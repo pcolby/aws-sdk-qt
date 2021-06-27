@@ -58,8 +58,7 @@ ModifyWorkspaceCreationPropertiesResponse::ModifyWorkspaceCreationPropertiesResp
  */
 const ModifyWorkspaceCreationPropertiesRequest * ModifyWorkspaceCreationPropertiesResponse::request() const
 {
-    Q_D(const ModifyWorkspaceCreationPropertiesResponse);
-    return static_cast<const ModifyWorkspaceCreationPropertiesRequest *>(d->request);
+    return static_cast<const ModifyWorkspaceCreationPropertiesRequest *>(WorkSpacesResponse::request());
 }
 
 /*!

@@ -98,8 +98,7 @@ StartAutomationExecutionResponse::StartAutomationExecutionResponse(
  */
 const StartAutomationExecutionRequest * StartAutomationExecutionResponse::request() const
 {
-    Q_D(const StartAutomationExecutionResponse);
-    return static_cast<const StartAutomationExecutionRequest *>(d->request);
+    return static_cast<const StartAutomationExecutionRequest *>(SsmResponse::request());
 }
 
 /*!

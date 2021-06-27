@@ -58,8 +58,7 @@ ReadJobResponse::ReadJobResponse(
  */
 const ReadJobRequest * ReadJobResponse::request() const
 {
-    Q_D(const ReadJobResponse);
-    return static_cast<const ReadJobRequest *>(d->request);
+    return static_cast<const ReadJobRequest *>(ElasticTranscoderResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ DeleteEmailTemplateResponse::DeleteEmailTemplateResponse(
  */
 const DeleteEmailTemplateRequest * DeleteEmailTemplateResponse::request() const
 {
-    Q_D(const DeleteEmailTemplateResponse);
-    return static_cast<const DeleteEmailTemplateRequest *>(d->request);
+    return static_cast<const DeleteEmailTemplateRequest *>(PinpointResponse::request());
 }
 
 /*!

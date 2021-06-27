@@ -75,16 +75,16 @@ PinpointSMSVoiceClient::PinpointSMSVoiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new PinpointSMSVoiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-09-05"),
+    QStringLiteral("sms-voice.pinpoint"),
+    QStringLiteral("Amazon Pinpoint SMS and Voice Service"),
+    QStringLiteral("sms-voice"),
+    parent), d_ptr(new PinpointSMSVoiceClientPrivate(this))
 {
-    Q_D(PinpointSMSVoiceClient);
-    d->apiVersion = QStringLiteral("2018-09-05");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("sms-voice.pinpoint");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Pinpoint SMS and Voice Service");
-    d->serviceName = QStringLiteral("sms-voice");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -103,16 +103,16 @@ PinpointSMSVoiceClient::PinpointSMSVoiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new PinpointSMSVoiceClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-09-05"),
+    QStringLiteral("sms-voice.pinpoint"),
+    QStringLiteral("Amazon Pinpoint SMS and Voice Service"),
+    QStringLiteral("sms-voice"),
+    parent), d_ptr(new PinpointSMSVoiceClientPrivate(this))
 {
-    Q_D(PinpointSMSVoiceClient);
-    d->apiVersion = QStringLiteral("2018-09-05");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("sms-voice.pinpoint");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Pinpoint SMS and Voice Service");
-    d->serviceName = QStringLiteral("sms-voice");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -226,10 +226,9 @@ UpdateConfigurationSetEventDestinationResponse * PinpointSMSVoiceClient::updateC
 /*!
  * Constructs a PinpointSMSVoiceClientPrivate object with public implementation \a q.
  */
-PinpointSMSVoiceClientPrivate::PinpointSMSVoiceClientPrivate(PinpointSMSVoiceClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+PinpointSMSVoiceClientPrivate::PinpointSMSVoiceClientPrivate(PinpointSMSVoiceClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace PinpointSMSVoice

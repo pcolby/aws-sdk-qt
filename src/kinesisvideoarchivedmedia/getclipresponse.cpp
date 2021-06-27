@@ -55,8 +55,7 @@ GetClipResponse::GetClipResponse(
  */
 const GetClipRequest * GetClipResponse::request() const
 {
-    Q_D(const GetClipResponse);
-    return static_cast<const GetClipRequest *>(d->request);
+    return static_cast<const GetClipRequest *>(KinesisVideoArchivedMediaResponse::request());
 }
 
 /*!

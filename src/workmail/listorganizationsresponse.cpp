@@ -89,8 +89,7 @@ ListOrganizationsResponse::ListOrganizationsResponse(
  */
 const ListOrganizationsRequest * ListOrganizationsResponse::request() const
 {
-    Q_D(const ListOrganizationsResponse);
-    return static_cast<const ListOrganizationsRequest *>(d->request);
+    return static_cast<const ListOrganizationsRequest *>(WorkMailResponse::request());
 }
 
 /*!

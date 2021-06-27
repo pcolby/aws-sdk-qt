@@ -60,7 +60,7 @@ namespace Appflow {
  * Constructs a AppflowRequest object for Appflow \a action.
  */
 AppflowRequest::AppflowRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new AppflowRequestPrivate(action, this))
+    : d_ptr(new AppflowRequestPrivate(action, this))
 {
 
 }
@@ -69,7 +69,8 @@ AppflowRequest::AppflowRequest(const Action action)
  * Constructs a copy of \a other.
  */
 AppflowRequest::AppflowRequest(const AppflowRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new AppflowRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new AppflowRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -92,7 +93,7 @@ AppflowRequest& AppflowRequest::operator=(const AppflowRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from AppflowRequestPrivate.
  */
-AppflowRequest::AppflowRequest(AppflowRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+AppflowRequest::AppflowRequest(AppflowRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -261,7 +262,7 @@ QNetworkRequest AppflowRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 AppflowRequestPrivate::AppflowRequestPrivate(const AppflowRequest::Action action, AppflowRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -276,8 +277,8 @@ AppflowRequestPrivate::AppflowRequestPrivate(const AppflowRequest::Action action
  */
 AppflowRequestPrivate::AppflowRequestPrivate(const AppflowRequestPrivate &other,
                                      AppflowRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

@@ -61,8 +61,7 @@ ScanProvisionedProductsResponse::ScanProvisionedProductsResponse(
  */
 const ScanProvisionedProductsRequest * ScanProvisionedProductsResponse::request() const
 {
-    Q_D(const ScanProvisionedProductsResponse);
-    return static_cast<const ScanProvisionedProductsRequest *>(d->request);
+    return static_cast<const ScanProvisionedProductsRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

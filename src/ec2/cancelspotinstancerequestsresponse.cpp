@@ -87,8 +87,7 @@ CancelSpotInstanceRequestsResponse::CancelSpotInstanceRequestsResponse(
  */
 const CancelSpotInstanceRequestsRequest * CancelSpotInstanceRequestsResponse::request() const
 {
-    Q_D(const CancelSpotInstanceRequestsResponse);
-    return static_cast<const CancelSpotInstanceRequestsRequest *>(d->request);
+    return static_cast<const CancelSpotInstanceRequestsRequest *>(Ec2Response::request());
 }
 
 /*!

@@ -202,6 +202,12 @@ public slots:
     UpdateOrganizationalUnitResponse * updateOrganizationalUnit(const UpdateOrganizationalUnitRequest &request);
     UpdatePolicyResponse * updatePolicy(const UpdatePolicyRequest &request);
 
+protected:
+    /// @cond internal
+    OrganizationsClientPrivate * const d_ptr; ///< Internal d-pointer.
+    OrganizationsClient(OrganizationsClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(OrganizationsClient)
     Q_DISABLE_COPY(OrganizationsClient)

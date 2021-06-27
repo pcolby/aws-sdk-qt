@@ -115,16 +115,16 @@ DataPipelineClient::DataPipelineClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new DataPipelineClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2012-10-29"),
+    QStringLiteral("datapipeline"),
+    QStringLiteral("AWS Data Pipeline"),
+    QStringLiteral("datapipeline"),
+    parent), d_ptr(new DataPipelineClientPrivate(this))
 {
-    Q_D(DataPipelineClient);
-    d->apiVersion = QStringLiteral("2012-10-29");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("datapipeline");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Data Pipeline");
-    d->serviceName = QStringLiteral("datapipeline");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -143,16 +143,16 @@ DataPipelineClient::DataPipelineClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new DataPipelineClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2012-10-29"),
+    QStringLiteral("datapipeline"),
+    QStringLiteral("AWS Data Pipeline"),
+    QStringLiteral("datapipeline"),
+    parent), d_ptr(new DataPipelineClientPrivate(this))
 {
-    Q_D(DataPipelineClient);
-    d->apiVersion = QStringLiteral("2012-10-29");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("datapipeline");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Data Pipeline");
-    d->serviceName = QStringLiteral("datapipeline");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -487,10 +487,9 @@ ValidatePipelineDefinitionResponse * DataPipelineClient::validatePipelineDefinit
 /*!
  * Constructs a DataPipelineClientPrivate object with public implementation \a q.
  */
-DataPipelineClientPrivate::DataPipelineClientPrivate(DataPipelineClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+DataPipelineClientPrivate::DataPipelineClientPrivate(DataPipelineClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace DataPipeline

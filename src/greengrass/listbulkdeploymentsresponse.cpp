@@ -58,8 +58,7 @@ ListBulkDeploymentsResponse::ListBulkDeploymentsResponse(
  */
 const ListBulkDeploymentsRequest * ListBulkDeploymentsResponse::request() const
 {
-    Q_D(const ListBulkDeploymentsResponse);
-    return static_cast<const ListBulkDeploymentsRequest *>(d->request);
+    return static_cast<const ListBulkDeploymentsRequest *>(GreengrassResponse::request());
 }
 
 /*!

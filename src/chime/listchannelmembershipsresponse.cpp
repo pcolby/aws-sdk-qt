@@ -98,8 +98,7 @@ ListChannelMembershipsResponse::ListChannelMembershipsResponse(
  */
 const ListChannelMembershipsRequest * ListChannelMembershipsResponse::request() const
 {
-    Q_D(const ListChannelMembershipsResponse);
-    return static_cast<const ListChannelMembershipsRequest *>(d->request);
+    return static_cast<const ListChannelMembershipsRequest *>(ChimeResponse::request());
 }
 
 /*!

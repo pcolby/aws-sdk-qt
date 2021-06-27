@@ -98,8 +98,7 @@ CreateSipRuleResponse::CreateSipRuleResponse(
  */
 const CreateSipRuleRequest * CreateSipRuleResponse::request() const
 {
-    Q_D(const CreateSipRuleResponse);
-    return static_cast<const CreateSipRuleRequest *>(d->request);
+    return static_cast<const CreateSipRuleRequest *>(ChimeResponse::request());
 }
 
 /*!

@@ -77,8 +77,7 @@ ListPlatformBranchesResponse::ListPlatformBranchesResponse(
  */
 const ListPlatformBranchesRequest * ListPlatformBranchesResponse::request() const
 {
-    Q_D(const ListPlatformBranchesResponse);
-    return static_cast<const ListPlatformBranchesRequest *>(d->request);
+    return static_cast<const ListPlatformBranchesRequest *>(ElasticBeanstalkResponse::request());
 }
 
 /*!

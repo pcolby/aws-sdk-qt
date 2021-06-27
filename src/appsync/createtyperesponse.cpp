@@ -56,8 +56,7 @@ CreateTypeResponse::CreateTypeResponse(
  */
 const CreateTypeRequest * CreateTypeResponse::request() const
 {
-    Q_D(const CreateTypeResponse);
-    return static_cast<const CreateTypeRequest *>(d->request);
+    return static_cast<const CreateTypeRequest *>(AppSyncResponse::request());
 }
 
 /*!

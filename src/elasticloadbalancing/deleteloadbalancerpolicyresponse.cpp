@@ -83,8 +83,7 @@ DeleteLoadBalancerPolicyResponse::DeleteLoadBalancerPolicyResponse(
  */
 const DeleteLoadBalancerPolicyRequest * DeleteLoadBalancerPolicyResponse::request() const
 {
-    Q_D(const DeleteLoadBalancerPolicyResponse);
-    return static_cast<const DeleteLoadBalancerPolicyRequest *>(d->request);
+    return static_cast<const DeleteLoadBalancerPolicyRequest *>(ElasticLoadBalancingResponse::request());
 }
 
 /*!

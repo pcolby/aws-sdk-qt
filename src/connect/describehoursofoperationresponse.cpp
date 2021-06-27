@@ -79,8 +79,7 @@ DescribeHoursOfOperationResponse::DescribeHoursOfOperationResponse(
  */
 const DescribeHoursOfOperationRequest * DescribeHoursOfOperationResponse::request() const
 {
-    Q_D(const DescribeHoursOfOperationResponse);
-    return static_cast<const DescribeHoursOfOperationRequest *>(d->request);
+    return static_cast<const DescribeHoursOfOperationRequest *>(ConnectResponse::request());
 }
 
 /*!

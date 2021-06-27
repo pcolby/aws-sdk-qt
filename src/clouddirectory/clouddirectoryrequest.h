@@ -122,6 +122,7 @@ public:
 
 protected:
     /// @cond internal
+    CloudDirectoryRequestPrivate * const d_ptr; ///< Internal d-pointer.
     CloudDirectoryRequest(CloudDirectoryRequestPrivate * const d);
     /// @endcond
 

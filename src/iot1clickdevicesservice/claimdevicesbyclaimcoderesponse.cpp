@@ -57,8 +57,7 @@ ClaimDevicesByClaimCodeResponse::ClaimDevicesByClaimCodeResponse(
  */
 const ClaimDevicesByClaimCodeRequest * ClaimDevicesByClaimCodeResponse::request() const
 {
-    Q_D(const ClaimDevicesByClaimCodeResponse);
-    return static_cast<const ClaimDevicesByClaimCodeRequest *>(d->request);
+    return static_cast<const ClaimDevicesByClaimCodeRequest *>(IoT1ClickDevicesServiceResponse::request());
 }
 
 /*!

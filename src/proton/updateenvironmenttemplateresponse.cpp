@@ -177,8 +177,7 @@ UpdateEnvironmentTemplateResponse::UpdateEnvironmentTemplateResponse(
  */
 const UpdateEnvironmentTemplateRequest * UpdateEnvironmentTemplateResponse::request() const
 {
-    Q_D(const UpdateEnvironmentTemplateResponse);
-    return static_cast<const UpdateEnvironmentTemplateRequest *>(d->request);
+    return static_cast<const UpdateEnvironmentTemplateRequest *>(ProtonResponse::request());
 }
 
 /*!

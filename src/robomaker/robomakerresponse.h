@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    RoboMakerResponsePrivate * const d_ptr; ///< Internal d-pointer.
     RoboMakerResponse(RoboMakerResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

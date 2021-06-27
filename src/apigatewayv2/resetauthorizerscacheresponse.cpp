@@ -56,8 +56,7 @@ ResetAuthorizersCacheResponse::ResetAuthorizersCacheResponse(
  */
 const ResetAuthorizersCacheRequest * ResetAuthorizersCacheResponse::request() const
 {
-    Q_D(const ResetAuthorizersCacheResponse);
-    return static_cast<const ResetAuthorizersCacheRequest *>(d->request);
+    return static_cast<const ResetAuthorizersCacheRequest *>(ApiGatewayV2Response::request());
 }
 
 /*!

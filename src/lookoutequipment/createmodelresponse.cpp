@@ -57,8 +57,7 @@ CreateModelResponse::CreateModelResponse(
  */
 const CreateModelRequest * CreateModelResponse::request() const
 {
-    Q_D(const CreateModelResponse);
-    return static_cast<const CreateModelRequest *>(d->request);
+    return static_cast<const CreateModelRequest *>(LookoutEquipmentResponse::request());
 }
 
 /*!

@@ -126,8 +126,7 @@ AssociateWebACLResponse::AssociateWebACLResponse(
  */
 const AssociateWebACLRequest * AssociateWebACLResponse::request() const
 {
-    Q_D(const AssociateWebACLResponse);
-    return static_cast<const AssociateWebACLRequest *>(d->request);
+    return static_cast<const AssociateWebACLRequest *>(Wafv2Response::request());
 }
 
 /*!

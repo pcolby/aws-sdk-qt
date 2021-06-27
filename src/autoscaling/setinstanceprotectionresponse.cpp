@@ -68,8 +68,7 @@ SetInstanceProtectionResponse::SetInstanceProtectionResponse(
  */
 const SetInstanceProtectionRequest * SetInstanceProtectionResponse::request() const
 {
-    Q_D(const SetInstanceProtectionResponse);
-    return static_cast<const SetInstanceProtectionRequest *>(d->request);
+    return static_cast<const SetInstanceProtectionRequest *>(AutoScalingResponse::request());
 }
 
 /*!

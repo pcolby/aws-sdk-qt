@@ -83,6 +83,7 @@ public:
 
 protected:
     /// @cond internal
+    XRayRequestPrivate * const d_ptr; ///< Internal d-pointer.
     XRayRequest(XRayRequestPrivate * const d);
     /// @endcond
 

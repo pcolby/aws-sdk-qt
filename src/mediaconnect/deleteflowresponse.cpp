@@ -55,8 +55,7 @@ DeleteFlowResponse::DeleteFlowResponse(
  */
 const DeleteFlowRequest * DeleteFlowResponse::request() const
 {
-    Q_D(const DeleteFlowResponse);
-    return static_cast<const DeleteFlowRequest *>(d->request);
+    return static_cast<const DeleteFlowRequest *>(MediaConnectResponse::request());
 }
 
 /*!

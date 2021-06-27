@@ -56,8 +56,7 @@ ListTextTranslationJobsResponse::ListTextTranslationJobsResponse(
  */
 const ListTextTranslationJobsRequest * ListTextTranslationJobsResponse::request() const
 {
-    Q_D(const ListTextTranslationJobsResponse);
-    return static_cast<const ListTextTranslationJobsRequest *>(d->request);
+    return static_cast<const ListTextTranslationJobsRequest *>(TranslateResponse::request());
 }
 
 /*!

@@ -60,8 +60,7 @@ ListOriginRequestPoliciesResponse::ListOriginRequestPoliciesResponse(
  */
 const ListOriginRequestPoliciesRequest * ListOriginRequestPoliciesResponse::request() const
 {
-    Q_D(const ListOriginRequestPoliciesResponse);
-    return static_cast<const ListOriginRequestPoliciesRequest *>(d->request);
+    return static_cast<const ListOriginRequestPoliciesRequest *>(CloudFrontResponse::request());
 }
 
 /*!

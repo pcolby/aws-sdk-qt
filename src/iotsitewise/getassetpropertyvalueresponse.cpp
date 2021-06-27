@@ -61,8 +61,7 @@ GetAssetPropertyValueResponse::GetAssetPropertyValueResponse(
  */
 const GetAssetPropertyValueRequest * GetAssetPropertyValueResponse::request() const
 {
-    Q_D(const GetAssetPropertyValueResponse);
-    return static_cast<const GetAssetPropertyValueRequest *>(d->request);
+    return static_cast<const GetAssetPropertyValueRequest *>(IoTSiteWiseResponse::request());
 }
 
 /*!

@@ -20,14 +20,12 @@
 #ifndef QTAWS_MEDIATAILORRESPONSE_P_H
 #define QTAWS_MEDIATAILORRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace MediaTailor {
 
 class MediaTailorResponse;
 
-class MediaTailorResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class MediaTailorResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    MediaTailorResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MediaTailorResponse)

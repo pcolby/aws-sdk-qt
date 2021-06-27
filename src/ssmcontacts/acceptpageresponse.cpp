@@ -55,8 +55,7 @@ AcceptPageResponse::AcceptPageResponse(
  */
 const AcceptPageRequest * AcceptPageResponse::request() const
 {
-    Q_D(const AcceptPageResponse);
-    return static_cast<const AcceptPageRequest *>(d->request);
+    return static_cast<const AcceptPageRequest *>(SSMContactsResponse::request());
 }
 
 /*!

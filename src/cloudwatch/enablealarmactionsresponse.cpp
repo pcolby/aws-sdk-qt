@@ -69,8 +69,7 @@ EnableAlarmActionsResponse::EnableAlarmActionsResponse(
  */
 const EnableAlarmActionsRequest * EnableAlarmActionsResponse::request() const
 {
-    Q_D(const EnableAlarmActionsResponse);
-    return static_cast<const EnableAlarmActionsRequest *>(d->request);
+    return static_cast<const EnableAlarmActionsRequest *>(CloudWatchResponse::request());
 }
 
 /*!

@@ -67,16 +67,16 @@ IdentityStoreClient::IdentityStoreClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new IdentityStoreClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-06-15"),
+    QStringLiteral("identitystore"),
+    QStringLiteral("AWS SSO Identity Store"),
+    QStringLiteral("identitystore"),
+    parent), d_ptr(new IdentityStoreClientPrivate(this))
 {
-    Q_D(IdentityStoreClient);
-    d->apiVersion = QStringLiteral("2020-06-15");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("identitystore");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS SSO Identity Store");
-    d->serviceName = QStringLiteral("identitystore");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -95,16 +95,16 @@ IdentityStoreClient::IdentityStoreClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new IdentityStoreClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-06-15"),
+    QStringLiteral("identitystore"),
+    QStringLiteral("AWS SSO Identity Store"),
+    QStringLiteral("identitystore"),
+    parent), d_ptr(new IdentityStoreClientPrivate(this))
 {
-    Q_D(IdentityStoreClient);
-    d->apiVersion = QStringLiteral("2020-06-15");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("identitystore");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS SSO Identity Store");
-    d->serviceName = QStringLiteral("identitystore");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -175,10 +175,9 @@ ListUsersResponse * IdentityStoreClient::listUsers(const ListUsersRequest &reque
 /*!
  * Constructs a IdentityStoreClientPrivate object with public implementation \a q.
  */
-IdentityStoreClientPrivate::IdentityStoreClientPrivate(IdentityStoreClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+IdentityStoreClientPrivate::IdentityStoreClientPrivate(IdentityStoreClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace IdentityStore

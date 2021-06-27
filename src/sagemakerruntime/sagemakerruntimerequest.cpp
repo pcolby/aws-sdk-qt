@@ -43,7 +43,7 @@ namespace SageMakerRuntime {
  * Constructs a SageMakerRuntimeRequest object for SageMakerRuntime \a action.
  */
 SageMakerRuntimeRequest::SageMakerRuntimeRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new SageMakerRuntimeRequestPrivate(action, this))
+    : d_ptr(new SageMakerRuntimeRequestPrivate(action, this))
 {
 
 }
@@ -52,7 +52,8 @@ SageMakerRuntimeRequest::SageMakerRuntimeRequest(const Action action)
  * Constructs a copy of \a other.
  */
 SageMakerRuntimeRequest::SageMakerRuntimeRequest(const SageMakerRuntimeRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new SageMakerRuntimeRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new SageMakerRuntimeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -75,7 +76,7 @@ SageMakerRuntimeRequest& SageMakerRuntimeRequest::operator=(const SageMakerRunti
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SageMakerRuntimeRequestPrivate.
  */
-SageMakerRuntimeRequest::SageMakerRuntimeRequest(SageMakerRuntimeRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+SageMakerRuntimeRequest::SageMakerRuntimeRequest(SageMakerRuntimeRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -244,7 +245,7 @@ QNetworkRequest SageMakerRuntimeRequest::unsignedRequest(const QUrl &endpoint) c
  * with public implementation \a q.
  */
 SageMakerRuntimeRequestPrivate::SageMakerRuntimeRequestPrivate(const SageMakerRuntimeRequest::Action action, SageMakerRuntimeRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -259,8 +260,8 @@ SageMakerRuntimeRequestPrivate::SageMakerRuntimeRequestPrivate(const SageMakerRu
  */
 SageMakerRuntimeRequestPrivate::SageMakerRuntimeRequestPrivate(const SageMakerRuntimeRequestPrivate &other,
                                      SageMakerRuntimeRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

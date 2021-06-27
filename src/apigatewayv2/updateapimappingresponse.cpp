@@ -56,8 +56,7 @@ UpdateApiMappingResponse::UpdateApiMappingResponse(
  */
 const UpdateApiMappingRequest * UpdateApiMappingResponse::request() const
 {
-    Q_D(const UpdateApiMappingResponse);
-    return static_cast<const UpdateApiMappingRequest *>(d->request);
+    return static_cast<const UpdateApiMappingRequest *>(ApiGatewayV2Response::request());
 }
 
 /*!

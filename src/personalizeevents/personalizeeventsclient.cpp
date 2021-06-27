@@ -68,16 +68,16 @@ PersonalizeEventsClient::PersonalizeEventsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new PersonalizeEventsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-03-22"),
+    QStringLiteral("personalize-events"),
+    QStringLiteral("Amazon Personalize Events"),
+    QStringLiteral("personalize"),
+    parent), d_ptr(new PersonalizeEventsClientPrivate(this))
 {
-    Q_D(PersonalizeEventsClient);
-    d->apiVersion = QStringLiteral("2018-03-22");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("personalize-events");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Personalize Events");
-    d->serviceName = QStringLiteral("personalize");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -96,16 +96,16 @@ PersonalizeEventsClient::PersonalizeEventsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new PersonalizeEventsClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-03-22"),
+    QStringLiteral("personalize-events"),
+    QStringLiteral("Amazon Personalize Events"),
+    QStringLiteral("personalize"),
+    parent), d_ptr(new PersonalizeEventsClientPrivate(this))
 {
-    Q_D(PersonalizeEventsClient);
-    d->apiVersion = QStringLiteral("2018-03-22");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("personalize-events");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Personalize Events");
-    d->serviceName = QStringLiteral("personalize");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -162,10 +162,9 @@ PutUsersResponse * PersonalizeEventsClient::putUsers(const PutUsersRequest &requ
 /*!
  * Constructs a PersonalizeEventsClientPrivate object with public implementation \a q.
  */
-PersonalizeEventsClientPrivate::PersonalizeEventsClientPrivate(PersonalizeEventsClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+PersonalizeEventsClientPrivate::PersonalizeEventsClientPrivate(PersonalizeEventsClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace PersonalizeEvents

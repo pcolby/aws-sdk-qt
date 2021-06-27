@@ -55,8 +55,7 @@ DescribeSlotTypeResponse::DescribeSlotTypeResponse(
  */
 const DescribeSlotTypeRequest * DescribeSlotTypeResponse::request() const
 {
-    Q_D(const DescribeSlotTypeResponse);
-    return static_cast<const DescribeSlotTypeRequest *>(d->request);
+    return static_cast<const DescribeSlotTypeRequest *>(LexModelsV2Response::request());
 }
 
 /*!

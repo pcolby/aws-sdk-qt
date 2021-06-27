@@ -61,8 +61,7 @@ ListLongTermPricingResponse::ListLongTermPricingResponse(
  */
 const ListLongTermPricingRequest * ListLongTermPricingResponse::request() const
 {
-    Q_D(const ListLongTermPricingResponse);
-    return static_cast<const ListLongTermPricingRequest *>(d->request);
+    return static_cast<const ListLongTermPricingRequest *>(SnowballResponse::request());
 }
 
 /*!

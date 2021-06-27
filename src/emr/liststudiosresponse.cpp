@@ -58,8 +58,7 @@ ListStudiosResponse::ListStudiosResponse(
  */
 const ListStudiosRequest * ListStudiosResponse::request() const
 {
-    Q_D(const ListStudiosResponse);
-    return static_cast<const ListStudiosRequest *>(d->request);
+    return static_cast<const ListStudiosRequest *>(EmrResponse::request());
 }
 
 /*!

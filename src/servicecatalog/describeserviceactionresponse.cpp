@@ -61,8 +61,7 @@ DescribeServiceActionResponse::DescribeServiceActionResponse(
  */
 const DescribeServiceActionRequest * DescribeServiceActionResponse::request() const
 {
-    Q_D(const DescribeServiceActionResponse);
-    return static_cast<const DescribeServiceActionRequest *>(d->request);
+    return static_cast<const DescribeServiceActionRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

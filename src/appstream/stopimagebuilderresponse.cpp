@@ -81,8 +81,7 @@ StopImageBuilderResponse::StopImageBuilderResponse(
  */
 const StopImageBuilderRequest * StopImageBuilderResponse::request() const
 {
-    Q_D(const StopImageBuilderResponse);
-    return static_cast<const StopImageBuilderRequest *>(d->request);
+    return static_cast<const StopImageBuilderRequest *>(AppStreamResponse::request());
 }
 
 /*!

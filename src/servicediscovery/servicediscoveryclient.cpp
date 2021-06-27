@@ -110,16 +110,16 @@ ServiceDiscoveryClient::ServiceDiscoveryClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ServiceDiscoveryClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-03-14"),
+    QStringLiteral("servicediscovery"),
+    QStringLiteral("AWS Cloud Map"),
+    QStringLiteral("servicediscovery"),
+    parent), d_ptr(new ServiceDiscoveryClientPrivate(this))
 {
-    Q_D(ServiceDiscoveryClient);
-    d->apiVersion = QStringLiteral("2017-03-14");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("servicediscovery");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Cloud Map");
-    d->serviceName = QStringLiteral("servicediscovery");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -138,16 +138,16 @@ ServiceDiscoveryClient::ServiceDiscoveryClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ServiceDiscoveryClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-03-14"),
+    QStringLiteral("servicediscovery"),
+    QStringLiteral("AWS Cloud Map"),
+    QStringLiteral("servicediscovery"),
+    parent), d_ptr(new ServiceDiscoveryClientPrivate(this))
 {
-    Q_D(ServiceDiscoveryClient);
-    d->apiVersion = QStringLiteral("2017-03-14");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("servicediscovery");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Cloud Map");
-    d->serviceName = QStringLiteral("servicediscovery");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -618,10 +618,9 @@ UpdateServiceResponse * ServiceDiscoveryClient::updateService(const UpdateServic
 /*!
  * Constructs a ServiceDiscoveryClientPrivate object with public implementation \a q.
  */
-ServiceDiscoveryClientPrivate::ServiceDiscoveryClientPrivate(ServiceDiscoveryClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+ServiceDiscoveryClientPrivate::ServiceDiscoveryClientPrivate(ServiceDiscoveryClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace ServiceDiscovery

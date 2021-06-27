@@ -343,6 +343,12 @@ public slots:
     UpdateThemePermissionsResponse * updateThemePermissions(const UpdateThemePermissionsRequest &request);
     UpdateUserResponse * updateUser(const UpdateUserRequest &request);
 
+protected:
+    /// @cond internal
+    QuickSightClientPrivate * const d_ptr; ///< Internal d-pointer.
+    QuickSightClient(QuickSightClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(QuickSightClient)
     Q_DISABLE_COPY(QuickSightClient)

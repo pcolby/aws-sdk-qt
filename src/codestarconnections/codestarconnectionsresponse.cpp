@@ -37,7 +37,7 @@ namespace CodeStarconnections {
  * Constructs a CodeStarconnectionsResponse object with parent \a parent.
  */
 CodeStarconnectionsResponse::CodeStarconnectionsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new CodeStarconnectionsResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new CodeStarconnectionsResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ CodeStarconnectionsResponse::CodeStarconnectionsResponse(QObject * const parent)
  * implementation that inherits from CodeStarconnectionsResponsePrivate.
  */
 CodeStarconnectionsResponse::CodeStarconnectionsResponse(CodeStarconnectionsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void CodeStarconnectionsResponse::parseFailure(QIODevice &response)
  * Constructs a CodeStarconnectionsResponsePrivate object with public implementation \a q.
  */
 CodeStarconnectionsResponsePrivate::CodeStarconnectionsResponsePrivate(
-    CodeStarconnectionsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    CodeStarconnectionsResponse * const q) : q_ptr(q)
 {
 
 }

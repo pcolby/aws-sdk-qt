@@ -58,8 +58,7 @@ UpdateApplicationMaintenanceConfigurationResponse::UpdateApplicationMaintenanceC
  */
 const UpdateApplicationMaintenanceConfigurationRequest * UpdateApplicationMaintenanceConfigurationResponse::request() const
 {
-    Q_D(const UpdateApplicationMaintenanceConfigurationResponse);
-    return static_cast<const UpdateApplicationMaintenanceConfigurationRequest *>(d->request);
+    return static_cast<const UpdateApplicationMaintenanceConfigurationRequest *>(KinesisAnalyticsV2Response::request());
 }
 
 /*!

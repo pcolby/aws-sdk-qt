@@ -58,8 +58,7 @@ ListJobsByStatusResponse::ListJobsByStatusResponse(
  */
 const ListJobsByStatusRequest * ListJobsByStatusResponse::request() const
 {
-    Q_D(const ListJobsByStatusResponse);
-    return static_cast<const ListJobsByStatusRequest *>(d->request);
+    return static_cast<const ListJobsByStatusRequest *>(ElasticTranscoderResponse::request());
 }
 
 /*!

@@ -87,8 +87,7 @@ UnassignPrivateIpAddressesResponse::UnassignPrivateIpAddressesResponse(
  */
 const UnassignPrivateIpAddressesRequest * UnassignPrivateIpAddressesResponse::request() const
 {
-    Q_D(const UnassignPrivateIpAddressesResponse);
-    return static_cast<const UnassignPrivateIpAddressesRequest *>(d->request);
+    return static_cast<const UnassignPrivateIpAddressesRequest *>(Ec2Response::request());
 }
 
 /*!

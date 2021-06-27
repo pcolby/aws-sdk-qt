@@ -64,8 +64,7 @@ ListCuratedEnvironmentImagesResponse::ListCuratedEnvironmentImagesResponse(
  */
 const ListCuratedEnvironmentImagesRequest * ListCuratedEnvironmentImagesResponse::request() const
 {
-    Q_D(const ListCuratedEnvironmentImagesResponse);
-    return static_cast<const ListCuratedEnvironmentImagesRequest *>(d->request);
+    return static_cast<const ListCuratedEnvironmentImagesRequest *>(CodeBuildResponse::request());
 }
 
 /*!

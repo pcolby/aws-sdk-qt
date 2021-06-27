@@ -56,8 +56,7 @@ ListWorldTemplatesResponse::ListWorldTemplatesResponse(
  */
 const ListWorldTemplatesRequest * ListWorldTemplatesResponse::request() const
 {
-    Q_D(const ListWorldTemplatesResponse);
-    return static_cast<const ListWorldTemplatesRequest *>(d->request);
+    return static_cast<const ListWorldTemplatesRequest *>(RoboMakerResponse::request());
 }
 
 /*!

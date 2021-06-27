@@ -313,16 +313,16 @@ OpsWorksClient::OpsWorksClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new OpsWorksClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2013-02-18"),
+    QStringLiteral("opsworks"),
+    QStringLiteral("AWS OpsWorks"),
+    QStringLiteral("opsworks"),
+    parent), d_ptr(new OpsWorksClientPrivate(this))
 {
-    Q_D(OpsWorksClient);
-    d->apiVersion = QStringLiteral("2013-02-18");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("opsworks");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS OpsWorks");
-    d->serviceName = QStringLiteral("opsworks");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -341,16 +341,16 @@ OpsWorksClient::OpsWorksClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new OpsWorksClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2013-02-18"),
+    QStringLiteral("opsworks"),
+    QStringLiteral("AWS OpsWorks"),
+    QStringLiteral("opsworks"),
+    parent), d_ptr(new OpsWorksClientPrivate(this))
 {
-    Q_D(OpsWorksClient);
-    d->apiVersion = QStringLiteral("2013-02-18");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("opsworks");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS OpsWorks");
-    d->serviceName = QStringLiteral("opsworks");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -1938,10 +1938,9 @@ UpdateVolumeResponse * OpsWorksClient::updateVolume(const UpdateVolumeRequest &r
 /*!
  * Constructs a OpsWorksClientPrivate object with public implementation \a q.
  */
-OpsWorksClientPrivate::OpsWorksClientPrivate(OpsWorksClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+OpsWorksClientPrivate::OpsWorksClientPrivate(OpsWorksClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace OpsWorks

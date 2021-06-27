@@ -62,8 +62,7 @@ ListWorkloadSharesResponse::ListWorkloadSharesResponse(
  */
 const ListWorkloadSharesRequest * ListWorkloadSharesResponse::request() const
 {
-    Q_D(const ListWorkloadSharesResponse);
-    return static_cast<const ListWorkloadSharesRequest *>(d->request);
+    return static_cast<const ListWorkloadSharesRequest *>(WellArchitectedResponse::request());
 }
 
 /*!

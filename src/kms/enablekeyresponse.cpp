@@ -154,8 +154,7 @@ EnableKeyResponse::EnableKeyResponse(
  */
 const EnableKeyRequest * EnableKeyResponse::request() const
 {
-    Q_D(const EnableKeyResponse);
-    return static_cast<const EnableKeyRequest *>(d->request);
+    return static_cast<const EnableKeyRequest *>(KmsResponse::request());
 }
 
 /*!

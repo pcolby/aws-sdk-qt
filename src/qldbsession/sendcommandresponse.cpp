@@ -75,8 +75,7 @@ SendCommandResponse::SendCommandResponse(
  */
 const SendCommandRequest * SendCommandResponse::request() const
 {
-    Q_D(const SendCommandResponse);
-    return static_cast<const SendCommandRequest *>(d->request);
+    return static_cast<const SendCommandRequest *>(QLDBSessionResponse::request());
 }
 
 /*!

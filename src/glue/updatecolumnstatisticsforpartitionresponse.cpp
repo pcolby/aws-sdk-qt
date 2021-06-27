@@ -58,8 +58,7 @@ UpdateColumnStatisticsForPartitionResponse::UpdateColumnStatisticsForPartitionRe
  */
 const UpdateColumnStatisticsForPartitionRequest * UpdateColumnStatisticsForPartitionResponse::request() const
 {
-    Q_D(const UpdateColumnStatisticsForPartitionResponse);
-    return static_cast<const UpdateColumnStatisticsForPartitionRequest *>(d->request);
+    return static_cast<const UpdateColumnStatisticsForPartitionRequest *>(GlueResponse::request());
 }
 
 /*!

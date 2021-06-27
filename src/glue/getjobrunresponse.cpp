@@ -58,8 +58,7 @@ GetJobRunResponse::GetJobRunResponse(
  */
 const GetJobRunRequest * GetJobRunResponse::request() const
 {
-    Q_D(const GetJobRunResponse);
-    return static_cast<const GetJobRunRequest *>(d->request);
+    return static_cast<const GetJobRunRequest *>(GlueResponse::request());
 }
 
 /*!

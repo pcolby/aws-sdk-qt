@@ -87,8 +87,7 @@ ModifyLaunchTemplateResponse::ModifyLaunchTemplateResponse(
  */
 const ModifyLaunchTemplateRequest * ModifyLaunchTemplateResponse::request() const
 {
-    Q_D(const ModifyLaunchTemplateResponse);
-    return static_cast<const ModifyLaunchTemplateRequest *>(d->request);
+    return static_cast<const ModifyLaunchTemplateRequest *>(Ec2Response::request());
 }
 
 /*!

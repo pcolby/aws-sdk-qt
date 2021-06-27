@@ -119,8 +119,7 @@ FailoverDBClusterResponse::FailoverDBClusterResponse(
  */
 const FailoverDBClusterRequest * FailoverDBClusterResponse::request() const
 {
-    Q_D(const FailoverDBClusterResponse);
-    return static_cast<const FailoverDBClusterRequest *>(d->request);
+    return static_cast<const FailoverDBClusterRequest *>(RdsResponse::request());
 }
 
 /*!

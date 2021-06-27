@@ -86,8 +86,7 @@ StartDeploymentResponse::StartDeploymentResponse(
  */
 const StartDeploymentRequest * StartDeploymentResponse::request() const
 {
-    Q_D(const StartDeploymentResponse);
-    return static_cast<const StartDeploymentRequest *>(d->request);
+    return static_cast<const StartDeploymentRequest *>(AppRunnerResponse::request());
 }
 
 /*!

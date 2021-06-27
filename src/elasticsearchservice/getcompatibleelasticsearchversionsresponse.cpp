@@ -72,8 +72,7 @@ GetCompatibleElasticsearchVersionsResponse::GetCompatibleElasticsearchVersionsRe
  */
 const GetCompatibleElasticsearchVersionsRequest * GetCompatibleElasticsearchVersionsResponse::request() const
 {
-    Q_D(const GetCompatibleElasticsearchVersionsResponse);
-    return static_cast<const GetCompatibleElasticsearchVersionsRequest *>(d->request);
+    return static_cast<const GetCompatibleElasticsearchVersionsRequest *>(ElasticsearchServiceResponse::request());
 }
 
 /*!

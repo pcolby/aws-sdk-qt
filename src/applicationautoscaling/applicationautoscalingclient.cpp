@@ -161,16 +161,16 @@ ApplicationAutoScalingClient::ApplicationAutoScalingClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ApplicationAutoScalingClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-02-06"),
+    QStringLiteral("application-autoscaling"),
+    QStringLiteral("Application Auto Scaling"),
+    QStringLiteral("application-autoscaling"),
+    parent), d_ptr(new ApplicationAutoScalingClientPrivate(this))
 {
-    Q_D(ApplicationAutoScalingClient);
-    d->apiVersion = QStringLiteral("2016-02-06");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("application-autoscaling");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Application Auto Scaling");
-    d->serviceName = QStringLiteral("application-autoscaling");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -189,16 +189,16 @@ ApplicationAutoScalingClient::ApplicationAutoScalingClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ApplicationAutoScalingClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-02-06"),
+    QStringLiteral("application-autoscaling"),
+    QStringLiteral("Application Auto Scaling"),
+    QStringLiteral("application-autoscaling"),
+    parent), d_ptr(new ApplicationAutoScalingClientPrivate(this))
 {
-    Q_D(ApplicationAutoScalingClient);
-    d->apiVersion = QStringLiteral("2016-02-06");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("application-autoscaling");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Application Auto Scaling");
-    d->serviceName = QStringLiteral("application-autoscaling");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -489,10 +489,9 @@ RegisterScalableTargetResponse * ApplicationAutoScalingClient::registerScalableT
 /*!
  * Constructs a ApplicationAutoScalingClientPrivate object with public implementation \a q.
  */
-ApplicationAutoScalingClientPrivate::ApplicationAutoScalingClientPrivate(ApplicationAutoScalingClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+ApplicationAutoScalingClientPrivate::ApplicationAutoScalingClientPrivate(ApplicationAutoScalingClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace ApplicationAutoScaling

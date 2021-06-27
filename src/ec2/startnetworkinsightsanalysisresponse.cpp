@@ -87,8 +87,7 @@ StartNetworkInsightsAnalysisResponse::StartNetworkInsightsAnalysisResponse(
  */
 const StartNetworkInsightsAnalysisRequest * StartNetworkInsightsAnalysisResponse::request() const
 {
-    Q_D(const StartNetworkInsightsAnalysisResponse);
-    return static_cast<const StartNetworkInsightsAnalysisRequest *>(d->request);
+    return static_cast<const StartNetworkInsightsAnalysisRequest *>(Ec2Response::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ UpdateApnsChannelResponse::UpdateApnsChannelResponse(
  */
 const UpdateApnsChannelRequest * UpdateApnsChannelResponse::request() const
 {
-    Q_D(const UpdateApnsChannelResponse);
-    return static_cast<const UpdateApnsChannelRequest *>(d->request);
+    return static_cast<const UpdateApnsChannelRequest *>(PinpointResponse::request());
 }
 
 /*!

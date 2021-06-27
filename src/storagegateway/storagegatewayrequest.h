@@ -145,6 +145,7 @@ public:
 
 protected:
     /// @cond internal
+    StorageGatewayRequestPrivate * const d_ptr; ///< Internal d-pointer.
     StorageGatewayRequest(StorageGatewayRequestPrivate * const d);
     /// @endcond
 

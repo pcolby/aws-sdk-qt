@@ -62,8 +62,7 @@ UpdateLinkResponse::UpdateLinkResponse(
  */
 const UpdateLinkRequest * UpdateLinkResponse::request() const
 {
-    Q_D(const UpdateLinkResponse);
-    return static_cast<const UpdateLinkRequest *>(d->request);
+    return static_cast<const UpdateLinkRequest *>(NetworkManagerResponse::request());
 }
 
 /*!

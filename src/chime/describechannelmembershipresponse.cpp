@@ -98,8 +98,7 @@ DescribeChannelMembershipResponse::DescribeChannelMembershipResponse(
  */
 const DescribeChannelMembershipRequest * DescribeChannelMembershipResponse::request() const
 {
-    Q_D(const DescribeChannelMembershipResponse);
-    return static_cast<const DescribeChannelMembershipRequest *>(d->request);
+    return static_cast<const DescribeChannelMembershipRequest *>(ChimeResponse::request());
 }
 
 /*!

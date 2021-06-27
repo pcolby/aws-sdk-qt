@@ -61,8 +61,7 @@ ExecuteProvisionedProductServiceActionResponse::ExecuteProvisionedProductService
  */
 const ExecuteProvisionedProductServiceActionRequest * ExecuteProvisionedProductServiceActionResponse::request() const
 {
-    Q_D(const ExecuteProvisionedProductServiceActionResponse);
-    return static_cast<const ExecuteProvisionedProductServiceActionRequest *>(d->request);
+    return static_cast<const ExecuteProvisionedProductServiceActionRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

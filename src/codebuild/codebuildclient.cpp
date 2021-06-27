@@ -156,16 +156,16 @@ CodeBuildClient::CodeBuildClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CodeBuildClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-10-06"),
+    QStringLiteral("codebuild"),
+    QStringLiteral("AWS CodeBuild"),
+    QStringLiteral("codebuild"),
+    parent), d_ptr(new CodeBuildClientPrivate(this))
 {
-    Q_D(CodeBuildClient);
-    d->apiVersion = QStringLiteral("2016-10-06");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("codebuild");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS CodeBuild");
-    d->serviceName = QStringLiteral("codebuild");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -184,16 +184,16 @@ CodeBuildClient::CodeBuildClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CodeBuildClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-10-06"),
+    QStringLiteral("codebuild"),
+    QStringLiteral("AWS CodeBuild"),
+    QStringLiteral("codebuild"),
+    parent), d_ptr(new CodeBuildClientPrivate(this))
 {
-    Q_D(CodeBuildClient);
-    d->apiVersion = QStringLiteral("2016-10-06");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("codebuild");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS CodeBuild");
-    d->serviceName = QStringLiteral("codebuild");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -797,10 +797,9 @@ UpdateWebhookResponse * CodeBuildClient::updateWebhook(const UpdateWebhookReques
 /*!
  * Constructs a CodeBuildClientPrivate object with public implementation \a q.
  */
-CodeBuildClientPrivate::CodeBuildClientPrivate(CodeBuildClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+CodeBuildClientPrivate::CodeBuildClientPrivate(CodeBuildClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace CodeBuild

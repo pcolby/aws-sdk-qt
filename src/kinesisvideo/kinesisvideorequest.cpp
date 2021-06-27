@@ -61,7 +61,7 @@ namespace KinesisVideo {
  * Constructs a KinesisVideoRequest object for KinesisVideo \a action.
  */
 KinesisVideoRequest::KinesisVideoRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new KinesisVideoRequestPrivate(action, this))
+    : d_ptr(new KinesisVideoRequestPrivate(action, this))
 {
 
 }
@@ -70,7 +70,8 @@ KinesisVideoRequest::KinesisVideoRequest(const Action action)
  * Constructs a copy of \a other.
  */
 KinesisVideoRequest::KinesisVideoRequest(const KinesisVideoRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new KinesisVideoRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new KinesisVideoRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -93,7 +94,7 @@ KinesisVideoRequest& KinesisVideoRequest::operator=(const KinesisVideoRequest &o
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from KinesisVideoRequestPrivate.
  */
-KinesisVideoRequest::KinesisVideoRequest(KinesisVideoRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+KinesisVideoRequest::KinesisVideoRequest(KinesisVideoRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -262,7 +263,7 @@ QNetworkRequest KinesisVideoRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 KinesisVideoRequestPrivate::KinesisVideoRequestPrivate(const KinesisVideoRequest::Action action, KinesisVideoRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -277,8 +278,8 @@ KinesisVideoRequestPrivate::KinesisVideoRequestPrivate(const KinesisVideoRequest
  */
 KinesisVideoRequestPrivate::KinesisVideoRequestPrivate(const KinesisVideoRequestPrivate &other,
                                      KinesisVideoRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

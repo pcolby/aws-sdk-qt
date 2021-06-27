@@ -59,8 +59,7 @@ GetSupportedResourceTypesResponse::GetSupportedResourceTypesResponse(
  */
 const GetSupportedResourceTypesRequest * GetSupportedResourceTypesResponse::request() const
 {
-    Q_D(const GetSupportedResourceTypesResponse);
-    return static_cast<const GetSupportedResourceTypesRequest *>(d->request);
+    return static_cast<const GetSupportedResourceTypesRequest *>(BackupResponse::request());
 }
 
 /*!

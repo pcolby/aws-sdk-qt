@@ -55,8 +55,7 @@ GetAccountBalanceResponse::GetAccountBalanceResponse(
  */
 const GetAccountBalanceRequest * GetAccountBalanceResponse::request() const
 {
-    Q_D(const GetAccountBalanceResponse);
-    return static_cast<const GetAccountBalanceRequest *>(d->request);
+    return static_cast<const GetAccountBalanceRequest *>(MTurkResponse::request());
 }
 
 /*!

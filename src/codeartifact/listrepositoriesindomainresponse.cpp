@@ -293,8 +293,7 @@ ListRepositoriesInDomainResponse::ListRepositoriesInDomainResponse(
  */
 const ListRepositoriesInDomainRequest * ListRepositoriesInDomainResponse::request() const
 {
-    Q_D(const ListRepositoriesInDomainResponse);
-    return static_cast<const ListRepositoriesInDomainRequest *>(d->request);
+    return static_cast<const ListRepositoriesInDomainRequest *>(CodeArtifactResponse::request());
 }
 
 /*!

@@ -55,8 +55,7 @@ DeletePackagingConfigurationResponse::DeletePackagingConfigurationResponse(
  */
 const DeletePackagingConfigurationRequest * DeletePackagingConfigurationResponse::request() const
 {
-    Q_D(const DeletePackagingConfigurationResponse);
-    return static_cast<const DeletePackagingConfigurationRequest *>(d->request);
+    return static_cast<const DeletePackagingConfigurationRequest *>(MediaPackageVodResponse::request());
 }
 
 /*!

@@ -60,6 +60,7 @@ public:
 
 protected:
     /// @cond internal
+    SsoRequestPrivate * const d_ptr; ///< Internal d-pointer.
     SsoRequest(SsoRequestPrivate * const d);
     /// @endcond
 

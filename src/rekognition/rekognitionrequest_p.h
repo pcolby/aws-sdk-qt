@@ -20,15 +20,12 @@
 #ifndef QTAWS_REKOGNITIONREQUEST_P_H
 #define QTAWS_REKOGNITIONREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "rekognitionrequest.h"
-
 namespace QtAws {
 namespace Rekognition {
 
 class RekognitionRequest;
 
-class RekognitionRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class RekognitionRequestPrivate {
 
 public:
     RekognitionRequest::Action action; ///< Rekognition action to be performed.
@@ -39,6 +36,9 @@ public:
     RekognitionRequestPrivate(const RekognitionRequestPrivate &other, RekognitionRequest * const q);
 
     static QString toString(const RekognitionRequest::Action &action);
+
+protected:
+    RekognitionRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(RekognitionRequest)

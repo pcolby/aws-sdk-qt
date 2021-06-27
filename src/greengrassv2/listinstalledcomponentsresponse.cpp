@@ -72,8 +72,7 @@ ListInstalledComponentsResponse::ListInstalledComponentsResponse(
  */
 const ListInstalledComponentsRequest * ListInstalledComponentsResponse::request() const
 {
-    Q_D(const ListInstalledComponentsResponse);
-    return static_cast<const ListInstalledComponentsRequest *>(d->request);
+    return static_cast<const ListInstalledComponentsRequest *>(GreengrassV2Response::request());
 }
 
 /*!

@@ -62,8 +62,7 @@ UpdateRoleDescriptionResponse::UpdateRoleDescriptionResponse(
  */
 const UpdateRoleDescriptionRequest * UpdateRoleDescriptionResponse::request() const
 {
-    Q_D(const UpdateRoleDescriptionResponse);
-    return static_cast<const UpdateRoleDescriptionRequest *>(d->request);
+    return static_cast<const UpdateRoleDescriptionRequest *>(IamResponse::request());
 }
 
 /*!

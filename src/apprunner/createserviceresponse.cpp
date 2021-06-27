@@ -86,8 +86,7 @@ CreateServiceResponse::CreateServiceResponse(
  */
 const CreateServiceRequest * CreateServiceResponse::request() const
 {
-    Q_D(const CreateServiceResponse);
-    return static_cast<const CreateServiceRequest *>(d->request);
+    return static_cast<const CreateServiceRequest *>(AppRunnerResponse::request());
 }
 
 /*!

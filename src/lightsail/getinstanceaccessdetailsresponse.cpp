@@ -74,8 +74,7 @@ GetInstanceAccessDetailsResponse::GetInstanceAccessDetailsResponse(
  */
 const GetInstanceAccessDetailsRequest * GetInstanceAccessDetailsResponse::request() const
 {
-    Q_D(const GetInstanceAccessDetailsResponse);
-    return static_cast<const GetInstanceAccessDetailsRequest *>(d->request);
+    return static_cast<const GetInstanceAccessDetailsRequest *>(LightsailResponse::request());
 }
 
 /*!

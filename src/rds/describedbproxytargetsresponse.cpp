@@ -119,8 +119,7 @@ DescribeDBProxyTargetsResponse::DescribeDBProxyTargetsResponse(
  */
 const DescribeDBProxyTargetsRequest * DescribeDBProxyTargetsResponse::request() const
 {
-    Q_D(const DescribeDBProxyTargetsResponse);
-    return static_cast<const DescribeDBProxyTargetsRequest *>(d->request);
+    return static_cast<const DescribeDBProxyTargetsRequest *>(RdsResponse::request());
 }
 
 /*!

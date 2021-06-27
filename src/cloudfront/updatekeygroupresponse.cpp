@@ -60,8 +60,7 @@ UpdateKeyGroupResponse::UpdateKeyGroupResponse(
  */
 const UpdateKeyGroupRequest * UpdateKeyGroupResponse::request() const
 {
-    Q_D(const UpdateKeyGroupResponse);
-    return static_cast<const UpdateKeyGroupRequest *>(d->request);
+    return static_cast<const UpdateKeyGroupRequest *>(CloudFrontResponse::request());
 }
 
 /*!

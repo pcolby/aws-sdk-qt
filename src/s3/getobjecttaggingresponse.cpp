@@ -55,8 +55,7 @@ GetObjectTaggingResponse::GetObjectTaggingResponse(
  */
 const GetObjectTaggingRequest * GetObjectTaggingResponse::request() const
 {
-    Q_D(const GetObjectTaggingResponse);
-    return static_cast<const GetObjectTaggingRequest *>(d->request);
+    return static_cast<const GetObjectTaggingRequest *>(S3Response::request());
 }
 
 /*!

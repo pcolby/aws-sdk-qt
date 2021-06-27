@@ -56,8 +56,7 @@ DisassociateWirelessGatewayFromThingResponse::DisassociateWirelessGatewayFromThi
  */
 const DisassociateWirelessGatewayFromThingRequest * DisassociateWirelessGatewayFromThingResponse::request() const
 {
-    Q_D(const DisassociateWirelessGatewayFromThingResponse);
-    return static_cast<const DisassociateWirelessGatewayFromThingRequest *>(d->request);
+    return static_cast<const DisassociateWirelessGatewayFromThingRequest *>(IoTWirelessResponse::request());
 }
 
 /*!

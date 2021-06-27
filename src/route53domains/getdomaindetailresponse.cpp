@@ -56,8 +56,7 @@ GetDomainDetailResponse::GetDomainDetailResponse(
  */
 const GetDomainDetailRequest * GetDomainDetailResponse::request() const
 {
-    Q_D(const GetDomainDetailResponse);
-    return static_cast<const GetDomainDetailRequest *>(d->request);
+    return static_cast<const GetDomainDetailRequest *>(Route53DomainsResponse::request());
 }
 
 /*!

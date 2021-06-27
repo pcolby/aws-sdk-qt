@@ -60,8 +60,7 @@ UpdateAccountCustomizationResponse::UpdateAccountCustomizationResponse(
  */
 const UpdateAccountCustomizationRequest * UpdateAccountCustomizationResponse::request() const
 {
-    Q_D(const UpdateAccountCustomizationResponse);
-    return static_cast<const UpdateAccountCustomizationRequest *>(d->request);
+    return static_cast<const UpdateAccountCustomizationRequest *>(QuickSightResponse::request());
 }
 
 /*!

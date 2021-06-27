@@ -64,8 +64,7 @@ ListResourcesResponse::ListResourcesResponse(
  */
 const ListResourcesRequest * ListResourcesResponse::request() const
 {
-    Q_D(const ListResourcesResponse);
-    return static_cast<const ListResourcesRequest *>(d->request);
+    return static_cast<const ListResourcesRequest *>(RamResponse::request());
 }
 
 /*!

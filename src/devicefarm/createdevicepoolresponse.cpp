@@ -75,8 +75,7 @@ CreateDevicePoolResponse::CreateDevicePoolResponse(
  */
 const CreateDevicePoolRequest * CreateDevicePoolResponse::request() const
 {
-    Q_D(const CreateDevicePoolResponse);
-    return static_cast<const CreateDevicePoolRequest *>(d->request);
+    return static_cast<const CreateDevicePoolRequest *>(DeviceFarmResponse::request());
 }
 
 /*!

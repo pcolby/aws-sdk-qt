@@ -66,8 +66,7 @@ SignUpResponse::SignUpResponse(
  */
 const SignUpRequest * SignUpResponse::request() const
 {
-    Q_D(const SignUpResponse);
-    return static_cast<const SignUpRequest *>(d->request);
+    return static_cast<const SignUpRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

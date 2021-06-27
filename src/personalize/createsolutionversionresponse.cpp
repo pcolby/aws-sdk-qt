@@ -56,8 +56,7 @@ CreateSolutionVersionResponse::CreateSolutionVersionResponse(
  */
 const CreateSolutionVersionRequest * CreateSolutionVersionResponse::request() const
 {
-    Q_D(const CreateSolutionVersionResponse);
-    return static_cast<const CreateSolutionVersionRequest *>(d->request);
+    return static_cast<const CreateSolutionVersionRequest *>(PersonalizeResponse::request());
 }
 
 /*!

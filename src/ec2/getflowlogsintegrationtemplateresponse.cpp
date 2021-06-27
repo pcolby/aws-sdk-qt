@@ -87,8 +87,7 @@ GetFlowLogsIntegrationTemplateResponse::GetFlowLogsIntegrationTemplateResponse(
  */
 const GetFlowLogsIntegrationTemplateRequest * GetFlowLogsIntegrationTemplateResponse::request() const
 {
-    Q_D(const GetFlowLogsIntegrationTemplateResponse);
-    return static_cast<const GetFlowLogsIntegrationTemplateRequest *>(d->request);
+    return static_cast<const GetFlowLogsIntegrationTemplateRequest *>(Ec2Response::request());
 }
 
 /*!

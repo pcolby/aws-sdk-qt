@@ -95,6 +95,7 @@ public:
 
 protected:
     /// @cond internal
+    kendraRequestPrivate * const d_ptr; ///< Internal d-pointer.
     kendraRequest(kendraRequestPrivate * const d);
     /// @endcond
 

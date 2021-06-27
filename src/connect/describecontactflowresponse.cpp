@@ -79,8 +79,7 @@ DescribeContactFlowResponse::DescribeContactFlowResponse(
  */
 const DescribeContactFlowRequest * DescribeContactFlowResponse::request() const
 {
-    Q_D(const DescribeContactFlowResponse);
-    return static_cast<const DescribeContactFlowRequest *>(d->request);
+    return static_cast<const DescribeContactFlowRequest *>(ConnectResponse::request());
 }
 
 /*!

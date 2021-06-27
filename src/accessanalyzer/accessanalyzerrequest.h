@@ -84,6 +84,7 @@ public:
 
 protected:
     /// @cond internal
+    AccessAnalyzerRequestPrivate * const d_ptr; ///< Internal d-pointer.
     AccessAnalyzerRequest(AccessAnalyzerRequestPrivate * const d);
     /// @endcond
 

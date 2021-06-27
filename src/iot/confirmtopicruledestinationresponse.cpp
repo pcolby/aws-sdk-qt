@@ -82,8 +82,7 @@ ConfirmTopicRuleDestinationResponse::ConfirmTopicRuleDestinationResponse(
  */
 const ConfirmTopicRuleDestinationRequest * ConfirmTopicRuleDestinationResponse::request() const
 {
-    Q_D(const ConfirmTopicRuleDestinationResponse);
-    return static_cast<const ConfirmTopicRuleDestinationRequest *>(d->request);
+    return static_cast<const ConfirmTopicRuleDestinationRequest *>(IoTResponse::request());
 }
 
 /*!

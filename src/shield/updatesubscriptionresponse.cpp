@@ -61,8 +61,7 @@ UpdateSubscriptionResponse::UpdateSubscriptionResponse(
  */
 const UpdateSubscriptionRequest * UpdateSubscriptionResponse::request() const
 {
-    Q_D(const UpdateSubscriptionResponse);
-    return static_cast<const UpdateSubscriptionRequest *>(d->request);
+    return static_cast<const UpdateSubscriptionRequest *>(ShieldResponse::request());
 }
 
 /*!

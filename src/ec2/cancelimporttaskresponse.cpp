@@ -87,8 +87,7 @@ CancelImportTaskResponse::CancelImportTaskResponse(
  */
 const CancelImportTaskRequest * CancelImportTaskResponse::request() const
 {
-    Q_D(const CancelImportTaskResponse);
-    return static_cast<const CancelImportTaskRequest *>(d->request);
+    return static_cast<const CancelImportTaskRequest *>(Ec2Response::request());
 }
 
 /*!

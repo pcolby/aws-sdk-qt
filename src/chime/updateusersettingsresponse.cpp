@@ -98,8 +98,7 @@ UpdateUserSettingsResponse::UpdateUserSettingsResponse(
  */
 const UpdateUserSettingsRequest * UpdateUserSettingsResponse::request() const
 {
-    Q_D(const UpdateUserSettingsResponse);
-    return static_cast<const UpdateUserSettingsRequest *>(d->request);
+    return static_cast<const UpdateUserSettingsRequest *>(ChimeResponse::request());
 }
 
 /*!

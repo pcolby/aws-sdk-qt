@@ -97,16 +97,16 @@ FSxClient::FSxClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new FSxClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-03-01"),
+    QStringLiteral("fsx"),
+    QStringLiteral("Amazon FSx"),
+    QStringLiteral("fsx"),
+    parent), d_ptr(new FSxClientPrivate(this))
 {
-    Q_D(FSxClient);
-    d->apiVersion = QStringLiteral("2018-03-01");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("fsx");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon FSx");
-    d->serviceName = QStringLiteral("fsx");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -125,16 +125,16 @@ FSxClient::FSxClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new FSxClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-03-01"),
+    QStringLiteral("fsx"),
+    QStringLiteral("Amazon FSx"),
+    QStringLiteral("fsx"),
+    parent), d_ptr(new FSxClientPrivate(this))
 {
-    Q_D(FSxClient);
-    d->apiVersion = QStringLiteral("2018-03-01");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("fsx");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon FSx");
-    d->serviceName = QStringLiteral("fsx");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -728,10 +728,9 @@ UpdateFileSystemResponse * FSxClient::updateFileSystem(const UpdateFileSystemReq
 /*!
  * Constructs a FSxClientPrivate object with public implementation \a q.
  */
-FSxClientPrivate::FSxClientPrivate(FSxClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+FSxClientPrivate::FSxClientPrivate(FSxClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace FSx

@@ -72,8 +72,7 @@ UpdateCapacityProviderResponse::UpdateCapacityProviderResponse(
  */
 const UpdateCapacityProviderRequest * UpdateCapacityProviderResponse::request() const
 {
-    Q_D(const UpdateCapacityProviderResponse);
-    return static_cast<const UpdateCapacityProviderRequest *>(d->request);
+    return static_cast<const UpdateCapacityProviderRequest *>(EcsResponse::request());
 }
 
 /*!

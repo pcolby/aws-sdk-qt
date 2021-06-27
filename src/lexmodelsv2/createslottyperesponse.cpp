@@ -55,8 +55,7 @@ CreateSlotTypeResponse::CreateSlotTypeResponse(
  */
 const CreateSlotTypeRequest * CreateSlotTypeResponse::request() const
 {
-    Q_D(const CreateSlotTypeResponse);
-    return static_cast<const CreateSlotTypeRequest *>(d->request);
+    return static_cast<const CreateSlotTypeRequest *>(LexModelsV2Response::request());
 }
 
 /*!

@@ -82,8 +82,7 @@ CancelAuditTaskResponse::CancelAuditTaskResponse(
  */
 const CancelAuditTaskRequest * CancelAuditTaskResponse::request() const
 {
-    Q_D(const CancelAuditTaskResponse);
-    return static_cast<const CancelAuditTaskRequest *>(d->request);
+    return static_cast<const CancelAuditTaskRequest *>(IoTResponse::request());
 }
 
 /*!

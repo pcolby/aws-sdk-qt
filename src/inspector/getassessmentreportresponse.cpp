@@ -60,8 +60,7 @@ GetAssessmentReportResponse::GetAssessmentReportResponse(
  */
 const GetAssessmentReportRequest * GetAssessmentReportResponse::request() const
 {
-    Q_D(const GetAssessmentReportResponse);
-    return static_cast<const GetAssessmentReportRequest *>(d->request);
+    return static_cast<const GetAssessmentReportRequest *>(InspectorResponse::request());
 }
 
 /*!

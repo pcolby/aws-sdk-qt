@@ -66,8 +66,7 @@ DescribeUserImportJobResponse::DescribeUserImportJobResponse(
  */
 const DescribeUserImportJobRequest * DescribeUserImportJobResponse::request() const
 {
-    Q_D(const DescribeUserImportJobResponse);
-    return static_cast<const DescribeUserImportJobRequest *>(d->request);
+    return static_cast<const DescribeUserImportJobRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

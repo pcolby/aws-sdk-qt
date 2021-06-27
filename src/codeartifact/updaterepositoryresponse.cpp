@@ -293,8 +293,7 @@ UpdateRepositoryResponse::UpdateRepositoryResponse(
  */
 const UpdateRepositoryRequest * UpdateRepositoryResponse::request() const
 {
-    Q_D(const UpdateRepositoryResponse);
-    return static_cast<const UpdateRepositoryRequest *>(d->request);
+    return static_cast<const UpdateRepositoryRequest *>(CodeArtifactResponse::request());
 }
 
 /*!

@@ -75,8 +75,7 @@ DeleteConfigRuleResponse::DeleteConfigRuleResponse(
  */
 const DeleteConfigRuleRequest * DeleteConfigRuleResponse::request() const
 {
-    Q_D(const DeleteConfigRuleResponse);
-    return static_cast<const DeleteConfigRuleRequest *>(d->request);
+    return static_cast<const DeleteConfigRuleRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

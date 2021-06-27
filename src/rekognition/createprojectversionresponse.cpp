@@ -56,8 +56,7 @@ CreateProjectVersionResponse::CreateProjectVersionResponse(
  */
 const CreateProjectVersionRequest * CreateProjectVersionResponse::request() const
 {
-    Q_D(const CreateProjectVersionResponse);
-    return static_cast<const CreateProjectVersionRequest *>(d->request);
+    return static_cast<const CreateProjectVersionRequest *>(RekognitionResponse::request());
 }
 
 /*!

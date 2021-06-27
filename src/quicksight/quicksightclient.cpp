@@ -262,16 +262,16 @@ QuickSightClient::QuickSightClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new QuickSightClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-04-01"),
+    QStringLiteral("quicksight"),
+    QStringLiteral("Amazon QuickSight"),
+    QStringLiteral("quicksight"),
+    parent), d_ptr(new QuickSightClientPrivate(this))
 {
-    Q_D(QuickSightClient);
-    d->apiVersion = QStringLiteral("2018-04-01");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("quicksight");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon QuickSight");
-    d->serviceName = QStringLiteral("quicksight");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -290,16 +290,16 @@ QuickSightClient::QuickSightClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new QuickSightClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-04-01"),
+    QStringLiteral("quicksight"),
+    QStringLiteral("Amazon QuickSight"),
+    QStringLiteral("quicksight"),
+    parent), d_ptr(new QuickSightClientPrivate(this))
 {
-    Q_D(QuickSightClient);
-    d->apiVersion = QStringLiteral("2018-04-01");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("quicksight");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon QuickSight");
-    d->serviceName = QStringLiteral("quicksight");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -1901,10 +1901,9 @@ UpdateUserResponse * QuickSightClient::updateUser(const UpdateUserRequest &reque
 /*!
  * Constructs a QuickSightClientPrivate object with public implementation \a q.
  */
-QuickSightClientPrivate::QuickSightClientPrivate(QuickSightClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+QuickSightClientPrivate::QuickSightClientPrivate(QuickSightClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace QuickSight

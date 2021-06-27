@@ -60,8 +60,7 @@ RegisterUserResponse::RegisterUserResponse(
  */
 const RegisterUserRequest * RegisterUserResponse::request() const
 {
-    Q_D(const RegisterUserResponse);
-    return static_cast<const RegisterUserRequest *>(d->request);
+    return static_cast<const RegisterUserRequest *>(QuickSightResponse::request());
 }
 
 /*!

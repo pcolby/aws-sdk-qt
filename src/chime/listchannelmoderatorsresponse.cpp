@@ -98,8 +98,7 @@ ListChannelModeratorsResponse::ListChannelModeratorsResponse(
  */
 const ListChannelModeratorsRequest * ListChannelModeratorsResponse::request() const
 {
-    Q_D(const ListChannelModeratorsResponse);
-    return static_cast<const ListChannelModeratorsRequest *>(d->request);
+    return static_cast<const ListChannelModeratorsRequest *>(ChimeResponse::request());
 }
 
 /*!

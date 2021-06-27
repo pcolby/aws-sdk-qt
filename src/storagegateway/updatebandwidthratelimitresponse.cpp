@@ -124,8 +124,7 @@ UpdateBandwidthRateLimitResponse::UpdateBandwidthRateLimitResponse(
  */
 const UpdateBandwidthRateLimitRequest * UpdateBandwidthRateLimitResponse::request() const
 {
-    Q_D(const UpdateBandwidthRateLimitResponse);
-    return static_cast<const UpdateBandwidthRateLimitRequest *>(d->request);
+    return static_cast<const UpdateBandwidthRateLimitRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

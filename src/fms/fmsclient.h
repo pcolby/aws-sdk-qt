@@ -124,6 +124,12 @@ public slots:
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
+protected:
+    /// @cond internal
+    FmsClientPrivate * const d_ptr; ///< Internal d-pointer.
+    FmsClient(FmsClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(FmsClient)
     Q_DISABLE_COPY(FmsClient)

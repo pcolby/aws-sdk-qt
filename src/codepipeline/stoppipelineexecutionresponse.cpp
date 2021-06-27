@@ -240,8 +240,7 @@ StopPipelineExecutionResponse::StopPipelineExecutionResponse(
  */
 const StopPipelineExecutionRequest * StopPipelineExecutionResponse::request() const
 {
-    Q_D(const StopPipelineExecutionResponse);
-    return static_cast<const StopPipelineExecutionRequest *>(d->request);
+    return static_cast<const StopPipelineExecutionRequest *>(CodePipelineResponse::request());
 }
 
 /*!

@@ -83,8 +83,7 @@ EnableAvailabilityZonesForLoadBalancerResponse::EnableAvailabilityZonesForLoadBa
  */
 const EnableAvailabilityZonesForLoadBalancerRequest * EnableAvailabilityZonesForLoadBalancerResponse::request() const
 {
-    Q_D(const EnableAvailabilityZonesForLoadBalancerResponse);
-    return static_cast<const EnableAvailabilityZonesForLoadBalancerRequest *>(d->request);
+    return static_cast<const EnableAvailabilityZonesForLoadBalancerRequest *>(ElasticLoadBalancingResponse::request());
 }
 
 /*!

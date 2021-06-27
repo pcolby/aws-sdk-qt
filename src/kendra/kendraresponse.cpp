@@ -37,7 +37,7 @@ namespace kendra {
  * Constructs a kendraResponse object with parent \a parent.
  */
 kendraResponse::kendraResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new kendraResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new kendraResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ kendraResponse::kendraResponse(QObject * const parent)
  * implementation that inherits from kendraResponsePrivate.
  */
 kendraResponse::kendraResponse(kendraResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void kendraResponse::parseFailure(QIODevice &response)
  * Constructs a kendraResponsePrivate object with public implementation \a q.
  */
 kendraResponsePrivate::kendraResponsePrivate(
-    kendraResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    kendraResponse * const q) : q_ptr(q)
 {
 
 }

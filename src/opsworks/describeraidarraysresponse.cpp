@@ -161,8 +161,7 @@ DescribeRaidArraysResponse::DescribeRaidArraysResponse(
  */
 const DescribeRaidArraysRequest * DescribeRaidArraysResponse::request() const
 {
-    Q_D(const DescribeRaidArraysResponse);
-    return static_cast<const DescribeRaidArraysRequest *>(d->request);
+    return static_cast<const DescribeRaidArraysRequest *>(OpsWorksResponse::request());
 }
 
 /*!

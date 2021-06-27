@@ -62,8 +62,7 @@ CreateServiceLinkedRoleResponse::CreateServiceLinkedRoleResponse(
  */
 const CreateServiceLinkedRoleRequest * CreateServiceLinkedRoleResponse::request() const
 {
-    Q_D(const CreateServiceLinkedRoleResponse);
-    return static_cast<const CreateServiceLinkedRoleRequest *>(d->request);
+    return static_cast<const CreateServiceLinkedRoleRequest *>(IamResponse::request());
 }
 
 /*!

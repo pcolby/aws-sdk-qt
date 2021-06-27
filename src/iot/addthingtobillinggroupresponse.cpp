@@ -82,8 +82,7 @@ AddThingToBillingGroupResponse::AddThingToBillingGroupResponse(
  */
 const AddThingToBillingGroupRequest * AddThingToBillingGroupResponse::request() const
 {
-    Q_D(const AddThingToBillingGroupResponse);
-    return static_cast<const AddThingToBillingGroupRequest *>(d->request);
+    return static_cast<const AddThingToBillingGroupRequest *>(IoTResponse::request());
 }
 
 /*!

@@ -439,8 +439,7 @@ GetFileResponse::GetFileResponse(
  */
 const GetFileRequest * GetFileResponse::request() const
 {
-    Q_D(const GetFileResponse);
-    return static_cast<const GetFileRequest *>(d->request);
+    return static_cast<const GetFileRequest *>(CodeCommitResponse::request());
 }
 
 /*!

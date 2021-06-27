@@ -85,8 +85,7 @@ PauseClusterResponse::PauseClusterResponse(
  */
 const PauseClusterRequest * PauseClusterResponse::request() const
 {
-    Q_D(const PauseClusterResponse);
-    return static_cast<const PauseClusterRequest *>(d->request);
+    return static_cast<const PauseClusterRequest *>(RedshiftResponse::request());
 }
 
 /*!

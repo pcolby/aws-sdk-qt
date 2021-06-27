@@ -86,8 +86,7 @@ AssociateCustomDomainResponse::AssociateCustomDomainResponse(
  */
 const AssociateCustomDomainRequest * AssociateCustomDomainResponse::request() const
 {
-    Q_D(const AssociateCustomDomainResponse);
-    return static_cast<const AssociateCustomDomainRequest *>(d->request);
+    return static_cast<const AssociateCustomDomainRequest *>(AppRunnerResponse::request());
 }
 
 /*!

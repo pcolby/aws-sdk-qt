@@ -58,8 +58,7 @@ BatchGetWorkflowsResponse::BatchGetWorkflowsResponse(
  */
 const BatchGetWorkflowsRequest * BatchGetWorkflowsResponse::request() const
 {
-    Q_D(const BatchGetWorkflowsResponse);
-    return static_cast<const BatchGetWorkflowsRequest *>(d->request);
+    return static_cast<const BatchGetWorkflowsRequest *>(GlueResponse::request());
 }
 
 /*!

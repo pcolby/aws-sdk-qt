@@ -72,8 +72,7 @@ PutClusterCapacityProvidersResponse::PutClusterCapacityProvidersResponse(
  */
 const PutClusterCapacityProvidersRequest * PutClusterCapacityProvidersResponse::request() const
 {
-    Q_D(const PutClusterCapacityProvidersResponse);
-    return static_cast<const PutClusterCapacityProvidersRequest *>(d->request);
+    return static_cast<const PutClusterCapacityProvidersRequest *>(EcsResponse::request());
 }
 
 /*!

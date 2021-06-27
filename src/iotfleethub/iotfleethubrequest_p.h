@@ -20,15 +20,12 @@
 #ifndef QTAWS_IOTFLEETHUBREQUEST_P_H
 #define QTAWS_IOTFLEETHUBREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "iotfleethubrequest.h"
-
 namespace QtAws {
 namespace IoTFleetHub {
 
 class IoTFleetHubRequest;
 
-class IoTFleetHubRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class IoTFleetHubRequestPrivate {
 
 public:
     IoTFleetHubRequest::Action action; ///< IoTFleetHub action to be performed.
@@ -39,6 +36,9 @@ public:
     IoTFleetHubRequestPrivate(const IoTFleetHubRequestPrivate &other, IoTFleetHubRequest * const q);
 
     static QString toString(const IoTFleetHubRequest::Action &action);
+
+protected:
+    IoTFleetHubRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoTFleetHubRequest)

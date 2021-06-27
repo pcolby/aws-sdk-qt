@@ -97,8 +97,7 @@ GetScalingPlanResourceForecastDataResponse::GetScalingPlanResourceForecastDataRe
  */
 const GetScalingPlanResourceForecastDataRequest * GetScalingPlanResourceForecastDataResponse::request() const
 {
-    Q_D(const GetScalingPlanResourceForecastDataResponse);
-    return static_cast<const GetScalingPlanResourceForecastDataRequest *>(d->request);
+    return static_cast<const GetScalingPlanResourceForecastDataRequest *>(AutoScalingPlansResponse::request());
 }
 
 /*!

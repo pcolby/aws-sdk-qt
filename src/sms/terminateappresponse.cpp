@@ -68,8 +68,7 @@ TerminateAppResponse::TerminateAppResponse(
  */
 const TerminateAppRequest * TerminateAppResponse::request() const
 {
-    Q_D(const TerminateAppResponse);
-    return static_cast<const TerminateAppRequest *>(d->request);
+    return static_cast<const TerminateAppRequest *>(SmsResponse::request());
 }
 
 /*!

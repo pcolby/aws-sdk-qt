@@ -55,8 +55,7 @@ UpdateChannelClassResponse::UpdateChannelClassResponse(
  */
 const UpdateChannelClassRequest * UpdateChannelClassResponse::request() const
 {
-    Q_D(const UpdateChannelClassResponse);
-    return static_cast<const UpdateChannelClassRequest *>(d->request);
+    return static_cast<const UpdateChannelClassRequest *>(MediaLiveResponse::request());
 }
 
 /*!

@@ -119,8 +119,7 @@ ModifyDBSubnetGroupResponse::ModifyDBSubnetGroupResponse(
  */
 const ModifyDBSubnetGroupRequest * ModifyDBSubnetGroupResponse::request() const
 {
-    Q_D(const ModifyDBSubnetGroupResponse);
-    return static_cast<const ModifyDBSubnetGroupRequest *>(d->request);
+    return static_cast<const ModifyDBSubnetGroupRequest *>(RdsResponse::request());
 }
 
 /*!

@@ -119,8 +119,7 @@ AddRoleToDBClusterResponse::AddRoleToDBClusterResponse(
  */
 const AddRoleToDBClusterRequest * AddRoleToDBClusterResponse::request() const
 {
-    Q_D(const AddRoleToDBClusterResponse);
-    return static_cast<const AddRoleToDBClusterRequest *>(d->request);
+    return static_cast<const AddRoleToDBClusterRequest *>(RdsResponse::request());
 }
 
 /*!

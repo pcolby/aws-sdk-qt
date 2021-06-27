@@ -73,8 +73,7 @@ ListNamedQueriesResponse::ListNamedQueriesResponse(
  */
 const ListNamedQueriesRequest * ListNamedQueriesResponse::request() const
 {
-    Q_D(const ListNamedQueriesResponse);
-    return static_cast<const ListNamedQueriesRequest *>(d->request);
+    return static_cast<const ListNamedQueriesRequest *>(AthenaResponse::request());
 }
 
 /*!

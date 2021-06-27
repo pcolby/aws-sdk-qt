@@ -177,8 +177,7 @@ CancelEnvironmentDeploymentResponse::CancelEnvironmentDeploymentResponse(
  */
 const CancelEnvironmentDeploymentRequest * CancelEnvironmentDeploymentResponse::request() const
 {
-    Q_D(const CancelEnvironmentDeploymentResponse);
-    return static_cast<const CancelEnvironmentDeploymentRequest *>(d->request);
+    return static_cast<const CancelEnvironmentDeploymentRequest *>(ProtonResponse::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ CreateContainerRecipeResponse::CreateContainerRecipeResponse(
  */
 const CreateContainerRecipeRequest * CreateContainerRecipeResponse::request() const
 {
-    Q_D(const CreateContainerRecipeResponse);
-    return static_cast<const CreateContainerRecipeRequest *>(d->request);
+    return static_cast<const CreateContainerRecipeRequest *>(imagebuilderResponse::request());
 }
 
 /*!

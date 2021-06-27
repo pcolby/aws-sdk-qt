@@ -60,8 +60,7 @@ CreateDashboardResponse::CreateDashboardResponse(
  */
 const CreateDashboardRequest * CreateDashboardResponse::request() const
 {
-    Q_D(const CreateDashboardResponse);
-    return static_cast<const CreateDashboardRequest *>(d->request);
+    return static_cast<const CreateDashboardRequest *>(QuickSightResponse::request());
 }
 
 /*!

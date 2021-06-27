@@ -98,8 +98,7 @@ BatchUpdateUserResponse::BatchUpdateUserResponse(
  */
 const BatchUpdateUserRequest * BatchUpdateUserResponse::request() const
 {
-    Q_D(const BatchUpdateUserResponse);
-    return static_cast<const BatchUpdateUserRequest *>(d->request);
+    return static_cast<const BatchUpdateUserRequest *>(ChimeResponse::request());
 }
 
 /*!

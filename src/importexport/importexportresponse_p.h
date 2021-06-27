@@ -20,14 +20,12 @@
 #ifndef QTAWS_IMPORTEXPORTRESPONSE_P_H
 #define QTAWS_IMPORTEXPORTRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace ImportExport {
 
 class ImportExportResponse;
 
-class ImportExportResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class ImportExportResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    ImportExportResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ImportExportResponse)

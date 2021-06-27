@@ -71,8 +71,7 @@ GetProfileObjectTypeResponse::GetProfileObjectTypeResponse(
  */
 const GetProfileObjectTypeRequest * GetProfileObjectTypeResponse::request() const
 {
-    Q_D(const GetProfileObjectTypeResponse);
-    return static_cast<const GetProfileObjectTypeRequest *>(d->request);
+    return static_cast<const GetProfileObjectTypeRequest *>(CustomerProfilesResponse::request());
 }
 
 /*!

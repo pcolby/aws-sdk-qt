@@ -61,8 +61,7 @@ CreatePrivateVirtualInterfaceResponse::CreatePrivateVirtualInterfaceResponse(
  */
 const CreatePrivateVirtualInterfaceRequest * CreatePrivateVirtualInterfaceResponse::request() const
 {
-    Q_D(const CreatePrivateVirtualInterfaceResponse);
-    return static_cast<const CreatePrivateVirtualInterfaceRequest *>(d->request);
+    return static_cast<const CreatePrivateVirtualInterfaceRequest *>(DirectConnectResponse::request());
 }
 
 /*!

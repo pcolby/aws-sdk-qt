@@ -85,8 +85,7 @@ DescribeLoggingStatusResponse::DescribeLoggingStatusResponse(
  */
 const DescribeLoggingStatusRequest * DescribeLoggingStatusResponse::request() const
 {
-    Q_D(const DescribeLoggingStatusResponse);
-    return static_cast<const DescribeLoggingStatusRequest *>(d->request);
+    return static_cast<const DescribeLoggingStatusRequest *>(RedshiftResponse::request());
 }
 
 /*!

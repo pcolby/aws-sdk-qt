@@ -20,15 +20,12 @@
 #ifndef QTAWS_IOTDATAPLANEREQUEST_P_H
 #define QTAWS_IOTDATAPLANEREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "iotdataplanerequest.h"
-
 namespace QtAws {
 namespace IoTDataPlane {
 
 class IoTDataPlaneRequest;
 
-class IoTDataPlaneRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class IoTDataPlaneRequestPrivate {
 
 public:
     IoTDataPlaneRequest::Action action; ///< IoTDataPlane action to be performed.
@@ -39,6 +36,9 @@ public:
     IoTDataPlaneRequestPrivate(const IoTDataPlaneRequestPrivate &other, IoTDataPlaneRequest * const q);
 
     static QString toString(const IoTDataPlaneRequest::Action &action);
+
+protected:
+    IoTDataPlaneRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoTDataPlaneRequest)

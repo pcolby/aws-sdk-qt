@@ -77,8 +77,7 @@ ContinueUpdateRollbackResponse::ContinueUpdateRollbackResponse(
  */
 const ContinueUpdateRollbackRequest * ContinueUpdateRollbackResponse::request() const
 {
-    Q_D(const ContinueUpdateRollbackResponse);
-    return static_cast<const ContinueUpdateRollbackRequest *>(d->request);
+    return static_cast<const ContinueUpdateRollbackRequest *>(CloudFormationResponse::request());
 }
 
 /*!

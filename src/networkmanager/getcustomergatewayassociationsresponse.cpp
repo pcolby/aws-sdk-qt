@@ -62,8 +62,7 @@ GetCustomerGatewayAssociationsResponse::GetCustomerGatewayAssociationsResponse(
  */
 const GetCustomerGatewayAssociationsRequest * GetCustomerGatewayAssociationsResponse::request() const
 {
-    Q_D(const GetCustomerGatewayAssociationsResponse);
-    return static_cast<const GetCustomerGatewayAssociationsRequest *>(d->request);
+    return static_cast<const GetCustomerGatewayAssociationsRequest *>(NetworkManagerResponse::request());
 }
 
 /*!

@@ -62,8 +62,7 @@ GetLexiconResponse::GetLexiconResponse(
  */
 const GetLexiconRequest * GetLexiconResponse::request() const
 {
-    Q_D(const GetLexiconResponse);
-    return static_cast<const GetLexiconRequest *>(d->request);
+    return static_cast<const GetLexiconRequest *>(PollyResponse::request());
 }
 
 /*!

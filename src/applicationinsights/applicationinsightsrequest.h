@@ -83,6 +83,7 @@ public:
 
 protected:
     /// @cond internal
+    ApplicationInsightsRequestPrivate * const d_ptr; ///< Internal d-pointer.
     ApplicationInsightsRequest(ApplicationInsightsRequestPrivate * const d);
     /// @endcond
 

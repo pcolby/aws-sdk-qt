@@ -56,8 +56,7 @@ DescribeJournalS3ExportResponse::DescribeJournalS3ExportResponse(
  */
 const DescribeJournalS3ExportRequest * DescribeJournalS3ExportResponse::request() const
 {
-    Q_D(const DescribeJournalS3ExportResponse);
-    return static_cast<const DescribeJournalS3ExportRequest *>(d->request);
+    return static_cast<const DescribeJournalS3ExportRequest *>(QldbResponse::request());
 }
 
 /*!

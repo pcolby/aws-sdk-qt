@@ -20,14 +20,12 @@
 #ifndef QTAWS_DAXRESPONSE_P_H
 #define QTAWS_DAXRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace DAX {
 
 class DaxResponse;
 
-class DaxResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class DaxResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    DaxResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DaxResponse)

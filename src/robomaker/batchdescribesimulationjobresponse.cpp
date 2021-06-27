@@ -56,8 +56,7 @@ BatchDescribeSimulationJobResponse::BatchDescribeSimulationJobResponse(
  */
 const BatchDescribeSimulationJobRequest * BatchDescribeSimulationJobResponse::request() const
 {
-    Q_D(const BatchDescribeSimulationJobResponse);
-    return static_cast<const BatchDescribeSimulationJobRequest *>(d->request);
+    return static_cast<const BatchDescribeSimulationJobRequest *>(RoboMakerResponse::request());
 }
 
 /*!

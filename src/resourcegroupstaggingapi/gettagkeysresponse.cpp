@@ -55,8 +55,7 @@ GetTagKeysResponse::GetTagKeysResponse(
  */
 const GetTagKeysRequest * GetTagKeysResponse::request() const
 {
-    Q_D(const GetTagKeysResponse);
-    return static_cast<const GetTagKeysRequest *>(d->request);
+    return static_cast<const GetTagKeysRequest *>(ResourceGroupsTaggingAPIResponse::request());
 }
 
 /*!

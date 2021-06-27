@@ -58,8 +58,7 @@ DeleteApplicationResponse::DeleteApplicationResponse(
  */
 const DeleteApplicationRequest * DeleteApplicationResponse::request() const
 {
-    Q_D(const DeleteApplicationResponse);
-    return static_cast<const DeleteApplicationRequest *>(d->request);
+    return static_cast<const DeleteApplicationRequest *>(KinesisAnalyticsV2Response::request());
 }
 
 /*!

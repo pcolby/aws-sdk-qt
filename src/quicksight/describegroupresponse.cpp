@@ -60,8 +60,7 @@ DescribeGroupResponse::DescribeGroupResponse(
  */
 const DescribeGroupRequest * DescribeGroupResponse::request() const
 {
-    Q_D(const DescribeGroupResponse);
-    return static_cast<const DescribeGroupRequest *>(d->request);
+    return static_cast<const DescribeGroupRequest *>(QuickSightResponse::request());
 }
 
 /*!

@@ -305,6 +305,12 @@ public slots:
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
+protected:
+    /// @cond internal
+    ConfigServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
+    ConfigServiceClient(ConfigServiceClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(ConfigServiceClient)
     Q_DISABLE_COPY(ConfigServiceClient)

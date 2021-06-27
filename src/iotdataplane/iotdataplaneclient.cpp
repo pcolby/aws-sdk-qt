@@ -88,16 +88,16 @@ IoTDataPlaneClient::IoTDataPlaneClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new IoTDataPlaneClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2015-05-28"),
+    QStringLiteral("data.iot"),
+    QStringLiteral("AWS IoT Data Plane"),
+    QStringLiteral("iotdata"),
+    parent), d_ptr(new IoTDataPlaneClientPrivate(this))
 {
-    Q_D(IoTDataPlaneClient);
-    d->apiVersion = QStringLiteral("2015-05-28");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("data.iot");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS IoT Data Plane");
-    d->serviceName = QStringLiteral("iotdata");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -116,16 +116,16 @@ IoTDataPlaneClient::IoTDataPlaneClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new IoTDataPlaneClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2015-05-28"),
+    QStringLiteral("data.iot"),
+    QStringLiteral("AWS IoT Data Plane"),
+    QStringLiteral("iotdata"),
+    parent), d_ptr(new IoTDataPlaneClientPrivate(this))
 {
-    Q_D(IoTDataPlaneClient);
-    d->apiVersion = QStringLiteral("2015-05-28");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("data.iot");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS IoT Data Plane");
-    d->serviceName = QStringLiteral("iotdata");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -228,10 +228,9 @@ UpdateThingShadowResponse * IoTDataPlaneClient::updateThingShadow(const UpdateTh
 /*!
  * Constructs a IoTDataPlaneClientPrivate object with public implementation \a q.
  */
-IoTDataPlaneClientPrivate::IoTDataPlaneClientPrivate(IoTDataPlaneClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+IoTDataPlaneClientPrivate::IoTDataPlaneClientPrivate(IoTDataPlaneClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace IoTDataPlane

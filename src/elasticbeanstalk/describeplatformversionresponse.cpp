@@ -77,8 +77,7 @@ DescribePlatformVersionResponse::DescribePlatformVersionResponse(
  */
 const DescribePlatformVersionRequest * DescribePlatformVersionResponse::request() const
 {
-    Q_D(const DescribePlatformVersionResponse);
-    return static_cast<const DescribePlatformVersionRequest *>(d->request);
+    return static_cast<const DescribePlatformVersionRequest *>(ElasticBeanstalkResponse::request());
 }
 
 /*!

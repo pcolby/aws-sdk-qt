@@ -70,8 +70,7 @@ EnableSagemakerServicecatalogPortfolioResponse::EnableSagemakerServicecatalogPor
  */
 const EnableSagemakerServicecatalogPortfolioRequest * EnableSagemakerServicecatalogPortfolioResponse::request() const
 {
-    Q_D(const EnableSagemakerServicecatalogPortfolioResponse);
-    return static_cast<const EnableSagemakerServicecatalogPortfolioRequest *>(d->request);
+    return static_cast<const EnableSagemakerServicecatalogPortfolioRequest *>(SageMakerResponse::request());
 }
 
 /*!

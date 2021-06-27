@@ -55,8 +55,7 @@ DeletePublicAccessBlockResponse::DeletePublicAccessBlockResponse(
  */
 const DeletePublicAccessBlockRequest * DeletePublicAccessBlockResponse::request() const
 {
-    Q_D(const DeletePublicAccessBlockResponse);
-    return static_cast<const DeletePublicAccessBlockRequest *>(d->request);
+    return static_cast<const DeletePublicAccessBlockRequest *>(S3Response::request());
 }
 
 /*!

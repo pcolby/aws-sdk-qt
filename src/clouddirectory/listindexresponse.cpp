@@ -63,8 +63,7 @@ ListIndexResponse::ListIndexResponse(
  */
 const ListIndexRequest * ListIndexResponse::request() const
 {
-    Q_D(const ListIndexResponse);
-    return static_cast<const ListIndexRequest *>(d->request);
+    return static_cast<const ListIndexRequest *>(CloudDirectoryResponse::request());
 }
 
 /*!

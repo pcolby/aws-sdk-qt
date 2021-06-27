@@ -78,6 +78,7 @@ public:
 
 protected:
     /// @cond internal
+    DataExchangeRequestPrivate * const d_ptr; ///< Internal d-pointer.
     DataExchangeRequest(DataExchangeRequestPrivate * const d);
     /// @endcond
 

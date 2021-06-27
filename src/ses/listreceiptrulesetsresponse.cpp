@@ -66,8 +66,7 @@ ListReceiptRuleSetsResponse::ListReceiptRuleSetsResponse(
  */
 const ListReceiptRuleSetsRequest * ListReceiptRuleSetsResponse::request() const
 {
-    Q_D(const ListReceiptRuleSetsResponse);
-    return static_cast<const ListReceiptRuleSetsRequest *>(d->request);
+    return static_cast<const ListReceiptRuleSetsRequest *>(SesResponse::request());
 }
 
 /*!

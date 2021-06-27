@@ -66,8 +66,7 @@ PublishVersionResponse::PublishVersionResponse(
  */
 const PublishVersionRequest * PublishVersionResponse::request() const
 {
-    Q_D(const PublishVersionResponse);
-    return static_cast<const PublishVersionRequest *>(d->request);
+    return static_cast<const PublishVersionRequest *>(LambdaResponse::request());
 }
 
 /*!

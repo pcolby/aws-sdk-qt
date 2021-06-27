@@ -55,8 +55,7 @@ ListTagsForStreamResponse::ListTagsForStreamResponse(
  */
 const ListTagsForStreamRequest * ListTagsForStreamResponse::request() const
 {
-    Q_D(const ListTagsForStreamResponse);
-    return static_cast<const ListTagsForStreamRequest *>(d->request);
+    return static_cast<const ListTagsForStreamRequest *>(KinesisVideoResponse::request());
 }
 
 /*!

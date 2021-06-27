@@ -56,8 +56,7 @@ IndexFacesResponse::IndexFacesResponse(
  */
 const IndexFacesRequest * IndexFacesResponse::request() const
 {
-    Q_D(const IndexFacesResponse);
-    return static_cast<const IndexFacesRequest *>(d->request);
+    return static_cast<const IndexFacesRequest *>(RekognitionResponse::request());
 }
 
 /*!

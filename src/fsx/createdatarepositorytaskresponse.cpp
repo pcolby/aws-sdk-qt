@@ -57,8 +57,7 @@ CreateDataRepositoryTaskResponse::CreateDataRepositoryTaskResponse(
  */
 const CreateDataRepositoryTaskRequest * CreateDataRepositoryTaskResponse::request() const
 {
-    Q_D(const CreateDataRepositoryTaskResponse);
-    return static_cast<const CreateDataRepositoryTaskRequest *>(d->request);
+    return static_cast<const CreateDataRepositoryTaskRequest *>(FSxResponse::request());
 }
 
 /*!

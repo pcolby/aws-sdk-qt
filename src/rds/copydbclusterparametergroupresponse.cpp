@@ -119,8 +119,7 @@ CopyDBClusterParameterGroupResponse::CopyDBClusterParameterGroupResponse(
  */
 const CopyDBClusterParameterGroupRequest * CopyDBClusterParameterGroupResponse::request() const
 {
-    Q_D(const CopyDBClusterParameterGroupResponse);
-    return static_cast<const CopyDBClusterParameterGroupRequest *>(d->request);
+    return static_cast<const CopyDBClusterParameterGroupRequest *>(RdsResponse::request());
 }
 
 /*!

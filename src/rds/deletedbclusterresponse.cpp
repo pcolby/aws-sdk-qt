@@ -119,8 +119,7 @@ DeleteDBClusterResponse::DeleteDBClusterResponse(
  */
 const DeleteDBClusterRequest * DeleteDBClusterResponse::request() const
 {
-    Q_D(const DeleteDBClusterResponse);
-    return static_cast<const DeleteDBClusterRequest *>(d->request);
+    return static_cast<const DeleteDBClusterRequest *>(RdsResponse::request());
 }
 
 /*!

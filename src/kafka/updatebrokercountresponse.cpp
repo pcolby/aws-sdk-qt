@@ -56,8 +56,7 @@ UpdateBrokerCountResponse::UpdateBrokerCountResponse(
  */
 const UpdateBrokerCountRequest * UpdateBrokerCountResponse::request() const
 {
-    Q_D(const UpdateBrokerCountResponse);
-    return static_cast<const UpdateBrokerCountRequest *>(d->request);
+    return static_cast<const UpdateBrokerCountRequest *>(KafkaResponse::request());
 }
 
 /*!

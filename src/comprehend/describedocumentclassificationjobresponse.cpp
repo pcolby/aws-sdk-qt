@@ -58,8 +58,7 @@ DescribeDocumentClassificationJobResponse::DescribeDocumentClassificationJobResp
  */
 const DescribeDocumentClassificationJobRequest * DescribeDocumentClassificationJobResponse::request() const
 {
-    Q_D(const DescribeDocumentClassificationJobResponse);
-    return static_cast<const DescribeDocumentClassificationJobRequest *>(d->request);
+    return static_cast<const DescribeDocumentClassificationJobRequest *>(ComprehendResponse::request());
 }
 
 /*!

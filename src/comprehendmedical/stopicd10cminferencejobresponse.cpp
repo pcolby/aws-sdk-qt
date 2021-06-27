@@ -57,8 +57,7 @@ StopICD10CMInferenceJobResponse::StopICD10CMInferenceJobResponse(
  */
 const StopICD10CMInferenceJobRequest * StopICD10CMInferenceJobResponse::request() const
 {
-    Q_D(const StopICD10CMInferenceJobResponse);
-    return static_cast<const StopICD10CMInferenceJobRequest *>(d->request);
+    return static_cast<const StopICD10CMInferenceJobRequest *>(ComprehendMedicalResponse::request());
 }
 
 /*!

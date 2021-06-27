@@ -59,8 +59,7 @@ RejectGrantResponse::RejectGrantResponse(
  */
 const RejectGrantRequest * RejectGrantResponse::request() const
 {
-    Q_D(const RejectGrantResponse);
-    return static_cast<const RejectGrantRequest *>(d->request);
+    return static_cast<const RejectGrantRequest *>(LicenseManagerResponse::request());
 }
 
 /*!

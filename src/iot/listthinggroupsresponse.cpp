@@ -82,8 +82,7 @@ ListThingGroupsResponse::ListThingGroupsResponse(
  */
 const ListThingGroupsRequest * ListThingGroupsResponse::request() const
 {
-    Q_D(const ListThingGroupsResponse);
-    return static_cast<const ListThingGroupsRequest *>(d->request);
+    return static_cast<const ListThingGroupsRequest *>(IoTResponse::request());
 }
 
 /*!

@@ -60,8 +60,7 @@ PutAccountConfigurationResponse::PutAccountConfigurationResponse(
  */
 const PutAccountConfigurationRequest * PutAccountConfigurationResponse::request() const
 {
-    Q_D(const PutAccountConfigurationResponse);
-    return static_cast<const PutAccountConfigurationRequest *>(d->request);
+    return static_cast<const PutAccountConfigurationRequest *>(AcmResponse::request());
 }
 
 /*!

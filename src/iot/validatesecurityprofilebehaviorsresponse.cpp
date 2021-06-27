@@ -82,8 +82,7 @@ ValidateSecurityProfileBehaviorsResponse::ValidateSecurityProfileBehaviorsRespon
  */
 const ValidateSecurityProfileBehaviorsRequest * ValidateSecurityProfileBehaviorsResponse::request() const
 {
-    Q_D(const ValidateSecurityProfileBehaviorsResponse);
-    return static_cast<const ValidateSecurityProfileBehaviorsRequest *>(d->request);
+    return static_cast<const ValidateSecurityProfileBehaviorsRequest *>(IoTResponse::request());
 }
 
 /*!

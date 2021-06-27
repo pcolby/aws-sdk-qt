@@ -58,8 +58,7 @@ CreateConnectorDefinitionVersionResponse::CreateConnectorDefinitionVersionRespon
  */
 const CreateConnectorDefinitionVersionRequest * CreateConnectorDefinitionVersionResponse::request() const
 {
-    Q_D(const CreateConnectorDefinitionVersionResponse);
-    return static_cast<const CreateConnectorDefinitionVersionRequest *>(d->request);
+    return static_cast<const CreateConnectorDefinitionVersionRequest *>(GreengrassResponse::request());
 }
 
 /*!

@@ -289,6 +289,12 @@ public slots:
     UpdateEmailIdentityPolicyResponse * updateEmailIdentityPolicy(const UpdateEmailIdentityPolicyRequest &request);
     UpdateEmailTemplateResponse * updateEmailTemplate(const UpdateEmailTemplateRequest &request);
 
+protected:
+    /// @cond internal
+    Sesv2ClientPrivate * const d_ptr; ///< Internal d-pointer.
+    Sesv2Client(Sesv2ClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(Sesv2Client)
     Q_DISABLE_COPY(Sesv2Client)

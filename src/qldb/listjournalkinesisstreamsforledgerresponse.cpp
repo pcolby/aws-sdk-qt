@@ -56,8 +56,7 @@ ListJournalKinesisStreamsForLedgerResponse::ListJournalKinesisStreamsForLedgerRe
  */
 const ListJournalKinesisStreamsForLedgerRequest * ListJournalKinesisStreamsForLedgerResponse::request() const
 {
-    Q_D(const ListJournalKinesisStreamsForLedgerResponse);
-    return static_cast<const ListJournalKinesisStreamsForLedgerRequest *>(d->request);
+    return static_cast<const ListJournalKinesisStreamsForLedgerRequest *>(QldbResponse::request());
 }
 
 /*!

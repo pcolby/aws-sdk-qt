@@ -58,8 +58,7 @@ DeleteAlertResponse::DeleteAlertResponse(
  */
 const DeleteAlertRequest * DeleteAlertResponse::request() const
 {
-    Q_D(const DeleteAlertResponse);
-    return static_cast<const DeleteAlertRequest *>(d->request);
+    return static_cast<const DeleteAlertRequest *>(LookoutMetricsResponse::request());
 }
 
 /*!

@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    SmsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     SmsResponse(SmsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

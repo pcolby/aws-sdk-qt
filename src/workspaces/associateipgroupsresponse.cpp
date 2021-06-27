@@ -58,8 +58,7 @@ AssociateIpGroupsResponse::AssociateIpGroupsResponse(
  */
 const AssociateIpGroupsRequest * AssociateIpGroupsResponse::request() const
 {
-    Q_D(const AssociateIpGroupsResponse);
-    return static_cast<const AssociateIpGroupsRequest *>(d->request);
+    return static_cast<const AssociateIpGroupsRequest *>(WorkSpacesResponse::request());
 }
 
 /*!

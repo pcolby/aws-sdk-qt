@@ -62,8 +62,7 @@ DeletePolicyVersionResponse::DeletePolicyVersionResponse(
  */
 const DeletePolicyVersionRequest * DeletePolicyVersionResponse::request() const
 {
-    Q_D(const DeletePolicyVersionResponse);
-    return static_cast<const DeletePolicyVersionRequest *>(d->request);
+    return static_cast<const DeletePolicyVersionRequest *>(IamResponse::request());
 }
 
 /*!

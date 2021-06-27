@@ -69,8 +69,7 @@ DeleteSnapshotResponse::DeleteSnapshotResponse(
  */
 const DeleteSnapshotRequest * DeleteSnapshotResponse::request() const
 {
-    Q_D(const DeleteSnapshotResponse);
-    return static_cast<const DeleteSnapshotRequest *>(d->request);
+    return static_cast<const DeleteSnapshotRequest *>(DirectoryServiceResponse::request());
 }
 
 /*!

@@ -55,8 +55,7 @@ ListEulasResponse::ListEulasResponse(
  */
 const ListEulasRequest * ListEulasResponse::request() const
 {
-    Q_D(const ListEulasResponse);
-    return static_cast<const ListEulasRequest *>(d->request);
+    return static_cast<const ListEulasRequest *>(NimbleStudioResponse::request());
 }
 
 /*!

@@ -37,7 +37,7 @@ namespace Pricing {
  * Constructs a PricingResponse object with parent \a parent.
  */
 PricingResponse::PricingResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new PricingResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new PricingResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ PricingResponse::PricingResponse(QObject * const parent)
  * implementation that inherits from PricingResponsePrivate.
  */
 PricingResponse::PricingResponse(PricingResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void PricingResponse::parseFailure(QIODevice &response)
  * Constructs a PricingResponsePrivate object with public implementation \a q.
  */
 PricingResponsePrivate::PricingResponsePrivate(
-    PricingResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    PricingResponse * const q) : q_ptr(q)
 {
 
 }

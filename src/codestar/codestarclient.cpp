@@ -183,16 +183,16 @@ CodeStarClient::CodeStarClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CodeStarClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-04-19"),
+    QStringLiteral("codestar"),
+    QStringLiteral("AWS CodeStar"),
+    QStringLiteral("codestar"),
+    parent), d_ptr(new CodeStarClientPrivate(this))
 {
-    Q_D(CodeStarClient);
-    d->apiVersion = QStringLiteral("2017-04-19");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("codestar");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS CodeStar");
-    d->serviceName = QStringLiteral("codestar");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -211,16 +211,16 @@ CodeStarClient::CodeStarClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CodeStarClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-04-19"),
+    QStringLiteral("codestar"),
+    QStringLiteral("AWS CodeStar"),
+    QStringLiteral("codestar"),
+    parent), d_ptr(new CodeStarClientPrivate(this))
 {
-    Q_D(CodeStarClient);
-    d->apiVersion = QStringLiteral("2017-04-19");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("codestar");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS CodeStar");
-    d->serviceName = QStringLiteral("codestar");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -480,10 +480,9 @@ UpdateUserProfileResponse * CodeStarClient::updateUserProfile(const UpdateUserPr
 /*!
  * Constructs a CodeStarClientPrivate object with public implementation \a q.
  */
-CodeStarClientPrivate::CodeStarClientPrivate(CodeStarClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+CodeStarClientPrivate::CodeStarClientPrivate(CodeStarClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace CodeStar

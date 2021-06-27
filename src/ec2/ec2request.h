@@ -507,6 +507,7 @@ public:
 
 protected:
     /// @cond internal
+    Ec2RequestPrivate * const d_ptr; ///< Internal d-pointer.
     Ec2Request(Ec2RequestPrivate * const d);
     /// @endcond
 

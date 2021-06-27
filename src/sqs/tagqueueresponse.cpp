@@ -126,8 +126,7 @@ TagQueueResponse::TagQueueResponse(
  */
 const TagQueueRequest * TagQueueResponse::request() const
 {
-    Q_D(const TagQueueResponse);
-    return static_cast<const TagQueueRequest *>(d->request);
+    return static_cast<const TagQueueRequest *>(SqsResponse::request());
 }
 
 /*!

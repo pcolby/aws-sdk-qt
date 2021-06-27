@@ -65,8 +65,7 @@ UpdateNodegroupConfigResponse::UpdateNodegroupConfigResponse(
  */
 const UpdateNodegroupConfigRequest * UpdateNodegroupConfigResponse::request() const
 {
-    Q_D(const UpdateNodegroupConfigResponse);
-    return static_cast<const UpdateNodegroupConfigRequest *>(d->request);
+    return static_cast<const UpdateNodegroupConfigRequest *>(EksResponse::request());
 }
 
 /*!

@@ -92,8 +92,7 @@ PutAccountSendingAttributesResponse::PutAccountSendingAttributesResponse(
  */
 const PutAccountSendingAttributesRequest * PutAccountSendingAttributesResponse::request() const
 {
-    Q_D(const PutAccountSendingAttributesResponse);
-    return static_cast<const PutAccountSendingAttributesRequest *>(d->request);
+    return static_cast<const PutAccountSendingAttributesRequest *>(PinpointEmailResponse::request());
 }
 
 /*!

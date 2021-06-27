@@ -62,8 +62,7 @@ UntagPolicyResponse::UntagPolicyResponse(
  */
 const UntagPolicyRequest * UntagPolicyResponse::request() const
 {
-    Q_D(const UntagPolicyResponse);
-    return static_cast<const UntagPolicyRequest *>(d->request);
+    return static_cast<const UntagPolicyRequest *>(IamResponse::request());
 }
 
 /*!

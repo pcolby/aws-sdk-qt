@@ -48,7 +48,7 @@ namespace AutoScalingPlans {
  * Constructs a AutoScalingPlansRequest object for AutoScalingPlans \a action.
  */
 AutoScalingPlansRequest::AutoScalingPlansRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new AutoScalingPlansRequestPrivate(action, this))
+    : d_ptr(new AutoScalingPlansRequestPrivate(action, this))
 {
 
 }
@@ -57,7 +57,8 @@ AutoScalingPlansRequest::AutoScalingPlansRequest(const Action action)
  * Constructs a copy of \a other.
  */
 AutoScalingPlansRequest::AutoScalingPlansRequest(const AutoScalingPlansRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new AutoScalingPlansRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new AutoScalingPlansRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +81,7 @@ AutoScalingPlansRequest& AutoScalingPlansRequest::operator=(const AutoScalingPla
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from AutoScalingPlansRequestPrivate.
  */
-AutoScalingPlansRequest::AutoScalingPlansRequest(AutoScalingPlansRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+AutoScalingPlansRequest::AutoScalingPlansRequest(AutoScalingPlansRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -249,7 +250,7 @@ QNetworkRequest AutoScalingPlansRequest::unsignedRequest(const QUrl &endpoint) c
  * with public implementation \a q.
  */
 AutoScalingPlansRequestPrivate::AutoScalingPlansRequestPrivate(const AutoScalingPlansRequest::Action action, AutoScalingPlansRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -264,8 +265,8 @@ AutoScalingPlansRequestPrivate::AutoScalingPlansRequestPrivate(const AutoScaling
  */
 AutoScalingPlansRequestPrivate::AutoScalingPlansRequestPrivate(const AutoScalingPlansRequestPrivate &other,
                                      AutoScalingPlansRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

@@ -74,8 +74,7 @@ DeleteThingShadowResponse::DeleteThingShadowResponse(
  */
 const DeleteThingShadowRequest * DeleteThingShadowResponse::request() const
 {
-    Q_D(const DeleteThingShadowResponse);
-    return static_cast<const DeleteThingShadowRequest *>(d->request);
+    return static_cast<const DeleteThingShadowRequest *>(IoTDataPlaneResponse::request());
 }
 
 /*!

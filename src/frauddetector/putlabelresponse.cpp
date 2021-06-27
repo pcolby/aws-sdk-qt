@@ -58,8 +58,7 @@ PutLabelResponse::PutLabelResponse(
  */
 const PutLabelRequest * PutLabelResponse::request() const
 {
-    Q_D(const PutLabelResponse);
-    return static_cast<const PutLabelRequest *>(d->request);
+    return static_cast<const PutLabelRequest *>(FraudDetectorResponse::request());
 }
 
 /*!

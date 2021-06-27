@@ -82,8 +82,7 @@ CreateKeysAndCertificateResponse::CreateKeysAndCertificateResponse(
  */
 const CreateKeysAndCertificateRequest * CreateKeysAndCertificateResponse::request() const
 {
-    Q_D(const CreateKeysAndCertificateResponse);
-    return static_cast<const CreateKeysAndCertificateRequest *>(d->request);
+    return static_cast<const CreateKeysAndCertificateRequest *>(IoTResponse::request());
 }
 
 /*!

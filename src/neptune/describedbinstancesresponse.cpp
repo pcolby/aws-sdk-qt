@@ -72,8 +72,7 @@ DescribeDBInstancesResponse::DescribeDBInstancesResponse(
  */
 const DescribeDBInstancesRequest * DescribeDBInstancesResponse::request() const
 {
-    Q_D(const DescribeDBInstancesResponse);
-    return static_cast<const DescribeDBInstancesRequest *>(d->request);
+    return static_cast<const DescribeDBInstancesRequest *>(NeptuneResponse::request());
 }
 
 /*!

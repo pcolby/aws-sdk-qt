@@ -75,8 +75,7 @@ DeleteAggregationAuthorizationResponse::DeleteAggregationAuthorizationResponse(
  */
 const DeleteAggregationAuthorizationRequest * DeleteAggregationAuthorizationResponse::request() const
 {
-    Q_D(const DeleteAggregationAuthorizationResponse);
-    return static_cast<const DeleteAggregationAuthorizationRequest *>(d->request);
+    return static_cast<const DeleteAggregationAuthorizationRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ DeleteTranscriptionJobResponse::DeleteTranscriptionJobResponse(
  */
 const DeleteTranscriptionJobRequest * DeleteTranscriptionJobResponse::request() const
 {
-    Q_D(const DeleteTranscriptionJobResponse);
-    return static_cast<const DeleteTranscriptionJobRequest *>(d->request);
+    return static_cast<const DeleteTranscriptionJobRequest *>(TranscribeServiceResponse::request());
 }
 
 /*!

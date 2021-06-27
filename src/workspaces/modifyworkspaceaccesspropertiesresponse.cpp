@@ -58,8 +58,7 @@ ModifyWorkspaceAccessPropertiesResponse::ModifyWorkspaceAccessPropertiesResponse
  */
 const ModifyWorkspaceAccessPropertiesRequest * ModifyWorkspaceAccessPropertiesResponse::request() const
 {
-    Q_D(const ModifyWorkspaceAccessPropertiesResponse);
-    return static_cast<const ModifyWorkspaceAccessPropertiesRequest *>(d->request);
+    return static_cast<const ModifyWorkspaceAccessPropertiesRequest *>(WorkSpacesResponse::request());
 }
 
 /*!

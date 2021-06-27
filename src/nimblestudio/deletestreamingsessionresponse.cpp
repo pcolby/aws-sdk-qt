@@ -55,8 +55,7 @@ DeleteStreamingSessionResponse::DeleteStreamingSessionResponse(
  */
 const DeleteStreamingSessionRequest * DeleteStreamingSessionResponse::request() const
 {
-    Q_D(const DeleteStreamingSessionResponse);
-    return static_cast<const DeleteStreamingSessionRequest *>(d->request);
+    return static_cast<const DeleteStreamingSessionRequest *>(NimbleStudioResponse::request());
 }
 
 /*!

@@ -37,7 +37,7 @@ namespace KinesisAnalytics {
  * Constructs a KinesisAnalyticsResponse object with parent \a parent.
  */
 KinesisAnalyticsResponse::KinesisAnalyticsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new KinesisAnalyticsResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new KinesisAnalyticsResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ KinesisAnalyticsResponse::KinesisAnalyticsResponse(QObject * const parent)
  * implementation that inherits from KinesisAnalyticsResponsePrivate.
  */
 KinesisAnalyticsResponse::KinesisAnalyticsResponse(KinesisAnalyticsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void KinesisAnalyticsResponse::parseFailure(QIODevice &response)
  * Constructs a KinesisAnalyticsResponsePrivate object with public implementation \a q.
  */
 KinesisAnalyticsResponsePrivate::KinesisAnalyticsResponsePrivate(
-    KinesisAnalyticsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    KinesisAnalyticsResponse * const q) : q_ptr(q)
 {
 
 }

@@ -77,6 +77,7 @@ public:
 
 protected:
     /// @cond internal
+    DaxRequestPrivate * const d_ptr; ///< Internal d-pointer.
     DaxRequest(DaxRequestPrivate * const d);
     /// @endcond
 

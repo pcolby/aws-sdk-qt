@@ -60,8 +60,7 @@ UpdateUsageResponse::UpdateUsageResponse(
  */
 const UpdateUsageRequest * UpdateUsageResponse::request() const
 {
-    Q_D(const UpdateUsageResponse);
-    return static_cast<const UpdateUsageRequest *>(d->request);
+    return static_cast<const UpdateUsageRequest *>(APIGatewayResponse::request());
 }
 
 /*!

@@ -251,16 +251,16 @@ S3Client::S3Client(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new S3ClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2006-03-01"),
+    QStringLiteral("s3"),
+    QStringLiteral("Amazon Simple Storage Service"),
+    QStringLiteral("s3"),
+    parent), d_ptr(new S3ClientPrivate(this))
 {
-    Q_D(S3Client);
-    d->apiVersion = QStringLiteral("2006-03-01");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("s3");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Simple Storage Service");
-    d->serviceName = QStringLiteral("s3");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -279,16 +279,16 @@ S3Client::S3Client(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new S3ClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2006-03-01"),
+    QStringLiteral("s3"),
+    QStringLiteral("Amazon Simple Storage Service"),
+    QStringLiteral("s3"),
+    parent), d_ptr(new S3ClientPrivate(this))
 {
-    Q_D(S3Client);
-    d->apiVersion = QStringLiteral("2006-03-01");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("s3");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Simple Storage Service");
-    d->serviceName = QStringLiteral("s3");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -6775,10 +6775,9 @@ WriteGetObjectResponseResponse * S3Client::writeGetObjectResponse(const WriteGet
 /*!
  * Constructs a S3ClientPrivate object with public implementation \a q.
  */
-S3ClientPrivate::S3ClientPrivate(S3Client * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+S3ClientPrivate::S3ClientPrivate(S3Client * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace S3

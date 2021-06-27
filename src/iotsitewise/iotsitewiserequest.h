@@ -114,6 +114,7 @@ public:
 
 protected:
     /// @cond internal
+    IoTSiteWiseRequestPrivate * const d_ptr; ///< Internal d-pointer.
     IoTSiteWiseRequest(IoTSiteWiseRequestPrivate * const d);
     /// @endcond
 

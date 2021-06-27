@@ -81,8 +81,7 @@ CreateImageBuilderResponse::CreateImageBuilderResponse(
  */
 const CreateImageBuilderRequest * CreateImageBuilderResponse::request() const
 {
-    Q_D(const CreateImageBuilderResponse);
-    return static_cast<const CreateImageBuilderRequest *>(d->request);
+    return static_cast<const CreateImageBuilderRequest *>(AppStreamResponse::request());
 }
 
 /*!

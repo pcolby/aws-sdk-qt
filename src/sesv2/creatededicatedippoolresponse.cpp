@@ -88,8 +88,7 @@ CreateDedicatedIpPoolResponse::CreateDedicatedIpPoolResponse(
  */
 const CreateDedicatedIpPoolRequest * CreateDedicatedIpPoolResponse::request() const
 {
-    Q_D(const CreateDedicatedIpPoolResponse);
-    return static_cast<const CreateDedicatedIpPoolRequest *>(d->request);
+    return static_cast<const CreateDedicatedIpPoolRequest *>(Sesv2Response::request());
 }
 
 /*!

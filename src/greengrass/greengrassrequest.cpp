@@ -134,7 +134,7 @@ namespace Greengrass {
  * Constructs a GreengrassRequest object for Greengrass \a action.
  */
 GreengrassRequest::GreengrassRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new GreengrassRequestPrivate(action, this))
+    : d_ptr(new GreengrassRequestPrivate(action, this))
 {
 
 }
@@ -143,7 +143,8 @@ GreengrassRequest::GreengrassRequest(const Action action)
  * Constructs a copy of \a other.
  */
 GreengrassRequest::GreengrassRequest(const GreengrassRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new GreengrassRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new GreengrassRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -166,7 +167,7 @@ GreengrassRequest& GreengrassRequest::operator=(const GreengrassRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from GreengrassRequestPrivate.
  */
-GreengrassRequest::GreengrassRequest(GreengrassRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+GreengrassRequest::GreengrassRequest(GreengrassRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -335,7 +336,7 @@ QNetworkRequest GreengrassRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 GreengrassRequestPrivate::GreengrassRequestPrivate(const GreengrassRequest::Action action, GreengrassRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -350,8 +351,8 @@ GreengrassRequestPrivate::GreengrassRequestPrivate(const GreengrassRequest::Acti
  */
 GreengrassRequestPrivate::GreengrassRequestPrivate(const GreengrassRequestPrivate &other,
                                      GreengrassRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

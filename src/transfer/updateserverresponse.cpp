@@ -62,8 +62,7 @@ UpdateServerResponse::UpdateServerResponse(
  */
 const UpdateServerRequest * UpdateServerResponse::request() const
 {
-    Q_D(const UpdateServerResponse);
-    return static_cast<const UpdateServerRequest *>(d->request);
+    return static_cast<const UpdateServerRequest *>(TransferResponse::request());
 }
 
 /*!

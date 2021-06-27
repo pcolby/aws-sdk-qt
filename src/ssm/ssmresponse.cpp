@@ -37,7 +37,7 @@ namespace SSM {
  * Constructs a SsmResponse object with parent \a parent.
  */
 SsmResponse::SsmResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new SsmResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new SsmResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ SsmResponse::SsmResponse(QObject * const parent)
  * implementation that inherits from SsmResponsePrivate.
  */
 SsmResponse::SsmResponse(SsmResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void SsmResponse::parseFailure(QIODevice &response)
  * Constructs a SsmResponsePrivate object with public implementation \a q.
  */
 SsmResponsePrivate::SsmResponsePrivate(
-    SsmResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    SsmResponse * const q) : q_ptr(q)
 {
 
 }

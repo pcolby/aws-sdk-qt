@@ -46,7 +46,7 @@ namespace MarketplaceMetering {
  * Constructs a MarketplaceMeteringRequest object for MarketplaceMetering \a action.
  */
 MarketplaceMeteringRequest::MarketplaceMeteringRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new MarketplaceMeteringRequestPrivate(action, this))
+    : d_ptr(new MarketplaceMeteringRequestPrivate(action, this))
 {
 
 }
@@ -55,7 +55,8 @@ MarketplaceMeteringRequest::MarketplaceMeteringRequest(const Action action)
  * Constructs a copy of \a other.
  */
 MarketplaceMeteringRequest::MarketplaceMeteringRequest(const MarketplaceMeteringRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new MarketplaceMeteringRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new MarketplaceMeteringRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -78,7 +79,7 @@ MarketplaceMeteringRequest& MarketplaceMeteringRequest::operator=(const Marketpl
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MarketplaceMeteringRequestPrivate.
  */
-MarketplaceMeteringRequest::MarketplaceMeteringRequest(MarketplaceMeteringRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+MarketplaceMeteringRequest::MarketplaceMeteringRequest(MarketplaceMeteringRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -247,7 +248,7 @@ QNetworkRequest MarketplaceMeteringRequest::unsignedRequest(const QUrl &endpoint
  * with public implementation \a q.
  */
 MarketplaceMeteringRequestPrivate::MarketplaceMeteringRequestPrivate(const MarketplaceMeteringRequest::Action action, MarketplaceMeteringRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -262,8 +263,8 @@ MarketplaceMeteringRequestPrivate::MarketplaceMeteringRequestPrivate(const Marke
  */
 MarketplaceMeteringRequestPrivate::MarketplaceMeteringRequestPrivate(const MarketplaceMeteringRequestPrivate &other,
                                      MarketplaceMeteringRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

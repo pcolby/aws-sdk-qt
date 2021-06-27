@@ -67,8 +67,7 @@ DescribeHapgResponse::DescribeHapgResponse(
  */
 const DescribeHapgRequest * DescribeHapgResponse::request() const
 {
-    Q_D(const DescribeHapgResponse);
-    return static_cast<const DescribeHapgRequest *>(d->request);
+    return static_cast<const DescribeHapgRequest *>(CloudHSMResponse::request());
 }
 
 /*!

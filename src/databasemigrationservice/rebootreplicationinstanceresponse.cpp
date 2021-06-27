@@ -66,8 +66,7 @@ RebootReplicationInstanceResponse::RebootReplicationInstanceResponse(
  */
 const RebootReplicationInstanceRequest * RebootReplicationInstanceResponse::request() const
 {
-    Q_D(const RebootReplicationInstanceResponse);
-    return static_cast<const RebootReplicationInstanceRequest *>(d->request);
+    return static_cast<const RebootReplicationInstanceRequest *>(DatabaseMigrationServiceResponse::request());
 }
 
 /*!

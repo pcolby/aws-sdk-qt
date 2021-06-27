@@ -159,8 +159,7 @@ StopDataCollectionByAgentIdsResponse::StopDataCollectionByAgentIdsResponse(
  */
 const StopDataCollectionByAgentIdsRequest * StopDataCollectionByAgentIdsResponse::request() const
 {
-    Q_D(const StopDataCollectionByAgentIdsResponse);
-    return static_cast<const StopDataCollectionByAgentIdsRequest *>(d->request);
+    return static_cast<const StopDataCollectionByAgentIdsRequest *>(ApplicationDiscoveryServiceResponse::request());
 }
 
 /*!

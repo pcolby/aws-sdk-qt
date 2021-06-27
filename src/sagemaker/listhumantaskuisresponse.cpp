@@ -70,8 +70,7 @@ ListHumanTaskUisResponse::ListHumanTaskUisResponse(
  */
 const ListHumanTaskUisRequest * ListHumanTaskUisResponse::request() const
 {
-    Q_D(const ListHumanTaskUisResponse);
-    return static_cast<const ListHumanTaskUisRequest *>(d->request);
+    return static_cast<const ListHumanTaskUisRequest *>(SageMakerResponse::request());
 }
 
 /*!

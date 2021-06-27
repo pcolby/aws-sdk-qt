@@ -96,6 +96,7 @@ public:
 
 protected:
     /// @cond internal
+    ElasticsearchServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
     ElasticsearchServiceRequest(ElasticsearchServiceRequestPrivate * const d);
     /// @endcond
 

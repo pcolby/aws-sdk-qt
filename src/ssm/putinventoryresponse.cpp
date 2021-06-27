@@ -98,8 +98,7 @@ PutInventoryResponse::PutInventoryResponse(
  */
 const PutInventoryRequest * PutInventoryResponse::request() const
 {
-    Q_D(const PutInventoryResponse);
-    return static_cast<const PutInventoryRequest *>(d->request);
+    return static_cast<const PutInventoryRequest *>(SsmResponse::request());
 }
 
 /*!

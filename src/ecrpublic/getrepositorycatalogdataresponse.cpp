@@ -63,8 +63,7 @@ GetRepositoryCatalogDataResponse::GetRepositoryCatalogDataResponse(
  */
 const GetRepositoryCatalogDataRequest * GetRepositoryCatalogDataResponse::request() const
 {
-    Q_D(const GetRepositoryCatalogDataResponse);
-    return static_cast<const GetRepositoryCatalogDataRequest *>(d->request);
+    return static_cast<const GetRepositoryCatalogDataRequest *>(ECRPublicResponse::request());
 }
 
 /*!

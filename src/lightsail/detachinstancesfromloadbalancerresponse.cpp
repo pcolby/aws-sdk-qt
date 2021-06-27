@@ -74,8 +74,7 @@ DetachInstancesFromLoadBalancerResponse::DetachInstancesFromLoadBalancerResponse
  */
 const DetachInstancesFromLoadBalancerRequest * DetachInstancesFromLoadBalancerResponse::request() const
 {
-    Q_D(const DetachInstancesFromLoadBalancerResponse);
-    return static_cast<const DetachInstancesFromLoadBalancerRequest *>(d->request);
+    return static_cast<const DetachInstancesFromLoadBalancerRequest *>(LightsailResponse::request());
 }
 
 /*!

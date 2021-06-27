@@ -56,8 +56,7 @@ GetSmsChannelResponse::GetSmsChannelResponse(
  */
 const GetSmsChannelRequest * GetSmsChannelResponse::request() const
 {
-    Q_D(const GetSmsChannelResponse);
-    return static_cast<const GetSmsChannelRequest *>(d->request);
+    return static_cast<const GetSmsChannelRequest *>(PinpointResponse::request());
 }
 
 /*!

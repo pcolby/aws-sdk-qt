@@ -58,8 +58,7 @@ DeleteDatasetResponse::DeleteDatasetResponse(
  */
 const DeleteDatasetRequest * DeleteDatasetResponse::request() const
 {
-    Q_D(const DeleteDatasetResponse);
-    return static_cast<const DeleteDatasetRequest *>(d->request);
+    return static_cast<const DeleteDatasetRequest *>(GlueDataBrewResponse::request());
 }
 
 /*!

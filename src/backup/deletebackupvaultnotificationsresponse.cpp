@@ -59,8 +59,7 @@ DeleteBackupVaultNotificationsResponse::DeleteBackupVaultNotificationsResponse(
  */
 const DeleteBackupVaultNotificationsRequest * DeleteBackupVaultNotificationsResponse::request() const
 {
-    Q_D(const DeleteBackupVaultNotificationsResponse);
-    return static_cast<const DeleteBackupVaultNotificationsRequest *>(d->request);
+    return static_cast<const DeleteBackupVaultNotificationsRequest *>(BackupResponse::request());
 }
 
 /*!

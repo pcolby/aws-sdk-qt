@@ -56,8 +56,7 @@ GetJourneyDateRangeKpiResponse::GetJourneyDateRangeKpiResponse(
  */
 const GetJourneyDateRangeKpiRequest * GetJourneyDateRangeKpiResponse::request() const
 {
-    Q_D(const GetJourneyDateRangeKpiResponse);
-    return static_cast<const GetJourneyDateRangeKpiRequest *>(d->request);
+    return static_cast<const GetJourneyDateRangeKpiRequest *>(PinpointResponse::request());
 }
 
 /*!

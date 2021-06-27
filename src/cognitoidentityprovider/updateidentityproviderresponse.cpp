@@ -66,8 +66,7 @@ UpdateIdentityProviderResponse::UpdateIdentityProviderResponse(
  */
 const UpdateIdentityProviderRequest * UpdateIdentityProviderResponse::request() const
 {
-    Q_D(const UpdateIdentityProviderResponse);
-    return static_cast<const UpdateIdentityProviderRequest *>(d->request);
+    return static_cast<const UpdateIdentityProviderRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

@@ -37,7 +37,7 @@ namespace APIGateway {
  * Constructs a APIGatewayResponse object with parent \a parent.
  */
 APIGatewayResponse::APIGatewayResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new APIGatewayResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new APIGatewayResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ APIGatewayResponse::APIGatewayResponse(QObject * const parent)
  * implementation that inherits from APIGatewayResponsePrivate.
  */
 APIGatewayResponse::APIGatewayResponse(APIGatewayResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void APIGatewayResponse::parseFailure(QIODevice &response)
  * Constructs a APIGatewayResponsePrivate object with public implementation \a q.
  */
 APIGatewayResponsePrivate::APIGatewayResponsePrivate(
-    APIGatewayResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    APIGatewayResponse * const q) : q_ptr(q)
 {
 
 }

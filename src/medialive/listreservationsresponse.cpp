@@ -55,8 +55,7 @@ ListReservationsResponse::ListReservationsResponse(
  */
 const ListReservationsRequest * ListReservationsResponse::request() const
 {
-    Q_D(const ListReservationsResponse);
-    return static_cast<const ListReservationsRequest *>(d->request);
+    return static_cast<const ListReservationsRequest *>(MediaLiveResponse::request());
 }
 
 /*!

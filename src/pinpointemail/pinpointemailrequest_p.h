@@ -20,15 +20,12 @@
 #ifndef QTAWS_PINPOINTEMAILREQUEST_P_H
 #define QTAWS_PINPOINTEMAILREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "pinpointemailrequest.h"
-
 namespace QtAws {
 namespace PinpointEmail {
 
 class PinpointEmailRequest;
 
-class PinpointEmailRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class PinpointEmailRequestPrivate {
 
 public:
     PinpointEmailRequest::Action action; ///< PinpointEmail action to be performed.
@@ -39,6 +36,9 @@ public:
     PinpointEmailRequestPrivate(const PinpointEmailRequestPrivate &other, PinpointEmailRequest * const q);
 
     static QString toString(const PinpointEmailRequest::Action &action);
+
+protected:
+    PinpointEmailRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(PinpointEmailRequest)

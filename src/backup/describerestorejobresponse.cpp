@@ -59,8 +59,7 @@ DescribeRestoreJobResponse::DescribeRestoreJobResponse(
  */
 const DescribeRestoreJobRequest * DescribeRestoreJobResponse::request() const
 {
-    Q_D(const DescribeRestoreJobResponse);
-    return static_cast<const DescribeRestoreJobRequest *>(d->request);
+    return static_cast<const DescribeRestoreJobRequest *>(BackupResponse::request());
 }
 
 /*!

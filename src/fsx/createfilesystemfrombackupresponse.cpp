@@ -57,8 +57,7 @@ CreateFileSystemFromBackupResponse::CreateFileSystemFromBackupResponse(
  */
 const CreateFileSystemFromBackupRequest * CreateFileSystemFromBackupResponse::request() const
 {
-    Q_D(const CreateFileSystemFromBackupResponse);
-    return static_cast<const CreateFileSystemFromBackupRequest *>(d->request);
+    return static_cast<const CreateFileSystemFromBackupRequest *>(FSxResponse::request());
 }
 
 /*!

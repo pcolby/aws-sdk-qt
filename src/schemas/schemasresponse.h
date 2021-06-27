@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    SchemasResponsePrivate * const d_ptr; ///< Internal d-pointer.
     SchemasResponse(SchemasResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -56,8 +56,7 @@ CreateStageResponse::CreateStageResponse(
  */
 const CreateStageRequest * CreateStageResponse::request() const
 {
-    Q_D(const CreateStageResponse);
-    return static_cast<const CreateStageRequest *>(d->request);
+    return static_cast<const CreateStageRequest *>(ApiGatewayV2Response::request());
 }
 
 /*!

@@ -64,8 +64,7 @@ ListBuildBatchesResponse::ListBuildBatchesResponse(
  */
 const ListBuildBatchesRequest * ListBuildBatchesResponse::request() const
 {
-    Q_D(const ListBuildBatchesResponse);
-    return static_cast<const ListBuildBatchesRequest *>(d->request);
+    return static_cast<const ListBuildBatchesRequest *>(CodeBuildResponse::request());
 }
 
 /*!

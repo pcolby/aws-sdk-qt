@@ -94,8 +94,7 @@ ImportFirewallDomainsResponse::ImportFirewallDomainsResponse(
  */
 const ImportFirewallDomainsRequest * ImportFirewallDomainsResponse::request() const
 {
-    Q_D(const ImportFirewallDomainsResponse);
-    return static_cast<const ImportFirewallDomainsRequest *>(d->request);
+    return static_cast<const ImportFirewallDomainsRequest *>(Route53ResolverResponse::request());
 }
 
 /*!

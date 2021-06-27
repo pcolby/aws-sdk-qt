@@ -56,8 +56,7 @@ DeleteCorsConfigurationResponse::DeleteCorsConfigurationResponse(
  */
 const DeleteCorsConfigurationRequest * DeleteCorsConfigurationResponse::request() const
 {
-    Q_D(const DeleteCorsConfigurationResponse);
-    return static_cast<const DeleteCorsConfigurationRequest *>(d->request);
+    return static_cast<const DeleteCorsConfigurationRequest *>(ApiGatewayV2Response::request());
 }
 
 /*!

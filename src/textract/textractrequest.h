@@ -62,6 +62,7 @@ public:
 
 protected:
     /// @cond internal
+    TextractRequestPrivate * const d_ptr; ///< Internal d-pointer.
     TextractRequest(TextractRequestPrivate * const d);
     /// @endcond
 

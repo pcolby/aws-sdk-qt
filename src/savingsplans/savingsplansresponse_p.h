@@ -20,14 +20,12 @@
 #ifndef QTAWS_SAVINGSPLANSRESPONSE_P_H
 #define QTAWS_SAVINGSPLANSRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace SavingsPlans {
 
 class SavingsPlansResponse;
 
-class SavingsPlansResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class SavingsPlansResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    SavingsPlansResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SavingsPlansResponse)

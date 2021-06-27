@@ -70,8 +70,7 @@ RegisterDevicesResponse::RegisterDevicesResponse(
  */
 const RegisterDevicesRequest * RegisterDevicesResponse::request() const
 {
-    Q_D(const RegisterDevicesResponse);
-    return static_cast<const RegisterDevicesRequest *>(d->request);
+    return static_cast<const RegisterDevicesRequest *>(SageMakerResponse::request());
 }
 
 /*!

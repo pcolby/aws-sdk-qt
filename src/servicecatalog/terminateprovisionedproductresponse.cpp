@@ -61,8 +61,7 @@ TerminateProvisionedProductResponse::TerminateProvisionedProductResponse(
  */
 const TerminateProvisionedProductRequest * TerminateProvisionedProductResponse::request() const
 {
-    Q_D(const TerminateProvisionedProductResponse);
-    return static_cast<const TerminateProvisionedProductRequest *>(d->request);
+    return static_cast<const TerminateProvisionedProductRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

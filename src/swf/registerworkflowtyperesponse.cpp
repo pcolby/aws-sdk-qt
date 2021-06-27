@@ -71,8 +71,7 @@ RegisterWorkflowTypeResponse::RegisterWorkflowTypeResponse(
  */
 const RegisterWorkflowTypeRequest * RegisterWorkflowTypeResponse::request() const
 {
-    Q_D(const RegisterWorkflowTypeResponse);
-    return static_cast<const RegisterWorkflowTypeRequest *>(d->request);
+    return static_cast<const RegisterWorkflowTypeRequest *>(SwfResponse::request());
 }
 
 /*!

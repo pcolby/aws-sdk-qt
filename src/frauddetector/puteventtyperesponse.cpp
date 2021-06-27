@@ -58,8 +58,7 @@ PutEventTypeResponse::PutEventTypeResponse(
  */
 const PutEventTypeRequest * PutEventTypeResponse::request() const
 {
-    Q_D(const PutEventTypeResponse);
-    return static_cast<const PutEventTypeRequest *>(d->request);
+    return static_cast<const PutEventTypeRequest *>(FraudDetectorResponse::request());
 }
 
 /*!

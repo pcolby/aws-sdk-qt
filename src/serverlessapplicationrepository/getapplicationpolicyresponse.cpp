@@ -76,8 +76,7 @@ GetApplicationPolicyResponse::GetApplicationPolicyResponse(
  */
 const GetApplicationPolicyRequest * GetApplicationPolicyResponse::request() const
 {
-    Q_D(const GetApplicationPolicyResponse);
-    return static_cast<const GetApplicationPolicyRequest *>(d->request);
+    return static_cast<const GetApplicationPolicyRequest *>(ServerlessApplicationRepositoryResponse::request());
 }
 
 /*!

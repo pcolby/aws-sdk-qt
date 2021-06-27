@@ -58,8 +58,7 @@ StopWorkflowRunResponse::StopWorkflowRunResponse(
  */
 const StopWorkflowRunRequest * StopWorkflowRunResponse::request() const
 {
-    Q_D(const StopWorkflowRunResponse);
-    return static_cast<const StopWorkflowRunRequest *>(d->request);
+    return static_cast<const StopWorkflowRunRequest *>(GlueResponse::request());
 }
 
 /*!

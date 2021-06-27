@@ -98,8 +98,7 @@ DeleteChannelBanResponse::DeleteChannelBanResponse(
  */
 const DeleteChannelBanRequest * DeleteChannelBanResponse::request() const
 {
-    Q_D(const DeleteChannelBanResponse);
-    return static_cast<const DeleteChannelBanRequest *>(d->request);
+    return static_cast<const DeleteChannelBanRequest *>(ChimeResponse::request());
 }
 
 /*!

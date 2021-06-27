@@ -56,8 +56,7 @@ RemoveAttributesResponse::RemoveAttributesResponse(
  */
 const RemoveAttributesRequest * RemoveAttributesResponse::request() const
 {
-    Q_D(const RemoveAttributesResponse);
-    return static_cast<const RemoveAttributesRequest *>(d->request);
+    return static_cast<const RemoveAttributesRequest *>(PinpointResponse::request());
 }
 
 /*!

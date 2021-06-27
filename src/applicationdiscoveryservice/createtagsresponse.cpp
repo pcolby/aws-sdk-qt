@@ -159,8 +159,7 @@ CreateTagsResponse::CreateTagsResponse(
  */
 const CreateTagsRequest * CreateTagsResponse::request() const
 {
-    Q_D(const CreateTagsResponse);
-    return static_cast<const CreateTagsRequest *>(d->request);
+    return static_cast<const CreateTagsRequest *>(ApplicationDiscoveryServiceResponse::request());
 }
 
 /*!

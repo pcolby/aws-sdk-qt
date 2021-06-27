@@ -56,8 +56,7 @@ CancelSimulationJobResponse::CancelSimulationJobResponse(
  */
 const CancelSimulationJobRequest * CancelSimulationJobResponse::request() const
 {
-    Q_D(const CancelSimulationJobResponse);
-    return static_cast<const CancelSimulationJobRequest *>(d->request);
+    return static_cast<const CancelSimulationJobRequest *>(RoboMakerResponse::request());
 }
 
 /*!

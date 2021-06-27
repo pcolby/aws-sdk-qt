@@ -60,8 +60,7 @@ CreateMonitoringSubscriptionResponse::CreateMonitoringSubscriptionResponse(
  */
 const CreateMonitoringSubscriptionRequest * CreateMonitoringSubscriptionResponse::request() const
 {
-    Q_D(const CreateMonitoringSubscriptionResponse);
-    return static_cast<const CreateMonitoringSubscriptionRequest *>(d->request);
+    return static_cast<const CreateMonitoringSubscriptionRequest *>(CloudFrontResponse::request());
 }
 
 /*!

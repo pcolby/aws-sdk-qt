@@ -87,8 +87,7 @@ CancelBundleTaskResponse::CancelBundleTaskResponse(
  */
 const CancelBundleTaskRequest * CancelBundleTaskResponse::request() const
 {
-    Q_D(const CancelBundleTaskResponse);
-    return static_cast<const CancelBundleTaskRequest *>(d->request);
+    return static_cast<const CancelBundleTaskRequest *>(Ec2Response::request());
 }
 
 /*!

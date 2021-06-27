@@ -37,7 +37,7 @@ namespace RedshiftDataAPIService {
  * Constructs a RedshiftDataAPIServiceResponse object with parent \a parent.
  */
 RedshiftDataAPIServiceResponse::RedshiftDataAPIServiceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new RedshiftDataAPIServiceResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new RedshiftDataAPIServiceResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ RedshiftDataAPIServiceResponse::RedshiftDataAPIServiceResponse(QObject * const p
  * implementation that inherits from RedshiftDataAPIServiceResponsePrivate.
  */
 RedshiftDataAPIServiceResponse::RedshiftDataAPIServiceResponse(RedshiftDataAPIServiceResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void RedshiftDataAPIServiceResponse::parseFailure(QIODevice &response)
  * Constructs a RedshiftDataAPIServiceResponsePrivate object with public implementation \a q.
  */
 RedshiftDataAPIServiceResponsePrivate::RedshiftDataAPIServiceResponsePrivate(
-    RedshiftDataAPIServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    RedshiftDataAPIServiceResponse * const q) : q_ptr(q)
 {
 
 }

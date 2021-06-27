@@ -81,7 +81,7 @@ namespace MTurk {
  * Constructs a MTurkRequest object for MTurk \a action.
  */
 MTurkRequest::MTurkRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new MTurkRequestPrivate(action, this))
+    : d_ptr(new MTurkRequestPrivate(action, this))
 {
 
 }
@@ -90,7 +90,8 @@ MTurkRequest::MTurkRequest(const Action action)
  * Constructs a copy of \a other.
  */
 MTurkRequest::MTurkRequest(const MTurkRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new MTurkRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new MTurkRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +114,7 @@ MTurkRequest& MTurkRequest::operator=(const MTurkRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MTurkRequestPrivate.
  */
-MTurkRequest::MTurkRequest(MTurkRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+MTurkRequest::MTurkRequest(MTurkRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -282,7 +283,7 @@ QNetworkRequest MTurkRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 MTurkRequestPrivate::MTurkRequestPrivate(const MTurkRequest::Action action, MTurkRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -297,8 +298,8 @@ MTurkRequestPrivate::MTurkRequestPrivate(const MTurkRequest::Action action, MTur
  */
 MTurkRequestPrivate::MTurkRequestPrivate(const MTurkRequestPrivate &other,
                                      MTurkRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

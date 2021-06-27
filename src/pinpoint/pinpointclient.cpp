@@ -284,16 +284,16 @@ PinpointClient::PinpointClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new PinpointClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-12-01"),
+    QStringLiteral("pinpoint"),
+    QStringLiteral("Amazon Pinpoint"),
+    QStringLiteral("mobiletargeting"),
+    parent), d_ptr(new PinpointClientPrivate(this))
 {
-    Q_D(PinpointClient);
-    d->apiVersion = QStringLiteral("2016-12-01");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("pinpoint");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Pinpoint");
-    d->serviceName = QStringLiteral("mobiletargeting");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -312,16 +312,16 @@ PinpointClient::PinpointClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new PinpointClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-12-01"),
+    QStringLiteral("pinpoint"),
+    QStringLiteral("Amazon Pinpoint"),
+    QStringLiteral("mobiletargeting"),
+    parent), d_ptr(new PinpointClientPrivate(this))
 {
-    Q_D(PinpointClient);
-    d->apiVersion = QStringLiteral("2016-12-01");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("pinpoint");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Pinpoint");
-    d->serviceName = QStringLiteral("mobiletargeting");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -1807,10 +1807,9 @@ UpdateVoiceTemplateResponse * PinpointClient::updateVoiceTemplate(const UpdateVo
 /*!
  * Constructs a PinpointClientPrivate object with public implementation \a q.
  */
-PinpointClientPrivate::PinpointClientPrivate(PinpointClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+PinpointClientPrivate::PinpointClientPrivate(PinpointClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace Pinpoint

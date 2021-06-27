@@ -56,8 +56,7 @@ DeletePredictorBacktestExportJobResponse::DeletePredictorBacktestExportJobRespon
  */
 const DeletePredictorBacktestExportJobRequest * DeletePredictorBacktestExportJobResponse::request() const
 {
-    Q_D(const DeletePredictorBacktestExportJobResponse);
-    return static_cast<const DeletePredictorBacktestExportJobRequest *>(d->request);
+    return static_cast<const DeletePredictorBacktestExportJobRequest *>(ForecastServiceResponse::request());
 }
 
 /*!

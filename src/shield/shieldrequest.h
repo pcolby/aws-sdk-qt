@@ -89,6 +89,7 @@ public:
 
 protected:
     /// @cond internal
+    ShieldRequestPrivate * const d_ptr; ///< Internal d-pointer.
     ShieldRequest(ShieldRequestPrivate * const d);
     /// @endcond
 

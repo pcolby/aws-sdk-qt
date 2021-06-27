@@ -98,8 +98,7 @@ PutRetentionSettingsResponse::PutRetentionSettingsResponse(
  */
 const PutRetentionSettingsRequest * PutRetentionSettingsResponse::request() const
 {
-    Q_D(const PutRetentionSettingsResponse);
-    return static_cast<const PutRetentionSettingsRequest *>(d->request);
+    return static_cast<const PutRetentionSettingsRequest *>(ChimeResponse::request());
 }
 
 /*!

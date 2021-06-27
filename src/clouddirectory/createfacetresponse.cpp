@@ -63,8 +63,7 @@ CreateFacetResponse::CreateFacetResponse(
  */
 const CreateFacetRequest * CreateFacetResponse::request() const
 {
-    Q_D(const CreateFacetResponse);
-    return static_cast<const CreateFacetRequest *>(d->request);
+    return static_cast<const CreateFacetRequest *>(CloudDirectoryResponse::request());
 }
 
 /*!

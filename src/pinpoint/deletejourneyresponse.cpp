@@ -56,8 +56,7 @@ DeleteJourneyResponse::DeleteJourneyResponse(
  */
 const DeleteJourneyRequest * DeleteJourneyResponse::request() const
 {
-    Q_D(const DeleteJourneyResponse);
-    return static_cast<const DeleteJourneyRequest *>(d->request);
+    return static_cast<const DeleteJourneyRequest *>(PinpointResponse::request());
 }
 
 /*!

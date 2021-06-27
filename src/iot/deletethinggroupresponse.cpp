@@ -82,8 +82,7 @@ DeleteThingGroupResponse::DeleteThingGroupResponse(
  */
 const DeleteThingGroupRequest * DeleteThingGroupResponse::request() const
 {
-    Q_D(const DeleteThingGroupResponse);
-    return static_cast<const DeleteThingGroupRequest *>(d->request);
+    return static_cast<const DeleteThingGroupRequest *>(IoTResponse::request());
 }
 
 /*!

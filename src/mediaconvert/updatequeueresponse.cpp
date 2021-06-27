@@ -55,8 +55,7 @@ UpdateQueueResponse::UpdateQueueResponse(
  */
 const UpdateQueueRequest * UpdateQueueResponse::request() const
 {
-    Q_D(const UpdateQueueResponse);
-    return static_cast<const UpdateQueueRequest *>(d->request);
+    return static_cast<const UpdateQueueRequest *>(MediaConvertResponse::request());
 }
 
 /*!

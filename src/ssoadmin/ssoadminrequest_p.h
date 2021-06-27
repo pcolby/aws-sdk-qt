@@ -20,15 +20,12 @@
 #ifndef QTAWS_SSOADMINREQUEST_P_H
 #define QTAWS_SSOADMINREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "ssoadminrequest.h"
-
 namespace QtAws {
 namespace SSOAdmin {
 
 class SSOAdminRequest;
 
-class SSOAdminRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SSOAdminRequestPrivate {
 
 public:
     SSOAdminRequest::Action action; ///< SSOAdmin action to be performed.
@@ -39,6 +36,9 @@ public:
     SSOAdminRequestPrivate(const SSOAdminRequestPrivate &other, SSOAdminRequest * const q);
 
     static QString toString(const SSOAdminRequest::Action &action);
+
+protected:
+    SSOAdminRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SSOAdminRequest)

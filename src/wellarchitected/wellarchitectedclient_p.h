@@ -20,19 +20,20 @@
 #ifndef QTAWS_WELLARCHITECTEDCLIENT_P_H
 #define QTAWS_WELLARCHITECTEDCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace WellArchitected {
 
 class WellArchitectedClient;
 
-class WellArchitectedClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class WellArchitectedClientPrivate {
 
 public:
     WellArchitectedClientPrivate(WellArchitectedClient * const q);
+
+protected:
+    WellArchitectedClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(WellArchitectedClient)

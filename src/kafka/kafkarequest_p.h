@@ -20,15 +20,12 @@
 #ifndef QTAWS_KAFKAREQUEST_P_H
 #define QTAWS_KAFKAREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "kafkarequest.h"
-
 namespace QtAws {
 namespace Kafka {
 
 class KafkaRequest;
 
-class KafkaRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class KafkaRequestPrivate {
 
 public:
     KafkaRequest::Action action; ///< Kafka action to be performed.
@@ -39,6 +36,9 @@ public:
     KafkaRequestPrivate(const KafkaRequestPrivate &other, KafkaRequest * const q);
 
     static QString toString(const KafkaRequest::Action &action);
+
+protected:
+    KafkaRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(KafkaRequest)

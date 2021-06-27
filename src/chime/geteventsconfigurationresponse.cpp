@@ -98,8 +98,7 @@ GetEventsConfigurationResponse::GetEventsConfigurationResponse(
  */
 const GetEventsConfigurationRequest * GetEventsConfigurationResponse::request() const
 {
-    Q_D(const GetEventsConfigurationResponse);
-    return static_cast<const GetEventsConfigurationRequest *>(d->request);
+    return static_cast<const GetEventsConfigurationRequest *>(ChimeResponse::request());
 }
 
 /*!

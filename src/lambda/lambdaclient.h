@@ -220,6 +220,12 @@ public slots:
     UpdateFunctionConfigurationResponse * updateFunctionConfiguration(const UpdateFunctionConfigurationRequest &request);
     UpdateFunctionEventInvokeConfigResponse * updateFunctionEventInvokeConfig(const UpdateFunctionEventInvokeConfigRequest &request);
 
+protected:
+    /// @cond internal
+    LambdaClientPrivate * const d_ptr; ///< Internal d-pointer.
+    LambdaClient(LambdaClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(LambdaClient)
     Q_DISABLE_COPY(LambdaClient)

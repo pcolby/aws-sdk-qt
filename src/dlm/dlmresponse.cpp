@@ -37,7 +37,7 @@ namespace DLM {
  * Constructs a DlmResponse object with parent \a parent.
  */
 DlmResponse::DlmResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new DlmResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new DlmResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ DlmResponse::DlmResponse(QObject * const parent)
  * implementation that inherits from DlmResponsePrivate.
  */
 DlmResponse::DlmResponse(DlmResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void DlmResponse::parseFailure(QIODevice &response)
  * Constructs a DlmResponsePrivate object with public implementation \a q.
  */
 DlmResponsePrivate::DlmResponsePrivate(
-    DlmResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    DlmResponse * const q) : q_ptr(q)
 {
 
 }

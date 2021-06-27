@@ -55,8 +55,7 @@ ListAccountAssignmentDeletionStatusResponse::ListAccountAssignmentDeletionStatus
  */
 const ListAccountAssignmentDeletionStatusRequest * ListAccountAssignmentDeletionStatusResponse::request() const
 {
-    Q_D(const ListAccountAssignmentDeletionStatusResponse);
-    return static_cast<const ListAccountAssignmentDeletionStatusRequest *>(d->request);
+    return static_cast<const ListAccountAssignmentDeletionStatusRequest *>(SSOAdminResponse::request());
 }
 
 /*!

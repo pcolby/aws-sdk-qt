@@ -517,6 +517,12 @@ public slots:
     UpdateUserDefinedFunctionResponse * updateUserDefinedFunction(const UpdateUserDefinedFunctionRequest &request);
     UpdateWorkflowResponse * updateWorkflow(const UpdateWorkflowRequest &request);
 
+protected:
+    /// @cond internal
+    GlueClientPrivate * const d_ptr; ///< Internal d-pointer.
+    GlueClient(GlueClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(GlueClient)
     Q_DISABLE_COPY(GlueClient)

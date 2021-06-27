@@ -87,8 +87,7 @@ DeleteNetworkAclEntryResponse::DeleteNetworkAclEntryResponse(
  */
 const DeleteNetworkAclEntryRequest * DeleteNetworkAclEntryResponse::request() const
 {
-    Q_D(const DeleteNetworkAclEntryResponse);
-    return static_cast<const DeleteNetworkAclEntryRequest *>(d->request);
+    return static_cast<const DeleteNetworkAclEntryRequest *>(Ec2Response::request());
 }
 
 /*!

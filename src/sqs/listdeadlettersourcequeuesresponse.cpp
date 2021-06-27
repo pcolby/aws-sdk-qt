@@ -126,8 +126,7 @@ ListDeadLetterSourceQueuesResponse::ListDeadLetterSourceQueuesResponse(
  */
 const ListDeadLetterSourceQueuesRequest * ListDeadLetterSourceQueuesResponse::request() const
 {
-    Q_D(const ListDeadLetterSourceQueuesResponse);
-    return static_cast<const ListDeadLetterSourceQueuesRequest *>(d->request);
+    return static_cast<const ListDeadLetterSourceQueuesRequest *>(SqsResponse::request());
 }
 
 /*!

@@ -72,8 +72,7 @@ DeleteOutboundCrossClusterSearchConnectionResponse::DeleteOutboundCrossClusterSe
  */
 const DeleteOutboundCrossClusterSearchConnectionRequest * DeleteOutboundCrossClusterSearchConnectionResponse::request() const
 {
-    Q_D(const DeleteOutboundCrossClusterSearchConnectionResponse);
-    return static_cast<const DeleteOutboundCrossClusterSearchConnectionRequest *>(d->request);
+    return static_cast<const DeleteOutboundCrossClusterSearchConnectionRequest *>(ElasticsearchServiceResponse::request());
 }
 
 /*!

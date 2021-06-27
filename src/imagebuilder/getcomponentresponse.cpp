@@ -58,8 +58,7 @@ GetComponentResponse::GetComponentResponse(
  */
 const GetComponentRequest * GetComponentResponse::request() const
 {
-    Q_D(const GetComponentResponse);
-    return static_cast<const GetComponentRequest *>(d->request);
+    return static_cast<const GetComponentRequest *>(imagebuilderResponse::request());
 }
 
 /*!

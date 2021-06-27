@@ -115,8 +115,7 @@ CreateBuildResponse::CreateBuildResponse(
  */
 const CreateBuildRequest * CreateBuildResponse::request() const
 {
-    Q_D(const CreateBuildResponse);
-    return static_cast<const CreateBuildRequest *>(d->request);
+    return static_cast<const CreateBuildRequest *>(GameLiftResponse::request());
 }
 
 /*!

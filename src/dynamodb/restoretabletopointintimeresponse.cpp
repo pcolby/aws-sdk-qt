@@ -74,8 +74,7 @@ RestoreTableToPointInTimeResponse::RestoreTableToPointInTimeResponse(
  */
 const RestoreTableToPointInTimeRequest * RestoreTableToPointInTimeResponse::request() const
 {
-    Q_D(const RestoreTableToPointInTimeResponse);
-    return static_cast<const RestoreTableToPointInTimeRequest *>(d->request);
+    return static_cast<const RestoreTableToPointInTimeRequest *>(DynamoDBResponse::request());
 }
 
 /*!

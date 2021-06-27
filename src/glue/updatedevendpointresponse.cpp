@@ -58,8 +58,7 @@ UpdateDevEndpointResponse::UpdateDevEndpointResponse(
  */
 const UpdateDevEndpointRequest * UpdateDevEndpointResponse::request() const
 {
-    Q_D(const UpdateDevEndpointResponse);
-    return static_cast<const UpdateDevEndpointRequest *>(d->request);
+    return static_cast<const UpdateDevEndpointRequest *>(GlueResponse::request());
 }
 
 /*!

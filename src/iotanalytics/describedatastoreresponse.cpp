@@ -75,8 +75,7 @@ DescribeDatastoreResponse::DescribeDatastoreResponse(
  */
 const DescribeDatastoreRequest * DescribeDatastoreResponse::request() const
 {
-    Q_D(const DescribeDatastoreResponse);
-    return static_cast<const DescribeDatastoreRequest *>(d->request);
+    return static_cast<const DescribeDatastoreRequest *>(IoTAnalyticsResponse::request());
 }
 
 /*!

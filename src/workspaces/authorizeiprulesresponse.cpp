@@ -58,8 +58,7 @@ AuthorizeIpRulesResponse::AuthorizeIpRulesResponse(
  */
 const AuthorizeIpRulesRequest * AuthorizeIpRulesResponse::request() const
 {
-    Q_D(const AuthorizeIpRulesResponse);
-    return static_cast<const AuthorizeIpRulesRequest *>(d->request);
+    return static_cast<const AuthorizeIpRulesRequest *>(WorkSpacesResponse::request());
 }
 
 /*!

@@ -37,7 +37,7 @@ namespace Cloud9 {
  * Constructs a Cloud9Response object with parent \a parent.
  */
 Cloud9Response::Cloud9Response(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new Cloud9ResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new Cloud9ResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ Cloud9Response::Cloud9Response(QObject * const parent)
  * implementation that inherits from Cloud9ResponsePrivate.
  */
 Cloud9Response::Cloud9Response(Cloud9ResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void Cloud9Response::parseFailure(QIODevice &response)
  * Constructs a Cloud9ResponsePrivate object with public implementation \a q.
  */
 Cloud9ResponsePrivate::Cloud9ResponsePrivate(
-    Cloud9Response * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    Cloud9Response * const q) : q_ptr(q)
 {
 
 }

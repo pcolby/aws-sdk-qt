@@ -63,8 +63,7 @@ GetSchemaAsJsonResponse::GetSchemaAsJsonResponse(
  */
 const GetSchemaAsJsonRequest * GetSchemaAsJsonResponse::request() const
 {
-    Q_D(const GetSchemaAsJsonResponse);
-    return static_cast<const GetSchemaAsJsonRequest *>(d->request);
+    return static_cast<const GetSchemaAsJsonRequest *>(CloudDirectoryResponse::request());
 }
 
 /*!

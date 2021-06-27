@@ -85,16 +85,16 @@ DlmClient::DlmClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new DlmClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-01-12"),
+    QStringLiteral("dlm"),
+    QStringLiteral("Amazon Data Lifecycle Manager"),
+    QStringLiteral("dlm"),
+    parent), d_ptr(new DlmClientPrivate(this))
 {
-    Q_D(DlmClient);
-    d->apiVersion = QStringLiteral("2018-01-12");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("dlm");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Data Lifecycle Manager");
-    d->serviceName = QStringLiteral("dlm");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -113,16 +113,16 @@ DlmClient::DlmClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new DlmClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-01-12"),
+    QStringLiteral("dlm"),
+    QStringLiteral("Amazon Data Lifecycle Manager"),
+    QStringLiteral("dlm"),
+    parent), d_ptr(new DlmClientPrivate(this))
 {
-    Q_D(DlmClient);
-    d->apiVersion = QStringLiteral("2018-01-12");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("dlm");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Data Lifecycle Manager");
-    d->serviceName = QStringLiteral("dlm");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -245,10 +245,9 @@ UpdateLifecyclePolicyResponse * DlmClient::updateLifecyclePolicy(const UpdateLif
 /*!
  * Constructs a DlmClientPrivate object with public implementation \a q.
  */
-DlmClientPrivate::DlmClientPrivate(DlmClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+DlmClientPrivate::DlmClientPrivate(DlmClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace DLM

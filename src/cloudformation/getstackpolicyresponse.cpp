@@ -77,8 +77,7 @@ GetStackPolicyResponse::GetStackPolicyResponse(
  */
 const GetStackPolicyRequest * GetStackPolicyResponse::request() const
 {
-    Q_D(const GetStackPolicyResponse);
-    return static_cast<const GetStackPolicyRequest *>(d->request);
+    return static_cast<const GetStackPolicyRequest *>(CloudFormationResponse::request());
 }
 
 /*!

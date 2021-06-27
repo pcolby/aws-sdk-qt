@@ -87,8 +87,7 @@ ImportSnapshotResponse::ImportSnapshotResponse(
  */
 const ImportSnapshotRequest * ImportSnapshotResponse::request() const
 {
-    Q_D(const ImportSnapshotResponse);
-    return static_cast<const ImportSnapshotRequest *>(d->request);
+    return static_cast<const ImportSnapshotRequest *>(Ec2Response::request());
 }
 
 /*!

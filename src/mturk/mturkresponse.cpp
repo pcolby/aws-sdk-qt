@@ -37,7 +37,7 @@ namespace MTurk {
  * Constructs a MTurkResponse object with parent \a parent.
  */
 MTurkResponse::MTurkResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new MTurkResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new MTurkResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ MTurkResponse::MTurkResponse(QObject * const parent)
  * implementation that inherits from MTurkResponsePrivate.
  */
 MTurkResponse::MTurkResponse(MTurkResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void MTurkResponse::parseFailure(QIODevice &response)
  * Constructs a MTurkResponsePrivate object with public implementation \a q.
  */
 MTurkResponsePrivate::MTurkResponsePrivate(
-    MTurkResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    MTurkResponse * const q) : q_ptr(q)
 {
 
 }

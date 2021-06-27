@@ -77,8 +77,7 @@ ListIdentitiesResponse::ListIdentitiesResponse(
  */
 const ListIdentitiesRequest * ListIdentitiesResponse::request() const
 {
-    Q_D(const ListIdentitiesResponse);
-    return static_cast<const ListIdentitiesRequest *>(d->request);
+    return static_cast<const ListIdentitiesRequest *>(CognitoIdentityResponse::request());
 }
 
 /*!

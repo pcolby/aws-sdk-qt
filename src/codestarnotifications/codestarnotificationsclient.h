@@ -85,6 +85,12 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateNotificationRuleResponse * updateNotificationRule(const UpdateNotificationRuleRequest &request);
 
+protected:
+    /// @cond internal
+    CodeStarNotificationsClientPrivate * const d_ptr; ///< Internal d-pointer.
+    CodeStarNotificationsClient(CodeStarNotificationsClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(CodeStarNotificationsClient)
     Q_DISABLE_COPY(CodeStarNotificationsClient)

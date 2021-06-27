@@ -69,8 +69,7 @@ CreateCertificateAuthorityAuditReportResponse::CreateCertificateAuthorityAuditRe
  */
 const CreateCertificateAuthorityAuditReportRequest * CreateCertificateAuthorityAuditReportResponse::request() const
 {
-    Q_D(const CreateCertificateAuthorityAuditReportResponse);
-    return static_cast<const CreateCertificateAuthorityAuditReportRequest *>(d->request);
+    return static_cast<const CreateCertificateAuthorityAuditReportRequest *>(AcmpcaResponse::request());
 }
 
 /*!

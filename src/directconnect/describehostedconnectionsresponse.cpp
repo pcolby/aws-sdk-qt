@@ -61,8 +61,7 @@ DescribeHostedConnectionsResponse::DescribeHostedConnectionsResponse(
  */
 const DescribeHostedConnectionsRequest * DescribeHostedConnectionsResponse::request() const
 {
-    Q_D(const DescribeHostedConnectionsResponse);
-    return static_cast<const DescribeHostedConnectionsRequest *>(d->request);
+    return static_cast<const DescribeHostedConnectionsRequest *>(DirectConnectResponse::request());
 }
 
 /*!

@@ -20,15 +20,12 @@
 #ifndef QTAWS_WAFV2REQUEST_P_H
 #define QTAWS_WAFV2REQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "wafv2request.h"
-
 namespace QtAws {
 namespace WAFV2 {
 
 class Wafv2Request;
 
-class Wafv2RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class Wafv2RequestPrivate {
 
 public:
     Wafv2Request::Action action; ///< WAFV2 action to be performed.
@@ -39,6 +36,9 @@ public:
     Wafv2RequestPrivate(const Wafv2RequestPrivate &other, Wafv2Request * const q);
 
     static QString toString(const Wafv2Request::Action &action);
+
+protected:
+    Wafv2Request * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(Wafv2Request)

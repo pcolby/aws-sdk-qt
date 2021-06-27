@@ -127,6 +127,12 @@ public slots:
     UpdateContactResponse * updateContact(const UpdateContactRequest &request);
     UpdateContactChannelResponse * updateContactChannel(const UpdateContactChannelRequest &request);
 
+protected:
+    /// @cond internal
+    SSMContactsClientPrivate * const d_ptr; ///< Internal d-pointer.
+    SSMContactsClient(SSMContactsClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(SSMContactsClient)
     Q_DISABLE_COPY(SSMContactsClient)

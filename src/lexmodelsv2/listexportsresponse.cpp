@@ -55,8 +55,7 @@ ListExportsResponse::ListExportsResponse(
  */
 const ListExportsRequest * ListExportsResponse::request() const
 {
-    Q_D(const ListExportsResponse);
-    return static_cast<const ListExportsRequest *>(d->request);
+    return static_cast<const ListExportsRequest *>(LexModelsV2Response::request());
 }
 
 /*!

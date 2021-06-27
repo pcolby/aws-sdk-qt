@@ -58,8 +58,7 @@ SubscribeToShardResponse::SubscribeToShardResponse(
  */
 const SubscribeToShardRequest * SubscribeToShardResponse::request() const
 {
-    Q_D(const SubscribeToShardResponse);
-    return static_cast<const SubscribeToShardRequest *>(d->request);
+    return static_cast<const SubscribeToShardRequest *>(KinesisResponse::request());
 }
 
 /*!

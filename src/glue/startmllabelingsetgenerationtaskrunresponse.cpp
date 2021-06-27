@@ -58,8 +58,7 @@ StartMLLabelingSetGenerationTaskRunResponse::StartMLLabelingSetGenerationTaskRun
  */
 const StartMLLabelingSetGenerationTaskRunRequest * StartMLLabelingSetGenerationTaskRunResponse::request() const
 {
-    Q_D(const StartMLLabelingSetGenerationTaskRunResponse);
-    return static_cast<const StartMLLabelingSetGenerationTaskRunRequest *>(d->request);
+    return static_cast<const StartMLLabelingSetGenerationTaskRunRequest *>(GlueResponse::request());
 }
 
 /*!

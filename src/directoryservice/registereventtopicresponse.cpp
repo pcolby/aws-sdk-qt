@@ -69,8 +69,7 @@ RegisterEventTopicResponse::RegisterEventTopicResponse(
  */
 const RegisterEventTopicRequest * RegisterEventTopicResponse::request() const
 {
-    Q_D(const RegisterEventTopicResponse);
-    return static_cast<const RegisterEventTopicRequest *>(d->request);
+    return static_cast<const RegisterEventTopicRequest *>(DirectoryServiceResponse::request());
 }
 
 /*!

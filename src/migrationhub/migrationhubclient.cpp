@@ -100,16 +100,16 @@ MigrationHubClient::MigrationHubClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new MigrationHubClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-05-31"),
+    QStringLiteral("mgh"),
+    QStringLiteral("AWS Migration Hub"),
+    QStringLiteral("mgh"),
+    parent), d_ptr(new MigrationHubClientPrivate(this))
 {
-    Q_D(MigrationHubClient);
-    d->apiVersion = QStringLiteral("2017-05-31");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("mgh");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Migration Hub");
-    d->serviceName = QStringLiteral("mgh");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -128,16 +128,16 @@ MigrationHubClient::MigrationHubClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new MigrationHubClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-05-31"),
+    QStringLiteral("mgh"),
+    QStringLiteral("AWS Migration Hub"),
+    QStringLiteral("mgh"),
+    parent), d_ptr(new MigrationHubClientPrivate(this))
 {
-    Q_D(MigrationHubClient);
-    d->apiVersion = QStringLiteral("2017-05-31");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("mgh");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Migration Hub");
-    d->serviceName = QStringLiteral("mgh");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -497,10 +497,9 @@ PutResourceAttributesResponse * MigrationHubClient::putResourceAttributes(const 
 /*!
  * Constructs a MigrationHubClientPrivate object with public implementation \a q.
  */
-MigrationHubClientPrivate::MigrationHubClientPrivate(MigrationHubClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+MigrationHubClientPrivate::MigrationHubClientPrivate(MigrationHubClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace MigrationHub

@@ -71,8 +71,7 @@ DeprecateWorkflowTypeResponse::DeprecateWorkflowTypeResponse(
  */
 const DeprecateWorkflowTypeRequest * DeprecateWorkflowTypeResponse::request() const
 {
-    Q_D(const DeprecateWorkflowTypeResponse);
-    return static_cast<const DeprecateWorkflowTypeRequest *>(d->request);
+    return static_cast<const DeprecateWorkflowTypeRequest *>(SwfResponse::request());
 }
 
 /*!

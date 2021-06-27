@@ -57,6 +57,7 @@ public:
 
 protected:
     /// @cond internal
+    MarketplaceEntitlementServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
     MarketplaceEntitlementServiceRequest(MarketplaceEntitlementServiceRequestPrivate * const d);
     /// @endcond
 

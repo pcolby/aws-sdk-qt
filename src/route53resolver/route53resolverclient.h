@@ -226,6 +226,12 @@ public slots:
     UpdateResolverEndpointResponse * updateResolverEndpoint(const UpdateResolverEndpointRequest &request);
     UpdateResolverRuleResponse * updateResolverRule(const UpdateResolverRuleRequest &request);
 
+protected:
+    /// @cond internal
+    Route53ResolverClientPrivate * const d_ptr; ///< Internal d-pointer.
+    Route53ResolverClient(Route53ResolverClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(Route53ResolverClient)
     Q_DISABLE_COPY(Route53ResolverClient)

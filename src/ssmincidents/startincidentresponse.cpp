@@ -65,8 +65,7 @@ StartIncidentResponse::StartIncidentResponse(
  */
 const StartIncidentRequest * StartIncidentResponse::request() const
 {
-    Q_D(const StartIncidentResponse);
-    return static_cast<const StartIncidentRequest *>(d->request);
+    return static_cast<const StartIncidentRequest *>(SSMIncidentsResponse::request());
 }
 
 /*!

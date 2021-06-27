@@ -58,8 +58,7 @@ UpdateTriggerResponse::UpdateTriggerResponse(
  */
 const UpdateTriggerRequest * UpdateTriggerResponse::request() const
 {
-    Q_D(const UpdateTriggerResponse);
-    return static_cast<const UpdateTriggerRequest *>(d->request);
+    return static_cast<const UpdateTriggerRequest *>(GlueResponse::request());
 }
 
 /*!

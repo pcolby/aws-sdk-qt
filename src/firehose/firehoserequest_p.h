@@ -20,15 +20,12 @@
 #ifndef QTAWS_FIREHOSEREQUEST_P_H
 #define QTAWS_FIREHOSEREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "firehoserequest.h"
-
 namespace QtAws {
 namespace Firehose {
 
 class FirehoseRequest;
 
-class FirehoseRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class FirehoseRequestPrivate {
 
 public:
     FirehoseRequest::Action action; ///< Firehose action to be performed.
@@ -39,6 +36,9 @@ public:
     FirehoseRequestPrivate(const FirehoseRequestPrivate &other, FirehoseRequest * const q);
 
     static QString toString(const FirehoseRequest::Action &action);
+
+protected:
+    FirehoseRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(FirehoseRequest)

@@ -58,8 +58,7 @@ CreateDetectorModelResponse::CreateDetectorModelResponse(
  */
 const CreateDetectorModelRequest * CreateDetectorModelResponse::request() const
 {
-    Q_D(const CreateDetectorModelResponse);
-    return static_cast<const CreateDetectorModelRequest *>(d->request);
+    return static_cast<const CreateDetectorModelRequest *>(IoTEventsResponse::request());
 }
 
 /*!

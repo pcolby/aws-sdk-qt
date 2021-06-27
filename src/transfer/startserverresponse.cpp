@@ -62,8 +62,7 @@ StartServerResponse::StartServerResponse(
  */
 const StartServerRequest * StartServerResponse::request() const
 {
-    Q_D(const StartServerResponse);
-    return static_cast<const StartServerRequest *>(d->request);
+    return static_cast<const StartServerRequest *>(TransferResponse::request());
 }
 
 /*!

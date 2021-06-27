@@ -57,8 +57,7 @@ DeleteFileSystemResponse::DeleteFileSystemResponse(
  */
 const DeleteFileSystemRequest * DeleteFileSystemResponse::request() const
 {
-    Q_D(const DeleteFileSystemResponse);
-    return static_cast<const DeleteFileSystemRequest *>(d->request);
+    return static_cast<const DeleteFileSystemRequest *>(FSxResponse::request());
 }
 
 /*!

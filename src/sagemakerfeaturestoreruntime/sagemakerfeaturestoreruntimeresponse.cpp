@@ -37,7 +37,7 @@ namespace SageMakerFeatureStoreRuntime {
  * Constructs a SageMakerFeatureStoreRuntimeResponse object with parent \a parent.
  */
 SageMakerFeatureStoreRuntimeResponse::SageMakerFeatureStoreRuntimeResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new SageMakerFeatureStoreRuntimeResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new SageMakerFeatureStoreRuntimeResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ SageMakerFeatureStoreRuntimeResponse::SageMakerFeatureStoreRuntimeResponse(QObje
  * implementation that inherits from SageMakerFeatureStoreRuntimeResponsePrivate.
  */
 SageMakerFeatureStoreRuntimeResponse::SageMakerFeatureStoreRuntimeResponse(SageMakerFeatureStoreRuntimeResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void SageMakerFeatureStoreRuntimeResponse::parseFailure(QIODevice &response)
  * Constructs a SageMakerFeatureStoreRuntimeResponsePrivate object with public implementation \a q.
  */
 SageMakerFeatureStoreRuntimeResponsePrivate::SageMakerFeatureStoreRuntimeResponsePrivate(
-    SageMakerFeatureStoreRuntimeResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    SageMakerFeatureStoreRuntimeResponse * const q) : q_ptr(q)
 {
 
 }

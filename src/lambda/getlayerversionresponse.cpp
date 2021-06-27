@@ -66,8 +66,7 @@ GetLayerVersionResponse::GetLayerVersionResponse(
  */
 const GetLayerVersionRequest * GetLayerVersionResponse::request() const
 {
-    Q_D(const GetLayerVersionResponse);
-    return static_cast<const GetLayerVersionRequest *>(d->request);
+    return static_cast<const GetLayerVersionRequest *>(LambdaResponse::request());
 }
 
 /*!

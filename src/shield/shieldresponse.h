@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    ShieldResponsePrivate * const d_ptr; ///< Internal d-pointer.
     ShieldResponse(ShieldResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

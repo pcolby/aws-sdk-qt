@@ -37,7 +37,7 @@ namespace AppConfig {
  * Constructs a AppConfigResponse object with parent \a parent.
  */
 AppConfigResponse::AppConfigResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new AppConfigResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new AppConfigResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ AppConfigResponse::AppConfigResponse(QObject * const parent)
  * implementation that inherits from AppConfigResponsePrivate.
  */
 AppConfigResponse::AppConfigResponse(AppConfigResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void AppConfigResponse::parseFailure(QIODevice &response)
  * Constructs a AppConfigResponsePrivate object with public implementation \a q.
  */
 AppConfigResponsePrivate::AppConfigResponsePrivate(
-    AppConfigResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    AppConfigResponse * const q) : q_ptr(q)
 {
 
 }

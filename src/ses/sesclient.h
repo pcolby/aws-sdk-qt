@@ -263,6 +263,12 @@ public slots:
     VerifyEmailAddressResponse * verifyEmailAddress(const VerifyEmailAddressRequest &request);
     VerifyEmailIdentityResponse * verifyEmailIdentity(const VerifyEmailIdentityRequest &request);
 
+protected:
+    /// @cond internal
+    SesClientPrivate * const d_ptr; ///< Internal d-pointer.
+    SesClient(SesClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(SesClient)
     Q_DISABLE_COPY(SesClient)

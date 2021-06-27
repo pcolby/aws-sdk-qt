@@ -218,8 +218,7 @@ DeprovisionByoipCidrResponse::DeprovisionByoipCidrResponse(
  */
 const DeprovisionByoipCidrRequest * DeprovisionByoipCidrResponse::request() const
 {
-    Q_D(const DeprovisionByoipCidrResponse);
-    return static_cast<const DeprovisionByoipCidrRequest *>(d->request);
+    return static_cast<const DeprovisionByoipCidrRequest *>(GlobalAcceleratorResponse::request());
 }
 
 /*!

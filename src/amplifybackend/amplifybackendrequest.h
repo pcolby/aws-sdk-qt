@@ -80,6 +80,7 @@ public:
 
 protected:
     /// @cond internal
+    AmplifyBackendRequestPrivate * const d_ptr; ///< Internal d-pointer.
     AmplifyBackendRequest(AmplifyBackendRequestPrivate * const d);
     /// @endcond
 

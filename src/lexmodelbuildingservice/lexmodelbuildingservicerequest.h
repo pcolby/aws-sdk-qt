@@ -95,6 +95,7 @@ public:
 
 protected:
     /// @cond internal
+    LexModelBuildingServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
     LexModelBuildingServiceRequest(LexModelBuildingServiceRequestPrivate * const d);
     /// @endcond
 

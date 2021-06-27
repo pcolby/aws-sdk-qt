@@ -58,8 +58,7 @@ StopBulkDeploymentResponse::StopBulkDeploymentResponse(
  */
 const StopBulkDeploymentRequest * StopBulkDeploymentResponse::request() const
 {
-    Q_D(const StopBulkDeploymentResponse);
-    return static_cast<const StopBulkDeploymentRequest *>(d->request);
+    return static_cast<const StopBulkDeploymentRequest *>(GreengrassResponse::request());
 }
 
 /*!

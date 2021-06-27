@@ -751,6 +751,12 @@ public slots:
     UpdateWorkforceResponse * updateWorkforce(const UpdateWorkforceRequest &request);
     UpdateWorkteamResponse * updateWorkteam(const UpdateWorkteamRequest &request);
 
+protected:
+    /// @cond internal
+    SageMakerClientPrivate * const d_ptr; ///< Internal d-pointer.
+    SageMakerClient(SageMakerClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(SageMakerClient)
     Q_DISABLE_COPY(SageMakerClient)

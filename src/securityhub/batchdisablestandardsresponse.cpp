@@ -103,8 +103,7 @@ BatchDisableStandardsResponse::BatchDisableStandardsResponse(
  */
 const BatchDisableStandardsRequest * BatchDisableStandardsResponse::request() const
 {
-    Q_D(const BatchDisableStandardsResponse);
-    return static_cast<const BatchDisableStandardsRequest *>(d->request);
+    return static_cast<const BatchDisableStandardsRequest *>(SecurityHubResponse::request());
 }
 
 /*!

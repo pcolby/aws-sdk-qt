@@ -75,8 +75,7 @@ CheckIfPhoneNumberIsOptedOutResponse::CheckIfPhoneNumberIsOptedOutResponse(
  */
 const CheckIfPhoneNumberIsOptedOutRequest * CheckIfPhoneNumberIsOptedOutResponse::request() const
 {
-    Q_D(const CheckIfPhoneNumberIsOptedOutResponse);
-    return static_cast<const CheckIfPhoneNumberIsOptedOutRequest *>(d->request);
+    return static_cast<const CheckIfPhoneNumberIsOptedOutRequest *>(SnsResponse::request());
 }
 
 /*!

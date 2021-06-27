@@ -55,8 +55,7 @@ ListWorkersWithQualificationTypeResponse::ListWorkersWithQualificationTypeRespon
  */
 const ListWorkersWithQualificationTypeRequest * ListWorkersWithQualificationTypeResponse::request() const
 {
-    Q_D(const ListWorkersWithQualificationTypeResponse);
-    return static_cast<const ListWorkersWithQualificationTypeRequest *>(d->request);
+    return static_cast<const ListWorkersWithQualificationTypeRequest *>(MTurkResponse::request());
 }
 
 /*!

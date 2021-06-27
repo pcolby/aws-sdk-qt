@@ -154,8 +154,7 @@ EncryptResponse::EncryptResponse(
  */
 const EncryptRequest * EncryptResponse::request() const
 {
-    Q_D(const EncryptResponse);
-    return static_cast<const EncryptRequest *>(d->request);
+    return static_cast<const EncryptRequest *>(KmsResponse::request());
 }
 
 /*!

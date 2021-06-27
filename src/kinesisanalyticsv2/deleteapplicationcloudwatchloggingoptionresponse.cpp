@@ -58,8 +58,7 @@ DeleteApplicationCloudWatchLoggingOptionResponse::DeleteApplicationCloudWatchLog
  */
 const DeleteApplicationCloudWatchLoggingOptionRequest * DeleteApplicationCloudWatchLoggingOptionResponse::request() const
 {
-    Q_D(const DeleteApplicationCloudWatchLoggingOptionResponse);
-    return static_cast<const DeleteApplicationCloudWatchLoggingOptionRequest *>(d->request);
+    return static_cast<const DeleteApplicationCloudWatchLoggingOptionRequest *>(KinesisAnalyticsV2Response::request());
 }
 
 /*!

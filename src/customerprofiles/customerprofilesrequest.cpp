@@ -72,7 +72,7 @@ namespace CustomerProfiles {
  * Constructs a CustomerProfilesRequest object for CustomerProfiles \a action.
  */
 CustomerProfilesRequest::CustomerProfilesRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new CustomerProfilesRequestPrivate(action, this))
+    : d_ptr(new CustomerProfilesRequestPrivate(action, this))
 {
 
 }
@@ -81,7 +81,8 @@ CustomerProfilesRequest::CustomerProfilesRequest(const Action action)
  * Constructs a copy of \a other.
  */
 CustomerProfilesRequest::CustomerProfilesRequest(const CustomerProfilesRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new CustomerProfilesRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new CustomerProfilesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -104,7 +105,7 @@ CustomerProfilesRequest& CustomerProfilesRequest::operator=(const CustomerProfil
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CustomerProfilesRequestPrivate.
  */
-CustomerProfilesRequest::CustomerProfilesRequest(CustomerProfilesRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+CustomerProfilesRequest::CustomerProfilesRequest(CustomerProfilesRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -273,7 +274,7 @@ QNetworkRequest CustomerProfilesRequest::unsignedRequest(const QUrl &endpoint) c
  * with public implementation \a q.
  */
 CustomerProfilesRequestPrivate::CustomerProfilesRequestPrivate(const CustomerProfilesRequest::Action action, CustomerProfilesRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -288,8 +289,8 @@ CustomerProfilesRequestPrivate::CustomerProfilesRequestPrivate(const CustomerPro
  */
 CustomerProfilesRequestPrivate::CustomerProfilesRequestPrivate(const CustomerProfilesRequestPrivate &other,
                                      CustomerProfilesRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

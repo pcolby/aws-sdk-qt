@@ -98,8 +98,7 @@ ValidateAssessmentReportIntegrityResponse::ValidateAssessmentReportIntegrityResp
  */
 const ValidateAssessmentReportIntegrityRequest * ValidateAssessmentReportIntegrityResponse::request() const
 {
-    Q_D(const ValidateAssessmentReportIntegrityResponse);
-    return static_cast<const ValidateAssessmentReportIntegrityRequest *>(d->request);
+    return static_cast<const ValidateAssessmentReportIntegrityRequest *>(AuditManagerResponse::request());
 }
 
 /*!

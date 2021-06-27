@@ -59,8 +59,7 @@ DescribeRecoveryPointResponse::DescribeRecoveryPointResponse(
  */
 const DescribeRecoveryPointRequest * DescribeRecoveryPointResponse::request() const
 {
-    Q_D(const DescribeRecoveryPointResponse);
-    return static_cast<const DescribeRecoveryPointRequest *>(d->request);
+    return static_cast<const DescribeRecoveryPointRequest *>(BackupResponse::request());
 }
 
 /*!

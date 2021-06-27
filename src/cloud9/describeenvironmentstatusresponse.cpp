@@ -121,8 +121,7 @@ DescribeEnvironmentStatusResponse::DescribeEnvironmentStatusResponse(
  */
 const DescribeEnvironmentStatusRequest * DescribeEnvironmentStatusResponse::request() const
 {
-    Q_D(const DescribeEnvironmentStatusResponse);
-    return static_cast<const DescribeEnvironmentStatusRequest *>(d->request);
+    return static_cast<const DescribeEnvironmentStatusRequest *>(Cloud9Response::request());
 }
 
 /*!

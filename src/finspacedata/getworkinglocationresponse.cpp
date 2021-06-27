@@ -56,8 +56,7 @@ GetWorkingLocationResponse::GetWorkingLocationResponse(
  */
 const GetWorkingLocationRequest * GetWorkingLocationResponse::request() const
 {
-    Q_D(const GetWorkingLocationResponse);
-    return static_cast<const GetWorkingLocationRequest *>(d->request);
+    return static_cast<const GetWorkingLocationRequest *>(FinSpaceDataResponse::request());
 }
 
 /*!

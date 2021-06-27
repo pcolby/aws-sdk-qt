@@ -78,8 +78,7 @@ UpdateApiDestinationResponse::UpdateApiDestinationResponse(
  */
 const UpdateApiDestinationRequest * UpdateApiDestinationResponse::request() const
 {
-    Q_D(const UpdateApiDestinationResponse);
-    return static_cast<const UpdateApiDestinationRequest *>(d->request);
+    return static_cast<const UpdateApiDestinationRequest *>(CloudWatchEventsResponse::request());
 }
 
 /*!

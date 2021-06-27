@@ -63,8 +63,7 @@ GetObjectAttributesResponse::GetObjectAttributesResponse(
  */
 const GetObjectAttributesRequest * GetObjectAttributesResponse::request() const
 {
-    Q_D(const GetObjectAttributesResponse);
-    return static_cast<const GetObjectAttributesRequest *>(d->request);
+    return static_cast<const GetObjectAttributesRequest *>(CloudDirectoryResponse::request());
 }
 
 /*!

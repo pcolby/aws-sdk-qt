@@ -94,7 +94,7 @@ namespace ECS {
  * Constructs a EcsRequest object for ECS \a action.
  */
 EcsRequest::EcsRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new EcsRequestPrivate(action, this))
+    : d_ptr(new EcsRequestPrivate(action, this))
 {
 
 }
@@ -103,7 +103,8 @@ EcsRequest::EcsRequest(const Action action)
  * Constructs a copy of \a other.
  */
 EcsRequest::EcsRequest(const EcsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new EcsRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new EcsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -126,7 +127,7 @@ EcsRequest& EcsRequest::operator=(const EcsRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from EcsRequestPrivate.
  */
-EcsRequest::EcsRequest(EcsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+EcsRequest::EcsRequest(EcsRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -295,7 +296,7 @@ QNetworkRequest EcsRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 EcsRequestPrivate::EcsRequestPrivate(const EcsRequest::Action action, EcsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -310,8 +311,8 @@ EcsRequestPrivate::EcsRequestPrivate(const EcsRequest::Action action, EcsRequest
  */
 EcsRequestPrivate::EcsRequestPrivate(const EcsRequestPrivate &other,
                                      EcsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

@@ -70,6 +70,12 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateApplicationResponse * updateApplication(const UpdateApplicationRequest &request);
 
+protected:
+    /// @cond internal
+    IoTFleetHubClientPrivate * const d_ptr; ///< Internal d-pointer.
+    IoTFleetHubClient(IoTFleetHubClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(IoTFleetHubClient)
     Q_DISABLE_COPY(IoTFleetHubClient)

@@ -74,8 +74,7 @@ AttachCertificateToDistributionResponse::AttachCertificateToDistributionResponse
  */
 const AttachCertificateToDistributionRequest * AttachCertificateToDistributionResponse::request() const
 {
-    Q_D(const AttachCertificateToDistributionResponse);
-    return static_cast<const AttachCertificateToDistributionRequest *>(d->request);
+    return static_cast<const AttachCertificateToDistributionRequest *>(LightsailResponse::request());
 }
 
 /*!

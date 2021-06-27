@@ -64,8 +64,7 @@ GetEBSVolumeRecommendationsResponse::GetEBSVolumeRecommendationsResponse(
  */
 const GetEBSVolumeRecommendationsRequest * GetEBSVolumeRecommendationsResponse::request() const
 {
-    Q_D(const GetEBSVolumeRecommendationsResponse);
-    return static_cast<const GetEBSVolumeRecommendationsRequest *>(d->request);
+    return static_cast<const GetEBSVolumeRecommendationsRequest *>(ComputeOptimizerResponse::request());
 }
 
 /*!

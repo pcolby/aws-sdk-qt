@@ -59,7 +59,7 @@ namespace MediaPackageVod {
  * Constructs a MediaPackageVodRequest object for MediaPackageVod \a action.
  */
 MediaPackageVodRequest::MediaPackageVodRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new MediaPackageVodRequestPrivate(action, this))
+    : d_ptr(new MediaPackageVodRequestPrivate(action, this))
 {
 
 }
@@ -68,7 +68,8 @@ MediaPackageVodRequest::MediaPackageVodRequest(const Action action)
  * Constructs a copy of \a other.
  */
 MediaPackageVodRequest::MediaPackageVodRequest(const MediaPackageVodRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new MediaPackageVodRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new MediaPackageVodRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -91,7 +92,7 @@ MediaPackageVodRequest& MediaPackageVodRequest::operator=(const MediaPackageVodR
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MediaPackageVodRequestPrivate.
  */
-MediaPackageVodRequest::MediaPackageVodRequest(MediaPackageVodRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+MediaPackageVodRequest::MediaPackageVodRequest(MediaPackageVodRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -260,7 +261,7 @@ QNetworkRequest MediaPackageVodRequest::unsignedRequest(const QUrl &endpoint) co
  * with public implementation \a q.
  */
 MediaPackageVodRequestPrivate::MediaPackageVodRequestPrivate(const MediaPackageVodRequest::Action action, MediaPackageVodRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -275,8 +276,8 @@ MediaPackageVodRequestPrivate::MediaPackageVodRequestPrivate(const MediaPackageV
  */
 MediaPackageVodRequestPrivate::MediaPackageVodRequestPrivate(const MediaPackageVodRequestPrivate &other,
                                      MediaPackageVodRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

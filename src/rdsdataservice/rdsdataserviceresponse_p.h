@@ -20,14 +20,12 @@
 #ifndef QTAWS_RDSDATASERVICERESPONSE_P_H
 #define QTAWS_RDSDATASERVICERESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace RDSDataService {
 
 class RDSDataServiceResponse;
 
-class RDSDataServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class RDSDataServiceResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    RDSDataServiceResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(RDSDataServiceResponse)

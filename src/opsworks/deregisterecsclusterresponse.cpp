@@ -161,8 +161,7 @@ DeregisterEcsClusterResponse::DeregisterEcsClusterResponse(
  */
 const DeregisterEcsClusterRequest * DeregisterEcsClusterResponse::request() const
 {
-    Q_D(const DeregisterEcsClusterResponse);
-    return static_cast<const DeregisterEcsClusterRequest *>(d->request);
+    return static_cast<const DeregisterEcsClusterRequest *>(OpsWorksResponse::request());
 }
 
 /*!

@@ -62,8 +62,7 @@ UploadLayerPartResponse::UploadLayerPartResponse(
  */
 const UploadLayerPartRequest * UploadLayerPartResponse::request() const
 {
-    Q_D(const UploadLayerPartResponse);
-    return static_cast<const UploadLayerPartRequest *>(d->request);
+    return static_cast<const UploadLayerPartRequest *>(EcrResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ CreateFunctionResponse::CreateFunctionResponse(
  */
 const CreateFunctionRequest * CreateFunctionResponse::request() const
 {
-    Q_D(const CreateFunctionResponse);
-    return static_cast<const CreateFunctionRequest *>(d->request);
+    return static_cast<const CreateFunctionRequest *>(AppSyncResponse::request());
 }
 
 /*!

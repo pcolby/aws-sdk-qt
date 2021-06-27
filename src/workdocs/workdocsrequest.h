@@ -97,6 +97,7 @@ public:
 
 protected:
     /// @cond internal
+    WorkDocsRequestPrivate * const d_ptr; ///< Internal d-pointer.
     WorkDocsRequest(WorkDocsRequestPrivate * const d);
     /// @endcond
 

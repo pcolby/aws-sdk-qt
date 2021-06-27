@@ -74,8 +74,7 @@ GetDistributionMetricDataResponse::GetDistributionMetricDataResponse(
  */
 const GetDistributionMetricDataRequest * GetDistributionMetricDataResponse::request() const
 {
-    Q_D(const GetDistributionMetricDataResponse);
-    return static_cast<const GetDistributionMetricDataRequest *>(d->request);
+    return static_cast<const GetDistributionMetricDataRequest *>(LightsailResponse::request());
 }
 
 /*!

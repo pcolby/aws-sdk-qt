@@ -77,7 +77,7 @@ namespace DataSync {
  * Constructs a DataSyncRequest object for DataSync \a action.
  */
 DataSyncRequest::DataSyncRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new DataSyncRequestPrivate(action, this))
+    : d_ptr(new DataSyncRequestPrivate(action, this))
 {
 
 }
@@ -86,7 +86,8 @@ DataSyncRequest::DataSyncRequest(const Action action)
  * Constructs a copy of \a other.
  */
 DataSyncRequest::DataSyncRequest(const DataSyncRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new DataSyncRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new DataSyncRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -109,7 +110,7 @@ DataSyncRequest& DataSyncRequest::operator=(const DataSyncRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from DataSyncRequestPrivate.
  */
-DataSyncRequest::DataSyncRequest(DataSyncRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+DataSyncRequest::DataSyncRequest(DataSyncRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -278,7 +279,7 @@ QNetworkRequest DataSyncRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 DataSyncRequestPrivate::DataSyncRequestPrivate(const DataSyncRequest::Action action, DataSyncRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -293,8 +294,8 @@ DataSyncRequestPrivate::DataSyncRequestPrivate(const DataSyncRequest::Action act
  */
 DataSyncRequestPrivate::DataSyncRequestPrivate(const DataSyncRequestPrivate &other,
                                      DataSyncRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

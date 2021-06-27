@@ -141,8 +141,7 @@ GetDeploymentGroupResponse::GetDeploymentGroupResponse(
  */
 const GetDeploymentGroupRequest * GetDeploymentGroupResponse::request() const
 {
-    Q_D(const GetDeploymentGroupResponse);
-    return static_cast<const GetDeploymentGroupRequest *>(d->request);
+    return static_cast<const GetDeploymentGroupRequest *>(CodeDeployResponse::request());
 }
 
 /*!

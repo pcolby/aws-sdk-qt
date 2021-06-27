@@ -58,8 +58,7 @@ StartEventsDetectionJobResponse::StartEventsDetectionJobResponse(
  */
 const StartEventsDetectionJobRequest * StartEventsDetectionJobResponse::request() const
 {
-    Q_D(const StartEventsDetectionJobResponse);
-    return static_cast<const StartEventsDetectionJobRequest *>(d->request);
+    return static_cast<const StartEventsDetectionJobRequest *>(ComprehendResponse::request());
 }
 
 /*!

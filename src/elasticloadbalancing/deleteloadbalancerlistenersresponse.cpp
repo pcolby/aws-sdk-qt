@@ -83,8 +83,7 @@ DeleteLoadBalancerListenersResponse::DeleteLoadBalancerListenersResponse(
  */
 const DeleteLoadBalancerListenersRequest * DeleteLoadBalancerListenersResponse::request() const
 {
-    Q_D(const DeleteLoadBalancerListenersResponse);
-    return static_cast<const DeleteLoadBalancerListenersRequest *>(d->request);
+    return static_cast<const DeleteLoadBalancerListenersRequest *>(ElasticLoadBalancingResponse::request());
 }
 
 /*!

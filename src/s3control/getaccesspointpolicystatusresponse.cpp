@@ -56,8 +56,7 @@ GetAccessPointPolicyStatusResponse::GetAccessPointPolicyStatusResponse(
  */
 const GetAccessPointPolicyStatusRequest * GetAccessPointPolicyStatusResponse::request() const
 {
-    Q_D(const GetAccessPointPolicyStatusResponse);
-    return static_cast<const GetAccessPointPolicyStatusRequest *>(d->request);
+    return static_cast<const GetAccessPointPolicyStatusRequest *>(S3ControlResponse::request());
 }
 
 /*!

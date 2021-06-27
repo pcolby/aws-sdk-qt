@@ -56,8 +56,7 @@ GetRawMessageContentResponse::GetRawMessageContentResponse(
  */
 const GetRawMessageContentRequest * GetRawMessageContentResponse::request() const
 {
-    Q_D(const GetRawMessageContentResponse);
-    return static_cast<const GetRawMessageContentRequest *>(d->request);
+    return static_cast<const GetRawMessageContentRequest *>(WorkMailMessageFlowResponse::request());
 }
 
 /*!

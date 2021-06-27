@@ -73,6 +73,7 @@ public:
 
 protected:
     /// @cond internal
+    ElasticTranscoderRequestPrivate * const d_ptr; ///< Internal d-pointer.
     ElasticTranscoderRequest(ElasticTranscoderRequestPrivate * const d);
     /// @endcond
 

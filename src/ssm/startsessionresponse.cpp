@@ -98,8 +98,7 @@ StartSessionResponse::StartSessionResponse(
  */
 const StartSessionRequest * StartSessionResponse::request() const
 {
-    Q_D(const StartSessionResponse);
-    return static_cast<const StartSessionRequest *>(d->request);
+    return static_cast<const StartSessionRequest *>(SsmResponse::request());
 }
 
 /*!

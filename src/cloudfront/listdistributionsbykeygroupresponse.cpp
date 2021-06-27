@@ -60,8 +60,7 @@ ListDistributionsByKeyGroupResponse::ListDistributionsByKeyGroupResponse(
  */
 const ListDistributionsByKeyGroupRequest * ListDistributionsByKeyGroupResponse::request() const
 {
-    Q_D(const ListDistributionsByKeyGroupResponse);
-    return static_cast<const ListDistributionsByKeyGroupRequest *>(d->request);
+    return static_cast<const ListDistributionsByKeyGroupRequest *>(CloudFrontResponse::request());
 }
 
 /*!

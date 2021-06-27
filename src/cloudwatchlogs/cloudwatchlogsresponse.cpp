@@ -37,7 +37,7 @@ namespace CloudWatchLogs {
  * Constructs a CloudWatchLogsResponse object with parent \a parent.
  */
 CloudWatchLogsResponse::CloudWatchLogsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new CloudWatchLogsResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new CloudWatchLogsResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ CloudWatchLogsResponse::CloudWatchLogsResponse(QObject * const parent)
  * implementation that inherits from CloudWatchLogsResponsePrivate.
  */
 CloudWatchLogsResponse::CloudWatchLogsResponse(CloudWatchLogsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void CloudWatchLogsResponse::parseFailure(QIODevice &response)
  * Constructs a CloudWatchLogsResponsePrivate object with public implementation \a q.
  */
 CloudWatchLogsResponsePrivate::CloudWatchLogsResponsePrivate(
-    CloudWatchLogsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    CloudWatchLogsResponse * const q) : q_ptr(q)
 {
 
 }

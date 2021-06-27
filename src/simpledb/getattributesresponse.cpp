@@ -68,8 +68,7 @@ GetAttributesResponse::GetAttributesResponse(
  */
 const GetAttributesRequest * GetAttributesResponse::request() const
 {
-    Q_D(const GetAttributesResponse);
-    return static_cast<const GetAttributesRequest *>(d->request);
+    return static_cast<const GetAttributesRequest *>(SimpleDBResponse::request());
 }
 
 /*!

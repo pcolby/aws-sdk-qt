@@ -60,8 +60,7 @@ UpdateRestApiResponse::UpdateRestApiResponse(
  */
 const UpdateRestApiRequest * UpdateRestApiResponse::request() const
 {
-    Q_D(const UpdateRestApiResponse);
-    return static_cast<const UpdateRestApiRequest *>(d->request);
+    return static_cast<const UpdateRestApiRequest *>(APIGatewayResponse::request());
 }
 
 /*!

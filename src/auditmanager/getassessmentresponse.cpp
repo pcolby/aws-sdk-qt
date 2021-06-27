@@ -98,8 +98,7 @@ GetAssessmentResponse::GetAssessmentResponse(
  */
 const GetAssessmentRequest * GetAssessmentResponse::request() const
 {
-    Q_D(const GetAssessmentResponse);
-    return static_cast<const GetAssessmentRequest *>(d->request);
+    return static_cast<const GetAssessmentRequest *>(AuditManagerResponse::request());
 }
 
 /*!

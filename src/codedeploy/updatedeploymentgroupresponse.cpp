@@ -141,8 +141,7 @@ UpdateDeploymentGroupResponse::UpdateDeploymentGroupResponse(
  */
 const UpdateDeploymentGroupRequest * UpdateDeploymentGroupResponse::request() const
 {
-    Q_D(const UpdateDeploymentGroupResponse);
-    return static_cast<const UpdateDeploymentGroupRequest *>(d->request);
+    return static_cast<const UpdateDeploymentGroupRequest *>(CodeDeployResponse::request());
 }
 
 /*!

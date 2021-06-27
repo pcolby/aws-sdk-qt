@@ -20,15 +20,12 @@
 #ifndef QTAWS_GAMELIFTREQUEST_P_H
 #define QTAWS_GAMELIFTREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "gameliftrequest.h"
-
 namespace QtAws {
 namespace GameLift {
 
 class GameLiftRequest;
 
-class GameLiftRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class GameLiftRequestPrivate {
 
 public:
     GameLiftRequest::Action action; ///< GameLift action to be performed.
@@ -39,6 +36,9 @@ public:
     GameLiftRequestPrivate(const GameLiftRequestPrivate &other, GameLiftRequest * const q);
 
     static QString toString(const GameLiftRequest::Action &action);
+
+protected:
+    GameLiftRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(GameLiftRequest)

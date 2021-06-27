@@ -62,8 +62,7 @@ GetInvitationConfigurationResponse::GetInvitationConfigurationResponse(
  */
 const GetInvitationConfigurationRequest * GetInvitationConfigurationResponse::request() const
 {
-    Q_D(const GetInvitationConfigurationResponse);
-    return static_cast<const GetInvitationConfigurationRequest *>(d->request);
+    return static_cast<const GetInvitationConfigurationRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

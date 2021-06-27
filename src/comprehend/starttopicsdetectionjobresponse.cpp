@@ -58,8 +58,7 @@ StartTopicsDetectionJobResponse::StartTopicsDetectionJobResponse(
  */
 const StartTopicsDetectionJobRequest * StartTopicsDetectionJobResponse::request() const
 {
-    Q_D(const StartTopicsDetectionJobResponse);
-    return static_cast<const StartTopicsDetectionJobRequest *>(d->request);
+    return static_cast<const StartTopicsDetectionJobRequest *>(ComprehendResponse::request());
 }
 
 /*!

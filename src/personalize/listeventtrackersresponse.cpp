@@ -56,8 +56,7 @@ ListEventTrackersResponse::ListEventTrackersResponse(
  */
 const ListEventTrackersRequest * ListEventTrackersResponse::request() const
 {
-    Q_D(const ListEventTrackersResponse);
-    return static_cast<const ListEventTrackersRequest *>(d->request);
+    return static_cast<const ListEventTrackersRequest *>(PersonalizeResponse::request());
 }
 
 /*!

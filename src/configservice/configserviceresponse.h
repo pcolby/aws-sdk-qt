@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    ConfigServiceResponsePrivate * const d_ptr; ///< Internal d-pointer.
     ConfigServiceResponse(ConfigServiceResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

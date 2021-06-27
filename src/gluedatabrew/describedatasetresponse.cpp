@@ -58,8 +58,7 @@ DescribeDatasetResponse::DescribeDatasetResponse(
  */
 const DescribeDatasetRequest * DescribeDatasetResponse::request() const
 {
-    Q_D(const DescribeDatasetResponse);
-    return static_cast<const DescribeDatasetRequest *>(d->request);
+    return static_cast<const DescribeDatasetRequest *>(GlueDataBrewResponse::request());
 }
 
 /*!

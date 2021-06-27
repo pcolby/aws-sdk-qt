@@ -62,8 +62,7 @@ UpdateAnswerResponse::UpdateAnswerResponse(
  */
 const UpdateAnswerRequest * UpdateAnswerResponse::request() const
 {
-    Q_D(const UpdateAnswerResponse);
-    return static_cast<const UpdateAnswerRequest *>(d->request);
+    return static_cast<const UpdateAnswerRequest *>(WellArchitectedResponse::request());
 }
 
 /*!

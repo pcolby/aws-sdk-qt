@@ -58,8 +58,7 @@ CreateTableResponse::CreateTableResponse(
  */
 const CreateTableRequest * CreateTableResponse::request() const
 {
-    Q_D(const CreateTableResponse);
-    return static_cast<const CreateTableRequest *>(d->request);
+    return static_cast<const CreateTableRequest *>(GlueResponse::request());
 }
 
 /*!

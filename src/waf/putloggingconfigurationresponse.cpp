@@ -76,8 +76,7 @@ PutLoggingConfigurationResponse::PutLoggingConfigurationResponse(
  */
 const PutLoggingConfigurationRequest * PutLoggingConfigurationResponse::request() const
 {
-    Q_D(const PutLoggingConfigurationResponse);
-    return static_cast<const PutLoggingConfigurationRequest *>(d->request);
+    return static_cast<const PutLoggingConfigurationRequest *>(WafResponse::request());
 }
 
 /*!

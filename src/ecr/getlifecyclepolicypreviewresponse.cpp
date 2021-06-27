@@ -62,8 +62,7 @@ GetLifecyclePolicyPreviewResponse::GetLifecyclePolicyPreviewResponse(
  */
 const GetLifecyclePolicyPreviewRequest * GetLifecyclePolicyPreviewResponse::request() const
 {
-    Q_D(const GetLifecyclePolicyPreviewResponse);
-    return static_cast<const GetLifecyclePolicyPreviewRequest *>(d->request);
+    return static_cast<const GetLifecyclePolicyPreviewRequest *>(EcrResponse::request());
 }
 
 /*!

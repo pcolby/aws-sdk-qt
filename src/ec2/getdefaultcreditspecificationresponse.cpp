@@ -87,8 +87,7 @@ GetDefaultCreditSpecificationResponse::GetDefaultCreditSpecificationResponse(
  */
 const GetDefaultCreditSpecificationRequest * GetDefaultCreditSpecificationResponse::request() const
 {
-    Q_D(const GetDefaultCreditSpecificationResponse);
-    return static_cast<const GetDefaultCreditSpecificationRequest *>(d->request);
+    return static_cast<const GetDefaultCreditSpecificationRequest *>(Ec2Response::request());
 }
 
 /*!

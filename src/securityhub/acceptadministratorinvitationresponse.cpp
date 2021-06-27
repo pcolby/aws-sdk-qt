@@ -103,8 +103,7 @@ AcceptAdministratorInvitationResponse::AcceptAdministratorInvitationResponse(
  */
 const AcceptAdministratorInvitationRequest * AcceptAdministratorInvitationResponse::request() const
 {
-    Q_D(const AcceptAdministratorInvitationResponse);
-    return static_cast<const AcceptAdministratorInvitationRequest *>(d->request);
+    return static_cast<const AcceptAdministratorInvitationRequest *>(SecurityHubResponse::request());
 }
 
 /*!

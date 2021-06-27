@@ -87,8 +87,7 @@ DeleteTransitGatewayVpcAttachmentResponse::DeleteTransitGatewayVpcAttachmentResp
  */
 const DeleteTransitGatewayVpcAttachmentRequest * DeleteTransitGatewayVpcAttachmentResponse::request() const
 {
-    Q_D(const DeleteTransitGatewayVpcAttachmentResponse);
-    return static_cast<const DeleteTransitGatewayVpcAttachmentRequest *>(d->request);
+    return static_cast<const DeleteTransitGatewayVpcAttachmentRequest *>(Ec2Response::request());
 }
 
 /*!

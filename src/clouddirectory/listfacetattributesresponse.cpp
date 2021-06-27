@@ -63,8 +63,7 @@ ListFacetAttributesResponse::ListFacetAttributesResponse(
  */
 const ListFacetAttributesRequest * ListFacetAttributesResponse::request() const
 {
-    Q_D(const ListFacetAttributesResponse);
-    return static_cast<const ListFacetAttributesRequest *>(d->request);
+    return static_cast<const ListFacetAttributesRequest *>(CloudDirectoryResponse::request());
 }
 
 /*!

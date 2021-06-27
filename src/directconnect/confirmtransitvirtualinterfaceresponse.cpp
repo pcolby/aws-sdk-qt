@@ -61,8 +61,7 @@ ConfirmTransitVirtualInterfaceResponse::ConfirmTransitVirtualInterfaceResponse(
  */
 const ConfirmTransitVirtualInterfaceRequest * ConfirmTransitVirtualInterfaceResponse::request() const
 {
-    Q_D(const ConfirmTransitVirtualInterfaceResponse);
-    return static_cast<const ConfirmTransitVirtualInterfaceRequest *>(d->request);
+    return static_cast<const ConfirmTransitVirtualInterfaceRequest *>(DirectConnectResponse::request());
 }
 
 /*!

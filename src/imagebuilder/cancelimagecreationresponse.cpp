@@ -58,8 +58,7 @@ CancelImageCreationResponse::CancelImageCreationResponse(
  */
 const CancelImageCreationRequest * CancelImageCreationResponse::request() const
 {
-    Q_D(const CancelImageCreationResponse);
-    return static_cast<const CancelImageCreationRequest *>(d->request);
+    return static_cast<const CancelImageCreationRequest *>(imagebuilderResponse::request());
 }
 
 /*!

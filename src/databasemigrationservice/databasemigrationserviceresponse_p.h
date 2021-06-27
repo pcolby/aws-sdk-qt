@@ -20,14 +20,12 @@
 #ifndef QTAWS_DATABASEMIGRATIONSERVICERESPONSE_P_H
 #define QTAWS_DATABASEMIGRATIONSERVICERESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace DatabaseMigrationService {
 
 class DatabaseMigrationServiceResponse;
 
-class DatabaseMigrationServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class DatabaseMigrationServiceResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    DatabaseMigrationServiceResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DatabaseMigrationServiceResponse)

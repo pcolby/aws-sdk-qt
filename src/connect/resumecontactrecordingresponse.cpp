@@ -79,8 +79,7 @@ ResumeContactRecordingResponse::ResumeContactRecordingResponse(
  */
 const ResumeContactRecordingRequest * ResumeContactRecordingResponse::request() const
 {
-    Q_D(const ResumeContactRecordingResponse);
-    return static_cast<const ResumeContactRecordingRequest *>(d->request);
+    return static_cast<const ResumeContactRecordingRequest *>(ConnectResponse::request());
 }
 
 /*!

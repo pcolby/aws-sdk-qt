@@ -154,8 +154,7 @@ CancelKeyDeletionResponse::CancelKeyDeletionResponse(
  */
 const CancelKeyDeletionRequest * CancelKeyDeletionResponse::request() const
 {
-    Q_D(const CancelKeyDeletionResponse);
-    return static_cast<const CancelKeyDeletionRequest *>(d->request);
+    return static_cast<const CancelKeyDeletionRequest *>(KmsResponse::request());
 }
 
 /*!

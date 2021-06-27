@@ -141,8 +141,7 @@ RemoveTagsFromOnPremisesInstancesResponse::RemoveTagsFromOnPremisesInstancesResp
  */
 const RemoveTagsFromOnPremisesInstancesRequest * RemoveTagsFromOnPremisesInstancesResponse::request() const
 {
-    Q_D(const RemoveTagsFromOnPremisesInstancesResponse);
-    return static_cast<const RemoveTagsFromOnPremisesInstancesRequest *>(d->request);
+    return static_cast<const RemoveTagsFromOnPremisesInstancesRequest *>(CodeDeployResponse::request());
 }
 
 /*!

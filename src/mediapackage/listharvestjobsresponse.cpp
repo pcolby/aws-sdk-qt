@@ -55,8 +55,7 @@ ListHarvestJobsResponse::ListHarvestJobsResponse(
  */
 const ListHarvestJobsRequest * ListHarvestJobsResponse::request() const
 {
-    Q_D(const ListHarvestJobsResponse);
-    return static_cast<const ListHarvestJobsRequest *>(d->request);
+    return static_cast<const ListHarvestJobsRequest *>(MediaPackageResponse::request());
 }
 
 /*!

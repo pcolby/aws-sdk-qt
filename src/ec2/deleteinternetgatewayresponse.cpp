@@ -87,8 +87,7 @@ DeleteInternetGatewayResponse::DeleteInternetGatewayResponse(
  */
 const DeleteInternetGatewayRequest * DeleteInternetGatewayResponse::request() const
 {
-    Q_D(const DeleteInternetGatewayResponse);
-    return static_cast<const DeleteInternetGatewayRequest *>(d->request);
+    return static_cast<const DeleteInternetGatewayRequest *>(Ec2Response::request());
 }
 
 /*!

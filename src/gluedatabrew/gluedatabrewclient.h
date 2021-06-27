@@ -163,6 +163,12 @@ public slots:
     UpdateRecipeJobResponse * updateRecipeJob(const UpdateRecipeJobRequest &request);
     UpdateScheduleResponse * updateSchedule(const UpdateScheduleRequest &request);
 
+protected:
+    /// @cond internal
+    GlueDataBrewClientPrivate * const d_ptr; ///< Internal d-pointer.
+    GlueDataBrewClient(GlueDataBrewClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(GlueDataBrewClient)
     Q_DISABLE_COPY(GlueDataBrewClient)

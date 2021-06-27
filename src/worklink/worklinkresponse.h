@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    WorkLinkResponsePrivate * const d_ptr; ///< Internal d-pointer.
     WorkLinkResponse(WorkLinkResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

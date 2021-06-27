@@ -129,8 +129,7 @@ ListEventTypesResponse::ListEventTypesResponse(
  */
 const ListEventTypesRequest * ListEventTypesResponse::request() const
 {
-    Q_D(const ListEventTypesResponse);
-    return static_cast<const ListEventTypesRequest *>(d->request);
+    return static_cast<const ListEventTypesRequest *>(CodeStarNotificationsResponse::request());
 }
 
 /*!

@@ -157,6 +157,12 @@ public slots:
     UpdateDomainAssociationResponse * updateDomainAssociation(const UpdateDomainAssociationRequest &request);
     UpdateWebhookResponse * updateWebhook(const UpdateWebhookRequest &request);
 
+protected:
+    /// @cond internal
+    AmplifyClientPrivate * const d_ptr; ///< Internal d-pointer.
+    AmplifyClient(AmplifyClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(AmplifyClient)
     Q_DISABLE_COPY(AmplifyClient)

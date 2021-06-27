@@ -58,8 +58,7 @@ GetExternalModelsResponse::GetExternalModelsResponse(
  */
 const GetExternalModelsRequest * GetExternalModelsResponse::request() const
 {
-    Q_D(const GetExternalModelsResponse);
-    return static_cast<const GetExternalModelsRequest *>(d->request);
+    return static_cast<const GetExternalModelsRequest *>(FraudDetectorResponse::request());
 }
 
 /*!

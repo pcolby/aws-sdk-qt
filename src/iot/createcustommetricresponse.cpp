@@ -82,8 +82,7 @@ CreateCustomMetricResponse::CreateCustomMetricResponse(
  */
 const CreateCustomMetricRequest * CreateCustomMetricResponse::request() const
 {
-    Q_D(const CreateCustomMetricResponse);
-    return static_cast<const CreateCustomMetricRequest *>(d->request);
+    return static_cast<const CreateCustomMetricRequest *>(IoTResponse::request());
 }
 
 /*!

@@ -37,7 +37,7 @@ namespace Connect {
  * Constructs a ConnectResponse object with parent \a parent.
  */
 ConnectResponse::ConnectResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new ConnectResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ConnectResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ ConnectResponse::ConnectResponse(QObject * const parent)
  * implementation that inherits from ConnectResponsePrivate.
  */
 ConnectResponse::ConnectResponse(ConnectResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void ConnectResponse::parseFailure(QIODevice &response)
  * Constructs a ConnectResponsePrivate object with public implementation \a q.
  */
 ConnectResponsePrivate::ConnectResponsePrivate(
-    ConnectResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    ConnectResponse * const q) : q_ptr(q)
 {
 
 }

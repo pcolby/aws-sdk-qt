@@ -58,8 +58,7 @@ GetDistributionConfigurationResponse::GetDistributionConfigurationResponse(
  */
 const GetDistributionConfigurationRequest * GetDistributionConfigurationResponse::request() const
 {
-    Q_D(const GetDistributionConfigurationResponse);
-    return static_cast<const GetDistributionConfigurationRequest *>(d->request);
+    return static_cast<const GetDistributionConfigurationRequest *>(imagebuilderResponse::request());
 }
 
 /*!

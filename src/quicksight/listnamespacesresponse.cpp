@@ -60,8 +60,7 @@ ListNamespacesResponse::ListNamespacesResponse(
  */
 const ListNamespacesRequest * ListNamespacesResponse::request() const
 {
-    Q_D(const ListNamespacesResponse);
-    return static_cast<const ListNamespacesRequest *>(d->request);
+    return static_cast<const ListNamespacesRequest *>(QuickSightResponse::request());
 }
 
 /*!

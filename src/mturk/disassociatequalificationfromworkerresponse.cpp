@@ -55,8 +55,7 @@ DisassociateQualificationFromWorkerResponse::DisassociateQualificationFromWorker
  */
 const DisassociateQualificationFromWorkerRequest * DisassociateQualificationFromWorkerResponse::request() const
 {
-    Q_D(const DisassociateQualificationFromWorkerResponse);
-    return static_cast<const DisassociateQualificationFromWorkerRequest *>(d->request);
+    return static_cast<const DisassociateQualificationFromWorkerRequest *>(MTurkResponse::request());
 }
 
 /*!

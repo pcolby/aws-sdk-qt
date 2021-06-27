@@ -98,8 +98,7 @@ CreateAssociationBatchResponse::CreateAssociationBatchResponse(
  */
 const CreateAssociationBatchRequest * CreateAssociationBatchResponse::request() const
 {
-    Q_D(const CreateAssociationBatchResponse);
-    return static_cast<const CreateAssociationBatchRequest *>(d->request);
+    return static_cast<const CreateAssociationBatchRequest *>(SsmResponse::request());
 }
 
 /*!

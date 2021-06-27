@@ -84,8 +84,7 @@ DescribeNotificationSubscriptionsResponse::DescribeNotificationSubscriptionsResp
  */
 const DescribeNotificationSubscriptionsRequest * DescribeNotificationSubscriptionsResponse::request() const
 {
-    Q_D(const DescribeNotificationSubscriptionsResponse);
-    return static_cast<const DescribeNotificationSubscriptionsRequest *>(d->request);
+    return static_cast<const DescribeNotificationSubscriptionsRequest *>(WorkDocsResponse::request());
 }
 
 /*!

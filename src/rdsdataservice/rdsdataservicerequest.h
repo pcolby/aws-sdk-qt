@@ -62,6 +62,7 @@ public:
 
 protected:
     /// @cond internal
+    RDSDataServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
     RDSDataServiceRequest(RDSDataServiceRequestPrivate * const d);
     /// @endcond
 

@@ -135,16 +135,16 @@ ResourceGroupsClient::ResourceGroupsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ResourceGroupsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-11-27"),
+    QStringLiteral("resource-groups"),
+    QStringLiteral("AWS Resource Groups"),
+    QStringLiteral("resource-groups"),
+    parent), d_ptr(new ResourceGroupsClientPrivate(this))
 {
-    Q_D(ResourceGroupsClient);
-    d->apiVersion = QStringLiteral("2017-11-27");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("resource-groups");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Resource Groups");
-    d->serviceName = QStringLiteral("resource-groups");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -163,16 +163,16 @@ ResourceGroupsClient::ResourceGroupsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ResourceGroupsClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-11-27"),
+    QStringLiteral("resource-groups"),
+    QStringLiteral("AWS Resource Groups"),
+    QStringLiteral("resource-groups"),
+    parent), d_ptr(new ResourceGroupsClientPrivate(this))
 {
-    Q_D(ResourceGroupsClient);
-    d->apiVersion = QStringLiteral("2017-11-27");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("resource-groups");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Resource Groups");
-    d->serviceName = QStringLiteral("resource-groups");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -631,10 +631,9 @@ UpdateGroupQueryResponse * ResourceGroupsClient::updateGroupQuery(const UpdateGr
 /*!
  * Constructs a ResourceGroupsClientPrivate object with public implementation \a q.
  */
-ResourceGroupsClientPrivate::ResourceGroupsClientPrivate(ResourceGroupsClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+ResourceGroupsClientPrivate::ResourceGroupsClientPrivate(ResourceGroupsClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace ResourceGroups

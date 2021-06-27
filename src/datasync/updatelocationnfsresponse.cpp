@@ -64,8 +64,7 @@ UpdateLocationNfsResponse::UpdateLocationNfsResponse(
  */
 const UpdateLocationNfsRequest * UpdateLocationNfsResponse::request() const
 {
-    Q_D(const UpdateLocationNfsResponse);
-    return static_cast<const UpdateLocationNfsRequest *>(d->request);
+    return static_cast<const UpdateLocationNfsRequest *>(DataSyncResponse::request());
 }
 
 /*!

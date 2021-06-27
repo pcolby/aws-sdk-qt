@@ -115,16 +115,16 @@ MachineLearningClient::MachineLearningClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new MachineLearningClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2014-12-12"),
+    QStringLiteral("machinelearning"),
+    QStringLiteral("Amazon Machine Learning"),
+    QStringLiteral("machinelearning"),
+    parent), d_ptr(new MachineLearningClientPrivate(this))
 {
-    Q_D(MachineLearningClient);
-    d->apiVersion = QStringLiteral("2014-12-12");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("machinelearning");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Machine Learning");
-    d->serviceName = QStringLiteral("machinelearning");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -143,16 +143,16 @@ MachineLearningClient::MachineLearningClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new MachineLearningClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2014-12-12"),
+    QStringLiteral("machinelearning"),
+    QStringLiteral("Amazon Machine Learning"),
+    QStringLiteral("machinelearning"),
+    parent), d_ptr(new MachineLearningClientPrivate(this))
 {
-    Q_D(MachineLearningClient);
-    d->apiVersion = QStringLiteral("2014-12-12");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("machinelearning");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Machine Learning");
-    d->serviceName = QStringLiteral("machinelearning");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -739,10 +739,9 @@ UpdateMLModelResponse * MachineLearningClient::updateMLModel(const UpdateMLModel
 /*!
  * Constructs a MachineLearningClientPrivate object with public implementation \a q.
  */
-MachineLearningClientPrivate::MachineLearningClientPrivate(MachineLearningClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+MachineLearningClientPrivate::MachineLearningClientPrivate(MachineLearningClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace MachineLearning

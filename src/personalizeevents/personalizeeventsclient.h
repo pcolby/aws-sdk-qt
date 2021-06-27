@@ -55,6 +55,12 @@ public slots:
     PutItemsResponse * putItems(const PutItemsRequest &request);
     PutUsersResponse * putUsers(const PutUsersRequest &request);
 
+protected:
+    /// @cond internal
+    PersonalizeEventsClientPrivate * const d_ptr; ///< Internal d-pointer.
+    PersonalizeEventsClient(PersonalizeEventsClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(PersonalizeEventsClient)
     Q_DISABLE_COPY(PersonalizeEventsClient)

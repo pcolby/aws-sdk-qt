@@ -119,8 +119,7 @@ StartActivityStreamResponse::StartActivityStreamResponse(
  */
 const StartActivityStreamRequest * StartActivityStreamResponse::request() const
 {
-    Q_D(const StartActivityStreamResponse);
-    return static_cast<const StartActivityStreamRequest *>(d->request);
+    return static_cast<const StartActivityStreamRequest *>(RdsResponse::request());
 }
 
 /*!

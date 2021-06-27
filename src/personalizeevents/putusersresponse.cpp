@@ -58,8 +58,7 @@ PutUsersResponse::PutUsersResponse(
  */
 const PutUsersRequest * PutUsersResponse::request() const
 {
-    Q_D(const PutUsersResponse);
-    return static_cast<const PutUsersRequest *>(d->request);
+    return static_cast<const PutUsersRequest *>(PersonalizeEventsResponse::request());
 }
 
 /*!

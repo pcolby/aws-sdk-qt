@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    EC2InstanceConnectResponsePrivate * const d_ptr; ///< Internal d-pointer.
     EC2InstanceConnectResponse(EC2InstanceConnectResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

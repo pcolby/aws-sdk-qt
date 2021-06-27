@@ -56,8 +56,7 @@ CreateJobResponse::CreateJobResponse(
  */
 const CreateJobRequest * CreateJobResponse::request() const
 {
-    Q_D(const CreateJobResponse);
-    return static_cast<const CreateJobRequest *>(d->request);
+    return static_cast<const CreateJobRequest *>(S3ControlResponse::request());
 }
 
 /*!

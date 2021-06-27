@@ -65,8 +65,7 @@ ExecuteSqlResponse::ExecuteSqlResponse(
  */
 const ExecuteSqlRequest * ExecuteSqlResponse::request() const
 {
-    Q_D(const ExecuteSqlResponse);
-    return static_cast<const ExecuteSqlRequest *>(d->request);
+    return static_cast<const ExecuteSqlRequest *>(RDSDataServiceResponse::request());
 }
 
 /*!

@@ -72,8 +72,7 @@ DescribeOrderableDBInstanceOptionsResponse::DescribeOrderableDBInstanceOptionsRe
  */
 const DescribeOrderableDBInstanceOptionsRequest * DescribeOrderableDBInstanceOptionsResponse::request() const
 {
-    Q_D(const DescribeOrderableDBInstanceOptionsResponse);
-    return static_cast<const DescribeOrderableDBInstanceOptionsRequest *>(d->request);
+    return static_cast<const DescribeOrderableDBInstanceOptionsRequest *>(NeptuneResponse::request());
 }
 
 /*!

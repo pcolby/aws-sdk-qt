@@ -37,7 +37,7 @@ namespace RDS {
  * Constructs a RdsResponse object with parent \a parent.
  */
 RdsResponse::RdsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new RdsResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new RdsResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ RdsResponse::RdsResponse(QObject * const parent)
  * implementation that inherits from RdsResponsePrivate.
  */
 RdsResponse::RdsResponse(RdsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void RdsResponse::parseFailure(QIODevice &response)
  * Constructs a RdsResponsePrivate object with public implementation \a q.
  */
 RdsResponsePrivate::RdsResponsePrivate(
-    RdsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    RdsResponse * const q) : q_ptr(q)
 {
 
 }

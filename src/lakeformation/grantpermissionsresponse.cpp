@@ -58,8 +58,7 @@ GrantPermissionsResponse::GrantPermissionsResponse(
  */
 const GrantPermissionsRequest * GrantPermissionsResponse::request() const
 {
-    Q_D(const GrantPermissionsResponse);
-    return static_cast<const GrantPermissionsRequest *>(d->request);
+    return static_cast<const GrantPermissionsRequest *>(LakeFormationResponse::request());
 }
 
 /*!

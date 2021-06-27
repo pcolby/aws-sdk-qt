@@ -79,8 +79,7 @@ DisassociateLexBotResponse::DisassociateLexBotResponse(
  */
 const DisassociateLexBotRequest * DisassociateLexBotResponse::request() const
 {
-    Q_D(const DisassociateLexBotResponse);
-    return static_cast<const DisassociateLexBotRequest *>(d->request);
+    return static_cast<const DisassociateLexBotRequest *>(ConnectResponse::request());
 }
 
 /*!

@@ -77,8 +77,7 @@ ListTypeVersionsResponse::ListTypeVersionsResponse(
  */
 const ListTypeVersionsRequest * ListTypeVersionsResponse::request() const
 {
-    Q_D(const ListTypeVersionsResponse);
-    return static_cast<const ListTypeVersionsRequest *>(d->request);
+    return static_cast<const ListTypeVersionsRequest *>(CloudFormationResponse::request());
 }
 
 /*!

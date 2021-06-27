@@ -141,8 +141,7 @@ MoveAccountResponse::MoveAccountResponse(
  */
 const MoveAccountRequest * MoveAccountResponse::request() const
 {
-    Q_D(const MoveAccountResponse);
-    return static_cast<const MoveAccountRequest *>(d->request);
+    return static_cast<const MoveAccountRequest *>(OrganizationsResponse::request());
 }
 
 /*!

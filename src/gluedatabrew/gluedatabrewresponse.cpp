@@ -37,7 +37,7 @@ namespace GlueDataBrew {
  * Constructs a GlueDataBrewResponse object with parent \a parent.
  */
 GlueDataBrewResponse::GlueDataBrewResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new GlueDataBrewResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new GlueDataBrewResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ GlueDataBrewResponse::GlueDataBrewResponse(QObject * const parent)
  * implementation that inherits from GlueDataBrewResponsePrivate.
  */
 GlueDataBrewResponse::GlueDataBrewResponse(GlueDataBrewResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void GlueDataBrewResponse::parseFailure(QIODevice &response)
  * Constructs a GlueDataBrewResponsePrivate object with public implementation \a q.
  */
 GlueDataBrewResponsePrivate::GlueDataBrewResponsePrivate(
-    GlueDataBrewResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    GlueDataBrewResponse * const q) : q_ptr(q)
 {
 
 }

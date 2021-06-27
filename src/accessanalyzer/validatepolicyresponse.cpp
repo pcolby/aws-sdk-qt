@@ -67,8 +67,7 @@ ValidatePolicyResponse::ValidatePolicyResponse(
  */
 const ValidatePolicyRequest * ValidatePolicyResponse::request() const
 {
-    Q_D(const ValidatePolicyResponse);
-    return static_cast<const ValidatePolicyRequest *>(d->request);
+    return static_cast<const ValidatePolicyRequest *>(AccessAnalyzerResponse::request());
 }
 
 /*!

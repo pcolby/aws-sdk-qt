@@ -145,8 +145,7 @@ DescribeLoggingConfigurationResponse::DescribeLoggingConfigurationResponse(
  */
 const DescribeLoggingConfigurationRequest * DescribeLoggingConfigurationResponse::request() const
 {
-    Q_D(const DescribeLoggingConfigurationResponse);
-    return static_cast<const DescribeLoggingConfigurationRequest *>(d->request);
+    return static_cast<const DescribeLoggingConfigurationRequest *>(NetworkFirewallResponse::request());
 }
 
 /*!

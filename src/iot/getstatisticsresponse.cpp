@@ -82,8 +82,7 @@ GetStatisticsResponse::GetStatisticsResponse(
  */
 const GetStatisticsRequest * GetStatisticsResponse::request() const
 {
-    Q_D(const GetStatisticsResponse);
-    return static_cast<const GetStatisticsRequest *>(d->request);
+    return static_cast<const GetStatisticsRequest *>(IoTResponse::request());
 }
 
 /*!

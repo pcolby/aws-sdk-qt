@@ -98,8 +98,7 @@ ListOpsItemRelatedItemsResponse::ListOpsItemRelatedItemsResponse(
  */
 const ListOpsItemRelatedItemsRequest * ListOpsItemRelatedItemsResponse::request() const
 {
-    Q_D(const ListOpsItemRelatedItemsResponse);
-    return static_cast<const ListOpsItemRelatedItemsRequest *>(d->request);
+    return static_cast<const ListOpsItemRelatedItemsRequest *>(SsmResponse::request());
 }
 
 /*!

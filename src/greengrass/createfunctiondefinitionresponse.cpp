@@ -58,8 +58,7 @@ CreateFunctionDefinitionResponse::CreateFunctionDefinitionResponse(
  */
 const CreateFunctionDefinitionRequest * CreateFunctionDefinitionResponse::request() const
 {
-    Q_D(const CreateFunctionDefinitionResponse);
-    return static_cast<const CreateFunctionDefinitionRequest *>(d->request);
+    return static_cast<const CreateFunctionDefinitionRequest *>(GreengrassResponse::request());
 }
 
 /*!

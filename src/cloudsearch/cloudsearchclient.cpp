@@ -122,16 +122,16 @@ CloudSearchClient::CloudSearchClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CloudSearchClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2013-01-01"),
+    QStringLiteral("cloudsearch"),
+    QStringLiteral("Amazon CloudSearch"),
+    QStringLiteral("cloudsearch"),
+    parent), d_ptr(new CloudSearchClientPrivate(this))
 {
-    Q_D(CloudSearchClient);
-    d->apiVersion = QStringLiteral("2013-01-01");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("cloudsearch");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon CloudSearch");
-    d->serviceName = QStringLiteral("cloudsearch");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -150,16 +150,16 @@ CloudSearchClient::CloudSearchClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CloudSearchClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2013-01-01"),
+    QStringLiteral("cloudsearch"),
+    QStringLiteral("Amazon CloudSearch"),
+    QStringLiteral("cloudsearch"),
+    parent), d_ptr(new CloudSearchClientPrivate(this))
 {
-    Q_D(CloudSearchClient);
-    d->apiVersion = QStringLiteral("2013-01-01");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("cloudsearch");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon CloudSearch");
-    d->serviceName = QStringLiteral("cloudsearch");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -606,10 +606,9 @@ UpdateServiceAccessPoliciesResponse * CloudSearchClient::updateServiceAccessPoli
 /*!
  * Constructs a CloudSearchClientPrivate object with public implementation \a q.
  */
-CloudSearchClientPrivate::CloudSearchClientPrivate(CloudSearchClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+CloudSearchClientPrivate::CloudSearchClientPrivate(CloudSearchClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace CloudSearch

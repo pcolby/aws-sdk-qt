@@ -89,8 +89,7 @@ DeleteGroupResponse::DeleteGroupResponse(
  */
 const DeleteGroupRequest * DeleteGroupResponse::request() const
 {
-    Q_D(const DeleteGroupResponse);
-    return static_cast<const DeleteGroupRequest *>(d->request);
+    return static_cast<const DeleteGroupRequest *>(WorkMailResponse::request());
 }
 
 /*!

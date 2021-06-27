@@ -56,8 +56,7 @@ DeleteForecastExportJobResponse::DeleteForecastExportJobResponse(
  */
 const DeleteForecastExportJobRequest * DeleteForecastExportJobResponse::request() const
 {
-    Q_D(const DeleteForecastExportJobResponse);
-    return static_cast<const DeleteForecastExportJobRequest *>(d->request);
+    return static_cast<const DeleteForecastExportJobRequest *>(ForecastServiceResponse::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ GetApplicationResponse::GetApplicationResponse(
  */
 const GetApplicationRequest * GetApplicationResponse::request() const
 {
-    Q_D(const GetApplicationResponse);
-    return static_cast<const GetApplicationRequest *>(d->request);
+    return static_cast<const GetApplicationRequest *>(AppRegistryResponse::request());
 }
 
 /*!

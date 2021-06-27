@@ -58,8 +58,7 @@ StartCrawlerScheduleResponse::StartCrawlerScheduleResponse(
  */
 const StartCrawlerScheduleRequest * StartCrawlerScheduleResponse::request() const
 {
-    Q_D(const StartCrawlerScheduleResponse);
-    return static_cast<const StartCrawlerScheduleRequest *>(d->request);
+    return static_cast<const StartCrawlerScheduleRequest *>(GlueResponse::request());
 }
 
 /*!

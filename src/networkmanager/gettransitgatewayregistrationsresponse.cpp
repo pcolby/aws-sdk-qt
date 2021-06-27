@@ -62,8 +62,7 @@ GetTransitGatewayRegistrationsResponse::GetTransitGatewayRegistrationsResponse(
  */
 const GetTransitGatewayRegistrationsRequest * GetTransitGatewayRegistrationsResponse::request() const
 {
-    Q_D(const GetTransitGatewayRegistrationsResponse);
-    return static_cast<const GetTransitGatewayRegistrationsRequest *>(d->request);
+    return static_cast<const GetTransitGatewayRegistrationsRequest *>(NetworkManagerResponse::request());
 }
 
 /*!

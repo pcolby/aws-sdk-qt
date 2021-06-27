@@ -87,8 +87,7 @@ AttachNetworkInterfaceResponse::AttachNetworkInterfaceResponse(
  */
 const AttachNetworkInterfaceRequest * AttachNetworkInterfaceResponse::request() const
 {
-    Q_D(const AttachNetworkInterfaceResponse);
-    return static_cast<const AttachNetworkInterfaceRequest *>(d->request);
+    return static_cast<const AttachNetworkInterfaceRequest *>(Ec2Response::request());
 }
 
 /*!

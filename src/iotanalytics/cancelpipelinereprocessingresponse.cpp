@@ -75,8 +75,7 @@ CancelPipelineReprocessingResponse::CancelPipelineReprocessingResponse(
  */
 const CancelPipelineReprocessingRequest * CancelPipelineReprocessingResponse::request() const
 {
-    Q_D(const CancelPipelineReprocessingResponse);
-    return static_cast<const CancelPipelineReprocessingRequest *>(d->request);
+    return static_cast<const CancelPipelineReprocessingRequest *>(IoTAnalyticsResponse::request());
 }
 
 /*!

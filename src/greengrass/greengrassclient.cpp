@@ -246,16 +246,16 @@ GreengrassClient::GreengrassClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new GreengrassClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-06-07"),
+    QStringLiteral("greengrass"),
+    QStringLiteral("AWS Greengrass"),
+    QStringLiteral("greengrass"),
+    parent), d_ptr(new GreengrassClientPrivate(this))
 {
-    Q_D(GreengrassClient);
-    d->apiVersion = QStringLiteral("2017-06-07");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("greengrass");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Greengrass");
-    d->serviceName = QStringLiteral("greengrass");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -274,16 +274,16 @@ GreengrassClient::GreengrassClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new GreengrassClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-06-07"),
+    QStringLiteral("greengrass"),
+    QStringLiteral("AWS Greengrass"),
+    QStringLiteral("greengrass"),
+    parent), d_ptr(new GreengrassClientPrivate(this))
 {
-    Q_D(GreengrassClient);
-    d->apiVersion = QStringLiteral("2017-06-07");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("greengrass");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Greengrass");
-    d->serviceName = QStringLiteral("greengrass");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -1432,10 +1432,9 @@ UpdateThingRuntimeConfigurationResponse * GreengrassClient::updateThingRuntimeCo
 /*!
  * Constructs a GreengrassClientPrivate object with public implementation \a q.
  */
-GreengrassClientPrivate::GreengrassClientPrivate(GreengrassClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+GreengrassClientPrivate::GreengrassClientPrivate(GreengrassClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace Greengrass

@@ -88,6 +88,12 @@ public slots:
     RefreshTrustedAdvisorCheckResponse * refreshTrustedAdvisorCheck(const RefreshTrustedAdvisorCheckRequest &request);
     ResolveCaseResponse * resolveCase(const ResolveCaseRequest &request);
 
+protected:
+    /// @cond internal
+    SupportClientPrivate * const d_ptr; ///< Internal d-pointer.
+    SupportClient(SupportClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(SupportClient)
     Q_DISABLE_COPY(SupportClient)

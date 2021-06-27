@@ -56,8 +56,7 @@ DeleteJobTaggingResponse::DeleteJobTaggingResponse(
  */
 const DeleteJobTaggingRequest * DeleteJobTaggingResponse::request() const
 {
-    Q_D(const DeleteJobTaggingResponse);
-    return static_cast<const DeleteJobTaggingRequest *>(d->request);
+    return static_cast<const DeleteJobTaggingRequest *>(S3ControlResponse::request());
 }
 
 /*!

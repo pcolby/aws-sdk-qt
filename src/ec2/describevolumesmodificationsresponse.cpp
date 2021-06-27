@@ -87,8 +87,7 @@ DescribeVolumesModificationsResponse::DescribeVolumesModificationsResponse(
  */
 const DescribeVolumesModificationsRequest * DescribeVolumesModificationsResponse::request() const
 {
-    Q_D(const DescribeVolumesModificationsResponse);
-    return static_cast<const DescribeVolumesModificationsRequest *>(d->request);
+    return static_cast<const DescribeVolumesModificationsRequest *>(Ec2Response::request());
 }
 
 /*!

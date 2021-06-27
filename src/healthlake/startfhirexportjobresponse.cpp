@@ -57,8 +57,7 @@ StartFHIRExportJobResponse::StartFHIRExportJobResponse(
  */
 const StartFHIRExportJobRequest * StartFHIRExportJobResponse::request() const
 {
-    Q_D(const StartFHIRExportJobResponse);
-    return static_cast<const StartFHIRExportJobRequest *>(d->request);
+    return static_cast<const StartFHIRExportJobRequest *>(HealthLakeResponse::request());
 }
 
 /*!

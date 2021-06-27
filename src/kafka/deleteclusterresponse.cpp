@@ -56,8 +56,7 @@ DeleteClusterResponse::DeleteClusterResponse(
  */
 const DeleteClusterRequest * DeleteClusterResponse::request() const
 {
-    Q_D(const DeleteClusterResponse);
-    return static_cast<const DeleteClusterRequest *>(d->request);
+    return static_cast<const DeleteClusterRequest *>(KafkaResponse::request());
 }
 
 /*!

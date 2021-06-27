@@ -66,8 +66,7 @@ DeleteReplicationInstanceResponse::DeleteReplicationInstanceResponse(
  */
 const DeleteReplicationInstanceRequest * DeleteReplicationInstanceResponse::request() const
 {
-    Q_D(const DeleteReplicationInstanceResponse);
-    return static_cast<const DeleteReplicationInstanceRequest *>(d->request);
+    return static_cast<const DeleteReplicationInstanceRequest *>(DatabaseMigrationServiceResponse::request());
 }
 
 /*!

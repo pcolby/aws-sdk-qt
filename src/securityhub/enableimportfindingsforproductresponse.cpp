@@ -103,8 +103,7 @@ EnableImportFindingsForProductResponse::EnableImportFindingsForProductResponse(
  */
 const EnableImportFindingsForProductRequest * EnableImportFindingsForProductResponse::request() const
 {
-    Q_D(const EnableImportFindingsForProductResponse);
-    return static_cast<const EnableImportFindingsForProductRequest *>(d->request);
+    return static_cast<const EnableImportFindingsForProductRequest *>(SecurityHubResponse::request());
 }
 
 /*!

@@ -62,8 +62,7 @@ DisassociateSkillFromUsersResponse::DisassociateSkillFromUsersResponse(
  */
 const DisassociateSkillFromUsersRequest * DisassociateSkillFromUsersResponse::request() const
 {
-    Q_D(const DisassociateSkillFromUsersResponse);
-    return static_cast<const DisassociateSkillFromUsersRequest *>(d->request);
+    return static_cast<const DisassociateSkillFromUsersRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

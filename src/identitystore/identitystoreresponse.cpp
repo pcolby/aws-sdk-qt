@@ -37,7 +37,7 @@ namespace IdentityStore {
  * Constructs a IdentityStoreResponse object with parent \a parent.
  */
 IdentityStoreResponse::IdentityStoreResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new IdentityStoreResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new IdentityStoreResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ IdentityStoreResponse::IdentityStoreResponse(QObject * const parent)
  * implementation that inherits from IdentityStoreResponsePrivate.
  */
 IdentityStoreResponse::IdentityStoreResponse(IdentityStoreResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void IdentityStoreResponse::parseFailure(QIODevice &response)
  * Constructs a IdentityStoreResponsePrivate object with public implementation \a q.
  */
 IdentityStoreResponsePrivate::IdentityStoreResponsePrivate(
-    IdentityStoreResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    IdentityStoreResponse * const q) : q_ptr(q)
 {
 
 }

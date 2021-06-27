@@ -74,8 +74,7 @@ ListNotificationChannelsResponse::ListNotificationChannelsResponse(
  */
 const ListNotificationChannelsRequest * ListNotificationChannelsResponse::request() const
 {
-    Q_D(const ListNotificationChannelsResponse);
-    return static_cast<const ListNotificationChannelsRequest *>(d->request);
+    return static_cast<const ListNotificationChannelsRequest *>(DevOpsGuruResponse::request());
 }
 
 /*!

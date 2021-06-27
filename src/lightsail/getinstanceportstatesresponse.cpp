@@ -74,8 +74,7 @@ GetInstancePortStatesResponse::GetInstancePortStatesResponse(
  */
 const GetInstancePortStatesRequest * GetInstancePortStatesResponse::request() const
 {
-    Q_D(const GetInstancePortStatesResponse);
-    return static_cast<const GetInstancePortStatesRequest *>(d->request);
+    return static_cast<const GetInstancePortStatesRequest *>(LightsailResponse::request());
 }
 
 /*!

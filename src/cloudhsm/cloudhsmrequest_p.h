@@ -20,15 +20,12 @@
 #ifndef QTAWS_CLOUDHSMREQUEST_P_H
 #define QTAWS_CLOUDHSMREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "cloudhsmrequest.h"
-
 namespace QtAws {
 namespace CloudHSM {
 
 class CloudHSMRequest;
 
-class CloudHSMRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class CloudHSMRequestPrivate {
 
 public:
     CloudHSMRequest::Action action; ///< CloudHSM action to be performed.
@@ -39,6 +36,9 @@ public:
     CloudHSMRequestPrivate(const CloudHSMRequestPrivate &other, CloudHSMRequest * const q);
 
     static QString toString(const CloudHSMRequest::Action &action);
+
+protected:
+    CloudHSMRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CloudHSMRequest)

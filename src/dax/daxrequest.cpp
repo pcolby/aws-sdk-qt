@@ -63,7 +63,7 @@ namespace DAX {
  * Constructs a DaxRequest object for DAX \a action.
  */
 DaxRequest::DaxRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new DaxRequestPrivate(action, this))
+    : d_ptr(new DaxRequestPrivate(action, this))
 {
 
 }
@@ -72,7 +72,8 @@ DaxRequest::DaxRequest(const Action action)
  * Constructs a copy of \a other.
  */
 DaxRequest::DaxRequest(const DaxRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new DaxRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new DaxRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -95,7 +96,7 @@ DaxRequest& DaxRequest::operator=(const DaxRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from DaxRequestPrivate.
  */
-DaxRequest::DaxRequest(DaxRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+DaxRequest::DaxRequest(DaxRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -264,7 +265,7 @@ QNetworkRequest DaxRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 DaxRequestPrivate::DaxRequestPrivate(const DaxRequest::Action action, DaxRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -279,8 +280,8 @@ DaxRequestPrivate::DaxRequestPrivate(const DaxRequest::Action action, DaxRequest
  */
 DaxRequestPrivate::DaxRequestPrivate(const DaxRequestPrivate &other,
                                      DaxRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

@@ -147,16 +147,16 @@ IoTAnalyticsClient::IoTAnalyticsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new IoTAnalyticsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-11-27"),
+    QStringLiteral("iotanalytics"),
+    QStringLiteral("AWS IoT Analytics"),
+    QStringLiteral("iotanalytics"),
+    parent), d_ptr(new IoTAnalyticsClientPrivate(this))
 {
-    Q_D(IoTAnalyticsClient);
-    d->apiVersion = QStringLiteral("2017-11-27");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("iotanalytics");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS IoT Analytics");
-    d->serviceName = QStringLiteral("iotanalytics");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -175,16 +175,16 @@ IoTAnalyticsClient::IoTAnalyticsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new IoTAnalyticsClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-11-27"),
+    QStringLiteral("iotanalytics"),
+    QStringLiteral("AWS IoT Analytics"),
+    QStringLiteral("iotanalytics"),
+    parent), d_ptr(new IoTAnalyticsClientPrivate(this))
 {
-    Q_D(IoTAnalyticsClient);
-    d->apiVersion = QStringLiteral("2017-11-27");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("iotanalytics");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS IoT Analytics");
-    d->serviceName = QStringLiteral("iotanalytics");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -661,10 +661,9 @@ UpdatePipelineResponse * IoTAnalyticsClient::updatePipeline(const UpdatePipeline
 /*!
  * Constructs a IoTAnalyticsClientPrivate object with public implementation \a q.
  */
-IoTAnalyticsClientPrivate::IoTAnalyticsClientPrivate(IoTAnalyticsClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+IoTAnalyticsClientPrivate::IoTAnalyticsClientPrivate(IoTAnalyticsClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace IoTAnalytics

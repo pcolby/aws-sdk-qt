@@ -93,16 +93,16 @@ EbsClient::EbsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new EbsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-11-02"),
+    QStringLiteral("ebs"),
+    QStringLiteral("Amazon Elastic Block Store"),
+    QStringLiteral("ebs"),
+    parent), d_ptr(new EbsClientPrivate(this))
 {
-    Q_D(EbsClient);
-    d->apiVersion = QStringLiteral("2019-11-02");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("ebs");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Elastic Block Store");
-    d->serviceName = QStringLiteral("ebs");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -121,16 +121,16 @@ EbsClient::EbsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new EbsClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-11-02"),
+    QStringLiteral("ebs"),
+    QStringLiteral("Amazon Elastic Block Store"),
+    QStringLiteral("ebs"),
+    parent), d_ptr(new EbsClientPrivate(this))
 {
-    Q_D(EbsClient);
-    d->apiVersion = QStringLiteral("2019-11-02");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("ebs");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Elastic Block Store");
-    d->serviceName = QStringLiteral("ebs");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -236,10 +236,9 @@ StartSnapshotResponse * EbsClient::startSnapshot(const StartSnapshotRequest &req
 /*!
  * Constructs a EbsClientPrivate object with public implementation \a q.
  */
-EbsClientPrivate::EbsClientPrivate(EbsClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+EbsClientPrivate::EbsClientPrivate(EbsClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace EBS

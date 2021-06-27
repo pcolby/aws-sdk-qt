@@ -55,8 +55,7 @@ ListInputsResponse::ListInputsResponse(
  */
 const ListInputsRequest * ListInputsResponse::request() const
 {
-    Q_D(const ListInputsResponse);
-    return static_cast<const ListInputsRequest *>(d->request);
+    return static_cast<const ListInputsRequest *>(MediaLiveResponse::request());
 }
 
 /*!

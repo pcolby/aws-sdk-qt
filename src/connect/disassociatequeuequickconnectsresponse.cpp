@@ -79,8 +79,7 @@ DisassociateQueueQuickConnectsResponse::DisassociateQueueQuickConnectsResponse(
  */
 const DisassociateQueueQuickConnectsRequest * DisassociateQueueQuickConnectsResponse::request() const
 {
-    Q_D(const DisassociateQueueQuickConnectsResponse);
-    return static_cast<const DisassociateQueueQuickConnectsRequest *>(d->request);
+    return static_cast<const DisassociateQueueQuickConnectsRequest *>(ConnectResponse::request());
 }
 
 /*!

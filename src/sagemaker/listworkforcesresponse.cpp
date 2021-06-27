@@ -70,8 +70,7 @@ ListWorkforcesResponse::ListWorkforcesResponse(
  */
 const ListWorkforcesRequest * ListWorkforcesResponse::request() const
 {
-    Q_D(const ListWorkforcesResponse);
-    return static_cast<const ListWorkforcesRequest *>(d->request);
+    return static_cast<const ListWorkforcesRequest *>(SageMakerResponse::request());
 }
 
 /*!

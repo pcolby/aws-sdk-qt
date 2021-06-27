@@ -62,7 +62,7 @@ namespace SQS {
  * Constructs a SqsRequest object for SQS \a action.
  */
 SqsRequest::SqsRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new SqsRequestPrivate(action, this))
+    : d_ptr(new SqsRequestPrivate(action, this))
 {
 
 }
@@ -71,7 +71,8 @@ SqsRequest::SqsRequest(const Action action)
  * Constructs a copy of \a other.
  */
 SqsRequest::SqsRequest(const SqsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new SqsRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new SqsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -94,7 +95,7 @@ SqsRequest& SqsRequest::operator=(const SqsRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SqsRequestPrivate.
  */
-SqsRequest::SqsRequest(SqsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+SqsRequest::SqsRequest(SqsRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -263,7 +264,7 @@ QNetworkRequest SqsRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 SqsRequestPrivate::SqsRequestPrivate(const SqsRequest::Action action, SqsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -278,8 +279,8 @@ SqsRequestPrivate::SqsRequestPrivate(const SqsRequest::Action action, SqsRequest
  */
 SqsRequestPrivate::SqsRequestPrivate(const SqsRequestPrivate &other,
                                      SqsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

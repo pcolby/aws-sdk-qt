@@ -73,8 +73,7 @@ DeleteVirtualGatewayResponse::DeleteVirtualGatewayResponse(
  */
 const DeleteVirtualGatewayRequest * DeleteVirtualGatewayResponse::request() const
 {
-    Q_D(const DeleteVirtualGatewayResponse);
-    return static_cast<const DeleteVirtualGatewayRequest *>(d->request);
+    return static_cast<const DeleteVirtualGatewayRequest *>(AppMeshResponse::request());
 }
 
 /*!

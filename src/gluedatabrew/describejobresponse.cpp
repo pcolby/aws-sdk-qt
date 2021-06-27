@@ -58,8 +58,7 @@ DescribeJobResponse::DescribeJobResponse(
  */
 const DescribeJobRequest * DescribeJobResponse::request() const
 {
-    Q_D(const DescribeJobResponse);
-    return static_cast<const DescribeJobRequest *>(d->request);
+    return static_cast<const DescribeJobRequest *>(GlueDataBrewResponse::request());
 }
 
 /*!

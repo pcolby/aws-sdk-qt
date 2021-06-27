@@ -55,8 +55,7 @@ ActivateContactChannelResponse::ActivateContactChannelResponse(
  */
 const ActivateContactChannelRequest * ActivateContactChannelResponse::request() const
 {
-    Q_D(const ActivateContactChannelResponse);
-    return static_cast<const ActivateContactChannelRequest *>(d->request);
+    return static_cast<const ActivateContactChannelRequest *>(SSMContactsResponse::request());
 }
 
 /*!

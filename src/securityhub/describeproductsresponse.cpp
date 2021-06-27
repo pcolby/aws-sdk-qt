@@ -103,8 +103,7 @@ DescribeProductsResponse::DescribeProductsResponse(
  */
 const DescribeProductsRequest * DescribeProductsResponse::request() const
 {
-    Q_D(const DescribeProductsResponse);
-    return static_cast<const DescribeProductsRequest *>(d->request);
+    return static_cast<const DescribeProductsRequest *>(SecurityHubResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ DescribeSolutionResponse::DescribeSolutionResponse(
  */
 const DescribeSolutionRequest * DescribeSolutionResponse::request() const
 {
-    Q_D(const DescribeSolutionResponse);
-    return static_cast<const DescribeSolutionRequest *>(d->request);
+    return static_cast<const DescribeSolutionRequest *>(PersonalizeResponse::request());
 }
 
 /*!

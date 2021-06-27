@@ -20,19 +20,20 @@
 #ifndef QTAWS_SSOOIDCCLIENT_P_H
 #define QTAWS_SSOOIDCCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace SSOOIDC {
 
 class SsooidcClient;
 
-class SsooidcClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SsooidcClientPrivate {
 
 public:
     SsooidcClientPrivate(SsooidcClient * const q);
+
+protected:
+    SsooidcClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SsooidcClient)

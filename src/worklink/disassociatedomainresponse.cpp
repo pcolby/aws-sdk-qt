@@ -60,8 +60,7 @@ DisassociateDomainResponse::DisassociateDomainResponse(
  */
 const DisassociateDomainRequest * DisassociateDomainResponse::request() const
 {
-    Q_D(const DisassociateDomainResponse);
-    return static_cast<const DisassociateDomainRequest *>(d->request);
+    return static_cast<const DisassociateDomainRequest *>(WorkLinkResponse::request());
 }
 
 /*!

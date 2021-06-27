@@ -163,6 +163,12 @@ public slots:
     UpdateQuerySuggestionsConfigResponse * updateQuerySuggestionsConfig(const UpdateQuerySuggestionsConfigRequest &request);
     UpdateThesaurusResponse * updateThesaurus(const UpdateThesaurusRequest &request);
 
+protected:
+    /// @cond internal
+    kendraClientPrivate * const d_ptr; ///< Internal d-pointer.
+    kendraClient(kendraClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(kendraClient)
     Q_DISABLE_COPY(kendraClient)

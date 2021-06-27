@@ -141,8 +141,7 @@ ListChildrenResponse::ListChildrenResponse(
  */
 const ListChildrenRequest * ListChildrenResponse::request() const
 {
-    Q_D(const ListChildrenResponse);
-    return static_cast<const ListChildrenRequest *>(d->request);
+    return static_cast<const ListChildrenRequest *>(OrganizationsResponse::request());
 }
 
 /*!

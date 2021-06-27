@@ -199,6 +199,12 @@ public slots:
     UpdateSecurityHubConfigurationResponse * updateSecurityHubConfiguration(const UpdateSecurityHubConfigurationRequest &request);
     UpdateStandardsControlResponse * updateStandardsControl(const UpdateStandardsControlRequest &request);
 
+protected:
+    /// @cond internal
+    SecurityHubClientPrivate * const d_ptr; ///< Internal d-pointer.
+    SecurityHubClient(SecurityHubClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(SecurityHubClient)
     Q_DISABLE_COPY(SecurityHubClient)

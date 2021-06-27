@@ -59,8 +59,7 @@ CreateBackupSelectionResponse::CreateBackupSelectionResponse(
  */
 const CreateBackupSelectionRequest * CreateBackupSelectionResponse::request() const
 {
-    Q_D(const CreateBackupSelectionResponse);
-    return static_cast<const CreateBackupSelectionRequest *>(d->request);
+    return static_cast<const CreateBackupSelectionRequest *>(BackupResponse::request());
 }
 
 /*!

@@ -20,14 +20,12 @@
 #ifndef QTAWS_RESOURCEGROUPSTAGGINGAPIRESPONSE_P_H
 #define QTAWS_RESOURCEGROUPSTAGGINGAPIRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace ResourceGroupsTaggingAPI {
 
 class ResourceGroupsTaggingAPIResponse;
 
-class ResourceGroupsTaggingAPIResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class ResourceGroupsTaggingAPIResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    ResourceGroupsTaggingAPIResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ResourceGroupsTaggingAPIResponse)

@@ -56,8 +56,7 @@ GetServiceGraphResponse::GetServiceGraphResponse(
  */
 const GetServiceGraphRequest * GetServiceGraphResponse::request() const
 {
-    Q_D(const GetServiceGraphResponse);
-    return static_cast<const GetServiceGraphRequest *>(d->request);
+    return static_cast<const GetServiceGraphRequest *>(XRayResponse::request());
 }
 
 /*!

@@ -57,8 +57,7 @@ UpdateFileSystemResponse::UpdateFileSystemResponse(
  */
 const UpdateFileSystemRequest * UpdateFileSystemResponse::request() const
 {
-    Q_D(const UpdateFileSystemResponse);
-    return static_cast<const UpdateFileSystemRequest *>(d->request);
+    return static_cast<const UpdateFileSystemRequest *>(FSxResponse::request());
 }
 
 /*!

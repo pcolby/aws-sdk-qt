@@ -105,8 +105,7 @@ ListHostedConfigurationVersionsResponse::ListHostedConfigurationVersionsResponse
  */
 const ListHostedConfigurationVersionsRequest * ListHostedConfigurationVersionsResponse::request() const
 {
-    Q_D(const ListHostedConfigurationVersionsResponse);
-    return static_cast<const ListHostedConfigurationVersionsRequest *>(d->request);
+    return static_cast<const ListHostedConfigurationVersionsRequest *>(AppConfigResponse::request());
 }
 
 /*!

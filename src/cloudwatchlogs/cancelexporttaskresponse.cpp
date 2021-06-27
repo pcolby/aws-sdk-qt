@@ -84,8 +84,7 @@ CancelExportTaskResponse::CancelExportTaskResponse(
  */
 const CancelExportTaskRequest * CancelExportTaskResponse::request() const
 {
-    Q_D(const CancelExportTaskResponse);
-    return static_cast<const CancelExportTaskRequest *>(d->request);
+    return static_cast<const CancelExportTaskRequest *>(CloudWatchLogsResponse::request());
 }
 
 /*!

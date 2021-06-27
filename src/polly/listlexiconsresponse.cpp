@@ -62,8 +62,7 @@ ListLexiconsResponse::ListLexiconsResponse(
  */
 const ListLexiconsRequest * ListLexiconsResponse::request() const
 {
-    Q_D(const ListLexiconsResponse);
-    return static_cast<const ListLexiconsRequest *>(d->request);
+    return static_cast<const ListLexiconsRequest *>(PollyResponse::request());
 }
 
 /*!

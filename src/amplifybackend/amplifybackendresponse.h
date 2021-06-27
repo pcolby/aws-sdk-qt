@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    AmplifyBackendResponsePrivate * const d_ptr; ///< Internal d-pointer.
     AmplifyBackendResponse(AmplifyBackendResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

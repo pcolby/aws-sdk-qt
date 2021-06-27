@@ -98,8 +98,7 @@ GetVoiceConnectorOriginationResponse::GetVoiceConnectorOriginationResponse(
  */
 const GetVoiceConnectorOriginationRequest * GetVoiceConnectorOriginationResponse::request() const
 {
-    Q_D(const GetVoiceConnectorOriginationResponse);
-    return static_cast<const GetVoiceConnectorOriginationRequest *>(d->request);
+    return static_cast<const GetVoiceConnectorOriginationRequest *>(ChimeResponse::request());
 }
 
 /*!

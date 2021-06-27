@@ -88,8 +88,7 @@ TestRenderEmailTemplateResponse::TestRenderEmailTemplateResponse(
  */
 const TestRenderEmailTemplateRequest * TestRenderEmailTemplateResponse::request() const
 {
-    Q_D(const TestRenderEmailTemplateResponse);
-    return static_cast<const TestRenderEmailTemplateRequest *>(d->request);
+    return static_cast<const TestRenderEmailTemplateRequest *>(Sesv2Response::request());
 }
 
 /*!

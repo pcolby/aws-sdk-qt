@@ -66,8 +66,7 @@ GetLayerVersionPolicyResponse::GetLayerVersionPolicyResponse(
  */
 const GetLayerVersionPolicyRequest * GetLayerVersionPolicyResponse::request() const
 {
-    Q_D(const GetLayerVersionPolicyResponse);
-    return static_cast<const GetLayerVersionPolicyRequest *>(d->request);
+    return static_cast<const GetLayerVersionPolicyRequest *>(LambdaResponse::request());
 }
 
 /*!

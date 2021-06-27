@@ -99,8 +99,7 @@ GetGroupConfigurationResponse::GetGroupConfigurationResponse(
  */
 const GetGroupConfigurationRequest * GetGroupConfigurationResponse::request() const
 {
-    Q_D(const GetGroupConfigurationResponse);
-    return static_cast<const GetGroupConfigurationRequest *>(d->request);
+    return static_cast<const GetGroupConfigurationRequest *>(ResourceGroupsResponse::request());
 }
 
 /*!

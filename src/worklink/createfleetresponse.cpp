@@ -60,8 +60,7 @@ CreateFleetResponse::CreateFleetResponse(
  */
 const CreateFleetRequest * CreateFleetResponse::request() const
 {
-    Q_D(const CreateFleetResponse);
-    return static_cast<const CreateFleetRequest *>(d->request);
+    return static_cast<const CreateFleetRequest *>(WorkLinkResponse::request());
 }
 
 /*!

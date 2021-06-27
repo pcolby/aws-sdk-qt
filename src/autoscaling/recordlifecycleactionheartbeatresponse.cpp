@@ -68,8 +68,7 @@ RecordLifecycleActionHeartbeatResponse::RecordLifecycleActionHeartbeatResponse(
  */
 const RecordLifecycleActionHeartbeatRequest * RecordLifecycleActionHeartbeatResponse::request() const
 {
-    Q_D(const RecordLifecycleActionHeartbeatResponse);
-    return static_cast<const RecordLifecycleActionHeartbeatRequest *>(d->request);
+    return static_cast<const RecordLifecycleActionHeartbeatRequest *>(AutoScalingResponse::request());
 }
 
 /*!

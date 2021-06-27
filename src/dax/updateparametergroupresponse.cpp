@@ -59,8 +59,7 @@ UpdateParameterGroupResponse::UpdateParameterGroupResponse(
  */
 const UpdateParameterGroupRequest * UpdateParameterGroupResponse::request() const
 {
-    Q_D(const UpdateParameterGroupResponse);
-    return static_cast<const UpdateParameterGroupRequest *>(d->request);
+    return static_cast<const UpdateParameterGroupRequest *>(DaxResponse::request());
 }
 
 /*!

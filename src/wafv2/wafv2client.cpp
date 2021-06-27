@@ -210,16 +210,16 @@ Wafv2Client::Wafv2Client(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new Wafv2ClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-07-29"),
+    QStringLiteral("wafv2"),
+    QStringLiteral("AWS WAFV2"),
+    QStringLiteral("wafv2"),
+    parent), d_ptr(new Wafv2ClientPrivate(this))
 {
-    Q_D(Wafv2Client);
-    d->apiVersion = QStringLiteral("2019-07-29");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("wafv2");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS WAFV2");
-    d->serviceName = QStringLiteral("wafv2");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -238,16 +238,16 @@ Wafv2Client::Wafv2Client(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new Wafv2ClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-07-29"),
+    QStringLiteral("wafv2"),
+    QStringLiteral("AWS WAFV2"),
+    QStringLiteral("wafv2"),
+    parent), d_ptr(new Wafv2ClientPrivate(this))
 {
-    Q_D(Wafv2Client);
-    d->apiVersion = QStringLiteral("2019-07-29");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("wafv2");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS WAFV2");
-    d->serviceName = QStringLiteral("wafv2");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -942,10 +942,9 @@ UpdateWebACLResponse * Wafv2Client::updateWebACL(const UpdateWebACLRequest &requ
 /*!
  * Constructs a Wafv2ClientPrivate object with public implementation \a q.
  */
-Wafv2ClientPrivate::Wafv2ClientPrivate(Wafv2Client * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+Wafv2ClientPrivate::Wafv2ClientPrivate(Wafv2Client * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace WAFV2

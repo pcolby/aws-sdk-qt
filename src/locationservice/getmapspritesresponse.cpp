@@ -56,8 +56,7 @@ GetMapSpritesResponse::GetMapSpritesResponse(
  */
 const GetMapSpritesRequest * GetMapSpritesResponse::request() const
 {
-    Q_D(const GetMapSpritesResponse);
-    return static_cast<const GetMapSpritesRequest *>(d->request);
+    return static_cast<const GetMapSpritesRequest *>(LocationServiceResponse::request());
 }
 
 /*!

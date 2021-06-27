@@ -597,6 +597,12 @@ public slots:
     UpdateVoiceConnectorResponse * updateVoiceConnector(const UpdateVoiceConnectorRequest &request);
     UpdateVoiceConnectorGroupResponse * updateVoiceConnectorGroup(const UpdateVoiceConnectorGroupRequest &request);
 
+protected:
+    /// @cond internal
+    ChimeClientPrivate * const d_ptr; ///< Internal d-pointer.
+    ChimeClient(ChimeClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(ChimeClient)
     Q_DISABLE_COPY(ChimeClient)

@@ -55,8 +55,7 @@ SendVoiceMessageResponse::SendVoiceMessageResponse(
  */
 const SendVoiceMessageRequest * SendVoiceMessageResponse::request() const
 {
-    Q_D(const SendVoiceMessageResponse);
-    return static_cast<const SendVoiceMessageRequest *>(d->request);
+    return static_cast<const SendVoiceMessageRequest *>(PinpointSMSVoiceResponse::request());
 }
 
 /*!

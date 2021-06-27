@@ -20,19 +20,20 @@
 #ifndef QTAWS_IOTWIRELESSCLIENT_P_H
 #define QTAWS_IOTWIRELESSCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace IoTWireless {
 
 class IoTWirelessClient;
 
-class IoTWirelessClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class IoTWirelessClientPrivate {
 
 public:
     IoTWirelessClientPrivate(IoTWirelessClient * const q);
+
+protected:
+    IoTWirelessClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoTWirelessClient)

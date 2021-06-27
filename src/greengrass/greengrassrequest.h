@@ -148,6 +148,7 @@ public:
 
 protected:
     /// @cond internal
+    GreengrassRequestPrivate * const d_ptr; ///< Internal d-pointer.
     GreengrassRequest(GreengrassRequestPrivate * const d);
     /// @endcond
 

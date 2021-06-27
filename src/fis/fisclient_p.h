@@ -20,19 +20,20 @@
 #ifndef QTAWS_FISCLIENT_P_H
 #define QTAWS_FISCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace FIS {
 
 class FisClient;
 
-class FisClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class FisClientPrivate {
 
 public:
     FisClientPrivate(FisClient * const q);
+
+protected:
+    FisClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(FisClient)

@@ -88,16 +88,16 @@ MigrationHubConfigClient::MigrationHubConfigClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new MigrationHubConfigClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-06-30"),
+    QStringLiteral("migrationhub-config"),
+    QStringLiteral("AWS Migration Hub Config"),
+    QStringLiteral("mgh"),
+    parent), d_ptr(new MigrationHubConfigClientPrivate(this))
 {
-    Q_D(MigrationHubConfigClient);
-    d->apiVersion = QStringLiteral("2019-06-30");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("migrationhub-config");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Migration Hub Config");
-    d->serviceName = QStringLiteral("mgh");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -116,16 +116,16 @@ MigrationHubConfigClient::MigrationHubConfigClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new MigrationHubConfigClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-06-30"),
+    QStringLiteral("migrationhub-config"),
+    QStringLiteral("AWS Migration Hub Config"),
+    QStringLiteral("mgh"),
+    parent), d_ptr(new MigrationHubConfigClientPrivate(this))
 {
-    Q_D(MigrationHubConfigClient);
-    d->apiVersion = QStringLiteral("2019-06-30");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("migrationhub-config");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Migration Hub Config");
-    d->serviceName = QStringLiteral("mgh");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -182,10 +182,9 @@ GetHomeRegionResponse * MigrationHubConfigClient::getHomeRegion(const GetHomeReg
 /*!
  * Constructs a MigrationHubConfigClientPrivate object with public implementation \a q.
  */
-MigrationHubConfigClientPrivate::MigrationHubConfigClientPrivate(MigrationHubConfigClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+MigrationHubConfigClientPrivate::MigrationHubConfigClientPrivate(MigrationHubConfigClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace MigrationHubConfig

@@ -126,8 +126,7 @@ DeleteQueueResponse::DeleteQueueResponse(
  */
 const DeleteQueueRequest * DeleteQueueResponse::request() const
 {
-    Q_D(const DeleteQueueResponse);
-    return static_cast<const DeleteQueueRequest *>(d->request);
+    return static_cast<const DeleteQueueRequest *>(SqsResponse::request());
 }
 
 /*!

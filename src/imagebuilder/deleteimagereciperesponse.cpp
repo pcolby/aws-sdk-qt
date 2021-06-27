@@ -58,8 +58,7 @@ DeleteImageRecipeResponse::DeleteImageRecipeResponse(
  */
 const DeleteImageRecipeRequest * DeleteImageRecipeResponse::request() const
 {
-    Q_D(const DeleteImageRecipeResponse);
-    return static_cast<const DeleteImageRecipeRequest *>(d->request);
+    return static_cast<const DeleteImageRecipeRequest *>(imagebuilderResponse::request());
 }
 
 /*!

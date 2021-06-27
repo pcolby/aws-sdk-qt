@@ -73,8 +73,7 @@ CreateGatewayRouteResponse::CreateGatewayRouteResponse(
  */
 const CreateGatewayRouteRequest * CreateGatewayRouteResponse::request() const
 {
-    Q_D(const CreateGatewayRouteResponse);
-    return static_cast<const CreateGatewayRouteRequest *>(d->request);
+    return static_cast<const CreateGatewayRouteRequest *>(AppMeshResponse::request());
 }
 
 /*!

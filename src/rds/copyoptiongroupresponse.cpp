@@ -119,8 +119,7 @@ CopyOptionGroupResponse::CopyOptionGroupResponse(
  */
 const CopyOptionGroupRequest * CopyOptionGroupResponse::request() const
 {
-    Q_D(const CopyOptionGroupResponse);
-    return static_cast<const CopyOptionGroupRequest *>(d->request);
+    return static_cast<const CopyOptionGroupRequest *>(RdsResponse::request());
 }
 
 /*!

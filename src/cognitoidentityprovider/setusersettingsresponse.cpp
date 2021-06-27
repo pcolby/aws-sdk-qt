@@ -66,8 +66,7 @@ SetUserSettingsResponse::SetUserSettingsResponse(
  */
 const SetUserSettingsRequest * SetUserSettingsResponse::request() const
 {
-    Q_D(const SetUserSettingsResponse);
-    return static_cast<const SetUserSettingsRequest *>(d->request);
+    return static_cast<const SetUserSettingsRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

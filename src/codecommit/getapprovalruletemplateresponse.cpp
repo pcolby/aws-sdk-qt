@@ -439,8 +439,7 @@ GetApprovalRuleTemplateResponse::GetApprovalRuleTemplateResponse(
  */
 const GetApprovalRuleTemplateRequest * GetApprovalRuleTemplateResponse::request() const
 {
-    Q_D(const GetApprovalRuleTemplateResponse);
-    return static_cast<const GetApprovalRuleTemplateRequest *>(d->request);
+    return static_cast<const GetApprovalRuleTemplateRequest *>(CodeCommitResponse::request());
 }
 
 /*!

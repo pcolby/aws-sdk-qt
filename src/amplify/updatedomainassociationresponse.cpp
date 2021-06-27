@@ -60,8 +60,7 @@ UpdateDomainAssociationResponse::UpdateDomainAssociationResponse(
  */
 const UpdateDomainAssociationRequest * UpdateDomainAssociationResponse::request() const
 {
-    Q_D(const UpdateDomainAssociationResponse);
-    return static_cast<const UpdateDomainAssociationRequest *>(d->request);
+    return static_cast<const UpdateDomainAssociationRequest *>(AmplifyResponse::request());
 }
 
 /*!

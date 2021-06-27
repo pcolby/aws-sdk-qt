@@ -97,8 +97,7 @@ DeleteScalingPlanResponse::DeleteScalingPlanResponse(
  */
 const DeleteScalingPlanRequest * DeleteScalingPlanResponse::request() const
 {
-    Q_D(const DeleteScalingPlanResponse);
-    return static_cast<const DeleteScalingPlanRequest *>(d->request);
+    return static_cast<const DeleteScalingPlanRequest *>(AutoScalingPlansResponse::request());
 }
 
 /*!

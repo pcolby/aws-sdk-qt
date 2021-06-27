@@ -58,8 +58,7 @@ GetSchemaByDefinitionResponse::GetSchemaByDefinitionResponse(
  */
 const GetSchemaByDefinitionRequest * GetSchemaByDefinitionResponse::request() const
 {
-    Q_D(const GetSchemaByDefinitionResponse);
-    return static_cast<const GetSchemaByDefinitionRequest *>(d->request);
+    return static_cast<const GetSchemaByDefinitionRequest *>(GlueResponse::request());
 }
 
 /*!

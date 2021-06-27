@@ -55,6 +55,12 @@ public slots:
     DeleteEndpointResponse * deleteEndpoint(const DeleteEndpointRequest &request);
     ListEndpointsResponse * listEndpoints(const ListEndpointsRequest &request);
 
+protected:
+    /// @cond internal
+    S3OutpostsClientPrivate * const d_ptr; ///< Internal d-pointer.
+    S3OutpostsClient(S3OutpostsClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(S3OutpostsClient)
     Q_DISABLE_COPY(S3OutpostsClient)

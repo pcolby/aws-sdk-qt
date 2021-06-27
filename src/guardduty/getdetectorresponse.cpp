@@ -73,8 +73,7 @@ GetDetectorResponse::GetDetectorResponse(
  */
 const GetDetectorRequest * GetDetectorResponse::request() const
 {
-    Q_D(const GetDetectorResponse);
-    return static_cast<const GetDetectorRequest *>(d->request);
+    return static_cast<const GetDetectorRequest *>(GuardDutyResponse::request());
 }
 
 /*!

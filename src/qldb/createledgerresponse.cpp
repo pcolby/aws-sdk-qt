@@ -56,8 +56,7 @@ CreateLedgerResponse::CreateLedgerResponse(
  */
 const CreateLedgerRequest * CreateLedgerResponse::request() const
 {
-    Q_D(const CreateLedgerResponse);
-    return static_cast<const CreateLedgerRequest *>(d->request);
+    return static_cast<const CreateLedgerRequest *>(QldbResponse::request());
 }
 
 /*!

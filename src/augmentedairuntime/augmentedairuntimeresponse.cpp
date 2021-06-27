@@ -37,7 +37,7 @@ namespace AugmentedAIRuntime {
  * Constructs a AugmentedAIRuntimeResponse object with parent \a parent.
  */
 AugmentedAIRuntimeResponse::AugmentedAIRuntimeResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new AugmentedAIRuntimeResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new AugmentedAIRuntimeResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ AugmentedAIRuntimeResponse::AugmentedAIRuntimeResponse(QObject * const parent)
  * implementation that inherits from AugmentedAIRuntimeResponsePrivate.
  */
 AugmentedAIRuntimeResponse::AugmentedAIRuntimeResponse(AugmentedAIRuntimeResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void AugmentedAIRuntimeResponse::parseFailure(QIODevice &response)
  * Constructs a AugmentedAIRuntimeResponsePrivate object with public implementation \a q.
  */
 AugmentedAIRuntimeResponsePrivate::AugmentedAIRuntimeResponsePrivate(
-    AugmentedAIRuntimeResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    AugmentedAIRuntimeResponse * const q) : q_ptr(q)
 {
 
 }

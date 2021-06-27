@@ -190,6 +190,12 @@ public slots:
     UpdateTagsForResourceResponse * updateTagsForResource(const UpdateTagsForResourceRequest &request);
     ValidateConfigurationSettingsResponse * validateConfigurationSettings(const ValidateConfigurationSettingsRequest &request);
 
+protected:
+    /// @cond internal
+    ElasticBeanstalkClientPrivate * const d_ptr; ///< Internal d-pointer.
+    ElasticBeanstalkClient(ElasticBeanstalkClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(ElasticBeanstalkClient)
     Q_DISABLE_COPY(ElasticBeanstalkClient)

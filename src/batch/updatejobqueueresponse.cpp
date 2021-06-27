@@ -68,8 +68,7 @@ UpdateJobQueueResponse::UpdateJobQueueResponse(
  */
 const UpdateJobQueueRequest * UpdateJobQueueResponse::request() const
 {
-    Q_D(const UpdateJobQueueResponse);
-    return static_cast<const UpdateJobQueueRequest *>(d->request);
+    return static_cast<const UpdateJobQueueRequest *>(BatchResponse::request());
 }
 
 /*!

@@ -60,8 +60,7 @@ DeleteDomainAssociationResponse::DeleteDomainAssociationResponse(
  */
 const DeleteDomainAssociationRequest * DeleteDomainAssociationResponse::request() const
 {
-    Q_D(const DeleteDomainAssociationResponse);
-    return static_cast<const DeleteDomainAssociationRequest *>(d->request);
+    return static_cast<const DeleteDomainAssociationRequest *>(AmplifyResponse::request());
 }
 
 /*!

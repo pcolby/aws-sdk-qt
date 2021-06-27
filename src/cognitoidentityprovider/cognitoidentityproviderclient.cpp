@@ -272,16 +272,16 @@ CognitoIdentityProviderClient::CognitoIdentityProviderClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CognitoIdentityProviderClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-04-18"),
+    QStringLiteral("cognito-idp"),
+    QStringLiteral("Amazon Cognito Identity Provider"),
+    QStringLiteral("cognito-idp"),
+    parent), d_ptr(new CognitoIdentityProviderClientPrivate(this))
 {
-    Q_D(CognitoIdentityProviderClient);
-    d->apiVersion = QStringLiteral("2016-04-18");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("cognito-idp");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Cognito Identity Provider");
-    d->serviceName = QStringLiteral("cognito-idp");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -300,16 +300,16 @@ CognitoIdentityProviderClient::CognitoIdentityProviderClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CognitoIdentityProviderClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-04-18"),
+    QStringLiteral("cognito-idp"),
+    QStringLiteral("Amazon Cognito Identity Provider"),
+    QStringLiteral("cognito-idp"),
+    parent), d_ptr(new CognitoIdentityProviderClientPrivate(this))
 {
-    Q_D(CognitoIdentityProviderClient);
-    d->apiVersion = QStringLiteral("2016-04-18");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("cognito-idp");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Cognito Identity Provider");
-    d->serviceName = QStringLiteral("cognito-idp");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -2235,10 +2235,9 @@ VerifyUserAttributeResponse * CognitoIdentityProviderClient::verifyUserAttribute
 /*!
  * Constructs a CognitoIdentityProviderClientPrivate object with public implementation \a q.
  */
-CognitoIdentityProviderClientPrivate::CognitoIdentityProviderClientPrivate(CognitoIdentityProviderClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+CognitoIdentityProviderClientPrivate::CognitoIdentityProviderClientPrivate(CognitoIdentityProviderClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace CognitoIdentityProvider

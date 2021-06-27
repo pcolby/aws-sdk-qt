@@ -61,8 +61,7 @@ DescribeDirectConnectGatewaysResponse::DescribeDirectConnectGatewaysResponse(
  */
 const DescribeDirectConnectGatewaysRequest * DescribeDirectConnectGatewaysResponse::request() const
 {
-    Q_D(const DescribeDirectConnectGatewaysResponse);
-    return static_cast<const DescribeDirectConnectGatewaysRequest *>(d->request);
+    return static_cast<const DescribeDirectConnectGatewaysRequest *>(DirectConnectResponse::request());
 }
 
 /*!

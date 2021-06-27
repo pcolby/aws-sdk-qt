@@ -66,8 +66,7 @@ PublishLayerVersionResponse::PublishLayerVersionResponse(
  */
 const PublishLayerVersionRequest * PublishLayerVersionResponse::request() const
 {
-    Q_D(const PublishLayerVersionResponse);
-    return static_cast<const PublishLayerVersionRequest *>(d->request);
+    return static_cast<const PublishLayerVersionRequest *>(LambdaResponse::request());
 }
 
 /*!

@@ -74,8 +74,7 @@ GetExportSnapshotRecordsResponse::GetExportSnapshotRecordsResponse(
  */
 const GetExportSnapshotRecordsRequest * GetExportSnapshotRecordsResponse::request() const
 {
-    Q_D(const GetExportSnapshotRecordsResponse);
-    return static_cast<const GetExportSnapshotRecordsRequest *>(d->request);
+    return static_cast<const GetExportSnapshotRecordsRequest *>(LightsailResponse::request());
 }
 
 /*!

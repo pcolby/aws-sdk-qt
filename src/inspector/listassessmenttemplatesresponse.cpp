@@ -60,8 +60,7 @@ ListAssessmentTemplatesResponse::ListAssessmentTemplatesResponse(
  */
 const ListAssessmentTemplatesRequest * ListAssessmentTemplatesResponse::request() const
 {
-    Q_D(const ListAssessmentTemplatesResponse);
-    return static_cast<const ListAssessmentTemplatesRequest *>(d->request);
+    return static_cast<const ListAssessmentTemplatesRequest *>(InspectorResponse::request());
 }
 
 /*!

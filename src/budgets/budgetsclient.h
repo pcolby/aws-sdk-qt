@@ -112,6 +112,12 @@ public slots:
     UpdateNotificationResponse * updateNotification(const UpdateNotificationRequest &request);
     UpdateSubscriberResponse * updateSubscriber(const UpdateSubscriberRequest &request);
 
+protected:
+    /// @cond internal
+    BudgetsClientPrivate * const d_ptr; ///< Internal d-pointer.
+    BudgetsClient(BudgetsClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(BudgetsClient)
     Q_DISABLE_COPY(BudgetsClient)

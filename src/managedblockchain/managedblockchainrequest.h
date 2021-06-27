@@ -79,6 +79,7 @@ public:
 
 protected:
     /// @cond internal
+    ManagedBlockchainRequestPrivate * const d_ptr; ///< Internal d-pointer.
     ManagedBlockchainRequest(ManagedBlockchainRequestPrivate * const d);
     /// @endcond
 

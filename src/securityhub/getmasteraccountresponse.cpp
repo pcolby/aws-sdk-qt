@@ -103,8 +103,7 @@ GetMasterAccountResponse::GetMasterAccountResponse(
  */
 const GetMasterAccountRequest * GetMasterAccountResponse::request() const
 {
-    Q_D(const GetMasterAccountResponse);
-    return static_cast<const GetMasterAccountRequest *>(d->request);
+    return static_cast<const GetMasterAccountRequest *>(SecurityHubResponse::request());
 }
 
 /*!

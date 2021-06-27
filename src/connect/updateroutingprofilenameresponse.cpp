@@ -79,8 +79,7 @@ UpdateRoutingProfileNameResponse::UpdateRoutingProfileNameResponse(
  */
 const UpdateRoutingProfileNameRequest * UpdateRoutingProfileNameResponse::request() const
 {
-    Q_D(const UpdateRoutingProfileNameResponse);
-    return static_cast<const UpdateRoutingProfileNameRequest *>(d->request);
+    return static_cast<const UpdateRoutingProfileNameRequest *>(ConnectResponse::request());
 }
 
 /*!

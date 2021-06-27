@@ -72,8 +72,7 @@ ListDeploymentsResponse::ListDeploymentsResponse(
  */
 const ListDeploymentsRequest * ListDeploymentsResponse::request() const
 {
-    Q_D(const ListDeploymentsResponse);
-    return static_cast<const ListDeploymentsRequest *>(d->request);
+    return static_cast<const ListDeploymentsRequest *>(GreengrassV2Response::request());
 }
 
 /*!

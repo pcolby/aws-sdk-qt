@@ -52,6 +52,12 @@ public slots:
     GetPersonalizedRankingResponse * getPersonalizedRanking(const GetPersonalizedRankingRequest &request);
     GetRecommendationsResponse * getRecommendations(const GetRecommendationsRequest &request);
 
+protected:
+    /// @cond internal
+    PersonalizeRuntimeClientPrivate * const d_ptr; ///< Internal d-pointer.
+    PersonalizeRuntimeClient(PersonalizeRuntimeClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(PersonalizeRuntimeClient)
     Q_DISABLE_COPY(PersonalizeRuntimeClient)

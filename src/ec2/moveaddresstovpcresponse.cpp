@@ -87,8 +87,7 @@ MoveAddressToVpcResponse::MoveAddressToVpcResponse(
  */
 const MoveAddressToVpcRequest * MoveAddressToVpcResponse::request() const
 {
-    Q_D(const MoveAddressToVpcResponse);
-    return static_cast<const MoveAddressToVpcRequest *>(d->request);
+    return static_cast<const MoveAddressToVpcRequest *>(Ec2Response::request());
 }
 
 /*!

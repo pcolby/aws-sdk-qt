@@ -161,8 +161,7 @@ DescribeCommandsResponse::DescribeCommandsResponse(
  */
 const DescribeCommandsRequest * DescribeCommandsResponse::request() const
 {
-    Q_D(const DescribeCommandsResponse);
-    return static_cast<const DescribeCommandsRequest *>(d->request);
+    return static_cast<const DescribeCommandsRequest *>(OpsWorksResponse::request());
 }
 
 /*!

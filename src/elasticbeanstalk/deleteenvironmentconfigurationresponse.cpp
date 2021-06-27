@@ -77,8 +77,7 @@ DeleteEnvironmentConfigurationResponse::DeleteEnvironmentConfigurationResponse(
  */
 const DeleteEnvironmentConfigurationRequest * DeleteEnvironmentConfigurationResponse::request() const
 {
-    Q_D(const DeleteEnvironmentConfigurationResponse);
-    return static_cast<const DeleteEnvironmentConfigurationRequest *>(d->request);
+    return static_cast<const DeleteEnvironmentConfigurationRequest *>(ElasticBeanstalkResponse::request());
 }
 
 /*!

@@ -20,19 +20,20 @@
 #ifndef QTAWS_GLACIERCLIENT_P_H
 #define QTAWS_GLACIERCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace Glacier {
 
 class GlacierClient;
 
-class GlacierClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class GlacierClientPrivate {
 
 public:
     GlacierClientPrivate(GlacierClient * const q);
+
+protected:
+    GlacierClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(GlacierClient)

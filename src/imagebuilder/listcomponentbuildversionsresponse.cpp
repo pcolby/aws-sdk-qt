@@ -58,8 +58,7 @@ ListComponentBuildVersionsResponse::ListComponentBuildVersionsResponse(
  */
 const ListComponentBuildVersionsRequest * ListComponentBuildVersionsResponse::request() const
 {
-    Q_D(const ListComponentBuildVersionsResponse);
-    return static_cast<const ListComponentBuildVersionsRequest *>(d->request);
+    return static_cast<const ListComponentBuildVersionsRequest *>(imagebuilderResponse::request());
 }
 
 /*!

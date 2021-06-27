@@ -56,8 +56,7 @@ PhoneNumberValidateResponse::PhoneNumberValidateResponse(
  */
 const PhoneNumberValidateRequest * PhoneNumberValidateResponse::request() const
 {
-    Q_D(const PhoneNumberValidateResponse);
-    return static_cast<const PhoneNumberValidateRequest *>(d->request);
+    return static_cast<const PhoneNumberValidateRequest *>(PinpointResponse::request());
 }
 
 /*!

@@ -84,8 +84,7 @@ InitiateDocumentVersionUploadResponse::InitiateDocumentVersionUploadResponse(
  */
 const InitiateDocumentVersionUploadRequest * InitiateDocumentVersionUploadResponse::request() const
 {
-    Q_D(const InitiateDocumentVersionUploadResponse);
-    return static_cast<const InitiateDocumentVersionUploadRequest *>(d->request);
+    return static_cast<const InitiateDocumentVersionUploadRequest *>(WorkDocsResponse::request());
 }
 
 /*!

@@ -439,8 +439,7 @@ GetCommentResponse::GetCommentResponse(
  */
 const GetCommentRequest * GetCommentResponse::request() const
 {
-    Q_D(const GetCommentResponse);
-    return static_cast<const GetCommentRequest *>(d->request);
+    return static_cast<const GetCommentRequest *>(CodeCommitResponse::request());
 }
 
 /*!

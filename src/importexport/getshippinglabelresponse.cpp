@@ -58,8 +58,7 @@ GetShippingLabelResponse::GetShippingLabelResponse(
  */
 const GetShippingLabelRequest * GetShippingLabelResponse::request() const
 {
-    Q_D(const GetShippingLabelResponse);
-    return static_cast<const GetShippingLabelRequest *>(d->request);
+    return static_cast<const GetShippingLabelRequest *>(ImportExportResponse::request());
 }
 
 /*!

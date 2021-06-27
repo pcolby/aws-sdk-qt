@@ -55,8 +55,7 @@ ListHITsForQualificationTypeResponse::ListHITsForQualificationTypeResponse(
  */
 const ListHITsForQualificationTypeRequest * ListHITsForQualificationTypeResponse::request() const
 {
-    Q_D(const ListHITsForQualificationTypeResponse);
-    return static_cast<const ListHITsForQualificationTypeRequest *>(d->request);
+    return static_cast<const ListHITsForQualificationTypeRequest *>(MTurkResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ GetIntrospectionSchemaResponse::GetIntrospectionSchemaResponse(
  */
 const GetIntrospectionSchemaRequest * GetIntrospectionSchemaResponse::request() const
 {
-    Q_D(const GetIntrospectionSchemaResponse);
-    return static_cast<const GetIntrospectionSchemaRequest *>(d->request);
+    return static_cast<const GetIntrospectionSchemaRequest *>(AppSyncResponse::request());
 }
 
 /*!

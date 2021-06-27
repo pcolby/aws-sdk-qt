@@ -60,8 +60,7 @@ UpdateInstanceCustomHealthStatusResponse::UpdateInstanceCustomHealthStatusRespon
  */
 const UpdateInstanceCustomHealthStatusRequest * UpdateInstanceCustomHealthStatusResponse::request() const
 {
-    Q_D(const UpdateInstanceCustomHealthStatusResponse);
-    return static_cast<const UpdateInstanceCustomHealthStatusRequest *>(d->request);
+    return static_cast<const UpdateInstanceCustomHealthStatusRequest *>(ServiceDiscoveryResponse::request());
 }
 
 /*!

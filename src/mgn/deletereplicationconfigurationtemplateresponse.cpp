@@ -56,8 +56,7 @@ DeleteReplicationConfigurationTemplateResponse::DeleteReplicationConfigurationTe
  */
 const DeleteReplicationConfigurationTemplateRequest * DeleteReplicationConfigurationTemplateResponse::request() const
 {
-    Q_D(const DeleteReplicationConfigurationTemplateResponse);
-    return static_cast<const DeleteReplicationConfigurationTemplateRequest *>(d->request);
+    return static_cast<const DeleteReplicationConfigurationTemplateRequest *>(mgnResponse::request());
 }
 
 /*!

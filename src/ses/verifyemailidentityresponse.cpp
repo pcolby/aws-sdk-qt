@@ -66,8 +66,7 @@ VerifyEmailIdentityResponse::VerifyEmailIdentityResponse(
  */
 const VerifyEmailIdentityRequest * VerifyEmailIdentityResponse::request() const
 {
-    Q_D(const VerifyEmailIdentityResponse);
-    return static_cast<const VerifyEmailIdentityRequest *>(d->request);
+    return static_cast<const VerifyEmailIdentityRequest *>(SesResponse::request());
 }
 
 /*!

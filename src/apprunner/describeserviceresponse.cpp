@@ -86,8 +86,7 @@ DescribeServiceResponse::DescribeServiceResponse(
  */
 const DescribeServiceRequest * DescribeServiceResponse::request() const
 {
-    Q_D(const DescribeServiceResponse);
-    return static_cast<const DescribeServiceRequest *>(d->request);
+    return static_cast<const DescribeServiceRequest *>(AppRunnerResponse::request());
 }
 
 /*!

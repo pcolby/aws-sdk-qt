@@ -20,14 +20,12 @@
 #ifndef QTAWS_BRAKETRESPONSE_P_H
 #define QTAWS_BRAKETRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace Braket {
 
 class BraketResponse;
 
-class BraketResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class BraketResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    BraketResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(BraketResponse)

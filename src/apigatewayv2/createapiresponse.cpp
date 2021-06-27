@@ -56,8 +56,7 @@ CreateApiResponse::CreateApiResponse(
  */
 const CreateApiRequest * CreateApiResponse::request() const
 {
-    Q_D(const CreateApiResponse);
-    return static_cast<const CreateApiRequest *>(d->request);
+    return static_cast<const CreateApiRequest *>(ApiGatewayV2Response::request());
 }
 
 /*!

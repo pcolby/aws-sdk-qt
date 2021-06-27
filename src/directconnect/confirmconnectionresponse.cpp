@@ -61,8 +61,7 @@ ConfirmConnectionResponse::ConfirmConnectionResponse(
  */
 const ConfirmConnectionRequest * ConfirmConnectionResponse::request() const
 {
-    Q_D(const ConfirmConnectionResponse);
-    return static_cast<const ConfirmConnectionRequest *>(d->request);
+    return static_cast<const ConfirmConnectionRequest *>(DirectConnectResponse::request());
 }
 
 /*!

@@ -106,6 +106,7 @@ public:
 
 protected:
     /// @cond internal
+    DynamoDBRequestPrivate * const d_ptr; ///< Internal d-pointer.
     DynamoDBRequest(DynamoDBRequestPrivate * const d);
     /// @endcond
 

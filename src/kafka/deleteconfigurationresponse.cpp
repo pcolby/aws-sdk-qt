@@ -56,8 +56,7 @@ DeleteConfigurationResponse::DeleteConfigurationResponse(
  */
 const DeleteConfigurationRequest * DeleteConfigurationResponse::request() const
 {
-    Q_D(const DeleteConfigurationResponse);
-    return static_cast<const DeleteConfigurationRequest *>(d->request);
+    return static_cast<const DeleteConfigurationRequest *>(KafkaResponse::request());
 }
 
 /*!

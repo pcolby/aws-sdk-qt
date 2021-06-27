@@ -87,8 +87,7 @@ CreateLocalGatewayRouteResponse::CreateLocalGatewayRouteResponse(
  */
 const CreateLocalGatewayRouteRequest * CreateLocalGatewayRouteResponse::request() const
 {
-    Q_D(const CreateLocalGatewayRouteResponse);
-    return static_cast<const CreateLocalGatewayRouteRequest *>(d->request);
+    return static_cast<const CreateLocalGatewayRouteRequest *>(Ec2Response::request());
 }
 
 /*!

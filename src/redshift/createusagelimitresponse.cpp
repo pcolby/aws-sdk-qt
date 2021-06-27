@@ -85,8 +85,7 @@ CreateUsageLimitResponse::CreateUsageLimitResponse(
  */
 const CreateUsageLimitRequest * CreateUsageLimitResponse::request() const
 {
-    Q_D(const CreateUsageLimitResponse);
-    return static_cast<const CreateUsageLimitRequest *>(d->request);
+    return static_cast<const CreateUsageLimitRequest *>(RedshiftResponse::request());
 }
 
 /*!

@@ -141,8 +141,7 @@ ListAWSServiceAccessForOrganizationResponse::ListAWSServiceAccessForOrganization
  */
 const ListAWSServiceAccessForOrganizationRequest * ListAWSServiceAccessForOrganizationResponse::request() const
 {
-    Q_D(const ListAWSServiceAccessForOrganizationResponse);
-    return static_cast<const ListAWSServiceAccessForOrganizationRequest *>(d->request);
+    return static_cast<const ListAWSServiceAccessForOrganizationRequest *>(OrganizationsResponse::request());
 }
 
 /*!

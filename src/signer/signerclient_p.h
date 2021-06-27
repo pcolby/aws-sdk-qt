@@ -20,19 +20,20 @@
 #ifndef QTAWS_SIGNERCLIENT_P_H
 #define QTAWS_SIGNERCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace signer {
 
 class signerClient;
 
-class signerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class signerClientPrivate {
 
 public:
     signerClientPrivate(signerClient * const q);
+
+protected:
+    signerClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(signerClient)

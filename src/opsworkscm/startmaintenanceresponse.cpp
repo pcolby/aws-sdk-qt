@@ -134,8 +134,7 @@ StartMaintenanceResponse::StartMaintenanceResponse(
  */
 const StartMaintenanceRequest * StartMaintenanceResponse::request() const
 {
-    Q_D(const StartMaintenanceResponse);
-    return static_cast<const StartMaintenanceRequest *>(d->request);
+    return static_cast<const StartMaintenanceRequest *>(OpsWorksCMResponse::request());
 }
 
 /*!

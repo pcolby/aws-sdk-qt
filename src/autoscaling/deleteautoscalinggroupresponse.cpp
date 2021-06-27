@@ -68,8 +68,7 @@ DeleteAutoScalingGroupResponse::DeleteAutoScalingGroupResponse(
  */
 const DeleteAutoScalingGroupRequest * DeleteAutoScalingGroupResponse::request() const
 {
-    Q_D(const DeleteAutoScalingGroupResponse);
-    return static_cast<const DeleteAutoScalingGroupRequest *>(d->request);
+    return static_cast<const DeleteAutoScalingGroupRequest *>(AutoScalingResponse::request());
 }
 
 /*!

@@ -98,8 +98,7 @@ BatchCreateAttendeeResponse::BatchCreateAttendeeResponse(
  */
 const BatchCreateAttendeeRequest * BatchCreateAttendeeResponse::request() const
 {
-    Q_D(const BatchCreateAttendeeResponse);
-    return static_cast<const BatchCreateAttendeeRequest *>(d->request);
+    return static_cast<const BatchCreateAttendeeRequest *>(ChimeResponse::request());
 }
 
 /*!

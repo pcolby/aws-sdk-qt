@@ -58,8 +58,7 @@ ListMetricSetsResponse::ListMetricSetsResponse(
  */
 const ListMetricSetsRequest * ListMetricSetsResponse::request() const
 {
-    Q_D(const ListMetricSetsResponse);
-    return static_cast<const ListMetricSetsRequest *>(d->request);
+    return static_cast<const ListMetricSetsRequest *>(LookoutMetricsResponse::request());
 }
 
 /*!

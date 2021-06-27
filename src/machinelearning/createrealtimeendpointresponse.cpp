@@ -55,8 +55,7 @@ CreateRealtimeEndpointResponse::CreateRealtimeEndpointResponse(
  */
 const CreateRealtimeEndpointRequest * CreateRealtimeEndpointResponse::request() const
 {
-    Q_D(const CreateRealtimeEndpointResponse);
-    return static_cast<const CreateRealtimeEndpointRequest *>(d->request);
+    return static_cast<const CreateRealtimeEndpointRequest *>(MachineLearningResponse::request());
 }
 
 /*!

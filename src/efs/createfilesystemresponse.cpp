@@ -62,8 +62,7 @@ CreateFileSystemResponse::CreateFileSystemResponse(
  */
 const CreateFileSystemRequest * CreateFileSystemResponse::request() const
 {
-    Q_D(const CreateFileSystemResponse);
-    return static_cast<const CreateFileSystemRequest *>(d->request);
+    return static_cast<const CreateFileSystemRequest *>(EfsResponse::request());
 }
 
 /*!

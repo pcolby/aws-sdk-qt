@@ -37,7 +37,7 @@ namespace MigrationHub {
  * Constructs a MigrationHubResponse object with parent \a parent.
  */
 MigrationHubResponse::MigrationHubResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new MigrationHubResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new MigrationHubResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ MigrationHubResponse::MigrationHubResponse(QObject * const parent)
  * implementation that inherits from MigrationHubResponsePrivate.
  */
 MigrationHubResponse::MigrationHubResponse(MigrationHubResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void MigrationHubResponse::parseFailure(QIODevice &response)
  * Constructs a MigrationHubResponsePrivate object with public implementation \a q.
  */
 MigrationHubResponsePrivate::MigrationHubResponsePrivate(
-    MigrationHubResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    MigrationHubResponse * const q) : q_ptr(q)
 {
 
 }

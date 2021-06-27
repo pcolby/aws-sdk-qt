@@ -20,19 +20,20 @@
 #ifndef QTAWS_CONNECTCLIENT_P_H
 #define QTAWS_CONNECTCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace Connect {
 
 class ConnectClient;
 
-class ConnectClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ConnectClientPrivate {
 
 public:
     ConnectClientPrivate(ConnectClient * const q);
+
+protected:
+    ConnectClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ConnectClient)

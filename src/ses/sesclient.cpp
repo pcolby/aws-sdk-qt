@@ -212,16 +212,16 @@ SesClient::SesClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SesClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2010-12-01"),
+    QStringLiteral("email"),
+    QStringLiteral("Amazon Simple Email Service"),
+    QStringLiteral("ses"),
+    parent), d_ptr(new SesClientPrivate(this))
 {
-    Q_D(SesClient);
-    d->apiVersion = QStringLiteral("2010-12-01");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("email");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Simple Email Service");
-    d->serviceName = QStringLiteral("ses");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -240,16 +240,16 @@ SesClient::SesClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SesClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2010-12-01"),
+    QStringLiteral("email"),
+    QStringLiteral("Amazon Simple Email Service"),
+    QStringLiteral("ses"),
+    parent), d_ptr(new SesClientPrivate(this))
 {
-    Q_D(SesClient);
-    d->apiVersion = QStringLiteral("2010-12-01");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("email");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Simple Email Service");
-    d->serviceName = QStringLiteral("ses");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -2138,10 +2138,9 @@ VerifyEmailIdentityResponse * SesClient::verifyEmailIdentity(const VerifyEmailId
 /*!
  * Constructs a SesClientPrivate object with public implementation \a q.
  */
-SesClientPrivate::SesClientPrivate(SesClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+SesClientPrivate::SesClientPrivate(SesClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace SES

@@ -56,8 +56,7 @@ ListNodesResponse::ListNodesResponse(
  */
 const ListNodesRequest * ListNodesResponse::request() const
 {
-    Q_D(const ListNodesResponse);
-    return static_cast<const ListNodesRequest *>(d->request);
+    return static_cast<const ListNodesRequest *>(KafkaResponse::request());
 }
 
 /*!

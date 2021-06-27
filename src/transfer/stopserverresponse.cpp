@@ -62,8 +62,7 @@ StopServerResponse::StopServerResponse(
  */
 const StopServerRequest * StopServerResponse::request() const
 {
-    Q_D(const StopServerResponse);
-    return static_cast<const StopServerRequest *>(d->request);
+    return static_cast<const StopServerRequest *>(TransferResponse::request());
 }
 
 /*!

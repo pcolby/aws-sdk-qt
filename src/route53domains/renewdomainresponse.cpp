@@ -56,8 +56,7 @@ RenewDomainResponse::RenewDomainResponse(
  */
 const RenewDomainRequest * RenewDomainResponse::request() const
 {
-    Q_D(const RenewDomainResponse);
-    return static_cast<const RenewDomainRequest *>(d->request);
+    return static_cast<const RenewDomainRequest *>(Route53DomainsResponse::request());
 }
 
 /*!

@@ -75,8 +75,7 @@ DescribeConformancePackStatusResponse::DescribeConformancePackStatusResponse(
  */
 const DescribeConformancePackStatusRequest * DescribeConformancePackStatusResponse::request() const
 {
-    Q_D(const DescribeConformancePackStatusResponse);
-    return static_cast<const DescribeConformancePackStatusRequest *>(d->request);
+    return static_cast<const DescribeConformancePackStatusRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

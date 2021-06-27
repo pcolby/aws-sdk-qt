@@ -75,8 +75,7 @@ GetCostCategoriesResponse::GetCostCategoriesResponse(
  */
 const GetCostCategoriesRequest * GetCostCategoriesResponse::request() const
 {
-    Q_D(const GetCostCategoriesResponse);
-    return static_cast<const GetCostCategoriesRequest *>(d->request);
+    return static_cast<const GetCostCategoriesRequest *>(CostExplorerResponse::request());
 }
 
 /*!

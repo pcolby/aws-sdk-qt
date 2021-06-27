@@ -57,6 +57,7 @@ public:
 
 protected:
     /// @cond internal
+    ForecastQueryServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
     ForecastQueryServiceRequest(ForecastQueryServiceRequestPrivate * const d);
     /// @endcond
 

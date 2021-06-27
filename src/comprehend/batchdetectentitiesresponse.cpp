@@ -58,8 +58,7 @@ BatchDetectEntitiesResponse::BatchDetectEntitiesResponse(
  */
 const BatchDetectEntitiesRequest * BatchDetectEntitiesResponse::request() const
 {
-    Q_D(const BatchDetectEntitiesResponse);
-    return static_cast<const BatchDetectEntitiesRequest *>(d->request);
+    return static_cast<const BatchDetectEntitiesRequest *>(ComprehendResponse::request());
 }
 
 /*!

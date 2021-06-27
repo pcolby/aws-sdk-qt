@@ -20,19 +20,20 @@
 #ifndef QTAWS_APPMESHCLIENT_P_H
 #define QTAWS_APPMESHCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace AppMesh {
 
 class AppMeshClient;
 
-class AppMeshClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class AppMeshClientPrivate {
 
 public:
     AppMeshClientPrivate(AppMeshClient * const q);
+
+protected:
+    AppMeshClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AppMeshClient)

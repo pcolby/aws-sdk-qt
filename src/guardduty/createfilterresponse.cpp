@@ -73,8 +73,7 @@ CreateFilterResponse::CreateFilterResponse(
  */
 const CreateFilterRequest * CreateFilterResponse::request() const
 {
-    Q_D(const CreateFilterResponse);
-    return static_cast<const CreateFilterRequest *>(d->request);
+    return static_cast<const CreateFilterRequest *>(GuardDutyResponse::request());
 }
 
 /*!

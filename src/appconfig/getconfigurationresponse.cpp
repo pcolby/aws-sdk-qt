@@ -105,8 +105,7 @@ GetConfigurationResponse::GetConfigurationResponse(
  */
 const GetConfigurationRequest * GetConfigurationResponse::request() const
 {
-    Q_D(const GetConfigurationResponse);
-    return static_cast<const GetConfigurationRequest *>(d->request);
+    return static_cast<const GetConfigurationRequest *>(AppConfigResponse::request());
 }
 
 /*!

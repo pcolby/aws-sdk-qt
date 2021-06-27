@@ -65,7 +65,7 @@ namespace CognitoIdentity {
  * Constructs a CognitoIdentityRequest object for CognitoIdentity \a action.
  */
 CognitoIdentityRequest::CognitoIdentityRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new CognitoIdentityRequestPrivate(action, this))
+    : d_ptr(new CognitoIdentityRequestPrivate(action, this))
 {
 
 }
@@ -74,7 +74,8 @@ CognitoIdentityRequest::CognitoIdentityRequest(const Action action)
  * Constructs a copy of \a other.
  */
 CognitoIdentityRequest::CognitoIdentityRequest(const CognitoIdentityRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new CognitoIdentityRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new CognitoIdentityRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -97,7 +98,7 @@ CognitoIdentityRequest& CognitoIdentityRequest::operator=(const CognitoIdentityR
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CognitoIdentityRequestPrivate.
  */
-CognitoIdentityRequest::CognitoIdentityRequest(CognitoIdentityRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+CognitoIdentityRequest::CognitoIdentityRequest(CognitoIdentityRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -266,7 +267,7 @@ QNetworkRequest CognitoIdentityRequest::unsignedRequest(const QUrl &endpoint) co
  * with public implementation \a q.
  */
 CognitoIdentityRequestPrivate::CognitoIdentityRequestPrivate(const CognitoIdentityRequest::Action action, CognitoIdentityRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -281,8 +282,8 @@ CognitoIdentityRequestPrivate::CognitoIdentityRequestPrivate(const CognitoIdenti
  */
 CognitoIdentityRequestPrivate::CognitoIdentityRequestPrivate(const CognitoIdentityRequestPrivate &other,
                                      CognitoIdentityRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

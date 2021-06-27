@@ -50,7 +50,7 @@ namespace ConnectParticipant {
  * Constructs a ConnectParticipantRequest object for ConnectParticipant \a action.
  */
 ConnectParticipantRequest::ConnectParticipantRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new ConnectParticipantRequestPrivate(action, this))
+    : d_ptr(new ConnectParticipantRequestPrivate(action, this))
 {
 
 }
@@ -59,7 +59,8 @@ ConnectParticipantRequest::ConnectParticipantRequest(const Action action)
  * Constructs a copy of \a other.
  */
 ConnectParticipantRequest::ConnectParticipantRequest(const ConnectParticipantRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new ConnectParticipantRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new ConnectParticipantRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -82,7 +83,7 @@ ConnectParticipantRequest& ConnectParticipantRequest::operator=(const ConnectPar
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ConnectParticipantRequestPrivate.
  */
-ConnectParticipantRequest::ConnectParticipantRequest(ConnectParticipantRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+ConnectParticipantRequest::ConnectParticipantRequest(ConnectParticipantRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -251,7 +252,7 @@ QNetworkRequest ConnectParticipantRequest::unsignedRequest(const QUrl &endpoint)
  * with public implementation \a q.
  */
 ConnectParticipantRequestPrivate::ConnectParticipantRequestPrivate(const ConnectParticipantRequest::Action action, ConnectParticipantRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -266,8 +267,8 @@ ConnectParticipantRequestPrivate::ConnectParticipantRequestPrivate(const Connect
  */
 ConnectParticipantRequestPrivate::ConnectParticipantRequestPrivate(const ConnectParticipantRequestPrivate &other,
                                      ConnectParticipantRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

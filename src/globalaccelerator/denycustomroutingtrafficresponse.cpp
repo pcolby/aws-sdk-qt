@@ -218,8 +218,7 @@ DenyCustomRoutingTrafficResponse::DenyCustomRoutingTrafficResponse(
  */
 const DenyCustomRoutingTrafficRequest * DenyCustomRoutingTrafficResponse::request() const
 {
-    Q_D(const DenyCustomRoutingTrafficResponse);
-    return static_cast<const DenyCustomRoutingTrafficRequest *>(d->request);
+    return static_cast<const DenyCustomRoutingTrafficRequest *>(GlobalAcceleratorResponse::request());
 }
 
 /*!

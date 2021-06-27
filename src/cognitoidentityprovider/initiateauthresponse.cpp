@@ -66,8 +66,7 @@ InitiateAuthResponse::InitiateAuthResponse(
  */
 const InitiateAuthRequest * InitiateAuthResponse::request() const
 {
-    Q_D(const InitiateAuthResponse);
-    return static_cast<const InitiateAuthRequest *>(d->request);
+    return static_cast<const InitiateAuthRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

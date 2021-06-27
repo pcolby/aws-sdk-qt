@@ -56,8 +56,7 @@ DeleteDiscovererResponse::DeleteDiscovererResponse(
  */
 const DeleteDiscovererRequest * DeleteDiscovererResponse::request() const
 {
-    Q_D(const DeleteDiscovererResponse);
-    return static_cast<const DeleteDiscovererRequest *>(d->request);
+    return static_cast<const DeleteDiscovererRequest *>(SchemasResponse::request());
 }
 
 /*!

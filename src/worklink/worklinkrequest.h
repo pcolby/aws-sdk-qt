@@ -89,6 +89,7 @@ public:
 
 protected:
     /// @cond internal
+    WorkLinkRequestPrivate * const d_ptr; ///< Internal d-pointer.
     WorkLinkRequest(WorkLinkRequestPrivate * const d);
     /// @endcond
 

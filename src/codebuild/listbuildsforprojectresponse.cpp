@@ -64,8 +64,7 @@ ListBuildsForProjectResponse::ListBuildsForProjectResponse(
  */
 const ListBuildsForProjectRequest * ListBuildsForProjectResponse::request() const
 {
-    Q_D(const ListBuildsForProjectResponse);
-    return static_cast<const ListBuildsForProjectRequest *>(d->request);
+    return static_cast<const ListBuildsForProjectRequest *>(CodeBuildResponse::request());
 }
 
 /*!

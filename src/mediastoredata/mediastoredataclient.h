@@ -61,6 +61,12 @@ public slots:
     ListItemsResponse * listItems(const ListItemsRequest &request);
     PutObjectResponse * putObject(const PutObjectRequest &request);
 
+protected:
+    /// @cond internal
+    MediaStoreDataClientPrivate * const d_ptr; ///< Internal d-pointer.
+    MediaStoreDataClient(MediaStoreDataClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(MediaStoreDataClient)
     Q_DISABLE_COPY(MediaStoreDataClient)

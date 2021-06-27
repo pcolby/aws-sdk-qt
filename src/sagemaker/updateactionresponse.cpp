@@ -70,8 +70,7 @@ UpdateActionResponse::UpdateActionResponse(
  */
 const UpdateActionRequest * UpdateActionResponse::request() const
 {
-    Q_D(const UpdateActionResponse);
-    return static_cast<const UpdateActionRequest *>(d->request);
+    return static_cast<const UpdateActionRequest *>(SageMakerResponse::request());
 }
 
 /*!

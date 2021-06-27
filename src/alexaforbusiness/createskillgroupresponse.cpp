@@ -62,8 +62,7 @@ CreateSkillGroupResponse::CreateSkillGroupResponse(
  */
 const CreateSkillGroupRequest * CreateSkillGroupResponse::request() const
 {
-    Q_D(const CreateSkillGroupResponse);
-    return static_cast<const CreateSkillGroupRequest *>(d->request);
+    return static_cast<const CreateSkillGroupRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

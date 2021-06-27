@@ -70,8 +70,7 @@ ListTrialsResponse::ListTrialsResponse(
  */
 const ListTrialsRequest * ListTrialsResponse::request() const
 {
-    Q_D(const ListTrialsResponse);
-    return static_cast<const ListTrialsRequest *>(d->request);
+    return static_cast<const ListTrialsRequest *>(SageMakerResponse::request());
 }
 
 /*!

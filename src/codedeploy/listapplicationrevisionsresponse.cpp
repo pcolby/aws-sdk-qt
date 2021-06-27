@@ -141,8 +141,7 @@ ListApplicationRevisionsResponse::ListApplicationRevisionsResponse(
  */
 const ListApplicationRevisionsRequest * ListApplicationRevisionsResponse::request() const
 {
-    Q_D(const ListApplicationRevisionsResponse);
-    return static_cast<const ListApplicationRevisionsRequest *>(d->request);
+    return static_cast<const ListApplicationRevisionsRequest *>(CodeDeployResponse::request());
 }
 
 /*!

@@ -87,8 +87,7 @@ GetReservedInstancesExchangeQuoteResponse::GetReservedInstancesExchangeQuoteResp
  */
 const GetReservedInstancesExchangeQuoteRequest * GetReservedInstancesExchangeQuoteResponse::request() const
 {
-    Q_D(const GetReservedInstancesExchangeQuoteResponse);
-    return static_cast<const GetReservedInstancesExchangeQuoteRequest *>(d->request);
+    return static_cast<const GetReservedInstancesExchangeQuoteRequest *>(Ec2Response::request());
 }
 
 /*!

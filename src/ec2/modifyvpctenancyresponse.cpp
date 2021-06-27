@@ -87,8 +87,7 @@ ModifyVpcTenancyResponse::ModifyVpcTenancyResponse(
  */
 const ModifyVpcTenancyRequest * ModifyVpcTenancyResponse::request() const
 {
-    Q_D(const ModifyVpcTenancyResponse);
-    return static_cast<const ModifyVpcTenancyRequest *>(d->request);
+    return static_cast<const ModifyVpcTenancyRequest *>(Ec2Response::request());
 }
 
 /*!

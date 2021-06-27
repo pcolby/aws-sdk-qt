@@ -37,7 +37,7 @@ namespace CognitoSync {
  * Constructs a CognitoSyncResponse object with parent \a parent.
  */
 CognitoSyncResponse::CognitoSyncResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new CognitoSyncResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new CognitoSyncResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ CognitoSyncResponse::CognitoSyncResponse(QObject * const parent)
  * implementation that inherits from CognitoSyncResponsePrivate.
  */
 CognitoSyncResponse::CognitoSyncResponse(CognitoSyncResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void CognitoSyncResponse::parseFailure(QIODevice &response)
  * Constructs a CognitoSyncResponsePrivate object with public implementation \a q.
  */
 CognitoSyncResponsePrivate::CognitoSyncResponsePrivate(
-    CognitoSyncResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    CognitoSyncResponse * const q) : q_ptr(q)
 {
 
 }

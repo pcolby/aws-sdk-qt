@@ -56,8 +56,7 @@ CreateSimulationApplicationResponse::CreateSimulationApplicationResponse(
  */
 const CreateSimulationApplicationRequest * CreateSimulationApplicationResponse::request() const
 {
-    Q_D(const CreateSimulationApplicationResponse);
-    return static_cast<const CreateSimulationApplicationRequest *>(d->request);
+    return static_cast<const CreateSimulationApplicationRequest *>(RoboMakerResponse::request());
 }
 
 /*!

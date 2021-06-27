@@ -91,8 +91,7 @@ CompleteMultipartUploadResponse::CompleteMultipartUploadResponse(
  */
 const CompleteMultipartUploadRequest * CompleteMultipartUploadResponse::request() const
 {
-    Q_D(const CompleteMultipartUploadResponse);
-    return static_cast<const CompleteMultipartUploadRequest *>(d->request);
+    return static_cast<const CompleteMultipartUploadRequest *>(GlacierResponse::request());
 }
 
 /*!

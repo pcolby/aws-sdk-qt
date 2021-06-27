@@ -58,8 +58,7 @@ DescribeStreamResponse::DescribeStreamResponse(
  */
 const DescribeStreamRequest * DescribeStreamResponse::request() const
 {
-    Q_D(const DescribeStreamResponse);
-    return static_cast<const DescribeStreamRequest *>(d->request);
+    return static_cast<const DescribeStreamRequest *>(KinesisResponse::request());
 }
 
 /*!

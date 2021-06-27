@@ -66,8 +66,7 @@ ListUserPoolsResponse::ListUserPoolsResponse(
  */
 const ListUserPoolsRequest * ListUserPoolsResponse::request() const
 {
-    Q_D(const ListUserPoolsResponse);
-    return static_cast<const ListUserPoolsRequest *>(d->request);
+    return static_cast<const ListUserPoolsRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

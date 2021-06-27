@@ -75,8 +75,7 @@ CreateUploadResponse::CreateUploadResponse(
  */
 const CreateUploadRequest * CreateUploadResponse::request() const
 {
-    Q_D(const CreateUploadResponse);
-    return static_cast<const CreateUploadRequest *>(d->request);
+    return static_cast<const CreateUploadRequest *>(DeviceFarmResponse::request());
 }
 
 /*!

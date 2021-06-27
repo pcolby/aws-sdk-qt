@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    DirectConnectResponsePrivate * const d_ptr; ///< Internal d-pointer.
     DirectConnectResponse(DirectConnectResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

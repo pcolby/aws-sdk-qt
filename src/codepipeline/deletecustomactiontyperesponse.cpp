@@ -240,8 +240,7 @@ DeleteCustomActionTypeResponse::DeleteCustomActionTypeResponse(
  */
 const DeleteCustomActionTypeRequest * DeleteCustomActionTypeResponse::request() const
 {
-    Q_D(const DeleteCustomActionTypeResponse);
-    return static_cast<const DeleteCustomActionTypeRequest *>(d->request);
+    return static_cast<const DeleteCustomActionTypeRequest *>(CodePipelineResponse::request());
 }
 
 /*!

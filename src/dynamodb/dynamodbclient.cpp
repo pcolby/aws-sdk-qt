@@ -178,16 +178,16 @@ DynamoDBClient::DynamoDBClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new DynamoDBClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2012-08-10"),
+    QStringLiteral("dynamodb"),
+    QStringLiteral("Amazon DynamoDB"),
+    QStringLiteral("dynamodb"),
+    parent), d_ptr(new DynamoDBClientPrivate(this))
 {
-    Q_D(DynamoDBClient);
-    d->apiVersion = QStringLiteral("2012-08-10");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("dynamodb");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon DynamoDB");
-    d->serviceName = QStringLiteral("dynamodb");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -206,16 +206,16 @@ DynamoDBClient::DynamoDBClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new DynamoDBClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2012-08-10"),
+    QStringLiteral("dynamodb"),
+    QStringLiteral("Amazon DynamoDB"),
+    QStringLiteral("dynamodb"),
+    parent), d_ptr(new DynamoDBClientPrivate(this))
 {
-    Q_D(DynamoDBClient);
-    d->apiVersion = QStringLiteral("2012-08-10");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("dynamodb");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon DynamoDB");
-    d->serviceName = QStringLiteral("dynamodb");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -1827,10 +1827,9 @@ UpdateTimeToLiveResponse * DynamoDBClient::updateTimeToLive(const UpdateTimeToLi
 /*!
  * Constructs a DynamoDBClientPrivate object with public implementation \a q.
  */
-DynamoDBClientPrivate::DynamoDBClientPrivate(DynamoDBClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+DynamoDBClientPrivate::DynamoDBClientPrivate(DynamoDBClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace DynamoDB

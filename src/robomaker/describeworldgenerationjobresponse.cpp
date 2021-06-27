@@ -56,8 +56,7 @@ DescribeWorldGenerationJobResponse::DescribeWorldGenerationJobResponse(
  */
 const DescribeWorldGenerationJobRequest * DescribeWorldGenerationJobResponse::request() const
 {
-    Q_D(const DescribeWorldGenerationJobResponse);
-    return static_cast<const DescribeWorldGenerationJobRequest *>(d->request);
+    return static_cast<const DescribeWorldGenerationJobRequest *>(RoboMakerResponse::request());
 }
 
 /*!

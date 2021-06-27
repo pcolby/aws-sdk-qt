@@ -74,8 +74,7 @@ GetRegionsResponse::GetRegionsResponse(
  */
 const GetRegionsRequest * GetRegionsResponse::request() const
 {
-    Q_D(const GetRegionsResponse);
-    return static_cast<const GetRegionsRequest *>(d->request);
+    return static_cast<const GetRegionsRequest *>(LightsailResponse::request());
 }
 
 /*!

@@ -293,8 +293,7 @@ DeleteRepositoryPermissionsPolicyResponse::DeleteRepositoryPermissionsPolicyResp
  */
 const DeleteRepositoryPermissionsPolicyRequest * DeleteRepositoryPermissionsPolicyResponse::request() const
 {
-    Q_D(const DeleteRepositoryPermissionsPolicyResponse);
-    return static_cast<const DeleteRepositoryPermissionsPolicyRequest *>(d->request);
+    return static_cast<const DeleteRepositoryPermissionsPolicyRequest *>(CodeArtifactResponse::request());
 }
 
 /*!

@@ -75,8 +75,7 @@ CreateTopicResponse::CreateTopicResponse(
  */
 const CreateTopicRequest * CreateTopicResponse::request() const
 {
-    Q_D(const CreateTopicResponse);
-    return static_cast<const CreateTopicRequest *>(d->request);
+    return static_cast<const CreateTopicRequest *>(SnsResponse::request());
 }
 
 /*!

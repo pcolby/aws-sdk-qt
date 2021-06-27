@@ -79,8 +79,7 @@ PutRecordResponse::PutRecordResponse(
  */
 const PutRecordRequest * PutRecordResponse::request() const
 {
-    Q_D(const PutRecordResponse);
-    return static_cast<const PutRecordRequest *>(d->request);
+    return static_cast<const PutRecordRequest *>(SageMakerFeatureStoreRuntimeResponse::request());
 }
 
 /*!

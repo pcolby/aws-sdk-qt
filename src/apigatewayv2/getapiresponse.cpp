@@ -56,8 +56,7 @@ GetApiResponse::GetApiResponse(
  */
 const GetApiRequest * GetApiResponse::request() const
 {
-    Q_D(const GetApiResponse);
-    return static_cast<const GetApiRequest *>(d->request);
+    return static_cast<const GetApiRequest *>(ApiGatewayV2Response::request());
 }
 
 /*!

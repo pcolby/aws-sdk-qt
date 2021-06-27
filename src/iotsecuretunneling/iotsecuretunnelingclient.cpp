@@ -81,16 +81,16 @@ IoTSecureTunnelingClient::IoTSecureTunnelingClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new IoTSecureTunnelingClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-10-05"),
+    QStringLiteral("api.tunneling.iot"),
+    QStringLiteral("AWS IoT Secure Tunneling"),
+    QStringLiteral("IoTSecuredTunneling"),
+    parent), d_ptr(new IoTSecureTunnelingClientPrivate(this))
 {
-    Q_D(IoTSecureTunnelingClient);
-    d->apiVersion = QStringLiteral("2018-10-05");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("api.tunneling.iot");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS IoT Secure Tunneling");
-    d->serviceName = QStringLiteral("IoTSecuredTunneling");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -109,16 +109,16 @@ IoTSecureTunnelingClient::IoTSecureTunnelingClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new IoTSecureTunnelingClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-10-05"),
+    QStringLiteral("api.tunneling.iot"),
+    QStringLiteral("AWS IoT Secure Tunneling"),
+    QStringLiteral("IoTSecuredTunneling"),
+    parent), d_ptr(new IoTSecureTunnelingClientPrivate(this))
 {
-    Q_D(IoTSecureTunnelingClient);
-    d->apiVersion = QStringLiteral("2018-10-05");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("api.tunneling.iot");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS IoT Secure Tunneling");
-    d->serviceName = QStringLiteral("IoTSecuredTunneling");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -227,10 +227,9 @@ UntagResourceResponse * IoTSecureTunnelingClient::untagResource(const UntagResou
 /*!
  * Constructs a IoTSecureTunnelingClientPrivate object with public implementation \a q.
  */
-IoTSecureTunnelingClientPrivate::IoTSecureTunnelingClientPrivate(IoTSecureTunnelingClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+IoTSecureTunnelingClientPrivate::IoTSecureTunnelingClientPrivate(IoTSecureTunnelingClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace IoTSecureTunneling

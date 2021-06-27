@@ -76,8 +76,7 @@ DeleteRegexMatchSetResponse::DeleteRegexMatchSetResponse(
  */
 const DeleteRegexMatchSetRequest * DeleteRegexMatchSetResponse::request() const
 {
-    Q_D(const DeleteRegexMatchSetResponse);
-    return static_cast<const DeleteRegexMatchSetRequest *>(d->request);
+    return static_cast<const DeleteRegexMatchSetRequest *>(WafResponse::request());
 }
 
 /*!

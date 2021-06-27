@@ -234,16 +234,16 @@ WafClient::WafClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new WafClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2015-08-24"),
+    QStringLiteral("waf"),
+    QStringLiteral("AWS WAF"),
+    QStringLiteral("waf"),
+    parent), d_ptr(new WafClientPrivate(this))
 {
-    Q_D(WafClient);
-    d->apiVersion = QStringLiteral("2015-08-24");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("waf");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS WAF");
-    d->serviceName = QStringLiteral("waf");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -262,16 +262,16 @@ WafClient::WafClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new WafClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2015-08-24"),
+    QStringLiteral("waf"),
+    QStringLiteral("AWS WAF"),
+    QStringLiteral("waf"),
+    parent), d_ptr(new WafClientPrivate(this))
 {
-    Q_D(WafClient);
-    d->apiVersion = QStringLiteral("2015-08-24");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("waf");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS WAF");
-    d->serviceName = QStringLiteral("waf");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -3835,10 +3835,9 @@ UpdateXssMatchSetResponse * WafClient::updateXssMatchSet(const UpdateXssMatchSet
 /*!
  * Constructs a WafClientPrivate object with public implementation \a q.
  */
-WafClientPrivate::WafClientPrivate(WafClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+WafClientPrivate::WafClientPrivate(WafClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace WAF

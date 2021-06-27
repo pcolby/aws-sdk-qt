@@ -56,8 +56,7 @@ GetApnsChannelResponse::GetApnsChannelResponse(
  */
 const GetApnsChannelRequest * GetApnsChannelResponse::request() const
 {
-    Q_D(const GetApnsChannelResponse);
-    return static_cast<const GetApnsChannelRequest *>(d->request);
+    return static_cast<const GetApnsChannelRequest *>(PinpointResponse::request());
 }
 
 /*!

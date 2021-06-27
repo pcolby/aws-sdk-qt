@@ -57,7 +57,7 @@ namespace ACM {
  * Constructs a AcmRequest object for ACM \a action.
  */
 AcmRequest::AcmRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new AcmRequestPrivate(action, this))
+    : d_ptr(new AcmRequestPrivate(action, this))
 {
 
 }
@@ -66,7 +66,8 @@ AcmRequest::AcmRequest(const Action action)
  * Constructs a copy of \a other.
  */
 AcmRequest::AcmRequest(const AcmRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new AcmRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new AcmRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -89,7 +90,7 @@ AcmRequest& AcmRequest::operator=(const AcmRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from AcmRequestPrivate.
  */
-AcmRequest::AcmRequest(AcmRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+AcmRequest::AcmRequest(AcmRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -258,7 +259,7 @@ QNetworkRequest AcmRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 AcmRequestPrivate::AcmRequestPrivate(const AcmRequest::Action action, AcmRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -273,8 +274,8 @@ AcmRequestPrivate::AcmRequestPrivate(const AcmRequest::Action action, AcmRequest
  */
 AcmRequestPrivate::AcmRequestPrivate(const AcmRequestPrivate &other,
                                      AcmRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

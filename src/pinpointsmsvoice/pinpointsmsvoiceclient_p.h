@@ -20,19 +20,20 @@
 #ifndef QTAWS_PINPOINTSMSVOICECLIENT_P_H
 #define QTAWS_PINPOINTSMSVOICECLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace PinpointSMSVoice {
 
 class PinpointSMSVoiceClient;
 
-class PinpointSMSVoiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class PinpointSMSVoiceClientPrivate {
 
 public:
     PinpointSMSVoiceClientPrivate(PinpointSMSVoiceClient * const q);
+
+protected:
+    PinpointSMSVoiceClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(PinpointSMSVoiceClient)

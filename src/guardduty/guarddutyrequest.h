@@ -114,6 +114,7 @@ public:
 
 protected:
     /// @cond internal
+    GuardDutyRequestPrivate * const d_ptr; ///< Internal d-pointer.
     GuardDutyRequest(GuardDutyRequestPrivate * const d);
     /// @endcond
 

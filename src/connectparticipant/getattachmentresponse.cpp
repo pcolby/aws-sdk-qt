@@ -65,8 +65,7 @@ GetAttachmentResponse::GetAttachmentResponse(
  */
 const GetAttachmentRequest * GetAttachmentResponse::request() const
 {
-    Q_D(const GetAttachmentResponse);
-    return static_cast<const GetAttachmentRequest *>(d->request);
+    return static_cast<const GetAttachmentRequest *>(ConnectParticipantResponse::request());
 }
 
 /*!

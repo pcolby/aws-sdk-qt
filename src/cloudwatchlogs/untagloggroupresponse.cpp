@@ -84,8 +84,7 @@ UntagLogGroupResponse::UntagLogGroupResponse(
  */
 const UntagLogGroupRequest * UntagLogGroupResponse::request() const
 {
-    Q_D(const UntagLogGroupResponse);
-    return static_cast<const UntagLogGroupRequest *>(d->request);
+    return static_cast<const UntagLogGroupRequest *>(CloudWatchLogsResponse::request());
 }
 
 /*!

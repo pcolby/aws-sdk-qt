@@ -59,8 +59,7 @@ GetBotChannelAssociationResponse::GetBotChannelAssociationResponse(
  */
 const GetBotChannelAssociationRequest * GetBotChannelAssociationResponse::request() const
 {
-    Q_D(const GetBotChannelAssociationResponse);
-    return static_cast<const GetBotChannelAssociationRequest *>(d->request);
+    return static_cast<const GetBotChannelAssociationRequest *>(LexModelBuildingServiceResponse::request());
 }
 
 /*!

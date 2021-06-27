@@ -161,8 +161,7 @@ DescribeServiceErrorsResponse::DescribeServiceErrorsResponse(
  */
 const DescribeServiceErrorsRequest * DescribeServiceErrorsResponse::request() const
 {
-    Q_D(const DescribeServiceErrorsResponse);
-    return static_cast<const DescribeServiceErrorsRequest *>(d->request);
+    return static_cast<const DescribeServiceErrorsRequest *>(OpsWorksResponse::request());
 }
 
 /*!

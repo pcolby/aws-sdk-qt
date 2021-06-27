@@ -56,8 +56,7 @@ UpdatePartnerAccountResponse::UpdatePartnerAccountResponse(
  */
 const UpdatePartnerAccountRequest * UpdatePartnerAccountResponse::request() const
 {
-    Q_D(const UpdatePartnerAccountResponse);
-    return static_cast<const UpdatePartnerAccountRequest *>(d->request);
+    return static_cast<const UpdatePartnerAccountRequest *>(IoTWirelessResponse::request());
 }
 
 /*!

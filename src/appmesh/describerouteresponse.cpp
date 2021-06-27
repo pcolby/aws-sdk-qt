@@ -73,8 +73,7 @@ DescribeRouteResponse::DescribeRouteResponse(
  */
 const DescribeRouteRequest * DescribeRouteResponse::request() const
 {
-    Q_D(const DescribeRouteResponse);
-    return static_cast<const DescribeRouteRequest *>(d->request);
+    return static_cast<const DescribeRouteRequest *>(AppMeshResponse::request());
 }
 
 /*!

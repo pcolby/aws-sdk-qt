@@ -218,8 +218,7 @@ DeleteListenerResponse::DeleteListenerResponse(
  */
 const DeleteListenerRequest * DeleteListenerResponse::request() const
 {
-    Q_D(const DeleteListenerResponse);
-    return static_cast<const DeleteListenerRequest *>(d->request);
+    return static_cast<const DeleteListenerRequest *>(GlobalAcceleratorResponse::request());
 }
 
 /*!

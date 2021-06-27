@@ -20,19 +20,20 @@
 #ifndef QTAWS_NEPTUNECLIENT_P_H
 #define QTAWS_NEPTUNECLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace Neptune {
 
 class NeptuneClient;
 
-class NeptuneClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class NeptuneClientPrivate {
 
 public:
     NeptuneClientPrivate(NeptuneClient * const q);
+
+protected:
+    NeptuneClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(NeptuneClient)

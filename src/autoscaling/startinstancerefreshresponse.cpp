@@ -68,8 +68,7 @@ StartInstanceRefreshResponse::StartInstanceRefreshResponse(
  */
 const StartInstanceRefreshRequest * StartInstanceRefreshResponse::request() const
 {
-    Q_D(const StartInstanceRefreshResponse);
-    return static_cast<const StartInstanceRefreshRequest *>(d->request);
+    return static_cast<const StartInstanceRefreshRequest *>(AutoScalingResponse::request());
 }
 
 /*!

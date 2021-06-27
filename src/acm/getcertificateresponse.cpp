@@ -60,8 +60,7 @@ GetCertificateResponse::GetCertificateResponse(
  */
 const GetCertificateRequest * GetCertificateResponse::request() const
 {
-    Q_D(const GetCertificateResponse);
-    return static_cast<const GetCertificateRequest *>(d->request);
+    return static_cast<const GetCertificateRequest *>(AcmResponse::request());
 }
 
 /*!

@@ -62,8 +62,7 @@ DeleteContactResponse::DeleteContactResponse(
  */
 const DeleteContactRequest * DeleteContactResponse::request() const
 {
-    Q_D(const DeleteContactResponse);
-    return static_cast<const DeleteContactRequest *>(d->request);
+    return static_cast<const DeleteContactRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

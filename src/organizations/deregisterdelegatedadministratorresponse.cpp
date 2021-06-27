@@ -141,8 +141,7 @@ DeregisterDelegatedAdministratorResponse::DeregisterDelegatedAdministratorRespon
  */
 const DeregisterDelegatedAdministratorRequest * DeregisterDelegatedAdministratorResponse::request() const
 {
-    Q_D(const DeregisterDelegatedAdministratorResponse);
-    return static_cast<const DeregisterDelegatedAdministratorRequest *>(d->request);
+    return static_cast<const DeregisterDelegatedAdministratorRequest *>(OrganizationsResponse::request());
 }
 
 /*!

@@ -193,6 +193,12 @@ public slots:
     UpdateServiceTemplateResponse * updateServiceTemplate(const UpdateServiceTemplateRequest &request);
     UpdateServiceTemplateVersionResponse * updateServiceTemplateVersion(const UpdateServiceTemplateVersionRequest &request);
 
+protected:
+    /// @cond internal
+    ProtonClientPrivate * const d_ptr; ///< Internal d-pointer.
+    ProtonClient(ProtonClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(ProtonClient)
     Q_DISABLE_COPY(ProtonClient)

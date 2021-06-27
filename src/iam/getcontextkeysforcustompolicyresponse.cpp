@@ -62,8 +62,7 @@ GetContextKeysForCustomPolicyResponse::GetContextKeysForCustomPolicyResponse(
  */
 const GetContextKeysForCustomPolicyRequest * GetContextKeysForCustomPolicyResponse::request() const
 {
-    Q_D(const GetContextKeysForCustomPolicyResponse);
-    return static_cast<const GetContextKeysForCustomPolicyRequest *>(d->request);
+    return static_cast<const GetContextKeysForCustomPolicyRequest *>(IamResponse::request());
 }
 
 /*!

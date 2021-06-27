@@ -58,8 +58,7 @@ GetSchemaVersionResponse::GetSchemaVersionResponse(
  */
 const GetSchemaVersionRequest * GetSchemaVersionResponse::request() const
 {
-    Q_D(const GetSchemaVersionResponse);
-    return static_cast<const GetSchemaVersionRequest *>(d->request);
+    return static_cast<const GetSchemaVersionRequest *>(GlueResponse::request());
 }
 
 /*!

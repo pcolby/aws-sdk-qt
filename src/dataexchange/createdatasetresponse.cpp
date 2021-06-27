@@ -66,8 +66,7 @@ CreateDataSetResponse::CreateDataSetResponse(
  */
 const CreateDataSetRequest * CreateDataSetResponse::request() const
 {
-    Q_D(const CreateDataSetResponse);
-    return static_cast<const CreateDataSetRequest *>(d->request);
+    return static_cast<const CreateDataSetRequest *>(DataExchangeResponse::request());
 }
 
 /*!

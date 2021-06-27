@@ -72,8 +72,7 @@ ModifyDBParameterGroupResponse::ModifyDBParameterGroupResponse(
  */
 const ModifyDBParameterGroupRequest * ModifyDBParameterGroupResponse::request() const
 {
-    Q_D(const ModifyDBParameterGroupResponse);
-    return static_cast<const ModifyDBParameterGroupRequest *>(d->request);
+    return static_cast<const ModifyDBParameterGroupRequest *>(NeptuneResponse::request());
 }
 
 /*!

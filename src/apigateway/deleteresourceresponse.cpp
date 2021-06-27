@@ -60,8 +60,7 @@ DeleteResourceResponse::DeleteResourceResponse(
  */
 const DeleteResourceRequest * DeleteResourceResponse::request() const
 {
-    Q_D(const DeleteResourceResponse);
-    return static_cast<const DeleteResourceRequest *>(d->request);
+    return static_cast<const DeleteResourceRequest *>(APIGatewayResponse::request());
 }
 
 /*!

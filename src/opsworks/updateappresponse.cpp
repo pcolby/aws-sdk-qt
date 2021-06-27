@@ -161,8 +161,7 @@ UpdateAppResponse::UpdateAppResponse(
  */
 const UpdateAppRequest * UpdateAppResponse::request() const
 {
-    Q_D(const UpdateAppResponse);
-    return static_cast<const UpdateAppRequest *>(d->request);
+    return static_cast<const UpdateAppRequest *>(OpsWorksResponse::request());
 }
 
 /*!

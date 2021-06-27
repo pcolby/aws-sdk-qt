@@ -69,8 +69,7 @@ VerifyTrustResponse::VerifyTrustResponse(
  */
 const VerifyTrustRequest * VerifyTrustResponse::request() const
 {
-    Q_D(const VerifyTrustResponse);
-    return static_cast<const VerifyTrustRequest *>(d->request);
+    return static_cast<const VerifyTrustRequest *>(DirectoryServiceResponse::request());
 }
 
 /*!

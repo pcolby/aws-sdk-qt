@@ -62,8 +62,7 @@ DeleteGlobalNetworkResponse::DeleteGlobalNetworkResponse(
  */
 const DeleteGlobalNetworkRequest * DeleteGlobalNetworkResponse::request() const
 {
-    Q_D(const DeleteGlobalNetworkResponse);
-    return static_cast<const DeleteGlobalNetworkRequest *>(d->request);
+    return static_cast<const DeleteGlobalNetworkRequest *>(NetworkManagerResponse::request());
 }
 
 /*!

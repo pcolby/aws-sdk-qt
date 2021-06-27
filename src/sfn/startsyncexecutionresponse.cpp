@@ -74,8 +74,7 @@ StartSyncExecutionResponse::StartSyncExecutionResponse(
  */
 const StartSyncExecutionRequest * StartSyncExecutionResponse::request() const
 {
-    Q_D(const StartSyncExecutionResponse);
-    return static_cast<const StartSyncExecutionRequest *>(d->request);
+    return static_cast<const StartSyncExecutionRequest *>(SfnResponse::request());
 }
 
 /*!

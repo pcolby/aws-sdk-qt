@@ -56,8 +56,7 @@ StartMedicalStreamTranscriptionResponse::StartMedicalStreamTranscriptionResponse
  */
 const StartMedicalStreamTranscriptionRequest * StartMedicalStreamTranscriptionResponse::request() const
 {
-    Q_D(const StartMedicalStreamTranscriptionResponse);
-    return static_cast<const StartMedicalStreamTranscriptionRequest *>(d->request);
+    return static_cast<const StartMedicalStreamTranscriptionRequest *>(TranscribeStreamingServiceResponse::request());
 }
 
 /*!

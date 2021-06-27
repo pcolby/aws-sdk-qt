@@ -37,7 +37,7 @@ namespace Inspector {
  * Constructs a InspectorResponse object with parent \a parent.
  */
 InspectorResponse::InspectorResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new InspectorResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new InspectorResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ InspectorResponse::InspectorResponse(QObject * const parent)
  * implementation that inherits from InspectorResponsePrivate.
  */
 InspectorResponse::InspectorResponse(InspectorResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void InspectorResponse::parseFailure(QIODevice &response)
  * Constructs a InspectorResponsePrivate object with public implementation \a q.
  */
 InspectorResponsePrivate::InspectorResponsePrivate(
-    InspectorResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    InspectorResponse * const q) : q_ptr(q)
 {
 
 }

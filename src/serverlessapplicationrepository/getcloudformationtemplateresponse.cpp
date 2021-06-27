@@ -76,8 +76,7 @@ GetCloudFormationTemplateResponse::GetCloudFormationTemplateResponse(
  */
 const GetCloudFormationTemplateRequest * GetCloudFormationTemplateResponse::request() const
 {
-    Q_D(const GetCloudFormationTemplateResponse);
-    return static_cast<const GetCloudFormationTemplateRequest *>(d->request);
+    return static_cast<const GetCloudFormationTemplateRequest *>(ServerlessApplicationRepositoryResponse::request());
 }
 
 /*!

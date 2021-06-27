@@ -55,8 +55,7 @@ GetFileUploadURLResponse::GetFileUploadURLResponse(
  */
 const GetFileUploadURLRequest * GetFileUploadURLResponse::request() const
 {
-    Q_D(const GetFileUploadURLResponse);
-    return static_cast<const GetFileUploadURLRequest *>(d->request);
+    return static_cast<const GetFileUploadURLRequest *>(MTurkResponse::request());
 }
 
 /*!

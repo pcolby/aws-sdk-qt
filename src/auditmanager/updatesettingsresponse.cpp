@@ -98,8 +98,7 @@ UpdateSettingsResponse::UpdateSettingsResponse(
  */
 const UpdateSettingsRequest * UpdateSettingsResponse::request() const
 {
-    Q_D(const UpdateSettingsResponse);
-    return static_cast<const UpdateSettingsRequest *>(d->request);
+    return static_cast<const UpdateSettingsRequest *>(AuditManagerResponse::request());
 }
 
 /*!

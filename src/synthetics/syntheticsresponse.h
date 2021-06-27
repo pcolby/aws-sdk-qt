@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    SyntheticsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     SyntheticsResponse(SyntheticsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

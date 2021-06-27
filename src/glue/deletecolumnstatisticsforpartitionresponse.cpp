@@ -58,8 +58,7 @@ DeleteColumnStatisticsForPartitionResponse::DeleteColumnStatisticsForPartitionRe
  */
 const DeleteColumnStatisticsForPartitionRequest * DeleteColumnStatisticsForPartitionResponse::request() const
 {
-    Q_D(const DeleteColumnStatisticsForPartitionResponse);
-    return static_cast<const DeleteColumnStatisticsForPartitionRequest *>(d->request);
+    return static_cast<const DeleteColumnStatisticsForPartitionRequest *>(GlueResponse::request());
 }
 
 /*!

@@ -115,6 +115,12 @@ public slots:
     UpdateLFTagResponse * updateLFTag(const UpdateLFTagRequest &request);
     UpdateResourceResponse * updateResource(const UpdateResourceRequest &request);
 
+protected:
+    /// @cond internal
+    LakeFormationClientPrivate * const d_ptr; ///< Internal d-pointer.
+    LakeFormationClient(LakeFormationClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(LakeFormationClient)
     Q_DISABLE_COPY(LakeFormationClient)

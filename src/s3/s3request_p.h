@@ -20,15 +20,12 @@
 #ifndef QTAWS_S3REQUEST_P_H
 #define QTAWS_S3REQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "s3request.h"
-
 namespace QtAws {
 namespace S3 {
 
 class S3Request;
 
-class S3RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class S3RequestPrivate {
 
 public:
     S3Request::Action action; ///< S3 action to be performed.
@@ -39,6 +36,9 @@ public:
     S3RequestPrivate(const S3RequestPrivate &other, S3Request * const q);
 
     static QString toString(const S3Request::Action &action);
+
+protected:
+    S3Request * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(S3Request)

@@ -61,8 +61,7 @@ CreateDirectConnectGatewayAssociationProposalResponse::CreateDirectConnectGatewa
  */
 const CreateDirectConnectGatewayAssociationProposalRequest * CreateDirectConnectGatewayAssociationProposalResponse::request() const
 {
-    Q_D(const CreateDirectConnectGatewayAssociationProposalResponse);
-    return static_cast<const CreateDirectConnectGatewayAssociationProposalRequest *>(d->request);
+    return static_cast<const CreateDirectConnectGatewayAssociationProposalRequest *>(DirectConnectResponse::request());
 }
 
 /*!

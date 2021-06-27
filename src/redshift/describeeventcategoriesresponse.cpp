@@ -85,8 +85,7 @@ DescribeEventCategoriesResponse::DescribeEventCategoriesResponse(
  */
 const DescribeEventCategoriesRequest * DescribeEventCategoriesResponse::request() const
 {
-    Q_D(const DescribeEventCategoriesResponse);
-    return static_cast<const DescribeEventCategoriesRequest *>(d->request);
+    return static_cast<const DescribeEventCategoriesRequest *>(RedshiftResponse::request());
 }
 
 /*!

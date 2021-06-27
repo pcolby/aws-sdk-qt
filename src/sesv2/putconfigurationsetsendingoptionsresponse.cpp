@@ -88,8 +88,7 @@ PutConfigurationSetSendingOptionsResponse::PutConfigurationSetSendingOptionsResp
  */
 const PutConfigurationSetSendingOptionsRequest * PutConfigurationSetSendingOptionsResponse::request() const
 {
-    Q_D(const PutConfigurationSetSendingOptionsResponse);
-    return static_cast<const PutConfigurationSetSendingOptionsRequest *>(d->request);
+    return static_cast<const PutConfigurationSetSendingOptionsRequest *>(Sesv2Response::request());
 }
 
 /*!

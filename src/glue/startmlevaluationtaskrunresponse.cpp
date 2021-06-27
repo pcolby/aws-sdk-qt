@@ -58,8 +58,7 @@ StartMLEvaluationTaskRunResponse::StartMLEvaluationTaskRunResponse(
  */
 const StartMLEvaluationTaskRunRequest * StartMLEvaluationTaskRunResponse::request() const
 {
-    Q_D(const StartMLEvaluationTaskRunResponse);
-    return static_cast<const StartMLEvaluationTaskRunRequest *>(d->request);
+    return static_cast<const StartMLEvaluationTaskRunRequest *>(GlueResponse::request());
 }
 
 /*!

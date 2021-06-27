@@ -105,8 +105,7 @@ DeleteConfigurationProfileResponse::DeleteConfigurationProfileResponse(
  */
 const DeleteConfigurationProfileRequest * DeleteConfigurationProfileResponse::request() const
 {
-    Q_D(const DeleteConfigurationProfileResponse);
-    return static_cast<const DeleteConfigurationProfileRequest *>(d->request);
+    return static_cast<const DeleteConfigurationProfileRequest *>(AppConfigResponse::request());
 }
 
 /*!

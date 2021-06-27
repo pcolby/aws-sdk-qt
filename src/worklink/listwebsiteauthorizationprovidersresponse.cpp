@@ -60,8 +60,7 @@ ListWebsiteAuthorizationProvidersResponse::ListWebsiteAuthorizationProvidersResp
  */
 const ListWebsiteAuthorizationProvidersRequest * ListWebsiteAuthorizationProvidersResponse::request() const
 {
-    Q_D(const ListWebsiteAuthorizationProvidersResponse);
-    return static_cast<const ListWebsiteAuthorizationProvidersRequest *>(d->request);
+    return static_cast<const ListWebsiteAuthorizationProvidersRequest *>(WorkLinkResponse::request());
 }
 
 /*!

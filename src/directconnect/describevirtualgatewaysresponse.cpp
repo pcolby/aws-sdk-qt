@@ -61,8 +61,7 @@ DescribeVirtualGatewaysResponse::DescribeVirtualGatewaysResponse(
  */
 const DescribeVirtualGatewaysRequest * DescribeVirtualGatewaysResponse::request() const
 {
-    Q_D(const DescribeVirtualGatewaysResponse);
-    return static_cast<const DescribeVirtualGatewaysRequest *>(d->request);
+    return static_cast<const DescribeVirtualGatewaysRequest *>(DirectConnectResponse::request());
 }
 
 /*!

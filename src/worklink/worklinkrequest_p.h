@@ -20,15 +20,12 @@
 #ifndef QTAWS_WORKLINKREQUEST_P_H
 #define QTAWS_WORKLINKREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "worklinkrequest.h"
-
 namespace QtAws {
 namespace WorkLink {
 
 class WorkLinkRequest;
 
-class WorkLinkRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class WorkLinkRequestPrivate {
 
 public:
     WorkLinkRequest::Action action; ///< WorkLink action to be performed.
@@ -39,6 +36,9 @@ public:
     WorkLinkRequestPrivate(const WorkLinkRequestPrivate &other, WorkLinkRequest * const q);
 
     static QString toString(const WorkLinkRequest::Action &action);
+
+protected:
+    WorkLinkRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(WorkLinkRequest)

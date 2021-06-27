@@ -64,8 +64,7 @@ StopBuildBatchResponse::StopBuildBatchResponse(
  */
 const StopBuildBatchRequest * StopBuildBatchResponse::request() const
 {
-    Q_D(const StopBuildBatchResponse);
-    return static_cast<const StopBuildBatchRequest *>(d->request);
+    return static_cast<const StopBuildBatchRequest *>(CodeBuildResponse::request());
 }
 
 /*!

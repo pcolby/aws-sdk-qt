@@ -57,8 +57,7 @@ DeleteInferenceSchedulerResponse::DeleteInferenceSchedulerResponse(
  */
 const DeleteInferenceSchedulerRequest * DeleteInferenceSchedulerResponse::request() const
 {
-    Q_D(const DeleteInferenceSchedulerResponse);
-    return static_cast<const DeleteInferenceSchedulerRequest *>(d->request);
+    return static_cast<const DeleteInferenceSchedulerRequest *>(LookoutEquipmentResponse::request());
 }
 
 /*!

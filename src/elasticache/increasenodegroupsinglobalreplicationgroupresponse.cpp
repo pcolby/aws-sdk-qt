@@ -69,8 +69,7 @@ IncreaseNodeGroupsInGlobalReplicationGroupResponse::IncreaseNodeGroupsInGlobalRe
  */
 const IncreaseNodeGroupsInGlobalReplicationGroupRequest * IncreaseNodeGroupsInGlobalReplicationGroupResponse::request() const
 {
-    Q_D(const IncreaseNodeGroupsInGlobalReplicationGroupResponse);
-    return static_cast<const IncreaseNodeGroupsInGlobalReplicationGroupRequest *>(d->request);
+    return static_cast<const IncreaseNodeGroupsInGlobalReplicationGroupRequest *>(ElastiCacheResponse::request());
 }
 
 /*!

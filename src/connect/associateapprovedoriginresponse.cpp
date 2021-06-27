@@ -79,8 +79,7 @@ AssociateApprovedOriginResponse::AssociateApprovedOriginResponse(
  */
 const AssociateApprovedOriginRequest * AssociateApprovedOriginResponse::request() const
 {
-    Q_D(const AssociateApprovedOriginResponse);
-    return static_cast<const AssociateApprovedOriginRequest *>(d->request);
+    return static_cast<const AssociateApprovedOriginRequest *>(ConnectResponse::request());
 }
 
 /*!

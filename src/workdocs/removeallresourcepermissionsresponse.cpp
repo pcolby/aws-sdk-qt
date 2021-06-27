@@ -84,8 +84,7 @@ RemoveAllResourcePermissionsResponse::RemoveAllResourcePermissionsResponse(
  */
 const RemoveAllResourcePermissionsRequest * RemoveAllResourcePermissionsResponse::request() const
 {
-    Q_D(const RemoveAllResourcePermissionsResponse);
-    return static_cast<const RemoveAllResourcePermissionsRequest *>(d->request);
+    return static_cast<const RemoveAllResourcePermissionsRequest *>(WorkDocsResponse::request());
 }
 
 /*!

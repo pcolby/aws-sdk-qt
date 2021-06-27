@@ -75,8 +75,7 @@ GetSavingsPlansCoverageResponse::GetSavingsPlansCoverageResponse(
  */
 const GetSavingsPlansCoverageRequest * GetSavingsPlansCoverageResponse::request() const
 {
-    Q_D(const GetSavingsPlansCoverageResponse);
-    return static_cast<const GetSavingsPlansCoverageRequest *>(d->request);
+    return static_cast<const GetSavingsPlansCoverageRequest *>(CostExplorerResponse::request());
 }
 
 /*!

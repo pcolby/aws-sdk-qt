@@ -66,8 +66,7 @@ SearchSystemTemplatesResponse::SearchSystemTemplatesResponse(
  */
 const SearchSystemTemplatesRequest * SearchSystemTemplatesResponse::request() const
 {
-    Q_D(const SearchSystemTemplatesResponse);
-    return static_cast<const SearchSystemTemplatesRequest *>(d->request);
+    return static_cast<const SearchSystemTemplatesRequest *>(IoTThingsGraphResponse::request());
 }
 
 /*!

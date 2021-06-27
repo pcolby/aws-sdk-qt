@@ -63,8 +63,7 @@ GetRepositoryPolicyResponse::GetRepositoryPolicyResponse(
  */
 const GetRepositoryPolicyRequest * GetRepositoryPolicyResponse::request() const
 {
-    Q_D(const GetRepositoryPolicyResponse);
-    return static_cast<const GetRepositoryPolicyRequest *>(d->request);
+    return static_cast<const GetRepositoryPolicyRequest *>(ECRPublicResponse::request());
 }
 
 /*!

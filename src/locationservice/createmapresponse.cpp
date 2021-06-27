@@ -56,8 +56,7 @@ CreateMapResponse::CreateMapResponse(
  */
 const CreateMapRequest * CreateMapResponse::request() const
 {
-    Q_D(const CreateMapResponse);
-    return static_cast<const CreateMapRequest *>(d->request);
+    return static_cast<const CreateMapRequest *>(LocationServiceResponse::request());
 }
 
 /*!

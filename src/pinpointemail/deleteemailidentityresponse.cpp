@@ -92,8 +92,7 @@ DeleteEmailIdentityResponse::DeleteEmailIdentityResponse(
  */
 const DeleteEmailIdentityRequest * DeleteEmailIdentityResponse::request() const
 {
-    Q_D(const DeleteEmailIdentityResponse);
-    return static_cast<const DeleteEmailIdentityRequest *>(d->request);
+    return static_cast<const DeleteEmailIdentityRequest *>(PinpointEmailResponse::request());
 }
 
 /*!

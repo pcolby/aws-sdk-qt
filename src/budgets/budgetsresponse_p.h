@@ -20,14 +20,12 @@
 #ifndef QTAWS_BUDGETSRESPONSE_P_H
 #define QTAWS_BUDGETSRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace Budgets {
 
 class BudgetsResponse;
 
-class BudgetsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class BudgetsResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    BudgetsResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(BudgetsResponse)

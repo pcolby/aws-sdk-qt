@@ -78,8 +78,7 @@ DeleteTrailResponse::DeleteTrailResponse(
  */
 const DeleteTrailRequest * DeleteTrailResponse::request() const
 {
-    Q_D(const DeleteTrailResponse);
-    return static_cast<const DeleteTrailRequest *>(d->request);
+    return static_cast<const DeleteTrailRequest *>(CloudTrailResponse::request());
 }
 
 /*!

@@ -87,8 +87,7 @@ CopyFpgaImageResponse::CopyFpgaImageResponse(
  */
 const CopyFpgaImageRequest * CopyFpgaImageResponse::request() const
 {
-    Q_D(const CopyFpgaImageResponse);
-    return static_cast<const CopyFpgaImageRequest *>(d->request);
+    return static_cast<const CopyFpgaImageRequest *>(Ec2Response::request());
 }
 
 /*!

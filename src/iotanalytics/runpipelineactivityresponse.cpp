@@ -75,8 +75,7 @@ RunPipelineActivityResponse::RunPipelineActivityResponse(
  */
 const RunPipelineActivityRequest * RunPipelineActivityResponse::request() const
 {
-    Q_D(const RunPipelineActivityResponse);
-    return static_cast<const RunPipelineActivityRequest *>(d->request);
+    return static_cast<const RunPipelineActivityRequest *>(IoTAnalyticsResponse::request());
 }
 
 /*!

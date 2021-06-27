@@ -97,6 +97,12 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdatePackagingGroupResponse * updatePackagingGroup(const UpdatePackagingGroupRequest &request);
 
+protected:
+    /// @cond internal
+    MediaPackageVodClientPrivate * const d_ptr; ///< Internal d-pointer.
+    MediaPackageVodClient(MediaPackageVodClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(MediaPackageVodClient)
     Q_DISABLE_COPY(MediaPackageVodClient)

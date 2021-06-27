@@ -131,8 +131,7 @@ RotateSecretResponse::RotateSecretResponse(
  */
 const RotateSecretRequest * RotateSecretResponse::request() const
 {
-    Q_D(const RotateSecretResponse);
-    return static_cast<const RotateSecretRequest *>(d->request);
+    return static_cast<const RotateSecretRequest *>(SecretsManagerResponse::request());
 }
 
 /*!

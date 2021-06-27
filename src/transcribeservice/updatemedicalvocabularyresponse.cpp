@@ -56,8 +56,7 @@ UpdateMedicalVocabularyResponse::UpdateMedicalVocabularyResponse(
  */
 const UpdateMedicalVocabularyRequest * UpdateMedicalVocabularyResponse::request() const
 {
-    Q_D(const UpdateMedicalVocabularyResponse);
-    return static_cast<const UpdateMedicalVocabularyRequest *>(d->request);
+    return static_cast<const UpdateMedicalVocabularyRequest *>(TranscribeServiceResponse::request());
 }
 
 /*!

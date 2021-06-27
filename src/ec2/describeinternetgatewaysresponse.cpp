@@ -87,8 +87,7 @@ DescribeInternetGatewaysResponse::DescribeInternetGatewaysResponse(
  */
 const DescribeInternetGatewaysRequest * DescribeInternetGatewaysResponse::request() const
 {
-    Q_D(const DescribeInternetGatewaysResponse);
-    return static_cast<const DescribeInternetGatewaysRequest *>(d->request);
+    return static_cast<const DescribeInternetGatewaysRequest *>(Ec2Response::request());
 }
 
 /*!

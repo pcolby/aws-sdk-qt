@@ -439,8 +439,7 @@ DeleteCommentContentResponse::DeleteCommentContentResponse(
  */
 const DeleteCommentContentRequest * DeleteCommentContentResponse::request() const
 {
-    Q_D(const DeleteCommentContentResponse);
-    return static_cast<const DeleteCommentContentRequest *>(d->request);
+    return static_cast<const DeleteCommentContentRequest *>(CodeCommitResponse::request());
 }
 
 /*!

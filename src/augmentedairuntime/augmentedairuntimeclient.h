@@ -61,6 +61,12 @@ public slots:
     StartHumanLoopResponse * startHumanLoop(const StartHumanLoopRequest &request);
     StopHumanLoopResponse * stopHumanLoop(const StopHumanLoopRequest &request);
 
+protected:
+    /// @cond internal
+    AugmentedAIRuntimeClientPrivate * const d_ptr; ///< Internal d-pointer.
+    AugmentedAIRuntimeClient(AugmentedAIRuntimeClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(AugmentedAIRuntimeClient)
     Q_DISABLE_COPY(AugmentedAIRuntimeClient)

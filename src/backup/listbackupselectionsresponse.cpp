@@ -59,8 +59,7 @@ ListBackupSelectionsResponse::ListBackupSelectionsResponse(
  */
 const ListBackupSelectionsRequest * ListBackupSelectionsResponse::request() const
 {
-    Q_D(const ListBackupSelectionsResponse);
-    return static_cast<const ListBackupSelectionsRequest *>(d->request);
+    return static_cast<const ListBackupSelectionsRequest *>(BackupResponse::request());
 }
 
 /*!

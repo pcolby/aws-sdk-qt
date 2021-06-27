@@ -69,8 +69,7 @@ ListCertificateAuthoritiesResponse::ListCertificateAuthoritiesResponse(
  */
 const ListCertificateAuthoritiesRequest * ListCertificateAuthoritiesResponse::request() const
 {
-    Q_D(const ListCertificateAuthoritiesResponse);
-    return static_cast<const ListCertificateAuthoritiesRequest *>(d->request);
+    return static_cast<const ListCertificateAuthoritiesRequest *>(AcmpcaResponse::request());
 }
 
 /*!

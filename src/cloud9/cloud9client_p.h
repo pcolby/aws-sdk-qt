@@ -20,19 +20,20 @@
 #ifndef QTAWS_CLOUD9CLIENT_P_H
 #define QTAWS_CLOUD9CLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace Cloud9 {
 
 class Cloud9Client;
 
-class Cloud9ClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class Cloud9ClientPrivate {
 
 public:
     Cloud9ClientPrivate(Cloud9Client * const q);
+
+protected:
+    Cloud9Client * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(Cloud9Client)

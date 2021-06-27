@@ -84,8 +84,7 @@ AddResourcePermissionsResponse::AddResourcePermissionsResponse(
  */
 const AddResourcePermissionsRequest * AddResourcePermissionsResponse::request() const
 {
-    Q_D(const AddResourcePermissionsResponse);
-    return static_cast<const AddResourcePermissionsRequest *>(d->request);
+    return static_cast<const AddResourcePermissionsRequest *>(WorkDocsResponse::request());
 }
 
 /*!

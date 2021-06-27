@@ -64,8 +64,7 @@ PutResourcePolicyResponse::PutResourcePolicyResponse(
  */
 const PutResourcePolicyRequest * PutResourcePolicyResponse::request() const
 {
-    Q_D(const PutResourcePolicyResponse);
-    return static_cast<const PutResourcePolicyRequest *>(d->request);
+    return static_cast<const PutResourcePolicyRequest *>(CodeBuildResponse::request());
 }
 
 /*!

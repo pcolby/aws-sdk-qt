@@ -60,8 +60,7 @@ UpdateFindingsFilterResponse::UpdateFindingsFilterResponse(
  */
 const UpdateFindingsFilterRequest * UpdateFindingsFilterResponse::request() const
 {
-    Q_D(const UpdateFindingsFilterResponse);
-    return static_cast<const UpdateFindingsFilterRequest *>(d->request);
+    return static_cast<const UpdateFindingsFilterRequest *>(Macie2Response::request());
 }
 
 /*!

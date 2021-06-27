@@ -544,16 +544,16 @@ SageMakerClient::SageMakerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SageMakerClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-07-24"),
+    QStringLiteral("api.sagemaker"),
+    QStringLiteral("Amazon SageMaker Service"),
+    QStringLiteral("sagemaker"),
+    parent), d_ptr(new SageMakerClientPrivate(this))
 {
-    Q_D(SageMakerClient);
-    d->apiVersion = QStringLiteral("2017-07-24");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("api.sagemaker");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon SageMaker Service");
-    d->serviceName = QStringLiteral("sagemaker");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -572,16 +572,16 @@ SageMakerClient::SageMakerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SageMakerClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-07-24"),
+    QStringLiteral("api.sagemaker"),
+    QStringLiteral("Amazon SageMaker Service"),
+    QStringLiteral("sagemaker"),
+    parent), d_ptr(new SageMakerClientPrivate(this))
 {
-    Q_D(SageMakerClient);
-    d->apiVersion = QStringLiteral("2017-07-24");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("api.sagemaker");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon SageMaker Service");
-    d->serviceName = QStringLiteral("sagemaker");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -4643,10 +4643,9 @@ UpdateWorkteamResponse * SageMakerClient::updateWorkteam(const UpdateWorkteamReq
 /*!
  * Constructs a SageMakerClientPrivate object with public implementation \a q.
  */
-SageMakerClientPrivate::SageMakerClientPrivate(SageMakerClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+SageMakerClientPrivate::SageMakerClientPrivate(SageMakerClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace SageMaker

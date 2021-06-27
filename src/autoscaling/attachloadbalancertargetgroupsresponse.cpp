@@ -68,8 +68,7 @@ AttachLoadBalancerTargetGroupsResponse::AttachLoadBalancerTargetGroupsResponse(
  */
 const AttachLoadBalancerTargetGroupsRequest * AttachLoadBalancerTargetGroupsResponse::request() const
 {
-    Q_D(const AttachLoadBalancerTargetGroupsResponse);
-    return static_cast<const AttachLoadBalancerTargetGroupsRequest *>(d->request);
+    return static_cast<const AttachLoadBalancerTargetGroupsRequest *>(AutoScalingResponse::request());
 }
 
 /*!

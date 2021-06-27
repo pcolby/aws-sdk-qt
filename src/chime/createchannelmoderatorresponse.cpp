@@ -98,8 +98,7 @@ CreateChannelModeratorResponse::CreateChannelModeratorResponse(
  */
 const CreateChannelModeratorRequest * CreateChannelModeratorResponse::request() const
 {
-    Q_D(const CreateChannelModeratorResponse);
-    return static_cast<const CreateChannelModeratorRequest *>(d->request);
+    return static_cast<const CreateChannelModeratorRequest *>(ChimeResponse::request());
 }
 
 /*!

@@ -72,8 +72,7 @@ ModifyDBClusterEndpointResponse::ModifyDBClusterEndpointResponse(
  */
 const ModifyDBClusterEndpointRequest * ModifyDBClusterEndpointResponse::request() const
 {
-    Q_D(const ModifyDBClusterEndpointResponse);
-    return static_cast<const ModifyDBClusterEndpointRequest *>(d->request);
+    return static_cast<const ModifyDBClusterEndpointRequest *>(NeptuneResponse::request());
 }
 
 /*!

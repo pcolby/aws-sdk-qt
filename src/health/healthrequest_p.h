@@ -20,15 +20,12 @@
 #ifndef QTAWS_HEALTHREQUEST_P_H
 #define QTAWS_HEALTHREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "healthrequest.h"
-
 namespace QtAws {
 namespace Health {
 
 class HealthRequest;
 
-class HealthRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class HealthRequestPrivate {
 
 public:
     HealthRequest::Action action; ///< Health action to be performed.
@@ -39,6 +36,9 @@ public:
     HealthRequestPrivate(const HealthRequestPrivate &other, HealthRequest * const q);
 
     static QString toString(const HealthRequest::Action &action);
+
+protected:
+    HealthRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(HealthRequest)

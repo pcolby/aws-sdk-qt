@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    GameLiftResponsePrivate * const d_ptr; ///< Internal d-pointer.
     GameLiftResponse(GameLiftResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

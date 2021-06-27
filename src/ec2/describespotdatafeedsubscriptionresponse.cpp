@@ -87,8 +87,7 @@ DescribeSpotDatafeedSubscriptionResponse::DescribeSpotDatafeedSubscriptionRespon
  */
 const DescribeSpotDatafeedSubscriptionRequest * DescribeSpotDatafeedSubscriptionResponse::request() const
 {
-    Q_D(const DescribeSpotDatafeedSubscriptionResponse);
-    return static_cast<const DescribeSpotDatafeedSubscriptionRequest *>(d->request);
+    return static_cast<const DescribeSpotDatafeedSubscriptionRequest *>(Ec2Response::request());
 }
 
 /*!

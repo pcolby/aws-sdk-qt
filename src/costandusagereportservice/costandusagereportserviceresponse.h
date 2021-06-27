@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    CostandUsageReportServiceResponsePrivate * const d_ptr; ///< Internal d-pointer.
     CostandUsageReportServiceResponse(CostandUsageReportServiceResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

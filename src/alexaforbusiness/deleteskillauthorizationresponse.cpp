@@ -62,8 +62,7 @@ DeleteSkillAuthorizationResponse::DeleteSkillAuthorizationResponse(
  */
 const DeleteSkillAuthorizationRequest * DeleteSkillAuthorizationResponse::request() const
 {
-    Q_D(const DeleteSkillAuthorizationResponse);
-    return static_cast<const DeleteSkillAuthorizationRequest *>(d->request);
+    return static_cast<const DeleteSkillAuthorizationRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

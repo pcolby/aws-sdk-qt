@@ -61,8 +61,7 @@ GetShardIteratorResponse::GetShardIteratorResponse(
  */
 const GetShardIteratorRequest * GetShardIteratorResponse::request() const
 {
-    Q_D(const GetShardIteratorResponse);
-    return static_cast<const GetShardIteratorRequest *>(d->request);
+    return static_cast<const GetShardIteratorRequest *>(DynamoDBStreamsResponse::request());
 }
 
 /*!

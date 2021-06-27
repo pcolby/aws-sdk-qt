@@ -56,8 +56,7 @@ DescribePlaceIndexResponse::DescribePlaceIndexResponse(
  */
 const DescribePlaceIndexRequest * DescribePlaceIndexResponse::request() const
 {
-    Q_D(const DescribePlaceIndexResponse);
-    return static_cast<const DescribePlaceIndexRequest *>(d->request);
+    return static_cast<const DescribePlaceIndexRequest *>(LocationServiceResponse::request());
 }
 
 /*!

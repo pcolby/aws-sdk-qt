@@ -64,8 +64,7 @@ StopBuildResponse::StopBuildResponse(
  */
 const StopBuildRequest * StopBuildResponse::request() const
 {
-    Q_D(const StopBuildResponse);
-    return static_cast<const StopBuildRequest *>(d->request);
+    return static_cast<const StopBuildRequest *>(CodeBuildResponse::request());
 }
 
 /*!

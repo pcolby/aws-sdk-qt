@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    ServerlessApplicationRepositoryResponsePrivate * const d_ptr; ///< Internal d-pointer.
     ServerlessApplicationRepositoryResponse(ServerlessApplicationRepositoryResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

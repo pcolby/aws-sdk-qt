@@ -68,8 +68,7 @@ TerminateInstanceInAutoScalingGroupResponse::TerminateInstanceInAutoScalingGroup
  */
 const TerminateInstanceInAutoScalingGroupRequest * TerminateInstanceInAutoScalingGroupResponse::request() const
 {
-    Q_D(const TerminateInstanceInAutoScalingGroupResponse);
-    return static_cast<const TerminateInstanceInAutoScalingGroupRequest *>(d->request);
+    return static_cast<const TerminateInstanceInAutoScalingGroupRequest *>(AutoScalingResponse::request());
 }
 
 /*!

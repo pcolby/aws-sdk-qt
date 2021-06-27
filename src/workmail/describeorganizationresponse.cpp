@@ -89,8 +89,7 @@ DescribeOrganizationResponse::DescribeOrganizationResponse(
  */
 const DescribeOrganizationRequest * DescribeOrganizationResponse::request() const
 {
-    Q_D(const DescribeOrganizationResponse);
-    return static_cast<const DescribeOrganizationRequest *>(d->request);
+    return static_cast<const DescribeOrganizationRequest *>(WorkMailResponse::request());
 }
 
 /*!

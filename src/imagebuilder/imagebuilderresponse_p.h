@@ -20,14 +20,12 @@
 #ifndef QTAWS_IMAGEBUILDERRESPONSE_P_H
 #define QTAWS_IMAGEBUILDERRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace imagebuilder {
 
 class imagebuilderResponse;
 
-class imagebuilderResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class imagebuilderResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    imagebuilderResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(imagebuilderResponse)

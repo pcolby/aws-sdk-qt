@@ -56,8 +56,7 @@ GetTranscriptionJobResponse::GetTranscriptionJobResponse(
  */
 const GetTranscriptionJobRequest * GetTranscriptionJobResponse::request() const
 {
-    Q_D(const GetTranscriptionJobResponse);
-    return static_cast<const GetTranscriptionJobRequest *>(d->request);
+    return static_cast<const GetTranscriptionJobRequest *>(TranscribeServiceResponse::request());
 }
 
 /*!

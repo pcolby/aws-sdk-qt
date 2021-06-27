@@ -85,8 +85,7 @@ AcceptReservedNodeExchangeResponse::AcceptReservedNodeExchangeResponse(
  */
 const AcceptReservedNodeExchangeRequest * AcceptReservedNodeExchangeResponse::request() const
 {
-    Q_D(const AcceptReservedNodeExchangeResponse);
-    return static_cast<const AcceptReservedNodeExchangeRequest *>(d->request);
+    return static_cast<const AcceptReservedNodeExchangeRequest *>(RedshiftResponse::request());
 }
 
 /*!

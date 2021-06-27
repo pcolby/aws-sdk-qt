@@ -58,8 +58,7 @@ DeleteConnectorDefinitionResponse::DeleteConnectorDefinitionResponse(
  */
 const DeleteConnectorDefinitionRequest * DeleteConnectorDefinitionResponse::request() const
 {
-    Q_D(const DeleteConnectorDefinitionResponse);
-    return static_cast<const DeleteConnectorDefinitionRequest *>(d->request);
+    return static_cast<const DeleteConnectorDefinitionRequest *>(GreengrassResponse::request());
 }
 
 /*!

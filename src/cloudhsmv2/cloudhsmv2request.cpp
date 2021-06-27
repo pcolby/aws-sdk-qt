@@ -57,7 +57,7 @@ namespace CloudHSMV2 {
  * Constructs a CloudHSMV2Request object for CloudHSMV2 \a action.
  */
 CloudHSMV2Request::CloudHSMV2Request(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new CloudHSMV2RequestPrivate(action, this))
+    : d_ptr(new CloudHSMV2RequestPrivate(action, this))
 {
 
 }
@@ -66,7 +66,8 @@ CloudHSMV2Request::CloudHSMV2Request(const Action action)
  * Constructs a copy of \a other.
  */
 CloudHSMV2Request::CloudHSMV2Request(const CloudHSMV2Request &other)
-    : QtAws::Core::AwsAbstractRequest(new CloudHSMV2RequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new CloudHSMV2RequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -89,7 +90,7 @@ CloudHSMV2Request& CloudHSMV2Request::operator=(const CloudHSMV2Request &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CloudHSMV2RequestPrivate.
  */
-CloudHSMV2Request::CloudHSMV2Request(CloudHSMV2RequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+CloudHSMV2Request::CloudHSMV2Request(CloudHSMV2RequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -258,7 +259,7 @@ QNetworkRequest CloudHSMV2Request::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 CloudHSMV2RequestPrivate::CloudHSMV2RequestPrivate(const CloudHSMV2Request::Action action, CloudHSMV2Request * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -273,8 +274,8 @@ CloudHSMV2RequestPrivate::CloudHSMV2RequestPrivate(const CloudHSMV2Request::Acti
  */
 CloudHSMV2RequestPrivate::CloudHSMV2RequestPrivate(const CloudHSMV2RequestPrivate &other,
                                      CloudHSMV2Request * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

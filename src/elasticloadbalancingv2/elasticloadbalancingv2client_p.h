@@ -20,19 +20,20 @@
 #ifndef QTAWS_ELASTICLOADBALANCINGV2CLIENT_P_H
 #define QTAWS_ELASTICLOADBALANCINGV2CLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace ElasticLoadBalancingv2 {
 
 class ElasticLoadBalancingv2Client;
 
-class ElasticLoadBalancingv2ClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ElasticLoadBalancingv2ClientPrivate {
 
 public:
     ElasticLoadBalancingv2ClientPrivate(ElasticLoadBalancingv2Client * const q);
+
+protected:
+    ElasticLoadBalancingv2Client * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ElasticLoadBalancingv2Client)

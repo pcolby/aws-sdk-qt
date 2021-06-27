@@ -20,19 +20,20 @@
 #ifndef QTAWS_IOTDEVICEADVISORCLIENT_P_H
 #define QTAWS_IOTDEVICEADVISORCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace IoTDeviceAdvisor {
 
 class IoTDeviceAdvisorClient;
 
-class IoTDeviceAdvisorClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class IoTDeviceAdvisorClientPrivate {
 
 public:
     IoTDeviceAdvisorClientPrivate(IoTDeviceAdvisorClient * const q);
+
+protected:
+    IoTDeviceAdvisorClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoTDeviceAdvisorClient)

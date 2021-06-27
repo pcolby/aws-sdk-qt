@@ -63,8 +63,7 @@ ListTunnelsResponse::ListTunnelsResponse(
  */
 const ListTunnelsRequest * ListTunnelsResponse::request() const
 {
-    Q_D(const ListTunnelsResponse);
-    return static_cast<const ListTunnelsRequest *>(d->request);
+    return static_cast<const ListTunnelsRequest *>(IoTSecureTunnelingResponse::request());
 }
 
 /*!

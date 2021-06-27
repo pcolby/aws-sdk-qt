@@ -58,8 +58,7 @@ DeleteClassifierResponse::DeleteClassifierResponse(
  */
 const DeleteClassifierRequest * DeleteClassifierResponse::request() const
 {
-    Q_D(const DeleteClassifierResponse);
-    return static_cast<const DeleteClassifierRequest *>(d->request);
+    return static_cast<const DeleteClassifierRequest *>(GlueResponse::request());
 }
 
 /*!

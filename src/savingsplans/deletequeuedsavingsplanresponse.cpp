@@ -59,8 +59,7 @@ DeleteQueuedSavingsPlanResponse::DeleteQueuedSavingsPlanResponse(
  */
 const DeleteQueuedSavingsPlanRequest * DeleteQueuedSavingsPlanResponse::request() const
 {
-    Q_D(const DeleteQueuedSavingsPlanResponse);
-    return static_cast<const DeleteQueuedSavingsPlanRequest *>(d->request);
+    return static_cast<const DeleteQueuedSavingsPlanRequest *>(SavingsPlansResponse::request());
 }
 
 /*!

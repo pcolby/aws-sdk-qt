@@ -66,8 +66,7 @@ ImportCertificateResponse::ImportCertificateResponse(
  */
 const ImportCertificateRequest * ImportCertificateResponse::request() const
 {
-    Q_D(const ImportCertificateResponse);
-    return static_cast<const ImportCertificateRequest *>(d->request);
+    return static_cast<const ImportCertificateRequest *>(DatabaseMigrationServiceResponse::request());
 }
 
 /*!

@@ -71,8 +71,7 @@ RespondActivityTaskCanceledResponse::RespondActivityTaskCanceledResponse(
  */
 const RespondActivityTaskCanceledRequest * RespondActivityTaskCanceledResponse::request() const
 {
-    Q_D(const RespondActivityTaskCanceledResponse);
-    return static_cast<const RespondActivityTaskCanceledRequest *>(d->request);
+    return static_cast<const RespondActivityTaskCanceledRequest *>(SwfResponse::request());
 }
 
 /*!

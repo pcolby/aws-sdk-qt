@@ -70,8 +70,7 @@ UpdateWorkforceResponse::UpdateWorkforceResponse(
  */
 const UpdateWorkforceRequest * UpdateWorkforceResponse::request() const
 {
-    Q_D(const UpdateWorkforceResponse);
-    return static_cast<const UpdateWorkforceRequest *>(d->request);
+    return static_cast<const UpdateWorkforceRequest *>(SageMakerResponse::request());
 }
 
 /*!

@@ -20,15 +20,12 @@
 #ifndef QTAWS_SQSREQUEST_P_H
 #define QTAWS_SQSREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "sqsrequest.h"
-
 namespace QtAws {
 namespace SQS {
 
 class SqsRequest;
 
-class SqsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SqsRequestPrivate {
 
 public:
     SqsRequest::Action action; ///< SQS action to be performed.
@@ -39,6 +36,9 @@ public:
     SqsRequestPrivate(const SqsRequestPrivate &other, SqsRequest * const q);
 
     static QString toString(const SqsRequest::Action &action);
+
+protected:
+    SqsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SqsRequest)

@@ -80,8 +80,7 @@ CancelSigningProfileResponse::CancelSigningProfileResponse(
  */
 const CancelSigningProfileRequest * CancelSigningProfileResponse::request() const
 {
-    Q_D(const CancelSigningProfileResponse);
-    return static_cast<const CancelSigningProfileRequest *>(d->request);
+    return static_cast<const CancelSigningProfileRequest *>(signerResponse::request());
 }
 
 /*!

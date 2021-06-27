@@ -64,8 +64,7 @@ BatchDeleteBuildsResponse::BatchDeleteBuildsResponse(
  */
 const BatchDeleteBuildsRequest * BatchDeleteBuildsResponse::request() const
 {
-    Q_D(const BatchDeleteBuildsResponse);
-    return static_cast<const BatchDeleteBuildsRequest *>(d->request);
+    return static_cast<const BatchDeleteBuildsRequest *>(CodeBuildResponse::request());
 }
 
 /*!

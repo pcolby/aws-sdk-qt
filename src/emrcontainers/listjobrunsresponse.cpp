@@ -83,8 +83,7 @@ ListJobRunsResponse::ListJobRunsResponse(
  */
 const ListJobRunsRequest * ListJobRunsResponse::request() const
 {
-    Q_D(const ListJobRunsResponse);
-    return static_cast<const ListJobRunsRequest *>(d->request);
+    return static_cast<const ListJobRunsRequest *>(EMRContainersResponse::request());
 }
 
 /*!

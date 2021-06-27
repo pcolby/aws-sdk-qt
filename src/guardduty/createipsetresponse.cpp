@@ -73,8 +73,7 @@ CreateIPSetResponse::CreateIPSetResponse(
  */
 const CreateIPSetRequest * CreateIPSetResponse::request() const
 {
-    Q_D(const CreateIPSetResponse);
-    return static_cast<const CreateIPSetRequest *>(d->request);
+    return static_cast<const CreateIPSetRequest *>(GuardDutyResponse::request());
 }
 
 /*!

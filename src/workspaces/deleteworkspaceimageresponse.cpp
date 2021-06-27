@@ -58,8 +58,7 @@ DeleteWorkspaceImageResponse::DeleteWorkspaceImageResponse(
  */
 const DeleteWorkspaceImageRequest * DeleteWorkspaceImageResponse::request() const
 {
-    Q_D(const DeleteWorkspaceImageResponse);
-    return static_cast<const DeleteWorkspaceImageRequest *>(d->request);
+    return static_cast<const DeleteWorkspaceImageRequest *>(WorkSpacesResponse::request());
 }
 
 /*!

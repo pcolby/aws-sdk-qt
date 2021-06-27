@@ -58,8 +58,7 @@ ListAssociatedAttributeGroupsResponse::ListAssociatedAttributeGroupsResponse(
  */
 const ListAssociatedAttributeGroupsRequest * ListAssociatedAttributeGroupsResponse::request() const
 {
-    Q_D(const ListAssociatedAttributeGroupsResponse);
-    return static_cast<const ListAssociatedAttributeGroupsRequest *>(d->request);
+    return static_cast<const ListAssociatedAttributeGroupsRequest *>(AppRegistryResponse::request());
 }
 
 /*!

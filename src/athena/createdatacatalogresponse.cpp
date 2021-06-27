@@ -73,8 +73,7 @@ CreateDataCatalogResponse::CreateDataCatalogResponse(
  */
 const CreateDataCatalogRequest * CreateDataCatalogResponse::request() const
 {
-    Q_D(const CreateDataCatalogResponse);
-    return static_cast<const CreateDataCatalogRequest *>(d->request);
+    return static_cast<const CreateDataCatalogRequest *>(AthenaResponse::request());
 }
 
 /*!

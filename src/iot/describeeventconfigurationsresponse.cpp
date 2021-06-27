@@ -82,8 +82,7 @@ DescribeEventConfigurationsResponse::DescribeEventConfigurationsResponse(
  */
 const DescribeEventConfigurationsRequest * DescribeEventConfigurationsResponse::request() const
 {
-    Q_D(const DescribeEventConfigurationsResponse);
-    return static_cast<const DescribeEventConfigurationsRequest *>(d->request);
+    return static_cast<const DescribeEventConfigurationsRequest *>(IoTResponse::request());
 }
 
 /*!

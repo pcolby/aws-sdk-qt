@@ -55,8 +55,7 @@ UntagResourcesResponse::UntagResourcesResponse(
  */
 const UntagResourcesRequest * UntagResourcesResponse::request() const
 {
-    Q_D(const UntagResourcesResponse);
-    return static_cast<const UntagResourcesRequest *>(d->request);
+    return static_cast<const UntagResourcesRequest *>(ResourceGroupsTaggingAPIResponse::request());
 }
 
 /*!

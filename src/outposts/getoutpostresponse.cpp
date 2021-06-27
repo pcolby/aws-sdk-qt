@@ -59,8 +59,7 @@ GetOutpostResponse::GetOutpostResponse(
  */
 const GetOutpostRequest * GetOutpostResponse::request() const
 {
-    Q_D(const GetOutpostResponse);
-    return static_cast<const GetOutpostRequest *>(d->request);
+    return static_cast<const GetOutpostRequest *>(OutpostsResponse::request());
 }
 
 /*!

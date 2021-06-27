@@ -57,8 +57,7 @@ DetectEntitiesResponse::DetectEntitiesResponse(
  */
 const DetectEntitiesRequest * DetectEntitiesResponse::request() const
 {
-    Q_D(const DetectEntitiesResponse);
-    return static_cast<const DetectEntitiesRequest *>(d->request);
+    return static_cast<const DetectEntitiesRequest *>(ComprehendMedicalResponse::request());
 }
 
 /*!

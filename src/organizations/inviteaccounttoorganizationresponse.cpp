@@ -141,8 +141,7 @@ InviteAccountToOrganizationResponse::InviteAccountToOrganizationResponse(
  */
 const InviteAccountToOrganizationRequest * InviteAccountToOrganizationResponse::request() const
 {
-    Q_D(const InviteAccountToOrganizationResponse);
-    return static_cast<const InviteAccountToOrganizationRequest *>(d->request);
+    return static_cast<const InviteAccountToOrganizationRequest *>(OrganizationsResponse::request());
 }
 
 /*!

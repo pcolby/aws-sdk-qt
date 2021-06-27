@@ -37,7 +37,7 @@ namespace IoT {
  * Constructs a IoTResponse object with parent \a parent.
  */
 IoTResponse::IoTResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new IoTResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new IoTResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ IoTResponse::IoTResponse(QObject * const parent)
  * implementation that inherits from IoTResponsePrivate.
  */
 IoTResponse::IoTResponse(IoTResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void IoTResponse::parseFailure(QIODevice &response)
  * Constructs a IoTResponsePrivate object with public implementation \a q.
  */
 IoTResponsePrivate::IoTResponsePrivate(
-    IoTResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    IoTResponse * const q) : q_ptr(q)
 {
 
 }

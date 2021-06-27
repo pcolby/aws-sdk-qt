@@ -20,15 +20,12 @@
 #ifndef QTAWS_SERVICEDISCOVERYREQUEST_P_H
 #define QTAWS_SERVICEDISCOVERYREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "servicediscoveryrequest.h"
-
 namespace QtAws {
 namespace ServiceDiscovery {
 
 class ServiceDiscoveryRequest;
 
-class ServiceDiscoveryRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ServiceDiscoveryRequestPrivate {
 
 public:
     ServiceDiscoveryRequest::Action action; ///< ServiceDiscovery action to be performed.
@@ -39,6 +36,9 @@ public:
     ServiceDiscoveryRequestPrivate(const ServiceDiscoveryRequestPrivate &other, ServiceDiscoveryRequest * const q);
 
     static QString toString(const ServiceDiscoveryRequest::Action &action);
+
+protected:
+    ServiceDiscoveryRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ServiceDiscoveryRequest)

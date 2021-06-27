@@ -70,8 +70,7 @@ CreateFlowDefinitionResponse::CreateFlowDefinitionResponse(
  */
 const CreateFlowDefinitionRequest * CreateFlowDefinitionResponse::request() const
 {
-    Q_D(const CreateFlowDefinitionResponse);
-    return static_cast<const CreateFlowDefinitionRequest *>(d->request);
+    return static_cast<const CreateFlowDefinitionRequest *>(SageMakerResponse::request());
 }
 
 /*!

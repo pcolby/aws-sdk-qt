@@ -218,8 +218,7 @@ TagResourceResponse::TagResourceResponse(
  */
 const TagResourceRequest * TagResourceResponse::request() const
 {
-    Q_D(const TagResourceResponse);
-    return static_cast<const TagResourceRequest *>(d->request);
+    return static_cast<const TagResourceRequest *>(GlobalAcceleratorResponse::request());
 }
 
 /*!

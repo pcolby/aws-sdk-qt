@@ -60,8 +60,7 @@ GetBranchResponse::GetBranchResponse(
  */
 const GetBranchRequest * GetBranchResponse::request() const
 {
-    Q_D(const GetBranchResponse);
-    return static_cast<const GetBranchRequest *>(d->request);
+    return static_cast<const GetBranchRequest *>(AmplifyResponse::request());
 }
 
 /*!

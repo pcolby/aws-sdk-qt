@@ -98,8 +98,7 @@ ListMeetingTagsResponse::ListMeetingTagsResponse(
  */
 const ListMeetingTagsRequest * ListMeetingTagsResponse::request() const
 {
-    Q_D(const ListMeetingTagsResponse);
-    return static_cast<const ListMeetingTagsRequest *>(d->request);
+    return static_cast<const ListMeetingTagsRequest *>(ChimeResponse::request());
 }
 
 /*!

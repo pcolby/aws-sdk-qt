@@ -68,8 +68,7 @@ PutScheduledUpdateGroupActionResponse::PutScheduledUpdateGroupActionResponse(
  */
 const PutScheduledUpdateGroupActionRequest * PutScheduledUpdateGroupActionResponse::request() const
 {
-    Q_D(const PutScheduledUpdateGroupActionResponse);
-    return static_cast<const PutScheduledUpdateGroupActionRequest *>(d->request);
+    return static_cast<const PutScheduledUpdateGroupActionRequest *>(AutoScalingResponse::request());
 }
 
 /*!

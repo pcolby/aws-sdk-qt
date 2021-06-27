@@ -85,8 +85,7 @@ UpdatePartnerStatusResponse::UpdatePartnerStatusResponse(
  */
 const UpdatePartnerStatusRequest * UpdatePartnerStatusResponse::request() const
 {
-    Q_D(const UpdatePartnerStatusResponse);
-    return static_cast<const UpdatePartnerStatusRequest *>(d->request);
+    return static_cast<const UpdatePartnerStatusRequest *>(RedshiftResponse::request());
 }
 
 /*!

@@ -103,8 +103,7 @@ GetEnabledStandardsResponse::GetEnabledStandardsResponse(
  */
 const GetEnabledStandardsRequest * GetEnabledStandardsResponse::request() const
 {
-    Q_D(const GetEnabledStandardsResponse);
-    return static_cast<const GetEnabledStandardsRequest *>(d->request);
+    return static_cast<const GetEnabledStandardsRequest *>(SecurityHubResponse::request());
 }
 
 /*!

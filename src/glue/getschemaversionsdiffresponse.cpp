@@ -58,8 +58,7 @@ GetSchemaVersionsDiffResponse::GetSchemaVersionsDiffResponse(
  */
 const GetSchemaVersionsDiffRequest * GetSchemaVersionsDiffResponse::request() const
 {
-    Q_D(const GetSchemaVersionsDiffResponse);
-    return static_cast<const GetSchemaVersionsDiffRequest *>(d->request);
+    return static_cast<const GetSchemaVersionsDiffRequest *>(GlueResponse::request());
 }
 
 /*!

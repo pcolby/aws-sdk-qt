@@ -218,8 +218,7 @@ AllowCustomRoutingTrafficResponse::AllowCustomRoutingTrafficResponse(
  */
 const AllowCustomRoutingTrafficRequest * AllowCustomRoutingTrafficResponse::request() const
 {
-    Q_D(const AllowCustomRoutingTrafficResponse);
-    return static_cast<const AllowCustomRoutingTrafficRequest *>(d->request);
+    return static_cast<const AllowCustomRoutingTrafficRequest *>(GlobalAcceleratorResponse::request());
 }
 
 /*!

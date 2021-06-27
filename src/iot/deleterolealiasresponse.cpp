@@ -82,8 +82,7 @@ DeleteRoleAliasResponse::DeleteRoleAliasResponse(
  */
 const DeleteRoleAliasRequest * DeleteRoleAliasResponse::request() const
 {
-    Q_D(const DeleteRoleAliasResponse);
-    return static_cast<const DeleteRoleAliasRequest *>(d->request);
+    return static_cast<const DeleteRoleAliasRequest *>(IoTResponse::request());
 }
 
 /*!

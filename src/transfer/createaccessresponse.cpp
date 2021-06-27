@@ -62,8 +62,7 @@ CreateAccessResponse::CreateAccessResponse(
  */
 const CreateAccessRequest * CreateAccessResponse::request() const
 {
-    Q_D(const CreateAccessResponse);
-    return static_cast<const CreateAccessRequest *>(d->request);
+    return static_cast<const CreateAccessRequest *>(TransferResponse::request());
 }
 
 /*!

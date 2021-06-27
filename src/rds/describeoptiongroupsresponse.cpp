@@ -119,8 +119,7 @@ DescribeOptionGroupsResponse::DescribeOptionGroupsResponse(
  */
 const DescribeOptionGroupsRequest * DescribeOptionGroupsResponse::request() const
 {
-    Q_D(const DescribeOptionGroupsResponse);
-    return static_cast<const DescribeOptionGroupsRequest *>(d->request);
+    return static_cast<const DescribeOptionGroupsRequest *>(RdsResponse::request());
 }
 
 /*!

@@ -61,8 +61,7 @@ DeleteGatewayResponse::DeleteGatewayResponse(
  */
 const DeleteGatewayRequest * DeleteGatewayResponse::request() const
 {
-    Q_D(const DeleteGatewayResponse);
-    return static_cast<const DeleteGatewayRequest *>(d->request);
+    return static_cast<const DeleteGatewayRequest *>(IoTSiteWiseResponse::request());
 }
 
 /*!

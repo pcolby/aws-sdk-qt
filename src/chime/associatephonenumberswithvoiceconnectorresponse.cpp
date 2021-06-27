@@ -98,8 +98,7 @@ AssociatePhoneNumbersWithVoiceConnectorResponse::AssociatePhoneNumbersWithVoiceC
  */
 const AssociatePhoneNumbersWithVoiceConnectorRequest * AssociatePhoneNumbersWithVoiceConnectorResponse::request() const
 {
-    Q_D(const AssociatePhoneNumbersWithVoiceConnectorResponse);
-    return static_cast<const AssociatePhoneNumbersWithVoiceConnectorRequest *>(d->request);
+    return static_cast<const AssociatePhoneNumbersWithVoiceConnectorRequest *>(ChimeResponse::request());
 }
 
 /*!

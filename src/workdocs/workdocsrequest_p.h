@@ -20,15 +20,12 @@
 #ifndef QTAWS_WORKDOCSREQUEST_P_H
 #define QTAWS_WORKDOCSREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "workdocsrequest.h"
-
 namespace QtAws {
 namespace WorkDocs {
 
 class WorkDocsRequest;
 
-class WorkDocsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class WorkDocsRequestPrivate {
 
 public:
     WorkDocsRequest::Action action; ///< WorkDocs action to be performed.
@@ -39,6 +36,9 @@ public:
     WorkDocsRequestPrivate(const WorkDocsRequestPrivate &other, WorkDocsRequest * const q);
 
     static QString toString(const WorkDocsRequest::Action &action);
+
+protected:
+    WorkDocsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(WorkDocsRequest)

@@ -78,8 +78,7 @@ GetEventSelectorsResponse::GetEventSelectorsResponse(
  */
 const GetEventSelectorsRequest * GetEventSelectorsResponse::request() const
 {
-    Q_D(const GetEventSelectorsResponse);
-    return static_cast<const GetEventSelectorsRequest *>(d->request);
+    return static_cast<const GetEventSelectorsRequest *>(CloudTrailResponse::request());
 }
 
 /*!

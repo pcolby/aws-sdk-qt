@@ -37,7 +37,7 @@ namespace MediaConvert {
  * Constructs a MediaConvertResponse object with parent \a parent.
  */
 MediaConvertResponse::MediaConvertResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new MediaConvertResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new MediaConvertResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ MediaConvertResponse::MediaConvertResponse(QObject * const parent)
  * implementation that inherits from MediaConvertResponsePrivate.
  */
 MediaConvertResponse::MediaConvertResponse(MediaConvertResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void MediaConvertResponse::parseFailure(QIODevice &response)
  * Constructs a MediaConvertResponsePrivate object with public implementation \a q.
  */
 MediaConvertResponsePrivate::MediaConvertResponsePrivate(
-    MediaConvertResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    MediaConvertResponse * const q) : q_ptr(q)
 {
 
 }

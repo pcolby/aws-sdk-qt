@@ -66,8 +66,7 @@ DeleteFlowTemplateResponse::DeleteFlowTemplateResponse(
  */
 const DeleteFlowTemplateRequest * DeleteFlowTemplateResponse::request() const
 {
-    Q_D(const DeleteFlowTemplateResponse);
-    return static_cast<const DeleteFlowTemplateRequest *>(d->request);
+    return static_cast<const DeleteFlowTemplateRequest *>(IoTThingsGraphResponse::request());
 }
 
 /*!

@@ -118,6 +118,12 @@ public slots:
     UpdateBackendConfigResponse * updateBackendConfig(const UpdateBackendConfigRequest &request);
     UpdateBackendJobResponse * updateBackendJob(const UpdateBackendJobRequest &request);
 
+protected:
+    /// @cond internal
+    AmplifyBackendClientPrivate * const d_ptr; ///< Internal d-pointer.
+    AmplifyBackendClient(AmplifyBackendClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(AmplifyBackendClient)
     Q_DISABLE_COPY(AmplifyBackendClient)

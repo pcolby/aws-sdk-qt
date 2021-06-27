@@ -149,16 +149,16 @@ NimbleStudioClient::NimbleStudioClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new NimbleStudioClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-08-01"),
+    QStringLiteral("nimble"),
+    QStringLiteral("AmazonNimbleStudio"),
+    QStringLiteral("nimble"),
+    parent), d_ptr(new NimbleStudioClientPrivate(this))
 {
-    Q_D(NimbleStudioClient);
-    d->apiVersion = QStringLiteral("2020-08-01");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("nimble");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AmazonNimbleStudio");
-    d->serviceName = QStringLiteral("nimble");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -177,16 +177,16 @@ NimbleStudioClient::NimbleStudioClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new NimbleStudioClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-08-01"),
+    QStringLiteral("nimble"),
+    QStringLiteral("AmazonNimbleStudio"),
+    QStringLiteral("nimble"),
+    parent), d_ptr(new NimbleStudioClientPrivate(this))
 {
-    Q_D(NimbleStudioClient);
-    d->apiVersion = QStringLiteral("2020-08-01");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("nimble");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AmazonNimbleStudio");
-    d->serviceName = QStringLiteral("nimble");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -882,10 +882,9 @@ UpdateStudioComponentResponse * NimbleStudioClient::updateStudioComponent(const 
 /*!
  * Constructs a NimbleStudioClientPrivate object with public implementation \a q.
  */
-NimbleStudioClientPrivate::NimbleStudioClientPrivate(NimbleStudioClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+NimbleStudioClientPrivate::NimbleStudioClientPrivate(NimbleStudioClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace NimbleStudio

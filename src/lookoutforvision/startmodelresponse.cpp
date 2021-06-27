@@ -64,8 +64,7 @@ StartModelResponse::StartModelResponse(
  */
 const StartModelRequest * StartModelResponse::request() const
 {
-    Q_D(const StartModelResponse);
-    return static_cast<const StartModelRequest *>(d->request);
+    return static_cast<const StartModelRequest *>(LookoutforVisionResponse::request());
 }
 
 /*!

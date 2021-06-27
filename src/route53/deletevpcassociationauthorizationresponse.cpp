@@ -56,8 +56,7 @@ DeleteVPCAssociationAuthorizationResponse::DeleteVPCAssociationAuthorizationResp
  */
 const DeleteVPCAssociationAuthorizationRequest * DeleteVPCAssociationAuthorizationResponse::request() const
 {
-    Q_D(const DeleteVPCAssociationAuthorizationResponse);
-    return static_cast<const DeleteVPCAssociationAuthorizationRequest *>(d->request);
+    return static_cast<const DeleteVPCAssociationAuthorizationRequest *>(Route53Response::request());
 }
 
 /*!

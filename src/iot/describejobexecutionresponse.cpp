@@ -82,8 +82,7 @@ DescribeJobExecutionResponse::DescribeJobExecutionResponse(
  */
 const DescribeJobExecutionRequest * DescribeJobExecutionResponse::request() const
 {
-    Q_D(const DescribeJobExecutionResponse);
-    return static_cast<const DescribeJobExecutionRequest *>(d->request);
+    return static_cast<const DescribeJobExecutionRequest *>(IoTResponse::request());
 }
 
 /*!

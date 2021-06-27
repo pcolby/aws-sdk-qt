@@ -72,8 +72,7 @@ ResetDBParameterGroupResponse::ResetDBParameterGroupResponse(
  */
 const ResetDBParameterGroupRequest * ResetDBParameterGroupResponse::request() const
 {
-    Q_D(const ResetDBParameterGroupResponse);
-    return static_cast<const ResetDBParameterGroupRequest *>(d->request);
+    return static_cast<const ResetDBParameterGroupRequest *>(NeptuneResponse::request());
 }
 
 /*!

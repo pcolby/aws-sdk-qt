@@ -20,15 +20,12 @@
 #ifndef QTAWS_RESOURCEGROUPSREQUEST_P_H
 #define QTAWS_RESOURCEGROUPSREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "resourcegroupsrequest.h"
-
 namespace QtAws {
 namespace ResourceGroups {
 
 class ResourceGroupsRequest;
 
-class ResourceGroupsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ResourceGroupsRequestPrivate {
 
 public:
     ResourceGroupsRequest::Action action; ///< ResourceGroups action to be performed.
@@ -39,6 +36,9 @@ public:
     ResourceGroupsRequestPrivate(const ResourceGroupsRequestPrivate &other, ResourceGroupsRequest * const q);
 
     static QString toString(const ResourceGroupsRequest::Action &action);
+
+protected:
+    ResourceGroupsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ResourceGroupsRequest)

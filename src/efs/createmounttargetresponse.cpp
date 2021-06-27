@@ -62,8 +62,7 @@ CreateMountTargetResponse::CreateMountTargetResponse(
  */
 const CreateMountTargetRequest * CreateMountTargetResponse::request() const
 {
-    Q_D(const CreateMountTargetResponse);
-    return static_cast<const CreateMountTargetRequest *>(d->request);
+    return static_cast<const CreateMountTargetRequest *>(EfsResponse::request());
 }
 
 /*!

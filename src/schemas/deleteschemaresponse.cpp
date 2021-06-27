@@ -56,8 +56,7 @@ DeleteSchemaResponse::DeleteSchemaResponse(
  */
 const DeleteSchemaRequest * DeleteSchemaResponse::request() const
 {
-    Q_D(const DeleteSchemaResponse);
-    return static_cast<const DeleteSchemaRequest *>(d->request);
+    return static_cast<const DeleteSchemaRequest *>(SchemasResponse::request());
 }
 
 /*!

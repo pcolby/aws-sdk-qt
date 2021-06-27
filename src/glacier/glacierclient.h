@@ -145,6 +145,12 @@ public slots:
     UploadArchiveResponse * uploadArchive(const UploadArchiveRequest &request);
     UploadMultipartPartResponse * uploadMultipartPart(const UploadMultipartPartRequest &request);
 
+protected:
+    /// @cond internal
+    GlacierClientPrivate * const d_ptr; ///< Internal d-pointer.
+    GlacierClient(GlacierClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(GlacierClient)
     Q_DISABLE_COPY(GlacierClient)

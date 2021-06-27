@@ -91,6 +91,7 @@ public:
 
 protected:
     /// @cond internal
+    IoTThingsGraphRequestPrivate * const d_ptr; ///< Internal d-pointer.
     IoTThingsGraphRequest(IoTThingsGraphRequestPrivate * const d);
     /// @endcond
 

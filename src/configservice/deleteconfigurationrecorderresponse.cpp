@@ -75,8 +75,7 @@ DeleteConfigurationRecorderResponse::DeleteConfigurationRecorderResponse(
  */
 const DeleteConfigurationRecorderRequest * DeleteConfigurationRecorderResponse::request() const
 {
-    Q_D(const DeleteConfigurationRecorderResponse);
-    return static_cast<const DeleteConfigurationRecorderRequest *>(d->request);
+    return static_cast<const DeleteConfigurationRecorderRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

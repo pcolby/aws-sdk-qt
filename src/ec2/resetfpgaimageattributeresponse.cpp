@@ -87,8 +87,7 @@ ResetFpgaImageAttributeResponse::ResetFpgaImageAttributeResponse(
  */
 const ResetFpgaImageAttributeRequest * ResetFpgaImageAttributeResponse::request() const
 {
-    Q_D(const ResetFpgaImageAttributeResponse);
-    return static_cast<const ResetFpgaImageAttributeRequest *>(d->request);
+    return static_cast<const ResetFpgaImageAttributeRequest *>(Ec2Response::request());
 }
 
 /*!

@@ -72,8 +72,7 @@ CreatePackageResponse::CreatePackageResponse(
  */
 const CreatePackageRequest * CreatePackageResponse::request() const
 {
-    Q_D(const CreatePackageResponse);
-    return static_cast<const CreatePackageRequest *>(d->request);
+    return static_cast<const CreatePackageRequest *>(ElasticsearchServiceResponse::request());
 }
 
 /*!

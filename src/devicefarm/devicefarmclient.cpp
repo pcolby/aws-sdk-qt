@@ -233,16 +233,16 @@ DeviceFarmClient::DeviceFarmClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new DeviceFarmClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2015-06-23"),
+    QStringLiteral("devicefarm"),
+    QStringLiteral("AWS Device Farm"),
+    QStringLiteral("devicefarm"),
+    parent), d_ptr(new DeviceFarmClientPrivate(this))
 {
-    Q_D(DeviceFarmClient);
-    d->apiVersion = QStringLiteral("2015-06-23");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("devicefarm");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Device Farm");
-    d->serviceName = QStringLiteral("devicefarm");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -261,16 +261,16 @@ DeviceFarmClient::DeviceFarmClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new DeviceFarmClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2015-06-23"),
+    QStringLiteral("devicefarm"),
+    QStringLiteral("AWS Device Farm"),
+    QStringLiteral("devicefarm"),
+    parent), d_ptr(new DeviceFarmClientPrivate(this))
 {
-    Q_D(DeviceFarmClient);
-    d->apiVersion = QStringLiteral("2015-06-23");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("devicefarm");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Device Farm");
-    d->serviceName = QStringLiteral("devicefarm");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -1341,10 +1341,9 @@ UpdateVPCEConfigurationResponse * DeviceFarmClient::updateVPCEConfiguration(cons
 /*!
  * Constructs a DeviceFarmClientPrivate object with public implementation \a q.
  */
-DeviceFarmClientPrivate::DeviceFarmClientPrivate(DeviceFarmClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+DeviceFarmClientPrivate::DeviceFarmClientPrivate(DeviceFarmClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace DeviceFarm

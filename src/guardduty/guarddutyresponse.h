@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    GuardDutyResponsePrivate * const d_ptr; ///< Internal d-pointer.
     GuardDutyResponse(GuardDutyResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

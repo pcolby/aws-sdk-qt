@@ -56,8 +56,7 @@ BatchDeleteDocumentResponse::BatchDeleteDocumentResponse(
  */
 const BatchDeleteDocumentRequest * BatchDeleteDocumentResponse::request() const
 {
-    Q_D(const BatchDeleteDocumentResponse);
-    return static_cast<const BatchDeleteDocumentRequest *>(d->request);
+    return static_cast<const BatchDeleteDocumentRequest *>(kendraResponse::request());
 }
 
 /*!

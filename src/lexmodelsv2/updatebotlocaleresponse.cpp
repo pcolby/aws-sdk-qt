@@ -55,8 +55,7 @@ UpdateBotLocaleResponse::UpdateBotLocaleResponse(
  */
 const UpdateBotLocaleRequest * UpdateBotLocaleResponse::request() const
 {
-    Q_D(const UpdateBotLocaleResponse);
-    return static_cast<const UpdateBotLocaleRequest *>(d->request);
+    return static_cast<const UpdateBotLocaleRequest *>(LexModelsV2Response::request());
 }
 
 /*!

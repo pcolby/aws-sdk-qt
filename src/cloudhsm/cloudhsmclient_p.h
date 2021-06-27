@@ -20,19 +20,20 @@
 #ifndef QTAWS_CLOUDHSMCLIENT_P_H
 #define QTAWS_CLOUDHSMCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace CloudHSM {
 
 class CloudHSMClient;
 
-class CloudHSMClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class CloudHSMClientPrivate {
 
 public:
     CloudHSMClientPrivate(CloudHSMClient * const q);
+
+protected:
+    CloudHSMClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CloudHSMClient)

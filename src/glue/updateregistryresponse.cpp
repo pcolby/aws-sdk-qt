@@ -58,8 +58,7 @@ UpdateRegistryResponse::UpdateRegistryResponse(
  */
 const UpdateRegistryRequest * UpdateRegistryResponse::request() const
 {
-    Q_D(const UpdateRegistryResponse);
-    return static_cast<const UpdateRegistryRequest *>(d->request);
+    return static_cast<const UpdateRegistryRequest *>(GlueResponse::request());
 }
 
 /*!

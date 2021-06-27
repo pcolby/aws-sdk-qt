@@ -157,6 +157,7 @@ public:
 
 protected:
     /// @cond internal
+    CognitoIdentityProviderRequestPrivate * const d_ptr; ///< Internal d-pointer.
     CognitoIdentityProviderRequest(CognitoIdentityProviderRequestPrivate * const d);
     /// @endcond
 

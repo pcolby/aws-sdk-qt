@@ -58,8 +58,7 @@ UpdateClassifierResponse::UpdateClassifierResponse(
  */
 const UpdateClassifierRequest * UpdateClassifierResponse::request() const
 {
-    Q_D(const UpdateClassifierResponse);
-    return static_cast<const UpdateClassifierRequest *>(d->request);
+    return static_cast<const UpdateClassifierRequest *>(GlueResponse::request());
 }
 
 /*!

@@ -140,8 +140,7 @@ ListConnectionsResponse::ListConnectionsResponse(
  */
 const ListConnectionsRequest * ListConnectionsResponse::request() const
 {
-    Q_D(const ListConnectionsResponse);
-    return static_cast<const ListConnectionsRequest *>(d->request);
+    return static_cast<const ListConnectionsRequest *>(CodeStarconnectionsResponse::request());
 }
 
 /*!

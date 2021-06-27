@@ -62,8 +62,7 @@ GetOrganizationsAccessReportResponse::GetOrganizationsAccessReportResponse(
  */
 const GetOrganizationsAccessReportRequest * GetOrganizationsAccessReportResponse::request() const
 {
-    Q_D(const GetOrganizationsAccessReportResponse);
-    return static_cast<const GetOrganizationsAccessReportRequest *>(d->request);
+    return static_cast<const GetOrganizationsAccessReportRequest *>(IamResponse::request());
 }
 
 /*!

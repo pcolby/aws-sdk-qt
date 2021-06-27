@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    IoTSecureTunnelingResponsePrivate * const d_ptr; ///< Internal d-pointer.
     IoTSecureTunnelingResponse(IoTSecureTunnelingResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

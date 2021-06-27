@@ -59,8 +59,7 @@ GetLicenseResponse::GetLicenseResponse(
  */
 const GetLicenseRequest * GetLicenseResponse::request() const
 {
-    Q_D(const GetLicenseResponse);
-    return static_cast<const GetLicenseRequest *>(d->request);
+    return static_cast<const GetLicenseRequest *>(LicenseManagerResponse::request());
 }
 
 /*!

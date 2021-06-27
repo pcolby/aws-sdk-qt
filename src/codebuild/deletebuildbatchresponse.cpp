@@ -64,8 +64,7 @@ DeleteBuildBatchResponse::DeleteBuildBatchResponse(
  */
 const DeleteBuildBatchRequest * DeleteBuildBatchResponse::request() const
 {
-    Q_D(const DeleteBuildBatchResponse);
-    return static_cast<const DeleteBuildBatchRequest *>(d->request);
+    return static_cast<const DeleteBuildBatchRequest *>(CodeBuildResponse::request());
 }
 
 /*!

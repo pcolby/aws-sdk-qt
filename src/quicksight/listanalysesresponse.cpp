@@ -60,8 +60,7 @@ ListAnalysesResponse::ListAnalysesResponse(
  */
 const ListAnalysesRequest * ListAnalysesResponse::request() const
 {
-    Q_D(const ListAnalysesResponse);
-    return static_cast<const ListAnalysesRequest *>(d->request);
+    return static_cast<const ListAnalysesRequest *>(QuickSightResponse::request());
 }
 
 /*!

@@ -75,8 +75,7 @@ ListOriginationNumbersResponse::ListOriginationNumbersResponse(
  */
 const ListOriginationNumbersRequest * ListOriginationNumbersResponse::request() const
 {
-    Q_D(const ListOriginationNumbersResponse);
-    return static_cast<const ListOriginationNumbersRequest *>(d->request);
+    return static_cast<const ListOriginationNumbersRequest *>(SnsResponse::request());
 }
 
 /*!

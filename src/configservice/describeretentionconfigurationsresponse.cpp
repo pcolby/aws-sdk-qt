@@ -75,8 +75,7 @@ DescribeRetentionConfigurationsResponse::DescribeRetentionConfigurationsResponse
  */
 const DescribeRetentionConfigurationsRequest * DescribeRetentionConfigurationsResponse::request() const
 {
-    Q_D(const DescribeRetentionConfigurationsResponse);
-    return static_cast<const DescribeRetentionConfigurationsRequest *>(d->request);
+    return static_cast<const DescribeRetentionConfigurationsRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

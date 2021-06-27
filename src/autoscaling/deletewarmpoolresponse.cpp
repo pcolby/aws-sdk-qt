@@ -68,8 +68,7 @@ DeleteWarmPoolResponse::DeleteWarmPoolResponse(
  */
 const DeleteWarmPoolRequest * DeleteWarmPoolResponse::request() const
 {
-    Q_D(const DeleteWarmPoolResponse);
-    return static_cast<const DeleteWarmPoolRequest *>(d->request);
+    return static_cast<const DeleteWarmPoolRequest *>(AutoScalingResponse::request());
 }
 
 /*!

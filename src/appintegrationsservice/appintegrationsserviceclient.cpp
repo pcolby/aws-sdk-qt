@@ -88,16 +88,16 @@ AppIntegrationsServiceClient::AppIntegrationsServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new AppIntegrationsServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-07-29"),
+    QStringLiteral("app-integrations"),
+    QStringLiteral("Amazon AppIntegrations Service"),
+    QStringLiteral("app-integrations"),
+    parent), d_ptr(new AppIntegrationsServiceClientPrivate(this))
 {
-    Q_D(AppIntegrationsServiceClient);
-    d->apiVersion = QStringLiteral("2020-07-29");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("app-integrations");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon AppIntegrations Service");
-    d->serviceName = QStringLiteral("app-integrations");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -116,16 +116,16 @@ AppIntegrationsServiceClient::AppIntegrationsServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new AppIntegrationsServiceClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-07-29"),
+    QStringLiteral("app-integrations"),
+    QStringLiteral("Amazon AppIntegrations Service"),
+    QStringLiteral("app-integrations"),
+    parent), d_ptr(new AppIntegrationsServiceClientPrivate(this))
 {
-    Q_D(AppIntegrationsServiceClient);
-    d->apiVersion = QStringLiteral("2020-07-29");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("app-integrations");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon AppIntegrations Service");
-    d->serviceName = QStringLiteral("app-integrations");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -295,10 +295,9 @@ UpdateEventIntegrationResponse * AppIntegrationsServiceClient::updateEventIntegr
 /*!
  * Constructs a AppIntegrationsServiceClientPrivate object with public implementation \a q.
  */
-AppIntegrationsServiceClientPrivate::AppIntegrationsServiceClientPrivate(AppIntegrationsServiceClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+AppIntegrationsServiceClientPrivate::AppIntegrationsServiceClientPrivate(AppIntegrationsServiceClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace AppIntegrationsService

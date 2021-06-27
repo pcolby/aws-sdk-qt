@@ -66,8 +66,7 @@ DescribeRiskConfigurationResponse::DescribeRiskConfigurationResponse(
  */
 const DescribeRiskConfigurationRequest * DescribeRiskConfigurationResponse::request() const
 {
-    Q_D(const DescribeRiskConfigurationResponse);
-    return static_cast<const DescribeRiskConfigurationRequest *>(d->request);
+    return static_cast<const DescribeRiskConfigurationRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

@@ -154,8 +154,7 @@ VerifyResponse::VerifyResponse(
  */
 const VerifyRequest * VerifyResponse::request() const
 {
-    Q_D(const VerifyResponse);
-    return static_cast<const VerifyRequest *>(d->request);
+    return static_cast<const VerifyRequest *>(KmsResponse::request());
 }
 
 /*!

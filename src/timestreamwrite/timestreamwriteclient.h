@@ -91,6 +91,12 @@ public slots:
     UpdateTableResponse * updateTable(const UpdateTableRequest &request);
     WriteRecordsResponse * writeRecords(const WriteRecordsRequest &request);
 
+protected:
+    /// @cond internal
+    TimestreamWriteClientPrivate * const d_ptr; ///< Internal d-pointer.
+    TimestreamWriteClient(TimestreamWriteClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(TimestreamWriteClient)
     Q_DISABLE_COPY(TimestreamWriteClient)

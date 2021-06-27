@@ -37,7 +37,7 @@ namespace EMRContainers {
  * Constructs a EMRContainersResponse object with parent \a parent.
  */
 EMRContainersResponse::EMRContainersResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new EMRContainersResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new EMRContainersResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ EMRContainersResponse::EMRContainersResponse(QObject * const parent)
  * implementation that inherits from EMRContainersResponsePrivate.
  */
 EMRContainersResponse::EMRContainersResponse(EMRContainersResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void EMRContainersResponse::parseFailure(QIODevice &response)
  * Constructs a EMRContainersResponsePrivate object with public implementation \a q.
  */
 EMRContainersResponsePrivate::EMRContainersResponsePrivate(
-    EMRContainersResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    EMRContainersResponse * const q) : q_ptr(q)
 {
 
 }

@@ -69,8 +69,7 @@ StartApplicationResponse::StartApplicationResponse(
  */
 const StartApplicationRequest * StartApplicationResponse::request() const
 {
-    Q_D(const StartApplicationResponse);
-    return static_cast<const StartApplicationRequest *>(d->request);
+    return static_cast<const StartApplicationRequest *>(KinesisAnalyticsResponse::request());
 }
 
 /*!

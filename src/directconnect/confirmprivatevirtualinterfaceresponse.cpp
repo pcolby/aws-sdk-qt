@@ -61,8 +61,7 @@ ConfirmPrivateVirtualInterfaceResponse::ConfirmPrivateVirtualInterfaceResponse(
  */
 const ConfirmPrivateVirtualInterfaceRequest * ConfirmPrivateVirtualInterfaceResponse::request() const
 {
-    Q_D(const ConfirmPrivateVirtualInterfaceResponse);
-    return static_cast<const ConfirmPrivateVirtualInterfaceRequest *>(d->request);
+    return static_cast<const ConfirmPrivateVirtualInterfaceRequest *>(DirectConnectResponse::request());
 }
 
 /*!

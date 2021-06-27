@@ -63,8 +63,7 @@ ListEntitiesResponse::ListEntitiesResponse(
  */
 const ListEntitiesRequest * ListEntitiesResponse::request() const
 {
-    Q_D(const ListEntitiesResponse);
-    return static_cast<const ListEntitiesRequest *>(d->request);
+    return static_cast<const ListEntitiesRequest *>(MarketplaceCatalogResponse::request());
 }
 
 /*!

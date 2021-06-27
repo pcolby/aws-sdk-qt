@@ -56,8 +56,7 @@ ListFiltersResponse::ListFiltersResponse(
  */
 const ListFiltersRequest * ListFiltersResponse::request() const
 {
-    Q_D(const ListFiltersResponse);
-    return static_cast<const ListFiltersRequest *>(d->request);
+    return static_cast<const ListFiltersRequest *>(PersonalizeResponse::request());
 }
 
 /*!

@@ -62,8 +62,7 @@ AssociateS3ResourcesResponse::AssociateS3ResourcesResponse(
  */
 const AssociateS3ResourcesRequest * AssociateS3ResourcesResponse::request() const
 {
-    Q_D(const AssociateS3ResourcesResponse);
-    return static_cast<const AssociateS3ResourcesRequest *>(d->request);
+    return static_cast<const AssociateS3ResourcesRequest *>(MacieResponse::request());
 }
 
 /*!

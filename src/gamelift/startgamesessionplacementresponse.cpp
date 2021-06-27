@@ -115,8 +115,7 @@ StartGameSessionPlacementResponse::StartGameSessionPlacementResponse(
  */
 const StartGameSessionPlacementRequest * StartGameSessionPlacementResponse::request() const
 {
-    Q_D(const StartGameSessionPlacementResponse);
-    return static_cast<const StartGameSessionPlacementRequest *>(d->request);
+    return static_cast<const StartGameSessionPlacementRequest *>(GameLiftResponse::request());
 }
 
 /*!

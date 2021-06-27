@@ -56,8 +56,7 @@ DeleteApnsSandboxChannelResponse::DeleteApnsSandboxChannelResponse(
  */
 const DeleteApnsSandboxChannelRequest * DeleteApnsSandboxChannelResponse::request() const
 {
-    Q_D(const DeleteApnsSandboxChannelResponse);
-    return static_cast<const DeleteApnsSandboxChannelRequest *>(d->request);
+    return static_cast<const DeleteApnsSandboxChannelRequest *>(PinpointResponse::request());
 }
 
 /*!

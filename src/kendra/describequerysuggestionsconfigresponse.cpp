@@ -56,8 +56,7 @@ DescribeQuerySuggestionsConfigResponse::DescribeQuerySuggestionsConfigResponse(
  */
 const DescribeQuerySuggestionsConfigRequest * DescribeQuerySuggestionsConfigResponse::request() const
 {
-    Q_D(const DescribeQuerySuggestionsConfigResponse);
-    return static_cast<const DescribeQuerySuggestionsConfigRequest *>(d->request);
+    return static_cast<const DescribeQuerySuggestionsConfigRequest *>(kendraResponse::request());
 }
 
 /*!

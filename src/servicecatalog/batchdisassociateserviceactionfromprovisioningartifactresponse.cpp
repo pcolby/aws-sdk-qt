@@ -61,8 +61,7 @@ BatchDisassociateServiceActionFromProvisioningArtifactResponse::BatchDisassociat
  */
 const BatchDisassociateServiceActionFromProvisioningArtifactRequest * BatchDisassociateServiceActionFromProvisioningArtifactResponse::request() const
 {
-    Q_D(const BatchDisassociateServiceActionFromProvisioningArtifactResponse);
-    return static_cast<const BatchDisassociateServiceActionFromProvisioningArtifactRequest *>(d->request);
+    return static_cast<const BatchDisassociateServiceActionFromProvisioningArtifactRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

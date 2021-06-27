@@ -77,6 +77,7 @@ public:
 
 protected:
     /// @cond internal
+    DevOpsGuruRequestPrivate * const d_ptr; ///< Internal d-pointer.
     DevOpsGuruRequest(DevOpsGuruRequestPrivate * const d);
     /// @endcond
 

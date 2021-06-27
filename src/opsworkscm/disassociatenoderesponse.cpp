@@ -134,8 +134,7 @@ DisassociateNodeResponse::DisassociateNodeResponse(
  */
 const DisassociateNodeRequest * DisassociateNodeResponse::request() const
 {
-    Q_D(const DisassociateNodeResponse);
-    return static_cast<const DisassociateNodeRequest *>(d->request);
+    return static_cast<const DisassociateNodeRequest *>(OpsWorksCMResponse::request());
 }
 
 /*!

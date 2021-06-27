@@ -59,8 +59,7 @@ PublishMetricsResponse::PublishMetricsResponse(
  */
 const PublishMetricsRequest * PublishMetricsResponse::request() const
 {
-    Q_D(const PublishMetricsResponse);
-    return static_cast<const PublishMetricsRequest *>(d->request);
+    return static_cast<const PublishMetricsRequest *>(MwaaResponse::request());
 }
 
 /*!

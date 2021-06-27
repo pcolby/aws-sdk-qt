@@ -124,8 +124,7 @@ CreateCachediSCSIVolumeResponse::CreateCachediSCSIVolumeResponse(
  */
 const CreateCachediSCSIVolumeRequest * CreateCachediSCSIVolumeResponse::request() const
 {
-    Q_D(const CreateCachediSCSIVolumeResponse);
-    return static_cast<const CreateCachediSCSIVolumeRequest *>(d->request);
+    return static_cast<const CreateCachediSCSIVolumeRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

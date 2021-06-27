@@ -87,8 +87,7 @@ RequestSpotInstancesResponse::RequestSpotInstancesResponse(
  */
 const RequestSpotInstancesRequest * RequestSpotInstancesResponse::request() const
 {
-    Q_D(const RequestSpotInstancesResponse);
-    return static_cast<const RequestSpotInstancesRequest *>(d->request);
+    return static_cast<const RequestSpotInstancesRequest *>(Ec2Response::request());
 }
 
 /*!

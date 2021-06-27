@@ -60,8 +60,7 @@ SetTagsForResourceResponse::SetTagsForResourceResponse(
  */
 const SetTagsForResourceRequest * SetTagsForResourceResponse::request() const
 {
-    Q_D(const SetTagsForResourceResponse);
-    return static_cast<const SetTagsForResourceRequest *>(d->request);
+    return static_cast<const SetTagsForResourceRequest *>(InspectorResponse::request());
 }
 
 /*!

@@ -115,8 +115,7 @@ ListBuildsResponse::ListBuildsResponse(
  */
 const ListBuildsRequest * ListBuildsResponse::request() const
 {
-    Q_D(const ListBuildsResponse);
-    return static_cast<const ListBuildsRequest *>(d->request);
+    return static_cast<const ListBuildsRequest *>(GameLiftResponse::request());
 }
 
 /*!

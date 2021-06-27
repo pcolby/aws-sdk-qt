@@ -88,8 +88,7 @@ GetConfigurationSetResponse::GetConfigurationSetResponse(
  */
 const GetConfigurationSetRequest * GetConfigurationSetResponse::request() const
 {
-    Q_D(const GetConfigurationSetResponse);
-    return static_cast<const GetConfigurationSetRequest *>(d->request);
+    return static_cast<const GetConfigurationSetRequest *>(Sesv2Response::request());
 }
 
 /*!

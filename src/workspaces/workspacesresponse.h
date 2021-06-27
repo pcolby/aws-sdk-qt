@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    WorkSpacesResponsePrivate * const d_ptr; ///< Internal d-pointer.
     WorkSpacesResponse(WorkSpacesResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

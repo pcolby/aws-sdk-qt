@@ -20,19 +20,20 @@
 #ifndef QTAWS_PRICINGCLIENT_P_H
 #define QTAWS_PRICINGCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace Pricing {
 
 class PricingClient;
 
-class PricingClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class PricingClientPrivate {
 
 public:
     PricingClientPrivate(PricingClient * const q);
+
+protected:
+    PricingClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(PricingClient)

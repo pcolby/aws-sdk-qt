@@ -75,8 +75,7 @@ ListStoredQueriesResponse::ListStoredQueriesResponse(
  */
 const ListStoredQueriesRequest * ListStoredQueriesResponse::request() const
 {
-    Q_D(const ListStoredQueriesResponse);
-    return static_cast<const ListStoredQueriesRequest *>(d->request);
+    return static_cast<const ListStoredQueriesRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

@@ -75,8 +75,7 @@ DescribeIdentityPoolUsageResponse::DescribeIdentityPoolUsageResponse(
  */
 const DescribeIdentityPoolUsageRequest * DescribeIdentityPoolUsageResponse::request() const
 {
-    Q_D(const DescribeIdentityPoolUsageResponse);
-    return static_cast<const DescribeIdentityPoolUsageRequest *>(d->request);
+    return static_cast<const DescribeIdentityPoolUsageRequest *>(CognitoSyncResponse::request());
 }
 
 /*!

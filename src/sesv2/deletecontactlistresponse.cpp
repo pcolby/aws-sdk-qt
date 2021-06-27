@@ -88,8 +88,7 @@ DeleteContactListResponse::DeleteContactListResponse(
  */
 const DeleteContactListRequest * DeleteContactListResponse::request() const
 {
-    Q_D(const DeleteContactListResponse);
-    return static_cast<const DeleteContactListRequest *>(d->request);
+    return static_cast<const DeleteContactListRequest *>(Sesv2Response::request());
 }
 
 /*!

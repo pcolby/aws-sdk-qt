@@ -79,8 +79,7 @@ UpdateUserHierarchyStructureResponse::UpdateUserHierarchyStructureResponse(
  */
 const UpdateUserHierarchyStructureRequest * UpdateUserHierarchyStructureResponse::request() const
 {
-    Q_D(const UpdateUserHierarchyStructureResponse);
-    return static_cast<const UpdateUserHierarchyStructureRequest *>(d->request);
+    return static_cast<const UpdateUserHierarchyStructureRequest *>(ConnectResponse::request());
 }
 
 /*!

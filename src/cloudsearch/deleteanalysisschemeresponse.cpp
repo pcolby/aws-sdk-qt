@@ -66,8 +66,7 @@ DeleteAnalysisSchemeResponse::DeleteAnalysisSchemeResponse(
  */
 const DeleteAnalysisSchemeRequest * DeleteAnalysisSchemeResponse::request() const
 {
-    Q_D(const DeleteAnalysisSchemeResponse);
-    return static_cast<const DeleteAnalysisSchemeRequest *>(d->request);
+    return static_cast<const DeleteAnalysisSchemeRequest *>(CloudSearchResponse::request());
 }
 
 /*!

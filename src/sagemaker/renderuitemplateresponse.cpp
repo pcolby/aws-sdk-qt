@@ -70,8 +70,7 @@ RenderUiTemplateResponse::RenderUiTemplateResponse(
  */
 const RenderUiTemplateRequest * RenderUiTemplateResponse::request() const
 {
-    Q_D(const RenderUiTemplateResponse);
-    return static_cast<const RenderUiTemplateRequest *>(d->request);
+    return static_cast<const RenderUiTemplateRequest *>(SageMakerResponse::request());
 }
 
 /*!

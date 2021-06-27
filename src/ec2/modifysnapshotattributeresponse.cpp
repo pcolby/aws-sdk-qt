@@ -87,8 +87,7 @@ ModifySnapshotAttributeResponse::ModifySnapshotAttributeResponse(
  */
 const ModifySnapshotAttributeRequest * ModifySnapshotAttributeResponse::request() const
 {
-    Q_D(const ModifySnapshotAttributeResponse);
-    return static_cast<const ModifySnapshotAttributeRequest *>(d->request);
+    return static_cast<const ModifySnapshotAttributeRequest *>(Ec2Response::request());
 }
 
 /*!

@@ -81,7 +81,7 @@ namespace GlueDataBrew {
  * Constructs a GlueDataBrewRequest object for GlueDataBrew \a action.
  */
 GlueDataBrewRequest::GlueDataBrewRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new GlueDataBrewRequestPrivate(action, this))
+    : d_ptr(new GlueDataBrewRequestPrivate(action, this))
 {
 
 }
@@ -90,7 +90,8 @@ GlueDataBrewRequest::GlueDataBrewRequest(const Action action)
  * Constructs a copy of \a other.
  */
 GlueDataBrewRequest::GlueDataBrewRequest(const GlueDataBrewRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new GlueDataBrewRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new GlueDataBrewRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +114,7 @@ GlueDataBrewRequest& GlueDataBrewRequest::operator=(const GlueDataBrewRequest &o
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from GlueDataBrewRequestPrivate.
  */
-GlueDataBrewRequest::GlueDataBrewRequest(GlueDataBrewRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+GlueDataBrewRequest::GlueDataBrewRequest(GlueDataBrewRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -282,7 +283,7 @@ QNetworkRequest GlueDataBrewRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 GlueDataBrewRequestPrivate::GlueDataBrewRequestPrivate(const GlueDataBrewRequest::Action action, GlueDataBrewRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -297,8 +298,8 @@ GlueDataBrewRequestPrivate::GlueDataBrewRequestPrivate(const GlueDataBrewRequest
  */
 GlueDataBrewRequestPrivate::GlueDataBrewRequestPrivate(const GlueDataBrewRequestPrivate &other,
                                      GlueDataBrewRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

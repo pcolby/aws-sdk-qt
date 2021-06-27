@@ -62,8 +62,7 @@ DeleteSshPublicKeyResponse::DeleteSshPublicKeyResponse(
  */
 const DeleteSshPublicKeyRequest * DeleteSshPublicKeyResponse::request() const
 {
-    Q_D(const DeleteSshPublicKeyResponse);
-    return static_cast<const DeleteSshPublicKeyRequest *>(d->request);
+    return static_cast<const DeleteSshPublicKeyRequest *>(TransferResponse::request());
 }
 
 /*!

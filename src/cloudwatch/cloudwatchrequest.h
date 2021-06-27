@@ -92,6 +92,7 @@ public:
 
 protected:
     /// @cond internal
+    CloudWatchRequestPrivate * const d_ptr; ///< Internal d-pointer.
     CloudWatchRequest(CloudWatchRequestPrivate * const d);
     /// @endcond
 

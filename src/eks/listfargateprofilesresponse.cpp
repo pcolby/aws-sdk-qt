@@ -65,8 +65,7 @@ ListFargateProfilesResponse::ListFargateProfilesResponse(
  */
 const ListFargateProfilesRequest * ListFargateProfilesResponse::request() const
 {
-    Q_D(const ListFargateProfilesResponse);
-    return static_cast<const ListFargateProfilesRequest *>(d->request);
+    return static_cast<const ListFargateProfilesRequest *>(EksResponse::request());
 }
 
 /*!

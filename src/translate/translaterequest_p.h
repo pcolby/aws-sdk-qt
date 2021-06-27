@@ -20,15 +20,12 @@
 #ifndef QTAWS_TRANSLATEREQUEST_P_H
 #define QTAWS_TRANSLATEREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "translaterequest.h"
-
 namespace QtAws {
 namespace Translate {
 
 class TranslateRequest;
 
-class TranslateRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class TranslateRequestPrivate {
 
 public:
     TranslateRequest::Action action; ///< Translate action to be performed.
@@ -39,6 +36,9 @@ public:
     TranslateRequestPrivate(const TranslateRequestPrivate &other, TranslateRequest * const q);
 
     static QString toString(const TranslateRequest::Action &action);
+
+protected:
+    TranslateRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(TranslateRequest)

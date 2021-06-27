@@ -20,14 +20,12 @@
 #ifndef QTAWS_APIGATEWAYV2RESPONSE_P_H
 #define QTAWS_APIGATEWAYV2RESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace ApiGatewayV2 {
 
 class ApiGatewayV2Response;
 
-class ApiGatewayV2ResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class ApiGatewayV2ResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    ApiGatewayV2Response * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ApiGatewayV2Response)

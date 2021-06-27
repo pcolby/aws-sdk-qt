@@ -66,8 +66,7 @@ CreateConfigurationSetEventDestinationResponse::CreateConfigurationSetEventDesti
  */
 const CreateConfigurationSetEventDestinationRequest * CreateConfigurationSetEventDestinationResponse::request() const
 {
-    Q_D(const CreateConfigurationSetEventDestinationResponse);
-    return static_cast<const CreateConfigurationSetEventDestinationRequest *>(d->request);
+    return static_cast<const CreateConfigurationSetEventDestinationRequest *>(SesResponse::request());
 }
 
 /*!

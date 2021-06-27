@@ -106,7 +106,7 @@ namespace Route53 {
  * Constructs a Route53Request object for Route53 \a action.
  */
 Route53Request::Route53Request(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new Route53RequestPrivate(action, this))
+    : d_ptr(new Route53RequestPrivate(action, this))
 {
 
 }
@@ -115,7 +115,8 @@ Route53Request::Route53Request(const Action action)
  * Constructs a copy of \a other.
  */
 Route53Request::Route53Request(const Route53Request &other)
-    : QtAws::Core::AwsAbstractRequest(new Route53RequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new Route53RequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -138,7 +139,7 @@ Route53Request& Route53Request::operator=(const Route53Request &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from Route53RequestPrivate.
  */
-Route53Request::Route53Request(Route53RequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+Route53Request::Route53Request(Route53RequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -307,7 +308,7 @@ QNetworkRequest Route53Request::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 Route53RequestPrivate::Route53RequestPrivate(const Route53Request::Action action, Route53Request * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -322,8 +323,8 @@ Route53RequestPrivate::Route53RequestPrivate(const Route53Request::Action action
  */
 Route53RequestPrivate::Route53RequestPrivate(const Route53RequestPrivate &other,
                                      Route53Request * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

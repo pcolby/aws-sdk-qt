@@ -73,8 +73,7 @@ DescribePipelinesResponse::DescribePipelinesResponse(
  */
 const DescribePipelinesRequest * DescribePipelinesResponse::request() const
 {
-    Q_D(const DescribePipelinesResponse);
-    return static_cast<const DescribePipelinesRequest *>(d->request);
+    return static_cast<const DescribePipelinesRequest *>(DataPipelineResponse::request());
 }
 
 /*!

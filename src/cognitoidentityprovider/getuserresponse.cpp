@@ -66,8 +66,7 @@ GetUserResponse::GetUserResponse(
  */
 const GetUserRequest * GetUserResponse::request() const
 {
-    Q_D(const GetUserResponse);
-    return static_cast<const GetUserRequest *>(d->request);
+    return static_cast<const GetUserRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

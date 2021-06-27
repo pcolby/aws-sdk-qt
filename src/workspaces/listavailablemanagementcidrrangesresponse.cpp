@@ -58,8 +58,7 @@ ListAvailableManagementCidrRangesResponse::ListAvailableManagementCidrRangesResp
  */
 const ListAvailableManagementCidrRangesRequest * ListAvailableManagementCidrRangesResponse::request() const
 {
-    Q_D(const ListAvailableManagementCidrRangesResponse);
-    return static_cast<const ListAvailableManagementCidrRangesRequest *>(d->request);
+    return static_cast<const ListAvailableManagementCidrRangesRequest *>(WorkSpacesResponse::request());
 }
 
 /*!

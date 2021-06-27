@@ -60,8 +60,7 @@ UpdateIntegrationResponseResponse::UpdateIntegrationResponseResponse(
  */
 const UpdateIntegrationResponseRequest * UpdateIntegrationResponseResponse::request() const
 {
-    Q_D(const UpdateIntegrationResponseResponse);
-    return static_cast<const UpdateIntegrationResponseRequest *>(d->request);
+    return static_cast<const UpdateIntegrationResponseRequest *>(APIGatewayResponse::request());
 }
 
 /*!

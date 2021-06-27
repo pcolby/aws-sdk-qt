@@ -98,8 +98,7 @@ PutParameterResponse::PutParameterResponse(
  */
 const PutParameterRequest * PutParameterResponse::request() const
 {
-    Q_D(const PutParameterResponse);
-    return static_cast<const PutParameterRequest *>(d->request);
+    return static_cast<const PutParameterRequest *>(SsmResponse::request());
 }
 
 /*!

@@ -66,8 +66,7 @@ ListUsersInGroupResponse::ListUsersInGroupResponse(
  */
 const ListUsersInGroupRequest * ListUsersInGroupResponse::request() const
 {
-    Q_D(const ListUsersInGroupResponse);
-    return static_cast<const ListUsersInGroupRequest *>(d->request);
+    return static_cast<const ListUsersInGroupRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

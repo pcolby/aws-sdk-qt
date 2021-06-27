@@ -20,19 +20,20 @@
 #ifndef QTAWS_BUDGETSCLIENT_P_H
 #define QTAWS_BUDGETSCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace Budgets {
 
 class BudgetsClient;
 
-class BudgetsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class BudgetsClientPrivate {
 
 public:
     BudgetsClientPrivate(BudgetsClient * const q);
+
+protected:
+    BudgetsClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(BudgetsClient)

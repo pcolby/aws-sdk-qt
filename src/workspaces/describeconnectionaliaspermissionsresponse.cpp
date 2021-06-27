@@ -58,8 +58,7 @@ DescribeConnectionAliasPermissionsResponse::DescribeConnectionAliasPermissionsRe
  */
 const DescribeConnectionAliasPermissionsRequest * DescribeConnectionAliasPermissionsResponse::request() const
 {
-    Q_D(const DescribeConnectionAliasPermissionsResponse);
-    return static_cast<const DescribeConnectionAliasPermissionsRequest *>(d->request);
+    return static_cast<const DescribeConnectionAliasPermissionsRequest *>(WorkSpacesResponse::request());
 }
 
 /*!

@@ -66,8 +66,7 @@ UpdateFunctionEventInvokeConfigResponse::UpdateFunctionEventInvokeConfigResponse
  */
 const UpdateFunctionEventInvokeConfigRequest * UpdateFunctionEventInvokeConfigResponse::request() const
 {
-    Q_D(const UpdateFunctionEventInvokeConfigResponse);
-    return static_cast<const UpdateFunctionEventInvokeConfigRequest *>(d->request);
+    return static_cast<const UpdateFunctionEventInvokeConfigRequest *>(LambdaResponse::request());
 }
 
 /*!

@@ -75,8 +75,7 @@ DeletePlatformApplicationResponse::DeletePlatformApplicationResponse(
  */
 const DeletePlatformApplicationRequest * DeletePlatformApplicationResponse::request() const
 {
-    Q_D(const DeletePlatformApplicationResponse);
-    return static_cast<const DeletePlatformApplicationRequest *>(d->request);
+    return static_cast<const DeletePlatformApplicationRequest *>(SnsResponse::request());
 }
 
 /*!

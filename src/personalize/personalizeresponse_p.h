@@ -20,14 +20,12 @@
 #ifndef QTAWS_PERSONALIZERESPONSE_P_H
 #define QTAWS_PERSONALIZERESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace Personalize {
 
 class PersonalizeResponse;
 
-class PersonalizeResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class PersonalizeResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    PersonalizeResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(PersonalizeResponse)

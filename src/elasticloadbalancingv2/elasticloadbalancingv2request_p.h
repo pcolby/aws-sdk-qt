@@ -20,15 +20,12 @@
 #ifndef QTAWS_ELASTICLOADBALANCINGV2REQUEST_P_H
 #define QTAWS_ELASTICLOADBALANCINGV2REQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "elasticloadbalancingv2request.h"
-
 namespace QtAws {
 namespace ElasticLoadBalancingv2 {
 
 class ElasticLoadBalancingv2Request;
 
-class ElasticLoadBalancingv2RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ElasticLoadBalancingv2RequestPrivate {
 
 public:
     ElasticLoadBalancingv2Request::Action action; ///< ElasticLoadBalancingv2 action to be performed.
@@ -39,6 +36,9 @@ public:
     ElasticLoadBalancingv2RequestPrivate(const ElasticLoadBalancingv2RequestPrivate &other, ElasticLoadBalancingv2Request * const q);
 
     static QString toString(const ElasticLoadBalancingv2Request::Action &action);
+
+protected:
+    ElasticLoadBalancingv2Request * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ElasticLoadBalancingv2Request)

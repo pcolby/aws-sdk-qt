@@ -59,8 +59,7 @@ DescribeBackupVaultResponse::DescribeBackupVaultResponse(
  */
 const DescribeBackupVaultRequest * DescribeBackupVaultResponse::request() const
 {
-    Q_D(const DescribeBackupVaultResponse);
-    return static_cast<const DescribeBackupVaultRequest *>(d->request);
+    return static_cast<const DescribeBackupVaultRequest *>(BackupResponse::request());
 }
 
 /*!

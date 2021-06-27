@@ -139,6 +139,7 @@ public:
 
 protected:
     /// @cond internal
+    CloudFrontRequestPrivate * const d_ptr; ///< Internal d-pointer.
     CloudFrontRequest(CloudFrontRequestPrivate * const d);
     /// @endcond
 

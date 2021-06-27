@@ -55,8 +55,7 @@ StartFlowResponse::StartFlowResponse(
  */
 const StartFlowRequest * StartFlowResponse::request() const
 {
-    Q_D(const StartFlowResponse);
-    return static_cast<const StartFlowRequest *>(d->request);
+    return static_cast<const StartFlowRequest *>(MediaConnectResponse::request());
 }
 
 /*!

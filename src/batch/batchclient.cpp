@@ -110,16 +110,16 @@ BatchClient::BatchClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new BatchClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-08-10"),
+    QStringLiteral("batch"),
+    QStringLiteral("AWS Batch"),
+    QStringLiteral("batch"),
+    parent), d_ptr(new BatchClientPrivate(this))
 {
-    Q_D(BatchClient);
-    d->apiVersion = QStringLiteral("2016-08-10");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("batch");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Batch");
-    d->serviceName = QStringLiteral("batch");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -138,16 +138,16 @@ BatchClient::BatchClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new BatchClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-08-10"),
+    QStringLiteral("batch"),
+    QStringLiteral("AWS Batch"),
+    QStringLiteral("batch"),
+    parent), d_ptr(new BatchClientPrivate(this))
 {
-    Q_D(BatchClient);
-    d->apiVersion = QStringLiteral("2016-08-10");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("batch");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Batch");
-    d->serviceName = QStringLiteral("batch");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -525,10 +525,9 @@ UpdateJobQueueResponse * BatchClient::updateJobQueue(const UpdateJobQueueRequest
 /*!
  * Constructs a BatchClientPrivate object with public implementation \a q.
  */
-BatchClientPrivate::BatchClientPrivate(BatchClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+BatchClientPrivate::BatchClientPrivate(BatchClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace Batch

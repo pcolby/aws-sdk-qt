@@ -58,8 +58,7 @@ GetActionResponse::GetActionResponse(
  */
 const GetActionRequest * GetActionResponse::request() const
 {
-    Q_D(const GetActionResponse);
-    return static_cast<const GetActionRequest *>(d->request);
+    return static_cast<const GetActionRequest *>(FisResponse::request());
 }
 
 /*!

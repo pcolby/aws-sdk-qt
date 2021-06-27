@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    DetectiveResponsePrivate * const d_ptr; ///< Internal d-pointer.
     DetectiveResponse(DetectiveResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

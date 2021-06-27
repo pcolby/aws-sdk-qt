@@ -58,8 +58,7 @@ StopTrainingDocumentClassifierResponse::StopTrainingDocumentClassifierResponse(
  */
 const StopTrainingDocumentClassifierRequest * StopTrainingDocumentClassifierResponse::request() const
 {
-    Q_D(const StopTrainingDocumentClassifierResponse);
-    return static_cast<const StopTrainingDocumentClassifierRequest *>(d->request);
+    return static_cast<const StopTrainingDocumentClassifierRequest *>(ComprehendResponse::request());
 }
 
 /*!

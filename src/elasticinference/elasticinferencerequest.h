@@ -62,6 +62,7 @@ public:
 
 protected:
     /// @cond internal
+    ElasticInferenceRequestPrivate * const d_ptr; ///< Internal d-pointer.
     ElasticInferenceRequest(ElasticInferenceRequestPrivate * const d);
     /// @endcond
 

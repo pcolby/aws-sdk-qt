@@ -55,8 +55,7 @@ PutBucketReplicationResponse::PutBucketReplicationResponse(
  */
 const PutBucketReplicationRequest * PutBucketReplicationResponse::request() const
 {
-    Q_D(const PutBucketReplicationResponse);
-    return static_cast<const PutBucketReplicationRequest *>(d->request);
+    return static_cast<const PutBucketReplicationRequest *>(S3Response::request());
 }
 
 /*!

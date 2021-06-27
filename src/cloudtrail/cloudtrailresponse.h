@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    CloudTrailResponsePrivate * const d_ptr; ///< Internal d-pointer.
     CloudTrailResponse(CloudTrailResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

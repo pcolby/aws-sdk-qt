@@ -79,6 +79,7 @@ public:
 
 protected:
     /// @cond internal
+    SfnRequestPrivate * const d_ptr; ///< Internal d-pointer.
     SfnRequest(SfnRequestPrivate * const d);
     /// @endcond
 

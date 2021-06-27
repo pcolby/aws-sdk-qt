@@ -55,8 +55,7 @@ CreateInstanceAccessControlAttributeConfigurationResponse::CreateInstanceAccessC
  */
 const CreateInstanceAccessControlAttributeConfigurationRequest * CreateInstanceAccessControlAttributeConfigurationResponse::request() const
 {
-    Q_D(const CreateInstanceAccessControlAttributeConfigurationResponse);
-    return static_cast<const CreateInstanceAccessControlAttributeConfigurationRequest *>(d->request);
+    return static_cast<const CreateInstanceAccessControlAttributeConfigurationRequest *>(SSOAdminResponse::request());
 }
 
 /*!

@@ -68,8 +68,7 @@ BatchPutAttributesResponse::BatchPutAttributesResponse(
  */
 const BatchPutAttributesRequest * BatchPutAttributesResponse::request() const
 {
-    Q_D(const BatchPutAttributesResponse);
-    return static_cast<const BatchPutAttributesRequest *>(d->request);
+    return static_cast<const BatchPutAttributesRequest *>(SimpleDBResponse::request());
 }
 
 /*!

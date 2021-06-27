@@ -75,8 +75,7 @@ PutConfigRuleResponse::PutConfigRuleResponse(
  */
 const PutConfigRuleRequest * PutConfigRuleResponse::request() const
 {
-    Q_D(const PutConfigRuleResponse);
-    return static_cast<const PutConfigRuleRequest *>(d->request);
+    return static_cast<const PutConfigRuleRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

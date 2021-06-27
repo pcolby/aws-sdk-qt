@@ -62,8 +62,7 @@ UpdateOpenIDConnectProviderThumbprintResponse::UpdateOpenIDConnectProviderThumbp
  */
 const UpdateOpenIDConnectProviderThumbprintRequest * UpdateOpenIDConnectProviderThumbprintResponse::request() const
 {
-    Q_D(const UpdateOpenIDConnectProviderThumbprintResponse);
-    return static_cast<const UpdateOpenIDConnectProviderThumbprintRequest *>(d->request);
+    return static_cast<const UpdateOpenIDConnectProviderThumbprintRequest *>(IamResponse::request());
 }
 
 /*!

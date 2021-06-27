@@ -58,8 +58,7 @@ CreatePipelineResponse::CreatePipelineResponse(
  */
 const CreatePipelineRequest * CreatePipelineResponse::request() const
 {
-    Q_D(const CreatePipelineResponse);
-    return static_cast<const CreatePipelineRequest *>(d->request);
+    return static_cast<const CreatePipelineRequest *>(ElasticTranscoderResponse::request());
 }
 
 /*!

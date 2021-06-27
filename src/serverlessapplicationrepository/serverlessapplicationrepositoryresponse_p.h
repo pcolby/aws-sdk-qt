@@ -20,14 +20,12 @@
 #ifndef QTAWS_SERVERLESSAPPLICATIONREPOSITORYRESPONSE_P_H
 #define QTAWS_SERVERLESSAPPLICATIONREPOSITORYRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace ServerlessApplicationRepository {
 
 class ServerlessApplicationRepositoryResponse;
 
-class ServerlessApplicationRepositoryResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class ServerlessApplicationRepositoryResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    ServerlessApplicationRepositoryResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ServerlessApplicationRepositoryResponse)

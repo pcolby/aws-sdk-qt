@@ -64,8 +64,7 @@ DescribeCodeCoveragesResponse::DescribeCodeCoveragesResponse(
  */
 const DescribeCodeCoveragesRequest * DescribeCodeCoveragesResponse::request() const
 {
-    Q_D(const DescribeCodeCoveragesResponse);
-    return static_cast<const DescribeCodeCoveragesRequest *>(d->request);
+    return static_cast<const DescribeCodeCoveragesRequest *>(CodeBuildResponse::request());
 }
 
 /*!

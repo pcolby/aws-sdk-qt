@@ -98,8 +98,7 @@ DescribeAppInstanceResponse::DescribeAppInstanceResponse(
  */
 const DescribeAppInstanceRequest * DescribeAppInstanceResponse::request() const
 {
-    Q_D(const DescribeAppInstanceResponse);
-    return static_cast<const DescribeAppInstanceRequest *>(d->request);
+    return static_cast<const DescribeAppInstanceRequest *>(ChimeResponse::request());
 }
 
 /*!

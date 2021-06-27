@@ -62,8 +62,7 @@ DeleteRoleResponse::DeleteRoleResponse(
  */
 const DeleteRoleRequest * DeleteRoleResponse::request() const
 {
-    Q_D(const DeleteRoleResponse);
-    return static_cast<const DeleteRoleRequest *>(d->request);
+    return static_cast<const DeleteRoleRequest *>(IamResponse::request());
 }
 
 /*!

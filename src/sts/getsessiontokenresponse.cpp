@@ -61,8 +61,7 @@ GetSessionTokenResponse::GetSessionTokenResponse(
  */
 const GetSessionTokenRequest * GetSessionTokenResponse::request() const
 {
-    Q_D(const GetSessionTokenResponse);
-    return static_cast<const GetSessionTokenRequest *>(d->request);
+    return static_cast<const GetSessionTokenRequest *>(StsResponse::request());
 }
 
 /*!

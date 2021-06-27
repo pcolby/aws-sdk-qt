@@ -89,8 +89,7 @@ UpdateResourceResponse::UpdateResourceResponse(
  */
 const UpdateResourceRequest * UpdateResourceResponse::request() const
 {
-    Q_D(const UpdateResourceResponse);
-    return static_cast<const UpdateResourceRequest *>(d->request);
+    return static_cast<const UpdateResourceRequest *>(WorkMailResponse::request());
 }
 
 /*!

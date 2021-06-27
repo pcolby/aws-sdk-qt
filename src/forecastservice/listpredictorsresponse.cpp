@@ -56,8 +56,7 @@ ListPredictorsResponse::ListPredictorsResponse(
  */
 const ListPredictorsRequest * ListPredictorsResponse::request() const
 {
-    Q_D(const ListPredictorsResponse);
-    return static_cast<const ListPredictorsRequest *>(d->request);
+    return static_cast<const ListPredictorsRequest *>(ForecastServiceResponse::request());
 }
 
 /*!

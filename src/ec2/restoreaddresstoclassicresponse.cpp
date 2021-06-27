@@ -87,8 +87,7 @@ RestoreAddressToClassicResponse::RestoreAddressToClassicResponse(
  */
 const RestoreAddressToClassicRequest * RestoreAddressToClassicResponse::request() const
 {
-    Q_D(const RestoreAddressToClassicResponse);
-    return static_cast<const RestoreAddressToClassicRequest *>(d->request);
+    return static_cast<const RestoreAddressToClassicRequest *>(Ec2Response::request());
 }
 
 /*!

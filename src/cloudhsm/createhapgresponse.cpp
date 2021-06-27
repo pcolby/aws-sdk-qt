@@ -67,8 +67,7 @@ CreateHapgResponse::CreateHapgResponse(
  */
 const CreateHapgRequest * CreateHapgResponse::request() const
 {
-    Q_D(const CreateHapgResponse);
-    return static_cast<const CreateHapgRequest *>(d->request);
+    return static_cast<const CreateHapgRequest *>(CloudHSMResponse::request());
 }
 
 /*!

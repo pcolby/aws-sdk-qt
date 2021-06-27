@@ -87,8 +87,7 @@ AssociateSubnetCidrBlockResponse::AssociateSubnetCidrBlockResponse(
  */
 const AssociateSubnetCidrBlockRequest * AssociateSubnetCidrBlockResponse::request() const
 {
-    Q_D(const AssociateSubnetCidrBlockResponse);
-    return static_cast<const AssociateSubnetCidrBlockRequest *>(d->request);
+    return static_cast<const AssociateSubnetCidrBlockRequest *>(Ec2Response::request());
 }
 
 /*!

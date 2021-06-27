@@ -119,8 +119,7 @@ DescribeDBParametersResponse::DescribeDBParametersResponse(
  */
 const DescribeDBParametersRequest * DescribeDBParametersResponse::request() const
 {
-    Q_D(const DescribeDBParametersResponse);
-    return static_cast<const DescribeDBParametersRequest *>(d->request);
+    return static_cast<const DescribeDBParametersRequest *>(RdsResponse::request());
 }
 
 /*!

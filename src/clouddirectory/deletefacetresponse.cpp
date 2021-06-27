@@ -63,8 +63,7 @@ DeleteFacetResponse::DeleteFacetResponse(
  */
 const DeleteFacetRequest * DeleteFacetResponse::request() const
 {
-    Q_D(const DeleteFacetResponse);
-    return static_cast<const DeleteFacetRequest *>(d->request);
+    return static_cast<const DeleteFacetRequest *>(CloudDirectoryResponse::request());
 }
 
 /*!

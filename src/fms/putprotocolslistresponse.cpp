@@ -67,8 +67,7 @@ PutProtocolsListResponse::PutProtocolsListResponse(
  */
 const PutProtocolsListRequest * PutProtocolsListResponse::request() const
 {
-    Q_D(const PutProtocolsListResponse);
-    return static_cast<const PutProtocolsListRequest *>(d->request);
+    return static_cast<const PutProtocolsListRequest *>(FmsResponse::request());
 }
 
 /*!

@@ -98,8 +98,7 @@ RegisterTargetWithMaintenanceWindowResponse::RegisterTargetWithMaintenanceWindow
  */
 const RegisterTargetWithMaintenanceWindowRequest * RegisterTargetWithMaintenanceWindowResponse::request() const
 {
-    Q_D(const RegisterTargetWithMaintenanceWindowResponse);
-    return static_cast<const RegisterTargetWithMaintenanceWindowRequest *>(d->request);
+    return static_cast<const RegisterTargetWithMaintenanceWindowRequest *>(SsmResponse::request());
 }
 
 /*!

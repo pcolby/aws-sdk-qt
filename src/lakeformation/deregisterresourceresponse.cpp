@@ -58,8 +58,7 @@ DeregisterResourceResponse::DeregisterResourceResponse(
  */
 const DeregisterResourceRequest * DeregisterResourceResponse::request() const
 {
-    Q_D(const DeregisterResourceResponse);
-    return static_cast<const DeregisterResourceRequest *>(d->request);
+    return static_cast<const DeregisterResourceRequest *>(LakeFormationResponse::request());
 }
 
 /*!

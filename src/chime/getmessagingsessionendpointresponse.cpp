@@ -98,8 +98,7 @@ GetMessagingSessionEndpointResponse::GetMessagingSessionEndpointResponse(
  */
 const GetMessagingSessionEndpointRequest * GetMessagingSessionEndpointResponse::request() const
 {
-    Q_D(const GetMessagingSessionEndpointResponse);
-    return static_cast<const GetMessagingSessionEndpointRequest *>(d->request);
+    return static_cast<const GetMessagingSessionEndpointRequest *>(ChimeResponse::request());
 }
 
 /*!

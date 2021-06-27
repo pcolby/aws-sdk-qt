@@ -74,8 +74,7 @@ ExecuteTransactionResponse::ExecuteTransactionResponse(
  */
 const ExecuteTransactionRequest * ExecuteTransactionResponse::request() const
 {
-    Q_D(const ExecuteTransactionResponse);
-    return static_cast<const ExecuteTransactionRequest *>(d->request);
+    return static_cast<const ExecuteTransactionRequest *>(DynamoDBResponse::request());
 }
 
 /*!

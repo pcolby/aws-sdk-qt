@@ -119,8 +119,7 @@ DescribeInstallationMediaResponse::DescribeInstallationMediaResponse(
  */
 const DescribeInstallationMediaRequest * DescribeInstallationMediaResponse::request() const
 {
-    Q_D(const DescribeInstallationMediaResponse);
-    return static_cast<const DescribeInstallationMediaRequest *>(d->request);
+    return static_cast<const DescribeInstallationMediaRequest *>(RdsResponse::request());
 }
 
 /*!

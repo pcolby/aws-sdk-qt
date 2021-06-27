@@ -72,8 +72,7 @@ UpdateClusterSettingsResponse::UpdateClusterSettingsResponse(
  */
 const UpdateClusterSettingsRequest * UpdateClusterSettingsResponse::request() const
 {
-    Q_D(const UpdateClusterSettingsResponse);
-    return static_cast<const UpdateClusterSettingsRequest *>(d->request);
+    return static_cast<const UpdateClusterSettingsRequest *>(EcsResponse::request());
 }
 
 /*!

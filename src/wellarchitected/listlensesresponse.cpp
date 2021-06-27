@@ -62,8 +62,7 @@ ListLensesResponse::ListLensesResponse(
  */
 const ListLensesRequest * ListLensesResponse::request() const
 {
-    Q_D(const ListLensesResponse);
-    return static_cast<const ListLensesRequest *>(d->request);
+    return static_cast<const ListLensesRequest *>(WellArchitectedResponse::request());
 }
 
 /*!

@@ -80,6 +80,7 @@ public:
 
 protected:
     /// @cond internal
+    RamRequestPrivate * const d_ptr; ///< Internal d-pointer.
     RamRequest(RamRequestPrivate * const d);
     /// @endcond
 

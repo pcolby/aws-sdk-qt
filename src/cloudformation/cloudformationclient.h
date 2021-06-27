@@ -211,6 +211,12 @@ public slots:
     UpdateTerminationProtectionResponse * updateTerminationProtection(const UpdateTerminationProtectionRequest &request);
     ValidateTemplateResponse * validateTemplate(const ValidateTemplateRequest &request);
 
+protected:
+    /// @cond internal
+    CloudFormationClientPrivate * const d_ptr; ///< Internal d-pointer.
+    CloudFormationClient(CloudFormationClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(CloudFormationClient)
     Q_DISABLE_COPY(CloudFormationClient)

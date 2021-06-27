@@ -58,8 +58,7 @@ CreateInputResponse::CreateInputResponse(
  */
 const CreateInputRequest * CreateInputResponse::request() const
 {
-    Q_D(const CreateInputResponse);
-    return static_cast<const CreateInputRequest *>(d->request);
+    return static_cast<const CreateInputRequest *>(IoTEventsResponse::request());
 }
 
 /*!

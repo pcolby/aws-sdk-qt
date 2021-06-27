@@ -78,8 +78,7 @@ ListRuleNamesByTargetResponse::ListRuleNamesByTargetResponse(
  */
 const ListRuleNamesByTargetRequest * ListRuleNamesByTargetResponse::request() const
 {
-    Q_D(const ListRuleNamesByTargetResponse);
-    return static_cast<const ListRuleNamesByTargetRequest *>(d->request);
+    return static_cast<const ListRuleNamesByTargetRequest *>(EventBridgeResponse::request());
 }
 
 /*!

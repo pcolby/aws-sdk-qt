@@ -90,6 +90,7 @@ public:
 
 protected:
     /// @cond internal
+    CodeArtifactRequestPrivate * const d_ptr; ///< Internal d-pointer.
     CodeArtifactRequest(CodeArtifactRequestPrivate * const d);
     /// @endcond
 

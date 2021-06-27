@@ -91,6 +91,7 @@ public:
 
 protected:
     /// @cond internal
+    NetworkManagerRequestPrivate * const d_ptr; ///< Internal d-pointer.
     NetworkManagerRequest(NetworkManagerRequestPrivate * const d);
     /// @endcond
 

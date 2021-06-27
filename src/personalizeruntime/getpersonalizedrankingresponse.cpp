@@ -55,8 +55,7 @@ GetPersonalizedRankingResponse::GetPersonalizedRankingResponse(
  */
 const GetPersonalizedRankingRequest * GetPersonalizedRankingResponse::request() const
 {
-    Q_D(const GetPersonalizedRankingResponse);
-    return static_cast<const GetPersonalizedRankingRequest *>(d->request);
+    return static_cast<const GetPersonalizedRankingRequest *>(PersonalizeRuntimeResponse::request());
 }
 
 /*!

@@ -70,8 +70,7 @@ ListCodeRepositoriesResponse::ListCodeRepositoriesResponse(
  */
 const ListCodeRepositoriesRequest * ListCodeRepositoriesResponse::request() const
 {
-    Q_D(const ListCodeRepositoriesResponse);
-    return static_cast<const ListCodeRepositoriesRequest *>(d->request);
+    return static_cast<const ListCodeRepositoriesRequest *>(SageMakerResponse::request());
 }
 
 /*!

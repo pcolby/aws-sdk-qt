@@ -154,8 +154,7 @@ RevokeGrantResponse::RevokeGrantResponse(
  */
 const RevokeGrantRequest * RevokeGrantResponse::request() const
 {
-    Q_D(const RevokeGrantResponse);
-    return static_cast<const RevokeGrantRequest *>(d->request);
+    return static_cast<const RevokeGrantRequest *>(KmsResponse::request());
 }
 
 /*!

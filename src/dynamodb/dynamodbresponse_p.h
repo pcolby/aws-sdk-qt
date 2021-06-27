@@ -20,14 +20,12 @@
 #ifndef QTAWS_DYNAMODBRESPONSE_P_H
 #define QTAWS_DYNAMODBRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace DynamoDB {
 
 class DynamoDBResponse;
 
-class DynamoDBResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class DynamoDBResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    DynamoDBResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DynamoDBResponse)

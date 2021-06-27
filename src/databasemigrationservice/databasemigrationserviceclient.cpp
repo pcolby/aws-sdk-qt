@@ -180,16 +180,16 @@ DatabaseMigrationServiceClient::DatabaseMigrationServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new DatabaseMigrationServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-01-01"),
+    QStringLiteral("dms"),
+    QStringLiteral("AWS Database Migration Service"),
+    QStringLiteral("dms"),
+    parent), d_ptr(new DatabaseMigrationServiceClientPrivate(this))
 {
-    Q_D(DatabaseMigrationServiceClient);
-    d->apiVersion = QStringLiteral("2016-01-01");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("dms");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Database Migration Service");
-    d->serviceName = QStringLiteral("dms");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -208,16 +208,16 @@ DatabaseMigrationServiceClient::DatabaseMigrationServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new DatabaseMigrationServiceClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-01-01"),
+    QStringLiteral("dms"),
+    QStringLiteral("AWS Database Migration Service"),
+    QStringLiteral("dms"),
+    parent), d_ptr(new DatabaseMigrationServiceClientPrivate(this))
 {
-    Q_D(DatabaseMigrationServiceClient);
-    d->apiVersion = QStringLiteral("2016-01-01");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("dms");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Database Migration Service");
-    d->serviceName = QStringLiteral("dms");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -1089,10 +1089,9 @@ TestConnectionResponse * DatabaseMigrationServiceClient::testConnection(const Te
 /*!
  * Constructs a DatabaseMigrationServiceClientPrivate object with public implementation \a q.
  */
-DatabaseMigrationServiceClientPrivate::DatabaseMigrationServiceClientPrivate(DatabaseMigrationServiceClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+DatabaseMigrationServiceClientPrivate::DatabaseMigrationServiceClientPrivate(DatabaseMigrationServiceClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace DatabaseMigrationService

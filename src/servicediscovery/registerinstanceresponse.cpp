@@ -60,8 +60,7 @@ RegisterInstanceResponse::RegisterInstanceResponse(
  */
 const RegisterInstanceRequest * RegisterInstanceResponse::request() const
 {
-    Q_D(const RegisterInstanceResponse);
-    return static_cast<const RegisterInstanceRequest *>(d->request);
+    return static_cast<const RegisterInstanceRequest *>(ServiceDiscoveryResponse::request());
 }
 
 /*!

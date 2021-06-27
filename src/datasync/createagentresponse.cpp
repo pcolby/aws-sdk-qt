@@ -64,8 +64,7 @@ CreateAgentResponse::CreateAgentResponse(
  */
 const CreateAgentRequest * CreateAgentResponse::request() const
 {
-    Q_D(const CreateAgentResponse);
-    return static_cast<const CreateAgentRequest *>(d->request);
+    return static_cast<const CreateAgentRequest *>(DataSyncResponse::request());
 }
 
 /*!

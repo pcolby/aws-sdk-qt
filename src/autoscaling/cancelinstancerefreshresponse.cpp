@@ -68,8 +68,7 @@ CancelInstanceRefreshResponse::CancelInstanceRefreshResponse(
  */
 const CancelInstanceRefreshRequest * CancelInstanceRefreshResponse::request() const
 {
-    Q_D(const CancelInstanceRefreshResponse);
-    return static_cast<const CancelInstanceRefreshRequest *>(d->request);
+    return static_cast<const CancelInstanceRefreshRequest *>(AutoScalingResponse::request());
 }
 
 /*!

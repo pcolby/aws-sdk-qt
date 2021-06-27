@@ -155,6 +155,7 @@ public:
 
 protected:
     /// @cond internal
+    QuickSightRequestPrivate * const d_ptr; ///< Internal d-pointer.
     QuickSightRequest(QuickSightRequestPrivate * const d);
     /// @endcond
 

@@ -439,8 +439,7 @@ UpdateDefaultBranchResponse::UpdateDefaultBranchResponse(
  */
 const UpdateDefaultBranchRequest * UpdateDefaultBranchResponse::request() const
 {
-    Q_D(const UpdateDefaultBranchResponse);
-    return static_cast<const UpdateDefaultBranchRequest *>(d->request);
+    return static_cast<const UpdateDefaultBranchRequest *>(CodeCommitResponse::request());
 }
 
 /*!

@@ -98,8 +98,7 @@ StopAutomationExecutionResponse::StopAutomationExecutionResponse(
  */
 const StopAutomationExecutionRequest * StopAutomationExecutionResponse::request() const
 {
-    Q_D(const StopAutomationExecutionResponse);
-    return static_cast<const StopAutomationExecutionRequest *>(d->request);
+    return static_cast<const StopAutomationExecutionRequest *>(SsmResponse::request());
 }
 
 /*!

@@ -65,8 +65,7 @@ DisassociateIdentityProviderConfigResponse::DisassociateIdentityProviderConfigRe
  */
 const DisassociateIdentityProviderConfigRequest * DisassociateIdentityProviderConfigResponse::request() const
 {
-    Q_D(const DisassociateIdentityProviderConfigResponse);
-    return static_cast<const DisassociateIdentityProviderConfigRequest *>(d->request);
+    return static_cast<const DisassociateIdentityProviderConfigRequest *>(EksResponse::request());
 }
 
 /*!

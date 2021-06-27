@@ -57,8 +57,7 @@ UnclaimDeviceResponse::UnclaimDeviceResponse(
  */
 const UnclaimDeviceRequest * UnclaimDeviceResponse::request() const
 {
-    Q_D(const UnclaimDeviceResponse);
-    return static_cast<const UnclaimDeviceRequest *>(d->request);
+    return static_cast<const UnclaimDeviceRequest *>(IoT1ClickDevicesServiceResponse::request());
 }
 
 /*!

@@ -78,8 +78,7 @@ StartReplayResponse::StartReplayResponse(
  */
 const StartReplayRequest * StartReplayResponse::request() const
 {
-    Q_D(const StartReplayResponse);
-    return static_cast<const StartReplayRequest *>(d->request);
+    return static_cast<const StartReplayRequest *>(EventBridgeResponse::request());
 }
 
 /*!

@@ -20,15 +20,12 @@
 #ifndef QTAWS_SESREQUEST_P_H
 #define QTAWS_SESREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "sesrequest.h"
-
 namespace QtAws {
 namespace SES {
 
 class SesRequest;
 
-class SesRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SesRequestPrivate {
 
 public:
     SesRequest::Action action; ///< SES action to be performed.
@@ -39,6 +36,9 @@ public:
     SesRequestPrivate(const SesRequestPrivate &other, SesRequest * const q);
 
     static QString toString(const SesRequest::Action &action);
+
+protected:
+    SesRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SesRequest)

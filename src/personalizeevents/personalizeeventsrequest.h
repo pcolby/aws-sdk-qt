@@ -59,6 +59,7 @@ public:
 
 protected:
     /// @cond internal
+    PersonalizeEventsRequestPrivate * const d_ptr; ///< Internal d-pointer.
     PersonalizeEventsRequest(PersonalizeEventsRequestPrivate * const d);
     /// @endcond
 

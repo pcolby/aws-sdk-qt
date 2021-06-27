@@ -70,8 +70,7 @@ DescribeAppResponse::DescribeAppResponse(
  */
 const DescribeAppRequest * DescribeAppResponse::request() const
 {
-    Q_D(const DescribeAppResponse);
-    return static_cast<const DescribeAppRequest *>(d->request);
+    return static_cast<const DescribeAppRequest *>(SageMakerResponse::request());
 }
 
 /*!

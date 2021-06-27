@@ -90,6 +90,7 @@ public:
 
 protected:
     /// @cond internal
+    IoTAnalyticsRequestPrivate * const d_ptr; ///< Internal d-pointer.
     IoTAnalyticsRequest(IoTAnalyticsRequestPrivate * const d);
     /// @endcond
 

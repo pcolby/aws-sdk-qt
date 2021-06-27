@@ -172,6 +172,12 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateConfigurationSetEventDestinationResponse * updateConfigurationSetEventDestination(const UpdateConfigurationSetEventDestinationRequest &request);
 
+protected:
+    /// @cond internal
+    PinpointEmailClientPrivate * const d_ptr; ///< Internal d-pointer.
+    PinpointEmailClient(PinpointEmailClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(PinpointEmailClient)
     Q_DISABLE_COPY(PinpointEmailClient)

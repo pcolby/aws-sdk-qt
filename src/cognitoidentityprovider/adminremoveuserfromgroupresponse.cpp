@@ -66,8 +66,7 @@ AdminRemoveUserFromGroupResponse::AdminRemoveUserFromGroupResponse(
  */
 const AdminRemoveUserFromGroupRequest * AdminRemoveUserFromGroupResponse::request() const
 {
-    Q_D(const AdminRemoveUserFromGroupResponse);
-    return static_cast<const AdminRemoveUserFromGroupRequest *>(d->request);
+    return static_cast<const AdminRemoveUserFromGroupRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

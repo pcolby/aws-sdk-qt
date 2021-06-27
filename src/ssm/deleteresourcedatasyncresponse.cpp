@@ -98,8 +98,7 @@ DeleteResourceDataSyncResponse::DeleteResourceDataSyncResponse(
  */
 const DeleteResourceDataSyncRequest * DeleteResourceDataSyncResponse::request() const
 {
-    Q_D(const DeleteResourceDataSyncResponse);
-    return static_cast<const DeleteResourceDataSyncRequest *>(d->request);
+    return static_cast<const DeleteResourceDataSyncRequest *>(SsmResponse::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ UpdateWorkspaceImagePermissionResponse::UpdateWorkspaceImagePermissionResponse(
  */
 const UpdateWorkspaceImagePermissionRequest * UpdateWorkspaceImagePermissionResponse::request() const
 {
-    Q_D(const UpdateWorkspaceImagePermissionResponse);
-    return static_cast<const UpdateWorkspaceImagePermissionRequest *>(d->request);
+    return static_cast<const UpdateWorkspaceImagePermissionRequest *>(WorkSpacesResponse::request());
 }
 
 /*!

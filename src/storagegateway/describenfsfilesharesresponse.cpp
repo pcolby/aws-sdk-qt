@@ -124,8 +124,7 @@ DescribeNFSFileSharesResponse::DescribeNFSFileSharesResponse(
  */
 const DescribeNFSFileSharesRequest * DescribeNFSFileSharesResponse::request() const
 {
-    Q_D(const DescribeNFSFileSharesResponse);
-    return static_cast<const DescribeNFSFileSharesRequest *>(d->request);
+    return static_cast<const DescribeNFSFileSharesRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

@@ -20,15 +20,12 @@
 #ifndef QTAWS_TRANSFERREQUEST_P_H
 #define QTAWS_TRANSFERREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "transferrequest.h"
-
 namespace QtAws {
 namespace Transfer {
 
 class TransferRequest;
 
-class TransferRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class TransferRequestPrivate {
 
 public:
     TransferRequest::Action action; ///< Transfer action to be performed.
@@ -39,6 +36,9 @@ public:
     TransferRequestPrivate(const TransferRequestPrivate &other, TransferRequest * const q);
 
     static QString toString(const TransferRequest::Action &action);
+
+protected:
+    TransferRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(TransferRequest)

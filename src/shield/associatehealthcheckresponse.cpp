@@ -61,8 +61,7 @@ AssociateHealthCheckResponse::AssociateHealthCheckResponse(
  */
 const AssociateHealthCheckRequest * AssociateHealthCheckResponse::request() const
 {
-    Q_D(const AssociateHealthCheckResponse);
-    return static_cast<const AssociateHealthCheckRequest *>(d->request);
+    return static_cast<const AssociateHealthCheckRequest *>(ShieldResponse::request());
 }
 
 /*!

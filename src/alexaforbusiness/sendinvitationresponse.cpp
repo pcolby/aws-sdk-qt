@@ -62,8 +62,7 @@ SendInvitationResponse::SendInvitationResponse(
  */
 const SendInvitationRequest * SendInvitationResponse::request() const
 {
-    Q_D(const SendInvitationResponse);
-    return static_cast<const SendInvitationRequest *>(d->request);
+    return static_cast<const SendInvitationRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

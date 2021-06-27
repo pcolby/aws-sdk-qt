@@ -56,8 +56,7 @@ GetDNSSECResponse::GetDNSSECResponse(
  */
 const GetDNSSECRequest * GetDNSSECResponse::request() const
 {
-    Q_D(const GetDNSSECResponse);
-    return static_cast<const GetDNSSECRequest *>(d->request);
+    return static_cast<const GetDNSSECRequest *>(Route53Response::request());
 }
 
 /*!

@@ -124,6 +124,12 @@ public slots:
     UpdateDetectorModelResponse * updateDetectorModel(const UpdateDetectorModelRequest &request);
     UpdateInputResponse * updateInput(const UpdateInputRequest &request);
 
+protected:
+    /// @cond internal
+    IoTEventsClientPrivate * const d_ptr; ///< Internal d-pointer.
+    IoTEventsClient(IoTEventsClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(IoTEventsClient)
     Q_DISABLE_COPY(IoTEventsClient)

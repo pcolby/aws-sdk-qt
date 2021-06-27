@@ -56,8 +56,7 @@ UpdateBackendJobResponse::UpdateBackendJobResponse(
  */
 const UpdateBackendJobRequest * UpdateBackendJobResponse::request() const
 {
-    Q_D(const UpdateBackendJobResponse);
-    return static_cast<const UpdateBackendJobRequest *>(d->request);
+    return static_cast<const UpdateBackendJobRequest *>(AmplifyBackendResponse::request());
 }
 
 /*!

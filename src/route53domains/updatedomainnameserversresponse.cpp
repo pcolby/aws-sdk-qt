@@ -56,8 +56,7 @@ UpdateDomainNameserversResponse::UpdateDomainNameserversResponse(
  */
 const UpdateDomainNameserversRequest * UpdateDomainNameserversResponse::request() const
 {
-    Q_D(const UpdateDomainNameserversResponse);
-    return static_cast<const UpdateDomainNameserversRequest *>(d->request);
+    return static_cast<const UpdateDomainNameserversRequest *>(Route53DomainsResponse::request());
 }
 
 /*!

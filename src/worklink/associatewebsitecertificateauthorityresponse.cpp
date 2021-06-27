@@ -60,8 +60,7 @@ AssociateWebsiteCertificateAuthorityResponse::AssociateWebsiteCertificateAuthori
  */
 const AssociateWebsiteCertificateAuthorityRequest * AssociateWebsiteCertificateAuthorityResponse::request() const
 {
-    Q_D(const AssociateWebsiteCertificateAuthorityResponse);
-    return static_cast<const AssociateWebsiteCertificateAuthorityRequest *>(d->request);
+    return static_cast<const AssociateWebsiteCertificateAuthorityRequest *>(WorkLinkResponse::request());
 }
 
 /*!

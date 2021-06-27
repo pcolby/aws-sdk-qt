@@ -55,8 +55,7 @@ ListBucketMetricsConfigurationsResponse::ListBucketMetricsConfigurationsResponse
  */
 const ListBucketMetricsConfigurationsRequest * ListBucketMetricsConfigurationsResponse::request() const
 {
-    Q_D(const ListBucketMetricsConfigurationsResponse);
-    return static_cast<const ListBucketMetricsConfigurationsRequest *>(d->request);
+    return static_cast<const ListBucketMetricsConfigurationsRequest *>(S3Response::request());
 }
 
 /*!

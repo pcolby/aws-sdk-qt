@@ -69,8 +69,7 @@ FailoverGlobalReplicationGroupResponse::FailoverGlobalReplicationGroupResponse(
  */
 const FailoverGlobalReplicationGroupRequest * FailoverGlobalReplicationGroupResponse::request() const
 {
-    Q_D(const FailoverGlobalReplicationGroupResponse);
-    return static_cast<const FailoverGlobalReplicationGroupRequest *>(d->request);
+    return static_cast<const FailoverGlobalReplicationGroupRequest *>(ElastiCacheResponse::request());
 }
 
 /*!

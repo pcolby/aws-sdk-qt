@@ -75,8 +75,7 @@ ListDatastoresResponse::ListDatastoresResponse(
  */
 const ListDatastoresRequest * ListDatastoresResponse::request() const
 {
-    Q_D(const ListDatastoresResponse);
-    return static_cast<const ListDatastoresRequest *>(d->request);
+    return static_cast<const ListDatastoresRequest *>(IoTAnalyticsResponse::request());
 }
 
 /*!

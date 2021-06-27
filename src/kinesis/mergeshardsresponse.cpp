@@ -58,8 +58,7 @@ MergeShardsResponse::MergeShardsResponse(
  */
 const MergeShardsRequest * MergeShardsResponse::request() const
 {
-    Q_D(const MergeShardsResponse);
-    return static_cast<const MergeShardsRequest *>(d->request);
+    return static_cast<const MergeShardsRequest *>(KinesisResponse::request());
 }
 
 /*!

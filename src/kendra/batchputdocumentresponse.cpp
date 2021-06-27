@@ -56,8 +56,7 @@ BatchPutDocumentResponse::BatchPutDocumentResponse(
  */
 const BatchPutDocumentRequest * BatchPutDocumentResponse::request() const
 {
-    Q_D(const BatchPutDocumentResponse);
-    return static_cast<const BatchPutDocumentRequest *>(d->request);
+    return static_cast<const BatchPutDocumentRequest *>(kendraResponse::request());
 }
 
 /*!

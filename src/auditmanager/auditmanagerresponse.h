@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    AuditManagerResponsePrivate * const d_ptr; ///< Internal d-pointer.
     AuditManagerResponse(AuditManagerResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

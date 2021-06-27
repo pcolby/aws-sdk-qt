@@ -87,8 +87,7 @@ DisableImageDeprecationResponse::DisableImageDeprecationResponse(
  */
 const DisableImageDeprecationRequest * DisableImageDeprecationResponse::request() const
 {
-    Q_D(const DisableImageDeprecationResponse);
-    return static_cast<const DisableImageDeprecationRequest *>(d->request);
+    return static_cast<const DisableImageDeprecationRequest *>(Ec2Response::request());
 }
 
 /*!

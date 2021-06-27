@@ -75,8 +75,7 @@ DescribePendingAggregationRequestsResponse::DescribePendingAggregationRequestsRe
  */
 const DescribePendingAggregationRequestsRequest * DescribePendingAggregationRequestsResponse::request() const
 {
-    Q_D(const DescribePendingAggregationRequestsResponse);
-    return static_cast<const DescribePendingAggregationRequestsRequest *>(d->request);
+    return static_cast<const DescribePendingAggregationRequestsRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

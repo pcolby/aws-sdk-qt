@@ -60,8 +60,7 @@ UpdateBranchResponse::UpdateBranchResponse(
  */
 const UpdateBranchRequest * UpdateBranchResponse::request() const
 {
-    Q_D(const UpdateBranchResponse);
-    return static_cast<const UpdateBranchRequest *>(d->request);
+    return static_cast<const UpdateBranchRequest *>(AmplifyResponse::request());
 }
 
 /*!

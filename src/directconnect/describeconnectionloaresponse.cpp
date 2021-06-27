@@ -61,8 +61,7 @@ DescribeConnectionLoaResponse::DescribeConnectionLoaResponse(
  */
 const DescribeConnectionLoaRequest * DescribeConnectionLoaResponse::request() const
 {
-    Q_D(const DescribeConnectionLoaResponse);
-    return static_cast<const DescribeConnectionLoaRequest *>(d->request);
+    return static_cast<const DescribeConnectionLoaRequest *>(DirectConnectResponse::request());
 }
 
 /*!

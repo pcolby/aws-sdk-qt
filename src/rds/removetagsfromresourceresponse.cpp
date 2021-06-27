@@ -119,8 +119,7 @@ RemoveTagsFromResourceResponse::RemoveTagsFromResourceResponse(
  */
 const RemoveTagsFromResourceRequest * RemoveTagsFromResourceResponse::request() const
 {
-    Q_D(const RemoveTagsFromResourceResponse);
-    return static_cast<const RemoveTagsFromResourceRequest *>(d->request);
+    return static_cast<const RemoveTagsFromResourceRequest *>(RdsResponse::request());
 }
 
 /*!

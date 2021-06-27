@@ -91,6 +91,7 @@ public:
 
 protected:
     /// @cond internal
+    DataSyncRequestPrivate * const d_ptr; ///< Internal d-pointer.
     DataSyncRequest(DataSyncRequestPrivate * const d);
     /// @endcond
 

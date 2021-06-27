@@ -55,8 +55,7 @@ GetBucketAclResponse::GetBucketAclResponse(
  */
 const GetBucketAclRequest * GetBucketAclResponse::request() const
 {
-    Q_D(const GetBucketAclResponse);
-    return static_cast<const GetBucketAclRequest *>(d->request);
+    return static_cast<const GetBucketAclRequest *>(S3Response::request());
 }
 
 /*!

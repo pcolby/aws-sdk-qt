@@ -62,8 +62,7 @@ DeleteMountTargetResponse::DeleteMountTargetResponse(
  */
 const DeleteMountTargetRequest * DeleteMountTargetResponse::request() const
 {
-    Q_D(const DeleteMountTargetResponse);
-    return static_cast<const DeleteMountTargetRequest *>(d->request);
+    return static_cast<const DeleteMountTargetRequest *>(EfsResponse::request());
 }
 
 /*!

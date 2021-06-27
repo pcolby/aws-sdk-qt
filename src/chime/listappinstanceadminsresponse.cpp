@@ -98,8 +98,7 @@ ListAppInstanceAdminsResponse::ListAppInstanceAdminsResponse(
  */
 const ListAppInstanceAdminsRequest * ListAppInstanceAdminsResponse::request() const
 {
-    Q_D(const ListAppInstanceAdminsResponse);
-    return static_cast<const ListAppInstanceAdminsRequest *>(d->request);
+    return static_cast<const ListAppInstanceAdminsRequest *>(ChimeResponse::request());
 }
 
 /*!

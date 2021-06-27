@@ -74,8 +74,7 @@ ListTablesResponse::ListTablesResponse(
  */
 const ListTablesRequest * ListTablesResponse::request() const
 {
-    Q_D(const ListTablesResponse);
-    return static_cast<const ListTablesRequest *>(d->request);
+    return static_cast<const ListTablesRequest *>(DynamoDBResponse::request());
 }
 
 /*!

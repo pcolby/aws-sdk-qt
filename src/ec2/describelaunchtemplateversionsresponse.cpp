@@ -87,8 +87,7 @@ DescribeLaunchTemplateVersionsResponse::DescribeLaunchTemplateVersionsResponse(
  */
 const DescribeLaunchTemplateVersionsRequest * DescribeLaunchTemplateVersionsResponse::request() const
 {
-    Q_D(const DescribeLaunchTemplateVersionsResponse);
-    return static_cast<const DescribeLaunchTemplateVersionsRequest *>(d->request);
+    return static_cast<const DescribeLaunchTemplateVersionsRequest *>(Ec2Response::request());
 }
 
 /*!

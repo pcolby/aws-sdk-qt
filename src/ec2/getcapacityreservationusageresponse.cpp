@@ -87,8 +87,7 @@ GetCapacityReservationUsageResponse::GetCapacityReservationUsageResponse(
  */
 const GetCapacityReservationUsageRequest * GetCapacityReservationUsageResponse::request() const
 {
-    Q_D(const GetCapacityReservationUsageResponse);
-    return static_cast<const GetCapacityReservationUsageRequest *>(d->request);
+    return static_cast<const GetCapacityReservationUsageRequest *>(Ec2Response::request());
 }
 
 /*!

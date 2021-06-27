@@ -61,8 +61,7 @@ ListPrincipalsForPortfolioResponse::ListPrincipalsForPortfolioResponse(
  */
 const ListPrincipalsForPortfolioRequest * ListPrincipalsForPortfolioResponse::request() const
 {
-    Q_D(const ListPrincipalsForPortfolioResponse);
-    return static_cast<const ListPrincipalsForPortfolioRequest *>(d->request);
+    return static_cast<const ListPrincipalsForPortfolioRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

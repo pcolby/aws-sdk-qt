@@ -77,6 +77,7 @@ public:
 
 protected:
     /// @cond internal
+    ComprehendMedicalRequestPrivate * const d_ptr; ///< Internal d-pointer.
     ComprehendMedicalRequest(ComprehendMedicalRequestPrivate * const d);
     /// @endcond
 

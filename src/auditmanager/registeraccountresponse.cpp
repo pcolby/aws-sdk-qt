@@ -98,8 +98,7 @@ RegisterAccountResponse::RegisterAccountResponse(
  */
 const RegisterAccountRequest * RegisterAccountResponse::request() const
 {
-    Q_D(const RegisterAccountResponse);
-    return static_cast<const RegisterAccountRequest *>(d->request);
+    return static_cast<const RegisterAccountRequest *>(AuditManagerResponse::request());
 }
 
 /*!

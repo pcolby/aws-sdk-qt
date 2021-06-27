@@ -73,8 +73,7 @@ DisableOrganizationAdminAccountResponse::DisableOrganizationAdminAccountResponse
  */
 const DisableOrganizationAdminAccountRequest * DisableOrganizationAdminAccountResponse::request() const
 {
-    Q_D(const DisableOrganizationAdminAccountResponse);
-    return static_cast<const DisableOrganizationAdminAccountRequest *>(d->request);
+    return static_cast<const DisableOrganizationAdminAccountRequest *>(GuardDutyResponse::request());
 }
 
 /*!

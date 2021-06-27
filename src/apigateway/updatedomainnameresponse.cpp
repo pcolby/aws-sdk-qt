@@ -60,8 +60,7 @@ UpdateDomainNameResponse::UpdateDomainNameResponse(
  */
 const UpdateDomainNameRequest * UpdateDomainNameResponse::request() const
 {
-    Q_D(const UpdateDomainNameResponse);
-    return static_cast<const UpdateDomainNameRequest *>(d->request);
+    return static_cast<const UpdateDomainNameRequest *>(APIGatewayResponse::request());
 }
 
 /*!

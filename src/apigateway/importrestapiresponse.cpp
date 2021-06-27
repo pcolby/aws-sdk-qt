@@ -60,8 +60,7 @@ ImportRestApiResponse::ImportRestApiResponse(
  */
 const ImportRestApiRequest * ImportRestApiResponse::request() const
 {
-    Q_D(const ImportRestApiResponse);
-    return static_cast<const ImportRestApiRequest *>(d->request);
+    return static_cast<const ImportRestApiRequest *>(APIGatewayResponse::request());
 }
 
 /*!

@@ -55,8 +55,7 @@ GetBucketAnalyticsConfigurationResponse::GetBucketAnalyticsConfigurationResponse
  */
 const GetBucketAnalyticsConfigurationRequest * GetBucketAnalyticsConfigurationResponse::request() const
 {
-    Q_D(const GetBucketAnalyticsConfigurationResponse);
-    return static_cast<const GetBucketAnalyticsConfigurationRequest *>(d->request);
+    return static_cast<const GetBucketAnalyticsConfigurationRequest *>(S3Response::request());
 }
 
 /*!

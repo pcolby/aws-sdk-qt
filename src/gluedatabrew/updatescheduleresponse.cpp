@@ -58,8 +58,7 @@ UpdateScheduleResponse::UpdateScheduleResponse(
  */
 const UpdateScheduleRequest * UpdateScheduleResponse::request() const
 {
-    Q_D(const UpdateScheduleResponse);
-    return static_cast<const UpdateScheduleRequest *>(d->request);
+    return static_cast<const UpdateScheduleRequest *>(GlueDataBrewResponse::request());
 }
 
 /*!

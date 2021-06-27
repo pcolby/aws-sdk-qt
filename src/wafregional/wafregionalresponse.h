@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    WAFRegionalResponsePrivate * const d_ptr; ///< Internal d-pointer.
     WAFRegionalResponse(WAFRegionalResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

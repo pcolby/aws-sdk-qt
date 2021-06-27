@@ -74,8 +74,7 @@ ListActivitiesResponse::ListActivitiesResponse(
  */
 const ListActivitiesRequest * ListActivitiesResponse::request() const
 {
-    Q_D(const ListActivitiesResponse);
-    return static_cast<const ListActivitiesRequest *>(d->request);
+    return static_cast<const ListActivitiesRequest *>(SfnResponse::request());
 }
 
 /*!

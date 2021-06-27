@@ -103,6 +103,7 @@ public:
 
 protected:
     /// @cond internal
+    GlobalAcceleratorRequestPrivate * const d_ptr; ///< Internal d-pointer.
     GlobalAcceleratorRequest(GlobalAcceleratorRequestPrivate * const d);
     /// @endcond
 

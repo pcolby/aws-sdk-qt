@@ -62,8 +62,7 @@ GetRoomSkillParameterResponse::GetRoomSkillParameterResponse(
  */
 const GetRoomSkillParameterRequest * GetRoomSkillParameterResponse::request() const
 {
-    Q_D(const GetRoomSkillParameterResponse);
-    return static_cast<const GetRoomSkillParameterRequest *>(d->request);
+    return static_cast<const GetRoomSkillParameterRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

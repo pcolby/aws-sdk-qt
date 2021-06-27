@@ -74,8 +74,7 @@ DescribeBackupResponse::DescribeBackupResponse(
  */
 const DescribeBackupRequest * DescribeBackupResponse::request() const
 {
-    Q_D(const DescribeBackupResponse);
-    return static_cast<const DescribeBackupRequest *>(d->request);
+    return static_cast<const DescribeBackupRequest *>(DynamoDBResponse::request());
 }
 
 /*!

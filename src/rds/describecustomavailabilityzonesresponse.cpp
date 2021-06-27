@@ -119,8 +119,7 @@ DescribeCustomAvailabilityZonesResponse::DescribeCustomAvailabilityZonesResponse
  */
 const DescribeCustomAvailabilityZonesRequest * DescribeCustomAvailabilityZonesResponse::request() const
 {
-    Q_D(const DescribeCustomAvailabilityZonesResponse);
-    return static_cast<const DescribeCustomAvailabilityZonesRequest *>(d->request);
+    return static_cast<const DescribeCustomAvailabilityZonesRequest *>(RdsResponse::request());
 }
 
 /*!

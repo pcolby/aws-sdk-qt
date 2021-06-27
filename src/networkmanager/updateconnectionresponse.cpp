@@ -62,8 +62,7 @@ UpdateConnectionResponse::UpdateConnectionResponse(
  */
 const UpdateConnectionRequest * UpdateConnectionResponse::request() const
 {
-    Q_D(const UpdateConnectionResponse);
-    return static_cast<const UpdateConnectionRequest *>(d->request);
+    return static_cast<const UpdateConnectionRequest *>(NetworkManagerResponse::request());
 }
 
 /*!

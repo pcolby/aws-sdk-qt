@@ -77,8 +77,7 @@ GetIdentityPoolRolesResponse::GetIdentityPoolRolesResponse(
  */
 const GetIdentityPoolRolesRequest * GetIdentityPoolRolesResponse::request() const
 {
-    Q_D(const GetIdentityPoolRolesResponse);
-    return static_cast<const GetIdentityPoolRolesRequest *>(d->request);
+    return static_cast<const GetIdentityPoolRolesRequest *>(CognitoIdentityResponse::request());
 }
 
 /*!

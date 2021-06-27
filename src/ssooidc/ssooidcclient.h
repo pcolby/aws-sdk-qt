@@ -55,6 +55,12 @@ public slots:
     RegisterClientResponse * registerClient(const RegisterClientRequest &request);
     StartDeviceAuthorizationResponse * startDeviceAuthorization(const StartDeviceAuthorizationRequest &request);
 
+protected:
+    /// @cond internal
+    SsooidcClientPrivate * const d_ptr; ///< Internal d-pointer.
+    SsooidcClient(SsooidcClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(SsooidcClient)
     Q_DISABLE_COPY(SsooidcClient)

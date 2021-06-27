@@ -77,8 +77,7 @@ PutSnapshotBlockResponse::PutSnapshotBlockResponse(
  */
 const PutSnapshotBlockRequest * PutSnapshotBlockResponse::request() const
 {
-    Q_D(const PutSnapshotBlockResponse);
-    return static_cast<const PutSnapshotBlockRequest *>(d->request);
+    return static_cast<const PutSnapshotBlockRequest *>(EbsResponse::request());
 }
 
 /*!

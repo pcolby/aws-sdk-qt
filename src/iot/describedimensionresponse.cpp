@@ -82,8 +82,7 @@ DescribeDimensionResponse::DescribeDimensionResponse(
  */
 const DescribeDimensionRequest * DescribeDimensionResponse::request() const
 {
-    Q_D(const DescribeDimensionResponse);
-    return static_cast<const DescribeDimensionRequest *>(d->request);
+    return static_cast<const DescribeDimensionRequest *>(IoTResponse::request());
 }
 
 /*!

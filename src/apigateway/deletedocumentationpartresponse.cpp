@@ -60,8 +60,7 @@ DeleteDocumentationPartResponse::DeleteDocumentationPartResponse(
  */
 const DeleteDocumentationPartRequest * DeleteDocumentationPartResponse::request() const
 {
-    Q_D(const DeleteDocumentationPartResponse);
-    return static_cast<const DeleteDocumentationPartRequest *>(d->request);
+    return static_cast<const DeleteDocumentationPartRequest *>(APIGatewayResponse::request());
 }
 
 /*!

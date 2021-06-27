@@ -60,8 +60,7 @@ GetMethodResponseResponse::GetMethodResponseResponse(
  */
 const GetMethodResponseRequest * GetMethodResponseResponse::request() const
 {
-    Q_D(const GetMethodResponseResponse);
-    return static_cast<const GetMethodResponseRequest *>(d->request);
+    return static_cast<const GetMethodResponseRequest *>(APIGatewayResponse::request());
 }
 
 /*!

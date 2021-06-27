@@ -124,8 +124,7 @@ UpdateGatewaySoftwareNowResponse::UpdateGatewaySoftwareNowResponse(
  */
 const UpdateGatewaySoftwareNowRequest * UpdateGatewaySoftwareNowResponse::request() const
 {
-    Q_D(const UpdateGatewaySoftwareNowResponse);
-    return static_cast<const UpdateGatewaySoftwareNowRequest *>(d->request);
+    return static_cast<const UpdateGatewaySoftwareNowRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

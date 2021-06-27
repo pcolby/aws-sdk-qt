@@ -87,8 +87,7 @@ AcceptVpcEndpointConnectionsResponse::AcceptVpcEndpointConnectionsResponse(
  */
 const AcceptVpcEndpointConnectionsRequest * AcceptVpcEndpointConnectionsResponse::request() const
 {
-    Q_D(const AcceptVpcEndpointConnectionsResponse);
-    return static_cast<const AcceptVpcEndpointConnectionsRequest *>(d->request);
+    return static_cast<const AcceptVpcEndpointConnectionsRequest *>(Ec2Response::request());
 }
 
 /*!

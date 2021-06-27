@@ -82,8 +82,7 @@ ListProvisioningTemplatesResponse::ListProvisioningTemplatesResponse(
  */
 const ListProvisioningTemplatesRequest * ListProvisioningTemplatesResponse::request() const
 {
-    Q_D(const ListProvisioningTemplatesResponse);
-    return static_cast<const ListProvisioningTemplatesRequest *>(d->request);
+    return static_cast<const ListProvisioningTemplatesRequest *>(IoTResponse::request());
 }
 
 /*!

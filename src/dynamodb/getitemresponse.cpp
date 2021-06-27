@@ -74,8 +74,7 @@ GetItemResponse::GetItemResponse(
  */
 const GetItemRequest * GetItemResponse::request() const
 {
-    Q_D(const GetItemResponse);
-    return static_cast<const GetItemRequest *>(d->request);
+    return static_cast<const GetItemRequest *>(DynamoDBResponse::request());
 }
 
 /*!

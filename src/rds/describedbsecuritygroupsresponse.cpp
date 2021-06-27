@@ -119,8 +119,7 @@ DescribeDBSecurityGroupsResponse::DescribeDBSecurityGroupsResponse(
  */
 const DescribeDBSecurityGroupsRequest * DescribeDBSecurityGroupsResponse::request() const
 {
-    Q_D(const DescribeDBSecurityGroupsResponse);
-    return static_cast<const DescribeDBSecurityGroupsRequest *>(d->request);
+    return static_cast<const DescribeDBSecurityGroupsRequest *>(RdsResponse::request());
 }
 
 /*!

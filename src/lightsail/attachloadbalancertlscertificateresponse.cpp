@@ -74,8 +74,7 @@ AttachLoadBalancerTlsCertificateResponse::AttachLoadBalancerTlsCertificateRespon
  */
 const AttachLoadBalancerTlsCertificateRequest * AttachLoadBalancerTlsCertificateResponse::request() const
 {
-    Q_D(const AttachLoadBalancerTlsCertificateResponse);
-    return static_cast<const AttachLoadBalancerTlsCertificateRequest *>(d->request);
+    return static_cast<const AttachLoadBalancerTlsCertificateRequest *>(LightsailResponse::request());
 }
 
 /*!

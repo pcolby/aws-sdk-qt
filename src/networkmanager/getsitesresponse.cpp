@@ -62,8 +62,7 @@ GetSitesResponse::GetSitesResponse(
  */
 const GetSitesRequest * GetSitesResponse::request() const
 {
-    Q_D(const GetSitesResponse);
-    return static_cast<const GetSitesRequest *>(d->request);
+    return static_cast<const GetSitesRequest *>(NetworkManagerResponse::request());
 }
 
 /*!

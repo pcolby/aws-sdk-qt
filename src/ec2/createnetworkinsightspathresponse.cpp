@@ -87,8 +87,7 @@ CreateNetworkInsightsPathResponse::CreateNetworkInsightsPathResponse(
  */
 const CreateNetworkInsightsPathRequest * CreateNetworkInsightsPathResponse::request() const
 {
-    Q_D(const CreateNetworkInsightsPathResponse);
-    return static_cast<const CreateNetworkInsightsPathRequest *>(d->request);
+    return static_cast<const CreateNetworkInsightsPathRequest *>(Ec2Response::request());
 }
 
 /*!

@@ -79,8 +79,7 @@ DescribeInstanceResponse::DescribeInstanceResponse(
  */
 const DescribeInstanceRequest * DescribeInstanceResponse::request() const
 {
-    Q_D(const DescribeInstanceResponse);
-    return static_cast<const DescribeInstanceRequest *>(d->request);
+    return static_cast<const DescribeInstanceRequest *>(ConnectResponse::request());
 }
 
 /*!

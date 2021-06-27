@@ -61,8 +61,7 @@ DescribeTagsResponse::DescribeTagsResponse(
  */
 const DescribeTagsRequest * DescribeTagsResponse::request() const
 {
-    Q_D(const DescribeTagsResponse);
-    return static_cast<const DescribeTagsRequest *>(d->request);
+    return static_cast<const DescribeTagsRequest *>(DirectConnectResponse::request());
 }
 
 /*!

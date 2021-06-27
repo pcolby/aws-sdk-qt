@@ -72,8 +72,7 @@ DeleteCoreDeviceResponse::DeleteCoreDeviceResponse(
  */
 const DeleteCoreDeviceRequest * DeleteCoreDeviceResponse::request() const
 {
-    Q_D(const DeleteCoreDeviceResponse);
-    return static_cast<const DeleteCoreDeviceRequest *>(d->request);
+    return static_cast<const DeleteCoreDeviceRequest *>(GreengrassV2Response::request());
 }
 
 /*!

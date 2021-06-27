@@ -69,8 +69,7 @@ UpdateTrustResponse::UpdateTrustResponse(
  */
 const UpdateTrustRequest * UpdateTrustResponse::request() const
 {
-    Q_D(const UpdateTrustResponse);
-    return static_cast<const UpdateTrustRequest *>(d->request);
+    return static_cast<const UpdateTrustRequest *>(DirectoryServiceResponse::request());
 }
 
 /*!

@@ -72,8 +72,7 @@ DeleteTaskSetResponse::DeleteTaskSetResponse(
  */
 const DeleteTaskSetRequest * DeleteTaskSetResponse::request() const
 {
-    Q_D(const DeleteTaskSetResponse);
-    return static_cast<const DeleteTaskSetRequest *>(d->request);
+    return static_cast<const DeleteTaskSetRequest *>(EcsResponse::request());
 }
 
 /*!

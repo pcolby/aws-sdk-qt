@@ -20,19 +20,20 @@
 #ifndef QTAWS_SERVERLESSAPPLICATIONREPOSITORYCLIENT_P_H
 #define QTAWS_SERVERLESSAPPLICATIONREPOSITORYCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace ServerlessApplicationRepository {
 
 class ServerlessApplicationRepositoryClient;
 
-class ServerlessApplicationRepositoryClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ServerlessApplicationRepositoryClientPrivate {
 
 public:
     ServerlessApplicationRepositoryClientPrivate(ServerlessApplicationRepositoryClient * const q);
+
+protected:
+    ServerlessApplicationRepositoryClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ServerlessApplicationRepositoryClient)

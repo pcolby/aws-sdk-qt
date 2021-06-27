@@ -154,8 +154,7 @@ GetParametersForImportResponse::GetParametersForImportResponse(
  */
 const GetParametersForImportRequest * GetParametersForImportResponse::request() const
 {
-    Q_D(const GetParametersForImportResponse);
-    return static_cast<const GetParametersForImportRequest *>(d->request);
+    return static_cast<const GetParametersForImportRequest *>(KmsResponse::request());
 }
 
 /*!

@@ -79,8 +79,7 @@ UpdateUserSecurityProfilesResponse::UpdateUserSecurityProfilesResponse(
  */
 const UpdateUserSecurityProfilesRequest * UpdateUserSecurityProfilesResponse::request() const
 {
-    Q_D(const UpdateUserSecurityProfilesResponse);
-    return static_cast<const UpdateUserSecurityProfilesRequest *>(d->request);
+    return static_cast<const UpdateUserSecurityProfilesRequest *>(ConnectResponse::request());
 }
 
 /*!

@@ -61,8 +61,7 @@ AssumeRoleWithWebIdentityResponse::AssumeRoleWithWebIdentityResponse(
  */
 const AssumeRoleWithWebIdentityRequest * AssumeRoleWithWebIdentityResponse::request() const
 {
-    Q_D(const AssumeRoleWithWebIdentityResponse);
-    return static_cast<const AssumeRoleWithWebIdentityRequest *>(d->request);
+    return static_cast<const AssumeRoleWithWebIdentityRequest *>(StsResponse::request());
 }
 
 /*!

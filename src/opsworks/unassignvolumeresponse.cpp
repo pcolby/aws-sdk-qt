@@ -161,8 +161,7 @@ UnassignVolumeResponse::UnassignVolumeResponse(
  */
 const UnassignVolumeRequest * UnassignVolumeResponse::request() const
 {
-    Q_D(const UnassignVolumeResponse);
-    return static_cast<const UnassignVolumeRequest *>(d->request);
+    return static_cast<const UnassignVolumeRequest *>(OpsWorksResponse::request());
 }
 
 /*!

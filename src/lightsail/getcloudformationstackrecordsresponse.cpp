@@ -74,8 +74,7 @@ GetCloudFormationStackRecordsResponse::GetCloudFormationStackRecordsResponse(
  */
 const GetCloudFormationStackRecordsRequest * GetCloudFormationStackRecordsResponse::request() const
 {
-    Q_D(const GetCloudFormationStackRecordsResponse);
-    return static_cast<const GetCloudFormationStackRecordsRequest *>(d->request);
+    return static_cast<const GetCloudFormationStackRecordsRequest *>(LightsailResponse::request());
 }
 
 /*!

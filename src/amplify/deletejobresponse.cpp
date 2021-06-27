@@ -60,8 +60,7 @@ DeleteJobResponse::DeleteJobResponse(
  */
 const DeleteJobRequest * DeleteJobResponse::request() const
 {
-    Q_D(const DeleteJobResponse);
-    return static_cast<const DeleteJobRequest *>(d->request);
+    return static_cast<const DeleteJobRequest *>(AmplifyResponse::request());
 }
 
 /*!

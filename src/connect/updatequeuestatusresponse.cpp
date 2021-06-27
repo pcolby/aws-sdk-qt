@@ -79,8 +79,7 @@ UpdateQueueStatusResponse::UpdateQueueStatusResponse(
  */
 const UpdateQueueStatusRequest * UpdateQueueStatusResponse::request() const
 {
-    Q_D(const UpdateQueueStatusResponse);
-    return static_cast<const UpdateQueueStatusRequest *>(d->request);
+    return static_cast<const UpdateQueueStatusRequest *>(ConnectResponse::request());
 }
 
 /*!

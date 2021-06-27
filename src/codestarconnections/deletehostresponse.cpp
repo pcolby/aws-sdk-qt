@@ -140,8 +140,7 @@ DeleteHostResponse::DeleteHostResponse(
  */
 const DeleteHostRequest * DeleteHostResponse::request() const
 {
-    Q_D(const DeleteHostResponse);
-    return static_cast<const DeleteHostRequest *>(d->request);
+    return static_cast<const DeleteHostRequest *>(CodeStarconnectionsResponse::request());
 }
 
 /*!

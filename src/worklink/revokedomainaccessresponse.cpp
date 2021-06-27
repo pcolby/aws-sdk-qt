@@ -60,8 +60,7 @@ RevokeDomainAccessResponse::RevokeDomainAccessResponse(
  */
 const RevokeDomainAccessRequest * RevokeDomainAccessResponse::request() const
 {
-    Q_D(const RevokeDomainAccessResponse);
-    return static_cast<const RevokeDomainAccessRequest *>(d->request);
+    return static_cast<const RevokeDomainAccessRequest *>(WorkLinkResponse::request());
 }
 
 /*!

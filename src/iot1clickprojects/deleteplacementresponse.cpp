@@ -56,8 +56,7 @@ DeletePlacementResponse::DeletePlacementResponse(
  */
 const DeletePlacementRequest * DeletePlacementResponse::request() const
 {
-    Q_D(const DeletePlacementResponse);
-    return static_cast<const DeletePlacementRequest *>(d->request);
+    return static_cast<const DeletePlacementRequest *>(IoT1ClickProjectsResponse::request());
 }
 
 /*!

@@ -78,8 +78,7 @@ ListApiDestinationsResponse::ListApiDestinationsResponse(
  */
 const ListApiDestinationsRequest * ListApiDestinationsResponse::request() const
 {
-    Q_D(const ListApiDestinationsResponse);
-    return static_cast<const ListApiDestinationsRequest *>(d->request);
+    return static_cast<const ListApiDestinationsRequest *>(CloudWatchEventsResponse::request());
 }
 
 /*!

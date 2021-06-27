@@ -168,6 +168,7 @@ public:
 
 protected:
     /// @cond internal
+    PinpointRequestPrivate * const d_ptr; ///< Internal d-pointer.
     PinpointRequest(PinpointRequestPrivate * const d);
     /// @endcond
 

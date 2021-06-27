@@ -75,8 +75,7 @@ SelectResourceConfigResponse::SelectResourceConfigResponse(
  */
 const SelectResourceConfigRequest * SelectResourceConfigResponse::request() const
 {
-    Q_D(const SelectResourceConfigResponse);
-    return static_cast<const SelectResourceConfigRequest *>(d->request);
+    return static_cast<const SelectResourceConfigRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

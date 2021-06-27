@@ -20,14 +20,12 @@
 #ifndef QTAWS_GLOBALACCELERATORRESPONSE_P_H
 #define QTAWS_GLOBALACCELERATORRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace GlobalAccelerator {
 
 class GlobalAcceleratorResponse;
 
-class GlobalAcceleratorResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class GlobalAcceleratorResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    GlobalAcceleratorResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(GlobalAcceleratorResponse)

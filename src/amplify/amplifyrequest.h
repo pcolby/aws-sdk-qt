@@ -93,6 +93,7 @@ public:
 
 protected:
     /// @cond internal
+    AmplifyRequestPrivate * const d_ptr; ///< Internal d-pointer.
     AmplifyRequest(AmplifyRequestPrivate * const d);
     /// @endcond
 

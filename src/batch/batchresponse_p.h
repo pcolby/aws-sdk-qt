@@ -20,14 +20,12 @@
 #ifndef QTAWS_BATCHRESPONSE_P_H
 #define QTAWS_BATCHRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace Batch {
 
 class BatchResponse;
 
-class BatchResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class BatchResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    BatchResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(BatchResponse)

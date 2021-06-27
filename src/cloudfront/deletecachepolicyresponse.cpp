@@ -60,8 +60,7 @@ DeleteCachePolicyResponse::DeleteCachePolicyResponse(
  */
 const DeleteCachePolicyRequest * DeleteCachePolicyResponse::request() const
 {
-    Q_D(const DeleteCachePolicyResponse);
-    return static_cast<const DeleteCachePolicyRequest *>(d->request);
+    return static_cast<const DeleteCachePolicyRequest *>(CloudFrontResponse::request());
 }
 
 /*!

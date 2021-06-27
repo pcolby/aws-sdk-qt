@@ -82,8 +82,7 @@ DescribeAuthorizerResponse::DescribeAuthorizerResponse(
  */
 const DescribeAuthorizerRequest * DescribeAuthorizerResponse::request() const
 {
-    Q_D(const DescribeAuthorizerResponse);
-    return static_cast<const DescribeAuthorizerRequest *>(d->request);
+    return static_cast<const DescribeAuthorizerRequest *>(IoTResponse::request());
 }
 
 /*!

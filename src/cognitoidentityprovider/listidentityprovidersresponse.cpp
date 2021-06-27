@@ -66,8 +66,7 @@ ListIdentityProvidersResponse::ListIdentityProvidersResponse(
  */
 const ListIdentityProvidersRequest * ListIdentityProvidersResponse::request() const
 {
-    Q_D(const ListIdentityProvidersResponse);
-    return static_cast<const ListIdentityProvidersRequest *>(d->request);
+    return static_cast<const ListIdentityProvidersRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

@@ -74,8 +74,7 @@ DeleteKnownHostKeysResponse::DeleteKnownHostKeysResponse(
  */
 const DeleteKnownHostKeysRequest * DeleteKnownHostKeysResponse::request() const
 {
-    Q_D(const DeleteKnownHostKeysResponse);
-    return static_cast<const DeleteKnownHostKeysRequest *>(d->request);
+    return static_cast<const DeleteKnownHostKeysRequest *>(LightsailResponse::request());
 }
 
 /*!

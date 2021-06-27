@@ -68,8 +68,7 @@ GetAppValidationOutputResponse::GetAppValidationOutputResponse(
  */
 const GetAppValidationOutputRequest * GetAppValidationOutputResponse::request() const
 {
-    Q_D(const GetAppValidationOutputResponse);
-    return static_cast<const GetAppValidationOutputRequest *>(d->request);
+    return static_cast<const GetAppValidationOutputRequest *>(SmsResponse::request());
 }
 
 /*!

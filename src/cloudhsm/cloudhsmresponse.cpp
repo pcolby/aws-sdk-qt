@@ -37,7 +37,7 @@ namespace CloudHSM {
  * Constructs a CloudHSMResponse object with parent \a parent.
  */
 CloudHSMResponse::CloudHSMResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new CloudHSMResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new CloudHSMResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ CloudHSMResponse::CloudHSMResponse(QObject * const parent)
  * implementation that inherits from CloudHSMResponsePrivate.
  */
 CloudHSMResponse::CloudHSMResponse(CloudHSMResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void CloudHSMResponse::parseFailure(QIODevice &response)
  * Constructs a CloudHSMResponsePrivate object with public implementation \a q.
  */
 CloudHSMResponsePrivate::CloudHSMResponsePrivate(
-    CloudHSMResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    CloudHSMResponse * const q) : q_ptr(q)
 {
 
 }

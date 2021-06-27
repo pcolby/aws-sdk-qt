@@ -72,8 +72,7 @@ ApplyPendingMaintenanceActionResponse::ApplyPendingMaintenanceActionResponse(
  */
 const ApplyPendingMaintenanceActionRequest * ApplyPendingMaintenanceActionResponse::request() const
 {
-    Q_D(const ApplyPendingMaintenanceActionResponse);
-    return static_cast<const ApplyPendingMaintenanceActionRequest *>(d->request);
+    return static_cast<const ApplyPendingMaintenanceActionRequest *>(NeptuneResponse::request());
 }
 
 /*!

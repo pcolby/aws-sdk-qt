@@ -55,8 +55,7 @@ RejectAssignmentResponse::RejectAssignmentResponse(
  */
 const RejectAssignmentRequest * RejectAssignmentResponse::request() const
 {
-    Q_D(const RejectAssignmentResponse);
-    return static_cast<const RejectAssignmentRequest *>(d->request);
+    return static_cast<const RejectAssignmentRequest *>(MTurkResponse::request());
 }
 
 /*!

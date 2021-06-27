@@ -68,8 +68,7 @@ DescribeComponentConfigurationRecommendationResponse::DescribeComponentConfigura
  */
 const DescribeComponentConfigurationRecommendationRequest * DescribeComponentConfigurationRecommendationResponse::request() const
 {
-    Q_D(const DescribeComponentConfigurationRecommendationResponse);
-    return static_cast<const DescribeComponentConfigurationRecommendationRequest *>(d->request);
+    return static_cast<const DescribeComponentConfigurationRecommendationRequest *>(ApplicationInsightsResponse::request());
 }
 
 /*!

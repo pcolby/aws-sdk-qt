@@ -69,8 +69,7 @@ DescribeCacheParametersResponse::DescribeCacheParametersResponse(
  */
 const DescribeCacheParametersRequest * DescribeCacheParametersResponse::request() const
 {
-    Q_D(const DescribeCacheParametersResponse);
-    return static_cast<const DescribeCacheParametersRequest *>(d->request);
+    return static_cast<const DescribeCacheParametersRequest *>(ElastiCacheResponse::request());
 }
 
 /*!

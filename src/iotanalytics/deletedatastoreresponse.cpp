@@ -75,8 +75,7 @@ DeleteDatastoreResponse::DeleteDatastoreResponse(
  */
 const DeleteDatastoreRequest * DeleteDatastoreResponse::request() const
 {
-    Q_D(const DeleteDatastoreResponse);
-    return static_cast<const DeleteDatastoreRequest *>(d->request);
+    return static_cast<const DeleteDatastoreRequest *>(IoTAnalyticsResponse::request());
 }
 
 /*!

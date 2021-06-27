@@ -60,8 +60,7 @@ ListAppsResponse::ListAppsResponse(
  */
 const ListAppsRequest * ListAppsResponse::request() const
 {
-    Q_D(const ListAppsResponse);
-    return static_cast<const ListAppsRequest *>(d->request);
+    return static_cast<const ListAppsRequest *>(AmplifyResponse::request());
 }
 
 /*!

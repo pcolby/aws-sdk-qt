@@ -55,6 +55,12 @@ public slots:
     SuggestResponse * suggest(const SuggestRequest &request);
     UploadDocumentsResponse * uploadDocuments(const UploadDocumentsRequest &request);
 
+protected:
+    /// @cond internal
+    CloudSearchDomainClientPrivate * const d_ptr; ///< Internal d-pointer.
+    CloudSearchDomainClient(CloudSearchDomainClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(CloudSearchDomainClient)
     Q_DISABLE_COPY(CloudSearchDomainClient)

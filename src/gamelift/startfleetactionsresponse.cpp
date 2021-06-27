@@ -115,8 +115,7 @@ StartFleetActionsResponse::StartFleetActionsResponse(
  */
 const StartFleetActionsRequest * StartFleetActionsResponse::request() const
 {
-    Q_D(const StartFleetActionsResponse);
-    return static_cast<const StartFleetActionsRequest *>(d->request);
+    return static_cast<const StartFleetActionsRequest *>(GameLiftResponse::request());
 }
 
 /*!

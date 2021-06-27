@@ -293,8 +293,7 @@ UpdatePackageVersionsStatusResponse::UpdatePackageVersionsStatusResponse(
  */
 const UpdatePackageVersionsStatusRequest * UpdatePackageVersionsStatusResponse::request() const
 {
-    Q_D(const UpdatePackageVersionsStatusResponse);
-    return static_cast<const UpdatePackageVersionsStatusRequest *>(d->request);
+    return static_cast<const UpdatePackageVersionsStatusRequest *>(CodeArtifactResponse::request());
 }
 
 /*!

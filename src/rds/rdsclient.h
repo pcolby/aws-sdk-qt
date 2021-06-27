@@ -457,6 +457,12 @@ public slots:
     StopDBInstanceResponse * stopDBInstance(const StopDBInstanceRequest &request);
     StopDBInstanceAutomatedBackupsReplicationResponse * stopDBInstanceAutomatedBackupsReplication(const StopDBInstanceAutomatedBackupsReplicationRequest &request);
 
+protected:
+    /// @cond internal
+    RdsClientPrivate * const d_ptr; ///< Internal d-pointer.
+    RdsClient(RdsClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(RdsClient)
     Q_DISABLE_COPY(RdsClient)

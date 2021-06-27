@@ -80,8 +80,7 @@ RevokeSignatureResponse::RevokeSignatureResponse(
  */
 const RevokeSignatureRequest * RevokeSignatureResponse::request() const
 {
-    Q_D(const RevokeSignatureResponse);
-    return static_cast<const RevokeSignatureRequest *>(d->request);
+    return static_cast<const RevokeSignatureRequest *>(signerResponse::request());
 }
 
 /*!

@@ -20,19 +20,20 @@
 #ifndef QTAWS_IVSCLIENT_P_H
 #define QTAWS_IVSCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace IVS {
 
 class IvsClient;
 
-class IvsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class IvsClientPrivate {
 
 public:
     IvsClientPrivate(IvsClient * const q);
+
+protected:
+    IvsClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IvsClient)

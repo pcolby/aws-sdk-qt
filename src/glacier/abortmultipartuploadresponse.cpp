@@ -91,8 +91,7 @@ AbortMultipartUploadResponse::AbortMultipartUploadResponse(
  */
 const AbortMultipartUploadRequest * AbortMultipartUploadResponse::request() const
 {
-    Q_D(const AbortMultipartUploadResponse);
-    return static_cast<const AbortMultipartUploadRequest *>(d->request);
+    return static_cast<const AbortMultipartUploadRequest *>(GlacierResponse::request());
 }
 
 /*!

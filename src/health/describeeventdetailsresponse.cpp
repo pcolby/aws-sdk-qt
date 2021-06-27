@@ -106,8 +106,7 @@ DescribeEventDetailsResponse::DescribeEventDetailsResponse(
  */
 const DescribeEventDetailsRequest * DescribeEventDetailsResponse::request() const
 {
-    Q_D(const DescribeEventDetailsResponse);
-    return static_cast<const DescribeEventDetailsRequest *>(d->request);
+    return static_cast<const DescribeEventDetailsRequest *>(HealthResponse::request());
 }
 
 /*!

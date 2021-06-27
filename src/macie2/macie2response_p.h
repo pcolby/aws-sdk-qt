@@ -20,14 +20,12 @@
 #ifndef QTAWS_MACIE2RESPONSE_P_H
 #define QTAWS_MACIE2RESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace Macie2 {
 
 class Macie2Response;
 
-class Macie2ResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class Macie2ResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    Macie2Response * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(Macie2Response)

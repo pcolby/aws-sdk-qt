@@ -113,16 +113,16 @@ CognitoSyncClient::CognitoSyncClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CognitoSyncClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2014-06-30"),
+    QStringLiteral("cognito-sync"),
+    QStringLiteral("Amazon Cognito Sync"),
+    QStringLiteral("cognito-sync"),
+    parent), d_ptr(new CognitoSyncClientPrivate(this))
 {
-    Q_D(CognitoSyncClient);
-    d->apiVersion = QStringLiteral("2014-06-30");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("cognito-sync");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Cognito Sync");
-    d->serviceName = QStringLiteral("cognito-sync");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -141,16 +141,16 @@ CognitoSyncClient::CognitoSyncClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CognitoSyncClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2014-06-30"),
+    QStringLiteral("cognito-sync"),
+    QStringLiteral("Amazon Cognito Sync"),
+    QStringLiteral("cognito-sync"),
+    parent), d_ptr(new CognitoSyncClientPrivate(this))
 {
-    Q_D(CognitoSyncClient);
-    d->apiVersion = QStringLiteral("2014-06-30");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("cognito-sync");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Cognito Sync");
-    d->serviceName = QStringLiteral("cognito-sync");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -451,10 +451,9 @@ UpdateRecordsResponse * CognitoSyncClient::updateRecords(const UpdateRecordsRequ
 /*!
  * Constructs a CognitoSyncClientPrivate object with public implementation \a q.
  */
-CognitoSyncClientPrivate::CognitoSyncClientPrivate(CognitoSyncClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+CognitoSyncClientPrivate::CognitoSyncClientPrivate(CognitoSyncClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace CognitoSync

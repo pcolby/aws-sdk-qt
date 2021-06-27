@@ -58,8 +58,7 @@ GetTriggerResponse::GetTriggerResponse(
  */
 const GetTriggerRequest * GetTriggerResponse::request() const
 {
-    Q_D(const GetTriggerResponse);
-    return static_cast<const GetTriggerRequest *>(d->request);
+    return static_cast<const GetTriggerRequest *>(GlueResponse::request());
 }
 
 /*!

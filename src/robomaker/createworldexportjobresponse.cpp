@@ -56,8 +56,7 @@ CreateWorldExportJobResponse::CreateWorldExportJobResponse(
  */
 const CreateWorldExportJobRequest * CreateWorldExportJobResponse::request() const
 {
-    Q_D(const CreateWorldExportJobResponse);
-    return static_cast<const CreateWorldExportJobRequest *>(d->request);
+    return static_cast<const CreateWorldExportJobRequest *>(RoboMakerResponse::request());
 }
 
 /*!

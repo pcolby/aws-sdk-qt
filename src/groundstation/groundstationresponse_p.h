@@ -20,14 +20,12 @@
 #ifndef QTAWS_GROUNDSTATIONRESPONSE_P_H
 #define QTAWS_GROUNDSTATIONRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace GroundStation {
 
 class GroundStationResponse;
 
-class GroundStationResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class GroundStationResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    GroundStationResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(GroundStationResponse)

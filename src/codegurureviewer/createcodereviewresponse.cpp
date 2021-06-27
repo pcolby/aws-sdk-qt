@@ -72,8 +72,7 @@ CreateCodeReviewResponse::CreateCodeReviewResponse(
  */
 const CreateCodeReviewRequest * CreateCodeReviewResponse::request() const
 {
-    Q_D(const CreateCodeReviewResponse);
-    return static_cast<const CreateCodeReviewRequest *>(d->request);
+    return static_cast<const CreateCodeReviewRequest *>(CodeGuruReviewerResponse::request());
 }
 
 /*!

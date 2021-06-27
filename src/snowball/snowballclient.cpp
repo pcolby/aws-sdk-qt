@@ -115,16 +115,16 @@ SnowballClient::SnowballClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SnowballClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-06-30"),
+    QStringLiteral("snowball"),
+    QStringLiteral("Amazon Import/Export Snowball"),
+    QStringLiteral("snowball"),
+    parent), d_ptr(new SnowballClientPrivate(this))
 {
-    Q_D(SnowballClient);
-    d->apiVersion = QStringLiteral("2016-06-30");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("snowball");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Import/Export Snowball");
-    d->serviceName = QStringLiteral("snowball");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -143,16 +143,16 @@ SnowballClient::SnowballClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SnowballClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-06-30"),
+    QStringLiteral("snowball"),
+    QStringLiteral("Amazon Import/Export Snowball"),
+    QStringLiteral("snowball"),
+    parent), d_ptr(new SnowballClientPrivate(this))
 {
-    Q_D(SnowballClient);
-    d->apiVersion = QStringLiteral("2016-06-30");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("snowball");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Import/Export Snowball");
-    d->serviceName = QStringLiteral("snowball");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -671,10 +671,9 @@ UpdateLongTermPricingResponse * SnowballClient::updateLongTermPricing(const Upda
 /*!
  * Constructs a SnowballClientPrivate object with public implementation \a q.
  */
-SnowballClientPrivate::SnowballClientPrivate(SnowballClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+SnowballClientPrivate::SnowballClientPrivate(SnowballClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace Snowball

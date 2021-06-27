@@ -119,8 +119,7 @@ ModifyCurrentDBClusterCapacityResponse::ModifyCurrentDBClusterCapacityResponse(
  */
 const ModifyCurrentDBClusterCapacityRequest * ModifyCurrentDBClusterCapacityResponse::request() const
 {
-    Q_D(const ModifyCurrentDBClusterCapacityResponse);
-    return static_cast<const ModifyCurrentDBClusterCapacityRequest *>(d->request);
+    return static_cast<const ModifyCurrentDBClusterCapacityRequest *>(RdsResponse::request());
 }
 
 /*!

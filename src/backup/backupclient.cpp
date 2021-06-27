@@ -165,16 +165,16 @@ BackupClient::BackupClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new BackupClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-11-15"),
+    QStringLiteral("backup"),
+    QStringLiteral("AWS Backup"),
+    QStringLiteral("backup"),
+    parent), d_ptr(new BackupClientPrivate(this))
 {
-    Q_D(BackupClient);
-    d->apiVersion = QStringLiteral("2018-11-15");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("backup");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Backup");
-    d->serviceName = QStringLiteral("backup");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -193,16 +193,16 @@ BackupClient::BackupClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new BackupClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-11-15"),
+    QStringLiteral("backup"),
+    QStringLiteral("AWS Backup"),
+    QStringLiteral("backup"),
+    parent), d_ptr(new BackupClientPrivate(this))
 {
-    Q_D(BackupClient);
-    d->apiVersion = QStringLiteral("2018-11-15");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("backup");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Backup");
-    d->serviceName = QStringLiteral("backup");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -1005,10 +1005,9 @@ UpdateRegionSettingsResponse * BackupClient::updateRegionSettings(const UpdateRe
 /*!
  * Constructs a BackupClientPrivate object with public implementation \a q.
  */
-BackupClientPrivate::BackupClientPrivate(BackupClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+BackupClientPrivate::BackupClientPrivate(BackupClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace Backup

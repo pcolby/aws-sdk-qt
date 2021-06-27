@@ -55,8 +55,7 @@ DeleteLaunchProfileResponse::DeleteLaunchProfileResponse(
  */
 const DeleteLaunchProfileRequest * DeleteLaunchProfileResponse::request() const
 {
-    Q_D(const DeleteLaunchProfileResponse);
-    return static_cast<const DeleteLaunchProfileRequest *>(d->request);
+    return static_cast<const DeleteLaunchProfileRequest *>(NimbleStudioResponse::request());
 }
 
 /*!

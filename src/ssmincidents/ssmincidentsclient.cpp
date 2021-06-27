@@ -127,16 +127,16 @@ SSMIncidentsClient::SSMIncidentsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SSMIncidentsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-05-10"),
+    QStringLiteral("ssm-incidents"),
+    QStringLiteral("AWS Systems Manager Incident Manager"),
+    QStringLiteral("ssm-incidents"),
+    parent), d_ptr(new SSMIncidentsClientPrivate(this))
 {
-    Q_D(SSMIncidentsClient);
-    d->apiVersion = QStringLiteral("2018-05-10");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("ssm-incidents");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Systems Manager Incident Manager");
-    d->serviceName = QStringLiteral("ssm-incidents");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -155,16 +155,16 @@ SSMIncidentsClient::SSMIncidentsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SSMIncidentsClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-05-10"),
+    QStringLiteral("ssm-incidents"),
+    QStringLiteral("AWS Systems Manager Incident Manager"),
+    QStringLiteral("ssm-incidents"),
+    parent), d_ptr(new SSMIncidentsClientPrivate(this))
 {
-    Q_D(SSMIncidentsClient);
-    d->apiVersion = QStringLiteral("2018-05-10");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("ssm-incidents");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Systems Manager Incident Manager");
-    d->serviceName = QStringLiteral("ssm-incidents");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -563,10 +563,9 @@ UpdateTimelineEventResponse * SSMIncidentsClient::updateTimelineEvent(const Upda
 /*!
  * Constructs a SSMIncidentsClientPrivate object with public implementation \a q.
  */
-SSMIncidentsClientPrivate::SSMIncidentsClientPrivate(SSMIncidentsClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+SSMIncidentsClientPrivate::SSMIncidentsClientPrivate(SSMIncidentsClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace SSMIncidents

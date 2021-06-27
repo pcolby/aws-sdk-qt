@@ -75,8 +75,7 @@ UnsubscribeFromDatasetResponse::UnsubscribeFromDatasetResponse(
  */
 const UnsubscribeFromDatasetRequest * UnsubscribeFromDatasetResponse::request() const
 {
-    Q_D(const UnsubscribeFromDatasetResponse);
-    return static_cast<const UnsubscribeFromDatasetRequest *>(d->request);
+    return static_cast<const UnsubscribeFromDatasetRequest *>(CognitoSyncResponse::request());
 }
 
 /*!

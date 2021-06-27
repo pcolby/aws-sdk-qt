@@ -66,8 +66,7 @@ GetSigningCertificateResponse::GetSigningCertificateResponse(
  */
 const GetSigningCertificateRequest * GetSigningCertificateResponse::request() const
 {
-    Q_D(const GetSigningCertificateResponse);
-    return static_cast<const GetSigningCertificateRequest *>(d->request);
+    return static_cast<const GetSigningCertificateRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

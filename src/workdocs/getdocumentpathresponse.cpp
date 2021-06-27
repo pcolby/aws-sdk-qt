@@ -84,8 +84,7 @@ GetDocumentPathResponse::GetDocumentPathResponse(
  */
 const GetDocumentPathRequest * GetDocumentPathResponse::request() const
 {
-    Q_D(const GetDocumentPathResponse);
-    return static_cast<const GetDocumentPathRequest *>(d->request);
+    return static_cast<const GetDocumentPathRequest *>(WorkDocsResponse::request());
 }
 
 /*!

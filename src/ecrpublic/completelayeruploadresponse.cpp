@@ -63,8 +63,7 @@ CompleteLayerUploadResponse::CompleteLayerUploadResponse(
  */
 const CompleteLayerUploadRequest * CompleteLayerUploadResponse::request() const
 {
-    Q_D(const CompleteLayerUploadResponse);
-    return static_cast<const CompleteLayerUploadRequest *>(d->request);
+    return static_cast<const CompleteLayerUploadRequest *>(ECRPublicResponse::request());
 }
 
 /*!

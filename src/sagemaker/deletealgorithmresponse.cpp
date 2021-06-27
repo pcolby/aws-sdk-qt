@@ -70,8 +70,7 @@ DeleteAlgorithmResponse::DeleteAlgorithmResponse(
  */
 const DeleteAlgorithmRequest * DeleteAlgorithmResponse::request() const
 {
-    Q_D(const DeleteAlgorithmResponse);
-    return static_cast<const DeleteAlgorithmRequest *>(d->request);
+    return static_cast<const DeleteAlgorithmRequest *>(SageMakerResponse::request());
 }
 
 /*!

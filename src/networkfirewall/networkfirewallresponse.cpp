@@ -37,7 +37,7 @@ namespace NetworkFirewall {
  * Constructs a NetworkFirewallResponse object with parent \a parent.
  */
 NetworkFirewallResponse::NetworkFirewallResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new NetworkFirewallResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new NetworkFirewallResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ NetworkFirewallResponse::NetworkFirewallResponse(QObject * const parent)
  * implementation that inherits from NetworkFirewallResponsePrivate.
  */
 NetworkFirewallResponse::NetworkFirewallResponse(NetworkFirewallResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void NetworkFirewallResponse::parseFailure(QIODevice &response)
  * Constructs a NetworkFirewallResponsePrivate object with public implementation \a q.
  */
 NetworkFirewallResponsePrivate::NetworkFirewallResponsePrivate(
-    NetworkFirewallResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    NetworkFirewallResponse * const q) : q_ptr(q)
 {
 
 }

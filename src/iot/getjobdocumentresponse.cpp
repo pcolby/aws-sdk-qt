@@ -82,8 +82,7 @@ GetJobDocumentResponse::GetJobDocumentResponse(
  */
 const GetJobDocumentRequest * GetJobDocumentResponse::request() const
 {
-    Q_D(const GetJobDocumentResponse);
-    return static_cast<const GetJobDocumentRequest *>(d->request);
+    return static_cast<const GetJobDocumentRequest *>(IoTResponse::request());
 }
 
 /*!

@@ -20,14 +20,12 @@
 #ifndef QTAWS_BACKUPRESPONSE_P_H
 #define QTAWS_BACKUPRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace Backup {
 
 class BackupResponse;
 
-class BackupResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class BackupResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    BackupResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(BackupResponse)

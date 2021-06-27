@@ -82,8 +82,7 @@ GetRegistrationCodeResponse::GetRegistrationCodeResponse(
  */
 const GetRegistrationCodeRequest * GetRegistrationCodeResponse::request() const
 {
-    Q_D(const GetRegistrationCodeResponse);
-    return static_cast<const GetRegistrationCodeRequest *>(d->request);
+    return static_cast<const GetRegistrationCodeRequest *>(IoTResponse::request());
 }
 
 /*!

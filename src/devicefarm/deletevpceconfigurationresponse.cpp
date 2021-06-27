@@ -75,8 +75,7 @@ DeleteVPCEConfigurationResponse::DeleteVPCEConfigurationResponse(
  */
 const DeleteVPCEConfigurationRequest * DeleteVPCEConfigurationResponse::request() const
 {
-    Q_D(const DeleteVPCEConfigurationResponse);
-    return static_cast<const DeleteVPCEConfigurationRequest *>(d->request);
+    return static_cast<const DeleteVPCEConfigurationRequest *>(DeviceFarmResponse::request());
 }
 
 /*!

@@ -77,8 +77,7 @@ AbortEnvironmentUpdateResponse::AbortEnvironmentUpdateResponse(
  */
 const AbortEnvironmentUpdateRequest * AbortEnvironmentUpdateResponse::request() const
 {
-    Q_D(const AbortEnvironmentUpdateResponse);
-    return static_cast<const AbortEnvironmentUpdateRequest *>(d->request);
+    return static_cast<const AbortEnvironmentUpdateRequest *>(ElasticBeanstalkResponse::request());
 }
 
 /*!

@@ -154,8 +154,7 @@ ListKeyPoliciesResponse::ListKeyPoliciesResponse(
  */
 const ListKeyPoliciesRequest * ListKeyPoliciesResponse::request() const
 {
-    Q_D(const ListKeyPoliciesResponse);
-    return static_cast<const ListKeyPoliciesRequest *>(d->request);
+    return static_cast<const ListKeyPoliciesRequest *>(KmsResponse::request());
 }
 
 /*!

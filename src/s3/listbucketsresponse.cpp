@@ -55,8 +55,7 @@ ListBucketsResponse::ListBucketsResponse(
  */
 const ListBucketsRequest * ListBucketsResponse::request() const
 {
-    Q_D(const ListBucketsResponse);
-    return static_cast<const ListBucketsRequest *>(d->request);
+    return static_cast<const ListBucketsRequest *>(S3Response::request());
 }
 
 /*!

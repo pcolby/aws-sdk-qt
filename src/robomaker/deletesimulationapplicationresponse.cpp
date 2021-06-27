@@ -56,8 +56,7 @@ DeleteSimulationApplicationResponse::DeleteSimulationApplicationResponse(
  */
 const DeleteSimulationApplicationRequest * DeleteSimulationApplicationResponse::request() const
 {
-    Q_D(const DeleteSimulationApplicationResponse);
-    return static_cast<const DeleteSimulationApplicationRequest *>(d->request);
+    return static_cast<const DeleteSimulationApplicationRequest *>(RoboMakerResponse::request());
 }
 
 /*!

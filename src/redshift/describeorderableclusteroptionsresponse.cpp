@@ -85,8 +85,7 @@ DescribeOrderableClusterOptionsResponse::DescribeOrderableClusterOptionsResponse
  */
 const DescribeOrderableClusterOptionsRequest * DescribeOrderableClusterOptionsResponse::request() const
 {
-    Q_D(const DescribeOrderableClusterOptionsResponse);
-    return static_cast<const DescribeOrderableClusterOptionsRequest *>(d->request);
+    return static_cast<const DescribeOrderableClusterOptionsRequest *>(RedshiftResponse::request());
 }
 
 /*!

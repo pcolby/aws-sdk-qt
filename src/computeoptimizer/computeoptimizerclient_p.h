@@ -20,19 +20,20 @@
 #ifndef QTAWS_COMPUTEOPTIMIZERCLIENT_P_H
 #define QTAWS_COMPUTEOPTIMIZERCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace ComputeOptimizer {
 
 class ComputeOptimizerClient;
 
-class ComputeOptimizerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ComputeOptimizerClientPrivate {
 
 public:
     ComputeOptimizerClientPrivate(ComputeOptimizerClient * const q);
+
+protected:
+    ComputeOptimizerClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ComputeOptimizerClient)

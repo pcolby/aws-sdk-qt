@@ -56,8 +56,7 @@ CreateVPCAssociationAuthorizationResponse::CreateVPCAssociationAuthorizationResp
  */
 const CreateVPCAssociationAuthorizationRequest * CreateVPCAssociationAuthorizationResponse::request() const
 {
-    Q_D(const CreateVPCAssociationAuthorizationResponse);
-    return static_cast<const CreateVPCAssociationAuthorizationRequest *>(d->request);
+    return static_cast<const CreateVPCAssociationAuthorizationRequest *>(Route53Response::request());
 }
 
 /*!

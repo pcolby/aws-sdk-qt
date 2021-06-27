@@ -119,8 +119,7 @@ ModifyDBProxyTargetGroupResponse::ModifyDBProxyTargetGroupResponse(
  */
 const ModifyDBProxyTargetGroupRequest * ModifyDBProxyTargetGroupResponse::request() const
 {
-    Q_D(const ModifyDBProxyTargetGroupResponse);
-    return static_cast<const ModifyDBProxyTargetGroupRequest *>(d->request);
+    return static_cast<const ModifyDBProxyTargetGroupRequest *>(RdsResponse::request());
 }
 
 /*!

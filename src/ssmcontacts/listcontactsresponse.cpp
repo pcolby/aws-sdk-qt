@@ -55,8 +55,7 @@ ListContactsResponse::ListContactsResponse(
  */
 const ListContactsRequest * ListContactsResponse::request() const
 {
-    Q_D(const ListContactsResponse);
-    return static_cast<const ListContactsRequest *>(d->request);
+    return static_cast<const ListContactsRequest *>(SSMContactsResponse::request());
 }
 
 /*!

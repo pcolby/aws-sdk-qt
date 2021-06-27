@@ -73,8 +73,7 @@ CreatePreparedStatementResponse::CreatePreparedStatementResponse(
  */
 const CreatePreparedStatementRequest * CreatePreparedStatementResponse::request() const
 {
-    Q_D(const CreatePreparedStatementResponse);
-    return static_cast<const CreatePreparedStatementRequest *>(d->request);
+    return static_cast<const CreatePreparedStatementRequest *>(AthenaResponse::request());
 }
 
 /*!

@@ -69,8 +69,7 @@ GetMetricStreamResponse::GetMetricStreamResponse(
  */
 const GetMetricStreamRequest * GetMetricStreamResponse::request() const
 {
-    Q_D(const GetMetricStreamResponse);
-    return static_cast<const GetMetricStreamRequest *>(d->request);
+    return static_cast<const GetMetricStreamRequest *>(CloudWatchResponse::request());
 }
 
 /*!

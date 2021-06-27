@@ -56,8 +56,7 @@ ListGraphqlApisResponse::ListGraphqlApisResponse(
  */
 const ListGraphqlApisRequest * ListGraphqlApisResponse::request() const
 {
-    Q_D(const ListGraphqlApisResponse);
-    return static_cast<const ListGraphqlApisRequest *>(d->request);
+    return static_cast<const ListGraphqlApisRequest *>(AppSyncResponse::request());
 }
 
 /*!

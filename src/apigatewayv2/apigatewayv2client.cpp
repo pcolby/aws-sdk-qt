@@ -204,16 +204,16 @@ ApiGatewayV2Client::ApiGatewayV2Client(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ApiGatewayV2ClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-11-29"),
+    QStringLiteral("apigateway"),
+    QStringLiteral("AmazonApiGatewayV2"),
+    QStringLiteral("apigateway"),
+    parent), d_ptr(new ApiGatewayV2ClientPrivate(this))
 {
-    Q_D(ApiGatewayV2Client);
-    d->apiVersion = QStringLiteral("2018-11-29");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("apigateway");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AmazonApiGatewayV2");
-    d->serviceName = QStringLiteral("apigateway");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -232,16 +232,16 @@ ApiGatewayV2Client::ApiGatewayV2Client(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ApiGatewayV2ClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-11-29"),
+    QStringLiteral("apigateway"),
+    QStringLiteral("AmazonApiGatewayV2"),
+    QStringLiteral("apigateway"),
+    parent), d_ptr(new ApiGatewayV2ClientPrivate(this))
 {
-    Q_D(ApiGatewayV2Client);
-    d->apiVersion = QStringLiteral("2018-11-29");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("apigateway");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AmazonApiGatewayV2");
-    d->serviceName = QStringLiteral("apigateway");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -1191,10 +1191,9 @@ UpdateVpcLinkResponse * ApiGatewayV2Client::updateVpcLink(const UpdateVpcLinkReq
 /*!
  * Constructs a ApiGatewayV2ClientPrivate object with public implementation \a q.
  */
-ApiGatewayV2ClientPrivate::ApiGatewayV2ClientPrivate(ApiGatewayV2Client * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+ApiGatewayV2ClientPrivate::ApiGatewayV2ClientPrivate(ApiGatewayV2Client * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace ApiGatewayV2

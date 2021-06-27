@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    LightsailResponsePrivate * const d_ptr; ///< Internal d-pointer.
     LightsailResponse(LightsailResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -56,8 +56,7 @@ CreateRobotApplicationResponse::CreateRobotApplicationResponse(
  */
 const CreateRobotApplicationRequest * CreateRobotApplicationResponse::request() const
 {
-    Q_D(const CreateRobotApplicationResponse);
-    return static_cast<const CreateRobotApplicationRequest *>(d->request);
+    return static_cast<const CreateRobotApplicationRequest *>(RoboMakerResponse::request());
 }
 
 /*!

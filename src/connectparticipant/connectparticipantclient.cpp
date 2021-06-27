@@ -85,16 +85,16 @@ ConnectParticipantClient::ConnectParticipantClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ConnectParticipantClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-09-07"),
+    QStringLiteral("participant.connect"),
+    QStringLiteral("Amazon Connect Participant Service"),
+    QStringLiteral("execute-api"),
+    parent), d_ptr(new ConnectParticipantClientPrivate(this))
 {
-    Q_D(ConnectParticipantClient);
-    d->apiVersion = QStringLiteral("2018-09-07");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("participant.connect");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Connect Participant Service");
-    d->serviceName = QStringLiteral("execute-api");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -113,16 +113,16 @@ ConnectParticipantClient::ConnectParticipantClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ConnectParticipantClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-09-07"),
+    QStringLiteral("participant.connect"),
+    QStringLiteral("Amazon Connect Participant Service"),
+    QStringLiteral("execute-api"),
+    parent), d_ptr(new ConnectParticipantClientPrivate(this))
 {
-    Q_D(ConnectParticipantClient);
-    d->apiVersion = QStringLiteral("2018-09-07");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("participant.connect");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Connect Participant Service");
-    d->serviceName = QStringLiteral("execute-api");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -290,10 +290,9 @@ StartAttachmentUploadResponse * ConnectParticipantClient::startAttachmentUpload(
 /*!
  * Constructs a ConnectParticipantClientPrivate object with public implementation \a q.
  */
-ConnectParticipantClientPrivate::ConnectParticipantClientPrivate(ConnectParticipantClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+ConnectParticipantClientPrivate::ConnectParticipantClientPrivate(ConnectParticipantClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace ConnectParticipant

@@ -177,8 +177,7 @@ CreateEnvironmentAccountConnectionResponse::CreateEnvironmentAccountConnectionRe
  */
 const CreateEnvironmentAccountConnectionRequest * CreateEnvironmentAccountConnectionResponse::request() const
 {
-    Q_D(const CreateEnvironmentAccountConnectionResponse);
-    return static_cast<const CreateEnvironmentAccountConnectionRequest *>(d->request);
+    return static_cast<const CreateEnvironmentAccountConnectionRequest *>(ProtonResponse::request());
 }
 
 /*!

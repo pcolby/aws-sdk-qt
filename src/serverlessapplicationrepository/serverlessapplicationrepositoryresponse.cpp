@@ -37,7 +37,7 @@ namespace ServerlessApplicationRepository {
  * Constructs a ServerlessApplicationRepositoryResponse object with parent \a parent.
  */
 ServerlessApplicationRepositoryResponse::ServerlessApplicationRepositoryResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new ServerlessApplicationRepositoryResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ServerlessApplicationRepositoryResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ ServerlessApplicationRepositoryResponse::ServerlessApplicationRepositoryResponse
  * implementation that inherits from ServerlessApplicationRepositoryResponsePrivate.
  */
 ServerlessApplicationRepositoryResponse::ServerlessApplicationRepositoryResponse(ServerlessApplicationRepositoryResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void ServerlessApplicationRepositoryResponse::parseFailure(QIODevice &response)
  * Constructs a ServerlessApplicationRepositoryResponsePrivate object with public implementation \a q.
  */
 ServerlessApplicationRepositoryResponsePrivate::ServerlessApplicationRepositoryResponsePrivate(
-    ServerlessApplicationRepositoryResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    ServerlessApplicationRepositoryResponse * const q) : q_ptr(q)
 {
 
 }

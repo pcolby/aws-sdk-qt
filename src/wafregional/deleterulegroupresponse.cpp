@@ -78,8 +78,7 @@ DeleteRuleGroupResponse::DeleteRuleGroupResponse(
  */
 const DeleteRuleGroupRequest * DeleteRuleGroupResponse::request() const
 {
-    Q_D(const DeleteRuleGroupResponse);
-    return static_cast<const DeleteRuleGroupRequest *>(d->request);
+    return static_cast<const DeleteRuleGroupRequest *>(WAFRegionalResponse::request());
 }
 
 /*!

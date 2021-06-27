@@ -55,8 +55,7 @@ DescribeInputDeviceThumbnailResponse::DescribeInputDeviceThumbnailResponse(
  */
 const DescribeInputDeviceThumbnailRequest * DescribeInputDeviceThumbnailResponse::request() const
 {
-    Q_D(const DescribeInputDeviceThumbnailResponse);
-    return static_cast<const DescribeInputDeviceThumbnailRequest *>(d->request);
+    return static_cast<const DescribeInputDeviceThumbnailRequest *>(MediaLiveResponse::request());
 }
 
 /*!

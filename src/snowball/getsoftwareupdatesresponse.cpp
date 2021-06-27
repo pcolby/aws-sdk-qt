@@ -61,8 +61,7 @@ GetSoftwareUpdatesResponse::GetSoftwareUpdatesResponse(
  */
 const GetSoftwareUpdatesRequest * GetSoftwareUpdatesResponse::request() const
 {
-    Q_D(const GetSoftwareUpdatesResponse);
-    return static_cast<const GetSoftwareUpdatesRequest *>(d->request);
+    return static_cast<const GetSoftwareUpdatesRequest *>(SnowballResponse::request());
 }
 
 /*!

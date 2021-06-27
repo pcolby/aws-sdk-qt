@@ -56,8 +56,7 @@ ListThesauriResponse::ListThesauriResponse(
  */
 const ListThesauriRequest * ListThesauriResponse::request() const
 {
-    Q_D(const ListThesauriResponse);
-    return static_cast<const ListThesauriRequest *>(d->request);
+    return static_cast<const ListThesauriRequest *>(kendraResponse::request());
 }
 
 /*!

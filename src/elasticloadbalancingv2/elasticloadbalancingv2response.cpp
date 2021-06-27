@@ -37,7 +37,7 @@ namespace ElasticLoadBalancingv2 {
  * Constructs a ElasticLoadBalancingv2Response object with parent \a parent.
  */
 ElasticLoadBalancingv2Response::ElasticLoadBalancingv2Response(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new ElasticLoadBalancingv2ResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ElasticLoadBalancingv2ResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ ElasticLoadBalancingv2Response::ElasticLoadBalancingv2Response(QObject * const p
  * implementation that inherits from ElasticLoadBalancingv2ResponsePrivate.
  */
 ElasticLoadBalancingv2Response::ElasticLoadBalancingv2Response(ElasticLoadBalancingv2ResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void ElasticLoadBalancingv2Response::parseFailure(QIODevice &response)
  * Constructs a ElasticLoadBalancingv2ResponsePrivate object with public implementation \a q.
  */
 ElasticLoadBalancingv2ResponsePrivate::ElasticLoadBalancingv2ResponsePrivate(
-    ElasticLoadBalancingv2Response * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    ElasticLoadBalancingv2Response * const q) : q_ptr(q)
 {
 
 }

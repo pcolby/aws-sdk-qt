@@ -58,8 +58,7 @@ SearchTablesResponse::SearchTablesResponse(
  */
 const SearchTablesRequest * SearchTablesResponse::request() const
 {
-    Q_D(const SearchTablesResponse);
-    return static_cast<const SearchTablesRequest *>(d->request);
+    return static_cast<const SearchTablesRequest *>(GlueResponse::request());
 }
 
 /*!

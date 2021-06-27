@@ -20,15 +20,12 @@
 #ifndef QTAWS_APPREGISTRYREQUEST_P_H
 #define QTAWS_APPREGISTRYREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "appregistryrequest.h"
-
 namespace QtAws {
 namespace AppRegistry {
 
 class AppRegistryRequest;
 
-class AppRegistryRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class AppRegistryRequestPrivate {
 
 public:
     AppRegistryRequest::Action action; ///< AppRegistry action to be performed.
@@ -39,6 +36,9 @@ public:
     AppRegistryRequestPrivate(const AppRegistryRequestPrivate &other, AppRegistryRequest * const q);
 
     static QString toString(const AppRegistryRequest::Action &action);
+
+protected:
+    AppRegistryRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AppRegistryRequest)

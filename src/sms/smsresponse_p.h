@@ -20,14 +20,12 @@
 #ifndef QTAWS_SMSRESPONSE_P_H
 #define QTAWS_SMSRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace SMS {
 
 class SmsResponse;
 
-class SmsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class SmsResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    SmsResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SmsResponse)

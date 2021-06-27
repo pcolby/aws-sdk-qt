@@ -37,7 +37,7 @@ namespace FSx {
  * Constructs a FSxResponse object with parent \a parent.
  */
 FSxResponse::FSxResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new FSxResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new FSxResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ FSxResponse::FSxResponse(QObject * const parent)
  * implementation that inherits from FSxResponsePrivate.
  */
 FSxResponse::FSxResponse(FSxResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void FSxResponse::parseFailure(QIODevice &response)
  * Constructs a FSxResponsePrivate object with public implementation \a q.
  */
 FSxResponsePrivate::FSxResponsePrivate(
-    FSxResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    FSxResponse * const q) : q_ptr(q)
 {
 
 }

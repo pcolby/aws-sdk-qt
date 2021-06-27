@@ -60,8 +60,7 @@ GetFindingsPublicationConfigurationResponse::GetFindingsPublicationConfiguration
  */
 const GetFindingsPublicationConfigurationRequest * GetFindingsPublicationConfigurationResponse::request() const
 {
-    Q_D(const GetFindingsPublicationConfigurationResponse);
-    return static_cast<const GetFindingsPublicationConfigurationRequest *>(d->request);
+    return static_cast<const GetFindingsPublicationConfigurationRequest *>(Macie2Response::request());
 }
 
 /*!

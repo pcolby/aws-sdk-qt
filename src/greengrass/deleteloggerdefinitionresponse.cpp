@@ -58,8 +58,7 @@ DeleteLoggerDefinitionResponse::DeleteLoggerDefinitionResponse(
  */
 const DeleteLoggerDefinitionRequest * DeleteLoggerDefinitionResponse::request() const
 {
-    Q_D(const DeleteLoggerDefinitionResponse);
-    return static_cast<const DeleteLoggerDefinitionRequest *>(d->request);
+    return static_cast<const DeleteLoggerDefinitionRequest *>(GreengrassResponse::request());
 }
 
 /*!

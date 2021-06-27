@@ -112,8 +112,7 @@ BatchMeterUsageResponse::BatchMeterUsageResponse(
  */
 const BatchMeterUsageRequest * BatchMeterUsageResponse::request() const
 {
-    Q_D(const BatchMeterUsageResponse);
-    return static_cast<const BatchMeterUsageRequest *>(d->request);
+    return static_cast<const BatchMeterUsageRequest *>(MarketplaceMeteringResponse::request());
 }
 
 /*!

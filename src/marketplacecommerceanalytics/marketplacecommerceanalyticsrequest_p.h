@@ -20,15 +20,12 @@
 #ifndef QTAWS_MARKETPLACECOMMERCEANALYTICSREQUEST_P_H
 #define QTAWS_MARKETPLACECOMMERCEANALYTICSREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "marketplacecommerceanalyticsrequest.h"
-
 namespace QtAws {
 namespace MarketplaceCommerceAnalytics {
 
 class MarketplaceCommerceAnalyticsRequest;
 
-class MarketplaceCommerceAnalyticsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class MarketplaceCommerceAnalyticsRequestPrivate {
 
 public:
     MarketplaceCommerceAnalyticsRequest::Action action; ///< MarketplaceCommerceAnalytics action to be performed.
@@ -39,6 +36,9 @@ public:
     MarketplaceCommerceAnalyticsRequestPrivate(const MarketplaceCommerceAnalyticsRequestPrivate &other, MarketplaceCommerceAnalyticsRequest * const q);
 
     static QString toString(const MarketplaceCommerceAnalyticsRequest::Action &action);
+
+protected:
+    MarketplaceCommerceAnalyticsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MarketplaceCommerceAnalyticsRequest)

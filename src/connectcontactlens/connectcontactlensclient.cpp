@@ -70,16 +70,16 @@ ConnectContactLensClient::ConnectContactLensClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ConnectContactLensClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-08-21"),
+    QStringLiteral("contact-lens"),
+    QStringLiteral("Amazon Connect Contact Lens"),
+    QStringLiteral("connect"),
+    parent), d_ptr(new ConnectContactLensClientPrivate(this))
 {
-    Q_D(ConnectContactLensClient);
-    d->apiVersion = QStringLiteral("2020-08-21");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("contact-lens");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Connect Contact Lens");
-    d->serviceName = QStringLiteral("connect");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -98,16 +98,16 @@ ConnectContactLensClient::ConnectContactLensClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ConnectContactLensClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-08-21"),
+    QStringLiteral("contact-lens"),
+    QStringLiteral("Amazon Connect Contact Lens"),
+    QStringLiteral("connect"),
+    parent), d_ptr(new ConnectContactLensClientPrivate(this))
 {
-    Q_D(ConnectContactLensClient);
-    d->apiVersion = QStringLiteral("2020-08-21");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("contact-lens");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Connect Contact Lens");
-    d->serviceName = QStringLiteral("connect");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -135,10 +135,9 @@ ListRealtimeContactAnalysisSegmentsResponse * ConnectContactLensClient::listReal
 /*!
  * Constructs a ConnectContactLensClientPrivate object with public implementation \a q.
  */
-ConnectContactLensClientPrivate::ConnectContactLensClientPrivate(ConnectContactLensClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+ConnectContactLensClientPrivate::ConnectContactLensClientPrivate(ConnectContactLensClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace ConnectContactLens

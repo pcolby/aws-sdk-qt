@@ -141,8 +141,7 @@ SkipWaitTimeForInstanceTerminationResponse::SkipWaitTimeForInstanceTerminationRe
  */
 const SkipWaitTimeForInstanceTerminationRequest * SkipWaitTimeForInstanceTerminationResponse::request() const
 {
-    Q_D(const SkipWaitTimeForInstanceTerminationResponse);
-    return static_cast<const SkipWaitTimeForInstanceTerminationRequest *>(d->request);
+    return static_cast<const SkipWaitTimeForInstanceTerminationRequest *>(CodeDeployResponse::request());
 }
 
 /*!

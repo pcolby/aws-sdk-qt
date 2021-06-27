@@ -65,8 +65,7 @@ CreateParticipantConnectionResponse::CreateParticipantConnectionResponse(
  */
 const CreateParticipantConnectionRequest * CreateParticipantConnectionResponse::request() const
 {
-    Q_D(const CreateParticipantConnectionResponse);
-    return static_cast<const CreateParticipantConnectionRequest *>(d->request);
+    return static_cast<const CreateParticipantConnectionRequest *>(ConnectParticipantResponse::request());
 }
 
 /*!

@@ -66,8 +66,7 @@ GetAccountSendingEnabledResponse::GetAccountSendingEnabledResponse(
  */
 const GetAccountSendingEnabledRequest * GetAccountSendingEnabledResponse::request() const
 {
-    Q_D(const GetAccountSendingEnabledResponse);
-    return static_cast<const GetAccountSendingEnabledRequest *>(d->request);
+    return static_cast<const GetAccountSendingEnabledRequest *>(SesResponse::request());
 }
 
 /*!

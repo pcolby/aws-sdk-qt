@@ -55,8 +55,7 @@ ListQueuesResponse::ListQueuesResponse(
  */
 const ListQueuesRequest * ListQueuesResponse::request() const
 {
-    Q_D(const ListQueuesResponse);
-    return static_cast<const ListQueuesRequest *>(d->request);
+    return static_cast<const ListQueuesRequest *>(MediaConvertResponse::request());
 }
 
 /*!

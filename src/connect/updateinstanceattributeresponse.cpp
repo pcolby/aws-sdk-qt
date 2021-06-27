@@ -79,8 +79,7 @@ UpdateInstanceAttributeResponse::UpdateInstanceAttributeResponse(
  */
 const UpdateInstanceAttributeRequest * UpdateInstanceAttributeResponse::request() const
 {
-    Q_D(const UpdateInstanceAttributeResponse);
-    return static_cast<const UpdateInstanceAttributeRequest *>(d->request);
+    return static_cast<const UpdateInstanceAttributeRequest *>(ConnectResponse::request());
 }
 
 /*!

@@ -79,8 +79,7 @@ DeleteRecordResponse::DeleteRecordResponse(
  */
 const DeleteRecordRequest * DeleteRecordResponse::request() const
 {
-    Q_D(const DeleteRecordResponse);
-    return static_cast<const DeleteRecordRequest *>(d->request);
+    return static_cast<const DeleteRecordRequest *>(SageMakerFeatureStoreRuntimeResponse::request());
 }
 
 /*!

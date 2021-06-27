@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    MobileAnalyticsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     MobileAnalyticsResponse(MobileAnalyticsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

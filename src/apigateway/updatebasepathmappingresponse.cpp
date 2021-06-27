@@ -60,8 +60,7 @@ UpdateBasePathMappingResponse::UpdateBasePathMappingResponse(
  */
 const UpdateBasePathMappingRequest * UpdateBasePathMappingResponse::request() const
 {
-    Q_D(const UpdateBasePathMappingResponse);
-    return static_cast<const UpdateBasePathMappingRequest *>(d->request);
+    return static_cast<const UpdateBasePathMappingRequest *>(APIGatewayResponse::request());
 }
 
 /*!

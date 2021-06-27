@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    PersonalizeRuntimeResponsePrivate * const d_ptr; ///< Internal d-pointer.
     PersonalizeRuntimeResponse(PersonalizeRuntimeResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -385,8 +385,7 @@ CreateRecordingConfigurationResponse::CreateRecordingConfigurationResponse(
  */
 const CreateRecordingConfigurationRequest * CreateRecordingConfigurationResponse::request() const
 {
-    Q_D(const CreateRecordingConfigurationResponse);
-    return static_cast<const CreateRecordingConfigurationRequest *>(d->request);
+    return static_cast<const CreateRecordingConfigurationRequest *>(IvsResponse::request());
 }
 
 /*!

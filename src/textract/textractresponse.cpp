@@ -37,7 +37,7 @@ namespace Textract {
  * Constructs a TextractResponse object with parent \a parent.
  */
 TextractResponse::TextractResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new TextractResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new TextractResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ TextractResponse::TextractResponse(QObject * const parent)
  * implementation that inherits from TextractResponsePrivate.
  */
 TextractResponse::TextractResponse(TextractResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void TextractResponse::parseFailure(QIODevice &response)
  * Constructs a TextractResponsePrivate object with public implementation \a q.
  */
 TextractResponsePrivate::TextractResponsePrivate(
-    TextractResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    TextractResponse * const q) : q_ptr(q)
 {
 
 }

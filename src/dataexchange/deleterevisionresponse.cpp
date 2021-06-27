@@ -66,8 +66,7 @@ DeleteRevisionResponse::DeleteRevisionResponse(
  */
 const DeleteRevisionRequest * DeleteRevisionResponse::request() const
 {
-    Q_D(const DeleteRevisionResponse);
-    return static_cast<const DeleteRevisionRequest *>(d->request);
+    return static_cast<const DeleteRevisionRequest *>(DataExchangeResponse::request());
 }
 
 /*!

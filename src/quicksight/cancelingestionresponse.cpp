@@ -60,8 +60,7 @@ CancelIngestionResponse::CancelIngestionResponse(
  */
 const CancelIngestionRequest * CancelIngestionResponse::request() const
 {
-    Q_D(const CancelIngestionResponse);
-    return static_cast<const CancelIngestionRequest *>(d->request);
+    return static_cast<const CancelIngestionRequest *>(QuickSightResponse::request());
 }
 
 /*!

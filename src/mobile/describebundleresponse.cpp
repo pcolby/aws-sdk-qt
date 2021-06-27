@@ -58,8 +58,7 @@ DescribeBundleResponse::DescribeBundleResponse(
  */
 const DescribeBundleRequest * DescribeBundleResponse::request() const
 {
-    Q_D(const DescribeBundleResponse);
-    return static_cast<const DescribeBundleRequest *>(d->request);
+    return static_cast<const DescribeBundleRequest *>(MobileResponse::request());
 }
 
 /*!

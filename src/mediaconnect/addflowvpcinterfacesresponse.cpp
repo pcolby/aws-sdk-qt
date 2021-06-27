@@ -55,8 +55,7 @@ AddFlowVpcInterfacesResponse::AddFlowVpcInterfacesResponse(
  */
 const AddFlowVpcInterfacesRequest * AddFlowVpcInterfacesResponse::request() const
 {
-    Q_D(const AddFlowVpcInterfacesResponse);
-    return static_cast<const AddFlowVpcInterfacesRequest *>(d->request);
+    return static_cast<const AddFlowVpcInterfacesRequest *>(MediaConnectResponse::request());
 }
 
 /*!

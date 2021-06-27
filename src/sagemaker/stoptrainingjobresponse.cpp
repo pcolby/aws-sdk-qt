@@ -70,8 +70,7 @@ StopTrainingJobResponse::StopTrainingJobResponse(
  */
 const StopTrainingJobRequest * StopTrainingJobResponse::request() const
 {
-    Q_D(const StopTrainingJobResponse);
-    return static_cast<const StopTrainingJobRequest *>(d->request);
+    return static_cast<const StopTrainingJobRequest *>(SageMakerResponse::request());
 }
 
 /*!

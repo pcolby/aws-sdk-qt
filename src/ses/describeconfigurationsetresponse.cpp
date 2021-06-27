@@ -66,8 +66,7 @@ DescribeConfigurationSetResponse::DescribeConfigurationSetResponse(
  */
 const DescribeConfigurationSetRequest * DescribeConfigurationSetResponse::request() const
 {
-    Q_D(const DescribeConfigurationSetResponse);
-    return static_cast<const DescribeConfigurationSetRequest *>(d->request);
+    return static_cast<const DescribeConfigurationSetRequest *>(SesResponse::request());
 }
 
 /*!

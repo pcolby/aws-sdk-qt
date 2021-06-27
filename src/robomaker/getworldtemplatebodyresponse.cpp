@@ -56,8 +56,7 @@ GetWorldTemplateBodyResponse::GetWorldTemplateBodyResponse(
  */
 const GetWorldTemplateBodyRequest * GetWorldTemplateBodyResponse::request() const
 {
-    Q_D(const GetWorldTemplateBodyResponse);
-    return static_cast<const GetWorldTemplateBodyRequest *>(d->request);
+    return static_cast<const GetWorldTemplateBodyRequest *>(RoboMakerResponse::request());
 }
 
 /*!

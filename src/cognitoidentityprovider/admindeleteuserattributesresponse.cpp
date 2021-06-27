@@ -66,8 +66,7 @@ AdminDeleteUserAttributesResponse::AdminDeleteUserAttributesResponse(
  */
 const AdminDeleteUserAttributesRequest * AdminDeleteUserAttributesResponse::request() const
 {
-    Q_D(const AdminDeleteUserAttributesResponse);
-    return static_cast<const AdminDeleteUserAttributesRequest *>(d->request);
+    return static_cast<const AdminDeleteUserAttributesRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

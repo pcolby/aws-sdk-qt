@@ -56,8 +56,7 @@ CreateResolverResponse::CreateResolverResponse(
  */
 const CreateResolverRequest * CreateResolverResponse::request() const
 {
-    Q_D(const CreateResolverResponse);
-    return static_cast<const CreateResolverRequest *>(d->request);
+    return static_cast<const CreateResolverRequest *>(AppSyncResponse::request());
 }
 
 /*!

@@ -68,8 +68,7 @@ SetDesiredCapacityResponse::SetDesiredCapacityResponse(
  */
 const SetDesiredCapacityRequest * SetDesiredCapacityResponse::request() const
 {
-    Q_D(const SetDesiredCapacityResponse);
-    return static_cast<const SetDesiredCapacityRequest *>(d->request);
+    return static_cast<const SetDesiredCapacityRequest *>(AutoScalingResponse::request());
 }
 
 /*!

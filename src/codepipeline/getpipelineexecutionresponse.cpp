@@ -240,8 +240,7 @@ GetPipelineExecutionResponse::GetPipelineExecutionResponse(
  */
 const GetPipelineExecutionRequest * GetPipelineExecutionResponse::request() const
 {
-    Q_D(const GetPipelineExecutionResponse);
-    return static_cast<const GetPipelineExecutionRequest *>(d->request);
+    return static_cast<const GetPipelineExecutionRequest *>(CodePipelineResponse::request());
 }
 
 /*!

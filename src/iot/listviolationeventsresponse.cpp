@@ -82,8 +82,7 @@ ListViolationEventsResponse::ListViolationEventsResponse(
  */
 const ListViolationEventsRequest * ListViolationEventsResponse::request() const
 {
-    Q_D(const ListViolationEventsResponse);
-    return static_cast<const ListViolationEventsRequest *>(d->request);
+    return static_cast<const ListViolationEventsRequest *>(IoTResponse::request());
 }
 
 /*!

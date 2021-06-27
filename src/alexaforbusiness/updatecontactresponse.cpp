@@ -62,8 +62,7 @@ UpdateContactResponse::UpdateContactResponse(
  */
 const UpdateContactRequest * UpdateContactResponse::request() const
 {
-    Q_D(const UpdateContactResponse);
-    return static_cast<const UpdateContactRequest *>(d->request);
+    return static_cast<const UpdateContactRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

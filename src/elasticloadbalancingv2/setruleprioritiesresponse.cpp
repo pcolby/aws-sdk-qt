@@ -90,8 +90,7 @@ SetRulePrioritiesResponse::SetRulePrioritiesResponse(
  */
 const SetRulePrioritiesRequest * SetRulePrioritiesResponse::request() const
 {
-    Q_D(const SetRulePrioritiesResponse);
-    return static_cast<const SetRulePrioritiesRequest *>(d->request);
+    return static_cast<const SetRulePrioritiesRequest *>(ElasticLoadBalancingv2Response::request());
 }
 
 /*!

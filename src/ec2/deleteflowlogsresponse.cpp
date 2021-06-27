@@ -87,8 +87,7 @@ DeleteFlowLogsResponse::DeleteFlowLogsResponse(
  */
 const DeleteFlowLogsRequest * DeleteFlowLogsResponse::request() const
 {
-    Q_D(const DeleteFlowLogsResponse);
-    return static_cast<const DeleteFlowLogsRequest *>(d->request);
+    return static_cast<const DeleteFlowLogsRequest *>(Ec2Response::request());
 }
 
 /*!

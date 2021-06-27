@@ -82,8 +82,7 @@ SetLoggingOptionsResponse::SetLoggingOptionsResponse(
  */
 const SetLoggingOptionsRequest * SetLoggingOptionsResponse::request() const
 {
-    Q_D(const SetLoggingOptionsResponse);
-    return static_cast<const SetLoggingOptionsRequest *>(d->request);
+    return static_cast<const SetLoggingOptionsRequest *>(IoTResponse::request());
 }
 
 /*!

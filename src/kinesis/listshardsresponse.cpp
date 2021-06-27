@@ -58,8 +58,7 @@ ListShardsResponse::ListShardsResponse(
  */
 const ListShardsRequest * ListShardsResponse::request() const
 {
-    Q_D(const ListShardsResponse);
-    return static_cast<const ListShardsRequest *>(d->request);
+    return static_cast<const ListShardsRequest *>(KinesisResponse::request());
 }
 
 /*!

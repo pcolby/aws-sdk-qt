@@ -87,8 +87,7 @@ DescribeClassicLinkInstancesResponse::DescribeClassicLinkInstancesResponse(
  */
 const DescribeClassicLinkInstancesRequest * DescribeClassicLinkInstancesResponse::request() const
 {
-    Q_D(const DescribeClassicLinkInstancesResponse);
-    return static_cast<const DescribeClassicLinkInstancesRequest *>(d->request);
+    return static_cast<const DescribeClassicLinkInstancesRequest *>(Ec2Response::request());
 }
 
 /*!

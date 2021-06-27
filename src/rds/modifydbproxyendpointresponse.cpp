@@ -119,8 +119,7 @@ ModifyDBProxyEndpointResponse::ModifyDBProxyEndpointResponse(
  */
 const ModifyDBProxyEndpointRequest * ModifyDBProxyEndpointResponse::request() const
 {
-    Q_D(const ModifyDBProxyEndpointResponse);
-    return static_cast<const ModifyDBProxyEndpointRequest *>(d->request);
+    return static_cast<const ModifyDBProxyEndpointRequest *>(RdsResponse::request());
 }
 
 /*!

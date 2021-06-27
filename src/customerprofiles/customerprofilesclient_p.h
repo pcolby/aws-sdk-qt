@@ -20,19 +20,20 @@
 #ifndef QTAWS_CUSTOMERPROFILESCLIENT_P_H
 #define QTAWS_CUSTOMERPROFILESCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace CustomerProfiles {
 
 class CustomerProfilesClient;
 
-class CustomerProfilesClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class CustomerProfilesClientPrivate {
 
 public:
     CustomerProfilesClientPrivate(CustomerProfilesClient * const q);
+
+protected:
+    CustomerProfilesClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CustomerProfilesClient)

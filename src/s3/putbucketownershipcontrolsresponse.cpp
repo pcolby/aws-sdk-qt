@@ -55,8 +55,7 @@ PutBucketOwnershipControlsResponse::PutBucketOwnershipControlsResponse(
  */
 const PutBucketOwnershipControlsRequest * PutBucketOwnershipControlsResponse::request() const
 {
-    Q_D(const PutBucketOwnershipControlsResponse);
-    return static_cast<const PutBucketOwnershipControlsRequest *>(d->request);
+    return static_cast<const PutBucketOwnershipControlsRequest *>(S3Response::request());
 }
 
 /*!

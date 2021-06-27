@@ -70,8 +70,7 @@ CreateHumanTaskUiResponse::CreateHumanTaskUiResponse(
  */
 const CreateHumanTaskUiRequest * CreateHumanTaskUiResponse::request() const
 {
-    Q_D(const CreateHumanTaskUiResponse);
-    return static_cast<const CreateHumanTaskUiRequest *>(d->request);
+    return static_cast<const CreateHumanTaskUiRequest *>(SageMakerResponse::request());
 }
 
 /*!

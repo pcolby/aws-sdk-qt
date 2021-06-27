@@ -75,8 +75,7 @@ DescribeRemediationExecutionStatusResponse::DescribeRemediationExecutionStatusRe
  */
 const DescribeRemediationExecutionStatusRequest * DescribeRemediationExecutionStatusResponse::request() const
 {
-    Q_D(const DescribeRemediationExecutionStatusResponse);
-    return static_cast<const DescribeRemediationExecutionStatusRequest *>(d->request);
+    return static_cast<const DescribeRemediationExecutionStatusRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

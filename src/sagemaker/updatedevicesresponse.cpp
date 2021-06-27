@@ -70,8 +70,7 @@ UpdateDevicesResponse::UpdateDevicesResponse(
  */
 const UpdateDevicesRequest * UpdateDevicesResponse::request() const
 {
-    Q_D(const UpdateDevicesResponse);
-    return static_cast<const UpdateDevicesRequest *>(d->request);
+    return static_cast<const UpdateDevicesRequest *>(SageMakerResponse::request());
 }
 
 /*!

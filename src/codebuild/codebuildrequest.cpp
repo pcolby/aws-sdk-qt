@@ -86,7 +86,7 @@ namespace CodeBuild {
  * Constructs a CodeBuildRequest object for CodeBuild \a action.
  */
 CodeBuildRequest::CodeBuildRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new CodeBuildRequestPrivate(action, this))
+    : d_ptr(new CodeBuildRequestPrivate(action, this))
 {
 
 }
@@ -95,7 +95,8 @@ CodeBuildRequest::CodeBuildRequest(const Action action)
  * Constructs a copy of \a other.
  */
 CodeBuildRequest::CodeBuildRequest(const CodeBuildRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new CodeBuildRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new CodeBuildRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -118,7 +119,7 @@ CodeBuildRequest& CodeBuildRequest::operator=(const CodeBuildRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CodeBuildRequestPrivate.
  */
-CodeBuildRequest::CodeBuildRequest(CodeBuildRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+CodeBuildRequest::CodeBuildRequest(CodeBuildRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -287,7 +288,7 @@ QNetworkRequest CodeBuildRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 CodeBuildRequestPrivate::CodeBuildRequestPrivate(const CodeBuildRequest::Action action, CodeBuildRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -302,8 +303,8 @@ CodeBuildRequestPrivate::CodeBuildRequestPrivate(const CodeBuildRequest::Action 
  */
 CodeBuildRequestPrivate::CodeBuildRequestPrivate(const CodeBuildRequestPrivate &other,
                                      CodeBuildRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

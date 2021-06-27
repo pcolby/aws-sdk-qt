@@ -58,8 +58,7 @@ ImportCatalogToGlueResponse::ImportCatalogToGlueResponse(
  */
 const ImportCatalogToGlueRequest * ImportCatalogToGlueResponse::request() const
 {
-    Q_D(const ImportCatalogToGlueResponse);
-    return static_cast<const ImportCatalogToGlueRequest *>(d->request);
+    return static_cast<const ImportCatalogToGlueRequest *>(GlueResponse::request());
 }
 
 /*!

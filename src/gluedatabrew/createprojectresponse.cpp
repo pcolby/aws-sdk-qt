@@ -58,8 +58,7 @@ CreateProjectResponse::CreateProjectResponse(
  */
 const CreateProjectRequest * CreateProjectResponse::request() const
 {
-    Q_D(const CreateProjectResponse);
-    return static_cast<const CreateProjectRequest *>(d->request);
+    return static_cast<const CreateProjectRequest *>(GlueDataBrewResponse::request());
 }
 
 /*!

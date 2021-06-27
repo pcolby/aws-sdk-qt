@@ -75,8 +75,7 @@ GetTopicAttributesResponse::GetTopicAttributesResponse(
  */
 const GetTopicAttributesRequest * GetTopicAttributesResponse::request() const
 {
-    Q_D(const GetTopicAttributesResponse);
-    return static_cast<const GetTopicAttributesRequest *>(d->request);
+    return static_cast<const GetTopicAttributesRequest *>(SnsResponse::request());
 }
 
 /*!

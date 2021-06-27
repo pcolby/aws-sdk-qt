@@ -77,8 +77,7 @@ DeleteStackSetResponse::DeleteStackSetResponse(
  */
 const DeleteStackSetRequest * DeleteStackSetResponse::request() const
 {
-    Q_D(const DeleteStackSetResponse);
-    return static_cast<const DeleteStackSetRequest *>(d->request);
+    return static_cast<const DeleteStackSetRequest *>(CloudFormationResponse::request());
 }
 
 /*!

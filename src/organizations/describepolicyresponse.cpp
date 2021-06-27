@@ -141,8 +141,7 @@ DescribePolicyResponse::DescribePolicyResponse(
  */
 const DescribePolicyRequest * DescribePolicyResponse::request() const
 {
-    Q_D(const DescribePolicyResponse);
-    return static_cast<const DescribePolicyRequest *>(d->request);
+    return static_cast<const DescribePolicyRequest *>(OrganizationsResponse::request());
 }
 
 /*!

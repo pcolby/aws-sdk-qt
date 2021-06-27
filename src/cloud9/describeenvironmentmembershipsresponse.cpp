@@ -121,8 +121,7 @@ DescribeEnvironmentMembershipsResponse::DescribeEnvironmentMembershipsResponse(
  */
 const DescribeEnvironmentMembershipsRequest * DescribeEnvironmentMembershipsResponse::request() const
 {
-    Q_D(const DescribeEnvironmentMembershipsResponse);
-    return static_cast<const DescribeEnvironmentMembershipsRequest *>(d->request);
+    return static_cast<const DescribeEnvironmentMembershipsRequest *>(Cloud9Response::request());
 }
 
 /*!

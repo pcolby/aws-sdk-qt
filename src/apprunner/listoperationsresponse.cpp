@@ -86,8 +86,7 @@ ListOperationsResponse::ListOperationsResponse(
  */
 const ListOperationsRequest * ListOperationsResponse::request() const
 {
-    Q_D(const ListOperationsResponse);
-    return static_cast<const ListOperationsRequest *>(d->request);
+    return static_cast<const ListOperationsRequest *>(AppRunnerResponse::request());
 }
 
 /*!

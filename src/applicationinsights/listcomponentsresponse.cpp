@@ -68,8 +68,7 @@ ListComponentsResponse::ListComponentsResponse(
  */
 const ListComponentsRequest * ListComponentsResponse::request() const
 {
-    Q_D(const ListComponentsResponse);
-    return static_cast<const ListComponentsRequest *>(d->request);
+    return static_cast<const ListComponentsRequest *>(ApplicationInsightsResponse::request());
 }
 
 /*!

@@ -63,8 +63,7 @@ ListDirectoriesResponse::ListDirectoriesResponse(
  */
 const ListDirectoriesRequest * ListDirectoriesResponse::request() const
 {
-    Q_D(const ListDirectoriesResponse);
-    return static_cast<const ListDirectoriesRequest *>(d->request);
+    return static_cast<const ListDirectoriesRequest *>(CloudDirectoryResponse::request());
 }
 
 /*!

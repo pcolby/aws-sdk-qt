@@ -60,8 +60,7 @@ GetAuthorizersResponse::GetAuthorizersResponse(
  */
 const GetAuthorizersRequest * GetAuthorizersResponse::request() const
 {
-    Q_D(const GetAuthorizersResponse);
-    return static_cast<const GetAuthorizersRequest *>(d->request);
+    return static_cast<const GetAuthorizersRequest *>(APIGatewayResponse::request());
 }
 
 /*!

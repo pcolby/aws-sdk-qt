@@ -37,7 +37,7 @@ namespace SES {
  * Constructs a SesResponse object with parent \a parent.
  */
 SesResponse::SesResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new SesResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new SesResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ SesResponse::SesResponse(QObject * const parent)
  * implementation that inherits from SesResponsePrivate.
  */
 SesResponse::SesResponse(SesResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void SesResponse::parseFailure(QIODevice &response)
  * Constructs a SesResponsePrivate object with public implementation \a q.
  */
 SesResponsePrivate::SesResponsePrivate(
-    SesResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    SesResponse * const q) : q_ptr(q)
 {
 
 }

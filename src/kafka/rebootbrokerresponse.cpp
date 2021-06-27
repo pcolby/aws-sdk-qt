@@ -56,8 +56,7 @@ RebootBrokerResponse::RebootBrokerResponse(
  */
 const RebootBrokerRequest * RebootBrokerResponse::request() const
 {
-    Q_D(const RebootBrokerResponse);
-    return static_cast<const RebootBrokerRequest *>(d->request);
+    return static_cast<const RebootBrokerRequest *>(KafkaResponse::request());
 }
 
 /*!

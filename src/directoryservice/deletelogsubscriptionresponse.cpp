@@ -69,8 +69,7 @@ DeleteLogSubscriptionResponse::DeleteLogSubscriptionResponse(
  */
 const DeleteLogSubscriptionRequest * DeleteLogSubscriptionResponse::request() const
 {
-    Q_D(const DeleteLogSubscriptionResponse);
-    return static_cast<const DeleteLogSubscriptionRequest *>(d->request);
+    return static_cast<const DeleteLogSubscriptionRequest *>(DirectoryServiceResponse::request());
 }
 
 /*!

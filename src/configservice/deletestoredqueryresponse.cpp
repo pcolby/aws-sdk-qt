@@ -75,8 +75,7 @@ DeleteStoredQueryResponse::DeleteStoredQueryResponse(
  */
 const DeleteStoredQueryRequest * DeleteStoredQueryResponse::request() const
 {
-    Q_D(const DeleteStoredQueryResponse);
-    return static_cast<const DeleteStoredQueryRequest *>(d->request);
+    return static_cast<const DeleteStoredQueryRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

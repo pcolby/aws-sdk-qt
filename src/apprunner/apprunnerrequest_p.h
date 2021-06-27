@@ -20,15 +20,12 @@
 #ifndef QTAWS_APPRUNNERREQUEST_P_H
 #define QTAWS_APPRUNNERREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "apprunnerrequest.h"
-
 namespace QtAws {
 namespace AppRunner {
 
 class AppRunnerRequest;
 
-class AppRunnerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class AppRunnerRequestPrivate {
 
 public:
     AppRunnerRequest::Action action; ///< AppRunner action to be performed.
@@ -39,6 +36,9 @@ public:
     AppRunnerRequestPrivate(const AppRunnerRequestPrivate &other, AppRunnerRequest * const q);
 
     static QString toString(const AppRunnerRequest::Action &action);
+
+protected:
+    AppRunnerRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AppRunnerRequest)

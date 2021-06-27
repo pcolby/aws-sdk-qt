@@ -58,8 +58,7 @@ StopExperimentResponse::StopExperimentResponse(
  */
 const StopExperimentRequest * StopExperimentResponse::request() const
 {
-    Q_D(const StopExperimentResponse);
-    return static_cast<const StopExperimentRequest *>(d->request);
+    return static_cast<const StopExperimentRequest *>(FisResponse::request());
 }
 
 /*!

@@ -115,8 +115,7 @@ UpdateFleetCapacityResponse::UpdateFleetCapacityResponse(
  */
 const UpdateFleetCapacityRequest * UpdateFleetCapacityResponse::request() const
 {
-    Q_D(const UpdateFleetCapacityResponse);
-    return static_cast<const UpdateFleetCapacityRequest *>(d->request);
+    return static_cast<const UpdateFleetCapacityRequest *>(GameLiftResponse::request());
 }
 
 /*!

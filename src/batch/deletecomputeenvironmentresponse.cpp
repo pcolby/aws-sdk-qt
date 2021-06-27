@@ -68,8 +68,7 @@ DeleteComputeEnvironmentResponse::DeleteComputeEnvironmentResponse(
  */
 const DeleteComputeEnvironmentRequest * DeleteComputeEnvironmentResponse::request() const
 {
-    Q_D(const DeleteComputeEnvironmentResponse);
-    return static_cast<const DeleteComputeEnvironmentRequest *>(d->request);
+    return static_cast<const DeleteComputeEnvironmentRequest *>(BatchResponse::request());
 }
 
 /*!

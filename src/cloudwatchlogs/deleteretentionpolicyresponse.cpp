@@ -84,8 +84,7 @@ DeleteRetentionPolicyResponse::DeleteRetentionPolicyResponse(
  */
 const DeleteRetentionPolicyRequest * DeleteRetentionPolicyResponse::request() const
 {
-    Q_D(const DeleteRetentionPolicyResponse);
-    return static_cast<const DeleteRetentionPolicyRequest *>(d->request);
+    return static_cast<const DeleteRetentionPolicyRequest *>(CloudWatchLogsResponse::request());
 }
 
 /*!

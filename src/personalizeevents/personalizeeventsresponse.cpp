@@ -37,7 +37,7 @@ namespace PersonalizeEvents {
  * Constructs a PersonalizeEventsResponse object with parent \a parent.
  */
 PersonalizeEventsResponse::PersonalizeEventsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new PersonalizeEventsResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new PersonalizeEventsResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ PersonalizeEventsResponse::PersonalizeEventsResponse(QObject * const parent)
  * implementation that inherits from PersonalizeEventsResponsePrivate.
  */
 PersonalizeEventsResponse::PersonalizeEventsResponse(PersonalizeEventsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void PersonalizeEventsResponse::parseFailure(QIODevice &response)
  * Constructs a PersonalizeEventsResponsePrivate object with public implementation \a q.
  */
 PersonalizeEventsResponsePrivate::PersonalizeEventsResponsePrivate(
-    PersonalizeEventsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    PersonalizeEventsResponse * const q) : q_ptr(q)
 {
 
 }

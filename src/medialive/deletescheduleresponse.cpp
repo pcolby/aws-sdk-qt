@@ -55,8 +55,7 @@ DeleteScheduleResponse::DeleteScheduleResponse(
  */
 const DeleteScheduleRequest * DeleteScheduleResponse::request() const
 {
-    Q_D(const DeleteScheduleResponse);
-    return static_cast<const DeleteScheduleRequest *>(d->request);
+    return static_cast<const DeleteScheduleRequest *>(MediaLiveResponse::request());
 }
 
 /*!

@@ -59,8 +59,7 @@ ListUsageForLicenseConfigurationResponse::ListUsageForLicenseConfigurationRespon
  */
 const ListUsageForLicenseConfigurationRequest * ListUsageForLicenseConfigurationResponse::request() const
 {
-    Q_D(const ListUsageForLicenseConfigurationResponse);
-    return static_cast<const ListUsageForLicenseConfigurationRequest *>(d->request);
+    return static_cast<const ListUsageForLicenseConfigurationRequest *>(LicenseManagerResponse::request());
 }
 
 /*!

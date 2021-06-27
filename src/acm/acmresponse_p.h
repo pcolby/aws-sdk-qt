@@ -20,14 +20,12 @@
 #ifndef QTAWS_ACMRESPONSE_P_H
 #define QTAWS_ACMRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace ACM {
 
 class AcmResponse;
 
-class AcmResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class AcmResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    AcmResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AcmResponse)

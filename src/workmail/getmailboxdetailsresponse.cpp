@@ -89,8 +89,7 @@ GetMailboxDetailsResponse::GetMailboxDetailsResponse(
  */
 const GetMailboxDetailsRequest * GetMailboxDetailsResponse::request() const
 {
-    Q_D(const GetMailboxDetailsResponse);
-    return static_cast<const GetMailboxDetailsRequest *>(d->request);
+    return static_cast<const GetMailboxDetailsRequest *>(WorkMailResponse::request());
 }
 
 /*!

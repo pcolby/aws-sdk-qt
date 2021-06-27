@@ -74,8 +74,7 @@ DeleteKeyPairResponse::DeleteKeyPairResponse(
  */
 const DeleteKeyPairRequest * DeleteKeyPairResponse::request() const
 {
-    Q_D(const DeleteKeyPairResponse);
-    return static_cast<const DeleteKeyPairRequest *>(d->request);
+    return static_cast<const DeleteKeyPairRequest *>(LightsailResponse::request());
 }
 
 /*!

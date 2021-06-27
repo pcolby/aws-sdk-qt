@@ -60,8 +60,7 @@ DeleteAccountCustomizationResponse::DeleteAccountCustomizationResponse(
  */
 const DeleteAccountCustomizationRequest * DeleteAccountCustomizationResponse::request() const
 {
-    Q_D(const DeleteAccountCustomizationResponse);
-    return static_cast<const DeleteAccountCustomizationRequest *>(d->request);
+    return static_cast<const DeleteAccountCustomizationRequest *>(QuickSightResponse::request());
 }
 
 /*!

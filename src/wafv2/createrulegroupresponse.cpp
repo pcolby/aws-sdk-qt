@@ -126,8 +126,7 @@ CreateRuleGroupResponse::CreateRuleGroupResponse(
  */
 const CreateRuleGroupRequest * CreateRuleGroupResponse::request() const
 {
-    Q_D(const CreateRuleGroupResponse);
-    return static_cast<const CreateRuleGroupRequest *>(d->request);
+    return static_cast<const CreateRuleGroupRequest *>(Wafv2Response::request());
 }
 
 /*!

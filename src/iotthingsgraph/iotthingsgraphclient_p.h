@@ -20,19 +20,20 @@
 #ifndef QTAWS_IOTTHINGSGRAPHCLIENT_P_H
 #define QTAWS_IOTTHINGSGRAPHCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace IoTThingsGraph {
 
 class IoTThingsGraphClient;
 
-class IoTThingsGraphClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class IoTThingsGraphClientPrivate {
 
 public:
     IoTThingsGraphClientPrivate(IoTThingsGraphClient * const q);
+
+protected:
+    IoTThingsGraphClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoTThingsGraphClient)

@@ -61,8 +61,7 @@ UpdateDirectConnectGatewayAssociationResponse::UpdateDirectConnectGatewayAssocia
  */
 const UpdateDirectConnectGatewayAssociationRequest * UpdateDirectConnectGatewayAssociationResponse::request() const
 {
-    Q_D(const UpdateDirectConnectGatewayAssociationResponse);
-    return static_cast<const UpdateDirectConnectGatewayAssociationRequest *>(d->request);
+    return static_cast<const UpdateDirectConnectGatewayAssociationRequest *>(DirectConnectResponse::request());
 }
 
 /*!

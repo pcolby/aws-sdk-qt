@@ -56,8 +56,7 @@ UpdateBackendConfigResponse::UpdateBackendConfigResponse(
  */
 const UpdateBackendConfigRequest * UpdateBackendConfigResponse::request() const
 {
-    Q_D(const UpdateBackendConfigResponse);
-    return static_cast<const UpdateBackendConfigRequest *>(d->request);
+    return static_cast<const UpdateBackendConfigRequest *>(AmplifyBackendResponse::request());
 }
 
 /*!

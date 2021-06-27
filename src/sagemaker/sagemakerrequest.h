@@ -291,6 +291,7 @@ public:
 
 protected:
     /// @cond internal
+    SageMakerRequestPrivate * const d_ptr; ///< Internal d-pointer.
     SageMakerRequest(SageMakerRequestPrivate * const d);
     /// @endcond
 

@@ -58,8 +58,7 @@ DescribeNotebookExecutionResponse::DescribeNotebookExecutionResponse(
  */
 const DescribeNotebookExecutionRequest * DescribeNotebookExecutionResponse::request() const
 {
-    Q_D(const DescribeNotebookExecutionResponse);
-    return static_cast<const DescribeNotebookExecutionRequest *>(d->request);
+    return static_cast<const DescribeNotebookExecutionRequest *>(EmrResponse::request());
 }
 
 /*!

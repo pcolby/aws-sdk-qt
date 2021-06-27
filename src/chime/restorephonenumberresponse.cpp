@@ -98,8 +98,7 @@ RestorePhoneNumberResponse::RestorePhoneNumberResponse(
  */
 const RestorePhoneNumberRequest * RestorePhoneNumberResponse::request() const
 {
-    Q_D(const RestorePhoneNumberResponse);
-    return static_cast<const RestorePhoneNumberRequest *>(d->request);
+    return static_cast<const RestorePhoneNumberRequest *>(ChimeResponse::request());
 }
 
 /*!

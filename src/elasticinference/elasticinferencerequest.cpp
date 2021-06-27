@@ -48,7 +48,7 @@ namespace ElasticInference {
  * Constructs a ElasticInferenceRequest object for ElasticInference \a action.
  */
 ElasticInferenceRequest::ElasticInferenceRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new ElasticInferenceRequestPrivate(action, this))
+    : d_ptr(new ElasticInferenceRequestPrivate(action, this))
 {
 
 }
@@ -57,7 +57,8 @@ ElasticInferenceRequest::ElasticInferenceRequest(const Action action)
  * Constructs a copy of \a other.
  */
 ElasticInferenceRequest::ElasticInferenceRequest(const ElasticInferenceRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new ElasticInferenceRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new ElasticInferenceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +81,7 @@ ElasticInferenceRequest& ElasticInferenceRequest::operator=(const ElasticInferen
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ElasticInferenceRequestPrivate.
  */
-ElasticInferenceRequest::ElasticInferenceRequest(ElasticInferenceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+ElasticInferenceRequest::ElasticInferenceRequest(ElasticInferenceRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -249,7 +250,7 @@ QNetworkRequest ElasticInferenceRequest::unsignedRequest(const QUrl &endpoint) c
  * with public implementation \a q.
  */
 ElasticInferenceRequestPrivate::ElasticInferenceRequestPrivate(const ElasticInferenceRequest::Action action, ElasticInferenceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -264,8 +265,8 @@ ElasticInferenceRequestPrivate::ElasticInferenceRequestPrivate(const ElasticInfe
  */
 ElasticInferenceRequestPrivate::ElasticInferenceRequestPrivate(const ElasticInferenceRequestPrivate &other,
                                      ElasticInferenceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

@@ -73,8 +73,7 @@ ListEngineVersionsResponse::ListEngineVersionsResponse(
  */
 const ListEngineVersionsRequest * ListEngineVersionsResponse::request() const
 {
-    Q_D(const ListEngineVersionsResponse);
-    return static_cast<const ListEngineVersionsRequest *>(d->request);
+    return static_cast<const ListEngineVersionsRequest *>(AthenaResponse::request());
 }
 
 /*!

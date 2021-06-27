@@ -85,8 +85,7 @@ ResumeClusterResponse::ResumeClusterResponse(
  */
 const ResumeClusterRequest * ResumeClusterResponse::request() const
 {
-    Q_D(const ResumeClusterResponse);
-    return static_cast<const ResumeClusterRequest *>(d->request);
+    return static_cast<const ResumeClusterRequest *>(RedshiftResponse::request());
 }
 
 /*!

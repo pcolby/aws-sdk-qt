@@ -37,7 +37,7 @@ namespace Shield {
  * Constructs a ShieldResponse object with parent \a parent.
  */
 ShieldResponse::ShieldResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new ShieldResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ShieldResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ ShieldResponse::ShieldResponse(QObject * const parent)
  * implementation that inherits from ShieldResponsePrivate.
  */
 ShieldResponse::ShieldResponse(ShieldResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void ShieldResponse::parseFailure(QIODevice &response)
  * Constructs a ShieldResponsePrivate object with public implementation \a q.
  */
 ShieldResponsePrivate::ShieldResponsePrivate(
-    ShieldResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    ShieldResponse * const q) : q_ptr(q)
 {
 
 }

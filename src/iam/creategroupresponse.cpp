@@ -62,8 +62,7 @@ CreateGroupResponse::CreateGroupResponse(
  */
 const CreateGroupRequest * CreateGroupResponse::request() const
 {
-    Q_D(const CreateGroupResponse);
-    return static_cast<const CreateGroupRequest *>(d->request);
+    return static_cast<const CreateGroupRequest *>(IamResponse::request());
 }
 
 /*!

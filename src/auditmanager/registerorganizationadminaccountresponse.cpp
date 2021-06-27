@@ -98,8 +98,7 @@ RegisterOrganizationAdminAccountResponse::RegisterOrganizationAdminAccountRespon
  */
 const RegisterOrganizationAdminAccountRequest * RegisterOrganizationAdminAccountResponse::request() const
 {
-    Q_D(const RegisterOrganizationAdminAccountResponse);
-    return static_cast<const RegisterOrganizationAdminAccountRequest *>(d->request);
+    return static_cast<const RegisterOrganizationAdminAccountRequest *>(AuditManagerResponse::request());
 }
 
 /*!

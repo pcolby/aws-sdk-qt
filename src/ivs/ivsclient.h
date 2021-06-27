@@ -124,6 +124,12 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateChannelResponse * updateChannel(const UpdateChannelRequest &request);
 
+protected:
+    /// @cond internal
+    IvsClientPrivate * const d_ptr; ///< Internal d-pointer.
+    IvsClient(IvsClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(IvsClient)
     Q_DISABLE_COPY(IvsClient)

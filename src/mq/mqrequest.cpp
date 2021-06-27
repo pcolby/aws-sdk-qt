@@ -64,7 +64,7 @@ namespace MQ {
  * Constructs a MqRequest object for MQ \a action.
  */
 MqRequest::MqRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new MqRequestPrivate(action, this))
+    : d_ptr(new MqRequestPrivate(action, this))
 {
 
 }
@@ -73,7 +73,8 @@ MqRequest::MqRequest(const Action action)
  * Constructs a copy of \a other.
  */
 MqRequest::MqRequest(const MqRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new MqRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new MqRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -96,7 +97,7 @@ MqRequest& MqRequest::operator=(const MqRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MqRequestPrivate.
  */
-MqRequest::MqRequest(MqRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+MqRequest::MqRequest(MqRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -265,7 +266,7 @@ QNetworkRequest MqRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 MqRequestPrivate::MqRequestPrivate(const MqRequest::Action action, MqRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -280,8 +281,8 @@ MqRequestPrivate::MqRequestPrivate(const MqRequest::Action action, MqRequest * c
  */
 MqRequestPrivate::MqRequestPrivate(const MqRequestPrivate &other,
                                      MqRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

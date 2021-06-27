@@ -124,8 +124,7 @@ CreateSnapshotFromVolumeRecoveryPointResponse::CreateSnapshotFromVolumeRecoveryP
  */
 const CreateSnapshotFromVolumeRecoveryPointRequest * CreateSnapshotFromVolumeRecoveryPointResponse::request() const
 {
-    Q_D(const CreateSnapshotFromVolumeRecoveryPointResponse);
-    return static_cast<const CreateSnapshotFromVolumeRecoveryPointRequest *>(d->request);
+    return static_cast<const CreateSnapshotFromVolumeRecoveryPointRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

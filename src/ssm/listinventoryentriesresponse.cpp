@@ -98,8 +98,7 @@ ListInventoryEntriesResponse::ListInventoryEntriesResponse(
  */
 const ListInventoryEntriesRequest * ListInventoryEntriesResponse::request() const
 {
-    Q_D(const ListInventoryEntriesResponse);
-    return static_cast<const ListInventoryEntriesRequest *>(d->request);
+    return static_cast<const ListInventoryEntriesRequest *>(SsmResponse::request());
 }
 
 /*!

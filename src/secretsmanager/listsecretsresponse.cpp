@@ -131,8 +131,7 @@ ListSecretsResponse::ListSecretsResponse(
  */
 const ListSecretsRequest * ListSecretsResponse::request() const
 {
-    Q_D(const ListSecretsResponse);
-    return static_cast<const ListSecretsRequest *>(d->request);
+    return static_cast<const ListSecretsRequest *>(SecretsManagerResponse::request());
 }
 
 /*!

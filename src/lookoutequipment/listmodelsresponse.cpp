@@ -57,8 +57,7 @@ ListModelsResponse::ListModelsResponse(
  */
 const ListModelsRequest * ListModelsResponse::request() const
 {
-    Q_D(const ListModelsResponse);
-    return static_cast<const ListModelsRequest *>(d->request);
+    return static_cast<const ListModelsRequest *>(LookoutEquipmentResponse::request());
 }
 
 /*!

@@ -67,8 +67,7 @@ PutNotificationChannelResponse::PutNotificationChannelResponse(
  */
 const PutNotificationChannelRequest * PutNotificationChannelResponse::request() const
 {
-    Q_D(const PutNotificationChannelResponse);
-    return static_cast<const PutNotificationChannelRequest *>(d->request);
+    return static_cast<const PutNotificationChannelRequest *>(FmsResponse::request());
 }
 
 /*!

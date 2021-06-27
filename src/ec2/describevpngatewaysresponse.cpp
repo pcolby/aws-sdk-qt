@@ -87,8 +87,7 @@ DescribeVpnGatewaysResponse::DescribeVpnGatewaysResponse(
  */
 const DescribeVpnGatewaysRequest * DescribeVpnGatewaysResponse::request() const
 {
-    Q_D(const DescribeVpnGatewaysResponse);
-    return static_cast<const DescribeVpnGatewaysRequest *>(d->request);
+    return static_cast<const DescribeVpnGatewaysRequest *>(Ec2Response::request());
 }
 
 /*!

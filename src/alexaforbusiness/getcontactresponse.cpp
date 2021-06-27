@@ -62,8 +62,7 @@ GetContactResponse::GetContactResponse(
  */
 const GetContactRequest * GetContactResponse::request() const
 {
-    Q_D(const GetContactResponse);
-    return static_cast<const GetContactRequest *>(d->request);
+    return static_cast<const GetContactRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

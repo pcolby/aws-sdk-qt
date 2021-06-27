@@ -56,8 +56,7 @@ DeleteMedicalVocabularyResponse::DeleteMedicalVocabularyResponse(
  */
 const DeleteMedicalVocabularyRequest * DeleteMedicalVocabularyResponse::request() const
 {
-    Q_D(const DeleteMedicalVocabularyResponse);
-    return static_cast<const DeleteMedicalVocabularyRequest *>(d->request);
+    return static_cast<const DeleteMedicalVocabularyRequest *>(TranscribeServiceResponse::request());
 }
 
 /*!

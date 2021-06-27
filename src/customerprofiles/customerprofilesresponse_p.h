@@ -20,14 +20,12 @@
 #ifndef QTAWS_CUSTOMERPROFILESRESPONSE_P_H
 #define QTAWS_CUSTOMERPROFILESRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace CustomerProfiles {
 
 class CustomerProfilesResponse;
 
-class CustomerProfilesResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class CustomerProfilesResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    CustomerProfilesResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CustomerProfilesResponse)

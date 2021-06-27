@@ -61,8 +61,7 @@ GetJobManifestResponse::GetJobManifestResponse(
  */
 const GetJobManifestRequest * GetJobManifestResponse::request() const
 {
-    Q_D(const GetJobManifestResponse);
-    return static_cast<const GetJobManifestRequest *>(d->request);
+    return static_cast<const GetJobManifestRequest *>(SnowballResponse::request());
 }
 
 /*!

@@ -68,8 +68,7 @@ SuggestResponse::SuggestResponse(
  */
 const SuggestRequest * SuggestResponse::request() const
 {
-    Q_D(const SuggestResponse);
-    return static_cast<const SuggestRequest *>(d->request);
+    return static_cast<const SuggestRequest *>(CloudSearchDomainResponse::request());
 }
 
 /*!

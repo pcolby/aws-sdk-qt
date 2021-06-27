@@ -75,8 +75,7 @@ RegisterDeviceResponse::RegisterDeviceResponse(
  */
 const RegisterDeviceRequest * RegisterDeviceResponse::request() const
 {
-    Q_D(const RegisterDeviceResponse);
-    return static_cast<const RegisterDeviceRequest *>(d->request);
+    return static_cast<const RegisterDeviceRequest *>(CognitoSyncResponse::request());
 }
 
 /*!

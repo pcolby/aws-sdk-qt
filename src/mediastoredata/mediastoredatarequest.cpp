@@ -47,7 +47,7 @@ namespace MediaStoreData {
  * Constructs a MediaStoreDataRequest object for MediaStoreData \a action.
  */
 MediaStoreDataRequest::MediaStoreDataRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new MediaStoreDataRequestPrivate(action, this))
+    : d_ptr(new MediaStoreDataRequestPrivate(action, this))
 {
 
 }
@@ -56,7 +56,8 @@ MediaStoreDataRequest::MediaStoreDataRequest(const Action action)
  * Constructs a copy of \a other.
  */
 MediaStoreDataRequest::MediaStoreDataRequest(const MediaStoreDataRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new MediaStoreDataRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new MediaStoreDataRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -79,7 +80,7 @@ MediaStoreDataRequest& MediaStoreDataRequest::operator=(const MediaStoreDataRequ
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MediaStoreDataRequestPrivate.
  */
-MediaStoreDataRequest::MediaStoreDataRequest(MediaStoreDataRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+MediaStoreDataRequest::MediaStoreDataRequest(MediaStoreDataRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -248,7 +249,7 @@ QNetworkRequest MediaStoreDataRequest::unsignedRequest(const QUrl &endpoint) con
  * with public implementation \a q.
  */
 MediaStoreDataRequestPrivate::MediaStoreDataRequestPrivate(const MediaStoreDataRequest::Action action, MediaStoreDataRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -263,8 +264,8 @@ MediaStoreDataRequestPrivate::MediaStoreDataRequestPrivate(const MediaStoreDataR
  */
 MediaStoreDataRequestPrivate::MediaStoreDataRequestPrivate(const MediaStoreDataRequestPrivate &other,
                                      MediaStoreDataRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

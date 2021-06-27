@@ -20,14 +20,12 @@
 #ifndef QTAWS_LAKEFORMATIONRESPONSE_P_H
 #define QTAWS_LAKEFORMATIONRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace LakeFormation {
 
 class LakeFormationResponse;
 
-class LakeFormationResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class LakeFormationResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    LakeFormationResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(LakeFormationResponse)

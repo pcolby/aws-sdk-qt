@@ -59,8 +59,7 @@ ExtendLicenseConsumptionResponse::ExtendLicenseConsumptionResponse(
  */
 const ExtendLicenseConsumptionRequest * ExtendLicenseConsumptionResponse::request() const
 {
-    Q_D(const ExtendLicenseConsumptionResponse);
-    return static_cast<const ExtendLicenseConsumptionRequest *>(d->request);
+    return static_cast<const ExtendLicenseConsumptionRequest *>(LicenseManagerResponse::request());
 }
 
 /*!

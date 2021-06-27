@@ -1399,6 +1399,12 @@ public slots:
     UpdateSecurityGroupRuleDescriptionsIngressResponse * updateSecurityGroupRuleDescriptionsIngress(const UpdateSecurityGroupRuleDescriptionsIngressRequest &request);
     WithdrawByoipCidrResponse * withdrawByoipCidr(const WithdrawByoipCidrRequest &request);
 
+protected:
+    /// @cond internal
+    Ec2ClientPrivate * const d_ptr; ///< Internal d-pointer.
+    Ec2Client(Ec2ClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(Ec2Client)
     Q_DISABLE_COPY(Ec2Client)

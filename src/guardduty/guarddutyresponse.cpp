@@ -37,7 +37,7 @@ namespace GuardDuty {
  * Constructs a GuardDutyResponse object with parent \a parent.
  */
 GuardDutyResponse::GuardDutyResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new GuardDutyResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new GuardDutyResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ GuardDutyResponse::GuardDutyResponse(QObject * const parent)
  * implementation that inherits from GuardDutyResponsePrivate.
  */
 GuardDutyResponse::GuardDutyResponse(GuardDutyResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void GuardDutyResponse::parseFailure(QIODevice &response)
  * Constructs a GuardDutyResponsePrivate object with public implementation \a q.
  */
 GuardDutyResponsePrivate::GuardDutyResponsePrivate(
-    GuardDutyResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    GuardDutyResponse * const q) : q_ptr(q)
 {
 
 }

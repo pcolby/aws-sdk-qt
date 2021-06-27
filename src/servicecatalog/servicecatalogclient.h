@@ -307,6 +307,12 @@ public slots:
     UpdateServiceActionResponse * updateServiceAction(const UpdateServiceActionRequest &request);
     UpdateTagOptionResponse * updateTagOption(const UpdateTagOptionRequest &request);
 
+protected:
+    /// @cond internal
+    ServiceCatalogClientPrivate * const d_ptr; ///< Internal d-pointer.
+    ServiceCatalogClient(ServiceCatalogClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(ServiceCatalogClient)
     Q_DISABLE_COPY(ServiceCatalogClient)

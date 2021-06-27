@@ -55,8 +55,7 @@ PutBucketEncryptionResponse::PutBucketEncryptionResponse(
  */
 const PutBucketEncryptionRequest * PutBucketEncryptionResponse::request() const
 {
-    Q_D(const PutBucketEncryptionResponse);
-    return static_cast<const PutBucketEncryptionRequest *>(d->request);
+    return static_cast<const PutBucketEncryptionRequest *>(S3Response::request());
 }
 
 /*!

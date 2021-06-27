@@ -159,8 +159,7 @@ DescribeAgentsResponse::DescribeAgentsResponse(
  */
 const DescribeAgentsRequest * DescribeAgentsResponse::request() const
 {
-    Q_D(const DescribeAgentsResponse);
-    return static_cast<const DescribeAgentsRequest *>(d->request);
+    return static_cast<const DescribeAgentsRequest *>(ApplicationDiscoveryServiceResponse::request());
 }
 
 /*!

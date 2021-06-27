@@ -64,8 +64,7 @@ DescribeLocationObjectStorageResponse::DescribeLocationObjectStorageResponse(
  */
 const DescribeLocationObjectStorageRequest * DescribeLocationObjectStorageResponse::request() const
 {
-    Q_D(const DescribeLocationObjectStorageResponse);
-    return static_cast<const DescribeLocationObjectStorageRequest *>(d->request);
+    return static_cast<const DescribeLocationObjectStorageRequest *>(DataSyncResponse::request());
 }
 
 /*!

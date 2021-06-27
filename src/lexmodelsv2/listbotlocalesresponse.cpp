@@ -55,8 +55,7 @@ ListBotLocalesResponse::ListBotLocalesResponse(
  */
 const ListBotLocalesRequest * ListBotLocalesResponse::request() const
 {
-    Q_D(const ListBotLocalesResponse);
-    return static_cast<const ListBotLocalesRequest *>(d->request);
+    return static_cast<const ListBotLocalesRequest *>(LexModelsV2Response::request());
 }
 
 /*!

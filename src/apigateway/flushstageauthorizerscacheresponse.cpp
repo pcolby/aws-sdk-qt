@@ -60,8 +60,7 @@ FlushStageAuthorizersCacheResponse::FlushStageAuthorizersCacheResponse(
  */
 const FlushStageAuthorizersCacheRequest * FlushStageAuthorizersCacheResponse::request() const
 {
-    Q_D(const FlushStageAuthorizersCacheResponse);
-    return static_cast<const FlushStageAuthorizersCacheRequest *>(d->request);
+    return static_cast<const FlushStageAuthorizersCacheRequest *>(APIGatewayResponse::request());
 }
 
 /*!

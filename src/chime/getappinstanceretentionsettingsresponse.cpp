@@ -98,8 +98,7 @@ GetAppInstanceRetentionSettingsResponse::GetAppInstanceRetentionSettingsResponse
  */
 const GetAppInstanceRetentionSettingsRequest * GetAppInstanceRetentionSettingsResponse::request() const
 {
-    Q_D(const GetAppInstanceRetentionSettingsResponse);
-    return static_cast<const GetAppInstanceRetentionSettingsRequest *>(d->request);
+    return static_cast<const GetAppInstanceRetentionSettingsRequest *>(ChimeResponse::request());
 }
 
 /*!

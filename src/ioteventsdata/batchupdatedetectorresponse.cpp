@@ -64,8 +64,7 @@ BatchUpdateDetectorResponse::BatchUpdateDetectorResponse(
  */
 const BatchUpdateDetectorRequest * BatchUpdateDetectorResponse::request() const
 {
-    Q_D(const BatchUpdateDetectorResponse);
-    return static_cast<const BatchUpdateDetectorRequest *>(d->request);
+    return static_cast<const BatchUpdateDetectorRequest *>(IoTEventsDataResponse::request());
 }
 
 /*!

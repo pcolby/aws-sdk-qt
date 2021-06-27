@@ -66,7 +66,7 @@ namespace AmplifyBackend {
  * Constructs a AmplifyBackendRequest object for AmplifyBackend \a action.
  */
 AmplifyBackendRequest::AmplifyBackendRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new AmplifyBackendRequestPrivate(action, this))
+    : d_ptr(new AmplifyBackendRequestPrivate(action, this))
 {
 
 }
@@ -75,7 +75,8 @@ AmplifyBackendRequest::AmplifyBackendRequest(const Action action)
  * Constructs a copy of \a other.
  */
 AmplifyBackendRequest::AmplifyBackendRequest(const AmplifyBackendRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new AmplifyBackendRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new AmplifyBackendRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -98,7 +99,7 @@ AmplifyBackendRequest& AmplifyBackendRequest::operator=(const AmplifyBackendRequ
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from AmplifyBackendRequestPrivate.
  */
-AmplifyBackendRequest::AmplifyBackendRequest(AmplifyBackendRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+AmplifyBackendRequest::AmplifyBackendRequest(AmplifyBackendRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -267,7 +268,7 @@ QNetworkRequest AmplifyBackendRequest::unsignedRequest(const QUrl &endpoint) con
  * with public implementation \a q.
  */
 AmplifyBackendRequestPrivate::AmplifyBackendRequestPrivate(const AmplifyBackendRequest::Action action, AmplifyBackendRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -282,8 +283,8 @@ AmplifyBackendRequestPrivate::AmplifyBackendRequestPrivate(const AmplifyBackendR
  */
 AmplifyBackendRequestPrivate::AmplifyBackendRequestPrivate(const AmplifyBackendRequestPrivate &other,
                                      AmplifyBackendRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

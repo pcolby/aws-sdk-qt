@@ -84,8 +84,7 @@ DisassociateKmsKeyResponse::DisassociateKmsKeyResponse(
  */
 const DisassociateKmsKeyRequest * DisassociateKmsKeyResponse::request() const
 {
-    Q_D(const DisassociateKmsKeyResponse);
-    return static_cast<const DisassociateKmsKeyRequest *>(d->request);
+    return static_cast<const DisassociateKmsKeyRequest *>(CloudWatchLogsResponse::request());
 }
 
 /*!

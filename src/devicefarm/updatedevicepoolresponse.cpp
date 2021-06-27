@@ -75,8 +75,7 @@ UpdateDevicePoolResponse::UpdateDevicePoolResponse(
  */
 const UpdateDevicePoolRequest * UpdateDevicePoolResponse::request() const
 {
-    Q_D(const UpdateDevicePoolResponse);
-    return static_cast<const UpdateDevicePoolRequest *>(d->request);
+    return static_cast<const UpdateDevicePoolRequest *>(DeviceFarmResponse::request());
 }
 
 /*!

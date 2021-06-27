@@ -62,8 +62,7 @@ AssociateCustomerGatewayResponse::AssociateCustomerGatewayResponse(
  */
 const AssociateCustomerGatewayRequest * AssociateCustomerGatewayResponse::request() const
 {
-    Q_D(const AssociateCustomerGatewayResponse);
-    return static_cast<const AssociateCustomerGatewayRequest *>(d->request);
+    return static_cast<const AssociateCustomerGatewayRequest *>(NetworkManagerResponse::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ RemoveTagsFromStreamResponse::RemoveTagsFromStreamResponse(
  */
 const RemoveTagsFromStreamRequest * RemoveTagsFromStreamResponse::request() const
 {
-    Q_D(const RemoveTagsFromStreamResponse);
-    return static_cast<const RemoveTagsFromStreamRequest *>(d->request);
+    return static_cast<const RemoveTagsFromStreamRequest *>(KinesisResponse::request());
 }
 
 /*!

@@ -57,8 +57,7 @@ ListConfigurationRevisionsResponse::ListConfigurationRevisionsResponse(
  */
 const ListConfigurationRevisionsRequest * ListConfigurationRevisionsResponse::request() const
 {
-    Q_D(const ListConfigurationRevisionsResponse);
-    return static_cast<const ListConfigurationRevisionsRequest *>(d->request);
+    return static_cast<const ListConfigurationRevisionsRequest *>(MqResponse::request());
 }
 
 /*!

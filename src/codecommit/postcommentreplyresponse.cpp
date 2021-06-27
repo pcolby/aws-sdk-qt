@@ -439,8 +439,7 @@ PostCommentReplyResponse::PostCommentReplyResponse(
  */
 const PostCommentReplyRequest * PostCommentReplyResponse::request() const
 {
-    Q_D(const PostCommentReplyResponse);
-    return static_cast<const PostCommentReplyRequest *>(d->request);
+    return static_cast<const PostCommentReplyRequest *>(CodeCommitResponse::request());
 }
 
 /*!

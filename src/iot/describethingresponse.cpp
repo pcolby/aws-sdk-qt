@@ -82,8 +82,7 @@ DescribeThingResponse::DescribeThingResponse(
  */
 const DescribeThingRequest * DescribeThingResponse::request() const
 {
-    Q_D(const DescribeThingResponse);
-    return static_cast<const DescribeThingRequest *>(d->request);
+    return static_cast<const DescribeThingRequest *>(IoTResponse::request());
 }
 
 /*!

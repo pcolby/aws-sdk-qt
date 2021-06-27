@@ -60,8 +60,7 @@ UpdateDevicePolicyConfigurationResponse::UpdateDevicePolicyConfigurationResponse
  */
 const UpdateDevicePolicyConfigurationRequest * UpdateDevicePolicyConfigurationResponse::request() const
 {
-    Q_D(const UpdateDevicePolicyConfigurationResponse);
-    return static_cast<const UpdateDevicePolicyConfigurationRequest *>(d->request);
+    return static_cast<const UpdateDevicePolicyConfigurationRequest *>(WorkLinkResponse::request());
 }
 
 /*!

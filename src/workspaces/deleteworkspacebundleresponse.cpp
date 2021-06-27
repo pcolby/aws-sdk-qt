@@ -58,8 +58,7 @@ DeleteWorkspaceBundleResponse::DeleteWorkspaceBundleResponse(
  */
 const DeleteWorkspaceBundleRequest * DeleteWorkspaceBundleResponse::request() const
 {
-    Q_D(const DeleteWorkspaceBundleResponse);
-    return static_cast<const DeleteWorkspaceBundleRequest *>(d->request);
+    return static_cast<const DeleteWorkspaceBundleRequest *>(WorkSpacesResponse::request());
 }
 
 /*!

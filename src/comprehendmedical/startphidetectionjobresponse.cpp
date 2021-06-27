@@ -57,8 +57,7 @@ StartPHIDetectionJobResponse::StartPHIDetectionJobResponse(
  */
 const StartPHIDetectionJobRequest * StartPHIDetectionJobResponse::request() const
 {
-    Q_D(const StartPHIDetectionJobResponse);
-    return static_cast<const StartPHIDetectionJobRequest *>(d->request);
+    return static_cast<const StartPHIDetectionJobRequest *>(ComprehendMedicalResponse::request());
 }
 
 /*!

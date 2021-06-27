@@ -66,8 +66,7 @@ DescribeSourceLocationResponse::DescribeSourceLocationResponse(
  */
 const DescribeSourceLocationRequest * DescribeSourceLocationResponse::request() const
 {
-    Q_D(const DescribeSourceLocationResponse);
-    return static_cast<const DescribeSourceLocationRequest *>(d->request);
+    return static_cast<const DescribeSourceLocationRequest *>(MediaTailorResponse::request());
 }
 
 /*!

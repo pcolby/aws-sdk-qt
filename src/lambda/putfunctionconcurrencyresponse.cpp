@@ -66,8 +66,7 @@ PutFunctionConcurrencyResponse::PutFunctionConcurrencyResponse(
  */
 const PutFunctionConcurrencyRequest * PutFunctionConcurrencyResponse::request() const
 {
-    Q_D(const PutFunctionConcurrencyResponse);
-    return static_cast<const PutFunctionConcurrencyRequest *>(d->request);
+    return static_cast<const PutFunctionConcurrencyRequest *>(LambdaResponse::request());
 }
 
 /*!

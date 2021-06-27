@@ -117,6 +117,7 @@ public:
 
 protected:
     /// @cond internal
+    AutoScalingRequestPrivate * const d_ptr; ///< Internal d-pointer.
     AutoScalingRequest(AutoScalingRequestPrivate * const d);
     /// @endcond
 

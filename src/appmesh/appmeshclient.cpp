@@ -153,16 +153,16 @@ AppMeshClient::AppMeshClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new AppMeshClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-01-25"),
+    QStringLiteral("appmesh"),
+    QStringLiteral("AWS App Mesh"),
+    QStringLiteral("appmesh"),
+    parent), d_ptr(new AppMeshClientPrivate(this))
 {
-    Q_D(AppMeshClient);
-    d->apiVersion = QStringLiteral("2019-01-25");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("appmesh");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS App Mesh");
-    d->serviceName = QStringLiteral("appmesh");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -181,16 +181,16 @@ AppMeshClient::AppMeshClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new AppMeshClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-01-25"),
+    QStringLiteral("appmesh"),
+    QStringLiteral("AWS App Mesh"),
+    QStringLiteral("appmesh"),
+    parent), d_ptr(new AppMeshClientPrivate(this))
 {
-    Q_D(AppMeshClient);
-    d->apiVersion = QStringLiteral("2019-01-25");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("appmesh");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS App Mesh");
-    d->serviceName = QStringLiteral("appmesh");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -813,10 +813,9 @@ UpdateVirtualServiceResponse * AppMeshClient::updateVirtualService(const UpdateV
 /*!
  * Constructs a AppMeshClientPrivate object with public implementation \a q.
  */
-AppMeshClientPrivate::AppMeshClientPrivate(AppMeshClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+AppMeshClientPrivate::AppMeshClientPrivate(AppMeshClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace AppMesh

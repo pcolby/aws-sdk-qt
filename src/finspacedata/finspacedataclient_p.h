@@ -20,19 +20,20 @@
 #ifndef QTAWS_FINSPACEDATACLIENT_P_H
 #define QTAWS_FINSPACEDATACLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace FinSpaceData {
 
 class FinSpaceDataClient;
 
-class FinSpaceDataClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class FinSpaceDataClientPrivate {
 
 public:
     FinSpaceDataClientPrivate(FinSpaceDataClient * const q);
+
+protected:
+    FinSpaceDataClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(FinSpaceDataClient)

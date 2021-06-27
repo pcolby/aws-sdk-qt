@@ -88,8 +88,7 @@ UpdateContactListResponse::UpdateContactListResponse(
  */
 const UpdateContactListRequest * UpdateContactListResponse::request() const
 {
-    Q_D(const UpdateContactListResponse);
-    return static_cast<const UpdateContactListRequest *>(d->request);
+    return static_cast<const UpdateContactListRequest *>(Sesv2Response::request());
 }
 
 /*!

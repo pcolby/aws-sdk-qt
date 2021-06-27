@@ -79,8 +79,7 @@ StartTaskContactResponse::StartTaskContactResponse(
  */
 const StartTaskContactRequest * StartTaskContactResponse::request() const
 {
-    Q_D(const StartTaskContactResponse);
-    return static_cast<const StartTaskContactRequest *>(d->request);
+    return static_cast<const StartTaskContactRequest *>(ConnectResponse::request());
 }
 
 /*!

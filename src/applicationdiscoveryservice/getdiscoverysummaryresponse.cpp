@@ -159,8 +159,7 @@ GetDiscoverySummaryResponse::GetDiscoverySummaryResponse(
  */
 const GetDiscoverySummaryRequest * GetDiscoverySummaryResponse::request() const
 {
-    Q_D(const GetDiscoverySummaryResponse);
-    return static_cast<const GetDiscoverySummaryRequest *>(d->request);
+    return static_cast<const GetDiscoverySummaryRequest *>(ApplicationDiscoveryServiceResponse::request());
 }
 
 /*!

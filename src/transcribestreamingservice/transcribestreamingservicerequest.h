@@ -58,6 +58,7 @@ public:
 
 protected:
     /// @cond internal
+    TranscribeStreamingServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
     TranscribeStreamingServiceRequest(TranscribeStreamingServiceRequestPrivate * const d);
     /// @endcond
 

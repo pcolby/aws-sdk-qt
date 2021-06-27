@@ -154,6 +154,12 @@ public slots:
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
+protected:
+    /// @cond internal
+    CloudWatchClientPrivate * const d_ptr; ///< Internal d-pointer.
+    CloudWatchClient(CloudWatchClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(CloudWatchClient)
     Q_DISABLE_COPY(CloudWatchClient)

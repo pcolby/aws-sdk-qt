@@ -92,8 +92,7 @@ GetBlacklistReportsResponse::GetBlacklistReportsResponse(
  */
 const GetBlacklistReportsRequest * GetBlacklistReportsResponse::request() const
 {
-    Q_D(const GetBlacklistReportsResponse);
-    return static_cast<const GetBlacklistReportsRequest *>(d->request);
+    return static_cast<const GetBlacklistReportsRequest *>(PinpointEmailResponse::request());
 }
 
 /*!

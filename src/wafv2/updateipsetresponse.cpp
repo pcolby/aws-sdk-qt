@@ -126,8 +126,7 @@ UpdateIPSetResponse::UpdateIPSetResponse(
  */
 const UpdateIPSetRequest * UpdateIPSetResponse::request() const
 {
-    Q_D(const UpdateIPSetResponse);
-    return static_cast<const UpdateIPSetRequest *>(d->request);
+    return static_cast<const UpdateIPSetRequest *>(Wafv2Response::request());
 }
 
 /*!

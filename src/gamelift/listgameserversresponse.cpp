@@ -115,8 +115,7 @@ ListGameServersResponse::ListGameServersResponse(
  */
 const ListGameServersRequest * ListGameServersResponse::request() const
 {
-    Q_D(const ListGameServersResponse);
-    return static_cast<const ListGameServersRequest *>(d->request);
+    return static_cast<const ListGameServersRequest *>(GameLiftResponse::request());
 }
 
 /*!

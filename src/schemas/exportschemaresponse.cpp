@@ -56,8 +56,7 @@ ExportSchemaResponse::ExportSchemaResponse(
  */
 const ExportSchemaRequest * ExportSchemaResponse::request() const
 {
-    Q_D(const ExportSchemaResponse);
-    return static_cast<const ExportSchemaRequest *>(d->request);
+    return static_cast<const ExportSchemaRequest *>(SchemasResponse::request());
 }
 
 /*!

@@ -64,8 +64,7 @@ DeleteReportGroupResponse::DeleteReportGroupResponse(
  */
 const DeleteReportGroupRequest * DeleteReportGroupResponse::request() const
 {
-    Q_D(const DeleteReportGroupResponse);
-    return static_cast<const DeleteReportGroupRequest *>(d->request);
+    return static_cast<const DeleteReportGroupRequest *>(CodeBuildResponse::request());
 }
 
 /*!

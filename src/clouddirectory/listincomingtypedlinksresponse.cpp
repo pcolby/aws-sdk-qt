@@ -63,8 +63,7 @@ ListIncomingTypedLinksResponse::ListIncomingTypedLinksResponse(
  */
 const ListIncomingTypedLinksRequest * ListIncomingTypedLinksResponse::request() const
 {
-    Q_D(const ListIncomingTypedLinksResponse);
-    return static_cast<const ListIncomingTypedLinksRequest *>(d->request);
+    return static_cast<const ListIncomingTypedLinksRequest *>(CloudDirectoryResponse::request());
 }
 
 /*!

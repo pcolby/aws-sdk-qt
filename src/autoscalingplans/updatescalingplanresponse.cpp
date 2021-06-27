@@ -97,8 +97,7 @@ UpdateScalingPlanResponse::UpdateScalingPlanResponse(
  */
 const UpdateScalingPlanRequest * UpdateScalingPlanResponse::request() const
 {
-    Q_D(const UpdateScalingPlanResponse);
-    return static_cast<const UpdateScalingPlanRequest *>(d->request);
+    return static_cast<const UpdateScalingPlanRequest *>(AutoScalingPlansResponse::request());
 }
 
 /*!

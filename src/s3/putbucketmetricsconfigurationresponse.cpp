@@ -55,8 +55,7 @@ PutBucketMetricsConfigurationResponse::PutBucketMetricsConfigurationResponse(
  */
 const PutBucketMetricsConfigurationRequest * PutBucketMetricsConfigurationResponse::request() const
 {
-    Q_D(const PutBucketMetricsConfigurationResponse);
-    return static_cast<const PutBucketMetricsConfigurationRequest *>(d->request);
+    return static_cast<const PutBucketMetricsConfigurationRequest *>(S3Response::request());
 }
 
 /*!

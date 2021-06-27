@@ -177,8 +177,7 @@ GetServiceTemplateVersionResponse::GetServiceTemplateVersionResponse(
  */
 const GetServiceTemplateVersionRequest * GetServiceTemplateVersionResponse::request() const
 {
-    Q_D(const GetServiceTemplateVersionResponse);
-    return static_cast<const GetServiceTemplateVersionRequest *>(d->request);
+    return static_cast<const GetServiceTemplateVersionRequest *>(ProtonResponse::request());
 }
 
 /*!

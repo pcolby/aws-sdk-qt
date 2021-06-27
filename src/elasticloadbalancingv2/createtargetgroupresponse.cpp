@@ -90,8 +90,7 @@ CreateTargetGroupResponse::CreateTargetGroupResponse(
  */
 const CreateTargetGroupRequest * CreateTargetGroupResponse::request() const
 {
-    Q_D(const CreateTargetGroupResponse);
-    return static_cast<const CreateTargetGroupRequest *>(d->request);
+    return static_cast<const CreateTargetGroupRequest *>(ElasticLoadBalancingv2Response::request());
 }
 
 /*!

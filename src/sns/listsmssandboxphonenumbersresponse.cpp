@@ -75,8 +75,7 @@ ListSMSSandboxPhoneNumbersResponse::ListSMSSandboxPhoneNumbersResponse(
  */
 const ListSMSSandboxPhoneNumbersRequest * ListSMSSandboxPhoneNumbersResponse::request() const
 {
-    Q_D(const ListSMSSandboxPhoneNumbersResponse);
-    return static_cast<const ListSMSSandboxPhoneNumbersRequest *>(d->request);
+    return static_cast<const ListSMSSandboxPhoneNumbersRequest *>(SnsResponse::request());
 }
 
 /*!

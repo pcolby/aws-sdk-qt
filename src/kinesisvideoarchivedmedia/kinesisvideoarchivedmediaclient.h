@@ -61,6 +61,12 @@ public slots:
     GetMediaForFragmentListResponse * getMediaForFragmentList(const GetMediaForFragmentListRequest &request);
     ListFragmentsResponse * listFragments(const ListFragmentsRequest &request);
 
+protected:
+    /// @cond internal
+    KinesisVideoArchivedMediaClientPrivate * const d_ptr; ///< Internal d-pointer.
+    KinesisVideoArchivedMediaClient(KinesisVideoArchivedMediaClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(KinesisVideoArchivedMediaClient)
     Q_DISABLE_COPY(KinesisVideoArchivedMediaClient)

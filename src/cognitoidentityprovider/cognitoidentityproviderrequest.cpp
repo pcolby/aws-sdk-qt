@@ -143,7 +143,7 @@ namespace CognitoIdentityProvider {
  * Constructs a CognitoIdentityProviderRequest object for CognitoIdentityProvider \a action.
  */
 CognitoIdentityProviderRequest::CognitoIdentityProviderRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new CognitoIdentityProviderRequestPrivate(action, this))
+    : d_ptr(new CognitoIdentityProviderRequestPrivate(action, this))
 {
 
 }
@@ -152,7 +152,8 @@ CognitoIdentityProviderRequest::CognitoIdentityProviderRequest(const Action acti
  * Constructs a copy of \a other.
  */
 CognitoIdentityProviderRequest::CognitoIdentityProviderRequest(const CognitoIdentityProviderRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new CognitoIdentityProviderRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new CognitoIdentityProviderRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -175,7 +176,7 @@ CognitoIdentityProviderRequest& CognitoIdentityProviderRequest::operator=(const 
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CognitoIdentityProviderRequestPrivate.
  */
-CognitoIdentityProviderRequest::CognitoIdentityProviderRequest(CognitoIdentityProviderRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+CognitoIdentityProviderRequest::CognitoIdentityProviderRequest(CognitoIdentityProviderRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -344,7 +345,7 @@ QNetworkRequest CognitoIdentityProviderRequest::unsignedRequest(const QUrl &endp
  * with public implementation \a q.
  */
 CognitoIdentityProviderRequestPrivate::CognitoIdentityProviderRequestPrivate(const CognitoIdentityProviderRequest::Action action, CognitoIdentityProviderRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -359,8 +360,8 @@ CognitoIdentityProviderRequestPrivate::CognitoIdentityProviderRequestPrivate(con
  */
 CognitoIdentityProviderRequestPrivate::CognitoIdentityProviderRequestPrivate(const CognitoIdentityProviderRequestPrivate &other,
                                      CognitoIdentityProviderRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

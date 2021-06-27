@@ -60,8 +60,7 @@ SubscribeToEventResponse::SubscribeToEventResponse(
  */
 const SubscribeToEventRequest * SubscribeToEventResponse::request() const
 {
-    Q_D(const SubscribeToEventResponse);
-    return static_cast<const SubscribeToEventRequest *>(d->request);
+    return static_cast<const SubscribeToEventRequest *>(InspectorResponse::request());
 }
 
 /*!

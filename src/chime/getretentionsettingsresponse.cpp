@@ -98,8 +98,7 @@ GetRetentionSettingsResponse::GetRetentionSettingsResponse(
  */
 const GetRetentionSettingsRequest * GetRetentionSettingsResponse::request() const
 {
-    Q_D(const GetRetentionSettingsResponse);
-    return static_cast<const GetRetentionSettingsRequest *>(d->request);
+    return static_cast<const GetRetentionSettingsRequest *>(ChimeResponse::request());
 }
 
 /*!

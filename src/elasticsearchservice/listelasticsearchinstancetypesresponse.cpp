@@ -72,8 +72,7 @@ ListElasticsearchInstanceTypesResponse::ListElasticsearchInstanceTypesResponse(
  */
 const ListElasticsearchInstanceTypesRequest * ListElasticsearchInstanceTypesResponse::request() const
 {
-    Q_D(const ListElasticsearchInstanceTypesResponse);
-    return static_cast<const ListElasticsearchInstanceTypesRequest *>(d->request);
+    return static_cast<const ListElasticsearchInstanceTypesRequest *>(ElasticsearchServiceResponse::request());
 }
 
 /*!

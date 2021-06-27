@@ -58,8 +58,7 @@ DeleteStudioResponse::DeleteStudioResponse(
  */
 const DeleteStudioRequest * DeleteStudioResponse::request() const
 {
-    Q_D(const DeleteStudioResponse);
-    return static_cast<const DeleteStudioRequest *>(d->request);
+    return static_cast<const DeleteStudioRequest *>(EmrResponse::request());
 }
 
 /*!

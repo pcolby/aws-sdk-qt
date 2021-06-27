@@ -66,8 +66,7 @@ SetUICustomizationResponse::SetUICustomizationResponse(
  */
 const SetUICustomizationRequest * SetUICustomizationResponse::request() const
 {
-    Q_D(const SetUICustomizationResponse);
-    return static_cast<const SetUICustomizationRequest *>(d->request);
+    return static_cast<const SetUICustomizationRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

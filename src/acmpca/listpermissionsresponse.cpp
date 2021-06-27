@@ -69,8 +69,7 @@ ListPermissionsResponse::ListPermissionsResponse(
  */
 const ListPermissionsRequest * ListPermissionsResponse::request() const
 {
-    Q_D(const ListPermissionsResponse);
-    return static_cast<const ListPermissionsRequest *>(d->request);
+    return static_cast<const ListPermissionsRequest *>(AcmpcaResponse::request());
 }
 
 /*!

@@ -70,8 +70,7 @@ CreateTransformJobResponse::CreateTransformJobResponse(
  */
 const CreateTransformJobRequest * CreateTransformJobResponse::request() const
 {
-    Q_D(const CreateTransformJobResponse);
-    return static_cast<const CreateTransformJobRequest *>(d->request);
+    return static_cast<const CreateTransformJobRequest *>(SageMakerResponse::request());
 }
 
 /*!

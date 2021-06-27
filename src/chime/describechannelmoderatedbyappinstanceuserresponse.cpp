@@ -98,8 +98,7 @@ DescribeChannelModeratedByAppInstanceUserResponse::DescribeChannelModeratedByApp
  */
 const DescribeChannelModeratedByAppInstanceUserRequest * DescribeChannelModeratedByAppInstanceUserResponse::request() const
 {
-    Q_D(const DescribeChannelModeratedByAppInstanceUserResponse);
-    return static_cast<const DescribeChannelModeratedByAppInstanceUserRequest *>(d->request);
+    return static_cast<const DescribeChannelModeratedByAppInstanceUserRequest *>(ChimeResponse::request());
 }
 
 /*!

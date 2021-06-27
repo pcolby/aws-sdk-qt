@@ -59,8 +59,7 @@ RebootNodeResponse::RebootNodeResponse(
  */
 const RebootNodeRequest * RebootNodeResponse::request() const
 {
-    Q_D(const RebootNodeResponse);
-    return static_cast<const RebootNodeRequest *>(d->request);
+    return static_cast<const RebootNodeRequest *>(DaxResponse::request());
 }
 
 /*!

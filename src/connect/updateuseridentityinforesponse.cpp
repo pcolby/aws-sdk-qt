@@ -79,8 +79,7 @@ UpdateUserIdentityInfoResponse::UpdateUserIdentityInfoResponse(
  */
 const UpdateUserIdentityInfoRequest * UpdateUserIdentityInfoResponse::request() const
 {
-    Q_D(const UpdateUserIdentityInfoResponse);
-    return static_cast<const UpdateUserIdentityInfoRequest *>(d->request);
+    return static_cast<const UpdateUserIdentityInfoRequest *>(ConnectResponse::request());
 }
 
 /*!

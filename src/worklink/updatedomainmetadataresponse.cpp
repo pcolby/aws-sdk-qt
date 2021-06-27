@@ -60,8 +60,7 @@ UpdateDomainMetadataResponse::UpdateDomainMetadataResponse(
  */
 const UpdateDomainMetadataRequest * UpdateDomainMetadataResponse::request() const
 {
-    Q_D(const UpdateDomainMetadataResponse);
-    return static_cast<const UpdateDomainMetadataRequest *>(d->request);
+    return static_cast<const UpdateDomainMetadataRequest *>(WorkLinkResponse::request());
 }
 
 /*!

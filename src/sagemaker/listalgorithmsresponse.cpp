@@ -70,8 +70,7 @@ ListAlgorithmsResponse::ListAlgorithmsResponse(
  */
 const ListAlgorithmsRequest * ListAlgorithmsResponse::request() const
 {
-    Q_D(const ListAlgorithmsResponse);
-    return static_cast<const ListAlgorithmsRequest *>(d->request);
+    return static_cast<const ListAlgorithmsRequest *>(SageMakerResponse::request());
 }
 
 /*!

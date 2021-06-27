@@ -87,8 +87,7 @@ EnableTransitGatewayRouteTablePropagationResponse::EnableTransitGatewayRouteTabl
  */
 const EnableTransitGatewayRouteTablePropagationRequest * EnableTransitGatewayRouteTablePropagationResponse::request() const
 {
-    Q_D(const EnableTransitGatewayRouteTablePropagationResponse);
-    return static_cast<const EnableTransitGatewayRouteTablePropagationRequest *>(d->request);
+    return static_cast<const EnableTransitGatewayRouteTablePropagationRequest *>(Ec2Response::request());
 }
 
 /*!

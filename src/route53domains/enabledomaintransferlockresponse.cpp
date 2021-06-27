@@ -56,8 +56,7 @@ EnableDomainTransferLockResponse::EnableDomainTransferLockResponse(
  */
 const EnableDomainTransferLockRequest * EnableDomainTransferLockResponse::request() const
 {
-    Q_D(const EnableDomainTransferLockResponse);
-    return static_cast<const EnableDomainTransferLockRequest *>(d->request);
+    return static_cast<const EnableDomainTransferLockRequest *>(Route53DomainsResponse::request());
 }
 
 /*!

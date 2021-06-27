@@ -143,8 +143,7 @@ TagProjectResponse::TagProjectResponse(
  */
 const TagProjectRequest * TagProjectResponse::request() const
 {
-    Q_D(const TagProjectResponse);
-    return static_cast<const TagProjectRequest *>(d->request);
+    return static_cast<const TagProjectRequest *>(CodeStarResponse::request());
 }
 
 /*!

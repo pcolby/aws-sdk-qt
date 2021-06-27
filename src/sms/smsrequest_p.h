@@ -20,15 +20,12 @@
 #ifndef QTAWS_SMSREQUEST_P_H
 #define QTAWS_SMSREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "smsrequest.h"
-
 namespace QtAws {
 namespace SMS {
 
 class SmsRequest;
 
-class SmsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SmsRequestPrivate {
 
 public:
     SmsRequest::Action action; ///< SMS action to be performed.
@@ -39,6 +36,9 @@ public:
     SmsRequestPrivate(const SmsRequestPrivate &other, SmsRequest * const q);
 
     static QString toString(const SmsRequest::Action &action);
+
+protected:
+    SmsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SmsRequest)

@@ -119,8 +119,7 @@ DescribeDBClusterSnapshotsResponse::DescribeDBClusterSnapshotsResponse(
  */
 const DescribeDBClusterSnapshotsRequest * DescribeDBClusterSnapshotsResponse::request() const
 {
-    Q_D(const DescribeDBClusterSnapshotsResponse);
-    return static_cast<const DescribeDBClusterSnapshotsRequest *>(d->request);
+    return static_cast<const DescribeDBClusterSnapshotsRequest *>(RdsResponse::request());
 }
 
 /*!

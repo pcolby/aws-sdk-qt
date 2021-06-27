@@ -60,8 +60,7 @@ DescribeAssessmentRunsResponse::DescribeAssessmentRunsResponse(
  */
 const DescribeAssessmentRunsRequest * DescribeAssessmentRunsResponse::request() const
 {
-    Q_D(const DescribeAssessmentRunsResponse);
-    return static_cast<const DescribeAssessmentRunsRequest *>(d->request);
+    return static_cast<const DescribeAssessmentRunsRequest *>(InspectorResponse::request());
 }
 
 /*!

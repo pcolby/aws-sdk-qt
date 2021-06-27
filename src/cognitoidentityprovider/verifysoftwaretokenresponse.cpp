@@ -66,8 +66,7 @@ VerifySoftwareTokenResponse::VerifySoftwareTokenResponse(
  */
 const VerifySoftwareTokenRequest * VerifySoftwareTokenResponse::request() const
 {
-    Q_D(const VerifySoftwareTokenResponse);
-    return static_cast<const VerifySoftwareTokenRequest *>(d->request);
+    return static_cast<const VerifySoftwareTokenRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

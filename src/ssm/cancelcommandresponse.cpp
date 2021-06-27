@@ -98,8 +98,7 @@ CancelCommandResponse::CancelCommandResponse(
  */
 const CancelCommandRequest * CancelCommandResponse::request() const
 {
-    Q_D(const CancelCommandResponse);
-    return static_cast<const CancelCommandRequest *>(d->request);
+    return static_cast<const CancelCommandRequest *>(SsmResponse::request());
 }
 
 /*!

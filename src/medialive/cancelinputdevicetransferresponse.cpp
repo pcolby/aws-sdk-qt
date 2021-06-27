@@ -55,8 +55,7 @@ CancelInputDeviceTransferResponse::CancelInputDeviceTransferResponse(
  */
 const CancelInputDeviceTransferRequest * CancelInputDeviceTransferResponse::request() const
 {
-    Q_D(const CancelInputDeviceTransferResponse);
-    return static_cast<const CancelInputDeviceTransferRequest *>(d->request);
+    return static_cast<const CancelInputDeviceTransferRequest *>(MediaLiveResponse::request());
 }
 
 /*!

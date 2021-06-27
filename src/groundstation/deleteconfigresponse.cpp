@@ -58,8 +58,7 @@ DeleteConfigResponse::DeleteConfigResponse(
  */
 const DeleteConfigRequest * DeleteConfigResponse::request() const
 {
-    Q_D(const DeleteConfigResponse);
-    return static_cast<const DeleteConfigRequest *>(d->request);
+    return static_cast<const DeleteConfigRequest *>(GroundStationResponse::request());
 }
 
 /*!

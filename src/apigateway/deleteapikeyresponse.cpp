@@ -60,8 +60,7 @@ DeleteApiKeyResponse::DeleteApiKeyResponse(
  */
 const DeleteApiKeyRequest * DeleteApiKeyResponse::request() const
 {
-    Q_D(const DeleteApiKeyResponse);
-    return static_cast<const DeleteApiKeyRequest *>(d->request);
+    return static_cast<const DeleteApiKeyRequest *>(APIGatewayResponse::request());
 }
 
 /*!

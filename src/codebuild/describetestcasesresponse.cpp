@@ -64,8 +64,7 @@ DescribeTestCasesResponse::DescribeTestCasesResponse(
  */
 const DescribeTestCasesRequest * DescribeTestCasesResponse::request() const
 {
-    Q_D(const DescribeTestCasesResponse);
-    return static_cast<const DescribeTestCasesRequest *>(d->request);
+    return static_cast<const DescribeTestCasesRequest *>(CodeBuildResponse::request());
 }
 
 /*!

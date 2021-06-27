@@ -70,8 +70,7 @@ CreateAutoMLJobResponse::CreateAutoMLJobResponse(
  */
 const CreateAutoMLJobRequest * CreateAutoMLJobResponse::request() const
 {
-    Q_D(const CreateAutoMLJobResponse);
-    return static_cast<const CreateAutoMLJobRequest *>(d->request);
+    return static_cast<const CreateAutoMLJobRequest *>(SageMakerResponse::request());
 }
 
 /*!

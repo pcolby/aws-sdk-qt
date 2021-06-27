@@ -77,8 +77,7 @@ SetTypeDefaultVersionResponse::SetTypeDefaultVersionResponse(
  */
 const SetTypeDefaultVersionRequest * SetTypeDefaultVersionResponse::request() const
 {
-    Q_D(const SetTypeDefaultVersionResponse);
-    return static_cast<const SetTypeDefaultVersionRequest *>(d->request);
+    return static_cast<const SetTypeDefaultVersionRequest *>(CloudFormationResponse::request());
 }
 
 /*!

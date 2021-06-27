@@ -56,8 +56,7 @@ GetApnsVoipSandboxChannelResponse::GetApnsVoipSandboxChannelResponse(
  */
 const GetApnsVoipSandboxChannelRequest * GetApnsVoipSandboxChannelResponse::request() const
 {
-    Q_D(const GetApnsVoipSandboxChannelResponse);
-    return static_cast<const GetApnsVoipSandboxChannelRequest *>(d->request);
+    return static_cast<const GetApnsVoipSandboxChannelRequest *>(PinpointResponse::request());
 }
 
 /*!

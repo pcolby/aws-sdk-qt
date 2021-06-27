@@ -98,8 +98,7 @@ GetSipMediaApplicationLoggingConfigurationResponse::GetSipMediaApplicationLoggin
  */
 const GetSipMediaApplicationLoggingConfigurationRequest * GetSipMediaApplicationLoggingConfigurationResponse::request() const
 {
-    Q_D(const GetSipMediaApplicationLoggingConfigurationResponse);
-    return static_cast<const GetSipMediaApplicationLoggingConfigurationRequest *>(d->request);
+    return static_cast<const GetSipMediaApplicationLoggingConfigurationRequest *>(ChimeResponse::request());
 }
 
 /*!

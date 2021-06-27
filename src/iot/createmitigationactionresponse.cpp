@@ -82,8 +82,7 @@ CreateMitigationActionResponse::CreateMitigationActionResponse(
  */
 const CreateMitigationActionRequest * CreateMitigationActionResponse::request() const
 {
-    Q_D(const CreateMitigationActionResponse);
-    return static_cast<const CreateMitigationActionRequest *>(d->request);
+    return static_cast<const CreateMitigationActionRequest *>(IoTResponse::request());
 }
 
 /*!

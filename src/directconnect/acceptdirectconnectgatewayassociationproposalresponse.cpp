@@ -61,8 +61,7 @@ AcceptDirectConnectGatewayAssociationProposalResponse::AcceptDirectConnectGatewa
  */
 const AcceptDirectConnectGatewayAssociationProposalRequest * AcceptDirectConnectGatewayAssociationProposalResponse::request() const
 {
-    Q_D(const AcceptDirectConnectGatewayAssociationProposalResponse);
-    return static_cast<const AcceptDirectConnectGatewayAssociationProposalRequest *>(d->request);
+    return static_cast<const AcceptDirectConnectGatewayAssociationProposalRequest *>(DirectConnectResponse::request());
 }
 
 /*!

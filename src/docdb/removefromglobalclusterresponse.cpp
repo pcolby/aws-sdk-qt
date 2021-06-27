@@ -56,8 +56,7 @@ RemoveFromGlobalClusterResponse::RemoveFromGlobalClusterResponse(
  */
 const RemoveFromGlobalClusterRequest * RemoveFromGlobalClusterResponse::request() const
 {
-    Q_D(const RemoveFromGlobalClusterResponse);
-    return static_cast<const RemoveFromGlobalClusterRequest *>(d->request);
+    return static_cast<const RemoveFromGlobalClusterRequest *>(DocDBResponse::request());
 }
 
 /*!

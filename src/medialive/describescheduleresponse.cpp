@@ -55,8 +55,7 @@ DescribeScheduleResponse::DescribeScheduleResponse(
  */
 const DescribeScheduleRequest * DescribeScheduleResponse::request() const
 {
-    Q_D(const DescribeScheduleResponse);
-    return static_cast<const DescribeScheduleRequest *>(d->request);
+    return static_cast<const DescribeScheduleRequest *>(MediaLiveResponse::request());
 }
 
 /*!

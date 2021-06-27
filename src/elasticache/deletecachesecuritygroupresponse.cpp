@@ -69,8 +69,7 @@ DeleteCacheSecurityGroupResponse::DeleteCacheSecurityGroupResponse(
  */
 const DeleteCacheSecurityGroupRequest * DeleteCacheSecurityGroupResponse::request() const
 {
-    Q_D(const DeleteCacheSecurityGroupResponse);
-    return static_cast<const DeleteCacheSecurityGroupRequest *>(d->request);
+    return static_cast<const DeleteCacheSecurityGroupRequest *>(ElastiCacheResponse::request());
 }
 
 /*!

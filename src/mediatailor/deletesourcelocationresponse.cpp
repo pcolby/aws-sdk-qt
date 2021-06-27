@@ -66,8 +66,7 @@ DeleteSourceLocationResponse::DeleteSourceLocationResponse(
  */
 const DeleteSourceLocationRequest * DeleteSourceLocationResponse::request() const
 {
-    Q_D(const DeleteSourceLocationResponse);
-    return static_cast<const DeleteSourceLocationRequest *>(d->request);
+    return static_cast<const DeleteSourceLocationRequest *>(MediaTailorResponse::request());
 }
 
 /*!

@@ -61,8 +61,7 @@ UpdateProvisionedProductPropertiesResponse::UpdateProvisionedProductPropertiesRe
  */
 const UpdateProvisionedProductPropertiesRequest * UpdateProvisionedProductPropertiesResponse::request() const
 {
-    Q_D(const UpdateProvisionedProductPropertiesResponse);
-    return static_cast<const UpdateProvisionedProductPropertiesRequest *>(d->request);
+    return static_cast<const UpdateProvisionedProductPropertiesRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

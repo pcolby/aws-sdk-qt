@@ -62,7 +62,7 @@ namespace QLDB {
  * Constructs a QldbRequest object for QLDB \a action.
  */
 QldbRequest::QldbRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new QldbRequestPrivate(action, this))
+    : d_ptr(new QldbRequestPrivate(action, this))
 {
 
 }
@@ -71,7 +71,8 @@ QldbRequest::QldbRequest(const Action action)
  * Constructs a copy of \a other.
  */
 QldbRequest::QldbRequest(const QldbRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new QldbRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new QldbRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -94,7 +95,7 @@ QldbRequest& QldbRequest::operator=(const QldbRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from QldbRequestPrivate.
  */
-QldbRequest::QldbRequest(QldbRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+QldbRequest::QldbRequest(QldbRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -263,7 +264,7 @@ QNetworkRequest QldbRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 QldbRequestPrivate::QldbRequestPrivate(const QldbRequest::Action action, QldbRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -278,8 +279,8 @@ QldbRequestPrivate::QldbRequestPrivate(const QldbRequest::Action action, QldbReq
  */
 QldbRequestPrivate::QldbRequestPrivate(const QldbRequestPrivate &other,
                                      QldbRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

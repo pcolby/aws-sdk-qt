@@ -193,6 +193,7 @@ public:
 
 protected:
     /// @cond internal
+    RdsRequestPrivate * const d_ptr; ///< Internal d-pointer.
     RdsRequest(RdsRequestPrivate * const d);
     /// @endcond
 

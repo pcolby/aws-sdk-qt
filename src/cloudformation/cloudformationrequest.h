@@ -111,6 +111,7 @@ public:
 
 protected:
     /// @cond internal
+    CloudFormationRequestPrivate * const d_ptr; ///< Internal d-pointer.
     CloudFormationRequest(CloudFormationRequestPrivate * const d);
     /// @endcond
 

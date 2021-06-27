@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    StorageGatewayResponsePrivate * const d_ptr; ///< Internal d-pointer.
     StorageGatewayResponse(StorageGatewayResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -55,8 +55,7 @@ GetBucketReplicationResponse::GetBucketReplicationResponse(
  */
 const GetBucketReplicationRequest * GetBucketReplicationResponse::request() const
 {
-    Q_D(const GetBucketReplicationResponse);
-    return static_cast<const GetBucketReplicationRequest *>(d->request);
+    return static_cast<const GetBucketReplicationRequest *>(S3Response::request());
 }
 
 /*!

@@ -20,19 +20,20 @@
 #ifndef QTAWS_CONFIGSERVICECLIENT_P_H
 #define QTAWS_CONFIGSERVICECLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace ConfigService {
 
 class ConfigServiceClient;
 
-class ConfigServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ConfigServiceClientPrivate {
 
 public:
     ConfigServiceClientPrivate(ConfigServiceClient * const q);
+
+protected:
+    ConfigServiceClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ConfigServiceClient)

@@ -60,8 +60,7 @@ ImportApiKeysResponse::ImportApiKeysResponse(
  */
 const ImportApiKeysRequest * ImportApiKeysResponse::request() const
 {
-    Q_D(const ImportApiKeysResponse);
-    return static_cast<const ImportApiKeysRequest *>(d->request);
+    return static_cast<const ImportApiKeysRequest *>(APIGatewayResponse::request());
 }
 
 /*!

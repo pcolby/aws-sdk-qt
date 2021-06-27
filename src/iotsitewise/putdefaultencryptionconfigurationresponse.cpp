@@ -61,8 +61,7 @@ PutDefaultEncryptionConfigurationResponse::PutDefaultEncryptionConfigurationResp
  */
 const PutDefaultEncryptionConfigurationRequest * PutDefaultEncryptionConfigurationResponse::request() const
 {
-    Q_D(const PutDefaultEncryptionConfigurationResponse);
-    return static_cast<const PutDefaultEncryptionConfigurationRequest *>(d->request);
+    return static_cast<const PutDefaultEncryptionConfigurationRequest *>(IoTSiteWiseResponse::request());
 }
 
 /*!

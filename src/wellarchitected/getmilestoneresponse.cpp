@@ -62,8 +62,7 @@ GetMilestoneResponse::GetMilestoneResponse(
  */
 const GetMilestoneRequest * GetMilestoneResponse::request() const
 {
-    Q_D(const GetMilestoneResponse);
-    return static_cast<const GetMilestoneRequest *>(d->request);
+    return static_cast<const GetMilestoneRequest *>(WellArchitectedResponse::request());
 }
 
 /*!

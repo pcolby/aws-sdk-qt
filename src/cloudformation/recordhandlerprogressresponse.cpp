@@ -77,8 +77,7 @@ RecordHandlerProgressResponse::RecordHandlerProgressResponse(
  */
 const RecordHandlerProgressRequest * RecordHandlerProgressResponse::request() const
 {
-    Q_D(const RecordHandlerProgressResponse);
-    return static_cast<const RecordHandlerProgressRequest *>(d->request);
+    return static_cast<const RecordHandlerProgressRequest *>(CloudFormationResponse::request());
 }
 
 /*!

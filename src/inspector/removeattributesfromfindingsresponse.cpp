@@ -60,8 +60,7 @@ RemoveAttributesFromFindingsResponse::RemoveAttributesFromFindingsResponse(
  */
 const RemoveAttributesFromFindingsRequest * RemoveAttributesFromFindingsResponse::request() const
 {
-    Q_D(const RemoveAttributesFromFindingsResponse);
-    return static_cast<const RemoveAttributesFromFindingsRequest *>(d->request);
+    return static_cast<const RemoveAttributesFromFindingsRequest *>(InspectorResponse::request());
 }
 
 /*!

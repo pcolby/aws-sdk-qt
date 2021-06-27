@@ -87,8 +87,7 @@ DeleteTransitGatewayMulticastDomainResponse::DeleteTransitGatewayMulticastDomain
  */
 const DeleteTransitGatewayMulticastDomainRequest * DeleteTransitGatewayMulticastDomainResponse::request() const
 {
-    Q_D(const DeleteTransitGatewayMulticastDomainResponse);
-    return static_cast<const DeleteTransitGatewayMulticastDomainRequest *>(d->request);
+    return static_cast<const DeleteTransitGatewayMulticastDomainRequest *>(Ec2Response::request());
 }
 
 /*!

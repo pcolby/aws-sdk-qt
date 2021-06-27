@@ -98,8 +98,7 @@ DisassociateSigninDelegateGroupsFromAccountResponse::DisassociateSigninDelegateG
  */
 const DisassociateSigninDelegateGroupsFromAccountRequest * DisassociateSigninDelegateGroupsFromAccountResponse::request() const
 {
-    Q_D(const DisassociateSigninDelegateGroupsFromAccountResponse);
-    return static_cast<const DisassociateSigninDelegateGroupsFromAccountRequest *>(d->request);
+    return static_cast<const DisassociateSigninDelegateGroupsFromAccountRequest *>(ChimeResponse::request());
 }
 
 /*!

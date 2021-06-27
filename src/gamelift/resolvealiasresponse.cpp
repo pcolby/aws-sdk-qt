@@ -115,8 +115,7 @@ ResolveAliasResponse::ResolveAliasResponse(
  */
 const ResolveAliasRequest * ResolveAliasResponse::request() const
 {
-    Q_D(const ResolveAliasResponse);
-    return static_cast<const ResolveAliasRequest *>(d->request);
+    return static_cast<const ResolveAliasRequest *>(GameLiftResponse::request());
 }
 
 /*!

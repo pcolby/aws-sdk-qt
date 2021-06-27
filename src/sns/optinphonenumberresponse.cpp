@@ -75,8 +75,7 @@ OptInPhoneNumberResponse::OptInPhoneNumberResponse(
  */
 const OptInPhoneNumberRequest * OptInPhoneNumberResponse::request() const
 {
-    Q_D(const OptInPhoneNumberResponse);
-    return static_cast<const OptInPhoneNumberRequest *>(d->request);
+    return static_cast<const OptInPhoneNumberRequest *>(SnsResponse::request());
 }
 
 /*!

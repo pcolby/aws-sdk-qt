@@ -20,15 +20,12 @@
 #ifndef QTAWS_LICENSEMANAGERREQUEST_P_H
 #define QTAWS_LICENSEMANAGERREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "licensemanagerrequest.h"
-
 namespace QtAws {
 namespace LicenseManager {
 
 class LicenseManagerRequest;
 
-class LicenseManagerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class LicenseManagerRequestPrivate {
 
 public:
     LicenseManagerRequest::Action action; ///< LicenseManager action to be performed.
@@ -39,6 +36,9 @@ public:
     LicenseManagerRequestPrivate(const LicenseManagerRequestPrivate &other, LicenseManagerRequest * const q);
 
     static QString toString(const LicenseManagerRequest::Action &action);
+
+protected:
+    LicenseManagerRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(LicenseManagerRequest)

@@ -62,8 +62,7 @@ AssociateLensesResponse::AssociateLensesResponse(
  */
 const AssociateLensesRequest * AssociateLensesResponse::request() const
 {
-    Q_D(const AssociateLensesResponse);
-    return static_cast<const AssociateLensesRequest *>(d->request);
+    return static_cast<const AssociateLensesRequest *>(WellArchitectedResponse::request());
 }
 
 /*!

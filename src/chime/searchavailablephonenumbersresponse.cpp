@@ -98,8 +98,7 @@ SearchAvailablePhoneNumbersResponse::SearchAvailablePhoneNumbersResponse(
  */
 const SearchAvailablePhoneNumbersRequest * SearchAvailablePhoneNumbersResponse::request() const
 {
-    Q_D(const SearchAvailablePhoneNumbersResponse);
-    return static_cast<const SearchAvailablePhoneNumbersRequest *>(d->request);
+    return static_cast<const SearchAvailablePhoneNumbersRequest *>(ChimeResponse::request());
 }
 
 /*!

@@ -62,8 +62,7 @@ ListAttachedRolePoliciesResponse::ListAttachedRolePoliciesResponse(
  */
 const ListAttachedRolePoliciesRequest * ListAttachedRolePoliciesResponse::request() const
 {
-    Q_D(const ListAttachedRolePoliciesResponse);
-    return static_cast<const ListAttachedRolePoliciesRequest *>(d->request);
+    return static_cast<const ListAttachedRolePoliciesRequest *>(IamResponse::request());
 }
 
 /*!

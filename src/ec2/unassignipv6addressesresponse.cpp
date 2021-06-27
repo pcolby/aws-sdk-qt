@@ -87,8 +87,7 @@ UnassignIpv6AddressesResponse::UnassignIpv6AddressesResponse(
  */
 const UnassignIpv6AddressesRequest * UnassignIpv6AddressesResponse::request() const
 {
-    Q_D(const UnassignIpv6AddressesResponse);
-    return static_cast<const UnassignIpv6AddressesRequest *>(d->request);
+    return static_cast<const UnassignIpv6AddressesRequest *>(Ec2Response::request());
 }
 
 /*!

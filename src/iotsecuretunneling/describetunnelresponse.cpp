@@ -63,8 +63,7 @@ DescribeTunnelResponse::DescribeTunnelResponse(
  */
 const DescribeTunnelRequest * DescribeTunnelResponse::request() const
 {
-    Q_D(const DescribeTunnelResponse);
-    return static_cast<const DescribeTunnelRequest *>(d->request);
+    return static_cast<const DescribeTunnelRequest *>(IoTSecureTunnelingResponse::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ ListClustersResponse::ListClustersResponse(
  */
 const ListClustersRequest * ListClustersResponse::request() const
 {
-    Q_D(const ListClustersResponse);
-    return static_cast<const ListClustersRequest *>(d->request);
+    return static_cast<const ListClustersRequest *>(EmrResponse::request());
 }
 
 /*!

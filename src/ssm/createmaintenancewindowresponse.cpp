@@ -98,8 +98,7 @@ CreateMaintenanceWindowResponse::CreateMaintenanceWindowResponse(
  */
 const CreateMaintenanceWindowRequest * CreateMaintenanceWindowResponse::request() const
 {
-    Q_D(const CreateMaintenanceWindowResponse);
-    return static_cast<const CreateMaintenanceWindowRequest *>(d->request);
+    return static_cast<const CreateMaintenanceWindowRequest *>(SsmResponse::request());
 }
 
 /*!

@@ -103,8 +103,7 @@ CreateInsightResponse::CreateInsightResponse(
  */
 const CreateInsightRequest * CreateInsightResponse::request() const
 {
-    Q_D(const CreateInsightResponse);
-    return static_cast<const CreateInsightRequest *>(d->request);
+    return static_cast<const CreateInsightRequest *>(SecurityHubResponse::request());
 }
 
 /*!

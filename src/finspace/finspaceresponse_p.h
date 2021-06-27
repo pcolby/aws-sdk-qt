@@ -20,14 +20,12 @@
 #ifndef QTAWS_FINSPACERESPONSE_P_H
 #define QTAWS_FINSPACERESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace finspace {
 
 class finspaceResponse;
 
-class finspaceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class finspaceResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    finspaceResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(finspaceResponse)

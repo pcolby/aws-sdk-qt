@@ -66,8 +66,7 @@ ModifyReplicationInstanceResponse::ModifyReplicationInstanceResponse(
  */
 const ModifyReplicationInstanceRequest * ModifyReplicationInstanceResponse::request() const
 {
-    Q_D(const ModifyReplicationInstanceResponse);
-    return static_cast<const ModifyReplicationInstanceRequest *>(d->request);
+    return static_cast<const ModifyReplicationInstanceRequest *>(DatabaseMigrationServiceResponse::request());
 }
 
 /*!

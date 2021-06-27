@@ -85,8 +85,7 @@ DisableSnapshotCopyResponse::DisableSnapshotCopyResponse(
  */
 const DisableSnapshotCopyRequest * DisableSnapshotCopyResponse::request() const
 {
-    Q_D(const DisableSnapshotCopyResponse);
-    return static_cast<const DisableSnapshotCopyRequest *>(d->request);
+    return static_cast<const DisableSnapshotCopyRequest *>(RedshiftResponse::request());
 }
 
 /*!

@@ -66,16 +66,16 @@ S3OutpostsClient::S3OutpostsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new S3OutpostsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-07-25"),
+    QStringLiteral("s3-outposts"),
+    QStringLiteral("Amazon S3 on Outposts"),
+    QStringLiteral("s3-outposts"),
+    parent), d_ptr(new S3OutpostsClientPrivate(this))
 {
-    Q_D(S3OutpostsClient);
-    d->apiVersion = QStringLiteral("2017-07-25");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("s3-outposts");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon S3 on Outposts");
-    d->serviceName = QStringLiteral("s3-outposts");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -94,16 +94,16 @@ S3OutpostsClient::S3OutpostsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new S3OutpostsClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-07-25"),
+    QStringLiteral("s3-outposts"),
+    QStringLiteral("Amazon S3 on Outposts"),
+    QStringLiteral("s3-outposts"),
+    parent), d_ptr(new S3OutpostsClientPrivate(this))
 {
-    Q_D(S3OutpostsClient);
-    d->apiVersion = QStringLiteral("2017-07-25");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("s3-outposts");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon S3 on Outposts");
-    d->serviceName = QStringLiteral("s3-outposts");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -211,10 +211,9 @@ ListEndpointsResponse * S3OutpostsClient::listEndpoints(const ListEndpointsReque
 /*!
  * Constructs a S3OutpostsClientPrivate object with public implementation \a q.
  */
-S3OutpostsClientPrivate::S3OutpostsClientPrivate(S3OutpostsClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+S3OutpostsClientPrivate::S3OutpostsClientPrivate(S3OutpostsClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace S3Outposts

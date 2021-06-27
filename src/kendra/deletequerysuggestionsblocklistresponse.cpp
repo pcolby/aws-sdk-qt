@@ -56,8 +56,7 @@ DeleteQuerySuggestionsBlockListResponse::DeleteQuerySuggestionsBlockListResponse
  */
 const DeleteQuerySuggestionsBlockListRequest * DeleteQuerySuggestionsBlockListResponse::request() const
 {
-    Q_D(const DeleteQuerySuggestionsBlockListResponse);
-    return static_cast<const DeleteQuerySuggestionsBlockListRequest *>(d->request);
+    return static_cast<const DeleteQuerySuggestionsBlockListRequest *>(kendraResponse::request());
 }
 
 /*!

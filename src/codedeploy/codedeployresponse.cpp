@@ -37,7 +37,7 @@ namespace CodeDeploy {
  * Constructs a CodeDeployResponse object with parent \a parent.
  */
 CodeDeployResponse::CodeDeployResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new CodeDeployResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new CodeDeployResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ CodeDeployResponse::CodeDeployResponse(QObject * const parent)
  * implementation that inherits from CodeDeployResponsePrivate.
  */
 CodeDeployResponse::CodeDeployResponse(CodeDeployResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void CodeDeployResponse::parseFailure(QIODevice &response)
  * Constructs a CodeDeployResponsePrivate object with public implementation \a q.
  */
 CodeDeployResponsePrivate::CodeDeployResponsePrivate(
-    CodeDeployResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    CodeDeployResponse * const q) : q_ptr(q)
 {
 
 }

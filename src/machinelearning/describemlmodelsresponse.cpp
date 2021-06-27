@@ -55,8 +55,7 @@ DescribeMLModelsResponse::DescribeMLModelsResponse(
  */
 const DescribeMLModelsRequest * DescribeMLModelsResponse::request() const
 {
-    Q_D(const DescribeMLModelsResponse);
-    return static_cast<const DescribeMLModelsRequest *>(d->request);
+    return static_cast<const DescribeMLModelsRequest *>(MachineLearningResponse::request());
 }
 
 /*!

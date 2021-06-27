@@ -87,8 +87,7 @@ DescribeVpcPeeringConnectionsResponse::DescribeVpcPeeringConnectionsResponse(
  */
 const DescribeVpcPeeringConnectionsRequest * DescribeVpcPeeringConnectionsResponse::request() const
 {
-    Q_D(const DescribeVpcPeeringConnectionsResponse);
-    return static_cast<const DescribeVpcPeeringConnectionsRequest *>(d->request);
+    return static_cast<const DescribeVpcPeeringConnectionsRequest *>(Ec2Response::request());
 }
 
 /*!

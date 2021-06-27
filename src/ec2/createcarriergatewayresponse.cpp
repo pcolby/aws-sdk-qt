@@ -87,8 +87,7 @@ CreateCarrierGatewayResponse::CreateCarrierGatewayResponse(
  */
 const CreateCarrierGatewayRequest * CreateCarrierGatewayResponse::request() const
 {
-    Q_D(const CreateCarrierGatewayResponse);
-    return static_cast<const CreateCarrierGatewayRequest *>(d->request);
+    return static_cast<const CreateCarrierGatewayRequest *>(Ec2Response::request());
 }
 
 /*!

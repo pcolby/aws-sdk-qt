@@ -76,8 +76,7 @@ GetIPSetResponse::GetIPSetResponse(
  */
 const GetIPSetRequest * GetIPSetResponse::request() const
 {
-    Q_D(const GetIPSetResponse);
-    return static_cast<const GetIPSetRequest *>(d->request);
+    return static_cast<const GetIPSetRequest *>(WafResponse::request());
 }
 
 /*!

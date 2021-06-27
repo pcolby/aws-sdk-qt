@@ -56,8 +56,7 @@ CreateSchemaResponse::CreateSchemaResponse(
  */
 const CreateSchemaRequest * CreateSchemaResponse::request() const
 {
-    Q_D(const CreateSchemaResponse);
-    return static_cast<const CreateSchemaRequest *>(d->request);
+    return static_cast<const CreateSchemaRequest *>(PersonalizeResponse::request());
 }
 
 /*!

@@ -20,15 +20,12 @@
 #ifndef QTAWS_LIGHTSAILREQUEST_P_H
 #define QTAWS_LIGHTSAILREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "lightsailrequest.h"
-
 namespace QtAws {
 namespace Lightsail {
 
 class LightsailRequest;
 
-class LightsailRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class LightsailRequestPrivate {
 
 public:
     LightsailRequest::Action action; ///< Lightsail action to be performed.
@@ -39,6 +36,9 @@ public:
     LightsailRequestPrivate(const LightsailRequestPrivate &other, LightsailRequest * const q);
 
     static QString toString(const LightsailRequest::Action &action);
+
+protected:
+    LightsailRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(LightsailRequest)

@@ -37,7 +37,7 @@ namespace ApiGatewayV2 {
  * Constructs a ApiGatewayV2Response object with parent \a parent.
  */
 ApiGatewayV2Response::ApiGatewayV2Response(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new ApiGatewayV2ResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ApiGatewayV2ResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ ApiGatewayV2Response::ApiGatewayV2Response(QObject * const parent)
  * implementation that inherits from ApiGatewayV2ResponsePrivate.
  */
 ApiGatewayV2Response::ApiGatewayV2Response(ApiGatewayV2ResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void ApiGatewayV2Response::parseFailure(QIODevice &response)
  * Constructs a ApiGatewayV2ResponsePrivate object with public implementation \a q.
  */
 ApiGatewayV2ResponsePrivate::ApiGatewayV2ResponsePrivate(
-    ApiGatewayV2Response * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    ApiGatewayV2Response * const q) : q_ptr(q)
 {
 
 }

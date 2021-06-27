@@ -75,8 +75,7 @@ PutExternalEvaluationResponse::PutExternalEvaluationResponse(
  */
 const PutExternalEvaluationRequest * PutExternalEvaluationResponse::request() const
 {
-    Q_D(const PutExternalEvaluationResponse);
-    return static_cast<const PutExternalEvaluationRequest *>(d->request);
+    return static_cast<const PutExternalEvaluationRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

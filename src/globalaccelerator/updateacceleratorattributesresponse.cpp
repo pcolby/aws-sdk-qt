@@ -218,8 +218,7 @@ UpdateAcceleratorAttributesResponse::UpdateAcceleratorAttributesResponse(
  */
 const UpdateAcceleratorAttributesRequest * UpdateAcceleratorAttributesResponse::request() const
 {
-    Q_D(const UpdateAcceleratorAttributesResponse);
-    return static_cast<const UpdateAcceleratorAttributesRequest *>(d->request);
+    return static_cast<const UpdateAcceleratorAttributesRequest *>(GlobalAcceleratorResponse::request());
 }
 
 /*!

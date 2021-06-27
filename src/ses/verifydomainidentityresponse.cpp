@@ -66,8 +66,7 @@ VerifyDomainIdentityResponse::VerifyDomainIdentityResponse(
  */
 const VerifyDomainIdentityRequest * VerifyDomainIdentityResponse::request() const
 {
-    Q_D(const VerifyDomainIdentityResponse);
-    return static_cast<const VerifyDomainIdentityRequest *>(d->request);
+    return static_cast<const VerifyDomainIdentityRequest *>(SesResponse::request());
 }
 
 /*!

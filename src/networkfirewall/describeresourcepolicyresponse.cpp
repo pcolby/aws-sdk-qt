@@ -145,8 +145,7 @@ DescribeResourcePolicyResponse::DescribeResourcePolicyResponse(
  */
 const DescribeResourcePolicyRequest * DescribeResourcePolicyResponse::request() const
 {
-    Q_D(const DescribeResourcePolicyResponse);
-    return static_cast<const DescribeResourcePolicyRequest *>(d->request);
+    return static_cast<const DescribeResourcePolicyRequest *>(NetworkFirewallResponse::request());
 }
 
 /*!

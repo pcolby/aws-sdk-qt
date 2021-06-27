@@ -55,8 +55,7 @@ CreateEvaluationResponse::CreateEvaluationResponse(
  */
 const CreateEvaluationRequest * CreateEvaluationResponse::request() const
 {
-    Q_D(const CreateEvaluationResponse);
-    return static_cast<const CreateEvaluationRequest *>(d->request);
+    return static_cast<const CreateEvaluationRequest *>(MachineLearningResponse::request());
 }
 
 /*!

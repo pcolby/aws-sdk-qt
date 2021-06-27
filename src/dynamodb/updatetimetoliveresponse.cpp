@@ -74,8 +74,7 @@ UpdateTimeToLiveResponse::UpdateTimeToLiveResponse(
  */
 const UpdateTimeToLiveRequest * UpdateTimeToLiveResponse::request() const
 {
-    Q_D(const UpdateTimeToLiveResponse);
-    return static_cast<const UpdateTimeToLiveRequest *>(d->request);
+    return static_cast<const UpdateTimeToLiveRequest *>(DynamoDBResponse::request());
 }
 
 /*!

@@ -171,16 +171,16 @@ LexModelsV2Client::LexModelsV2Client(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new LexModelsV2ClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-08-07"),
+    QStringLiteral("models-v2-lex"),
+    QStringLiteral("Amazon Lex Model Building V2"),
+    QStringLiteral("lex"),
+    parent), d_ptr(new LexModelsV2ClientPrivate(this))
 {
-    Q_D(LexModelsV2Client);
-    d->apiVersion = QStringLiteral("2020-08-07");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("models-v2-lex");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Lex Model Building V2");
-    d->serviceName = QStringLiteral("lex");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -199,16 +199,16 @@ LexModelsV2Client::LexModelsV2Client(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new LexModelsV2ClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-08-07"),
+    QStringLiteral("models-v2-lex"),
+    QStringLiteral("Amazon Lex Model Building V2"),
+    QStringLiteral("lex"),
+    parent), d_ptr(new LexModelsV2ClientPrivate(this))
 {
-    Q_D(LexModelsV2Client);
-    d->apiVersion = QStringLiteral("2020-08-07");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("models-v2-lex");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Lex Model Building V2");
-    d->serviceName = QStringLiteral("lex");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -1075,10 +1075,9 @@ UpdateSlotTypeResponse * LexModelsV2Client::updateSlotType(const UpdateSlotTypeR
 /*!
  * Constructs a LexModelsV2ClientPrivate object with public implementation \a q.
  */
-LexModelsV2ClientPrivate::LexModelsV2ClientPrivate(LexModelsV2Client * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+LexModelsV2ClientPrivate::LexModelsV2ClientPrivate(LexModelsV2Client * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace LexModelsV2

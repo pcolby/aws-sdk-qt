@@ -61,8 +61,7 @@ DisassociateProductFromPortfolioResponse::DisassociateProductFromPortfolioRespon
  */
 const DisassociateProductFromPortfolioRequest * DisassociateProductFromPortfolioResponse::request() const
 {
-    Q_D(const DisassociateProductFromPortfolioResponse);
-    return static_cast<const DisassociateProductFromPortfolioRequest *>(d->request);
+    return static_cast<const DisassociateProductFromPortfolioRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

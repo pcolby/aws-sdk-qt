@@ -74,8 +74,7 @@ AttachStaticIpResponse::AttachStaticIpResponse(
  */
 const AttachStaticIpRequest * AttachStaticIpResponse::request() const
 {
-    Q_D(const AttachStaticIpResponse);
-    return static_cast<const AttachStaticIpRequest *>(d->request);
+    return static_cast<const AttachStaticIpRequest *>(LightsailResponse::request());
 }
 
 /*!

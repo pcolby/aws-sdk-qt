@@ -20,14 +20,12 @@
 #ifndef QTAWS_MWAARESPONSE_P_H
 #define QTAWS_MWAARESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace MWAA {
 
 class MwaaResponse;
 
-class MwaaResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class MwaaResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    MwaaResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MwaaResponse)

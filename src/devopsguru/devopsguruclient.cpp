@@ -120,16 +120,16 @@ DevOpsGuruClient::DevOpsGuruClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new DevOpsGuruClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-12-01"),
+    QStringLiteral("devops-guru"),
+    QStringLiteral("Amazon DevOps Guru"),
+    QStringLiteral("devops-guru"),
+    parent), d_ptr(new DevOpsGuruClientPrivate(this))
 {
-    Q_D(DevOpsGuruClient);
-    d->apiVersion = QStringLiteral("2020-12-01");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("devops-guru");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon DevOps Guru");
-    d->serviceName = QStringLiteral("devops-guru");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -148,16 +148,16 @@ DevOpsGuruClient::DevOpsGuruClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new DevOpsGuruClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-12-01"),
+    QStringLiteral("devops-guru"),
+    QStringLiteral("Amazon DevOps Guru"),
+    QStringLiteral("devops-guru"),
+    parent), d_ptr(new DevOpsGuruClientPrivate(this))
 {
-    Q_D(DevOpsGuruClient);
-    d->apiVersion = QStringLiteral("2020-12-01");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("devops-guru");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon DevOps Guru");
-    d->serviceName = QStringLiteral("devops-guru");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -489,10 +489,9 @@ UpdateServiceIntegrationResponse * DevOpsGuruClient::updateServiceIntegration(co
 /*!
  * Constructs a DevOpsGuruClientPrivate object with public implementation \a q.
  */
-DevOpsGuruClientPrivate::DevOpsGuruClientPrivate(DevOpsGuruClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+DevOpsGuruClientPrivate::DevOpsGuruClientPrivate(DevOpsGuruClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace DevOpsGuru

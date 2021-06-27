@@ -83,16 +83,16 @@ OutpostsClient::OutpostsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new OutpostsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-12-03"),
+    QStringLiteral("outposts"),
+    QStringLiteral("AWS Outposts"),
+    QStringLiteral("outposts"),
+    parent), d_ptr(new OutpostsClientPrivate(this))
 {
-    Q_D(OutpostsClient);
-    d->apiVersion = QStringLiteral("2019-12-03");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("outposts");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Outposts");
-    d->serviceName = QStringLiteral("outposts");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -111,16 +111,16 @@ OutpostsClient::OutpostsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new OutpostsClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-12-03"),
+    QStringLiteral("outposts"),
+    QStringLiteral("AWS Outposts"),
+    QStringLiteral("outposts"),
+    parent), d_ptr(new OutpostsClientPrivate(this))
 {
-    Q_D(OutpostsClient);
-    d->apiVersion = QStringLiteral("2019-12-03");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("outposts");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Outposts");
-    d->serviceName = QStringLiteral("outposts");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -265,10 +265,9 @@ UntagResourceResponse * OutpostsClient::untagResource(const UntagResourceRequest
 /*!
  * Constructs a OutpostsClientPrivate object with public implementation \a q.
  */
-OutpostsClientPrivate::OutpostsClientPrivate(OutpostsClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+OutpostsClientPrivate::OutpostsClientPrivate(OutpostsClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace Outposts

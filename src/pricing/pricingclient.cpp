@@ -91,16 +91,16 @@ PricingClient::PricingClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new PricingClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-10-15"),
+    QStringLiteral("api.pricing"),
+    QStringLiteral("AWS Price List Service"),
+    QStringLiteral("pricing"),
+    parent), d_ptr(new PricingClientPrivate(this))
 {
-    Q_D(PricingClient);
-    d->apiVersion = QStringLiteral("2017-10-15");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("api.pricing");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Price List Service");
-    d->serviceName = QStringLiteral("pricing");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -119,16 +119,16 @@ PricingClient::PricingClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new PricingClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-10-15"),
+    QStringLiteral("api.pricing"),
+    QStringLiteral("AWS Price List Service"),
+    QStringLiteral("pricing"),
+    parent), d_ptr(new PricingClientPrivate(this))
 {
-    Q_D(PricingClient);
-    d->apiVersion = QStringLiteral("2017-10-15");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("api.pricing");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Price List Service");
-    d->serviceName = QStringLiteral("pricing");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -190,10 +190,9 @@ GetProductsResponse * PricingClient::getProducts(const GetProductsRequest &reque
 /*!
  * Constructs a PricingClientPrivate object with public implementation \a q.
  */
-PricingClientPrivate::PricingClientPrivate(PricingClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+PricingClientPrivate::PricingClientPrivate(PricingClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace Pricing

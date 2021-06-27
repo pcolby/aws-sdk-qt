@@ -98,8 +98,7 @@ PutVoiceConnectorLoggingConfigurationResponse::PutVoiceConnectorLoggingConfigura
  */
 const PutVoiceConnectorLoggingConfigurationRequest * PutVoiceConnectorLoggingConfigurationResponse::request() const
 {
-    Q_D(const PutVoiceConnectorLoggingConfigurationResponse);
-    return static_cast<const PutVoiceConnectorLoggingConfigurationRequest *>(d->request);
+    return static_cast<const PutVoiceConnectorLoggingConfigurationRequest *>(ChimeResponse::request());
 }
 
 /*!

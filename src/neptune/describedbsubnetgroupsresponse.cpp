@@ -72,8 +72,7 @@ DescribeDBSubnetGroupsResponse::DescribeDBSubnetGroupsResponse(
  */
 const DescribeDBSubnetGroupsRequest * DescribeDBSubnetGroupsResponse::request() const
 {
-    Q_D(const DescribeDBSubnetGroupsResponse);
-    return static_cast<const DescribeDBSubnetGroupsRequest *>(d->request);
+    return static_cast<const DescribeDBSubnetGroupsRequest *>(NeptuneResponse::request());
 }
 
 /*!

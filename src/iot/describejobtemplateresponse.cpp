@@ -82,8 +82,7 @@ DescribeJobTemplateResponse::DescribeJobTemplateResponse(
  */
 const DescribeJobTemplateRequest * DescribeJobTemplateResponse::request() const
 {
-    Q_D(const DescribeJobTemplateResponse);
-    return static_cast<const DescribeJobTemplateRequest *>(d->request);
+    return static_cast<const DescribeJobTemplateRequest *>(IoTResponse::request());
 }
 
 /*!

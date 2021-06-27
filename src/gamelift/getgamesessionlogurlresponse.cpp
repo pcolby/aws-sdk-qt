@@ -115,8 +115,7 @@ GetGameSessionLogUrlResponse::GetGameSessionLogUrlResponse(
  */
 const GetGameSessionLogUrlRequest * GetGameSessionLogUrlResponse::request() const
 {
-    Q_D(const GetGameSessionLogUrlResponse);
-    return static_cast<const GetGameSessionLogUrlRequest *>(d->request);
+    return static_cast<const GetGameSessionLogUrlRequest *>(GameLiftResponse::request());
 }
 
 /*!

@@ -72,8 +72,7 @@ DeleteElasticsearchDomainResponse::DeleteElasticsearchDomainResponse(
  */
 const DeleteElasticsearchDomainRequest * DeleteElasticsearchDomainResponse::request() const
 {
-    Q_D(const DeleteElasticsearchDomainResponse);
-    return static_cast<const DeleteElasticsearchDomainRequest *>(d->request);
+    return static_cast<const DeleteElasticsearchDomainRequest *>(ElasticsearchServiceResponse::request());
 }
 
 /*!

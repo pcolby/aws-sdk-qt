@@ -71,6 +71,7 @@ public:
 
 protected:
     /// @cond internal
+    TimestreamWriteRequestPrivate * const d_ptr; ///< Internal d-pointer.
     TimestreamWriteRequest(TimestreamWriteRequestPrivate * const d);
     /// @endcond
 

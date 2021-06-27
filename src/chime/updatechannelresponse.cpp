@@ -98,8 +98,7 @@ UpdateChannelResponse::UpdateChannelResponse(
  */
 const UpdateChannelRequest * UpdateChannelResponse::request() const
 {
-    Q_D(const UpdateChannelResponse);
-    return static_cast<const UpdateChannelRequest *>(d->request);
+    return static_cast<const UpdateChannelRequest *>(ChimeResponse::request());
 }
 
 /*!

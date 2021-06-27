@@ -58,8 +58,7 @@ GetBatchPredictionJobsResponse::GetBatchPredictionJobsResponse(
  */
 const GetBatchPredictionJobsRequest * GetBatchPredictionJobsResponse::request() const
 {
-    Q_D(const GetBatchPredictionJobsResponse);
-    return static_cast<const GetBatchPredictionJobsRequest *>(d->request);
+    return static_cast<const GetBatchPredictionJobsRequest *>(FraudDetectorResponse::request());
 }
 
 /*!

@@ -75,8 +75,7 @@ ListPipelinesResponse::ListPipelinesResponse(
  */
 const ListPipelinesRequest * ListPipelinesResponse::request() const
 {
-    Q_D(const ListPipelinesResponse);
-    return static_cast<const ListPipelinesRequest *>(d->request);
+    return static_cast<const ListPipelinesRequest *>(IoTAnalyticsResponse::request());
 }
 
 /*!

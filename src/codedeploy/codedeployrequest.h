@@ -103,6 +103,7 @@ public:
 
 protected:
     /// @cond internal
+    CodeDeployRequestPrivate * const d_ptr; ///< Internal d-pointer.
     CodeDeployRequest(CodeDeployRequestPrivate * const d);
     /// @endcond
 

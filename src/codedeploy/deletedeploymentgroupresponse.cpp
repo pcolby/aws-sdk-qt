@@ -141,8 +141,7 @@ DeleteDeploymentGroupResponse::DeleteDeploymentGroupResponse(
  */
 const DeleteDeploymentGroupRequest * DeleteDeploymentGroupResponse::request() const
 {
-    Q_D(const DeleteDeploymentGroupResponse);
-    return static_cast<const DeleteDeploymentGroupRequest *>(d->request);
+    return static_cast<const DeleteDeploymentGroupRequest *>(CodeDeployResponse::request());
 }
 
 /*!

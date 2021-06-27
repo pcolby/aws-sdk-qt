@@ -59,6 +59,7 @@ public:
 
 protected:
     /// @cond internal
+    TimestreamQueryRequestPrivate * const d_ptr; ///< Internal d-pointer.
     TimestreamQueryRequest(TimestreamQueryRequestPrivate * const d);
     /// @endcond
 

@@ -72,8 +72,7 @@ UpdateNodeResponse::UpdateNodeResponse(
  */
 const UpdateNodeRequest * UpdateNodeResponse::request() const
 {
-    Q_D(const UpdateNodeResponse);
-    return static_cast<const UpdateNodeRequest *>(d->request);
+    return static_cast<const UpdateNodeRequest *>(ManagedBlockchainResponse::request());
 }
 
 /*!

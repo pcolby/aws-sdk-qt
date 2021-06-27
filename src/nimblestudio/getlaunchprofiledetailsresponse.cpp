@@ -55,8 +55,7 @@ GetLaunchProfileDetailsResponse::GetLaunchProfileDetailsResponse(
  */
 const GetLaunchProfileDetailsRequest * GetLaunchProfileDetailsResponse::request() const
 {
-    Q_D(const GetLaunchProfileDetailsResponse);
-    return static_cast<const GetLaunchProfileDetailsRequest *>(d->request);
+    return static_cast<const GetLaunchProfileDetailsRequest *>(NimbleStudioResponse::request());
 }
 
 /*!

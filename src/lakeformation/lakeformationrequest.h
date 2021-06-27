@@ -79,6 +79,7 @@ public:
 
 protected:
     /// @cond internal
+    LakeFormationRequestPrivate * const d_ptr; ///< Internal d-pointer.
     LakeFormationRequest(LakeFormationRequestPrivate * const d);
     /// @endcond
 

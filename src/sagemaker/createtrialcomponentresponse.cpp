@@ -70,8 +70,7 @@ CreateTrialComponentResponse::CreateTrialComponentResponse(
  */
 const CreateTrialComponentRequest * CreateTrialComponentResponse::request() const
 {
-    Q_D(const CreateTrialComponentResponse);
-    return static_cast<const CreateTrialComponentRequest *>(d->request);
+    return static_cast<const CreateTrialComponentRequest *>(SageMakerResponse::request());
 }
 
 /*!

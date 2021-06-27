@@ -56,8 +56,7 @@ CancelWorldExportJobResponse::CancelWorldExportJobResponse(
  */
 const CancelWorldExportJobRequest * CancelWorldExportJobResponse::request() const
 {
-    Q_D(const CancelWorldExportJobResponse);
-    return static_cast<const CancelWorldExportJobRequest *>(d->request);
+    return static_cast<const CancelWorldExportJobRequest *>(RoboMakerResponse::request());
 }
 
 /*!

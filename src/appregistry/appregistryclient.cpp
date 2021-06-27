@@ -102,16 +102,16 @@ AppRegistryClient::AppRegistryClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new AppRegistryClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-06-24"),
+    QStringLiteral("servicecatalog-appregistry"),
+    QStringLiteral("AWS Service Catalog App Registry"),
+    QStringLiteral("servicecatalog"),
+    parent), d_ptr(new AppRegistryClientPrivate(this))
 {
-    Q_D(AppRegistryClient);
-    d->apiVersion = QStringLiteral("2020-06-24");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("servicecatalog-appregistry");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Service Catalog App Registry");
-    d->serviceName = QStringLiteral("servicecatalog");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -130,16 +130,16 @@ AppRegistryClient::AppRegistryClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new AppRegistryClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-06-24"),
+    QStringLiteral("servicecatalog-appregistry"),
+    QStringLiteral("AWS Service Catalog App Registry"),
+    QStringLiteral("servicecatalog"),
+    parent), d_ptr(new AppRegistryClientPrivate(this))
 {
-    Q_D(AppRegistryClient);
-    d->apiVersion = QStringLiteral("2020-06-24");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("servicecatalog-appregistry");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Service Catalog App Registry");
-    d->serviceName = QStringLiteral("servicecatalog");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -439,10 +439,9 @@ UpdateAttributeGroupResponse * AppRegistryClient::updateAttributeGroup(const Upd
 /*!
  * Constructs a AppRegistryClientPrivate object with public implementation \a q.
  */
-AppRegistryClientPrivate::AppRegistryClientPrivate(AppRegistryClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+AppRegistryClientPrivate::AppRegistryClientPrivate(AppRegistryClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace AppRegistry

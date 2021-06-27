@@ -56,8 +56,7 @@ CreateGlobalClusterResponse::CreateGlobalClusterResponse(
  */
 const CreateGlobalClusterRequest * CreateGlobalClusterResponse::request() const
 {
-    Q_D(const CreateGlobalClusterResponse);
-    return static_cast<const CreateGlobalClusterRequest *>(d->request);
+    return static_cast<const CreateGlobalClusterRequest *>(DocDBResponse::request());
 }
 
 /*!

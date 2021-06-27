@@ -58,8 +58,7 @@ DescribeMetricSetResponse::DescribeMetricSetResponse(
  */
 const DescribeMetricSetRequest * DescribeMetricSetResponse::request() const
 {
-    Q_D(const DescribeMetricSetResponse);
-    return static_cast<const DescribeMetricSetRequest *>(d->request);
+    return static_cast<const DescribeMetricSetRequest *>(LookoutMetricsResponse::request());
 }
 
 /*!

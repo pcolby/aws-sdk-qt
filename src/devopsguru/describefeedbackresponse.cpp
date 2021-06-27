@@ -74,8 +74,7 @@ DescribeFeedbackResponse::DescribeFeedbackResponse(
  */
 const DescribeFeedbackRequest * DescribeFeedbackResponse::request() const
 {
-    Q_D(const DescribeFeedbackResponse);
-    return static_cast<const DescribeFeedbackRequest *>(d->request);
+    return static_cast<const DescribeFeedbackRequest *>(DevOpsGuruResponse::request());
 }
 
 /*!

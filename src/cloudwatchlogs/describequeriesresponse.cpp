@@ -84,8 +84,7 @@ DescribeQueriesResponse::DescribeQueriesResponse(
  */
 const DescribeQueriesRequest * DescribeQueriesResponse::request() const
 {
-    Q_D(const DescribeQueriesResponse);
-    return static_cast<const DescribeQueriesRequest *>(d->request);
+    return static_cast<const DescribeQueriesRequest *>(CloudWatchLogsResponse::request());
 }
 
 /*!

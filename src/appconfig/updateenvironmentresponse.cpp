@@ -105,8 +105,7 @@ UpdateEnvironmentResponse::UpdateEnvironmentResponse(
  */
 const UpdateEnvironmentRequest * UpdateEnvironmentResponse::request() const
 {
-    Q_D(const UpdateEnvironmentResponse);
-    return static_cast<const UpdateEnvironmentRequest *>(d->request);
+    return static_cast<const UpdateEnvironmentRequest *>(AppConfigResponse::request());
 }
 
 /*!

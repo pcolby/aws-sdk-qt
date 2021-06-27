@@ -92,8 +92,7 @@ GetDomainDeliverabilityCampaignResponse::GetDomainDeliverabilityCampaignResponse
  */
 const GetDomainDeliverabilityCampaignRequest * GetDomainDeliverabilityCampaignResponse::request() const
 {
-    Q_D(const GetDomainDeliverabilityCampaignResponse);
-    return static_cast<const GetDomainDeliverabilityCampaignRequest *>(d->request);
+    return static_cast<const GetDomainDeliverabilityCampaignRequest *>(PinpointEmailResponse::request());
 }
 
 /*!

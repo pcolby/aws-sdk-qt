@@ -58,8 +58,7 @@ AssociateRoleToGroupResponse::AssociateRoleToGroupResponse(
  */
 const AssociateRoleToGroupRequest * AssociateRoleToGroupResponse::request() const
 {
-    Q_D(const AssociateRoleToGroupResponse);
-    return static_cast<const AssociateRoleToGroupRequest *>(d->request);
+    return static_cast<const AssociateRoleToGroupRequest *>(GreengrassResponse::request());
 }
 
 /*!

@@ -134,8 +134,7 @@ DeleteServerResponse::DeleteServerResponse(
  */
 const DeleteServerRequest * DeleteServerResponse::request() const
 {
-    Q_D(const DeleteServerResponse);
-    return static_cast<const DeleteServerRequest *>(d->request);
+    return static_cast<const DeleteServerRequest *>(OpsWorksCMResponse::request());
 }
 
 /*!

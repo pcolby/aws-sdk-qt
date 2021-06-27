@@ -74,8 +74,7 @@ DeleteItemResponse::DeleteItemResponse(
  */
 const DeleteItemRequest * DeleteItemResponse::request() const
 {
-    Q_D(const DeleteItemResponse);
-    return static_cast<const DeleteItemRequest *>(d->request);
+    return static_cast<const DeleteItemRequest *>(DynamoDBResponse::request());
 }
 
 /*!

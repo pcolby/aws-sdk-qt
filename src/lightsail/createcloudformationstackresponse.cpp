@@ -74,8 +74,7 @@ CreateCloudFormationStackResponse::CreateCloudFormationStackResponse(
  */
 const CreateCloudFormationStackRequest * CreateCloudFormationStackResponse::request() const
 {
-    Q_D(const CreateCloudFormationStackResponse);
-    return static_cast<const CreateCloudFormationStackRequest *>(d->request);
+    return static_cast<const CreateCloudFormationStackRequest *>(LightsailResponse::request());
 }
 
 /*!

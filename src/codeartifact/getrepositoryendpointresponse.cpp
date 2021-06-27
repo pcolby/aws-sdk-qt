@@ -293,8 +293,7 @@ GetRepositoryEndpointResponse::GetRepositoryEndpointResponse(
  */
 const GetRepositoryEndpointRequest * GetRepositoryEndpointResponse::request() const
 {
-    Q_D(const GetRepositoryEndpointResponse);
-    return static_cast<const GetRepositoryEndpointRequest *>(d->request);
+    return static_cast<const GetRepositoryEndpointRequest *>(CodeArtifactResponse::request());
 }
 
 /*!

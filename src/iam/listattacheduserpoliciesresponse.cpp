@@ -62,8 +62,7 @@ ListAttachedUserPoliciesResponse::ListAttachedUserPoliciesResponse(
  */
 const ListAttachedUserPoliciesRequest * ListAttachedUserPoliciesResponse::request() const
 {
-    Q_D(const ListAttachedUserPoliciesResponse);
-    return static_cast<const ListAttachedUserPoliciesRequest *>(d->request);
+    return static_cast<const ListAttachedUserPoliciesRequest *>(IamResponse::request());
 }
 
 /*!

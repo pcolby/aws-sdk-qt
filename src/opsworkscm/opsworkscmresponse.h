@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    OpsWorksCMResponsePrivate * const d_ptr; ///< Internal d-pointer.
     OpsWorksCMResponse(OpsWorksCMResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

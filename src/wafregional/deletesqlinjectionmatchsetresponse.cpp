@@ -78,8 +78,7 @@ DeleteSqlInjectionMatchSetResponse::DeleteSqlInjectionMatchSetResponse(
  */
 const DeleteSqlInjectionMatchSetRequest * DeleteSqlInjectionMatchSetResponse::request() const
 {
-    Q_D(const DeleteSqlInjectionMatchSetResponse);
-    return static_cast<const DeleteSqlInjectionMatchSetRequest *>(d->request);
+    return static_cast<const DeleteSqlInjectionMatchSetRequest *>(WAFRegionalResponse::request());
 }
 
 /*!

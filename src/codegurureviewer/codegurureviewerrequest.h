@@ -70,6 +70,7 @@ public:
 
 protected:
     /// @cond internal
+    CodeGuruReviewerRequestPrivate * const d_ptr; ///< Internal d-pointer.
     CodeGuruReviewerRequest(CodeGuruReviewerRequestPrivate * const d);
     /// @endcond
 

@@ -60,8 +60,7 @@ DeleteDashboardResponse::DeleteDashboardResponse(
  */
 const DeleteDashboardRequest * DeleteDashboardResponse::request() const
 {
-    Q_D(const DeleteDashboardResponse);
-    return static_cast<const DeleteDashboardRequest *>(d->request);
+    return static_cast<const DeleteDashboardRequest *>(QuickSightResponse::request());
 }
 
 /*!

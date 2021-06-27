@@ -100,16 +100,16 @@ QldbClient::QldbClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new QldbClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-01-02"),
+    QStringLiteral("qldb"),
+    QStringLiteral("Amazon QLDB"),
+    QStringLiteral("qldb"),
+    parent), d_ptr(new QldbClientPrivate(this))
 {
-    Q_D(QldbClient);
-    d->apiVersion = QStringLiteral("2019-01-02");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("qldb");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon QLDB");
-    d->serviceName = QStringLiteral("qldb");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -128,16 +128,16 @@ QldbClient::QldbClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new QldbClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-01-02"),
+    QStringLiteral("qldb"),
+    QStringLiteral("Amazon QLDB"),
+    QStringLiteral("qldb"),
+    parent), d_ptr(new QldbClientPrivate(this))
 {
-    Q_D(QldbClient);
-    d->apiVersion = QStringLiteral("2019-01-02");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("qldb");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon QLDB");
-    d->serviceName = QStringLiteral("qldb");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -531,10 +531,9 @@ UpdateLedgerPermissionsModeResponse * QldbClient::updateLedgerPermissionsMode(co
 /*!
  * Constructs a QldbClientPrivate object with public implementation \a q.
  */
-QldbClientPrivate::QldbClientPrivate(QldbClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+QldbClientPrivate::QldbClientPrivate(QldbClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace QLDB

@@ -56,8 +56,7 @@ CreateSolutionResponse::CreateSolutionResponse(
  */
 const CreateSolutionRequest * CreateSolutionResponse::request() const
 {
-    Q_D(const CreateSolutionResponse);
-    return static_cast<const CreateSolutionRequest *>(d->request);
+    return static_cast<const CreateSolutionRequest *>(PersonalizeResponse::request());
 }
 
 /*!

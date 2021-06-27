@@ -64,8 +64,7 @@ InvalidateProjectCacheResponse::InvalidateProjectCacheResponse(
  */
 const InvalidateProjectCacheRequest * InvalidateProjectCacheResponse::request() const
 {
-    Q_D(const InvalidateProjectCacheResponse);
-    return static_cast<const InvalidateProjectCacheRequest *>(d->request);
+    return static_cast<const InvalidateProjectCacheRequest *>(CodeBuildResponse::request());
 }
 
 /*!

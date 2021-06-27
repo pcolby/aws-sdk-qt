@@ -163,6 +163,12 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     VerifySMSSandboxPhoneNumberResponse * verifySMSSandboxPhoneNumber(const VerifySMSSandboxPhoneNumberRequest &request);
 
+protected:
+    /// @cond internal
+    SnsClientPrivate * const d_ptr; ///< Internal d-pointer.
+    SnsClient(SnsClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(SnsClient)
     Q_DISABLE_COPY(SnsClient)

@@ -95,6 +95,7 @@ public:
 
 protected:
     /// @cond internal
+    SnsRequestPrivate * const d_ptr; ///< Internal d-pointer.
     SnsRequest(SnsRequestPrivate * const d);
     /// @endcond
 

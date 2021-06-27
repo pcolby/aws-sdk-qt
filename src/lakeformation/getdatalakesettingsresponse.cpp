@@ -58,8 +58,7 @@ GetDataLakeSettingsResponse::GetDataLakeSettingsResponse(
  */
 const GetDataLakeSettingsRequest * GetDataLakeSettingsResponse::request() const
 {
-    Q_D(const GetDataLakeSettingsResponse);
-    return static_cast<const GetDataLakeSettingsRequest *>(d->request);
+    return static_cast<const GetDataLakeSettingsRequest *>(LakeFormationResponse::request());
 }
 
 /*!

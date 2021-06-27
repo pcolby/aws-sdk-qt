@@ -126,8 +126,7 @@ ReceiveMessageResponse::ReceiveMessageResponse(
  */
 const ReceiveMessageRequest * ReceiveMessageResponse::request() const
 {
-    Q_D(const ReceiveMessageResponse);
-    return static_cast<const ReceiveMessageRequest *>(d->request);
+    return static_cast<const ReceiveMessageRequest *>(SqsResponse::request());
 }
 
 /*!

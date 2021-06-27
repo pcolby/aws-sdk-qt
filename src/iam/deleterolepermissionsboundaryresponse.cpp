@@ -62,8 +62,7 @@ DeleteRolePermissionsBoundaryResponse::DeleteRolePermissionsBoundaryResponse(
  */
 const DeleteRolePermissionsBoundaryRequest * DeleteRolePermissionsBoundaryResponse::request() const
 {
-    Q_D(const DeleteRolePermissionsBoundaryResponse);
-    return static_cast<const DeleteRolePermissionsBoundaryRequest *>(d->request);
+    return static_cast<const DeleteRolePermissionsBoundaryRequest *>(IamResponse::request());
 }
 
 /*!

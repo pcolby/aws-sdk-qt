@@ -20,19 +20,20 @@
 #ifndef QTAWS_CONNECTCONTACTLENSCLIENT_P_H
 #define QTAWS_CONNECTCONTACTLENSCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace ConnectContactLens {
 
 class ConnectContactLensClient;
 
-class ConnectContactLensClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ConnectContactLensClientPrivate {
 
 public:
     ConnectContactLensClientPrivate(ConnectContactLensClient * const q);
+
+protected:
+    ConnectContactLensClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ConnectContactLensClient)

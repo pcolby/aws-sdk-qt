@@ -62,8 +62,7 @@ DeleteLoginProfileResponse::DeleteLoginProfileResponse(
  */
 const DeleteLoginProfileRequest * DeleteLoginProfileResponse::request() const
 {
-    Q_D(const DeleteLoginProfileResponse);
-    return static_cast<const DeleteLoginProfileRequest *>(d->request);
+    return static_cast<const DeleteLoginProfileRequest *>(IamResponse::request());
 }
 
 /*!

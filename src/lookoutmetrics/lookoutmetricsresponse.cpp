@@ -37,7 +37,7 @@ namespace LookoutMetrics {
  * Constructs a LookoutMetricsResponse object with parent \a parent.
  */
 LookoutMetricsResponse::LookoutMetricsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new LookoutMetricsResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new LookoutMetricsResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ LookoutMetricsResponse::LookoutMetricsResponse(QObject * const parent)
  * implementation that inherits from LookoutMetricsResponsePrivate.
  */
 LookoutMetricsResponse::LookoutMetricsResponse(LookoutMetricsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void LookoutMetricsResponse::parseFailure(QIODevice &response)
  * Constructs a LookoutMetricsResponsePrivate object with public implementation \a q.
  */
 LookoutMetricsResponsePrivate::LookoutMetricsResponsePrivate(
-    LookoutMetricsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    LookoutMetricsResponse * const q) : q_ptr(q)
 {
 
 }

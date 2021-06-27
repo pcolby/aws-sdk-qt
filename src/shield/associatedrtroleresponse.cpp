@@ -61,8 +61,7 @@ AssociateDRTRoleResponse::AssociateDRTRoleResponse(
  */
 const AssociateDRTRoleRequest * AssociateDRTRoleResponse::request() const
 {
-    Q_D(const AssociateDRTRoleResponse);
-    return static_cast<const AssociateDRTRoleRequest *>(d->request);
+    return static_cast<const AssociateDRTRoleRequest *>(ShieldResponse::request());
 }
 
 /*!

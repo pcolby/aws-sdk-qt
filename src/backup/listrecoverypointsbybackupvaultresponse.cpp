@@ -59,8 +59,7 @@ ListRecoveryPointsByBackupVaultResponse::ListRecoveryPointsByBackupVaultResponse
  */
 const ListRecoveryPointsByBackupVaultRequest * ListRecoveryPointsByBackupVaultResponse::request() const
 {
-    Q_D(const ListRecoveryPointsByBackupVaultResponse);
-    return static_cast<const ListRecoveryPointsByBackupVaultRequest *>(d->request);
+    return static_cast<const ListRecoveryPointsByBackupVaultRequest *>(BackupResponse::request());
 }
 
 /*!

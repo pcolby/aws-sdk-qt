@@ -37,7 +37,7 @@ namespace AppSync {
  * Constructs a AppSyncResponse object with parent \a parent.
  */
 AppSyncResponse::AppSyncResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new AppSyncResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new AppSyncResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ AppSyncResponse::AppSyncResponse(QObject * const parent)
  * implementation that inherits from AppSyncResponsePrivate.
  */
 AppSyncResponse::AppSyncResponse(AppSyncResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void AppSyncResponse::parseFailure(QIODevice &response)
  * Constructs a AppSyncResponsePrivate object with public implementation \a q.
  */
 AppSyncResponsePrivate::AppSyncResponsePrivate(
-    AppSyncResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    AppSyncResponse * const q) : q_ptr(q)
 {
 
 }

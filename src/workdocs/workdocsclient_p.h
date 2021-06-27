@@ -20,19 +20,20 @@
 #ifndef QTAWS_WORKDOCSCLIENT_P_H
 #define QTAWS_WORKDOCSCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace WorkDocs {
 
 class WorkDocsClient;
 
-class WorkDocsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class WorkDocsClientPrivate {
 
 public:
     WorkDocsClientPrivate(WorkDocsClient * const q);
+
+protected:
+    WorkDocsClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(WorkDocsClient)

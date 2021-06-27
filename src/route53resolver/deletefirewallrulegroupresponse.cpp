@@ -94,8 +94,7 @@ DeleteFirewallRuleGroupResponse::DeleteFirewallRuleGroupResponse(
  */
 const DeleteFirewallRuleGroupRequest * DeleteFirewallRuleGroupResponse::request() const
 {
-    Q_D(const DeleteFirewallRuleGroupResponse);
-    return static_cast<const DeleteFirewallRuleGroupRequest *>(d->request);
+    return static_cast<const DeleteFirewallRuleGroupRequest *>(Route53ResolverResponse::request());
 }
 
 /*!

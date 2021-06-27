@@ -70,8 +70,7 @@ CreateNotebookInstanceResponse::CreateNotebookInstanceResponse(
  */
 const CreateNotebookInstanceRequest * CreateNotebookInstanceResponse::request() const
 {
-    Q_D(const CreateNotebookInstanceResponse);
-    return static_cast<const CreateNotebookInstanceRequest *>(d->request);
+    return static_cast<const CreateNotebookInstanceRequest *>(SageMakerResponse::request());
 }
 
 /*!

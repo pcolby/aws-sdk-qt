@@ -57,8 +57,7 @@ DescribeModelResponse::DescribeModelResponse(
  */
 const DescribeModelRequest * DescribeModelResponse::request() const
 {
-    Q_D(const DescribeModelResponse);
-    return static_cast<const DescribeModelRequest *>(d->request);
+    return static_cast<const DescribeModelRequest *>(LookoutEquipmentResponse::request());
 }
 
 /*!

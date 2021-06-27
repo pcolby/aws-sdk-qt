@@ -72,8 +72,7 @@ DescribeServicesResponse::DescribeServicesResponse(
  */
 const DescribeServicesRequest * DescribeServicesResponse::request() const
 {
-    Q_D(const DescribeServicesResponse);
-    return static_cast<const DescribeServicesRequest *>(d->request);
+    return static_cast<const DescribeServicesRequest *>(EcsResponse::request());
 }
 
 /*!

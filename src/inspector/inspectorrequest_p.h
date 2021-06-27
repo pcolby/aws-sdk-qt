@@ -20,15 +20,12 @@
 #ifndef QTAWS_INSPECTORREQUEST_P_H
 #define QTAWS_INSPECTORREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "inspectorrequest.h"
-
 namespace QtAws {
 namespace Inspector {
 
 class InspectorRequest;
 
-class InspectorRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class InspectorRequestPrivate {
 
 public:
     InspectorRequest::Action action; ///< Inspector action to be performed.
@@ -39,6 +36,9 @@ public:
     InspectorRequestPrivate(const InspectorRequestPrivate &other, InspectorRequest * const q);
 
     static QString toString(const InspectorRequest::Action &action);
+
+protected:
+    InspectorRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(InspectorRequest)

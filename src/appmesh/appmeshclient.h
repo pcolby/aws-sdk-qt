@@ -160,6 +160,12 @@ public slots:
     UpdateVirtualRouterResponse * updateVirtualRouter(const UpdateVirtualRouterRequest &request);
     UpdateVirtualServiceResponse * updateVirtualService(const UpdateVirtualServiceRequest &request);
 
+protected:
+    /// @cond internal
+    AppMeshClientPrivate * const d_ptr; ///< Internal d-pointer.
+    AppMeshClient(AppMeshClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(AppMeshClient)
     Q_DISABLE_COPY(AppMeshClient)

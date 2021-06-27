@@ -60,8 +60,7 @@ ListDataSetsResponse::ListDataSetsResponse(
  */
 const ListDataSetsRequest * ListDataSetsResponse::request() const
 {
-    Q_D(const ListDataSetsResponse);
-    return static_cast<const ListDataSetsRequest *>(d->request);
+    return static_cast<const ListDataSetsRequest *>(QuickSightResponse::request());
 }
 
 /*!

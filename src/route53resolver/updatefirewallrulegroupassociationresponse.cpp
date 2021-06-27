@@ -94,8 +94,7 @@ UpdateFirewallRuleGroupAssociationResponse::UpdateFirewallRuleGroupAssociationRe
  */
 const UpdateFirewallRuleGroupAssociationRequest * UpdateFirewallRuleGroupAssociationResponse::request() const
 {
-    Q_D(const UpdateFirewallRuleGroupAssociationResponse);
-    return static_cast<const UpdateFirewallRuleGroupAssociationRequest *>(d->request);
+    return static_cast<const UpdateFirewallRuleGroupAssociationRequest *>(Route53ResolverResponse::request());
 }
 
 /*!

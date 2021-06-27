@@ -61,8 +61,7 @@ SearchProductsResponse::SearchProductsResponse(
  */
 const SearchProductsRequest * SearchProductsResponse::request() const
 {
-    Q_D(const SearchProductsResponse);
-    return static_cast<const SearchProductsRequest *>(d->request);
+    return static_cast<const SearchProductsRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

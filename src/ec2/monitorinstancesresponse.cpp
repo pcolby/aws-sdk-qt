@@ -87,8 +87,7 @@ MonitorInstancesResponse::MonitorInstancesResponse(
  */
 const MonitorInstancesRequest * MonitorInstancesResponse::request() const
 {
-    Q_D(const MonitorInstancesResponse);
-    return static_cast<const MonitorInstancesRequest *>(d->request);
+    return static_cast<const MonitorInstancesRequest *>(Ec2Response::request());
 }
 
 /*!

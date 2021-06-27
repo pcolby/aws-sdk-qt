@@ -141,8 +141,7 @@ AttachPolicyResponse::AttachPolicyResponse(
  */
 const AttachPolicyRequest * AttachPolicyResponse::request() const
 {
-    Q_D(const AttachPolicyResponse);
-    return static_cast<const AttachPolicyRequest *>(d->request);
+    return static_cast<const AttachPolicyRequest *>(OrganizationsResponse::request());
 }
 
 /*!

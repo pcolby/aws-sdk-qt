@@ -127,16 +127,16 @@ AccessAnalyzerClient::AccessAnalyzerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new AccessAnalyzerClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-11-01"),
+    QStringLiteral("access-analyzer"),
+    QStringLiteral("Access Analyzer"),
+    QStringLiteral("access-analyzer"),
+    parent), d_ptr(new AccessAnalyzerClientPrivate(this))
 {
-    Q_D(AccessAnalyzerClient);
-    d->apiVersion = QStringLiteral("2019-11-01");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("access-analyzer");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Access Analyzer");
-    d->serviceName = QStringLiteral("access-analyzer");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -155,16 +155,16 @@ AccessAnalyzerClient::AccessAnalyzerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new AccessAnalyzerClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-11-01"),
+    QStringLiteral("access-analyzer"),
+    QStringLiteral("Access Analyzer"),
+    QStringLiteral("access-analyzer"),
+    parent), d_ptr(new AccessAnalyzerClientPrivate(this))
 {
-    Q_D(AccessAnalyzerClient);
-    d->apiVersion = QStringLiteral("2019-11-01");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("access-analyzer");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Access Analyzer");
-    d->serviceName = QStringLiteral("access-analyzer");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -566,10 +566,9 @@ ValidatePolicyResponse * AccessAnalyzerClient::validatePolicy(const ValidatePoli
 /*!
  * Constructs a AccessAnalyzerClientPrivate object with public implementation \a q.
  */
-AccessAnalyzerClientPrivate::AccessAnalyzerClientPrivate(AccessAnalyzerClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+AccessAnalyzerClientPrivate::AccessAnalyzerClientPrivate(AccessAnalyzerClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace AccessAnalyzer

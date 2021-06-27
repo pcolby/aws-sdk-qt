@@ -65,6 +65,7 @@ public:
 
 protected:
     /// @cond internal
+    PollyRequestPrivate * const d_ptr; ///< Internal d-pointer.
     PollyRequest(PollyRequestPrivate * const d);
     /// @endcond
 

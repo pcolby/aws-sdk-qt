@@ -90,16 +90,16 @@ FisClient::FisClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new FisClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-12-01"),
+    QStringLiteral("fis"),
+    QStringLiteral("AWS Fault Injection Simulator"),
+    QStringLiteral("fis"),
+    parent), d_ptr(new FisClientPrivate(this))
 {
-    Q_D(FisClient);
-    d->apiVersion = QStringLiteral("2020-12-01");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("fis");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Fault Injection Simulator");
-    d->serviceName = QStringLiteral("fis");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -118,16 +118,16 @@ FisClient::FisClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new FisClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-12-01"),
+    QStringLiteral("fis"),
+    QStringLiteral("AWS Fault Injection Simulator"),
+    QStringLiteral("fis"),
+    parent), d_ptr(new FisClientPrivate(this))
 {
-    Q_D(FisClient);
-    d->apiVersion = QStringLiteral("2020-12-01");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("fis");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Fault Injection Simulator");
-    d->serviceName = QStringLiteral("fis");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -348,10 +348,9 @@ UpdateExperimentTemplateResponse * FisClient::updateExperimentTemplate(const Upd
 /*!
  * Constructs a FisClientPrivate object with public implementation \a q.
  */
-FisClientPrivate::FisClientPrivate(FisClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+FisClientPrivate::FisClientPrivate(FisClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace FIS

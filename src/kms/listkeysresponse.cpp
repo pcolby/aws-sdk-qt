@@ -154,8 +154,7 @@ ListKeysResponse::ListKeysResponse(
  */
 const ListKeysRequest * ListKeysResponse::request() const
 {
-    Q_D(const ListKeysResponse);
-    return static_cast<const ListKeysRequest *>(d->request);
+    return static_cast<const ListKeysRequest *>(KmsResponse::request());
 }
 
 /*!

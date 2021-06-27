@@ -154,8 +154,7 @@ DeleteImportedKeyMaterialResponse::DeleteImportedKeyMaterialResponse(
  */
 const DeleteImportedKeyMaterialRequest * DeleteImportedKeyMaterialResponse::request() const
 {
-    Q_D(const DeleteImportedKeyMaterialResponse);
-    return static_cast<const DeleteImportedKeyMaterialRequest *>(d->request);
+    return static_cast<const DeleteImportedKeyMaterialRequest *>(KmsResponse::request());
 }
 
 /*!

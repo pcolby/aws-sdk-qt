@@ -58,8 +58,7 @@ AddApplicationInputResponse::AddApplicationInputResponse(
  */
 const AddApplicationInputRequest * AddApplicationInputResponse::request() const
 {
-    Q_D(const AddApplicationInputResponse);
-    return static_cast<const AddApplicationInputRequest *>(d->request);
+    return static_cast<const AddApplicationInputRequest *>(KinesisAnalyticsV2Response::request());
 }
 
 /*!

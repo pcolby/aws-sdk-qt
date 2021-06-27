@@ -69,8 +69,7 @@ RemoveIpRoutesResponse::RemoveIpRoutesResponse(
  */
 const RemoveIpRoutesRequest * RemoveIpRoutesResponse::request() const
 {
-    Q_D(const RemoveIpRoutesResponse);
-    return static_cast<const RemoveIpRoutesRequest *>(d->request);
+    return static_cast<const RemoveIpRoutesRequest *>(DirectoryServiceResponse::request());
 }
 
 /*!

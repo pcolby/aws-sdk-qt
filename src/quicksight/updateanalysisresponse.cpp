@@ -60,8 +60,7 @@ UpdateAnalysisResponse::UpdateAnalysisResponse(
  */
 const UpdateAnalysisRequest * UpdateAnalysisResponse::request() const
 {
-    Q_D(const UpdateAnalysisResponse);
-    return static_cast<const UpdateAnalysisRequest *>(d->request);
+    return static_cast<const UpdateAnalysisRequest *>(QuickSightResponse::request());
 }
 
 /*!

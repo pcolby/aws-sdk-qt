@@ -62,8 +62,7 @@ SendAnnouncementResponse::SendAnnouncementResponse(
  */
 const SendAnnouncementRequest * SendAnnouncementResponse::request() const
 {
-    Q_D(const SendAnnouncementResponse);
-    return static_cast<const SendAnnouncementRequest *>(d->request);
+    return static_cast<const SendAnnouncementRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ UpdateCrawlerScheduleResponse::UpdateCrawlerScheduleResponse(
  */
 const UpdateCrawlerScheduleRequest * UpdateCrawlerScheduleResponse::request() const
 {
-    Q_D(const UpdateCrawlerScheduleResponse);
-    return static_cast<const UpdateCrawlerScheduleRequest *>(d->request);
+    return static_cast<const UpdateCrawlerScheduleRequest *>(GlueResponse::request());
 }
 
 /*!

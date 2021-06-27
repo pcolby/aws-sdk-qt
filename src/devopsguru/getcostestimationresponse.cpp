@@ -74,8 +74,7 @@ GetCostEstimationResponse::GetCostEstimationResponse(
  */
 const GetCostEstimationRequest * GetCostEstimationResponse::request() const
 {
-    Q_D(const GetCostEstimationResponse);
-    return static_cast<const GetCostEstimationRequest *>(d->request);
+    return static_cast<const GetCostEstimationRequest *>(DevOpsGuruResponse::request());
 }
 
 /*!

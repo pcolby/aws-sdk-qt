@@ -74,8 +74,7 @@ SendContactMethodVerificationResponse::SendContactMethodVerificationResponse(
  */
 const SendContactMethodVerificationRequest * SendContactMethodVerificationResponse::request() const
 {
-    Q_D(const SendContactMethodVerificationResponse);
-    return static_cast<const SendContactMethodVerificationRequest *>(d->request);
+    return static_cast<const SendContactMethodVerificationRequest *>(LightsailResponse::request());
 }
 
 /*!

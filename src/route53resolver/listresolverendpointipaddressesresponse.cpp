@@ -94,8 +94,7 @@ ListResolverEndpointIpAddressesResponse::ListResolverEndpointIpAddressesResponse
  */
 const ListResolverEndpointIpAddressesRequest * ListResolverEndpointIpAddressesResponse::request() const
 {
-    Q_D(const ListResolverEndpointIpAddressesResponse);
-    return static_cast<const ListResolverEndpointIpAddressesRequest *>(d->request);
+    return static_cast<const ListResolverEndpointIpAddressesRequest *>(Route53ResolverResponse::request());
 }
 
 /*!

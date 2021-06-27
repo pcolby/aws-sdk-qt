@@ -56,8 +56,7 @@ DeleteResourcePolicyResponse::DeleteResourcePolicyResponse(
  */
 const DeleteResourcePolicyRequest * DeleteResourcePolicyResponse::request() const
 {
-    Q_D(const DeleteResourcePolicyResponse);
-    return static_cast<const DeleteResourcePolicyRequest *>(d->request);
+    return static_cast<const DeleteResourcePolicyRequest *>(SchemasResponse::request());
 }
 
 /*!

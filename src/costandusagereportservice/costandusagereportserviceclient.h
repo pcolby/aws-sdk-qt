@@ -58,6 +58,12 @@ public slots:
     ModifyReportDefinitionResponse * modifyReportDefinition(const ModifyReportDefinitionRequest &request);
     PutReportDefinitionResponse * putReportDefinition(const PutReportDefinitionRequest &request);
 
+protected:
+    /// @cond internal
+    CostandUsageReportServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
+    CostandUsageReportServiceClient(CostandUsageReportServiceClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(CostandUsageReportServiceClient)
     Q_DISABLE_COPY(CostandUsageReportServiceClient)

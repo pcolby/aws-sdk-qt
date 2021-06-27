@@ -20,15 +20,12 @@
 #ifndef QTAWS_IMPORTEXPORTREQUEST_P_H
 #define QTAWS_IMPORTEXPORTREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "importexportrequest.h"
-
 namespace QtAws {
 namespace ImportExport {
 
 class ImportExportRequest;
 
-class ImportExportRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ImportExportRequestPrivate {
 
 public:
     ImportExportRequest::Action action; ///< ImportExport action to be performed.
@@ -39,6 +36,9 @@ public:
     ImportExportRequestPrivate(const ImportExportRequestPrivate &other, ImportExportRequest * const q);
 
     static QString toString(const ImportExportRequest::Action &action);
+
+protected:
+    ImportExportRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ImportExportRequest)

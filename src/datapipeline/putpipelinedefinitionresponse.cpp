@@ -73,8 +73,7 @@ PutPipelineDefinitionResponse::PutPipelineDefinitionResponse(
  */
 const PutPipelineDefinitionRequest * PutPipelineDefinitionResponse::request() const
 {
-    Q_D(const PutPipelineDefinitionResponse);
-    return static_cast<const PutPipelineDefinitionRequest *>(d->request);
+    return static_cast<const PutPipelineDefinitionRequest *>(DataPipelineResponse::request());
 }
 
 /*!

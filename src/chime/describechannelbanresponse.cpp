@@ -98,8 +98,7 @@ DescribeChannelBanResponse::DescribeChannelBanResponse(
  */
 const DescribeChannelBanRequest * DescribeChannelBanResponse::request() const
 {
-    Q_D(const DescribeChannelBanResponse);
-    return static_cast<const DescribeChannelBanRequest *>(d->request);
+    return static_cast<const DescribeChannelBanRequest *>(ChimeResponse::request());
 }
 
 /*!

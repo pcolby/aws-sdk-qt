@@ -61,8 +61,7 @@ CreateInterconnectResponse::CreateInterconnectResponse(
  */
 const CreateInterconnectRequest * CreateInterconnectResponse::request() const
 {
-    Q_D(const CreateInterconnectResponse);
-    return static_cast<const CreateInterconnectRequest *>(d->request);
+    return static_cast<const CreateInterconnectRequest *>(DirectConnectResponse::request());
 }
 
 /*!

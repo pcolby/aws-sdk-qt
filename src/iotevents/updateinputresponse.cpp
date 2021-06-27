@@ -58,8 +58,7 @@ UpdateInputResponse::UpdateInputResponse(
  */
 const UpdateInputRequest * UpdateInputResponse::request() const
 {
-    Q_D(const UpdateInputResponse);
-    return static_cast<const UpdateInputRequest *>(d->request);
+    return static_cast<const UpdateInputRequest *>(IoTEventsResponse::request());
 }
 
 /*!

@@ -61,8 +61,7 @@ ListProjectAssetsResponse::ListProjectAssetsResponse(
  */
 const ListProjectAssetsRequest * ListProjectAssetsResponse::request() const
 {
-    Q_D(const ListProjectAssetsResponse);
-    return static_cast<const ListProjectAssetsRequest *>(d->request);
+    return static_cast<const ListProjectAssetsRequest *>(IoTSiteWiseResponse::request());
 }
 
 /*!

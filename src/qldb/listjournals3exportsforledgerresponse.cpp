@@ -56,8 +56,7 @@ ListJournalS3ExportsForLedgerResponse::ListJournalS3ExportsForLedgerResponse(
  */
 const ListJournalS3ExportsForLedgerRequest * ListJournalS3ExportsForLedgerResponse::request() const
 {
-    Q_D(const ListJournalS3ExportsForLedgerResponse);
-    return static_cast<const ListJournalS3ExportsForLedgerRequest *>(d->request);
+    return static_cast<const ListJournalS3ExportsForLedgerRequest *>(QldbResponse::request());
 }
 
 /*!

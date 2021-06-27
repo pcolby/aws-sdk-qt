@@ -77,8 +77,7 @@ RestartAppServerResponse::RestartAppServerResponse(
  */
 const RestartAppServerRequest * RestartAppServerResponse::request() const
 {
-    Q_D(const RestartAppServerResponse);
-    return static_cast<const RestartAppServerRequest *>(d->request);
+    return static_cast<const RestartAppServerRequest *>(ElasticBeanstalkResponse::request());
 }
 
 /*!

@@ -64,8 +64,7 @@ AssociateResourceShareResponse::AssociateResourceShareResponse(
  */
 const AssociateResourceShareRequest * AssociateResourceShareResponse::request() const
 {
-    Q_D(const AssociateResourceShareResponse);
-    return static_cast<const AssociateResourceShareRequest *>(d->request);
+    return static_cast<const AssociateResourceShareRequest *>(RamResponse::request());
 }
 
 /*!

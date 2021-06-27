@@ -218,8 +218,7 @@ DescribeEndpointGroupResponse::DescribeEndpointGroupResponse(
  */
 const DescribeEndpointGroupRequest * DescribeEndpointGroupResponse::request() const
 {
-    Q_D(const DescribeEndpointGroupResponse);
-    return static_cast<const DescribeEndpointGroupRequest *>(d->request);
+    return static_cast<const DescribeEndpointGroupRequest *>(GlobalAcceleratorResponse::request());
 }
 
 /*!

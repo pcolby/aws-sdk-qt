@@ -56,8 +56,7 @@ UpdateClusterConfigurationResponse::UpdateClusterConfigurationResponse(
  */
 const UpdateClusterConfigurationRequest * UpdateClusterConfigurationResponse::request() const
 {
-    Q_D(const UpdateClusterConfigurationResponse);
-    return static_cast<const UpdateClusterConfigurationRequest *>(d->request);
+    return static_cast<const UpdateClusterConfigurationRequest *>(KafkaResponse::request());
 }
 
 /*!

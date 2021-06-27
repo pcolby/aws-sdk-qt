@@ -70,8 +70,7 @@ DescribeUserProfileResponse::DescribeUserProfileResponse(
  */
 const DescribeUserProfileRequest * DescribeUserProfileResponse::request() const
 {
-    Q_D(const DescribeUserProfileResponse);
-    return static_cast<const DescribeUserProfileRequest *>(d->request);
+    return static_cast<const DescribeUserProfileRequest *>(SageMakerResponse::request());
 }
 
 /*!

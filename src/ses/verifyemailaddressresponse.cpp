@@ -66,8 +66,7 @@ VerifyEmailAddressResponse::VerifyEmailAddressResponse(
  */
 const VerifyEmailAddressRequest * VerifyEmailAddressResponse::request() const
 {
-    Q_D(const VerifyEmailAddressResponse);
-    return static_cast<const VerifyEmailAddressRequest *>(d->request);
+    return static_cast<const VerifyEmailAddressRequest *>(SesResponse::request());
 }
 
 /*!

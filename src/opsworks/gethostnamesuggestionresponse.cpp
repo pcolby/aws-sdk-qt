@@ -161,8 +161,7 @@ GetHostnameSuggestionResponse::GetHostnameSuggestionResponse(
  */
 const GetHostnameSuggestionRequest * GetHostnameSuggestionResponse::request() const
 {
-    Q_D(const GetHostnameSuggestionResponse);
-    return static_cast<const GetHostnameSuggestionRequest *>(d->request);
+    return static_cast<const GetHostnameSuggestionRequest *>(OpsWorksResponse::request());
 }
 
 /*!

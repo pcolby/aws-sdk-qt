@@ -55,8 +55,7 @@ ListFlowsResponse::ListFlowsResponse(
  */
 const ListFlowsRequest * ListFlowsResponse::request() const
 {
-    Q_D(const ListFlowsResponse);
-    return static_cast<const ListFlowsRequest *>(d->request);
+    return static_cast<const ListFlowsRequest *>(MediaConnectResponse::request());
 }
 
 /*!

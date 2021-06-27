@@ -52,6 +52,12 @@ public slots:
     SendSSHPublicKeyResponse * sendSSHPublicKey(const SendSSHPublicKeyRequest &request);
     SendSerialConsoleSSHPublicKeyResponse * sendSerialConsoleSSHPublicKey(const SendSerialConsoleSSHPublicKeyRequest &request);
 
+protected:
+    /// @cond internal
+    EC2InstanceConnectClientPrivate * const d_ptr; ///< Internal d-pointer.
+    EC2InstanceConnectClient(EC2InstanceConnectClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(EC2InstanceConnectClient)
     Q_DISABLE_COPY(EC2InstanceConnectClient)

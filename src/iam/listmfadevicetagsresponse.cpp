@@ -62,8 +62,7 @@ ListMFADeviceTagsResponse::ListMFADeviceTagsResponse(
  */
 const ListMFADeviceTagsRequest * ListMFADeviceTagsResponse::request() const
 {
-    Q_D(const ListMFADeviceTagsResponse);
-    return static_cast<const ListMFADeviceTagsRequest *>(d->request);
+    return static_cast<const ListMFADeviceTagsRequest *>(IamResponse::request());
 }
 
 /*!

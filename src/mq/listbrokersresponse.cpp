@@ -57,8 +57,7 @@ ListBrokersResponse::ListBrokersResponse(
  */
 const ListBrokersRequest * ListBrokersResponse::request() const
 {
-    Q_D(const ListBrokersResponse);
-    return static_cast<const ListBrokersRequest *>(d->request);
+    return static_cast<const ListBrokersRequest *>(MqResponse::request());
 }
 
 /*!

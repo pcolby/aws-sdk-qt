@@ -65,7 +65,7 @@ namespace LakeFormation {
  * Constructs a LakeFormationRequest object for LakeFormation \a action.
  */
 LakeFormationRequest::LakeFormationRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new LakeFormationRequestPrivate(action, this))
+    : d_ptr(new LakeFormationRequestPrivate(action, this))
 {
 
 }
@@ -74,7 +74,8 @@ LakeFormationRequest::LakeFormationRequest(const Action action)
  * Constructs a copy of \a other.
  */
 LakeFormationRequest::LakeFormationRequest(const LakeFormationRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new LakeFormationRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new LakeFormationRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -97,7 +98,7 @@ LakeFormationRequest& LakeFormationRequest::operator=(const LakeFormationRequest
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from LakeFormationRequestPrivate.
  */
-LakeFormationRequest::LakeFormationRequest(LakeFormationRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+LakeFormationRequest::LakeFormationRequest(LakeFormationRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -266,7 +267,7 @@ QNetworkRequest LakeFormationRequest::unsignedRequest(const QUrl &endpoint) cons
  * with public implementation \a q.
  */
 LakeFormationRequestPrivate::LakeFormationRequestPrivate(const LakeFormationRequest::Action action, LakeFormationRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -281,8 +282,8 @@ LakeFormationRequestPrivate::LakeFormationRequestPrivate(const LakeFormationRequ
  */
 LakeFormationRequestPrivate::LakeFormationRequestPrivate(const LakeFormationRequestPrivate &other,
                                      LakeFormationRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

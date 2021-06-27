@@ -83,8 +83,7 @@ DescribeDimensionKeysResponse::DescribeDimensionKeysResponse(
  */
 const DescribeDimensionKeysRequest * DescribeDimensionKeysResponse::request() const
 {
-    Q_D(const DescribeDimensionKeysResponse);
-    return static_cast<const DescribeDimensionKeysRequest *>(d->request);
+    return static_cast<const DescribeDimensionKeysRequest *>(PiResponse::request());
 }
 
 /*!

@@ -37,7 +37,7 @@ namespace Greengrass {
  * Constructs a GreengrassResponse object with parent \a parent.
  */
 GreengrassResponse::GreengrassResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new GreengrassResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new GreengrassResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ GreengrassResponse::GreengrassResponse(QObject * const parent)
  * implementation that inherits from GreengrassResponsePrivate.
  */
 GreengrassResponse::GreengrassResponse(GreengrassResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void GreengrassResponse::parseFailure(QIODevice &response)
  * Constructs a GreengrassResponsePrivate object with public implementation \a q.
  */
 GreengrassResponsePrivate::GreengrassResponsePrivate(
-    GreengrassResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    GreengrassResponse * const q) : q_ptr(q)
 {
 
 }

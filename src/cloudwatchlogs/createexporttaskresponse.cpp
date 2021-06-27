@@ -84,8 +84,7 @@ CreateExportTaskResponse::CreateExportTaskResponse(
  */
 const CreateExportTaskRequest * CreateExportTaskResponse::request() const
 {
-    Q_D(const CreateExportTaskResponse);
-    return static_cast<const CreateExportTaskRequest *>(d->request);
+    return static_cast<const CreateExportTaskRequest *>(CloudWatchLogsResponse::request());
 }
 
 /*!

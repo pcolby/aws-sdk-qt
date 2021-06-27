@@ -73,8 +73,7 @@ ListVirtualNodesResponse::ListVirtualNodesResponse(
  */
 const ListVirtualNodesRequest * ListVirtualNodesResponse::request() const
 {
-    Q_D(const ListVirtualNodesResponse);
-    return static_cast<const ListVirtualNodesRequest *>(d->request);
+    return static_cast<const ListVirtualNodesRequest *>(AppMeshResponse::request());
 }
 
 /*!

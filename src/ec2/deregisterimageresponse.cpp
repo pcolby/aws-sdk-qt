@@ -87,8 +87,7 @@ DeregisterImageResponse::DeregisterImageResponse(
  */
 const DeregisterImageRequest * DeregisterImageResponse::request() const
 {
-    Q_D(const DeregisterImageResponse);
-    return static_cast<const DeregisterImageRequest *>(d->request);
+    return static_cast<const DeregisterImageRequest *>(Ec2Response::request());
 }
 
 /*!

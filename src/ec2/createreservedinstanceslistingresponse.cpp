@@ -87,8 +87,7 @@ CreateReservedInstancesListingResponse::CreateReservedInstancesListingResponse(
  */
 const CreateReservedInstancesListingRequest * CreateReservedInstancesListingResponse::request() const
 {
-    Q_D(const CreateReservedInstancesListingResponse);
-    return static_cast<const CreateReservedInstancesListingRequest *>(d->request);
+    return static_cast<const CreateReservedInstancesListingRequest *>(Ec2Response::request());
 }
 
 /*!

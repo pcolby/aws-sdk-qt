@@ -55,8 +55,7 @@ CreatePermissionSetResponse::CreatePermissionSetResponse(
  */
 const CreatePermissionSetRequest * CreatePermissionSetResponse::request() const
 {
-    Q_D(const CreatePermissionSetResponse);
-    return static_cast<const CreatePermissionSetRequest *>(d->request);
+    return static_cast<const CreatePermissionSetRequest *>(SSOAdminResponse::request());
 }
 
 /*!

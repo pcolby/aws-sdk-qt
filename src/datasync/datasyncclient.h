@@ -151,6 +151,12 @@ public slots:
     UpdateTaskResponse * updateTask(const UpdateTaskRequest &request);
     UpdateTaskExecutionResponse * updateTaskExecution(const UpdateTaskExecutionRequest &request);
 
+protected:
+    /// @cond internal
+    DataSyncClientPrivate * const d_ptr; ///< Internal d-pointer.
+    DataSyncClient(DataSyncClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(DataSyncClient)
     Q_DISABLE_COPY(DataSyncClient)

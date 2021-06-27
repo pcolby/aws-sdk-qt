@@ -141,8 +141,7 @@ ListDeploymentGroupsResponse::ListDeploymentGroupsResponse(
  */
 const ListDeploymentGroupsRequest * ListDeploymentGroupsResponse::request() const
 {
-    Q_D(const ListDeploymentGroupsResponse);
-    return static_cast<const ListDeploymentGroupsRequest *>(d->request);
+    return static_cast<const ListDeploymentGroupsRequest *>(CodeDeployResponse::request());
 }
 
 /*!

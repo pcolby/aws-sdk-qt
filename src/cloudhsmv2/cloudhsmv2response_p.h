@@ -20,14 +20,12 @@
 #ifndef QTAWS_CLOUDHSMV2RESPONSE_P_H
 #define QTAWS_CLOUDHSMV2RESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace CloudHSMV2 {
 
 class CloudHSMV2Response;
 
-class CloudHSMV2ResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class CloudHSMV2ResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    CloudHSMV2Response * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CloudHSMV2Response)

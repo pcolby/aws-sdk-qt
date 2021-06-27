@@ -74,8 +74,7 @@ GetContainerAPIMetadataResponse::GetContainerAPIMetadataResponse(
  */
 const GetContainerAPIMetadataRequest * GetContainerAPIMetadataResponse::request() const
 {
-    Q_D(const GetContainerAPIMetadataResponse);
-    return static_cast<const GetContainerAPIMetadataRequest *>(d->request);
+    return static_cast<const GetContainerAPIMetadataRequest *>(LightsailResponse::request());
 }
 
 /*!

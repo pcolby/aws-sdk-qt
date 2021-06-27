@@ -84,8 +84,7 @@ DescribeResourcePermissionsResponse::DescribeResourcePermissionsResponse(
  */
 const DescribeResourcePermissionsRequest * DescribeResourcePermissionsResponse::request() const
 {
-    Q_D(const DescribeResourcePermissionsResponse);
-    return static_cast<const DescribeResourcePermissionsRequest *>(d->request);
+    return static_cast<const DescribeResourcePermissionsRequest *>(WorkDocsResponse::request());
 }
 
 /*!

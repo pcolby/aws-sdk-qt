@@ -60,8 +60,7 @@ CreateFieldLevelEncryptionProfileResponse::CreateFieldLevelEncryptionProfileResp
  */
 const CreateFieldLevelEncryptionProfileRequest * CreateFieldLevelEncryptionProfileResponse::request() const
 {
-    Q_D(const CreateFieldLevelEncryptionProfileResponse);
-    return static_cast<const CreateFieldLevelEncryptionProfileRequest *>(d->request);
+    return static_cast<const CreateFieldLevelEncryptionProfileRequest *>(CloudFrontResponse::request());
 }
 
 /*!

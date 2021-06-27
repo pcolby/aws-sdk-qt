@@ -56,8 +56,7 @@ UpdateThesaurusResponse::UpdateThesaurusResponse(
  */
 const UpdateThesaurusRequest * UpdateThesaurusResponse::request() const
 {
-    Q_D(const UpdateThesaurusResponse);
-    return static_cast<const UpdateThesaurusRequest *>(d->request);
+    return static_cast<const UpdateThesaurusRequest *>(kendraResponse::request());
 }
 
 /*!

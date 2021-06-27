@@ -85,8 +85,7 @@ DescribeAccountAttributesResponse::DescribeAccountAttributesResponse(
  */
 const DescribeAccountAttributesRequest * DescribeAccountAttributesResponse::request() const
 {
-    Q_D(const DescribeAccountAttributesResponse);
-    return static_cast<const DescribeAccountAttributesRequest *>(d->request);
+    return static_cast<const DescribeAccountAttributesRequest *>(RedshiftResponse::request());
 }
 
 /*!

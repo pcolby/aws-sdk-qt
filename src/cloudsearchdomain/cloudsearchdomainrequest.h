@@ -59,6 +59,7 @@ public:
 
 protected:
     /// @cond internal
+    CloudSearchDomainRequestPrivate * const d_ptr; ///< Internal d-pointer.
     CloudSearchDomainRequest(CloudSearchDomainRequestPrivate * const d);
     /// @endcond
 

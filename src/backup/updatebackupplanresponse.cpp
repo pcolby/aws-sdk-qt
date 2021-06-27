@@ -59,8 +59,7 @@ UpdateBackupPlanResponse::UpdateBackupPlanResponse(
  */
 const UpdateBackupPlanRequest * UpdateBackupPlanResponse::request() const
 {
-    Q_D(const UpdateBackupPlanResponse);
-    return static_cast<const UpdateBackupPlanRequest *>(d->request);
+    return static_cast<const UpdateBackupPlanRequest *>(BackupResponse::request());
 }
 
 /*!

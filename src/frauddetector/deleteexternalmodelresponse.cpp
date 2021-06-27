@@ -58,8 +58,7 @@ DeleteExternalModelResponse::DeleteExternalModelResponse(
  */
 const DeleteExternalModelRequest * DeleteExternalModelResponse::request() const
 {
-    Q_D(const DeleteExternalModelResponse);
-    return static_cast<const DeleteExternalModelRequest *>(d->request);
+    return static_cast<const DeleteExternalModelRequest *>(FraudDetectorResponse::request());
 }
 
 /*!

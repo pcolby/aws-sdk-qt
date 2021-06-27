@@ -161,8 +161,7 @@ DescribeAgentVersionsResponse::DescribeAgentVersionsResponse(
  */
 const DescribeAgentVersionsRequest * DescribeAgentVersionsResponse::request() const
 {
-    Q_D(const DescribeAgentVersionsResponse);
-    return static_cast<const DescribeAgentVersionsRequest *>(d->request);
+    return static_cast<const DescribeAgentVersionsRequest *>(OpsWorksResponse::request());
 }
 
 /*!

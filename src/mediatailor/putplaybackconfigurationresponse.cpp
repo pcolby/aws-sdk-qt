@@ -66,8 +66,7 @@ PutPlaybackConfigurationResponse::PutPlaybackConfigurationResponse(
  */
 const PutPlaybackConfigurationRequest * PutPlaybackConfigurationResponse::request() const
 {
-    Q_D(const PutPlaybackConfigurationResponse);
-    return static_cast<const PutPlaybackConfigurationRequest *>(d->request);
+    return static_cast<const PutPlaybackConfigurationRequest *>(MediaTailorResponse::request());
 }
 
 /*!

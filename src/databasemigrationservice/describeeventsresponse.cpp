@@ -66,8 +66,7 @@ DescribeEventsResponse::DescribeEventsResponse(
  */
 const DescribeEventsRequest * DescribeEventsResponse::request() const
 {
-    Q_D(const DescribeEventsResponse);
-    return static_cast<const DescribeEventsRequest *>(d->request);
+    return static_cast<const DescribeEventsRequest *>(DatabaseMigrationServiceResponse::request());
 }
 
 /*!

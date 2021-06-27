@@ -58,8 +58,7 @@ ListContainerRecipesResponse::ListContainerRecipesResponse(
  */
 const ListContainerRecipesRequest * ListContainerRecipesResponse::request() const
 {
-    Q_D(const ListContainerRecipesResponse);
-    return static_cast<const ListContainerRecipesRequest *>(d->request);
+    return static_cast<const ListContainerRecipesRequest *>(imagebuilderResponse::request());
 }
 
 /*!

@@ -100,7 +100,7 @@ namespace Lambda {
  * Constructs a LambdaRequest object for Lambda \a action.
  */
 LambdaRequest::LambdaRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new LambdaRequestPrivate(action, this))
+    : d_ptr(new LambdaRequestPrivate(action, this))
 {
 
 }
@@ -109,7 +109,8 @@ LambdaRequest::LambdaRequest(const Action action)
  * Constructs a copy of \a other.
  */
 LambdaRequest::LambdaRequest(const LambdaRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new LambdaRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new LambdaRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -132,7 +133,7 @@ LambdaRequest& LambdaRequest::operator=(const LambdaRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from LambdaRequestPrivate.
  */
-LambdaRequest::LambdaRequest(LambdaRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+LambdaRequest::LambdaRequest(LambdaRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -301,7 +302,7 @@ QNetworkRequest LambdaRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 LambdaRequestPrivate::LambdaRequestPrivate(const LambdaRequest::Action action, LambdaRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -316,8 +317,8 @@ LambdaRequestPrivate::LambdaRequestPrivate(const LambdaRequest::Action action, L
  */
 LambdaRequestPrivate::LambdaRequestPrivate(const LambdaRequestPrivate &other,
                                      LambdaRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

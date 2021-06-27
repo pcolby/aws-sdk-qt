@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    SageMakerRuntimeResponsePrivate * const d_ptr; ///< Internal d-pointer.
     SageMakerRuntimeResponse(SageMakerRuntimeResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

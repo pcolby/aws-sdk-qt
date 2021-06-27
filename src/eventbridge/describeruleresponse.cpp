@@ -78,8 +78,7 @@ DescribeRuleResponse::DescribeRuleResponse(
  */
 const DescribeRuleRequest * DescribeRuleResponse::request() const
 {
-    Q_D(const DescribeRuleResponse);
-    return static_cast<const DescribeRuleRequest *>(d->request);
+    return static_cast<const DescribeRuleRequest *>(EventBridgeResponse::request());
 }
 
 /*!

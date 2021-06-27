@@ -20,14 +20,12 @@
 #ifndef QTAWS_MEDIALIVERESPONSE_P_H
 #define QTAWS_MEDIALIVERESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace MediaLive {
 
 class MediaLiveResponse;
 
-class MediaLiveResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class MediaLiveResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    MediaLiveResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MediaLiveResponse)

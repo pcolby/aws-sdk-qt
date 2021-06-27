@@ -56,8 +56,7 @@ GetDeviceRegistrationResponse::GetDeviceRegistrationResponse(
  */
 const GetDeviceRegistrationRequest * GetDeviceRegistrationResponse::request() const
 {
-    Q_D(const GetDeviceRegistrationResponse);
-    return static_cast<const GetDeviceRegistrationRequest *>(d->request);
+    return static_cast<const GetDeviceRegistrationRequest *>(SagemakerEdgeManagerResponse::request());
 }
 
 /*!

@@ -90,8 +90,7 @@ DescribeListenersResponse::DescribeListenersResponse(
  */
 const DescribeListenersRequest * DescribeListenersResponse::request() const
 {
-    Q_D(const DescribeListenersResponse);
-    return static_cast<const DescribeListenersRequest *>(d->request);
+    return static_cast<const DescribeListenersRequest *>(ElasticLoadBalancingv2Response::request());
 }
 
 /*!

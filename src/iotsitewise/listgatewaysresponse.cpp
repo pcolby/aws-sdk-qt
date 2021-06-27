@@ -61,8 +61,7 @@ ListGatewaysResponse::ListGatewaysResponse(
  */
 const ListGatewaysRequest * ListGatewaysResponse::request() const
 {
-    Q_D(const ListGatewaysResponse);
-    return static_cast<const ListGatewaysRequest *>(d->request);
+    return static_cast<const ListGatewaysRequest *>(IoTSiteWiseResponse::request());
 }
 
 /*!

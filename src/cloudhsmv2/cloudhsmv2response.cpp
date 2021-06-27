@@ -37,7 +37,7 @@ namespace CloudHSMV2 {
  * Constructs a CloudHSMV2Response object with parent \a parent.
  */
 CloudHSMV2Response::CloudHSMV2Response(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new CloudHSMV2ResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new CloudHSMV2ResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ CloudHSMV2Response::CloudHSMV2Response(QObject * const parent)
  * implementation that inherits from CloudHSMV2ResponsePrivate.
  */
 CloudHSMV2Response::CloudHSMV2Response(CloudHSMV2ResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void CloudHSMV2Response::parseFailure(QIODevice &response)
  * Constructs a CloudHSMV2ResponsePrivate object with public implementation \a q.
  */
 CloudHSMV2ResponsePrivate::CloudHSMV2ResponsePrivate(
-    CloudHSMV2Response * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    CloudHSMV2Response * const q) : q_ptr(q)
 {
 
 }

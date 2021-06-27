@@ -65,8 +65,7 @@ DeleteReplicationSetResponse::DeleteReplicationSetResponse(
  */
 const DeleteReplicationSetRequest * DeleteReplicationSetResponse::request() const
 {
-    Q_D(const DeleteReplicationSetResponse);
-    return static_cast<const DeleteReplicationSetRequest *>(d->request);
+    return static_cast<const DeleteReplicationSetRequest *>(SSMIncidentsResponse::request());
 }
 
 /*!

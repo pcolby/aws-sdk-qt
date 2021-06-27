@@ -56,8 +56,7 @@ UpdateLedgerResponse::UpdateLedgerResponse(
  */
 const UpdateLedgerRequest * UpdateLedgerResponse::request() const
 {
-    Q_D(const UpdateLedgerResponse);
-    return static_cast<const UpdateLedgerRequest *>(d->request);
+    return static_cast<const UpdateLedgerRequest *>(QldbResponse::request());
 }
 
 /*!

@@ -89,8 +89,7 @@ DisassociateMemberFromGroupResponse::DisassociateMemberFromGroupResponse(
  */
 const DisassociateMemberFromGroupRequest * DisassociateMemberFromGroupResponse::request() const
 {
-    Q_D(const DisassociateMemberFromGroupResponse);
-    return static_cast<const DisassociateMemberFromGroupRequest *>(d->request);
+    return static_cast<const DisassociateMemberFromGroupRequest *>(WorkMailResponse::request());
 }
 
 /*!

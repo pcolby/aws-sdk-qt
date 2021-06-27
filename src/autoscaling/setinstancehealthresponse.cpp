@@ -68,8 +68,7 @@ SetInstanceHealthResponse::SetInstanceHealthResponse(
  */
 const SetInstanceHealthRequest * SetInstanceHealthResponse::request() const
 {
-    Q_D(const SetInstanceHealthResponse);
-    return static_cast<const SetInstanceHealthRequest *>(d->request);
+    return static_cast<const SetInstanceHealthRequest *>(AutoScalingResponse::request());
 }
 
 /*!

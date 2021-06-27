@@ -58,8 +58,7 @@ ListSubscriptionDefinitionsResponse::ListSubscriptionDefinitionsResponse(
  */
 const ListSubscriptionDefinitionsRequest * ListSubscriptionDefinitionsResponse::request() const
 {
-    Q_D(const ListSubscriptionDefinitionsResponse);
-    return static_cast<const ListSubscriptionDefinitionsRequest *>(d->request);
+    return static_cast<const ListSubscriptionDefinitionsRequest *>(GreengrassResponse::request());
 }
 
 /*!

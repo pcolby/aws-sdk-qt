@@ -64,8 +64,7 @@ GetRecommendationSummariesResponse::GetRecommendationSummariesResponse(
  */
 const GetRecommendationSummariesRequest * GetRecommendationSummariesResponse::request() const
 {
-    Q_D(const GetRecommendationSummariesResponse);
-    return static_cast<const GetRecommendationSummariesRequest *>(d->request);
+    return static_cast<const GetRecommendationSummariesRequest *>(ComputeOptimizerResponse::request());
 }
 
 /*!

@@ -66,8 +66,7 @@ DeprecateFlowTemplateResponse::DeprecateFlowTemplateResponse(
  */
 const DeprecateFlowTemplateRequest * DeprecateFlowTemplateResponse::request() const
 {
-    Q_D(const DeprecateFlowTemplateResponse);
-    return static_cast<const DeprecateFlowTemplateRequest *>(d->request);
+    return static_cast<const DeprecateFlowTemplateRequest *>(IoTThingsGraphResponse::request());
 }
 
 /*!

@@ -20,19 +20,20 @@
 #ifndef QTAWS_APPCONFIGCLIENT_P_H
 #define QTAWS_APPCONFIGCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace AppConfig {
 
 class AppConfigClient;
 
-class AppConfigClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class AppConfigClientPrivate {
 
 public:
     AppConfigClientPrivate(AppConfigClient * const q);
+
+protected:
+    AppConfigClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AppConfigClient)

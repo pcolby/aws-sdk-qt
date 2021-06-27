@@ -56,8 +56,7 @@ CreateConfigurationResponse::CreateConfigurationResponse(
  */
 const CreateConfigurationRequest * CreateConfigurationResponse::request() const
 {
-    Q_D(const CreateConfigurationResponse);
-    return static_cast<const CreateConfigurationRequest *>(d->request);
+    return static_cast<const CreateConfigurationRequest *>(KafkaResponse::request());
 }
 
 /*!

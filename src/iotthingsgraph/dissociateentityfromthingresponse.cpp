@@ -66,8 +66,7 @@ DissociateEntityFromThingResponse::DissociateEntityFromThingResponse(
  */
 const DissociateEntityFromThingRequest * DissociateEntityFromThingResponse::request() const
 {
-    Q_D(const DissociateEntityFromThingResponse);
-    return static_cast<const DissociateEntityFromThingRequest *>(d->request);
+    return static_cast<const DissociateEntityFromThingRequest *>(IoTThingsGraphResponse::request());
 }
 
 /*!

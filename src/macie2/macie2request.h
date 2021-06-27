@@ -112,6 +112,7 @@ public:
 
 protected:
     /// @cond internal
+    Macie2RequestPrivate * const d_ptr; ///< Internal d-pointer.
     Macie2Request(Macie2RequestPrivate * const d);
     /// @endcond
 

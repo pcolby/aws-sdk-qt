@@ -72,8 +72,7 @@ AssociatePackageResponse::AssociatePackageResponse(
  */
 const AssociatePackageRequest * AssociatePackageResponse::request() const
 {
-    Q_D(const AssociatePackageResponse);
-    return static_cast<const AssociatePackageRequest *>(d->request);
+    return static_cast<const AssociatePackageRequest *>(ElasticsearchServiceResponse::request());
 }
 
 /*!

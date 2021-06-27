@@ -58,8 +58,7 @@ CreateAlertResponse::CreateAlertResponse(
  */
 const CreateAlertRequest * CreateAlertResponse::request() const
 {
-    Q_D(const CreateAlertResponse);
-    return static_cast<const CreateAlertRequest *>(d->request);
+    return static_cast<const CreateAlertRequest *>(LookoutMetricsResponse::request());
 }
 
 /*!

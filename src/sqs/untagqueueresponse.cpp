@@ -126,8 +126,7 @@ UntagQueueResponse::UntagQueueResponse(
  */
 const UntagQueueRequest * UntagQueueResponse::request() const
 {
-    Q_D(const UntagQueueResponse);
-    return static_cast<const UntagQueueRequest *>(d->request);
+    return static_cast<const UntagQueueRequest *>(SqsResponse::request());
 }
 
 /*!

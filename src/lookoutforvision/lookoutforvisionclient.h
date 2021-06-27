@@ -103,6 +103,12 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateDatasetEntriesResponse * updateDatasetEntries(const UpdateDatasetEntriesRequest &request);
 
+protected:
+    /// @cond internal
+    LookoutforVisionClientPrivate * const d_ptr; ///< Internal d-pointer.
+    LookoutforVisionClient(LookoutforVisionClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(LookoutforVisionClient)
     Q_DISABLE_COPY(LookoutforVisionClient)

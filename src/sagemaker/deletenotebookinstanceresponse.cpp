@@ -70,8 +70,7 @@ DeleteNotebookInstanceResponse::DeleteNotebookInstanceResponse(
  */
 const DeleteNotebookInstanceRequest * DeleteNotebookInstanceResponse::request() const
 {
-    Q_D(const DeleteNotebookInstanceResponse);
-    return static_cast<const DeleteNotebookInstanceRequest *>(d->request);
+    return static_cast<const DeleteNotebookInstanceRequest *>(SageMakerResponse::request());
 }
 
 /*!

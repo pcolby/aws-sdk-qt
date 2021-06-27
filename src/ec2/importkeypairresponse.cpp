@@ -87,8 +87,7 @@ ImportKeyPairResponse::ImportKeyPairResponse(
  */
 const ImportKeyPairRequest * ImportKeyPairResponse::request() const
 {
-    Q_D(const ImportKeyPairResponse);
-    return static_cast<const ImportKeyPairRequest *>(d->request);
+    return static_cast<const ImportKeyPairRequest *>(Ec2Response::request());
 }
 
 /*!

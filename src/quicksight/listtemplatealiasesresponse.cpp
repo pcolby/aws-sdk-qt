@@ -60,8 +60,7 @@ ListTemplateAliasesResponse::ListTemplateAliasesResponse(
  */
 const ListTemplateAliasesRequest * ListTemplateAliasesResponse::request() const
 {
-    Q_D(const ListTemplateAliasesResponse);
-    return static_cast<const ListTemplateAliasesRequest *>(d->request);
+    return static_cast<const ListTemplateAliasesRequest *>(QuickSightResponse::request());
 }
 
 /*!

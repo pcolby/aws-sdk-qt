@@ -87,8 +87,7 @@ AuthorizeClientVpnIngressResponse::AuthorizeClientVpnIngressResponse(
  */
 const AuthorizeClientVpnIngressRequest * AuthorizeClientVpnIngressResponse::request() const
 {
-    Q_D(const AuthorizeClientVpnIngressResponse);
-    return static_cast<const AuthorizeClientVpnIngressRequest *>(d->request);
+    return static_cast<const AuthorizeClientVpnIngressRequest *>(Ec2Response::request());
 }
 
 /*!

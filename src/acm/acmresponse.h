@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    AcmResponsePrivate * const d_ptr; ///< Internal d-pointer.
     AcmResponse(AcmResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

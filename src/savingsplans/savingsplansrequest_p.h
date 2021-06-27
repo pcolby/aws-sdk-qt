@@ -20,15 +20,12 @@
 #ifndef QTAWS_SAVINGSPLANSREQUEST_P_H
 #define QTAWS_SAVINGSPLANSREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "savingsplansrequest.h"
-
 namespace QtAws {
 namespace SavingsPlans {
 
 class SavingsPlansRequest;
 
-class SavingsPlansRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SavingsPlansRequestPrivate {
 
 public:
     SavingsPlansRequest::Action action; ///< SavingsPlans action to be performed.
@@ -39,6 +36,9 @@ public:
     SavingsPlansRequestPrivate(const SavingsPlansRequestPrivate &other, SavingsPlansRequest * const q);
 
     static QString toString(const SavingsPlansRequest::Action &action);
+
+protected:
+    SavingsPlansRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SavingsPlansRequest)

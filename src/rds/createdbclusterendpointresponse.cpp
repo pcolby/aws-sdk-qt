@@ -119,8 +119,7 @@ CreateDBClusterEndpointResponse::CreateDBClusterEndpointResponse(
  */
 const CreateDBClusterEndpointRequest * CreateDBClusterEndpointResponse::request() const
 {
-    Q_D(const CreateDBClusterEndpointResponse);
-    return static_cast<const CreateDBClusterEndpointRequest *>(d->request);
+    return static_cast<const CreateDBClusterEndpointRequest *>(RdsResponse::request());
 }
 
 /*!

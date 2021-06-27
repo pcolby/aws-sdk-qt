@@ -68,8 +68,7 @@ DomainMetadataResponse::DomainMetadataResponse(
  */
 const DomainMetadataRequest * DomainMetadataResponse::request() const
 {
-    Q_D(const DomainMetadataResponse);
-    return static_cast<const DomainMetadataRequest *>(d->request);
+    return static_cast<const DomainMetadataRequest *>(SimpleDBResponse::request());
 }
 
 /*!

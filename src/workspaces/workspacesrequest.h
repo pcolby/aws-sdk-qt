@@ -109,6 +109,7 @@ public:
 
 protected:
     /// @cond internal
+    WorkSpacesRequestPrivate * const d_ptr; ///< Internal d-pointer.
     WorkSpacesRequest(WorkSpacesRequestPrivate * const d);
     /// @endcond
 

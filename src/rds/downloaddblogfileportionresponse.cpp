@@ -119,8 +119,7 @@ DownloadDBLogFilePortionResponse::DownloadDBLogFilePortionResponse(
  */
 const DownloadDBLogFilePortionRequest * DownloadDBLogFilePortionResponse::request() const
 {
-    Q_D(const DownloadDBLogFilePortionResponse);
-    return static_cast<const DownloadDBLogFilePortionRequest *>(d->request);
+    return static_cast<const DownloadDBLogFilePortionRequest *>(RdsResponse::request());
 }
 
 /*!

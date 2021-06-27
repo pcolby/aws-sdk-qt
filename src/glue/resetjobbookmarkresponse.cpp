@@ -58,8 +58,7 @@ ResetJobBookmarkResponse::ResetJobBookmarkResponse(
  */
 const ResetJobBookmarkRequest * ResetJobBookmarkResponse::request() const
 {
-    Q_D(const ResetJobBookmarkResponse);
-    return static_cast<const ResetJobBookmarkRequest *>(d->request);
+    return static_cast<const ResetJobBookmarkRequest *>(GlueResponse::request());
 }
 
 /*!

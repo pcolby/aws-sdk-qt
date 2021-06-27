@@ -56,8 +56,7 @@ GetGeofenceResponse::GetGeofenceResponse(
  */
 const GetGeofenceRequest * GetGeofenceResponse::request() const
 {
-    Q_D(const GetGeofenceResponse);
-    return static_cast<const GetGeofenceRequest *>(d->request);
+    return static_cast<const GetGeofenceRequest *>(LocationServiceResponse::request());
 }
 
 /*!

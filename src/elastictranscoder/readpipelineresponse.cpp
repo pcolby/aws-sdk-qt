@@ -58,8 +58,7 @@ ReadPipelineResponse::ReadPipelineResponse(
  */
 const ReadPipelineRequest * ReadPipelineResponse::request() const
 {
-    Q_D(const ReadPipelineResponse);
-    return static_cast<const ReadPipelineRequest *>(d->request);
+    return static_cast<const ReadPipelineRequest *>(ElasticTranscoderResponse::request());
 }
 
 /*!

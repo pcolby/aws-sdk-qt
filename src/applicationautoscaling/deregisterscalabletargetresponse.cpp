@@ -137,8 +137,7 @@ DeregisterScalableTargetResponse::DeregisterScalableTargetResponse(
  */
 const DeregisterScalableTargetRequest * DeregisterScalableTargetResponse::request() const
 {
-    Q_D(const DeregisterScalableTargetResponse);
-    return static_cast<const DeregisterScalableTargetRequest *>(d->request);
+    return static_cast<const DeregisterScalableTargetRequest *>(ApplicationAutoScalingResponse::request());
 }
 
 /*!

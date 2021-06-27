@@ -93,6 +93,7 @@ public:
 
 protected:
     /// @cond internal
+    SwfRequestPrivate * const d_ptr; ///< Internal d-pointer.
     SwfRequest(SwfRequestPrivate * const d);
     /// @endcond
 

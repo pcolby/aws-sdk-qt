@@ -168,6 +168,12 @@ public slots:
     UpdatePackageResponse * updatePackage(const UpdatePackageRequest &request);
     UpgradeElasticsearchDomainResponse * upgradeElasticsearchDomain(const UpgradeElasticsearchDomainRequest &request);
 
+protected:
+    /// @cond internal
+    ElasticsearchServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
+    ElasticsearchServiceClient(ElasticsearchServiceClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(ElasticsearchServiceClient)
     Q_DISABLE_COPY(ElasticsearchServiceClient)

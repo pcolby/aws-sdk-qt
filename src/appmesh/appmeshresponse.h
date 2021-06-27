@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    AppMeshResponsePrivate * const d_ptr; ///< Internal d-pointer.
     AppMeshResponse(AppMeshResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -177,8 +177,7 @@ UpdateServicePipelineResponse::UpdateServicePipelineResponse(
  */
 const UpdateServicePipelineRequest * UpdateServicePipelineResponse::request() const
 {
-    Q_D(const UpdateServicePipelineResponse);
-    return static_cast<const UpdateServicePipelineRequest *>(d->request);
+    return static_cast<const UpdateServicePipelineRequest *>(ProtonResponse::request());
 }
 
 /*!

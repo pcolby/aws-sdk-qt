@@ -62,8 +62,7 @@ ForgetSmartHomeAppliancesResponse::ForgetSmartHomeAppliancesResponse(
  */
 const ForgetSmartHomeAppliancesRequest * ForgetSmartHomeAppliancesResponse::request() const
 {
-    Q_D(const ForgetSmartHomeAppliancesResponse);
-    return static_cast<const ForgetSmartHomeAppliancesRequest *>(d->request);
+    return static_cast<const ForgetSmartHomeAppliancesRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

@@ -66,8 +66,7 @@ GetFunctionEventInvokeConfigResponse::GetFunctionEventInvokeConfigResponse(
  */
 const GetFunctionEventInvokeConfigRequest * GetFunctionEventInvokeConfigResponse::request() const
 {
-    Q_D(const GetFunctionEventInvokeConfigResponse);
-    return static_cast<const GetFunctionEventInvokeConfigRequest *>(d->request);
+    return static_cast<const GetFunctionEventInvokeConfigRequest *>(LambdaResponse::request());
 }
 
 /*!

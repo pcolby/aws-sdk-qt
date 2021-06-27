@@ -100,7 +100,7 @@ namespace IoTSiteWise {
  * Constructs a IoTSiteWiseRequest object for IoTSiteWise \a action.
  */
 IoTSiteWiseRequest::IoTSiteWiseRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new IoTSiteWiseRequestPrivate(action, this))
+    : d_ptr(new IoTSiteWiseRequestPrivate(action, this))
 {
 
 }
@@ -109,7 +109,8 @@ IoTSiteWiseRequest::IoTSiteWiseRequest(const Action action)
  * Constructs a copy of \a other.
  */
 IoTSiteWiseRequest::IoTSiteWiseRequest(const IoTSiteWiseRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new IoTSiteWiseRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new IoTSiteWiseRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -132,7 +133,7 @@ IoTSiteWiseRequest& IoTSiteWiseRequest::operator=(const IoTSiteWiseRequest &othe
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from IoTSiteWiseRequestPrivate.
  */
-IoTSiteWiseRequest::IoTSiteWiseRequest(IoTSiteWiseRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+IoTSiteWiseRequest::IoTSiteWiseRequest(IoTSiteWiseRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -301,7 +302,7 @@ QNetworkRequest IoTSiteWiseRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 IoTSiteWiseRequestPrivate::IoTSiteWiseRequestPrivate(const IoTSiteWiseRequest::Action action, IoTSiteWiseRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -316,8 +317,8 @@ IoTSiteWiseRequestPrivate::IoTSiteWiseRequestPrivate(const IoTSiteWiseRequest::A
  */
 IoTSiteWiseRequestPrivate::IoTSiteWiseRequestPrivate(const IoTSiteWiseRequestPrivate &other,
                                      IoTSiteWiseRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

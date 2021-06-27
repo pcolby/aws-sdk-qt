@@ -37,7 +37,7 @@ namespace MediaTailor {
  * Constructs a MediaTailorResponse object with parent \a parent.
  */
 MediaTailorResponse::MediaTailorResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new MediaTailorResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new MediaTailorResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ MediaTailorResponse::MediaTailorResponse(QObject * const parent)
  * implementation that inherits from MediaTailorResponsePrivate.
  */
 MediaTailorResponse::MediaTailorResponse(MediaTailorResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void MediaTailorResponse::parseFailure(QIODevice &response)
  * Constructs a MediaTailorResponsePrivate object with public implementation \a q.
  */
 MediaTailorResponsePrivate::MediaTailorResponsePrivate(
-    MediaTailorResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    MediaTailorResponse * const q) : q_ptr(q)
 {
 
 }

@@ -84,16 +84,16 @@ CostandUsageReportServiceClient::CostandUsageReportServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CostandUsageReportServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-01-06"),
+    QStringLiteral("cur"),
+    QStringLiteral("AWS Cost and Usage Report Service"),
+    QStringLiteral("cur"),
+    parent), d_ptr(new CostandUsageReportServiceClientPrivate(this))
 {
-    Q_D(CostandUsageReportServiceClient);
-    d->apiVersion = QStringLiteral("2017-01-06");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("cur");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Cost and Usage Report Service");
-    d->serviceName = QStringLiteral("cur");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -112,16 +112,16 @@ CostandUsageReportServiceClient::CostandUsageReportServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CostandUsageReportServiceClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-01-06"),
+    QStringLiteral("cur"),
+    QStringLiteral("AWS Cost and Usage Report Service"),
+    QStringLiteral("cur"),
+    parent), d_ptr(new CostandUsageReportServiceClientPrivate(this))
 {
-    Q_D(CostandUsageReportServiceClient);
-    d->apiVersion = QStringLiteral("2017-01-06");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("cur");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Cost and Usage Report Service");
-    d->serviceName = QStringLiteral("cur");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -188,10 +188,9 @@ PutReportDefinitionResponse * CostandUsageReportServiceClient::putReportDefiniti
 /*!
  * Constructs a CostandUsageReportServiceClientPrivate object with public implementation \a q.
  */
-CostandUsageReportServiceClientPrivate::CostandUsageReportServiceClientPrivate(CostandUsageReportServiceClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+CostandUsageReportServiceClientPrivate::CostandUsageReportServiceClientPrivate(CostandUsageReportServiceClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace CostandUsageReportService

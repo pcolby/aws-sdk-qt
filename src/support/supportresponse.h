@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    SupportResponsePrivate * const d_ptr; ///< Internal d-pointer.
     SupportResponse(SupportResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

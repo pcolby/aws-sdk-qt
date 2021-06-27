@@ -190,6 +190,12 @@ public slots:
     UpdateImagePermissionsResponse * updateImagePermissions(const UpdateImagePermissionsRequest &request);
     UpdateStackResponse * updateStack(const UpdateStackRequest &request);
 
+protected:
+    /// @cond internal
+    AppStreamClientPrivate * const d_ptr; ///< Internal d-pointer.
+    AppStreamClient(AppStreamClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(AppStreamClient)
     Q_DISABLE_COPY(AppStreamClient)

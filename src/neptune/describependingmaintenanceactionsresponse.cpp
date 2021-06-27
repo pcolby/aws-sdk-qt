@@ -72,8 +72,7 @@ DescribePendingMaintenanceActionsResponse::DescribePendingMaintenanceActionsResp
  */
 const DescribePendingMaintenanceActionsRequest * DescribePendingMaintenanceActionsResponse::request() const
 {
-    Q_D(const DescribePendingMaintenanceActionsResponse);
-    return static_cast<const DescribePendingMaintenanceActionsRequest *>(d->request);
+    return static_cast<const DescribePendingMaintenanceActionsRequest *>(NeptuneResponse::request());
 }
 
 /*!

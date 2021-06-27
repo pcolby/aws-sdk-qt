@@ -76,8 +76,7 @@ CreateCloudFormationChangeSetResponse::CreateCloudFormationChangeSetResponse(
  */
 const CreateCloudFormationChangeSetRequest * CreateCloudFormationChangeSetResponse::request() const
 {
-    Q_D(const CreateCloudFormationChangeSetResponse);
-    return static_cast<const CreateCloudFormationChangeSetRequest *>(d->request);
+    return static_cast<const CreateCloudFormationChangeSetRequest *>(ServerlessApplicationRepositoryResponse::request());
 }
 
 /*!

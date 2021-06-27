@@ -55,8 +55,7 @@ CreateStreamingSessionStreamResponse::CreateStreamingSessionStreamResponse(
  */
 const CreateStreamingSessionStreamRequest * CreateStreamingSessionStreamResponse::request() const
 {
-    Q_D(const CreateStreamingSessionStreamResponse);
-    return static_cast<const CreateStreamingSessionStreamRequest *>(d->request);
+    return static_cast<const CreateStreamingSessionStreamRequest *>(NimbleStudioResponse::request());
 }
 
 /*!

@@ -83,6 +83,7 @@ public:
 
 protected:
     /// @cond internal
+    EfsRequestPrivate * const d_ptr; ///< Internal d-pointer.
     EfsRequest(EfsRequestPrivate * const d);
     /// @endcond
 

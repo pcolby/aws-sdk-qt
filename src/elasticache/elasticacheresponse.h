@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    ElastiCacheResponsePrivate * const d_ptr; ///< Internal d-pointer.
     ElastiCacheResponse(ElastiCacheResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -20,19 +20,20 @@
 #ifndef QTAWS_APPRUNNERCLIENT_P_H
 #define QTAWS_APPRUNNERCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace AppRunner {
 
 class AppRunnerClient;
 
-class AppRunnerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class AppRunnerClientPrivate {
 
 public:
     AppRunnerClientPrivate(AppRunnerClient * const q);
+
+protected:
+    AppRunnerClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AppRunnerClient)

@@ -100,6 +100,12 @@ public slots:
     UpdateConnectorProfileResponse * updateConnectorProfile(const UpdateConnectorProfileRequest &request);
     UpdateFlowResponse * updateFlow(const UpdateFlowRequest &request);
 
+protected:
+    /// @cond internal
+    AppflowClientPrivate * const d_ptr; ///< Internal d-pointer.
+    AppflowClient(AppflowClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(AppflowClient)
     Q_DISABLE_COPY(AppflowClient)

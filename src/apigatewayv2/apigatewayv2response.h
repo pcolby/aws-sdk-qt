@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    ApiGatewayV2ResponsePrivate * const d_ptr; ///< Internal d-pointer.
     ApiGatewayV2Response(ApiGatewayV2ResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

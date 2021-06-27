@@ -98,8 +98,7 @@ GetVoiceConnectorEmergencyCallingConfigurationResponse::GetVoiceConnectorEmergen
  */
 const GetVoiceConnectorEmergencyCallingConfigurationRequest * GetVoiceConnectorEmergencyCallingConfigurationResponse::request() const
 {
-    Q_D(const GetVoiceConnectorEmergencyCallingConfigurationResponse);
-    return static_cast<const GetVoiceConnectorEmergencyCallingConfigurationRequest *>(d->request);
+    return static_cast<const GetVoiceConnectorEmergencyCallingConfigurationRequest *>(ChimeResponse::request());
 }
 
 /*!

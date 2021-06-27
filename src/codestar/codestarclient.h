@@ -100,6 +100,12 @@ public slots:
     UpdateTeamMemberResponse * updateTeamMember(const UpdateTeamMemberRequest &request);
     UpdateUserProfileResponse * updateUserProfile(const UpdateUserProfileRequest &request);
 
+protected:
+    /// @cond internal
+    CodeStarClientPrivate * const d_ptr; ///< Internal d-pointer.
+    CodeStarClient(CodeStarClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(CodeStarClient)
     Q_DISABLE_COPY(CodeStarClient)

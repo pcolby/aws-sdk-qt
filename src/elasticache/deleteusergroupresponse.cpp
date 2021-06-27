@@ -69,8 +69,7 @@ DeleteUserGroupResponse::DeleteUserGroupResponse(
  */
 const DeleteUserGroupRequest * DeleteUserGroupResponse::request() const
 {
-    Q_D(const DeleteUserGroupResponse);
-    return static_cast<const DeleteUserGroupRequest *>(d->request);
+    return static_cast<const DeleteUserGroupRequest *>(ElastiCacheResponse::request());
 }
 
 /*!

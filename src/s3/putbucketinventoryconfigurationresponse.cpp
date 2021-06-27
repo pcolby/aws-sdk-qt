@@ -55,8 +55,7 @@ PutBucketInventoryConfigurationResponse::PutBucketInventoryConfigurationResponse
  */
 const PutBucketInventoryConfigurationRequest * PutBucketInventoryConfigurationResponse::request() const
 {
-    Q_D(const PutBucketInventoryConfigurationResponse);
-    return static_cast<const PutBucketInventoryConfigurationRequest *>(d->request);
+    return static_cast<const PutBucketInventoryConfigurationRequest *>(S3Response::request());
 }
 
 /*!

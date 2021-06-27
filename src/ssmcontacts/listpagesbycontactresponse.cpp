@@ -55,8 +55,7 @@ ListPagesByContactResponse::ListPagesByContactResponse(
  */
 const ListPagesByContactRequest * ListPagesByContactResponse::request() const
 {
-    Q_D(const ListPagesByContactResponse);
-    return static_cast<const ListPagesByContactRequest *>(d->request);
+    return static_cast<const ListPagesByContactRequest *>(SSMContactsResponse::request());
 }
 
 /*!

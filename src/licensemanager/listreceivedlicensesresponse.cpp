@@ -59,8 +59,7 @@ ListReceivedLicensesResponse::ListReceivedLicensesResponse(
  */
 const ListReceivedLicensesRequest * ListReceivedLicensesResponse::request() const
 {
-    Q_D(const ListReceivedLicensesResponse);
-    return static_cast<const ListReceivedLicensesRequest *>(d->request);
+    return static_cast<const ListReceivedLicensesRequest *>(LicenseManagerResponse::request());
 }
 
 /*!

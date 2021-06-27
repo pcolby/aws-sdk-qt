@@ -63,8 +63,7 @@ CreateObjectResponse::CreateObjectResponse(
  */
 const CreateObjectRequest * CreateObjectResponse::request() const
 {
-    Q_D(const CreateObjectResponse);
-    return static_cast<const CreateObjectRequest *>(d->request);
+    return static_cast<const CreateObjectRequest *>(CloudDirectoryResponse::request());
 }
 
 /*!

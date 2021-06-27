@@ -76,6 +76,7 @@ public:
 
 protected:
     /// @cond internal
+    CloudHSMRequestPrivate * const d_ptr; ///< Internal d-pointer.
     CloudHSMRequest(CloudHSMRequestPrivate * const d);
     /// @endcond
 

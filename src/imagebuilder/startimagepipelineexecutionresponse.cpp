@@ -58,8 +58,7 @@ StartImagePipelineExecutionResponse::StartImagePipelineExecutionResponse(
  */
 const StartImagePipelineExecutionRequest * StartImagePipelineExecutionResponse::request() const
 {
-    Q_D(const StartImagePipelineExecutionResponse);
-    return static_cast<const StartImagePipelineExecutionRequest *>(d->request);
+    return static_cast<const StartImagePipelineExecutionRequest *>(imagebuilderResponse::request());
 }
 
 /*!

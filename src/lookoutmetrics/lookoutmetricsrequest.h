@@ -81,6 +81,7 @@ public:
 
 protected:
     /// @cond internal
+    LookoutMetricsRequestPrivate * const d_ptr; ///< Internal d-pointer.
     LookoutMetricsRequest(LookoutMetricsRequestPrivate * const d);
     /// @endcond
 

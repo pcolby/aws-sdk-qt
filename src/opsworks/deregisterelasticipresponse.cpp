@@ -161,8 +161,7 @@ DeregisterElasticIpResponse::DeregisterElasticIpResponse(
  */
 const DeregisterElasticIpRequest * DeregisterElasticIpResponse::request() const
 {
-    Q_D(const DeregisterElasticIpResponse);
-    return static_cast<const DeregisterElasticIpRequest *>(d->request);
+    return static_cast<const DeregisterElasticIpRequest *>(OpsWorksResponse::request());
 }
 
 /*!

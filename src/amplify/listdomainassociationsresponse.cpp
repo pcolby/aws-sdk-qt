@@ -60,8 +60,7 @@ ListDomainAssociationsResponse::ListDomainAssociationsResponse(
  */
 const ListDomainAssociationsRequest * ListDomainAssociationsResponse::request() const
 {
-    Q_D(const ListDomainAssociationsResponse);
-    return static_cast<const ListDomainAssociationsRequest *>(d->request);
+    return static_cast<const ListDomainAssociationsRequest *>(AmplifyResponse::request());
 }
 
 /*!

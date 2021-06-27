@@ -73,8 +73,7 @@ ListFindingsResponse::ListFindingsResponse(
  */
 const ListFindingsRequest * ListFindingsResponse::request() const
 {
-    Q_D(const ListFindingsResponse);
-    return static_cast<const ListFindingsRequest *>(d->request);
+    return static_cast<const ListFindingsRequest *>(GuardDutyResponse::request());
 }
 
 /*!

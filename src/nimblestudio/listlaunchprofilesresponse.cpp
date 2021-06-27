@@ -55,8 +55,7 @@ ListLaunchProfilesResponse::ListLaunchProfilesResponse(
  */
 const ListLaunchProfilesRequest * ListLaunchProfilesResponse::request() const
 {
-    Q_D(const ListLaunchProfilesResponse);
-    return static_cast<const ListLaunchProfilesRequest *>(d->request);
+    return static_cast<const ListLaunchProfilesRequest *>(NimbleStudioResponse::request());
 }
 
 /*!

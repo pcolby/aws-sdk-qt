@@ -79,8 +79,7 @@ UpdateRoutingProfileConcurrencyResponse::UpdateRoutingProfileConcurrencyResponse
  */
 const UpdateRoutingProfileConcurrencyRequest * UpdateRoutingProfileConcurrencyResponse::request() const
 {
-    Q_D(const UpdateRoutingProfileConcurrencyResponse);
-    return static_cast<const UpdateRoutingProfileConcurrencyRequest *>(d->request);
+    return static_cast<const UpdateRoutingProfileConcurrencyRequest *>(ConnectResponse::request());
 }
 
 /*!

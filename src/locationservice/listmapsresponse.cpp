@@ -56,8 +56,7 @@ ListMapsResponse::ListMapsResponse(
  */
 const ListMapsRequest * ListMapsResponse::request() const
 {
-    Q_D(const ListMapsResponse);
-    return static_cast<const ListMapsRequest *>(d->request);
+    return static_cast<const ListMapsRequest *>(LocationServiceResponse::request());
 }
 
 /*!

@@ -62,8 +62,7 @@ GetProfileResponse::GetProfileResponse(
  */
 const GetProfileRequest * GetProfileResponse::request() const
 {
-    Q_D(const GetProfileResponse);
-    return static_cast<const GetProfileRequest *>(d->request);
+    return static_cast<const GetProfileRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

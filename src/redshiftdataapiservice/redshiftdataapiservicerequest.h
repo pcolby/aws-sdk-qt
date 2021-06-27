@@ -65,6 +65,7 @@ public:
 
 protected:
     /// @cond internal
+    RedshiftDataAPIServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
     RedshiftDataAPIServiceRequest(RedshiftDataAPIServiceRequestPrivate * const d);
     /// @endcond
 

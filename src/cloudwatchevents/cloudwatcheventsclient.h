@@ -199,6 +199,12 @@ public slots:
     UpdateArchiveResponse * updateArchive(const UpdateArchiveRequest &request);
     UpdateConnectionResponse * updateConnection(const UpdateConnectionRequest &request);
 
+protected:
+    /// @cond internal
+    CloudWatchEventsClientPrivate * const d_ptr; ///< Internal d-pointer.
+    CloudWatchEventsClient(CloudWatchEventsClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(CloudWatchEventsClient)
     Q_DISABLE_COPY(CloudWatchEventsClient)

@@ -56,8 +56,7 @@ CreateQuerySuggestionsBlockListResponse::CreateQuerySuggestionsBlockListResponse
  */
 const CreateQuerySuggestionsBlockListRequest * CreateQuerySuggestionsBlockListResponse::request() const
 {
-    Q_D(const CreateQuerySuggestionsBlockListResponse);
-    return static_cast<const CreateQuerySuggestionsBlockListRequest *>(d->request);
+    return static_cast<const CreateQuerySuggestionsBlockListRequest *>(kendraResponse::request());
 }
 
 /*!

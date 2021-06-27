@@ -76,8 +76,7 @@ DeleteByteMatchSetResponse::DeleteByteMatchSetResponse(
  */
 const DeleteByteMatchSetRequest * DeleteByteMatchSetResponse::request() const
 {
-    Q_D(const DeleteByteMatchSetResponse);
-    return static_cast<const DeleteByteMatchSetRequest *>(d->request);
+    return static_cast<const DeleteByteMatchSetRequest *>(WafResponse::request());
 }
 
 /*!

@@ -64,8 +64,7 @@ GetEC2InstanceRecommendationsResponse::GetEC2InstanceRecommendationsResponse(
  */
 const GetEC2InstanceRecommendationsRequest * GetEC2InstanceRecommendationsResponse::request() const
 {
-    Q_D(const GetEC2InstanceRecommendationsResponse);
-    return static_cast<const GetEC2InstanceRecommendationsRequest *>(d->request);
+    return static_cast<const GetEC2InstanceRecommendationsRequest *>(ComputeOptimizerResponse::request());
 }
 
 /*!

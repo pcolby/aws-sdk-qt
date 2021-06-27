@@ -98,6 +98,7 @@ public:
 
 protected:
     /// @cond internal
+    PinpointEmailRequestPrivate * const d_ptr; ///< Internal d-pointer.
     PinpointEmailRequest(PinpointEmailRequestPrivate * const d);
     /// @endcond
 

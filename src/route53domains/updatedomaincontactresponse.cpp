@@ -56,8 +56,7 @@ UpdateDomainContactResponse::UpdateDomainContactResponse(
  */
 const UpdateDomainContactRequest * UpdateDomainContactResponse::request() const
 {
-    Q_D(const UpdateDomainContactResponse);
-    return static_cast<const UpdateDomainContactRequest *>(d->request);
+    return static_cast<const UpdateDomainContactRequest *>(Route53DomainsResponse::request());
 }
 
 /*!

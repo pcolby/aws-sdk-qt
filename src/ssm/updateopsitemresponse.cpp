@@ -98,8 +98,7 @@ UpdateOpsItemResponse::UpdateOpsItemResponse(
  */
 const UpdateOpsItemRequest * UpdateOpsItemResponse::request() const
 {
-    Q_D(const UpdateOpsItemResponse);
-    return static_cast<const UpdateOpsItemRequest *>(d->request);
+    return static_cast<const UpdateOpsItemRequest *>(SsmResponse::request());
 }
 
 /*!

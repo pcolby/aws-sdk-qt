@@ -64,8 +64,7 @@ ListPrincipalsResponse::ListPrincipalsResponse(
  */
 const ListPrincipalsRequest * ListPrincipalsResponse::request() const
 {
-    Q_D(const ListPrincipalsResponse);
-    return static_cast<const ListPrincipalsRequest *>(d->request);
+    return static_cast<const ListPrincipalsRequest *>(RamResponse::request());
 }
 
 /*!

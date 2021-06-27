@@ -61,8 +61,7 @@ StopBgpFailoverTestResponse::StopBgpFailoverTestResponse(
  */
 const StopBgpFailoverTestRequest * StopBgpFailoverTestResponse::request() const
 {
-    Q_D(const StopBgpFailoverTestResponse);
-    return static_cast<const StopBgpFailoverTestRequest *>(d->request);
+    return static_cast<const StopBgpFailoverTestRequest *>(DirectConnectResponse::request());
 }
 
 /*!

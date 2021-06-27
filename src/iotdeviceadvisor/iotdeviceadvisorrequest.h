@@ -69,6 +69,7 @@ public:
 
 protected:
     /// @cond internal
+    IoTDeviceAdvisorRequestPrivate * const d_ptr; ///< Internal d-pointer.
     IoTDeviceAdvisorRequest(IoTDeviceAdvisorRequestPrivate * const d);
     /// @endcond
 

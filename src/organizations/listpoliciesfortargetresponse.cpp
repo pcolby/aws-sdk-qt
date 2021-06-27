@@ -141,8 +141,7 @@ ListPoliciesForTargetResponse::ListPoliciesForTargetResponse(
  */
 const ListPoliciesForTargetRequest * ListPoliciesForTargetResponse::request() const
 {
-    Q_D(const ListPoliciesForTargetResponse);
-    return static_cast<const ListPoliciesForTargetRequest *>(d->request);
+    return static_cast<const ListPoliciesForTargetRequest *>(OrganizationsResponse::request());
 }
 
 /*!

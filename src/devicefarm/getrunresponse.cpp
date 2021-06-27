@@ -75,8 +75,7 @@ GetRunResponse::GetRunResponse(
  */
 const GetRunRequest * GetRunResponse::request() const
 {
-    Q_D(const GetRunResponse);
-    return static_cast<const GetRunRequest *>(d->request);
+    return static_cast<const GetRunRequest *>(DeviceFarmResponse::request());
 }
 
 /*!

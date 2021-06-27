@@ -103,8 +103,7 @@ DisassociateMembersResponse::DisassociateMembersResponse(
  */
 const DisassociateMembersRequest * DisassociateMembersResponse::request() const
 {
-    Q_D(const DisassociateMembersResponse);
-    return static_cast<const DisassociateMembersRequest *>(d->request);
+    return static_cast<const DisassociateMembersRequest *>(SecurityHubResponse::request());
 }
 
 /*!

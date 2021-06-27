@@ -62,8 +62,7 @@ UpdateRoomResponse::UpdateRoomResponse(
  */
 const UpdateRoomRequest * UpdateRoomResponse::request() const
 {
-    Q_D(const UpdateRoomResponse);
-    return static_cast<const UpdateRoomRequest *>(d->request);
+    return static_cast<const UpdateRoomRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

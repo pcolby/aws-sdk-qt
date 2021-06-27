@@ -56,8 +56,7 @@ DeleteApiCacheResponse::DeleteApiCacheResponse(
  */
 const DeleteApiCacheRequest * DeleteApiCacheResponse::request() const
 {
-    Q_D(const DeleteApiCacheResponse);
-    return static_cast<const DeleteApiCacheRequest *>(d->request);
+    return static_cast<const DeleteApiCacheRequest *>(AppSyncResponse::request());
 }
 
 /*!

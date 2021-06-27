@@ -106,8 +106,7 @@ DescribeAffectedAccountsForOrganizationResponse::DescribeAffectedAccountsForOrga
  */
 const DescribeAffectedAccountsForOrganizationRequest * DescribeAffectedAccountsForOrganizationResponse::request() const
 {
-    Q_D(const DescribeAffectedAccountsForOrganizationResponse);
-    return static_cast<const DescribeAffectedAccountsForOrganizationRequest *>(d->request);
+    return static_cast<const DescribeAffectedAccountsForOrganizationRequest *>(HealthResponse::request());
 }
 
 /*!

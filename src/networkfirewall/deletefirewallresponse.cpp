@@ -145,8 +145,7 @@ DeleteFirewallResponse::DeleteFirewallResponse(
  */
 const DeleteFirewallRequest * DeleteFirewallResponse::request() const
 {
-    Q_D(const DeleteFirewallResponse);
-    return static_cast<const DeleteFirewallRequest *>(d->request);
+    return static_cast<const DeleteFirewallRequest *>(NetworkFirewallResponse::request());
 }
 
 /*!

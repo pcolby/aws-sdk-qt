@@ -60,8 +60,7 @@ ListKeyGroupsResponse::ListKeyGroupsResponse(
  */
 const ListKeyGroupsRequest * ListKeyGroupsResponse::request() const
 {
-    Q_D(const ListKeyGroupsResponse);
-    return static_cast<const ListKeyGroupsRequest *>(d->request);
+    return static_cast<const ListKeyGroupsRequest *>(CloudFrontResponse::request());
 }
 
 /*!

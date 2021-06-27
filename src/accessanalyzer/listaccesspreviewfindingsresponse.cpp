@@ -67,8 +67,7 @@ ListAccessPreviewFindingsResponse::ListAccessPreviewFindingsResponse(
  */
 const ListAccessPreviewFindingsRequest * ListAccessPreviewFindingsResponse::request() const
 {
-    Q_D(const ListAccessPreviewFindingsResponse);
-    return static_cast<const ListAccessPreviewFindingsRequest *>(d->request);
+    return static_cast<const ListAccessPreviewFindingsRequest *>(AccessAnalyzerResponse::request());
 }
 
 /*!

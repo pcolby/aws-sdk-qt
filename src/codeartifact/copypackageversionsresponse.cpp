@@ -293,8 +293,7 @@ CopyPackageVersionsResponse::CopyPackageVersionsResponse(
  */
 const CopyPackageVersionsRequest * CopyPackageVersionsResponse::request() const
 {
-    Q_D(const CopyPackageVersionsResponse);
-    return static_cast<const CopyPackageVersionsRequest *>(d->request);
+    return static_cast<const CopyPackageVersionsRequest *>(CodeArtifactResponse::request());
 }
 
 /*!

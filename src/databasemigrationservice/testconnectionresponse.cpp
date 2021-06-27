@@ -66,8 +66,7 @@ TestConnectionResponse::TestConnectionResponse(
  */
 const TestConnectionRequest * TestConnectionResponse::request() const
 {
-    Q_D(const TestConnectionResponse);
-    return static_cast<const TestConnectionRequest *>(d->request);
+    return static_cast<const TestConnectionRequest *>(DatabaseMigrationServiceResponse::request());
 }
 
 /*!

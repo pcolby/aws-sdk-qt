@@ -98,8 +98,7 @@ ListTagsForResourceResponse::ListTagsForResourceResponse(
  */
 const ListTagsForResourceRequest * ListTagsForResourceResponse::request() const
 {
-    Q_D(const ListTagsForResourceResponse);
-    return static_cast<const ListTagsForResourceRequest *>(d->request);
+    return static_cast<const ListTagsForResourceRequest *>(ChimeResponse::request());
 }
 
 /*!

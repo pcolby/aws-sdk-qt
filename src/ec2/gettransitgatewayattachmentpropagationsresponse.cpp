@@ -87,8 +87,7 @@ GetTransitGatewayAttachmentPropagationsResponse::GetTransitGatewayAttachmentProp
  */
 const GetTransitGatewayAttachmentPropagationsRequest * GetTransitGatewayAttachmentPropagationsResponse::request() const
 {
-    Q_D(const GetTransitGatewayAttachmentPropagationsResponse);
-    return static_cast<const GetTransitGatewayAttachmentPropagationsRequest *>(d->request);
+    return static_cast<const GetTransitGatewayAttachmentPropagationsRequest *>(Ec2Response::request());
 }
 
 /*!

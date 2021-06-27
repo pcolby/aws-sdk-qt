@@ -37,7 +37,7 @@ namespace Macie2 {
  * Constructs a Macie2Response object with parent \a parent.
  */
 Macie2Response::Macie2Response(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new Macie2ResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new Macie2ResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ Macie2Response::Macie2Response(QObject * const parent)
  * implementation that inherits from Macie2ResponsePrivate.
  */
 Macie2Response::Macie2Response(Macie2ResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void Macie2Response::parseFailure(QIODevice &response)
  * Constructs a Macie2ResponsePrivate object with public implementation \a q.
  */
 Macie2ResponsePrivate::Macie2ResponsePrivate(
-    Macie2Response * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    Macie2Response * const q) : q_ptr(q)
 {
 
 }

@@ -66,8 +66,7 @@ CreateReplicationInstanceResponse::CreateReplicationInstanceResponse(
  */
 const CreateReplicationInstanceRequest * CreateReplicationInstanceResponse::request() const
 {
-    Q_D(const CreateReplicationInstanceResponse);
-    return static_cast<const CreateReplicationInstanceRequest *>(d->request);
+    return static_cast<const CreateReplicationInstanceRequest *>(DatabaseMigrationServiceResponse::request());
 }
 
 /*!

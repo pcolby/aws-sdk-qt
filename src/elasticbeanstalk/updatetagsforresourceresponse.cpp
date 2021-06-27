@@ -77,8 +77,7 @@ UpdateTagsForResourceResponse::UpdateTagsForResourceResponse(
  */
 const UpdateTagsForResourceRequest * UpdateTagsForResourceResponse::request() const
 {
-    Q_D(const UpdateTagsForResourceResponse);
-    return static_cast<const UpdateTagsForResourceRequest *>(d->request);
+    return static_cast<const UpdateTagsForResourceRequest *>(ElasticBeanstalkResponse::request());
 }
 
 /*!

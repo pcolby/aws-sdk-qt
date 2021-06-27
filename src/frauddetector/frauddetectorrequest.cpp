@@ -99,7 +99,7 @@ namespace FraudDetector {
  * Constructs a FraudDetectorRequest object for FraudDetector \a action.
  */
 FraudDetectorRequest::FraudDetectorRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new FraudDetectorRequestPrivate(action, this))
+    : d_ptr(new FraudDetectorRequestPrivate(action, this))
 {
 
 }
@@ -108,7 +108,8 @@ FraudDetectorRequest::FraudDetectorRequest(const Action action)
  * Constructs a copy of \a other.
  */
 FraudDetectorRequest::FraudDetectorRequest(const FraudDetectorRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new FraudDetectorRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new FraudDetectorRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -131,7 +132,7 @@ FraudDetectorRequest& FraudDetectorRequest::operator=(const FraudDetectorRequest
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from FraudDetectorRequestPrivate.
  */
-FraudDetectorRequest::FraudDetectorRequest(FraudDetectorRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+FraudDetectorRequest::FraudDetectorRequest(FraudDetectorRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -300,7 +301,7 @@ QNetworkRequest FraudDetectorRequest::unsignedRequest(const QUrl &endpoint) cons
  * with public implementation \a q.
  */
 FraudDetectorRequestPrivate::FraudDetectorRequestPrivate(const FraudDetectorRequest::Action action, FraudDetectorRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -315,8 +316,8 @@ FraudDetectorRequestPrivate::FraudDetectorRequestPrivate(const FraudDetectorRequ
  */
 FraudDetectorRequestPrivate::FraudDetectorRequestPrivate(const FraudDetectorRequestPrivate &other,
                                      FraudDetectorRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

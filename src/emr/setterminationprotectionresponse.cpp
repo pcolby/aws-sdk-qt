@@ -58,8 +58,7 @@ SetTerminationProtectionResponse::SetTerminationProtectionResponse(
  */
 const SetTerminationProtectionRequest * SetTerminationProtectionResponse::request() const
 {
-    Q_D(const SetTerminationProtectionResponse);
-    return static_cast<const SetTerminationProtectionRequest *>(d->request);
+    return static_cast<const SetTerminationProtectionRequest *>(EmrResponse::request());
 }
 
 /*!

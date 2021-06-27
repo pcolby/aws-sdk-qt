@@ -75,8 +75,7 @@ DeleteConformancePackResponse::DeleteConformancePackResponse(
  */
 const DeleteConformancePackRequest * DeleteConformancePackResponse::request() const
 {
-    Q_D(const DeleteConformancePackResponse);
-    return static_cast<const DeleteConformancePackRequest *>(d->request);
+    return static_cast<const DeleteConformancePackRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

@@ -77,8 +77,7 @@ StartSnapshotResponse::StartSnapshotResponse(
  */
 const StartSnapshotRequest * StartSnapshotResponse::request() const
 {
-    Q_D(const StartSnapshotResponse);
-    return static_cast<const StartSnapshotRequest *>(d->request);
+    return static_cast<const StartSnapshotRequest *>(EbsResponse::request());
 }
 
 /*!

@@ -94,8 +94,7 @@ GetFirewallRuleGroupPolicyResponse::GetFirewallRuleGroupPolicyResponse(
  */
 const GetFirewallRuleGroupPolicyRequest * GetFirewallRuleGroupPolicyResponse::request() const
 {
-    Q_D(const GetFirewallRuleGroupPolicyResponse);
-    return static_cast<const GetFirewallRuleGroupPolicyRequest *>(d->request);
+    return static_cast<const GetFirewallRuleGroupPolicyRequest *>(Route53ResolverResponse::request());
 }
 
 /*!

@@ -87,8 +87,7 @@ DeleteTransitGatewayConnectPeerResponse::DeleteTransitGatewayConnectPeerResponse
  */
 const DeleteTransitGatewayConnectPeerRequest * DeleteTransitGatewayConnectPeerResponse::request() const
 {
-    Q_D(const DeleteTransitGatewayConnectPeerResponse);
-    return static_cast<const DeleteTransitGatewayConnectPeerRequest *>(d->request);
+    return static_cast<const DeleteTransitGatewayConnectPeerRequest *>(Ec2Response::request());
 }
 
 /*!

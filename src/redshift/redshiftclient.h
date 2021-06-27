@@ -359,6 +359,12 @@ public slots:
     RotateEncryptionKeyResponse * rotateEncryptionKey(const RotateEncryptionKeyRequest &request);
     UpdatePartnerStatusResponse * updatePartnerStatus(const UpdatePartnerStatusRequest &request);
 
+protected:
+    /// @cond internal
+    RedshiftClientPrivate * const d_ptr; ///< Internal d-pointer.
+    RedshiftClient(RedshiftClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(RedshiftClient)
     Q_DISABLE_COPY(RedshiftClient)

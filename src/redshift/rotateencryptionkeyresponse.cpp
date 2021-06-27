@@ -85,8 +85,7 @@ RotateEncryptionKeyResponse::RotateEncryptionKeyResponse(
  */
 const RotateEncryptionKeyRequest * RotateEncryptionKeyResponse::request() const
 {
-    Q_D(const RotateEncryptionKeyResponse);
-    return static_cast<const RotateEncryptionKeyRequest *>(d->request);
+    return static_cast<const RotateEncryptionKeyRequest *>(RedshiftResponse::request());
 }
 
 /*!

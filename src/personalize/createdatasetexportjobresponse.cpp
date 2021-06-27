@@ -56,8 +56,7 @@ CreateDatasetExportJobResponse::CreateDatasetExportJobResponse(
  */
 const CreateDatasetExportJobRequest * CreateDatasetExportJobResponse::request() const
 {
-    Q_D(const CreateDatasetExportJobResponse);
-    return static_cast<const CreateDatasetExportJobRequest *>(d->request);
+    return static_cast<const CreateDatasetExportJobRequest *>(PersonalizeResponse::request());
 }
 
 /*!

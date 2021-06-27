@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    CloudSearchDomainResponsePrivate * const d_ptr; ///< Internal d-pointer.
     CloudSearchDomainResponse(CloudSearchDomainResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -61,8 +61,7 @@ GetProvisionedProductOutputsResponse::GetProvisionedProductOutputsResponse(
  */
 const GetProvisionedProductOutputsRequest * GetProvisionedProductOutputsResponse::request() const
 {
-    Q_D(const GetProvisionedProductOutputsResponse);
-    return static_cast<const GetProvisionedProductOutputsRequest *>(d->request);
+    return static_cast<const GetProvisionedProductOutputsRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

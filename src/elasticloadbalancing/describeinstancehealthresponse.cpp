@@ -83,8 +83,7 @@ DescribeInstanceHealthResponse::DescribeInstanceHealthResponse(
  */
 const DescribeInstanceHealthRequest * DescribeInstanceHealthResponse::request() const
 {
-    Q_D(const DescribeInstanceHealthResponse);
-    return static_cast<const DescribeInstanceHealthRequest *>(d->request);
+    return static_cast<const DescribeInstanceHealthRequest *>(ElasticLoadBalancingResponse::request());
 }
 
 /*!

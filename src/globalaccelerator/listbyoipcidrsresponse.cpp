@@ -218,8 +218,7 @@ ListByoipCidrsResponse::ListByoipCidrsResponse(
  */
 const ListByoipCidrsRequest * ListByoipCidrsResponse::request() const
 {
-    Q_D(const ListByoipCidrsResponse);
-    return static_cast<const ListByoipCidrsRequest *>(d->request);
+    return static_cast<const ListByoipCidrsRequest *>(GlobalAcceleratorResponse::request());
 }
 
 /*!

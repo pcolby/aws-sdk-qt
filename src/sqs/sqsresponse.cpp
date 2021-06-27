@@ -37,7 +37,7 @@ namespace SQS {
  * Constructs a SqsResponse object with parent \a parent.
  */
 SqsResponse::SqsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new SqsResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new SqsResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ SqsResponse::SqsResponse(QObject * const parent)
  * implementation that inherits from SqsResponsePrivate.
  */
 SqsResponse::SqsResponse(SqsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void SqsResponse::parseFailure(QIODevice &response)
  * Constructs a SqsResponsePrivate object with public implementation \a q.
  */
 SqsResponsePrivate::SqsResponsePrivate(
-    SqsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    SqsResponse * const q) : q_ptr(q)
 {
 
 }

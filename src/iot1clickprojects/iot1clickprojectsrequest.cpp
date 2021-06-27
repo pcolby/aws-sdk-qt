@@ -58,7 +58,7 @@ namespace IoT1ClickProjects {
  * Constructs a IoT1ClickProjectsRequest object for IoT1ClickProjects \a action.
  */
 IoT1ClickProjectsRequest::IoT1ClickProjectsRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new IoT1ClickProjectsRequestPrivate(action, this))
+    : d_ptr(new IoT1ClickProjectsRequestPrivate(action, this))
 {
 
 }
@@ -67,7 +67,8 @@ IoT1ClickProjectsRequest::IoT1ClickProjectsRequest(const Action action)
  * Constructs a copy of \a other.
  */
 IoT1ClickProjectsRequest::IoT1ClickProjectsRequest(const IoT1ClickProjectsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new IoT1ClickProjectsRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new IoT1ClickProjectsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -90,7 +91,7 @@ IoT1ClickProjectsRequest& IoT1ClickProjectsRequest::operator=(const IoT1ClickPro
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from IoT1ClickProjectsRequestPrivate.
  */
-IoT1ClickProjectsRequest::IoT1ClickProjectsRequest(IoT1ClickProjectsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+IoT1ClickProjectsRequest::IoT1ClickProjectsRequest(IoT1ClickProjectsRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -259,7 +260,7 @@ QNetworkRequest IoT1ClickProjectsRequest::unsignedRequest(const QUrl &endpoint) 
  * with public implementation \a q.
  */
 IoT1ClickProjectsRequestPrivate::IoT1ClickProjectsRequestPrivate(const IoT1ClickProjectsRequest::Action action, IoT1ClickProjectsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -274,8 +275,8 @@ IoT1ClickProjectsRequestPrivate::IoT1ClickProjectsRequestPrivate(const IoT1Click
  */
 IoT1ClickProjectsRequestPrivate::IoT1ClickProjectsRequestPrivate(const IoT1ClickProjectsRequestPrivate &other,
                                      IoT1ClickProjectsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

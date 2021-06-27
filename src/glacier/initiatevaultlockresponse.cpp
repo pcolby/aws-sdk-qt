@@ -91,8 +91,7 @@ InitiateVaultLockResponse::InitiateVaultLockResponse(
  */
 const InitiateVaultLockRequest * InitiateVaultLockResponse::request() const
 {
-    Q_D(const InitiateVaultLockResponse);
-    return static_cast<const InitiateVaultLockRequest *>(d->request);
+    return static_cast<const InitiateVaultLockRequest *>(GlacierResponse::request());
 }
 
 /*!

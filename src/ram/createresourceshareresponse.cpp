@@ -64,8 +64,7 @@ CreateResourceShareResponse::CreateResourceShareResponse(
  */
 const CreateResourceShareRequest * CreateResourceShareResponse::request() const
 {
-    Q_D(const CreateResourceShareResponse);
-    return static_cast<const CreateResourceShareRequest *>(d->request);
+    return static_cast<const CreateResourceShareRequest *>(RamResponse::request());
 }
 
 /*!

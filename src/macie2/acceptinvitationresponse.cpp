@@ -60,8 +60,7 @@ AcceptInvitationResponse::AcceptInvitationResponse(
  */
 const AcceptInvitationRequest * AcceptInvitationResponse::request() const
 {
-    Q_D(const AcceptInvitationResponse);
-    return static_cast<const AcceptInvitationRequest *>(d->request);
+    return static_cast<const AcceptInvitationRequest *>(Macie2Response::request());
 }
 
 /*!

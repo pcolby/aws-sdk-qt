@@ -55,8 +55,7 @@ PutSessionResponse::PutSessionResponse(
  */
 const PutSessionRequest * PutSessionResponse::request() const
 {
-    Q_D(const PutSessionResponse);
-    return static_cast<const PutSessionRequest *>(d->request);
+    return static_cast<const PutSessionRequest *>(LexRuntimeV2Response::request());
 }
 
 /*!

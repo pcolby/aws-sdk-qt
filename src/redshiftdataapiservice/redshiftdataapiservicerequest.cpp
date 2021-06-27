@@ -51,7 +51,7 @@ namespace RedshiftDataAPIService {
  * Constructs a RedshiftDataAPIServiceRequest object for RedshiftDataAPIService \a action.
  */
 RedshiftDataAPIServiceRequest::RedshiftDataAPIServiceRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new RedshiftDataAPIServiceRequestPrivate(action, this))
+    : d_ptr(new RedshiftDataAPIServiceRequestPrivate(action, this))
 {
 
 }
@@ -60,7 +60,8 @@ RedshiftDataAPIServiceRequest::RedshiftDataAPIServiceRequest(const Action action
  * Constructs a copy of \a other.
  */
 RedshiftDataAPIServiceRequest::RedshiftDataAPIServiceRequest(const RedshiftDataAPIServiceRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new RedshiftDataAPIServiceRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new RedshiftDataAPIServiceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -83,7 +84,7 @@ RedshiftDataAPIServiceRequest& RedshiftDataAPIServiceRequest::operator=(const Re
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from RedshiftDataAPIServiceRequestPrivate.
  */
-RedshiftDataAPIServiceRequest::RedshiftDataAPIServiceRequest(RedshiftDataAPIServiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+RedshiftDataAPIServiceRequest::RedshiftDataAPIServiceRequest(RedshiftDataAPIServiceRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -252,7 +253,7 @@ QNetworkRequest RedshiftDataAPIServiceRequest::unsignedRequest(const QUrl &endpo
  * with public implementation \a q.
  */
 RedshiftDataAPIServiceRequestPrivate::RedshiftDataAPIServiceRequestPrivate(const RedshiftDataAPIServiceRequest::Action action, RedshiftDataAPIServiceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -267,8 +268,8 @@ RedshiftDataAPIServiceRequestPrivate::RedshiftDataAPIServiceRequestPrivate(const
  */
 RedshiftDataAPIServiceRequestPrivate::RedshiftDataAPIServiceRequestPrivate(const RedshiftDataAPIServiceRequestPrivate &other,
                                      RedshiftDataAPIServiceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

@@ -68,8 +68,7 @@ ExecutePolicyResponse::ExecutePolicyResponse(
  */
 const ExecutePolicyRequest * ExecutePolicyResponse::request() const
 {
-    Q_D(const ExecutePolicyResponse);
-    return static_cast<const ExecutePolicyRequest *>(d->request);
+    return static_cast<const ExecutePolicyRequest *>(AutoScalingResponse::request());
 }
 
 /*!

@@ -59,8 +59,7 @@ DeleteSubnetGroupResponse::DeleteSubnetGroupResponse(
  */
 const DeleteSubnetGroupRequest * DeleteSubnetGroupResponse::request() const
 {
-    Q_D(const DeleteSubnetGroupResponse);
-    return static_cast<const DeleteSubnetGroupRequest *>(d->request);
+    return static_cast<const DeleteSubnetGroupRequest *>(DaxResponse::request());
 }
 
 /*!

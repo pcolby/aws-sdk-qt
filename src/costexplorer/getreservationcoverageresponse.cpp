@@ -75,8 +75,7 @@ GetReservationCoverageResponse::GetReservationCoverageResponse(
  */
 const GetReservationCoverageRequest * GetReservationCoverageResponse::request() const
 {
-    Q_D(const GetReservationCoverageResponse);
-    return static_cast<const GetReservationCoverageRequest *>(d->request);
+    return static_cast<const GetReservationCoverageRequest *>(CostExplorerResponse::request());
 }
 
 /*!

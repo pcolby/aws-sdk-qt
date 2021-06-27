@@ -56,8 +56,7 @@ DescribeTrackerResponse::DescribeTrackerResponse(
  */
 const DescribeTrackerRequest * DescribeTrackerResponse::request() const
 {
-    Q_D(const DescribeTrackerResponse);
-    return static_cast<const DescribeTrackerRequest *>(d->request);
+    return static_cast<const DescribeTrackerRequest *>(LocationServiceResponse::request());
 }
 
 /*!

@@ -98,8 +98,7 @@ UpdateServiceSettingResponse::UpdateServiceSettingResponse(
  */
 const UpdateServiceSettingRequest * UpdateServiceSettingResponse::request() const
 {
-    Q_D(const UpdateServiceSettingResponse);
-    return static_cast<const UpdateServiceSettingRequest *>(d->request);
+    return static_cast<const UpdateServiceSettingRequest *>(SsmResponse::request());
 }
 
 /*!

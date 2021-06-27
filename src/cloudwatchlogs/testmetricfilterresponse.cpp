@@ -84,8 +84,7 @@ TestMetricFilterResponse::TestMetricFilterResponse(
  */
 const TestMetricFilterRequest * TestMetricFilterResponse::request() const
 {
-    Q_D(const TestMetricFilterResponse);
-    return static_cast<const TestMetricFilterRequest *>(d->request);
+    return static_cast<const TestMetricFilterRequest *>(CloudWatchLogsResponse::request());
 }
 
 /*!

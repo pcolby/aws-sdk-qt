@@ -66,8 +66,7 @@ DescribeChannelResponse::DescribeChannelResponse(
  */
 const DescribeChannelRequest * DescribeChannelResponse::request() const
 {
-    Q_D(const DescribeChannelResponse);
-    return static_cast<const DescribeChannelRequest *>(d->request);
+    return static_cast<const DescribeChannelRequest *>(MediaTailorResponse::request());
 }
 
 /*!

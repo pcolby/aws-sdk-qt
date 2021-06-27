@@ -96,16 +96,16 @@ ElasticTranscoderClient::ElasticTranscoderClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ElasticTranscoderClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2012-09-25"),
+    QStringLiteral("elastictranscoder"),
+    QStringLiteral("Amazon Elastic Transcoder"),
+    QStringLiteral("elastictranscoder"),
+    parent), d_ptr(new ElasticTranscoderClientPrivate(this))
 {
-    Q_D(ElasticTranscoderClient);
-    d->apiVersion = QStringLiteral("2012-09-25");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("elastictranscoder");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Elastic Transcoder");
-    d->serviceName = QStringLiteral("elastictranscoder");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -124,16 +124,16 @@ ElasticTranscoderClient::ElasticTranscoderClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ElasticTranscoderClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2012-09-25"),
+    QStringLiteral("elastictranscoder"),
+    QStringLiteral("Amazon Elastic Transcoder"),
+    QStringLiteral("elastictranscoder"),
+    parent), d_ptr(new ElasticTranscoderClientPrivate(this))
 {
-    Q_D(ElasticTranscoderClient);
-    d->apiVersion = QStringLiteral("2012-09-25");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("elastictranscoder");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Elastic Transcoder");
-    d->serviceName = QStringLiteral("elastictranscoder");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -435,10 +435,9 @@ UpdatePipelineStatusResponse * ElasticTranscoderClient::updatePipelineStatus(con
 /*!
  * Constructs a ElasticTranscoderClientPrivate object with public implementation \a q.
  */
-ElasticTranscoderClientPrivate::ElasticTranscoderClientPrivate(ElasticTranscoderClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+ElasticTranscoderClientPrivate::ElasticTranscoderClientPrivate(ElasticTranscoderClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace ElasticTranscoder

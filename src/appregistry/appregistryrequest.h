@@ -76,6 +76,7 @@ public:
 
 protected:
     /// @cond internal
+    AppRegistryRequestPrivate * const d_ptr; ///< Internal d-pointer.
     AppRegistryRequest(AppRegistryRequestPrivate * const d);
     /// @endcond
 

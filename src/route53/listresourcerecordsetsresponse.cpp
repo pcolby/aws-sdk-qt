@@ -56,8 +56,7 @@ ListResourceRecordSetsResponse::ListResourceRecordSetsResponse(
  */
 const ListResourceRecordSetsRequest * ListResourceRecordSetsResponse::request() const
 {
-    Q_D(const ListResourceRecordSetsResponse);
-    return static_cast<const ListResourceRecordSetsRequest *>(d->request);
+    return static_cast<const ListResourceRecordSetsRequest *>(Route53Response::request());
 }
 
 /*!

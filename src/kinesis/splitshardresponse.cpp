@@ -58,8 +58,7 @@ SplitShardResponse::SplitShardResponse(
  */
 const SplitShardRequest * SplitShardResponse::request() const
 {
-    Q_D(const SplitShardResponse);
-    return static_cast<const SplitShardRequest *>(d->request);
+    return static_cast<const SplitShardRequest *>(KinesisResponse::request());
 }
 
 /*!

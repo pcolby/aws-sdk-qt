@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    LookoutforVisionResponsePrivate * const d_ptr; ///< Internal d-pointer.
     LookoutforVisionResponse(LookoutforVisionResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

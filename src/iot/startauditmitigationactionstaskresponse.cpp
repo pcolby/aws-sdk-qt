@@ -82,8 +82,7 @@ StartAuditMitigationActionsTaskResponse::StartAuditMitigationActionsTaskResponse
  */
 const StartAuditMitigationActionsTaskRequest * StartAuditMitigationActionsTaskResponse::request() const
 {
-    Q_D(const StartAuditMitigationActionsTaskResponse);
-    return static_cast<const StartAuditMitigationActionsTaskRequest *>(d->request);
+    return static_cast<const StartAuditMitigationActionsTaskRequest *>(IoTResponse::request());
 }
 
 /*!

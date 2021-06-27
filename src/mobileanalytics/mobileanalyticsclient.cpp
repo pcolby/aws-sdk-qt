@@ -62,16 +62,16 @@ MobileAnalyticsClient::MobileAnalyticsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new MobileAnalyticsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2014-06-05"),
+    QStringLiteral("mobileanalytics"),
+    QStringLiteral("Amazon Mobile Analytics"),
+    QStringLiteral("mobileanalytics"),
+    parent), d_ptr(new MobileAnalyticsClientPrivate(this))
 {
-    Q_D(MobileAnalyticsClient);
-    d->apiVersion = QStringLiteral("2014-06-05");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("mobileanalytics");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Mobile Analytics");
-    d->serviceName = QStringLiteral("mobileanalytics");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -90,16 +90,16 @@ MobileAnalyticsClient::MobileAnalyticsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new MobileAnalyticsClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2014-06-05"),
+    QStringLiteral("mobileanalytics"),
+    QStringLiteral("Amazon Mobile Analytics"),
+    QStringLiteral("mobileanalytics"),
+    parent), d_ptr(new MobileAnalyticsClientPrivate(this))
 {
-    Q_D(MobileAnalyticsClient);
-    d->apiVersion = QStringLiteral("2014-06-05");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("mobileanalytics");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Mobile Analytics");
-    d->serviceName = QStringLiteral("mobileanalytics");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -128,10 +128,9 @@ PutEventsResponse * MobileAnalyticsClient::putEvents(const PutEventsRequest &req
 /*!
  * Constructs a MobileAnalyticsClientPrivate object with public implementation \a q.
  */
-MobileAnalyticsClientPrivate::MobileAnalyticsClientPrivate(MobileAnalyticsClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+MobileAnalyticsClientPrivate::MobileAnalyticsClientPrivate(MobileAnalyticsClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace MobileAnalytics

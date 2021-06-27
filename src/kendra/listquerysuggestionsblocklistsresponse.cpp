@@ -56,8 +56,7 @@ ListQuerySuggestionsBlockListsResponse::ListQuerySuggestionsBlockListsResponse(
  */
 const ListQuerySuggestionsBlockListsRequest * ListQuerySuggestionsBlockListsResponse::request() const
 {
-    Q_D(const ListQuerySuggestionsBlockListsResponse);
-    return static_cast<const ListQuerySuggestionsBlockListsRequest *>(d->request);
+    return static_cast<const ListQuerySuggestionsBlockListsRequest *>(kendraResponse::request());
 }
 
 /*!

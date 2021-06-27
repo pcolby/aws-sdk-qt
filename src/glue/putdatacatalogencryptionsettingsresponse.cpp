@@ -58,8 +58,7 @@ PutDataCatalogEncryptionSettingsResponse::PutDataCatalogEncryptionSettingsRespon
  */
 const PutDataCatalogEncryptionSettingsRequest * PutDataCatalogEncryptionSettingsResponse::request() const
 {
-    Q_D(const PutDataCatalogEncryptionSettingsResponse);
-    return static_cast<const PutDataCatalogEncryptionSettingsRequest *>(d->request);
+    return static_cast<const PutDataCatalogEncryptionSettingsRequest *>(GlueResponse::request());
 }
 
 /*!

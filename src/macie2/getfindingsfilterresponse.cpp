@@ -60,8 +60,7 @@ GetFindingsFilterResponse::GetFindingsFilterResponse(
  */
 const GetFindingsFilterRequest * GetFindingsFilterResponse::request() const
 {
-    Q_D(const GetFindingsFilterResponse);
-    return static_cast<const GetFindingsFilterRequest *>(d->request);
+    return static_cast<const GetFindingsFilterRequest *>(Macie2Response::request());
 }
 
 /*!

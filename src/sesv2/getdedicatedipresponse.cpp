@@ -88,8 +88,7 @@ GetDedicatedIpResponse::GetDedicatedIpResponse(
  */
 const GetDedicatedIpRequest * GetDedicatedIpResponse::request() const
 {
-    Q_D(const GetDedicatedIpResponse);
-    return static_cast<const GetDedicatedIpRequest *>(d->request);
+    return static_cast<const GetDedicatedIpRequest *>(Sesv2Response::request());
 }
 
 /*!

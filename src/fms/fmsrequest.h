@@ -82,6 +82,7 @@ public:
 
 protected:
     /// @cond internal
+    FmsRequestPrivate * const d_ptr; ///< Internal d-pointer.
     FmsRequest(FmsRequestPrivate * const d);
     /// @endcond
 

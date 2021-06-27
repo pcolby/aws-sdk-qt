@@ -102,7 +102,7 @@ namespace Route53Resolver {
  * Constructs a Route53ResolverRequest object for Route53Resolver \a action.
  */
 Route53ResolverRequest::Route53ResolverRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new Route53ResolverRequestPrivate(action, this))
+    : d_ptr(new Route53ResolverRequestPrivate(action, this))
 {
 
 }
@@ -111,7 +111,8 @@ Route53ResolverRequest::Route53ResolverRequest(const Action action)
  * Constructs a copy of \a other.
  */
 Route53ResolverRequest::Route53ResolverRequest(const Route53ResolverRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new Route53ResolverRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new Route53ResolverRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -134,7 +135,7 @@ Route53ResolverRequest& Route53ResolverRequest::operator=(const Route53ResolverR
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from Route53ResolverRequestPrivate.
  */
-Route53ResolverRequest::Route53ResolverRequest(Route53ResolverRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+Route53ResolverRequest::Route53ResolverRequest(Route53ResolverRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -303,7 +304,7 @@ QNetworkRequest Route53ResolverRequest::unsignedRequest(const QUrl &endpoint) co
  * with public implementation \a q.
  */
 Route53ResolverRequestPrivate::Route53ResolverRequestPrivate(const Route53ResolverRequest::Action action, Route53ResolverRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -318,8 +319,8 @@ Route53ResolverRequestPrivate::Route53ResolverRequestPrivate(const Route53Resolv
  */
 Route53ResolverRequestPrivate::Route53ResolverRequestPrivate(const Route53ResolverRequestPrivate &other,
                                      Route53ResolverRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

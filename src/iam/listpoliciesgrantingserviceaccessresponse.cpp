@@ -62,8 +62,7 @@ ListPoliciesGrantingServiceAccessResponse::ListPoliciesGrantingServiceAccessResp
  */
 const ListPoliciesGrantingServiceAccessRequest * ListPoliciesGrantingServiceAccessResponse::request() const
 {
-    Q_D(const ListPoliciesGrantingServiceAccessResponse);
-    return static_cast<const ListPoliciesGrantingServiceAccessRequest *>(d->request);
+    return static_cast<const ListPoliciesGrantingServiceAccessRequest *>(IamResponse::request());
 }
 
 /*!

@@ -75,6 +75,7 @@ public:
 
 protected:
     /// @cond internal
+    BatchRequestPrivate * const d_ptr; ///< Internal d-pointer.
     BatchRequest(BatchRequestPrivate * const d);
     /// @endcond
 

@@ -66,8 +66,7 @@ GlobalSignOutResponse::GlobalSignOutResponse(
  */
 const GlobalSignOutRequest * GlobalSignOutResponse::request() const
 {
-    Q_D(const GlobalSignOutResponse);
-    return static_cast<const GlobalSignOutRequest *>(d->request);
+    return static_cast<const GlobalSignOutRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

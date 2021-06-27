@@ -20,15 +20,12 @@
 #ifndef QTAWS_CODEARTIFACTREQUEST_P_H
 #define QTAWS_CODEARTIFACTREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "codeartifactrequest.h"
-
 namespace QtAws {
 namespace CodeArtifact {
 
 class CodeArtifactRequest;
 
-class CodeArtifactRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class CodeArtifactRequestPrivate {
 
 public:
     CodeArtifactRequest::Action action; ///< CodeArtifact action to be performed.
@@ -39,6 +36,9 @@ public:
     CodeArtifactRequestPrivate(const CodeArtifactRequestPrivate &other, CodeArtifactRequest * const q);
 
     static QString toString(const CodeArtifactRequest::Action &action);
+
+protected:
+    CodeArtifactRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CodeArtifactRequest)

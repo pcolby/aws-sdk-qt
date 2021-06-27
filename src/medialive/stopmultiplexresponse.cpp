@@ -55,8 +55,7 @@ StopMultiplexResponse::StopMultiplexResponse(
  */
 const StopMultiplexRequest * StopMultiplexResponse::request() const
 {
-    Q_D(const StopMultiplexResponse);
-    return static_cast<const StopMultiplexRequest *>(d->request);
+    return static_cast<const StopMultiplexRequest *>(MediaLiveResponse::request());
 }
 
 /*!

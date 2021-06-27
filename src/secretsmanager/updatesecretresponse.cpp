@@ -131,8 +131,7 @@ UpdateSecretResponse::UpdateSecretResponse(
  */
 const UpdateSecretRequest * UpdateSecretResponse::request() const
 {
-    Q_D(const UpdateSecretResponse);
-    return static_cast<const UpdateSecretRequest *>(d->request);
+    return static_cast<const UpdateSecretRequest *>(SecretsManagerResponse::request());
 }
 
 /*!

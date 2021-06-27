@@ -20,19 +20,20 @@
 #ifndef QTAWS_MACHINELEARNINGCLIENT_P_H
 #define QTAWS_MACHINELEARNINGCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace MachineLearning {
 
 class MachineLearningClient;
 
-class MachineLearningClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class MachineLearningClientPrivate {
 
 public:
     MachineLearningClientPrivate(MachineLearningClient * const q);
+
+protected:
+    MachineLearningClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MachineLearningClient)

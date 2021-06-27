@@ -56,8 +56,7 @@ UpdateEmailChannelResponse::UpdateEmailChannelResponse(
  */
 const UpdateEmailChannelRequest * UpdateEmailChannelResponse::request() const
 {
-    Q_D(const UpdateEmailChannelResponse);
-    return static_cast<const UpdateEmailChannelRequest *>(d->request);
+    return static_cast<const UpdateEmailChannelRequest *>(PinpointResponse::request());
 }
 
 /*!

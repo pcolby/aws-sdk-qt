@@ -68,8 +68,7 @@ AttachInstancesResponse::AttachInstancesResponse(
  */
 const AttachInstancesRequest * AttachInstancesResponse::request() const
 {
-    Q_D(const AttachInstancesResponse);
-    return static_cast<const AttachInstancesRequest *>(d->request);
+    return static_cast<const AttachInstancesRequest *>(AutoScalingResponse::request());
 }
 
 /*!

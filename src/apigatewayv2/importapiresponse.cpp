@@ -56,8 +56,7 @@ ImportApiResponse::ImportApiResponse(
  */
 const ImportApiRequest * ImportApiResponse::request() const
 {
-    Q_D(const ImportApiResponse);
-    return static_cast<const ImportApiRequest *>(d->request);
+    return static_cast<const ImportApiRequest *>(ApiGatewayV2Response::request());
 }
 
 /*!

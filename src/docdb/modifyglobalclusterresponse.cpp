@@ -56,8 +56,7 @@ ModifyGlobalClusterResponse::ModifyGlobalClusterResponse(
  */
 const ModifyGlobalClusterRequest * ModifyGlobalClusterResponse::request() const
 {
-    Q_D(const ModifyGlobalClusterResponse);
-    return static_cast<const ModifyGlobalClusterRequest *>(d->request);
+    return static_cast<const ModifyGlobalClusterRequest *>(DocDBResponse::request());
 }
 
 /*!

@@ -133,8 +133,7 @@ DescribeTrustedAdvisorChecksResponse::DescribeTrustedAdvisorChecksResponse(
  */
 const DescribeTrustedAdvisorChecksRequest * DescribeTrustedAdvisorChecksResponse::request() const
 {
-    Q_D(const DescribeTrustedAdvisorChecksResponse);
-    return static_cast<const DescribeTrustedAdvisorChecksRequest *>(d->request);
+    return static_cast<const DescribeTrustedAdvisorChecksRequest *>(SupportResponse::request());
 }
 
 /*!

@@ -61,8 +61,7 @@ CreateProvisioningArtifactResponse::CreateProvisioningArtifactResponse(
  */
 const CreateProvisioningArtifactRequest * CreateProvisioningArtifactResponse::request() const
 {
-    Q_D(const CreateProvisioningArtifactResponse);
-    return static_cast<const CreateProvisioningArtifactRequest *>(d->request);
+    return static_cast<const CreateProvisioningArtifactRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

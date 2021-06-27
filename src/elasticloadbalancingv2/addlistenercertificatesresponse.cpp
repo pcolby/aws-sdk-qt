@@ -90,8 +90,7 @@ AddListenerCertificatesResponse::AddListenerCertificatesResponse(
  */
 const AddListenerCertificatesRequest * AddListenerCertificatesResponse::request() const
 {
-    Q_D(const AddListenerCertificatesResponse);
-    return static_cast<const AddListenerCertificatesRequest *>(d->request);
+    return static_cast<const AddListenerCertificatesRequest *>(ElasticLoadBalancingv2Response::request());
 }
 
 /*!

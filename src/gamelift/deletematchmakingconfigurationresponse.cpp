@@ -115,8 +115,7 @@ DeleteMatchmakingConfigurationResponse::DeleteMatchmakingConfigurationResponse(
  */
 const DeleteMatchmakingConfigurationRequest * DeleteMatchmakingConfigurationResponse::request() const
 {
-    Q_D(const DeleteMatchmakingConfigurationResponse);
-    return static_cast<const DeleteMatchmakingConfigurationRequest *>(d->request);
+    return static_cast<const DeleteMatchmakingConfigurationRequest *>(GameLiftResponse::request());
 }
 
 /*!

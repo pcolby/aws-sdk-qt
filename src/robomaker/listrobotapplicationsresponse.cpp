@@ -56,8 +56,7 @@ ListRobotApplicationsResponse::ListRobotApplicationsResponse(
  */
 const ListRobotApplicationsRequest * ListRobotApplicationsResponse::request() const
 {
-    Q_D(const ListRobotApplicationsResponse);
-    return static_cast<const ListRobotApplicationsRequest *>(d->request);
+    return static_cast<const ListRobotApplicationsRequest *>(RoboMakerResponse::request());
 }
 
 /*!

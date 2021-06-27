@@ -58,8 +58,7 @@ DeregisterWorkspaceDirectoryResponse::DeregisterWorkspaceDirectoryResponse(
  */
 const DeregisterWorkspaceDirectoryRequest * DeregisterWorkspaceDirectoryResponse::request() const
 {
-    Q_D(const DeregisterWorkspaceDirectoryResponse);
-    return static_cast<const DeregisterWorkspaceDirectoryRequest *>(d->request);
+    return static_cast<const DeregisterWorkspaceDirectoryRequest *>(WorkSpacesResponse::request());
 }
 
 /*!

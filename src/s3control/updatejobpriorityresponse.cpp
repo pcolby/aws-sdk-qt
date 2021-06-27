@@ -56,8 +56,7 @@ UpdateJobPriorityResponse::UpdateJobPriorityResponse(
  */
 const UpdateJobPriorityRequest * UpdateJobPriorityResponse::request() const
 {
-    Q_D(const UpdateJobPriorityResponse);
-    return static_cast<const UpdateJobPriorityRequest *>(d->request);
+    return static_cast<const UpdateJobPriorityRequest *>(S3ControlResponse::request());
 }
 
 /*!

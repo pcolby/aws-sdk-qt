@@ -88,6 +88,12 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateExperimentTemplateResponse * updateExperimentTemplate(const UpdateExperimentTemplateRequest &request);
 
+protected:
+    /// @cond internal
+    FisClientPrivate * const d_ptr; ///< Internal d-pointer.
+    FisClient(FisClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(FisClient)
     Q_DISABLE_COPY(FisClient)

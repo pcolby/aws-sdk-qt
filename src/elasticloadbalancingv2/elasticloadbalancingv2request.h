@@ -90,6 +90,7 @@ public:
 
 protected:
     /// @cond internal
+    ElasticLoadBalancingv2RequestPrivate * const d_ptr; ///< Internal d-pointer.
     ElasticLoadBalancingv2Request(ElasticLoadBalancingv2RequestPrivate * const d);
     /// @endcond
 

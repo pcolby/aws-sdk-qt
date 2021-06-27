@@ -56,8 +56,7 @@ GetMapStyleDescriptorResponse::GetMapStyleDescriptorResponse(
  */
 const GetMapStyleDescriptorRequest * GetMapStyleDescriptorResponse::request() const
 {
-    Q_D(const GetMapStyleDescriptorResponse);
-    return static_cast<const GetMapStyleDescriptorRequest *>(d->request);
+    return static_cast<const GetMapStyleDescriptorRequest *>(LocationServiceResponse::request());
 }
 
 /*!

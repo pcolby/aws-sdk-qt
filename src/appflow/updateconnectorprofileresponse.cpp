@@ -100,8 +100,7 @@ UpdateConnectorProfileResponse::UpdateConnectorProfileResponse(
  */
 const UpdateConnectorProfileRequest * UpdateConnectorProfileResponse::request() const
 {
-    Q_D(const UpdateConnectorProfileResponse);
-    return static_cast<const UpdateConnectorProfileRequest *>(d->request);
+    return static_cast<const UpdateConnectorProfileRequest *>(AppflowResponse::request());
 }
 
 /*!

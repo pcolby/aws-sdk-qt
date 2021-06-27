@@ -20,15 +20,12 @@
 #ifndef QTAWS_XRAYREQUEST_P_H
 #define QTAWS_XRAYREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "xrayrequest.h"
-
 namespace QtAws {
 namespace XRay {
 
 class XRayRequest;
 
-class XRayRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class XRayRequestPrivate {
 
 public:
     XRayRequest::Action action; ///< XRay action to be performed.
@@ -39,6 +36,9 @@ public:
     XRayRequestPrivate(const XRayRequestPrivate &other, XRayRequest * const q);
 
     static QString toString(const XRayRequest::Action &action);
+
+protected:
+    XRayRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(XRayRequest)

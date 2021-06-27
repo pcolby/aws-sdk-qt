@@ -79,8 +79,7 @@ UpdateQuickConnectConfigResponse::UpdateQuickConnectConfigResponse(
  */
 const UpdateQuickConnectConfigRequest * UpdateQuickConnectConfigResponse::request() const
 {
-    Q_D(const UpdateQuickConnectConfigResponse);
-    return static_cast<const UpdateQuickConnectConfigRequest *>(d->request);
+    return static_cast<const UpdateQuickConnectConfigRequest *>(ConnectResponse::request());
 }
 
 /*!

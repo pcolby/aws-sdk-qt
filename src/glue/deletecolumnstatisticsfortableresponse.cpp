@@ -58,8 +58,7 @@ DeleteColumnStatisticsForTableResponse::DeleteColumnStatisticsForTableResponse(
  */
 const DeleteColumnStatisticsForTableRequest * DeleteColumnStatisticsForTableResponse::request() const
 {
-    Q_D(const DeleteColumnStatisticsForTableResponse);
-    return static_cast<const DeleteColumnStatisticsForTableRequest *>(d->request);
+    return static_cast<const DeleteColumnStatisticsForTableRequest *>(GlueResponse::request());
 }
 
 /*!

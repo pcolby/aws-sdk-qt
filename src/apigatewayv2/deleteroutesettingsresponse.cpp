@@ -56,8 +56,7 @@ DeleteRouteSettingsResponse::DeleteRouteSettingsResponse(
  */
 const DeleteRouteSettingsRequest * DeleteRouteSettingsResponse::request() const
 {
-    Q_D(const DeleteRouteSettingsResponse);
-    return static_cast<const DeleteRouteSettingsRequest *>(d->request);
+    return static_cast<const DeleteRouteSettingsRequest *>(ApiGatewayV2Response::request());
 }
 
 /*!

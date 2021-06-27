@@ -63,8 +63,7 @@ CreateIndexResponse::CreateIndexResponse(
  */
 const CreateIndexRequest * CreateIndexResponse::request() const
 {
-    Q_D(const CreateIndexResponse);
-    return static_cast<const CreateIndexRequest *>(d->request);
+    return static_cast<const CreateIndexRequest *>(CloudDirectoryResponse::request());
 }
 
 /*!

@@ -126,8 +126,7 @@ SendMessageBatchResponse::SendMessageBatchResponse(
  */
 const SendMessageBatchRequest * SendMessageBatchResponse::request() const
 {
-    Q_D(const SendMessageBatchResponse);
-    return static_cast<const SendMessageBatchRequest *>(d->request);
+    return static_cast<const SendMessageBatchRequest *>(SqsResponse::request());
 }
 
 /*!

@@ -76,8 +76,7 @@ ListRegexPatternSetsResponse::ListRegexPatternSetsResponse(
  */
 const ListRegexPatternSetsRequest * ListRegexPatternSetsResponse::request() const
 {
-    Q_D(const ListRegexPatternSetsResponse);
-    return static_cast<const ListRegexPatternSetsRequest *>(d->request);
+    return static_cast<const ListRegexPatternSetsRequest *>(WafResponse::request());
 }
 
 /*!

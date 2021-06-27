@@ -61,8 +61,7 @@ DescribeLocationsResponse::DescribeLocationsResponse(
  */
 const DescribeLocationsRequest * DescribeLocationsResponse::request() const
 {
-    Q_D(const DescribeLocationsResponse);
-    return static_cast<const DescribeLocationsRequest *>(d->request);
+    return static_cast<const DescribeLocationsRequest *>(DirectConnectResponse::request());
 }
 
 /*!

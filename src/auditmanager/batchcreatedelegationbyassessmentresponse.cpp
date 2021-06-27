@@ -98,8 +98,7 @@ BatchCreateDelegationByAssessmentResponse::BatchCreateDelegationByAssessmentResp
  */
 const BatchCreateDelegationByAssessmentRequest * BatchCreateDelegationByAssessmentResponse::request() const
 {
-    Q_D(const BatchCreateDelegationByAssessmentResponse);
-    return static_cast<const BatchCreateDelegationByAssessmentRequest *>(d->request);
+    return static_cast<const BatchCreateDelegationByAssessmentRequest *>(AuditManagerResponse::request());
 }
 
 /*!

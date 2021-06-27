@@ -100,8 +100,7 @@ DescribeFlowExecutionRecordsResponse::DescribeFlowExecutionRecordsResponse(
  */
 const DescribeFlowExecutionRecordsRequest * DescribeFlowExecutionRecordsResponse::request() const
 {
-    Q_D(const DescribeFlowExecutionRecordsResponse);
-    return static_cast<const DescribeFlowExecutionRecordsRequest *>(d->request);
+    return static_cast<const DescribeFlowExecutionRecordsRequest *>(AppflowResponse::request());
 }
 
 /*!

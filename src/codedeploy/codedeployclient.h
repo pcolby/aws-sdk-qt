@@ -187,6 +187,12 @@ public slots:
     UpdateApplicationResponse * updateApplication(const UpdateApplicationRequest &request);
     UpdateDeploymentGroupResponse * updateDeploymentGroup(const UpdateDeploymentGroupRequest &request);
 
+protected:
+    /// @cond internal
+    CodeDeployClientPrivate * const d_ptr; ///< Internal d-pointer.
+    CodeDeployClient(CodeDeployClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(CodeDeployClient)
     Q_DISABLE_COPY(CodeDeployClient)

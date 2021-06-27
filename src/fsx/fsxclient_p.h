@@ -20,19 +20,20 @@
 #ifndef QTAWS_FSXCLIENT_P_H
 #define QTAWS_FSXCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace FSx {
 
 class FSxClient;
 
-class FSxClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class FSxClientPrivate {
 
 public:
     FSxClientPrivate(FSxClient * const q);
+
+protected:
+    FSxClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(FSxClient)

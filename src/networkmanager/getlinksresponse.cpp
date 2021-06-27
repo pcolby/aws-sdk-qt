@@ -62,8 +62,7 @@ GetLinksResponse::GetLinksResponse(
  */
 const GetLinksRequest * GetLinksResponse::request() const
 {
-    Q_D(const GetLinksResponse);
-    return static_cast<const GetLinksRequest *>(d->request);
+    return static_cast<const GetLinksRequest *>(NetworkManagerResponse::request());
 }
 
 /*!

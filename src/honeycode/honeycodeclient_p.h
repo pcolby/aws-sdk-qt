@@ -20,19 +20,20 @@
 #ifndef QTAWS_HONEYCODECLIENT_P_H
 #define QTAWS_HONEYCODECLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace Honeycode {
 
 class HoneycodeClient;
 
-class HoneycodeClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class HoneycodeClientPrivate {
 
 public:
     HoneycodeClientPrivate(HoneycodeClient * const q);
+
+protected:
+    HoneycodeClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(HoneycodeClient)

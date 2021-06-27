@@ -59,8 +59,7 @@ DisassociateRecoveryPointResponse::DisassociateRecoveryPointResponse(
  */
 const DisassociateRecoveryPointRequest * DisassociateRecoveryPointResponse::request() const
 {
-    Q_D(const DisassociateRecoveryPointResponse);
-    return static_cast<const DisassociateRecoveryPointRequest *>(d->request);
+    return static_cast<const DisassociateRecoveryPointRequest *>(BackupResponse::request());
 }
 
 /*!

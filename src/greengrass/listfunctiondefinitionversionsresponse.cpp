@@ -58,8 +58,7 @@ ListFunctionDefinitionVersionsResponse::ListFunctionDefinitionVersionsResponse(
  */
 const ListFunctionDefinitionVersionsRequest * ListFunctionDefinitionVersionsResponse::request() const
 {
-    Q_D(const ListFunctionDefinitionVersionsResponse);
-    return static_cast<const ListFunctionDefinitionVersionsRequest *>(d->request);
+    return static_cast<const ListFunctionDefinitionVersionsRequest *>(GreengrassResponse::request());
 }
 
 /*!

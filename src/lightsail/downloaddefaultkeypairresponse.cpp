@@ -74,8 +74,7 @@ DownloadDefaultKeyPairResponse::DownloadDefaultKeyPairResponse(
  */
 const DownloadDefaultKeyPairRequest * DownloadDefaultKeyPairResponse::request() const
 {
-    Q_D(const DownloadDefaultKeyPairResponse);
-    return static_cast<const DownloadDefaultKeyPairRequest *>(d->request);
+    return static_cast<const DownloadDefaultKeyPairRequest *>(LightsailResponse::request());
 }
 
 /*!

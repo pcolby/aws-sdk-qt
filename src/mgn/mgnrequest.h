@@ -81,6 +81,7 @@ public:
 
 protected:
     /// @cond internal
+    mgnRequestPrivate * const d_ptr; ///< Internal d-pointer.
     mgnRequest(mgnRequestPrivate * const d);
     /// @endcond
 

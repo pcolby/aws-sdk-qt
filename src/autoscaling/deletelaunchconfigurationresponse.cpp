@@ -68,8 +68,7 @@ DeleteLaunchConfigurationResponse::DeleteLaunchConfigurationResponse(
  */
 const DeleteLaunchConfigurationRequest * DeleteLaunchConfigurationResponse::request() const
 {
-    Q_D(const DeleteLaunchConfigurationResponse);
-    return static_cast<const DeleteLaunchConfigurationRequest *>(d->request);
+    return static_cast<const DeleteLaunchConfigurationRequest *>(AutoScalingResponse::request());
 }
 
 /*!

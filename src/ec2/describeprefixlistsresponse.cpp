@@ -87,8 +87,7 @@ DescribePrefixListsResponse::DescribePrefixListsResponse(
  */
 const DescribePrefixListsRequest * DescribePrefixListsResponse::request() const
 {
-    Q_D(const DescribePrefixListsResponse);
-    return static_cast<const DescribePrefixListsRequest *>(d->request);
+    return static_cast<const DescribePrefixListsRequest *>(Ec2Response::request());
 }
 
 /*!

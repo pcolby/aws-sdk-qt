@@ -88,8 +88,7 @@ GetEmailIdentityPoliciesResponse::GetEmailIdentityPoliciesResponse(
  */
 const GetEmailIdentityPoliciesRequest * GetEmailIdentityPoliciesResponse::request() const
 {
-    Q_D(const GetEmailIdentityPoliciesResponse);
-    return static_cast<const GetEmailIdentityPoliciesRequest *>(d->request);
+    return static_cast<const GetEmailIdentityPoliciesRequest *>(Sesv2Response::request());
 }
 
 /*!

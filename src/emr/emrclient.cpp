@@ -156,16 +156,16 @@ EmrClient::EmrClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new EmrClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2009-03-31"),
+    QStringLiteral("elasticmapreduce"),
+    QStringLiteral("Amazon Elastic MapReduce"),
+    QStringLiteral("elasticmapreduce"),
+    parent), d_ptr(new EmrClientPrivate(this))
 {
-    Q_D(EmrClient);
-    d->apiVersion = QStringLiteral("2009-03-31");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("elasticmapreduce");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Elastic MapReduce");
-    d->serviceName = QStringLiteral("elasticmapreduce");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -184,16 +184,16 @@ EmrClient::EmrClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new EmrClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2009-03-31"),
+    QStringLiteral("elasticmapreduce"),
+    QStringLiteral("Amazon Elastic MapReduce"),
+    QStringLiteral("elasticmapreduce"),
+    parent), d_ptr(new EmrClientPrivate(this))
 {
-    Q_D(EmrClient);
-    d->apiVersion = QStringLiteral("2009-03-31");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("elasticmapreduce");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Elastic MapReduce");
-    d->serviceName = QStringLiteral("elasticmapreduce");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -981,10 +981,9 @@ UpdateStudioSessionMappingResponse * EmrClient::updateStudioSessionMapping(const
 /*!
  * Constructs a EmrClientPrivate object with public implementation \a q.
  */
-EmrClientPrivate::EmrClientPrivate(EmrClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+EmrClientPrivate::EmrClientPrivate(EmrClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace EMR

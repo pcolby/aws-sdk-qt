@@ -56,8 +56,7 @@ DescribeAcceleratorTypesResponse::DescribeAcceleratorTypesResponse(
  */
 const DescribeAcceleratorTypesRequest * DescribeAcceleratorTypesResponse::request() const
 {
-    Q_D(const DescribeAcceleratorTypesResponse);
-    return static_cast<const DescribeAcceleratorTypesRequest *>(d->request);
+    return static_cast<const DescribeAcceleratorTypesRequest *>(ElasticInferenceResponse::request());
 }
 
 /*!

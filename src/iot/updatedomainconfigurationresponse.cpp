@@ -82,8 +82,7 @@ UpdateDomainConfigurationResponse::UpdateDomainConfigurationResponse(
  */
 const UpdateDomainConfigurationRequest * UpdateDomainConfigurationResponse::request() const
 {
-    Q_D(const UpdateDomainConfigurationResponse);
-    return static_cast<const UpdateDomainConfigurationRequest *>(d->request);
+    return static_cast<const UpdateDomainConfigurationRequest *>(IoTResponse::request());
 }
 
 /*!

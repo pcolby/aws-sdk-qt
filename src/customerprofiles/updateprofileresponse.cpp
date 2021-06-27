@@ -71,8 +71,7 @@ UpdateProfileResponse::UpdateProfileResponse(
  */
 const UpdateProfileRequest * UpdateProfileResponse::request() const
 {
-    Q_D(const UpdateProfileResponse);
-    return static_cast<const UpdateProfileRequest *>(d->request);
+    return static_cast<const UpdateProfileRequest *>(CustomerProfilesResponse::request());
 }
 
 /*!

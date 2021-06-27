@@ -20,14 +20,12 @@
 #ifndef QTAWS_IOTSITEWISERESPONSE_P_H
 #define QTAWS_IOTSITEWISERESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace IoTSiteWise {
 
 class IoTSiteWiseResponse;
 
-class IoTSiteWiseResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class IoTSiteWiseResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    IoTSiteWiseResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoTSiteWiseResponse)

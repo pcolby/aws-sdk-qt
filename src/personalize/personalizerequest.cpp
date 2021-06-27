@@ -89,7 +89,7 @@ namespace Personalize {
  * Constructs a PersonalizeRequest object for Personalize \a action.
  */
 PersonalizeRequest::PersonalizeRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new PersonalizeRequestPrivate(action, this))
+    : d_ptr(new PersonalizeRequestPrivate(action, this))
 {
 
 }
@@ -98,7 +98,8 @@ PersonalizeRequest::PersonalizeRequest(const Action action)
  * Constructs a copy of \a other.
  */
 PersonalizeRequest::PersonalizeRequest(const PersonalizeRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new PersonalizeRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new PersonalizeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -121,7 +122,7 @@ PersonalizeRequest& PersonalizeRequest::operator=(const PersonalizeRequest &othe
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from PersonalizeRequestPrivate.
  */
-PersonalizeRequest::PersonalizeRequest(PersonalizeRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+PersonalizeRequest::PersonalizeRequest(PersonalizeRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -290,7 +291,7 @@ QNetworkRequest PersonalizeRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 PersonalizeRequestPrivate::PersonalizeRequestPrivate(const PersonalizeRequest::Action action, PersonalizeRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -305,8 +306,8 @@ PersonalizeRequestPrivate::PersonalizeRequestPrivate(const PersonalizeRequest::A
  */
 PersonalizeRequestPrivate::PersonalizeRequestPrivate(const PersonalizeRequestPrivate &other,
                                      PersonalizeRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

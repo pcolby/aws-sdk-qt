@@ -104,7 +104,7 @@ namespace DirectoryService {
  * Constructs a DirectoryServiceRequest object for DirectoryService \a action.
  */
 DirectoryServiceRequest::DirectoryServiceRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new DirectoryServiceRequestPrivate(action, this))
+    : d_ptr(new DirectoryServiceRequestPrivate(action, this))
 {
 
 }
@@ -113,7 +113,8 @@ DirectoryServiceRequest::DirectoryServiceRequest(const Action action)
  * Constructs a copy of \a other.
  */
 DirectoryServiceRequest::DirectoryServiceRequest(const DirectoryServiceRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new DirectoryServiceRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new DirectoryServiceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -136,7 +137,7 @@ DirectoryServiceRequest& DirectoryServiceRequest::operator=(const DirectoryServi
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from DirectoryServiceRequestPrivate.
  */
-DirectoryServiceRequest::DirectoryServiceRequest(DirectoryServiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+DirectoryServiceRequest::DirectoryServiceRequest(DirectoryServiceRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -305,7 +306,7 @@ QNetworkRequest DirectoryServiceRequest::unsignedRequest(const QUrl &endpoint) c
  * with public implementation \a q.
  */
 DirectoryServiceRequestPrivate::DirectoryServiceRequestPrivate(const DirectoryServiceRequest::Action action, DirectoryServiceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -320,8 +321,8 @@ DirectoryServiceRequestPrivate::DirectoryServiceRequestPrivate(const DirectorySe
  */
 DirectoryServiceRequestPrivate::DirectoryServiceRequestPrivate(const DirectoryServiceRequestPrivate &other,
                                      DirectoryServiceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

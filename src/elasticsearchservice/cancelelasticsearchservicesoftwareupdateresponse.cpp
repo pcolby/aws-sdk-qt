@@ -72,8 +72,7 @@ CancelElasticsearchServiceSoftwareUpdateResponse::CancelElasticsearchServiceSoft
  */
 const CancelElasticsearchServiceSoftwareUpdateRequest * CancelElasticsearchServiceSoftwareUpdateResponse::request() const
 {
-    Q_D(const CancelElasticsearchServiceSoftwareUpdateResponse);
-    return static_cast<const CancelElasticsearchServiceSoftwareUpdateRequest *>(d->request);
+    return static_cast<const CancelElasticsearchServiceSoftwareUpdateRequest *>(ElasticsearchServiceResponse::request());
 }
 
 /*!

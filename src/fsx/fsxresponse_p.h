@@ -20,14 +20,12 @@
 #ifndef QTAWS_FSXRESPONSE_P_H
 #define QTAWS_FSXRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace FSx {
 
 class FSxResponse;
 
-class FSxResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class FSxResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    FSxResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(FSxResponse)

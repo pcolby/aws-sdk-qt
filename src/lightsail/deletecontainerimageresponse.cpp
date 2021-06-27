@@ -74,8 +74,7 @@ DeleteContainerImageResponse::DeleteContainerImageResponse(
  */
 const DeleteContainerImageRequest * DeleteContainerImageResponse::request() const
 {
-    Q_D(const DeleteContainerImageResponse);
-    return static_cast<const DeleteContainerImageRequest *>(d->request);
+    return static_cast<const DeleteContainerImageRequest *>(LightsailResponse::request());
 }
 
 /*!

@@ -62,8 +62,7 @@ GetInstanceProfileResponse::GetInstanceProfileResponse(
  */
 const GetInstanceProfileRequest * GetInstanceProfileResponse::request() const
 {
-    Q_D(const GetInstanceProfileResponse);
-    return static_cast<const GetInstanceProfileRequest *>(d->request);
+    return static_cast<const GetInstanceProfileRequest *>(IamResponse::request());
 }
 
 /*!

@@ -63,8 +63,7 @@ UpdateFacetResponse::UpdateFacetResponse(
  */
 const UpdateFacetRequest * UpdateFacetResponse::request() const
 {
-    Q_D(const UpdateFacetResponse);
-    return static_cast<const UpdateFacetRequest *>(d->request);
+    return static_cast<const UpdateFacetRequest *>(CloudDirectoryResponse::request());
 }
 
 /*!

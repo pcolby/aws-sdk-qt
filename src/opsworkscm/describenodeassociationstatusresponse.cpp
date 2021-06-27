@@ -134,8 +134,7 @@ DescribeNodeAssociationStatusResponse::DescribeNodeAssociationStatusResponse(
  */
 const DescribeNodeAssociationStatusRequest * DescribeNodeAssociationStatusResponse::request() const
 {
-    Q_D(const DescribeNodeAssociationStatusResponse);
-    return static_cast<const DescribeNodeAssociationStatusRequest *>(d->request);
+    return static_cast<const DescribeNodeAssociationStatusRequest *>(OpsWorksCMResponse::request());
 }
 
 /*!

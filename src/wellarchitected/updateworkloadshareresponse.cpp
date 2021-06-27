@@ -62,8 +62,7 @@ UpdateWorkloadShareResponse::UpdateWorkloadShareResponse(
  */
 const UpdateWorkloadShareRequest * UpdateWorkloadShareResponse::request() const
 {
-    Q_D(const UpdateWorkloadShareResponse);
-    return static_cast<const UpdateWorkloadShareRequest *>(d->request);
+    return static_cast<const UpdateWorkloadShareRequest *>(WellArchitectedResponse::request());
 }
 
 /*!

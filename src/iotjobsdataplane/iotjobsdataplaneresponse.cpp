@@ -37,7 +37,7 @@ namespace IoTJobsDataPlane {
  * Constructs a IoTJobsDataPlaneResponse object with parent \a parent.
  */
 IoTJobsDataPlaneResponse::IoTJobsDataPlaneResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new IoTJobsDataPlaneResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new IoTJobsDataPlaneResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ IoTJobsDataPlaneResponse::IoTJobsDataPlaneResponse(QObject * const parent)
  * implementation that inherits from IoTJobsDataPlaneResponsePrivate.
  */
 IoTJobsDataPlaneResponse::IoTJobsDataPlaneResponse(IoTJobsDataPlaneResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void IoTJobsDataPlaneResponse::parseFailure(QIODevice &response)
  * Constructs a IoTJobsDataPlaneResponsePrivate object with public implementation \a q.
  */
 IoTJobsDataPlaneResponsePrivate::IoTJobsDataPlaneResponsePrivate(
-    IoTJobsDataPlaneResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    IoTJobsDataPlaneResponse * const q) : q_ptr(q)
 {
 
 }

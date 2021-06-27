@@ -58,8 +58,7 @@ GetResourcePolicyResponse::GetResourcePolicyResponse(
  */
 const GetResourcePolicyRequest * GetResourcePolicyResponse::request() const
 {
-    Q_D(const GetResourcePolicyResponse);
-    return static_cast<const GetResourcePolicyRequest *>(d->request);
+    return static_cast<const GetResourcePolicyRequest *>(GlueResponse::request());
 }
 
 /*!

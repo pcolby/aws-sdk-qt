@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    DirectoryServiceResponsePrivate * const d_ptr; ///< Internal d-pointer.
     DirectoryServiceResponse(DirectoryServiceResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

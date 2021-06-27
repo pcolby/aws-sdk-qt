@@ -89,8 +89,7 @@ GetMobileDeviceAccessEffectResponse::GetMobileDeviceAccessEffectResponse(
  */
 const GetMobileDeviceAccessEffectRequest * GetMobileDeviceAccessEffectResponse::request() const
 {
-    Q_D(const GetMobileDeviceAccessEffectResponse);
-    return static_cast<const GetMobileDeviceAccessEffectRequest *>(d->request);
+    return static_cast<const GetMobileDeviceAccessEffectRequest *>(WorkMailResponse::request());
 }
 
 /*!

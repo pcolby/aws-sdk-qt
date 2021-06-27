@@ -75,8 +75,7 @@ ListRecordsResponse::ListRecordsResponse(
  */
 const ListRecordsRequest * ListRecordsResponse::request() const
 {
-    Q_D(const ListRecordsResponse);
-    return static_cast<const ListRecordsRequest *>(d->request);
+    return static_cast<const ListRecordsRequest *>(CognitoSyncResponse::request());
 }
 
 /*!

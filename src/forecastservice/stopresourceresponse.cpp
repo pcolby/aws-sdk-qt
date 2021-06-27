@@ -56,8 +56,7 @@ StopResourceResponse::StopResourceResponse(
  */
 const StopResourceRequest * StopResourceResponse::request() const
 {
-    Q_D(const StopResourceResponse);
-    return static_cast<const StopResourceRequest *>(d->request);
+    return static_cast<const StopResourceRequest *>(ForecastServiceResponse::request());
 }
 
 /*!

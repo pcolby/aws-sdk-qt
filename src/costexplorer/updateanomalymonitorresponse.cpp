@@ -75,8 +75,7 @@ UpdateAnomalyMonitorResponse::UpdateAnomalyMonitorResponse(
  */
 const UpdateAnomalyMonitorRequest * UpdateAnomalyMonitorResponse::request() const
 {
-    Q_D(const UpdateAnomalyMonitorResponse);
-    return static_cast<const UpdateAnomalyMonitorRequest *>(d->request);
+    return static_cast<const UpdateAnomalyMonitorRequest *>(CostExplorerResponse::request());
 }
 
 /*!

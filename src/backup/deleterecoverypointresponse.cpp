@@ -59,8 +59,7 @@ DeleteRecoveryPointResponse::DeleteRecoveryPointResponse(
  */
 const DeleteRecoveryPointRequest * DeleteRecoveryPointResponse::request() const
 {
-    Q_D(const DeleteRecoveryPointResponse);
-    return static_cast<const DeleteRecoveryPointRequest *>(d->request);
+    return static_cast<const DeleteRecoveryPointRequest *>(BackupResponse::request());
 }
 
 /*!

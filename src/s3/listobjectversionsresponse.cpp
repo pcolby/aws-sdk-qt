@@ -55,8 +55,7 @@ ListObjectVersionsResponse::ListObjectVersionsResponse(
  */
 const ListObjectVersionsRequest * ListObjectVersionsResponse::request() const
 {
-    Q_D(const ListObjectVersionsResponse);
-    return static_cast<const ListObjectVersionsRequest *>(d->request);
+    return static_cast<const ListObjectVersionsRequest *>(S3Response::request());
 }
 
 /*!

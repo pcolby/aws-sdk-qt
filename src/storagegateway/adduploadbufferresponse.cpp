@@ -124,8 +124,7 @@ AddUploadBufferResponse::AddUploadBufferResponse(
  */
 const AddUploadBufferRequest * AddUploadBufferResponse::request() const
 {
-    Q_D(const AddUploadBufferResponse);
-    return static_cast<const AddUploadBufferRequest *>(d->request);
+    return static_cast<const AddUploadBufferRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

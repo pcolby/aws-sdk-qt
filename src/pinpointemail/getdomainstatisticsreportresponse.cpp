@@ -92,8 +92,7 @@ GetDomainStatisticsReportResponse::GetDomainStatisticsReportResponse(
  */
 const GetDomainStatisticsReportRequest * GetDomainStatisticsReportResponse::request() const
 {
-    Q_D(const GetDomainStatisticsReportResponse);
-    return static_cast<const GetDomainStatisticsReportRequest *>(d->request);
+    return static_cast<const GetDomainStatisticsReportRequest *>(PinpointEmailResponse::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ BatchDeleteRecipeVersionResponse::BatchDeleteRecipeVersionResponse(
  */
 const BatchDeleteRecipeVersionRequest * BatchDeleteRecipeVersionResponse::request() const
 {
-    Q_D(const BatchDeleteRecipeVersionResponse);
-    return static_cast<const BatchDeleteRecipeVersionRequest *>(d->request);
+    return static_cast<const BatchDeleteRecipeVersionRequest *>(GlueDataBrewResponse::request());
 }
 
 /*!

@@ -57,8 +57,7 @@ CreateBackupResponse::CreateBackupResponse(
  */
 const CreateBackupRequest * CreateBackupResponse::request() const
 {
-    Q_D(const CreateBackupResponse);
-    return static_cast<const CreateBackupRequest *>(d->request);
+    return static_cast<const CreateBackupRequest *>(FSxResponse::request());
 }
 
 /*!

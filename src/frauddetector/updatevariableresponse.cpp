@@ -58,8 +58,7 @@ UpdateVariableResponse::UpdateVariableResponse(
  */
 const UpdateVariableRequest * UpdateVariableResponse::request() const
 {
-    Q_D(const UpdateVariableResponse);
-    return static_cast<const UpdateVariableRequest *>(d->request);
+    return static_cast<const UpdateVariableRequest *>(FraudDetectorResponse::request());
 }
 
 /*!

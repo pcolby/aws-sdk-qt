@@ -78,8 +78,7 @@ ListEventSourcesResponse::ListEventSourcesResponse(
  */
 const ListEventSourcesRequest * ListEventSourcesResponse::request() const
 {
-    Q_D(const ListEventSourcesResponse);
-    return static_cast<const ListEventSourcesRequest *>(d->request);
+    return static_cast<const ListEventSourcesRequest *>(EventBridgeResponse::request());
 }
 
 /*!

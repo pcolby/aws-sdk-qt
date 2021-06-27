@@ -70,8 +70,7 @@ CreateDeviceFleetResponse::CreateDeviceFleetResponse(
  */
 const CreateDeviceFleetRequest * CreateDeviceFleetResponse::request() const
 {
-    Q_D(const CreateDeviceFleetResponse);
-    return static_cast<const CreateDeviceFleetRequest *>(d->request);
+    return static_cast<const CreateDeviceFleetRequest *>(SageMakerResponse::request());
 }
 
 /*!

@@ -69,8 +69,7 @@ ListMetricStreamsResponse::ListMetricStreamsResponse(
  */
 const ListMetricStreamsRequest * ListMetricStreamsResponse::request() const
 {
-    Q_D(const ListMetricStreamsResponse);
-    return static_cast<const ListMetricStreamsRequest *>(d->request);
+    return static_cast<const ListMetricStreamsRequest *>(CloudWatchResponse::request());
 }
 
 /*!

@@ -87,8 +87,7 @@ ReplaceTransitGatewayRouteResponse::ReplaceTransitGatewayRouteResponse(
  */
 const ReplaceTransitGatewayRouteRequest * ReplaceTransitGatewayRouteResponse::request() const
 {
-    Q_D(const ReplaceTransitGatewayRouteResponse);
-    return static_cast<const ReplaceTransitGatewayRouteRequest *>(d->request);
+    return static_cast<const ReplaceTransitGatewayRouteRequest *>(Ec2Response::request());
 }
 
 /*!

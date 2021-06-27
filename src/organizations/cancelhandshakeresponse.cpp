@@ -141,8 +141,7 @@ CancelHandshakeResponse::CancelHandshakeResponse(
  */
 const CancelHandshakeRequest * CancelHandshakeResponse::request() const
 {
-    Q_D(const CancelHandshakeResponse);
-    return static_cast<const CancelHandshakeRequest *>(d->request);
+    return static_cast<const CancelHandshakeRequest *>(OrganizationsResponse::request());
 }
 
 /*!

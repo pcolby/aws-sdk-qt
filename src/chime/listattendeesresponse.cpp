@@ -98,8 +98,7 @@ ListAttendeesResponse::ListAttendeesResponse(
  */
 const ListAttendeesRequest * ListAttendeesResponse::request() const
 {
-    Q_D(const ListAttendeesResponse);
-    return static_cast<const ListAttendeesRequest *>(d->request);
+    return static_cast<const ListAttendeesRequest *>(ChimeResponse::request());
 }
 
 /*!

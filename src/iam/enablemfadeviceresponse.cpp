@@ -62,8 +62,7 @@ EnableMFADeviceResponse::EnableMFADeviceResponse(
  */
 const EnableMFADeviceRequest * EnableMFADeviceResponse::request() const
 {
-    Q_D(const EnableMFADeviceResponse);
-    return static_cast<const EnableMFADeviceRequest *>(d->request);
+    return static_cast<const EnableMFADeviceRequest *>(IamResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ DeleteStreamProcessorResponse::DeleteStreamProcessorResponse(
  */
 const DeleteStreamProcessorRequest * DeleteStreamProcessorResponse::request() const
 {
-    Q_D(const DeleteStreamProcessorResponse);
-    return static_cast<const DeleteStreamProcessorRequest *>(d->request);
+    return static_cast<const DeleteStreamProcessorRequest *>(RekognitionResponse::request());
 }
 
 /*!

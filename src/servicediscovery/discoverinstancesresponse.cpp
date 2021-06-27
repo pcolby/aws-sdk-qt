@@ -60,8 +60,7 @@ DiscoverInstancesResponse::DiscoverInstancesResponse(
  */
 const DiscoverInstancesRequest * DiscoverInstancesResponse::request() const
 {
-    Q_D(const DiscoverInstancesResponse);
-    return static_cast<const DiscoverInstancesRequest *>(d->request);
+    return static_cast<const DiscoverInstancesRequest *>(ServiceDiscoveryResponse::request());
 }
 
 /*!

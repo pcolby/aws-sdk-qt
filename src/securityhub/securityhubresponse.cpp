@@ -37,7 +37,7 @@ namespace SecurityHub {
  * Constructs a SecurityHubResponse object with parent \a parent.
  */
 SecurityHubResponse::SecurityHubResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new SecurityHubResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new SecurityHubResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ SecurityHubResponse::SecurityHubResponse(QObject * const parent)
  * implementation that inherits from SecurityHubResponsePrivate.
  */
 SecurityHubResponse::SecurityHubResponse(SecurityHubResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void SecurityHubResponse::parseFailure(QIODevice &response)
  * Constructs a SecurityHubResponsePrivate object with public implementation \a q.
  */
 SecurityHubResponsePrivate::SecurityHubResponsePrivate(
-    SecurityHubResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    SecurityHubResponse * const q) : q_ptr(q)
 {
 
 }

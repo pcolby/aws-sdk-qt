@@ -74,8 +74,7 @@ AllocateStaticIpResponse::AllocateStaticIpResponse(
  */
 const AllocateStaticIpRequest * AllocateStaticIpResponse::request() const
 {
-    Q_D(const AllocateStaticIpResponse);
-    return static_cast<const AllocateStaticIpRequest *>(d->request);
+    return static_cast<const AllocateStaticIpRequest *>(LightsailResponse::request());
 }
 
 /*!

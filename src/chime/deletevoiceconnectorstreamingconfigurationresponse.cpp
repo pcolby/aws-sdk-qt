@@ -98,8 +98,7 @@ DeleteVoiceConnectorStreamingConfigurationResponse::DeleteVoiceConnectorStreamin
  */
 const DeleteVoiceConnectorStreamingConfigurationRequest * DeleteVoiceConnectorStreamingConfigurationResponse::request() const
 {
-    Q_D(const DeleteVoiceConnectorStreamingConfigurationResponse);
-    return static_cast<const DeleteVoiceConnectorStreamingConfigurationRequest *>(d->request);
+    return static_cast<const DeleteVoiceConnectorStreamingConfigurationRequest *>(ChimeResponse::request());
 }
 
 /*!

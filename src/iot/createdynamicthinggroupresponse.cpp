@@ -82,8 +82,7 @@ CreateDynamicThingGroupResponse::CreateDynamicThingGroupResponse(
  */
 const CreateDynamicThingGroupRequest * CreateDynamicThingGroupResponse::request() const
 {
-    Q_D(const CreateDynamicThingGroupResponse);
-    return static_cast<const CreateDynamicThingGroupRequest *>(d->request);
+    return static_cast<const CreateDynamicThingGroupRequest *>(IoTResponse::request());
 }
 
 /*!

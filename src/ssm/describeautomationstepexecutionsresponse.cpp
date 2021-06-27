@@ -98,8 +98,7 @@ DescribeAutomationStepExecutionsResponse::DescribeAutomationStepExecutionsRespon
  */
 const DescribeAutomationStepExecutionsRequest * DescribeAutomationStepExecutionsResponse::request() const
 {
-    Q_D(const DescribeAutomationStepExecutionsResponse);
-    return static_cast<const DescribeAutomationStepExecutionsRequest *>(d->request);
+    return static_cast<const DescribeAutomationStepExecutionsRequest *>(SsmResponse::request());
 }
 
 /*!

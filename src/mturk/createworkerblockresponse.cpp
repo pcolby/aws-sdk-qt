@@ -55,8 +55,7 @@ CreateWorkerBlockResponse::CreateWorkerBlockResponse(
  */
 const CreateWorkerBlockRequest * CreateWorkerBlockResponse::request() const
 {
-    Q_D(const CreateWorkerBlockResponse);
-    return static_cast<const CreateWorkerBlockRequest *>(d->request);
+    return static_cast<const CreateWorkerBlockRequest *>(MTurkResponse::request());
 }
 
 /*!

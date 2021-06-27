@@ -66,8 +66,7 @@ UpdateAssetResponse::UpdateAssetResponse(
  */
 const UpdateAssetRequest * UpdateAssetResponse::request() const
 {
-    Q_D(const UpdateAssetResponse);
-    return static_cast<const UpdateAssetRequest *>(d->request);
+    return static_cast<const UpdateAssetRequest *>(DataExchangeResponse::request());
 }
 
 /*!

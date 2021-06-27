@@ -69,8 +69,7 @@ ShareDirectoryResponse::ShareDirectoryResponse(
  */
 const ShareDirectoryRequest * ShareDirectoryResponse::request() const
 {
-    Q_D(const ShareDirectoryResponse);
-    return static_cast<const ShareDirectoryRequest *>(d->request);
+    return static_cast<const ShareDirectoryRequest *>(DirectoryServiceResponse::request());
 }
 
 /*!

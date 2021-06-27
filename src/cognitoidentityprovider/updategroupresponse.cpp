@@ -66,8 +66,7 @@ UpdateGroupResponse::UpdateGroupResponse(
  */
 const UpdateGroupRequest * UpdateGroupResponse::request() const
 {
-    Q_D(const UpdateGroupResponse);
-    return static_cast<const UpdateGroupRequest *>(d->request);
+    return static_cast<const UpdateGroupRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

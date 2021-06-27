@@ -84,8 +84,7 @@ DescribeLogGroupsResponse::DescribeLogGroupsResponse(
  */
 const DescribeLogGroupsRequest * DescribeLogGroupsResponse::request() const
 {
-    Q_D(const DescribeLogGroupsResponse);
-    return static_cast<const DescribeLogGroupsRequest *>(d->request);
+    return static_cast<const DescribeLogGroupsRequest *>(CloudWatchLogsResponse::request());
 }
 
 /*!

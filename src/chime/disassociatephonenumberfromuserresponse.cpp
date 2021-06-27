@@ -98,8 +98,7 @@ DisassociatePhoneNumberFromUserResponse::DisassociatePhoneNumberFromUserResponse
  */
 const DisassociatePhoneNumberFromUserRequest * DisassociatePhoneNumberFromUserResponse::request() const
 {
-    Q_D(const DisassociatePhoneNumberFromUserResponse);
-    return static_cast<const DisassociatePhoneNumberFromUserRequest *>(d->request);
+    return static_cast<const DisassociatePhoneNumberFromUserRequest *>(ChimeResponse::request());
 }
 
 /*!

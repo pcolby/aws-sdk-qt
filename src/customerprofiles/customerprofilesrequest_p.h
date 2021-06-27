@@ -20,15 +20,12 @@
 #ifndef QTAWS_CUSTOMERPROFILESREQUEST_P_H
 #define QTAWS_CUSTOMERPROFILESREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "customerprofilesrequest.h"
-
 namespace QtAws {
 namespace CustomerProfiles {
 
 class CustomerProfilesRequest;
 
-class CustomerProfilesRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class CustomerProfilesRequestPrivate {
 
 public:
     CustomerProfilesRequest::Action action; ///< CustomerProfiles action to be performed.
@@ -39,6 +36,9 @@ public:
     CustomerProfilesRequestPrivate(const CustomerProfilesRequestPrivate &other, CustomerProfilesRequest * const q);
 
     static QString toString(const CustomerProfilesRequest::Action &action);
+
+protected:
+    CustomerProfilesRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CustomerProfilesRequest)

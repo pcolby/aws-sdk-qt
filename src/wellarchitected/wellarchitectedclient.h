@@ -139,6 +139,12 @@ public slots:
     UpdateWorkloadShareResponse * updateWorkloadShare(const UpdateWorkloadShareRequest &request);
     UpgradeLensReviewResponse * upgradeLensReview(const UpgradeLensReviewRequest &request);
 
+protected:
+    /// @cond internal
+    WellArchitectedClientPrivate * const d_ptr; ///< Internal d-pointer.
+    WellArchitectedClient(WellArchitectedClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(WellArchitectedClient)
     Q_DISABLE_COPY(WellArchitectedClient)

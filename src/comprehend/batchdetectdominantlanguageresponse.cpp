@@ -58,8 +58,7 @@ BatchDetectDominantLanguageResponse::BatchDetectDominantLanguageResponse(
  */
 const BatchDetectDominantLanguageRequest * BatchDetectDominantLanguageResponse::request() const
 {
-    Q_D(const BatchDetectDominantLanguageResponse);
-    return static_cast<const BatchDetectDominantLanguageRequest *>(d->request);
+    return static_cast<const BatchDetectDominantLanguageRequest *>(ComprehendResponse::request());
 }
 
 /*!

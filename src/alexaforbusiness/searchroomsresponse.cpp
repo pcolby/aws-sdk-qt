@@ -62,8 +62,7 @@ SearchRoomsResponse::SearchRoomsResponse(
  */
 const SearchRoomsRequest * SearchRoomsResponse::request() const
 {
-    Q_D(const SearchRoomsResponse);
-    return static_cast<const SearchRoomsRequest *>(d->request);
+    return static_cast<const SearchRoomsRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

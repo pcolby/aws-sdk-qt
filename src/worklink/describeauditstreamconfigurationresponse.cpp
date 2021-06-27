@@ -60,8 +60,7 @@ DescribeAuditStreamConfigurationResponse::DescribeAuditStreamConfigurationRespon
  */
 const DescribeAuditStreamConfigurationRequest * DescribeAuditStreamConfigurationResponse::request() const
 {
-    Q_D(const DescribeAuditStreamConfigurationResponse);
-    return static_cast<const DescribeAuditStreamConfigurationRequest *>(d->request);
+    return static_cast<const DescribeAuditStreamConfigurationRequest *>(WorkLinkResponse::request());
 }
 
 /*!

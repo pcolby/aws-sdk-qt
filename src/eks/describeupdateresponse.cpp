@@ -65,8 +65,7 @@ DescribeUpdateResponse::DescribeUpdateResponse(
  */
 const DescribeUpdateRequest * DescribeUpdateResponse::request() const
 {
-    Q_D(const DescribeUpdateResponse);
-    return static_cast<const DescribeUpdateRequest *>(d->request);
+    return static_cast<const DescribeUpdateRequest *>(EksResponse::request());
 }
 
 /*!

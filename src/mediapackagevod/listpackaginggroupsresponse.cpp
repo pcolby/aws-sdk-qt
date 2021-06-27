@@ -55,8 +55,7 @@ ListPackagingGroupsResponse::ListPackagingGroupsResponse(
  */
 const ListPackagingGroupsRequest * ListPackagingGroupsResponse::request() const
 {
-    Q_D(const ListPackagingGroupsResponse);
-    return static_cast<const ListPackagingGroupsRequest *>(d->request);
+    return static_cast<const ListPackagingGroupsRequest *>(MediaPackageVodResponse::request());
 }
 
 /*!

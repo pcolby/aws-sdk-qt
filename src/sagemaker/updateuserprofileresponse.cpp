@@ -70,8 +70,7 @@ UpdateUserProfileResponse::UpdateUserProfileResponse(
  */
 const UpdateUserProfileRequest * UpdateUserProfileResponse::request() const
 {
-    Q_D(const UpdateUserProfileResponse);
-    return static_cast<const UpdateUserProfileRequest *>(d->request);
+    return static_cast<const UpdateUserProfileRequest *>(SageMakerResponse::request());
 }
 
 /*!

@@ -525,6 +525,12 @@ public slots:
     UploadServerCertificateResponse * uploadServerCertificate(const UploadServerCertificateRequest &request);
     UploadSigningCertificateResponse * uploadSigningCertificate(const UploadSigningCertificateRequest &request);
 
+protected:
+    /// @cond internal
+    IamClientPrivate * const d_ptr; ///< Internal d-pointer.
+    IamClient(IamClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(IamClient)
     Q_DISABLE_COPY(IamClient)

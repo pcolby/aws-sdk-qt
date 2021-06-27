@@ -69,8 +69,7 @@ ModifyReplicationGroupShardConfigurationResponse::ModifyReplicationGroupShardCon
  */
 const ModifyReplicationGroupShardConfigurationRequest * ModifyReplicationGroupShardConfigurationResponse::request() const
 {
-    Q_D(const ModifyReplicationGroupShardConfigurationResponse);
-    return static_cast<const ModifyReplicationGroupShardConfigurationRequest *>(d->request);
+    return static_cast<const ModifyReplicationGroupShardConfigurationRequest *>(ElastiCacheResponse::request());
 }
 
 /*!

@@ -67,6 +67,7 @@ public:
 
 protected:
     /// @cond internal
+    MwaaRequestPrivate * const d_ptr; ///< Internal d-pointer.
     MwaaRequest(MwaaRequestPrivate * const d);
     /// @endcond
 

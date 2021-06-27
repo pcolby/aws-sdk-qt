@@ -55,8 +55,7 @@ GetBucketLocationResponse::GetBucketLocationResponse(
  */
 const GetBucketLocationRequest * GetBucketLocationResponse::request() const
 {
-    Q_D(const GetBucketLocationResponse);
-    return static_cast<const GetBucketLocationRequest *>(d->request);
+    return static_cast<const GetBucketLocationRequest *>(S3Response::request());
 }
 
 /*!

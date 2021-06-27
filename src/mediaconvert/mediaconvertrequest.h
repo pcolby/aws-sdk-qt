@@ -81,6 +81,7 @@ public:
 
 protected:
     /// @cond internal
+    MediaConvertRequestPrivate * const d_ptr; ///< Internal d-pointer.
     MediaConvertRequest(MediaConvertRequestPrivate * const d);
     /// @endcond
 

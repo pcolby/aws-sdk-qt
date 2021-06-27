@@ -37,7 +37,7 @@ namespace Chime {
  * Constructs a ChimeResponse object with parent \a parent.
  */
 ChimeResponse::ChimeResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new ChimeResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ChimeResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ ChimeResponse::ChimeResponse(QObject * const parent)
  * implementation that inherits from ChimeResponsePrivate.
  */
 ChimeResponse::ChimeResponse(ChimeResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void ChimeResponse::parseFailure(QIODevice &response)
  * Constructs a ChimeResponsePrivate object with public implementation \a q.
  */
 ChimeResponsePrivate::ChimeResponsePrivate(
-    ChimeResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    ChimeResponse * const q) : q_ptr(q)
 {
 
 }

@@ -90,8 +90,7 @@ SetSubnetsResponse::SetSubnetsResponse(
  */
 const SetSubnetsRequest * SetSubnetsResponse::request() const
 {
-    Q_D(const SetSubnetsResponse);
-    return static_cast<const SetSubnetsRequest *>(d->request);
+    return static_cast<const SetSubnetsRequest *>(ElasticLoadBalancingv2Response::request());
 }
 
 /*!

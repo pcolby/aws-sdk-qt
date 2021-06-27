@@ -82,8 +82,7 @@ DeleteCACertificateResponse::DeleteCACertificateResponse(
  */
 const DeleteCACertificateRequest * DeleteCACertificateResponse::request() const
 {
-    Q_D(const DeleteCACertificateResponse);
-    return static_cast<const DeleteCACertificateRequest *>(d->request);
+    return static_cast<const DeleteCACertificateRequest *>(IoTResponse::request());
 }
 
 /*!

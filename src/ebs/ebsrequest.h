@@ -62,6 +62,7 @@ public:
 
 protected:
     /// @cond internal
+    EbsRequestPrivate * const d_ptr; ///< Internal d-pointer.
     EbsRequest(EbsRequestPrivate * const d);
     /// @endcond
 

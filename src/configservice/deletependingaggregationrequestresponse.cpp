@@ -75,8 +75,7 @@ DeletePendingAggregationRequestResponse::DeletePendingAggregationRequestResponse
  */
 const DeletePendingAggregationRequestRequest * DeletePendingAggregationRequestResponse::request() const
 {
-    Q_D(const DeletePendingAggregationRequestResponse);
-    return static_cast<const DeletePendingAggregationRequestRequest *>(d->request);
+    return static_cast<const DeletePendingAggregationRequestRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

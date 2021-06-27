@@ -63,6 +63,7 @@ public:
 
 protected:
     /// @cond internal
+    IoTSecureTunnelingRequestPrivate * const d_ptr; ///< Internal d-pointer.
     IoTSecureTunnelingRequest(IoTSecureTunnelingRequestPrivate * const d);
     /// @endcond
 

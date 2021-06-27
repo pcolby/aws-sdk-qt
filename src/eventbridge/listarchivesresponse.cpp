@@ -78,8 +78,7 @@ ListArchivesResponse::ListArchivesResponse(
  */
 const ListArchivesRequest * ListArchivesResponse::request() const
 {
-    Q_D(const ListArchivesResponse);
-    return static_cast<const ListArchivesRequest *>(d->request);
+    return static_cast<const ListArchivesRequest *>(EventBridgeResponse::request());
 }
 
 /*!

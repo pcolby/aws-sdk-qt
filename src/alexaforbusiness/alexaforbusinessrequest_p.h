@@ -20,15 +20,12 @@
 #ifndef QTAWS_ALEXAFORBUSINESSREQUEST_P_H
 #define QTAWS_ALEXAFORBUSINESSREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "alexaforbusinessrequest.h"
-
 namespace QtAws {
 namespace AlexaForBusiness {
 
 class AlexaForBusinessRequest;
 
-class AlexaForBusinessRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class AlexaForBusinessRequestPrivate {
 
 public:
     AlexaForBusinessRequest::Action action; ///< AlexaForBusiness action to be performed.
@@ -39,6 +36,9 @@ public:
     AlexaForBusinessRequestPrivate(const AlexaForBusinessRequestPrivate &other, AlexaForBusinessRequest * const q);
 
     static QString toString(const AlexaForBusinessRequest::Action &action);
+
+protected:
+    AlexaForBusinessRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AlexaForBusinessRequest)

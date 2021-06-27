@@ -69,8 +69,7 @@ DescribeAnomalyDetectorsResponse::DescribeAnomalyDetectorsResponse(
  */
 const DescribeAnomalyDetectorsRequest * DescribeAnomalyDetectorsResponse::request() const
 {
-    Q_D(const DescribeAnomalyDetectorsResponse);
-    return static_cast<const DescribeAnomalyDetectorsRequest *>(d->request);
+    return static_cast<const DescribeAnomalyDetectorsRequest *>(CloudWatchResponse::request());
 }
 
 /*!

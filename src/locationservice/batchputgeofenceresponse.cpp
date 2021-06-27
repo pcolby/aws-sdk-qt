@@ -56,8 +56,7 @@ BatchPutGeofenceResponse::BatchPutGeofenceResponse(
  */
 const BatchPutGeofenceRequest * BatchPutGeofenceResponse::request() const
 {
-    Q_D(const BatchPutGeofenceResponse);
-    return static_cast<const BatchPutGeofenceRequest *>(d->request);
+    return static_cast<const BatchPutGeofenceRequest *>(LocationServiceResponse::request());
 }
 
 /*!

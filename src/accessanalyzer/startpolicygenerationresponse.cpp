@@ -67,8 +67,7 @@ StartPolicyGenerationResponse::StartPolicyGenerationResponse(
  */
 const StartPolicyGenerationRequest * StartPolicyGenerationResponse::request() const
 {
-    Q_D(const StartPolicyGenerationResponse);
-    return static_cast<const StartPolicyGenerationRequest *>(d->request);
+    return static_cast<const StartPolicyGenerationRequest *>(AccessAnalyzerResponse::request());
 }
 
 /*!

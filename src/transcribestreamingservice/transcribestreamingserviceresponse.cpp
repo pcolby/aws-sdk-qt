@@ -37,7 +37,7 @@ namespace TranscribeStreamingService {
  * Constructs a TranscribeStreamingServiceResponse object with parent \a parent.
  */
 TranscribeStreamingServiceResponse::TranscribeStreamingServiceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new TranscribeStreamingServiceResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new TranscribeStreamingServiceResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ TranscribeStreamingServiceResponse::TranscribeStreamingServiceResponse(QObject *
  * implementation that inherits from TranscribeStreamingServiceResponsePrivate.
  */
 TranscribeStreamingServiceResponse::TranscribeStreamingServiceResponse(TranscribeStreamingServiceResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void TranscribeStreamingServiceResponse::parseFailure(QIODevice &response)
  * Constructs a TranscribeStreamingServiceResponsePrivate object with public implementation \a q.
  */
 TranscribeStreamingServiceResponsePrivate::TranscribeStreamingServiceResponsePrivate(
-    TranscribeStreamingServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    TranscribeStreamingServiceResponse * const q) : q_ptr(q)
 {
 
 }

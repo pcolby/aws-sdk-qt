@@ -58,8 +58,7 @@ CancelContactResponse::CancelContactResponse(
  */
 const CancelContactRequest * CancelContactResponse::request() const
 {
-    Q_D(const CancelContactResponse);
-    return static_cast<const CancelContactRequest *>(d->request);
+    return static_cast<const CancelContactRequest *>(GroundStationResponse::request());
 }
 
 /*!

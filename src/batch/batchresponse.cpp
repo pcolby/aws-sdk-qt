@@ -37,7 +37,7 @@ namespace Batch {
  * Constructs a BatchResponse object with parent \a parent.
  */
 BatchResponse::BatchResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new BatchResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new BatchResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ BatchResponse::BatchResponse(QObject * const parent)
  * implementation that inherits from BatchResponsePrivate.
  */
 BatchResponse::BatchResponse(BatchResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void BatchResponse::parseFailure(QIODevice &response)
  * Constructs a BatchResponsePrivate object with public implementation \a q.
  */
 BatchResponsePrivate::BatchResponsePrivate(
-    BatchResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    BatchResponse * const q) : q_ptr(q)
 {
 
 }

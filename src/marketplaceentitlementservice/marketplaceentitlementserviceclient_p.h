@@ -20,19 +20,20 @@
 #ifndef QTAWS_MARKETPLACEENTITLEMENTSERVICECLIENT_P_H
 #define QTAWS_MARKETPLACEENTITLEMENTSERVICECLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace MarketplaceEntitlementService {
 
 class MarketplaceEntitlementServiceClient;
 
-class MarketplaceEntitlementServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class MarketplaceEntitlementServiceClientPrivate {
 
 public:
     MarketplaceEntitlementServiceClientPrivate(MarketplaceEntitlementServiceClient * const q);
+
+protected:
+    MarketplaceEntitlementServiceClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MarketplaceEntitlementServiceClient)

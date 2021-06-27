@@ -75,8 +75,7 @@ ListSuitesResponse::ListSuitesResponse(
  */
 const ListSuitesRequest * ListSuitesResponse::request() const
 {
-    Q_D(const ListSuitesResponse);
-    return static_cast<const ListSuitesRequest *>(d->request);
+    return static_cast<const ListSuitesRequest *>(DeviceFarmResponse::request());
 }
 
 /*!

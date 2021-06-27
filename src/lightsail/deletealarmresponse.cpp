@@ -74,8 +74,7 @@ DeleteAlarmResponse::DeleteAlarmResponse(
  */
 const DeleteAlarmRequest * DeleteAlarmResponse::request() const
 {
-    Q_D(const DeleteAlarmResponse);
-    return static_cast<const DeleteAlarmRequest *>(d->request);
+    return static_cast<const DeleteAlarmRequest *>(LightsailResponse::request());
 }
 
 /*!

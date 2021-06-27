@@ -66,8 +66,7 @@ GetAliasResponse::GetAliasResponse(
  */
 const GetAliasRequest * GetAliasResponse::request() const
 {
-    Q_D(const GetAliasResponse);
-    return static_cast<const GetAliasRequest *>(d->request);
+    return static_cast<const GetAliasRequest *>(LambdaResponse::request());
 }
 
 /*!

@@ -119,8 +119,7 @@ DescribeDBProxyTargetGroupsResponse::DescribeDBProxyTargetGroupsResponse(
  */
 const DescribeDBProxyTargetGroupsRequest * DescribeDBProxyTargetGroupsResponse::request() const
 {
-    Q_D(const DescribeDBProxyTargetGroupsResponse);
-    return static_cast<const DescribeDBProxyTargetGroupsRequest *>(d->request);
+    return static_cast<const DescribeDBProxyTargetGroupsRequest *>(RdsResponse::request());
 }
 
 /*!

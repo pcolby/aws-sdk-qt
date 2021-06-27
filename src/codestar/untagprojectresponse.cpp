@@ -143,8 +143,7 @@ UntagProjectResponse::UntagProjectResponse(
  */
 const UntagProjectRequest * UntagProjectResponse::request() const
 {
-    Q_D(const UntagProjectResponse);
-    return static_cast<const UntagProjectRequest *>(d->request);
+    return static_cast<const UntagProjectRequest *>(CodeStarResponse::request());
 }
 
 /*!

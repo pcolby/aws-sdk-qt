@@ -56,8 +56,7 @@ DisassociateAwsAccountFromPartnerAccountResponse::DisassociateAwsAccountFromPart
  */
 const DisassociateAwsAccountFromPartnerAccountRequest * DisassociateAwsAccountFromPartnerAccountResponse::request() const
 {
-    Q_D(const DisassociateAwsAccountFromPartnerAccountResponse);
-    return static_cast<const DisassociateAwsAccountFromPartnerAccountRequest *>(d->request);
+    return static_cast<const DisassociateAwsAccountFromPartnerAccountRequest *>(IoTWirelessResponse::request());
 }
 
 /*!

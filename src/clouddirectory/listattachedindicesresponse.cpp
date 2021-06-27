@@ -63,8 +63,7 @@ ListAttachedIndicesResponse::ListAttachedIndicesResponse(
  */
 const ListAttachedIndicesRequest * ListAttachedIndicesResponse::request() const
 {
-    Q_D(const ListAttachedIndicesResponse);
-    return static_cast<const ListAttachedIndicesRequest *>(d->request);
+    return static_cast<const ListAttachedIndicesRequest *>(CloudDirectoryResponse::request());
 }
 
 /*!

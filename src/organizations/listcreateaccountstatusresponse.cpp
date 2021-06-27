@@ -141,8 +141,7 @@ ListCreateAccountStatusResponse::ListCreateAccountStatusResponse(
  */
 const ListCreateAccountStatusRequest * ListCreateAccountStatusResponse::request() const
 {
-    Q_D(const ListCreateAccountStatusResponse);
-    return static_cast<const ListCreateAccountStatusRequest *>(d->request);
+    return static_cast<const ListCreateAccountStatusRequest *>(OrganizationsResponse::request());
 }
 
 /*!

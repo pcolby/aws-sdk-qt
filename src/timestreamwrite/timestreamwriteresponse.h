@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    TimestreamWriteResponsePrivate * const d_ptr; ///< Internal d-pointer.
     TimestreamWriteResponse(TimestreamWriteResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

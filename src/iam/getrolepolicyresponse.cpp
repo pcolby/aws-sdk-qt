@@ -62,8 +62,7 @@ GetRolePolicyResponse::GetRolePolicyResponse(
  */
 const GetRolePolicyRequest * GetRolePolicyResponse::request() const
 {
-    Q_D(const GetRolePolicyResponse);
-    return static_cast<const GetRolePolicyRequest *>(d->request);
+    return static_cast<const GetRolePolicyRequest *>(IamResponse::request());
 }
 
 /*!

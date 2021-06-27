@@ -97,6 +97,12 @@ public slots:
     UnsubscribeFromDatasetResponse * unsubscribeFromDataset(const UnsubscribeFromDatasetRequest &request);
     UpdateRecordsResponse * updateRecords(const UpdateRecordsRequest &request);
 
+protected:
+    /// @cond internal
+    CognitoSyncClientPrivate * const d_ptr; ///< Internal d-pointer.
+    CognitoSyncClient(CognitoSyncClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(CognitoSyncClient)
     Q_DISABLE_COPY(CognitoSyncClient)

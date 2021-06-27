@@ -20,14 +20,12 @@
 #ifndef QTAWS_EKSRESPONSE_P_H
 #define QTAWS_EKSRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace EKS {
 
 class EksResponse;
 
-class EksResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class EksResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    EksResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(EksResponse)

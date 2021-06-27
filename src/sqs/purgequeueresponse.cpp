@@ -126,8 +126,7 @@ PurgeQueueResponse::PurgeQueueResponse(
  */
 const PurgeQueueRequest * PurgeQueueResponse::request() const
 {
-    Q_D(const PurgeQueueResponse);
-    return static_cast<const PurgeQueueRequest *>(d->request);
+    return static_cast<const PurgeQueueRequest *>(SqsResponse::request());
 }
 
 /*!

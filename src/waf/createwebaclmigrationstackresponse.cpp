@@ -76,8 +76,7 @@ CreateWebACLMigrationStackResponse::CreateWebACLMigrationStackResponse(
  */
 const CreateWebACLMigrationStackRequest * CreateWebACLMigrationStackResponse::request() const
 {
-    Q_D(const CreateWebACLMigrationStackResponse);
-    return static_cast<const CreateWebACLMigrationStackRequest *>(d->request);
+    return static_cast<const CreateWebACLMigrationStackRequest *>(WafResponse::request());
 }
 
 /*!

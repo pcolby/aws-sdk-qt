@@ -20,15 +20,12 @@
 #ifndef QTAWS_LOOKOUTFORVISIONREQUEST_P_H
 #define QTAWS_LOOKOUTFORVISIONREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "lookoutforvisionrequest.h"
-
 namespace QtAws {
 namespace LookoutforVision {
 
 class LookoutforVisionRequest;
 
-class LookoutforVisionRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class LookoutforVisionRequestPrivate {
 
 public:
     LookoutforVisionRequest::Action action; ///< LookoutforVision action to be performed.
@@ -39,6 +36,9 @@ public:
     LookoutforVisionRequestPrivate(const LookoutforVisionRequestPrivate &other, LookoutforVisionRequest * const q);
 
     static QString toString(const LookoutforVisionRequest::Action &action);
+
+protected:
+    LookoutforVisionRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(LookoutforVisionRequest)

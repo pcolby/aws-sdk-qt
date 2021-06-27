@@ -87,8 +87,7 @@ DeleteDhcpOptionsResponse::DeleteDhcpOptionsResponse(
  */
 const DeleteDhcpOptionsRequest * DeleteDhcpOptionsResponse::request() const
 {
-    Q_D(const DeleteDhcpOptionsResponse);
-    return static_cast<const DeleteDhcpOptionsRequest *>(d->request);
+    return static_cast<const DeleteDhcpOptionsRequest *>(Ec2Response::request());
 }
 
 /*!

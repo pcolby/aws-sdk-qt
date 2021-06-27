@@ -87,8 +87,7 @@ CreateRouteTableResponse::CreateRouteTableResponse(
  */
 const CreateRouteTableRequest * CreateRouteTableResponse::request() const
 {
-    Q_D(const CreateRouteTableResponse);
-    return static_cast<const CreateRouteTableRequest *>(d->request);
+    return static_cast<const CreateRouteTableRequest *>(Ec2Response::request());
 }
 
 /*!

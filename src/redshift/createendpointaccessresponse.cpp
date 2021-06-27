@@ -85,8 +85,7 @@ CreateEndpointAccessResponse::CreateEndpointAccessResponse(
  */
 const CreateEndpointAccessRequest * CreateEndpointAccessResponse::request() const
 {
-    Q_D(const CreateEndpointAccessResponse);
-    return static_cast<const CreateEndpointAccessRequest *>(d->request);
+    return static_cast<const CreateEndpointAccessRequest *>(RedshiftResponse::request());
 }
 
 /*!

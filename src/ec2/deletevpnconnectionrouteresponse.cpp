@@ -87,8 +87,7 @@ DeleteVpnConnectionRouteResponse::DeleteVpnConnectionRouteResponse(
  */
 const DeleteVpnConnectionRouteRequest * DeleteVpnConnectionRouteResponse::request() const
 {
-    Q_D(const DeleteVpnConnectionRouteResponse);
-    return static_cast<const DeleteVpnConnectionRouteRequest *>(d->request);
+    return static_cast<const DeleteVpnConnectionRouteRequest *>(Ec2Response::request());
 }
 
 /*!

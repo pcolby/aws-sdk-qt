@@ -20,19 +20,20 @@
 #ifndef QTAWS_LOOKOUTFORVISIONCLIENT_P_H
 #define QTAWS_LOOKOUTFORVISIONCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace LookoutforVision {
 
 class LookoutforVisionClient;
 
-class LookoutforVisionClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class LookoutforVisionClientPrivate {
 
 public:
     LookoutforVisionClientPrivate(LookoutforVisionClient * const q);
+
+protected:
+    LookoutforVisionClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(LookoutforVisionClient)

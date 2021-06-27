@@ -82,8 +82,7 @@ RegisterCACertificateResponse::RegisterCACertificateResponse(
  */
 const RegisterCACertificateRequest * RegisterCACertificateResponse::request() const
 {
-    Q_D(const RegisterCACertificateResponse);
-    return static_cast<const RegisterCACertificateRequest *>(d->request);
+    return static_cast<const RegisterCACertificateRequest *>(IoTResponse::request());
 }
 
 /*!

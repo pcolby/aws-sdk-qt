@@ -55,8 +55,7 @@ ListManagedPoliciesInPermissionSetResponse::ListManagedPoliciesInPermissionSetRe
  */
 const ListManagedPoliciesInPermissionSetRequest * ListManagedPoliciesInPermissionSetResponse::request() const
 {
-    Q_D(const ListManagedPoliciesInPermissionSetResponse);
-    return static_cast<const ListManagedPoliciesInPermissionSetRequest *>(d->request);
+    return static_cast<const ListManagedPoliciesInPermissionSetRequest *>(SSOAdminResponse::request());
 }
 
 /*!

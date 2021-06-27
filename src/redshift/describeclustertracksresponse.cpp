@@ -85,8 +85,7 @@ DescribeClusterTracksResponse::DescribeClusterTracksResponse(
  */
 const DescribeClusterTracksRequest * DescribeClusterTracksResponse::request() const
 {
-    Q_D(const DescribeClusterTracksResponse);
-    return static_cast<const DescribeClusterTracksRequest *>(d->request);
+    return static_cast<const DescribeClusterTracksRequest *>(RedshiftResponse::request());
 }
 
 /*!

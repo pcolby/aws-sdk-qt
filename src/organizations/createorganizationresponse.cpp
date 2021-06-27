@@ -141,8 +141,7 @@ CreateOrganizationResponse::CreateOrganizationResponse(
  */
 const CreateOrganizationRequest * CreateOrganizationResponse::request() const
 {
-    Q_D(const CreateOrganizationResponse);
-    return static_cast<const CreateOrganizationRequest *>(d->request);
+    return static_cast<const CreateOrganizationRequest *>(OrganizationsResponse::request());
 }
 
 /*!

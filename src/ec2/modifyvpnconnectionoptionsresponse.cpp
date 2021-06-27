@@ -87,8 +87,7 @@ ModifyVpnConnectionOptionsResponse::ModifyVpnConnectionOptionsResponse(
  */
 const ModifyVpnConnectionOptionsRequest * ModifyVpnConnectionOptionsResponse::request() const
 {
-    Q_D(const ModifyVpnConnectionOptionsResponse);
-    return static_cast<const ModifyVpnConnectionOptionsRequest *>(d->request);
+    return static_cast<const ModifyVpnConnectionOptionsRequest *>(Ec2Response::request());
 }
 
 /*!

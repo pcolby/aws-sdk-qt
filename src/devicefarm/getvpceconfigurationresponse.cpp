@@ -75,8 +75,7 @@ GetVPCEConfigurationResponse::GetVPCEConfigurationResponse(
  */
 const GetVPCEConfigurationRequest * GetVPCEConfigurationResponse::request() const
 {
-    Q_D(const GetVPCEConfigurationResponse);
-    return static_cast<const GetVPCEConfigurationRequest *>(d->request);
+    return static_cast<const GetVPCEConfigurationRequest *>(DeviceFarmResponse::request());
 }
 
 /*!

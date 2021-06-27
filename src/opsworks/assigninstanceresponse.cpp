@@ -161,8 +161,7 @@ AssignInstanceResponse::AssignInstanceResponse(
  */
 const AssignInstanceRequest * AssignInstanceResponse::request() const
 {
-    Q_D(const AssignInstanceResponse);
-    return static_cast<const AssignInstanceRequest *>(d->request);
+    return static_cast<const AssignInstanceRequest *>(OpsWorksResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ DeleteQueryLoggingConfigResponse::DeleteQueryLoggingConfigResponse(
  */
 const DeleteQueryLoggingConfigRequest * DeleteQueryLoggingConfigResponse::request() const
 {
-    Q_D(const DeleteQueryLoggingConfigResponse);
-    return static_cast<const DeleteQueryLoggingConfigRequest *>(d->request);
+    return static_cast<const DeleteQueryLoggingConfigRequest *>(Route53Response::request());
 }
 
 /*!

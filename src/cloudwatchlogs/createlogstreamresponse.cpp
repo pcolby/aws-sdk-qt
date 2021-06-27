@@ -84,8 +84,7 @@ CreateLogStreamResponse::CreateLogStreamResponse(
  */
 const CreateLogStreamRequest * CreateLogStreamResponse::request() const
 {
-    Q_D(const CreateLogStreamResponse);
-    return static_cast<const CreateLogStreamRequest *>(d->request);
+    return static_cast<const CreateLogStreamRequest *>(CloudWatchLogsResponse::request());
 }
 
 /*!

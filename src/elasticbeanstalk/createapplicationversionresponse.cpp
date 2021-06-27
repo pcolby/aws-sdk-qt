@@ -77,8 +77,7 @@ CreateApplicationVersionResponse::CreateApplicationVersionResponse(
  */
 const CreateApplicationVersionRequest * CreateApplicationVersionResponse::request() const
 {
-    Q_D(const CreateApplicationVersionResponse);
-    return static_cast<const CreateApplicationVersionRequest *>(d->request);
+    return static_cast<const CreateApplicationVersionRequest *>(ElasticBeanstalkResponse::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ ListPiiEntitiesDetectionJobsResponse::ListPiiEntitiesDetectionJobsResponse(
  */
 const ListPiiEntitiesDetectionJobsRequest * ListPiiEntitiesDetectionJobsResponse::request() const
 {
-    Q_D(const ListPiiEntitiesDetectionJobsResponse);
-    return static_cast<const ListPiiEntitiesDetectionJobsRequest *>(d->request);
+    return static_cast<const ListPiiEntitiesDetectionJobsRequest *>(ComprehendResponse::request());
 }
 
 /*!

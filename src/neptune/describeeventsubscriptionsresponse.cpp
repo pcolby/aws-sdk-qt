@@ -72,8 +72,7 @@ DescribeEventSubscriptionsResponse::DescribeEventSubscriptionsResponse(
  */
 const DescribeEventSubscriptionsRequest * DescribeEventSubscriptionsResponse::request() const
 {
-    Q_D(const DescribeEventSubscriptionsResponse);
-    return static_cast<const DescribeEventSubscriptionsRequest *>(d->request);
+    return static_cast<const DescribeEventSubscriptionsRequest *>(NeptuneResponse::request());
 }
 
 /*!

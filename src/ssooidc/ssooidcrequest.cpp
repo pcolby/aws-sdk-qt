@@ -45,7 +45,7 @@ namespace SSOOIDC {
  * Constructs a SsooidcRequest object for SSOOIDC \a action.
  */
 SsooidcRequest::SsooidcRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new SsooidcRequestPrivate(action, this))
+    : d_ptr(new SsooidcRequestPrivate(action, this))
 {
 
 }
@@ -54,7 +54,8 @@ SsooidcRequest::SsooidcRequest(const Action action)
  * Constructs a copy of \a other.
  */
 SsooidcRequest::SsooidcRequest(const SsooidcRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new SsooidcRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new SsooidcRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -77,7 +78,7 @@ SsooidcRequest& SsooidcRequest::operator=(const SsooidcRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SsooidcRequestPrivate.
  */
-SsooidcRequest::SsooidcRequest(SsooidcRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+SsooidcRequest::SsooidcRequest(SsooidcRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -246,7 +247,7 @@ QNetworkRequest SsooidcRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 SsooidcRequestPrivate::SsooidcRequestPrivate(const SsooidcRequest::Action action, SsooidcRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -261,8 +262,8 @@ SsooidcRequestPrivate::SsooidcRequestPrivate(const SsooidcRequest::Action action
  */
 SsooidcRequestPrivate::SsooidcRequestPrivate(const SsooidcRequestPrivate &other,
                                      SsooidcRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

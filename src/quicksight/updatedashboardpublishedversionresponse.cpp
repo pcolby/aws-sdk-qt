@@ -60,8 +60,7 @@ UpdateDashboardPublishedVersionResponse::UpdateDashboardPublishedVersionResponse
  */
 const UpdateDashboardPublishedVersionRequest * UpdateDashboardPublishedVersionResponse::request() const
 {
-    Q_D(const UpdateDashboardPublishedVersionResponse);
-    return static_cast<const UpdateDashboardPublishedVersionRequest *>(d->request);
+    return static_cast<const UpdateDashboardPublishedVersionRequest *>(QuickSightResponse::request());
 }
 
 /*!

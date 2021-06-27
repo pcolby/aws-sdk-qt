@@ -68,8 +68,7 @@ DeletePolicyResponse::DeletePolicyResponse(
  */
 const DeletePolicyRequest * DeletePolicyResponse::request() const
 {
-    Q_D(const DeletePolicyResponse);
-    return static_cast<const DeletePolicyRequest *>(d->request);
+    return static_cast<const DeletePolicyRequest *>(AutoScalingResponse::request());
 }
 
 /*!

@@ -75,8 +75,7 @@ DeleteCostCategoryDefinitionResponse::DeleteCostCategoryDefinitionResponse(
  */
 const DeleteCostCategoryDefinitionRequest * DeleteCostCategoryDefinitionResponse::request() const
 {
-    Q_D(const DeleteCostCategoryDefinitionResponse);
-    return static_cast<const DeleteCostCategoryDefinitionRequest *>(d->request);
+    return static_cast<const DeleteCostCategoryDefinitionRequest *>(CostExplorerResponse::request());
 }
 
 /*!

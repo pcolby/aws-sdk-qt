@@ -62,8 +62,7 @@ ListMigrationTasksResponse::ListMigrationTasksResponse(
  */
 const ListMigrationTasksRequest * ListMigrationTasksResponse::request() const
 {
-    Q_D(const ListMigrationTasksResponse);
-    return static_cast<const ListMigrationTasksRequest *>(d->request);
+    return static_cast<const ListMigrationTasksRequest *>(MigrationHubResponse::request());
 }
 
 /*!

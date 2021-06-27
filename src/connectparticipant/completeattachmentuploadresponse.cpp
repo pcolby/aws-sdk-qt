@@ -65,8 +65,7 @@ CompleteAttachmentUploadResponse::CompleteAttachmentUploadResponse(
  */
 const CompleteAttachmentUploadRequest * CompleteAttachmentUploadResponse::request() const
 {
-    Q_D(const CompleteAttachmentUploadResponse);
-    return static_cast<const CompleteAttachmentUploadRequest *>(d->request);
+    return static_cast<const CompleteAttachmentUploadRequest *>(ConnectParticipantResponse::request());
 }
 
 /*!

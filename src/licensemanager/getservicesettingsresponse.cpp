@@ -59,8 +59,7 @@ GetServiceSettingsResponse::GetServiceSettingsResponse(
  */
 const GetServiceSettingsRequest * GetServiceSettingsResponse::request() const
 {
-    Q_D(const GetServiceSettingsResponse);
-    return static_cast<const GetServiceSettingsRequest *>(d->request);
+    return static_cast<const GetServiceSettingsRequest *>(LicenseManagerResponse::request());
 }
 
 /*!

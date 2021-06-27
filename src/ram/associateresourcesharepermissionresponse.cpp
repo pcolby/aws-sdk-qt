@@ -64,8 +64,7 @@ AssociateResourceSharePermissionResponse::AssociateResourceSharePermissionRespon
  */
 const AssociateResourceSharePermissionRequest * AssociateResourceSharePermissionResponse::request() const
 {
-    Q_D(const AssociateResourceSharePermissionResponse);
-    return static_cast<const AssociateResourceSharePermissionRequest *>(d->request);
+    return static_cast<const AssociateResourceSharePermissionRequest *>(RamResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ FinalizeCutoverResponse::FinalizeCutoverResponse(
  */
 const FinalizeCutoverRequest * FinalizeCutoverResponse::request() const
 {
-    Q_D(const FinalizeCutoverResponse);
-    return static_cast<const FinalizeCutoverRequest *>(d->request);
+    return static_cast<const FinalizeCutoverRequest *>(mgnResponse::request());
 }
 
 /*!

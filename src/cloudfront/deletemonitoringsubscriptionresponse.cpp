@@ -60,8 +60,7 @@ DeleteMonitoringSubscriptionResponse::DeleteMonitoringSubscriptionResponse(
  */
 const DeleteMonitoringSubscriptionRequest * DeleteMonitoringSubscriptionResponse::request() const
 {
-    Q_D(const DeleteMonitoringSubscriptionResponse);
-    return static_cast<const DeleteMonitoringSubscriptionRequest *>(d->request);
+    return static_cast<const DeleteMonitoringSubscriptionRequest *>(CloudFrontResponse::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ InvokeScreenAutomationResponse::InvokeScreenAutomationResponse(
  */
 const InvokeScreenAutomationRequest * InvokeScreenAutomationResponse::request() const
 {
-    Q_D(const InvokeScreenAutomationResponse);
-    return static_cast<const InvokeScreenAutomationRequest *>(d->request);
+    return static_cast<const InvokeScreenAutomationRequest *>(HoneycodeResponse::request());
 }
 
 /*!

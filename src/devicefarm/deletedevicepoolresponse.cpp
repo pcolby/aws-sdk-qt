@@ -75,8 +75,7 @@ DeleteDevicePoolResponse::DeleteDevicePoolResponse(
  */
 const DeleteDevicePoolRequest * DeleteDevicePoolResponse::request() const
 {
-    Q_D(const DeleteDevicePoolResponse);
-    return static_cast<const DeleteDevicePoolRequest *>(d->request);
+    return static_cast<const DeleteDevicePoolRequest *>(DeviceFarmResponse::request());
 }
 
 /*!

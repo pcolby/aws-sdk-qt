@@ -143,6 +143,7 @@ public:
 
 protected:
     /// @cond internal
+    ServiceCatalogRequestPrivate * const d_ptr; ///< Internal d-pointer.
     ServiceCatalogRequest(ServiceCatalogRequestPrivate * const d);
     /// @endcond
 

@@ -87,8 +87,7 @@ ConfirmProductInstanceResponse::ConfirmProductInstanceResponse(
  */
 const ConfirmProductInstanceRequest * ConfirmProductInstanceResponse::request() const
 {
-    Q_D(const ConfirmProductInstanceResponse);
-    return static_cast<const ConfirmProductInstanceRequest *>(d->request);
+    return static_cast<const ConfirmProductInstanceRequest *>(Ec2Response::request());
 }
 
 /*!

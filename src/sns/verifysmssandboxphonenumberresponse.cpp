@@ -75,8 +75,7 @@ VerifySMSSandboxPhoneNumberResponse::VerifySMSSandboxPhoneNumberResponse(
  */
 const VerifySMSSandboxPhoneNumberRequest * VerifySMSSandboxPhoneNumberResponse::request() const
 {
-    Q_D(const VerifySMSSandboxPhoneNumberResponse);
-    return static_cast<const VerifySMSSandboxPhoneNumberRequest *>(d->request);
+    return static_cast<const VerifySMSSandboxPhoneNumberRequest *>(SnsResponse::request());
 }
 
 /*!

@@ -141,8 +141,7 @@ DescribeHandshakeResponse::DescribeHandshakeResponse(
  */
 const DescribeHandshakeRequest * DescribeHandshakeResponse::request() const
 {
-    Q_D(const DescribeHandshakeResponse);
-    return static_cast<const DescribeHandshakeRequest *>(d->request);
+    return static_cast<const DescribeHandshakeRequest *>(OrganizationsResponse::request());
 }
 
 /*!

@@ -103,8 +103,7 @@ EnableSecurityHubResponse::EnableSecurityHubResponse(
  */
 const EnableSecurityHubRequest * EnableSecurityHubResponse::request() const
 {
-    Q_D(const EnableSecurityHubResponse);
-    return static_cast<const EnableSecurityHubRequest *>(d->request);
+    return static_cast<const EnableSecurityHubRequest *>(SecurityHubResponse::request());
 }
 
 /*!

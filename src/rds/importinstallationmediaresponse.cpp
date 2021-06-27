@@ -119,8 +119,7 @@ ImportInstallationMediaResponse::ImportInstallationMediaResponse(
  */
 const ImportInstallationMediaRequest * ImportInstallationMediaResponse::request() const
 {
-    Q_D(const ImportInstallationMediaResponse);
-    return static_cast<const ImportInstallationMediaRequest *>(d->request);
+    return static_cast<const ImportInstallationMediaRequest *>(RdsResponse::request());
 }
 
 /*!

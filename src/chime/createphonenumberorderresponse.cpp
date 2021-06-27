@@ -98,8 +98,7 @@ CreatePhoneNumberOrderResponse::CreatePhoneNumberOrderResponse(
  */
 const CreatePhoneNumberOrderRequest * CreatePhoneNumberOrderResponse::request() const
 {
-    Q_D(const CreatePhoneNumberOrderResponse);
-    return static_cast<const CreatePhoneNumberOrderRequest *>(d->request);
+    return static_cast<const CreatePhoneNumberOrderRequest *>(ChimeResponse::request());
 }
 
 /*!

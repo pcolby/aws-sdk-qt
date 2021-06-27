@@ -66,8 +66,7 @@ AssociateSoftwareTokenResponse::AssociateSoftwareTokenResponse(
  */
 const AssociateSoftwareTokenRequest * AssociateSoftwareTokenResponse::request() const
 {
-    Q_D(const AssociateSoftwareTokenResponse);
-    return static_cast<const AssociateSoftwareTokenRequest *>(d->request);
+    return static_cast<const AssociateSoftwareTokenRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

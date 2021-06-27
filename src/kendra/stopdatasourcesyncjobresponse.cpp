@@ -56,8 +56,7 @@ StopDataSourceSyncJobResponse::StopDataSourceSyncJobResponse(
  */
 const StopDataSourceSyncJobRequest * StopDataSourceSyncJobResponse::request() const
 {
-    Q_D(const StopDataSourceSyncJobResponse);
-    return static_cast<const StopDataSourceSyncJobRequest *>(d->request);
+    return static_cast<const StopDataSourceSyncJobRequest *>(kendraResponse::request());
 }
 
 /*!

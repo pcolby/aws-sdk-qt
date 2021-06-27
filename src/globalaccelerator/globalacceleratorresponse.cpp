@@ -37,7 +37,7 @@ namespace GlobalAccelerator {
  * Constructs a GlobalAcceleratorResponse object with parent \a parent.
  */
 GlobalAcceleratorResponse::GlobalAcceleratorResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new GlobalAcceleratorResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new GlobalAcceleratorResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ GlobalAcceleratorResponse::GlobalAcceleratorResponse(QObject * const parent)
  * implementation that inherits from GlobalAcceleratorResponsePrivate.
  */
 GlobalAcceleratorResponse::GlobalAcceleratorResponse(GlobalAcceleratorResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void GlobalAcceleratorResponse::parseFailure(QIODevice &response)
  * Constructs a GlobalAcceleratorResponsePrivate object with public implementation \a q.
  */
 GlobalAcceleratorResponsePrivate::GlobalAcceleratorResponsePrivate(
-    GlobalAcceleratorResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    GlobalAcceleratorResponse * const q) : q_ptr(q)
 {
 
 }

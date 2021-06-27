@@ -56,8 +56,7 @@ StopSolutionVersionCreationResponse::StopSolutionVersionCreationResponse(
  */
 const StopSolutionVersionCreationRequest * StopSolutionVersionCreationResponse::request() const
 {
-    Q_D(const StopSolutionVersionCreationResponse);
-    return static_cast<const StopSolutionVersionCreationRequest *>(d->request);
+    return static_cast<const StopSolutionVersionCreationRequest *>(PersonalizeResponse::request());
 }
 
 /*!

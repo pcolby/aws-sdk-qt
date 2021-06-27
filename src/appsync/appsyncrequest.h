@@ -97,6 +97,7 @@ public:
 
 protected:
     /// @cond internal
+    AppSyncRequestPrivate * const d_ptr; ///< Internal d-pointer.
     AppSyncRequest(AppSyncRequestPrivate * const d);
     /// @endcond
 

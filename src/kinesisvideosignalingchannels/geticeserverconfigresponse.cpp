@@ -57,8 +57,7 @@ GetIceServerConfigResponse::GetIceServerConfigResponse(
  */
 const GetIceServerConfigRequest * GetIceServerConfigResponse::request() const
 {
-    Q_D(const GetIceServerConfigResponse);
-    return static_cast<const GetIceServerConfigRequest *>(d->request);
+    return static_cast<const GetIceServerConfigRequest *>(KinesisVideoSignalingChannelsResponse::request());
 }
 
 /*!

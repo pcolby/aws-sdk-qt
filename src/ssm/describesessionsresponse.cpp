@@ -98,8 +98,7 @@ DescribeSessionsResponse::DescribeSessionsResponse(
  */
 const DescribeSessionsRequest * DescribeSessionsResponse::request() const
 {
-    Q_D(const DescribeSessionsResponse);
-    return static_cast<const DescribeSessionsRequest *>(d->request);
+    return static_cast<const DescribeSessionsRequest *>(SsmResponse::request());
 }
 
 /*!

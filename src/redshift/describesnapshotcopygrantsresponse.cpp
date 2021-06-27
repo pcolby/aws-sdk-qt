@@ -85,8 +85,7 @@ DescribeSnapshotCopyGrantsResponse::DescribeSnapshotCopyGrantsResponse(
  */
 const DescribeSnapshotCopyGrantsRequest * DescribeSnapshotCopyGrantsResponse::request() const
 {
-    Q_D(const DescribeSnapshotCopyGrantsResponse);
-    return static_cast<const DescribeSnapshotCopyGrantsRequest *>(d->request);
+    return static_cast<const DescribeSnapshotCopyGrantsRequest *>(RedshiftResponse::request());
 }
 
 /*!

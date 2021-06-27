@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    SnowballResponsePrivate * const d_ptr; ///< Internal d-pointer.
     SnowballResponse(SnowballResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

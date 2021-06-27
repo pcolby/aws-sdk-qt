@@ -73,8 +73,7 @@ UpdateVirtualRouterResponse::UpdateVirtualRouterResponse(
  */
 const UpdateVirtualRouterRequest * UpdateVirtualRouterResponse::request() const
 {
-    Q_D(const UpdateVirtualRouterResponse);
-    return static_cast<const UpdateVirtualRouterRequest *>(d->request);
+    return static_cast<const UpdateVirtualRouterRequest *>(AppMeshResponse::request());
 }
 
 /*!

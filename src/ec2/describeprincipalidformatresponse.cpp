@@ -87,8 +87,7 @@ DescribePrincipalIdFormatResponse::DescribePrincipalIdFormatResponse(
  */
 const DescribePrincipalIdFormatRequest * DescribePrincipalIdFormatResponse::request() const
 {
-    Q_D(const DescribePrincipalIdFormatResponse);
-    return static_cast<const DescribePrincipalIdFormatRequest *>(d->request);
+    return static_cast<const DescribePrincipalIdFormatRequest *>(Ec2Response::request());
 }
 
 /*!

@@ -439,8 +439,7 @@ DeletePullRequestApprovalRuleResponse::DeletePullRequestApprovalRuleResponse(
  */
 const DeletePullRequestApprovalRuleRequest * DeletePullRequestApprovalRuleResponse::request() const
 {
-    Q_D(const DeletePullRequestApprovalRuleResponse);
-    return static_cast<const DeletePullRequestApprovalRuleRequest *>(d->request);
+    return static_cast<const DeletePullRequestApprovalRuleRequest *>(CodeCommitResponse::request());
 }
 
 /*!

@@ -78,8 +78,7 @@ DescribeEventBusResponse::DescribeEventBusResponse(
  */
 const DescribeEventBusRequest * DescribeEventBusResponse::request() const
 {
-    Q_D(const DescribeEventBusResponse);
-    return static_cast<const DescribeEventBusRequest *>(d->request);
+    return static_cast<const DescribeEventBusRequest *>(CloudWatchEventsResponse::request());
 }
 
 /*!

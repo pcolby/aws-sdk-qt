@@ -65,8 +65,7 @@ DeleteNodegroupResponse::DeleteNodegroupResponse(
  */
 const DeleteNodegroupRequest * DeleteNodegroupResponse::request() const
 {
-    Q_D(const DeleteNodegroupResponse);
-    return static_cast<const DeleteNodegroupRequest *>(d->request);
+    return static_cast<const DeleteNodegroupRequest *>(EksResponse::request());
 }
 
 /*!

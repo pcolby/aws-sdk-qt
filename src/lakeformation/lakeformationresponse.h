@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    LakeFormationResponsePrivate * const d_ptr; ///< Internal d-pointer.
     LakeFormationResponse(LakeFormationResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -75,8 +75,7 @@ StopConfigurationRecorderResponse::StopConfigurationRecorderResponse(
  */
 const StopConfigurationRecorderRequest * StopConfigurationRecorderResponse::request() const
 {
-    Q_D(const StopConfigurationRecorderResponse);
-    return static_cast<const StopConfigurationRecorderRequest *>(d->request);
+    return static_cast<const StopConfigurationRecorderRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ StopTriggerResponse::StopTriggerResponse(
  */
 const StopTriggerRequest * StopTriggerResponse::request() const
 {
-    Q_D(const StopTriggerResponse);
-    return static_cast<const StopTriggerRequest *>(d->request);
+    return static_cast<const StopTriggerRequest *>(GlueResponse::request());
 }
 
 /*!

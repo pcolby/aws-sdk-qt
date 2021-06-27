@@ -62,8 +62,7 @@ ListSmartHomeAppliancesResponse::ListSmartHomeAppliancesResponse(
  */
 const ListSmartHomeAppliancesRequest * ListSmartHomeAppliancesResponse::request() const
 {
-    Q_D(const ListSmartHomeAppliancesResponse);
-    return static_cast<const ListSmartHomeAppliancesRequest *>(d->request);
+    return static_cast<const ListSmartHomeAppliancesRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

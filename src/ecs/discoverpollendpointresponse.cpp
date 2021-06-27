@@ -72,8 +72,7 @@ DiscoverPollEndpointResponse::DiscoverPollEndpointResponse(
  */
 const DiscoverPollEndpointRequest * DiscoverPollEndpointResponse::request() const
 {
-    Q_D(const DiscoverPollEndpointResponse);
-    return static_cast<const DiscoverPollEndpointRequest *>(d->request);
+    return static_cast<const DiscoverPollEndpointRequest *>(EcsResponse::request());
 }
 
 /*!

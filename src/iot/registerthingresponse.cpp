@@ -82,8 +82,7 @@ RegisterThingResponse::RegisterThingResponse(
  */
 const RegisterThingRequest * RegisterThingResponse::request() const
 {
-    Q_D(const RegisterThingResponse);
-    return static_cast<const RegisterThingRequest *>(d->request);
+    return static_cast<const RegisterThingRequest *>(IoTResponse::request());
 }
 
 /*!

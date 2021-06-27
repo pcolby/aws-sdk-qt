@@ -55,8 +55,7 @@ DeleteBucketCorsResponse::DeleteBucketCorsResponse(
  */
 const DeleteBucketCorsRequest * DeleteBucketCorsResponse::request() const
 {
-    Q_D(const DeleteBucketCorsResponse);
-    return static_cast<const DeleteBucketCorsRequest *>(d->request);
+    return static_cast<const DeleteBucketCorsRequest *>(S3Response::request());
 }
 
 /*!

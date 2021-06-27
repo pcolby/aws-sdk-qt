@@ -74,8 +74,7 @@ DescribeTableResponse::DescribeTableResponse(
  */
 const DescribeTableRequest * DescribeTableResponse::request() const
 {
-    Q_D(const DescribeTableResponse);
-    return static_cast<const DescribeTableRequest *>(d->request);
+    return static_cast<const DescribeTableRequest *>(DynamoDBResponse::request());
 }
 
 /*!

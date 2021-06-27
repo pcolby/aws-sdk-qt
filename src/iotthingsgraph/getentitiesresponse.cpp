@@ -66,8 +66,7 @@ GetEntitiesResponse::GetEntitiesResponse(
  */
 const GetEntitiesRequest * GetEntitiesResponse::request() const
 {
-    Q_D(const GetEntitiesResponse);
-    return static_cast<const GetEntitiesRequest *>(d->request);
+    return static_cast<const GetEntitiesRequest *>(IoTThingsGraphResponse::request());
 }
 
 /*!

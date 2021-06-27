@@ -143,8 +143,7 @@ DeleteUserProfileResponse::DeleteUserProfileResponse(
  */
 const DeleteUserProfileRequest * DeleteUserProfileResponse::request() const
 {
-    Q_D(const DeleteUserProfileResponse);
-    return static_cast<const DeleteUserProfileRequest *>(d->request);
+    return static_cast<const DeleteUserProfileRequest *>(CodeStarResponse::request());
 }
 
 /*!

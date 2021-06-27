@@ -124,8 +124,7 @@ DescribeSMBFileSharesResponse::DescribeSMBFileSharesResponse(
  */
 const DescribeSMBFileSharesRequest * DescribeSMBFileSharesResponse::request() const
 {
-    Q_D(const DescribeSMBFileSharesResponse);
-    return static_cast<const DescribeSMBFileSharesRequest *>(d->request);
+    return static_cast<const DescribeSMBFileSharesRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

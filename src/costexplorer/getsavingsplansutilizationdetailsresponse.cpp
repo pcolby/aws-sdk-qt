@@ -75,8 +75,7 @@ GetSavingsPlansUtilizationDetailsResponse::GetSavingsPlansUtilizationDetailsResp
  */
 const GetSavingsPlansUtilizationDetailsRequest * GetSavingsPlansUtilizationDetailsResponse::request() const
 {
-    Q_D(const GetSavingsPlansUtilizationDetailsResponse);
-    return static_cast<const GetSavingsPlansUtilizationDetailsRequest *>(d->request);
+    return static_cast<const GetSavingsPlansUtilizationDetailsRequest *>(CostExplorerResponse::request());
 }
 
 /*!

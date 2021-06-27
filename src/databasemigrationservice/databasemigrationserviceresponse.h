@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    DatabaseMigrationServiceResponsePrivate * const d_ptr; ///< Internal d-pointer.
     DatabaseMigrationServiceResponse(DatabaseMigrationServiceResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

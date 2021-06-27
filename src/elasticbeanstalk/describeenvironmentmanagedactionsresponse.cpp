@@ -77,8 +77,7 @@ DescribeEnvironmentManagedActionsResponse::DescribeEnvironmentManagedActionsResp
  */
 const DescribeEnvironmentManagedActionsRequest * DescribeEnvironmentManagedActionsResponse::request() const
 {
-    Q_D(const DescribeEnvironmentManagedActionsResponse);
-    return static_cast<const DescribeEnvironmentManagedActionsRequest *>(d->request);
+    return static_cast<const DescribeEnvironmentManagedActionsRequest *>(ElasticBeanstalkResponse::request());
 }
 
 /*!

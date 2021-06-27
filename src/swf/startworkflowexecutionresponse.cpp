@@ -71,8 +71,7 @@ StartWorkflowExecutionResponse::StartWorkflowExecutionResponse(
  */
 const StartWorkflowExecutionRequest * StartWorkflowExecutionResponse::request() const
 {
-    Q_D(const StartWorkflowExecutionResponse);
-    return static_cast<const StartWorkflowExecutionRequest *>(d->request);
+    return static_cast<const StartWorkflowExecutionRequest *>(SwfResponse::request());
 }
 
 /*!

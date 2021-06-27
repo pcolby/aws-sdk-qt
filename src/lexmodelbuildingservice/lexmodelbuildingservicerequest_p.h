@@ -20,15 +20,12 @@
 #ifndef QTAWS_LEXMODELBUILDINGSERVICEREQUEST_P_H
 #define QTAWS_LEXMODELBUILDINGSERVICEREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "lexmodelbuildingservicerequest.h"
-
 namespace QtAws {
 namespace LexModelBuildingService {
 
 class LexModelBuildingServiceRequest;
 
-class LexModelBuildingServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class LexModelBuildingServiceRequestPrivate {
 
 public:
     LexModelBuildingServiceRequest::Action action; ///< LexModelBuildingService action to be performed.
@@ -39,6 +36,9 @@ public:
     LexModelBuildingServiceRequestPrivate(const LexModelBuildingServiceRequestPrivate &other, LexModelBuildingServiceRequest * const q);
 
     static QString toString(const LexModelBuildingServiceRequest::Action &action);
+
+protected:
+    LexModelBuildingServiceRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(LexModelBuildingServiceRequest)

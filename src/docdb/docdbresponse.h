@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    DocDBResponsePrivate * const d_ptr; ///< Internal d-pointer.
     DocDBResponse(DocDBResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

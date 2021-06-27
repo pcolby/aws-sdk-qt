@@ -85,8 +85,7 @@ ModifyEndpointAccessResponse::ModifyEndpointAccessResponse(
  */
 const ModifyEndpointAccessRequest * ModifyEndpointAccessResponse::request() const
 {
-    Q_D(const ModifyEndpointAccessResponse);
-    return static_cast<const ModifyEndpointAccessRequest *>(d->request);
+    return static_cast<const ModifyEndpointAccessRequest *>(RedshiftResponse::request());
 }
 
 /*!

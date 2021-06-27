@@ -106,6 +106,12 @@ public slots:
     UpdateLedgerResponse * updateLedger(const UpdateLedgerRequest &request);
     UpdateLedgerPermissionsModeResponse * updateLedgerPermissionsMode(const UpdateLedgerPermissionsModeRequest &request);
 
+protected:
+    /// @cond internal
+    QldbClientPrivate * const d_ptr; ///< Internal d-pointer.
+    QldbClient(QldbClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(QldbClient)
     Q_DISABLE_COPY(QldbClient)

@@ -92,16 +92,16 @@ IoTDeviceAdvisorClient::IoTDeviceAdvisorClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new IoTDeviceAdvisorClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-09-18"),
+    QStringLiteral("api.iotdeviceadvisor"),
+    QStringLiteral("AWS IoT Core Device Advisor"),
+    QStringLiteral("iotdeviceadvisor"),
+    parent), d_ptr(new IoTDeviceAdvisorClientPrivate(this))
 {
-    Q_D(IoTDeviceAdvisorClient);
-    d->apiVersion = QStringLiteral("2020-09-18");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("api.iotdeviceadvisor");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS IoT Core Device Advisor");
-    d->serviceName = QStringLiteral("iotdeviceadvisor");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -120,16 +120,16 @@ IoTDeviceAdvisorClient::IoTDeviceAdvisorClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new IoTDeviceAdvisorClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-09-18"),
+    QStringLiteral("api.iotdeviceadvisor"),
+    QStringLiteral("AWS IoT Core Device Advisor"),
+    QStringLiteral("iotdeviceadvisor"),
+    parent), d_ptr(new IoTDeviceAdvisorClientPrivate(this))
 {
-    Q_D(IoTDeviceAdvisorClient);
-    d->apiVersion = QStringLiteral("2020-09-18");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("api.iotdeviceadvisor");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS IoT Core Device Advisor");
-    d->serviceName = QStringLiteral("iotdeviceadvisor");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -314,10 +314,9 @@ UpdateSuiteDefinitionResponse * IoTDeviceAdvisorClient::updateSuiteDefinition(co
 /*!
  * Constructs a IoTDeviceAdvisorClientPrivate object with public implementation \a q.
  */
-IoTDeviceAdvisorClientPrivate::IoTDeviceAdvisorClientPrivate(IoTDeviceAdvisorClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+IoTDeviceAdvisorClientPrivate::IoTDeviceAdvisorClientPrivate(IoTDeviceAdvisorClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace IoTDeviceAdvisor

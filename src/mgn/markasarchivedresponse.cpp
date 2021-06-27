@@ -56,8 +56,7 @@ MarkAsArchivedResponse::MarkAsArchivedResponse(
  */
 const MarkAsArchivedRequest * MarkAsArchivedResponse::request() const
 {
-    Q_D(const MarkAsArchivedResponse);
-    return static_cast<const MarkAsArchivedRequest *>(d->request);
+    return static_cast<const MarkAsArchivedRequest *>(mgnResponse::request());
 }
 
 /*!

@@ -73,8 +73,7 @@ DescribeVirtualNodeResponse::DescribeVirtualNodeResponse(
  */
 const DescribeVirtualNodeRequest * DescribeVirtualNodeResponse::request() const
 {
-    Q_D(const DescribeVirtualNodeResponse);
-    return static_cast<const DescribeVirtualNodeRequest *>(d->request);
+    return static_cast<const DescribeVirtualNodeRequest *>(AppMeshResponse::request());
 }
 
 /*!

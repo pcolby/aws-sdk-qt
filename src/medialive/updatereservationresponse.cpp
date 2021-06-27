@@ -55,8 +55,7 @@ UpdateReservationResponse::UpdateReservationResponse(
  */
 const UpdateReservationRequest * UpdateReservationResponse::request() const
 {
-    Q_D(const UpdateReservationResponse);
-    return static_cast<const UpdateReservationRequest *>(d->request);
+    return static_cast<const UpdateReservationRequest *>(MediaLiveResponse::request());
 }
 
 /*!

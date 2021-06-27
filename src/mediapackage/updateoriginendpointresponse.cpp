@@ -55,8 +55,7 @@ UpdateOriginEndpointResponse::UpdateOriginEndpointResponse(
  */
 const UpdateOriginEndpointRequest * UpdateOriginEndpointResponse::request() const
 {
-    Q_D(const UpdateOriginEndpointResponse);
-    return static_cast<const UpdateOriginEndpointRequest *>(d->request);
+    return static_cast<const UpdateOriginEndpointRequest *>(MediaPackageResponse::request());
 }
 
 /*!

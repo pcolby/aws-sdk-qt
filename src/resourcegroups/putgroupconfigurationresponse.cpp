@@ -99,8 +99,7 @@ PutGroupConfigurationResponse::PutGroupConfigurationResponse(
  */
 const PutGroupConfigurationRequest * PutGroupConfigurationResponse::request() const
 {
-    Q_D(const PutGroupConfigurationResponse);
-    return static_cast<const PutGroupConfigurationRequest *>(d->request);
+    return static_cast<const PutGroupConfigurationRequest *>(ResourceGroupsResponse::request());
 }
 
 /*!

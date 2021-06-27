@@ -161,8 +161,7 @@ DescribeOperatingSystemsResponse::DescribeOperatingSystemsResponse(
  */
 const DescribeOperatingSystemsRequest * DescribeOperatingSystemsResponse::request() const
 {
-    Q_D(const DescribeOperatingSystemsResponse);
-    return static_cast<const DescribeOperatingSystemsRequest *>(d->request);
+    return static_cast<const DescribeOperatingSystemsRequest *>(OpsWorksResponse::request());
 }
 
 /*!

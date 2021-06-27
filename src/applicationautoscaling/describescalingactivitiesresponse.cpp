@@ -137,8 +137,7 @@ DescribeScalingActivitiesResponse::DescribeScalingActivitiesResponse(
  */
 const DescribeScalingActivitiesRequest * DescribeScalingActivitiesResponse::request() const
 {
-    Q_D(const DescribeScalingActivitiesResponse);
-    return static_cast<const DescribeScalingActivitiesRequest *>(d->request);
+    return static_cast<const DescribeScalingActivitiesRequest *>(ApplicationAutoScalingResponse::request());
 }
 
 /*!

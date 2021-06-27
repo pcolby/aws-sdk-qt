@@ -87,8 +87,7 @@ DeleteRouteTableResponse::DeleteRouteTableResponse(
  */
 const DeleteRouteTableRequest * DeleteRouteTableResponse::request() const
 {
-    Q_D(const DeleteRouteTableResponse);
-    return static_cast<const DeleteRouteTableRequest *>(d->request);
+    return static_cast<const DeleteRouteTableRequest *>(Ec2Response::request());
 }
 
 /*!

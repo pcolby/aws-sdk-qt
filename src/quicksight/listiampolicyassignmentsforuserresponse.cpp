@@ -60,8 +60,7 @@ ListIAMPolicyAssignmentsForUserResponse::ListIAMPolicyAssignmentsForUserResponse
  */
 const ListIAMPolicyAssignmentsForUserRequest * ListIAMPolicyAssignmentsForUserResponse::request() const
 {
-    Q_D(const ListIAMPolicyAssignmentsForUserResponse);
-    return static_cast<const ListIAMPolicyAssignmentsForUserRequest *>(d->request);
+    return static_cast<const ListIAMPolicyAssignmentsForUserRequest *>(QuickSightResponse::request());
 }
 
 /*!

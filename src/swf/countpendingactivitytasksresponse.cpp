@@ -71,8 +71,7 @@ CountPendingActivityTasksResponse::CountPendingActivityTasksResponse(
  */
 const CountPendingActivityTasksRequest * CountPendingActivityTasksResponse::request() const
 {
-    Q_D(const CountPendingActivityTasksResponse);
-    return static_cast<const CountPendingActivityTasksRequest *>(d->request);
+    return static_cast<const CountPendingActivityTasksRequest *>(SwfResponse::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ SendProjectSessionActionResponse::SendProjectSessionActionResponse(
  */
 const SendProjectSessionActionRequest * SendProjectSessionActionResponse::request() const
 {
-    Q_D(const SendProjectSessionActionResponse);
-    return static_cast<const SendProjectSessionActionRequest *>(d->request);
+    return static_cast<const SendProjectSessionActionRequest *>(GlueDataBrewResponse::request());
 }
 
 /*!

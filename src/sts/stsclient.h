@@ -70,6 +70,12 @@ public slots:
     GetFederationTokenResponse * getFederationToken(const GetFederationTokenRequest &request);
     GetSessionTokenResponse * getSessionToken(const GetSessionTokenRequest &request);
 
+protected:
+    /// @cond internal
+    StsClientPrivate * const d_ptr; ///< Internal d-pointer.
+    StsClient(StsClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(StsClient)
     Q_DISABLE_COPY(StsClient)

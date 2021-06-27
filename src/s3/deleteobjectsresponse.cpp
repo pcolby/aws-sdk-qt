@@ -55,8 +55,7 @@ DeleteObjectsResponse::DeleteObjectsResponse(
  */
 const DeleteObjectsRequest * DeleteObjectsResponse::request() const
 {
-    Q_D(const DeleteObjectsResponse);
-    return static_cast<const DeleteObjectsRequest *>(d->request);
+    return static_cast<const DeleteObjectsRequest *>(S3Response::request());
 }
 
 /*!

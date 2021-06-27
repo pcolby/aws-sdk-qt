@@ -60,8 +60,7 @@ ListInvitationsResponse::ListInvitationsResponse(
  */
 const ListInvitationsRequest * ListInvitationsResponse::request() const
 {
-    Q_D(const ListInvitationsResponse);
-    return static_cast<const ListInvitationsRequest *>(d->request);
+    return static_cast<const ListInvitationsRequest *>(Macie2Response::request());
 }
 
 /*!

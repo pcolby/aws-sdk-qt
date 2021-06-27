@@ -63,8 +63,7 @@ DeleteObjectResponse::DeleteObjectResponse(
  */
 const DeleteObjectRequest * DeleteObjectResponse::request() const
 {
-    Q_D(const DeleteObjectResponse);
-    return static_cast<const DeleteObjectRequest *>(d->request);
+    return static_cast<const DeleteObjectRequest *>(CloudDirectoryResponse::request());
 }
 
 /*!

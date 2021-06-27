@@ -43,7 +43,7 @@ namespace KinesisVideoMedia {
  * Constructs a KinesisVideoMediaRequest object for KinesisVideoMedia \a action.
  */
 KinesisVideoMediaRequest::KinesisVideoMediaRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new KinesisVideoMediaRequestPrivate(action, this))
+    : d_ptr(new KinesisVideoMediaRequestPrivate(action, this))
 {
 
 }
@@ -52,7 +52,8 @@ KinesisVideoMediaRequest::KinesisVideoMediaRequest(const Action action)
  * Constructs a copy of \a other.
  */
 KinesisVideoMediaRequest::KinesisVideoMediaRequest(const KinesisVideoMediaRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new KinesisVideoMediaRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new KinesisVideoMediaRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -75,7 +76,7 @@ KinesisVideoMediaRequest& KinesisVideoMediaRequest::operator=(const KinesisVideo
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from KinesisVideoMediaRequestPrivate.
  */
-KinesisVideoMediaRequest::KinesisVideoMediaRequest(KinesisVideoMediaRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+KinesisVideoMediaRequest::KinesisVideoMediaRequest(KinesisVideoMediaRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -244,7 +245,7 @@ QNetworkRequest KinesisVideoMediaRequest::unsignedRequest(const QUrl &endpoint) 
  * with public implementation \a q.
  */
 KinesisVideoMediaRequestPrivate::KinesisVideoMediaRequestPrivate(const KinesisVideoMediaRequest::Action action, KinesisVideoMediaRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -259,8 +260,8 @@ KinesisVideoMediaRequestPrivate::KinesisVideoMediaRequestPrivate(const KinesisVi
  */
 KinesisVideoMediaRequestPrivate::KinesisVideoMediaRequestPrivate(const KinesisVideoMediaRequestPrivate &other,
                                      KinesisVideoMediaRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

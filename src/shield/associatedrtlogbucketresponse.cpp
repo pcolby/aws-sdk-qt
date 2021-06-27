@@ -61,8 +61,7 @@ AssociateDRTLogBucketResponse::AssociateDRTLogBucketResponse(
  */
 const AssociateDRTLogBucketRequest * AssociateDRTLogBucketResponse::request() const
 {
-    Q_D(const AssociateDRTLogBucketResponse);
-    return static_cast<const AssociateDRTLogBucketRequest *>(d->request);
+    return static_cast<const AssociateDRTLogBucketRequest *>(ShieldResponse::request());
 }
 
 /*!

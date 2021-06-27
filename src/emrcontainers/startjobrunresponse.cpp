@@ -83,8 +83,7 @@ StartJobRunResponse::StartJobRunResponse(
  */
 const StartJobRunRequest * StartJobRunResponse::request() const
 {
-    Q_D(const StartJobRunResponse);
-    return static_cast<const StartJobRunRequest *>(d->request);
+    return static_cast<const StartJobRunRequest *>(EMRContainersResponse::request());
 }
 
 /*!

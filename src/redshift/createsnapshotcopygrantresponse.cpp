@@ -85,8 +85,7 @@ CreateSnapshotCopyGrantResponse::CreateSnapshotCopyGrantResponse(
  */
 const CreateSnapshotCopyGrantRequest * CreateSnapshotCopyGrantResponse::request() const
 {
-    Q_D(const CreateSnapshotCopyGrantResponse);
-    return static_cast<const CreateSnapshotCopyGrantRequest *>(d->request);
+    return static_cast<const CreateSnapshotCopyGrantRequest *>(RedshiftResponse::request());
 }
 
 /*!

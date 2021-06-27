@@ -154,8 +154,7 @@ DescribeKeyResponse::DescribeKeyResponse(
  */
 const DescribeKeyRequest * DescribeKeyResponse::request() const
 {
-    Q_D(const DescribeKeyResponse);
-    return static_cast<const DescribeKeyRequest *>(d->request);
+    return static_cast<const DescribeKeyRequest *>(KmsResponse::request());
 }
 
 /*!

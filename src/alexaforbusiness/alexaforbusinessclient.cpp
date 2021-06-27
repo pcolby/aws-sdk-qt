@@ -252,16 +252,16 @@ AlexaForBusinessClient::AlexaForBusinessClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new AlexaForBusinessClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-11-09"),
+    QStringLiteral("a4b"),
+    QStringLiteral("Alexa For Business"),
+    QStringLiteral("a4b"),
+    parent), d_ptr(new AlexaForBusinessClientPrivate(this))
 {
-    Q_D(AlexaForBusinessClient);
-    d->apiVersion = QStringLiteral("2017-11-09");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("a4b");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Alexa For Business");
-    d->serviceName = QStringLiteral("a4b");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -280,16 +280,16 @@ AlexaForBusinessClient::AlexaForBusinessClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new AlexaForBusinessClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-11-09"),
+    QStringLiteral("a4b"),
+    QStringLiteral("Alexa For Business"),
+    QStringLiteral("a4b"),
+    parent), d_ptr(new AlexaForBusinessClientPrivate(this))
 {
-    Q_D(AlexaForBusinessClient);
-    d->apiVersion = QStringLiteral("2017-11-09");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("a4b");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Alexa For Business");
-    d->serviceName = QStringLiteral("a4b");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -1555,10 +1555,9 @@ UpdateSkillGroupResponse * AlexaForBusinessClient::updateSkillGroup(const Update
 /*!
  * Constructs a AlexaForBusinessClientPrivate object with public implementation \a q.
  */
-AlexaForBusinessClientPrivate::AlexaForBusinessClientPrivate(AlexaForBusinessClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+AlexaForBusinessClientPrivate::AlexaForBusinessClientPrivate(AlexaForBusinessClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace AlexaForBusiness

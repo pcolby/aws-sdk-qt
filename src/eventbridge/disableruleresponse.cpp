@@ -78,8 +78,7 @@ DisableRuleResponse::DisableRuleResponse(
  */
 const DisableRuleRequest * DisableRuleResponse::request() const
 {
-    Q_D(const DisableRuleResponse);
-    return static_cast<const DisableRuleRequest *>(d->request);
+    return static_cast<const DisableRuleRequest *>(EventBridgeResponse::request());
 }
 
 /*!

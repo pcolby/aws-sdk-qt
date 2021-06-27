@@ -68,8 +68,7 @@ GetConnectorsResponse::GetConnectorsResponse(
  */
 const GetConnectorsRequest * GetConnectorsResponse::request() const
 {
-    Q_D(const GetConnectorsResponse);
-    return static_cast<const GetConnectorsRequest *>(d->request);
+    return static_cast<const GetConnectorsRequest *>(SmsResponse::request());
 }
 
 /*!

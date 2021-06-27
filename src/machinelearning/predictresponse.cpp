@@ -55,8 +55,7 @@ PredictResponse::PredictResponse(
  */
 const PredictRequest * PredictResponse::request() const
 {
-    Q_D(const PredictResponse);
-    return static_cast<const PredictRequest *>(d->request);
+    return static_cast<const PredictRequest *>(MachineLearningResponse::request());
 }
 
 /*!

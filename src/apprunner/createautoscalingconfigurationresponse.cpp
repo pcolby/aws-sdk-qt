@@ -86,8 +86,7 @@ CreateAutoScalingConfigurationResponse::CreateAutoScalingConfigurationResponse(
  */
 const CreateAutoScalingConfigurationRequest * CreateAutoScalingConfigurationResponse::request() const
 {
-    Q_D(const CreateAutoScalingConfigurationResponse);
-    return static_cast<const CreateAutoScalingConfigurationRequest *>(d->request);
+    return static_cast<const CreateAutoScalingConfigurationRequest *>(AppRunnerResponse::request());
 }
 
 /*!

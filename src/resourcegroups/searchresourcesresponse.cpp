@@ -99,8 +99,7 @@ SearchResourcesResponse::SearchResourcesResponse(
  */
 const SearchResourcesRequest * SearchResourcesResponse::request() const
 {
-    Q_D(const SearchResourcesResponse);
-    return static_cast<const SearchResourcesRequest *>(d->request);
+    return static_cast<const SearchResourcesRequest *>(ResourceGroupsResponse::request());
 }
 
 /*!

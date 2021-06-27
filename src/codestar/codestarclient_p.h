@@ -20,19 +20,20 @@
 #ifndef QTAWS_CODESTARCLIENT_P_H
 #define QTAWS_CODESTARCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace CodeStar {
 
 class CodeStarClient;
 
-class CodeStarClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class CodeStarClientPrivate {
 
 public:
     CodeStarClientPrivate(CodeStarClient * const q);
+
+protected:
+    CodeStarClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CodeStarClient)

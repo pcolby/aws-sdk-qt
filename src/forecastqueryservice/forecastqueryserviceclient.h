@@ -49,6 +49,12 @@ public:
 public slots:
     QueryForecastResponse * queryForecast(const QueryForecastRequest &request);
 
+protected:
+    /// @cond internal
+    ForecastQueryServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
+    ForecastQueryServiceClient(ForecastQueryServiceClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(ForecastQueryServiceClient)
     Q_DISABLE_COPY(ForecastQueryServiceClient)

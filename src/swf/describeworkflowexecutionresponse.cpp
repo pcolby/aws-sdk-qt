@@ -71,8 +71,7 @@ DescribeWorkflowExecutionResponse::DescribeWorkflowExecutionResponse(
  */
 const DescribeWorkflowExecutionRequest * DescribeWorkflowExecutionResponse::request() const
 {
-    Q_D(const DescribeWorkflowExecutionResponse);
-    return static_cast<const DescribeWorkflowExecutionRequest *>(d->request);
+    return static_cast<const DescribeWorkflowExecutionRequest *>(SwfResponse::request());
 }
 
 /*!

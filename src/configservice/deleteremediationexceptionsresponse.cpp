@@ -75,8 +75,7 @@ DeleteRemediationExceptionsResponse::DeleteRemediationExceptionsResponse(
  */
 const DeleteRemediationExceptionsRequest * DeleteRemediationExceptionsResponse::request() const
 {
-    Q_D(const DeleteRemediationExceptionsResponse);
-    return static_cast<const DeleteRemediationExceptionsRequest *>(d->request);
+    return static_cast<const DeleteRemediationExceptionsRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

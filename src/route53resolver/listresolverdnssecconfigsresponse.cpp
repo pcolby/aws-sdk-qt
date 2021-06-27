@@ -94,8 +94,7 @@ ListResolverDnssecConfigsResponse::ListResolverDnssecConfigsResponse(
  */
 const ListResolverDnssecConfigsRequest * ListResolverDnssecConfigsResponse::request() const
 {
-    Q_D(const ListResolverDnssecConfigsResponse);
-    return static_cast<const ListResolverDnssecConfigsRequest *>(d->request);
+    return static_cast<const ListResolverDnssecConfigsRequest *>(Route53ResolverResponse::request());
 }
 
 /*!

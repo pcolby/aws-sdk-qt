@@ -56,8 +56,7 @@ UpdateEndpointResponse::UpdateEndpointResponse(
  */
 const UpdateEndpointRequest * UpdateEndpointResponse::request() const
 {
-    Q_D(const UpdateEndpointResponse);
-    return static_cast<const UpdateEndpointRequest *>(d->request);
+    return static_cast<const UpdateEndpointRequest *>(PinpointResponse::request());
 }
 
 /*!

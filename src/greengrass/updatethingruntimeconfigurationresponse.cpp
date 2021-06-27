@@ -58,8 +58,7 @@ UpdateThingRuntimeConfigurationResponse::UpdateThingRuntimeConfigurationResponse
  */
 const UpdateThingRuntimeConfigurationRequest * UpdateThingRuntimeConfigurationResponse::request() const
 {
-    Q_D(const UpdateThingRuntimeConfigurationResponse);
-    return static_cast<const UpdateThingRuntimeConfigurationRequest *>(d->request);
+    return static_cast<const UpdateThingRuntimeConfigurationRequest *>(GreengrassResponse::request());
 }
 
 /*!

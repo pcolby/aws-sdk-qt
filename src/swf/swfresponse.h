@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    SwfResponsePrivate * const d_ptr; ///< Internal d-pointer.
     SwfResponse(SwfResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

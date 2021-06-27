@@ -59,8 +59,7 @@ DeleteUtterancesResponse::DeleteUtterancesResponse(
  */
 const DeleteUtterancesRequest * DeleteUtterancesResponse::request() const
 {
-    Q_D(const DeleteUtterancesResponse);
-    return static_cast<const DeleteUtterancesRequest *>(d->request);
+    return static_cast<const DeleteUtterancesRequest *>(LexModelBuildingServiceResponse::request());
 }
 
 /*!

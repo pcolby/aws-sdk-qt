@@ -84,8 +84,7 @@ DeleteDestinationResponse::DeleteDestinationResponse(
  */
 const DeleteDestinationRequest * DeleteDestinationResponse::request() const
 {
-    Q_D(const DeleteDestinationResponse);
-    return static_cast<const DeleteDestinationRequest *>(d->request);
+    return static_cast<const DeleteDestinationRequest *>(CloudWatchLogsResponse::request());
 }
 
 /*!

@@ -62,8 +62,7 @@ ListMemberAccountsResponse::ListMemberAccountsResponse(
  */
 const ListMemberAccountsRequest * ListMemberAccountsResponse::request() const
 {
-    Q_D(const ListMemberAccountsResponse);
-    return static_cast<const ListMemberAccountsRequest *>(d->request);
+    return static_cast<const ListMemberAccountsRequest *>(MacieResponse::request());
 }
 
 /*!

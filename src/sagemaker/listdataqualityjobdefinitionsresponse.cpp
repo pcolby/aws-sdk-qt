@@ -70,8 +70,7 @@ ListDataQualityJobDefinitionsResponse::ListDataQualityJobDefinitionsResponse(
  */
 const ListDataQualityJobDefinitionsRequest * ListDataQualityJobDefinitionsResponse::request() const
 {
-    Q_D(const ListDataQualityJobDefinitionsResponse);
-    return static_cast<const ListDataQualityJobDefinitionsRequest *>(d->request);
+    return static_cast<const ListDataQualityJobDefinitionsRequest *>(SageMakerResponse::request());
 }
 
 /*!

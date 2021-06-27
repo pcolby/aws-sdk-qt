@@ -79,8 +79,7 @@ PostAgentProfileResponse::PostAgentProfileResponse(
  */
 const PostAgentProfileRequest * PostAgentProfileResponse::request() const
 {
-    Q_D(const PostAgentProfileResponse);
-    return static_cast<const PostAgentProfileRequest *>(d->request);
+    return static_cast<const PostAgentProfileRequest *>(CodeGuruProfilerResponse::request());
 }
 
 /*!

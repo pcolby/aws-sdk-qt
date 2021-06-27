@@ -152,6 +152,7 @@ public:
 
 protected:
     /// @cond internal
+    S3RequestPrivate * const d_ptr; ///< Internal d-pointer.
     S3Request(S3RequestPrivate * const d);
     /// @endcond
 

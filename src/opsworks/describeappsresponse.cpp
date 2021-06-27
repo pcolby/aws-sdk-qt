@@ -161,8 +161,7 @@ DescribeAppsResponse::DescribeAppsResponse(
  */
 const DescribeAppsRequest * DescribeAppsResponse::request() const
 {
-    Q_D(const DescribeAppsResponse);
-    return static_cast<const DescribeAppsRequest *>(d->request);
+    return static_cast<const DescribeAppsRequest *>(OpsWorksResponse::request());
 }
 
 /*!

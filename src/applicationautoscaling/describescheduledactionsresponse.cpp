@@ -137,8 +137,7 @@ DescribeScheduledActionsResponse::DescribeScheduledActionsResponse(
  */
 const DescribeScheduledActionsRequest * DescribeScheduledActionsResponse::request() const
 {
-    Q_D(const DescribeScheduledActionsResponse);
-    return static_cast<const DescribeScheduledActionsRequest *>(d->request);
+    return static_cast<const DescribeScheduledActionsRequest *>(ApplicationAutoScalingResponse::request());
 }
 
 /*!

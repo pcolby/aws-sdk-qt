@@ -58,8 +58,7 @@ RegisterSchemaVersionResponse::RegisterSchemaVersionResponse(
  */
 const RegisterSchemaVersionRequest * RegisterSchemaVersionResponse::request() const
 {
-    Q_D(const RegisterSchemaVersionResponse);
-    return static_cast<const RegisterSchemaVersionRequest *>(d->request);
+    return static_cast<const RegisterSchemaVersionRequest *>(GlueResponse::request());
 }
 
 /*!

@@ -82,8 +82,7 @@ ListDetectMitigationActionsExecutionsResponse::ListDetectMitigationActionsExecut
  */
 const ListDetectMitigationActionsExecutionsRequest * ListDetectMitigationActionsExecutionsResponse::request() const
 {
-    Q_D(const ListDetectMitigationActionsExecutionsResponse);
-    return static_cast<const ListDetectMitigationActionsExecutionsRequest *>(d->request);
+    return static_cast<const ListDetectMitigationActionsExecutionsRequest *>(IoTResponse::request());
 }
 
 /*!

@@ -20,19 +20,20 @@
 #ifndef QTAWS_LOCATIONSERVICECLIENT_P_H
 #define QTAWS_LOCATIONSERVICECLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace LocationService {
 
 class LocationServiceClient;
 
-class LocationServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class LocationServiceClientPrivate {
 
 public:
     LocationServiceClientPrivate(LocationServiceClient * const q);
+
+protected:
+    LocationServiceClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(LocationServiceClient)

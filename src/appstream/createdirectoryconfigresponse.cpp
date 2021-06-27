@@ -81,8 +81,7 @@ CreateDirectoryConfigResponse::CreateDirectoryConfigResponse(
  */
 const CreateDirectoryConfigRequest * CreateDirectoryConfigResponse::request() const
 {
-    Q_D(const CreateDirectoryConfigResponse);
-    return static_cast<const CreateDirectoryConfigRequest *>(d->request);
+    return static_cast<const CreateDirectoryConfigRequest *>(AppStreamResponse::request());
 }
 
 /*!

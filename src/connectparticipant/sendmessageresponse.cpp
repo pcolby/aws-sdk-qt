@@ -65,8 +65,7 @@ SendMessageResponse::SendMessageResponse(
  */
 const SendMessageRequest * SendMessageResponse::request() const
 {
-    Q_D(const SendMessageResponse);
-    return static_cast<const SendMessageRequest *>(d->request);
+    return static_cast<const SendMessageRequest *>(ConnectParticipantResponse::request());
 }
 
 /*!

@@ -93,6 +93,7 @@ public:
 
 protected:
     /// @cond internal
+    InspectorRequestPrivate * const d_ptr; ///< Internal d-pointer.
     InspectorRequest(InspectorRequestPrivate * const d);
     /// @endcond
 

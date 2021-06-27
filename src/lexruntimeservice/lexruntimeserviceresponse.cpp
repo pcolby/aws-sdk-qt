@@ -37,7 +37,7 @@ namespace LexRuntimeService {
  * Constructs a LexRuntimeServiceResponse object with parent \a parent.
  */
 LexRuntimeServiceResponse::LexRuntimeServiceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new LexRuntimeServiceResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new LexRuntimeServiceResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ LexRuntimeServiceResponse::LexRuntimeServiceResponse(QObject * const parent)
  * implementation that inherits from LexRuntimeServiceResponsePrivate.
  */
 LexRuntimeServiceResponse::LexRuntimeServiceResponse(LexRuntimeServiceResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void LexRuntimeServiceResponse::parseFailure(QIODevice &response)
  * Constructs a LexRuntimeServiceResponsePrivate object with public implementation \a q.
  */
 LexRuntimeServiceResponsePrivate::LexRuntimeServiceResponsePrivate(
-    LexRuntimeServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    LexRuntimeServiceResponse * const q) : q_ptr(q)
 {
 
 }

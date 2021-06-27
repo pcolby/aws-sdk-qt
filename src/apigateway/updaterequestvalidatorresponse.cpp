@@ -60,8 +60,7 @@ UpdateRequestValidatorResponse::UpdateRequestValidatorResponse(
  */
 const UpdateRequestValidatorRequest * UpdateRequestValidatorResponse::request() const
 {
-    Q_D(const UpdateRequestValidatorResponse);
-    return static_cast<const UpdateRequestValidatorRequest *>(d->request);
+    return static_cast<const UpdateRequestValidatorRequest *>(APIGatewayResponse::request());
 }
 
 /*!

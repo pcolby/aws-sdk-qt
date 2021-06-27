@@ -20,15 +20,12 @@
 #ifndef QTAWS_MACIEREQUEST_P_H
 #define QTAWS_MACIEREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "macierequest.h"
-
 namespace QtAws {
 namespace Macie {
 
 class MacieRequest;
 
-class MacieRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class MacieRequestPrivate {
 
 public:
     MacieRequest::Action action; ///< Macie action to be performed.
@@ -39,6 +36,9 @@ public:
     MacieRequestPrivate(const MacieRequestPrivate &other, MacieRequest * const q);
 
     static QString toString(const MacieRequest::Action &action);
+
+protected:
+    MacieRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MacieRequest)

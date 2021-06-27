@@ -62,8 +62,7 @@ GetAccountAuthorizationDetailsResponse::GetAccountAuthorizationDetailsResponse(
  */
 const GetAccountAuthorizationDetailsRequest * GetAccountAuthorizationDetailsResponse::request() const
 {
-    Q_D(const GetAccountAuthorizationDetailsResponse);
-    return static_cast<const GetAccountAuthorizationDetailsRequest *>(d->request);
+    return static_cast<const GetAccountAuthorizationDetailsRequest *>(IamResponse::request());
 }
 
 /*!

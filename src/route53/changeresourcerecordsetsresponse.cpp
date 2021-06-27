@@ -56,8 +56,7 @@ ChangeResourceRecordSetsResponse::ChangeResourceRecordSetsResponse(
  */
 const ChangeResourceRecordSetsRequest * ChangeResourceRecordSetsResponse::request() const
 {
-    Q_D(const ChangeResourceRecordSetsResponse);
-    return static_cast<const ChangeResourceRecordSetsRequest *>(d->request);
+    return static_cast<const ChangeResourceRecordSetsRequest *>(Route53Response::request());
 }
 
 /*!

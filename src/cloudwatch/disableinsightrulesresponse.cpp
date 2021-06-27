@@ -69,8 +69,7 @@ DisableInsightRulesResponse::DisableInsightRulesResponse(
  */
 const DisableInsightRulesRequest * DisableInsightRulesResponse::request() const
 {
-    Q_D(const DisableInsightRulesResponse);
-    return static_cast<const DisableInsightRulesRequest *>(d->request);
+    return static_cast<const DisableInsightRulesRequest *>(CloudWatchResponse::request());
 }
 
 /*!

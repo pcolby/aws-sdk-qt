@@ -75,8 +75,7 @@ CreatePlatformEndpointResponse::CreatePlatformEndpointResponse(
  */
 const CreatePlatformEndpointRequest * CreatePlatformEndpointResponse::request() const
 {
-    Q_D(const CreatePlatformEndpointResponse);
-    return static_cast<const CreatePlatformEndpointRequest *>(d->request);
+    return static_cast<const CreatePlatformEndpointRequest *>(SnsResponse::request());
 }
 
 /*!

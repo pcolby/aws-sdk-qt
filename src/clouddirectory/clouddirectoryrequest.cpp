@@ -108,7 +108,7 @@ namespace CloudDirectory {
  * Constructs a CloudDirectoryRequest object for CloudDirectory \a action.
  */
 CloudDirectoryRequest::CloudDirectoryRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new CloudDirectoryRequestPrivate(action, this))
+    : d_ptr(new CloudDirectoryRequestPrivate(action, this))
 {
 
 }
@@ -117,7 +117,8 @@ CloudDirectoryRequest::CloudDirectoryRequest(const Action action)
  * Constructs a copy of \a other.
  */
 CloudDirectoryRequest::CloudDirectoryRequest(const CloudDirectoryRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new CloudDirectoryRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new CloudDirectoryRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -140,7 +141,7 @@ CloudDirectoryRequest& CloudDirectoryRequest::operator=(const CloudDirectoryRequ
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CloudDirectoryRequestPrivate.
  */
-CloudDirectoryRequest::CloudDirectoryRequest(CloudDirectoryRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+CloudDirectoryRequest::CloudDirectoryRequest(CloudDirectoryRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -309,7 +310,7 @@ QNetworkRequest CloudDirectoryRequest::unsignedRequest(const QUrl &endpoint) con
  * with public implementation \a q.
  */
 CloudDirectoryRequestPrivate::CloudDirectoryRequestPrivate(const CloudDirectoryRequest::Action action, CloudDirectoryRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -324,8 +325,8 @@ CloudDirectoryRequestPrivate::CloudDirectoryRequestPrivate(const CloudDirectoryR
  */
 CloudDirectoryRequestPrivate::CloudDirectoryRequestPrivate(const CloudDirectoryRequestPrivate &other,
                                      CloudDirectoryRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

@@ -57,8 +57,7 @@ DeleteFHIRDatastoreResponse::DeleteFHIRDatastoreResponse(
  */
 const DeleteFHIRDatastoreRequest * DeleteFHIRDatastoreResponse::request() const
 {
-    Q_D(const DeleteFHIRDatastoreResponse);
-    return static_cast<const DeleteFHIRDatastoreRequest *>(d->request);
+    return static_cast<const DeleteFHIRDatastoreRequest *>(HealthLakeResponse::request());
 }
 
 /*!

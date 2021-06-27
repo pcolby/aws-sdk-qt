@@ -78,8 +78,7 @@ ListRateBasedRulesResponse::ListRateBasedRulesResponse(
  */
 const ListRateBasedRulesRequest * ListRateBasedRulesResponse::request() const
 {
-    Q_D(const ListRateBasedRulesResponse);
-    return static_cast<const ListRateBasedRulesRequest *>(d->request);
+    return static_cast<const ListRateBasedRulesRequest *>(WAFRegionalResponse::request());
 }
 
 /*!

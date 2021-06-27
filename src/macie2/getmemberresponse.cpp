@@ -60,8 +60,7 @@ GetMemberResponse::GetMemberResponse(
  */
 const GetMemberRequest * GetMemberResponse::request() const
 {
-    Q_D(const GetMemberResponse);
-    return static_cast<const GetMemberRequest *>(d->request);
+    return static_cast<const GetMemberRequest *>(Macie2Response::request());
 }
 
 /*!

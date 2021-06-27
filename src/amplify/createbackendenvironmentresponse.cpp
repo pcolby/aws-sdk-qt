@@ -60,8 +60,7 @@ CreateBackendEnvironmentResponse::CreateBackendEnvironmentResponse(
  */
 const CreateBackendEnvironmentRequest * CreateBackendEnvironmentResponse::request() const
 {
-    Q_D(const CreateBackendEnvironmentResponse);
-    return static_cast<const CreateBackendEnvironmentRequest *>(d->request);
+    return static_cast<const CreateBackendEnvironmentRequest *>(AmplifyResponse::request());
 }
 
 /*!

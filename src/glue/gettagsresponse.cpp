@@ -58,8 +58,7 @@ GetTagsResponse::GetTagsResponse(
  */
 const GetTagsRequest * GetTagsResponse::request() const
 {
-    Q_D(const GetTagsResponse);
-    return static_cast<const GetTagsRequest *>(d->request);
+    return static_cast<const GetTagsRequest *>(GlueResponse::request());
 }
 
 /*!

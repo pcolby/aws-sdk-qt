@@ -145,8 +145,7 @@ AssociateFirewallPolicyResponse::AssociateFirewallPolicyResponse(
  */
 const AssociateFirewallPolicyRequest * AssociateFirewallPolicyResponse::request() const
 {
-    Q_D(const AssociateFirewallPolicyResponse);
-    return static_cast<const AssociateFirewallPolicyRequest *>(d->request);
+    return static_cast<const AssociateFirewallPolicyRequest *>(NetworkFirewallResponse::request());
 }
 
 /*!

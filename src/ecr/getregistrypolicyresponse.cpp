@@ -62,8 +62,7 @@ GetRegistryPolicyResponse::GetRegistryPolicyResponse(
  */
 const GetRegistryPolicyRequest * GetRegistryPolicyResponse::request() const
 {
-    Q_D(const GetRegistryPolicyResponse);
-    return static_cast<const GetRegistryPolicyRequest *>(d->request);
+    return static_cast<const GetRegistryPolicyRequest *>(EcrResponse::request());
 }
 
 /*!

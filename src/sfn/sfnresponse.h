@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    SfnResponsePrivate * const d_ptr; ///< Internal d-pointer.
     SfnResponse(SfnResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

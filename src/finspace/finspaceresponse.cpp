@@ -37,7 +37,7 @@ namespace finspace {
  * Constructs a finspaceResponse object with parent \a parent.
  */
 finspaceResponse::finspaceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new finspaceResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new finspaceResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ finspaceResponse::finspaceResponse(QObject * const parent)
  * implementation that inherits from finspaceResponsePrivate.
  */
 finspaceResponse::finspaceResponse(finspaceResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void finspaceResponse::parseFailure(QIODevice &response)
  * Constructs a finspaceResponsePrivate object with public implementation \a q.
  */
 finspaceResponsePrivate::finspaceResponsePrivate(
-    finspaceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    finspaceResponse * const q) : q_ptr(q)
 {
 
 }

@@ -176,16 +176,16 @@ FraudDetectorClient::FraudDetectorClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new FraudDetectorClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-11-15"),
+    QStringLiteral("frauddetector"),
+    QStringLiteral("Amazon Fraud Detector"),
+    QStringLiteral("frauddetector"),
+    parent), d_ptr(new FraudDetectorClientPrivate(this))
 {
-    Q_D(FraudDetectorClient);
-    d->apiVersion = QStringLiteral("2019-11-15");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("frauddetector");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Fraud Detector");
-    d->serviceName = QStringLiteral("frauddetector");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -204,16 +204,16 @@ FraudDetectorClient::FraudDetectorClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new FraudDetectorClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-11-15"),
+    QStringLiteral("frauddetector"),
+    QStringLiteral("Amazon Fraud Detector"),
+    QStringLiteral("frauddetector"),
+    parent), d_ptr(new FraudDetectorClientPrivate(this))
 {
-    Q_D(FraudDetectorClient);
-    d->apiVersion = QStringLiteral("2019-11-15");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("frauddetector");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Fraud Detector");
-    d->serviceName = QStringLiteral("frauddetector");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -1159,10 +1159,9 @@ UpdateVariableResponse * FraudDetectorClient::updateVariable(const UpdateVariabl
 /*!
  * Constructs a FraudDetectorClientPrivate object with public implementation \a q.
  */
-FraudDetectorClientPrivate::FraudDetectorClientPrivate(FraudDetectorClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+FraudDetectorClientPrivate::FraudDetectorClientPrivate(FraudDetectorClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace FraudDetector

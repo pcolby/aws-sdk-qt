@@ -88,8 +88,7 @@ PutDeliverabilityDashboardOptionResponse::PutDeliverabilityDashboardOptionRespon
  */
 const PutDeliverabilityDashboardOptionRequest * PutDeliverabilityDashboardOptionResponse::request() const
 {
-    Q_D(const PutDeliverabilityDashboardOptionResponse);
-    return static_cast<const PutDeliverabilityDashboardOptionRequest *>(d->request);
+    return static_cast<const PutDeliverabilityDashboardOptionRequest *>(Sesv2Response::request());
 }
 
 /*!

@@ -154,8 +154,7 @@ DisconnectCustomKeyStoreResponse::DisconnectCustomKeyStoreResponse(
  */
 const DisconnectCustomKeyStoreRequest * DisconnectCustomKeyStoreResponse::request() const
 {
-    Q_D(const DisconnectCustomKeyStoreResponse);
-    return static_cast<const DisconnectCustomKeyStoreRequest *>(d->request);
+    return static_cast<const DisconnectCustomKeyStoreRequest *>(KmsResponse::request());
 }
 
 /*!

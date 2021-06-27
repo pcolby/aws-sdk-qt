@@ -20,14 +20,12 @@
 #ifndef QTAWS_LEXRUNTIMEV2RESPONSE_P_H
 #define QTAWS_LEXRUNTIMEV2RESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace LexRuntimeV2 {
 
 class LexRuntimeV2Response;
 
-class LexRuntimeV2ResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class LexRuntimeV2ResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    LexRuntimeV2Response * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(LexRuntimeV2Response)

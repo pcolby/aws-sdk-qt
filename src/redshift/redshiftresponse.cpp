@@ -37,7 +37,7 @@ namespace Redshift {
  * Constructs a RedshiftResponse object with parent \a parent.
  */
 RedshiftResponse::RedshiftResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new RedshiftResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new RedshiftResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ RedshiftResponse::RedshiftResponse(QObject * const parent)
  * implementation that inherits from RedshiftResponsePrivate.
  */
 RedshiftResponse::RedshiftResponse(RedshiftResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void RedshiftResponse::parseFailure(QIODevice &response)
  * Constructs a RedshiftResponsePrivate object with public implementation \a q.
  */
 RedshiftResponsePrivate::RedshiftResponsePrivate(
-    RedshiftResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    RedshiftResponse * const q) : q_ptr(q)
 {
 
 }

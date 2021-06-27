@@ -141,8 +141,7 @@ DeclineHandshakeResponse::DeclineHandshakeResponse(
  */
 const DeclineHandshakeRequest * DeclineHandshakeResponse::request() const
 {
-    Q_D(const DeclineHandshakeResponse);
-    return static_cast<const DeclineHandshakeRequest *>(d->request);
+    return static_cast<const DeclineHandshakeRequest *>(OrganizationsResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ UpdateWorldTemplateResponse::UpdateWorldTemplateResponse(
  */
 const UpdateWorldTemplateRequest * UpdateWorldTemplateResponse::request() const
 {
-    Q_D(const UpdateWorldTemplateResponse);
-    return static_cast<const UpdateWorldTemplateRequest *>(d->request);
+    return static_cast<const UpdateWorldTemplateRequest *>(RoboMakerResponse::request());
 }
 
 /*!

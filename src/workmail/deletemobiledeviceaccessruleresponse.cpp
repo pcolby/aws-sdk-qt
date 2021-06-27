@@ -89,8 +89,7 @@ DeleteMobileDeviceAccessRuleResponse::DeleteMobileDeviceAccessRuleResponse(
  */
 const DeleteMobileDeviceAccessRuleRequest * DeleteMobileDeviceAccessRuleResponse::request() const
 {
-    Q_D(const DeleteMobileDeviceAccessRuleResponse);
-    return static_cast<const DeleteMobileDeviceAccessRuleRequest *>(d->request);
+    return static_cast<const DeleteMobileDeviceAccessRuleRequest *>(WorkMailResponse::request());
 }
 
 /*!

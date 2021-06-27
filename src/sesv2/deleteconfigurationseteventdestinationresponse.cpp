@@ -88,8 +88,7 @@ DeleteConfigurationSetEventDestinationResponse::DeleteConfigurationSetEventDesti
  */
 const DeleteConfigurationSetEventDestinationRequest * DeleteConfigurationSetEventDestinationResponse::request() const
 {
-    Q_D(const DeleteConfigurationSetEventDestinationResponse);
-    return static_cast<const DeleteConfigurationSetEventDestinationRequest *>(d->request);
+    return static_cast<const DeleteConfigurationSetEventDestinationRequest *>(Sesv2Response::request());
 }
 
 /*!

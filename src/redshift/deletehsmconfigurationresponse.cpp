@@ -85,8 +85,7 @@ DeleteHsmConfigurationResponse::DeleteHsmConfigurationResponse(
  */
 const DeleteHsmConfigurationRequest * DeleteHsmConfigurationResponse::request() const
 {
-    Q_D(const DeleteHsmConfigurationResponse);
-    return static_cast<const DeleteHsmConfigurationRequest *>(d->request);
+    return static_cast<const DeleteHsmConfigurationRequest *>(RedshiftResponse::request());
 }
 
 /*!

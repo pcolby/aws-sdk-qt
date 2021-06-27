@@ -56,8 +56,7 @@ DescribeGeofenceCollectionResponse::DescribeGeofenceCollectionResponse(
  */
 const DescribeGeofenceCollectionRequest * DescribeGeofenceCollectionResponse::request() const
 {
-    Q_D(const DescribeGeofenceCollectionResponse);
-    return static_cast<const DescribeGeofenceCollectionRequest *>(d->request);
+    return static_cast<const DescribeGeofenceCollectionRequest *>(LocationServiceResponse::request());
 }
 
 /*!

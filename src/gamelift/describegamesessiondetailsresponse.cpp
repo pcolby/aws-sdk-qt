@@ -115,8 +115,7 @@ DescribeGameSessionDetailsResponse::DescribeGameSessionDetailsResponse(
  */
 const DescribeGameSessionDetailsRequest * DescribeGameSessionDetailsResponse::request() const
 {
-    Q_D(const DescribeGameSessionDetailsResponse);
-    return static_cast<const DescribeGameSessionDetailsRequest *>(d->request);
+    return static_cast<const DescribeGameSessionDetailsRequest *>(GameLiftResponse::request());
 }
 
 /*!

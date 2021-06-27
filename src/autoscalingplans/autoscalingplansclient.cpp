@@ -113,16 +113,16 @@ AutoScalingPlansClient::AutoScalingPlansClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new AutoScalingPlansClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-01-06"),
+    QStringLiteral("autoscaling-plans"),
+    QStringLiteral("AWS Auto Scaling Plans"),
+    QStringLiteral("autoscaling-plans"),
+    parent), d_ptr(new AutoScalingPlansClientPrivate(this))
 {
-    Q_D(AutoScalingPlansClient);
-    d->apiVersion = QStringLiteral("2018-01-06");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("autoscaling-plans");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Auto Scaling Plans");
-    d->serviceName = QStringLiteral("autoscaling-plans");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -141,16 +141,16 @@ AutoScalingPlansClient::AutoScalingPlansClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new AutoScalingPlansClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-01-06"),
+    QStringLiteral("autoscaling-plans"),
+    QStringLiteral("AWS Auto Scaling Plans"),
+    QStringLiteral("autoscaling-plans"),
+    parent), d_ptr(new AutoScalingPlansClientPrivate(this))
 {
-    Q_D(AutoScalingPlansClient);
-    d->apiVersion = QStringLiteral("2018-01-06");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("autoscaling-plans");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Auto Scaling Plans");
-    d->serviceName = QStringLiteral("autoscaling-plans");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -261,10 +261,9 @@ UpdateScalingPlanResponse * AutoScalingPlansClient::updateScalingPlan(const Upda
 /*!
  * Constructs a AutoScalingPlansClientPrivate object with public implementation \a q.
  */
-AutoScalingPlansClientPrivate::AutoScalingPlansClientPrivate(AutoScalingPlansClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+AutoScalingPlansClientPrivate::AutoScalingPlansClientPrivate(AutoScalingPlansClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace AutoScalingPlans

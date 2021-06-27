@@ -66,8 +66,7 @@ ListEventSourceMappingsResponse::ListEventSourceMappingsResponse(
  */
 const ListEventSourceMappingsRequest * ListEventSourceMappingsResponse::request() const
 {
-    Q_D(const ListEventSourceMappingsResponse);
-    return static_cast<const ListEventSourceMappingsRequest *>(d->request);
+    return static_cast<const ListEventSourceMappingsRequest *>(LambdaResponse::request());
 }
 
 /*!

@@ -63,8 +63,7 @@ RemoveFacetFromObjectResponse::RemoveFacetFromObjectResponse(
  */
 const RemoveFacetFromObjectRequest * RemoveFacetFromObjectResponse::request() const
 {
-    Q_D(const RemoveFacetFromObjectResponse);
-    return static_cast<const RemoveFacetFromObjectRequest *>(d->request);
+    return static_cast<const RemoveFacetFromObjectRequest *>(CloudDirectoryResponse::request());
 }
 
 /*!

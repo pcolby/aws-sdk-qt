@@ -37,7 +37,7 @@ namespace Amplify {
  * Constructs a AmplifyResponse object with parent \a parent.
  */
 AmplifyResponse::AmplifyResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new AmplifyResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new AmplifyResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ AmplifyResponse::AmplifyResponse(QObject * const parent)
  * implementation that inherits from AmplifyResponsePrivate.
  */
 AmplifyResponse::AmplifyResponse(AmplifyResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void AmplifyResponse::parseFailure(QIODevice &response)
  * Constructs a AmplifyResponsePrivate object with public implementation \a q.
  */
 AmplifyResponsePrivate::AmplifyResponsePrivate(
-    AmplifyResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    AmplifyResponse * const q) : q_ptr(q)
 {
 
 }

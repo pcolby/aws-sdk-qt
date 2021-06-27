@@ -37,7 +37,7 @@ namespace WAFRegional {
  * Constructs a WAFRegionalResponse object with parent \a parent.
  */
 WAFRegionalResponse::WAFRegionalResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new WAFRegionalResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new WAFRegionalResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ WAFRegionalResponse::WAFRegionalResponse(QObject * const parent)
  * implementation that inherits from WAFRegionalResponsePrivate.
  */
 WAFRegionalResponse::WAFRegionalResponse(WAFRegionalResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void WAFRegionalResponse::parseFailure(QIODevice &response)
  * Constructs a WAFRegionalResponsePrivate object with public implementation \a q.
  */
 WAFRegionalResponsePrivate::WAFRegionalResponsePrivate(
-    WAFRegionalResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    WAFRegionalResponse * const q) : q_ptr(q)
 {
 
 }

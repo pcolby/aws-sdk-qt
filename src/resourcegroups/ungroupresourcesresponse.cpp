@@ -99,8 +99,7 @@ UngroupResourcesResponse::UngroupResourcesResponse(
  */
 const UngroupResourcesRequest * UngroupResourcesResponse::request() const
 {
-    Q_D(const UngroupResourcesResponse);
-    return static_cast<const UngroupResourcesRequest *>(d->request);
+    return static_cast<const UngroupResourcesRequest *>(ResourceGroupsResponse::request());
 }
 
 /*!

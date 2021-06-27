@@ -84,8 +84,7 @@ StartQueryResponse::StartQueryResponse(
  */
 const StartQueryRequest * StartQueryResponse::request() const
 {
-    Q_D(const StartQueryResponse);
-    return static_cast<const StartQueryRequest *>(d->request);
+    return static_cast<const StartQueryRequest *>(CloudWatchLogsResponse::request());
 }
 
 /*!

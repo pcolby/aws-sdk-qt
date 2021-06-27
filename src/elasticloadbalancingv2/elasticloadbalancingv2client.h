@@ -148,6 +148,12 @@ public slots:
     SetSecurityGroupsResponse * setSecurityGroups(const SetSecurityGroupsRequest &request);
     SetSubnetsResponse * setSubnets(const SetSubnetsRequest &request);
 
+protected:
+    /// @cond internal
+    ElasticLoadBalancingv2ClientPrivate * const d_ptr; ///< Internal d-pointer.
+    ElasticLoadBalancingv2Client(ElasticLoadBalancingv2ClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(ElasticLoadBalancingv2Client)
     Q_DISABLE_COPY(ElasticLoadBalancingv2Client)

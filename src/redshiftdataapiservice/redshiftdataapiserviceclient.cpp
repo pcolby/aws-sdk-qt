@@ -85,16 +85,16 @@ RedshiftDataAPIServiceClient::RedshiftDataAPIServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new RedshiftDataAPIServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-12-20"),
+    QStringLiteral("redshift-data"),
+    QStringLiteral("Redshift Data API Service"),
+    QStringLiteral("redshift-data"),
+    parent), d_ptr(new RedshiftDataAPIServiceClientPrivate(this))
 {
-    Q_D(RedshiftDataAPIServiceClient);
-    d->apiVersion = QStringLiteral("2019-12-20");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("redshift-data");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Redshift Data API Service");
-    d->serviceName = QStringLiteral("redshift-data");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -113,16 +113,16 @@ RedshiftDataAPIServiceClient::RedshiftDataAPIServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new RedshiftDataAPIServiceClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-12-20"),
+    QStringLiteral("redshift-data"),
+    QStringLiteral("Redshift Data API Service"),
+    QStringLiteral("redshift-data"),
+    parent), d_ptr(new RedshiftDataAPIServiceClientPrivate(this))
 {
-    Q_D(RedshiftDataAPIServiceClient);
-    d->apiVersion = QStringLiteral("2019-12-20");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("redshift-data");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Redshift Data API Service");
-    d->serviceName = QStringLiteral("redshift-data");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -314,10 +314,9 @@ ListTablesResponse * RedshiftDataAPIServiceClient::listTables(const ListTablesRe
 /*!
  * Constructs a RedshiftDataAPIServiceClientPrivate object with public implementation \a q.
  */
-RedshiftDataAPIServiceClientPrivate::RedshiftDataAPIServiceClientPrivate(RedshiftDataAPIServiceClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+RedshiftDataAPIServiceClientPrivate::RedshiftDataAPIServiceClientPrivate(RedshiftDataAPIServiceClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace RedshiftDataAPIService

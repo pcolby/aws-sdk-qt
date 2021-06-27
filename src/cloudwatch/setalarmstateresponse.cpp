@@ -69,8 +69,7 @@ SetAlarmStateResponse::SetAlarmStateResponse(
  */
 const SetAlarmStateRequest * SetAlarmStateResponse::request() const
 {
-    Q_D(const SetAlarmStateResponse);
-    return static_cast<const SetAlarmStateRequest *>(d->request);
+    return static_cast<const SetAlarmStateRequest *>(CloudWatchResponse::request());
 }
 
 /*!

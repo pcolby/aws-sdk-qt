@@ -79,6 +79,7 @@ public:
 
 protected:
     /// @cond internal
+    CodeGuruProfilerRequestPrivate * const d_ptr; ///< Internal d-pointer.
     CodeGuruProfilerRequest(CodeGuruProfilerRequestPrivate * const d);
     /// @endcond
 

@@ -88,8 +88,7 @@ GetImportJobResponse::GetImportJobResponse(
  */
 const GetImportJobRequest * GetImportJobResponse::request() const
 {
-    Q_D(const GetImportJobResponse);
-    return static_cast<const GetImportJobRequest *>(d->request);
+    return static_cast<const GetImportJobRequest *>(Sesv2Response::request());
 }
 
 /*!

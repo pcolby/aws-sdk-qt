@@ -62,8 +62,7 @@ CreateProgressUpdateStreamResponse::CreateProgressUpdateStreamResponse(
  */
 const CreateProgressUpdateStreamRequest * CreateProgressUpdateStreamResponse::request() const
 {
-    Q_D(const CreateProgressUpdateStreamResponse);
-    return static_cast<const CreateProgressUpdateStreamRequest *>(d->request);
+    return static_cast<const CreateProgressUpdateStreamRequest *>(MigrationHubResponse::request());
 }
 
 /*!

@@ -57,8 +57,7 @@ PutLifecyclePolicyResponse::PutLifecyclePolicyResponse(
  */
 const PutLifecyclePolicyRequest * PutLifecyclePolicyResponse::request() const
 {
-    Q_D(const PutLifecyclePolicyResponse);
-    return static_cast<const PutLifecyclePolicyRequest *>(d->request);
+    return static_cast<const PutLifecyclePolicyRequest *>(MediaStoreResponse::request());
 }
 
 /*!

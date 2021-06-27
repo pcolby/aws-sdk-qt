@@ -61,8 +61,7 @@ AllocateHostedConnectionResponse::AllocateHostedConnectionResponse(
  */
 const AllocateHostedConnectionRequest * AllocateHostedConnectionResponse::request() const
 {
-    Q_D(const AllocateHostedConnectionResponse);
-    return static_cast<const AllocateHostedConnectionRequest *>(d->request);
+    return static_cast<const AllocateHostedConnectionRequest *>(DirectConnectResponse::request());
 }
 
 /*!

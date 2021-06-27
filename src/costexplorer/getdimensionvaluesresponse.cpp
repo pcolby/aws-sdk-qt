@@ -75,8 +75,7 @@ GetDimensionValuesResponse::GetDimensionValuesResponse(
  */
 const GetDimensionValuesRequest * GetDimensionValuesResponse::request() const
 {
-    Q_D(const GetDimensionValuesResponse);
-    return static_cast<const GetDimensionValuesRequest *>(d->request);
+    return static_cast<const GetDimensionValuesRequest *>(CostExplorerResponse::request());
 }
 
 /*!

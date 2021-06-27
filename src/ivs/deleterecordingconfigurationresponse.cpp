@@ -385,8 +385,7 @@ DeleteRecordingConfigurationResponse::DeleteRecordingConfigurationResponse(
  */
 const DeleteRecordingConfigurationRequest * DeleteRecordingConfigurationResponse::request() const
 {
-    Q_D(const DeleteRecordingConfigurationResponse);
-    return static_cast<const DeleteRecordingConfigurationRequest *>(d->request);
+    return static_cast<const DeleteRecordingConfigurationRequest *>(IvsResponse::request());
 }
 
 /*!

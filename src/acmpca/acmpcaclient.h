@@ -115,6 +115,12 @@ public slots:
     UntagCertificateAuthorityResponse * untagCertificateAuthority(const UntagCertificateAuthorityRequest &request);
     UpdateCertificateAuthorityResponse * updateCertificateAuthority(const UpdateCertificateAuthorityRequest &request);
 
+protected:
+    /// @cond internal
+    AcmpcaClientPrivate * const d_ptr; ///< Internal d-pointer.
+    AcmpcaClient(AcmpcaClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(AcmpcaClient)
     Q_DISABLE_COPY(AcmpcaClient)

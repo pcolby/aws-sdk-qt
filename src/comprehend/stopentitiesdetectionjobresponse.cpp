@@ -58,8 +58,7 @@ StopEntitiesDetectionJobResponse::StopEntitiesDetectionJobResponse(
  */
 const StopEntitiesDetectionJobRequest * StopEntitiesDetectionJobResponse::request() const
 {
-    Q_D(const StopEntitiesDetectionJobResponse);
-    return static_cast<const StopEntitiesDetectionJobRequest *>(d->request);
+    return static_cast<const StopEntitiesDetectionJobRequest *>(ComprehendResponse::request());
 }
 
 /*!

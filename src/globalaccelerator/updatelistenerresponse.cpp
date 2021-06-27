@@ -218,8 +218,7 @@ UpdateListenerResponse::UpdateListenerResponse(
  */
 const UpdateListenerRequest * UpdateListenerResponse::request() const
 {
-    Q_D(const UpdateListenerResponse);
-    return static_cast<const UpdateListenerRequest *>(d->request);
+    return static_cast<const UpdateListenerRequest *>(GlobalAcceleratorResponse::request());
 }
 
 /*!

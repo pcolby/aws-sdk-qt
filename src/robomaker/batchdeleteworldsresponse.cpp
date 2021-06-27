@@ -56,8 +56,7 @@ BatchDeleteWorldsResponse::BatchDeleteWorldsResponse(
  */
 const BatchDeleteWorldsRequest * BatchDeleteWorldsResponse::request() const
 {
-    Q_D(const BatchDeleteWorldsResponse);
-    return static_cast<const BatchDeleteWorldsRequest *>(d->request);
+    return static_cast<const BatchDeleteWorldsRequest *>(RoboMakerResponse::request());
 }
 
 /*!

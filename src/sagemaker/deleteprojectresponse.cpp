@@ -70,8 +70,7 @@ DeleteProjectResponse::DeleteProjectResponse(
  */
 const DeleteProjectRequest * DeleteProjectResponse::request() const
 {
-    Q_D(const DeleteProjectResponse);
-    return static_cast<const DeleteProjectRequest *>(d->request);
+    return static_cast<const DeleteProjectRequest *>(SageMakerResponse::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ AssociateResourceResponse::AssociateResourceResponse(
  */
 const AssociateResourceRequest * AssociateResourceResponse::request() const
 {
-    Q_D(const AssociateResourceResponse);
-    return static_cast<const AssociateResourceRequest *>(d->request);
+    return static_cast<const AssociateResourceRequest *>(AppRegistryResponse::request());
 }
 
 /*!

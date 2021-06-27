@@ -56,8 +56,7 @@ GetStorageLensConfigurationResponse::GetStorageLensConfigurationResponse(
  */
 const GetStorageLensConfigurationRequest * GetStorageLensConfigurationResponse::request() const
 {
-    Q_D(const GetStorageLensConfigurationResponse);
-    return static_cast<const GetStorageLensConfigurationRequest *>(d->request);
+    return static_cast<const GetStorageLensConfigurationRequest *>(S3ControlResponse::request());
 }
 
 /*!

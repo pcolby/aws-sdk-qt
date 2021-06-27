@@ -68,8 +68,7 @@ DescribeAdjustmentTypesResponse::DescribeAdjustmentTypesResponse(
  */
 const DescribeAdjustmentTypesRequest * DescribeAdjustmentTypesResponse::request() const
 {
-    Q_D(const DescribeAdjustmentTypesResponse);
-    return static_cast<const DescribeAdjustmentTypesRequest *>(d->request);
+    return static_cast<const DescribeAdjustmentTypesRequest *>(AutoScalingResponse::request());
 }
 
 /*!

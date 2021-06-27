@@ -81,8 +81,7 @@ ListAssociatedFleetsResponse::ListAssociatedFleetsResponse(
  */
 const ListAssociatedFleetsRequest * ListAssociatedFleetsResponse::request() const
 {
-    Q_D(const ListAssociatedFleetsResponse);
-    return static_cast<const ListAssociatedFleetsRequest *>(d->request);
+    return static_cast<const ListAssociatedFleetsRequest *>(AppStreamResponse::request());
 }
 
 /*!

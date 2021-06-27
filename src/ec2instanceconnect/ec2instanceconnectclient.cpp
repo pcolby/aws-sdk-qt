@@ -65,16 +65,16 @@ EC2InstanceConnectClient::EC2InstanceConnectClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new EC2InstanceConnectClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-04-02"),
+    QStringLiteral("ec2-instance-connect"),
+    QStringLiteral("AWS EC2 Instance Connect"),
+    QStringLiteral("ec2-instance-connect"),
+    parent), d_ptr(new EC2InstanceConnectClientPrivate(this))
 {
-    Q_D(EC2InstanceConnectClient);
-    d->apiVersion = QStringLiteral("2018-04-02");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("ec2-instance-connect");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS EC2 Instance Connect");
-    d->serviceName = QStringLiteral("ec2-instance-connect");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -93,16 +93,16 @@ EC2InstanceConnectClient::EC2InstanceConnectClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new EC2InstanceConnectClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-04-02"),
+    QStringLiteral("ec2-instance-connect"),
+    QStringLiteral("AWS EC2 Instance Connect"),
+    QStringLiteral("ec2-instance-connect"),
+    parent), d_ptr(new EC2InstanceConnectClientPrivate(this))
 {
-    Q_D(EC2InstanceConnectClient);
-    d->apiVersion = QStringLiteral("2018-04-02");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("ec2-instance-connect");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS EC2 Instance Connect");
-    d->serviceName = QStringLiteral("ec2-instance-connect");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -149,10 +149,9 @@ SendSerialConsoleSSHPublicKeyResponse * EC2InstanceConnectClient::sendSerialCons
 /*!
  * Constructs a EC2InstanceConnectClientPrivate object with public implementation \a q.
  */
-EC2InstanceConnectClientPrivate::EC2InstanceConnectClientPrivate(EC2InstanceConnectClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+EC2InstanceConnectClientPrivate::EC2InstanceConnectClientPrivate(EC2InstanceConnectClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace EC2InstanceConnect

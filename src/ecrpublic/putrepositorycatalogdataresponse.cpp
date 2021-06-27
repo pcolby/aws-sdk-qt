@@ -63,8 +63,7 @@ PutRepositoryCatalogDataResponse::PutRepositoryCatalogDataResponse(
  */
 const PutRepositoryCatalogDataRequest * PutRepositoryCatalogDataResponse::request() const
 {
-    Q_D(const PutRepositoryCatalogDataResponse);
-    return static_cast<const PutRepositoryCatalogDataRequest *>(d->request);
+    return static_cast<const PutRepositoryCatalogDataRequest *>(ECRPublicResponse::request());
 }
 
 /*!

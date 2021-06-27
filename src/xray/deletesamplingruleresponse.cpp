@@ -56,8 +56,7 @@ DeleteSamplingRuleResponse::DeleteSamplingRuleResponse(
  */
 const DeleteSamplingRuleRequest * DeleteSamplingRuleResponse::request() const
 {
-    Q_D(const DeleteSamplingRuleResponse);
-    return static_cast<const DeleteSamplingRuleRequest *>(d->request);
+    return static_cast<const DeleteSamplingRuleRequest *>(XRayResponse::request());
 }
 
 /*!

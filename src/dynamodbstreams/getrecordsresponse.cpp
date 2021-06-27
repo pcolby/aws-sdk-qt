@@ -61,8 +61,7 @@ GetRecordsResponse::GetRecordsResponse(
  */
 const GetRecordsRequest * GetRecordsResponse::request() const
 {
-    Q_D(const GetRecordsResponse);
-    return static_cast<const GetRecordsRequest *>(d->request);
+    return static_cast<const GetRecordsRequest *>(DynamoDBStreamsResponse::request());
 }
 
 /*!

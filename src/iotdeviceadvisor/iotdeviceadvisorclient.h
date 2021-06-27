@@ -85,6 +85,12 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateSuiteDefinitionResponse * updateSuiteDefinition(const UpdateSuiteDefinitionRequest &request);
 
+protected:
+    /// @cond internal
+    IoTDeviceAdvisorClientPrivate * const d_ptr; ///< Internal d-pointer.
+    IoTDeviceAdvisorClient(IoTDeviceAdvisorClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(IoTDeviceAdvisorClient)
     Q_DISABLE_COPY(IoTDeviceAdvisorClient)

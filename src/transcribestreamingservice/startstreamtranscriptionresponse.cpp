@@ -56,8 +56,7 @@ StartStreamTranscriptionResponse::StartStreamTranscriptionResponse(
  */
 const StartStreamTranscriptionRequest * StartStreamTranscriptionResponse::request() const
 {
-    Q_D(const StartStreamTranscriptionResponse);
-    return static_cast<const StartStreamTranscriptionRequest *>(d->request);
+    return static_cast<const StartStreamTranscriptionRequest *>(TranscribeStreamingServiceResponse::request());
 }
 
 /*!

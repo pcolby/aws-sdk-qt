@@ -73,8 +73,7 @@ ListDetectorsResponse::ListDetectorsResponse(
  */
 const ListDetectorsRequest * ListDetectorsResponse::request() const
 {
-    Q_D(const ListDetectorsResponse);
-    return static_cast<const ListDetectorsRequest *>(d->request);
+    return static_cast<const ListDetectorsRequest *>(GuardDutyResponse::request());
 }
 
 /*!

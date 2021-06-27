@@ -58,8 +58,7 @@ ListAlarmModelVersionsResponse::ListAlarmModelVersionsResponse(
  */
 const ListAlarmModelVersionsRequest * ListAlarmModelVersionsResponse::request() const
 {
-    Q_D(const ListAlarmModelVersionsResponse);
-    return static_cast<const ListAlarmModelVersionsRequest *>(d->request);
+    return static_cast<const ListAlarmModelVersionsRequest *>(IoTEventsResponse::request());
 }
 
 /*!

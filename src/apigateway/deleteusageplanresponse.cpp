@@ -60,8 +60,7 @@ DeleteUsagePlanResponse::DeleteUsagePlanResponse(
  */
 const DeleteUsagePlanRequest * DeleteUsagePlanResponse::request() const
 {
-    Q_D(const DeleteUsagePlanResponse);
-    return static_cast<const DeleteUsagePlanRequest *>(d->request);
+    return static_cast<const DeleteUsagePlanRequest *>(APIGatewayResponse::request());
 }
 
 /*!

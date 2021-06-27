@@ -113,6 +113,7 @@ public:
 
 protected:
     /// @cond internal
+    FraudDetectorRequestPrivate * const d_ptr; ///< Internal d-pointer.
     FraudDetectorRequest(FraudDetectorRequestPrivate * const d);
     /// @endcond
 

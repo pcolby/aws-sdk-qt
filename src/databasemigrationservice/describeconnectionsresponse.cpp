@@ -66,8 +66,7 @@ DescribeConnectionsResponse::DescribeConnectionsResponse(
  */
 const DescribeConnectionsRequest * DescribeConnectionsResponse::request() const
 {
-    Q_D(const DescribeConnectionsResponse);
-    return static_cast<const DescribeConnectionsRequest *>(d->request);
+    return static_cast<const DescribeConnectionsRequest *>(DatabaseMigrationServiceResponse::request());
 }
 
 /*!

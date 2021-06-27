@@ -70,8 +70,7 @@ DeleteModelExplainabilityJobDefinitionResponse::DeleteModelExplainabilityJobDefi
  */
 const DeleteModelExplainabilityJobDefinitionRequest * DeleteModelExplainabilityJobDefinitionResponse::request() const
 {
-    Q_D(const DeleteModelExplainabilityJobDefinitionResponse);
-    return static_cast<const DeleteModelExplainabilityJobDefinitionRequest *>(d->request);
+    return static_cast<const DeleteModelExplainabilityJobDefinitionRequest *>(SageMakerResponse::request());
 }
 
 /*!

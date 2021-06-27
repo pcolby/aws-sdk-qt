@@ -60,8 +60,7 @@ DescribeDashboardPermissionsResponse::DescribeDashboardPermissionsResponse(
  */
 const DescribeDashboardPermissionsRequest * DescribeDashboardPermissionsResponse::request() const
 {
-    Q_D(const DescribeDashboardPermissionsResponse);
-    return static_cast<const DescribeDashboardPermissionsRequest *>(d->request);
+    return static_cast<const DescribeDashboardPermissionsRequest *>(QuickSightResponse::request());
 }
 
 /*!

@@ -60,8 +60,7 @@ UpdateDashboardPermissionsResponse::UpdateDashboardPermissionsResponse(
  */
 const UpdateDashboardPermissionsRequest * UpdateDashboardPermissionsResponse::request() const
 {
-    Q_D(const UpdateDashboardPermissionsResponse);
-    return static_cast<const UpdateDashboardPermissionsRequest *>(d->request);
+    return static_cast<const UpdateDashboardPermissionsRequest *>(QuickSightResponse::request());
 }
 
 /*!

@@ -57,8 +57,7 @@ DescribeObjectResponse::DescribeObjectResponse(
  */
 const DescribeObjectRequest * DescribeObjectResponse::request() const
 {
-    Q_D(const DescribeObjectResponse);
-    return static_cast<const DescribeObjectRequest *>(d->request);
+    return static_cast<const DescribeObjectRequest *>(MediaStoreDataResponse::request());
 }
 
 /*!

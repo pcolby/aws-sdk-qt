@@ -59,8 +59,7 @@ ListLicenseSpecificationsForResourceResponse::ListLicenseSpecificationsForResour
  */
 const ListLicenseSpecificationsForResourceRequest * ListLicenseSpecificationsForResourceResponse::request() const
 {
-    Q_D(const ListLicenseSpecificationsForResourceResponse);
-    return static_cast<const ListLicenseSpecificationsForResourceRequest *>(d->request);
+    return static_cast<const ListLicenseSpecificationsForResourceRequest *>(LicenseManagerResponse::request());
 }
 
 /*!

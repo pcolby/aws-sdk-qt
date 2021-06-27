@@ -60,8 +60,7 @@ StartAssessmentRunResponse::StartAssessmentRunResponse(
  */
 const StartAssessmentRunRequest * StartAssessmentRunResponse::request() const
 {
-    Q_D(const StartAssessmentRunResponse);
-    return static_cast<const StartAssessmentRunRequest *>(d->request);
+    return static_cast<const StartAssessmentRunRequest *>(InspectorResponse::request());
 }
 
 /*!

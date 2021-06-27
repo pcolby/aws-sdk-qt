@@ -56,8 +56,7 @@ DescribePlacementResponse::DescribePlacementResponse(
  */
 const DescribePlacementRequest * DescribePlacementResponse::request() const
 {
-    Q_D(const DescribePlacementResponse);
-    return static_cast<const DescribePlacementRequest *>(d->request);
+    return static_cast<const DescribePlacementRequest *>(IoT1ClickProjectsResponse::request());
 }
 
 /*!

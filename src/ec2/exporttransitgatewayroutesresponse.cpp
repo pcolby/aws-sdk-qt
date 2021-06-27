@@ -87,8 +87,7 @@ ExportTransitGatewayRoutesResponse::ExportTransitGatewayRoutesResponse(
  */
 const ExportTransitGatewayRoutesRequest * ExportTransitGatewayRoutesResponse::request() const
 {
-    Q_D(const ExportTransitGatewayRoutesResponse);
-    return static_cast<const ExportTransitGatewayRoutesRequest *>(d->request);
+    return static_cast<const ExportTransitGatewayRoutesRequest *>(Ec2Response::request());
 }
 
 /*!

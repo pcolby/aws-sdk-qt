@@ -37,7 +37,7 @@ namespace CostExplorer {
  * Constructs a CostExplorerResponse object with parent \a parent.
  */
 CostExplorerResponse::CostExplorerResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new CostExplorerResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new CostExplorerResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ CostExplorerResponse::CostExplorerResponse(QObject * const parent)
  * implementation that inherits from CostExplorerResponsePrivate.
  */
 CostExplorerResponse::CostExplorerResponse(CostExplorerResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void CostExplorerResponse::parseFailure(QIODevice &response)
  * Constructs a CostExplorerResponsePrivate object with public implementation \a q.
  */
 CostExplorerResponsePrivate::CostExplorerResponsePrivate(
-    CostExplorerResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    CostExplorerResponse * const q) : q_ptr(q)
 {
 
 }

@@ -82,8 +82,7 @@ ReplaceTopicRuleResponse::ReplaceTopicRuleResponse(
  */
 const ReplaceTopicRuleRequest * ReplaceTopicRuleResponse::request() const
 {
-    Q_D(const ReplaceTopicRuleResponse);
-    return static_cast<const ReplaceTopicRuleRequest *>(d->request);
+    return static_cast<const ReplaceTopicRuleRequest *>(IoTResponse::request());
 }
 
 /*!

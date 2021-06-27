@@ -98,8 +98,7 @@ DeleteProxySessionResponse::DeleteProxySessionResponse(
  */
 const DeleteProxySessionRequest * DeleteProxySessionResponse::request() const
 {
-    Q_D(const DeleteProxySessionResponse);
-    return static_cast<const DeleteProxySessionRequest *>(d->request);
+    return static_cast<const DeleteProxySessionRequest *>(ChimeResponse::request());
 }
 
 /*!

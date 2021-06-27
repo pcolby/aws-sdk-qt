@@ -89,8 +89,7 @@ DeleteMailboxPermissionsResponse::DeleteMailboxPermissionsResponse(
  */
 const DeleteMailboxPermissionsRequest * DeleteMailboxPermissionsResponse::request() const
 {
-    Q_D(const DeleteMailboxPermissionsResponse);
-    return static_cast<const DeleteMailboxPermissionsRequest *>(d->request);
+    return static_cast<const DeleteMailboxPermissionsRequest *>(WorkMailResponse::request());
 }
 
 /*!

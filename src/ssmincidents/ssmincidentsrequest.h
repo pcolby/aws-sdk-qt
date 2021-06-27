@@ -85,6 +85,7 @@ public:
 
 protected:
     /// @cond internal
+    SSMIncidentsRequestPrivate * const d_ptr; ///< Internal d-pointer.
     SSMIncidentsRequest(SSMIncidentsRequestPrivate * const d);
     /// @endcond
 

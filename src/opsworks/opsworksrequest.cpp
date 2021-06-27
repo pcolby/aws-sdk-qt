@@ -116,7 +116,7 @@ namespace OpsWorks {
  * Constructs a OpsWorksRequest object for OpsWorks \a action.
  */
 OpsWorksRequest::OpsWorksRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new OpsWorksRequestPrivate(action, this))
+    : d_ptr(new OpsWorksRequestPrivate(action, this))
 {
 
 }
@@ -125,7 +125,8 @@ OpsWorksRequest::OpsWorksRequest(const Action action)
  * Constructs a copy of \a other.
  */
 OpsWorksRequest::OpsWorksRequest(const OpsWorksRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new OpsWorksRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new OpsWorksRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -148,7 +149,7 @@ OpsWorksRequest& OpsWorksRequest::operator=(const OpsWorksRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from OpsWorksRequestPrivate.
  */
-OpsWorksRequest::OpsWorksRequest(OpsWorksRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+OpsWorksRequest::OpsWorksRequest(OpsWorksRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -317,7 +318,7 @@ QNetworkRequest OpsWorksRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 OpsWorksRequestPrivate::OpsWorksRequestPrivate(const OpsWorksRequest::Action action, OpsWorksRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -332,8 +333,8 @@ OpsWorksRequestPrivate::OpsWorksRequestPrivate(const OpsWorksRequest::Action act
  */
 OpsWorksRequestPrivate::OpsWorksRequestPrivate(const OpsWorksRequestPrivate &other,
                                      OpsWorksRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

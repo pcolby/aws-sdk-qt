@@ -20,19 +20,20 @@
 #ifndef QTAWS_DYNAMODBSTREAMSCLIENT_P_H
 #define QTAWS_DYNAMODBSTREAMSCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace DynamoDBStreams {
 
 class DynamoDBStreamsClient;
 
-class DynamoDBStreamsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class DynamoDBStreamsClientPrivate {
 
 public:
     DynamoDBStreamsClientPrivate(DynamoDBStreamsClient * const q);
+
+protected:
+    DynamoDBStreamsClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DynamoDBStreamsClient)

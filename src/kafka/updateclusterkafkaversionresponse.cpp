@@ -56,8 +56,7 @@ UpdateClusterKafkaVersionResponse::UpdateClusterKafkaVersionResponse(
  */
 const UpdateClusterKafkaVersionRequest * UpdateClusterKafkaVersionResponse::request() const
 {
-    Q_D(const UpdateClusterKafkaVersionResponse);
-    return static_cast<const UpdateClusterKafkaVersionRequest *>(d->request);
+    return static_cast<const UpdateClusterKafkaVersionRequest *>(KafkaResponse::request());
 }
 
 /*!

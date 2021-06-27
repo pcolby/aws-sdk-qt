@@ -74,8 +74,7 @@ AttachDiskResponse::AttachDiskResponse(
  */
 const AttachDiskRequest * AttachDiskResponse::request() const
 {
-    Q_D(const AttachDiskResponse);
-    return static_cast<const AttachDiskRequest *>(d->request);
+    return static_cast<const AttachDiskRequest *>(LightsailResponse::request());
 }
 
 /*!

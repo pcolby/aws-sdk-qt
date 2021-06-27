@@ -59,8 +59,7 @@ GetImportResponse::GetImportResponse(
  */
 const GetImportRequest * GetImportResponse::request() const
 {
-    Q_D(const GetImportResponse);
-    return static_cast<const GetImportRequest *>(d->request);
+    return static_cast<const GetImportRequest *>(LexModelBuildingServiceResponse::request());
 }
 
 /*!

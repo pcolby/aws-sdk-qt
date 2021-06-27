@@ -60,8 +60,7 @@ ListThemeAliasesResponse::ListThemeAliasesResponse(
  */
 const ListThemeAliasesRequest * ListThemeAliasesResponse::request() const
 {
-    Q_D(const ListThemeAliasesResponse);
-    return static_cast<const ListThemeAliasesRequest *>(d->request);
+    return static_cast<const ListThemeAliasesRequest *>(QuickSightResponse::request());
 }
 
 /*!

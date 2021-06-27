@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    AutoScalingResponsePrivate * const d_ptr; ///< Internal d-pointer.
     AutoScalingResponse(AutoScalingResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

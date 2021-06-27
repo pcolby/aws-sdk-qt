@@ -66,8 +66,7 @@ UndeploySystemInstanceResponse::UndeploySystemInstanceResponse(
  */
 const UndeploySystemInstanceRequest * UndeploySystemInstanceResponse::request() const
 {
-    Q_D(const UndeploySystemInstanceResponse);
-    return static_cast<const UndeploySystemInstanceRequest *>(d->request);
+    return static_cast<const UndeploySystemInstanceRequest *>(IoTThingsGraphResponse::request());
 }
 
 /*!

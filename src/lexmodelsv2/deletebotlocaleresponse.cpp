@@ -55,8 +55,7 @@ DeleteBotLocaleResponse::DeleteBotLocaleResponse(
  */
 const DeleteBotLocaleRequest * DeleteBotLocaleResponse::request() const
 {
-    Q_D(const DeleteBotLocaleResponse);
-    return static_cast<const DeleteBotLocaleRequest *>(d->request);
+    return static_cast<const DeleteBotLocaleRequest *>(LexModelsV2Response::request());
 }
 
 /*!

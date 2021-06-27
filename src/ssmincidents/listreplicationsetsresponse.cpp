@@ -65,8 +65,7 @@ ListReplicationSetsResponse::ListReplicationSetsResponse(
  */
 const ListReplicationSetsRequest * ListReplicationSetsResponse::request() const
 {
-    Q_D(const ListReplicationSetsResponse);
-    return static_cast<const ListReplicationSetsRequest *>(d->request);
+    return static_cast<const ListReplicationSetsRequest *>(SSMIncidentsResponse::request());
 }
 
 /*!

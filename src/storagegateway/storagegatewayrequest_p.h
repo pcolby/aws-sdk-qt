@@ -20,15 +20,12 @@
 #ifndef QTAWS_STORAGEGATEWAYREQUEST_P_H
 #define QTAWS_STORAGEGATEWAYREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "storagegatewayrequest.h"
-
 namespace QtAws {
 namespace StorageGateway {
 
 class StorageGatewayRequest;
 
-class StorageGatewayRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class StorageGatewayRequestPrivate {
 
 public:
     StorageGatewayRequest::Action action; ///< StorageGateway action to be performed.
@@ -39,6 +36,9 @@ public:
     StorageGatewayRequestPrivate(const StorageGatewayRequestPrivate &other, StorageGatewayRequest * const q);
 
     static QString toString(const StorageGatewayRequest::Action &action);
+
+protected:
+    StorageGatewayRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(StorageGatewayRequest)

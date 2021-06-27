@@ -55,8 +55,7 @@ GetBucketInventoryConfigurationResponse::GetBucketInventoryConfigurationResponse
  */
 const GetBucketInventoryConfigurationRequest * GetBucketInventoryConfigurationResponse::request() const
 {
-    Q_D(const GetBucketInventoryConfigurationResponse);
-    return static_cast<const GetBucketInventoryConfigurationRequest *>(d->request);
+    return static_cast<const GetBucketInventoryConfigurationRequest *>(S3Response::request());
 }
 
 /*!

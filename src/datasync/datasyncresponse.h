@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    DataSyncResponsePrivate * const d_ptr; ///< Internal d-pointer.
     DataSyncResponse(DataSyncResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

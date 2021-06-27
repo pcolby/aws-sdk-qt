@@ -87,8 +87,7 @@ EnableVgwRoutePropagationResponse::EnableVgwRoutePropagationResponse(
  */
 const EnableVgwRoutePropagationRequest * EnableVgwRoutePropagationResponse::request() const
 {
-    Q_D(const EnableVgwRoutePropagationResponse);
-    return static_cast<const EnableVgwRoutePropagationRequest *>(d->request);
+    return static_cast<const EnableVgwRoutePropagationRequest *>(Ec2Response::request());
 }
 
 /*!

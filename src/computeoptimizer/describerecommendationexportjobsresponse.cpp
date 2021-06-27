@@ -64,8 +64,7 @@ DescribeRecommendationExportJobsResponse::DescribeRecommendationExportJobsRespon
  */
 const DescribeRecommendationExportJobsRequest * DescribeRecommendationExportJobsResponse::request() const
 {
-    Q_D(const DescribeRecommendationExportJobsResponse);
-    return static_cast<const DescribeRecommendationExportJobsRequest *>(d->request);
+    return static_cast<const DescribeRecommendationExportJobsRequest *>(ComputeOptimizerResponse::request());
 }
 
 /*!

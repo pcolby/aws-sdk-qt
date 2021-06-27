@@ -78,8 +78,7 @@ CreateGeoMatchSetResponse::CreateGeoMatchSetResponse(
  */
 const CreateGeoMatchSetRequest * CreateGeoMatchSetResponse::request() const
 {
-    Q_D(const CreateGeoMatchSetResponse);
-    return static_cast<const CreateGeoMatchSetRequest *>(d->request);
+    return static_cast<const CreateGeoMatchSetRequest *>(WAFRegionalResponse::request());
 }
 
 /*!

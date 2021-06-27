@@ -84,8 +84,7 @@ DescribeGroupsResponse::DescribeGroupsResponse(
  */
 const DescribeGroupsRequest * DescribeGroupsResponse::request() const
 {
-    Q_D(const DescribeGroupsResponse);
-    return static_cast<const DescribeGroupsRequest *>(d->request);
+    return static_cast<const DescribeGroupsRequest *>(WorkDocsResponse::request());
 }
 
 /*!

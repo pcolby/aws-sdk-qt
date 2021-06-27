@@ -56,8 +56,7 @@ CreateSmsTemplateResponse::CreateSmsTemplateResponse(
  */
 const CreateSmsTemplateRequest * CreateSmsTemplateResponse::request() const
 {
-    Q_D(const CreateSmsTemplateResponse);
-    return static_cast<const CreateSmsTemplateRequest *>(d->request);
+    return static_cast<const CreateSmsTemplateRequest *>(PinpointResponse::request());
 }
 
 /*!

@@ -66,8 +66,7 @@ DescribeApplicableIndividualAssessmentsResponse::DescribeApplicableIndividualAss
  */
 const DescribeApplicableIndividualAssessmentsRequest * DescribeApplicableIndividualAssessmentsResponse::request() const
 {
-    Q_D(const DescribeApplicableIndividualAssessmentsResponse);
-    return static_cast<const DescribeApplicableIndividualAssessmentsRequest *>(d->request);
+    return static_cast<const DescribeApplicableIndividualAssessmentsRequest *>(DatabaseMigrationServiceResponse::request());
 }
 
 /*!

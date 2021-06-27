@@ -58,8 +58,7 @@ ListSchemaVersionsResponse::ListSchemaVersionsResponse(
  */
 const ListSchemaVersionsRequest * ListSchemaVersionsResponse::request() const
 {
-    Q_D(const ListSchemaVersionsResponse);
-    return static_cast<const ListSchemaVersionsRequest *>(d->request);
+    return static_cast<const ListSchemaVersionsRequest *>(GlueResponse::request());
 }
 
 /*!

@@ -74,8 +74,7 @@ ListTagsOfResourceResponse::ListTagsOfResourceResponse(
  */
 const ListTagsOfResourceRequest * ListTagsOfResourceResponse::request() const
 {
-    Q_D(const ListTagsOfResourceResponse);
-    return static_cast<const ListTagsOfResourceRequest *>(d->request);
+    return static_cast<const ListTagsOfResourceRequest *>(DynamoDBResponse::request());
 }
 
 /*!

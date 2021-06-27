@@ -124,8 +124,7 @@ UpdateFileSystemAssociationResponse::UpdateFileSystemAssociationResponse(
  */
 const UpdateFileSystemAssociationRequest * UpdateFileSystemAssociationResponse::request() const
 {
-    Q_D(const UpdateFileSystemAssociationResponse);
-    return static_cast<const UpdateFileSystemAssociationRequest *>(d->request);
+    return static_cast<const UpdateFileSystemAssociationRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

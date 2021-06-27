@@ -20,19 +20,20 @@
 #ifndef QTAWS_TEXTRACTCLIENT_P_H
 #define QTAWS_TEXTRACTCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace Textract {
 
 class TextractClient;
 
-class TextractClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class TextractClientPrivate {
 
 public:
     TextractClientPrivate(TextractClient * const q);
+
+protected:
+    TextractClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(TextractClient)

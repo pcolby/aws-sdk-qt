@@ -66,8 +66,7 @@ PutConfigurationSetDeliveryOptionsResponse::PutConfigurationSetDeliveryOptionsRe
  */
 const PutConfigurationSetDeliveryOptionsRequest * PutConfigurationSetDeliveryOptionsResponse::request() const
 {
-    Q_D(const PutConfigurationSetDeliveryOptionsResponse);
-    return static_cast<const PutConfigurationSetDeliveryOptionsRequest *>(d->request);
+    return static_cast<const PutConfigurationSetDeliveryOptionsRequest *>(SesResponse::request());
 }
 
 /*!

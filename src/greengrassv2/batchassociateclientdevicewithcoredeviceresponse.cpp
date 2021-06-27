@@ -72,8 +72,7 @@ BatchAssociateClientDeviceWithCoreDeviceResponse::BatchAssociateClientDeviceWith
  */
 const BatchAssociateClientDeviceWithCoreDeviceRequest * BatchAssociateClientDeviceWithCoreDeviceResponse::request() const
 {
-    Q_D(const BatchAssociateClientDeviceWithCoreDeviceResponse);
-    return static_cast<const BatchAssociateClientDeviceWithCoreDeviceRequest *>(d->request);
+    return static_cast<const BatchAssociateClientDeviceWithCoreDeviceRequest *>(GreengrassV2Response::request());
 }
 
 /*!

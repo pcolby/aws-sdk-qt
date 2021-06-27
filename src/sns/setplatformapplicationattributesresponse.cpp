@@ -75,8 +75,7 @@ SetPlatformApplicationAttributesResponse::SetPlatformApplicationAttributesRespon
  */
 const SetPlatformApplicationAttributesRequest * SetPlatformApplicationAttributesResponse::request() const
 {
-    Q_D(const SetPlatformApplicationAttributesResponse);
-    return static_cast<const SetPlatformApplicationAttributesRequest *>(d->request);
+    return static_cast<const SetPlatformApplicationAttributesRequest *>(SnsResponse::request());
 }
 
 /*!

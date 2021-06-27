@@ -20,14 +20,12 @@
 #ifndef QTAWS_PERSONALIZERUNTIMERESPONSE_P_H
 #define QTAWS_PERSONALIZERUNTIMERESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace PersonalizeRuntime {
 
 class PersonalizeRuntimeResponse;
 
-class PersonalizeRuntimeResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class PersonalizeRuntimeResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    PersonalizeRuntimeResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(PersonalizeRuntimeResponse)

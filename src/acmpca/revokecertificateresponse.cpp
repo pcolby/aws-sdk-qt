@@ -69,8 +69,7 @@ RevokeCertificateResponse::RevokeCertificateResponse(
  */
 const RevokeCertificateRequest * RevokeCertificateResponse::request() const
 {
-    Q_D(const RevokeCertificateResponse);
-    return static_cast<const RevokeCertificateRequest *>(d->request);
+    return static_cast<const RevokeCertificateRequest *>(AcmpcaResponse::request());
 }
 
 /*!

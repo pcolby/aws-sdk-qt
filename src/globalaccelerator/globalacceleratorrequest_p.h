@@ -20,15 +20,12 @@
 #ifndef QTAWS_GLOBALACCELERATORREQUEST_P_H
 #define QTAWS_GLOBALACCELERATORREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "globalacceleratorrequest.h"
-
 namespace QtAws {
 namespace GlobalAccelerator {
 
 class GlobalAcceleratorRequest;
 
-class GlobalAcceleratorRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class GlobalAcceleratorRequestPrivate {
 
 public:
     GlobalAcceleratorRequest::Action action; ///< GlobalAccelerator action to be performed.
@@ -39,6 +36,9 @@ public:
     GlobalAcceleratorRequestPrivate(const GlobalAcceleratorRequestPrivate &other, GlobalAcceleratorRequest * const q);
 
     static QString toString(const GlobalAcceleratorRequest::Action &action);
+
+protected:
+    GlobalAcceleratorRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(GlobalAcceleratorRequest)

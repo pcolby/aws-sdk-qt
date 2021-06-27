@@ -84,8 +84,7 @@ PutDestinationResponse::PutDestinationResponse(
  */
 const PutDestinationRequest * PutDestinationResponse::request() const
 {
-    Q_D(const PutDestinationResponse);
-    return static_cast<const PutDestinationRequest *>(d->request);
+    return static_cast<const PutDestinationRequest *>(CloudWatchLogsResponse::request());
 }
 
 /*!

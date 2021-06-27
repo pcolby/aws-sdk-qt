@@ -94,16 +94,16 @@ AcmClient::AcmClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new AcmClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2015-12-08"),
+    QStringLiteral("acm"),
+    QStringLiteral("AWS Certificate Manager"),
+    QStringLiteral("acm"),
+    parent), d_ptr(new AcmClientPrivate(this))
 {
-    Q_D(AcmClient);
-    d->apiVersion = QStringLiteral("2015-12-08");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("acm");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Certificate Manager");
-    d->serviceName = QStringLiteral("acm");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -122,16 +122,16 @@ AcmClient::AcmClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new AcmClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2015-12-08"),
+    QStringLiteral("acm"),
+    QStringLiteral("AWS Certificate Manager"),
+    QStringLiteral("acm"),
+    parent), d_ptr(new AcmClientPrivate(this))
 {
-    Q_D(AcmClient);
-    d->apiVersion = QStringLiteral("2015-12-08");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("acm");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Certificate Manager");
-    d->serviceName = QStringLiteral("acm");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -507,10 +507,9 @@ UpdateCertificateOptionsResponse * AcmClient::updateCertificateOptions(const Upd
 /*!
  * Constructs a AcmClientPrivate object with public implementation \a q.
  */
-AcmClientPrivate::AcmClientPrivate(AcmClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+AcmClientPrivate::AcmClientPrivate(AcmClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace ACM

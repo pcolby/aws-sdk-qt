@@ -70,8 +70,7 @@ StopMonitoringScheduleResponse::StopMonitoringScheduleResponse(
  */
 const StopMonitoringScheduleRequest * StopMonitoringScheduleResponse::request() const
 {
-    Q_D(const StopMonitoringScheduleResponse);
-    return static_cast<const StopMonitoringScheduleRequest *>(d->request);
+    return static_cast<const StopMonitoringScheduleRequest *>(SageMakerResponse::request());
 }
 
 /*!

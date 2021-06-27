@@ -84,8 +84,7 @@ DeleteQueryDefinitionResponse::DeleteQueryDefinitionResponse(
  */
 const DeleteQueryDefinitionRequest * DeleteQueryDefinitionResponse::request() const
 {
-    Q_D(const DeleteQueryDefinitionResponse);
-    return static_cast<const DeleteQueryDefinitionRequest *>(d->request);
+    return static_cast<const DeleteQueryDefinitionRequest *>(CloudWatchLogsResponse::request());
 }
 
 /*!

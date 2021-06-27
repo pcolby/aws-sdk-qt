@@ -57,8 +57,7 @@ StopRxNormInferenceJobResponse::StopRxNormInferenceJobResponse(
  */
 const StopRxNormInferenceJobRequest * StopRxNormInferenceJobResponse::request() const
 {
-    Q_D(const StopRxNormInferenceJobResponse);
-    return static_cast<const StopRxNormInferenceJobRequest *>(d->request);
+    return static_cast<const StopRxNormInferenceJobRequest *>(ComprehendMedicalResponse::request());
 }
 
 /*!

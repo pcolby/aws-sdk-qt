@@ -87,8 +87,7 @@ DeleteNetworkInsightsPathResponse::DeleteNetworkInsightsPathResponse(
  */
 const DeleteNetworkInsightsPathRequest * DeleteNetworkInsightsPathResponse::request() const
 {
-    Q_D(const DeleteNetworkInsightsPathResponse);
-    return static_cast<const DeleteNetworkInsightsPathRequest *>(d->request);
+    return static_cast<const DeleteNetworkInsightsPathRequest *>(Ec2Response::request());
 }
 
 /*!

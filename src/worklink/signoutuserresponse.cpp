@@ -60,8 +60,7 @@ SignOutUserResponse::SignOutUserResponse(
  */
 const SignOutUserRequest * SignOutUserResponse::request() const
 {
-    Q_D(const SignOutUserResponse);
-    return static_cast<const SignOutUserRequest *>(d->request);
+    return static_cast<const SignOutUserRequest *>(WorkLinkResponse::request());
 }
 
 /*!

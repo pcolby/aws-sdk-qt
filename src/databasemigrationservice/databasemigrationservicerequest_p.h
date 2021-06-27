@@ -20,15 +20,12 @@
 #ifndef QTAWS_DATABASEMIGRATIONSERVICEREQUEST_P_H
 #define QTAWS_DATABASEMIGRATIONSERVICEREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "databasemigrationservicerequest.h"
-
 namespace QtAws {
 namespace DatabaseMigrationService {
 
 class DatabaseMigrationServiceRequest;
 
-class DatabaseMigrationServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class DatabaseMigrationServiceRequestPrivate {
 
 public:
     DatabaseMigrationServiceRequest::Action action; ///< DatabaseMigrationService action to be performed.
@@ -39,6 +36,9 @@ public:
     DatabaseMigrationServiceRequestPrivate(const DatabaseMigrationServiceRequestPrivate &other, DatabaseMigrationServiceRequest * const q);
 
     static QString toString(const DatabaseMigrationServiceRequest::Action &action);
+
+protected:
+    DatabaseMigrationServiceRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DatabaseMigrationServiceRequest)

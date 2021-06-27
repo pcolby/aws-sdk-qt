@@ -58,8 +58,7 @@ GetConfigResponse::GetConfigResponse(
  */
 const GetConfigRequest * GetConfigResponse::request() const
 {
-    Q_D(const GetConfigResponse);
-    return static_cast<const GetConfigRequest *>(d->request);
+    return static_cast<const GetConfigRequest *>(GroundStationResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ CreateDBSubnetGroupResponse::CreateDBSubnetGroupResponse(
  */
 const CreateDBSubnetGroupRequest * CreateDBSubnetGroupResponse::request() const
 {
-    Q_D(const CreateDBSubnetGroupResponse);
-    return static_cast<const CreateDBSubnetGroupRequest *>(d->request);
+    return static_cast<const CreateDBSubnetGroupRequest *>(DocDBResponse::request());
 }
 
 /*!

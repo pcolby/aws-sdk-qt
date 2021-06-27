@@ -84,8 +84,7 @@ CreateCustomMetadataResponse::CreateCustomMetadataResponse(
  */
 const CreateCustomMetadataRequest * CreateCustomMetadataResponse::request() const
 {
-    Q_D(const CreateCustomMetadataResponse);
-    return static_cast<const CreateCustomMetadataRequest *>(d->request);
+    return static_cast<const CreateCustomMetadataRequest *>(WorkDocsResponse::request());
 }
 
 /*!

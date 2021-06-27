@@ -20,15 +20,12 @@
 #ifndef QTAWS_KMSREQUEST_P_H
 #define QTAWS_KMSREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "kmsrequest.h"
-
 namespace QtAws {
 namespace KMS {
 
 class KmsRequest;
 
-class KmsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class KmsRequestPrivate {
 
 public:
     KmsRequest::Action action; ///< KMS action to be performed.
@@ -39,6 +36,9 @@ public:
     KmsRequestPrivate(const KmsRequestPrivate &other, KmsRequest * const q);
 
     static QString toString(const KmsRequest::Action &action);
+
+protected:
+    KmsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(KmsRequest)

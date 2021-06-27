@@ -66,8 +66,7 @@ DeleteConfigurationSetResponse::DeleteConfigurationSetResponse(
  */
 const DeleteConfigurationSetRequest * DeleteConfigurationSetResponse::request() const
 {
-    Q_D(const DeleteConfigurationSetResponse);
-    return static_cast<const DeleteConfigurationSetRequest *>(d->request);
+    return static_cast<const DeleteConfigurationSetRequest *>(SesResponse::request());
 }
 
 /*!

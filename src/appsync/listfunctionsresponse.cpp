@@ -56,8 +56,7 @@ ListFunctionsResponse::ListFunctionsResponse(
  */
 const ListFunctionsRequest * ListFunctionsResponse::request() const
 {
-    Q_D(const ListFunctionsResponse);
-    return static_cast<const ListFunctionsRequest *>(d->request);
+    return static_cast<const ListFunctionsRequest *>(AppSyncResponse::request());
 }
 
 /*!

@@ -20,14 +20,12 @@
 #ifndef QTAWS_CODEGURUREVIEWERRESPONSE_P_H
 #define QTAWS_CODEGURUREVIEWERRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace CodeGuruReviewer {
 
 class CodeGuruReviewerResponse;
 
-class CodeGuruReviewerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class CodeGuruReviewerResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    CodeGuruReviewerResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CodeGuruReviewerResponse)

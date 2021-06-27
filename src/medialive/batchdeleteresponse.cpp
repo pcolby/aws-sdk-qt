@@ -55,8 +55,7 @@ BatchDeleteResponse::BatchDeleteResponse(
  */
 const BatchDeleteRequest * BatchDeleteResponse::request() const
 {
-    Q_D(const BatchDeleteResponse);
-    return static_cast<const BatchDeleteRequest *>(d->request);
+    return static_cast<const BatchDeleteRequest *>(MediaLiveResponse::request());
 }
 
 /*!

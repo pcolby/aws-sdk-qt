@@ -58,8 +58,7 @@ ListInputRoutingsResponse::ListInputRoutingsResponse(
  */
 const ListInputRoutingsRequest * ListInputRoutingsResponse::request() const
 {
-    Q_D(const ListInputRoutingsResponse);
-    return static_cast<const ListInputRoutingsRequest *>(d->request);
+    return static_cast<const ListInputRoutingsRequest *>(IoTEventsResponse::request());
 }
 
 /*!

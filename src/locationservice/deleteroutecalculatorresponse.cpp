@@ -56,8 +56,7 @@ DeleteRouteCalculatorResponse::DeleteRouteCalculatorResponse(
  */
 const DeleteRouteCalculatorRequest * DeleteRouteCalculatorResponse::request() const
 {
-    Q_D(const DeleteRouteCalculatorResponse);
-    return static_cast<const DeleteRouteCalculatorRequest *>(d->request);
+    return static_cast<const DeleteRouteCalculatorRequest *>(LocationServiceResponse::request());
 }
 
 /*!

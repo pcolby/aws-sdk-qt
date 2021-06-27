@@ -58,8 +58,7 @@ ListSatellitesResponse::ListSatellitesResponse(
  */
 const ListSatellitesRequest * ListSatellitesResponse::request() const
 {
-    Q_D(const ListSatellitesResponse);
-    return static_cast<const ListSatellitesRequest *>(d->request);
+    return static_cast<const ListSatellitesRequest *>(GroundStationResponse::request());
 }
 
 /*!

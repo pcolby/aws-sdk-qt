@@ -66,8 +66,7 @@ UpdateFunctionCodeResponse::UpdateFunctionCodeResponse(
  */
 const UpdateFunctionCodeRequest * UpdateFunctionCodeResponse::request() const
 {
-    Q_D(const UpdateFunctionCodeResponse);
-    return static_cast<const UpdateFunctionCodeRequest *>(d->request);
+    return static_cast<const UpdateFunctionCodeRequest *>(LambdaResponse::request());
 }
 
 /*!

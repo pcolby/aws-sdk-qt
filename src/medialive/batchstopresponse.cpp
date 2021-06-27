@@ -55,8 +55,7 @@ BatchStopResponse::BatchStopResponse(
  */
 const BatchStopRequest * BatchStopResponse::request() const
 {
-    Q_D(const BatchStopResponse);
-    return static_cast<const BatchStopRequest *>(d->request);
+    return static_cast<const BatchStopRequest *>(MediaLiveResponse::request());
 }
 
 /*!

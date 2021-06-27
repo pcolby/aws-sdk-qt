@@ -62,8 +62,7 @@ UntagOpenIDConnectProviderResponse::UntagOpenIDConnectProviderResponse(
  */
 const UntagOpenIDConnectProviderRequest * UntagOpenIDConnectProviderResponse::request() const
 {
-    Q_D(const UntagOpenIDConnectProviderResponse);
-    return static_cast<const UntagOpenIDConnectProviderRequest *>(d->request);
+    return static_cast<const UntagOpenIDConnectProviderRequest *>(IamResponse::request());
 }
 
 /*!

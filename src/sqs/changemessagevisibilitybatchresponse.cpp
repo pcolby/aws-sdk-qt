@@ -126,8 +126,7 @@ ChangeMessageVisibilityBatchResponse::ChangeMessageVisibilityBatchResponse(
  */
 const ChangeMessageVisibilityBatchRequest * ChangeMessageVisibilityBatchResponse::request() const
 {
-    Q_D(const ChangeMessageVisibilityBatchResponse);
-    return static_cast<const ChangeMessageVisibilityBatchRequest *>(d->request);
+    return static_cast<const ChangeMessageVisibilityBatchRequest *>(SqsResponse::request());
 }
 
 /*!

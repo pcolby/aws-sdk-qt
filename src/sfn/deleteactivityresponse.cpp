@@ -74,8 +74,7 @@ DeleteActivityResponse::DeleteActivityResponse(
  */
 const DeleteActivityRequest * DeleteActivityResponse::request() const
 {
-    Q_D(const DeleteActivityResponse);
-    return static_cast<const DeleteActivityRequest *>(d->request);
+    return static_cast<const DeleteActivityRequest *>(SfnResponse::request());
 }
 
 /*!

@@ -60,8 +60,7 @@ DescribeIdentityProviderConfigurationResponse::DescribeIdentityProviderConfigura
  */
 const DescribeIdentityProviderConfigurationRequest * DescribeIdentityProviderConfigurationResponse::request() const
 {
-    Q_D(const DescribeIdentityProviderConfigurationResponse);
-    return static_cast<const DescribeIdentityProviderConfigurationRequest *>(d->request);
+    return static_cast<const DescribeIdentityProviderConfigurationRequest *>(WorkLinkResponse::request());
 }
 
 /*!

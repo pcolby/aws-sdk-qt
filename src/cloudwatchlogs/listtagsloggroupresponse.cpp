@@ -84,8 +84,7 @@ ListTagsLogGroupResponse::ListTagsLogGroupResponse(
  */
 const ListTagsLogGroupRequest * ListTagsLogGroupResponse::request() const
 {
-    Q_D(const ListTagsLogGroupResponse);
-    return static_cast<const ListTagsLogGroupRequest *>(d->request);
+    return static_cast<const ListTagsLogGroupRequest *>(CloudWatchLogsResponse::request());
 }
 
 /*!

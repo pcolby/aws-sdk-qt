@@ -78,8 +78,7 @@ PutPermissionResponse::PutPermissionResponse(
  */
 const PutPermissionRequest * PutPermissionResponse::request() const
 {
-    Q_D(const PutPermissionResponse);
-    return static_cast<const PutPermissionRequest *>(d->request);
+    return static_cast<const PutPermissionRequest *>(EventBridgeResponse::request());
 }
 
 /*!

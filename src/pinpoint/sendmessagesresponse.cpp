@@ -56,8 +56,7 @@ SendMessagesResponse::SendMessagesResponse(
  */
 const SendMessagesRequest * SendMessagesResponse::request() const
 {
-    Q_D(const SendMessagesResponse);
-    return static_cast<const SendMessagesRequest *>(d->request);
+    return static_cast<const SendMessagesRequest *>(PinpointResponse::request());
 }
 
 /*!

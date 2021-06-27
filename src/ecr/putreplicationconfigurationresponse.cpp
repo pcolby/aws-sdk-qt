@@ -62,8 +62,7 @@ PutReplicationConfigurationResponse::PutReplicationConfigurationResponse(
  */
 const PutReplicationConfigurationRequest * PutReplicationConfigurationResponse::request() const
 {
-    Q_D(const PutReplicationConfigurationResponse);
-    return static_cast<const PutReplicationConfigurationRequest *>(d->request);
+    return static_cast<const PutReplicationConfigurationRequest *>(EcrResponse::request());
 }
 
 /*!

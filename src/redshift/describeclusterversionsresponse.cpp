@@ -85,8 +85,7 @@ DescribeClusterVersionsResponse::DescribeClusterVersionsResponse(
  */
 const DescribeClusterVersionsRequest * DescribeClusterVersionsResponse::request() const
 {
-    Q_D(const DescribeClusterVersionsResponse);
-    return static_cast<const DescribeClusterVersionsRequest *>(d->request);
+    return static_cast<const DescribeClusterVersionsRequest *>(RedshiftResponse::request());
 }
 
 /*!

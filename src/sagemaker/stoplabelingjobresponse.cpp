@@ -70,8 +70,7 @@ StopLabelingJobResponse::StopLabelingJobResponse(
  */
 const StopLabelingJobRequest * StopLabelingJobResponse::request() const
 {
-    Q_D(const StopLabelingJobResponse);
-    return static_cast<const StopLabelingJobRequest *>(d->request);
+    return static_cast<const StopLabelingJobRequest *>(SageMakerResponse::request());
 }
 
 /*!

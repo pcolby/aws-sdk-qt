@@ -87,8 +87,7 @@ RegisterTransitGatewayMulticastGroupMembersResponse::RegisterTransitGatewayMulti
  */
 const RegisterTransitGatewayMulticastGroupMembersRequest * RegisterTransitGatewayMulticastGroupMembersResponse::request() const
 {
-    Q_D(const RegisterTransitGatewayMulticastGroupMembersResponse);
-    return static_cast<const RegisterTransitGatewayMulticastGroupMembersRequest *>(d->request);
+    return static_cast<const RegisterTransitGatewayMulticastGroupMembersRequest *>(Ec2Response::request());
 }
 
 /*!

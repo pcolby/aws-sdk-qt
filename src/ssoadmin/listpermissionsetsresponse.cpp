@@ -55,8 +55,7 @@ ListPermissionSetsResponse::ListPermissionSetsResponse(
  */
 const ListPermissionSetsRequest * ListPermissionSetsResponse::request() const
 {
-    Q_D(const ListPermissionSetsResponse);
-    return static_cast<const ListPermissionSetsRequest *>(d->request);
+    return static_cast<const ListPermissionSetsRequest *>(SSOAdminResponse::request());
 }
 
 /*!

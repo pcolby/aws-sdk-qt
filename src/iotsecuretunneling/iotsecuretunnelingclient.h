@@ -67,6 +67,12 @@ public slots:
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
+protected:
+    /// @cond internal
+    IoTSecureTunnelingClientPrivate * const d_ptr; ///< Internal d-pointer.
+    IoTSecureTunnelingClient(IoTSecureTunnelingClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(IoTSecureTunnelingClient)
     Q_DISABLE_COPY(IoTSecureTunnelingClient)

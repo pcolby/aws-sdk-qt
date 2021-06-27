@@ -58,8 +58,7 @@ DescribeResourceResponse::DescribeResourceResponse(
  */
 const DescribeResourceRequest * DescribeResourceResponse::request() const
 {
-    Q_D(const DescribeResourceResponse);
-    return static_cast<const DescribeResourceRequest *>(d->request);
+    return static_cast<const DescribeResourceRequest *>(LakeFormationResponse::request());
 }
 
 /*!

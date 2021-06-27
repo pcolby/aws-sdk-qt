@@ -60,8 +60,7 @@ UpdateAnalysisPermissionsResponse::UpdateAnalysisPermissionsResponse(
  */
 const UpdateAnalysisPermissionsRequest * UpdateAnalysisPermissionsResponse::request() const
 {
-    Q_D(const UpdateAnalysisPermissionsResponse);
-    return static_cast<const UpdateAnalysisPermissionsRequest *>(d->request);
+    return static_cast<const UpdateAnalysisPermissionsRequest *>(QuickSightResponse::request());
 }
 
 /*!

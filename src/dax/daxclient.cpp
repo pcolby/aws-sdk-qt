@@ -105,16 +105,16 @@ DaxClient::DaxClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new DaxClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-04-19"),
+    QStringLiteral("dax"),
+    QStringLiteral("Amazon DynamoDB Accelerator (DAX)"),
+    QStringLiteral("dax"),
+    parent), d_ptr(new DaxClientPrivate(this))
 {
-    Q_D(DaxClient);
-    d->apiVersion = QStringLiteral("2017-04-19");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("dax");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon DynamoDB Accelerator (DAX)");
-    d->serviceName = QStringLiteral("dax");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -133,16 +133,16 @@ DaxClient::DaxClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new DaxClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-04-19"),
+    QStringLiteral("dax"),
+    QStringLiteral("Amazon DynamoDB Accelerator (DAX)"),
+    QStringLiteral("dax"),
+    parent), d_ptr(new DaxClientPrivate(this))
 {
-    Q_D(DaxClient);
-    d->apiVersion = QStringLiteral("2017-04-19");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("dax");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon DynamoDB Accelerator (DAX)");
-    d->serviceName = QStringLiteral("dax");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -479,10 +479,9 @@ UpdateSubnetGroupResponse * DaxClient::updateSubnetGroup(const UpdateSubnetGroup
 /*!
  * Constructs a DaxClientPrivate object with public implementation \a q.
  */
-DaxClientPrivate::DaxClientPrivate(DaxClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+DaxClientPrivate::DaxClientPrivate(DaxClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace DAX

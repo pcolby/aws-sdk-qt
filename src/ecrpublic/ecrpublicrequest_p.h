@@ -20,15 +20,12 @@
 #ifndef QTAWS_ECRPUBLICREQUEST_P_H
 #define QTAWS_ECRPUBLICREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "ecrpublicrequest.h"
-
 namespace QtAws {
 namespace ECRPublic {
 
 class ECRPublicRequest;
 
-class ECRPublicRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ECRPublicRequestPrivate {
 
 public:
     ECRPublicRequest::Action action; ///< ECRPublic action to be performed.
@@ -39,6 +36,9 @@ public:
     ECRPublicRequestPrivate(const ECRPublicRequestPrivate &other, ECRPublicRequest * const q);
 
     static QString toString(const ECRPublicRequest::Action &action);
+
+protected:
+    ECRPublicRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ECRPublicRequest)

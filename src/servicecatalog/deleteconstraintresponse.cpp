@@ -61,8 +61,7 @@ DeleteConstraintResponse::DeleteConstraintResponse(
  */
 const DeleteConstraintRequest * DeleteConstraintResponse::request() const
 {
-    Q_D(const DeleteConstraintResponse);
-    return static_cast<const DeleteConstraintRequest *>(d->request);
+    return static_cast<const DeleteConstraintRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

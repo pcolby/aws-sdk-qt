@@ -74,8 +74,7 @@ CreateActivityResponse::CreateActivityResponse(
  */
 const CreateActivityRequest * CreateActivityResponse::request() const
 {
-    Q_D(const CreateActivityResponse);
-    return static_cast<const CreateActivityRequest *>(d->request);
+    return static_cast<const CreateActivityRequest *>(SfnResponse::request());
 }
 
 /*!

@@ -66,8 +66,7 @@ GetIdentityVerificationAttributesResponse::GetIdentityVerificationAttributesResp
  */
 const GetIdentityVerificationAttributesRequest * GetIdentityVerificationAttributesResponse::request() const
 {
-    Q_D(const GetIdentityVerificationAttributesResponse);
-    return static_cast<const GetIdentityVerificationAttributesRequest *>(d->request);
+    return static_cast<const GetIdentityVerificationAttributesRequest *>(SesResponse::request());
 }
 
 /*!

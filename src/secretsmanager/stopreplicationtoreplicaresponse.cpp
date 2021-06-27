@@ -131,8 +131,7 @@ StopReplicationToReplicaResponse::StopReplicationToReplicaResponse(
  */
 const StopReplicationToReplicaRequest * StopReplicationToReplicaResponse::request() const
 {
-    Q_D(const StopReplicationToReplicaResponse);
-    return static_cast<const StopReplicationToReplicaRequest *>(d->request);
+    return static_cast<const StopReplicationToReplicaRequest *>(SecretsManagerResponse::request());
 }
 
 /*!

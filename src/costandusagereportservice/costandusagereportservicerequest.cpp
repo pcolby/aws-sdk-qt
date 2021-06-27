@@ -46,7 +46,7 @@ namespace CostandUsageReportService {
  * Constructs a CostandUsageReportServiceRequest object for CostandUsageReportService \a action.
  */
 CostandUsageReportServiceRequest::CostandUsageReportServiceRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new CostandUsageReportServiceRequestPrivate(action, this))
+    : d_ptr(new CostandUsageReportServiceRequestPrivate(action, this))
 {
 
 }
@@ -55,7 +55,8 @@ CostandUsageReportServiceRequest::CostandUsageReportServiceRequest(const Action 
  * Constructs a copy of \a other.
  */
 CostandUsageReportServiceRequest::CostandUsageReportServiceRequest(const CostandUsageReportServiceRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new CostandUsageReportServiceRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new CostandUsageReportServiceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -78,7 +79,7 @@ CostandUsageReportServiceRequest& CostandUsageReportServiceRequest::operator=(co
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CostandUsageReportServiceRequestPrivate.
  */
-CostandUsageReportServiceRequest::CostandUsageReportServiceRequest(CostandUsageReportServiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+CostandUsageReportServiceRequest::CostandUsageReportServiceRequest(CostandUsageReportServiceRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -247,7 +248,7 @@ QNetworkRequest CostandUsageReportServiceRequest::unsignedRequest(const QUrl &en
  * with public implementation \a q.
  */
 CostandUsageReportServiceRequestPrivate::CostandUsageReportServiceRequestPrivate(const CostandUsageReportServiceRequest::Action action, CostandUsageReportServiceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -262,8 +263,8 @@ CostandUsageReportServiceRequestPrivate::CostandUsageReportServiceRequestPrivate
  */
 CostandUsageReportServiceRequestPrivate::CostandUsageReportServiceRequestPrivate(const CostandUsageReportServiceRequestPrivate &other,
                                      CostandUsageReportServiceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

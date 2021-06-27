@@ -56,8 +56,7 @@ CreateWorldGenerationJobResponse::CreateWorldGenerationJobResponse(
  */
 const CreateWorldGenerationJobRequest * CreateWorldGenerationJobResponse::request() const
 {
-    Q_D(const CreateWorldGenerationJobResponse);
-    return static_cast<const CreateWorldGenerationJobRequest *>(d->request);
+    return static_cast<const CreateWorldGenerationJobRequest *>(RoboMakerResponse::request());
 }
 
 /*!

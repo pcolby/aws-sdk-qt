@@ -77,8 +77,7 @@ ListChangeSetsResponse::ListChangeSetsResponse(
  */
 const ListChangeSetsRequest * ListChangeSetsResponse::request() const
 {
-    Q_D(const ListChangeSetsResponse);
-    return static_cast<const ListChangeSetsRequest *>(d->request);
+    return static_cast<const ListChangeSetsRequest *>(CloudFormationResponse::request());
 }
 
 /*!

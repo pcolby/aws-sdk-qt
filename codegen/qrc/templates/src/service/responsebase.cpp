@@ -19,7 +19,7 @@ namespace {{NameSpaceName}} {
  * Constructs a {{ClassName}} object with parent \a parent.
  */
 {{ClassName}}::{{ClassName}}(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new {{ClassName}}Private(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new {{ClassName}}Private(this))
 {
 
 }
@@ -33,7 +33,7 @@ namespace {{NameSpaceName}} {
  * implementation that inherits from {{ClassName}}Private.
  */
 {{ClassName}}::{{ClassName}}({{ClassName}}Private * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -69,7 +69,7 @@ void {{ClassName}}::parseFailure(QIODevice &response)
  * Constructs a {{ClassName}}Private object with public implementation \a q.
  */
 {{ClassName}}Private::{{ClassName}}Private(
-    {{ClassName}} * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    {{ClassName}} * const q) : q_ptr(q)
 {
 
 }

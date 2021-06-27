@@ -64,8 +64,7 @@ ExportEC2InstanceRecommendationsResponse::ExportEC2InstanceRecommendationsRespon
  */
 const ExportEC2InstanceRecommendationsRequest * ExportEC2InstanceRecommendationsResponse::request() const
 {
-    Q_D(const ExportEC2InstanceRecommendationsResponse);
-    return static_cast<const ExportEC2InstanceRecommendationsRequest *>(d->request);
+    return static_cast<const ExportEC2InstanceRecommendationsRequest *>(ComputeOptimizerResponse::request());
 }
 
 /*!

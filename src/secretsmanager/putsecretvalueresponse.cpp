@@ -131,8 +131,7 @@ PutSecretValueResponse::PutSecretValueResponse(
  */
 const PutSecretValueRequest * PutSecretValueResponse::request() const
 {
-    Q_D(const PutSecretValueResponse);
-    return static_cast<const PutSecretValueRequest *>(d->request);
+    return static_cast<const PutSecretValueRequest *>(SecretsManagerResponse::request());
 }
 
 /*!

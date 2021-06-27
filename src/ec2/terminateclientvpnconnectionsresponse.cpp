@@ -87,8 +87,7 @@ TerminateClientVpnConnectionsResponse::TerminateClientVpnConnectionsResponse(
  */
 const TerminateClientVpnConnectionsRequest * TerminateClientVpnConnectionsResponse::request() const
 {
-    Q_D(const TerminateClientVpnConnectionsResponse);
-    return static_cast<const TerminateClientVpnConnectionsRequest *>(d->request);
+    return static_cast<const TerminateClientVpnConnectionsRequest *>(Ec2Response::request());
 }
 
 /*!

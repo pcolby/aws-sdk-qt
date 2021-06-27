@@ -71,8 +71,7 @@ RespondDecisionTaskCompletedResponse::RespondDecisionTaskCompletedResponse(
  */
 const RespondDecisionTaskCompletedRequest * RespondDecisionTaskCompletedResponse::request() const
 {
-    Q_D(const RespondDecisionTaskCompletedResponse);
-    return static_cast<const RespondDecisionTaskCompletedRequest *>(d->request);
+    return static_cast<const RespondDecisionTaskCompletedRequest *>(SwfResponse::request());
 }
 
 /*!

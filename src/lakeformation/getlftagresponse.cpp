@@ -58,8 +58,7 @@ GetLFTagResponse::GetLFTagResponse(
  */
 const GetLFTagRequest * GetLFTagResponse::request() const
 {
-    Q_D(const GetLFTagResponse);
-    return static_cast<const GetLFTagRequest *>(d->request);
+    return static_cast<const GetLFTagRequest *>(LakeFormationResponse::request());
 }
 
 /*!

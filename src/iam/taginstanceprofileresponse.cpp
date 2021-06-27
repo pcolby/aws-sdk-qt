@@ -62,8 +62,7 @@ TagInstanceProfileResponse::TagInstanceProfileResponse(
  */
 const TagInstanceProfileRequest * TagInstanceProfileResponse::request() const
 {
-    Q_D(const TagInstanceProfileResponse);
-    return static_cast<const TagInstanceProfileRequest *>(d->request);
+    return static_cast<const TagInstanceProfileRequest *>(IamResponse::request());
 }
 
 /*!

@@ -74,8 +74,7 @@ GetOperationsResponse::GetOperationsResponse(
  */
 const GetOperationsRequest * GetOperationsResponse::request() const
 {
-    Q_D(const GetOperationsResponse);
-    return static_cast<const GetOperationsRequest *>(d->request);
+    return static_cast<const GetOperationsRequest *>(LightsailResponse::request());
 }
 
 /*!

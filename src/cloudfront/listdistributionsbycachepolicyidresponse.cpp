@@ -60,8 +60,7 @@ ListDistributionsByCachePolicyIdResponse::ListDistributionsByCachePolicyIdRespon
  */
 const ListDistributionsByCachePolicyIdRequest * ListDistributionsByCachePolicyIdResponse::request() const
 {
-    Q_D(const ListDistributionsByCachePolicyIdResponse);
-    return static_cast<const ListDistributionsByCachePolicyIdRequest *>(d->request);
+    return static_cast<const ListDistributionsByCachePolicyIdRequest *>(CloudFrontResponse::request());
 }
 
 /*!

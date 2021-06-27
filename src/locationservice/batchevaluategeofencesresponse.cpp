@@ -56,8 +56,7 @@ BatchEvaluateGeofencesResponse::BatchEvaluateGeofencesResponse(
  */
 const BatchEvaluateGeofencesRequest * BatchEvaluateGeofencesResponse::request() const
 {
-    Q_D(const BatchEvaluateGeofencesResponse);
-    return static_cast<const BatchEvaluateGeofencesRequest *>(d->request);
+    return static_cast<const BatchEvaluateGeofencesRequest *>(LocationServiceResponse::request());
 }
 
 /*!

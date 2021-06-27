@@ -58,8 +58,7 @@ UpdatePartitionResponse::UpdatePartitionResponse(
  */
 const UpdatePartitionRequest * UpdatePartitionResponse::request() const
 {
-    Q_D(const UpdatePartitionResponse);
-    return static_cast<const UpdatePartitionRequest *>(d->request);
+    return static_cast<const UpdatePartitionRequest *>(GlueResponse::request());
 }
 
 /*!

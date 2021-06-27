@@ -61,6 +61,7 @@ public:
 
 protected:
     /// @cond internal
+    PrometheusServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
     PrometheusServiceRequest(PrometheusServiceRequestPrivate * const d);
     /// @endcond
 

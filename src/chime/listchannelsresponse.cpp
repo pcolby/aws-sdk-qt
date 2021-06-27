@@ -98,8 +98,7 @@ ListChannelsResponse::ListChannelsResponse(
  */
 const ListChannelsRequest * ListChannelsResponse::request() const
 {
-    Q_D(const ListChannelsResponse);
-    return static_cast<const ListChannelsRequest *>(d->request);
+    return static_cast<const ListChannelsRequest *>(ChimeResponse::request());
 }
 
 /*!

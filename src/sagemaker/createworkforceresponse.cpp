@@ -70,8 +70,7 @@ CreateWorkforceResponse::CreateWorkforceResponse(
  */
 const CreateWorkforceRequest * CreateWorkforceResponse::request() const
 {
-    Q_D(const CreateWorkforceResponse);
-    return static_cast<const CreateWorkforceRequest *>(d->request);
+    return static_cast<const CreateWorkforceRequest *>(SageMakerResponse::request());
 }
 
 /*!

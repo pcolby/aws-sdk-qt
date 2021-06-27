@@ -115,8 +115,7 @@ DeleteVpcPeeringAuthorizationResponse::DeleteVpcPeeringAuthorizationResponse(
  */
 const DeleteVpcPeeringAuthorizationRequest * DeleteVpcPeeringAuthorizationResponse::request() const
 {
-    Q_D(const DeleteVpcPeeringAuthorizationResponse);
-    return static_cast<const DeleteVpcPeeringAuthorizationRequest *>(d->request);
+    return static_cast<const DeleteVpcPeeringAuthorizationRequest *>(GameLiftResponse::request());
 }
 
 /*!

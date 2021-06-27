@@ -75,8 +75,7 @@ ListDeviceInstancesResponse::ListDeviceInstancesResponse(
  */
 const ListDeviceInstancesRequest * ListDeviceInstancesResponse::request() const
 {
-    Q_D(const ListDeviceInstancesResponse);
-    return static_cast<const ListDeviceInstancesRequest *>(d->request);
+    return static_cast<const ListDeviceInstancesRequest *>(DeviceFarmResponse::request());
 }
 
 /*!

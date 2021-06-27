@@ -73,8 +73,7 @@ UpdateVirtualNodeResponse::UpdateVirtualNodeResponse(
  */
 const UpdateVirtualNodeRequest * UpdateVirtualNodeResponse::request() const
 {
-    Q_D(const UpdateVirtualNodeResponse);
-    return static_cast<const UpdateVirtualNodeRequest *>(d->request);
+    return static_cast<const UpdateVirtualNodeRequest *>(AppMeshResponse::request());
 }
 
 /*!

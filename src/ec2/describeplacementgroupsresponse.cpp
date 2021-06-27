@@ -87,8 +87,7 @@ DescribePlacementGroupsResponse::DescribePlacementGroupsResponse(
  */
 const DescribePlacementGroupsRequest * DescribePlacementGroupsResponse::request() const
 {
-    Q_D(const DescribePlacementGroupsResponse);
-    return static_cast<const DescribePlacementGroupsRequest *>(d->request);
+    return static_cast<const DescribePlacementGroupsRequest *>(Ec2Response::request());
 }
 
 /*!

@@ -87,8 +87,7 @@ DescribeTrafficMirrorSessionsResponse::DescribeTrafficMirrorSessionsResponse(
  */
 const DescribeTrafficMirrorSessionsRequest * DescribeTrafficMirrorSessionsResponse::request() const
 {
-    Q_D(const DescribeTrafficMirrorSessionsResponse);
-    return static_cast<const DescribeTrafficMirrorSessionsRequest *>(d->request);
+    return static_cast<const DescribeTrafficMirrorSessionsRequest *>(Ec2Response::request());
 }
 
 /*!

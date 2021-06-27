@@ -159,8 +159,7 @@ AssociateConfigurationItemsToApplicationResponse::AssociateConfigurationItemsToA
  */
 const AssociateConfigurationItemsToApplicationRequest * AssociateConfigurationItemsToApplicationResponse::request() const
 {
-    Q_D(const AssociateConfigurationItemsToApplicationResponse);
-    return static_cast<const AssociateConfigurationItemsToApplicationRequest *>(d->request);
+    return static_cast<const AssociateConfigurationItemsToApplicationRequest *>(ApplicationDiscoveryServiceResponse::request());
 }
 
 /*!

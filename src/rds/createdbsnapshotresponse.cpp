@@ -119,8 +119,7 @@ CreateDBSnapshotResponse::CreateDBSnapshotResponse(
  */
 const CreateDBSnapshotRequest * CreateDBSnapshotResponse::request() const
 {
-    Q_D(const CreateDBSnapshotResponse);
-    return static_cast<const CreateDBSnapshotRequest *>(d->request);
+    return static_cast<const CreateDBSnapshotRequest *>(RdsResponse::request());
 }
 
 /*!

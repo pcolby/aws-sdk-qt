@@ -98,8 +98,7 @@ GetAssessmentReportUrlResponse::GetAssessmentReportUrlResponse(
  */
 const GetAssessmentReportUrlRequest * GetAssessmentReportUrlResponse::request() const
 {
-    Q_D(const GetAssessmentReportUrlResponse);
-    return static_cast<const GetAssessmentReportUrlRequest *>(d->request);
+    return static_cast<const GetAssessmentReportUrlRequest *>(AuditManagerResponse::request());
 }
 
 /*!

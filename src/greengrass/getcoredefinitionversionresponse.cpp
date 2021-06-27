@@ -58,8 +58,7 @@ GetCoreDefinitionVersionResponse::GetCoreDefinitionVersionResponse(
  */
 const GetCoreDefinitionVersionRequest * GetCoreDefinitionVersionResponse::request() const
 {
-    Q_D(const GetCoreDefinitionVersionResponse);
-    return static_cast<const GetCoreDefinitionVersionRequest *>(d->request);
+    return static_cast<const GetCoreDefinitionVersionRequest *>(GreengrassResponse::request());
 }
 
 /*!

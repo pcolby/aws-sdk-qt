@@ -55,8 +55,7 @@ DeleteContactChannelResponse::DeleteContactChannelResponse(
  */
 const DeleteContactChannelRequest * DeleteContactChannelResponse::request() const
 {
-    Q_D(const DeleteContactChannelResponse);
-    return static_cast<const DeleteContactChannelRequest *>(d->request);
+    return static_cast<const DeleteContactChannelRequest *>(SSMContactsResponse::request());
 }
 
 /*!

@@ -124,8 +124,7 @@ AssignTapePoolResponse::AssignTapePoolResponse(
  */
 const AssignTapePoolRequest * AssignTapePoolResponse::request() const
 {
-    Q_D(const AssignTapePoolResponse);
-    return static_cast<const AssignTapePoolRequest *>(d->request);
+    return static_cast<const AssignTapePoolRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

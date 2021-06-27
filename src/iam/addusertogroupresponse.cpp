@@ -62,8 +62,7 @@ AddUserToGroupResponse::AddUserToGroupResponse(
  */
 const AddUserToGroupRequest * AddUserToGroupResponse::request() const
 {
-    Q_D(const AddUserToGroupResponse);
-    return static_cast<const AddUserToGroupRequest *>(d->request);
+    return static_cast<const AddUserToGroupRequest *>(IamResponse::request());
 }
 
 /*!

@@ -66,8 +66,7 @@ VerifyDomainDkimResponse::VerifyDomainDkimResponse(
  */
 const VerifyDomainDkimRequest * VerifyDomainDkimResponse::request() const
 {
-    Q_D(const VerifyDomainDkimResponse);
-    return static_cast<const VerifyDomainDkimRequest *>(d->request);
+    return static_cast<const VerifyDomainDkimRequest *>(SesResponse::request());
 }
 
 /*!

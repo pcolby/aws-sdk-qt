@@ -37,7 +37,7 @@ namespace SNS {
  * Constructs a SnsResponse object with parent \a parent.
  */
 SnsResponse::SnsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new SnsResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new SnsResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ SnsResponse::SnsResponse(QObject * const parent)
  * implementation that inherits from SnsResponsePrivate.
  */
 SnsResponse::SnsResponse(SnsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void SnsResponse::parseFailure(QIODevice &response)
  * Constructs a SnsResponsePrivate object with public implementation \a q.
  */
 SnsResponsePrivate::SnsResponsePrivate(
-    SnsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    SnsResponse * const q) : q_ptr(q)
 {
 
 }

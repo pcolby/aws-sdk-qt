@@ -439,8 +439,7 @@ MergePullRequestByFastForwardResponse::MergePullRequestByFastForwardResponse(
  */
 const MergePullRequestByFastForwardRequest * MergePullRequestByFastForwardResponse::request() const
 {
-    Q_D(const MergePullRequestByFastForwardResponse);
-    return static_cast<const MergePullRequestByFastForwardRequest *>(d->request);
+    return static_cast<const MergePullRequestByFastForwardRequest *>(CodeCommitResponse::request());
 }
 
 /*!

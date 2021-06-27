@@ -63,8 +63,7 @@ DescribeDatabaseResponse::DescribeDatabaseResponse(
  */
 const DescribeDatabaseRequest * DescribeDatabaseResponse::request() const
 {
-    Q_D(const DescribeDatabaseResponse);
-    return static_cast<const DescribeDatabaseRequest *>(d->request);
+    return static_cast<const DescribeDatabaseRequest *>(TimestreamWriteResponse::request());
 }
 
 /*!

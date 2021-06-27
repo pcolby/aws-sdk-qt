@@ -81,8 +81,7 @@ DeleteImageResponse::DeleteImageResponse(
  */
 const DeleteImageRequest * DeleteImageResponse::request() const
 {
-    Q_D(const DeleteImageResponse);
-    return static_cast<const DeleteImageRequest *>(d->request);
+    return static_cast<const DeleteImageRequest *>(AppStreamResponse::request());
 }
 
 /*!

@@ -87,8 +87,7 @@ CreateNetworkInterfaceResponse::CreateNetworkInterfaceResponse(
  */
 const CreateNetworkInterfaceRequest * CreateNetworkInterfaceResponse::request() const
 {
-    Q_D(const CreateNetworkInterfaceResponse);
-    return static_cast<const CreateNetworkInterfaceRequest *>(d->request);
+    return static_cast<const CreateNetworkInterfaceRequest *>(Ec2Response::request());
 }
 
 /*!

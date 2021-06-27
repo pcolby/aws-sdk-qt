@@ -61,8 +61,7 @@ ListProtectionsResponse::ListProtectionsResponse(
  */
 const ListProtectionsRequest * ListProtectionsResponse::request() const
 {
-    Q_D(const ListProtectionsResponse);
-    return static_cast<const ListProtectionsRequest *>(d->request);
+    return static_cast<const ListProtectionsRequest *>(ShieldResponse::request());
 }
 
 /*!

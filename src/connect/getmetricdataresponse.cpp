@@ -79,8 +79,7 @@ GetMetricDataResponse::GetMetricDataResponse(
  */
 const GetMetricDataRequest * GetMetricDataResponse::request() const
 {
-    Q_D(const GetMetricDataResponse);
-    return static_cast<const GetMetricDataRequest *>(d->request);
+    return static_cast<const GetMetricDataRequest *>(ConnectResponse::request());
 }
 
 /*!

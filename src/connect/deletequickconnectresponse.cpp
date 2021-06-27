@@ -79,8 +79,7 @@ DeleteQuickConnectResponse::DeleteQuickConnectResponse(
  */
 const DeleteQuickConnectRequest * DeleteQuickConnectResponse::request() const
 {
-    Q_D(const DeleteQuickConnectResponse);
-    return static_cast<const DeleteQuickConnectRequest *>(d->request);
+    return static_cast<const DeleteQuickConnectRequest *>(ConnectResponse::request());
 }
 
 /*!

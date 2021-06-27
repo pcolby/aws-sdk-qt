@@ -74,8 +74,7 @@ CreateDiskSnapshotResponse::CreateDiskSnapshotResponse(
  */
 const CreateDiskSnapshotRequest * CreateDiskSnapshotResponse::request() const
 {
-    Q_D(const CreateDiskSnapshotResponse);
-    return static_cast<const CreateDiskSnapshotRequest *>(d->request);
+    return static_cast<const CreateDiskSnapshotRequest *>(LightsailResponse::request());
 }
 
 /*!

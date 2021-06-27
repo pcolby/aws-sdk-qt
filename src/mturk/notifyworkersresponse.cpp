@@ -55,8 +55,7 @@ NotifyWorkersResponse::NotifyWorkersResponse(
  */
 const NotifyWorkersRequest * NotifyWorkersResponse::request() const
 {
-    Q_D(const NotifyWorkersResponse);
-    return static_cast<const NotifyWorkersRequest *>(d->request);
+    return static_cast<const NotifyWorkersRequest *>(MTurkResponse::request());
 }
 
 /*!

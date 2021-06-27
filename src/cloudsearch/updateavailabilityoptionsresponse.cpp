@@ -66,8 +66,7 @@ UpdateAvailabilityOptionsResponse::UpdateAvailabilityOptionsResponse(
  */
 const UpdateAvailabilityOptionsRequest * UpdateAvailabilityOptionsResponse::request() const
 {
-    Q_D(const UpdateAvailabilityOptionsResponse);
-    return static_cast<const UpdateAvailabilityOptionsRequest *>(d->request);
+    return static_cast<const UpdateAvailabilityOptionsRequest *>(CloudSearchResponse::request());
 }
 
 /*!

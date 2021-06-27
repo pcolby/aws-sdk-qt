@@ -69,8 +69,7 @@ CreateLogSubscriptionResponse::CreateLogSubscriptionResponse(
  */
 const CreateLogSubscriptionRequest * CreateLogSubscriptionResponse::request() const
 {
-    Q_D(const CreateLogSubscriptionResponse);
-    return static_cast<const CreateLogSubscriptionRequest *>(d->request);
+    return static_cast<const CreateLogSubscriptionRequest *>(DirectoryServiceResponse::request());
 }
 
 /*!

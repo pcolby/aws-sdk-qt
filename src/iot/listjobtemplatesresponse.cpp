@@ -82,8 +82,7 @@ ListJobTemplatesResponse::ListJobTemplatesResponse(
  */
 const ListJobTemplatesRequest * ListJobTemplatesResponse::request() const
 {
-    Q_D(const ListJobTemplatesResponse);
-    return static_cast<const ListJobTemplatesRequest *>(d->request);
+    return static_cast<const ListJobTemplatesRequest *>(IoTResponse::request());
 }
 
 /*!

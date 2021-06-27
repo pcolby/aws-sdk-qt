@@ -87,8 +87,7 @@ DeleteVolumeResponse::DeleteVolumeResponse(
  */
 const DeleteVolumeRequest * DeleteVolumeResponse::request() const
 {
-    Q_D(const DeleteVolumeResponse);
-    return static_cast<const DeleteVolumeRequest *>(d->request);
+    return static_cast<const DeleteVolumeRequest *>(Ec2Response::request());
 }
 
 /*!

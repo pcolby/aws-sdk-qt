@@ -78,8 +78,7 @@ UpdateByteMatchSetResponse::UpdateByteMatchSetResponse(
  */
 const UpdateByteMatchSetRequest * UpdateByteMatchSetResponse::request() const
 {
-    Q_D(const UpdateByteMatchSetResponse);
-    return static_cast<const UpdateByteMatchSetRequest *>(d->request);
+    return static_cast<const UpdateByteMatchSetRequest *>(WAFRegionalResponse::request());
 }
 
 /*!

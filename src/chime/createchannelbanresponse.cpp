@@ -98,8 +98,7 @@ CreateChannelBanResponse::CreateChannelBanResponse(
  */
 const CreateChannelBanRequest * CreateChannelBanResponse::request() const
 {
-    Q_D(const CreateChannelBanResponse);
-    return static_cast<const CreateChannelBanRequest *>(d->request);
+    return static_cast<const CreateChannelBanRequest *>(ChimeResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ DeleteWirelessDeviceResponse::DeleteWirelessDeviceResponse(
  */
 const DeleteWirelessDeviceRequest * DeleteWirelessDeviceResponse::request() const
 {
-    Q_D(const DeleteWirelessDeviceResponse);
-    return static_cast<const DeleteWirelessDeviceRequest *>(d->request);
+    return static_cast<const DeleteWirelessDeviceRequest *>(IoTWirelessResponse::request());
 }
 
 /*!

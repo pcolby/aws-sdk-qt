@@ -60,8 +60,7 @@ AssociateDomainResponse::AssociateDomainResponse(
  */
 const AssociateDomainRequest * AssociateDomainResponse::request() const
 {
-    Q_D(const AssociateDomainResponse);
-    return static_cast<const AssociateDomainRequest *>(d->request);
+    return static_cast<const AssociateDomainRequest *>(WorkLinkResponse::request());
 }
 
 /*!

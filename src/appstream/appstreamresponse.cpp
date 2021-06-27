@@ -37,7 +37,7 @@ namespace AppStream {
  * Constructs a AppStreamResponse object with parent \a parent.
  */
 AppStreamResponse::AppStreamResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new AppStreamResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new AppStreamResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ AppStreamResponse::AppStreamResponse(QObject * const parent)
  * implementation that inherits from AppStreamResponsePrivate.
  */
 AppStreamResponse::AppStreamResponse(AppStreamResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void AppStreamResponse::parseFailure(QIODevice &response)
  * Constructs a AppStreamResponsePrivate object with public implementation \a q.
  */
 AppStreamResponsePrivate::AppStreamResponsePrivate(
-    AppStreamResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    AppStreamResponse * const q) : q_ptr(q)
 {
 
 }

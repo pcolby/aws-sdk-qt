@@ -55,8 +55,7 @@ UpdatePermissionSetResponse::UpdatePermissionSetResponse(
  */
 const UpdatePermissionSetRequest * UpdatePermissionSetResponse::request() const
 {
-    Q_D(const UpdatePermissionSetResponse);
-    return static_cast<const UpdatePermissionSetRequest *>(d->request);
+    return static_cast<const UpdatePermissionSetRequest *>(SSOAdminResponse::request());
 }
 
 /*!

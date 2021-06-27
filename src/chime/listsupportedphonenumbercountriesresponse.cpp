@@ -98,8 +98,7 @@ ListSupportedPhoneNumberCountriesResponse::ListSupportedPhoneNumberCountriesResp
  */
 const ListSupportedPhoneNumberCountriesRequest * ListSupportedPhoneNumberCountriesResponse::request() const
 {
-    Q_D(const ListSupportedPhoneNumberCountriesResponse);
-    return static_cast<const ListSupportedPhoneNumberCountriesRequest *>(d->request);
+    return static_cast<const ListSupportedPhoneNumberCountriesRequest *>(ChimeResponse::request());
 }
 
 /*!

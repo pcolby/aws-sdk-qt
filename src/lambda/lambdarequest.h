@@ -114,6 +114,7 @@ public:
 
 protected:
     /// @cond internal
+    LambdaRequestPrivate * const d_ptr; ///< Internal d-pointer.
     LambdaRequest(LambdaRequestPrivate * const d);
     /// @endcond
 

@@ -81,8 +81,7 @@ CreateUpdatedImageResponse::CreateUpdatedImageResponse(
  */
 const CreateUpdatedImageRequest * CreateUpdatedImageResponse::request() const
 {
-    Q_D(const CreateUpdatedImageResponse);
-    return static_cast<const CreateUpdatedImageRequest *>(d->request);
+    return static_cast<const CreateUpdatedImageRequest *>(AppStreamResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ DeleteBaiduChannelResponse::DeleteBaiduChannelResponse(
  */
 const DeleteBaiduChannelRequest * DeleteBaiduChannelResponse::request() const
 {
-    Q_D(const DeleteBaiduChannelResponse);
-    return static_cast<const DeleteBaiduChannelRequest *>(d->request);
+    return static_cast<const DeleteBaiduChannelRequest *>(PinpointResponse::request());
 }
 
 /*!

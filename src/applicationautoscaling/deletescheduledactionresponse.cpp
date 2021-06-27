@@ -137,8 +137,7 @@ DeleteScheduledActionResponse::DeleteScheduledActionResponse(
  */
 const DeleteScheduledActionRequest * DeleteScheduledActionResponse::request() const
 {
-    Q_D(const DeleteScheduledActionResponse);
-    return static_cast<const DeleteScheduledActionRequest *>(d->request);
+    return static_cast<const DeleteScheduledActionRequest *>(ApplicationAutoScalingResponse::request());
 }
 
 /*!

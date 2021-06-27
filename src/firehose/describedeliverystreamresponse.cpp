@@ -59,8 +59,7 @@ DescribeDeliveryStreamResponse::DescribeDeliveryStreamResponse(
  */
 const DescribeDeliveryStreamRequest * DescribeDeliveryStreamResponse::request() const
 {
-    Q_D(const DescribeDeliveryStreamResponse);
-    return static_cast<const DescribeDeliveryStreamRequest *>(d->request);
+    return static_cast<const DescribeDeliveryStreamRequest *>(FirehoseResponse::request());
 }
 
 /*!

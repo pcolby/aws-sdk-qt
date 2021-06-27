@@ -70,8 +70,7 @@ ListExperimentsResponse::ListExperimentsResponse(
  */
 const ListExperimentsRequest * ListExperimentsResponse::request() const
 {
-    Q_D(const ListExperimentsResponse);
-    return static_cast<const ListExperimentsRequest *>(d->request);
+    return static_cast<const ListExperimentsRequest *>(SageMakerResponse::request());
 }
 
 /*!

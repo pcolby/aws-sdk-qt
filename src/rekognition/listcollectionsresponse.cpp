@@ -56,8 +56,7 @@ ListCollectionsResponse::ListCollectionsResponse(
  */
 const ListCollectionsRequest * ListCollectionsResponse::request() const
 {
-    Q_D(const ListCollectionsResponse);
-    return static_cast<const ListCollectionsRequest *>(d->request);
+    return static_cast<const ListCollectionsRequest *>(RekognitionResponse::request());
 }
 
 /*!

@@ -57,8 +57,7 @@ DescribeFHIRExportJobResponse::DescribeFHIRExportJobResponse(
  */
 const DescribeFHIRExportJobRequest * DescribeFHIRExportJobResponse::request() const
 {
-    Q_D(const DescribeFHIRExportJobResponse);
-    return static_cast<const DescribeFHIRExportJobRequest *>(d->request);
+    return static_cast<const DescribeFHIRExportJobRequest *>(HealthLakeResponse::request());
 }
 
 /*!

@@ -74,8 +74,7 @@ CreateGlobalTableResponse::CreateGlobalTableResponse(
  */
 const CreateGlobalTableRequest * CreateGlobalTableResponse::request() const
 {
-    Q_D(const CreateGlobalTableResponse);
-    return static_cast<const CreateGlobalTableRequest *>(d->request);
+    return static_cast<const CreateGlobalTableRequest *>(DynamoDBResponse::request());
 }
 
 /*!

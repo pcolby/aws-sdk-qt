@@ -74,8 +74,7 @@ DeleteDiskResponse::DeleteDiskResponse(
  */
 const DeleteDiskRequest * DeleteDiskResponse::request() const
 {
-    Q_D(const DeleteDiskResponse);
-    return static_cast<const DeleteDiskRequest *>(d->request);
+    return static_cast<const DeleteDiskRequest *>(LightsailResponse::request());
 }
 
 /*!

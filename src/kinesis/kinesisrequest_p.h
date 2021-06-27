@@ -20,15 +20,12 @@
 #ifndef QTAWS_KINESISREQUEST_P_H
 #define QTAWS_KINESISREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "kinesisrequest.h"
-
 namespace QtAws {
 namespace Kinesis {
 
 class KinesisRequest;
 
-class KinesisRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class KinesisRequestPrivate {
 
 public:
     KinesisRequest::Action action; ///< Kinesis action to be performed.
@@ -39,6 +36,9 @@ public:
     KinesisRequestPrivate(const KinesisRequestPrivate &other, KinesisRequest * const q);
 
     static QString toString(const KinesisRequest::Action &action);
+
+protected:
+    KinesisRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(KinesisRequest)

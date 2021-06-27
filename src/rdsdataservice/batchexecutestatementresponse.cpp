@@ -65,8 +65,7 @@ BatchExecuteStatementResponse::BatchExecuteStatementResponse(
  */
 const BatchExecuteStatementRequest * BatchExecuteStatementResponse::request() const
 {
-    Q_D(const BatchExecuteStatementResponse);
-    return static_cast<const BatchExecuteStatementRequest *>(d->request);
+    return static_cast<const BatchExecuteStatementRequest *>(RDSDataServiceResponse::request());
 }
 
 /*!

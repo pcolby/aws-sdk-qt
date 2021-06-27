@@ -70,6 +70,7 @@ public:
 
 protected:
     /// @cond internal
+    FisRequestPrivate * const d_ptr; ///< Internal d-pointer.
     FisRequest(FisRequestPrivate * const d);
     /// @endcond
 

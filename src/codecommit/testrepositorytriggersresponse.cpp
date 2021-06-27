@@ -439,8 +439,7 @@ TestRepositoryTriggersResponse::TestRepositoryTriggersResponse(
  */
 const TestRepositoryTriggersRequest * TestRepositoryTriggersResponse::request() const
 {
-    Q_D(const TestRepositoryTriggersResponse);
-    return static_cast<const TestRepositoryTriggersRequest *>(d->request);
+    return static_cast<const TestRepositoryTriggersRequest *>(CodeCommitResponse::request());
 }
 
 /*!

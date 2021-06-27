@@ -80,8 +80,7 @@ ListProfilePermissionsResponse::ListProfilePermissionsResponse(
  */
 const ListProfilePermissionsRequest * ListProfilePermissionsResponse::request() const
 {
-    Q_D(const ListProfilePermissionsResponse);
-    return static_cast<const ListProfilePermissionsRequest *>(d->request);
+    return static_cast<const ListProfilePermissionsRequest *>(signerResponse::request());
 }
 
 /*!

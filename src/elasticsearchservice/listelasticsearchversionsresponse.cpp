@@ -72,8 +72,7 @@ ListElasticsearchVersionsResponse::ListElasticsearchVersionsResponse(
  */
 const ListElasticsearchVersionsRequest * ListElasticsearchVersionsResponse::request() const
 {
-    Q_D(const ListElasticsearchVersionsResponse);
-    return static_cast<const ListElasticsearchVersionsRequest *>(d->request);
+    return static_cast<const ListElasticsearchVersionsRequest *>(ElasticsearchServiceResponse::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ PutServiceQuotaIncreaseRequestIntoTemplateResponse::PutServiceQuotaIncreaseReque
  */
 const PutServiceQuotaIncreaseRequestIntoTemplateRequest * PutServiceQuotaIncreaseRequestIntoTemplateResponse::request() const
 {
-    Q_D(const PutServiceQuotaIncreaseRequestIntoTemplateResponse);
-    return static_cast<const PutServiceQuotaIncreaseRequestIntoTemplateRequest *>(d->request);
+    return static_cast<const PutServiceQuotaIncreaseRequestIntoTemplateRequest *>(ServiceQuotasResponse::request());
 }
 
 /*!

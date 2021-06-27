@@ -53,7 +53,7 @@ namespace IoTEventsData {
  * Constructs a IoTEventsDataRequest object for IoTEventsData \a action.
  */
 IoTEventsDataRequest::IoTEventsDataRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new IoTEventsDataRequestPrivate(action, this))
+    : d_ptr(new IoTEventsDataRequestPrivate(action, this))
 {
 
 }
@@ -62,7 +62,8 @@ IoTEventsDataRequest::IoTEventsDataRequest(const Action action)
  * Constructs a copy of \a other.
  */
 IoTEventsDataRequest::IoTEventsDataRequest(const IoTEventsDataRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new IoTEventsDataRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new IoTEventsDataRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -85,7 +86,7 @@ IoTEventsDataRequest& IoTEventsDataRequest::operator=(const IoTEventsDataRequest
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from IoTEventsDataRequestPrivate.
  */
-IoTEventsDataRequest::IoTEventsDataRequest(IoTEventsDataRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+IoTEventsDataRequest::IoTEventsDataRequest(IoTEventsDataRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -254,7 +255,7 @@ QNetworkRequest IoTEventsDataRequest::unsignedRequest(const QUrl &endpoint) cons
  * with public implementation \a q.
  */
 IoTEventsDataRequestPrivate::IoTEventsDataRequestPrivate(const IoTEventsDataRequest::Action action, IoTEventsDataRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -269,8 +270,8 @@ IoTEventsDataRequestPrivate::IoTEventsDataRequestPrivate(const IoTEventsDataRequ
  */
 IoTEventsDataRequestPrivate::IoTEventsDataRequestPrivate(const IoTEventsDataRequestPrivate &other,
                                      IoTEventsDataRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

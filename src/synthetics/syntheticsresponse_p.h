@@ -20,14 +20,12 @@
 #ifndef QTAWS_SYNTHETICSRESPONSE_P_H
 #define QTAWS_SYNTHETICSRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace Synthetics {
 
 class SyntheticsResponse;
 
-class SyntheticsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class SyntheticsResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    SyntheticsResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SyntheticsResponse)

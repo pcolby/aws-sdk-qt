@@ -72,8 +72,7 @@ PutAttributesResponse::PutAttributesResponse(
  */
 const PutAttributesRequest * PutAttributesResponse::request() const
 {
-    Q_D(const PutAttributesResponse);
-    return static_cast<const PutAttributesRequest *>(d->request);
+    return static_cast<const PutAttributesRequest *>(EcsResponse::request());
 }
 
 /*!

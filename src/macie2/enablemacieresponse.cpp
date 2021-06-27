@@ -60,8 +60,7 @@ EnableMacieResponse::EnableMacieResponse(
  */
 const EnableMacieRequest * EnableMacieResponse::request() const
 {
-    Q_D(const EnableMacieResponse);
-    return static_cast<const EnableMacieRequest *>(d->request);
+    return static_cast<const EnableMacieRequest *>(Macie2Response::request());
 }
 
 /*!

@@ -72,8 +72,7 @@ UpdateContainerAgentResponse::UpdateContainerAgentResponse(
  */
 const UpdateContainerAgentRequest * UpdateContainerAgentResponse::request() const
 {
-    Q_D(const UpdateContainerAgentResponse);
-    return static_cast<const UpdateContainerAgentRequest *>(d->request);
+    return static_cast<const UpdateContainerAgentRequest *>(EcsResponse::request());
 }
 
 /*!

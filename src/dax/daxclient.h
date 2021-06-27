@@ -109,6 +109,12 @@ public slots:
     UpdateParameterGroupResponse * updateParameterGroup(const UpdateParameterGroupRequest &request);
     UpdateSubnetGroupResponse * updateSubnetGroup(const UpdateSubnetGroupRequest &request);
 
+protected:
+    /// @cond internal
+    DaxClientPrivate * const d_ptr; ///< Internal d-pointer.
+    DaxClient(DaxClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(DaxClient)
     Q_DISABLE_COPY(DaxClient)

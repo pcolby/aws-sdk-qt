@@ -218,8 +218,7 @@ UpdateCustomRoutingListenerResponse::UpdateCustomRoutingListenerResponse(
  */
 const UpdateCustomRoutingListenerRequest * UpdateCustomRoutingListenerResponse::request() const
 {
-    Q_D(const UpdateCustomRoutingListenerResponse);
-    return static_cast<const UpdateCustomRoutingListenerRequest *>(d->request);
+    return static_cast<const UpdateCustomRoutingListenerRequest *>(GlobalAcceleratorResponse::request());
 }
 
 /*!

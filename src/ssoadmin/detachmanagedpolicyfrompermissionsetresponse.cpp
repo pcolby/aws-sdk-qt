@@ -55,8 +55,7 @@ DetachManagedPolicyFromPermissionSetResponse::DetachManagedPolicyFromPermissionS
  */
 const DetachManagedPolicyFromPermissionSetRequest * DetachManagedPolicyFromPermissionSetResponse::request() const
 {
-    Q_D(const DetachManagedPolicyFromPermissionSetResponse);
-    return static_cast<const DetachManagedPolicyFromPermissionSetRequest *>(d->request);
+    return static_cast<const DetachManagedPolicyFromPermissionSetRequest *>(SSOAdminResponse::request());
 }
 
 /*!

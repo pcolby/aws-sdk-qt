@@ -56,8 +56,7 @@ DeleteTagsForDomainResponse::DeleteTagsForDomainResponse(
  */
 const DeleteTagsForDomainRequest * DeleteTagsForDomainResponse::request() const
 {
-    Q_D(const DeleteTagsForDomainResponse);
-    return static_cast<const DeleteTagsForDomainRequest *>(d->request);
+    return static_cast<const DeleteTagsForDomainRequest *>(Route53DomainsResponse::request());
 }
 
 /*!

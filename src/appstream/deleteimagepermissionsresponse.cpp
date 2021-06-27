@@ -81,8 +81,7 @@ DeleteImagePermissionsResponse::DeleteImagePermissionsResponse(
  */
 const DeleteImagePermissionsRequest * DeleteImagePermissionsResponse::request() const
 {
-    Q_D(const DeleteImagePermissionsResponse);
-    return static_cast<const DeleteImagePermissionsRequest *>(d->request);
+    return static_cast<const DeleteImagePermissionsRequest *>(AppStreamResponse::request());
 }
 
 /*!

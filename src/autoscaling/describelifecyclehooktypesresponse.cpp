@@ -68,8 +68,7 @@ DescribeLifecycleHookTypesResponse::DescribeLifecycleHookTypesResponse(
  */
 const DescribeLifecycleHookTypesRequest * DescribeLifecycleHookTypesResponse::request() const
 {
-    Q_D(const DescribeLifecycleHookTypesResponse);
-    return static_cast<const DescribeLifecycleHookTypesRequest *>(d->request);
+    return static_cast<const DescribeLifecycleHookTypesRequest *>(AutoScalingResponse::request());
 }
 
 /*!

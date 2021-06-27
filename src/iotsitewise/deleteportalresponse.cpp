@@ -61,8 +61,7 @@ DeletePortalResponse::DeletePortalResponse(
  */
 const DeletePortalRequest * DeletePortalResponse::request() const
 {
-    Q_D(const DeletePortalResponse);
-    return static_cast<const DeletePortalRequest *>(d->request);
+    return static_cast<const DeletePortalRequest *>(IoTSiteWiseResponse::request());
 }
 
 /*!

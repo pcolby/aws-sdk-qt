@@ -58,8 +58,7 @@ CreateUserDefinedFunctionResponse::CreateUserDefinedFunctionResponse(
  */
 const CreateUserDefinedFunctionRequest * CreateUserDefinedFunctionResponse::request() const
 {
-    Q_D(const CreateUserDefinedFunctionResponse);
-    return static_cast<const CreateUserDefinedFunctionRequest *>(d->request);
+    return static_cast<const CreateUserDefinedFunctionRequest *>(GlueResponse::request());
 }
 
 /*!

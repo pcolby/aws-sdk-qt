@@ -141,8 +141,7 @@ RegisterOnPremisesInstanceResponse::RegisterOnPremisesInstanceResponse(
  */
 const RegisterOnPremisesInstanceRequest * RegisterOnPremisesInstanceResponse::request() const
 {
-    Q_D(const RegisterOnPremisesInstanceResponse);
-    return static_cast<const RegisterOnPremisesInstanceRequest *>(d->request);
+    return static_cast<const RegisterOnPremisesInstanceRequest *>(CodeDeployResponse::request());
 }
 
 /*!

@@ -77,8 +77,7 @@ UnlinkDeveloperIdentityResponse::UnlinkDeveloperIdentityResponse(
  */
 const UnlinkDeveloperIdentityRequest * UnlinkDeveloperIdentityResponse::request() const
 {
-    Q_D(const UnlinkDeveloperIdentityResponse);
-    return static_cast<const UnlinkDeveloperIdentityRequest *>(d->request);
+    return static_cast<const UnlinkDeveloperIdentityRequest *>(CognitoIdentityResponse::request());
 }
 
 /*!

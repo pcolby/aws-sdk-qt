@@ -98,8 +98,7 @@ DeleteAppInstanceResponse::DeleteAppInstanceResponse(
  */
 const DeleteAppInstanceRequest * DeleteAppInstanceResponse::request() const
 {
-    Q_D(const DeleteAppInstanceResponse);
-    return static_cast<const DeleteAppInstanceRequest *>(d->request);
+    return static_cast<const DeleteAppInstanceRequest *>(ChimeResponse::request());
 }
 
 /*!

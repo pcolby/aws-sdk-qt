@@ -69,8 +69,7 @@ CopySnapshotResponse::CopySnapshotResponse(
  */
 const CopySnapshotRequest * CopySnapshotResponse::request() const
 {
-    Q_D(const CopySnapshotResponse);
-    return static_cast<const CopySnapshotRequest *>(d->request);
+    return static_cast<const CopySnapshotRequest *>(ElastiCacheResponse::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ DescribeTableDataImportJobResponse::DescribeTableDataImportJobResponse(
  */
 const DescribeTableDataImportJobRequest * DescribeTableDataImportJobResponse::request() const
 {
-    Q_D(const DescribeTableDataImportJobResponse);
-    return static_cast<const DescribeTableDataImportJobRequest *>(d->request);
+    return static_cast<const DescribeTableDataImportJobRequest *>(HoneycodeResponse::request());
 }
 
 /*!

@@ -55,8 +55,7 @@ DeleteMultiplexResponse::DeleteMultiplexResponse(
  */
 const DeleteMultiplexRequest * DeleteMultiplexResponse::request() const
 {
-    Q_D(const DeleteMultiplexResponse);
-    return static_cast<const DeleteMultiplexRequest *>(d->request);
+    return static_cast<const DeleteMultiplexRequest *>(MediaLiveResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ BatchDeleteDevicePositionHistoryResponse::BatchDeleteDevicePositionHistoryRespon
  */
 const BatchDeleteDevicePositionHistoryRequest * BatchDeleteDevicePositionHistoryResponse::request() const
 {
-    Q_D(const BatchDeleteDevicePositionHistoryResponse);
-    return static_cast<const BatchDeleteDevicePositionHistoryRequest *>(d->request);
+    return static_cast<const BatchDeleteDevicePositionHistoryRequest *>(LocationServiceResponse::request());
 }
 
 /*!

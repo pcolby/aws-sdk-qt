@@ -58,8 +58,7 @@ ListPresetsResponse::ListPresetsResponse(
  */
 const ListPresetsRequest * ListPresetsResponse::request() const
 {
-    Q_D(const ListPresetsResponse);
-    return static_cast<const ListPresetsRequest *>(d->request);
+    return static_cast<const ListPresetsRequest *>(ElasticTranscoderResponse::request());
 }
 
 /*!

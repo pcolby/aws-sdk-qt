@@ -37,7 +37,7 @@ namespace IAM {
  * Constructs a IamResponse object with parent \a parent.
  */
 IamResponse::IamResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new IamResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new IamResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ IamResponse::IamResponse(QObject * const parent)
  * implementation that inherits from IamResponsePrivate.
  */
 IamResponse::IamResponse(IamResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void IamResponse::parseFailure(QIODevice &response)
  * Constructs a IamResponsePrivate object with public implementation \a q.
  */
 IamResponsePrivate::IamResponsePrivate(
-    IamResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    IamResponse * const q) : q_ptr(q)
 {
 
 }

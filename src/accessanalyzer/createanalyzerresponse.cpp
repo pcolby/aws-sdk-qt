@@ -67,8 +67,7 @@ CreateAnalyzerResponse::CreateAnalyzerResponse(
  */
 const CreateAnalyzerRequest * CreateAnalyzerResponse::request() const
 {
-    Q_D(const CreateAnalyzerResponse);
-    return static_cast<const CreateAnalyzerRequest *>(d->request);
+    return static_cast<const CreateAnalyzerRequest *>(AccessAnalyzerResponse::request());
 }
 
 /*!

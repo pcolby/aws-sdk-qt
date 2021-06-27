@@ -98,8 +98,7 @@ GetGlobalSettingsResponse::GetGlobalSettingsResponse(
  */
 const GetGlobalSettingsRequest * GetGlobalSettingsResponse::request() const
 {
-    Q_D(const GetGlobalSettingsResponse);
-    return static_cast<const GetGlobalSettingsRequest *>(d->request);
+    return static_cast<const GetGlobalSettingsRequest *>(ChimeResponse::request());
 }
 
 /*!

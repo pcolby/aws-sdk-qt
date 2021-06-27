@@ -56,8 +56,7 @@ DescribeDBClusterSnapshotAttributesResponse::DescribeDBClusterSnapshotAttributes
  */
 const DescribeDBClusterSnapshotAttributesRequest * DescribeDBClusterSnapshotAttributesResponse::request() const
 {
-    Q_D(const DescribeDBClusterSnapshotAttributesResponse);
-    return static_cast<const DescribeDBClusterSnapshotAttributesRequest *>(d->request);
+    return static_cast<const DescribeDBClusterSnapshotAttributesRequest *>(DocDBResponse::request());
 }
 
 /*!

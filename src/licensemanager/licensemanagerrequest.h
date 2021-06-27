@@ -101,6 +101,7 @@ public:
 
 protected:
     /// @cond internal
+    LicenseManagerRequestPrivate * const d_ptr; ///< Internal d-pointer.
     LicenseManagerRequest(LicenseManagerRequestPrivate * const d);
     /// @endcond
 

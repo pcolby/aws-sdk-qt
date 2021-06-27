@@ -69,8 +69,7 @@ DescribeSharedDirectoriesResponse::DescribeSharedDirectoriesResponse(
  */
 const DescribeSharedDirectoriesRequest * DescribeSharedDirectoriesResponse::request() const
 {
-    Q_D(const DescribeSharedDirectoriesResponse);
-    return static_cast<const DescribeSharedDirectoriesRequest *>(d->request);
+    return static_cast<const DescribeSharedDirectoriesRequest *>(DirectoryServiceResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ GetServiceEndpointResponse::GetServiceEndpointResponse(
  */
 const GetServiceEndpointRequest * GetServiceEndpointResponse::request() const
 {
-    Q_D(const GetServiceEndpointResponse);
-    return static_cast<const GetServiceEndpointRequest *>(d->request);
+    return static_cast<const GetServiceEndpointRequest *>(IoTWirelessResponse::request());
 }
 
 /*!

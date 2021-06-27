@@ -70,8 +70,7 @@ AddAssociationResponse::AddAssociationResponse(
  */
 const AddAssociationRequest * AddAssociationResponse::request() const
 {
-    Q_D(const AddAssociationResponse);
-    return static_cast<const AddAssociationRequest *>(d->request);
+    return static_cast<const AddAssociationRequest *>(SageMakerResponse::request());
 }
 
 /*!

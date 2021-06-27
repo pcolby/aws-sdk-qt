@@ -61,8 +61,7 @@ AssociateMacSecKeyResponse::AssociateMacSecKeyResponse(
  */
 const AssociateMacSecKeyRequest * AssociateMacSecKeyResponse::request() const
 {
-    Q_D(const AssociateMacSecKeyResponse);
-    return static_cast<const AssociateMacSecKeyRequest *>(d->request);
+    return static_cast<const AssociateMacSecKeyRequest *>(DirectConnectResponse::request());
 }
 
 /*!

@@ -64,8 +64,7 @@ StartBuildResponse::StartBuildResponse(
  */
 const StartBuildRequest * StartBuildResponse::request() const
 {
-    Q_D(const StartBuildResponse);
-    return static_cast<const StartBuildRequest *>(d->request);
+    return static_cast<const StartBuildRequest *>(CodeBuildResponse::request());
 }
 
 /*!

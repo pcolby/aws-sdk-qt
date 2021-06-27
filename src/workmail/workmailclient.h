@@ -208,6 +208,12 @@ public slots:
     UpdatePrimaryEmailAddressResponse * updatePrimaryEmailAddress(const UpdatePrimaryEmailAddressRequest &request);
     UpdateResourceResponse * updateResource(const UpdateResourceRequest &request);
 
+protected:
+    /// @cond internal
+    WorkMailClientPrivate * const d_ptr; ///< Internal d-pointer.
+    WorkMailClient(WorkMailClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(WorkMailClient)
     Q_DISABLE_COPY(WorkMailClient)

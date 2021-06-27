@@ -87,8 +87,7 @@ CreateFpgaImageResponse::CreateFpgaImageResponse(
  */
 const CreateFpgaImageRequest * CreateFpgaImageResponse::request() const
 {
-    Q_D(const CreateFpgaImageResponse);
-    return static_cast<const CreateFpgaImageRequest *>(d->request);
+    return static_cast<const CreateFpgaImageRequest *>(Ec2Response::request());
 }
 
 /*!

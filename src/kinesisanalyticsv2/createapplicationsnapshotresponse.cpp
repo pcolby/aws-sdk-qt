@@ -58,8 +58,7 @@ CreateApplicationSnapshotResponse::CreateApplicationSnapshotResponse(
  */
 const CreateApplicationSnapshotRequest * CreateApplicationSnapshotResponse::request() const
 {
-    Q_D(const CreateApplicationSnapshotResponse);
-    return static_cast<const CreateApplicationSnapshotRequest *>(d->request);
+    return static_cast<const CreateApplicationSnapshotRequest *>(KinesisAnalyticsV2Response::request());
 }
 
 /*!

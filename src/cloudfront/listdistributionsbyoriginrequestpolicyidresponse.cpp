@@ -60,8 +60,7 @@ ListDistributionsByOriginRequestPolicyIdResponse::ListDistributionsByOriginReque
  */
 const ListDistributionsByOriginRequestPolicyIdRequest * ListDistributionsByOriginRequestPolicyIdResponse::request() const
 {
-    Q_D(const ListDistributionsByOriginRequestPolicyIdResponse);
-    return static_cast<const ListDistributionsByOriginRequestPolicyIdRequest *>(d->request);
+    return static_cast<const ListDistributionsByOriginRequestPolicyIdRequest *>(CloudFrontResponse::request());
 }
 
 /*!

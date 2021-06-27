@@ -98,8 +98,7 @@ DeleteVoiceConnectorEmergencyCallingConfigurationResponse::DeleteVoiceConnectorE
  */
 const DeleteVoiceConnectorEmergencyCallingConfigurationRequest * DeleteVoiceConnectorEmergencyCallingConfigurationResponse::request() const
 {
-    Q_D(const DeleteVoiceConnectorEmergencyCallingConfigurationResponse);
-    return static_cast<const DeleteVoiceConnectorEmergencyCallingConfigurationRequest *>(d->request);
+    return static_cast<const DeleteVoiceConnectorEmergencyCallingConfigurationRequest *>(ChimeResponse::request());
 }
 
 /*!

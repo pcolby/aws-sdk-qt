@@ -119,8 +119,7 @@ DescribeDBClusterParametersResponse::DescribeDBClusterParametersResponse(
  */
 const DescribeDBClusterParametersRequest * DescribeDBClusterParametersResponse::request() const
 {
-    Q_D(const DescribeDBClusterParametersResponse);
-    return static_cast<const DescribeDBClusterParametersRequest *>(d->request);
+    return static_cast<const DescribeDBClusterParametersRequest *>(RdsResponse::request());
 }
 
 /*!

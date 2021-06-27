@@ -154,8 +154,7 @@ DeleteAliasResponse::DeleteAliasResponse(
  */
 const DeleteAliasRequest * DeleteAliasResponse::request() const
 {
-    Q_D(const DeleteAliasResponse);
-    return static_cast<const DeleteAliasRequest *>(d->request);
+    return static_cast<const DeleteAliasRequest *>(KmsResponse::request());
 }
 
 /*!

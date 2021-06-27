@@ -58,8 +58,7 @@ GetGroupCertificateAuthorityResponse::GetGroupCertificateAuthorityResponse(
  */
 const GetGroupCertificateAuthorityRequest * GetGroupCertificateAuthorityResponse::request() const
 {
-    Q_D(const GetGroupCertificateAuthorityResponse);
-    return static_cast<const GetGroupCertificateAuthorityRequest *>(d->request);
+    return static_cast<const GetGroupCertificateAuthorityRequest *>(GreengrassResponse::request());
 }
 
 /*!

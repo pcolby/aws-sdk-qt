@@ -79,6 +79,7 @@ public:
 
 protected:
     /// @cond internal
+    ECRPublicRequestPrivate * const d_ptr; ///< Internal d-pointer.
     ECRPublicRequest(ECRPublicRequestPrivate * const d);
     /// @endcond
 

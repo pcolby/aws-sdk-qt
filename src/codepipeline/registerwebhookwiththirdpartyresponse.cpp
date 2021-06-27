@@ -240,8 +240,7 @@ RegisterWebhookWithThirdPartyResponse::RegisterWebhookWithThirdPartyResponse(
  */
 const RegisterWebhookWithThirdPartyRequest * RegisterWebhookWithThirdPartyResponse::request() const
 {
-    Q_D(const RegisterWebhookWithThirdPartyResponse);
-    return static_cast<const RegisterWebhookWithThirdPartyRequest *>(d->request);
+    return static_cast<const RegisterWebhookWithThirdPartyRequest *>(CodePipelineResponse::request());
 }
 
 /*!

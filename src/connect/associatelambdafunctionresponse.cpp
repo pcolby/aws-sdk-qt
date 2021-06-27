@@ -79,8 +79,7 @@ AssociateLambdaFunctionResponse::AssociateLambdaFunctionResponse(
  */
 const AssociateLambdaFunctionRequest * AssociateLambdaFunctionResponse::request() const
 {
-    Q_D(const AssociateLambdaFunctionResponse);
-    return static_cast<const AssociateLambdaFunctionRequest *>(d->request);
+    return static_cast<const AssociateLambdaFunctionRequest *>(ConnectResponse::request());
 }
 
 /*!

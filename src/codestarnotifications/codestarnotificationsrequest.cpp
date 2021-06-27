@@ -55,7 +55,7 @@ namespace CodeStarNotifications {
  * Constructs a CodeStarNotificationsRequest object for CodeStarNotifications \a action.
  */
 CodeStarNotificationsRequest::CodeStarNotificationsRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new CodeStarNotificationsRequestPrivate(action, this))
+    : d_ptr(new CodeStarNotificationsRequestPrivate(action, this))
 {
 
 }
@@ -64,7 +64,8 @@ CodeStarNotificationsRequest::CodeStarNotificationsRequest(const Action action)
  * Constructs a copy of \a other.
  */
 CodeStarNotificationsRequest::CodeStarNotificationsRequest(const CodeStarNotificationsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new CodeStarNotificationsRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new CodeStarNotificationsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -87,7 +88,7 @@ CodeStarNotificationsRequest& CodeStarNotificationsRequest::operator=(const Code
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CodeStarNotificationsRequestPrivate.
  */
-CodeStarNotificationsRequest::CodeStarNotificationsRequest(CodeStarNotificationsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+CodeStarNotificationsRequest::CodeStarNotificationsRequest(CodeStarNotificationsRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -256,7 +257,7 @@ QNetworkRequest CodeStarNotificationsRequest::unsignedRequest(const QUrl &endpoi
  * with public implementation \a q.
  */
 CodeStarNotificationsRequestPrivate::CodeStarNotificationsRequestPrivate(const CodeStarNotificationsRequest::Action action, CodeStarNotificationsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -271,8 +272,8 @@ CodeStarNotificationsRequestPrivate::CodeStarNotificationsRequestPrivate(const C
  */
 CodeStarNotificationsRequestPrivate::CodeStarNotificationsRequestPrivate(const CodeStarNotificationsRequestPrivate &other,
                                      CodeStarNotificationsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

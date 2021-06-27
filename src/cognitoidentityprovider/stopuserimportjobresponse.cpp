@@ -66,8 +66,7 @@ StopUserImportJobResponse::StopUserImportJobResponse(
  */
 const StopUserImportJobRequest * StopUserImportJobResponse::request() const
 {
-    Q_D(const StopUserImportJobResponse);
-    return static_cast<const StopUserImportJobRequest *>(d->request);
+    return static_cast<const StopUserImportJobRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

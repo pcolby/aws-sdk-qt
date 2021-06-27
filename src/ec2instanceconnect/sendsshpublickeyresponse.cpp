@@ -57,8 +57,7 @@ SendSSHPublicKeyResponse::SendSSHPublicKeyResponse(
  */
 const SendSSHPublicKeyRequest * SendSSHPublicKeyResponse::request() const
 {
-    Q_D(const SendSSHPublicKeyResponse);
-    return static_cast<const SendSSHPublicKeyRequest *>(d->request);
+    return static_cast<const SendSSHPublicKeyRequest *>(EC2InstanceConnectResponse::request());
 }
 
 /*!

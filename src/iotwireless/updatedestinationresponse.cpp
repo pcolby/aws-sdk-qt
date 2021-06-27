@@ -56,8 +56,7 @@ UpdateDestinationResponse::UpdateDestinationResponse(
  */
 const UpdateDestinationRequest * UpdateDestinationResponse::request() const
 {
-    Q_D(const UpdateDestinationResponse);
-    return static_cast<const UpdateDestinationRequest *>(d->request);
+    return static_cast<const UpdateDestinationRequest *>(IoTWirelessResponse::request());
 }
 
 /*!

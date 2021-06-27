@@ -88,8 +88,7 @@ DeleteDedicatedIpPoolResponse::DeleteDedicatedIpPoolResponse(
  */
 const DeleteDedicatedIpPoolRequest * DeleteDedicatedIpPoolResponse::request() const
 {
-    Q_D(const DeleteDedicatedIpPoolResponse);
-    return static_cast<const DeleteDedicatedIpPoolRequest *>(d->request);
+    return static_cast<const DeleteDedicatedIpPoolRequest *>(Sesv2Response::request());
 }
 
 /*!

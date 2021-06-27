@@ -63,8 +63,7 @@ PublishSchemaResponse::PublishSchemaResponse(
  */
 const PublishSchemaRequest * PublishSchemaResponse::request() const
 {
-    Q_D(const PublishSchemaResponse);
-    return static_cast<const PublishSchemaRequest *>(d->request);
+    return static_cast<const PublishSchemaRequest *>(CloudDirectoryResponse::request());
 }
 
 /*!

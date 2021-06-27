@@ -69,8 +69,7 @@ ListSchemaExtensionsResponse::ListSchemaExtensionsResponse(
  */
 const ListSchemaExtensionsRequest * ListSchemaExtensionsResponse::request() const
 {
-    Q_D(const ListSchemaExtensionsResponse);
-    return static_cast<const ListSchemaExtensionsRequest *>(d->request);
+    return static_cast<const ListSchemaExtensionsRequest *>(DirectoryServiceResponse::request());
 }
 
 /*!

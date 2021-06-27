@@ -59,7 +59,7 @@ namespace CognitoSync {
  * Constructs a CognitoSyncRequest object for CognitoSync \a action.
  */
 CognitoSyncRequest::CognitoSyncRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new CognitoSyncRequestPrivate(action, this))
+    : d_ptr(new CognitoSyncRequestPrivate(action, this))
 {
 
 }
@@ -68,7 +68,8 @@ CognitoSyncRequest::CognitoSyncRequest(const Action action)
  * Constructs a copy of \a other.
  */
 CognitoSyncRequest::CognitoSyncRequest(const CognitoSyncRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new CognitoSyncRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new CognitoSyncRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -91,7 +92,7 @@ CognitoSyncRequest& CognitoSyncRequest::operator=(const CognitoSyncRequest &othe
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CognitoSyncRequestPrivate.
  */
-CognitoSyncRequest::CognitoSyncRequest(CognitoSyncRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+CognitoSyncRequest::CognitoSyncRequest(CognitoSyncRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -260,7 +261,7 @@ QNetworkRequest CognitoSyncRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 CognitoSyncRequestPrivate::CognitoSyncRequestPrivate(const CognitoSyncRequest::Action action, CognitoSyncRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -275,8 +276,8 @@ CognitoSyncRequestPrivate::CognitoSyncRequestPrivate(const CognitoSyncRequest::A
  */
 CognitoSyncRequestPrivate::CognitoSyncRequestPrivate(const CognitoSyncRequestPrivate &other,
                                      CognitoSyncRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

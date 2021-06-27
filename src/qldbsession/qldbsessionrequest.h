@@ -57,6 +57,7 @@ public:
 
 protected:
     /// @cond internal
+    QLDBSessionRequestPrivate * const d_ptr; ///< Internal d-pointer.
     QLDBSessionRequest(QLDBSessionRequestPrivate * const d);
     /// @endcond
 

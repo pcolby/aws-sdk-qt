@@ -70,8 +70,7 @@ DeleteFlowDefinitionResponse::DeleteFlowDefinitionResponse(
  */
 const DeleteFlowDefinitionRequest * DeleteFlowDefinitionResponse::request() const
 {
-    Q_D(const DeleteFlowDefinitionResponse);
-    return static_cast<const DeleteFlowDefinitionRequest *>(d->request);
+    return static_cast<const DeleteFlowDefinitionRequest *>(SageMakerResponse::request());
 }
 
 /*!

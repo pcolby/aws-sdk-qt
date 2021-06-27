@@ -57,8 +57,7 @@ InitializeClusterResponse::InitializeClusterResponse(
  */
 const InitializeClusterRequest * InitializeClusterResponse::request() const
 {
-    Q_D(const InitializeClusterResponse);
-    return static_cast<const InitializeClusterRequest *>(d->request);
+    return static_cast<const InitializeClusterRequest *>(CloudHSMV2Response::request());
 }
 
 /*!

@@ -91,8 +91,7 @@ CompleteVaultLockResponse::CompleteVaultLockResponse(
  */
 const CompleteVaultLockRequest * CompleteVaultLockResponse::request() const
 {
-    Q_D(const CompleteVaultLockResponse);
-    return static_cast<const CompleteVaultLockRequest *>(d->request);
+    return static_cast<const CompleteVaultLockRequest *>(GlacierResponse::request());
 }
 
 /*!

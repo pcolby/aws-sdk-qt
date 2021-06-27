@@ -66,8 +66,7 @@ DescribeVodSourceResponse::DescribeVodSourceResponse(
  */
 const DescribeVodSourceRequest * DescribeVodSourceResponse::request() const
 {
-    Q_D(const DescribeVodSourceResponse);
-    return static_cast<const DescribeVodSourceRequest *>(d->request);
+    return static_cast<const DescribeVodSourceRequest *>(MediaTailorResponse::request());
 }
 
 /*!

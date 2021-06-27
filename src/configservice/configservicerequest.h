@@ -142,6 +142,7 @@ public:
 
 protected:
     /// @cond internal
+    ConfigServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
     ConfigServiceRequest(ConfigServiceRequestPrivate * const d);
     /// @endcond
 

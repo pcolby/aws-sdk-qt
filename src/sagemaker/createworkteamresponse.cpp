@@ -70,8 +70,7 @@ CreateWorkteamResponse::CreateWorkteamResponse(
  */
 const CreateWorkteamRequest * CreateWorkteamResponse::request() const
 {
-    Q_D(const CreateWorkteamResponse);
-    return static_cast<const CreateWorkteamRequest *>(d->request);
+    return static_cast<const CreateWorkteamRequest *>(SageMakerResponse::request());
 }
 
 /*!

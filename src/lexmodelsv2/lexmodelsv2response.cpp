@@ -37,7 +37,7 @@ namespace LexModelsV2 {
  * Constructs a LexModelsV2Response object with parent \a parent.
  */
 LexModelsV2Response::LexModelsV2Response(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new LexModelsV2ResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new LexModelsV2ResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ LexModelsV2Response::LexModelsV2Response(QObject * const parent)
  * implementation that inherits from LexModelsV2ResponsePrivate.
  */
 LexModelsV2Response::LexModelsV2Response(LexModelsV2ResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void LexModelsV2Response::parseFailure(QIODevice &response)
  * Constructs a LexModelsV2ResponsePrivate object with public implementation \a q.
  */
 LexModelsV2ResponsePrivate::LexModelsV2ResponsePrivate(
-    LexModelsV2Response * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    LexModelsV2Response * const q) : q_ptr(q)
 {
 
 }

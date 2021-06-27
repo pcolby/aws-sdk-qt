@@ -58,8 +58,7 @@ StartKeyPhrasesDetectionJobResponse::StartKeyPhrasesDetectionJobResponse(
  */
 const StartKeyPhrasesDetectionJobRequest * StartKeyPhrasesDetectionJobResponse::request() const
 {
-    Q_D(const StartKeyPhrasesDetectionJobResponse);
-    return static_cast<const StartKeyPhrasesDetectionJobRequest *>(d->request);
+    return static_cast<const StartKeyPhrasesDetectionJobRequest *>(ComprehendResponse::request());
 }
 
 /*!

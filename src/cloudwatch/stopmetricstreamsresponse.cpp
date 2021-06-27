@@ -69,8 +69,7 @@ StopMetricStreamsResponse::StopMetricStreamsResponse(
  */
 const StopMetricStreamsRequest * StopMetricStreamsResponse::request() const
 {
-    Q_D(const StopMetricStreamsResponse);
-    return static_cast<const StopMetricStreamsRequest *>(d->request);
+    return static_cast<const StopMetricStreamsRequest *>(CloudWatchResponse::request());
 }
 
 /*!

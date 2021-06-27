@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    SimpleDBResponsePrivate * const d_ptr; ///< Internal d-pointer.
     SimpleDBResponse(SimpleDBResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

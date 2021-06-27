@@ -60,8 +60,7 @@ ListTagsForCertificateResponse::ListTagsForCertificateResponse(
  */
 const ListTagsForCertificateRequest * ListTagsForCertificateResponse::request() const
 {
-    Q_D(const ListTagsForCertificateResponse);
-    return static_cast<const ListTagsForCertificateRequest *>(d->request);
+    return static_cast<const ListTagsForCertificateRequest *>(AcmResponse::request());
 }
 
 /*!

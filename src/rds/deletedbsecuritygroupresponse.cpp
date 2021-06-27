@@ -119,8 +119,7 @@ DeleteDBSecurityGroupResponse::DeleteDBSecurityGroupResponse(
  */
 const DeleteDBSecurityGroupRequest * DeleteDBSecurityGroupResponse::request() const
 {
-    Q_D(const DeleteDBSecurityGroupResponse);
-    return static_cast<const DeleteDBSecurityGroupRequest *>(d->request);
+    return static_cast<const DeleteDBSecurityGroupRequest *>(RdsResponse::request());
 }
 
 /*!

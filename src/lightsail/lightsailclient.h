@@ -472,6 +472,12 @@ public slots:
     UpdateRelationalDatabaseResponse * updateRelationalDatabase(const UpdateRelationalDatabaseRequest &request);
     UpdateRelationalDatabaseParametersResponse * updateRelationalDatabaseParameters(const UpdateRelationalDatabaseParametersRequest &request);
 
+protected:
+    /// @cond internal
+    LightsailClientPrivate * const d_ptr; ///< Internal d-pointer.
+    LightsailClient(LightsailClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(LightsailClient)
     Q_DISABLE_COPY(LightsailClient)

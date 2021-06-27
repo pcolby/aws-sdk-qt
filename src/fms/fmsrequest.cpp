@@ -68,7 +68,7 @@ namespace FMS {
  * Constructs a FmsRequest object for FMS \a action.
  */
 FmsRequest::FmsRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new FmsRequestPrivate(action, this))
+    : d_ptr(new FmsRequestPrivate(action, this))
 {
 
 }
@@ -77,7 +77,8 @@ FmsRequest::FmsRequest(const Action action)
  * Constructs a copy of \a other.
  */
 FmsRequest::FmsRequest(const FmsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new FmsRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new FmsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -100,7 +101,7 @@ FmsRequest& FmsRequest::operator=(const FmsRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from FmsRequestPrivate.
  */
-FmsRequest::FmsRequest(FmsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+FmsRequest::FmsRequest(FmsRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -269,7 +270,7 @@ QNetworkRequest FmsRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 FmsRequestPrivate::FmsRequestPrivate(const FmsRequest::Action action, FmsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -284,8 +285,8 @@ FmsRequestPrivate::FmsRequestPrivate(const FmsRequest::Action action, FmsRequest
  */
 FmsRequestPrivate::FmsRequestPrivate(const FmsRequestPrivate &other,
                                      FmsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

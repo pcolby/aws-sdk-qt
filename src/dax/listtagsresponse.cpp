@@ -59,8 +59,7 @@ ListTagsResponse::ListTagsResponse(
  */
 const ListTagsRequest * ListTagsResponse::request() const
 {
-    Q_D(const ListTagsResponse);
-    return static_cast<const ListTagsRequest *>(d->request);
+    return static_cast<const ListTagsRequest *>(DaxResponse::request());
 }
 
 /*!

@@ -90,8 +90,7 @@ CreateLoadBalancerResponse::CreateLoadBalancerResponse(
  */
 const CreateLoadBalancerRequest * CreateLoadBalancerResponse::request() const
 {
-    Q_D(const CreateLoadBalancerResponse);
-    return static_cast<const CreateLoadBalancerRequest *>(d->request);
+    return static_cast<const CreateLoadBalancerRequest *>(ElasticLoadBalancingv2Response::request());
 }
 
 /*!

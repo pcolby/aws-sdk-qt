@@ -87,8 +87,7 @@ UpdateSecurityGroupRuleDescriptionsEgressResponse::UpdateSecurityGroupRuleDescri
  */
 const UpdateSecurityGroupRuleDescriptionsEgressRequest * UpdateSecurityGroupRuleDescriptionsEgressResponse::request() const
 {
-    Q_D(const UpdateSecurityGroupRuleDescriptionsEgressResponse);
-    return static_cast<const UpdateSecurityGroupRuleDescriptionsEgressRequest *>(d->request);
+    return static_cast<const UpdateSecurityGroupRuleDescriptionsEgressRequest *>(Ec2Response::request());
 }
 
 /*!

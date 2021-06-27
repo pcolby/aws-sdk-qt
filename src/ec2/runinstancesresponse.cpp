@@ -87,8 +87,7 @@ RunInstancesResponse::RunInstancesResponse(
  */
 const RunInstancesRequest * RunInstancesResponse::request() const
 {
-    Q_D(const RunInstancesResponse);
-    return static_cast<const RunInstancesRequest *>(d->request);
+    return static_cast<const RunInstancesRequest *>(Ec2Response::request());
 }
 
 /*!

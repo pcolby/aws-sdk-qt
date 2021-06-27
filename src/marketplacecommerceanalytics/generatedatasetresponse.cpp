@@ -55,8 +55,7 @@ GenerateDataSetResponse::GenerateDataSetResponse(
  */
 const GenerateDataSetRequest * GenerateDataSetResponse::request() const
 {
-    Q_D(const GenerateDataSetResponse);
-    return static_cast<const GenerateDataSetRequest *>(d->request);
+    return static_cast<const GenerateDataSetRequest *>(MarketplaceCommerceAnalyticsResponse::request());
 }
 
 /*!

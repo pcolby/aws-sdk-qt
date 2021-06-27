@@ -187,6 +187,12 @@ public slots:
     UpdateListenerResponse * updateListener(const UpdateListenerRequest &request);
     WithdrawByoipCidrResponse * withdrawByoipCidr(const WithdrawByoipCidrRequest &request);
 
+protected:
+    /// @cond internal
+    GlobalAcceleratorClientPrivate * const d_ptr; ///< Internal d-pointer.
+    GlobalAcceleratorClient(GlobalAcceleratorClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(GlobalAcceleratorClient)
     Q_DISABLE_COPY(GlobalAcceleratorClient)

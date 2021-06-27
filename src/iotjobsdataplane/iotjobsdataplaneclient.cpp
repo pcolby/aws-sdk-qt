@@ -81,16 +81,16 @@ IoTJobsDataPlaneClient::IoTJobsDataPlaneClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new IoTJobsDataPlaneClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-09-29"),
+    QStringLiteral("data.jobs.iot"),
+    QStringLiteral("AWS IoT Jobs Data Plane"),
+    QStringLiteral("iot-jobs-data"),
+    parent), d_ptr(new IoTJobsDataPlaneClientPrivate(this))
 {
-    Q_D(IoTJobsDataPlaneClient);
-    d->apiVersion = QStringLiteral("2017-09-29");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("data.jobs.iot");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS IoT Jobs Data Plane");
-    d->serviceName = QStringLiteral("iot-jobs-data");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -109,16 +109,16 @@ IoTJobsDataPlaneClient::IoTJobsDataPlaneClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new IoTJobsDataPlaneClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-09-29"),
+    QStringLiteral("data.jobs.iot"),
+    QStringLiteral("AWS IoT Jobs Data Plane"),
+    QStringLiteral("iot-jobs-data"),
+    parent), d_ptr(new IoTJobsDataPlaneClientPrivate(this))
 {
-    Q_D(IoTJobsDataPlaneClient);
-    d->apiVersion = QStringLiteral("2017-09-29");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("data.jobs.iot");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS IoT Jobs Data Plane");
-    d->serviceName = QStringLiteral("iot-jobs-data");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -185,10 +185,9 @@ UpdateJobExecutionResponse * IoTJobsDataPlaneClient::updateJobExecution(const Up
 /*!
  * Constructs a IoTJobsDataPlaneClientPrivate object with public implementation \a q.
  */
-IoTJobsDataPlaneClientPrivate::IoTJobsDataPlaneClientPrivate(IoTJobsDataPlaneClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+IoTJobsDataPlaneClientPrivate::IoTJobsDataPlaneClientPrivate(IoTJobsDataPlaneClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace IoTJobsDataPlane

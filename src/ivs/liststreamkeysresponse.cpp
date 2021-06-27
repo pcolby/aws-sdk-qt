@@ -385,8 +385,7 @@ ListStreamKeysResponse::ListStreamKeysResponse(
  */
 const ListStreamKeysRequest * ListStreamKeysResponse::request() const
 {
-    Q_D(const ListStreamKeysResponse);
-    return static_cast<const ListStreamKeysRequest *>(d->request);
+    return static_cast<const ListStreamKeysRequest *>(IvsResponse::request());
 }
 
 /*!

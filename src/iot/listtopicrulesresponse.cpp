@@ -82,8 +82,7 @@ ListTopicRulesResponse::ListTopicRulesResponse(
  */
 const ListTopicRulesRequest * ListTopicRulesResponse::request() const
 {
-    Q_D(const ListTopicRulesResponse);
-    return static_cast<const ListTopicRulesRequest *>(d->request);
+    return static_cast<const ListTopicRulesRequest *>(IoTResponse::request());
 }
 
 /*!

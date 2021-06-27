@@ -66,8 +66,7 @@ GetIdentityMailFromDomainAttributesResponse::GetIdentityMailFromDomainAttributes
  */
 const GetIdentityMailFromDomainAttributesRequest * GetIdentityMailFromDomainAttributesResponse::request() const
 {
-    Q_D(const GetIdentityMailFromDomainAttributesResponse);
-    return static_cast<const GetIdentityMailFromDomainAttributesRequest *>(d->request);
+    return static_cast<const GetIdentityMailFromDomainAttributesRequest *>(SesResponse::request());
 }
 
 /*!

@@ -82,8 +82,7 @@ AttachThingPrincipalResponse::AttachThingPrincipalResponse(
  */
 const AttachThingPrincipalRequest * AttachThingPrincipalResponse::request() const
 {
-    Q_D(const AttachThingPrincipalResponse);
-    return static_cast<const AttachThingPrincipalRequest *>(d->request);
+    return static_cast<const AttachThingPrincipalRequest *>(IoTResponse::request());
 }
 
 /*!

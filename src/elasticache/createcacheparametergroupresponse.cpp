@@ -69,8 +69,7 @@ CreateCacheParameterGroupResponse::CreateCacheParameterGroupResponse(
  */
 const CreateCacheParameterGroupRequest * CreateCacheParameterGroupResponse::request() const
 {
-    Q_D(const CreateCacheParameterGroupResponse);
-    return static_cast<const CreateCacheParameterGroupRequest *>(d->request);
+    return static_cast<const CreateCacheParameterGroupRequest *>(ElastiCacheResponse::request());
 }
 
 /*!

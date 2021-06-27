@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    PinpointSMSVoiceResponsePrivate * const d_ptr; ///< Internal d-pointer.
     PinpointSMSVoiceResponse(PinpointSMSVoiceResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

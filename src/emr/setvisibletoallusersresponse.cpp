@@ -58,8 +58,7 @@ SetVisibleToAllUsersResponse::SetVisibleToAllUsersResponse(
  */
 const SetVisibleToAllUsersRequest * SetVisibleToAllUsersResponse::request() const
 {
-    Q_D(const SetVisibleToAllUsersResponse);
-    return static_cast<const SetVisibleToAllUsersRequest *>(d->request);
+    return static_cast<const SetVisibleToAllUsersRequest *>(EmrResponse::request());
 }
 
 /*!

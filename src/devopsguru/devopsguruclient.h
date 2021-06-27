@@ -109,6 +109,12 @@ public slots:
     UpdateResourceCollectionResponse * updateResourceCollection(const UpdateResourceCollectionRequest &request);
     UpdateServiceIntegrationResponse * updateServiceIntegration(const UpdateServiceIntegrationRequest &request);
 
+protected:
+    /// @cond internal
+    DevOpsGuruClientPrivate * const d_ptr; ///< Internal d-pointer.
+    DevOpsGuruClient(DevOpsGuruClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(DevOpsGuruClient)
     Q_DISABLE_COPY(DevOpsGuruClient)

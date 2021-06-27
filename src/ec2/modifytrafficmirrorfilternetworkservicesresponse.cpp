@@ -87,8 +87,7 @@ ModifyTrafficMirrorFilterNetworkServicesResponse::ModifyTrafficMirrorFilterNetwo
  */
 const ModifyTrafficMirrorFilterNetworkServicesRequest * ModifyTrafficMirrorFilterNetworkServicesResponse::request() const
 {
-    Q_D(const ModifyTrafficMirrorFilterNetworkServicesResponse);
-    return static_cast<const ModifyTrafficMirrorFilterNetworkServicesRequest *>(d->request);
+    return static_cast<const ModifyTrafficMirrorFilterNetworkServicesRequest *>(Ec2Response::request());
 }
 
 /*!

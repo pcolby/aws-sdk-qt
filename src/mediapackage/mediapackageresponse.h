@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    MediaPackageResponsePrivate * const d_ptr; ///< Internal d-pointer.
     MediaPackageResponse(MediaPackageResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

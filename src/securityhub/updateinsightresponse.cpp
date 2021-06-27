@@ -103,8 +103,7 @@ UpdateInsightResponse::UpdateInsightResponse(
  */
 const UpdateInsightRequest * UpdateInsightResponse::request() const
 {
-    Q_D(const UpdateInsightResponse);
-    return static_cast<const UpdateInsightRequest *>(d->request);
+    return static_cast<const UpdateInsightRequest *>(SecurityHubResponse::request());
 }
 
 /*!

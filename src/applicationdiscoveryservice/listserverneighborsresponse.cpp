@@ -159,8 +159,7 @@ ListServerNeighborsResponse::ListServerNeighborsResponse(
  */
 const ListServerNeighborsRequest * ListServerNeighborsResponse::request() const
 {
-    Q_D(const ListServerNeighborsResponse);
-    return static_cast<const ListServerNeighborsRequest *>(d->request);
+    return static_cast<const ListServerNeighborsRequest *>(ApplicationDiscoveryServiceResponse::request());
 }
 
 /*!

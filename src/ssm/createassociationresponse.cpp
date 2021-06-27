@@ -98,8 +98,7 @@ CreateAssociationResponse::CreateAssociationResponse(
  */
 const CreateAssociationRequest * CreateAssociationResponse::request() const
 {
-    Q_D(const CreateAssociationResponse);
-    return static_cast<const CreateAssociationRequest *>(d->request);
+    return static_cast<const CreateAssociationRequest *>(SsmResponse::request());
 }
 
 /*!

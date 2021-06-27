@@ -55,8 +55,7 @@ ListEntitlementsResponse::ListEntitlementsResponse(
  */
 const ListEntitlementsRequest * ListEntitlementsResponse::request() const
 {
-    Q_D(const ListEntitlementsResponse);
-    return static_cast<const ListEntitlementsRequest *>(d->request);
+    return static_cast<const ListEntitlementsRequest *>(MediaConnectResponse::request());
 }
 
 /*!

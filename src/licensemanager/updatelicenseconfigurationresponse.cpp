@@ -59,8 +59,7 @@ UpdateLicenseConfigurationResponse::UpdateLicenseConfigurationResponse(
  */
 const UpdateLicenseConfigurationRequest * UpdateLicenseConfigurationResponse::request() const
 {
-    Q_D(const UpdateLicenseConfigurationResponse);
-    return static_cast<const UpdateLicenseConfigurationRequest *>(d->request);
+    return static_cast<const UpdateLicenseConfigurationRequest *>(LicenseManagerResponse::request());
 }
 
 /*!

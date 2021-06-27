@@ -75,8 +75,7 @@ StartConfigurationRecorderResponse::StartConfigurationRecorderResponse(
  */
 const StartConfigurationRecorderRequest * StartConfigurationRecorderResponse::request() const
 {
-    Q_D(const StartConfigurationRecorderResponse);
-    return static_cast<const StartConfigurationRecorderRequest *>(d->request);
+    return static_cast<const StartConfigurationRecorderRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

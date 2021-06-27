@@ -439,8 +439,7 @@ DeleteBranchResponse::DeleteBranchResponse(
  */
 const DeleteBranchRequest * DeleteBranchResponse::request() const
 {
-    Q_D(const DeleteBranchResponse);
-    return static_cast<const DeleteBranchRequest *>(d->request);
+    return static_cast<const DeleteBranchRequest *>(CodeCommitResponse::request());
 }
 
 /*!

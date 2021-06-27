@@ -73,8 +73,7 @@ GetMembersResponse::GetMembersResponse(
  */
 const GetMembersRequest * GetMembersResponse::request() const
 {
-    Q_D(const GetMembersResponse);
-    return static_cast<const GetMembersRequest *>(d->request);
+    return static_cast<const GetMembersRequest *>(GuardDutyResponse::request());
 }
 
 /*!

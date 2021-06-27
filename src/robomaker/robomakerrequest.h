@@ -113,6 +113,7 @@ public:
 
 protected:
     /// @cond internal
+    RoboMakerRequestPrivate * const d_ptr; ///< Internal d-pointer.
     RoboMakerRequest(RoboMakerRequestPrivate * const d);
     /// @endcond
 

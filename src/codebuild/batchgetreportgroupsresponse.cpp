@@ -64,8 +64,7 @@ BatchGetReportGroupsResponse::BatchGetReportGroupsResponse(
  */
 const BatchGetReportGroupsRequest * BatchGetReportGroupsResponse::request() const
 {
-    Q_D(const BatchGetReportGroupsResponse);
-    return static_cast<const BatchGetReportGroupsRequest *>(d->request);
+    return static_cast<const BatchGetReportGroupsRequest *>(CodeBuildResponse::request());
 }
 
 /*!

@@ -335,6 +335,12 @@ public slots:
     UploadPartCopyResponse * uploadPartCopy(const UploadPartCopyRequest &request);
     WriteGetObjectResponseResponse * writeGetObjectResponse(const WriteGetObjectResponseRequest &request);
 
+protected:
+    /// @cond internal
+    S3ClientPrivate * const d_ptr; ///< Internal d-pointer.
+    S3Client(S3ClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(S3Client)
     Q_DISABLE_COPY(S3Client)

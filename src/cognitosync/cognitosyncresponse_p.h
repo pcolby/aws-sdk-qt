@@ -20,14 +20,12 @@
 #ifndef QTAWS_COGNITOSYNCRESPONSE_P_H
 #define QTAWS_COGNITOSYNCRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace CognitoSync {
 
 class CognitoSyncResponse;
 
-class CognitoSyncResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class CognitoSyncResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    CognitoSyncResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CognitoSyncResponse)

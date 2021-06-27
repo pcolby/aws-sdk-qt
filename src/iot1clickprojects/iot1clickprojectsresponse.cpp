@@ -37,7 +37,7 @@ namespace IoT1ClickProjects {
  * Constructs a IoT1ClickProjectsResponse object with parent \a parent.
  */
 IoT1ClickProjectsResponse::IoT1ClickProjectsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new IoT1ClickProjectsResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new IoT1ClickProjectsResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ IoT1ClickProjectsResponse::IoT1ClickProjectsResponse(QObject * const parent)
  * implementation that inherits from IoT1ClickProjectsResponsePrivate.
  */
 IoT1ClickProjectsResponse::IoT1ClickProjectsResponse(IoT1ClickProjectsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void IoT1ClickProjectsResponse::parseFailure(QIODevice &response)
  * Constructs a IoT1ClickProjectsResponsePrivate object with public implementation \a q.
  */
 IoT1ClickProjectsResponsePrivate::IoT1ClickProjectsResponsePrivate(
-    IoT1ClickProjectsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    IoT1ClickProjectsResponse * const q) : q_ptr(q)
 {
 
 }

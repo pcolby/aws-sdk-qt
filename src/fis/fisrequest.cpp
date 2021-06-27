@@ -56,7 +56,7 @@ namespace FIS {
  * Constructs a FisRequest object for FIS \a action.
  */
 FisRequest::FisRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new FisRequestPrivate(action, this))
+    : d_ptr(new FisRequestPrivate(action, this))
 {
 
 }
@@ -65,7 +65,8 @@ FisRequest::FisRequest(const Action action)
  * Constructs a copy of \a other.
  */
 FisRequest::FisRequest(const FisRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new FisRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new FisRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -88,7 +89,7 @@ FisRequest& FisRequest::operator=(const FisRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from FisRequestPrivate.
  */
-FisRequest::FisRequest(FisRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+FisRequest::FisRequest(FisRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -257,7 +258,7 @@ QNetworkRequest FisRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 FisRequestPrivate::FisRequestPrivate(const FisRequest::Action action, FisRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -272,8 +273,8 @@ FisRequestPrivate::FisRequestPrivate(const FisRequest::Action action, FisRequest
  */
 FisRequestPrivate::FisRequestPrivate(const FisRequestPrivate &other,
                                      FisRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

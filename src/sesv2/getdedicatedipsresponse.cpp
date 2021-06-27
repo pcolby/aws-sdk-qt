@@ -88,8 +88,7 @@ GetDedicatedIpsResponse::GetDedicatedIpsResponse(
  */
 const GetDedicatedIpsRequest * GetDedicatedIpsResponse::request() const
 {
-    Q_D(const GetDedicatedIpsResponse);
-    return static_cast<const GetDedicatedIpsRequest *>(d->request);
+    return static_cast<const GetDedicatedIpsRequest *>(Sesv2Response::request());
 }
 
 /*!

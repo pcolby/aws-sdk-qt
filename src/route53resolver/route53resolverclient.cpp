@@ -218,16 +218,16 @@ Route53ResolverClient::Route53ResolverClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new Route53ResolverClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-04-01"),
+    QStringLiteral("route53resolver"),
+    QStringLiteral("Amazon Route 53 Resolver"),
+    QStringLiteral("route53resolver"),
+    parent), d_ptr(new Route53ResolverClientPrivate(this))
 {
-    Q_D(Route53ResolverClient);
-    d->apiVersion = QStringLiteral("2018-04-01");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("route53resolver");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Route 53 Resolver");
-    d->serviceName = QStringLiteral("route53resolver");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -246,16 +246,16 @@ Route53ResolverClient::Route53ResolverClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new Route53ResolverClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-04-01"),
+    QStringLiteral("route53resolver"),
+    QStringLiteral("Amazon Route 53 Resolver"),
+    QStringLiteral("route53resolver"),
+    parent), d_ptr(new Route53ResolverClientPrivate(this))
 {
-    Q_D(Route53ResolverClient);
-    d->apiVersion = QStringLiteral("2018-04-01");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("route53resolver");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Route 53 Resolver");
-    d->serviceName = QStringLiteral("route53resolver");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -1206,10 +1206,9 @@ UpdateResolverRuleResponse * Route53ResolverClient::updateResolverRule(const Upd
 /*!
  * Constructs a Route53ResolverClientPrivate object with public implementation \a q.
  */
-Route53ResolverClientPrivate::Route53ResolverClientPrivate(Route53ResolverClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+Route53ResolverClientPrivate::Route53ResolverClientPrivate(Route53ResolverClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace Route53Resolver

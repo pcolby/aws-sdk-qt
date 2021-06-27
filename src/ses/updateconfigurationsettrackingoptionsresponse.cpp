@@ -66,8 +66,7 @@ UpdateConfigurationSetTrackingOptionsResponse::UpdateConfigurationSetTrackingOpt
  */
 const UpdateConfigurationSetTrackingOptionsRequest * UpdateConfigurationSetTrackingOptionsResponse::request() const
 {
-    Q_D(const UpdateConfigurationSetTrackingOptionsResponse);
-    return static_cast<const UpdateConfigurationSetTrackingOptionsRequest *>(d->request);
+    return static_cast<const UpdateConfigurationSetTrackingOptionsRequest *>(SesResponse::request());
 }
 
 /*!

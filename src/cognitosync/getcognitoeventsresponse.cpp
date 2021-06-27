@@ -75,8 +75,7 @@ GetCognitoEventsResponse::GetCognitoEventsResponse(
  */
 const GetCognitoEventsRequest * GetCognitoEventsResponse::request() const
 {
-    Q_D(const GetCognitoEventsResponse);
-    return static_cast<const GetCognitoEventsRequest *>(d->request);
+    return static_cast<const GetCognitoEventsRequest *>(CognitoSyncResponse::request());
 }
 
 /*!

@@ -68,8 +68,7 @@ DescribeNotificationConfigurationsResponse::DescribeNotificationConfigurationsRe
  */
 const DescribeNotificationConfigurationsRequest * DescribeNotificationConfigurationsResponse::request() const
 {
-    Q_D(const DescribeNotificationConfigurationsResponse);
-    return static_cast<const DescribeNotificationConfigurationsRequest *>(d->request);
+    return static_cast<const DescribeNotificationConfigurationsRequest *>(AutoScalingResponse::request());
 }
 
 /*!

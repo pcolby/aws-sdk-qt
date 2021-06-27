@@ -85,8 +85,7 @@ CreateScheduledActionResponse::CreateScheduledActionResponse(
  */
 const CreateScheduledActionRequest * CreateScheduledActionResponse::request() const
 {
-    Q_D(const CreateScheduledActionResponse);
-    return static_cast<const CreateScheduledActionRequest *>(d->request);
+    return static_cast<const CreateScheduledActionRequest *>(RedshiftResponse::request());
 }
 
 /*!

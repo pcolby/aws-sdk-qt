@@ -20,14 +20,12 @@
 #ifndef QTAWS_TRANSCRIBESTREAMINGSERVICERESPONSE_P_H
 #define QTAWS_TRANSCRIBESTREAMINGSERVICERESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace TranscribeStreamingService {
 
 class TranscribeStreamingServiceResponse;
 
-class TranscribeStreamingServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class TranscribeStreamingServiceResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    TranscribeStreamingServiceResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(TranscribeStreamingServiceResponse)

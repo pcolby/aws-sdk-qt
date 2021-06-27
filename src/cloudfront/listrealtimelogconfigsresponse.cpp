@@ -60,8 +60,7 @@ ListRealtimeLogConfigsResponse::ListRealtimeLogConfigsResponse(
  */
 const ListRealtimeLogConfigsRequest * ListRealtimeLogConfigsResponse::request() const
 {
-    Q_D(const ListRealtimeLogConfigsResponse);
-    return static_cast<const ListRealtimeLogConfigsRequest *>(d->request);
+    return static_cast<const ListRealtimeLogConfigsRequest *>(CloudFrontResponse::request());
 }
 
 /*!

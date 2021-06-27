@@ -56,8 +56,7 @@ UpdateLedgerPermissionsModeResponse::UpdateLedgerPermissionsModeResponse(
  */
 const UpdateLedgerPermissionsModeRequest * UpdateLedgerPermissionsModeResponse::request() const
 {
-    Q_D(const UpdateLedgerPermissionsModeResponse);
-    return static_cast<const UpdateLedgerPermissionsModeRequest *>(d->request);
+    return static_cast<const UpdateLedgerPermissionsModeRequest *>(QldbResponse::request());
 }
 
 /*!

@@ -20,15 +20,12 @@
 #ifndef QTAWS_FISREQUEST_P_H
 #define QTAWS_FISREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "fisrequest.h"
-
 namespace QtAws {
 namespace FIS {
 
 class FisRequest;
 
-class FisRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class FisRequestPrivate {
 
 public:
     FisRequest::Action action; ///< FIS action to be performed.
@@ -39,6 +36,9 @@ public:
     FisRequestPrivate(const FisRequestPrivate &other, FisRequest * const q);
 
     static QString toString(const FisRequest::Action &action);
+
+protected:
+    FisRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(FisRequest)

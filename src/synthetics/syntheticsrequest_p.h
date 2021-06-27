@@ -20,15 +20,12 @@
 #ifndef QTAWS_SYNTHETICSREQUEST_P_H
 #define QTAWS_SYNTHETICSREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "syntheticsrequest.h"
-
 namespace QtAws {
 namespace Synthetics {
 
 class SyntheticsRequest;
 
-class SyntheticsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SyntheticsRequestPrivate {
 
 public:
     SyntheticsRequest::Action action; ///< Synthetics action to be performed.
@@ -39,6 +36,9 @@ public:
     SyntheticsRequestPrivate(const SyntheticsRequestPrivate &other, SyntheticsRequest * const q);
 
     static QString toString(const SyntheticsRequest::Action &action);
+
+protected:
+    SyntheticsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SyntheticsRequest)

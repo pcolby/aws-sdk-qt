@@ -77,8 +77,7 @@ GetCredentialsForIdentityResponse::GetCredentialsForIdentityResponse(
  */
 const GetCredentialsForIdentityRequest * GetCredentialsForIdentityResponse::request() const
 {
-    Q_D(const GetCredentialsForIdentityResponse);
-    return static_cast<const GetCredentialsForIdentityRequest *>(d->request);
+    return static_cast<const GetCredentialsForIdentityRequest *>(CognitoIdentityResponse::request());
 }
 
 /*!

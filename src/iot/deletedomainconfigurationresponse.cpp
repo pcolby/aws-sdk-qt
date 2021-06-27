@@ -82,8 +82,7 @@ DeleteDomainConfigurationResponse::DeleteDomainConfigurationResponse(
  */
 const DeleteDomainConfigurationRequest * DeleteDomainConfigurationResponse::request() const
 {
-    Q_D(const DeleteDomainConfigurationResponse);
-    return static_cast<const DeleteDomainConfigurationRequest *>(d->request);
+    return static_cast<const DeleteDomainConfigurationRequest *>(IoTResponse::request());
 }
 
 /*!

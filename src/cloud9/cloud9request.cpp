@@ -55,7 +55,7 @@ namespace Cloud9 {
  * Constructs a Cloud9Request object for Cloud9 \a action.
  */
 Cloud9Request::Cloud9Request(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new Cloud9RequestPrivate(action, this))
+    : d_ptr(new Cloud9RequestPrivate(action, this))
 {
 
 }
@@ -64,7 +64,8 @@ Cloud9Request::Cloud9Request(const Action action)
  * Constructs a copy of \a other.
  */
 Cloud9Request::Cloud9Request(const Cloud9Request &other)
-    : QtAws::Core::AwsAbstractRequest(new Cloud9RequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new Cloud9RequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -87,7 +88,7 @@ Cloud9Request& Cloud9Request::operator=(const Cloud9Request &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from Cloud9RequestPrivate.
  */
-Cloud9Request::Cloud9Request(Cloud9RequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+Cloud9Request::Cloud9Request(Cloud9RequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -256,7 +257,7 @@ QNetworkRequest Cloud9Request::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 Cloud9RequestPrivate::Cloud9RequestPrivate(const Cloud9Request::Action action, Cloud9Request * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -271,8 +272,8 @@ Cloud9RequestPrivate::Cloud9RequestPrivate(const Cloud9Request::Action action, C
  */
 Cloud9RequestPrivate::Cloud9RequestPrivate(const Cloud9RequestPrivate &other,
                                      Cloud9Request * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

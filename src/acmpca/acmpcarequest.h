@@ -79,6 +79,7 @@ public:
 
 protected:
     /// @cond internal
+    AcmpcaRequestPrivate * const d_ptr; ///< Internal d-pointer.
     AcmpcaRequest(AcmpcaRequestPrivate * const d);
     /// @endcond
 

@@ -56,8 +56,7 @@ AcceptDomainTransferFromAnotherAwsAccountResponse::AcceptDomainTransferFromAnoth
  */
 const AcceptDomainTransferFromAnotherAwsAccountRequest * AcceptDomainTransferFromAnotherAwsAccountResponse::request() const
 {
-    Q_D(const AcceptDomainTransferFromAnotherAwsAccountResponse);
-    return static_cast<const AcceptDomainTransferFromAnotherAwsAccountRequest *>(d->request);
+    return static_cast<const AcceptDomainTransferFromAnotherAwsAccountRequest *>(Route53DomainsResponse::request());
 }
 
 /*!

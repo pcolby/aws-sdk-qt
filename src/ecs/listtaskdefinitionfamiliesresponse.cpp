@@ -72,8 +72,7 @@ ListTaskDefinitionFamiliesResponse::ListTaskDefinitionFamiliesResponse(
  */
 const ListTaskDefinitionFamiliesRequest * ListTaskDefinitionFamiliesResponse::request() const
 {
-    Q_D(const ListTaskDefinitionFamiliesResponse);
-    return static_cast<const ListTaskDefinitionFamiliesRequest *>(d->request);
+    return static_cast<const ListTaskDefinitionFamiliesRequest *>(EcsResponse::request());
 }
 
 /*!

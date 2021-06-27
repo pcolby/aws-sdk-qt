@@ -20,19 +20,20 @@
 #ifndef QTAWS_TIMESTREAMQUERYCLIENT_P_H
 #define QTAWS_TIMESTREAMQUERYCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace TimestreamQuery {
 
 class TimestreamQueryClient;
 
-class TimestreamQueryClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class TimestreamQueryClientPrivate {
 
 public:
     TimestreamQueryClientPrivate(TimestreamQueryClient * const q);
+
+protected:
+    TimestreamQueryClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(TimestreamQueryClient)

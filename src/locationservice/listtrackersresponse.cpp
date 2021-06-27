@@ -56,8 +56,7 @@ ListTrackersResponse::ListTrackersResponse(
  */
 const ListTrackersRequest * ListTrackersResponse::request() const
 {
-    Q_D(const ListTrackersResponse);
-    return static_cast<const ListTrackersRequest *>(d->request);
+    return static_cast<const ListTrackersRequest *>(LocationServiceResponse::request());
 }
 
 /*!

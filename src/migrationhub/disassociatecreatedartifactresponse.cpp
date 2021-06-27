@@ -62,8 +62,7 @@ DisassociateCreatedArtifactResponse::DisassociateCreatedArtifactResponse(
  */
 const DisassociateCreatedArtifactRequest * DisassociateCreatedArtifactResponse::request() const
 {
-    Q_D(const DisassociateCreatedArtifactResponse);
-    return static_cast<const DisassociateCreatedArtifactRequest *>(d->request);
+    return static_cast<const DisassociateCreatedArtifactRequest *>(MigrationHubResponse::request());
 }
 
 /*!

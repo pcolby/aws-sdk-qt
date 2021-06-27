@@ -56,8 +56,7 @@ ListRouteCalculatorsResponse::ListRouteCalculatorsResponse(
  */
 const ListRouteCalculatorsRequest * ListRouteCalculatorsResponse::request() const
 {
-    Q_D(const ListRouteCalculatorsResponse);
-    return static_cast<const ListRouteCalculatorsRequest *>(d->request);
+    return static_cast<const ListRouteCalculatorsRequest *>(LocationServiceResponse::request());
 }
 
 /*!

@@ -120,16 +120,16 @@ KafkaClient::KafkaClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new KafkaClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-11-14"),
+    QStringLiteral("kafka"),
+    QStringLiteral("Managed Streaming for Kafka"),
+    QStringLiteral("kafka"),
+    parent), d_ptr(new KafkaClientPrivate(this))
 {
-    Q_D(KafkaClient);
-    d->apiVersion = QStringLiteral("2018-11-14");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("kafka");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Managed Streaming for Kafka");
-    d->serviceName = QStringLiteral("kafka");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -148,16 +148,16 @@ KafkaClient::KafkaClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new KafkaClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-11-14"),
+    QStringLiteral("kafka"),
+    QStringLiteral("Managed Streaming for Kafka"),
+    QStringLiteral("kafka"),
+    parent), d_ptr(new KafkaClientPrivate(this))
 {
-    Q_D(KafkaClient);
-    d->apiVersion = QStringLiteral("2018-11-14");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("kafka");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Managed Streaming for Kafka");
-    d->serviceName = QStringLiteral("kafka");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -562,10 +562,9 @@ UpdateMonitoringResponse * KafkaClient::updateMonitoring(const UpdateMonitoringR
 /*!
  * Constructs a KafkaClientPrivate object with public implementation \a q.
  */
-KafkaClientPrivate::KafkaClientPrivate(KafkaClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+KafkaClientPrivate::KafkaClientPrivate(KafkaClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace Kafka

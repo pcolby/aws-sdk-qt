@@ -439,8 +439,7 @@ GetMergeOptionsResponse::GetMergeOptionsResponse(
  */
 const GetMergeOptionsRequest * GetMergeOptionsResponse::request() const
 {
-    Q_D(const GetMergeOptionsResponse);
-    return static_cast<const GetMergeOptionsRequest *>(d->request);
+    return static_cast<const GetMergeOptionsRequest *>(CodeCommitResponse::request());
 }
 
 /*!

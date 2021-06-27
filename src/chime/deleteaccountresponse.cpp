@@ -98,8 +98,7 @@ DeleteAccountResponse::DeleteAccountResponse(
  */
 const DeleteAccountRequest * DeleteAccountResponse::request() const
 {
-    Q_D(const DeleteAccountResponse);
-    return static_cast<const DeleteAccountRequest *>(d->request);
+    return static_cast<const DeleteAccountRequest *>(ChimeResponse::request());
 }
 
 /*!

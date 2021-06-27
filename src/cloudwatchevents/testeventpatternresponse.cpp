@@ -78,8 +78,7 @@ TestEventPatternResponse::TestEventPatternResponse(
  */
 const TestEventPatternRequest * TestEventPatternResponse::request() const
 {
-    Q_D(const TestEventPatternResponse);
-    return static_cast<const TestEventPatternRequest *>(d->request);
+    return static_cast<const TestEventPatternRequest *>(CloudWatchEventsResponse::request());
 }
 
 /*!

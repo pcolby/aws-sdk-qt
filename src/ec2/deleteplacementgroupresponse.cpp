@@ -87,8 +87,7 @@ DeletePlacementGroupResponse::DeletePlacementGroupResponse(
  */
 const DeletePlacementGroupRequest * DeletePlacementGroupResponse::request() const
 {
-    Q_D(const DeletePlacementGroupResponse);
-    return static_cast<const DeletePlacementGroupRequest *>(d->request);
+    return static_cast<const DeletePlacementGroupRequest *>(Ec2Response::request());
 }
 
 /*!

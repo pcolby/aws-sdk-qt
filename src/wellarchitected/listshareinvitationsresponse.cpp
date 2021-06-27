@@ -62,8 +62,7 @@ ListShareInvitationsResponse::ListShareInvitationsResponse(
  */
 const ListShareInvitationsRequest * ListShareInvitationsResponse::request() const
 {
-    Q_D(const ListShareInvitationsResponse);
-    return static_cast<const ListShareInvitationsRequest *>(d->request);
+    return static_cast<const ListShareInvitationsRequest *>(WellArchitectedResponse::request());
 }
 
 /*!

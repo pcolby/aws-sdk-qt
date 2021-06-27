@@ -20,15 +20,12 @@
 #ifndef QTAWS_EMRREQUEST_P_H
 #define QTAWS_EMRREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "emrrequest.h"
-
 namespace QtAws {
 namespace EMR {
 
 class EmrRequest;
 
-class EmrRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class EmrRequestPrivate {
 
 public:
     EmrRequest::Action action; ///< EMR action to be performed.
@@ -39,6 +36,9 @@ public:
     EmrRequestPrivate(const EmrRequestPrivate &other, EmrRequest * const q);
 
     static QString toString(const EmrRequest::Action &action);
+
+protected:
+    EmrRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(EmrRequest)

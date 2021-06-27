@@ -82,8 +82,7 @@ ListAttachedPoliciesResponse::ListAttachedPoliciesResponse(
  */
 const ListAttachedPoliciesRequest * ListAttachedPoliciesResponse::request() const
 {
-    Q_D(const ListAttachedPoliciesResponse);
-    return static_cast<const ListAttachedPoliciesRequest *>(d->request);
+    return static_cast<const ListAttachedPoliciesRequest *>(IoTResponse::request());
 }
 
 /*!

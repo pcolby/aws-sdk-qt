@@ -82,8 +82,7 @@ SetDefaultPolicyVersionResponse::SetDefaultPolicyVersionResponse(
  */
 const SetDefaultPolicyVersionRequest * SetDefaultPolicyVersionResponse::request() const
 {
-    Q_D(const SetDefaultPolicyVersionResponse);
-    return static_cast<const SetDefaultPolicyVersionRequest *>(d->request);
+    return static_cast<const SetDefaultPolicyVersionRequest *>(IoTResponse::request());
 }
 
 /*!

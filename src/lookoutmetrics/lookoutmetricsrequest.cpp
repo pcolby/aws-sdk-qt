@@ -67,7 +67,7 @@ namespace LookoutMetrics {
  * Constructs a LookoutMetricsRequest object for LookoutMetrics \a action.
  */
 LookoutMetricsRequest::LookoutMetricsRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new LookoutMetricsRequestPrivate(action, this))
+    : d_ptr(new LookoutMetricsRequestPrivate(action, this))
 {
 
 }
@@ -76,7 +76,8 @@ LookoutMetricsRequest::LookoutMetricsRequest(const Action action)
  * Constructs a copy of \a other.
  */
 LookoutMetricsRequest::LookoutMetricsRequest(const LookoutMetricsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new LookoutMetricsRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new LookoutMetricsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -99,7 +100,7 @@ LookoutMetricsRequest& LookoutMetricsRequest::operator=(const LookoutMetricsRequ
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from LookoutMetricsRequestPrivate.
  */
-LookoutMetricsRequest::LookoutMetricsRequest(LookoutMetricsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+LookoutMetricsRequest::LookoutMetricsRequest(LookoutMetricsRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -268,7 +269,7 @@ QNetworkRequest LookoutMetricsRequest::unsignedRequest(const QUrl &endpoint) con
  * with public implementation \a q.
  */
 LookoutMetricsRequestPrivate::LookoutMetricsRequestPrivate(const LookoutMetricsRequest::Action action, LookoutMetricsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -283,8 +284,8 @@ LookoutMetricsRequestPrivate::LookoutMetricsRequestPrivate(const LookoutMetricsR
  */
 LookoutMetricsRequestPrivate::LookoutMetricsRequestPrivate(const LookoutMetricsRequestPrivate &other,
                                      LookoutMetricsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

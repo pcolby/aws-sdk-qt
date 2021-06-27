@@ -119,8 +119,7 @@ ModifyDBSnapshotAttributeResponse::ModifyDBSnapshotAttributeResponse(
  */
 const ModifyDBSnapshotAttributeRequest * ModifyDBSnapshotAttributeResponse::request() const
 {
-    Q_D(const ModifyDBSnapshotAttributeResponse);
-    return static_cast<const ModifyDBSnapshotAttributeRequest *>(d->request);
+    return static_cast<const ModifyDBSnapshotAttributeRequest *>(RdsResponse::request());
 }
 
 /*!

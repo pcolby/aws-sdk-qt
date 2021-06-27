@@ -45,7 +45,7 @@ namespace ApiGatewayManagementApi {
  * Constructs a ApiGatewayManagementApiRequest object for ApiGatewayManagementApi \a action.
  */
 ApiGatewayManagementApiRequest::ApiGatewayManagementApiRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new ApiGatewayManagementApiRequestPrivate(action, this))
+    : d_ptr(new ApiGatewayManagementApiRequestPrivate(action, this))
 {
 
 }
@@ -54,7 +54,8 @@ ApiGatewayManagementApiRequest::ApiGatewayManagementApiRequest(const Action acti
  * Constructs a copy of \a other.
  */
 ApiGatewayManagementApiRequest::ApiGatewayManagementApiRequest(const ApiGatewayManagementApiRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new ApiGatewayManagementApiRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new ApiGatewayManagementApiRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -77,7 +78,7 @@ ApiGatewayManagementApiRequest& ApiGatewayManagementApiRequest::operator=(const 
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ApiGatewayManagementApiRequestPrivate.
  */
-ApiGatewayManagementApiRequest::ApiGatewayManagementApiRequest(ApiGatewayManagementApiRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+ApiGatewayManagementApiRequest::ApiGatewayManagementApiRequest(ApiGatewayManagementApiRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -246,7 +247,7 @@ QNetworkRequest ApiGatewayManagementApiRequest::unsignedRequest(const QUrl &endp
  * with public implementation \a q.
  */
 ApiGatewayManagementApiRequestPrivate::ApiGatewayManagementApiRequestPrivate(const ApiGatewayManagementApiRequest::Action action, ApiGatewayManagementApiRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -261,8 +262,8 @@ ApiGatewayManagementApiRequestPrivate::ApiGatewayManagementApiRequestPrivate(con
  */
 ApiGatewayManagementApiRequestPrivate::ApiGatewayManagementApiRequestPrivate(const ApiGatewayManagementApiRequestPrivate &other,
                                      ApiGatewayManagementApiRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

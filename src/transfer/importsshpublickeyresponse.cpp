@@ -62,8 +62,7 @@ ImportSshPublicKeyResponse::ImportSshPublicKeyResponse(
  */
 const ImportSshPublicKeyRequest * ImportSshPublicKeyResponse::request() const
 {
-    Q_D(const ImportSshPublicKeyResponse);
-    return static_cast<const ImportSshPublicKeyRequest *>(d->request);
+    return static_cast<const ImportSshPublicKeyRequest *>(TransferResponse::request());
 }
 
 /*!

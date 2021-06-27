@@ -73,8 +73,7 @@ DescribeObjectsResponse::DescribeObjectsResponse(
  */
 const DescribeObjectsRequest * DescribeObjectsResponse::request() const
 {
-    Q_D(const DescribeObjectsResponse);
-    return static_cast<const DescribeObjectsRequest *>(d->request);
+    return static_cast<const DescribeObjectsRequest *>(DataPipelineResponse::request());
 }
 
 /*!

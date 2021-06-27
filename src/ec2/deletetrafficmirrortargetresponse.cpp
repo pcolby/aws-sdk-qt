@@ -87,8 +87,7 @@ DeleteTrafficMirrorTargetResponse::DeleteTrafficMirrorTargetResponse(
  */
 const DeleteTrafficMirrorTargetRequest * DeleteTrafficMirrorTargetResponse::request() const
 {
-    Q_D(const DeleteTrafficMirrorTargetResponse);
-    return static_cast<const DeleteTrafficMirrorTargetRequest *>(d->request);
+    return static_cast<const DeleteTrafficMirrorTargetRequest *>(Ec2Response::request());
 }
 
 /*!

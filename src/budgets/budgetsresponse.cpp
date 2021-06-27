@@ -37,7 +37,7 @@ namespace Budgets {
  * Constructs a BudgetsResponse object with parent \a parent.
  */
 BudgetsResponse::BudgetsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new BudgetsResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new BudgetsResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ BudgetsResponse::BudgetsResponse(QObject * const parent)
  * implementation that inherits from BudgetsResponsePrivate.
  */
 BudgetsResponse::BudgetsResponse(BudgetsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void BudgetsResponse::parseFailure(QIODevice &response)
  * Constructs a BudgetsResponsePrivate object with public implementation \a q.
  */
 BudgetsResponsePrivate::BudgetsResponsePrivate(
-    BudgetsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    BudgetsResponse * const q) : q_ptr(q)
 {
 
 }

@@ -56,8 +56,7 @@ StopTextTranslationJobResponse::StopTextTranslationJobResponse(
  */
 const StopTextTranslationJobRequest * StopTextTranslationJobResponse::request() const
 {
-    Q_D(const StopTextTranslationJobResponse);
-    return static_cast<const StopTextTranslationJobRequest *>(d->request);
+    return static_cast<const StopTextTranslationJobRequest *>(TranslateResponse::request());
 }
 
 /*!

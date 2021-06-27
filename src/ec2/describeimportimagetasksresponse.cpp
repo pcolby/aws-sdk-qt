@@ -87,8 +87,7 @@ DescribeImportImageTasksResponse::DescribeImportImageTasksResponse(
  */
 const DescribeImportImageTasksRequest * DescribeImportImageTasksResponse::request() const
 {
-    Q_D(const DescribeImportImageTasksResponse);
-    return static_cast<const DescribeImportImageTasksRequest *>(d->request);
+    return static_cast<const DescribeImportImageTasksRequest *>(Ec2Response::request());
 }
 
 /*!

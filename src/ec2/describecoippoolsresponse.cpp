@@ -87,8 +87,7 @@ DescribeCoipPoolsResponse::DescribeCoipPoolsResponse(
  */
 const DescribeCoipPoolsRequest * DescribeCoipPoolsResponse::request() const
 {
-    Q_D(const DescribeCoipPoolsResponse);
-    return static_cast<const DescribeCoipPoolsRequest *>(d->request);
+    return static_cast<const DescribeCoipPoolsRequest *>(Ec2Response::request());
 }
 
 /*!

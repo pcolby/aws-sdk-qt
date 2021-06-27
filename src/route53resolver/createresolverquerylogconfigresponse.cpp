@@ -94,8 +94,7 @@ CreateResolverQueryLogConfigResponse::CreateResolverQueryLogConfigResponse(
  */
 const CreateResolverQueryLogConfigRequest * CreateResolverQueryLogConfigResponse::request() const
 {
-    Q_D(const CreateResolverQueryLogConfigResponse);
-    return static_cast<const CreateResolverQueryLogConfigRequest *>(d->request);
+    return static_cast<const CreateResolverQueryLogConfigRequest *>(Route53ResolverResponse::request());
 }
 
 /*!

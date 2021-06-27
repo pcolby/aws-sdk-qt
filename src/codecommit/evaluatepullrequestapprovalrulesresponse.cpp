@@ -439,8 +439,7 @@ EvaluatePullRequestApprovalRulesResponse::EvaluatePullRequestApprovalRulesRespon
  */
 const EvaluatePullRequestApprovalRulesRequest * EvaluatePullRequestApprovalRulesResponse::request() const
 {
-    Q_D(const EvaluatePullRequestApprovalRulesResponse);
-    return static_cast<const EvaluatePullRequestApprovalRulesRequest *>(d->request);
+    return static_cast<const EvaluatePullRequestApprovalRulesRequest *>(CodeCommitResponse::request());
 }
 
 /*!

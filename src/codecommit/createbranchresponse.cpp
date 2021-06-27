@@ -439,8 +439,7 @@ CreateBranchResponse::CreateBranchResponse(
  */
 const CreateBranchRequest * CreateBranchResponse::request() const
 {
-    Q_D(const CreateBranchResponse);
-    return static_cast<const CreateBranchRequest *>(d->request);
+    return static_cast<const CreateBranchRequest *>(CodeCommitResponse::request());
 }
 
 /*!

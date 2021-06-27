@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    CustomerProfilesResponsePrivate * const d_ptr; ///< Internal d-pointer.
     CustomerProfilesResponse(CustomerProfilesResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

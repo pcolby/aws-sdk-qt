@@ -66,8 +66,7 @@ DeleteIdentityProviderResponse::DeleteIdentityProviderResponse(
  */
 const DeleteIdentityProviderRequest * DeleteIdentityProviderResponse::request() const
 {
-    Q_D(const DeleteIdentityProviderResponse);
-    return static_cast<const DeleteIdentityProviderRequest *>(d->request);
+    return static_cast<const DeleteIdentityProviderRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

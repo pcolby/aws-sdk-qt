@@ -119,8 +119,7 @@ DeleteDBInstanceAutomatedBackupResponse::DeleteDBInstanceAutomatedBackupResponse
  */
 const DeleteDBInstanceAutomatedBackupRequest * DeleteDBInstanceAutomatedBackupResponse::request() const
 {
-    Q_D(const DeleteDBInstanceAutomatedBackupResponse);
-    return static_cast<const DeleteDBInstanceAutomatedBackupRequest *>(d->request);
+    return static_cast<const DeleteDBInstanceAutomatedBackupRequest *>(RdsResponse::request());
 }
 
 /*!

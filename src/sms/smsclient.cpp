@@ -142,16 +142,16 @@ SmsClient::SmsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SmsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-10-24"),
+    QStringLiteral("sms"),
+    QStringLiteral("AWS Server Migration Service"),
+    QStringLiteral("sms"),
+    parent), d_ptr(new SmsClientPrivate(this))
 {
-    Q_D(SmsClient);
-    d->apiVersion = QStringLiteral("2016-10-24");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("sms");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Server Migration Service");
-    d->serviceName = QStringLiteral("sms");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -170,16 +170,16 @@ SmsClient::SmsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SmsClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-10-24"),
+    QStringLiteral("sms"),
+    QStringLiteral("AWS Server Migration Service"),
+    QStringLiteral("sms"),
+    parent), d_ptr(new SmsClientPrivate(this))
 {
-    Q_D(SmsClient);
-    d->apiVersion = QStringLiteral("2016-10-24");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("sms");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Server Migration Service");
-    d->serviceName = QStringLiteral("sms");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -675,10 +675,9 @@ UpdateReplicationJobResponse * SmsClient::updateReplicationJob(const UpdateRepli
 /*!
  * Constructs a SmsClientPrivate object with public implementation \a q.
  */
-SmsClientPrivate::SmsClientPrivate(SmsClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+SmsClientPrivate::SmsClientPrivate(SmsClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace SMS

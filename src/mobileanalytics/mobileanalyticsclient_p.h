@@ -20,19 +20,20 @@
 #ifndef QTAWS_MOBILEANALYTICSCLIENT_P_H
 #define QTAWS_MOBILEANALYTICSCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace MobileAnalytics {
 
 class MobileAnalyticsClient;
 
-class MobileAnalyticsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class MobileAnalyticsClientPrivate {
 
 public:
     MobileAnalyticsClientPrivate(MobileAnalyticsClient * const q);
+
+protected:
+    MobileAnalyticsClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MobileAnalyticsClient)

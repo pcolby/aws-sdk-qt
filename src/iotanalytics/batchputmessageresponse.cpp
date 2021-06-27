@@ -75,8 +75,7 @@ BatchPutMessageResponse::BatchPutMessageResponse(
  */
 const BatchPutMessageRequest * BatchPutMessageResponse::request() const
 {
-    Q_D(const BatchPutMessageResponse);
-    return static_cast<const BatchPutMessageRequest *>(d->request);
+    return static_cast<const BatchPutMessageRequest *>(IoTAnalyticsResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ UpdateBrokerTypeResponse::UpdateBrokerTypeResponse(
  */
 const UpdateBrokerTypeRequest * UpdateBrokerTypeResponse::request() const
 {
-    Q_D(const UpdateBrokerTypeResponse);
-    return static_cast<const UpdateBrokerTypeRequest *>(d->request);
+    return static_cast<const UpdateBrokerTypeRequest *>(KafkaResponse::request());
 }
 
 /*!

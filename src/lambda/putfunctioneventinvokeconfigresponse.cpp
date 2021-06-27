@@ -66,8 +66,7 @@ PutFunctionEventInvokeConfigResponse::PutFunctionEventInvokeConfigResponse(
  */
 const PutFunctionEventInvokeConfigRequest * PutFunctionEventInvokeConfigResponse::request() const
 {
-    Q_D(const PutFunctionEventInvokeConfigResponse);
-    return static_cast<const PutFunctionEventInvokeConfigRequest *>(d->request);
+    return static_cast<const PutFunctionEventInvokeConfigRequest *>(LambdaResponse::request());
 }
 
 /*!

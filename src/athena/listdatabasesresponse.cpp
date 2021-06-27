@@ -73,8 +73,7 @@ ListDatabasesResponse::ListDatabasesResponse(
  */
 const ListDatabasesRequest * ListDatabasesResponse::request() const
 {
-    Q_D(const ListDatabasesResponse);
-    return static_cast<const ListDatabasesRequest *>(d->request);
+    return static_cast<const ListDatabasesRequest *>(AthenaResponse::request());
 }
 
 /*!

@@ -161,8 +161,7 @@ DescribeInstancesResponse::DescribeInstancesResponse(
  */
 const DescribeInstancesRequest * DescribeInstancesResponse::request() const
 {
-    Q_D(const DescribeInstancesResponse);
-    return static_cast<const DescribeInstancesRequest *>(d->request);
+    return static_cast<const DescribeInstancesRequest *>(OpsWorksResponse::request());
 }
 
 /*!

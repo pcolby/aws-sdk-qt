@@ -20,14 +20,12 @@
 #ifndef QTAWS_COSTEXPLORERRESPONSE_P_H
 #define QTAWS_COSTEXPLORERRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace CostExplorer {
 
 class CostExplorerResponse;
 
-class CostExplorerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class CostExplorerResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    CostExplorerResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CostExplorerResponse)

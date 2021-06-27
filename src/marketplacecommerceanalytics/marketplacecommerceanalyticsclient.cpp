@@ -63,16 +63,16 @@ MarketplaceCommerceAnalyticsClient::MarketplaceCommerceAnalyticsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new MarketplaceCommerceAnalyticsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2015-07-01"),
+    QStringLiteral("marketplacecommerceanalytics"),
+    QStringLiteral("AWS Marketplace Commerce Analytics"),
+    QStringLiteral("marketplacecommerceanalytics"),
+    parent), d_ptr(new MarketplaceCommerceAnalyticsClientPrivate(this))
 {
-    Q_D(MarketplaceCommerceAnalyticsClient);
-    d->apiVersion = QStringLiteral("2015-07-01");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("marketplacecommerceanalytics");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Marketplace Commerce Analytics");
-    d->serviceName = QStringLiteral("marketplacecommerceanalytics");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -91,16 +91,16 @@ MarketplaceCommerceAnalyticsClient::MarketplaceCommerceAnalyticsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new MarketplaceCommerceAnalyticsClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2015-07-01"),
+    QStringLiteral("marketplacecommerceanalytics"),
+    QStringLiteral("AWS Marketplace Commerce Analytics"),
+    QStringLiteral("marketplacecommerceanalytics"),
+    parent), d_ptr(new MarketplaceCommerceAnalyticsClientPrivate(this))
 {
-    Q_D(MarketplaceCommerceAnalyticsClient);
-    d->apiVersion = QStringLiteral("2015-07-01");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("marketplacecommerceanalytics");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Marketplace Commerce Analytics");
-    d->serviceName = QStringLiteral("marketplacecommerceanalytics");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -151,10 +151,9 @@ StartSupportDataExportResponse * MarketplaceCommerceAnalyticsClient::startSuppor
 /*!
  * Constructs a MarketplaceCommerceAnalyticsClientPrivate object with public implementation \a q.
  */
-MarketplaceCommerceAnalyticsClientPrivate::MarketplaceCommerceAnalyticsClientPrivate(MarketplaceCommerceAnalyticsClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+MarketplaceCommerceAnalyticsClientPrivate::MarketplaceCommerceAnalyticsClientPrivate(MarketplaceCommerceAnalyticsClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace MarketplaceCommerceAnalytics

@@ -64,8 +64,7 @@ ExportLambdaFunctionRecommendationsResponse::ExportLambdaFunctionRecommendations
  */
 const ExportLambdaFunctionRecommendationsRequest * ExportLambdaFunctionRecommendationsResponse::request() const
 {
-    Q_D(const ExportLambdaFunctionRecommendationsResponse);
-    return static_cast<const ExportLambdaFunctionRecommendationsRequest *>(d->request);
+    return static_cast<const ExportLambdaFunctionRecommendationsRequest *>(ComputeOptimizerResponse::request());
 }
 
 /*!

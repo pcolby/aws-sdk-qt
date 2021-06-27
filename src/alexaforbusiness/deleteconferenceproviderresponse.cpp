@@ -62,8 +62,7 @@ DeleteConferenceProviderResponse::DeleteConferenceProviderResponse(
  */
 const DeleteConferenceProviderRequest * DeleteConferenceProviderResponse::request() const
 {
-    Q_D(const DeleteConferenceProviderResponse);
-    return static_cast<const DeleteConferenceProviderRequest *>(d->request);
+    return static_cast<const DeleteConferenceProviderRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

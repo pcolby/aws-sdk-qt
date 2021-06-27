@@ -57,8 +57,7 @@ DeleteBrokerResponse::DeleteBrokerResponse(
  */
 const DeleteBrokerRequest * DeleteBrokerResponse::request() const
 {
-    Q_D(const DeleteBrokerResponse);
-    return static_cast<const DeleteBrokerRequest *>(d->request);
+    return static_cast<const DeleteBrokerRequest *>(MqResponse::request());
 }
 
 /*!

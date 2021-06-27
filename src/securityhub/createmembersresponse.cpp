@@ -103,8 +103,7 @@ CreateMembersResponse::CreateMembersResponse(
  */
 const CreateMembersRequest * CreateMembersResponse::request() const
 {
-    Q_D(const CreateMembersResponse);
-    return static_cast<const CreateMembersRequest *>(d->request);
+    return static_cast<const CreateMembersRequest *>(SecurityHubResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ PutBucketLifecycleConfigurationResponse::PutBucketLifecycleConfigurationResponse
  */
 const PutBucketLifecycleConfigurationRequest * PutBucketLifecycleConfigurationResponse::request() const
 {
-    Q_D(const PutBucketLifecycleConfigurationResponse);
-    return static_cast<const PutBucketLifecycleConfigurationRequest *>(d->request);
+    return static_cast<const PutBucketLifecycleConfigurationRequest *>(S3ControlResponse::request());
 }
 
 /*!

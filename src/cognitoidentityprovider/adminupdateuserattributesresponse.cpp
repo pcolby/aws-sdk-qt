@@ -66,8 +66,7 @@ AdminUpdateUserAttributesResponse::AdminUpdateUserAttributesResponse(
  */
 const AdminUpdateUserAttributesRequest * AdminUpdateUserAttributesResponse::request() const
 {
-    Q_D(const AdminUpdateUserAttributesResponse);
-    return static_cast<const AdminUpdateUserAttributesRequest *>(d->request);
+    return static_cast<const AdminUpdateUserAttributesRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

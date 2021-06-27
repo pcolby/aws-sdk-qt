@@ -56,8 +56,7 @@ SendHeartbeatResponse::SendHeartbeatResponse(
  */
 const SendHeartbeatRequest * SendHeartbeatResponse::request() const
 {
-    Q_D(const SendHeartbeatResponse);
-    return static_cast<const SendHeartbeatRequest *>(d->request);
+    return static_cast<const SendHeartbeatRequest *>(SagemakerEdgeManagerResponse::request());
 }
 
 /*!

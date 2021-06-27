@@ -85,6 +85,7 @@ public:
 
 protected:
     /// @cond internal
+    NetworkFirewallRequestPrivate * const d_ptr; ///< Internal d-pointer.
     NetworkFirewallRequest(NetworkFirewallRequestPrivate * const d);
     /// @endcond
 

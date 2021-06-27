@@ -76,6 +76,12 @@ public slots:
     PutAttributesResponse * putAttributes(const PutAttributesRequest &request);
     SelectResponse * select(const SelectRequest &request);
 
+protected:
+    /// @cond internal
+    SimpleDBClientPrivate * const d_ptr; ///< Internal d-pointer.
+    SimpleDBClient(SimpleDBClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(SimpleDBClient)
     Q_DISABLE_COPY(SimpleDBClient)

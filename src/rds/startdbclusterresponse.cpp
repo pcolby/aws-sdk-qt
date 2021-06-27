@@ -119,8 +119,7 @@ StartDBClusterResponse::StartDBClusterResponse(
  */
 const StartDBClusterRequest * StartDBClusterResponse::request() const
 {
-    Q_D(const StartDBClusterResponse);
-    return static_cast<const StartDBClusterRequest *>(d->request);
+    return static_cast<const StartDBClusterRequest *>(RdsResponse::request());
 }
 
 /*!

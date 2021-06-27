@@ -66,8 +66,7 @@ DeleteNamespaceResponse::DeleteNamespaceResponse(
  */
 const DeleteNamespaceRequest * DeleteNamespaceResponse::request() const
 {
-    Q_D(const DeleteNamespaceResponse);
-    return static_cast<const DeleteNamespaceRequest *>(d->request);
+    return static_cast<const DeleteNamespaceRequest *>(IoTThingsGraphResponse::request());
 }
 
 /*!

@@ -61,8 +61,7 @@ DescribePortfolioSharesResponse::DescribePortfolioSharesResponse(
  */
 const DescribePortfolioSharesRequest * DescribePortfolioSharesResponse::request() const
 {
-    Q_D(const DescribePortfolioSharesResponse);
-    return static_cast<const DescribePortfolioSharesRequest *>(d->request);
+    return static_cast<const DescribePortfolioSharesRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

@@ -73,8 +73,7 @@ UpdateFilterResponse::UpdateFilterResponse(
  */
 const UpdateFilterRequest * UpdateFilterResponse::request() const
 {
-    Q_D(const UpdateFilterResponse);
-    return static_cast<const UpdateFilterRequest *>(d->request);
+    return static_cast<const UpdateFilterRequest *>(GuardDutyResponse::request());
 }
 
 /*!

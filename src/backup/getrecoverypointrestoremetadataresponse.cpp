@@ -59,8 +59,7 @@ GetRecoveryPointRestoreMetadataResponse::GetRecoveryPointRestoreMetadataResponse
  */
 const GetRecoveryPointRestoreMetadataRequest * GetRecoveryPointRestoreMetadataResponse::request() const
 {
-    Q_D(const GetRecoveryPointRestoreMetadataResponse);
-    return static_cast<const GetRecoveryPointRestoreMetadataRequest *>(d->request);
+    return static_cast<const GetRecoveryPointRestoreMetadataRequest *>(BackupResponse::request());
 }
 
 /*!

@@ -116,8 +116,7 @@ DescribeSubscribersForNotificationResponse::DescribeSubscribersForNotificationRe
  */
 const DescribeSubscribersForNotificationRequest * DescribeSubscribersForNotificationResponse::request() const
 {
-    Q_D(const DescribeSubscribersForNotificationResponse);
-    return static_cast<const DescribeSubscribersForNotificationRequest *>(d->request);
+    return static_cast<const DescribeSubscribersForNotificationRequest *>(BudgetsResponse::request());
 }
 
 /*!

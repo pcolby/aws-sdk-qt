@@ -67,8 +67,7 @@ DisassociateAdminAccountResponse::DisassociateAdminAccountResponse(
  */
 const DisassociateAdminAccountRequest * DisassociateAdminAccountResponse::request() const
 {
-    Q_D(const DisassociateAdminAccountResponse);
-    return static_cast<const DisassociateAdminAccountRequest *>(d->request);
+    return static_cast<const DisassociateAdminAccountRequest *>(FmsResponse::request());
 }
 
 /*!

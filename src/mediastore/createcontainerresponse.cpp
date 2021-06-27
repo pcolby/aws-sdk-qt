@@ -57,8 +57,7 @@ CreateContainerResponse::CreateContainerResponse(
  */
 const CreateContainerRequest * CreateContainerResponse::request() const
 {
-    Q_D(const CreateContainerResponse);
-    return static_cast<const CreateContainerRequest *>(d->request);
+    return static_cast<const CreateContainerRequest *>(MediaStoreResponse::request());
 }
 
 /*!

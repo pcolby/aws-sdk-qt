@@ -124,8 +124,7 @@ ListVolumeInitiatorsResponse::ListVolumeInitiatorsResponse(
  */
 const ListVolumeInitiatorsRequest * ListVolumeInitiatorsResponse::request() const
 {
-    Q_D(const ListVolumeInitiatorsResponse);
-    return static_cast<const ListVolumeInitiatorsRequest *>(d->request);
+    return static_cast<const ListVolumeInitiatorsRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

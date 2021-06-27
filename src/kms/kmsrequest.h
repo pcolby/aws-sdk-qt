@@ -102,6 +102,7 @@ public:
 
 protected:
     /// @cond internal
+    KmsRequestPrivate * const d_ptr; ///< Internal d-pointer.
     KmsRequest(KmsRequestPrivate * const d);
     /// @endcond
 

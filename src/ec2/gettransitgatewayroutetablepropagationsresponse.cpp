@@ -87,8 +87,7 @@ GetTransitGatewayRouteTablePropagationsResponse::GetTransitGatewayRouteTableProp
  */
 const GetTransitGatewayRouteTablePropagationsRequest * GetTransitGatewayRouteTablePropagationsResponse::request() const
 {
-    Q_D(const GetTransitGatewayRouteTablePropagationsResponse);
-    return static_cast<const GetTransitGatewayRouteTablePropagationsRequest *>(d->request);
+    return static_cast<const GetTransitGatewayRouteTablePropagationsRequest *>(Ec2Response::request());
 }
 
 /*!

@@ -66,8 +66,7 @@ CancelReplicationTaskAssessmentRunResponse::CancelReplicationTaskAssessmentRunRe
  */
 const CancelReplicationTaskAssessmentRunRequest * CancelReplicationTaskAssessmentRunResponse::request() const
 {
-    Q_D(const CancelReplicationTaskAssessmentRunResponse);
-    return static_cast<const CancelReplicationTaskAssessmentRunRequest *>(d->request);
+    return static_cast<const CancelReplicationTaskAssessmentRunRequest *>(DatabaseMigrationServiceResponse::request());
 }
 
 /*!

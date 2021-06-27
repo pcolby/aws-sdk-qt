@@ -115,6 +115,12 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateProfilingGroupResponse * updateProfilingGroup(const UpdateProfilingGroupRequest &request);
 
+protected:
+    /// @cond internal
+    CodeGuruProfilerClientPrivate * const d_ptr; ///< Internal d-pointer.
+    CodeGuruProfilerClient(CodeGuruProfilerClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(CodeGuruProfilerClient)
     Q_DISABLE_COPY(CodeGuruProfilerClient)

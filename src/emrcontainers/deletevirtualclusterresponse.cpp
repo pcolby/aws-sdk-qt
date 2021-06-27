@@ -83,8 +83,7 @@ DeleteVirtualClusterResponse::DeleteVirtualClusterResponse(
  */
 const DeleteVirtualClusterRequest * DeleteVirtualClusterResponse::request() const
 {
-    Q_D(const DeleteVirtualClusterResponse);
-    return static_cast<const DeleteVirtualClusterRequest *>(d->request);
+    return static_cast<const DeleteVirtualClusterRequest *>(EMRContainersResponse::request());
 }
 
 /*!

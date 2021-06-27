@@ -73,8 +73,7 @@ UpdateMemberDetectorsResponse::UpdateMemberDetectorsResponse(
  */
 const UpdateMemberDetectorsRequest * UpdateMemberDetectorsResponse::request() const
 {
-    Q_D(const UpdateMemberDetectorsResponse);
-    return static_cast<const UpdateMemberDetectorsRequest *>(d->request);
+    return static_cast<const UpdateMemberDetectorsRequest *>(GuardDutyResponse::request());
 }
 
 /*!

@@ -62,8 +62,7 @@ CreateRoleResponse::CreateRoleResponse(
  */
 const CreateRoleRequest * CreateRoleResponse::request() const
 {
-    Q_D(const CreateRoleResponse);
-    return static_cast<const CreateRoleRequest *>(d->request);
+    return static_cast<const CreateRoleRequest *>(IamResponse::request());
 }
 
 /*!

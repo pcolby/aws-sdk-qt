@@ -79,8 +79,7 @@ ListInstanceAttributesResponse::ListInstanceAttributesResponse(
  */
 const ListInstanceAttributesRequest * ListInstanceAttributesResponse::request() const
 {
-    Q_D(const ListInstanceAttributesResponse);
-    return static_cast<const ListInstanceAttributesRequest *>(d->request);
+    return static_cast<const ListInstanceAttributesRequest *>(ConnectResponse::request());
 }
 
 /*!

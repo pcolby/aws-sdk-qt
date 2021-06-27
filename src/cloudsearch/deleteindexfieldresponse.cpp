@@ -66,8 +66,7 @@ DeleteIndexFieldResponse::DeleteIndexFieldResponse(
  */
 const DeleteIndexFieldRequest * DeleteIndexFieldResponse::request() const
 {
-    Q_D(const DeleteIndexFieldResponse);
-    return static_cast<const DeleteIndexFieldRequest *>(d->request);
+    return static_cast<const DeleteIndexFieldRequest *>(CloudSearchResponse::request());
 }
 
 /*!

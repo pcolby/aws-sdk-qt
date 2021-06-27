@@ -154,8 +154,7 @@ ListRetirableGrantsResponse::ListRetirableGrantsResponse(
  */
 const ListRetirableGrantsRequest * ListRetirableGrantsResponse::request() const
 {
-    Q_D(const ListRetirableGrantsResponse);
-    return static_cast<const ListRetirableGrantsRequest *>(d->request);
+    return static_cast<const ListRetirableGrantsRequest *>(KmsResponse::request());
 }
 
 /*!

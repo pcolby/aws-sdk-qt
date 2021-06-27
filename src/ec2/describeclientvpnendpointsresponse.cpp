@@ -87,8 +87,7 @@ DescribeClientVpnEndpointsResponse::DescribeClientVpnEndpointsResponse(
  */
 const DescribeClientVpnEndpointsRequest * DescribeClientVpnEndpointsResponse::request() const
 {
-    Q_D(const DescribeClientVpnEndpointsResponse);
-    return static_cast<const DescribeClientVpnEndpointsRequest *>(d->request);
+    return static_cast<const DescribeClientVpnEndpointsRequest *>(Ec2Response::request());
 }
 
 /*!

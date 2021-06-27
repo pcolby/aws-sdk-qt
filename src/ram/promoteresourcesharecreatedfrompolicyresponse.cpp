@@ -64,8 +64,7 @@ PromoteResourceShareCreatedFromPolicyResponse::PromoteResourceShareCreatedFromPo
  */
 const PromoteResourceShareCreatedFromPolicyRequest * PromoteResourceShareCreatedFromPolicyResponse::request() const
 {
-    Q_D(const PromoteResourceShareCreatedFromPolicyResponse);
-    return static_cast<const PromoteResourceShareCreatedFromPolicyRequest *>(d->request);
+    return static_cast<const PromoteResourceShareCreatedFromPolicyRequest *>(RamResponse::request());
 }
 
 /*!

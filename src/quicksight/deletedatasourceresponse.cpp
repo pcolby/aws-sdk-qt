@@ -60,8 +60,7 @@ DeleteDataSourceResponse::DeleteDataSourceResponse(
  */
 const DeleteDataSourceRequest * DeleteDataSourceResponse::request() const
 {
-    Q_D(const DeleteDataSourceResponse);
-    return static_cast<const DeleteDataSourceRequest *>(d->request);
+    return static_cast<const DeleteDataSourceRequest *>(QuickSightResponse::request());
 }
 
 /*!

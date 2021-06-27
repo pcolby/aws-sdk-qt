@@ -76,8 +76,7 @@ CreateRateBasedRuleResponse::CreateRateBasedRuleResponse(
  */
 const CreateRateBasedRuleRequest * CreateRateBasedRuleResponse::request() const
 {
-    Q_D(const CreateRateBasedRuleResponse);
-    return static_cast<const CreateRateBasedRuleRequest *>(d->request);
+    return static_cast<const CreateRateBasedRuleRequest *>(WafResponse::request());
 }
 
 /*!

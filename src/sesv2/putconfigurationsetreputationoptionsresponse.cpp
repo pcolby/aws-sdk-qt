@@ -88,8 +88,7 @@ PutConfigurationSetReputationOptionsResponse::PutConfigurationSetReputationOptio
  */
 const PutConfigurationSetReputationOptionsRequest * PutConfigurationSetReputationOptionsResponse::request() const
 {
-    Q_D(const PutConfigurationSetReputationOptionsResponse);
-    return static_cast<const PutConfigurationSetReputationOptionsRequest *>(d->request);
+    return static_cast<const PutConfigurationSetReputationOptionsRequest *>(Sesv2Response::request());
 }
 
 /*!

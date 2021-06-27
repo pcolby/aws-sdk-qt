@@ -79,8 +79,7 @@ ListSecurityKeysResponse::ListSecurityKeysResponse(
  */
 const ListSecurityKeysRequest * ListSecurityKeysResponse::request() const
 {
-    Q_D(const ListSecurityKeysResponse);
-    return static_cast<const ListSecurityKeysRequest *>(d->request);
+    return static_cast<const ListSecurityKeysRequest *>(ConnectResponse::request());
 }
 
 /*!

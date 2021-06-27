@@ -62,8 +62,7 @@ StartImageScanResponse::StartImageScanResponse(
  */
 const StartImageScanRequest * StartImageScanResponse::request() const
 {
-    Q_D(const StartImageScanResponse);
-    return static_cast<const StartImageScanRequest *>(d->request);
+    return static_cast<const StartImageScanRequest *>(EcrResponse::request());
 }
 
 /*!

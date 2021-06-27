@@ -56,8 +56,7 @@ GetCelebrityInfoResponse::GetCelebrityInfoResponse(
  */
 const GetCelebrityInfoRequest * GetCelebrityInfoResponse::request() const
 {
-    Q_D(const GetCelebrityInfoResponse);
-    return static_cast<const GetCelebrityInfoRequest *>(d->request);
+    return static_cast<const GetCelebrityInfoRequest *>(RekognitionResponse::request());
 }
 
 /*!

@@ -247,16 +247,16 @@ OrganizationsClient::OrganizationsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new OrganizationsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-11-28"),
+    QStringLiteral("organizations"),
+    QStringLiteral("AWS Organizations"),
+    QStringLiteral("organizations"),
+    parent), d_ptr(new OrganizationsClientPrivate(this))
 {
-    Q_D(OrganizationsClient);
-    d->apiVersion = QStringLiteral("2016-11-28");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("organizations");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Organizations");
-    d->serviceName = QStringLiteral("organizations");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -275,16 +275,16 @@ OrganizationsClient::OrganizationsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new OrganizationsClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-11-28"),
+    QStringLiteral("organizations"),
+    QStringLiteral("AWS Organizations"),
+    QStringLiteral("organizations"),
+    parent), d_ptr(new OrganizationsClientPrivate(this))
 {
-    Q_D(OrganizationsClient);
-    d->apiVersion = QStringLiteral("2016-11-28");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("organizations");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Organizations");
-    d->serviceName = QStringLiteral("organizations");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -2087,10 +2087,9 @@ UpdatePolicyResponse * OrganizationsClient::updatePolicy(const UpdatePolicyReque
 /*!
  * Constructs a OrganizationsClientPrivate object with public implementation \a q.
  */
-OrganizationsClientPrivate::OrganizationsClientPrivate(OrganizationsClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+OrganizationsClientPrivate::OrganizationsClientPrivate(OrganizationsClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace Organizations

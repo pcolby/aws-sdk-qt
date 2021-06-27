@@ -69,8 +69,7 @@ DeregisterCertificateResponse::DeregisterCertificateResponse(
  */
 const DeregisterCertificateRequest * DeregisterCertificateResponse::request() const
 {
-    Q_D(const DeregisterCertificateResponse);
-    return static_cast<const DeregisterCertificateRequest *>(d->request);
+    return static_cast<const DeregisterCertificateRequest *>(DirectoryServiceResponse::request());
 }
 
 /*!

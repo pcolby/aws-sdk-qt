@@ -87,8 +87,7 @@ DescribeRegionsResponse::DescribeRegionsResponse(
  */
 const DescribeRegionsRequest * DescribeRegionsResponse::request() const
 {
-    Q_D(const DescribeRegionsResponse);
-    return static_cast<const DescribeRegionsRequest *>(d->request);
+    return static_cast<const DescribeRegionsRequest *>(Ec2Response::request());
 }
 
 /*!

@@ -65,8 +65,7 @@ DeleteLifecyclePolicyResponse::DeleteLifecyclePolicyResponse(
  */
 const DeleteLifecyclePolicyRequest * DeleteLifecyclePolicyResponse::request() const
 {
-    Q_D(const DeleteLifecyclePolicyResponse);
-    return static_cast<const DeleteLifecyclePolicyRequest *>(d->request);
+    return static_cast<const DeleteLifecyclePolicyRequest *>(DlmResponse::request());
 }
 
 /*!

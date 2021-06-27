@@ -20,19 +20,20 @@
 #ifndef QTAWS_MEDIATAILORCLIENT_P_H
 #define QTAWS_MEDIATAILORCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace MediaTailor {
 
 class MediaTailorClient;
 
-class MediaTailorClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class MediaTailorClientPrivate {
 
 public:
     MediaTailorClientPrivate(MediaTailorClient * const q);
+
+protected:
+    MediaTailorClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MediaTailorClient)

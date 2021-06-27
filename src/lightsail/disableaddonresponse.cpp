@@ -74,8 +74,7 @@ DisableAddOnResponse::DisableAddOnResponse(
  */
 const DisableAddOnRequest * DisableAddOnResponse::request() const
 {
-    Q_D(const DisableAddOnResponse);
-    return static_cast<const DisableAddOnRequest *>(d->request);
+    return static_cast<const DisableAddOnRequest *>(LightsailResponse::request());
 }
 
 /*!

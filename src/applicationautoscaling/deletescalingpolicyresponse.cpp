@@ -137,8 +137,7 @@ DeleteScalingPolicyResponse::DeleteScalingPolicyResponse(
  */
 const DeleteScalingPolicyRequest * DeleteScalingPolicyResponse::request() const
 {
-    Q_D(const DeleteScalingPolicyResponse);
-    return static_cast<const DeleteScalingPolicyRequest *>(d->request);
+    return static_cast<const DeleteScalingPolicyRequest *>(ApplicationAutoScalingResponse::request());
 }
 
 /*!

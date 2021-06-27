@@ -55,8 +55,7 @@ GetJobTemplateResponse::GetJobTemplateResponse(
  */
 const GetJobTemplateRequest * GetJobTemplateResponse::request() const
 {
-    Q_D(const GetJobTemplateResponse);
-    return static_cast<const GetJobTemplateRequest *>(d->request);
+    return static_cast<const GetJobTemplateRequest *>(MediaConvertResponse::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ ListGroupsResponse::ListGroupsResponse(
  */
 const ListGroupsRequest * ListGroupsResponse::request() const
 {
-    Q_D(const ListGroupsResponse);
-    return static_cast<const ListGroupsRequest *>(d->request);
+    return static_cast<const ListGroupsRequest *>(GreengrassResponse::request());
 }
 
 /*!

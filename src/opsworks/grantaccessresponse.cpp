@@ -161,8 +161,7 @@ GrantAccessResponse::GrantAccessResponse(
  */
 const GrantAccessRequest * GrantAccessResponse::request() const
 {
-    Q_D(const GrantAccessResponse);
-    return static_cast<const GrantAccessRequest *>(d->request);
+    return static_cast<const GrantAccessRequest *>(OpsWorksResponse::request());
 }
 
 /*!

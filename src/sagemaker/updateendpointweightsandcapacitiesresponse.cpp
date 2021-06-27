@@ -70,8 +70,7 @@ UpdateEndpointWeightsAndCapacitiesResponse::UpdateEndpointWeightsAndCapacitiesRe
  */
 const UpdateEndpointWeightsAndCapacitiesRequest * UpdateEndpointWeightsAndCapacitiesResponse::request() const
 {
-    Q_D(const UpdateEndpointWeightsAndCapacitiesResponse);
-    return static_cast<const UpdateEndpointWeightsAndCapacitiesRequest *>(d->request);
+    return static_cast<const UpdateEndpointWeightsAndCapacitiesRequest *>(SageMakerResponse::request());
 }
 
 /*!

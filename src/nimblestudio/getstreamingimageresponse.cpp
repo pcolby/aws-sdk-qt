@@ -55,8 +55,7 @@ GetStreamingImageResponse::GetStreamingImageResponse(
  */
 const GetStreamingImageRequest * GetStreamingImageResponse::request() const
 {
-    Q_D(const GetStreamingImageResponse);
-    return static_cast<const GetStreamingImageRequest *>(d->request);
+    return static_cast<const GetStreamingImageRequest *>(NimbleStudioResponse::request());
 }
 
 /*!

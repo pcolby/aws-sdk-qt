@@ -67,8 +67,7 @@ GetViolationDetailsResponse::GetViolationDetailsResponse(
  */
 const GetViolationDetailsRequest * GetViolationDetailsResponse::request() const
 {
-    Q_D(const GetViolationDetailsResponse);
-    return static_cast<const GetViolationDetailsRequest *>(d->request);
+    return static_cast<const GetViolationDetailsRequest *>(FmsResponse::request());
 }
 
 /*!

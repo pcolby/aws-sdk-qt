@@ -62,8 +62,7 @@ AddClientIDToOpenIDConnectProviderResponse::AddClientIDToOpenIDConnectProviderRe
  */
 const AddClientIDToOpenIDConnectProviderRequest * AddClientIDToOpenIDConnectProviderResponse::request() const
 {
-    Q_D(const AddClientIDToOpenIDConnectProviderResponse);
-    return static_cast<const AddClientIDToOpenIDConnectProviderRequest *>(d->request);
+    return static_cast<const AddClientIDToOpenIDConnectProviderRequest *>(IamResponse::request());
 }
 
 /*!

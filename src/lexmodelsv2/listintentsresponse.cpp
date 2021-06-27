@@ -55,8 +55,7 @@ ListIntentsResponse::ListIntentsResponse(
  */
 const ListIntentsRequest * ListIntentsResponse::request() const
 {
-    Q_D(const ListIntentsResponse);
-    return static_cast<const ListIntentsRequest *>(d->request);
+    return static_cast<const ListIntentsRequest *>(LexModelsV2Response::request());
 }
 
 /*!

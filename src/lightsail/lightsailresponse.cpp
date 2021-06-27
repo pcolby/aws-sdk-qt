@@ -37,7 +37,7 @@ namespace Lightsail {
  * Constructs a LightsailResponse object with parent \a parent.
  */
 LightsailResponse::LightsailResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new LightsailResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new LightsailResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ LightsailResponse::LightsailResponse(QObject * const parent)
  * implementation that inherits from LightsailResponsePrivate.
  */
 LightsailResponse::LightsailResponse(LightsailResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void LightsailResponse::parseFailure(QIODevice &response)
  * Constructs a LightsailResponsePrivate object with public implementation \a q.
  */
 LightsailResponsePrivate::LightsailResponsePrivate(
-    LightsailResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    LightsailResponse * const q) : q_ptr(q)
 {
 
 }

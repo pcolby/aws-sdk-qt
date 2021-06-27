@@ -62,8 +62,7 @@ UntagInstanceProfileResponse::UntagInstanceProfileResponse(
  */
 const UntagInstanceProfileRequest * UntagInstanceProfileResponse::request() const
 {
-    Q_D(const UntagInstanceProfileResponse);
-    return static_cast<const UntagInstanceProfileRequest *>(d->request);
+    return static_cast<const UntagInstanceProfileRequest *>(IamResponse::request());
 }
 
 /*!

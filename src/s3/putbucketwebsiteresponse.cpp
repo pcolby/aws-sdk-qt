@@ -55,8 +55,7 @@ PutBucketWebsiteResponse::PutBucketWebsiteResponse(
  */
 const PutBucketWebsiteRequest * PutBucketWebsiteResponse::request() const
 {
-    Q_D(const PutBucketWebsiteResponse);
-    return static_cast<const PutBucketWebsiteRequest *>(d->request);
+    return static_cast<const PutBucketWebsiteRequest *>(S3Response::request());
 }
 
 /*!

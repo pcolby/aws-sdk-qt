@@ -56,8 +56,7 @@ PutEventStreamResponse::PutEventStreamResponse(
  */
 const PutEventStreamRequest * PutEventStreamResponse::request() const
 {
-    Q_D(const PutEventStreamResponse);
-    return static_cast<const PutEventStreamRequest *>(d->request);
+    return static_cast<const PutEventStreamRequest *>(PinpointResponse::request());
 }
 
 /*!

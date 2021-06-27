@@ -75,8 +75,7 @@ GetRoleCredentialsResponse::GetRoleCredentialsResponse(
  */
 const GetRoleCredentialsRequest * GetRoleCredentialsResponse::request() const
 {
-    Q_D(const GetRoleCredentialsResponse);
-    return static_cast<const GetRoleCredentialsRequest *>(d->request);
+    return static_cast<const GetRoleCredentialsRequest *>(SsoResponse::request());
 }
 
 /*!

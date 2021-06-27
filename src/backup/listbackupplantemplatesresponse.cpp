@@ -59,8 +59,7 @@ ListBackupPlanTemplatesResponse::ListBackupPlanTemplatesResponse(
  */
 const ListBackupPlanTemplatesRequest * ListBackupPlanTemplatesResponse::request() const
 {
-    Q_D(const ListBackupPlanTemplatesResponse);
-    return static_cast<const ListBackupPlanTemplatesRequest *>(d->request);
+    return static_cast<const ListBackupPlanTemplatesRequest *>(BackupResponse::request());
 }
 
 /*!

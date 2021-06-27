@@ -58,8 +58,7 @@ DeleteExperimentTemplateResponse::DeleteExperimentTemplateResponse(
  */
 const DeleteExperimentTemplateRequest * DeleteExperimentTemplateResponse::request() const
 {
-    Q_D(const DeleteExperimentTemplateResponse);
-    return static_cast<const DeleteExperimentTemplateRequest *>(d->request);
+    return static_cast<const DeleteExperimentTemplateRequest *>(FisResponse::request());
 }
 
 /*!

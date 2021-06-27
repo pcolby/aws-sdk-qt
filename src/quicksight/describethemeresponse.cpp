@@ -60,8 +60,7 @@ DescribeThemeResponse::DescribeThemeResponse(
  */
 const DescribeThemeRequest * DescribeThemeResponse::request() const
 {
-    Q_D(const DescribeThemeResponse);
-    return static_cast<const DescribeThemeRequest *>(d->request);
+    return static_cast<const DescribeThemeRequest *>(QuickSightResponse::request());
 }
 
 /*!

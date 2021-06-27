@@ -59,8 +59,7 @@ DeleteBackupSelectionResponse::DeleteBackupSelectionResponse(
  */
 const DeleteBackupSelectionRequest * DeleteBackupSelectionResponse::request() const
 {
-    Q_D(const DeleteBackupSelectionResponse);
-    return static_cast<const DeleteBackupSelectionRequest *>(d->request);
+    return static_cast<const DeleteBackupSelectionRequest *>(BackupResponse::request());
 }
 
 /*!

@@ -322,16 +322,16 @@ CodePipelineClient::CodePipelineClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CodePipelineClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2015-07-09"),
+    QStringLiteral("codepipeline"),
+    QStringLiteral("AWS CodePipeline"),
+    QStringLiteral("codepipeline"),
+    parent), d_ptr(new CodePipelineClientPrivate(this))
 {
-    Q_D(CodePipelineClient);
-    d->apiVersion = QStringLiteral("2015-07-09");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("codepipeline");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS CodePipeline");
-    d->serviceName = QStringLiteral("codepipeline");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -350,16 +350,16 @@ CodePipelineClient::CodePipelineClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CodePipelineClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2015-07-09"),
+    QStringLiteral("codepipeline"),
+    QStringLiteral("AWS CodePipeline"),
+    QStringLiteral("codepipeline"),
+    parent), d_ptr(new CodePipelineClientPrivate(this))
 {
-    Q_D(CodePipelineClient);
-    d->apiVersion = QStringLiteral("2015-07-09");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("codepipeline");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS CodePipeline");
-    d->serviceName = QStringLiteral("codepipeline");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -946,10 +946,9 @@ UpdatePipelineResponse * CodePipelineClient::updatePipeline(const UpdatePipeline
 /*!
  * Constructs a CodePipelineClientPrivate object with public implementation \a q.
  */
-CodePipelineClientPrivate::CodePipelineClientPrivate(CodePipelineClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+CodePipelineClientPrivate::CodePipelineClientPrivate(CodePipelineClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace CodePipeline

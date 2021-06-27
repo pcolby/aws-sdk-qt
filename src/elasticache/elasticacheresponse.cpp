@@ -37,7 +37,7 @@ namespace ElastiCache {
  * Constructs a ElastiCacheResponse object with parent \a parent.
  */
 ElastiCacheResponse::ElastiCacheResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new ElastiCacheResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ElastiCacheResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ ElastiCacheResponse::ElastiCacheResponse(QObject * const parent)
  * implementation that inherits from ElastiCacheResponsePrivate.
  */
 ElastiCacheResponse::ElastiCacheResponse(ElastiCacheResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void ElastiCacheResponse::parseFailure(QIODevice &response)
  * Constructs a ElastiCacheResponsePrivate object with public implementation \a q.
  */
 ElastiCacheResponsePrivate::ElastiCacheResponsePrivate(
-    ElastiCacheResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    ElastiCacheResponse * const q) : q_ptr(q)
 {
 
 }

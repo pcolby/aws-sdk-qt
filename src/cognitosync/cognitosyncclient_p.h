@@ -20,19 +20,20 @@
 #ifndef QTAWS_COGNITOSYNCCLIENT_P_H
 #define QTAWS_COGNITOSYNCCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace CognitoSync {
 
 class CognitoSyncClient;
 
-class CognitoSyncClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class CognitoSyncClientPrivate {
 
 public:
     CognitoSyncClientPrivate(CognitoSyncClient * const q);
+
+protected:
+    CognitoSyncClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CognitoSyncClient)

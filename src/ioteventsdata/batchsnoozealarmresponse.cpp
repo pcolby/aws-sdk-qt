@@ -64,8 +64,7 @@ BatchSnoozeAlarmResponse::BatchSnoozeAlarmResponse(
  */
 const BatchSnoozeAlarmRequest * BatchSnoozeAlarmResponse::request() const
 {
-    Q_D(const BatchSnoozeAlarmResponse);
-    return static_cast<const BatchSnoozeAlarmRequest *>(d->request);
+    return static_cast<const BatchSnoozeAlarmRequest *>(IoTEventsDataResponse::request());
 }
 
 /*!

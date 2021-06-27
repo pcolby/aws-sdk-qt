@@ -37,7 +37,7 @@ namespace CloudSearch {
  * Constructs a CloudSearchResponse object with parent \a parent.
  */
 CloudSearchResponse::CloudSearchResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new CloudSearchResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new CloudSearchResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ CloudSearchResponse::CloudSearchResponse(QObject * const parent)
  * implementation that inherits from CloudSearchResponsePrivate.
  */
 CloudSearchResponse::CloudSearchResponse(CloudSearchResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void CloudSearchResponse::parseFailure(QIODevice &response)
  * Constructs a CloudSearchResponsePrivate object with public implementation \a q.
  */
 CloudSearchResponsePrivate::CloudSearchResponsePrivate(
-    CloudSearchResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    CloudSearchResponse * const q) : q_ptr(q)
 {
 
 }

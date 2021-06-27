@@ -20,14 +20,12 @@
 #ifndef QTAWS_OPSWORKSCMRESPONSE_P_H
 #define QTAWS_OPSWORKSCMRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace OpsWorksCM {
 
 class OpsWorksCMResponse;
 
-class OpsWorksCMResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class OpsWorksCMResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    OpsWorksCMResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(OpsWorksCMResponse)

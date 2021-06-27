@@ -439,8 +439,7 @@ MergeBranchesBySquashResponse::MergeBranchesBySquashResponse(
  */
 const MergeBranchesBySquashRequest * MergeBranchesBySquashResponse::request() const
 {
-    Q_D(const MergeBranchesBySquashResponse);
-    return static_cast<const MergeBranchesBySquashRequest *>(d->request);
+    return static_cast<const MergeBranchesBySquashRequest *>(CodeCommitResponse::request());
 }
 
 /*!

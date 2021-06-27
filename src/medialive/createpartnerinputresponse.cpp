@@ -55,8 +55,7 @@ CreatePartnerInputResponse::CreatePartnerInputResponse(
  */
 const CreatePartnerInputRequest * CreatePartnerInputResponse::request() const
 {
-    Q_D(const CreatePartnerInputResponse);
-    return static_cast<const CreatePartnerInputRequest *>(d->request);
+    return static_cast<const CreatePartnerInputRequest *>(MediaLiveResponse::request());
 }
 
 /*!

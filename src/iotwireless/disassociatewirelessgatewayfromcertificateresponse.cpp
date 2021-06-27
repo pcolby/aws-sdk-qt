@@ -56,8 +56,7 @@ DisassociateWirelessGatewayFromCertificateResponse::DisassociateWirelessGatewayF
  */
 const DisassociateWirelessGatewayFromCertificateRequest * DisassociateWirelessGatewayFromCertificateResponse::request() const
 {
-    Q_D(const DisassociateWirelessGatewayFromCertificateResponse);
-    return static_cast<const DisassociateWirelessGatewayFromCertificateRequest *>(d->request);
+    return static_cast<const DisassociateWirelessGatewayFromCertificateRequest *>(IoTWirelessResponse::request());
 }
 
 /*!

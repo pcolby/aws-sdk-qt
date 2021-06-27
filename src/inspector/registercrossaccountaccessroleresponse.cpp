@@ -60,8 +60,7 @@ RegisterCrossAccountAccessRoleResponse::RegisterCrossAccountAccessRoleResponse(
  */
 const RegisterCrossAccountAccessRoleRequest * RegisterCrossAccountAccessRoleResponse::request() const
 {
-    Q_D(const RegisterCrossAccountAccessRoleResponse);
-    return static_cast<const RegisterCrossAccountAccessRoleRequest *>(d->request);
+    return static_cast<const RegisterCrossAccountAccessRoleRequest *>(InspectorResponse::request());
 }
 
 /*!

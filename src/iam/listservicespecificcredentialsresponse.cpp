@@ -62,8 +62,7 @@ ListServiceSpecificCredentialsResponse::ListServiceSpecificCredentialsResponse(
  */
 const ListServiceSpecificCredentialsRequest * ListServiceSpecificCredentialsResponse::request() const
 {
-    Q_D(const ListServiceSpecificCredentialsResponse);
-    return static_cast<const ListServiceSpecificCredentialsRequest *>(d->request);
+    return static_cast<const ListServiceSpecificCredentialsRequest *>(IamResponse::request());
 }
 
 /*!

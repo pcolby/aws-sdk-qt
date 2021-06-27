@@ -82,8 +82,7 @@ UpdateSecurityProfileResponse::UpdateSecurityProfileResponse(
  */
 const UpdateSecurityProfileRequest * UpdateSecurityProfileResponse::request() const
 {
-    Q_D(const UpdateSecurityProfileResponse);
-    return static_cast<const UpdateSecurityProfileRequest *>(d->request);
+    return static_cast<const UpdateSecurityProfileRequest *>(IoTResponse::request());
 }
 
 /*!

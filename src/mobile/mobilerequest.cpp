@@ -51,7 +51,7 @@ namespace Mobile {
  * Constructs a MobileRequest object for Mobile \a action.
  */
 MobileRequest::MobileRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new MobileRequestPrivate(action, this))
+    : d_ptr(new MobileRequestPrivate(action, this))
 {
 
 }
@@ -60,7 +60,8 @@ MobileRequest::MobileRequest(const Action action)
  * Constructs a copy of \a other.
  */
 MobileRequest::MobileRequest(const MobileRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new MobileRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new MobileRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -83,7 +84,7 @@ MobileRequest& MobileRequest::operator=(const MobileRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MobileRequestPrivate.
  */
-MobileRequest::MobileRequest(MobileRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+MobileRequest::MobileRequest(MobileRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -252,7 +253,7 @@ QNetworkRequest MobileRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 MobileRequestPrivate::MobileRequestPrivate(const MobileRequest::Action action, MobileRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -267,8 +268,8 @@ MobileRequestPrivate::MobileRequestPrivate(const MobileRequest::Action action, M
  */
 MobileRequestPrivate::MobileRequestPrivate(const MobileRequestPrivate &other,
                                      MobileRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

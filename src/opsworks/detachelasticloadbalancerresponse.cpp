@@ -161,8 +161,7 @@ DetachElasticLoadBalancerResponse::DetachElasticLoadBalancerResponse(
  */
 const DetachElasticLoadBalancerRequest * DetachElasticLoadBalancerResponse::request() const
 {
-    Q_D(const DetachElasticLoadBalancerResponse);
-    return static_cast<const DetachElasticLoadBalancerRequest *>(d->request);
+    return static_cast<const DetachElasticLoadBalancerRequest *>(OpsWorksResponse::request());
 }
 
 /*!

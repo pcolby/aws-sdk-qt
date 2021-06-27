@@ -55,8 +55,7 @@ UpdateExpirationForHITResponse::UpdateExpirationForHITResponse(
  */
 const UpdateExpirationForHITRequest * UpdateExpirationForHITResponse::request() const
 {
-    Q_D(const UpdateExpirationForHITResponse);
-    return static_cast<const UpdateExpirationForHITRequest *>(d->request);
+    return static_cast<const UpdateExpirationForHITRequest *>(MTurkResponse::request());
 }
 
 /*!

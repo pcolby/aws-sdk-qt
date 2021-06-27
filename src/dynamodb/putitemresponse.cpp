@@ -74,8 +74,7 @@ PutItemResponse::PutItemResponse(
  */
 const PutItemRequest * PutItemResponse::request() const
 {
-    Q_D(const PutItemResponse);
-    return static_cast<const PutItemRequest *>(d->request);
+    return static_cast<const PutItemRequest *>(DynamoDBResponse::request());
 }
 
 /*!

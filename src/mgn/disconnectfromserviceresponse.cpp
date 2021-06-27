@@ -56,8 +56,7 @@ DisconnectFromServiceResponse::DisconnectFromServiceResponse(
  */
 const DisconnectFromServiceRequest * DisconnectFromServiceResponse::request() const
 {
-    Q_D(const DisconnectFromServiceResponse);
-    return static_cast<const DisconnectFromServiceRequest *>(d->request);
+    return static_cast<const DisconnectFromServiceRequest *>(mgnResponse::request());
 }
 
 /*!

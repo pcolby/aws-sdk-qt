@@ -62,8 +62,7 @@ CreateConferenceProviderResponse::CreateConferenceProviderResponse(
  */
 const CreateConferenceProviderRequest * CreateConferenceProviderResponse::request() const
 {
-    Q_D(const CreateConferenceProviderResponse);
-    return static_cast<const CreateConferenceProviderRequest *>(d->request);
+    return static_cast<const CreateConferenceProviderRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

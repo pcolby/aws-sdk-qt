@@ -37,7 +37,7 @@ namespace SSOAdmin {
  * Constructs a SSOAdminResponse object with parent \a parent.
  */
 SSOAdminResponse::SSOAdminResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new SSOAdminResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new SSOAdminResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ SSOAdminResponse::SSOAdminResponse(QObject * const parent)
  * implementation that inherits from SSOAdminResponsePrivate.
  */
 SSOAdminResponse::SSOAdminResponse(SSOAdminResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void SSOAdminResponse::parseFailure(QIODevice &response)
  * Constructs a SSOAdminResponsePrivate object with public implementation \a q.
  */
 SSOAdminResponsePrivate::SSOAdminResponsePrivate(
-    SSOAdminResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    SSOAdminResponse * const q) : q_ptr(q)
 {
 
 }

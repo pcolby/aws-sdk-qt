@@ -37,7 +37,7 @@ namespace IoTThingsGraph {
  * Constructs a IoTThingsGraphResponse object with parent \a parent.
  */
 IoTThingsGraphResponse::IoTThingsGraphResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new IoTThingsGraphResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new IoTThingsGraphResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ IoTThingsGraphResponse::IoTThingsGraphResponse(QObject * const parent)
  * implementation that inherits from IoTThingsGraphResponsePrivate.
  */
 IoTThingsGraphResponse::IoTThingsGraphResponse(IoTThingsGraphResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void IoTThingsGraphResponse::parseFailure(QIODevice &response)
  * Constructs a IoTThingsGraphResponsePrivate object with public implementation \a q.
  */
 IoTThingsGraphResponsePrivate::IoTThingsGraphResponsePrivate(
-    IoTThingsGraphResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    IoTThingsGraphResponse * const q) : q_ptr(q)
 {
 
 }

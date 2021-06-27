@@ -91,8 +91,7 @@ RemoveTagsFromVaultResponse::RemoveTagsFromVaultResponse(
  */
 const RemoveTagsFromVaultRequest * RemoveTagsFromVaultResponse::request() const
 {
-    Q_D(const RemoveTagsFromVaultResponse);
-    return static_cast<const RemoveTagsFromVaultRequest *>(d->request);
+    return static_cast<const RemoveTagsFromVaultRequest *>(GlacierResponse::request());
 }
 
 /*!

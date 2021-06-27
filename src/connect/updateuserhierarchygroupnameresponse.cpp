@@ -79,8 +79,7 @@ UpdateUserHierarchyGroupNameResponse::UpdateUserHierarchyGroupNameResponse(
  */
 const UpdateUserHierarchyGroupNameRequest * UpdateUserHierarchyGroupNameResponse::request() const
 {
-    Q_D(const UpdateUserHierarchyGroupNameResponse);
-    return static_cast<const UpdateUserHierarchyGroupNameRequest *>(d->request);
+    return static_cast<const UpdateUserHierarchyGroupNameRequest *>(ConnectResponse::request());
 }
 
 /*!

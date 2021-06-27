@@ -37,7 +37,7 @@ namespace WorkMailMessageFlow {
  * Constructs a WorkMailMessageFlowResponse object with parent \a parent.
  */
 WorkMailMessageFlowResponse::WorkMailMessageFlowResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new WorkMailMessageFlowResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new WorkMailMessageFlowResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ WorkMailMessageFlowResponse::WorkMailMessageFlowResponse(QObject * const parent)
  * implementation that inherits from WorkMailMessageFlowResponsePrivate.
  */
 WorkMailMessageFlowResponse::WorkMailMessageFlowResponse(WorkMailMessageFlowResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void WorkMailMessageFlowResponse::parseFailure(QIODevice &response)
  * Constructs a WorkMailMessageFlowResponsePrivate object with public implementation \a q.
  */
 WorkMailMessageFlowResponsePrivate::WorkMailMessageFlowResponsePrivate(
-    WorkMailMessageFlowResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    WorkMailMessageFlowResponse * const q) : q_ptr(q)
 {
 
 }

@@ -89,8 +89,7 @@ CancelMailboxExportJobResponse::CancelMailboxExportJobResponse(
  */
 const CancelMailboxExportJobRequest * CancelMailboxExportJobResponse::request() const
 {
-    Q_D(const CancelMailboxExportJobResponse);
-    return static_cast<const CancelMailboxExportJobRequest *>(d->request);
+    return static_cast<const CancelMailboxExportJobRequest *>(WorkMailResponse::request());
 }
 
 /*!

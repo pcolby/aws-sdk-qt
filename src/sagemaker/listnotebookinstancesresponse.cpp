@@ -70,8 +70,7 @@ ListNotebookInstancesResponse::ListNotebookInstancesResponse(
  */
 const ListNotebookInstancesRequest * ListNotebookInstancesResponse::request() const
 {
-    Q_D(const ListNotebookInstancesResponse);
-    return static_cast<const ListNotebookInstancesRequest *>(d->request);
+    return static_cast<const ListNotebookInstancesRequest *>(SageMakerResponse::request());
 }
 
 /*!

@@ -74,8 +74,7 @@ ReleaseStaticIpResponse::ReleaseStaticIpResponse(
  */
 const ReleaseStaticIpRequest * ReleaseStaticIpResponse::request() const
 {
-    Q_D(const ReleaseStaticIpResponse);
-    return static_cast<const ReleaseStaticIpRequest *>(d->request);
+    return static_cast<const ReleaseStaticIpRequest *>(LightsailResponse::request());
 }
 
 /*!

@@ -84,8 +84,7 @@ UpdateFolderResponse::UpdateFolderResponse(
  */
 const UpdateFolderRequest * UpdateFolderResponse::request() const
 {
-    Q_D(const UpdateFolderResponse);
-    return static_cast<const UpdateFolderRequest *>(d->request);
+    return static_cast<const UpdateFolderRequest *>(WorkDocsResponse::request());
 }
 
 /*!

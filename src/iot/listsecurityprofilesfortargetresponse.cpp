@@ -82,8 +82,7 @@ ListSecurityProfilesForTargetResponse::ListSecurityProfilesForTargetResponse(
  */
 const ListSecurityProfilesForTargetRequest * ListSecurityProfilesForTargetResponse::request() const
 {
-    Q_D(const ListSecurityProfilesForTargetResponse);
-    return static_cast<const ListSecurityProfilesForTargetRequest *>(d->request);
+    return static_cast<const ListSecurityProfilesForTargetRequest *>(IoTResponse::request());
 }
 
 /*!

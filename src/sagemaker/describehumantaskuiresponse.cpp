@@ -70,8 +70,7 @@ DescribeHumanTaskUiResponse::DescribeHumanTaskUiResponse(
  */
 const DescribeHumanTaskUiRequest * DescribeHumanTaskUiResponse::request() const
 {
-    Q_D(const DescribeHumanTaskUiResponse);
-    return static_cast<const DescribeHumanTaskUiRequest *>(d->request);
+    return static_cast<const DescribeHumanTaskUiRequest *>(SageMakerResponse::request());
 }
 
 /*!

@@ -78,8 +78,7 @@ ActivateEventSourceResponse::ActivateEventSourceResponse(
  */
 const ActivateEventSourceRequest * ActivateEventSourceResponse::request() const
 {
-    Q_D(const ActivateEventSourceResponse);
-    return static_cast<const ActivateEventSourceRequest *>(d->request);
+    return static_cast<const ActivateEventSourceRequest *>(CloudWatchEventsResponse::request());
 }
 
 /*!

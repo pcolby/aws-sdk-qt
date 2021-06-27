@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    SSMContactsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     SSMContactsResponse(SSMContactsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -86,8 +86,7 @@ DeleteConnectionResponse::DeleteConnectionResponse(
  */
 const DeleteConnectionRequest * DeleteConnectionResponse::request() const
 {
-    Q_D(const DeleteConnectionResponse);
-    return static_cast<const DeleteConnectionRequest *>(d->request);
+    return static_cast<const DeleteConnectionRequest *>(AppRunnerResponse::request());
 }
 
 /*!

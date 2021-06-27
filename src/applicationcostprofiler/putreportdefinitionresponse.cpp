@@ -67,8 +67,7 @@ PutReportDefinitionResponse::PutReportDefinitionResponse(
  */
 const PutReportDefinitionRequest * PutReportDefinitionResponse::request() const
 {
-    Q_D(const PutReportDefinitionResponse);
-    return static_cast<const PutReportDefinitionRequest *>(d->request);
+    return static_cast<const PutReportDefinitionRequest *>(ApplicationCostProfilerResponse::request());
 }
 
 /*!

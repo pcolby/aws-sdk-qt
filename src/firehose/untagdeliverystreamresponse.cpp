@@ -59,8 +59,7 @@ UntagDeliveryStreamResponse::UntagDeliveryStreamResponse(
  */
 const UntagDeliveryStreamRequest * UntagDeliveryStreamResponse::request() const
 {
-    Q_D(const UntagDeliveryStreamResponse);
-    return static_cast<const UntagDeliveryStreamRequest *>(d->request);
+    return static_cast<const UntagDeliveryStreamRequest *>(FirehoseResponse::request());
 }
 
 /*!

@@ -62,8 +62,7 @@ TestIdentityProviderResponse::TestIdentityProviderResponse(
  */
 const TestIdentityProviderRequest * TestIdentityProviderResponse::request() const
 {
-    Q_D(const TestIdentityProviderResponse);
-    return static_cast<const TestIdentityProviderRequest *>(d->request);
+    return static_cast<const TestIdentityProviderRequest *>(TransferResponse::request());
 }
 
 /*!

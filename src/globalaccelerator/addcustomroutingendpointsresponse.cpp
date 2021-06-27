@@ -218,8 +218,7 @@ AddCustomRoutingEndpointsResponse::AddCustomRoutingEndpointsResponse(
  */
 const AddCustomRoutingEndpointsRequest * AddCustomRoutingEndpointsResponse::request() const
 {
-    Q_D(const AddCustomRoutingEndpointsResponse);
-    return static_cast<const AddCustomRoutingEndpointsRequest *>(d->request);
+    return static_cast<const AddCustomRoutingEndpointsRequest *>(GlobalAcceleratorResponse::request());
 }
 
 /*!

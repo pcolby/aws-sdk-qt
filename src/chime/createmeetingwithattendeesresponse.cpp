@@ -98,8 +98,7 @@ CreateMeetingWithAttendeesResponse::CreateMeetingWithAttendeesResponse(
  */
 const CreateMeetingWithAttendeesRequest * CreateMeetingWithAttendeesResponse::request() const
 {
-    Q_D(const CreateMeetingWithAttendeesResponse);
-    return static_cast<const CreateMeetingWithAttendeesRequest *>(d->request);
+    return static_cast<const CreateMeetingWithAttendeesRequest *>(ChimeResponse::request());
 }
 
 /*!

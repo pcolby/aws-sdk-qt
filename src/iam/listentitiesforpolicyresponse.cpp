@@ -62,8 +62,7 @@ ListEntitiesForPolicyResponse::ListEntitiesForPolicyResponse(
  */
 const ListEntitiesForPolicyRequest * ListEntitiesForPolicyResponse::request() const
 {
-    Q_D(const ListEntitiesForPolicyResponse);
-    return static_cast<const ListEntitiesForPolicyRequest *>(d->request);
+    return static_cast<const ListEntitiesForPolicyRequest *>(IamResponse::request());
 }
 
 /*!

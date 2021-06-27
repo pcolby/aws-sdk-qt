@@ -20,15 +20,12 @@
 #ifndef QTAWS_PRICINGREQUEST_P_H
 #define QTAWS_PRICINGREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "pricingrequest.h"
-
 namespace QtAws {
 namespace Pricing {
 
 class PricingRequest;
 
-class PricingRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class PricingRequestPrivate {
 
 public:
     PricingRequest::Action action; ///< Pricing action to be performed.
@@ -39,6 +36,9 @@ public:
     PricingRequestPrivate(const PricingRequestPrivate &other, PricingRequest * const q);
 
     static QString toString(const PricingRequest::Action &action);
+
+protected:
+    PricingRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(PricingRequest)

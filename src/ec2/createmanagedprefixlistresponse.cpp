@@ -87,8 +87,7 @@ CreateManagedPrefixListResponse::CreateManagedPrefixListResponse(
  */
 const CreateManagedPrefixListRequest * CreateManagedPrefixListResponse::request() const
 {
-    Q_D(const CreateManagedPrefixListResponse);
-    return static_cast<const CreateManagedPrefixListRequest *>(d->request);
+    return static_cast<const CreateManagedPrefixListRequest *>(Ec2Response::request());
 }
 
 /*!

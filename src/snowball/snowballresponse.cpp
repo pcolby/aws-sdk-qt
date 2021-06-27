@@ -37,7 +37,7 @@ namespace Snowball {
  * Constructs a SnowballResponse object with parent \a parent.
  */
 SnowballResponse::SnowballResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new SnowballResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new SnowballResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ SnowballResponse::SnowballResponse(QObject * const parent)
  * implementation that inherits from SnowballResponsePrivate.
  */
 SnowballResponse::SnowballResponse(SnowballResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void SnowballResponse::parseFailure(QIODevice &response)
  * Constructs a SnowballResponsePrivate object with public implementation \a q.
  */
 SnowballResponsePrivate::SnowballResponsePrivate(
-    SnowballResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    SnowballResponse * const q) : q_ptr(q)
 {
 
 }

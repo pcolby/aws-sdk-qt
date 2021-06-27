@@ -78,8 +78,7 @@ CreatePartnerEventSourceResponse::CreatePartnerEventSourceResponse(
  */
 const CreatePartnerEventSourceRequest * CreatePartnerEventSourceResponse::request() const
 {
-    Q_D(const CreatePartnerEventSourceResponse);
-    return static_cast<const CreatePartnerEventSourceRequest *>(d->request);
+    return static_cast<const CreatePartnerEventSourceRequest *>(EventBridgeResponse::request());
 }
 
 /*!

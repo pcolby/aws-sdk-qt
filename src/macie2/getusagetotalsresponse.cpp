@@ -60,8 +60,7 @@ GetUsageTotalsResponse::GetUsageTotalsResponse(
  */
 const GetUsageTotalsRequest * GetUsageTotalsResponse::request() const
 {
-    Q_D(const GetUsageTotalsResponse);
-    return static_cast<const GetUsageTotalsRequest *>(d->request);
+    return static_cast<const GetUsageTotalsRequest *>(Macie2Response::request());
 }
 
 /*!

@@ -62,8 +62,7 @@ ListNotificationsResponse::ListNotificationsResponse(
  */
 const ListNotificationsRequest * ListNotificationsResponse::request() const
 {
-    Q_D(const ListNotificationsResponse);
-    return static_cast<const ListNotificationsRequest *>(d->request);
+    return static_cast<const ListNotificationsRequest *>(WellArchitectedResponse::request());
 }
 
 /*!

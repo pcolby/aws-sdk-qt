@@ -71,8 +71,7 @@ CountOpenWorkflowExecutionsResponse::CountOpenWorkflowExecutionsResponse(
  */
 const CountOpenWorkflowExecutionsRequest * CountOpenWorkflowExecutionsResponse::request() const
 {
-    Q_D(const CountOpenWorkflowExecutionsResponse);
-    return static_cast<const CountOpenWorkflowExecutionsRequest *>(d->request);
+    return static_cast<const CountOpenWorkflowExecutionsRequest *>(SwfResponse::request());
 }
 
 /*!

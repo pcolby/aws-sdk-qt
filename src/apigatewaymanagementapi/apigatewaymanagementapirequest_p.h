@@ -20,15 +20,12 @@
 #ifndef QTAWS_APIGATEWAYMANAGEMENTAPIREQUEST_P_H
 #define QTAWS_APIGATEWAYMANAGEMENTAPIREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "apigatewaymanagementapirequest.h"
-
 namespace QtAws {
 namespace ApiGatewayManagementApi {
 
 class ApiGatewayManagementApiRequest;
 
-class ApiGatewayManagementApiRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ApiGatewayManagementApiRequestPrivate {
 
 public:
     ApiGatewayManagementApiRequest::Action action; ///< ApiGatewayManagementApi action to be performed.
@@ -39,6 +36,9 @@ public:
     ApiGatewayManagementApiRequestPrivate(const ApiGatewayManagementApiRequestPrivate &other, ApiGatewayManagementApiRequest * const q);
 
     static QString toString(const ApiGatewayManagementApiRequest::Action &action);
+
+protected:
+    ApiGatewayManagementApiRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ApiGatewayManagementApiRequest)

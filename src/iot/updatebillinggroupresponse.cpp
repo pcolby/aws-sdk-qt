@@ -82,8 +82,7 @@ UpdateBillingGroupResponse::UpdateBillingGroupResponse(
  */
 const UpdateBillingGroupRequest * UpdateBillingGroupResponse::request() const
 {
-    Q_D(const UpdateBillingGroupResponse);
-    return static_cast<const UpdateBillingGroupRequest *>(d->request);
+    return static_cast<const UpdateBillingGroupRequest *>(IoTResponse::request());
 }
 
 /*!

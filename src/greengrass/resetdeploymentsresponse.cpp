@@ -58,8 +58,7 @@ ResetDeploymentsResponse::ResetDeploymentsResponse(
  */
 const ResetDeploymentsRequest * ResetDeploymentsResponse::request() const
 {
-    Q_D(const ResetDeploymentsResponse);
-    return static_cast<const ResetDeploymentsRequest *>(d->request);
+    return static_cast<const ResetDeploymentsRequest *>(GreengrassResponse::request());
 }
 
 /*!

@@ -72,8 +72,7 @@ RejectInvitationResponse::RejectInvitationResponse(
  */
 const RejectInvitationRequest * RejectInvitationResponse::request() const
 {
-    Q_D(const RejectInvitationResponse);
-    return static_cast<const RejectInvitationRequest *>(d->request);
+    return static_cast<const RejectInvitationRequest *>(ManagedBlockchainResponse::request());
 }
 
 /*!

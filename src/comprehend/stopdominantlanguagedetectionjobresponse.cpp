@@ -58,8 +58,7 @@ StopDominantLanguageDetectionJobResponse::StopDominantLanguageDetectionJobRespon
  */
 const StopDominantLanguageDetectionJobRequest * StopDominantLanguageDetectionJobResponse::request() const
 {
-    Q_D(const StopDominantLanguageDetectionJobResponse);
-    return static_cast<const StopDominantLanguageDetectionJobRequest *>(d->request);
+    return static_cast<const StopDominantLanguageDetectionJobRequest *>(ComprehendResponse::request());
 }
 
 /*!

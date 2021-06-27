@@ -85,8 +85,7 @@ RevokeSnapshotAccessResponse::RevokeSnapshotAccessResponse(
  */
 const RevokeSnapshotAccessRequest * RevokeSnapshotAccessResponse::request() const
 {
-    Q_D(const RevokeSnapshotAccessResponse);
-    return static_cast<const RevokeSnapshotAccessRequest *>(d->request);
+    return static_cast<const RevokeSnapshotAccessRequest *>(RedshiftResponse::request());
 }
 
 /*!

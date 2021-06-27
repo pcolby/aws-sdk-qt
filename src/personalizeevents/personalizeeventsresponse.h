@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    PersonalizeEventsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     PersonalizeEventsResponse(PersonalizeEventsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -56,8 +56,7 @@ ExportJournalToS3Response::ExportJournalToS3Response(
  */
 const ExportJournalToS3Request * ExportJournalToS3Response::request() const
 {
-    Q_D(const ExportJournalToS3Response);
-    return static_cast<const ExportJournalToS3Request *>(d->request);
+    return static_cast<const ExportJournalToS3Request *>(QldbResponse::request());
 }
 
 /*!

@@ -161,8 +161,7 @@ CloneStackResponse::CloneStackResponse(
  */
 const CloneStackRequest * CloneStackResponse::request() const
 {
-    Q_D(const CloneStackResponse);
-    return static_cast<const CloneStackRequest *>(d->request);
+    return static_cast<const CloneStackRequest *>(OpsWorksResponse::request());
 }
 
 /*!

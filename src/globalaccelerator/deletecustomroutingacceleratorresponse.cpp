@@ -218,8 +218,7 @@ DeleteCustomRoutingAcceleratorResponse::DeleteCustomRoutingAcceleratorResponse(
  */
 const DeleteCustomRoutingAcceleratorRequest * DeleteCustomRoutingAcceleratorResponse::request() const
 {
-    Q_D(const DeleteCustomRoutingAcceleratorResponse);
-    return static_cast<const DeleteCustomRoutingAcceleratorRequest *>(d->request);
+    return static_cast<const DeleteCustomRoutingAcceleratorRequest *>(GlobalAcceleratorResponse::request());
 }
 
 /*!

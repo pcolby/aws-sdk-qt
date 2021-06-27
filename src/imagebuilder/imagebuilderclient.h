@@ -193,6 +193,12 @@ public slots:
     UpdateImagePipelineResponse * updateImagePipeline(const UpdateImagePipelineRequest &request);
     UpdateInfrastructureConfigurationResponse * updateInfrastructureConfiguration(const UpdateInfrastructureConfigurationRequest &request);
 
+protected:
+    /// @cond internal
+    imagebuilderClientPrivate * const d_ptr; ///< Internal d-pointer.
+    imagebuilderClient(imagebuilderClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(imagebuilderClient)
     Q_DISABLE_COPY(imagebuilderClient)

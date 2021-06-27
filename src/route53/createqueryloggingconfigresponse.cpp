@@ -56,8 +56,7 @@ CreateQueryLoggingConfigResponse::CreateQueryLoggingConfigResponse(
  */
 const CreateQueryLoggingConfigRequest * CreateQueryLoggingConfigResponse::request() const
 {
-    Q_D(const CreateQueryLoggingConfigResponse);
-    return static_cast<const CreateQueryLoggingConfigRequest *>(d->request);
+    return static_cast<const CreateQueryLoggingConfigRequest *>(Route53Response::request());
 }
 
 /*!

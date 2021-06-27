@@ -64,6 +64,7 @@ public:
 
 protected:
     /// @cond internal
+    DlmRequestPrivate * const d_ptr; ///< Internal d-pointer.
     DlmRequest(DlmRequestPrivate * const d);
     /// @endcond
 

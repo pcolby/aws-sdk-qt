@@ -68,6 +68,7 @@ public:
 
 protected:
     /// @cond internal
+    HoneycodeRequestPrivate * const d_ptr; ///< Internal d-pointer.
     HoneycodeRequest(HoneycodeRequestPrivate * const d);
     /// @endcond
 

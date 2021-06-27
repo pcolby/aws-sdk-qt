@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    LambdaResponsePrivate * const d_ptr; ///< Internal d-pointer.
     LambdaResponse(LambdaResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

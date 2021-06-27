@@ -119,8 +119,7 @@ CreateDBInstanceReadReplicaResponse::CreateDBInstanceReadReplicaResponse(
  */
 const CreateDBInstanceReadReplicaRequest * CreateDBInstanceReadReplicaResponse::request() const
 {
-    Q_D(const CreateDBInstanceReadReplicaResponse);
-    return static_cast<const CreateDBInstanceReadReplicaRequest *>(d->request);
+    return static_cast<const CreateDBInstanceReadReplicaRequest *>(RdsResponse::request());
 }
 
 /*!

@@ -66,8 +66,7 @@ DescribeCertificatesResponse::DescribeCertificatesResponse(
  */
 const DescribeCertificatesRequest * DescribeCertificatesResponse::request() const
 {
-    Q_D(const DescribeCertificatesResponse);
-    return static_cast<const DescribeCertificatesRequest *>(d->request);
+    return static_cast<const DescribeCertificatesRequest *>(DatabaseMigrationServiceResponse::request());
 }
 
 /*!

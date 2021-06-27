@@ -103,8 +103,7 @@ DeclineInvitationsResponse::DeclineInvitationsResponse(
  */
 const DeclineInvitationsRequest * DeclineInvitationsResponse::request() const
 {
-    Q_D(const DeclineInvitationsResponse);
-    return static_cast<const DeclineInvitationsRequest *>(d->request);
+    return static_cast<const DeclineInvitationsRequest *>(SecurityHubResponse::request());
 }
 
 /*!

@@ -37,7 +37,7 @@ namespace NimbleStudio {
  * Constructs a NimbleStudioResponse object with parent \a parent.
  */
 NimbleStudioResponse::NimbleStudioResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new NimbleStudioResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new NimbleStudioResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ NimbleStudioResponse::NimbleStudioResponse(QObject * const parent)
  * implementation that inherits from NimbleStudioResponsePrivate.
  */
 NimbleStudioResponse::NimbleStudioResponse(NimbleStudioResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void NimbleStudioResponse::parseFailure(QIODevice &response)
  * Constructs a NimbleStudioResponsePrivate object with public implementation \a q.
  */
 NimbleStudioResponsePrivate::NimbleStudioResponsePrivate(
-    NimbleStudioResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    NimbleStudioResponse * const q) : q_ptr(q)
 {
 
 }

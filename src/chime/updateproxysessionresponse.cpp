@@ -98,8 +98,7 @@ UpdateProxySessionResponse::UpdateProxySessionResponse(
  */
 const UpdateProxySessionRequest * UpdateProxySessionResponse::request() const
 {
-    Q_D(const UpdateProxySessionResponse);
-    return static_cast<const UpdateProxySessionRequest *>(d->request);
+    return static_cast<const UpdateProxySessionRequest *>(ChimeResponse::request());
 }
 
 /*!

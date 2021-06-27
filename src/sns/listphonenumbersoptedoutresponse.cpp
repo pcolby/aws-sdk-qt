@@ -75,8 +75,7 @@ ListPhoneNumbersOptedOutResponse::ListPhoneNumbersOptedOutResponse(
  */
 const ListPhoneNumbersOptedOutRequest * ListPhoneNumbersOptedOutResponse::request() const
 {
-    Q_D(const ListPhoneNumbersOptedOutResponse);
-    return static_cast<const ListPhoneNumbersOptedOutRequest *>(d->request);
+    return static_cast<const ListPhoneNumbersOptedOutRequest *>(SnsResponse::request());
 }
 
 /*!

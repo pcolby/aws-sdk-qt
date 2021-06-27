@@ -56,8 +56,7 @@ GetHealthCheckStatusResponse::GetHealthCheckStatusResponse(
  */
 const GetHealthCheckStatusRequest * GetHealthCheckStatusResponse::request() const
 {
-    Q_D(const GetHealthCheckStatusResponse);
-    return static_cast<const GetHealthCheckStatusRequest *>(d->request);
+    return static_cast<const GetHealthCheckStatusRequest *>(Route53Response::request());
 }
 
 /*!

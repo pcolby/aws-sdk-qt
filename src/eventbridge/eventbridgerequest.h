@@ -107,6 +107,7 @@ public:
 
 protected:
     /// @cond internal
+    EventBridgeRequestPrivate * const d_ptr; ///< Internal d-pointer.
     EventBridgeRequest(EventBridgeRequestPrivate * const d);
     /// @endcond
 

@@ -20,14 +20,12 @@
 #ifndef QTAWS_IOTEVENTSDATARESPONSE_P_H
 #define QTAWS_IOTEVENTSDATARESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace IoTEventsData {
 
 class IoTEventsDataResponse;
 
-class IoTEventsDataResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class IoTEventsDataResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    IoTEventsDataResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoTEventsDataResponse)

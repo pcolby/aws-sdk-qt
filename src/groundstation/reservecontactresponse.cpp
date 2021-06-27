@@ -58,8 +58,7 @@ ReserveContactResponse::ReserveContactResponse(
  */
 const ReserveContactRequest * ReserveContactResponse::request() const
 {
-    Q_D(const ReserveContactResponse);
-    return static_cast<const ReserveContactRequest *>(d->request);
+    return static_cast<const ReserveContactRequest *>(GroundStationResponse::request());
 }
 
 /*!

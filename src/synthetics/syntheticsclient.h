@@ -85,6 +85,12 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateCanaryResponse * updateCanary(const UpdateCanaryRequest &request);
 
+protected:
+    /// @cond internal
+    SyntheticsClientPrivate * const d_ptr; ///< Internal d-pointer.
+    SyntheticsClient(SyntheticsClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(SyntheticsClient)
     Q_DISABLE_COPY(SyntheticsClient)

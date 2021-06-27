@@ -56,8 +56,7 @@ GetInsightEventsResponse::GetInsightEventsResponse(
  */
 const GetInsightEventsRequest * GetInsightEventsResponse::request() const
 {
-    Q_D(const GetInsightEventsResponse);
-    return static_cast<const GetInsightEventsRequest *>(d->request);
+    return static_cast<const GetInsightEventsRequest *>(XRayResponse::request());
 }
 
 /*!

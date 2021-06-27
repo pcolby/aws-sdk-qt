@@ -56,8 +56,7 @@ StartSchemaCreationResponse::StartSchemaCreationResponse(
  */
 const StartSchemaCreationRequest * StartSchemaCreationResponse::request() const
 {
-    Q_D(const StartSchemaCreationResponse);
-    return static_cast<const StartSchemaCreationRequest *>(d->request);
+    return static_cast<const StartSchemaCreationRequest *>(AppSyncResponse::request());
 }
 
 /*!

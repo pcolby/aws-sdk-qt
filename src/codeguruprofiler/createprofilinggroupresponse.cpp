@@ -79,8 +79,7 @@ CreateProfilingGroupResponse::CreateProfilingGroupResponse(
  */
 const CreateProfilingGroupRequest * CreateProfilingGroupResponse::request() const
 {
-    Q_D(const CreateProfilingGroupResponse);
-    return static_cast<const CreateProfilingGroupRequest *>(d->request);
+    return static_cast<const CreateProfilingGroupRequest *>(CodeGuruProfilerResponse::request());
 }
 
 /*!

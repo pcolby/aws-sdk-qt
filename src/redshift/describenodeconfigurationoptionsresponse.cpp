@@ -85,8 +85,7 @@ DescribeNodeConfigurationOptionsResponse::DescribeNodeConfigurationOptionsRespon
  */
 const DescribeNodeConfigurationOptionsRequest * DescribeNodeConfigurationOptionsResponse::request() const
 {
-    Q_D(const DescribeNodeConfigurationOptionsResponse);
-    return static_cast<const DescribeNodeConfigurationOptionsRequest *>(d->request);
+    return static_cast<const DescribeNodeConfigurationOptionsRequest *>(RedshiftResponse::request());
 }
 
 /*!

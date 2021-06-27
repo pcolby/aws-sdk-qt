@@ -79,6 +79,12 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateEnvironmentResponse * updateEnvironment(const UpdateEnvironmentRequest &request);
 
+protected:
+    /// @cond internal
+    MwaaClientPrivate * const d_ptr; ///< Internal d-pointer.
+    MwaaClient(MwaaClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(MwaaClient)
     Q_DISABLE_COPY(MwaaClient)

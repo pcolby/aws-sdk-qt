@@ -57,8 +57,7 @@ CopyBackupToRegionResponse::CopyBackupToRegionResponse(
  */
 const CopyBackupToRegionRequest * CopyBackupToRegionResponse::request() const
 {
-    Q_D(const CopyBackupToRegionResponse);
-    return static_cast<const CopyBackupToRegionRequest *>(d->request);
+    return static_cast<const CopyBackupToRegionRequest *>(CloudHSMV2Response::request());
 }
 
 /*!

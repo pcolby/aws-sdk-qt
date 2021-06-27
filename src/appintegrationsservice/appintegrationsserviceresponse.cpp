@@ -37,7 +37,7 @@ namespace AppIntegrationsService {
  * Constructs a AppIntegrationsServiceResponse object with parent \a parent.
  */
 AppIntegrationsServiceResponse::AppIntegrationsServiceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new AppIntegrationsServiceResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new AppIntegrationsServiceResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ AppIntegrationsServiceResponse::AppIntegrationsServiceResponse(QObject * const p
  * implementation that inherits from AppIntegrationsServiceResponsePrivate.
  */
 AppIntegrationsServiceResponse::AppIntegrationsServiceResponse(AppIntegrationsServiceResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void AppIntegrationsServiceResponse::parseFailure(QIODevice &response)
  * Constructs a AppIntegrationsServiceResponsePrivate object with public implementation \a q.
  */
 AppIntegrationsServiceResponsePrivate::AppIntegrationsServiceResponsePrivate(
-    AppIntegrationsServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    AppIntegrationsServiceResponse * const q) : q_ptr(q)
 {
 
 }

@@ -283,6 +283,7 @@ public:
 
 protected:
     /// @cond internal
+    IoTRequestPrivate * const d_ptr; ///< Internal d-pointer.
     IoTRequest(IoTRequestPrivate * const d);
     /// @endcond
 

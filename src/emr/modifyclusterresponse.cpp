@@ -58,8 +58,7 @@ ModifyClusterResponse::ModifyClusterResponse(
  */
 const ModifyClusterRequest * ModifyClusterResponse::request() const
 {
-    Q_D(const ModifyClusterResponse);
-    return static_cast<const ModifyClusterRequest *>(d->request);
+    return static_cast<const ModifyClusterRequest *>(EmrResponse::request());
 }
 
 /*!

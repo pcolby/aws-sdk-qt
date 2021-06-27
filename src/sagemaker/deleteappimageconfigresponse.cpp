@@ -70,8 +70,7 @@ DeleteAppImageConfigResponse::DeleteAppImageConfigResponse(
  */
 const DeleteAppImageConfigRequest * DeleteAppImageConfigResponse::request() const
 {
-    Q_D(const DeleteAppImageConfigResponse);
-    return static_cast<const DeleteAppImageConfigRequest *>(d->request);
+    return static_cast<const DeleteAppImageConfigRequest *>(SageMakerResponse::request());
 }
 
 /*!

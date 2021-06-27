@@ -37,7 +37,7 @@ namespace TimestreamQuery {
  * Constructs a TimestreamQueryResponse object with parent \a parent.
  */
 TimestreamQueryResponse::TimestreamQueryResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new TimestreamQueryResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new TimestreamQueryResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ TimestreamQueryResponse::TimestreamQueryResponse(QObject * const parent)
  * implementation that inherits from TimestreamQueryResponsePrivate.
  */
 TimestreamQueryResponse::TimestreamQueryResponse(TimestreamQueryResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void TimestreamQueryResponse::parseFailure(QIODevice &response)
  * Constructs a TimestreamQueryResponsePrivate object with public implementation \a q.
  */
 TimestreamQueryResponsePrivate::TimestreamQueryResponsePrivate(
-    TimestreamQueryResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    TimestreamQueryResponse * const q) : q_ptr(q)
 {
 
 }

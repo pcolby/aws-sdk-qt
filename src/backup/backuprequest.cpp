@@ -93,7 +93,7 @@ namespace Backup {
  * Constructs a BackupRequest object for Backup \a action.
  */
 BackupRequest::BackupRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new BackupRequestPrivate(action, this))
+    : d_ptr(new BackupRequestPrivate(action, this))
 {
 
 }
@@ -102,7 +102,8 @@ BackupRequest::BackupRequest(const Action action)
  * Constructs a copy of \a other.
  */
 BackupRequest::BackupRequest(const BackupRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new BackupRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new BackupRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -125,7 +126,7 @@ BackupRequest& BackupRequest::operator=(const BackupRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from BackupRequestPrivate.
  */
-BackupRequest::BackupRequest(BackupRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+BackupRequest::BackupRequest(BackupRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -294,7 +295,7 @@ QNetworkRequest BackupRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 BackupRequestPrivate::BackupRequestPrivate(const BackupRequest::Action action, BackupRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -309,8 +310,8 @@ BackupRequestPrivate::BackupRequestPrivate(const BackupRequest::Action action, B
  */
 BackupRequestPrivate::BackupRequestPrivate(const BackupRequestPrivate &other,
                                      BackupRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

@@ -131,8 +131,7 @@ DeleteSecretResponse::DeleteSecretResponse(
  */
 const DeleteSecretRequest * DeleteSecretResponse::request() const
 {
-    Q_D(const DeleteSecretResponse);
-    return static_cast<const DeleteSecretRequest *>(d->request);
+    return static_cast<const DeleteSecretRequest *>(SecretsManagerResponse::request());
 }
 
 /*!

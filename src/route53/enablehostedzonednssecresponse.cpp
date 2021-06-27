@@ -56,8 +56,7 @@ EnableHostedZoneDNSSECResponse::EnableHostedZoneDNSSECResponse(
  */
 const EnableHostedZoneDNSSECRequest * EnableHostedZoneDNSSECResponse::request() const
 {
-    Q_D(const EnableHostedZoneDNSSECResponse);
-    return static_cast<const EnableHostedZoneDNSSECRequest *>(d->request);
+    return static_cast<const EnableHostedZoneDNSSECRequest *>(Route53Response::request());
 }
 
 /*!

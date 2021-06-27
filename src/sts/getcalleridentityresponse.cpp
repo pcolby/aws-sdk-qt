@@ -61,8 +61,7 @@ GetCallerIdentityResponse::GetCallerIdentityResponse(
  */
 const GetCallerIdentityRequest * GetCallerIdentityResponse::request() const
 {
-    Q_D(const GetCallerIdentityResponse);
-    return static_cast<const GetCallerIdentityRequest *>(d->request);
+    return static_cast<const GetCallerIdentityRequest *>(StsResponse::request());
 }
 
 /*!

@@ -75,8 +75,7 @@ ListAccountRolesResponse::ListAccountRolesResponse(
  */
 const ListAccountRolesRequest * ListAccountRolesResponse::request() const
 {
-    Q_D(const ListAccountRolesResponse);
-    return static_cast<const ListAccountRolesRequest *>(d->request);
+    return static_cast<const ListAccountRolesRequest *>(SsoResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ StreamJournalToKinesisResponse::StreamJournalToKinesisResponse(
  */
 const StreamJournalToKinesisRequest * StreamJournalToKinesisResponse::request() const
 {
-    Q_D(const StreamJournalToKinesisResponse);
-    return static_cast<const StreamJournalToKinesisRequest *>(d->request);
+    return static_cast<const StreamJournalToKinesisRequest *>(QldbResponse::request());
 }
 
 /*!

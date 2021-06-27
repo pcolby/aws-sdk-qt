@@ -117,6 +117,7 @@ public:
 
 protected:
     /// @cond internal
+    ComprehendRequestPrivate * const d_ptr; ///< Internal d-pointer.
     ComprehendRequest(ComprehendRequestPrivate * const d);
     /// @endcond
 

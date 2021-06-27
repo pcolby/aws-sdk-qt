@@ -119,8 +119,7 @@ DescribeValidDBInstanceModificationsResponse::DescribeValidDBInstanceModificatio
  */
 const DescribeValidDBInstanceModificationsRequest * DescribeValidDBInstanceModificationsResponse::request() const
 {
-    Q_D(const DescribeValidDBInstanceModificationsResponse);
-    return static_cast<const DescribeValidDBInstanceModificationsRequest *>(d->request);
+    return static_cast<const DescribeValidDBInstanceModificationsRequest *>(RdsResponse::request());
 }
 
 /*!

@@ -65,8 +65,7 @@ UpdateLifecyclePolicyResponse::UpdateLifecyclePolicyResponse(
  */
 const UpdateLifecyclePolicyRequest * UpdateLifecyclePolicyResponse::request() const
 {
-    Q_D(const UpdateLifecyclePolicyResponse);
-    return static_cast<const UpdateLifecyclePolicyRequest *>(d->request);
+    return static_cast<const UpdateLifecyclePolicyRequest *>(DlmResponse::request());
 }
 
 /*!

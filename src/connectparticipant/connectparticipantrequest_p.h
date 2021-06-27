@@ -20,15 +20,12 @@
 #ifndef QTAWS_CONNECTPARTICIPANTREQUEST_P_H
 #define QTAWS_CONNECTPARTICIPANTREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "connectparticipantrequest.h"
-
 namespace QtAws {
 namespace ConnectParticipant {
 
 class ConnectParticipantRequest;
 
-class ConnectParticipantRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ConnectParticipantRequestPrivate {
 
 public:
     ConnectParticipantRequest::Action action; ///< ConnectParticipant action to be performed.
@@ -39,6 +36,9 @@ public:
     ConnectParticipantRequestPrivate(const ConnectParticipantRequestPrivate &other, ConnectParticipantRequest * const q);
 
     static QString toString(const ConnectParticipantRequest::Action &action);
+
+protected:
+    ConnectParticipantRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ConnectParticipantRequest)

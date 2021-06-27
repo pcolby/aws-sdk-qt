@@ -73,8 +73,7 @@ DisassociateFromMasterAccountResponse::DisassociateFromMasterAccountResponse(
  */
 const DisassociateFromMasterAccountRequest * DisassociateFromMasterAccountResponse::request() const
 {
-    Q_D(const DisassociateFromMasterAccountResponse);
-    return static_cast<const DisassociateFromMasterAccountRequest *>(d->request);
+    return static_cast<const DisassociateFromMasterAccountRequest *>(GuardDutyResponse::request());
 }
 
 /*!

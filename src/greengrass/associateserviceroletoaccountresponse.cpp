@@ -58,8 +58,7 @@ AssociateServiceRoleToAccountResponse::AssociateServiceRoleToAccountResponse(
  */
 const AssociateServiceRoleToAccountRequest * AssociateServiceRoleToAccountResponse::request() const
 {
-    Q_D(const AssociateServiceRoleToAccountResponse);
-    return static_cast<const AssociateServiceRoleToAccountRequest *>(d->request);
+    return static_cast<const AssociateServiceRoleToAccountRequest *>(GreengrassResponse::request());
 }
 
 /*!

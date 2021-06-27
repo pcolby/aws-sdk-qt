@@ -75,8 +75,7 @@ ListArtifactsResponse::ListArtifactsResponse(
  */
 const ListArtifactsRequest * ListArtifactsResponse::request() const
 {
-    Q_D(const ListArtifactsResponse);
-    return static_cast<const ListArtifactsRequest *>(d->request);
+    return static_cast<const ListArtifactsRequest *>(DeviceFarmResponse::request());
 }
 
 /*!

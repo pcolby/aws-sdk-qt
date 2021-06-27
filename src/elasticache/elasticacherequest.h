@@ -121,6 +121,7 @@ public:
 
 protected:
     /// @cond internal
+    ElastiCacheRequestPrivate * const d_ptr; ///< Internal d-pointer.
     ElastiCacheRequest(ElastiCacheRequestPrivate * const d);
     /// @endcond
 

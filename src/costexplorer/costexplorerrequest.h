@@ -86,6 +86,7 @@ public:
 
 protected:
     /// @cond internal
+    CostExplorerRequestPrivate * const d_ptr; ///< Internal d-pointer.
     CostExplorerRequest(CostExplorerRequestPrivate * const d);
     /// @endcond
 

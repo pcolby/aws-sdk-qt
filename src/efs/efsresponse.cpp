@@ -37,7 +37,7 @@ namespace EFS {
  * Constructs a EfsResponse object with parent \a parent.
  */
 EfsResponse::EfsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new EfsResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new EfsResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ EfsResponse::EfsResponse(QObject * const parent)
  * implementation that inherits from EfsResponsePrivate.
  */
 EfsResponse::EfsResponse(EfsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void EfsResponse::parseFailure(QIODevice &response)
  * Constructs a EfsResponsePrivate object with public implementation \a q.
  */
 EfsResponsePrivate::EfsResponsePrivate(
-    EfsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    EfsResponse * const q) : q_ptr(q)
 {
 
 }

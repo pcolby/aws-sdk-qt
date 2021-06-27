@@ -60,8 +60,7 @@ DeleteCertificateResponse::DeleteCertificateResponse(
  */
 const DeleteCertificateRequest * DeleteCertificateResponse::request() const
 {
-    Q_D(const DeleteCertificateResponse);
-    return static_cast<const DeleteCertificateRequest *>(d->request);
+    return static_cast<const DeleteCertificateRequest *>(AcmResponse::request());
 }
 
 /*!

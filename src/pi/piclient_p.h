@@ -20,19 +20,20 @@
 #ifndef QTAWS_PICLIENT_P_H
 #define QTAWS_PICLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace PI {
 
 class PiClient;
 
-class PiClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class PiClientPrivate {
 
 public:
     PiClientPrivate(PiClient * const q);
+
+protected:
+    PiClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(PiClient)

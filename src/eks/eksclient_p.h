@@ -20,19 +20,20 @@
 #ifndef QTAWS_EKSCLIENT_P_H
 #define QTAWS_EKSCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace EKS {
 
 class EksClient;
 
-class EksClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class EksClientPrivate {
 
 public:
     EksClientPrivate(EksClient * const q);
+
+protected:
+    EksClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(EksClient)

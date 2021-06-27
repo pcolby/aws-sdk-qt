@@ -82,8 +82,7 @@ ListActiveViolationsResponse::ListActiveViolationsResponse(
  */
 const ListActiveViolationsRequest * ListActiveViolationsResponse::request() const
 {
-    Q_D(const ListActiveViolationsResponse);
-    return static_cast<const ListActiveViolationsRequest *>(d->request);
+    return static_cast<const ListActiveViolationsRequest *>(IoTResponse::request());
 }
 
 /*!

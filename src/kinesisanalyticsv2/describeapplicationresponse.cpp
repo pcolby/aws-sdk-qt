@@ -58,8 +58,7 @@ DescribeApplicationResponse::DescribeApplicationResponse(
  */
 const DescribeApplicationRequest * DescribeApplicationResponse::request() const
 {
-    Q_D(const DescribeApplicationResponse);
-    return static_cast<const DescribeApplicationRequest *>(d->request);
+    return static_cast<const DescribeApplicationRequest *>(KinesisAnalyticsV2Response::request());
 }
 
 /*!

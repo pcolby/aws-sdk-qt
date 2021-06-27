@@ -20,15 +20,12 @@
 #ifndef QTAWS_SFNREQUEST_P_H
 #define QTAWS_SFNREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "sfnrequest.h"
-
 namespace QtAws {
 namespace SFN {
 
 class SfnRequest;
 
-class SfnRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SfnRequestPrivate {
 
 public:
     SfnRequest::Action action; ///< SFN action to be performed.
@@ -39,6 +36,9 @@ public:
     SfnRequestPrivate(const SfnRequestPrivate &other, SfnRequest * const q);
 
     static QString toString(const SfnRequest::Action &action);
+
+protected:
+    SfnRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SfnRequest)

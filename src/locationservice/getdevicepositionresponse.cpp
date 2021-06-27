@@ -56,8 +56,7 @@ GetDevicePositionResponse::GetDevicePositionResponse(
  */
 const GetDevicePositionRequest * GetDevicePositionResponse::request() const
 {
-    Q_D(const GetDevicePositionResponse);
-    return static_cast<const GetDevicePositionRequest *>(d->request);
+    return static_cast<const GetDevicePositionRequest *>(LocationServiceResponse::request());
 }
 
 /*!

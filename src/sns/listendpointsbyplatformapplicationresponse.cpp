@@ -75,8 +75,7 @@ ListEndpointsByPlatformApplicationResponse::ListEndpointsByPlatformApplicationRe
  */
 const ListEndpointsByPlatformApplicationRequest * ListEndpointsByPlatformApplicationResponse::request() const
 {
-    Q_D(const ListEndpointsByPlatformApplicationResponse);
-    return static_cast<const ListEndpointsByPlatformApplicationRequest *>(d->request);
+    return static_cast<const ListEndpointsByPlatformApplicationRequest *>(SnsResponse::request());
 }
 
 /*!

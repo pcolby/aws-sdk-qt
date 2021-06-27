@@ -85,8 +85,7 @@ DescribeTableRestoreStatusResponse::DescribeTableRestoreStatusResponse(
  */
 const DescribeTableRestoreStatusRequest * DescribeTableRestoreStatusResponse::request() const
 {
-    Q_D(const DescribeTableRestoreStatusResponse);
-    return static_cast<const DescribeTableRestoreStatusRequest *>(d->request);
+    return static_cast<const DescribeTableRestoreStatusRequest *>(RedshiftResponse::request());
 }
 
 /*!

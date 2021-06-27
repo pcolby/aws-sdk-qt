@@ -131,8 +131,7 @@ ListSecretVersionIdsResponse::ListSecretVersionIdsResponse(
  */
 const ListSecretVersionIdsRequest * ListSecretVersionIdsResponse::request() const
 {
-    Q_D(const ListSecretVersionIdsResponse);
-    return static_cast<const ListSecretVersionIdsRequest *>(d->request);
+    return static_cast<const ListSecretVersionIdsRequest *>(SecretsManagerResponse::request());
 }
 
 /*!

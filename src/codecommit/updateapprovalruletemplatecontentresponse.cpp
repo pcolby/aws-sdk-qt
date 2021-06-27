@@ -439,8 +439,7 @@ UpdateApprovalRuleTemplateContentResponse::UpdateApprovalRuleTemplateContentResp
  */
 const UpdateApprovalRuleTemplateContentRequest * UpdateApprovalRuleTemplateContentResponse::request() const
 {
-    Q_D(const UpdateApprovalRuleTemplateContentResponse);
-    return static_cast<const UpdateApprovalRuleTemplateContentRequest *>(d->request);
+    return static_cast<const UpdateApprovalRuleTemplateContentRequest *>(CodeCommitResponse::request());
 }
 
 /*!

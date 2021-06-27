@@ -91,7 +91,7 @@ namespace S3Control {
  * Constructs a S3ControlRequest object for S3Control \a action.
  */
 S3ControlRequest::S3ControlRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new S3ControlRequestPrivate(action, this))
+    : d_ptr(new S3ControlRequestPrivate(action, this))
 {
 
 }
@@ -100,7 +100,8 @@ S3ControlRequest::S3ControlRequest(const Action action)
  * Constructs a copy of \a other.
  */
 S3ControlRequest::S3ControlRequest(const S3ControlRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new S3ControlRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new S3ControlRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -123,7 +124,7 @@ S3ControlRequest& S3ControlRequest::operator=(const S3ControlRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from S3ControlRequestPrivate.
  */
-S3ControlRequest::S3ControlRequest(S3ControlRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+S3ControlRequest::S3ControlRequest(S3ControlRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -292,7 +293,7 @@ QNetworkRequest S3ControlRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 S3ControlRequestPrivate::S3ControlRequestPrivate(const S3ControlRequest::Action action, S3ControlRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -307,8 +308,8 @@ S3ControlRequestPrivate::S3ControlRequestPrivate(const S3ControlRequest::Action 
  */
 S3ControlRequestPrivate::S3ControlRequestPrivate(const S3ControlRequestPrivate &other,
                                      S3ControlRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

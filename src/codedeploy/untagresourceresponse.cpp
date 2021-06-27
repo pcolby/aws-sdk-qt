@@ -141,8 +141,7 @@ UntagResourceResponse::UntagResourceResponse(
  */
 const UntagResourceRequest * UntagResourceResponse::request() const
 {
-    Q_D(const UntagResourceResponse);
-    return static_cast<const UntagResourceRequest *>(d->request);
+    return static_cast<const UntagResourceRequest *>(CodeDeployResponse::request());
 }
 
 /*!

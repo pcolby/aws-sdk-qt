@@ -91,8 +91,7 @@ GetJobOutputResponse::GetJobOutputResponse(
  */
 const GetJobOutputRequest * GetJobOutputResponse::request() const
 {
-    Q_D(const GetJobOutputResponse);
-    return static_cast<const GetJobOutputRequest *>(d->request);
+    return static_cast<const GetJobOutputRequest *>(GlacierResponse::request());
 }
 
 /*!

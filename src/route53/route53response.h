@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    Route53ResponsePrivate * const d_ptr; ///< Internal d-pointer.
     Route53Response(Route53ResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

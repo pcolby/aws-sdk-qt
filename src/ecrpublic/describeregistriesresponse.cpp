@@ -63,8 +63,7 @@ DescribeRegistriesResponse::DescribeRegistriesResponse(
  */
 const DescribeRegistriesRequest * DescribeRegistriesResponse::request() const
 {
-    Q_D(const DescribeRegistriesResponse);
-    return static_cast<const DescribeRegistriesRequest *>(d->request);
+    return static_cast<const DescribeRegistriesRequest *>(ECRPublicResponse::request());
 }
 
 /*!

@@ -71,8 +71,7 @@ CountClosedWorkflowExecutionsResponse::CountClosedWorkflowExecutionsResponse(
  */
 const CountClosedWorkflowExecutionsRequest * CountClosedWorkflowExecutionsResponse::request() const
 {
-    Q_D(const CountClosedWorkflowExecutionsResponse);
-    return static_cast<const CountClosedWorkflowExecutionsRequest *>(d->request);
+    return static_cast<const CountClosedWorkflowExecutionsRequest *>(SwfResponse::request());
 }
 
 /*!

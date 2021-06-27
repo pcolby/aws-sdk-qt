@@ -98,8 +98,7 @@ GetEvidenceFoldersByAssessmentControlResponse::GetEvidenceFoldersByAssessmentCon
  */
 const GetEvidenceFoldersByAssessmentControlRequest * GetEvidenceFoldersByAssessmentControlResponse::request() const
 {
-    Q_D(const GetEvidenceFoldersByAssessmentControlResponse);
-    return static_cast<const GetEvidenceFoldersByAssessmentControlRequest *>(d->request);
+    return static_cast<const GetEvidenceFoldersByAssessmentControlRequest *>(AuditManagerResponse::request());
 }
 
 /*!

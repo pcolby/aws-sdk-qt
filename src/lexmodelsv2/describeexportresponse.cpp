@@ -55,8 +55,7 @@ DescribeExportResponse::DescribeExportResponse(
  */
 const DescribeExportRequest * DescribeExportResponse::request() const
 {
-    Q_D(const DescribeExportResponse);
-    return static_cast<const DescribeExportRequest *>(d->request);
+    return static_cast<const DescribeExportRequest *>(LexModelsV2Response::request());
 }
 
 /*!

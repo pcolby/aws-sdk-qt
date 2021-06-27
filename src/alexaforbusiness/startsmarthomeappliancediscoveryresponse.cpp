@@ -62,8 +62,7 @@ StartSmartHomeApplianceDiscoveryResponse::StartSmartHomeApplianceDiscoveryRespon
  */
 const StartSmartHomeApplianceDiscoveryRequest * StartSmartHomeApplianceDiscoveryResponse::request() const
 {
-    Q_D(const StartSmartHomeApplianceDiscoveryResponse);
-    return static_cast<const StartSmartHomeApplianceDiscoveryRequest *>(d->request);
+    return static_cast<const StartSmartHomeApplianceDiscoveryRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

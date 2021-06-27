@@ -52,7 +52,7 @@ namespace ApplicationAutoScaling {
  * Constructs a ApplicationAutoScalingRequest object for ApplicationAutoScaling \a action.
  */
 ApplicationAutoScalingRequest::ApplicationAutoScalingRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new ApplicationAutoScalingRequestPrivate(action, this))
+    : d_ptr(new ApplicationAutoScalingRequestPrivate(action, this))
 {
 
 }
@@ -61,7 +61,8 @@ ApplicationAutoScalingRequest::ApplicationAutoScalingRequest(const Action action
  * Constructs a copy of \a other.
  */
 ApplicationAutoScalingRequest::ApplicationAutoScalingRequest(const ApplicationAutoScalingRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new ApplicationAutoScalingRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new ApplicationAutoScalingRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -84,7 +85,7 @@ ApplicationAutoScalingRequest& ApplicationAutoScalingRequest::operator=(const Ap
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ApplicationAutoScalingRequestPrivate.
  */
-ApplicationAutoScalingRequest::ApplicationAutoScalingRequest(ApplicationAutoScalingRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+ApplicationAutoScalingRequest::ApplicationAutoScalingRequest(ApplicationAutoScalingRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -253,7 +254,7 @@ QNetworkRequest ApplicationAutoScalingRequest::unsignedRequest(const QUrl &endpo
  * with public implementation \a q.
  */
 ApplicationAutoScalingRequestPrivate::ApplicationAutoScalingRequestPrivate(const ApplicationAutoScalingRequest::Action action, ApplicationAutoScalingRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -268,8 +269,8 @@ ApplicationAutoScalingRequestPrivate::ApplicationAutoScalingRequestPrivate(const
  */
 ApplicationAutoScalingRequestPrivate::ApplicationAutoScalingRequestPrivate(const ApplicationAutoScalingRequestPrivate &other,
                                      ApplicationAutoScalingRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

@@ -89,8 +89,7 @@ StartMailboxExportJobResponse::StartMailboxExportJobResponse(
  */
 const StartMailboxExportJobRequest * StartMailboxExportJobResponse::request() const
 {
-    Q_D(const StartMailboxExportJobResponse);
-    return static_cast<const StartMailboxExportJobRequest *>(d->request);
+    return static_cast<const StartMailboxExportJobRequest *>(WorkMailResponse::request());
 }
 
 /*!

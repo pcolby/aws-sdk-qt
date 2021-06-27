@@ -65,8 +65,7 @@ UpdateAddonResponse::UpdateAddonResponse(
  */
 const UpdateAddonRequest * UpdateAddonResponse::request() const
 {
-    Q_D(const UpdateAddonResponse);
-    return static_cast<const UpdateAddonRequest *>(d->request);
+    return static_cast<const UpdateAddonRequest *>(EksResponse::request());
 }
 
 /*!

@@ -98,8 +98,7 @@ DeleteInventoryResponse::DeleteInventoryResponse(
  */
 const DeleteInventoryRequest * DeleteInventoryResponse::request() const
 {
-    Q_D(const DeleteInventoryResponse);
-    return static_cast<const DeleteInventoryRequest *>(d->request);
+    return static_cast<const DeleteInventoryRequest *>(SsmResponse::request());
 }
 
 /*!

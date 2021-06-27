@@ -385,8 +385,7 @@ GetStreamResponse::GetStreamResponse(
  */
 const GetStreamRequest * GetStreamResponse::request() const
 {
-    Q_D(const GetStreamResponse);
-    return static_cast<const GetStreamRequest *>(d->request);
+    return static_cast<const GetStreamRequest *>(IvsResponse::request());
 }
 
 /*!

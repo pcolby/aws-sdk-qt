@@ -58,8 +58,7 @@ CreateExperimentTemplateResponse::CreateExperimentTemplateResponse(
  */
 const CreateExperimentTemplateRequest * CreateExperimentTemplateResponse::request() const
 {
-    Q_D(const CreateExperimentTemplateResponse);
-    return static_cast<const CreateExperimentTemplateRequest *>(d->request);
+    return static_cast<const CreateExperimentTemplateRequest *>(FisResponse::request());
 }
 
 /*!

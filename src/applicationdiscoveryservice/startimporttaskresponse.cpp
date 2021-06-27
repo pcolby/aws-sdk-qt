@@ -159,8 +159,7 @@ StartImportTaskResponse::StartImportTaskResponse(
  */
 const StartImportTaskRequest * StartImportTaskResponse::request() const
 {
-    Q_D(const StartImportTaskResponse);
-    return static_cast<const StartImportTaskRequest *>(d->request);
+    return static_cast<const StartImportTaskRequest *>(ApplicationDiscoveryServiceResponse::request());
 }
 
 /*!

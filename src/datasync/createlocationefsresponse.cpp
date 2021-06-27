@@ -64,8 +64,7 @@ CreateLocationEfsResponse::CreateLocationEfsResponse(
  */
 const CreateLocationEfsRequest * CreateLocationEfsResponse::request() const
 {
-    Q_D(const CreateLocationEfsResponse);
-    return static_cast<const CreateLocationEfsRequest *>(d->request);
+    return static_cast<const CreateLocationEfsRequest *>(DataSyncResponse::request());
 }
 
 /*!

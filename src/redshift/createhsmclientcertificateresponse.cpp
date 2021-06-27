@@ -85,8 +85,7 @@ CreateHsmClientCertificateResponse::CreateHsmClientCertificateResponse(
  */
 const CreateHsmClientCertificateRequest * CreateHsmClientCertificateResponse::request() const
 {
-    Q_D(const CreateHsmClientCertificateResponse);
-    return static_cast<const CreateHsmClientCertificateRequest *>(d->request);
+    return static_cast<const CreateHsmClientCertificateRequest *>(RedshiftResponse::request());
 }
 
 /*!

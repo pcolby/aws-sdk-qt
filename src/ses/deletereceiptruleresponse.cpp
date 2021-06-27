@@ -66,8 +66,7 @@ DeleteReceiptRuleResponse::DeleteReceiptRuleResponse(
  */
 const DeleteReceiptRuleRequest * DeleteReceiptRuleResponse::request() const
 {
-    Q_D(const DeleteReceiptRuleResponse);
-    return static_cast<const DeleteReceiptRuleRequest *>(d->request);
+    return static_cast<const DeleteReceiptRuleRequest *>(SesResponse::request());
 }
 
 /*!

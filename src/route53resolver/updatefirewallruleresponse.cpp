@@ -94,8 +94,7 @@ UpdateFirewallRuleResponse::UpdateFirewallRuleResponse(
  */
 const UpdateFirewallRuleRequest * UpdateFirewallRuleResponse::request() const
 {
-    Q_D(const UpdateFirewallRuleResponse);
-    return static_cast<const UpdateFirewallRuleRequest *>(d->request);
+    return static_cast<const UpdateFirewallRuleRequest *>(Route53ResolverResponse::request());
 }
 
 /*!

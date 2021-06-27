@@ -58,8 +58,7 @@ PutDetectorResponse::PutDetectorResponse(
  */
 const PutDetectorRequest * PutDetectorResponse::request() const
 {
-    Q_D(const PutDetectorResponse);
-    return static_cast<const PutDetectorRequest *>(d->request);
+    return static_cast<const PutDetectorRequest *>(FraudDetectorResponse::request());
 }
 
 /*!

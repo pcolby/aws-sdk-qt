@@ -129,8 +129,7 @@ DeleteTargetResponse::DeleteTargetResponse(
  */
 const DeleteTargetRequest * DeleteTargetResponse::request() const
 {
-    Q_D(const DeleteTargetResponse);
-    return static_cast<const DeleteTargetRequest *>(d->request);
+    return static_cast<const DeleteTargetRequest *>(CodeStarNotificationsResponse::request());
 }
 
 /*!

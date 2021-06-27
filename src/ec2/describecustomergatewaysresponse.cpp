@@ -87,8 +87,7 @@ DescribeCustomerGatewaysResponse::DescribeCustomerGatewaysResponse(
  */
 const DescribeCustomerGatewaysRequest * DescribeCustomerGatewaysResponse::request() const
 {
-    Q_D(const DescribeCustomerGatewaysResponse);
-    return static_cast<const DescribeCustomerGatewaysRequest *>(d->request);
+    return static_cast<const DescribeCustomerGatewaysRequest *>(Ec2Response::request());
 }
 
 /*!

@@ -110,6 +110,7 @@ public:
 
 protected:
     /// @cond internal
+    WorkMailRequestPrivate * const d_ptr; ///< Internal d-pointer.
     WorkMailRequest(WorkMailRequestPrivate * const d);
     /// @endcond
 

@@ -84,8 +84,7 @@ CreateLogGroupResponse::CreateLogGroupResponse(
  */
 const CreateLogGroupRequest * CreateLogGroupResponse::request() const
 {
-    Q_D(const CreateLogGroupResponse);
-    return static_cast<const CreateLogGroupRequest *>(d->request);
+    return static_cast<const CreateLogGroupRequest *>(CloudWatchLogsResponse::request());
 }
 
 /*!

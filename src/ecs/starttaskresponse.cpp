@@ -72,8 +72,7 @@ StartTaskResponse::StartTaskResponse(
  */
 const StartTaskRequest * StartTaskResponse::request() const
 {
-    Q_D(const StartTaskResponse);
-    return static_cast<const StartTaskRequest *>(d->request);
+    return static_cast<const StartTaskRequest *>(EcsResponse::request());
 }
 
 /*!

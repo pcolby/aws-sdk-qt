@@ -65,8 +65,7 @@ UpdateNodegroupVersionResponse::UpdateNodegroupVersionResponse(
  */
 const UpdateNodegroupVersionRequest * UpdateNodegroupVersionResponse::request() const
 {
-    Q_D(const UpdateNodegroupVersionResponse);
-    return static_cast<const UpdateNodegroupVersionRequest *>(d->request);
+    return static_cast<const UpdateNodegroupVersionRequest *>(EksResponse::request());
 }
 
 /*!

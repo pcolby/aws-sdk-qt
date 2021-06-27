@@ -79,8 +79,7 @@ DisassociateRoutingProfileQueuesResponse::DisassociateRoutingProfileQueuesRespon
  */
 const DisassociateRoutingProfileQueuesRequest * DisassociateRoutingProfileQueuesResponse::request() const
 {
-    Q_D(const DisassociateRoutingProfileQueuesResponse);
-    return static_cast<const DisassociateRoutingProfileQueuesRequest *>(d->request);
+    return static_cast<const DisassociateRoutingProfileQueuesRequest *>(ConnectResponse::request());
 }
 
 /*!

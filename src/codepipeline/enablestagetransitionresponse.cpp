@@ -240,8 +240,7 @@ EnableStageTransitionResponse::EnableStageTransitionResponse(
  */
 const EnableStageTransitionRequest * EnableStageTransitionResponse::request() const
 {
-    Q_D(const EnableStageTransitionResponse);
-    return static_cast<const EnableStageTransitionRequest *>(d->request);
+    return static_cast<const EnableStageTransitionRequest *>(CodePipelineResponse::request());
 }
 
 /*!

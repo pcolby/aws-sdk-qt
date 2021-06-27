@@ -84,8 +84,7 @@ DescribeDestinationsResponse::DescribeDestinationsResponse(
  */
 const DescribeDestinationsRequest * DescribeDestinationsResponse::request() const
 {
-    Q_D(const DescribeDestinationsResponse);
-    return static_cast<const DescribeDestinationsRequest *>(d->request);
+    return static_cast<const DescribeDestinationsRequest *>(CloudWatchLogsResponse::request());
 }
 
 /*!

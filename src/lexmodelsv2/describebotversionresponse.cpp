@@ -55,8 +55,7 @@ DescribeBotVersionResponse::DescribeBotVersionResponse(
  */
 const DescribeBotVersionRequest * DescribeBotVersionResponse::request() const
 {
-    Q_D(const DescribeBotVersionResponse);
-    return static_cast<const DescribeBotVersionRequest *>(d->request);
+    return static_cast<const DescribeBotVersionRequest *>(LexModelsV2Response::request());
 }
 
 /*!

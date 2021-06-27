@@ -79,8 +79,7 @@ ListProfileTimesResponse::ListProfileTimesResponse(
  */
 const ListProfileTimesRequest * ListProfileTimesResponse::request() const
 {
-    Q_D(const ListProfileTimesResponse);
-    return static_cast<const ListProfileTimesRequest *>(d->request);
+    return static_cast<const ListProfileTimesRequest *>(CodeGuruProfilerResponse::request());
 }
 
 /*!

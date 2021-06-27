@@ -149,6 +149,7 @@ public:
 
 protected:
     /// @cond internal
+    AlexaForBusinessRequestPrivate * const d_ptr; ///< Internal d-pointer.
     AlexaForBusinessRequest(AlexaForBusinessRequestPrivate * const d);
     /// @endcond
 

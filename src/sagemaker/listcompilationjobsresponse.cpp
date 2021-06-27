@@ -70,8 +70,7 @@ ListCompilationJobsResponse::ListCompilationJobsResponse(
  */
 const ListCompilationJobsRequest * ListCompilationJobsResponse::request() const
 {
-    Q_D(const ListCompilationJobsResponse);
-    return static_cast<const ListCompilationJobsRequest *>(d->request);
+    return static_cast<const ListCompilationJobsRequest *>(SageMakerResponse::request());
 }
 
 /*!

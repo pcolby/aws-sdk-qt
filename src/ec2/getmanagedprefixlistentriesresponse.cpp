@@ -87,8 +87,7 @@ GetManagedPrefixListEntriesResponse::GetManagedPrefixListEntriesResponse(
  */
 const GetManagedPrefixListEntriesRequest * GetManagedPrefixListEntriesResponse::request() const
 {
-    Q_D(const GetManagedPrefixListEntriesResponse);
-    return static_cast<const GetManagedPrefixListEntriesRequest *>(d->request);
+    return static_cast<const GetManagedPrefixListEntriesRequest *>(Ec2Response::request());
 }
 
 /*!

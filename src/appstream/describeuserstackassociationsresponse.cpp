@@ -81,8 +81,7 @@ DescribeUserStackAssociationsResponse::DescribeUserStackAssociationsResponse(
  */
 const DescribeUserStackAssociationsRequest * DescribeUserStackAssociationsResponse::request() const
 {
-    Q_D(const DescribeUserStackAssociationsResponse);
-    return static_cast<const DescribeUserStackAssociationsRequest *>(d->request);
+    return static_cast<const DescribeUserStackAssociationsRequest *>(AppStreamResponse::request());
 }
 
 /*!

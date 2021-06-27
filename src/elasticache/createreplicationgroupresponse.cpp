@@ -69,8 +69,7 @@ CreateReplicationGroupResponse::CreateReplicationGroupResponse(
  */
 const CreateReplicationGroupRequest * CreateReplicationGroupResponse::request() const
 {
-    Q_D(const CreateReplicationGroupResponse);
-    return static_cast<const CreateReplicationGroupRequest *>(d->request);
+    return static_cast<const CreateReplicationGroupRequest *>(ElastiCacheResponse::request());
 }
 
 /*!

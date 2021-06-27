@@ -20,15 +20,12 @@
 #ifndef QTAWS_CODECOMMITREQUEST_P_H
 #define QTAWS_CODECOMMITREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "codecommitrequest.h"
-
 namespace QtAws {
 namespace CodeCommit {
 
 class CodeCommitRequest;
 
-class CodeCommitRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class CodeCommitRequestPrivate {
 
 public:
     CodeCommitRequest::Action action; ///< CodeCommit action to be performed.
@@ -39,6 +36,9 @@ public:
     CodeCommitRequestPrivate(const CodeCommitRequestPrivate &other, CodeCommitRequest * const q);
 
     static QString toString(const CodeCommitRequest::Action &action);
+
+protected:
+    CodeCommitRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CodeCommitRequest)

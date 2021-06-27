@@ -37,7 +37,7 @@ namespace imagebuilder {
  * Constructs a imagebuilderResponse object with parent \a parent.
  */
 imagebuilderResponse::imagebuilderResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new imagebuilderResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new imagebuilderResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ imagebuilderResponse::imagebuilderResponse(QObject * const parent)
  * implementation that inherits from imagebuilderResponsePrivate.
  */
 imagebuilderResponse::imagebuilderResponse(imagebuilderResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void imagebuilderResponse::parseFailure(QIODevice &response)
  * Constructs a imagebuilderResponsePrivate object with public implementation \a q.
  */
 imagebuilderResponsePrivate::imagebuilderResponsePrivate(
-    imagebuilderResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    imagebuilderResponse * const q) : q_ptr(q)
 {
 
 }

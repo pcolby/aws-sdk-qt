@@ -55,8 +55,7 @@ DescribeSignalingChannelResponse::DescribeSignalingChannelResponse(
  */
 const DescribeSignalingChannelRequest * DescribeSignalingChannelResponse::request() const
 {
-    Q_D(const DescribeSignalingChannelResponse);
-    return static_cast<const DescribeSignalingChannelRequest *>(d->request);
+    return static_cast<const DescribeSignalingChannelRequest *>(KinesisVideoResponse::request());
 }
 
 /*!

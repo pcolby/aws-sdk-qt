@@ -51,7 +51,7 @@ namespace Braket {
  * Constructs a BraketRequest object for Braket \a action.
  */
 BraketRequest::BraketRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new BraketRequestPrivate(action, this))
+    : d_ptr(new BraketRequestPrivate(action, this))
 {
 
 }
@@ -60,7 +60,8 @@ BraketRequest::BraketRequest(const Action action)
  * Constructs a copy of \a other.
  */
 BraketRequest::BraketRequest(const BraketRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new BraketRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new BraketRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -83,7 +84,7 @@ BraketRequest& BraketRequest::operator=(const BraketRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from BraketRequestPrivate.
  */
-BraketRequest::BraketRequest(BraketRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+BraketRequest::BraketRequest(BraketRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -252,7 +253,7 @@ QNetworkRequest BraketRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 BraketRequestPrivate::BraketRequestPrivate(const BraketRequest::Action action, BraketRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -267,8 +268,8 @@ BraketRequestPrivate::BraketRequestPrivate(const BraketRequest::Action action, B
  */
 BraketRequestPrivate::BraketRequestPrivate(const BraketRequestPrivate &other,
                                      BraketRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

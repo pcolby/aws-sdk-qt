@@ -62,8 +62,7 @@ DeleteAddressBookResponse::DeleteAddressBookResponse(
  */
 const DeleteAddressBookRequest * DeleteAddressBookResponse::request() const
 {
-    Q_D(const DeleteAddressBookResponse);
-    return static_cast<const DeleteAddressBookRequest *>(d->request);
+    return static_cast<const DeleteAddressBookRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

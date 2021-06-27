@@ -84,8 +84,7 @@ UpdateDocumentResponse::UpdateDocumentResponse(
  */
 const UpdateDocumentRequest * UpdateDocumentResponse::request() const
 {
-    Q_D(const UpdateDocumentResponse);
-    return static_cast<const UpdateDocumentRequest *>(d->request);
+    return static_cast<const UpdateDocumentRequest *>(WorkDocsResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ ListVPCAssociationAuthorizationsResponse::ListVPCAssociationAuthorizationsRespon
  */
 const ListVPCAssociationAuthorizationsRequest * ListVPCAssociationAuthorizationsResponse::request() const
 {
-    Q_D(const ListVPCAssociationAuthorizationsResponse);
-    return static_cast<const ListVPCAssociationAuthorizationsRequest *>(d->request);
+    return static_cast<const ListVPCAssociationAuthorizationsRequest *>(Route53Response::request());
 }
 
 /*!

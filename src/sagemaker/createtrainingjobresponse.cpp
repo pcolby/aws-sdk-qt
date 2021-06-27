@@ -70,8 +70,7 @@ CreateTrainingJobResponse::CreateTrainingJobResponse(
  */
 const CreateTrainingJobRequest * CreateTrainingJobResponse::request() const
 {
-    Q_D(const CreateTrainingJobResponse);
-    return static_cast<const CreateTrainingJobRequest *>(d->request);
+    return static_cast<const CreateTrainingJobRequest *>(SageMakerResponse::request());
 }
 
 /*!

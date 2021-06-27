@@ -385,8 +385,7 @@ DeleteStreamKeyResponse::DeleteStreamKeyResponse(
  */
 const DeleteStreamKeyRequest * DeleteStreamKeyResponse::request() const
 {
-    Q_D(const DeleteStreamKeyResponse);
-    return static_cast<const DeleteStreamKeyRequest *>(d->request);
+    return static_cast<const DeleteStreamKeyRequest *>(IvsResponse::request());
 }
 
 /*!

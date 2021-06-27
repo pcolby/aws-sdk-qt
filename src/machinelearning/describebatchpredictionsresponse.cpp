@@ -55,8 +55,7 @@ DescribeBatchPredictionsResponse::DescribeBatchPredictionsResponse(
  */
 const DescribeBatchPredictionsRequest * DescribeBatchPredictionsResponse::request() const
 {
-    Q_D(const DescribeBatchPredictionsResponse);
-    return static_cast<const DescribeBatchPredictionsRequest *>(d->request);
+    return static_cast<const DescribeBatchPredictionsRequest *>(MachineLearningResponse::request());
 }
 
 /*!

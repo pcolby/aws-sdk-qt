@@ -87,8 +87,7 @@ AllocateAddressResponse::AllocateAddressResponse(
  */
 const AllocateAddressRequest * AllocateAddressResponse::request() const
 {
-    Q_D(const AllocateAddressResponse);
-    return static_cast<const AllocateAddressRequest *>(d->request);
+    return static_cast<const AllocateAddressRequest *>(Ec2Response::request());
 }
 
 /*!

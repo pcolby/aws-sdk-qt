@@ -62,8 +62,7 @@ PutSkillAuthorizationResponse::PutSkillAuthorizationResponse(
  */
 const PutSkillAuthorizationRequest * PutSkillAuthorizationResponse::request() const
 {
-    Q_D(const PutSkillAuthorizationResponse);
-    return static_cast<const PutSkillAuthorizationRequest *>(d->request);
+    return static_cast<const PutSkillAuthorizationRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

@@ -77,8 +77,7 @@ SignalResourceResponse::SignalResourceResponse(
  */
 const SignalResourceRequest * SignalResourceResponse::request() const
 {
-    Q_D(const SignalResourceResponse);
-    return static_cast<const SignalResourceRequest *>(d->request);
+    return static_cast<const SignalResourceRequest *>(CloudFormationResponse::request());
 }
 
 /*!

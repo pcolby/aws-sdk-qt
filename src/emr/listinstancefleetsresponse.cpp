@@ -58,8 +58,7 @@ ListInstanceFleetsResponse::ListInstanceFleetsResponse(
  */
 const ListInstanceFleetsRequest * ListInstanceFleetsResponse::request() const
 {
-    Q_D(const ListInstanceFleetsResponse);
-    return static_cast<const ListInstanceFleetsRequest *>(d->request);
+    return static_cast<const ListInstanceFleetsRequest *>(EmrResponse::request());
 }
 
 /*!

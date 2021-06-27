@@ -82,8 +82,7 @@ DeleteThingTypeResponse::DeleteThingTypeResponse(
  */
 const DeleteThingTypeRequest * DeleteThingTypeResponse::request() const
 {
-    Q_D(const DeleteThingTypeResponse);
-    return static_cast<const DeleteThingTypeRequest *>(d->request);
+    return static_cast<const DeleteThingTypeRequest *>(IoTResponse::request());
 }
 
 /*!

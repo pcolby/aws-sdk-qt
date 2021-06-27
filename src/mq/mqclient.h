@@ -112,6 +112,12 @@ public slots:
     UpdateConfigurationResponse * updateConfiguration(const UpdateConfigurationRequest &request);
     UpdateUserResponse * updateUser(const UpdateUserRequest &request);
 
+protected:
+    /// @cond internal
+    MqClientPrivate * const d_ptr; ///< Internal d-pointer.
+    MqClient(MqClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(MqClient)
     Q_DISABLE_COPY(MqClient)

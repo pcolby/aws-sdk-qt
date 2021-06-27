@@ -159,8 +159,7 @@ ListConfigurationsResponse::ListConfigurationsResponse(
  */
 const ListConfigurationsRequest * ListConfigurationsResponse::request() const
 {
-    Q_D(const ListConfigurationsResponse);
-    return static_cast<const ListConfigurationsRequest *>(d->request);
+    return static_cast<const ListConfigurationsRequest *>(ApplicationDiscoveryServiceResponse::request());
 }
 
 /*!

@@ -78,8 +78,7 @@ DeauthorizeConnectionResponse::DeauthorizeConnectionResponse(
  */
 const DeauthorizeConnectionRequest * DeauthorizeConnectionResponse::request() const
 {
-    Q_D(const DeauthorizeConnectionResponse);
-    return static_cast<const DeauthorizeConnectionRequest *>(d->request);
+    return static_cast<const DeauthorizeConnectionRequest *>(EventBridgeResponse::request());
 }
 
 /*!

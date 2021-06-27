@@ -61,8 +61,7 @@ UpdateDashboardResponse::UpdateDashboardResponse(
  */
 const UpdateDashboardRequest * UpdateDashboardResponse::request() const
 {
-    Q_D(const UpdateDashboardResponse);
-    return static_cast<const UpdateDashboardRequest *>(d->request);
+    return static_cast<const UpdateDashboardRequest *>(IoTSiteWiseResponse::request());
 }
 
 /*!

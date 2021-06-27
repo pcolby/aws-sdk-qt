@@ -71,8 +71,7 @@ StopCanaryResponse::StopCanaryResponse(
  */
 const StopCanaryRequest * StopCanaryResponse::request() const
 {
-    Q_D(const StopCanaryResponse);
-    return static_cast<const StopCanaryRequest *>(d->request);
+    return static_cast<const StopCanaryRequest *>(SyntheticsResponse::request());
 }
 
 /*!

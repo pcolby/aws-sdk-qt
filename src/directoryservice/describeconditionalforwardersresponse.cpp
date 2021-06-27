@@ -69,8 +69,7 @@ DescribeConditionalForwardersResponse::DescribeConditionalForwardersResponse(
  */
 const DescribeConditionalForwardersRequest * DescribeConditionalForwardersResponse::request() const
 {
-    Q_D(const DescribeConditionalForwardersResponse);
-    return static_cast<const DescribeConditionalForwardersRequest *>(d->request);
+    return static_cast<const DescribeConditionalForwardersRequest *>(DirectoryServiceResponse::request());
 }
 
 /*!

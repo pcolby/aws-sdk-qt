@@ -69,6 +69,7 @@ public:
 
 protected:
     /// @cond internal
+    SyntheticsRequestPrivate * const d_ptr; ///< Internal d-pointer.
     SyntheticsRequest(SyntheticsRequestPrivate * const d);
     /// @endcond
 

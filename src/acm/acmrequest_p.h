@@ -20,15 +20,12 @@
 #ifndef QTAWS_ACMREQUEST_P_H
 #define QTAWS_ACMREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "acmrequest.h"
-
 namespace QtAws {
 namespace ACM {
 
 class AcmRequest;
 
-class AcmRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class AcmRequestPrivate {
 
 public:
     AcmRequest::Action action; ///< ACM action to be performed.
@@ -39,6 +36,9 @@ public:
     AcmRequestPrivate(const AcmRequestPrivate &other, AcmRequest * const q);
 
     static QString toString(const AcmRequest::Action &action);
+
+protected:
+    AcmRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AcmRequest)

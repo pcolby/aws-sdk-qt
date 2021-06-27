@@ -68,8 +68,7 @@ DescribeLogPatternResponse::DescribeLogPatternResponse(
  */
 const DescribeLogPatternRequest * DescribeLogPatternResponse::request() const
 {
-    Q_D(const DescribeLogPatternResponse);
-    return static_cast<const DescribeLogPatternRequest *>(d->request);
+    return static_cast<const DescribeLogPatternRequest *>(ApplicationInsightsResponse::request());
 }
 
 /*!

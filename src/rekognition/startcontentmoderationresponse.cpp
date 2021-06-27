@@ -56,8 +56,7 @@ StartContentModerationResponse::StartContentModerationResponse(
  */
 const StartContentModerationRequest * StartContentModerationResponse::request() const
 {
-    Q_D(const StartContentModerationResponse);
-    return static_cast<const StartContentModerationRequest *>(d->request);
+    return static_cast<const StartContentModerationRequest *>(RekognitionResponse::request());
 }
 
 /*!

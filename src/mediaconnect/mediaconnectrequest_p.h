@@ -20,15 +20,12 @@
 #ifndef QTAWS_MEDIACONNECTREQUEST_P_H
 #define QTAWS_MEDIACONNECTREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "mediaconnectrequest.h"
-
 namespace QtAws {
 namespace MediaConnect {
 
 class MediaConnectRequest;
 
-class MediaConnectRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class MediaConnectRequestPrivate {
 
 public:
     MediaConnectRequest::Action action; ///< MediaConnect action to be performed.
@@ -39,6 +36,9 @@ public:
     MediaConnectRequestPrivate(const MediaConnectRequestPrivate &other, MediaConnectRequest * const q);
 
     static QString toString(const MediaConnectRequest::Action &action);
+
+protected:
+    MediaConnectRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MediaConnectRequest)

@@ -60,6 +60,7 @@ public:
 
 protected:
     /// @cond internal
+    DynamoDBStreamsRequestPrivate * const d_ptr; ///< Internal d-pointer.
     DynamoDBStreamsRequest(DynamoDBStreamsRequestPrivate * const d);
     /// @endcond
 

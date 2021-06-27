@@ -58,8 +58,7 @@ GetImageRecipeResponse::GetImageRecipeResponse(
  */
 const GetImageRecipeRequest * GetImageRecipeResponse::request() const
 {
-    Q_D(const GetImageRecipeResponse);
-    return static_cast<const GetImageRecipeRequest *>(d->request);
+    return static_cast<const GetImageRecipeRequest *>(imagebuilderResponse::request());
 }
 
 /*!

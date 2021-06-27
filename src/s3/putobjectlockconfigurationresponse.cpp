@@ -55,8 +55,7 @@ PutObjectLockConfigurationResponse::PutObjectLockConfigurationResponse(
  */
 const PutObjectLockConfigurationRequest * PutObjectLockConfigurationResponse::request() const
 {
-    Q_D(const PutObjectLockConfigurationResponse);
-    return static_cast<const PutObjectLockConfigurationRequest *>(d->request);
+    return static_cast<const PutObjectLockConfigurationRequest *>(S3Response::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ ListTranscriptionJobsResponse::ListTranscriptionJobsResponse(
  */
 const ListTranscriptionJobsRequest * ListTranscriptionJobsResponse::request() const
 {
-    Q_D(const ListTranscriptionJobsResponse);
-    return static_cast<const ListTranscriptionJobsRequest *>(d->request);
+    return static_cast<const ListTranscriptionJobsRequest *>(TranscribeServiceResponse::request());
 }
 
 /*!

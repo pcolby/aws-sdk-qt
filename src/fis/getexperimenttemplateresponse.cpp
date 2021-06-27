@@ -58,8 +58,7 @@ GetExperimentTemplateResponse::GetExperimentTemplateResponse(
  */
 const GetExperimentTemplateRequest * GetExperimentTemplateResponse::request() const
 {
-    Q_D(const GetExperimentTemplateResponse);
-    return static_cast<const GetExperimentTemplateRequest *>(d->request);
+    return static_cast<const GetExperimentTemplateRequest *>(FisResponse::request());
 }
 
 /*!

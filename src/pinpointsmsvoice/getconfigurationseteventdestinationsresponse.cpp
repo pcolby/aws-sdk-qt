@@ -55,8 +55,7 @@ GetConfigurationSetEventDestinationsResponse::GetConfigurationSetEventDestinatio
  */
 const GetConfigurationSetEventDestinationsRequest * GetConfigurationSetEventDestinationsResponse::request() const
 {
-    Q_D(const GetConfigurationSetEventDestinationsResponse);
-    return static_cast<const GetConfigurationSetEventDestinationsRequest *>(d->request);
+    return static_cast<const GetConfigurationSetEventDestinationsRequest *>(PinpointSMSVoiceResponse::request());
 }
 
 /*!

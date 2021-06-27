@@ -87,8 +87,7 @@ SearchTransitGatewayRoutesResponse::SearchTransitGatewayRoutesResponse(
  */
 const SearchTransitGatewayRoutesRequest * SearchTransitGatewayRoutesResponse::request() const
 {
-    Q_D(const SearchTransitGatewayRoutesResponse);
-    return static_cast<const SearchTransitGatewayRoutesRequest *>(d->request);
+    return static_cast<const SearchTransitGatewayRoutesRequest *>(Ec2Response::request());
 }
 
 /*!

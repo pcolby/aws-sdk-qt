@@ -85,6 +85,12 @@ public slots:
     GetRecommendationSummariesResponse * getRecommendationSummaries(const GetRecommendationSummariesRequest &request);
     UpdateEnrollmentStatusResponse * updateEnrollmentStatus(const UpdateEnrollmentStatusRequest &request);
 
+protected:
+    /// @cond internal
+    ComputeOptimizerClientPrivate * const d_ptr; ///< Internal d-pointer.
+    ComputeOptimizerClient(ComputeOptimizerClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(ComputeOptimizerClient)
     Q_DISABLE_COPY(ComputeOptimizerClient)

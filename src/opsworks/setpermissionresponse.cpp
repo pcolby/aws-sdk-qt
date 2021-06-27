@@ -161,8 +161,7 @@ SetPermissionResponse::SetPermissionResponse(
  */
 const SetPermissionRequest * SetPermissionResponse::request() const
 {
-    Q_D(const SetPermissionResponse);
-    return static_cast<const SetPermissionRequest *>(d->request);
+    return static_cast<const SetPermissionRequest *>(OpsWorksResponse::request());
 }
 
 /*!

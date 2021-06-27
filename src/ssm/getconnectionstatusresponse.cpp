@@ -98,8 +98,7 @@ GetConnectionStatusResponse::GetConnectionStatusResponse(
  */
 const GetConnectionStatusRequest * GetConnectionStatusResponse::request() const
 {
-    Q_D(const GetConnectionStatusResponse);
-    return static_cast<const GetConnectionStatusRequest *>(d->request);
+    return static_cast<const GetConnectionStatusRequest *>(SsmResponse::request());
 }
 
 /*!

@@ -77,8 +77,7 @@ ExecuteChangeSetResponse::ExecuteChangeSetResponse(
  */
 const ExecuteChangeSetRequest * ExecuteChangeSetResponse::request() const
 {
-    Q_D(const ExecuteChangeSetResponse);
-    return static_cast<const ExecuteChangeSetRequest *>(d->request);
+    return static_cast<const ExecuteChangeSetRequest *>(CloudFormationResponse::request());
 }
 
 /*!

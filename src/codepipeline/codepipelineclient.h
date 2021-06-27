@@ -163,6 +163,12 @@ public slots:
     UpdateActionTypeResponse * updateActionType(const UpdateActionTypeRequest &request);
     UpdatePipelineResponse * updatePipeline(const UpdatePipelineRequest &request);
 
+protected:
+    /// @cond internal
+    CodePipelineClientPrivate * const d_ptr; ///< Internal d-pointer.
+    CodePipelineClient(CodePipelineClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(CodePipelineClient)
     Q_DISABLE_COPY(CodePipelineClient)

@@ -56,8 +56,7 @@ UpdateBackendAuthResponse::UpdateBackendAuthResponse(
  */
 const UpdateBackendAuthRequest * UpdateBackendAuthResponse::request() const
 {
-    Q_D(const UpdateBackendAuthResponse);
-    return static_cast<const UpdateBackendAuthRequest *>(d->request);
+    return static_cast<const UpdateBackendAuthRequest *>(AmplifyBackendResponse::request());
 }
 
 /*!

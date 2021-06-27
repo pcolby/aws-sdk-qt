@@ -85,16 +85,16 @@ MwaaClient::MwaaClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new MwaaClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-07-01"),
+    QStringLiteral("airflow"),
+    QStringLiteral("AmazonMWAA"),
+    QStringLiteral("airflow"),
+    parent), d_ptr(new MwaaClientPrivate(this))
 {
-    Q_D(MwaaClient);
-    d->apiVersion = QStringLiteral("2020-07-01");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("airflow");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AmazonMWAA");
-    d->serviceName = QStringLiteral("airflow");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -113,16 +113,16 @@ MwaaClient::MwaaClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new MwaaClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-07-01"),
+    QStringLiteral("airflow"),
+    QStringLiteral("AmazonMWAA"),
+    QStringLiteral("airflow"),
+    parent), d_ptr(new MwaaClientPrivate(this))
 {
-    Q_D(MwaaClient);
-    d->apiVersion = QStringLiteral("2020-07-01");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("airflow");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AmazonMWAA");
-    d->serviceName = QStringLiteral("airflow");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -282,10 +282,9 @@ UpdateEnvironmentResponse * MwaaClient::updateEnvironment(const UpdateEnvironmen
 /*!
  * Constructs a MwaaClientPrivate object with public implementation \a q.
  */
-MwaaClientPrivate::MwaaClientPrivate(MwaaClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+MwaaClientPrivate::MwaaClientPrivate(MwaaClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace MWAA

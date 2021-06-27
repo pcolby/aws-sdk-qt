@@ -66,8 +66,7 @@ DeleteEventIntegrationResponse::DeleteEventIntegrationResponse(
  */
 const DeleteEventIntegrationRequest * DeleteEventIntegrationResponse::request() const
 {
-    Q_D(const DeleteEventIntegrationResponse);
-    return static_cast<const DeleteEventIntegrationRequest *>(d->request);
+    return static_cast<const DeleteEventIntegrationRequest *>(AppIntegrationsServiceResponse::request());
 }
 
 /*!

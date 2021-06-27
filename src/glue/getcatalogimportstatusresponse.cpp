@@ -58,8 +58,7 @@ GetCatalogImportStatusResponse::GetCatalogImportStatusResponse(
  */
 const GetCatalogImportStatusRequest * GetCatalogImportStatusResponse::request() const
 {
-    Q_D(const GetCatalogImportStatusResponse);
-    return static_cast<const GetCatalogImportStatusRequest *>(d->request);
+    return static_cast<const GetCatalogImportStatusRequest *>(GlueResponse::request());
 }
 
 /*!

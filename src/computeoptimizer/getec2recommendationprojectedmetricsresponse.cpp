@@ -64,8 +64,7 @@ GetEC2RecommendationProjectedMetricsResponse::GetEC2RecommendationProjectedMetri
  */
 const GetEC2RecommendationProjectedMetricsRequest * GetEC2RecommendationProjectedMetricsResponse::request() const
 {
-    Q_D(const GetEC2RecommendationProjectedMetricsResponse);
-    return static_cast<const GetEC2RecommendationProjectedMetricsRequest *>(d->request);
+    return static_cast<const GetEC2RecommendationProjectedMetricsRequest *>(ComputeOptimizerResponse::request());
 }
 
 /*!

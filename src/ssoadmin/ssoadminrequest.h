@@ -87,6 +87,7 @@ public:
 
 protected:
     /// @cond internal
+    SSOAdminRequestPrivate * const d_ptr; ///< Internal d-pointer.
     SSOAdminRequest(SSOAdminRequestPrivate * const d);
     /// @endcond
 

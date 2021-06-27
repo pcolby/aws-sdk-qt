@@ -79,8 +79,7 @@ CreateContactFlowResponse::CreateContactFlowResponse(
  */
 const CreateContactFlowRequest * CreateContactFlowResponse::request() const
 {
-    Q_D(const CreateContactFlowResponse);
-    return static_cast<const CreateContactFlowRequest *>(d->request);
+    return static_cast<const CreateContactFlowRequest *>(ConnectResponse::request());
 }
 
 /*!

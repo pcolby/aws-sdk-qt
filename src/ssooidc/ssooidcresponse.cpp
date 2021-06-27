@@ -37,7 +37,7 @@ namespace SSOOIDC {
  * Constructs a SsooidcResponse object with parent \a parent.
  */
 SsooidcResponse::SsooidcResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new SsooidcResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new SsooidcResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ SsooidcResponse::SsooidcResponse(QObject * const parent)
  * implementation that inherits from SsooidcResponsePrivate.
  */
 SsooidcResponse::SsooidcResponse(SsooidcResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void SsooidcResponse::parseFailure(QIODevice &response)
  * Constructs a SsooidcResponsePrivate object with public implementation \a q.
  */
 SsooidcResponsePrivate::SsooidcResponsePrivate(
-    SsooidcResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    SsooidcResponse * const q) : q_ptr(q)
 {
 
 }

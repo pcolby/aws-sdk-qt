@@ -82,8 +82,7 @@ UpdateEventConfigurationsResponse::UpdateEventConfigurationsResponse(
  */
 const UpdateEventConfigurationsRequest * UpdateEventConfigurationsResponse::request() const
 {
-    Q_D(const UpdateEventConfigurationsResponse);
-    return static_cast<const UpdateEventConfigurationsRequest *>(d->request);
+    return static_cast<const UpdateEventConfigurationsRequest *>(IoTResponse::request());
 }
 
 /*!

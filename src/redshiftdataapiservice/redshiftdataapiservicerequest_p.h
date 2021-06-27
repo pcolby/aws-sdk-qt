@@ -20,15 +20,12 @@
 #ifndef QTAWS_REDSHIFTDATAAPISERVICEREQUEST_P_H
 #define QTAWS_REDSHIFTDATAAPISERVICEREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "redshiftdataapiservicerequest.h"
-
 namespace QtAws {
 namespace RedshiftDataAPIService {
 
 class RedshiftDataAPIServiceRequest;
 
-class RedshiftDataAPIServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class RedshiftDataAPIServiceRequestPrivate {
 
 public:
     RedshiftDataAPIServiceRequest::Action action; ///< RedshiftDataAPIService action to be performed.
@@ -39,6 +36,9 @@ public:
     RedshiftDataAPIServiceRequestPrivate(const RedshiftDataAPIServiceRequestPrivate &other, RedshiftDataAPIServiceRequest * const q);
 
     static QString toString(const RedshiftDataAPIServiceRequest::Action &action);
+
+protected:
+    RedshiftDataAPIServiceRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(RedshiftDataAPIServiceRequest)

@@ -20,15 +20,12 @@
 #ifndef QTAWS_SERVICECATALOGREQUEST_P_H
 #define QTAWS_SERVICECATALOGREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "servicecatalogrequest.h"
-
 namespace QtAws {
 namespace ServiceCatalog {
 
 class ServiceCatalogRequest;
 
-class ServiceCatalogRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ServiceCatalogRequestPrivate {
 
 public:
     ServiceCatalogRequest::Action action; ///< ServiceCatalog action to be performed.
@@ -39,6 +36,9 @@ public:
     ServiceCatalogRequestPrivate(const ServiceCatalogRequestPrivate &other, ServiceCatalogRequest * const q);
 
     static QString toString(const ServiceCatalogRequest::Action &action);
+
+protected:
+    ServiceCatalogRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ServiceCatalogRequest)

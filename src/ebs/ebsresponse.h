@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    EbsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     EbsResponse(EbsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

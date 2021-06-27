@@ -214,6 +214,7 @@ public:
 
 protected:
     /// @cond internal
+    IamRequestPrivate * const d_ptr; ///< Internal d-pointer.
     IamRequest(IamRequestPrivate * const d);
     /// @endcond
 

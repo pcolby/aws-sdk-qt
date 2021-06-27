@@ -98,8 +98,7 @@ DeleteAssociationResponse::DeleteAssociationResponse(
  */
 const DeleteAssociationRequest * DeleteAssociationResponse::request() const
 {
-    Q_D(const DeleteAssociationResponse);
-    return static_cast<const DeleteAssociationRequest *>(d->request);
+    return static_cast<const DeleteAssociationRequest *>(SsmResponse::request());
 }
 
 /*!

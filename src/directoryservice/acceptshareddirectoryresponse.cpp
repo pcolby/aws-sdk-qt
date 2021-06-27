@@ -69,8 +69,7 @@ AcceptSharedDirectoryResponse::AcceptSharedDirectoryResponse(
  */
 const AcceptSharedDirectoryRequest * AcceptSharedDirectoryResponse::request() const
 {
-    Q_D(const AcceptSharedDirectoryResponse);
-    return static_cast<const AcceptSharedDirectoryRequest *>(d->request);
+    return static_cast<const AcceptSharedDirectoryRequest *>(DirectoryServiceResponse::request());
 }
 
 /*!

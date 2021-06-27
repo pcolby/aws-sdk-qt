@@ -98,8 +98,7 @@ GetAttendeeResponse::GetAttendeeResponse(
  */
 const GetAttendeeRequest * GetAttendeeResponse::request() const
 {
-    Q_D(const GetAttendeeResponse);
-    return static_cast<const GetAttendeeRequest *>(d->request);
+    return static_cast<const GetAttendeeRequest *>(ChimeResponse::request());
 }
 
 /*!

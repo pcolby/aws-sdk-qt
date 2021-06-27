@@ -77,8 +77,7 @@ TerminateEnvironmentResponse::TerminateEnvironmentResponse(
  */
 const TerminateEnvironmentRequest * TerminateEnvironmentResponse::request() const
 {
-    Q_D(const TerminateEnvironmentResponse);
-    return static_cast<const TerminateEnvironmentRequest *>(d->request);
+    return static_cast<const TerminateEnvironmentRequest *>(ElasticBeanstalkResponse::request());
 }
 
 /*!

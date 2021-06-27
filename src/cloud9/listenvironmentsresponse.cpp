@@ -121,8 +121,7 @@ ListEnvironmentsResponse::ListEnvironmentsResponse(
  */
 const ListEnvironmentsRequest * ListEnvironmentsResponse::request() const
 {
-    Q_D(const ListEnvironmentsResponse);
-    return static_cast<const ListEnvironmentsRequest *>(d->request);
+    return static_cast<const ListEnvironmentsRequest *>(Cloud9Response::request());
 }
 
 /*!

@@ -81,8 +81,7 @@ StopFleetResponse::StopFleetResponse(
  */
 const StopFleetRequest * StopFleetResponse::request() const
 {
-    Q_D(const StopFleetResponse);
-    return static_cast<const StopFleetRequest *>(d->request);
+    return static_cast<const StopFleetRequest *>(AppStreamResponse::request());
 }
 
 /*!

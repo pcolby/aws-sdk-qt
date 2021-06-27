@@ -59,8 +59,7 @@ StartDeliveryStreamEncryptionResponse::StartDeliveryStreamEncryptionResponse(
  */
 const StartDeliveryStreamEncryptionRequest * StartDeliveryStreamEncryptionResponse::request() const
 {
-    Q_D(const StartDeliveryStreamEncryptionResponse);
-    return static_cast<const StartDeliveryStreamEncryptionRequest *>(d->request);
+    return static_cast<const StartDeliveryStreamEncryptionRequest *>(FirehoseResponse::request());
 }
 
 /*!

@@ -141,8 +141,7 @@ UpdatePolicyResponse::UpdatePolicyResponse(
  */
 const UpdatePolicyRequest * UpdatePolicyResponse::request() const
 {
-    Q_D(const UpdatePolicyResponse);
-    return static_cast<const UpdatePolicyRequest *>(d->request);
+    return static_cast<const UpdatePolicyRequest *>(OrganizationsResponse::request());
 }
 
 /*!

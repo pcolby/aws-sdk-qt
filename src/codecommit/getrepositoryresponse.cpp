@@ -439,8 +439,7 @@ GetRepositoryResponse::GetRepositoryResponse(
  */
 const GetRepositoryRequest * GetRepositoryResponse::request() const
 {
-    Q_D(const GetRepositoryResponse);
-    return static_cast<const GetRepositoryRequest *>(d->request);
+    return static_cast<const GetRepositoryRequest *>(CodeCommitResponse::request());
 }
 
 /*!

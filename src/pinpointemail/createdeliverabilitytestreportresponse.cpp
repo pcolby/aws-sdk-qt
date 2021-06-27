@@ -92,8 +92,7 @@ CreateDeliverabilityTestReportResponse::CreateDeliverabilityTestReportResponse(
  */
 const CreateDeliverabilityTestReportRequest * CreateDeliverabilityTestReportResponse::request() const
 {
-    Q_D(const CreateDeliverabilityTestReportResponse);
-    return static_cast<const CreateDeliverabilityTestReportRequest *>(d->request);
+    return static_cast<const CreateDeliverabilityTestReportRequest *>(PinpointEmailResponse::request());
 }
 
 /*!

@@ -62,8 +62,7 @@ CreateRepositoryResponse::CreateRepositoryResponse(
  */
 const CreateRepositoryRequest * CreateRepositoryResponse::request() const
 {
-    Q_D(const CreateRepositoryResponse);
-    return static_cast<const CreateRepositoryRequest *>(d->request);
+    return static_cast<const CreateRepositoryRequest *>(EcrResponse::request());
 }
 
 /*!

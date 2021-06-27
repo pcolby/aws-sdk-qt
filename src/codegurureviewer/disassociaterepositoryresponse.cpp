@@ -72,8 +72,7 @@ DisassociateRepositoryResponse::DisassociateRepositoryResponse(
  */
 const DisassociateRepositoryRequest * DisassociateRepositoryResponse::request() const
 {
-    Q_D(const DisassociateRepositoryResponse);
-    return static_cast<const DisassociateRepositoryRequest *>(d->request);
+    return static_cast<const DisassociateRepositoryRequest *>(CodeGuruReviewerResponse::request());
 }
 
 /*!

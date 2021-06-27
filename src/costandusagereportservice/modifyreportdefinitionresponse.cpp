@@ -72,8 +72,7 @@ ModifyReportDefinitionResponse::ModifyReportDefinitionResponse(
  */
 const ModifyReportDefinitionRequest * ModifyReportDefinitionResponse::request() const
 {
-    Q_D(const ModifyReportDefinitionResponse);
-    return static_cast<const ModifyReportDefinitionRequest *>(d->request);
+    return static_cast<const ModifyReportDefinitionRequest *>(CostandUsageReportServiceResponse::request());
 }
 
 /*!

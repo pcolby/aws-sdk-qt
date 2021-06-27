@@ -62,8 +62,7 @@ CreateAccountAliasResponse::CreateAccountAliasResponse(
  */
 const CreateAccountAliasRequest * CreateAccountAliasResponse::request() const
 {
-    Q_D(const CreateAccountAliasResponse);
-    return static_cast<const CreateAccountAliasRequest *>(d->request);
+    return static_cast<const CreateAccountAliasRequest *>(IamResponse::request());
 }
 
 /*!

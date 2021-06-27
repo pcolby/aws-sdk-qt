@@ -94,8 +94,7 @@ ListResolverEndpointsResponse::ListResolverEndpointsResponse(
  */
 const ListResolverEndpointsRequest * ListResolverEndpointsResponse::request() const
 {
-    Q_D(const ListResolverEndpointsResponse);
-    return static_cast<const ListResolverEndpointsRequest *>(d->request);
+    return static_cast<const ListResolverEndpointsRequest *>(Route53ResolverResponse::request());
 }
 
 /*!

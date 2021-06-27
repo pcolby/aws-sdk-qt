@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    AppIntegrationsServiceResponsePrivate * const d_ptr; ///< Internal d-pointer.
     AppIntegrationsServiceResponse(AppIntegrationsServiceResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

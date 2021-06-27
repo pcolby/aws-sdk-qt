@@ -68,8 +68,7 @@ CreateOrUpdateTagsResponse::CreateOrUpdateTagsResponse(
  */
 const CreateOrUpdateTagsRequest * CreateOrUpdateTagsResponse::request() const
 {
-    Q_D(const CreateOrUpdateTagsResponse);
-    return static_cast<const CreateOrUpdateTagsRequest *>(d->request);
+    return static_cast<const CreateOrUpdateTagsRequest *>(AutoScalingResponse::request());
 }
 
 /*!

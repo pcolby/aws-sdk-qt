@@ -56,8 +56,7 @@ ListRegionalBucketsResponse::ListRegionalBucketsResponse(
  */
 const ListRegionalBucketsRequest * ListRegionalBucketsResponse::request() const
 {
-    Q_D(const ListRegionalBucketsResponse);
-    return static_cast<const ListRegionalBucketsRequest *>(d->request);
+    return static_cast<const ListRegionalBucketsRequest *>(S3ControlResponse::request());
 }
 
 /*!

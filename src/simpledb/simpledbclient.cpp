@@ -92,16 +92,16 @@ SimpleDBClient::SimpleDBClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SimpleDBClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2009-04-15"),
+    QStringLiteral("sdb"),
+    QStringLiteral("Amazon SimpleDB"),
+    QStringLiteral("sdb"),
+    parent), d_ptr(new SimpleDBClientPrivate(this))
 {
-    Q_D(SimpleDBClient);
-    d->apiVersion = QStringLiteral("2009-04-15");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("sdb");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon SimpleDB");
-    d->serviceName = QStringLiteral("sdb");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -120,16 +120,16 @@ SimpleDBClient::SimpleDBClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SimpleDBClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2009-04-15"),
+    QStringLiteral("sdb"),
+    QStringLiteral("Amazon SimpleDB"),
+    QStringLiteral("sdb"),
+    parent), d_ptr(new SimpleDBClientPrivate(this))
 {
-    Q_D(SimpleDBClient);
-    d->apiVersion = QStringLiteral("2009-04-15");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("sdb");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon SimpleDB");
-    d->serviceName = QStringLiteral("sdb");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -400,10 +400,9 @@ SelectResponse * SimpleDBClient::select(const SelectRequest &request)
 /*!
  * Constructs a SimpleDBClientPrivate object with public implementation \a q.
  */
-SimpleDBClientPrivate::SimpleDBClientPrivate(SimpleDBClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+SimpleDBClientPrivate::SimpleDBClientPrivate(SimpleDBClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV2();
+    q->setSignature(new QtAws::Core::AwsSignatureV2());
 }
 
 } // namespace SimpleDB

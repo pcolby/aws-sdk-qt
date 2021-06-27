@@ -161,8 +161,7 @@ DescribeElasticIpsResponse::DescribeElasticIpsResponse(
  */
 const DescribeElasticIpsRequest * DescribeElasticIpsResponse::request() const
 {
-    Q_D(const DescribeElasticIpsResponse);
-    return static_cast<const DescribeElasticIpsRequest *>(d->request);
+    return static_cast<const DescribeElasticIpsRequest *>(OpsWorksResponse::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ BatchDetectSentimentResponse::BatchDetectSentimentResponse(
  */
 const BatchDetectSentimentRequest * BatchDetectSentimentResponse::request() const
 {
-    Q_D(const BatchDetectSentimentResponse);
-    return static_cast<const BatchDetectSentimentRequest *>(d->request);
+    return static_cast<const BatchDetectSentimentRequest *>(ComprehendResponse::request());
 }
 
 /*!

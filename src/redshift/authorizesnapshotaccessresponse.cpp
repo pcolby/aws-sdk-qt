@@ -85,8 +85,7 @@ AuthorizeSnapshotAccessResponse::AuthorizeSnapshotAccessResponse(
  */
 const AuthorizeSnapshotAccessRequest * AuthorizeSnapshotAccessResponse::request() const
 {
-    Q_D(const AuthorizeSnapshotAccessResponse);
-    return static_cast<const AuthorizeSnapshotAccessRequest *>(d->request);
+    return static_cast<const AuthorizeSnapshotAccessRequest *>(RedshiftResponse::request());
 }
 
 /*!

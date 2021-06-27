@@ -62,8 +62,7 @@ DescribeAccessPointsResponse::DescribeAccessPointsResponse(
  */
 const DescribeAccessPointsRequest * DescribeAccessPointsResponse::request() const
 {
-    Q_D(const DescribeAccessPointsResponse);
-    return static_cast<const DescribeAccessPointsRequest *>(d->request);
+    return static_cast<const DescribeAccessPointsRequest *>(EfsResponse::request());
 }
 
 /*!

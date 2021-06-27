@@ -177,8 +177,7 @@ DeleteEnvironmentAccountConnectionResponse::DeleteEnvironmentAccountConnectionRe
  */
 const DeleteEnvironmentAccountConnectionRequest * DeleteEnvironmentAccountConnectionResponse::request() const
 {
-    Q_D(const DeleteEnvironmentAccountConnectionResponse);
-    return static_cast<const DeleteEnvironmentAccountConnectionRequest *>(d->request);
+    return static_cast<const DeleteEnvironmentAccountConnectionRequest *>(ProtonResponse::request());
 }
 
 /*!

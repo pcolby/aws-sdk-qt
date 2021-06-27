@@ -119,8 +119,7 @@ CreateDBProxyResponse::CreateDBProxyResponse(
  */
 const CreateDBProxyRequest * CreateDBProxyResponse::request() const
 {
-    Q_D(const CreateDBProxyResponse);
-    return static_cast<const CreateDBProxyRequest *>(d->request);
+    return static_cast<const CreateDBProxyRequest *>(RdsResponse::request());
 }
 
 /*!

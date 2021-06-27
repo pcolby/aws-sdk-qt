@@ -62,8 +62,7 @@ GetContextKeysForPrincipalPolicyResponse::GetContextKeysForPrincipalPolicyRespon
  */
 const GetContextKeysForPrincipalPolicyRequest * GetContextKeysForPrincipalPolicyResponse::request() const
 {
-    Q_D(const GetContextKeysForPrincipalPolicyResponse);
-    return static_cast<const GetContextKeysForPrincipalPolicyRequest *>(d->request);
+    return static_cast<const GetContextKeysForPrincipalPolicyRequest *>(IamResponse::request());
 }
 
 /*!

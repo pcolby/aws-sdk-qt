@@ -58,8 +58,7 @@ CancelBatchPredictionJobResponse::CancelBatchPredictionJobResponse(
  */
 const CancelBatchPredictionJobRequest * CancelBatchPredictionJobResponse::request() const
 {
-    Q_D(const CancelBatchPredictionJobResponse);
-    return static_cast<const CancelBatchPredictionJobRequest *>(d->request);
+    return static_cast<const CancelBatchPredictionJobRequest *>(FraudDetectorResponse::request());
 }
 
 /*!

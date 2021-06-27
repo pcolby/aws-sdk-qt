@@ -87,8 +87,7 @@ DeleteNetworkInterfaceResponse::DeleteNetworkInterfaceResponse(
  */
 const DeleteNetworkInterfaceRequest * DeleteNetworkInterfaceResponse::request() const
 {
-    Q_D(const DeleteNetworkInterfaceResponse);
-    return static_cast<const DeleteNetworkInterfaceRequest *>(d->request);
+    return static_cast<const DeleteNetworkInterfaceRequest *>(Ec2Response::request());
 }
 
 /*!

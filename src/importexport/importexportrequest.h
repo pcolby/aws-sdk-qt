@@ -62,6 +62,7 @@ public:
 
 protected:
     /// @cond internal
+    ImportExportRequestPrivate * const d_ptr; ///< Internal d-pointer.
     ImportExportRequest(ImportExportRequestPrivate * const d);
     /// @endcond
 

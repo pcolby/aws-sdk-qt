@@ -86,6 +86,7 @@ public:
 
 protected:
     /// @cond internal
+    MediaConnectRequestPrivate * const d_ptr; ///< Internal d-pointer.
     MediaConnectRequest(MediaConnectRequestPrivate * const d);
     /// @endcond
 

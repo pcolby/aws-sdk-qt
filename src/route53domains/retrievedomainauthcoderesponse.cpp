@@ -56,8 +56,7 @@ RetrieveDomainAuthCodeResponse::RetrieveDomainAuthCodeResponse(
  */
 const RetrieveDomainAuthCodeRequest * RetrieveDomainAuthCodeResponse::request() const
 {
-    Q_D(const RetrieveDomainAuthCodeResponse);
-    return static_cast<const RetrieveDomainAuthCodeRequest *>(d->request);
+    return static_cast<const RetrieveDomainAuthCodeRequest *>(Route53DomainsResponse::request());
 }
 
 /*!

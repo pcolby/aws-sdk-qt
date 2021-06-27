@@ -104,6 +104,7 @@ public:
 
 protected:
     /// @cond internal
+    AppStreamRequestPrivate * const d_ptr; ///< Internal d-pointer.
     AppStreamRequest(AppStreamRequestPrivate * const d);
     /// @endcond
 

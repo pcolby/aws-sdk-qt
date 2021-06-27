@@ -61,8 +61,7 @@ UpdatePortalResponse::UpdatePortalResponse(
  */
 const UpdatePortalRequest * UpdatePortalResponse::request() const
 {
-    Q_D(const UpdatePortalResponse);
-    return static_cast<const UpdatePortalRequest *>(d->request);
+    return static_cast<const UpdatePortalRequest *>(IoTSiteWiseResponse::request());
 }
 
 /*!

@@ -20,14 +20,12 @@
 #ifndef QTAWS_COMPREHENDRESPONSE_P_H
 #define QTAWS_COMPREHENDRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace Comprehend {
 
 class ComprehendResponse;
 
-class ComprehendResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class ComprehendResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    ComprehendResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ComprehendResponse)

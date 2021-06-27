@@ -72,8 +72,7 @@ DeleteDBClusterParameterGroupResponse::DeleteDBClusterParameterGroupResponse(
  */
 const DeleteDBClusterParameterGroupRequest * DeleteDBClusterParameterGroupResponse::request() const
 {
-    Q_D(const DeleteDBClusterParameterGroupResponse);
-    return static_cast<const DeleteDBClusterParameterGroupRequest *>(d->request);
+    return static_cast<const DeleteDBClusterParameterGroupRequest *>(NeptuneResponse::request());
 }
 
 /*!

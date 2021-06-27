@@ -66,8 +66,7 @@ DeleteTemplateResponse::DeleteTemplateResponse(
  */
 const DeleteTemplateRequest * DeleteTemplateResponse::request() const
 {
-    Q_D(const DeleteTemplateResponse);
-    return static_cast<const DeleteTemplateRequest *>(d->request);
+    return static_cast<const DeleteTemplateRequest *>(SesResponse::request());
 }
 
 /*!

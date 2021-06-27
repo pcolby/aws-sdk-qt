@@ -56,8 +56,7 @@ PutRawMessageContentResponse::PutRawMessageContentResponse(
  */
 const PutRawMessageContentRequest * PutRawMessageContentResponse::request() const
 {
-    Q_D(const PutRawMessageContentResponse);
-    return static_cast<const PutRawMessageContentRequest *>(d->request);
+    return static_cast<const PutRawMessageContentRequest *>(WorkMailMessageFlowResponse::request());
 }
 
 /*!

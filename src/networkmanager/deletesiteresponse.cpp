@@ -62,8 +62,7 @@ DeleteSiteResponse::DeleteSiteResponse(
  */
 const DeleteSiteRequest * DeleteSiteResponse::request() const
 {
-    Q_D(const DeleteSiteResponse);
-    return static_cast<const DeleteSiteRequest *>(d->request);
+    return static_cast<const DeleteSiteRequest *>(NetworkManagerResponse::request());
 }
 
 /*!

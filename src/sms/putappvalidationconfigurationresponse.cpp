@@ -68,8 +68,7 @@ PutAppValidationConfigurationResponse::PutAppValidationConfigurationResponse(
  */
 const PutAppValidationConfigurationRequest * PutAppValidationConfigurationResponse::request() const
 {
-    Q_D(const PutAppValidationConfigurationResponse);
-    return static_cast<const PutAppValidationConfigurationRequest *>(d->request);
+    return static_cast<const PutAppValidationConfigurationRequest *>(SmsResponse::request());
 }
 
 /*!

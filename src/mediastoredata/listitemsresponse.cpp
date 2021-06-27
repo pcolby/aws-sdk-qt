@@ -57,8 +57,7 @@ ListItemsResponse::ListItemsResponse(
  */
 const ListItemsRequest * ListItemsResponse::request() const
 {
-    Q_D(const ListItemsResponse);
-    return static_cast<const ListItemsRequest *>(d->request);
+    return static_cast<const ListItemsRequest *>(MediaStoreDataResponse::request());
 }
 
 /*!

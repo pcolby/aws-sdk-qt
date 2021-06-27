@@ -74,8 +74,7 @@ DeleteInstanceResponse::DeleteInstanceResponse(
  */
 const DeleteInstanceRequest * DeleteInstanceResponse::request() const
 {
-    Q_D(const DeleteInstanceResponse);
-    return static_cast<const DeleteInstanceRequest *>(d->request);
+    return static_cast<const DeleteInstanceRequest *>(LightsailResponse::request());
 }
 
 /*!

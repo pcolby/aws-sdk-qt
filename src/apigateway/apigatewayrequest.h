@@ -176,6 +176,7 @@ public:
 
 protected:
     /// @cond internal
+    APIGatewayRequestPrivate * const d_ptr; ///< Internal d-pointer.
     APIGatewayRequest(APIGatewayRequestPrivate * const d);
     /// @endcond
 

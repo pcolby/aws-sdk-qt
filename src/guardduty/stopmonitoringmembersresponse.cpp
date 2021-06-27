@@ -73,8 +73,7 @@ StopMonitoringMembersResponse::StopMonitoringMembersResponse(
  */
 const StopMonitoringMembersRequest * StopMonitoringMembersResponse::request() const
 {
-    Q_D(const StopMonitoringMembersResponse);
-    return static_cast<const StopMonitoringMembersRequest *>(d->request);
+    return static_cast<const StopMonitoringMembersRequest *>(GuardDutyResponse::request());
 }
 
 /*!

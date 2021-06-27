@@ -66,8 +66,7 @@ SendBounceResponse::SendBounceResponse(
  */
 const SendBounceRequest * SendBounceResponse::request() const
 {
-    Q_D(const SendBounceResponse);
-    return static_cast<const SendBounceRequest *>(d->request);
+    return static_cast<const SendBounceRequest *>(SesResponse::request());
 }
 
 /*!

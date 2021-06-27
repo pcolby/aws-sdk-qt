@@ -58,8 +58,7 @@ UpdateWorkflowResponse::UpdateWorkflowResponse(
  */
 const UpdateWorkflowRequest * UpdateWorkflowResponse::request() const
 {
-    Q_D(const UpdateWorkflowResponse);
-    return static_cast<const UpdateWorkflowRequest *>(d->request);
+    return static_cast<const UpdateWorkflowRequest *>(GlueResponse::request());
 }
 
 /*!

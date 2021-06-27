@@ -20,14 +20,12 @@
 #ifndef QTAWS_MARKETPLACECATALOGRESPONSE_P_H
 #define QTAWS_MARKETPLACECATALOGRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace MarketplaceCatalog {
 
 class MarketplaceCatalogResponse;
 
-class MarketplaceCatalogResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class MarketplaceCatalogResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    MarketplaceCatalogResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MarketplaceCatalogResponse)

@@ -94,8 +94,7 @@ PutResolverRulePolicyResponse::PutResolverRulePolicyResponse(
  */
 const PutResolverRulePolicyRequest * PutResolverRulePolicyResponse::request() const
 {
-    Q_D(const PutResolverRulePolicyResponse);
-    return static_cast<const PutResolverRulePolicyRequest *>(d->request);
+    return static_cast<const PutResolverRulePolicyRequest *>(Route53ResolverResponse::request());
 }
 
 /*!

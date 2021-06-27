@@ -56,8 +56,7 @@ DescribePredictorBacktestExportJobResponse::DescribePredictorBacktestExportJobRe
  */
 const DescribePredictorBacktestExportJobRequest * DescribePredictorBacktestExportJobResponse::request() const
 {
-    Q_D(const DescribePredictorBacktestExportJobResponse);
-    return static_cast<const DescribePredictorBacktestExportJobRequest *>(d->request);
+    return static_cast<const DescribePredictorBacktestExportJobRequest *>(ForecastServiceResponse::request());
 }
 
 /*!

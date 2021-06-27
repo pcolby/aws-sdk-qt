@@ -87,8 +87,7 @@ AssociateClientVpnTargetNetworkResponse::AssociateClientVpnTargetNetworkResponse
  */
 const AssociateClientVpnTargetNetworkRequest * AssociateClientVpnTargetNetworkResponse::request() const
 {
-    Q_D(const AssociateClientVpnTargetNetworkResponse);
-    return static_cast<const AssociateClientVpnTargetNetworkRequest *>(d->request);
+    return static_cast<const AssociateClientVpnTargetNetworkRequest *>(Ec2Response::request());
 }
 
 /*!

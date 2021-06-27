@@ -90,8 +90,7 @@ ModifyTargetGroupAttributesResponse::ModifyTargetGroupAttributesResponse(
  */
 const ModifyTargetGroupAttributesRequest * ModifyTargetGroupAttributesResponse::request() const
 {
-    Q_D(const ModifyTargetGroupAttributesResponse);
-    return static_cast<const ModifyTargetGroupAttributesRequest *>(d->request);
+    return static_cast<const ModifyTargetGroupAttributesRequest *>(ElasticLoadBalancingv2Response::request());
 }
 
 /*!

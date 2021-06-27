@@ -78,8 +78,7 @@ CreateArchiveResponse::CreateArchiveResponse(
  */
 const CreateArchiveRequest * CreateArchiveResponse::request() const
 {
-    Q_D(const CreateArchiveResponse);
-    return static_cast<const CreateArchiveRequest *>(d->request);
+    return static_cast<const CreateArchiveRequest *>(EventBridgeResponse::request());
 }
 
 /*!

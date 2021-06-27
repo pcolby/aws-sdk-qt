@@ -60,8 +60,7 @@ ListIngestionsResponse::ListIngestionsResponse(
  */
 const ListIngestionsRequest * ListIngestionsResponse::request() const
 {
-    Q_D(const ListIngestionsResponse);
-    return static_cast<const ListIngestionsRequest *>(d->request);
+    return static_cast<const ListIngestionsRequest *>(QuickSightResponse::request());
 }
 
 /*!

@@ -37,7 +37,7 @@ namespace GameLift {
  * Constructs a GameLiftResponse object with parent \a parent.
  */
 GameLiftResponse::GameLiftResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new GameLiftResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new GameLiftResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ GameLiftResponse::GameLiftResponse(QObject * const parent)
  * implementation that inherits from GameLiftResponsePrivate.
  */
 GameLiftResponse::GameLiftResponse(GameLiftResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void GameLiftResponse::parseFailure(QIODevice &response)
  * Constructs a GameLiftResponsePrivate object with public implementation \a q.
  */
 GameLiftResponsePrivate::GameLiftResponsePrivate(
-    GameLiftResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    GameLiftResponse * const q) : q_ptr(q)
 {
 
 }

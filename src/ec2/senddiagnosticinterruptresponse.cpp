@@ -87,8 +87,7 @@ SendDiagnosticInterruptResponse::SendDiagnosticInterruptResponse(
  */
 const SendDiagnosticInterruptRequest * SendDiagnosticInterruptResponse::request() const
 {
-    Q_D(const SendDiagnosticInterruptResponse);
-    return static_cast<const SendDiagnosticInterruptRequest *>(d->request);
+    return static_cast<const SendDiagnosticInterruptRequest *>(Ec2Response::request());
 }
 
 /*!

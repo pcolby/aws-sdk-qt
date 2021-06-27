@@ -94,8 +94,7 @@ ListFirewallConfigsResponse::ListFirewallConfigsResponse(
  */
 const ListFirewallConfigsRequest * ListFirewallConfigsResponse::request() const
 {
-    Q_D(const ListFirewallConfigsResponse);
-    return static_cast<const ListFirewallConfigsRequest *>(d->request);
+    return static_cast<const ListFirewallConfigsRequest *>(Route53ResolverResponse::request());
 }
 
 /*!

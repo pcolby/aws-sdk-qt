@@ -20,14 +20,12 @@
 #ifndef QTAWS_KINESISANALYTICSV2RESPONSE_P_H
 #define QTAWS_KINESISANALYTICSV2RESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace KinesisAnalyticsV2 {
 
 class KinesisAnalyticsV2Response;
 
-class KinesisAnalyticsV2ResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class KinesisAnalyticsV2ResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    KinesisAnalyticsV2Response * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(KinesisAnalyticsV2Response)

@@ -90,6 +90,7 @@ public:
 
 protected:
     /// @cond internal
+    EcrRequestPrivate * const d_ptr; ///< Internal d-pointer.
     EcrRequest(EcrRequestPrivate * const d);
     /// @endcond
 

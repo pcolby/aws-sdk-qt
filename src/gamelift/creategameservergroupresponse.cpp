@@ -115,8 +115,7 @@ CreateGameServerGroupResponse::CreateGameServerGroupResponse(
  */
 const CreateGameServerGroupRequest * CreateGameServerGroupResponse::request() const
 {
-    Q_D(const CreateGameServerGroupResponse);
-    return static_cast<const CreateGameServerGroupRequest *>(d->request);
+    return static_cast<const CreateGameServerGroupRequest *>(GameLiftResponse::request());
 }
 
 /*!

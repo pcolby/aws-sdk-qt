@@ -98,8 +98,7 @@ ListComplianceSummariesResponse::ListComplianceSummariesResponse(
  */
 const ListComplianceSummariesRequest * ListComplianceSummariesResponse::request() const
 {
-    Q_D(const ListComplianceSummariesResponse);
-    return static_cast<const ListComplianceSummariesRequest *>(d->request);
+    return static_cast<const ListComplianceSummariesRequest *>(SsmResponse::request());
 }
 
 /*!

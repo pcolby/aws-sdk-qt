@@ -161,8 +161,7 @@ CreateUserProfileResponse::CreateUserProfileResponse(
  */
 const CreateUserProfileRequest * CreateUserProfileResponse::request() const
 {
-    Q_D(const CreateUserProfileResponse);
-    return static_cast<const CreateUserProfileRequest *>(d->request);
+    return static_cast<const CreateUserProfileRequest *>(OpsWorksResponse::request());
 }
 
 /*!

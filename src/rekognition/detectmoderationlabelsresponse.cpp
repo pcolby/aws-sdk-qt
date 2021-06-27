@@ -56,8 +56,7 @@ DetectModerationLabelsResponse::DetectModerationLabelsResponse(
  */
 const DetectModerationLabelsRequest * DetectModerationLabelsResponse::request() const
 {
-    Q_D(const DetectModerationLabelsResponse);
-    return static_cast<const DetectModerationLabelsRequest *>(d->request);
+    return static_cast<const DetectModerationLabelsRequest *>(RekognitionResponse::request());
 }
 
 /*!

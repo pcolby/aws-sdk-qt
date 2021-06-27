@@ -154,8 +154,7 @@ ScheduleKeyDeletionResponse::ScheduleKeyDeletionResponse(
  */
 const ScheduleKeyDeletionRequest * ScheduleKeyDeletionResponse::request() const
 {
-    Q_D(const ScheduleKeyDeletionResponse);
-    return static_cast<const ScheduleKeyDeletionRequest *>(d->request);
+    return static_cast<const ScheduleKeyDeletionRequest *>(KmsResponse::request());
 }
 
 /*!

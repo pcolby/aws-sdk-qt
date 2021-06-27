@@ -89,8 +89,7 @@ PutRetentionPolicyResponse::PutRetentionPolicyResponse(
  */
 const PutRetentionPolicyRequest * PutRetentionPolicyResponse::request() const
 {
-    Q_D(const PutRetentionPolicyResponse);
-    return static_cast<const PutRetentionPolicyRequest *>(d->request);
+    return static_cast<const PutRetentionPolicyRequest *>(WorkMailResponse::request());
 }
 
 /*!

@@ -37,7 +37,7 @@ namespace MWAA {
  * Constructs a MwaaResponse object with parent \a parent.
  */
 MwaaResponse::MwaaResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new MwaaResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new MwaaResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ MwaaResponse::MwaaResponse(QObject * const parent)
  * implementation that inherits from MwaaResponsePrivate.
  */
 MwaaResponse::MwaaResponse(MwaaResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void MwaaResponse::parseFailure(QIODevice &response)
  * Constructs a MwaaResponsePrivate object with public implementation \a q.
  */
 MwaaResponsePrivate::MwaaResponsePrivate(
-    MwaaResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    MwaaResponse * const q) : q_ptr(q)
 {
 
 }

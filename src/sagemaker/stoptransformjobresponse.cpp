@@ -70,8 +70,7 @@ StopTransformJobResponse::StopTransformJobResponse(
  */
 const StopTransformJobRequest * StopTransformJobResponse::request() const
 {
-    Q_D(const StopTransformJobResponse);
-    return static_cast<const StopTransformJobRequest *>(d->request);
+    return static_cast<const StopTransformJobRequest *>(SageMakerResponse::request());
 }
 
 /*!

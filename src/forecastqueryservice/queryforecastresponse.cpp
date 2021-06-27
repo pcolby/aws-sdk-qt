@@ -56,8 +56,7 @@ QueryForecastResponse::QueryForecastResponse(
  */
 const QueryForecastRequest * QueryForecastResponse::request() const
 {
-    Q_D(const QueryForecastResponse);
-    return static_cast<const QueryForecastRequest *>(d->request);
+    return static_cast<const QueryForecastRequest *>(ForecastQueryServiceResponse::request());
 }
 
 /*!

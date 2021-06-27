@@ -66,8 +66,7 @@ StartReplicationTaskAssessmentResponse::StartReplicationTaskAssessmentResponse(
  */
 const StartReplicationTaskAssessmentRequest * StartReplicationTaskAssessmentResponse::request() const
 {
-    Q_D(const StartReplicationTaskAssessmentResponse);
-    return static_cast<const StartReplicationTaskAssessmentRequest *>(d->request);
+    return static_cast<const StartReplicationTaskAssessmentRequest *>(DatabaseMigrationServiceResponse::request());
 }
 
 /*!

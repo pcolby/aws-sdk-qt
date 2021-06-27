@@ -87,8 +87,7 @@ EnableEbsEncryptionByDefaultResponse::EnableEbsEncryptionByDefaultResponse(
  */
 const EnableEbsEncryptionByDefaultRequest * EnableEbsEncryptionByDefaultResponse::request() const
 {
-    Q_D(const EnableEbsEncryptionByDefaultResponse);
-    return static_cast<const EnableEbsEncryptionByDefaultRequest *>(d->request);
+    return static_cast<const EnableEbsEncryptionByDefaultRequest *>(Ec2Response::request());
 }
 
 /*!

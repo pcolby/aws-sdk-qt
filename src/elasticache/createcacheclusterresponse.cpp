@@ -69,8 +69,7 @@ CreateCacheClusterResponse::CreateCacheClusterResponse(
  */
 const CreateCacheClusterRequest * CreateCacheClusterResponse::request() const
 {
-    Q_D(const CreateCacheClusterResponse);
-    return static_cast<const CreateCacheClusterRequest *>(d->request);
+    return static_cast<const CreateCacheClusterRequest *>(ElastiCacheResponse::request());
 }
 
 /*!

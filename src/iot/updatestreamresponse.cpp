@@ -82,8 +82,7 @@ UpdateStreamResponse::UpdateStreamResponse(
  */
 const UpdateStreamRequest * UpdateStreamResponse::request() const
 {
-    Q_D(const UpdateStreamResponse);
-    return static_cast<const UpdateStreamRequest *>(d->request);
+    return static_cast<const UpdateStreamRequest *>(IoTResponse::request());
 }
 
 /*!

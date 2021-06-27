@@ -20,14 +20,12 @@
 #ifndef QTAWS_CLOUDFRONTRESPONSE_P_H
 #define QTAWS_CLOUDFRONTRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace CloudFront {
 
 class CloudFrontResponse;
 
-class CloudFrontResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class CloudFrontResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    CloudFrontResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CloudFrontResponse)

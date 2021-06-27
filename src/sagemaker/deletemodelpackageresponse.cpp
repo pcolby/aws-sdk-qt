@@ -70,8 +70,7 @@ DeleteModelPackageResponse::DeleteModelPackageResponse(
  */
 const DeleteModelPackageRequest * DeleteModelPackageResponse::request() const
 {
-    Q_D(const DeleteModelPackageResponse);
-    return static_cast<const DeleteModelPackageRequest *>(d->request);
+    return static_cast<const DeleteModelPackageRequest *>(SageMakerResponse::request());
 }
 
 /*!

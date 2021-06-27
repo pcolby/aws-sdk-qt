@@ -61,8 +61,7 @@ DescribeProvisioningParametersResponse::DescribeProvisioningParametersResponse(
  */
 const DescribeProvisioningParametersRequest * DescribeProvisioningParametersResponse::request() const
 {
-    Q_D(const DescribeProvisioningParametersResponse);
-    return static_cast<const DescribeProvisioningParametersRequest *>(d->request);
+    return static_cast<const DescribeProvisioningParametersRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

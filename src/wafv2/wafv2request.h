@@ -96,6 +96,7 @@ public:
 
 protected:
     /// @cond internal
+    Wafv2RequestPrivate * const d_ptr; ///< Internal d-pointer.
     Wafv2Request(Wafv2RequestPrivate * const d);
     /// @endcond
 

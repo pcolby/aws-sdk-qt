@@ -87,8 +87,7 @@ CreateSnapshotsResponse::CreateSnapshotsResponse(
  */
 const CreateSnapshotsRequest * CreateSnapshotsResponse::request() const
 {
-    Q_D(const CreateSnapshotsResponse);
-    return static_cast<const CreateSnapshotsRequest *>(d->request);
+    return static_cast<const CreateSnapshotsRequest *>(Ec2Response::request());
 }
 
 /*!

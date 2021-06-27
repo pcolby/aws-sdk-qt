@@ -56,8 +56,7 @@ ViewBillingResponse::ViewBillingResponse(
  */
 const ViewBillingRequest * ViewBillingResponse::request() const
 {
-    Q_D(const ViewBillingResponse);
-    return static_cast<const ViewBillingRequest *>(d->request);
+    return static_cast<const ViewBillingRequest *>(Route53DomainsResponse::request());
 }
 
 /*!

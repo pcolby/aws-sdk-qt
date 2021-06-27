@@ -68,8 +68,7 @@ ResumeProcessesResponse::ResumeProcessesResponse(
  */
 const ResumeProcessesRequest * ResumeProcessesResponse::request() const
 {
-    Q_D(const ResumeProcessesResponse);
-    return static_cast<const ResumeProcessesRequest *>(d->request);
+    return static_cast<const ResumeProcessesRequest *>(AutoScalingResponse::request());
 }
 
 /*!

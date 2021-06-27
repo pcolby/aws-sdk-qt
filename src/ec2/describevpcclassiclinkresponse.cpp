@@ -87,8 +87,7 @@ DescribeVpcClassicLinkResponse::DescribeVpcClassicLinkResponse(
  */
 const DescribeVpcClassicLinkRequest * DescribeVpcClassicLinkResponse::request() const
 {
-    Q_D(const DescribeVpcClassicLinkResponse);
-    return static_cast<const DescribeVpcClassicLinkRequest *>(d->request);
+    return static_cast<const DescribeVpcClassicLinkRequest *>(Ec2Response::request());
 }
 
 /*!

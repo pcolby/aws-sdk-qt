@@ -98,8 +98,7 @@ GetParameterHistoryResponse::GetParameterHistoryResponse(
  */
 const GetParameterHistoryRequest * GetParameterHistoryResponse::request() const
 {
-    Q_D(const GetParameterHistoryResponse);
-    return static_cast<const GetParameterHistoryRequest *>(d->request);
+    return static_cast<const GetParameterHistoryRequest *>(SsmResponse::request());
 }
 
 /*!

@@ -20,19 +20,20 @@
 #ifndef QTAWS_EBSCLIENT_P_H
 #define QTAWS_EBSCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace EBS {
 
 class EbsClient;
 
-class EbsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class EbsClientPrivate {
 
 public:
     EbsClientPrivate(EbsClient * const q);
+
+protected:
+    EbsClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(EbsClient)

@@ -79,8 +79,7 @@ DescribeQueueResponse::DescribeQueueResponse(
  */
 const DescribeQueueRequest * DescribeQueueResponse::request() const
 {
-    Q_D(const DescribeQueueResponse);
-    return static_cast<const DescribeQueueRequest *>(d->request);
+    return static_cast<const DescribeQueueRequest *>(ConnectResponse::request());
 }
 
 /*!

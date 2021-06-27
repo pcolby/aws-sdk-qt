@@ -78,8 +78,7 @@ ListTargetsByRuleResponse::ListTargetsByRuleResponse(
  */
 const ListTargetsByRuleRequest * ListTargetsByRuleResponse::request() const
 {
-    Q_D(const ListTargetsByRuleResponse);
-    return static_cast<const ListTargetsByRuleRequest *>(d->request);
+    return static_cast<const ListTargetsByRuleRequest *>(EventBridgeResponse::request());
 }
 
 /*!

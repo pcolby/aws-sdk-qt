@@ -87,8 +87,7 @@ DeleteSecurityGroupResponse::DeleteSecurityGroupResponse(
  */
 const DeleteSecurityGroupRequest * DeleteSecurityGroupResponse::request() const
 {
-    Q_D(const DeleteSecurityGroupResponse);
-    return static_cast<const DeleteSecurityGroupRequest *>(d->request);
+    return static_cast<const DeleteSecurityGroupRequest *>(Ec2Response::request());
 }
 
 /*!

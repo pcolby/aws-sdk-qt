@@ -70,8 +70,7 @@ SendPipelineExecutionStepSuccessResponse::SendPipelineExecutionStepSuccessRespon
  */
 const SendPipelineExecutionStepSuccessRequest * SendPipelineExecutionStepSuccessResponse::request() const
 {
-    Q_D(const SendPipelineExecutionStepSuccessResponse);
-    return static_cast<const SendPipelineExecutionStepSuccessRequest *>(d->request);
+    return static_cast<const SendPipelineExecutionStepSuccessRequest *>(SageMakerResponse::request());
 }
 
 /*!

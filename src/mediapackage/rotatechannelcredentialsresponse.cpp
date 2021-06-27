@@ -55,8 +55,7 @@ RotateChannelCredentialsResponse::RotateChannelCredentialsResponse(
  */
 const RotateChannelCredentialsRequest * RotateChannelCredentialsResponse::request() const
 {
-    Q_D(const RotateChannelCredentialsResponse);
-    return static_cast<const RotateChannelCredentialsRequest *>(d->request);
+    return static_cast<const RotateChannelCredentialsRequest *>(MediaPackageResponse::request());
 }
 
 /*!

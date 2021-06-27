@@ -105,7 +105,7 @@ namespace Neptune {
  * Constructs a NeptuneRequest object for Neptune \a action.
  */
 NeptuneRequest::NeptuneRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new NeptuneRequestPrivate(action, this))
+    : d_ptr(new NeptuneRequestPrivate(action, this))
 {
 
 }
@@ -114,7 +114,8 @@ NeptuneRequest::NeptuneRequest(const Action action)
  * Constructs a copy of \a other.
  */
 NeptuneRequest::NeptuneRequest(const NeptuneRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new NeptuneRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new NeptuneRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -137,7 +138,7 @@ NeptuneRequest& NeptuneRequest::operator=(const NeptuneRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from NeptuneRequestPrivate.
  */
-NeptuneRequest::NeptuneRequest(NeptuneRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+NeptuneRequest::NeptuneRequest(NeptuneRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -306,7 +307,7 @@ QNetworkRequest NeptuneRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 NeptuneRequestPrivate::NeptuneRequestPrivate(const NeptuneRequest::Action action, NeptuneRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -321,8 +322,8 @@ NeptuneRequestPrivate::NeptuneRequestPrivate(const NeptuneRequest::Action action
  */
 NeptuneRequestPrivate::NeptuneRequestPrivate(const NeptuneRequestPrivate &other,
                                      NeptuneRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

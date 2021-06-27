@@ -100,8 +100,7 @@ CreateConnectorProfileResponse::CreateConnectorProfileResponse(
  */
 const CreateConnectorProfileRequest * CreateConnectorProfileResponse::request() const
 {
-    Q_D(const CreateConnectorProfileResponse);
-    return static_cast<const CreateConnectorProfileRequest *>(d->request);
+    return static_cast<const CreateConnectorProfileRequest *>(AppflowResponse::request());
 }
 
 /*!

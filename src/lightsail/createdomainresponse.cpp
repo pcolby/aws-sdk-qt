@@ -74,8 +74,7 @@ CreateDomainResponse::CreateDomainResponse(
  */
 const CreateDomainRequest * CreateDomainResponse::request() const
 {
-    Q_D(const CreateDomainResponse);
-    return static_cast<const CreateDomainRequest *>(d->request);
+    return static_cast<const CreateDomainRequest *>(LightsailResponse::request());
 }
 
 /*!

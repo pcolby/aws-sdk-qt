@@ -218,8 +218,7 @@ ListAcceleratorsResponse::ListAcceleratorsResponse(
  */
 const ListAcceleratorsRequest * ListAcceleratorsResponse::request() const
 {
-    Q_D(const ListAcceleratorsResponse);
-    return static_cast<const ListAcceleratorsRequest *>(d->request);
+    return static_cast<const ListAcceleratorsRequest *>(GlobalAcceleratorResponse::request());
 }
 
 /*!

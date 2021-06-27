@@ -61,8 +61,7 @@ ListVirtualInterfaceTestHistoryResponse::ListVirtualInterfaceTestHistoryResponse
  */
 const ListVirtualInterfaceTestHistoryRequest * ListVirtualInterfaceTestHistoryResponse::request() const
 {
-    Q_D(const ListVirtualInterfaceTestHistoryResponse);
-    return static_cast<const ListVirtualInterfaceTestHistoryRequest *>(d->request);
+    return static_cast<const ListVirtualInterfaceTestHistoryRequest *>(DirectConnectResponse::request());
 }
 
 /*!

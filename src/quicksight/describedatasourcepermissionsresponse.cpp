@@ -60,8 +60,7 @@ DescribeDataSourcePermissionsResponse::DescribeDataSourcePermissionsResponse(
  */
 const DescribeDataSourcePermissionsRequest * DescribeDataSourcePermissionsResponse::request() const
 {
-    Q_D(const DescribeDataSourcePermissionsResponse);
-    return static_cast<const DescribeDataSourcePermissionsRequest *>(d->request);
+    return static_cast<const DescribeDataSourcePermissionsRequest *>(QuickSightResponse::request());
 }
 
 /*!

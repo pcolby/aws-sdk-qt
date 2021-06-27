@@ -82,8 +82,7 @@ DeleteScheduledAuditResponse::DeleteScheduledAuditResponse(
  */
 const DeleteScheduledAuditRequest * DeleteScheduledAuditResponse::request() const
 {
-    Q_D(const DeleteScheduledAuditResponse);
-    return static_cast<const DeleteScheduledAuditRequest *>(d->request);
+    return static_cast<const DeleteScheduledAuditRequest *>(IoTResponse::request());
 }
 
 /*!

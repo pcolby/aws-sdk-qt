@@ -72,7 +72,7 @@ namespace Kafka {
  * Constructs a KafkaRequest object for Kafka \a action.
  */
 KafkaRequest::KafkaRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new KafkaRequestPrivate(action, this))
+    : d_ptr(new KafkaRequestPrivate(action, this))
 {
 
 }
@@ -81,7 +81,8 @@ KafkaRequest::KafkaRequest(const Action action)
  * Constructs a copy of \a other.
  */
 KafkaRequest::KafkaRequest(const KafkaRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new KafkaRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new KafkaRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -104,7 +105,7 @@ KafkaRequest& KafkaRequest::operator=(const KafkaRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from KafkaRequestPrivate.
  */
-KafkaRequest::KafkaRequest(KafkaRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+KafkaRequest::KafkaRequest(KafkaRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -273,7 +274,7 @@ QNetworkRequest KafkaRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 KafkaRequestPrivate::KafkaRequestPrivate(const KafkaRequest::Action action, KafkaRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -288,8 +289,8 @@ KafkaRequestPrivate::KafkaRequestPrivate(const KafkaRequest::Action action, Kafk
  */
 KafkaRequestPrivate::KafkaRequestPrivate(const KafkaRequestPrivate &other,
                                      KafkaRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

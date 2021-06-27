@@ -91,8 +91,7 @@ UploadArchiveResponse::UploadArchiveResponse(
  */
 const UploadArchiveRequest * UploadArchiveResponse::request() const
 {
-    Q_D(const UploadArchiveResponse);
-    return static_cast<const UploadArchiveRequest *>(d->request);
+    return static_cast<const UploadArchiveRequest *>(GlacierResponse::request());
 }
 
 /*!

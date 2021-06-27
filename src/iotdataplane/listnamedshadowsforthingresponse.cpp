@@ -74,8 +74,7 @@ ListNamedShadowsForThingResponse::ListNamedShadowsForThingResponse(
  */
 const ListNamedShadowsForThingRequest * ListNamedShadowsForThingResponse::request() const
 {
-    Q_D(const ListNamedShadowsForThingResponse);
-    return static_cast<const ListNamedShadowsForThingRequest *>(d->request);
+    return static_cast<const ListNamedShadowsForThingRequest *>(IoTDataPlaneResponse::request());
 }
 
 /*!

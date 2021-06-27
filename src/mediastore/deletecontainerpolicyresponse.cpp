@@ -57,8 +57,7 @@ DeleteContainerPolicyResponse::DeleteContainerPolicyResponse(
  */
 const DeleteContainerPolicyRequest * DeleteContainerPolicyResponse::request() const
 {
-    Q_D(const DeleteContainerPolicyResponse);
-    return static_cast<const DeleteContainerPolicyRequest *>(d->request);
+    return static_cast<const DeleteContainerPolicyRequest *>(MediaStoreResponse::request());
 }
 
 /*!

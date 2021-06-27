@@ -133,16 +133,16 @@ EksClient::EksClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new EksClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-11-01"),
+    QStringLiteral("eks"),
+    QStringLiteral("Amazon Elastic Kubernetes Service"),
+    QStringLiteral("eks"),
+    parent), d_ptr(new EksClientPrivate(this))
 {
-    Q_D(EksClient);
-    d->apiVersion = QStringLiteral("2017-11-01");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("eks");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Elastic Kubernetes Service");
-    d->serviceName = QStringLiteral("eks");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -161,16 +161,16 @@ EksClient::EksClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new EksClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-11-01"),
+    QStringLiteral("eks"),
+    QStringLiteral("Amazon Elastic Kubernetes Service"),
+    QStringLiteral("eks"),
+    parent), d_ptr(new EksClientPrivate(this))
 {
-    Q_D(EksClient);
-    d->apiVersion = QStringLiteral("2017-11-01");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("eks");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Elastic Kubernetes Service");
-    d->serviceName = QStringLiteral("eks");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -816,10 +816,9 @@ UpdateNodegroupVersionResponse * EksClient::updateNodegroupVersion(const UpdateN
 /*!
  * Constructs a EksClientPrivate object with public implementation \a q.
  */
-EksClientPrivate::EksClientPrivate(EksClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+EksClientPrivate::EksClientPrivate(EksClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace EKS

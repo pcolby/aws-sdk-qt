@@ -61,8 +61,7 @@ CreateBGPPeerResponse::CreateBGPPeerResponse(
  */
 const CreateBGPPeerRequest * CreateBGPPeerResponse::request() const
 {
-    Q_D(const CreateBGPPeerResponse);
-    return static_cast<const CreateBGPPeerRequest *>(d->request);
+    return static_cast<const CreateBGPPeerRequest *>(DirectConnectResponse::request());
 }
 
 /*!

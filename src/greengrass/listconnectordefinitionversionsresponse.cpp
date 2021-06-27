@@ -58,8 +58,7 @@ ListConnectorDefinitionVersionsResponse::ListConnectorDefinitionVersionsResponse
  */
 const ListConnectorDefinitionVersionsRequest * ListConnectorDefinitionVersionsResponse::request() const
 {
-    Q_D(const ListConnectorDefinitionVersionsResponse);
-    return static_cast<const ListConnectorDefinitionVersionsRequest *>(d->request);
+    return static_cast<const ListConnectorDefinitionVersionsRequest *>(GreengrassResponse::request());
 }
 
 /*!

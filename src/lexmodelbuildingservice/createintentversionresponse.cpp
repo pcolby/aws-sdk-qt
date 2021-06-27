@@ -59,8 +59,7 @@ CreateIntentVersionResponse::CreateIntentVersionResponse(
  */
 const CreateIntentVersionRequest * CreateIntentVersionResponse::request() const
 {
-    Q_D(const CreateIntentVersionResponse);
-    return static_cast<const CreateIntentVersionRequest *>(d->request);
+    return static_cast<const CreateIntentVersionRequest *>(LexModelBuildingServiceResponse::request());
 }
 
 /*!

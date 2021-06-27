@@ -141,8 +141,7 @@ DescribeAccountResponse::DescribeAccountResponse(
  */
 const DescribeAccountRequest * DescribeAccountResponse::request() const
 {
-    Q_D(const DescribeAccountResponse);
-    return static_cast<const DescribeAccountRequest *>(d->request);
+    return static_cast<const DescribeAccountRequest *>(OrganizationsResponse::request());
 }
 
 /*!

@@ -62,8 +62,7 @@ PutLexiconResponse::PutLexiconResponse(
  */
 const PutLexiconRequest * PutLexiconResponse::request() const
 {
-    Q_D(const PutLexiconResponse);
-    return static_cast<const PutLexiconRequest *>(d->request);
+    return static_cast<const PutLexiconRequest *>(PollyResponse::request());
 }
 
 /*!

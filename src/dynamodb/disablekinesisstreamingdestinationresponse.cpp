@@ -74,8 +74,7 @@ DisableKinesisStreamingDestinationResponse::DisableKinesisStreamingDestinationRe
  */
 const DisableKinesisStreamingDestinationRequest * DisableKinesisStreamingDestinationResponse::request() const
 {
-    Q_D(const DisableKinesisStreamingDestinationResponse);
-    return static_cast<const DisableKinesisStreamingDestinationRequest *>(d->request);
+    return static_cast<const DisableKinesisStreamingDestinationRequest *>(DynamoDBResponse::request());
 }
 
 /*!

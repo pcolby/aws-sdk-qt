@@ -293,8 +293,7 @@ GetRepositoryPermissionsPolicyResponse::GetRepositoryPermissionsPolicyResponse(
  */
 const GetRepositoryPermissionsPolicyRequest * GetRepositoryPermissionsPolicyResponse::request() const
 {
-    Q_D(const GetRepositoryPermissionsPolicyResponse);
-    return static_cast<const GetRepositoryPermissionsPolicyRequest *>(d->request);
+    return static_cast<const GetRepositoryPermissionsPolicyRequest *>(CodeArtifactResponse::request());
 }
 
 /*!

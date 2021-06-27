@@ -55,8 +55,7 @@ DeleteHITResponse::DeleteHITResponse(
  */
 const DeleteHITRequest * DeleteHITResponse::request() const
 {
-    Q_D(const DeleteHITResponse);
-    return static_cast<const DeleteHITRequest *>(d->request);
+    return static_cast<const DeleteHITRequest *>(MTurkResponse::request());
 }
 
 /*!

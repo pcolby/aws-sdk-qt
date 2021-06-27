@@ -66,8 +66,7 @@ CreateRevisionResponse::CreateRevisionResponse(
  */
 const CreateRevisionRequest * CreateRevisionResponse::request() const
 {
-    Q_D(const CreateRevisionResponse);
-    return static_cast<const CreateRevisionRequest *>(d->request);
+    return static_cast<const CreateRevisionRequest *>(DataExchangeResponse::request());
 }
 
 /*!

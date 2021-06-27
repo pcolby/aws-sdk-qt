@@ -56,8 +56,7 @@ DeleteAccessPointResponse::DeleteAccessPointResponse(
  */
 const DeleteAccessPointRequest * DeleteAccessPointResponse::request() const
 {
-    Q_D(const DeleteAccessPointResponse);
-    return static_cast<const DeleteAccessPointRequest *>(d->request);
+    return static_cast<const DeleteAccessPointRequest *>(S3ControlResponse::request());
 }
 
 /*!

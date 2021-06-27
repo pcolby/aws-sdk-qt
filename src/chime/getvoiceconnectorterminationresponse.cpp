@@ -98,8 +98,7 @@ GetVoiceConnectorTerminationResponse::GetVoiceConnectorTerminationResponse(
  */
 const GetVoiceConnectorTerminationRequest * GetVoiceConnectorTerminationResponse::request() const
 {
-    Q_D(const GetVoiceConnectorTerminationResponse);
-    return static_cast<const GetVoiceConnectorTerminationRequest *>(d->request);
+    return static_cast<const GetVoiceConnectorTerminationRequest *>(ChimeResponse::request());
 }
 
 /*!

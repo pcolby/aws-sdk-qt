@@ -60,8 +60,7 @@ ListDomainsResponse::ListDomainsResponse(
  */
 const ListDomainsRequest * ListDomainsResponse::request() const
 {
-    Q_D(const ListDomainsResponse);
-    return static_cast<const ListDomainsRequest *>(d->request);
+    return static_cast<const ListDomainsRequest *>(WorkLinkResponse::request());
 }
 
 /*!

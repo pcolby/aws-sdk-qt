@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    HoneycodeResponsePrivate * const d_ptr; ///< Internal d-pointer.
     HoneycodeResponse(HoneycodeResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

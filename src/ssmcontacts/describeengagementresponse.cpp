@@ -55,8 +55,7 @@ DescribeEngagementResponse::DescribeEngagementResponse(
  */
 const DescribeEngagementRequest * DescribeEngagementResponse::request() const
 {
-    Q_D(const DescribeEngagementResponse);
-    return static_cast<const DescribeEngagementRequest *>(d->request);
+    return static_cast<const DescribeEngagementRequest *>(SSMContactsResponse::request());
 }
 
 /*!

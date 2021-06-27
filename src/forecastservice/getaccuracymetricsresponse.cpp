@@ -56,8 +56,7 @@ GetAccuracyMetricsResponse::GetAccuracyMetricsResponse(
  */
 const GetAccuracyMetricsRequest * GetAccuracyMetricsResponse::request() const
 {
-    Q_D(const GetAccuracyMetricsResponse);
-    return static_cast<const GetAccuracyMetricsRequest *>(d->request);
+    return static_cast<const GetAccuracyMetricsRequest *>(ForecastServiceResponse::request());
 }
 
 /*!

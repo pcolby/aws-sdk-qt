@@ -74,8 +74,7 @@ CloseInstancePublicPortsResponse::CloseInstancePublicPortsResponse(
  */
 const CloseInstancePublicPortsRequest * CloseInstancePublicPortsResponse::request() const
 {
-    Q_D(const CloseInstancePublicPortsResponse);
-    return static_cast<const CloseInstancePublicPortsRequest *>(d->request);
+    return static_cast<const CloseInstancePublicPortsRequest *>(LightsailResponse::request());
 }
 
 /*!

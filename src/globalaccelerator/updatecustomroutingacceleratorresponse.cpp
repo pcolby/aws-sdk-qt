@@ -218,8 +218,7 @@ UpdateCustomRoutingAcceleratorResponse::UpdateCustomRoutingAcceleratorResponse(
  */
 const UpdateCustomRoutingAcceleratorRequest * UpdateCustomRoutingAcceleratorResponse::request() const
 {
-    Q_D(const UpdateCustomRoutingAcceleratorResponse);
-    return static_cast<const UpdateCustomRoutingAcceleratorRequest *>(d->request);
+    return static_cast<const UpdateCustomRoutingAcceleratorRequest *>(GlobalAcceleratorResponse::request());
 }
 
 /*!

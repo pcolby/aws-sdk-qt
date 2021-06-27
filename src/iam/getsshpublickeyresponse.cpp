@@ -62,8 +62,7 @@ GetSSHPublicKeyResponse::GetSSHPublicKeyResponse(
  */
 const GetSSHPublicKeyRequest * GetSSHPublicKeyResponse::request() const
 {
-    Q_D(const GetSSHPublicKeyResponse);
-    return static_cast<const GetSSHPublicKeyRequest *>(d->request);
+    return static_cast<const GetSSHPublicKeyRequest *>(IamResponse::request());
 }
 
 /*!

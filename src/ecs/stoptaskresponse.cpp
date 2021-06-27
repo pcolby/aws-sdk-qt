@@ -72,8 +72,7 @@ StopTaskResponse::StopTaskResponse(
  */
 const StopTaskRequest * StopTaskResponse::request() const
 {
-    Q_D(const StopTaskResponse);
-    return static_cast<const StopTaskRequest *>(d->request);
+    return static_cast<const StopTaskRequest *>(EcsResponse::request());
 }
 
 /*!

@@ -115,8 +115,7 @@ DeleteFleetLocationsResponse::DeleteFleetLocationsResponse(
  */
 const DeleteFleetLocationsRequest * DeleteFleetLocationsResponse::request() const
 {
-    Q_D(const DeleteFleetLocationsResponse);
-    return static_cast<const DeleteFleetLocationsRequest *>(d->request);
+    return static_cast<const DeleteFleetLocationsRequest *>(GameLiftResponse::request());
 }
 
 /*!

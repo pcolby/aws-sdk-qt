@@ -79,8 +79,7 @@ GetContactAttributesResponse::GetContactAttributesResponse(
  */
 const GetContactAttributesRequest * GetContactAttributesResponse::request() const
 {
-    Q_D(const GetContactAttributesResponse);
-    return static_cast<const GetContactAttributesRequest *>(d->request);
+    return static_cast<const GetContactAttributesRequest *>(ConnectResponse::request());
 }
 
 /*!

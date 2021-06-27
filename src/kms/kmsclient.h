@@ -184,6 +184,12 @@ public slots:
     UpdateKeyDescriptionResponse * updateKeyDescription(const UpdateKeyDescriptionRequest &request);
     VerifyResponse * verify(const VerifyRequest &request);
 
+protected:
+    /// @cond internal
+    KmsClientPrivate * const d_ptr; ///< Internal d-pointer.
+    KmsClient(KmsClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(KmsClient)
     Q_DISABLE_COPY(KmsClient)

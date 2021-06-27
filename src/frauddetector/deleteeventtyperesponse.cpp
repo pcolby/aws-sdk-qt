@@ -58,8 +58,7 @@ DeleteEventTypeResponse::DeleteEventTypeResponse(
  */
 const DeleteEventTypeRequest * DeleteEventTypeResponse::request() const
 {
-    Q_D(const DeleteEventTypeResponse);
-    return static_cast<const DeleteEventTypeRequest *>(d->request);
+    return static_cast<const DeleteEventTypeRequest *>(FraudDetectorResponse::request());
 }
 
 /*!

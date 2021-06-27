@@ -372,16 +372,16 @@ SsmClient::SsmClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SsmClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2014-11-06"),
+    QStringLiteral("ssm"),
+    QStringLiteral("Amazon Simple Systems Manager (SSM)"),
+    QStringLiteral("ssm"),
+    parent), d_ptr(new SsmClientPrivate(this))
 {
-    Q_D(SsmClient);
-    d->apiVersion = QStringLiteral("2014-11-06");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("ssm");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Simple Systems Manager (SSM)");
-    d->serviceName = QStringLiteral("ssm");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -400,16 +400,16 @@ SsmClient::SsmClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SsmClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2014-11-06"),
+    QStringLiteral("ssm"),
+    QStringLiteral("Amazon Simple Systems Manager (SSM)"),
+    QStringLiteral("ssm"),
+    parent), d_ptr(new SsmClientPrivate(this))
 {
-    Q_D(SsmClient);
-    d->apiVersion = QStringLiteral("2014-11-06");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("ssm");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Simple Systems Manager (SSM)");
-    d->serviceName = QStringLiteral("ssm");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -2744,10 +2744,9 @@ UpdateServiceSettingResponse * SsmClient::updateServiceSetting(const UpdateServi
 /*!
  * Constructs a SsmClientPrivate object with public implementation \a q.
  */
-SsmClientPrivate::SsmClientPrivate(SsmClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+SsmClientPrivate::SsmClientPrivate(SsmClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace SSM

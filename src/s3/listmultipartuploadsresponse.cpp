@@ -55,8 +55,7 @@ ListMultipartUploadsResponse::ListMultipartUploadsResponse(
  */
 const ListMultipartUploadsRequest * ListMultipartUploadsResponse::request() const
 {
-    Q_D(const ListMultipartUploadsResponse);
-    return static_cast<const ListMultipartUploadsRequest *>(d->request);
+    return static_cast<const ListMultipartUploadsRequest *>(S3Response::request());
 }
 
 /*!

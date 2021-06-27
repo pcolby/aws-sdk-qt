@@ -78,16 +78,16 @@ MarketplaceEntitlementServiceClient::MarketplaceEntitlementServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new MarketplaceEntitlementServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-01-11"),
+    QStringLiteral("entitlement.marketplace"),
+    QStringLiteral("AWS Marketplace Entitlement Service"),
+    QStringLiteral("aws-marketplace"),
+    parent), d_ptr(new MarketplaceEntitlementServiceClientPrivate(this))
 {
-    Q_D(MarketplaceEntitlementServiceClient);
-    d->apiVersion = QStringLiteral("2017-01-11");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("entitlement.marketplace");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Marketplace Entitlement Service");
-    d->serviceName = QStringLiteral("aws-marketplace");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -106,16 +106,16 @@ MarketplaceEntitlementServiceClient::MarketplaceEntitlementServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new MarketplaceEntitlementServiceClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-01-11"),
+    QStringLiteral("entitlement.marketplace"),
+    QStringLiteral("AWS Marketplace Entitlement Service"),
+    QStringLiteral("aws-marketplace"),
+    parent), d_ptr(new MarketplaceEntitlementServiceClientPrivate(this))
 {
-    Q_D(MarketplaceEntitlementServiceClient);
-    d->apiVersion = QStringLiteral("2017-01-11");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("entitlement.marketplace");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Marketplace Entitlement Service");
-    d->serviceName = QStringLiteral("aws-marketplace");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -144,10 +144,9 @@ GetEntitlementsResponse * MarketplaceEntitlementServiceClient::getEntitlements(c
 /*!
  * Constructs a MarketplaceEntitlementServiceClientPrivate object with public implementation \a q.
  */
-MarketplaceEntitlementServiceClientPrivate::MarketplaceEntitlementServiceClientPrivate(MarketplaceEntitlementServiceClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+MarketplaceEntitlementServiceClientPrivate::MarketplaceEntitlementServiceClientPrivate(MarketplaceEntitlementServiceClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace MarketplaceEntitlementService

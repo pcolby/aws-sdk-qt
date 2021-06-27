@@ -98,8 +98,7 @@ GetUserSettingsResponse::GetUserSettingsResponse(
  */
 const GetUserSettingsRequest * GetUserSettingsResponse::request() const
 {
-    Q_D(const GetUserSettingsResponse);
-    return static_cast<const GetUserSettingsRequest *>(d->request);
+    return static_cast<const GetUserSettingsRequest *>(ChimeResponse::request());
 }
 
 /*!

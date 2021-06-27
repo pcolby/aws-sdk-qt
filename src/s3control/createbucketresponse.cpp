@@ -56,8 +56,7 @@ CreateBucketResponse::CreateBucketResponse(
  */
 const CreateBucketRequest * CreateBucketResponse::request() const
 {
-    Q_D(const CreateBucketResponse);
-    return static_cast<const CreateBucketRequest *>(d->request);
+    return static_cast<const CreateBucketRequest *>(S3ControlResponse::request());
 }
 
 /*!

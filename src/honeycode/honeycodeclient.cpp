@@ -86,16 +86,16 @@ HoneycodeClient::HoneycodeClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new HoneycodeClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-03-01"),
+    QStringLiteral("honeycode"),
+    QStringLiteral("Amazon Honeycode"),
+    QStringLiteral("honeycode"),
+    parent), d_ptr(new HoneycodeClientPrivate(this))
 {
-    Q_D(HoneycodeClient);
-    d->apiVersion = QStringLiteral("2020-03-01");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("honeycode");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Honeycode");
-    d->serviceName = QStringLiteral("honeycode");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -114,16 +114,16 @@ HoneycodeClient::HoneycodeClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new HoneycodeClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-03-01"),
+    QStringLiteral("honeycode"),
+    QStringLiteral("Amazon Honeycode"),
+    QStringLiteral("honeycode"),
+    parent), d_ptr(new HoneycodeClientPrivate(this))
 {
-    Q_D(HoneycodeClient);
-    d->apiVersion = QStringLiteral("2020-03-01");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("honeycode");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Honeycode");
-    d->serviceName = QStringLiteral("honeycode");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -322,10 +322,9 @@ StartTableDataImportJobResponse * HoneycodeClient::startTableDataImportJob(const
 /*!
  * Constructs a HoneycodeClientPrivate object with public implementation \a q.
  */
-HoneycodeClientPrivate::HoneycodeClientPrivate(HoneycodeClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+HoneycodeClientPrivate::HoneycodeClientPrivate(HoneycodeClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace Honeycode

@@ -82,8 +82,7 @@ DeleteAuditSuppressionResponse::DeleteAuditSuppressionResponse(
  */
 const DeleteAuditSuppressionRequest * DeleteAuditSuppressionResponse::request() const
 {
-    Q_D(const DeleteAuditSuppressionResponse);
-    return static_cast<const DeleteAuditSuppressionRequest *>(d->request);
+    return static_cast<const DeleteAuditSuppressionRequest *>(IoTResponse::request());
 }
 
 /*!

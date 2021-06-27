@@ -128,16 +128,16 @@ WellArchitectedClient::WellArchitectedClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new WellArchitectedClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-03-31"),
+    QStringLiteral("wellarchitected"),
+    QStringLiteral("AWS Well-Architected Tool"),
+    QStringLiteral("wellarchitected"),
+    parent), d_ptr(new WellArchitectedClientPrivate(this))
 {
-    Q_D(WellArchitectedClient);
-    d->apiVersion = QStringLiteral("2020-03-31");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("wellarchitected");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Well-Architected Tool");
-    d->serviceName = QStringLiteral("wellarchitected");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -156,16 +156,16 @@ WellArchitectedClient::WellArchitectedClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new WellArchitectedClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-03-31"),
+    QStringLiteral("wellarchitected"),
+    QStringLiteral("AWS Well-Architected Tool"),
+    QStringLiteral("wellarchitected"),
+    parent), d_ptr(new WellArchitectedClientPrivate(this))
 {
-    Q_D(WellArchitectedClient);
-    d->apiVersion = QStringLiteral("2020-03-31");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("wellarchitected");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Well-Architected Tool");
-    d->serviceName = QStringLiteral("wellarchitected");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -609,10 +609,9 @@ UpgradeLensReviewResponse * WellArchitectedClient::upgradeLensReview(const Upgra
 /*!
  * Constructs a WellArchitectedClientPrivate object with public implementation \a q.
  */
-WellArchitectedClientPrivate::WellArchitectedClientPrivate(WellArchitectedClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+WellArchitectedClientPrivate::WellArchitectedClientPrivate(WellArchitectedClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace WellArchitected

@@ -58,8 +58,7 @@ CreateDocumentClassifierResponse::CreateDocumentClassifierResponse(
  */
 const CreateDocumentClassifierRequest * CreateDocumentClassifierResponse::request() const
 {
-    Q_D(const CreateDocumentClassifierResponse);
-    return static_cast<const CreateDocumentClassifierRequest *>(d->request);
+    return static_cast<const CreateDocumentClassifierRequest *>(ComprehendResponse::request());
 }
 
 /*!

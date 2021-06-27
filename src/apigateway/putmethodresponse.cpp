@@ -60,8 +60,7 @@ PutMethodResponse::PutMethodResponse(
  */
 const PutMethodRequest * PutMethodResponse::request() const
 {
-    Q_D(const PutMethodResponse);
-    return static_cast<const PutMethodRequest *>(d->request);
+    return static_cast<const PutMethodRequest *>(APIGatewayResponse::request());
 }
 
 /*!

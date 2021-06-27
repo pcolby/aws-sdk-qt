@@ -68,8 +68,7 @@ DescribeLaunchConfigurationsResponse::DescribeLaunchConfigurationsResponse(
  */
 const DescribeLaunchConfigurationsRequest * DescribeLaunchConfigurationsResponse::request() const
 {
-    Q_D(const DescribeLaunchConfigurationsResponse);
-    return static_cast<const DescribeLaunchConfigurationsRequest *>(d->request);
+    return static_cast<const DescribeLaunchConfigurationsRequest *>(AutoScalingResponse::request());
 }
 
 /*!

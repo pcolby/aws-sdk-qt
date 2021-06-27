@@ -66,8 +66,7 @@ AdminListGroupsForUserResponse::AdminListGroupsForUserResponse(
  */
 const AdminListGroupsForUserRequest * AdminListGroupsForUserResponse::request() const
 {
-    Q_D(const AdminListGroupsForUserResponse);
-    return static_cast<const AdminListGroupsForUserRequest *>(d->request);
+    return static_cast<const AdminListGroupsForUserRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

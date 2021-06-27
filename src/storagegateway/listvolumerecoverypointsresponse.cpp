@@ -124,8 +124,7 @@ ListVolumeRecoveryPointsResponse::ListVolumeRecoveryPointsResponse(
  */
 const ListVolumeRecoveryPointsRequest * ListVolumeRecoveryPointsResponse::request() const
 {
-    Q_D(const ListVolumeRecoveryPointsResponse);
-    return static_cast<const ListVolumeRecoveryPointsRequest *>(d->request);
+    return static_cast<const ListVolumeRecoveryPointsRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

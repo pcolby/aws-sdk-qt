@@ -37,7 +37,7 @@ namespace AmplifyBackend {
  * Constructs a AmplifyBackendResponse object with parent \a parent.
  */
 AmplifyBackendResponse::AmplifyBackendResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new AmplifyBackendResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new AmplifyBackendResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ AmplifyBackendResponse::AmplifyBackendResponse(QObject * const parent)
  * implementation that inherits from AmplifyBackendResponsePrivate.
  */
 AmplifyBackendResponse::AmplifyBackendResponse(AmplifyBackendResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void AmplifyBackendResponse::parseFailure(QIODevice &response)
  * Constructs a AmplifyBackendResponsePrivate object with public implementation \a q.
  */
 AmplifyBackendResponsePrivate::AmplifyBackendResponsePrivate(
-    AmplifyBackendResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    AmplifyBackendResponse * const q) : q_ptr(q)
 {
 
 }

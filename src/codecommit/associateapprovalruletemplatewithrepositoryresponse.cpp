@@ -439,8 +439,7 @@ AssociateApprovalRuleTemplateWithRepositoryResponse::AssociateApprovalRuleTempla
  */
 const AssociateApprovalRuleTemplateWithRepositoryRequest * AssociateApprovalRuleTemplateWithRepositoryResponse::request() const
 {
-    Q_D(const AssociateApprovalRuleTemplateWithRepositoryResponse);
-    return static_cast<const AssociateApprovalRuleTemplateWithRepositoryRequest *>(d->request);
+    return static_cast<const AssociateApprovalRuleTemplateWithRepositoryRequest *>(CodeCommitResponse::request());
 }
 
 /*!

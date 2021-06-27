@@ -20,15 +20,12 @@
 #ifndef QTAWS_BATCHREQUEST_P_H
 #define QTAWS_BATCHREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "batchrequest.h"
-
 namespace QtAws {
 namespace Batch {
 
 class BatchRequest;
 
-class BatchRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class BatchRequestPrivate {
 
 public:
     BatchRequest::Action action; ///< Batch action to be performed.
@@ -39,6 +36,9 @@ public:
     BatchRequestPrivate(const BatchRequestPrivate &other, BatchRequest * const q);
 
     static QString toString(const BatchRequest::Action &action);
+
+protected:
+    BatchRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(BatchRequest)

@@ -37,7 +37,7 @@ namespace ResourceGroupsTaggingAPI {
  * Constructs a ResourceGroupsTaggingAPIResponse object with parent \a parent.
  */
 ResourceGroupsTaggingAPIResponse::ResourceGroupsTaggingAPIResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new ResourceGroupsTaggingAPIResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ResourceGroupsTaggingAPIResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ ResourceGroupsTaggingAPIResponse::ResourceGroupsTaggingAPIResponse(QObject * con
  * implementation that inherits from ResourceGroupsTaggingAPIResponsePrivate.
  */
 ResourceGroupsTaggingAPIResponse::ResourceGroupsTaggingAPIResponse(ResourceGroupsTaggingAPIResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void ResourceGroupsTaggingAPIResponse::parseFailure(QIODevice &response)
  * Constructs a ResourceGroupsTaggingAPIResponsePrivate object with public implementation \a q.
  */
 ResourceGroupsTaggingAPIResponsePrivate::ResourceGroupsTaggingAPIResponsePrivate(
-    ResourceGroupsTaggingAPIResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    ResourceGroupsTaggingAPIResponse * const q) : q_ptr(q)
 {
 
 }

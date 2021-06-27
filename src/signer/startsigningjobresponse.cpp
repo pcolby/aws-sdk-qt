@@ -80,8 +80,7 @@ StartSigningJobResponse::StartSigningJobResponse(
  */
 const StartSigningJobRequest * StartSigningJobResponse::request() const
 {
-    Q_D(const StartSigningJobResponse);
-    return static_cast<const StartSigningJobRequest *>(d->request);
+    return static_cast<const StartSigningJobRequest *>(signerResponse::request());
 }
 
 /*!

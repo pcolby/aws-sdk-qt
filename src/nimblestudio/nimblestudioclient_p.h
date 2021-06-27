@@ -20,19 +20,20 @@
 #ifndef QTAWS_NIMBLESTUDIOCLIENT_P_H
 #define QTAWS_NIMBLESTUDIOCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace NimbleStudio {
 
 class NimbleStudioClient;
 
-class NimbleStudioClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class NimbleStudioClientPrivate {
 
 public:
     NimbleStudioClientPrivate(NimbleStudioClient * const q);
+
+protected:
+    NimbleStudioClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(NimbleStudioClient)

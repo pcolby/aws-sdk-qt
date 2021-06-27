@@ -55,8 +55,7 @@ DeletePresetResponse::DeletePresetResponse(
  */
 const DeletePresetRequest * DeletePresetResponse::request() const
 {
-    Q_D(const DeletePresetResponse);
-    return static_cast<const DeletePresetRequest *>(d->request);
+    return static_cast<const DeletePresetRequest *>(MediaConvertResponse::request());
 }
 
 /*!

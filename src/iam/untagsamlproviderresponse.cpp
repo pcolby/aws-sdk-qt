@@ -62,8 +62,7 @@ UntagSAMLProviderResponse::UntagSAMLProviderResponse(
  */
 const UntagSAMLProviderRequest * UntagSAMLProviderResponse::request() const
 {
-    Q_D(const UntagSAMLProviderResponse);
-    return static_cast<const UntagSAMLProviderRequest *>(d->request);
+    return static_cast<const UntagSAMLProviderRequest *>(IamResponse::request());
 }
 
 /*!

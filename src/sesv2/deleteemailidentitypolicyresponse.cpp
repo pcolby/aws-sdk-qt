@@ -88,8 +88,7 @@ DeleteEmailIdentityPolicyResponse::DeleteEmailIdentityPolicyResponse(
  */
 const DeleteEmailIdentityPolicyRequest * DeleteEmailIdentityPolicyResponse::request() const
 {
-    Q_D(const DeleteEmailIdentityPolicyResponse);
-    return static_cast<const DeleteEmailIdentityPolicyRequest *>(d->request);
+    return static_cast<const DeleteEmailIdentityPolicyRequest *>(Sesv2Response::request());
 }
 
 /*!

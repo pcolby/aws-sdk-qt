@@ -61,8 +61,7 @@ DescribeDashboardResponse::DescribeDashboardResponse(
  */
 const DescribeDashboardRequest * DescribeDashboardResponse::request() const
 {
-    Q_D(const DescribeDashboardResponse);
-    return static_cast<const DescribeDashboardRequest *>(d->request);
+    return static_cast<const DescribeDashboardRequest *>(IoTSiteWiseResponse::request());
 }
 
 /*!

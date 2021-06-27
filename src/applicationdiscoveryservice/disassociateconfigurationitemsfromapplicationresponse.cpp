@@ -159,8 +159,7 @@ DisassociateConfigurationItemsFromApplicationResponse::DisassociateConfiguration
  */
 const DisassociateConfigurationItemsFromApplicationRequest * DisassociateConfigurationItemsFromApplicationResponse::request() const
 {
-    Q_D(const DisassociateConfigurationItemsFromApplicationResponse);
-    return static_cast<const DisassociateConfigurationItemsFromApplicationRequest *>(d->request);
+    return static_cast<const DisassociateConfigurationItemsFromApplicationRequest *>(ApplicationDiscoveryServiceResponse::request());
 }
 
 /*!

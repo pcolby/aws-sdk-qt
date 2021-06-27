@@ -79,8 +79,7 @@ UpdateUserPhoneConfigResponse::UpdateUserPhoneConfigResponse(
  */
 const UpdateUserPhoneConfigRequest * UpdateUserPhoneConfigResponse::request() const
 {
-    Q_D(const UpdateUserPhoneConfigResponse);
-    return static_cast<const UpdateUserPhoneConfigRequest *>(d->request);
+    return static_cast<const UpdateUserPhoneConfigRequest *>(ConnectResponse::request());
 }
 
 /*!

@@ -62,8 +62,7 @@ GetAnswerResponse::GetAnswerResponse(
  */
 const GetAnswerRequest * GetAnswerResponse::request() const
 {
-    Q_D(const GetAnswerResponse);
-    return static_cast<const GetAnswerRequest *>(d->request);
+    return static_cast<const GetAnswerRequest *>(WellArchitectedResponse::request());
 }
 
 /*!

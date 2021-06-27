@@ -37,7 +37,7 @@ namespace ApplicationCostProfiler {
  * Constructs a ApplicationCostProfilerResponse object with parent \a parent.
  */
 ApplicationCostProfilerResponse::ApplicationCostProfilerResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new ApplicationCostProfilerResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ApplicationCostProfilerResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ ApplicationCostProfilerResponse::ApplicationCostProfilerResponse(QObject * const
  * implementation that inherits from ApplicationCostProfilerResponsePrivate.
  */
 ApplicationCostProfilerResponse::ApplicationCostProfilerResponse(ApplicationCostProfilerResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void ApplicationCostProfilerResponse::parseFailure(QIODevice &response)
  * Constructs a ApplicationCostProfilerResponsePrivate object with public implementation \a q.
  */
 ApplicationCostProfilerResponsePrivate::ApplicationCostProfilerResponsePrivate(
-    ApplicationCostProfilerResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    ApplicationCostProfilerResponse * const q) : q_ptr(q)
 {
 
 }

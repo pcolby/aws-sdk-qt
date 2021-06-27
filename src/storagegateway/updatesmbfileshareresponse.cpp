@@ -124,8 +124,7 @@ UpdateSMBFileShareResponse::UpdateSMBFileShareResponse(
  */
 const UpdateSMBFileShareRequest * UpdateSMBFileShareResponse::request() const
 {
-    Q_D(const UpdateSMBFileShareResponse);
-    return static_cast<const UpdateSMBFileShareRequest *>(d->request);
+    return static_cast<const UpdateSMBFileShareRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

@@ -115,8 +115,7 @@ AcceptMatchResponse::AcceptMatchResponse(
  */
 const AcceptMatchRequest * AcceptMatchResponse::request() const
 {
-    Q_D(const AcceptMatchResponse);
-    return static_cast<const AcceptMatchRequest *>(d->request);
+    return static_cast<const AcceptMatchRequest *>(GameLiftResponse::request());
 }
 
 /*!

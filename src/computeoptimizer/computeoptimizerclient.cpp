@@ -94,16 +94,16 @@ ComputeOptimizerClient::ComputeOptimizerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ComputeOptimizerClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-11-01"),
+    QStringLiteral("compute-optimizer"),
+    QStringLiteral("AWS Compute Optimizer"),
+    QStringLiteral("compute-optimizer"),
+    parent), d_ptr(new ComputeOptimizerClientPrivate(this))
 {
-    Q_D(ComputeOptimizerClient);
-    d->apiVersion = QStringLiteral("2019-11-01");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("compute-optimizer");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Compute Optimizer");
-    d->serviceName = QStringLiteral("compute-optimizer");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -122,16 +122,16 @@ ComputeOptimizerClient::ComputeOptimizerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ComputeOptimizerClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-11-01"),
+    QStringLiteral("compute-optimizer"),
+    QStringLiteral("AWS Compute Optimizer"),
+    QStringLiteral("compute-optimizer"),
+    parent), d_ptr(new ComputeOptimizerClientPrivate(this))
 {
-    Q_D(ComputeOptimizerClient);
-    d->apiVersion = QStringLiteral("2019-11-01");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("compute-optimizer");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Compute Optimizer");
-    d->serviceName = QStringLiteral("compute-optimizer");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -443,10 +443,9 @@ UpdateEnrollmentStatusResponse * ComputeOptimizerClient::updateEnrollmentStatus(
 /*!
  * Constructs a ComputeOptimizerClientPrivate object with public implementation \a q.
  */
-ComputeOptimizerClientPrivate::ComputeOptimizerClientPrivate(ComputeOptimizerClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+ComputeOptimizerClientPrivate::ComputeOptimizerClientPrivate(ComputeOptimizerClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace ComputeOptimizer

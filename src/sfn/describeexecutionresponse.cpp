@@ -74,8 +74,7 @@ DescribeExecutionResponse::DescribeExecutionResponse(
  */
 const DescribeExecutionRequest * DescribeExecutionResponse::request() const
 {
-    Q_D(const DescribeExecutionResponse);
-    return static_cast<const DescribeExecutionRequest *>(d->request);
+    return static_cast<const DescribeExecutionRequest *>(SfnResponse::request());
 }
 
 /*!

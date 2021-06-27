@@ -63,8 +63,7 @@ WriteRecordsResponse::WriteRecordsResponse(
  */
 const WriteRecordsRequest * WriteRecordsResponse::request() const
 {
-    Q_D(const WriteRecordsResponse);
-    return static_cast<const WriteRecordsRequest *>(d->request);
+    return static_cast<const WriteRecordsRequest *>(TimestreamWriteResponse::request());
 }
 
 /*!

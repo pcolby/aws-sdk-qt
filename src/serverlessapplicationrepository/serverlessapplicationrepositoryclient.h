@@ -88,6 +88,12 @@ public slots:
     UnshareApplicationResponse * unshareApplication(const UnshareApplicationRequest &request);
     UpdateApplicationResponse * updateApplication(const UpdateApplicationRequest &request);
 
+protected:
+    /// @cond internal
+    ServerlessApplicationRepositoryClientPrivate * const d_ptr; ///< Internal d-pointer.
+    ServerlessApplicationRepositoryClient(ServerlessApplicationRepositoryClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(ServerlessApplicationRepositoryClient)
     Q_DISABLE_COPY(ServerlessApplicationRepositoryClient)

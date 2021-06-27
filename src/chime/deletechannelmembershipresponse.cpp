@@ -98,8 +98,7 @@ DeleteChannelMembershipResponse::DeleteChannelMembershipResponse(
  */
 const DeleteChannelMembershipRequest * DeleteChannelMembershipResponse::request() const
 {
-    Q_D(const DeleteChannelMembershipResponse);
-    return static_cast<const DeleteChannelMembershipRequest *>(d->request);
+    return static_cast<const DeleteChannelMembershipRequest *>(ChimeResponse::request());
 }
 
 /*!

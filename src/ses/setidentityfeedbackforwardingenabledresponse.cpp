@@ -66,8 +66,7 @@ SetIdentityFeedbackForwardingEnabledResponse::SetIdentityFeedbackForwardingEnabl
  */
 const SetIdentityFeedbackForwardingEnabledRequest * SetIdentityFeedbackForwardingEnabledResponse::request() const
 {
-    Q_D(const SetIdentityFeedbackForwardingEnabledResponse);
-    return static_cast<const SetIdentityFeedbackForwardingEnabledRequest *>(d->request);
+    return static_cast<const SetIdentityFeedbackForwardingEnabledRequest *>(SesResponse::request());
 }
 
 /*!

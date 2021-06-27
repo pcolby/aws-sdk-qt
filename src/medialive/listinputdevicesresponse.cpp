@@ -55,8 +55,7 @@ ListInputDevicesResponse::ListInputDevicesResponse(
  */
 const ListInputDevicesRequest * ListInputDevicesResponse::request() const
 {
-    Q_D(const ListInputDevicesResponse);
-    return static_cast<const ListInputDevicesRequest *>(d->request);
+    return static_cast<const ListInputDevicesRequest *>(MediaLiveResponse::request());
 }
 
 /*!

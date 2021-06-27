@@ -67,8 +67,7 @@ GetProtocolsListResponse::GetProtocolsListResponse(
  */
 const GetProtocolsListRequest * GetProtocolsListResponse::request() const
 {
-    Q_D(const GetProtocolsListResponse);
-    return static_cast<const GetProtocolsListRequest *>(d->request);
+    return static_cast<const GetProtocolsListRequest *>(FmsResponse::request());
 }
 
 /*!

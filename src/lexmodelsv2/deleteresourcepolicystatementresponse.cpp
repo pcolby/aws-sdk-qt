@@ -55,8 +55,7 @@ DeleteResourcePolicyStatementResponse::DeleteResourcePolicyStatementResponse(
  */
 const DeleteResourcePolicyStatementRequest * DeleteResourcePolicyStatementResponse::request() const
 {
-    Q_D(const DeleteResourcePolicyStatementResponse);
-    return static_cast<const DeleteResourcePolicyStatementRequest *>(d->request);
+    return static_cast<const DeleteResourcePolicyStatementRequest *>(LexModelsV2Response::request());
 }
 
 /*!

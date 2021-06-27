@@ -20,15 +20,12 @@
 #ifndef QTAWS_EC2INSTANCECONNECTREQUEST_P_H
 #define QTAWS_EC2INSTANCECONNECTREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "ec2instanceconnectrequest.h"
-
 namespace QtAws {
 namespace EC2InstanceConnect {
 
 class EC2InstanceConnectRequest;
 
-class EC2InstanceConnectRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class EC2InstanceConnectRequestPrivate {
 
 public:
     EC2InstanceConnectRequest::Action action; ///< EC2InstanceConnect action to be performed.
@@ -39,6 +36,9 @@ public:
     EC2InstanceConnectRequestPrivate(const EC2InstanceConnectRequestPrivate &other, EC2InstanceConnectRequest * const q);
 
     static QString toString(const EC2InstanceConnectRequest::Action &action);
+
+protected:
+    EC2InstanceConnectRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(EC2InstanceConnectRequest)

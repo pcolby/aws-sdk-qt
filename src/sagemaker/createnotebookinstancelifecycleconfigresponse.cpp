@@ -70,8 +70,7 @@ CreateNotebookInstanceLifecycleConfigResponse::CreateNotebookInstanceLifecycleCo
  */
 const CreateNotebookInstanceLifecycleConfigRequest * CreateNotebookInstanceLifecycleConfigResponse::request() const
 {
-    Q_D(const CreateNotebookInstanceLifecycleConfigResponse);
-    return static_cast<const CreateNotebookInstanceLifecycleConfigRequest *>(d->request);
+    return static_cast<const CreateNotebookInstanceLifecycleConfigRequest *>(SageMakerResponse::request());
 }
 
 /*!

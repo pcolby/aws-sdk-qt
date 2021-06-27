@@ -68,8 +68,7 @@ DisableMetricsCollectionResponse::DisableMetricsCollectionResponse(
  */
 const DisableMetricsCollectionRequest * DisableMetricsCollectionResponse::request() const
 {
-    Q_D(const DisableMetricsCollectionResponse);
-    return static_cast<const DisableMetricsCollectionRequest *>(d->request);
+    return static_cast<const DisableMetricsCollectionRequest *>(AutoScalingResponse::request());
 }
 
 /*!

@@ -61,8 +61,7 @@ AllocateConnectionOnInterconnectResponse::AllocateConnectionOnInterconnectRespon
  */
 const AllocateConnectionOnInterconnectRequest * AllocateConnectionOnInterconnectResponse::request() const
 {
-    Q_D(const AllocateConnectionOnInterconnectResponse);
-    return static_cast<const AllocateConnectionOnInterconnectRequest *>(d->request);
+    return static_cast<const AllocateConnectionOnInterconnectRequest *>(DirectConnectResponse::request());
 }
 
 /*!

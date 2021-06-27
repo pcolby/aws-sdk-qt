@@ -55,8 +55,7 @@ DeleteBucketPolicyResponse::DeleteBucketPolicyResponse(
  */
 const DeleteBucketPolicyRequest * DeleteBucketPolicyResponse::request() const
 {
-    Q_D(const DeleteBucketPolicyResponse);
-    return static_cast<const DeleteBucketPolicyRequest *>(d->request);
+    return static_cast<const DeleteBucketPolicyRequest *>(S3Response::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ BatchDeletePartitionResponse::BatchDeletePartitionResponse(
  */
 const BatchDeletePartitionRequest * BatchDeletePartitionResponse::request() const
 {
-    Q_D(const BatchDeletePartitionResponse);
-    return static_cast<const BatchDeletePartitionRequest *>(d->request);
+    return static_cast<const BatchDeletePartitionRequest *>(GlueResponse::request());
 }
 
 /*!

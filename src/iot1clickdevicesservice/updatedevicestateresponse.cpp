@@ -57,8 +57,7 @@ UpdateDeviceStateResponse::UpdateDeviceStateResponse(
  */
 const UpdateDeviceStateRequest * UpdateDeviceStateResponse::request() const
 {
-    Q_D(const UpdateDeviceStateResponse);
-    return static_cast<const UpdateDeviceStateRequest *>(d->request);
+    return static_cast<const UpdateDeviceStateRequest *>(IoT1ClickDevicesServiceResponse::request());
 }
 
 /*!

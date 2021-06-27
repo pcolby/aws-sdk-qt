@@ -57,8 +57,7 @@ RestoreBackupResponse::RestoreBackupResponse(
  */
 const RestoreBackupRequest * RestoreBackupResponse::request() const
 {
-    Q_D(const RestoreBackupResponse);
-    return static_cast<const RestoreBackupRequest *>(d->request);
+    return static_cast<const RestoreBackupRequest *>(CloudHSMV2Response::request());
 }
 
 /*!

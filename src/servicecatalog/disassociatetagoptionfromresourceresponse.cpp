@@ -61,8 +61,7 @@ DisassociateTagOptionFromResourceResponse::DisassociateTagOptionFromResourceResp
  */
 const DisassociateTagOptionFromResourceRequest * DisassociateTagOptionFromResourceResponse::request() const
 {
-    Q_D(const DisassociateTagOptionFromResourceResponse);
-    return static_cast<const DisassociateTagOptionFromResourceRequest *>(d->request);
+    return static_cast<const DisassociateTagOptionFromResourceRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

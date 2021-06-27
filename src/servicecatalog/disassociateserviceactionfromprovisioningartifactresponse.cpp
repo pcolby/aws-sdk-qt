@@ -61,8 +61,7 @@ DisassociateServiceActionFromProvisioningArtifactResponse::DisassociateServiceAc
  */
 const DisassociateServiceActionFromProvisioningArtifactRequest * DisassociateServiceActionFromProvisioningArtifactResponse::request() const
 {
-    Q_D(const DisassociateServiceActionFromProvisioningArtifactResponse);
-    return static_cast<const DisassociateServiceActionFromProvisioningArtifactRequest *>(d->request);
+    return static_cast<const DisassociateServiceActionFromProvisioningArtifactRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

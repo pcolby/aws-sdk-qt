@@ -56,8 +56,7 @@ ListHealthChecksResponse::ListHealthChecksResponse(
  */
 const ListHealthChecksRequest * ListHealthChecksResponse::request() const
 {
-    Q_D(const ListHealthChecksResponse);
-    return static_cast<const ListHealthChecksRequest *>(d->request);
+    return static_cast<const ListHealthChecksRequest *>(Route53Response::request());
 }
 
 /*!

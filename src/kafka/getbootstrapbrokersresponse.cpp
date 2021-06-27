@@ -56,8 +56,7 @@ GetBootstrapBrokersResponse::GetBootstrapBrokersResponse(
  */
 const GetBootstrapBrokersRequest * GetBootstrapBrokersResponse::request() const
 {
-    Q_D(const GetBootstrapBrokersResponse);
-    return static_cast<const GetBootstrapBrokersRequest *>(d->request);
+    return static_cast<const GetBootstrapBrokersRequest *>(KafkaResponse::request());
 }
 
 /*!

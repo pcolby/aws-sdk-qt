@@ -55,8 +55,7 @@ CreateUploadUrlResponse::CreateUploadUrlResponse(
  */
 const CreateUploadUrlRequest * CreateUploadUrlResponse::request() const
 {
-    Q_D(const CreateUploadUrlResponse);
-    return static_cast<const CreateUploadUrlRequest *>(d->request);
+    return static_cast<const CreateUploadUrlRequest *>(LexModelsV2Response::request());
 }
 
 /*!

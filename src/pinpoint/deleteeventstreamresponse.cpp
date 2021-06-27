@@ -56,8 +56,7 @@ DeleteEventStreamResponse::DeleteEventStreamResponse(
  */
 const DeleteEventStreamRequest * DeleteEventStreamResponse::request() const
 {
-    Q_D(const DeleteEventStreamResponse);
-    return static_cast<const DeleteEventStreamRequest *>(d->request);
+    return static_cast<const DeleteEventStreamRequest *>(PinpointResponse::request());
 }
 
 /*!

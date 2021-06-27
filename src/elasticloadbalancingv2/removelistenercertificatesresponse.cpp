@@ -90,8 +90,7 @@ RemoveListenerCertificatesResponse::RemoveListenerCertificatesResponse(
  */
 const RemoveListenerCertificatesRequest * RemoveListenerCertificatesResponse::request() const
 {
-    Q_D(const RemoveListenerCertificatesResponse);
-    return static_cast<const RemoveListenerCertificatesRequest *>(d->request);
+    return static_cast<const RemoveListenerCertificatesRequest *>(ElasticLoadBalancingv2Response::request());
 }
 
 /*!

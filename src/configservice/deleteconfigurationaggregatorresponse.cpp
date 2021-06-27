@@ -75,8 +75,7 @@ DeleteConfigurationAggregatorResponse::DeleteConfigurationAggregatorResponse(
  */
 const DeleteConfigurationAggregatorRequest * DeleteConfigurationAggregatorResponse::request() const
 {
-    Q_D(const DeleteConfigurationAggregatorResponse);
-    return static_cast<const DeleteConfigurationAggregatorRequest *>(d->request);
+    return static_cast<const DeleteConfigurationAggregatorRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

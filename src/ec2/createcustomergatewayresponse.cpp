@@ -87,8 +87,7 @@ CreateCustomerGatewayResponse::CreateCustomerGatewayResponse(
  */
 const CreateCustomerGatewayRequest * CreateCustomerGatewayResponse::request() const
 {
-    Q_D(const CreateCustomerGatewayResponse);
-    return static_cast<const CreateCustomerGatewayRequest *>(d->request);
+    return static_cast<const CreateCustomerGatewayRequest *>(Ec2Response::request());
 }
 
 /*!

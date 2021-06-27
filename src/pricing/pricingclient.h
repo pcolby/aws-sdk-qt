@@ -55,6 +55,12 @@ public slots:
     GetAttributeValuesResponse * getAttributeValues(const GetAttributeValuesRequest &request);
     GetProductsResponse * getProducts(const GetProductsRequest &request);
 
+protected:
+    /// @cond internal
+    PricingClientPrivate * const d_ptr; ///< Internal d-pointer.
+    PricingClient(PricingClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(PricingClient)
     Q_DISABLE_COPY(PricingClient)

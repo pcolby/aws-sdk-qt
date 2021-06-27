@@ -56,8 +56,7 @@ GetVoiceChannelResponse::GetVoiceChannelResponse(
  */
 const GetVoiceChannelRequest * GetVoiceChannelResponse::request() const
 {
-    Q_D(const GetVoiceChannelResponse);
-    return static_cast<const GetVoiceChannelRequest *>(d->request);
+    return static_cast<const GetVoiceChannelRequest *>(PinpointResponse::request());
 }
 
 /*!

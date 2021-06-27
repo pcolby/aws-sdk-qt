@@ -87,16 +87,16 @@ SsooidcClient::SsooidcClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SsooidcClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-06-10"),
+    QStringLiteral("oidc"),
+    QStringLiteral("AWS SSO OIDC"),
+    QStringLiteral("awsssooidc"),
+    parent), d_ptr(new SsooidcClientPrivate(this))
 {
-    Q_D(SsooidcClient);
-    d->apiVersion = QStringLiteral("2019-06-10");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("oidc");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS SSO OIDC");
-    d->serviceName = QStringLiteral("awsssooidc");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -115,16 +115,16 @@ SsooidcClient::SsooidcClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SsooidcClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-06-10"),
+    QStringLiteral("oidc"),
+    QStringLiteral("AWS SSO OIDC"),
+    QStringLiteral("awsssooidc"),
+    parent), d_ptr(new SsooidcClientPrivate(this))
 {
-    Q_D(SsooidcClient);
-    d->apiVersion = QStringLiteral("2019-06-10");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("oidc");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS SSO OIDC");
-    d->serviceName = QStringLiteral("awsssooidc");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -180,10 +180,9 @@ StartDeviceAuthorizationResponse * SsooidcClient::startDeviceAuthorization(const
 /*!
  * Constructs a SsooidcClientPrivate object with public implementation \a q.
  */
-SsooidcClientPrivate::SsooidcClientPrivate(SsooidcClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+SsooidcClientPrivate::SsooidcClientPrivate(SsooidcClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace SSOOIDC

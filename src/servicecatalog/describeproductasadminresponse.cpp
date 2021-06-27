@@ -61,8 +61,7 @@ DescribeProductAsAdminResponse::DescribeProductAsAdminResponse(
  */
 const DescribeProductAsAdminRequest * DescribeProductAsAdminResponse::request() const
 {
-    Q_D(const DescribeProductAsAdminResponse);
-    return static_cast<const DescribeProductAsAdminRequest *>(d->request);
+    return static_cast<const DescribeProductAsAdminRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

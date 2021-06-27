@@ -66,8 +66,7 @@ AdminInitiateAuthResponse::AdminInitiateAuthResponse(
  */
 const AdminInitiateAuthRequest * AdminInitiateAuthResponse::request() const
 {
-    Q_D(const AdminInitiateAuthResponse);
-    return static_cast<const AdminInitiateAuthRequest *>(d->request);
+    return static_cast<const AdminInitiateAuthRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

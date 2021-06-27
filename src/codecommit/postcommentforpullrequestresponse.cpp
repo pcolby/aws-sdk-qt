@@ -439,8 +439,7 @@ PostCommentForPullRequestResponse::PostCommentForPullRequestResponse(
  */
 const PostCommentForPullRequestRequest * PostCommentForPullRequestResponse::request() const
 {
-    Q_D(const PostCommentForPullRequestResponse);
-    return static_cast<const PostCommentForPullRequestRequest *>(d->request);
+    return static_cast<const PostCommentForPullRequestRequest *>(CodeCommitResponse::request());
 }
 
 /*!

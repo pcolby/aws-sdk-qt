@@ -140,8 +140,7 @@ CreateHostResponse::CreateHostResponse(
  */
 const CreateHostRequest * CreateHostResponse::request() const
 {
-    Q_D(const CreateHostResponse);
-    return static_cast<const CreateHostRequest *>(d->request);
+    return static_cast<const CreateHostRequest *>(CodeStarconnectionsResponse::request());
 }
 
 /*!

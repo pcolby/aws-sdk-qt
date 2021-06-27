@@ -68,8 +68,7 @@ DescribeJobQueuesResponse::DescribeJobQueuesResponse(
  */
 const DescribeJobQueuesRequest * DescribeJobQueuesResponse::request() const
 {
-    Q_D(const DescribeJobQueuesResponse);
-    return static_cast<const DescribeJobQueuesRequest *>(d->request);
+    return static_cast<const DescribeJobQueuesRequest *>(BatchResponse::request());
 }
 
 /*!

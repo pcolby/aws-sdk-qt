@@ -20,15 +20,12 @@
 #ifndef QTAWS_MANAGEDBLOCKCHAINREQUEST_P_H
 #define QTAWS_MANAGEDBLOCKCHAINREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "managedblockchainrequest.h"
-
 namespace QtAws {
 namespace ManagedBlockchain {
 
 class ManagedBlockchainRequest;
 
-class ManagedBlockchainRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ManagedBlockchainRequestPrivate {
 
 public:
     ManagedBlockchainRequest::Action action; ///< ManagedBlockchain action to be performed.
@@ -39,6 +36,9 @@ public:
     ManagedBlockchainRequestPrivate(const ManagedBlockchainRequestPrivate &other, ManagedBlockchainRequest * const q);
 
     static QString toString(const ManagedBlockchainRequest::Action &action);
+
+protected:
+    ManagedBlockchainRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ManagedBlockchainRequest)

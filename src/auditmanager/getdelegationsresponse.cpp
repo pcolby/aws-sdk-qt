@@ -98,8 +98,7 @@ GetDelegationsResponse::GetDelegationsResponse(
  */
 const GetDelegationsRequest * GetDelegationsResponse::request() const
 {
-    Q_D(const GetDelegationsResponse);
-    return static_cast<const GetDelegationsRequest *>(d->request);
+    return static_cast<const GetDelegationsRequest *>(AuditManagerResponse::request());
 }
 
 /*!

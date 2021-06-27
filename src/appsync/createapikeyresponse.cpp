@@ -56,8 +56,7 @@ CreateApiKeyResponse::CreateApiKeyResponse(
  */
 const CreateApiKeyRequest * CreateApiKeyResponse::request() const
 {
-    Q_D(const CreateApiKeyResponse);
-    return static_cast<const CreateApiKeyRequest *>(d->request);
+    return static_cast<const CreateApiKeyRequest *>(AppSyncResponse::request());
 }
 
 /*!

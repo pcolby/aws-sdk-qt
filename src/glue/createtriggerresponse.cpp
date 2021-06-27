@@ -58,8 +58,7 @@ CreateTriggerResponse::CreateTriggerResponse(
  */
 const CreateTriggerRequest * CreateTriggerResponse::request() const
 {
-    Q_D(const CreateTriggerResponse);
-    return static_cast<const CreateTriggerRequest *>(d->request);
+    return static_cast<const CreateTriggerRequest *>(GlueResponse::request());
 }
 
 /*!

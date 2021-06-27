@@ -103,7 +103,7 @@ namespace AutoScaling {
  * Constructs a AutoScalingRequest object for AutoScaling \a action.
  */
 AutoScalingRequest::AutoScalingRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new AutoScalingRequestPrivate(action, this))
+    : d_ptr(new AutoScalingRequestPrivate(action, this))
 {
 
 }
@@ -112,7 +112,8 @@ AutoScalingRequest::AutoScalingRequest(const Action action)
  * Constructs a copy of \a other.
  */
 AutoScalingRequest::AutoScalingRequest(const AutoScalingRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new AutoScalingRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new AutoScalingRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -135,7 +136,7 @@ AutoScalingRequest& AutoScalingRequest::operator=(const AutoScalingRequest &othe
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from AutoScalingRequestPrivate.
  */
-AutoScalingRequest::AutoScalingRequest(AutoScalingRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+AutoScalingRequest::AutoScalingRequest(AutoScalingRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -304,7 +305,7 @@ QNetworkRequest AutoScalingRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 AutoScalingRequestPrivate::AutoScalingRequestPrivate(const AutoScalingRequest::Action action, AutoScalingRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -319,8 +320,8 @@ AutoScalingRequestPrivate::AutoScalingRequestPrivate(const AutoScalingRequest::A
  */
 AutoScalingRequestPrivate::AutoScalingRequestPrivate(const AutoScalingRequestPrivate &other,
                                      AutoScalingRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

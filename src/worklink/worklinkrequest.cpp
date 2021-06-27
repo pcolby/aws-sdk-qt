@@ -75,7 +75,7 @@ namespace WorkLink {
  * Constructs a WorkLinkRequest object for WorkLink \a action.
  */
 WorkLinkRequest::WorkLinkRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new WorkLinkRequestPrivate(action, this))
+    : d_ptr(new WorkLinkRequestPrivate(action, this))
 {
 
 }
@@ -84,7 +84,8 @@ WorkLinkRequest::WorkLinkRequest(const Action action)
  * Constructs a copy of \a other.
  */
 WorkLinkRequest::WorkLinkRequest(const WorkLinkRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new WorkLinkRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new WorkLinkRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -107,7 +108,7 @@ WorkLinkRequest& WorkLinkRequest::operator=(const WorkLinkRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from WorkLinkRequestPrivate.
  */
-WorkLinkRequest::WorkLinkRequest(WorkLinkRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+WorkLinkRequest::WorkLinkRequest(WorkLinkRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -276,7 +277,7 @@ QNetworkRequest WorkLinkRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 WorkLinkRequestPrivate::WorkLinkRequestPrivate(const WorkLinkRequest::Action action, WorkLinkRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -291,8 +292,8 @@ WorkLinkRequestPrivate::WorkLinkRequestPrivate(const WorkLinkRequest::Action act
  */
 WorkLinkRequestPrivate::WorkLinkRequestPrivate(const WorkLinkRequestPrivate &other,
                                      WorkLinkRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

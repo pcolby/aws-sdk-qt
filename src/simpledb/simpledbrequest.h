@@ -66,6 +66,7 @@ public:
 
 protected:
     /// @cond internal
+    SimpleDBRequestPrivate * const d_ptr; ///< Internal d-pointer.
     SimpleDBRequest(SimpleDBRequestPrivate * const d);
     /// @endcond
 

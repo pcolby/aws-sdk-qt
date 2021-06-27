@@ -66,8 +66,7 @@ DeleteChannelPolicyResponse::DeleteChannelPolicyResponse(
  */
 const DeleteChannelPolicyRequest * DeleteChannelPolicyResponse::request() const
 {
-    Q_D(const DeleteChannelPolicyResponse);
-    return static_cast<const DeleteChannelPolicyRequest *>(d->request);
+    return static_cast<const DeleteChannelPolicyRequest *>(MediaTailorResponse::request());
 }
 
 /*!

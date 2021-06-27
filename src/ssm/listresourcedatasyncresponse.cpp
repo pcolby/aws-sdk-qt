@@ -98,8 +98,7 @@ ListResourceDataSyncResponse::ListResourceDataSyncResponse(
  */
 const ListResourceDataSyncRequest * ListResourceDataSyncResponse::request() const
 {
-    Q_D(const ListResourceDataSyncResponse);
-    return static_cast<const ListResourceDataSyncRequest *>(d->request);
+    return static_cast<const ListResourceDataSyncRequest *>(SsmResponse::request());
 }
 
 /*!

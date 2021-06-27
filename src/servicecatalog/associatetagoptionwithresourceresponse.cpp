@@ -61,8 +61,7 @@ AssociateTagOptionWithResourceResponse::AssociateTagOptionWithResourceResponse(
  */
 const AssociateTagOptionWithResourceRequest * AssociateTagOptionWithResourceResponse::request() const
 {
-    Q_D(const AssociateTagOptionWithResourceResponse);
-    return static_cast<const AssociateTagOptionWithResourceRequest *>(d->request);
+    return static_cast<const AssociateTagOptionWithResourceRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

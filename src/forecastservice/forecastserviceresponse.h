@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    ForecastServiceResponsePrivate * const d_ptr; ///< Internal d-pointer.
     ForecastServiceResponse(ForecastServiceResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -20,15 +20,12 @@
 #ifndef QTAWS_MTURKREQUEST_P_H
 #define QTAWS_MTURKREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "mturkrequest.h"
-
 namespace QtAws {
 namespace MTurk {
 
 class MTurkRequest;
 
-class MTurkRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class MTurkRequestPrivate {
 
 public:
     MTurkRequest::Action action; ///< MTurk action to be performed.
@@ -39,6 +36,9 @@ public:
     MTurkRequestPrivate(const MTurkRequestPrivate &other, MTurkRequest * const q);
 
     static QString toString(const MTurkRequest::Action &action);
+
+protected:
+    MTurkRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MTurkRequest)

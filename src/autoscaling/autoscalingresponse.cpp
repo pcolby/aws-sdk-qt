@@ -37,7 +37,7 @@ namespace AutoScaling {
  * Constructs a AutoScalingResponse object with parent \a parent.
  */
 AutoScalingResponse::AutoScalingResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new AutoScalingResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new AutoScalingResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ AutoScalingResponse::AutoScalingResponse(QObject * const parent)
  * implementation that inherits from AutoScalingResponsePrivate.
  */
 AutoScalingResponse::AutoScalingResponse(AutoScalingResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void AutoScalingResponse::parseFailure(QIODevice &response)
  * Constructs a AutoScalingResponsePrivate object with public implementation \a q.
  */
 AutoScalingResponsePrivate::AutoScalingResponsePrivate(
-    AutoScalingResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    AutoScalingResponse * const q) : q_ptr(q)
 {
 
 }

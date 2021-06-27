@@ -57,8 +57,7 @@ InferRxNormResponse::InferRxNormResponse(
  */
 const InferRxNormRequest * InferRxNormResponse::request() const
 {
-    Q_D(const InferRxNormResponse);
-    return static_cast<const InferRxNormRequest *>(d->request);
+    return static_cast<const InferRxNormRequest *>(ComprehendMedicalResponse::request());
 }
 
 /*!

@@ -87,8 +87,7 @@ DescribeExportTasksResponse::DescribeExportTasksResponse(
  */
 const DescribeExportTasksRequest * DescribeExportTasksResponse::request() const
 {
-    Q_D(const DescribeExportTasksResponse);
-    return static_cast<const DescribeExportTasksRequest *>(d->request);
+    return static_cast<const DescribeExportTasksRequest *>(Ec2Response::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ DetectSentimentResponse::DetectSentimentResponse(
  */
 const DetectSentimentRequest * DetectSentimentResponse::request() const
 {
-    Q_D(const DetectSentimentResponse);
-    return static_cast<const DetectSentimentRequest *>(d->request);
+    return static_cast<const DetectSentimentRequest *>(ComprehendResponse::request());
 }
 
 /*!

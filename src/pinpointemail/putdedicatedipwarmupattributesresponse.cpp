@@ -92,8 +92,7 @@ PutDedicatedIpWarmupAttributesResponse::PutDedicatedIpWarmupAttributesResponse(
  */
 const PutDedicatedIpWarmupAttributesRequest * PutDedicatedIpWarmupAttributesResponse::request() const
 {
-    Q_D(const PutDedicatedIpWarmupAttributesResponse);
-    return static_cast<const PutDedicatedIpWarmupAttributesRequest *>(d->request);
+    return static_cast<const PutDedicatedIpWarmupAttributesRequest *>(PinpointEmailResponse::request());
 }
 
 /*!

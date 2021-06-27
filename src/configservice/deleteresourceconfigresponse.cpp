@@ -75,8 +75,7 @@ DeleteResourceConfigResponse::DeleteResourceConfigResponse(
  */
 const DeleteResourceConfigRequest * DeleteResourceConfigResponse::request() const
 {
-    Q_D(const DeleteResourceConfigResponse);
-    return static_cast<const DeleteResourceConfigRequest *>(d->request);
+    return static_cast<const DeleteResourceConfigRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

@@ -73,8 +73,7 @@ GetNamedQueryResponse::GetNamedQueryResponse(
  */
 const GetNamedQueryRequest * GetNamedQueryResponse::request() const
 {
-    Q_D(const GetNamedQueryResponse);
-    return static_cast<const GetNamedQueryRequest *>(d->request);
+    return static_cast<const GetNamedQueryRequest *>(AthenaResponse::request());
 }
 
 /*!

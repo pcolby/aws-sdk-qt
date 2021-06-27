@@ -439,8 +439,7 @@ UpdatePullRequestDescriptionResponse::UpdatePullRequestDescriptionResponse(
  */
 const UpdatePullRequestDescriptionRequest * UpdatePullRequestDescriptionResponse::request() const
 {
-    Q_D(const UpdatePullRequestDescriptionResponse);
-    return static_cast<const UpdatePullRequestDescriptionRequest *>(d->request);
+    return static_cast<const UpdatePullRequestDescriptionRequest *>(CodeCommitResponse::request());
 }
 
 /*!

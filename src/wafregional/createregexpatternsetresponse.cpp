@@ -78,8 +78,7 @@ CreateRegexPatternSetResponse::CreateRegexPatternSetResponse(
  */
 const CreateRegexPatternSetRequest * CreateRegexPatternSetResponse::request() const
 {
-    Q_D(const CreateRegexPatternSetResponse);
-    return static_cast<const CreateRegexPatternSetRequest *>(d->request);
+    return static_cast<const CreateRegexPatternSetRequest *>(WAFRegionalResponse::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ DeleteStreamResponse::DeleteStreamResponse(
  */
 const DeleteStreamRequest * DeleteStreamResponse::request() const
 {
-    Q_D(const DeleteStreamResponse);
-    return static_cast<const DeleteStreamRequest *>(d->request);
+    return static_cast<const DeleteStreamRequest *>(KinesisResponse::request());
 }
 
 /*!

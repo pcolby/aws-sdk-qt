@@ -58,8 +58,7 @@ AddJobFlowStepsResponse::AddJobFlowStepsResponse(
  */
 const AddJobFlowStepsRequest * AddJobFlowStepsResponse::request() const
 {
-    Q_D(const AddJobFlowStepsResponse);
-    return static_cast<const AddJobFlowStepsRequest *>(d->request);
+    return static_cast<const AddJobFlowStepsRequest *>(EmrResponse::request());
 }
 
 /*!

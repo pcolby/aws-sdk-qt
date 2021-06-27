@@ -89,7 +89,7 @@ namespace EMR {
  * Constructs a EmrRequest object for EMR \a action.
  */
 EmrRequest::EmrRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new EmrRequestPrivate(action, this))
+    : d_ptr(new EmrRequestPrivate(action, this))
 {
 
 }
@@ -98,7 +98,8 @@ EmrRequest::EmrRequest(const Action action)
  * Constructs a copy of \a other.
  */
 EmrRequest::EmrRequest(const EmrRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new EmrRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new EmrRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -121,7 +122,7 @@ EmrRequest& EmrRequest::operator=(const EmrRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from EmrRequestPrivate.
  */
-EmrRequest::EmrRequest(EmrRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+EmrRequest::EmrRequest(EmrRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -290,7 +291,7 @@ QNetworkRequest EmrRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 EmrRequestPrivate::EmrRequestPrivate(const EmrRequest::Action action, EmrRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -305,8 +306,8 @@ EmrRequestPrivate::EmrRequestPrivate(const EmrRequest::Action action, EmrRequest
  */
 EmrRequestPrivate::EmrRequestPrivate(const EmrRequestPrivate &other,
                                      EmrRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

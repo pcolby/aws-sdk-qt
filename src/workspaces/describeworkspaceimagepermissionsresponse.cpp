@@ -58,8 +58,7 @@ DescribeWorkspaceImagePermissionsResponse::DescribeWorkspaceImagePermissionsResp
  */
 const DescribeWorkspaceImagePermissionsRequest * DescribeWorkspaceImagePermissionsResponse::request() const
 {
-    Q_D(const DescribeWorkspaceImagePermissionsResponse);
-    return static_cast<const DescribeWorkspaceImagePermissionsRequest *>(d->request);
+    return static_cast<const DescribeWorkspaceImagePermissionsRequest *>(WorkSpacesResponse::request());
 }
 
 /*!

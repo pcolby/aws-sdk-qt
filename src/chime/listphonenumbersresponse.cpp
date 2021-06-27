@@ -98,8 +98,7 @@ ListPhoneNumbersResponse::ListPhoneNumbersResponse(
  */
 const ListPhoneNumbersRequest * ListPhoneNumbersResponse::request() const
 {
-    Q_D(const ListPhoneNumbersResponse);
-    return static_cast<const ListPhoneNumbersRequest *>(d->request);
+    return static_cast<const ListPhoneNumbersRequest *>(ChimeResponse::request());
 }
 
 /*!

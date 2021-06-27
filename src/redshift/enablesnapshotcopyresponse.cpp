@@ -85,8 +85,7 @@ EnableSnapshotCopyResponse::EnableSnapshotCopyResponse(
  */
 const EnableSnapshotCopyRequest * EnableSnapshotCopyResponse::request() const
 {
-    Q_D(const EnableSnapshotCopyResponse);
-    return static_cast<const EnableSnapshotCopyRequest *>(d->request);
+    return static_cast<const EnableSnapshotCopyRequest *>(RedshiftResponse::request());
 }
 
 /*!

@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    AlexaForBusinessResponsePrivate * const d_ptr; ///< Internal d-pointer.
     AlexaForBusinessResponse(AlexaForBusinessResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

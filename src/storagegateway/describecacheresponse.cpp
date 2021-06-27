@@ -124,8 +124,7 @@ DescribeCacheResponse::DescribeCacheResponse(
  */
 const DescribeCacheRequest * DescribeCacheResponse::request() const
 {
-    Q_D(const DescribeCacheResponse);
-    return static_cast<const DescribeCacheRequest *>(d->request);
+    return static_cast<const DescribeCacheRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

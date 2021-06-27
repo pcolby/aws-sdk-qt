@@ -61,8 +61,7 @@ DescribeAccessPolicyResponse::DescribeAccessPolicyResponse(
  */
 const DescribeAccessPolicyRequest * DescribeAccessPolicyResponse::request() const
 {
-    Q_D(const DescribeAccessPolicyResponse);
-    return static_cast<const DescribeAccessPolicyRequest *>(d->request);
+    return static_cast<const DescribeAccessPolicyRequest *>(IoTSiteWiseResponse::request());
 }
 
 /*!

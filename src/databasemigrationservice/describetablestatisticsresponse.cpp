@@ -66,8 +66,7 @@ DescribeTableStatisticsResponse::DescribeTableStatisticsResponse(
  */
 const DescribeTableStatisticsRequest * DescribeTableStatisticsResponse::request() const
 {
-    Q_D(const DescribeTableStatisticsResponse);
-    return static_cast<const DescribeTableStatisticsRequest *>(d->request);
+    return static_cast<const DescribeTableStatisticsRequest *>(DatabaseMigrationServiceResponse::request());
 }
 
 /*!

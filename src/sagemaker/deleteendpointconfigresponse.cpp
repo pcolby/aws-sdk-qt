@@ -70,8 +70,7 @@ DeleteEndpointConfigResponse::DeleteEndpointConfigResponse(
  */
 const DeleteEndpointConfigRequest * DeleteEndpointConfigResponse::request() const
 {
-    Q_D(const DeleteEndpointConfigResponse);
-    return static_cast<const DeleteEndpointConfigRequest *>(d->request);
+    return static_cast<const DeleteEndpointConfigRequest *>(SageMakerResponse::request());
 }
 
 /*!

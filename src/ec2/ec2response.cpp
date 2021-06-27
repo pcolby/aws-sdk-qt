@@ -37,7 +37,7 @@ namespace EC2 {
  * Constructs a Ec2Response object with parent \a parent.
  */
 Ec2Response::Ec2Response(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new Ec2ResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new Ec2ResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ Ec2Response::Ec2Response(QObject * const parent)
  * implementation that inherits from Ec2ResponsePrivate.
  */
 Ec2Response::Ec2Response(Ec2ResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void Ec2Response::parseFailure(QIODevice &response)
  * Constructs a Ec2ResponsePrivate object with public implementation \a q.
  */
 Ec2ResponsePrivate::Ec2ResponsePrivate(
-    Ec2Response * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    Ec2Response * const q) : q_ptr(q)
 {
 
 }

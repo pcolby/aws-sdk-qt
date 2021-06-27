@@ -57,8 +57,7 @@ DescribeDataIngestionJobResponse::DescribeDataIngestionJobResponse(
  */
 const DescribeDataIngestionJobRequest * DescribeDataIngestionJobResponse::request() const
 {
-    Q_D(const DescribeDataIngestionJobResponse);
-    return static_cast<const DescribeDataIngestionJobRequest *>(d->request);
+    return static_cast<const DescribeDataIngestionJobRequest *>(LookoutEquipmentResponse::request());
 }
 
 /*!

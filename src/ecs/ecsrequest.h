@@ -108,6 +108,7 @@ public:
 
 protected:
     /// @cond internal
+    EcsRequestPrivate * const d_ptr; ///< Internal d-pointer.
     EcsRequest(EcsRequestPrivate * const d);
     /// @endcond
 

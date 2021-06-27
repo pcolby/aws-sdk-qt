@@ -56,8 +56,7 @@ GetCompatibleKafkaVersionsResponse::GetCompatibleKafkaVersionsResponse(
  */
 const GetCompatibleKafkaVersionsRequest * GetCompatibleKafkaVersionsResponse::request() const
 {
-    Q_D(const GetCompatibleKafkaVersionsResponse);
-    return static_cast<const GetCompatibleKafkaVersionsRequest *>(d->request);
+    return static_cast<const GetCompatibleKafkaVersionsRequest *>(KafkaResponse::request());
 }
 
 /*!

@@ -87,8 +87,7 @@ DescribeInstanceCreditSpecificationsResponse::DescribeInstanceCreditSpecificatio
  */
 const DescribeInstanceCreditSpecificationsRequest * DescribeInstanceCreditSpecificationsResponse::request() const
 {
-    Q_D(const DescribeInstanceCreditSpecificationsResponse);
-    return static_cast<const DescribeInstanceCreditSpecificationsRequest *>(d->request);
+    return static_cast<const DescribeInstanceCreditSpecificationsRequest *>(Ec2Response::request());
 }
 
 /*!

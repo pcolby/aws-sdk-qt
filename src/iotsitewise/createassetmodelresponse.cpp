@@ -61,8 +61,7 @@ CreateAssetModelResponse::CreateAssetModelResponse(
  */
 const CreateAssetModelRequest * CreateAssetModelResponse::request() const
 {
-    Q_D(const CreateAssetModelResponse);
-    return static_cast<const CreateAssetModelRequest *>(d->request);
+    return static_cast<const CreateAssetModelRequest *>(IoTSiteWiseResponse::request());
 }
 
 /*!

@@ -93,16 +93,16 @@ MediaPackageVodClient::MediaPackageVodClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new MediaPackageVodClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-11-07"),
+    QStringLiteral("mediapackage-vod"),
+    QStringLiteral("AWS Elemental MediaPackage VOD"),
+    QStringLiteral("mediapackage-vod"),
+    parent), d_ptr(new MediaPackageVodClientPrivate(this))
 {
-    Q_D(MediaPackageVodClient);
-    d->apiVersion = QStringLiteral("2018-11-07");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("mediapackage-vod");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Elemental MediaPackage VOD");
-    d->serviceName = QStringLiteral("mediapackage-vod");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -121,16 +121,16 @@ MediaPackageVodClient::MediaPackageVodClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new MediaPackageVodClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-11-07"),
+    QStringLiteral("mediapackage-vod"),
+    QStringLiteral("AWS Elemental MediaPackage VOD"),
+    QStringLiteral("mediapackage-vod"),
+    parent), d_ptr(new MediaPackageVodClientPrivate(this))
 {
-    Q_D(MediaPackageVodClient);
-    d->apiVersion = QStringLiteral("2018-11-07");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("mediapackage-vod");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Elemental MediaPackage VOD");
-    d->serviceName = QStringLiteral("mediapackage-vod");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -349,10 +349,9 @@ UpdatePackagingGroupResponse * MediaPackageVodClient::updatePackagingGroup(const
 /*!
  * Constructs a MediaPackageVodClientPrivate object with public implementation \a q.
  */
-MediaPackageVodClientPrivate::MediaPackageVodClientPrivate(MediaPackageVodClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+MediaPackageVodClientPrivate::MediaPackageVodClientPrivate(MediaPackageVodClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace MediaPackageVod

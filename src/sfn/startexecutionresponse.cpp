@@ -74,8 +74,7 @@ StartExecutionResponse::StartExecutionResponse(
  */
 const StartExecutionRequest * StartExecutionResponse::request() const
 {
-    Q_D(const StartExecutionResponse);
-    return static_cast<const StartExecutionRequest *>(d->request);
+    return static_cast<const StartExecutionRequest *>(SfnResponse::request());
 }
 
 /*!

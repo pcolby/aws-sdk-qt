@@ -119,8 +119,7 @@ DeleteDBParameterGroupResponse::DeleteDBParameterGroupResponse(
  */
 const DeleteDBParameterGroupRequest * DeleteDBParameterGroupResponse::request() const
 {
-    Q_D(const DeleteDBParameterGroupResponse);
-    return static_cast<const DeleteDBParameterGroupRequest *>(d->request);
+    return static_cast<const DeleteDBParameterGroupRequest *>(RdsResponse::request());
 }
 
 /*!

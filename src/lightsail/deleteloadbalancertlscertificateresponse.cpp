@@ -74,8 +74,7 @@ DeleteLoadBalancerTlsCertificateResponse::DeleteLoadBalancerTlsCertificateRespon
  */
 const DeleteLoadBalancerTlsCertificateRequest * DeleteLoadBalancerTlsCertificateResponse::request() const
 {
-    Q_D(const DeleteLoadBalancerTlsCertificateResponse);
-    return static_cast<const DeleteLoadBalancerTlsCertificateRequest *>(d->request);
+    return static_cast<const DeleteLoadBalancerTlsCertificateRequest *>(LightsailResponse::request());
 }
 
 /*!

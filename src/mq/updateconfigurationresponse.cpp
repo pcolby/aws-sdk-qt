@@ -57,8 +57,7 @@ UpdateConfigurationResponse::UpdateConfigurationResponse(
  */
 const UpdateConfigurationRequest * UpdateConfigurationResponse::request() const
 {
-    Q_D(const UpdateConfigurationResponse);
-    return static_cast<const UpdateConfigurationRequest *>(d->request);
+    return static_cast<const UpdateConfigurationRequest *>(MqResponse::request());
 }
 
 /*!

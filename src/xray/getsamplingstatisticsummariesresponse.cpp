@@ -56,8 +56,7 @@ GetSamplingStatisticSummariesResponse::GetSamplingStatisticSummariesResponse(
  */
 const GetSamplingStatisticSummariesRequest * GetSamplingStatisticSummariesResponse::request() const
 {
-    Q_D(const GetSamplingStatisticSummariesResponse);
-    return static_cast<const GetSamplingStatisticSummariesRequest *>(d->request);
+    return static_cast<const GetSamplingStatisticSummariesRequest *>(XRayResponse::request());
 }
 
 /*!

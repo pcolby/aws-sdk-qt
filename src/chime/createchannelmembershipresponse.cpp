@@ -98,8 +98,7 @@ CreateChannelMembershipResponse::CreateChannelMembershipResponse(
  */
 const CreateChannelMembershipRequest * CreateChannelMembershipResponse::request() const
 {
-    Q_D(const CreateChannelMembershipResponse);
-    return static_cast<const CreateChannelMembershipRequest *>(d->request);
+    return static_cast<const CreateChannelMembershipRequest *>(ChimeResponse::request());
 }
 
 /*!

@@ -115,8 +115,7 @@ DescribeScriptResponse::DescribeScriptResponse(
  */
 const DescribeScriptRequest * DescribeScriptResponse::request() const
 {
-    Q_D(const DescribeScriptResponse);
-    return static_cast<const DescribeScriptRequest *>(d->request);
+    return static_cast<const DescribeScriptRequest *>(GameLiftResponse::request());
 }
 
 /*!

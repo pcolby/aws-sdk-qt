@@ -90,8 +90,7 @@ ModifyRuleResponse::ModifyRuleResponse(
  */
 const ModifyRuleRequest * ModifyRuleResponse::request() const
 {
-    Q_D(const ModifyRuleResponse);
-    return static_cast<const ModifyRuleRequest *>(d->request);
+    return static_cast<const ModifyRuleRequest *>(ElasticLoadBalancingv2Response::request());
 }
 
 /*!

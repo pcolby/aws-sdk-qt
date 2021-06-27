@@ -64,8 +64,7 @@ ListRealtimeContactAnalysisSegmentsResponse::ListRealtimeContactAnalysisSegments
  */
 const ListRealtimeContactAnalysisSegmentsRequest * ListRealtimeContactAnalysisSegmentsResponse::request() const
 {
-    Q_D(const ListRealtimeContactAnalysisSegmentsResponse);
-    return static_cast<const ListRealtimeContactAnalysisSegmentsRequest *>(d->request);
+    return static_cast<const ListRealtimeContactAnalysisSegmentsRequest *>(ConnectContactLensResponse::request());
 }
 
 /*!

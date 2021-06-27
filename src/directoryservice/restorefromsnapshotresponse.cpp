@@ -69,8 +69,7 @@ RestoreFromSnapshotResponse::RestoreFromSnapshotResponse(
  */
 const RestoreFromSnapshotRequest * RestoreFromSnapshotResponse::request() const
 {
-    Q_D(const RestoreFromSnapshotResponse);
-    return static_cast<const RestoreFromSnapshotRequest *>(d->request);
+    return static_cast<const RestoreFromSnapshotRequest *>(DirectoryServiceResponse::request());
 }
 
 /*!

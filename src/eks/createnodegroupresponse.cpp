@@ -65,8 +65,7 @@ CreateNodegroupResponse::CreateNodegroupResponse(
  */
 const CreateNodegroupRequest * CreateNodegroupResponse::request() const
 {
-    Q_D(const CreateNodegroupResponse);
-    return static_cast<const CreateNodegroupRequest *>(d->request);
+    return static_cast<const CreateNodegroupRequest *>(EksResponse::request());
 }
 
 /*!

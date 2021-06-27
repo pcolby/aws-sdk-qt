@@ -130,16 +130,16 @@ WorkLinkClient::WorkLinkClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new WorkLinkClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-09-25"),
+    QStringLiteral("worklink"),
+    QStringLiteral("Amazon WorkLink"),
+    QStringLiteral("worklink"),
+    parent), d_ptr(new WorkLinkClientPrivate(this))
 {
-    Q_D(WorkLinkClient);
-    d->apiVersion = QStringLiteral("2018-09-25");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("worklink");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon WorkLink");
-    d->serviceName = QStringLiteral("worklink");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -158,16 +158,16 @@ WorkLinkClient::WorkLinkClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new WorkLinkClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-09-25"),
+    QStringLiteral("worklink"),
+    QStringLiteral("Amazon WorkLink"),
+    QStringLiteral("worklink"),
+    parent), d_ptr(new WorkLinkClientPrivate(this))
 {
-    Q_D(WorkLinkClient);
-    d->apiVersion = QStringLiteral("2018-09-25");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("worklink");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon WorkLink");
-    d->serviceName = QStringLiteral("worklink");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -616,10 +616,9 @@ UpdateIdentityProviderConfigurationResponse * WorkLinkClient::updateIdentityProv
 /*!
  * Constructs a WorkLinkClientPrivate object with public implementation \a q.
  */
-WorkLinkClientPrivate::WorkLinkClientPrivate(WorkLinkClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+WorkLinkClientPrivate::WorkLinkClientPrivate(WorkLinkClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace WorkLink

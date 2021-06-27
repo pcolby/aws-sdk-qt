@@ -20,15 +20,12 @@
 #ifndef QTAWS_SSMREQUEST_P_H
 #define QTAWS_SSMREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "ssmrequest.h"
-
 namespace QtAws {
 namespace SSM {
 
 class SsmRequest;
 
-class SsmRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SsmRequestPrivate {
 
 public:
     SsmRequest::Action action; ///< SSM action to be performed.
@@ -39,6 +36,9 @@ public:
     SsmRequestPrivate(const SsmRequestPrivate &other, SsmRequest * const q);
 
     static QString toString(const SsmRequest::Action &action);
+
+protected:
+    SsmRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SsmRequest)

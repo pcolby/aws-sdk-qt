@@ -37,7 +37,7 @@ namespace ServiceQuotas {
  * Constructs a ServiceQuotasResponse object with parent \a parent.
  */
 ServiceQuotasResponse::ServiceQuotasResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new ServiceQuotasResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ServiceQuotasResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ ServiceQuotasResponse::ServiceQuotasResponse(QObject * const parent)
  * implementation that inherits from ServiceQuotasResponsePrivate.
  */
 ServiceQuotasResponse::ServiceQuotasResponse(ServiceQuotasResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void ServiceQuotasResponse::parseFailure(QIODevice &response)
  * Constructs a ServiceQuotasResponsePrivate object with public implementation \a q.
  */
 ServiceQuotasResponsePrivate::ServiceQuotasResponsePrivate(
-    ServiceQuotasResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    ServiceQuotasResponse * const q) : q_ptr(q)
 {
 
 }

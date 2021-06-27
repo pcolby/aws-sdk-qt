@@ -73,6 +73,7 @@ public:
 
 protected:
     /// @cond internal
+    MigrationHubRequestPrivate * const d_ptr; ///< Internal d-pointer.
     MigrationHubRequest(MigrationHubRequestPrivate * const d);
     /// @endcond
 

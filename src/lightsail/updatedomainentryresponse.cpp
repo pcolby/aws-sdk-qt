@@ -74,8 +74,7 @@ UpdateDomainEntryResponse::UpdateDomainEntryResponse(
  */
 const UpdateDomainEntryRequest * UpdateDomainEntryResponse::request() const
 {
-    Q_D(const UpdateDomainEntryResponse);
-    return static_cast<const UpdateDomainEntryRequest *>(d->request);
+    return static_cast<const UpdateDomainEntryRequest *>(LightsailResponse::request());
 }
 
 /*!

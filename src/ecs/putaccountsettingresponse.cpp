@@ -72,8 +72,7 @@ PutAccountSettingResponse::PutAccountSettingResponse(
  */
 const PutAccountSettingRequest * PutAccountSettingResponse::request() const
 {
-    Q_D(const PutAccountSettingResponse);
-    return static_cast<const PutAccountSettingRequest *>(d->request);
+    return static_cast<const PutAccountSettingRequest *>(EcsResponse::request());
 }
 
 /*!

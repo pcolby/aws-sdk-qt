@@ -126,8 +126,7 @@ GetQueueAttributesResponse::GetQueueAttributesResponse(
  */
 const GetQueueAttributesRequest * GetQueueAttributesResponse::request() const
 {
-    Q_D(const GetQueueAttributesResponse);
-    return static_cast<const GetQueueAttributesRequest *>(d->request);
+    return static_cast<const GetQueueAttributesRequest *>(SqsResponse::request());
 }
 
 /*!

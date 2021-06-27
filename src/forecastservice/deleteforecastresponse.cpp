@@ -56,8 +56,7 @@ DeleteForecastResponse::DeleteForecastResponse(
  */
 const DeleteForecastRequest * DeleteForecastResponse::request() const
 {
-    Q_D(const DeleteForecastResponse);
-    return static_cast<const DeleteForecastRequest *>(d->request);
+    return static_cast<const DeleteForecastRequest *>(ForecastServiceResponse::request());
 }
 
 /*!

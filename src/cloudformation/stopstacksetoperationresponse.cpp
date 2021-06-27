@@ -77,8 +77,7 @@ StopStackSetOperationResponse::StopStackSetOperationResponse(
  */
 const StopStackSetOperationRequest * StopStackSetOperationResponse::request() const
 {
-    Q_D(const StopStackSetOperationResponse);
-    return static_cast<const StopStackSetOperationRequest *>(d->request);
+    return static_cast<const StopStackSetOperationRequest *>(CloudFormationResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ UpdateVocabularyFilterResponse::UpdateVocabularyFilterResponse(
  */
 const UpdateVocabularyFilterRequest * UpdateVocabularyFilterResponse::request() const
 {
-    Q_D(const UpdateVocabularyFilterResponse);
-    return static_cast<const UpdateVocabularyFilterRequest *>(d->request);
+    return static_cast<const UpdateVocabularyFilterRequest *>(TranscribeServiceResponse::request());
 }
 
 /*!

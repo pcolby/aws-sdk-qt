@@ -322,6 +322,12 @@ public slots:
     UpdateSubscriptionDefinitionResponse * updateSubscriptionDefinition(const UpdateSubscriptionDefinitionRequest &request);
     UpdateThingRuntimeConfigurationResponse * updateThingRuntimeConfiguration(const UpdateThingRuntimeConfigurationRequest &request);
 
+protected:
+    /// @cond internal
+    GreengrassClientPrivate * const d_ptr; ///< Internal d-pointer.
+    GreengrassClient(GreengrassClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(GreengrassClient)
     Q_DISABLE_COPY(GreengrassClient)

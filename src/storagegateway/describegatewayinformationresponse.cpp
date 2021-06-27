@@ -124,8 +124,7 @@ DescribeGatewayInformationResponse::DescribeGatewayInformationResponse(
  */
 const DescribeGatewayInformationRequest * DescribeGatewayInformationResponse::request() const
 {
-    Q_D(const DescribeGatewayInformationResponse);
-    return static_cast<const DescribeGatewayInformationRequest *>(d->request);
+    return static_cast<const DescribeGatewayInformationRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

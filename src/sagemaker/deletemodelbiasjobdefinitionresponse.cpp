@@ -70,8 +70,7 @@ DeleteModelBiasJobDefinitionResponse::DeleteModelBiasJobDefinitionResponse(
  */
 const DeleteModelBiasJobDefinitionRequest * DeleteModelBiasJobDefinitionResponse::request() const
 {
-    Q_D(const DeleteModelBiasJobDefinitionResponse);
-    return static_cast<const DeleteModelBiasJobDefinitionRequest *>(d->request);
+    return static_cast<const DeleteModelBiasJobDefinitionRequest *>(SageMakerResponse::request());
 }
 
 /*!

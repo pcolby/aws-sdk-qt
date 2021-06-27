@@ -62,8 +62,7 @@ DescribeServerResponse::DescribeServerResponse(
  */
 const DescribeServerRequest * DescribeServerResponse::request() const
 {
-    Q_D(const DescribeServerResponse);
-    return static_cast<const DescribeServerRequest *>(d->request);
+    return static_cast<const DescribeServerRequest *>(TransferResponse::request());
 }
 
 /*!

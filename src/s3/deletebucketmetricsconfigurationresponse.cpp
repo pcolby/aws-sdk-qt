@@ -55,8 +55,7 @@ DeleteBucketMetricsConfigurationResponse::DeleteBucketMetricsConfigurationRespon
  */
 const DeleteBucketMetricsConfigurationRequest * DeleteBucketMetricsConfigurationResponse::request() const
 {
-    Q_D(const DeleteBucketMetricsConfigurationResponse);
-    return static_cast<const DeleteBucketMetricsConfigurationRequest *>(d->request);
+    return static_cast<const DeleteBucketMetricsConfigurationRequest *>(S3Response::request());
 }
 
 /*!

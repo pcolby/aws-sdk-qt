@@ -95,7 +95,7 @@ namespace DocDB {
  * Constructs a DocDBRequest object for DocDB \a action.
  */
 DocDBRequest::DocDBRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new DocDBRequestPrivate(action, this))
+    : d_ptr(new DocDBRequestPrivate(action, this))
 {
 
 }
@@ -104,7 +104,8 @@ DocDBRequest::DocDBRequest(const Action action)
  * Constructs a copy of \a other.
  */
 DocDBRequest::DocDBRequest(const DocDBRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new DocDBRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new DocDBRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -127,7 +128,7 @@ DocDBRequest& DocDBRequest::operator=(const DocDBRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from DocDBRequestPrivate.
  */
-DocDBRequest::DocDBRequest(DocDBRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+DocDBRequest::DocDBRequest(DocDBRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -296,7 +297,7 @@ QNetworkRequest DocDBRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 DocDBRequestPrivate::DocDBRequestPrivate(const DocDBRequest::Action action, DocDBRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -311,8 +312,8 @@ DocDBRequestPrivate::DocDBRequestPrivate(const DocDBRequest::Action action, DocD
  */
 DocDBRequestPrivate::DocDBRequestPrivate(const DocDBRequestPrivate &other,
                                      DocDBRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

@@ -78,6 +78,7 @@ public:
 
 protected:
     /// @cond internal
+    MqRequestPrivate * const d_ptr; ///< Internal d-pointer.
     MqRequest(MqRequestPrivate * const d);
     /// @endcond
 

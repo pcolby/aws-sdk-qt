@@ -60,8 +60,7 @@ CreateMemberResponse::CreateMemberResponse(
  */
 const CreateMemberRequest * CreateMemberResponse::request() const
 {
-    Q_D(const CreateMemberResponse);
-    return static_cast<const CreateMemberRequest *>(d->request);
+    return static_cast<const CreateMemberRequest *>(Macie2Response::request());
 }
 
 /*!

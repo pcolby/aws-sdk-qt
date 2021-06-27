@@ -87,8 +87,7 @@ DescribeNetworkInsightsAnalysesResponse::DescribeNetworkInsightsAnalysesResponse
  */
 const DescribeNetworkInsightsAnalysesRequest * DescribeNetworkInsightsAnalysesResponse::request() const
 {
-    Q_D(const DescribeNetworkInsightsAnalysesResponse);
-    return static_cast<const DescribeNetworkInsightsAnalysesRequest *>(d->request);
+    return static_cast<const DescribeNetworkInsightsAnalysesRequest *>(Ec2Response::request());
 }
 
 /*!

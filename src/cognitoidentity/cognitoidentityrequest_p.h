@@ -20,15 +20,12 @@
 #ifndef QTAWS_COGNITOIDENTITYREQUEST_P_H
 #define QTAWS_COGNITOIDENTITYREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "cognitoidentityrequest.h"
-
 namespace QtAws {
 namespace CognitoIdentity {
 
 class CognitoIdentityRequest;
 
-class CognitoIdentityRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class CognitoIdentityRequestPrivate {
 
 public:
     CognitoIdentityRequest::Action action; ///< CognitoIdentity action to be performed.
@@ -39,6 +36,9 @@ public:
     CognitoIdentityRequestPrivate(const CognitoIdentityRequestPrivate &other, CognitoIdentityRequest * const q);
 
     static QString toString(const CognitoIdentityRequest::Action &action);
+
+protected:
+    CognitoIdentityRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CognitoIdentityRequest)

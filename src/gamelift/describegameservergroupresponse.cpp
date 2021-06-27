@@ -115,8 +115,7 @@ DescribeGameServerGroupResponse::DescribeGameServerGroupResponse(
  */
 const DescribeGameServerGroupRequest * DescribeGameServerGroupResponse::request() const
 {
-    Q_D(const DescribeGameServerGroupResponse);
-    return static_cast<const DescribeGameServerGroupRequest *>(d->request);
+    return static_cast<const DescribeGameServerGroupRequest *>(GameLiftResponse::request());
 }
 
 /*!

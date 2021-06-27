@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    IoTFleetHubResponsePrivate * const d_ptr; ///< Internal d-pointer.
     IoTFleetHubResponse(IoTFleetHubResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

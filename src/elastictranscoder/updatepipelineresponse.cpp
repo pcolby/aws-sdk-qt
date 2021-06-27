@@ -58,8 +58,7 @@ UpdatePipelineResponse::UpdatePipelineResponse(
  */
 const UpdatePipelineRequest * UpdatePipelineResponse::request() const
 {
-    Q_D(const UpdatePipelineResponse);
-    return static_cast<const UpdatePipelineRequest *>(d->request);
+    return static_cast<const UpdatePipelineRequest *>(ElasticTranscoderResponse::request());
 }
 
 /*!

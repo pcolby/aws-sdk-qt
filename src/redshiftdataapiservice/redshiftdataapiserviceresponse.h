@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    RedshiftDataAPIServiceResponsePrivate * const d_ptr; ///< Internal d-pointer.
     RedshiftDataAPIServiceResponse(RedshiftDataAPIServiceResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

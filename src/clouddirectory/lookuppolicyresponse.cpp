@@ -63,8 +63,7 @@ LookupPolicyResponse::LookupPolicyResponse(
  */
 const LookupPolicyRequest * LookupPolicyResponse::request() const
 {
-    Q_D(const LookupPolicyResponse);
-    return static_cast<const LookupPolicyRequest *>(d->request);
+    return static_cast<const LookupPolicyRequest *>(CloudDirectoryResponse::request());
 }
 
 /*!

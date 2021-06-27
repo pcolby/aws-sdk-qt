@@ -56,8 +56,7 @@ ListFaqsResponse::ListFaqsResponse(
  */
 const ListFaqsRequest * ListFaqsResponse::request() const
 {
-    Q_D(const ListFaqsResponse);
-    return static_cast<const ListFaqsRequest *>(d->request);
+    return static_cast<const ListFaqsRequest *>(kendraResponse::request());
 }
 
 /*!

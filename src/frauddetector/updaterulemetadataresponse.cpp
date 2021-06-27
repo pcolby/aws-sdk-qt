@@ -58,8 +58,7 @@ UpdateRuleMetadataResponse::UpdateRuleMetadataResponse(
  */
 const UpdateRuleMetadataRequest * UpdateRuleMetadataResponse::request() const
 {
-    Q_D(const UpdateRuleMetadataResponse);
-    return static_cast<const UpdateRuleMetadataRequest *>(d->request);
+    return static_cast<const UpdateRuleMetadataRequest *>(FraudDetectorResponse::request());
 }
 
 /*!

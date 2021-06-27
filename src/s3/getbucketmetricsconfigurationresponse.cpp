@@ -55,8 +55,7 @@ GetBucketMetricsConfigurationResponse::GetBucketMetricsConfigurationResponse(
  */
 const GetBucketMetricsConfigurationRequest * GetBucketMetricsConfigurationResponse::request() const
 {
-    Q_D(const GetBucketMetricsConfigurationResponse);
-    return static_cast<const GetBucketMetricsConfigurationRequest *>(d->request);
+    return static_cast<const GetBucketMetricsConfigurationRequest *>(S3Response::request());
 }
 
 /*!

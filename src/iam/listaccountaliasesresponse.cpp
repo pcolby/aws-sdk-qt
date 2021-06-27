@@ -62,8 +62,7 @@ ListAccountAliasesResponse::ListAccountAliasesResponse(
  */
 const ListAccountAliasesRequest * ListAccountAliasesResponse::request() const
 {
-    Q_D(const ListAccountAliasesResponse);
-    return static_cast<const ListAccountAliasesRequest *>(d->request);
+    return static_cast<const ListAccountAliasesRequest *>(IamResponse::request());
 }
 
 /*!

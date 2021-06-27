@@ -76,8 +76,7 @@ ListByteMatchSetsResponse::ListByteMatchSetsResponse(
  */
 const ListByteMatchSetsRequest * ListByteMatchSetsResponse::request() const
 {
-    Q_D(const ListByteMatchSetsResponse);
-    return static_cast<const ListByteMatchSetsRequest *>(d->request);
+    return static_cast<const ListByteMatchSetsRequest *>(WafResponse::request());
 }
 
 /*!

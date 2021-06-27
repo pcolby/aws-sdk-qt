@@ -72,8 +72,7 @@ ListAttributesResponse::ListAttributesResponse(
  */
 const ListAttributesRequest * ListAttributesResponse::request() const
 {
-    Q_D(const ListAttributesResponse);
-    return static_cast<const ListAttributesRequest *>(d->request);
+    return static_cast<const ListAttributesRequest *>(EcsResponse::request());
 }
 
 /*!

@@ -75,8 +75,7 @@ SubscribeResponse::SubscribeResponse(
  */
 const SubscribeRequest * SubscribeResponse::request() const
 {
-    Q_D(const SubscribeResponse);
-    return static_cast<const SubscribeRequest *>(d->request);
+    return static_cast<const SubscribeRequest *>(SnsResponse::request());
 }
 
 /*!

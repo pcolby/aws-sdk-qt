@@ -98,8 +98,7 @@ BatchImportEvidenceToAssessmentControlResponse::BatchImportEvidenceToAssessmentC
  */
 const BatchImportEvidenceToAssessmentControlRequest * BatchImportEvidenceToAssessmentControlResponse::request() const
 {
-    Q_D(const BatchImportEvidenceToAssessmentControlResponse);
-    return static_cast<const BatchImportEvidenceToAssessmentControlRequest *>(d->request);
+    return static_cast<const BatchImportEvidenceToAssessmentControlRequest *>(AuditManagerResponse::request());
 }
 
 /*!

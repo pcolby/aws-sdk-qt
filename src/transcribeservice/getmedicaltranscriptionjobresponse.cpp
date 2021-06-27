@@ -56,8 +56,7 @@ GetMedicalTranscriptionJobResponse::GetMedicalTranscriptionJobResponse(
  */
 const GetMedicalTranscriptionJobRequest * GetMedicalTranscriptionJobResponse::request() const
 {
-    Q_D(const GetMedicalTranscriptionJobResponse);
-    return static_cast<const GetMedicalTranscriptionJobRequest *>(d->request);
+    return static_cast<const GetMedicalTranscriptionJobRequest *>(TranscribeServiceResponse::request());
 }
 
 /*!

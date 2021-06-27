@@ -60,8 +60,7 @@ ListAssessmentRunAgentsResponse::ListAssessmentRunAgentsResponse(
  */
 const ListAssessmentRunAgentsRequest * ListAssessmentRunAgentsResponse::request() const
 {
-    Q_D(const ListAssessmentRunAgentsResponse);
-    return static_cast<const ListAssessmentRunAgentsRequest *>(d->request);
+    return static_cast<const ListAssessmentRunAgentsRequest *>(InspectorResponse::request());
 }
 
 /*!

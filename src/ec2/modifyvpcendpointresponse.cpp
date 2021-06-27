@@ -87,8 +87,7 @@ ModifyVpcEndpointResponse::ModifyVpcEndpointResponse(
  */
 const ModifyVpcEndpointRequest * ModifyVpcEndpointResponse::request() const
 {
-    Q_D(const ModifyVpcEndpointResponse);
-    return static_cast<const ModifyVpcEndpointRequest *>(d->request);
+    return static_cast<const ModifyVpcEndpointRequest *>(Ec2Response::request());
 }
 
 /*!

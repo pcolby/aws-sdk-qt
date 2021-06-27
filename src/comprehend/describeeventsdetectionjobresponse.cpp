@@ -58,8 +58,7 @@ DescribeEventsDetectionJobResponse::DescribeEventsDetectionJobResponse(
  */
 const DescribeEventsDetectionJobRequest * DescribeEventsDetectionJobResponse::request() const
 {
-    Q_D(const DescribeEventsDetectionJobResponse);
-    return static_cast<const DescribeEventsDetectionJobRequest *>(d->request);
+    return static_cast<const DescribeEventsDetectionJobRequest *>(ComprehendResponse::request());
 }
 
 /*!

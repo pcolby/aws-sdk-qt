@@ -65,8 +65,7 @@ ListIdentityProviderConfigsResponse::ListIdentityProviderConfigsResponse(
  */
 const ListIdentityProviderConfigsRequest * ListIdentityProviderConfigsResponse::request() const
 {
-    Q_D(const ListIdentityProviderConfigsResponse);
-    return static_cast<const ListIdentityProviderConfigsRequest *>(d->request);
+    return static_cast<const ListIdentityProviderConfigsRequest *>(EksResponse::request());
 }
 
 /*!

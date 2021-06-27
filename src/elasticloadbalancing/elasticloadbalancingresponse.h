@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    ElasticLoadBalancingResponsePrivate * const d_ptr; ///< Internal d-pointer.
     ElasticLoadBalancingResponse(ElasticLoadBalancingResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

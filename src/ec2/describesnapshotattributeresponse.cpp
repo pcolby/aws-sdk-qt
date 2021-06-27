@@ -87,8 +87,7 @@ DescribeSnapshotAttributeResponse::DescribeSnapshotAttributeResponse(
  */
 const DescribeSnapshotAttributeRequest * DescribeSnapshotAttributeResponse::request() const
 {
-    Q_D(const DescribeSnapshotAttributeResponse);
-    return static_cast<const DescribeSnapshotAttributeRequest *>(d->request);
+    return static_cast<const DescribeSnapshotAttributeRequest *>(Ec2Response::request());
 }
 
 /*!

@@ -66,8 +66,7 @@ ReorderReceiptRuleSetResponse::ReorderReceiptRuleSetResponse(
  */
 const ReorderReceiptRuleSetRequest * ReorderReceiptRuleSetResponse::request() const
 {
-    Q_D(const ReorderReceiptRuleSetResponse);
-    return static_cast<const ReorderReceiptRuleSetRequest *>(d->request);
+    return static_cast<const ReorderReceiptRuleSetRequest *>(SesResponse::request());
 }
 
 /*!

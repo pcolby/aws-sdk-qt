@@ -62,8 +62,7 @@ DescribeImagesResponse::DescribeImagesResponse(
  */
 const DescribeImagesRequest * DescribeImagesResponse::request() const
 {
-    Q_D(const DescribeImagesResponse);
-    return static_cast<const DescribeImagesRequest *>(d->request);
+    return static_cast<const DescribeImagesRequest *>(EcrResponse::request());
 }
 
 /*!

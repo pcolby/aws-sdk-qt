@@ -55,8 +55,7 @@ HeadObjectResponse::HeadObjectResponse(
  */
 const HeadObjectRequest * HeadObjectResponse::request() const
 {
-    Q_D(const HeadObjectResponse);
-    return static_cast<const HeadObjectRequest *>(d->request);
+    return static_cast<const HeadObjectRequest *>(S3Response::request());
 }
 
 /*!

@@ -87,8 +87,7 @@ CreateTransitGatewayRouteResponse::CreateTransitGatewayRouteResponse(
  */
 const CreateTransitGatewayRouteRequest * CreateTransitGatewayRouteResponse::request() const
 {
-    Q_D(const CreateTransitGatewayRouteResponse);
-    return static_cast<const CreateTransitGatewayRouteRequest *>(d->request);
+    return static_cast<const CreateTransitGatewayRouteRequest *>(Ec2Response::request());
 }
 
 /*!

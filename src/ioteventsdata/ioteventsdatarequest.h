@@ -67,6 +67,7 @@ public:
 
 protected:
     /// @cond internal
+    IoTEventsDataRequestPrivate * const d_ptr; ///< Internal d-pointer.
     IoTEventsDataRequest(IoTEventsDataRequestPrivate * const d);
     /// @endcond
 

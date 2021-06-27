@@ -78,8 +78,7 @@ GetWebACLForResourceResponse::GetWebACLForResourceResponse(
  */
 const GetWebACLForResourceRequest * GetWebACLForResourceResponse::request() const
 {
-    Q_D(const GetWebACLForResourceResponse);
-    return static_cast<const GetWebACLForResourceRequest *>(d->request);
+    return static_cast<const GetWebACLForResourceRequest *>(WAFRegionalResponse::request());
 }
 
 /*!

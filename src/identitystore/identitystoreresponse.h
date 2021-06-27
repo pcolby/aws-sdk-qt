@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    IdentityStoreResponsePrivate * const d_ptr; ///< Internal d-pointer.
     IdentityStoreResponse(IdentityStoreResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

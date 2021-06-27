@@ -87,8 +87,7 @@ DescribeIamInstanceProfileAssociationsResponse::DescribeIamInstanceProfileAssoci
  */
 const DescribeIamInstanceProfileAssociationsRequest * DescribeIamInstanceProfileAssociationsResponse::request() const
 {
-    Q_D(const DescribeIamInstanceProfileAssociationsResponse);
-    return static_cast<const DescribeIamInstanceProfileAssociationsRequest *>(d->request);
+    return static_cast<const DescribeIamInstanceProfileAssociationsRequest *>(Ec2Response::request());
 }
 
 /*!

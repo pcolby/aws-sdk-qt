@@ -60,8 +60,7 @@ GetStreamingDistributionConfigResponse::GetStreamingDistributionConfigResponse(
  */
 const GetStreamingDistributionConfigRequest * GetStreamingDistributionConfigResponse::request() const
 {
-    Q_D(const GetStreamingDistributionConfigResponse);
-    return static_cast<const GetStreamingDistributionConfigRequest *>(d->request);
+    return static_cast<const GetStreamingDistributionConfigRequest *>(CloudFrontResponse::request());
 }
 
 /*!

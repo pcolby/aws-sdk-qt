@@ -55,8 +55,7 @@ ListBuiltInSlotTypesResponse::ListBuiltInSlotTypesResponse(
  */
 const ListBuiltInSlotTypesRequest * ListBuiltInSlotTypesResponse::request() const
 {
-    Q_D(const ListBuiltInSlotTypesResponse);
-    return static_cast<const ListBuiltInSlotTypesRequest *>(d->request);
+    return static_cast<const ListBuiltInSlotTypesRequest *>(LexModelsV2Response::request());
 }
 
 /*!

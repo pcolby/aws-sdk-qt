@@ -75,8 +75,7 @@ DescribePipelineResponse::DescribePipelineResponse(
  */
 const DescribePipelineRequest * DescribePipelineResponse::request() const
 {
-    Q_D(const DescribePipelineResponse);
-    return static_cast<const DescribePipelineRequest *>(d->request);
+    return static_cast<const DescribePipelineRequest *>(IoTAnalyticsResponse::request());
 }
 
 /*!

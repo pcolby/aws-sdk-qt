@@ -80,8 +80,7 @@ AddProfilePermissionResponse::AddProfilePermissionResponse(
  */
 const AddProfilePermissionRequest * AddProfilePermissionResponse::request() const
 {
-    Q_D(const AddProfilePermissionResponse);
-    return static_cast<const AddProfilePermissionRequest *>(d->request);
+    return static_cast<const AddProfilePermissionRequest *>(signerResponse::request());
 }
 
 /*!

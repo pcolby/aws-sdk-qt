@@ -112,16 +112,16 @@ LookoutMetricsClient::LookoutMetricsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new LookoutMetricsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-07-25"),
+    QStringLiteral("lookoutmetrics"),
+    QStringLiteral("Amazon Lookout for Metrics"),
+    QStringLiteral("lookoutmetrics"),
+    parent), d_ptr(new LookoutMetricsClientPrivate(this))
 {
-    Q_D(LookoutMetricsClient);
-    d->apiVersion = QStringLiteral("2017-07-25");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("lookoutmetrics");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Lookout for Metrics");
-    d->serviceName = QStringLiteral("lookoutmetrics");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -140,16 +140,16 @@ LookoutMetricsClient::LookoutMetricsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new LookoutMetricsClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-07-25"),
+    QStringLiteral("lookoutmetrics"),
+    QStringLiteral("Amazon Lookout for Metrics"),
+    QStringLiteral("lookoutmetrics"),
+    parent), d_ptr(new LookoutMetricsClientPrivate(this))
 {
-    Q_D(LookoutMetricsClient);
-    d->apiVersion = QStringLiteral("2017-07-25");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("lookoutmetrics");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Lookout for Metrics");
-    d->serviceName = QStringLiteral("lookoutmetrics");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -523,10 +523,9 @@ UpdateMetricSetResponse * LookoutMetricsClient::updateMetricSet(const UpdateMetr
 /*!
  * Constructs a LookoutMetricsClientPrivate object with public implementation \a q.
  */
-LookoutMetricsClientPrivate::LookoutMetricsClientPrivate(LookoutMetricsClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+LookoutMetricsClientPrivate::LookoutMetricsClientPrivate(LookoutMetricsClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace LookoutMetrics

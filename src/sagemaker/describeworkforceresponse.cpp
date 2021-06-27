@@ -70,8 +70,7 @@ DescribeWorkforceResponse::DescribeWorkforceResponse(
  */
 const DescribeWorkforceRequest * DescribeWorkforceResponse::request() const
 {
-    Q_D(const DescribeWorkforceResponse);
-    return static_cast<const DescribeWorkforceRequest *>(d->request);
+    return static_cast<const DescribeWorkforceRequest *>(SageMakerResponse::request());
 }
 
 /*!

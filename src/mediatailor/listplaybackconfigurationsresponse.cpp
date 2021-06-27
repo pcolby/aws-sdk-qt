@@ -66,8 +66,7 @@ ListPlaybackConfigurationsResponse::ListPlaybackConfigurationsResponse(
  */
 const ListPlaybackConfigurationsRequest * ListPlaybackConfigurationsResponse::request() const
 {
-    Q_D(const ListPlaybackConfigurationsResponse);
-    return static_cast<const ListPlaybackConfigurationsRequest *>(d->request);
+    return static_cast<const ListPlaybackConfigurationsRequest *>(MediaTailorResponse::request());
 }
 
 /*!

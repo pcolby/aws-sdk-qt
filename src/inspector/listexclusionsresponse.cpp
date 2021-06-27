@@ -60,8 +60,7 @@ ListExclusionsResponse::ListExclusionsResponse(
  */
 const ListExclusionsRequest * ListExclusionsResponse::request() const
 {
-    Q_D(const ListExclusionsResponse);
-    return static_cast<const ListExclusionsRequest *>(d->request);
+    return static_cast<const ListExclusionsRequest *>(InspectorResponse::request());
 }
 
 /*!

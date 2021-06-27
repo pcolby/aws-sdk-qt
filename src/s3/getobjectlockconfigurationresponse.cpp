@@ -55,8 +55,7 @@ GetObjectLockConfigurationResponse::GetObjectLockConfigurationResponse(
  */
 const GetObjectLockConfigurationRequest * GetObjectLockConfigurationResponse::request() const
 {
-    Q_D(const GetObjectLockConfigurationResponse);
-    return static_cast<const GetObjectLockConfigurationRequest *>(d->request);
+    return static_cast<const GetObjectLockConfigurationRequest *>(S3Response::request());
 }
 
 /*!

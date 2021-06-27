@@ -71,8 +71,7 @@ DeleteProfileKeyResponse::DeleteProfileKeyResponse(
  */
 const DeleteProfileKeyRequest * DeleteProfileKeyResponse::request() const
 {
-    Q_D(const DeleteProfileKeyResponse);
-    return static_cast<const DeleteProfileKeyRequest *>(d->request);
+    return static_cast<const DeleteProfileKeyRequest *>(CustomerProfilesResponse::request());
 }
 
 /*!

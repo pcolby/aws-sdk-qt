@@ -119,7 +119,7 @@ namespace CodeCommit {
  * Constructs a CodeCommitRequest object for CodeCommit \a action.
  */
 CodeCommitRequest::CodeCommitRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new CodeCommitRequestPrivate(action, this))
+    : d_ptr(new CodeCommitRequestPrivate(action, this))
 {
 
 }
@@ -128,7 +128,8 @@ CodeCommitRequest::CodeCommitRequest(const Action action)
  * Constructs a copy of \a other.
  */
 CodeCommitRequest::CodeCommitRequest(const CodeCommitRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new CodeCommitRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new CodeCommitRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -151,7 +152,7 @@ CodeCommitRequest& CodeCommitRequest::operator=(const CodeCommitRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CodeCommitRequestPrivate.
  */
-CodeCommitRequest::CodeCommitRequest(CodeCommitRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+CodeCommitRequest::CodeCommitRequest(CodeCommitRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -320,7 +321,7 @@ QNetworkRequest CodeCommitRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 CodeCommitRequestPrivate::CodeCommitRequestPrivate(const CodeCommitRequest::Action action, CodeCommitRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -335,8 +336,8 @@ CodeCommitRequestPrivate::CodeCommitRequestPrivate(const CodeCommitRequest::Acti
  */
 CodeCommitRequestPrivate::CodeCommitRequestPrivate(const CodeCommitRequestPrivate &other,
                                      CodeCommitRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

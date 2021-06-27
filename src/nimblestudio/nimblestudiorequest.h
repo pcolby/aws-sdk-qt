@@ -101,6 +101,7 @@ public:
 
 protected:
     /// @cond internal
+    NimbleStudioRequestPrivate * const d_ptr; ///< Internal d-pointer.
     NimbleStudioRequest(NimbleStudioRequestPrivate * const d);
     /// @endcond
 

@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    KinesisVideoSignalingChannelsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     KinesisVideoSignalingChannelsResponse(KinesisVideoSignalingChannelsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

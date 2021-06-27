@@ -77,8 +77,7 @@ CreateIdentityPoolResponse::CreateIdentityPoolResponse(
  */
 const CreateIdentityPoolRequest * CreateIdentityPoolResponse::request() const
 {
-    Q_D(const CreateIdentityPoolResponse);
-    return static_cast<const CreateIdentityPoolRequest *>(d->request);
+    return static_cast<const CreateIdentityPoolRequest *>(CognitoIdentityResponse::request());
 }
 
 /*!

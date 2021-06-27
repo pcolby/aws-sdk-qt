@@ -98,8 +98,7 @@ DeleteEventsConfigurationResponse::DeleteEventsConfigurationResponse(
  */
 const DeleteEventsConfigurationRequest * DeleteEventsConfigurationResponse::request() const
 {
-    Q_D(const DeleteEventsConfigurationResponse);
-    return static_cast<const DeleteEventsConfigurationRequest *>(d->request);
+    return static_cast<const DeleteEventsConfigurationRequest *>(ChimeResponse::request());
 }
 
 /*!

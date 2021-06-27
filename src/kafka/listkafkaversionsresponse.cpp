@@ -56,8 +56,7 @@ ListKafkaVersionsResponse::ListKafkaVersionsResponse(
  */
 const ListKafkaVersionsRequest * ListKafkaVersionsResponse::request() const
 {
-    Q_D(const ListKafkaVersionsResponse);
-    return static_cast<const ListKafkaVersionsRequest *>(d->request);
+    return static_cast<const ListKafkaVersionsRequest *>(KafkaResponse::request());
 }
 
 /*!

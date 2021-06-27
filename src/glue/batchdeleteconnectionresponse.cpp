@@ -58,8 +58,7 @@ BatchDeleteConnectionResponse::BatchDeleteConnectionResponse(
  */
 const BatchDeleteConnectionRequest * BatchDeleteConnectionResponse::request() const
 {
-    Q_D(const BatchDeleteConnectionResponse);
-    return static_cast<const BatchDeleteConnectionRequest *>(d->request);
+    return static_cast<const BatchDeleteConnectionRequest *>(GlueResponse::request());
 }
 
 /*!

@@ -68,8 +68,7 @@ PutWarmPoolResponse::PutWarmPoolResponse(
  */
 const PutWarmPoolRequest * PutWarmPoolResponse::request() const
 {
-    Q_D(const PutWarmPoolResponse);
-    return static_cast<const PutWarmPoolRequest *>(d->request);
+    return static_cast<const PutWarmPoolRequest *>(AutoScalingResponse::request());
 }
 
 /*!

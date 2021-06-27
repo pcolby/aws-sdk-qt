@@ -56,8 +56,7 @@ CreateChangesetResponse::CreateChangesetResponse(
  */
 const CreateChangesetRequest * CreateChangesetResponse::request() const
 {
-    Q_D(const CreateChangesetResponse);
-    return static_cast<const CreateChangesetRequest *>(d->request);
+    return static_cast<const CreateChangesetRequest *>(FinSpaceDataResponse::request());
 }
 
 /*!

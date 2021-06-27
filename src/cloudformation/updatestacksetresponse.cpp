@@ -77,8 +77,7 @@ UpdateStackSetResponse::UpdateStackSetResponse(
  */
 const UpdateStackSetRequest * UpdateStackSetResponse::request() const
 {
-    Q_D(const UpdateStackSetResponse);
-    return static_cast<const UpdateStackSetRequest *>(d->request);
+    return static_cast<const UpdateStackSetRequest *>(CloudFormationResponse::request());
 }
 
 /*!

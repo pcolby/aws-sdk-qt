@@ -57,8 +57,7 @@ UpdateInferenceSchedulerResponse::UpdateInferenceSchedulerResponse(
  */
 const UpdateInferenceSchedulerRequest * UpdateInferenceSchedulerResponse::request() const
 {
-    Q_D(const UpdateInferenceSchedulerResponse);
-    return static_cast<const UpdateInferenceSchedulerRequest *>(d->request);
+    return static_cast<const UpdateInferenceSchedulerRequest *>(LookoutEquipmentResponse::request());
 }
 
 /*!

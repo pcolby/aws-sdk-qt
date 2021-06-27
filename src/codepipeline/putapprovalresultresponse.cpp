@@ -240,8 +240,7 @@ PutApprovalResultResponse::PutApprovalResultResponse(
  */
 const PutApprovalResultRequest * PutApprovalResultResponse::request() const
 {
-    Q_D(const PutApprovalResultResponse);
-    return static_cast<const PutApprovalResultRequest *>(d->request);
+    return static_cast<const PutApprovalResultRequest *>(CodePipelineResponse::request());
 }
 
 /*!

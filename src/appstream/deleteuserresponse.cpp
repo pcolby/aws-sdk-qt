@@ -81,8 +81,7 @@ DeleteUserResponse::DeleteUserResponse(
  */
 const DeleteUserRequest * DeleteUserResponse::request() const
 {
-    Q_D(const DeleteUserResponse);
-    return static_cast<const DeleteUserRequest *>(d->request);
+    return static_cast<const DeleteUserRequest *>(AppStreamResponse::request());
 }
 
 /*!

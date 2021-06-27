@@ -70,8 +70,7 @@ DeleteWorkteamResponse::DeleteWorkteamResponse(
  */
 const DeleteWorkteamRequest * DeleteWorkteamResponse::request() const
 {
-    Q_D(const DeleteWorkteamResponse);
-    return static_cast<const DeleteWorkteamRequest *>(d->request);
+    return static_cast<const DeleteWorkteamRequest *>(SageMakerResponse::request());
 }
 
 /*!

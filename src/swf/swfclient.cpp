@@ -149,16 +149,16 @@ SwfClient::SwfClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SwfClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2012-01-25"),
+    QStringLiteral("swf"),
+    QStringLiteral("Amazon Simple Workflow Service"),
+    QStringLiteral("swf"),
+    parent), d_ptr(new SwfClientPrivate(this))
 {
-    Q_D(SwfClient);
-    d->apiVersion = QStringLiteral("2012-01-25");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("swf");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Simple Workflow Service");
-    d->serviceName = QStringLiteral("swf");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -177,16 +177,16 @@ SwfClient::SwfClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SwfClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2012-01-25"),
+    QStringLiteral("swf"),
+    QStringLiteral("Amazon Simple Workflow Service"),
+    QStringLiteral("swf"),
+    parent), d_ptr(new SwfClientPrivate(this))
 {
-    Q_D(SwfClient);
-    d->apiVersion = QStringLiteral("2012-01-25");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("swf");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Simple Workflow Service");
-    d->serviceName = QStringLiteral("swf");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -2024,10 +2024,9 @@ UntagResourceResponse * SwfClient::untagResource(const UntagResourceRequest &req
 /*!
  * Constructs a SwfClientPrivate object with public implementation \a q.
  */
-SwfClientPrivate::SwfClientPrivate(SwfClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+SwfClientPrivate::SwfClientPrivate(SwfClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace SWF

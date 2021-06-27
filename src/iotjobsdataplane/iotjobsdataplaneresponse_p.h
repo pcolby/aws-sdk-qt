@@ -20,14 +20,12 @@
 #ifndef QTAWS_IOTJOBSDATAPLANERESPONSE_P_H
 #define QTAWS_IOTJOBSDATAPLANERESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace IoTJobsDataPlane {
 
 class IoTJobsDataPlaneResponse;
 
-class IoTJobsDataPlaneResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class IoTJobsDataPlaneResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    IoTJobsDataPlaneResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoTJobsDataPlaneResponse)

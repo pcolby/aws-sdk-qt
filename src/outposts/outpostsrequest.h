@@ -66,6 +66,7 @@ public:
 
 protected:
     /// @cond internal
+    OutpostsRequestPrivate * const d_ptr; ///< Internal d-pointer.
     OutpostsRequest(OutpostsRequestPrivate * const d);
     /// @endcond
 

@@ -124,8 +124,7 @@ DescribeChapCredentialsResponse::DescribeChapCredentialsResponse(
  */
 const DescribeChapCredentialsRequest * DescribeChapCredentialsResponse::request() const
 {
-    Q_D(const DescribeChapCredentialsResponse);
-    return static_cast<const DescribeChapCredentialsRequest *>(d->request);
+    return static_cast<const DescribeChapCredentialsRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

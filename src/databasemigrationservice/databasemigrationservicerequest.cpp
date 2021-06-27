@@ -97,7 +97,7 @@ namespace DatabaseMigrationService {
  * Constructs a DatabaseMigrationServiceRequest object for DatabaseMigrationService \a action.
  */
 DatabaseMigrationServiceRequest::DatabaseMigrationServiceRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new DatabaseMigrationServiceRequestPrivate(action, this))
+    : d_ptr(new DatabaseMigrationServiceRequestPrivate(action, this))
 {
 
 }
@@ -106,7 +106,8 @@ DatabaseMigrationServiceRequest::DatabaseMigrationServiceRequest(const Action ac
  * Constructs a copy of \a other.
  */
 DatabaseMigrationServiceRequest::DatabaseMigrationServiceRequest(const DatabaseMigrationServiceRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new DatabaseMigrationServiceRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new DatabaseMigrationServiceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -129,7 +130,7 @@ DatabaseMigrationServiceRequest& DatabaseMigrationServiceRequest::operator=(cons
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from DatabaseMigrationServiceRequestPrivate.
  */
-DatabaseMigrationServiceRequest::DatabaseMigrationServiceRequest(DatabaseMigrationServiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+DatabaseMigrationServiceRequest::DatabaseMigrationServiceRequest(DatabaseMigrationServiceRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -298,7 +299,7 @@ QNetworkRequest DatabaseMigrationServiceRequest::unsignedRequest(const QUrl &end
  * with public implementation \a q.
  */
 DatabaseMigrationServiceRequestPrivate::DatabaseMigrationServiceRequestPrivate(const DatabaseMigrationServiceRequest::Action action, DatabaseMigrationServiceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -313,8 +314,8 @@ DatabaseMigrationServiceRequestPrivate::DatabaseMigrationServiceRequestPrivate(c
  */
 DatabaseMigrationServiceRequestPrivate::DatabaseMigrationServiceRequestPrivate(const DatabaseMigrationServiceRequestPrivate &other,
                                      DatabaseMigrationServiceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

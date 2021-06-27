@@ -60,8 +60,7 @@ UpdateThemePermissionsResponse::UpdateThemePermissionsResponse(
  */
 const UpdateThemePermissionsRequest * UpdateThemePermissionsResponse::request() const
 {
-    Q_D(const UpdateThemePermissionsResponse);
-    return static_cast<const UpdateThemePermissionsRequest *>(d->request);
+    return static_cast<const UpdateThemePermissionsRequest *>(QuickSightResponse::request());
 }
 
 /*!

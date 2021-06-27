@@ -63,8 +63,7 @@ UpdateObjectAttributesResponse::UpdateObjectAttributesResponse(
  */
 const UpdateObjectAttributesRequest * UpdateObjectAttributesResponse::request() const
 {
-    Q_D(const UpdateObjectAttributesResponse);
-    return static_cast<const UpdateObjectAttributesRequest *>(d->request);
+    return static_cast<const UpdateObjectAttributesRequest *>(CloudDirectoryResponse::request());
 }
 
 /*!

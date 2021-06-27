@@ -58,8 +58,7 @@ QuerySchemaVersionMetadataResponse::QuerySchemaVersionMetadataResponse(
  */
 const QuerySchemaVersionMetadataRequest * QuerySchemaVersionMetadataResponse::request() const
 {
-    Q_D(const QuerySchemaVersionMetadataResponse);
-    return static_cast<const QuerySchemaVersionMetadataRequest *>(d->request);
+    return static_cast<const QuerySchemaVersionMetadataRequest *>(GlueResponse::request());
 }
 
 /*!

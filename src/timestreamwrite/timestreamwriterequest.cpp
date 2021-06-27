@@ -57,7 +57,7 @@ namespace TimestreamWrite {
  * Constructs a TimestreamWriteRequest object for TimestreamWrite \a action.
  */
 TimestreamWriteRequest::TimestreamWriteRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new TimestreamWriteRequestPrivate(action, this))
+    : d_ptr(new TimestreamWriteRequestPrivate(action, this))
 {
 
 }
@@ -66,7 +66,8 @@ TimestreamWriteRequest::TimestreamWriteRequest(const Action action)
  * Constructs a copy of \a other.
  */
 TimestreamWriteRequest::TimestreamWriteRequest(const TimestreamWriteRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new TimestreamWriteRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new TimestreamWriteRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -89,7 +90,7 @@ TimestreamWriteRequest& TimestreamWriteRequest::operator=(const TimestreamWriteR
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from TimestreamWriteRequestPrivate.
  */
-TimestreamWriteRequest::TimestreamWriteRequest(TimestreamWriteRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+TimestreamWriteRequest::TimestreamWriteRequest(TimestreamWriteRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -258,7 +259,7 @@ QNetworkRequest TimestreamWriteRequest::unsignedRequest(const QUrl &endpoint) co
  * with public implementation \a q.
  */
 TimestreamWriteRequestPrivate::TimestreamWriteRequestPrivate(const TimestreamWriteRequest::Action action, TimestreamWriteRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -273,8 +274,8 @@ TimestreamWriteRequestPrivate::TimestreamWriteRequestPrivate(const TimestreamWri
  */
 TimestreamWriteRequestPrivate::TimestreamWriteRequestPrivate(const TimestreamWriteRequestPrivate &other,
                                      TimestreamWriteRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

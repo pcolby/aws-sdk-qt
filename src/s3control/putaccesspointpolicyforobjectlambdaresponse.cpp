@@ -56,8 +56,7 @@ PutAccessPointPolicyForObjectLambdaResponse::PutAccessPointPolicyForObjectLambda
  */
 const PutAccessPointPolicyForObjectLambdaRequest * PutAccessPointPolicyForObjectLambdaResponse::request() const
 {
-    Q_D(const PutAccessPointPolicyForObjectLambdaResponse);
-    return static_cast<const PutAccessPointPolicyForObjectLambdaRequest *>(d->request);
+    return static_cast<const PutAccessPointPolicyForObjectLambdaRequest *>(S3ControlResponse::request());
 }
 
 /*!

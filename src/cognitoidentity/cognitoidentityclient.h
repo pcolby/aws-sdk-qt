@@ -115,6 +115,12 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateIdentityPoolResponse * updateIdentityPool(const UpdateIdentityPoolRequest &request);
 
+protected:
+    /// @cond internal
+    CognitoIdentityClientPrivate * const d_ptr; ///< Internal d-pointer.
+    CognitoIdentityClient(CognitoIdentityClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(CognitoIdentityClient)
     Q_DISABLE_COPY(CognitoIdentityClient)

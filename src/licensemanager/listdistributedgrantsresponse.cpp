@@ -59,8 +59,7 @@ ListDistributedGrantsResponse::ListDistributedGrantsResponse(
  */
 const ListDistributedGrantsRequest * ListDistributedGrantsResponse::request() const
 {
-    Q_D(const ListDistributedGrantsResponse);
-    return static_cast<const ListDistributedGrantsRequest *>(d->request);
+    return static_cast<const ListDistributedGrantsRequest *>(LicenseManagerResponse::request());
 }
 
 /*!

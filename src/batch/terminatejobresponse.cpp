@@ -68,8 +68,7 @@ TerminateJobResponse::TerminateJobResponse(
  */
 const TerminateJobRequest * TerminateJobResponse::request() const
 {
-    Q_D(const TerminateJobResponse);
-    return static_cast<const TerminateJobRequest *>(d->request);
+    return static_cast<const TerminateJobRequest *>(BatchResponse::request());
 }
 
 /*!

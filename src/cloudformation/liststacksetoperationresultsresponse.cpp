@@ -77,8 +77,7 @@ ListStackSetOperationResultsResponse::ListStackSetOperationResultsResponse(
  */
 const ListStackSetOperationResultsRequest * ListStackSetOperationResultsResponse::request() const
 {
-    Q_D(const ListStackSetOperationResultsResponse);
-    return static_cast<const ListStackSetOperationResultsRequest *>(d->request);
+    return static_cast<const ListStackSetOperationResultsRequest *>(CloudFormationResponse::request());
 }
 
 /*!

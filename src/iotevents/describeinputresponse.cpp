@@ -58,8 +58,7 @@ DescribeInputResponse::DescribeInputResponse(
  */
 const DescribeInputRequest * DescribeInputResponse::request() const
 {
-    Q_D(const DescribeInputResponse);
-    return static_cast<const DescribeInputRequest *>(d->request);
+    return static_cast<const DescribeInputRequest *>(IoTEventsResponse::request());
 }
 
 /*!

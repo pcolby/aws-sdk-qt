@@ -85,8 +85,7 @@ PurchaseReservedNodeOfferingResponse::PurchaseReservedNodeOfferingResponse(
  */
 const PurchaseReservedNodeOfferingRequest * PurchaseReservedNodeOfferingResponse::request() const
 {
-    Q_D(const PurchaseReservedNodeOfferingResponse);
-    return static_cast<const PurchaseReservedNodeOfferingRequest *>(d->request);
+    return static_cast<const PurchaseReservedNodeOfferingRequest *>(RedshiftResponse::request());
 }
 
 /*!

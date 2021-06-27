@@ -60,8 +60,7 @@ StopJobResponse::StopJobResponse(
  */
 const StopJobRequest * StopJobResponse::request() const
 {
-    Q_D(const StopJobResponse);
-    return static_cast<const StopJobRequest *>(d->request);
+    return static_cast<const StopJobRequest *>(AmplifyResponse::request());
 }
 
 /*!

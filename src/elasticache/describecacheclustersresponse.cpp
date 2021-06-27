@@ -69,8 +69,7 @@ DescribeCacheClustersResponse::DescribeCacheClustersResponse(
  */
 const DescribeCacheClustersRequest * DescribeCacheClustersResponse::request() const
 {
-    Q_D(const DescribeCacheClustersResponse);
-    return static_cast<const DescribeCacheClustersRequest *>(d->request);
+    return static_cast<const DescribeCacheClustersRequest *>(ElastiCacheResponse::request());
 }
 
 /*!

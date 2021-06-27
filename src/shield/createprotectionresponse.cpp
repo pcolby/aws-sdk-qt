@@ -61,8 +61,7 @@ CreateProtectionResponse::CreateProtectionResponse(
  */
 const CreateProtectionRequest * CreateProtectionResponse::request() const
 {
-    Q_D(const CreateProtectionResponse);
-    return static_cast<const CreateProtectionRequest *>(d->request);
+    return static_cast<const CreateProtectionRequest *>(ShieldResponse::request());
 }
 
 /*!

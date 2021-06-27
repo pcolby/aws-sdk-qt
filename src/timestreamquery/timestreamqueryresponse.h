@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    TimestreamQueryResponsePrivate * const d_ptr; ///< Internal d-pointer.
     TimestreamQueryResponse(TimestreamQueryResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

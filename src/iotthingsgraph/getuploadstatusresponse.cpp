@@ -66,8 +66,7 @@ GetUploadStatusResponse::GetUploadStatusResponse(
  */
 const GetUploadStatusRequest * GetUploadStatusResponse::request() const
 {
-    Q_D(const GetUploadStatusResponse);
-    return static_cast<const GetUploadStatusRequest *>(d->request);
+    return static_cast<const GetUploadStatusRequest *>(IoTThingsGraphResponse::request());
 }
 
 /*!

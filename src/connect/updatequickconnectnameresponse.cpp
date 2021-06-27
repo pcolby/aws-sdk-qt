@@ -79,8 +79,7 @@ UpdateQuickConnectNameResponse::UpdateQuickConnectNameResponse(
  */
 const UpdateQuickConnectNameRequest * UpdateQuickConnectNameResponse::request() const
 {
-    Q_D(const UpdateQuickConnectNameResponse);
-    return static_cast<const UpdateQuickConnectNameRequest *>(d->request);
+    return static_cast<const UpdateQuickConnectNameRequest *>(ConnectResponse::request());
 }
 
 /*!

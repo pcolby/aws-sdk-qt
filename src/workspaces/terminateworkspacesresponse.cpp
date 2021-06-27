@@ -58,8 +58,7 @@ TerminateWorkspacesResponse::TerminateWorkspacesResponse(
  */
 const TerminateWorkspacesRequest * TerminateWorkspacesResponse::request() const
 {
-    Q_D(const TerminateWorkspacesResponse);
-    return static_cast<const TerminateWorkspacesRequest *>(d->request);
+    return static_cast<const TerminateWorkspacesRequest *>(WorkSpacesResponse::request());
 }
 
 /*!

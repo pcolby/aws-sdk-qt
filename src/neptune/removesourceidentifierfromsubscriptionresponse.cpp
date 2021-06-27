@@ -72,8 +72,7 @@ RemoveSourceIdentifierFromSubscriptionResponse::RemoveSourceIdentifierFromSubscr
  */
 const RemoveSourceIdentifierFromSubscriptionRequest * RemoveSourceIdentifierFromSubscriptionResponse::request() const
 {
-    Q_D(const RemoveSourceIdentifierFromSubscriptionResponse);
-    return static_cast<const RemoveSourceIdentifierFromSubscriptionRequest *>(d->request);
+    return static_cast<const RemoveSourceIdentifierFromSubscriptionRequest *>(NeptuneResponse::request());
 }
 
 /*!

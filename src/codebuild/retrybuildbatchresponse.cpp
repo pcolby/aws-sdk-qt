@@ -64,8 +64,7 @@ RetryBuildBatchResponse::RetryBuildBatchResponse(
  */
 const RetryBuildBatchRequest * RetryBuildBatchResponse::request() const
 {
-    Q_D(const RetryBuildBatchResponse);
-    return static_cast<const RetryBuildBatchRequest *>(d->request);
+    return static_cast<const RetryBuildBatchRequest *>(CodeBuildResponse::request());
 }
 
 /*!

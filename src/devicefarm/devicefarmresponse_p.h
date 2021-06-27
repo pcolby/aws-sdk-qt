@@ -20,14 +20,12 @@
 #ifndef QTAWS_DEVICEFARMRESPONSE_P_H
 #define QTAWS_DEVICEFARMRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace DeviceFarm {
 
 class DeviceFarmResponse;
 
-class DeviceFarmResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class DeviceFarmResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    DeviceFarmResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DeviceFarmResponse)

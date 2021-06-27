@@ -62,8 +62,7 @@ UpdateUserResponse::UpdateUserResponse(
  */
 const UpdateUserRequest * UpdateUserResponse::request() const
 {
-    Q_D(const UpdateUserResponse);
-    return static_cast<const UpdateUserRequest *>(d->request);
+    return static_cast<const UpdateUserRequest *>(IamResponse::request());
 }
 
 /*!

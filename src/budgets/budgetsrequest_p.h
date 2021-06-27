@@ -20,15 +20,12 @@
 #ifndef QTAWS_BUDGETSREQUEST_P_H
 #define QTAWS_BUDGETSREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "budgetsrequest.h"
-
 namespace QtAws {
 namespace Budgets {
 
 class BudgetsRequest;
 
-class BudgetsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class BudgetsRequestPrivate {
 
 public:
     BudgetsRequest::Action action; ///< Budgets action to be performed.
@@ -39,6 +36,9 @@ public:
     BudgetsRequestPrivate(const BudgetsRequestPrivate &other, BudgetsRequest * const q);
 
     static QString toString(const BudgetsRequest::Action &action);
+
+protected:
+    BudgetsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(BudgetsRequest)

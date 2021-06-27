@@ -37,7 +37,7 @@ namespace ConnectContactLens {
  * Constructs a ConnectContactLensResponse object with parent \a parent.
  */
 ConnectContactLensResponse::ConnectContactLensResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new ConnectContactLensResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ConnectContactLensResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ ConnectContactLensResponse::ConnectContactLensResponse(QObject * const parent)
  * implementation that inherits from ConnectContactLensResponsePrivate.
  */
 ConnectContactLensResponse::ConnectContactLensResponse(ConnectContactLensResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void ConnectContactLensResponse::parseFailure(QIODevice &response)
  * Constructs a ConnectContactLensResponsePrivate object with public implementation \a q.
  */
 ConnectContactLensResponsePrivate::ConnectContactLensResponsePrivate(
-    ConnectContactLensResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    ConnectContactLensResponse * const q) : q_ptr(q)
 {
 
 }

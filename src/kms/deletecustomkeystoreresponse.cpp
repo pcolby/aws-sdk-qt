@@ -154,8 +154,7 @@ DeleteCustomKeyStoreResponse::DeleteCustomKeyStoreResponse(
  */
 const DeleteCustomKeyStoreRequest * DeleteCustomKeyStoreResponse::request() const
 {
-    Q_D(const DeleteCustomKeyStoreResponse);
-    return static_cast<const DeleteCustomKeyStoreRequest *>(d->request);
+    return static_cast<const DeleteCustomKeyStoreRequest *>(KmsResponse::request());
 }
 
 /*!

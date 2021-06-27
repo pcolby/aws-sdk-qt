@@ -75,8 +75,7 @@ DeleteOrganizationConfigRuleResponse::DeleteOrganizationConfigRuleResponse(
  */
 const DeleteOrganizationConfigRuleRequest * DeleteOrganizationConfigRuleResponse::request() const
 {
-    Q_D(const DeleteOrganizationConfigRuleResponse);
-    return static_cast<const DeleteOrganizationConfigRuleRequest *>(d->request);
+    return static_cast<const DeleteOrganizationConfigRuleRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

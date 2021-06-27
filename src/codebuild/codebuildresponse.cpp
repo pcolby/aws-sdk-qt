@@ -37,7 +37,7 @@ namespace CodeBuild {
  * Constructs a CodeBuildResponse object with parent \a parent.
  */
 CodeBuildResponse::CodeBuildResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new CodeBuildResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new CodeBuildResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ CodeBuildResponse::CodeBuildResponse(QObject * const parent)
  * implementation that inherits from CodeBuildResponsePrivate.
  */
 CodeBuildResponse::CodeBuildResponse(CodeBuildResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void CodeBuildResponse::parseFailure(QIODevice &response)
  * Constructs a CodeBuildResponsePrivate object with public implementation \a q.
  */
 CodeBuildResponsePrivate::CodeBuildResponsePrivate(
-    CodeBuildResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    CodeBuildResponse * const q) : q_ptr(q)
 {
 
 }

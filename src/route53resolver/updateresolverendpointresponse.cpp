@@ -94,8 +94,7 @@ UpdateResolverEndpointResponse::UpdateResolverEndpointResponse(
  */
 const UpdateResolverEndpointRequest * UpdateResolverEndpointResponse::request() const
 {
-    Q_D(const UpdateResolverEndpointResponse);
-    return static_cast<const UpdateResolverEndpointRequest *>(d->request);
+    return static_cast<const UpdateResolverEndpointRequest *>(Route53ResolverResponse::request());
 }
 
 /*!

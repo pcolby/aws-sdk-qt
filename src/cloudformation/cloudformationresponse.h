@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    CloudFormationResponsePrivate * const d_ptr; ///< Internal d-pointer.
     CloudFormationResponse(CloudFormationResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

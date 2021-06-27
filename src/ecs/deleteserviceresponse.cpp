@@ -72,8 +72,7 @@ DeleteServiceResponse::DeleteServiceResponse(
  */
 const DeleteServiceRequest * DeleteServiceResponse::request() const
 {
-    Q_D(const DeleteServiceResponse);
-    return static_cast<const DeleteServiceRequest *>(d->request);
+    return static_cast<const DeleteServiceRequest *>(EcsResponse::request());
 }
 
 /*!

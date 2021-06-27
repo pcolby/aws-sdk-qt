@@ -87,8 +87,7 @@ GetConsoleScreenshotResponse::GetConsoleScreenshotResponse(
  */
 const GetConsoleScreenshotRequest * GetConsoleScreenshotResponse::request() const
 {
-    Q_D(const GetConsoleScreenshotResponse);
-    return static_cast<const GetConsoleScreenshotRequest *>(d->request);
+    return static_cast<const GetConsoleScreenshotRequest *>(Ec2Response::request());
 }
 
 /*!

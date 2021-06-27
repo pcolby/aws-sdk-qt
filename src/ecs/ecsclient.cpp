@@ -180,16 +180,16 @@ EcsClient::EcsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new EcsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2014-11-13"),
+    QStringLiteral("ecs"),
+    QStringLiteral("Amazon EC2 Container Service"),
+    QStringLiteral("ecs"),
+    parent), d_ptr(new EcsClientPrivate(this))
 {
-    Q_D(EcsClient);
-    d->apiVersion = QStringLiteral("2014-11-13");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("ecs");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon EC2 Container Service");
-    d->serviceName = QStringLiteral("ecs");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -208,16 +208,16 @@ EcsClient::EcsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new EcsClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2014-11-13"),
+    QStringLiteral("ecs"),
+    QStringLiteral("Amazon EC2 Container Service"),
+    QStringLiteral("ecs"),
+    parent), d_ptr(new EcsClientPrivate(this))
 {
-    Q_D(EcsClient);
-    d->apiVersion = QStringLiteral("2014-11-13");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("ecs");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon EC2 Container Service");
-    d->serviceName = QStringLiteral("ecs");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -1496,10 +1496,9 @@ UpdateTaskSetResponse * EcsClient::updateTaskSet(const UpdateTaskSetRequest &req
 /*!
  * Constructs a EcsClientPrivate object with public implementation \a q.
  */
-EcsClientPrivate::EcsClientPrivate(EcsClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+EcsClientPrivate::EcsClientPrivate(EcsClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace ECS

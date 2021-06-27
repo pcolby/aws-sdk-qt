@@ -20,19 +20,20 @@
 #ifndef QTAWS_LAMBDACLIENT_P_H
 #define QTAWS_LAMBDACLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace Lambda {
 
 class LambdaClient;
 
-class LambdaClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class LambdaClientPrivate {
 
 public:
     LambdaClientPrivate(LambdaClient * const q);
+
+protected:
+    LambdaClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(LambdaClient)

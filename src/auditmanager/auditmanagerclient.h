@@ -199,6 +199,12 @@ public slots:
     UpdateSettingsResponse * updateSettings(const UpdateSettingsRequest &request);
     ValidateAssessmentReportIntegrityResponse * validateAssessmentReportIntegrity(const ValidateAssessmentReportIntegrityRequest &request);
 
+protected:
+    /// @cond internal
+    AuditManagerClientPrivate * const d_ptr; ///< Internal d-pointer.
+    AuditManagerClient(AuditManagerClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(AuditManagerClient)
     Q_DISABLE_COPY(AuditManagerClient)

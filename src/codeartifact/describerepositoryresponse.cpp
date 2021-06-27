@@ -293,8 +293,7 @@ DescribeRepositoryResponse::DescribeRepositoryResponse(
  */
 const DescribeRepositoryRequest * DescribeRepositoryResponse::request() const
 {
-    Q_D(const DescribeRepositoryResponse);
-    return static_cast<const DescribeRepositoryRequest *>(d->request);
+    return static_cast<const DescribeRepositoryRequest *>(CodeArtifactResponse::request());
 }
 
 /*!

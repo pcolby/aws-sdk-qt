@@ -59,8 +59,7 @@ StartCopyJobResponse::StartCopyJobResponse(
  */
 const StartCopyJobRequest * StartCopyJobResponse::request() const
 {
-    Q_D(const StartCopyJobResponse);
-    return static_cast<const StartCopyJobRequest *>(d->request);
+    return static_cast<const StartCopyJobRequest *>(BackupResponse::request());
 }
 
 /*!

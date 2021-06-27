@@ -57,8 +57,7 @@ FinalizeDeviceClaimResponse::FinalizeDeviceClaimResponse(
  */
 const FinalizeDeviceClaimRequest * FinalizeDeviceClaimResponse::request() const
 {
-    Q_D(const FinalizeDeviceClaimResponse);
-    return static_cast<const FinalizeDeviceClaimRequest *>(d->request);
+    return static_cast<const FinalizeDeviceClaimRequest *>(IoT1ClickDevicesServiceResponse::request());
 }
 
 /*!

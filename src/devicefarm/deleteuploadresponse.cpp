@@ -75,8 +75,7 @@ DeleteUploadResponse::DeleteUploadResponse(
  */
 const DeleteUploadRequest * DeleteUploadResponse::request() const
 {
-    Q_D(const DeleteUploadResponse);
-    return static_cast<const DeleteUploadRequest *>(d->request);
+    return static_cast<const DeleteUploadRequest *>(DeviceFarmResponse::request());
 }
 
 /*!

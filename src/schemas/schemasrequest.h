@@ -87,6 +87,7 @@ public:
 
 protected:
     /// @cond internal
+    SchemasRequestPrivate * const d_ptr; ///< Internal d-pointer.
     SchemasRequest(SchemasRequestPrivate * const d);
     /// @endcond
 

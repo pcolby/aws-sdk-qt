@@ -78,8 +78,7 @@ UpdateRuleResponse::UpdateRuleResponse(
  */
 const UpdateRuleRequest * UpdateRuleResponse::request() const
 {
-    Q_D(const UpdateRuleResponse);
-    return static_cast<const UpdateRuleRequest *>(d->request);
+    return static_cast<const UpdateRuleRequest *>(WAFRegionalResponse::request());
 }
 
 /*!

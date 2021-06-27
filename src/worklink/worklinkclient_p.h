@@ -20,19 +20,20 @@
 #ifndef QTAWS_WORKLINKCLIENT_P_H
 #define QTAWS_WORKLINKCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace WorkLink {
 
 class WorkLinkClient;
 
-class WorkLinkClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class WorkLinkClientPrivate {
 
 public:
     WorkLinkClientPrivate(WorkLinkClient * const q);
+
+protected:
+    WorkLinkClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(WorkLinkClient)

@@ -62,8 +62,7 @@ BatchGetImageResponse::BatchGetImageResponse(
  */
 const BatchGetImageRequest * BatchGetImageResponse::request() const
 {
-    Q_D(const BatchGetImageResponse);
-    return static_cast<const BatchGetImageRequest *>(d->request);
+    return static_cast<const BatchGetImageRequest *>(EcrResponse::request());
 }
 
 /*!

@@ -92,8 +92,7 @@ ListConfigurationSetsResponse::ListConfigurationSetsResponse(
  */
 const ListConfigurationSetsRequest * ListConfigurationSetsResponse::request() const
 {
-    Q_D(const ListConfigurationSetsResponse);
-    return static_cast<const ListConfigurationSetsRequest *>(d->request);
+    return static_cast<const ListConfigurationSetsRequest *>(PinpointEmailResponse::request());
 }
 
 /*!

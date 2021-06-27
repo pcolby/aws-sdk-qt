@@ -81,8 +81,7 @@ CopyImageResponse::CopyImageResponse(
  */
 const CopyImageRequest * CopyImageResponse::request() const
 {
-    Q_D(const CopyImageResponse);
-    return static_cast<const CopyImageRequest *>(d->request);
+    return static_cast<const CopyImageRequest *>(AppStreamResponse::request());
 }
 
 /*!

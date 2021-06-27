@@ -20,15 +20,12 @@
 #ifndef QTAWS_SAGEMAKERFEATURESTORERUNTIMEREQUEST_P_H
 #define QTAWS_SAGEMAKERFEATURESTORERUNTIMEREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "sagemakerfeaturestoreruntimerequest.h"
-
 namespace QtAws {
 namespace SageMakerFeatureStoreRuntime {
 
 class SageMakerFeatureStoreRuntimeRequest;
 
-class SageMakerFeatureStoreRuntimeRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SageMakerFeatureStoreRuntimeRequestPrivate {
 
 public:
     SageMakerFeatureStoreRuntimeRequest::Action action; ///< SageMakerFeatureStoreRuntime action to be performed.
@@ -39,6 +36,9 @@ public:
     SageMakerFeatureStoreRuntimeRequestPrivate(const SageMakerFeatureStoreRuntimeRequestPrivate &other, SageMakerFeatureStoreRuntimeRequest * const q);
 
     static QString toString(const SageMakerFeatureStoreRuntimeRequest::Action &action);
+
+protected:
+    SageMakerFeatureStoreRuntimeRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SageMakerFeatureStoreRuntimeRequest)

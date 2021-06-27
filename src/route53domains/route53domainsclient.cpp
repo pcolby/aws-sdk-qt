@@ -116,16 +116,16 @@ Route53DomainsClient::Route53DomainsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new Route53DomainsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2014-05-15"),
+    QStringLiteral("route53domains"),
+    QStringLiteral("Amazon Route 53 Domains"),
+    QStringLiteral("route53domains"),
+    parent), d_ptr(new Route53DomainsClientPrivate(this))
 {
-    Q_D(Route53DomainsClient);
-    d->apiVersion = QStringLiteral("2014-05-15");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("route53domains");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Route 53 Domains");
-    d->serviceName = QStringLiteral("route53domains");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -144,16 +144,16 @@ Route53DomainsClient::Route53DomainsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new Route53DomainsClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2014-05-15"),
+    QStringLiteral("route53domains"),
+    QStringLiteral("Amazon Route 53 Domains"),
+    QStringLiteral("route53domains"),
+    parent), d_ptr(new Route53DomainsClientPrivate(this))
 {
-    Q_D(Route53DomainsClient);
-    d->apiVersion = QStringLiteral("2014-05-15");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("route53domains");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Route 53 Domains");
-    d->serviceName = QStringLiteral("route53domains");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -751,10 +751,9 @@ ViewBillingResponse * Route53DomainsClient::viewBilling(const ViewBillingRequest
 /*!
  * Constructs a Route53DomainsClientPrivate object with public implementation \a q.
  */
-Route53DomainsClientPrivate::Route53DomainsClientPrivate(Route53DomainsClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+Route53DomainsClientPrivate::Route53DomainsClientPrivate(Route53DomainsClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace Route53Domains

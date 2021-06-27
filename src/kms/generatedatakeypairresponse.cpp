@@ -154,8 +154,7 @@ GenerateDataKeyPairResponse::GenerateDataKeyPairResponse(
  */
 const GenerateDataKeyPairRequest * GenerateDataKeyPairResponse::request() const
 {
-    Q_D(const GenerateDataKeyPairResponse);
-    return static_cast<const GenerateDataKeyPairRequest *>(d->request);
+    return static_cast<const GenerateDataKeyPairRequest *>(KmsResponse::request());
 }
 
 /*!

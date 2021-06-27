@@ -60,8 +60,7 @@ UpdateRealtimeLogConfigResponse::UpdateRealtimeLogConfigResponse(
  */
 const UpdateRealtimeLogConfigRequest * UpdateRealtimeLogConfigResponse::request() const
 {
-    Q_D(const UpdateRealtimeLogConfigResponse);
-    return static_cast<const UpdateRealtimeLogConfigRequest *>(d->request);
+    return static_cast<const UpdateRealtimeLogConfigRequest *>(CloudFrontResponse::request());
 }
 
 /*!

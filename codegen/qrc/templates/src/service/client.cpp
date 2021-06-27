@@ -52,18 +52,18 @@ namespace {{NameSpaceName}} {
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new {{ClassName}}Private(this), parent)
-{
-    Q_D({{ClassName}});
-    d->apiVersion = QStringLiteral("{{metadata.apiVersion}}");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("{{metadata.endpointPrefix}}");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("{{metadata.serviceFullName}}");
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("{{metadata.apiVersion}}"),
+    QStringLiteral("{{metadata.endpointPrefix}}"),
+    QStringLiteral("{{metadata.serviceFullName}}"),
     {# Here we do exactly as aws-sdk-cpp does; we use the signingName (ie the name of the service as expected by #}
     {# V4 signatures if set, otherwise fall back to the endpoint prefix (which is the same 90% of the time.      #}
-    d->serviceName = QStringLiteral("{% if metadata.signingName %}{{ metadata.signingName }}{% else %}{{ metadata.endpointPrefix }}{% endif %}");
+    QStringLiteral("{% if metadata.signingName %}{{ metadata.signingName }}{% else %}{{ metadata.endpointPrefix }}{% endif %}"),
+    parent), d_ptr(new {{ClassName}}Private(this))
+{
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -82,18 +82,18 @@ namespace {{NameSpaceName}} {
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new {{ClassName}}Private(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("{{metadata.apiVersion}}"),
+    QStringLiteral("{{metadata.endpointPrefix}}"),
+    QStringLiteral("{{metadata.serviceFullName}}"),
+    {# Here we do exactly as aws-sdk-cpp does; we use the signingName (ie the name of the service as expected by #}
+    {# V4 signatures if set, otherwise fall back to the endpoint prefix (which is the same 90% of the time.      #}
+    QStringLiteral("{% if metadata.signingName %}{{ metadata.signingName }}{% else %}{{ metadata.endpointPrefix }}{% endif %}"),
+    parent), d_ptr(new {{ClassName}}Private(this))
 {
-    Q_D({{ClassName}});
-    d->apiVersion = QStringLiteral("{{metadata.apiVersion}}");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("{{metadata.endpointPrefix}}");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("{{metadata.serviceFullName}}");
-    {# Here we do exactly as aws-sdk-cpp does; we using the signingName (ie the name of the service as expected by #}
-    {# V4 signatures if set, otherwise fall back to the endpoint prefiex (which is the same 90% of the time.       #}
-    d->serviceName = QStringLiteral("{% if metadata.signingName %}{{ metadata.signingName }}{% else %}{{ metadata.endpointPrefix }}{% endif %}");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 {% for name,op in operations.items %}
@@ -142,13 +142,12 @@ namespace {{NameSpaceName}} {
 /*!
  * Constructs a {{ClassName}}Private object with public implementation \a q.
  */
-{{ClassName}}Private::{{ClassName}}Private({{ClassName}} * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+{{ClassName}}Private::{{ClassName}}Private({{ClassName}} * const q) : q_ptr(q)
 {
 {% if metadata.signatureVersion == "s3" or metadata.signatureVersion == "s3v4" %}
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 {% else %}
-    signature = new QtAws::Core::AwsSignature{{metadata.signatureVersion|upper}}();
+    q->setSignature(new QtAws::Core::AwsSignature{{metadata.signatureVersion|upper}}());
 {% endif %}
 }
 

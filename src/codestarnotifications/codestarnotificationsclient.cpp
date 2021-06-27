@@ -159,16 +159,16 @@ CodeStarNotificationsClient::CodeStarNotificationsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CodeStarNotificationsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-10-15"),
+    QStringLiteral("codestar-notifications"),
+    QStringLiteral("AWS CodeStar Notifications"),
+    QStringLiteral("codestar-notifications"),
+    parent), d_ptr(new CodeStarNotificationsClientPrivate(this))
 {
-    Q_D(CodeStarNotificationsClient);
-    d->apiVersion = QStringLiteral("2019-10-15");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("codestar-notifications");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS CodeStar Notifications");
-    d->serviceName = QStringLiteral("codestar-notifications");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -187,16 +187,16 @@ CodeStarNotificationsClient::CodeStarNotificationsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CodeStarNotificationsClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-10-15"),
+    QStringLiteral("codestar-notifications"),
+    QStringLiteral("AWS CodeStar Notifications"),
+    QStringLiteral("codestar-notifications"),
+    parent), d_ptr(new CodeStarNotificationsClientPrivate(this))
 {
-    Q_D(CodeStarNotificationsClient);
-    d->apiVersion = QStringLiteral("2019-10-15");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("codestar-notifications");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS CodeStar Notifications");
-    d->serviceName = QStringLiteral("codestar-notifications");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -388,10 +388,9 @@ UpdateNotificationRuleResponse * CodeStarNotificationsClient::updateNotification
 /*!
  * Constructs a CodeStarNotificationsClientPrivate object with public implementation \a q.
  */
-CodeStarNotificationsClientPrivate::CodeStarNotificationsClientPrivate(CodeStarNotificationsClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+CodeStarNotificationsClientPrivate::CodeStarNotificationsClientPrivate(CodeStarNotificationsClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace CodeStarNotifications

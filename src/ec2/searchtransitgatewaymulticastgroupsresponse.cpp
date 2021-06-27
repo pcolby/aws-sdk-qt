@@ -87,8 +87,7 @@ SearchTransitGatewayMulticastGroupsResponse::SearchTransitGatewayMulticastGroups
  */
 const SearchTransitGatewayMulticastGroupsRequest * SearchTransitGatewayMulticastGroupsResponse::request() const
 {
-    Q_D(const SearchTransitGatewayMulticastGroupsResponse);
-    return static_cast<const SearchTransitGatewayMulticastGroupsRequest *>(d->request);
+    return static_cast<const SearchTransitGatewayMulticastGroupsRequest *>(Ec2Response::request());
 }
 
 /*!

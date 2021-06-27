@@ -67,6 +67,12 @@ public slots:
     ListS3ResourcesResponse * listS3Resources(const ListS3ResourcesRequest &request);
     UpdateS3ResourcesResponse * updateS3Resources(const UpdateS3ResourcesRequest &request);
 
+protected:
+    /// @cond internal
+    MacieClientPrivate * const d_ptr; ///< Internal d-pointer.
+    MacieClient(MacieClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(MacieClient)
     Q_DISABLE_COPY(MacieClient)

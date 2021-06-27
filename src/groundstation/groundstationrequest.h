@@ -81,6 +81,7 @@ public:
 
 protected:
     /// @cond internal
+    GroundStationRequestPrivate * const d_ptr; ///< Internal d-pointer.
     GroundStationRequest(GroundStationRequestPrivate * const d);
     /// @endcond
 

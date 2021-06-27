@@ -66,8 +66,7 @@ CreateProgramResponse::CreateProgramResponse(
  */
 const CreateProgramRequest * CreateProgramResponse::request() const
 {
-    Q_D(const CreateProgramResponse);
-    return static_cast<const CreateProgramRequest *>(d->request);
+    return static_cast<const CreateProgramRequest *>(MediaTailorResponse::request());
 }
 
 /*!

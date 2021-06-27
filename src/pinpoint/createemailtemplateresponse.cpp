@@ -56,8 +56,7 @@ CreateEmailTemplateResponse::CreateEmailTemplateResponse(
  */
 const CreateEmailTemplateRequest * CreateEmailTemplateResponse::request() const
 {
-    Q_D(const CreateEmailTemplateResponse);
-    return static_cast<const CreateEmailTemplateRequest *>(d->request);
+    return static_cast<const CreateEmailTemplateRequest *>(PinpointResponse::request());
 }
 
 /*!

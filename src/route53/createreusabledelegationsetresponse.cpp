@@ -56,8 +56,7 @@ CreateReusableDelegationSetResponse::CreateReusableDelegationSetResponse(
  */
 const CreateReusableDelegationSetRequest * CreateReusableDelegationSetResponse::request() const
 {
-    Q_D(const CreateReusableDelegationSetResponse);
-    return static_cast<const CreateReusableDelegationSetRequest *>(d->request);
+    return static_cast<const CreateReusableDelegationSetRequest *>(Route53Response::request());
 }
 
 /*!

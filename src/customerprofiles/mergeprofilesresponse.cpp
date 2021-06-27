@@ -71,8 +71,7 @@ MergeProfilesResponse::MergeProfilesResponse(
  */
 const MergeProfilesRequest * MergeProfilesResponse::request() const
 {
-    Q_D(const MergeProfilesResponse);
-    return static_cast<const MergeProfilesRequest *>(d->request);
+    return static_cast<const MergeProfilesRequest *>(CustomerProfilesResponse::request());
 }
 
 /*!

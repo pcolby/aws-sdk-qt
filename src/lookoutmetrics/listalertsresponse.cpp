@@ -58,8 +58,7 @@ ListAlertsResponse::ListAlertsResponse(
  */
 const ListAlertsRequest * ListAlertsResponse::request() const
 {
-    Q_D(const ListAlertsResponse);
-    return static_cast<const ListAlertsRequest *>(d->request);
+    return static_cast<const ListAlertsRequest *>(LookoutMetricsResponse::request());
 }
 
 /*!

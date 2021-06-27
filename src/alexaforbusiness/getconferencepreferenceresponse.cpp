@@ -62,8 +62,7 @@ GetConferencePreferenceResponse::GetConferencePreferenceResponse(
  */
 const GetConferencePreferenceRequest * GetConferencePreferenceResponse::request() const
 {
-    Q_D(const GetConferencePreferenceResponse);
-    return static_cast<const GetConferencePreferenceRequest *>(d->request);
+    return static_cast<const GetConferencePreferenceRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

@@ -107,6 +107,7 @@ public:
 
 protected:
     /// @cond internal
+    OrganizationsRequestPrivate * const d_ptr; ///< Internal d-pointer.
     OrganizationsRequest(OrganizationsRequestPrivate * const d);
     /// @endcond
 

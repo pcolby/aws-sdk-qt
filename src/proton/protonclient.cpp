@@ -279,16 +279,16 @@ ProtonClient::ProtonClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ProtonClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-07-20"),
+    QStringLiteral("proton"),
+    QStringLiteral("AWS Proton"),
+    QStringLiteral("proton"),
+    parent), d_ptr(new ProtonClientPrivate(this))
 {
-    Q_D(ProtonClient);
-    d->apiVersion = QStringLiteral("2020-07-20");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("proton");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Proton");
-    d->serviceName = QStringLiteral("proton");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -307,16 +307,16 @@ ProtonClient::ProtonClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ProtonClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-07-20"),
+    QStringLiteral("proton"),
+    QStringLiteral("AWS Proton"),
+    QStringLiteral("proton"),
+    parent), d_ptr(new ProtonClientPrivate(this))
 {
-    Q_D(ProtonClient);
-    d->apiVersion = QStringLiteral("2020-07-20");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("proton");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Proton");
-    d->serviceName = QStringLiteral("proton");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -1301,10 +1301,9 @@ UpdateServiceTemplateVersionResponse * ProtonClient::updateServiceTemplateVersio
 /*!
  * Constructs a ProtonClientPrivate object with public implementation \a q.
  */
-ProtonClientPrivate::ProtonClientPrivate(ProtonClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+ProtonClientPrivate::ProtonClientPrivate(ProtonClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace Proton

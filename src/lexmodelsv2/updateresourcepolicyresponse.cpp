@@ -55,8 +55,7 @@ UpdateResourcePolicyResponse::UpdateResourcePolicyResponse(
  */
 const UpdateResourcePolicyRequest * UpdateResourcePolicyResponse::request() const
 {
-    Q_D(const UpdateResourcePolicyResponse);
-    return static_cast<const UpdateResourcePolicyRequest *>(d->request);
+    return static_cast<const UpdateResourcePolicyRequest *>(LexModelsV2Response::request());
 }
 
 /*!

@@ -118,6 +118,7 @@ public:
 
 protected:
     /// @cond internal
+    DirectoryServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
     DirectoryServiceRequest(DirectoryServiceRequestPrivate * const d);
     /// @endcond
 

@@ -72,8 +72,7 @@ PurchaseReservedElasticsearchInstanceOfferingResponse::PurchaseReservedElasticse
  */
 const PurchaseReservedElasticsearchInstanceOfferingRequest * PurchaseReservedElasticsearchInstanceOfferingResponse::request() const
 {
-    Q_D(const PurchaseReservedElasticsearchInstanceOfferingResponse);
-    return static_cast<const PurchaseReservedElasticsearchInstanceOfferingRequest *>(d->request);
+    return static_cast<const PurchaseReservedElasticsearchInstanceOfferingRequest *>(ElasticsearchServiceResponse::request());
 }
 
 /*!

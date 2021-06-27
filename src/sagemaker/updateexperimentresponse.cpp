@@ -70,8 +70,7 @@ UpdateExperimentResponse::UpdateExperimentResponse(
  */
 const UpdateExperimentRequest * UpdateExperimentResponse::request() const
 {
-    Q_D(const UpdateExperimentResponse);
-    return static_cast<const UpdateExperimentRequest *>(d->request);
+    return static_cast<const UpdateExperimentRequest *>(SageMakerResponse::request());
 }
 
 /*!

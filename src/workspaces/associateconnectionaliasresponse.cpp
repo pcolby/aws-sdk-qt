@@ -58,8 +58,7 @@ AssociateConnectionAliasResponse::AssociateConnectionAliasResponse(
  */
 const AssociateConnectionAliasRequest * AssociateConnectionAliasResponse::request() const
 {
-    Q_D(const AssociateConnectionAliasResponse);
-    return static_cast<const AssociateConnectionAliasRequest *>(d->request);
+    return static_cast<const AssociateConnectionAliasRequest *>(WorkSpacesResponse::request());
 }
 
 /*!

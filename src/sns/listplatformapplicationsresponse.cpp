@@ -75,8 +75,7 @@ ListPlatformApplicationsResponse::ListPlatformApplicationsResponse(
  */
 const ListPlatformApplicationsRequest * ListPlatformApplicationsResponse::request() const
 {
-    Q_D(const ListPlatformApplicationsResponse);
-    return static_cast<const ListPlatformApplicationsRequest *>(d->request);
+    return static_cast<const ListPlatformApplicationsRequest *>(SnsResponse::request());
 }
 
 /*!

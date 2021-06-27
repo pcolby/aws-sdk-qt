@@ -60,8 +60,7 @@ DeleteBasePathMappingResponse::DeleteBasePathMappingResponse(
  */
 const DeleteBasePathMappingRequest * DeleteBasePathMappingResponse::request() const
 {
-    Q_D(const DeleteBasePathMappingResponse);
-    return static_cast<const DeleteBasePathMappingRequest *>(d->request);
+    return static_cast<const DeleteBasePathMappingRequest *>(APIGatewayResponse::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ CreateGroupVersionResponse::CreateGroupVersionResponse(
  */
 const CreateGroupVersionRequest * CreateGroupVersionResponse::request() const
 {
-    Q_D(const CreateGroupVersionResponse);
-    return static_cast<const CreateGroupVersionRequest *>(d->request);
+    return static_cast<const CreateGroupVersionRequest *>(GreengrassResponse::request());
 }
 
 /*!

@@ -66,8 +66,7 @@ AdminGetDeviceResponse::AdminGetDeviceResponse(
  */
 const AdminGetDeviceRequest * AdminGetDeviceResponse::request() const
 {
-    Q_D(const AdminGetDeviceResponse);
-    return static_cast<const AdminGetDeviceRequest *>(d->request);
+    return static_cast<const AdminGetDeviceRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

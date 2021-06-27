@@ -20,15 +20,12 @@
 #ifndef QTAWS_EFSREQUEST_P_H
 #define QTAWS_EFSREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "efsrequest.h"
-
 namespace QtAws {
 namespace EFS {
 
 class EfsRequest;
 
-class EfsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class EfsRequestPrivate {
 
 public:
     EfsRequest::Action action; ///< EFS action to be performed.
@@ -39,6 +36,9 @@ public:
     EfsRequestPrivate(const EfsRequestPrivate &other, EfsRequest * const q);
 
     static QString toString(const EfsRequest::Action &action);
+
+protected:
+    EfsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(EfsRequest)

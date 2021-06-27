@@ -55,8 +55,7 @@ ListAccountAssignmentCreationStatusResponse::ListAccountAssignmentCreationStatus
  */
 const ListAccountAssignmentCreationStatusRequest * ListAccountAssignmentCreationStatusResponse::request() const
 {
-    Q_D(const ListAccountAssignmentCreationStatusResponse);
-    return static_cast<const ListAccountAssignmentCreationStatusRequest *>(d->request);
+    return static_cast<const ListAccountAssignmentCreationStatusRequest *>(SSOAdminResponse::request());
 }
 
 /*!

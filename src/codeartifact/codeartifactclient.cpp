@@ -365,16 +365,16 @@ CodeArtifactClient::CodeArtifactClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CodeArtifactClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-09-22"),
+    QStringLiteral("codeartifact"),
+    QStringLiteral("CodeArtifact"),
+    QStringLiteral("codeartifact"),
+    parent), d_ptr(new CodeArtifactClientPrivate(this))
 {
-    Q_D(CodeArtifactClient);
-    d->apiVersion = QStringLiteral("2018-09-22");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("codeartifact");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("CodeArtifact");
-    d->serviceName = QStringLiteral("codeartifact");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -393,16 +393,16 @@ CodeArtifactClient::CodeArtifactClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CodeArtifactClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-09-22"),
+    QStringLiteral("codeartifact"),
+    QStringLiteral("CodeArtifact"),
+    QStringLiteral("codeartifact"),
+    parent), d_ptr(new CodeArtifactClientPrivate(this))
 {
-    Q_D(CodeArtifactClient);
-    d->apiVersion = QStringLiteral("2018-09-22");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("codeartifact");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("CodeArtifact");
-    d->serviceName = QStringLiteral("codeartifact");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -988,10 +988,9 @@ UpdateRepositoryResponse * CodeArtifactClient::updateRepository(const UpdateRepo
 /*!
  * Constructs a CodeArtifactClientPrivate object with public implementation \a q.
  */
-CodeArtifactClientPrivate::CodeArtifactClientPrivate(CodeArtifactClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+CodeArtifactClientPrivate::CodeArtifactClientPrivate(CodeArtifactClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace CodeArtifact

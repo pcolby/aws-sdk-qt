@@ -73,8 +73,7 @@ EvaluateExpressionResponse::EvaluateExpressionResponse(
  */
 const EvaluateExpressionRequest * EvaluateExpressionResponse::request() const
 {
-    Q_D(const EvaluateExpressionResponse);
-    return static_cast<const EvaluateExpressionRequest *>(d->request);
+    return static_cast<const EvaluateExpressionRequest *>(DataPipelineResponse::request());
 }
 
 /*!

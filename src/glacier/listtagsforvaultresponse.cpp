@@ -91,8 +91,7 @@ ListTagsForVaultResponse::ListTagsForVaultResponse(
  */
 const ListTagsForVaultRequest * ListTagsForVaultResponse::request() const
 {
-    Q_D(const ListTagsForVaultResponse);
-    return static_cast<const ListTagsForVaultRequest *>(d->request);
+    return static_cast<const ListTagsForVaultRequest *>(GlacierResponse::request());
 }
 
 /*!

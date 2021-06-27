@@ -76,8 +76,7 @@ GetRegexMatchSetResponse::GetRegexMatchSetResponse(
  */
 const GetRegexMatchSetRequest * GetRegexMatchSetResponse::request() const
 {
-    Q_D(const GetRegexMatchSetResponse);
-    return static_cast<const GetRegexMatchSetRequest *>(d->request);
+    return static_cast<const GetRegexMatchSetRequest *>(WafResponse::request());
 }
 
 /*!

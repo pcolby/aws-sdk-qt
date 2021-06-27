@@ -68,8 +68,7 @@ DeleteDomainResponse::DeleteDomainResponse(
  */
 const DeleteDomainRequest * DeleteDomainResponse::request() const
 {
-    Q_D(const DeleteDomainResponse);
-    return static_cast<const DeleteDomainRequest *>(d->request);
+    return static_cast<const DeleteDomainRequest *>(SimpleDBResponse::request());
 }
 
 /*!

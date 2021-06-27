@@ -98,8 +98,7 @@ AssociateSigninDelegateGroupsWithAccountResponse::AssociateSigninDelegateGroupsW
  */
 const AssociateSigninDelegateGroupsWithAccountRequest * AssociateSigninDelegateGroupsWithAccountResponse::request() const
 {
-    Q_D(const AssociateSigninDelegateGroupsWithAccountResponse);
-    return static_cast<const AssociateSigninDelegateGroupsWithAccountRequest *>(d->request);
+    return static_cast<const AssociateSigninDelegateGroupsWithAccountRequest *>(ChimeResponse::request());
 }
 
 /*!

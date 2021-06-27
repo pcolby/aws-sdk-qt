@@ -55,8 +55,7 @@ ListAssignmentsForHITResponse::ListAssignmentsForHITResponse(
  */
 const ListAssignmentsForHITRequest * ListAssignmentsForHITResponse::request() const
 {
-    Q_D(const ListAssignmentsForHITResponse);
-    return static_cast<const ListAssignmentsForHITRequest *>(d->request);
+    return static_cast<const ListAssignmentsForHITRequest *>(MTurkResponse::request());
 }
 
 /*!

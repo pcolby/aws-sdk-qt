@@ -352,6 +352,12 @@ public slots:
     UpdateUserRoutingProfileResponse * updateUserRoutingProfile(const UpdateUserRoutingProfileRequest &request);
     UpdateUserSecurityProfilesResponse * updateUserSecurityProfiles(const UpdateUserSecurityProfilesRequest &request);
 
+protected:
+    /// @cond internal
+    ConnectClientPrivate * const d_ptr; ///< Internal d-pointer.
+    ConnectClient(ConnectClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(ConnectClient)
     Q_DISABLE_COPY(ConnectClient)

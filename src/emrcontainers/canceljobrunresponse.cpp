@@ -83,8 +83,7 @@ CancelJobRunResponse::CancelJobRunResponse(
  */
 const CancelJobRunRequest * CancelJobRunResponse::request() const
 {
-    Q_D(const CancelJobRunResponse);
-    return static_cast<const CancelJobRunRequest *>(d->request);
+    return static_cast<const CancelJobRunRequest *>(EMRContainersResponse::request());
 }
 
 /*!

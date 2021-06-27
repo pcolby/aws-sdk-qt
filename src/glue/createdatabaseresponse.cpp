@@ -58,8 +58,7 @@ CreateDatabaseResponse::CreateDatabaseResponse(
  */
 const CreateDatabaseRequest * CreateDatabaseResponse::request() const
 {
-    Q_D(const CreateDatabaseResponse);
-    return static_cast<const CreateDatabaseRequest *>(d->request);
+    return static_cast<const CreateDatabaseRequest *>(GlueResponse::request());
 }
 
 /*!

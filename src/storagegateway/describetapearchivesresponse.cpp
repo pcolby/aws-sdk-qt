@@ -124,8 +124,7 @@ DescribeTapeArchivesResponse::DescribeTapeArchivesResponse(
  */
 const DescribeTapeArchivesRequest * DescribeTapeArchivesResponse::request() const
 {
-    Q_D(const DescribeTapeArchivesResponse);
-    return static_cast<const DescribeTapeArchivesRequest *>(d->request);
+    return static_cast<const DescribeTapeArchivesRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

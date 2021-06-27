@@ -20,15 +20,12 @@
 #ifndef QTAWS_CLOUDWATCHREQUEST_P_H
 #define QTAWS_CLOUDWATCHREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "cloudwatchrequest.h"
-
 namespace QtAws {
 namespace CloudWatch {
 
 class CloudWatchRequest;
 
-class CloudWatchRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class CloudWatchRequestPrivate {
 
 public:
     CloudWatchRequest::Action action; ///< CloudWatch action to be performed.
@@ -39,6 +36,9 @@ public:
     CloudWatchRequestPrivate(const CloudWatchRequestPrivate &other, CloudWatchRequest * const q);
 
     static QString toString(const CloudWatchRequest::Action &action);
+
+protected:
+    CloudWatchRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CloudWatchRequest)

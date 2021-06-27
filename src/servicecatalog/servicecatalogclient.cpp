@@ -239,16 +239,16 @@ ServiceCatalogClient::ServiceCatalogClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ServiceCatalogClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2015-12-10"),
+    QStringLiteral("servicecatalog"),
+    QStringLiteral("AWS Service Catalog"),
+    QStringLiteral("servicecatalog"),
+    parent), d_ptr(new ServiceCatalogClientPrivate(this))
 {
-    Q_D(ServiceCatalogClient);
-    d->apiVersion = QStringLiteral("2015-12-10");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("servicecatalog");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Service Catalog");
-    d->serviceName = QStringLiteral("servicecatalog");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -267,16 +267,16 @@ ServiceCatalogClient::ServiceCatalogClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ServiceCatalogClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2015-12-10"),
+    QStringLiteral("servicecatalog"),
+    QStringLiteral("AWS Service Catalog"),
+    QStringLiteral("servicecatalog"),
+    parent), d_ptr(new ServiceCatalogClientPrivate(this))
 {
-    Q_D(ServiceCatalogClient);
-    d->apiVersion = QStringLiteral("2015-12-10");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("servicecatalog");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Service Catalog");
-    d->serviceName = QStringLiteral("servicecatalog");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -1680,10 +1680,9 @@ UpdateTagOptionResponse * ServiceCatalogClient::updateTagOption(const UpdateTagO
 /*!
  * Constructs a ServiceCatalogClientPrivate object with public implementation \a q.
  */
-ServiceCatalogClientPrivate::ServiceCatalogClientPrivate(ServiceCatalogClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+ServiceCatalogClientPrivate::ServiceCatalogClientPrivate(ServiceCatalogClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace ServiceCatalog

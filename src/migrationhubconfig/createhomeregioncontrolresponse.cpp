@@ -78,8 +78,7 @@ CreateHomeRegionControlResponse::CreateHomeRegionControlResponse(
  */
 const CreateHomeRegionControlRequest * CreateHomeRegionControlResponse::request() const
 {
-    Q_D(const CreateHomeRegionControlResponse);
-    return static_cast<const CreateHomeRegionControlRequest *>(d->request);
+    return static_cast<const CreateHomeRegionControlRequest *>(MigrationHubConfigResponse::request());
 }
 
 /*!

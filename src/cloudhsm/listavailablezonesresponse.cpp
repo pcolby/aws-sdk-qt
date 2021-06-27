@@ -67,8 +67,7 @@ ListAvailableZonesResponse::ListAvailableZonesResponse(
  */
 const ListAvailableZonesRequest * ListAvailableZonesResponse::request() const
 {
-    Q_D(const ListAvailableZonesResponse);
-    return static_cast<const ListAvailableZonesRequest *>(d->request);
+    return static_cast<const ListAvailableZonesRequest *>(CloudHSMResponse::request());
 }
 
 /*!

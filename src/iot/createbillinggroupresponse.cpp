@@ -82,8 +82,7 @@ CreateBillingGroupResponse::CreateBillingGroupResponse(
  */
 const CreateBillingGroupRequest * CreateBillingGroupResponse::request() const
 {
-    Q_D(const CreateBillingGroupResponse);
-    return static_cast<const CreateBillingGroupRequest *>(d->request);
+    return static_cast<const CreateBillingGroupRequest *>(IoTResponse::request());
 }
 
 /*!

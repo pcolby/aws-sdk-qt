@@ -58,8 +58,7 @@ ModifyInstanceGroupsResponse::ModifyInstanceGroupsResponse(
  */
 const ModifyInstanceGroupsRequest * ModifyInstanceGroupsResponse::request() const
 {
-    Q_D(const ModifyInstanceGroupsResponse);
-    return static_cast<const ModifyInstanceGroupsRequest *>(d->request);
+    return static_cast<const ModifyInstanceGroupsRequest *>(EmrResponse::request());
 }
 
 /*!

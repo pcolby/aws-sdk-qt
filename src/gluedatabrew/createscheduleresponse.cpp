@@ -58,8 +58,7 @@ CreateScheduleResponse::CreateScheduleResponse(
  */
 const CreateScheduleRequest * CreateScheduleResponse::request() const
 {
-    Q_D(const CreateScheduleResponse);
-    return static_cast<const CreateScheduleRequest *>(d->request);
+    return static_cast<const CreateScheduleRequest *>(GlueDataBrewResponse::request());
 }
 
 /*!

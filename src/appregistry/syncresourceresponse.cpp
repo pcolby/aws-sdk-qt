@@ -58,8 +58,7 @@ SyncResourceResponse::SyncResourceResponse(
  */
 const SyncResourceRequest * SyncResourceResponse::request() const
 {
-    Q_D(const SyncResourceResponse);
-    return static_cast<const SyncResourceRequest *>(d->request);
+    return static_cast<const SyncResourceRequest *>(AppRegistryResponse::request());
 }
 
 /*!

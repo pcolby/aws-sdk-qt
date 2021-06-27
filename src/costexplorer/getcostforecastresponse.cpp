@@ -75,8 +75,7 @@ GetCostForecastResponse::GetCostForecastResponse(
  */
 const GetCostForecastRequest * GetCostForecastResponse::request() const
 {
-    Q_D(const GetCostForecastResponse);
-    return static_cast<const GetCostForecastRequest *>(d->request);
+    return static_cast<const GetCostForecastRequest *>(CostExplorerResponse::request());
 }
 
 /*!

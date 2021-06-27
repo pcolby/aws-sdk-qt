@@ -37,7 +37,7 @@ namespace WorkMail {
  * Constructs a WorkMailResponse object with parent \a parent.
  */
 WorkMailResponse::WorkMailResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new WorkMailResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new WorkMailResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ WorkMailResponse::WorkMailResponse(QObject * const parent)
  * implementation that inherits from WorkMailResponsePrivate.
  */
 WorkMailResponse::WorkMailResponse(WorkMailResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void WorkMailResponse::parseFailure(QIODevice &response)
  * Constructs a WorkMailResponsePrivate object with public implementation \a q.
  */
 WorkMailResponsePrivate::WorkMailResponsePrivate(
-    WorkMailResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    WorkMailResponse * const q) : q_ptr(q)
 {
 
 }

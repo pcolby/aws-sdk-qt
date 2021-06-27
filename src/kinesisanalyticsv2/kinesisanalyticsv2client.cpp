@@ -124,16 +124,16 @@ KinesisAnalyticsV2Client::KinesisAnalyticsV2Client(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new KinesisAnalyticsV2ClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-05-23"),
+    QStringLiteral("kinesisanalytics"),
+    QStringLiteral("Amazon Kinesis Analytics"),
+    QStringLiteral("kinesisanalytics"),
+    parent), d_ptr(new KinesisAnalyticsV2ClientPrivate(this))
 {
-    Q_D(KinesisAnalyticsV2Client);
-    d->apiVersion = QStringLiteral("2018-05-23");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("kinesisanalytics");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Kinesis Analytics");
-    d->serviceName = QStringLiteral("kinesisanalytics");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -152,16 +152,16 @@ KinesisAnalyticsV2Client::KinesisAnalyticsV2Client(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new KinesisAnalyticsV2ClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-05-23"),
+    QStringLiteral("kinesisanalytics"),
+    QStringLiteral("Amazon Kinesis Analytics"),
+    QStringLiteral("kinesisanalytics"),
+    parent), d_ptr(new KinesisAnalyticsV2ClientPrivate(this))
 {
-    Q_D(KinesisAnalyticsV2Client);
-    d->apiVersion = QStringLiteral("2018-05-23");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("kinesisanalytics");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Kinesis Analytics");
-    d->serviceName = QStringLiteral("kinesisanalytics");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -745,10 +745,9 @@ UpdateApplicationMaintenanceConfigurationResponse * KinesisAnalyticsV2Client::up
 /*!
  * Constructs a KinesisAnalyticsV2ClientPrivate object with public implementation \a q.
  */
-KinesisAnalyticsV2ClientPrivate::KinesisAnalyticsV2ClientPrivate(KinesisAnalyticsV2Client * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+KinesisAnalyticsV2ClientPrivate::KinesisAnalyticsV2ClientPrivate(KinesisAnalyticsV2Client * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace KinesisAnalyticsV2

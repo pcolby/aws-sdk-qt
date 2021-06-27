@@ -68,8 +68,7 @@ DescribeAccountLimitsResponse::DescribeAccountLimitsResponse(
  */
 const DescribeAccountLimitsRequest * DescribeAccountLimitsResponse::request() const
 {
-    Q_D(const DescribeAccountLimitsResponse);
-    return static_cast<const DescribeAccountLimitsRequest *>(d->request);
+    return static_cast<const DescribeAccountLimitsRequest *>(AutoScalingResponse::request());
 }
 
 /*!

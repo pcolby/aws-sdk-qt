@@ -63,8 +63,7 @@ BatchWriteResponse::BatchWriteResponse(
  */
 const BatchWriteRequest * BatchWriteResponse::request() const
 {
-    Q_D(const BatchWriteResponse);
-    return static_cast<const BatchWriteRequest *>(d->request);
+    return static_cast<const BatchWriteRequest *>(CloudDirectoryResponse::request());
 }
 
 /*!

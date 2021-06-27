@@ -62,8 +62,7 @@ DeleteGatewayGroupResponse::DeleteGatewayGroupResponse(
  */
 const DeleteGatewayGroupRequest * DeleteGatewayGroupResponse::request() const
 {
-    Q_D(const DeleteGatewayGroupResponse);
-    return static_cast<const DeleteGatewayGroupRequest *>(d->request);
+    return static_cast<const DeleteGatewayGroupRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

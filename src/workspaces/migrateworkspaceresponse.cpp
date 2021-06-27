@@ -58,8 +58,7 @@ MigrateWorkspaceResponse::MigrateWorkspaceResponse(
  */
 const MigrateWorkspaceRequest * MigrateWorkspaceResponse::request() const
 {
-    Q_D(const MigrateWorkspaceResponse);
-    return static_cast<const MigrateWorkspaceRequest *>(d->request);
+    return static_cast<const MigrateWorkspaceRequest *>(WorkSpacesResponse::request());
 }
 
 /*!

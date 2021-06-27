@@ -87,8 +87,7 @@ RestoreManagedPrefixListVersionResponse::RestoreManagedPrefixListVersionResponse
  */
 const RestoreManagedPrefixListVersionRequest * RestoreManagedPrefixListVersionResponse::request() const
 {
-    Q_D(const RestoreManagedPrefixListVersionResponse);
-    return static_cast<const RestoreManagedPrefixListVersionRequest *>(d->request);
+    return static_cast<const RestoreManagedPrefixListVersionRequest *>(Ec2Response::request());
 }
 
 /*!

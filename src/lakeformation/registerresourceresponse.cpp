@@ -58,8 +58,7 @@ RegisterResourceResponse::RegisterResourceResponse(
  */
 const RegisterResourceRequest * RegisterResourceResponse::request() const
 {
-    Q_D(const RegisterResourceResponse);
-    return static_cast<const RegisterResourceRequest *>(d->request);
+    return static_cast<const RegisterResourceRequest *>(LakeFormationResponse::request());
 }
 
 /*!

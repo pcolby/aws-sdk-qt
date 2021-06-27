@@ -124,8 +124,7 @@ ListVolumesResponse::ListVolumesResponse(
  */
 const ListVolumesRequest * ListVolumesResponse::request() const
 {
-    Q_D(const ListVolumesResponse);
-    return static_cast<const ListVolumesRequest *>(d->request);
+    return static_cast<const ListVolumesRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

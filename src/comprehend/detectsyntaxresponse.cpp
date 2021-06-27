@@ -58,8 +58,7 @@ DetectSyntaxResponse::DetectSyntaxResponse(
  */
 const DetectSyntaxRequest * DetectSyntaxResponse::request() const
 {
-    Q_D(const DetectSyntaxResponse);
-    return static_cast<const DetectSyntaxRequest *>(d->request);
+    return static_cast<const DetectSyntaxRequest *>(ComprehendResponse::request());
 }
 
 /*!

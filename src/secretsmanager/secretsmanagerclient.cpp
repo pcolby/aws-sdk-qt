@@ -179,16 +179,16 @@ SecretsManagerClient::SecretsManagerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SecretsManagerClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-10-17"),
+    QStringLiteral("secretsmanager"),
+    QStringLiteral("AWS Secrets Manager"),
+    QStringLiteral("secretsmanager"),
+    parent), d_ptr(new SecretsManagerClientPrivate(this))
 {
-    Q_D(SecretsManagerClient);
-    d->apiVersion = QStringLiteral("2017-10-17");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("secretsmanager");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Secrets Manager");
-    d->serviceName = QStringLiteral("secretsmanager");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -207,16 +207,16 @@ SecretsManagerClient::SecretsManagerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SecretsManagerClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-10-17"),
+    QStringLiteral("secretsmanager"),
+    QStringLiteral("AWS Secrets Manager"),
+    QStringLiteral("secretsmanager"),
+    parent), d_ptr(new SecretsManagerClientPrivate(this))
 {
-    Q_D(SecretsManagerClient);
-    d->apiVersion = QStringLiteral("2017-10-17");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("secretsmanager");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Secrets Manager");
-    d->serviceName = QStringLiteral("secretsmanager");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -1356,10 +1356,9 @@ ValidateResourcePolicyResponse * SecretsManagerClient::validateResourcePolicy(co
 /*!
  * Constructs a SecretsManagerClientPrivate object with public implementation \a q.
  */
-SecretsManagerClientPrivate::SecretsManagerClientPrivate(SecretsManagerClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+SecretsManagerClientPrivate::SecretsManagerClientPrivate(SecretsManagerClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace SecretsManager

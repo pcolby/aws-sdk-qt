@@ -98,8 +98,7 @@ DescribeAvailablePatchesResponse::DescribeAvailablePatchesResponse(
  */
 const DescribeAvailablePatchesRequest * DescribeAvailablePatchesResponse::request() const
 {
-    Q_D(const DescribeAvailablePatchesResponse);
-    return static_cast<const DescribeAvailablePatchesRequest *>(d->request);
+    return static_cast<const DescribeAvailablePatchesRequest *>(SsmResponse::request());
 }
 
 /*!

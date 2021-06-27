@@ -100,8 +100,7 @@ DescribeConnectorProfilesResponse::DescribeConnectorProfilesResponse(
  */
 const DescribeConnectorProfilesRequest * DescribeConnectorProfilesResponse::request() const
 {
-    Q_D(const DescribeConnectorProfilesResponse);
-    return static_cast<const DescribeConnectorProfilesRequest *>(d->request);
+    return static_cast<const DescribeConnectorProfilesRequest *>(AppflowResponse::request());
 }
 
 /*!

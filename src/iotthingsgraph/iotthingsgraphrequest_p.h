@@ -20,15 +20,12 @@
 #ifndef QTAWS_IOTTHINGSGRAPHREQUEST_P_H
 #define QTAWS_IOTTHINGSGRAPHREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "iotthingsgraphrequest.h"
-
 namespace QtAws {
 namespace IoTThingsGraph {
 
 class IoTThingsGraphRequest;
 
-class IoTThingsGraphRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class IoTThingsGraphRequestPrivate {
 
 public:
     IoTThingsGraphRequest::Action action; ///< IoTThingsGraph action to be performed.
@@ -39,6 +36,9 @@ public:
     IoTThingsGraphRequestPrivate(const IoTThingsGraphRequestPrivate &other, IoTThingsGraphRequest * const q);
 
     static QString toString(const IoTThingsGraphRequest::Action &action);
+
+protected:
+    IoTThingsGraphRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoTThingsGraphRequest)

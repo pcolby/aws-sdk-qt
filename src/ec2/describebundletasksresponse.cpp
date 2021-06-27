@@ -87,8 +87,7 @@ DescribeBundleTasksResponse::DescribeBundleTasksResponse(
  */
 const DescribeBundleTasksRequest * DescribeBundleTasksResponse::request() const
 {
-    Q_D(const DescribeBundleTasksResponse);
-    return static_cast<const DescribeBundleTasksRequest *>(d->request);
+    return static_cast<const DescribeBundleTasksRequest *>(Ec2Response::request());
 }
 
 /*!

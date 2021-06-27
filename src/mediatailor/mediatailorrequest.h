@@ -87,6 +87,7 @@ public:
 
 protected:
     /// @cond internal
+    MediaTailorRequestPrivate * const d_ptr; ///< Internal d-pointer.
     MediaTailorRequest(MediaTailorRequestPrivate * const d);
     /// @endcond
 

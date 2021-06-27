@@ -59,8 +59,7 @@ StopDeliveryStreamEncryptionResponse::StopDeliveryStreamEncryptionResponse(
  */
 const StopDeliveryStreamEncryptionRequest * StopDeliveryStreamEncryptionResponse::request() const
 {
-    Q_D(const StopDeliveryStreamEncryptionResponse);
-    return static_cast<const StopDeliveryStreamEncryptionRequest *>(d->request);
+    return static_cast<const StopDeliveryStreamEncryptionRequest *>(FirehoseResponse::request());
 }
 
 /*!

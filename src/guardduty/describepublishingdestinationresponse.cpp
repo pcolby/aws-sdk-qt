@@ -73,8 +73,7 @@ DescribePublishingDestinationResponse::DescribePublishingDestinationResponse(
  */
 const DescribePublishingDestinationRequest * DescribePublishingDestinationResponse::request() const
 {
-    Q_D(const DescribePublishingDestinationResponse);
-    return static_cast<const DescribePublishingDestinationRequest *>(d->request);
+    return static_cast<const DescribePublishingDestinationRequest *>(GuardDutyResponse::request());
 }
 
 /*!

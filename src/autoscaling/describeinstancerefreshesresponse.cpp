@@ -68,8 +68,7 @@ DescribeInstanceRefreshesResponse::DescribeInstanceRefreshesResponse(
  */
 const DescribeInstanceRefreshesRequest * DescribeInstanceRefreshesResponse::request() const
 {
-    Q_D(const DescribeInstanceRefreshesResponse);
-    return static_cast<const DescribeInstanceRefreshesRequest *>(d->request);
+    return static_cast<const DescribeInstanceRefreshesRequest *>(AutoScalingResponse::request());
 }
 
 /*!

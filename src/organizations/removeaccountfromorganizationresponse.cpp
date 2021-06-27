@@ -141,8 +141,7 @@ RemoveAccountFromOrganizationResponse::RemoveAccountFromOrganizationResponse(
  */
 const RemoveAccountFromOrganizationRequest * RemoveAccountFromOrganizationResponse::request() const
 {
-    Q_D(const RemoveAccountFromOrganizationResponse);
-    return static_cast<const RemoveAccountFromOrganizationRequest *>(d->request);
+    return static_cast<const RemoveAccountFromOrganizationRequest *>(OrganizationsResponse::request());
 }
 
 /*!

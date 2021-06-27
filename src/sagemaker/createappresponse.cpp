@@ -70,8 +70,7 @@ CreateAppResponse::CreateAppResponse(
  */
 const CreateAppRequest * CreateAppResponse::request() const
 {
-    Q_D(const CreateAppResponse);
-    return static_cast<const CreateAppRequest *>(d->request);
+    return static_cast<const CreateAppRequest *>(SageMakerResponse::request());
 }
 
 /*!

@@ -69,8 +69,7 @@ UpdateJobExecutionResponse::UpdateJobExecutionResponse(
  */
 const UpdateJobExecutionRequest * UpdateJobExecutionResponse::request() const
 {
-    Q_D(const UpdateJobExecutionResponse);
-    return static_cast<const UpdateJobExecutionRequest *>(d->request);
+    return static_cast<const UpdateJobExecutionRequest *>(IoTJobsDataPlaneResponse::request());
 }
 
 /*!

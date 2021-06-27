@@ -56,8 +56,7 @@ GetVocabularyFilterResponse::GetVocabularyFilterResponse(
  */
 const GetVocabularyFilterRequest * GetVocabularyFilterResponse::request() const
 {
-    Q_D(const GetVocabularyFilterResponse);
-    return static_cast<const GetVocabularyFilterRequest *>(d->request);
+    return static_cast<const GetVocabularyFilterRequest *>(TranscribeServiceResponse::request());
 }
 
 /*!

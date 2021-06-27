@@ -55,8 +55,7 @@ GetBucketVersioningResponse::GetBucketVersioningResponse(
  */
 const GetBucketVersioningRequest * GetBucketVersioningResponse::request() const
 {
-    Q_D(const GetBucketVersioningResponse);
-    return static_cast<const GetBucketVersioningRequest *>(d->request);
+    return static_cast<const GetBucketVersioningRequest *>(S3Response::request());
 }
 
 /*!

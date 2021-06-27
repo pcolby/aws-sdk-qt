@@ -20,14 +20,12 @@
 #ifndef QTAWS_STORAGEGATEWAYRESPONSE_P_H
 #define QTAWS_STORAGEGATEWAYRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace StorageGateway {
 
 class StorageGatewayResponse;
 
-class StorageGatewayResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class StorageGatewayResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    StorageGatewayResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(StorageGatewayResponse)

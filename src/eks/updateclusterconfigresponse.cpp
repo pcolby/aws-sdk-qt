@@ -65,8 +65,7 @@ UpdateClusterConfigResponse::UpdateClusterConfigResponse(
  */
 const UpdateClusterConfigRequest * UpdateClusterConfigResponse::request() const
 {
-    Q_D(const UpdateClusterConfigResponse);
-    return static_cast<const UpdateClusterConfigRequest *>(d->request);
+    return static_cast<const UpdateClusterConfigRequest *>(EksResponse::request());
 }
 
 /*!

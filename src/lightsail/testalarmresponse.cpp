@@ -74,8 +74,7 @@ TestAlarmResponse::TestAlarmResponse(
  */
 const TestAlarmRequest * TestAlarmResponse::request() const
 {
-    Q_D(const TestAlarmResponse);
-    return static_cast<const TestAlarmRequest *>(d->request);
+    return static_cast<const TestAlarmRequest *>(LightsailResponse::request());
 }
 
 /*!

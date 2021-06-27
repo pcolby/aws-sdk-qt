@@ -73,8 +73,7 @@ CreateVirtualServiceResponse::CreateVirtualServiceResponse(
  */
 const CreateVirtualServiceRequest * CreateVirtualServiceResponse::request() const
 {
-    Q_D(const CreateVirtualServiceResponse);
-    return static_cast<const CreateVirtualServiceRequest *>(d->request);
+    return static_cast<const CreateVirtualServiceRequest *>(AppMeshResponse::request());
 }
 
 /*!

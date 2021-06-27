@@ -60,8 +60,7 @@ GetServiceResponse::GetServiceResponse(
  */
 const GetServiceRequest * GetServiceResponse::request() const
 {
-    Q_D(const GetServiceResponse);
-    return static_cast<const GetServiceRequest *>(d->request);
+    return static_cast<const GetServiceRequest *>(ServiceDiscoveryResponse::request());
 }
 
 /*!

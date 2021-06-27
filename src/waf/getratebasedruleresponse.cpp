@@ -76,8 +76,7 @@ GetRateBasedRuleResponse::GetRateBasedRuleResponse(
  */
 const GetRateBasedRuleRequest * GetRateBasedRuleResponse::request() const
 {
-    Q_D(const GetRateBasedRuleResponse);
-    return static_cast<const GetRateBasedRuleRequest *>(d->request);
+    return static_cast<const GetRateBasedRuleRequest *>(WafResponse::request());
 }
 
 /*!

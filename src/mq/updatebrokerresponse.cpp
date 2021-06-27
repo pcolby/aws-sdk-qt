@@ -57,8 +57,7 @@ UpdateBrokerResponse::UpdateBrokerResponse(
  */
 const UpdateBrokerRequest * UpdateBrokerResponse::request() const
 {
-    Q_D(const UpdateBrokerResponse);
-    return static_cast<const UpdateBrokerRequest *>(d->request);
+    return static_cast<const UpdateBrokerRequest *>(MqResponse::request());
 }
 
 /*!

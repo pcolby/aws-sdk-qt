@@ -98,8 +98,7 @@ DescribeAppInstanceAdminResponse::DescribeAppInstanceAdminResponse(
  */
 const DescribeAppInstanceAdminRequest * DescribeAppInstanceAdminResponse::request() const
 {
-    Q_D(const DescribeAppInstanceAdminResponse);
-    return static_cast<const DescribeAppInstanceAdminRequest *>(d->request);
+    return static_cast<const DescribeAppInstanceAdminRequest *>(ChimeResponse::request());
 }
 
 /*!

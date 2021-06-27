@@ -116,8 +116,7 @@ DescribeBudgetActionsForAccountResponse::DescribeBudgetActionsForAccountResponse
  */
 const DescribeBudgetActionsForAccountRequest * DescribeBudgetActionsForAccountResponse::request() const
 {
-    Q_D(const DescribeBudgetActionsForAccountResponse);
-    return static_cast<const DescribeBudgetActionsForAccountRequest *>(d->request);
+    return static_cast<const DescribeBudgetActionsForAccountRequest *>(BudgetsResponse::request());
 }
 
 /*!

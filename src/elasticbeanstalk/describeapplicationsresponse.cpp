@@ -77,8 +77,7 @@ DescribeApplicationsResponse::DescribeApplicationsResponse(
  */
 const DescribeApplicationsRequest * DescribeApplicationsResponse::request() const
 {
-    Q_D(const DescribeApplicationsResponse);
-    return static_cast<const DescribeApplicationsRequest *>(d->request);
+    return static_cast<const DescribeApplicationsRequest *>(ElasticBeanstalkResponse::request());
 }
 
 /*!

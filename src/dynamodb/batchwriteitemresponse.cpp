@@ -74,8 +74,7 @@ BatchWriteItemResponse::BatchWriteItemResponse(
  */
 const BatchWriteItemRequest * BatchWriteItemResponse::request() const
 {
-    Q_D(const BatchWriteItemResponse);
-    return static_cast<const BatchWriteItemRequest *>(d->request);
+    return static_cast<const BatchWriteItemRequest *>(DynamoDBResponse::request());
 }
 
 /*!

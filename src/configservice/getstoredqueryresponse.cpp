@@ -75,8 +75,7 @@ GetStoredQueryResponse::GetStoredQueryResponse(
  */
 const GetStoredQueryRequest * GetStoredQueryResponse::request() const
 {
-    Q_D(const GetStoredQueryResponse);
-    return static_cast<const GetStoredQueryRequest *>(d->request);
+    return static_cast<const GetStoredQueryRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

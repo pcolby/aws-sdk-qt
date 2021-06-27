@@ -98,8 +98,7 @@ CreateAccountResponse::CreateAccountResponse(
  */
 const CreateAccountRequest * CreateAccountResponse::request() const
 {
-    Q_D(const CreateAccountResponse);
-    return static_cast<const CreateAccountRequest *>(d->request);
+    return static_cast<const CreateAccountRequest *>(ChimeResponse::request());
 }
 
 /*!

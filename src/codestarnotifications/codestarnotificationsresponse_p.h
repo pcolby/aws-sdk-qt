@@ -20,14 +20,12 @@
 #ifndef QTAWS_CODESTARNOTIFICATIONSRESPONSE_P_H
 #define QTAWS_CODESTARNOTIFICATIONSRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace CodeStarNotifications {
 
 class CodeStarNotificationsResponse;
 
-class CodeStarNotificationsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class CodeStarNotificationsResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    CodeStarNotificationsResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CodeStarNotificationsResponse)

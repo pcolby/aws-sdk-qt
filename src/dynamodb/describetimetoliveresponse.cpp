@@ -74,8 +74,7 @@ DescribeTimeToLiveResponse::DescribeTimeToLiveResponse(
  */
 const DescribeTimeToLiveRequest * DescribeTimeToLiveResponse::request() const
 {
-    Q_D(const DescribeTimeToLiveResponse);
-    return static_cast<const DescribeTimeToLiveRequest *>(d->request);
+    return static_cast<const DescribeTimeToLiveRequest *>(DynamoDBResponse::request());
 }
 
 /*!

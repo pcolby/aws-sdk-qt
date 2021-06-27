@@ -75,8 +75,7 @@ DescribeConfigRulesResponse::DescribeConfigRulesResponse(
  */
 const DescribeConfigRulesRequest * DescribeConfigRulesResponse::request() const
 {
-    Q_D(const DescribeConfigRulesResponse);
-    return static_cast<const DescribeConfigRulesRequest *>(d->request);
+    return static_cast<const DescribeConfigRulesRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

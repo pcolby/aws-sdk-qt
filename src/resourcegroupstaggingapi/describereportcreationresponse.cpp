@@ -55,8 +55,7 @@ DescribeReportCreationResponse::DescribeReportCreationResponse(
  */
 const DescribeReportCreationRequest * DescribeReportCreationResponse::request() const
 {
-    Q_D(const DescribeReportCreationResponse);
-    return static_cast<const DescribeReportCreationRequest *>(d->request);
+    return static_cast<const DescribeReportCreationRequest *>(ResourceGroupsTaggingAPIResponse::request());
 }
 
 /*!

@@ -66,8 +66,7 @@ ListDataSetRevisionsResponse::ListDataSetRevisionsResponse(
  */
 const ListDataSetRevisionsRequest * ListDataSetRevisionsResponse::request() const
 {
-    Q_D(const ListDataSetRevisionsResponse);
-    return static_cast<const ListDataSetRevisionsRequest *>(d->request);
+    return static_cast<const ListDataSetRevisionsRequest *>(DataExchangeResponse::request());
 }
 
 /*!

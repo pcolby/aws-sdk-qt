@@ -124,8 +124,7 @@ DescribeMaintenanceStartTimeResponse::DescribeMaintenanceStartTimeResponse(
  */
 const DescribeMaintenanceStartTimeRequest * DescribeMaintenanceStartTimeResponse::request() const
 {
-    Q_D(const DescribeMaintenanceStartTimeResponse);
-    return static_cast<const DescribeMaintenanceStartTimeRequest *>(d->request);
+    return static_cast<const DescribeMaintenanceStartTimeRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

@@ -20,15 +20,12 @@
 #ifndef QTAWS_CLOUDHSMV2REQUEST_P_H
 #define QTAWS_CLOUDHSMV2REQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "cloudhsmv2request.h"
-
 namespace QtAws {
 namespace CloudHSMV2 {
 
 class CloudHSMV2Request;
 
-class CloudHSMV2RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class CloudHSMV2RequestPrivate {
 
 public:
     CloudHSMV2Request::Action action; ///< CloudHSMV2 action to be performed.
@@ -39,6 +36,9 @@ public:
     CloudHSMV2RequestPrivate(const CloudHSMV2RequestPrivate &other, CloudHSMV2Request * const q);
 
     static QString toString(const CloudHSMV2Request::Action &action);
+
+protected:
+    CloudHSMV2Request * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CloudHSMV2Request)

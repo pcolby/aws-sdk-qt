@@ -56,8 +56,7 @@ CreateDBInstanceResponse::CreateDBInstanceResponse(
  */
 const CreateDBInstanceRequest * CreateDBInstanceResponse::request() const
 {
-    Q_D(const CreateDBInstanceResponse);
-    return static_cast<const CreateDBInstanceRequest *>(d->request);
+    return static_cast<const CreateDBInstanceRequest *>(DocDBResponse::request());
 }
 
 /*!

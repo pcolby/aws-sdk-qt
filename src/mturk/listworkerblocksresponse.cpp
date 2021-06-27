@@ -55,8 +55,7 @@ ListWorkerBlocksResponse::ListWorkerBlocksResponse(
  */
 const ListWorkerBlocksRequest * ListWorkerBlocksResponse::request() const
 {
-    Q_D(const ListWorkerBlocksResponse);
-    return static_cast<const ListWorkerBlocksRequest *>(d->request);
+    return static_cast<const ListWorkerBlocksRequest *>(MTurkResponse::request());
 }
 
 /*!

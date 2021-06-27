@@ -20,15 +20,12 @@
 #ifndef QTAWS_MARKETPLACEENTITLEMENTSERVICEREQUEST_P_H
 #define QTAWS_MARKETPLACEENTITLEMENTSERVICEREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "marketplaceentitlementservicerequest.h"
-
 namespace QtAws {
 namespace MarketplaceEntitlementService {
 
 class MarketplaceEntitlementServiceRequest;
 
-class MarketplaceEntitlementServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class MarketplaceEntitlementServiceRequestPrivate {
 
 public:
     MarketplaceEntitlementServiceRequest::Action action; ///< MarketplaceEntitlementService action to be performed.
@@ -39,6 +36,9 @@ public:
     MarketplaceEntitlementServiceRequestPrivate(const MarketplaceEntitlementServiceRequestPrivate &other, MarketplaceEntitlementServiceRequest * const q);
 
     static QString toString(const MarketplaceEntitlementServiceRequest::Action &action);
+
+protected:
+    MarketplaceEntitlementServiceRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MarketplaceEntitlementServiceRequest)

@@ -20,15 +20,12 @@
 #ifndef QTAWS_PERSONALIZEREQUEST_P_H
 #define QTAWS_PERSONALIZEREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "personalizerequest.h"
-
 namespace QtAws {
 namespace Personalize {
 
 class PersonalizeRequest;
 
-class PersonalizeRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class PersonalizeRequestPrivate {
 
 public:
     PersonalizeRequest::Action action; ///< Personalize action to be performed.
@@ -39,6 +36,9 @@ public:
     PersonalizeRequestPrivate(const PersonalizeRequestPrivate &other, PersonalizeRequest * const q);
 
     static QString toString(const PersonalizeRequest::Action &action);
+
+protected:
+    PersonalizeRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(PersonalizeRequest)

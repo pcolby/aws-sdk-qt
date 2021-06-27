@@ -85,8 +85,7 @@ DescribeUsageLimitsResponse::DescribeUsageLimitsResponse(
  */
 const DescribeUsageLimitsRequest * DescribeUsageLimitsResponse::request() const
 {
-    Q_D(const DescribeUsageLimitsResponse);
-    return static_cast<const DescribeUsageLimitsRequest *>(d->request);
+    return static_cast<const DescribeUsageLimitsRequest *>(RedshiftResponse::request());
 }
 
 /*!

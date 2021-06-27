@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    RekognitionResponsePrivate * const d_ptr; ///< Internal d-pointer.
     RekognitionResponse(RekognitionResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

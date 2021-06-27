@@ -60,8 +60,7 @@ DescribeThemePermissionsResponse::DescribeThemePermissionsResponse(
  */
 const DescribeThemePermissionsRequest * DescribeThemePermissionsResponse::request() const
 {
-    Q_D(const DescribeThemePermissionsResponse);
-    return static_cast<const DescribeThemePermissionsRequest *>(d->request);
+    return static_cast<const DescribeThemePermissionsRequest *>(QuickSightResponse::request());
 }
 
 /*!

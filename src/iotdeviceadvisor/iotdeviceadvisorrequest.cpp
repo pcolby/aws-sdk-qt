@@ -55,7 +55,7 @@ namespace IoTDeviceAdvisor {
  * Constructs a IoTDeviceAdvisorRequest object for IoTDeviceAdvisor \a action.
  */
 IoTDeviceAdvisorRequest::IoTDeviceAdvisorRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new IoTDeviceAdvisorRequestPrivate(action, this))
+    : d_ptr(new IoTDeviceAdvisorRequestPrivate(action, this))
 {
 
 }
@@ -64,7 +64,8 @@ IoTDeviceAdvisorRequest::IoTDeviceAdvisorRequest(const Action action)
  * Constructs a copy of \a other.
  */
 IoTDeviceAdvisorRequest::IoTDeviceAdvisorRequest(const IoTDeviceAdvisorRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new IoTDeviceAdvisorRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new IoTDeviceAdvisorRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -87,7 +88,7 @@ IoTDeviceAdvisorRequest& IoTDeviceAdvisorRequest::operator=(const IoTDeviceAdvis
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from IoTDeviceAdvisorRequestPrivate.
  */
-IoTDeviceAdvisorRequest::IoTDeviceAdvisorRequest(IoTDeviceAdvisorRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+IoTDeviceAdvisorRequest::IoTDeviceAdvisorRequest(IoTDeviceAdvisorRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -256,7 +257,7 @@ QNetworkRequest IoTDeviceAdvisorRequest::unsignedRequest(const QUrl &endpoint) c
  * with public implementation \a q.
  */
 IoTDeviceAdvisorRequestPrivate::IoTDeviceAdvisorRequestPrivate(const IoTDeviceAdvisorRequest::Action action, IoTDeviceAdvisorRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -271,8 +272,8 @@ IoTDeviceAdvisorRequestPrivate::IoTDeviceAdvisorRequestPrivate(const IoTDeviceAd
  */
 IoTDeviceAdvisorRequestPrivate::IoTDeviceAdvisorRequestPrivate(const IoTDeviceAdvisorRequestPrivate &other,
                                      IoTDeviceAdvisorRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

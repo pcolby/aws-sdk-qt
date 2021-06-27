@@ -141,8 +141,7 @@ DeleteDeploymentConfigResponse::DeleteDeploymentConfigResponse(
  */
 const DeleteDeploymentConfigRequest * DeleteDeploymentConfigResponse::request() const
 {
-    Q_D(const DeleteDeploymentConfigResponse);
-    return static_cast<const DeleteDeploymentConfigRequest *>(d->request);
+    return static_cast<const DeleteDeploymentConfigRequest *>(CodeDeployResponse::request());
 }
 
 /*!

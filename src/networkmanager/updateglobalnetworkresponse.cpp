@@ -62,8 +62,7 @@ UpdateGlobalNetworkResponse::UpdateGlobalNetworkResponse(
  */
 const UpdateGlobalNetworkRequest * UpdateGlobalNetworkResponse::request() const
 {
-    Q_D(const UpdateGlobalNetworkResponse);
-    return static_cast<const UpdateGlobalNetworkRequest *>(d->request);
+    return static_cast<const UpdateGlobalNetworkRequest *>(NetworkManagerResponse::request());
 }
 
 /*!

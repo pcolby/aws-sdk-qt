@@ -161,8 +161,7 @@ DescribeStackProvisioningParametersResponse::DescribeStackProvisioningParameters
  */
 const DescribeStackProvisioningParametersRequest * DescribeStackProvisioningParametersResponse::request() const
 {
-    Q_D(const DescribeStackProvisioningParametersResponse);
-    return static_cast<const DescribeStackProvisioningParametersRequest *>(d->request);
+    return static_cast<const DescribeStackProvisioningParametersRequest *>(OpsWorksResponse::request());
 }
 
 /*!

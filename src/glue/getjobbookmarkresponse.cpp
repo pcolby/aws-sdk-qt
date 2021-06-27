@@ -58,8 +58,7 @@ GetJobBookmarkResponse::GetJobBookmarkResponse(
  */
 const GetJobBookmarkRequest * GetJobBookmarkResponse::request() const
 {
-    Q_D(const GetJobBookmarkResponse);
-    return static_cast<const GetJobBookmarkRequest *>(d->request);
+    return static_cast<const GetJobBookmarkRequest *>(GlueResponse::request());
 }
 
 /*!

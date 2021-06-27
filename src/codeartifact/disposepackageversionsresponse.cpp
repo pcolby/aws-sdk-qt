@@ -293,8 +293,7 @@ DisposePackageVersionsResponse::DisposePackageVersionsResponse(
  */
 const DisposePackageVersionsRequest * DisposePackageVersionsResponse::request() const
 {
-    Q_D(const DisposePackageVersionsResponse);
-    return static_cast<const DisposePackageVersionsRequest *>(d->request);
+    return static_cast<const DisposePackageVersionsRequest *>(CodeArtifactResponse::request());
 }
 
 /*!

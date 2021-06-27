@@ -66,8 +66,7 @@ DeleteFunctionCodeSigningConfigResponse::DeleteFunctionCodeSigningConfigResponse
  */
 const DeleteFunctionCodeSigningConfigRequest * DeleteFunctionCodeSigningConfigResponse::request() const
 {
-    Q_D(const DeleteFunctionCodeSigningConfigResponse);
-    return static_cast<const DeleteFunctionCodeSigningConfigRequest *>(d->request);
+    return static_cast<const DeleteFunctionCodeSigningConfigRequest *>(LambdaResponse::request());
 }
 
 /*!

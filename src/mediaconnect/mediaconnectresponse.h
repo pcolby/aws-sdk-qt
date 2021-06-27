@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    MediaConnectResponsePrivate * const d_ptr; ///< Internal d-pointer.
     MediaConnectResponse(MediaConnectResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

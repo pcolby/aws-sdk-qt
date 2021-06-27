@@ -66,16 +66,16 @@ FinSpaceDataClient::FinSpaceDataClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new FinSpaceDataClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-07-13"),
+    QStringLiteral("finspace-api"),
+    QStringLiteral("FinSpace Public API"),
+    QStringLiteral("finspace-api"),
+    parent), d_ptr(new FinSpaceDataClientPrivate(this))
 {
-    Q_D(FinSpaceDataClient);
-    d->apiVersion = QStringLiteral("2020-07-13");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("finspace-api");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("FinSpace Public API");
-    d->serviceName = QStringLiteral("finspace-api");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -94,16 +94,16 @@ FinSpaceDataClient::FinSpaceDataClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new FinSpaceDataClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-07-13"),
+    QStringLiteral("finspace-api"),
+    QStringLiteral("FinSpace Public API"),
+    QStringLiteral("finspace-api"),
+    parent), d_ptr(new FinSpaceDataClientPrivate(this))
 {
-    Q_D(FinSpaceDataClient);
-    d->apiVersion = QStringLiteral("2020-07-13");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("finspace-api");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("FinSpace Public API");
-    d->serviceName = QStringLiteral("finspace-api");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -157,10 +157,9 @@ GetWorkingLocationResponse * FinSpaceDataClient::getWorkingLocation(const GetWor
 /*!
  * Constructs a FinSpaceDataClientPrivate object with public implementation \a q.
  */
-FinSpaceDataClientPrivate::FinSpaceDataClientPrivate(FinSpaceDataClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+FinSpaceDataClientPrivate::FinSpaceDataClientPrivate(FinSpaceDataClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace FinSpaceData

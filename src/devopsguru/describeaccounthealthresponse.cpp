@@ -74,8 +74,7 @@ DescribeAccountHealthResponse::DescribeAccountHealthResponse(
  */
 const DescribeAccountHealthRequest * DescribeAccountHealthResponse::request() const
 {
-    Q_D(const DescribeAccountHealthResponse);
-    return static_cast<const DescribeAccountHealthRequest *>(d->request);
+    return static_cast<const DescribeAccountHealthRequest *>(DevOpsGuruResponse::request());
 }
 
 /*!

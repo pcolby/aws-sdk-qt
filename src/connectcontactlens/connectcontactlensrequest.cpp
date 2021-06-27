@@ -43,7 +43,7 @@ namespace ConnectContactLens {
  * Constructs a ConnectContactLensRequest object for ConnectContactLens \a action.
  */
 ConnectContactLensRequest::ConnectContactLensRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new ConnectContactLensRequestPrivate(action, this))
+    : d_ptr(new ConnectContactLensRequestPrivate(action, this))
 {
 
 }
@@ -52,7 +52,8 @@ ConnectContactLensRequest::ConnectContactLensRequest(const Action action)
  * Constructs a copy of \a other.
  */
 ConnectContactLensRequest::ConnectContactLensRequest(const ConnectContactLensRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new ConnectContactLensRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new ConnectContactLensRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -75,7 +76,7 @@ ConnectContactLensRequest& ConnectContactLensRequest::operator=(const ConnectCon
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ConnectContactLensRequestPrivate.
  */
-ConnectContactLensRequest::ConnectContactLensRequest(ConnectContactLensRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+ConnectContactLensRequest::ConnectContactLensRequest(ConnectContactLensRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -244,7 +245,7 @@ QNetworkRequest ConnectContactLensRequest::unsignedRequest(const QUrl &endpoint)
  * with public implementation \a q.
  */
 ConnectContactLensRequestPrivate::ConnectContactLensRequestPrivate(const ConnectContactLensRequest::Action action, ConnectContactLensRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -259,8 +260,8 @@ ConnectContactLensRequestPrivate::ConnectContactLensRequestPrivate(const Connect
  */
 ConnectContactLensRequestPrivate::ConnectContactLensRequestPrivate(const ConnectContactLensRequestPrivate &other,
                                      ConnectContactLensRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

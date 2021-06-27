@@ -66,8 +66,7 @@ GetCustomVerificationEmailTemplateResponse::GetCustomVerificationEmailTemplateRe
  */
 const GetCustomVerificationEmailTemplateRequest * GetCustomVerificationEmailTemplateResponse::request() const
 {
-    Q_D(const GetCustomVerificationEmailTemplateResponse);
-    return static_cast<const GetCustomVerificationEmailTemplateRequest *>(d->request);
+    return static_cast<const GetCustomVerificationEmailTemplateRequest *>(SesResponse::request());
 }
 
 /*!

@@ -84,16 +84,16 @@ PollyClient::PollyClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new PollyClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-06-10"),
+    QStringLiteral("polly"),
+    QStringLiteral("Amazon Polly"),
+    QStringLiteral("polly"),
+    parent), d_ptr(new PollyClientPrivate(this))
 {
-    Q_D(PollyClient);
-    d->apiVersion = QStringLiteral("2016-06-10");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("polly");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Polly");
-    d->serviceName = QStringLiteral("polly");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -112,16 +112,16 @@ PollyClient::PollyClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new PollyClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-06-10"),
+    QStringLiteral("polly"),
+    QStringLiteral("Amazon Polly"),
+    QStringLiteral("polly"),
+    parent), d_ptr(new PollyClientPrivate(this))
 {
-    Q_D(PollyClient);
-    d->apiVersion = QStringLiteral("2016-06-10");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("polly");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Polly");
-    d->serviceName = QStringLiteral("polly");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -297,10 +297,9 @@ SynthesizeSpeechResponse * PollyClient::synthesizeSpeech(const SynthesizeSpeechR
 /*!
  * Constructs a PollyClientPrivate object with public implementation \a q.
  */
-PollyClientPrivate::PollyClientPrivate(PollyClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+PollyClientPrivate::PollyClientPrivate(PollyClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace Polly

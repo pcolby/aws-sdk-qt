@@ -64,8 +64,7 @@ ListResourceSharePermissionsResponse::ListResourceSharePermissionsResponse(
  */
 const ListResourceSharePermissionsRequest * ListResourceSharePermissionsResponse::request() const
 {
-    Q_D(const ListResourceSharePermissionsResponse);
-    return static_cast<const ListResourceSharePermissionsRequest *>(d->request);
+    return static_cast<const ListResourceSharePermissionsRequest *>(RamResponse::request());
 }
 
 /*!

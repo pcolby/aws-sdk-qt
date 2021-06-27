@@ -66,8 +66,7 @@ DeleteSystemInstanceResponse::DeleteSystemInstanceResponse(
  */
 const DeleteSystemInstanceRequest * DeleteSystemInstanceResponse::request() const
 {
-    Q_D(const DeleteSystemInstanceResponse);
-    return static_cast<const DeleteSystemInstanceRequest *>(d->request);
+    return static_cast<const DeleteSystemInstanceRequest *>(IoTThingsGraphResponse::request());
 }
 
 /*!

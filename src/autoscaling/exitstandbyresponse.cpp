@@ -68,8 +68,7 @@ ExitStandbyResponse::ExitStandbyResponse(
  */
 const ExitStandbyRequest * ExitStandbyResponse::request() const
 {
-    Q_D(const ExitStandbyResponse);
-    return static_cast<const ExitStandbyRequest *>(d->request);
+    return static_cast<const ExitStandbyRequest *>(AutoScalingResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ DescribeDataSourceResponse::DescribeDataSourceResponse(
  */
 const DescribeDataSourceRequest * DescribeDataSourceResponse::request() const
 {
-    Q_D(const DescribeDataSourceResponse);
-    return static_cast<const DescribeDataSourceRequest *>(d->request);
+    return static_cast<const DescribeDataSourceRequest *>(kendraResponse::request());
 }
 
 /*!

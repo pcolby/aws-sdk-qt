@@ -56,8 +56,7 @@ DeleteSmsTemplateResponse::DeleteSmsTemplateResponse(
  */
 const DeleteSmsTemplateRequest * DeleteSmsTemplateResponse::request() const
 {
-    Q_D(const DeleteSmsTemplateResponse);
-    return static_cast<const DeleteSmsTemplateRequest *>(d->request);
+    return static_cast<const DeleteSmsTemplateRequest *>(PinpointResponse::request());
 }
 
 /*!

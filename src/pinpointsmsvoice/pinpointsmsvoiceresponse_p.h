@@ -20,14 +20,12 @@
 #ifndef QTAWS_PINPOINTSMSVOICERESPONSE_P_H
 #define QTAWS_PINPOINTSMSVOICERESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace PinpointSMSVoice {
 
 class PinpointSMSVoiceResponse;
 
-class PinpointSMSVoiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class PinpointSMSVoiceResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    PinpointSMSVoiceResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(PinpointSMSVoiceResponse)

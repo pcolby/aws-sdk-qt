@@ -382,6 +382,12 @@ public slots:
     UpdateVoiceChannelResponse * updateVoiceChannel(const UpdateVoiceChannelRequest &request);
     UpdateVoiceTemplateResponse * updateVoiceTemplate(const UpdateVoiceTemplateRequest &request);
 
+protected:
+    /// @cond internal
+    PinpointClientPrivate * const d_ptr; ///< Internal d-pointer.
+    PinpointClient(PinpointClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(PinpointClient)
     Q_DISABLE_COPY(PinpointClient)

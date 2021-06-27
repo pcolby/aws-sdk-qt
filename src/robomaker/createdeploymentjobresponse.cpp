@@ -56,8 +56,7 @@ CreateDeploymentJobResponse::CreateDeploymentJobResponse(
  */
 const CreateDeploymentJobRequest * CreateDeploymentJobResponse::request() const
 {
-    Q_D(const CreateDeploymentJobResponse);
-    return static_cast<const CreateDeploymentJobRequest *>(d->request);
+    return static_cast<const CreateDeploymentJobRequest *>(RoboMakerResponse::request());
 }
 
 /*!

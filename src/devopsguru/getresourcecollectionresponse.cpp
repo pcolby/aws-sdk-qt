@@ -74,8 +74,7 @@ GetResourceCollectionResponse::GetResourceCollectionResponse(
  */
 const GetResourceCollectionRequest * GetResourceCollectionResponse::request() const
 {
-    Q_D(const GetResourceCollectionResponse);
-    return static_cast<const GetResourceCollectionRequest *>(d->request);
+    return static_cast<const GetResourceCollectionRequest *>(DevOpsGuruResponse::request());
 }
 
 /*!

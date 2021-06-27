@@ -87,8 +87,7 @@ CancelCapacityReservationResponse::CancelCapacityReservationResponse(
  */
 const CancelCapacityReservationRequest * CancelCapacityReservationResponse::request() const
 {
-    Q_D(const CancelCapacityReservationResponse);
-    return static_cast<const CancelCapacityReservationRequest *>(d->request);
+    return static_cast<const CancelCapacityReservationRequest *>(Ec2Response::request());
 }
 
 /*!

@@ -20,15 +20,12 @@
 #ifndef QTAWS_LEXRUNTIMEV2REQUEST_P_H
 #define QTAWS_LEXRUNTIMEV2REQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "lexruntimev2request.h"
-
 namespace QtAws {
 namespace LexRuntimeV2 {
 
 class LexRuntimeV2Request;
 
-class LexRuntimeV2RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class LexRuntimeV2RequestPrivate {
 
 public:
     LexRuntimeV2Request::Action action; ///< LexRuntimeV2 action to be performed.
@@ -39,6 +36,9 @@ public:
     LexRuntimeV2RequestPrivate(const LexRuntimeV2RequestPrivate &other, LexRuntimeV2Request * const q);
 
     static QString toString(const LexRuntimeV2Request::Action &action);
+
+protected:
+    LexRuntimeV2Request * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(LexRuntimeV2Request)

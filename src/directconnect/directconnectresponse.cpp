@@ -37,7 +37,7 @@ namespace DirectConnect {
  * Constructs a DirectConnectResponse object with parent \a parent.
  */
 DirectConnectResponse::DirectConnectResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new DirectConnectResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new DirectConnectResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ DirectConnectResponse::DirectConnectResponse(QObject * const parent)
  * implementation that inherits from DirectConnectResponsePrivate.
  */
 DirectConnectResponse::DirectConnectResponse(DirectConnectResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void DirectConnectResponse::parseFailure(QIODevice &response)
  * Constructs a DirectConnectResponsePrivate object with public implementation \a q.
  */
 DirectConnectResponsePrivate::DirectConnectResponsePrivate(
-    DirectConnectResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    DirectConnectResponse * const q) : q_ptr(q)
 {
 
 }

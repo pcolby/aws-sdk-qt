@@ -103,8 +103,7 @@ DescribeStandardsResponse::DescribeStandardsResponse(
  */
 const DescribeStandardsRequest * DescribeStandardsResponse::request() const
 {
-    Q_D(const DescribeStandardsResponse);
-    return static_cast<const DescribeStandardsRequest *>(d->request);
+    return static_cast<const DescribeStandardsRequest *>(SecurityHubResponse::request());
 }
 
 /*!

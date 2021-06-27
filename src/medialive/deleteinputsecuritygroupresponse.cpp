@@ -55,8 +55,7 @@ DeleteInputSecurityGroupResponse::DeleteInputSecurityGroupResponse(
  */
 const DeleteInputSecurityGroupRequest * DeleteInputSecurityGroupResponse::request() const
 {
-    Q_D(const DeleteInputSecurityGroupResponse);
-    return static_cast<const DeleteInputSecurityGroupRequest *>(d->request);
+    return static_cast<const DeleteInputSecurityGroupRequest *>(MediaLiveResponse::request());
 }
 
 /*!

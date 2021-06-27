@@ -129,16 +129,16 @@ CodeGuruProfilerClient::CodeGuruProfilerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CodeGuruProfilerClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-07-18"),
+    QStringLiteral("codeguru-profiler"),
+    QStringLiteral("Amazon CodeGuru Profiler"),
+    QStringLiteral("codeguru-profiler"),
+    parent), d_ptr(new CodeGuruProfilerClientPrivate(this))
 {
-    Q_D(CodeGuruProfilerClient);
-    d->apiVersion = QStringLiteral("2019-07-18");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("codeguru-profiler");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon CodeGuru Profiler");
-    d->serviceName = QStringLiteral("codeguru-profiler");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -157,16 +157,16 @@ CodeGuruProfilerClient::CodeGuruProfilerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CodeGuruProfilerClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-07-18"),
+    QStringLiteral("codeguru-profiler"),
+    QStringLiteral("Amazon CodeGuru Profiler"),
+    QStringLiteral("codeguru-profiler"),
+    parent), d_ptr(new CodeGuruProfilerClientPrivate(this))
 {
-    Q_D(CodeGuruProfilerClient);
-    d->apiVersion = QStringLiteral("2019-07-18");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("codeguru-profiler");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon CodeGuru Profiler");
-    d->serviceName = QStringLiteral("codeguru-profiler");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -540,10 +540,9 @@ UpdateProfilingGroupResponse * CodeGuruProfilerClient::updateProfilingGroup(cons
 /*!
  * Constructs a CodeGuruProfilerClientPrivate object with public implementation \a q.
  */
-CodeGuruProfilerClientPrivate::CodeGuruProfilerClientPrivate(CodeGuruProfilerClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+CodeGuruProfilerClientPrivate::CodeGuruProfilerClientPrivate(CodeGuruProfilerClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace CodeGuruProfiler

@@ -98,8 +98,7 @@ DeleteVoiceConnectorResponse::DeleteVoiceConnectorResponse(
  */
 const DeleteVoiceConnectorRequest * DeleteVoiceConnectorResponse::request() const
 {
-    Q_D(const DeleteVoiceConnectorResponse);
-    return static_cast<const DeleteVoiceConnectorRequest *>(d->request);
+    return static_cast<const DeleteVoiceConnectorRequest *>(ChimeResponse::request());
 }
 
 /*!

@@ -151,16 +151,16 @@ Cloud9Client::Cloud9Client(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new Cloud9ClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-09-23"),
+    QStringLiteral("cloud9"),
+    QStringLiteral("AWS Cloud9"),
+    QStringLiteral("cloud9"),
+    parent), d_ptr(new Cloud9ClientPrivate(this))
 {
-    Q_D(Cloud9Client);
-    d->apiVersion = QStringLiteral("2017-09-23");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("cloud9");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Cloud9");
-    d->serviceName = QStringLiteral("cloud9");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -179,16 +179,16 @@ Cloud9Client::Cloud9Client(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new Cloud9ClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-09-23"),
+    QStringLiteral("cloud9"),
+    QStringLiteral("AWS Cloud9"),
+    QStringLiteral("cloud9"),
+    parent), d_ptr(new Cloud9ClientPrivate(this))
 {
-    Q_D(Cloud9Client);
-    d->apiVersion = QStringLiteral("2017-09-23");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("cloud9");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Cloud9");
-    d->serviceName = QStringLiteral("cloud9");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -378,10 +378,9 @@ UpdateEnvironmentMembershipResponse * Cloud9Client::updateEnvironmentMembership(
 /*!
  * Constructs a Cloud9ClientPrivate object with public implementation \a q.
  */
-Cloud9ClientPrivate::Cloud9ClientPrivate(Cloud9Client * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+Cloud9ClientPrivate::Cloud9ClientPrivate(Cloud9Client * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace Cloud9

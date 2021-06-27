@@ -124,8 +124,7 @@ UpdateAutomaticTapeCreationPolicyResponse::UpdateAutomaticTapeCreationPolicyResp
  */
 const UpdateAutomaticTapeCreationPolicyRequest * UpdateAutomaticTapeCreationPolicyResponse::request() const
 {
-    Q_D(const UpdateAutomaticTapeCreationPolicyResponse);
-    return static_cast<const UpdateAutomaticTapeCreationPolicyRequest *>(d->request);
+    return static_cast<const UpdateAutomaticTapeCreationPolicyRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

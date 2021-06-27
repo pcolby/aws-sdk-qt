@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    MqResponsePrivate * const d_ptr; ///< Internal d-pointer.
     MqResponse(MqResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -62,8 +62,7 @@ GetAccountPasswordPolicyResponse::GetAccountPasswordPolicyResponse(
  */
 const GetAccountPasswordPolicyRequest * GetAccountPasswordPolicyResponse::request() const
 {
-    Q_D(const GetAccountPasswordPolicyResponse);
-    return static_cast<const GetAccountPasswordPolicyRequest *>(d->request);
+    return static_cast<const GetAccountPasswordPolicyRequest *>(IamResponse::request());
 }
 
 /*!

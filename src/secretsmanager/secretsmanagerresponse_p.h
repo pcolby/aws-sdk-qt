@@ -20,14 +20,12 @@
 #ifndef QTAWS_SECRETSMANAGERRESPONSE_P_H
 #define QTAWS_SECRETSMANAGERRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace SecretsManager {
 
 class SecretsManagerResponse;
 
-class SecretsManagerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class SecretsManagerResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    SecretsManagerResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SecretsManagerResponse)

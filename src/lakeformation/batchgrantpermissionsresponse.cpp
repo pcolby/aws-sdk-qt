@@ -58,8 +58,7 @@ BatchGrantPermissionsResponse::BatchGrantPermissionsResponse(
  */
 const BatchGrantPermissionsRequest * BatchGrantPermissionsResponse::request() const
 {
-    Q_D(const BatchGrantPermissionsResponse);
-    return static_cast<const BatchGrantPermissionsRequest *>(d->request);
+    return static_cast<const BatchGrantPermissionsRequest *>(LakeFormationResponse::request());
 }
 
 /*!

@@ -62,8 +62,7 @@ PutAccountPreferencesResponse::PutAccountPreferencesResponse(
  */
 const PutAccountPreferencesRequest * PutAccountPreferencesResponse::request() const
 {
-    Q_D(const PutAccountPreferencesResponse);
-    return static_cast<const PutAccountPreferencesRequest *>(d->request);
+    return static_cast<const PutAccountPreferencesRequest *>(EfsResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ DescribeSourceServersResponse::DescribeSourceServersResponse(
  */
 const DescribeSourceServersRequest * DescribeSourceServersResponse::request() const
 {
-    Q_D(const DescribeSourceServersResponse);
-    return static_cast<const DescribeSourceServersRequest *>(d->request);
+    return static_cast<const DescribeSourceServersRequest *>(mgnResponse::request());
 }
 
 /*!

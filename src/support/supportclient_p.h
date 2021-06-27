@@ -20,19 +20,20 @@
 #ifndef QTAWS_SUPPORTCLIENT_P_H
 #define QTAWS_SUPPORTCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace Support {
 
 class SupportClient;
 
-class SupportClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SupportClientPrivate {
 
 public:
     SupportClientPrivate(SupportClient * const q);
+
+protected:
+    SupportClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SupportClient)

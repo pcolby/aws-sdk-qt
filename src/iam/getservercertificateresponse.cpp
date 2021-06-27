@@ -62,8 +62,7 @@ GetServerCertificateResponse::GetServerCertificateResponse(
  */
 const GetServerCertificateRequest * GetServerCertificateResponse::request() const
 {
-    Q_D(const GetServerCertificateResponse);
-    return static_cast<const GetServerCertificateRequest *>(d->request);
+    return static_cast<const GetServerCertificateRequest *>(IamResponse::request());
 }
 
 /*!

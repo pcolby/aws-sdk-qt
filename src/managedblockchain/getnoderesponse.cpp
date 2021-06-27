@@ -72,8 +72,7 @@ GetNodeResponse::GetNodeResponse(
  */
 const GetNodeRequest * GetNodeResponse::request() const
 {
-    Q_D(const GetNodeResponse);
-    return static_cast<const GetNodeRequest *>(d->request);
+    return static_cast<const GetNodeRequest *>(ManagedBlockchainResponse::request());
 }
 
 /*!

@@ -87,8 +87,7 @@ DeleteFpgaImageResponse::DeleteFpgaImageResponse(
  */
 const DeleteFpgaImageRequest * DeleteFpgaImageResponse::request() const
 {
-    Q_D(const DeleteFpgaImageResponse);
-    return static_cast<const DeleteFpgaImageRequest *>(d->request);
+    return static_cast<const DeleteFpgaImageRequest *>(Ec2Response::request());
 }
 
 /*!

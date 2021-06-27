@@ -58,8 +58,7 @@ UpdateLFTagResponse::UpdateLFTagResponse(
  */
 const UpdateLFTagRequest * UpdateLFTagResponse::request() const
 {
-    Q_D(const UpdateLFTagResponse);
-    return static_cast<const UpdateLFTagRequest *>(d->request);
+    return static_cast<const UpdateLFTagRequest *>(LakeFormationResponse::request());
 }
 
 /*!

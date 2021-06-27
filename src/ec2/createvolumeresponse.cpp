@@ -87,8 +87,7 @@ CreateVolumeResponse::CreateVolumeResponse(
  */
 const CreateVolumeRequest * CreateVolumeResponse::request() const
 {
-    Q_D(const CreateVolumeResponse);
-    return static_cast<const CreateVolumeRequest *>(d->request);
+    return static_cast<const CreateVolumeRequest *>(Ec2Response::request());
 }
 
 /*!

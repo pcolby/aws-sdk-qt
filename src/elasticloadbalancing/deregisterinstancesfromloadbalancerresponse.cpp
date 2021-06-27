@@ -83,8 +83,7 @@ DeregisterInstancesFromLoadBalancerResponse::DeregisterInstancesFromLoadBalancer
  */
 const DeregisterInstancesFromLoadBalancerRequest * DeregisterInstancesFromLoadBalancerResponse::request() const
 {
-    Q_D(const DeregisterInstancesFromLoadBalancerResponse);
-    return static_cast<const DeregisterInstancesFromLoadBalancerRequest *>(d->request);
+    return static_cast<const DeregisterInstancesFromLoadBalancerRequest *>(ElasticLoadBalancingResponse::request());
 }
 
 /*!

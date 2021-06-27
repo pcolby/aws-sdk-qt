@@ -87,8 +87,7 @@ DescribeVpcEndpointServicesResponse::DescribeVpcEndpointServicesResponse(
  */
 const DescribeVpcEndpointServicesRequest * DescribeVpcEndpointServicesResponse::request() const
 {
-    Q_D(const DescribeVpcEndpointServicesResponse);
-    return static_cast<const DescribeVpcEndpointServicesRequest *>(d->request);
+    return static_cast<const DescribeVpcEndpointServicesRequest *>(Ec2Response::request());
 }
 
 /*!

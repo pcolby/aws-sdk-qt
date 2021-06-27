@@ -75,8 +75,7 @@ DescribeComplianceByResourceResponse::DescribeComplianceByResourceResponse(
  */
 const DescribeComplianceByResourceRequest * DescribeComplianceByResourceResponse::request() const
 {
-    Q_D(const DescribeComplianceByResourceResponse);
-    return static_cast<const DescribeComplianceByResourceRequest *>(d->request);
+    return static_cast<const DescribeComplianceByResourceRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

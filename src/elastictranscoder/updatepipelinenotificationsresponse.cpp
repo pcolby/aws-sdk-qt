@@ -58,8 +58,7 @@ UpdatePipelineNotificationsResponse::UpdatePipelineNotificationsResponse(
  */
 const UpdatePipelineNotificationsRequest * UpdatePipelineNotificationsResponse::request() const
 {
-    Q_D(const UpdatePipelineNotificationsResponse);
-    return static_cast<const UpdatePipelineNotificationsRequest *>(d->request);
+    return static_cast<const UpdatePipelineNotificationsRequest *>(ElasticTranscoderResponse::request());
 }
 
 /*!

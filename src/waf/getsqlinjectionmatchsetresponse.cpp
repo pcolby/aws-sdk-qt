@@ -76,8 +76,7 @@ GetSqlInjectionMatchSetResponse::GetSqlInjectionMatchSetResponse(
  */
 const GetSqlInjectionMatchSetRequest * GetSqlInjectionMatchSetResponse::request() const
 {
-    Q_D(const GetSqlInjectionMatchSetResponse);
-    return static_cast<const GetSqlInjectionMatchSetRequest *>(d->request);
+    return static_cast<const GetSqlInjectionMatchSetRequest *>(WafResponse::request());
 }
 
 /*!

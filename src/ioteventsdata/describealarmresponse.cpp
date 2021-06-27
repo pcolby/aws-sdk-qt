@@ -64,8 +64,7 @@ DescribeAlarmResponse::DescribeAlarmResponse(
  */
 const DescribeAlarmRequest * DescribeAlarmResponse::request() const
 {
-    Q_D(const DescribeAlarmResponse);
-    return static_cast<const DescribeAlarmRequest *>(d->request);
+    return static_cast<const DescribeAlarmRequest *>(IoTEventsDataResponse::request());
 }
 
 /*!

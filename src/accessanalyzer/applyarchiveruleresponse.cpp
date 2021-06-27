@@ -67,8 +67,7 @@ ApplyArchiveRuleResponse::ApplyArchiveRuleResponse(
  */
 const ApplyArchiveRuleRequest * ApplyArchiveRuleResponse::request() const
 {
-    Q_D(const ApplyArchiveRuleResponse);
-    return static_cast<const ApplyArchiveRuleRequest *>(d->request);
+    return static_cast<const ApplyArchiveRuleRequest *>(AccessAnalyzerResponse::request());
 }
 
 /*!

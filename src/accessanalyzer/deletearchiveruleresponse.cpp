@@ -67,8 +67,7 @@ DeleteArchiveRuleResponse::DeleteArchiveRuleResponse(
  */
 const DeleteArchiveRuleRequest * DeleteArchiveRuleResponse::request() const
 {
-    Q_D(const DeleteArchiveRuleResponse);
-    return static_cast<const DeleteArchiveRuleRequest *>(d->request);
+    return static_cast<const DeleteArchiveRuleRequest *>(AccessAnalyzerResponse::request());
 }
 
 /*!

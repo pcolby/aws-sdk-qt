@@ -55,8 +55,7 @@ UpdateIntentResponse::UpdateIntentResponse(
  */
 const UpdateIntentRequest * UpdateIntentResponse::request() const
 {
-    Q_D(const UpdateIntentResponse);
-    return static_cast<const UpdateIntentRequest *>(d->request);
+    return static_cast<const UpdateIntentRequest *>(LexModelsV2Response::request());
 }
 
 /*!

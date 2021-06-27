@@ -67,8 +67,7 @@ DeleteProtocolsListResponse::DeleteProtocolsListResponse(
  */
 const DeleteProtocolsListRequest * DeleteProtocolsListResponse::request() const
 {
-    Q_D(const DeleteProtocolsListResponse);
-    return static_cast<const DeleteProtocolsListRequest *>(d->request);
+    return static_cast<const DeleteProtocolsListRequest *>(FmsResponse::request());
 }
 
 /*!

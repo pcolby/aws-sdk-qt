@@ -270,6 +270,12 @@ public slots:
     UpdateUserProfileResponse * updateUserProfile(const UpdateUserProfileRequest &request);
     UpdateVolumeResponse * updateVolume(const UpdateVolumeRequest &request);
 
+protected:
+    /// @cond internal
+    OpsWorksClientPrivate * const d_ptr; ///< Internal d-pointer.
+    OpsWorksClient(OpsWorksClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(OpsWorksClient)
     Q_DISABLE_COPY(OpsWorksClient)

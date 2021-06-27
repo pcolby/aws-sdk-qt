@@ -134,8 +134,7 @@ DeleteBackupResponse::DeleteBackupResponse(
  */
 const DeleteBackupRequest * DeleteBackupResponse::request() const
 {
-    Q_D(const DeleteBackupResponse);
-    return static_cast<const DeleteBackupRequest *>(d->request);
+    return static_cast<const DeleteBackupRequest *>(OpsWorksCMResponse::request());
 }
 
 /*!

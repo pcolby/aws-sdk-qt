@@ -56,8 +56,7 @@ DescribeDBEngineVersionsResponse::DescribeDBEngineVersionsResponse(
  */
 const DescribeDBEngineVersionsRequest * DescribeDBEngineVersionsResponse::request() const
 {
-    Q_D(const DescribeDBEngineVersionsResponse);
-    return static_cast<const DescribeDBEngineVersionsRequest *>(d->request);
+    return static_cast<const DescribeDBEngineVersionsRequest *>(DocDBResponse::request());
 }
 
 /*!

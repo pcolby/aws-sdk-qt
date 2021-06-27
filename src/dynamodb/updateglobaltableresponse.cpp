@@ -74,8 +74,7 @@ UpdateGlobalTableResponse::UpdateGlobalTableResponse(
  */
 const UpdateGlobalTableRequest * UpdateGlobalTableResponse::request() const
 {
-    Q_D(const UpdateGlobalTableResponse);
-    return static_cast<const UpdateGlobalTableRequest *>(d->request);
+    return static_cast<const UpdateGlobalTableRequest *>(DynamoDBResponse::request());
 }
 
 /*!

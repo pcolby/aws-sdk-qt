@@ -84,8 +84,7 @@ DeactivateUserResponse::DeactivateUserResponse(
  */
 const DeactivateUserRequest * DeactivateUserResponse::request() const
 {
-    Q_D(const DeactivateUserResponse);
-    return static_cast<const DeactivateUserRequest *>(d->request);
+    return static_cast<const DeactivateUserRequest *>(WorkDocsResponse::request());
 }
 
 /*!

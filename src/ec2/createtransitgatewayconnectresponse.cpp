@@ -87,8 +87,7 @@ CreateTransitGatewayConnectResponse::CreateTransitGatewayConnectResponse(
  */
 const CreateTransitGatewayConnectRequest * CreateTransitGatewayConnectResponse::request() const
 {
-    Q_D(const CreateTransitGatewayConnectResponse);
-    return static_cast<const CreateTransitGatewayConnectRequest *>(d->request);
+    return static_cast<const CreateTransitGatewayConnectRequest *>(Ec2Response::request());
 }
 
 /*!

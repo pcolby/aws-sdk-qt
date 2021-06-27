@@ -109,16 +109,16 @@ MediaConvertClient::MediaConvertClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new MediaConvertClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-08-29"),
+    QStringLiteral("mediaconvert"),
+    QStringLiteral("AWS Elemental MediaConvert"),
+    QStringLiteral("mediaconvert"),
+    parent), d_ptr(new MediaConvertClientPrivate(this))
 {
-    Q_D(MediaConvertClient);
-    d->apiVersion = QStringLiteral("2017-08-29");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("mediaconvert");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Elemental MediaConvert");
-    d->serviceName = QStringLiteral("mediaconvert");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -137,16 +137,16 @@ MediaConvertClient::MediaConvertClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new MediaConvertClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-08-29"),
+    QStringLiteral("mediaconvert"),
+    QStringLiteral("AWS Elemental MediaConvert"),
+    QStringLiteral("mediaconvert"),
+    parent), d_ptr(new MediaConvertClientPrivate(this))
 {
-    Q_D(MediaConvertClient);
-    d->apiVersion = QStringLiteral("2017-08-29");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("mediaconvert");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Elemental MediaConvert");
-    d->serviceName = QStringLiteral("mediaconvert");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -473,10 +473,9 @@ UpdateQueueResponse * MediaConvertClient::updateQueue(const UpdateQueueRequest &
 /*!
  * Constructs a MediaConvertClientPrivate object with public implementation \a q.
  */
-MediaConvertClientPrivate::MediaConvertClientPrivate(MediaConvertClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+MediaConvertClientPrivate::MediaConvertClientPrivate(MediaConvertClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace MediaConvert

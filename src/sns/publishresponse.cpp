@@ -75,8 +75,7 @@ PublishResponse::PublishResponse(
  */
 const PublishRequest * PublishResponse::request() const
 {
-    Q_D(const PublishResponse);
-    return static_cast<const PublishRequest *>(d->request);
+    return static_cast<const PublishRequest *>(SnsResponse::request());
 }
 
 /*!

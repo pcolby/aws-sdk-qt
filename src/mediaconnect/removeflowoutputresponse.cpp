@@ -55,8 +55,7 @@ RemoveFlowOutputResponse::RemoveFlowOutputResponse(
  */
 const RemoveFlowOutputRequest * RemoveFlowOutputResponse::request() const
 {
-    Q_D(const RemoveFlowOutputResponse);
-    return static_cast<const RemoveFlowOutputRequest *>(d->request);
+    return static_cast<const RemoveFlowOutputRequest *>(MediaConnectResponse::request());
 }
 
 /*!

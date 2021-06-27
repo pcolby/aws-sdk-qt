@@ -55,8 +55,7 @@ AssociateCertificateResponse::AssociateCertificateResponse(
  */
 const AssociateCertificateRequest * AssociateCertificateResponse::request() const
 {
-    Q_D(const AssociateCertificateResponse);
-    return static_cast<const AssociateCertificateRequest *>(d->request);
+    return static_cast<const AssociateCertificateRequest *>(MediaConvertResponse::request());
 }
 
 /*!

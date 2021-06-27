@@ -98,8 +98,7 @@ UnlabelParameterVersionResponse::UnlabelParameterVersionResponse(
  */
 const UnlabelParameterVersionRequest * UnlabelParameterVersionResponse::request() const
 {
-    Q_D(const UnlabelParameterVersionResponse);
-    return static_cast<const UnlabelParameterVersionRequest *>(d->request);
+    return static_cast<const UnlabelParameterVersionRequest *>(SsmResponse::request());
 }
 
 /*!

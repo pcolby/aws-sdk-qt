@@ -67,8 +67,7 @@ ListAnalyzedResourcesResponse::ListAnalyzedResourcesResponse(
  */
 const ListAnalyzedResourcesRequest * ListAnalyzedResourcesResponse::request() const
 {
-    Q_D(const ListAnalyzedResourcesResponse);
-    return static_cast<const ListAnalyzedResourcesRequest *>(d->request);
+    return static_cast<const ListAnalyzedResourcesRequest *>(AccessAnalyzerResponse::request());
 }
 
 /*!

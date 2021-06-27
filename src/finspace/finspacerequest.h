@@ -64,6 +64,7 @@ public:
 
 protected:
     /// @cond internal
+    finspaceRequestPrivate * const d_ptr; ///< Internal d-pointer.
     finspaceRequest(finspaceRequestPrivate * const d);
     /// @endcond
 

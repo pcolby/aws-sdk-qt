@@ -61,8 +61,7 @@ UpdateJobResponse::UpdateJobResponse(
  */
 const UpdateJobRequest * UpdateJobResponse::request() const
 {
-    Q_D(const UpdateJobResponse);
-    return static_cast<const UpdateJobRequest *>(d->request);
+    return static_cast<const UpdateJobRequest *>(SnowballResponse::request());
 }
 
 /*!

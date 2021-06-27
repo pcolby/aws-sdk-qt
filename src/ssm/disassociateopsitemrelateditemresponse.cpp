@@ -98,8 +98,7 @@ DisassociateOpsItemRelatedItemResponse::DisassociateOpsItemRelatedItemResponse(
  */
 const DisassociateOpsItemRelatedItemRequest * DisassociateOpsItemRelatedItemResponse::request() const
 {
-    Q_D(const DisassociateOpsItemRelatedItemResponse);
-    return static_cast<const DisassociateOpsItemRelatedItemRequest *>(d->request);
+    return static_cast<const DisassociateOpsItemRelatedItemRequest *>(SsmResponse::request());
 }
 
 /*!

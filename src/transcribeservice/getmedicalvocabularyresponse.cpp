@@ -56,8 +56,7 @@ GetMedicalVocabularyResponse::GetMedicalVocabularyResponse(
  */
 const GetMedicalVocabularyRequest * GetMedicalVocabularyResponse::request() const
 {
-    Q_D(const GetMedicalVocabularyResponse);
-    return static_cast<const GetMedicalVocabularyRequest *>(d->request);
+    return static_cast<const GetMedicalVocabularyRequest *>(TranscribeServiceResponse::request());
 }
 
 /*!

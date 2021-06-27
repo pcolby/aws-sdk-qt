@@ -60,8 +60,7 @@ CreateThemeResponse::CreateThemeResponse(
  */
 const CreateThemeRequest * CreateThemeResponse::request() const
 {
-    Q_D(const CreateThemeResponse);
-    return static_cast<const CreateThemeRequest *>(d->request);
+    return static_cast<const CreateThemeRequest *>(QuickSightResponse::request());
 }
 
 /*!

@@ -65,8 +65,7 @@ ListAddonsResponse::ListAddonsResponse(
  */
 const ListAddonsRequest * ListAddonsResponse::request() const
 {
-    Q_D(const ListAddonsResponse);
-    return static_cast<const ListAddonsRequest *>(d->request);
+    return static_cast<const ListAddonsRequest *>(EksResponse::request());
 }
 
 /*!

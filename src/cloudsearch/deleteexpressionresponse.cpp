@@ -66,8 +66,7 @@ DeleteExpressionResponse::DeleteExpressionResponse(
  */
 const DeleteExpressionRequest * DeleteExpressionResponse::request() const
 {
-    Q_D(const DeleteExpressionResponse);
-    return static_cast<const DeleteExpressionRequest *>(d->request);
+    return static_cast<const DeleteExpressionRequest *>(CloudSearchResponse::request());
 }
 
 /*!

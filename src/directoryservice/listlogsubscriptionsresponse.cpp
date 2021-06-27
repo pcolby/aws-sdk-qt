@@ -69,8 +69,7 @@ ListLogSubscriptionsResponse::ListLogSubscriptionsResponse(
  */
 const ListLogSubscriptionsRequest * ListLogSubscriptionsResponse::request() const
 {
-    Q_D(const ListLogSubscriptionsResponse);
-    return static_cast<const ListLogSubscriptionsRequest *>(d->request);
+    return static_cast<const ListLogSubscriptionsRequest *>(DirectoryServiceResponse::request());
 }
 
 /*!

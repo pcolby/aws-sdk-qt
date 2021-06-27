@@ -58,8 +58,7 @@ GetLoggerDefinitionResponse::GetLoggerDefinitionResponse(
  */
 const GetLoggerDefinitionRequest * GetLoggerDefinitionResponse::request() const
 {
-    Q_D(const GetLoggerDefinitionResponse);
-    return static_cast<const GetLoggerDefinitionRequest *>(d->request);
+    return static_cast<const GetLoggerDefinitionRequest *>(GreengrassResponse::request());
 }
 
 /*!

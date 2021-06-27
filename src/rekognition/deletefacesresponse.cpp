@@ -56,8 +56,7 @@ DeleteFacesResponse::DeleteFacesResponse(
  */
 const DeleteFacesRequest * DeleteFacesResponse::request() const
 {
-    Q_D(const DeleteFacesResponse);
-    return static_cast<const DeleteFacesRequest *>(d->request);
+    return static_cast<const DeleteFacesRequest *>(RekognitionResponse::request());
 }
 
 /*!

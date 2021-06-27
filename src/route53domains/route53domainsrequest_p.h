@@ -20,15 +20,12 @@
 #ifndef QTAWS_ROUTE53DOMAINSREQUEST_P_H
 #define QTAWS_ROUTE53DOMAINSREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "route53domainsrequest.h"
-
 namespace QtAws {
 namespace Route53Domains {
 
 class Route53DomainsRequest;
 
-class Route53DomainsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class Route53DomainsRequestPrivate {
 
 public:
     Route53DomainsRequest::Action action; ///< Route53Domains action to be performed.
@@ -39,6 +36,9 @@ public:
     Route53DomainsRequestPrivate(const Route53DomainsRequestPrivate &other, Route53DomainsRequest * const q);
 
     static QString toString(const Route53DomainsRequest::Action &action);
+
+protected:
+    Route53DomainsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(Route53DomainsRequest)

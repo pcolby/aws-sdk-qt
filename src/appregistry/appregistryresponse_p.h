@@ -20,14 +20,12 @@
 #ifndef QTAWS_APPREGISTRYRESPONSE_P_H
 #define QTAWS_APPREGISTRYRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace AppRegistry {
 
 class AppRegistryResponse;
 
-class AppRegistryResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class AppRegistryResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    AppRegistryResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AppRegistryResponse)

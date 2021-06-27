@@ -112,16 +112,16 @@ GroundStationClient::GroundStationClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new GroundStationClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-05-23"),
+    QStringLiteral("groundstation"),
+    QStringLiteral("AWS Ground Station"),
+    QStringLiteral("groundstation"),
+    parent), d_ptr(new GroundStationClientPrivate(this))
 {
-    Q_D(GroundStationClient);
-    d->apiVersion = QStringLiteral("2019-05-23");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("groundstation");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Ground Station");
-    d->serviceName = QStringLiteral("groundstation");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -140,16 +140,16 @@ GroundStationClient::GroundStationClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new GroundStationClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-05-23"),
+    QStringLiteral("groundstation"),
+    QStringLiteral("AWS Ground Station"),
+    QStringLiteral("groundstation"),
+    parent), d_ptr(new GroundStationClientPrivate(this))
 {
-    Q_D(GroundStationClient);
-    d->apiVersion = QStringLiteral("2019-05-23");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("groundstation");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Ground Station");
-    d->serviceName = QStringLiteral("groundstation");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -525,10 +525,9 @@ UpdateMissionProfileResponse * GroundStationClient::updateMissionProfile(const U
 /*!
  * Constructs a GroundStationClientPrivate object with public implementation \a q.
  */
-GroundStationClientPrivate::GroundStationClientPrivate(GroundStationClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+GroundStationClientPrivate::GroundStationClientPrivate(GroundStationClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace GroundStation

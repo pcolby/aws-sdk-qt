@@ -193,6 +193,12 @@ public slots:
     UpdateJobPriorityResponse * updateJobPriority(const UpdateJobPriorityRequest &request);
     UpdateJobStatusResponse * updateJobStatus(const UpdateJobStatusRequest &request);
 
+protected:
+    /// @cond internal
+    S3ControlClientPrivate * const d_ptr; ///< Internal d-pointer.
+    S3ControlClient(S3ControlClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(S3ControlClient)
     Q_DISABLE_COPY(S3ControlClient)

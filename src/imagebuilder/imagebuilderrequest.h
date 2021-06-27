@@ -105,6 +105,7 @@ public:
 
 protected:
     /// @cond internal
+    imagebuilderRequestPrivate * const d_ptr; ///< Internal d-pointer.
     imagebuilderRequest(imagebuilderRequestPrivate * const d);
     /// @endcond
 

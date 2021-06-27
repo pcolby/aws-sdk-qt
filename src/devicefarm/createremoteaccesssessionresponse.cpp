@@ -75,8 +75,7 @@ CreateRemoteAccessSessionResponse::CreateRemoteAccessSessionResponse(
  */
 const CreateRemoteAccessSessionRequest * CreateRemoteAccessSessionResponse::request() const
 {
-    Q_D(const CreateRemoteAccessSessionResponse);
-    return static_cast<const CreateRemoteAccessSessionRequest *>(d->request);
+    return static_cast<const CreateRemoteAccessSessionRequest *>(DeviceFarmResponse::request());
 }
 
 /*!

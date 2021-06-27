@@ -61,8 +61,7 @@ ListRecordHistoryResponse::ListRecordHistoryResponse(
  */
 const ListRecordHistoryRequest * ListRecordHistoryResponse::request() const
 {
-    Q_D(const ListRecordHistoryResponse);
-    return static_cast<const ListRecordHistoryRequest *>(d->request);
+    return static_cast<const ListRecordHistoryRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

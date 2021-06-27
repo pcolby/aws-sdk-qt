@@ -57,8 +57,7 @@ GetMetricPolicyResponse::GetMetricPolicyResponse(
  */
 const GetMetricPolicyRequest * GetMetricPolicyResponse::request() const
 {
-    Q_D(const GetMetricPolicyResponse);
-    return static_cast<const GetMetricPolicyRequest *>(d->request);
+    return static_cast<const GetMetricPolicyRequest *>(MediaStoreResponse::request());
 }
 
 /*!

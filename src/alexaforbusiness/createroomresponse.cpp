@@ -62,8 +62,7 @@ CreateRoomResponse::CreateRoomResponse(
  */
 const CreateRoomRequest * CreateRoomResponse::request() const
 {
-    Q_D(const CreateRoomResponse);
-    return static_cast<const CreateRoomRequest *>(d->request);
+    return static_cast<const CreateRoomRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

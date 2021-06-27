@@ -45,7 +45,7 @@ namespace S3Outposts {
  * Constructs a S3OutpostsRequest object for S3Outposts \a action.
  */
 S3OutpostsRequest::S3OutpostsRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new S3OutpostsRequestPrivate(action, this))
+    : d_ptr(new S3OutpostsRequestPrivate(action, this))
 {
 
 }
@@ -54,7 +54,8 @@ S3OutpostsRequest::S3OutpostsRequest(const Action action)
  * Constructs a copy of \a other.
  */
 S3OutpostsRequest::S3OutpostsRequest(const S3OutpostsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new S3OutpostsRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new S3OutpostsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -77,7 +78,7 @@ S3OutpostsRequest& S3OutpostsRequest::operator=(const S3OutpostsRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from S3OutpostsRequestPrivate.
  */
-S3OutpostsRequest::S3OutpostsRequest(S3OutpostsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+S3OutpostsRequest::S3OutpostsRequest(S3OutpostsRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -246,7 +247,7 @@ QNetworkRequest S3OutpostsRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 S3OutpostsRequestPrivate::S3OutpostsRequestPrivate(const S3OutpostsRequest::Action action, S3OutpostsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -261,8 +262,8 @@ S3OutpostsRequestPrivate::S3OutpostsRequestPrivate(const S3OutpostsRequest::Acti
  */
 S3OutpostsRequestPrivate::S3OutpostsRequestPrivate(const S3OutpostsRequestPrivate &other,
                                      S3OutpostsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

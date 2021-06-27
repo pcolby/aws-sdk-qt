@@ -62,8 +62,7 @@ UpdateSAMLProviderResponse::UpdateSAMLProviderResponse(
  */
 const UpdateSAMLProviderRequest * UpdateSAMLProviderResponse::request() const
 {
-    Q_D(const UpdateSAMLProviderResponse);
-    return static_cast<const UpdateSAMLProviderRequest *>(d->request);
+    return static_cast<const UpdateSAMLProviderRequest *>(IamResponse::request());
 }
 
 /*!

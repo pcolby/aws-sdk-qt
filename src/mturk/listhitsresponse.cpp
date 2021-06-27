@@ -55,8 +55,7 @@ ListHITsResponse::ListHITsResponse(
  */
 const ListHITsRequest * ListHITsResponse::request() const
 {
-    Q_D(const ListHITsResponse);
-    return static_cast<const ListHITsRequest *>(d->request);
+    return static_cast<const ListHITsRequest *>(MTurkResponse::request());
 }
 
 /*!

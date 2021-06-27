@@ -55,8 +55,7 @@ CreateContactResponse::CreateContactResponse(
  */
 const CreateContactRequest * CreateContactResponse::request() const
 {
-    Q_D(const CreateContactResponse);
-    return static_cast<const CreateContactRequest *>(d->request);
+    return static_cast<const CreateContactRequest *>(SSMContactsResponse::request());
 }
 
 /*!

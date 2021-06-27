@@ -82,8 +82,7 @@ ListProvisioningTemplateVersionsResponse::ListProvisioningTemplateVersionsRespon
  */
 const ListProvisioningTemplateVersionsRequest * ListProvisioningTemplateVersionsResponse::request() const
 {
-    Q_D(const ListProvisioningTemplateVersionsResponse);
-    return static_cast<const ListProvisioningTemplateVersionsRequest *>(d->request);
+    return static_cast<const ListProvisioningTemplateVersionsRequest *>(IoTResponse::request());
 }
 
 /*!

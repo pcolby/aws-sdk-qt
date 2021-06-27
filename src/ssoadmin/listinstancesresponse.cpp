@@ -55,8 +55,7 @@ ListInstancesResponse::ListInstancesResponse(
  */
 const ListInstancesRequest * ListInstancesResponse::request() const
 {
-    Q_D(const ListInstancesResponse);
-    return static_cast<const ListInstancesRequest *>(d->request);
+    return static_cast<const ListInstancesRequest *>(SSOAdminResponse::request());
 }
 
 /*!

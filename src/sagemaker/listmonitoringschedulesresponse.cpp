@@ -70,8 +70,7 @@ ListMonitoringSchedulesResponse::ListMonitoringSchedulesResponse(
  */
 const ListMonitoringSchedulesRequest * ListMonitoringSchedulesResponse::request() const
 {
-    Q_D(const ListMonitoringSchedulesResponse);
-    return static_cast<const ListMonitoringSchedulesRequest *>(d->request);
+    return static_cast<const ListMonitoringSchedulesRequest *>(SageMakerResponse::request());
 }
 
 /*!

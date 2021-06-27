@@ -59,8 +59,7 @@ DescribeCopyJobResponse::DescribeCopyJobResponse(
  */
 const DescribeCopyJobRequest * DescribeCopyJobResponse::request() const
 {
-    Q_D(const DescribeCopyJobResponse);
-    return static_cast<const DescribeCopyJobRequest *>(d->request);
+    return static_cast<const DescribeCopyJobRequest *>(BackupResponse::request());
 }
 
 /*!

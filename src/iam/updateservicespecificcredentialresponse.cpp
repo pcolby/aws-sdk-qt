@@ -62,8 +62,7 @@ UpdateServiceSpecificCredentialResponse::UpdateServiceSpecificCredentialResponse
  */
 const UpdateServiceSpecificCredentialRequest * UpdateServiceSpecificCredentialResponse::request() const
 {
-    Q_D(const UpdateServiceSpecificCredentialResponse);
-    return static_cast<const UpdateServiceSpecificCredentialRequest *>(d->request);
+    return static_cast<const UpdateServiceSpecificCredentialRequest *>(IamResponse::request());
 }
 
 /*!

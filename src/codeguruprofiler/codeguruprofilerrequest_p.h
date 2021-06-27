@@ -20,15 +20,12 @@
 #ifndef QTAWS_CODEGURUPROFILERREQUEST_P_H
 #define QTAWS_CODEGURUPROFILERREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "codeguruprofilerrequest.h"
-
 namespace QtAws {
 namespace CodeGuruProfiler {
 
 class CodeGuruProfilerRequest;
 
-class CodeGuruProfilerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class CodeGuruProfilerRequestPrivate {
 
 public:
     CodeGuruProfilerRequest::Action action; ///< CodeGuruProfiler action to be performed.
@@ -39,6 +36,9 @@ public:
     CodeGuruProfilerRequestPrivate(const CodeGuruProfilerRequestPrivate &other, CodeGuruProfilerRequest * const q);
 
     static QString toString(const CodeGuruProfilerRequest::Action &action);
+
+protected:
+    CodeGuruProfilerRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CodeGuruProfilerRequest)

@@ -70,8 +70,7 @@ ListAssociationsResponse::ListAssociationsResponse(
  */
 const ListAssociationsRequest * ListAssociationsResponse::request() const
 {
-    Q_D(const ListAssociationsResponse);
-    return static_cast<const ListAssociationsRequest *>(d->request);
+    return static_cast<const ListAssociationsRequest *>(SageMakerResponse::request());
 }
 
 /*!

@@ -71,8 +71,7 @@ SignalWorkflowExecutionResponse::SignalWorkflowExecutionResponse(
  */
 const SignalWorkflowExecutionRequest * SignalWorkflowExecutionResponse::request() const
 {
-    Q_D(const SignalWorkflowExecutionResponse);
-    return static_cast<const SignalWorkflowExecutionRequest *>(d->request);
+    return static_cast<const SignalWorkflowExecutionRequest *>(SwfResponse::request());
 }
 
 /*!

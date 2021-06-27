@@ -121,8 +121,7 @@ DisassociateMembershipResponse::DisassociateMembershipResponse(
  */
 const DisassociateMembershipRequest * DisassociateMembershipResponse::request() const
 {
-    Q_D(const DisassociateMembershipResponse);
-    return static_cast<const DisassociateMembershipRequest *>(d->request);
+    return static_cast<const DisassociateMembershipRequest *>(DetectiveResponse::request());
 }
 
 /*!

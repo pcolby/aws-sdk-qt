@@ -145,8 +145,7 @@ UpdateFirewallDescriptionResponse::UpdateFirewallDescriptionResponse(
  */
 const UpdateFirewallDescriptionRequest * UpdateFirewallDescriptionResponse::request() const
 {
-    Q_D(const UpdateFirewallDescriptionResponse);
-    return static_cast<const UpdateFirewallDescriptionRequest *>(d->request);
+    return static_cast<const UpdateFirewallDescriptionRequest *>(NetworkFirewallResponse::request());
 }
 
 /*!

@@ -107,6 +107,7 @@ public:
 
 protected:
     /// @cond internal
+    RekognitionRequestPrivate * const d_ptr; ///< Internal d-pointer.
     RekognitionRequest(RekognitionRequestPrivate * const d);
     /// @endcond
 

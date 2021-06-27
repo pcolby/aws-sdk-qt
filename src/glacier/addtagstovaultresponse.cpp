@@ -91,8 +91,7 @@ AddTagsToVaultResponse::AddTagsToVaultResponse(
  */
 const AddTagsToVaultRequest * AddTagsToVaultResponse::request() const
 {
-    Q_D(const AddTagsToVaultResponse);
-    return static_cast<const AddTagsToVaultRequest *>(d->request);
+    return static_cast<const AddTagsToVaultRequest *>(GlacierResponse::request());
 }
 
 /*!

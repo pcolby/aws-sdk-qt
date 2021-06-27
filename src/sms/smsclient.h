@@ -151,6 +151,12 @@ public slots:
     UpdateAppResponse * updateApp(const UpdateAppRequest &request);
     UpdateReplicationJobResponse * updateReplicationJob(const UpdateReplicationJobRequest &request);
 
+protected:
+    /// @cond internal
+    SmsClientPrivate * const d_ptr; ///< Internal d-pointer.
+    SmsClient(SmsClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(SmsClient)
     Q_DISABLE_COPY(SmsClient)

@@ -56,8 +56,7 @@ GetDomainSuggestionsResponse::GetDomainSuggestionsResponse(
  */
 const GetDomainSuggestionsRequest * GetDomainSuggestionsResponse::request() const
 {
-    Q_D(const GetDomainSuggestionsResponse);
-    return static_cast<const GetDomainSuggestionsRequest *>(d->request);
+    return static_cast<const GetDomainSuggestionsRequest *>(Route53DomainsResponse::request());
 }
 
 /*!

@@ -37,7 +37,7 @@ namespace Health {
  * Constructs a HealthResponse object with parent \a parent.
  */
 HealthResponse::HealthResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new HealthResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new HealthResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ HealthResponse::HealthResponse(QObject * const parent)
  * implementation that inherits from HealthResponsePrivate.
  */
 HealthResponse::HealthResponse(HealthResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void HealthResponse::parseFailure(QIODevice &response)
  * Constructs a HealthResponsePrivate object with public implementation \a q.
  */
 HealthResponsePrivate::HealthResponsePrivate(
-    HealthResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    HealthResponse * const q) : q_ptr(q)
 {
 
 }

@@ -73,8 +73,7 @@ ReportTaskRunnerHeartbeatResponse::ReportTaskRunnerHeartbeatResponse(
  */
 const ReportTaskRunnerHeartbeatRequest * ReportTaskRunnerHeartbeatResponse::request() const
 {
-    Q_D(const ReportTaskRunnerHeartbeatResponse);
-    return static_cast<const ReportTaskRunnerHeartbeatRequest *>(d->request);
+    return static_cast<const ReportTaskRunnerHeartbeatRequest *>(DataPipelineResponse::request());
 }
 
 /*!

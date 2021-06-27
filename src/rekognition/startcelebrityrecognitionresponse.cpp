@@ -56,8 +56,7 @@ StartCelebrityRecognitionResponse::StartCelebrityRecognitionResponse(
  */
 const StartCelebrityRecognitionRequest * StartCelebrityRecognitionResponse::request() const
 {
-    Q_D(const StartCelebrityRecognitionResponse);
-    return static_cast<const StartCelebrityRecognitionRequest *>(d->request);
+    return static_cast<const StartCelebrityRecognitionRequest *>(RekognitionResponse::request());
 }
 
 /*!

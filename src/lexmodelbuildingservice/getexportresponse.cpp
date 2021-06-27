@@ -59,8 +59,7 @@ GetExportResponse::GetExportResponse(
  */
 const GetExportRequest * GetExportResponse::request() const
 {
-    Q_D(const GetExportResponse);
-    return static_cast<const GetExportRequest *>(d->request);
+    return static_cast<const GetExportRequest *>(LexModelBuildingServiceResponse::request());
 }
 
 /*!

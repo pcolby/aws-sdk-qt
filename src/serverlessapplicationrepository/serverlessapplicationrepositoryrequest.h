@@ -70,6 +70,7 @@ public:
 
 protected:
     /// @cond internal
+    ServerlessApplicationRepositoryRequestPrivate * const d_ptr; ///< Internal d-pointer.
     ServerlessApplicationRepositoryRequest(ServerlessApplicationRepositoryRequestPrivate * const d);
     /// @endcond
 

@@ -70,8 +70,7 @@ DescribePipelineDefinitionForExecutionResponse::DescribePipelineDefinitionForExe
  */
 const DescribePipelineDefinitionForExecutionRequest * DescribePipelineDefinitionForExecutionResponse::request() const
 {
-    Q_D(const DescribePipelineDefinitionForExecutionResponse);
-    return static_cast<const DescribePipelineDefinitionForExecutionRequest *>(d->request);
+    return static_cast<const DescribePipelineDefinitionForExecutionRequest *>(SageMakerResponse::request());
 }
 
 /*!

@@ -98,8 +98,7 @@ RegenerateSecurityTokenResponse::RegenerateSecurityTokenResponse(
  */
 const RegenerateSecurityTokenRequest * RegenerateSecurityTokenResponse::request() const
 {
-    Q_D(const RegenerateSecurityTokenResponse);
-    return static_cast<const RegenerateSecurityTokenRequest *>(d->request);
+    return static_cast<const RegenerateSecurityTokenRequest *>(ChimeResponse::request());
 }
 
 /*!

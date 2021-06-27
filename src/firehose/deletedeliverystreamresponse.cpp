@@ -59,8 +59,7 @@ DeleteDeliveryStreamResponse::DeleteDeliveryStreamResponse(
  */
 const DeleteDeliveryStreamRequest * DeleteDeliveryStreamResponse::request() const
 {
-    Q_D(const DeleteDeliveryStreamResponse);
-    return static_cast<const DeleteDeliveryStreamRequest *>(d->request);
+    return static_cast<const DeleteDeliveryStreamRequest *>(FirehoseResponse::request());
 }
 
 /*!

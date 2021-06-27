@@ -55,8 +55,7 @@ DeleteOriginEndpointResponse::DeleteOriginEndpointResponse(
  */
 const DeleteOriginEndpointRequest * DeleteOriginEndpointResponse::request() const
 {
-    Q_D(const DeleteOriginEndpointResponse);
-    return static_cast<const DeleteOriginEndpointRequest *>(d->request);
+    return static_cast<const DeleteOriginEndpointRequest *>(MediaPackageResponse::request());
 }
 
 /*!

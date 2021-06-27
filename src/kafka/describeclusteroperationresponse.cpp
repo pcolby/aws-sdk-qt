@@ -56,8 +56,7 @@ DescribeClusterOperationResponse::DescribeClusterOperationResponse(
  */
 const DescribeClusterOperationRequest * DescribeClusterOperationResponse::request() const
 {
-    Q_D(const DescribeClusterOperationResponse);
-    return static_cast<const DescribeClusterOperationRequest *>(d->request);
+    return static_cast<const DescribeClusterOperationRequest *>(KafkaResponse::request());
 }
 
 /*!

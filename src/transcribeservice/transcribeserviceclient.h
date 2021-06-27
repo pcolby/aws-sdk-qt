@@ -127,6 +127,12 @@ public slots:
     UpdateVocabularyResponse * updateVocabulary(const UpdateVocabularyRequest &request);
     UpdateVocabularyFilterResponse * updateVocabularyFilter(const UpdateVocabularyFilterRequest &request);
 
+protected:
+    /// @cond internal
+    TranscribeServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
+    TranscribeServiceClient(TranscribeServiceClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(TranscribeServiceClient)
     Q_DISABLE_COPY(TranscribeServiceClient)

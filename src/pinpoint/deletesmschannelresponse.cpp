@@ -56,8 +56,7 @@ DeleteSmsChannelResponse::DeleteSmsChannelResponse(
  */
 const DeleteSmsChannelRequest * DeleteSmsChannelResponse::request() const
 {
-    Q_D(const DeleteSmsChannelResponse);
-    return static_cast<const DeleteSmsChannelRequest *>(d->request);
+    return static_cast<const DeleteSmsChannelRequest *>(PinpointResponse::request());
 }
 
 /*!

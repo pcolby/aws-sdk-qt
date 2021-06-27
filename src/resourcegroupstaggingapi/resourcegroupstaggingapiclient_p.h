@@ -20,19 +20,20 @@
 #ifndef QTAWS_RESOURCEGROUPSTAGGINGAPICLIENT_P_H
 #define QTAWS_RESOURCEGROUPSTAGGINGAPICLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace ResourceGroupsTaggingAPI {
 
 class ResourceGroupsTaggingAPIClient;
 
-class ResourceGroupsTaggingAPIClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ResourceGroupsTaggingAPIClientPrivate {
 
 public:
     ResourceGroupsTaggingAPIClientPrivate(ResourceGroupsTaggingAPIClient * const q);
+
+protected:
+    ResourceGroupsTaggingAPIClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ResourceGroupsTaggingAPIClient)

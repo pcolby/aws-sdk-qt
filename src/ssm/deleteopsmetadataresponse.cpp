@@ -98,8 +98,7 @@ DeleteOpsMetadataResponse::DeleteOpsMetadataResponse(
  */
 const DeleteOpsMetadataRequest * DeleteOpsMetadataResponse::request() const
 {
-    Q_D(const DeleteOpsMetadataResponse);
-    return static_cast<const DeleteOpsMetadataRequest *>(d->request);
+    return static_cast<const DeleteOpsMetadataRequest *>(SsmResponse::request());
 }
 
 /*!

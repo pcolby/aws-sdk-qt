@@ -62,8 +62,7 @@ SetRepositoryPolicyResponse::SetRepositoryPolicyResponse(
  */
 const SetRepositoryPolicyRequest * SetRepositoryPolicyResponse::request() const
 {
-    Q_D(const SetRepositoryPolicyResponse);
-    return static_cast<const SetRepositoryPolicyRequest *>(d->request);
+    return static_cast<const SetRepositoryPolicyRequest *>(EcrResponse::request());
 }
 
 /*!

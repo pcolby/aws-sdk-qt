@@ -59,8 +59,7 @@ CreateSubnetGroupResponse::CreateSubnetGroupResponse(
  */
 const CreateSubnetGroupRequest * CreateSubnetGroupResponse::request() const
 {
-    Q_D(const CreateSubnetGroupResponse);
-    return static_cast<const CreateSubnetGroupRequest *>(d->request);
+    return static_cast<const CreateSubnetGroupRequest *>(DaxResponse::request());
 }
 
 /*!

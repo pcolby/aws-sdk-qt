@@ -56,8 +56,7 @@ PutResourceLogLevelResponse::PutResourceLogLevelResponse(
  */
 const PutResourceLogLevelRequest * PutResourceLogLevelResponse::request() const
 {
-    Q_D(const PutResourceLogLevelResponse);
-    return static_cast<const PutResourceLogLevelRequest *>(d->request);
+    return static_cast<const PutResourceLogLevelRequest *>(IoTWirelessResponse::request());
 }
 
 /*!

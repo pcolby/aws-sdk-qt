@@ -113,6 +113,7 @@ public:
 
 protected:
     /// @cond internal
+    IoTWirelessRequestPrivate * const d_ptr; ///< Internal d-pointer.
     IoTWirelessRequest(IoTWirelessRequestPrivate * const d);
     /// @endcond
 

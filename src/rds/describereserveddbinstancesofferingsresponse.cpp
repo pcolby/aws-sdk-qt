@@ -119,8 +119,7 @@ DescribeReservedDBInstancesOfferingsResponse::DescribeReservedDBInstancesOfferin
  */
 const DescribeReservedDBInstancesOfferingsRequest * DescribeReservedDBInstancesOfferingsResponse::request() const
 {
-    Q_D(const DescribeReservedDBInstancesOfferingsResponse);
-    return static_cast<const DescribeReservedDBInstancesOfferingsRequest *>(d->request);
+    return static_cast<const DescribeReservedDBInstancesOfferingsRequest *>(RdsResponse::request());
 }
 
 /*!

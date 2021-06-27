@@ -79,8 +79,7 @@ DisassociateLambdaFunctionResponse::DisassociateLambdaFunctionResponse(
  */
 const DisassociateLambdaFunctionRequest * DisassociateLambdaFunctionResponse::request() const
 {
-    Q_D(const DisassociateLambdaFunctionResponse);
-    return static_cast<const DisassociateLambdaFunctionRequest *>(d->request);
+    return static_cast<const DisassociateLambdaFunctionRequest *>(ConnectResponse::request());
 }
 
 /*!

@@ -62,8 +62,7 @@ ListRolesResponse::ListRolesResponse(
  */
 const ListRolesRequest * ListRolesResponse::request() const
 {
-    Q_D(const ListRolesResponse);
-    return static_cast<const ListRolesRequest *>(d->request);
+    return static_cast<const ListRolesRequest *>(IamResponse::request());
 }
 
 /*!

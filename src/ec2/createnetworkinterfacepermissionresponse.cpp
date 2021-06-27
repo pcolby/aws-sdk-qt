@@ -87,8 +87,7 @@ CreateNetworkInterfacePermissionResponse::CreateNetworkInterfacePermissionRespon
  */
 const CreateNetworkInterfacePermissionRequest * CreateNetworkInterfacePermissionResponse::request() const
 {
-    Q_D(const CreateNetworkInterfacePermissionResponse);
-    return static_cast<const CreateNetworkInterfacePermissionRequest *>(d->request);
+    return static_cast<const CreateNetworkInterfacePermissionRequest *>(Ec2Response::request());
 }
 
 /*!

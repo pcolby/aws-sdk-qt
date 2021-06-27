@@ -60,8 +60,7 @@ UpdateCertificateOptionsResponse::UpdateCertificateOptionsResponse(
  */
 const UpdateCertificateOptionsRequest * UpdateCertificateOptionsResponse::request() const
 {
-    Q_D(const UpdateCertificateOptionsResponse);
-    return static_cast<const UpdateCertificateOptionsRequest *>(d->request);
+    return static_cast<const UpdateCertificateOptionsRequest *>(AcmResponse::request());
 }
 
 /*!

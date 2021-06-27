@@ -79,8 +79,7 @@ AssociateQueueQuickConnectsResponse::AssociateQueueQuickConnectsResponse(
  */
 const AssociateQueueQuickConnectsRequest * AssociateQueueQuickConnectsResponse::request() const
 {
-    Q_D(const AssociateQueueQuickConnectsResponse);
-    return static_cast<const AssociateQueueQuickConnectsRequest *>(d->request);
+    return static_cast<const AssociateQueueQuickConnectsRequest *>(ConnectResponse::request());
 }
 
 /*!

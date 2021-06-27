@@ -74,8 +74,7 @@ UpdateItemResponse::UpdateItemResponse(
  */
 const UpdateItemRequest * UpdateItemResponse::request() const
 {
-    Q_D(const UpdateItemResponse);
-    return static_cast<const UpdateItemRequest *>(d->request);
+    return static_cast<const UpdateItemRequest *>(DynamoDBResponse::request());
 }
 
 /*!

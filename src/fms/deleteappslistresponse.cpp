@@ -67,8 +67,7 @@ DeleteAppsListResponse::DeleteAppsListResponse(
  */
 const DeleteAppsListRequest * DeleteAppsListResponse::request() const
 {
-    Q_D(const DeleteAppsListResponse);
-    return static_cast<const DeleteAppsListRequest *>(d->request);
+    return static_cast<const DeleteAppsListRequest *>(FmsResponse::request());
 }
 
 /*!

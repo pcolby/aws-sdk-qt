@@ -79,8 +79,7 @@ ListUserHierarchyGroupsResponse::ListUserHierarchyGroupsResponse(
  */
 const ListUserHierarchyGroupsRequest * ListUserHierarchyGroupsResponse::request() const
 {
-    Q_D(const ListUserHierarchyGroupsResponse);
-    return static_cast<const ListUserHierarchyGroupsRequest *>(d->request);
+    return static_cast<const ListUserHierarchyGroupsRequest *>(ConnectResponse::request());
 }
 
 /*!

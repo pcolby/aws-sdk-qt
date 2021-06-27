@@ -74,8 +74,7 @@ GetContainerServiceMetricDataResponse::GetContainerServiceMetricDataResponse(
  */
 const GetContainerServiceMetricDataRequest * GetContainerServiceMetricDataResponse::request() const
 {
-    Q_D(const GetContainerServiceMetricDataResponse);
-    return static_cast<const GetContainerServiceMetricDataRequest *>(d->request);
+    return static_cast<const GetContainerServiceMetricDataRequest *>(LightsailResponse::request());
 }
 
 /*!

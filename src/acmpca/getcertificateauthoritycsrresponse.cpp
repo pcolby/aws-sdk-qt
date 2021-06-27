@@ -69,8 +69,7 @@ GetCertificateAuthorityCsrResponse::GetCertificateAuthorityCsrResponse(
  */
 const GetCertificateAuthorityCsrRequest * GetCertificateAuthorityCsrResponse::request() const
 {
-    Q_D(const GetCertificateAuthorityCsrResponse);
-    return static_cast<const GetCertificateAuthorityCsrRequest *>(d->request);
+    return static_cast<const GetCertificateAuthorityCsrRequest *>(AcmpcaResponse::request());
 }
 
 /*!

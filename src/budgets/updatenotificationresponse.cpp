@@ -116,8 +116,7 @@ UpdateNotificationResponse::UpdateNotificationResponse(
  */
 const UpdateNotificationRequest * UpdateNotificationResponse::request() const
 {
-    Q_D(const UpdateNotificationResponse);
-    return static_cast<const UpdateNotificationRequest *>(d->request);
+    return static_cast<const UpdateNotificationRequest *>(BudgetsResponse::request());
 }
 
 /*!

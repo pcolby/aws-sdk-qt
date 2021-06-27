@@ -37,7 +37,7 @@ namespace EC2InstanceConnect {
  * Constructs a EC2InstanceConnectResponse object with parent \a parent.
  */
 EC2InstanceConnectResponse::EC2InstanceConnectResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new EC2InstanceConnectResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new EC2InstanceConnectResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ EC2InstanceConnectResponse::EC2InstanceConnectResponse(QObject * const parent)
  * implementation that inherits from EC2InstanceConnectResponsePrivate.
  */
 EC2InstanceConnectResponse::EC2InstanceConnectResponse(EC2InstanceConnectResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void EC2InstanceConnectResponse::parseFailure(QIODevice &response)
  * Constructs a EC2InstanceConnectResponsePrivate object with public implementation \a q.
  */
 EC2InstanceConnectResponsePrivate::EC2InstanceConnectResponsePrivate(
-    EC2InstanceConnectResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    EC2InstanceConnectResponse * const q) : q_ptr(q)
 {
 
 }

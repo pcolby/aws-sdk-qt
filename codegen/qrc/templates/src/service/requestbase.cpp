@@ -27,7 +27,7 @@ namespace {{NameSpaceName}} {
  * Constructs a {{ClassName}} object for {{ServiceName}} \a action.
  */
 {{ClassName}}::{{ClassName}}(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new {{ClassName}}Private(action, this))
+    : d_ptr(new {{ClassName}}Private(action, this))
 {
 
 }
@@ -36,7 +36,8 @@ namespace {{NameSpaceName}} {
  * Constructs a copy of \a other.
  */
 {{ClassName}}::{{ClassName}}(const {{ClassName}} &other)
-    : QtAws::Core::AwsAbstractRequest(new {{ClassName}}Private(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new {{ClassName}}Private(*other.d_func(), this))
 {
 
 }
@@ -59,7 +60,7 @@ namespace {{NameSpaceName}} {
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from {{ClassName}}Private.
  */
-{{ClassName}}::{{ClassName}}({{ClassName}}Private * const d) : QtAws::Core::AwsAbstractRequest(d)
+{{ClassName}}::{{ClassName}}({{ClassName}}Private * const d) : d_ptr(d)
 {
 
 }
@@ -228,7 +229,7 @@ QNetworkRequest {{ClassName}}::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 {{ClassName}}Private::{{ClassName}}Private(const {{ClassName}}::Action action, {{ClassName}} * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -243,8 +244,8 @@ QNetworkRequest {{ClassName}}::unsignedRequest(const QUrl &endpoint) const
  */
 {{ClassName}}Private::{{ClassName}}Private(const {{ClassName}}Private &other,
                                      {{ClassName}} * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

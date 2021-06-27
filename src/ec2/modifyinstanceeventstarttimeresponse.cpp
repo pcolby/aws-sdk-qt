@@ -87,8 +87,7 @@ ModifyInstanceEventStartTimeResponse::ModifyInstanceEventStartTimeResponse(
  */
 const ModifyInstanceEventStartTimeRequest * ModifyInstanceEventStartTimeResponse::request() const
 {
-    Q_D(const ModifyInstanceEventStartTimeResponse);
-    return static_cast<const ModifyInstanceEventStartTimeRequest *>(d->request);
+    return static_cast<const ModifyInstanceEventStartTimeRequest *>(Ec2Response::request());
 }
 
 /*!

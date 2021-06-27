@@ -181,6 +181,12 @@ public slots:
     UpdateLicenseSpecificationsForResourceResponse * updateLicenseSpecificationsForResource(const UpdateLicenseSpecificationsForResourceRequest &request);
     UpdateServiceSettingsResponse * updateServiceSettings(const UpdateServiceSettingsRequest &request);
 
+protected:
+    /// @cond internal
+    LicenseManagerClientPrivate * const d_ptr; ///< Internal d-pointer.
+    LicenseManagerClient(LicenseManagerClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(LicenseManagerClient)
     Q_DISABLE_COPY(LicenseManagerClient)

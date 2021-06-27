@@ -20,14 +20,12 @@
 #ifndef QTAWS_FRAUDDETECTORRESPONSE_P_H
 #define QTAWS_FRAUDDETECTORRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace FraudDetector {
 
 class FraudDetectorResponse;
 
-class FraudDetectorResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class FraudDetectorResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    FraudDetectorResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(FraudDetectorResponse)

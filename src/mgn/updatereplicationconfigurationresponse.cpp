@@ -56,8 +56,7 @@ UpdateReplicationConfigurationResponse::UpdateReplicationConfigurationResponse(
  */
 const UpdateReplicationConfigurationRequest * UpdateReplicationConfigurationResponse::request() const
 {
-    Q_D(const UpdateReplicationConfigurationResponse);
-    return static_cast<const UpdateReplicationConfigurationRequest *>(d->request);
+    return static_cast<const UpdateReplicationConfigurationRequest *>(mgnResponse::request());
 }
 
 /*!

@@ -72,8 +72,7 @@ DescribeElasticsearchInstanceTypeLimitsResponse::DescribeElasticsearchInstanceTy
  */
 const DescribeElasticsearchInstanceTypeLimitsRequest * DescribeElasticsearchInstanceTypeLimitsResponse::request() const
 {
-    Q_D(const DescribeElasticsearchInstanceTypeLimitsResponse);
-    return static_cast<const DescribeElasticsearchInstanceTypeLimitsRequest *>(d->request);
+    return static_cast<const DescribeElasticsearchInstanceTypeLimitsRequest *>(ElasticsearchServiceResponse::request());
 }
 
 /*!

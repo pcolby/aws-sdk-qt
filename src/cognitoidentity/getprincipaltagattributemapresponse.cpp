@@ -77,8 +77,7 @@ GetPrincipalTagAttributeMapResponse::GetPrincipalTagAttributeMapResponse(
  */
 const GetPrincipalTagAttributeMapRequest * GetPrincipalTagAttributeMapResponse::request() const
 {
-    Q_D(const GetPrincipalTagAttributeMapResponse);
-    return static_cast<const GetPrincipalTagAttributeMapRequest *>(d->request);
+    return static_cast<const GetPrincipalTagAttributeMapRequest *>(CognitoIdentityResponse::request());
 }
 
 /*!

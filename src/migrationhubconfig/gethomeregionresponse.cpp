@@ -78,8 +78,7 @@ GetHomeRegionResponse::GetHomeRegionResponse(
  */
 const GetHomeRegionRequest * GetHomeRegionResponse::request() const
 {
-    Q_D(const GetHomeRegionResponse);
-    return static_cast<const GetHomeRegionRequest *>(d->request);
+    return static_cast<const GetHomeRegionRequest *>(MigrationHubConfigResponse::request());
 }
 
 /*!

@@ -105,8 +105,7 @@ GetConfigurationProfileResponse::GetConfigurationProfileResponse(
  */
 const GetConfigurationProfileRequest * GetConfigurationProfileResponse::request() const
 {
-    Q_D(const GetConfigurationProfileResponse);
-    return static_cast<const GetConfigurationProfileRequest *>(d->request);
+    return static_cast<const GetConfigurationProfileRequest *>(AppConfigResponse::request());
 }
 
 /*!

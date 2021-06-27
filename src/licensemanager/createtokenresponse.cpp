@@ -59,8 +59,7 @@ CreateTokenResponse::CreateTokenResponse(
  */
 const CreateTokenRequest * CreateTokenResponse::request() const
 {
-    Q_D(const CreateTokenResponse);
-    return static_cast<const CreateTokenRequest *>(d->request);
+    return static_cast<const CreateTokenRequest *>(LicenseManagerResponse::request());
 }
 
 /*!

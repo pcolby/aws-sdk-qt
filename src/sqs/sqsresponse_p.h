@@ -20,14 +20,12 @@
 #ifndef QTAWS_SQSRESPONSE_P_H
 #define QTAWS_SQSRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace SQS {
 
 class SqsResponse;
 
-class SqsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class SqsResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    SqsResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SqsResponse)

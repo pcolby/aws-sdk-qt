@@ -141,8 +141,7 @@ BatchGetDeploymentGroupsResponse::BatchGetDeploymentGroupsResponse(
  */
 const BatchGetDeploymentGroupsRequest * BatchGetDeploymentGroupsResponse::request() const
 {
-    Q_D(const BatchGetDeploymentGroupsResponse);
-    return static_cast<const BatchGetDeploymentGroupsRequest *>(d->request);
+    return static_cast<const BatchGetDeploymentGroupsRequest *>(CodeDeployResponse::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ GetWorkflowRunResponse::GetWorkflowRunResponse(
  */
 const GetWorkflowRunRequest * GetWorkflowRunResponse::request() const
 {
-    Q_D(const GetWorkflowRunResponse);
-    return static_cast<const GetWorkflowRunRequest *>(d->request);
+    return static_cast<const GetWorkflowRunRequest *>(GlueResponse::request());
 }
 
 /*!

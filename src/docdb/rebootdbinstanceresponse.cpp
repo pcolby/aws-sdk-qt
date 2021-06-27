@@ -56,8 +56,7 @@ RebootDBInstanceResponse::RebootDBInstanceResponse(
  */
 const RebootDBInstanceRequest * RebootDBInstanceResponse::request() const
 {
-    Q_D(const RebootDBInstanceResponse);
-    return static_cast<const RebootDBInstanceRequest *>(d->request);
+    return static_cast<const RebootDBInstanceRequest *>(DocDBResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ DetectCustomLabelsResponse::DetectCustomLabelsResponse(
  */
 const DetectCustomLabelsRequest * DetectCustomLabelsResponse::request() const
 {
-    Q_D(const DetectCustomLabelsResponse);
-    return static_cast<const DetectCustomLabelsRequest *>(d->request);
+    return static_cast<const DetectCustomLabelsRequest *>(RekognitionResponse::request());
 }
 
 /*!

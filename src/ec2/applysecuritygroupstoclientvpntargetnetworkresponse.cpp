@@ -87,8 +87,7 @@ ApplySecurityGroupsToClientVpnTargetNetworkResponse::ApplySecurityGroupsToClient
  */
 const ApplySecurityGroupsToClientVpnTargetNetworkRequest * ApplySecurityGroupsToClientVpnTargetNetworkResponse::request() const
 {
-    Q_D(const ApplySecurityGroupsToClientVpnTargetNetworkResponse);
-    return static_cast<const ApplySecurityGroupsToClientVpnTargetNetworkRequest *>(d->request);
+    return static_cast<const ApplySecurityGroupsToClientVpnTargetNetworkRequest *>(Ec2Response::request());
 }
 
 /*!

@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    CodeGuruReviewerResponsePrivate * const d_ptr; ///< Internal d-pointer.
     CodeGuruReviewerResponse(CodeGuruReviewerResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

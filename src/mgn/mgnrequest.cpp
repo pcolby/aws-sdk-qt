@@ -67,7 +67,7 @@ namespace mgn {
  * Constructs a mgnRequest object for mgn \a action.
  */
 mgnRequest::mgnRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new mgnRequestPrivate(action, this))
+    : d_ptr(new mgnRequestPrivate(action, this))
 {
 
 }
@@ -76,7 +76,8 @@ mgnRequest::mgnRequest(const Action action)
  * Constructs a copy of \a other.
  */
 mgnRequest::mgnRequest(const mgnRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new mgnRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new mgnRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -99,7 +100,7 @@ mgnRequest& mgnRequest::operator=(const mgnRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from mgnRequestPrivate.
  */
-mgnRequest::mgnRequest(mgnRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+mgnRequest::mgnRequest(mgnRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -268,7 +269,7 @@ QNetworkRequest mgnRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 mgnRequestPrivate::mgnRequestPrivate(const mgnRequest::Action action, mgnRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -283,8 +284,8 @@ mgnRequestPrivate::mgnRequestPrivate(const mgnRequest::Action action, mgnRequest
  */
 mgnRequestPrivate::mgnRequestPrivate(const mgnRequestPrivate &other,
                                      mgnRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

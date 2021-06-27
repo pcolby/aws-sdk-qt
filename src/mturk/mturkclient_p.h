@@ -20,19 +20,20 @@
 #ifndef QTAWS_MTURKCLIENT_P_H
 #define QTAWS_MTURKCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace MTurk {
 
 class MTurkClient;
 
-class MTurkClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class MTurkClientPrivate {
 
 public:
     MTurkClientPrivate(MTurkClient * const q);
+
+protected:
+    MTurkClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MTurkClient)

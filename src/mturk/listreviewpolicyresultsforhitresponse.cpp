@@ -55,8 +55,7 @@ ListReviewPolicyResultsForHITResponse::ListReviewPolicyResultsForHITResponse(
  */
 const ListReviewPolicyResultsForHITRequest * ListReviewPolicyResultsForHITResponse::request() const
 {
-    Q_D(const ListReviewPolicyResultsForHITResponse);
-    return static_cast<const ListReviewPolicyResultsForHITRequest *>(d->request);
+    return static_cast<const ListReviewPolicyResultsForHITRequest *>(MTurkResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ UpdateMonitoringResponse::UpdateMonitoringResponse(
  */
 const UpdateMonitoringRequest * UpdateMonitoringResponse::request() const
 {
-    Q_D(const UpdateMonitoringResponse);
-    return static_cast<const UpdateMonitoringRequest *>(d->request);
+    return static_cast<const UpdateMonitoringRequest *>(KafkaResponse::request());
 }
 
 /*!

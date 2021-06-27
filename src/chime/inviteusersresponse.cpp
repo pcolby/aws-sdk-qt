@@ -98,8 +98,7 @@ InviteUsersResponse::InviteUsersResponse(
  */
 const InviteUsersRequest * InviteUsersResponse::request() const
 {
-    Q_D(const InviteUsersResponse);
-    return static_cast<const InviteUsersRequest *>(d->request);
+    return static_cast<const InviteUsersRequest *>(ChimeResponse::request());
 }
 
 /*!

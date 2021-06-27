@@ -136,16 +136,16 @@ HealthClient::HealthClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new HealthClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-08-04"),
+    QStringLiteral("health"),
+    QStringLiteral("AWS Health APIs and Notifications"),
+    QStringLiteral("health"),
+    parent), d_ptr(new HealthClientPrivate(this))
 {
-    Q_D(HealthClient);
-    d->apiVersion = QStringLiteral("2016-08-04");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("health");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Health APIs and Notifications");
-    d->serviceName = QStringLiteral("health");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -164,16 +164,16 @@ HealthClient::HealthClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new HealthClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-08-04"),
+    QStringLiteral("health"),
+    QStringLiteral("AWS Health APIs and Notifications"),
+    QStringLiteral("health"),
+    parent), d_ptr(new HealthClientPrivate(this))
 {
-    Q_D(HealthClient);
-    d->apiVersion = QStringLiteral("2016-08-04");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("health");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Health APIs and Notifications");
-    d->serviceName = QStringLiteral("health");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -685,10 +685,9 @@ EnableHealthServiceAccessForOrganizationResponse * HealthClient::enableHealthSer
 /*!
  * Constructs a HealthClientPrivate object with public implementation \a q.
  */
-HealthClientPrivate::HealthClientPrivate(HealthClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+HealthClientPrivate::HealthClientPrivate(HealthClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace Health

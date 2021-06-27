@@ -56,8 +56,7 @@ StartTextTranslationJobResponse::StartTextTranslationJobResponse(
  */
 const StartTextTranslationJobRequest * StartTextTranslationJobResponse::request() const
 {
-    Q_D(const StartTextTranslationJobResponse);
-    return static_cast<const StartTextTranslationJobRequest *>(d->request);
+    return static_cast<const StartTextTranslationJobRequest *>(TranslateResponse::request());
 }
 
 /*!

@@ -62,8 +62,7 @@ UpdateLoginProfileResponse::UpdateLoginProfileResponse(
  */
 const UpdateLoginProfileRequest * UpdateLoginProfileResponse::request() const
 {
-    Q_D(const UpdateLoginProfileResponse);
-    return static_cast<const UpdateLoginProfileRequest *>(d->request);
+    return static_cast<const UpdateLoginProfileRequest *>(IamResponse::request());
 }
 
 /*!

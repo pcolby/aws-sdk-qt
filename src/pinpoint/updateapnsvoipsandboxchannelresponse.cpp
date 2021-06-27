@@ -56,8 +56,7 @@ UpdateApnsVoipSandboxChannelResponse::UpdateApnsVoipSandboxChannelResponse(
  */
 const UpdateApnsVoipSandboxChannelRequest * UpdateApnsVoipSandboxChannelResponse::request() const
 {
-    Q_D(const UpdateApnsVoipSandboxChannelResponse);
-    return static_cast<const UpdateApnsVoipSandboxChannelRequest *>(d->request);
+    return static_cast<const UpdateApnsVoipSandboxChannelRequest *>(PinpointResponse::request());
 }
 
 /*!

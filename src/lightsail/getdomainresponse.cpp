@@ -74,8 +74,7 @@ GetDomainResponse::GetDomainResponse(
  */
 const GetDomainRequest * GetDomainResponse::request() const
 {
-    Q_D(const GetDomainResponse);
-    return static_cast<const GetDomainRequest *>(d->request);
+    return static_cast<const GetDomainRequest *>(LightsailResponse::request());
 }
 
 /*!

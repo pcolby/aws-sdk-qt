@@ -75,8 +75,7 @@ LogoutResponse::LogoutResponse(
  */
 const LogoutRequest * LogoutResponse::request() const
 {
-    Q_D(const LogoutResponse);
-    return static_cast<const LogoutRequest *>(d->request);
+    return static_cast<const LogoutRequest *>(SsoResponse::request());
 }
 
 /*!

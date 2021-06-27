@@ -56,8 +56,7 @@ RegisterDomainResponse::RegisterDomainResponse(
  */
 const RegisterDomainRequest * RegisterDomainResponse::request() const
 {
-    Q_D(const RegisterDomainResponse);
-    return static_cast<const RegisterDomainRequest *>(d->request);
+    return static_cast<const RegisterDomainRequest *>(Route53DomainsResponse::request());
 }
 
 /*!

@@ -98,8 +98,7 @@ LogoutUserResponse::LogoutUserResponse(
  */
 const LogoutUserRequest * LogoutUserResponse::request() const
 {
-    Q_D(const LogoutUserResponse);
-    return static_cast<const LogoutUserRequest *>(d->request);
+    return static_cast<const LogoutUserRequest *>(ChimeResponse::request());
 }
 
 /*!

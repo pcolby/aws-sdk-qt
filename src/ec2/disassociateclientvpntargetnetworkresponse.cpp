@@ -87,8 +87,7 @@ DisassociateClientVpnTargetNetworkResponse::DisassociateClientVpnTargetNetworkRe
  */
 const DisassociateClientVpnTargetNetworkRequest * DisassociateClientVpnTargetNetworkResponse::request() const
 {
-    Q_D(const DisassociateClientVpnTargetNetworkResponse);
-    return static_cast<const DisassociateClientVpnTargetNetworkRequest *>(d->request);
+    return static_cast<const DisassociateClientVpnTargetNetworkRequest *>(Ec2Response::request());
 }
 
 /*!

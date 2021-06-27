@@ -70,8 +70,7 @@ UpdatePipelineExecutionResponse::UpdatePipelineExecutionResponse(
  */
 const UpdatePipelineExecutionRequest * UpdatePipelineExecutionResponse::request() const
 {
-    Q_D(const UpdatePipelineExecutionResponse);
-    return static_cast<const UpdatePipelineExecutionRequest *>(d->request);
+    return static_cast<const UpdatePipelineExecutionRequest *>(SageMakerResponse::request());
 }
 
 /*!

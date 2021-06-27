@@ -60,8 +60,7 @@ CreateDistributionWithTagsResponse::CreateDistributionWithTagsResponse(
  */
 const CreateDistributionWithTagsRequest * CreateDistributionWithTagsResponse::request() const
 {
-    Q_D(const CreateDistributionWithTagsResponse);
-    return static_cast<const CreateDistributionWithTagsRequest *>(d->request);
+    return static_cast<const CreateDistributionWithTagsRequest *>(CloudFrontResponse::request());
 }
 
 /*!

@@ -59,8 +59,7 @@ PutBackupVaultNotificationsResponse::PutBackupVaultNotificationsResponse(
  */
 const PutBackupVaultNotificationsRequest * PutBackupVaultNotificationsResponse::request() const
 {
-    Q_D(const PutBackupVaultNotificationsResponse);
-    return static_cast<const PutBackupVaultNotificationsRequest *>(d->request);
+    return static_cast<const PutBackupVaultNotificationsRequest *>(BackupResponse::request());
 }
 
 /*!

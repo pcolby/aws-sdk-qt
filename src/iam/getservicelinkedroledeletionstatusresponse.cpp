@@ -62,8 +62,7 @@ GetServiceLinkedRoleDeletionStatusResponse::GetServiceLinkedRoleDeletionStatusRe
  */
 const GetServiceLinkedRoleDeletionStatusRequest * GetServiceLinkedRoleDeletionStatusResponse::request() const
 {
-    Q_D(const GetServiceLinkedRoleDeletionStatusResponse);
-    return static_cast<const GetServiceLinkedRoleDeletionStatusRequest *>(d->request);
+    return static_cast<const GetServiceLinkedRoleDeletionStatusRequest *>(IamResponse::request());
 }
 
 /*!

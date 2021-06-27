@@ -20,15 +20,12 @@
 #ifndef QTAWS_NETWORKMANAGERREQUEST_P_H
 #define QTAWS_NETWORKMANAGERREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "networkmanagerrequest.h"
-
 namespace QtAws {
 namespace NetworkManager {
 
 class NetworkManagerRequest;
 
-class NetworkManagerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class NetworkManagerRequestPrivate {
 
 public:
     NetworkManagerRequest::Action action; ///< NetworkManager action to be performed.
@@ -39,6 +36,9 @@ public:
     NetworkManagerRequestPrivate(const NetworkManagerRequestPrivate &other, NetworkManagerRequest * const q);
 
     static QString toString(const NetworkManagerRequest::Action &action);
+
+protected:
+    NetworkManagerRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(NetworkManagerRequest)

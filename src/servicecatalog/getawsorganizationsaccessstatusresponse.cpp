@@ -61,8 +61,7 @@ GetAWSOrganizationsAccessStatusResponse::GetAWSOrganizationsAccessStatusResponse
  */
 const GetAWSOrganizationsAccessStatusRequest * GetAWSOrganizationsAccessStatusResponse::request() const
 {
-    Q_D(const GetAWSOrganizationsAccessStatusResponse);
-    return static_cast<const GetAWSOrganizationsAccessStatusRequest *>(d->request);
+    return static_cast<const GetAWSOrganizationsAccessStatusRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

@@ -75,8 +75,7 @@ DeliverConfigSnapshotResponse::DeliverConfigSnapshotResponse(
  */
 const DeliverConfigSnapshotRequest * DeliverConfigSnapshotResponse::request() const
 {
-    Q_D(const DeliverConfigSnapshotResponse);
-    return static_cast<const DeliverConfigSnapshotRequest *>(d->request);
+    return static_cast<const DeliverConfigSnapshotRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

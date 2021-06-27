@@ -56,8 +56,7 @@ DeleteParallelDataResponse::DeleteParallelDataResponse(
  */
 const DeleteParallelDataRequest * DeleteParallelDataResponse::request() const
 {
-    Q_D(const DeleteParallelDataResponse);
-    return static_cast<const DeleteParallelDataRequest *>(d->request);
+    return static_cast<const DeleteParallelDataRequest *>(TranslateResponse::request());
 }
 
 /*!

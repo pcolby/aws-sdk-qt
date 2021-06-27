@@ -20,15 +20,12 @@
 #ifndef QTAWS_CONFIGSERVICEREQUEST_P_H
 #define QTAWS_CONFIGSERVICEREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "configservicerequest.h"
-
 namespace QtAws {
 namespace ConfigService {
 
 class ConfigServiceRequest;
 
-class ConfigServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ConfigServiceRequestPrivate {
 
 public:
     ConfigServiceRequest::Action action; ///< ConfigService action to be performed.
@@ -39,6 +36,9 @@ public:
     ConfigServiceRequestPrivate(const ConfigServiceRequestPrivate &other, ConfigServiceRequest * const q);
 
     static QString toString(const ConfigServiceRequest::Action &action);
+
+protected:
+    ConfigServiceRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ConfigServiceRequest)

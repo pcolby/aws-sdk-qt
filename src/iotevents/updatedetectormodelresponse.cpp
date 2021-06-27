@@ -58,8 +58,7 @@ UpdateDetectorModelResponse::UpdateDetectorModelResponse(
  */
 const UpdateDetectorModelRequest * UpdateDetectorModelResponse::request() const
 {
-    Q_D(const UpdateDetectorModelResponse);
-    return static_cast<const UpdateDetectorModelRequest *>(d->request);
+    return static_cast<const UpdateDetectorModelRequest *>(IoTEventsResponse::request());
 }
 
 /*!

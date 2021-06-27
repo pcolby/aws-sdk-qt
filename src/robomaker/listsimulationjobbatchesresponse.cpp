@@ -56,8 +56,7 @@ ListSimulationJobBatchesResponse::ListSimulationJobBatchesResponse(
  */
 const ListSimulationJobBatchesRequest * ListSimulationJobBatchesResponse::request() const
 {
-    Q_D(const ListSimulationJobBatchesResponse);
-    return static_cast<const ListSimulationJobBatchesRequest *>(d->request);
+    return static_cast<const ListSimulationJobBatchesRequest *>(RoboMakerResponse::request());
 }
 
 /*!

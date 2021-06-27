@@ -37,7 +37,7 @@ namespace IoTDeviceAdvisor {
  * Constructs a IoTDeviceAdvisorResponse object with parent \a parent.
  */
 IoTDeviceAdvisorResponse::IoTDeviceAdvisorResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new IoTDeviceAdvisorResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new IoTDeviceAdvisorResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ IoTDeviceAdvisorResponse::IoTDeviceAdvisorResponse(QObject * const parent)
  * implementation that inherits from IoTDeviceAdvisorResponsePrivate.
  */
 IoTDeviceAdvisorResponse::IoTDeviceAdvisorResponse(IoTDeviceAdvisorResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void IoTDeviceAdvisorResponse::parseFailure(QIODevice &response)
  * Constructs a IoTDeviceAdvisorResponsePrivate object with public implementation \a q.
  */
 IoTDeviceAdvisorResponsePrivate::IoTDeviceAdvisorResponsePrivate(
-    IoTDeviceAdvisorResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    IoTDeviceAdvisorResponse * const q) : q_ptr(q)
 {
 
 }

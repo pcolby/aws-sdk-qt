@@ -107,6 +107,7 @@ public:
 
 protected:
     /// @cond internal
+    BackupRequestPrivate * const d_ptr; ///< Internal d-pointer.
     BackupRequest(BackupRequestPrivate * const d);
     /// @endcond
 

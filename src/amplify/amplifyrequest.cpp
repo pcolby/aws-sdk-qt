@@ -79,7 +79,7 @@ namespace Amplify {
  * Constructs a AmplifyRequest object for Amplify \a action.
  */
 AmplifyRequest::AmplifyRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new AmplifyRequestPrivate(action, this))
+    : d_ptr(new AmplifyRequestPrivate(action, this))
 {
 
 }
@@ -88,7 +88,8 @@ AmplifyRequest::AmplifyRequest(const Action action)
  * Constructs a copy of \a other.
  */
 AmplifyRequest::AmplifyRequest(const AmplifyRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new AmplifyRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new AmplifyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -111,7 +112,7 @@ AmplifyRequest& AmplifyRequest::operator=(const AmplifyRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from AmplifyRequestPrivate.
  */
-AmplifyRequest::AmplifyRequest(AmplifyRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+AmplifyRequest::AmplifyRequest(AmplifyRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -280,7 +281,7 @@ QNetworkRequest AmplifyRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 AmplifyRequestPrivate::AmplifyRequestPrivate(const AmplifyRequest::Action action, AmplifyRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -295,8 +296,8 @@ AmplifyRequestPrivate::AmplifyRequestPrivate(const AmplifyRequest::Action action
  */
 AmplifyRequestPrivate::AmplifyRequestPrivate(const AmplifyRequestPrivate &other,
                                      AmplifyRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

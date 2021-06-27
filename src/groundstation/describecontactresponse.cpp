@@ -58,8 +58,7 @@ DescribeContactResponse::DescribeContactResponse(
  */
 const DescribeContactRequest * DescribeContactResponse::request() const
 {
-    Q_D(const DescribeContactResponse);
-    return static_cast<const DescribeContactRequest *>(d->request);
+    return static_cast<const DescribeContactRequest *>(GroundStationResponse::request());
 }
 
 /*!

@@ -66,8 +66,7 @@ DeploySystemInstanceResponse::DeploySystemInstanceResponse(
  */
 const DeploySystemInstanceRequest * DeploySystemInstanceResponse::request() const
 {
-    Q_D(const DeploySystemInstanceResponse);
-    return static_cast<const DeploySystemInstanceRequest *>(d->request);
+    return static_cast<const DeploySystemInstanceRequest *>(IoTThingsGraphResponse::request());
 }
 
 /*!

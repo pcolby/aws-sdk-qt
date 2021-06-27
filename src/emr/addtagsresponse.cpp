@@ -58,8 +58,7 @@ AddTagsResponse::AddTagsResponse(
  */
 const AddTagsRequest * AddTagsResponse::request() const
 {
-    Q_D(const AddTagsResponse);
-    return static_cast<const AddTagsRequest *>(d->request);
+    return static_cast<const AddTagsRequest *>(EmrResponse::request());
 }
 
 /*!

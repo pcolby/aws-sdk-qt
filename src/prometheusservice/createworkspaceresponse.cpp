@@ -56,8 +56,7 @@ CreateWorkspaceResponse::CreateWorkspaceResponse(
  */
 const CreateWorkspaceRequest * CreateWorkspaceResponse::request() const
 {
-    Q_D(const CreateWorkspaceResponse);
-    return static_cast<const CreateWorkspaceRequest *>(d->request);
+    return static_cast<const CreateWorkspaceRequest *>(PrometheusServiceResponse::request());
 }
 
 /*!

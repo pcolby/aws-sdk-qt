@@ -141,8 +141,7 @@ EnableAllFeaturesResponse::EnableAllFeaturesResponse(
  */
 const EnableAllFeaturesRequest * EnableAllFeaturesResponse::request() const
 {
-    Q_D(const EnableAllFeaturesResponse);
-    return static_cast<const EnableAllFeaturesRequest *>(d->request);
+    return static_cast<const EnableAllFeaturesRequest *>(OrganizationsResponse::request());
 }
 
 /*!

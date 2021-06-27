@@ -70,8 +70,7 @@ DescribeCodeRepositoryResponse::DescribeCodeRepositoryResponse(
  */
 const DescribeCodeRepositoryRequest * DescribeCodeRepositoryResponse::request() const
 {
-    Q_D(const DescribeCodeRepositoryResponse);
-    return static_cast<const DescribeCodeRepositoryRequest *>(d->request);
+    return static_cast<const DescribeCodeRepositoryRequest *>(SageMakerResponse::request());
 }
 
 /*!

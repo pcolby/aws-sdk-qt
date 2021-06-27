@@ -148,6 +148,12 @@ public slots:
     UpdateDatastoreResponse * updateDatastore(const UpdateDatastoreRequest &request);
     UpdatePipelineResponse * updatePipeline(const UpdatePipelineRequest &request);
 
+protected:
+    /// @cond internal
+    IoTAnalyticsClientPrivate * const d_ptr; ///< Internal d-pointer.
+    IoTAnalyticsClient(IoTAnalyticsClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(IoTAnalyticsClient)
     Q_DISABLE_COPY(IoTAnalyticsClient)

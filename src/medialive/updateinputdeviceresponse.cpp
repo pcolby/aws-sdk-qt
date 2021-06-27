@@ -55,8 +55,7 @@ UpdateInputDeviceResponse::UpdateInputDeviceResponse(
  */
 const UpdateInputDeviceRequest * UpdateInputDeviceResponse::request() const
 {
-    Q_D(const UpdateInputDeviceResponse);
-    return static_cast<const UpdateInputDeviceRequest *>(d->request);
+    return static_cast<const UpdateInputDeviceRequest *>(MediaLiveResponse::request());
 }
 
 /*!

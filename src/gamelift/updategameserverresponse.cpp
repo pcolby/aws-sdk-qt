@@ -115,8 +115,7 @@ UpdateGameServerResponse::UpdateGameServerResponse(
  */
 const UpdateGameServerRequest * UpdateGameServerResponse::request() const
 {
-    Q_D(const UpdateGameServerResponse);
-    return static_cast<const UpdateGameServerRequest *>(d->request);
+    return static_cast<const UpdateGameServerRequest *>(GameLiftResponse::request());
 }
 
 /*!

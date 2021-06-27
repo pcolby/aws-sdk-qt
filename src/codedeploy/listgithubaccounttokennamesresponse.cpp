@@ -141,8 +141,7 @@ ListGitHubAccountTokenNamesResponse::ListGitHubAccountTokenNamesResponse(
  */
 const ListGitHubAccountTokenNamesRequest * ListGitHubAccountTokenNamesResponse::request() const
 {
-    Q_D(const ListGitHubAccountTokenNamesResponse);
-    return static_cast<const ListGitHubAccountTokenNamesRequest *>(d->request);
+    return static_cast<const ListGitHubAccountTokenNamesRequest *>(CodeDeployResponse::request());
 }
 
 /*!

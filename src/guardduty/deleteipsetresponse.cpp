@@ -73,8 +73,7 @@ DeleteIPSetResponse::DeleteIPSetResponse(
  */
 const DeleteIPSetRequest * DeleteIPSetResponse::request() const
 {
-    Q_D(const DeleteIPSetResponse);
-    return static_cast<const DeleteIPSetRequest *>(d->request);
+    return static_cast<const DeleteIPSetRequest *>(GuardDutyResponse::request());
 }
 
 /*!

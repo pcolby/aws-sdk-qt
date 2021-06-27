@@ -57,8 +57,7 @@ CancelDataRepositoryTaskResponse::CancelDataRepositoryTaskResponse(
  */
 const CancelDataRepositoryTaskRequest * CancelDataRepositoryTaskResponse::request() const
 {
-    Q_D(const CancelDataRepositoryTaskResponse);
-    return static_cast<const CancelDataRepositoryTaskRequest *>(d->request);
+    return static_cast<const CancelDataRepositoryTaskRequest *>(FSxResponse::request());
 }
 
 /*!

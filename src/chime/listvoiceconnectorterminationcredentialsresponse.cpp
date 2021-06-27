@@ -98,8 +98,7 @@ ListVoiceConnectorTerminationCredentialsResponse::ListVoiceConnectorTerminationC
  */
 const ListVoiceConnectorTerminationCredentialsRequest * ListVoiceConnectorTerminationCredentialsResponse::request() const
 {
-    Q_D(const ListVoiceConnectorTerminationCredentialsResponse);
-    return static_cast<const ListVoiceConnectorTerminationCredentialsRequest *>(d->request);
+    return static_cast<const ListVoiceConnectorTerminationCredentialsRequest *>(ChimeResponse::request());
 }
 
 /*!

@@ -65,6 +65,7 @@ public:
 
 protected:
     /// @cond internal
+    SavingsPlansRequestPrivate * const d_ptr; ///< Internal d-pointer.
     SavingsPlansRequest(SavingsPlansRequestPrivate * const d);
     /// @endcond
 

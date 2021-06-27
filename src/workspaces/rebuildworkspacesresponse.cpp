@@ -58,8 +58,7 @@ RebuildWorkspacesResponse::RebuildWorkspacesResponse(
  */
 const RebuildWorkspacesRequest * RebuildWorkspacesResponse::request() const
 {
-    Q_D(const RebuildWorkspacesResponse);
-    return static_cast<const RebuildWorkspacesRequest *>(d->request);
+    return static_cast<const RebuildWorkspacesRequest *>(WorkSpacesResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ GetDevicesInPlacementResponse::GetDevicesInPlacementResponse(
  */
 const GetDevicesInPlacementRequest * GetDevicesInPlacementResponse::request() const
 {
-    Q_D(const GetDevicesInPlacementResponse);
-    return static_cast<const GetDevicesInPlacementRequest *>(d->request);
+    return static_cast<const GetDevicesInPlacementRequest *>(IoT1ClickProjectsResponse::request());
 }
 
 /*!

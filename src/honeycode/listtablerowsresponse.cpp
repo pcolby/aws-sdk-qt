@@ -58,8 +58,7 @@ ListTableRowsResponse::ListTableRowsResponse(
  */
 const ListTableRowsRequest * ListTableRowsResponse::request() const
 {
-    Q_D(const ListTableRowsResponse);
-    return static_cast<const ListTableRowsRequest *>(d->request);
+    return static_cast<const ListTableRowsRequest *>(HoneycodeResponse::request());
 }
 
 /*!

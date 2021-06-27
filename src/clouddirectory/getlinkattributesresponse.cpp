@@ -63,8 +63,7 @@ GetLinkAttributesResponse::GetLinkAttributesResponse(
  */
 const GetLinkAttributesRequest * GetLinkAttributesResponse::request() const
 {
-    Q_D(const GetLinkAttributesResponse);
-    return static_cast<const GetLinkAttributesRequest *>(d->request);
+    return static_cast<const GetLinkAttributesRequest *>(CloudDirectoryResponse::request());
 }
 
 /*!

@@ -20,14 +20,12 @@
 #ifndef QTAWS_CLOUDWATCHLOGSRESPONSE_P_H
 #define QTAWS_CLOUDWATCHLOGSRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace CloudWatchLogs {
 
 class CloudWatchLogsResponse;
 
-class CloudWatchLogsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class CloudWatchLogsResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    CloudWatchLogsResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CloudWatchLogsResponse)

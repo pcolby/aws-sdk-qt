@@ -161,8 +161,7 @@ DeregisterRdsDbInstanceResponse::DeregisterRdsDbInstanceResponse(
  */
 const DeregisterRdsDbInstanceRequest * DeregisterRdsDbInstanceResponse::request() const
 {
-    Q_D(const DeregisterRdsDbInstanceResponse);
-    return static_cast<const DeregisterRdsDbInstanceRequest *>(d->request);
+    return static_cast<const DeregisterRdsDbInstanceRequest *>(OpsWorksResponse::request());
 }
 
 /*!

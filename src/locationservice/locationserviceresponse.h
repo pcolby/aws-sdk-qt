@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    LocationServiceResponsePrivate * const d_ptr; ///< Internal d-pointer.
     LocationServiceResponse(LocationServiceResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

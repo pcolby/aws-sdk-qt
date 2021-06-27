@@ -79,8 +79,7 @@ AssociateSecurityKeyResponse::AssociateSecurityKeyResponse(
  */
 const AssociateSecurityKeyRequest * AssociateSecurityKeyResponse::request() const
 {
-    Q_D(const AssociateSecurityKeyResponse);
-    return static_cast<const AssociateSecurityKeyRequest *>(d->request);
+    return static_cast<const AssociateSecurityKeyRequest *>(ConnectResponse::request());
 }
 
 /*!

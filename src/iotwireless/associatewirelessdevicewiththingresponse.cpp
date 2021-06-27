@@ -56,8 +56,7 @@ AssociateWirelessDeviceWithThingResponse::AssociateWirelessDeviceWithThingRespon
  */
 const AssociateWirelessDeviceWithThingRequest * AssociateWirelessDeviceWithThingResponse::request() const
 {
-    Q_D(const AssociateWirelessDeviceWithThingResponse);
-    return static_cast<const AssociateWirelessDeviceWithThingRequest *>(d->request);
+    return static_cast<const AssociateWirelessDeviceWithThingRequest *>(IoTWirelessResponse::request());
 }
 
 /*!

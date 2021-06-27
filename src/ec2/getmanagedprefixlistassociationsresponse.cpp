@@ -87,8 +87,7 @@ GetManagedPrefixListAssociationsResponse::GetManagedPrefixListAssociationsRespon
  */
 const GetManagedPrefixListAssociationsRequest * GetManagedPrefixListAssociationsResponse::request() const
 {
-    Q_D(const GetManagedPrefixListAssociationsResponse);
-    return static_cast<const GetManagedPrefixListAssociationsRequest *>(d->request);
+    return static_cast<const GetManagedPrefixListAssociationsRequest *>(Ec2Response::request());
 }
 
 /*!

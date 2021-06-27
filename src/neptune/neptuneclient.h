@@ -235,6 +235,12 @@ public slots:
     StartDBClusterResponse * startDBCluster(const StartDBClusterRequest &request);
     StopDBClusterResponse * stopDBCluster(const StopDBClusterRequest &request);
 
+protected:
+    /// @cond internal
+    NeptuneClientPrivate * const d_ptr; ///< Internal d-pointer.
+    NeptuneClient(NeptuneClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(NeptuneClient)
     Q_DISABLE_COPY(NeptuneClient)

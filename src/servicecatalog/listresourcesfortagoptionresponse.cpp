@@ -61,8 +61,7 @@ ListResourcesForTagOptionResponse::ListResourcesForTagOptionResponse(
  */
 const ListResourcesForTagOptionRequest * ListResourcesForTagOptionResponse::request() const
 {
-    Q_D(const ListResourcesForTagOptionResponse);
-    return static_cast<const ListResourcesForTagOptionRequest *>(d->request);
+    return static_cast<const ListResourcesForTagOptionRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

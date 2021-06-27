@@ -66,8 +66,7 @@ SendBulkTemplatedEmailResponse::SendBulkTemplatedEmailResponse(
  */
 const SendBulkTemplatedEmailRequest * SendBulkTemplatedEmailResponse::request() const
 {
-    Q_D(const SendBulkTemplatedEmailResponse);
-    return static_cast<const SendBulkTemplatedEmailRequest *>(d->request);
+    return static_cast<const SendBulkTemplatedEmailRequest *>(SesResponse::request());
 }
 
 /*!

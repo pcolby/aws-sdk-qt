@@ -55,8 +55,7 @@ BatchUpdateScheduleResponse::BatchUpdateScheduleResponse(
  */
 const BatchUpdateScheduleRequest * BatchUpdateScheduleResponse::request() const
 {
-    Q_D(const BatchUpdateScheduleResponse);
-    return static_cast<const BatchUpdateScheduleRequest *>(d->request);
+    return static_cast<const BatchUpdateScheduleRequest *>(MediaLiveResponse::request());
 }
 
 /*!

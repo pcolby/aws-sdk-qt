@@ -115,6 +115,12 @@ public slots:
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
+protected:
+    /// @cond internal
+    GreengrassV2ClientPrivate * const d_ptr; ///< Internal d-pointer.
+    GreengrassV2Client(GreengrassV2ClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(GreengrassV2Client)
     Q_DISABLE_COPY(GreengrassV2Client)

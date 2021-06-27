@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    RDSDataServiceResponsePrivate * const d_ptr; ///< Internal d-pointer.
     RDSDataServiceResponse(RDSDataServiceResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -68,8 +68,7 @@ DescribeMetricCollectionTypesResponse::DescribeMetricCollectionTypesResponse(
  */
 const DescribeMetricCollectionTypesRequest * DescribeMetricCollectionTypesResponse::request() const
 {
-    Q_D(const DescribeMetricCollectionTypesResponse);
-    return static_cast<const DescribeMetricCollectionTypesRequest *>(d->request);
+    return static_cast<const DescribeMetricCollectionTypesRequest *>(AutoScalingResponse::request());
 }
 
 /*!

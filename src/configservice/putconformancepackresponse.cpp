@@ -75,8 +75,7 @@ PutConformancePackResponse::PutConformancePackResponse(
  */
 const PutConformancePackRequest * PutConformancePackResponse::request() const
 {
-    Q_D(const PutConformancePackResponse);
-    return static_cast<const PutConformancePackRequest *>(d->request);
+    return static_cast<const PutConformancePackRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

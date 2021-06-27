@@ -62,8 +62,7 @@ AssociateContactWithAddressBookResponse::AssociateContactWithAddressBookResponse
  */
 const AssociateContactWithAddressBookRequest * AssociateContactWithAddressBookResponse::request() const
 {
-    Q_D(const AssociateContactWithAddressBookResponse);
-    return static_cast<const AssociateContactWithAddressBookRequest *>(d->request);
+    return static_cast<const AssociateContactWithAddressBookRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

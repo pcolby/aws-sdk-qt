@@ -60,6 +60,7 @@ public:
 
 protected:
     /// @cond internal
+    SageMakerFeatureStoreRuntimeRequestPrivate * const d_ptr; ///< Internal d-pointer.
     SageMakerFeatureStoreRuntimeRequest(SageMakerFeatureStoreRuntimeRequestPrivate * const d);
     /// @endcond
 

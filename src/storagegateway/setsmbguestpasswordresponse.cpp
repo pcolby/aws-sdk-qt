@@ -124,8 +124,7 @@ SetSMBGuestPasswordResponse::SetSMBGuestPasswordResponse(
  */
 const SetSMBGuestPasswordRequest * SetSMBGuestPasswordResponse::request() const
 {
-    Q_D(const SetSMBGuestPasswordResponse);
-    return static_cast<const SetSMBGuestPasswordRequest *>(d->request);
+    return static_cast<const SetSMBGuestPasswordRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

@@ -66,8 +66,7 @@ PutProvisionedConcurrencyConfigResponse::PutProvisionedConcurrencyConfigResponse
  */
 const PutProvisionedConcurrencyConfigRequest * PutProvisionedConcurrencyConfigResponse::request() const
 {
-    Q_D(const PutProvisionedConcurrencyConfigResponse);
-    return static_cast<const PutProvisionedConcurrencyConfigRequest *>(d->request);
+    return static_cast<const PutProvisionedConcurrencyConfigRequest *>(LambdaResponse::request());
 }
 
 /*!

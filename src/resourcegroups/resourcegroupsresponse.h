@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    ResourceGroupsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     ResourceGroupsResponse(ResourceGroupsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

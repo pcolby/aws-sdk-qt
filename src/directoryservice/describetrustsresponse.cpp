@@ -69,8 +69,7 @@ DescribeTrustsResponse::DescribeTrustsResponse(
  */
 const DescribeTrustsRequest * DescribeTrustsResponse::request() const
 {
-    Q_D(const DescribeTrustsResponse);
-    return static_cast<const DescribeTrustsRequest *>(d->request);
+    return static_cast<const DescribeTrustsRequest *>(DirectoryServiceResponse::request());
 }
 
 /*!

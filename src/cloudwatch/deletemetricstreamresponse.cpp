@@ -69,8 +69,7 @@ DeleteMetricStreamResponse::DeleteMetricStreamResponse(
  */
 const DeleteMetricStreamRequest * DeleteMetricStreamResponse::request() const
 {
-    Q_D(const DeleteMetricStreamResponse);
-    return static_cast<const DeleteMetricStreamRequest *>(d->request);
+    return static_cast<const DeleteMetricStreamRequest *>(CloudWatchResponse::request());
 }
 
 /*!

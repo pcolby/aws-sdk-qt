@@ -62,8 +62,7 @@ UpdateNetworkProfileResponse::UpdateNetworkProfileResponse(
  */
 const UpdateNetworkProfileRequest * UpdateNetworkProfileResponse::request() const
 {
-    Q_D(const UpdateNetworkProfileResponse);
-    return static_cast<const UpdateNetworkProfileRequest *>(d->request);
+    return static_cast<const UpdateNetworkProfileRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    XRayResponsePrivate * const d_ptr; ///< Internal d-pointer.
     XRayResponse(XRayResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -72,8 +72,7 @@ ListEffectiveDeploymentsResponse::ListEffectiveDeploymentsResponse(
  */
 const ListEffectiveDeploymentsRequest * ListEffectiveDeploymentsResponse::request() const
 {
-    Q_D(const ListEffectiveDeploymentsResponse);
-    return static_cast<const ListEffectiveDeploymentsRequest *>(d->request);
+    return static_cast<const ListEffectiveDeploymentsRequest *>(GreengrassV2Response::request());
 }
 
 /*!

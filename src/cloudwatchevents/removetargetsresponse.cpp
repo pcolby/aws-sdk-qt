@@ -78,8 +78,7 @@ RemoveTargetsResponse::RemoveTargetsResponse(
  */
 const RemoveTargetsRequest * RemoveTargetsResponse::request() const
 {
-    Q_D(const RemoveTargetsResponse);
-    return static_cast<const RemoveTargetsRequest *>(d->request);
+    return static_cast<const RemoveTargetsRequest *>(CloudWatchEventsResponse::request());
 }
 
 /*!

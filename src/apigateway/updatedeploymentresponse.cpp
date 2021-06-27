@@ -60,8 +60,7 @@ UpdateDeploymentResponse::UpdateDeploymentResponse(
  */
 const UpdateDeploymentRequest * UpdateDeploymentResponse::request() const
 {
-    Q_D(const UpdateDeploymentResponse);
-    return static_cast<const UpdateDeploymentRequest *>(d->request);
+    return static_cast<const UpdateDeploymentRequest *>(APIGatewayResponse::request());
 }
 
 /*!

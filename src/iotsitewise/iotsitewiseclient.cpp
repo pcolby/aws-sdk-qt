@@ -181,16 +181,16 @@ IoTSiteWiseClient::IoTSiteWiseClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new IoTSiteWiseClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-12-02"),
+    QStringLiteral("iotsitewise"),
+    QStringLiteral("AWS IoT SiteWise"),
+    QStringLiteral("iotsitewise"),
+    parent), d_ptr(new IoTSiteWiseClientPrivate(this))
 {
-    Q_D(IoTSiteWiseClient);
-    d->apiVersion = QStringLiteral("2019-12-02");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("iotsitewise");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS IoT SiteWise");
-    d->serviceName = QStringLiteral("iotsitewise");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -209,16 +209,16 @@ IoTSiteWiseClient::IoTSiteWiseClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new IoTSiteWiseClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-12-02"),
+    QStringLiteral("iotsitewise"),
+    QStringLiteral("AWS IoT SiteWise"),
+    QStringLiteral("iotsitewise"),
+    parent), d_ptr(new IoTSiteWiseClientPrivate(this))
 {
-    Q_D(IoTSiteWiseClient);
-    d->apiVersion = QStringLiteral("2019-12-02");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("iotsitewise");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS IoT SiteWise");
-    d->serviceName = QStringLiteral("iotsitewise");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -1204,10 +1204,9 @@ UpdateProjectResponse * IoTSiteWiseClient::updateProject(const UpdateProjectRequ
 /*!
  * Constructs a IoTSiteWiseClientPrivate object with public implementation \a q.
  */
-IoTSiteWiseClientPrivate::IoTSiteWiseClientPrivate(IoTSiteWiseClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+IoTSiteWiseClientPrivate::IoTSiteWiseClientPrivate(IoTSiteWiseClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace IoTSiteWise

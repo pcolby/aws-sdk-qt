@@ -72,8 +72,7 @@ ListNetworksResponse::ListNetworksResponse(
  */
 const ListNetworksRequest * ListNetworksResponse::request() const
 {
-    Q_D(const ListNetworksResponse);
-    return static_cast<const ListNetworksRequest *>(d->request);
+    return static_cast<const ListNetworksRequest *>(ManagedBlockchainResponse::request());
 }
 
 /*!

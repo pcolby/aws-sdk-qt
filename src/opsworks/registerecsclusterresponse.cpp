@@ -161,8 +161,7 @@ RegisterEcsClusterResponse::RegisterEcsClusterResponse(
  */
 const RegisterEcsClusterRequest * RegisterEcsClusterResponse::request() const
 {
-    Q_D(const RegisterEcsClusterResponse);
-    return static_cast<const RegisterEcsClusterRequest *>(d->request);
+    return static_cast<const RegisterEcsClusterRequest *>(OpsWorksResponse::request());
 }
 
 /*!

@@ -60,8 +60,7 @@ GetDashboardEmbedUrlResponse::GetDashboardEmbedUrlResponse(
  */
 const GetDashboardEmbedUrlRequest * GetDashboardEmbedUrlResponse::request() const
 {
-    Q_D(const GetDashboardEmbedUrlResponse);
-    return static_cast<const GetDashboardEmbedUrlRequest *>(d->request);
+    return static_cast<const GetDashboardEmbedUrlRequest *>(QuickSightResponse::request());
 }
 
 /*!

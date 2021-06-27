@@ -76,8 +76,7 @@ CreateApplicationResponse::CreateApplicationResponse(
  */
 const CreateApplicationRequest * CreateApplicationResponse::request() const
 {
-    Q_D(const CreateApplicationResponse);
-    return static_cast<const CreateApplicationRequest *>(d->request);
+    return static_cast<const CreateApplicationRequest *>(ServerlessApplicationRepositoryResponse::request());
 }
 
 /*!

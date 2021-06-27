@@ -62,8 +62,7 @@ ListInstanceProfileTagsResponse::ListInstanceProfileTagsResponse(
  */
 const ListInstanceProfileTagsRequest * ListInstanceProfileTagsResponse::request() const
 {
-    Q_D(const ListInstanceProfileTagsResponse);
-    return static_cast<const ListInstanceProfileTagsRequest *>(d->request);
+    return static_cast<const ListInstanceProfileTagsRequest *>(IamResponse::request());
 }
 
 /*!

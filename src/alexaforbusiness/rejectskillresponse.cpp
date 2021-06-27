@@ -62,8 +62,7 @@ RejectSkillResponse::RejectSkillResponse(
  */
 const RejectSkillRequest * RejectSkillResponse::request() const
 {
-    Q_D(const RejectSkillResponse);
-    return static_cast<const RejectSkillRequest *>(d->request);
+    return static_cast<const RejectSkillRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

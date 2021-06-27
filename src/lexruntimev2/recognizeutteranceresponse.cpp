@@ -55,8 +55,7 @@ RecognizeUtteranceResponse::RecognizeUtteranceResponse(
  */
 const RecognizeUtteranceRequest * RecognizeUtteranceResponse::request() const
 {
-    Q_D(const RecognizeUtteranceResponse);
-    return static_cast<const RecognizeUtteranceRequest *>(d->request);
+    return static_cast<const RecognizeUtteranceRequest *>(LexRuntimeV2Response::request());
 }
 
 /*!

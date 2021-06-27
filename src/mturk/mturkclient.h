@@ -163,6 +163,12 @@ public slots:
     UpdateNotificationSettingsResponse * updateNotificationSettings(const UpdateNotificationSettingsRequest &request);
     UpdateQualificationTypeResponse * updateQualificationType(const UpdateQualificationTypeRequest &request);
 
+protected:
+    /// @cond internal
+    MTurkClientPrivate * const d_ptr; ///< Internal d-pointer.
+    MTurkClient(MTurkClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(MTurkClient)
     Q_DISABLE_COPY(MTurkClient)

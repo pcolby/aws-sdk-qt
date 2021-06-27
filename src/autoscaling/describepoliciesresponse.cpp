@@ -68,8 +68,7 @@ DescribePoliciesResponse::DescribePoliciesResponse(
  */
 const DescribePoliciesRequest * DescribePoliciesResponse::request() const
 {
-    Q_D(const DescribePoliciesResponse);
-    return static_cast<const DescribePoliciesRequest *>(d->request);
+    return static_cast<const DescribePoliciesRequest *>(AutoScalingResponse::request());
 }
 
 /*!

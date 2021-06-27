@@ -58,8 +58,7 @@ DescribeLimitsResponse::DescribeLimitsResponse(
  */
 const DescribeLimitsRequest * DescribeLimitsResponse::request() const
 {
-    Q_D(const DescribeLimitsResponse);
-    return static_cast<const DescribeLimitsRequest *>(d->request);
+    return static_cast<const DescribeLimitsRequest *>(KinesisResponse::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ ModifyAccountResponse::ModifyAccountResponse(
  */
 const ModifyAccountRequest * ModifyAccountResponse::request() const
 {
-    Q_D(const ModifyAccountResponse);
-    return static_cast<const ModifyAccountRequest *>(d->request);
+    return static_cast<const ModifyAccountRequest *>(WorkSpacesResponse::request());
 }
 
 /*!

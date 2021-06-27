@@ -61,8 +61,7 @@ DeleteVirtualInterfaceResponse::DeleteVirtualInterfaceResponse(
  */
 const DeleteVirtualInterfaceRequest * DeleteVirtualInterfaceResponse::request() const
 {
-    Q_D(const DeleteVirtualInterfaceResponse);
-    return static_cast<const DeleteVirtualInterfaceRequest *>(d->request);
+    return static_cast<const DeleteVirtualInterfaceRequest *>(DirectConnectResponse::request());
 }
 
 /*!

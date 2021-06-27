@@ -159,8 +159,7 @@ StopContinuousExportResponse::StopContinuousExportResponse(
  */
 const StopContinuousExportRequest * StopContinuousExportResponse::request() const
 {
-    Q_D(const StopContinuousExportResponse);
-    return static_cast<const StopContinuousExportRequest *>(d->request);
+    return static_cast<const StopContinuousExportRequest *>(ApplicationDiscoveryServiceResponse::request());
 }
 
 /*!

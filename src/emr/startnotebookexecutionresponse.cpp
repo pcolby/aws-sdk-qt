@@ -58,8 +58,7 @@ StartNotebookExecutionResponse::StartNotebookExecutionResponse(
  */
 const StartNotebookExecutionRequest * StartNotebookExecutionResponse::request() const
 {
-    Q_D(const StartNotebookExecutionResponse);
-    return static_cast<const StartNotebookExecutionRequest *>(d->request);
+    return static_cast<const StartNotebookExecutionRequest *>(EmrResponse::request());
 }
 
 /*!

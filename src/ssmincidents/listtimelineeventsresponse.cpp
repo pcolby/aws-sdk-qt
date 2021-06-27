@@ -65,8 +65,7 @@ ListTimelineEventsResponse::ListTimelineEventsResponse(
  */
 const ListTimelineEventsRequest * ListTimelineEventsResponse::request() const
 {
-    Q_D(const ListTimelineEventsResponse);
-    return static_cast<const ListTimelineEventsRequest *>(d->request);
+    return static_cast<const ListTimelineEventsRequest *>(SSMIncidentsResponse::request());
 }
 
 /*!

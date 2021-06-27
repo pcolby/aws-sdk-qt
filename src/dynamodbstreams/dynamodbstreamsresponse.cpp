@@ -37,7 +37,7 @@ namespace DynamoDBStreams {
  * Constructs a DynamoDBStreamsResponse object with parent \a parent.
  */
 DynamoDBStreamsResponse::DynamoDBStreamsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new DynamoDBStreamsResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new DynamoDBStreamsResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ DynamoDBStreamsResponse::DynamoDBStreamsResponse(QObject * const parent)
  * implementation that inherits from DynamoDBStreamsResponsePrivate.
  */
 DynamoDBStreamsResponse::DynamoDBStreamsResponse(DynamoDBStreamsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void DynamoDBStreamsResponse::parseFailure(QIODevice &response)
  * Constructs a DynamoDBStreamsResponsePrivate object with public implementation \a q.
  */
 DynamoDBStreamsResponsePrivate::DynamoDBStreamsResponsePrivate(
-    DynamoDBStreamsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    DynamoDBStreamsResponse * const q) : q_ptr(q)
 {
 
 }

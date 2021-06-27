@@ -123,7 +123,7 @@ namespace SESV2 {
  * Constructs a Sesv2Request object for SESV2 \a action.
  */
 Sesv2Request::Sesv2Request(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new Sesv2RequestPrivate(action, this))
+    : d_ptr(new Sesv2RequestPrivate(action, this))
 {
 
 }
@@ -132,7 +132,8 @@ Sesv2Request::Sesv2Request(const Action action)
  * Constructs a copy of \a other.
  */
 Sesv2Request::Sesv2Request(const Sesv2Request &other)
-    : QtAws::Core::AwsAbstractRequest(new Sesv2RequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new Sesv2RequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -155,7 +156,7 @@ Sesv2Request& Sesv2Request::operator=(const Sesv2Request &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from Sesv2RequestPrivate.
  */
-Sesv2Request::Sesv2Request(Sesv2RequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+Sesv2Request::Sesv2Request(Sesv2RequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -324,7 +325,7 @@ QNetworkRequest Sesv2Request::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 Sesv2RequestPrivate::Sesv2RequestPrivate(const Sesv2Request::Action action, Sesv2Request * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -339,8 +340,8 @@ Sesv2RequestPrivate::Sesv2RequestPrivate(const Sesv2Request::Action action, Sesv
  */
 Sesv2RequestPrivate::Sesv2RequestPrivate(const Sesv2RequestPrivate &other,
                                      Sesv2Request * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

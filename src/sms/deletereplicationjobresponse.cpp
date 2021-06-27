@@ -68,8 +68,7 @@ DeleteReplicationJobResponse::DeleteReplicationJobResponse(
  */
 const DeleteReplicationJobRequest * DeleteReplicationJobResponse::request() const
 {
-    Q_D(const DeleteReplicationJobResponse);
-    return static_cast<const DeleteReplicationJobRequest *>(d->request);
+    return static_cast<const DeleteReplicationJobRequest *>(SmsResponse::request());
 }
 
 /*!

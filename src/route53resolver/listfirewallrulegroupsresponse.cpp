@@ -94,8 +94,7 @@ ListFirewallRuleGroupsResponse::ListFirewallRuleGroupsResponse(
  */
 const ListFirewallRuleGroupsRequest * ListFirewallRuleGroupsResponse::request() const
 {
-    Q_D(const ListFirewallRuleGroupsResponse);
-    return static_cast<const ListFirewallRuleGroupsRequest *>(d->request);
+    return static_cast<const ListFirewallRuleGroupsRequest *>(Route53ResolverResponse::request());
 }
 
 /*!

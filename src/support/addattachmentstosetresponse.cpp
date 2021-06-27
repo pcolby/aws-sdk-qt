@@ -133,8 +133,7 @@ AddAttachmentsToSetResponse::AddAttachmentsToSetResponse(
  */
 const AddAttachmentsToSetRequest * AddAttachmentsToSetResponse::request() const
 {
-    Q_D(const AddAttachmentsToSetResponse);
-    return static_cast<const AddAttachmentsToSetRequest *>(d->request);
+    return static_cast<const AddAttachmentsToSetRequest *>(SupportResponse::request());
 }
 
 /*!

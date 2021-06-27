@@ -60,7 +60,7 @@ namespace CodeStar {
  * Constructs a CodeStarRequest object for CodeStar \a action.
  */
 CodeStarRequest::CodeStarRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new CodeStarRequestPrivate(action, this))
+    : d_ptr(new CodeStarRequestPrivate(action, this))
 {
 
 }
@@ -69,7 +69,8 @@ CodeStarRequest::CodeStarRequest(const Action action)
  * Constructs a copy of \a other.
  */
 CodeStarRequest::CodeStarRequest(const CodeStarRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new CodeStarRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new CodeStarRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -92,7 +93,7 @@ CodeStarRequest& CodeStarRequest::operator=(const CodeStarRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CodeStarRequestPrivate.
  */
-CodeStarRequest::CodeStarRequest(CodeStarRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+CodeStarRequest::CodeStarRequest(CodeStarRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -261,7 +262,7 @@ QNetworkRequest CodeStarRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 CodeStarRequestPrivate::CodeStarRequestPrivate(const CodeStarRequest::Action action, CodeStarRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -276,8 +277,8 @@ CodeStarRequestPrivate::CodeStarRequestPrivate(const CodeStarRequest::Action act
  */
 CodeStarRequestPrivate::CodeStarRequestPrivate(const CodeStarRequestPrivate &other,
                                      CodeStarRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

@@ -56,8 +56,7 @@ RestoreDBClusterToPointInTimeResponse::RestoreDBClusterToPointInTimeResponse(
  */
 const RestoreDBClusterToPointInTimeRequest * RestoreDBClusterToPointInTimeResponse::request() const
 {
-    Q_D(const RestoreDBClusterToPointInTimeResponse);
-    return static_cast<const RestoreDBClusterToPointInTimeRequest *>(d->request);
+    return static_cast<const RestoreDBClusterToPointInTimeRequest *>(DocDBResponse::request());
 }
 
 /*!

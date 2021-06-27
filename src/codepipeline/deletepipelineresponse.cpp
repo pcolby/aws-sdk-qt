@@ -240,8 +240,7 @@ DeletePipelineResponse::DeletePipelineResponse(
  */
 const DeletePipelineRequest * DeletePipelineResponse::request() const
 {
-    Q_D(const DeletePipelineResponse);
-    return static_cast<const DeletePipelineRequest *>(d->request);
+    return static_cast<const DeletePipelineRequest *>(CodePipelineResponse::request());
 }
 
 /*!

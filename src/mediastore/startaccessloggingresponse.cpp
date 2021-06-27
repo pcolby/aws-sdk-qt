@@ -57,8 +57,7 @@ StartAccessLoggingResponse::StartAccessLoggingResponse(
  */
 const StartAccessLoggingRequest * StartAccessLoggingResponse::request() const
 {
-    Q_D(const StartAccessLoggingResponse);
-    return static_cast<const StartAccessLoggingRequest *>(d->request);
+    return static_cast<const StartAccessLoggingRequest *>(MediaStoreResponse::request());
 }
 
 /*!

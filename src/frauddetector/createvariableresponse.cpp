@@ -58,8 +58,7 @@ CreateVariableResponse::CreateVariableResponse(
  */
 const CreateVariableRequest * CreateVariableResponse::request() const
 {
-    Q_D(const CreateVariableResponse);
-    return static_cast<const CreateVariableRequest *>(d->request);
+    return static_cast<const CreateVariableRequest *>(FraudDetectorResponse::request());
 }
 
 /*!

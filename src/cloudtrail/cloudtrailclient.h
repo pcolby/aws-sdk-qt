@@ -100,6 +100,12 @@ public slots:
     StopLoggingResponse * stopLogging(const StopLoggingRequest &request);
     UpdateTrailResponse * updateTrail(const UpdateTrailRequest &request);
 
+protected:
+    /// @cond internal
+    CloudTrailClientPrivate * const d_ptr; ///< Internal d-pointer.
+    CloudTrailClient(CloudTrailClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(CloudTrailClient)
     Q_DISABLE_COPY(CloudTrailClient)

@@ -58,8 +58,7 @@ GetSecurityConfigurationResponse::GetSecurityConfigurationResponse(
  */
 const GetSecurityConfigurationRequest * GetSecurityConfigurationResponse::request() const
 {
-    Q_D(const GetSecurityConfigurationResponse);
-    return static_cast<const GetSecurityConfigurationRequest *>(d->request);
+    return static_cast<const GetSecurityConfigurationRequest *>(GlueResponse::request());
 }
 
 /*!

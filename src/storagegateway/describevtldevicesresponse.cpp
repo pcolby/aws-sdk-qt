@@ -124,8 +124,7 @@ DescribeVTLDevicesResponse::DescribeVTLDevicesResponse(
  */
 const DescribeVTLDevicesRequest * DescribeVTLDevicesResponse::request() const
 {
-    Q_D(const DescribeVTLDevicesResponse);
-    return static_cast<const DescribeVTLDevicesRequest *>(d->request);
+    return static_cast<const DescribeVTLDevicesRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

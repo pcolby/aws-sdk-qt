@@ -123,7 +123,7 @@ namespace WAFRegional {
  * Constructs a WAFRegionalRequest object for WAFRegional \a action.
  */
 WAFRegionalRequest::WAFRegionalRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new WAFRegionalRequestPrivate(action, this))
+    : d_ptr(new WAFRegionalRequestPrivate(action, this))
 {
 
 }
@@ -132,7 +132,8 @@ WAFRegionalRequest::WAFRegionalRequest(const Action action)
  * Constructs a copy of \a other.
  */
 WAFRegionalRequest::WAFRegionalRequest(const WAFRegionalRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new WAFRegionalRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new WAFRegionalRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -155,7 +156,7 @@ WAFRegionalRequest& WAFRegionalRequest::operator=(const WAFRegionalRequest &othe
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from WAFRegionalRequestPrivate.
  */
-WAFRegionalRequest::WAFRegionalRequest(WAFRegionalRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+WAFRegionalRequest::WAFRegionalRequest(WAFRegionalRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -324,7 +325,7 @@ QNetworkRequest WAFRegionalRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 WAFRegionalRequestPrivate::WAFRegionalRequestPrivate(const WAFRegionalRequest::Action action, WAFRegionalRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -339,8 +340,8 @@ WAFRegionalRequestPrivate::WAFRegionalRequestPrivate(const WAFRegionalRequest::A
  */
 WAFRegionalRequestPrivate::WAFRegionalRequestPrivate(const WAFRegionalRequestPrivate &other,
                                      WAFRegionalRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

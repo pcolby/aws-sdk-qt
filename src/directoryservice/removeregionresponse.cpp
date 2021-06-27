@@ -69,8 +69,7 @@ RemoveRegionResponse::RemoveRegionResponse(
  */
 const RemoveRegionRequest * RemoveRegionResponse::request() const
 {
-    Q_D(const RemoveRegionResponse);
-    return static_cast<const RemoveRegionRequest *>(d->request);
+    return static_cast<const RemoveRegionRequest *>(DirectoryServiceResponse::request());
 }
 
 /*!

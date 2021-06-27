@@ -60,6 +60,7 @@ public:
 
 protected:
     /// @cond internal
+    CostandUsageReportServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
     CostandUsageReportServiceRequest(CostandUsageReportServiceRequestPrivate * const d);
     /// @endcond
 

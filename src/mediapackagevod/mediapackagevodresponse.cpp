@@ -37,7 +37,7 @@ namespace MediaPackageVod {
  * Constructs a MediaPackageVodResponse object with parent \a parent.
  */
 MediaPackageVodResponse::MediaPackageVodResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new MediaPackageVodResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new MediaPackageVodResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ MediaPackageVodResponse::MediaPackageVodResponse(QObject * const parent)
  * implementation that inherits from MediaPackageVodResponsePrivate.
  */
 MediaPackageVodResponse::MediaPackageVodResponse(MediaPackageVodResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void MediaPackageVodResponse::parseFailure(QIODevice &response)
  * Constructs a MediaPackageVodResponsePrivate object with public implementation \a q.
  */
 MediaPackageVodResponsePrivate::MediaPackageVodResponsePrivate(
-    MediaPackageVodResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    MediaPackageVodResponse * const q) : q_ptr(q)
 {
 
 }

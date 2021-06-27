@@ -20,19 +20,20 @@
 #ifndef QTAWS_DEVOPSGURUCLIENT_P_H
 #define QTAWS_DEVOPSGURUCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace DevOpsGuru {
 
 class DevOpsGuruClient;
 
-class DevOpsGuruClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class DevOpsGuruClientPrivate {
 
 public:
     DevOpsGuruClientPrivate(DevOpsGuruClient * const q);
+
+protected:
+    DevOpsGuruClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DevOpsGuruClient)

@@ -55,8 +55,7 @@ HeadBucketResponse::HeadBucketResponse(
  */
 const HeadBucketRequest * HeadBucketResponse::request() const
 {
-    Q_D(const HeadBucketResponse);
-    return static_cast<const HeadBucketRequest *>(d->request);
+    return static_cast<const HeadBucketRequest *>(S3Response::request());
 }
 
 /*!

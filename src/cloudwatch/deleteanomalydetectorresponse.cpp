@@ -69,8 +69,7 @@ DeleteAnomalyDetectorResponse::DeleteAnomalyDetectorResponse(
  */
 const DeleteAnomalyDetectorRequest * DeleteAnomalyDetectorResponse::request() const
 {
-    Q_D(const DeleteAnomalyDetectorResponse);
-    return static_cast<const DeleteAnomalyDetectorRequest *>(d->request);
+    return static_cast<const DeleteAnomalyDetectorRequest *>(CloudWatchResponse::request());
 }
 
 /*!

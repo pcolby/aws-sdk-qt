@@ -74,8 +74,7 @@ ListInsightsResponse::ListInsightsResponse(
  */
 const ListInsightsRequest * ListInsightsResponse::request() const
 {
-    Q_D(const ListInsightsResponse);
-    return static_cast<const ListInsightsRequest *>(d->request);
+    return static_cast<const ListInsightsRequest *>(DevOpsGuruResponse::request());
 }
 
 /*!

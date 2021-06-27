@@ -87,8 +87,7 @@ PurchaseScheduledInstancesResponse::PurchaseScheduledInstancesResponse(
  */
 const PurchaseScheduledInstancesRequest * PurchaseScheduledInstancesResponse::request() const
 {
-    Q_D(const PurchaseScheduledInstancesResponse);
-    return static_cast<const PurchaseScheduledInstancesRequest *>(d->request);
+    return static_cast<const PurchaseScheduledInstancesRequest *>(Ec2Response::request());
 }
 
 /*!

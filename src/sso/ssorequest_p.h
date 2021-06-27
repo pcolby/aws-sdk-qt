@@ -20,15 +20,12 @@
 #ifndef QTAWS_SSOREQUEST_P_H
 #define QTAWS_SSOREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "ssorequest.h"
-
 namespace QtAws {
 namespace SSO {
 
 class SsoRequest;
 
-class SsoRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SsoRequestPrivate {
 
 public:
     SsoRequest::Action action; ///< SSO action to be performed.
@@ -39,6 +36,9 @@ public:
     SsoRequestPrivate(const SsoRequestPrivate &other, SsoRequest * const q);
 
     static QString toString(const SsoRequest::Action &action);
+
+protected:
+    SsoRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SsoRequest)

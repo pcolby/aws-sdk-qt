@@ -64,7 +64,7 @@ namespace Budgets {
  * Constructs a BudgetsRequest object for Budgets \a action.
  */
 BudgetsRequest::BudgetsRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new BudgetsRequestPrivate(action, this))
+    : d_ptr(new BudgetsRequestPrivate(action, this))
 {
 
 }
@@ -73,7 +73,8 @@ BudgetsRequest::BudgetsRequest(const Action action)
  * Constructs a copy of \a other.
  */
 BudgetsRequest::BudgetsRequest(const BudgetsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new BudgetsRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new BudgetsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -96,7 +97,7 @@ BudgetsRequest& BudgetsRequest::operator=(const BudgetsRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from BudgetsRequestPrivate.
  */
-BudgetsRequest::BudgetsRequest(BudgetsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+BudgetsRequest::BudgetsRequest(BudgetsRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -265,7 +266,7 @@ QNetworkRequest BudgetsRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 BudgetsRequestPrivate::BudgetsRequestPrivate(const BudgetsRequest::Action action, BudgetsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -280,8 +281,8 @@ BudgetsRequestPrivate::BudgetsRequestPrivate(const BudgetsRequest::Action action
  */
 BudgetsRequestPrivate::BudgetsRequestPrivate(const BudgetsRequestPrivate &other,
                                      BudgetsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

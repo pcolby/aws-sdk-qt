@@ -116,8 +116,7 @@ CreateBudgetResponse::CreateBudgetResponse(
  */
 const CreateBudgetRequest * CreateBudgetResponse::request() const
 {
-    Q_D(const CreateBudgetResponse);
-    return static_cast<const CreateBudgetRequest *>(d->request);
+    return static_cast<const CreateBudgetRequest *>(BudgetsResponse::request());
 }
 
 /*!

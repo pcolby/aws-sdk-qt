@@ -87,8 +87,7 @@ ModifySubnetAttributeResponse::ModifySubnetAttributeResponse(
  */
 const ModifySubnetAttributeRequest * ModifySubnetAttributeResponse::request() const
 {
-    Q_D(const ModifySubnetAttributeResponse);
-    return static_cast<const ModifySubnetAttributeRequest *>(d->request);
+    return static_cast<const ModifySubnetAttributeRequest *>(Ec2Response::request());
 }
 
 /*!

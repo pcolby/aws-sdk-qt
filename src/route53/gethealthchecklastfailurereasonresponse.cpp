@@ -56,8 +56,7 @@ GetHealthCheckLastFailureReasonResponse::GetHealthCheckLastFailureReasonResponse
  */
 const GetHealthCheckLastFailureReasonRequest * GetHealthCheckLastFailureReasonResponse::request() const
 {
-    Q_D(const GetHealthCheckLastFailureReasonResponse);
-    return static_cast<const GetHealthCheckLastFailureReasonRequest *>(d->request);
+    return static_cast<const GetHealthCheckLastFailureReasonRequest *>(Route53Response::request());
 }
 
 /*!

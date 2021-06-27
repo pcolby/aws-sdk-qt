@@ -20,19 +20,20 @@
 #ifndef QTAWS_COMPREHENDCLIENT_P_H
 #define QTAWS_COMPREHENDCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace Comprehend {
 
 class ComprehendClient;
 
-class ComprehendClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ComprehendClientPrivate {
 
 public:
     ComprehendClientPrivate(ComprehendClient * const q);
+
+protected:
+    ComprehendClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ComprehendClient)

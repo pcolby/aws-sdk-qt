@@ -58,8 +58,7 @@ DeleteModelVersionResponse::DeleteModelVersionResponse(
  */
 const DeleteModelVersionRequest * DeleteModelVersionResponse::request() const
 {
-    Q_D(const DeleteModelVersionResponse);
-    return static_cast<const DeleteModelVersionRequest *>(d->request);
+    return static_cast<const DeleteModelVersionRequest *>(FraudDetectorResponse::request());
 }
 
 /*!

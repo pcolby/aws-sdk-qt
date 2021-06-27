@@ -197,16 +197,16 @@ DirectoryServiceClient::DirectoryServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new DirectoryServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2015-04-16"),
+    QStringLiteral("ds"),
+    QStringLiteral("AWS Directory Service"),
+    QStringLiteral("ds"),
+    parent), d_ptr(new DirectoryServiceClientPrivate(this))
 {
-    Q_D(DirectoryServiceClient);
-    d->apiVersion = QStringLiteral("2015-04-16");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("ds");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Directory Service");
-    d->serviceName = QStringLiteral("ds");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -225,16 +225,16 @@ DirectoryServiceClient::DirectoryServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new DirectoryServiceClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2015-04-16"),
+    QStringLiteral("ds"),
+    QStringLiteral("AWS Directory Service"),
+    QStringLiteral("ds"),
+    parent), d_ptr(new DirectoryServiceClientPrivate(this))
 {
-    Q_D(DirectoryServiceClient);
-    d->apiVersion = QStringLiteral("2015-04-16");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("ds");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Directory Service");
-    d->serviceName = QStringLiteral("ds");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -1219,10 +1219,9 @@ VerifyTrustResponse * DirectoryServiceClient::verifyTrust(const VerifyTrustReque
 /*!
  * Constructs a DirectoryServiceClientPrivate object with public implementation \a q.
  */
-DirectoryServiceClientPrivate::DirectoryServiceClientPrivate(DirectoryServiceClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+DirectoryServiceClientPrivate::DirectoryServiceClientPrivate(DirectoryServiceClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace DirectoryService

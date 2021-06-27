@@ -74,8 +74,7 @@ EnableAddOnResponse::EnableAddOnResponse(
  */
 const EnableAddOnRequest * EnableAddOnResponse::request() const
 {
-    Q_D(const EnableAddOnResponse);
-    return static_cast<const EnableAddOnRequest *>(d->request);
+    return static_cast<const EnableAddOnRequest *>(LightsailResponse::request());
 }
 
 /*!

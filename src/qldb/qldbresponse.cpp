@@ -37,7 +37,7 @@ namespace QLDB {
  * Constructs a QldbResponse object with parent \a parent.
  */
 QldbResponse::QldbResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new QldbResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new QldbResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ QldbResponse::QldbResponse(QObject * const parent)
  * implementation that inherits from QldbResponsePrivate.
  */
 QldbResponse::QldbResponse(QldbResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void QldbResponse::parseFailure(QIODevice &response)
  * Constructs a QldbResponsePrivate object with public implementation \a q.
  */
 QldbResponsePrivate::QldbResponsePrivate(
-    QldbResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    QldbResponse * const q) : q_ptr(q)
 {
 
 }

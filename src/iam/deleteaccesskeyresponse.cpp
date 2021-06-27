@@ -62,8 +62,7 @@ DeleteAccessKeyResponse::DeleteAccessKeyResponse(
  */
 const DeleteAccessKeyRequest * DeleteAccessKeyResponse::request() const
 {
-    Q_D(const DeleteAccessKeyResponse);
-    return static_cast<const DeleteAccessKeyRequest *>(d->request);
+    return static_cast<const DeleteAccessKeyRequest *>(IamResponse::request());
 }
 
 /*!

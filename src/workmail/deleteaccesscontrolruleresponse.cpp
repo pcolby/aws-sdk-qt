@@ -89,8 +89,7 @@ DeleteAccessControlRuleResponse::DeleteAccessControlRuleResponse(
  */
 const DeleteAccessControlRuleRequest * DeleteAccessControlRuleResponse::request() const
 {
-    Q_D(const DeleteAccessControlRuleResponse);
-    return static_cast<const DeleteAccessControlRuleRequest *>(d->request);
+    return static_cast<const DeleteAccessControlRuleRequest *>(WorkMailResponse::request());
 }
 
 /*!

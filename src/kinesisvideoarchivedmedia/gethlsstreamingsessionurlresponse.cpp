@@ -55,8 +55,7 @@ GetHLSStreamingSessionURLResponse::GetHLSStreamingSessionURLResponse(
  */
 const GetHLSStreamingSessionURLRequest * GetHLSStreamingSessionURLResponse::request() const
 {
-    Q_D(const GetHLSStreamingSessionURLResponse);
-    return static_cast<const GetHLSStreamingSessionURLRequest *>(d->request);
+    return static_cast<const GetHLSStreamingSessionURLRequest *>(KinesisVideoArchivedMediaResponse::request());
 }
 
 /*!

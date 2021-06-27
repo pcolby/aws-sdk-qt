@@ -62,8 +62,7 @@ ListServersResponse::ListServersResponse(
  */
 const ListServersRequest * ListServersResponse::request() const
 {
-    Q_D(const ListServersResponse);
-    return static_cast<const ListServersRequest *>(d->request);
+    return static_cast<const ListServersRequest *>(TransferResponse::request());
 }
 
 /*!

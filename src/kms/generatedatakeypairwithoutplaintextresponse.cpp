@@ -154,8 +154,7 @@ GenerateDataKeyPairWithoutPlaintextResponse::GenerateDataKeyPairWithoutPlaintext
  */
 const GenerateDataKeyPairWithoutPlaintextRequest * GenerateDataKeyPairWithoutPlaintextResponse::request() const
 {
-    Q_D(const GenerateDataKeyPairWithoutPlaintextResponse);
-    return static_cast<const GenerateDataKeyPairWithoutPlaintextRequest *>(d->request);
+    return static_cast<const GenerateDataKeyPairWithoutPlaintextRequest *>(KmsResponse::request());
 }
 
 /*!

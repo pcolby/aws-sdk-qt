@@ -87,8 +87,7 @@ DescribeVolumeStatusResponse::DescribeVolumeStatusResponse(
  */
 const DescribeVolumeStatusRequest * DescribeVolumeStatusResponse::request() const
 {
-    Q_D(const DescribeVolumeStatusResponse);
-    return static_cast<const DescribeVolumeStatusRequest *>(d->request);
+    return static_cast<const DescribeVolumeStatusRequest *>(Ec2Response::request());
 }
 
 /*!

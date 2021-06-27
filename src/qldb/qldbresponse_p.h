@@ -20,14 +20,12 @@
 #ifndef QTAWS_QLDBRESPONSE_P_H
 #define QTAWS_QLDBRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace QLDB {
 
 class QldbResponse;
 
-class QldbResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class QldbResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    QldbResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(QldbResponse)

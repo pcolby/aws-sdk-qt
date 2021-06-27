@@ -77,8 +77,7 @@ DescribeTypeResponse::DescribeTypeResponse(
  */
 const DescribeTypeRequest * DescribeTypeResponse::request() const
 {
-    Q_D(const DescribeTypeResponse);
-    return static_cast<const DescribeTypeRequest *>(d->request);
+    return static_cast<const DescribeTypeRequest *>(CloudFormationResponse::request());
 }
 
 /*!

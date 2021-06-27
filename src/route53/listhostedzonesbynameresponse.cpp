@@ -56,8 +56,7 @@ ListHostedZonesByNameResponse::ListHostedZonesByNameResponse(
  */
 const ListHostedZonesByNameRequest * ListHostedZonesByNameResponse::request() const
 {
-    Q_D(const ListHostedZonesByNameResponse);
-    return static_cast<const ListHostedZonesByNameRequest *>(d->request);
+    return static_cast<const ListHostedZonesByNameRequest *>(Route53Response::request());
 }
 
 /*!

@@ -55,8 +55,7 @@ CancelQueryResponse::CancelQueryResponse(
  */
 const CancelQueryRequest * CancelQueryResponse::request() const
 {
-    Q_D(const CancelQueryResponse);
-    return static_cast<const CancelQueryRequest *>(d->request);
+    return static_cast<const CancelQueryRequest *>(TimestreamQueryResponse::request());
 }
 
 /*!

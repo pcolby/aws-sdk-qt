@@ -262,6 +262,12 @@ public slots:
     UpdateStageResponse * updateStage(const UpdateStageRequest &request);
     UpdateVpcLinkResponse * updateVpcLink(const UpdateVpcLinkRequest &request);
 
+protected:
+    /// @cond internal
+    ApiGatewayV2ClientPrivate * const d_ptr; ///< Internal d-pointer.
+    ApiGatewayV2Client(ApiGatewayV2ClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(ApiGatewayV2Client)
     Q_DISABLE_COPY(ApiGatewayV2Client)

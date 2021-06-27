@@ -98,8 +98,7 @@ ListAppInstancesResponse::ListAppInstancesResponse(
  */
 const ListAppInstancesRequest * ListAppInstancesResponse::request() const
 {
-    Q_D(const ListAppInstancesResponse);
-    return static_cast<const ListAppInstancesRequest *>(d->request);
+    return static_cast<const ListAppInstancesRequest *>(ChimeResponse::request());
 }
 
 /*!

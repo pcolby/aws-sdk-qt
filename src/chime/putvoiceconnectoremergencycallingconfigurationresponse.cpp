@@ -98,8 +98,7 @@ PutVoiceConnectorEmergencyCallingConfigurationResponse::PutVoiceConnectorEmergen
  */
 const PutVoiceConnectorEmergencyCallingConfigurationRequest * PutVoiceConnectorEmergencyCallingConfigurationResponse::request() const
 {
-    Q_D(const PutVoiceConnectorEmergencyCallingConfigurationResponse);
-    return static_cast<const PutVoiceConnectorEmergencyCallingConfigurationRequest *>(d->request);
+    return static_cast<const PutVoiceConnectorEmergencyCallingConfigurationRequest *>(ChimeResponse::request());
 }
 
 /*!

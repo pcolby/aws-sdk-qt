@@ -73,8 +73,7 @@ ListOrganizationAdminAccountsResponse::ListOrganizationAdminAccountsResponse(
  */
 const ListOrganizationAdminAccountsRequest * ListOrganizationAdminAccountsResponse::request() const
 {
-    Q_D(const ListOrganizationAdminAccountsResponse);
-    return static_cast<const ListOrganizationAdminAccountsRequest *>(d->request);
+    return static_cast<const ListOrganizationAdminAccountsRequest *>(GuardDutyResponse::request());
 }
 
 /*!

@@ -67,8 +67,7 @@ ListHsmsResponse::ListHsmsResponse(
  */
 const ListHsmsRequest * ListHsmsResponse::request() const
 {
-    Q_D(const ListHsmsResponse);
-    return static_cast<const ListHsmsRequest *>(d->request);
+    return static_cast<const ListHsmsRequest *>(CloudHSMResponse::request());
 }
 
 /*!

@@ -84,8 +84,7 @@ CreateLabelsResponse::CreateLabelsResponse(
  */
 const CreateLabelsRequest * CreateLabelsResponse::request() const
 {
-    Q_D(const CreateLabelsResponse);
-    return static_cast<const CreateLabelsRequest *>(d->request);
+    return static_cast<const CreateLabelsRequest *>(WorkDocsResponse::request());
 }
 
 /*!

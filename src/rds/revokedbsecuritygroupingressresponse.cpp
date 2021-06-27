@@ -119,8 +119,7 @@ RevokeDBSecurityGroupIngressResponse::RevokeDBSecurityGroupIngressResponse(
  */
 const RevokeDBSecurityGroupIngressRequest * RevokeDBSecurityGroupIngressResponse::request() const
 {
-    Q_D(const RevokeDBSecurityGroupIngressResponse);
-    return static_cast<const RevokeDBSecurityGroupIngressRequest *>(d->request);
+    return static_cast<const RevokeDBSecurityGroupIngressRequest *>(RdsResponse::request());
 }
 
 /*!

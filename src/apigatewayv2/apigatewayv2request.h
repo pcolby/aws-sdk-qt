@@ -128,6 +128,7 @@ public:
 
 protected:
     /// @cond internal
+    ApiGatewayV2RequestPrivate * const d_ptr; ///< Internal d-pointer.
     ApiGatewayV2Request(ApiGatewayV2RequestPrivate * const d);
     /// @endcond
 

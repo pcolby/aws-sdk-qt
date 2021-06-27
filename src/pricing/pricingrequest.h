@@ -59,6 +59,7 @@ public:
 
 protected:
     /// @cond internal
+    PricingRequestPrivate * const d_ptr; ///< Internal d-pointer.
     PricingRequest(PricingRequestPrivate * const d);
     /// @endcond
 

@@ -439,8 +439,7 @@ DeleteApprovalRuleTemplateResponse::DeleteApprovalRuleTemplateResponse(
  */
 const DeleteApprovalRuleTemplateRequest * DeleteApprovalRuleTemplateResponse::request() const
 {
-    Q_D(const DeleteApprovalRuleTemplateResponse);
-    return static_cast<const DeleteApprovalRuleTemplateRequest *>(d->request);
+    return static_cast<const DeleteApprovalRuleTemplateRequest *>(CodeCommitResponse::request());
 }
 
 /*!

@@ -115,6 +115,12 @@ public slots:
     UpdateInstanceCustomHealthStatusResponse * updateInstanceCustomHealthStatus(const UpdateInstanceCustomHealthStatusRequest &request);
     UpdateServiceResponse * updateService(const UpdateServiceRequest &request);
 
+protected:
+    /// @cond internal
+    ServiceDiscoveryClientPrivate * const d_ptr; ///< Internal d-pointer.
+    ServiceDiscoveryClient(ServiceDiscoveryClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(ServiceDiscoveryClient)
     Q_DISABLE_COPY(ServiceDiscoveryClient)

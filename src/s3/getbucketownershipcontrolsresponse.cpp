@@ -55,8 +55,7 @@ GetBucketOwnershipControlsResponse::GetBucketOwnershipControlsResponse(
  */
 const GetBucketOwnershipControlsRequest * GetBucketOwnershipControlsResponse::request() const
 {
-    Q_D(const GetBucketOwnershipControlsResponse);
-    return static_cast<const GetBucketOwnershipControlsRequest *>(d->request);
+    return static_cast<const GetBucketOwnershipControlsRequest *>(S3Response::request());
 }
 
 /*!

@@ -55,8 +55,7 @@ PutBucketNotificationResponse::PutBucketNotificationResponse(
  */
 const PutBucketNotificationRequest * PutBucketNotificationResponse::request() const
 {
-    Q_D(const PutBucketNotificationResponse);
-    return static_cast<const PutBucketNotificationRequest *>(d->request);
+    return static_cast<const PutBucketNotificationRequest *>(S3Response::request());
 }
 
 /*!

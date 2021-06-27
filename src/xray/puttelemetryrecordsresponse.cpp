@@ -56,8 +56,7 @@ PutTelemetryRecordsResponse::PutTelemetryRecordsResponse(
  */
 const PutTelemetryRecordsRequest * PutTelemetryRecordsResponse::request() const
 {
-    Q_D(const PutTelemetryRecordsResponse);
-    return static_cast<const PutTelemetryRecordsRequest *>(d->request);
+    return static_cast<const PutTelemetryRecordsRequest *>(XRayResponse::request());
 }
 
 /*!

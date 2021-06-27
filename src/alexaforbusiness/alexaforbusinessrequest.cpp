@@ -135,7 +135,7 @@ namespace AlexaForBusiness {
  * Constructs a AlexaForBusinessRequest object for AlexaForBusiness \a action.
  */
 AlexaForBusinessRequest::AlexaForBusinessRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new AlexaForBusinessRequestPrivate(action, this))
+    : d_ptr(new AlexaForBusinessRequestPrivate(action, this))
 {
 
 }
@@ -144,7 +144,8 @@ AlexaForBusinessRequest::AlexaForBusinessRequest(const Action action)
  * Constructs a copy of \a other.
  */
 AlexaForBusinessRequest::AlexaForBusinessRequest(const AlexaForBusinessRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new AlexaForBusinessRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new AlexaForBusinessRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -167,7 +168,7 @@ AlexaForBusinessRequest& AlexaForBusinessRequest::operator=(const AlexaForBusine
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from AlexaForBusinessRequestPrivate.
  */
-AlexaForBusinessRequest::AlexaForBusinessRequest(AlexaForBusinessRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+AlexaForBusinessRequest::AlexaForBusinessRequest(AlexaForBusinessRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -336,7 +337,7 @@ QNetworkRequest AlexaForBusinessRequest::unsignedRequest(const QUrl &endpoint) c
  * with public implementation \a q.
  */
 AlexaForBusinessRequestPrivate::AlexaForBusinessRequestPrivate(const AlexaForBusinessRequest::Action action, AlexaForBusinessRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -351,8 +352,8 @@ AlexaForBusinessRequestPrivate::AlexaForBusinessRequestPrivate(const AlexaForBus
  */
 AlexaForBusinessRequestPrivate::AlexaForBusinessRequestPrivate(const AlexaForBusinessRequestPrivate &other,
                                      AlexaForBusinessRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

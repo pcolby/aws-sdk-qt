@@ -98,8 +98,7 @@ CreateAttendeeResponse::CreateAttendeeResponse(
  */
 const CreateAttendeeRequest * CreateAttendeeResponse::request() const
 {
-    Q_D(const CreateAttendeeResponse);
-    return static_cast<const CreateAttendeeRequest *>(d->request);
+    return static_cast<const CreateAttendeeRequest *>(ChimeResponse::request());
 }
 
 /*!

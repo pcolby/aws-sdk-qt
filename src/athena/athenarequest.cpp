@@ -76,7 +76,7 @@ namespace Athena {
  * Constructs a AthenaRequest object for Athena \a action.
  */
 AthenaRequest::AthenaRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new AthenaRequestPrivate(action, this))
+    : d_ptr(new AthenaRequestPrivate(action, this))
 {
 
 }
@@ -85,7 +85,8 @@ AthenaRequest::AthenaRequest(const Action action)
  * Constructs a copy of \a other.
  */
 AthenaRequest::AthenaRequest(const AthenaRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new AthenaRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new AthenaRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -108,7 +109,7 @@ AthenaRequest& AthenaRequest::operator=(const AthenaRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from AthenaRequestPrivate.
  */
-AthenaRequest::AthenaRequest(AthenaRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+AthenaRequest::AthenaRequest(AthenaRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -277,7 +278,7 @@ QNetworkRequest AthenaRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 AthenaRequestPrivate::AthenaRequestPrivate(const AthenaRequest::Action action, AthenaRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -292,8 +293,8 @@ AthenaRequestPrivate::AthenaRequestPrivate(const AthenaRequest::Action action, A
  */
 AthenaRequestPrivate::AthenaRequestPrivate(const AthenaRequestPrivate &other,
                                      AthenaRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

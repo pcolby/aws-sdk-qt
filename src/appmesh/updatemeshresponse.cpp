@@ -73,8 +73,7 @@ UpdateMeshResponse::UpdateMeshResponse(
  */
 const UpdateMeshRequest * UpdateMeshResponse::request() const
 {
-    Q_D(const UpdateMeshResponse);
-    return static_cast<const UpdateMeshRequest *>(d->request);
+    return static_cast<const UpdateMeshRequest *>(AppMeshResponse::request());
 }
 
 /*!

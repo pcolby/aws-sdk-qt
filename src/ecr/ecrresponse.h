@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    EcrResponsePrivate * const d_ptr; ///< Internal d-pointer.
     EcrResponse(EcrResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -60,8 +60,7 @@ PutIntegrationResponseResponse::PutIntegrationResponseResponse(
  */
 const PutIntegrationResponseRequest * PutIntegrationResponseResponse::request() const
 {
-    Q_D(const PutIntegrationResponseResponse);
-    return static_cast<const PutIntegrationResponseRequest *>(d->request);
+    return static_cast<const PutIntegrationResponseRequest *>(APIGatewayResponse::request());
 }
 
 /*!

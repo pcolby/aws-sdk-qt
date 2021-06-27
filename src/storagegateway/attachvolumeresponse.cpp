@@ -124,8 +124,7 @@ AttachVolumeResponse::AttachVolumeResponse(
  */
 const AttachVolumeRequest * AttachVolumeResponse::request() const
 {
-    Q_D(const AttachVolumeResponse);
-    return static_cast<const AttachVolumeRequest *>(d->request);
+    return static_cast<const AttachVolumeRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

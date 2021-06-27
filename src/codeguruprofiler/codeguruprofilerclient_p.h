@@ -20,19 +20,20 @@
 #ifndef QTAWS_CODEGURUPROFILERCLIENT_P_H
 #define QTAWS_CODEGURUPROFILERCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace CodeGuruProfiler {
 
 class CodeGuruProfilerClient;
 
-class CodeGuruProfilerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class CodeGuruProfilerClientPrivate {
 
 public:
     CodeGuruProfilerClientPrivate(CodeGuruProfilerClient * const q);
+
+protected:
+    CodeGuruProfilerClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CodeGuruProfilerClient)

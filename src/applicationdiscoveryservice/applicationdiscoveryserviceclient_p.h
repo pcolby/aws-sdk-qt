@@ -20,19 +20,20 @@
 #ifndef QTAWS_APPLICATIONDISCOVERYSERVICECLIENT_P_H
 #define QTAWS_APPLICATIONDISCOVERYSERVICECLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace ApplicationDiscoveryService {
 
 class ApplicationDiscoveryServiceClient;
 
-class ApplicationDiscoveryServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ApplicationDiscoveryServiceClientPrivate {
 
 public:
     ApplicationDiscoveryServiceClientPrivate(ApplicationDiscoveryServiceClient * const q);
+
+protected:
+    ApplicationDiscoveryServiceClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ApplicationDiscoveryServiceClient)

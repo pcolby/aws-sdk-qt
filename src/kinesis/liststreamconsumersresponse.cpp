@@ -58,8 +58,7 @@ ListStreamConsumersResponse::ListStreamConsumersResponse(
  */
 const ListStreamConsumersRequest * ListStreamConsumersResponse::request() const
 {
-    Q_D(const ListStreamConsumersResponse);
-    return static_cast<const ListStreamConsumersRequest *>(d->request);
+    return static_cast<const ListStreamConsumersRequest *>(KinesisResponse::request());
 }
 
 /*!

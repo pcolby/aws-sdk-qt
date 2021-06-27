@@ -159,8 +159,7 @@ DescribeConfigurationsResponse::DescribeConfigurationsResponse(
  */
 const DescribeConfigurationsRequest * DescribeConfigurationsResponse::request() const
 {
-    Q_D(const DescribeConfigurationsResponse);
-    return static_cast<const DescribeConfigurationsRequest *>(d->request);
+    return static_cast<const DescribeConfigurationsRequest *>(ApplicationDiscoveryServiceResponse::request());
 }
 
 /*!

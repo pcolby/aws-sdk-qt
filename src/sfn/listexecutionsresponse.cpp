@@ -74,8 +74,7 @@ ListExecutionsResponse::ListExecutionsResponse(
  */
 const ListExecutionsRequest * ListExecutionsResponse::request() const
 {
-    Q_D(const ListExecutionsResponse);
-    return static_cast<const ListExecutionsRequest *>(d->request);
+    return static_cast<const ListExecutionsRequest *>(SfnResponse::request());
 }
 
 /*!

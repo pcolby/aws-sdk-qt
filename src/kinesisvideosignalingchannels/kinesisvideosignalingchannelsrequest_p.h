@@ -20,15 +20,12 @@
 #ifndef QTAWS_KINESISVIDEOSIGNALINGCHANNELSREQUEST_P_H
 #define QTAWS_KINESISVIDEOSIGNALINGCHANNELSREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "kinesisvideosignalingchannelsrequest.h"
-
 namespace QtAws {
 namespace KinesisVideoSignalingChannels {
 
 class KinesisVideoSignalingChannelsRequest;
 
-class KinesisVideoSignalingChannelsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class KinesisVideoSignalingChannelsRequestPrivate {
 
 public:
     KinesisVideoSignalingChannelsRequest::Action action; ///< KinesisVideoSignalingChannels action to be performed.
@@ -39,6 +36,9 @@ public:
     KinesisVideoSignalingChannelsRequestPrivate(const KinesisVideoSignalingChannelsRequestPrivate &other, KinesisVideoSignalingChannelsRequest * const q);
 
     static QString toString(const KinesisVideoSignalingChannelsRequest::Action &action);
+
+protected:
+    KinesisVideoSignalingChannelsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(KinesisVideoSignalingChannelsRequest)

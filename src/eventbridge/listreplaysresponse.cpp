@@ -78,8 +78,7 @@ ListReplaysResponse::ListReplaysResponse(
  */
 const ListReplaysRequest * ListReplaysResponse::request() const
 {
-    Q_D(const ListReplaysResponse);
-    return static_cast<const ListReplaysRequest *>(d->request);
+    return static_cast<const ListReplaysRequest *>(EventBridgeResponse::request());
 }
 
 /*!

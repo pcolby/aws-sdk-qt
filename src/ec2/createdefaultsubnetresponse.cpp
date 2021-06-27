@@ -87,8 +87,7 @@ CreateDefaultSubnetResponse::CreateDefaultSubnetResponse(
  */
 const CreateDefaultSubnetRequest * CreateDefaultSubnetResponse::request() const
 {
-    Q_D(const CreateDefaultSubnetResponse);
-    return static_cast<const CreateDefaultSubnetRequest *>(d->request);
+    return static_cast<const CreateDefaultSubnetRequest *>(Ec2Response::request());
 }
 
 /*!

@@ -58,6 +58,12 @@ public slots:
     ListGroupsResponse * listGroups(const ListGroupsRequest &request);
     ListUsersResponse * listUsers(const ListUsersRequest &request);
 
+protected:
+    /// @cond internal
+    IdentityStoreClientPrivate * const d_ptr; ///< Internal d-pointer.
+    IdentityStoreClient(IdentityStoreClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(IdentityStoreClient)
     Q_DISABLE_COPY(IdentityStoreClient)

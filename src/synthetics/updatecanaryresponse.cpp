@@ -71,8 +71,7 @@ UpdateCanaryResponse::UpdateCanaryResponse(
  */
 const UpdateCanaryRequest * UpdateCanaryResponse::request() const
 {
-    Q_D(const UpdateCanaryResponse);
-    return static_cast<const UpdateCanaryRequest *>(d->request);
+    return static_cast<const UpdateCanaryRequest *>(SyntheticsResponse::request());
 }
 
 /*!

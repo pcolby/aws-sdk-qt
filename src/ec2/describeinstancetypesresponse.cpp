@@ -87,8 +87,7 @@ DescribeInstanceTypesResponse::DescribeInstanceTypesResponse(
  */
 const DescribeInstanceTypesRequest * DescribeInstanceTypesResponse::request() const
 {
-    Q_D(const DescribeInstanceTypesResponse);
-    return static_cast<const DescribeInstanceTypesRequest *>(d->request);
+    return static_cast<const DescribeInstanceTypesRequest *>(Ec2Response::request());
 }
 
 /*!

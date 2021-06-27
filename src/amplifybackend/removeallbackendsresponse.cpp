@@ -56,8 +56,7 @@ RemoveAllBackendsResponse::RemoveAllBackendsResponse(
  */
 const RemoveAllBackendsRequest * RemoveAllBackendsResponse::request() const
 {
-    Q_D(const RemoveAllBackendsResponse);
-    return static_cast<const RemoveAllBackendsRequest *>(d->request);
+    return static_cast<const RemoveAllBackendsRequest *>(AmplifyBackendResponse::request());
 }
 
 /*!

@@ -241,6 +241,12 @@ public slots:
     StartMigrationResponse * startMigration(const StartMigrationRequest &request);
     TestFailoverResponse * testFailover(const TestFailoverRequest &request);
 
+protected:
+    /// @cond internal
+    ElastiCacheClientPrivate * const d_ptr; ///< Internal d-pointer.
+    ElastiCacheClient(ElastiCacheClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(ElastiCacheClient)
     Q_DISABLE_COPY(ElastiCacheClient)

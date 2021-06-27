@@ -20,14 +20,12 @@
 #ifndef QTAWS_IOT1CLICKPROJECTSRESPONSE_P_H
 #define QTAWS_IOT1CLICKPROJECTSRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace IoT1ClickProjects {
 
 class IoT1ClickProjectsResponse;
 
-class IoT1ClickProjectsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class IoT1ClickProjectsResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    IoT1ClickProjectsResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoT1ClickProjectsResponse)

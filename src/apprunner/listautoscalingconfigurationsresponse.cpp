@@ -86,8 +86,7 @@ ListAutoScalingConfigurationsResponse::ListAutoScalingConfigurationsResponse(
  */
 const ListAutoScalingConfigurationsRequest * ListAutoScalingConfigurationsResponse::request() const
 {
-    Q_D(const ListAutoScalingConfigurationsResponse);
-    return static_cast<const ListAutoScalingConfigurationsRequest *>(d->request);
+    return static_cast<const ListAutoScalingConfigurationsRequest *>(AppRunnerResponse::request());
 }
 
 /*!

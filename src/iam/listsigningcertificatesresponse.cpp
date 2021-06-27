@@ -62,8 +62,7 @@ ListSigningCertificatesResponse::ListSigningCertificatesResponse(
  */
 const ListSigningCertificatesRequest * ListSigningCertificatesResponse::request() const
 {
-    Q_D(const ListSigningCertificatesResponse);
-    return static_cast<const ListSigningCertificatesRequest *>(d->request);
+    return static_cast<const ListSigningCertificatesRequest *>(IamResponse::request());
 }
 
 /*!

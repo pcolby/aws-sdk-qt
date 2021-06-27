@@ -56,8 +56,7 @@ DeleteSegmentResponse::DeleteSegmentResponse(
  */
 const DeleteSegmentRequest * DeleteSegmentResponse::request() const
 {
-    Q_D(const DeleteSegmentResponse);
-    return static_cast<const DeleteSegmentRequest *>(d->request);
+    return static_cast<const DeleteSegmentRequest *>(PinpointResponse::request());
 }
 
 /*!

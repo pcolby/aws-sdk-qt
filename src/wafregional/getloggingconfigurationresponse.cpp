@@ -78,8 +78,7 @@ GetLoggingConfigurationResponse::GetLoggingConfigurationResponse(
  */
 const GetLoggingConfigurationRequest * GetLoggingConfigurationResponse::request() const
 {
-    Q_D(const GetLoggingConfigurationResponse);
-    return static_cast<const GetLoggingConfigurationRequest *>(d->request);
+    return static_cast<const GetLoggingConfigurationRequest *>(WAFRegionalResponse::request());
 }
 
 /*!

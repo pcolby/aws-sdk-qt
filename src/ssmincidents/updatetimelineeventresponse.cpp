@@ -65,8 +65,7 @@ UpdateTimelineEventResponse::UpdateTimelineEventResponse(
  */
 const UpdateTimelineEventRequest * UpdateTimelineEventResponse::request() const
 {
-    Q_D(const UpdateTimelineEventResponse);
-    return static_cast<const UpdateTimelineEventRequest *>(d->request);
+    return static_cast<const UpdateTimelineEventRequest *>(SSMIncidentsResponse::request());
 }
 
 /*!

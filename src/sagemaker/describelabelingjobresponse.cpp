@@ -70,8 +70,7 @@ DescribeLabelingJobResponse::DescribeLabelingJobResponse(
  */
 const DescribeLabelingJobRequest * DescribeLabelingJobResponse::request() const
 {
-    Q_D(const DescribeLabelingJobResponse);
-    return static_cast<const DescribeLabelingJobRequest *>(d->request);
+    return static_cast<const DescribeLabelingJobRequest *>(SageMakerResponse::request());
 }
 
 /*!

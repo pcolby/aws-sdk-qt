@@ -55,8 +55,7 @@ DeleteQualificationTypeResponse::DeleteQualificationTypeResponse(
  */
 const DeleteQualificationTypeRequest * DeleteQualificationTypeResponse::request() const
 {
-    Q_D(const DeleteQualificationTypeResponse);
-    return static_cast<const DeleteQualificationTypeRequest *>(d->request);
+    return static_cast<const DeleteQualificationTypeRequest *>(MTurkResponse::request());
 }
 
 /*!

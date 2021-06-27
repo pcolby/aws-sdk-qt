@@ -58,8 +58,7 @@ StartProjectSessionResponse::StartProjectSessionResponse(
  */
 const StartProjectSessionRequest * StartProjectSessionResponse::request() const
 {
-    Q_D(const StartProjectSessionResponse);
-    return static_cast<const StartProjectSessionRequest *>(d->request);
+    return static_cast<const StartProjectSessionRequest *>(GlueDataBrewResponse::request());
 }
 
 /*!

@@ -306,16 +306,16 @@ StorageGatewayClient::StorageGatewayClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new StorageGatewayClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2013-06-30"),
+    QStringLiteral("storagegateway"),
+    QStringLiteral("AWS Storage Gateway"),
+    QStringLiteral("storagegateway"),
+    parent), d_ptr(new StorageGatewayClientPrivate(this))
 {
-    Q_D(StorageGatewayClient);
-    d->apiVersion = QStringLiteral("2013-06-30");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("storagegateway");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Storage Gateway");
-    d->serviceName = QStringLiteral("storagegateway");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -334,16 +334,16 @@ StorageGatewayClient::StorageGatewayClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new StorageGatewayClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2013-06-30"),
+    QStringLiteral("storagegateway"),
+    QStringLiteral("AWS Storage Gateway"),
+    QStringLiteral("storagegateway"),
+    parent), d_ptr(new StorageGatewayClientPrivate(this))
 {
-    Q_D(StorageGatewayClient);
-    d->apiVersion = QStringLiteral("2013-06-30");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("storagegateway");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Storage Gateway");
-    d->serviceName = QStringLiteral("storagegateway");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -2155,10 +2155,9 @@ UpdateVTLDeviceTypeResponse * StorageGatewayClient::updateVTLDeviceType(const Up
 /*!
  * Constructs a StorageGatewayClientPrivate object with public implementation \a q.
  */
-StorageGatewayClientPrivate::StorageGatewayClientPrivate(StorageGatewayClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+StorageGatewayClientPrivate::StorageGatewayClientPrivate(StorageGatewayClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace StorageGateway

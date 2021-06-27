@@ -62,8 +62,7 @@ GetGatewayResponse::GetGatewayResponse(
  */
 const GetGatewayRequest * GetGatewayResponse::request() const
 {
-    Q_D(const GetGatewayResponse);
-    return static_cast<const GetGatewayRequest *>(d->request);
+    return static_cast<const GetGatewayRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

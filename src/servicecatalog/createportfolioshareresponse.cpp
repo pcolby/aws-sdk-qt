@@ -61,8 +61,7 @@ CreatePortfolioShareResponse::CreatePortfolioShareResponse(
  */
 const CreatePortfolioShareRequest * CreatePortfolioShareResponse::request() const
 {
-    Q_D(const CreatePortfolioShareResponse);
-    return static_cast<const CreatePortfolioShareRequest *>(d->request);
+    return static_cast<const CreatePortfolioShareRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

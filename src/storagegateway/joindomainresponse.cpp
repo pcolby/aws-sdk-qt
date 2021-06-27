@@ -124,8 +124,7 @@ JoinDomainResponse::JoinDomainResponse(
  */
 const JoinDomainRequest * JoinDomainResponse::request() const
 {
-    Q_D(const JoinDomainResponse);
-    return static_cast<const JoinDomainRequest *>(d->request);
+    return static_cast<const JoinDomainRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

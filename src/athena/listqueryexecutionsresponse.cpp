@@ -73,8 +73,7 @@ ListQueryExecutionsResponse::ListQueryExecutionsResponse(
  */
 const ListQueryExecutionsRequest * ListQueryExecutionsResponse::request() const
 {
-    Q_D(const ListQueryExecutionsResponse);
-    return static_cast<const ListQueryExecutionsRequest *>(d->request);
+    return static_cast<const ListQueryExecutionsRequest *>(AthenaResponse::request());
 }
 
 /*!

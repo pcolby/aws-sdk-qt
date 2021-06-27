@@ -58,8 +58,7 @@ UpdateCrawlerResponse::UpdateCrawlerResponse(
  */
 const UpdateCrawlerRequest * UpdateCrawlerResponse::request() const
 {
-    Q_D(const UpdateCrawlerResponse);
-    return static_cast<const UpdateCrawlerRequest *>(d->request);
+    return static_cast<const UpdateCrawlerRequest *>(GlueResponse::request());
 }
 
 /*!

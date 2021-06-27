@@ -87,8 +87,7 @@ CreateNatGatewayResponse::CreateNatGatewayResponse(
  */
 const CreateNatGatewayRequest * CreateNatGatewayResponse::request() const
 {
-    Q_D(const CreateNatGatewayResponse);
-    return static_cast<const CreateNatGatewayRequest *>(d->request);
+    return static_cast<const CreateNatGatewayRequest *>(Ec2Response::request());
 }
 
 /*!

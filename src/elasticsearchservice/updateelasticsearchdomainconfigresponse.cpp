@@ -72,8 +72,7 @@ UpdateElasticsearchDomainConfigResponse::UpdateElasticsearchDomainConfigResponse
  */
 const UpdateElasticsearchDomainConfigRequest * UpdateElasticsearchDomainConfigResponse::request() const
 {
-    Q_D(const UpdateElasticsearchDomainConfigResponse);
-    return static_cast<const UpdateElasticsearchDomainConfigRequest *>(d->request);
+    return static_cast<const UpdateElasticsearchDomainConfigRequest *>(ElasticsearchServiceResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ DeleteFleetResponse::DeleteFleetResponse(
  */
 const DeleteFleetRequest * DeleteFleetResponse::request() const
 {
-    Q_D(const DeleteFleetResponse);
-    return static_cast<const DeleteFleetRequest *>(d->request);
+    return static_cast<const DeleteFleetRequest *>(RoboMakerResponse::request());
 }
 
 /*!

@@ -70,8 +70,7 @@ ListDeviceFleetsResponse::ListDeviceFleetsResponse(
  */
 const ListDeviceFleetsRequest * ListDeviceFleetsResponse::request() const
 {
-    Q_D(const ListDeviceFleetsResponse);
-    return static_cast<const ListDeviceFleetsRequest *>(d->request);
+    return static_cast<const ListDeviceFleetsRequest *>(SageMakerResponse::request());
 }
 
 /*!

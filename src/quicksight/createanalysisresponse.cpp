@@ -60,8 +60,7 @@ CreateAnalysisResponse::CreateAnalysisResponse(
  */
 const CreateAnalysisRequest * CreateAnalysisResponse::request() const
 {
-    Q_D(const CreateAnalysisResponse);
-    return static_cast<const CreateAnalysisRequest *>(d->request);
+    return static_cast<const CreateAnalysisRequest *>(QuickSightResponse::request());
 }
 
 /*!

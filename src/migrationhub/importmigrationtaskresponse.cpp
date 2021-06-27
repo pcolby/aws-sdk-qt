@@ -62,8 +62,7 @@ ImportMigrationTaskResponse::ImportMigrationTaskResponse(
  */
 const ImportMigrationTaskRequest * ImportMigrationTaskResponse::request() const
 {
-    Q_D(const ImportMigrationTaskResponse);
-    return static_cast<const ImportMigrationTaskRequest *>(d->request);
+    return static_cast<const ImportMigrationTaskRequest *>(MigrationHubResponse::request());
 }
 
 /*!

@@ -78,8 +78,7 @@ DisassociateWebACLResponse::DisassociateWebACLResponse(
  */
 const DisassociateWebACLRequest * DisassociateWebACLResponse::request() const
 {
-    Q_D(const DisassociateWebACLResponse);
-    return static_cast<const DisassociateWebACLRequest *>(d->request);
+    return static_cast<const DisassociateWebACLRequest *>(WAFRegionalResponse::request());
 }
 
 /*!

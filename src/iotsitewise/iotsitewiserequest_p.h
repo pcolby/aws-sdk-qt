@@ -20,15 +20,12 @@
 #ifndef QTAWS_IOTSITEWISEREQUEST_P_H
 #define QTAWS_IOTSITEWISEREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "iotsitewiserequest.h"
-
 namespace QtAws {
 namespace IoTSiteWise {
 
 class IoTSiteWiseRequest;
 
-class IoTSiteWiseRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class IoTSiteWiseRequestPrivate {
 
 public:
     IoTSiteWiseRequest::Action action; ///< IoTSiteWise action to be performed.
@@ -39,6 +36,9 @@ public:
     IoTSiteWiseRequestPrivate(const IoTSiteWiseRequestPrivate &other, IoTSiteWiseRequest * const q);
 
     static QString toString(const IoTSiteWiseRequest::Action &action);
+
+protected:
+    IoTSiteWiseRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoTSiteWiseRequest)

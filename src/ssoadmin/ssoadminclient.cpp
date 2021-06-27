@@ -121,16 +121,16 @@ SSOAdminClient::SSOAdminClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SSOAdminClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-07-20"),
+    QStringLiteral("sso"),
+    QStringLiteral("AWS Single Sign-On Admin"),
+    QStringLiteral("sso"),
+    parent), d_ptr(new SSOAdminClientPrivate(this))
 {
-    Q_D(SSOAdminClient);
-    d->apiVersion = QStringLiteral("2020-07-20");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("sso");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Single Sign-On Admin");
-    d->serviceName = QStringLiteral("sso");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -149,16 +149,16 @@ SSOAdminClient::SSOAdminClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SSOAdminClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-07-20"),
+    QStringLiteral("sso"),
+    QStringLiteral("AWS Single Sign-On Admin"),
+    QStringLiteral("sso"),
+    parent), d_ptr(new SSOAdminClientPrivate(this))
 {
-    Q_D(SSOAdminClient);
-    d->apiVersion = QStringLiteral("2020-07-20");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("sso");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Single Sign-On Admin");
-    d->serviceName = QStringLiteral("sso");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -614,10 +614,9 @@ UpdatePermissionSetResponse * SSOAdminClient::updatePermissionSet(const UpdatePe
 /*!
  * Constructs a SSOAdminClientPrivate object with public implementation \a q.
  */
-SSOAdminClientPrivate::SSOAdminClientPrivate(SSOAdminClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+SSOAdminClientPrivate::SSOAdminClientPrivate(SSOAdminClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace SSOAdmin

@@ -82,8 +82,7 @@ StopThingRegistrationTaskResponse::StopThingRegistrationTaskResponse(
  */
 const StopThingRegistrationTaskRequest * StopThingRegistrationTaskResponse::request() const
 {
-    Q_D(const StopThingRegistrationTaskResponse);
-    return static_cast<const StopThingRegistrationTaskRequest *>(d->request);
+    return static_cast<const StopThingRegistrationTaskRequest *>(IoTResponse::request());
 }
 
 /*!

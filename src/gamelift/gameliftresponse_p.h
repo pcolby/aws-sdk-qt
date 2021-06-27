@@ -20,14 +20,12 @@
 #ifndef QTAWS_GAMELIFTRESPONSE_P_H
 #define QTAWS_GAMELIFTRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace GameLift {
 
 class GameLiftResponse;
 
-class GameLiftResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class GameLiftResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    GameLiftResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(GameLiftResponse)

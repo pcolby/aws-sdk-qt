@@ -62,8 +62,7 @@ UpdateBusinessReportScheduleResponse::UpdateBusinessReportScheduleResponse(
  */
 const UpdateBusinessReportScheduleRequest * UpdateBusinessReportScheduleResponse::request() const
 {
-    Q_D(const UpdateBusinessReportScheduleResponse);
-    return static_cast<const UpdateBusinessReportScheduleRequest *>(d->request);
+    return static_cast<const UpdateBusinessReportScheduleRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

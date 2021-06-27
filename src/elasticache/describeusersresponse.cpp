@@ -69,8 +69,7 @@ DescribeUsersResponse::DescribeUsersResponse(
  */
 const DescribeUsersRequest * DescribeUsersResponse::request() const
 {
-    Q_D(const DescribeUsersResponse);
-    return static_cast<const DescribeUsersRequest *>(d->request);
+    return static_cast<const DescribeUsersRequest *>(ElastiCacheResponse::request());
 }
 
 /*!

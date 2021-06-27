@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    EMRContainersResponsePrivate * const d_ptr; ///< Internal d-pointer.
     EMRContainersResponse(EMRContainersResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

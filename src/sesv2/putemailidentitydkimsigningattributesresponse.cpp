@@ -88,8 +88,7 @@ PutEmailIdentityDkimSigningAttributesResponse::PutEmailIdentityDkimSigningAttrib
  */
 const PutEmailIdentityDkimSigningAttributesRequest * PutEmailIdentityDkimSigningAttributesResponse::request() const
 {
-    Q_D(const PutEmailIdentityDkimSigningAttributesResponse);
-    return static_cast<const PutEmailIdentityDkimSigningAttributesRequest *>(d->request);
+    return static_cast<const PutEmailIdentityDkimSigningAttributesRequest *>(Sesv2Response::request());
 }
 
 /*!

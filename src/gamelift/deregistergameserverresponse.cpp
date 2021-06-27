@@ -115,8 +115,7 @@ DeregisterGameServerResponse::DeregisterGameServerResponse(
  */
 const DeregisterGameServerRequest * DeregisterGameServerResponse::request() const
 {
-    Q_D(const DeregisterGameServerResponse);
-    return static_cast<const DeregisterGameServerRequest *>(d->request);
+    return static_cast<const DeregisterGameServerRequest *>(GameLiftResponse::request());
 }
 
 /*!

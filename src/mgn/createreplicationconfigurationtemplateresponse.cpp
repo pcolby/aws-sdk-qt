@@ -56,8 +56,7 @@ CreateReplicationConfigurationTemplateResponse::CreateReplicationConfigurationTe
  */
 const CreateReplicationConfigurationTemplateRequest * CreateReplicationConfigurationTemplateResponse::request() const
 {
-    Q_D(const CreateReplicationConfigurationTemplateResponse);
-    return static_cast<const CreateReplicationConfigurationTemplateRequest *>(d->request);
+    return static_cast<const CreateReplicationConfigurationTemplateRequest *>(mgnResponse::request());
 }
 
 /*!

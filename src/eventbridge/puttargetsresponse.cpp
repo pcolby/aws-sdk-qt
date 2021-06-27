@@ -78,8 +78,7 @@ PutTargetsResponse::PutTargetsResponse(
  */
 const PutTargetsRequest * PutTargetsResponse::request() const
 {
-    Q_D(const PutTargetsResponse);
-    return static_cast<const PutTargetsRequest *>(d->request);
+    return static_cast<const PutTargetsRequest *>(EventBridgeResponse::request());
 }
 
 /*!

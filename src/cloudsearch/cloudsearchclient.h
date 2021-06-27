@@ -125,6 +125,12 @@ public slots:
     UpdateScalingParametersResponse * updateScalingParameters(const UpdateScalingParametersRequest &request);
     UpdateServiceAccessPoliciesResponse * updateServiceAccessPolicies(const UpdateServiceAccessPoliciesRequest &request);
 
+protected:
+    /// @cond internal
+    CloudSearchClientPrivate * const d_ptr; ///< Internal d-pointer.
+    CloudSearchClient(CloudSearchClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(CloudSearchClient)
     Q_DISABLE_COPY(CloudSearchClient)

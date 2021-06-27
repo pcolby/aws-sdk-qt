@@ -62,8 +62,7 @@ UpdateSigningCertificateResponse::UpdateSigningCertificateResponse(
  */
 const UpdateSigningCertificateRequest * UpdateSigningCertificateResponse::request() const
 {
-    Q_D(const UpdateSigningCertificateResponse);
-    return static_cast<const UpdateSigningCertificateRequest *>(d->request);
+    return static_cast<const UpdateSigningCertificateRequest *>(IamResponse::request());
 }
 
 /*!

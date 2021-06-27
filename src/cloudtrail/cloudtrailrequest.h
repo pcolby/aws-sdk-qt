@@ -74,6 +74,7 @@ public:
 
 protected:
     /// @cond internal
+    CloudTrailRequestPrivate * const d_ptr; ///< Internal d-pointer.
     CloudTrailRequest(CloudTrailRequestPrivate * const d);
     /// @endcond
 

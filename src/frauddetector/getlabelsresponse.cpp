@@ -58,8 +58,7 @@ GetLabelsResponse::GetLabelsResponse(
  */
 const GetLabelsRequest * GetLabelsResponse::request() const
 {
-    Q_D(const GetLabelsResponse);
-    return static_cast<const GetLabelsRequest *>(d->request);
+    return static_cast<const GetLabelsRequest *>(FraudDetectorResponse::request());
 }
 
 /*!

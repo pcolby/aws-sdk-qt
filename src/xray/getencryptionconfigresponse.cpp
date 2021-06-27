@@ -56,8 +56,7 @@ GetEncryptionConfigResponse::GetEncryptionConfigResponse(
  */
 const GetEncryptionConfigRequest * GetEncryptionConfigResponse::request() const
 {
-    Q_D(const GetEncryptionConfigResponse);
-    return static_cast<const GetEncryptionConfigRequest *>(d->request);
+    return static_cast<const GetEncryptionConfigRequest *>(XRayResponse::request());
 }
 
 /*!

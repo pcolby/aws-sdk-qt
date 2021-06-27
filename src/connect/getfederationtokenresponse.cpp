@@ -79,8 +79,7 @@ GetFederationTokenResponse::GetFederationTokenResponse(
  */
 const GetFederationTokenRequest * GetFederationTokenResponse::request() const
 {
-    Q_D(const GetFederationTokenResponse);
-    return static_cast<const GetFederationTokenRequest *>(d->request);
+    return static_cast<const GetFederationTokenRequest *>(ConnectResponse::request());
 }
 
 /*!

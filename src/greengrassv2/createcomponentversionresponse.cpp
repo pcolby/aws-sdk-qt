@@ -72,8 +72,7 @@ CreateComponentVersionResponse::CreateComponentVersionResponse(
  */
 const CreateComponentVersionRequest * CreateComponentVersionResponse::request() const
 {
-    Q_D(const CreateComponentVersionResponse);
-    return static_cast<const CreateComponentVersionRequest *>(d->request);
+    return static_cast<const CreateComponentVersionRequest *>(GreengrassV2Response::request());
 }
 
 /*!

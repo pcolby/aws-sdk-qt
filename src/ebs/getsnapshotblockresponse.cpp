@@ -77,8 +77,7 @@ GetSnapshotBlockResponse::GetSnapshotBlockResponse(
  */
 const GetSnapshotBlockRequest * GetSnapshotBlockResponse::request() const
 {
-    Q_D(const GetSnapshotBlockResponse);
-    return static_cast<const GetSnapshotBlockRequest *>(d->request);
+    return static_cast<const GetSnapshotBlockRequest *>(EbsResponse::request());
 }
 
 /*!

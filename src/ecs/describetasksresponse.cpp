@@ -72,8 +72,7 @@ DescribeTasksResponse::DescribeTasksResponse(
  */
 const DescribeTasksRequest * DescribeTasksResponse::request() const
 {
-    Q_D(const DescribeTasksResponse);
-    return static_cast<const DescribeTasksRequest *>(d->request);
+    return static_cast<const DescribeTasksRequest *>(EcsResponse::request());
 }
 
 /*!

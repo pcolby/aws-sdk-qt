@@ -56,8 +56,7 @@ CreateFaqResponse::CreateFaqResponse(
  */
 const CreateFaqRequest * CreateFaqResponse::request() const
 {
-    Q_D(const CreateFaqResponse);
-    return static_cast<const CreateFaqRequest *>(d->request);
+    return static_cast<const CreateFaqRequest *>(kendraResponse::request());
 }
 
 /*!

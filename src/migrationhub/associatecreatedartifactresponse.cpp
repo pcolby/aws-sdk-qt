@@ -62,8 +62,7 @@ AssociateCreatedArtifactResponse::AssociateCreatedArtifactResponse(
  */
 const AssociateCreatedArtifactRequest * AssociateCreatedArtifactResponse::request() const
 {
-    Q_D(const AssociateCreatedArtifactResponse);
-    return static_cast<const AssociateCreatedArtifactRequest *>(d->request);
+    return static_cast<const AssociateCreatedArtifactRequest *>(MigrationHubResponse::request());
 }
 
 /*!

@@ -68,8 +68,7 @@ PutNotificationConfigurationResponse::PutNotificationConfigurationResponse(
  */
 const PutNotificationConfigurationRequest * PutNotificationConfigurationResponse::request() const
 {
-    Q_D(const PutNotificationConfigurationResponse);
-    return static_cast<const PutNotificationConfigurationRequest *>(d->request);
+    return static_cast<const PutNotificationConfigurationRequest *>(AutoScalingResponse::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ BatchDeleteTableRowsResponse::BatchDeleteTableRowsResponse(
  */
 const BatchDeleteTableRowsRequest * BatchDeleteTableRowsResponse::request() const
 {
-    Q_D(const BatchDeleteTableRowsResponse);
-    return static_cast<const BatchDeleteTableRowsRequest *>(d->request);
+    return static_cast<const BatchDeleteTableRowsRequest *>(HoneycodeResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ DeleteCampaignResponse::DeleteCampaignResponse(
  */
 const DeleteCampaignRequest * DeleteCampaignResponse::request() const
 {
-    Q_D(const DeleteCampaignResponse);
-    return static_cast<const DeleteCampaignRequest *>(d->request);
+    return static_cast<const DeleteCampaignRequest *>(PinpointResponse::request());
 }
 
 /*!

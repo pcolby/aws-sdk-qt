@@ -112,8 +112,7 @@ MeterUsageResponse::MeterUsageResponse(
  */
 const MeterUsageRequest * MeterUsageResponse::request() const
 {
-    Q_D(const MeterUsageResponse);
-    return static_cast<const MeterUsageRequest *>(d->request);
+    return static_cast<const MeterUsageRequest *>(MarketplaceMeteringResponse::request());
 }
 
 /*!

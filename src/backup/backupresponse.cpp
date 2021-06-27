@@ -37,7 +37,7 @@ namespace Backup {
  * Constructs a BackupResponse object with parent \a parent.
  */
 BackupResponse::BackupResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new BackupResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new BackupResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ BackupResponse::BackupResponse(QObject * const parent)
  * implementation that inherits from BackupResponsePrivate.
  */
 BackupResponse::BackupResponse(BackupResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void BackupResponse::parseFailure(QIODevice &response)
  * Constructs a BackupResponsePrivate object with public implementation \a q.
  */
 BackupResponsePrivate::BackupResponsePrivate(
-    BackupResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    BackupResponse * const q) : q_ptr(q)
 {
 
 }

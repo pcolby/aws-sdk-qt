@@ -68,7 +68,7 @@ namespace IoTEvents {
  * Constructs a IoTEventsRequest object for IoTEvents \a action.
  */
 IoTEventsRequest::IoTEventsRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new IoTEventsRequestPrivate(action, this))
+    : d_ptr(new IoTEventsRequestPrivate(action, this))
 {
 
 }
@@ -77,7 +77,8 @@ IoTEventsRequest::IoTEventsRequest(const Action action)
  * Constructs a copy of \a other.
  */
 IoTEventsRequest::IoTEventsRequest(const IoTEventsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new IoTEventsRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new IoTEventsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -100,7 +101,7 @@ IoTEventsRequest& IoTEventsRequest::operator=(const IoTEventsRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from IoTEventsRequestPrivate.
  */
-IoTEventsRequest::IoTEventsRequest(IoTEventsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+IoTEventsRequest::IoTEventsRequest(IoTEventsRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -269,7 +270,7 @@ QNetworkRequest IoTEventsRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 IoTEventsRequestPrivate::IoTEventsRequestPrivate(const IoTEventsRequest::Action action, IoTEventsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -284,8 +285,8 @@ IoTEventsRequestPrivate::IoTEventsRequestPrivate(const IoTEventsRequest::Action 
  */
 IoTEventsRequestPrivate::IoTEventsRequestPrivate(const IoTEventsRequestPrivate &other,
                                      IoTEventsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

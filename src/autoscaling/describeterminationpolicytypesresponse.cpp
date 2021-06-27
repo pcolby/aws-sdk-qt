@@ -68,8 +68,7 @@ DescribeTerminationPolicyTypesResponse::DescribeTerminationPolicyTypesResponse(
  */
 const DescribeTerminationPolicyTypesRequest * DescribeTerminationPolicyTypesResponse::request() const
 {
-    Q_D(const DescribeTerminationPolicyTypesResponse);
-    return static_cast<const DescribeTerminationPolicyTypesRequest *>(d->request);
+    return static_cast<const DescribeTerminationPolicyTypesRequest *>(AutoScalingResponse::request());
 }
 
 /*!

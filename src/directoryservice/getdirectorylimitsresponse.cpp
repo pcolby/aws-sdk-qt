@@ -69,8 +69,7 @@ GetDirectoryLimitsResponse::GetDirectoryLimitsResponse(
  */
 const GetDirectoryLimitsRequest * GetDirectoryLimitsResponse::request() const
 {
-    Q_D(const GetDirectoryLimitsResponse);
-    return static_cast<const GetDirectoryLimitsRequest *>(d->request);
+    return static_cast<const GetDirectoryLimitsRequest *>(DirectoryServiceResponse::request());
 }
 
 /*!

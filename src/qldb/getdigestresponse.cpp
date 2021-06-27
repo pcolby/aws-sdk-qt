@@ -56,8 +56,7 @@ GetDigestResponse::GetDigestResponse(
  */
 const GetDigestRequest * GetDigestResponse::request() const
 {
-    Q_D(const GetDigestResponse);
-    return static_cast<const GetDigestRequest *>(d->request);
+    return static_cast<const GetDigestRequest *>(QldbResponse::request());
 }
 
 /*!

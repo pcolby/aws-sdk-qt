@@ -60,8 +60,7 @@ UpdateStageResponse::UpdateStageResponse(
  */
 const UpdateStageRequest * UpdateStageResponse::request() const
 {
-    Q_D(const UpdateStageResponse);
-    return static_cast<const UpdateStageRequest *>(d->request);
+    return static_cast<const UpdateStageRequest *>(APIGatewayResponse::request());
 }
 
 /*!

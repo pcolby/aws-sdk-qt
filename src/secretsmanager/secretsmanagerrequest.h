@@ -78,6 +78,7 @@ public:
 
 protected:
     /// @cond internal
+    SecretsManagerRequestPrivate * const d_ptr; ///< Internal d-pointer.
     SecretsManagerRequest(SecretsManagerRequestPrivate * const d);
     /// @endcond
 

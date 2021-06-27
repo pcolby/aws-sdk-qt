@@ -73,8 +73,7 @@ CreateThreatIntelSetResponse::CreateThreatIntelSetResponse(
  */
 const CreateThreatIntelSetRequest * CreateThreatIntelSetResponse::request() const
 {
-    Q_D(const CreateThreatIntelSetResponse);
-    return static_cast<const CreateThreatIntelSetRequest *>(d->request);
+    return static_cast<const CreateThreatIntelSetRequest *>(GuardDutyResponse::request());
 }
 
 /*!

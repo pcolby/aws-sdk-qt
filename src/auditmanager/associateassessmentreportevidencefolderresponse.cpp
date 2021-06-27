@@ -98,8 +98,7 @@ AssociateAssessmentReportEvidenceFolderResponse::AssociateAssessmentReportEviden
  */
 const AssociateAssessmentReportEvidenceFolderRequest * AssociateAssessmentReportEvidenceFolderResponse::request() const
 {
-    Q_D(const AssociateAssessmentReportEvidenceFolderResponse);
-    return static_cast<const AssociateAssessmentReportEvidenceFolderRequest *>(d->request);
+    return static_cast<const AssociateAssessmentReportEvidenceFolderRequest *>(AuditManagerResponse::request());
 }
 
 /*!

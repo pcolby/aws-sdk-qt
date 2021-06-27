@@ -87,8 +87,7 @@ GetHostReservationPurchasePreviewResponse::GetHostReservationPurchasePreviewResp
  */
 const GetHostReservationPurchasePreviewRequest * GetHostReservationPurchasePreviewResponse::request() const
 {
-    Q_D(const GetHostReservationPurchasePreviewResponse);
-    return static_cast<const GetHostReservationPurchasePreviewRequest *>(d->request);
+    return static_cast<const GetHostReservationPurchasePreviewRequest *>(Ec2Response::request());
 }
 
 /*!

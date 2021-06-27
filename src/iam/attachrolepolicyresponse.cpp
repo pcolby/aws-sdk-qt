@@ -62,8 +62,7 @@ AttachRolePolicyResponse::AttachRolePolicyResponse(
  */
 const AttachRolePolicyRequest * AttachRolePolicyResponse::request() const
 {
-    Q_D(const AttachRolePolicyResponse);
-    return static_cast<const AttachRolePolicyRequest *>(d->request);
+    return static_cast<const AttachRolePolicyRequest *>(IamResponse::request());
 }
 
 /*!

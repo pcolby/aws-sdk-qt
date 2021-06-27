@@ -154,8 +154,7 @@ RetireGrantResponse::RetireGrantResponse(
  */
 const RetireGrantRequest * RetireGrantResponse::request() const
 {
-    Q_D(const RetireGrantResponse);
-    return static_cast<const RetireGrantRequest *>(d->request);
+    return static_cast<const RetireGrantRequest *>(KmsResponse::request());
 }
 
 /*!

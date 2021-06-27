@@ -56,8 +56,7 @@ StartTestResponse::StartTestResponse(
  */
 const StartTestRequest * StartTestResponse::request() const
 {
-    Q_D(const StartTestResponse);
-    return static_cast<const StartTestRequest *>(d->request);
+    return static_cast<const StartTestRequest *>(mgnResponse::request());
 }
 
 /*!

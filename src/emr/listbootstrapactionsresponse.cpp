@@ -58,8 +58,7 @@ ListBootstrapActionsResponse::ListBootstrapActionsResponse(
  */
 const ListBootstrapActionsRequest * ListBootstrapActionsResponse::request() const
 {
-    Q_D(const ListBootstrapActionsResponse);
-    return static_cast<const ListBootstrapActionsRequest *>(d->request);
+    return static_cast<const ListBootstrapActionsRequest *>(EmrResponse::request());
 }
 
 /*!

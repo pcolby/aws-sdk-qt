@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    GlueDataBrewResponsePrivate * const d_ptr; ///< Internal d-pointer.
     GlueDataBrewResponse(GlueDataBrewResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

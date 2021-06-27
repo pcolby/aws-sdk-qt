@@ -56,8 +56,7 @@ GetOperationDetailResponse::GetOperationDetailResponse(
  */
 const GetOperationDetailRequest * GetOperationDetailResponse::request() const
 {
-    Q_D(const GetOperationDetailResponse);
-    return static_cast<const GetOperationDetailRequest *>(d->request);
+    return static_cast<const GetOperationDetailRequest *>(Route53DomainsResponse::request());
 }
 
 /*!

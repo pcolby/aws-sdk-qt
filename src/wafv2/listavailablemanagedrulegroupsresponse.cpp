@@ -126,8 +126,7 @@ ListAvailableManagedRuleGroupsResponse::ListAvailableManagedRuleGroupsResponse(
  */
 const ListAvailableManagedRuleGroupsRequest * ListAvailableManagedRuleGroupsResponse::request() const
 {
-    Q_D(const ListAvailableManagedRuleGroupsResponse);
-    return static_cast<const ListAvailableManagedRuleGroupsRequest *>(d->request);
+    return static_cast<const ListAvailableManagedRuleGroupsRequest *>(Wafv2Response::request());
 }
 
 /*!

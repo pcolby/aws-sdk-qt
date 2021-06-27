@@ -67,8 +67,7 @@ ModifyHsmResponse::ModifyHsmResponse(
  */
 const ModifyHsmRequest * ModifyHsmResponse::request() const
 {
-    Q_D(const ModifyHsmResponse);
-    return static_cast<const ModifyHsmRequest *>(d->request);
+    return static_cast<const ModifyHsmRequest *>(CloudHSMResponse::request());
 }
 
 /*!

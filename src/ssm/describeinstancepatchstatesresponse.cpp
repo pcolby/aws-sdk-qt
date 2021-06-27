@@ -98,8 +98,7 @@ DescribeInstancePatchStatesResponse::DescribeInstancePatchStatesResponse(
  */
 const DescribeInstancePatchStatesRequest * DescribeInstancePatchStatesResponse::request() const
 {
-    Q_D(const DescribeInstancePatchStatesResponse);
-    return static_cast<const DescribeInstancePatchStatesRequest *>(d->request);
+    return static_cast<const DescribeInstancePatchStatesRequest *>(SsmResponse::request());
 }
 
 /*!

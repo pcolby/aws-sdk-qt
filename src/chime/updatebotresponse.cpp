@@ -98,8 +98,7 @@ UpdateBotResponse::UpdateBotResponse(
  */
 const UpdateBotRequest * UpdateBotResponse::request() const
 {
-    Q_D(const UpdateBotResponse);
-    return static_cast<const UpdateBotRequest *>(d->request);
+    return static_cast<const UpdateBotRequest *>(ChimeResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ GetCampaignVersionsResponse::GetCampaignVersionsResponse(
  */
 const GetCampaignVersionsRequest * GetCampaignVersionsResponse::request() const
 {
-    Q_D(const GetCampaignVersionsResponse);
-    return static_cast<const GetCampaignVersionsRequest *>(d->request);
+    return static_cast<const GetCampaignVersionsRequest *>(PinpointResponse::request());
 }
 
 /*!

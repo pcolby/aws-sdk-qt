@@ -56,8 +56,7 @@ DescribeWorldTemplateResponse::DescribeWorldTemplateResponse(
  */
 const DescribeWorldTemplateRequest * DescribeWorldTemplateResponse::request() const
 {
-    Q_D(const DescribeWorldTemplateResponse);
-    return static_cast<const DescribeWorldTemplateRequest *>(d->request);
+    return static_cast<const DescribeWorldTemplateRequest *>(RoboMakerResponse::request());
 }
 
 /*!

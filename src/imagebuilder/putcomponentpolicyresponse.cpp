@@ -58,8 +58,7 @@ PutComponentPolicyResponse::PutComponentPolicyResponse(
  */
 const PutComponentPolicyRequest * PutComponentPolicyResponse::request() const
 {
-    Q_D(const PutComponentPolicyResponse);
-    return static_cast<const PutComponentPolicyRequest *>(d->request);
+    return static_cast<const PutComponentPolicyRequest *>(imagebuilderResponse::request());
 }
 
 /*!

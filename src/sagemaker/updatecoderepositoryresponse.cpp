@@ -70,8 +70,7 @@ UpdateCodeRepositoryResponse::UpdateCodeRepositoryResponse(
  */
 const UpdateCodeRepositoryRequest * UpdateCodeRepositoryResponse::request() const
 {
-    Q_D(const UpdateCodeRepositoryResponse);
-    return static_cast<const UpdateCodeRepositoryRequest *>(d->request);
+    return static_cast<const UpdateCodeRepositoryRequest *>(SageMakerResponse::request());
 }
 
 /*!

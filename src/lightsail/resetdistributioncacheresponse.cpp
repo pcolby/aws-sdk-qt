@@ -74,8 +74,7 @@ ResetDistributionCacheResponse::ResetDistributionCacheResponse(
  */
 const ResetDistributionCacheRequest * ResetDistributionCacheResponse::request() const
 {
-    Q_D(const ResetDistributionCacheResponse);
-    return static_cast<const ResetDistributionCacheRequest *>(d->request);
+    return static_cast<const ResetDistributionCacheRequest *>(LightsailResponse::request());
 }
 
 /*!

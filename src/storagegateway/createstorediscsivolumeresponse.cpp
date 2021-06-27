@@ -124,8 +124,7 @@ CreateStorediSCSIVolumeResponse::CreateStorediSCSIVolumeResponse(
  */
 const CreateStorediSCSIVolumeRequest * CreateStorediSCSIVolumeResponse::request() const
 {
-    Q_D(const CreateStorediSCSIVolumeResponse);
-    return static_cast<const CreateStorediSCSIVolumeRequest *>(d->request);
+    return static_cast<const CreateStorediSCSIVolumeRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

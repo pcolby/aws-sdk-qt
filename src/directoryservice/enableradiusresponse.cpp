@@ -69,8 +69,7 @@ EnableRadiusResponse::EnableRadiusResponse(
  */
 const EnableRadiusRequest * EnableRadiusResponse::request() const
 {
-    Q_D(const EnableRadiusResponse);
-    return static_cast<const EnableRadiusRequest *>(d->request);
+    return static_cast<const EnableRadiusRequest *>(DirectoryServiceResponse::request());
 }
 
 /*!

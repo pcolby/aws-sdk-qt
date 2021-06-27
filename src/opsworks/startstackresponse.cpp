@@ -161,8 +161,7 @@ StartStackResponse::StartStackResponse(
  */
 const StartStackRequest * StartStackResponse::request() const
 {
-    Q_D(const StartStackResponse);
-    return static_cast<const StartStackRequest *>(d->request);
+    return static_cast<const StartStackRequest *>(OpsWorksResponse::request());
 }
 
 /*!

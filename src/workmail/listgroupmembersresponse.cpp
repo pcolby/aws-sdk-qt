@@ -89,8 +89,7 @@ ListGroupMembersResponse::ListGroupMembersResponse(
  */
 const ListGroupMembersRequest * ListGroupMembersResponse::request() const
 {
-    Q_D(const ListGroupMembersResponse);
-    return static_cast<const ListGroupMembersRequest *>(d->request);
+    return static_cast<const ListGroupMembersRequest *>(WorkMailResponse::request());
 }
 
 /*!

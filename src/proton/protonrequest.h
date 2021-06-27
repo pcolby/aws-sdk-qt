@@ -105,6 +105,7 @@ public:
 
 protected:
     /// @cond internal
+    ProtonRequestPrivate * const d_ptr; ///< Internal d-pointer.
     ProtonRequest(ProtonRequestPrivate * const d);
     /// @endcond
 

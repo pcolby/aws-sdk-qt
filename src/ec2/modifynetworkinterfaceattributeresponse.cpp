@@ -87,8 +87,7 @@ ModifyNetworkInterfaceAttributeResponse::ModifyNetworkInterfaceAttributeResponse
  */
 const ModifyNetworkInterfaceAttributeRequest * ModifyNetworkInterfaceAttributeResponse::request() const
 {
-    Q_D(const ModifyNetworkInterfaceAttributeResponse);
-    return static_cast<const ModifyNetworkInterfaceAttributeRequest *>(d->request);
+    return static_cast<const ModifyNetworkInterfaceAttributeRequest *>(Ec2Response::request());
 }
 
 /*!

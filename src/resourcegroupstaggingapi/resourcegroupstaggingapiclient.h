@@ -70,6 +70,12 @@ public slots:
     TagResourcesResponse * tagResources(const TagResourcesRequest &request);
     UntagResourcesResponse * untagResources(const UntagResourcesRequest &request);
 
+protected:
+    /// @cond internal
+    ResourceGroupsTaggingAPIClientPrivate * const d_ptr; ///< Internal d-pointer.
+    ResourceGroupsTaggingAPIClient(ResourceGroupsTaggingAPIClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(ResourceGroupsTaggingAPIClient)
     Q_DISABLE_COPY(ResourceGroupsTaggingAPIClient)

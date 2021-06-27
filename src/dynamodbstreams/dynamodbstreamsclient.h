@@ -58,6 +58,12 @@ public slots:
     GetShardIteratorResponse * getShardIterator(const GetShardIteratorRequest &request);
     ListStreamsResponse * listStreams(const ListStreamsRequest &request);
 
+protected:
+    /// @cond internal
+    DynamoDBStreamsClientPrivate * const d_ptr; ///< Internal d-pointer.
+    DynamoDBStreamsClient(DynamoDBStreamsClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(DynamoDBStreamsClient)
     Q_DISABLE_COPY(DynamoDBStreamsClient)

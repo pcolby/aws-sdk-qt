@@ -69,8 +69,7 @@ GetPendingJobExecutionsResponse::GetPendingJobExecutionsResponse(
  */
 const GetPendingJobExecutionsRequest * GetPendingJobExecutionsResponse::request() const
 {
-    Q_D(const GetPendingJobExecutionsResponse);
-    return static_cast<const GetPendingJobExecutionsRequest *>(d->request);
+    return static_cast<const GetPendingJobExecutionsRequest *>(IoTJobsDataPlaneResponse::request());
 }
 
 /*!

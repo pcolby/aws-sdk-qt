@@ -66,8 +66,7 @@ CreateCodeSigningConfigResponse::CreateCodeSigningConfigResponse(
  */
 const CreateCodeSigningConfigRequest * CreateCodeSigningConfigResponse::request() const
 {
-    Q_D(const CreateCodeSigningConfigResponse);
-    return static_cast<const CreateCodeSigningConfigRequest *>(d->request);
+    return static_cast<const CreateCodeSigningConfigRequest *>(LambdaResponse::request());
 }
 
 /*!

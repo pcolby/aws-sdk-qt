@@ -66,8 +66,7 @@ DeleteProgramResponse::DeleteProgramResponse(
  */
 const DeleteProgramRequest * DeleteProgramResponse::request() const
 {
-    Q_D(const DeleteProgramResponse);
-    return static_cast<const DeleteProgramRequest *>(d->request);
+    return static_cast<const DeleteProgramRequest *>(MediaTailorResponse::request());
 }
 
 /*!

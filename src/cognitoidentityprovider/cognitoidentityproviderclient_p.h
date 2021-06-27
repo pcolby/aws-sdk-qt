@@ -20,19 +20,20 @@
 #ifndef QTAWS_COGNITOIDENTITYPROVIDERCLIENT_P_H
 #define QTAWS_COGNITOIDENTITYPROVIDERCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace CognitoIdentityProvider {
 
 class CognitoIdentityProviderClient;
 
-class CognitoIdentityProviderClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class CognitoIdentityProviderClientPrivate {
 
 public:
     CognitoIdentityProviderClientPrivate(CognitoIdentityProviderClient * const q);
+
+protected:
+    CognitoIdentityProviderClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CognitoIdentityProviderClient)

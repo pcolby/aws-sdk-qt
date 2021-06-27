@@ -62,8 +62,7 @@ UpdateSiteResponse::UpdateSiteResponse(
  */
 const UpdateSiteRequest * UpdateSiteResponse::request() const
 {
-    Q_D(const UpdateSiteResponse);
-    return static_cast<const UpdateSiteRequest *>(d->request);
+    return static_cast<const UpdateSiteRequest *>(NetworkManagerResponse::request());
 }
 
 /*!

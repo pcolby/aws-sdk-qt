@@ -61,8 +61,7 @@ ListApplicationsResponse::ListApplicationsResponse(
  */
 const ListApplicationsRequest * ListApplicationsResponse::request() const
 {
-    Q_D(const ListApplicationsResponse);
-    return static_cast<const ListApplicationsRequest *>(d->request);
+    return static_cast<const ListApplicationsRequest *>(IoTFleetHubResponse::request());
 }
 
 /*!

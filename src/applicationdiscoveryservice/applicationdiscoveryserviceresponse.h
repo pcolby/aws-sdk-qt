@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    ApplicationDiscoveryServiceResponsePrivate * const d_ptr; ///< Internal d-pointer.
     ApplicationDiscoveryServiceResponse(ApplicationDiscoveryServiceResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

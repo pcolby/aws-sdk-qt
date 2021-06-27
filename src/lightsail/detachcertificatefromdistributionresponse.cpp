@@ -74,8 +74,7 @@ DetachCertificateFromDistributionResponse::DetachCertificateFromDistributionResp
  */
 const DetachCertificateFromDistributionRequest * DetachCertificateFromDistributionResponse::request() const
 {
-    Q_D(const DetachCertificateFromDistributionResponse);
-    return static_cast<const DetachCertificateFromDistributionRequest *>(d->request);
+    return static_cast<const DetachCertificateFromDistributionRequest *>(LightsailResponse::request());
 }
 
 /*!

@@ -37,7 +37,7 @@ namespace MarketplaceEntitlementService {
  * Constructs a MarketplaceEntitlementServiceResponse object with parent \a parent.
  */
 MarketplaceEntitlementServiceResponse::MarketplaceEntitlementServiceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new MarketplaceEntitlementServiceResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new MarketplaceEntitlementServiceResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ MarketplaceEntitlementServiceResponse::MarketplaceEntitlementServiceResponse(QOb
  * implementation that inherits from MarketplaceEntitlementServiceResponsePrivate.
  */
 MarketplaceEntitlementServiceResponse::MarketplaceEntitlementServiceResponse(MarketplaceEntitlementServiceResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void MarketplaceEntitlementServiceResponse::parseFailure(QIODevice &response)
  * Constructs a MarketplaceEntitlementServiceResponsePrivate object with public implementation \a q.
  */
 MarketplaceEntitlementServiceResponsePrivate::MarketplaceEntitlementServiceResponsePrivate(
-    MarketplaceEntitlementServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    MarketplaceEntitlementServiceResponse * const q) : q_ptr(q)
 {
 
 }

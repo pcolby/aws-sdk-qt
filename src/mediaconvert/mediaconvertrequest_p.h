@@ -20,15 +20,12 @@
 #ifndef QTAWS_MEDIACONVERTREQUEST_P_H
 #define QTAWS_MEDIACONVERTREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "mediaconvertrequest.h"
-
 namespace QtAws {
 namespace MediaConvert {
 
 class MediaConvertRequest;
 
-class MediaConvertRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class MediaConvertRequestPrivate {
 
 public:
     MediaConvertRequest::Action action; ///< MediaConvert action to be performed.
@@ -39,6 +36,9 @@ public:
     MediaConvertRequestPrivate(const MediaConvertRequestPrivate &other, MediaConvertRequest * const q);
 
     static QString toString(const MediaConvertRequest::Action &action);
+
+protected:
+    MediaConvertRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MediaConvertRequest)

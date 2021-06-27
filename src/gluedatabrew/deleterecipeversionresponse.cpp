@@ -58,8 +58,7 @@ DeleteRecipeVersionResponse::DeleteRecipeVersionResponse(
  */
 const DeleteRecipeVersionRequest * DeleteRecipeVersionResponse::request() const
 {
-    Q_D(const DeleteRecipeVersionResponse);
-    return static_cast<const DeleteRecipeVersionRequest *>(d->request);
+    return static_cast<const DeleteRecipeVersionRequest *>(GlueDataBrewResponse::request());
 }
 
 /*!

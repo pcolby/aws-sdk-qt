@@ -55,8 +55,7 @@ ListPageReceiptsResponse::ListPageReceiptsResponse(
  */
 const ListPageReceiptsRequest * ListPageReceiptsResponse::request() const
 {
-    Q_D(const ListPageReceiptsResponse);
-    return static_cast<const ListPageReceiptsRequest *>(d->request);
+    return static_cast<const ListPageReceiptsRequest *>(SSMContactsResponse::request());
 }
 
 /*!

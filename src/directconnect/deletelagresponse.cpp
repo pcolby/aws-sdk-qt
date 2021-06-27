@@ -61,8 +61,7 @@ DeleteLagResponse::DeleteLagResponse(
  */
 const DeleteLagRequest * DeleteLagResponse::request() const
 {
-    Q_D(const DeleteLagResponse);
-    return static_cast<const DeleteLagRequest *>(d->request);
+    return static_cast<const DeleteLagRequest *>(DirectConnectResponse::request());
 }
 
 /*!

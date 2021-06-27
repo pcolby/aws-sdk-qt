@@ -37,7 +37,7 @@ namespace IoTEventsData {
  * Constructs a IoTEventsDataResponse object with parent \a parent.
  */
 IoTEventsDataResponse::IoTEventsDataResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new IoTEventsDataResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new IoTEventsDataResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ IoTEventsDataResponse::IoTEventsDataResponse(QObject * const parent)
  * implementation that inherits from IoTEventsDataResponsePrivate.
  */
 IoTEventsDataResponse::IoTEventsDataResponse(IoTEventsDataResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void IoTEventsDataResponse::parseFailure(QIODevice &response)
  * Constructs a IoTEventsDataResponsePrivate object with public implementation \a q.
  */
 IoTEventsDataResponsePrivate::IoTEventsDataResponsePrivate(
-    IoTEventsDataResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    IoTEventsDataResponse * const q) : q_ptr(q)
 {
 
 }

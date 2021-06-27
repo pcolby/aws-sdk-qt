@@ -56,8 +56,7 @@ GetSegmentVersionsResponse::GetSegmentVersionsResponse(
  */
 const GetSegmentVersionsRequest * GetSegmentVersionsResponse::request() const
 {
-    Q_D(const GetSegmentVersionsResponse);
-    return static_cast<const GetSegmentVersionsRequest *>(d->request);
+    return static_cast<const GetSegmentVersionsRequest *>(PinpointResponse::request());
 }
 
 /*!

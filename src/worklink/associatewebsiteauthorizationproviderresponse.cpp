@@ -60,8 +60,7 @@ AssociateWebsiteAuthorizationProviderResponse::AssociateWebsiteAuthorizationProv
  */
 const AssociateWebsiteAuthorizationProviderRequest * AssociateWebsiteAuthorizationProviderResponse::request() const
 {
-    Q_D(const AssociateWebsiteAuthorizationProviderResponse);
-    return static_cast<const AssociateWebsiteAuthorizationProviderRequest *>(d->request);
+    return static_cast<const AssociateWebsiteAuthorizationProviderRequest *>(WorkLinkResponse::request());
 }
 
 /*!

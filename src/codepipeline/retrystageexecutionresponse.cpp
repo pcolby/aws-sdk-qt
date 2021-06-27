@@ -240,8 +240,7 @@ RetryStageExecutionResponse::RetryStageExecutionResponse(
  */
 const RetryStageExecutionRequest * RetryStageExecutionResponse::request() const
 {
-    Q_D(const RetryStageExecutionResponse);
-    return static_cast<const RetryStageExecutionRequest *>(d->request);
+    return static_cast<const RetryStageExecutionRequest *>(CodePipelineResponse::request());
 }
 
 /*!

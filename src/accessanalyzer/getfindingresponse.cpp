@@ -67,8 +67,7 @@ GetFindingResponse::GetFindingResponse(
  */
 const GetFindingRequest * GetFindingResponse::request() const
 {
-    Q_D(const GetFindingResponse);
-    return static_cast<const GetFindingRequest *>(d->request);
+    return static_cast<const GetFindingRequest *>(AccessAnalyzerResponse::request());
 }
 
 /*!

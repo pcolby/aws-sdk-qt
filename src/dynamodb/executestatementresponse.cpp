@@ -74,8 +74,7 @@ ExecuteStatementResponse::ExecuteStatementResponse(
  */
 const ExecuteStatementRequest * ExecuteStatementResponse::request() const
 {
-    Q_D(const ExecuteStatementResponse);
-    return static_cast<const ExecuteStatementRequest *>(d->request);
+    return static_cast<const ExecuteStatementRequest *>(DynamoDBResponse::request());
 }
 
 /*!

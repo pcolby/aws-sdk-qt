@@ -134,8 +134,7 @@ RestoreServerResponse::RestoreServerResponse(
  */
 const RestoreServerRequest * RestoreServerResponse::request() const
 {
-    Q_D(const RestoreServerResponse);
-    return static_cast<const RestoreServerRequest *>(d->request);
+    return static_cast<const RestoreServerRequest *>(OpsWorksCMResponse::request());
 }
 
 /*!

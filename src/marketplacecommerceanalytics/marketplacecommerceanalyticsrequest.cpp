@@ -44,7 +44,7 @@ namespace MarketplaceCommerceAnalytics {
  * Constructs a MarketplaceCommerceAnalyticsRequest object for MarketplaceCommerceAnalytics \a action.
  */
 MarketplaceCommerceAnalyticsRequest::MarketplaceCommerceAnalyticsRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new MarketplaceCommerceAnalyticsRequestPrivate(action, this))
+    : d_ptr(new MarketplaceCommerceAnalyticsRequestPrivate(action, this))
 {
 
 }
@@ -53,7 +53,8 @@ MarketplaceCommerceAnalyticsRequest::MarketplaceCommerceAnalyticsRequest(const A
  * Constructs a copy of \a other.
  */
 MarketplaceCommerceAnalyticsRequest::MarketplaceCommerceAnalyticsRequest(const MarketplaceCommerceAnalyticsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new MarketplaceCommerceAnalyticsRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new MarketplaceCommerceAnalyticsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -76,7 +77,7 @@ MarketplaceCommerceAnalyticsRequest& MarketplaceCommerceAnalyticsRequest::operat
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MarketplaceCommerceAnalyticsRequestPrivate.
  */
-MarketplaceCommerceAnalyticsRequest::MarketplaceCommerceAnalyticsRequest(MarketplaceCommerceAnalyticsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+MarketplaceCommerceAnalyticsRequest::MarketplaceCommerceAnalyticsRequest(MarketplaceCommerceAnalyticsRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -245,7 +246,7 @@ QNetworkRequest MarketplaceCommerceAnalyticsRequest::unsignedRequest(const QUrl 
  * with public implementation \a q.
  */
 MarketplaceCommerceAnalyticsRequestPrivate::MarketplaceCommerceAnalyticsRequestPrivate(const MarketplaceCommerceAnalyticsRequest::Action action, MarketplaceCommerceAnalyticsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -260,8 +261,8 @@ MarketplaceCommerceAnalyticsRequestPrivate::MarketplaceCommerceAnalyticsRequestP
  */
 MarketplaceCommerceAnalyticsRequestPrivate::MarketplaceCommerceAnalyticsRequestPrivate(const MarketplaceCommerceAnalyticsRequestPrivate &other,
                                      MarketplaceCommerceAnalyticsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

@@ -82,8 +82,7 @@ ListOTAUpdatesResponse::ListOTAUpdatesResponse(
  */
 const ListOTAUpdatesRequest * ListOTAUpdatesResponse::request() const
 {
-    Q_D(const ListOTAUpdatesResponse);
-    return static_cast<const ListOTAUpdatesRequest *>(d->request);
+    return static_cast<const ListOTAUpdatesRequest *>(IoTResponse::request());
 }
 
 /*!

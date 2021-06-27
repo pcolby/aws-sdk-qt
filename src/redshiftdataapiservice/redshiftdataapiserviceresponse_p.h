@@ -20,14 +20,12 @@
 #ifndef QTAWS_REDSHIFTDATAAPISERVICERESPONSE_P_H
 #define QTAWS_REDSHIFTDATAAPISERVICERESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace RedshiftDataAPIService {
 
 class RedshiftDataAPIServiceResponse;
 
-class RedshiftDataAPIServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class RedshiftDataAPIServiceResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    RedshiftDataAPIServiceResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(RedshiftDataAPIServiceResponse)

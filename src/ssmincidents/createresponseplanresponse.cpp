@@ -65,8 +65,7 @@ CreateResponsePlanResponse::CreateResponsePlanResponse(
  */
 const CreateResponsePlanRequest * CreateResponsePlanResponse::request() const
 {
-    Q_D(const CreateResponsePlanResponse);
-    return static_cast<const CreateResponsePlanRequest *>(d->request);
+    return static_cast<const CreateResponsePlanRequest *>(SSMIncidentsResponse::request());
 }
 
 /*!

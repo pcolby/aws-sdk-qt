@@ -73,8 +73,7 @@ RemoveTagsResponse::RemoveTagsResponse(
  */
 const RemoveTagsRequest * RemoveTagsResponse::request() const
 {
-    Q_D(const RemoveTagsResponse);
-    return static_cast<const RemoveTagsRequest *>(d->request);
+    return static_cast<const RemoveTagsRequest *>(DataPipelineResponse::request());
 }
 
 /*!

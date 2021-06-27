@@ -75,8 +75,7 @@ PutConfigurationRecorderResponse::PutConfigurationRecorderResponse(
  */
 const PutConfigurationRecorderRequest * PutConfigurationRecorderResponse::request() const
 {
-    Q_D(const PutConfigurationRecorderResponse);
-    return static_cast<const PutConfigurationRecorderRequest *>(d->request);
+    return static_cast<const PutConfigurationRecorderRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

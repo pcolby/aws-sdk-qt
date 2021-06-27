@@ -112,6 +112,12 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateServiceResponse * updateService(const UpdateServiceRequest &request);
 
+protected:
+    /// @cond internal
+    AppRunnerClientPrivate * const d_ptr; ///< Internal d-pointer.
+    AppRunnerClient(AppRunnerClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(AppRunnerClient)
     Q_DISABLE_COPY(AppRunnerClient)

@@ -20,15 +20,12 @@
 #ifndef QTAWS_KINESISVIDEOREQUEST_P_H
 #define QTAWS_KINESISVIDEOREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "kinesisvideorequest.h"
-
 namespace QtAws {
 namespace KinesisVideo {
 
 class KinesisVideoRequest;
 
-class KinesisVideoRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class KinesisVideoRequestPrivate {
 
 public:
     KinesisVideoRequest::Action action; ///< KinesisVideo action to be performed.
@@ -39,6 +36,9 @@ public:
     KinesisVideoRequestPrivate(const KinesisVideoRequestPrivate &other, KinesisVideoRequest * const q);
 
     static QString toString(const KinesisVideoRequest::Action &action);
+
+protected:
+    KinesisVideoRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(KinesisVideoRequest)

@@ -62,8 +62,7 @@ DeleteWorkloadResponse::DeleteWorkloadResponse(
  */
 const DeleteWorkloadRequest * DeleteWorkloadResponse::request() const
 {
-    Q_D(const DeleteWorkloadResponse);
-    return static_cast<const DeleteWorkloadRequest *>(d->request);
+    return static_cast<const DeleteWorkloadRequest *>(WellArchitectedResponse::request());
 }
 
 /*!

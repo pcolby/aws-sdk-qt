@@ -58,8 +58,7 @@ DetectDominantLanguageResponse::DetectDominantLanguageResponse(
  */
 const DetectDominantLanguageRequest * DetectDominantLanguageResponse::request() const
 {
-    Q_D(const DetectDominantLanguageResponse);
-    return static_cast<const DetectDominantLanguageRequest *>(d->request);
+    return static_cast<const DetectDominantLanguageRequest *>(ComprehendResponse::request());
 }
 
 /*!

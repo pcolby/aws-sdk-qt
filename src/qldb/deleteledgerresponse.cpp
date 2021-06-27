@@ -56,8 +56,7 @@ DeleteLedgerResponse::DeleteLedgerResponse(
  */
 const DeleteLedgerRequest * DeleteLedgerResponse::request() const
 {
-    Q_D(const DeleteLedgerResponse);
-    return static_cast<const DeleteLedgerRequest *>(d->request);
+    return static_cast<const DeleteLedgerRequest *>(QldbResponse::request());
 }
 
 /*!

@@ -177,8 +177,7 @@ ListServiceTemplateVersionsResponse::ListServiceTemplateVersionsResponse(
  */
 const ListServiceTemplateVersionsRequest * ListServiceTemplateVersionsResponse::request() const
 {
-    Q_D(const ListServiceTemplateVersionsResponse);
-    return static_cast<const ListServiceTemplateVersionsRequest *>(d->request);
+    return static_cast<const ListServiceTemplateVersionsRequest *>(ProtonResponse::request());
 }
 
 /*!

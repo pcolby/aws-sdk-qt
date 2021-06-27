@@ -148,6 +148,12 @@ public slots:
     UpdatePreparedStatementResponse * updatePreparedStatement(const UpdatePreparedStatementRequest &request);
     UpdateWorkGroupResponse * updateWorkGroup(const UpdateWorkGroupRequest &request);
 
+protected:
+    /// @cond internal
+    AthenaClientPrivate * const d_ptr; ///< Internal d-pointer.
+    AthenaClient(AthenaClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(AthenaClient)
     Q_DISABLE_COPY(AthenaClient)

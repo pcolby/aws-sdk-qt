@@ -68,8 +68,7 @@ BatchDeleteAttributesResponse::BatchDeleteAttributesResponse(
  */
 const BatchDeleteAttributesRequest * BatchDeleteAttributesResponse::request() const
 {
-    Q_D(const BatchDeleteAttributesResponse);
-    return static_cast<const BatchDeleteAttributesRequest *>(d->request);
+    return static_cast<const BatchDeleteAttributesRequest *>(SimpleDBResponse::request());
 }
 
 /*!

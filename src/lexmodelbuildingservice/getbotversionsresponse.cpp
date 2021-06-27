@@ -59,8 +59,7 @@ GetBotVersionsResponse::GetBotVersionsResponse(
  */
 const GetBotVersionsRequest * GetBotVersionsResponse::request() const
 {
-    Q_D(const GetBotVersionsResponse);
-    return static_cast<const GetBotVersionsRequest *>(d->request);
+    return static_cast<const GetBotVersionsRequest *>(LexModelBuildingServiceResponse::request());
 }
 
 /*!

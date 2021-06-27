@@ -68,8 +68,7 @@ ListProblemsResponse::ListProblemsResponse(
  */
 const ListProblemsRequest * ListProblemsResponse::request() const
 {
-    Q_D(const ListProblemsResponse);
-    return static_cast<const ListProblemsRequest *>(d->request);
+    return static_cast<const ListProblemsRequest *>(ApplicationInsightsResponse::request());
 }
 
 /*!

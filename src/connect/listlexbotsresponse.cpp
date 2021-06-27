@@ -79,8 +79,7 @@ ListLexBotsResponse::ListLexBotsResponse(
  */
 const ListLexBotsRequest * ListLexBotsResponse::request() const
 {
-    Q_D(const ListLexBotsResponse);
-    return static_cast<const ListLexBotsRequest *>(d->request);
+    return static_cast<const ListLexBotsRequest *>(ConnectResponse::request());
 }
 
 /*!

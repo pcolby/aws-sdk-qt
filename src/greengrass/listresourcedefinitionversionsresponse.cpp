@@ -58,8 +58,7 @@ ListResourceDefinitionVersionsResponse::ListResourceDefinitionVersionsResponse(
  */
 const ListResourceDefinitionVersionsRequest * ListResourceDefinitionVersionsResponse::request() const
 {
-    Q_D(const ListResourceDefinitionVersionsResponse);
-    return static_cast<const ListResourceDefinitionVersionsRequest *>(d->request);
+    return static_cast<const ListResourceDefinitionVersionsRequest *>(GreengrassResponse::request());
 }
 
 /*!

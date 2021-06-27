@@ -69,8 +69,7 @@ GetMetricWidgetImageResponse::GetMetricWidgetImageResponse(
  */
 const GetMetricWidgetImageRequest * GetMetricWidgetImageResponse::request() const
 {
-    Q_D(const GetMetricWidgetImageResponse);
-    return static_cast<const GetMetricWidgetImageRequest *>(d->request);
+    return static_cast<const GetMetricWidgetImageRequest *>(CloudWatchResponse::request());
 }
 
 /*!

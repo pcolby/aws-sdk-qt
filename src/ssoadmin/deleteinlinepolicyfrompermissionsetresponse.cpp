@@ -55,8 +55,7 @@ DeleteInlinePolicyFromPermissionSetResponse::DeleteInlinePolicyFromPermissionSet
  */
 const DeleteInlinePolicyFromPermissionSetRequest * DeleteInlinePolicyFromPermissionSetResponse::request() const
 {
-    Q_D(const DeleteInlinePolicyFromPermissionSetResponse);
-    return static_cast<const DeleteInlinePolicyFromPermissionSetRequest *>(d->request);
+    return static_cast<const DeleteInlinePolicyFromPermissionSetRequest *>(SSOAdminResponse::request());
 }
 
 /*!

@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    kendraResponsePrivate * const d_ptr; ///< Internal d-pointer.
     kendraResponse(kendraResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

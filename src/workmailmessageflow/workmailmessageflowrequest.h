@@ -58,6 +58,7 @@ public:
 
 protected:
     /// @cond internal
+    WorkMailMessageFlowRequestPrivate * const d_ptr; ///< Internal d-pointer.
     WorkMailMessageFlowRequest(WorkMailMessageFlowRequestPrivate * const d);
     /// @endcond
 

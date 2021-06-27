@@ -126,8 +126,7 @@ DeleteMessageBatchResponse::DeleteMessageBatchResponse(
  */
 const DeleteMessageBatchRequest * DeleteMessageBatchResponse::request() const
 {
-    Q_D(const DeleteMessageBatchResponse);
-    return static_cast<const DeleteMessageBatchRequest *>(d->request);
+    return static_cast<const DeleteMessageBatchRequest *>(SqsResponse::request());
 }
 
 /*!

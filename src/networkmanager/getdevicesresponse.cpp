@@ -62,8 +62,7 @@ GetDevicesResponse::GetDevicesResponse(
  */
 const GetDevicesRequest * GetDevicesResponse::request() const
 {
-    Q_D(const GetDevicesResponse);
-    return static_cast<const GetDevicesRequest *>(d->request);
+    return static_cast<const GetDevicesRequest *>(NetworkManagerResponse::request());
 }
 
 /*!

@@ -66,8 +66,7 @@ IndexDocumentsResponse::IndexDocumentsResponse(
  */
 const IndexDocumentsRequest * IndexDocumentsResponse::request() const
 {
-    Q_D(const IndexDocumentsResponse);
-    return static_cast<const IndexDocumentsRequest *>(d->request);
+    return static_cast<const IndexDocumentsRequest *>(CloudSearchResponse::request());
 }
 
 /*!

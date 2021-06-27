@@ -55,8 +55,7 @@ PutObjectResponse::PutObjectResponse(
  */
 const PutObjectRequest * PutObjectResponse::request() const
 {
-    Q_D(const PutObjectResponse);
-    return static_cast<const PutObjectRequest *>(d->request);
+    return static_cast<const PutObjectRequest *>(S3Response::request());
 }
 
 /*!

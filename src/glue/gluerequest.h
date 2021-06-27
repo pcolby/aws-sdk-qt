@@ -213,6 +213,7 @@ public:
 
 protected:
     /// @cond internal
+    GlueRequestPrivate * const d_ptr; ///< Internal d-pointer.
     GlueRequest(GlueRequestPrivate * const d);
     /// @endcond
 

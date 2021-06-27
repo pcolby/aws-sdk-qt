@@ -98,8 +98,7 @@ DescribeOpsItemsResponse::DescribeOpsItemsResponse(
  */
 const DescribeOpsItemsRequest * DescribeOpsItemsResponse::request() const
 {
-    Q_D(const DescribeOpsItemsResponse);
-    return static_cast<const DescribeOpsItemsRequest *>(d->request);
+    return static_cast<const DescribeOpsItemsRequest *>(SsmResponse::request());
 }
 
 /*!

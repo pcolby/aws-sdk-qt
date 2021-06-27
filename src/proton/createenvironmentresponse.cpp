@@ -177,8 +177,7 @@ CreateEnvironmentResponse::CreateEnvironmentResponse(
  */
 const CreateEnvironmentRequest * CreateEnvironmentResponse::request() const
 {
-    Q_D(const CreateEnvironmentResponse);
-    return static_cast<const CreateEnvironmentRequest *>(d->request);
+    return static_cast<const CreateEnvironmentRequest *>(ProtonResponse::request());
 }
 
 /*!

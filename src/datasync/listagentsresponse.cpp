@@ -64,8 +64,7 @@ ListAgentsResponse::ListAgentsResponse(
  */
 const ListAgentsRequest * ListAgentsResponse::request() const
 {
-    Q_D(const ListAgentsResponse);
-    return static_cast<const ListAgentsRequest *>(d->request);
+    return static_cast<const ListAgentsRequest *>(DataSyncResponse::request());
 }
 
 /*!

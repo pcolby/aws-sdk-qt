@@ -56,8 +56,7 @@ EnableDomainAutoRenewResponse::EnableDomainAutoRenewResponse(
  */
 const EnableDomainAutoRenewRequest * EnableDomainAutoRenewResponse::request() const
 {
-    Q_D(const EnableDomainAutoRenewResponse);
-    return static_cast<const EnableDomainAutoRenewRequest *>(d->request);
+    return static_cast<const EnableDomainAutoRenewRequest *>(Route53DomainsResponse::request());
 }
 
 /*!

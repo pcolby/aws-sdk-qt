@@ -71,8 +71,7 @@ DeleteProfileResponse::DeleteProfileResponse(
  */
 const DeleteProfileRequest * DeleteProfileResponse::request() const
 {
-    Q_D(const DeleteProfileResponse);
-    return static_cast<const DeleteProfileRequest *>(d->request);
+    return static_cast<const DeleteProfileRequest *>(CustomerProfilesResponse::request());
 }
 
 /*!

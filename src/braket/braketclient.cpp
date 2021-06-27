@@ -78,16 +78,16 @@ BraketClient::BraketClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new BraketClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-09-01"),
+    QStringLiteral("braket"),
+    QStringLiteral("Braket"),
+    QStringLiteral("braket"),
+    parent), d_ptr(new BraketClientPrivate(this))
 {
-    Q_D(BraketClient);
-    d->apiVersion = QStringLiteral("2019-09-01");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("braket");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Braket");
-    d->serviceName = QStringLiteral("braket");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -106,16 +106,16 @@ BraketClient::BraketClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new BraketClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-09-01"),
+    QStringLiteral("braket"),
+    QStringLiteral("Braket"),
+    QStringLiteral("braket"),
+    parent), d_ptr(new BraketClientPrivate(this))
 {
-    Q_D(BraketClient);
-    d->apiVersion = QStringLiteral("2019-09-01");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("braket");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Braket");
-    d->serviceName = QStringLiteral("braket");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -247,10 +247,9 @@ UntagResourceResponse * BraketClient::untagResource(const UntagResourceRequest &
 /*!
  * Constructs a BraketClientPrivate object with public implementation \a q.
  */
-BraketClientPrivate::BraketClientPrivate(BraketClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+BraketClientPrivate::BraketClientPrivate(BraketClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace Braket

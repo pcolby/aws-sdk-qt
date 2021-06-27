@@ -67,8 +67,7 @@ GetAdminAccountResponse::GetAdminAccountResponse(
  */
 const GetAdminAccountRequest * GetAdminAccountResponse::request() const
 {
-    Q_D(const GetAdminAccountResponse);
-    return static_cast<const GetAdminAccountRequest *>(d->request);
+    return static_cast<const GetAdminAccountRequest *>(FmsResponse::request());
 }
 
 /*!

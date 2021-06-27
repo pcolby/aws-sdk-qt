@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    CodeCommitResponsePrivate * const d_ptr; ///< Internal d-pointer.
     CodeCommitResponse(CodeCommitResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

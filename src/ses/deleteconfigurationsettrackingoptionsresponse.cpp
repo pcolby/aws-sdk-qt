@@ -66,8 +66,7 @@ DeleteConfigurationSetTrackingOptionsResponse::DeleteConfigurationSetTrackingOpt
  */
 const DeleteConfigurationSetTrackingOptionsRequest * DeleteConfigurationSetTrackingOptionsResponse::request() const
 {
-    Q_D(const DeleteConfigurationSetTrackingOptionsResponse);
-    return static_cast<const DeleteConfigurationSetTrackingOptionsRequest *>(d->request);
+    return static_cast<const DeleteConfigurationSetTrackingOptionsRequest *>(SesResponse::request());
 }
 
 /*!

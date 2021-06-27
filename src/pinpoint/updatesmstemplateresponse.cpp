@@ -56,8 +56,7 @@ UpdateSmsTemplateResponse::UpdateSmsTemplateResponse(
  */
 const UpdateSmsTemplateRequest * UpdateSmsTemplateResponse::request() const
 {
-    Q_D(const UpdateSmsTemplateResponse);
-    return static_cast<const UpdateSmsTemplateRequest *>(d->request);
+    return static_cast<const UpdateSmsTemplateRequest *>(PinpointResponse::request());
 }
 
 /*!

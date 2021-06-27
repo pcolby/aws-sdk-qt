@@ -20,19 +20,20 @@
 #ifndef QTAWS_IOTCLIENT_P_H
 #define QTAWS_IOTCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace IoT {
 
 class IoTClient;
 
-class IoTClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class IoTClientPrivate {
 
 public:
     IoTClientPrivate(IoTClient * const q);
+
+protected:
+    IoTClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoTClient)

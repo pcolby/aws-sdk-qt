@@ -66,8 +66,7 @@ GetDeviceResponse::GetDeviceResponse(
  */
 const GetDeviceRequest * GetDeviceResponse::request() const
 {
-    Q_D(const GetDeviceResponse);
-    return static_cast<const GetDeviceRequest *>(d->request);
+    return static_cast<const GetDeviceRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

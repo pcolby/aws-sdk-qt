@@ -151,6 +151,7 @@ public:
 
 protected:
     /// @cond internal
+    GameLiftRequestPrivate * const d_ptr; ///< Internal d-pointer.
     GameLiftRequest(GameLiftRequestPrivate * const d);
     /// @endcond
 

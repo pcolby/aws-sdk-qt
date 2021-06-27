@@ -56,8 +56,7 @@ GetSamplingRulesResponse::GetSamplingRulesResponse(
  */
 const GetSamplingRulesRequest * GetSamplingRulesResponse::request() const
 {
-    Q_D(const GetSamplingRulesResponse);
-    return static_cast<const GetSamplingRulesRequest *>(d->request);
+    return static_cast<const GetSamplingRulesRequest *>(XRayResponse::request());
 }
 
 /*!

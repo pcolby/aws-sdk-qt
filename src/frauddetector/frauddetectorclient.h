@@ -218,6 +218,12 @@ public slots:
     UpdateRuleVersionResponse * updateRuleVersion(const UpdateRuleVersionRequest &request);
     UpdateVariableResponse * updateVariable(const UpdateVariableRequest &request);
 
+protected:
+    /// @cond internal
+    FraudDetectorClientPrivate * const d_ptr; ///< Internal d-pointer.
+    FraudDetectorClient(FraudDetectorClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(FraudDetectorClient)
     Q_DISABLE_COPY(FraudDetectorClient)

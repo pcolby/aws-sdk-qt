@@ -69,8 +69,7 @@ DecreaseNodeGroupsInGlobalReplicationGroupResponse::DecreaseNodeGroupsInGlobalRe
  */
 const DecreaseNodeGroupsInGlobalReplicationGroupRequest * DecreaseNodeGroupsInGlobalReplicationGroupResponse::request() const
 {
-    Q_D(const DecreaseNodeGroupsInGlobalReplicationGroupResponse);
-    return static_cast<const DecreaseNodeGroupsInGlobalReplicationGroupRequest *>(d->request);
+    return static_cast<const DecreaseNodeGroupsInGlobalReplicationGroupRequest *>(ElastiCacheResponse::request());
 }
 
 /*!

@@ -79,8 +79,7 @@ CreateRoutingProfileResponse::CreateRoutingProfileResponse(
  */
 const CreateRoutingProfileRequest * CreateRoutingProfileResponse::request() const
 {
-    Q_D(const CreateRoutingProfileResponse);
-    return static_cast<const CreateRoutingProfileRequest *>(d->request);
+    return static_cast<const CreateRoutingProfileRequest *>(ConnectResponse::request());
 }
 
 /*!

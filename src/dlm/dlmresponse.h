@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    DlmResponsePrivate * const d_ptr; ///< Internal d-pointer.
     DlmResponse(DlmResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

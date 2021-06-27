@@ -115,8 +115,7 @@ ResumeGameServerGroupResponse::ResumeGameServerGroupResponse(
  */
 const ResumeGameServerGroupRequest * ResumeGameServerGroupResponse::request() const
 {
-    Q_D(const ResumeGameServerGroupResponse);
-    return static_cast<const ResumeGameServerGroupRequest *>(d->request);
+    return static_cast<const ResumeGameServerGroupRequest *>(GameLiftResponse::request());
 }
 
 /*!

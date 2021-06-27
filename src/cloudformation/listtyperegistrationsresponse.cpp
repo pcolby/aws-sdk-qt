@@ -77,8 +77,7 @@ ListTypeRegistrationsResponse::ListTypeRegistrationsResponse(
  */
 const ListTypeRegistrationsRequest * ListTypeRegistrationsResponse::request() const
 {
-    Q_D(const ListTypeRegistrationsResponse);
-    return static_cast<const ListTypeRegistrationsRequest *>(d->request);
+    return static_cast<const ListTypeRegistrationsRequest *>(CloudFormationResponse::request());
 }
 
 /*!

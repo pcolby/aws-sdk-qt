@@ -57,8 +57,7 @@ StartDocumentAnalysisResponse::StartDocumentAnalysisResponse(
  */
 const StartDocumentAnalysisRequest * StartDocumentAnalysisResponse::request() const
 {
-    Q_D(const StartDocumentAnalysisResponse);
-    return static_cast<const StartDocumentAnalysisRequest *>(d->request);
+    return static_cast<const StartDocumentAnalysisRequest *>(TextractResponse::request());
 }
 
 /*!

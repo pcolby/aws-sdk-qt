@@ -154,8 +154,7 @@ DisableKeyResponse::DisableKeyResponse(
  */
 const DisableKeyRequest * DisableKeyResponse::request() const
 {
-    Q_D(const DisableKeyResponse);
-    return static_cast<const DisableKeyRequest *>(d->request);
+    return static_cast<const DisableKeyRequest *>(KmsResponse::request());
 }
 
 /*!

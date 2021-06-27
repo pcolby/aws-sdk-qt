@@ -48,7 +48,7 @@ namespace RDSDataService {
  * Constructs a RDSDataServiceRequest object for RDSDataService \a action.
  */
 RDSDataServiceRequest::RDSDataServiceRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new RDSDataServiceRequestPrivate(action, this))
+    : d_ptr(new RDSDataServiceRequestPrivate(action, this))
 {
 
 }
@@ -57,7 +57,8 @@ RDSDataServiceRequest::RDSDataServiceRequest(const Action action)
  * Constructs a copy of \a other.
  */
 RDSDataServiceRequest::RDSDataServiceRequest(const RDSDataServiceRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new RDSDataServiceRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new RDSDataServiceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +81,7 @@ RDSDataServiceRequest& RDSDataServiceRequest::operator=(const RDSDataServiceRequ
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from RDSDataServiceRequestPrivate.
  */
-RDSDataServiceRequest::RDSDataServiceRequest(RDSDataServiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+RDSDataServiceRequest::RDSDataServiceRequest(RDSDataServiceRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -249,7 +250,7 @@ QNetworkRequest RDSDataServiceRequest::unsignedRequest(const QUrl &endpoint) con
  * with public implementation \a q.
  */
 RDSDataServiceRequestPrivate::RDSDataServiceRequestPrivate(const RDSDataServiceRequest::Action action, RDSDataServiceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -264,8 +265,8 @@ RDSDataServiceRequestPrivate::RDSDataServiceRequestPrivate(const RDSDataServiceR
  */
 RDSDataServiceRequestPrivate::RDSDataServiceRequestPrivate(const RDSDataServiceRequestPrivate &other,
                                      RDSDataServiceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

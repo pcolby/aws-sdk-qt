@@ -59,8 +59,7 @@ DeleteBotChannelAssociationResponse::DeleteBotChannelAssociationResponse(
  */
 const DeleteBotChannelAssociationRequest * DeleteBotChannelAssociationResponse::request() const
 {
-    Q_D(const DeleteBotChannelAssociationResponse);
-    return static_cast<const DeleteBotChannelAssociationRequest *>(d->request);
+    return static_cast<const DeleteBotChannelAssociationRequest *>(LexModelBuildingServiceResponse::request());
 }
 
 /*!

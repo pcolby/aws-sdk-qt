@@ -61,8 +61,7 @@ DisassociateConnectionFromLagResponse::DisassociateConnectionFromLagResponse(
  */
 const DisassociateConnectionFromLagRequest * DisassociateConnectionFromLagResponse::request() const
 {
-    Q_D(const DisassociateConnectionFromLagResponse);
-    return static_cast<const DisassociateConnectionFromLagRequest *>(d->request);
+    return static_cast<const DisassociateConnectionFromLagRequest *>(DirectConnectResponse::request());
 }
 
 /*!

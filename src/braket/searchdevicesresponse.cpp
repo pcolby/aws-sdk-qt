@@ -56,8 +56,7 @@ SearchDevicesResponse::SearchDevicesResponse(
  */
 const SearchDevicesRequest * SearchDevicesResponse::request() const
 {
-    Q_D(const SearchDevicesResponse);
-    return static_cast<const SearchDevicesRequest *>(d->request);
+    return static_cast<const SearchDevicesRequest *>(BraketResponse::request());
 }
 
 /*!

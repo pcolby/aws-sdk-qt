@@ -61,8 +61,7 @@ ListPortfoliosResponse::ListPortfoliosResponse(
  */
 const ListPortfoliosRequest * ListPortfoliosResponse::request() const
 {
-    Q_D(const ListPortfoliosResponse);
-    return static_cast<const ListPortfoliosRequest *>(d->request);
+    return static_cast<const ListPortfoliosRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

@@ -115,8 +115,7 @@ UpdateGameSessionQueueResponse::UpdateGameSessionQueueResponse(
  */
 const UpdateGameSessionQueueRequest * UpdateGameSessionQueueResponse::request() const
 {
-    Q_D(const UpdateGameSessionQueueResponse);
-    return static_cast<const UpdateGameSessionQueueRequest *>(d->request);
+    return static_cast<const UpdateGameSessionQueueRequest *>(GameLiftResponse::request());
 }
 
 /*!

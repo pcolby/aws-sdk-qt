@@ -63,8 +63,7 @@ DeleteTableResponse::DeleteTableResponse(
  */
 const DeleteTableRequest * DeleteTableResponse::request() const
 {
-    Q_D(const DeleteTableResponse);
-    return static_cast<const DeleteTableRequest *>(d->request);
+    return static_cast<const DeleteTableRequest *>(TimestreamWriteResponse::request());
 }
 
 /*!

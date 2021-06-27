@@ -81,8 +81,7 @@ CreateStackResponse::CreateStackResponse(
  */
 const CreateStackRequest * CreateStackResponse::request() const
 {
-    Q_D(const CreateStackResponse);
-    return static_cast<const CreateStackRequest *>(d->request);
+    return static_cast<const CreateStackRequest *>(AppStreamResponse::request());
 }
 
 /*!

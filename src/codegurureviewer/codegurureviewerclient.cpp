@@ -104,16 +104,16 @@ CodeGuruReviewerClient::CodeGuruReviewerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CodeGuruReviewerClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-09-19"),
+    QStringLiteral("codeguru-reviewer"),
+    QStringLiteral("Amazon CodeGuru Reviewer"),
+    QStringLiteral("codeguru-reviewer"),
+    parent), d_ptr(new CodeGuruReviewerClientPrivate(this))
 {
-    Q_D(CodeGuruReviewerClient);
-    d->apiVersion = QStringLiteral("2019-09-19");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("codeguru-reviewer");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon CodeGuru Reviewer");
-    d->serviceName = QStringLiteral("codeguru-reviewer");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -132,16 +132,16 @@ CodeGuruReviewerClient::CodeGuruReviewerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CodeGuruReviewerClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-09-19"),
+    QStringLiteral("codeguru-reviewer"),
+    QStringLiteral("Amazon CodeGuru Reviewer"),
+    QStringLiteral("codeguru-reviewer"),
+    parent), d_ptr(new CodeGuruReviewerClientPrivate(this))
 {
-    Q_D(CodeGuruReviewerClient);
-    d->apiVersion = QStringLiteral("2019-09-19");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("codeguru-reviewer");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon CodeGuru Reviewer");
-    d->serviceName = QStringLiteral("codeguru-reviewer");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -382,10 +382,9 @@ UntagResourceResponse * CodeGuruReviewerClient::untagResource(const UntagResourc
 /*!
  * Constructs a CodeGuruReviewerClientPrivate object with public implementation \a q.
  */
-CodeGuruReviewerClientPrivate::CodeGuruReviewerClientPrivate(CodeGuruReviewerClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+CodeGuruReviewerClientPrivate::CodeGuruReviewerClientPrivate(CodeGuruReviewerClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace CodeGuruReviewer

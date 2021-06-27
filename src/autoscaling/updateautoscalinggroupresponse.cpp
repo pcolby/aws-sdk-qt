@@ -68,8 +68,7 @@ UpdateAutoScalingGroupResponse::UpdateAutoScalingGroupResponse(
  */
 const UpdateAutoScalingGroupRequest * UpdateAutoScalingGroupResponse::request() const
 {
-    Q_D(const UpdateAutoScalingGroupResponse);
-    return static_cast<const UpdateAutoScalingGroupRequest *>(d->request);
+    return static_cast<const UpdateAutoScalingGroupRequest *>(AutoScalingResponse::request());
 }
 
 /*!

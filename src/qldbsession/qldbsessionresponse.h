@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    QLDBSessionResponsePrivate * const d_ptr; ///< Internal d-pointer.
     QLDBSessionResponse(QLDBSessionResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

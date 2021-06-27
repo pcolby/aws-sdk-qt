@@ -61,8 +61,7 @@ DeleteProtectionGroupResponse::DeleteProtectionGroupResponse(
  */
 const DeleteProtectionGroupRequest * DeleteProtectionGroupResponse::request() const
 {
-    Q_D(const DeleteProtectionGroupResponse);
-    return static_cast<const DeleteProtectionGroupRequest *>(d->request);
+    return static_cast<const DeleteProtectionGroupRequest *>(ShieldResponse::request());
 }
 
 /*!

@@ -68,8 +68,7 @@ UpdateLogPatternResponse::UpdateLogPatternResponse(
  */
 const UpdateLogPatternRequest * UpdateLogPatternResponse::request() const
 {
-    Q_D(const UpdateLogPatternResponse);
-    return static_cast<const UpdateLogPatternRequest *>(d->request);
+    return static_cast<const UpdateLogPatternRequest *>(ApplicationInsightsResponse::request());
 }
 
 /*!

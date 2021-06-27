@@ -58,8 +58,7 @@ DeleteServiceQuotaIncreaseRequestFromTemplateResponse::DeleteServiceQuotaIncreas
  */
 const DeleteServiceQuotaIncreaseRequestFromTemplateRequest * DeleteServiceQuotaIncreaseRequestFromTemplateResponse::request() const
 {
-    Q_D(const DeleteServiceQuotaIncreaseRequestFromTemplateResponse);
-    return static_cast<const DeleteServiceQuotaIncreaseRequestFromTemplateRequest *>(d->request);
+    return static_cast<const DeleteServiceQuotaIncreaseRequestFromTemplateRequest *>(ServiceQuotasResponse::request());
 }
 
 /*!

@@ -61,8 +61,7 @@ AcceptPortfolioShareResponse::AcceptPortfolioShareResponse(
  */
 const AcceptPortfolioShareRequest * AcceptPortfolioShareResponse::request() const
 {
-    Q_D(const AcceptPortfolioShareResponse);
-    return static_cast<const AcceptPortfolioShareRequest *>(d->request);
+    return static_cast<const AcceptPortfolioShareRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

@@ -74,8 +74,7 @@ GetActiveNamesResponse::GetActiveNamesResponse(
  */
 const GetActiveNamesRequest * GetActiveNamesResponse::request() const
 {
-    Q_D(const GetActiveNamesResponse);
-    return static_cast<const GetActiveNamesRequest *>(d->request);
+    return static_cast<const GetActiveNamesRequest *>(LightsailResponse::request());
 }
 
 /*!

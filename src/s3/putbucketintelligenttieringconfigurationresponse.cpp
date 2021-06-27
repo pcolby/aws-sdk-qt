@@ -55,8 +55,7 @@ PutBucketIntelligentTieringConfigurationResponse::PutBucketIntelligentTieringCon
  */
 const PutBucketIntelligentTieringConfigurationRequest * PutBucketIntelligentTieringConfigurationResponse::request() const
 {
-    Q_D(const PutBucketIntelligentTieringConfigurationResponse);
-    return static_cast<const PutBucketIntelligentTieringConfigurationRequest *>(d->request);
+    return static_cast<const PutBucketIntelligentTieringConfigurationRequest *>(S3Response::request());
 }
 
 /*!

@@ -74,8 +74,7 @@ CreateInstancesResponse::CreateInstancesResponse(
  */
 const CreateInstancesRequest * CreateInstancesResponse::request() const
 {
-    Q_D(const CreateInstancesResponse);
-    return static_cast<const CreateInstancesRequest *>(d->request);
+    return static_cast<const CreateInstancesRequest *>(LightsailResponse::request());
 }
 
 /*!

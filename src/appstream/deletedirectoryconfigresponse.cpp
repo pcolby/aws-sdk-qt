@@ -81,8 +81,7 @@ DeleteDirectoryConfigResponse::DeleteDirectoryConfigResponse(
  */
 const DeleteDirectoryConfigRequest * DeleteDirectoryConfigResponse::request() const
 {
-    Q_D(const DeleteDirectoryConfigResponse);
-    return static_cast<const DeleteDirectoryConfigRequest *>(d->request);
+    return static_cast<const DeleteDirectoryConfigRequest *>(AppStreamResponse::request());
 }
 
 /*!

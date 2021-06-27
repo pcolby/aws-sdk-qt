@@ -78,8 +78,7 @@ DescribeReplayResponse::DescribeReplayResponse(
  */
 const DescribeReplayRequest * DescribeReplayResponse::request() const
 {
-    Q_D(const DescribeReplayResponse);
-    return static_cast<const DescribeReplayRequest *>(d->request);
+    return static_cast<const DescribeReplayRequest *>(CloudWatchEventsResponse::request());
 }
 
 /*!

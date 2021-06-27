@@ -72,8 +72,7 @@ DescribeReportDefinitionsResponse::DescribeReportDefinitionsResponse(
  */
 const DescribeReportDefinitionsRequest * DescribeReportDefinitionsResponse::request() const
 {
-    Q_D(const DescribeReportDefinitionsResponse);
-    return static_cast<const DescribeReportDefinitionsRequest *>(d->request);
+    return static_cast<const DescribeReportDefinitionsRequest *>(CostandUsageReportServiceResponse::request());
 }
 
 /*!

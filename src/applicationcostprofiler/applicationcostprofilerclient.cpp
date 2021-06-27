@@ -83,16 +83,16 @@ ApplicationCostProfilerClient::ApplicationCostProfilerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ApplicationCostProfilerClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-09-10"),
+    QStringLiteral("application-cost-profiler"),
+    QStringLiteral("AWS Application Cost Profiler"),
+    QStringLiteral("application-cost-profiler"),
+    parent), d_ptr(new ApplicationCostProfilerClientPrivate(this))
 {
-    Q_D(ApplicationCostProfilerClient);
-    d->apiVersion = QStringLiteral("2020-09-10");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("application-cost-profiler");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Application Cost Profiler");
-    d->serviceName = QStringLiteral("application-cost-profiler");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -111,16 +111,16 @@ ApplicationCostProfilerClient::ApplicationCostProfilerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ApplicationCostProfilerClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-09-10"),
+    QStringLiteral("application-cost-profiler"),
+    QStringLiteral("AWS Application Cost Profiler"),
+    QStringLiteral("application-cost-profiler"),
+    parent), d_ptr(new ApplicationCostProfilerClientPrivate(this))
 {
-    Q_D(ApplicationCostProfilerClient);
-    d->apiVersion = QStringLiteral("2020-09-10");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("application-cost-profiler");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Application Cost Profiler");
-    d->serviceName = QStringLiteral("application-cost-profiler");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -222,10 +222,9 @@ UpdateReportDefinitionResponse * ApplicationCostProfilerClient::updateReportDefi
 /*!
  * Constructs a ApplicationCostProfilerClientPrivate object with public implementation \a q.
  */
-ApplicationCostProfilerClientPrivate::ApplicationCostProfilerClientPrivate(ApplicationCostProfilerClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+ApplicationCostProfilerClientPrivate::ApplicationCostProfilerClientPrivate(ApplicationCostProfilerClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace ApplicationCostProfiler

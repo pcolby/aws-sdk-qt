@@ -56,8 +56,7 @@ ClearQuerySuggestionsResponse::ClearQuerySuggestionsResponse(
  */
 const ClearQuerySuggestionsRequest * ClearQuerySuggestionsResponse::request() const
 {
-    Q_D(const ClearQuerySuggestionsResponse);
-    return static_cast<const ClearQuerySuggestionsRequest *>(d->request);
+    return static_cast<const ClearQuerySuggestionsRequest *>(kendraResponse::request());
 }
 
 /*!

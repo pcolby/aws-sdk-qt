@@ -63,8 +63,7 @@ CancelStatementResponse::CancelStatementResponse(
  */
 const CancelStatementRequest * CancelStatementResponse::request() const
 {
-    Q_D(const CancelStatementResponse);
-    return static_cast<const CancelStatementRequest *>(d->request);
+    return static_cast<const CancelStatementRequest *>(RedshiftDataAPIServiceResponse::request());
 }
 
 /*!

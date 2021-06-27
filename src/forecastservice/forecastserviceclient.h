@@ -151,6 +151,12 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateDatasetGroupResponse * updateDatasetGroup(const UpdateDatasetGroupRequest &request);
 
+protected:
+    /// @cond internal
+    ForecastServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
+    ForecastServiceClient(ForecastServiceClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(ForecastServiceClient)
     Q_DISABLE_COPY(ForecastServiceClient)

@@ -57,8 +57,7 @@ StartRxNormInferenceJobResponse::StartRxNormInferenceJobResponse(
  */
 const StartRxNormInferenceJobRequest * StartRxNormInferenceJobResponse::request() const
 {
-    Q_D(const StartRxNormInferenceJobResponse);
-    return static_cast<const StartRxNormInferenceJobRequest *>(d->request);
+    return static_cast<const StartRxNormInferenceJobRequest *>(ComprehendMedicalResponse::request());
 }
 
 /*!

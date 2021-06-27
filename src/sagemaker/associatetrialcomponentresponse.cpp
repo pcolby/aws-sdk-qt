@@ -70,8 +70,7 @@ AssociateTrialComponentResponse::AssociateTrialComponentResponse(
  */
 const AssociateTrialComponentRequest * AssociateTrialComponentResponse::request() const
 {
-    Q_D(const AssociateTrialComponentResponse);
-    return static_cast<const AssociateTrialComponentRequest *>(d->request);
+    return static_cast<const AssociateTrialComponentRequest *>(SageMakerResponse::request());
 }
 
 /*!

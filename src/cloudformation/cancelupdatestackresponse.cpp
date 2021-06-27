@@ -77,8 +77,7 @@ CancelUpdateStackResponse::CancelUpdateStackResponse(
  */
 const CancelUpdateStackRequest * CancelUpdateStackResponse::request() const
 {
-    Q_D(const CancelUpdateStackResponse);
-    return static_cast<const CancelUpdateStackRequest *>(d->request);
+    return static_cast<const CancelUpdateStackRequest *>(CloudFormationResponse::request());
 }
 
 /*!

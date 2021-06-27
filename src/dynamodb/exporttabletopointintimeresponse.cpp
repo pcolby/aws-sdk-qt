@@ -74,8 +74,7 @@ ExportTableToPointInTimeResponse::ExportTableToPointInTimeResponse(
  */
 const ExportTableToPointInTimeRequest * ExportTableToPointInTimeResponse::request() const
 {
-    Q_D(const ExportTableToPointInTimeResponse);
-    return static_cast<const ExportTableToPointInTimeRequest *>(d->request);
+    return static_cast<const ExportTableToPointInTimeRequest *>(DynamoDBResponse::request());
 }
 
 /*!

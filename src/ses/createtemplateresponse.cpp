@@ -66,8 +66,7 @@ CreateTemplateResponse::CreateTemplateResponse(
  */
 const CreateTemplateRequest * CreateTemplateResponse::request() const
 {
-    Q_D(const CreateTemplateResponse);
-    return static_cast<const CreateTemplateRequest *>(d->request);
+    return static_cast<const CreateTemplateRequest *>(SesResponse::request());
 }
 
 /*!

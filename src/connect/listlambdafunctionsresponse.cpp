@@ -79,8 +79,7 @@ ListLambdaFunctionsResponse::ListLambdaFunctionsResponse(
  */
 const ListLambdaFunctionsRequest * ListLambdaFunctionsResponse::request() const
 {
-    Q_D(const ListLambdaFunctionsResponse);
-    return static_cast<const ListLambdaFunctionsRequest *>(d->request);
+    return static_cast<const ListLambdaFunctionsRequest *>(ConnectResponse::request());
 }
 
 /*!

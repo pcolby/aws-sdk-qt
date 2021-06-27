@@ -98,8 +98,7 @@ ListRoomsResponse::ListRoomsResponse(
  */
 const ListRoomsRequest * ListRoomsResponse::request() const
 {
-    Q_D(const ListRoomsResponse);
-    return static_cast<const ListRoomsRequest *>(d->request);
+    return static_cast<const ListRoomsRequest *>(ChimeResponse::request());
 }
 
 /*!

@@ -83,8 +83,7 @@ ConfigureHealthCheckResponse::ConfigureHealthCheckResponse(
  */
 const ConfigureHealthCheckRequest * ConfigureHealthCheckResponse::request() const
 {
-    Q_D(const ConfigureHealthCheckResponse);
-    return static_cast<const ConfigureHealthCheckRequest *>(d->request);
+    return static_cast<const ConfigureHealthCheckRequest *>(ElasticLoadBalancingResponse::request());
 }
 
 /*!

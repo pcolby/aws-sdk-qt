@@ -56,8 +56,7 @@ DeleteMedicalTranscriptionJobResponse::DeleteMedicalTranscriptionJobResponse(
  */
 const DeleteMedicalTranscriptionJobRequest * DeleteMedicalTranscriptionJobResponse::request() const
 {
-    Q_D(const DeleteMedicalTranscriptionJobResponse);
-    return static_cast<const DeleteMedicalTranscriptionJobRequest *>(d->request);
+    return static_cast<const DeleteMedicalTranscriptionJobRequest *>(TranscribeServiceResponse::request());
 }
 
 /*!

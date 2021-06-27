@@ -55,8 +55,7 @@ GetBucketCorsResponse::GetBucketCorsResponse(
  */
 const GetBucketCorsRequest * GetBucketCorsResponse::request() const
 {
-    Q_D(const GetBucketCorsResponse);
-    return static_cast<const GetBucketCorsRequest *>(d->request);
+    return static_cast<const GetBucketCorsRequest *>(S3Response::request());
 }
 
 /*!

@@ -60,8 +60,7 @@ ListUserGroupsResponse::ListUserGroupsResponse(
  */
 const ListUserGroupsRequest * ListUserGroupsResponse::request() const
 {
-    Q_D(const ListUserGroupsResponse);
-    return static_cast<const ListUserGroupsRequest *>(d->request);
+    return static_cast<const ListUserGroupsRequest *>(QuickSightResponse::request());
 }
 
 /*!

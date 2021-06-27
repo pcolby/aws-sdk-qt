@@ -240,8 +240,7 @@ DeregisterWebhookWithThirdPartyResponse::DeregisterWebhookWithThirdPartyResponse
  */
 const DeregisterWebhookWithThirdPartyRequest * DeregisterWebhookWithThirdPartyResponse::request() const
 {
-    Q_D(const DeregisterWebhookWithThirdPartyResponse);
-    return static_cast<const DeregisterWebhookWithThirdPartyRequest *>(d->request);
+    return static_cast<const DeregisterWebhookWithThirdPartyRequest *>(CodePipelineResponse::request());
 }
 
 /*!

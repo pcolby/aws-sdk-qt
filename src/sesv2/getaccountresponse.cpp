@@ -88,8 +88,7 @@ GetAccountResponse::GetAccountResponse(
  */
 const GetAccountRequest * GetAccountResponse::request() const
 {
-    Q_D(const GetAccountResponse);
-    return static_cast<const GetAccountRequest *>(d->request);
+    return static_cast<const GetAccountRequest *>(Sesv2Response::request());
 }
 
 /*!

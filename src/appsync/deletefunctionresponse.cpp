@@ -56,8 +56,7 @@ DeleteFunctionResponse::DeleteFunctionResponse(
  */
 const DeleteFunctionRequest * DeleteFunctionResponse::request() const
 {
-    Q_D(const DeleteFunctionResponse);
-    return static_cast<const DeleteFunctionRequest *>(d->request);
+    return static_cast<const DeleteFunctionRequest *>(AppSyncResponse::request());
 }
 
 /*!

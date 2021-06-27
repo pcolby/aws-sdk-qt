@@ -58,8 +58,7 @@ GetLoggerDefinitionVersionResponse::GetLoggerDefinitionVersionResponse(
  */
 const GetLoggerDefinitionVersionRequest * GetLoggerDefinitionVersionResponse::request() const
 {
-    Q_D(const GetLoggerDefinitionVersionResponse);
-    return static_cast<const GetLoggerDefinitionVersionRequest *>(d->request);
+    return static_cast<const GetLoggerDefinitionVersionRequest *>(GreengrassResponse::request());
 }
 
 /*!

@@ -82,8 +82,7 @@ DeleteRegistrationCodeResponse::DeleteRegistrationCodeResponse(
  */
 const DeleteRegistrationCodeRequest * DeleteRegistrationCodeResponse::request() const
 {
-    Q_D(const DeleteRegistrationCodeResponse);
-    return static_cast<const DeleteRegistrationCodeRequest *>(d->request);
+    return static_cast<const DeleteRegistrationCodeRequest *>(IoTResponse::request());
 }
 
 /*!

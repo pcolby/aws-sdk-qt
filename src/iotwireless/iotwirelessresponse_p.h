@@ -20,14 +20,12 @@
 #ifndef QTAWS_IOTWIRELESSRESPONSE_P_H
 #define QTAWS_IOTWIRELESSRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace IoTWireless {
 
 class IoTWirelessResponse;
 
-class IoTWirelessResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class IoTWirelessResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    IoTWirelessResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoTWirelessResponse)

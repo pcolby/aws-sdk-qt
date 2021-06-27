@@ -73,8 +73,7 @@ BatchGetNamedQueryResponse::BatchGetNamedQueryResponse(
  */
 const BatchGetNamedQueryRequest * BatchGetNamedQueryResponse::request() const
 {
-    Q_D(const BatchGetNamedQueryResponse);
-    return static_cast<const BatchGetNamedQueryRequest *>(d->request);
+    return static_cast<const BatchGetNamedQueryRequest *>(AthenaResponse::request());
 }
 
 /*!

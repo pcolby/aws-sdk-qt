@@ -157,16 +157,16 @@ SnsClient::SnsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SnsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2010-03-31"),
+    QStringLiteral("sns"),
+    QStringLiteral("Amazon Simple Notification Service"),
+    QStringLiteral("sns"),
+    parent), d_ptr(new SnsClientPrivate(this))
 {
-    Q_D(SnsClient);
-    d->apiVersion = QStringLiteral("2010-03-31");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("sns");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Simple Notification Service");
-    d->serviceName = QStringLiteral("sns");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -185,16 +185,16 @@ SnsClient::SnsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SnsClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2010-03-31"),
+    QStringLiteral("sns"),
+    QStringLiteral("Amazon Simple Notification Service"),
+    QStringLiteral("sns"),
+    parent), d_ptr(new SnsClientPrivate(this))
 {
-    Q_D(SnsClient);
-    d->apiVersion = QStringLiteral("2010-03-31");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("sns");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Simple Notification Service");
-    d->serviceName = QStringLiteral("sns");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -988,10 +988,9 @@ VerifySMSSandboxPhoneNumberResponse * SnsClient::verifySMSSandboxPhoneNumber(con
 /*!
  * Constructs a SnsClientPrivate object with public implementation \a q.
  */
-SnsClientPrivate::SnsClientPrivate(SnsClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+SnsClientPrivate::SnsClientPrivate(SnsClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace SNS

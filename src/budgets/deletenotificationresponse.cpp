@@ -116,8 +116,7 @@ DeleteNotificationResponse::DeleteNotificationResponse(
  */
 const DeleteNotificationRequest * DeleteNotificationResponse::request() const
 {
-    Q_D(const DeleteNotificationResponse);
-    return static_cast<const DeleteNotificationRequest *>(d->request);
+    return static_cast<const DeleteNotificationRequest *>(BudgetsResponse::request());
 }
 
 /*!

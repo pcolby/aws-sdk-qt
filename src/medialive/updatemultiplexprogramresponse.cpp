@@ -55,8 +55,7 @@ UpdateMultiplexProgramResponse::UpdateMultiplexProgramResponse(
  */
 const UpdateMultiplexProgramRequest * UpdateMultiplexProgramResponse::request() const
 {
-    Q_D(const UpdateMultiplexProgramResponse);
-    return static_cast<const UpdateMultiplexProgramRequest *>(d->request);
+    return static_cast<const UpdateMultiplexProgramRequest *>(MediaLiveResponse::request());
 }
 
 /*!

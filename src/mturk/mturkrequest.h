@@ -95,6 +95,7 @@ public:
 
 protected:
     /// @cond internal
+    MTurkRequestPrivate * const d_ptr; ///< Internal d-pointer.
     MTurkRequest(MTurkRequestPrivate * const d);
     /// @endcond
 

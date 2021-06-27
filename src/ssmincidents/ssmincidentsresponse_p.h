@@ -20,14 +20,12 @@
 #ifndef QTAWS_SSMINCIDENTSRESPONSE_P_H
 #define QTAWS_SSMINCIDENTSRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace SSMIncidents {
 
 class SSMIncidentsResponse;
 
-class SSMIncidentsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class SSMIncidentsResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    SSMIncidentsResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SSMIncidentsResponse)

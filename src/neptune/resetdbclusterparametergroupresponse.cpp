@@ -72,8 +72,7 @@ ResetDBClusterParameterGroupResponse::ResetDBClusterParameterGroupResponse(
  */
 const ResetDBClusterParameterGroupRequest * ResetDBClusterParameterGroupResponse::request() const
 {
-    Q_D(const ResetDBClusterParameterGroupResponse);
-    return static_cast<const ResetDBClusterParameterGroupRequest *>(d->request);
+    return static_cast<const ResetDBClusterParameterGroupRequest *>(NeptuneResponse::request());
 }
 
 /*!

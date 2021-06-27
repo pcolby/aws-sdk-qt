@@ -66,8 +66,7 @@ DeletePlaybackConfigurationResponse::DeletePlaybackConfigurationResponse(
  */
 const DeletePlaybackConfigurationRequest * DeletePlaybackConfigurationResponse::request() const
 {
-    Q_D(const DeletePlaybackConfigurationResponse);
-    return static_cast<const DeletePlaybackConfigurationRequest *>(d->request);
+    return static_cast<const DeletePlaybackConfigurationRequest *>(MediaTailorResponse::request());
 }
 
 /*!

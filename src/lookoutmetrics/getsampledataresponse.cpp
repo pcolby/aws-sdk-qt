@@ -58,8 +58,7 @@ GetSampleDataResponse::GetSampleDataResponse(
  */
 const GetSampleDataRequest * GetSampleDataResponse::request() const
 {
-    Q_D(const GetSampleDataResponse);
-    return static_cast<const GetSampleDataRequest *>(d->request);
+    return static_cast<const GetSampleDataRequest *>(LookoutMetricsResponse::request());
 }
 
 /*!

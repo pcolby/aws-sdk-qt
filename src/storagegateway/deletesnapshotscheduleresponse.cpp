@@ -124,8 +124,7 @@ DeleteSnapshotScheduleResponse::DeleteSnapshotScheduleResponse(
  */
 const DeleteSnapshotScheduleRequest * DeleteSnapshotScheduleResponse::request() const
 {
-    Q_D(const DeleteSnapshotScheduleResponse);
-    return static_cast<const DeleteSnapshotScheduleRequest *>(d->request);
+    return static_cast<const DeleteSnapshotScheduleRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

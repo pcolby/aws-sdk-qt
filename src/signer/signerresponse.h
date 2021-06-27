@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    signerResponsePrivate * const d_ptr; ///< Internal d-pointer.
     signerResponse(signerResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

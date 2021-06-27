@@ -87,8 +87,7 @@ CreateInstanceExportTaskResponse::CreateInstanceExportTaskResponse(
  */
 const CreateInstanceExportTaskRequest * CreateInstanceExportTaskResponse::request() const
 {
-    Q_D(const CreateInstanceExportTaskResponse);
-    return static_cast<const CreateInstanceExportTaskRequest *>(d->request);
+    return static_cast<const CreateInstanceExportTaskRequest *>(Ec2Response::request());
 }
 
 /*!

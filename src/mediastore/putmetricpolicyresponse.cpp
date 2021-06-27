@@ -57,8 +57,7 @@ PutMetricPolicyResponse::PutMetricPolicyResponse(
  */
 const PutMetricPolicyRequest * PutMetricPolicyResponse::request() const
 {
-    Q_D(const PutMetricPolicyResponse);
-    return static_cast<const PutMetricPolicyRequest *>(d->request);
+    return static_cast<const PutMetricPolicyRequest *>(MediaStoreResponse::request());
 }
 
 /*!

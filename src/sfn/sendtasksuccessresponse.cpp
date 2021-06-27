@@ -74,8 +74,7 @@ SendTaskSuccessResponse::SendTaskSuccessResponse(
  */
 const SendTaskSuccessRequest * SendTaskSuccessResponse::request() const
 {
-    Q_D(const SendTaskSuccessResponse);
-    return static_cast<const SendTaskSuccessRequest *>(d->request);
+    return static_cast<const SendTaskSuccessRequest *>(SfnResponse::request());
 }
 
 /*!

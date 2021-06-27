@@ -62,8 +62,7 @@ GetAuthorizationTokenResponse::GetAuthorizationTokenResponse(
  */
 const GetAuthorizationTokenRequest * GetAuthorizationTokenResponse::request() const
 {
-    Q_D(const GetAuthorizationTokenResponse);
-    return static_cast<const GetAuthorizationTokenRequest *>(d->request);
+    return static_cast<const GetAuthorizationTokenRequest *>(EcrResponse::request());
 }
 
 /*!

@@ -158,6 +158,7 @@ public:
 
 protected:
     /// @cond internal
+    ConnectRequestPrivate * const d_ptr; ///< Internal d-pointer.
     ConnectRequest(ConnectRequestPrivate * const d);
     /// @endcond
 

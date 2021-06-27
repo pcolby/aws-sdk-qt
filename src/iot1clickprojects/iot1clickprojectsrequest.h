@@ -72,6 +72,7 @@ public:
 
 protected:
     /// @cond internal
+    IoT1ClickProjectsRequestPrivate * const d_ptr; ///< Internal d-pointer.
     IoT1ClickProjectsRequest(IoT1ClickProjectsRequestPrivate * const d);
     /// @endcond
 

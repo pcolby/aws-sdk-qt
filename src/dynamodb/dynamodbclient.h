@@ -196,6 +196,12 @@ public slots:
     UpdateTableReplicaAutoScalingResponse * updateTableReplicaAutoScaling(const UpdateTableReplicaAutoScalingRequest &request);
     UpdateTimeToLiveResponse * updateTimeToLive(const UpdateTimeToLiveRequest &request);
 
+protected:
+    /// @cond internal
+    DynamoDBClientPrivate * const d_ptr; ///< Internal d-pointer.
+    DynamoDBClient(DynamoDBClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(DynamoDBClient)
     Q_DISABLE_COPY(DynamoDBClient)

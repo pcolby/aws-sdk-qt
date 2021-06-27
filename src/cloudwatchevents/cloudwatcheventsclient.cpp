@@ -184,16 +184,16 @@ CloudWatchEventsClient::CloudWatchEventsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CloudWatchEventsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2015-10-07"),
+    QStringLiteral("events"),
+    QStringLiteral("Amazon CloudWatch Events"),
+    QStringLiteral("events"),
+    parent), d_ptr(new CloudWatchEventsClientPrivate(this))
 {
-    Q_D(CloudWatchEventsClient);
-    d->apiVersion = QStringLiteral("2015-10-07");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("events");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon CloudWatch Events");
-    d->serviceName = QStringLiteral("events");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -212,16 +212,16 @@ CloudWatchEventsClient::CloudWatchEventsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new CloudWatchEventsClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2015-10-07"),
+    QStringLiteral("events"),
+    QStringLiteral("Amazon CloudWatch Events"),
+    QStringLiteral("events"),
+    parent), d_ptr(new CloudWatchEventsClientPrivate(this))
 {
-    Q_D(CloudWatchEventsClient);
-    d->apiVersion = QStringLiteral("2015-10-07");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("events");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon CloudWatch Events");
-    d->serviceName = QStringLiteral("events");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -1307,10 +1307,9 @@ UpdateConnectionResponse * CloudWatchEventsClient::updateConnection(const Update
 /*!
  * Constructs a CloudWatchEventsClientPrivate object with public implementation \a q.
  */
-CloudWatchEventsClientPrivate::CloudWatchEventsClientPrivate(CloudWatchEventsClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+CloudWatchEventsClientPrivate::CloudWatchEventsClientPrivate(CloudWatchEventsClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace CloudWatchEvents

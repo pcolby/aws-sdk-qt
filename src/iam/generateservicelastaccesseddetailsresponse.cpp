@@ -62,8 +62,7 @@ GenerateServiceLastAccessedDetailsResponse::GenerateServiceLastAccessedDetailsRe
  */
 const GenerateServiceLastAccessedDetailsRequest * GenerateServiceLastAccessedDetailsResponse::request() const
 {
-    Q_D(const GenerateServiceLastAccessedDetailsResponse);
-    return static_cast<const GenerateServiceLastAccessedDetailsRequest *>(d->request);
+    return static_cast<const GenerateServiceLastAccessedDetailsRequest *>(IamResponse::request());
 }
 
 /*!

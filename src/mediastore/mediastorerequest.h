@@ -77,6 +77,7 @@ public:
 
 protected:
     /// @cond internal
+    MediaStoreRequestPrivate * const d_ptr; ///< Internal d-pointer.
     MediaStoreRequest(MediaStoreRequestPrivate * const d);
     /// @endcond
 

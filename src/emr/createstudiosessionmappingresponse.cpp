@@ -58,8 +58,7 @@ CreateStudioSessionMappingResponse::CreateStudioSessionMappingResponse(
  */
 const CreateStudioSessionMappingRequest * CreateStudioSessionMappingResponse::request() const
 {
-    Q_D(const CreateStudioSessionMappingResponse);
-    return static_cast<const CreateStudioSessionMappingRequest *>(d->request);
+    return static_cast<const CreateStudioSessionMappingRequest *>(EmrResponse::request());
 }
 
 /*!

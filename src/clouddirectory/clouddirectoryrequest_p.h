@@ -20,15 +20,12 @@
 #ifndef QTAWS_CLOUDDIRECTORYREQUEST_P_H
 #define QTAWS_CLOUDDIRECTORYREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "clouddirectoryrequest.h"
-
 namespace QtAws {
 namespace CloudDirectory {
 
 class CloudDirectoryRequest;
 
-class CloudDirectoryRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class CloudDirectoryRequestPrivate {
 
 public:
     CloudDirectoryRequest::Action action; ///< CloudDirectory action to be performed.
@@ -39,6 +36,9 @@ public:
     CloudDirectoryRequestPrivate(const CloudDirectoryRequestPrivate &other, CloudDirectoryRequest * const q);
 
     static QString toString(const CloudDirectoryRequest::Action &action);
+
+protected:
+    CloudDirectoryRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CloudDirectoryRequest)

@@ -66,8 +66,7 @@ VerifyUserAttributeResponse::VerifyUserAttributeResponse(
  */
 const VerifyUserAttributeRequest * VerifyUserAttributeResponse::request() const
 {
-    Q_D(const VerifyUserAttributeResponse);
-    return static_cast<const VerifyUserAttributeRequest *>(d->request);
+    return static_cast<const VerifyUserAttributeRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

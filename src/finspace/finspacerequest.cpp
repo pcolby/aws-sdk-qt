@@ -50,7 +50,7 @@ namespace finspace {
  * Constructs a finspaceRequest object for finspace \a action.
  */
 finspaceRequest::finspaceRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new finspaceRequestPrivate(action, this))
+    : d_ptr(new finspaceRequestPrivate(action, this))
 {
 
 }
@@ -59,7 +59,8 @@ finspaceRequest::finspaceRequest(const Action action)
  * Constructs a copy of \a other.
  */
 finspaceRequest::finspaceRequest(const finspaceRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new finspaceRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new finspaceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -82,7 +83,7 @@ finspaceRequest& finspaceRequest::operator=(const finspaceRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from finspaceRequestPrivate.
  */
-finspaceRequest::finspaceRequest(finspaceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+finspaceRequest::finspaceRequest(finspaceRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -251,7 +252,7 @@ QNetworkRequest finspaceRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 finspaceRequestPrivate::finspaceRequestPrivate(const finspaceRequest::Action action, finspaceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -266,8 +267,8 @@ finspaceRequestPrivate::finspaceRequestPrivate(const finspaceRequest::Action act
  */
 finspaceRequestPrivate::finspaceRequestPrivate(const finspaceRequestPrivate &other,
                                      finspaceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

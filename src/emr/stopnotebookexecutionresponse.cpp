@@ -58,8 +58,7 @@ StopNotebookExecutionResponse::StopNotebookExecutionResponse(
  */
 const StopNotebookExecutionRequest * StopNotebookExecutionResponse::request() const
 {
-    Q_D(const StopNotebookExecutionResponse);
-    return static_cast<const StopNotebookExecutionRequest *>(d->request);
+    return static_cast<const StopNotebookExecutionRequest *>(EmrResponse::request());
 }
 
 /*!

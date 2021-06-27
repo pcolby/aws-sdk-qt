@@ -56,8 +56,7 @@ DeleteFaqResponse::DeleteFaqResponse(
  */
 const DeleteFaqRequest * DeleteFaqResponse::request() const
 {
-    Q_D(const DeleteFaqResponse);
-    return static_cast<const DeleteFaqRequest *>(d->request);
+    return static_cast<const DeleteFaqRequest *>(kendraResponse::request());
 }
 
 /*!

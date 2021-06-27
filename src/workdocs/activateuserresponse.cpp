@@ -84,8 +84,7 @@ ActivateUserResponse::ActivateUserResponse(
  */
 const ActivateUserRequest * ActivateUserResponse::request() const
 {
-    Q_D(const ActivateUserResponse);
-    return static_cast<const ActivateUserRequest *>(d->request);
+    return static_cast<const ActivateUserRequest *>(WorkDocsResponse::request());
 }
 
 /*!

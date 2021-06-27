@@ -56,8 +56,7 @@ GetGroupsResponse::GetGroupsResponse(
  */
 const GetGroupsRequest * GetGroupsResponse::request() const
 {
-    Q_D(const GetGroupsResponse);
-    return static_cast<const GetGroupsRequest *>(d->request);
+    return static_cast<const GetGroupsRequest *>(XRayResponse::request());
 }
 
 /*!

@@ -72,8 +72,7 @@ DeleteComponentResponse::DeleteComponentResponse(
  */
 const DeleteComponentRequest * DeleteComponentResponse::request() const
 {
-    Q_D(const DeleteComponentResponse);
-    return static_cast<const DeleteComponentRequest *>(d->request);
+    return static_cast<const DeleteComponentRequest *>(GreengrassV2Response::request());
 }
 
 /*!

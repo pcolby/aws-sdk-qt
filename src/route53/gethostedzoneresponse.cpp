@@ -56,8 +56,7 @@ GetHostedZoneResponse::GetHostedZoneResponse(
  */
 const GetHostedZoneRequest * GetHostedZoneResponse::request() const
 {
-    Q_D(const GetHostedZoneResponse);
-    return static_cast<const GetHostedZoneRequest *>(d->request);
+    return static_cast<const GetHostedZoneRequest *>(Route53Response::request());
 }
 
 /*!

@@ -98,8 +98,7 @@ UpdatePatchBaselineResponse::UpdatePatchBaselineResponse(
  */
 const UpdatePatchBaselineRequest * UpdatePatchBaselineResponse::request() const
 {
-    Q_D(const UpdatePatchBaselineResponse);
-    return static_cast<const UpdatePatchBaselineRequest *>(d->request);
+    return static_cast<const UpdatePatchBaselineRequest *>(SsmResponse::request());
 }
 
 /*!

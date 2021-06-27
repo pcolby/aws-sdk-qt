@@ -161,8 +161,7 @@ DeregisterInstanceResponse::DeregisterInstanceResponse(
  */
 const DeregisterInstanceRequest * DeregisterInstanceResponse::request() const
 {
-    Q_D(const DeregisterInstanceResponse);
-    return static_cast<const DeregisterInstanceRequest *>(d->request);
+    return static_cast<const DeregisterInstanceRequest *>(OpsWorksResponse::request());
 }
 
 /*!

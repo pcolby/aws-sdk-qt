@@ -82,8 +82,7 @@ SearchIndexResponse::SearchIndexResponse(
  */
 const SearchIndexRequest * SearchIndexResponse::request() const
 {
-    Q_D(const SearchIndexResponse);
-    return static_cast<const SearchIndexRequest *>(d->request);
+    return static_cast<const SearchIndexRequest *>(IoTResponse::request());
 }
 
 /*!

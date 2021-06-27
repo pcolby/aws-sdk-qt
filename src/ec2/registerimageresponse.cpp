@@ -87,8 +87,7 @@ RegisterImageResponse::RegisterImageResponse(
  */
 const RegisterImageRequest * RegisterImageResponse::request() const
 {
-    Q_D(const RegisterImageResponse);
-    return static_cast<const RegisterImageRequest *>(d->request);
+    return static_cast<const RegisterImageRequest *>(Ec2Response::request());
 }
 
 /*!

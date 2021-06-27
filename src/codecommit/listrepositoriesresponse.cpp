@@ -439,8 +439,7 @@ ListRepositoriesResponse::ListRepositoriesResponse(
  */
 const ListRepositoriesRequest * ListRepositoriesResponse::request() const
 {
-    Q_D(const ListRepositoriesResponse);
-    return static_cast<const ListRepositoriesRequest *>(d->request);
+    return static_cast<const ListRepositoriesRequest *>(CodeCommitResponse::request());
 }
 
 /*!

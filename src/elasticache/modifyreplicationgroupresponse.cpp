@@ -69,8 +69,7 @@ ModifyReplicationGroupResponse::ModifyReplicationGroupResponse(
  */
 const ModifyReplicationGroupRequest * ModifyReplicationGroupResponse::request() const
 {
-    Q_D(const ModifyReplicationGroupResponse);
-    return static_cast<const ModifyReplicationGroupRequest *>(d->request);
+    return static_cast<const ModifyReplicationGroupRequest *>(ElastiCacheResponse::request());
 }
 
 /*!

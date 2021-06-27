@@ -82,8 +82,7 @@ DescribeDomainConfigurationResponse::DescribeDomainConfigurationResponse(
  */
 const DescribeDomainConfigurationRequest * DescribeDomainConfigurationResponse::request() const
 {
-    Q_D(const DescribeDomainConfigurationResponse);
-    return static_cast<const DescribeDomainConfigurationRequest *>(d->request);
+    return static_cast<const DescribeDomainConfigurationRequest *>(IoTResponse::request());
 }
 
 /*!

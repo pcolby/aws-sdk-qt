@@ -81,6 +81,7 @@ public:
 
 protected:
     /// @cond internal
+    TransferRequestPrivate * const d_ptr; ///< Internal d-pointer.
     TransferRequest(TransferRequestPrivate * const d);
     /// @endcond
 

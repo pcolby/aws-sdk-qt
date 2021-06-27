@@ -59,8 +59,7 @@ CheckoutBorrowLicenseResponse::CheckoutBorrowLicenseResponse(
  */
 const CheckoutBorrowLicenseRequest * CheckoutBorrowLicenseResponse::request() const
 {
-    Q_D(const CheckoutBorrowLicenseResponse);
-    return static_cast<const CheckoutBorrowLicenseRequest *>(d->request);
+    return static_cast<const CheckoutBorrowLicenseRequest *>(LicenseManagerResponse::request());
 }
 
 /*!

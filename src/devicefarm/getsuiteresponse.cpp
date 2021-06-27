@@ -75,8 +75,7 @@ GetSuiteResponse::GetSuiteResponse(
  */
 const GetSuiteRequest * GetSuiteResponse::request() const
 {
-    Q_D(const GetSuiteResponse);
-    return static_cast<const GetSuiteRequest *>(d->request);
+    return static_cast<const GetSuiteRequest *>(DeviceFarmResponse::request());
 }
 
 /*!

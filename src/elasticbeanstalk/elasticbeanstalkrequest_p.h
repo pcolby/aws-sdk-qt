@@ -20,15 +20,12 @@
 #ifndef QTAWS_ELASTICBEANSTALKREQUEST_P_H
 #define QTAWS_ELASTICBEANSTALKREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "elasticbeanstalkrequest.h"
-
 namespace QtAws {
 namespace ElasticBeanstalk {
 
 class ElasticBeanstalkRequest;
 
-class ElasticBeanstalkRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ElasticBeanstalkRequestPrivate {
 
 public:
     ElasticBeanstalkRequest::Action action; ///< ElasticBeanstalk action to be performed.
@@ -39,6 +36,9 @@ public:
     ElasticBeanstalkRequestPrivate(const ElasticBeanstalkRequestPrivate &other, ElasticBeanstalkRequest * const q);
 
     static QString toString(const ElasticBeanstalkRequest::Action &action);
+
+protected:
+    ElasticBeanstalkRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ElasticBeanstalkRequest)

@@ -69,8 +69,7 @@ UntagCertificateAuthorityResponse::UntagCertificateAuthorityResponse(
  */
 const UntagCertificateAuthorityRequest * UntagCertificateAuthorityResponse::request() const
 {
-    Q_D(const UntagCertificateAuthorityResponse);
-    return static_cast<const UntagCertificateAuthorityRequest *>(d->request);
+    return static_cast<const UntagCertificateAuthorityRequest *>(AcmpcaResponse::request());
 }
 
 /*!

@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    NetworkFirewallResponsePrivate * const d_ptr; ///< Internal d-pointer.
     NetworkFirewallResponse(NetworkFirewallResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

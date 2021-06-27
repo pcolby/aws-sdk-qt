@@ -88,8 +88,7 @@ PutAccountDedicatedIpWarmupAttributesResponse::PutAccountDedicatedIpWarmupAttrib
  */
 const PutAccountDedicatedIpWarmupAttributesRequest * PutAccountDedicatedIpWarmupAttributesResponse::request() const
 {
-    Q_D(const PutAccountDedicatedIpWarmupAttributesResponse);
-    return static_cast<const PutAccountDedicatedIpWarmupAttributesRequest *>(d->request);
+    return static_cast<const PutAccountDedicatedIpWarmupAttributesRequest *>(Sesv2Response::request());
 }
 
 /*!

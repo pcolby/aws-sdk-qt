@@ -58,8 +58,7 @@ ListAWSDefaultServiceQuotasResponse::ListAWSDefaultServiceQuotasResponse(
  */
 const ListAWSDefaultServiceQuotasRequest * ListAWSDefaultServiceQuotasResponse::request() const
 {
-    Q_D(const ListAWSDefaultServiceQuotasResponse);
-    return static_cast<const ListAWSDefaultServiceQuotasRequest *>(d->request);
+    return static_cast<const ListAWSDefaultServiceQuotasRequest *>(ServiceQuotasResponse::request());
 }
 
 /*!

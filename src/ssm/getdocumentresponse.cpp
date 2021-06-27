@@ -98,8 +98,7 @@ GetDocumentResponse::GetDocumentResponse(
  */
 const GetDocumentRequest * GetDocumentResponse::request() const
 {
-    Q_D(const GetDocumentResponse);
-    return static_cast<const GetDocumentRequest *>(d->request);
+    return static_cast<const GetDocumentRequest *>(SsmResponse::request());
 }
 
 /*!

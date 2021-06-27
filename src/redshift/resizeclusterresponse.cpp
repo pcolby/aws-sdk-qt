@@ -85,8 +85,7 @@ ResizeClusterResponse::ResizeClusterResponse(
  */
 const ResizeClusterRequest * ResizeClusterResponse::request() const
 {
-    Q_D(const ResizeClusterResponse);
-    return static_cast<const ResizeClusterRequest *>(d->request);
+    return static_cast<const ResizeClusterRequest *>(RedshiftResponse::request());
 }
 
 /*!

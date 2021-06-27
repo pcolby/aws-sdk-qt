@@ -67,8 +67,7 @@ DeleteHapgResponse::DeleteHapgResponse(
  */
 const DeleteHapgRequest * DeleteHapgResponse::request() const
 {
-    Q_D(const DeleteHapgResponse);
-    return static_cast<const DeleteHapgRequest *>(d->request);
+    return static_cast<const DeleteHapgRequest *>(CloudHSMResponse::request());
 }
 
 /*!

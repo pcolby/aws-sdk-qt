@@ -55,8 +55,7 @@ GetContactPolicyResponse::GetContactPolicyResponse(
  */
 const GetContactPolicyRequest * GetContactPolicyResponse::request() const
 {
-    Q_D(const GetContactPolicyResponse);
-    return static_cast<const GetContactPolicyRequest *>(d->request);
+    return static_cast<const GetContactPolicyRequest *>(SSMContactsResponse::request());
 }
 
 /*!

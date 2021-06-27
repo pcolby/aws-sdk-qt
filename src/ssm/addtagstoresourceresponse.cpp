@@ -98,8 +98,7 @@ AddTagsToResourceResponse::AddTagsToResourceResponse(
  */
 const AddTagsToResourceRequest * AddTagsToResourceResponse::request() const
 {
-    Q_D(const AddTagsToResourceResponse);
-    return static_cast<const AddTagsToResourceRequest *>(d->request);
+    return static_cast<const AddTagsToResourceRequest *>(SsmResponse::request());
 }
 
 /*!

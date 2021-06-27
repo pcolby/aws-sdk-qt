@@ -20,15 +20,12 @@
 #ifndef QTAWS_CODESTARREQUEST_P_H
 #define QTAWS_CODESTARREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "codestarrequest.h"
-
 namespace QtAws {
 namespace CodeStar {
 
 class CodeStarRequest;
 
-class CodeStarRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class CodeStarRequestPrivate {
 
 public:
     CodeStarRequest::Action action; ///< CodeStar action to be performed.
@@ -39,6 +36,9 @@ public:
     CodeStarRequestPrivate(const CodeStarRequestPrivate &other, CodeStarRequest * const q);
 
     static QString toString(const CodeStarRequest::Action &action);
+
+protected:
+    CodeStarRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CodeStarRequest)

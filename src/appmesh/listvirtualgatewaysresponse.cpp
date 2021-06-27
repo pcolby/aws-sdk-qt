@@ -73,8 +73,7 @@ ListVirtualGatewaysResponse::ListVirtualGatewaysResponse(
  */
 const ListVirtualGatewaysRequest * ListVirtualGatewaysResponse::request() const
 {
-    Q_D(const ListVirtualGatewaysResponse);
-    return static_cast<const ListVirtualGatewaysRequest *>(d->request);
+    return static_cast<const ListVirtualGatewaysRequest *>(AppMeshResponse::request());
 }
 
 /*!

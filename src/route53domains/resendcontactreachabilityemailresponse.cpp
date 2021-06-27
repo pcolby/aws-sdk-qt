@@ -56,8 +56,7 @@ ResendContactReachabilityEmailResponse::ResendContactReachabilityEmailResponse(
  */
 const ResendContactReachabilityEmailRequest * ResendContactReachabilityEmailResponse::request() const
 {
-    Q_D(const ResendContactReachabilityEmailResponse);
-    return static_cast<const ResendContactReachabilityEmailRequest *>(d->request);
+    return static_cast<const ResendContactReachabilityEmailRequest *>(Route53DomainsResponse::request());
 }
 
 /*!

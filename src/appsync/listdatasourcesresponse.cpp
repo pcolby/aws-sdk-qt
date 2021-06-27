@@ -56,8 +56,7 @@ ListDataSourcesResponse::ListDataSourcesResponse(
  */
 const ListDataSourcesRequest * ListDataSourcesResponse::request() const
 {
-    Q_D(const ListDataSourcesResponse);
-    return static_cast<const ListDataSourcesRequest *>(d->request);
+    return static_cast<const ListDataSourcesRequest *>(AppSyncResponse::request());
 }
 
 /*!

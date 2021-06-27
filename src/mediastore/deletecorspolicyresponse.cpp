@@ -57,8 +57,7 @@ DeleteCorsPolicyResponse::DeleteCorsPolicyResponse(
  */
 const DeleteCorsPolicyRequest * DeleteCorsPolicyResponse::request() const
 {
-    Q_D(const DeleteCorsPolicyResponse);
-    return static_cast<const DeleteCorsPolicyRequest *>(d->request);
+    return static_cast<const DeleteCorsPolicyRequest *>(MediaStoreResponse::request());
 }
 
 /*!

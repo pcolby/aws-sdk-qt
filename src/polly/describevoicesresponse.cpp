@@ -62,8 +62,7 @@ DescribeVoicesResponse::DescribeVoicesResponse(
  */
 const DescribeVoicesRequest * DescribeVoicesResponse::request() const
 {
-    Q_D(const DescribeVoicesResponse);
-    return static_cast<const DescribeVoicesRequest *>(d->request);
+    return static_cast<const DescribeVoicesRequest *>(PollyResponse::request());
 }
 
 /*!

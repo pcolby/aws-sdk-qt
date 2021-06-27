@@ -70,8 +70,7 @@ ListMonitoringExecutionsResponse::ListMonitoringExecutionsResponse(
  */
 const ListMonitoringExecutionsRequest * ListMonitoringExecutionsResponse::request() const
 {
-    Q_D(const ListMonitoringExecutionsResponse);
-    return static_cast<const ListMonitoringExecutionsRequest *>(d->request);
+    return static_cast<const ListMonitoringExecutionsRequest *>(SageMakerResponse::request());
 }
 
 /*!

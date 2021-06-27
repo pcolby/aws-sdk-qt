@@ -293,8 +293,7 @@ ListPackagesResponse::ListPackagesResponse(
  */
 const ListPackagesRequest * ListPackagesResponse::request() const
 {
-    Q_D(const ListPackagesResponse);
-    return static_cast<const ListPackagesRequest *>(d->request);
+    return static_cast<const ListPackagesRequest *>(CodeArtifactResponse::request());
 }
 
 /*!

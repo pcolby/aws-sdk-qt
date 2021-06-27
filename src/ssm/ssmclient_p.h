@@ -20,19 +20,20 @@
 #ifndef QTAWS_SSMCLIENT_P_H
 #define QTAWS_SSMCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace SSM {
 
 class SsmClient;
 
-class SsmClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SsmClientPrivate {
 
 public:
     SsmClientPrivate(SsmClient * const q);
+
+protected:
+    SsmClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SsmClient)

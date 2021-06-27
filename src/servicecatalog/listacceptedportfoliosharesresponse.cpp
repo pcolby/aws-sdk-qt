@@ -61,8 +61,7 @@ ListAcceptedPortfolioSharesResponse::ListAcceptedPortfolioSharesResponse(
  */
 const ListAcceptedPortfolioSharesRequest * ListAcceptedPortfolioSharesResponse::request() const
 {
-    Q_D(const ListAcceptedPortfolioSharesResponse);
-    return static_cast<const ListAcceptedPortfolioSharesRequest *>(d->request);
+    return static_cast<const ListAcceptedPortfolioSharesRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

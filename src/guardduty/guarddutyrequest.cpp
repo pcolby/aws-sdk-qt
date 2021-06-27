@@ -100,7 +100,7 @@ namespace GuardDuty {
  * Constructs a GuardDutyRequest object for GuardDuty \a action.
  */
 GuardDutyRequest::GuardDutyRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new GuardDutyRequestPrivate(action, this))
+    : d_ptr(new GuardDutyRequestPrivate(action, this))
 {
 
 }
@@ -109,7 +109,8 @@ GuardDutyRequest::GuardDutyRequest(const Action action)
  * Constructs a copy of \a other.
  */
 GuardDutyRequest::GuardDutyRequest(const GuardDutyRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new GuardDutyRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new GuardDutyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -132,7 +133,7 @@ GuardDutyRequest& GuardDutyRequest::operator=(const GuardDutyRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from GuardDutyRequestPrivate.
  */
-GuardDutyRequest::GuardDutyRequest(GuardDutyRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+GuardDutyRequest::GuardDutyRequest(GuardDutyRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -301,7 +302,7 @@ QNetworkRequest GuardDutyRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 GuardDutyRequestPrivate::GuardDutyRequestPrivate(const GuardDutyRequest::Action action, GuardDutyRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -316,8 +317,8 @@ GuardDutyRequestPrivate::GuardDutyRequestPrivate(const GuardDutyRequest::Action 
  */
 GuardDutyRequestPrivate::GuardDutyRequestPrivate(const GuardDutyRequestPrivate &other,
                                      GuardDutyRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

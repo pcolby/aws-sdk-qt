@@ -70,8 +70,7 @@ DescribeDomainResponse::DescribeDomainResponse(
  */
 const DescribeDomainRequest * DescribeDomainResponse::request() const
 {
-    Q_D(const DescribeDomainResponse);
-    return static_cast<const DescribeDomainRequest *>(d->request);
+    return static_cast<const DescribeDomainRequest *>(SageMakerResponse::request());
 }
 
 /*!

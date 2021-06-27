@@ -159,8 +159,7 @@ DescribeContinuousExportsResponse::DescribeContinuousExportsResponse(
  */
 const DescribeContinuousExportsRequest * DescribeContinuousExportsResponse::request() const
 {
-    Q_D(const DescribeContinuousExportsResponse);
-    return static_cast<const DescribeContinuousExportsRequest *>(d->request);
+    return static_cast<const DescribeContinuousExportsRequest *>(ApplicationDiscoveryServiceResponse::request());
 }
 
 /*!

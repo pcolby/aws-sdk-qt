@@ -87,8 +87,7 @@ CancelSpotFleetRequestsResponse::CancelSpotFleetRequestsResponse(
  */
 const CancelSpotFleetRequestsRequest * CancelSpotFleetRequestsResponse::request() const
 {
-    Q_D(const CancelSpotFleetRequestsResponse);
-    return static_cast<const CancelSpotFleetRequestsRequest *>(d->request);
+    return static_cast<const CancelSpotFleetRequestsRequest *>(Ec2Response::request());
 }
 
 /*!

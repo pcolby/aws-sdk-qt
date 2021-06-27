@@ -78,8 +78,7 @@ ListSubscribedRuleGroupsResponse::ListSubscribedRuleGroupsResponse(
  */
 const ListSubscribedRuleGroupsRequest * ListSubscribedRuleGroupsResponse::request() const
 {
-    Q_D(const ListSubscribedRuleGroupsResponse);
-    return static_cast<const ListSubscribedRuleGroupsRequest *>(d->request);
+    return static_cast<const ListSubscribedRuleGroupsRequest *>(WAFRegionalResponse::request());
 }
 
 /*!

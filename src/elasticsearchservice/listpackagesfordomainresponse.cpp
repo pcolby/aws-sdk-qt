@@ -72,8 +72,7 @@ ListPackagesForDomainResponse::ListPackagesForDomainResponse(
  */
 const ListPackagesForDomainRequest * ListPackagesForDomainResponse::request() const
 {
-    Q_D(const ListPackagesForDomainResponse);
-    return static_cast<const ListPackagesForDomainRequest *>(d->request);
+    return static_cast<const ListPackagesForDomainRequest *>(ElasticsearchServiceResponse::request());
 }
 
 /*!

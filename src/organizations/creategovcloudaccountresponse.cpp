@@ -141,8 +141,7 @@ CreateGovCloudAccountResponse::CreateGovCloudAccountResponse(
  */
 const CreateGovCloudAccountRequest * CreateGovCloudAccountResponse::request() const
 {
-    Q_D(const CreateGovCloudAccountResponse);
-    return static_cast<const CreateGovCloudAccountRequest *>(d->request);
+    return static_cast<const CreateGovCloudAccountRequest *>(OrganizationsResponse::request());
 }
 
 /*!

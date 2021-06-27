@@ -71,8 +71,7 @@ AddProfileKeyResponse::AddProfileKeyResponse(
  */
 const AddProfileKeyRequest * AddProfileKeyResponse::request() const
 {
-    Q_D(const AddProfileKeyResponse);
-    return static_cast<const AddProfileKeyRequest *>(d->request);
+    return static_cast<const AddProfileKeyRequest *>(CustomerProfilesResponse::request());
 }
 
 /*!

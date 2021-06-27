@@ -58,8 +58,7 @@ CreateModelVersionResponse::CreateModelVersionResponse(
  */
 const CreateModelVersionRequest * CreateModelVersionResponse::request() const
 {
-    Q_D(const CreateModelVersionResponse);
-    return static_cast<const CreateModelVersionRequest *>(d->request);
+    return static_cast<const CreateModelVersionRequest *>(FraudDetectorResponse::request());
 }
 
 /*!

@@ -87,8 +87,7 @@ DeleteCarrierGatewayResponse::DeleteCarrierGatewayResponse(
  */
 const DeleteCarrierGatewayRequest * DeleteCarrierGatewayResponse::request() const
 {
-    Q_D(const DeleteCarrierGatewayResponse);
-    return static_cast<const DeleteCarrierGatewayRequest *>(d->request);
+    return static_cast<const DeleteCarrierGatewayRequest *>(Ec2Response::request());
 }
 
 /*!

@@ -77,8 +77,7 @@ UpdateTerminationProtectionResponse::UpdateTerminationProtectionResponse(
  */
 const UpdateTerminationProtectionRequest * UpdateTerminationProtectionResponse::request() const
 {
-    Q_D(const UpdateTerminationProtectionResponse);
-    return static_cast<const UpdateTerminationProtectionRequest *>(d->request);
+    return static_cast<const UpdateTerminationProtectionRequest *>(CloudFormationResponse::request());
 }
 
 /*!

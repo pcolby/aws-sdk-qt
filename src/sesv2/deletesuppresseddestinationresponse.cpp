@@ -88,8 +88,7 @@ DeleteSuppressedDestinationResponse::DeleteSuppressedDestinationResponse(
  */
 const DeleteSuppressedDestinationRequest * DeleteSuppressedDestinationResponse::request() const
 {
-    Q_D(const DeleteSuppressedDestinationResponse);
-    return static_cast<const DeleteSuppressedDestinationRequest *>(d->request);
+    return static_cast<const DeleteSuppressedDestinationRequest *>(Sesv2Response::request());
 }
 
 /*!

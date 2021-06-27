@@ -82,6 +82,12 @@ public slots:
     UntagDeliveryStreamResponse * untagDeliveryStream(const UntagDeliveryStreamRequest &request);
     UpdateDestinationResponse * updateDestination(const UpdateDestinationRequest &request);
 
+protected:
+    /// @cond internal
+    FirehoseClientPrivate * const d_ptr; ///< Internal d-pointer.
+    FirehoseClient(FirehoseClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(FirehoseClient)
     Q_DISABLE_COPY(FirehoseClient)

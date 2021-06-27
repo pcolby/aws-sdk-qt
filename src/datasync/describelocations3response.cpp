@@ -64,8 +64,7 @@ DescribeLocationS3Response::DescribeLocationS3Response(
  */
 const DescribeLocationS3Request * DescribeLocationS3Response::request() const
 {
-    Q_D(const DescribeLocationS3Response);
-    return static_cast<const DescribeLocationS3Request *>(d->request);
+    return static_cast<const DescribeLocationS3Request *>(DataSyncResponse::request());
 }
 
 /*!

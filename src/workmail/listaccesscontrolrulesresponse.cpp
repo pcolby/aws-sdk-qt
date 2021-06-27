@@ -89,8 +89,7 @@ ListAccessControlRulesResponse::ListAccessControlRulesResponse(
  */
 const ListAccessControlRulesRequest * ListAccessControlRulesResponse::request() const
 {
-    Q_D(const ListAccessControlRulesResponse);
-    return static_cast<const ListAccessControlRulesRequest *>(d->request);
+    return static_cast<const ListAccessControlRulesRequest *>(WorkMailResponse::request());
 }
 
 /*!

@@ -62,8 +62,7 @@ CreateLinkResponse::CreateLinkResponse(
  */
 const CreateLinkRequest * CreateLinkResponse::request() const
 {
-    Q_D(const CreateLinkResponse);
-    return static_cast<const CreateLinkRequest *>(d->request);
+    return static_cast<const CreateLinkRequest *>(NetworkManagerResponse::request());
 }
 
 /*!

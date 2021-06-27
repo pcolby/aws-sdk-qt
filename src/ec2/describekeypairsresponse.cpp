@@ -87,8 +87,7 @@ DescribeKeyPairsResponse::DescribeKeyPairsResponse(
  */
 const DescribeKeyPairsRequest * DescribeKeyPairsResponse::request() const
 {
-    Q_D(const DescribeKeyPairsResponse);
-    return static_cast<const DescribeKeyPairsRequest *>(d->request);
+    return static_cast<const DescribeKeyPairsRequest *>(Ec2Response::request());
 }
 
 /*!

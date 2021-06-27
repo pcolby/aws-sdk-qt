@@ -64,8 +64,7 @@ CreateReportGroupResponse::CreateReportGroupResponse(
  */
 const CreateReportGroupRequest * CreateReportGroupResponse::request() const
 {
-    Q_D(const CreateReportGroupResponse);
-    return static_cast<const CreateReportGroupRequest *>(d->request);
+    return static_cast<const CreateReportGroupRequest *>(CodeBuildResponse::request());
 }
 
 /*!

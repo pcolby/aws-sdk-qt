@@ -103,8 +103,7 @@ DeleteActionTargetResponse::DeleteActionTargetResponse(
  */
 const DeleteActionTargetRequest * DeleteActionTargetResponse::request() const
 {
-    Q_D(const DeleteActionTargetResponse);
-    return static_cast<const DeleteActionTargetRequest *>(d->request);
+    return static_cast<const DeleteActionTargetRequest *>(SecurityHubResponse::request());
 }
 
 /*!

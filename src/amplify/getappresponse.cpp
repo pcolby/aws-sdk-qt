@@ -60,8 +60,7 @@ GetAppResponse::GetAppResponse(
  */
 const GetAppRequest * GetAppResponse::request() const
 {
-    Q_D(const GetAppResponse);
-    return static_cast<const GetAppRequest *>(d->request);
+    return static_cast<const GetAppRequest *>(AmplifyResponse::request());
 }
 
 /*!

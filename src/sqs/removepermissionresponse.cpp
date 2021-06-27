@@ -126,8 +126,7 @@ RemovePermissionResponse::RemovePermissionResponse(
  */
 const RemovePermissionRequest * RemovePermissionResponse::request() const
 {
-    Q_D(const RemovePermissionResponse);
-    return static_cast<const RemovePermissionRequest *>(d->request);
+    return static_cast<const RemovePermissionRequest *>(SqsResponse::request());
 }
 
 /*!

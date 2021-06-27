@@ -62,8 +62,7 @@ DeleteSigningCertificateResponse::DeleteSigningCertificateResponse(
  */
 const DeleteSigningCertificateRequest * DeleteSigningCertificateResponse::request() const
 {
-    Q_D(const DeleteSigningCertificateResponse);
-    return static_cast<const DeleteSigningCertificateRequest *>(d->request);
+    return static_cast<const DeleteSigningCertificateRequest *>(IamResponse::request());
 }
 
 /*!

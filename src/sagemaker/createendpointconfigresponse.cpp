@@ -70,8 +70,7 @@ CreateEndpointConfigResponse::CreateEndpointConfigResponse(
  */
 const CreateEndpointConfigRequest * CreateEndpointConfigResponse::request() const
 {
-    Q_D(const CreateEndpointConfigResponse);
-    return static_cast<const CreateEndpointConfigRequest *>(d->request);
+    return static_cast<const CreateEndpointConfigRequest *>(SageMakerResponse::request());
 }
 
 /*!

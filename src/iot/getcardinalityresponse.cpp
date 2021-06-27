@@ -82,8 +82,7 @@ GetCardinalityResponse::GetCardinalityResponse(
  */
 const GetCardinalityRequest * GetCardinalityResponse::request() const
 {
-    Q_D(const GetCardinalityResponse);
-    return static_cast<const GetCardinalityRequest *>(d->request);
+    return static_cast<const GetCardinalityRequest *>(IoTResponse::request());
 }
 
 /*!

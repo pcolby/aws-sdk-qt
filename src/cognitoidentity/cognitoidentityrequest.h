@@ -79,6 +79,7 @@ public:
 
 protected:
     /// @cond internal
+    CognitoIdentityRequestPrivate * const d_ptr; ///< Internal d-pointer.
     CognitoIdentityRequest(CognitoIdentityRequestPrivate * const d);
     /// @endcond
 

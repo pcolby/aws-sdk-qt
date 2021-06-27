@@ -103,8 +103,7 @@ BatchImportFindingsResponse::BatchImportFindingsResponse(
  */
 const BatchImportFindingsRequest * BatchImportFindingsResponse::request() const
 {
-    Q_D(const BatchImportFindingsResponse);
-    return static_cast<const BatchImportFindingsRequest *>(d->request);
+    return static_cast<const BatchImportFindingsRequest *>(SecurityHubResponse::request());
 }
 
 /*!

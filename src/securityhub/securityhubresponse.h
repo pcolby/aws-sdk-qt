@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    SecurityHubResponsePrivate * const d_ptr; ///< Internal d-pointer.
     SecurityHubResponse(SecurityHubResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

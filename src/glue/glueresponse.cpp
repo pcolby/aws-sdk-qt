@@ -37,7 +37,7 @@ namespace Glue {
  * Constructs a GlueResponse object with parent \a parent.
  */
 GlueResponse::GlueResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new GlueResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new GlueResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ GlueResponse::GlueResponse(QObject * const parent)
  * implementation that inherits from GlueResponsePrivate.
  */
 GlueResponse::GlueResponse(GlueResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void GlueResponse::parseFailure(QIODevice &response)
  * Constructs a GlueResponsePrivate object with public implementation \a q.
  */
 GlueResponsePrivate::GlueResponsePrivate(
-    GlueResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    GlueResponse * const q) : q_ptr(q)
 {
 
 }

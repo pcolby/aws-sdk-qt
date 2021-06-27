@@ -162,16 +162,16 @@ RekognitionClient::RekognitionClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new RekognitionClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-06-27"),
+    QStringLiteral("rekognition"),
+    QStringLiteral("Amazon Rekognition"),
+    QStringLiteral("rekognition"),
+    parent), d_ptr(new RekognitionClientPrivate(this))
 {
-    Q_D(RekognitionClient);
-    d->apiVersion = QStringLiteral("2016-06-27");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("rekognition");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Rekognition");
-    d->serviceName = QStringLiteral("rekognition");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -190,16 +190,16 @@ RekognitionClient::RekognitionClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new RekognitionClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-06-27"),
+    QStringLiteral("rekognition"),
+    QStringLiteral("Amazon Rekognition"),
+    QStringLiteral("rekognition"),
+    parent), d_ptr(new RekognitionClientPrivate(this))
 {
-    Q_D(RekognitionClient);
-    d->apiVersion = QStringLiteral("2016-06-27");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("rekognition");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Rekognition");
-    d->serviceName = QStringLiteral("rekognition");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -1995,10 +1995,9 @@ UntagResourceResponse * RekognitionClient::untagResource(const UntagResourceRequ
 /*!
  * Constructs a RekognitionClientPrivate object with public implementation \a q.
  */
-RekognitionClientPrivate::RekognitionClientPrivate(RekognitionClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+RekognitionClientPrivate::RekognitionClientPrivate(RekognitionClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace Rekognition

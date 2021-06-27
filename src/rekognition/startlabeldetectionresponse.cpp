@@ -56,8 +56,7 @@ StartLabelDetectionResponse::StartLabelDetectionResponse(
  */
 const StartLabelDetectionRequest * StartLabelDetectionResponse::request() const
 {
-    Q_D(const StartLabelDetectionResponse);
-    return static_cast<const StartLabelDetectionRequest *>(d->request);
+    return static_cast<const StartLabelDetectionRequest *>(RekognitionResponse::request());
 }
 
 /*!

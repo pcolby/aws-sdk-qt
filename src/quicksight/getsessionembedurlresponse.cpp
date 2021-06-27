@@ -60,8 +60,7 @@ GetSessionEmbedUrlResponse::GetSessionEmbedUrlResponse(
  */
 const GetSessionEmbedUrlRequest * GetSessionEmbedUrlResponse::request() const
 {
-    Q_D(const GetSessionEmbedUrlResponse);
-    return static_cast<const GetSessionEmbedUrlRequest *>(d->request);
+    return static_cast<const GetSessionEmbedUrlRequest *>(QuickSightResponse::request());
 }
 
 /*!

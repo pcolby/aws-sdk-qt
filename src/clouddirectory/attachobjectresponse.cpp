@@ -63,8 +63,7 @@ AttachObjectResponse::AttachObjectResponse(
  */
 const AttachObjectRequest * AttachObjectResponse::request() const
 {
-    Q_D(const AttachObjectResponse);
-    return static_cast<const AttachObjectRequest *>(d->request);
+    return static_cast<const AttachObjectRequest *>(CloudDirectoryResponse::request());
 }
 
 /*!

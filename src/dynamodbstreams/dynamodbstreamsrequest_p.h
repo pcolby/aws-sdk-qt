@@ -20,15 +20,12 @@
 #ifndef QTAWS_DYNAMODBSTREAMSREQUEST_P_H
 #define QTAWS_DYNAMODBSTREAMSREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "dynamodbstreamsrequest.h"
-
 namespace QtAws {
 namespace DynamoDBStreams {
 
 class DynamoDBStreamsRequest;
 
-class DynamoDBStreamsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class DynamoDBStreamsRequestPrivate {
 
 public:
     DynamoDBStreamsRequest::Action action; ///< DynamoDBStreams action to be performed.
@@ -39,6 +36,9 @@ public:
     DynamoDBStreamsRequestPrivate(const DynamoDBStreamsRequestPrivate &other, DynamoDBStreamsRequest * const q);
 
     static QString toString(const DynamoDBStreamsRequest::Action &action);
+
+protected:
+    DynamoDBStreamsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DynamoDBStreamsRequest)

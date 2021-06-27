@@ -114,16 +114,16 @@ IoTEventsClient::IoTEventsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new IoTEventsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-07-27"),
+    QStringLiteral("iotevents"),
+    QStringLiteral("AWS IoT Events"),
+    QStringLiteral("iotevents"),
+    parent), d_ptr(new IoTEventsClientPrivate(this))
 {
-    Q_D(IoTEventsClient);
-    d->apiVersion = QStringLiteral("2018-07-27");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("iotevents");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS IoT Events");
-    d->serviceName = QStringLiteral("iotevents");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -142,16 +142,16 @@ IoTEventsClient::IoTEventsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new IoTEventsClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-07-27"),
+    QStringLiteral("iotevents"),
+    QStringLiteral("AWS IoT Events"),
+    QStringLiteral("iotevents"),
+    parent), d_ptr(new IoTEventsClientPrivate(this))
 {
-    Q_D(IoTEventsClient);
-    d->apiVersion = QStringLiteral("2018-07-27");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("iotevents");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS IoT Events");
-    d->serviceName = QStringLiteral("iotevents");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -528,10 +528,9 @@ UpdateInputResponse * IoTEventsClient::updateInput(const UpdateInputRequest &req
 /*!
  * Constructs a IoTEventsClientPrivate object with public implementation \a q.
  */
-IoTEventsClientPrivate::IoTEventsClientPrivate(IoTEventsClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+IoTEventsClientPrivate::IoTEventsClientPrivate(IoTEventsClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace IoTEvents

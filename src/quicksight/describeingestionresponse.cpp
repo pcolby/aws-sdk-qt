@@ -60,8 +60,7 @@ DescribeIngestionResponse::DescribeIngestionResponse(
  */
 const DescribeIngestionRequest * DescribeIngestionResponse::request() const
 {
-    Q_D(const DescribeIngestionResponse);
-    return static_cast<const DescribeIngestionRequest *>(d->request);
+    return static_cast<const DescribeIngestionRequest *>(QuickSightResponse::request());
 }
 
 /*!

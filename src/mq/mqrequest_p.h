@@ -20,15 +20,12 @@
 #ifndef QTAWS_MQREQUEST_P_H
 #define QTAWS_MQREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "mqrequest.h"
-
 namespace QtAws {
 namespace MQ {
 
 class MqRequest;
 
-class MqRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class MqRequestPrivate {
 
 public:
     MqRequest::Action action; ///< MQ action to be performed.
@@ -39,6 +36,9 @@ public:
     MqRequestPrivate(const MqRequestPrivate &other, MqRequest * const q);
 
     static QString toString(const MqRequest::Action &action);
+
+protected:
+    MqRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MqRequest)

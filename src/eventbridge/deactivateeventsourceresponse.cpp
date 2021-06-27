@@ -78,8 +78,7 @@ DeactivateEventSourceResponse::DeactivateEventSourceResponse(
  */
 const DeactivateEventSourceRequest * DeactivateEventSourceResponse::request() const
 {
-    Q_D(const DeactivateEventSourceResponse);
-    return static_cast<const DeactivateEventSourceRequest *>(d->request);
+    return static_cast<const DeactivateEventSourceRequest *>(EventBridgeResponse::request());
 }
 
 /*!

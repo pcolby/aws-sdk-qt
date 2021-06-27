@@ -60,8 +60,7 @@ DeleteTemplateAliasResponse::DeleteTemplateAliasResponse(
  */
 const DeleteTemplateAliasRequest * DeleteTemplateAliasResponse::request() const
 {
-    Q_D(const DeleteTemplateAliasResponse);
-    return static_cast<const DeleteTemplateAliasRequest *>(d->request);
+    return static_cast<const DeleteTemplateAliasRequest *>(QuickSightResponse::request());
 }
 
 /*!

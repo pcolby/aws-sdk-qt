@@ -133,6 +133,7 @@ public:
 
 protected:
     /// @cond internal
+    CodeCommitRequestPrivate * const d_ptr; ///< Internal d-pointer.
     CodeCommitRequest(CodeCommitRequestPrivate * const d);
     /// @endcond
 

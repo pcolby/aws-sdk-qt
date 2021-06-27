@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    CodeArtifactResponsePrivate * const d_ptr; ///< Internal d-pointer.
     CodeArtifactResponse(CodeArtifactResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

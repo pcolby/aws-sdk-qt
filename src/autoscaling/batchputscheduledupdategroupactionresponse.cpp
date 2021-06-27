@@ -68,8 +68,7 @@ BatchPutScheduledUpdateGroupActionResponse::BatchPutScheduledUpdateGroupActionRe
  */
 const BatchPutScheduledUpdateGroupActionRequest * BatchPutScheduledUpdateGroupActionResponse::request() const
 {
-    Q_D(const BatchPutScheduledUpdateGroupActionResponse);
-    return static_cast<const BatchPutScheduledUpdateGroupActionRequest *>(d->request);
+    return static_cast<const BatchPutScheduledUpdateGroupActionRequest *>(AutoScalingResponse::request());
 }
 
 /*!

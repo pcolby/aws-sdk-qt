@@ -81,8 +81,7 @@ DescribeImageBuildersResponse::DescribeImageBuildersResponse(
  */
 const DescribeImageBuildersRequest * DescribeImageBuildersResponse::request() const
 {
-    Q_D(const DescribeImageBuildersResponse);
-    return static_cast<const DescribeImageBuildersRequest *>(d->request);
+    return static_cast<const DescribeImageBuildersRequest *>(AppStreamResponse::request());
 }
 
 /*!

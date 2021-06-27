@@ -56,8 +56,7 @@ DeleteVoiceTemplateResponse::DeleteVoiceTemplateResponse(
  */
 const DeleteVoiceTemplateRequest * DeleteVoiceTemplateResponse::request() const
 {
-    Q_D(const DeleteVoiceTemplateResponse);
-    return static_cast<const DeleteVoiceTemplateRequest *>(d->request);
+    return static_cast<const DeleteVoiceTemplateRequest *>(PinpointResponse::request());
 }
 
 /*!

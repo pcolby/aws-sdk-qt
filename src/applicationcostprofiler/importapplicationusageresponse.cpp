@@ -67,8 +67,7 @@ ImportApplicationUsageResponse::ImportApplicationUsageResponse(
  */
 const ImportApplicationUsageRequest * ImportApplicationUsageResponse::request() const
 {
-    Q_D(const ImportApplicationUsageResponse);
-    return static_cast<const ImportApplicationUsageRequest *>(d->request);
+    return static_cast<const ImportApplicationUsageRequest *>(ApplicationCostProfilerResponse::request());
 }
 
 /*!

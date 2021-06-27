@@ -58,8 +58,7 @@ BatchDetectKeyPhrasesResponse::BatchDetectKeyPhrasesResponse(
  */
 const BatchDetectKeyPhrasesRequest * BatchDetectKeyPhrasesResponse::request() const
 {
-    Q_D(const BatchDetectKeyPhrasesResponse);
-    return static_cast<const BatchDetectKeyPhrasesRequest *>(d->request);
+    return static_cast<const BatchDetectKeyPhrasesRequest *>(ComprehendResponse::request());
 }
 
 /*!

@@ -71,8 +71,7 @@ ListProfileObjectTypeTemplatesResponse::ListProfileObjectTypeTemplatesResponse(
  */
 const ListProfileObjectTypeTemplatesRequest * ListProfileObjectTypeTemplatesResponse::request() const
 {
-    Q_D(const ListProfileObjectTypeTemplatesResponse);
-    return static_cast<const ListProfileObjectTypeTemplatesRequest *>(d->request);
+    return static_cast<const ListProfileObjectTypeTemplatesRequest *>(CustomerProfilesResponse::request());
 }
 
 /*!

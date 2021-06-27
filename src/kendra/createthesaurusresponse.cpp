@@ -56,8 +56,7 @@ CreateThesaurusResponse::CreateThesaurusResponse(
  */
 const CreateThesaurusRequest * CreateThesaurusResponse::request() const
 {
-    Q_D(const CreateThesaurusResponse);
-    return static_cast<const CreateThesaurusRequest *>(d->request);
+    return static_cast<const CreateThesaurusRequest *>(kendraResponse::request());
 }
 
 /*!

@@ -65,7 +65,7 @@ namespace ECRPublic {
  * Constructs a ECRPublicRequest object for ECRPublic \a action.
  */
 ECRPublicRequest::ECRPublicRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new ECRPublicRequestPrivate(action, this))
+    : d_ptr(new ECRPublicRequestPrivate(action, this))
 {
 
 }
@@ -74,7 +74,8 @@ ECRPublicRequest::ECRPublicRequest(const Action action)
  * Constructs a copy of \a other.
  */
 ECRPublicRequest::ECRPublicRequest(const ECRPublicRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new ECRPublicRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new ECRPublicRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -97,7 +98,7 @@ ECRPublicRequest& ECRPublicRequest::operator=(const ECRPublicRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ECRPublicRequestPrivate.
  */
-ECRPublicRequest::ECRPublicRequest(ECRPublicRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+ECRPublicRequest::ECRPublicRequest(ECRPublicRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -266,7 +267,7 @@ QNetworkRequest ECRPublicRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 ECRPublicRequestPrivate::ECRPublicRequestPrivate(const ECRPublicRequest::Action action, ECRPublicRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -281,8 +282,8 @@ ECRPublicRequestPrivate::ECRPublicRequestPrivate(const ECRPublicRequest::Action 
  */
 ECRPublicRequestPrivate::ECRPublicRequestPrivate(const ECRPublicRequestPrivate &other,
                                      ECRPublicRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

@@ -94,8 +94,7 @@ DisassociateResolverQueryLogConfigResponse::DisassociateResolverQueryLogConfigRe
  */
 const DisassociateResolverQueryLogConfigRequest * DisassociateResolverQueryLogConfigResponse::request() const
 {
-    Q_D(const DisassociateResolverQueryLogConfigResponse);
-    return static_cast<const DisassociateResolverQueryLogConfigRequest *>(d->request);
+    return static_cast<const DisassociateResolverQueryLogConfigRequest *>(Route53ResolverResponse::request());
 }
 
 /*!

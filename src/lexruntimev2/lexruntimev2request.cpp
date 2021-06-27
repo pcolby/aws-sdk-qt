@@ -48,7 +48,7 @@ namespace LexRuntimeV2 {
  * Constructs a LexRuntimeV2Request object for LexRuntimeV2 \a action.
  */
 LexRuntimeV2Request::LexRuntimeV2Request(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new LexRuntimeV2RequestPrivate(action, this))
+    : d_ptr(new LexRuntimeV2RequestPrivate(action, this))
 {
 
 }
@@ -57,7 +57,8 @@ LexRuntimeV2Request::LexRuntimeV2Request(const Action action)
  * Constructs a copy of \a other.
  */
 LexRuntimeV2Request::LexRuntimeV2Request(const LexRuntimeV2Request &other)
-    : QtAws::Core::AwsAbstractRequest(new LexRuntimeV2RequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new LexRuntimeV2RequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +81,7 @@ LexRuntimeV2Request& LexRuntimeV2Request::operator=(const LexRuntimeV2Request &o
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from LexRuntimeV2RequestPrivate.
  */
-LexRuntimeV2Request::LexRuntimeV2Request(LexRuntimeV2RequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+LexRuntimeV2Request::LexRuntimeV2Request(LexRuntimeV2RequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -249,7 +250,7 @@ QNetworkRequest LexRuntimeV2Request::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 LexRuntimeV2RequestPrivate::LexRuntimeV2RequestPrivate(const LexRuntimeV2Request::Action action, LexRuntimeV2Request * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -264,8 +265,8 @@ LexRuntimeV2RequestPrivate::LexRuntimeV2RequestPrivate(const LexRuntimeV2Request
  */
 LexRuntimeV2RequestPrivate::LexRuntimeV2RequestPrivate(const LexRuntimeV2RequestPrivate &other,
                                      LexRuntimeV2Request * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

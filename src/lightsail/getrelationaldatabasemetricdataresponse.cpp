@@ -74,8 +74,7 @@ GetRelationalDatabaseMetricDataResponse::GetRelationalDatabaseMetricDataResponse
  */
 const GetRelationalDatabaseMetricDataRequest * GetRelationalDatabaseMetricDataResponse::request() const
 {
-    Q_D(const GetRelationalDatabaseMetricDataResponse);
-    return static_cast<const GetRelationalDatabaseMetricDataRequest *>(d->request);
+    return static_cast<const GetRelationalDatabaseMetricDataRequest *>(LightsailResponse::request());
 }
 
 /*!

@@ -87,8 +87,7 @@ AssociateTransitGatewayRouteTableResponse::AssociateTransitGatewayRouteTableResp
  */
 const AssociateTransitGatewayRouteTableRequest * AssociateTransitGatewayRouteTableResponse::request() const
 {
-    Q_D(const AssociateTransitGatewayRouteTableResponse);
-    return static_cast<const AssociateTransitGatewayRouteTableRequest *>(d->request);
+    return static_cast<const AssociateTransitGatewayRouteTableRequest *>(Ec2Response::request());
 }
 
 /*!

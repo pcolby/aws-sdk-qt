@@ -115,8 +115,7 @@ DescribeFleetEventsResponse::DescribeFleetEventsResponse(
  */
 const DescribeFleetEventsRequest * DescribeFleetEventsResponse::request() const
 {
-    Q_D(const DescribeFleetEventsResponse);
-    return static_cast<const DescribeFleetEventsRequest *>(d->request);
+    return static_cast<const DescribeFleetEventsRequest *>(GameLiftResponse::request());
 }
 
 /*!

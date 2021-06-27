@@ -46,7 +46,7 @@ namespace DynamoDBStreams {
  * Constructs a DynamoDBStreamsRequest object for DynamoDBStreams \a action.
  */
 DynamoDBStreamsRequest::DynamoDBStreamsRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new DynamoDBStreamsRequestPrivate(action, this))
+    : d_ptr(new DynamoDBStreamsRequestPrivate(action, this))
 {
 
 }
@@ -55,7 +55,8 @@ DynamoDBStreamsRequest::DynamoDBStreamsRequest(const Action action)
  * Constructs a copy of \a other.
  */
 DynamoDBStreamsRequest::DynamoDBStreamsRequest(const DynamoDBStreamsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new DynamoDBStreamsRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new DynamoDBStreamsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -78,7 +79,7 @@ DynamoDBStreamsRequest& DynamoDBStreamsRequest::operator=(const DynamoDBStreamsR
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from DynamoDBStreamsRequestPrivate.
  */
-DynamoDBStreamsRequest::DynamoDBStreamsRequest(DynamoDBStreamsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+DynamoDBStreamsRequest::DynamoDBStreamsRequest(DynamoDBStreamsRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -247,7 +248,7 @@ QNetworkRequest DynamoDBStreamsRequest::unsignedRequest(const QUrl &endpoint) co
  * with public implementation \a q.
  */
 DynamoDBStreamsRequestPrivate::DynamoDBStreamsRequestPrivate(const DynamoDBStreamsRequest::Action action, DynamoDBStreamsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -262,8 +263,8 @@ DynamoDBStreamsRequestPrivate::DynamoDBStreamsRequestPrivate(const DynamoDBStrea
  */
 DynamoDBStreamsRequestPrivate::DynamoDBStreamsRequestPrivate(const DynamoDBStreamsRequestPrivate &other,
                                      DynamoDBStreamsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

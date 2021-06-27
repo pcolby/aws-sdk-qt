@@ -20,15 +20,12 @@
 #ifndef QTAWS_HEALTHLAKEREQUEST_P_H
 #define QTAWS_HEALTHLAKEREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "healthlakerequest.h"
-
 namespace QtAws {
 namespace HealthLake {
 
 class HealthLakeRequest;
 
-class HealthLakeRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class HealthLakeRequestPrivate {
 
 public:
     HealthLakeRequest::Action action; ///< HealthLake action to be performed.
@@ -39,6 +36,9 @@ public:
     HealthLakeRequestPrivate(const HealthLakeRequestPrivate &other, HealthLakeRequest * const q);
 
     static QString toString(const HealthLakeRequest::Action &action);
+
+protected:
+    HealthLakeRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(HealthLakeRequest)

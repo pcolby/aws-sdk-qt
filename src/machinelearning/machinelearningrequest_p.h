@@ -20,15 +20,12 @@
 #ifndef QTAWS_MACHINELEARNINGREQUEST_P_H
 #define QTAWS_MACHINELEARNINGREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "machinelearningrequest.h"
-
 namespace QtAws {
 namespace MachineLearning {
 
 class MachineLearningRequest;
 
-class MachineLearningRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class MachineLearningRequestPrivate {
 
 public:
     MachineLearningRequest::Action action; ///< MachineLearning action to be performed.
@@ -39,6 +36,9 @@ public:
     MachineLearningRequestPrivate(const MachineLearningRequestPrivate &other, MachineLearningRequest * const q);
 
     static QString toString(const MachineLearningRequest::Action &action);
+
+protected:
+    MachineLearningRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MachineLearningRequest)

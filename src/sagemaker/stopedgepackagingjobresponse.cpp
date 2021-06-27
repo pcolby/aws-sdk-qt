@@ -70,8 +70,7 @@ StopEdgePackagingJobResponse::StopEdgePackagingJobResponse(
  */
 const StopEdgePackagingJobRequest * StopEdgePackagingJobResponse::request() const
 {
-    Q_D(const StopEdgePackagingJobResponse);
-    return static_cast<const StopEdgePackagingJobRequest *>(d->request);
+    return static_cast<const StopEdgePackagingJobRequest *>(SageMakerResponse::request());
 }
 
 /*!

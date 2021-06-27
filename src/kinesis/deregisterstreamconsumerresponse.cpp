@@ -58,8 +58,7 @@ DeregisterStreamConsumerResponse::DeregisterStreamConsumerResponse(
  */
 const DeregisterStreamConsumerRequest * DeregisterStreamConsumerResponse::request() const
 {
-    Q_D(const DeregisterStreamConsumerResponse);
-    return static_cast<const DeregisterStreamConsumerRequest *>(d->request);
+    return static_cast<const DeregisterStreamConsumerRequest *>(KinesisResponse::request());
 }
 
 /*!

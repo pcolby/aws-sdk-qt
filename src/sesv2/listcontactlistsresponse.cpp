@@ -88,8 +88,7 @@ ListContactListsResponse::ListContactListsResponse(
  */
 const ListContactListsRequest * ListContactListsResponse::request() const
 {
-    Q_D(const ListContactListsResponse);
-    return static_cast<const ListContactListsRequest *>(d->request);
+    return static_cast<const ListContactListsRequest *>(Sesv2Response::request());
 }
 
 /*!

@@ -87,8 +87,7 @@ DescribeRouteTablesResponse::DescribeRouteTablesResponse(
  */
 const DescribeRouteTablesRequest * DescribeRouteTablesResponse::request() const
 {
-    Q_D(const DescribeRouteTablesResponse);
-    return static_cast<const DescribeRouteTablesRequest *>(d->request);
+    return static_cast<const DescribeRouteTablesRequest *>(Ec2Response::request());
 }
 
 /*!

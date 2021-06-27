@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    WellArchitectedResponsePrivate * const d_ptr; ///< Internal d-pointer.
     WellArchitectedResponse(WellArchitectedResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

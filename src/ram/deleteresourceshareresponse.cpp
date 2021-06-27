@@ -64,8 +64,7 @@ DeleteResourceShareResponse::DeleteResourceShareResponse(
  */
 const DeleteResourceShareRequest * DeleteResourceShareResponse::request() const
 {
-    Q_D(const DeleteResourceShareResponse);
-    return static_cast<const DeleteResourceShareRequest *>(d->request);
+    return static_cast<const DeleteResourceShareRequest *>(RamResponse::request());
 }
 
 /*!

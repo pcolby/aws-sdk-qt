@@ -73,8 +73,7 @@ ActivatePipelineResponse::ActivatePipelineResponse(
  */
 const ActivatePipelineRequest * ActivatePipelineResponse::request() const
 {
-    Q_D(const ActivatePipelineResponse);
-    return static_cast<const ActivatePipelineRequest *>(d->request);
+    return static_cast<const ActivatePipelineRequest *>(DataPipelineResponse::request());
 }
 
 /*!

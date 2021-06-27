@@ -76,8 +76,7 @@ UpdateWebACLResponse::UpdateWebACLResponse(
  */
 const UpdateWebACLRequest * UpdateWebACLResponse::request() const
 {
-    Q_D(const UpdateWebACLResponse);
-    return static_cast<const UpdateWebACLRequest *>(d->request);
+    return static_cast<const UpdateWebACLRequest *>(WafResponse::request());
 }
 
 /*!

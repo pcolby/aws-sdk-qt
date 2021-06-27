@@ -72,8 +72,7 @@ CreateDBClusterResponse::CreateDBClusterResponse(
  */
 const CreateDBClusterRequest * CreateDBClusterResponse::request() const
 {
-    Q_D(const CreateDBClusterResponse);
-    return static_cast<const CreateDBClusterRequest *>(d->request);
+    return static_cast<const CreateDBClusterRequest *>(NeptuneResponse::request());
 }
 
 /*!

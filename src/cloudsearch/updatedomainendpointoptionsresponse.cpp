@@ -66,8 +66,7 @@ UpdateDomainEndpointOptionsResponse::UpdateDomainEndpointOptionsResponse(
  */
 const UpdateDomainEndpointOptionsRequest * UpdateDomainEndpointOptionsResponse::request() const
 {
-    Q_D(const UpdateDomainEndpointOptionsResponse);
-    return static_cast<const UpdateDomainEndpointOptionsRequest *>(d->request);
+    return static_cast<const UpdateDomainEndpointOptionsRequest *>(CloudSearchResponse::request());
 }
 
 /*!

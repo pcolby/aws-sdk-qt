@@ -74,16 +74,16 @@ ImportExportClient::ImportExportClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ImportExportClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2010-06-01"),
+    QStringLiteral("importexport"),
+    QStringLiteral("AWS Import/Export"),
+    QStringLiteral("importexport"),
+    parent), d_ptr(new ImportExportClientPrivate(this))
 {
-    Q_D(ImportExportClient);
-    d->apiVersion = QStringLiteral("2010-06-01");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("importexport");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Import/Export");
-    d->serviceName = QStringLiteral("importexport");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -102,16 +102,16 @@ ImportExportClient::ImportExportClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ImportExportClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2010-06-01"),
+    QStringLiteral("importexport"),
+    QStringLiteral("AWS Import/Export"),
+    QStringLiteral("importexport"),
+    parent), d_ptr(new ImportExportClientPrivate(this))
 {
-    Q_D(ImportExportClient);
-    d->apiVersion = QStringLiteral("2010-06-01");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("importexport");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Import/Export");
-    d->serviceName = QStringLiteral("importexport");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -207,10 +207,9 @@ UpdateJobResponse * ImportExportClient::updateJob(const UpdateJobRequest &reques
 /*!
  * Constructs a ImportExportClientPrivate object with public implementation \a q.
  */
-ImportExportClientPrivate::ImportExportClientPrivate(ImportExportClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+ImportExportClientPrivate::ImportExportClientPrivate(ImportExportClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV2();
+    q->setSignature(new QtAws::Core::AwsSignatureV2());
 }
 
 } // namespace ImportExport

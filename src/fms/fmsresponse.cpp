@@ -37,7 +37,7 @@ namespace FMS {
  * Constructs a FmsResponse object with parent \a parent.
  */
 FmsResponse::FmsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new FmsResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new FmsResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ FmsResponse::FmsResponse(QObject * const parent)
  * implementation that inherits from FmsResponsePrivate.
  */
 FmsResponse::FmsResponse(FmsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void FmsResponse::parseFailure(QIODevice &response)
  * Constructs a FmsResponsePrivate object with public implementation \a q.
  */
 FmsResponsePrivate::FmsResponsePrivate(
-    FmsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    FmsResponse * const q) : q_ptr(q)
 {
 
 }

@@ -60,8 +60,7 @@ GetInvitationsCountResponse::GetInvitationsCountResponse(
  */
 const GetInvitationsCountRequest * GetInvitationsCountResponse::request() const
 {
-    Q_D(const GetInvitationsCountResponse);
-    return static_cast<const GetInvitationsCountRequest *>(d->request);
+    return static_cast<const GetInvitationsCountRequest *>(Macie2Response::request());
 }
 
 /*!

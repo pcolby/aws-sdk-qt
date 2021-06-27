@@ -170,16 +170,16 @@ SqsClient::SqsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SqsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2012-11-05"),
+    QStringLiteral("sqs"),
+    QStringLiteral("Amazon Simple Queue Service"),
+    QStringLiteral("sqs"),
+    parent), d_ptr(new SqsClientPrivate(this))
 {
-    Q_D(SqsClient);
-    d->apiVersion = QStringLiteral("2012-11-05");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("sqs");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Simple Queue Service");
-    d->serviceName = QStringLiteral("sqs");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -198,16 +198,16 @@ SqsClient::SqsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SqsClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2012-11-05"),
+    QStringLiteral("sqs"),
+    QStringLiteral("Amazon Simple Queue Service"),
+    QStringLiteral("sqs"),
+    parent), d_ptr(new SqsClientPrivate(this))
 {
-    Q_D(SqsClient);
-    d->apiVersion = QStringLiteral("2012-11-05");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("sqs");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Simple Queue Service");
-    d->serviceName = QStringLiteral("sqs");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -997,10 +997,9 @@ UntagQueueResponse * SqsClient::untagQueue(const UntagQueueRequest &request)
 /*!
  * Constructs a SqsClientPrivate object with public implementation \a q.
  */
-SqsClientPrivate::SqsClientPrivate(SqsClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+SqsClientPrivate::SqsClientPrivate(SqsClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace SQS

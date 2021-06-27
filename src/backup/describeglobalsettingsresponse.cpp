@@ -59,8 +59,7 @@ DescribeGlobalSettingsResponse::DescribeGlobalSettingsResponse(
  */
 const DescribeGlobalSettingsRequest * DescribeGlobalSettingsResponse::request() const
 {
-    Q_D(const DescribeGlobalSettingsResponse);
-    return static_cast<const DescribeGlobalSettingsRequest *>(d->request);
+    return static_cast<const DescribeGlobalSettingsRequest *>(BackupResponse::request());
 }
 
 /*!

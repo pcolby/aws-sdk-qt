@@ -73,8 +73,7 @@ DescribeVirtualRouterResponse::DescribeVirtualRouterResponse(
  */
 const DescribeVirtualRouterRequest * DescribeVirtualRouterResponse::request() const
 {
-    Q_D(const DescribeVirtualRouterResponse);
-    return static_cast<const DescribeVirtualRouterRequest *>(d->request);
+    return static_cast<const DescribeVirtualRouterRequest *>(AppMeshResponse::request());
 }
 
 /*!

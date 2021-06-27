@@ -20,19 +20,20 @@
 #ifndef QTAWS_AUGMENTEDAIRUNTIMECLIENT_P_H
 #define QTAWS_AUGMENTEDAIRUNTIMECLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace AugmentedAIRuntime {
 
 class AugmentedAIRuntimeClient;
 
-class AugmentedAIRuntimeClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class AugmentedAIRuntimeClientPrivate {
 
 public:
     AugmentedAIRuntimeClientPrivate(AugmentedAIRuntimeClient * const q);
+
+protected:
+    AugmentedAIRuntimeClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AugmentedAIRuntimeClient)

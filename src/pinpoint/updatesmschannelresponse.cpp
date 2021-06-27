@@ -56,8 +56,7 @@ UpdateSmsChannelResponse::UpdateSmsChannelResponse(
  */
 const UpdateSmsChannelRequest * UpdateSmsChannelResponse::request() const
 {
-    Q_D(const UpdateSmsChannelResponse);
-    return static_cast<const UpdateSmsChannelRequest *>(d->request);
+    return static_cast<const UpdateSmsChannelRequest *>(PinpointResponse::request());
 }
 
 /*!

@@ -66,8 +66,7 @@ DescribeSchemasResponse::DescribeSchemasResponse(
  */
 const DescribeSchemasRequest * DescribeSchemasResponse::request() const
 {
-    Q_D(const DescribeSchemasResponse);
-    return static_cast<const DescribeSchemasRequest *>(d->request);
+    return static_cast<const DescribeSchemasRequest *>(DatabaseMigrationServiceResponse::request());
 }
 
 /*!

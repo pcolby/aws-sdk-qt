@@ -73,7 +73,7 @@ namespace WellArchitected {
  * Constructs a WellArchitectedRequest object for WellArchitected \a action.
  */
 WellArchitectedRequest::WellArchitectedRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new WellArchitectedRequestPrivate(action, this))
+    : d_ptr(new WellArchitectedRequestPrivate(action, this))
 {
 
 }
@@ -82,7 +82,8 @@ WellArchitectedRequest::WellArchitectedRequest(const Action action)
  * Constructs a copy of \a other.
  */
 WellArchitectedRequest::WellArchitectedRequest(const WellArchitectedRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new WellArchitectedRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new WellArchitectedRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -105,7 +106,7 @@ WellArchitectedRequest& WellArchitectedRequest::operator=(const WellArchitectedR
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from WellArchitectedRequestPrivate.
  */
-WellArchitectedRequest::WellArchitectedRequest(WellArchitectedRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+WellArchitectedRequest::WellArchitectedRequest(WellArchitectedRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -274,7 +275,7 @@ QNetworkRequest WellArchitectedRequest::unsignedRequest(const QUrl &endpoint) co
  * with public implementation \a q.
  */
 WellArchitectedRequestPrivate::WellArchitectedRequestPrivate(const WellArchitectedRequest::Action action, WellArchitectedRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -289,8 +290,8 @@ WellArchitectedRequestPrivate::WellArchitectedRequestPrivate(const WellArchitect
  */
 WellArchitectedRequestPrivate::WellArchitectedRequestPrivate(const WellArchitectedRequestPrivate &other,
                                      WellArchitectedRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

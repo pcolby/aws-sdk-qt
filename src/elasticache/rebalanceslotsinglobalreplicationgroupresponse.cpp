@@ -69,8 +69,7 @@ RebalanceSlotsInGlobalReplicationGroupResponse::RebalanceSlotsInGlobalReplicatio
  */
 const RebalanceSlotsInGlobalReplicationGroupRequest * RebalanceSlotsInGlobalReplicationGroupResponse::request() const
 {
-    Q_D(const RebalanceSlotsInGlobalReplicationGroupResponse);
-    return static_cast<const RebalanceSlotsInGlobalReplicationGroupRequest *>(d->request);
+    return static_cast<const RebalanceSlotsInGlobalReplicationGroupRequest *>(ElastiCacheResponse::request());
 }
 
 /*!

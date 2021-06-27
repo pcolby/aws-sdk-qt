@@ -60,8 +60,7 @@ UpdateWebhookResponse::UpdateWebhookResponse(
  */
 const UpdateWebhookRequest * UpdateWebhookResponse::request() const
 {
-    Q_D(const UpdateWebhookResponse);
-    return static_cast<const UpdateWebhookRequest *>(d->request);
+    return static_cast<const UpdateWebhookRequest *>(AmplifyResponse::request());
 }
 
 /*!

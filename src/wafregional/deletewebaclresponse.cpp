@@ -78,8 +78,7 @@ DeleteWebACLResponse::DeleteWebACLResponse(
  */
 const DeleteWebACLRequest * DeleteWebACLResponse::request() const
 {
-    Q_D(const DeleteWebACLResponse);
-    return static_cast<const DeleteWebACLRequest *>(d->request);
+    return static_cast<const DeleteWebACLRequest *>(WAFRegionalResponse::request());
 }
 
 /*!

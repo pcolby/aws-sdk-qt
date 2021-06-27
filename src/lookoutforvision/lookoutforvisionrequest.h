@@ -75,6 +75,7 @@ public:
 
 protected:
     /// @cond internal
+    LookoutforVisionRequestPrivate * const d_ptr; ///< Internal d-pointer.
     LookoutforVisionRequest(LookoutforVisionRequestPrivate * const d);
     /// @endcond
 

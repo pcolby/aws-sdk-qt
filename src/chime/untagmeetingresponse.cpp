@@ -98,8 +98,7 @@ UntagMeetingResponse::UntagMeetingResponse(
  */
 const UntagMeetingRequest * UntagMeetingResponse::request() const
 {
-    Q_D(const UntagMeetingResponse);
-    return static_cast<const UntagMeetingRequest *>(d->request);
+    return static_cast<const UntagMeetingRequest *>(ChimeResponse::request());
 }
 
 /*!

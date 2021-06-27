@@ -61,8 +61,7 @@ DescribeCopyProductStatusResponse::DescribeCopyProductStatusResponse(
  */
 const DescribeCopyProductStatusRequest * DescribeCopyProductStatusResponse::request() const
 {
-    Q_D(const DescribeCopyProductStatusResponse);
-    return static_cast<const DescribeCopyProductStatusRequest *>(d->request);
+    return static_cast<const DescribeCopyProductStatusRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

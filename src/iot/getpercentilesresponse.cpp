@@ -82,8 +82,7 @@ GetPercentilesResponse::GetPercentilesResponse(
  */
 const GetPercentilesRequest * GetPercentilesResponse::request() const
 {
-    Q_D(const GetPercentilesResponse);
-    return static_cast<const GetPercentilesRequest *>(d->request);
+    return static_cast<const GetPercentilesRequest *>(IoTResponse::request());
 }
 
 /*!

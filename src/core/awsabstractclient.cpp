@@ -51,10 +51,15 @@ namespace Core {
 /*!
  * Constructs an AwsAbstractClient object with parent \a parent.
  */
-AwsAbstractClient::AwsAbstractClient(QObject * const parent)
+AwsAbstractClient::AwsAbstractClient(const QString &apiVersion, const QString &endpointPrefix,
+    const QString &serviceFullName, const QString &serviceName, QObject * const parent)
     : QObject(parent), d_ptr(new AwsAbstractClientPrivate(this))
 {
-
+    Q_D(AwsAbstractClient);
+    d->apiVersion = apiVersion;
+    d->endpointPrefix = endpointPrefix;
+    d->serviceFullName = serviceFullName;
+    d->serviceName = serviceName;
 }
 
 /*!
@@ -261,6 +266,17 @@ void AwsAbstractClient::setRegion(const AwsRegion::Region region)
 {
     Q_D(AwsAbstractClient);
     d->region = region;
+}
+
+/*!
+ * Sets the \a signature to use for generated AWS signatures.
+ *
+ * @todo Document pointer ownership / lifecycle.
+ */
+void AwsAbstractClient::setSignature(AwsAbstractSignature * const signature)
+{
+    Q_D(AwsAbstractClient);
+    d->signature = signature;
 }
 
 /*!

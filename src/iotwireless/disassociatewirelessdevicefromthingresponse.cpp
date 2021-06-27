@@ -56,8 +56,7 @@ DisassociateWirelessDeviceFromThingResponse::DisassociateWirelessDeviceFromThing
  */
 const DisassociateWirelessDeviceFromThingRequest * DisassociateWirelessDeviceFromThingResponse::request() const
 {
-    Q_D(const DisassociateWirelessDeviceFromThingResponse);
-    return static_cast<const DisassociateWirelessDeviceFromThingRequest *>(d->request);
+    return static_cast<const DisassociateWirelessDeviceFromThingRequest *>(IoTWirelessResponse::request());
 }
 
 /*!

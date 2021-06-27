@@ -75,8 +75,7 @@ CreateTestGridUrlResponse::CreateTestGridUrlResponse(
  */
 const CreateTestGridUrlRequest * CreateTestGridUrlResponse::request() const
 {
-    Q_D(const CreateTestGridUrlResponse);
-    return static_cast<const CreateTestGridUrlRequest *>(d->request);
+    return static_cast<const CreateTestGridUrlRequest *>(DeviceFarmResponse::request());
 }
 
 /*!

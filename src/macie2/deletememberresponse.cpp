@@ -60,8 +60,7 @@ DeleteMemberResponse::DeleteMemberResponse(
  */
 const DeleteMemberRequest * DeleteMemberResponse::request() const
 {
-    Q_D(const DeleteMemberResponse);
-    return static_cast<const DeleteMemberRequest *>(d->request);
+    return static_cast<const DeleteMemberRequest *>(Macie2Response::request());
 }
 
 /*!

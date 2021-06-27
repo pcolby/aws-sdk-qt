@@ -66,8 +66,7 @@ UpdateScalingParametersResponse::UpdateScalingParametersResponse(
  */
 const UpdateScalingParametersRequest * UpdateScalingParametersResponse::request() const
 {
-    Q_D(const UpdateScalingParametersResponse);
-    return static_cast<const UpdateScalingParametersRequest *>(d->request);
+    return static_cast<const UpdateScalingParametersRequest *>(CloudSearchResponse::request());
 }
 
 /*!

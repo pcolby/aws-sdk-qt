@@ -20,19 +20,20 @@
 #ifndef QTAWS_POLLYCLIENT_P_H
 #define QTAWS_POLLYCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace Polly {
 
 class PollyClient;
 
-class PollyClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class PollyClientPrivate {
 
 public:
     PollyClientPrivate(PollyClient * const q);
+
+protected:
+    PollyClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(PollyClient)

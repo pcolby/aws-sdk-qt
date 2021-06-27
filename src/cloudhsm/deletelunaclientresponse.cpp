@@ -67,8 +67,7 @@ DeleteLunaClientResponse::DeleteLunaClientResponse(
  */
 const DeleteLunaClientRequest * DeleteLunaClientResponse::request() const
 {
-    Q_D(const DeleteLunaClientResponse);
-    return static_cast<const DeleteLunaClientRequest *>(d->request);
+    return static_cast<const DeleteLunaClientRequest *>(CloudHSMResponse::request());
 }
 
 /*!

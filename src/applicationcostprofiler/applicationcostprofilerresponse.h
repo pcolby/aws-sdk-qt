@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    ApplicationCostProfilerResponsePrivate * const d_ptr; ///< Internal d-pointer.
     ApplicationCostProfilerResponse(ApplicationCostProfilerResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

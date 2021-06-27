@@ -59,8 +59,7 @@ CreateBackupVaultResponse::CreateBackupVaultResponse(
  */
 const CreateBackupVaultRequest * CreateBackupVaultResponse::request() const
 {
-    Q_D(const CreateBackupVaultResponse);
-    return static_cast<const CreateBackupVaultRequest *>(d->request);
+    return static_cast<const CreateBackupVaultRequest *>(BackupResponse::request());
 }
 
 /*!

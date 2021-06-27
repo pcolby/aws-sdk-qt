@@ -58,8 +58,7 @@ StopKeyPhrasesDetectionJobResponse::StopKeyPhrasesDetectionJobResponse(
  */
 const StopKeyPhrasesDetectionJobRequest * StopKeyPhrasesDetectionJobResponse::request() const
 {
-    Q_D(const StopKeyPhrasesDetectionJobResponse);
-    return static_cast<const StopKeyPhrasesDetectionJobRequest *>(d->request);
+    return static_cast<const StopKeyPhrasesDetectionJobRequest *>(ComprehendResponse::request());
 }
 
 /*!

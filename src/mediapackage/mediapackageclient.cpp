@@ -97,16 +97,16 @@ MediaPackageClient::MediaPackageClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new MediaPackageClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-10-12"),
+    QStringLiteral("mediapackage"),
+    QStringLiteral("AWS Elemental MediaPackage"),
+    QStringLiteral("mediapackage"),
+    parent), d_ptr(new MediaPackageClientPrivate(this))
 {
-    Q_D(MediaPackageClient);
-    d->apiVersion = QStringLiteral("2017-10-12");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("mediapackage");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Elemental MediaPackage");
-    d->serviceName = QStringLiteral("mediapackage");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -125,16 +125,16 @@ MediaPackageClient::MediaPackageClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new MediaPackageClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-10-12"),
+    QStringLiteral("mediapackage"),
+    QStringLiteral("AWS Elemental MediaPackage"),
+    QStringLiteral("mediapackage"),
+    parent), d_ptr(new MediaPackageClientPrivate(this))
 {
-    Q_D(MediaPackageClient);
-    d->apiVersion = QStringLiteral("2017-10-12");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("mediapackage");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Elemental MediaPackage");
-    d->serviceName = QStringLiteral("mediapackage");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -378,10 +378,9 @@ UpdateOriginEndpointResponse * MediaPackageClient::updateOriginEndpoint(const Up
 /*!
  * Constructs a MediaPackageClientPrivate object with public implementation \a q.
  */
-MediaPackageClientPrivate::MediaPackageClientPrivate(MediaPackageClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+MediaPackageClientPrivate::MediaPackageClientPrivate(MediaPackageClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace MediaPackage

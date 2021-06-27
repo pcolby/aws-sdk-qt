@@ -73,8 +73,7 @@ UpdateVirtualGatewayResponse::UpdateVirtualGatewayResponse(
  */
 const UpdateVirtualGatewayRequest * UpdateVirtualGatewayResponse::request() const
 {
-    Q_D(const UpdateVirtualGatewayResponse);
-    return static_cast<const UpdateVirtualGatewayRequest *>(d->request);
+    return static_cast<const UpdateVirtualGatewayRequest *>(AppMeshResponse::request());
 }
 
 /*!

@@ -61,8 +61,7 @@ DescribeLagsResponse::DescribeLagsResponse(
  */
 const DescribeLagsRequest * DescribeLagsResponse::request() const
 {
-    Q_D(const DescribeLagsResponse);
-    return static_cast<const DescribeLagsRequest *>(d->request);
+    return static_cast<const DescribeLagsRequest *>(DirectConnectResponse::request());
 }
 
 /*!

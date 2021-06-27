@@ -37,7 +37,7 @@ namespace MarketplaceCommerceAnalytics {
  * Constructs a MarketplaceCommerceAnalyticsResponse object with parent \a parent.
  */
 MarketplaceCommerceAnalyticsResponse::MarketplaceCommerceAnalyticsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new MarketplaceCommerceAnalyticsResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new MarketplaceCommerceAnalyticsResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ MarketplaceCommerceAnalyticsResponse::MarketplaceCommerceAnalyticsResponse(QObje
  * implementation that inherits from MarketplaceCommerceAnalyticsResponsePrivate.
  */
 MarketplaceCommerceAnalyticsResponse::MarketplaceCommerceAnalyticsResponse(MarketplaceCommerceAnalyticsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void MarketplaceCommerceAnalyticsResponse::parseFailure(QIODevice &response)
  * Constructs a MarketplaceCommerceAnalyticsResponsePrivate object with public implementation \a q.
  */
 MarketplaceCommerceAnalyticsResponsePrivate::MarketplaceCommerceAnalyticsResponsePrivate(
-    MarketplaceCommerceAnalyticsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    MarketplaceCommerceAnalyticsResponse * const q) : q_ptr(q)
 {
 
 }

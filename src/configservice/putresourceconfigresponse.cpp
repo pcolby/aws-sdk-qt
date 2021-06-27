@@ -75,8 +75,7 @@ PutResourceConfigResponse::PutResourceConfigResponse(
  */
 const PutResourceConfigRequest * PutResourceConfigResponse::request() const
 {
-    Q_D(const PutResourceConfigResponse);
-    return static_cast<const PutResourceConfigRequest *>(d->request);
+    return static_cast<const PutResourceConfigRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

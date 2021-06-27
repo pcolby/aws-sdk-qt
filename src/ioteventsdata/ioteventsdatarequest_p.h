@@ -20,15 +20,12 @@
 #ifndef QTAWS_IOTEVENTSDATAREQUEST_P_H
 #define QTAWS_IOTEVENTSDATAREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "ioteventsdatarequest.h"
-
 namespace QtAws {
 namespace IoTEventsData {
 
 class IoTEventsDataRequest;
 
-class IoTEventsDataRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class IoTEventsDataRequestPrivate {
 
 public:
     IoTEventsDataRequest::Action action; ///< IoTEventsData action to be performed.
@@ -39,6 +36,9 @@ public:
     IoTEventsDataRequestPrivate(const IoTEventsDataRequestPrivate &other, IoTEventsDataRequest * const q);
 
     static QString toString(const IoTEventsDataRequest::Action &action);
+
+protected:
+    IoTEventsDataRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoTEventsDataRequest)

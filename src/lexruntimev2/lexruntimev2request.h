@@ -62,6 +62,7 @@ public:
 
 protected:
     /// @cond internal
+    LexRuntimeV2RequestPrivate * const d_ptr; ///< Internal d-pointer.
     LexRuntimeV2Request(LexRuntimeV2RequestPrivate * const d);
     /// @endcond
 

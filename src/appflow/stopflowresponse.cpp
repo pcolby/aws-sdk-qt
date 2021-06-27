@@ -100,8 +100,7 @@ StopFlowResponse::StopFlowResponse(
  */
 const StopFlowRequest * StopFlowResponse::request() const
 {
-    Q_D(const StopFlowResponse);
-    return static_cast<const StopFlowRequest *>(d->request);
+    return static_cast<const StopFlowRequest *>(AppflowResponse::request());
 }
 
 /*!

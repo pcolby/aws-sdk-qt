@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    CognitoSyncResponsePrivate * const d_ptr; ///< Internal d-pointer.
     CognitoSyncResponse(CognitoSyncResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -56,8 +56,7 @@ GetTraceGraphResponse::GetTraceGraphResponse(
  */
 const GetTraceGraphRequest * GetTraceGraphResponse::request() const
 {
-    Q_D(const GetTraceGraphResponse);
-    return static_cast<const GetTraceGraphRequest *>(d->request);
+    return static_cast<const GetTraceGraphRequest *>(XRayResponse::request());
 }
 
 /*!

@@ -87,8 +87,7 @@ DeleteTransitGatewayConnectResponse::DeleteTransitGatewayConnectResponse(
  */
 const DeleteTransitGatewayConnectRequest * DeleteTransitGatewayConnectResponse::request() const
 {
-    Q_D(const DeleteTransitGatewayConnectResponse);
-    return static_cast<const DeleteTransitGatewayConnectRequest *>(d->request);
+    return static_cast<const DeleteTransitGatewayConnectRequest *>(Ec2Response::request());
 }
 
 /*!

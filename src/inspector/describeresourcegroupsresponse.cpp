@@ -60,8 +60,7 @@ DescribeResourceGroupsResponse::DescribeResourceGroupsResponse(
  */
 const DescribeResourceGroupsRequest * DescribeResourceGroupsResponse::request() const
 {
-    Q_D(const DescribeResourceGroupsResponse);
-    return static_cast<const DescribeResourceGroupsRequest *>(d->request);
+    return static_cast<const DescribeResourceGroupsRequest *>(InspectorResponse::request());
 }
 
 /*!

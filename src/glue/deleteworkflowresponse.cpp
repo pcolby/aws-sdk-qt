@@ -58,8 +58,7 @@ DeleteWorkflowResponse::DeleteWorkflowResponse(
  */
 const DeleteWorkflowRequest * DeleteWorkflowResponse::request() const
 {
-    Q_D(const DeleteWorkflowResponse);
-    return static_cast<const DeleteWorkflowRequest *>(d->request);
+    return static_cast<const DeleteWorkflowRequest *>(GlueResponse::request());
 }
 
 /*!

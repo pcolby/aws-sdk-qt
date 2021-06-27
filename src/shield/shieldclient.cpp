@@ -131,16 +131,16 @@ ShieldClient::ShieldClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ShieldClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-06-02"),
+    QStringLiteral("shield"),
+    QStringLiteral("AWS Shield"),
+    QStringLiteral("shield"),
+    parent), d_ptr(new ShieldClientPrivate(this))
 {
-    Q_D(ShieldClient);
-    d->apiVersion = QStringLiteral("2016-06-02");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("shield");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Shield");
-    d->serviceName = QStringLiteral("shield");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -159,16 +159,16 @@ ShieldClient::ShieldClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new ShieldClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-06-02"),
+    QStringLiteral("shield"),
+    QStringLiteral("AWS Shield"),
+    QStringLiteral("shield"),
+    parent), d_ptr(new ShieldClientPrivate(this))
 {
-    Q_D(ShieldClient);
-    d->apiVersion = QStringLiteral("2016-06-02");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("shield");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Shield");
-    d->serviceName = QStringLiteral("shield");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -744,10 +744,9 @@ UpdateSubscriptionResponse * ShieldClient::updateSubscription(const UpdateSubscr
 /*!
  * Constructs a ShieldClientPrivate object with public implementation \a q.
  */
-ShieldClientPrivate::ShieldClientPrivate(ShieldClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+ShieldClientPrivate::ShieldClientPrivate(ShieldClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace Shield

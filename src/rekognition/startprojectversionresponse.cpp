@@ -56,8 +56,7 @@ StartProjectVersionResponse::StartProjectVersionResponse(
  */
 const StartProjectVersionRequest * StartProjectVersionResponse::request() const
 {
-    Q_D(const StartProjectVersionResponse);
-    return static_cast<const StartProjectVersionRequest *>(d->request);
+    return static_cast<const StartProjectVersionRequest *>(RekognitionResponse::request());
 }
 
 /*!

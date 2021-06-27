@@ -119,8 +119,7 @@ CreateDBSecurityGroupResponse::CreateDBSecurityGroupResponse(
  */
 const CreateDBSecurityGroupRequest * CreateDBSecurityGroupResponse::request() const
 {
-    Q_D(const CreateDBSecurityGroupResponse);
-    return static_cast<const CreateDBSecurityGroupRequest *>(d->request);
+    return static_cast<const CreateDBSecurityGroupRequest *>(RdsResponse::request());
 }
 
 /*!

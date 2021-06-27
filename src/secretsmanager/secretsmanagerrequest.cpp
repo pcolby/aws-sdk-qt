@@ -64,7 +64,7 @@ namespace SecretsManager {
  * Constructs a SecretsManagerRequest object for SecretsManager \a action.
  */
 SecretsManagerRequest::SecretsManagerRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new SecretsManagerRequestPrivate(action, this))
+    : d_ptr(new SecretsManagerRequestPrivate(action, this))
 {
 
 }
@@ -73,7 +73,8 @@ SecretsManagerRequest::SecretsManagerRequest(const Action action)
  * Constructs a copy of \a other.
  */
 SecretsManagerRequest::SecretsManagerRequest(const SecretsManagerRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new SecretsManagerRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new SecretsManagerRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -96,7 +97,7 @@ SecretsManagerRequest& SecretsManagerRequest::operator=(const SecretsManagerRequ
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SecretsManagerRequestPrivate.
  */
-SecretsManagerRequest::SecretsManagerRequest(SecretsManagerRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+SecretsManagerRequest::SecretsManagerRequest(SecretsManagerRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -265,7 +266,7 @@ QNetworkRequest SecretsManagerRequest::unsignedRequest(const QUrl &endpoint) con
  * with public implementation \a q.
  */
 SecretsManagerRequestPrivate::SecretsManagerRequestPrivate(const SecretsManagerRequest::Action action, SecretsManagerRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -280,8 +281,8 @@ SecretsManagerRequestPrivate::SecretsManagerRequestPrivate(const SecretsManagerR
  */
 SecretsManagerRequestPrivate::SecretsManagerRequestPrivate(const SecretsManagerRequestPrivate &other,
                                      SecretsManagerRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

@@ -218,8 +218,7 @@ DeleteEndpointGroupResponse::DeleteEndpointGroupResponse(
  */
 const DeleteEndpointGroupRequest * DeleteEndpointGroupResponse::request() const
 {
-    Q_D(const DeleteEndpointGroupResponse);
-    return static_cast<const DeleteEndpointGroupRequest *>(d->request);
+    return static_cast<const DeleteEndpointGroupRequest *>(GlobalAcceleratorResponse::request());
 }
 
 /*!

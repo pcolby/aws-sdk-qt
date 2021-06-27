@@ -159,8 +159,7 @@ StartExportTaskResponse::StartExportTaskResponse(
  */
 const StartExportTaskRequest * StartExportTaskResponse::request() const
 {
-    Q_D(const StartExportTaskResponse);
-    return static_cast<const StartExportTaskRequest *>(d->request);
+    return static_cast<const StartExportTaskRequest *>(ApplicationDiscoveryServiceResponse::request());
 }
 
 /*!

@@ -75,8 +75,7 @@ InstallToRemoteAccessSessionResponse::InstallToRemoteAccessSessionResponse(
  */
 const InstallToRemoteAccessSessionRequest * InstallToRemoteAccessSessionResponse::request() const
 {
-    Q_D(const InstallToRemoteAccessSessionResponse);
-    return static_cast<const InstallToRemoteAccessSessionRequest *>(d->request);
+    return static_cast<const InstallToRemoteAccessSessionRequest *>(DeviceFarmResponse::request());
 }
 
 /*!

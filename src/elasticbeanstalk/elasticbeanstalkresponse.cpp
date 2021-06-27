@@ -37,7 +37,7 @@ namespace ElasticBeanstalk {
  * Constructs a ElasticBeanstalkResponse object with parent \a parent.
  */
 ElasticBeanstalkResponse::ElasticBeanstalkResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new ElasticBeanstalkResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ElasticBeanstalkResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ ElasticBeanstalkResponse::ElasticBeanstalkResponse(QObject * const parent)
  * implementation that inherits from ElasticBeanstalkResponsePrivate.
  */
 ElasticBeanstalkResponse::ElasticBeanstalkResponse(ElasticBeanstalkResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void ElasticBeanstalkResponse::parseFailure(QIODevice &response)
  * Constructs a ElasticBeanstalkResponsePrivate object with public implementation \a q.
  */
 ElasticBeanstalkResponsePrivate::ElasticBeanstalkResponsePrivate(
-    ElasticBeanstalkResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    ElasticBeanstalkResponse * const q) : q_ptr(q)
 {
 
 }

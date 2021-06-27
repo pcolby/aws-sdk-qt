@@ -55,8 +55,7 @@ SelectObjectContentResponse::SelectObjectContentResponse(
  */
 const SelectObjectContentRequest * SelectObjectContentResponse::request() const
 {
-    Q_D(const SelectObjectContentResponse);
-    return static_cast<const SelectObjectContentRequest *>(d->request);
+    return static_cast<const SelectObjectContentRequest *>(S3Response::request());
 }
 
 /*!

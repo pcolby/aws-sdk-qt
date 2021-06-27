@@ -61,8 +61,7 @@ CreatePortfolioResponse::CreatePortfolioResponse(
  */
 const CreatePortfolioRequest * CreatePortfolioResponse::request() const
 {
-    Q_D(const CreatePortfolioResponse);
-    return static_cast<const CreatePortfolioRequest *>(d->request);
+    return static_cast<const CreatePortfolioRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

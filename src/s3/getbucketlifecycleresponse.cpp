@@ -55,8 +55,7 @@ GetBucketLifecycleResponse::GetBucketLifecycleResponse(
  */
 const GetBucketLifecycleRequest * GetBucketLifecycleResponse::request() const
 {
-    Q_D(const GetBucketLifecycleResponse);
-    return static_cast<const GetBucketLifecycleRequest *>(d->request);
+    return static_cast<const GetBucketLifecycleRequest *>(S3Response::request());
 }
 
 /*!

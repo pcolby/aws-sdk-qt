@@ -62,8 +62,7 @@ ListMFADevicesResponse::ListMFADevicesResponse(
  */
 const ListMFADevicesRequest * ListMFADevicesResponse::request() const
 {
-    Q_D(const ListMFADevicesResponse);
-    return static_cast<const ListMFADevicesRequest *>(d->request);
+    return static_cast<const ListMFADevicesRequest *>(IamResponse::request());
 }
 
 /*!

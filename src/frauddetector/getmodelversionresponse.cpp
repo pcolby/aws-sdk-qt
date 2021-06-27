@@ -58,8 +58,7 @@ GetModelVersionResponse::GetModelVersionResponse(
  */
 const GetModelVersionRequest * GetModelVersionResponse::request() const
 {
-    Q_D(const GetModelVersionResponse);
-    return static_cast<const GetModelVersionRequest *>(d->request);
+    return static_cast<const GetModelVersionRequest *>(FraudDetectorResponse::request());
 }
 
 /*!

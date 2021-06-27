@@ -110,16 +110,16 @@ mgnClient::mgnClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new mgnClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-02-26"),
+    QStringLiteral("mgn"),
+    QStringLiteral("Application Migration Service"),
+    QStringLiteral("mgn"),
+    parent), d_ptr(new mgnClientPrivate(this))
 {
-    Q_D(mgnClient);
-    d->apiVersion = QStringLiteral("2020-02-26");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("mgn");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Application Migration Service");
-    d->serviceName = QStringLiteral("mgn");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -138,16 +138,16 @@ mgnClient::mgnClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new mgnClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-02-26"),
+    QStringLiteral("mgn"),
+    QStringLiteral("Application Migration Service"),
+    QStringLiteral("mgn"),
+    parent), d_ptr(new mgnClientPrivate(this))
 {
-    Q_D(mgnClient);
-    d->apiVersion = QStringLiteral("2020-02-26");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("mgn");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Application Migration Service");
-    d->serviceName = QStringLiteral("mgn");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -513,10 +513,9 @@ UpdateReplicationConfigurationTemplateResponse * mgnClient::updateReplicationCon
 /*!
  * Constructs a mgnClientPrivate object with public implementation \a q.
  */
-mgnClientPrivate::mgnClientPrivate(mgnClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+mgnClientPrivate::mgnClientPrivate(mgnClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace mgn

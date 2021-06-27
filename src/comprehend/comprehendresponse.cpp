@@ -37,7 +37,7 @@ namespace Comprehend {
  * Constructs a ComprehendResponse object with parent \a parent.
  */
 ComprehendResponse::ComprehendResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new ComprehendResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ComprehendResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ ComprehendResponse::ComprehendResponse(QObject * const parent)
  * implementation that inherits from ComprehendResponsePrivate.
  */
 ComprehendResponse::ComprehendResponse(ComprehendResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void ComprehendResponse::parseFailure(QIODevice &response)
  * Constructs a ComprehendResponsePrivate object with public implementation \a q.
  */
 ComprehendResponsePrivate::ComprehendResponsePrivate(
-    ComprehendResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    ComprehendResponse * const q) : q_ptr(q)
 {
 
 }

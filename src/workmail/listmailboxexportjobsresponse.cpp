@@ -89,8 +89,7 @@ ListMailboxExportJobsResponse::ListMailboxExportJobsResponse(
  */
 const ListMailboxExportJobsRequest * ListMailboxExportJobsResponse::request() const
 {
-    Q_D(const ListMailboxExportJobsResponse);
-    return static_cast<const ListMailboxExportJobsRequest *>(d->request);
+    return static_cast<const ListMailboxExportJobsRequest *>(WorkMailResponse::request());
 }
 
 /*!

@@ -66,8 +66,7 @@ GetUserAttributeVerificationCodeResponse::GetUserAttributeVerificationCodeRespon
  */
 const GetUserAttributeVerificationCodeRequest * GetUserAttributeVerificationCodeResponse::request() const
 {
-    Q_D(const GetUserAttributeVerificationCodeResponse);
-    return static_cast<const GetUserAttributeVerificationCodeRequest *>(d->request);
+    return static_cast<const GetUserAttributeVerificationCodeRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

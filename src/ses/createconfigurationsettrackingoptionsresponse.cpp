@@ -66,8 +66,7 @@ CreateConfigurationSetTrackingOptionsResponse::CreateConfigurationSetTrackingOpt
  */
 const CreateConfigurationSetTrackingOptionsRequest * CreateConfigurationSetTrackingOptionsResponse::request() const
 {
-    Q_D(const CreateConfigurationSetTrackingOptionsResponse);
-    return static_cast<const CreateConfigurationSetTrackingOptionsRequest *>(d->request);
+    return static_cast<const CreateConfigurationSetTrackingOptionsRequest *>(SesResponse::request());
 }
 
 /*!

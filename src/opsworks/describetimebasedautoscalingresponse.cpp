@@ -161,8 +161,7 @@ DescribeTimeBasedAutoScalingResponse::DescribeTimeBasedAutoScalingResponse(
  */
 const DescribeTimeBasedAutoScalingRequest * DescribeTimeBasedAutoScalingResponse::request() const
 {
-    Q_D(const DescribeTimeBasedAutoScalingResponse);
-    return static_cast<const DescribeTimeBasedAutoScalingRequest *>(d->request);
+    return static_cast<const DescribeTimeBasedAutoScalingRequest *>(OpsWorksResponse::request());
 }
 
 /*!

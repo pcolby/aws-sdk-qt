@@ -81,8 +81,7 @@ AssociateFleetResponse::AssociateFleetResponse(
  */
 const AssociateFleetRequest * AssociateFleetResponse::request() const
 {
-    Q_D(const AssociateFleetResponse);
-    return static_cast<const AssociateFleetRequest *>(d->request);
+    return static_cast<const AssociateFleetRequest *>(AppStreamResponse::request());
 }
 
 /*!

@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    OpsWorksResponsePrivate * const d_ptr; ///< Internal d-pointer.
     OpsWorksResponse(OpsWorksResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

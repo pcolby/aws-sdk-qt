@@ -62,8 +62,7 @@ InitiateLayerUploadResponse::InitiateLayerUploadResponse(
  */
 const InitiateLayerUploadRequest * InitiateLayerUploadResponse::request() const
 {
-    Q_D(const InitiateLayerUploadResponse);
-    return static_cast<const InitiateLayerUploadRequest *>(d->request);
+    return static_cast<const InitiateLayerUploadRequest *>(EcrResponse::request());
 }
 
 /*!

@@ -115,8 +115,7 @@ RequestUploadCredentialsResponse::RequestUploadCredentialsResponse(
  */
 const RequestUploadCredentialsRequest * RequestUploadCredentialsResponse::request() const
 {
-    Q_D(const RequestUploadCredentialsResponse);
-    return static_cast<const RequestUploadCredentialsRequest *>(d->request);
+    return static_cast<const RequestUploadCredentialsRequest *>(GameLiftResponse::request());
 }
 
 /*!

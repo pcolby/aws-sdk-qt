@@ -211,6 +211,12 @@ public slots:
     StopReplicationTaskResponse * stopReplicationTask(const StopReplicationTaskRequest &request);
     TestConnectionResponse * testConnection(const TestConnectionRequest &request);
 
+protected:
+    /// @cond internal
+    DatabaseMigrationServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
+    DatabaseMigrationServiceClient(DatabaseMigrationServiceClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(DatabaseMigrationServiceClient)
     Q_DISABLE_COPY(DatabaseMigrationServiceClient)

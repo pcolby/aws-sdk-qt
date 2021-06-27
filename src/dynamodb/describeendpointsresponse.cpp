@@ -74,8 +74,7 @@ DescribeEndpointsResponse::DescribeEndpointsResponse(
  */
 const DescribeEndpointsRequest * DescribeEndpointsResponse::request() const
 {
-    Q_D(const DescribeEndpointsResponse);
-    return static_cast<const DescribeEndpointsRequest *>(d->request);
+    return static_cast<const DescribeEndpointsRequest *>(DynamoDBResponse::request());
 }
 
 /*!

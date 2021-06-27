@@ -68,7 +68,7 @@ namespace IVS {
  * Constructs a IvsRequest object for IVS \a action.
  */
 IvsRequest::IvsRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new IvsRequestPrivate(action, this))
+    : d_ptr(new IvsRequestPrivate(action, this))
 {
 
 }
@@ -77,7 +77,8 @@ IvsRequest::IvsRequest(const Action action)
  * Constructs a copy of \a other.
  */
 IvsRequest::IvsRequest(const IvsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new IvsRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new IvsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -100,7 +101,7 @@ IvsRequest& IvsRequest::operator=(const IvsRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from IvsRequestPrivate.
  */
-IvsRequest::IvsRequest(IvsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+IvsRequest::IvsRequest(IvsRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -269,7 +270,7 @@ QNetworkRequest IvsRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 IvsRequestPrivate::IvsRequestPrivate(const IvsRequest::Action action, IvsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -284,8 +285,8 @@ IvsRequestPrivate::IvsRequestPrivate(const IvsRequest::Action action, IvsRequest
  */
 IvsRequestPrivate::IvsRequestPrivate(const IvsRequestPrivate &other,
                                      IvsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

@@ -58,8 +58,7 @@ GetServiceQuotaResponse::GetServiceQuotaResponse(
  */
 const GetServiceQuotaRequest * GetServiceQuotaResponse::request() const
 {
-    Q_D(const GetServiceQuotaResponse);
-    return static_cast<const GetServiceQuotaRequest *>(d->request);
+    return static_cast<const GetServiceQuotaRequest *>(ServiceQuotasResponse::request());
 }
 
 /*!

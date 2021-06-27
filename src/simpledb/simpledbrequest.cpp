@@ -52,7 +52,7 @@ namespace SimpleDB {
  * Constructs a SimpleDBRequest object for SimpleDB \a action.
  */
 SimpleDBRequest::SimpleDBRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new SimpleDBRequestPrivate(action, this))
+    : d_ptr(new SimpleDBRequestPrivate(action, this))
 {
 
 }
@@ -61,7 +61,8 @@ SimpleDBRequest::SimpleDBRequest(const Action action)
  * Constructs a copy of \a other.
  */
 SimpleDBRequest::SimpleDBRequest(const SimpleDBRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new SimpleDBRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new SimpleDBRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -84,7 +85,7 @@ SimpleDBRequest& SimpleDBRequest::operator=(const SimpleDBRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SimpleDBRequestPrivate.
  */
-SimpleDBRequest::SimpleDBRequest(SimpleDBRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+SimpleDBRequest::SimpleDBRequest(SimpleDBRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -253,7 +254,7 @@ QNetworkRequest SimpleDBRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 SimpleDBRequestPrivate::SimpleDBRequestPrivate(const SimpleDBRequest::Action action, SimpleDBRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -268,8 +269,8 @@ SimpleDBRequestPrivate::SimpleDBRequestPrivate(const SimpleDBRequest::Action act
  */
 SimpleDBRequestPrivate::SimpleDBRequestPrivate(const SimpleDBRequestPrivate &other,
                                      SimpleDBRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

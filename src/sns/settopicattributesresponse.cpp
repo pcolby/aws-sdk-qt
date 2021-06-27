@@ -75,8 +75,7 @@ SetTopicAttributesResponse::SetTopicAttributesResponse(
  */
 const SetTopicAttributesRequest * SetTopicAttributesResponse::request() const
 {
-    Q_D(const SetTopicAttributesResponse);
-    return static_cast<const SetTopicAttributesRequest *>(d->request);
+    return static_cast<const SetTopicAttributesRequest *>(SnsResponse::request());
 }
 
 /*!

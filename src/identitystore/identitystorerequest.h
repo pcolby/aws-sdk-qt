@@ -60,6 +60,7 @@ public:
 
 protected:
     /// @cond internal
+    IdentityStoreRequestPrivate * const d_ptr; ///< Internal d-pointer.
     IdentityStoreRequest(IdentityStoreRequestPrivate * const d);
     /// @endcond
 

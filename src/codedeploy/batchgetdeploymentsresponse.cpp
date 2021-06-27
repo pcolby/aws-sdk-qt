@@ -141,8 +141,7 @@ BatchGetDeploymentsResponse::BatchGetDeploymentsResponse(
  */
 const BatchGetDeploymentsRequest * BatchGetDeploymentsResponse::request() const
 {
-    Q_D(const BatchGetDeploymentsResponse);
-    return static_cast<const BatchGetDeploymentsRequest *>(d->request);
+    return static_cast<const BatchGetDeploymentsRequest *>(CodeDeployResponse::request());
 }
 
 /*!

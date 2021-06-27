@@ -20,14 +20,12 @@
 #ifndef QTAWS_MGNRESPONSE_P_H
 #define QTAWS_MGNRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace mgn {
 
 class mgnResponse;
 
-class mgnResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class mgnResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    mgnResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(mgnResponse)

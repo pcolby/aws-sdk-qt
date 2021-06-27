@@ -65,6 +65,7 @@ public:
 
 protected:
     /// @cond internal
+    AppIntegrationsServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
     AppIntegrationsServiceRequest(AppIntegrationsServiceRequestPrivate * const d);
     /// @endcond
 

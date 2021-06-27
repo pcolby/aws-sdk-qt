@@ -82,8 +82,7 @@ ListDimensionsResponse::ListDimensionsResponse(
  */
 const ListDimensionsRequest * ListDimensionsResponse::request() const
 {
-    Q_D(const ListDimensionsResponse);
-    return static_cast<const ListDimensionsRequest *>(d->request);
+    return static_cast<const ListDimensionsRequest *>(IoTResponse::request());
 }
 
 /*!

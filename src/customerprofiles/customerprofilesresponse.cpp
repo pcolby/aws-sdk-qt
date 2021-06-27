@@ -37,7 +37,7 @@ namespace CustomerProfiles {
  * Constructs a CustomerProfilesResponse object with parent \a parent.
  */
 CustomerProfilesResponse::CustomerProfilesResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new CustomerProfilesResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new CustomerProfilesResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ CustomerProfilesResponse::CustomerProfilesResponse(QObject * const parent)
  * implementation that inherits from CustomerProfilesResponsePrivate.
  */
 CustomerProfilesResponse::CustomerProfilesResponse(CustomerProfilesResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void CustomerProfilesResponse::parseFailure(QIODevice &response)
  * Constructs a CustomerProfilesResponsePrivate object with public implementation \a q.
  */
 CustomerProfilesResponsePrivate::CustomerProfilesResponsePrivate(
-    CustomerProfilesResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    CustomerProfilesResponse * const q) : q_ptr(q)
 {
 
 }

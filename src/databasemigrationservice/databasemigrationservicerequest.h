@@ -111,6 +111,7 @@ public:
 
 protected:
     /// @cond internal
+    DatabaseMigrationServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
     DatabaseMigrationServiceRequest(DatabaseMigrationServiceRequestPrivate * const d);
     /// @endcond
 

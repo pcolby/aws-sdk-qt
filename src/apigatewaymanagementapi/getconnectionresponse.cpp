@@ -59,8 +59,7 @@ GetConnectionResponse::GetConnectionResponse(
  */
 const GetConnectionRequest * GetConnectionResponse::request() const
 {
-    Q_D(const GetConnectionResponse);
-    return static_cast<const GetConnectionRequest *>(d->request);
+    return static_cast<const GetConnectionRequest *>(ApiGatewayManagementApiResponse::request());
 }
 
 /*!

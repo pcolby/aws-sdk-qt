@@ -75,8 +75,7 @@ UpdateTestGridProjectResponse::UpdateTestGridProjectResponse(
  */
 const UpdateTestGridProjectRequest * UpdateTestGridProjectResponse::request() const
 {
-    Q_D(const UpdateTestGridProjectResponse);
-    return static_cast<const UpdateTestGridProjectRequest *>(d->request);
+    return static_cast<const UpdateTestGridProjectRequest *>(DeviceFarmResponse::request());
 }
 
 /*!

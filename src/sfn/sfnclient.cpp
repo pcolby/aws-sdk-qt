@@ -124,16 +124,16 @@ SfnClient::SfnClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SfnClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-11-23"),
+    QStringLiteral("states"),
+    QStringLiteral("AWS Step Functions"),
+    QStringLiteral("states"),
+    parent), d_ptr(new SfnClientPrivate(this))
 {
-    Q_D(SfnClient);
-    d->apiVersion = QStringLiteral("2016-11-23");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("states");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Step Functions");
-    d->serviceName = QStringLiteral("states");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -152,16 +152,16 @@ SfnClient::SfnClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SfnClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2016-11-23"),
+    QStringLiteral("states"),
+    QStringLiteral("AWS Step Functions"),
+    QStringLiteral("states"),
+    parent), d_ptr(new SfnClientPrivate(this))
 {
-    Q_D(SfnClient);
-    d->apiVersion = QStringLiteral("2016-11-23");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("states");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Step Functions");
-    d->serviceName = QStringLiteral("states");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -655,10 +655,9 @@ UpdateStateMachineResponse * SfnClient::updateStateMachine(const UpdateStateMach
 /*!
  * Constructs a SfnClientPrivate object with public implementation \a q.
  */
-SfnClientPrivate::SfnClientPrivate(SfnClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+SfnClientPrivate::SfnClientPrivate(SfnClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace SFN

@@ -115,8 +115,7 @@ UpdateAliasResponse::UpdateAliasResponse(
  */
 const UpdateAliasRequest * UpdateAliasResponse::request() const
 {
-    Q_D(const UpdateAliasResponse);
-    return static_cast<const UpdateAliasRequest *>(d->request);
+    return static_cast<const UpdateAliasRequest *>(GameLiftResponse::request());
 }
 
 /*!

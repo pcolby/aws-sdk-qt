@@ -87,8 +87,7 @@ CreateDhcpOptionsResponse::CreateDhcpOptionsResponse(
  */
 const CreateDhcpOptionsRequest * CreateDhcpOptionsResponse::request() const
 {
-    Q_D(const CreateDhcpOptionsResponse);
-    return static_cast<const CreateDhcpOptionsRequest *>(d->request);
+    return static_cast<const CreateDhcpOptionsRequest *>(Ec2Response::request());
 }
 
 /*!

@@ -20,15 +20,12 @@
 #ifndef QTAWS_FRAUDDETECTORREQUEST_P_H
 #define QTAWS_FRAUDDETECTORREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "frauddetectorrequest.h"
-
 namespace QtAws {
 namespace FraudDetector {
 
 class FraudDetectorRequest;
 
-class FraudDetectorRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class FraudDetectorRequestPrivate {
 
 public:
     FraudDetectorRequest::Action action; ///< FraudDetector action to be performed.
@@ -39,6 +36,9 @@ public:
     FraudDetectorRequestPrivate(const FraudDetectorRequestPrivate &other, FraudDetectorRequest * const q);
 
     static QString toString(const FraudDetectorRequest::Action &action);
+
+protected:
+    FraudDetectorRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(FraudDetectorRequest)

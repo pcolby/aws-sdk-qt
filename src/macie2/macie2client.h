@@ -214,6 +214,12 @@ public slots:
     UpdateMemberSessionResponse * updateMemberSession(const UpdateMemberSessionRequest &request);
     UpdateOrganizationConfigurationResponse * updateOrganizationConfiguration(const UpdateOrganizationConfigurationRequest &request);
 
+protected:
+    /// @cond internal
+    Macie2ClientPrivate * const d_ptr; ///< Internal d-pointer.
+    Macie2Client(Macie2ClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(Macie2Client)
     Q_DISABLE_COPY(Macie2Client)

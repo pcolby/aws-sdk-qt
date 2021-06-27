@@ -64,8 +64,7 @@ CancelTaskExecutionResponse::CancelTaskExecutionResponse(
  */
 const CancelTaskExecutionRequest * CancelTaskExecutionResponse::request() const
 {
-    Q_D(const CancelTaskExecutionResponse);
-    return static_cast<const CancelTaskExecutionRequest *>(d->request);
+    return static_cast<const CancelTaskExecutionRequest *>(DataSyncResponse::request());
 }
 
 /*!

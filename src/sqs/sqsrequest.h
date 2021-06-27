@@ -76,6 +76,7 @@ public:
 
 protected:
     /// @cond internal
+    SqsRequestPrivate * const d_ptr; ///< Internal d-pointer.
     SqsRequest(SqsRequestPrivate * const d);
     /// @endcond
 

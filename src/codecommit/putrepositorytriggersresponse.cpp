@@ -439,8 +439,7 @@ PutRepositoryTriggersResponse::PutRepositoryTriggersResponse(
  */
 const PutRepositoryTriggersRequest * PutRepositoryTriggersResponse::request() const
 {
-    Q_D(const PutRepositoryTriggersResponse);
-    return static_cast<const PutRepositoryTriggersRequest *>(d->request);
+    return static_cast<const PutRepositoryTriggersRequest *>(CodeCommitResponse::request());
 }
 
 /*!

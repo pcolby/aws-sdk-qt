@@ -89,8 +89,7 @@ GetDefaultRetentionPolicyResponse::GetDefaultRetentionPolicyResponse(
  */
 const GetDefaultRetentionPolicyRequest * GetDefaultRetentionPolicyResponse::request() const
 {
-    Q_D(const GetDefaultRetentionPolicyResponse);
-    return static_cast<const GetDefaultRetentionPolicyRequest *>(d->request);
+    return static_cast<const GetDefaultRetentionPolicyRequest *>(WorkMailResponse::request());
 }
 
 /*!

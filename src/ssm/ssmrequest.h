@@ -191,6 +191,7 @@ public:
 
 protected:
     /// @cond internal
+    SsmRequestPrivate * const d_ptr; ///< Internal d-pointer.
     SsmRequest(SsmRequestPrivate * const d);
     /// @endcond
 

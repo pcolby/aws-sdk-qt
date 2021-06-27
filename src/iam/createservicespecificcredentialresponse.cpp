@@ -62,8 +62,7 @@ CreateServiceSpecificCredentialResponse::CreateServiceSpecificCredentialResponse
  */
 const CreateServiceSpecificCredentialRequest * CreateServiceSpecificCredentialResponse::request() const
 {
-    Q_D(const CreateServiceSpecificCredentialResponse);
-    return static_cast<const CreateServiceSpecificCredentialRequest *>(d->request);
+    return static_cast<const CreateServiceSpecificCredentialRequest *>(IamResponse::request());
 }
 
 /*!

@@ -57,8 +57,7 @@ DeleteMetricPolicyResponse::DeleteMetricPolicyResponse(
  */
 const DeleteMetricPolicyRequest * DeleteMetricPolicyResponse::request() const
 {
-    Q_D(const DeleteMetricPolicyResponse);
-    return static_cast<const DeleteMetricPolicyRequest *>(d->request);
+    return static_cast<const DeleteMetricPolicyRequest *>(MediaStoreResponse::request());
 }
 
 /*!

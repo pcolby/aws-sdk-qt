@@ -55,8 +55,7 @@ DeleteBucketInventoryConfigurationResponse::DeleteBucketInventoryConfigurationRe
  */
 const DeleteBucketInventoryConfigurationRequest * DeleteBucketInventoryConfigurationResponse::request() const
 {
-    Q_D(const DeleteBucketInventoryConfigurationResponse);
-    return static_cast<const DeleteBucketInventoryConfigurationRequest *>(d->request);
+    return static_cast<const DeleteBucketInventoryConfigurationRequest *>(S3Response::request());
 }
 
 /*!

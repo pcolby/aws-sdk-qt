@@ -78,8 +78,7 @@ CancelReplayResponse::CancelReplayResponse(
  */
 const CancelReplayRequest * CancelReplayResponse::request() const
 {
-    Q_D(const CancelReplayResponse);
-    return static_cast<const CancelReplayRequest *>(d->request);
+    return static_cast<const CancelReplayRequest *>(EventBridgeResponse::request());
 }
 
 /*!

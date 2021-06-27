@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    FirehoseResponsePrivate * const d_ptr; ///< Internal d-pointer.
     FirehoseResponse(FirehoseResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

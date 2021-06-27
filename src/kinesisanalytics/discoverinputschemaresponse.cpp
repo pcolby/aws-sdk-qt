@@ -69,8 +69,7 @@ DiscoverInputSchemaResponse::DiscoverInputSchemaResponse(
  */
 const DiscoverInputSchemaRequest * DiscoverInputSchemaResponse::request() const
 {
-    Q_D(const DiscoverInputSchemaResponse);
-    return static_cast<const DiscoverInputSchemaRequest *>(d->request);
+    return static_cast<const DiscoverInputSchemaRequest *>(KinesisAnalyticsResponse::request());
 }
 
 /*!

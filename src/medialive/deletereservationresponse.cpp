@@ -55,8 +55,7 @@ DeleteReservationResponse::DeleteReservationResponse(
  */
 const DeleteReservationRequest * DeleteReservationResponse::request() const
 {
-    Q_D(const DeleteReservationResponse);
-    return static_cast<const DeleteReservationRequest *>(d->request);
+    return static_cast<const DeleteReservationRequest *>(MediaLiveResponse::request());
 }
 
 /*!

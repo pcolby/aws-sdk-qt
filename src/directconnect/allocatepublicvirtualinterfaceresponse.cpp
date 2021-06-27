@@ -61,8 +61,7 @@ AllocatePublicVirtualInterfaceResponse::AllocatePublicVirtualInterfaceResponse(
  */
 const AllocatePublicVirtualInterfaceRequest * AllocatePublicVirtualInterfaceResponse::request() const
 {
-    Q_D(const AllocatePublicVirtualInterfaceResponse);
-    return static_cast<const AllocatePublicVirtualInterfaceRequest *>(d->request);
+    return static_cast<const AllocatePublicVirtualInterfaceRequest *>(DirectConnectResponse::request());
 }
 
 /*!

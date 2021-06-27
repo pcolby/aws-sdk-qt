@@ -90,8 +90,7 @@ DescribeSSLPoliciesResponse::DescribeSSLPoliciesResponse(
  */
 const DescribeSSLPoliciesRequest * DescribeSSLPoliciesResponse::request() const
 {
-    Q_D(const DescribeSSLPoliciesResponse);
-    return static_cast<const DescribeSSLPoliciesRequest *>(d->request);
+    return static_cast<const DescribeSSLPoliciesRequest *>(ElasticLoadBalancingv2Response::request());
 }
 
 /*!

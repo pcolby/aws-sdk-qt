@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    ElasticInferenceResponsePrivate * const d_ptr; ///< Internal d-pointer.
     ElasticInferenceResponse(ElasticInferenceResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

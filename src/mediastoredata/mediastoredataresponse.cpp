@@ -37,7 +37,7 @@ namespace MediaStoreData {
  * Constructs a MediaStoreDataResponse object with parent \a parent.
  */
 MediaStoreDataResponse::MediaStoreDataResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new MediaStoreDataResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new MediaStoreDataResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ MediaStoreDataResponse::MediaStoreDataResponse(QObject * const parent)
  * implementation that inherits from MediaStoreDataResponsePrivate.
  */
 MediaStoreDataResponse::MediaStoreDataResponse(MediaStoreDataResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void MediaStoreDataResponse::parseFailure(QIODevice &response)
  * Constructs a MediaStoreDataResponsePrivate object with public implementation \a q.
  */
 MediaStoreDataResponsePrivate::MediaStoreDataResponsePrivate(
-    MediaStoreDataResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    MediaStoreDataResponse * const q) : q_ptr(q)
 {
 
 }

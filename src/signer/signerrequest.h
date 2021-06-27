@@ -73,6 +73,7 @@ public:
 
 protected:
     /// @cond internal
+    signerRequestPrivate * const d_ptr; ///< Internal d-pointer.
     signerRequest(signerRequestPrivate * const d);
     /// @endcond
 

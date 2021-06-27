@@ -69,8 +69,7 @@ DescribeDirectoriesResponse::DescribeDirectoriesResponse(
  */
 const DescribeDirectoriesRequest * DescribeDirectoriesResponse::request() const
 {
-    Q_D(const DescribeDirectoriesResponse);
-    return static_cast<const DescribeDirectoriesRequest *>(d->request);
+    return static_cast<const DescribeDirectoriesRequest *>(DirectoryServiceResponse::request());
 }
 
 /*!

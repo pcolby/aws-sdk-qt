@@ -87,8 +87,7 @@ BundleInstanceResponse::BundleInstanceResponse(
  */
 const BundleInstanceRequest * BundleInstanceResponse::request() const
 {
-    Q_D(const BundleInstanceResponse);
-    return static_cast<const BundleInstanceRequest *>(d->request);
+    return static_cast<const BundleInstanceRequest *>(Ec2Response::request());
 }
 
 /*!

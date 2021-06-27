@@ -60,8 +60,7 @@ UpdateDataSourceResponse::UpdateDataSourceResponse(
  */
 const UpdateDataSourceRequest * UpdateDataSourceResponse::request() const
 {
-    Q_D(const UpdateDataSourceResponse);
-    return static_cast<const UpdateDataSourceRequest *>(d->request);
+    return static_cast<const UpdateDataSourceRequest *>(QuickSightResponse::request());
 }
 
 /*!

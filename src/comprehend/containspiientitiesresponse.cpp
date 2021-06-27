@@ -58,8 +58,7 @@ ContainsPiiEntitiesResponse::ContainsPiiEntitiesResponse(
  */
 const ContainsPiiEntitiesRequest * ContainsPiiEntitiesResponse::request() const
 {
-    Q_D(const ContainsPiiEntitiesResponse);
-    return static_cast<const ContainsPiiEntitiesRequest *>(d->request);
+    return static_cast<const ContainsPiiEntitiesRequest *>(ComprehendResponse::request());
 }
 
 /*!

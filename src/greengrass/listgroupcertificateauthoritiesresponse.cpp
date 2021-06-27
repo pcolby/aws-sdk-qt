@@ -58,8 +58,7 @@ ListGroupCertificateAuthoritiesResponse::ListGroupCertificateAuthoritiesResponse
  */
 const ListGroupCertificateAuthoritiesRequest * ListGroupCertificateAuthoritiesResponse::request() const
 {
-    Q_D(const ListGroupCertificateAuthoritiesResponse);
-    return static_cast<const ListGroupCertificateAuthoritiesRequest *>(d->request);
+    return static_cast<const ListGroupCertificateAuthoritiesRequest *>(GreengrassResponse::request());
 }
 
 /*!

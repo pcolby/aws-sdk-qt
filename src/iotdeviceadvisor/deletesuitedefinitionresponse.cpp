@@ -62,8 +62,7 @@ DeleteSuiteDefinitionResponse::DeleteSuiteDefinitionResponse(
  */
 const DeleteSuiteDefinitionRequest * DeleteSuiteDefinitionResponse::request() const
 {
-    Q_D(const DeleteSuiteDefinitionResponse);
-    return static_cast<const DeleteSuiteDefinitionRequest *>(d->request);
+    return static_cast<const DeleteSuiteDefinitionRequest *>(IoTDeviceAdvisorResponse::request());
 }
 
 /*!

@@ -87,8 +87,7 @@ ReportInstanceStatusResponse::ReportInstanceStatusResponse(
  */
 const ReportInstanceStatusRequest * ReportInstanceStatusResponse::request() const
 {
-    Q_D(const ReportInstanceStatusResponse);
-    return static_cast<const ReportInstanceStatusRequest *>(d->request);
+    return static_cast<const ReportInstanceStatusRequest *>(Ec2Response::request());
 }
 
 /*!

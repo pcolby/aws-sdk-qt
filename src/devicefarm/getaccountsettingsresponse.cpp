@@ -75,8 +75,7 @@ GetAccountSettingsResponse::GetAccountSettingsResponse(
  */
 const GetAccountSettingsRequest * GetAccountSettingsResponse::request() const
 {
-    Q_D(const GetAccountSettingsResponse);
-    return static_cast<const GetAccountSettingsRequest *>(d->request);
+    return static_cast<const GetAccountSettingsRequest *>(DeviceFarmResponse::request());
 }
 
 /*!

@@ -98,8 +98,7 @@ ListAccountsResponse::ListAccountsResponse(
  */
 const ListAccountsRequest * ListAccountsResponse::request() const
 {
-    Q_D(const ListAccountsResponse);
-    return static_cast<const ListAccountsRequest *>(d->request);
+    return static_cast<const ListAccountsRequest *>(ChimeResponse::request());
 }
 
 /*!

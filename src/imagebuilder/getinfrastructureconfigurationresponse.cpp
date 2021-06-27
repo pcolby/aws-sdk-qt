@@ -58,8 +58,7 @@ GetInfrastructureConfigurationResponse::GetInfrastructureConfigurationResponse(
  */
 const GetInfrastructureConfigurationRequest * GetInfrastructureConfigurationResponse::request() const
 {
-    Q_D(const GetInfrastructureConfigurationResponse);
-    return static_cast<const GetInfrastructureConfigurationRequest *>(d->request);
+    return static_cast<const GetInfrastructureConfigurationRequest *>(imagebuilderResponse::request());
 }
 
 /*!

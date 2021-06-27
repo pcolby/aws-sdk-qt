@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    SesResponsePrivate * const d_ptr; ///< Internal d-pointer.
     SesResponse(SesResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

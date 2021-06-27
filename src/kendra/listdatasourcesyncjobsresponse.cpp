@@ -56,8 +56,7 @@ ListDataSourceSyncJobsResponse::ListDataSourceSyncJobsResponse(
  */
 const ListDataSourceSyncJobsRequest * ListDataSourceSyncJobsResponse::request() const
 {
-    Q_D(const ListDataSourceSyncJobsResponse);
-    return static_cast<const ListDataSourceSyncJobsRequest *>(d->request);
+    return static_cast<const ListDataSourceSyncJobsRequest *>(kendraResponse::request());
 }
 
 /*!

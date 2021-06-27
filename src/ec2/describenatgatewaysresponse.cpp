@@ -87,8 +87,7 @@ DescribeNatGatewaysResponse::DescribeNatGatewaysResponse(
  */
 const DescribeNatGatewaysRequest * DescribeNatGatewaysResponse::request() const
 {
-    Q_D(const DescribeNatGatewaysResponse);
-    return static_cast<const DescribeNatGatewaysRequest *>(d->request);
+    return static_cast<const DescribeNatGatewaysRequest *>(Ec2Response::request());
 }
 
 /*!

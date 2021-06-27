@@ -64,8 +64,7 @@ ListPendingInvitationResourcesResponse::ListPendingInvitationResourcesResponse(
  */
 const ListPendingInvitationResourcesRequest * ListPendingInvitationResourcesResponse::request() const
 {
-    Q_D(const ListPendingInvitationResourcesResponse);
-    return static_cast<const ListPendingInvitationResourcesRequest *>(d->request);
+    return static_cast<const ListPendingInvitationResourcesRequest *>(RamResponse::request());
 }
 
 /*!

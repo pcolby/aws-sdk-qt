@@ -115,8 +115,7 @@ StopGameSessionPlacementResponse::StopGameSessionPlacementResponse(
  */
 const StopGameSessionPlacementRequest * StopGameSessionPlacementResponse::request() const
 {
-    Q_D(const StopGameSessionPlacementResponse);
-    return static_cast<const StopGameSessionPlacementRequest *>(d->request);
+    return static_cast<const StopGameSessionPlacementRequest *>(GameLiftResponse::request());
 }
 
 /*!

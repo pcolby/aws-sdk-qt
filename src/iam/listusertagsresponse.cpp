@@ -62,8 +62,7 @@ ListUserTagsResponse::ListUserTagsResponse(
  */
 const ListUserTagsRequest * ListUserTagsResponse::request() const
 {
-    Q_D(const ListUserTagsResponse);
-    return static_cast<const ListUserTagsRequest *>(d->request);
+    return static_cast<const ListUserTagsRequest *>(IamResponse::request());
 }
 
 /*!

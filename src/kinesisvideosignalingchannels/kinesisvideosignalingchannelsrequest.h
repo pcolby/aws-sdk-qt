@@ -58,6 +58,7 @@ public:
 
 protected:
     /// @cond internal
+    KinesisVideoSignalingChannelsRequestPrivate * const d_ptr; ///< Internal d-pointer.
     KinesisVideoSignalingChannelsRequest(KinesisVideoSignalingChannelsRequestPrivate * const d);
     /// @endcond
 

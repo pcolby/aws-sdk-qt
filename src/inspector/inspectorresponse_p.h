@@ -20,14 +20,12 @@
 #ifndef QTAWS_INSPECTORRESPONSE_P_H
 #define QTAWS_INSPECTORRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace Inspector {
 
 class InspectorResponse;
 
-class InspectorResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class InspectorResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    InspectorResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(InspectorResponse)

@@ -87,8 +87,7 @@ DescribeByoipCidrsResponse::DescribeByoipCidrsResponse(
  */
 const DescribeByoipCidrsRequest * DescribeByoipCidrsResponse::request() const
 {
-    Q_D(const DescribeByoipCidrsResponse);
-    return static_cast<const DescribeByoipCidrsRequest *>(d->request);
+    return static_cast<const DescribeByoipCidrsRequest *>(Ec2Response::request());
 }
 
 /*!

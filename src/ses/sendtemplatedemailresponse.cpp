@@ -66,8 +66,7 @@ SendTemplatedEmailResponse::SendTemplatedEmailResponse(
  */
 const SendTemplatedEmailRequest * SendTemplatedEmailResponse::request() const
 {
-    Q_D(const SendTemplatedEmailResponse);
-    return static_cast<const SendTemplatedEmailRequest *>(d->request);
+    return static_cast<const SendTemplatedEmailRequest *>(SesResponse::request());
 }
 
 /*!

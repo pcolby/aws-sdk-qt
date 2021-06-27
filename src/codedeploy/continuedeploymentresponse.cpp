@@ -141,8 +141,7 @@ ContinueDeploymentResponse::ContinueDeploymentResponse(
  */
 const ContinueDeploymentRequest * ContinueDeploymentResponse::request() const
 {
-    Q_D(const ContinueDeploymentResponse);
-    return static_cast<const ContinueDeploymentRequest *>(d->request);
+    return static_cast<const ContinueDeploymentRequest *>(CodeDeployResponse::request());
 }
 
 /*!

@@ -87,8 +87,7 @@ ModifyFleetResponse::ModifyFleetResponse(
  */
 const ModifyFleetRequest * ModifyFleetResponse::request() const
 {
-    Q_D(const ModifyFleetResponse);
-    return static_cast<const ModifyFleetRequest *>(d->request);
+    return static_cast<const ModifyFleetRequest *>(Ec2Response::request());
 }
 
 /*!

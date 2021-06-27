@@ -105,16 +105,16 @@ LookoutEquipmentClient::LookoutEquipmentClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new LookoutEquipmentClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-12-15"),
+    QStringLiteral("lookoutequipment"),
+    QStringLiteral("Amazon Lookout for Equipment"),
+    QStringLiteral("lookoutequipment"),
+    parent), d_ptr(new LookoutEquipmentClientPrivate(this))
 {
-    Q_D(LookoutEquipmentClient);
-    d->apiVersion = QStringLiteral("2020-12-15");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("lookoutequipment");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Lookout for Equipment");
-    d->serviceName = QStringLiteral("lookoutequipment");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -133,16 +133,16 @@ LookoutEquipmentClient::LookoutEquipmentClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new LookoutEquipmentClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-12-15"),
+    QStringLiteral("lookoutequipment"),
+    QStringLiteral("Amazon Lookout for Equipment"),
+    QStringLiteral("lookoutequipment"),
+    parent), d_ptr(new LookoutEquipmentClientPrivate(this))
 {
-    Q_D(LookoutEquipmentClient);
-    d->apiVersion = QStringLiteral("2020-12-15");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("lookoutequipment");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Lookout for Equipment");
-    d->serviceName = QStringLiteral("lookoutequipment");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -470,10 +470,9 @@ UpdateInferenceSchedulerResponse * LookoutEquipmentClient::updateInferenceSchedu
 /*!
  * Constructs a LookoutEquipmentClientPrivate object with public implementation \a q.
  */
-LookoutEquipmentClientPrivate::LookoutEquipmentClientPrivate(LookoutEquipmentClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+LookoutEquipmentClientPrivate::LookoutEquipmentClientPrivate(LookoutEquipmentClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace LookoutEquipment

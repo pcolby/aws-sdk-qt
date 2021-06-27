@@ -77,8 +77,7 @@ AssociateEnvironmentOperationsRoleResponse::AssociateEnvironmentOperationsRoleRe
  */
 const AssociateEnvironmentOperationsRoleRequest * AssociateEnvironmentOperationsRoleResponse::request() const
 {
-    Q_D(const AssociateEnvironmentOperationsRoleResponse);
-    return static_cast<const AssociateEnvironmentOperationsRoleRequest *>(d->request);
+    return static_cast<const AssociateEnvironmentOperationsRoleRequest *>(ElasticBeanstalkResponse::request());
 }
 
 /*!

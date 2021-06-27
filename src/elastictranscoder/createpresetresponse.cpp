@@ -58,8 +58,7 @@ CreatePresetResponse::CreatePresetResponse(
  */
 const CreatePresetRequest * CreatePresetResponse::request() const
 {
-    Q_D(const CreatePresetResponse);
-    return static_cast<const CreatePresetRequest *>(d->request);
+    return static_cast<const CreatePresetRequest *>(ElasticTranscoderResponse::request());
 }
 
 /*!

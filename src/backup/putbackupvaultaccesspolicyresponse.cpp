@@ -59,8 +59,7 @@ PutBackupVaultAccessPolicyResponse::PutBackupVaultAccessPolicyResponse(
  */
 const PutBackupVaultAccessPolicyRequest * PutBackupVaultAccessPolicyResponse::request() const
 {
-    Q_D(const PutBackupVaultAccessPolicyResponse);
-    return static_cast<const PutBackupVaultAccessPolicyRequest *>(d->request);
+    return static_cast<const PutBackupVaultAccessPolicyRequest *>(BackupResponse::request());
 }
 
 /*!

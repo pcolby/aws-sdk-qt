@@ -69,8 +69,7 @@ UpdateNumberOfDomainControllersResponse::UpdateNumberOfDomainControllersResponse
  */
 const UpdateNumberOfDomainControllersRequest * UpdateNumberOfDomainControllersResponse::request() const
 {
-    Q_D(const UpdateNumberOfDomainControllersResponse);
-    return static_cast<const UpdateNumberOfDomainControllersRequest *>(d->request);
+    return static_cast<const UpdateNumberOfDomainControllersRequest *>(DirectoryServiceResponse::request());
 }
 
 /*!

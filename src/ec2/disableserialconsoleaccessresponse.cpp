@@ -87,8 +87,7 @@ DisableSerialConsoleAccessResponse::DisableSerialConsoleAccessResponse(
  */
 const DisableSerialConsoleAccessRequest * DisableSerialConsoleAccessResponse::request() const
 {
-    Q_D(const DisableSerialConsoleAccessResponse);
-    return static_cast<const DisableSerialConsoleAccessRequest *>(d->request);
+    return static_cast<const DisableSerialConsoleAccessRequest *>(Ec2Response::request());
 }
 
 /*!

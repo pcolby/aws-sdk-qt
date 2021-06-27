@@ -66,8 +66,7 @@ DeleteVerifiedEmailAddressResponse::DeleteVerifiedEmailAddressResponse(
  */
 const DeleteVerifiedEmailAddressRequest * DeleteVerifiedEmailAddressResponse::request() const
 {
-    Q_D(const DeleteVerifiedEmailAddressResponse);
-    return static_cast<const DeleteVerifiedEmailAddressRequest *>(d->request);
+    return static_cast<const DeleteVerifiedEmailAddressRequest *>(SesResponse::request());
 }
 
 /*!

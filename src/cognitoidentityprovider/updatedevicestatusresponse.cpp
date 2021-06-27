@@ -66,8 +66,7 @@ UpdateDeviceStatusResponse::UpdateDeviceStatusResponse(
  */
 const UpdateDeviceStatusRequest * UpdateDeviceStatusResponse::request() const
 {
-    Q_D(const UpdateDeviceStatusResponse);
-    return static_cast<const UpdateDeviceStatusRequest *>(d->request);
+    return static_cast<const UpdateDeviceStatusRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

@@ -90,8 +90,7 @@ DeleteTargetGroupResponse::DeleteTargetGroupResponse(
  */
 const DeleteTargetGroupRequest * DeleteTargetGroupResponse::request() const
 {
-    Q_D(const DeleteTargetGroupResponse);
-    return static_cast<const DeleteTargetGroupRequest *>(d->request);
+    return static_cast<const DeleteTargetGroupRequest *>(ElasticLoadBalancingv2Response::request());
 }
 
 /*!

@@ -75,8 +75,7 @@ ListUploadsResponse::ListUploadsResponse(
  */
 const ListUploadsRequest * ListUploadsResponse::request() const
 {
-    Q_D(const ListUploadsResponse);
-    return static_cast<const ListUploadsRequest *>(d->request);
+    return static_cast<const ListUploadsRequest *>(DeviceFarmResponse::request());
 }
 
 /*!

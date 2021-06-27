@@ -56,8 +56,7 @@ UpdateTypeResponse::UpdateTypeResponse(
  */
 const UpdateTypeRequest * UpdateTypeResponse::request() const
 {
-    Q_D(const UpdateTypeResponse);
-    return static_cast<const UpdateTypeRequest *>(d->request);
+    return static_cast<const UpdateTypeRequest *>(AppSyncResponse::request());
 }
 
 /*!

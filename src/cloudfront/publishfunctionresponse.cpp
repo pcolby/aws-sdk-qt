@@ -60,8 +60,7 @@ PublishFunctionResponse::PublishFunctionResponse(
  */
 const PublishFunctionRequest * PublishFunctionResponse::request() const
 {
-    Q_D(const PublishFunctionResponse);
-    return static_cast<const PublishFunctionRequest *>(d->request);
+    return static_cast<const PublishFunctionRequest *>(CloudFrontResponse::request());
 }
 
 /*!

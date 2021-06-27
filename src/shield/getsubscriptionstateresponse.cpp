@@ -61,8 +61,7 @@ GetSubscriptionStateResponse::GetSubscriptionStateResponse(
  */
 const GetSubscriptionStateRequest * GetSubscriptionStateResponse::request() const
 {
-    Q_D(const GetSubscriptionStateResponse);
-    return static_cast<const GetSubscriptionStateRequest *>(d->request);
+    return static_cast<const GetSubscriptionStateRequest *>(ShieldResponse::request());
 }
 
 /*!

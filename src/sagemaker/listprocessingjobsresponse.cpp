@@ -70,8 +70,7 @@ ListProcessingJobsResponse::ListProcessingJobsResponse(
  */
 const ListProcessingJobsRequest * ListProcessingJobsResponse::request() const
 {
-    Q_D(const ListProcessingJobsResponse);
-    return static_cast<const ListProcessingJobsRequest *>(d->request);
+    return static_cast<const ListProcessingJobsRequest *>(SageMakerResponse::request());
 }
 
 /*!

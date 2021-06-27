@@ -58,8 +58,7 @@ DisassociateResourceResponse::DisassociateResourceResponse(
  */
 const DisassociateResourceRequest * DisassociateResourceResponse::request() const
 {
-    Q_D(const DisassociateResourceResponse);
-    return static_cast<const DisassociateResourceRequest *>(d->request);
+    return static_cast<const DisassociateResourceRequest *>(AppRegistryResponse::request());
 }
 
 /*!

@@ -78,8 +78,7 @@ DeleteRuleResponse::DeleteRuleResponse(
  */
 const DeleteRuleRequest * DeleteRuleResponse::request() const
 {
-    Q_D(const DeleteRuleResponse);
-    return static_cast<const DeleteRuleRequest *>(d->request);
+    return static_cast<const DeleteRuleRequest *>(WAFRegionalResponse::request());
 }
 
 /*!

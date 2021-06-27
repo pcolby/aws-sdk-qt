@@ -119,8 +119,7 @@ RestoreDBClusterFromSnapshotResponse::RestoreDBClusterFromSnapshotResponse(
  */
 const RestoreDBClusterFromSnapshotRequest * RestoreDBClusterFromSnapshotResponse::request() const
 {
-    Q_D(const RestoreDBClusterFromSnapshotResponse);
-    return static_cast<const RestoreDBClusterFromSnapshotRequest *>(d->request);
+    return static_cast<const RestoreDBClusterFromSnapshotRequest *>(RdsResponse::request());
 }
 
 /*!

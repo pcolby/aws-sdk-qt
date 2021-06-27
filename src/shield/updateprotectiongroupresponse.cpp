@@ -61,8 +61,7 @@ UpdateProtectionGroupResponse::UpdateProtectionGroupResponse(
  */
 const UpdateProtectionGroupRequest * UpdateProtectionGroupResponse::request() const
 {
-    Q_D(const UpdateProtectionGroupResponse);
-    return static_cast<const UpdateProtectionGroupRequest *>(d->request);
+    return static_cast<const UpdateProtectionGroupRequest *>(ShieldResponse::request());
 }
 
 /*!

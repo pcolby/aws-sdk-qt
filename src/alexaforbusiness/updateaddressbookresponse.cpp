@@ -62,8 +62,7 @@ UpdateAddressBookResponse::UpdateAddressBookResponse(
  */
 const UpdateAddressBookRequest * UpdateAddressBookResponse::request() const
 {
-    Q_D(const UpdateAddressBookResponse);
-    return static_cast<const UpdateAddressBookRequest *>(d->request);
+    return static_cast<const UpdateAddressBookRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

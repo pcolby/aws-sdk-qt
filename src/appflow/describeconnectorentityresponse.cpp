@@ -100,8 +100,7 @@ DescribeConnectorEntityResponse::DescribeConnectorEntityResponse(
  */
 const DescribeConnectorEntityRequest * DescribeConnectorEntityResponse::request() const
 {
-    Q_D(const DescribeConnectorEntityResponse);
-    return static_cast<const DescribeConnectorEntityRequest *>(d->request);
+    return static_cast<const DescribeConnectorEntityRequest *>(AppflowResponse::request());
 }
 
 /*!

@@ -129,8 +129,7 @@ ListNotificationRulesResponse::ListNotificationRulesResponse(
  */
 const ListNotificationRulesRequest * ListNotificationRulesResponse::request() const
 {
-    Q_D(const ListNotificationRulesResponse);
-    return static_cast<const ListNotificationRulesRequest *>(d->request);
+    return static_cast<const ListNotificationRulesRequest *>(CodeStarNotificationsResponse::request());
 }
 
 /*!

@@ -78,8 +78,7 @@ ListPartnerEventSourcesResponse::ListPartnerEventSourcesResponse(
  */
 const ListPartnerEventSourcesRequest * ListPartnerEventSourcesResponse::request() const
 {
-    Q_D(const ListPartnerEventSourcesResponse);
-    return static_cast<const ListPartnerEventSourcesRequest *>(d->request);
+    return static_cast<const ListPartnerEventSourcesRequest *>(CloudWatchEventsResponse::request());
 }
 
 /*!

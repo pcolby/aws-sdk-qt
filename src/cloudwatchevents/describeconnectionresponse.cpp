@@ -78,8 +78,7 @@ DescribeConnectionResponse::DescribeConnectionResponse(
  */
 const DescribeConnectionRequest * DescribeConnectionResponse::request() const
 {
-    Q_D(const DescribeConnectionResponse);
-    return static_cast<const DescribeConnectionRequest *>(d->request);
+    return static_cast<const DescribeConnectionRequest *>(CloudWatchEventsResponse::request());
 }
 
 /*!

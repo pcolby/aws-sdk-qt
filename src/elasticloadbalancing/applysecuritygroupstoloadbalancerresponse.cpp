@@ -83,8 +83,7 @@ ApplySecurityGroupsToLoadBalancerResponse::ApplySecurityGroupsToLoadBalancerResp
  */
 const ApplySecurityGroupsToLoadBalancerRequest * ApplySecurityGroupsToLoadBalancerResponse::request() const
 {
-    Q_D(const ApplySecurityGroupsToLoadBalancerResponse);
-    return static_cast<const ApplySecurityGroupsToLoadBalancerRequest *>(d->request);
+    return static_cast<const ApplySecurityGroupsToLoadBalancerRequest *>(ElasticLoadBalancingResponse::request());
 }
 
 /*!

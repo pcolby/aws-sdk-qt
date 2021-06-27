@@ -37,7 +37,7 @@ namespace MediaLive {
  * Constructs a MediaLiveResponse object with parent \a parent.
  */
 MediaLiveResponse::MediaLiveResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new MediaLiveResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new MediaLiveResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ MediaLiveResponse::MediaLiveResponse(QObject * const parent)
  * implementation that inherits from MediaLiveResponsePrivate.
  */
 MediaLiveResponse::MediaLiveResponse(MediaLiveResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void MediaLiveResponse::parseFailure(QIODevice &response)
  * Constructs a MediaLiveResponsePrivate object with public implementation \a q.
  */
 MediaLiveResponsePrivate::MediaLiveResponsePrivate(
-    MediaLiveResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    MediaLiveResponse * const q) : q_ptr(q)
 {
 
 }

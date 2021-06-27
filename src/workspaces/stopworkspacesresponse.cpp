@@ -58,8 +58,7 @@ StopWorkspacesResponse::StopWorkspacesResponse(
  */
 const StopWorkspacesRequest * StopWorkspacesResponse::request() const
 {
-    Q_D(const StopWorkspacesResponse);
-    return static_cast<const StopWorkspacesRequest *>(d->request);
+    return static_cast<const StopWorkspacesRequest *>(WorkSpacesResponse::request());
 }
 
 /*!

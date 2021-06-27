@@ -20,14 +20,12 @@
 #ifndef QTAWS_NIMBLESTUDIORESPONSE_P_H
 #define QTAWS_NIMBLESTUDIORESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace NimbleStudio {
 
 class NimbleStudioResponse;
 
-class NimbleStudioResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class NimbleStudioResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    NimbleStudioResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(NimbleStudioResponse)

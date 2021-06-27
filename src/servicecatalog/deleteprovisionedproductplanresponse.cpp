@@ -61,8 +61,7 @@ DeleteProvisionedProductPlanResponse::DeleteProvisionedProductPlanResponse(
  */
 const DeleteProvisionedProductPlanRequest * DeleteProvisionedProductPlanResponse::request() const
 {
-    Q_D(const DeleteProvisionedProductPlanResponse);
-    return static_cast<const DeleteProvisionedProductPlanRequest *>(d->request);
+    return static_cast<const DeleteProvisionedProductPlanRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

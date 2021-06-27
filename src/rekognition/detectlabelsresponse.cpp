@@ -56,8 +56,7 @@ DetectLabelsResponse::DetectLabelsResponse(
  */
 const DetectLabelsRequest * DetectLabelsResponse::request() const
 {
-    Q_D(const DetectLabelsResponse);
-    return static_cast<const DetectLabelsRequest *>(d->request);
+    return static_cast<const DetectLabelsRequest *>(RekognitionResponse::request());
 }
 
 /*!

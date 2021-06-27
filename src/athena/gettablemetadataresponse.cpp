@@ -73,8 +73,7 @@ GetTableMetadataResponse::GetTableMetadataResponse(
  */
 const GetTableMetadataRequest * GetTableMetadataResponse::request() const
 {
-    Q_D(const GetTableMetadataResponse);
-    return static_cast<const GetTableMetadataRequest *>(d->request);
+    return static_cast<const GetTableMetadataRequest *>(AthenaResponse::request());
 }
 
 /*!

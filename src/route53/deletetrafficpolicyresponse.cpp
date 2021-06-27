@@ -56,8 +56,7 @@ DeleteTrafficPolicyResponse::DeleteTrafficPolicyResponse(
  */
 const DeleteTrafficPolicyRequest * DeleteTrafficPolicyResponse::request() const
 {
-    Q_D(const DeleteTrafficPolicyResponse);
-    return static_cast<const DeleteTrafficPolicyRequest *>(d->request);
+    return static_cast<const DeleteTrafficPolicyRequest *>(Route53Response::request());
 }
 
 /*!

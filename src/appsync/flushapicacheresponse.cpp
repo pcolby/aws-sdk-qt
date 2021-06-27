@@ -56,8 +56,7 @@ FlushApiCacheResponse::FlushApiCacheResponse(
  */
 const FlushApiCacheRequest * FlushApiCacheResponse::request() const
 {
-    Q_D(const FlushApiCacheResponse);
-    return static_cast<const FlushApiCacheRequest *>(d->request);
+    return static_cast<const FlushApiCacheRequest *>(AppSyncResponse::request());
 }
 
 /*!

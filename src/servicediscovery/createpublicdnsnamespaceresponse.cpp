@@ -60,8 +60,7 @@ CreatePublicDnsNamespaceResponse::CreatePublicDnsNamespaceResponse(
  */
 const CreatePublicDnsNamespaceRequest * CreatePublicDnsNamespaceResponse::request() const
 {
-    Q_D(const CreatePublicDnsNamespaceResponse);
-    return static_cast<const CreatePublicDnsNamespaceRequest *>(d->request);
+    return static_cast<const CreatePublicDnsNamespaceRequest *>(ServiceDiscoveryResponse::request());
 }
 
 /*!

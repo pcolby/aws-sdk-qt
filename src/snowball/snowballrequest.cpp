@@ -67,7 +67,7 @@ namespace Snowball {
  * Constructs a SnowballRequest object for Snowball \a action.
  */
 SnowballRequest::SnowballRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new SnowballRequestPrivate(action, this))
+    : d_ptr(new SnowballRequestPrivate(action, this))
 {
 
 }
@@ -76,7 +76,8 @@ SnowballRequest::SnowballRequest(const Action action)
  * Constructs a copy of \a other.
  */
 SnowballRequest::SnowballRequest(const SnowballRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new SnowballRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new SnowballRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -99,7 +100,7 @@ SnowballRequest& SnowballRequest::operator=(const SnowballRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SnowballRequestPrivate.
  */
-SnowballRequest::SnowballRequest(SnowballRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+SnowballRequest::SnowballRequest(SnowballRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -268,7 +269,7 @@ QNetworkRequest SnowballRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 SnowballRequestPrivate::SnowballRequestPrivate(const SnowballRequest::Action action, SnowballRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -283,8 +284,8 @@ SnowballRequestPrivate::SnowballRequestPrivate(const SnowballRequest::Action act
  */
 SnowballRequestPrivate::SnowballRequestPrivate(const SnowballRequestPrivate &other,
                                      SnowballRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

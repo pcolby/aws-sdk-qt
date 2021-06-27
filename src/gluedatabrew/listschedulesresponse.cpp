@@ -58,8 +58,7 @@ ListSchedulesResponse::ListSchedulesResponse(
  */
 const ListSchedulesRequest * ListSchedulesResponse::request() const
 {
-    Q_D(const ListSchedulesResponse);
-    return static_cast<const ListSchedulesRequest *>(d->request);
+    return static_cast<const ListSchedulesRequest *>(GlueDataBrewResponse::request());
 }
 
 /*!

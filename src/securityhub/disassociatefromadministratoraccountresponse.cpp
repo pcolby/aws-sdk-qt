@@ -103,8 +103,7 @@ DisassociateFromAdministratorAccountResponse::DisassociateFromAdministratorAccou
  */
 const DisassociateFromAdministratorAccountRequest * DisassociateFromAdministratorAccountResponse::request() const
 {
-    Q_D(const DisassociateFromAdministratorAccountResponse);
-    return static_cast<const DisassociateFromAdministratorAccountRequest *>(d->request);
+    return static_cast<const DisassociateFromAdministratorAccountRequest *>(SecurityHubResponse::request());
 }
 
 /*!

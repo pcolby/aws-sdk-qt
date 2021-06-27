@@ -82,8 +82,7 @@ DescribeAccountAuditConfigurationResponse::DescribeAccountAuditConfigurationResp
  */
 const DescribeAccountAuditConfigurationRequest * DescribeAccountAuditConfigurationResponse::request() const
 {
-    Q_D(const DescribeAccountAuditConfigurationResponse);
-    return static_cast<const DescribeAccountAuditConfigurationRequest *>(d->request);
+    return static_cast<const DescribeAccountAuditConfigurationRequest *>(IoTResponse::request());
 }
 
 /*!

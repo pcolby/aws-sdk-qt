@@ -55,8 +55,7 @@ CancelJobResponse::CancelJobResponse(
  */
 const CancelJobRequest * CancelJobResponse::request() const
 {
-    Q_D(const CancelJobResponse);
-    return static_cast<const CancelJobRequest *>(d->request);
+    return static_cast<const CancelJobRequest *>(MediaConvertResponse::request());
 }
 
 /*!

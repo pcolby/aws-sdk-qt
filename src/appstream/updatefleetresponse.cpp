@@ -81,8 +81,7 @@ UpdateFleetResponse::UpdateFleetResponse(
  */
 const UpdateFleetRequest * UpdateFleetResponse::request() const
 {
-    Q_D(const UpdateFleetResponse);
-    return static_cast<const UpdateFleetRequest *>(d->request);
+    return static_cast<const UpdateFleetRequest *>(AppStreamResponse::request());
 }
 
 /*!

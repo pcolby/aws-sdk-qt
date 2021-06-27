@@ -55,8 +55,7 @@ PutObjectRetentionResponse::PutObjectRetentionResponse(
  */
 const PutObjectRetentionRequest * PutObjectRetentionResponse::request() const
 {
-    Q_D(const PutObjectRetentionResponse);
-    return static_cast<const PutObjectRetentionRequest *>(d->request);
+    return static_cast<const PutObjectRetentionRequest *>(S3Response::request());
 }
 
 /*!

@@ -66,8 +66,7 @@ ModifyEndpointResponse::ModifyEndpointResponse(
  */
 const ModifyEndpointRequest * ModifyEndpointResponse::request() const
 {
-    Q_D(const ModifyEndpointResponse);
-    return static_cast<const ModifyEndpointRequest *>(d->request);
+    return static_cast<const ModifyEndpointRequest *>(DatabaseMigrationServiceResponse::request());
 }
 
 /*!

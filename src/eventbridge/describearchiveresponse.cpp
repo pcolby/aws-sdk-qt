@@ -78,8 +78,7 @@ DescribeArchiveResponse::DescribeArchiveResponse(
  */
 const DescribeArchiveRequest * DescribeArchiveResponse::request() const
 {
-    Q_D(const DescribeArchiveResponse);
-    return static_cast<const DescribeArchiveRequest *>(d->request);
+    return static_cast<const DescribeArchiveRequest *>(EventBridgeResponse::request());
 }
 
 /*!

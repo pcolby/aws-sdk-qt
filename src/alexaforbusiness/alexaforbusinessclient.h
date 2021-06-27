@@ -325,6 +325,12 @@ public slots:
     UpdateRoomResponse * updateRoom(const UpdateRoomRequest &request);
     UpdateSkillGroupResponse * updateSkillGroup(const UpdateSkillGroupRequest &request);
 
+protected:
+    /// @cond internal
+    AlexaForBusinessClientPrivate * const d_ptr; ///< Internal d-pointer.
+    AlexaForBusinessClient(AlexaForBusinessClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(AlexaForBusinessClient)
     Q_DISABLE_COPY(AlexaForBusinessClient)

@@ -68,8 +68,7 @@ LaunchAppResponse::LaunchAppResponse(
  */
 const LaunchAppRequest * LaunchAppResponse::request() const
 {
-    Q_D(const LaunchAppResponse);
-    return static_cast<const LaunchAppRequest *>(d->request);
+    return static_cast<const LaunchAppRequest *>(SmsResponse::request());
 }
 
 /*!

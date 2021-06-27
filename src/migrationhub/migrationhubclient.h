@@ -97,6 +97,12 @@ public slots:
     NotifyMigrationTaskStateResponse * notifyMigrationTaskState(const NotifyMigrationTaskStateRequest &request);
     PutResourceAttributesResponse * putResourceAttributes(const PutResourceAttributesRequest &request);
 
+protected:
+    /// @cond internal
+    MigrationHubClientPrivate * const d_ptr; ///< Internal d-pointer.
+    MigrationHubClient(MigrationHubClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(MigrationHubClient)
     Q_DISABLE_COPY(MigrationHubClient)

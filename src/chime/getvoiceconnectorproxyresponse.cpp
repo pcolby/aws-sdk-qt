@@ -98,8 +98,7 @@ GetVoiceConnectorProxyResponse::GetVoiceConnectorProxyResponse(
  */
 const GetVoiceConnectorProxyRequest * GetVoiceConnectorProxyResponse::request() const
 {
-    Q_D(const GetVoiceConnectorProxyResponse);
-    return static_cast<const GetVoiceConnectorProxyRequest *>(d->request);
+    return static_cast<const GetVoiceConnectorProxyRequest *>(ChimeResponse::request());
 }
 
 /*!

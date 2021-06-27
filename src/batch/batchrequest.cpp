@@ -61,7 +61,7 @@ namespace Batch {
  * Constructs a BatchRequest object for Batch \a action.
  */
 BatchRequest::BatchRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new BatchRequestPrivate(action, this))
+    : d_ptr(new BatchRequestPrivate(action, this))
 {
 
 }
@@ -70,7 +70,8 @@ BatchRequest::BatchRequest(const Action action)
  * Constructs a copy of \a other.
  */
 BatchRequest::BatchRequest(const BatchRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new BatchRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new BatchRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -93,7 +94,7 @@ BatchRequest& BatchRequest::operator=(const BatchRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from BatchRequestPrivate.
  */
-BatchRequest::BatchRequest(BatchRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+BatchRequest::BatchRequest(BatchRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -262,7 +263,7 @@ QNetworkRequest BatchRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 BatchRequestPrivate::BatchRequestPrivate(const BatchRequest::Action action, BatchRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -277,8 +278,8 @@ BatchRequestPrivate::BatchRequestPrivate(const BatchRequest::Action action, Batc
  */
 BatchRequestPrivate::BatchRequestPrivate(const BatchRequestPrivate &other,
                                      BatchRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

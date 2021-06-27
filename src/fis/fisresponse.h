@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    FisResponsePrivate * const d_ptr; ///< Internal d-pointer.
     FisResponse(FisResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

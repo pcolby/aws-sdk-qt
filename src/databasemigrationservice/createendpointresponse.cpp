@@ -66,8 +66,7 @@ CreateEndpointResponse::CreateEndpointResponse(
  */
 const CreateEndpointRequest * CreateEndpointResponse::request() const
 {
-    Q_D(const CreateEndpointResponse);
-    return static_cast<const CreateEndpointRequest *>(d->request);
+    return static_cast<const CreateEndpointRequest *>(DatabaseMigrationServiceResponse::request());
 }
 
 /*!

@@ -46,7 +46,7 @@ namespace SSO {
  * Constructs a SsoRequest object for SSO \a action.
  */
 SsoRequest::SsoRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new SsoRequestPrivate(action, this))
+    : d_ptr(new SsoRequestPrivate(action, this))
 {
 
 }
@@ -55,7 +55,8 @@ SsoRequest::SsoRequest(const Action action)
  * Constructs a copy of \a other.
  */
 SsoRequest::SsoRequest(const SsoRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new SsoRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new SsoRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -78,7 +79,7 @@ SsoRequest& SsoRequest::operator=(const SsoRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SsoRequestPrivate.
  */
-SsoRequest::SsoRequest(SsoRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+SsoRequest::SsoRequest(SsoRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -247,7 +248,7 @@ QNetworkRequest SsoRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 SsoRequestPrivate::SsoRequestPrivate(const SsoRequest::Action action, SsoRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -262,8 +263,8 @@ SsoRequestPrivate::SsoRequestPrivate(const SsoRequest::Action action, SsoRequest
  */
 SsoRequestPrivate::SsoRequestPrivate(const SsoRequestPrivate &other,
                                      SsoRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

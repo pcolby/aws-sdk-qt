@@ -20,19 +20,20 @@
 #ifndef QTAWS_FRAUDDETECTORCLIENT_P_H
 #define QTAWS_FRAUDDETECTORCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace FraudDetector {
 
 class FraudDetectorClient;
 
-class FraudDetectorClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class FraudDetectorClientPrivate {
 
 public:
     FraudDetectorClientPrivate(FraudDetectorClient * const q);
+
+protected:
+    FraudDetectorClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(FraudDetectorClient)

@@ -181,6 +181,12 @@ public slots:
     UpdateStudioResponse * updateStudio(const UpdateStudioRequest &request);
     UpdateStudioComponentResponse * updateStudioComponent(const UpdateStudioComponentRequest &request);
 
+protected:
+    /// @cond internal
+    NimbleStudioClientPrivate * const d_ptr; ///< Internal d-pointer.
+    NimbleStudioClient(NimbleStudioClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(NimbleStudioClient)
     Q_DISABLE_COPY(NimbleStudioClient)

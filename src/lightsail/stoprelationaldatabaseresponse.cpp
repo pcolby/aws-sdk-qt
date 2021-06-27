@@ -74,8 +74,7 @@ StopRelationalDatabaseResponse::StopRelationalDatabaseResponse(
  */
 const StopRelationalDatabaseRequest * StopRelationalDatabaseResponse::request() const
 {
-    Q_D(const StopRelationalDatabaseResponse);
-    return static_cast<const StopRelationalDatabaseRequest *>(d->request);
+    return static_cast<const StopRelationalDatabaseRequest *>(LightsailResponse::request());
 }
 
 /*!

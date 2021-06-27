@@ -82,8 +82,7 @@ GetEffectivePoliciesResponse::GetEffectivePoliciesResponse(
  */
 const GetEffectivePoliciesRequest * GetEffectivePoliciesResponse::request() const
 {
-    Q_D(const GetEffectivePoliciesResponse);
-    return static_cast<const GetEffectivePoliciesRequest *>(d->request);
+    return static_cast<const GetEffectivePoliciesRequest *>(IoTResponse::request());
 }
 
 /*!

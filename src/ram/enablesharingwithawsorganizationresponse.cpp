@@ -64,8 +64,7 @@ EnableSharingWithAwsOrganizationResponse::EnableSharingWithAwsOrganizationRespon
  */
 const EnableSharingWithAwsOrganizationRequest * EnableSharingWithAwsOrganizationResponse::request() const
 {
-    Q_D(const EnableSharingWithAwsOrganizationResponse);
-    return static_cast<const EnableSharingWithAwsOrganizationRequest *>(d->request);
+    return static_cast<const EnableSharingWithAwsOrganizationRequest *>(RamResponse::request());
 }
 
 /*!

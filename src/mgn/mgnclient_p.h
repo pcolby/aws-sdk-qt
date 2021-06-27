@@ -20,19 +20,20 @@
 #ifndef QTAWS_MGNCLIENT_P_H
 #define QTAWS_MGNCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace mgn {
 
 class mgnClient;
 
-class mgnClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class mgnClientPrivate {
 
 public:
     mgnClientPrivate(mgnClient * const q);
+
+protected:
+    mgnClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(mgnClient)

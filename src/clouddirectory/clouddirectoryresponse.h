@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    CloudDirectoryResponsePrivate * const d_ptr; ///< Internal d-pointer.
     CloudDirectoryResponse(CloudDirectoryResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

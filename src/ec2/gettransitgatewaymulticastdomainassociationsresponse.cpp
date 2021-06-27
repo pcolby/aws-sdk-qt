@@ -87,8 +87,7 @@ GetTransitGatewayMulticastDomainAssociationsResponse::GetTransitGatewayMulticast
  */
 const GetTransitGatewayMulticastDomainAssociationsRequest * GetTransitGatewayMulticastDomainAssociationsResponse::request() const
 {
-    Q_D(const GetTransitGatewayMulticastDomainAssociationsResponse);
-    return static_cast<const GetTransitGatewayMulticastDomainAssociationsRequest *>(d->request);
+    return static_cast<const GetTransitGatewayMulticastDomainAssociationsRequest *>(Ec2Response::request());
 }
 
 /*!

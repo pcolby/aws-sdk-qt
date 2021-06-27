@@ -81,8 +81,7 @@ ExpireSessionResponse::ExpireSessionResponse(
  */
 const ExpireSessionRequest * ExpireSessionResponse::request() const
 {
-    Q_D(const ExpireSessionResponse);
-    return static_cast<const ExpireSessionRequest *>(d->request);
+    return static_cast<const ExpireSessionRequest *>(AppStreamResponse::request());
 }
 
 /*!

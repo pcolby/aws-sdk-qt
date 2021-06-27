@@ -58,6 +58,12 @@ public slots:
     StartNextPendingJobExecutionResponse * startNextPendingJobExecution(const StartNextPendingJobExecutionRequest &request);
     UpdateJobExecutionResponse * updateJobExecution(const UpdateJobExecutionRequest &request);
 
+protected:
+    /// @cond internal
+    IoTJobsDataPlaneClientPrivate * const d_ptr; ///< Internal d-pointer.
+    IoTJobsDataPlaneClient(IoTJobsDataPlaneClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(IoTJobsDataPlaneClient)
     Q_DISABLE_COPY(IoTJobsDataPlaneClient)

@@ -67,8 +67,7 @@ DescribeHsmResponse::DescribeHsmResponse(
  */
 const DescribeHsmRequest * DescribeHsmResponse::request() const
 {
-    Q_D(const DescribeHsmResponse);
-    return static_cast<const DescribeHsmRequest *>(d->request);
+    return static_cast<const DescribeHsmRequest *>(CloudHSMResponse::request());
 }
 
 /*!

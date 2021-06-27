@@ -62,8 +62,7 @@ CreateVirtualMFADeviceResponse::CreateVirtualMFADeviceResponse(
  */
 const CreateVirtualMFADeviceRequest * CreateVirtualMFADeviceResponse::request() const
 {
-    Q_D(const CreateVirtualMFADeviceResponse);
-    return static_cast<const CreateVirtualMFADeviceRequest *>(d->request);
+    return static_cast<const CreateVirtualMFADeviceRequest *>(IamResponse::request());
 }
 
 /*!

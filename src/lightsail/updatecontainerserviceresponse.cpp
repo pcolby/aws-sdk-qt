@@ -74,8 +74,7 @@ UpdateContainerServiceResponse::UpdateContainerServiceResponse(
  */
 const UpdateContainerServiceRequest * UpdateContainerServiceResponse::request() const
 {
-    Q_D(const UpdateContainerServiceResponse);
-    return static_cast<const UpdateContainerServiceRequest *>(d->request);
+    return static_cast<const UpdateContainerServiceRequest *>(LightsailResponse::request());
 }
 
 /*!

@@ -115,8 +115,7 @@ DeleteScriptResponse::DeleteScriptResponse(
  */
 const DeleteScriptRequest * DeleteScriptResponse::request() const
 {
-    Q_D(const DeleteScriptResponse);
-    return static_cast<const DeleteScriptRequest *>(d->request);
+    return static_cast<const DeleteScriptRequest *>(GameLiftResponse::request());
 }
 
 /*!

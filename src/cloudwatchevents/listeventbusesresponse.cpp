@@ -78,8 +78,7 @@ ListEventBusesResponse::ListEventBusesResponse(
  */
 const ListEventBusesRequest * ListEventBusesResponse::request() const
 {
-    Q_D(const ListEventBusesResponse);
-    return static_cast<const ListEventBusesRequest *>(d->request);
+    return static_cast<const ListEventBusesRequest *>(CloudWatchEventsResponse::request());
 }
 
 /*!

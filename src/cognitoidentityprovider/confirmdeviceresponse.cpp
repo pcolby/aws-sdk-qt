@@ -66,8 +66,7 @@ ConfirmDeviceResponse::ConfirmDeviceResponse(
  */
 const ConfirmDeviceRequest * ConfirmDeviceResponse::request() const
 {
-    Q_D(const ConfirmDeviceResponse);
-    return static_cast<const ConfirmDeviceRequest *>(d->request);
+    return static_cast<const ConfirmDeviceRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

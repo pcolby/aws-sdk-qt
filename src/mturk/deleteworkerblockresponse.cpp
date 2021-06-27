@@ -55,8 +55,7 @@ DeleteWorkerBlockResponse::DeleteWorkerBlockResponse(
  */
 const DeleteWorkerBlockRequest * DeleteWorkerBlockResponse::request() const
 {
-    Q_D(const DeleteWorkerBlockResponse);
-    return static_cast<const DeleteWorkerBlockRequest *>(d->request);
+    return static_cast<const DeleteWorkerBlockRequest *>(MTurkResponse::request());
 }
 
 /*!

@@ -75,8 +75,7 @@ SampleChannelDataResponse::SampleChannelDataResponse(
  */
 const SampleChannelDataRequest * SampleChannelDataResponse::request() const
 {
-    Q_D(const SampleChannelDataResponse);
-    return static_cast<const SampleChannelDataRequest *>(d->request);
+    return static_cast<const SampleChannelDataRequest *>(IoTAnalyticsResponse::request());
 }
 
 /*!

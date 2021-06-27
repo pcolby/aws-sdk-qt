@@ -59,8 +59,7 @@ CreateGrantVersionResponse::CreateGrantVersionResponse(
  */
 const CreateGrantVersionRequest * CreateGrantVersionResponse::request() const
 {
-    Q_D(const CreateGrantVersionResponse);
-    return static_cast<const CreateGrantVersionRequest *>(d->request);
+    return static_cast<const CreateGrantVersionRequest *>(LicenseManagerResponse::request());
 }
 
 /*!

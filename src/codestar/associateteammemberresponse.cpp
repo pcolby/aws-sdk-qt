@@ -143,8 +143,7 @@ AssociateTeamMemberResponse::AssociateTeamMemberResponse(
  */
 const AssociateTeamMemberRequest * AssociateTeamMemberResponse::request() const
 {
-    Q_D(const AssociateTeamMemberResponse);
-    return static_cast<const AssociateTeamMemberRequest *>(d->request);
+    return static_cast<const AssociateTeamMemberRequest *>(CodeStarResponse::request());
 }
 
 /*!

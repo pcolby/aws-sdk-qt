@@ -72,8 +72,7 @@ GetPackageVersionHistoryResponse::GetPackageVersionHistoryResponse(
  */
 const GetPackageVersionHistoryRequest * GetPackageVersionHistoryResponse::request() const
 {
-    Q_D(const GetPackageVersionHistoryResponse);
-    return static_cast<const GetPackageVersionHistoryRequest *>(d->request);
+    return static_cast<const GetPackageVersionHistoryRequest *>(ElasticsearchServiceResponse::request());
 }
 
 /*!

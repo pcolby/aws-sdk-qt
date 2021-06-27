@@ -119,8 +119,7 @@ RegisterDBProxyTargetsResponse::RegisterDBProxyTargetsResponse(
  */
 const RegisterDBProxyTargetsRequest * RegisterDBProxyTargetsResponse::request() const
 {
-    Q_D(const RegisterDBProxyTargetsResponse);
-    return static_cast<const RegisterDBProxyTargetsRequest *>(d->request);
+    return static_cast<const RegisterDBProxyTargetsRequest *>(RdsResponse::request());
 }
 
 /*!

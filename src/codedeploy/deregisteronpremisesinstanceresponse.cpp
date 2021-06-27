@@ -141,8 +141,7 @@ DeregisterOnPremisesInstanceResponse::DeregisterOnPremisesInstanceResponse(
  */
 const DeregisterOnPremisesInstanceRequest * DeregisterOnPremisesInstanceResponse::request() const
 {
-    Q_D(const DeregisterOnPremisesInstanceResponse);
-    return static_cast<const DeregisterOnPremisesInstanceRequest *>(d->request);
+    return static_cast<const DeregisterOnPremisesInstanceRequest *>(CodeDeployResponse::request());
 }
 
 /*!

@@ -60,8 +60,7 @@ UpdateAccountResponse::UpdateAccountResponse(
  */
 const UpdateAccountRequest * UpdateAccountResponse::request() const
 {
-    Q_D(const UpdateAccountResponse);
-    return static_cast<const UpdateAccountRequest *>(d->request);
+    return static_cast<const UpdateAccountRequest *>(APIGatewayResponse::request());
 }
 
 /*!

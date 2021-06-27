@@ -80,8 +80,7 @@ RemoveProfilePermissionResponse::RemoveProfilePermissionResponse(
  */
 const RemoveProfilePermissionRequest * RemoveProfilePermissionResponse::request() const
 {
-    Q_D(const RemoveProfilePermissionResponse);
-    return static_cast<const RemoveProfilePermissionRequest *>(d->request);
+    return static_cast<const RemoveProfilePermissionRequest *>(signerResponse::request());
 }
 
 /*!

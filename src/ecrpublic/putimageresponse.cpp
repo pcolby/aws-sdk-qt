@@ -63,8 +63,7 @@ PutImageResponse::PutImageResponse(
  */
 const PutImageRequest * PutImageResponse::request() const
 {
-    Q_D(const PutImageResponse);
-    return static_cast<const PutImageRequest *>(d->request);
+    return static_cast<const PutImageRequest *>(ECRPublicResponse::request());
 }
 
 /*!

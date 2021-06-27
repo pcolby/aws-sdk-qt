@@ -74,8 +74,7 @@ SetIpAddressTypeResponse::SetIpAddressTypeResponse(
  */
 const SetIpAddressTypeRequest * SetIpAddressTypeResponse::request() const
 {
-    Q_D(const SetIpAddressTypeResponse);
-    return static_cast<const SetIpAddressTypeRequest *>(d->request);
+    return static_cast<const SetIpAddressTypeRequest *>(LightsailResponse::request());
 }
 
 /*!

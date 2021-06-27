@@ -81,8 +81,7 @@ CreateImageBuilderStreamingURLResponse::CreateImageBuilderStreamingURLResponse(
  */
 const CreateImageBuilderStreamingURLRequest * CreateImageBuilderStreamingURLResponse::request() const
 {
-    Q_D(const CreateImageBuilderStreamingURLResponse);
-    return static_cast<const CreateImageBuilderStreamingURLRequest *>(d->request);
+    return static_cast<const CreateImageBuilderStreamingURLRequest *>(AppStreamResponse::request());
 }
 
 /*!

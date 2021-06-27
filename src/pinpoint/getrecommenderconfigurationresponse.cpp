@@ -56,8 +56,7 @@ GetRecommenderConfigurationResponse::GetRecommenderConfigurationResponse(
  */
 const GetRecommenderConfigurationRequest * GetRecommenderConfigurationResponse::request() const
 {
-    Q_D(const GetRecommenderConfigurationResponse);
-    return static_cast<const GetRecommenderConfigurationRequest *>(d->request);
+    return static_cast<const GetRecommenderConfigurationRequest *>(PinpointResponse::request());
 }
 
 /*!

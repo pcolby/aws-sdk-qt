@@ -177,8 +177,7 @@ ListServicesResponse::ListServicesResponse(
  */
 const ListServicesRequest * ListServicesResponse::request() const
 {
-    Q_D(const ListServicesResponse);
-    return static_cast<const ListServicesRequest *>(d->request);
+    return static_cast<const ListServicesRequest *>(ProtonResponse::request());
 }
 
 /*!

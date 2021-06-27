@@ -20,14 +20,12 @@
 #ifndef QTAWS_EVENTBRIDGERESPONSE_P_H
 #define QTAWS_EVENTBRIDGERESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace EventBridge {
 
 class EventBridgeResponse;
 
-class EventBridgeResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class EventBridgeResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    EventBridgeResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(EventBridgeResponse)

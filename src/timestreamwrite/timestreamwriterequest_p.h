@@ -20,15 +20,12 @@
 #ifndef QTAWS_TIMESTREAMWRITEREQUEST_P_H
 #define QTAWS_TIMESTREAMWRITEREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "timestreamwriterequest.h"
-
 namespace QtAws {
 namespace TimestreamWrite {
 
 class TimestreamWriteRequest;
 
-class TimestreamWriteRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class TimestreamWriteRequestPrivate {
 
 public:
     TimestreamWriteRequest::Action action; ///< TimestreamWrite action to be performed.
@@ -39,6 +36,9 @@ public:
     TimestreamWriteRequestPrivate(const TimestreamWriteRequestPrivate &other, TimestreamWriteRequest * const q);
 
     static QString toString(const TimestreamWriteRequest::Action &action);
+
+protected:
+    TimestreamWriteRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(TimestreamWriteRequest)

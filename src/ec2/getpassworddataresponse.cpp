@@ -87,8 +87,7 @@ GetPasswordDataResponse::GetPasswordDataResponse(
  */
 const GetPasswordDataRequest * GetPasswordDataResponse::request() const
 {
-    Q_D(const GetPasswordDataResponse);
-    return static_cast<const GetPasswordDataRequest *>(d->request);
+    return static_cast<const GetPasswordDataRequest *>(Ec2Response::request());
 }
 
 /*!

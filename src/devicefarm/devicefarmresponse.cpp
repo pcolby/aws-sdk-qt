@@ -37,7 +37,7 @@ namespace DeviceFarm {
  * Constructs a DeviceFarmResponse object with parent \a parent.
  */
 DeviceFarmResponse::DeviceFarmResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new DeviceFarmResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new DeviceFarmResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ DeviceFarmResponse::DeviceFarmResponse(QObject * const parent)
  * implementation that inherits from DeviceFarmResponsePrivate.
  */
 DeviceFarmResponse::DeviceFarmResponse(DeviceFarmResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void DeviceFarmResponse::parseFailure(QIODevice &response)
  * Constructs a DeviceFarmResponsePrivate object with public implementation \a q.
  */
 DeviceFarmResponsePrivate::DeviceFarmResponsePrivate(
-    DeviceFarmResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    DeviceFarmResponse * const q) : q_ptr(q)
 {
 
 }

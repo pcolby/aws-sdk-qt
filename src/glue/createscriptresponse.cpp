@@ -58,8 +58,7 @@ CreateScriptResponse::CreateScriptResponse(
  */
 const CreateScriptRequest * CreateScriptResponse::request() const
 {
-    Q_D(const CreateScriptResponse);
-    return static_cast<const CreateScriptRequest *>(d->request);
+    return static_cast<const CreateScriptRequest *>(GlueResponse::request());
 }
 
 /*!

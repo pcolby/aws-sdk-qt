@@ -20,19 +20,20 @@
 #ifndef QTAWS_WAFCLIENT_P_H
 #define QTAWS_WAFCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace WAF {
 
 class WafClient;
 
-class WafClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class WafClientPrivate {
 
 public:
     WafClientPrivate(WafClient * const q);
+
+protected:
+    WafClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(WafClient)

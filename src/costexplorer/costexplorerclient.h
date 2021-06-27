@@ -136,6 +136,12 @@ public slots:
     UpdateAnomalySubscriptionResponse * updateAnomalySubscription(const UpdateAnomalySubscriptionRequest &request);
     UpdateCostCategoryDefinitionResponse * updateCostCategoryDefinition(const UpdateCostCategoryDefinitionRequest &request);
 
+protected:
+    /// @cond internal
+    CostExplorerClientPrivate * const d_ptr; ///< Internal d-pointer.
+    CostExplorerClient(CostExplorerClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(CostExplorerClient)
     Q_DISABLE_COPY(CostExplorerClient)

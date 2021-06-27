@@ -65,8 +65,7 @@ CommitTransactionResponse::CommitTransactionResponse(
  */
 const CommitTransactionRequest * CommitTransactionResponse::request() const
 {
-    Q_D(const CommitTransactionResponse);
-    return static_cast<const CommitTransactionRequest *>(d->request);
+    return static_cast<const CommitTransactionRequest *>(RDSDataServiceResponse::request());
 }
 
 /*!

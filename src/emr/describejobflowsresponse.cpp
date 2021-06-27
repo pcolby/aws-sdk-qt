@@ -58,8 +58,7 @@ DescribeJobFlowsResponse::DescribeJobFlowsResponse(
  */
 const DescribeJobFlowsRequest * DescribeJobFlowsResponse::request() const
 {
-    Q_D(const DescribeJobFlowsResponse);
-    return static_cast<const DescribeJobFlowsRequest *>(d->request);
+    return static_cast<const DescribeJobFlowsRequest *>(EmrResponse::request());
 }
 
 /*!

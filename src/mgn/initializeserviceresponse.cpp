@@ -56,8 +56,7 @@ InitializeServiceResponse::InitializeServiceResponse(
  */
 const InitializeServiceRequest * InitializeServiceResponse::request() const
 {
-    Q_D(const InitializeServiceResponse);
-    return static_cast<const InitializeServiceRequest *>(d->request);
+    return static_cast<const InitializeServiceRequest *>(mgnResponse::request());
 }
 
 /*!

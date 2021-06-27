@@ -61,8 +61,7 @@ DescribeAssetPropertyResponse::DescribeAssetPropertyResponse(
  */
 const DescribeAssetPropertyRequest * DescribeAssetPropertyResponse::request() const
 {
-    Q_D(const DescribeAssetPropertyResponse);
-    return static_cast<const DescribeAssetPropertyRequest *>(d->request);
+    return static_cast<const DescribeAssetPropertyRequest *>(IoTSiteWiseResponse::request());
 }
 
 /*!

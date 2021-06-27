@@ -58,8 +58,7 @@ ListEntityRecognizersResponse::ListEntityRecognizersResponse(
  */
 const ListEntityRecognizersRequest * ListEntityRecognizersResponse::request() const
 {
-    Q_D(const ListEntityRecognizersResponse);
-    return static_cast<const ListEntityRecognizersRequest *>(d->request);
+    return static_cast<const ListEntityRecognizersRequest *>(ComprehendResponse::request());
 }
 
 /*!

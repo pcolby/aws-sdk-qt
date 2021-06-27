@@ -201,16 +201,16 @@ WorkMailClient::WorkMailClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new WorkMailClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-10-01"),
+    QStringLiteral("workmail"),
+    QStringLiteral("Amazon WorkMail"),
+    QStringLiteral("workmail"),
+    parent), d_ptr(new WorkMailClientPrivate(this))
 {
-    Q_D(WorkMailClient);
-    d->apiVersion = QStringLiteral("2017-10-01");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("workmail");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon WorkMail");
-    d->serviceName = QStringLiteral("workmail");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -229,16 +229,16 @@ WorkMailClient::WorkMailClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new WorkMailClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-10-01"),
+    QStringLiteral("workmail"),
+    QStringLiteral("Amazon WorkMail"),
+    QStringLiteral("workmail"),
+    parent), d_ptr(new WorkMailClientPrivate(this))
 {
-    Q_D(WorkMailClient);
-    d->apiVersion = QStringLiteral("2017-10-01");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("workmail");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon WorkMail");
-    d->serviceName = QStringLiteral("workmail");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -1008,10 +1008,9 @@ UpdateResourceResponse * WorkMailClient::updateResource(const UpdateResourceRequ
 /*!
  * Constructs a WorkMailClientPrivate object with public implementation \a q.
  */
-WorkMailClientPrivate::WorkMailClientPrivate(WorkMailClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+WorkMailClientPrivate::WorkMailClientPrivate(WorkMailClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace WorkMail

@@ -60,8 +60,7 @@ GetOperationResponse::GetOperationResponse(
  */
 const GetOperationRequest * GetOperationResponse::request() const
 {
-    Q_D(const GetOperationResponse);
-    return static_cast<const GetOperationRequest *>(d->request);
+    return static_cast<const GetOperationRequest *>(ServiceDiscoveryResponse::request());
 }
 
 /*!

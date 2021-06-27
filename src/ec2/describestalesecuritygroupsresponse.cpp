@@ -87,8 +87,7 @@ DescribeStaleSecurityGroupsResponse::DescribeStaleSecurityGroupsResponse(
  */
 const DescribeStaleSecurityGroupsRequest * DescribeStaleSecurityGroupsResponse::request() const
 {
-    Q_D(const DescribeStaleSecurityGroupsResponse);
-    return static_cast<const DescribeStaleSecurityGroupsRequest *>(d->request);
+    return static_cast<const DescribeStaleSecurityGroupsRequest *>(Ec2Response::request());
 }
 
 /*!

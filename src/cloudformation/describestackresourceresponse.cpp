@@ -77,8 +77,7 @@ DescribeStackResourceResponse::DescribeStackResourceResponse(
  */
 const DescribeStackResourceRequest * DescribeStackResourceResponse::request() const
 {
-    Q_D(const DescribeStackResourceResponse);
-    return static_cast<const DescribeStackResourceRequest *>(d->request);
+    return static_cast<const DescribeStackResourceRequest *>(CloudFormationResponse::request());
 }
 
 /*!

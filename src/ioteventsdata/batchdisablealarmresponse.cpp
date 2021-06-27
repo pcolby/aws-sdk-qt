@@ -64,8 +64,7 @@ BatchDisableAlarmResponse::BatchDisableAlarmResponse(
  */
 const BatchDisableAlarmRequest * BatchDisableAlarmResponse::request() const
 {
-    Q_D(const BatchDisableAlarmResponse);
-    return static_cast<const BatchDisableAlarmRequest *>(d->request);
+    return static_cast<const BatchDisableAlarmRequest *>(IoTEventsDataResponse::request());
 }
 
 /*!

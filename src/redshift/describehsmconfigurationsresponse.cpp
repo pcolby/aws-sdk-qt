@@ -85,8 +85,7 @@ DescribeHsmConfigurationsResponse::DescribeHsmConfigurationsResponse(
  */
 const DescribeHsmConfigurationsRequest * DescribeHsmConfigurationsResponse::request() const
 {
-    Q_D(const DescribeHsmConfigurationsResponse);
-    return static_cast<const DescribeHsmConfigurationsRequest *>(d->request);
+    return static_cast<const DescribeHsmConfigurationsRequest *>(RedshiftResponse::request());
 }
 
 /*!

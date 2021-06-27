@@ -62,8 +62,7 @@ DisassociateLinkResponse::DisassociateLinkResponse(
  */
 const DisassociateLinkRequest * DisassociateLinkResponse::request() const
 {
-    Q_D(const DisassociateLinkResponse);
-    return static_cast<const DisassociateLinkRequest *>(d->request);
+    return static_cast<const DisassociateLinkRequest *>(NetworkManagerResponse::request());
 }
 
 /*!

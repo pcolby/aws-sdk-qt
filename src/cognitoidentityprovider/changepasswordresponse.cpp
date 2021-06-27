@@ -66,8 +66,7 @@ ChangePasswordResponse::ChangePasswordResponse(
  */
 const ChangePasswordRequest * ChangePasswordResponse::request() const
 {
-    Q_D(const ChangePasswordResponse);
-    return static_cast<const ChangePasswordRequest *>(d->request);
+    return static_cast<const ChangePasswordRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

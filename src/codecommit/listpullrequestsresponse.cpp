@@ -439,8 +439,7 @@ ListPullRequestsResponse::ListPullRequestsResponse(
  */
 const ListPullRequestsRequest * ListPullRequestsResponse::request() const
 {
-    Q_D(const ListPullRequestsResponse);
-    return static_cast<const ListPullRequestsRequest *>(d->request);
+    return static_cast<const ListPullRequestsRequest *>(CodeCommitResponse::request());
 }
 
 /*!

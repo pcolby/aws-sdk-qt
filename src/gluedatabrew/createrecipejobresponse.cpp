@@ -58,8 +58,7 @@ CreateRecipeJobResponse::CreateRecipeJobResponse(
  */
 const CreateRecipeJobRequest * CreateRecipeJobResponse::request() const
 {
-    Q_D(const CreateRecipeJobResponse);
-    return static_cast<const CreateRecipeJobRequest *>(d->request);
+    return static_cast<const CreateRecipeJobRequest *>(GlueDataBrewResponse::request());
 }
 
 /*!

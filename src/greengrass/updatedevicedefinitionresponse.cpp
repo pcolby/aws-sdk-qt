@@ -58,8 +58,7 @@ UpdateDeviceDefinitionResponse::UpdateDeviceDefinitionResponse(
  */
 const UpdateDeviceDefinitionRequest * UpdateDeviceDefinitionResponse::request() const
 {
-    Q_D(const UpdateDeviceDefinitionResponse);
-    return static_cast<const UpdateDeviceDefinitionRequest *>(d->request);
+    return static_cast<const UpdateDeviceDefinitionRequest *>(GreengrassResponse::request());
 }
 
 /*!

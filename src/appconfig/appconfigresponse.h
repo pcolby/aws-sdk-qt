@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    AppConfigResponsePrivate * const d_ptr; ///< Internal d-pointer.
     AppConfigResponse(AppConfigResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

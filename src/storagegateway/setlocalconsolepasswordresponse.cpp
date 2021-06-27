@@ -124,8 +124,7 @@ SetLocalConsolePasswordResponse::SetLocalConsolePasswordResponse(
  */
 const SetLocalConsolePasswordRequest * SetLocalConsolePasswordResponse::request() const
 {
-    Q_D(const SetLocalConsolePasswordResponse);
-    return static_cast<const SetLocalConsolePasswordRequest *>(d->request);
+    return static_cast<const SetLocalConsolePasswordRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

@@ -87,8 +87,7 @@ ModifyClientVpnEndpointResponse::ModifyClientVpnEndpointResponse(
  */
 const ModifyClientVpnEndpointRequest * ModifyClientVpnEndpointResponse::request() const
 {
-    Q_D(const ModifyClientVpnEndpointResponse);
-    return static_cast<const ModifyClientVpnEndpointRequest *>(d->request);
+    return static_cast<const ModifyClientVpnEndpointRequest *>(Ec2Response::request());
 }
 
 /*!

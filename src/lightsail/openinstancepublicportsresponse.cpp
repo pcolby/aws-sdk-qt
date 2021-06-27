@@ -74,8 +74,7 @@ OpenInstancePublicPortsResponse::OpenInstancePublicPortsResponse(
  */
 const OpenInstancePublicPortsRequest * OpenInstancePublicPortsResponse::request() const
 {
-    Q_D(const OpenInstancePublicPortsResponse);
-    return static_cast<const OpenInstancePublicPortsRequest *>(d->request);
+    return static_cast<const OpenInstancePublicPortsRequest *>(LightsailResponse::request());
 }
 
 /*!

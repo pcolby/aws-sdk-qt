@@ -119,8 +119,7 @@ ModifyDBClusterResponse::ModifyDBClusterResponse(
  */
 const ModifyDBClusterRequest * ModifyDBClusterResponse::request() const
 {
-    Q_D(const ModifyDBClusterResponse);
-    return static_cast<const ModifyDBClusterRequest *>(d->request);
+    return static_cast<const ModifyDBClusterRequest *>(RdsResponse::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ ListStepsResponse::ListStepsResponse(
  */
 const ListStepsRequest * ListStepsResponse::request() const
 {
-    Q_D(const ListStepsResponse);
-    return static_cast<const ListStepsRequest *>(d->request);
+    return static_cast<const ListStepsRequest *>(EmrResponse::request());
 }
 
 /*!

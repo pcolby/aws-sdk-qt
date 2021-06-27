@@ -106,16 +106,16 @@ LookoutforVisionClient::LookoutforVisionClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new LookoutforVisionClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-11-20"),
+    QStringLiteral("lookoutvision"),
+    QStringLiteral("Amazon Lookout for Vision"),
+    QStringLiteral("lookoutvision"),
+    parent), d_ptr(new LookoutforVisionClientPrivate(this))
 {
-    Q_D(LookoutforVisionClient);
-    d->apiVersion = QStringLiteral("2020-11-20");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("lookoutvision");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Lookout for Vision");
-    d->serviceName = QStringLiteral("lookoutvision");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -134,16 +134,16 @@ LookoutforVisionClient::LookoutforVisionClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new LookoutforVisionClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-11-20"),
+    QStringLiteral("lookoutvision"),
+    QStringLiteral("Amazon Lookout for Vision"),
+    QStringLiteral("lookoutvision"),
+    parent), d_ptr(new LookoutforVisionClientPrivate(this))
 {
-    Q_D(LookoutforVisionClient);
-    d->apiVersion = QStringLiteral("2020-11-20");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("lookoutvision");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Lookout for Vision");
-    d->serviceName = QStringLiteral("lookoutvision");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -579,10 +579,9 @@ UpdateDatasetEntriesResponse * LookoutforVisionClient::updateDatasetEntries(cons
 /*!
  * Constructs a LookoutforVisionClientPrivate object with public implementation \a q.
  */
-LookoutforVisionClientPrivate::LookoutforVisionClientPrivate(LookoutforVisionClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+LookoutforVisionClientPrivate::LookoutforVisionClientPrivate(LookoutforVisionClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace LookoutforVision

@@ -194,16 +194,16 @@ AutoScalingClient::AutoScalingClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new AutoScalingClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2011-01-01"),
+    QStringLiteral("autoscaling"),
+    QStringLiteral("Auto Scaling"),
+    QStringLiteral("autoscaling"),
+    parent), d_ptr(new AutoScalingClientPrivate(this))
 {
-    Q_D(AutoScalingClient);
-    d->apiVersion = QStringLiteral("2011-01-01");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("autoscaling");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Auto Scaling");
-    d->serviceName = QStringLiteral("autoscaling");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -222,16 +222,16 @@ AutoScalingClient::AutoScalingClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new AutoScalingClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2011-01-01"),
+    QStringLiteral("autoscaling"),
+    QStringLiteral("Auto Scaling"),
+    QStringLiteral("autoscaling"),
+    parent), d_ptr(new AutoScalingClientPrivate(this))
 {
-    Q_D(AutoScalingClient);
-    d->apiVersion = QStringLiteral("2011-01-01");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("autoscaling");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Auto Scaling");
-    d->serviceName = QStringLiteral("autoscaling");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -1909,10 +1909,9 @@ UpdateAutoScalingGroupResponse * AutoScalingClient::updateAutoScalingGroup(const
 /*!
  * Constructs a AutoScalingClientPrivate object with public implementation \a q.
  */
-AutoScalingClientPrivate::AutoScalingClientPrivate(AutoScalingClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+AutoScalingClientPrivate::AutoScalingClientPrivate(AutoScalingClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace AutoScaling

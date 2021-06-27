@@ -58,8 +58,7 @@ DeleteResourceDefinitionResponse::DeleteResourceDefinitionResponse(
  */
 const DeleteResourceDefinitionRequest * DeleteResourceDefinitionResponse::request() const
 {
-    Q_D(const DeleteResourceDefinitionResponse);
-    return static_cast<const DeleteResourceDefinitionRequest *>(d->request);
+    return static_cast<const DeleteResourceDefinitionRequest *>(GreengrassResponse::request());
 }
 
 /*!

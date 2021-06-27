@@ -20,19 +20,20 @@
 #ifndef QTAWS_EMRCLIENT_P_H
 #define QTAWS_EMRCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace EMR {
 
 class EmrClient;
 
-class EmrClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class EmrClientPrivate {
 
 public:
     EmrClientPrivate(EmrClient * const q);
+
+protected:
+    EmrClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(EmrClient)

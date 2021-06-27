@@ -61,8 +61,7 @@ DeleteAssetModelResponse::DeleteAssetModelResponse(
  */
 const DeleteAssetModelRequest * DeleteAssetModelResponse::request() const
 {
-    Q_D(const DeleteAssetModelResponse);
-    return static_cast<const DeleteAssetModelRequest *>(d->request);
+    return static_cast<const DeleteAssetModelRequest *>(IoTSiteWiseResponse::request());
 }
 
 /*!

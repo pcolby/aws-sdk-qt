@@ -58,8 +58,7 @@ DeleteBatchPredictionJobResponse::DeleteBatchPredictionJobResponse(
  */
 const DeleteBatchPredictionJobRequest * DeleteBatchPredictionJobResponse::request() const
 {
-    Q_D(const DeleteBatchPredictionJobResponse);
-    return static_cast<const DeleteBatchPredictionJobRequest *>(d->request);
+    return static_cast<const DeleteBatchPredictionJobRequest *>(FraudDetectorResponse::request());
 }
 
 /*!

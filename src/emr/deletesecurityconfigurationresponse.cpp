@@ -58,8 +58,7 @@ DeleteSecurityConfigurationResponse::DeleteSecurityConfigurationResponse(
  */
 const DeleteSecurityConfigurationRequest * DeleteSecurityConfigurationResponse::request() const
 {
-    Q_D(const DeleteSecurityConfigurationResponse);
-    return static_cast<const DeleteSecurityConfigurationRequest *>(d->request);
+    return static_cast<const DeleteSecurityConfigurationRequest *>(EmrResponse::request());
 }
 
 /*!

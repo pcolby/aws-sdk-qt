@@ -64,6 +64,7 @@ public:
 
 protected:
     /// @cond internal
+    PinpointSMSVoiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
     PinpointSMSVoiceRequest(PinpointSMSVoiceRequestPrivate * const d);
     /// @endcond
 

@@ -82,8 +82,7 @@ DetachPrincipalPolicyResponse::DetachPrincipalPolicyResponse(
  */
 const DetachPrincipalPolicyRequest * DetachPrincipalPolicyResponse::request() const
 {
-    Q_D(const DetachPrincipalPolicyResponse);
-    return static_cast<const DetachPrincipalPolicyRequest *>(d->request);
+    return static_cast<const DetachPrincipalPolicyRequest *>(IoTResponse::request());
 }
 
 /*!

@@ -84,8 +84,7 @@ DescribeCommentsResponse::DescribeCommentsResponse(
  */
 const DescribeCommentsRequest * DescribeCommentsResponse::request() const
 {
-    Q_D(const DescribeCommentsResponse);
-    return static_cast<const DescribeCommentsRequest *>(d->request);
+    return static_cast<const DescribeCommentsRequest *>(WorkDocsResponse::request());
 }
 
 /*!

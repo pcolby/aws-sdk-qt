@@ -62,8 +62,7 @@ DeleteSessionResponse::DeleteSessionResponse(
  */
 const DeleteSessionRequest * DeleteSessionResponse::request() const
 {
-    Q_D(const DeleteSessionResponse);
-    return static_cast<const DeleteSessionRequest *>(d->request);
+    return static_cast<const DeleteSessionRequest *>(LexRuntimeServiceResponse::request());
 }
 
 /*!

@@ -87,8 +87,7 @@ ModifyInstanceCapacityReservationAttributesResponse::ModifyInstanceCapacityReser
  */
 const ModifyInstanceCapacityReservationAttributesRequest * ModifyInstanceCapacityReservationAttributesResponse::request() const
 {
-    Q_D(const ModifyInstanceCapacityReservationAttributesResponse);
-    return static_cast<const ModifyInstanceCapacityReservationAttributesRequest *>(d->request);
+    return static_cast<const ModifyInstanceCapacityReservationAttributesRequest *>(Ec2Response::request());
 }
 
 /*!

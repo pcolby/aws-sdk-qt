@@ -55,8 +55,7 @@ SendBonusResponse::SendBonusResponse(
  */
 const SendBonusRequest * SendBonusResponse::request() const
 {
-    Q_D(const SendBonusResponse);
-    return static_cast<const SendBonusRequest *>(d->request);
+    return static_cast<const SendBonusRequest *>(MTurkResponse::request());
 }
 
 /*!

@@ -51,7 +51,7 @@ namespace Polly {
  * Constructs a PollyRequest object for Polly \a action.
  */
 PollyRequest::PollyRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new PollyRequestPrivate(action, this))
+    : d_ptr(new PollyRequestPrivate(action, this))
 {
 
 }
@@ -60,7 +60,8 @@ PollyRequest::PollyRequest(const Action action)
  * Constructs a copy of \a other.
  */
 PollyRequest::PollyRequest(const PollyRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new PollyRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new PollyRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -83,7 +84,7 @@ PollyRequest& PollyRequest::operator=(const PollyRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from PollyRequestPrivate.
  */
-PollyRequest::PollyRequest(PollyRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+PollyRequest::PollyRequest(PollyRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -252,7 +253,7 @@ QNetworkRequest PollyRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 PollyRequestPrivate::PollyRequestPrivate(const PollyRequest::Action action, PollyRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -267,8 +268,8 @@ PollyRequestPrivate::PollyRequestPrivate(const PollyRequest::Action action, Poll
  */
 PollyRequestPrivate::PollyRequestPrivate(const PollyRequestPrivate &other,
                                      PollyRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

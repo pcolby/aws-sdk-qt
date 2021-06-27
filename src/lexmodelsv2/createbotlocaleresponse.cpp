@@ -55,8 +55,7 @@ CreateBotLocaleResponse::CreateBotLocaleResponse(
  */
 const CreateBotLocaleRequest * CreateBotLocaleResponse::request() const
 {
-    Q_D(const CreateBotLocaleResponse);
-    return static_cast<const CreateBotLocaleRequest *>(d->request);
+    return static_cast<const CreateBotLocaleRequest *>(LexModelsV2Response::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ UpdateMLTransformResponse::UpdateMLTransformResponse(
  */
 const UpdateMLTransformRequest * UpdateMLTransformResponse::request() const
 {
-    Q_D(const UpdateMLTransformResponse);
-    return static_cast<const UpdateMLTransformRequest *>(d->request);
+    return static_cast<const UpdateMLTransformRequest *>(GlueResponse::request());
 }
 
 /*!

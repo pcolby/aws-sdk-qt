@@ -77,8 +77,7 @@ GetTemplateResponse::GetTemplateResponse(
  */
 const GetTemplateRequest * GetTemplateResponse::request() const
 {
-    Q_D(const GetTemplateResponse);
-    return static_cast<const GetTemplateRequest *>(d->request);
+    return static_cast<const GetTemplateRequest *>(CloudFormationResponse::request());
 }
 
 /*!

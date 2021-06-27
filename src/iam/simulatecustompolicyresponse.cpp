@@ -62,8 +62,7 @@ SimulateCustomPolicyResponse::SimulateCustomPolicyResponse(
  */
 const SimulateCustomPolicyRequest * SimulateCustomPolicyResponse::request() const
 {
-    Q_D(const SimulateCustomPolicyResponse);
-    return static_cast<const SimulateCustomPolicyRequest *>(d->request);
+    return static_cast<const SimulateCustomPolicyRequest *>(IamResponse::request());
 }
 
 /*!

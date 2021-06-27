@@ -59,6 +59,7 @@ public:
 
 protected:
     /// @cond internal
+    FinSpaceDataRequestPrivate * const d_ptr; ///< Internal d-pointer.
     FinSpaceDataRequest(FinSpaceDataRequestPrivate * const d);
     /// @endcond
 

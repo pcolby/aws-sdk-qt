@@ -89,8 +89,7 @@ ListMobileDeviceAccessRulesResponse::ListMobileDeviceAccessRulesResponse(
  */
 const ListMobileDeviceAccessRulesRequest * ListMobileDeviceAccessRulesResponse::request() const
 {
-    Q_D(const ListMobileDeviceAccessRulesResponse);
-    return static_cast<const ListMobileDeviceAccessRulesRequest *>(d->request);
+    return static_cast<const ListMobileDeviceAccessRulesRequest *>(WorkMailResponse::request());
 }
 
 /*!

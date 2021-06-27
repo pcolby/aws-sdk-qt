@@ -58,8 +58,7 @@ CreateSoftwareUpdateJobResponse::CreateSoftwareUpdateJobResponse(
  */
 const CreateSoftwareUpdateJobRequest * CreateSoftwareUpdateJobResponse::request() const
 {
-    Q_D(const CreateSoftwareUpdateJobResponse);
-    return static_cast<const CreateSoftwareUpdateJobRequest *>(d->request);
+    return static_cast<const CreateSoftwareUpdateJobRequest *>(GreengrassResponse::request());
 }
 
 /*!

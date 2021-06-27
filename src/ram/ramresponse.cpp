@@ -37,7 +37,7 @@ namespace RAM {
  * Constructs a RamResponse object with parent \a parent.
  */
 RamResponse::RamResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new RamResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new RamResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ RamResponse::RamResponse(QObject * const parent)
  * implementation that inherits from RamResponsePrivate.
  */
 RamResponse::RamResponse(RamResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void RamResponse::parseFailure(QIODevice &response)
  * Constructs a RamResponsePrivate object with public implementation \a q.
  */
 RamResponsePrivate::RamResponsePrivate(
-    RamResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    RamResponse * const q) : q_ptr(q)
 {
 
 }

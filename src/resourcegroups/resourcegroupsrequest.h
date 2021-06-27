@@ -72,6 +72,7 @@ public:
 
 protected:
     /// @cond internal
+    ResourceGroupsRequestPrivate * const d_ptr; ///< Internal d-pointer.
     ResourceGroupsRequest(ResourceGroupsRequestPrivate * const d);
     /// @endcond
 

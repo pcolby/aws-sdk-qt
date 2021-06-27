@@ -66,8 +66,7 @@ AdminListUserAuthEventsResponse::AdminListUserAuthEventsResponse(
  */
 const AdminListUserAuthEventsRequest * AdminListUserAuthEventsResponse::request() const
 {
-    Q_D(const AdminListUserAuthEventsResponse);
-    return static_cast<const AdminListUserAuthEventsRequest *>(d->request);
+    return static_cast<const AdminListUserAuthEventsRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

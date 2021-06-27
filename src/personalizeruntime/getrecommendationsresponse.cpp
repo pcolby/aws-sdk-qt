@@ -55,8 +55,7 @@ GetRecommendationsResponse::GetRecommendationsResponse(
  */
 const GetRecommendationsRequest * GetRecommendationsResponse::request() const
 {
-    Q_D(const GetRecommendationsResponse);
-    return static_cast<const GetRecommendationsRequest *>(d->request);
+    return static_cast<const GetRecommendationsRequest *>(PersonalizeRuntimeResponse::request());
 }
 
 /*!

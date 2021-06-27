@@ -60,8 +60,7 @@ RestoreDomainAccessResponse::RestoreDomainAccessResponse(
  */
 const RestoreDomainAccessRequest * RestoreDomainAccessResponse::request() const
 {
-    Q_D(const RestoreDomainAccessResponse);
-    return static_cast<const RestoreDomainAccessRequest *>(d->request);
+    return static_cast<const RestoreDomainAccessRequest *>(WorkLinkResponse::request());
 }
 
 /*!

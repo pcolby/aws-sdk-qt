@@ -58,8 +58,7 @@ RemoveLFTagsFromResourceResponse::RemoveLFTagsFromResourceResponse(
  */
 const RemoveLFTagsFromResourceRequest * RemoveLFTagsFromResourceResponse::request() const
 {
-    Q_D(const RemoveLFTagsFromResourceResponse);
-    return static_cast<const RemoveLFTagsFromResourceRequest *>(d->request);
+    return static_cast<const RemoveLFTagsFromResourceRequest *>(LakeFormationResponse::request());
 }
 
 /*!

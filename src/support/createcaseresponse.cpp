@@ -133,8 +133,7 @@ CreateCaseResponse::CreateCaseResponse(
  */
 const CreateCaseRequest * CreateCaseResponse::request() const
 {
-    Q_D(const CreateCaseResponse);
-    return static_cast<const CreateCaseRequest *>(d->request);
+    return static_cast<const CreateCaseRequest *>(SupportResponse::request());
 }
 
 /*!

@@ -385,8 +385,7 @@ ListRecordingConfigurationsResponse::ListRecordingConfigurationsResponse(
  */
 const ListRecordingConfigurationsRequest * ListRecordingConfigurationsResponse::request() const
 {
-    Q_D(const ListRecordingConfigurationsResponse);
-    return static_cast<const ListRecordingConfigurationsRequest *>(d->request);
+    return static_cast<const ListRecordingConfigurationsRequest *>(IvsResponse::request());
 }
 
 /*!

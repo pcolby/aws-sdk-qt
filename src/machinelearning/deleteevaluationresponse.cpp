@@ -55,8 +55,7 @@ DeleteEvaluationResponse::DeleteEvaluationResponse(
  */
 const DeleteEvaluationRequest * DeleteEvaluationResponse::request() const
 {
-    Q_D(const DeleteEvaluationResponse);
-    return static_cast<const DeleteEvaluationRequest *>(d->request);
+    return static_cast<const DeleteEvaluationRequest *>(MachineLearningResponse::request());
 }
 
 /*!

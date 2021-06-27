@@ -60,8 +60,7 @@ GetModelTemplateResponse::GetModelTemplateResponse(
  */
 const GetModelTemplateRequest * GetModelTemplateResponse::request() const
 {
-    Q_D(const GetModelTemplateResponse);
-    return static_cast<const GetModelTemplateRequest *>(d->request);
+    return static_cast<const GetModelTemplateRequest *>(APIGatewayResponse::request());
 }
 
 /*!

@@ -75,8 +75,7 @@ DescribeAggregateComplianceByConfigRulesResponse::DescribeAggregateComplianceByC
  */
 const DescribeAggregateComplianceByConfigRulesRequest * DescribeAggregateComplianceByConfigRulesResponse::request() const
 {
-    Q_D(const DescribeAggregateComplianceByConfigRulesResponse);
-    return static_cast<const DescribeAggregateComplianceByConfigRulesRequest *>(d->request);
+    return static_cast<const DescribeAggregateComplianceByConfigRulesRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

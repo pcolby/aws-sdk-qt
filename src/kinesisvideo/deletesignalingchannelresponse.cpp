@@ -55,8 +55,7 @@ DeleteSignalingChannelResponse::DeleteSignalingChannelResponse(
  */
 const DeleteSignalingChannelRequest * DeleteSignalingChannelResponse::request() const
 {
-    Q_D(const DeleteSignalingChannelResponse);
-    return static_cast<const DeleteSignalingChannelRequest *>(d->request);
+    return static_cast<const DeleteSignalingChannelRequest *>(KinesisVideoResponse::request());
 }
 
 /*!

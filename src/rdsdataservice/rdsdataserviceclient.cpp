@@ -81,16 +81,16 @@ RDSDataServiceClient::RDSDataServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new RDSDataServiceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-08-01"),
+    QStringLiteral("rds-data"),
+    QStringLiteral("AWS RDS DataService"),
+    QStringLiteral("rds-data"),
+    parent), d_ptr(new RDSDataServiceClientPrivate(this))
 {
-    Q_D(RDSDataServiceClient);
-    d->apiVersion = QStringLiteral("2018-08-01");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("rds-data");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS RDS DataService");
-    d->serviceName = QStringLiteral("rds-data");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -109,16 +109,16 @@ RDSDataServiceClient::RDSDataServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new RDSDataServiceClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-08-01"),
+    QStringLiteral("rds-data"),
+    QStringLiteral("AWS RDS DataService"),
+    QStringLiteral("rds-data"),
+    parent), d_ptr(new RDSDataServiceClientPrivate(this))
 {
-    Q_D(RDSDataServiceClient);
-    d->apiVersion = QStringLiteral("2018-08-01");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("rds-data");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS RDS DataService");
-    d->serviceName = QStringLiteral("rds-data");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -240,10 +240,9 @@ RollbackTransactionResponse * RDSDataServiceClient::rollbackTransaction(const Ro
 /*!
  * Constructs a RDSDataServiceClientPrivate object with public implementation \a q.
  */
-RDSDataServiceClientPrivate::RDSDataServiceClientPrivate(RDSDataServiceClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+RDSDataServiceClientPrivate::RDSDataServiceClientPrivate(RDSDataServiceClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace RDSDataService

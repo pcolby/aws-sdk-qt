@@ -55,8 +55,7 @@ DescribePageResponse::DescribePageResponse(
  */
 const DescribePageRequest * DescribePageResponse::request() const
 {
-    Q_D(const DescribePageResponse);
-    return static_cast<const DescribePageRequest *>(d->request);
+    return static_cast<const DescribePageRequest *>(SSMContactsResponse::request());
 }
 
 /*!

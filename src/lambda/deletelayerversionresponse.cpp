@@ -66,8 +66,7 @@ DeleteLayerVersionResponse::DeleteLayerVersionResponse(
  */
 const DeleteLayerVersionRequest * DeleteLayerVersionResponse::request() const
 {
-    Q_D(const DeleteLayerVersionResponse);
-    return static_cast<const DeleteLayerVersionRequest *>(d->request);
+    return static_cast<const DeleteLayerVersionRequest *>(LambdaResponse::request());
 }
 
 /*!

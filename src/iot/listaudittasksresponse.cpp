@@ -82,8 +82,7 @@ ListAuditTasksResponse::ListAuditTasksResponse(
  */
 const ListAuditTasksRequest * ListAuditTasksResponse::request() const
 {
-    Q_D(const ListAuditTasksResponse);
-    return static_cast<const ListAuditTasksRequest *>(d->request);
+    return static_cast<const ListAuditTasksRequest *>(IoTResponse::request());
 }
 
 /*!

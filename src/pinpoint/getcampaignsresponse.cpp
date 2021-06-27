@@ -56,8 +56,7 @@ GetCampaignsResponse::GetCampaignsResponse(
  */
 const GetCampaignsRequest * GetCampaignsResponse::request() const
 {
-    Q_D(const GetCampaignsResponse);
-    return static_cast<const GetCampaignsRequest *>(d->request);
+    return static_cast<const GetCampaignsRequest *>(PinpointResponse::request());
 }
 
 /*!

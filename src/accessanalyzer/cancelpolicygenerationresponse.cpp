@@ -67,8 +67,7 @@ CancelPolicyGenerationResponse::CancelPolicyGenerationResponse(
  */
 const CancelPolicyGenerationRequest * CancelPolicyGenerationResponse::request() const
 {
-    Q_D(const CancelPolicyGenerationResponse);
-    return static_cast<const CancelPolicyGenerationRequest *>(d->request);
+    return static_cast<const CancelPolicyGenerationRequest *>(AccessAnalyzerResponse::request());
 }
 
 /*!

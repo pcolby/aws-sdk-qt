@@ -82,8 +82,7 @@ TransferCertificateResponse::TransferCertificateResponse(
  */
 const TransferCertificateRequest * TransferCertificateResponse::request() const
 {
-    Q_D(const TransferCertificateResponse);
-    return static_cast<const TransferCertificateRequest *>(d->request);
+    return static_cast<const TransferCertificateRequest *>(IoTResponse::request());
 }
 
 /*!

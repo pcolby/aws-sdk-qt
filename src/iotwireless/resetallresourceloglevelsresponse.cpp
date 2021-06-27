@@ -56,8 +56,7 @@ ResetAllResourceLogLevelsResponse::ResetAllResourceLogLevelsResponse(
  */
 const ResetAllResourceLogLevelsRequest * ResetAllResourceLogLevelsResponse::request() const
 {
-    Q_D(const ResetAllResourceLogLevelsResponse);
-    return static_cast<const ResetAllResourceLogLevelsRequest *>(d->request);
+    return static_cast<const ResetAllResourceLogLevelsRequest *>(IoTWirelessResponse::request());
 }
 
 /*!

@@ -37,7 +37,7 @@ namespace Athena {
  * Constructs a AthenaResponse object with parent \a parent.
  */
 AthenaResponse::AthenaResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new AthenaResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new AthenaResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ AthenaResponse::AthenaResponse(QObject * const parent)
  * implementation that inherits from AthenaResponsePrivate.
  */
 AthenaResponse::AthenaResponse(AthenaResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void AthenaResponse::parseFailure(QIODevice &response)
  * Constructs a AthenaResponsePrivate object with public implementation \a q.
  */
 AthenaResponsePrivate::AthenaResponsePrivate(
-    AthenaResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    AthenaResponse * const q) : q_ptr(q)
 {
 
 }

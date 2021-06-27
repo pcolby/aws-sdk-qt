@@ -124,8 +124,7 @@ DeleteTapeResponse::DeleteTapeResponse(
  */
 const DeleteTapeRequest * DeleteTapeResponse::request() const
 {
-    Q_D(const DeleteTapeResponse);
-    return static_cast<const DeleteTapeRequest *>(d->request);
+    return static_cast<const DeleteTapeRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

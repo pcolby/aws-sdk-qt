@@ -87,8 +87,7 @@ DescribeInstanceTypeOfferingsResponse::DescribeInstanceTypeOfferingsResponse(
  */
 const DescribeInstanceTypeOfferingsRequest * DescribeInstanceTypeOfferingsResponse::request() const
 {
-    Q_D(const DescribeInstanceTypeOfferingsResponse);
-    return static_cast<const DescribeInstanceTypeOfferingsRequest *>(d->request);
+    return static_cast<const DescribeInstanceTypeOfferingsRequest *>(Ec2Response::request());
 }
 
 /*!

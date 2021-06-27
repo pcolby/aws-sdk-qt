@@ -72,8 +72,7 @@ GetUpgradeHistoryResponse::GetUpgradeHistoryResponse(
  */
 const GetUpgradeHistoryRequest * GetUpgradeHistoryResponse::request() const
 {
-    Q_D(const GetUpgradeHistoryResponse);
-    return static_cast<const GetUpgradeHistoryRequest *>(d->request);
+    return static_cast<const GetUpgradeHistoryRequest *>(ElasticsearchServiceResponse::request());
 }
 
 /*!

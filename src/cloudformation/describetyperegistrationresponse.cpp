@@ -77,8 +77,7 @@ DescribeTypeRegistrationResponse::DescribeTypeRegistrationResponse(
  */
 const DescribeTypeRegistrationRequest * DescribeTypeRegistrationResponse::request() const
 {
-    Q_D(const DescribeTypeRegistrationResponse);
-    return static_cast<const DescribeTypeRegistrationRequest *>(d->request);
+    return static_cast<const DescribeTypeRegistrationRequest *>(CloudFormationResponse::request());
 }
 
 /*!

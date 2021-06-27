@@ -87,8 +87,7 @@ DescribeImageAttributeResponse::DescribeImageAttributeResponse(
  */
 const DescribeImageAttributeRequest * DescribeImageAttributeResponse::request() const
 {
-    Q_D(const DescribeImageAttributeResponse);
-    return static_cast<const DescribeImageAttributeRequest *>(d->request);
+    return static_cast<const DescribeImageAttributeRequest *>(Ec2Response::request());
 }
 
 /*!

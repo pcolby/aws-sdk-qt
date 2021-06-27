@@ -56,8 +56,7 @@ PutCodeBindingResponse::PutCodeBindingResponse(
  */
 const PutCodeBindingRequest * PutCodeBindingResponse::request() const
 {
-    Q_D(const PutCodeBindingResponse);
-    return static_cast<const PutCodeBindingRequest *>(d->request);
+    return static_cast<const PutCodeBindingRequest *>(SchemasResponse::request());
 }
 
 /*!

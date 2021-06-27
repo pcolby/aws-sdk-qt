@@ -113,7 +113,7 @@ namespace SES {
  * Constructs a SesRequest object for SES \a action.
  */
 SesRequest::SesRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new SesRequestPrivate(action, this))
+    : d_ptr(new SesRequestPrivate(action, this))
 {
 
 }
@@ -122,7 +122,8 @@ SesRequest::SesRequest(const Action action)
  * Constructs a copy of \a other.
  */
 SesRequest::SesRequest(const SesRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new SesRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new SesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -145,7 +146,7 @@ SesRequest& SesRequest::operator=(const SesRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SesRequestPrivate.
  */
-SesRequest::SesRequest(SesRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+SesRequest::SesRequest(SesRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -314,7 +315,7 @@ QNetworkRequest SesRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 SesRequestPrivate::SesRequestPrivate(const SesRequest::Action action, SesRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -329,8 +330,8 @@ SesRequestPrivate::SesRequestPrivate(const SesRequest::Action action, SesRequest
  */
 SesRequestPrivate::SesRequestPrivate(const SesRequestPrivate &other,
                                      SesRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

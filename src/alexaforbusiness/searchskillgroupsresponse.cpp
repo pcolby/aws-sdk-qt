@@ -62,8 +62,7 @@ SearchSkillGroupsResponse::SearchSkillGroupsResponse(
  */
 const SearchSkillGroupsRequest * SearchSkillGroupsResponse::request() const
 {
-    Q_D(const SearchSkillGroupsResponse);
-    return static_cast<const SearchSkillGroupsRequest *>(d->request);
+    return static_cast<const SearchSkillGroupsRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

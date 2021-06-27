@@ -95,6 +95,7 @@ public:
 
 protected:
     /// @cond internal
+    GlueDataBrewRequestPrivate * const d_ptr; ///< Internal d-pointer.
     GlueDataBrewRequest(GlueDataBrewRequestPrivate * const d);
     /// @endcond
 

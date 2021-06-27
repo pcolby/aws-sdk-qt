@@ -124,8 +124,7 @@ DisassociateFileSystemResponse::DisassociateFileSystemResponse(
  */
 const DisassociateFileSystemRequest * DisassociateFileSystemResponse::request() const
 {
-    Q_D(const DisassociateFileSystemResponse);
-    return static_cast<const DisassociateFileSystemRequest *>(d->request);
+    return static_cast<const DisassociateFileSystemRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

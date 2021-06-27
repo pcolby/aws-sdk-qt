@@ -61,8 +61,7 @@ DescribeConnectionsOnInterconnectResponse::DescribeConnectionsOnInterconnectResp
  */
 const DescribeConnectionsOnInterconnectRequest * DescribeConnectionsOnInterconnectResponse::request() const
 {
-    Q_D(const DescribeConnectionsOnInterconnectResponse);
-    return static_cast<const DescribeConnectionsOnInterconnectRequest *>(d->request);
+    return static_cast<const DescribeConnectionsOnInterconnectRequest *>(DirectConnectResponse::request());
 }
 
 /*!

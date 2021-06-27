@@ -56,8 +56,7 @@ DescribeQuerySuggestionsBlockListResponse::DescribeQuerySuggestionsBlockListResp
  */
 const DescribeQuerySuggestionsBlockListRequest * DescribeQuerySuggestionsBlockListResponse::request() const
 {
-    Q_D(const DescribeQuerySuggestionsBlockListResponse);
-    return static_cast<const DescribeQuerySuggestionsBlockListRequest *>(d->request);
+    return static_cast<const DescribeQuerySuggestionsBlockListRequest *>(kendraResponse::request());
 }
 
 /*!

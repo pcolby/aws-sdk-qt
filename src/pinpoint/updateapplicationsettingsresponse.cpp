@@ -56,8 +56,7 @@ UpdateApplicationSettingsResponse::UpdateApplicationSettingsResponse(
  */
 const UpdateApplicationSettingsRequest * UpdateApplicationSettingsResponse::request() const
 {
-    Q_D(const UpdateApplicationSettingsResponse);
-    return static_cast<const UpdateApplicationSettingsRequest *>(d->request);
+    return static_cast<const UpdateApplicationSettingsRequest *>(PinpointResponse::request());
 }
 
 /*!

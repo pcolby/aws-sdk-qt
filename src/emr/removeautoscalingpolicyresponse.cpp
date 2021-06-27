@@ -58,8 +58,7 @@ RemoveAutoScalingPolicyResponse::RemoveAutoScalingPolicyResponse(
  */
 const RemoveAutoScalingPolicyRequest * RemoveAutoScalingPolicyResponse::request() const
 {
-    Q_D(const RemoveAutoScalingPolicyResponse);
-    return static_cast<const RemoveAutoScalingPolicyRequest *>(d->request);
+    return static_cast<const RemoveAutoScalingPolicyRequest *>(EmrResponse::request());
 }
 
 /*!

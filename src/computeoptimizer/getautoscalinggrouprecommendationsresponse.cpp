@@ -64,8 +64,7 @@ GetAutoScalingGroupRecommendationsResponse::GetAutoScalingGroupRecommendationsRe
  */
 const GetAutoScalingGroupRecommendationsRequest * GetAutoScalingGroupRecommendationsResponse::request() const
 {
-    Q_D(const GetAutoScalingGroupRecommendationsResponse);
-    return static_cast<const GetAutoScalingGroupRecommendationsRequest *>(d->request);
+    return static_cast<const GetAutoScalingGroupRecommendationsRequest *>(ComputeOptimizerResponse::request());
 }
 
 /*!

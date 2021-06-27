@@ -90,6 +90,7 @@ public:
 
 protected:
     /// @cond internal
+    AthenaRequestPrivate * const d_ptr; ///< Internal d-pointer.
     AthenaRequest(AthenaRequestPrivate * const d);
     /// @endcond
 

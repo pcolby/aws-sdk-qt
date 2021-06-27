@@ -63,8 +63,7 @@ DeleteTypedLinkFacetResponse::DeleteTypedLinkFacetResponse(
  */
 const DeleteTypedLinkFacetRequest * DeleteTypedLinkFacetResponse::request() const
 {
-    Q_D(const DeleteTypedLinkFacetResponse);
-    return static_cast<const DeleteTypedLinkFacetRequest *>(d->request);
+    return static_cast<const DeleteTypedLinkFacetRequest *>(CloudDirectoryResponse::request());
 }
 
 /*!

@@ -58,6 +58,7 @@ public:
 
 protected:
     /// @cond internal
+    MarketplaceCommerceAnalyticsRequestPrivate * const d_ptr; ///< Internal d-pointer.
     MarketplaceCommerceAnalyticsRequest(MarketplaceCommerceAnalyticsRequestPrivate * const d);
     /// @endcond
 

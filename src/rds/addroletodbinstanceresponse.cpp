@@ -119,8 +119,7 @@ AddRoleToDBInstanceResponse::AddRoleToDBInstanceResponse(
  */
 const AddRoleToDBInstanceRequest * AddRoleToDBInstanceResponse::request() const
 {
-    Q_D(const AddRoleToDBInstanceResponse);
-    return static_cast<const AddRoleToDBInstanceRequest *>(d->request);
+    return static_cast<const AddRoleToDBInstanceRequest *>(RdsResponse::request());
 }
 
 /*!

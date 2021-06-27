@@ -74,8 +74,7 @@ CreateContainerServiceRegistryLoginResponse::CreateContainerServiceRegistryLogin
  */
 const CreateContainerServiceRegistryLoginRequest * CreateContainerServiceRegistryLoginResponse::request() const
 {
-    Q_D(const CreateContainerServiceRegistryLoginResponse);
-    return static_cast<const CreateContainerServiceRegistryLoginRequest *>(d->request);
+    return static_cast<const CreateContainerServiceRegistryLoginRequest *>(LightsailResponse::request());
 }
 
 /*!

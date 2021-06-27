@@ -439,8 +439,7 @@ BatchAssociateApprovalRuleTemplateWithRepositoriesResponse::BatchAssociateApprov
  */
 const BatchAssociateApprovalRuleTemplateWithRepositoriesRequest * BatchAssociateApprovalRuleTemplateWithRepositoriesResponse::request() const
 {
-    Q_D(const BatchAssociateApprovalRuleTemplateWithRepositoriesResponse);
-    return static_cast<const BatchAssociateApprovalRuleTemplateWithRepositoriesRequest *>(d->request);
+    return static_cast<const BatchAssociateApprovalRuleTemplateWithRepositoriesRequest *>(CodeCommitResponse::request());
 }
 
 /*!

@@ -37,7 +37,7 @@ namespace MarketplaceMetering {
  * Constructs a MarketplaceMeteringResponse object with parent \a parent.
  */
 MarketplaceMeteringResponse::MarketplaceMeteringResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new MarketplaceMeteringResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new MarketplaceMeteringResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ MarketplaceMeteringResponse::MarketplaceMeteringResponse(QObject * const parent)
  * implementation that inherits from MarketplaceMeteringResponsePrivate.
  */
 MarketplaceMeteringResponse::MarketplaceMeteringResponse(MarketplaceMeteringResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void MarketplaceMeteringResponse::parseFailure(QIODevice &response)
  * Constructs a MarketplaceMeteringResponsePrivate object with public implementation \a q.
  */
 MarketplaceMeteringResponsePrivate::MarketplaceMeteringResponsePrivate(
-    MarketplaceMeteringResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    MarketplaceMeteringResponse * const q) : q_ptr(q)
 {
 
 }

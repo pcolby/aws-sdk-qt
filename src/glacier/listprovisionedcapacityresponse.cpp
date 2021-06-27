@@ -91,8 +91,7 @@ ListProvisionedCapacityResponse::ListProvisionedCapacityResponse(
  */
 const ListProvisionedCapacityRequest * ListProvisionedCapacityResponse::request() const
 {
-    Q_D(const ListProvisionedCapacityResponse);
-    return static_cast<const ListProvisionedCapacityRequest *>(d->request);
+    return static_cast<const ListProvisionedCapacityRequest *>(GlacierResponse::request());
 }
 
 /*!

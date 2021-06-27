@@ -129,8 +129,7 @@ DeleteNotificationRuleResponse::DeleteNotificationRuleResponse(
  */
 const DeleteNotificationRuleRequest * DeleteNotificationRuleResponse::request() const
 {
-    Q_D(const DeleteNotificationRuleResponse);
-    return static_cast<const DeleteNotificationRuleRequest *>(d->request);
+    return static_cast<const DeleteNotificationRuleRequest *>(CodeStarNotificationsResponse::request());
 }
 
 /*!

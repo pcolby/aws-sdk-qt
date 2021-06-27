@@ -37,7 +37,7 @@ namespace AlexaForBusiness {
  * Constructs a AlexaForBusinessResponse object with parent \a parent.
  */
 AlexaForBusinessResponse::AlexaForBusinessResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new AlexaForBusinessResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new AlexaForBusinessResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ AlexaForBusinessResponse::AlexaForBusinessResponse(QObject * const parent)
  * implementation that inherits from AlexaForBusinessResponsePrivate.
  */
 AlexaForBusinessResponse::AlexaForBusinessResponse(AlexaForBusinessResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void AlexaForBusinessResponse::parseFailure(QIODevice &response)
  * Constructs a AlexaForBusinessResponsePrivate object with public implementation \a q.
  */
 AlexaForBusinessResponsePrivate::AlexaForBusinessResponsePrivate(
-    AlexaForBusinessResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    AlexaForBusinessResponse * const q) : q_ptr(q)
 {
 
 }

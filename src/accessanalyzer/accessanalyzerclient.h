@@ -130,6 +130,12 @@ public slots:
     UpdateFindingsResponse * updateFindings(const UpdateFindingsRequest &request);
     ValidatePolicyResponse * validatePolicy(const ValidatePolicyRequest &request);
 
+protected:
+    /// @cond internal
+    AccessAnalyzerClientPrivate * const d_ptr; ///< Internal d-pointer.
+    AccessAnalyzerClient(AccessAnalyzerClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(AccessAnalyzerClient)
     Q_DISABLE_COPY(AccessAnalyzerClient)

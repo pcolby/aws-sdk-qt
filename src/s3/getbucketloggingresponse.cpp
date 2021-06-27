@@ -55,8 +55,7 @@ GetBucketLoggingResponse::GetBucketLoggingResponse(
  */
 const GetBucketLoggingRequest * GetBucketLoggingResponse::request() const
 {
-    Q_D(const GetBucketLoggingResponse);
-    return static_cast<const GetBucketLoggingRequest *>(d->request);
+    return static_cast<const GetBucketLoggingRequest *>(S3Response::request());
 }
 
 /*!

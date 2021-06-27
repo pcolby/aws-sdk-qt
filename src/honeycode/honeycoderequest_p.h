@@ -20,15 +20,12 @@
 #ifndef QTAWS_HONEYCODEREQUEST_P_H
 #define QTAWS_HONEYCODEREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "honeycoderequest.h"
-
 namespace QtAws {
 namespace Honeycode {
 
 class HoneycodeRequest;
 
-class HoneycodeRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class HoneycodeRequestPrivate {
 
 public:
     HoneycodeRequest::Action action; ///< Honeycode action to be performed.
@@ -39,6 +36,9 @@ public:
     HoneycodeRequestPrivate(const HoneycodeRequestPrivate &other, HoneycodeRequest * const q);
 
     static QString toString(const HoneycodeRequest::Action &action);
+
+protected:
+    HoneycodeRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(HoneycodeRequest)

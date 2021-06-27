@@ -72,8 +72,7 @@ DeletePackageResponse::DeletePackageResponse(
  */
 const DeletePackageRequest * DeletePackageResponse::request() const
 {
-    Q_D(const DeletePackageResponse);
-    return static_cast<const DeletePackageRequest *>(d->request);
+    return static_cast<const DeletePackageRequest *>(ElasticsearchServiceResponse::request());
 }
 
 /*!

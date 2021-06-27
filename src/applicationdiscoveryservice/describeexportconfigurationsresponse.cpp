@@ -159,8 +159,7 @@ DescribeExportConfigurationsResponse::DescribeExportConfigurationsResponse(
  */
 const DescribeExportConfigurationsRequest * DescribeExportConfigurationsResponse::request() const
 {
-    Q_D(const DescribeExportConfigurationsResponse);
-    return static_cast<const DescribeExportConfigurationsRequest *>(d->request);
+    return static_cast<const DescribeExportConfigurationsRequest *>(ApplicationDiscoveryServiceResponse::request());
 }
 
 /*!

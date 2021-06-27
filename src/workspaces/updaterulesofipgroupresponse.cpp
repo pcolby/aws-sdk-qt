@@ -58,8 +58,7 @@ UpdateRulesOfIpGroupResponse::UpdateRulesOfIpGroupResponse(
  */
 const UpdateRulesOfIpGroupRequest * UpdateRulesOfIpGroupResponse::request() const
 {
-    Q_D(const UpdateRulesOfIpGroupResponse);
-    return static_cast<const UpdateRulesOfIpGroupRequest *>(d->request);
+    return static_cast<const UpdateRulesOfIpGroupRequest *>(WorkSpacesResponse::request());
 }
 
 /*!

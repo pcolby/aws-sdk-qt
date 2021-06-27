@@ -56,8 +56,7 @@ CreateJourneyResponse::CreateJourneyResponse(
  */
 const CreateJourneyRequest * CreateJourneyResponse::request() const
 {
-    Q_D(const CreateJourneyResponse);
-    return static_cast<const CreateJourneyRequest *>(d->request);
+    return static_cast<const CreateJourneyRequest *>(PinpointResponse::request());
 }
 
 /*!

@@ -60,8 +60,7 @@ UpdateDistributionResponse::UpdateDistributionResponse(
  */
 const UpdateDistributionRequest * UpdateDistributionResponse::request() const
 {
-    Q_D(const UpdateDistributionResponse);
-    return static_cast<const UpdateDistributionRequest *>(d->request);
+    return static_cast<const UpdateDistributionRequest *>(CloudFrontResponse::request());
 }
 
 /*!

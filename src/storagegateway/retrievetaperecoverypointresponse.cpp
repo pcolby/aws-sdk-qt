@@ -124,8 +124,7 @@ RetrieveTapeRecoveryPointResponse::RetrieveTapeRecoveryPointResponse(
  */
 const RetrieveTapeRecoveryPointRequest * RetrieveTapeRecoveryPointResponse::request() const
 {
-    Q_D(const RetrieveTapeRecoveryPointResponse);
-    return static_cast<const RetrieveTapeRecoveryPointRequest *>(d->request);
+    return static_cast<const RetrieveTapeRecoveryPointRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

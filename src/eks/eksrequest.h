@@ -88,6 +88,7 @@ public:
 
 protected:
     /// @cond internal
+    EksRequestPrivate * const d_ptr; ///< Internal d-pointer.
     EksRequest(EksRequestPrivate * const d);
     /// @endcond
 

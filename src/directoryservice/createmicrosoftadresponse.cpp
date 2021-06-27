@@ -69,8 +69,7 @@ CreateMicrosoftADResponse::CreateMicrosoftADResponse(
  */
 const CreateMicrosoftADRequest * CreateMicrosoftADResponse::request() const
 {
-    Q_D(const CreateMicrosoftADResponse);
-    return static_cast<const CreateMicrosoftADRequest *>(d->request);
+    return static_cast<const CreateMicrosoftADRequest *>(DirectoryServiceResponse::request());
 }
 
 /*!

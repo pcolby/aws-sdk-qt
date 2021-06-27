@@ -78,8 +78,7 @@ ListPublicKeysResponse::ListPublicKeysResponse(
  */
 const ListPublicKeysRequest * ListPublicKeysResponse::request() const
 {
-    Q_D(const ListPublicKeysResponse);
-    return static_cast<const ListPublicKeysRequest *>(d->request);
+    return static_cast<const ListPublicKeysRequest *>(CloudTrailResponse::request());
 }
 
 /*!

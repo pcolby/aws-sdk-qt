@@ -62,8 +62,7 @@ SearchProfilesResponse::SearchProfilesResponse(
  */
 const SearchProfilesRequest * SearchProfilesResponse::request() const
 {
-    Q_D(const SearchProfilesResponse);
-    return static_cast<const SearchProfilesRequest *>(d->request);
+    return static_cast<const SearchProfilesRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

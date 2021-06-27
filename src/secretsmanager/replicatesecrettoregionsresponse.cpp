@@ -131,8 +131,7 @@ ReplicateSecretToRegionsResponse::ReplicateSecretToRegionsResponse(
  */
 const ReplicateSecretToRegionsRequest * ReplicateSecretToRegionsResponse::request() const
 {
-    Q_D(const ReplicateSecretToRegionsResponse);
-    return static_cast<const ReplicateSecretToRegionsRequest *>(d->request);
+    return static_cast<const ReplicateSecretToRegionsRequest *>(SecretsManagerResponse::request());
 }
 
 /*!

@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    MacieResponsePrivate * const d_ptr; ///< Internal d-pointer.
     MacieResponse(MacieResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

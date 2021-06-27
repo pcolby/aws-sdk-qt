@@ -74,8 +74,7 @@ ListRecommendationsResponse::ListRecommendationsResponse(
  */
 const ListRecommendationsRequest * ListRecommendationsResponse::request() const
 {
-    Q_D(const ListRecommendationsResponse);
-    return static_cast<const ListRecommendationsRequest *>(d->request);
+    return static_cast<const ListRecommendationsRequest *>(DevOpsGuruResponse::request());
 }
 
 /*!

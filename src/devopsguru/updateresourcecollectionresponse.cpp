@@ -74,8 +74,7 @@ UpdateResourceCollectionResponse::UpdateResourceCollectionResponse(
  */
 const UpdateResourceCollectionRequest * UpdateResourceCollectionResponse::request() const
 {
-    Q_D(const UpdateResourceCollectionResponse);
-    return static_cast<const UpdateResourceCollectionRequest *>(d->request);
+    return static_cast<const UpdateResourceCollectionRequest *>(DevOpsGuruResponse::request());
 }
 
 /*!

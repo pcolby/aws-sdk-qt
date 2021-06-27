@@ -20,14 +20,12 @@
 #ifndef QTAWS_REKOGNITIONRESPONSE_P_H
 #define QTAWS_REKOGNITIONRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace Rekognition {
 
 class RekognitionResponse;
 
-class RekognitionResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class RekognitionResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    RekognitionResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(RekognitionResponse)

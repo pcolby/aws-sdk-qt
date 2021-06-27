@@ -20,15 +20,12 @@
 #ifndef QTAWS_GUARDDUTYREQUEST_P_H
 #define QTAWS_GUARDDUTYREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "guarddutyrequest.h"
-
 namespace QtAws {
 namespace GuardDuty {
 
 class GuardDutyRequest;
 
-class GuardDutyRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class GuardDutyRequestPrivate {
 
 public:
     GuardDutyRequest::Action action; ///< GuardDuty action to be performed.
@@ -39,6 +36,9 @@ public:
     GuardDutyRequestPrivate(const GuardDutyRequestPrivate &other, GuardDutyRequest * const q);
 
     static QString toString(const GuardDutyRequest::Action &action);
+
+protected:
+    GuardDutyRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(GuardDutyRequest)

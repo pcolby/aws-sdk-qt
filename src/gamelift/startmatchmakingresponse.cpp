@@ -115,8 +115,7 @@ StartMatchmakingResponse::StartMatchmakingResponse(
  */
 const StartMatchmakingRequest * StartMatchmakingResponse::request() const
 {
-    Q_D(const StartMatchmakingResponse);
-    return static_cast<const StartMatchmakingRequest *>(d->request);
+    return static_cast<const StartMatchmakingRequest *>(GameLiftResponse::request());
 }
 
 /*!

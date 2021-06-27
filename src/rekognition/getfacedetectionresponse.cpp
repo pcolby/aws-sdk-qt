@@ -56,8 +56,7 @@ GetFaceDetectionResponse::GetFaceDetectionResponse(
  */
 const GetFaceDetectionRequest * GetFaceDetectionResponse::request() const
 {
-    Q_D(const GetFaceDetectionResponse);
-    return static_cast<const GetFaceDetectionRequest *>(d->request);
+    return static_cast<const GetFaceDetectionRequest *>(RekognitionResponse::request());
 }
 
 /*!

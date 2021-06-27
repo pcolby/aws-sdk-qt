@@ -86,8 +86,7 @@ CreateConnectionResponse::CreateConnectionResponse(
  */
 const CreateConnectionRequest * CreateConnectionResponse::request() const
 {
-    Q_D(const CreateConnectionResponse);
-    return static_cast<const CreateConnectionRequest *>(d->request);
+    return static_cast<const CreateConnectionRequest *>(AppRunnerResponse::request());
 }
 
 /*!

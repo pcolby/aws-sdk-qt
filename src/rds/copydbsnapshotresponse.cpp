@@ -119,8 +119,7 @@ CopyDBSnapshotResponse::CopyDBSnapshotResponse(
  */
 const CopyDBSnapshotRequest * CopyDBSnapshotResponse::request() const
 {
-    Q_D(const CopyDBSnapshotResponse);
-    return static_cast<const CopyDBSnapshotRequest *>(d->request);
+    return static_cast<const CopyDBSnapshotRequest *>(RdsResponse::request());
 }
 
 /*!

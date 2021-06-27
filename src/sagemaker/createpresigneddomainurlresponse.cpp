@@ -70,8 +70,7 @@ CreatePresignedDomainUrlResponse::CreatePresignedDomainUrlResponse(
  */
 const CreatePresignedDomainUrlRequest * CreatePresignedDomainUrlResponse::request() const
 {
-    Q_D(const CreatePresignedDomainUrlResponse);
-    return static_cast<const CreatePresignedDomainUrlRequest *>(d->request);
+    return static_cast<const CreatePresignedDomainUrlRequest *>(SageMakerResponse::request());
 }
 
 /*!

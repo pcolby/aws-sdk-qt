@@ -82,8 +82,7 @@ DeleteBillingGroupResponse::DeleteBillingGroupResponse(
  */
 const DeleteBillingGroupRequest * DeleteBillingGroupResponse::request() const
 {
-    Q_D(const DeleteBillingGroupResponse);
-    return static_cast<const DeleteBillingGroupRequest *>(d->request);
+    return static_cast<const DeleteBillingGroupRequest *>(IoTResponse::request());
 }
 
 /*!

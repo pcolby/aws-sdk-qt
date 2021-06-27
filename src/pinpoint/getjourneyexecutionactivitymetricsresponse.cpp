@@ -56,8 +56,7 @@ GetJourneyExecutionActivityMetricsResponse::GetJourneyExecutionActivityMetricsRe
  */
 const GetJourneyExecutionActivityMetricsRequest * GetJourneyExecutionActivityMetricsResponse::request() const
 {
-    Q_D(const GetJourneyExecutionActivityMetricsResponse);
-    return static_cast<const GetJourneyExecutionActivityMetricsRequest *>(d->request);
+    return static_cast<const GetJourneyExecutionActivityMetricsRequest *>(PinpointResponse::request());
 }
 
 /*!

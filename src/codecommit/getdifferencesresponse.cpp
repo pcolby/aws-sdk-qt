@@ -439,8 +439,7 @@ GetDifferencesResponse::GetDifferencesResponse(
  */
 const GetDifferencesRequest * GetDifferencesResponse::request() const
 {
-    Q_D(const GetDifferencesResponse);
-    return static_cast<const GetDifferencesRequest *>(d->request);
+    return static_cast<const GetDifferencesRequest *>(CodeCommitResponse::request());
 }
 
 /*!

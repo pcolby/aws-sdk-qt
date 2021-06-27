@@ -87,8 +87,7 @@ CancelReservedInstancesListingResponse::CancelReservedInstancesListingResponse(
  */
 const CancelReservedInstancesListingRequest * CancelReservedInstancesListingResponse::request() const
 {
-    Q_D(const CancelReservedInstancesListingResponse);
-    return static_cast<const CancelReservedInstancesListingRequest *>(d->request);
+    return static_cast<const CancelReservedInstancesListingRequest *>(Ec2Response::request());
 }
 
 /*!

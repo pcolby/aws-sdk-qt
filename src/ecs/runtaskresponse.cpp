@@ -72,8 +72,7 @@ RunTaskResponse::RunTaskResponse(
  */
 const RunTaskRequest * RunTaskResponse::request() const
 {
-    Q_D(const RunTaskResponse);
-    return static_cast<const RunTaskRequest *>(d->request);
+    return static_cast<const RunTaskRequest *>(EcsResponse::request());
 }
 
 /*!

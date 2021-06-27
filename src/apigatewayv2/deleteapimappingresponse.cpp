@@ -56,8 +56,7 @@ DeleteApiMappingResponse::DeleteApiMappingResponse(
  */
 const DeleteApiMappingRequest * DeleteApiMappingResponse::request() const
 {
-    Q_D(const DeleteApiMappingResponse);
-    return static_cast<const DeleteApiMappingRequest *>(d->request);
+    return static_cast<const DeleteApiMappingRequest *>(ApiGatewayV2Response::request());
 }
 
 /*!

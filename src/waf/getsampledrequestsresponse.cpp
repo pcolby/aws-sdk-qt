@@ -76,8 +76,7 @@ GetSampledRequestsResponse::GetSampledRequestsResponse(
  */
 const GetSampledRequestsRequest * GetSampledRequestsResponse::request() const
 {
-    Q_D(const GetSampledRequestsResponse);
-    return static_cast<const GetSampledRequestsRequest *>(d->request);
+    return static_cast<const GetSampledRequestsRequest *>(WafResponse::request());
 }
 
 /*!

@@ -126,8 +126,7 @@ GetRateBasedStatementManagedKeysResponse::GetRateBasedStatementManagedKeysRespon
  */
 const GetRateBasedStatementManagedKeysRequest * GetRateBasedStatementManagedKeysResponse::request() const
 {
-    Q_D(const GetRateBasedStatementManagedKeysResponse);
-    return static_cast<const GetRateBasedStatementManagedKeysRequest *>(d->request);
+    return static_cast<const GetRateBasedStatementManagedKeysRequest *>(Wafv2Response::request());
 }
 
 /*!

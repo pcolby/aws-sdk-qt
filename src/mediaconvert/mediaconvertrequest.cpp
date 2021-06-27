@@ -67,7 +67,7 @@ namespace MediaConvert {
  * Constructs a MediaConvertRequest object for MediaConvert \a action.
  */
 MediaConvertRequest::MediaConvertRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new MediaConvertRequestPrivate(action, this))
+    : d_ptr(new MediaConvertRequestPrivate(action, this))
 {
 
 }
@@ -76,7 +76,8 @@ MediaConvertRequest::MediaConvertRequest(const Action action)
  * Constructs a copy of \a other.
  */
 MediaConvertRequest::MediaConvertRequest(const MediaConvertRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new MediaConvertRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new MediaConvertRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -99,7 +100,7 @@ MediaConvertRequest& MediaConvertRequest::operator=(const MediaConvertRequest &o
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MediaConvertRequestPrivate.
  */
-MediaConvertRequest::MediaConvertRequest(MediaConvertRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+MediaConvertRequest::MediaConvertRequest(MediaConvertRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -268,7 +269,7 @@ QNetworkRequest MediaConvertRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 MediaConvertRequestPrivate::MediaConvertRequestPrivate(const MediaConvertRequest::Action action, MediaConvertRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -283,8 +284,8 @@ MediaConvertRequestPrivate::MediaConvertRequestPrivate(const MediaConvertRequest
  */
 MediaConvertRequestPrivate::MediaConvertRequestPrivate(const MediaConvertRequestPrivate &other,
                                      MediaConvertRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

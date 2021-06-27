@@ -59,8 +59,7 @@ GetBackupVaultNotificationsResponse::GetBackupVaultNotificationsResponse(
  */
 const GetBackupVaultNotificationsRequest * GetBackupVaultNotificationsResponse::request() const
 {
-    Q_D(const GetBackupVaultNotificationsResponse);
-    return static_cast<const GetBackupVaultNotificationsRequest *>(d->request);
+    return static_cast<const GetBackupVaultNotificationsRequest *>(BackupResponse::request());
 }
 
 /*!

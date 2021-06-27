@@ -69,8 +69,7 @@ PutPolicyResponse::PutPolicyResponse(
  */
 const PutPolicyRequest * PutPolicyResponse::request() const
 {
-    Q_D(const PutPolicyResponse);
-    return static_cast<const PutPolicyRequest *>(d->request);
+    return static_cast<const PutPolicyRequest *>(AcmpcaResponse::request());
 }
 
 /*!

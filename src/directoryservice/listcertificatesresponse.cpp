@@ -69,8 +69,7 @@ ListCertificatesResponse::ListCertificatesResponse(
  */
 const ListCertificatesRequest * ListCertificatesResponse::request() const
 {
-    Q_D(const ListCertificatesResponse);
-    return static_cast<const ListCertificatesRequest *>(d->request);
+    return static_cast<const ListCertificatesRequest *>(DirectoryServiceResponse::request());
 }
 
 /*!

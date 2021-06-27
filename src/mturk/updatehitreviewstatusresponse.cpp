@@ -55,8 +55,7 @@ UpdateHITReviewStatusResponse::UpdateHITReviewStatusResponse(
  */
 const UpdateHITReviewStatusRequest * UpdateHITReviewStatusResponse::request() const
 {
-    Q_D(const UpdateHITReviewStatusResponse);
-    return static_cast<const UpdateHITReviewStatusRequest *>(d->request);
+    return static_cast<const UpdateHITReviewStatusRequest *>(MTurkResponse::request());
 }
 
 /*!

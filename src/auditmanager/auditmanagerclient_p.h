@@ -20,19 +20,20 @@
 #ifndef QTAWS_AUDITMANAGERCLIENT_P_H
 #define QTAWS_AUDITMANAGERCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace AuditManager {
 
 class AuditManagerClient;
 
-class AuditManagerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class AuditManagerClientPrivate {
 
 public:
     AuditManagerClientPrivate(AuditManagerClient * const q);
+
+protected:
+    AuditManagerClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AuditManagerClient)

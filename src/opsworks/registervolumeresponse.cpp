@@ -161,8 +161,7 @@ RegisterVolumeResponse::RegisterVolumeResponse(
  */
 const RegisterVolumeRequest * RegisterVolumeResponse::request() const
 {
-    Q_D(const RegisterVolumeResponse);
-    return static_cast<const RegisterVolumeRequest *>(d->request);
+    return static_cast<const RegisterVolumeRequest *>(OpsWorksResponse::request());
 }
 
 /*!

@@ -82,8 +82,7 @@ ListJobExecutionsForThingResponse::ListJobExecutionsForThingResponse(
  */
 const ListJobExecutionsForThingRequest * ListJobExecutionsForThingResponse::request() const
 {
-    Q_D(const ListJobExecutionsForThingResponse);
-    return static_cast<const ListJobExecutionsForThingRequest *>(d->request);
+    return static_cast<const ListJobExecutionsForThingRequest *>(IoTResponse::request());
 }
 
 /*!

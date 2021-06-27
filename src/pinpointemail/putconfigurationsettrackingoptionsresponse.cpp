@@ -92,8 +92,7 @@ PutConfigurationSetTrackingOptionsResponse::PutConfigurationSetTrackingOptionsRe
  */
 const PutConfigurationSetTrackingOptionsRequest * PutConfigurationSetTrackingOptionsResponse::request() const
 {
-    Q_D(const PutConfigurationSetTrackingOptionsResponse);
-    return static_cast<const PutConfigurationSetTrackingOptionsRequest *>(d->request);
+    return static_cast<const PutConfigurationSetTrackingOptionsRequest *>(PinpointEmailResponse::request());
 }
 
 /*!

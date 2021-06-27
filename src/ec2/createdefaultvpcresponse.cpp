@@ -87,8 +87,7 @@ CreateDefaultVpcResponse::CreateDefaultVpcResponse(
  */
 const CreateDefaultVpcRequest * CreateDefaultVpcResponse::request() const
 {
-    Q_D(const CreateDefaultVpcResponse);
-    return static_cast<const CreateDefaultVpcRequest *>(d->request);
+    return static_cast<const CreateDefaultVpcRequest *>(Ec2Response::request());
 }
 
 /*!

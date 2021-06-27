@@ -91,8 +91,7 @@ DeleteArchiveResponse::DeleteArchiveResponse(
  */
 const DeleteArchiveRequest * DeleteArchiveResponse::request() const
 {
-    Q_D(const DeleteArchiveResponse);
-    return static_cast<const DeleteArchiveRequest *>(d->request);
+    return static_cast<const DeleteArchiveRequest *>(GlacierResponse::request());
 }
 
 /*!

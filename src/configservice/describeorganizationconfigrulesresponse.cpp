@@ -75,8 +75,7 @@ DescribeOrganizationConfigRulesResponse::DescribeOrganizationConfigRulesResponse
  */
 const DescribeOrganizationConfigRulesRequest * DescribeOrganizationConfigRulesResponse::request() const
 {
-    Q_D(const DescribeOrganizationConfigRulesResponse);
-    return static_cast<const DescribeOrganizationConfigRulesRequest *>(d->request);
+    return static_cast<const DescribeOrganizationConfigRulesRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

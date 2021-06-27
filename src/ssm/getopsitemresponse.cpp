@@ -98,8 +98,7 @@ GetOpsItemResponse::GetOpsItemResponse(
  */
 const GetOpsItemRequest * GetOpsItemResponse::request() const
 {
-    Q_D(const GetOpsItemResponse);
-    return static_cast<const GetOpsItemRequest *>(d->request);
+    return static_cast<const GetOpsItemRequest *>(SsmResponse::request());
 }
 
 /*!

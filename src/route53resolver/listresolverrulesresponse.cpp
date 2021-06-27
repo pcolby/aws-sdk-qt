@@ -94,8 +94,7 @@ ListResolverRulesResponse::ListResolverRulesResponse(
  */
 const ListResolverRulesRequest * ListResolverRulesResponse::request() const
 {
-    Q_D(const ListResolverRulesResponse);
-    return static_cast<const ListResolverRulesRequest *>(d->request);
+    return static_cast<const ListResolverRulesRequest *>(Route53ResolverResponse::request());
 }
 
 /*!

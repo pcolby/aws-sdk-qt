@@ -77,8 +77,7 @@ StartDeviceAuthorizationResponse::StartDeviceAuthorizationResponse(
  */
 const StartDeviceAuthorizationRequest * StartDeviceAuthorizationResponse::request() const
 {
-    Q_D(const StartDeviceAuthorizationResponse);
-    return static_cast<const StartDeviceAuthorizationRequest *>(d->request);
+    return static_cast<const StartDeviceAuthorizationRequest *>(SsooidcResponse::request());
 }
 
 /*!

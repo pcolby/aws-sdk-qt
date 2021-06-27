@@ -56,8 +56,7 @@ ListWorldExportJobsResponse::ListWorldExportJobsResponse(
  */
 const ListWorldExportJobsRequest * ListWorldExportJobsResponse::request() const
 {
-    Q_D(const ListWorldExportJobsResponse);
-    return static_cast<const ListWorldExportJobsRequest *>(d->request);
+    return static_cast<const ListWorldExportJobsRequest *>(RoboMakerResponse::request());
 }
 
 /*!

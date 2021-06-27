@@ -70,8 +70,7 @@ DeleteModelQualityJobDefinitionResponse::DeleteModelQualityJobDefinitionResponse
  */
 const DeleteModelQualityJobDefinitionRequest * DeleteModelQualityJobDefinitionResponse::request() const
 {
-    Q_D(const DeleteModelQualityJobDefinitionResponse);
-    return static_cast<const DeleteModelQualityJobDefinitionRequest *>(d->request);
+    return static_cast<const DeleteModelQualityJobDefinitionRequest *>(SageMakerResponse::request());
 }
 
 /*!

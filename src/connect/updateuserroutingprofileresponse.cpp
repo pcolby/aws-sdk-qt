@@ -79,8 +79,7 @@ UpdateUserRoutingProfileResponse::UpdateUserRoutingProfileResponse(
  */
 const UpdateUserRoutingProfileRequest * UpdateUserRoutingProfileResponse::request() const
 {
-    Q_D(const UpdateUserRoutingProfileResponse);
-    return static_cast<const UpdateUserRoutingProfileRequest *>(d->request);
+    return static_cast<const UpdateUserRoutingProfileRequest *>(ConnectResponse::request());
 }
 
 /*!

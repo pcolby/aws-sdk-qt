@@ -20,15 +20,12 @@
 #ifndef QTAWS_SSOOIDCREQUEST_P_H
 #define QTAWS_SSOOIDCREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "ssooidcrequest.h"
-
 namespace QtAws {
 namespace SSOOIDC {
 
 class SsooidcRequest;
 
-class SsooidcRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class SsooidcRequestPrivate {
 
 public:
     SsooidcRequest::Action action; ///< SSOOIDC action to be performed.
@@ -39,6 +36,9 @@ public:
     SsooidcRequestPrivate(const SsooidcRequestPrivate &other, SsooidcRequest * const q);
 
     static QString toString(const SsooidcRequest::Action &action);
+
+protected:
+    SsooidcRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SsooidcRequest)

@@ -87,8 +87,7 @@ DisableVpcClassicLinkDnsSupportResponse::DisableVpcClassicLinkDnsSupportResponse
  */
 const DisableVpcClassicLinkDnsSupportRequest * DisableVpcClassicLinkDnsSupportResponse::request() const
 {
-    Q_D(const DisableVpcClassicLinkDnsSupportResponse);
-    return static_cast<const DisableVpcClassicLinkDnsSupportRequest *>(d->request);
+    return static_cast<const DisableVpcClassicLinkDnsSupportRequest *>(Ec2Response::request());
 }
 
 /*!

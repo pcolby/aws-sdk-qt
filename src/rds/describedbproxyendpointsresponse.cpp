@@ -119,8 +119,7 @@ DescribeDBProxyEndpointsResponse::DescribeDBProxyEndpointsResponse(
  */
 const DescribeDBProxyEndpointsRequest * DescribeDBProxyEndpointsResponse::request() const
 {
-    Q_D(const DescribeDBProxyEndpointsResponse);
-    return static_cast<const DescribeDBProxyEndpointsRequest *>(d->request);
+    return static_cast<const DescribeDBProxyEndpointsRequest *>(RdsResponse::request());
 }
 
 /*!

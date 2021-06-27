@@ -56,8 +56,7 @@ CreateBatchInferenceJobResponse::CreateBatchInferenceJobResponse(
  */
 const CreateBatchInferenceJobRequest * CreateBatchInferenceJobResponse::request() const
 {
-    Q_D(const CreateBatchInferenceJobResponse);
-    return static_cast<const CreateBatchInferenceJobRequest *>(d->request);
+    return static_cast<const CreateBatchInferenceJobRequest *>(PersonalizeResponse::request());
 }
 
 /*!

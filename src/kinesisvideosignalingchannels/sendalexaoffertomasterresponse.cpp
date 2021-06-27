@@ -57,8 +57,7 @@ SendAlexaOfferToMasterResponse::SendAlexaOfferToMasterResponse(
  */
 const SendAlexaOfferToMasterRequest * SendAlexaOfferToMasterResponse::request() const
 {
-    Q_D(const SendAlexaOfferToMasterResponse);
-    return static_cast<const SendAlexaOfferToMasterRequest *>(d->request);
+    return static_cast<const SendAlexaOfferToMasterRequest *>(KinesisVideoSignalingChannelsResponse::request());
 }
 
 /*!

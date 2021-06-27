@@ -98,8 +98,7 @@ RedactChannelMessageResponse::RedactChannelMessageResponse(
  */
 const RedactChannelMessageRequest * RedactChannelMessageResponse::request() const
 {
-    Q_D(const RedactChannelMessageResponse);
-    return static_cast<const RedactChannelMessageRequest *>(d->request);
+    return static_cast<const RedactChannelMessageRequest *>(ChimeResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ ListTypesResponse::ListTypesResponse(
  */
 const ListTypesRequest * ListTypesResponse::request() const
 {
-    Q_D(const ListTypesResponse);
-    return static_cast<const ListTypesRequest *>(d->request);
+    return static_cast<const ListTypesRequest *>(AppSyncResponse::request());
 }
 
 /*!

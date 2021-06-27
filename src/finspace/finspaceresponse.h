@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    finspaceResponsePrivate * const d_ptr; ///< Internal d-pointer.
     finspaceResponse(finspaceResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

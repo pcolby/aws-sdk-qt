@@ -57,8 +57,7 @@ GetObjectResponse::GetObjectResponse(
  */
 const GetObjectRequest * GetObjectResponse::request() const
 {
-    Q_D(const GetObjectResponse);
-    return static_cast<const GetObjectRequest *>(d->request);
+    return static_cast<const GetObjectRequest *>(MediaStoreDataResponse::request());
 }
 
 /*!

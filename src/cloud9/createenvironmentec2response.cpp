@@ -121,8 +121,7 @@ CreateEnvironmentEC2Response::CreateEnvironmentEC2Response(
  */
 const CreateEnvironmentEC2Request * CreateEnvironmentEC2Response::request() const
 {
-    Q_D(const CreateEnvironmentEC2Response);
-    return static_cast<const CreateEnvironmentEC2Request *>(d->request);
+    return static_cast<const CreateEnvironmentEC2Request *>(Cloud9Response::request());
 }
 
 /*!

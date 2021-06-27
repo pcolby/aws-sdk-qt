@@ -55,8 +55,7 @@ StopChannelResponse::StopChannelResponse(
  */
 const StopChannelRequest * StopChannelResponse::request() const
 {
-    Q_D(const StopChannelResponse);
-    return static_cast<const StopChannelRequest *>(d->request);
+    return static_cast<const StopChannelRequest *>(MediaLiveResponse::request());
 }
 
 /*!

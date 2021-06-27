@@ -87,8 +87,7 @@ ModifyVpnTunnelOptionsResponse::ModifyVpnTunnelOptionsResponse(
  */
 const ModifyVpnTunnelOptionsRequest * ModifyVpnTunnelOptionsResponse::request() const
 {
-    Q_D(const ModifyVpnTunnelOptionsResponse);
-    return static_cast<const ModifyVpnTunnelOptionsRequest *>(d->request);
+    return static_cast<const ModifyVpnTunnelOptionsRequest *>(Ec2Response::request());
 }
 
 /*!

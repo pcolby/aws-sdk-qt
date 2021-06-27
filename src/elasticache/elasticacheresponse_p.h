@@ -20,14 +20,12 @@
 #ifndef QTAWS_ELASTICACHERESPONSE_P_H
 #define QTAWS_ELASTICACHERESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace ElastiCache {
 
 class ElastiCacheResponse;
 
-class ElastiCacheResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class ElastiCacheResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    ElastiCacheResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ElastiCacheResponse)

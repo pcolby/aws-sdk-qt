@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    LookoutEquipmentResponsePrivate * const d_ptr; ///< Internal d-pointer.
     LookoutEquipmentResponse(LookoutEquipmentResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

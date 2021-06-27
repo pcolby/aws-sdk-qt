@@ -66,8 +66,7 @@ DeleteSuggesterResponse::DeleteSuggesterResponse(
  */
 const DeleteSuggesterRequest * DeleteSuggesterResponse::request() const
 {
-    Q_D(const DeleteSuggesterResponse);
-    return static_cast<const DeleteSuggesterRequest *>(d->request);
+    return static_cast<const DeleteSuggesterRequest *>(CloudSearchResponse::request());
 }
 
 /*!

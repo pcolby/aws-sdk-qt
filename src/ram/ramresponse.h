@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    RamResponsePrivate * const d_ptr; ///< Internal d-pointer.
     RamResponse(RamResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

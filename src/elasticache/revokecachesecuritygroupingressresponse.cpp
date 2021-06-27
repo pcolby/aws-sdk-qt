@@ -69,8 +69,7 @@ RevokeCacheSecurityGroupIngressResponse::RevokeCacheSecurityGroupIngressResponse
  */
 const RevokeCacheSecurityGroupIngressRequest * RevokeCacheSecurityGroupIngressResponse::request() const
 {
-    Q_D(const RevokeCacheSecurityGroupIngressResponse);
-    return static_cast<const RevokeCacheSecurityGroupIngressRequest *>(d->request);
+    return static_cast<const RevokeCacheSecurityGroupIngressRequest *>(ElastiCacheResponse::request());
 }
 
 /*!

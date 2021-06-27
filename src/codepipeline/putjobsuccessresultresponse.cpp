@@ -240,8 +240,7 @@ PutJobSuccessResultResponse::PutJobSuccessResultResponse(
  */
 const PutJobSuccessResultRequest * PutJobSuccessResultResponse::request() const
 {
-    Q_D(const PutJobSuccessResultResponse);
-    return static_cast<const PutJobSuccessResultRequest *>(d->request);
+    return static_cast<const PutJobSuccessResultRequest *>(CodePipelineResponse::request());
 }
 
 /*!

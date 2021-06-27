@@ -98,8 +98,7 @@ ListRoomMembershipsResponse::ListRoomMembershipsResponse(
  */
 const ListRoomMembershipsRequest * ListRoomMembershipsResponse::request() const
 {
-    Q_D(const ListRoomMembershipsResponse);
-    return static_cast<const ListRoomMembershipsRequest *>(d->request);
+    return static_cast<const ListRoomMembershipsRequest *>(ChimeResponse::request());
 }
 
 /*!

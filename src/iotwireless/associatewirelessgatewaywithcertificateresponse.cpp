@@ -56,8 +56,7 @@ AssociateWirelessGatewayWithCertificateResponse::AssociateWirelessGatewayWithCer
  */
 const AssociateWirelessGatewayWithCertificateRequest * AssociateWirelessGatewayWithCertificateResponse::request() const
 {
-    Q_D(const AssociateWirelessGatewayWithCertificateResponse);
-    return static_cast<const AssociateWirelessGatewayWithCertificateRequest *>(d->request);
+    return static_cast<const AssociateWirelessGatewayWithCertificateRequest *>(IoTWirelessResponse::request());
 }
 
 /*!

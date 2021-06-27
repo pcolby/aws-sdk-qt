@@ -451,6 +451,12 @@ public slots:
     UpdateResourceDataSyncResponse * updateResourceDataSync(const UpdateResourceDataSyncRequest &request);
     UpdateServiceSettingResponse * updateServiceSetting(const UpdateServiceSettingRequest &request);
 
+protected:
+    /// @cond internal
+    SsmClientPrivate * const d_ptr; ///< Internal d-pointer.
+    SsmClient(SsmClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(SsmClient)
     Q_DISABLE_COPY(SsmClient)

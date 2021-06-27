@@ -87,8 +87,7 @@ GetSerialConsoleAccessStatusResponse::GetSerialConsoleAccessStatusResponse(
  */
 const GetSerialConsoleAccessStatusRequest * GetSerialConsoleAccessStatusResponse::request() const
 {
-    Q_D(const GetSerialConsoleAccessStatusResponse);
-    return static_cast<const GetSerialConsoleAccessStatusRequest *>(d->request);
+    return static_cast<const GetSerialConsoleAccessStatusRequest *>(Ec2Response::request());
 }
 
 /*!

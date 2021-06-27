@@ -84,6 +84,7 @@ public:
 
 protected:
     /// @cond internal
+    MachineLearningRequestPrivate * const d_ptr; ///< Internal d-pointer.
     MachineLearningRequest(MachineLearningRequestPrivate * const d);
     /// @endcond
 

@@ -145,6 +145,12 @@ public slots:
     UpdateFleetMetadataResponse * updateFleetMetadata(const UpdateFleetMetadataRequest &request);
     UpdateIdentityProviderConfigurationResponse * updateIdentityProviderConfiguration(const UpdateIdentityProviderConfigurationRequest &request);
 
+protected:
+    /// @cond internal
+    WorkLinkClientPrivate * const d_ptr; ///< Internal d-pointer.
+    WorkLinkClient(WorkLinkClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(WorkLinkClient)
     Q_DISABLE_COPY(WorkLinkClient)

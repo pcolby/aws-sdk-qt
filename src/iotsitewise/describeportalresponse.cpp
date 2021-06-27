@@ -61,8 +61,7 @@ DescribePortalResponse::DescribePortalResponse(
  */
 const DescribePortalRequest * DescribePortalResponse::request() const
 {
-    Q_D(const DescribePortalResponse);
-    return static_cast<const DescribePortalRequest *>(d->request);
+    return static_cast<const DescribePortalRequest *>(IoTSiteWiseResponse::request());
 }
 
 /*!

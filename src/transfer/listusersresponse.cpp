@@ -62,8 +62,7 @@ ListUsersResponse::ListUsersResponse(
  */
 const ListUsersRequest * ListUsersResponse::request() const
 {
-    Q_D(const ListUsersResponse);
-    return static_cast<const ListUsersRequest *>(d->request);
+    return static_cast<const ListUsersRequest *>(TransferResponse::request());
 }
 
 /*!

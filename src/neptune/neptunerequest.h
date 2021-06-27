@@ -119,6 +119,7 @@ public:
 
 protected:
     /// @cond internal
+    NeptuneRequestPrivate * const d_ptr; ///< Internal d-pointer.
     NeptuneRequest(NeptuneRequestPrivate * const d);
     /// @endcond
 

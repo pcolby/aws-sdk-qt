@@ -56,8 +56,7 @@ CreateCollectionResponse::CreateCollectionResponse(
  */
 const CreateCollectionRequest * CreateCollectionResponse::request() const
 {
-    Q_D(const CreateCollectionResponse);
-    return static_cast<const CreateCollectionRequest *>(d->request);
+    return static_cast<const CreateCollectionRequest *>(RekognitionResponse::request());
 }
 
 /*!

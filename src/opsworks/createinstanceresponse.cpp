@@ -161,8 +161,7 @@ CreateInstanceResponse::CreateInstanceResponse(
  */
 const CreateInstanceRequest * CreateInstanceResponse::request() const
 {
-    Q_D(const CreateInstanceResponse);
-    return static_cast<const CreateInstanceRequest *>(d->request);
+    return static_cast<const CreateInstanceRequest *>(OpsWorksResponse::request());
 }
 
 /*!

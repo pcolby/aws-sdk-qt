@@ -55,8 +55,7 @@ SendTestEventNotificationResponse::SendTestEventNotificationResponse(
  */
 const SendTestEventNotificationRequest * SendTestEventNotificationResponse::request() const
 {
-    Q_D(const SendTestEventNotificationResponse);
-    return static_cast<const SendTestEventNotificationRequest *>(d->request);
+    return static_cast<const SendTestEventNotificationRequest *>(MTurkResponse::request());
 }
 
 /*!

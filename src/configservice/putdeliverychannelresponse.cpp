@@ -75,8 +75,7 @@ PutDeliveryChannelResponse::PutDeliveryChannelResponse(
  */
 const PutDeliveryChannelRequest * PutDeliveryChannelResponse::request() const
 {
-    Q_D(const PutDeliveryChannelResponse);
-    return static_cast<const PutDeliveryChannelRequest *>(d->request);
+    return static_cast<const PutDeliveryChannelRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

@@ -295,6 +295,12 @@ public slots:
     UpdateRealtimeLogConfigResponse * updateRealtimeLogConfig(const UpdateRealtimeLogConfigRequest &request);
     UpdateStreamingDistributionResponse * updateStreamingDistribution(const UpdateStreamingDistributionRequest &request);
 
+protected:
+    /// @cond internal
+    CloudFrontClientPrivate * const d_ptr; ///< Internal d-pointer.
+    CloudFrontClient(CloudFrontClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(CloudFrontClient)
     Q_DISABLE_COPY(CloudFrontClient)

@@ -73,8 +73,7 @@ CreateVirtualGatewayResponse::CreateVirtualGatewayResponse(
  */
 const CreateVirtualGatewayRequest * CreateVirtualGatewayResponse::request() const
 {
-    Q_D(const CreateVirtualGatewayResponse);
-    return static_cast<const CreateVirtualGatewayRequest *>(d->request);
+    return static_cast<const CreateVirtualGatewayRequest *>(AppMeshResponse::request());
 }
 
 /*!

@@ -87,8 +87,7 @@ DescribeReservedInstancesListingsResponse::DescribeReservedInstancesListingsResp
  */
 const DescribeReservedInstancesListingsRequest * DescribeReservedInstancesListingsResponse::request() const
 {
-    Q_D(const DescribeReservedInstancesListingsResponse);
-    return static_cast<const DescribeReservedInstancesListingsRequest *>(d->request);
+    return static_cast<const DescribeReservedInstancesListingsRequest *>(Ec2Response::request());
 }
 
 /*!

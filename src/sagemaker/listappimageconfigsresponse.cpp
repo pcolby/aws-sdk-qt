@@ -70,8 +70,7 @@ ListAppImageConfigsResponse::ListAppImageConfigsResponse(
  */
 const ListAppImageConfigsRequest * ListAppImageConfigsResponse::request() const
 {
-    Q_D(const ListAppImageConfigsResponse);
-    return static_cast<const ListAppImageConfigsRequest *>(d->request);
+    return static_cast<const ListAppImageConfigsRequest *>(SageMakerResponse::request());
 }
 
 /*!

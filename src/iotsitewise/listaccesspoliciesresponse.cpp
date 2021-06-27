@@ -61,8 +61,7 @@ ListAccessPoliciesResponse::ListAccessPoliciesResponse(
  */
 const ListAccessPoliciesRequest * ListAccessPoliciesResponse::request() const
 {
-    Q_D(const ListAccessPoliciesResponse);
-    return static_cast<const ListAccessPoliciesRequest *>(d->request);
+    return static_cast<const ListAccessPoliciesRequest *>(IoTSiteWiseResponse::request());
 }
 
 /*!

@@ -87,8 +87,7 @@ UnmonitorInstancesResponse::UnmonitorInstancesResponse(
  */
 const UnmonitorInstancesRequest * UnmonitorInstancesResponse::request() const
 {
-    Q_D(const UnmonitorInstancesResponse);
-    return static_cast<const UnmonitorInstancesRequest *>(d->request);
+    return static_cast<const UnmonitorInstancesRequest *>(Ec2Response::request());
 }
 
 /*!

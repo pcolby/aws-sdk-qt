@@ -60,8 +60,7 @@ GetRestApisResponse::GetRestApisResponse(
  */
 const GetRestApisRequest * GetRestApisResponse::request() const
 {
-    Q_D(const GetRestApisResponse);
-    return static_cast<const GetRestApisRequest *>(d->request);
+    return static_cast<const GetRestApisRequest *>(APIGatewayResponse::request());
 }
 
 /*!

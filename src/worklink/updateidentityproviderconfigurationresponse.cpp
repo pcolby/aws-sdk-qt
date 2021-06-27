@@ -60,8 +60,7 @@ UpdateIdentityProviderConfigurationResponse::UpdateIdentityProviderConfiguration
  */
 const UpdateIdentityProviderConfigurationRequest * UpdateIdentityProviderConfigurationResponse::request() const
 {
-    Q_D(const UpdateIdentityProviderConfigurationResponse);
-    return static_cast<const UpdateIdentityProviderConfigurationRequest *>(d->request);
+    return static_cast<const UpdateIdentityProviderConfigurationRequest *>(WorkLinkResponse::request());
 }
 
 /*!

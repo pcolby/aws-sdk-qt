@@ -69,8 +69,7 @@ PurchaseReservedCacheNodesOfferingResponse::PurchaseReservedCacheNodesOfferingRe
  */
 const PurchaseReservedCacheNodesOfferingRequest * PurchaseReservedCacheNodesOfferingResponse::request() const
 {
-    Q_D(const PurchaseReservedCacheNodesOfferingResponse);
-    return static_cast<const PurchaseReservedCacheNodesOfferingRequest *>(d->request);
+    return static_cast<const PurchaseReservedCacheNodesOfferingRequest *>(ElastiCacheResponse::request());
 }
 
 /*!

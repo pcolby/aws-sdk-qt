@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    LexModelBuildingServiceResponsePrivate * const d_ptr; ///< Internal d-pointer.
     LexModelBuildingServiceResponse(LexModelBuildingServiceResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

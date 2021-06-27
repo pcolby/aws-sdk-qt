@@ -177,8 +177,7 @@ CancelServiceInstanceDeploymentResponse::CancelServiceInstanceDeploymentResponse
  */
 const CancelServiceInstanceDeploymentRequest * CancelServiceInstanceDeploymentResponse::request() const
 {
-    Q_D(const CancelServiceInstanceDeploymentResponse);
-    return static_cast<const CancelServiceInstanceDeploymentRequest *>(d->request);
+    return static_cast<const CancelServiceInstanceDeploymentRequest *>(ProtonResponse::request());
 }
 
 /*!

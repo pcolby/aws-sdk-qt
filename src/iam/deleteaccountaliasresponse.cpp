@@ -62,8 +62,7 @@ DeleteAccountAliasResponse::DeleteAccountAliasResponse(
  */
 const DeleteAccountAliasRequest * DeleteAccountAliasResponse::request() const
 {
-    Q_D(const DeleteAccountAliasResponse);
-    return static_cast<const DeleteAccountAliasRequest *>(d->request);
+    return static_cast<const DeleteAccountAliasRequest *>(IamResponse::request());
 }
 
 /*!

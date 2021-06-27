@@ -145,16 +145,16 @@ AthenaClient::AthenaClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new AthenaClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-05-18"),
+    QStringLiteral("athena"),
+    QStringLiteral("Amazon Athena"),
+    QStringLiteral("athena"),
+    parent), d_ptr(new AthenaClientPrivate(this))
 {
-    Q_D(AthenaClient);
-    d->apiVersion = QStringLiteral("2017-05-18");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("athena");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Athena");
-    d->serviceName = QStringLiteral("athena");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -173,16 +173,16 @@ AthenaClient::AthenaClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new AthenaClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2017-05-18"),
+    QStringLiteral("athena"),
+    QStringLiteral("Amazon Athena"),
+    QStringLiteral("athena"),
+    parent), d_ptr(new AthenaClientPrivate(this))
 {
-    Q_D(AthenaClient);
-    d->apiVersion = QStringLiteral("2017-05-18");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("athena");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Athena");
-    d->serviceName = QStringLiteral("athena");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -707,10 +707,9 @@ UpdateWorkGroupResponse * AthenaClient::updateWorkGroup(const UpdateWorkGroupReq
 /*!
  * Constructs a AthenaClientPrivate object with public implementation \a q.
  */
-AthenaClientPrivate::AthenaClientPrivate(AthenaClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+AthenaClientPrivate::AthenaClientPrivate(AthenaClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace Athena

@@ -70,8 +70,7 @@ StopProcessingJobResponse::StopProcessingJobResponse(
  */
 const StopProcessingJobRequest * StopProcessingJobResponse::request() const
 {
-    Q_D(const StopProcessingJobResponse);
-    return static_cast<const StopProcessingJobRequest *>(d->request);
+    return static_cast<const StopProcessingJobRequest *>(SageMakerResponse::request());
 }
 
 /*!

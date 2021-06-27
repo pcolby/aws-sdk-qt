@@ -73,8 +73,7 @@ SetStatusResponse::SetStatusResponse(
  */
 const SetStatusRequest * SetStatusResponse::request() const
 {
-    Q_D(const SetStatusResponse);
-    return static_cast<const SetStatusRequest *>(d->request);
+    return static_cast<const SetStatusRequest *>(DataPipelineResponse::request());
 }
 
 /*!

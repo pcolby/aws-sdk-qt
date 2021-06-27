@@ -57,8 +57,7 @@ ModifyBackupAttributesResponse::ModifyBackupAttributesResponse(
  */
 const ModifyBackupAttributesRequest * ModifyBackupAttributesResponse::request() const
 {
-    Q_D(const ModifyBackupAttributesResponse);
-    return static_cast<const ModifyBackupAttributesRequest *>(d->request);
+    return static_cast<const ModifyBackupAttributesRequest *>(CloudHSMV2Response::request());
 }
 
 /*!

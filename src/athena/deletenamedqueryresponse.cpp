@@ -73,8 +73,7 @@ DeleteNamedQueryResponse::DeleteNamedQueryResponse(
  */
 const DeleteNamedQueryRequest * DeleteNamedQueryResponse::request() const
 {
-    Q_D(const DeleteNamedQueryResponse);
-    return static_cast<const DeleteNamedQueryRequest *>(d->request);
+    return static_cast<const DeleteNamedQueryRequest *>(AthenaResponse::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ ExportProjectResponse::ExportProjectResponse(
  */
 const ExportProjectRequest * ExportProjectResponse::request() const
 {
-    Q_D(const ExportProjectResponse);
-    return static_cast<const ExportProjectRequest *>(d->request);
+    return static_cast<const ExportProjectRequest *>(MobileResponse::request());
 }
 
 /*!

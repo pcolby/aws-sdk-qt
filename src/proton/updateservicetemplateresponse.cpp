@@ -177,8 +177,7 @@ UpdateServiceTemplateResponse::UpdateServiceTemplateResponse(
  */
 const UpdateServiceTemplateRequest * UpdateServiceTemplateResponse::request() const
 {
-    Q_D(const UpdateServiceTemplateResponse);
-    return static_cast<const UpdateServiceTemplateRequest *>(d->request);
+    return static_cast<const UpdateServiceTemplateRequest *>(ProtonResponse::request());
 }
 
 /*!

@@ -67,8 +67,7 @@ GetAccessPreviewResponse::GetAccessPreviewResponse(
  */
 const GetAccessPreviewRequest * GetAccessPreviewResponse::request() const
 {
-    Q_D(const GetAccessPreviewResponse);
-    return static_cast<const GetAccessPreviewRequest *>(d->request);
+    return static_cast<const GetAccessPreviewRequest *>(AccessAnalyzerResponse::request());
 }
 
 /*!

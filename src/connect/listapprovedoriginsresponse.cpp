@@ -79,8 +79,7 @@ ListApprovedOriginsResponse::ListApprovedOriginsResponse(
  */
 const ListApprovedOriginsRequest * ListApprovedOriginsResponse::request() const
 {
-    Q_D(const ListApprovedOriginsResponse);
-    return static_cast<const ListApprovedOriginsRequest *>(d->request);
+    return static_cast<const ListApprovedOriginsRequest *>(ConnectResponse::request());
 }
 
 /*!

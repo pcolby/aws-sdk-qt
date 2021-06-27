@@ -91,8 +91,7 @@ SetDataRetrievalPolicyResponse::SetDataRetrievalPolicyResponse(
  */
 const SetDataRetrievalPolicyRequest * SetDataRetrievalPolicyResponse::request() const
 {
-    Q_D(const SetDataRetrievalPolicyResponse);
-    return static_cast<const SetDataRetrievalPolicyRequest *>(d->request);
+    return static_cast<const SetDataRetrievalPolicyRequest *>(GlacierResponse::request());
 }
 
 /*!

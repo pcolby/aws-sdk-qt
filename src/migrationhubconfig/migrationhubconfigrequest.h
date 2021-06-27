@@ -59,6 +59,7 @@ public:
 
 protected:
     /// @cond internal
+    MigrationHubConfigRequestPrivate * const d_ptr; ///< Internal d-pointer.
     MigrationHubConfigRequest(MigrationHubConfigRequestPrivate * const d);
     /// @endcond
 

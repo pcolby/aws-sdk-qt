@@ -81,16 +81,16 @@ SavingsPlansClient::SavingsPlansClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SavingsPlansClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-06-28"),
+    QStringLiteral("savingsplans"),
+    QStringLiteral("AWS Savings Plans"),
+    QStringLiteral("savingsplans"),
+    parent), d_ptr(new SavingsPlansClientPrivate(this))
 {
-    Q_D(SavingsPlansClient);
-    d->apiVersion = QStringLiteral("2019-06-28");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("savingsplans");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Savings Plans");
-    d->serviceName = QStringLiteral("savingsplans");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -109,16 +109,16 @@ SavingsPlansClient::SavingsPlansClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SavingsPlansClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-06-28"),
+    QStringLiteral("savingsplans"),
+    QStringLiteral("AWS Savings Plans"),
+    QStringLiteral("savingsplans"),
+    parent), d_ptr(new SavingsPlansClientPrivate(this))
 {
-    Q_D(SavingsPlansClient);
-    d->apiVersion = QStringLiteral("2019-06-28");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("savingsplans");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Savings Plans");
-    d->serviceName = QStringLiteral("savingsplans");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -250,10 +250,9 @@ UntagResourceResponse * SavingsPlansClient::untagResource(const UntagResourceReq
 /*!
  * Constructs a SavingsPlansClientPrivate object with public implementation \a q.
  */
-SavingsPlansClientPrivate::SavingsPlansClientPrivate(SavingsPlansClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+SavingsPlansClientPrivate::SavingsPlansClientPrivate(SavingsPlansClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace SavingsPlans

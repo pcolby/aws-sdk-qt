@@ -209,16 +209,16 @@ SecurityHubClient::SecurityHubClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SecurityHubClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-10-26"),
+    QStringLiteral("securityhub"),
+    QStringLiteral("AWS SecurityHub"),
+    QStringLiteral("securityhub"),
+    parent), d_ptr(new SecurityHubClientPrivate(this))
 {
-    Q_D(SecurityHubClient);
-    d->apiVersion = QStringLiteral("2018-10-26");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("securityhub");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS SecurityHub");
-    d->serviceName = QStringLiteral("securityhub");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -237,16 +237,16 @@ SecurityHubClient::SecurityHubClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SecurityHubClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-10-26"),
+    QStringLiteral("securityhub"),
+    QStringLiteral("AWS SecurityHub"),
+    QStringLiteral("securityhub"),
+    parent), d_ptr(new SecurityHubClientPrivate(this))
 {
-    Q_D(SecurityHubClient);
-    d->apiVersion = QStringLiteral("2018-10-26");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("securityhub");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS SecurityHub");
-    d->serviceName = QStringLiteral("securityhub");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -1307,10 +1307,9 @@ UpdateStandardsControlResponse * SecurityHubClient::updateStandardsControl(const
 /*!
  * Constructs a SecurityHubClientPrivate object with public implementation \a q.
  */
-SecurityHubClientPrivate::SecurityHubClientPrivate(SecurityHubClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+SecurityHubClientPrivate::SecurityHubClientPrivate(SecurityHubClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace SecurityHub

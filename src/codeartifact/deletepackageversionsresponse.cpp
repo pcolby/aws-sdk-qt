@@ -293,8 +293,7 @@ DeletePackageVersionsResponse::DeletePackageVersionsResponse(
  */
 const DeletePackageVersionsRequest * DeletePackageVersionsResponse::request() const
 {
-    Q_D(const DeletePackageVersionsResponse);
-    return static_cast<const DeletePackageVersionsRequest *>(d->request);
+    return static_cast<const DeletePackageVersionsRequest *>(CodeArtifactResponse::request());
 }
 
 /*!

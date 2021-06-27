@@ -58,8 +58,7 @@ CreateAttributeGroupResponse::CreateAttributeGroupResponse(
  */
 const CreateAttributeGroupRequest * CreateAttributeGroupResponse::request() const
 {
-    Q_D(const CreateAttributeGroupResponse);
-    return static_cast<const CreateAttributeGroupRequest *>(d->request);
+    return static_cast<const CreateAttributeGroupRequest *>(AppRegistryResponse::request());
 }
 
 /*!

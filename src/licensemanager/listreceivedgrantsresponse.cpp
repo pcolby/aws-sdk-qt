@@ -59,8 +59,7 @@ ListReceivedGrantsResponse::ListReceivedGrantsResponse(
  */
 const ListReceivedGrantsRequest * ListReceivedGrantsResponse::request() const
 {
-    Q_D(const ListReceivedGrantsResponse);
-    return static_cast<const ListReceivedGrantsRequest *>(d->request);
+    return static_cast<const ListReceivedGrantsRequest *>(LicenseManagerResponse::request());
 }
 
 /*!

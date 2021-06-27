@@ -73,8 +73,7 @@ GetDatabaseResponse::GetDatabaseResponse(
  */
 const GetDatabaseRequest * GetDatabaseResponse::request() const
 {
-    Q_D(const GetDatabaseResponse);
-    return static_cast<const GetDatabaseRequest *>(d->request);
+    return static_cast<const GetDatabaseRequest *>(AthenaResponse::request());
 }
 
 /*!

@@ -82,8 +82,7 @@ ListThingRegistrationTaskReportsResponse::ListThingRegistrationTaskReportsRespon
  */
 const ListThingRegistrationTaskReportsRequest * ListThingRegistrationTaskReportsResponse::request() const
 {
-    Q_D(const ListThingRegistrationTaskReportsResponse);
-    return static_cast<const ListThingRegistrationTaskReportsRequest *>(d->request);
+    return static_cast<const ListThingRegistrationTaskReportsRequest *>(IoTResponse::request());
 }
 
 /*!

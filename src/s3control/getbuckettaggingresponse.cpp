@@ -56,8 +56,7 @@ GetBucketTaggingResponse::GetBucketTaggingResponse(
  */
 const GetBucketTaggingRequest * GetBucketTaggingResponse::request() const
 {
-    Q_D(const GetBucketTaggingResponse);
-    return static_cast<const GetBucketTaggingRequest *>(d->request);
+    return static_cast<const GetBucketTaggingRequest *>(S3ControlResponse::request());
 }
 
 /*!

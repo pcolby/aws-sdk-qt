@@ -77,8 +77,7 @@ DeleteIdentitiesResponse::DeleteIdentitiesResponse(
  */
 const DeleteIdentitiesRequest * DeleteIdentitiesResponse::request() const
 {
-    Q_D(const DeleteIdentitiesResponse);
-    return static_cast<const DeleteIdentitiesRequest *>(d->request);
+    return static_cast<const DeleteIdentitiesRequest *>(CognitoIdentityResponse::request());
 }
 
 /*!

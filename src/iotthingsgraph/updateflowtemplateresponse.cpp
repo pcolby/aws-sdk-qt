@@ -66,8 +66,7 @@ UpdateFlowTemplateResponse::UpdateFlowTemplateResponse(
  */
 const UpdateFlowTemplateRequest * UpdateFlowTemplateResponse::request() const
 {
-    Q_D(const UpdateFlowTemplateResponse);
-    return static_cast<const UpdateFlowTemplateRequest *>(d->request);
+    return static_cast<const UpdateFlowTemplateRequest *>(IoTThingsGraphResponse::request());
 }
 
 /*!

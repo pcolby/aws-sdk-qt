@@ -20,15 +20,12 @@
 #ifndef QTAWS_MOBILEREQUEST_P_H
 #define QTAWS_MOBILEREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "mobilerequest.h"
-
 namespace QtAws {
 namespace Mobile {
 
 class MobileRequest;
 
-class MobileRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class MobileRequestPrivate {
 
 public:
     MobileRequest::Action action; ///< Mobile action to be performed.
@@ -39,6 +36,9 @@ public:
     MobileRequestPrivate(const MobileRequestPrivate &other, MobileRequest * const q);
 
     static QString toString(const MobileRequest::Action &action);
+
+protected:
+    MobileRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MobileRequest)

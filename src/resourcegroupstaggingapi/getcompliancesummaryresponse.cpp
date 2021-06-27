@@ -55,8 +55,7 @@ GetComplianceSummaryResponse::GetComplianceSummaryResponse(
  */
 const GetComplianceSummaryRequest * GetComplianceSummaryResponse::request() const
 {
-    Q_D(const GetComplianceSummaryResponse);
-    return static_cast<const GetComplianceSummaryRequest *>(d->request);
+    return static_cast<const GetComplianceSummaryRequest *>(ResourceGroupsTaggingAPIResponse::request());
 }
 
 /*!

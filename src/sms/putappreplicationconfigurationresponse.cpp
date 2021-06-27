@@ -68,8 +68,7 @@ PutAppReplicationConfigurationResponse::PutAppReplicationConfigurationResponse(
  */
 const PutAppReplicationConfigurationRequest * PutAppReplicationConfigurationResponse::request() const
 {
-    Q_D(const PutAppReplicationConfigurationResponse);
-    return static_cast<const PutAppReplicationConfigurationRequest *>(d->request);
+    return static_cast<const PutAppReplicationConfigurationRequest *>(SmsResponse::request());
 }
 
 /*!

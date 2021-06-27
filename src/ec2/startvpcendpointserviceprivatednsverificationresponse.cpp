@@ -87,8 +87,7 @@ StartVpcEndpointServicePrivateDnsVerificationResponse::StartVpcEndpointServicePr
  */
 const StartVpcEndpointServicePrivateDnsVerificationRequest * StartVpcEndpointServicePrivateDnsVerificationResponse::request() const
 {
-    Q_D(const StartVpcEndpointServicePrivateDnsVerificationResponse);
-    return static_cast<const StartVpcEndpointServicePrivateDnsVerificationRequest *>(d->request);
+    return static_cast<const StartVpcEndpointServicePrivateDnsVerificationRequest *>(Ec2Response::request());
 }
 
 /*!

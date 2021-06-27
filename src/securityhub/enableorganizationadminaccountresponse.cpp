@@ -103,8 +103,7 @@ EnableOrganizationAdminAccountResponse::EnableOrganizationAdminAccountResponse(
  */
 const EnableOrganizationAdminAccountRequest * EnableOrganizationAdminAccountResponse::request() const
 {
-    Q_D(const EnableOrganizationAdminAccountResponse);
-    return static_cast<const EnableOrganizationAdminAccountRequest *>(d->request);
+    return static_cast<const EnableOrganizationAdminAccountRequest *>(SecurityHubResponse::request());
 }
 
 /*!

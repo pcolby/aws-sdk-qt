@@ -62,8 +62,7 @@ UntagMFADeviceResponse::UntagMFADeviceResponse(
  */
 const UntagMFADeviceRequest * UntagMFADeviceResponse::request() const
 {
-    Q_D(const UntagMFADeviceResponse);
-    return static_cast<const UntagMFADeviceRequest *>(d->request);
+    return static_cast<const UntagMFADeviceRequest *>(IamResponse::request());
 }
 
 /*!

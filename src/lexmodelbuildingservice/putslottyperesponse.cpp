@@ -59,8 +59,7 @@ PutSlotTypeResponse::PutSlotTypeResponse(
  */
 const PutSlotTypeRequest * PutSlotTypeResponse::request() const
 {
-    Q_D(const PutSlotTypeResponse);
-    return static_cast<const PutSlotTypeRequest *>(d->request);
+    return static_cast<const PutSlotTypeRequest *>(LexModelBuildingServiceResponse::request());
 }
 
 /*!

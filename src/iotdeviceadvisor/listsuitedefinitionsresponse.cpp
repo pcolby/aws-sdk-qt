@@ -62,8 +62,7 @@ ListSuiteDefinitionsResponse::ListSuiteDefinitionsResponse(
  */
 const ListSuiteDefinitionsRequest * ListSuiteDefinitionsResponse::request() const
 {
-    Q_D(const ListSuiteDefinitionsResponse);
-    return static_cast<const ListSuiteDefinitionsRequest *>(d->request);
+    return static_cast<const ListSuiteDefinitionsRequest *>(IoTDeviceAdvisorResponse::request());
 }
 
 /*!

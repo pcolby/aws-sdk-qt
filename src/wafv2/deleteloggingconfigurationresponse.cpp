@@ -126,8 +126,7 @@ DeleteLoggingConfigurationResponse::DeleteLoggingConfigurationResponse(
  */
 const DeleteLoggingConfigurationRequest * DeleteLoggingConfigurationResponse::request() const
 {
-    Q_D(const DeleteLoggingConfigurationResponse);
-    return static_cast<const DeleteLoggingConfigurationRequest *>(d->request);
+    return static_cast<const DeleteLoggingConfigurationRequest *>(Wafv2Response::request());
 }
 
 /*!

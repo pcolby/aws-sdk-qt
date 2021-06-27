@@ -65,8 +65,7 @@ ListResponsePlansResponse::ListResponsePlansResponse(
  */
 const ListResponsePlansRequest * ListResponsePlansResponse::request() const
 {
-    Q_D(const ListResponsePlansResponse);
-    return static_cast<const ListResponsePlansRequest *>(d->request);
+    return static_cast<const ListResponsePlansRequest *>(SSMIncidentsResponse::request());
 }
 
 /*!

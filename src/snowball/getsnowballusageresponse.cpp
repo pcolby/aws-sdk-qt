@@ -61,8 +61,7 @@ GetSnowballUsageResponse::GetSnowballUsageResponse(
  */
 const GetSnowballUsageRequest * GetSnowballUsageResponse::request() const
 {
-    Q_D(const GetSnowballUsageResponse);
-    return static_cast<const GetSnowballUsageRequest *>(d->request);
+    return static_cast<const GetSnowballUsageRequest *>(SnowballResponse::request());
 }
 
 /*!

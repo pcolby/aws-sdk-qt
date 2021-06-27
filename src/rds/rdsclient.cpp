@@ -397,16 +397,16 @@ RdsClient::RdsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new RdsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2014-10-31"),
+    QStringLiteral("rds"),
+    QStringLiteral("Amazon Relational Database Service"),
+    QStringLiteral("rds"),
+    parent), d_ptr(new RdsClientPrivate(this))
 {
-    Q_D(RdsClient);
-    d->apiVersion = QStringLiteral("2014-10-31");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("rds");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Relational Database Service");
-    d->serviceName = QStringLiteral("rds");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -425,16 +425,16 @@ RdsClient::RdsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new RdsClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2014-10-31"),
+    QStringLiteral("rds"),
+    QStringLiteral("Amazon Relational Database Service"),
+    QStringLiteral("rds"),
+    parent), d_ptr(new RdsClientPrivate(this))
 {
-    Q_D(RdsClient);
-    d->apiVersion = QStringLiteral("2014-10-31");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("rds");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Relational Database Service");
-    d->serviceName = QStringLiteral("rds");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -3247,10 +3247,9 @@ StopDBInstanceAutomatedBackupsReplicationResponse * RdsClient::stopDBInstanceAut
 /*!
  * Constructs a RdsClientPrivate object with public implementation \a q.
  */
-RdsClientPrivate::RdsClientPrivate(RdsClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+RdsClientPrivate::RdsClientPrivate(RdsClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace RDS

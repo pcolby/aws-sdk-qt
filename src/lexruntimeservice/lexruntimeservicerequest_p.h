@@ -20,15 +20,12 @@
 #ifndef QTAWS_LEXRUNTIMESERVICEREQUEST_P_H
 #define QTAWS_LEXRUNTIMESERVICEREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "lexruntimeservicerequest.h"
-
 namespace QtAws {
 namespace LexRuntimeService {
 
 class LexRuntimeServiceRequest;
 
-class LexRuntimeServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class LexRuntimeServiceRequestPrivate {
 
 public:
     LexRuntimeServiceRequest::Action action; ///< LexRuntimeService action to be performed.
@@ -39,6 +36,9 @@ public:
     LexRuntimeServiceRequestPrivate(const LexRuntimeServiceRequestPrivate &other, LexRuntimeServiceRequest * const q);
 
     static QString toString(const LexRuntimeServiceRequest::Action &action);
+
+protected:
+    LexRuntimeServiceRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(LexRuntimeServiceRequest)

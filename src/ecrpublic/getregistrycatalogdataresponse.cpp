@@ -63,8 +63,7 @@ GetRegistryCatalogDataResponse::GetRegistryCatalogDataResponse(
  */
 const GetRegistryCatalogDataRequest * GetRegistryCatalogDataResponse::request() const
 {
-    Q_D(const GetRegistryCatalogDataResponse);
-    return static_cast<const GetRegistryCatalogDataRequest *>(d->request);
+    return static_cast<const GetRegistryCatalogDataRequest *>(ECRPublicResponse::request());
 }
 
 /*!

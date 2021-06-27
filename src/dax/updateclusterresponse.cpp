@@ -59,8 +59,7 @@ UpdateClusterResponse::UpdateClusterResponse(
  */
 const UpdateClusterRequest * UpdateClusterResponse::request() const
 {
-    Q_D(const UpdateClusterResponse);
-    return static_cast<const UpdateClusterRequest *>(d->request);
+    return static_cast<const UpdateClusterRequest *>(DaxResponse::request());
 }
 
 /*!

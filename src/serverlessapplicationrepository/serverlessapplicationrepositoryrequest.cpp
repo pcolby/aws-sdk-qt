@@ -56,7 +56,7 @@ namespace ServerlessApplicationRepository {
  * Constructs a ServerlessApplicationRepositoryRequest object for ServerlessApplicationRepository \a action.
  */
 ServerlessApplicationRepositoryRequest::ServerlessApplicationRepositoryRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new ServerlessApplicationRepositoryRequestPrivate(action, this))
+    : d_ptr(new ServerlessApplicationRepositoryRequestPrivate(action, this))
 {
 
 }
@@ -65,7 +65,8 @@ ServerlessApplicationRepositoryRequest::ServerlessApplicationRepositoryRequest(c
  * Constructs a copy of \a other.
  */
 ServerlessApplicationRepositoryRequest::ServerlessApplicationRepositoryRequest(const ServerlessApplicationRepositoryRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new ServerlessApplicationRepositoryRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new ServerlessApplicationRepositoryRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -88,7 +89,7 @@ ServerlessApplicationRepositoryRequest& ServerlessApplicationRepositoryRequest::
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ServerlessApplicationRepositoryRequestPrivate.
  */
-ServerlessApplicationRepositoryRequest::ServerlessApplicationRepositoryRequest(ServerlessApplicationRepositoryRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+ServerlessApplicationRepositoryRequest::ServerlessApplicationRepositoryRequest(ServerlessApplicationRepositoryRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -257,7 +258,7 @@ QNetworkRequest ServerlessApplicationRepositoryRequest::unsignedRequest(const QU
  * with public implementation \a q.
  */
 ServerlessApplicationRepositoryRequestPrivate::ServerlessApplicationRepositoryRequestPrivate(const ServerlessApplicationRepositoryRequest::Action action, ServerlessApplicationRepositoryRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -272,8 +273,8 @@ ServerlessApplicationRepositoryRequestPrivate::ServerlessApplicationRepositoryRe
  */
 ServerlessApplicationRepositoryRequestPrivate::ServerlessApplicationRepositoryRequestPrivate(const ServerlessApplicationRepositoryRequestPrivate &other,
                                      ServerlessApplicationRepositoryRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

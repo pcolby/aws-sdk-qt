@@ -66,8 +66,7 @@ DeleteReceiptFilterResponse::DeleteReceiptFilterResponse(
  */
 const DeleteReceiptFilterRequest * DeleteReceiptFilterResponse::request() const
 {
-    Q_D(const DeleteReceiptFilterResponse);
-    return static_cast<const DeleteReceiptFilterRequest *>(d->request);
+    return static_cast<const DeleteReceiptFilterRequest *>(SesResponse::request());
 }
 
 /*!

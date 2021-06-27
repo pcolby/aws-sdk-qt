@@ -82,8 +82,7 @@ CreateThingResponse::CreateThingResponse(
  */
 const CreateThingRequest * CreateThingResponse::request() const
 {
-    Q_D(const CreateThingResponse);
-    return static_cast<const CreateThingRequest *>(d->request);
+    return static_cast<const CreateThingRequest *>(IoTResponse::request());
 }
 
 /*!

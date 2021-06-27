@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    PiResponsePrivate * const d_ptr; ///< Internal d-pointer.
     PiResponse(PiResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

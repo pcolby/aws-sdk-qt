@@ -56,8 +56,7 @@ GetDataSourceResponse::GetDataSourceResponse(
  */
 const GetDataSourceRequest * GetDataSourceResponse::request() const
 {
-    Q_D(const GetDataSourceResponse);
-    return static_cast<const GetDataSourceRequest *>(d->request);
+    return static_cast<const GetDataSourceRequest *>(AppSyncResponse::request());
 }
 
 /*!

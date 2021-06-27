@@ -61,8 +61,7 @@ ListStackInstancesForProvisionedProductResponse::ListStackInstancesForProvisione
  */
 const ListStackInstancesForProvisionedProductRequest * ListStackInstancesForProvisionedProductResponse::request() const
 {
-    Q_D(const ListStackInstancesForProvisionedProductResponse);
-    return static_cast<const ListStackInstancesForProvisionedProductRequest *>(d->request);
+    return static_cast<const ListStackInstancesForProvisionedProductRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

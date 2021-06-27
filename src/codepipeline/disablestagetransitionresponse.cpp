@@ -240,8 +240,7 @@ DisableStageTransitionResponse::DisableStageTransitionResponse(
  */
 const DisableStageTransitionRequest * DisableStageTransitionResponse::request() const
 {
-    Q_D(const DisableStageTransitionResponse);
-    return static_cast<const DisableStageTransitionRequest *>(d->request);
+    return static_cast<const DisableStageTransitionRequest *>(CodePipelineResponse::request());
 }
 
 /*!

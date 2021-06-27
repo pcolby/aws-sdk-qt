@@ -124,8 +124,7 @@ AddWorkingStorageResponse::AddWorkingStorageResponse(
  */
 const AddWorkingStorageRequest * AddWorkingStorageResponse::request() const
 {
-    Q_D(const AddWorkingStorageResponse);
-    return static_cast<const AddWorkingStorageRequest *>(d->request);
+    return static_cast<const AddWorkingStorageRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

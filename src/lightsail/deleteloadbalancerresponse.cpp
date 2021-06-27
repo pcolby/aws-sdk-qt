@@ -74,8 +74,7 @@ DeleteLoadBalancerResponse::DeleteLoadBalancerResponse(
  */
 const DeleteLoadBalancerRequest * DeleteLoadBalancerResponse::request() const
 {
-    Q_D(const DeleteLoadBalancerResponse);
-    return static_cast<const DeleteLoadBalancerRequest *>(d->request);
+    return static_cast<const DeleteLoadBalancerRequest *>(LightsailResponse::request());
 }
 
 /*!

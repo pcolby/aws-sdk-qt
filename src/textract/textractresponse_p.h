@@ -20,14 +20,12 @@
 #ifndef QTAWS_TEXTRACTRESPONSE_P_H
 #define QTAWS_TEXTRACTRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace Textract {
 
 class TextractResponse;
 
-class TextractResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class TextractResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    TextractResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(TextractResponse)

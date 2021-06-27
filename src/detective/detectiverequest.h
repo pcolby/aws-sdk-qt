@@ -71,6 +71,7 @@ public:
 
 protected:
     /// @cond internal
+    DetectiveRequestPrivate * const d_ptr; ///< Internal d-pointer.
     DetectiveRequest(DetectiveRequestPrivate * const d);
     /// @endcond
 

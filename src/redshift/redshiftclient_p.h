@@ -20,19 +20,20 @@
 #ifndef QTAWS_REDSHIFTCLIENT_P_H
 #define QTAWS_REDSHIFTCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace Redshift {
 
 class RedshiftClient;
 
-class RedshiftClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class RedshiftClientPrivate {
 
 public:
     RedshiftClientPrivate(RedshiftClient * const q);
+
+protected:
+    RedshiftClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(RedshiftClient)

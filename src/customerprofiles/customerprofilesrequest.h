@@ -86,6 +86,7 @@ public:
 
 protected:
     /// @cond internal
+    CustomerProfilesRequestPrivate * const d_ptr; ///< Internal d-pointer.
     CustomerProfilesRequest(CustomerProfilesRequestPrivate * const d);
     /// @endcond
 

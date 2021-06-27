@@ -55,8 +55,7 @@ DescribeUserResponse::DescribeUserResponse(
  */
 const DescribeUserRequest * DescribeUserResponse::request() const
 {
-    Q_D(const DescribeUserResponse);
-    return static_cast<const DescribeUserRequest *>(d->request);
+    return static_cast<const DescribeUserRequest *>(IdentityStoreResponse::request());
 }
 
 /*!

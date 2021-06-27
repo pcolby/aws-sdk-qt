@@ -214,6 +214,12 @@ public slots:
     UpdateSlotResponse * updateSlot(const UpdateSlotRequest &request);
     UpdateSlotTypeResponse * updateSlotType(const UpdateSlotTypeRequest &request);
 
+protected:
+    /// @cond internal
+    LexModelsV2ClientPrivate * const d_ptr; ///< Internal d-pointer.
+    LexModelsV2Client(LexModelsV2ClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(LexModelsV2Client)
     Q_DISABLE_COPY(LexModelsV2Client)

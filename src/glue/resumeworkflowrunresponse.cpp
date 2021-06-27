@@ -58,8 +58,7 @@ ResumeWorkflowRunResponse::ResumeWorkflowRunResponse(
  */
 const ResumeWorkflowRunRequest * ResumeWorkflowRunResponse::request() const
 {
-    Q_D(const ResumeWorkflowRunResponse);
-    return static_cast<const ResumeWorkflowRunRequest *>(d->request);
+    return static_cast<const ResumeWorkflowRunRequest *>(GlueResponse::request());
 }
 
 /*!

@@ -74,6 +74,7 @@ public:
 
 protected:
     /// @cond internal
+    AppflowRequestPrivate * const d_ptr; ///< Internal d-pointer.
     AppflowRequest(AppflowRequestPrivate * const d);
     /// @endcond
 

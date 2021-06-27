@@ -60,8 +60,7 @@ SearchDashboardsResponse::SearchDashboardsResponse(
  */
 const SearchDashboardsRequest * SearchDashboardsResponse::request() const
 {
-    Q_D(const SearchDashboardsResponse);
-    return static_cast<const SearchDashboardsRequest *>(d->request);
+    return static_cast<const SearchDashboardsRequest *>(QuickSightResponse::request());
 }
 
 /*!

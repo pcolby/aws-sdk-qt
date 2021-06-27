@@ -293,8 +293,7 @@ GetPackageVersionReadmeResponse::GetPackageVersionReadmeResponse(
  */
 const GetPackageVersionReadmeRequest * GetPackageVersionReadmeResponse::request() const
 {
-    Q_D(const GetPackageVersionReadmeResponse);
-    return static_cast<const GetPackageVersionReadmeRequest *>(d->request);
+    return static_cast<const GetPackageVersionReadmeRequest *>(CodeArtifactResponse::request());
 }
 
 /*!

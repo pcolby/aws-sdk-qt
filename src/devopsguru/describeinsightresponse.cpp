@@ -74,8 +74,7 @@ DescribeInsightResponse::DescribeInsightResponse(
  */
 const DescribeInsightRequest * DescribeInsightResponse::request() const
 {
-    Q_D(const DescribeInsightResponse);
-    return static_cast<const DescribeInsightRequest *>(d->request);
+    return static_cast<const DescribeInsightRequest *>(DevOpsGuruResponse::request());
 }
 
 /*!

@@ -85,8 +85,7 @@ ResetClusterParameterGroupResponse::ResetClusterParameterGroupResponse(
  */
 const ResetClusterParameterGroupRequest * ResetClusterParameterGroupResponse::request() const
 {
-    Q_D(const ResetClusterParameterGroupResponse);
-    return static_cast<const ResetClusterParameterGroupRequest *>(d->request);
+    return static_cast<const ResetClusterParameterGroupRequest *>(RedshiftResponse::request());
 }
 
 /*!

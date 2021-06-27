@@ -78,8 +78,7 @@ UpdateGeoMatchSetResponse::UpdateGeoMatchSetResponse(
  */
 const UpdateGeoMatchSetRequest * UpdateGeoMatchSetResponse::request() const
 {
-    Q_D(const UpdateGeoMatchSetResponse);
-    return static_cast<const UpdateGeoMatchSetRequest *>(d->request);
+    return static_cast<const UpdateGeoMatchSetRequest *>(WAFRegionalResponse::request());
 }
 
 /*!

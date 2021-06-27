@@ -61,8 +61,7 @@ BatchDisassociateProjectAssetsResponse::BatchDisassociateProjectAssetsResponse(
  */
 const BatchDisassociateProjectAssetsRequest * BatchDisassociateProjectAssetsResponse::request() const
 {
-    Q_D(const BatchDisassociateProjectAssetsResponse);
-    return static_cast<const BatchDisassociateProjectAssetsRequest *>(d->request);
+    return static_cast<const BatchDisassociateProjectAssetsRequest *>(IoTSiteWiseResponse::request());
 }
 
 /*!

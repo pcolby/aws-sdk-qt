@@ -20,15 +20,12 @@
 #ifndef QTAWS_LAKEFORMATIONREQUEST_P_H
 #define QTAWS_LAKEFORMATIONREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "lakeformationrequest.h"
-
 namespace QtAws {
 namespace LakeFormation {
 
 class LakeFormationRequest;
 
-class LakeFormationRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class LakeFormationRequestPrivate {
 
 public:
     LakeFormationRequest::Action action; ///< LakeFormation action to be performed.
@@ -39,6 +36,9 @@ public:
     LakeFormationRequestPrivate(const LakeFormationRequestPrivate &other, LakeFormationRequest * const q);
 
     static QString toString(const LakeFormationRequest::Action &action);
+
+protected:
+    LakeFormationRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(LakeFormationRequest)

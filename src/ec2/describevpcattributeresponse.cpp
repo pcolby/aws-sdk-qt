@@ -87,8 +87,7 @@ DescribeVpcAttributeResponse::DescribeVpcAttributeResponse(
  */
 const DescribeVpcAttributeRequest * DescribeVpcAttributeResponse::request() const
 {
-    Q_D(const DescribeVpcAttributeResponse);
-    return static_cast<const DescribeVpcAttributeRequest *>(d->request);
+    return static_cast<const DescribeVpcAttributeRequest *>(Ec2Response::request());
 }
 
 /*!

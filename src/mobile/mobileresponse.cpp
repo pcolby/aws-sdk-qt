@@ -37,7 +37,7 @@ namespace Mobile {
  * Constructs a MobileResponse object with parent \a parent.
  */
 MobileResponse::MobileResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new MobileResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new MobileResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ MobileResponse::MobileResponse(QObject * const parent)
  * implementation that inherits from MobileResponsePrivate.
  */
 MobileResponse::MobileResponse(MobileResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void MobileResponse::parseFailure(QIODevice &response)
  * Constructs a MobileResponsePrivate object with public implementation \a q.
  */
 MobileResponsePrivate::MobileResponsePrivate(
-    MobileResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    MobileResponse * const q) : q_ptr(q)
 {
 
 }

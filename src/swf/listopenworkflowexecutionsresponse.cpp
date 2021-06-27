@@ -71,8 +71,7 @@ ListOpenWorkflowExecutionsResponse::ListOpenWorkflowExecutionsResponse(
  */
 const ListOpenWorkflowExecutionsRequest * ListOpenWorkflowExecutionsResponse::request() const
 {
-    Q_D(const ListOpenWorkflowExecutionsResponse);
-    return static_cast<const ListOpenWorkflowExecutionsRequest *>(d->request);
+    return static_cast<const ListOpenWorkflowExecutionsRequest *>(SwfResponse::request());
 }
 
 /*!

@@ -115,8 +115,7 @@ CreateFleetLocationsResponse::CreateFleetLocationsResponse(
  */
 const CreateFleetLocationsRequest * CreateFleetLocationsResponse::request() const
 {
-    Q_D(const CreateFleetLocationsResponse);
-    return static_cast<const CreateFleetLocationsRequest *>(d->request);
+    return static_cast<const CreateFleetLocationsRequest *>(GameLiftResponse::request());
 }
 
 /*!

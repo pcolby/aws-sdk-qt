@@ -58,8 +58,7 @@ DescribeIpGroupsResponse::DescribeIpGroupsResponse(
  */
 const DescribeIpGroupsRequest * DescribeIpGroupsResponse::request() const
 {
-    Q_D(const DescribeIpGroupsResponse);
-    return static_cast<const DescribeIpGroupsRequest *>(d->request);
+    return static_cast<const DescribeIpGroupsRequest *>(WorkSpacesResponse::request());
 }
 
 /*!

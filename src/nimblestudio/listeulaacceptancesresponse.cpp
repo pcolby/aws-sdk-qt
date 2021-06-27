@@ -55,8 +55,7 @@ ListEulaAcceptancesResponse::ListEulaAcceptancesResponse(
  */
 const ListEulaAcceptancesRequest * ListEulaAcceptancesResponse::request() const
 {
-    Q_D(const ListEulaAcceptancesResponse);
-    return static_cast<const ListEulaAcceptancesRequest *>(d->request);
+    return static_cast<const ListEulaAcceptancesRequest *>(NimbleStudioResponse::request());
 }
 
 /*!

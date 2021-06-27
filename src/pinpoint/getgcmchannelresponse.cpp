@@ -56,8 +56,7 @@ GetGcmChannelResponse::GetGcmChannelResponse(
  */
 const GetGcmChannelRequest * GetGcmChannelResponse::request() const
 {
-    Q_D(const GetGcmChannelResponse);
-    return static_cast<const GetGcmChannelRequest *>(d->request);
+    return static_cast<const GetGcmChannelRequest *>(PinpointResponse::request());
 }
 
 /*!

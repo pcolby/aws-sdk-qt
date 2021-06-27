@@ -64,6 +64,7 @@ public:
 
 protected:
     /// @cond internal
+    ConnectParticipantRequestPrivate * const d_ptr; ///< Internal d-pointer.
     ConnectParticipantRequest(ConnectParticipantRequestPrivate * const d);
     /// @endcond
 

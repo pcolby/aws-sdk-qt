@@ -154,8 +154,7 @@ DecryptResponse::DecryptResponse(
  */
 const DecryptRequest * DecryptResponse::request() const
 {
-    Q_D(const DecryptResponse);
-    return static_cast<const DecryptRequest *>(d->request);
+    return static_cast<const DecryptRequest *>(KmsResponse::request());
 }
 
 /*!

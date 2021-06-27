@@ -37,7 +37,7 @@ namespace LexModelBuildingService {
  * Constructs a LexModelBuildingServiceResponse object with parent \a parent.
  */
 LexModelBuildingServiceResponse::LexModelBuildingServiceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new LexModelBuildingServiceResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new LexModelBuildingServiceResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ LexModelBuildingServiceResponse::LexModelBuildingServiceResponse(QObject * const
  * implementation that inherits from LexModelBuildingServiceResponsePrivate.
  */
 LexModelBuildingServiceResponse::LexModelBuildingServiceResponse(LexModelBuildingServiceResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void LexModelBuildingServiceResponse::parseFailure(QIODevice &response)
  * Constructs a LexModelBuildingServiceResponsePrivate object with public implementation \a q.
  */
 LexModelBuildingServiceResponsePrivate::LexModelBuildingServiceResponsePrivate(
-    LexModelBuildingServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    LexModelBuildingServiceResponse * const q) : q_ptr(q)
 {
 
 }

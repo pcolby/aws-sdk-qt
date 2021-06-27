@@ -169,6 +169,12 @@ public slots:
     UpdateFolderResponse * updateFolder(const UpdateFolderRequest &request);
     UpdateUserResponse * updateUser(const UpdateUserRequest &request);
 
+protected:
+    /// @cond internal
+    WorkDocsClientPrivate * const d_ptr; ///< Internal d-pointer.
+    WorkDocsClient(WorkDocsClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(WorkDocsClient)
     Q_DISABLE_COPY(WorkDocsClient)

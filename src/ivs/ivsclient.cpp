@@ -441,16 +441,16 @@ IvsClient::IvsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new IvsClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-07-14"),
+    QStringLiteral("ivs"),
+    QStringLiteral("Amazon Interactive Video Service"),
+    QStringLiteral("ivs"),
+    parent), d_ptr(new IvsClientPrivate(this))
 {
-    Q_D(IvsClient);
-    d->apiVersion = QStringLiteral("2020-07-14");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("ivs");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Interactive Video Service");
-    d->serviceName = QStringLiteral("ivs");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -469,16 +469,16 @@ IvsClient::IvsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new IvsClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-07-14"),
+    QStringLiteral("ivs"),
+    QStringLiteral("Amazon Interactive Video Service"),
+    QStringLiteral("ivs"),
+    parent), d_ptr(new IvsClientPrivate(this))
 {
-    Q_D(IvsClient);
-    d->apiVersion = QStringLiteral("2020-07-14");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("ivs");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Interactive Video Service");
-    d->serviceName = QStringLiteral("ivs");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -889,10 +889,9 @@ UpdateChannelResponse * IvsClient::updateChannel(const UpdateChannelRequest &req
 /*!
  * Constructs a IvsClientPrivate object with public implementation \a q.
  */
-IvsClientPrivate::IvsClientPrivate(IvsClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+IvsClientPrivate::IvsClientPrivate(IvsClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace IVS

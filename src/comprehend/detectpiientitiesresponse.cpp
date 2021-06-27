@@ -58,8 +58,7 @@ DetectPiiEntitiesResponse::DetectPiiEntitiesResponse(
  */
 const DetectPiiEntitiesRequest * DetectPiiEntitiesResponse::request() const
 {
-    Q_D(const DetectPiiEntitiesResponse);
-    return static_cast<const DetectPiiEntitiesRequest *>(d->request);
+    return static_cast<const DetectPiiEntitiesRequest *>(ComprehendResponse::request());
 }
 
 /*!

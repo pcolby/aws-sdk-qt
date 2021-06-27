@@ -439,8 +439,7 @@ UpdateRepositoryDescriptionResponse::UpdateRepositoryDescriptionResponse(
  */
 const UpdateRepositoryDescriptionRequest * UpdateRepositoryDescriptionResponse::request() const
 {
-    Q_D(const UpdateRepositoryDescriptionResponse);
-    return static_cast<const UpdateRepositoryDescriptionRequest *>(d->request);
+    return static_cast<const UpdateRepositoryDescriptionRequest *>(CodeCommitResponse::request());
 }
 
 /*!

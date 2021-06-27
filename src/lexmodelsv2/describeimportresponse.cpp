@@ -55,8 +55,7 @@ DescribeImportResponse::DescribeImportResponse(
  */
 const DescribeImportRequest * DescribeImportResponse::request() const
 {
-    Q_D(const DescribeImportResponse);
-    return static_cast<const DescribeImportRequest *>(d->request);
+    return static_cast<const DescribeImportRequest *>(LexModelsV2Response::request());
 }
 
 /*!

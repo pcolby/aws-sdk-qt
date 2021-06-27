@@ -20,14 +20,12 @@
 #ifndef QTAWS_SESV2RESPONSE_P_H
 #define QTAWS_SESV2RESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace SESV2 {
 
 class Sesv2Response;
 
-class Sesv2ResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class Sesv2ResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    Sesv2Response * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(Sesv2Response)

@@ -62,8 +62,7 @@ ListSkillsResponse::ListSkillsResponse(
  */
 const ListSkillsRequest * ListSkillsResponse::request() const
 {
-    Q_D(const ListSkillsResponse);
-    return static_cast<const ListSkillsRequest *>(d->request);
+    return static_cast<const ListSkillsRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

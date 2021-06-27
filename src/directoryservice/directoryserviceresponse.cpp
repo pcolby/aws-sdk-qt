@@ -37,7 +37,7 @@ namespace DirectoryService {
  * Constructs a DirectoryServiceResponse object with parent \a parent.
  */
 DirectoryServiceResponse::DirectoryServiceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new DirectoryServiceResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new DirectoryServiceResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ DirectoryServiceResponse::DirectoryServiceResponse(QObject * const parent)
  * implementation that inherits from DirectoryServiceResponsePrivate.
  */
 DirectoryServiceResponse::DirectoryServiceResponse(DirectoryServiceResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void DirectoryServiceResponse::parseFailure(QIODevice &response)
  * Constructs a DirectoryServiceResponsePrivate object with public implementation \a q.
  */
 DirectoryServiceResponsePrivate::DirectoryServiceResponsePrivate(
-    DirectoryServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    DirectoryServiceResponse * const q) : q_ptr(q)
 {
 
 }

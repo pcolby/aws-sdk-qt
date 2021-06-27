@@ -37,7 +37,7 @@ namespace PinpointSMSVoice {
  * Constructs a PinpointSMSVoiceResponse object with parent \a parent.
  */
 PinpointSMSVoiceResponse::PinpointSMSVoiceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new PinpointSMSVoiceResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new PinpointSMSVoiceResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ PinpointSMSVoiceResponse::PinpointSMSVoiceResponse(QObject * const parent)
  * implementation that inherits from PinpointSMSVoiceResponsePrivate.
  */
 PinpointSMSVoiceResponse::PinpointSMSVoiceResponse(PinpointSMSVoiceResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void PinpointSMSVoiceResponse::parseFailure(QIODevice &response)
  * Constructs a PinpointSMSVoiceResponsePrivate object with public implementation \a q.
  */
 PinpointSMSVoiceResponsePrivate::PinpointSMSVoiceResponsePrivate(
-    PinpointSMSVoiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    PinpointSMSVoiceResponse * const q) : q_ptr(q)
 {
 
 }

@@ -62,8 +62,7 @@ DeleteServiceSpecificCredentialResponse::DeleteServiceSpecificCredentialResponse
  */
 const DeleteServiceSpecificCredentialRequest * DeleteServiceSpecificCredentialResponse::request() const
 {
-    Q_D(const DeleteServiceSpecificCredentialResponse);
-    return static_cast<const DeleteServiceSpecificCredentialRequest *>(d->request);
+    return static_cast<const DeleteServiceSpecificCredentialRequest *>(IamResponse::request());
 }
 
 /*!

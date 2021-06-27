@@ -87,8 +87,7 @@ ReplaceNetworkAclAssociationResponse::ReplaceNetworkAclAssociationResponse(
  */
 const ReplaceNetworkAclAssociationRequest * ReplaceNetworkAclAssociationResponse::request() const
 {
-    Q_D(const ReplaceNetworkAclAssociationResponse);
-    return static_cast<const ReplaceNetworkAclAssociationRequest *>(d->request);
+    return static_cast<const ReplaceNetworkAclAssociationRequest *>(Ec2Response::request());
 }
 
 /*!

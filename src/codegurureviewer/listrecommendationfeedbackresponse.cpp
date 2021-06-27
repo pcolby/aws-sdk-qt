@@ -72,8 +72,7 @@ ListRecommendationFeedbackResponse::ListRecommendationFeedbackResponse(
  */
 const ListRecommendationFeedbackRequest * ListRecommendationFeedbackResponse::request() const
 {
-    Q_D(const ListRecommendationFeedbackResponse);
-    return static_cast<const ListRecommendationFeedbackRequest *>(d->request);
+    return static_cast<const ListRecommendationFeedbackRequest *>(CodeGuruReviewerResponse::request());
 }
 
 /*!

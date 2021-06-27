@@ -56,8 +56,7 @@ DeleteVoiceChannelResponse::DeleteVoiceChannelResponse(
  */
 const DeleteVoiceChannelRequest * DeleteVoiceChannelResponse::request() const
 {
-    Q_D(const DeleteVoiceChannelResponse);
-    return static_cast<const DeleteVoiceChannelRequest *>(d->request);
+    return static_cast<const DeleteVoiceChannelRequest *>(PinpointResponse::request());
 }
 
 /*!

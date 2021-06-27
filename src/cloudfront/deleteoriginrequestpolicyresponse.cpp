@@ -60,8 +60,7 @@ DeleteOriginRequestPolicyResponse::DeleteOriginRequestPolicyResponse(
  */
 const DeleteOriginRequestPolicyRequest * DeleteOriginRequestPolicyResponse::request() const
 {
-    Q_D(const DeleteOriginRequestPolicyResponse);
-    return static_cast<const DeleteOriginRequestPolicyRequest *>(d->request);
+    return static_cast<const DeleteOriginRequestPolicyRequest *>(CloudFrontResponse::request());
 }
 
 /*!

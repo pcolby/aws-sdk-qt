@@ -20,15 +20,12 @@
 #ifndef QTAWS_MEDIATAILORREQUEST_P_H
 #define QTAWS_MEDIATAILORREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "mediatailorrequest.h"
-
 namespace QtAws {
 namespace MediaTailor {
 
 class MediaTailorRequest;
 
-class MediaTailorRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class MediaTailorRequestPrivate {
 
 public:
     MediaTailorRequest::Action action; ///< MediaTailor action to be performed.
@@ -39,6 +36,9 @@ public:
     MediaTailorRequestPrivate(const MediaTailorRequestPrivate &other, MediaTailorRequest * const q);
 
     static QString toString(const MediaTailorRequest::Action &action);
+
+protected:
+    MediaTailorRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MediaTailorRequest)

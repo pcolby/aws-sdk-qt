@@ -37,7 +37,7 @@ namespace RDSDataService {
  * Constructs a RDSDataServiceResponse object with parent \a parent.
  */
 RDSDataServiceResponse::RDSDataServiceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new RDSDataServiceResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new RDSDataServiceResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ RDSDataServiceResponse::RDSDataServiceResponse(QObject * const parent)
  * implementation that inherits from RDSDataServiceResponsePrivate.
  */
 RDSDataServiceResponse::RDSDataServiceResponse(RDSDataServiceResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void RDSDataServiceResponse::parseFailure(QIODevice &response)
  * Constructs a RDSDataServiceResponsePrivate object with public implementation \a q.
  */
 RDSDataServiceResponsePrivate::RDSDataServiceResponsePrivate(
-    RDSDataServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    RDSDataServiceResponse * const q) : q_ptr(q)
 {
 
 }

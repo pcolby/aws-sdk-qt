@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    MediaTailorResponsePrivate * const d_ptr; ///< Internal d-pointer.
     MediaTailorResponse(MediaTailorResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -70,8 +70,7 @@ ListFeatureGroupsResponse::ListFeatureGroupsResponse(
  */
 const ListFeatureGroupsRequest * ListFeatureGroupsResponse::request() const
 {
-    Q_D(const ListFeatureGroupsResponse);
-    return static_cast<const ListFeatureGroupsRequest *>(d->request);
+    return static_cast<const ListFeatureGroupsRequest *>(SageMakerResponse::request());
 }
 
 /*!

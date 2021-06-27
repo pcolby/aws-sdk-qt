@@ -79,8 +79,7 @@ GetRecordResponse::GetRecordResponse(
  */
 const GetRecordRequest * GetRecordResponse::request() const
 {
-    Q_D(const GetRecordResponse);
-    return static_cast<const GetRecordRequest *>(d->request);
+    return static_cast<const GetRecordRequest *>(SageMakerFeatureStoreRuntimeResponse::request());
 }
 
 /*!

@@ -57,6 +57,7 @@ public:
 
 protected:
     /// @cond internal
+    KinesisVideoMediaRequestPrivate * const d_ptr; ///< Internal d-pointer.
     KinesisVideoMediaRequest(KinesisVideoMediaRequestPrivate * const d);
     /// @endcond
 

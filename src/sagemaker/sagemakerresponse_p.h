@@ -20,14 +20,12 @@
 #ifndef QTAWS_SAGEMAKERRESPONSE_P_H
 #define QTAWS_SAGEMAKERRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace SageMaker {
 
 class SageMakerResponse;
 
-class SageMakerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class SageMakerResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    SageMakerResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SageMakerResponse)

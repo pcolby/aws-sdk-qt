@@ -56,8 +56,7 @@ DeletePushTemplateResponse::DeletePushTemplateResponse(
  */
 const DeletePushTemplateRequest * DeletePushTemplateResponse::request() const
 {
-    Q_D(const DeletePushTemplateResponse);
-    return static_cast<const DeletePushTemplateRequest *>(d->request);
+    return static_cast<const DeletePushTemplateRequest *>(PinpointResponse::request());
 }
 
 /*!

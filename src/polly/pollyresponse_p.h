@@ -20,14 +20,12 @@
 #ifndef QTAWS_POLLYRESPONSE_P_H
 #define QTAWS_POLLYRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace Polly {
 
 class PollyResponse;
 
-class PollyResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class PollyResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    PollyResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(PollyResponse)

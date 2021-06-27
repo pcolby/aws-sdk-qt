@@ -56,8 +56,7 @@ DeleteRecommenderConfigurationResponse::DeleteRecommenderConfigurationResponse(
  */
 const DeleteRecommenderConfigurationRequest * DeleteRecommenderConfigurationResponse::request() const
 {
-    Q_D(const DeleteRecommenderConfigurationResponse);
-    return static_cast<const DeleteRecommenderConfigurationRequest *>(d->request);
+    return static_cast<const DeleteRecommenderConfigurationRequest *>(PinpointResponse::request());
 }
 
 /*!

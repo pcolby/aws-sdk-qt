@@ -71,8 +71,7 @@ PollForDecisionTaskResponse::PollForDecisionTaskResponse(
  */
 const PollForDecisionTaskRequest * PollForDecisionTaskResponse::request() const
 {
-    Q_D(const PollForDecisionTaskResponse);
-    return static_cast<const PollForDecisionTaskRequest *>(d->request);
+    return static_cast<const PollForDecisionTaskRequest *>(SwfResponse::request());
 }
 
 /*!

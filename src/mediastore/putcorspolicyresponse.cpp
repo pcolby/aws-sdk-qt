@@ -57,8 +57,7 @@ PutCorsPolicyResponse::PutCorsPolicyResponse(
  */
 const PutCorsPolicyRequest * PutCorsPolicyResponse::request() const
 {
-    Q_D(const PutCorsPolicyResponse);
-    return static_cast<const PutCorsPolicyRequest *>(d->request);
+    return static_cast<const PutCorsPolicyRequest *>(MediaStoreResponse::request());
 }
 
 /*!

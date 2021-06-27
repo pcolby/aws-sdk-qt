@@ -85,8 +85,7 @@ ModifyClusterIamRolesResponse::ModifyClusterIamRolesResponse(
  */
 const ModifyClusterIamRolesRequest * ModifyClusterIamRolesResponse::request() const
 {
-    Q_D(const ModifyClusterIamRolesResponse);
-    return static_cast<const ModifyClusterIamRolesRequest *>(d->request);
+    return static_cast<const ModifyClusterIamRolesRequest *>(RedshiftResponse::request());
 }
 
 /*!

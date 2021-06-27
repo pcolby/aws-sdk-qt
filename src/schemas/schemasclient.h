@@ -139,6 +139,12 @@ public slots:
     UpdateRegistryResponse * updateRegistry(const UpdateRegistryRequest &request);
     UpdateSchemaResponse * updateSchema(const UpdateSchemaRequest &request);
 
+protected:
+    /// @cond internal
+    SchemasClientPrivate * const d_ptr; ///< Internal d-pointer.
+    SchemasClient(SchemasClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(SchemasClient)
     Q_DISABLE_COPY(SchemasClient)

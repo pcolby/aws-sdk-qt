@@ -59,8 +59,7 @@ GetSlotTypesResponse::GetSlotTypesResponse(
  */
 const GetSlotTypesRequest * GetSlotTypesResponse::request() const
 {
-    Q_D(const GetSlotTypesResponse);
-    return static_cast<const GetSlotTypesRequest *>(d->request);
+    return static_cast<const GetSlotTypesRequest *>(LexModelBuildingServiceResponse::request());
 }
 
 /*!

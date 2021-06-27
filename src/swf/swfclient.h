@@ -157,6 +157,12 @@ public slots:
     UndeprecateWorkflowTypeResponse * undeprecateWorkflowType(const UndeprecateWorkflowTypeRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
+protected:
+    /// @cond internal
+    SwfClientPrivate * const d_ptr; ///< Internal d-pointer.
+    SwfClient(SwfClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(SwfClient)
     Q_DISABLE_COPY(SwfClient)

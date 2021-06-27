@@ -20,15 +20,12 @@
 #ifndef QTAWS_WORKSPACESREQUEST_P_H
 #define QTAWS_WORKSPACESREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "workspacesrequest.h"
-
 namespace QtAws {
 namespace WorkSpaces {
 
 class WorkSpacesRequest;
 
-class WorkSpacesRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class WorkSpacesRequestPrivate {
 
 public:
     WorkSpacesRequest::Action action; ///< WorkSpaces action to be performed.
@@ -39,6 +36,9 @@ public:
     WorkSpacesRequestPrivate(const WorkSpacesRequestPrivate &other, WorkSpacesRequest * const q);
 
     static QString toString(const WorkSpacesRequest::Action &action);
+
+protected:
+    WorkSpacesRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(WorkSpacesRequest)

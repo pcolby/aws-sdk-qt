@@ -69,8 +69,7 @@ GetSnapshotLimitsResponse::GetSnapshotLimitsResponse(
  */
 const GetSnapshotLimitsRequest * GetSnapshotLimitsResponse::request() const
 {
-    Q_D(const GetSnapshotLimitsResponse);
-    return static_cast<const GetSnapshotLimitsRequest *>(d->request);
+    return static_cast<const GetSnapshotLimitsRequest *>(DirectoryServiceResponse::request());
 }
 
 /*!

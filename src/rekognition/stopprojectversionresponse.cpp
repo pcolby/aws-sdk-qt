@@ -56,8 +56,7 @@ StopProjectVersionResponse::StopProjectVersionResponse(
  */
 const StopProjectVersionRequest * StopProjectVersionResponse::request() const
 {
-    Q_D(const StopProjectVersionResponse);
-    return static_cast<const StopProjectVersionRequest *>(d->request);
+    return static_cast<const StopProjectVersionRequest *>(RekognitionResponse::request());
 }
 
 /*!

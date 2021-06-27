@@ -98,8 +98,7 @@ BatchDisassociateAssessmentReportEvidenceResponse::BatchDisassociateAssessmentRe
  */
 const BatchDisassociateAssessmentReportEvidenceRequest * BatchDisassociateAssessmentReportEvidenceResponse::request() const
 {
-    Q_D(const BatchDisassociateAssessmentReportEvidenceResponse);
-    return static_cast<const BatchDisassociateAssessmentReportEvidenceRequest *>(d->request);
+    return static_cast<const BatchDisassociateAssessmentReportEvidenceRequest *>(AuditManagerResponse::request());
 }
 
 /*!

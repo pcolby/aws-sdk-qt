@@ -70,8 +70,7 @@ DeleteFeatureGroupResponse::DeleteFeatureGroupResponse(
  */
 const DeleteFeatureGroupRequest * DeleteFeatureGroupResponse::request() const
 {
-    Q_D(const DeleteFeatureGroupResponse);
-    return static_cast<const DeleteFeatureGroupRequest *>(d->request);
+    return static_cast<const DeleteFeatureGroupRequest *>(SageMakerResponse::request());
 }
 
 /*!

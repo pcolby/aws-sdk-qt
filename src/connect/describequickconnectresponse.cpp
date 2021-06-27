@@ -79,8 +79,7 @@ DescribeQuickConnectResponse::DescribeQuickConnectResponse(
  */
 const DescribeQuickConnectRequest * DescribeQuickConnectResponse::request() const
 {
-    Q_D(const DescribeQuickConnectResponse);
-    return static_cast<const DescribeQuickConnectRequest *>(d->request);
+    return static_cast<const DescribeQuickConnectRequest *>(ConnectResponse::request());
 }
 
 /*!

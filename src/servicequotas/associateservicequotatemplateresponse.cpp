@@ -58,8 +58,7 @@ AssociateServiceQuotaTemplateResponse::AssociateServiceQuotaTemplateResponse(
  */
 const AssociateServiceQuotaTemplateRequest * AssociateServiceQuotaTemplateResponse::request() const
 {
-    Q_D(const AssociateServiceQuotaTemplateResponse);
-    return static_cast<const AssociateServiceQuotaTemplateRequest *>(d->request);
+    return static_cast<const AssociateServiceQuotaTemplateRequest *>(ServiceQuotasResponse::request());
 }
 
 /*!

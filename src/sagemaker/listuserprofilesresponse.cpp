@@ -70,8 +70,7 @@ ListUserProfilesResponse::ListUserProfilesResponse(
  */
 const ListUserProfilesRequest * ListUserProfilesResponse::request() const
 {
-    Q_D(const ListUserProfilesResponse);
-    return static_cast<const ListUserProfilesRequest *>(d->request);
+    return static_cast<const ListUserProfilesRequest *>(SageMakerResponse::request());
 }
 
 /*!

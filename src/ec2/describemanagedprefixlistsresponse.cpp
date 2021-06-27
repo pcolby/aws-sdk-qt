@@ -87,8 +87,7 @@ DescribeManagedPrefixListsResponse::DescribeManagedPrefixListsResponse(
  */
 const DescribeManagedPrefixListsRequest * DescribeManagedPrefixListsResponse::request() const
 {
-    Q_D(const DescribeManagedPrefixListsResponse);
-    return static_cast<const DescribeManagedPrefixListsRequest *>(d->request);
+    return static_cast<const DescribeManagedPrefixListsRequest *>(Ec2Response::request());
 }
 
 /*!

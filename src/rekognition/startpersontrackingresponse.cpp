@@ -56,8 +56,7 @@ StartPersonTrackingResponse::StartPersonTrackingResponse(
  */
 const StartPersonTrackingRequest * StartPersonTrackingResponse::request() const
 {
-    Q_D(const StartPersonTrackingResponse);
-    return static_cast<const StartPersonTrackingRequest *>(d->request);
+    return static_cast<const StartPersonTrackingRequest *>(RekognitionResponse::request());
 }
 
 /*!

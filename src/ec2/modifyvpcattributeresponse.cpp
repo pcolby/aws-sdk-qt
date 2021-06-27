@@ -87,8 +87,7 @@ ModifyVpcAttributeResponse::ModifyVpcAttributeResponse(
  */
 const ModifyVpcAttributeRequest * ModifyVpcAttributeResponse::request() const
 {
-    Q_D(const ModifyVpcAttributeResponse);
-    return static_cast<const ModifyVpcAttributeRequest *>(d->request);
+    return static_cast<const ModifyVpcAttributeRequest *>(Ec2Response::request());
 }
 
 /*!

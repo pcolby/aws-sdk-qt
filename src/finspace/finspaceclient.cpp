@@ -76,16 +76,16 @@ finspaceClient::finspaceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new finspaceClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2021-03-12"),
+    QStringLiteral("finspace"),
+    QStringLiteral("FinSpace User Environment Management service"),
+    QStringLiteral("finspace"),
+    parent), d_ptr(new finspaceClientPrivate(this))
 {
-    Q_D(finspaceClient);
-    d->apiVersion = QStringLiteral("2021-03-12");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("finspace");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("FinSpace User Environment Management service");
-    d->serviceName = QStringLiteral("finspace");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -104,16 +104,16 @@ finspaceClient::finspaceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new finspaceClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2021-03-12"),
+    QStringLiteral("finspace"),
+    QStringLiteral("FinSpace User Environment Management service"),
+    QStringLiteral("finspace"),
+    parent), d_ptr(new finspaceClientPrivate(this))
 {
-    Q_D(finspaceClient);
-    d->apiVersion = QStringLiteral("2021-03-12");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("finspace");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("FinSpace User Environment Management service");
-    d->serviceName = QStringLiteral("finspace");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -232,10 +232,9 @@ UpdateEnvironmentResponse * finspaceClient::updateEnvironment(const UpdateEnviro
 /*!
  * Constructs a finspaceClientPrivate object with public implementation \a q.
  */
-finspaceClientPrivate::finspaceClientPrivate(finspaceClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+finspaceClientPrivate::finspaceClientPrivate(finspaceClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace finspace

@@ -119,8 +119,7 @@ DeleteDBProxyEndpointResponse::DeleteDBProxyEndpointResponse(
  */
 const DeleteDBProxyEndpointRequest * DeleteDBProxyEndpointResponse::request() const
 {
-    Q_D(const DeleteDBProxyEndpointResponse);
-    return static_cast<const DeleteDBProxyEndpointRequest *>(d->request);
+    return static_cast<const DeleteDBProxyEndpointRequest *>(RdsResponse::request());
 }
 
 /*!

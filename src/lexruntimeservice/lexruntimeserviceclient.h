@@ -61,6 +61,12 @@ public slots:
     PostTextResponse * postText(const PostTextRequest &request);
     PutSessionResponse * putSession(const PutSessionRequest &request);
 
+protected:
+    /// @cond internal
+    LexRuntimeServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
+    LexRuntimeServiceClient(LexRuntimeServiceClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(LexRuntimeServiceClient)
     Q_DISABLE_COPY(LexRuntimeServiceClient)

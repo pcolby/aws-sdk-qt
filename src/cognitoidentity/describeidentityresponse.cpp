@@ -77,8 +77,7 @@ DescribeIdentityResponse::DescribeIdentityResponse(
  */
 const DescribeIdentityRequest * DescribeIdentityResponse::request() const
 {
-    Q_D(const DescribeIdentityResponse);
-    return static_cast<const DescribeIdentityRequest *>(d->request);
+    return static_cast<const DescribeIdentityRequest *>(CognitoIdentityResponse::request());
 }
 
 /*!

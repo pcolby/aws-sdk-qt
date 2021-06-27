@@ -66,8 +66,7 @@ DescribeDomainsResponse::DescribeDomainsResponse(
  */
 const DescribeDomainsRequest * DescribeDomainsResponse::request() const
 {
-    Q_D(const DescribeDomainsResponse);
-    return static_cast<const DescribeDomainsRequest *>(d->request);
+    return static_cast<const DescribeDomainsRequest *>(CloudSearchResponse::request());
 }
 
 /*!

@@ -20,19 +20,20 @@
 #ifndef QTAWS_ACCESSANALYZERCLIENT_P_H
 #define QTAWS_ACCESSANALYZERCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace AccessAnalyzer {
 
 class AccessAnalyzerClient;
 
-class AccessAnalyzerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class AccessAnalyzerClientPrivate {
 
 public:
     AccessAnalyzerClientPrivate(AccessAnalyzerClient * const q);
+
+protected:
+    AccessAnalyzerClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AccessAnalyzerClient)

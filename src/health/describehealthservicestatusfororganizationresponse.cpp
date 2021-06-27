@@ -106,8 +106,7 @@ DescribeHealthServiceStatusForOrganizationResponse::DescribeHealthServiceStatusF
  */
 const DescribeHealthServiceStatusForOrganizationRequest * DescribeHealthServiceStatusForOrganizationResponse::request() const
 {
-    Q_D(const DescribeHealthServiceStatusForOrganizationResponse);
-    return static_cast<const DescribeHealthServiceStatusForOrganizationRequest *>(d->request);
+    return static_cast<const DescribeHealthServiceStatusForOrganizationRequest *>(HealthResponse::request());
 }
 
 /*!

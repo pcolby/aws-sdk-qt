@@ -58,8 +58,7 @@ DescribeEntityRecognizerResponse::DescribeEntityRecognizerResponse(
  */
 const DescribeEntityRecognizerRequest * DescribeEntityRecognizerResponse::request() const
 {
-    Q_D(const DescribeEntityRecognizerResponse);
-    return static_cast<const DescribeEntityRecognizerRequest *>(d->request);
+    return static_cast<const DescribeEntityRecognizerRequest *>(ComprehendResponse::request());
 }
 
 /*!

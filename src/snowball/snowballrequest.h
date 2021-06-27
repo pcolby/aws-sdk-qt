@@ -81,6 +81,7 @@ public:
 
 protected:
     /// @cond internal
+    SnowballRequestPrivate * const d_ptr; ///< Internal d-pointer.
     SnowballRequest(SnowballRequestPrivate * const d);
     /// @endcond
 

@@ -56,8 +56,7 @@ UpdatePlacementResponse::UpdatePlacementResponse(
  */
 const UpdatePlacementRequest * UpdatePlacementResponse::request() const
 {
-    Q_D(const UpdatePlacementResponse);
-    return static_cast<const UpdatePlacementRequest *>(d->request);
+    return static_cast<const UpdatePlacementRequest *>(IoT1ClickProjectsResponse::request());
 }
 
 /*!

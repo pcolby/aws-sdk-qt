@@ -20,14 +20,12 @@
 #ifndef QTAWS_CLOUD9RESPONSE_P_H
 #define QTAWS_CLOUD9RESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace Cloud9 {
 
 class Cloud9Response;
 
-class Cloud9ResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class Cloud9ResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    Cloud9Response * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(Cloud9Response)

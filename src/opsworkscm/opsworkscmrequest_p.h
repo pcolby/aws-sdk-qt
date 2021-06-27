@@ -20,15 +20,12 @@
 #ifndef QTAWS_OPSWORKSCMREQUEST_P_H
 #define QTAWS_OPSWORKSCMREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "opsworkscmrequest.h"
-
 namespace QtAws {
 namespace OpsWorksCM {
 
 class OpsWorksCMRequest;
 
-class OpsWorksCMRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class OpsWorksCMRequestPrivate {
 
 public:
     OpsWorksCMRequest::Action action; ///< OpsWorksCM action to be performed.
@@ -39,6 +36,9 @@ public:
     OpsWorksCMRequestPrivate(const OpsWorksCMRequestPrivate &other, OpsWorksCMRequest * const q);
 
     static QString toString(const OpsWorksCMRequest::Action &action);
+
+protected:
+    OpsWorksCMRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(OpsWorksCMRequest)

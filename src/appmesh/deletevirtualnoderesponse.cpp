@@ -73,8 +73,7 @@ DeleteVirtualNodeResponse::DeleteVirtualNodeResponse(
  */
 const DeleteVirtualNodeRequest * DeleteVirtualNodeResponse::request() const
 {
-    Q_D(const DeleteVirtualNodeResponse);
-    return static_cast<const DeleteVirtualNodeRequest *>(d->request);
+    return static_cast<const DeleteVirtualNodeRequest *>(AppMeshResponse::request());
 }
 
 /*!

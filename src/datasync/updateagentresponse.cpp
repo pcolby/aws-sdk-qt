@@ -64,8 +64,7 @@ UpdateAgentResponse::UpdateAgentResponse(
  */
 const UpdateAgentRequest * UpdateAgentResponse::request() const
 {
-    Q_D(const UpdateAgentResponse);
-    return static_cast<const UpdateAgentRequest *>(d->request);
+    return static_cast<const UpdateAgentRequest *>(DataSyncResponse::request());
 }
 
 /*!

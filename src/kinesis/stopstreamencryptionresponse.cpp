@@ -58,8 +58,7 @@ StopStreamEncryptionResponse::StopStreamEncryptionResponse(
  */
 const StopStreamEncryptionRequest * StopStreamEncryptionResponse::request() const
 {
-    Q_D(const StopStreamEncryptionResponse);
-    return static_cast<const StopStreamEncryptionRequest *>(d->request);
+    return static_cast<const StopStreamEncryptionRequest *>(KinesisResponse::request());
 }
 
 /*!

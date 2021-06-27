@@ -64,8 +64,7 @@ DeleteWebhookResponse::DeleteWebhookResponse(
  */
 const DeleteWebhookRequest * DeleteWebhookResponse::request() const
 {
-    Q_D(const DeleteWebhookResponse);
-    return static_cast<const DeleteWebhookRequest *>(d->request);
+    return static_cast<const DeleteWebhookRequest *>(CodeBuildResponse::request());
 }
 
 /*!

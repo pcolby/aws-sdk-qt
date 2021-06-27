@@ -98,8 +98,7 @@ RedactConversationMessageResponse::RedactConversationMessageResponse(
  */
 const RedactConversationMessageRequest * RedactConversationMessageResponse::request() const
 {
-    Q_D(const RedactConversationMessageResponse);
-    return static_cast<const RedactConversationMessageRequest *>(d->request);
+    return static_cast<const RedactConversationMessageRequest *>(ChimeResponse::request());
 }
 
 /*!

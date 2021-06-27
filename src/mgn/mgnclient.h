@@ -121,6 +121,12 @@ public slots:
     UpdateReplicationConfigurationResponse * updateReplicationConfiguration(const UpdateReplicationConfigurationRequest &request);
     UpdateReplicationConfigurationTemplateResponse * updateReplicationConfigurationTemplate(const UpdateReplicationConfigurationTemplateRequest &request);
 
+protected:
+    /// @cond internal
+    mgnClientPrivate * const d_ptr; ///< Internal d-pointer.
+    mgnClient(mgnClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(mgnClient)
     Q_DISABLE_COPY(mgnClient)

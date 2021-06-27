@@ -75,8 +75,7 @@ GetResourceConfigHistoryResponse::GetResourceConfigHistoryResponse(
  */
 const GetResourceConfigHistoryRequest * GetResourceConfigHistoryResponse::request() const
 {
-    Q_D(const GetResourceConfigHistoryResponse);
-    return static_cast<const GetResourceConfigHistoryRequest *>(d->request);
+    return static_cast<const GetResourceConfigHistoryRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

@@ -64,16 +64,16 @@ SagemakerEdgeManagerClient::SagemakerEdgeManagerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SagemakerEdgeManagerClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-09-23"),
+    QStringLiteral("edge.sagemaker"),
+    QStringLiteral("Amazon Sagemaker Edge Manager"),
+    QStringLiteral("sagemaker"),
+    parent), d_ptr(new SagemakerEdgeManagerClientPrivate(this))
 {
-    Q_D(SagemakerEdgeManagerClient);
-    d->apiVersion = QStringLiteral("2020-09-23");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("edge.sagemaker");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Sagemaker Edge Manager");
-    d->serviceName = QStringLiteral("sagemaker");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -92,16 +92,16 @@ SagemakerEdgeManagerClient::SagemakerEdgeManagerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SagemakerEdgeManagerClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2020-09-23"),
+    QStringLiteral("edge.sagemaker"),
+    QStringLiteral("Amazon Sagemaker Edge Manager"),
+    QStringLiteral("sagemaker"),
+    parent), d_ptr(new SagemakerEdgeManagerClientPrivate(this))
 {
-    Q_D(SagemakerEdgeManagerClient);
-    d->apiVersion = QStringLiteral("2020-09-23");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("edge.sagemaker");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Sagemaker Edge Manager");
-    d->serviceName = QStringLiteral("sagemaker");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -142,10 +142,9 @@ SendHeartbeatResponse * SagemakerEdgeManagerClient::sendHeartbeat(const SendHear
 /*!
  * Constructs a SagemakerEdgeManagerClientPrivate object with public implementation \a q.
  */
-SagemakerEdgeManagerClientPrivate::SagemakerEdgeManagerClientPrivate(SagemakerEdgeManagerClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+SagemakerEdgeManagerClientPrivate::SagemakerEdgeManagerClientPrivate(SagemakerEdgeManagerClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace SagemakerEdgeManager

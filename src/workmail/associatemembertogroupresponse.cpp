@@ -89,8 +89,7 @@ AssociateMemberToGroupResponse::AssociateMemberToGroupResponse(
  */
 const AssociateMemberToGroupRequest * AssociateMemberToGroupResponse::request() const
 {
-    Q_D(const AssociateMemberToGroupResponse);
-    return static_cast<const AssociateMemberToGroupRequest *>(d->request);
+    return static_cast<const AssociateMemberToGroupRequest *>(WorkMailResponse::request());
 }
 
 /*!

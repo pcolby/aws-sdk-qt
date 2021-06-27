@@ -78,8 +78,7 @@ PutPartnerEventsResponse::PutPartnerEventsResponse(
  */
 const PutPartnerEventsRequest * PutPartnerEventsResponse::request() const
 {
-    Q_D(const PutPartnerEventsResponse);
-    return static_cast<const PutPartnerEventsRequest *>(d->request);
+    return static_cast<const PutPartnerEventsRequest *>(EventBridgeResponse::request());
 }
 
 /*!

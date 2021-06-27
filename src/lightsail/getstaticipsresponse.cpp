@@ -74,8 +74,7 @@ GetStaticIpsResponse::GetStaticIpsResponse(
  */
 const GetStaticIpsRequest * GetStaticIpsResponse::request() const
 {
-    Q_D(const GetStaticIpsResponse);
-    return static_cast<const GetStaticIpsRequest *>(d->request);
+    return static_cast<const GetStaticIpsRequest *>(LightsailResponse::request());
 }
 
 /*!

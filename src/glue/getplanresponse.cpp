@@ -58,8 +58,7 @@ GetPlanResponse::GetPlanResponse(
  */
 const GetPlanRequest * GetPlanResponse::request() const
 {
-    Q_D(const GetPlanResponse);
-    return static_cast<const GetPlanRequest *>(d->request);
+    return static_cast<const GetPlanRequest *>(GlueResponse::request());
 }
 
 /*!

@@ -69,8 +69,7 @@ DecreaseReplicaCountResponse::DecreaseReplicaCountResponse(
  */
 const DecreaseReplicaCountRequest * DecreaseReplicaCountResponse::request() const
 {
-    Q_D(const DecreaseReplicaCountResponse);
-    return static_cast<const DecreaseReplicaCountRequest *>(d->request);
+    return static_cast<const DecreaseReplicaCountRequest *>(ElastiCacheResponse::request());
 }
 
 /*!

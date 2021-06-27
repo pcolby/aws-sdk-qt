@@ -37,7 +37,7 @@ namespace AuditManager {
  * Constructs a AuditManagerResponse object with parent \a parent.
  */
 AuditManagerResponse::AuditManagerResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new AuditManagerResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new AuditManagerResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ AuditManagerResponse::AuditManagerResponse(QObject * const parent)
  * implementation that inherits from AuditManagerResponsePrivate.
  */
 AuditManagerResponse::AuditManagerResponse(AuditManagerResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void AuditManagerResponse::parseFailure(QIODevice &response)
  * Constructs a AuditManagerResponsePrivate object with public implementation \a q.
  */
 AuditManagerResponsePrivate::AuditManagerResponsePrivate(
-    AuditManagerResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    AuditManagerResponse * const q) : q_ptr(q)
 {
 
 }

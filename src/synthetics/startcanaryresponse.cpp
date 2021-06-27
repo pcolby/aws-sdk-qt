@@ -71,8 +71,7 @@ StartCanaryResponse::StartCanaryResponse(
  */
 const StartCanaryRequest * StartCanaryResponse::request() const
 {
-    Q_D(const StartCanaryResponse);
-    return static_cast<const StartCanaryRequest *>(d->request);
+    return static_cast<const StartCanaryRequest *>(SyntheticsResponse::request());
 }
 
 /*!

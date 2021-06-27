@@ -72,8 +72,7 @@ DescribeCodeReviewResponse::DescribeCodeReviewResponse(
  */
 const DescribeCodeReviewRequest * DescribeCodeReviewResponse::request() const
 {
-    Q_D(const DescribeCodeReviewResponse);
-    return static_cast<const DescribeCodeReviewRequest *>(d->request);
+    return static_cast<const DescribeCodeReviewRequest *>(CodeGuruReviewerResponse::request());
 }
 
 /*!

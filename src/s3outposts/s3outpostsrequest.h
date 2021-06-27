@@ -59,6 +59,7 @@ public:
 
 protected:
     /// @cond internal
+    S3OutpostsRequestPrivate * const d_ptr; ///< Internal d-pointer.
     S3OutpostsRequest(S3OutpostsRequestPrivate * const d);
     /// @endcond
 

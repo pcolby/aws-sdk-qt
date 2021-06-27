@@ -128,7 +128,7 @@ namespace ConfigService {
  * Constructs a ConfigServiceRequest object for ConfigService \a action.
  */
 ConfigServiceRequest::ConfigServiceRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new ConfigServiceRequestPrivate(action, this))
+    : d_ptr(new ConfigServiceRequestPrivate(action, this))
 {
 
 }
@@ -137,7 +137,8 @@ ConfigServiceRequest::ConfigServiceRequest(const Action action)
  * Constructs a copy of \a other.
  */
 ConfigServiceRequest::ConfigServiceRequest(const ConfigServiceRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new ConfigServiceRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new ConfigServiceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -160,7 +161,7 @@ ConfigServiceRequest& ConfigServiceRequest::operator=(const ConfigServiceRequest
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ConfigServiceRequestPrivate.
  */
-ConfigServiceRequest::ConfigServiceRequest(ConfigServiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+ConfigServiceRequest::ConfigServiceRequest(ConfigServiceRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -329,7 +330,7 @@ QNetworkRequest ConfigServiceRequest::unsignedRequest(const QUrl &endpoint) cons
  * with public implementation \a q.
  */
 ConfigServiceRequestPrivate::ConfigServiceRequestPrivate(const ConfigServiceRequest::Action action, ConfigServiceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -344,8 +345,8 @@ ConfigServiceRequestPrivate::ConfigServiceRequestPrivate(const ConfigServiceRequ
  */
 ConfigServiceRequestPrivate::ConfigServiceRequestPrivate(const ConfigServiceRequestPrivate &other,
                                      ConfigServiceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

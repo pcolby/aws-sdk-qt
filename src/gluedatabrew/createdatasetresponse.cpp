@@ -58,8 +58,7 @@ CreateDatasetResponse::CreateDatasetResponse(
  */
 const CreateDatasetRequest * CreateDatasetResponse::request() const
 {
-    Q_D(const CreateDatasetResponse);
-    return static_cast<const CreateDatasetRequest *>(d->request);
+    return static_cast<const CreateDatasetRequest *>(GlueDataBrewResponse::request());
 }
 
 /*!

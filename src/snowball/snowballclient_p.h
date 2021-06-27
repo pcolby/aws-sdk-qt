@@ -20,19 +20,20 @@
 #ifndef QTAWS_SNOWBALLCLIENT_P_H
 #define QTAWS_SNOWBALLCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace Snowball {
 
 class SnowballClient;
 
-class SnowballClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SnowballClientPrivate {
 
 public:
     SnowballClientPrivate(SnowballClient * const q);
+
+protected:
+    SnowballClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SnowballClient)

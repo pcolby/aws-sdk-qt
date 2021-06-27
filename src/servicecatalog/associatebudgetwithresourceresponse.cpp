@@ -61,8 +61,7 @@ AssociateBudgetWithResourceResponse::AssociateBudgetWithResourceResponse(
  */
 const AssociateBudgetWithResourceRequest * AssociateBudgetWithResourceResponse::request() const
 {
-    Q_D(const AssociateBudgetWithResourceResponse);
-    return static_cast<const AssociateBudgetWithResourceRequest *>(d->request);
+    return static_cast<const AssociateBudgetWithResourceRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

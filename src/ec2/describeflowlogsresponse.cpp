@@ -87,8 +87,7 @@ DescribeFlowLogsResponse::DescribeFlowLogsResponse(
  */
 const DescribeFlowLogsRequest * DescribeFlowLogsResponse::request() const
 {
-    Q_D(const DescribeFlowLogsResponse);
-    return static_cast<const DescribeFlowLogsRequest *>(d->request);
+    return static_cast<const DescribeFlowLogsRequest *>(Ec2Response::request());
 }
 
 /*!

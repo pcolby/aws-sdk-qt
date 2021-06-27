@@ -62,8 +62,7 @@ AssociateLinkResponse::AssociateLinkResponse(
  */
 const AssociateLinkRequest * AssociateLinkResponse::request() const
 {
-    Q_D(const AssociateLinkResponse);
-    return static_cast<const AssociateLinkRequest *>(d->request);
+    return static_cast<const AssociateLinkRequest *>(NetworkManagerResponse::request());
 }
 
 /*!

@@ -55,8 +55,7 @@ DescribeOfferingResponse::DescribeOfferingResponse(
  */
 const DescribeOfferingRequest * DescribeOfferingResponse::request() const
 {
-    Q_D(const DescribeOfferingResponse);
-    return static_cast<const DescribeOfferingRequest *>(d->request);
+    return static_cast<const DescribeOfferingRequest *>(MediaLiveResponse::request());
 }
 
 /*!

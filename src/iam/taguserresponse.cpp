@@ -62,8 +62,7 @@ TagUserResponse::TagUserResponse(
  */
 const TagUserRequest * TagUserResponse::request() const
 {
-    Q_D(const TagUserResponse);
-    return static_cast<const TagUserRequest *>(d->request);
+    return static_cast<const TagUserRequest *>(IamResponse::request());
 }
 
 /*!

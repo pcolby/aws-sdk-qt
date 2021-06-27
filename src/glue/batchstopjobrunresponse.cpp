@@ -58,8 +58,7 @@ BatchStopJobRunResponse::BatchStopJobRunResponse(
  */
 const BatchStopJobRunRequest * BatchStopJobRunResponse::request() const
 {
-    Q_D(const BatchStopJobRunResponse);
-    return static_cast<const BatchStopJobRunRequest *>(d->request);
+    return static_cast<const BatchStopJobRunRequest *>(GlueResponse::request());
 }
 
 /*!

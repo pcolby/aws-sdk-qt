@@ -82,8 +82,7 @@ CreateAuthorizerResponse::CreateAuthorizerResponse(
  */
 const CreateAuthorizerRequest * CreateAuthorizerResponse::request() const
 {
-    Q_D(const CreateAuthorizerResponse);
-    return static_cast<const CreateAuthorizerRequest *>(d->request);
+    return static_cast<const CreateAuthorizerRequest *>(IoTResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ CreateDestinationResponse::CreateDestinationResponse(
  */
 const CreateDestinationRequest * CreateDestinationResponse::request() const
 {
-    Q_D(const CreateDestinationResponse);
-    return static_cast<const CreateDestinationRequest *>(d->request);
+    return static_cast<const CreateDestinationRequest *>(IoTWirelessResponse::request());
 }
 
 /*!

@@ -174,16 +174,16 @@ RoboMakerClient::RoboMakerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new RoboMakerClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-06-29"),
+    QStringLiteral("robomaker"),
+    QStringLiteral("AWS RoboMaker"),
+    QStringLiteral("robomaker"),
+    parent), d_ptr(new RoboMakerClientPrivate(this))
 {
-    Q_D(RoboMakerClient);
-    d->apiVersion = QStringLiteral("2018-06-29");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("robomaker");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS RoboMaker");
-    d->serviceName = QStringLiteral("robomaker");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -202,16 +202,16 @@ RoboMakerClient::RoboMakerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new RoboMakerClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-06-29"),
+    QStringLiteral("robomaker"),
+    QStringLiteral("AWS RoboMaker"),
+    QStringLiteral("robomaker"),
+    parent), d_ptr(new RoboMakerClientPrivate(this))
 {
-    Q_D(RoboMakerClient);
-    d->apiVersion = QStringLiteral("2018-06-29");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("robomaker");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS RoboMaker");
-    d->serviceName = QStringLiteral("robomaker");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -1000,10 +1000,9 @@ UpdateWorldTemplateResponse * RoboMakerClient::updateWorldTemplate(const UpdateW
 /*!
  * Constructs a RoboMakerClientPrivate object with public implementation \a q.
  */
-RoboMakerClientPrivate::RoboMakerClientPrivate(RoboMakerClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+RoboMakerClientPrivate::RoboMakerClientPrivate(RoboMakerClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace RoboMaker

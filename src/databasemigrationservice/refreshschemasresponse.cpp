@@ -66,8 +66,7 @@ RefreshSchemasResponse::RefreshSchemasResponse(
  */
 const RefreshSchemasRequest * RefreshSchemasResponse::request() const
 {
-    Q_D(const RefreshSchemasResponse);
-    return static_cast<const RefreshSchemasRequest *>(d->request);
+    return static_cast<const RefreshSchemasRequest *>(DatabaseMigrationServiceResponse::request());
 }
 
 /*!

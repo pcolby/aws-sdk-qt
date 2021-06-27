@@ -98,8 +98,7 @@ GetDefaultPatchBaselineResponse::GetDefaultPatchBaselineResponse(
  */
 const GetDefaultPatchBaselineRequest * GetDefaultPatchBaselineResponse::request() const
 {
-    Q_D(const GetDefaultPatchBaselineResponse);
-    return static_cast<const GetDefaultPatchBaselineRequest *>(d->request);
+    return static_cast<const GetDefaultPatchBaselineRequest *>(SsmResponse::request());
 }
 
 /*!

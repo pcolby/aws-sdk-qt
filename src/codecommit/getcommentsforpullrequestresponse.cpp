@@ -439,8 +439,7 @@ GetCommentsForPullRequestResponse::GetCommentsForPullRequestResponse(
  */
 const GetCommentsForPullRequestRequest * GetCommentsForPullRequestResponse::request() const
 {
-    Q_D(const GetCommentsForPullRequestResponse);
-    return static_cast<const GetCommentsForPullRequestRequest *>(d->request);
+    return static_cast<const GetCommentsForPullRequestRequest *>(CodeCommitResponse::request());
 }
 
 /*!

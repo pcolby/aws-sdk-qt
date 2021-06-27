@@ -64,8 +64,7 @@ DeleteAgentResponse::DeleteAgentResponse(
  */
 const DeleteAgentRequest * DeleteAgentResponse::request() const
 {
-    Q_D(const DeleteAgentResponse);
-    return static_cast<const DeleteAgentRequest *>(d->request);
+    return static_cast<const DeleteAgentRequest *>(DataSyncResponse::request());
 }
 
 /*!

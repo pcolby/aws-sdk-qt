@@ -56,8 +56,7 @@ DisassociateTrackerConsumerResponse::DisassociateTrackerConsumerResponse(
  */
 const DisassociateTrackerConsumerRequest * DisassociateTrackerConsumerResponse::request() const
 {
-    Q_D(const DisassociateTrackerConsumerResponse);
-    return static_cast<const DisassociateTrackerConsumerRequest *>(d->request);
+    return static_cast<const DisassociateTrackerConsumerRequest *>(LocationServiceResponse::request());
 }
 
 /*!

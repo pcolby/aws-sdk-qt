@@ -62,8 +62,7 @@ UpdateS3ResourcesResponse::UpdateS3ResourcesResponse(
  */
 const UpdateS3ResourcesRequest * UpdateS3ResourcesResponse::request() const
 {
-    Q_D(const UpdateS3ResourcesResponse);
-    return static_cast<const UpdateS3ResourcesRequest *>(d->request);
+    return static_cast<const UpdateS3ResourcesRequest *>(MacieResponse::request());
 }
 
 /*!

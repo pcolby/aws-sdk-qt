@@ -77,8 +77,7 @@ CreateChangeSetResponse::CreateChangeSetResponse(
  */
 const CreateChangeSetRequest * CreateChangeSetResponse::request() const
 {
-    Q_D(const CreateChangeSetResponse);
-    return static_cast<const CreateChangeSetRequest *>(d->request);
+    return static_cast<const CreateChangeSetRequest *>(CloudFormationResponse::request());
 }
 
 /*!

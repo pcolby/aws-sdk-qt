@@ -220,6 +220,12 @@ public slots:
     UpdatePublishingDestinationResponse * updatePublishingDestination(const UpdatePublishingDestinationRequest &request);
     UpdateThreatIntelSetResponse * updateThreatIntelSet(const UpdateThreatIntelSetRequest &request);
 
+protected:
+    /// @cond internal
+    GuardDutyClientPrivate * const d_ptr; ///< Internal d-pointer.
+    GuardDutyClient(GuardDutyClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(GuardDutyClient)
     Q_DISABLE_COPY(GuardDutyClient)

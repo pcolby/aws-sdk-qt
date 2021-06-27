@@ -75,8 +75,7 @@ GetSubscriptionAttributesResponse::GetSubscriptionAttributesResponse(
  */
 const GetSubscriptionAttributesRequest * GetSubscriptionAttributesResponse::request() const
 {
-    Q_D(const GetSubscriptionAttributesResponse);
-    return static_cast<const GetSubscriptionAttributesRequest *>(d->request);
+    return static_cast<const GetSubscriptionAttributesRequest *>(SnsResponse::request());
 }
 
 /*!

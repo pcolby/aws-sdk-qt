@@ -62,8 +62,7 @@ SearchAddressBooksResponse::SearchAddressBooksResponse(
  */
 const SearchAddressBooksRequest * SearchAddressBooksResponse::request() const
 {
-    Q_D(const SearchAddressBooksResponse);
-    return static_cast<const SearchAddressBooksRequest *>(d->request);
+    return static_cast<const SearchAddressBooksRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

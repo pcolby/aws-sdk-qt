@@ -75,8 +75,7 @@ ScheduleRunResponse::ScheduleRunResponse(
  */
 const ScheduleRunRequest * ScheduleRunResponse::request() const
 {
-    Q_D(const ScheduleRunResponse);
-    return static_cast<const ScheduleRunRequest *>(d->request);
+    return static_cast<const ScheduleRunRequest *>(DeviceFarmResponse::request());
 }
 
 /*!

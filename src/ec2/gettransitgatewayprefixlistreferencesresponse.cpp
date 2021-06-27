@@ -87,8 +87,7 @@ GetTransitGatewayPrefixListReferencesResponse::GetTransitGatewayPrefixListRefere
  */
 const GetTransitGatewayPrefixListReferencesRequest * GetTransitGatewayPrefixListReferencesResponse::request() const
 {
-    Q_D(const GetTransitGatewayPrefixListReferencesResponse);
-    return static_cast<const GetTransitGatewayPrefixListReferencesRequest *>(d->request);
+    return static_cast<const GetTransitGatewayPrefixListReferencesRequest *>(Ec2Response::request());
 }
 
 /*!

@@ -60,8 +60,7 @@ GetClassificationExportConfigurationResponse::GetClassificationExportConfigurati
  */
 const GetClassificationExportConfigurationRequest * GetClassificationExportConfigurationResponse::request() const
 {
-    Q_D(const GetClassificationExportConfigurationResponse);
-    return static_cast<const GetClassificationExportConfigurationRequest *>(d->request);
+    return static_cast<const GetClassificationExportConfigurationRequest *>(Macie2Response::request());
 }
 
 /*!

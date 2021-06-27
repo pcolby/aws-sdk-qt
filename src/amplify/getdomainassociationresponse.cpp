@@ -60,8 +60,7 @@ GetDomainAssociationResponse::GetDomainAssociationResponse(
  */
 const GetDomainAssociationRequest * GetDomainAssociationResponse::request() const
 {
-    Q_D(const GetDomainAssociationResponse);
-    return static_cast<const GetDomainAssociationRequest *>(d->request);
+    return static_cast<const GetDomainAssociationRequest *>(AmplifyResponse::request());
 }
 
 /*!

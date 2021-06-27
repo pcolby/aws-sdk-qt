@@ -79,8 +79,7 @@ BatchGetFrameMetricDataResponse::BatchGetFrameMetricDataResponse(
  */
 const BatchGetFrameMetricDataRequest * BatchGetFrameMetricDataResponse::request() const
 {
-    Q_D(const BatchGetFrameMetricDataResponse);
-    return static_cast<const BatchGetFrameMetricDataRequest *>(d->request);
+    return static_cast<const BatchGetFrameMetricDataRequest *>(CodeGuruProfilerResponse::request());
 }
 
 /*!

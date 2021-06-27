@@ -87,8 +87,7 @@ DescribeScheduledInstancesResponse::DescribeScheduledInstancesResponse(
  */
 const DescribeScheduledInstancesRequest * DescribeScheduledInstancesResponse::request() const
 {
-    Q_D(const DescribeScheduledInstancesResponse);
-    return static_cast<const DescribeScheduledInstancesRequest *>(d->request);
+    return static_cast<const DescribeScheduledInstancesRequest *>(Ec2Response::request());
 }
 
 /*!

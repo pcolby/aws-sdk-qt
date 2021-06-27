@@ -56,8 +56,7 @@ CreateRegistryResponse::CreateRegistryResponse(
  */
 const CreateRegistryRequest * CreateRegistryResponse::request() const
 {
-    Q_D(const CreateRegistryResponse);
-    return static_cast<const CreateRegistryRequest *>(d->request);
+    return static_cast<const CreateRegistryRequest *>(SchemasResponse::request());
 }
 
 /*!

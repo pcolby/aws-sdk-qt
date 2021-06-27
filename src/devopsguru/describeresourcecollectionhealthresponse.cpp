@@ -74,8 +74,7 @@ DescribeResourceCollectionHealthResponse::DescribeResourceCollectionHealthRespon
  */
 const DescribeResourceCollectionHealthRequest * DescribeResourceCollectionHealthResponse::request() const
 {
-    Q_D(const DescribeResourceCollectionHealthResponse);
-    return static_cast<const DescribeResourceCollectionHealthRequest *>(d->request);
+    return static_cast<const DescribeResourceCollectionHealthRequest *>(DevOpsGuruResponse::request());
 }
 
 /*!

@@ -139,6 +139,12 @@ public slots:
     UpdateSourceLocationResponse * updateSourceLocation(const UpdateSourceLocationRequest &request);
     UpdateVodSourceResponse * updateVodSource(const UpdateVodSourceRequest &request);
 
+protected:
+    /// @cond internal
+    MediaTailorClientPrivate * const d_ptr; ///< Internal d-pointer.
+    MediaTailorClient(MediaTailorClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(MediaTailorClient)
     Q_DISABLE_COPY(MediaTailorClient)

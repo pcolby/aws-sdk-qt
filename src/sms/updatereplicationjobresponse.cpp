@@ -68,8 +68,7 @@ UpdateReplicationJobResponse::UpdateReplicationJobResponse(
  */
 const UpdateReplicationJobRequest * UpdateReplicationJobResponse::request() const
 {
-    Q_D(const UpdateReplicationJobResponse);
-    return static_cast<const UpdateReplicationJobRequest *>(d->request);
+    return static_cast<const UpdateReplicationJobRequest *>(SmsResponse::request());
 }
 
 /*!

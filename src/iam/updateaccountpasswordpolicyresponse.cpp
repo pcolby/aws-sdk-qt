@@ -62,8 +62,7 @@ UpdateAccountPasswordPolicyResponse::UpdateAccountPasswordPolicyResponse(
  */
 const UpdateAccountPasswordPolicyRequest * UpdateAccountPasswordPolicyResponse::request() const
 {
-    Q_D(const UpdateAccountPasswordPolicyResponse);
-    return static_cast<const UpdateAccountPasswordPolicyRequest *>(d->request);
+    return static_cast<const UpdateAccountPasswordPolicyRequest *>(IamResponse::request());
 }
 
 /*!

@@ -63,8 +63,7 @@ ApplySchemaResponse::ApplySchemaResponse(
  */
 const ApplySchemaRequest * ApplySchemaResponse::request() const
 {
-    Q_D(const ApplySchemaResponse);
-    return static_cast<const ApplySchemaRequest *>(d->request);
+    return static_cast<const ApplySchemaRequest *>(CloudDirectoryResponse::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ UpdateMissionProfileResponse::UpdateMissionProfileResponse(
  */
 const UpdateMissionProfileRequest * UpdateMissionProfileResponse::request() const
 {
-    Q_D(const UpdateMissionProfileResponse);
-    return static_cast<const UpdateMissionProfileRequest *>(d->request);
+    return static_cast<const UpdateMissionProfileRequest *>(GroundStationResponse::request());
 }
 
 /*!

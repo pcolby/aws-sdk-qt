@@ -82,8 +82,7 @@ DescribeThingGroupResponse::DescribeThingGroupResponse(
  */
 const DescribeThingGroupRequest * DescribeThingGroupResponse::request() const
 {
-    Q_D(const DescribeThingGroupResponse);
-    return static_cast<const DescribeThingGroupRequest *>(d->request);
+    return static_cast<const DescribeThingGroupRequest *>(IoTResponse::request());
 }
 
 /*!

@@ -69,8 +69,7 @@ DescribeInsightRulesResponse::DescribeInsightRulesResponse(
  */
 const DescribeInsightRulesRequest * DescribeInsightRulesResponse::request() const
 {
-    Q_D(const DescribeInsightRulesResponse);
-    return static_cast<const DescribeInsightRulesRequest *>(d->request);
+    return static_cast<const DescribeInsightRulesRequest *>(CloudWatchResponse::request());
 }
 
 /*!

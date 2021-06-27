@@ -62,8 +62,7 @@ CreateDeviceResponse::CreateDeviceResponse(
  */
 const CreateDeviceRequest * CreateDeviceResponse::request() const
 {
-    Q_D(const CreateDeviceResponse);
-    return static_cast<const CreateDeviceRequest *>(d->request);
+    return static_cast<const CreateDeviceRequest *>(NetworkManagerResponse::request());
 }
 
 /*!

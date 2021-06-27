@@ -56,8 +56,7 @@ GetAdmChannelResponse::GetAdmChannelResponse(
  */
 const GetAdmChannelRequest * GetAdmChannelResponse::request() const
 {
-    Q_D(const GetAdmChannelResponse);
-    return static_cast<const GetAdmChannelRequest *>(d->request);
+    return static_cast<const GetAdmChannelRequest *>(PinpointResponse::request());
 }
 
 /*!

@@ -69,6 +69,7 @@ public:
 
 protected:
     /// @cond internal
+    CodeStarNotificationsRequestPrivate * const d_ptr; ///< Internal d-pointer.
     CodeStarNotificationsRequest(CodeStarNotificationsRequestPrivate * const d);
     /// @endcond
 

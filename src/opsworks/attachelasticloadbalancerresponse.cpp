@@ -161,8 +161,7 @@ AttachElasticLoadBalancerResponse::AttachElasticLoadBalancerResponse(
  */
 const AttachElasticLoadBalancerRequest * AttachElasticLoadBalancerResponse::request() const
 {
-    Q_D(const AttachElasticLoadBalancerResponse);
-    return static_cast<const AttachElasticLoadBalancerRequest *>(d->request);
+    return static_cast<const AttachElasticLoadBalancerRequest *>(OpsWorksResponse::request());
 }
 
 /*!

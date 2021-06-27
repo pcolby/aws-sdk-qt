@@ -20,14 +20,12 @@
 #ifndef QTAWS_WORKLINKRESPONSE_P_H
 #define QTAWS_WORKLINKRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace WorkLink {
 
 class WorkLinkResponse;
 
-class WorkLinkResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class WorkLinkResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    WorkLinkResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(WorkLinkResponse)

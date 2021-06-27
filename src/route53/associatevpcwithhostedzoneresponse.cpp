@@ -56,8 +56,7 @@ AssociateVPCWithHostedZoneResponse::AssociateVPCWithHostedZoneResponse(
  */
 const AssociateVPCWithHostedZoneRequest * AssociateVPCWithHostedZoneResponse::request() const
 {
-    Q_D(const AssociateVPCWithHostedZoneResponse);
-    return static_cast<const AssociateVPCWithHostedZoneRequest *>(d->request);
+    return static_cast<const AssociateVPCWithHostedZoneRequest *>(Route53Response::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ DeleteEntityRecognizerResponse::DeleteEntityRecognizerResponse(
  */
 const DeleteEntityRecognizerRequest * DeleteEntityRecognizerResponse::request() const
 {
-    Q_D(const DeleteEntityRecognizerResponse);
-    return static_cast<const DeleteEntityRecognizerRequest *>(d->request);
+    return static_cast<const DeleteEntityRecognizerRequest *>(ComprehendResponse::request());
 }
 
 /*!

@@ -69,8 +69,7 @@ DescribeEngineDefaultParametersResponse::DescribeEngineDefaultParametersResponse
  */
 const DescribeEngineDefaultParametersRequest * DescribeEngineDefaultParametersResponse::request() const
 {
-    Q_D(const DescribeEngineDefaultParametersResponse);
-    return static_cast<const DescribeEngineDefaultParametersRequest *>(d->request);
+    return static_cast<const DescribeEngineDefaultParametersRequest *>(ElastiCacheResponse::request());
 }
 
 /*!

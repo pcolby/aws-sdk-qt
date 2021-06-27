@@ -86,8 +86,7 @@ PauseServiceResponse::PauseServiceResponse(
  */
 const PauseServiceRequest * PauseServiceResponse::request() const
 {
-    Q_D(const PauseServiceResponse);
-    return static_cast<const PauseServiceRequest *>(d->request);
+    return static_cast<const PauseServiceRequest *>(AppRunnerResponse::request());
 }
 
 /*!

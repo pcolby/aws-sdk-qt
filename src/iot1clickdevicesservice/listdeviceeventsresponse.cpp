@@ -57,8 +57,7 @@ ListDeviceEventsResponse::ListDeviceEventsResponse(
  */
 const ListDeviceEventsRequest * ListDeviceEventsResponse::request() const
 {
-    Q_D(const ListDeviceEventsResponse);
-    return static_cast<const ListDeviceEventsRequest *>(d->request);
+    return static_cast<const ListDeviceEventsRequest *>(IoT1ClickDevicesServiceResponse::request());
 }
 
 /*!

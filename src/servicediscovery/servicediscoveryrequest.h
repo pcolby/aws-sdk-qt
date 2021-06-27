@@ -79,6 +79,7 @@ public:
 
 protected:
     /// @cond internal
+    ServiceDiscoveryRequestPrivate * const d_ptr; ///< Internal d-pointer.
     ServiceDiscoveryRequest(ServiceDiscoveryRequestPrivate * const d);
     /// @endcond
 

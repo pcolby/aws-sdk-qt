@@ -55,8 +55,7 @@ DeleteExportResponse::DeleteExportResponse(
  */
 const DeleteExportRequest * DeleteExportResponse::request() const
 {
-    Q_D(const DeleteExportResponse);
-    return static_cast<const DeleteExportRequest *>(d->request);
+    return static_cast<const DeleteExportRequest *>(LexModelsV2Response::request());
 }
 
 /*!

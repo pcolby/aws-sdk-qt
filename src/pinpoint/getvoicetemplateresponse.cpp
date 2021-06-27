@@ -56,8 +56,7 @@ GetVoiceTemplateResponse::GetVoiceTemplateResponse(
  */
 const GetVoiceTemplateRequest * GetVoiceTemplateResponse::request() const
 {
-    Q_D(const GetVoiceTemplateResponse);
-    return static_cast<const GetVoiceTemplateRequest *>(d->request);
+    return static_cast<const GetVoiceTemplateRequest *>(PinpointResponse::request());
 }
 
 /*!

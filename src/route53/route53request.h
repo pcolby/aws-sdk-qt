@@ -120,6 +120,7 @@ public:
 
 protected:
     /// @cond internal
+    Route53RequestPrivate * const d_ptr; ///< Internal d-pointer.
     Route53Request(Route53RequestPrivate * const d);
     /// @endcond
 

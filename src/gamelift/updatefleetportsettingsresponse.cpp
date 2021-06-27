@@ -115,8 +115,7 @@ UpdateFleetPortSettingsResponse::UpdateFleetPortSettingsResponse(
  */
 const UpdateFleetPortSettingsRequest * UpdateFleetPortSettingsResponse::request() const
 {
-    Q_D(const UpdateFleetPortSettingsResponse);
-    return static_cast<const UpdateFleetPortSettingsRequest *>(d->request);
+    return static_cast<const UpdateFleetPortSettingsRequest *>(GameLiftResponse::request());
 }
 
 /*!

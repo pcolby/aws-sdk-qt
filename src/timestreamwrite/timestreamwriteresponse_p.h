@@ -20,14 +20,12 @@
 #ifndef QTAWS_TIMESTREAMWRITERESPONSE_P_H
 #define QTAWS_TIMESTREAMWRITERESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace TimestreamWrite {
 
 class TimestreamWriteResponse;
 
-class TimestreamWriteResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class TimestreamWriteResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    TimestreamWriteResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(TimestreamWriteResponse)

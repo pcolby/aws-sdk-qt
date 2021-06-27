@@ -81,8 +81,7 @@ DisableUserResponse::DisableUserResponse(
  */
 const DisableUserRequest * DisableUserResponse::request() const
 {
-    Q_D(const DisableUserResponse);
-    return static_cast<const DisableUserRequest *>(d->request);
+    return static_cast<const DisableUserRequest *>(AppStreamResponse::request());
 }
 
 /*!

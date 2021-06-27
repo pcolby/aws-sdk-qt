@@ -98,8 +98,7 @@ GetAccountStatusResponse::GetAccountStatusResponse(
  */
 const GetAccountStatusRequest * GetAccountStatusResponse::request() const
 {
-    Q_D(const GetAccountStatusResponse);
-    return static_cast<const GetAccountStatusRequest *>(d->request);
+    return static_cast<const GetAccountStatusRequest *>(AuditManagerResponse::request());
 }
 
 /*!

@@ -98,8 +98,7 @@ UpdateAppInstanceUserResponse::UpdateAppInstanceUserResponse(
  */
 const UpdateAppInstanceUserRequest * UpdateAppInstanceUserResponse::request() const
 {
-    Q_D(const UpdateAppInstanceUserResponse);
-    return static_cast<const UpdateAppInstanceUserRequest *>(d->request);
+    return static_cast<const UpdateAppInstanceUserRequest *>(ChimeResponse::request());
 }
 
 /*!

@@ -20,15 +20,12 @@
 #ifndef QTAWS_GLACIERREQUEST_P_H
 #define QTAWS_GLACIERREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "glacierrequest.h"
-
 namespace QtAws {
 namespace Glacier {
 
 class GlacierRequest;
 
-class GlacierRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class GlacierRequestPrivate {
 
 public:
     GlacierRequest::Action action; ///< Glacier action to be performed.
@@ -39,6 +36,9 @@ public:
     GlacierRequestPrivate(const GlacierRequestPrivate &other, GlacierRequest * const q);
 
     static QString toString(const GlacierRequest::Action &action);
+
+protected:
+    GlacierRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(GlacierRequest)

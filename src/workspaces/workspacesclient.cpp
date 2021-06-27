@@ -168,16 +168,16 @@ WorkSpacesClient::WorkSpacesClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new WorkSpacesClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2015-04-08"),
+    QStringLiteral("workspaces"),
+    QStringLiteral("Amazon WorkSpaces"),
+    QStringLiteral("workspaces"),
+    parent), d_ptr(new WorkSpacesClientPrivate(this))
 {
-    Q_D(WorkSpacesClient);
-    d->apiVersion = QStringLiteral("2015-04-08");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("workspaces");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon WorkSpaces");
-    d->serviceName = QStringLiteral("workspaces");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -196,16 +196,16 @@ WorkSpacesClient::WorkSpacesClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new WorkSpacesClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2015-04-08"),
+    QStringLiteral("workspaces"),
+    QStringLiteral("Amazon WorkSpaces"),
+    QStringLiteral("workspaces"),
+    parent), d_ptr(new WorkSpacesClientPrivate(this))
 {
-    Q_D(WorkSpacesClient);
-    d->apiVersion = QStringLiteral("2015-04-08");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("workspaces");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon WorkSpaces");
-    d->serviceName = QStringLiteral("workspaces");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -1192,10 +1192,9 @@ UpdateWorkspaceImagePermissionResponse * WorkSpacesClient::updateWorkspaceImageP
 /*!
  * Constructs a WorkSpacesClientPrivate object with public implementation \a q.
  */
-WorkSpacesClientPrivate::WorkSpacesClientPrivate(WorkSpacesClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+WorkSpacesClientPrivate::WorkSpacesClientPrivate(WorkSpacesClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace WorkSpaces

@@ -63,8 +63,7 @@ ListObjectParentsResponse::ListObjectParentsResponse(
  */
 const ListObjectParentsRequest * ListObjectParentsResponse::request() const
 {
-    Q_D(const ListObjectParentsResponse);
-    return static_cast<const ListObjectParentsRequest *>(d->request);
+    return static_cast<const ListObjectParentsRequest *>(CloudDirectoryResponse::request());
 }
 
 /*!

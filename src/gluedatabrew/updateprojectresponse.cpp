@@ -58,8 +58,7 @@ UpdateProjectResponse::UpdateProjectResponse(
  */
 const UpdateProjectRequest * UpdateProjectResponse::request() const
 {
-    Q_D(const UpdateProjectResponse);
-    return static_cast<const UpdateProjectRequest *>(d->request);
+    return static_cast<const UpdateProjectRequest *>(GlueDataBrewResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ GetContactReachabilityStatusResponse::GetContactReachabilityStatusResponse(
  */
 const GetContactReachabilityStatusRequest * GetContactReachabilityStatusResponse::request() const
 {
-    Q_D(const GetContactReachabilityStatusResponse);
-    return static_cast<const GetContactReachabilityStatusRequest *>(d->request);
+    return static_cast<const GetContactReachabilityStatusRequest *>(Route53DomainsResponse::request());
 }
 
 /*!

@@ -66,8 +66,7 @@ AdminConfirmSignUpResponse::AdminConfirmSignUpResponse(
  */
 const AdminConfirmSignUpRequest * AdminConfirmSignUpResponse::request() const
 {
-    Q_D(const AdminConfirmSignUpResponse);
-    return static_cast<const AdminConfirmSignUpRequest *>(d->request);
+    return static_cast<const AdminConfirmSignUpRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

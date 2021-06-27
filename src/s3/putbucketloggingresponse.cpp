@@ -55,8 +55,7 @@ PutBucketLoggingResponse::PutBucketLoggingResponse(
  */
 const PutBucketLoggingRequest * PutBucketLoggingResponse::request() const
 {
-    Q_D(const PutBucketLoggingResponse);
-    return static_cast<const PutBucketLoggingRequest *>(d->request);
+    return static_cast<const PutBucketLoggingRequest *>(S3Response::request());
 }
 
 /*!

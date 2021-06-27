@@ -62,8 +62,7 @@ PutRoomSkillParameterResponse::PutRoomSkillParameterResponse(
  */
 const PutRoomSkillParameterRequest * PutRoomSkillParameterResponse::request() const
 {
-    Q_D(const PutRoomSkillParameterResponse);
-    return static_cast<const PutRoomSkillParameterRequest *>(d->request);
+    return static_cast<const PutRoomSkillParameterRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

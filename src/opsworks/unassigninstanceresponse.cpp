@@ -161,8 +161,7 @@ UnassignInstanceResponse::UnassignInstanceResponse(
  */
 const UnassignInstanceRequest * UnassignInstanceResponse::request() const
 {
-    Q_D(const UnassignInstanceResponse);
-    return static_cast<const UnassignInstanceRequest *>(d->request);
+    return static_cast<const UnassignInstanceRequest *>(OpsWorksResponse::request());
 }
 
 /*!

@@ -75,8 +75,7 @@ ListTopicsResponse::ListTopicsResponse(
  */
 const ListTopicsRequest * ListTopicsResponse::request() const
 {
-    Q_D(const ListTopicsResponse);
-    return static_cast<const ListTopicsRequest *>(d->request);
+    return static_cast<const ListTopicsRequest *>(SnsResponse::request());
 }
 
 /*!

@@ -80,8 +80,7 @@ RevokeSigningProfileResponse::RevokeSigningProfileResponse(
  */
 const RevokeSigningProfileRequest * RevokeSigningProfileResponse::request() const
 {
-    Q_D(const RevokeSigningProfileResponse);
-    return static_cast<const RevokeSigningProfileRequest *>(d->request);
+    return static_cast<const RevokeSigningProfileRequest *>(signerResponse::request());
 }
 
 /*!

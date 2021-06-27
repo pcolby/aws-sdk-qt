@@ -141,8 +141,7 @@ ListOnPremisesInstancesResponse::ListOnPremisesInstancesResponse(
  */
 const ListOnPremisesInstancesRequest * ListOnPremisesInstancesResponse::request() const
 {
-    Q_D(const ListOnPremisesInstancesResponse);
-    return static_cast<const ListOnPremisesInstancesRequest *>(d->request);
+    return static_cast<const ListOnPremisesInstancesRequest *>(CodeDeployResponse::request());
 }
 
 /*!

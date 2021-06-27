@@ -20,14 +20,12 @@
 #ifndef QTAWS_SNOWBALLRESPONSE_P_H
 #define QTAWS_SNOWBALLRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace Snowball {
 
 class SnowballResponse;
 
-class SnowballResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class SnowballResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    SnowballResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SnowballResponse)

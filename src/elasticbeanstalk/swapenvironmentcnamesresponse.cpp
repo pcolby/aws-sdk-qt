@@ -77,8 +77,7 @@ SwapEnvironmentCNAMEsResponse::SwapEnvironmentCNAMEsResponse(
  */
 const SwapEnvironmentCNAMEsRequest * SwapEnvironmentCNAMEsResponse::request() const
 {
-    Q_D(const SwapEnvironmentCNAMEsResponse);
-    return static_cast<const SwapEnvironmentCNAMEsRequest *>(d->request);
+    return static_cast<const SwapEnvironmentCNAMEsRequest *>(ElasticBeanstalkResponse::request());
 }
 
 /*!

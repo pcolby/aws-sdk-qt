@@ -37,7 +37,7 @@ namespace Organizations {
  * Constructs a OrganizationsResponse object with parent \a parent.
  */
 OrganizationsResponse::OrganizationsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new OrganizationsResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new OrganizationsResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ OrganizationsResponse::OrganizationsResponse(QObject * const parent)
  * implementation that inherits from OrganizationsResponsePrivate.
  */
 OrganizationsResponse::OrganizationsResponse(OrganizationsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void OrganizationsResponse::parseFailure(QIODevice &response)
  * Constructs a OrganizationsResponsePrivate object with public implementation \a q.
  */
 OrganizationsResponsePrivate::OrganizationsResponsePrivate(
-    OrganizationsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    OrganizationsResponse * const q) : q_ptr(q)
 {
 
 }

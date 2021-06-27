@@ -439,8 +439,7 @@ GetFolderResponse::GetFolderResponse(
  */
 const GetFolderRequest * GetFolderResponse::request() const
 {
-    Q_D(const GetFolderResponse);
-    return static_cast<const GetFolderRequest *>(d->request);
+    return static_cast<const GetFolderRequest *>(CodeCommitResponse::request());
 }
 
 /*!

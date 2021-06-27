@@ -82,8 +82,7 @@ ListAuditFindingsResponse::ListAuditFindingsResponse(
  */
 const ListAuditFindingsRequest * ListAuditFindingsResponse::request() const
 {
-    Q_D(const ListAuditFindingsResponse);
-    return static_cast<const ListAuditFindingsRequest *>(d->request);
+    return static_cast<const ListAuditFindingsRequest *>(IoTResponse::request());
 }
 
 /*!

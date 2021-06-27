@@ -137,6 +137,7 @@ public:
 
 protected:
     /// @cond internal
+    WAFRegionalRequestPrivate * const d_ptr; ///< Internal d-pointer.
     WAFRegionalRequest(WAFRegionalRequestPrivate * const d);
     /// @endcond
 

@@ -82,8 +82,7 @@ CreateCertificateFromCsrResponse::CreateCertificateFromCsrResponse(
  */
 const CreateCertificateFromCsrRequest * CreateCertificateFromCsrResponse::request() const
 {
-    Q_D(const CreateCertificateFromCsrResponse);
-    return static_cast<const CreateCertificateFromCsrRequest *>(d->request);
+    return static_cast<const CreateCertificateFromCsrRequest *>(IoTResponse::request());
 }
 
 /*!

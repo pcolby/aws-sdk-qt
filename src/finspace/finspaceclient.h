@@ -70,6 +70,12 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateEnvironmentResponse * updateEnvironment(const UpdateEnvironmentRequest &request);
 
+protected:
+    /// @cond internal
+    finspaceClientPrivate * const d_ptr; ///< Internal d-pointer.
+    finspaceClient(finspaceClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(finspaceClient)
     Q_DISABLE_COPY(finspaceClient)

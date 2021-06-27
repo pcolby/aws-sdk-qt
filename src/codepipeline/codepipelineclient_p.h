@@ -20,19 +20,20 @@
 #ifndef QTAWS_CODEPIPELINECLIENT_P_H
 #define QTAWS_CODEPIPELINECLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace CodePipeline {
 
 class CodePipelineClient;
 
-class CodePipelineClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class CodePipelineClientPrivate {
 
 public:
     CodePipelineClientPrivate(CodePipelineClient * const q);
+
+protected:
+    CodePipelineClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CodePipelineClient)

@@ -75,8 +75,7 @@ GetReservationPurchaseRecommendationResponse::GetReservationPurchaseRecommendati
  */
 const GetReservationPurchaseRecommendationRequest * GetReservationPurchaseRecommendationResponse::request() const
 {
-    Q_D(const GetReservationPurchaseRecommendationResponse);
-    return static_cast<const GetReservationPurchaseRecommendationRequest *>(d->request);
+    return static_cast<const GetReservationPurchaseRecommendationRequest *>(CostExplorerResponse::request());
 }
 
 /*!

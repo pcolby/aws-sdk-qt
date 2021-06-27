@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    TranslateResponsePrivate * const d_ptr; ///< Internal d-pointer.
     TranslateResponse(TranslateResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

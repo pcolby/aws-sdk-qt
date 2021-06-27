@@ -66,8 +66,7 @@ DefineAnalysisSchemeResponse::DefineAnalysisSchemeResponse(
  */
 const DefineAnalysisSchemeRequest * DefineAnalysisSchemeResponse::request() const
 {
-    Q_D(const DefineAnalysisSchemeResponse);
-    return static_cast<const DefineAnalysisSchemeRequest *>(d->request);
+    return static_cast<const DefineAnalysisSchemeRequest *>(CloudSearchResponse::request());
 }
 
 /*!

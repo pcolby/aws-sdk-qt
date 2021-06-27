@@ -56,8 +56,7 @@ DescribeDatasetGroupResponse::DescribeDatasetGroupResponse(
  */
 const DescribeDatasetGroupRequest * DescribeDatasetGroupResponse::request() const
 {
-    Q_D(const DescribeDatasetGroupResponse);
-    return static_cast<const DescribeDatasetGroupRequest *>(d->request);
+    return static_cast<const DescribeDatasetGroupRequest *>(ForecastServiceResponse::request());
 }
 
 /*!

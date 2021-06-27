@@ -73,8 +73,7 @@ UpdateFindingsFeedbackResponse::UpdateFindingsFeedbackResponse(
  */
 const UpdateFindingsFeedbackRequest * UpdateFindingsFeedbackResponse::request() const
 {
-    Q_D(const UpdateFindingsFeedbackResponse);
-    return static_cast<const UpdateFindingsFeedbackRequest *>(d->request);
+    return static_cast<const UpdateFindingsFeedbackRequest *>(GuardDutyResponse::request());
 }
 
 /*!

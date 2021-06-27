@@ -98,8 +98,7 @@ CreateUserResponse::CreateUserResponse(
  */
 const CreateUserRequest * CreateUserResponse::request() const
 {
-    Q_D(const CreateUserResponse);
-    return static_cast<const CreateUserRequest *>(d->request);
+    return static_cast<const CreateUserRequest *>(ChimeResponse::request());
 }
 
 /*!

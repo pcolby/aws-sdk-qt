@@ -74,8 +74,7 @@ UpdateStateMachineResponse::UpdateStateMachineResponse(
  */
 const UpdateStateMachineRequest * UpdateStateMachineResponse::request() const
 {
-    Q_D(const UpdateStateMachineResponse);
-    return static_cast<const UpdateStateMachineRequest *>(d->request);
+    return static_cast<const UpdateStateMachineRequest *>(SfnResponse::request());
 }
 
 /*!

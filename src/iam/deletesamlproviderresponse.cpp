@@ -62,8 +62,7 @@ DeleteSAMLProviderResponse::DeleteSAMLProviderResponse(
  */
 const DeleteSAMLProviderRequest * DeleteSAMLProviderResponse::request() const
 {
-    Q_D(const DeleteSAMLProviderResponse);
-    return static_cast<const DeleteSAMLProviderRequest *>(d->request);
+    return static_cast<const DeleteSAMLProviderRequest *>(IamResponse::request());
 }
 
 /*!

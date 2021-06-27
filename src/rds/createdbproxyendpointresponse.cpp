@@ -119,8 +119,7 @@ CreateDBProxyEndpointResponse::CreateDBProxyEndpointResponse(
  */
 const CreateDBProxyEndpointRequest * CreateDBProxyEndpointResponse::request() const
 {
-    Q_D(const CreateDBProxyEndpointResponse);
-    return static_cast<const CreateDBProxyEndpointRequest *>(d->request);
+    return static_cast<const CreateDBProxyEndpointRequest *>(RdsResponse::request());
 }
 
 /*!

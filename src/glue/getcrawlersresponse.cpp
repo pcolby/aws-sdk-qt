@@ -58,8 +58,7 @@ GetCrawlersResponse::GetCrawlersResponse(
  */
 const GetCrawlersRequest * GetCrawlersResponse::request() const
 {
-    Q_D(const GetCrawlersResponse);
-    return static_cast<const GetCrawlersRequest *>(d->request);
+    return static_cast<const GetCrawlersRequest *>(GlueResponse::request());
 }
 
 /*!

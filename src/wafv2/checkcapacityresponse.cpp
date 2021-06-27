@@ -126,8 +126,7 @@ CheckCapacityResponse::CheckCapacityResponse(
  */
 const CheckCapacityRequest * CheckCapacityResponse::request() const
 {
-    Q_D(const CheckCapacityResponse);
-    return static_cast<const CheckCapacityRequest *>(d->request);
+    return static_cast<const CheckCapacityRequest *>(Wafv2Response::request());
 }
 
 /*!

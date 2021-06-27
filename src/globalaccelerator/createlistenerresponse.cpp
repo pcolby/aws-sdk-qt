@@ -218,8 +218,7 @@ CreateListenerResponse::CreateListenerResponse(
  */
 const CreateListenerRequest * CreateListenerResponse::request() const
 {
-    Q_D(const CreateListenerResponse);
-    return static_cast<const CreateListenerRequest *>(d->request);
+    return static_cast<const CreateListenerRequest *>(GlobalAcceleratorResponse::request());
 }
 
 /*!

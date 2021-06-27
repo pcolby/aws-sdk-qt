@@ -160,6 +160,7 @@ public:
 
 protected:
     /// @cond internal
+    RedshiftRequestPrivate * const d_ptr; ///< Internal d-pointer.
     RedshiftRequest(RedshiftRequestPrivate * const d);
     /// @endcond
 

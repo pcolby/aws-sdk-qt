@@ -75,6 +75,7 @@ public:
 
 protected:
     /// @cond internal
+    DataPipelineRequestPrivate * const d_ptr; ///< Internal d-pointer.
     DataPipelineRequest(DataPipelineRequestPrivate * const d);
     /// @endcond
 

@@ -69,8 +69,7 @@ DeleteCertificateAuthorityResponse::DeleteCertificateAuthorityResponse(
  */
 const DeleteCertificateAuthorityRequest * DeleteCertificateAuthorityResponse::request() const
 {
-    Q_D(const DeleteCertificateAuthorityResponse);
-    return static_cast<const DeleteCertificateAuthorityRequest *>(d->request);
+    return static_cast<const DeleteCertificateAuthorityRequest *>(AcmpcaResponse::request());
 }
 
 /*!

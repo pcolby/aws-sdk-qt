@@ -55,8 +55,7 @@ DeleteBucketAnalyticsConfigurationResponse::DeleteBucketAnalyticsConfigurationRe
  */
 const DeleteBucketAnalyticsConfigurationRequest * DeleteBucketAnalyticsConfigurationResponse::request() const
 {
-    Q_D(const DeleteBucketAnalyticsConfigurationResponse);
-    return static_cast<const DeleteBucketAnalyticsConfigurationRequest *>(d->request);
+    return static_cast<const DeleteBucketAnalyticsConfigurationRequest *>(S3Response::request());
 }
 
 /*!

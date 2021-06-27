@@ -55,8 +55,7 @@ UpdateQualificationTypeResponse::UpdateQualificationTypeResponse(
  */
 const UpdateQualificationTypeRequest * UpdateQualificationTypeResponse::request() const
 {
-    Q_D(const UpdateQualificationTypeResponse);
-    return static_cast<const UpdateQualificationTypeRequest *>(d->request);
+    return static_cast<const UpdateQualificationTypeRequest *>(MTurkResponse::request());
 }
 
 /*!

@@ -439,8 +439,7 @@ BatchDescribeMergeConflictsResponse::BatchDescribeMergeConflictsResponse(
  */
 const BatchDescribeMergeConflictsRequest * BatchDescribeMergeConflictsResponse::request() const
 {
-    Q_D(const BatchDescribeMergeConflictsResponse);
-    return static_cast<const BatchDescribeMergeConflictsRequest *>(d->request);
+    return static_cast<const BatchDescribeMergeConflictsRequest *>(CodeCommitResponse::request());
 }
 
 /*!

@@ -83,8 +83,7 @@ RegisterInstancesWithLoadBalancerResponse::RegisterInstancesWithLoadBalancerResp
  */
 const RegisterInstancesWithLoadBalancerRequest * RegisterInstancesWithLoadBalancerResponse::request() const
 {
-    Q_D(const RegisterInstancesWithLoadBalancerResponse);
-    return static_cast<const RegisterInstancesWithLoadBalancerRequest *>(d->request);
+    return static_cast<const RegisterInstancesWithLoadBalancerRequest *>(ElasticLoadBalancingResponse::request());
 }
 
 /*!

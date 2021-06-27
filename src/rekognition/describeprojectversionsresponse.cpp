@@ -56,8 +56,7 @@ DescribeProjectVersionsResponse::DescribeProjectVersionsResponse(
  */
 const DescribeProjectVersionsRequest * DescribeProjectVersionsResponse::request() const
 {
-    Q_D(const DescribeProjectVersionsResponse);
-    return static_cast<const DescribeProjectVersionsRequest *>(d->request);
+    return static_cast<const DescribeProjectVersionsRequest *>(RekognitionResponse::request());
 }
 
 /*!

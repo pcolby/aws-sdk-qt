@@ -98,8 +98,7 @@ CreateProxySessionResponse::CreateProxySessionResponse(
  */
 const CreateProxySessionRequest * CreateProxySessionResponse::request() const
 {
-    Q_D(const CreateProxySessionResponse);
-    return static_cast<const CreateProxySessionRequest *>(d->request);
+    return static_cast<const CreateProxySessionRequest *>(ChimeResponse::request());
 }
 
 /*!

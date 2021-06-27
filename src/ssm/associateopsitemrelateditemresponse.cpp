@@ -98,8 +98,7 @@ AssociateOpsItemRelatedItemResponse::AssociateOpsItemRelatedItemResponse(
  */
 const AssociateOpsItemRelatedItemRequest * AssociateOpsItemRelatedItemResponse::request() const
 {
-    Q_D(const AssociateOpsItemRelatedItemResponse);
-    return static_cast<const AssociateOpsItemRelatedItemRequest *>(d->request);
+    return static_cast<const AssociateOpsItemRelatedItemRequest *>(SsmResponse::request());
 }
 
 /*!

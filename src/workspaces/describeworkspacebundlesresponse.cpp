@@ -58,8 +58,7 @@ DescribeWorkspaceBundlesResponse::DescribeWorkspaceBundlesResponse(
  */
 const DescribeWorkspaceBundlesRequest * DescribeWorkspaceBundlesResponse::request() const
 {
-    Q_D(const DescribeWorkspaceBundlesResponse);
-    return static_cast<const DescribeWorkspaceBundlesRequest *>(d->request);
+    return static_cast<const DescribeWorkspaceBundlesRequest *>(WorkSpacesResponse::request());
 }
 
 /*!

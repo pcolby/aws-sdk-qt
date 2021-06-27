@@ -82,8 +82,7 @@ AssociateTargetsWithJobResponse::AssociateTargetsWithJobResponse(
  */
 const AssociateTargetsWithJobRequest * AssociateTargetsWithJobResponse::request() const
 {
-    Q_D(const AssociateTargetsWithJobResponse);
-    return static_cast<const AssociateTargetsWithJobRequest *>(d->request);
+    return static_cast<const AssociateTargetsWithJobRequest *>(IoTResponse::request());
 }
 
 /*!

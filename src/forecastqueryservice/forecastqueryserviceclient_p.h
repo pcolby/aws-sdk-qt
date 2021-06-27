@@ -20,19 +20,20 @@
 #ifndef QTAWS_FORECASTQUERYSERVICECLIENT_P_H
 #define QTAWS_FORECASTQUERYSERVICECLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace ForecastQueryService {
 
 class ForecastQueryServiceClient;
 
-class ForecastQueryServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class ForecastQueryServiceClientPrivate {
 
 public:
     ForecastQueryServiceClientPrivate(ForecastQueryServiceClient * const q);
+
+protected:
+    ForecastQueryServiceClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ForecastQueryServiceClient)

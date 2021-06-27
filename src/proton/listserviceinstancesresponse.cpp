@@ -177,8 +177,7 @@ ListServiceInstancesResponse::ListServiceInstancesResponse(
  */
 const ListServiceInstancesRequest * ListServiceInstancesResponse::request() const
 {
-    Q_D(const ListServiceInstancesResponse);
-    return static_cast<const ListServiceInstancesRequest *>(d->request);
+    return static_cast<const ListServiceInstancesRequest *>(ProtonResponse::request());
 }
 
 /*!

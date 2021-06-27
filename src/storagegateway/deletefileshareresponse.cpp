@@ -124,8 +124,7 @@ DeleteFileShareResponse::DeleteFileShareResponse(
  */
 const DeleteFileShareRequest * DeleteFileShareResponse::request() const
 {
-    Q_D(const DeleteFileShareResponse);
-    return static_cast<const DeleteFileShareRequest *>(d->request);
+    return static_cast<const DeleteFileShareRequest *>(StorageGatewayResponse::request());
 }
 
 /*!

@@ -51,7 +51,7 @@ namespace AppIntegrationsService {
  * Constructs a AppIntegrationsServiceRequest object for AppIntegrationsService \a action.
  */
 AppIntegrationsServiceRequest::AppIntegrationsServiceRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new AppIntegrationsServiceRequestPrivate(action, this))
+    : d_ptr(new AppIntegrationsServiceRequestPrivate(action, this))
 {
 
 }
@@ -60,7 +60,8 @@ AppIntegrationsServiceRequest::AppIntegrationsServiceRequest(const Action action
  * Constructs a copy of \a other.
  */
 AppIntegrationsServiceRequest::AppIntegrationsServiceRequest(const AppIntegrationsServiceRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new AppIntegrationsServiceRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new AppIntegrationsServiceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -83,7 +84,7 @@ AppIntegrationsServiceRequest& AppIntegrationsServiceRequest::operator=(const Ap
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from AppIntegrationsServiceRequestPrivate.
  */
-AppIntegrationsServiceRequest::AppIntegrationsServiceRequest(AppIntegrationsServiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+AppIntegrationsServiceRequest::AppIntegrationsServiceRequest(AppIntegrationsServiceRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -252,7 +253,7 @@ QNetworkRequest AppIntegrationsServiceRequest::unsignedRequest(const QUrl &endpo
  * with public implementation \a q.
  */
 AppIntegrationsServiceRequestPrivate::AppIntegrationsServiceRequestPrivate(const AppIntegrationsServiceRequest::Action action, AppIntegrationsServiceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -267,8 +268,8 @@ AppIntegrationsServiceRequestPrivate::AppIntegrationsServiceRequestPrivate(const
  */
 AppIntegrationsServiceRequestPrivate::AppIntegrationsServiceRequestPrivate(const AppIntegrationsServiceRequestPrivate &other,
                                      AppIntegrationsServiceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

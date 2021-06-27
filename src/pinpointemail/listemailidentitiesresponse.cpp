@@ -92,8 +92,7 @@ ListEmailIdentitiesResponse::ListEmailIdentitiesResponse(
  */
 const ListEmailIdentitiesRequest * ListEmailIdentitiesResponse::request() const
 {
-    Q_D(const ListEmailIdentitiesResponse);
-    return static_cast<const ListEmailIdentitiesRequest *>(d->request);
+    return static_cast<const ListEmailIdentitiesRequest *>(PinpointEmailResponse::request());
 }
 
 /*!

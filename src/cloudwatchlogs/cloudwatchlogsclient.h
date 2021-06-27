@@ -172,6 +172,12 @@ public slots:
     TestMetricFilterResponse * testMetricFilter(const TestMetricFilterRequest &request);
     UntagLogGroupResponse * untagLogGroup(const UntagLogGroupRequest &request);
 
+protected:
+    /// @cond internal
+    CloudWatchLogsClientPrivate * const d_ptr; ///< Internal d-pointer.
+    CloudWatchLogsClient(CloudWatchLogsClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(CloudWatchLogsClient)
     Q_DISABLE_COPY(CloudWatchLogsClient)

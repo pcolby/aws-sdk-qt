@@ -72,8 +72,7 @@ DissociatePackageResponse::DissociatePackageResponse(
  */
 const DissociatePackageRequest * DissociatePackageResponse::request() const
 {
-    Q_D(const DissociatePackageResponse);
-    return static_cast<const DissociatePackageRequest *>(d->request);
+    return static_cast<const DissociatePackageRequest *>(ElasticsearchServiceResponse::request());
 }
 
 /*!

@@ -70,8 +70,7 @@ DeleteWorkforceResponse::DeleteWorkforceResponse(
  */
 const DeleteWorkforceRequest * DeleteWorkforceResponse::request() const
 {
-    Q_D(const DeleteWorkforceResponse);
-    return static_cast<const DeleteWorkforceRequest *>(d->request);
+    return static_cast<const DeleteWorkforceRequest *>(SageMakerResponse::request());
 }
 
 /*!

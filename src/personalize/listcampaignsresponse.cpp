@@ -56,8 +56,7 @@ ListCampaignsResponse::ListCampaignsResponse(
  */
 const ListCampaignsRequest * ListCampaignsResponse::request() const
 {
-    Q_D(const ListCampaignsResponse);
-    return static_cast<const ListCampaignsRequest *>(d->request);
+    return static_cast<const ListCampaignsRequest *>(PersonalizeResponse::request());
 }
 
 /*!

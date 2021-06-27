@@ -62,8 +62,7 @@ AttachGroupPolicyResponse::AttachGroupPolicyResponse(
  */
 const AttachGroupPolicyRequest * AttachGroupPolicyResponse::request() const
 {
-    Q_D(const AttachGroupPolicyResponse);
-    return static_cast<const AttachGroupPolicyRequest *>(d->request);
+    return static_cast<const AttachGroupPolicyRequest *>(IamResponse::request());
 }
 
 /*!

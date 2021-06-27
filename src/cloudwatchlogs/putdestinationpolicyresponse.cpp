@@ -84,8 +84,7 @@ PutDestinationPolicyResponse::PutDestinationPolicyResponse(
  */
 const PutDestinationPolicyRequest * PutDestinationPolicyResponse::request() const
 {
-    Q_D(const PutDestinationPolicyResponse);
-    return static_cast<const PutDestinationPolicyRequest *>(d->request);
+    return static_cast<const PutDestinationPolicyRequest *>(CloudWatchLogsResponse::request());
 }
 
 /*!

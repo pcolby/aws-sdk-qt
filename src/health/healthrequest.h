@@ -69,6 +69,7 @@ public:
 
 protected:
     /// @cond internal
+    HealthRequestPrivate * const d_ptr; ///< Internal d-pointer.
     HealthRequest(HealthRequestPrivate * const d);
     /// @endcond
 

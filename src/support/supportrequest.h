@@ -70,6 +70,7 @@ public:
 
 protected:
     /// @cond internal
+    SupportRequestPrivate * const d_ptr; ///< Internal d-pointer.
     SupportRequest(SupportRequestPrivate * const d);
     /// @endcond
 

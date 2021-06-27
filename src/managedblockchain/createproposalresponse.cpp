@@ -72,8 +72,7 @@ CreateProposalResponse::CreateProposalResponse(
  */
 const CreateProposalRequest * CreateProposalResponse::request() const
 {
-    Q_D(const CreateProposalResponse);
-    return static_cast<const CreateProposalRequest *>(d->request);
+    return static_cast<const CreateProposalRequest *>(ManagedBlockchainResponse::request());
 }
 
 /*!

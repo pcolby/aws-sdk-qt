@@ -85,8 +85,7 @@ DeleteEventSubscriptionResponse::DeleteEventSubscriptionResponse(
  */
 const DeleteEventSubscriptionRequest * DeleteEventSubscriptionResponse::request() const
 {
-    Q_D(const DeleteEventSubscriptionResponse);
-    return static_cast<const DeleteEventSubscriptionRequest *>(d->request);
+    return static_cast<const DeleteEventSubscriptionRequest *>(RedshiftResponse::request());
 }
 
 /*!

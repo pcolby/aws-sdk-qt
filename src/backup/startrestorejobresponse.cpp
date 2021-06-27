@@ -59,8 +59,7 @@ StartRestoreJobResponse::StartRestoreJobResponse(
  */
 const StartRestoreJobRequest * StartRestoreJobResponse::request() const
 {
-    Q_D(const StartRestoreJobResponse);
-    return static_cast<const StartRestoreJobRequest *>(d->request);
+    return static_cast<const StartRestoreJobRequest *>(BackupResponse::request());
 }
 
 /*!

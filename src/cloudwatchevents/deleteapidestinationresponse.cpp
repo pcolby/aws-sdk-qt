@@ -78,8 +78,7 @@ DeleteApiDestinationResponse::DeleteApiDestinationResponse(
  */
 const DeleteApiDestinationRequest * DeleteApiDestinationResponse::request() const
 {
-    Q_D(const DeleteApiDestinationResponse);
-    return static_cast<const DeleteApiDestinationRequest *>(d->request);
+    return static_cast<const DeleteApiDestinationRequest *>(CloudWatchEventsResponse::request());
 }
 
 /*!

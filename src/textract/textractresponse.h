@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    TextractResponsePrivate * const d_ptr; ///< Internal d-pointer.
     TextractResponse(TextractResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -58,8 +58,7 @@ ListRecipesResponse::ListRecipesResponse(
  */
 const ListRecipesRequest * ListRecipesResponse::request() const
 {
-    Q_D(const ListRecipesResponse);
-    return static_cast<const ListRecipesRequest *>(d->request);
+    return static_cast<const ListRecipesRequest *>(GlueDataBrewResponse::request());
 }
 
 /*!

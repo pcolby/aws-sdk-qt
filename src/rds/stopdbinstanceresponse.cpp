@@ -119,8 +119,7 @@ StopDBInstanceResponse::StopDBInstanceResponse(
  */
 const StopDBInstanceRequest * StopDBInstanceResponse::request() const
 {
-    Q_D(const StopDBInstanceResponse);
-    return static_cast<const StopDBInstanceRequest *>(d->request);
+    return static_cast<const StopDBInstanceRequest *>(RdsResponse::request());
 }
 
 /*!

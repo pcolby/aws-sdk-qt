@@ -103,8 +103,7 @@ GetAdministratorAccountResponse::GetAdministratorAccountResponse(
  */
 const GetAdministratorAccountRequest * GetAdministratorAccountResponse::request() const
 {
-    Q_D(const GetAdministratorAccountResponse);
-    return static_cast<const GetAdministratorAccountRequest *>(d->request);
+    return static_cast<const GetAdministratorAccountRequest *>(SecurityHubResponse::request());
 }
 
 /*!

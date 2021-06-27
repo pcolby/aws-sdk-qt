@@ -56,8 +56,7 @@ DeleteTokenResponse::DeleteTokenResponse(
  */
 const DeleteTokenRequest * DeleteTokenResponse::request() const
 {
-    Q_D(const DeleteTokenResponse);
-    return static_cast<const DeleteTokenRequest *>(d->request);
+    return static_cast<const DeleteTokenRequest *>(AmplifyBackendResponse::request());
 }
 
 /*!

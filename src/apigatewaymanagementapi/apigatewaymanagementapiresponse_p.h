@@ -20,14 +20,12 @@
 #ifndef QTAWS_APIGATEWAYMANAGEMENTAPIRESPONSE_P_H
 #define QTAWS_APIGATEWAYMANAGEMENTAPIRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace ApiGatewayManagementApi {
 
 class ApiGatewayManagementApiResponse;
 
-class ApiGatewayManagementApiResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class ApiGatewayManagementApiResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    ApiGatewayManagementApiResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ApiGatewayManagementApiResponse)

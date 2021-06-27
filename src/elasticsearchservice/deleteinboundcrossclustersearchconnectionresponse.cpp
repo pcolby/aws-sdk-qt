@@ -72,8 +72,7 @@ DeleteInboundCrossClusterSearchConnectionResponse::DeleteInboundCrossClusterSear
  */
 const DeleteInboundCrossClusterSearchConnectionRequest * DeleteInboundCrossClusterSearchConnectionResponse::request() const
 {
-    Q_D(const DeleteInboundCrossClusterSearchConnectionResponse);
-    return static_cast<const DeleteInboundCrossClusterSearchConnectionRequest *>(d->request);
+    return static_cast<const DeleteInboundCrossClusterSearchConnectionRequest *>(ElasticsearchServiceResponse::request());
 }
 
 /*!

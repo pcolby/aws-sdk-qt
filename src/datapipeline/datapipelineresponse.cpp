@@ -37,7 +37,7 @@ namespace DataPipeline {
  * Constructs a DataPipelineResponse object with parent \a parent.
  */
 DataPipelineResponse::DataPipelineResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new DataPipelineResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new DataPipelineResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ DataPipelineResponse::DataPipelineResponse(QObject * const parent)
  * implementation that inherits from DataPipelineResponsePrivate.
  */
 DataPipelineResponse::DataPipelineResponse(DataPipelineResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void DataPipelineResponse::parseFailure(QIODevice &response)
  * Constructs a DataPipelineResponsePrivate object with public implementation \a q.
  */
 DataPipelineResponsePrivate::DataPipelineResponsePrivate(
-    DataPipelineResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    DataPipelineResponse * const q) : q_ptr(q)
 {
 
 }

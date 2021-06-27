@@ -74,8 +74,7 @@ RestoreTableFromBackupResponse::RestoreTableFromBackupResponse(
  */
 const RestoreTableFromBackupRequest * RestoreTableFromBackupResponse::request() const
 {
-    Q_D(const RestoreTableFromBackupResponse);
-    return static_cast<const RestoreTableFromBackupRequest *>(d->request);
+    return static_cast<const RestoreTableFromBackupRequest *>(DynamoDBResponse::request());
 }
 
 /*!

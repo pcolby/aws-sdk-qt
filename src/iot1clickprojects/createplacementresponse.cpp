@@ -56,8 +56,7 @@ CreatePlacementResponse::CreatePlacementResponse(
  */
 const CreatePlacementRequest * CreatePlacementResponse::request() const
 {
-    Q_D(const CreatePlacementResponse);
-    return static_cast<const CreatePlacementRequest *>(d->request);
+    return static_cast<const CreatePlacementRequest *>(IoT1ClickProjectsResponse::request());
 }
 
 /*!

@@ -77,8 +77,7 @@ DeleteConfigurationTemplateResponse::DeleteConfigurationTemplateResponse(
  */
 const DeleteConfigurationTemplateRequest * DeleteConfigurationTemplateResponse::request() const
 {
-    Q_D(const DeleteConfigurationTemplateResponse);
-    return static_cast<const DeleteConfigurationTemplateRequest *>(d->request);
+    return static_cast<const DeleteConfigurationTemplateRequest *>(ElasticBeanstalkResponse::request());
 }
 
 /*!

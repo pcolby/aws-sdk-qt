@@ -98,8 +98,7 @@ UpdateGlobalSettingsResponse::UpdateGlobalSettingsResponse(
  */
 const UpdateGlobalSettingsRequest * UpdateGlobalSettingsResponse::request() const
 {
-    Q_D(const UpdateGlobalSettingsResponse);
-    return static_cast<const UpdateGlobalSettingsRequest *>(d->request);
+    return static_cast<const UpdateGlobalSettingsRequest *>(ChimeResponse::request());
 }
 
 /*!

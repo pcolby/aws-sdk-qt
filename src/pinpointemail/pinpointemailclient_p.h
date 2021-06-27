@@ -20,19 +20,20 @@
 #ifndef QTAWS_PINPOINTEMAILCLIENT_P_H
 #define QTAWS_PINPOINTEMAILCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace PinpointEmail {
 
 class PinpointEmailClient;
 
-class PinpointEmailClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class PinpointEmailClientPrivate {
 
 public:
     PinpointEmailClientPrivate(PinpointEmailClient * const q);
+
+protected:
+    PinpointEmailClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(PinpointEmailClient)

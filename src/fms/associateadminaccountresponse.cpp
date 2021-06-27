@@ -67,8 +67,7 @@ AssociateAdminAccountResponse::AssociateAdminAccountResponse(
  */
 const AssociateAdminAccountRequest * AssociateAdminAccountResponse::request() const
 {
-    Q_D(const AssociateAdminAccountResponse);
-    return static_cast<const AssociateAdminAccountRequest *>(d->request);
+    return static_cast<const AssociateAdminAccountRequest *>(FmsResponse::request());
 }
 
 /*!

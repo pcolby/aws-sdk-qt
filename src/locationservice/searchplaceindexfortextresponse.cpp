@@ -56,8 +56,7 @@ SearchPlaceIndexForTextResponse::SearchPlaceIndexForTextResponse(
  */
 const SearchPlaceIndexForTextRequest * SearchPlaceIndexForTextResponse::request() const
 {
-    Q_D(const SearchPlaceIndexForTextResponse);
-    return static_cast<const SearchPlaceIndexForTextRequest *>(d->request);
+    return static_cast<const SearchPlaceIndexForTextRequest *>(LocationServiceResponse::request());
 }
 
 /*!

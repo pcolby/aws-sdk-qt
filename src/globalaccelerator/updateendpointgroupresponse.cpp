@@ -218,8 +218,7 @@ UpdateEndpointGroupResponse::UpdateEndpointGroupResponse(
  */
 const UpdateEndpointGroupRequest * UpdateEndpointGroupResponse::request() const
 {
-    Q_D(const UpdateEndpointGroupResponse);
-    return static_cast<const UpdateEndpointGroupRequest *>(d->request);
+    return static_cast<const UpdateEndpointGroupRequest *>(GlobalAcceleratorResponse::request());
 }
 
 /*!

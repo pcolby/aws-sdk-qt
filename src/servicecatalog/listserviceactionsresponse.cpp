@@ -61,8 +61,7 @@ ListServiceActionsResponse::ListServiceActionsResponse(
  */
 const ListServiceActionsRequest * ListServiceActionsResponse::request() const
 {
-    Q_D(const ListServiceActionsResponse);
-    return static_cast<const ListServiceActionsRequest *>(d->request);
+    return static_cast<const ListServiceActionsRequest *>(ServiceCatalogResponse::request());
 }
 
 /*!

@@ -97,16 +97,16 @@ TimestreamWriteClient::TimestreamWriteClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new TimestreamWriteClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-11-01"),
+    QStringLiteral("ingest.timestream"),
+    QStringLiteral("Amazon Timestream Write"),
+    QStringLiteral("timestream"),
+    parent), d_ptr(new TimestreamWriteClientPrivate(this))
 {
-    Q_D(TimestreamWriteClient);
-    d->apiVersion = QStringLiteral("2018-11-01");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("ingest.timestream");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("Amazon Timestream Write");
-    d->serviceName = QStringLiteral("timestream");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -125,16 +125,16 @@ TimestreamWriteClient::TimestreamWriteClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new TimestreamWriteClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-11-01"),
+    QStringLiteral("ingest.timestream"),
+    QStringLiteral("Amazon Timestream Write"),
+    QStringLiteral("timestream"),
+    parent), d_ptr(new TimestreamWriteClientPrivate(this))
 {
-    Q_D(TimestreamWriteClient);
-    d->apiVersion = QStringLiteral("2018-11-01");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("ingest.timestream");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("Amazon Timestream Write");
-    d->serviceName = QStringLiteral("timestream");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -419,10 +419,9 @@ WriteRecordsResponse * TimestreamWriteClient::writeRecords(const WriteRecordsReq
 /*!
  * Constructs a TimestreamWriteClientPrivate object with public implementation \a q.
  */
-TimestreamWriteClientPrivate::TimestreamWriteClientPrivate(TimestreamWriteClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+TimestreamWriteClientPrivate::TimestreamWriteClientPrivate(TimestreamWriteClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace TimestreamWrite

@@ -56,8 +56,7 @@ PutEncryptionConfigResponse::PutEncryptionConfigResponse(
  */
 const PutEncryptionConfigRequest * PutEncryptionConfigResponse::request() const
 {
-    Q_D(const PutEncryptionConfigResponse);
-    return static_cast<const PutEncryptionConfigRequest *>(d->request);
+    return static_cast<const PutEncryptionConfigRequest *>(XRayResponse::request());
 }
 
 /*!

@@ -66,8 +66,7 @@ DescribeEndpointSettingsResponse::DescribeEndpointSettingsResponse(
  */
 const DescribeEndpointSettingsRequest * DescribeEndpointSettingsResponse::request() const
 {
-    Q_D(const DescribeEndpointSettingsResponse);
-    return static_cast<const DescribeEndpointSettingsRequest *>(d->request);
+    return static_cast<const DescribeEndpointSettingsRequest *>(DatabaseMigrationServiceResponse::request());
 }
 
 /*!

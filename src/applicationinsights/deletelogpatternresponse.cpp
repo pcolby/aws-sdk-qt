@@ -68,8 +68,7 @@ DeleteLogPatternResponse::DeleteLogPatternResponse(
  */
 const DeleteLogPatternRequest * DeleteLogPatternResponse::request() const
 {
-    Q_D(const DeleteLogPatternResponse);
-    return static_cast<const DeleteLogPatternRequest *>(d->request);
+    return static_cast<const DeleteLogPatternRequest *>(ApplicationInsightsResponse::request());
 }
 
 /*!

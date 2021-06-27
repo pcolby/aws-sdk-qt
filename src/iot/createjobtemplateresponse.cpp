@@ -82,8 +82,7 @@ CreateJobTemplateResponse::CreateJobTemplateResponse(
  */
 const CreateJobTemplateRequest * CreateJobTemplateResponse::request() const
 {
-    Q_D(const CreateJobTemplateResponse);
-    return static_cast<const CreateJobTemplateRequest *>(d->request);
+    return static_cast<const CreateJobTemplateRequest *>(IoTResponse::request());
 }
 
 /*!

@@ -66,8 +66,7 @@ DeleteReplicationTaskAssessmentRunResponse::DeleteReplicationTaskAssessmentRunRe
  */
 const DeleteReplicationTaskAssessmentRunRequest * DeleteReplicationTaskAssessmentRunResponse::request() const
 {
-    Q_D(const DeleteReplicationTaskAssessmentRunResponse);
-    return static_cast<const DeleteReplicationTaskAssessmentRunRequest *>(d->request);
+    return static_cast<const DeleteReplicationTaskAssessmentRunRequest *>(DatabaseMigrationServiceResponse::request());
 }
 
 /*!

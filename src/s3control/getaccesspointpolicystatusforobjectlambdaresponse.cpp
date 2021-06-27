@@ -56,8 +56,7 @@ GetAccessPointPolicyStatusForObjectLambdaResponse::GetAccessPointPolicyStatusFor
  */
 const GetAccessPointPolicyStatusForObjectLambdaRequest * GetAccessPointPolicyStatusForObjectLambdaResponse::request() const
 {
-    Q_D(const GetAccessPointPolicyStatusForObjectLambdaResponse);
-    return static_cast<const GetAccessPointPolicyStatusForObjectLambdaRequest *>(d->request);
+    return static_cast<const GetAccessPointPolicyStatusForObjectLambdaRequest *>(S3ControlResponse::request());
 }
 
 /*!

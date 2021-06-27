@@ -58,8 +58,7 @@ ListRegistriesResponse::ListRegistriesResponse(
  */
 const ListRegistriesRequest * ListRegistriesResponse::request() const
 {
-    Q_D(const ListRegistriesResponse);
-    return static_cast<const ListRegistriesRequest *>(d->request);
+    return static_cast<const ListRegistriesRequest *>(GlueResponse::request());
 }
 
 /*!

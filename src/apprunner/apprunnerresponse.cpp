@@ -37,7 +37,7 @@ namespace AppRunner {
  * Constructs a AppRunnerResponse object with parent \a parent.
  */
 AppRunnerResponse::AppRunnerResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new AppRunnerResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new AppRunnerResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ AppRunnerResponse::AppRunnerResponse(QObject * const parent)
  * implementation that inherits from AppRunnerResponsePrivate.
  */
 AppRunnerResponse::AppRunnerResponse(AppRunnerResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void AppRunnerResponse::parseFailure(QIODevice &response)
  * Constructs a AppRunnerResponsePrivate object with public implementation \a q.
  */
 AppRunnerResponsePrivate::AppRunnerResponsePrivate(
-    AppRunnerResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    AppRunnerResponse * const q) : q_ptr(q)
 {
 
 }

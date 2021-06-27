@@ -66,8 +66,7 @@ ConfirmForgotPasswordResponse::ConfirmForgotPasswordResponse(
  */
 const ConfirmForgotPasswordRequest * ConfirmForgotPasswordResponse::request() const
 {
-    Q_D(const ConfirmForgotPasswordResponse);
-    return static_cast<const ConfirmForgotPasswordRequest *>(d->request);
+    return static_cast<const ConfirmForgotPasswordRequest *>(CognitoIdentityProviderResponse::request());
 }
 
 /*!

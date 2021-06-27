@@ -65,8 +65,7 @@ DescribeIdentityProviderConfigResponse::DescribeIdentityProviderConfigResponse(
  */
 const DescribeIdentityProviderConfigRequest * DescribeIdentityProviderConfigResponse::request() const
 {
-    Q_D(const DescribeIdentityProviderConfigResponse);
-    return static_cast<const DescribeIdentityProviderConfigRequest *>(d->request);
+    return static_cast<const DescribeIdentityProviderConfigRequest *>(EksResponse::request());
 }
 
 /*!

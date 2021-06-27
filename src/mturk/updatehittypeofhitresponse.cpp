@@ -55,8 +55,7 @@ UpdateHITTypeOfHITResponse::UpdateHITTypeOfHITResponse(
  */
 const UpdateHITTypeOfHITRequest * UpdateHITTypeOfHITResponse::request() const
 {
-    Q_D(const UpdateHITTypeOfHITResponse);
-    return static_cast<const UpdateHITTypeOfHITRequest *>(d->request);
+    return static_cast<const UpdateHITTypeOfHITRequest *>(MTurkResponse::request());
 }
 
 /*!

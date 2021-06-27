@@ -82,8 +82,7 @@ ListAuthorizersResponse::ListAuthorizersResponse(
  */
 const ListAuthorizersRequest * ListAuthorizersResponse::request() const
 {
-    Q_D(const ListAuthorizersResponse);
-    return static_cast<const ListAuthorizersRequest *>(d->request);
+    return static_cast<const ListAuthorizersRequest *>(IoTResponse::request());
 }
 
 /*!

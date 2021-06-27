@@ -79,8 +79,7 @@ DeleteUseCaseResponse::DeleteUseCaseResponse(
  */
 const DeleteUseCaseRequest * DeleteUseCaseResponse::request() const
 {
-    Q_D(const DeleteUseCaseResponse);
-    return static_cast<const DeleteUseCaseRequest *>(d->request);
+    return static_cast<const DeleteUseCaseRequest *>(ConnectResponse::request());
 }
 
 /*!

@@ -161,8 +161,7 @@ CreateLayerResponse::CreateLayerResponse(
  */
 const CreateLayerRequest * CreateLayerResponse::request() const
 {
-    Q_D(const CreateLayerResponse);
-    return static_cast<const CreateLayerRequest *>(d->request);
+    return static_cast<const CreateLayerRequest *>(OpsWorksResponse::request());
 }
 
 /*!

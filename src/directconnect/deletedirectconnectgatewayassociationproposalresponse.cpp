@@ -61,8 +61,7 @@ DeleteDirectConnectGatewayAssociationProposalResponse::DeleteDirectConnectGatewa
  */
 const DeleteDirectConnectGatewayAssociationProposalRequest * DeleteDirectConnectGatewayAssociationProposalResponse::request() const
 {
-    Q_D(const DeleteDirectConnectGatewayAssociationProposalResponse);
-    return static_cast<const DeleteDirectConnectGatewayAssociationProposalRequest *>(d->request);
+    return static_cast<const DeleteDirectConnectGatewayAssociationProposalRequest *>(DirectConnectResponse::request());
 }
 
 /*!

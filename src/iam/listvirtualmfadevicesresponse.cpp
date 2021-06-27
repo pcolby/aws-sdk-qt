@@ -62,8 +62,7 @@ ListVirtualMFADevicesResponse::ListVirtualMFADevicesResponse(
  */
 const ListVirtualMFADevicesRequest * ListVirtualMFADevicesResponse::request() const
 {
-    Q_D(const ListVirtualMFADevicesResponse);
-    return static_cast<const ListVirtualMFADevicesRequest *>(d->request);
+    return static_cast<const ListVirtualMFADevicesRequest *>(IamResponse::request());
 }
 
 /*!

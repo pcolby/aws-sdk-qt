@@ -217,6 +217,12 @@ public slots:
     UpdateWirelessDeviceResponse * updateWirelessDevice(const UpdateWirelessDeviceRequest &request);
     UpdateWirelessGatewayResponse * updateWirelessGateway(const UpdateWirelessGatewayRequest &request);
 
+protected:
+    /// @cond internal
+    IoTWirelessClientPrivate * const d_ptr; ///< Internal d-pointer.
+    IoTWirelessClient(IoTWirelessClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(IoTWirelessClient)
     Q_DISABLE_COPY(IoTWirelessClient)

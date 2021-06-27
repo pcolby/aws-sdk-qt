@@ -84,8 +84,7 @@ CreateNotificationSubscriptionResponse::CreateNotificationSubscriptionResponse(
  */
 const CreateNotificationSubscriptionRequest * CreateNotificationSubscriptionResponse::request() const
 {
-    Q_D(const CreateNotificationSubscriptionResponse);
-    return static_cast<const CreateNotificationSubscriptionRequest *>(d->request);
+    return static_cast<const CreateNotificationSubscriptionRequest *>(WorkDocsResponse::request());
 }
 
 /*!

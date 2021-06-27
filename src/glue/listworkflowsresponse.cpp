@@ -58,8 +58,7 @@ ListWorkflowsResponse::ListWorkflowsResponse(
  */
 const ListWorkflowsRequest * ListWorkflowsResponse::request() const
 {
-    Q_D(const ListWorkflowsResponse);
-    return static_cast<const ListWorkflowsRequest *>(d->request);
+    return static_cast<const ListWorkflowsRequest *>(GlueResponse::request());
 }
 
 /*!

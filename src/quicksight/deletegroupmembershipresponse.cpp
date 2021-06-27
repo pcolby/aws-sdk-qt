@@ -60,8 +60,7 @@ DeleteGroupMembershipResponse::DeleteGroupMembershipResponse(
  */
 const DeleteGroupMembershipRequest * DeleteGroupMembershipResponse::request() const
 {
-    Q_D(const DeleteGroupMembershipResponse);
-    return static_cast<const DeleteGroupMembershipRequest *>(d->request);
+    return static_cast<const DeleteGroupMembershipRequest *>(QuickSightResponse::request());
 }
 
 /*!

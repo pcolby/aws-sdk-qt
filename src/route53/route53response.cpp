@@ -37,7 +37,7 @@ namespace Route53 {
  * Constructs a Route53Response object with parent \a parent.
  */
 Route53Response::Route53Response(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new Route53ResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new Route53ResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ Route53Response::Route53Response(QObject * const parent)
  * implementation that inherits from Route53ResponsePrivate.
  */
 Route53Response::Route53Response(Route53ResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void Route53Response::parseFailure(QIODevice &response)
  * Constructs a Route53ResponsePrivate object with public implementation \a q.
  */
 Route53ResponsePrivate::Route53ResponsePrivate(
-    Route53Response * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    Route53Response * const q) : q_ptr(q)
 {
 
 }

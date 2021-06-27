@@ -62,8 +62,7 @@ PutImageTagMutabilityResponse::PutImageTagMutabilityResponse(
  */
 const PutImageTagMutabilityRequest * PutImageTagMutabilityResponse::request() const
 {
-    Q_D(const PutImageTagMutabilityResponse);
-    return static_cast<const PutImageTagMutabilityRequest *>(d->request);
+    return static_cast<const PutImageTagMutabilityRequest *>(EcrResponse::request());
 }
 
 /*!

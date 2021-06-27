@@ -20,15 +20,12 @@
 #ifndef QTAWS_APPLICATIONDISCOVERYSERVICEREQUEST_P_H
 #define QTAWS_APPLICATIONDISCOVERYSERVICEREQUEST_P_H
 
-#include "core/awsabstractrequest_p.h"
-#include "applicationdiscoveryservicerequest.h"
-
 namespace QtAws {
 namespace ApplicationDiscoveryService {
 
 class ApplicationDiscoveryServiceRequest;
 
-class ApplicationDiscoveryServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
+class ApplicationDiscoveryServiceRequestPrivate {
 
 public:
     ApplicationDiscoveryServiceRequest::Action action; ///< ApplicationDiscoveryService action to be performed.
@@ -39,6 +36,9 @@ public:
     ApplicationDiscoveryServiceRequestPrivate(const ApplicationDiscoveryServiceRequestPrivate &other, ApplicationDiscoveryServiceRequest * const q);
 
     static QString toString(const ApplicationDiscoveryServiceRequest::Action &action);
+
+protected:
+    ApplicationDiscoveryServiceRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ApplicationDiscoveryServiceRequest)

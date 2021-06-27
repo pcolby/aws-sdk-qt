@@ -63,8 +63,7 @@ AttachTypedLinkResponse::AttachTypedLinkResponse(
  */
 const AttachTypedLinkRequest * AttachTypedLinkResponse::request() const
 {
-    Q_D(const AttachTypedLinkResponse);
-    return static_cast<const AttachTypedLinkRequest *>(d->request);
+    return static_cast<const AttachTypedLinkRequest *>(CloudDirectoryResponse::request());
 }
 
 /*!

@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    Ec2ResponsePrivate * const d_ptr; ///< Internal d-pointer.
     Ec2Response(Ec2ResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

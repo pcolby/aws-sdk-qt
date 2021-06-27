@@ -55,8 +55,7 @@ RemoveFlowSourceResponse::RemoveFlowSourceResponse(
  */
 const RemoveFlowSourceRequest * RemoveFlowSourceResponse::request() const
 {
-    Q_D(const RemoveFlowSourceResponse);
-    return static_cast<const RemoveFlowSourceRequest *>(d->request);
+    return static_cast<const RemoveFlowSourceRequest *>(MediaConnectResponse::request());
 }
 
 /*!

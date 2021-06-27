@@ -73,8 +73,7 @@ GetUsageStatisticsResponse::GetUsageStatisticsResponse(
  */
 const GetUsageStatisticsRequest * GetUsageStatisticsResponse::request() const
 {
-    Q_D(const GetUsageStatisticsResponse);
-    return static_cast<const GetUsageStatisticsRequest *>(d->request);
+    return static_cast<const GetUsageStatisticsRequest *>(GuardDutyResponse::request());
 }
 
 /*!

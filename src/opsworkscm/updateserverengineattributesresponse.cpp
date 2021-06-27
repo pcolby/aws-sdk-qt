@@ -134,8 +134,7 @@ UpdateServerEngineAttributesResponse::UpdateServerEngineAttributesResponse(
  */
 const UpdateServerEngineAttributesRequest * UpdateServerEngineAttributesResponse::request() const
 {
-    Q_D(const UpdateServerEngineAttributesResponse);
-    return static_cast<const UpdateServerEngineAttributesRequest *>(d->request);
+    return static_cast<const UpdateServerEngineAttributesRequest *>(OpsWorksCMResponse::request());
 }
 
 /*!

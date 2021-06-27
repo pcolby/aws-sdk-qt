@@ -20,19 +20,20 @@
 #ifndef QTAWS_SIMPLEDBCLIENT_P_H
 #define QTAWS_SIMPLEDBCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace SimpleDB {
 
 class SimpleDBClient;
 
-class SimpleDBClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class SimpleDBClientPrivate {
 
 public:
     SimpleDBClientPrivate(SimpleDBClient * const q);
+
+protected:
+    SimpleDBClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SimpleDBClient)

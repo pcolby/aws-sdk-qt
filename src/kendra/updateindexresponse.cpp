@@ -56,8 +56,7 @@ UpdateIndexResponse::UpdateIndexResponse(
  */
 const UpdateIndexRequest * UpdateIndexResponse::request() const
 {
-    Q_D(const UpdateIndexResponse);
-    return static_cast<const UpdateIndexRequest *>(d->request);
+    return static_cast<const UpdateIndexRequest *>(kendraResponse::request());
 }
 
 /*!

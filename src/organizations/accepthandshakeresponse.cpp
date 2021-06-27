@@ -141,8 +141,7 @@ AcceptHandshakeResponse::AcceptHandshakeResponse(
  */
 const AcceptHandshakeRequest * AcceptHandshakeResponse::request() const
 {
-    Q_D(const AcceptHandshakeResponse);
-    return static_cast<const AcceptHandshakeRequest *>(d->request);
+    return static_cast<const AcceptHandshakeRequest *>(OrganizationsResponse::request());
 }
 
 /*!

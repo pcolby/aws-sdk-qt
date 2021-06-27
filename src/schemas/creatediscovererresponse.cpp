@@ -56,8 +56,7 @@ CreateDiscovererResponse::CreateDiscovererResponse(
  */
 const CreateDiscovererRequest * CreateDiscovererResponse::request() const
 {
-    Q_D(const CreateDiscovererResponse);
-    return static_cast<const CreateDiscovererRequest *>(d->request);
+    return static_cast<const CreateDiscovererRequest *>(SchemasResponse::request());
 }
 
 /*!

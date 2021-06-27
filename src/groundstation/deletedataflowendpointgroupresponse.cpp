@@ -58,8 +58,7 @@ DeleteDataflowEndpointGroupResponse::DeleteDataflowEndpointGroupResponse(
  */
 const DeleteDataflowEndpointGroupRequest * DeleteDataflowEndpointGroupResponse::request() const
 {
-    Q_D(const DeleteDataflowEndpointGroupResponse);
-    return static_cast<const DeleteDataflowEndpointGroupRequest *>(d->request);
+    return static_cast<const DeleteDataflowEndpointGroupRequest *>(GroundStationResponse::request());
 }
 
 /*!

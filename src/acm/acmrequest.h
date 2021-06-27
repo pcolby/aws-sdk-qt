@@ -71,6 +71,7 @@ public:
 
 protected:
     /// @cond internal
+    AcmRequestPrivate * const d_ptr; ///< Internal d-pointer.
     AcmRequest(AcmRequestPrivate * const d);
     /// @endcond
 

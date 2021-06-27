@@ -86,6 +86,7 @@ public:
 
 protected:
     /// @cond internal
+    KafkaRequestPrivate * const d_ptr; ///< Internal d-pointer.
     KafkaRequest(KafkaRequestPrivate * const d);
     /// @endcond
 

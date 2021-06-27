@@ -127,6 +127,7 @@ public:
 
 protected:
     /// @cond internal
+    SesRequestPrivate * const d_ptr; ///< Internal d-pointer.
     SesRequest(SesRequestPrivate * const d);
     /// @endcond
 

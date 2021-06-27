@@ -98,8 +98,7 @@ UpdateDocumentDefaultVersionResponse::UpdateDocumentDefaultVersionResponse(
  */
 const UpdateDocumentDefaultVersionRequest * UpdateDocumentDefaultVersionResponse::request() const
 {
-    Q_D(const UpdateDocumentDefaultVersionResponse);
-    return static_cast<const UpdateDocumentDefaultVersionRequest *>(d->request);
+    return static_cast<const UpdateDocumentDefaultVersionRequest *>(SsmResponse::request());
 }
 
 /*!

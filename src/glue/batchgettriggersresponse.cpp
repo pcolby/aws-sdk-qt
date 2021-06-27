@@ -58,8 +58,7 @@ BatchGetTriggersResponse::BatchGetTriggersResponse(
  */
 const BatchGetTriggersRequest * BatchGetTriggersResponse::request() const
 {
-    Q_D(const BatchGetTriggersResponse);
-    return static_cast<const BatchGetTriggersRequest *>(d->request);
+    return static_cast<const BatchGetTriggersRequest *>(GlueResponse::request());
 }
 
 /*!

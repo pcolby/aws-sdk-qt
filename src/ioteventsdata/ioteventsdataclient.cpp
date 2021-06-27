@@ -90,16 +90,16 @@ IoTEventsDataClient::IoTEventsDataClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new IoTEventsDataClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-10-23"),
+    QStringLiteral("data.iotevents"),
+    QStringLiteral("AWS IoT Events Data"),
+    QStringLiteral("ioteventsdata"),
+    parent), d_ptr(new IoTEventsDataClientPrivate(this))
 {
-    Q_D(IoTEventsDataClient);
-    d->apiVersion = QStringLiteral("2018-10-23");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("data.iotevents");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS IoT Events Data");
-    d->serviceName = QStringLiteral("ioteventsdata");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -118,16 +118,16 @@ IoTEventsDataClient::IoTEventsDataClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new IoTEventsDataClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2018-10-23"),
+    QStringLiteral("data.iotevents"),
+    QStringLiteral("AWS IoT Events Data"),
+    QStringLiteral("ioteventsdata"),
+    parent), d_ptr(new IoTEventsDataClientPrivate(this))
 {
-    Q_D(IoTEventsDataClient);
-    d->apiVersion = QStringLiteral("2018-10-23");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("data.iotevents");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS IoT Events Data");
-    d->serviceName = QStringLiteral("ioteventsdata");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -289,10 +289,9 @@ ListDetectorsResponse * IoTEventsDataClient::listDetectors(const ListDetectorsRe
 /*!
  * Constructs a IoTEventsDataClientPrivate object with public implementation \a q.
  */
-IoTEventsDataClientPrivate::IoTEventsDataClientPrivate(IoTEventsDataClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+IoTEventsDataClientPrivate::IoTEventsDataClientPrivate(IoTEventsDataClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace IoTEventsData

@@ -79,8 +79,7 @@ UpdateQueueMaxContactsResponse::UpdateQueueMaxContactsResponse(
  */
 const UpdateQueueMaxContactsRequest * UpdateQueueMaxContactsResponse::request() const
 {
-    Q_D(const UpdateQueueMaxContactsResponse);
-    return static_cast<const UpdateQueueMaxContactsRequest *>(d->request);
+    return static_cast<const UpdateQueueMaxContactsRequest *>(ConnectResponse::request());
 }
 
 /*!

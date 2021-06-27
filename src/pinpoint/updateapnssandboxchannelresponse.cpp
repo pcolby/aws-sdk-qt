@@ -56,8 +56,7 @@ UpdateApnsSandboxChannelResponse::UpdateApnsSandboxChannelResponse(
  */
 const UpdateApnsSandboxChannelRequest * UpdateApnsSandboxChannelResponse::request() const
 {
-    Q_D(const UpdateApnsSandboxChannelResponse);
-    return static_cast<const UpdateApnsSandboxChannelRequest *>(d->request);
+    return static_cast<const UpdateApnsSandboxChannelRequest *>(PinpointResponse::request());
 }
 
 /*!

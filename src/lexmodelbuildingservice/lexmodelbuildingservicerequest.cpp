@@ -81,7 +81,7 @@ namespace LexModelBuildingService {
  * Constructs a LexModelBuildingServiceRequest object for LexModelBuildingService \a action.
  */
 LexModelBuildingServiceRequest::LexModelBuildingServiceRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new LexModelBuildingServiceRequestPrivate(action, this))
+    : d_ptr(new LexModelBuildingServiceRequestPrivate(action, this))
 {
 
 }
@@ -90,7 +90,8 @@ LexModelBuildingServiceRequest::LexModelBuildingServiceRequest(const Action acti
  * Constructs a copy of \a other.
  */
 LexModelBuildingServiceRequest::LexModelBuildingServiceRequest(const LexModelBuildingServiceRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new LexModelBuildingServiceRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new LexModelBuildingServiceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +114,7 @@ LexModelBuildingServiceRequest& LexModelBuildingServiceRequest::operator=(const 
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from LexModelBuildingServiceRequestPrivate.
  */
-LexModelBuildingServiceRequest::LexModelBuildingServiceRequest(LexModelBuildingServiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+LexModelBuildingServiceRequest::LexModelBuildingServiceRequest(LexModelBuildingServiceRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -282,7 +283,7 @@ QNetworkRequest LexModelBuildingServiceRequest::unsignedRequest(const QUrl &endp
  * with public implementation \a q.
  */
 LexModelBuildingServiceRequestPrivate::LexModelBuildingServiceRequestPrivate(const LexModelBuildingServiceRequest::Action action, LexModelBuildingServiceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -297,8 +298,8 @@ LexModelBuildingServiceRequestPrivate::LexModelBuildingServiceRequestPrivate(con
  */
 LexModelBuildingServiceRequestPrivate::LexModelBuildingServiceRequestPrivate(const LexModelBuildingServiceRequestPrivate &other,
                                      LexModelBuildingServiceRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

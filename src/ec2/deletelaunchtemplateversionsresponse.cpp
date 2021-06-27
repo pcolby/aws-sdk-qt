@@ -87,8 +87,7 @@ DeleteLaunchTemplateVersionsResponse::DeleteLaunchTemplateVersionsResponse(
  */
 const DeleteLaunchTemplateVersionsRequest * DeleteLaunchTemplateVersionsResponse::request() const
 {
-    Q_D(const DeleteLaunchTemplateVersionsResponse);
-    return static_cast<const DeleteLaunchTemplateVersionsRequest *>(d->request);
+    return static_cast<const DeleteLaunchTemplateVersionsRequest *>(Ec2Response::request());
 }
 
 /*!

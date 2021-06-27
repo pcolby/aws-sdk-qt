@@ -82,8 +82,7 @@ DetachThingPrincipalResponse::DetachThingPrincipalResponse(
  */
 const DetachThingPrincipalRequest * DetachThingPrincipalResponse::request() const
 {
-    Q_D(const DetachThingPrincipalResponse);
-    return static_cast<const DetachThingPrincipalRequest *>(d->request);
+    return static_cast<const DetachThingPrincipalRequest *>(IoTResponse::request());
 }
 
 /*!

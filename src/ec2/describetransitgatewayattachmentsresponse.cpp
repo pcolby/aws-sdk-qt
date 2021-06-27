@@ -87,8 +87,7 @@ DescribeTransitGatewayAttachmentsResponse::DescribeTransitGatewayAttachmentsResp
  */
 const DescribeTransitGatewayAttachmentsRequest * DescribeTransitGatewayAttachmentsResponse::request() const
 {
-    Q_D(const DescribeTransitGatewayAttachmentsResponse);
-    return static_cast<const DescribeTransitGatewayAttachmentsRequest *>(d->request);
+    return static_cast<const DescribeTransitGatewayAttachmentsRequest *>(Ec2Response::request());
 }
 
 /*!

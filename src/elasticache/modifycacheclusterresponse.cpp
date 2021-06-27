@@ -69,8 +69,7 @@ ModifyCacheClusterResponse::ModifyCacheClusterResponse(
  */
 const ModifyCacheClusterRequest * ModifyCacheClusterResponse::request() const
 {
-    Q_D(const ModifyCacheClusterResponse);
-    return static_cast<const ModifyCacheClusterRequest *>(d->request);
+    return static_cast<const ModifyCacheClusterRequest *>(ElastiCacheResponse::request());
 }
 
 /*!

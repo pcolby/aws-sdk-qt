@@ -74,8 +74,7 @@ DescribeAccountOverviewResponse::DescribeAccountOverviewResponse(
  */
 const DescribeAccountOverviewRequest * DescribeAccountOverviewResponse::request() const
 {
-    Q_D(const DescribeAccountOverviewResponse);
-    return static_cast<const DescribeAccountOverviewRequest *>(d->request);
+    return static_cast<const DescribeAccountOverviewRequest *>(DevOpsGuruResponse::request());
 }
 
 /*!

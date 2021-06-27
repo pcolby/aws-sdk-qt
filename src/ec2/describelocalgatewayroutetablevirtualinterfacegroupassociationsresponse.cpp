@@ -87,8 +87,7 @@ DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsResponse::Describ
  */
 const DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequest * DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsResponse::request() const
 {
-    Q_D(const DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsResponse);
-    return static_cast<const DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequest *>(d->request);
+    return static_cast<const DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequest *>(Ec2Response::request());
 }
 
 /*!

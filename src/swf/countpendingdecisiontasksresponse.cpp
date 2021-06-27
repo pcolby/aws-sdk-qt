@@ -71,8 +71,7 @@ CountPendingDecisionTasksResponse::CountPendingDecisionTasksResponse(
  */
 const CountPendingDecisionTasksRequest * CountPendingDecisionTasksResponse::request() const
 {
-    Q_D(const CountPendingDecisionTasksResponse);
-    return static_cast<const CountPendingDecisionTasksRequest *>(d->request);
+    return static_cast<const CountPendingDecisionTasksRequest *>(SwfResponse::request());
 }
 
 /*!

@@ -87,8 +87,7 @@ CreateNetworkAclResponse::CreateNetworkAclResponse(
  */
 const CreateNetworkAclRequest * CreateNetworkAclResponse::request() const
 {
-    Q_D(const CreateNetworkAclResponse);
-    return static_cast<const CreateNetworkAclRequest *>(d->request);
+    return static_cast<const CreateNetworkAclRequest *>(Ec2Response::request());
 }
 
 /*!

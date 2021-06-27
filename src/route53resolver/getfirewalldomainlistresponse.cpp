@@ -94,8 +94,7 @@ GetFirewallDomainListResponse::GetFirewallDomainListResponse(
  */
 const GetFirewallDomainListRequest * GetFirewallDomainListResponse::request() const
 {
-    Q_D(const GetFirewallDomainListResponse);
-    return static_cast<const GetFirewallDomainListRequest *>(d->request);
+    return static_cast<const GetFirewallDomainListRequest *>(Route53ResolverResponse::request());
 }
 
 /*!

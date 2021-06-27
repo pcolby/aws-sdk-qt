@@ -99,8 +99,7 @@ UpdateGroupQueryResponse::UpdateGroupQueryResponse(
  */
 const UpdateGroupQueryRequest * UpdateGroupQueryResponse::request() const
 {
-    Q_D(const UpdateGroupQueryResponse);
-    return static_cast<const UpdateGroupQueryRequest *>(d->request);
+    return static_cast<const UpdateGroupQueryRequest *>(ResourceGroupsResponse::request());
 }
 
 /*!

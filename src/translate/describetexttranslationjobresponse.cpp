@@ -56,8 +56,7 @@ DescribeTextTranslationJobResponse::DescribeTextTranslationJobResponse(
  */
 const DescribeTextTranslationJobRequest * DescribeTextTranslationJobResponse::request() const
 {
-    Q_D(const DescribeTextTranslationJobResponse);
-    return static_cast<const DescribeTextTranslationJobRequest *>(d->request);
+    return static_cast<const DescribeTextTranslationJobRequest *>(TranslateResponse::request());
 }
 
 /*!

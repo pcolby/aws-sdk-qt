@@ -72,8 +72,7 @@ DeregisterContainerInstanceResponse::DeregisterContainerInstanceResponse(
  */
 const DeregisterContainerInstanceRequest * DeregisterContainerInstanceResponse::request() const
 {
-    Q_D(const DeregisterContainerInstanceResponse);
-    return static_cast<const DeregisterContainerInstanceRequest *>(d->request);
+    return static_cast<const DeregisterContainerInstanceRequest *>(EcsResponse::request());
 }
 
 /*!

@@ -58,8 +58,7 @@ DescribeRecipeResponse::DescribeRecipeResponse(
  */
 const DescribeRecipeRequest * DescribeRecipeResponse::request() const
 {
-    Q_D(const DescribeRecipeResponse);
-    return static_cast<const DescribeRecipeRequest *>(d->request);
+    return static_cast<const DescribeRecipeRequest *>(GlueDataBrewResponse::request());
 }
 
 /*!

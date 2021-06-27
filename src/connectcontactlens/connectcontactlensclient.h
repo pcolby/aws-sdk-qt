@@ -49,6 +49,12 @@ public:
 public slots:
     ListRealtimeContactAnalysisSegmentsResponse * listRealtimeContactAnalysisSegments(const ListRealtimeContactAnalysisSegmentsRequest &request);
 
+protected:
+    /// @cond internal
+    ConnectContactLensClientPrivate * const d_ptr; ///< Internal d-pointer.
+    ConnectContactLensClient(ConnectContactLensClientPrivate * const d);
+    /// @endcond
+
 private:
     Q_DECLARE_PRIVATE(ConnectContactLensClient)
     Q_DISABLE_COPY(ConnectContactLensClient)

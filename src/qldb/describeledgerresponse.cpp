@@ -56,8 +56,7 @@ DescribeLedgerResponse::DescribeLedgerResponse(
  */
 const DescribeLedgerRequest * DescribeLedgerResponse::request() const
 {
-    Q_D(const DescribeLedgerResponse);
-    return static_cast<const DescribeLedgerRequest *>(d->request);
+    return static_cast<const DescribeLedgerRequest *>(QldbResponse::request());
 }
 
 /*!

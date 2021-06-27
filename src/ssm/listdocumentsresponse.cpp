@@ -98,8 +98,7 @@ ListDocumentsResponse::ListDocumentsResponse(
  */
 const ListDocumentsRequest * ListDocumentsResponse::request() const
 {
-    Q_D(const ListDocumentsResponse);
-    return static_cast<const ListDocumentsRequest *>(d->request);
+    return static_cast<const ListDocumentsRequest *>(SsmResponse::request());
 }
 
 /*!

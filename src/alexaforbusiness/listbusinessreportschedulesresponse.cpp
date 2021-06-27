@@ -62,8 +62,7 @@ ListBusinessReportSchedulesResponse::ListBusinessReportSchedulesResponse(
  */
 const ListBusinessReportSchedulesRequest * ListBusinessReportSchedulesResponse::request() const
 {
-    Q_D(const ListBusinessReportSchedulesResponse);
-    return static_cast<const ListBusinessReportSchedulesRequest *>(d->request);
+    return static_cast<const ListBusinessReportSchedulesRequest *>(AlexaForBusinessResponse::request());
 }
 
 /*!

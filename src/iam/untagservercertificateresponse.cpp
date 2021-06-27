@@ -62,8 +62,7 @@ UntagServerCertificateResponse::UntagServerCertificateResponse(
  */
 const UntagServerCertificateRequest * UntagServerCertificateResponse::request() const
 {
-    Q_D(const UntagServerCertificateResponse);
-    return static_cast<const UntagServerCertificateRequest *>(d->request);
+    return static_cast<const UntagServerCertificateRequest *>(IamResponse::request());
 }
 
 /*!

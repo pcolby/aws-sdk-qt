@@ -78,8 +78,7 @@ DescribeApiDestinationResponse::DescribeApiDestinationResponse(
  */
 const DescribeApiDestinationRequest * DescribeApiDestinationResponse::request() const
 {
-    Q_D(const DescribeApiDestinationResponse);
-    return static_cast<const DescribeApiDestinationRequest *>(d->request);
+    return static_cast<const DescribeApiDestinationRequest *>(EventBridgeResponse::request());
 }
 
 /*!

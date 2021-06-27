@@ -137,8 +137,7 @@ DescribeScalingPoliciesResponse::DescribeScalingPoliciesResponse(
  */
 const DescribeScalingPoliciesRequest * DescribeScalingPoliciesResponse::request() const
 {
-    Q_D(const DescribeScalingPoliciesResponse);
-    return static_cast<const DescribeScalingPoliciesRequest *>(d->request);
+    return static_cast<const DescribeScalingPoliciesRequest *>(ApplicationAutoScalingResponse::request());
 }
 
 /*!

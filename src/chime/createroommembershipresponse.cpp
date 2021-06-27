@@ -98,8 +98,7 @@ CreateRoomMembershipResponse::CreateRoomMembershipResponse(
  */
 const CreateRoomMembershipRequest * CreateRoomMembershipResponse::request() const
 {
-    Q_D(const CreateRoomMembershipResponse);
-    return static_cast<const CreateRoomMembershipRequest *>(d->request);
+    return static_cast<const CreateRoomMembershipRequest *>(ChimeResponse::request());
 }
 
 /*!

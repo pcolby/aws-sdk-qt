@@ -84,6 +84,7 @@ public:
 
 protected:
     /// @cond internal
+    Route53DomainsRequestPrivate * const d_ptr; ///< Internal d-pointer.
     Route53DomainsRequest(Route53DomainsRequestPrivate * const d);
     /// @endcond
 

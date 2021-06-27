@@ -98,8 +98,7 @@ UpdateControlResponse::UpdateControlResponse(
  */
 const UpdateControlRequest * UpdateControlResponse::request() const
 {
-    Q_D(const UpdateControlResponse);
-    return static_cast<const UpdateControlRequest *>(d->request);
+    return static_cast<const UpdateControlRequest *>(AuditManagerResponse::request());
 }
 
 /*!

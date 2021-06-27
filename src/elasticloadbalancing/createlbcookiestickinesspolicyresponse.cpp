@@ -83,8 +83,7 @@ CreateLBCookieStickinessPolicyResponse::CreateLBCookieStickinessPolicyResponse(
  */
 const CreateLBCookieStickinessPolicyRequest * CreateLBCookieStickinessPolicyResponse::request() const
 {
-    Q_D(const CreateLBCookieStickinessPolicyResponse);
-    return static_cast<const CreateLBCookieStickinessPolicyRequest *>(d->request);
+    return static_cast<const CreateLBCookieStickinessPolicyRequest *>(ElasticLoadBalancingResponse::request());
 }
 
 /*!

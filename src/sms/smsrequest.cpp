@@ -77,7 +77,7 @@ namespace SMS {
  * Constructs a SmsRequest object for SMS \a action.
  */
 SmsRequest::SmsRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new SmsRequestPrivate(action, this))
+    : d_ptr(new SmsRequestPrivate(action, this))
 {
 
 }
@@ -86,7 +86,8 @@ SmsRequest::SmsRequest(const Action action)
  * Constructs a copy of \a other.
  */
 SmsRequest::SmsRequest(const SmsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new SmsRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new SmsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -109,7 +110,7 @@ SmsRequest& SmsRequest::operator=(const SmsRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SmsRequestPrivate.
  */
-SmsRequest::SmsRequest(SmsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+SmsRequest::SmsRequest(SmsRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -278,7 +279,7 @@ QNetworkRequest SmsRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 SmsRequestPrivate::SmsRequestPrivate(const SmsRequest::Action action, SmsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -293,8 +294,8 @@ SmsRequestPrivate::SmsRequestPrivate(const SmsRequest::Action action, SmsRequest
  */
 SmsRequestPrivate::SmsRequestPrivate(const SmsRequestPrivate &other,
                                      SmsRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

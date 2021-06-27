@@ -98,8 +98,7 @@ ListAssessmentReportsResponse::ListAssessmentReportsResponse(
  */
 const ListAssessmentReportsRequest * ListAssessmentReportsResponse::request() const
 {
-    Q_D(const ListAssessmentReportsResponse);
-    return static_cast<const ListAssessmentReportsRequest *>(d->request);
+    return static_cast<const ListAssessmentReportsRequest *>(AuditManagerResponse::request());
 }
 
 /*!

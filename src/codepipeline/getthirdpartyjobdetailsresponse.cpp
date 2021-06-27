@@ -240,8 +240,7 @@ GetThirdPartyJobDetailsResponse::GetThirdPartyJobDetailsResponse(
  */
 const GetThirdPartyJobDetailsRequest * GetThirdPartyJobDetailsResponse::request() const
 {
-    Q_D(const GetThirdPartyJobDetailsResponse);
-    return static_cast<const GetThirdPartyJobDetailsRequest *>(d->request);
+    return static_cast<const GetThirdPartyJobDetailsRequest *>(CodePipelineResponse::request());
 }
 
 /*!

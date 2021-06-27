@@ -119,8 +119,7 @@ RestoreDBInstanceToPointInTimeResponse::RestoreDBInstanceToPointInTimeResponse(
  */
 const RestoreDBInstanceToPointInTimeRequest * RestoreDBInstanceToPointInTimeResponse::request() const
 {
-    Q_D(const RestoreDBInstanceToPointInTimeResponse);
-    return static_cast<const RestoreDBInstanceToPointInTimeRequest *>(d->request);
+    return static_cast<const RestoreDBInstanceToPointInTimeRequest *>(RdsResponse::request());
 }
 
 /*!

@@ -66,8 +66,7 @@ DescribeNamespaceResponse::DescribeNamespaceResponse(
  */
 const DescribeNamespaceRequest * DescribeNamespaceResponse::request() const
 {
-    Q_D(const DescribeNamespaceResponse);
-    return static_cast<const DescribeNamespaceRequest *>(d->request);
+    return static_cast<const DescribeNamespaceRequest *>(IoTThingsGraphResponse::request());
 }
 
 /*!

@@ -74,8 +74,7 @@ GetDisksResponse::GetDisksResponse(
  */
 const GetDisksRequest * GetDisksResponse::request() const
 {
-    Q_D(const GetDisksResponse);
-    return static_cast<const GetDisksRequest *>(d->request);
+    return static_cast<const GetDisksRequest *>(LightsailResponse::request());
 }
 
 /*!

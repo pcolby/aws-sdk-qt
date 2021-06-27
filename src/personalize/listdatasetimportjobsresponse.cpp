@@ -56,8 +56,7 @@ ListDatasetImportJobsResponse::ListDatasetImportJobsResponse(
  */
 const ListDatasetImportJobsRequest * ListDatasetImportJobsResponse::request() const
 {
-    Q_D(const ListDatasetImportJobsResponse);
-    return static_cast<const ListDatasetImportJobsRequest *>(d->request);
+    return static_cast<const ListDatasetImportJobsRequest *>(PersonalizeResponse::request());
 }
 
 /*!

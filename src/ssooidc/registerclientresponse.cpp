@@ -77,8 +77,7 @@ RegisterClientResponse::RegisterClientResponse(
  */
 const RegisterClientRequest * RegisterClientResponse::request() const
 {
-    Q_D(const RegisterClientResponse);
-    return static_cast<const RegisterClientRequest *>(d->request);
+    return static_cast<const RegisterClientRequest *>(SsooidcResponse::request());
 }
 
 /*!

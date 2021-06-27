@@ -68,8 +68,7 @@ UploadDocumentsResponse::UploadDocumentsResponse(
  */
 const UploadDocumentsRequest * UploadDocumentsResponse::request() const
 {
-    Q_D(const UploadDocumentsResponse);
-    return static_cast<const UploadDocumentsRequest *>(d->request);
+    return static_cast<const UploadDocumentsRequest *>(CloudSearchDomainResponse::request());
 }
 
 /*!

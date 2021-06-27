@@ -85,8 +85,7 @@ DescribeClusterDbRevisionsResponse::DescribeClusterDbRevisionsResponse(
  */
 const DescribeClusterDbRevisionsRequest * DescribeClusterDbRevisionsResponse::request() const
 {
-    Q_D(const DescribeClusterDbRevisionsResponse);
-    return static_cast<const DescribeClusterDbRevisionsRequest *>(d->request);
+    return static_cast<const DescribeClusterDbRevisionsRequest *>(RedshiftResponse::request());
 }
 
 /*!

@@ -74,8 +74,7 @@ UpdateLoadBalancerAttributeResponse::UpdateLoadBalancerAttributeResponse(
  */
 const UpdateLoadBalancerAttributeRequest * UpdateLoadBalancerAttributeResponse::request() const
 {
-    Q_D(const UpdateLoadBalancerAttributeResponse);
-    return static_cast<const UpdateLoadBalancerAttributeRequest *>(d->request);
+    return static_cast<const UpdateLoadBalancerAttributeRequest *>(LightsailResponse::request());
 }
 
 /*!

@@ -20,19 +20,20 @@
 #ifndef QTAWS_QLDBCLIENT_P_H
 #define QTAWS_QLDBCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace QLDB {
 
 class QldbClient;
 
-class QldbClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class QldbClientPrivate {
 
 public:
     QldbClientPrivate(QldbClient * const q);
+
+protected:
+    QldbClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(QldbClient)

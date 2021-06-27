@@ -75,7 +75,7 @@ namespace Shield {
  * Constructs a ShieldRequest object for Shield \a action.
  */
 ShieldRequest::ShieldRequest(const Action action)
-    : QtAws::Core::AwsAbstractRequest(new ShieldRequestPrivate(action, this))
+    : d_ptr(new ShieldRequestPrivate(action, this))
 {
 
 }
@@ -84,7 +84,8 @@ ShieldRequest::ShieldRequest(const Action action)
  * Constructs a copy of \a other.
  */
 ShieldRequest::ShieldRequest(const ShieldRequest &other)
-    : QtAws::Core::AwsAbstractRequest(new ShieldRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(*this),
+      d_ptr(new ShieldRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -107,7 +108,7 @@ ShieldRequest& ShieldRequest::operator=(const ShieldRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ShieldRequestPrivate.
  */
-ShieldRequest::ShieldRequest(ShieldRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
+ShieldRequest::ShieldRequest(ShieldRequestPrivate * const d) : d_ptr(d)
 {
 
 }
@@ -276,7 +277,7 @@ QNetworkRequest ShieldRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 ShieldRequestPrivate::ShieldRequestPrivate(const ShieldRequest::Action action, ShieldRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
 {
 
 }
@@ -291,8 +292,8 @@ ShieldRequestPrivate::ShieldRequestPrivate(const ShieldRequest::Action action, S
  */
 ShieldRequestPrivate::ShieldRequestPrivate(const ShieldRequestPrivate &other,
                                      ShieldRequest * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters)
+    : action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
 {
 
 }

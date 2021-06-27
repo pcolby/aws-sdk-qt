@@ -78,8 +78,7 @@ UpdateRegexPatternSetResponse::UpdateRegexPatternSetResponse(
  */
 const UpdateRegexPatternSetRequest * UpdateRegexPatternSetResponse::request() const
 {
-    Q_D(const UpdateRegexPatternSetResponse);
-    return static_cast<const UpdateRegexPatternSetRequest *>(d->request);
+    return static_cast<const UpdateRegexPatternSetRequest *>(WAFRegionalResponse::request());
 }
 
 /*!

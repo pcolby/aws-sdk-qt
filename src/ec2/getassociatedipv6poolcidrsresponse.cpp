@@ -87,8 +87,7 @@ GetAssociatedIpv6PoolCidrsResponse::GetAssociatedIpv6PoolCidrsResponse(
  */
 const GetAssociatedIpv6PoolCidrsRequest * GetAssociatedIpv6PoolCidrsResponse::request() const
 {
-    Q_D(const GetAssociatedIpv6PoolCidrsResponse);
-    return static_cast<const GetAssociatedIpv6PoolCidrsRequest *>(d->request);
+    return static_cast<const GetAssociatedIpv6PoolCidrsRequest *>(Ec2Response::request());
 }
 
 /*!

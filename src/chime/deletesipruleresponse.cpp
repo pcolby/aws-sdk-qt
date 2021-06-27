@@ -98,8 +98,7 @@ DeleteSipRuleResponse::DeleteSipRuleResponse(
  */
 const DeleteSipRuleRequest * DeleteSipRuleResponse::request() const
 {
-    Q_D(const DeleteSipRuleResponse);
-    return static_cast<const DeleteSipRuleRequest *>(d->request);
+    return static_cast<const DeleteSipRuleRequest *>(ChimeResponse::request());
 }
 
 /*!

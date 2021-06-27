@@ -66,8 +66,7 @@ GetSendQuotaResponse::GetSendQuotaResponse(
  */
 const GetSendQuotaRequest * GetSendQuotaResponse::request() const
 {
-    Q_D(const GetSendQuotaResponse);
-    return static_cast<const GetSendQuotaRequest *>(d->request);
+    return static_cast<const GetSendQuotaRequest *>(SesResponse::request());
 }
 
 /*!

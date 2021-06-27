@@ -70,8 +70,7 @@ DescribeFeatureGroupResponse::DescribeFeatureGroupResponse(
  */
 const DescribeFeatureGroupRequest * DescribeFeatureGroupResponse::request() const
 {
-    Q_D(const DescribeFeatureGroupResponse);
-    return static_cast<const DescribeFeatureGroupRequest *>(d->request);
+    return static_cast<const DescribeFeatureGroupRequest *>(SageMakerResponse::request());
 }
 
 /*!

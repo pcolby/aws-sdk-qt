@@ -59,8 +59,7 @@ UpdateLicenseManagerReportGeneratorResponse::UpdateLicenseManagerReportGenerator
  */
 const UpdateLicenseManagerReportGeneratorRequest * UpdateLicenseManagerReportGeneratorResponse::request() const
 {
-    Q_D(const UpdateLicenseManagerReportGeneratorResponse);
-    return static_cast<const UpdateLicenseManagerReportGeneratorRequest *>(d->request);
+    return static_cast<const UpdateLicenseManagerReportGeneratorRequest *>(LicenseManagerResponse::request());
 }
 
 /*!

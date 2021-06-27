@@ -56,8 +56,7 @@ UpdateWorkspaceAliasResponse::UpdateWorkspaceAliasResponse(
  */
 const UpdateWorkspaceAliasRequest * UpdateWorkspaceAliasResponse::request() const
 {
-    Q_D(const UpdateWorkspaceAliasResponse);
-    return static_cast<const UpdateWorkspaceAliasRequest *>(d->request);
+    return static_cast<const UpdateWorkspaceAliasRequest *>(PrometheusServiceResponse::request());
 }
 
 /*!

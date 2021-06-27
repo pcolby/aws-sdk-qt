@@ -67,8 +67,7 @@ ListAnalyzersResponse::ListAnalyzersResponse(
  */
 const ListAnalyzersRequest * ListAnalyzersResponse::request() const
 {
-    Q_D(const ListAnalyzersResponse);
-    return static_cast<const ListAnalyzersRequest *>(d->request);
+    return static_cast<const ListAnalyzersRequest *>(AccessAnalyzerResponse::request());
 }
 
 /*!

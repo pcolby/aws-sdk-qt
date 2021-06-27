@@ -98,8 +98,7 @@ ListDocumentMetadataHistoryResponse::ListDocumentMetadataHistoryResponse(
  */
 const ListDocumentMetadataHistoryRequest * ListDocumentMetadataHistoryResponse::request() const
 {
-    Q_D(const ListDocumentMetadataHistoryResponse);
-    return static_cast<const ListDocumentMetadataHistoryRequest *>(d->request);
+    return static_cast<const ListDocumentMetadataHistoryRequest *>(SsmResponse::request());
 }
 
 /*!

@@ -20,19 +20,20 @@
 #ifndef QTAWS_APPREGISTRYCLIENT_P_H
 #define QTAWS_APPREGISTRYCLIENT_P_H
 
-#include "core/awsabstractclient_p.h"
-
-class QNetworkAccessManager;
+#include <QtGlobal>
 
 namespace QtAws {
 namespace AppRegistry {
 
 class AppRegistryClient;
 
-class AppRegistryClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
+class AppRegistryClientPrivate {
 
 public:
     AppRegistryClientPrivate(AppRegistryClient * const q);
+
+protected:
+    AppRegistryClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AppRegistryClient)

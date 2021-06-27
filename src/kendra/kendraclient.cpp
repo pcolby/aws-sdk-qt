@@ -138,16 +138,16 @@ kendraClient::kendraClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new kendraClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-02-03"),
+    QStringLiteral("kendra"),
+    QStringLiteral("AWSKendraFrontendService"),
+    QStringLiteral("kendra"),
+    parent), d_ptr(new kendraClientPrivate(this))
 {
-    Q_D(kendraClient);
-    d->apiVersion = QStringLiteral("2019-02-03");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("kendra");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWSKendraFrontendService");
-    d->serviceName = QStringLiteral("kendra");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -166,16 +166,16 @@ kendraClient::kendraClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new kendraClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2019-02-03"),
+    QStringLiteral("kendra"),
+    QStringLiteral("AWSKendraFrontendService"),
+    QStringLiteral("kendra"),
+    parent), d_ptr(new kendraClientPrivate(this))
 {
-    Q_D(kendraClient);
-    d->apiVersion = QStringLiteral("2019-02-03");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("kendra");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWSKendraFrontendService");
-    d->serviceName = QStringLiteral("kendra");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -849,10 +849,9 @@ UpdateThesaurusResponse * kendraClient::updateThesaurus(const UpdateThesaurusReq
 /*!
  * Constructs a kendraClientPrivate object with public implementation \a q.
  */
-kendraClientPrivate::kendraClientPrivate(kendraClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+kendraClientPrivate::kendraClientPrivate(kendraClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace kendra

@@ -62,8 +62,7 @@ DeactivateMFADeviceResponse::DeactivateMFADeviceResponse(
  */
 const DeactivateMFADeviceRequest * DeactivateMFADeviceResponse::request() const
 {
-    Q_D(const DeactivateMFADeviceResponse);
-    return static_cast<const DeactivateMFADeviceRequest *>(d->request);
+    return static_cast<const DeactivateMFADeviceRequest *>(IamResponse::request());
 }
 
 /*!

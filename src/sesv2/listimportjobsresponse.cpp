@@ -88,8 +88,7 @@ ListImportJobsResponse::ListImportJobsResponse(
  */
 const ListImportJobsRequest * ListImportJobsResponse::request() const
 {
-    Q_D(const ListImportJobsResponse);
-    return static_cast<const ListImportJobsRequest *>(d->request);
+    return static_cast<const ListImportJobsRequest *>(Sesv2Response::request());
 }
 
 /*!

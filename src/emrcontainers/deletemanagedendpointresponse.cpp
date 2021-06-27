@@ -83,8 +83,7 @@ DeleteManagedEndpointResponse::DeleteManagedEndpointResponse(
  */
 const DeleteManagedEndpointRequest * DeleteManagedEndpointResponse::request() const
 {
-    Q_D(const DeleteManagedEndpointResponse);
-    return static_cast<const DeleteManagedEndpointRequest *>(d->request);
+    return static_cast<const DeleteManagedEndpointRequest *>(EMRContainersResponse::request());
 }
 
 /*!

@@ -56,8 +56,7 @@ CreateCampaignResponse::CreateCampaignResponse(
  */
 const CreateCampaignRequest * CreateCampaignResponse::request() const
 {
-    Q_D(const CreateCampaignResponse);
-    return static_cast<const CreateCampaignRequest *>(d->request);
+    return static_cast<const CreateCampaignRequest *>(PinpointResponse::request());
 }
 
 /*!

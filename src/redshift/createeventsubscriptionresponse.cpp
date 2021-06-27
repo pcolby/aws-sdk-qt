@@ -85,8 +85,7 @@ CreateEventSubscriptionResponse::CreateEventSubscriptionResponse(
  */
 const CreateEventSubscriptionRequest * CreateEventSubscriptionResponse::request() const
 {
-    Q_D(const CreateEventSubscriptionResponse);
-    return static_cast<const CreateEventSubscriptionRequest *>(d->request);
+    return static_cast<const CreateEventSubscriptionRequest *>(RedshiftResponse::request());
 }
 
 /*!

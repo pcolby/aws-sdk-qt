@@ -56,8 +56,7 @@ ListFacesResponse::ListFacesResponse(
  */
 const ListFacesRequest * ListFacesResponse::request() const
 {
-    Q_D(const ListFacesResponse);
-    return static_cast<const ListFacesRequest *>(d->request);
+    return static_cast<const ListFacesRequest *>(RekognitionResponse::request());
 }
 
 /*!

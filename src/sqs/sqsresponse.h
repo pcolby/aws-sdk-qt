@@ -36,6 +36,7 @@ public:
 
 protected:
     /// @cond internal
+    SqsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     SqsResponse(SqsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

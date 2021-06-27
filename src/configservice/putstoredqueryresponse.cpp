@@ -75,8 +75,7 @@ PutStoredQueryResponse::PutStoredQueryResponse(
  */
 const PutStoredQueryRequest * PutStoredQueryResponse::request() const
 {
-    Q_D(const PutStoredQueryResponse);
-    return static_cast<const PutStoredQueryRequest *>(d->request);
+    return static_cast<const PutStoredQueryRequest *>(ConfigServiceResponse::request());
 }
 
 /*!

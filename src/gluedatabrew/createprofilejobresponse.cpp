@@ -58,8 +58,7 @@ CreateProfileJobResponse::CreateProfileJobResponse(
  */
 const CreateProfileJobRequest * CreateProfileJobResponse::request() const
 {
-    Q_D(const CreateProfileJobResponse);
-    return static_cast<const CreateProfileJobRequest *>(d->request);
+    return static_cast<const CreateProfileJobRequest *>(GlueDataBrewResponse::request());
 }
 
 /*!

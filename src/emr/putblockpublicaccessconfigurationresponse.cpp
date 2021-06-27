@@ -58,8 +58,7 @@ PutBlockPublicAccessConfigurationResponse::PutBlockPublicAccessConfigurationResp
  */
 const PutBlockPublicAccessConfigurationRequest * PutBlockPublicAccessConfigurationResponse::request() const
 {
-    Q_D(const PutBlockPublicAccessConfigurationResponse);
-    return static_cast<const PutBlockPublicAccessConfigurationRequest *>(d->request);
+    return static_cast<const PutBlockPublicAccessConfigurationRequest *>(EmrResponse::request());
 }
 
 /*!

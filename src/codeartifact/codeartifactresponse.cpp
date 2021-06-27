@@ -37,7 +37,7 @@ namespace CodeArtifact {
  * Constructs a CodeArtifactResponse object with parent \a parent.
  */
 CodeArtifactResponse::CodeArtifactResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(new CodeArtifactResponsePrivate(this), parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new CodeArtifactResponsePrivate(this))
 {
 
 }
@@ -51,7 +51,7 @@ CodeArtifactResponse::CodeArtifactResponse(QObject * const parent)
  * implementation that inherits from CodeArtifactResponsePrivate.
  */
 CodeArtifactResponse::CodeArtifactResponse(CodeArtifactResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(d, parent)
+    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
 {
 
 }
@@ -87,7 +87,7 @@ void CodeArtifactResponse::parseFailure(QIODevice &response)
  * Constructs a CodeArtifactResponsePrivate object with public implementation \a q.
  */
 CodeArtifactResponsePrivate::CodeArtifactResponsePrivate(
-    CodeArtifactResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
+    CodeArtifactResponse * const q) : q_ptr(q)
 {
 
 }

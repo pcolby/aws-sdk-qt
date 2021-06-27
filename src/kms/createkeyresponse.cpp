@@ -154,8 +154,7 @@ CreateKeyResponse::CreateKeyResponse(
  */
 const CreateKeyRequest * CreateKeyResponse::request() const
 {
-    Q_D(const CreateKeyResponse);
-    return static_cast<const CreateKeyRequest *>(d->request);
+    return static_cast<const CreateKeyRequest *>(KmsResponse::request());
 }
 
 /*!

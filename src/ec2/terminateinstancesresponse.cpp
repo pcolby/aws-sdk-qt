@@ -87,8 +87,7 @@ TerminateInstancesResponse::TerminateInstancesResponse(
  */
 const TerminateInstancesRequest * TerminateInstancesResponse::request() const
 {
-    Q_D(const TerminateInstancesResponse);
-    return static_cast<const TerminateInstancesRequest *>(d->request);
+    return static_cast<const TerminateInstancesRequest *>(Ec2Response::request());
 }
 
 /*!

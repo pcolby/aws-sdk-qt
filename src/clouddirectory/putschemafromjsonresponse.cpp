@@ -63,8 +63,7 @@ PutSchemaFromJsonResponse::PutSchemaFromJsonResponse(
  */
 const PutSchemaFromJsonRequest * PutSchemaFromJsonResponse::request() const
 {
-    Q_D(const PutSchemaFromJsonResponse);
-    return static_cast<const PutSchemaFromJsonRequest *>(d->request);
+    return static_cast<const PutSchemaFromJsonRequest *>(CloudDirectoryResponse::request());
 }
 
 /*!

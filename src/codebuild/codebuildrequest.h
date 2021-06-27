@@ -100,6 +100,7 @@ public:
 
 protected:
     /// @cond internal
+    CodeBuildRequestPrivate * const d_ptr; ///< Internal d-pointer.
     CodeBuildRequest(CodeBuildRequestPrivate * const d);
     /// @endcond
 

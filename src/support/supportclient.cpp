@@ -165,16 +165,16 @@ SupportClient::SupportClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SupportClientPrivate(this), parent)
+: QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2013-04-15"),
+    QStringLiteral("support"),
+    QStringLiteral("AWS Support"),
+    QStringLiteral("support"),
+    parent), d_ptr(new SupportClientPrivate(this))
 {
-    Q_D(SupportClient);
-    d->apiVersion = QStringLiteral("2013-04-15");
-    d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("support");
-    d->networkAccessManager = manager;
-    d->region = region;
-    d->serviceFullName = QStringLiteral("AWS Support");
-    d->serviceName = QStringLiteral("support");
+    setRegion(region);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -193,16 +193,16 @@ SupportClient::SupportClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(new SupportClientPrivate(this), parent)
+:  QtAws::Core::AwsAbstractClient(
+    QStringLiteral("2013-04-15"),
+    QStringLiteral("support"),
+    QStringLiteral("AWS Support"),
+    QStringLiteral("support"),
+    parent), d_ptr(new SupportClientPrivate(this))
 {
-    Q_D(SupportClient);
-    d->apiVersion = QStringLiteral("2013-04-15");
-    d->credentials = credentials;
-    d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("support");
-    d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("AWS Support");
-    d->serviceName = QStringLiteral("support");
+    setEndpoint(endpoint);
+    setCredentials(credentials);
+    setNetworkAccessManager(manager);
 }
 
 /*!
@@ -683,10 +683,9 @@ ResolveCaseResponse * SupportClient::resolveCase(const ResolveCaseRequest &reque
 /*!
  * Constructs a SupportClientPrivate object with public implementation \a q.
  */
-SupportClientPrivate::SupportClientPrivate(SupportClient * const q)
-    : QtAws::Core::AwsAbstractClientPrivate(q)
+SupportClientPrivate::SupportClientPrivate(SupportClient * const q) : q_ptr(q)
 {
-    signature = new QtAws::Core::AwsSignatureV4();
+    q->setSignature(new QtAws::Core::AwsSignatureV4());
 }
 
 } // namespace Support

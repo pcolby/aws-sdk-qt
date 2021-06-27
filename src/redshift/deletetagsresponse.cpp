@@ -85,8 +85,7 @@ DeleteTagsResponse::DeleteTagsResponse(
  */
 const DeleteTagsRequest * DeleteTagsResponse::request() const
 {
-    Q_D(const DeleteTagsResponse);
-    return static_cast<const DeleteTagsRequest *>(d->request);
+    return static_cast<const DeleteTagsRequest *>(RedshiftResponse::request());
 }
 
 /*!

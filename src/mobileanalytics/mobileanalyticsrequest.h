@@ -57,6 +57,7 @@ public:
 
 protected:
     /// @cond internal
+    MobileAnalyticsRequestPrivate * const d_ptr; ///< Internal d-pointer.
     MobileAnalyticsRequest(MobileAnalyticsRequestPrivate * const d);
     /// @endcond
 

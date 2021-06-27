@@ -119,8 +119,7 @@ ModifyOptionGroupResponse::ModifyOptionGroupResponse(
  */
 const ModifyOptionGroupRequest * ModifyOptionGroupResponse::request() const
 {
-    Q_D(const ModifyOptionGroupResponse);
-    return static_cast<const ModifyOptionGroupRequest *>(d->request);
+    return static_cast<const ModifyOptionGroupRequest *>(RdsResponse::request());
 }
 
 /*!

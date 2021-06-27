@@ -20,14 +20,12 @@
 #ifndef QTAWS_CLOUDFORMATIONRESPONSE_P_H
 #define QTAWS_CLOUDFORMATIONRESPONSE_P_H
 
-#include "core/awsabstractresponse_p.h"
-
 namespace QtAws {
 namespace CloudFormation {
 
 class CloudFormationResponse;
 
-class CloudFormationResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
+class CloudFormationResponsePrivate {
 
 public:
 
@@ -35,6 +33,9 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
+
+protected:
+    CloudFormationResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CloudFormationResponse)

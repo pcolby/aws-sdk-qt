@@ -60,8 +60,7 @@ GenerateAccessLogsResponse::GenerateAccessLogsResponse(
  */
 const GenerateAccessLogsRequest * GenerateAccessLogsResponse::request() const
 {
-    Q_D(const GenerateAccessLogsResponse);
-    return static_cast<const GenerateAccessLogsRequest *>(d->request);
+    return static_cast<const GenerateAccessLogsRequest *>(AmplifyResponse::request());
 }
 
 /*!
