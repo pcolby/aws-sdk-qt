@@ -93,5 +93,5 @@ jobs:
         version: ${{ matrix.qt }}
     - name: Build
       run: |
-        cmake -D BUILD_CODEGEN=NO -G "${{ matrix.generator }}" -S "$GITHUB_WORKSPACE"  -B "$RUNNER_TEMP"
-        cmake --build "$RUNNER_TEMP" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
+        cmake -D BUILD_CODEGEN=NO -G "${{ matrix.generator }}" -S "%GITHUB_WORKSPACE%"  -B "%RUNNER_TEMP%"
+        cmake --build "%RUNNER_TEMP%" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
