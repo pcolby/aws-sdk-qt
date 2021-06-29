@@ -1,6 +1,3 @@
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-
 add_library(QtAwsInspector
   addattributestofindingsrequest.h
   addattributestofindingsrequest_p.h

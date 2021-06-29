@@ -1,6 +1,3 @@
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-
 add_library(QtAwsApplicationInsights
   applicationinsightsclient.h
   applicationinsightsclient_p.h

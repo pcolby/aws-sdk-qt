@@ -1,6 +1,3 @@
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-
 add_library(QtAwsEC2InstanceConnect
   ec2instanceconnectclient.h
   ec2instanceconnectclient_p.h

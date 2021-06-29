@@ -1,6 +1,3 @@
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-
 add_library(QtAwsSSMIncidents
   createreplicationsetrequest.h
   createreplicationsetrequest_p.h

@@ -1,6 +1,3 @@
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-
 add_library(QtAwsDataSync
   canceltaskexecutionrequest.h
   canceltaskexecutionrequest_p.h

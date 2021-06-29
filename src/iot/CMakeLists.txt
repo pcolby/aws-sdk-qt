@@ -1,6 +1,3 @@
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-
 add_library(QtAwsIoT
   acceptcertificatetransferrequest.h
   acceptcertificatetransferrequest_p.h

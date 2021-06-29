@@ -1,6 +1,3 @@
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-
 add_library(QtAwsEc2
   acceptreservedinstancesexchangequoterequest.h
   acceptreservedinstancesexchangequoterequest_p.h

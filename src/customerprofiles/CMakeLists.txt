@@ -1,6 +1,3 @@
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-
 add_library(QtAwsCustomerProfiles
   addprofilekeyrequest.h
   addprofilekeyrequest_p.h

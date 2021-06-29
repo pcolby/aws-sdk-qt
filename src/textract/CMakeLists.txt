@@ -1,6 +1,3 @@
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-
 add_library(QtAwsTextract
   analyzedocumentrequest.h
   analyzedocumentrequest_p.h

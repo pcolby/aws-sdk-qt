@@ -1,6 +1,3 @@
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-
 add_library(QtAwsPrometheusService
   createworkspacerequest.h
   createworkspacerequest_p.h

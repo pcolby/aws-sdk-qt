@@ -1,6 +1,3 @@
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-
 add_library(QtAwsElastiCache
   addtagstoresourcerequest.h
   addtagstoresourcerequest_p.h

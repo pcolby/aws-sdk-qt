@@ -1,6 +1,3 @@
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-
 add_library(QtAwsCloudHSMV2
   cloudhsmv2client.h
   cloudhsmv2client_p.h

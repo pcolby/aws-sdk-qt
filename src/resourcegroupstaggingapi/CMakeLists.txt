@@ -1,6 +1,3 @@
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-
 add_library(QtAwsResourceGroupsTaggingAPI
   describereportcreationrequest.h
   describereportcreationrequest_p.h

@@ -1,6 +1,3 @@
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-
 add_library(QtAwsConnectParticipant
   completeattachmentuploadrequest.h
   completeattachmentuploadrequest_p.h

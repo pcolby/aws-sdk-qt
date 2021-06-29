@@ -1,6 +1,3 @@
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-
 # Used by codegen to default paths relative to the codegen project's directory.
 add_definitions(-DCODEGEN_PROJECT_DIR="${CMAKE_CURRENT_SOURCE_DIR}")
 

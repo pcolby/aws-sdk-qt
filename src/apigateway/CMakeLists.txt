@@ -1,6 +1,3 @@
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-
 add_library(QtAwsAPIGateway
   apigatewayclient.h
   apigatewayclient_p.h

@@ -1,6 +1,3 @@
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-
 add_library(QtAwsAppIntegrationsService
   appintegrationsserviceclient.h
   appintegrationsserviceclient_p.h

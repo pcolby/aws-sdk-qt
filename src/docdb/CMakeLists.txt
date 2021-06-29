@@ -1,6 +1,3 @@
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-
 add_library(QtAwsDocDB
   addsourceidentifiertosubscriptionrequest.h
   addsourceidentifiertosubscriptionrequest_p.h

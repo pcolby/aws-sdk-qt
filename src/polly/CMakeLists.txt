@@ -1,6 +1,3 @@
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-
 add_library(QtAwsPolly
   deletelexiconrequest.h
   deletelexiconrequest_p.h
