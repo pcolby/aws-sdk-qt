@@ -27,7 +27,7 @@ namespace CognitoIdentity {
 
 class SetPrincipalTagAttributeMapRequestPrivate;
 
-class QTAWS_EXPORT SetPrincipalTagAttributeMapRequest : public CognitoIdentityRequest {
+class QTAWSCOGNITOIDENTITY_EXPORT SetPrincipalTagAttributeMapRequest : public CognitoIdentityRequest {
 
 public:
     SetPrincipalTagAttributeMapRequest(const SetPrincipalTagAttributeMapRequest &other);

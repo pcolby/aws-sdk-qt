@@ -21,6 +21,8 @@
 #define QTAWS_LOOKOUTFORVISIONRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawslookoutforvisionglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace LookoutforVision {
 
 class LookoutforVisionResponsePrivate;
 
-class QTAWS_EXPORT LookoutforVisionResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSLOOKOUTFORVISION_EXPORT LookoutforVisionResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

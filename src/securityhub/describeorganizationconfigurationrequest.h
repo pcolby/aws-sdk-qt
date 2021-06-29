@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class DescribeOrganizationConfigurationRequestPrivate;
 
-class QTAWS_EXPORT DescribeOrganizationConfigurationRequest : public SecurityHubRequest {
+class QTAWSSECURITYHUB_EXPORT DescribeOrganizationConfigurationRequest : public SecurityHubRequest {
 
 public:
     DescribeOrganizationConfigurationRequest(const DescribeOrganizationConfigurationRequest &other);

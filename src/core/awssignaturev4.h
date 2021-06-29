@@ -20,7 +20,7 @@
 #ifndef AWSSIGNATUREV4_H
 #define AWSSIGNATUREV4_H
 
-#include "qtawsglobal.h"
+#include "qtawscoreglobal.h"
 #include "awsabstractsignature.h"
 
 #include <QCryptographicHash>
@@ -30,7 +30,7 @@ namespace Core {
 
 class AwsSignatureV4Private;
 
-class QTAWS_EXPORT AwsSignatureV4 : public AwsAbstractSignature {
+class QTAWSCORE_EXPORT AwsSignatureV4 : public AwsAbstractSignature {
 
 public:
     AwsSignatureV4(const QCryptographicHash::Algorithm hashAlgorithm = QCryptographicHash::Sha256);

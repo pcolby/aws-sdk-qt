@@ -27,7 +27,7 @@ namespace WAFV2 {
 
 class ListRegexPatternSetsRequestPrivate;
 
-class QTAWS_EXPORT ListRegexPatternSetsRequest : public Wafv2Request {
+class QTAWSWAFV2_EXPORT ListRegexPatternSetsRequest : public Wafv2Request {
 
 public:
     ListRegexPatternSetsRequest(const ListRegexPatternSetsRequest &other);

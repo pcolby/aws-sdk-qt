@@ -28,7 +28,7 @@ namespace RAM {
 
 class GetPermissionResponsePrivate;
 
-class QTAWS_EXPORT GetPermissionResponse : public RamResponse {
+class QTAWSRAM_EXPORT GetPermissionResponse : public RamResponse {
     Q_OBJECT
 
 public:

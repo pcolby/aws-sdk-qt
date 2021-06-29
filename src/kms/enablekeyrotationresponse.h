@@ -28,7 +28,7 @@ namespace KMS {
 
 class EnableKeyRotationResponsePrivate;
 
-class QTAWS_EXPORT EnableKeyRotationResponse : public KmsResponse {
+class QTAWSKMS_EXPORT EnableKeyRotationResponse : public KmsResponse {
     Q_OBJECT
 
 public:

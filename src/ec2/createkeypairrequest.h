@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CreateKeyPairRequestPrivate;
 
-class QTAWS_EXPORT CreateKeyPairRequest : public Ec2Request {
+class QTAWSEC2_EXPORT CreateKeyPairRequest : public Ec2Request {
 
 public:
     CreateKeyPairRequest(const CreateKeyPairRequest &other);

@@ -27,7 +27,7 @@ namespace Route53 {
 
 class GetCheckerIpRangesRequestPrivate;
 
-class QTAWS_EXPORT GetCheckerIpRangesRequest : public Route53Request {
+class QTAWSROUTE53_EXPORT GetCheckerIpRangesRequest : public Route53Request {
 
 public:
     GetCheckerIpRangesRequest(const GetCheckerIpRangesRequest &other);

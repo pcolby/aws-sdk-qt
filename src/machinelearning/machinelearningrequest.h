@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsmachinelearningglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace MachineLearning {
 
 class MachineLearningRequestPrivate;
 
-class QTAWS_EXPORT MachineLearningRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSMACHINELEARNING_EXPORT MachineLearningRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by MachineLearning.

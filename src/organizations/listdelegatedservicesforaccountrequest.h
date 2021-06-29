@@ -27,7 +27,7 @@ namespace Organizations {
 
 class ListDelegatedServicesForAccountRequestPrivate;
 
-class QTAWS_EXPORT ListDelegatedServicesForAccountRequest : public OrganizationsRequest {
+class QTAWSORGANIZATIONS_EXPORT ListDelegatedServicesForAccountRequest : public OrganizationsRequest {
 
 public:
     ListDelegatedServicesForAccountRequest(const ListDelegatedServicesForAccountRequest &other);

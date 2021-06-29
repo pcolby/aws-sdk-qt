@@ -27,7 +27,7 @@ namespace Organizations {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public OrganizationsRequest {
+class QTAWSORGANIZATIONS_EXPORT TagResourceRequest : public OrganizationsRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

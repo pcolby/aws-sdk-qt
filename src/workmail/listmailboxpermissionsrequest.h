@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class ListMailboxPermissionsRequestPrivate;
 
-class QTAWS_EXPORT ListMailboxPermissionsRequest : public WorkMailRequest {
+class QTAWSWORKMAIL_EXPORT ListMailboxPermissionsRequest : public WorkMailRequest {
 
 public:
     ListMailboxPermissionsRequest(const ListMailboxPermissionsRequest &other);

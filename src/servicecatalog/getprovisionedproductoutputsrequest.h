@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class GetProvisionedProductOutputsRequestPrivate;
 
-class QTAWS_EXPORT GetProvisionedProductOutputsRequest : public ServiceCatalogRequest {
+class QTAWSSERVICECATALOG_EXPORT GetProvisionedProductOutputsRequest : public ServiceCatalogRequest {
 
 public:
     GetProvisionedProductOutputsRequest(const GetProvisionedProductOutputsRequest &other);

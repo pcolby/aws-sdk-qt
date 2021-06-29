@@ -27,7 +27,7 @@ namespace LookoutforVision {
 
 class DescribeModelRequestPrivate;
 
-class QTAWS_EXPORT DescribeModelRequest : public LookoutforVisionRequest {
+class QTAWSLOOKOUTFORVISION_EXPORT DescribeModelRequest : public LookoutforVisionRequest {
 
 public:
     DescribeModelRequest(const DescribeModelRequest &other);

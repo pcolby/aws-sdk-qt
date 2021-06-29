@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class GetDifferencesRequestPrivate;
 
-class QTAWS_EXPORT GetDifferencesRequest : public CodeCommitRequest {
+class QTAWSCODECOMMIT_EXPORT GetDifferencesRequest : public CodeCommitRequest {
 
 public:
     GetDifferencesRequest(const GetDifferencesRequest &other);

@@ -28,7 +28,7 @@ namespace Redshift {
 
 class CreateSnapshotScheduleResponsePrivate;
 
-class QTAWS_EXPORT CreateSnapshotScheduleResponse : public RedshiftResponse {
+class QTAWSREDSHIFT_EXPORT CreateSnapshotScheduleResponse : public RedshiftResponse {
     Q_OBJECT
 
 public:

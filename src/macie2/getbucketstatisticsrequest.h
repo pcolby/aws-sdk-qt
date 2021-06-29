@@ -27,7 +27,7 @@ namespace Macie2 {
 
 class GetBucketStatisticsRequestPrivate;
 
-class QTAWS_EXPORT GetBucketStatisticsRequest : public Macie2Request {
+class QTAWSMACIE2_EXPORT GetBucketStatisticsRequest : public Macie2Request {
 
 public:
     GetBucketStatisticsRequest(const GetBucketStatisticsRequest &other);

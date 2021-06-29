@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class PollForThirdPartyJobsResponsePrivate;
 
-class QTAWS_EXPORT PollForThirdPartyJobsResponse : public CodePipelineResponse {
+class QTAWSCODEPIPELINE_EXPORT PollForThirdPartyJobsResponse : public CodePipelineResponse {
     Q_OBJECT
 
 public:

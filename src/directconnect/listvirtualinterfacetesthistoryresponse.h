@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class ListVirtualInterfaceTestHistoryResponsePrivate;
 
-class QTAWS_EXPORT ListVirtualInterfaceTestHistoryResponse : public DirectConnectResponse {
+class QTAWSDIRECTCONNECT_EXPORT ListVirtualInterfaceTestHistoryResponse : public DirectConnectResponse {
     Q_OBJECT
 
 public:

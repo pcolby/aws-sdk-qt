@@ -28,7 +28,7 @@ namespace EMR {
 
 class AddInstanceGroupsResponsePrivate;
 
-class QTAWS_EXPORT AddInstanceGroupsResponse : public EmrResponse {
+class QTAWSEMR_EXPORT AddInstanceGroupsResponse : public EmrResponse {
     Q_OBJECT
 
 public:

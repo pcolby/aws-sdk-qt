@@ -27,7 +27,7 @@ namespace PrometheusService {
 
 class DescribeWorkspaceRequestPrivate;
 
-class QTAWS_EXPORT DescribeWorkspaceRequest : public PrometheusServiceRequest {
+class QTAWSPROMETHEUSSERVICE_EXPORT DescribeWorkspaceRequest : public PrometheusServiceRequest {
 
 public:
     DescribeWorkspaceRequest(const DescribeWorkspaceRequest &other);

@@ -27,7 +27,7 @@ namespace AlexaForBusiness {
 
 class RejectSkillRequestPrivate;
 
-class QTAWS_EXPORT RejectSkillRequest : public AlexaForBusinessRequest {
+class QTAWSALEXAFORBUSINESS_EXPORT RejectSkillRequest : public AlexaForBusinessRequest {
 
 public:
     RejectSkillRequest(const RejectSkillRequest &other);

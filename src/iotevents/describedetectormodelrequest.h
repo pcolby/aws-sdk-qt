@@ -27,7 +27,7 @@ namespace IoTEvents {
 
 class DescribeDetectorModelRequestPrivate;
 
-class QTAWS_EXPORT DescribeDetectorModelRequest : public IoTEventsRequest {
+class QTAWSIOTEVENTS_EXPORT DescribeDetectorModelRequest : public IoTEventsRequest {
 
 public:
     DescribeDetectorModelRequest(const DescribeDetectorModelRequest &other);

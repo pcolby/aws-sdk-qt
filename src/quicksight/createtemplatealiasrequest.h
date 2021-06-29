@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class CreateTemplateAliasRequestPrivate;
 
-class QTAWS_EXPORT CreateTemplateAliasRequest : public QuickSightRequest {
+class QTAWSQUICKSIGHT_EXPORT CreateTemplateAliasRequest : public QuickSightRequest {
 
 public:
     CreateTemplateAliasRequest(const CreateTemplateAliasRequest &other);

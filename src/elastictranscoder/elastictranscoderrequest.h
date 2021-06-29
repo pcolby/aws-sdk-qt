@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawselastictranscoderglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace ElasticTranscoder {
 
 class ElasticTranscoderRequestPrivate;
 
-class QTAWS_EXPORT ElasticTranscoderRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSELASTICTRANSCODER_EXPORT ElasticTranscoderRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ElasticTranscoder.

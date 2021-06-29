@@ -27,7 +27,7 @@ namespace GlueDataBrew {
 
 class UpdateScheduleRequestPrivate;
 
-class QTAWS_EXPORT UpdateScheduleRequest : public GlueDataBrewRequest {
+class QTAWSGLUEDATABREW_EXPORT UpdateScheduleRequest : public GlueDataBrewRequest {
 
 public:
     UpdateScheduleRequest(const UpdateScheduleRequest &other);

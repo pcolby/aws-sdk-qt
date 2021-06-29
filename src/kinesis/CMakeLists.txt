@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSKINESIS_LIBRARY)
+
 add_library(QtAwsKinesis
   addtagstostreamrequest.h
   addtagstostreamrequest_p.h
@@ -89,6 +91,7 @@ add_library(QtAwsKinesis
   putrecordsrequest_p.h
   putrecordsresponse.h
   putrecordsresponse_p.h
+  qtawskinesisglobal.h
   registerstreamconsumerrequest.h
   registerstreamconsumerrequest_p.h
   registerstreamconsumerresponse.h

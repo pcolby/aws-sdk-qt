@@ -28,7 +28,7 @@ namespace IoTSiteWise {
 
 class DescribeGatewayCapabilityConfigurationResponsePrivate;
 
-class QTAWS_EXPORT DescribeGatewayCapabilityConfigurationResponse : public IoTSiteWiseResponse {
+class QTAWSIOTSITEWISE_EXPORT DescribeGatewayCapabilityConfigurationResponse : public IoTSiteWiseResponse {
     Q_OBJECT
 
 public:

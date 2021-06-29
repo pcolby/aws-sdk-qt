@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSAUTOSCALING_LIBRARY)
+
 add_library(QtAwsAutoScaling
   attachinstancesrequest.h
   attachinstancesrequest_p.h
@@ -213,6 +215,7 @@ add_library(QtAwsAutoScaling
   putwarmpoolrequest_p.h
   putwarmpoolresponse.h
   putwarmpoolresponse_p.h
+  qtawsautoscalingglobal.h
   recordlifecycleactionheartbeatrequest.h
   recordlifecycleactionheartbeatrequest_p.h
   recordlifecycleactionheartbeatresponse.h

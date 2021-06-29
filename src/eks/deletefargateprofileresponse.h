@@ -28,7 +28,7 @@ namespace EKS {
 
 class DeleteFargateProfileResponsePrivate;
 
-class QTAWS_EXPORT DeleteFargateProfileResponse : public EksResponse {
+class QTAWSEKS_EXPORT DeleteFargateProfileResponse : public EksResponse {
     Q_OBJECT
 
 public:

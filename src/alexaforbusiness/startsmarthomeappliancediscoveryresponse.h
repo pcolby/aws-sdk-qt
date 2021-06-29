@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class StartSmartHomeApplianceDiscoveryResponsePrivate;
 
-class QTAWS_EXPORT StartSmartHomeApplianceDiscoveryResponse : public AlexaForBusinessResponse {
+class QTAWSALEXAFORBUSINESS_EXPORT StartSmartHomeApplianceDiscoveryResponse : public AlexaForBusinessResponse {
     Q_OBJECT
 
 public:

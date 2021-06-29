@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 
 class DeleteServiceResponsePrivate;
 
-class QTAWS_EXPORT DeleteServiceResponse : public ServiceDiscoveryResponse {
+class QTAWSSERVICEDISCOVERY_EXPORT DeleteServiceResponse : public ServiceDiscoveryResponse {
     Q_OBJECT
 
 public:

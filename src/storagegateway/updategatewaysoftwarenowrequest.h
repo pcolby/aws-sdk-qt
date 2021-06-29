@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class UpdateGatewaySoftwareNowRequestPrivate;
 
-class QTAWS_EXPORT UpdateGatewaySoftwareNowRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT UpdateGatewaySoftwareNowRequest : public StorageGatewayRequest {
 
 public:
     UpdateGatewaySoftwareNowRequest(const UpdateGatewaySoftwareNowRequest &other);

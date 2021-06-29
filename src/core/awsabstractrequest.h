@@ -20,7 +20,7 @@
 #ifndef AWSABSTRACTREQUEST_H
 #define AWSABSTRACTREQUEST_H
 
-#include "qtawsglobal.h"
+#include "qtawscoreglobal.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
@@ -37,7 +37,7 @@ class AwsAbstractRequestPrivate;
 class AwsAbstractResponse;
 class AwsAbstractSignature;
 
-class QTAWS_EXPORT AwsAbstractRequest {
+class QTAWSCORE_EXPORT AwsAbstractRequest {
 
 public:
     AwsAbstractRequest();

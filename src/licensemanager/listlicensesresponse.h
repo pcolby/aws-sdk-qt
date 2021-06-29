@@ -28,7 +28,7 @@ namespace LicenseManager {
 
 class ListLicensesResponsePrivate;
 
-class QTAWS_EXPORT ListLicensesResponse : public LicenseManagerResponse {
+class QTAWSLICENSEMANAGER_EXPORT ListLicensesResponse : public LicenseManagerResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace RAM {
 
 class ListResourceSharePermissionsResponsePrivate;
 
-class QTAWS_EXPORT ListResourceSharePermissionsResponse : public RamResponse {
+class QTAWSRAM_EXPORT ListResourceSharePermissionsResponse : public RamResponse {
     Q_OBJECT
 
 public:

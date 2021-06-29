@@ -27,7 +27,7 @@ namespace CloudFormation {
 
 class DescribeStackSetRequestPrivate;
 
-class QTAWS_EXPORT DescribeStackSetRequest : public CloudFormationRequest {
+class QTAWSCLOUDFORMATION_EXPORT DescribeStackSetRequest : public CloudFormationRequest {
 
 public:
     DescribeStackSetRequest(const DescribeStackSetRequest &other);

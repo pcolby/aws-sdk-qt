@@ -21,6 +21,8 @@
 #define QTAWS_SSOOIDCRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsssooidcglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace SSOOIDC {
 
 class SsooidcResponsePrivate;
 
-class QTAWS_EXPORT SsooidcResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSSOOIDC_EXPORT SsooidcResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

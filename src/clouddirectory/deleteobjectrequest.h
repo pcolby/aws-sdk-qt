@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class DeleteObjectRequestPrivate;
 
-class QTAWS_EXPORT DeleteObjectRequest : public CloudDirectoryRequest {
+class QTAWSCLOUDDIRECTORY_EXPORT DeleteObjectRequest : public CloudDirectoryRequest {
 
 public:
     DeleteObjectRequest(const DeleteObjectRequest &other);

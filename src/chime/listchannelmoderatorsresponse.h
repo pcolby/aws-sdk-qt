@@ -28,7 +28,7 @@ namespace Chime {
 
 class ListChannelModeratorsResponsePrivate;
 
-class QTAWS_EXPORT ListChannelModeratorsResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT ListChannelModeratorsResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DescribeLoggingStatusResponsePrivate;
 
-class QTAWS_EXPORT DescribeLoggingStatusResponse : public RedshiftResponse {
+class QTAWSREDSHIFT_EXPORT DescribeLoggingStatusResponse : public RedshiftResponse {
     Q_OBJECT
 
 public:

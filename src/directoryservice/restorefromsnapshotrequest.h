@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class RestoreFromSnapshotRequestPrivate;
 
-class QTAWS_EXPORT RestoreFromSnapshotRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT RestoreFromSnapshotRequest : public DirectoryServiceRequest {
 
 public:
     RestoreFromSnapshotRequest(const RestoreFromSnapshotRequest &other);

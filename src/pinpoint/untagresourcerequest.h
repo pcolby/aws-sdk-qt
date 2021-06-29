@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT UntagResourceRequest : public PinpointRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

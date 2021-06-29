@@ -27,7 +27,7 @@ namespace ECS {
 
 class DescribeTaskDefinitionRequestPrivate;
 
-class QTAWS_EXPORT DescribeTaskDefinitionRequest : public EcsRequest {
+class QTAWSECS_EXPORT DescribeTaskDefinitionRequest : public EcsRequest {
 
 public:
     DescribeTaskDefinitionRequest(const DescribeTaskDefinitionRequest &other);

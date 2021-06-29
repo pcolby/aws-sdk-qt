@@ -27,7 +27,7 @@ namespace Macie2 {
 
 class UpdateMemberSessionRequestPrivate;
 
-class QTAWS_EXPORT UpdateMemberSessionRequest : public Macie2Request {
+class QTAWSMACIE2_EXPORT UpdateMemberSessionRequest : public Macie2Request {
 
 public:
     UpdateMemberSessionRequest(const UpdateMemberSessionRequest &other);

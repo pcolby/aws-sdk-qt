@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class CreatePublicKeyResponsePrivate;
 
-class QTAWS_EXPORT CreatePublicKeyResponse : public CloudFrontResponse {
+class QTAWSCLOUDFRONT_EXPORT CreatePublicKeyResponse : public CloudFrontResponse {
     Q_OBJECT
 
 public:

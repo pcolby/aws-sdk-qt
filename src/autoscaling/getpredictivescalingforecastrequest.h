@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class GetPredictiveScalingForecastRequestPrivate;
 
-class QTAWS_EXPORT GetPredictiveScalingForecastRequest : public AutoScalingRequest {
+class QTAWSAUTOSCALING_EXPORT GetPredictiveScalingForecastRequest : public AutoScalingRequest {
 
 public:
     GetPredictiveScalingForecastRequest(const GetPredictiveScalingForecastRequest &other);

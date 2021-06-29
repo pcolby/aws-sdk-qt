@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsworkdocsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -111,7 +113,7 @@ class UpdateFolderResponse;
 class UpdateUserRequest;
 class UpdateUserResponse;
 
-class QTAWS_EXPORT WorkDocsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSWORKDOCS_EXPORT WorkDocsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

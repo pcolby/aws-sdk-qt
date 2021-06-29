@@ -27,7 +27,7 @@ namespace LocationService {
 
 class GetMapTileRequestPrivate;
 
-class QTAWS_EXPORT GetMapTileRequest : public LocationServiceRequest {
+class QTAWSLOCATIONSERVICE_EXPORT GetMapTileRequest : public LocationServiceRequest {
 
 public:
     GetMapTileRequest(const GetMapTileRequest &other);

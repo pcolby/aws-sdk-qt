@@ -28,7 +28,7 @@ namespace LakeFormation {
 
 class ListResourcesResponsePrivate;
 
-class QTAWS_EXPORT ListResourcesResponse : public LakeFormationResponse {
+class QTAWSLAKEFORMATION_EXPORT ListResourcesResponse : public LakeFormationResponse {
     Q_OBJECT
 
 public:

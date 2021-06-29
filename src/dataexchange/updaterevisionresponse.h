@@ -28,7 +28,7 @@ namespace DataExchange {
 
 class UpdateRevisionResponsePrivate;
 
-class QTAWS_EXPORT UpdateRevisionResponse : public DataExchangeResponse {
+class QTAWSDATAEXCHANGE_EXPORT UpdateRevisionResponse : public DataExchangeResponse {
     Q_OBJECT
 
 public:

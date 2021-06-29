@@ -28,7 +28,7 @@ namespace DAX {
 
 class DescribeDefaultParametersResponsePrivate;
 
-class QTAWS_EXPORT DescribeDefaultParametersResponse : public DaxResponse {
+class QTAWSDAX_EXPORT DescribeDefaultParametersResponse : public DaxResponse {
     Q_OBJECT
 
 public:

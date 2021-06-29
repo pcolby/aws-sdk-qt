@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class ListRepositoriesForApprovalRuleTemplateRequestPrivate;
 
-class QTAWS_EXPORT ListRepositoriesForApprovalRuleTemplateRequest : public CodeCommitRequest {
+class QTAWSCODECOMMIT_EXPORT ListRepositoriesForApprovalRuleTemplateRequest : public CodeCommitRequest {
 
 public:
     ListRepositoriesForApprovalRuleTemplateRequest(const ListRepositoriesForApprovalRuleTemplateRequest &other);

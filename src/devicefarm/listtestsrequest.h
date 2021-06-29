@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class ListTestsRequestPrivate;
 
-class QTAWS_EXPORT ListTestsRequest : public DeviceFarmRequest {
+class QTAWSDEVICEFARM_EXPORT ListTestsRequest : public DeviceFarmRequest {
 
 public:
     ListTestsRequest(const ListTestsRequest &other);

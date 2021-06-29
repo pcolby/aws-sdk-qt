@@ -28,7 +28,7 @@ namespace mgn {
 
 class DeleteJobResponsePrivate;
 
-class QTAWS_EXPORT DeleteJobResponse : public mgnResponse {
+class QTAWSMGN_EXPORT DeleteJobResponse : public mgnResponse {
     Q_OBJECT
 
 public:

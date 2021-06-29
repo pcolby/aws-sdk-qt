@@ -27,7 +27,7 @@ namespace QLDB {
 
 class ExportJournalToS3RequestPrivate;
 
-class QTAWS_EXPORT ExportJournalToS3Request : public QldbRequest {
+class QTAWSQLDB_EXPORT ExportJournalToS3Request : public QldbRequest {
 
 public:
     ExportJournalToS3Request(const ExportJournalToS3Request &other);

@@ -28,7 +28,7 @@ namespace WAFV2 {
 
 class DeleteFirewallManagerRuleGroupsResponsePrivate;
 
-class QTAWS_EXPORT DeleteFirewallManagerRuleGroupsResponse : public Wafv2Response {
+class QTAWSWAFV2_EXPORT DeleteFirewallManagerRuleGroupsResponse : public Wafv2Response {
     Q_OBJECT
 
 public:

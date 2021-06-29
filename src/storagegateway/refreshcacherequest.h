@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class RefreshCacheRequestPrivate;
 
-class QTAWS_EXPORT RefreshCacheRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT RefreshCacheRequest : public StorageGatewayRequest {
 
 public:
     RefreshCacheRequest(const RefreshCacheRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawssqsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -69,7 +71,7 @@ class TagQueueResponse;
 class UntagQueueRequest;
 class UntagQueueResponse;
 
-class QTAWS_EXPORT SqsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSQS_EXPORT SqsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

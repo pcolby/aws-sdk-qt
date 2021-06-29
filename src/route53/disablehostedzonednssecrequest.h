@@ -27,7 +27,7 @@ namespace Route53 {
 
 class DisableHostedZoneDNSSECRequestPrivate;
 
-class QTAWS_EXPORT DisableHostedZoneDNSSECRequest : public Route53Request {
+class QTAWSROUTE53_EXPORT DisableHostedZoneDNSSECRequest : public Route53Request {
 
 public:
     DisableHostedZoneDNSSECRequest(const DisableHostedZoneDNSSECRequest &other);

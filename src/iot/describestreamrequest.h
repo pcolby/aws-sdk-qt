@@ -27,7 +27,7 @@ namespace IoT {
 
 class DescribeStreamRequestPrivate;
 
-class QTAWS_EXPORT DescribeStreamRequest : public IoTRequest {
+class QTAWSIOT_EXPORT DescribeStreamRequest : public IoTRequest {
 
 public:
     DescribeStreamRequest(const DescribeStreamRequest &other);

@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DescribeAccountAttributesResponsePrivate;
 
-class QTAWS_EXPORT DescribeAccountAttributesResponse : public RedshiftResponse {
+class QTAWSREDSHIFT_EXPORT DescribeAccountAttributesResponse : public RedshiftResponse {
     Q_OBJECT
 
 public:

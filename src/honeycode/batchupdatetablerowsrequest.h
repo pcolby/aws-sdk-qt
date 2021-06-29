@@ -27,7 +27,7 @@ namespace Honeycode {
 
 class BatchUpdateTableRowsRequestPrivate;
 
-class QTAWS_EXPORT BatchUpdateTableRowsRequest : public HoneycodeRequest {
+class QTAWSHONEYCODE_EXPORT BatchUpdateTableRowsRequest : public HoneycodeRequest {
 
 public:
     BatchUpdateTableRowsRequest(const BatchUpdateTableRowsRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawscodeartifactglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -97,7 +99,7 @@ class UpdatePackageVersionsStatusResponse;
 class UpdateRepositoryRequest;
 class UpdateRepositoryResponse;
 
-class QTAWS_EXPORT CodeArtifactClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCODEARTIFACT_EXPORT CodeArtifactClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

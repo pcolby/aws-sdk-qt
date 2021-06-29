@@ -28,7 +28,7 @@ namespace DocDB {
 
 class CreateDBSubnetGroupResponsePrivate;
 
-class QTAWS_EXPORT CreateDBSubnetGroupResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT CreateDBSubnetGroupResponse : public DocDBResponse {
     Q_OBJECT
 
 public:

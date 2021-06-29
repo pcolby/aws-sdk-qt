@@ -21,6 +21,8 @@
 #define QTAWS_SAGEMAKERFEATURESTORERUNTIMERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawssagemakerfeaturestoreruntimeglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace SageMakerFeatureStoreRuntime {
 
 class SageMakerFeatureStoreRuntimeResponsePrivate;
 
-class QTAWS_EXPORT SageMakerFeatureStoreRuntimeResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSAGEMAKERFEATURESTORERUNTIME_EXPORT SageMakerFeatureStoreRuntimeResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

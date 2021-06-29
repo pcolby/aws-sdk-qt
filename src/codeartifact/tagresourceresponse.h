@@ -28,7 +28,7 @@ namespace CodeArtifact {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public CodeArtifactResponse {
+class QTAWSCODEARTIFACT_EXPORT TagResourceResponse : public CodeArtifactResponse {
     Q_OBJECT
 
 public:

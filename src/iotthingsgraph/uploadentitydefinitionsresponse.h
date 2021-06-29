@@ -28,7 +28,7 @@ namespace IoTThingsGraph {
 
 class UploadEntityDefinitionsResponsePrivate;
 
-class QTAWS_EXPORT UploadEntityDefinitionsResponse : public IoTThingsGraphResponse {
+class QTAWSIOTTHINGSGRAPH_EXPORT UploadEntityDefinitionsResponse : public IoTThingsGraphResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class DeleteVolumeRequestPrivate;
 
-class QTAWS_EXPORT DeleteVolumeRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT DeleteVolumeRequest : public StorageGatewayRequest {
 
 public:
     DeleteVolumeRequest(const DeleteVolumeRequest &other);

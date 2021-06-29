@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class PutConfigurationSetReputationOptionsResponsePrivate;
 
-class QTAWS_EXPORT PutConfigurationSetReputationOptionsResponse : public Sesv2Response {
+class QTAWSSESV2_EXPORT PutConfigurationSetReputationOptionsResponse : public Sesv2Response {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace AppStream {
 
 class DescribeUserStackAssociationsResponsePrivate;
 
-class QTAWS_EXPORT DescribeUserStackAssociationsResponse : public AppStreamResponse {
+class QTAWSAPPSTREAM_EXPORT DescribeUserStackAssociationsResponse : public AppStreamResponse {
     Q_OBJECT
 
 public:

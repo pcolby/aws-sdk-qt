@@ -27,7 +27,7 @@ namespace Connect {
 
 class ListLambdaFunctionsRequestPrivate;
 
-class QTAWS_EXPORT ListLambdaFunctionsRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT ListLambdaFunctionsRequest : public ConnectRequest {
 
 public:
     ListLambdaFunctionsRequest(const ListLambdaFunctionsRequest &other);

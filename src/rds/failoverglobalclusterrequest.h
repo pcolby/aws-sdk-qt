@@ -27,7 +27,7 @@ namespace RDS {
 
 class FailoverGlobalClusterRequestPrivate;
 
-class QTAWS_EXPORT FailoverGlobalClusterRequest : public RdsRequest {
+class QTAWSRDS_EXPORT FailoverGlobalClusterRequest : public RdsRequest {
 
 public:
     FailoverGlobalClusterRequest(const FailoverGlobalClusterRequest &other);

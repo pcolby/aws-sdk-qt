@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsappflowglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Appflow {
 
 class AppflowRequestPrivate;
 
-class QTAWS_EXPORT AppflowRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSAPPFLOW_EXPORT AppflowRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Appflow.

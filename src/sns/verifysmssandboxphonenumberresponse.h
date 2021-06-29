@@ -28,7 +28,7 @@ namespace SNS {
 
 class VerifySMSSandboxPhoneNumberResponsePrivate;
 
-class QTAWS_EXPORT VerifySMSSandboxPhoneNumberResponse : public SnsResponse {
+class QTAWSSNS_EXPORT VerifySMSSandboxPhoneNumberResponse : public SnsResponse {
     Q_OBJECT
 
 public:

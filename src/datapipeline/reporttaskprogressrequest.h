@@ -27,7 +27,7 @@ namespace DataPipeline {
 
 class ReportTaskProgressRequestPrivate;
 
-class QTAWS_EXPORT ReportTaskProgressRequest : public DataPipelineRequest {
+class QTAWSDATAPIPELINE_EXPORT ReportTaskProgressRequest : public DataPipelineRequest {
 
 public:
     ReportTaskProgressRequest(const ReportTaskProgressRequest &other);

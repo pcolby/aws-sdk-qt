@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeReplaceRootVolumeTasksResponsePrivate;
 
-class QTAWS_EXPORT DescribeReplaceRootVolumeTasksResponse : public Ec2Response {
+class QTAWSEC2_EXPORT DescribeReplaceRootVolumeTasksResponse : public Ec2Response {
     Q_OBJECT
 
 public:

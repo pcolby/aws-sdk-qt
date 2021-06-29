@@ -28,7 +28,7 @@ namespace Shield {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public ShieldResponse {
+class QTAWSSHIELD_EXPORT TagResourceResponse : public ShieldResponse {
     Q_OBJECT
 
 public:

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsemrcontainersglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -59,7 +61,7 @@ class TagResourceResponse;
 class UntagResourceRequest;
 class UntagResourceResponse;
 
-class QTAWS_EXPORT EMRContainersClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSEMRCONTAINERS_EXPORT EMRContainersClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class SearchFacesByImageResponsePrivate;
 
-class QTAWS_EXPORT SearchFacesByImageResponse : public RekognitionResponse {
+class QTAWSREKOGNITION_EXPORT SearchFacesByImageResponse : public RekognitionResponse {
     Q_OBJECT
 
 public:

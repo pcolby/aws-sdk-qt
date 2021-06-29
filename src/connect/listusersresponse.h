@@ -28,7 +28,7 @@ namespace Connect {
 
 class ListUsersResponsePrivate;
 
-class QTAWS_EXPORT ListUsersResponse : public ConnectResponse {
+class QTAWSCONNECT_EXPORT ListUsersResponse : public ConnectResponse {
     Q_OBJECT
 
 public:

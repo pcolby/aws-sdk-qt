@@ -28,7 +28,7 @@ namespace SecretsManager {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public SecretsManagerResponse {
+class QTAWSSECRETSMANAGER_EXPORT UntagResourceResponse : public SecretsManagerResponse {
     Q_OBJECT
 
 public:

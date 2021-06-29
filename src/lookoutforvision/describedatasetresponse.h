@@ -28,7 +28,7 @@ namespace LookoutforVision {
 
 class DescribeDatasetResponsePrivate;
 
-class QTAWS_EXPORT DescribeDatasetResponse : public LookoutforVisionResponse {
+class QTAWSLOOKOUTFORVISION_EXPORT DescribeDatasetResponse : public LookoutforVisionResponse {
     Q_OBJECT
 
 public:

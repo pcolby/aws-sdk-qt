@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsfrauddetectorglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -143,7 +145,7 @@ class UpdateRuleVersionResponse;
 class UpdateVariableRequest;
 class UpdateVariableResponse;
 
-class QTAWS_EXPORT FraudDetectorClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSFRAUDDETECTOR_EXPORT FraudDetectorClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

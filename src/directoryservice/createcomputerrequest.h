@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class CreateComputerRequestPrivate;
 
-class QTAWS_EXPORT CreateComputerRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT CreateComputerRequest : public DirectoryServiceRequest {
 
 public:
     CreateComputerRequest(const CreateComputerRequest &other);

@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 
 class DescribeServersResponsePrivate;
 
-class QTAWS_EXPORT DescribeServersResponse : public OpsWorksCMResponse {
+class QTAWSOPSWORKSCM_EXPORT DescribeServersResponse : public OpsWorksCMResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace Transfer {
 
 class CreateUserRequestPrivate;
 
-class QTAWS_EXPORT CreateUserRequest : public TransferRequest {
+class QTAWSTRANSFER_EXPORT CreateUserRequest : public TransferRequest {
 
 public:
     CreateUserRequest(const CreateUserRequest &other);

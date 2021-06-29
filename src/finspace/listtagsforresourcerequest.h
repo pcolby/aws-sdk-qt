@@ -27,7 +27,7 @@ namespace finspace {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public finspaceRequest {
+class QTAWSFINSPACE_EXPORT ListTagsForResourceRequest : public finspaceRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

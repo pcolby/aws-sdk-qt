@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class UnshareDirectoryResponsePrivate;
 
-class QTAWS_EXPORT UnshareDirectoryResponse : public DirectoryServiceResponse {
+class QTAWSDIRECTORYSERVICE_EXPORT UnshareDirectoryResponse : public DirectoryServiceResponse {
     Q_OBJECT
 
 public:

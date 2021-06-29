@@ -28,7 +28,7 @@ namespace AppIntegrationsService {
 
 class CreateEventIntegrationResponsePrivate;
 
-class QTAWS_EXPORT CreateEventIntegrationResponse : public AppIntegrationsServiceResponse {
+class QTAWSAPPINTEGRATIONSSERVICE_EXPORT CreateEventIntegrationResponse : public AppIntegrationsServiceResponse {
     Q_OBJECT
 
 public:

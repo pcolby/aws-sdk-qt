@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSREDSHIFTDATAAPISERVICE_LIBRARY)
+
 add_library(QtAwsRedshiftDataAPIService
   cancelstatementrequest.h
   cancelstatementrequest_p.h
@@ -35,6 +37,7 @@ add_library(QtAwsRedshiftDataAPIService
   listtablesrequest_p.h
   listtablesresponse.h
   listtablesresponse_p.h
+  qtawsredshiftdataapiserviceglobal.h
   redshiftdataapiserviceclient.h
   redshiftdataapiserviceclient_p.h
   redshiftdataapiservicerequest.h

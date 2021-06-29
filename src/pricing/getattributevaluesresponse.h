@@ -28,7 +28,7 @@ namespace Pricing {
 
 class GetAttributeValuesResponsePrivate;
 
-class QTAWS_EXPORT GetAttributeValuesResponse : public PricingResponse {
+class QTAWSPRICING_EXPORT GetAttributeValuesResponse : public PricingResponse {
     Q_OBJECT
 
 public:

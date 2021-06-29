@@ -27,7 +27,7 @@ namespace Transfer {
 
 class UpdateServerRequestPrivate;
 
-class QTAWS_EXPORT UpdateServerRequest : public TransferRequest {
+class QTAWSTRANSFER_EXPORT UpdateServerRequest : public TransferRequest {
 
 public:
     UpdateServerRequest(const UpdateServerRequest &other);

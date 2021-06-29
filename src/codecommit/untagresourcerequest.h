@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public CodeCommitRequest {
+class QTAWSCODECOMMIT_EXPORT UntagResourceRequest : public CodeCommitRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

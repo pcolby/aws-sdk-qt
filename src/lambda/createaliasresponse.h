@@ -28,7 +28,7 @@ namespace Lambda {
 
 class CreateAliasResponsePrivate;
 
-class QTAWS_EXPORT CreateAliasResponse : public LambdaResponse {
+class QTAWSLAMBDA_EXPORT CreateAliasResponse : public LambdaResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace Route53 {
 
 class DeleteVPCAssociationAuthorizationRequestPrivate;
 
-class QTAWS_EXPORT DeleteVPCAssociationAuthorizationRequest : public Route53Request {
+class QTAWSROUTE53_EXPORT DeleteVPCAssociationAuthorizationRequest : public Route53Request {
 
 public:
     DeleteVPCAssociationAuthorizationRequest(const DeleteVPCAssociationAuthorizationRequest &other);

@@ -28,7 +28,7 @@ namespace GlobalAccelerator {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public GlobalAcceleratorResponse {
+class QTAWSGLOBALACCELERATOR_EXPORT TagResourceResponse : public GlobalAcceleratorResponse {
     Q_OBJECT
 
 public:

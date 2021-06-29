@@ -27,7 +27,7 @@ namespace Lambda {
 
 class UpdateCodeSigningConfigRequestPrivate;
 
-class QTAWS_EXPORT UpdateCodeSigningConfigRequest : public LambdaRequest {
+class QTAWSLAMBDA_EXPORT UpdateCodeSigningConfigRequest : public LambdaRequest {
 
 public:
     UpdateCodeSigningConfigRequest(const UpdateCodeSigningConfigRequest &other);

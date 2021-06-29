@@ -27,7 +27,7 @@ namespace IoTAnalytics {
 
 class PutLoggingOptionsRequestPrivate;
 
-class QTAWS_EXPORT PutLoggingOptionsRequest : public IoTAnalyticsRequest {
+class QTAWSIOTANALYTICS_EXPORT PutLoggingOptionsRequest : public IoTAnalyticsRequest {
 
 public:
     PutLoggingOptionsRequest(const PutLoggingOptionsRequest &other);

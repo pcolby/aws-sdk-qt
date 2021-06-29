@@ -28,7 +28,7 @@ namespace Firehose {
 
 class ListDeliveryStreamsResponsePrivate;
 
-class QTAWS_EXPORT ListDeliveryStreamsResponse : public FirehoseResponse {
+class QTAWSFIREHOSE_EXPORT ListDeliveryStreamsResponse : public FirehoseResponse {
     Q_OBJECT
 
 public:

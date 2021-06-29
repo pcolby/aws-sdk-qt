@@ -28,7 +28,7 @@ namespace IoTAnalytics {
 
 class DeleteDatastoreResponsePrivate;
 
-class QTAWS_EXPORT DeleteDatastoreResponse : public IoTAnalyticsResponse {
+class QTAWSIOTANALYTICS_EXPORT DeleteDatastoreResponse : public IoTAnalyticsResponse {
     Q_OBJECT
 
 public:

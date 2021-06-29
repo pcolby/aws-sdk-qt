@@ -27,7 +27,7 @@ namespace CognitoIdentityProvider {
 
 class DeleteGroupRequestPrivate;
 
-class QTAWS_EXPORT DeleteGroupRequest : public CognitoIdentityProviderRequest {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT DeleteGroupRequest : public CognitoIdentityProviderRequest {
 
 public:
     DeleteGroupRequest(const DeleteGroupRequest &other);

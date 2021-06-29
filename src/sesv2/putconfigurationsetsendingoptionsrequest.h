@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class PutConfigurationSetSendingOptionsRequestPrivate;
 
-class QTAWS_EXPORT PutConfigurationSetSendingOptionsRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT PutConfigurationSetSendingOptionsRequest : public Sesv2Request {
 
 public:
     PutConfigurationSetSendingOptionsRequest(const PutConfigurationSetSendingOptionsRequest &other);

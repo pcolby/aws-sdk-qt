@@ -28,7 +28,7 @@ namespace CodeStarNotifications {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public CodeStarNotificationsResponse {
+class QTAWSCODESTARNOTIFICATIONS_EXPORT UntagResourceResponse : public CodeStarNotificationsResponse {
     Q_OBJECT
 
 public:

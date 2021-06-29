@@ -27,7 +27,7 @@ namespace Chime {
 
 class GetRetentionSettingsRequestPrivate;
 
-class QTAWS_EXPORT GetRetentionSettingsRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT GetRetentionSettingsRequest : public ChimeRequest {
 
 public:
     GetRetentionSettingsRequest(const GetRetentionSettingsRequest &other);

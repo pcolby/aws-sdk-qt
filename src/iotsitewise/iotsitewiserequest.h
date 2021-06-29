@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsiotsitewiseglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace IoTSiteWise {
 
 class IoTSiteWiseRequestPrivate;
 
-class QTAWS_EXPORT IoTSiteWiseRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSIOTSITEWISE_EXPORT IoTSiteWiseRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by IoTSiteWise.

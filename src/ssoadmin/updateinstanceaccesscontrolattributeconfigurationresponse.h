@@ -28,7 +28,7 @@ namespace SSOAdmin {
 
 class UpdateInstanceAccessControlAttributeConfigurationResponsePrivate;
 
-class QTAWS_EXPORT UpdateInstanceAccessControlAttributeConfigurationResponse : public SSOAdminResponse {
+class QTAWSSSOADMIN_EXPORT UpdateInstanceAccessControlAttributeConfigurationResponse : public SSOAdminResponse {
     Q_OBJECT
 
 public:

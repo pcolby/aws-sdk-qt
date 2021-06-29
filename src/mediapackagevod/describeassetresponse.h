@@ -28,7 +28,7 @@ namespace MediaPackageVod {
 
 class DescribeAssetResponsePrivate;
 
-class QTAWS_EXPORT DescribeAssetResponse : public MediaPackageVodResponse {
+class QTAWSMEDIAPACKAGEVOD_EXPORT DescribeAssetResponse : public MediaPackageVodResponse {
     Q_OBJECT
 
 public:

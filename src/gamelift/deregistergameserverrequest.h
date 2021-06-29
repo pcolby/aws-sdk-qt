@@ -27,7 +27,7 @@ namespace GameLift {
 
 class DeregisterGameServerRequestPrivate;
 
-class QTAWS_EXPORT DeregisterGameServerRequest : public GameLiftRequest {
+class QTAWSGAMELIFT_EXPORT DeregisterGameServerRequest : public GameLiftRequest {
 
 public:
     DeregisterGameServerRequest(const DeregisterGameServerRequest &other);

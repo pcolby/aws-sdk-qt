@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class DescribeAggregateComplianceByConformancePacksResponsePrivate;
 
-class QTAWS_EXPORT DescribeAggregateComplianceByConformancePacksResponse : public ConfigServiceResponse {
+class QTAWSCONFIGSERVICE_EXPORT DescribeAggregateComplianceByConformancePacksResponse : public ConfigServiceResponse {
     Q_OBJECT
 
 public:

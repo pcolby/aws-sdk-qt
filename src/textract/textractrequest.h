@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawstextractglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Textract {
 
 class TextractRequestPrivate;
 
-class QTAWS_EXPORT TextractRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSTEXTRACT_EXPORT TextractRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Textract.

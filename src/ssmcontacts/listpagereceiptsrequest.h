@@ -27,7 +27,7 @@ namespace SSMContacts {
 
 class ListPageReceiptsRequestPrivate;
 
-class QTAWS_EXPORT ListPageReceiptsRequest : public SSMContactsRequest {
+class QTAWSSSMCONTACTS_EXPORT ListPageReceiptsRequest : public SSMContactsRequest {
 
 public:
     ListPageReceiptsRequest(const ListPageReceiptsRequest &other);

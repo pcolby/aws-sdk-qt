@@ -21,6 +21,8 @@
 #define QTAWS_KINESISRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawskinesisglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Kinesis {
 
 class KinesisResponsePrivate;
 
-class QTAWS_EXPORT KinesisResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSKINESIS_EXPORT KinesisResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

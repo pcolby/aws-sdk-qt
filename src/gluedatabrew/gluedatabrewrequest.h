@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsgluedatabrewglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace GlueDataBrew {
 
 class GlueDataBrewRequestPrivate;
 
-class QTAWS_EXPORT GlueDataBrewRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSGLUEDATABREW_EXPORT GlueDataBrewRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by GlueDataBrew.

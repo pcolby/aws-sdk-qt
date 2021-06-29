@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsdirectoryserviceglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace DirectoryService {
 
 class DirectoryServiceRequestPrivate;
 
-class QTAWS_EXPORT DirectoryServiceRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT DirectoryServiceRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by DirectoryService.

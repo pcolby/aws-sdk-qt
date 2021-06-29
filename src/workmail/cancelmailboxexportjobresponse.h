@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class CancelMailboxExportJobResponsePrivate;
 
-class QTAWS_EXPORT CancelMailboxExportJobResponse : public WorkMailResponse {
+class QTAWSWORKMAIL_EXPORT CancelMailboxExportJobResponse : public WorkMailResponse {
     Q_OBJECT
 
 public:

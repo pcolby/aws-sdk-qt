@@ -28,7 +28,7 @@ namespace IVS {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public IvsResponse {
+class QTAWSIVS_EXPORT UntagResourceResponse : public IvsResponse {
     Q_OBJECT
 
 public:

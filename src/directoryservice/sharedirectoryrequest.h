@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class ShareDirectoryRequestPrivate;
 
-class QTAWS_EXPORT ShareDirectoryRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT ShareDirectoryRequest : public DirectoryServiceRequest {
 
 public:
     ShareDirectoryRequest(const ShareDirectoryRequest &other);

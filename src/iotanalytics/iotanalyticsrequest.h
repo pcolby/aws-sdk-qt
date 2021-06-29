@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsiotanalyticsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace IoTAnalytics {
 
 class IoTAnalyticsRequestPrivate;
 
-class QTAWS_EXPORT IoTAnalyticsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSIOTANALYTICS_EXPORT IoTAnalyticsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by IoTAnalytics.

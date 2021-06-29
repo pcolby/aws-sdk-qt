@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeIdentityIdFormatResponsePrivate;
 
-class QTAWS_EXPORT DescribeIdentityIdFormatResponse : public Ec2Response {
+class QTAWSEC2_EXPORT DescribeIdentityIdFormatResponse : public Ec2Response {
     Q_OBJECT
 
 public:

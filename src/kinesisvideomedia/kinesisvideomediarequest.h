@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawskinesisvideomediaglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace KinesisVideoMedia {
 
 class KinesisVideoMediaRequestPrivate;
 
-class QTAWS_EXPORT KinesisVideoMediaRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSKINESISVIDEOMEDIA_EXPORT KinesisVideoMediaRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by KinesisVideoMedia.

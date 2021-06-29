@@ -27,7 +27,7 @@ namespace Glue {
 
 class GetTableVersionRequestPrivate;
 
-class QTAWS_EXPORT GetTableVersionRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT GetTableVersionRequest : public GlueRequest {
 
 public:
     GetTableVersionRequest(const GetTableVersionRequest &other);

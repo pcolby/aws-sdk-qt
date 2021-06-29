@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class DeleteAccessControlRuleRequestPrivate;
 
-class QTAWS_EXPORT DeleteAccessControlRuleRequest : public WorkMailRequest {
+class QTAWSWORKMAIL_EXPORT DeleteAccessControlRuleRequest : public WorkMailRequest {
 
 public:
     DeleteAccessControlRuleRequest(const DeleteAccessControlRuleRequest &other);

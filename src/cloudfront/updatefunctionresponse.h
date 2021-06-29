@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class UpdateFunctionResponsePrivate;
 
-class QTAWS_EXPORT UpdateFunctionResponse : public CloudFrontResponse {
+class QTAWSCLOUDFRONT_EXPORT UpdateFunctionResponse : public CloudFrontResponse {
     Q_OBJECT
 
 public:

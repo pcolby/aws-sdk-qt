@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsorganizationsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Organizations {
 
 class OrganizationsRequestPrivate;
 
-class QTAWS_EXPORT OrganizationsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSORGANIZATIONS_EXPORT OrganizationsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Organizations.

@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class GetAccountResponsePrivate;
 
-class QTAWS_EXPORT GetAccountResponse : public Sesv2Response {
+class QTAWSSESV2_EXPORT GetAccountResponse : public Sesv2Response {
     Q_OBJECT
 
 public:

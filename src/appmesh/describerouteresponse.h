@@ -28,7 +28,7 @@ namespace AppMesh {
 
 class DescribeRouteResponsePrivate;
 
-class QTAWS_EXPORT DescribeRouteResponse : public AppMeshResponse {
+class QTAWSAPPMESH_EXPORT DescribeRouteResponse : public AppMeshResponse {
     Q_OBJECT
 
 public:

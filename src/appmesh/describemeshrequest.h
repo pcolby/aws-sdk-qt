@@ -27,7 +27,7 @@ namespace AppMesh {
 
 class DescribeMeshRequestPrivate;
 
-class QTAWS_EXPORT DescribeMeshRequest : public AppMeshRequest {
+class QTAWSAPPMESH_EXPORT DescribeMeshRequest : public AppMeshRequest {
 
 public:
     DescribeMeshRequest(const DescribeMeshRequest &other);

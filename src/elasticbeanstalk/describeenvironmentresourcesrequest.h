@@ -27,7 +27,7 @@ namespace ElasticBeanstalk {
 
 class DescribeEnvironmentResourcesRequestPrivate;
 
-class QTAWS_EXPORT DescribeEnvironmentResourcesRequest : public ElasticBeanstalkRequest {
+class QTAWSELASTICBEANSTALK_EXPORT DescribeEnvironmentResourcesRequest : public ElasticBeanstalkRequest {
 
 public:
     DescribeEnvironmentResourcesRequest(const DescribeEnvironmentResourcesRequest &other);

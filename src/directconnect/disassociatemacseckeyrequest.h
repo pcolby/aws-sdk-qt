@@ -27,7 +27,7 @@ namespace DirectConnect {
 
 class DisassociateMacSecKeyRequestPrivate;
 
-class QTAWS_EXPORT DisassociateMacSecKeyRequest : public DirectConnectRequest {
+class QTAWSDIRECTCONNECT_EXPORT DisassociateMacSecKeyRequest : public DirectConnectRequest {
 
 public:
     DisassociateMacSecKeyRequest(const DisassociateMacSecKeyRequest &other);

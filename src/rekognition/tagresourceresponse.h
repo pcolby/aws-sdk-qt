@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public RekognitionResponse {
+class QTAWSREKOGNITION_EXPORT TagResourceResponse : public RekognitionResponse {
     Q_OBJECT
 
 public:

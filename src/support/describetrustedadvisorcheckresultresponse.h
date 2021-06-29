@@ -28,7 +28,7 @@ namespace Support {
 
 class DescribeTrustedAdvisorCheckResultResponsePrivate;
 
-class QTAWS_EXPORT DescribeTrustedAdvisorCheckResultResponse : public SupportResponse {
+class QTAWSSUPPORT_EXPORT DescribeTrustedAdvisorCheckResultResponse : public SupportResponse {
     Q_OBJECT
 
 public:

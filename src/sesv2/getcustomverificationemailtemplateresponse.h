@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class GetCustomVerificationEmailTemplateResponsePrivate;
 
-class QTAWS_EXPORT GetCustomVerificationEmailTemplateResponse : public Sesv2Response {
+class QTAWSSESV2_EXPORT GetCustomVerificationEmailTemplateResponse : public Sesv2Response {
     Q_OBJECT
 
 public:

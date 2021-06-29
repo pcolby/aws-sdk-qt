@@ -27,7 +27,7 @@ namespace EMR {
 
 class StartNotebookExecutionRequestPrivate;
 
-class QTAWS_EXPORT StartNotebookExecutionRequest : public EmrRequest {
+class QTAWSEMR_EXPORT StartNotebookExecutionRequest : public EmrRequest {
 
 public:
     StartNotebookExecutionRequest(const StartNotebookExecutionRequest &other);

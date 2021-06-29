@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class DeleteLaunchConfigurationRequestPrivate;
 
-class QTAWS_EXPORT DeleteLaunchConfigurationRequest : public AutoScalingRequest {
+class QTAWSAUTOSCALING_EXPORT DeleteLaunchConfigurationRequest : public AutoScalingRequest {
 
 public:
     DeleteLaunchConfigurationRequest(const DeleteLaunchConfigurationRequest &other);

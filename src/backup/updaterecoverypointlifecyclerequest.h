@@ -27,7 +27,7 @@ namespace Backup {
 
 class UpdateRecoveryPointLifecycleRequestPrivate;
 
-class QTAWS_EXPORT UpdateRecoveryPointLifecycleRequest : public BackupRequest {
+class QTAWSBACKUP_EXPORT UpdateRecoveryPointLifecycleRequest : public BackupRequest {
 
 public:
     UpdateRecoveryPointLifecycleRequest(const UpdateRecoveryPointLifecycleRequest &other);

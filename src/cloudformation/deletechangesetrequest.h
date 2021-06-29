@@ -27,7 +27,7 @@ namespace CloudFormation {
 
 class DeleteChangeSetRequestPrivate;
 
-class QTAWS_EXPORT DeleteChangeSetRequest : public CloudFormationRequest {
+class QTAWSCLOUDFORMATION_EXPORT DeleteChangeSetRequest : public CloudFormationRequest {
 
 public:
     DeleteChangeSetRequest(const DeleteChangeSetRequest &other);

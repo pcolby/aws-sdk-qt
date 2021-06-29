@@ -28,7 +28,7 @@ namespace Shield {
 
 class DescribeDRTAccessResponsePrivate;
 
-class QTAWS_EXPORT DescribeDRTAccessResponse : public ShieldResponse {
+class QTAWSSHIELD_EXPORT DescribeDRTAccessResponse : public ShieldResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class CreateIndexResponsePrivate;
 
-class QTAWS_EXPORT CreateIndexResponse : public CloudDirectoryResponse {
+class QTAWSCLOUDDIRECTORY_EXPORT CreateIndexResponse : public CloudDirectoryResponse {
     Q_OBJECT
 
 public:

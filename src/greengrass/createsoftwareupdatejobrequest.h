@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class CreateSoftwareUpdateJobRequestPrivate;
 
-class QTAWS_EXPORT CreateSoftwareUpdateJobRequest : public GreengrassRequest {
+class QTAWSGREENGRASS_EXPORT CreateSoftwareUpdateJobRequest : public GreengrassRequest {
 
 public:
     CreateSoftwareUpdateJobRequest(const CreateSoftwareUpdateJobRequest &other);

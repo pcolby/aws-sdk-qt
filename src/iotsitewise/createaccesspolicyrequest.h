@@ -27,7 +27,7 @@ namespace IoTSiteWise {
 
 class CreateAccessPolicyRequestPrivate;
 
-class QTAWS_EXPORT CreateAccessPolicyRequest : public IoTSiteWiseRequest {
+class QTAWSIOTSITEWISE_EXPORT CreateAccessPolicyRequest : public IoTSiteWiseRequest {
 
 public:
     CreateAccessPolicyRequest(const CreateAccessPolicyRequest &other);

@@ -27,7 +27,7 @@ namespace EKS {
 
 class CreateClusterRequestPrivate;
 
-class QTAWS_EXPORT CreateClusterRequest : public EksRequest {
+class QTAWSEKS_EXPORT CreateClusterRequest : public EksRequest {
 
 public:
     CreateClusterRequest(const CreateClusterRequest &other);

@@ -27,7 +27,7 @@ namespace S3 {
 
 class GetBucketCorsRequestPrivate;
 
-class QTAWS_EXPORT GetBucketCorsRequest : public S3Request {
+class QTAWSS3_EXPORT GetBucketCorsRequest : public S3Request {
 
 public:
     GetBucketCorsRequest(const GetBucketCorsRequest &other);

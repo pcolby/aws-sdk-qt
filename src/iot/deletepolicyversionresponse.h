@@ -28,7 +28,7 @@ namespace IoT {
 
 class DeletePolicyVersionResponsePrivate;
 
-class QTAWS_EXPORT DeletePolicyVersionResponse : public IoTResponse {
+class QTAWSIOT_EXPORT DeletePolicyVersionResponse : public IoTResponse {
     Q_OBJECT
 
 public:

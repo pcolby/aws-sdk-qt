@@ -28,7 +28,7 @@ namespace NetworkManager {
 
 class DescribeGlobalNetworksResponsePrivate;
 
-class QTAWS_EXPORT DescribeGlobalNetworksResponse : public NetworkManagerResponse {
+class QTAWSNETWORKMANAGER_EXPORT DescribeGlobalNetworksResponse : public NetworkManagerResponse {
     Q_OBJECT
 
 public:

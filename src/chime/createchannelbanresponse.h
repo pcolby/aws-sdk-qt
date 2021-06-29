@@ -28,7 +28,7 @@ namespace Chime {
 
 class CreateChannelBanResponsePrivate;
 
-class QTAWS_EXPORT CreateChannelBanResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT CreateChannelBanResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

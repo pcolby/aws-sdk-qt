@@ -27,7 +27,7 @@ namespace CustomerProfiles {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public CustomerProfilesRequest {
+class QTAWSCUSTOMERPROFILES_EXPORT TagResourceRequest : public CustomerProfilesRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

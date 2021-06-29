@@ -27,7 +27,7 @@ namespace ElasticBeanstalk {
 
 class CreateStorageLocationRequestPrivate;
 
-class QTAWS_EXPORT CreateStorageLocationRequest : public ElasticBeanstalkRequest {
+class QTAWSELASTICBEANSTALK_EXPORT CreateStorageLocationRequest : public ElasticBeanstalkRequest {
 
 public:
     CreateStorageLocationRequest(const CreateStorageLocationRequest &other);

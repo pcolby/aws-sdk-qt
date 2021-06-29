@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class AcknowledgeThirdPartyJobResponsePrivate;
 
-class QTAWS_EXPORT AcknowledgeThirdPartyJobResponse : public CodePipelineResponse {
+class QTAWSCODEPIPELINE_EXPORT AcknowledgeThirdPartyJobResponse : public CodePipelineResponse {
     Q_OBJECT
 
 public:

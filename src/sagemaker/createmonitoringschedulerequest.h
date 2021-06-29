@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class CreateMonitoringScheduleRequestPrivate;
 
-class QTAWS_EXPORT CreateMonitoringScheduleRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT CreateMonitoringScheduleRequest : public SageMakerRequest {
 
 public:
     CreateMonitoringScheduleRequest(const CreateMonitoringScheduleRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsoutpostsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -49,7 +51,7 @@ class TagResourceResponse;
 class UntagResourceRequest;
 class UntagResourceResponse;
 
-class QTAWS_EXPORT OutpostsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSOUTPOSTS_EXPORT OutpostsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

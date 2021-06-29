@@ -28,7 +28,7 @@ namespace Lambda {
 
 class ListTagsResponsePrivate;
 
-class QTAWS_EXPORT ListTagsResponse : public LambdaResponse {
+class QTAWSLAMBDA_EXPORT ListTagsResponse : public LambdaResponse {
     Q_OBJECT
 
 public:

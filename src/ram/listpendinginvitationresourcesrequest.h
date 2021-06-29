@@ -27,7 +27,7 @@ namespace RAM {
 
 class ListPendingInvitationResourcesRequestPrivate;
 
-class QTAWS_EXPORT ListPendingInvitationResourcesRequest : public RamRequest {
+class QTAWSRAM_EXPORT ListPendingInvitationResourcesRequest : public RamRequest {
 
 public:
     ListPendingInvitationResourcesRequest(const ListPendingInvitationResourcesRequest &other);

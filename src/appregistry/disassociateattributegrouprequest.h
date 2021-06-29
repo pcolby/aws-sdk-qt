@@ -27,7 +27,7 @@ namespace AppRegistry {
 
 class DisassociateAttributeGroupRequestPrivate;
 
-class QTAWS_EXPORT DisassociateAttributeGroupRequest : public AppRegistryRequest {
+class QTAWSAPPREGISTRY_EXPORT DisassociateAttributeGroupRequest : public AppRegistryRequest {
 
 public:
     DisassociateAttributeGroupRequest(const DisassociateAttributeGroupRequest &other);

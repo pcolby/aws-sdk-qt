@@ -27,7 +27,7 @@ namespace MTurk {
 
 class UpdateExpirationForHITRequestPrivate;
 
-class QTAWS_EXPORT UpdateExpirationForHITRequest : public MTurkRequest {
+class QTAWSMTURK_EXPORT UpdateExpirationForHITRequest : public MTurkRequest {
 
 public:
     UpdateExpirationForHITRequest(const UpdateExpirationForHITRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsconnectcontactlensglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace ConnectContactLens {
 
 class ConnectContactLensRequestPrivate;
 
-class QTAWS_EXPORT ConnectContactLensRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCONNECTCONTACTLENS_EXPORT ConnectContactLensRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ConnectContactLens.

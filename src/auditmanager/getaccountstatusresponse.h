@@ -28,7 +28,7 @@ namespace AuditManager {
 
 class GetAccountStatusResponsePrivate;
 
-class QTAWS_EXPORT GetAccountStatusResponse : public AuditManagerResponse {
+class QTAWSAUDITMANAGER_EXPORT GetAccountStatusResponse : public AuditManagerResponse {
     Q_OBJECT
 
 public:

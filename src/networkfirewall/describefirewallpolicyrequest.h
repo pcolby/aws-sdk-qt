@@ -27,7 +27,7 @@ namespace NetworkFirewall {
 
 class DescribeFirewallPolicyRequestPrivate;
 
-class QTAWS_EXPORT DescribeFirewallPolicyRequest : public NetworkFirewallRequest {
+class QTAWSNETWORKFIREWALL_EXPORT DescribeFirewallPolicyRequest : public NetworkFirewallRequest {
 
 public:
     DescribeFirewallPolicyRequest(const DescribeFirewallPolicyRequest &other);

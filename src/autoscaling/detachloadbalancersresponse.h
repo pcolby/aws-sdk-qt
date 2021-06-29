@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class DetachLoadBalancersResponsePrivate;
 
-class QTAWS_EXPORT DetachLoadBalancersResponse : public AutoScalingResponse {
+class QTAWSAUTOSCALING_EXPORT DetachLoadBalancersResponse : public AutoScalingResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace Detective {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public DetectiveResponse {
+class QTAWSDETECTIVE_EXPORT UntagResourceResponse : public DetectiveResponse {
     Q_OBJECT
 
 public:

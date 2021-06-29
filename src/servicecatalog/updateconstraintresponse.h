@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class UpdateConstraintResponsePrivate;
 
-class QTAWS_EXPORT UpdateConstraintResponse : public ServiceCatalogResponse {
+class QTAWSSERVICECATALOG_EXPORT UpdateConstraintResponse : public ServiceCatalogResponse {
     Q_OBJECT
 
 public:

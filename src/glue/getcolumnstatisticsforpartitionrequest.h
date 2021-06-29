@@ -27,7 +27,7 @@ namespace Glue {
 
 class GetColumnStatisticsForPartitionRequestPrivate;
 
-class QTAWS_EXPORT GetColumnStatisticsForPartitionRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT GetColumnStatisticsForPartitionRequest : public GlueRequest {
 
 public:
     GetColumnStatisticsForPartitionRequest(const GetColumnStatisticsForPartitionRequest &other);

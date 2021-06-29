@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSFINSPACEDATA_LIBRARY)
+
 add_library(QtAwsFinSpaceData
   createchangesetrequest.h
   createchangesetrequest_p.h
@@ -17,6 +19,7 @@ add_library(QtAwsFinSpaceData
   getworkinglocationrequest_p.h
   getworkinglocationresponse.h
   getworkinglocationresponse_p.h
+  qtawsfinspacedataglobal.h
   createchangesetrequest.cpp
   createchangesetresponse.cpp
   finspacedataclient.cpp

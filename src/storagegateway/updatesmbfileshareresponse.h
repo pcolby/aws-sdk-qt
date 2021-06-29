@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class UpdateSMBFileShareResponsePrivate;
 
-class QTAWS_EXPORT UpdateSMBFileShareResponse : public StorageGatewayResponse {
+class QTAWSSTORAGEGATEWAY_EXPORT UpdateSMBFileShareResponse : public StorageGatewayResponse {
     Q_OBJECT
 
 public:

@@ -21,6 +21,8 @@
 #define QTAWS_LOOKOUTMETRICSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawslookoutmetricsglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace LookoutMetrics {
 
 class LookoutMetricsResponsePrivate;
 
-class QTAWS_EXPORT LookoutMetricsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSLOOKOUTMETRICS_EXPORT LookoutMetricsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace LexRuntimeV2 {
 
 class StartConversationResponsePrivate;
 
-class QTAWS_EXPORT StartConversationResponse : public LexRuntimeV2Response {
+class QTAWSLEXRUNTIMEV2_EXPORT StartConversationResponse : public LexRuntimeV2Response {
     Q_OBJECT
 
 public:

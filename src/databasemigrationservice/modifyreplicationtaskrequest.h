@@ -27,7 +27,7 @@ namespace DatabaseMigrationService {
 
 class ModifyReplicationTaskRequestPrivate;
 
-class QTAWS_EXPORT ModifyReplicationTaskRequest : public DatabaseMigrationServiceRequest {
+class QTAWSDATABASEMIGRATIONSERVICE_EXPORT ModifyReplicationTaskRequest : public DatabaseMigrationServiceRequest {
 
 public:
     ModifyReplicationTaskRequest(const ModifyReplicationTaskRequest &other);

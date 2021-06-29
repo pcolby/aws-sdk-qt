@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class ListProvisioningArtifactsForServiceActionResponsePrivate;
 
-class QTAWS_EXPORT ListProvisioningArtifactsForServiceActionResponse : public ServiceCatalogResponse {
+class QTAWSSERVICECATALOG_EXPORT ListProvisioningArtifactsForServiceActionResponse : public ServiceCatalogResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class DeleteFileResponsePrivate;
 
-class QTAWS_EXPORT DeleteFileResponse : public CodeCommitResponse {
+class QTAWSCODECOMMIT_EXPORT DeleteFileResponse : public CodeCommitResponse {
     Q_OBJECT
 
 public:

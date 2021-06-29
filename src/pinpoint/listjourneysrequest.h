@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class ListJourneysRequestPrivate;
 
-class QTAWS_EXPORT ListJourneysRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT ListJourneysRequest : public PinpointRequest {
 
 public:
     ListJourneysRequest(const ListJourneysRequest &other);

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSAPPLICATIONINSIGHTS_LIBRARY)
+
 add_library(QtAwsApplicationInsights
   applicationinsightsclient.h
   applicationinsightsclient_p.h
@@ -89,6 +91,7 @@ add_library(QtAwsApplicationInsights
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsapplicationinsightsglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

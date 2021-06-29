@@ -27,7 +27,7 @@ namespace DirectConnect {
 
 class CreateBGPPeerRequestPrivate;
 
-class QTAWS_EXPORT CreateBGPPeerRequest : public DirectConnectRequest {
+class QTAWSDIRECTCONNECT_EXPORT CreateBGPPeerRequest : public DirectConnectRequest {
 
 public:
     CreateBGPPeerRequest(const CreateBGPPeerRequest &other);

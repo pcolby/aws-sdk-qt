@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsshieldglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Shield {
 
 class ShieldRequestPrivate;
 
-class QTAWS_EXPORT ShieldRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSHIELD_EXPORT ShieldRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Shield.

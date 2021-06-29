@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeClientVpnTargetNetworksResponsePrivate;
 
-class QTAWS_EXPORT DescribeClientVpnTargetNetworksResponse : public Ec2Response {
+class QTAWSEC2_EXPORT DescribeClientVpnTargetNetworksResponse : public Ec2Response {
     Q_OBJECT
 
 public:

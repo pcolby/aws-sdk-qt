@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawslookoutforvisionglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace LookoutforVision {
 
 class LookoutforVisionRequestPrivate;
 
-class QTAWS_EXPORT LookoutforVisionRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSLOOKOUTFORVISION_EXPORT LookoutforVisionRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by LookoutforVision.

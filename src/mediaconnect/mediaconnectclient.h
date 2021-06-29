@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsmediaconnectglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -89,7 +91,7 @@ class UpdateFlowOutputResponse;
 class UpdateFlowSourceRequest;
 class UpdateFlowSourceResponse;
 
-class QTAWS_EXPORT MediaConnectClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSMEDIACONNECT_EXPORT MediaConnectClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

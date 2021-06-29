@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSROBOMAKER_LIBRARY)
+
 add_library(QtAwsRoboMaker
   batchdeleteworldsrequest.h
   batchdeleteworldsrequest_p.h
@@ -191,6 +193,7 @@ add_library(QtAwsRoboMaker
   listworldtemplatesrequest_p.h
   listworldtemplatesresponse.h
   listworldtemplatesresponse_p.h
+  qtawsrobomakerglobal.h
   registerrobotrequest.h
   registerrobotrequest_p.h
   registerrobotresponse.h

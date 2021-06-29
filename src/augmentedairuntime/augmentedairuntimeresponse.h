@@ -21,6 +21,8 @@
 #define QTAWS_AUGMENTEDAIRUNTIMERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsaugmentedairuntimeglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace AugmentedAIRuntime {
 
 class AugmentedAIRuntimeResponsePrivate;
 
-class QTAWS_EXPORT AugmentedAIRuntimeResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSAUGMENTEDAIRUNTIME_EXPORT AugmentedAIRuntimeResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

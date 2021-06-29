@@ -27,7 +27,7 @@ namespace MachineLearning {
 
 class CreateMLModelRequestPrivate;
 
-class QTAWS_EXPORT CreateMLModelRequest : public MachineLearningRequest {
+class QTAWSMACHINELEARNING_EXPORT CreateMLModelRequest : public MachineLearningRequest {
 
 public:
     CreateMLModelRequest(const CreateMLModelRequest &other);

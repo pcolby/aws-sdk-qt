@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ModifyAvailabilityZoneGroupResponsePrivate;
 
-class QTAWS_EXPORT ModifyAvailabilityZoneGroupResponse : public Ec2Response {
+class QTAWSEC2_EXPORT ModifyAvailabilityZoneGroupResponse : public Ec2Response {
     Q_OBJECT
 
 public:

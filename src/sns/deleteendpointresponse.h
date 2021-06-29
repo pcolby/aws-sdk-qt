@@ -28,7 +28,7 @@ namespace SNS {
 
 class DeleteEndpointResponsePrivate;
 
-class QTAWS_EXPORT DeleteEndpointResponse : public SnsResponse {
+class QTAWSSNS_EXPORT DeleteEndpointResponse : public SnsResponse {
     Q_OBJECT
 
 public:

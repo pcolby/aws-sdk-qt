@@ -27,7 +27,7 @@ namespace RDS {
 
 class DeleteInstallationMediaRequestPrivate;
 
-class QTAWS_EXPORT DeleteInstallationMediaRequest : public RdsRequest {
+class QTAWSRDS_EXPORT DeleteInstallationMediaRequest : public RdsRequest {
 
 public:
     DeleteInstallationMediaRequest(const DeleteInstallationMediaRequest &other);

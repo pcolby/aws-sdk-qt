@@ -28,7 +28,7 @@ namespace NetworkManager {
 
 class UpdateLinkResponsePrivate;
 
-class QTAWS_EXPORT UpdateLinkResponse : public NetworkManagerResponse {
+class QTAWSNETWORKMANAGER_EXPORT UpdateLinkResponse : public NetworkManagerResponse {
     Q_OBJECT
 
 public:

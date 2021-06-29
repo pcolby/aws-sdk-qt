@@ -27,7 +27,7 @@ namespace ElasticBeanstalk {
 
 class DescribeEnvironmentManagedActionHistoryRequestPrivate;
 
-class QTAWS_EXPORT DescribeEnvironmentManagedActionHistoryRequest : public ElasticBeanstalkRequest {
+class QTAWSELASTICBEANSTALK_EXPORT DescribeEnvironmentManagedActionHistoryRequest : public ElasticBeanstalkRequest {
 
 public:
     DescribeEnvironmentManagedActionHistoryRequest(const DescribeEnvironmentManagedActionHistoryRequest &other);

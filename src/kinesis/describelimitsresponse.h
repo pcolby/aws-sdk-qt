@@ -28,7 +28,7 @@ namespace Kinesis {
 
 class DescribeLimitsResponsePrivate;
 
-class QTAWS_EXPORT DescribeLimitsResponse : public KinesisResponse {
+class QTAWSKINESIS_EXPORT DescribeLimitsResponse : public KinesisResponse {
     Q_OBJECT
 
 public:

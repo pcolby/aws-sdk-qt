@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsemrglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace EMR {
 
 class EmrRequestPrivate;
 
-class QTAWS_EXPORT EmrRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSEMR_EXPORT EmrRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by EMR.

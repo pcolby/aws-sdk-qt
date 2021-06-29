@@ -27,7 +27,7 @@ namespace CloudFormation {
 
 class CreateStackInstancesRequestPrivate;
 
-class QTAWS_EXPORT CreateStackInstancesRequest : public CloudFormationRequest {
+class QTAWSCLOUDFORMATION_EXPORT CreateStackInstancesRequest : public CloudFormationRequest {
 
 public:
     CreateStackInstancesRequest(const CreateStackInstancesRequest &other);

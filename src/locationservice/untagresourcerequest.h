@@ -27,7 +27,7 @@ namespace LocationService {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public LocationServiceRequest {
+class QTAWSLOCATIONSERVICE_EXPORT UntagResourceRequest : public LocationServiceRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

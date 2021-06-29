@@ -28,7 +28,7 @@ namespace ForecastService {
 
 class DeleteResourceTreeResponsePrivate;
 
-class QTAWS_EXPORT DeleteResourceTreeResponse : public ForecastServiceResponse {
+class QTAWSFORECASTSERVICE_EXPORT DeleteResourceTreeResponse : public ForecastServiceResponse {
     Q_OBJECT
 
 public:

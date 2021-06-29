@@ -27,7 +27,7 @@ namespace EC2 {
 
 class AssociateVpcCidrBlockRequestPrivate;
 
-class QTAWS_EXPORT AssociateVpcCidrBlockRequest : public Ec2Request {
+class QTAWSEC2_EXPORT AssociateVpcCidrBlockRequest : public Ec2Request {
 
 public:
     AssociateVpcCidrBlockRequest(const AssociateVpcCidrBlockRequest &other);

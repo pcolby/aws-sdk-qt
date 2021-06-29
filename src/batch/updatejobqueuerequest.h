@@ -27,7 +27,7 @@ namespace Batch {
 
 class UpdateJobQueueRequestPrivate;
 
-class QTAWS_EXPORT UpdateJobQueueRequest : public BatchRequest {
+class QTAWSBATCH_EXPORT UpdateJobQueueRequest : public BatchRequest {
 
 public:
     UpdateJobQueueRequest(const UpdateJobQueueRequest &other);

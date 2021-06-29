@@ -27,7 +27,7 @@ namespace FraudDetector {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public FraudDetectorRequest {
+class QTAWSFRAUDDETECTOR_EXPORT ListTagsForResourceRequest : public FraudDetectorRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

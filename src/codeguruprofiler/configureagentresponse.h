@@ -28,7 +28,7 @@ namespace CodeGuruProfiler {
 
 class ConfigureAgentResponsePrivate;
 
-class QTAWS_EXPORT ConfigureAgentResponse : public CodeGuruProfilerResponse {
+class QTAWSCODEGURUPROFILER_EXPORT ConfigureAgentResponse : public CodeGuruProfilerResponse {
     Q_OBJECT
 
 public:

@@ -20,7 +20,7 @@
 #ifndef AWSABSTRACTREQUEST_P_H
 #define AWSABSTRACTREQUEST_P_H
 
-#include "qtawsglobal.h"
+#include "qtawscoreglobal.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkReply>

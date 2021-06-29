@@ -27,7 +27,7 @@ namespace CloudFormation {
 
 class DescribeTypeRegistrationRequestPrivate;
 
-class QTAWS_EXPORT DescribeTypeRegistrationRequest : public CloudFormationRequest {
+class QTAWSCLOUDFORMATION_EXPORT DescribeTypeRegistrationRequest : public CloudFormationRequest {
 
 public:
     DescribeTypeRegistrationRequest(const DescribeTypeRegistrationRequest &other);

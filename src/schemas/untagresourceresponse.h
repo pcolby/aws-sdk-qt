@@ -28,7 +28,7 @@ namespace Schemas {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public SchemasResponse {
+class QTAWSSCHEMAS_EXPORT UntagResourceResponse : public SchemasResponse {
     Q_OBJECT
 
 public:

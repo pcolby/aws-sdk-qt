@@ -28,7 +28,7 @@ namespace IoTEvents {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public IoTEventsResponse {
+class QTAWSIOTEVENTS_EXPORT TagResourceResponse : public IoTEventsResponse {
     Q_OBJECT
 
 public:

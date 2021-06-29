@@ -27,7 +27,7 @@ namespace LookoutforVision {
 
 class DeleteDatasetRequestPrivate;
 
-class QTAWS_EXPORT DeleteDatasetRequest : public LookoutforVisionRequest {
+class QTAWSLOOKOUTFORVISION_EXPORT DeleteDatasetRequest : public LookoutforVisionRequest {
 
 public:
     DeleteDatasetRequest(const DeleteDatasetRequest &other);

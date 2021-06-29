@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DescribeInstanceAttributeRequestPrivate;
 
-class QTAWS_EXPORT DescribeInstanceAttributeRequest : public Ec2Request {
+class QTAWSEC2_EXPORT DescribeInstanceAttributeRequest : public Ec2Request {
 
 public:
     DescribeInstanceAttributeRequest(const DescribeInstanceAttributeRequest &other);

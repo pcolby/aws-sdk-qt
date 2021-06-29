@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class DeleteUserEndpointsRequestPrivate;
 
-class QTAWS_EXPORT DeleteUserEndpointsRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT DeleteUserEndpointsRequest : public PinpointRequest {
 
 public:
     DeleteUserEndpointsRequest(const DeleteUserEndpointsRequest &other);

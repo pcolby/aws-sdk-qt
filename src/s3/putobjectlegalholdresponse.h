@@ -28,7 +28,7 @@ namespace S3 {
 
 class PutObjectLegalHoldResponsePrivate;
 
-class QTAWS_EXPORT PutObjectLegalHoldResponse : public S3Response {
+class QTAWSS3_EXPORT PutObjectLegalHoldResponse : public S3Response {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace CognitoIdentityProvider {
 
 class ResendConfirmationCodeRequestPrivate;
 
-class QTAWS_EXPORT ResendConfirmationCodeRequest : public CognitoIdentityProviderRequest {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT ResendConfirmationCodeRequest : public CognitoIdentityProviderRequest {
 
 public:
     ResendConfirmationCodeRequest(const ResendConfirmationCodeRequest &other);

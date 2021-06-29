@@ -27,7 +27,7 @@ namespace Route53Resolver {
 
 class ListResolverRuleAssociationsRequestPrivate;
 
-class QTAWS_EXPORT ListResolverRuleAssociationsRequest : public Route53ResolverRequest {
+class QTAWSROUTE53RESOLVER_EXPORT ListResolverRuleAssociationsRequest : public Route53ResolverRequest {
 
 public:
     ListResolverRuleAssociationsRequest(const ListResolverRuleAssociationsRequest &other);

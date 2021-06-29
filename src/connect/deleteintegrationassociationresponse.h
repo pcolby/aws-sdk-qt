@@ -28,7 +28,7 @@ namespace Connect {
 
 class DeleteIntegrationAssociationResponsePrivate;
 
-class QTAWS_EXPORT DeleteIntegrationAssociationResponse : public ConnectResponse {
+class QTAWSCONNECT_EXPORT DeleteIntegrationAssociationResponse : public ConnectResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace EC2 {
 
 class GetDefaultCreditSpecificationRequestPrivate;
 
-class QTAWS_EXPORT GetDefaultCreditSpecificationRequest : public Ec2Request {
+class QTAWSEC2_EXPORT GetDefaultCreditSpecificationRequest : public Ec2Request {
 
 public:
     GetDefaultCreditSpecificationRequest(const GetDefaultCreditSpecificationRequest &other);

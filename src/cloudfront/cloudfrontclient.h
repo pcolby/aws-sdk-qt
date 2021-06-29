@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawscloudfrontglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -195,7 +197,7 @@ class UpdateRealtimeLogConfigResponse;
 class UpdateStreamingDistributionRequest;
 class UpdateStreamingDistributionResponse;
 
-class QTAWS_EXPORT CloudFrontClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCLOUDFRONT_EXPORT CloudFrontClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

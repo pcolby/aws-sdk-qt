@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class DeliverConfigSnapshotRequestPrivate;
 
-class QTAWS_EXPORT DeliverConfigSnapshotRequest : public ConfigServiceRequest {
+class QTAWSCONFIGSERVICE_EXPORT DeliverConfigSnapshotRequest : public ConfigServiceRequest {
 
 public:
     DeliverConfigSnapshotRequest(const DeliverConfigSnapshotRequest &other);

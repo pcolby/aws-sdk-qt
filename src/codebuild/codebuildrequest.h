@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawscodebuildglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace CodeBuild {
 
 class CodeBuildRequestPrivate;
 
-class QTAWS_EXPORT CodeBuildRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCODEBUILD_EXPORT CodeBuildRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CodeBuild.

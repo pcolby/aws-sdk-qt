@@ -28,7 +28,7 @@ namespace ServerlessApplicationRepository {
 
 class ListApplicationsResponsePrivate;
 
-class QTAWS_EXPORT ListApplicationsResponse : public ServerlessApplicationRepositoryResponse {
+class QTAWSSERVERLESSAPPLICATIONREPOSITORY_EXPORT ListApplicationsResponse : public ServerlessApplicationRepositoryResponse {
     Q_OBJECT
 
 public:

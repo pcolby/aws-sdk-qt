@@ -28,7 +28,7 @@ namespace Inspector {
 
 class GetExclusionsPreviewResponsePrivate;
 
-class QTAWS_EXPORT GetExclusionsPreviewResponse : public InspectorResponse {
+class QTAWSINSPECTOR_EXPORT GetExclusionsPreviewResponse : public InspectorResponse {
     Q_OBJECT
 
 public:

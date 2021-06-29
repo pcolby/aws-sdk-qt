@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawskafkaglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Kafka {
 
 class KafkaRequestPrivate;
 
-class QTAWS_EXPORT KafkaRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSKAFKA_EXPORT KafkaRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Kafka.

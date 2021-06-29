@@ -27,7 +27,7 @@ namespace FMS {
 
 class PutPolicyRequestPrivate;
 
-class QTAWS_EXPORT PutPolicyRequest : public FmsRequest {
+class QTAWSFMS_EXPORT PutPolicyRequest : public FmsRequest {
 
 public:
     PutPolicyRequest(const PutPolicyRequest &other);

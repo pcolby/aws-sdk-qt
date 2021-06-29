@@ -27,7 +27,7 @@ namespace Glacier {
 
 class GetVaultLockRequestPrivate;
 
-class QTAWS_EXPORT GetVaultLockRequest : public GlacierRequest {
+class QTAWSGLACIER_EXPORT GetVaultLockRequest : public GlacierRequest {
 
 public:
     GetVaultLockRequest(const GetVaultLockRequest &other);

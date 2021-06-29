@@ -27,7 +27,7 @@ namespace Proton {
 
 class DeleteEnvironmentTemplateRequestPrivate;
 
-class QTAWS_EXPORT DeleteEnvironmentTemplateRequest : public ProtonRequest {
+class QTAWSPROTON_EXPORT DeleteEnvironmentTemplateRequest : public ProtonRequest {
 
 public:
     DeleteEnvironmentTemplateRequest(const DeleteEnvironmentTemplateRequest &other);

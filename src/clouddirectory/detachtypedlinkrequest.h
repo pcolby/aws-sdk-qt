@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class DetachTypedLinkRequestPrivate;
 
-class QTAWS_EXPORT DetachTypedLinkRequest : public CloudDirectoryRequest {
+class QTAWSCLOUDDIRECTORY_EXPORT DetachTypedLinkRequest : public CloudDirectoryRequest {
 
 public:
     DetachTypedLinkRequest(const DetachTypedLinkRequest &other);

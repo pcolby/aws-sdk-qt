@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class DeleteCertificateRequestPrivate;
 
-class QTAWS_EXPORT DeleteCertificateRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT DeleteCertificateRequest : public LightsailRequest {
 
 public:
     DeleteCertificateRequest(const DeleteCertificateRequest &other);

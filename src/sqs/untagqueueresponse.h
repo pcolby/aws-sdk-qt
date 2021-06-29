@@ -28,7 +28,7 @@ namespace SQS {
 
 class UntagQueueResponsePrivate;
 
-class QTAWS_EXPORT UntagQueueResponse : public SqsResponse {
+class QTAWSSQS_EXPORT UntagQueueResponse : public SqsResponse {
     Q_OBJECT
 
 public:

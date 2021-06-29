@@ -28,7 +28,7 @@ namespace IoT {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public IoTResponse {
+class QTAWSIOT_EXPORT UntagResourceResponse : public IoTResponse {
     Q_OBJECT
 
 public:

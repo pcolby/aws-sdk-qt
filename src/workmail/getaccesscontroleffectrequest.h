@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class GetAccessControlEffectRequestPrivate;
 
-class QTAWS_EXPORT GetAccessControlEffectRequest : public WorkMailRequest {
+class QTAWSWORKMAIL_EXPORT GetAccessControlEffectRequest : public WorkMailRequest {
 
 public:
     GetAccessControlEffectRequest(const GetAccessControlEffectRequest &other);

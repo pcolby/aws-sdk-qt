@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class DeleteKeyPairResponsePrivate;
 
-class QTAWS_EXPORT DeleteKeyPairResponse : public LightsailResponse {
+class QTAWSLIGHTSAIL_EXPORT DeleteKeyPairResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

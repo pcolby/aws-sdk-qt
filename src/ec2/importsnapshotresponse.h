@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ImportSnapshotResponsePrivate;
 
-class QTAWS_EXPORT ImportSnapshotResponse : public Ec2Response {
+class QTAWSEC2_EXPORT ImportSnapshotResponse : public Ec2Response {
     Q_OBJECT
 
 public:

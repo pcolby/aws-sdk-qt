@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class DetachVolumeRequestPrivate;
 
-class QTAWS_EXPORT DetachVolumeRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT DetachVolumeRequest : public StorageGatewayRequest {
 
 public:
     DetachVolumeRequest(const DetachVolumeRequest &other);

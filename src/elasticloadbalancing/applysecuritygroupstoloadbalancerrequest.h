@@ -27,7 +27,7 @@ namespace ElasticLoadBalancing {
 
 class ApplySecurityGroupsToLoadBalancerRequestPrivate;
 
-class QTAWS_EXPORT ApplySecurityGroupsToLoadBalancerRequest : public ElasticLoadBalancingRequest {
+class QTAWSELASTICLOADBALANCING_EXPORT ApplySecurityGroupsToLoadBalancerRequest : public ElasticLoadBalancingRequest {
 
 public:
     ApplySecurityGroupsToLoadBalancerRequest(const ApplySecurityGroupsToLoadBalancerRequest &other);

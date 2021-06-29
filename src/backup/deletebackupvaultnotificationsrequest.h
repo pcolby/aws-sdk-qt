@@ -27,7 +27,7 @@ namespace Backup {
 
 class DeleteBackupVaultNotificationsRequestPrivate;
 
-class QTAWS_EXPORT DeleteBackupVaultNotificationsRequest : public BackupRequest {
+class QTAWSBACKUP_EXPORT DeleteBackupVaultNotificationsRequest : public BackupRequest {
 
 public:
     DeleteBackupVaultNotificationsRequest(const DeleteBackupVaultNotificationsRequest &other);

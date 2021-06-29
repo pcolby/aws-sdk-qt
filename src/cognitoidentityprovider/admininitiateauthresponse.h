@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class AdminInitiateAuthResponsePrivate;
 
-class QTAWS_EXPORT AdminInitiateAuthResponse : public CognitoIdentityProviderResponse {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT AdminInitiateAuthResponse : public CognitoIdentityProviderResponse {
     Q_OBJECT
 
 public:

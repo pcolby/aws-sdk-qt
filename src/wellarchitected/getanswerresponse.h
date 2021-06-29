@@ -28,7 +28,7 @@ namespace WellArchitected {
 
 class GetAnswerResponsePrivate;
 
-class QTAWS_EXPORT GetAnswerResponse : public WellArchitectedResponse {
+class QTAWSWELLARCHITECTED_EXPORT GetAnswerResponse : public WellArchitectedResponse {
     Q_OBJECT
 
 public:

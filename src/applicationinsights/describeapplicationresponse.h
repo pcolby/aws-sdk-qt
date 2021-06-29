@@ -28,7 +28,7 @@ namespace ApplicationInsights {
 
 class DescribeApplicationResponsePrivate;
 
-class QTAWS_EXPORT DescribeApplicationResponse : public ApplicationInsightsResponse {
+class QTAWSAPPLICATIONINSIGHTS_EXPORT DescribeApplicationResponse : public ApplicationInsightsResponse {
     Q_OBJECT
 
 public:

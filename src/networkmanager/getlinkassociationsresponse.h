@@ -28,7 +28,7 @@ namespace NetworkManager {
 
 class GetLinkAssociationsResponsePrivate;
 
-class QTAWS_EXPORT GetLinkAssociationsResponse : public NetworkManagerResponse {
+class QTAWSNETWORKMANAGER_EXPORT GetLinkAssociationsResponse : public NetworkManagerResponse {
     Q_OBJECT
 
 public:

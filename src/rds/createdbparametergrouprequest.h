@@ -27,7 +27,7 @@ namespace RDS {
 
 class CreateDBParameterGroupRequestPrivate;
 
-class QTAWS_EXPORT CreateDBParameterGroupRequest : public RdsRequest {
+class QTAWSRDS_EXPORT CreateDBParameterGroupRequest : public RdsRequest {
 
 public:
     CreateDBParameterGroupRequest(const CreateDBParameterGroupRequest &other);

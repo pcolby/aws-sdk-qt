@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class UpdateAuthorizerResponsePrivate;
 
-class QTAWS_EXPORT UpdateAuthorizerResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT UpdateAuthorizerResponse : public APIGatewayResponse {
     Q_OBJECT
 
 public:

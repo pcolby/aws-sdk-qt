@@ -27,7 +27,7 @@ namespace CloudFormation {
 
 class DescribeAccountLimitsRequestPrivate;
 
-class QTAWS_EXPORT DescribeAccountLimitsRequest : public CloudFormationRequest {
+class QTAWSCLOUDFORMATION_EXPORT DescribeAccountLimitsRequest : public CloudFormationRequest {
 
 public:
     DescribeAccountLimitsRequest(const DescribeAccountLimitsRequest &other);

@@ -28,7 +28,7 @@ namespace MQ {
 
 class UpdateBrokerResponsePrivate;
 
-class QTAWS_EXPORT UpdateBrokerResponse : public MqResponse {
+class QTAWSMQ_EXPORT UpdateBrokerResponse : public MqResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace ElasticLoadBalancingv2 {
 
 class SetSecurityGroupsRequestPrivate;
 
-class QTAWS_EXPORT SetSecurityGroupsRequest : public ElasticLoadBalancingv2Request {
+class QTAWSELASTICLOADBALANCINGV2_EXPORT SetSecurityGroupsRequest : public ElasticLoadBalancingv2Request {
 
 public:
     SetSecurityGroupsRequest(const SetSecurityGroupsRequest &other);

@@ -28,7 +28,7 @@ namespace LicenseManager {
 
 class GetGrantResponsePrivate;
 
-class QTAWS_EXPORT GetGrantResponse : public LicenseManagerResponse {
+class QTAWSLICENSEMANAGER_EXPORT GetGrantResponse : public LicenseManagerResponse {
     Q_OBJECT
 
 public:

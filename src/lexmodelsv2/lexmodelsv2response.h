@@ -21,6 +21,8 @@
 #define QTAWS_LEXMODELSV2RESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawslexmodelsv2global.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace LexModelsV2 {
 
 class LexModelsV2ResponsePrivate;
 
-class QTAWS_EXPORT LexModelsV2Response : public QtAws::Core::AwsAbstractResponse {
+class QTAWSLEXMODELSV2_EXPORT LexModelsV2Response : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

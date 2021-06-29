@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSAPIGATEWAYV2_LIBRARY)
+
 add_library(QtAwsApiGatewayV2
   apigatewayv2client.h
   apigatewayv2client_p.h
@@ -229,6 +231,7 @@ add_library(QtAwsApiGatewayV2
   importapirequest_p.h
   importapiresponse.h
   importapiresponse_p.h
+  qtawsapigatewayv2global.h
   reimportapirequest.h
   reimportapirequest_p.h
   reimportapiresponse.h

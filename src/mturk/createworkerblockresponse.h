@@ -28,7 +28,7 @@ namespace MTurk {
 
 class CreateWorkerBlockResponsePrivate;
 
-class QTAWS_EXPORT CreateWorkerBlockResponse : public MTurkResponse {
+class QTAWSMTURK_EXPORT CreateWorkerBlockResponse : public MTurkResponse {
     Q_OBJECT
 
 public:

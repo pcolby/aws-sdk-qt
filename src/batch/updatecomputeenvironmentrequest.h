@@ -27,7 +27,7 @@ namespace Batch {
 
 class UpdateComputeEnvironmentRequestPrivate;
 
-class QTAWS_EXPORT UpdateComputeEnvironmentRequest : public BatchRequest {
+class QTAWSBATCH_EXPORT UpdateComputeEnvironmentRequest : public BatchRequest {
 
 public:
     UpdateComputeEnvironmentRequest(const UpdateComputeEnvironmentRequest &other);

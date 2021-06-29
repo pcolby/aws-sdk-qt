@@ -28,7 +28,7 @@ namespace EMRContainers {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public EMRContainersResponse {
+class QTAWSEMRCONTAINERS_EXPORT ListTagsForResourceResponse : public EMRContainersResponse {
     Q_OBJECT
 
 public:

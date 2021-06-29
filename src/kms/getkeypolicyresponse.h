@@ -28,7 +28,7 @@ namespace KMS {
 
 class GetKeyPolicyResponsePrivate;
 
-class QTAWS_EXPORT GetKeyPolicyResponse : public KmsResponse {
+class QTAWSKMS_EXPORT GetKeyPolicyResponse : public KmsResponse {
     Q_OBJECT
 
 public:

@@ -20,7 +20,7 @@
 #ifndef AWSABSTRACTSIGNATURE_H
 #define AWSABSTRACTSIGNATURE_H
 
-#include "qtawsglobal.h"
+#include "qtawscoreglobal.h"
 #include "awsabstractcredentials.h"
 
 #include <QNetworkAccessManager>
@@ -31,7 +31,7 @@ namespace Core {
 
 class AwsAbstractSignaturePrivate;
 
-class QTAWS_EXPORT AwsAbstractSignature {
+class QTAWSCORE_EXPORT AwsAbstractSignature {
 
 public:
     AwsAbstractSignature();

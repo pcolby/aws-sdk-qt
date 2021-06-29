@@ -27,7 +27,7 @@ namespace CloudFormation {
 
 class GetTemplateSummaryRequestPrivate;
 
-class QTAWS_EXPORT GetTemplateSummaryRequest : public CloudFormationRequest {
+class QTAWSCLOUDFORMATION_EXPORT GetTemplateSummaryRequest : public CloudFormationRequest {
 
 public:
     GetTemplateSummaryRequest(const GetTemplateSummaryRequest &other);

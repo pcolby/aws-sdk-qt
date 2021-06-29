@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsalexaforbusinessglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -215,7 +217,7 @@ class UpdateRoomResponse;
 class UpdateSkillGroupRequest;
 class UpdateSkillGroupResponse;
 
-class QTAWS_EXPORT AlexaForBusinessClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSALEXAFORBUSINESS_EXPORT AlexaForBusinessClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace CloudTrail {
 
 class StartLoggingRequestPrivate;
 
-class QTAWS_EXPORT StartLoggingRequest : public CloudTrailRequest {
+class QTAWSCLOUDTRAIL_EXPORT StartLoggingRequest : public CloudTrailRequest {
 
 public:
     StartLoggingRequest(const StartLoggingRequest &other);

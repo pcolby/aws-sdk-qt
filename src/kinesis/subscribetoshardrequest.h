@@ -27,7 +27,7 @@ namespace Kinesis {
 
 class SubscribeToShardRequestPrivate;
 
-class QTAWS_EXPORT SubscribeToShardRequest : public KinesisRequest {
+class QTAWSKINESIS_EXPORT SubscribeToShardRequest : public KinesisRequest {
 
 public:
     SubscribeToShardRequest(const SubscribeToShardRequest &other);

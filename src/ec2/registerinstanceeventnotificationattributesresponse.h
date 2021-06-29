@@ -28,7 +28,7 @@ namespace EC2 {
 
 class RegisterInstanceEventNotificationAttributesResponsePrivate;
 
-class QTAWS_EXPORT RegisterInstanceEventNotificationAttributesResponse : public Ec2Response {
+class QTAWSEC2_EXPORT RegisterInstanceEventNotificationAttributesResponse : public Ec2Response {
     Q_OBJECT
 
 public:

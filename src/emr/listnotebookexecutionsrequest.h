@@ -27,7 +27,7 @@ namespace EMR {
 
 class ListNotebookExecutionsRequestPrivate;
 
-class QTAWS_EXPORT ListNotebookExecutionsRequest : public EmrRequest {
+class QTAWSEMR_EXPORT ListNotebookExecutionsRequest : public EmrRequest {
 
 public:
     ListNotebookExecutionsRequest(const ListNotebookExecutionsRequest &other);

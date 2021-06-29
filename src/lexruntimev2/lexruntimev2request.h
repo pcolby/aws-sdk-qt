@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawslexruntimev2global.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace LexRuntimeV2 {
 
 class LexRuntimeV2RequestPrivate;
 
-class QTAWS_EXPORT LexRuntimeV2Request : public QtAws::Core::AwsAbstractRequest {
+class QTAWSLEXRUNTIMEV2_EXPORT LexRuntimeV2Request : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by LexRuntimeV2.

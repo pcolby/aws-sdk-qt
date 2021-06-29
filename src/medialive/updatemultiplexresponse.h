@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class UpdateMultiplexResponsePrivate;
 
-class QTAWS_EXPORT UpdateMultiplexResponse : public MediaLiveResponse {
+class QTAWSMEDIALIVE_EXPORT UpdateMultiplexResponse : public MediaLiveResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace GroundStation {
 
 class GetConfigRequestPrivate;
 
-class QTAWS_EXPORT GetConfigRequest : public GroundStationRequest {
+class QTAWSGROUNDSTATION_EXPORT GetConfigRequest : public GroundStationRequest {
 
 public:
     GetConfigRequest(const GetConfigRequest &other);

@@ -27,7 +27,7 @@ namespace OpsWorksCM {
 
 class UpdateServerEngineAttributesRequestPrivate;
 
-class QTAWS_EXPORT UpdateServerEngineAttributesRequest : public OpsWorksCMRequest {
+class QTAWSOPSWORKSCM_EXPORT UpdateServerEngineAttributesRequest : public OpsWorksCMRequest {
 
 public:
     UpdateServerEngineAttributesRequest(const UpdateServerEngineAttributesRequest &other);

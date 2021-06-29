@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class UpdateWorkspaceImagePermissionResponsePrivate;
 
-class QTAWS_EXPORT UpdateWorkspaceImagePermissionResponse : public WorkSpacesResponse {
+class QTAWSWORKSPACES_EXPORT UpdateWorkspaceImagePermissionResponse : public WorkSpacesResponse {
     Q_OBJECT
 
 public:

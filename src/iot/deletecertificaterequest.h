@@ -27,7 +27,7 @@ namespace IoT {
 
 class DeleteCertificateRequestPrivate;
 
-class QTAWS_EXPORT DeleteCertificateRequest : public IoTRequest {
+class QTAWSIOT_EXPORT DeleteCertificateRequest : public IoTRequest {
 
 public:
     DeleteCertificateRequest(const DeleteCertificateRequest &other);

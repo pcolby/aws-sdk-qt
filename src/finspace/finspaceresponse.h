@@ -21,6 +21,8 @@
 #define QTAWS_FINSPACERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsfinspaceglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace finspace {
 
 class finspaceResponsePrivate;
 
-class QTAWS_EXPORT finspaceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSFINSPACE_EXPORT finspaceResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace IoT {
 
 class ListOutgoingCertificatesRequestPrivate;
 
-class QTAWS_EXPORT ListOutgoingCertificatesRequest : public IoTRequest {
+class QTAWSIOT_EXPORT ListOutgoingCertificatesRequest : public IoTRequest {
 
 public:
     ListOutgoingCertificatesRequest(const ListOutgoingCertificatesRequest &other);

@@ -27,7 +27,7 @@ namespace MachineLearning {
 
 class DeleteTagsRequestPrivate;
 
-class QTAWS_EXPORT DeleteTagsRequest : public MachineLearningRequest {
+class QTAWSMACHINELEARNING_EXPORT DeleteTagsRequest : public MachineLearningRequest {
 
 public:
     DeleteTagsRequest(const DeleteTagsRequest &other);

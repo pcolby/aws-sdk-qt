@@ -27,7 +27,7 @@ namespace Kafka {
 
 class DescribeClusterRequestPrivate;
 
-class QTAWS_EXPORT DescribeClusterRequest : public KafkaRequest {
+class QTAWSKAFKA_EXPORT DescribeClusterRequest : public KafkaRequest {
 
 public:
     DescribeClusterRequest(const DescribeClusterRequest &other);

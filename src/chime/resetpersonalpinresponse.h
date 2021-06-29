@@ -28,7 +28,7 @@ namespace Chime {
 
 class ResetPersonalPINResponsePrivate;
 
-class QTAWS_EXPORT ResetPersonalPINResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT ResetPersonalPINResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

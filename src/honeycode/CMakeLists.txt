@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSHONEYCODE_LIBRARY)
+
 add_library(QtAwsHoneycode
   batchcreatetablerowsrequest.h
   batchcreatetablerowsrequest_p.h
@@ -45,6 +47,7 @@ add_library(QtAwsHoneycode
   listtablesrequest_p.h
   listtablesresponse.h
   listtablesresponse_p.h
+  qtawshoneycodeglobal.h
   querytablerowsrequest.h
   querytablerowsrequest_p.h
   querytablerowsresponse.h

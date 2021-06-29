@@ -28,7 +28,7 @@ namespace GameLift {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public GameLiftResponse {
+class QTAWSGAMELIFT_EXPORT TagResourceResponse : public GameLiftResponse {
     Q_OBJECT
 
 public:

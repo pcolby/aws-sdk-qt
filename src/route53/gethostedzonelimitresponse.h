@@ -28,7 +28,7 @@ namespace Route53 {
 
 class GetHostedZoneLimitResponsePrivate;
 
-class QTAWS_EXPORT GetHostedZoneLimitResponse : public Route53Response {
+class QTAWSROUTE53_EXPORT GetHostedZoneLimitResponse : public Route53Response {
     Q_OBJECT
 
 public:

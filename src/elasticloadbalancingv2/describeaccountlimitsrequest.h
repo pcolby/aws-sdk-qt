@@ -27,7 +27,7 @@ namespace ElasticLoadBalancingv2 {
 
 class DescribeAccountLimitsRequestPrivate;
 
-class QTAWS_EXPORT DescribeAccountLimitsRequest : public ElasticLoadBalancingv2Request {
+class QTAWSELASTICLOADBALANCINGV2_EXPORT DescribeAccountLimitsRequest : public ElasticLoadBalancingv2Request {
 
 public:
     DescribeAccountLimitsRequest(const DescribeAccountLimitsRequest &other);

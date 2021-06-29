@@ -27,7 +27,7 @@ namespace FSx {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public FSxRequest {
+class QTAWSFSX_EXPORT TagResourceRequest : public FSxRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

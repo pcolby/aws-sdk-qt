@@ -27,7 +27,7 @@ namespace Redshift {
 
 class PauseClusterRequestPrivate;
 
-class QTAWS_EXPORT PauseClusterRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT PauseClusterRequest : public RedshiftRequest {
 
 public:
     PauseClusterRequest(const PauseClusterRequest &other);

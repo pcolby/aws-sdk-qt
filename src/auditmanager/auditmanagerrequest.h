@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsauditmanagerglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace AuditManager {
 
 class AuditManagerRequestPrivate;
 
-class QTAWS_EXPORT AuditManagerRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSAUDITMANAGER_EXPORT AuditManagerRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by AuditManager.

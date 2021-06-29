@@ -28,7 +28,7 @@ namespace LexRuntimeV2 {
 
 class RecognizeUtteranceResponsePrivate;
 
-class QTAWS_EXPORT RecognizeUtteranceResponse : public LexRuntimeV2Response {
+class QTAWSLEXRUNTIMEV2_EXPORT RecognizeUtteranceResponse : public LexRuntimeV2Response {
     Q_OBJECT
 
 public:

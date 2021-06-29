@@ -27,7 +27,7 @@ namespace ApplicationDiscoveryService {
 
 class DescribeExportConfigurationsRequestPrivate;
 
-class QTAWS_EXPORT DescribeExportConfigurationsRequest : public ApplicationDiscoveryServiceRequest {
+class QTAWSAPPLICATIONDISCOVERYSERVICE_EXPORT DescribeExportConfigurationsRequest : public ApplicationDiscoveryServiceRequest {
 
 public:
     DescribeExportConfigurationsRequest(const DescribeExportConfigurationsRequest &other);

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSMOBILE_LIBRARY)
+
 add_library(QtAwsMobile
   createprojectrequest.h
   createprojectrequest_p.h
@@ -37,6 +39,7 @@ add_library(QtAwsMobile
   mobilerequest_p.h
   mobileresponse.h
   mobileresponse_p.h
+  qtawsmobileglobal.h
   updateprojectrequest.h
   updateprojectrequest_p.h
   updateprojectresponse.h

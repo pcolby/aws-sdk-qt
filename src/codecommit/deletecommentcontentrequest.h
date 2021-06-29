@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class DeleteCommentContentRequestPrivate;
 
-class QTAWS_EXPORT DeleteCommentContentRequest : public CodeCommitRequest {
+class QTAWSCODECOMMIT_EXPORT DeleteCommentContentRequest : public CodeCommitRequest {
 
 public:
     DeleteCommentContentRequest(const DeleteCommentContentRequest &other);

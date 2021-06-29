@@ -27,7 +27,7 @@ namespace PinpointEmail {
 
 class UpdateConfigurationSetEventDestinationRequestPrivate;
 
-class QTAWS_EXPORT UpdateConfigurationSetEventDestinationRequest : public PinpointEmailRequest {
+class QTAWSPINPOINTEMAIL_EXPORT UpdateConfigurationSetEventDestinationRequest : public PinpointEmailRequest {
 
 public:
     UpdateConfigurationSetEventDestinationRequest(const UpdateConfigurationSetEventDestinationRequest &other);

@@ -28,7 +28,7 @@ namespace Glue {
 
 class StartMLLabelingSetGenerationTaskRunResponsePrivate;
 
-class QTAWS_EXPORT StartMLLabelingSetGenerationTaskRunResponse : public GlueResponse {
+class QTAWSGLUE_EXPORT StartMLLabelingSetGenerationTaskRunResponse : public GlueResponse {
     Q_OBJECT
 
 public:

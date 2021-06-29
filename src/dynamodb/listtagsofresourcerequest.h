@@ -27,7 +27,7 @@ namespace DynamoDB {
 
 class ListTagsOfResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsOfResourceRequest : public DynamoDBRequest {
+class QTAWSDYNAMODB_EXPORT ListTagsOfResourceRequest : public DynamoDBRequest {
 
 public:
     ListTagsOfResourceRequest(const ListTagsOfResourceRequest &other);

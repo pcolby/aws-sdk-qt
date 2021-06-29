@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class DescribePendingMaintenanceActionsResponsePrivate;
 
-class QTAWS_EXPORT DescribePendingMaintenanceActionsResponse : public DatabaseMigrationServiceResponse {
+class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DescribePendingMaintenanceActionsResponse : public DatabaseMigrationServiceResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace DocDB {
 
 class CopyDBClusterParameterGroupRequestPrivate;
 
-class QTAWS_EXPORT CopyDBClusterParameterGroupRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT CopyDBClusterParameterGroupRequest : public DocDBRequest {
 
 public:
     CopyDBClusterParameterGroupRequest(const CopyDBClusterParameterGroupRequest &other);

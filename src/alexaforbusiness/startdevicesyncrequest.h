@@ -27,7 +27,7 @@ namespace AlexaForBusiness {
 
 class StartDeviceSyncRequestPrivate;
 
-class QTAWS_EXPORT StartDeviceSyncRequest : public AlexaForBusinessRequest {
+class QTAWSALEXAFORBUSINESS_EXPORT StartDeviceSyncRequest : public AlexaForBusinessRequest {
 
 public:
     StartDeviceSyncRequest(const StartDeviceSyncRequest &other);

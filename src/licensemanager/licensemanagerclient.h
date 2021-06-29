@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawslicensemanagerglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -119,7 +121,7 @@ class UpdateLicenseSpecificationsForResourceResponse;
 class UpdateServiceSettingsRequest;
 class UpdateServiceSettingsResponse;
 
-class QTAWS_EXPORT LicenseManagerClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSLICENSEMANAGER_EXPORT LicenseManagerClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

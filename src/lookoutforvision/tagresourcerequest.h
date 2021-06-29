@@ -27,7 +27,7 @@ namespace LookoutforVision {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public LookoutforVisionRequest {
+class QTAWSLOOKOUTFORVISION_EXPORT TagResourceRequest : public LookoutforVisionRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class DeleteGcmChannelRequestPrivate;
 
-class QTAWS_EXPORT DeleteGcmChannelRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT DeleteGcmChannelRequest : public PinpointRequest {
 
 public:
     DeleteGcmChannelRequest(const DeleteGcmChannelRequest &other);

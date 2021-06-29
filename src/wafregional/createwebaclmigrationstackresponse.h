@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class CreateWebACLMigrationStackResponsePrivate;
 
-class QTAWS_EXPORT CreateWebACLMigrationStackResponse : public WAFRegionalResponse {
+class QTAWSWAFREGIONAL_EXPORT CreateWebACLMigrationStackResponse : public WAFRegionalResponse {
     Q_OBJECT
 
 public:

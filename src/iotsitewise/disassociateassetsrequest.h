@@ -27,7 +27,7 @@ namespace IoTSiteWise {
 
 class DisassociateAssetsRequestPrivate;
 
-class QTAWS_EXPORT DisassociateAssetsRequest : public IoTSiteWiseRequest {
+class QTAWSIOTSITEWISE_EXPORT DisassociateAssetsRequest : public IoTSiteWiseRequest {
 
 public:
     DisassociateAssetsRequest(const DisassociateAssetsRequest &other);

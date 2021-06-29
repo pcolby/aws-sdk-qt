@@ -27,7 +27,7 @@ namespace EMR {
 
 class StopNotebookExecutionRequestPrivate;
 
-class QTAWS_EXPORT StopNotebookExecutionRequest : public EmrRequest {
+class QTAWSEMR_EXPORT StopNotebookExecutionRequest : public EmrRequest {
 
 public:
     StopNotebookExecutionRequest(const StopNotebookExecutionRequest &other);

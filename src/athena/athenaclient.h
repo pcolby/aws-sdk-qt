@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsathenaglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -97,7 +99,7 @@ class UpdatePreparedStatementResponse;
 class UpdateWorkGroupRequest;
 class UpdateWorkGroupResponse;
 
-class QTAWS_EXPORT AthenaClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSATHENA_EXPORT AthenaClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

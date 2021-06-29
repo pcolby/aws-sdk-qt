@@ -27,7 +27,7 @@ namespace CloudWatchEvents {
 
 class RemovePermissionRequestPrivate;
 
-class QTAWS_EXPORT RemovePermissionRequest : public CloudWatchEventsRequest {
+class QTAWSCLOUDWATCHEVENTS_EXPORT RemovePermissionRequest : public CloudWatchEventsRequest {
 
 public:
     RemovePermissionRequest(const RemovePermissionRequest &other);

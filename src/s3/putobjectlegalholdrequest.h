@@ -27,7 +27,7 @@ namespace S3 {
 
 class PutObjectLegalHoldRequestPrivate;
 
-class QTAWS_EXPORT PutObjectLegalHoldRequest : public S3Request {
+class QTAWSS3_EXPORT PutObjectLegalHoldRequest : public S3Request {
 
 public:
     PutObjectLegalHoldRequest(const PutObjectLegalHoldRequest &other);

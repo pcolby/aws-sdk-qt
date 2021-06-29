@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteLocalGatewayRouteTableVpcAssociationResponsePrivate;
 
-class QTAWS_EXPORT DeleteLocalGatewayRouteTableVpcAssociationResponse : public Ec2Response {
+class QTAWSEC2_EXPORT DeleteLocalGatewayRouteTableVpcAssociationResponse : public Ec2Response {
     Q_OBJECT
 
 public:

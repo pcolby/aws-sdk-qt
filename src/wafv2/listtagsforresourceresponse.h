@@ -28,7 +28,7 @@ namespace WAFV2 {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public Wafv2Response {
+class QTAWSWAFV2_EXPORT ListTagsForResourceResponse : public Wafv2Response {
     Q_OBJECT
 
 public:

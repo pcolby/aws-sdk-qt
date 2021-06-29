@@ -21,6 +21,8 @@
 #define QTAWS_WORKMAILRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsworkmailglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace WorkMail {
 
 class WorkMailResponsePrivate;
 
-class QTAWS_EXPORT WorkMailResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSWORKMAIL_EXPORT WorkMailResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

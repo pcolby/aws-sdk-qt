@@ -27,7 +27,7 @@ namespace SNS {
 
 class ListPlatformApplicationsRequestPrivate;
 
-class QTAWS_EXPORT ListPlatformApplicationsRequest : public SnsRequest {
+class QTAWSSNS_EXPORT ListPlatformApplicationsRequest : public SnsRequest {
 
 public:
     ListPlatformApplicationsRequest(const ListPlatformApplicationsRequest &other);

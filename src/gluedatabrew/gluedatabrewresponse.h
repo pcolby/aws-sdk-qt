@@ -21,6 +21,8 @@
 #define QTAWS_GLUEDATABREWRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsgluedatabrewglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace GlueDataBrew {
 
 class GlueDataBrewResponsePrivate;
 
-class QTAWS_EXPORT GlueDataBrewResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSGLUEDATABREW_EXPORT GlueDataBrewResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

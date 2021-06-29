@@ -27,7 +27,7 @@ namespace DynamoDB {
 
 class ListGlobalTablesRequestPrivate;
 
-class QTAWS_EXPORT ListGlobalTablesRequest : public DynamoDBRequest {
+class QTAWSDYNAMODB_EXPORT ListGlobalTablesRequest : public DynamoDBRequest {
 
 public:
     ListGlobalTablesRequest(const ListGlobalTablesRequest &other);

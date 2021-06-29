@@ -21,6 +21,8 @@
 #define QTAWS_ELASTICTRANSCODERRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawselastictranscoderglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace ElasticTranscoder {
 
 class ElasticTranscoderResponsePrivate;
 
-class QTAWS_EXPORT ElasticTranscoderResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSELASTICTRANSCODER_EXPORT ElasticTranscoderResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

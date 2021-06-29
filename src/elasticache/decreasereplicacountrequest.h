@@ -27,7 +27,7 @@ namespace ElastiCache {
 
 class DecreaseReplicaCountRequestPrivate;
 
-class QTAWS_EXPORT DecreaseReplicaCountRequest : public ElastiCacheRequest {
+class QTAWSELASTICACHE_EXPORT DecreaseReplicaCountRequest : public ElastiCacheRequest {
 
 public:
     DecreaseReplicaCountRequest(const DecreaseReplicaCountRequest &other);

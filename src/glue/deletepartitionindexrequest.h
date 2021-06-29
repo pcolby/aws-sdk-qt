@@ -27,7 +27,7 @@ namespace Glue {
 
 class DeletePartitionIndexRequestPrivate;
 
-class QTAWS_EXPORT DeletePartitionIndexRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT DeletePartitionIndexRequest : public GlueRequest {
 
 public:
     DeletePartitionIndexRequest(const DeletePartitionIndexRequest &other);

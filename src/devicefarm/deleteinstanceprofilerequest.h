@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class DeleteInstanceProfileRequestPrivate;
 
-class QTAWS_EXPORT DeleteInstanceProfileRequest : public DeviceFarmRequest {
+class QTAWSDEVICEFARM_EXPORT DeleteInstanceProfileRequest : public DeviceFarmRequest {
 
 public:
     DeleteInstanceProfileRequest(const DeleteInstanceProfileRequest &other);

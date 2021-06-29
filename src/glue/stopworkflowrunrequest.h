@@ -27,7 +27,7 @@ namespace Glue {
 
 class StopWorkflowRunRequestPrivate;
 
-class QTAWS_EXPORT StopWorkflowRunRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT StopWorkflowRunRequest : public GlueRequest {
 
 public:
     StopWorkflowRunRequest(const StopWorkflowRunRequest &other);

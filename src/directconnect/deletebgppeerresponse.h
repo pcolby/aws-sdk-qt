@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class DeleteBGPPeerResponsePrivate;
 
-class QTAWS_EXPORT DeleteBGPPeerResponse : public DirectConnectResponse {
+class QTAWSDIRECTCONNECT_EXPORT DeleteBGPPeerResponse : public DirectConnectResponse {
     Q_OBJECT
 
 public:

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSMIGRATIONHUBCONFIG_LIBRARY)
+
 add_library(QtAwsMigrationHubConfig
   createhomeregioncontrolrequest.h
   createhomeregioncontrolrequest_p.h
@@ -17,6 +19,7 @@ add_library(QtAwsMigrationHubConfig
   migrationhubconfigrequest_p.h
   migrationhubconfigresponse.h
   migrationhubconfigresponse_p.h
+  qtawsmigrationhubconfigglobal.h
   createhomeregioncontrolrequest.cpp
   createhomeregioncontrolresponse.cpp
   describehomeregioncontrolsrequest.cpp

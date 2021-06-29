@@ -28,7 +28,7 @@ namespace SES {
 
 class ListIdentityPoliciesResponsePrivate;
 
-class QTAWS_EXPORT ListIdentityPoliciesResponse : public SesResponse {
+class QTAWSSES_EXPORT ListIdentityPoliciesResponse : public SesResponse {
     Q_OBJECT
 
 public:

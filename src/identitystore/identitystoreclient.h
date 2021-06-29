@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsidentitystoreglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -37,7 +39,7 @@ class ListGroupsResponse;
 class ListUsersRequest;
 class ListUsersResponse;
 
-class QTAWS_EXPORT IdentityStoreClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSIDENTITYSTORE_EXPORT IdentityStoreClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

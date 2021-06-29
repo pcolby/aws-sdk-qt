@@ -27,7 +27,7 @@ namespace Synthetics {
 
 class UpdateCanaryRequestPrivate;
 
-class QTAWS_EXPORT UpdateCanaryRequest : public SyntheticsRequest {
+class QTAWSSYNTHETICS_EXPORT UpdateCanaryRequest : public SyntheticsRequest {
 
 public:
     UpdateCanaryRequest(const UpdateCanaryRequest &other);

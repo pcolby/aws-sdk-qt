@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSHEALTH_LIBRARY)
+
 add_library(QtAwsHealth
   describeaffectedaccountsfororganizationrequest.h
   describeaffectedaccountsfororganizationrequest_p.h
@@ -57,6 +59,7 @@ add_library(QtAwsHealth
   healthrequest_p.h
   healthresponse.h
   healthresponse_p.h
+  qtawshealthglobal.h
   describeaffectedaccountsfororganizationrequest.cpp
   describeaffectedaccountsfororganizationresponse.cpp
   describeaffectedentitiesfororganizationrequest.cpp

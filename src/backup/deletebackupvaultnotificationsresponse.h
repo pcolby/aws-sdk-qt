@@ -28,7 +28,7 @@ namespace Backup {
 
 class DeleteBackupVaultNotificationsResponsePrivate;
 
-class QTAWS_EXPORT DeleteBackupVaultNotificationsResponse : public BackupResponse {
+class QTAWSBACKUP_EXPORT DeleteBackupVaultNotificationsResponse : public BackupResponse {
     Q_OBJECT
 
 public:

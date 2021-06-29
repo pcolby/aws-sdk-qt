@@ -27,7 +27,7 @@ namespace CloudSearch {
 
 class DeleteSuggesterRequestPrivate;
 
-class QTAWS_EXPORT DeleteSuggesterRequest : public CloudSearchRequest {
+class QTAWSCLOUDSEARCH_EXPORT DeleteSuggesterRequest : public CloudSearchRequest {
 
 public:
     DeleteSuggesterRequest(const DeleteSuggesterRequest &other);

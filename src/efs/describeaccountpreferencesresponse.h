@@ -28,7 +28,7 @@ namespace EFS {
 
 class DescribeAccountPreferencesResponsePrivate;
 
-class QTAWS_EXPORT DescribeAccountPreferencesResponse : public EfsResponse {
+class QTAWSEFS_EXPORT DescribeAccountPreferencesResponse : public EfsResponse {
     Q_OBJECT
 
 public:

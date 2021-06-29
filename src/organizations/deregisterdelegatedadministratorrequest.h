@@ -27,7 +27,7 @@ namespace Organizations {
 
 class DeregisterDelegatedAdministratorRequestPrivate;
 
-class QTAWS_EXPORT DeregisterDelegatedAdministratorRequest : public OrganizationsRequest {
+class QTAWSORGANIZATIONS_EXPORT DeregisterDelegatedAdministratorRequest : public OrganizationsRequest {
 
 public:
     DeregisterDelegatedAdministratorRequest(const DeregisterDelegatedAdministratorRequest &other);

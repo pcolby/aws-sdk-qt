@@ -27,7 +27,7 @@ namespace Chime {
 
 class RegenerateSecurityTokenRequestPrivate;
 
-class QTAWS_EXPORT RegenerateSecurityTokenRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT RegenerateSecurityTokenRequest : public ChimeRequest {
 
 public:
     RegenerateSecurityTokenRequest(const RegenerateSecurityTokenRequest &other);

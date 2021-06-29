@@ -28,7 +28,7 @@ namespace FMS {
 
 class PutAppsListResponsePrivate;
 
-class QTAWS_EXPORT PutAppsListResponse : public FmsResponse {
+class QTAWSFMS_EXPORT PutAppsListResponse : public FmsResponse {
     Q_OBJECT
 
 public:

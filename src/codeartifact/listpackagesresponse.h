@@ -28,7 +28,7 @@ namespace CodeArtifact {
 
 class ListPackagesResponsePrivate;
 
-class QTAWS_EXPORT ListPackagesResponse : public CodeArtifactResponse {
+class QTAWSCODEARTIFACT_EXPORT ListPackagesResponse : public CodeArtifactResponse {
     Q_OBJECT
 
 public:

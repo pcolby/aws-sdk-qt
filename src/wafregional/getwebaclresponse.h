@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class GetWebACLResponsePrivate;
 
-class QTAWS_EXPORT GetWebACLResponse : public WAFRegionalResponse {
+class QTAWSWAFREGIONAL_EXPORT GetWebACLResponse : public WAFRegionalResponse {
     Q_OBJECT
 
 public:

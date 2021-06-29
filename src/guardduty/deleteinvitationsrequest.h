@@ -27,7 +27,7 @@ namespace GuardDuty {
 
 class DeleteInvitationsRequestPrivate;
 
-class QTAWS_EXPORT DeleteInvitationsRequest : public GuardDutyRequest {
+class QTAWSGUARDDUTY_EXPORT DeleteInvitationsRequest : public GuardDutyRequest {
 
 public:
     DeleteInvitationsRequest(const DeleteInvitationsRequest &other);

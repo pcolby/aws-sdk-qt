@@ -21,6 +21,8 @@
 #define QTAWS_LAMBDARESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawslambdaglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Lambda {
 
 class LambdaResponsePrivate;
 
-class QTAWS_EXPORT LambdaResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSLAMBDA_EXPORT LambdaResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

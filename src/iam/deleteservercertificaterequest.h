@@ -27,7 +27,7 @@ namespace IAM {
 
 class DeleteServerCertificateRequestPrivate;
 
-class QTAWS_EXPORT DeleteServerCertificateRequest : public IamRequest {
+class QTAWSIAM_EXPORT DeleteServerCertificateRequest : public IamRequest {
 
 public:
     DeleteServerCertificateRequest(const DeleteServerCertificateRequest &other);

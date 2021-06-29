@@ -27,7 +27,7 @@ namespace ForecastService {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public ForecastServiceRequest {
+class QTAWSFORECASTSERVICE_EXPORT TagResourceRequest : public ForecastServiceRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

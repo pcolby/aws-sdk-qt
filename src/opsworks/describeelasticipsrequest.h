@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class DescribeElasticIpsRequestPrivate;
 
-class QTAWS_EXPORT DescribeElasticIpsRequest : public OpsWorksRequest {
+class QTAWSOPSWORKS_EXPORT DescribeElasticIpsRequest : public OpsWorksRequest {
 
 public:
     DescribeElasticIpsRequest(const DescribeElasticIpsRequest &other);

@@ -28,7 +28,7 @@ namespace ResourceGroups {
 
 class ListGroupResourcesResponsePrivate;
 
-class QTAWS_EXPORT ListGroupResourcesResponse : public ResourceGroupsResponse {
+class QTAWSRESOURCEGROUPS_EXPORT ListGroupResourcesResponse : public ResourceGroupsResponse {
     Q_OBJECT
 
 public:

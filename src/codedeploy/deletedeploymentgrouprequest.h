@@ -27,7 +27,7 @@ namespace CodeDeploy {
 
 class DeleteDeploymentGroupRequestPrivate;
 
-class QTAWS_EXPORT DeleteDeploymentGroupRequest : public CodeDeployRequest {
+class QTAWSCODEDEPLOY_EXPORT DeleteDeploymentGroupRequest : public CodeDeployRequest {
 
 public:
     DeleteDeploymentGroupRequest(const DeleteDeploymentGroupRequest &other);

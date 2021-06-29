@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class UpdateLayerRequestPrivate;
 
-class QTAWS_EXPORT UpdateLayerRequest : public OpsWorksRequest {
+class QTAWSOPSWORKS_EXPORT UpdateLayerRequest : public OpsWorksRequest {
 
 public:
     UpdateLayerRequest(const UpdateLayerRequest &other);

@@ -28,7 +28,7 @@ namespace FMS {
 
 class DeleteAppsListResponsePrivate;
 
-class QTAWS_EXPORT DeleteAppsListResponse : public FmsResponse {
+class QTAWSFMS_EXPORT DeleteAppsListResponse : public FmsResponse {
     Q_OBJECT
 
 public:

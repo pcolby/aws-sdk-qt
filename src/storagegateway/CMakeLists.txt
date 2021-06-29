@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSTORAGEGATEWAY_LIBRARY)
+
 add_library(QtAwsStorageGateway
   activategatewayrequest.h
   activategatewayrequest_p.h
@@ -259,6 +261,7 @@ add_library(QtAwsStorageGateway
   notifywhenuploadedrequest_p.h
   notifywhenuploadedresponse.h
   notifywhenuploadedresponse_p.h
+  qtawsstoragegatewayglobal.h
   refreshcacherequest.h
   refreshcacherequest_p.h
   refreshcacheresponse.h

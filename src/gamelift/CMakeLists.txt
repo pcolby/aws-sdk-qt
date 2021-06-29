@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSGAMELIFT_LIBRARY)
+
 add_library(QtAwsGameLift
   acceptmatchrequest.h
   acceptmatchrequest_p.h
@@ -273,6 +275,7 @@ add_library(QtAwsGameLift
   putscalingpolicyrequest_p.h
   putscalingpolicyresponse.h
   putscalingpolicyresponse_p.h
+  qtawsgameliftglobal.h
   registergameserverrequest.h
   registergameserverrequest_p.h
   registergameserverresponse.h

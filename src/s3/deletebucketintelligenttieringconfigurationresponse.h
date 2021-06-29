@@ -28,7 +28,7 @@ namespace S3 {
 
 class DeleteBucketIntelligentTieringConfigurationResponsePrivate;
 
-class QTAWS_EXPORT DeleteBucketIntelligentTieringConfigurationResponse : public S3Response {
+class QTAWSS3_EXPORT DeleteBucketIntelligentTieringConfigurationResponse : public S3Response {
     Q_OBJECT
 
 public:

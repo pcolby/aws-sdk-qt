@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSTIMESTREAMWRITE_LIBRARY)
+
 add_library(QtAwsTimestreamWrite
   createdatabaserequest.h
   createdatabaserequest_p.h
@@ -39,6 +41,7 @@ add_library(QtAwsTimestreamWrite
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawstimestreamwriteglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

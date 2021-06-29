@@ -28,7 +28,7 @@ namespace FMS {
 
 class DisassociateAdminAccountResponsePrivate;
 
-class QTAWS_EXPORT DisassociateAdminAccountResponse : public FmsResponse {
+class QTAWSFMS_EXPORT DisassociateAdminAccountResponse : public FmsResponse {
     Q_OBJECT
 
 public:

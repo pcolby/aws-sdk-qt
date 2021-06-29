@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class GetCampaignVersionResponsePrivate;
 
-class QTAWS_EXPORT GetCampaignVersionResponse : public PinpointResponse {
+class QTAWSPINPOINT_EXPORT GetCampaignVersionResponse : public PinpointResponse {
     Q_OBJECT
 
 public:

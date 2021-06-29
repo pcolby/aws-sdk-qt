@@ -27,7 +27,7 @@ namespace IoTWireless {
 
 class PutResourceLogLevelRequestPrivate;
 
-class QTAWS_EXPORT PutResourceLogLevelRequest : public IoTWirelessRequest {
+class QTAWSIOTWIRELESS_EXPORT PutResourceLogLevelRequest : public IoTWirelessRequest {
 
 public:
     PutResourceLogLevelRequest(const PutResourceLogLevelRequest &other);

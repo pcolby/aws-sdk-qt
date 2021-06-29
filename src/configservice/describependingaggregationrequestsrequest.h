@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class DescribePendingAggregationRequestsRequestPrivate;
 
-class QTAWS_EXPORT DescribePendingAggregationRequestsRequest : public ConfigServiceRequest {
+class QTAWSCONFIGSERVICE_EXPORT DescribePendingAggregationRequestsRequest : public ConfigServiceRequest {
 
 public:
     DescribePendingAggregationRequestsRequest(const DescribePendingAggregationRequestsRequest &other);

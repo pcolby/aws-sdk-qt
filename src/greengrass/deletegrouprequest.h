@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class DeleteGroupRequestPrivate;
 
-class QTAWS_EXPORT DeleteGroupRequest : public GreengrassRequest {
+class QTAWSGREENGRASS_EXPORT DeleteGroupRequest : public GreengrassRequest {
 
 public:
     DeleteGroupRequest(const DeleteGroupRequest &other);

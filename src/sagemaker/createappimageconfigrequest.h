@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class CreateAppImageConfigRequestPrivate;
 
-class QTAWS_EXPORT CreateAppImageConfigRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT CreateAppImageConfigRequest : public SageMakerRequest {
 
 public:
     CreateAppImageConfigRequest(const CreateAppImageConfigRequest &other);

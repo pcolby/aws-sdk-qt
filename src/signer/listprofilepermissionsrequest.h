@@ -27,7 +27,7 @@ namespace signer {
 
 class ListProfilePermissionsRequestPrivate;
 
-class QTAWS_EXPORT ListProfilePermissionsRequest : public signerRequest {
+class QTAWSSIGNER_EXPORT ListProfilePermissionsRequest : public signerRequest {
 
 public:
     ListProfilePermissionsRequest(const ListProfilePermissionsRequest &other);

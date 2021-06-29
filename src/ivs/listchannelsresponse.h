@@ -28,7 +28,7 @@ namespace IVS {
 
 class ListChannelsResponsePrivate;
 
-class QTAWS_EXPORT ListChannelsResponse : public IvsResponse {
+class QTAWSIVS_EXPORT ListChannelsResponse : public IvsResponse {
     Q_OBJECT
 
 public:

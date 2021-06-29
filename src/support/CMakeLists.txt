@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSUPPORT_LIBRARY)
+
 add_library(QtAwsSupport
   addattachmentstosetrequest.h
   addattachmentstosetrequest_p.h
@@ -47,6 +49,7 @@ add_library(QtAwsSupport
   describetrustedadvisorchecksummariesrequest_p.h
   describetrustedadvisorchecksummariesresponse.h
   describetrustedadvisorchecksummariesresponse_p.h
+  qtawssupportglobal.h
   refreshtrustedadvisorcheckrequest.h
   refreshtrustedadvisorcheckrequest_p.h
   refreshtrustedadvisorcheckresponse.h

@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DescribeEndpointAuthorizationResponsePrivate;
 
-class QTAWS_EXPORT DescribeEndpointAuthorizationResponse : public RedshiftResponse {
+class QTAWSREDSHIFT_EXPORT DescribeEndpointAuthorizationResponse : public RedshiftResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace AppConfig {
 
 class GetHostedConfigurationVersionRequestPrivate;
 
-class QTAWS_EXPORT GetHostedConfigurationVersionRequest : public AppConfigRequest {
+class QTAWSAPPCONFIG_EXPORT GetHostedConfigurationVersionRequest : public AppConfigRequest {
 
 public:
     GetHostedConfigurationVersionRequest(const GetHostedConfigurationVersionRequest &other);

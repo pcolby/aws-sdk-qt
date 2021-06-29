@@ -28,7 +28,7 @@ namespace FIS {
 
 class StartExperimentResponsePrivate;
 
-class QTAWS_EXPORT StartExperimentResponse : public FisResponse {
+class QTAWSFIS_EXPORT StartExperimentResponse : public FisResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class DisableImportFindingsForProductResponsePrivate;
 
-class QTAWS_EXPORT DisableImportFindingsForProductResponse : public SecurityHubResponse {
+class QTAWSSECURITYHUB_EXPORT DisableImportFindingsForProductResponse : public SecurityHubResponse {
     Q_OBJECT
 
 public:

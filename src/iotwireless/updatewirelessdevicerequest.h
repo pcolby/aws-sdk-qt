@@ -27,7 +27,7 @@ namespace IoTWireless {
 
 class UpdateWirelessDeviceRequestPrivate;
 
-class QTAWS_EXPORT UpdateWirelessDeviceRequest : public IoTWirelessRequest {
+class QTAWSIOTWIRELESS_EXPORT UpdateWirelessDeviceRequest : public IoTWirelessRequest {
 
 public:
     UpdateWirelessDeviceRequest(const UpdateWirelessDeviceRequest &other);

@@ -21,6 +21,8 @@
 #define QTAWS_IMPORTEXPORTRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsimportexportglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace ImportExport {
 
 class ImportExportResponsePrivate;
 
-class QTAWS_EXPORT ImportExportResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSIMPORTEXPORT_EXPORT ImportExportResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

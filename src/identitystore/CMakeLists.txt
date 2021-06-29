@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSIDENTITYSTORE_LIBRARY)
+
 add_library(QtAwsIdentityStore
   describegrouprequest.h
   describegrouprequest_p.h
@@ -21,6 +23,7 @@ add_library(QtAwsIdentityStore
   listusersrequest_p.h
   listusersresponse.h
   listusersresponse_p.h
+  qtawsidentitystoreglobal.h
   describegrouprequest.cpp
   describegroupresponse.cpp
   describeuserrequest.cpp

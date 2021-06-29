@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsivsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -81,7 +83,7 @@ class UntagResourceResponse;
 class UpdateChannelRequest;
 class UpdateChannelResponse;
 
-class QTAWS_EXPORT IvsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSIVS_EXPORT IvsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

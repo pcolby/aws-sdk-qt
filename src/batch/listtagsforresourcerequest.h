@@ -27,7 +27,7 @@ namespace Batch {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public BatchRequest {
+class QTAWSBATCH_EXPORT ListTagsForResourceRequest : public BatchRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

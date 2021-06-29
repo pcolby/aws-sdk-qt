@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsdlmglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace DLM {
 
 class DlmRequestPrivate;
 
-class QTAWS_EXPORT DlmRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSDLM_EXPORT DlmRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by DLM.

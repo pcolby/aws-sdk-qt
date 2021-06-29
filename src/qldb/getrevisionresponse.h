@@ -28,7 +28,7 @@ namespace QLDB {
 
 class GetRevisionResponsePrivate;
 
-class QTAWS_EXPORT GetRevisionResponse : public QldbResponse {
+class QTAWSQLDB_EXPORT GetRevisionResponse : public QldbResponse {
     Q_OBJECT
 
 public:

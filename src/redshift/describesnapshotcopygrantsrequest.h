@@ -27,7 +27,7 @@ namespace Redshift {
 
 class DescribeSnapshotCopyGrantsRequestPrivate;
 
-class QTAWS_EXPORT DescribeSnapshotCopyGrantsRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT DescribeSnapshotCopyGrantsRequest : public RedshiftRequest {
 
 public:
     DescribeSnapshotCopyGrantsRequest(const DescribeSnapshotCopyGrantsRequest &other);

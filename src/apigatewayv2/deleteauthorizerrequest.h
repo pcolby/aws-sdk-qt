@@ -27,7 +27,7 @@ namespace ApiGatewayV2 {
 
 class DeleteAuthorizerRequestPrivate;
 
-class QTAWS_EXPORT DeleteAuthorizerRequest : public ApiGatewayV2Request {
+class QTAWSAPIGATEWAYV2_EXPORT DeleteAuthorizerRequest : public ApiGatewayV2Request {
 
 public:
     DeleteAuthorizerRequest(const DeleteAuthorizerRequest &other);

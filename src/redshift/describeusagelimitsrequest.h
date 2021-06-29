@@ -27,7 +27,7 @@ namespace Redshift {
 
 class DescribeUsageLimitsRequestPrivate;
 
-class QTAWS_EXPORT DescribeUsageLimitsRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT DescribeUsageLimitsRequest : public RedshiftRequest {
 
 public:
     DescribeUsageLimitsRequest(const DescribeUsageLimitsRequest &other);

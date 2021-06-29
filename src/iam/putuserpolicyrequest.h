@@ -27,7 +27,7 @@ namespace IAM {
 
 class PutUserPolicyRequestPrivate;
 
-class QTAWS_EXPORT PutUserPolicyRequest : public IamRequest {
+class QTAWSIAM_EXPORT PutUserPolicyRequest : public IamRequest {
 
 public:
     PutUserPolicyRequest(const PutUserPolicyRequest &other);

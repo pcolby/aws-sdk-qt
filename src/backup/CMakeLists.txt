@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSBACKUP_LIBRARY)
+
 add_library(QtAwsBackup
   backupclient.h
   backupclient_p.h
@@ -169,6 +171,7 @@ add_library(QtAwsBackup
   putbackupvaultnotificationsrequest_p.h
   putbackupvaultnotificationsresponse.h
   putbackupvaultnotificationsresponse_p.h
+  qtawsbackupglobal.h
   startbackupjobrequest.h
   startbackupjobrequest_p.h
   startbackupjobresponse.h

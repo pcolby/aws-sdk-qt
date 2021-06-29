@@ -28,7 +28,7 @@ namespace ECS {
 
 class DeleteTaskSetResponsePrivate;
 
-class QTAWS_EXPORT DeleteTaskSetResponse : public EcsResponse {
+class QTAWSECS_EXPORT DeleteTaskSetResponse : public EcsResponse {
     Q_OBJECT
 
 public:

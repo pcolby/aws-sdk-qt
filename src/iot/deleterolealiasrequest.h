@@ -27,7 +27,7 @@ namespace IoT {
 
 class DeleteRoleAliasRequestPrivate;
 
-class QTAWS_EXPORT DeleteRoleAliasRequest : public IoTRequest {
+class QTAWSIOT_EXPORT DeleteRoleAliasRequest : public IoTRequest {
 
 public:
     DeleteRoleAliasRequest(const DeleteRoleAliasRequest &other);

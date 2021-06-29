@@ -28,7 +28,7 @@ namespace RDS {
 
 class RebootDBInstanceResponsePrivate;
 
-class QTAWS_EXPORT RebootDBInstanceResponse : public RdsResponse {
+class QTAWSRDS_EXPORT RebootDBInstanceResponse : public RdsResponse {
     Q_OBJECT
 
 public:

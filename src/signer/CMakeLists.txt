@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSIGNER_LIBRARY)
+
 add_library(QtAwssigner
   addprofilepermissionrequest.h
   addprofilepermissionrequest_p.h
@@ -43,6 +45,7 @@ add_library(QtAwssigner
   putsigningprofilerequest_p.h
   putsigningprofileresponse.h
   putsigningprofileresponse_p.h
+  qtawssignerglobal.h
   removeprofilepermissionrequest.h
   removeprofilepermissionrequest_p.h
   removeprofilepermissionresponse.h

@@ -27,7 +27,7 @@ namespace kendra {
 
 class BatchDeleteDocumentRequestPrivate;
 
-class QTAWS_EXPORT BatchDeleteDocumentRequest : public kendraRequest {
+class QTAWSKENDRA_EXPORT BatchDeleteDocumentRequest : public kendraRequest {
 
 public:
     BatchDeleteDocumentRequest(const BatchDeleteDocumentRequest &other);

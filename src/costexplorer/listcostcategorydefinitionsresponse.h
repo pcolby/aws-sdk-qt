@@ -28,7 +28,7 @@ namespace CostExplorer {
 
 class ListCostCategoryDefinitionsResponsePrivate;
 
-class QTAWS_EXPORT ListCostCategoryDefinitionsResponse : public CostExplorerResponse {
+class QTAWSCOSTEXPLORER_EXPORT ListCostCategoryDefinitionsResponse : public CostExplorerResponse {
     Q_OBJECT
 
 public:

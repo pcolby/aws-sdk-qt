@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CancelConversionTaskRequestPrivate;
 
-class QTAWS_EXPORT CancelConversionTaskRequest : public Ec2Request {
+class QTAWSEC2_EXPORT CancelConversionTaskRequest : public Ec2Request {
 
 public:
     CancelConversionTaskRequest(const CancelConversionTaskRequest &other);

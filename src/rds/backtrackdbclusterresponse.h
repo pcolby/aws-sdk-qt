@@ -28,7 +28,7 @@ namespace RDS {
 
 class BacktrackDBClusterResponsePrivate;
 
-class QTAWS_EXPORT BacktrackDBClusterResponse : public RdsResponse {
+class QTAWSRDS_EXPORT BacktrackDBClusterResponse : public RdsResponse {
     Q_OBJECT
 
 public:

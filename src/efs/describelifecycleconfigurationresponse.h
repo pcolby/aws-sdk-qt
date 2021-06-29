@@ -28,7 +28,7 @@ namespace EFS {
 
 class DescribeLifecycleConfigurationResponsePrivate;
 
-class QTAWS_EXPORT DescribeLifecycleConfigurationResponse : public EfsResponse {
+class QTAWSEFS_EXPORT DescribeLifecycleConfigurationResponse : public EfsResponse {
     Q_OBJECT
 
 public:

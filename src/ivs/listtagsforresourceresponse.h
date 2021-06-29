@@ -28,7 +28,7 @@ namespace IVS {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public IvsResponse {
+class QTAWSIVS_EXPORT ListTagsForResourceResponse : public IvsResponse {
     Q_OBJECT
 
 public:

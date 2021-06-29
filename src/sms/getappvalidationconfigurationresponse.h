@@ -28,7 +28,7 @@ namespace SMS {
 
 class GetAppValidationConfigurationResponsePrivate;
 
-class QTAWS_EXPORT GetAppValidationConfigurationResponse : public SmsResponse {
+class QTAWSSMS_EXPORT GetAppValidationConfigurationResponse : public SmsResponse {
     Q_OBJECT
 
 public:

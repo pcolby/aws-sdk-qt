@@ -21,6 +21,8 @@
 #define QTAWS_CLOUDHSMV2RESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawscloudhsmv2global.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace CloudHSMV2 {
 
 class CloudHSMV2ResponsePrivate;
 
-class QTAWS_EXPORT CloudHSMV2Response : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCLOUDHSMV2_EXPORT CloudHSMV2Response : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace IAM {
 
 class ListEntitiesForPolicyRequestPrivate;
 
-class QTAWS_EXPORT ListEntitiesForPolicyRequest : public IamRequest {
+class QTAWSIAM_EXPORT ListEntitiesForPolicyRequest : public IamRequest {
 
 public:
     ListEntitiesForPolicyRequest(const ListEntitiesForPolicyRequest &other);

@@ -27,7 +27,7 @@ namespace SSOAdmin {
 
 class ListAccountAssignmentDeletionStatusRequestPrivate;
 
-class QTAWS_EXPORT ListAccountAssignmentDeletionStatusRequest : public SSOAdminRequest {
+class QTAWSSSOADMIN_EXPORT ListAccountAssignmentDeletionStatusRequest : public SSOAdminRequest {
 
 public:
     ListAccountAssignmentDeletionStatusRequest(const ListAccountAssignmentDeletionStatusRequest &other);

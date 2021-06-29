@@ -27,7 +27,7 @@ namespace LexModelBuildingService {
 
 class GetBuiltinSlotTypesRequestPrivate;
 
-class QTAWS_EXPORT GetBuiltinSlotTypesRequest : public LexModelBuildingServiceRequest {
+class QTAWSLEXMODELBUILDINGSERVICE_EXPORT GetBuiltinSlotTypesRequest : public LexModelBuildingServiceRequest {
 
 public:
     GetBuiltinSlotTypesRequest(const GetBuiltinSlotTypesRequest &other);

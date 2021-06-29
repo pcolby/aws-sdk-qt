@@ -28,7 +28,7 @@ namespace IoT {
 
 class CreateProvisioningClaimResponsePrivate;
 
-class QTAWS_EXPORT CreateProvisioningClaimResponse : public IoTResponse {
+class QTAWSIOT_EXPORT CreateProvisioningClaimResponse : public IoTResponse {
     Q_OBJECT
 
 public:

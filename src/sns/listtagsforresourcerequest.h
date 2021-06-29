@@ -27,7 +27,7 @@ namespace SNS {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public SnsRequest {
+class QTAWSSNS_EXPORT ListTagsForResourceRequest : public SnsRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

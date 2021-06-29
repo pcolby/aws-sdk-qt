@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 
 class UpdatePackageResponsePrivate;
 
-class QTAWS_EXPORT UpdatePackageResponse : public ElasticsearchServiceResponse {
+class QTAWSELASTICSEARCHSERVICE_EXPORT UpdatePackageResponse : public ElasticsearchServiceResponse {
     Q_OBJECT
 
 public:

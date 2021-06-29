@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public GuardDutyResponse {
+class QTAWSGUARDDUTY_EXPORT UntagResourceResponse : public GuardDutyResponse {
     Q_OBJECT
 
 public:

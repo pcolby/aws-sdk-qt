@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class DeleteCustomActionTypeResponsePrivate;
 
-class QTAWS_EXPORT DeleteCustomActionTypeResponse : public CodePipelineResponse {
+class QTAWSCODEPIPELINE_EXPORT DeleteCustomActionTypeResponse : public CodePipelineResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace S3 {
 
 class DeleteBucketMetricsConfigurationRequestPrivate;
 
-class QTAWS_EXPORT DeleteBucketMetricsConfigurationRequest : public S3Request {
+class QTAWSS3_EXPORT DeleteBucketMetricsConfigurationRequest : public S3Request {
 
 public:
     DeleteBucketMetricsConfigurationRequest(const DeleteBucketMetricsConfigurationRequest &other);

@@ -21,6 +21,8 @@
 #define QTAWS_APIGATEWAYRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsapigatewayglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace APIGateway {
 
 class APIGatewayResponsePrivate;
 
-class QTAWS_EXPORT APIGatewayResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSAPIGATEWAY_EXPORT APIGatewayResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

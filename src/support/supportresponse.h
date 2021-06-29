@@ -21,6 +21,8 @@
 #define QTAWS_SUPPORTRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawssupportglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Support {
 
 class SupportResponsePrivate;
 
-class QTAWS_EXPORT SupportResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSUPPORT_EXPORT SupportResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

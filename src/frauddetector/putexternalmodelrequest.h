@@ -27,7 +27,7 @@ namespace FraudDetector {
 
 class PutExternalModelRequestPrivate;
 
-class QTAWS_EXPORT PutExternalModelRequest : public FraudDetectorRequest {
+class QTAWSFRAUDDETECTOR_EXPORT PutExternalModelRequest : public FraudDetectorRequest {
 
 public:
     PutExternalModelRequest(const PutExternalModelRequest &other);

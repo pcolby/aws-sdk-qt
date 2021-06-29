@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSPERSONALIZERUNTIME_LIBRARY)
+
 add_library(QtAwsPersonalizeRuntime
   getpersonalizedrankingrequest.h
   getpersonalizedrankingrequest_p.h
@@ -13,6 +15,7 @@ add_library(QtAwsPersonalizeRuntime
   personalizeruntimerequest_p.h
   personalizeruntimeresponse.h
   personalizeruntimeresponse_p.h
+  qtawspersonalizeruntimeglobal.h
   getpersonalizedrankingrequest.cpp
   getpersonalizedrankingresponse.cpp
   getrecommendationsrequest.cpp

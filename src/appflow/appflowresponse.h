@@ -21,6 +21,8 @@
 #define QTAWS_APPFLOWRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsappflowglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Appflow {
 
 class AppflowResponsePrivate;
 
-class QTAWS_EXPORT AppflowResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSAPPFLOW_EXPORT AppflowResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

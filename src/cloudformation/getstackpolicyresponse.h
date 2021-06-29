@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class GetStackPolicyResponsePrivate;
 
-class QTAWS_EXPORT GetStackPolicyResponse : public CloudFormationResponse {
+class QTAWSCLOUDFORMATION_EXPORT GetStackPolicyResponse : public CloudFormationResponse {
     Q_OBJECT
 
 public:

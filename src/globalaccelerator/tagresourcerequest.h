@@ -27,7 +27,7 @@ namespace GlobalAccelerator {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public GlobalAcceleratorRequest {
+class QTAWSGLOBALACCELERATOR_EXPORT TagResourceRequest : public GlobalAcceleratorRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

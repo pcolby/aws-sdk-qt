@@ -28,7 +28,7 @@ namespace ECS {
 
 class UpdateClusterSettingsResponsePrivate;
 
-class QTAWS_EXPORT UpdateClusterSettingsResponse : public EcsResponse {
+class QTAWSECS_EXPORT UpdateClusterSettingsResponse : public EcsResponse {
     Q_OBJECT
 
 public:

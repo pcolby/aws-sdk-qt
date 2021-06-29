@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class DeletePublishingDestinationResponsePrivate;
 
-class QTAWS_EXPORT DeletePublishingDestinationResponse : public GuardDutyResponse {
+class QTAWSGUARDDUTY_EXPORT DeletePublishingDestinationResponse : public GuardDutyResponse {
     Q_OBJECT
 
 public:

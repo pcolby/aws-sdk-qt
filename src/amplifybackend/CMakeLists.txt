@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSAMPLIFYBACKEND_LIBRARY)
+
 add_library(QtAwsAmplifyBackend
   amplifybackendclient.h
   amplifybackendclient_p.h
@@ -77,6 +79,7 @@ add_library(QtAwsAmplifyBackend
   listbackendjobsrequest_p.h
   listbackendjobsresponse.h
   listbackendjobsresponse_p.h
+  qtawsamplifybackendglobal.h
   removeallbackendsrequest.h
   removeallbackendsrequest_p.h
   removeallbackendsresponse.h

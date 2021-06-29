@@ -27,7 +27,7 @@ namespace IoTSiteWise {
 
 class DeleteAccessPolicyRequestPrivate;
 
-class QTAWS_EXPORT DeleteAccessPolicyRequest : public IoTSiteWiseRequest {
+class QTAWSIOTSITEWISE_EXPORT DeleteAccessPolicyRequest : public IoTSiteWiseRequest {
 
 public:
     DeleteAccessPolicyRequest(const DeleteAccessPolicyRequest &other);

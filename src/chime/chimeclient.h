@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawschimeglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -395,7 +397,7 @@ class UpdateVoiceConnectorResponse;
 class UpdateVoiceConnectorGroupRequest;
 class UpdateVoiceConnectorGroupResponse;
 
-class QTAWS_EXPORT ChimeClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCHIME_EXPORT ChimeClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

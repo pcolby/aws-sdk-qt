@@ -21,6 +21,8 @@
 #define QTAWS_LEXRUNTIMESERVICERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawslexruntimeserviceglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace LexRuntimeService {
 
 class LexRuntimeServiceResponsePrivate;
 
-class QTAWS_EXPORT LexRuntimeServiceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSLEXRUNTIMESERVICE_EXPORT LexRuntimeServiceResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

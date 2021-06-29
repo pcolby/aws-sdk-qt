@@ -21,6 +21,8 @@
 #define QTAWS_SHIELDRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsshieldglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Shield {
 
 class ShieldResponsePrivate;
 
-class QTAWS_EXPORT ShieldResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSHIELD_EXPORT ShieldResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

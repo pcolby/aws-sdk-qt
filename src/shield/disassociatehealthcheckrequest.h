@@ -27,7 +27,7 @@ namespace Shield {
 
 class DisassociateHealthCheckRequestPrivate;
 
-class QTAWS_EXPORT DisassociateHealthCheckRequest : public ShieldRequest {
+class QTAWSSHIELD_EXPORT DisassociateHealthCheckRequest : public ShieldRequest {
 
 public:
     DisassociateHealthCheckRequest(const DisassociateHealthCheckRequest &other);

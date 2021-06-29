@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsclouddirectoryglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -161,7 +163,7 @@ class UpgradeAppliedSchemaResponse;
 class UpgradePublishedSchemaRequest;
 class UpgradePublishedSchemaResponse;
 
-class QTAWS_EXPORT CloudDirectoryClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCLOUDDIRECTORY_EXPORT CloudDirectoryClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

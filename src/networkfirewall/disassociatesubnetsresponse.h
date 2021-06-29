@@ -28,7 +28,7 @@ namespace NetworkFirewall {
 
 class DisassociateSubnetsResponsePrivate;
 
-class QTAWS_EXPORT DisassociateSubnetsResponse : public NetworkFirewallResponse {
+class QTAWSNETWORKFIREWALL_EXPORT DisassociateSubnetsResponse : public NetworkFirewallResponse {
     Q_OBJECT
 
 public:

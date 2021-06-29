@@ -21,6 +21,8 @@
 #define QTAWS_ACMRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsacmglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace ACM {
 
 class AcmResponsePrivate;
 
-class QTAWS_EXPORT AcmResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSACM_EXPORT AcmResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

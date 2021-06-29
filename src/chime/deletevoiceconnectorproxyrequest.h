@@ -27,7 +27,7 @@ namespace Chime {
 
 class DeleteVoiceConnectorProxyRequestPrivate;
 
-class QTAWS_EXPORT DeleteVoiceConnectorProxyRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT DeleteVoiceConnectorProxyRequest : public ChimeRequest {
 
 public:
     DeleteVoiceConnectorProxyRequest(const DeleteVoiceConnectorProxyRequest &other);

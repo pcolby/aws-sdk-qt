@@ -27,7 +27,7 @@ namespace KinesisVideo {
 
 class GetDataEndpointRequestPrivate;
 
-class QTAWS_EXPORT GetDataEndpointRequest : public KinesisVideoRequest {
+class QTAWSKINESISVIDEO_EXPORT GetDataEndpointRequest : public KinesisVideoRequest {
 
 public:
     GetDataEndpointRequest(const GetDataEndpointRequest &other);

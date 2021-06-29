@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class DeleteApnsVoipSandboxChannelRequestPrivate;
 
-class QTAWS_EXPORT DeleteApnsVoipSandboxChannelRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT DeleteApnsVoipSandboxChannelRequest : public PinpointRequest {
 
 public:
     DeleteApnsVoipSandboxChannelRequest(const DeleteApnsVoipSandboxChannelRequest &other);

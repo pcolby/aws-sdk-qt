@@ -27,7 +27,7 @@ namespace IoTThingsGraph {
 
 class GetSystemInstanceRequestPrivate;
 
-class QTAWS_EXPORT GetSystemInstanceRequest : public IoTThingsGraphRequest {
+class QTAWSIOTTHINGSGRAPH_EXPORT GetSystemInstanceRequest : public IoTThingsGraphRequest {
 
 public:
     GetSystemInstanceRequest(const GetSystemInstanceRequest &other);

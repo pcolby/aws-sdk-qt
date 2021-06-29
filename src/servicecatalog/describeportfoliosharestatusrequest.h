@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class DescribePortfolioShareStatusRequestPrivate;
 
-class QTAWS_EXPORT DescribePortfolioShareStatusRequest : public ServiceCatalogRequest {
+class QTAWSSERVICECATALOG_EXPORT DescribePortfolioShareStatusRequest : public ServiceCatalogRequest {
 
 public:
     DescribePortfolioShareStatusRequest(const DescribePortfolioShareStatusRequest &other);

@@ -28,7 +28,7 @@ namespace ComputeOptimizer {
 
 class ExportEC2InstanceRecommendationsResponsePrivate;
 
-class QTAWS_EXPORT ExportEC2InstanceRecommendationsResponse : public ComputeOptimizerResponse {
+class QTAWSCOMPUTEOPTIMIZER_EXPORT ExportEC2InstanceRecommendationsResponse : public ComputeOptimizerResponse {
     Q_OBJECT
 
 public:

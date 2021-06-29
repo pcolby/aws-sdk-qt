@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class DescribeCertificatesResponsePrivate;
 
-class QTAWS_EXPORT DescribeCertificatesResponse : public DatabaseMigrationServiceResponse {
+class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DescribeCertificatesResponse : public DatabaseMigrationServiceResponse {
     Q_OBJECT
 
 public:

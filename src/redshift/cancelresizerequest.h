@@ -27,7 +27,7 @@ namespace Redshift {
 
 class CancelResizeRequestPrivate;
 
-class QTAWS_EXPORT CancelResizeRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT CancelResizeRequest : public RedshiftRequest {
 
 public:
     CancelResizeRequest(const CancelResizeRequest &other);

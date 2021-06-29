@@ -28,7 +28,7 @@ namespace Kafka {
 
 class GetBootstrapBrokersResponsePrivate;
 
-class QTAWS_EXPORT GetBootstrapBrokersResponse : public KafkaResponse {
+class QTAWSKAFKA_EXPORT GetBootstrapBrokersResponse : public KafkaResponse {
     Q_OBJECT
 
 public:

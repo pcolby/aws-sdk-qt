@@ -28,7 +28,7 @@ namespace WAFV2 {
 
 class ListAvailableManagedRuleGroupsResponsePrivate;
 
-class QTAWS_EXPORT ListAvailableManagedRuleGroupsResponse : public Wafv2Response {
+class QTAWSWAFV2_EXPORT ListAvailableManagedRuleGroupsResponse : public Wafv2Response {
     Q_OBJECT
 
 public:

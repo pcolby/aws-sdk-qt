@@ -27,7 +27,7 @@ namespace CloudHSM {
 
 class CreateLunaClientRequestPrivate;
 
-class QTAWS_EXPORT CreateLunaClientRequest : public CloudHSMRequest {
+class QTAWSCLOUDHSM_EXPORT CreateLunaClientRequest : public CloudHSMRequest {
 
 public:
     CreateLunaClientRequest(const CreateLunaClientRequest &other);

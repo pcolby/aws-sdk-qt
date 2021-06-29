@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class CreateContainerServiceDeploymentRequestPrivate;
 
-class QTAWS_EXPORT CreateContainerServiceDeploymentRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT CreateContainerServiceDeploymentRequest : public LightsailRequest {
 
 public:
     CreateContainerServiceDeploymentRequest(const CreateContainerServiceDeploymentRequest &other);

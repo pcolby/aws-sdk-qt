@@ -27,7 +27,7 @@ namespace Shield {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public ShieldRequest {
+class QTAWSSHIELD_EXPORT TagResourceRequest : public ShieldRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

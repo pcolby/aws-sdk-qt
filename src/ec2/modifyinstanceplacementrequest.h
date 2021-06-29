@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ModifyInstancePlacementRequestPrivate;
 
-class QTAWS_EXPORT ModifyInstancePlacementRequest : public Ec2Request {
+class QTAWSEC2_EXPORT ModifyInstancePlacementRequest : public Ec2Request {
 
 public:
     ModifyInstancePlacementRequest(const ModifyInstancePlacementRequest &other);

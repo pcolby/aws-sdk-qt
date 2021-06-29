@@ -27,7 +27,7 @@ namespace SSM {
 
 class CancelMaintenanceWindowExecutionRequestPrivate;
 
-class QTAWS_EXPORT CancelMaintenanceWindowExecutionRequest : public SsmRequest {
+class QTAWSSSM_EXPORT CancelMaintenanceWindowExecutionRequest : public SsmRequest {
 
 public:
     CancelMaintenanceWindowExecutionRequest(const CancelMaintenanceWindowExecutionRequest &other);

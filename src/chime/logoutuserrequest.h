@@ -27,7 +27,7 @@ namespace Chime {
 
 class LogoutUserRequestPrivate;
 
-class QTAWS_EXPORT LogoutUserRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT LogoutUserRequest : public ChimeRequest {
 
 public:
     LogoutUserRequest(const LogoutUserRequest &other);

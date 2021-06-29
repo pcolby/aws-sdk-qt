@@ -27,7 +27,7 @@ namespace APIGateway {
 
 class UpdateMethodRequestPrivate;
 
-class QTAWS_EXPORT UpdateMethodRequest : public APIGatewayRequest {
+class QTAWSAPIGATEWAY_EXPORT UpdateMethodRequest : public APIGatewayRequest {
 
 public:
     UpdateMethodRequest(const UpdateMethodRequest &other);

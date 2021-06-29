@@ -28,7 +28,7 @@ namespace DocDB {
 
 class DescribeOrderableDBInstanceOptionsResponsePrivate;
 
-class QTAWS_EXPORT DescribeOrderableDBInstanceOptionsResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT DescribeOrderableDBInstanceOptionsResponse : public DocDBResponse {
     Q_OBJECT
 
 public:

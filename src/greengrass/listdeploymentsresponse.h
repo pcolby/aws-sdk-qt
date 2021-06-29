@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class ListDeploymentsResponsePrivate;
 
-class QTAWS_EXPORT ListDeploymentsResponse : public GreengrassResponse {
+class QTAWSGREENGRASS_EXPORT ListDeploymentsResponse : public GreengrassResponse {
     Q_OBJECT
 
 public:

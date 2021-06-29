@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class PutFileRequestPrivate;
 
-class QTAWS_EXPORT PutFileRequest : public CodeCommitRequest {
+class QTAWSCODECOMMIT_EXPORT PutFileRequest : public CodeCommitRequest {
 
 public:
     PutFileRequest(const PutFileRequest &other);

@@ -28,7 +28,7 @@ namespace ECR {
 
 class DeleteRegistryPolicyResponsePrivate;
 
-class QTAWS_EXPORT DeleteRegistryPolicyResponse : public EcrResponse {
+class QTAWSECR_EXPORT DeleteRegistryPolicyResponse : public EcrResponse {
     Q_OBJECT
 
 public:

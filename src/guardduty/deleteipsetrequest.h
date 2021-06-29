@@ -27,7 +27,7 @@ namespace GuardDuty {
 
 class DeleteIPSetRequestPrivate;
 
-class QTAWS_EXPORT DeleteIPSetRequest : public GuardDutyRequest {
+class QTAWSGUARDDUTY_EXPORT DeleteIPSetRequest : public GuardDutyRequest {
 
 public:
     DeleteIPSetRequest(const DeleteIPSetRequest &other);

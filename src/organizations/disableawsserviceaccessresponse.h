@@ -28,7 +28,7 @@ namespace Organizations {
 
 class DisableAWSServiceAccessResponsePrivate;
 
-class QTAWS_EXPORT DisableAWSServiceAccessResponse : public OrganizationsResponse {
+class QTAWSORGANIZATIONS_EXPORT DisableAWSServiceAccessResponse : public OrganizationsResponse {
     Q_OBJECT
 
 public:

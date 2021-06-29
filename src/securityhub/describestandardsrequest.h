@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class DescribeStandardsRequestPrivate;
 
-class QTAWS_EXPORT DescribeStandardsRequest : public SecurityHubRequest {
+class QTAWSSECURITYHUB_EXPORT DescribeStandardsRequest : public SecurityHubRequest {
 
 public:
     DescribeStandardsRequest(const DescribeStandardsRequest &other);

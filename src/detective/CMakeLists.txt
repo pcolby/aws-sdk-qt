@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSDETECTIVE_LIBRARY)
+
 add_library(QtAwsDetective
   acceptinvitationrequest.h
   acceptinvitationrequest_p.h
@@ -49,6 +51,7 @@ add_library(QtAwsDetective
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsdetectiveglobal.h
   rejectinvitationrequest.h
   rejectinvitationrequest_p.h
   rejectinvitationresponse.h

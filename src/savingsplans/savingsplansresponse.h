@@ -21,6 +21,8 @@
 #define QTAWS_SAVINGSPLANSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawssavingsplansglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace SavingsPlans {
 
 class SavingsPlansResponsePrivate;
 
-class QTAWS_EXPORT SavingsPlansResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSAVINGSPLANS_EXPORT SavingsPlansResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

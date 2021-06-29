@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class CreateInputSecurityGroupResponsePrivate;
 
-class QTAWS_EXPORT CreateInputSecurityGroupResponse : public MediaLiveResponse {
+class QTAWSMEDIALIVE_EXPORT CreateInputSecurityGroupResponse : public MediaLiveResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace MachineLearning {
 
 class DescribeBatchPredictionsRequestPrivate;
 
-class QTAWS_EXPORT DescribeBatchPredictionsRequest : public MachineLearningRequest {
+class QTAWSMACHINELEARNING_EXPORT DescribeBatchPredictionsRequest : public MachineLearningRequest {
 
 public:
     DescribeBatchPredictionsRequest(const DescribeBatchPredictionsRequest &other);

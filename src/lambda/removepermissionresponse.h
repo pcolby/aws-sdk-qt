@@ -28,7 +28,7 @@ namespace Lambda {
 
 class RemovePermissionResponsePrivate;
 
-class QTAWS_EXPORT RemovePermissionResponse : public LambdaResponse {
+class QTAWSLAMBDA_EXPORT RemovePermissionResponse : public LambdaResponse {
     Q_OBJECT
 
 public:

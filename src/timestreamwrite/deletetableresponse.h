@@ -28,7 +28,7 @@ namespace TimestreamWrite {
 
 class DeleteTableResponsePrivate;
 
-class QTAWS_EXPORT DeleteTableResponse : public TimestreamWriteResponse {
+class QTAWSTIMESTREAMWRITE_EXPORT DeleteTableResponse : public TimestreamWriteResponse {
     Q_OBJECT
 
 public:

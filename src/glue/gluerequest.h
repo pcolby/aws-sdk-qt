@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsglueglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Glue {
 
 class GlueRequestPrivate;
 
-class QTAWS_EXPORT GlueRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSGLUE_EXPORT GlueRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Glue.

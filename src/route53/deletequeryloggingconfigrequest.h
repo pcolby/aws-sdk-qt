@@ -27,7 +27,7 @@ namespace Route53 {
 
 class DeleteQueryLoggingConfigRequestPrivate;
 
-class QTAWS_EXPORT DeleteQueryLoggingConfigRequest : public Route53Request {
+class QTAWSROUTE53_EXPORT DeleteQueryLoggingConfigRequest : public Route53Request {
 
 public:
     DeleteQueryLoggingConfigRequest(const DeleteQueryLoggingConfigRequest &other);

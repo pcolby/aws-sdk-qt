@@ -21,6 +21,8 @@
 #define QTAWS_PROTONRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsprotonglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Proton {
 
 class ProtonResponsePrivate;
 
-class QTAWS_EXPORT ProtonResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSPROTON_EXPORT ProtonResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

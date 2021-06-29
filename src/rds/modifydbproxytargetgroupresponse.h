@@ -28,7 +28,7 @@ namespace RDS {
 
 class ModifyDBProxyTargetGroupResponsePrivate;
 
-class QTAWS_EXPORT ModifyDBProxyTargetGroupResponse : public RdsResponse {
+class QTAWSRDS_EXPORT ModifyDBProxyTargetGroupResponse : public RdsResponse {
     Q_OBJECT
 
 public:

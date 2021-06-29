@@ -27,7 +27,7 @@ namespace Core {
 
 class AwsBasicCredentialsPrivate;
 
-class QTAWS_EXPORT AwsBasicCredentials : public AwsAbstractCredentials {
+class QTAWSCORE_EXPORT AwsBasicCredentials : public AwsAbstractCredentials {
     Q_OBJECT
 
 public:

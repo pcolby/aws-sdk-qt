@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class DescribeVTLDevicesRequestPrivate;
 
-class QTAWS_EXPORT DescribeVTLDevicesRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT DescribeVTLDevicesRequest : public StorageGatewayRequest {
 
 public:
     DescribeVTLDevicesRequest(const DescribeVTLDevicesRequest &other);

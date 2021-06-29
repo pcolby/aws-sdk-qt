@@ -28,7 +28,7 @@ namespace SSOAdmin {
 
 class DescribeAccountAssignmentDeletionStatusResponsePrivate;
 
-class QTAWS_EXPORT DescribeAccountAssignmentDeletionStatusResponse : public SSOAdminResponse {
+class QTAWSSSOADMIN_EXPORT DescribeAccountAssignmentDeletionStatusResponse : public SSOAdminResponse {
     Q_OBJECT
 
 public:

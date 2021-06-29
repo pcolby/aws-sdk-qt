@@ -27,7 +27,7 @@ namespace SecretsManager {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public SecretsManagerRequest {
+class QTAWSSECRETSMANAGER_EXPORT UntagResourceRequest : public SecretsManagerRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

@@ -21,6 +21,8 @@
 #define QTAWS_QUICKSIGHTRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsquicksightglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace QuickSight {
 
 class QuickSightResponsePrivate;
 
-class QTAWS_EXPORT QuickSightResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSQUICKSIGHT_EXPORT QuickSightResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

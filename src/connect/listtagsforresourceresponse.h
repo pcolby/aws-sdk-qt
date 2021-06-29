@@ -28,7 +28,7 @@ namespace Connect {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public ConnectResponse {
+class QTAWSCONNECT_EXPORT ListTagsForResourceResponse : public ConnectResponse {
     Q_OBJECT
 
 public:

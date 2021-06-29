@@ -27,7 +27,7 @@ namespace MediaConnect {
 
 class ListFlowsRequestPrivate;
 
-class QTAWS_EXPORT ListFlowsRequest : public MediaConnectRequest {
+class QTAWSMEDIACONNECT_EXPORT ListFlowsRequest : public MediaConnectRequest {
 
 public:
     ListFlowsRequest(const ListFlowsRequest &other);

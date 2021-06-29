@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class GetContainerAPIMetadataRequestPrivate;
 
-class QTAWS_EXPORT GetContainerAPIMetadataRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT GetContainerAPIMetadataRequest : public LightsailRequest {
 
 public:
     GetContainerAPIMetadataRequest(const GetContainerAPIMetadataRequest &other);

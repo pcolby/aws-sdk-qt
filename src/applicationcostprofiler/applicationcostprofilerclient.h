@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsapplicationcostprofilerglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -41,7 +43,7 @@ class PutReportDefinitionResponse;
 class UpdateReportDefinitionRequest;
 class UpdateReportDefinitionResponse;
 
-class QTAWS_EXPORT ApplicationCostProfilerClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSAPPLICATIONCOSTPROFILER_EXPORT ApplicationCostProfilerClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

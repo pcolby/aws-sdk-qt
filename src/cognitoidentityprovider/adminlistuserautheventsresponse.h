@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class AdminListUserAuthEventsResponsePrivate;
 
-class QTAWS_EXPORT AdminListUserAuthEventsResponse : public CognitoIdentityProviderResponse {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT AdminListUserAuthEventsResponse : public CognitoIdentityProviderResponse {
     Q_OBJECT
 
 public:

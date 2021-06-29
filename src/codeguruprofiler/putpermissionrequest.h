@@ -27,7 +27,7 @@ namespace CodeGuruProfiler {
 
 class PutPermissionRequestPrivate;
 
-class QTAWS_EXPORT PutPermissionRequest : public CodeGuruProfilerRequest {
+class QTAWSCODEGURUPROFILER_EXPORT PutPermissionRequest : public CodeGuruProfilerRequest {
 
 public:
     PutPermissionRequest(const PutPermissionRequest &other);

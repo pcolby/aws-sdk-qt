@@ -28,7 +28,7 @@ namespace Route53 {
 
 class DeleteQueryLoggingConfigResponsePrivate;
 
-class QTAWS_EXPORT DeleteQueryLoggingConfigResponse : public Route53Response {
+class QTAWSROUTE53_EXPORT DeleteQueryLoggingConfigResponse : public Route53Response {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace GameLift {
 
 class DescribeScalingPoliciesResponsePrivate;
 
-class QTAWS_EXPORT DescribeScalingPoliciesResponse : public GameLiftResponse {
+class QTAWSGAMELIFT_EXPORT DescribeScalingPoliciesResponse : public GameLiftResponse {
     Q_OBJECT
 
 public:

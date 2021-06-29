@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ModifyInstanceCapacityReservationAttributesResponsePrivate;
 
-class QTAWS_EXPORT ModifyInstanceCapacityReservationAttributesResponse : public Ec2Response {
+class QTAWSEC2_EXPORT ModifyInstanceCapacityReservationAttributesResponse : public Ec2Response {
     Q_OBJECT
 
 public:

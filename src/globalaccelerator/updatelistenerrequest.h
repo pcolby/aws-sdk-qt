@@ -27,7 +27,7 @@ namespace GlobalAccelerator {
 
 class UpdateListenerRequestPrivate;
 
-class QTAWS_EXPORT UpdateListenerRequest : public GlobalAcceleratorRequest {
+class QTAWSGLOBALACCELERATOR_EXPORT UpdateListenerRequest : public GlobalAcceleratorRequest {
 
 public:
     UpdateListenerRequest(const UpdateListenerRequest &other);

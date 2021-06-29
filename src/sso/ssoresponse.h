@@ -21,6 +21,8 @@
 #define QTAWS_SSORESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsssoglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace SSO {
 
 class SsoResponsePrivate;
 
-class QTAWS_EXPORT SsoResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSSO_EXPORT SsoResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class CreateLaunchConfigurationResponsePrivate;
 
-class QTAWS_EXPORT CreateLaunchConfigurationResponse : public AutoScalingResponse {
+class QTAWSAUTOSCALING_EXPORT CreateLaunchConfigurationResponse : public AutoScalingResponse {
     Q_OBJECT
 
 public:

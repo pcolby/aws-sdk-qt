@@ -28,7 +28,7 @@ namespace Neptune {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public NeptuneResponse {
+class QTAWSNEPTUNE_EXPORT ListTagsForResourceResponse : public NeptuneResponse {
     Q_OBJECT
 
 public:

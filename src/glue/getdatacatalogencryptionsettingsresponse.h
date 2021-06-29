@@ -28,7 +28,7 @@ namespace Glue {
 
 class GetDataCatalogEncryptionSettingsResponsePrivate;
 
-class QTAWS_EXPORT GetDataCatalogEncryptionSettingsResponse : public GlueResponse {
+class QTAWSGLUE_EXPORT GetDataCatalogEncryptionSettingsResponse : public GlueResponse {
     Q_OBJECT
 
 public:

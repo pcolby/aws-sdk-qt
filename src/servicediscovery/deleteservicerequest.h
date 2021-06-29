@@ -27,7 +27,7 @@ namespace ServiceDiscovery {
 
 class DeleteServiceRequestPrivate;
 
-class QTAWS_EXPORT DeleteServiceRequest : public ServiceDiscoveryRequest {
+class QTAWSSERVICEDISCOVERY_EXPORT DeleteServiceRequest : public ServiceDiscoveryRequest {
 
 public:
     DeleteServiceRequest(const DeleteServiceRequest &other);

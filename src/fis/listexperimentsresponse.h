@@ -28,7 +28,7 @@ namespace FIS {
 
 class ListExperimentsResponsePrivate;
 
-class QTAWS_EXPORT ListExperimentsResponse : public FisResponse {
+class QTAWSFIS_EXPORT ListExperimentsResponse : public FisResponse {
     Q_OBJECT
 
 public:

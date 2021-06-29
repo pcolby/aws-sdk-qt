@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class CreateComputerResponsePrivate;
 
-class QTAWS_EXPORT CreateComputerResponse : public DirectoryServiceResponse {
+class QTAWSDIRECTORYSERVICE_EXPORT CreateComputerResponse : public DirectoryServiceResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class DeleteConfigurationRecorderResponsePrivate;
 
-class QTAWS_EXPORT DeleteConfigurationRecorderResponse : public ConfigServiceResponse {
+class QTAWSCONFIGSERVICE_EXPORT DeleteConfigurationRecorderResponse : public ConfigServiceResponse {
     Q_OBJECT
 
 public:

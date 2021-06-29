@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeMovingAddressesResponsePrivate;
 
-class QTAWS_EXPORT DescribeMovingAddressesResponse : public Ec2Response {
+class QTAWSEC2_EXPORT DescribeMovingAddressesResponse : public Ec2Response {
     Q_OBJECT
 
 public:

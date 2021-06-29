@@ -27,7 +27,7 @@ namespace AccessAnalyzer {
 
 class UpdateFindingsRequestPrivate;
 
-class QTAWS_EXPORT UpdateFindingsRequest : public AccessAnalyzerRequest {
+class QTAWSACCESSANALYZER_EXPORT UpdateFindingsRequest : public AccessAnalyzerRequest {
 
 public:
     UpdateFindingsRequest(const UpdateFindingsRequest &other);

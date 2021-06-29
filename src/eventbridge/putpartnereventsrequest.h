@@ -27,7 +27,7 @@ namespace EventBridge {
 
 class PutPartnerEventsRequestPrivate;
 
-class QTAWS_EXPORT PutPartnerEventsRequest : public EventBridgeRequest {
+class QTAWSEVENTBRIDGE_EXPORT PutPartnerEventsRequest : public EventBridgeRequest {
 
 public:
     PutPartnerEventsRequest(const PutPartnerEventsRequest &other);

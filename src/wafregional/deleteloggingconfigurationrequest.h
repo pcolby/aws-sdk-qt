@@ -27,7 +27,7 @@ namespace WAFRegional {
 
 class DeleteLoggingConfigurationRequestPrivate;
 
-class QTAWS_EXPORT DeleteLoggingConfigurationRequest : public WAFRegionalRequest {
+class QTAWSWAFREGIONAL_EXPORT DeleteLoggingConfigurationRequest : public WAFRegionalRequest {
 
 public:
     DeleteLoggingConfigurationRequest(const DeleteLoggingConfigurationRequest &other);

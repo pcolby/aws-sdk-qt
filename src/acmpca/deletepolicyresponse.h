@@ -28,7 +28,7 @@ namespace ACMPCA {
 
 class DeletePolicyResponsePrivate;
 
-class QTAWS_EXPORT DeletePolicyResponse : public AcmpcaResponse {
+class QTAWSACMPCA_EXPORT DeletePolicyResponse : public AcmpcaResponse {
     Q_OBJECT
 
 public:

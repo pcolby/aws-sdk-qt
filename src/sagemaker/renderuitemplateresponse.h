@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class RenderUiTemplateResponsePrivate;
 
-class QTAWS_EXPORT RenderUiTemplateResponse : public SageMakerResponse {
+class QTAWSSAGEMAKER_EXPORT RenderUiTemplateResponse : public SageMakerResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace ECS {
 
 class PutAccountSettingDefaultRequestPrivate;
 
-class QTAWS_EXPORT PutAccountSettingDefaultRequest : public EcsRequest {
+class QTAWSECS_EXPORT PutAccountSettingDefaultRequest : public EcsRequest {
 
 public:
     PutAccountSettingDefaultRequest(const PutAccountSettingDefaultRequest &other);

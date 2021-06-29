@@ -27,7 +27,7 @@ namespace RedshiftDataAPIService {
 
 class GetStatementResultRequestPrivate;
 
-class QTAWS_EXPORT GetStatementResultRequest : public RedshiftDataAPIServiceRequest {
+class QTAWSREDSHIFTDATAAPISERVICE_EXPORT GetStatementResultRequest : public RedshiftDataAPIServiceRequest {
 
 public:
     GetStatementResultRequest(const GetStatementResultRequest &other);

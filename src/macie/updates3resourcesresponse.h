@@ -28,7 +28,7 @@ namespace Macie {
 
 class UpdateS3ResourcesResponsePrivate;
 
-class QTAWS_EXPORT UpdateS3ResourcesResponse : public MacieResponse {
+class QTAWSMACIE_EXPORT UpdateS3ResourcesResponse : public MacieResponse {
     Q_OBJECT
 
 public:

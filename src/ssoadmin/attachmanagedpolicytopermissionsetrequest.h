@@ -27,7 +27,7 @@ namespace SSOAdmin {
 
 class AttachManagedPolicyToPermissionSetRequestPrivate;
 
-class QTAWS_EXPORT AttachManagedPolicyToPermissionSetRequest : public SSOAdminRequest {
+class QTAWSSSOADMIN_EXPORT AttachManagedPolicyToPermissionSetRequest : public SSOAdminRequest {
 
 public:
     AttachManagedPolicyToPermissionSetRequest(const AttachManagedPolicyToPermissionSetRequest &other);

@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class ListGroupCertificateAuthoritiesRequestPrivate;
 
-class QTAWS_EXPORT ListGroupCertificateAuthoritiesRequest : public GreengrassRequest {
+class QTAWSGREENGRASS_EXPORT ListGroupCertificateAuthoritiesRequest : public GreengrassRequest {
 
 public:
     ListGroupCertificateAuthoritiesRequest(const ListGroupCertificateAuthoritiesRequest &other);

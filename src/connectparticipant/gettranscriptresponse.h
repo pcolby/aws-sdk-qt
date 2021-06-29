@@ -28,7 +28,7 @@ namespace ConnectParticipant {
 
 class GetTranscriptResponsePrivate;
 
-class QTAWS_EXPORT GetTranscriptResponse : public ConnectParticipantResponse {
+class QTAWSCONNECTPARTICIPANT_EXPORT GetTranscriptResponse : public ConnectParticipantResponse {
     Q_OBJECT
 
 public:

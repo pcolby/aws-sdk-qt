@@ -27,7 +27,7 @@ namespace AlexaForBusiness {
 
 class DeleteDeviceRequestPrivate;
 
-class QTAWS_EXPORT DeleteDeviceRequest : public AlexaForBusinessRequest {
+class QTAWSALEXAFORBUSINESS_EXPORT DeleteDeviceRequest : public AlexaForBusinessRequest {
 
 public:
     DeleteDeviceRequest(const DeleteDeviceRequest &other);

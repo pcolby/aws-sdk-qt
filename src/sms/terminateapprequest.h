@@ -27,7 +27,7 @@ namespace SMS {
 
 class TerminateAppRequestPrivate;
 
-class QTAWS_EXPORT TerminateAppRequest : public SmsRequest {
+class QTAWSSMS_EXPORT TerminateAppRequest : public SmsRequest {
 
 public:
     TerminateAppRequest(const TerminateAppRequest &other);

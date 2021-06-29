@@ -28,7 +28,7 @@ namespace ApplicationInsights {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public ApplicationInsightsResponse {
+class QTAWSAPPLICATIONINSIGHTS_EXPORT UntagResourceResponse : public ApplicationInsightsResponse {
     Q_OBJECT
 
 public:

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSAPIGATEWAY_LIBRARY)
+
 add_library(QtAwsAPIGateway
   apigatewayclient.h
   apigatewayclient_p.h
@@ -381,6 +383,7 @@ add_library(QtAwsAPIGateway
   putrestapirequest_p.h
   putrestapiresponse.h
   putrestapiresponse_p.h
+  qtawsapigatewayglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

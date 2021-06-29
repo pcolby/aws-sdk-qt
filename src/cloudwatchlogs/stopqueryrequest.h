@@ -27,7 +27,7 @@ namespace CloudWatchLogs {
 
 class StopQueryRequestPrivate;
 
-class QTAWS_EXPORT StopQueryRequest : public CloudWatchLogsRequest {
+class QTAWSCLOUDWATCHLOGS_EXPORT StopQueryRequest : public CloudWatchLogsRequest {
 
 public:
     StopQueryRequest(const StopQueryRequest &other);

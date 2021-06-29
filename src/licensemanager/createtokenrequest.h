@@ -27,7 +27,7 @@ namespace LicenseManager {
 
 class CreateTokenRequestPrivate;
 
-class QTAWS_EXPORT CreateTokenRequest : public LicenseManagerRequest {
+class QTAWSLICENSEMANAGER_EXPORT CreateTokenRequest : public LicenseManagerRequest {
 
 public:
     CreateTokenRequest(const CreateTokenRequest &other);

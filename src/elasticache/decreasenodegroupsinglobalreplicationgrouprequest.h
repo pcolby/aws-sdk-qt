@@ -27,7 +27,7 @@ namespace ElastiCache {
 
 class DecreaseNodeGroupsInGlobalReplicationGroupRequestPrivate;
 
-class QTAWS_EXPORT DecreaseNodeGroupsInGlobalReplicationGroupRequest : public ElastiCacheRequest {
+class QTAWSELASTICACHE_EXPORT DecreaseNodeGroupsInGlobalReplicationGroupRequest : public ElastiCacheRequest {
 
 public:
     DecreaseNodeGroupsInGlobalReplicationGroupRequest(const DecreaseNodeGroupsInGlobalReplicationGroupRequest &other);

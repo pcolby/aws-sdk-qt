@@ -28,7 +28,7 @@ namespace RoboMaker {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public RoboMakerResponse {
+class QTAWSROBOMAKER_EXPORT TagResourceResponse : public RoboMakerResponse {
     Q_OBJECT
 
 public:

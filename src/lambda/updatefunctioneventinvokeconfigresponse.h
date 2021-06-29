@@ -28,7 +28,7 @@ namespace Lambda {
 
 class UpdateFunctionEventInvokeConfigResponsePrivate;
 
-class QTAWS_EXPORT UpdateFunctionEventInvokeConfigResponse : public LambdaResponse {
+class QTAWSLAMBDA_EXPORT UpdateFunctionEventInvokeConfigResponse : public LambdaResponse {
     Q_OBJECT
 
 public:

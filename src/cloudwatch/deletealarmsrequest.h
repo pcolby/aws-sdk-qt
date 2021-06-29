@@ -27,7 +27,7 @@ namespace CloudWatch {
 
 class DeleteAlarmsRequestPrivate;
 
-class QTAWS_EXPORT DeleteAlarmsRequest : public CloudWatchRequest {
+class QTAWSCLOUDWATCH_EXPORT DeleteAlarmsRequest : public CloudWatchRequest {
 
 public:
     DeleteAlarmsRequest(const DeleteAlarmsRequest &other);

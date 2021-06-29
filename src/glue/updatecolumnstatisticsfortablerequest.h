@@ -27,7 +27,7 @@ namespace Glue {
 
 class UpdateColumnStatisticsForTableRequestPrivate;
 
-class QTAWS_EXPORT UpdateColumnStatisticsForTableRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT UpdateColumnStatisticsForTableRequest : public GlueRequest {
 
 public:
     UpdateColumnStatisticsForTableRequest(const UpdateColumnStatisticsForTableRequest &other);

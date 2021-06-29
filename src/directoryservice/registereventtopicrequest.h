@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class RegisterEventTopicRequestPrivate;
 
-class QTAWS_EXPORT RegisterEventTopicRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT RegisterEventTopicRequest : public DirectoryServiceRequest {
 
 public:
     RegisterEventTopicRequest(const RegisterEventTopicRequest &other);

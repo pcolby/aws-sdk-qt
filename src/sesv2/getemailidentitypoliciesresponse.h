@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class GetEmailIdentityPoliciesResponsePrivate;
 
-class QTAWS_EXPORT GetEmailIdentityPoliciesResponse : public Sesv2Response {
+class QTAWSSESV2_EXPORT GetEmailIdentityPoliciesResponse : public Sesv2Response {
     Q_OBJECT
 
 public:

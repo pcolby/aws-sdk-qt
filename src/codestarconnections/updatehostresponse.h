@@ -28,7 +28,7 @@ namespace CodeStarconnections {
 
 class UpdateHostResponsePrivate;
 
-class QTAWS_EXPORT UpdateHostResponse : public CodeStarconnectionsResponse {
+class QTAWSCODESTARCONNECTIONS_EXPORT UpdateHostResponse : public CodeStarconnectionsResponse {
     Q_OBJECT
 
 public:

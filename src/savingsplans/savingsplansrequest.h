@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawssavingsplansglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace SavingsPlans {
 
 class SavingsPlansRequestPrivate;
 
-class QTAWS_EXPORT SavingsPlansRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSAVINGSPLANS_EXPORT SavingsPlansRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SavingsPlans.

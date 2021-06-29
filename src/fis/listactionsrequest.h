@@ -27,7 +27,7 @@ namespace FIS {
 
 class ListActionsRequestPrivate;
 
-class QTAWS_EXPORT ListActionsRequest : public FisRequest {
+class QTAWSFIS_EXPORT ListActionsRequest : public FisRequest {
 
 public:
     ListActionsRequest(const ListActionsRequest &other);

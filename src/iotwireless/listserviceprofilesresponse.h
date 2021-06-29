@@ -28,7 +28,7 @@ namespace IoTWireless {
 
 class ListServiceProfilesResponsePrivate;
 
-class QTAWS_EXPORT ListServiceProfilesResponse : public IoTWirelessResponse {
+class QTAWSIOTWIRELESS_EXPORT ListServiceProfilesResponse : public IoTWirelessResponse {
     Q_OBJECT
 
 public:

@@ -21,6 +21,8 @@
 #define QTAWS_SFNRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawssfnglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace SFN {
 
 class SfnResponsePrivate;
 
-class QTAWS_EXPORT SfnResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSFN_EXPORT SfnResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

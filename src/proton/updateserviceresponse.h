@@ -28,7 +28,7 @@ namespace Proton {
 
 class UpdateServiceResponsePrivate;
 
-class QTAWS_EXPORT UpdateServiceResponse : public ProtonResponse {
+class QTAWSPROTON_EXPORT UpdateServiceResponse : public ProtonResponse {
     Q_OBJECT
 
 public:

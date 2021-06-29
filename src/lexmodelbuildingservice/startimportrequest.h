@@ -27,7 +27,7 @@ namespace LexModelBuildingService {
 
 class StartImportRequestPrivate;
 
-class QTAWS_EXPORT StartImportRequest : public LexModelBuildingServiceRequest {
+class QTAWSLEXMODELBUILDINGSERVICE_EXPORT StartImportRequest : public LexModelBuildingServiceRequest {
 
 public:
     StartImportRequest(const StartImportRequest &other);

@@ -27,7 +27,7 @@ namespace GuardDuty {
 
 class DisableOrganizationAdminAccountRequestPrivate;
 
-class QTAWS_EXPORT DisableOrganizationAdminAccountRequest : public GuardDutyRequest {
+class QTAWSGUARDDUTY_EXPORT DisableOrganizationAdminAccountRequest : public GuardDutyRequest {
 
 public:
     DisableOrganizationAdminAccountRequest(const DisableOrganizationAdminAccountRequest &other);

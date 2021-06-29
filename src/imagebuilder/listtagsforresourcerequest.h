@@ -27,7 +27,7 @@ namespace imagebuilder {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public imagebuilderRequest {
+class QTAWSIMAGEBUILDER_EXPORT ListTagsForResourceRequest : public imagebuilderRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

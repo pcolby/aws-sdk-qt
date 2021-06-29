@@ -27,7 +27,7 @@ namespace IoT {
 
 class DeleteJobTemplateRequestPrivate;
 
-class QTAWS_EXPORT DeleteJobTemplateRequest : public IoTRequest {
+class QTAWSIOT_EXPORT DeleteJobTemplateRequest : public IoTRequest {
 
 public:
     DeleteJobTemplateRequest(const DeleteJobTemplateRequest &other);

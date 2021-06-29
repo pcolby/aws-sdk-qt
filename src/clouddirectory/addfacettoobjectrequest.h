@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class AddFacetToObjectRequestPrivate;
 
-class QTAWS_EXPORT AddFacetToObjectRequest : public CloudDirectoryRequest {
+class QTAWSCLOUDDIRECTORY_EXPORT AddFacetToObjectRequest : public CloudDirectoryRequest {
 
 public:
     AddFacetToObjectRequest(const AddFacetToObjectRequest &other);

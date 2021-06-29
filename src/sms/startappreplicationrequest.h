@@ -27,7 +27,7 @@ namespace SMS {
 
 class StartAppReplicationRequestPrivate;
 
-class QTAWS_EXPORT StartAppReplicationRequest : public SmsRequest {
+class QTAWSSMS_EXPORT StartAppReplicationRequest : public SmsRequest {
 
 public:
     StartAppReplicationRequest(const StartAppReplicationRequest &other);

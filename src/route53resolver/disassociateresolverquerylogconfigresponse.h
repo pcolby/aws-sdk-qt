@@ -28,7 +28,7 @@ namespace Route53Resolver {
 
 class DisassociateResolverQueryLogConfigResponsePrivate;
 
-class QTAWS_EXPORT DisassociateResolverQueryLogConfigResponse : public Route53ResolverResponse {
+class QTAWSROUTE53RESOLVER_EXPORT DisassociateResolverQueryLogConfigResponse : public Route53ResolverResponse {
     Q_OBJECT
 
 public:

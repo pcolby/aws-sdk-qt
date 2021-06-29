@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class DeleteAppRequestPrivate;
 
-class QTAWS_EXPORT DeleteAppRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT DeleteAppRequest : public SageMakerRequest {
 
 public:
     DeleteAppRequest(const DeleteAppRequest &other);

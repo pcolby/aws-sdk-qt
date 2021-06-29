@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawslookoutequipmentglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -73,7 +75,7 @@ class UntagResourceResponse;
 class UpdateInferenceSchedulerRequest;
 class UpdateInferenceSchedulerResponse;
 
-class QTAWS_EXPORT LookoutEquipmentClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSLOOKOUTEQUIPMENT_EXPORT LookoutEquipmentClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

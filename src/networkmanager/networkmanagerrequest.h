@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsnetworkmanagerglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace NetworkManager {
 
 class NetworkManagerRequestPrivate;
 
-class QTAWS_EXPORT NetworkManagerRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSNETWORKMANAGER_EXPORT NetworkManagerRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by NetworkManager.

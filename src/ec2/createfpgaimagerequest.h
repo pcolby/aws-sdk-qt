@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CreateFpgaImageRequestPrivate;
 
-class QTAWS_EXPORT CreateFpgaImageRequest : public Ec2Request {
+class QTAWSEC2_EXPORT CreateFpgaImageRequest : public Ec2Request {
 
 public:
     CreateFpgaImageRequest(const CreateFpgaImageRequest &other);

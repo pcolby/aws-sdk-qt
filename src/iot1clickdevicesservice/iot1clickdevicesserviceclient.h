@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsiot1clickdevicesserviceglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -55,7 +57,7 @@ class UntagResourceResponse;
 class UpdateDeviceStateRequest;
 class UpdateDeviceStateResponse;
 
-class QTAWS_EXPORT IoT1ClickDevicesServiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSIOT1CLICKDEVICESSERVICE_EXPORT IoT1ClickDevicesServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

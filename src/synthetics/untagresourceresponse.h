@@ -28,7 +28,7 @@ namespace Synthetics {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public SyntheticsResponse {
+class QTAWSSYNTHETICS_EXPORT UntagResourceResponse : public SyntheticsResponse {
     Q_OBJECT
 
 public:

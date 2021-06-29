@@ -27,7 +27,7 @@ namespace Redshift {
 
 class GetClusterCredentialsRequestPrivate;
 
-class QTAWS_EXPORT GetClusterCredentialsRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT GetClusterCredentialsRequest : public RedshiftRequest {
 
 public:
     GetClusterCredentialsRequest(const GetClusterCredentialsRequest &other);

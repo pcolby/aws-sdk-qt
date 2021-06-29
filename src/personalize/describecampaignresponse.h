@@ -28,7 +28,7 @@ namespace Personalize {
 
 class DescribeCampaignResponsePrivate;
 
-class QTAWS_EXPORT DescribeCampaignResponse : public PersonalizeResponse {
+class QTAWSPERSONALIZE_EXPORT DescribeCampaignResponse : public PersonalizeResponse {
     Q_OBJECT
 
 public:

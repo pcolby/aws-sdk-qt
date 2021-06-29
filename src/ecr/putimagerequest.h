@@ -27,7 +27,7 @@ namespace ECR {
 
 class PutImageRequestPrivate;
 
-class QTAWS_EXPORT PutImageRequest : public EcrRequest {
+class QTAWSECR_EXPORT PutImageRequest : public EcrRequest {
 
 public:
     PutImageRequest(const PutImageRequest &other);

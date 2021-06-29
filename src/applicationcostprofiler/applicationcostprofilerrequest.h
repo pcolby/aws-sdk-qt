@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsapplicationcostprofilerglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace ApplicationCostProfiler {
 
 class ApplicationCostProfilerRequestPrivate;
 
-class QTAWS_EXPORT ApplicationCostProfilerRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSAPPLICATIONCOSTPROFILER_EXPORT ApplicationCostProfilerRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ApplicationCostProfiler.

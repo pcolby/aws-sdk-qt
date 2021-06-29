@@ -27,7 +27,7 @@ namespace CloudFormation {
 
 class SetStackPolicyRequestPrivate;
 
-class QTAWS_EXPORT SetStackPolicyRequest : public CloudFormationRequest {
+class QTAWSCLOUDFORMATION_EXPORT SetStackPolicyRequest : public CloudFormationRequest {
 
 public:
     SetStackPolicyRequest(const SetStackPolicyRequest &other);

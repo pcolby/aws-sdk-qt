@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class DeleteDataSourceRequestPrivate;
 
-class QTAWS_EXPORT DeleteDataSourceRequest : public QuickSightRequest {
+class QTAWSQUICKSIGHT_EXPORT DeleteDataSourceRequest : public QuickSightRequest {
 
 public:
     DeleteDataSourceRequest(const DeleteDataSourceRequest &other);

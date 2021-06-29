@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSPRICING_LIBRARY)
+
 add_library(QtAwsPricing
   describeservicesrequest.h
   describeservicesrequest_p.h
@@ -17,6 +19,7 @@ add_library(QtAwsPricing
   pricingrequest_p.h
   pricingresponse.h
   pricingresponse_p.h
+  qtawspricingglobal.h
   describeservicesrequest.cpp
   describeservicesresponse.cpp
   getattributevaluesrequest.cpp

@@ -27,7 +27,7 @@ namespace ECR {
 
 class PutImageTagMutabilityRequestPrivate;
 
-class QTAWS_EXPORT PutImageTagMutabilityRequest : public EcrRequest {
+class QTAWSECR_EXPORT PutImageTagMutabilityRequest : public EcrRequest {
 
 public:
     PutImageTagMutabilityRequest(const PutImageTagMutabilityRequest &other);

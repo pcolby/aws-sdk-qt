@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class DeleteDirectoryRequestPrivate;
 
-class QTAWS_EXPORT DeleteDirectoryRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT DeleteDirectoryRequest : public DirectoryServiceRequest {
 
 public:
     DeleteDirectoryRequest(const DeleteDirectoryRequest &other);

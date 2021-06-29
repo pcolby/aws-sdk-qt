@@ -27,7 +27,7 @@ namespace Connect {
 
 class GetFederationTokenRequestPrivate;
 
-class QTAWS_EXPORT GetFederationTokenRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT GetFederationTokenRequest : public ConnectRequest {
 
 public:
     GetFederationTokenRequest(const GetFederationTokenRequest &other);

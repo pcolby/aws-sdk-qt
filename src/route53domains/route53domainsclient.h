@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsroute53domainsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -85,7 +87,7 @@ class UpdateTagsForDomainResponse;
 class ViewBillingRequest;
 class ViewBillingResponse;
 
-class QTAWS_EXPORT Route53DomainsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSROUTE53DOMAINS_EXPORT Route53DomainsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

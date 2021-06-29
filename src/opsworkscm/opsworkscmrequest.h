@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsopsworkscmglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace OpsWorksCM {
 
 class OpsWorksCMRequestPrivate;
 
-class QTAWS_EXPORT OpsWorksCMRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSOPSWORKSCM_EXPORT OpsWorksCMRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by OpsWorksCM.

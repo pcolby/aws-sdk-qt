@@ -27,7 +27,7 @@ namespace EMR {
 
 class ModifyInstanceGroupsRequestPrivate;
 
-class QTAWS_EXPORT ModifyInstanceGroupsRequest : public EmrRequest {
+class QTAWSEMR_EXPORT ModifyInstanceGroupsRequest : public EmrRequest {
 
 public:
     ModifyInstanceGroupsRequest(const ModifyInstanceGroupsRequest &other);

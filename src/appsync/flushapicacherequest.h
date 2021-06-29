@@ -27,7 +27,7 @@ namespace AppSync {
 
 class FlushApiCacheRequestPrivate;
 
-class QTAWS_EXPORT FlushApiCacheRequest : public AppSyncRequest {
+class QTAWSAPPSYNC_EXPORT FlushApiCacheRequest : public AppSyncRequest {
 
 public:
     FlushApiCacheRequest(const FlushApiCacheRequest &other);

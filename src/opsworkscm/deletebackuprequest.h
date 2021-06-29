@@ -27,7 +27,7 @@ namespace OpsWorksCM {
 
 class DeleteBackupRequestPrivate;
 
-class QTAWS_EXPORT DeleteBackupRequest : public OpsWorksCMRequest {
+class QTAWSOPSWORKSCM_EXPORT DeleteBackupRequest : public OpsWorksCMRequest {
 
 public:
     DeleteBackupRequest(const DeleteBackupRequest &other);

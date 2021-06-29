@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSIOT1CLICKDEVICESSERVICE_LIBRARY)
+
 add_library(QtAwsIoT1ClickDevicesService
   claimdevicesbyclaimcoderequest.h
   claimdevicesbyclaimcoderequest_p.h
@@ -41,6 +43,7 @@ add_library(QtAwsIoT1ClickDevicesService
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsiot1clickdevicesserviceglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

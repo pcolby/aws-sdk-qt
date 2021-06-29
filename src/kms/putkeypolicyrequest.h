@@ -27,7 +27,7 @@ namespace KMS {
 
 class PutKeyPolicyRequestPrivate;
 
-class QTAWS_EXPORT PutKeyPolicyRequest : public KmsRequest {
+class QTAWSKMS_EXPORT PutKeyPolicyRequest : public KmsRequest {
 
 public:
     PutKeyPolicyRequest(const PutKeyPolicyRequest &other);

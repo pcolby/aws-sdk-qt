@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class DeleteDashboardRequestPrivate;
 
-class QTAWS_EXPORT DeleteDashboardRequest : public QuickSightRequest {
+class QTAWSQUICKSIGHT_EXPORT DeleteDashboardRequest : public QuickSightRequest {
 
 public:
     DeleteDashboardRequest(const DeleteDashboardRequest &other);

@@ -27,7 +27,7 @@ namespace CloudHSMV2 {
 
 class ListTagsRequestPrivate;
 
-class QTAWS_EXPORT ListTagsRequest : public CloudHSMV2Request {
+class QTAWSCLOUDHSMV2_EXPORT ListTagsRequest : public CloudHSMV2Request {
 
 public:
     ListTagsRequest(const ListTagsRequest &other);

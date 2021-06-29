@@ -28,7 +28,7 @@ namespace ApiGatewayV2 {
 
 class UpdateApiMappingResponsePrivate;
 
-class QTAWS_EXPORT UpdateApiMappingResponse : public ApiGatewayV2Response {
+class QTAWSAPIGATEWAYV2_EXPORT UpdateApiMappingResponse : public ApiGatewayV2Response {
     Q_OBJECT
 
 public:

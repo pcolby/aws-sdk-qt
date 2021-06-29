@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class DescribeLifecycleHooksResponsePrivate;
 
-class QTAWS_EXPORT DescribeLifecycleHooksResponse : public AutoScalingResponse {
+class QTAWSAUTOSCALING_EXPORT DescribeLifecycleHooksResponse : public AutoScalingResponse {
     Q_OBJECT
 
 public:

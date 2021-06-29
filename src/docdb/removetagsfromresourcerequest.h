@@ -27,7 +27,7 @@ namespace DocDB {
 
 class RemoveTagsFromResourceRequestPrivate;
 
-class QTAWS_EXPORT RemoveTagsFromResourceRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT RemoveTagsFromResourceRequest : public DocDBRequest {
 
 public:
     RemoveTagsFromResourceRequest(const RemoveTagsFromResourceRequest &other);

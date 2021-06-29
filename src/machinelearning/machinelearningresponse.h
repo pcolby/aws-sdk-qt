@@ -21,6 +21,8 @@
 #define QTAWS_MACHINELEARNINGRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsmachinelearningglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace MachineLearning {
 
 class MachineLearningResponsePrivate;
 
-class QTAWS_EXPORT MachineLearningResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSMACHINELEARNING_EXPORT MachineLearningResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

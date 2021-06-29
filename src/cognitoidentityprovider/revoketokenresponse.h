@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class RevokeTokenResponsePrivate;
 
-class QTAWS_EXPORT RevokeTokenResponse : public CognitoIdentityProviderResponse {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT RevokeTokenResponse : public CognitoIdentityProviderResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class DeleteNamespaceRequestPrivate;
 
-class QTAWS_EXPORT DeleteNamespaceRequest : public QuickSightRequest {
+class QTAWSQUICKSIGHT_EXPORT DeleteNamespaceRequest : public QuickSightRequest {
 
 public:
     DeleteNamespaceRequest(const DeleteNamespaceRequest &other);

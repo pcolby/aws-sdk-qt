@@ -28,7 +28,7 @@ namespace Amplify {
 
 class DeleteJobResponsePrivate;
 
-class QTAWS_EXPORT DeleteJobResponse : public AmplifyResponse {
+class QTAWSAMPLIFY_EXPORT DeleteJobResponse : public AmplifyResponse {
     Q_OBJECT
 
 public:

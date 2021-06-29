@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCLOUDTRAIL_LIBRARY)
+
 add_library(QtAwsCloudTrail
   addtagsrequest.h
   addtagsrequest_p.h
@@ -61,6 +63,7 @@ add_library(QtAwsCloudTrail
   putinsightselectorsrequest_p.h
   putinsightselectorsresponse.h
   putinsightselectorsresponse_p.h
+  qtawscloudtrailglobal.h
   removetagsrequest.h
   removetagsrequest_p.h
   removetagsresponse.h

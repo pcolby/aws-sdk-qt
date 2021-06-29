@@ -27,7 +27,7 @@ namespace mgn {
 
 class FinalizeCutoverRequestPrivate;
 
-class QTAWS_EXPORT FinalizeCutoverRequest : public mgnRequest {
+class QTAWSMGN_EXPORT FinalizeCutoverRequest : public mgnRequest {
 
 public:
     FinalizeCutoverRequest(const FinalizeCutoverRequest &other);

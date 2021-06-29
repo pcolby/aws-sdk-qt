@@ -28,7 +28,7 @@ namespace WorkLink {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public WorkLinkResponse {
+class QTAWSWORKLINK_EXPORT ListTagsForResourceResponse : public WorkLinkResponse {
     Q_OBJECT
 
 public:

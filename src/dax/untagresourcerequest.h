@@ -27,7 +27,7 @@ namespace DAX {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public DaxRequest {
+class QTAWSDAX_EXPORT UntagResourceRequest : public DaxRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

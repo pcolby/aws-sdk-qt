@@ -27,7 +27,7 @@ namespace Comprehend {
 
 class StopKeyPhrasesDetectionJobRequestPrivate;
 
-class QTAWS_EXPORT StopKeyPhrasesDetectionJobRequest : public ComprehendRequest {
+class QTAWSCOMPREHEND_EXPORT StopKeyPhrasesDetectionJobRequest : public ComprehendRequest {
 
 public:
     StopKeyPhrasesDetectionJobRequest(const StopKeyPhrasesDetectionJobRequest &other);

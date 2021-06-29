@@ -27,7 +27,7 @@ namespace Connect {
 
 class ListInstanceAttributesRequestPrivate;
 
-class QTAWS_EXPORT ListInstanceAttributesRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT ListInstanceAttributesRequest : public ConnectRequest {
 
 public:
     ListInstanceAttributesRequest(const ListInstanceAttributesRequest &other);

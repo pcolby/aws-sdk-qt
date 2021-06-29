@@ -27,7 +27,7 @@ namespace Schemas {
 
 class DeleteRegistryRequestPrivate;
 
-class QTAWS_EXPORT DeleteRegistryRequest : public SchemasRequest {
+class QTAWSSCHEMAS_EXPORT DeleteRegistryRequest : public SchemasRequest {
 
 public:
     DeleteRegistryRequest(const DeleteRegistryRequest &other);

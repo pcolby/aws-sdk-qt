@@ -27,7 +27,7 @@ namespace AppSync {
 
 class UpdateApiCacheRequestPrivate;
 
-class QTAWS_EXPORT UpdateApiCacheRequest : public AppSyncRequest {
+class QTAWSAPPSYNC_EXPORT UpdateApiCacheRequest : public AppSyncRequest {
 
 public:
     UpdateApiCacheRequest(const UpdateApiCacheRequest &other);

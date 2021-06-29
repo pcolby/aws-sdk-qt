@@ -27,7 +27,7 @@ namespace Synthetics {
 
 class DescribeCanariesLastRunRequestPrivate;
 
-class QTAWS_EXPORT DescribeCanariesLastRunRequest : public SyntheticsRequest {
+class QTAWSSYNTHETICS_EXPORT DescribeCanariesLastRunRequest : public SyntheticsRequest {
 
 public:
     DescribeCanariesLastRunRequest(const DescribeCanariesLastRunRequest &other);

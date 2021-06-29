@@ -21,6 +21,8 @@
 #define QTAWS_ELASTICLOADBALANCINGV2RESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawselasticloadbalancingv2global.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace ElasticLoadBalancingv2 {
 
 class ElasticLoadBalancingv2ResponsePrivate;
 
-class QTAWS_EXPORT ElasticLoadBalancingv2Response : public QtAws::Core::AwsAbstractResponse {
+class QTAWSELASTICLOADBALANCINGV2_EXPORT ElasticLoadBalancingv2Response : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

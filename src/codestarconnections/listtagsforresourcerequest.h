@@ -27,7 +27,7 @@ namespace CodeStarconnections {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public CodeStarconnectionsRequest {
+class QTAWSCODESTARCONNECTIONS_EXPORT ListTagsForResourceRequest : public CodeStarconnectionsRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

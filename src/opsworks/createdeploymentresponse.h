@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class CreateDeploymentResponsePrivate;
 
-class QTAWS_EXPORT CreateDeploymentResponse : public OpsWorksResponse {
+class QTAWSOPSWORKS_EXPORT CreateDeploymentResponse : public OpsWorksResponse {
     Q_OBJECT
 
 public:

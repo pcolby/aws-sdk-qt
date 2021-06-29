@@ -27,7 +27,7 @@ namespace Synthetics {
 
 class DescribeCanariesRequestPrivate;
 
-class QTAWS_EXPORT DescribeCanariesRequest : public SyntheticsRequest {
+class QTAWSSYNTHETICS_EXPORT DescribeCanariesRequest : public SyntheticsRequest {
 
 public:
     DescribeCanariesRequest(const DescribeCanariesRequest &other);

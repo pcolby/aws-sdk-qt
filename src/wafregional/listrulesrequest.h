@@ -27,7 +27,7 @@ namespace WAFRegional {
 
 class ListRulesRequestPrivate;
 
-class QTAWS_EXPORT ListRulesRequest : public WAFRegionalRequest {
+class QTAWSWAFREGIONAL_EXPORT ListRulesRequest : public WAFRegionalRequest {
 
 public:
     ListRulesRequest(const ListRulesRequest &other);

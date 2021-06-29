@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class GetAutoSnapshotsRequestPrivate;
 
-class QTAWS_EXPORT GetAutoSnapshotsRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT GetAutoSnapshotsRequest : public LightsailRequest {
 
 public:
     GetAutoSnapshotsRequest(const GetAutoSnapshotsRequest &other);

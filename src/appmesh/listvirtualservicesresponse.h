@@ -28,7 +28,7 @@ namespace AppMesh {
 
 class ListVirtualServicesResponsePrivate;
 
-class QTAWS_EXPORT ListVirtualServicesResponse : public AppMeshResponse {
+class QTAWSAPPMESH_EXPORT ListVirtualServicesResponse : public AppMeshResponse {
     Q_OBJECT
 
 public:

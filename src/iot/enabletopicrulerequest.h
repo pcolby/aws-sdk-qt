@@ -27,7 +27,7 @@ namespace IoT {
 
 class EnableTopicRuleRequestPrivate;
 
-class QTAWS_EXPORT EnableTopicRuleRequest : public IoTRequest {
+class QTAWSIOT_EXPORT EnableTopicRuleRequest : public IoTRequest {
 
 public:
     EnableTopicRuleRequest(const EnableTopicRuleRequest &other);

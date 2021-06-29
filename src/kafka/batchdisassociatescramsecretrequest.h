@@ -27,7 +27,7 @@ namespace Kafka {
 
 class BatchDisassociateScramSecretRequestPrivate;
 
-class QTAWS_EXPORT BatchDisassociateScramSecretRequest : public KafkaRequest {
+class QTAWSKAFKA_EXPORT BatchDisassociateScramSecretRequest : public KafkaRequest {
 
 public:
     BatchDisassociateScramSecretRequest(const BatchDisassociateScramSecretRequest &other);

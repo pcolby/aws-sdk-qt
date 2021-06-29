@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSMEDIACONNECT_LIBRARY)
+
 add_library(QtAwsMediaConnect
   addflowmediastreamsrequest.h
   addflowmediastreamsrequest_p.h
@@ -69,6 +71,7 @@ add_library(QtAwsMediaConnect
   purchaseofferingrequest_p.h
   purchaseofferingresponse.h
   purchaseofferingresponse_p.h
+  qtawsmediaconnectglobal.h
   removeflowmediastreamrequest.h
   removeflowmediastreamrequest_p.h
   removeflowmediastreamresponse.h

@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public ConfigServiceRequest {
+class QTAWSCONFIGSERVICE_EXPORT UntagResourceRequest : public ConfigServiceRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

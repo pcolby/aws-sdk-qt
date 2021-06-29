@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsdevicefarmglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -183,7 +185,7 @@ class UpdateUploadResponse;
 class UpdateVPCEConfigurationRequest;
 class UpdateVPCEConfigurationResponse;
 
-class QTAWS_EXPORT DeviceFarmClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSDEVICEFARM_EXPORT DeviceFarmClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

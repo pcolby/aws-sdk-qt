@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawstranscribestreamingserviceglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -33,7 +35,7 @@ class StartMedicalStreamTranscriptionResponse;
 class StartStreamTranscriptionRequest;
 class StartStreamTranscriptionResponse;
 
-class QTAWS_EXPORT TranscribeStreamingServiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSTRANSCRIBESTREAMINGSERVICE_EXPORT TranscribeStreamingServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

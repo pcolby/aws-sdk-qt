@@ -27,7 +27,7 @@ namespace SimpleDB {
 
 class DeleteDomainRequestPrivate;
 
-class QTAWS_EXPORT DeleteDomainRequest : public SimpleDBRequest {
+class QTAWSSIMPLEDB_EXPORT DeleteDomainRequest : public SimpleDBRequest {
 
 public:
     DeleteDomainRequest(const DeleteDomainRequest &other);

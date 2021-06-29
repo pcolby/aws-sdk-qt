@@ -27,7 +27,7 @@ namespace Organizations {
 
 class CreateGovCloudAccountRequestPrivate;
 
-class QTAWS_EXPORT CreateGovCloudAccountRequest : public OrganizationsRequest {
+class QTAWSORGANIZATIONS_EXPORT CreateGovCloudAccountRequest : public OrganizationsRequest {
 
 public:
     CreateGovCloudAccountRequest(const CreateGovCloudAccountRequest &other);

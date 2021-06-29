@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsworkmailglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace WorkMail {
 
 class WorkMailRequestPrivate;
 
-class QTAWS_EXPORT WorkMailRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSWORKMAIL_EXPORT WorkMailRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by WorkMail.

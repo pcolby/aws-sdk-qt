@@ -28,7 +28,7 @@ namespace SES {
 
 class UpdateConfigurationSetReputationMetricsEnabledResponsePrivate;
 
-class QTAWS_EXPORT UpdateConfigurationSetReputationMetricsEnabledResponse : public SesResponse {
+class QTAWSSES_EXPORT UpdateConfigurationSetReputationMetricsEnabledResponse : public SesResponse {
     Q_OBJECT
 
 public:

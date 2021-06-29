@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSIOTDEVICEADVISOR_LIBRARY)
+
 add_library(QtAwsIoTDeviceAdvisor
   createsuitedefinitionrequest.h
   createsuitedefinitionrequest_p.h
@@ -37,6 +39,7 @@ add_library(QtAwsIoTDeviceAdvisor
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsiotdeviceadvisorglobal.h
   startsuiterunrequest.h
   startsuiterunrequest_p.h
   startsuiterunresponse.h

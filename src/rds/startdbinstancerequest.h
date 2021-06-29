@@ -27,7 +27,7 @@ namespace RDS {
 
 class StartDBInstanceRequestPrivate;
 
-class QTAWS_EXPORT StartDBInstanceRequest : public RdsRequest {
+class QTAWSRDS_EXPORT StartDBInstanceRequest : public RdsRequest {
 
 public:
     StartDBInstanceRequest(const StartDBInstanceRequest &other);

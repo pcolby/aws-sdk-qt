@@ -27,7 +27,7 @@ namespace IoTDeviceAdvisor {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public IoTDeviceAdvisorRequest {
+class QTAWSIOTDEVICEADVISOR_EXPORT TagResourceRequest : public IoTDeviceAdvisorRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

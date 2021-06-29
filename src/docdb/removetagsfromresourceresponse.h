@@ -28,7 +28,7 @@ namespace DocDB {
 
 class RemoveTagsFromResourceResponsePrivate;
 
-class QTAWS_EXPORT RemoveTagsFromResourceResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT RemoveTagsFromResourceResponse : public DocDBResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace Connect {
 
 class UpdateContactAttributesRequestPrivate;
 
-class QTAWS_EXPORT UpdateContactAttributesRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT UpdateContactAttributesRequest : public ConnectRequest {
 
 public:
     UpdateContactAttributesRequest(const UpdateContactAttributesRequest &other);

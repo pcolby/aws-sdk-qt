@@ -21,6 +21,8 @@
 #define QTAWS_IOTJOBSDATAPLANERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsiotjobsdataplaneglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace IoTJobsDataPlane {
 
 class IoTJobsDataPlaneResponsePrivate;
 
-class QTAWS_EXPORT IoTJobsDataPlaneResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSIOTJOBSDATAPLANE_EXPORT IoTJobsDataPlaneResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

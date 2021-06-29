@@ -27,7 +27,7 @@ namespace TimestreamWrite {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public TimestreamWriteRequest {
+class QTAWSTIMESTREAMWRITE_EXPORT UntagResourceRequest : public TimestreamWriteRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

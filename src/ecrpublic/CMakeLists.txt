@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSECRPUBLIC_LIBRARY)
+
 add_library(QtAwsECRPublic
   batchchecklayeravailabilityrequest.h
   batchchecklayeravailabilityrequest_p.h
@@ -81,6 +83,7 @@ add_library(QtAwsECRPublic
   putrepositorycatalogdatarequest_p.h
   putrepositorycatalogdataresponse.h
   putrepositorycatalogdataresponse_p.h
+  qtawsecrpublicglobal.h
   setrepositorypolicyrequest.h
   setrepositorypolicyrequest_p.h
   setrepositorypolicyresponse.h

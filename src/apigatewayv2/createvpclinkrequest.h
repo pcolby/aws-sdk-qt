@@ -27,7 +27,7 @@ namespace ApiGatewayV2 {
 
 class CreateVpcLinkRequestPrivate;
 
-class QTAWS_EXPORT CreateVpcLinkRequest : public ApiGatewayV2Request {
+class QTAWSAPIGATEWAYV2_EXPORT CreateVpcLinkRequest : public ApiGatewayV2Request {
 
 public:
     CreateVpcLinkRequest(const CreateVpcLinkRequest &other);

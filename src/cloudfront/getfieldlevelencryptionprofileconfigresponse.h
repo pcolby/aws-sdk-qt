@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class GetFieldLevelEncryptionProfileConfigResponsePrivate;
 
-class QTAWS_EXPORT GetFieldLevelEncryptionProfileConfigResponse : public CloudFrontResponse {
+class QTAWSCLOUDFRONT_EXPORT GetFieldLevelEncryptionProfileConfigResponse : public CloudFrontResponse {
     Q_OBJECT
 
 public:

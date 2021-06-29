@@ -27,7 +27,7 @@ namespace MTurk {
 
 class DisassociateQualificationFromWorkerRequestPrivate;
 
-class QTAWS_EXPORT DisassociateQualificationFromWorkerRequest : public MTurkRequest {
+class QTAWSMTURK_EXPORT DisassociateQualificationFromWorkerRequest : public MTurkRequest {
 
 public:
     DisassociateQualificationFromWorkerRequest(const DisassociateQualificationFromWorkerRequest &other);

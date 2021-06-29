@@ -27,7 +27,7 @@ namespace NimbleStudio {
 
 class AcceptEulasRequestPrivate;
 
-class QTAWS_EXPORT AcceptEulasRequest : public NimbleStudioRequest {
+class QTAWSNIMBLESTUDIO_EXPORT AcceptEulasRequest : public NimbleStudioRequest {
 
 public:
     AcceptEulasRequest(const AcceptEulasRequest &other);

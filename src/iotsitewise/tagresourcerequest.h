@@ -27,7 +27,7 @@ namespace IoTSiteWise {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public IoTSiteWiseRequest {
+class QTAWSIOTSITEWISE_EXPORT TagResourceRequest : public IoTSiteWiseRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

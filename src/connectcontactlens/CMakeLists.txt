@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCONNECTCONTACTLENS_LIBRARY)
+
 add_library(QtAwsConnectContactLens
   connectcontactlensclient.h
   connectcontactlensclient_p.h
@@ -9,6 +11,7 @@ add_library(QtAwsConnectContactLens
   listrealtimecontactanalysissegmentsrequest_p.h
   listrealtimecontactanalysissegmentsresponse.h
   listrealtimecontactanalysissegmentsresponse_p.h
+  qtawsconnectcontactlensglobal.h
   connectcontactlensclient.cpp
   connectcontactlensrequest.cpp
   connectcontactlensresponse.cpp

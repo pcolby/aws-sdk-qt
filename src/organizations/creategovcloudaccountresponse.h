@@ -28,7 +28,7 @@ namespace Organizations {
 
 class CreateGovCloudAccountResponsePrivate;
 
-class QTAWS_EXPORT CreateGovCloudAccountResponse : public OrganizationsResponse {
+class QTAWSORGANIZATIONS_EXPORT CreateGovCloudAccountResponse : public OrganizationsResponse {
     Q_OBJECT
 
 public:

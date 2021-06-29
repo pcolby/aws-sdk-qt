@@ -27,7 +27,7 @@ namespace KinesisVideo {
 
 class ListSignalingChannelsRequestPrivate;
 
-class QTAWS_EXPORT ListSignalingChannelsRequest : public KinesisVideoRequest {
+class QTAWSKINESISVIDEO_EXPORT ListSignalingChannelsRequest : public KinesisVideoRequest {
 
 public:
     ListSignalingChannelsRequest(const ListSignalingChannelsRequest &other);

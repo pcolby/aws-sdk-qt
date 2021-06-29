@@ -27,7 +27,7 @@ namespace ElasticLoadBalancingv2 {
 
 class ModifyListenerRequestPrivate;
 
-class QTAWS_EXPORT ModifyListenerRequest : public ElasticLoadBalancingv2Request {
+class QTAWSELASTICLOADBALANCINGV2_EXPORT ModifyListenerRequest : public ElasticLoadBalancingv2Request {
 
 public:
     ModifyListenerRequest(const ModifyListenerRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawssnowballglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Snowball {
 
 class SnowballRequestPrivate;
 
-class QTAWS_EXPORT SnowballRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSNOWBALL_EXPORT SnowballRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Snowball.

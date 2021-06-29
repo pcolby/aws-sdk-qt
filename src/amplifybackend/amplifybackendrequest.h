@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsamplifybackendglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace AmplifyBackend {
 
 class AmplifyBackendRequestPrivate;
 
-class QTAWS_EXPORT AmplifyBackendRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSAMPLIFYBACKEND_EXPORT AmplifyBackendRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by AmplifyBackend.

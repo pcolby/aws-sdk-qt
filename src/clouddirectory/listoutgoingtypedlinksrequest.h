@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class ListOutgoingTypedLinksRequestPrivate;
 
-class QTAWS_EXPORT ListOutgoingTypedLinksRequest : public CloudDirectoryRequest {
+class QTAWSCLOUDDIRECTORY_EXPORT ListOutgoingTypedLinksRequest : public CloudDirectoryRequest {
 
 public:
     ListOutgoingTypedLinksRequest(const ListOutgoingTypedLinksRequest &other);

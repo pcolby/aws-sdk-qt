@@ -27,7 +27,7 @@ namespace SQS {
 
 class ListQueuesRequestPrivate;
 
-class QTAWS_EXPORT ListQueuesRequest : public SqsRequest {
+class QTAWSSQS_EXPORT ListQueuesRequest : public SqsRequest {
 
 public:
     ListQueuesRequest(const ListQueuesRequest &other);

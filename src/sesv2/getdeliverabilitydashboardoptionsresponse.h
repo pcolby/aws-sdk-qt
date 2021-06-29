@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class GetDeliverabilityDashboardOptionsResponsePrivate;
 
-class QTAWS_EXPORT GetDeliverabilityDashboardOptionsResponse : public Sesv2Response {
+class QTAWSSESV2_EXPORT GetDeliverabilityDashboardOptionsResponse : public Sesv2Response {
     Q_OBJECT
 
 public:

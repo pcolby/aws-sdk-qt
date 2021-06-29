@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class UpdateApplicationSettingsRequestPrivate;
 
-class QTAWS_EXPORT UpdateApplicationSettingsRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT UpdateApplicationSettingsRequest : public PinpointRequest {
 
 public:
     UpdateApplicationSettingsRequest(const UpdateApplicationSettingsRequest &other);

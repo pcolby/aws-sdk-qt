@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class GetApnsVoipSandboxChannelRequestPrivate;
 
-class QTAWS_EXPORT GetApnsVoipSandboxChannelRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT GetApnsVoipSandboxChannelRequest : public PinpointRequest {
 
 public:
     GetApnsVoipSandboxChannelRequest(const GetApnsVoipSandboxChannelRequest &other);

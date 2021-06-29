@@ -27,7 +27,7 @@ namespace PinpointEmail {
 
 class PutDedicatedIpWarmupAttributesRequestPrivate;
 
-class QTAWS_EXPORT PutDedicatedIpWarmupAttributesRequest : public PinpointEmailRequest {
+class QTAWSPINPOINTEMAIL_EXPORT PutDedicatedIpWarmupAttributesRequest : public PinpointEmailRequest {
 
 public:
     PutDedicatedIpWarmupAttributesRequest(const PutDedicatedIpWarmupAttributesRequest &other);

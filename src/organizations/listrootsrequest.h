@@ -27,7 +27,7 @@ namespace Organizations {
 
 class ListRootsRequestPrivate;
 
-class QTAWS_EXPORT ListRootsRequest : public OrganizationsRequest {
+class QTAWSORGANIZATIONS_EXPORT ListRootsRequest : public OrganizationsRequest {
 
 public:
     ListRootsRequest(const ListRootsRequest &other);

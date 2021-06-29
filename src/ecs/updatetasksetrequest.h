@@ -27,7 +27,7 @@ namespace ECS {
 
 class UpdateTaskSetRequestPrivate;
 
-class QTAWS_EXPORT UpdateTaskSetRequest : public EcsRequest {
+class QTAWSECS_EXPORT UpdateTaskSetRequest : public EcsRequest {
 
 public:
     UpdateTaskSetRequest(const UpdateTaskSetRequest &other);

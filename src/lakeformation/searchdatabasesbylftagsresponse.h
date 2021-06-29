@@ -28,7 +28,7 @@ namespace LakeFormation {
 
 class SearchDatabasesByLFTagsResponsePrivate;
 
-class QTAWS_EXPORT SearchDatabasesByLFTagsResponse : public LakeFormationResponse {
+class QTAWSLAKEFORMATION_EXPORT SearchDatabasesByLFTagsResponse : public LakeFormationResponse {
     Q_OBJECT
 
 public:

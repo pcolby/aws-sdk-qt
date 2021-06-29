@@ -27,7 +27,7 @@ namespace CloudTrail {
 
 class PutInsightSelectorsRequestPrivate;
 
-class QTAWS_EXPORT PutInsightSelectorsRequest : public CloudTrailRequest {
+class QTAWSCLOUDTRAIL_EXPORT PutInsightSelectorsRequest : public CloudTrailRequest {
 
 public:
     PutInsightSelectorsRequest(const PutInsightSelectorsRequest &other);

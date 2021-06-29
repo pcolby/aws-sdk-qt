@@ -28,7 +28,7 @@ namespace SSMIncidents {
 
 class UpdateDeletionProtectionResponsePrivate;
 
-class QTAWS_EXPORT UpdateDeletionProtectionResponse : public SSMIncidentsResponse {
+class QTAWSSSMINCIDENTS_EXPORT UpdateDeletionProtectionResponse : public SSMIncidentsResponse {
     Q_OBJECT
 
 public:

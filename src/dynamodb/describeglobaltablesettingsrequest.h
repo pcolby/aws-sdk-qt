@@ -27,7 +27,7 @@ namespace DynamoDB {
 
 class DescribeGlobalTableSettingsRequestPrivate;
 
-class QTAWS_EXPORT DescribeGlobalTableSettingsRequest : public DynamoDBRequest {
+class QTAWSDYNAMODB_EXPORT DescribeGlobalTableSettingsRequest : public DynamoDBRequest {
 
 public:
     DescribeGlobalTableSettingsRequest(const DescribeGlobalTableSettingsRequest &other);

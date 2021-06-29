@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class CreateActionRequestPrivate;
 
-class QTAWS_EXPORT CreateActionRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT CreateActionRequest : public SageMakerRequest {
 
 public:
     CreateActionRequest(const CreateActionRequest &other);

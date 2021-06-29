@@ -27,7 +27,7 @@ namespace CodeBuild {
 
 class DescribeTestCasesRequestPrivate;
 
-class QTAWS_EXPORT DescribeTestCasesRequest : public CodeBuildRequest {
+class QTAWSCODEBUILD_EXPORT DescribeTestCasesRequest : public CodeBuildRequest {
 
 public:
     DescribeTestCasesRequest(const DescribeTestCasesRequest &other);

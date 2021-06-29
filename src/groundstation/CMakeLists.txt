@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSGROUNDSTATION_LIBRARY)
+
 add_library(QtAwsGroundStation
   cancelcontactrequest.h
   cancelcontactrequest_p.h
@@ -85,6 +87,7 @@ add_library(QtAwsGroundStation
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsgroundstationglobal.h
   reservecontactrequest.h
   reservecontactrequest_p.h
   reservecontactresponse.h

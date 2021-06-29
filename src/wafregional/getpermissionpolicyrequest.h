@@ -27,7 +27,7 @@ namespace WAFRegional {
 
 class GetPermissionPolicyRequestPrivate;
 
-class QTAWS_EXPORT GetPermissionPolicyRequest : public WAFRegionalRequest {
+class QTAWSWAFREGIONAL_EXPORT GetPermissionPolicyRequest : public WAFRegionalRequest {
 
 public:
     GetPermissionPolicyRequest(const GetPermissionPolicyRequest &other);

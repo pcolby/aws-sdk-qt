@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class RemoveTagsFromResourceRequestPrivate;
 
-class QTAWS_EXPORT RemoveTagsFromResourceRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT RemoveTagsFromResourceRequest : public StorageGatewayRequest {
 
 public:
     RemoveTagsFromResourceRequest(const RemoveTagsFromResourceRequest &other);

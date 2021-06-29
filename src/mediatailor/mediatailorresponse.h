@@ -21,6 +21,8 @@
 #define QTAWS_MEDIATAILORRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsmediatailorglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace MediaTailor {
 
 class MediaTailorResponsePrivate;
 
-class QTAWS_EXPORT MediaTailorResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSMEDIATAILOR_EXPORT MediaTailorResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

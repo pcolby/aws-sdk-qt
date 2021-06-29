@@ -27,7 +27,7 @@ namespace MachineLearning {
 
 class CreateDataSourceFromRDSRequestPrivate;
 
-class QTAWS_EXPORT CreateDataSourceFromRDSRequest : public MachineLearningRequest {
+class QTAWSMACHINELEARNING_EXPORT CreateDataSourceFromRDSRequest : public MachineLearningRequest {
 
 public:
     CreateDataSourceFromRDSRequest(const CreateDataSourceFromRDSRequest &other);

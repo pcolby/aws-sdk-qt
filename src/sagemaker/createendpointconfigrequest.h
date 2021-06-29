@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class CreateEndpointConfigRequestPrivate;
 
-class QTAWS_EXPORT CreateEndpointConfigRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT CreateEndpointConfigRequest : public SageMakerRequest {
 
 public:
     CreateEndpointConfigRequest(const CreateEndpointConfigRequest &other);

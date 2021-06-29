@@ -21,6 +21,8 @@
 #define QTAWS_RDSDATASERVICERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsrdsdataserviceglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace RDSDataService {
 
 class RDSDataServiceResponsePrivate;
 
-class QTAWS_EXPORT RDSDataServiceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSRDSDATASERVICE_EXPORT RDSDataServiceResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

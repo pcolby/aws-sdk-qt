@@ -28,7 +28,7 @@ namespace CodeArtifact {
 
 class DescribeRepositoryResponsePrivate;
 
-class QTAWS_EXPORT DescribeRepositoryResponse : public CodeArtifactResponse {
+class QTAWSCODEARTIFACT_EXPORT DescribeRepositoryResponse : public CodeArtifactResponse {
     Q_OBJECT
 
 public:

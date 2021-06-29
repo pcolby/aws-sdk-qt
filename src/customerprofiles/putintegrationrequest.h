@@ -27,7 +27,7 @@ namespace CustomerProfiles {
 
 class PutIntegrationRequestPrivate;
 
-class QTAWS_EXPORT PutIntegrationRequest : public CustomerProfilesRequest {
+class QTAWSCUSTOMERPROFILES_EXPORT PutIntegrationRequest : public CustomerProfilesRequest {
 
 public:
     PutIntegrationRequest(const PutIntegrationRequest &other);

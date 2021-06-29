@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCODEDEPLOY_LIBRARY)
+
 add_library(QtAwsCodeDeploy
   addtagstoonpremisesinstancesrequest.h
   addtagstoonpremisesinstancesrequest_p.h
@@ -157,6 +159,7 @@ add_library(QtAwsCodeDeploy
   putlifecycleeventhookexecutionstatusrequest_p.h
   putlifecycleeventhookexecutionstatusresponse.h
   putlifecycleeventhookexecutionstatusresponse_p.h
+  qtawscodedeployglobal.h
   registerapplicationrevisionrequest.h
   registerapplicationrevisionrequest_p.h
   registerapplicationrevisionresponse.h

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawspricingglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Pricing {
 
 class PricingRequestPrivate;
 
-class QTAWS_EXPORT PricingRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSPRICING_EXPORT PricingRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Pricing.

@@ -27,7 +27,7 @@ namespace Glacier {
 
 class DeleteArchiveRequestPrivate;
 
-class QTAWS_EXPORT DeleteArchiveRequest : public GlacierRequest {
+class QTAWSGLACIER_EXPORT DeleteArchiveRequest : public GlacierRequest {
 
 public:
     DeleteArchiveRequest(const DeleteArchiveRequest &other);

@@ -27,7 +27,7 @@ namespace WorkLink {
 
 class ListDomainsRequestPrivate;
 
-class QTAWS_EXPORT ListDomainsRequest : public WorkLinkRequest {
+class QTAWSWORKLINK_EXPORT ListDomainsRequest : public WorkLinkRequest {
 
 public:
     ListDomainsRequest(const ListDomainsRequest &other);

@@ -27,7 +27,7 @@ namespace CustomerProfiles {
 
 class AddProfileKeyRequestPrivate;
 
-class QTAWS_EXPORT AddProfileKeyRequest : public CustomerProfilesRequest {
+class QTAWSCUSTOMERPROFILES_EXPORT AddProfileKeyRequest : public CustomerProfilesRequest {
 
 public:
     AddProfileKeyRequest(const AddProfileKeyRequest &other);

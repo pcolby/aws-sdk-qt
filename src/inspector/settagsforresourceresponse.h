@@ -28,7 +28,7 @@ namespace Inspector {
 
 class SetTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT SetTagsForResourceResponse : public InspectorResponse {
+class QTAWSINSPECTOR_EXPORT SetTagsForResourceResponse : public InspectorResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace MTurk {
 
 class GetFileUploadURLRequestPrivate;
 
-class QTAWS_EXPORT GetFileUploadURLRequest : public MTurkRequest {
+class QTAWSMTURK_EXPORT GetFileUploadURLRequest : public MTurkRequest {
 
 public:
     GetFileUploadURLRequest(const GetFileUploadURLRequest &other);

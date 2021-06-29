@@ -27,7 +27,7 @@ namespace CognitoIdentityProvider {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public CognitoIdentityProviderRequest {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT TagResourceRequest : public CognitoIdentityProviderRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

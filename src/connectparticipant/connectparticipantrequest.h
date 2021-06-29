@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsconnectparticipantglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace ConnectParticipant {
 
 class ConnectParticipantRequestPrivate;
 
-class QTAWS_EXPORT ConnectParticipantRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCONNECTPARTICIPANT_EXPORT ConnectParticipantRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ConnectParticipant.

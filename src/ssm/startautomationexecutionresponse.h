@@ -28,7 +28,7 @@ namespace SSM {
 
 class StartAutomationExecutionResponsePrivate;
 
-class QTAWS_EXPORT StartAutomationExecutionResponse : public SsmResponse {
+class QTAWSSSM_EXPORT StartAutomationExecutionResponse : public SsmResponse {
     Q_OBJECT
 
 public:

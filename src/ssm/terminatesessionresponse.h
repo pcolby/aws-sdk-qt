@@ -28,7 +28,7 @@ namespace SSM {
 
 class TerminateSessionResponsePrivate;
 
-class QTAWS_EXPORT TerminateSessionResponse : public SsmResponse {
+class QTAWSSSM_EXPORT TerminateSessionResponse : public SsmResponse {
     Q_OBJECT
 
 public:

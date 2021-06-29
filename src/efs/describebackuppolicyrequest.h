@@ -27,7 +27,7 @@ namespace EFS {
 
 class DescribeBackupPolicyRequestPrivate;
 
-class QTAWS_EXPORT DescribeBackupPolicyRequest : public EfsRequest {
+class QTAWSEFS_EXPORT DescribeBackupPolicyRequest : public EfsRequest {
 
 public:
     DescribeBackupPolicyRequest(const DescribeBackupPolicyRequest &other);

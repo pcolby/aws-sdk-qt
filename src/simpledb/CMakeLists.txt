@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSIMPLEDB_LIBRARY)
+
 add_library(QtAwsSimpleDB
   batchdeleteattributesrequest.h
   batchdeleteattributesrequest_p.h
@@ -35,6 +37,7 @@ add_library(QtAwsSimpleDB
   putattributesrequest_p.h
   putattributesresponse.h
   putattributesresponse_p.h
+  qtawssimpledbglobal.h
   selectrequest.h
   selectrequest_p.h
   selectresponse.h

@@ -27,7 +27,7 @@ namespace Batch {
 
 class CancelJobRequestPrivate;
 
-class QTAWS_EXPORT CancelJobRequest : public BatchRequest {
+class QTAWSBATCH_EXPORT CancelJobRequest : public BatchRequest {
 
 public:
     CancelJobRequest(const CancelJobRequest &other);

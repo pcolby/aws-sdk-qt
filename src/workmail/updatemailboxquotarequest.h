@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class UpdateMailboxQuotaRequestPrivate;
 
-class QTAWS_EXPORT UpdateMailboxQuotaRequest : public WorkMailRequest {
+class QTAWSWORKMAIL_EXPORT UpdateMailboxQuotaRequest : public WorkMailRequest {
 
 public:
     UpdateMailboxQuotaRequest(const UpdateMailboxQuotaRequest &other);

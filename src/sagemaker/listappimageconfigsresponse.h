@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class ListAppImageConfigsResponsePrivate;
 
-class QTAWS_EXPORT ListAppImageConfigsResponse : public SageMakerResponse {
+class QTAWSSAGEMAKER_EXPORT ListAppImageConfigsResponse : public SageMakerResponse {
     Q_OBJECT
 
 public:

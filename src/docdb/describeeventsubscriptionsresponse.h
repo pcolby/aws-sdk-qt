@@ -28,7 +28,7 @@ namespace DocDB {
 
 class DescribeEventSubscriptionsResponsePrivate;
 
-class QTAWS_EXPORT DescribeEventSubscriptionsResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT DescribeEventSubscriptionsResponse : public DocDBResponse {
     Q_OBJECT
 
 public:

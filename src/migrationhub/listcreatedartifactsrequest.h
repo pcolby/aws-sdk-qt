@@ -27,7 +27,7 @@ namespace MigrationHub {
 
 class ListCreatedArtifactsRequestPrivate;
 
-class QTAWS_EXPORT ListCreatedArtifactsRequest : public MigrationHubRequest {
+class QTAWSMIGRATIONHUB_EXPORT ListCreatedArtifactsRequest : public MigrationHubRequest {
 
 public:
     ListCreatedArtifactsRequest(const ListCreatedArtifactsRequest &other);

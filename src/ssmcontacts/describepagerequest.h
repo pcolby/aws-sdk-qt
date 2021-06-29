@@ -27,7 +27,7 @@ namespace SSMContacts {
 
 class DescribePageRequestPrivate;
 
-class QTAWS_EXPORT DescribePageRequest : public SSMContactsRequest {
+class QTAWSSSMCONTACTS_EXPORT DescribePageRequest : public SSMContactsRequest {
 
 public:
     DescribePageRequest(const DescribePageRequest &other);

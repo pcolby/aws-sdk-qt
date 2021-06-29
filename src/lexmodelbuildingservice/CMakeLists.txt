@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSLEXMODELBUILDINGSERVICE_LIBRARY)
+
 add_library(QtAwsLexModelBuildingService
   createbotversionrequest.h
   createbotversionrequest_p.h
@@ -149,6 +151,7 @@ add_library(QtAwsLexModelBuildingService
   putslottyperequest_p.h
   putslottyperesponse.h
   putslottyperesponse_p.h
+  qtawslexmodelbuildingserviceglobal.h
   startimportrequest.h
   startimportrequest_p.h
   startimportresponse.h

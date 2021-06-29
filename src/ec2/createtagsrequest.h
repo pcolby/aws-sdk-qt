@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CreateTagsRequestPrivate;
 
-class QTAWS_EXPORT CreateTagsRequest : public Ec2Request {
+class QTAWSEC2_EXPORT CreateTagsRequest : public Ec2Request {
 
 public:
     CreateTagsRequest(const CreateTagsRequest &other);

@@ -28,7 +28,7 @@ namespace GameLift {
 
 class DeregisterGameServerResponsePrivate;
 
-class QTAWS_EXPORT DeregisterGameServerResponse : public GameLiftResponse {
+class QTAWSGAMELIFT_EXPORT DeregisterGameServerResponse : public GameLiftResponse {
     Q_OBJECT
 
 public:

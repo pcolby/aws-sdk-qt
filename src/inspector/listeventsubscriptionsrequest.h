@@ -27,7 +27,7 @@ namespace Inspector {
 
 class ListEventSubscriptionsRequestPrivate;
 
-class QTAWS_EXPORT ListEventSubscriptionsRequest : public InspectorRequest {
+class QTAWSINSPECTOR_EXPORT ListEventSubscriptionsRequest : public InspectorRequest {
 
 public:
     ListEventSubscriptionsRequest(const ListEventSubscriptionsRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsqldbsessionglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace QLDBSession {
 
 class QLDBSessionRequestPrivate;
 
-class QTAWS_EXPORT QLDBSessionRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSQLDBSESSION_EXPORT QLDBSessionRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by QLDBSession.

@@ -27,7 +27,7 @@ namespace Health {
 
 class EnableHealthServiceAccessForOrganizationRequestPrivate;
 
-class QTAWS_EXPORT EnableHealthServiceAccessForOrganizationRequest : public HealthRequest {
+class QTAWSHEALTH_EXPORT EnableHealthServiceAccessForOrganizationRequest : public HealthRequest {
 
 public:
     EnableHealthServiceAccessForOrganizationRequest(const EnableHealthServiceAccessForOrganizationRequest &other);

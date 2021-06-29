@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSMEDIALIVE_LIBRARY)
+
 add_library(QtAwsMediaLive
   acceptinputdevicetransferrequest.h
   acceptinputdevicetransferrequest_p.h
@@ -173,6 +175,7 @@ add_library(QtAwsMediaLive
   purchaseofferingrequest_p.h
   purchaseofferingresponse.h
   purchaseofferingresponse_p.h
+  qtawsmedialiveglobal.h
   rejectinputdevicetransferrequest.h
   rejectinputdevicetransferrequest_p.h
   rejectinputdevicetransferresponse.h

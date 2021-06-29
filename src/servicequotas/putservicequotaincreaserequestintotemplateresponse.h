@@ -28,7 +28,7 @@ namespace ServiceQuotas {
 
 class PutServiceQuotaIncreaseRequestIntoTemplateResponsePrivate;
 
-class QTAWS_EXPORT PutServiceQuotaIncreaseRequestIntoTemplateResponse : public ServiceQuotasResponse {
+class QTAWSSERVICEQUOTAS_EXPORT PutServiceQuotaIncreaseRequestIntoTemplateResponse : public ServiceQuotasResponse {
     Q_OBJECT
 
 public:

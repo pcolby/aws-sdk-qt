@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawssecurityhubglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace SecurityHub {
 
 class SecurityHubRequestPrivate;
 
-class QTAWS_EXPORT SecurityHubRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSECURITYHUB_EXPORT SecurityHubRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SecurityHub.

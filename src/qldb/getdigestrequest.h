@@ -27,7 +27,7 @@ namespace QLDB {
 
 class GetDigestRequestPrivate;
 
-class QTAWS_EXPORT GetDigestRequest : public QldbRequest {
+class QTAWSQLDB_EXPORT GetDigestRequest : public QldbRequest {
 
 public:
     GetDigestRequest(const GetDigestRequest &other);

@@ -27,7 +27,7 @@ namespace WAF {
 
 class UpdateXssMatchSetRequestPrivate;
 
-class QTAWS_EXPORT UpdateXssMatchSetRequest : public WafRequest {
+class QTAWSWAF_EXPORT UpdateXssMatchSetRequest : public WafRequest {
 
 public:
     UpdateXssMatchSetRequest(const UpdateXssMatchSetRequest &other);

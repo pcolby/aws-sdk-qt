@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class ListLogSubscriptionsRequestPrivate;
 
-class QTAWS_EXPORT ListLogSubscriptionsRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT ListLogSubscriptionsRequest : public DirectoryServiceRequest {
 
 public:
     ListLogSubscriptionsRequest(const ListLogSubscriptionsRequest &other);

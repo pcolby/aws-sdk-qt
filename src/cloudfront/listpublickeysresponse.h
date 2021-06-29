@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class ListPublicKeysResponsePrivate;
 
-class QTAWS_EXPORT ListPublicKeysResponse : public CloudFrontResponse {
+class QTAWSCLOUDFRONT_EXPORT ListPublicKeysResponse : public CloudFrontResponse {
     Q_OBJECT
 
 public:

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsorganizationsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -131,7 +133,7 @@ class UpdateOrganizationalUnitResponse;
 class UpdatePolicyRequest;
 class UpdatePolicyResponse;
 
-class QTAWS_EXPORT OrganizationsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSORGANIZATIONS_EXPORT OrganizationsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

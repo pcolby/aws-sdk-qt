@@ -28,7 +28,7 @@ namespace MigrationHub {
 
 class DisassociateDiscoveredResourceResponsePrivate;
 
-class QTAWS_EXPORT DisassociateDiscoveredResourceResponse : public MigrationHubResponse {
+class QTAWSMIGRATIONHUB_EXPORT DisassociateDiscoveredResourceResponse : public MigrationHubResponse {
     Q_OBJECT
 
 public:

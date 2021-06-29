@@ -28,7 +28,7 @@ namespace Schemas {
 
 class StopDiscovererResponsePrivate;
 
-class QTAWS_EXPORT StopDiscovererResponse : public SchemasResponse {
+class QTAWSSCHEMAS_EXPORT StopDiscovererResponse : public SchemasResponse {
     Q_OBJECT
 
 public:

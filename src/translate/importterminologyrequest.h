@@ -27,7 +27,7 @@ namespace Translate {
 
 class ImportTerminologyRequestPrivate;
 
-class QTAWS_EXPORT ImportTerminologyRequest : public TranslateRequest {
+class QTAWSTRANSLATE_EXPORT ImportTerminologyRequest : public TranslateRequest {
 
 public:
     ImportTerminologyRequest(const ImportTerminologyRequest &other);

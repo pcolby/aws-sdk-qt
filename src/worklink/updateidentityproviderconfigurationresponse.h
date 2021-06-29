@@ -28,7 +28,7 @@ namespace WorkLink {
 
 class UpdateIdentityProviderConfigurationResponsePrivate;
 
-class QTAWS_EXPORT UpdateIdentityProviderConfigurationResponse : public WorkLinkResponse {
+class QTAWSWORKLINK_EXPORT UpdateIdentityProviderConfigurationResponse : public WorkLinkResponse {
     Q_OBJECT
 
 public:

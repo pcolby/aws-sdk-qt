@@ -27,7 +27,7 @@ namespace S3 {
 
 class PutBucketAccelerateConfigurationRequestPrivate;
 
-class QTAWS_EXPORT PutBucketAccelerateConfigurationRequest : public S3Request {
+class QTAWSS3_EXPORT PutBucketAccelerateConfigurationRequest : public S3Request {
 
 public:
     PutBucketAccelerateConfigurationRequest(const PutBucketAccelerateConfigurationRequest &other);

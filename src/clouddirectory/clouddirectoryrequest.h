@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsclouddirectoryglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace CloudDirectory {
 
 class CloudDirectoryRequestPrivate;
 
-class QTAWS_EXPORT CloudDirectoryRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCLOUDDIRECTORY_EXPORT CloudDirectoryRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CloudDirectory.

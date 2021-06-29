@@ -28,7 +28,7 @@ namespace IoTDeviceAdvisor {
 
 class StartSuiteRunResponsePrivate;
 
-class QTAWS_EXPORT StartSuiteRunResponse : public IoTDeviceAdvisorResponse {
+class QTAWSIOTDEVICEADVISOR_EXPORT StartSuiteRunResponse : public IoTDeviceAdvisorResponse {
     Q_OBJECT
 
 public:

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsdetectiveglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Detective {
 
 class DetectiveRequestPrivate;
 
-class QTAWS_EXPORT DetectiveRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSDETECTIVE_EXPORT DetectiveRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Detective.

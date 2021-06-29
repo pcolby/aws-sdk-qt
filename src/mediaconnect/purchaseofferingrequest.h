@@ -27,7 +27,7 @@ namespace MediaConnect {
 
 class PurchaseOfferingRequestPrivate;
 
-class QTAWS_EXPORT PurchaseOfferingRequest : public MediaConnectRequest {
+class QTAWSMEDIACONNECT_EXPORT PurchaseOfferingRequest : public MediaConnectRequest {
 
 public:
     PurchaseOfferingRequest(const PurchaseOfferingRequest &other);

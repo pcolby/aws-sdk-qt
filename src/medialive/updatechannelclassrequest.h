@@ -27,7 +27,7 @@ namespace MediaLive {
 
 class UpdateChannelClassRequestPrivate;
 
-class QTAWS_EXPORT UpdateChannelClassRequest : public MediaLiveRequest {
+class QTAWSMEDIALIVE_EXPORT UpdateChannelClassRequest : public MediaLiveRequest {
 
 public:
     UpdateChannelClassRequest(const UpdateChannelClassRequest &other);

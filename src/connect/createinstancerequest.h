@@ -27,7 +27,7 @@ namespace Connect {
 
 class CreateInstanceRequestPrivate;
 
-class QTAWS_EXPORT CreateInstanceRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT CreateInstanceRequest : public ConnectRequest {
 
 public:
     CreateInstanceRequest(const CreateInstanceRequest &other);

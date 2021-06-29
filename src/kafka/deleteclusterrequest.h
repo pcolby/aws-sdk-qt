@@ -27,7 +27,7 @@ namespace Kafka {
 
 class DeleteClusterRequestPrivate;
 
-class QTAWS_EXPORT DeleteClusterRequest : public KafkaRequest {
+class QTAWSKAFKA_EXPORT DeleteClusterRequest : public KafkaRequest {
 
 public:
     DeleteClusterRequest(const DeleteClusterRequest &other);

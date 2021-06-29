@@ -28,7 +28,7 @@ namespace CodeStarNotifications {
 
 class UnsubscribeResponsePrivate;
 
-class QTAWS_EXPORT UnsubscribeResponse : public CodeStarNotificationsResponse {
+class QTAWSCODESTARNOTIFICATIONS_EXPORT UnsubscribeResponse : public CodeStarNotificationsResponse {
     Q_OBJECT
 
 public:

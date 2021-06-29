@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DeleteTransitGatewayPeeringAttachmentRequestPrivate;
 
-class QTAWS_EXPORT DeleteTransitGatewayPeeringAttachmentRequest : public Ec2Request {
+class QTAWSEC2_EXPORT DeleteTransitGatewayPeeringAttachmentRequest : public Ec2Request {
 
 public:
     DeleteTransitGatewayPeeringAttachmentRequest(const DeleteTransitGatewayPeeringAttachmentRequest &other);

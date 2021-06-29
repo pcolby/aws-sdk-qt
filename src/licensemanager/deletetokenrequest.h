@@ -27,7 +27,7 @@ namespace LicenseManager {
 
 class DeleteTokenRequestPrivate;
 
-class QTAWS_EXPORT DeleteTokenRequest : public LicenseManagerRequest {
+class QTAWSLICENSEMANAGER_EXPORT DeleteTokenRequest : public LicenseManagerRequest {
 
 public:
     DeleteTokenRequest(const DeleteTokenRequest &other);

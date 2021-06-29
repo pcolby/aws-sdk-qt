@@ -28,7 +28,7 @@ namespace MQ {
 
 class CreateTagsResponsePrivate;
 
-class QTAWS_EXPORT CreateTagsResponse : public MqResponse {
+class QTAWSMQ_EXPORT CreateTagsResponse : public MqResponse {
     Q_OBJECT
 
 public:

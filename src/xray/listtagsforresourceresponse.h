@@ -28,7 +28,7 @@ namespace XRay {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public XRayResponse {
+class QTAWSXRAY_EXPORT ListTagsForResourceResponse : public XRayResponse {
     Q_OBJECT
 
 public:

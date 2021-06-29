@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class DeregisterEcsClusterResponsePrivate;
 
-class QTAWS_EXPORT DeregisterEcsClusterResponse : public OpsWorksResponse {
+class QTAWSOPSWORKS_EXPORT DeregisterEcsClusterResponse : public OpsWorksResponse {
     Q_OBJECT
 
 public:

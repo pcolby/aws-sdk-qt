@@ -28,7 +28,7 @@ namespace AppRunner {
 
 class DeleteConnectionResponsePrivate;
 
-class QTAWS_EXPORT DeleteConnectionResponse : public AppRunnerResponse {
+class QTAWSAPPRUNNER_EXPORT DeleteConnectionResponse : public AppRunnerResponse {
     Q_OBJECT
 
 public:

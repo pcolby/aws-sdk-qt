@@ -21,6 +21,8 @@
 #define QTAWS_APIGATEWAYMANAGEMENTAPIRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsapigatewaymanagementapiglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace ApiGatewayManagementApi {
 
 class ApiGatewayManagementApiResponsePrivate;
 
-class QTAWS_EXPORT ApiGatewayManagementApiResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSAPIGATEWAYMANAGEMENTAPI_EXPORT ApiGatewayManagementApiResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace FSx {
 
 class CancelDataRepositoryTaskResponsePrivate;
 
-class QTAWS_EXPORT CancelDataRepositoryTaskResponse : public FSxResponse {
+class QTAWSFSX_EXPORT CancelDataRepositoryTaskResponse : public FSxResponse {
     Q_OBJECT
 
 public:

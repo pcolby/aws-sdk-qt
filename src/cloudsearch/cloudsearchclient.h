@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawscloudsearchglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -81,7 +83,7 @@ class UpdateScalingParametersResponse;
 class UpdateServiceAccessPoliciesRequest;
 class UpdateServiceAccessPoliciesResponse;
 
-class QTAWS_EXPORT CloudSearchClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCLOUDSEARCH_EXPORT CloudSearchClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

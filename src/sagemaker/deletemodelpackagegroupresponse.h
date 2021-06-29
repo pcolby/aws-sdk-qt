@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class DeleteModelPackageGroupResponsePrivate;
 
-class QTAWS_EXPORT DeleteModelPackageGroupResponse : public SageMakerResponse {
+class QTAWSSAGEMAKER_EXPORT DeleteModelPackageGroupResponse : public SageMakerResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace MediaLive {
 
 class DeleteReservationRequestPrivate;
 
-class QTAWS_EXPORT DeleteReservationRequest : public MediaLiveRequest {
+class QTAWSMEDIALIVE_EXPORT DeleteReservationRequest : public MediaLiveRequest {
 
 public:
     DeleteReservationRequest(const DeleteReservationRequest &other);

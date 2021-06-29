@@ -27,7 +27,7 @@ namespace IoTSiteWise {
 
 class GetInterpolatedAssetPropertyValuesRequestPrivate;
 
-class QTAWS_EXPORT GetInterpolatedAssetPropertyValuesRequest : public IoTSiteWiseRequest {
+class QTAWSIOTSITEWISE_EXPORT GetInterpolatedAssetPropertyValuesRequest : public IoTSiteWiseRequest {
 
 public:
     GetInterpolatedAssetPropertyValuesRequest(const GetInterpolatedAssetPropertyValuesRequest &other);

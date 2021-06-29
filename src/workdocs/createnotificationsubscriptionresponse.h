@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class CreateNotificationSubscriptionResponsePrivate;
 
-class QTAWS_EXPORT CreateNotificationSubscriptionResponse : public WorkDocsResponse {
+class QTAWSWORKDOCS_EXPORT CreateNotificationSubscriptionResponse : public WorkDocsResponse {
     Q_OBJECT
 
 public:

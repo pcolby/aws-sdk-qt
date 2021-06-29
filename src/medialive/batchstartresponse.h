@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class BatchStartResponsePrivate;
 
-class QTAWS_EXPORT BatchStartResponse : public MediaLiveResponse {
+class QTAWSMEDIALIVE_EXPORT BatchStartResponse : public MediaLiveResponse {
     Q_OBJECT
 
 public:

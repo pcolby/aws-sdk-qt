@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsmediaconnectglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace MediaConnect {
 
 class MediaConnectRequestPrivate;
 
-class QTAWS_EXPORT MediaConnectRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSMEDIACONNECT_EXPORT MediaConnectRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by MediaConnect.

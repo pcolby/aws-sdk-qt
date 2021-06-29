@@ -27,7 +27,7 @@ namespace Organizations {
 
 class CancelHandshakeRequestPrivate;
 
-class QTAWS_EXPORT CancelHandshakeRequest : public OrganizationsRequest {
+class QTAWSORGANIZATIONS_EXPORT CancelHandshakeRequest : public OrganizationsRequest {
 
 public:
     CancelHandshakeRequest(const CancelHandshakeRequest &other);

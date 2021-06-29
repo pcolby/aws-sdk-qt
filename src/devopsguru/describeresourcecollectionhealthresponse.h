@@ -28,7 +28,7 @@ namespace DevOpsGuru {
 
 class DescribeResourceCollectionHealthResponsePrivate;
 
-class QTAWS_EXPORT DescribeResourceCollectionHealthResponse : public DevOpsGuruResponse {
+class QTAWSDEVOPSGURU_EXPORT DescribeResourceCollectionHealthResponse : public DevOpsGuruResponse {
     Q_OBJECT
 
 public:

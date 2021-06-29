@@ -27,7 +27,7 @@ namespace MTurk {
 
 class AcceptQualificationRequestRequestPrivate;
 
-class QTAWS_EXPORT AcceptQualificationRequestRequest : public MTurkRequest {
+class QTAWSMTURK_EXPORT AcceptQualificationRequestRequest : public MTurkRequest {
 
 public:
     AcceptQualificationRequestRequest(const AcceptQualificationRequestRequest &other);

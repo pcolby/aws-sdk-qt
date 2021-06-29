@@ -27,7 +27,7 @@ namespace Redshift {
 
 class DescribeStorageRequestPrivate;
 
-class QTAWS_EXPORT DescribeStorageRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT DescribeStorageRequest : public RedshiftRequest {
 
 public:
     DescribeStorageRequest(const DescribeStorageRequest &other);

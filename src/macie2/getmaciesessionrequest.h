@@ -27,7 +27,7 @@ namespace Macie2 {
 
 class GetMacieSessionRequestPrivate;
 
-class QTAWS_EXPORT GetMacieSessionRequest : public Macie2Request {
+class QTAWSMACIE2_EXPORT GetMacieSessionRequest : public Macie2Request {
 
 public:
     GetMacieSessionRequest(const GetMacieSessionRequest &other);

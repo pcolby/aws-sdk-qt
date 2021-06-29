@@ -27,7 +27,7 @@ namespace IoT {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public IoTRequest {
+class QTAWSIOT_EXPORT TagResourceRequest : public IoTRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

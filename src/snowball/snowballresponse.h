@@ -21,6 +21,8 @@
 #define QTAWS_SNOWBALLRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawssnowballglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Snowball {
 
 class SnowballResponsePrivate;
 
-class QTAWS_EXPORT SnowballResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSNOWBALL_EXPORT SnowballResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

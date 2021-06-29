@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteSecurityGroupResponsePrivate;
 
-class QTAWS_EXPORT DeleteSecurityGroupResponse : public Ec2Response {
+class QTAWSEC2_EXPORT DeleteSecurityGroupResponse : public Ec2Response {
     Q_OBJECT
 
 public:

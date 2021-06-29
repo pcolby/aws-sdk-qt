@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsautoscalingplansglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -41,7 +43,7 @@ class GetScalingPlanResourceForecastDataResponse;
 class UpdateScalingPlanRequest;
 class UpdateScalingPlanResponse;
 
-class QTAWS_EXPORT AutoScalingPlansClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSAUTOSCALINGPLANS_EXPORT AutoScalingPlansClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

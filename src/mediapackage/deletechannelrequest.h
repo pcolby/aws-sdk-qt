@@ -27,7 +27,7 @@ namespace MediaPackage {
 
 class DeleteChannelRequestPrivate;
 
-class QTAWS_EXPORT DeleteChannelRequest : public MediaPackageRequest {
+class QTAWSMEDIAPACKAGE_EXPORT DeleteChannelRequest : public MediaPackageRequest {
 
 public:
     DeleteChannelRequest(const DeleteChannelRequest &other);

@@ -28,7 +28,7 @@ namespace LookoutforVision {
 
 class DeleteDatasetResponsePrivate;
 
-class QTAWS_EXPORT DeleteDatasetResponse : public LookoutforVisionResponse {
+class QTAWSLOOKOUTFORVISION_EXPORT DeleteDatasetResponse : public LookoutforVisionResponse {
     Q_OBJECT
 
 public:

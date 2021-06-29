@@ -28,7 +28,7 @@ namespace Chime {
 
 class PutAppInstanceStreamingConfigurationsResponsePrivate;
 
-class QTAWS_EXPORT PutAppInstanceStreamingConfigurationsResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT PutAppInstanceStreamingConfigurationsResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

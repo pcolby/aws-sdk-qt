@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class DeleteThreatIntelSetResponsePrivate;
 
-class QTAWS_EXPORT DeleteThreatIntelSetResponse : public GuardDutyResponse {
+class QTAWSGUARDDUTY_EXPORT DeleteThreatIntelSetResponse : public GuardDutyResponse {
     Q_OBJECT
 
 public:

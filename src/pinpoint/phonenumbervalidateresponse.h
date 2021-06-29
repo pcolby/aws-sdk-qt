@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class PhoneNumberValidateResponsePrivate;
 
-class QTAWS_EXPORT PhoneNumberValidateResponse : public PinpointResponse {
+class QTAWSPINPOINT_EXPORT PhoneNumberValidateResponse : public PinpointResponse {
     Q_OBJECT
 
 public:

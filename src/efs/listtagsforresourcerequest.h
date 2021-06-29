@@ -27,7 +27,7 @@ namespace EFS {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public EfsRequest {
+class QTAWSEFS_EXPORT ListTagsForResourceRequest : public EfsRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

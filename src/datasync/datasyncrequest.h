@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsdatasyncglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace DataSync {
 
 class DataSyncRequestPrivate;
 
-class QTAWS_EXPORT DataSyncRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSDATASYNC_EXPORT DataSyncRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by DataSync.

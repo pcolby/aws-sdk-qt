@@ -27,7 +27,7 @@ namespace CostExplorer {
 
 class DescribeCostCategoryDefinitionRequestPrivate;
 
-class QTAWS_EXPORT DescribeCostCategoryDefinitionRequest : public CostExplorerRequest {
+class QTAWSCOSTEXPLORER_EXPORT DescribeCostCategoryDefinitionRequest : public CostExplorerRequest {
 
 public:
     DescribeCostCategoryDefinitionRequest(const DescribeCostCategoryDefinitionRequest &other);

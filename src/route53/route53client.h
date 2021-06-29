@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsroute53global.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -157,7 +159,7 @@ class UpdateTrafficPolicyCommentResponse;
 class UpdateTrafficPolicyInstanceRequest;
 class UpdateTrafficPolicyInstanceResponse;
 
-class QTAWS_EXPORT Route53Client : public QtAws::Core::AwsAbstractClient {
+class QTAWSROUTE53_EXPORT Route53Client : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

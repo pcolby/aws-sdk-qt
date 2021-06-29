@@ -28,7 +28,7 @@ namespace WAF {
 
 class DeleteWebACLResponsePrivate;
 
-class QTAWS_EXPORT DeleteWebACLResponse : public WafResponse {
+class QTAWSWAF_EXPORT DeleteWebACLResponse : public WafResponse {
     Q_OBJECT
 
 public:

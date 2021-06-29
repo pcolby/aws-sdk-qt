@@ -27,7 +27,7 @@ namespace Honeycode {
 
 class BatchCreateTableRowsRequestPrivate;
 
-class QTAWS_EXPORT BatchCreateTableRowsRequest : public HoneycodeRequest {
+class QTAWSHONEYCODE_EXPORT BatchCreateTableRowsRequest : public HoneycodeRequest {
 
 public:
     BatchCreateTableRowsRequest(const BatchCreateTableRowsRequest &other);

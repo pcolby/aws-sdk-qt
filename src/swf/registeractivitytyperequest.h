@@ -27,7 +27,7 @@ namespace SWF {
 
 class RegisterActivityTypeRequestPrivate;
 
-class QTAWS_EXPORT RegisterActivityTypeRequest : public SwfRequest {
+class QTAWSSWF_EXPORT RegisterActivityTypeRequest : public SwfRequest {
 
 public:
     RegisterActivityTypeRequest(const RegisterActivityTypeRequest &other);

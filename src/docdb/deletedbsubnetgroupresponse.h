@@ -28,7 +28,7 @@ namespace DocDB {
 
 class DeleteDBSubnetGroupResponsePrivate;
 
-class QTAWS_EXPORT DeleteDBSubnetGroupResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT DeleteDBSubnetGroupResponse : public DocDBResponse {
     Q_OBJECT
 
 public:

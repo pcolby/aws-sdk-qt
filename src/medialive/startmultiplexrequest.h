@@ -27,7 +27,7 @@ namespace MediaLive {
 
 class StartMultiplexRequestPrivate;
 
-class QTAWS_EXPORT StartMultiplexRequest : public MediaLiveRequest {
+class QTAWSMEDIALIVE_EXPORT StartMultiplexRequest : public MediaLiveRequest {
 
 public:
     StartMultiplexRequest(const StartMultiplexRequest &other);

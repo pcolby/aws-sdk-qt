@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsacmglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace ACM {
 
 class AcmRequestPrivate;
 
-class QTAWS_EXPORT AcmRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSACM_EXPORT AcmRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ACM.

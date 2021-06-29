@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class CreateRecommenderConfigurationRequestPrivate;
 
-class QTAWS_EXPORT CreateRecommenderConfigurationRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT CreateRecommenderConfigurationRequest : public PinpointRequest {
 
 public:
     CreateRecommenderConfigurationRequest(const CreateRecommenderConfigurationRequest &other);

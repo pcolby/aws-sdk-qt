@@ -27,7 +27,7 @@ namespace ACMPCA {
 
 class RestoreCertificateAuthorityRequestPrivate;
 
-class QTAWS_EXPORT RestoreCertificateAuthorityRequest : public AcmpcaRequest {
+class QTAWSACMPCA_EXPORT RestoreCertificateAuthorityRequest : public AcmpcaRequest {
 
 public:
     RestoreCertificateAuthorityRequest(const RestoreCertificateAuthorityRequest &other);

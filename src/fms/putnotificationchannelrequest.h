@@ -27,7 +27,7 @@ namespace FMS {
 
 class PutNotificationChannelRequestPrivate;
 
-class QTAWS_EXPORT PutNotificationChannelRequest : public FmsRequest {
+class QTAWSFMS_EXPORT PutNotificationChannelRequest : public FmsRequest {
 
 public:
     PutNotificationChannelRequest(const PutNotificationChannelRequest &other);

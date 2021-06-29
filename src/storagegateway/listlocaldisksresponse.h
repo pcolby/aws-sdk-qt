@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class ListLocalDisksResponsePrivate;
 
-class QTAWS_EXPORT ListLocalDisksResponse : public StorageGatewayResponse {
+class QTAWSSTORAGEGATEWAY_EXPORT ListLocalDisksResponse : public StorageGatewayResponse {
     Q_OBJECT
 
 public:

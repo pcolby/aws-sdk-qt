@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsivsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace IVS {
 
 class IvsRequestPrivate;
 
-class QTAWS_EXPORT IvsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSIVS_EXPORT IvsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by IVS.

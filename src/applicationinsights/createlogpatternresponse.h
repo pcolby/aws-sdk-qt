@@ -28,7 +28,7 @@ namespace ApplicationInsights {
 
 class CreateLogPatternResponsePrivate;
 
-class QTAWS_EXPORT CreateLogPatternResponse : public ApplicationInsightsResponse {
+class QTAWSAPPLICATIONINSIGHTS_EXPORT CreateLogPatternResponse : public ApplicationInsightsResponse {
     Q_OBJECT
 
 public:

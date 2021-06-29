@@ -27,7 +27,7 @@ namespace IVS {
 
 class ImportPlaybackKeyPairRequestPrivate;
 
-class QTAWS_EXPORT ImportPlaybackKeyPairRequest : public IvsRequest {
+class QTAWSIVS_EXPORT ImportPlaybackKeyPairRequest : public IvsRequest {
 
 public:
     ImportPlaybackKeyPairRequest(const ImportPlaybackKeyPairRequest &other);

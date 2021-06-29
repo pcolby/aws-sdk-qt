@@ -27,7 +27,7 @@ namespace Backup {
 
 class GetBackupPlanFromJSONRequestPrivate;
 
-class QTAWS_EXPORT GetBackupPlanFromJSONRequest : public BackupRequest {
+class QTAWSBACKUP_EXPORT GetBackupPlanFromJSONRequest : public BackupRequest {
 
 public:
     GetBackupPlanFromJSONRequest(const GetBackupPlanFromJSONRequest &other);

@@ -27,7 +27,7 @@ namespace AppSync {
 
 class ListApiKeysRequestPrivate;
 
-class QTAWS_EXPORT ListApiKeysRequest : public AppSyncRequest {
+class QTAWSAPPSYNC_EXPORT ListApiKeysRequest : public AppSyncRequest {
 
 public:
     ListApiKeysRequest(const ListApiKeysRequest &other);

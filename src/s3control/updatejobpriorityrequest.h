@@ -27,7 +27,7 @@ namespace S3Control {
 
 class UpdateJobPriorityRequestPrivate;
 
-class QTAWS_EXPORT UpdateJobPriorityRequest : public S3ControlRequest {
+class QTAWSS3CONTROL_EXPORT UpdateJobPriorityRequest : public S3ControlRequest {
 
 public:
     UpdateJobPriorityRequest(const UpdateJobPriorityRequest &other);

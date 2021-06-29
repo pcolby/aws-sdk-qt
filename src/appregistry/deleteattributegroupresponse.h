@@ -28,7 +28,7 @@ namespace AppRegistry {
 
 class DeleteAttributeGroupResponsePrivate;
 
-class QTAWS_EXPORT DeleteAttributeGroupResponse : public AppRegistryResponse {
+class QTAWSAPPREGISTRY_EXPORT DeleteAttributeGroupResponse : public AppRegistryResponse {
     Q_OBJECT
 
 public:

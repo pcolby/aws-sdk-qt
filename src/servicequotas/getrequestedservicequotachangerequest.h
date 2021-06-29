@@ -27,7 +27,7 @@ namespace ServiceQuotas {
 
 class GetRequestedServiceQuotaChangeRequestPrivate;
 
-class QTAWS_EXPORT GetRequestedServiceQuotaChangeRequest : public ServiceQuotasRequest {
+class QTAWSSERVICEQUOTAS_EXPORT GetRequestedServiceQuotaChangeRequest : public ServiceQuotasRequest {
 
 public:
     GetRequestedServiceQuotaChangeRequest(const GetRequestedServiceQuotaChangeRequest &other);

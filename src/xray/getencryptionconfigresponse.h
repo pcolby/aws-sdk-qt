@@ -28,7 +28,7 @@ namespace XRay {
 
 class GetEncryptionConfigResponsePrivate;
 
-class QTAWS_EXPORT GetEncryptionConfigResponse : public XRayResponse {
+class QTAWSXRAY_EXPORT GetEncryptionConfigResponse : public XRayResponse {
     Q_OBJECT
 
 public:

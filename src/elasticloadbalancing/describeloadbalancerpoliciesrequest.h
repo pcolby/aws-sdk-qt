@@ -27,7 +27,7 @@ namespace ElasticLoadBalancing {
 
 class DescribeLoadBalancerPoliciesRequestPrivate;
 
-class QTAWS_EXPORT DescribeLoadBalancerPoliciesRequest : public ElasticLoadBalancingRequest {
+class QTAWSELASTICLOADBALANCING_EXPORT DescribeLoadBalancerPoliciesRequest : public ElasticLoadBalancingRequest {
 
 public:
     DescribeLoadBalancerPoliciesRequest(const DescribeLoadBalancerPoliciesRequest &other);

@@ -27,7 +27,7 @@ namespace AuditManager {
 
 class GetAssessmentFrameworkRequestPrivate;
 
-class QTAWS_EXPORT GetAssessmentFrameworkRequest : public AuditManagerRequest {
+class QTAWSAUDITMANAGER_EXPORT GetAssessmentFrameworkRequest : public AuditManagerRequest {
 
 public:
     GetAssessmentFrameworkRequest(const GetAssessmentFrameworkRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsapplicationdiscoveryserviceglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -79,7 +81,7 @@ class StopDataCollectionByAgentIdsResponse;
 class UpdateApplicationRequest;
 class UpdateApplicationResponse;
 
-class QTAWS_EXPORT ApplicationDiscoveryServiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSAPPLICATIONDISCOVERYSERVICE_EXPORT ApplicationDiscoveryServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

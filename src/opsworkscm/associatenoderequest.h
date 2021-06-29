@@ -27,7 +27,7 @@ namespace OpsWorksCM {
 
 class AssociateNodeRequestPrivate;
 
-class QTAWS_EXPORT AssociateNodeRequest : public OpsWorksCMRequest {
+class QTAWSOPSWORKSCM_EXPORT AssociateNodeRequest : public OpsWorksCMRequest {
 
 public:
     AssociateNodeRequest(const AssociateNodeRequest &other);

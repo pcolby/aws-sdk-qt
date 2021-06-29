@@ -27,7 +27,7 @@ namespace RoboMaker {
 
 class DescribeFleetRequestPrivate;
 
-class QTAWS_EXPORT DescribeFleetRequest : public RoboMakerRequest {
+class QTAWSROBOMAKER_EXPORT DescribeFleetRequest : public RoboMakerRequest {
 
 public:
     DescribeFleetRequest(const DescribeFleetRequest &other);

@@ -21,6 +21,8 @@
 #define QTAWS_COMPREHENDMEDICALRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawscomprehendmedicalglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace ComprehendMedical {
 
 class ComprehendMedicalResponsePrivate;
 
-class QTAWS_EXPORT ComprehendMedicalResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCOMPREHENDMEDICAL_EXPORT ComprehendMedicalResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

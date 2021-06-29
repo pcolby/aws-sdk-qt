@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class DeleteFacetResponsePrivate;
 
-class QTAWS_EXPORT DeleteFacetResponse : public CloudDirectoryResponse {
+class QTAWSCLOUDDIRECTORY_EXPORT DeleteFacetResponse : public CloudDirectoryResponse {
     Q_OBJECT
 
 public:

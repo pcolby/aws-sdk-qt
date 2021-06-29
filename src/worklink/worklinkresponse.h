@@ -21,6 +21,8 @@
 #define QTAWS_WORKLINKRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsworklinkglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace WorkLink {
 
 class WorkLinkResponsePrivate;
 
-class QTAWS_EXPORT WorkLinkResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSWORKLINK_EXPORT WorkLinkResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSMTURK_LIBRARY)
+
 add_library(QtAwsMTurk
   acceptqualificationrequestrequest.h
   acceptqualificationrequestrequest_p.h
@@ -125,6 +127,7 @@ add_library(QtAwsMTurk
   notifyworkersrequest_p.h
   notifyworkersresponse.h
   notifyworkersresponse_p.h
+  qtawsmturkglobal.h
   rejectassignmentrequest.h
   rejectassignmentrequest_p.h
   rejectassignmentresponse.h

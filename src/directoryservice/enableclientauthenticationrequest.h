@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class EnableClientAuthenticationRequestPrivate;
 
-class QTAWS_EXPORT EnableClientAuthenticationRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT EnableClientAuthenticationRequest : public DirectoryServiceRequest {
 
 public:
     EnableClientAuthenticationRequest(const EnableClientAuthenticationRequest &other);

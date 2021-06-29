@@ -27,7 +27,7 @@ namespace KinesisAnalytics {
 
 class DeleteApplicationReferenceDataSourceRequestPrivate;
 
-class QTAWS_EXPORT DeleteApplicationReferenceDataSourceRequest : public KinesisAnalyticsRequest {
+class QTAWSKINESISANALYTICS_EXPORT DeleteApplicationReferenceDataSourceRequest : public KinesisAnalyticsRequest {
 
 public:
     DeleteApplicationReferenceDataSourceRequest(const DeleteApplicationReferenceDataSourceRequest &other);

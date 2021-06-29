@@ -27,7 +27,7 @@ namespace ElasticBeanstalk {
 
 class DescribeConfigurationSettingsRequestPrivate;
 
-class QTAWS_EXPORT DescribeConfigurationSettingsRequest : public ElasticBeanstalkRequest {
+class QTAWSELASTICBEANSTALK_EXPORT DescribeConfigurationSettingsRequest : public ElasticBeanstalkRequest {
 
 public:
     DescribeConfigurationSettingsRequest(const DescribeConfigurationSettingsRequest &other);

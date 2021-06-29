@@ -27,7 +27,7 @@ namespace WAFRegional {
 
 class DeleteWebACLRequestPrivate;
 
-class QTAWS_EXPORT DeleteWebACLRequest : public WAFRegionalRequest {
+class QTAWSWAFREGIONAL_EXPORT DeleteWebACLRequest : public WAFRegionalRequest {
 
 public:
     DeleteWebACLRequest(const DeleteWebACLRequest &other);

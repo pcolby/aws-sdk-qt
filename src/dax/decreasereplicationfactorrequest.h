@@ -27,7 +27,7 @@ namespace DAX {
 
 class DecreaseReplicationFactorRequestPrivate;
 
-class QTAWS_EXPORT DecreaseReplicationFactorRequest : public DaxRequest {
+class QTAWSDAX_EXPORT DecreaseReplicationFactorRequest : public DaxRequest {
 
 public:
     DecreaseReplicationFactorRequest(const DecreaseReplicationFactorRequest &other);

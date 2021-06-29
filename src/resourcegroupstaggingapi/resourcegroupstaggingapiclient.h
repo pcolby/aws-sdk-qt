@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsresourcegroupstaggingapiglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -45,7 +47,7 @@ class TagResourcesResponse;
 class UntagResourcesRequest;
 class UntagResourcesResponse;
 
-class QTAWS_EXPORT ResourceGroupsTaggingAPIClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSRESOURCEGROUPSTAGGINGAPI_EXPORT ResourceGroupsTaggingAPIClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

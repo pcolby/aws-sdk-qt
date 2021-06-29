@@ -27,7 +27,7 @@ namespace EventBridge {
 
 class StartReplayRequestPrivate;
 
-class QTAWS_EXPORT StartReplayRequest : public EventBridgeRequest {
+class QTAWSEVENTBRIDGE_EXPORT StartReplayRequest : public EventBridgeRequest {
 
 public:
     StartReplayRequest(const StartReplayRequest &other);

@@ -28,7 +28,7 @@ namespace RDSDataService {
 
 class BeginTransactionResponsePrivate;
 
-class QTAWS_EXPORT BeginTransactionResponse : public RDSDataServiceResponse {
+class QTAWSRDSDATASERVICE_EXPORT BeginTransactionResponse : public RDSDataServiceResponse {
     Q_OBJECT
 
 public:

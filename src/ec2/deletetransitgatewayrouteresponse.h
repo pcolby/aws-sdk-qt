@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteTransitGatewayRouteResponsePrivate;
 
-class QTAWS_EXPORT DeleteTransitGatewayRouteResponse : public Ec2Response {
+class QTAWSEC2_EXPORT DeleteTransitGatewayRouteResponse : public Ec2Response {
     Q_OBJECT
 
 public:

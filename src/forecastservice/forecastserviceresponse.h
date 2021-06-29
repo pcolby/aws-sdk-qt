@@ -21,6 +21,8 @@
 #define QTAWS_FORECASTSERVICERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsforecastserviceglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace ForecastService {
 
 class ForecastServiceResponsePrivate;
 
-class QTAWS_EXPORT ForecastServiceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSFORECASTSERVICE_EXPORT ForecastServiceResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

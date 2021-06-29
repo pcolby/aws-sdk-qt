@@ -28,7 +28,7 @@ namespace Glue {
 
 class BatchDeleteTableVersionResponsePrivate;
 
-class QTAWS_EXPORT BatchDeleteTableVersionResponse : public GlueResponse {
+class QTAWSGLUE_EXPORT BatchDeleteTableVersionResponse : public GlueResponse {
     Q_OBJECT
 
 public:

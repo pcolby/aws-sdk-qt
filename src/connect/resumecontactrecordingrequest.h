@@ -27,7 +27,7 @@ namespace Connect {
 
 class ResumeContactRecordingRequestPrivate;
 
-class QTAWS_EXPORT ResumeContactRecordingRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT ResumeContactRecordingRequest : public ConnectRequest {
 
 public:
     ResumeContactRecordingRequest(const ResumeContactRecordingRequest &other);

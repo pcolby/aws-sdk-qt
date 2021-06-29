@@ -27,7 +27,7 @@ namespace ECS {
 
 class UpdateContainerAgentRequestPrivate;
 
-class QTAWS_EXPORT UpdateContainerAgentRequest : public EcsRequest {
+class QTAWSECS_EXPORT UpdateContainerAgentRequest : public EcsRequest {
 
 public:
     UpdateContainerAgentRequest(const UpdateContainerAgentRequest &other);

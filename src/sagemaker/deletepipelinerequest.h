@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class DeletePipelineRequestPrivate;
 
-class QTAWS_EXPORT DeletePipelineRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT DeletePipelineRequest : public SageMakerRequest {
 
 public:
     DeletePipelineRequest(const DeletePipelineRequest &other);

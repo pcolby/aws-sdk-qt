@@ -28,7 +28,7 @@ namespace ApiGatewayV2 {
 
 class GetDeploymentsResponsePrivate;
 
-class QTAWS_EXPORT GetDeploymentsResponse : public ApiGatewayV2Response {
+class QTAWSAPIGATEWAYV2_EXPORT GetDeploymentsResponse : public ApiGatewayV2Response {
     Q_OBJECT
 
 public:

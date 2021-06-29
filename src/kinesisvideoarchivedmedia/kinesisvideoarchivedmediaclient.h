@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawskinesisvideoarchivedmediaglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -39,7 +41,7 @@ class GetMediaForFragmentListResponse;
 class ListFragmentsRequest;
 class ListFragmentsResponse;
 
-class QTAWS_EXPORT KinesisVideoArchivedMediaClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSKINESISVIDEOARCHIVEDMEDIA_EXPORT KinesisVideoArchivedMediaClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

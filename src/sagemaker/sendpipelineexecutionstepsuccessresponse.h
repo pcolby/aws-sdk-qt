@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class SendPipelineExecutionStepSuccessResponsePrivate;
 
-class QTAWS_EXPORT SendPipelineExecutionStepSuccessResponse : public SageMakerResponse {
+class QTAWSSAGEMAKER_EXPORT SendPipelineExecutionStepSuccessResponse : public SageMakerResponse {
     Q_OBJECT
 
 public:

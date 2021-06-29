@@ -27,7 +27,7 @@ namespace AuditManager {
 
 class BatchDeleteDelegationByAssessmentRequestPrivate;
 
-class QTAWS_EXPORT BatchDeleteDelegationByAssessmentRequest : public AuditManagerRequest {
+class QTAWSAUDITMANAGER_EXPORT BatchDeleteDelegationByAssessmentRequest : public AuditManagerRequest {
 
 public:
     BatchDeleteDelegationByAssessmentRequest(const BatchDeleteDelegationByAssessmentRequest &other);

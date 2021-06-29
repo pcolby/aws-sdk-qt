@@ -28,7 +28,7 @@ namespace FraudDetector {
 
 class GetEntityTypesResponsePrivate;
 
-class QTAWS_EXPORT GetEntityTypesResponse : public FraudDetectorResponse {
+class QTAWSFRAUDDETECTOR_EXPORT GetEntityTypesResponse : public FraudDetectorResponse {
     Q_OBJECT
 
 public:

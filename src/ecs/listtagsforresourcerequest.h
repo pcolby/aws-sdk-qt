@@ -27,7 +27,7 @@ namespace ECS {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public EcsRequest {
+class QTAWSECS_EXPORT ListTagsForResourceRequest : public EcsRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

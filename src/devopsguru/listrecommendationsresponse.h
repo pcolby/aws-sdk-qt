@@ -28,7 +28,7 @@ namespace DevOpsGuru {
 
 class ListRecommendationsResponsePrivate;
 
-class QTAWS_EXPORT ListRecommendationsResponse : public DevOpsGuruResponse {
+class QTAWSDEVOPSGURU_EXPORT ListRecommendationsResponse : public DevOpsGuruResponse {
     Q_OBJECT
 
 public:

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSS3OUTPOSTS_LIBRARY)
+
 add_library(QtAwsS3Outposts
   createendpointrequest.h
   createendpointrequest_p.h
@@ -11,6 +13,7 @@ add_library(QtAwsS3Outposts
   listendpointsrequest_p.h
   listendpointsresponse.h
   listendpointsresponse_p.h
+  qtawss3outpostsglobal.h
   s3outpostsclient.h
   s3outpostsclient_p.h
   s3outpostsrequest.h

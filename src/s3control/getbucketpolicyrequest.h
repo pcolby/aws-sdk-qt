@@ -27,7 +27,7 @@ namespace S3Control {
 
 class GetBucketPolicyRequestPrivate;
 
-class QTAWS_EXPORT GetBucketPolicyRequest : public S3ControlRequest {
+class QTAWSS3CONTROL_EXPORT GetBucketPolicyRequest : public S3ControlRequest {
 
 public:
     GetBucketPolicyRequest(const GetBucketPolicyRequest &other);

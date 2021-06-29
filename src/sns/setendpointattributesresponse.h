@@ -28,7 +28,7 @@ namespace SNS {
 
 class SetEndpointAttributesResponsePrivate;
 
-class QTAWS_EXPORT SetEndpointAttributesResponse : public SnsResponse {
+class QTAWSSNS_EXPORT SetEndpointAttributesResponse : public SnsResponse {
     Q_OBJECT
 
 public:

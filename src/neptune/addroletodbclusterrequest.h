@@ -27,7 +27,7 @@ namespace Neptune {
 
 class AddRoleToDBClusterRequestPrivate;
 
-class QTAWS_EXPORT AddRoleToDBClusterRequest : public NeptuneRequest {
+class QTAWSNEPTUNE_EXPORT AddRoleToDBClusterRequest : public NeptuneRequest {
 
 public:
     AddRoleToDBClusterRequest(const AddRoleToDBClusterRequest &other);

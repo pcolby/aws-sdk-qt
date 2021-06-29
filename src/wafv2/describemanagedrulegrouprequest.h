@@ -27,7 +27,7 @@ namespace WAFV2 {
 
 class DescribeManagedRuleGroupRequestPrivate;
 
-class QTAWS_EXPORT DescribeManagedRuleGroupRequest : public Wafv2Request {
+class QTAWSWAFV2_EXPORT DescribeManagedRuleGroupRequest : public Wafv2Request {
 
 public:
     DescribeManagedRuleGroupRequest(const DescribeManagedRuleGroupRequest &other);

@@ -27,7 +27,7 @@ namespace EC2 {
 
 class AdvertiseByoipCidrRequestPrivate;
 
-class QTAWS_EXPORT AdvertiseByoipCidrRequest : public Ec2Request {
+class QTAWSEC2_EXPORT AdvertiseByoipCidrRequest : public Ec2Request {
 
 public:
     AdvertiseByoipCidrRequest(const AdvertiseByoipCidrRequest &other);

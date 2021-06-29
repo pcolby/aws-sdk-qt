@@ -27,7 +27,7 @@ namespace Chime {
 
 class PutVoiceConnectorOriginationRequestPrivate;
 
-class QTAWS_EXPORT PutVoiceConnectorOriginationRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT PutVoiceConnectorOriginationRequest : public ChimeRequest {
 
 public:
     PutVoiceConnectorOriginationRequest(const PutVoiceConnectorOriginationRequest &other);

@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class DescribeBandwidthRateLimitScheduleResponsePrivate;
 
-class QTAWS_EXPORT DescribeBandwidthRateLimitScheduleResponse : public StorageGatewayResponse {
+class QTAWSSTORAGEGATEWAY_EXPORT DescribeBandwidthRateLimitScheduleResponse : public StorageGatewayResponse {
     Q_OBJECT
 
 public:

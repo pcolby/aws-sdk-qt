@@ -27,7 +27,7 @@ namespace RDS {
 
 class ModifyDBProxyEndpointRequestPrivate;
 
-class QTAWS_EXPORT ModifyDBProxyEndpointRequest : public RdsRequest {
+class QTAWSRDS_EXPORT ModifyDBProxyEndpointRequest : public RdsRequest {
 
 public:
     ModifyDBProxyEndpointRequest(const ModifyDBProxyEndpointRequest &other);

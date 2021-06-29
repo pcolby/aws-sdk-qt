@@ -27,7 +27,7 @@ namespace Organizations {
 
 class EnableAWSServiceAccessRequestPrivate;
 
-class QTAWS_EXPORT EnableAWSServiceAccessRequest : public OrganizationsRequest {
+class QTAWSORGANIZATIONS_EXPORT EnableAWSServiceAccessRequest : public OrganizationsRequest {
 
 public:
     EnableAWSServiceAccessRequest(const EnableAWSServiceAccessRequest &other);

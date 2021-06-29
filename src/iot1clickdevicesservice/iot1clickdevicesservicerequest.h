@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsiot1clickdevicesserviceglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace IoT1ClickDevicesService {
 
 class IoT1ClickDevicesServiceRequestPrivate;
 
-class QTAWS_EXPORT IoT1ClickDevicesServiceRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSIOT1CLICKDEVICESSERVICE_EXPORT IoT1ClickDevicesServiceRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by IoT1ClickDevicesService.

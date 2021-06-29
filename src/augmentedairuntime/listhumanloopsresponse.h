@@ -28,7 +28,7 @@ namespace AugmentedAIRuntime {
 
 class ListHumanLoopsResponsePrivate;
 
-class QTAWS_EXPORT ListHumanLoopsResponse : public AugmentedAIRuntimeResponse {
+class QTAWSAUGMENTEDAIRUNTIME_EXPORT ListHumanLoopsResponse : public AugmentedAIRuntimeResponse {
     Q_OBJECT
 
 public:

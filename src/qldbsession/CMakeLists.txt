@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSQLDBSESSION_LIBRARY)
+
 add_library(QtAwsQLDBSession
   qldbsessionclient.h
   qldbsessionclient_p.h
@@ -5,6 +7,7 @@ add_library(QtAwsQLDBSession
   qldbsessionrequest_p.h
   qldbsessionresponse.h
   qldbsessionresponse_p.h
+  qtawsqldbsessionglobal.h
   sendcommandrequest.h
   sendcommandrequest_p.h
   sendcommandresponse.h

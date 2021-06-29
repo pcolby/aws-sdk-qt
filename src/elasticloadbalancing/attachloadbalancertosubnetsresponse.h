@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 
 class AttachLoadBalancerToSubnetsResponsePrivate;
 
-class QTAWS_EXPORT AttachLoadBalancerToSubnetsResponse : public ElasticLoadBalancingResponse {
+class QTAWSELASTICLOADBALANCING_EXPORT AttachLoadBalancerToSubnetsResponse : public ElasticLoadBalancingResponse {
     Q_OBJECT
 
 public:

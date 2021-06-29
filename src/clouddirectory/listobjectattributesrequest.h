@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class ListObjectAttributesRequestPrivate;
 
-class QTAWS_EXPORT ListObjectAttributesRequest : public CloudDirectoryRequest {
+class QTAWSCLOUDDIRECTORY_EXPORT ListObjectAttributesRequest : public CloudDirectoryRequest {
 
 public:
     ListObjectAttributesRequest(const ListObjectAttributesRequest &other);

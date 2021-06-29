@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class CreateDeliverabilityTestReportRequestPrivate;
 
-class QTAWS_EXPORT CreateDeliverabilityTestReportRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT CreateDeliverabilityTestReportRequest : public Sesv2Request {
 
 public:
     CreateDeliverabilityTestReportRequest(const CreateDeliverabilityTestReportRequest &other);

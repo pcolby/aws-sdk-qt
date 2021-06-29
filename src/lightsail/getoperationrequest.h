@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class GetOperationRequestPrivate;
 
-class QTAWS_EXPORT GetOperationRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT GetOperationRequest : public LightsailRequest {
 
 public:
     GetOperationRequest(const GetOperationRequest &other);

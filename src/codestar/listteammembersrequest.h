@@ -27,7 +27,7 @@ namespace CodeStar {
 
 class ListTeamMembersRequestPrivate;
 
-class QTAWS_EXPORT ListTeamMembersRequest : public CodeStarRequest {
+class QTAWSCODESTAR_EXPORT ListTeamMembersRequest : public CodeStarRequest {
 
 public:
     ListTeamMembersRequest(const ListTeamMembersRequest &other);

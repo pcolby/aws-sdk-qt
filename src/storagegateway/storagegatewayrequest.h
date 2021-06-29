@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsstoragegatewayglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace StorageGateway {
 
 class StorageGatewayRequestPrivate;
 
-class QTAWS_EXPORT StorageGatewayRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT StorageGatewayRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by StorageGateway.

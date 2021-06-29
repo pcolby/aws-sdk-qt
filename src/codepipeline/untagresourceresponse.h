@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public CodePipelineResponse {
+class QTAWSCODEPIPELINE_EXPORT UntagResourceResponse : public CodePipelineResponse {
     Q_OBJECT
 
 public:

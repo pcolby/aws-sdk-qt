@@ -28,7 +28,7 @@ namespace Kafka {
 
 class UpdateBrokerCountResponsePrivate;
 
-class QTAWS_EXPORT UpdateBrokerCountResponse : public KafkaResponse {
+class QTAWSKAFKA_EXPORT UpdateBrokerCountResponse : public KafkaResponse {
     Q_OBJECT
 
 public:

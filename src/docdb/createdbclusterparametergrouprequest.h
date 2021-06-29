@@ -27,7 +27,7 @@ namespace DocDB {
 
 class CreateDBClusterParameterGroupRequestPrivate;
 
-class QTAWS_EXPORT CreateDBClusterParameterGroupRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT CreateDBClusterParameterGroupRequest : public DocDBRequest {
 
 public:
     CreateDBClusterParameterGroupRequest(const CreateDBClusterParameterGroupRequest &other);

@@ -20,7 +20,7 @@
 #ifndef AWSREGION_P_H
 #define AWSREGION_P_H
 
-#include "qtawsglobal.h"
+#include "qtawscoreglobal.h"
 
 #include <QtGlobal>
 

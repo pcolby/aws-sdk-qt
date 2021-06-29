@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DeleteSnapshotRequestPrivate;
 
-class QTAWS_EXPORT DeleteSnapshotRequest : public Ec2Request {
+class QTAWSEC2_EXPORT DeleteSnapshotRequest : public Ec2Request {
 
 public:
     DeleteSnapshotRequest(const DeleteSnapshotRequest &other);

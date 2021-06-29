@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsappregistryglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace AppRegistry {
 
 class AppRegistryRequestPrivate;
 
-class QTAWS_EXPORT AppRegistryRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSAPPREGISTRY_EXPORT AppRegistryRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by AppRegistry.

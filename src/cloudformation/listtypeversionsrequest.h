@@ -27,7 +27,7 @@ namespace CloudFormation {
 
 class ListTypeVersionsRequestPrivate;
 
-class QTAWS_EXPORT ListTypeVersionsRequest : public CloudFormationRequest {
+class QTAWSCLOUDFORMATION_EXPORT ListTypeVersionsRequest : public CloudFormationRequest {
 
 public:
     ListTypeVersionsRequest(const ListTypeVersionsRequest &other);

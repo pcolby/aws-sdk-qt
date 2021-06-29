@@ -27,7 +27,7 @@ namespace Lambda {
 
 class GetFunctionConcurrencyRequestPrivate;
 
-class QTAWS_EXPORT GetFunctionConcurrencyRequest : public LambdaRequest {
+class QTAWSLAMBDA_EXPORT GetFunctionConcurrencyRequest : public LambdaRequest {
 
 public:
     GetFunctionConcurrencyRequest(const GetFunctionConcurrencyRequest &other);

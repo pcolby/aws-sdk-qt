@@ -28,7 +28,7 @@ namespace Braket {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public BraketResponse {
+class QTAWSBRAKET_EXPORT ListTagsForResourceResponse : public BraketResponse {
     Q_OBJECT
 
 public:

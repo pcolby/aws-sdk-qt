@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawslocationserviceglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -119,7 +121,7 @@ class TagResourceResponse;
 class UntagResourceRequest;
 class UntagResourceResponse;
 
-class QTAWS_EXPORT LocationServiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSLOCATIONSERVICE_EXPORT LocationServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

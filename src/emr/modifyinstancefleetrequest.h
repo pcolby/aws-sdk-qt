@@ -27,7 +27,7 @@ namespace EMR {
 
 class ModifyInstanceFleetRequestPrivate;
 
-class QTAWS_EXPORT ModifyInstanceFleetRequest : public EmrRequest {
+class QTAWSEMR_EXPORT ModifyInstanceFleetRequest : public EmrRequest {
 
 public:
     ModifyInstanceFleetRequest(const ModifyInstanceFleetRequest &other);

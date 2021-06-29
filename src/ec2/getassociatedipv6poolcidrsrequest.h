@@ -27,7 +27,7 @@ namespace EC2 {
 
 class GetAssociatedIpv6PoolCidrsRequestPrivate;
 
-class QTAWS_EXPORT GetAssociatedIpv6PoolCidrsRequest : public Ec2Request {
+class QTAWSEC2_EXPORT GetAssociatedIpv6PoolCidrsRequest : public Ec2Request {
 
 public:
     GetAssociatedIpv6PoolCidrsRequest(const GetAssociatedIpv6PoolCidrsRequest &other);

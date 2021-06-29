@@ -27,7 +27,7 @@ namespace MediaPackageVod {
 
 class DeleteAssetRequestPrivate;
 
-class QTAWS_EXPORT DeleteAssetRequest : public MediaPackageVodRequest {
+class QTAWSMEDIAPACKAGEVOD_EXPORT DeleteAssetRequest : public MediaPackageVodRequest {
 
 public:
     DeleteAssetRequest(const DeleteAssetRequest &other);

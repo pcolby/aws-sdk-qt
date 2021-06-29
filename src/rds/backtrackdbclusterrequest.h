@@ -27,7 +27,7 @@ namespace RDS {
 
 class BacktrackDBClusterRequestPrivate;
 
-class QTAWS_EXPORT BacktrackDBClusterRequest : public RdsRequest {
+class QTAWSRDS_EXPORT BacktrackDBClusterRequest : public RdsRequest {
 
 public:
     BacktrackDBClusterRequest(const BacktrackDBClusterRequest &other);

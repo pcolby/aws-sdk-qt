@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsfinspacedataglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace FinSpaceData {
 
 class FinSpaceDataRequestPrivate;
 
-class QTAWS_EXPORT FinSpaceDataRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSFINSPACEDATA_EXPORT FinSpaceDataRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by FinSpaceData.

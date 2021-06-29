@@ -27,7 +27,7 @@ namespace AppMesh {
 
 class UpdateMeshRequestPrivate;
 
-class QTAWS_EXPORT UpdateMeshRequest : public AppMeshRequest {
+class QTAWSAPPMESH_EXPORT UpdateMeshRequest : public AppMeshRequest {
 
 public:
     UpdateMeshRequest(const UpdateMeshRequest &other);

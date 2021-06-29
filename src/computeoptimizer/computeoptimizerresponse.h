@@ -21,6 +21,8 @@
 #define QTAWS_COMPUTEOPTIMIZERRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawscomputeoptimizerglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace ComputeOptimizer {
 
 class ComputeOptimizerResponsePrivate;
 
-class QTAWS_EXPORT ComputeOptimizerResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCOMPUTEOPTIMIZER_EXPORT ComputeOptimizerResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

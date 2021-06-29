@@ -28,7 +28,7 @@ namespace Connect {
 
 class StopContactRecordingResponsePrivate;
 
-class QTAWS_EXPORT StopContactRecordingResponse : public ConnectResponse {
+class QTAWSCONNECT_EXPORT StopContactRecordingResponse : public ConnectResponse {
     Q_OBJECT
 
 public:

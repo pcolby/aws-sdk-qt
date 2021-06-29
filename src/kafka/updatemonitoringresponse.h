@@ -28,7 +28,7 @@ namespace Kafka {
 
 class UpdateMonitoringResponsePrivate;
 
-class QTAWS_EXPORT UpdateMonitoringResponse : public KafkaResponse {
+class QTAWSKAFKA_EXPORT UpdateMonitoringResponse : public KafkaResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace DynamoDB {
 
 class CreateTableRequestPrivate;
 
-class QTAWS_EXPORT CreateTableRequest : public DynamoDBRequest {
+class QTAWSDYNAMODB_EXPORT CreateTableRequest : public DynamoDBRequest {
 
 public:
     CreateTableRequest(const CreateTableRequest &other);

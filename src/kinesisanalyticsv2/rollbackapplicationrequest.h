@@ -27,7 +27,7 @@ namespace KinesisAnalyticsV2 {
 
 class RollbackApplicationRequestPrivate;
 
-class QTAWS_EXPORT RollbackApplicationRequest : public KinesisAnalyticsV2Request {
+class QTAWSKINESISANALYTICSV2_EXPORT RollbackApplicationRequest : public KinesisAnalyticsV2Request {
 
 public:
     RollbackApplicationRequest(const RollbackApplicationRequest &other);

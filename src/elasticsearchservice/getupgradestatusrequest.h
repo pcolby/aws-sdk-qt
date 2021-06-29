@@ -27,7 +27,7 @@ namespace ElasticsearchService {
 
 class GetUpgradeStatusRequestPrivate;
 
-class QTAWS_EXPORT GetUpgradeStatusRequest : public ElasticsearchServiceRequest {
+class QTAWSELASTICSEARCHSERVICE_EXPORT GetUpgradeStatusRequest : public ElasticsearchServiceRequest {
 
 public:
     GetUpgradeStatusRequest(const GetUpgradeStatusRequest &other);

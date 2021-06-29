@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class PutSchemaFromJsonRequestPrivate;
 
-class QTAWS_EXPORT PutSchemaFromJsonRequest : public CloudDirectoryRequest {
+class QTAWSCLOUDDIRECTORY_EXPORT PutSchemaFromJsonRequest : public CloudDirectoryRequest {
 
 public:
     PutSchemaFromJsonRequest(const PutSchemaFromJsonRequest &other);

@@ -28,7 +28,7 @@ namespace signer {
 
 class ListSigningProfilesResponsePrivate;
 
-class QTAWS_EXPORT ListSigningProfilesResponse : public signerResponse {
+class QTAWSSIGNER_EXPORT ListSigningProfilesResponse : public signerResponse {
     Q_OBJECT
 
 public:

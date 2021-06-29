@@ -27,7 +27,7 @@ namespace ECS {
 
 class StartTaskRequestPrivate;
 
-class QTAWS_EXPORT StartTaskRequest : public EcsRequest {
+class QTAWSECS_EXPORT StartTaskRequest : public EcsRequest {
 
 public:
     StartTaskRequest(const StartTaskRequest &other);

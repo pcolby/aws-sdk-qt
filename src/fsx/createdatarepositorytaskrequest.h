@@ -27,7 +27,7 @@ namespace FSx {
 
 class CreateDataRepositoryTaskRequestPrivate;
 
-class QTAWS_EXPORT CreateDataRepositoryTaskRequest : public FSxRequest {
+class QTAWSFSX_EXPORT CreateDataRepositoryTaskRequest : public FSxRequest {
 
 public:
     CreateDataRepositoryTaskRequest(const CreateDataRepositoryTaskRequest &other);

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSMGN_LIBRARY)
+
 add_library(QtAwsmgn
   changeserverlifecyclestaterequest.h
   changeserverlifecyclestaterequest_p.h
@@ -69,6 +71,7 @@ add_library(QtAwsmgn
   mgnrequest_p.h
   mgnresponse.h
   mgnresponse_p.h
+  qtawsmgnglobal.h
   retrydatareplicationrequest.h
   retrydatareplicationrequest_p.h
   retrydatareplicationresponse.h

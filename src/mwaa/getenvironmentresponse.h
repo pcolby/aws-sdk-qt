@@ -28,7 +28,7 @@ namespace MWAA {
 
 class GetEnvironmentResponsePrivate;
 
-class QTAWS_EXPORT GetEnvironmentResponse : public MwaaResponse {
+class QTAWSMWAA_EXPORT GetEnvironmentResponse : public MwaaResponse {
     Q_OBJECT
 
 public:

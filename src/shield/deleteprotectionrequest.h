@@ -27,7 +27,7 @@ namespace Shield {
 
 class DeleteProtectionRequestPrivate;
 
-class QTAWS_EXPORT DeleteProtectionRequest : public ShieldRequest {
+class QTAWSSHIELD_EXPORT DeleteProtectionRequest : public ShieldRequest {
 
 public:
     DeleteProtectionRequest(const DeleteProtectionRequest &other);

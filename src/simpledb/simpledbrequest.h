@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawssimpledbglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace SimpleDB {
 
 class SimpleDBRequestPrivate;
 
-class QTAWS_EXPORT SimpleDBRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSIMPLEDB_EXPORT SimpleDBRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SimpleDB.

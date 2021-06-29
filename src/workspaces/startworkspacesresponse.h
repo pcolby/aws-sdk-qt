@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class StartWorkspacesResponsePrivate;
 
-class QTAWS_EXPORT StartWorkspacesResponse : public WorkSpacesResponse {
+class QTAWSWORKSPACES_EXPORT StartWorkspacesResponse : public WorkSpacesResponse {
     Q_OBJECT
 
 public:

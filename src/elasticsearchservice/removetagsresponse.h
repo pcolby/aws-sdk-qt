@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 
 class RemoveTagsResponsePrivate;
 
-class QTAWS_EXPORT RemoveTagsResponse : public ElasticsearchServiceResponse {
+class QTAWSELASTICSEARCHSERVICE_EXPORT RemoveTagsResponse : public ElasticsearchServiceResponse {
     Q_OBJECT
 
 public:

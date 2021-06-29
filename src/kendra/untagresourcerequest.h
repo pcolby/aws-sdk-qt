@@ -27,7 +27,7 @@ namespace kendra {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public kendraRequest {
+class QTAWSKENDRA_EXPORT UntagResourceRequest : public kendraRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

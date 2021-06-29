@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class GetStaticIpsRequestPrivate;
 
-class QTAWS_EXPORT GetStaticIpsRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT GetStaticIpsRequest : public LightsailRequest {
 
 public:
     GetStaticIpsRequest(const GetStaticIpsRequest &other);

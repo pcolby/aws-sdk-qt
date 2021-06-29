@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSAPPREGISTRY_LIBRARY)
+
 add_library(QtAwsAppRegistry
   appregistryclient.h
   appregistryclient_p.h
@@ -65,6 +67,7 @@ add_library(QtAwsAppRegistry
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsappregistryglobal.h
   syncresourcerequest.h
   syncresourcerequest_p.h
   syncresourceresponse.h

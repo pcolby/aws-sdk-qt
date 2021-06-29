@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class RestartAppServerResponsePrivate;
 
-class QTAWS_EXPORT RestartAppServerResponse : public ElasticBeanstalkResponse {
+class QTAWSELASTICBEANSTALK_EXPORT RestartAppServerResponse : public ElasticBeanstalkResponse {
     Q_OBJECT
 
 public:

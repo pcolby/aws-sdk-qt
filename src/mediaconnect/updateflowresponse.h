@@ -28,7 +28,7 @@ namespace MediaConnect {
 
 class UpdateFlowResponsePrivate;
 
-class QTAWS_EXPORT UpdateFlowResponse : public MediaConnectResponse {
+class QTAWSMEDIACONNECT_EXPORT UpdateFlowResponse : public MediaConnectResponse {
     Q_OBJECT
 
 public:

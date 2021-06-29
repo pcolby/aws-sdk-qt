@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class PutResourceConfigRequestPrivate;
 
-class QTAWS_EXPORT PutResourceConfigRequest : public ConfigServiceRequest {
+class QTAWSCONFIGSERVICE_EXPORT PutResourceConfigRequest : public ConfigServiceRequest {
 
 public:
     PutResourceConfigRequest(const PutResourceConfigRequest &other);

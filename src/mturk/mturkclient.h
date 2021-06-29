@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsmturkglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -107,7 +109,7 @@ class UpdateNotificationSettingsResponse;
 class UpdateQualificationTypeRequest;
 class UpdateQualificationTypeResponse;
 
-class QTAWS_EXPORT MTurkClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSMTURK_EXPORT MTurkClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

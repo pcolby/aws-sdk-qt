@@ -27,7 +27,7 @@ namespace IoTWireless {
 
 class ListPartnerAccountsRequestPrivate;
 
-class QTAWS_EXPORT ListPartnerAccountsRequest : public IoTWirelessRequest {
+class QTAWSIOTWIRELESS_EXPORT ListPartnerAccountsRequest : public IoTWirelessRequest {
 
 public:
     ListPartnerAccountsRequest(const ListPartnerAccountsRequest &other);

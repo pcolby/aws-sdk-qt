@@ -28,7 +28,7 @@ namespace Comprehend {
 
 class DeleteEndpointResponsePrivate;
 
-class QTAWS_EXPORT DeleteEndpointResponse : public ComprehendResponse {
+class QTAWSCOMPREHEND_EXPORT DeleteEndpointResponse : public ComprehendResponse {
     Q_OBJECT
 
 public:

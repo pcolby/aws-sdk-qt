@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class DeleteRecommenderConfigurationRequestPrivate;
 
-class QTAWS_EXPORT DeleteRecommenderConfigurationRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT DeleteRecommenderConfigurationRequest : public PinpointRequest {
 
 public:
     DeleteRecommenderConfigurationRequest(const DeleteRecommenderConfigurationRequest &other);

@@ -27,7 +27,7 @@ namespace Chime {
 
 class UpdateSipMediaApplicationRequestPrivate;
 
-class QTAWS_EXPORT UpdateSipMediaApplicationRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT UpdateSipMediaApplicationRequest : public ChimeRequest {
 
 public:
     UpdateSipMediaApplicationRequest(const UpdateSipMediaApplicationRequest &other);

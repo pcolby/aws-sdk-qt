@@ -28,7 +28,7 @@ namespace EFS {
 
 class DescribeFileSystemsResponsePrivate;
 
-class QTAWS_EXPORT DescribeFileSystemsResponse : public EfsResponse {
+class QTAWSEFS_EXPORT DescribeFileSystemsResponse : public EfsResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace EKS {
 
 class CreateAddonResponsePrivate;
 
-class QTAWS_EXPORT CreateAddonResponse : public EksResponse {
+class QTAWSEKS_EXPORT CreateAddonResponse : public EksResponse {
     Q_OBJECT
 
 public:

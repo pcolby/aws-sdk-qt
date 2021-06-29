@@ -27,7 +27,7 @@ namespace LookoutEquipment {
 
 class StopInferenceSchedulerRequestPrivate;
 
-class QTAWS_EXPORT StopInferenceSchedulerRequest : public LookoutEquipmentRequest {
+class QTAWSLOOKOUTEQUIPMENT_EXPORT StopInferenceSchedulerRequest : public LookoutEquipmentRequest {
 
 public:
     StopInferenceSchedulerRequest(const StopInferenceSchedulerRequest &other);

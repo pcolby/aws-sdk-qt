@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsdevopsguruglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -71,7 +73,7 @@ class UpdateResourceCollectionResponse;
 class UpdateServiceIntegrationRequest;
 class UpdateServiceIntegrationResponse;
 
-class QTAWS_EXPORT DevOpsGuruClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSDEVOPSGURU_EXPORT DevOpsGuruClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

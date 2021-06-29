@@ -27,7 +27,7 @@ namespace AccessAnalyzer {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public AccessAnalyzerRequest {
+class QTAWSACCESSANALYZER_EXPORT TagResourceRequest : public AccessAnalyzerRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

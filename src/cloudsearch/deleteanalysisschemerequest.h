@@ -27,7 +27,7 @@ namespace CloudSearch {
 
 class DeleteAnalysisSchemeRequestPrivate;
 
-class QTAWS_EXPORT DeleteAnalysisSchemeRequest : public CloudSearchRequest {
+class QTAWSCLOUDSEARCH_EXPORT DeleteAnalysisSchemeRequest : public CloudSearchRequest {
 
 public:
     DeleteAnalysisSchemeRequest(const DeleteAnalysisSchemeRequest &other);

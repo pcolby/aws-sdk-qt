@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class CreateSchemaRequestPrivate;
 
-class QTAWS_EXPORT CreateSchemaRequest : public CloudDirectoryRequest {
+class QTAWSCLOUDDIRECTORY_EXPORT CreateSchemaRequest : public CloudDirectoryRequest {
 
 public:
     CreateSchemaRequest(const CreateSchemaRequest &other);

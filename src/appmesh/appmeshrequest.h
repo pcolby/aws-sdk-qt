@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsappmeshglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace AppMesh {
 
 class AppMeshRequestPrivate;
 
-class QTAWS_EXPORT AppMeshRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSAPPMESH_EXPORT AppMeshRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by AppMesh.

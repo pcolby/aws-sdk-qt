@@ -27,7 +27,7 @@ namespace LocationService {
 
 class DeletePlaceIndexRequestPrivate;
 
-class QTAWS_EXPORT DeletePlaceIndexRequest : public LocationServiceRequest {
+class QTAWSLOCATIONSERVICE_EXPORT DeletePlaceIndexRequest : public LocationServiceRequest {
 
 public:
     DeletePlaceIndexRequest(const DeletePlaceIndexRequest &other);

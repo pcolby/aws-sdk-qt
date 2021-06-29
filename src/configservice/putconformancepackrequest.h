@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class PutConformancePackRequestPrivate;
 
-class QTAWS_EXPORT PutConformancePackRequest : public ConfigServiceRequest {
+class QTAWSCONFIGSERVICE_EXPORT PutConformancePackRequest : public ConfigServiceRequest {
 
 public:
     PutConformancePackRequest(const PutConformancePackRequest &other);

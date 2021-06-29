@@ -27,7 +27,7 @@ namespace S3 {
 
 class PutBucketVersioningRequestPrivate;
 
-class QTAWS_EXPORT PutBucketVersioningRequest : public S3Request {
+class QTAWSS3_EXPORT PutBucketVersioningRequest : public S3Request {
 
 public:
     PutBucketVersioningRequest(const PutBucketVersioningRequest &other);

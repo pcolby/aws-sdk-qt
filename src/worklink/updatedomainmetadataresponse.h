@@ -28,7 +28,7 @@ namespace WorkLink {
 
 class UpdateDomainMetadataResponsePrivate;
 
-class QTAWS_EXPORT UpdateDomainMetadataResponse : public WorkLinkResponse {
+class QTAWSWORKLINK_EXPORT UpdateDomainMetadataResponse : public WorkLinkResponse {
     Q_OBJECT
 
 public:

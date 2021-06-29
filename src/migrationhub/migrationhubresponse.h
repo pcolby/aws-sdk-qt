@@ -21,6 +21,8 @@
 #define QTAWS_MIGRATIONHUBRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsmigrationhubglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace MigrationHub {
 
 class MigrationHubResponsePrivate;
 
-class QTAWS_EXPORT MigrationHubResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSMIGRATIONHUB_EXPORT MigrationHubResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

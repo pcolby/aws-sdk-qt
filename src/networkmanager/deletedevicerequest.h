@@ -27,7 +27,7 @@ namespace NetworkManager {
 
 class DeleteDeviceRequestPrivate;
 
-class QTAWS_EXPORT DeleteDeviceRequest : public NetworkManagerRequest {
+class QTAWSNETWORKMANAGER_EXPORT DeleteDeviceRequest : public NetworkManagerRequest {
 
 public:
     DeleteDeviceRequest(const DeleteDeviceRequest &other);

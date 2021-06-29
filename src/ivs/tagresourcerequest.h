@@ -27,7 +27,7 @@ namespace IVS {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public IvsRequest {
+class QTAWSIVS_EXPORT TagResourceRequest : public IvsRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

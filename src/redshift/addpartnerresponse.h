@@ -28,7 +28,7 @@ namespace Redshift {
 
 class AddPartnerResponsePrivate;
 
-class QTAWS_EXPORT AddPartnerResponse : public RedshiftResponse {
+class QTAWSREDSHIFT_EXPORT AddPartnerResponse : public RedshiftResponse {
     Q_OBJECT
 
 public:

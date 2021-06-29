@@ -28,7 +28,7 @@ namespace MWAA {
 
 class CreateWebLoginTokenResponsePrivate;
 
-class QTAWS_EXPORT CreateWebLoginTokenResponse : public MwaaResponse {
+class QTAWSMWAA_EXPORT CreateWebLoginTokenResponse : public MwaaResponse {
     Q_OBJECT
 
 public:

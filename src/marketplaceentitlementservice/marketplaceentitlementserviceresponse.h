@@ -21,6 +21,8 @@
 #define QTAWS_MARKETPLACEENTITLEMENTSERVICERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsmarketplaceentitlementserviceglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace MarketplaceEntitlementService {
 
 class MarketplaceEntitlementServiceResponsePrivate;
 
-class QTAWS_EXPORT MarketplaceEntitlementServiceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSMARKETPLACEENTITLEMENTSERVICE_EXPORT MarketplaceEntitlementServiceResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

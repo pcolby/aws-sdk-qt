@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSTRANSCRIBESERVICE_LIBRARY)
+
 add_library(QtAwsTranscribeService
   createlanguagemodelrequest.h
   createlanguagemodelrequest_p.h
@@ -87,6 +89,7 @@ add_library(QtAwsTranscribeService
   listvocabularyfiltersrequest_p.h
   listvocabularyfiltersresponse.h
   listvocabularyfiltersresponse_p.h
+  qtawstranscribeserviceglobal.h
   startmedicaltranscriptionjobrequest.h
   startmedicaltranscriptionjobrequest_p.h
   startmedicaltranscriptionjobresponse.h

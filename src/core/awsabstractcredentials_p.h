@@ -20,7 +20,7 @@
 #ifndef AWSABSTRACTCREDENTIALS_P_H
 #define AWSABSTRACTCREDENTIALS_P_H
 
-#include "qtawsglobal.h"
+#include "qtawscoreglobal.h"
 
 namespace QtAws {
 namespace Core {

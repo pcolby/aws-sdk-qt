@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawskmsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace KMS {
 
 class KmsRequestPrivate;
 
-class QTAWS_EXPORT KmsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSKMS_EXPORT KmsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by KMS.

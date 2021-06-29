@@ -28,7 +28,7 @@ namespace Snowball {
 
 class UpdateJobShipmentStateResponsePrivate;
 
-class QTAWS_EXPORT UpdateJobShipmentStateResponse : public SnowballResponse {
+class QTAWSSNOWBALL_EXPORT UpdateJobShipmentStateResponse : public SnowballResponse {
     Q_OBJECT
 
 public:

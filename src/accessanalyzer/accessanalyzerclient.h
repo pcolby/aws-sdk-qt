@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsaccessanalyzerglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -85,7 +87,7 @@ class UpdateFindingsResponse;
 class ValidatePolicyRequest;
 class ValidatePolicyResponse;
 
-class QTAWS_EXPORT AccessAnalyzerClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSACCESSANALYZER_EXPORT AccessAnalyzerClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCLOUDWATCH_LIBRARY)
+
 add_library(QtAwsCloudWatch
   cloudwatchclient.h
   cloudwatchclient_p.h
@@ -129,6 +131,7 @@ add_library(QtAwsCloudWatch
   putmetricstreamrequest_p.h
   putmetricstreamresponse.h
   putmetricstreamresponse_p.h
+  qtawscloudwatchglobal.h
   setalarmstaterequest.h
   setalarmstaterequest_p.h
   setalarmstateresponse.h

@@ -27,7 +27,7 @@ namespace AmplifyBackend {
 
 class CreateBackendConfigRequestPrivate;
 
-class QTAWS_EXPORT CreateBackendConfigRequest : public AmplifyBackendRequest {
+class QTAWSAMPLIFYBACKEND_EXPORT CreateBackendConfigRequest : public AmplifyBackendRequest {
 
 public:
     CreateBackendConfigRequest(const CreateBackendConfigRequest &other);

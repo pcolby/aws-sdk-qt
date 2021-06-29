@@ -28,7 +28,7 @@ namespace IAM {
 
 class GetAccountAuthorizationDetailsResponsePrivate;
 
-class QTAWS_EXPORT GetAccountAuthorizationDetailsResponse : public IamResponse {
+class QTAWSIAM_EXPORT GetAccountAuthorizationDetailsResponse : public IamResponse {
     Q_OBJECT
 
 public:

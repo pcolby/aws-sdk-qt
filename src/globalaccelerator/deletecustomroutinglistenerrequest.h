@@ -27,7 +27,7 @@ namespace GlobalAccelerator {
 
 class DeleteCustomRoutingListenerRequestPrivate;
 
-class QTAWS_EXPORT DeleteCustomRoutingListenerRequest : public GlobalAcceleratorRequest {
+class QTAWSGLOBALACCELERATOR_EXPORT DeleteCustomRoutingListenerRequest : public GlobalAcceleratorRequest {
 
 public:
     DeleteCustomRoutingListenerRequest(const DeleteCustomRoutingListenerRequest &other);

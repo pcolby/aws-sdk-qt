@@ -27,7 +27,7 @@ namespace Personalize {
 
 class GetSolutionMetricsRequestPrivate;
 
-class QTAWS_EXPORT GetSolutionMetricsRequest : public PersonalizeRequest {
+class QTAWSPERSONALIZE_EXPORT GetSolutionMetricsRequest : public PersonalizeRequest {
 
 public:
     GetSolutionMetricsRequest(const GetSolutionMetricsRequest &other);

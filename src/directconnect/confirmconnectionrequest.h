@@ -27,7 +27,7 @@ namespace DirectConnect {
 
 class ConfirmConnectionRequestPrivate;
 
-class QTAWS_EXPORT ConfirmConnectionRequest : public DirectConnectRequest {
+class QTAWSDIRECTCONNECT_EXPORT ConfirmConnectionRequest : public DirectConnectRequest {
 
 public:
     ConfirmConnectionRequest(const ConfirmConnectionRequest &other);

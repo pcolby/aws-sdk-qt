@@ -27,7 +27,7 @@ namespace DynamoDB {
 
 class DeleteBackupRequestPrivate;
 
-class QTAWS_EXPORT DeleteBackupRequest : public DynamoDBRequest {
+class QTAWSDYNAMODB_EXPORT DeleteBackupRequest : public DynamoDBRequest {
 
 public:
     DeleteBackupRequest(const DeleteBackupRequest &other);

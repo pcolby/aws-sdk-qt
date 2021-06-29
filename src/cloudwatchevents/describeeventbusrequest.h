@@ -27,7 +27,7 @@ namespace CloudWatchEvents {
 
 class DescribeEventBusRequestPrivate;
 
-class QTAWS_EXPORT DescribeEventBusRequest : public CloudWatchEventsRequest {
+class QTAWSCLOUDWATCHEVENTS_EXPORT DescribeEventBusRequest : public CloudWatchEventsRequest {
 
 public:
     DescribeEventBusRequest(const DescribeEventBusRequest &other);

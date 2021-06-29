@@ -28,7 +28,7 @@ namespace Braket {
 
 class GetDeviceResponsePrivate;
 
-class QTAWS_EXPORT GetDeviceResponse : public BraketResponse {
+class QTAWSBRAKET_EXPORT GetDeviceResponse : public BraketResponse {
     Q_OBJECT
 
 public:

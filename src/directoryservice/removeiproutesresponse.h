@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class RemoveIpRoutesResponsePrivate;
 
-class QTAWS_EXPORT RemoveIpRoutesResponse : public DirectoryServiceResponse {
+class QTAWSDIRECTORYSERVICE_EXPORT RemoveIpRoutesResponse : public DirectoryServiceResponse {
     Q_OBJECT
 
 public:

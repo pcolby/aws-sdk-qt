@@ -27,7 +27,7 @@ namespace EC2 {
 
 class AssociateIamInstanceProfileRequestPrivate;
 
-class QTAWS_EXPORT AssociateIamInstanceProfileRequest : public Ec2Request {
+class QTAWSEC2_EXPORT AssociateIamInstanceProfileRequest : public Ec2Request {
 
 public:
     AssociateIamInstanceProfileRequest(const AssociateIamInstanceProfileRequest &other);

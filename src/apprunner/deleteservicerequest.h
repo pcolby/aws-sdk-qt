@@ -27,7 +27,7 @@ namespace AppRunner {
 
 class DeleteServiceRequestPrivate;
 
-class QTAWS_EXPORT DeleteServiceRequest : public AppRunnerRequest {
+class QTAWSAPPRUNNER_EXPORT DeleteServiceRequest : public AppRunnerRequest {
 
 public:
     DeleteServiceRequest(const DeleteServiceRequest &other);

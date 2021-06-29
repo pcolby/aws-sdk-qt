@@ -28,7 +28,7 @@ namespace IoTEvents {
 
 class DeleteAlarmModelResponsePrivate;
 
-class QTAWS_EXPORT DeleteAlarmModelResponse : public IoTEventsResponse {
+class QTAWSIOTEVENTS_EXPORT DeleteAlarmModelResponse : public IoTEventsResponse {
     Q_OBJECT
 
 public:

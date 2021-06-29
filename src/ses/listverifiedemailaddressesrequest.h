@@ -27,7 +27,7 @@ namespace SES {
 
 class ListVerifiedEmailAddressesRequestPrivate;
 
-class QTAWS_EXPORT ListVerifiedEmailAddressesRequest : public SesRequest {
+class QTAWSSES_EXPORT ListVerifiedEmailAddressesRequest : public SesRequest {
 
 public:
     ListVerifiedEmailAddressesRequest(const ListVerifiedEmailAddressesRequest &other);

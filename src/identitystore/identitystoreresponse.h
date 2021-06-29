@@ -21,6 +21,8 @@
 #define QTAWS_IDENTITYSTORERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsidentitystoreglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace IdentityStore {
 
 class IdentityStoreResponsePrivate;
 
-class QTAWS_EXPORT IdentityStoreResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSIDENTITYSTORE_EXPORT IdentityStoreResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

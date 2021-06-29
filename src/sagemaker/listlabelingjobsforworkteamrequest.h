@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class ListLabelingJobsForWorkteamRequestPrivate;
 
-class QTAWS_EXPORT ListLabelingJobsForWorkteamRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT ListLabelingJobsForWorkteamRequest : public SageMakerRequest {
 
 public:
     ListLabelingJobsForWorkteamRequest(const ListLabelingJobsForWorkteamRequest &other);

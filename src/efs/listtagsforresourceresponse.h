@@ -28,7 +28,7 @@ namespace EFS {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public EfsResponse {
+class QTAWSEFS_EXPORT ListTagsForResourceResponse : public EfsResponse {
     Q_OBJECT
 
 public:

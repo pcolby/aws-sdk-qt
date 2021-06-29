@@ -27,7 +27,7 @@ namespace MediaStoreData {
 
 class PutObjectRequestPrivate;
 
-class QTAWS_EXPORT PutObjectRequest : public MediaStoreDataRequest {
+class QTAWSMEDIASTOREDATA_EXPORT PutObjectRequest : public MediaStoreDataRequest {
 
 public:
     PutObjectRequest(const PutObjectRequest &other);

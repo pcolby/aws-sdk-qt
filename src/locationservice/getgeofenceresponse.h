@@ -28,7 +28,7 @@ namespace LocationService {
 
 class GetGeofenceResponsePrivate;
 
-class QTAWS_EXPORT GetGeofenceResponse : public LocationServiceResponse {
+class QTAWSLOCATIONSERVICE_EXPORT GetGeofenceResponse : public LocationServiceResponse {
     Q_OBJECT
 
 public:

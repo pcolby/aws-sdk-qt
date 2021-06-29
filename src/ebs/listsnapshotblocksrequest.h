@@ -27,7 +27,7 @@ namespace EBS {
 
 class ListSnapshotBlocksRequestPrivate;
 
-class QTAWS_EXPORT ListSnapshotBlocksRequest : public EbsRequest {
+class QTAWSEBS_EXPORT ListSnapshotBlocksRequest : public EbsRequest {
 
 public:
     ListSnapshotBlocksRequest(const ListSnapshotBlocksRequest &other);

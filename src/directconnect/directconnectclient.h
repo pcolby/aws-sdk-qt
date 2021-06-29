@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsdirectconnectglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -147,7 +149,7 @@ class UpdateLagResponse;
 class UpdateVirtualInterfaceAttributesRequest;
 class UpdateVirtualInterfaceAttributesResponse;
 
-class QTAWS_EXPORT DirectConnectClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSDIRECTCONNECT_EXPORT DirectConnectClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

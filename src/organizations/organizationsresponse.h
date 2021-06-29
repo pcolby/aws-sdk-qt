@@ -21,6 +21,8 @@
 #define QTAWS_ORGANIZATIONSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsorganizationsglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Organizations {
 
 class OrganizationsResponsePrivate;
 
-class QTAWS_EXPORT OrganizationsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSORGANIZATIONS_EXPORT OrganizationsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

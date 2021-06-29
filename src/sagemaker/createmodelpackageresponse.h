@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class CreateModelPackageResponsePrivate;
 
-class QTAWS_EXPORT CreateModelPackageResponse : public SageMakerResponse {
+class QTAWSSAGEMAKER_EXPORT CreateModelPackageResponse : public SageMakerResponse {
     Q_OBJECT
 
 public:

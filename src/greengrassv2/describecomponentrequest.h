@@ -27,7 +27,7 @@ namespace GreengrassV2 {
 
 class DescribeComponentRequestPrivate;
 
-class QTAWS_EXPORT DescribeComponentRequest : public GreengrassV2Request {
+class QTAWSGREENGRASSV2_EXPORT DescribeComponentRequest : public GreengrassV2Request {
 
 public:
     DescribeComponentRequest(const DescribeComponentRequest &other);

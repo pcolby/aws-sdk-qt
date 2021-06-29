@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class ListSchemaExtensionsRequestPrivate;
 
-class QTAWS_EXPORT ListSchemaExtensionsRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT ListSchemaExtensionsRequest : public DirectoryServiceRequest {
 
 public:
     ListSchemaExtensionsRequest(const ListSchemaExtensionsRequest &other);

@@ -28,7 +28,7 @@ namespace CloudHSMV2 {
 
 class ModifyBackupAttributesResponsePrivate;
 
-class QTAWS_EXPORT ModifyBackupAttributesResponse : public CloudHSMV2Response {
+class QTAWSCLOUDHSMV2_EXPORT ModifyBackupAttributesResponse : public CloudHSMV2Response {
     Q_OBJECT
 
 public:

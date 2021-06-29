@@ -28,7 +28,7 @@ namespace imagebuilder {
 
 class DeleteComponentResponsePrivate;
 
-class QTAWS_EXPORT DeleteComponentResponse : public imagebuilderResponse {
+class QTAWSIMAGEBUILDER_EXPORT DeleteComponentResponse : public imagebuilderResponse {
     Q_OBJECT
 
 public:

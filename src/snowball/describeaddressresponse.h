@@ -28,7 +28,7 @@ namespace Snowball {
 
 class DescribeAddressResponsePrivate;
 
-class QTAWS_EXPORT DescribeAddressResponse : public SnowballResponse {
+class QTAWSSNOWBALL_EXPORT DescribeAddressResponse : public SnowballResponse {
     Q_OBJECT
 
 public:

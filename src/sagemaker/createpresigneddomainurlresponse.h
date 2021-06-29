@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class CreatePresignedDomainUrlResponsePrivate;
 
-class QTAWS_EXPORT CreatePresignedDomainUrlResponse : public SageMakerResponse {
+class QTAWSSAGEMAKER_EXPORT CreatePresignedDomainUrlResponse : public SageMakerResponse {
     Q_OBJECT
 
 public:

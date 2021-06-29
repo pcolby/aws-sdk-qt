@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ExportClientVpnClientConfigurationRequestPrivate;
 
-class QTAWS_EXPORT ExportClientVpnClientConfigurationRequest : public Ec2Request {
+class QTAWSEC2_EXPORT ExportClientVpnClientConfigurationRequest : public Ec2Request {
 
 public:
     ExportClientVpnClientConfigurationRequest(const ExportClientVpnClientConfigurationRequest &other);

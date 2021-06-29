@@ -28,7 +28,7 @@ namespace Transfer {
 
 class DeleteServerResponsePrivate;
 
-class QTAWS_EXPORT DeleteServerResponse : public TransferResponse {
+class QTAWSTRANSFER_EXPORT DeleteServerResponse : public TransferResponse {
     Q_OBJECT
 
 public:

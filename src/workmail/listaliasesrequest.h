@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class ListAliasesRequestPrivate;
 
-class QTAWS_EXPORT ListAliasesRequest : public WorkMailRequest {
+class QTAWSWORKMAIL_EXPORT ListAliasesRequest : public WorkMailRequest {
 
 public:
     ListAliasesRequest(const ListAliasesRequest &other);

@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class GetReportGroupTrendResponsePrivate;
 
-class QTAWS_EXPORT GetReportGroupTrendResponse : public CodeBuildResponse {
+class QTAWSCODEBUILD_EXPORT GetReportGroupTrendResponse : public CodeBuildResponse {
     Q_OBJECT
 
 public:

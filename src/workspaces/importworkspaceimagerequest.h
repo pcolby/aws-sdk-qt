@@ -27,7 +27,7 @@ namespace WorkSpaces {
 
 class ImportWorkspaceImageRequestPrivate;
 
-class QTAWS_EXPORT ImportWorkspaceImageRequest : public WorkSpacesRequest {
+class QTAWSWORKSPACES_EXPORT ImportWorkspaceImageRequest : public WorkSpacesRequest {
 
 public:
     ImportWorkspaceImageRequest(const ImportWorkspaceImageRequest &other);

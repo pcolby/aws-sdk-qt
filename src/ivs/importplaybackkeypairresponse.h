@@ -28,7 +28,7 @@ namespace IVS {
 
 class ImportPlaybackKeyPairResponsePrivate;
 
-class QTAWS_EXPORT ImportPlaybackKeyPairResponse : public IvsResponse {
+class QTAWSIVS_EXPORT ImportPlaybackKeyPairResponse : public IvsResponse {
     Q_OBJECT
 
 public:

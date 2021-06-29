@@ -27,7 +27,7 @@ namespace CloudWatchEvents {
 
 class DeleteRuleRequestPrivate;
 
-class QTAWS_EXPORT DeleteRuleRequest : public CloudWatchEventsRequest {
+class QTAWSCLOUDWATCHEVENTS_EXPORT DeleteRuleRequest : public CloudWatchEventsRequest {
 
 public:
     DeleteRuleRequest(const DeleteRuleRequest &other);

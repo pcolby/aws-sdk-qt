@@ -27,7 +27,7 @@ namespace WorkSpaces {
 
 class RebootWorkspacesRequestPrivate;
 
-class QTAWS_EXPORT RebootWorkspacesRequest : public WorkSpacesRequest {
+class QTAWSWORKSPACES_EXPORT RebootWorkspacesRequest : public WorkSpacesRequest {
 
 public:
     RebootWorkspacesRequest(const RebootWorkspacesRequest &other);

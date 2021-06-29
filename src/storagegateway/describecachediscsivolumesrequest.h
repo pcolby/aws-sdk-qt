@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class DescribeCachediSCSIVolumesRequestPrivate;
 
-class QTAWS_EXPORT DescribeCachediSCSIVolumesRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT DescribeCachediSCSIVolumesRequest : public StorageGatewayRequest {
 
 public:
     DescribeCachediSCSIVolumesRequest(const DescribeCachediSCSIVolumesRequest &other);

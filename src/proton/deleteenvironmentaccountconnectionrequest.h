@@ -27,7 +27,7 @@ namespace Proton {
 
 class DeleteEnvironmentAccountConnectionRequestPrivate;
 
-class QTAWS_EXPORT DeleteEnvironmentAccountConnectionRequest : public ProtonRequest {
+class QTAWSPROTON_EXPORT DeleteEnvironmentAccountConnectionRequest : public ProtonRequest {
 
 public:
     DeleteEnvironmentAccountConnectionRequest(const DeleteEnvironmentAccountConnectionRequest &other);

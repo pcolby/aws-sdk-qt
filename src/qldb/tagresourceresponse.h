@@ -28,7 +28,7 @@ namespace QLDB {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public QldbResponse {
+class QTAWSQLDB_EXPORT TagResourceResponse : public QldbResponse {
     Q_OBJECT
 
 public:

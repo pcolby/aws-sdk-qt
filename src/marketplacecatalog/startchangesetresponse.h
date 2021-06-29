@@ -28,7 +28,7 @@ namespace MarketplaceCatalog {
 
 class StartChangeSetResponsePrivate;
 
-class QTAWS_EXPORT StartChangeSetResponse : public MarketplaceCatalogResponse {
+class QTAWSMARKETPLACECATALOG_EXPORT StartChangeSetResponse : public MarketplaceCatalogResponse {
     Q_OBJECT
 
 public:

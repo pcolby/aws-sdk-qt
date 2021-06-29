@@ -27,7 +27,7 @@ namespace Appflow {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public AppflowRequest {
+class QTAWSAPPFLOW_EXPORT ListTagsForResourceRequest : public AppflowRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

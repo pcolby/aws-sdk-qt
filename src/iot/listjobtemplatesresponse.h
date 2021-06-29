@@ -28,7 +28,7 @@ namespace IoT {
 
 class ListJobTemplatesResponsePrivate;
 
-class QTAWS_EXPORT ListJobTemplatesResponse : public IoTResponse {
+class QTAWSIOT_EXPORT ListJobTemplatesResponse : public IoTResponse {
     Q_OBJECT
 
 public:

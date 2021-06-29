@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class ApplySchemaRequestPrivate;
 
-class QTAWS_EXPORT ApplySchemaRequest : public CloudDirectoryRequest {
+class QTAWSCLOUDDIRECTORY_EXPORT ApplySchemaRequest : public CloudDirectoryRequest {
 
 public:
     ApplySchemaRequest(const ApplySchemaRequest &other);

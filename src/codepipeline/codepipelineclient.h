@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawscodepipelineglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -107,7 +109,7 @@ class UpdateActionTypeResponse;
 class UpdatePipelineRequest;
 class UpdatePipelineResponse;
 
-class QTAWS_EXPORT CodePipelineClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCODEPIPELINE_EXPORT CodePipelineClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

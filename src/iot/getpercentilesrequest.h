@@ -27,7 +27,7 @@ namespace IoT {
 
 class GetPercentilesRequestPrivate;
 
-class QTAWS_EXPORT GetPercentilesRequest : public IoTRequest {
+class QTAWSIOT_EXPORT GetPercentilesRequest : public IoTRequest {
 
 public:
     GetPercentilesRequest(const GetPercentilesRequest &other);

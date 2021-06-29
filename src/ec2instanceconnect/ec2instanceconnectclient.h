@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsec2instanceconnectglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -33,7 +35,7 @@ class SendSSHPublicKeyResponse;
 class SendSerialConsoleSSHPublicKeyRequest;
 class SendSerialConsoleSSHPublicKeyResponse;
 
-class QTAWS_EXPORT EC2InstanceConnectClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSEC2INSTANCECONNECT_EXPORT EC2InstanceConnectClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

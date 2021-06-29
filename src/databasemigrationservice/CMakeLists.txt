@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSDATABASEMIGRATIONSERVICE_LIBRARY)
+
 add_library(QtAwsDatabaseMigrationService
   addtagstoresourcerequest.h
   addtagstoresourcerequest_p.h
@@ -189,6 +191,7 @@ add_library(QtAwsDatabaseMigrationService
   movereplicationtaskrequest_p.h
   movereplicationtaskresponse.h
   movereplicationtaskresponse_p.h
+  qtawsdatabasemigrationserviceglobal.h
   rebootreplicationinstancerequest.h
   rebootreplicationinstancerequest_p.h
   rebootreplicationinstanceresponse.h

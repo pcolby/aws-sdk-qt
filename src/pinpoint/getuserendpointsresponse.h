@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class GetUserEndpointsResponsePrivate;
 
-class QTAWS_EXPORT GetUserEndpointsResponse : public PinpointResponse {
+class QTAWSPINPOINT_EXPORT GetUserEndpointsResponse : public PinpointResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace EKS {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public EksResponse {
+class QTAWSEKS_EXPORT TagResourceResponse : public EksResponse {
     Q_OBJECT
 
 public:

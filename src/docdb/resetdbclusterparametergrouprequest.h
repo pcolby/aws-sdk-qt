@@ -27,7 +27,7 @@ namespace DocDB {
 
 class ResetDBClusterParameterGroupRequestPrivate;
 
-class QTAWS_EXPORT ResetDBClusterParameterGroupRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT ResetDBClusterParameterGroupRequest : public DocDBRequest {
 
 public:
     ResetDBClusterParameterGroupRequest(const ResetDBClusterParameterGroupRequest &other);

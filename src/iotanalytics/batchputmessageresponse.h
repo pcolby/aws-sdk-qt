@@ -28,7 +28,7 @@ namespace IoTAnalytics {
 
 class BatchPutMessageResponsePrivate;
 
-class QTAWS_EXPORT BatchPutMessageResponse : public IoTAnalyticsResponse {
+class QTAWSIOTANALYTICS_EXPORT BatchPutMessageResponse : public IoTAnalyticsResponse {
     Q_OBJECT
 
 public:

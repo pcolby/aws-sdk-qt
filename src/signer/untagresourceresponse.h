@@ -28,7 +28,7 @@ namespace signer {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public signerResponse {
+class QTAWSSIGNER_EXPORT UntagResourceResponse : public signerResponse {
     Q_OBJECT
 
 public:

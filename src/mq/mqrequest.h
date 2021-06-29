@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsmqglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace MQ {
 
 class MqRequestPrivate;
 
-class QTAWS_EXPORT MqRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSMQ_EXPORT MqRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by MQ.

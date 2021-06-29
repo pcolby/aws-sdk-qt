@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public OpsWorksCMResponse {
+class QTAWSOPSWORKSCM_EXPORT ListTagsForResourceResponse : public OpsWorksCMResponse {
     Q_OBJECT
 
 public:

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSELASTICTRANSCODER_LIBRARY)
+
 add_library(QtAwsElasticTranscoder
   canceljobrequest.h
   canceljobrequest_p.h
@@ -45,6 +47,7 @@ add_library(QtAwsElasticTranscoder
   listpresetsrequest_p.h
   listpresetsresponse.h
   listpresetsresponse_p.h
+  qtawselastictranscoderglobal.h
   readjobrequest.h
   readjobrequest_p.h
   readjobresponse.h

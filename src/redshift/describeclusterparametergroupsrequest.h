@@ -27,7 +27,7 @@ namespace Redshift {
 
 class DescribeClusterParameterGroupsRequestPrivate;
 
-class QTAWS_EXPORT DescribeClusterParameterGroupsRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT DescribeClusterParameterGroupsRequest : public RedshiftRequest {
 
 public:
     DescribeClusterParameterGroupsRequest(const DescribeClusterParameterGroupsRequest &other);

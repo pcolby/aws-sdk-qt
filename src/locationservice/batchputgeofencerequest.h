@@ -27,7 +27,7 @@ namespace LocationService {
 
 class BatchPutGeofenceRequestPrivate;
 
-class QTAWS_EXPORT BatchPutGeofenceRequest : public LocationServiceRequest {
+class QTAWSLOCATIONSERVICE_EXPORT BatchPutGeofenceRequest : public LocationServiceRequest {
 
 public:
     BatchPutGeofenceRequest(const BatchPutGeofenceRequest &other);

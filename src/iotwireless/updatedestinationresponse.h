@@ -28,7 +28,7 @@ namespace IoTWireless {
 
 class UpdateDestinationResponsePrivate;
 
-class QTAWS_EXPORT UpdateDestinationResponse : public IoTWirelessResponse {
+class QTAWSIOTWIRELESS_EXPORT UpdateDestinationResponse : public IoTWirelessResponse {
     Q_OBJECT
 
 public:

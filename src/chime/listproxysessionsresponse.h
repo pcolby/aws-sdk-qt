@@ -28,7 +28,7 @@ namespace Chime {
 
 class ListProxySessionsResponsePrivate;
 
-class QTAWS_EXPORT ListProxySessionsResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT ListProxySessionsResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

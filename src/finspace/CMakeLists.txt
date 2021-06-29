@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSFINSPACE_LIBRARY)
+
 add_library(QtAwsfinspace
   createenvironmentrequest.h
   createenvironmentrequest_p.h
@@ -25,6 +27,7 @@ add_library(QtAwsfinspace
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsfinspaceglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

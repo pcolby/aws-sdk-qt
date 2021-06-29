@@ -27,7 +27,7 @@ namespace Comprehend {
 
 class DeleteEntityRecognizerRequestPrivate;
 
-class QTAWS_EXPORT DeleteEntityRecognizerRequest : public ComprehendRequest {
+class QTAWSCOMPREHEND_EXPORT DeleteEntityRecognizerRequest : public ComprehendRequest {
 
 public:
     DeleteEntityRecognizerRequest(const DeleteEntityRecognizerRequest &other);

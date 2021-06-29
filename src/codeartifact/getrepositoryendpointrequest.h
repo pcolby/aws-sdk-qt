@@ -27,7 +27,7 @@ namespace CodeArtifact {
 
 class GetRepositoryEndpointRequestPrivate;
 
-class QTAWS_EXPORT GetRepositoryEndpointRequest : public CodeArtifactRequest {
+class QTAWSCODEARTIFACT_EXPORT GetRepositoryEndpointRequest : public CodeArtifactRequest {
 
 public:
     GetRepositoryEndpointRequest(const GetRepositoryEndpointRequest &other);

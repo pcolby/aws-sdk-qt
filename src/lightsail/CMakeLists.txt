@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSLIGHTSAIL_LIBRARY)
+
 add_library(QtAwsLightsail
   allocatestaticiprequest.h
   allocatestaticiprequest_p.h
@@ -485,6 +487,7 @@ add_library(QtAwsLightsail
   putinstancepublicportsrequest_p.h
   putinstancepublicportsresponse.h
   putinstancepublicportsresponse_p.h
+  qtawslightsailglobal.h
   rebootinstancerequest.h
   rebootinstancerequest_p.h
   rebootinstanceresponse.h

@@ -28,7 +28,7 @@ namespace SSOAdmin {
 
 class ListPermissionSetsProvisionedToAccountResponsePrivate;
 
-class QTAWS_EXPORT ListPermissionSetsProvisionedToAccountResponse : public SSOAdminResponse {
+class QTAWSSSOADMIN_EXPORT ListPermissionSetsProvisionedToAccountResponse : public SSOAdminResponse {
     Q_OBJECT
 
 public:

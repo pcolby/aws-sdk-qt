@@ -27,7 +27,7 @@ namespace Rekognition {
 
 class GetCelebrityInfoRequestPrivate;
 
-class QTAWS_EXPORT GetCelebrityInfoRequest : public RekognitionRequest {
+class QTAWSREKOGNITION_EXPORT GetCelebrityInfoRequest : public RekognitionRequest {
 
 public:
     GetCelebrityInfoRequest(const GetCelebrityInfoRequest &other);

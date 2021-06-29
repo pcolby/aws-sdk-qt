@@ -27,7 +27,7 @@ namespace SFN {
 
 class DescribeExecutionRequestPrivate;
 
-class QTAWS_EXPORT DescribeExecutionRequest : public SfnRequest {
+class QTAWSSFN_EXPORT DescribeExecutionRequest : public SfnRequest {
 
 public:
     DescribeExecutionRequest(const DescribeExecutionRequest &other);

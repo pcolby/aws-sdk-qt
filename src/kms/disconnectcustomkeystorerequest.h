@@ -27,7 +27,7 @@ namespace KMS {
 
 class DisconnectCustomKeyStoreRequestPrivate;
 
-class QTAWS_EXPORT DisconnectCustomKeyStoreRequest : public KmsRequest {
+class QTAWSKMS_EXPORT DisconnectCustomKeyStoreRequest : public KmsRequest {
 
 public:
     DisconnectCustomKeyStoreRequest(const DisconnectCustomKeyStoreRequest &other);

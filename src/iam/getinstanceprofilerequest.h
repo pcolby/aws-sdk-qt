@@ -27,7 +27,7 @@ namespace IAM {
 
 class GetInstanceProfileRequestPrivate;
 
-class QTAWS_EXPORT GetInstanceProfileRequest : public IamRequest {
+class QTAWSIAM_EXPORT GetInstanceProfileRequest : public IamRequest {
 
 public:
     GetInstanceProfileRequest(const GetInstanceProfileRequest &other);

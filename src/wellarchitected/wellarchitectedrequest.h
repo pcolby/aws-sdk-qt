@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawswellarchitectedglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace WellArchitected {
 
 class WellArchitectedRequestPrivate;
 
-class QTAWS_EXPORT WellArchitectedRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSWELLARCHITECTED_EXPORT WellArchitectedRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by WellArchitected.

@@ -28,7 +28,7 @@ namespace AppMesh {
 
 class CreateVirtualRouterResponsePrivate;
 
-class QTAWS_EXPORT CreateVirtualRouterResponse : public AppMeshResponse {
+class QTAWSAPPMESH_EXPORT CreateVirtualRouterResponse : public AppMeshResponse {
     Q_OBJECT
 
 public:

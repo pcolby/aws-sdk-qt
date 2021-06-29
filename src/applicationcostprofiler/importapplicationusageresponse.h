@@ -28,7 +28,7 @@ namespace ApplicationCostProfiler {
 
 class ImportApplicationUsageResponsePrivate;
 
-class QTAWS_EXPORT ImportApplicationUsageResponse : public ApplicationCostProfilerResponse {
+class QTAWSAPPLICATIONCOSTPROFILER_EXPORT ImportApplicationUsageResponse : public ApplicationCostProfilerResponse {
     Q_OBJECT
 
 public:

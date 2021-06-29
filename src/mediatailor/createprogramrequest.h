@@ -27,7 +27,7 @@ namespace MediaTailor {
 
 class CreateProgramRequestPrivate;
 
-class QTAWS_EXPORT CreateProgramRequest : public MediaTailorRequest {
+class QTAWSMEDIATAILOR_EXPORT CreateProgramRequest : public MediaTailorRequest {
 
 public:
     CreateProgramRequest(const CreateProgramRequest &other);

@@ -28,7 +28,7 @@ namespace ApiGatewayV2 {
 
 class CreateIntegrationResponsePrivate;
 
-class QTAWS_EXPORT CreateIntegrationResponse : public ApiGatewayV2Response {
+class QTAWSAPIGATEWAYV2_EXPORT CreateIntegrationResponse : public ApiGatewayV2Response {
     Q_OBJECT
 
 public:

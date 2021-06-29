@@ -27,7 +27,7 @@ namespace WAFV2 {
 
 class ListRuleGroupsRequestPrivate;
 
-class QTAWS_EXPORT ListRuleGroupsRequest : public Wafv2Request {
+class QTAWSWAFV2_EXPORT ListRuleGroupsRequest : public Wafv2Request {
 
 public:
     ListRuleGroupsRequest(const ListRuleGroupsRequest &other);

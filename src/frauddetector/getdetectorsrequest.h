@@ -27,7 +27,7 @@ namespace FraudDetector {
 
 class GetDetectorsRequestPrivate;
 
-class QTAWS_EXPORT GetDetectorsRequest : public FraudDetectorRequest {
+class QTAWSFRAUDDETECTOR_EXPORT GetDetectorsRequest : public FraudDetectorRequest {
 
 public:
     GetDetectorsRequest(const GetDetectorsRequest &other);

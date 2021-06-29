@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class ListTapePoolsRequestPrivate;
 
-class QTAWS_EXPORT ListTapePoolsRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT ListTapePoolsRequest : public StorageGatewayRequest {
 
 public:
     ListTapePoolsRequest(const ListTapePoolsRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsappconfigglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -95,7 +97,7 @@ class UpdateEnvironmentResponse;
 class ValidateConfigurationRequest;
 class ValidateConfigurationResponse;
 
-class QTAWS_EXPORT AppConfigClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSAPPCONFIG_EXPORT AppConfigClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

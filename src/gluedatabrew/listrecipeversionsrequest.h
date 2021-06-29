@@ -27,7 +27,7 @@ namespace GlueDataBrew {
 
 class ListRecipeVersionsRequestPrivate;
 
-class QTAWS_EXPORT ListRecipeVersionsRequest : public GlueDataBrewRequest {
+class QTAWSGLUEDATABREW_EXPORT ListRecipeVersionsRequest : public GlueDataBrewRequest {
 
 public:
     ListRecipeVersionsRequest(const ListRecipeVersionsRequest &other);

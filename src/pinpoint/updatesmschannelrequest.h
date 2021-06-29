@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class UpdateSmsChannelRequestPrivate;
 
-class QTAWS_EXPORT UpdateSmsChannelRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT UpdateSmsChannelRequest : public PinpointRequest {
 
 public:
     UpdateSmsChannelRequest(const UpdateSmsChannelRequest &other);

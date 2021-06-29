@@ -27,7 +27,7 @@ namespace DynamoDB {
 
 class UpdateGlobalTableRequestPrivate;
 
-class QTAWS_EXPORT UpdateGlobalTableRequest : public DynamoDBRequest {
+class QTAWSDYNAMODB_EXPORT UpdateGlobalTableRequest : public DynamoDBRequest {
 
 public:
     UpdateGlobalTableRequest(const UpdateGlobalTableRequest &other);

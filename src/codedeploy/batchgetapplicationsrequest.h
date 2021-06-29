@@ -27,7 +27,7 @@ namespace CodeDeploy {
 
 class BatchGetApplicationsRequestPrivate;
 
-class QTAWS_EXPORT BatchGetApplicationsRequest : public CodeDeployRequest {
+class QTAWSCODEDEPLOY_EXPORT BatchGetApplicationsRequest : public CodeDeployRequest {
 
 public:
     BatchGetApplicationsRequest(const BatchGetApplicationsRequest &other);

@@ -28,7 +28,7 @@ namespace IAM {
 
 class TagSAMLProviderResponsePrivate;
 
-class QTAWS_EXPORT TagSAMLProviderResponse : public IamResponse {
+class QTAWSIAM_EXPORT TagSAMLProviderResponse : public IamResponse {
     Q_OBJECT
 
 public:

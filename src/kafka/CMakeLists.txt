@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSKAFKA_LIBRARY)
+
 add_library(QtAwsKafka
   batchassociatescramsecretrequest.h
   batchassociatescramsecretrequest_p.h
@@ -85,6 +87,7 @@ add_library(QtAwsKafka
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawskafkaglobal.h
   rebootbrokerrequest.h
   rebootbrokerrequest_p.h
   rebootbrokerresponse.h

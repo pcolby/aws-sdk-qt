@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsforecastqueryserviceglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace ForecastQueryService {
 
 class ForecastQueryServiceRequestPrivate;
 
-class QTAWS_EXPORT ForecastQueryServiceRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSFORECASTQUERYSERVICE_EXPORT ForecastQueryServiceRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ForecastQueryService.

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsmarketplacemeteringglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -37,7 +39,7 @@ class RegisterUsageResponse;
 class ResolveCustomerRequest;
 class ResolveCustomerResponse;
 
-class QTAWS_EXPORT MarketplaceMeteringClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSMARKETPLACEMETERING_EXPORT MarketplaceMeteringClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

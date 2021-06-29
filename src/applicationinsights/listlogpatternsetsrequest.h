@@ -27,7 +27,7 @@ namespace ApplicationInsights {
 
 class ListLogPatternSetsRequestPrivate;
 
-class QTAWS_EXPORT ListLogPatternSetsRequest : public ApplicationInsightsRequest {
+class QTAWSAPPLICATIONINSIGHTS_EXPORT ListLogPatternSetsRequest : public ApplicationInsightsRequest {
 
 public:
     ListLogPatternSetsRequest(const ListLogPatternSetsRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsschemasglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Schemas {
 
 class SchemasRequestPrivate;
 
-class QTAWS_EXPORT SchemasRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSCHEMAS_EXPORT SchemasRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Schemas.

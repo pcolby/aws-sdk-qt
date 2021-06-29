@@ -21,6 +21,8 @@
 #define QTAWS_SWFRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsswfglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace SWF {
 
 class SwfResponsePrivate;
 
-class QTAWS_EXPORT SwfResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSWF_EXPORT SwfResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

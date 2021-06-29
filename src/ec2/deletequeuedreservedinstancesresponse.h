@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteQueuedReservedInstancesResponsePrivate;
 
-class QTAWS_EXPORT DeleteQueuedReservedInstancesResponse : public Ec2Response {
+class QTAWSEC2_EXPORT DeleteQueuedReservedInstancesResponse : public Ec2Response {
     Q_OBJECT
 
 public:

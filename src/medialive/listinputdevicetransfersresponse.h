@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class ListInputDeviceTransfersResponsePrivate;
 
-class QTAWS_EXPORT ListInputDeviceTransfersResponse : public MediaLiveResponse {
+class QTAWSMEDIALIVE_EXPORT ListInputDeviceTransfersResponse : public MediaLiveResponse {
     Q_OBJECT
 
 public:

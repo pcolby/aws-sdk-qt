@@ -27,7 +27,7 @@ namespace GuardDuty {
 
 class DescribeOrganizationConfigurationRequestPrivate;
 
-class QTAWS_EXPORT DescribeOrganizationConfigurationRequest : public GuardDutyRequest {
+class QTAWSGUARDDUTY_EXPORT DescribeOrganizationConfigurationRequest : public GuardDutyRequest {
 
 public:
     DescribeOrganizationConfigurationRequest(const DescribeOrganizationConfigurationRequest &other);

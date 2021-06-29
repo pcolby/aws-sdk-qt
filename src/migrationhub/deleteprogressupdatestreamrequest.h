@@ -27,7 +27,7 @@ namespace MigrationHub {
 
 class DeleteProgressUpdateStreamRequestPrivate;
 
-class QTAWS_EXPORT DeleteProgressUpdateStreamRequest : public MigrationHubRequest {
+class QTAWSMIGRATIONHUB_EXPORT DeleteProgressUpdateStreamRequest : public MigrationHubRequest {
 
 public:
     DeleteProgressUpdateStreamRequest(const DeleteProgressUpdateStreamRequest &other);

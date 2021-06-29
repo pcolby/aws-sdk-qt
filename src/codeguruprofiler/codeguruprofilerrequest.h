@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawscodeguruprofilerglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace CodeGuruProfiler {
 
 class CodeGuruProfilerRequestPrivate;
 
-class QTAWS_EXPORT CodeGuruProfilerRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCODEGURUPROFILER_EXPORT CodeGuruProfilerRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CodeGuruProfiler.

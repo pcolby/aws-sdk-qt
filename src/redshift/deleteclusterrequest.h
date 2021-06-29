@@ -27,7 +27,7 @@ namespace Redshift {
 
 class DeleteClusterRequestPrivate;
 
-class QTAWS_EXPORT DeleteClusterRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT DeleteClusterRequest : public RedshiftRequest {
 
 public:
     DeleteClusterRequest(const DeleteClusterRequest &other);

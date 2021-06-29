@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeAddressesAttributeResponsePrivate;
 
-class QTAWS_EXPORT DescribeAddressesAttributeResponse : public Ec2Response {
+class QTAWSEC2_EXPORT DescribeAddressesAttributeResponse : public Ec2Response {
     Q_OBJECT
 
 public:

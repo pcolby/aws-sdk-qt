@@ -28,7 +28,7 @@ namespace Glue {
 
 class GetCrawlerMetricsResponsePrivate;
 
-class QTAWS_EXPORT GetCrawlerMetricsResponse : public GlueResponse {
+class QTAWSGLUE_EXPORT GetCrawlerMetricsResponse : public GlueResponse {
     Q_OBJECT
 
 public:

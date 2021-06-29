@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class UpdateEmailTemplateRequestPrivate;
 
-class QTAWS_EXPORT UpdateEmailTemplateRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT UpdateEmailTemplateRequest : public Sesv2Request {
 
 public:
     UpdateEmailTemplateRequest(const UpdateEmailTemplateRequest &other);

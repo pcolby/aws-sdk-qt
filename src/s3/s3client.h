@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawss3global.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -221,7 +223,7 @@ class UploadPartCopyResponse;
 class WriteGetObjectResponseRequest;
 class WriteGetObjectResponseResponse;
 
-class QTAWS_EXPORT S3Client : public QtAws::Core::AwsAbstractClient {
+class QTAWSS3_EXPORT S3Client : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawspricingglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -35,7 +37,7 @@ class GetAttributeValuesResponse;
 class GetProductsRequest;
 class GetProductsResponse;
 
-class QTAWS_EXPORT PricingClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSPRICING_EXPORT PricingClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

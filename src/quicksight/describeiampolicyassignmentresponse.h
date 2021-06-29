@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class DescribeIAMPolicyAssignmentResponsePrivate;
 
-class QTAWS_EXPORT DescribeIAMPolicyAssignmentResponse : public QuickSightResponse {
+class QTAWSQUICKSIGHT_EXPORT DescribeIAMPolicyAssignmentResponse : public QuickSightResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace ServiceQuotas {
 
 class DisassociateServiceQuotaTemplateResponsePrivate;
 
-class QTAWS_EXPORT DisassociateServiceQuotaTemplateResponse : public ServiceQuotasResponse {
+class QTAWSSERVICEQUOTAS_EXPORT DisassociateServiceQuotaTemplateResponse : public ServiceQuotasResponse {
     Q_OBJECT
 
 public:

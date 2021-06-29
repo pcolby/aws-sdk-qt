@@ -27,7 +27,7 @@ namespace S3 {
 
 class DeleteBucketCorsRequestPrivate;
 
-class QTAWS_EXPORT DeleteBucketCorsRequest : public S3Request {
+class QTAWSS3_EXPORT DeleteBucketCorsRequest : public S3Request {
 
 public:
     DeleteBucketCorsRequest(const DeleteBucketCorsRequest &other);

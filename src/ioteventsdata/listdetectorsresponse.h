@@ -28,7 +28,7 @@ namespace IoTEventsData {
 
 class ListDetectorsResponsePrivate;
 
-class QTAWS_EXPORT ListDetectorsResponse : public IoTEventsDataResponse {
+class QTAWSIOTEVENTSDATA_EXPORT ListDetectorsResponse : public IoTEventsDataResponse {
     Q_OBJECT
 
 public:

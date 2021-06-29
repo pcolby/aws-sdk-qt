@@ -27,7 +27,7 @@ namespace Organizations {
 
 class AcceptHandshakeRequestPrivate;
 
-class QTAWS_EXPORT AcceptHandshakeRequest : public OrganizationsRequest {
+class QTAWSORGANIZATIONS_EXPORT AcceptHandshakeRequest : public OrganizationsRequest {
 
 public:
     AcceptHandshakeRequest(const AcceptHandshakeRequest &other);

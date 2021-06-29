@@ -27,7 +27,7 @@ namespace QLDB {
 
 class DeleteLedgerRequestPrivate;
 
-class QTAWS_EXPORT DeleteLedgerRequest : public QldbRequest {
+class QTAWSQLDB_EXPORT DeleteLedgerRequest : public QldbRequest {
 
 public:
     DeleteLedgerRequest(const DeleteLedgerRequest &other);

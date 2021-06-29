@@ -27,7 +27,7 @@ namespace MWAA {
 
 class CreateCliTokenRequestPrivate;
 
-class QTAWS_EXPORT CreateCliTokenRequest : public MwaaRequest {
+class QTAWSMWAA_EXPORT CreateCliTokenRequest : public MwaaRequest {
 
 public:
     CreateCliTokenRequest(const CreateCliTokenRequest &other);

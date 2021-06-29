@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DeleteCustomerGatewayRequestPrivate;
 
-class QTAWS_EXPORT DeleteCustomerGatewayRequest : public Ec2Request {
+class QTAWSEC2_EXPORT DeleteCustomerGatewayRequest : public Ec2Request {
 
 public:
     DeleteCustomerGatewayRequest(const DeleteCustomerGatewayRequest &other);

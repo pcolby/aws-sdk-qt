@@ -28,7 +28,7 @@ namespace EC2 {
 
 class PurchaseScheduledInstancesResponsePrivate;
 
-class QTAWS_EXPORT PurchaseScheduledInstancesResponse : public Ec2Response {
+class QTAWSEC2_EXPORT PurchaseScheduledInstancesResponse : public Ec2Response {
     Q_OBJECT
 
 public:

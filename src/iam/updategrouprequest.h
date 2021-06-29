@@ -27,7 +27,7 @@ namespace IAM {
 
 class UpdateGroupRequestPrivate;
 
-class QTAWS_EXPORT UpdateGroupRequest : public IamRequest {
+class QTAWSIAM_EXPORT UpdateGroupRequest : public IamRequest {
 
 public:
     UpdateGroupRequest(const UpdateGroupRequest &other);

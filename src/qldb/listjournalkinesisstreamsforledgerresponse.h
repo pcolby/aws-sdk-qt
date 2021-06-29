@@ -28,7 +28,7 @@ namespace QLDB {
 
 class ListJournalKinesisStreamsForLedgerResponsePrivate;
 
-class QTAWS_EXPORT ListJournalKinesisStreamsForLedgerResponse : public QldbResponse {
+class QTAWSQLDB_EXPORT ListJournalKinesisStreamsForLedgerResponse : public QldbResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace IAM {
 
 class GetLoginProfileRequestPrivate;
 
-class QTAWS_EXPORT GetLoginProfileRequest : public IamRequest {
+class QTAWSIAM_EXPORT GetLoginProfileRequest : public IamRequest {
 
 public:
     GetLoginProfileRequest(const GetLoginProfileRequest &other);

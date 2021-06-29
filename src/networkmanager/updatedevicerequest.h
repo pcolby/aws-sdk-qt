@@ -27,7 +27,7 @@ namespace NetworkManager {
 
 class UpdateDeviceRequestPrivate;
 
-class QTAWS_EXPORT UpdateDeviceRequest : public NetworkManagerRequest {
+class QTAWSNETWORKMANAGER_EXPORT UpdateDeviceRequest : public NetworkManagerRequest {
 
 public:
     UpdateDeviceRequest(const UpdateDeviceRequest &other);

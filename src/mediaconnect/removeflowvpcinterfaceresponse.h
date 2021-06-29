@@ -28,7 +28,7 @@ namespace MediaConnect {
 
 class RemoveFlowVpcInterfaceResponsePrivate;
 
-class QTAWS_EXPORT RemoveFlowVpcInterfaceResponse : public MediaConnectResponse {
+class QTAWSMEDIACONNECT_EXPORT RemoveFlowVpcInterfaceResponse : public MediaConnectResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace WellArchitected {
 
 class DeleteWorkloadResponsePrivate;
 
-class QTAWS_EXPORT DeleteWorkloadResponse : public WellArchitectedResponse {
+class QTAWSWELLARCHITECTED_EXPORT DeleteWorkloadResponse : public WellArchitectedResponse {
     Q_OBJECT
 
 public:

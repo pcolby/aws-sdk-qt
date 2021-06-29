@@ -28,7 +28,7 @@ namespace SecretsManager {
 
 class PutSecretValueResponsePrivate;
 
-class QTAWS_EXPORT PutSecretValueResponse : public SecretsManagerResponse {
+class QTAWSSECRETSMANAGER_EXPORT PutSecretValueResponse : public SecretsManagerResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace MediaLive {
 
 class UpdateInputRequestPrivate;
 
-class QTAWS_EXPORT UpdateInputRequest : public MediaLiveRequest {
+class QTAWSMEDIALIVE_EXPORT UpdateInputRequest : public MediaLiveRequest {
 
 public:
     UpdateInputRequest(const UpdateInputRequest &other);

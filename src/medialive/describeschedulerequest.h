@@ -27,7 +27,7 @@ namespace MediaLive {
 
 class DescribeScheduleRequestPrivate;
 
-class QTAWS_EXPORT DescribeScheduleRequest : public MediaLiveRequest {
+class QTAWSMEDIALIVE_EXPORT DescribeScheduleRequest : public MediaLiveRequest {
 
 public:
     DescribeScheduleRequest(const DescribeScheduleRequest &other);

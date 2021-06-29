@@ -28,7 +28,7 @@ namespace AppRunner {
 
 class ResumeServiceResponsePrivate;
 
-class QTAWS_EXPORT ResumeServiceResponse : public AppRunnerResponse {
+class QTAWSAPPRUNNER_EXPORT ResumeServiceResponse : public AppRunnerResponse {
     Q_OBJECT
 
 public:

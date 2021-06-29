@@ -28,7 +28,7 @@ namespace kendra {
 
 class DescribeThesaurusResponsePrivate;
 
-class QTAWS_EXPORT DescribeThesaurusResponse : public kendraResponse {
+class QTAWSKENDRA_EXPORT DescribeThesaurusResponse : public kendraResponse {
     Q_OBJECT
 
 public:

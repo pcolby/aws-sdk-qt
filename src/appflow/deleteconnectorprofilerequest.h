@@ -27,7 +27,7 @@ namespace Appflow {
 
 class DeleteConnectorProfileRequestPrivate;
 
-class QTAWS_EXPORT DeleteConnectorProfileRequest : public AppflowRequest {
+class QTAWSAPPFLOW_EXPORT DeleteConnectorProfileRequest : public AppflowRequest {
 
 public:
     DeleteConnectorProfileRequest(const DeleteConnectorProfileRequest &other);

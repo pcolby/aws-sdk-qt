@@ -27,7 +27,7 @@ namespace SavingsPlans {
 
 class DescribeSavingsPlansOfferingsRequestPrivate;
 
-class QTAWS_EXPORT DescribeSavingsPlansOfferingsRequest : public SavingsPlansRequest {
+class QTAWSSAVINGSPLANS_EXPORT DescribeSavingsPlansOfferingsRequest : public SavingsPlansRequest {
 
 public:
     DescribeSavingsPlansOfferingsRequest(const DescribeSavingsPlansOfferingsRequest &other);

@@ -28,7 +28,7 @@ namespace IAM {
 
 class UpdateAccessKeyResponsePrivate;
 
-class QTAWS_EXPORT UpdateAccessKeyResponse : public IamResponse {
+class QTAWSIAM_EXPORT UpdateAccessKeyResponse : public IamResponse {
     Q_OBJECT
 
 public:

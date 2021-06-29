@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class PutEmailIdentityFeedbackAttributesRequestPrivate;
 
-class QTAWS_EXPORT PutEmailIdentityFeedbackAttributesRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT PutEmailIdentityFeedbackAttributesRequest : public Sesv2Request {
 
 public:
     PutEmailIdentityFeedbackAttributesRequest(const PutEmailIdentityFeedbackAttributesRequest &other);

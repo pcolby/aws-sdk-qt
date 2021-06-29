@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class GetInsightResultsResponsePrivate;
 
-class QTAWS_EXPORT GetInsightResultsResponse : public SecurityHubResponse {
+class QTAWSSECURITYHUB_EXPORT GetInsightResultsResponse : public SecurityHubResponse {
     Q_OBJECT
 
 public:

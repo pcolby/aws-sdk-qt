@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class DeleteFileShareRequestPrivate;
 
-class QTAWS_EXPORT DeleteFileShareRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT DeleteFileShareRequest : public StorageGatewayRequest {
 
 public:
     DeleteFileShareRequest(const DeleteFileShareRequest &other);

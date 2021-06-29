@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class GetPublicKeyConfigRequestPrivate;
 
-class QTAWS_EXPORT GetPublicKeyConfigRequest : public CloudFrontRequest {
+class QTAWSCLOUDFRONT_EXPORT GetPublicKeyConfigRequest : public CloudFrontRequest {
 
 public:
     GetPublicKeyConfigRequest(const GetPublicKeyConfigRequest &other);

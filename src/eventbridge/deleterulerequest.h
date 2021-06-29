@@ -27,7 +27,7 @@ namespace EventBridge {
 
 class DeleteRuleRequestPrivate;
 
-class QTAWS_EXPORT DeleteRuleRequest : public EventBridgeRequest {
+class QTAWSEVENTBRIDGE_EXPORT DeleteRuleRequest : public EventBridgeRequest {
 
 public:
     DeleteRuleRequest(const DeleteRuleRequest &other);

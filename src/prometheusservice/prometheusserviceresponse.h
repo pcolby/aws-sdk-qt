@@ -21,6 +21,8 @@
 #define QTAWS_PROMETHEUSSERVICERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsprometheusserviceglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace PrometheusService {
 
 class PrometheusServiceResponsePrivate;
 
-class QTAWS_EXPORT PrometheusServiceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSPROMETHEUSSERVICE_EXPORT PrometheusServiceResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

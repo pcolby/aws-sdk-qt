@@ -28,7 +28,7 @@ namespace Organizations {
 
 class RegisterDelegatedAdministratorResponsePrivate;
 
-class QTAWS_EXPORT RegisterDelegatedAdministratorResponse : public OrganizationsResponse {
+class QTAWSORGANIZATIONS_EXPORT RegisterDelegatedAdministratorResponse : public OrganizationsResponse {
     Q_OBJECT
 
 public:

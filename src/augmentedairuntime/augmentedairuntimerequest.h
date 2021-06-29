@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsaugmentedairuntimeglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace AugmentedAIRuntime {
 
 class AugmentedAIRuntimeRequestPrivate;
 
-class QTAWS_EXPORT AugmentedAIRuntimeRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSAUGMENTEDAIRUNTIME_EXPORT AugmentedAIRuntimeRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by AugmentedAIRuntime.

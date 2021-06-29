@@ -28,7 +28,7 @@ namespace AppConfig {
 
 class ListApplicationsResponsePrivate;
 
-class QTAWS_EXPORT ListApplicationsResponse : public AppConfigResponse {
+class QTAWSAPPCONFIG_EXPORT ListApplicationsResponse : public AppConfigResponse {
     Q_OBJECT
 
 public:

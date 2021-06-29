@@ -28,7 +28,7 @@ namespace AppConfig {
 
 class UpdateDeploymentStrategyResponsePrivate;
 
-class QTAWS_EXPORT UpdateDeploymentStrategyResponse : public AppConfigResponse {
+class QTAWSAPPCONFIG_EXPORT UpdateDeploymentStrategyResponse : public AppConfigResponse {
     Q_OBJECT
 
 public:

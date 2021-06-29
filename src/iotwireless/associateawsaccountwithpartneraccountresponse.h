@@ -28,7 +28,7 @@ namespace IoTWireless {
 
 class AssociateAwsAccountWithPartnerAccountResponsePrivate;
 
-class QTAWS_EXPORT AssociateAwsAccountWithPartnerAccountResponse : public IoTWirelessResponse {
+class QTAWSIOTWIRELESS_EXPORT AssociateAwsAccountWithPartnerAccountResponse : public IoTWirelessResponse {
     Q_OBJECT
 
 public:

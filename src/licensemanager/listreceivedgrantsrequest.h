@@ -27,7 +27,7 @@ namespace LicenseManager {
 
 class ListReceivedGrantsRequestPrivate;
 
-class QTAWS_EXPORT ListReceivedGrantsRequest : public LicenseManagerRequest {
+class QTAWSLICENSEMANAGER_EXPORT ListReceivedGrantsRequest : public LicenseManagerRequest {
 
 public:
     ListReceivedGrantsRequest(const ListReceivedGrantsRequest &other);

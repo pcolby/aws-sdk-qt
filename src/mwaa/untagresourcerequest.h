@@ -27,7 +27,7 @@ namespace MWAA {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public MwaaRequest {
+class QTAWSMWAA_EXPORT UntagResourceRequest : public MwaaRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

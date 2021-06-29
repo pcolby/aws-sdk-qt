@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSAPPFLOW_LIBRARY)
+
 add_library(QtAwsAppflow
   appflowclient.h
   appflowclient_p.h
@@ -53,6 +55,7 @@ add_library(QtAwsAppflow
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsappflowglobal.h
   startflowrequest.h
   startflowrequest_p.h
   startflowresponse.h

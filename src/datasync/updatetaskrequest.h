@@ -27,7 +27,7 @@ namespace DataSync {
 
 class UpdateTaskRequestPrivate;
 
-class QTAWS_EXPORT UpdateTaskRequest : public DataSyncRequest {
+class QTAWSDATASYNC_EXPORT UpdateTaskRequest : public DataSyncRequest {
 
 public:
     UpdateTaskRequest(const UpdateTaskRequest &other);

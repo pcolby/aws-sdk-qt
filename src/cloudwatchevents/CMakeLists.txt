@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCLOUDWATCHEVENTS_LIBRARY)
+
 add_library(QtAwsCloudWatchEvents
   activateeventsourcerequest.h
   activateeventsourcerequest_p.h
@@ -173,6 +175,7 @@ add_library(QtAwsCloudWatchEvents
   puttargetsrequest_p.h
   puttargetsresponse.h
   puttargetsresponse_p.h
+  qtawscloudwatcheventsglobal.h
   removepermissionrequest.h
   removepermissionrequest_p.h
   removepermissionresponse.h

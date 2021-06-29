@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class RebootInstanceRequestPrivate;
 
-class QTAWS_EXPORT RebootInstanceRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT RebootInstanceRequest : public LightsailRequest {
 
 public:
     RebootInstanceRequest(const RebootInstanceRequest &other);

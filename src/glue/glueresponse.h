@@ -21,6 +21,8 @@
 #define QTAWS_GLUERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsglueglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Glue {
 
 class GlueResponsePrivate;
 
-class QTAWS_EXPORT GlueResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSGLUE_EXPORT GlueResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

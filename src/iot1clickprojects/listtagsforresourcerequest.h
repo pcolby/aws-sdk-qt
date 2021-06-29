@@ -27,7 +27,7 @@ namespace IoT1ClickProjects {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public IoT1ClickProjectsRequest {
+class QTAWSIOT1CLICKPROJECTS_EXPORT ListTagsForResourceRequest : public IoT1ClickProjectsRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

@@ -27,7 +27,7 @@ namespace CloudFormation {
 
 class ContinueUpdateRollbackRequestPrivate;
 
-class QTAWS_EXPORT ContinueUpdateRollbackRequest : public CloudFormationRequest {
+class QTAWSCLOUDFORMATION_EXPORT ContinueUpdateRollbackRequest : public CloudFormationRequest {
 
 public:
     ContinueUpdateRollbackRequest(const ContinueUpdateRollbackRequest &other);

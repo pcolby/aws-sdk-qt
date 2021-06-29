@@ -27,7 +27,7 @@ namespace Redshift {
 
 class DescribeClusterSecurityGroupsRequestPrivate;
 
-class QTAWS_EXPORT DescribeClusterSecurityGroupsRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT DescribeClusterSecurityGroupsRequest : public RedshiftRequest {
 
 public:
     DescribeClusterSecurityGroupsRequest(const DescribeClusterSecurityGroupsRequest &other);

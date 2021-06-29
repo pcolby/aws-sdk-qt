@@ -27,7 +27,7 @@ namespace IoTFleetHub {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public IoTFleetHubRequest {
+class QTAWSIOTFLEETHUB_EXPORT UntagResourceRequest : public IoTFleetHubRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

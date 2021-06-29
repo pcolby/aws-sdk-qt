@@ -27,7 +27,7 @@ namespace ElasticLoadBalancingv2 {
 
 class SetIpAddressTypeRequestPrivate;
 
-class QTAWS_EXPORT SetIpAddressTypeRequest : public ElasticLoadBalancingv2Request {
+class QTAWSELASTICLOADBALANCINGV2_EXPORT SetIpAddressTypeRequest : public ElasticLoadBalancingv2Request {
 
 public:
     SetIpAddressTypeRequest(const SetIpAddressTypeRequest &other);

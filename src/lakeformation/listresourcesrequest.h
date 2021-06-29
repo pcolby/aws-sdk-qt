@@ -27,7 +27,7 @@ namespace LakeFormation {
 
 class ListResourcesRequestPrivate;
 
-class QTAWS_EXPORT ListResourcesRequest : public LakeFormationRequest {
+class QTAWSLAKEFORMATION_EXPORT ListResourcesRequest : public LakeFormationRequest {
 
 public:
     ListResourcesRequest(const ListResourcesRequest &other);

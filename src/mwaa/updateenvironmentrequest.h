@@ -27,7 +27,7 @@ namespace MWAA {
 
 class UpdateEnvironmentRequestPrivate;
 
-class QTAWS_EXPORT UpdateEnvironmentRequest : public MwaaRequest {
+class QTAWSMWAA_EXPORT UpdateEnvironmentRequest : public MwaaRequest {
 
 public:
     UpdateEnvironmentRequest(const UpdateEnvironmentRequest &other);

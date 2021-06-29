@@ -27,7 +27,7 @@ namespace RDS {
 
 class DescribeDBSecurityGroupsRequestPrivate;
 
-class QTAWS_EXPORT DescribeDBSecurityGroupsRequest : public RdsRequest {
+class QTAWSRDS_EXPORT DescribeDBSecurityGroupsRequest : public RdsRequest {
 
 public:
     DescribeDBSecurityGroupsRequest(const DescribeDBSecurityGroupsRequest &other);

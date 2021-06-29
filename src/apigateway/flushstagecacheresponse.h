@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class FlushStageCacheResponsePrivate;
 
-class QTAWS_EXPORT FlushStageCacheResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT FlushStageCacheResponse : public APIGatewayResponse {
     Q_OBJECT
 
 public:

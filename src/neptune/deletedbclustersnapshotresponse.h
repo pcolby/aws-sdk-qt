@@ -28,7 +28,7 @@ namespace Neptune {
 
 class DeleteDBClusterSnapshotResponsePrivate;
 
-class QTAWS_EXPORT DeleteDBClusterSnapshotResponse : public NeptuneResponse {
+class QTAWSNEPTUNE_EXPORT DeleteDBClusterSnapshotResponse : public NeptuneResponse {
     Q_OBJECT
 
 public:

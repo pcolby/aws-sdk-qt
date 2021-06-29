@@ -28,7 +28,7 @@ namespace DocDB {
 
 class DescribeCertificatesResponsePrivate;
 
-class QTAWS_EXPORT DescribeCertificatesResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT DescribeCertificatesResponse : public DocDBResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace SecretsManager {
 
 class RotateSecretRequestPrivate;
 
-class QTAWS_EXPORT RotateSecretRequest : public SecretsManagerRequest {
+class QTAWSSECRETSMANAGER_EXPORT RotateSecretRequest : public SecretsManagerRequest {
 
 public:
     RotateSecretRequest(const RotateSecretRequest &other);

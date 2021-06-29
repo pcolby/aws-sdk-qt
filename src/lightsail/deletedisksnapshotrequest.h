@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class DeleteDiskSnapshotRequestPrivate;
 
-class QTAWS_EXPORT DeleteDiskSnapshotRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT DeleteDiskSnapshotRequest : public LightsailRequest {
 
 public:
     DeleteDiskSnapshotRequest(const DeleteDiskSnapshotRequest &other);

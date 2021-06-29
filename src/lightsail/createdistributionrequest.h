@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class CreateDistributionRequestPrivate;
 
-class QTAWS_EXPORT CreateDistributionRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT CreateDistributionRequest : public LightsailRequest {
 
 public:
     CreateDistributionRequest(const CreateDistributionRequest &other);

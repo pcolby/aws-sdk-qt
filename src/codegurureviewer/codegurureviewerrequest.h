@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawscodegurureviewerglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace CodeGuruReviewer {
 
 class CodeGuruReviewerRequestPrivate;
 
-class QTAWS_EXPORT CodeGuruReviewerRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCODEGURUREVIEWER_EXPORT CodeGuruReviewerRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CodeGuruReviewer.

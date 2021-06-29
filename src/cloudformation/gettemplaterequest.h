@@ -27,7 +27,7 @@ namespace CloudFormation {
 
 class GetTemplateRequestPrivate;
 
-class QTAWS_EXPORT GetTemplateRequest : public CloudFormationRequest {
+class QTAWSCLOUDFORMATION_EXPORT GetTemplateRequest : public CloudFormationRequest {
 
 public:
     GetTemplateRequest(const GetTemplateRequest &other);

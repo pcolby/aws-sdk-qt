@@ -21,6 +21,8 @@
 #define QTAWS_MACIE2RESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsmacie2global.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Macie2 {
 
 class Macie2ResponsePrivate;
 
-class QTAWS_EXPORT Macie2Response : public QtAws::Core::AwsAbstractResponse {
+class QTAWSMACIE2_EXPORT Macie2Response : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

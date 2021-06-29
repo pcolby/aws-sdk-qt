@@ -27,7 +27,7 @@ namespace MediaConnect {
 
 class StartFlowRequestPrivate;
 
-class QTAWS_EXPORT StartFlowRequest : public MediaConnectRequest {
+class QTAWSMEDIACONNECT_EXPORT StartFlowRequest : public MediaConnectRequest {
 
 public:
     StartFlowRequest(const StartFlowRequest &other);

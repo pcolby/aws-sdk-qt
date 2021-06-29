@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class DeleteContactMethodResponsePrivate;
 
-class QTAWS_EXPORT DeleteContactMethodResponse : public LightsailResponse {
+class QTAWSLIGHTSAIL_EXPORT DeleteContactMethodResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

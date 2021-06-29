@@ -27,7 +27,7 @@ namespace SavingsPlans {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public SavingsPlansRequest {
+class QTAWSSAVINGSPLANS_EXPORT ListTagsForResourceRequest : public SavingsPlansRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

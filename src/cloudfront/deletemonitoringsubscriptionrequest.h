@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class DeleteMonitoringSubscriptionRequestPrivate;
 
-class QTAWS_EXPORT DeleteMonitoringSubscriptionRequest : public CloudFrontRequest {
+class QTAWSCLOUDFRONT_EXPORT DeleteMonitoringSubscriptionRequest : public CloudFrontRequest {
 
 public:
     DeleteMonitoringSubscriptionRequest(const DeleteMonitoringSubscriptionRequest &other);

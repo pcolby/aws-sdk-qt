@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DisableImageDeprecationResponsePrivate;
 
-class QTAWS_EXPORT DisableImageDeprecationResponse : public Ec2Response {
+class QTAWSEC2_EXPORT DisableImageDeprecationResponse : public Ec2Response {
     Q_OBJECT
 
 public:

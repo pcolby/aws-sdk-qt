@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsdocdbglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -135,7 +137,7 @@ class StartDBClusterResponse;
 class StopDBClusterRequest;
 class StopDBClusterResponse;
 
-class QTAWS_EXPORT DocDBClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSDOCDB_EXPORT DocDBClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

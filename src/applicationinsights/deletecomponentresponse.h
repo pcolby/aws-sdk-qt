@@ -28,7 +28,7 @@ namespace ApplicationInsights {
 
 class DeleteComponentResponsePrivate;
 
-class QTAWS_EXPORT DeleteComponentResponse : public ApplicationInsightsResponse {
+class QTAWSAPPLICATIONINSIGHTS_EXPORT DeleteComponentResponse : public ApplicationInsightsResponse {
     Q_OBJECT
 
 public:

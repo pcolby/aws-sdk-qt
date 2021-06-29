@@ -27,7 +27,7 @@ namespace CloudSearch {
 
 class DescribeAnalysisSchemesRequestPrivate;
 
-class QTAWS_EXPORT DescribeAnalysisSchemesRequest : public CloudSearchRequest {
+class QTAWSCLOUDSEARCH_EXPORT DescribeAnalysisSchemesRequest : public CloudSearchRequest {
 
 public:
     DescribeAnalysisSchemesRequest(const DescribeAnalysisSchemesRequest &other);

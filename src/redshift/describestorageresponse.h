@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DescribeStorageResponsePrivate;
 
-class QTAWS_EXPORT DescribeStorageResponse : public RedshiftResponse {
+class QTAWSREDSHIFT_EXPORT DescribeStorageResponse : public RedshiftResponse {
     Q_OBJECT
 
 public:

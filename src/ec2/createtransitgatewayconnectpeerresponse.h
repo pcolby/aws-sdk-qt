@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CreateTransitGatewayConnectPeerResponsePrivate;
 
-class QTAWS_EXPORT CreateTransitGatewayConnectPeerResponse : public Ec2Response {
+class QTAWSEC2_EXPORT CreateTransitGatewayConnectPeerResponse : public Ec2Response {
     Q_OBJECT
 
 public:

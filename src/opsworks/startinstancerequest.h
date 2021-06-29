@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class StartInstanceRequestPrivate;
 
-class QTAWS_EXPORT StartInstanceRequest : public OpsWorksRequest {
+class QTAWSOPSWORKS_EXPORT StartInstanceRequest : public OpsWorksRequest {
 
 public:
     StartInstanceRequest(const StartInstanceRequest &other);

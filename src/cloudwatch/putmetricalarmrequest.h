@@ -27,7 +27,7 @@ namespace CloudWatch {
 
 class PutMetricAlarmRequestPrivate;
 
-class QTAWS_EXPORT PutMetricAlarmRequest : public CloudWatchRequest {
+class QTAWSCLOUDWATCH_EXPORT PutMetricAlarmRequest : public CloudWatchRequest {
 
 public:
     PutMetricAlarmRequest(const PutMetricAlarmRequest &other);

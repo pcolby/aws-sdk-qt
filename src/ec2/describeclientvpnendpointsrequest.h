@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DescribeClientVpnEndpointsRequestPrivate;
 
-class QTAWS_EXPORT DescribeClientVpnEndpointsRequest : public Ec2Request {
+class QTAWSEC2_EXPORT DescribeClientVpnEndpointsRequest : public Ec2Request {
 
 public:
     DescribeClientVpnEndpointsRequest(const DescribeClientVpnEndpointsRequest &other);

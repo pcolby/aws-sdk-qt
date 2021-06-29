@@ -27,7 +27,7 @@ namespace Personalize {
 
 class DeleteCampaignRequestPrivate;
 
-class QTAWS_EXPORT DeleteCampaignRequest : public PersonalizeRequest {
+class QTAWSPERSONALIZE_EXPORT DeleteCampaignRequest : public PersonalizeRequest {
 
 public:
     DeleteCampaignRequest(const DeleteCampaignRequest &other);

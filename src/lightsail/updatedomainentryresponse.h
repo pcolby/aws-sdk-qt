@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class UpdateDomainEntryResponsePrivate;
 
-class QTAWS_EXPORT UpdateDomainEntryResponse : public LightsailResponse {
+class QTAWSLIGHTSAIL_EXPORT UpdateDomainEntryResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

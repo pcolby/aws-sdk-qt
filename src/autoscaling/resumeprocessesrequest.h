@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class ResumeProcessesRequestPrivate;
 
-class QTAWS_EXPORT ResumeProcessesRequest : public AutoScalingRequest {
+class QTAWSAUTOSCALING_EXPORT ResumeProcessesRequest : public AutoScalingRequest {
 
 public:
     ResumeProcessesRequest(const ResumeProcessesRequest &other);

@@ -28,7 +28,7 @@ namespace Neptune {
 
 class ResetDBParameterGroupResponsePrivate;
 
-class QTAWS_EXPORT ResetDBParameterGroupResponse : public NeptuneResponse {
+class QTAWSNEPTUNE_EXPORT ResetDBParameterGroupResponse : public NeptuneResponse {
     Q_OBJECT
 
 public:

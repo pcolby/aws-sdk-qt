@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsglueglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -343,7 +345,7 @@ class UpdateUserDefinedFunctionResponse;
 class UpdateWorkflowRequest;
 class UpdateWorkflowResponse;
 
-class QTAWS_EXPORT GlueClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSGLUE_EXPORT GlueClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

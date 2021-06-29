@@ -28,7 +28,7 @@ namespace SSMIncidents {
 
 class CreateReplicationSetResponsePrivate;
 
-class QTAWS_EXPORT CreateReplicationSetResponse : public SSMIncidentsResponse {
+class QTAWSSSMINCIDENTS_EXPORT CreateReplicationSetResponse : public SSMIncidentsResponse {
     Q_OBJECT
 
 public:

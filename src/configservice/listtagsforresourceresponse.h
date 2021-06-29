@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public ConfigServiceResponse {
+class QTAWSCONFIGSERVICE_EXPORT ListTagsForResourceResponse : public ConfigServiceResponse {
     Q_OBJECT
 
 public:

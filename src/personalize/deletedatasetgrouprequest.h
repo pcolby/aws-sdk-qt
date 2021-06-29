@@ -27,7 +27,7 @@ namespace Personalize {
 
 class DeleteDatasetGroupRequestPrivate;
 
-class QTAWS_EXPORT DeleteDatasetGroupRequest : public PersonalizeRequest {
+class QTAWSPERSONALIZE_EXPORT DeleteDatasetGroupRequest : public PersonalizeRequest {
 
 public:
     DeleteDatasetGroupRequest(const DeleteDatasetGroupRequest &other);

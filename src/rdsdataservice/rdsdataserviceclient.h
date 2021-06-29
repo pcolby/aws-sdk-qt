@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsrdsdataserviceglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -41,7 +43,7 @@ class ExecuteStatementResponse;
 class RollbackTransactionRequest;
 class RollbackTransactionResponse;
 
-class QTAWS_EXPORT RDSDataServiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSRDSDATASERVICE_EXPORT RDSDataServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -21,6 +21,8 @@
 #define QTAWS_MARKETPLACEMETERINGRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsmarketplacemeteringglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace MarketplaceMetering {
 
 class MarketplaceMeteringResponsePrivate;
 
-class QTAWS_EXPORT MarketplaceMeteringResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSMARKETPLACEMETERING_EXPORT MarketplaceMeteringResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

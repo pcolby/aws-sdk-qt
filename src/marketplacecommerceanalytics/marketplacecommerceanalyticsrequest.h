@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsmarketplacecommerceanalyticsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace MarketplaceCommerceAnalytics {
 
 class MarketplaceCommerceAnalyticsRequestPrivate;
 
-class QTAWS_EXPORT MarketplaceCommerceAnalyticsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSMARKETPLACECOMMERCEANALYTICS_EXPORT MarketplaceCommerceAnalyticsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by MarketplaceCommerceAnalytics.

@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class ListUsersRequestPrivate;
 
-class QTAWS_EXPORT ListUsersRequest : public QuickSightRequest {
+class QTAWSQUICKSIGHT_EXPORT ListUsersRequest : public QuickSightRequest {
 
 public:
     ListUsersRequest(const ListUsersRequest &other);

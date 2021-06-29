@@ -27,7 +27,7 @@ namespace EC2 {
 
 class GetCoipPoolUsageRequestPrivate;
 
-class QTAWS_EXPORT GetCoipPoolUsageRequest : public Ec2Request {
+class QTAWSEC2_EXPORT GetCoipPoolUsageRequest : public Ec2Request {
 
 public:
     GetCoipPoolUsageRequest(const GetCoipPoolUsageRequest &other);

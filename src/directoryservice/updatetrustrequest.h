@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class UpdateTrustRequestPrivate;
 
-class QTAWS_EXPORT UpdateTrustRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT UpdateTrustRequest : public DirectoryServiceRequest {
 
 public:
     UpdateTrustRequest(const UpdateTrustRequest &other);

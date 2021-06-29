@@ -28,7 +28,7 @@ namespace Cloud9 {
 
 class DescribeEnvironmentStatusResponsePrivate;
 
-class QTAWS_EXPORT DescribeEnvironmentStatusResponse : public Cloud9Response {
+class QTAWSCLOUD9_EXPORT DescribeEnvironmentStatusResponse : public Cloud9Response {
     Q_OBJECT
 
 public:

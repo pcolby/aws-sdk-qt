@@ -28,7 +28,7 @@ namespace Macie2 {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public Macie2Response {
+class QTAWSMACIE2_EXPORT TagResourceResponse : public Macie2Response {
     Q_OBJECT
 
 public:

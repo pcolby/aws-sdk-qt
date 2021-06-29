@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DescribeTransitGatewaysRequestPrivate;
 
-class QTAWS_EXPORT DescribeTransitGatewaysRequest : public Ec2Request {
+class QTAWSEC2_EXPORT DescribeTransitGatewaysRequest : public Ec2Request {
 
 public:
     DescribeTransitGatewaysRequest(const DescribeTransitGatewaysRequest &other);

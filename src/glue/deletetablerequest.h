@@ -27,7 +27,7 @@ namespace Glue {
 
 class DeleteTableRequestPrivate;
 
-class QTAWS_EXPORT DeleteTableRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT DeleteTableRequest : public GlueRequest {
 
 public:
     DeleteTableRequest(const DeleteTableRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsssmglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace SSM {
 
 class SsmRequestPrivate;
 
-class QTAWS_EXPORT SsmRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSSM_EXPORT SsmRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SSM.

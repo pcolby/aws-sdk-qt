@@ -20,7 +20,7 @@
 #ifndef AWSABSTRACTCREDENTIALS_H
 #define AWSABSTRACTCREDENTIALS_H
 
-#include "qtawsglobal.h"
+#include "qtawscoreglobal.h"
 
 #include <QDateTime>
 #include <QObject>
@@ -30,7 +30,7 @@ namespace Core {
 
 class AwsAbstractCredentialsPrivate;
 
-class QTAWS_EXPORT AwsAbstractCredentials : public QObject {
+class QTAWSCORE_EXPORT AwsAbstractCredentials : public QObject {
     Q_OBJECT
 
 public:

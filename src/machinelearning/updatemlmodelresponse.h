@@ -28,7 +28,7 @@ namespace MachineLearning {
 
 class UpdateMLModelResponsePrivate;
 
-class QTAWS_EXPORT UpdateMLModelResponse : public MachineLearningResponse {
+class QTAWSMACHINELEARNING_EXPORT UpdateMLModelResponse : public MachineLearningResponse {
     Q_OBJECT
 
 public:

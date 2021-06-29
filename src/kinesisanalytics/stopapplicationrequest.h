@@ -27,7 +27,7 @@ namespace KinesisAnalytics {
 
 class StopApplicationRequestPrivate;
 
-class QTAWS_EXPORT StopApplicationRequest : public KinesisAnalyticsRequest {
+class QTAWSKINESISANALYTICS_EXPORT StopApplicationRequest : public KinesisAnalyticsRequest {
 
 public:
     StopApplicationRequest(const StopApplicationRequest &other);

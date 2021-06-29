@@ -27,7 +27,7 @@ namespace IoT {
 
 class ListOTAUpdatesRequestPrivate;
 
-class QTAWS_EXPORT ListOTAUpdatesRequest : public IoTRequest {
+class QTAWSIOT_EXPORT ListOTAUpdatesRequest : public IoTRequest {
 
 public:
     ListOTAUpdatesRequest(const ListOTAUpdatesRequest &other);

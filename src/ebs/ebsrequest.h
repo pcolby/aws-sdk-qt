@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsebsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace EBS {
 
 class EbsRequestPrivate;
 
-class QTAWS_EXPORT EbsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSEBS_EXPORT EbsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by EBS.

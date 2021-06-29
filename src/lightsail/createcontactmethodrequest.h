@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class CreateContactMethodRequestPrivate;
 
-class QTAWS_EXPORT CreateContactMethodRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT CreateContactMethodRequest : public LightsailRequest {
 
 public:
     CreateContactMethodRequest(const CreateContactMethodRequest &other);

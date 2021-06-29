@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsec2global.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace EC2 {
 
 class Ec2RequestPrivate;
 
-class QTAWS_EXPORT Ec2Request : public QtAws::Core::AwsAbstractRequest {
+class QTAWSEC2_EXPORT Ec2Request : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by EC2.

@@ -28,7 +28,7 @@ namespace EC2 {
 
 class StartNetworkInsightsAnalysisResponsePrivate;
 
-class QTAWS_EXPORT StartNetworkInsightsAnalysisResponse : public Ec2Response {
+class QTAWSEC2_EXPORT StartNetworkInsightsAnalysisResponse : public Ec2Response {
     Q_OBJECT
 
 public:

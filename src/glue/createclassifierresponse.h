@@ -28,7 +28,7 @@ namespace Glue {
 
 class CreateClassifierResponsePrivate;
 
-class QTAWS_EXPORT CreateClassifierResponse : public GlueResponse {
+class QTAWSGLUE_EXPORT CreateClassifierResponse : public GlueResponse {
     Q_OBJECT
 
 public:

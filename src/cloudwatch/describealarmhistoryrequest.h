@@ -27,7 +27,7 @@ namespace CloudWatch {
 
 class DescribeAlarmHistoryRequestPrivate;
 
-class QTAWS_EXPORT DescribeAlarmHistoryRequest : public CloudWatchRequest {
+class QTAWSCLOUDWATCH_EXPORT DescribeAlarmHistoryRequest : public CloudWatchRequest {
 
 public:
     DescribeAlarmHistoryRequest(const DescribeAlarmHistoryRequest &other);

@@ -28,7 +28,7 @@ namespace EventBridge {
 
 class CancelReplayResponsePrivate;
 
-class QTAWS_EXPORT CancelReplayResponse : public EventBridgeResponse {
+class QTAWSEVENTBRIDGE_EXPORT CancelReplayResponse : public EventBridgeResponse {
     Q_OBJECT
 
 public:

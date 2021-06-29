@@ -27,7 +27,7 @@ namespace AppRegistry {
 
 class CreateApplicationRequestPrivate;
 
-class QTAWS_EXPORT CreateApplicationRequest : public AppRegistryRequest {
+class QTAWSAPPREGISTRY_EXPORT CreateApplicationRequest : public AppRegistryRequest {
 
 public:
     CreateApplicationRequest(const CreateApplicationRequest &other);

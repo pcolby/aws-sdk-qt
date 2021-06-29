@@ -28,7 +28,7 @@ namespace Chime {
 
 class CreateSipRuleResponsePrivate;
 
-class QTAWS_EXPORT CreateSipRuleResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT CreateSipRuleResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

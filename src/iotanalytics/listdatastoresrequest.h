@@ -27,7 +27,7 @@ namespace IoTAnalytics {
 
 class ListDatastoresRequestPrivate;
 
-class QTAWS_EXPORT ListDatastoresRequest : public IoTAnalyticsRequest {
+class QTAWSIOTANALYTICS_EXPORT ListDatastoresRequest : public IoTAnalyticsRequest {
 
 public:
     ListDatastoresRequest(const ListDatastoresRequest &other);

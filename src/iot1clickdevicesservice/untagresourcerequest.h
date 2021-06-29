@@ -27,7 +27,7 @@ namespace IoT1ClickDevicesService {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public IoT1ClickDevicesServiceRequest {
+class QTAWSIOT1CLICKDEVICESSERVICE_EXPORT UntagResourceRequest : public IoT1ClickDevicesServiceRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

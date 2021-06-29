@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsathenaglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Athena {
 
 class AthenaRequestPrivate;
 
-class QTAWS_EXPORT AthenaRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSATHENA_EXPORT AthenaRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Athena.

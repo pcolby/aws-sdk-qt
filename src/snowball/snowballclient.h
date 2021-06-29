@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawssnowballglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -79,7 +81,7 @@ class UpdateJobShipmentStateResponse;
 class UpdateLongTermPricingRequest;
 class UpdateLongTermPricingResponse;
 
-class QTAWS_EXPORT SnowballClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSNOWBALL_EXPORT SnowballClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace Braket {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public BraketRequest {
+class QTAWSBRAKET_EXPORT TagResourceRequest : public BraketRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

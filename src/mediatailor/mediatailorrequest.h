@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsmediatailorglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace MediaTailor {
 
 class MediaTailorRequestPrivate;
 
-class QTAWS_EXPORT MediaTailorRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSMEDIATAILOR_EXPORT MediaTailorRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by MediaTailor.

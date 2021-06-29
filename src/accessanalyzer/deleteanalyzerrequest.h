@@ -27,7 +27,7 @@ namespace AccessAnalyzer {
 
 class DeleteAnalyzerRequestPrivate;
 
-class QTAWS_EXPORT DeleteAnalyzerRequest : public AccessAnalyzerRequest {
+class QTAWSACCESSANALYZER_EXPORT DeleteAnalyzerRequest : public AccessAnalyzerRequest {
 
 public:
     DeleteAnalyzerRequest(const DeleteAnalyzerRequest &other);

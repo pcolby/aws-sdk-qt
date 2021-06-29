@@ -27,7 +27,7 @@ namespace GuardDuty {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public GuardDutyRequest {
+class QTAWSGUARDDUTY_EXPORT ListTagsForResourceRequest : public GuardDutyRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

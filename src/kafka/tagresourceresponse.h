@@ -28,7 +28,7 @@ namespace Kafka {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public KafkaResponse {
+class QTAWSKAFKA_EXPORT TagResourceResponse : public KafkaResponse {
     Q_OBJECT
 
 public:

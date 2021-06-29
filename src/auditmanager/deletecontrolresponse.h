@@ -28,7 +28,7 @@ namespace AuditManager {
 
 class DeleteControlResponsePrivate;
 
-class QTAWS_EXPORT DeleteControlResponse : public AuditManagerResponse {
+class QTAWSAUDITMANAGER_EXPORT DeleteControlResponse : public AuditManagerResponse {
     Q_OBJECT
 
 public:

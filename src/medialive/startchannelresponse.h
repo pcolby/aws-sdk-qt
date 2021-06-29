@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class StartChannelResponsePrivate;
 
-class QTAWS_EXPORT StartChannelResponse : public MediaLiveResponse {
+class QTAWSMEDIALIVE_EXPORT StartChannelResponse : public MediaLiveResponse {
     Q_OBJECT
 
 public:

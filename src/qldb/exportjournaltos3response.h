@@ -28,7 +28,7 @@ namespace QLDB {
 
 class ExportJournalToS3ResponsePrivate;
 
-class QTAWS_EXPORT ExportJournalToS3Response : public QldbResponse {
+class QTAWSQLDB_EXPORT ExportJournalToS3Response : public QldbResponse {
     Q_OBJECT
 
 public:

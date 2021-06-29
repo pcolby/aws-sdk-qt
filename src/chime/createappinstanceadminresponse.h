@@ -28,7 +28,7 @@ namespace Chime {
 
 class CreateAppInstanceAdminResponsePrivate;
 
-class QTAWS_EXPORT CreateAppInstanceAdminResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT CreateAppInstanceAdminResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

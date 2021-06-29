@@ -27,7 +27,7 @@ namespace SES {
 
 class GetSendStatisticsRequestPrivate;
 
-class QTAWS_EXPORT GetSendStatisticsRequest : public SesRequest {
+class QTAWSSES_EXPORT GetSendStatisticsRequest : public SesRequest {
 
 public:
     GetSendStatisticsRequest(const GetSendStatisticsRequest &other);

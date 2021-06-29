@@ -27,7 +27,7 @@ namespace IAM {
 
 class UntagSAMLProviderRequestPrivate;
 
-class QTAWS_EXPORT UntagSAMLProviderRequest : public IamRequest {
+class QTAWSIAM_EXPORT UntagSAMLProviderRequest : public IamRequest {
 
 public:
     UntagSAMLProviderRequest(const UntagSAMLProviderRequest &other);

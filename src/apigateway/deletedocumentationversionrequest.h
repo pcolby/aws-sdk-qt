@@ -27,7 +27,7 @@ namespace APIGateway {
 
 class DeleteDocumentationVersionRequestPrivate;
 
-class QTAWS_EXPORT DeleteDocumentationVersionRequest : public APIGatewayRequest {
+class QTAWSAPIGATEWAY_EXPORT DeleteDocumentationVersionRequest : public APIGatewayRequest {
 
 public:
     DeleteDocumentationVersionRequest(const DeleteDocumentationVersionRequest &other);

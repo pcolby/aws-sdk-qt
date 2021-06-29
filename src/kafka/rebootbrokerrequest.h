@@ -27,7 +27,7 @@ namespace Kafka {
 
 class RebootBrokerRequestPrivate;
 
-class QTAWS_EXPORT RebootBrokerRequest : public KafkaRequest {
+class QTAWSKAFKA_EXPORT RebootBrokerRequest : public KafkaRequest {
 
 public:
     RebootBrokerRequest(const RebootBrokerRequest &other);

@@ -27,7 +27,7 @@ namespace DAX {
 
 class CreateClusterRequestPrivate;
 
-class QTAWS_EXPORT CreateClusterRequest : public DaxRequest {
+class QTAWSDAX_EXPORT CreateClusterRequest : public DaxRequest {
 
 public:
     CreateClusterRequest(const CreateClusterRequest &other);

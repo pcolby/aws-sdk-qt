@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class PutDedicatedIpInPoolRequestPrivate;
 
-class QTAWS_EXPORT PutDedicatedIpInPoolRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT PutDedicatedIpInPoolRequest : public Sesv2Request {
 
 public:
     PutDedicatedIpInPoolRequest(const PutDedicatedIpInPoolRequest &other);

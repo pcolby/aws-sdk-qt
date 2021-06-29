@@ -27,7 +27,7 @@ namespace CloudHSM {
 
 class RemoveTagsFromResourceRequestPrivate;
 
-class QTAWS_EXPORT RemoveTagsFromResourceRequest : public CloudHSMRequest {
+class QTAWSCLOUDHSM_EXPORT RemoveTagsFromResourceRequest : public CloudHSMRequest {
 
 public:
     RemoveTagsFromResourceRequest(const RemoveTagsFromResourceRequest &other);

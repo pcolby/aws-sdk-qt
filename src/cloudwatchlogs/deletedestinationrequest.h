@@ -27,7 +27,7 @@ namespace CloudWatchLogs {
 
 class DeleteDestinationRequestPrivate;
 
-class QTAWS_EXPORT DeleteDestinationRequest : public CloudWatchLogsRequest {
+class QTAWSCLOUDWATCHLOGS_EXPORT DeleteDestinationRequest : public CloudWatchLogsRequest {
 
 public:
     DeleteDestinationRequest(const DeleteDestinationRequest &other);

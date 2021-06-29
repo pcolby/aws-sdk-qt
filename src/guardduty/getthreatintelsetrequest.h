@@ -27,7 +27,7 @@ namespace GuardDuty {
 
 class GetThreatIntelSetRequestPrivate;
 
-class QTAWS_EXPORT GetThreatIntelSetRequest : public GuardDutyRequest {
+class QTAWSGUARDDUTY_EXPORT GetThreatIntelSetRequest : public GuardDutyRequest {
 
 public:
     GetThreatIntelSetRequest(const GetThreatIntelSetRequest &other);

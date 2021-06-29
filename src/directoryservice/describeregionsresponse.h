@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class DescribeRegionsResponsePrivate;
 
-class QTAWS_EXPORT DescribeRegionsResponse : public DirectoryServiceResponse {
+class QTAWSDIRECTORYSERVICE_EXPORT DescribeRegionsResponse : public DirectoryServiceResponse {
     Q_OBJECT
 
 public:

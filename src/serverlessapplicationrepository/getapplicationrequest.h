@@ -27,7 +27,7 @@ namespace ServerlessApplicationRepository {
 
 class GetApplicationRequestPrivate;
 
-class QTAWS_EXPORT GetApplicationRequest : public ServerlessApplicationRepositoryRequest {
+class QTAWSSERVERLESSAPPLICATIONREPOSITORY_EXPORT GetApplicationRequest : public ServerlessApplicationRepositoryRequest {
 
 public:
     GetApplicationRequest(const GetApplicationRequest &other);

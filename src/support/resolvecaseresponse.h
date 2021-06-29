@@ -28,7 +28,7 @@ namespace Support {
 
 class ResolveCaseResponsePrivate;
 
-class QTAWS_EXPORT ResolveCaseResponse : public SupportResponse {
+class QTAWSSUPPORT_EXPORT ResolveCaseResponse : public SupportResponse {
     Q_OBJECT
 
 public:

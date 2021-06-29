@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsbackupglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Backup {
 
 class BackupRequestPrivate;
 
-class QTAWS_EXPORT BackupRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSBACKUP_EXPORT BackupRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Backup.

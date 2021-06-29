@@ -27,7 +27,7 @@ namespace imagebuilder {
 
 class ListImageBuildVersionsRequestPrivate;
 
-class QTAWS_EXPORT ListImageBuildVersionsRequest : public imagebuilderRequest {
+class QTAWSIMAGEBUILDER_EXPORT ListImageBuildVersionsRequest : public imagebuilderRequest {
 
 public:
     ListImageBuildVersionsRequest(const ListImageBuildVersionsRequest &other);

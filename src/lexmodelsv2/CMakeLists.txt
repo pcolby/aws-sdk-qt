@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSLEXMODELSV2_LIBRARY)
+
 add_library(QtAwsLexModelsV2
   buildbotlocalerequest.h
   buildbotlocalerequest_p.h
@@ -185,6 +187,7 @@ add_library(QtAwsLexModelsV2
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawslexmodelsv2global.h
   startimportrequest.h
   startimportrequest_p.h
   startimportresponse.h

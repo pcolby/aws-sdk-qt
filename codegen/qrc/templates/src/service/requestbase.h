@@ -4,6 +4,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtaws{{ServiceName|lower}}global.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -14,7 +16,7 @@ namespace {{NameSpaceName}} {
 
 class {{ClassName}}Private;
 
-class QTAWS_EXPORT {{ClassName}} : public QtAws::Core::AwsAbstractRequest {
+class QTAWS{{ServiceName|upper}}_EXPORT {{ClassName}} : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by {{ServiceName}}.

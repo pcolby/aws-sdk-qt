@@ -27,7 +27,7 @@ namespace Outposts {
 
 class DeleteOutpostRequestPrivate;
 
-class QTAWS_EXPORT DeleteOutpostRequest : public OutpostsRequest {
+class QTAWSOUTPOSTS_EXPORT DeleteOutpostRequest : public OutpostsRequest {
 
 public:
     DeleteOutpostRequest(const DeleteOutpostRequest &other);

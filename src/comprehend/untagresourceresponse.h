@@ -28,7 +28,7 @@ namespace Comprehend {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public ComprehendResponse {
+class QTAWSCOMPREHEND_EXPORT UntagResourceResponse : public ComprehendResponse {
     Q_OBJECT
 
 public:

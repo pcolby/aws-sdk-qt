@@ -28,7 +28,7 @@ namespace Chime {
 
 class LogoutUserResponsePrivate;
 
-class QTAWS_EXPORT LogoutUserResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT LogoutUserResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

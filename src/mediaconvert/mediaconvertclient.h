@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsmediaconvertglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -79,7 +81,7 @@ class UpdatePresetResponse;
 class UpdateQueueRequest;
 class UpdateQueueResponse;
 
-class QTAWS_EXPORT MediaConvertClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSMEDIACONVERT_EXPORT MediaConvertClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

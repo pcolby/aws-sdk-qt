@@ -27,7 +27,7 @@ namespace CodePipeline {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public CodePipelineRequest {
+class QTAWSCODEPIPELINE_EXPORT UntagResourceRequest : public CodePipelineRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

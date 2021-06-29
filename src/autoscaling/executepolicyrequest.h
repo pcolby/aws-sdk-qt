@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class ExecutePolicyRequestPrivate;
 
-class QTAWS_EXPORT ExecutePolicyRequest : public AutoScalingRequest {
+class QTAWSAUTOSCALING_EXPORT ExecutePolicyRequest : public AutoScalingRequest {
 
 public:
     ExecutePolicyRequest(const ExecutePolicyRequest &other);

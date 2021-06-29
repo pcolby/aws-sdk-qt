@@ -27,7 +27,7 @@ namespace GuardDuty {
 
 class StopMonitoringMembersRequestPrivate;
 
-class QTAWS_EXPORT StopMonitoringMembersRequest : public GuardDutyRequest {
+class QTAWSGUARDDUTY_EXPORT StopMonitoringMembersRequest : public GuardDutyRequest {
 
 public:
     StopMonitoringMembersRequest(const StopMonitoringMembersRequest &other);

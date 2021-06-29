@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawspersonalizeglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Personalize {
 
 class PersonalizeRequestPrivate;
 
-class QTAWS_EXPORT PersonalizeRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSPERSONALIZE_EXPORT PersonalizeRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Personalize.

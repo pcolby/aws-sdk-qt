@@ -28,7 +28,7 @@ namespace KMS {
 
 class CreateCustomKeyStoreResponsePrivate;
 
-class QTAWS_EXPORT CreateCustomKeyStoreResponse : public KmsResponse {
+class QTAWSKMS_EXPORT CreateCustomKeyStoreResponse : public KmsResponse {
     Q_OBJECT
 
 public:

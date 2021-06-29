@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class GetImportJobRequestPrivate;
 
-class QTAWS_EXPORT GetImportJobRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT GetImportJobRequest : public PinpointRequest {
 
 public:
     GetImportJobRequest(const GetImportJobRequest &other);

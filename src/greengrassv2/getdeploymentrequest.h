@@ -27,7 +27,7 @@ namespace GreengrassV2 {
 
 class GetDeploymentRequestPrivate;
 
-class QTAWS_EXPORT GetDeploymentRequest : public GreengrassV2Request {
+class QTAWSGREENGRASSV2_EXPORT GetDeploymentRequest : public GreengrassV2Request {
 
 public:
     GetDeploymentRequest(const GetDeploymentRequest &other);

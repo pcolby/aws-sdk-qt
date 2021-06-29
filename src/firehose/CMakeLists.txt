@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSFIREHOSE_LIBRARY)
+
 add_library(QtAwsFirehose
   createdeliverystreamrequest.h
   createdeliverystreamrequest_p.h
@@ -33,6 +35,7 @@ add_library(QtAwsFirehose
   putrecordrequest_p.h
   putrecordresponse.h
   putrecordresponse_p.h
+  qtawsfirehoseglobal.h
   startdeliverystreamencryptionrequest.h
   startdeliverystreamencryptionrequest_p.h
   startdeliverystreamencryptionresponse.h

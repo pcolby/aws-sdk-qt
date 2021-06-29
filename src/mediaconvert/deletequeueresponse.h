@@ -28,7 +28,7 @@ namespace MediaConvert {
 
 class DeleteQueueResponsePrivate;
 
-class QTAWS_EXPORT DeleteQueueResponse : public MediaConvertResponse {
+class QTAWSMEDIACONVERT_EXPORT DeleteQueueResponse : public MediaConvertResponse {
     Q_OBJECT
 
 public:

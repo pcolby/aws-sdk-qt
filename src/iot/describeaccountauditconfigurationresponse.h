@@ -28,7 +28,7 @@ namespace IoT {
 
 class DescribeAccountAuditConfigurationResponsePrivate;
 
-class QTAWS_EXPORT DescribeAccountAuditConfigurationResponse : public IoTResponse {
+class QTAWSIOT_EXPORT DescribeAccountAuditConfigurationResponse : public IoTResponse {
     Q_OBJECT
 
 public:

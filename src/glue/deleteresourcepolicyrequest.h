@@ -27,7 +27,7 @@ namespace Glue {
 
 class DeleteResourcePolicyRequestPrivate;
 
-class QTAWS_EXPORT DeleteResourcePolicyRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT DeleteResourcePolicyRequest : public GlueRequest {
 
 public:
     DeleteResourcePolicyRequest(const DeleteResourcePolicyRequest &other);

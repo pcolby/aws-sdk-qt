@@ -27,7 +27,7 @@ namespace EC2 {
 
 class GetReservedInstancesExchangeQuoteRequestPrivate;
 
-class QTAWS_EXPORT GetReservedInstancesExchangeQuoteRequest : public Ec2Request {
+class QTAWSEC2_EXPORT GetReservedInstancesExchangeQuoteRequest : public Ec2Request {
 
 public:
     GetReservedInstancesExchangeQuoteRequest(const GetReservedInstancesExchangeQuoteRequest &other);

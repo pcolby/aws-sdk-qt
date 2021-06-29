@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class DescribeUserProfileRequestPrivate;
 
-class QTAWS_EXPORT DescribeUserProfileRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT DescribeUserProfileRequest : public SageMakerRequest {
 
 public:
     DescribeUserProfileRequest(const DescribeUserProfileRequest &other);

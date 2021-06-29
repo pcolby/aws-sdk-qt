@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class BatchReadRequestPrivate;
 
-class QTAWS_EXPORT BatchReadRequest : public CloudDirectoryRequest {
+class QTAWSCLOUDDIRECTORY_EXPORT BatchReadRequest : public CloudDirectoryRequest {
 
 public:
     BatchReadRequest(const BatchReadRequest &other);

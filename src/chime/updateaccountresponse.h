@@ -28,7 +28,7 @@ namespace Chime {
 
 class UpdateAccountResponsePrivate;
 
-class QTAWS_EXPORT UpdateAccountResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT UpdateAccountResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

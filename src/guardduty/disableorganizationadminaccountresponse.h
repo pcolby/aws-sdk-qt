@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class DisableOrganizationAdminAccountResponsePrivate;
 
-class QTAWS_EXPORT DisableOrganizationAdminAccountResponse : public GuardDutyResponse {
+class QTAWSGUARDDUTY_EXPORT DisableOrganizationAdminAccountResponse : public GuardDutyResponse {
     Q_OBJECT
 
 public:

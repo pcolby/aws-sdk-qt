@@ -27,7 +27,7 @@ namespace EMR {
 
 class DescribeNotebookExecutionRequestPrivate;
 
-class QTAWS_EXPORT DescribeNotebookExecutionRequest : public EmrRequest {
+class QTAWSEMR_EXPORT DescribeNotebookExecutionRequest : public EmrRequest {
 
 public:
     DescribeNotebookExecutionRequest(const DescribeNotebookExecutionRequest &other);

@@ -28,7 +28,7 @@ namespace kendra {
 
 class CreateQuerySuggestionsBlockListResponsePrivate;
 
-class QTAWS_EXPORT CreateQuerySuggestionsBlockListResponse : public kendraResponse {
+class QTAWSKENDRA_EXPORT CreateQuerySuggestionsBlockListResponse : public kendraResponse {
     Q_OBJECT
 
 public:

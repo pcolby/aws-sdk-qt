@@ -27,7 +27,7 @@ namespace APIGateway {
 
 class CreateDomainNameRequestPrivate;
 
-class QTAWS_EXPORT CreateDomainNameRequest : public APIGatewayRequest {
+class QTAWSAPIGATEWAY_EXPORT CreateDomainNameRequest : public APIGatewayRequest {
 
 public:
     CreateDomainNameRequest(const CreateDomainNameRequest &other);

@@ -27,7 +27,7 @@ namespace Connect {
 
 class DescribeUserHierarchyStructureRequestPrivate;
 
-class QTAWS_EXPORT DescribeUserHierarchyStructureRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT DescribeUserHierarchyStructureRequest : public ConnectRequest {
 
 public:
     DescribeUserHierarchyStructureRequest(const DescribeUserHierarchyStructureRequest &other);

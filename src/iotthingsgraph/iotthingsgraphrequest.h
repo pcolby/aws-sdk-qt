@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsiotthingsgraphglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace IoTThingsGraph {
 
 class IoTThingsGraphRequestPrivate;
 
-class QTAWS_EXPORT IoTThingsGraphRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSIOTTHINGSGRAPH_EXPORT IoTThingsGraphRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by IoTThingsGraph.

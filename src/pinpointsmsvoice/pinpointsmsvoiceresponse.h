@@ -21,6 +21,8 @@
 #define QTAWS_PINPOINTSMSVOICERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawspinpointsmsvoiceglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace PinpointSMSVoice {
 
 class PinpointSMSVoiceResponsePrivate;
 
-class QTAWS_EXPORT PinpointSMSVoiceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSPINPOINTSMSVOICE_EXPORT PinpointSMSVoiceResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

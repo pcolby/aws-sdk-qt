@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class ListResourcesForTagOptionRequestPrivate;
 
-class QTAWS_EXPORT ListResourcesForTagOptionRequest : public ServiceCatalogRequest {
+class QTAWSSERVICECATALOG_EXPORT ListResourcesForTagOptionRequest : public ServiceCatalogRequest {
 
 public:
     ListResourcesForTagOptionRequest(const ListResourcesForTagOptionRequest &other);

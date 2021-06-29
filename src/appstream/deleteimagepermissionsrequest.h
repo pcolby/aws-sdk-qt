@@ -27,7 +27,7 @@ namespace AppStream {
 
 class DeleteImagePermissionsRequestPrivate;
 
-class QTAWS_EXPORT DeleteImagePermissionsRequest : public AppStreamRequest {
+class QTAWSAPPSTREAM_EXPORT DeleteImagePermissionsRequest : public AppStreamRequest {
 
 public:
     DeleteImagePermissionsRequest(const DeleteImagePermissionsRequest &other);

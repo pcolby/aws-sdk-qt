@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class UpdateIAMPolicyAssignmentRequestPrivate;
 
-class QTAWS_EXPORT UpdateIAMPolicyAssignmentRequest : public QuickSightRequest {
+class QTAWSQUICKSIGHT_EXPORT UpdateIAMPolicyAssignmentRequest : public QuickSightRequest {
 
 public:
     UpdateIAMPolicyAssignmentRequest(const UpdateIAMPolicyAssignmentRequest &other);

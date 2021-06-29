@@ -27,7 +27,7 @@ namespace Glacier {
 
 class AddTagsToVaultRequestPrivate;
 
-class QTAWS_EXPORT AddTagsToVaultRequest : public GlacierRequest {
+class QTAWSGLACIER_EXPORT AddTagsToVaultRequest : public GlacierRequest {
 
 public:
     AddTagsToVaultRequest(const AddTagsToVaultRequest &other);

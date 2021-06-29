@@ -28,7 +28,7 @@ namespace LocationService {
 
 class SearchPlaceIndexForPositionResponsePrivate;
 
-class QTAWS_EXPORT SearchPlaceIndexForPositionResponse : public LocationServiceResponse {
+class QTAWSLOCATIONSERVICE_EXPORT SearchPlaceIndexForPositionResponse : public LocationServiceResponse {
     Q_OBJECT
 
 public:

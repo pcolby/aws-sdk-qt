@@ -28,7 +28,7 @@ namespace S3Control {
 
 class UpdateJobStatusResponsePrivate;
 
-class QTAWS_EXPORT UpdateJobStatusResponse : public S3ControlResponse {
+class QTAWSS3CONTROL_EXPORT UpdateJobStatusResponse : public S3ControlResponse {
     Q_OBJECT
 
 public:

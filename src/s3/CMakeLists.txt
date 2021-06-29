@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSS3_LIBRARY)
+
 add_library(QtAwsS3
   abortmultipartuploadrequest.h
   abortmultipartuploadrequest_p.h
@@ -363,6 +365,7 @@ add_library(QtAwsS3
   putpublicaccessblockrequest_p.h
   putpublicaccessblockresponse.h
   putpublicaccessblockresponse_p.h
+  qtawss3global.h
   restoreobjectrequest.h
   restoreobjectrequest_p.h
   restoreobjectresponse.h

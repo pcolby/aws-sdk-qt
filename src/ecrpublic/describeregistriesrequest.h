@@ -27,7 +27,7 @@ namespace ECRPublic {
 
 class DescribeRegistriesRequestPrivate;
 
-class QTAWS_EXPORT DescribeRegistriesRequest : public ECRPublicRequest {
+class QTAWSECRPUBLIC_EXPORT DescribeRegistriesRequest : public ECRPublicRequest {
 
 public:
     DescribeRegistriesRequest(const DescribeRegistriesRequest &other);

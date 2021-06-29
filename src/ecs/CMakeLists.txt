@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSECS_LIBRARY)
+
 add_library(QtAwsEcs
   createcapacityproviderrequest.h
   createcapacityproviderrequest_p.h
@@ -141,6 +143,7 @@ add_library(QtAwsEcs
   putclustercapacityprovidersrequest_p.h
   putclustercapacityprovidersresponse.h
   putclustercapacityprovidersresponse_p.h
+  qtawsecsglobal.h
   registercontainerinstancerequest.h
   registercontainerinstancerequest_p.h
   registercontainerinstanceresponse.h

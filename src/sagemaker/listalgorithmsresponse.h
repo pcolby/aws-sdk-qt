@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class ListAlgorithmsResponsePrivate;
 
-class QTAWS_EXPORT ListAlgorithmsResponse : public SageMakerResponse {
+class QTAWSSAGEMAKER_EXPORT ListAlgorithmsResponse : public SageMakerResponse {
     Q_OBJECT
 
 public:

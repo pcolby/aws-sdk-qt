@@ -27,7 +27,7 @@ namespace LocationService {
 
 class GetMapSpritesRequestPrivate;
 
-class QTAWS_EXPORT GetMapSpritesRequest : public LocationServiceRequest {
+class QTAWSLOCATIONSERVICE_EXPORT GetMapSpritesRequest : public LocationServiceRequest {
 
 public:
     GetMapSpritesRequest(const GetMapSpritesRequest &other);

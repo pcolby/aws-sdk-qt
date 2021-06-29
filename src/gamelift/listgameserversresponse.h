@@ -28,7 +28,7 @@ namespace GameLift {
 
 class ListGameServersResponsePrivate;
 
-class QTAWS_EXPORT ListGameServersResponse : public GameLiftResponse {
+class QTAWSGAMELIFT_EXPORT ListGameServersResponse : public GameLiftResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace ElasticTranscoder {
 
 class CreateJobRequestPrivate;
 
-class QTAWS_EXPORT CreateJobRequest : public ElasticTranscoderRequest {
+class QTAWSELASTICTRANSCODER_EXPORT CreateJobRequest : public ElasticTranscoderRequest {
 
 public:
     CreateJobRequest(const CreateJobRequest &other);

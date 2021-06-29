@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class DeleteRemoteAccessSessionRequestPrivate;
 
-class QTAWS_EXPORT DeleteRemoteAccessSessionRequest : public DeviceFarmRequest {
+class QTAWSDEVICEFARM_EXPORT DeleteRemoteAccessSessionRequest : public DeviceFarmRequest {
 
 public:
     DeleteRemoteAccessSessionRequest(const DeleteRemoteAccessSessionRequest &other);

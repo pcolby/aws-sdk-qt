@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsmarketplacecommerceanalyticsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -33,7 +35,7 @@ class GenerateDataSetResponse;
 class StartSupportDataExportRequest;
 class StartSupportDataExportResponse;
 
-class QTAWS_EXPORT MarketplaceCommerceAnalyticsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSMARKETPLACECOMMERCEANALYTICS_EXPORT MarketplaceCommerceAnalyticsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

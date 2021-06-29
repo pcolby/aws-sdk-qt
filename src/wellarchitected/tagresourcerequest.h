@@ -27,7 +27,7 @@ namespace WellArchitected {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public WellArchitectedRequest {
+class QTAWSWELLARCHITECTED_EXPORT TagResourceRequest : public WellArchitectedRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

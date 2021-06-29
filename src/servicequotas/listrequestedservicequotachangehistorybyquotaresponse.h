@@ -28,7 +28,7 @@ namespace ServiceQuotas {
 
 class ListRequestedServiceQuotaChangeHistoryByQuotaResponsePrivate;
 
-class QTAWS_EXPORT ListRequestedServiceQuotaChangeHistoryByQuotaResponse : public ServiceQuotasResponse {
+class QTAWSSERVICEQUOTAS_EXPORT ListRequestedServiceQuotaChangeHistoryByQuotaResponse : public ServiceQuotasResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class StopNotebookInstanceRequestPrivate;
 
-class QTAWS_EXPORT StopNotebookInstanceRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT StopNotebookInstanceRequest : public SageMakerRequest {
 
 public:
     StopNotebookInstanceRequest(const StopNotebookInstanceRequest &other);

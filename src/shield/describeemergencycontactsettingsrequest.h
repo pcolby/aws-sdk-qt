@@ -27,7 +27,7 @@ namespace Shield {
 
 class DescribeEmergencyContactSettingsRequestPrivate;
 
-class QTAWS_EXPORT DescribeEmergencyContactSettingsRequest : public ShieldRequest {
+class QTAWSSHIELD_EXPORT DescribeEmergencyContactSettingsRequest : public ShieldRequest {
 
 public:
     DescribeEmergencyContactSettingsRequest(const DescribeEmergencyContactSettingsRequest &other);

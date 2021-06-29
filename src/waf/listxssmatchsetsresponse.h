@@ -28,7 +28,7 @@ namespace WAF {
 
 class ListXssMatchSetsResponsePrivate;
 
-class QTAWS_EXPORT ListXssMatchSetsResponse : public WafResponse {
+class QTAWSWAF_EXPORT ListXssMatchSetsResponse : public WafResponse {
     Q_OBJECT
 
 public:

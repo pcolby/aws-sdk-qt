@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsmedialiveglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -141,7 +143,7 @@ class UpdateMultiplexProgramResponse;
 class UpdateReservationRequest;
 class UpdateReservationResponse;
 
-class QTAWS_EXPORT MediaLiveClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSMEDIALIVE_EXPORT MediaLiveClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

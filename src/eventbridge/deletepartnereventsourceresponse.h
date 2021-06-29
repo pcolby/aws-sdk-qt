@@ -28,7 +28,7 @@ namespace EventBridge {
 
 class DeletePartnerEventSourceResponsePrivate;
 
-class QTAWS_EXPORT DeletePartnerEventSourceResponse : public EventBridgeResponse {
+class QTAWSEVENTBRIDGE_EXPORT DeletePartnerEventSourceResponse : public EventBridgeResponse {
     Q_OBJECT
 
 public:

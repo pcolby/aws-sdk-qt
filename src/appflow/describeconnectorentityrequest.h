@@ -27,7 +27,7 @@ namespace Appflow {
 
 class DescribeConnectorEntityRequestPrivate;
 
-class QTAWS_EXPORT DescribeConnectorEntityRequest : public AppflowRequest {
+class QTAWSAPPFLOW_EXPORT DescribeConnectorEntityRequest : public AppflowRequest {
 
 public:
     DescribeConnectorEntityRequest(const DescribeConnectorEntityRequest &other);

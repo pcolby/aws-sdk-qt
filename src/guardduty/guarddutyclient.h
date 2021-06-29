@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsguarddutyglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -145,7 +147,7 @@ class UpdatePublishingDestinationResponse;
 class UpdateThreatIntelSetRequest;
 class UpdateThreatIntelSetResponse;
 
-class QTAWS_EXPORT GuardDutyClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSGUARDDUTY_EXPORT GuardDutyClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

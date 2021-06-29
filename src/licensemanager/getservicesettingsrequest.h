@@ -27,7 +27,7 @@ namespace LicenseManager {
 
 class GetServiceSettingsRequestPrivate;
 
-class QTAWS_EXPORT GetServiceSettingsRequest : public LicenseManagerRequest {
+class QTAWSLICENSEMANAGER_EXPORT GetServiceSettingsRequest : public LicenseManagerRequest {
 
 public:
     GetServiceSettingsRequest(const GetServiceSettingsRequest &other);

@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class UpdateGroupResponsePrivate;
 
-class QTAWS_EXPORT UpdateGroupResponse : public QuickSightResponse {
+class QTAWSQUICKSIGHT_EXPORT UpdateGroupResponse : public QuickSightResponse {
     Q_OBJECT
 
 public:

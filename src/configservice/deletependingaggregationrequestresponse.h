@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class DeletePendingAggregationRequestResponsePrivate;
 
-class QTAWS_EXPORT DeletePendingAggregationRequestResponse : public ConfigServiceResponse {
+class QTAWSCONFIGSERVICE_EXPORT DeletePendingAggregationRequestResponse : public ConfigServiceResponse {
     Q_OBJECT
 
 public:

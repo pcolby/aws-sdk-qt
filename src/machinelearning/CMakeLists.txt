@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSMACHINELEARNING_LIBRARY)
+
 add_library(QtAwsMachineLearning
   addtagsrequest.h
   addtagsrequest_p.h
@@ -101,6 +103,7 @@ add_library(QtAwsMachineLearning
   predictrequest_p.h
   predictresponse.h
   predictresponse_p.h
+  qtawsmachinelearningglobal.h
   updatebatchpredictionrequest.h
   updatebatchpredictionrequest_p.h
   updatebatchpredictionresponse.h

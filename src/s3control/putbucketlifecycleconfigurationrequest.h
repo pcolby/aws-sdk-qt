@@ -27,7 +27,7 @@ namespace S3Control {
 
 class PutBucketLifecycleConfigurationRequestPrivate;
 
-class QTAWS_EXPORT PutBucketLifecycleConfigurationRequest : public S3ControlRequest {
+class QTAWSS3CONTROL_EXPORT PutBucketLifecycleConfigurationRequest : public S3ControlRequest {
 
 public:
     PutBucketLifecycleConfigurationRequest(const PutBucketLifecycleConfigurationRequest &other);

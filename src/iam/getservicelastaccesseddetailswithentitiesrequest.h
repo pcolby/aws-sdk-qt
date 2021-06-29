@@ -27,7 +27,7 @@ namespace IAM {
 
 class GetServiceLastAccessedDetailsWithEntitiesRequestPrivate;
 
-class QTAWS_EXPORT GetServiceLastAccessedDetailsWithEntitiesRequest : public IamRequest {
+class QTAWSIAM_EXPORT GetServiceLastAccessedDetailsWithEntitiesRequest : public IamRequest {
 
 public:
     GetServiceLastAccessedDetailsWithEntitiesRequest(const GetServiceLastAccessedDetailsWithEntitiesRequest &other);

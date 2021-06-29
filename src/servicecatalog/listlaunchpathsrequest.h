@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class ListLaunchPathsRequestPrivate;
 
-class QTAWS_EXPORT ListLaunchPathsRequest : public ServiceCatalogRequest {
+class QTAWSSERVICECATALOG_EXPORT ListLaunchPathsRequest : public ServiceCatalogRequest {
 
 public:
     ListLaunchPathsRequest(const ListLaunchPathsRequest &other);

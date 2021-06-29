@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsapigatewaymanagementapiglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -35,7 +37,7 @@ class GetConnectionResponse;
 class PostToConnectionRequest;
 class PostToConnectionResponse;
 
-class QTAWS_EXPORT ApiGatewayManagementApiClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSAPIGATEWAYMANAGEMENTAPI_EXPORT ApiGatewayManagementApiClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

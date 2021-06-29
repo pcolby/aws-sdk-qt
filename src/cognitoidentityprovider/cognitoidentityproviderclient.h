@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawscognitoidentityproviderglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -231,7 +233,7 @@ class VerifySoftwareTokenResponse;
 class VerifyUserAttributeRequest;
 class VerifyUserAttributeResponse;
 
-class QTAWS_EXPORT CognitoIdentityProviderClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT CognitoIdentityProviderClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace SSM {
 
 class SendCommandRequestPrivate;
 
-class QTAWS_EXPORT SendCommandRequest : public SsmRequest {
+class QTAWSSSM_EXPORT SendCommandRequest : public SsmRequest {
 
 public:
     SendCommandRequest(const SendCommandRequest &other);

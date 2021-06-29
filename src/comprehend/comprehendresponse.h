@@ -21,6 +21,8 @@
 #define QTAWS_COMPREHENDRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawscomprehendglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Comprehend {
 
 class ComprehendResponsePrivate;
 
-class QTAWS_EXPORT ComprehendResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCOMPREHEND_EXPORT ComprehendResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

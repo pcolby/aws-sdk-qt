@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsfrauddetectorglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace FraudDetector {
 
 class FraudDetectorRequestPrivate;
 
-class QTAWS_EXPORT FraudDetectorRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSFRAUDDETECTOR_EXPORT FraudDetectorRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by FraudDetector.

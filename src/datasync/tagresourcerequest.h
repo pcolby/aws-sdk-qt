@@ -27,7 +27,7 @@ namespace DataSync {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public DataSyncRequest {
+class QTAWSDATASYNC_EXPORT TagResourceRequest : public DataSyncRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

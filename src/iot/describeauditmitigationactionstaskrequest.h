@@ -27,7 +27,7 @@ namespace IoT {
 
 class DescribeAuditMitigationActionsTaskRequestPrivate;
 
-class QTAWS_EXPORT DescribeAuditMitigationActionsTaskRequest : public IoTRequest {
+class QTAWSIOT_EXPORT DescribeAuditMitigationActionsTaskRequest : public IoTRequest {
 
 public:
     DescribeAuditMitigationActionsTaskRequest(const DescribeAuditMitigationActionsTaskRequest &other);

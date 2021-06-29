@@ -27,7 +27,7 @@ namespace Polly {
 
 class DescribeVoicesRequestPrivate;
 
-class QTAWS_EXPORT DescribeVoicesRequest : public PollyRequest {
+class QTAWSPOLLY_EXPORT DescribeVoicesRequest : public PollyRequest {
 
 public:
     DescribeVoicesRequest(const DescribeVoicesRequest &other);

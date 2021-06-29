@@ -28,7 +28,7 @@ namespace RoboMaker {
 
 class ListRobotsResponsePrivate;
 
-class QTAWS_EXPORT ListRobotsResponse : public RoboMakerResponse {
+class QTAWSROBOMAKER_EXPORT ListRobotsResponse : public RoboMakerResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace ElasticTranscoder {
 
 class CreatePresetRequestPrivate;
 
-class QTAWS_EXPORT CreatePresetRequest : public ElasticTranscoderRequest {
+class QTAWSELASTICTRANSCODER_EXPORT CreatePresetRequest : public ElasticTranscoderRequest {
 
 public:
     CreatePresetRequest(const CreatePresetRequest &other);

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCODEPIPELINE_LIBRARY)
+
 add_library(QtAwsCodePipeline
   acknowledgejobrequest.h
   acknowledgejobrequest_p.h
@@ -129,6 +131,7 @@ add_library(QtAwsCodePipeline
   putwebhookrequest_p.h
   putwebhookresponse.h
   putwebhookresponse_p.h
+  qtawscodepipelineglobal.h
   registerwebhookwiththirdpartyrequest.h
   registerwebhookwiththirdpartyrequest_p.h
   registerwebhookwiththirdpartyresponse.h

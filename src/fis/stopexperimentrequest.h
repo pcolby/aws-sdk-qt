@@ -27,7 +27,7 @@ namespace FIS {
 
 class StopExperimentRequestPrivate;
 
-class QTAWS_EXPORT StopExperimentRequest : public FisRequest {
+class QTAWSFIS_EXPORT StopExperimentRequest : public FisRequest {
 
 public:
     StopExperimentRequest(const StopExperimentRequest &other);

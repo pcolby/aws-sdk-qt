@@ -27,7 +27,7 @@ namespace Amplify {
 
 class StopJobRequestPrivate;
 
-class QTAWS_EXPORT StopJobRequest : public AmplifyRequest {
+class QTAWSAMPLIFY_EXPORT StopJobRequest : public AmplifyRequest {
 
 public:
     StopJobRequest(const StopJobRequest &other);

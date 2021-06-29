@@ -28,7 +28,7 @@ namespace Neptune {
 
 class CopyDBClusterSnapshotResponsePrivate;
 
-class QTAWS_EXPORT CopyDBClusterSnapshotResponse : public NeptuneResponse {
+class QTAWSNEPTUNE_EXPORT CopyDBClusterSnapshotResponse : public NeptuneResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace Route53 {
 
 class EnableHostedZoneDNSSECResponsePrivate;
 
-class QTAWS_EXPORT EnableHostedZoneDNSSECResponse : public Route53Response {
+class QTAWSROUTE53_EXPORT EnableHostedZoneDNSSECResponse : public Route53Response {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace TimestreamWrite {
 
 class CreateTableRequestPrivate;
 
-class QTAWS_EXPORT CreateTableRequest : public TimestreamWriteRequest {
+class QTAWSTIMESTREAMWRITE_EXPORT CreateTableRequest : public TimestreamWriteRequest {
 
 public:
     CreateTableRequest(const CreateTableRequest &other);

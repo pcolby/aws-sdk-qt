@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class DeleteActionTargetRequestPrivate;
 
-class QTAWS_EXPORT DeleteActionTargetRequest : public SecurityHubRequest {
+class QTAWSSECURITYHUB_EXPORT DeleteActionTargetRequest : public SecurityHubRequest {
 
 public:
     DeleteActionTargetRequest(const DeleteActionTargetRequest &other);

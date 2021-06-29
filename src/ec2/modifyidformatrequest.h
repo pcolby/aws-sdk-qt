@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ModifyIdFormatRequestPrivate;
 
-class QTAWS_EXPORT ModifyIdFormatRequest : public Ec2Request {
+class QTAWSEC2_EXPORT ModifyIdFormatRequest : public Ec2Request {
 
 public:
     ModifyIdFormatRequest(const ModifyIdFormatRequest &other);

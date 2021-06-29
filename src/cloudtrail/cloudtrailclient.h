@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawscloudtrailglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -65,7 +67,7 @@ class StopLoggingResponse;
 class UpdateTrailRequest;
 class UpdateTrailResponse;
 
-class QTAWS_EXPORT CloudTrailClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCLOUDTRAIL_EXPORT CloudTrailClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -21,6 +21,8 @@
 #define QTAWS_EMRRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsemrglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace EMR {
 
 class EmrResponsePrivate;
 
-class QTAWS_EXPORT EmrResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSEMR_EXPORT EmrResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

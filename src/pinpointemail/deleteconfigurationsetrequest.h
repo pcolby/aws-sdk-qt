@@ -27,7 +27,7 @@ namespace PinpointEmail {
 
 class DeleteConfigurationSetRequestPrivate;
 
-class QTAWS_EXPORT DeleteConfigurationSetRequest : public PinpointEmailRequest {
+class QTAWSPINPOINTEMAIL_EXPORT DeleteConfigurationSetRequest : public PinpointEmailRequest {
 
 public:
     DeleteConfigurationSetRequest(const DeleteConfigurationSetRequest &other);

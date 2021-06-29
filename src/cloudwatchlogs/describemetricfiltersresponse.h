@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class DescribeMetricFiltersResponsePrivate;
 
-class QTAWS_EXPORT DescribeMetricFiltersResponse : public CloudWatchLogsResponse {
+class QTAWSCLOUDWATCHLOGS_EXPORT DescribeMetricFiltersResponse : public CloudWatchLogsResponse {
     Q_OBJECT
 
 public:

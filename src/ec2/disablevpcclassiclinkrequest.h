@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DisableVpcClassicLinkRequestPrivate;
 
-class QTAWS_EXPORT DisableVpcClassicLinkRequest : public Ec2Request {
+class QTAWSEC2_EXPORT DisableVpcClassicLinkRequest : public Ec2Request {
 
 public:
     DisableVpcClassicLinkRequest(const DisableVpcClassicLinkRequest &other);

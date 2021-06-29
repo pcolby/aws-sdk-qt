@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class CreateInstancesFromSnapshotRequestPrivate;
 
-class QTAWS_EXPORT CreateInstancesFromSnapshotRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT CreateInstancesFromSnapshotRequest : public LightsailRequest {
 
 public:
     CreateInstancesFromSnapshotRequest(const CreateInstancesFromSnapshotRequest &other);

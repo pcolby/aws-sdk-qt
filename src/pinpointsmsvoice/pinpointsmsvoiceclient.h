@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawspinpointsmsvoiceglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -45,7 +47,7 @@ class SendVoiceMessageResponse;
 class UpdateConfigurationSetEventDestinationRequest;
 class UpdateConfigurationSetEventDestinationResponse;
 
-class QTAWS_EXPORT PinpointSMSVoiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSPINPOINTSMSVOICE_EXPORT PinpointSMSVoiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

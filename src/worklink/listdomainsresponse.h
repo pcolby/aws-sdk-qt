@@ -28,7 +28,7 @@ namespace WorkLink {
 
 class ListDomainsResponsePrivate;
 
-class QTAWS_EXPORT ListDomainsResponse : public WorkLinkResponse {
+class QTAWSWORKLINK_EXPORT ListDomainsResponse : public WorkLinkResponse {
     Q_OBJECT
 
 public:

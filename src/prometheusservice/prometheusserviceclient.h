@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsprometheusserviceglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -39,7 +41,7 @@ class ListWorkspacesResponse;
 class UpdateWorkspaceAliasRequest;
 class UpdateWorkspaceAliasResponse;
 
-class QTAWS_EXPORT PrometheusServiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSPROMETHEUSSERVICE_EXPORT PrometheusServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

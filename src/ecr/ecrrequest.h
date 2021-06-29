@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsecrglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace ECR {
 
 class EcrRequestPrivate;
 
-class QTAWS_EXPORT EcrRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSECR_EXPORT EcrRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ECR.

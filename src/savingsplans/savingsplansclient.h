@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawssavingsplansglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -47,7 +49,7 @@ class TagResourceResponse;
 class UntagResourceRequest;
 class UntagResourceResponse;
 
-class QTAWS_EXPORT SavingsPlansClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSAVINGSPLANS_EXPORT SavingsPlansClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

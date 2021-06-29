@@ -28,7 +28,7 @@ namespace WorkLink {
 
 class DescribeFleetMetadataResponsePrivate;
 
-class QTAWS_EXPORT DescribeFleetMetadataResponse : public WorkLinkResponse {
+class QTAWSWORKLINK_EXPORT DescribeFleetMetadataResponse : public WorkLinkResponse {
     Q_OBJECT
 
 public:

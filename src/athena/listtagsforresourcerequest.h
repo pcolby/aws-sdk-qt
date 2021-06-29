@@ -27,7 +27,7 @@ namespace Athena {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public AthenaRequest {
+class QTAWSATHENA_EXPORT ListTagsForResourceRequest : public AthenaRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

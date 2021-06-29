@@ -27,7 +27,7 @@ namespace DevOpsGuru {
 
 class DescribeAccountOverviewRequestPrivate;
 
-class QTAWS_EXPORT DescribeAccountOverviewRequest : public DevOpsGuruRequest {
+class QTAWSDEVOPSGURU_EXPORT DescribeAccountOverviewRequest : public DevOpsGuruRequest {
 
 public:
     DescribeAccountOverviewRequest(const DescribeAccountOverviewRequest &other);

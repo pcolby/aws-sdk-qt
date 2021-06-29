@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSFRAUDDETECTOR_LIBRARY)
+
 add_library(QtAwsFraudDetector
   batchcreatevariablerequest.h
   batchcreatevariablerequest_p.h
@@ -189,6 +191,7 @@ add_library(QtAwsFraudDetector
   putoutcomerequest_p.h
   putoutcomeresponse.h
   putoutcomeresponse_p.h
+  qtawsfrauddetectorglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

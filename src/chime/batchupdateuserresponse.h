@@ -28,7 +28,7 @@ namespace Chime {
 
 class BatchUpdateUserResponsePrivate;
 
-class QTAWS_EXPORT BatchUpdateUserResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT BatchUpdateUserResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

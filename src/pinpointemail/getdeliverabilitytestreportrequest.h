@@ -27,7 +27,7 @@ namespace PinpointEmail {
 
 class GetDeliverabilityTestReportRequestPrivate;
 
-class QTAWS_EXPORT GetDeliverabilityTestReportRequest : public PinpointEmailRequest {
+class QTAWSPINPOINTEMAIL_EXPORT GetDeliverabilityTestReportRequest : public PinpointEmailRequest {
 
 public:
     GetDeliverabilityTestReportRequest(const GetDeliverabilityTestReportRequest &other);

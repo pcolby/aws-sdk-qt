@@ -27,7 +27,7 @@ namespace Kinesis {
 
 class AddTagsToStreamRequestPrivate;
 
-class QTAWS_EXPORT AddTagsToStreamRequest : public KinesisRequest {
+class QTAWSKINESIS_EXPORT AddTagsToStreamRequest : public KinesisRequest {
 
 public:
     AddTagsToStreamRequest(const AddTagsToStreamRequest &other);

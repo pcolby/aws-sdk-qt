@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsredshiftglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Redshift {
 
 class RedshiftRequestPrivate;
 
-class QTAWS_EXPORT RedshiftRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSREDSHIFT_EXPORT RedshiftRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Redshift.

@@ -28,7 +28,7 @@ namespace Schemas {
 
 class ListRegistriesResponsePrivate;
 
-class QTAWS_EXPORT ListRegistriesResponse : public SchemasResponse {
+class QTAWSSCHEMAS_EXPORT ListRegistriesResponse : public SchemasResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace ServerlessApplicationRepository {
 
 class UnshareApplicationResponsePrivate;
 
-class QTAWS_EXPORT UnshareApplicationResponse : public ServerlessApplicationRepositoryResponse {
+class QTAWSSERVERLESSAPPLICATIONREPOSITORY_EXPORT UnshareApplicationResponse : public ServerlessApplicationRepositoryResponse {
     Q_OBJECT
 
 public:

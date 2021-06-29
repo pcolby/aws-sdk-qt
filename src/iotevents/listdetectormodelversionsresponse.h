@@ -28,7 +28,7 @@ namespace IoTEvents {
 
 class ListDetectorModelVersionsResponsePrivate;
 
-class QTAWS_EXPORT ListDetectorModelVersionsResponse : public IoTEventsResponse {
+class QTAWSIOTEVENTS_EXPORT ListDetectorModelVersionsResponse : public IoTEventsResponse {
     Q_OBJECT
 
 public:

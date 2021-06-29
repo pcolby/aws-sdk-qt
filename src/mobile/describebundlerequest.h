@@ -27,7 +27,7 @@ namespace Mobile {
 
 class DescribeBundleRequestPrivate;
 
-class QTAWS_EXPORT DescribeBundleRequest : public MobileRequest {
+class QTAWSMOBILE_EXPORT DescribeBundleRequest : public MobileRequest {
 
 public:
     DescribeBundleRequest(const DescribeBundleRequest &other);

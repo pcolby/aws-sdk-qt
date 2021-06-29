@@ -27,7 +27,7 @@ namespace Glue {
 
 class UpdateCrawlerScheduleRequestPrivate;
 
-class QTAWS_EXPORT UpdateCrawlerScheduleRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT UpdateCrawlerScheduleRequest : public GlueRequest {
 
 public:
     UpdateCrawlerScheduleRequest(const UpdateCrawlerScheduleRequest &other);

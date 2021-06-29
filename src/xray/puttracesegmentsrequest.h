@@ -27,7 +27,7 @@ namespace XRay {
 
 class PutTraceSegmentsRequestPrivate;
 
-class QTAWS_EXPORT PutTraceSegmentsRequest : public XRayRequest {
+class QTAWSXRAY_EXPORT PutTraceSegmentsRequest : public XRayRequest {
 
 public:
     PutTraceSegmentsRequest(const PutTraceSegmentsRequest &other);

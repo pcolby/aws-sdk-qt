@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class AuthorizeCacheSecurityGroupIngressResponsePrivate;
 
-class QTAWS_EXPORT AuthorizeCacheSecurityGroupIngressResponse : public ElastiCacheResponse {
+class QTAWSELASTICACHE_EXPORT AuthorizeCacheSecurityGroupIngressResponse : public ElastiCacheResponse {
     Q_OBJECT
 
 public:

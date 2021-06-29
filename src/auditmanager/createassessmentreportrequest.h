@@ -27,7 +27,7 @@ namespace AuditManager {
 
 class CreateAssessmentReportRequestPrivate;
 
-class QTAWS_EXPORT CreateAssessmentReportRequest : public AuditManagerRequest {
+class QTAWSAUDITMANAGER_EXPORT CreateAssessmentReportRequest : public AuditManagerRequest {
 
 public:
     CreateAssessmentReportRequest(const CreateAssessmentReportRequest &other);

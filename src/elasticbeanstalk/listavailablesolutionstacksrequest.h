@@ -27,7 +27,7 @@ namespace ElasticBeanstalk {
 
 class ListAvailableSolutionStacksRequestPrivate;
 
-class QTAWS_EXPORT ListAvailableSolutionStacksRequest : public ElasticBeanstalkRequest {
+class QTAWSELASTICBEANSTALK_EXPORT ListAvailableSolutionStacksRequest : public ElasticBeanstalkRequest {
 
 public:
     ListAvailableSolutionStacksRequest(const ListAvailableSolutionStacksRequest &other);

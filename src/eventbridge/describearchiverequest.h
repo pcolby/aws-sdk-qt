@@ -27,7 +27,7 @@ namespace EventBridge {
 
 class DescribeArchiveRequestPrivate;
 
-class QTAWS_EXPORT DescribeArchiveRequest : public EventBridgeRequest {
+class QTAWSEVENTBRIDGE_EXPORT DescribeArchiveRequest : public EventBridgeRequest {
 
 public:
     DescribeArchiveRequest(const DescribeArchiveRequest &other);

@@ -28,7 +28,7 @@ namespace GameLift {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public GameLiftResponse {
+class QTAWSGAMELIFT_EXPORT ListTagsForResourceResponse : public GameLiftResponse {
     Q_OBJECT
 
 public:

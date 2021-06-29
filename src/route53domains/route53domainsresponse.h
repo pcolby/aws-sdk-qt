@@ -21,6 +21,8 @@
 #define QTAWS_ROUTE53DOMAINSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsroute53domainsglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Route53Domains {
 
 class Route53DomainsResponsePrivate;
 
-class QTAWS_EXPORT Route53DomainsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSROUTE53DOMAINS_EXPORT Route53DomainsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class DeleteFileShareResponsePrivate;
 
-class QTAWS_EXPORT DeleteFileShareResponse : public StorageGatewayResponse {
+class QTAWSSTORAGEGATEWAY_EXPORT DeleteFileShareResponse : public StorageGatewayResponse {
     Q_OBJECT
 
 public:

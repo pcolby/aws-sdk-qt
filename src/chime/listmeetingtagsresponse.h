@@ -28,7 +28,7 @@ namespace Chime {
 
 class ListMeetingTagsResponsePrivate;
 
-class QTAWS_EXPORT ListMeetingTagsResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT ListMeetingTagsResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace S3Control {
 
 class UpdateJobPriorityResponsePrivate;
 
-class QTAWS_EXPORT UpdateJobPriorityResponse : public S3ControlResponse {
+class QTAWSS3CONTROL_EXPORT UpdateJobPriorityResponse : public S3ControlResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace SSMContacts {
 
 class DeactivateContactChannelRequestPrivate;
 
-class QTAWS_EXPORT DeactivateContactChannelRequest : public SSMContactsRequest {
+class QTAWSSSMCONTACTS_EXPORT DeactivateContactChannelRequest : public SSMContactsRequest {
 
 public:
     DeactivateContactChannelRequest(const DeactivateContactChannelRequest &other);

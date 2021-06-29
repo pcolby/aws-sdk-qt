@@ -28,7 +28,7 @@ namespace AuditManager {
 
 class RegisterAccountResponsePrivate;
 
-class QTAWS_EXPORT RegisterAccountResponse : public AuditManagerResponse {
+class QTAWSAUDITMANAGER_EXPORT RegisterAccountResponse : public AuditManagerResponse {
     Q_OBJECT
 
 public:

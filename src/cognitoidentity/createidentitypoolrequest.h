@@ -27,7 +27,7 @@ namespace CognitoIdentity {
 
 class CreateIdentityPoolRequestPrivate;
 
-class QTAWS_EXPORT CreateIdentityPoolRequest : public CognitoIdentityRequest {
+class QTAWSCOGNITOIDENTITY_EXPORT CreateIdentityPoolRequest : public CognitoIdentityRequest {
 
 public:
     CreateIdentityPoolRequest(const CreateIdentityPoolRequest &other);

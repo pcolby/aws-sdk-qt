@@ -27,7 +27,7 @@ namespace CloudWatch {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public CloudWatchRequest {
+class QTAWSCLOUDWATCH_EXPORT ListTagsForResourceRequest : public CloudWatchRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

@@ -27,7 +27,7 @@ namespace IoT {
 
 class ListCACertificatesRequestPrivate;
 
-class QTAWS_EXPORT ListCACertificatesRequest : public IoTRequest {
+class QTAWSIOT_EXPORT ListCACertificatesRequest : public IoTRequest {
 
 public:
     ListCACertificatesRequest(const ListCACertificatesRequest &other);

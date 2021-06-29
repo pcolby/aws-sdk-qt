@@ -28,7 +28,7 @@ namespace LexModelBuildingService {
 
 class PutBotResponsePrivate;
 
-class QTAWS_EXPORT PutBotResponse : public LexModelBuildingServiceResponse {
+class QTAWSLEXMODELBUILDINGSERVICE_EXPORT PutBotResponse : public LexModelBuildingServiceResponse {
     Q_OBJECT
 
 public:

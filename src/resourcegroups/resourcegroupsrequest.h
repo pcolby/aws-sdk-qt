@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsresourcegroupsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace ResourceGroups {
 
 class ResourceGroupsRequestPrivate;
 
-class QTAWS_EXPORT ResourceGroupsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSRESOURCEGROUPS_EXPORT ResourceGroupsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ResourceGroups.

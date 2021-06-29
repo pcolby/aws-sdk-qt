@@ -28,7 +28,7 @@ namespace Glue {
 
 class CreateDevEndpointResponsePrivate;
 
-class QTAWS_EXPORT CreateDevEndpointResponse : public GlueResponse {
+class QTAWSGLUE_EXPORT CreateDevEndpointResponse : public GlueResponse {
     Q_OBJECT
 
 public:

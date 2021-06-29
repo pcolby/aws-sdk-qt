@@ -28,7 +28,7 @@ namespace Connect {
 
 class CreateUserHierarchyGroupResponsePrivate;
 
-class QTAWS_EXPORT CreateUserHierarchyGroupResponse : public ConnectResponse {
+class QTAWSCONNECT_EXPORT CreateUserHierarchyGroupResponse : public ConnectResponse {
     Q_OBJECT
 
 public:

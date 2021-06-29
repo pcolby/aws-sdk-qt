@@ -21,6 +21,8 @@
 #define QTAWS_IOTFLEETHUBRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsiotfleethubglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace IoTFleetHub {
 
 class IoTFleetHubResponsePrivate;
 
-class QTAWS_EXPORT IoTFleetHubResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSIOTFLEETHUB_EXPORT IoTFleetHubResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

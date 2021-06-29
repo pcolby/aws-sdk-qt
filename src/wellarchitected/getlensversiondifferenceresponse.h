@@ -28,7 +28,7 @@ namespace WellArchitected {
 
 class GetLensVersionDifferenceResponsePrivate;
 
-class QTAWS_EXPORT GetLensVersionDifferenceResponse : public WellArchitectedResponse {
+class QTAWSWELLARCHITECTED_EXPORT GetLensVersionDifferenceResponse : public WellArchitectedResponse {
     Q_OBJECT
 
 public:

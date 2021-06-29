@@ -27,7 +27,7 @@ namespace ECRPublic {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public ECRPublicRequest {
+class QTAWSECRPUBLIC_EXPORT UntagResourceRequest : public ECRPublicRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

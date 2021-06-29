@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSMEDIASTORE_LIBRARY)
+
 add_library(QtAwsMediaStore
   createcontainerrequest.h
   createcontainerrequest_p.h
@@ -73,6 +75,7 @@ add_library(QtAwsMediaStore
   putmetricpolicyrequest_p.h
   putmetricpolicyresponse.h
   putmetricpolicyresponse_p.h
+  qtawsmediastoreglobal.h
   startaccessloggingrequest.h
   startaccessloggingrequest_p.h
   startaccessloggingresponse.h

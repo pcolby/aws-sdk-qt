@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class ListRepositoriesRequestPrivate;
 
-class QTAWS_EXPORT ListRepositoriesRequest : public CodeCommitRequest {
+class QTAWSCODECOMMIT_EXPORT ListRepositoriesRequest : public CodeCommitRequest {
 
 public:
     ListRepositoriesRequest(const ListRepositoriesRequest &other);

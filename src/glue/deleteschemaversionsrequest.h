@@ -27,7 +27,7 @@ namespace Glue {
 
 class DeleteSchemaVersionsRequestPrivate;
 
-class QTAWS_EXPORT DeleteSchemaVersionsRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT DeleteSchemaVersionsRequest : public GlueRequest {
 
 public:
     DeleteSchemaVersionsRequest(const DeleteSchemaVersionsRequest &other);

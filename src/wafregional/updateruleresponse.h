@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class UpdateRuleResponsePrivate;
 
-class QTAWS_EXPORT UpdateRuleResponse : public WAFRegionalResponse {
+class QTAWSWAFREGIONAL_EXPORT UpdateRuleResponse : public WAFRegionalResponse {
     Q_OBJECT
 
 public:

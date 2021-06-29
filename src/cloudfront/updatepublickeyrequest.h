@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class UpdatePublicKeyRequestPrivate;
 
-class QTAWS_EXPORT UpdatePublicKeyRequest : public CloudFrontRequest {
+class QTAWSCLOUDFRONT_EXPORT UpdatePublicKeyRequest : public CloudFrontRequest {
 
 public:
     UpdatePublicKeyRequest(const UpdatePublicKeyRequest &other);

@@ -27,7 +27,7 @@ namespace IAM {
 
 class AttachRolePolicyRequestPrivate;
 
-class QTAWS_EXPORT AttachRolePolicyRequest : public IamRequest {
+class QTAWSIAM_EXPORT AttachRolePolicyRequest : public IamRequest {
 
 public:
     AttachRolePolicyRequest(const AttachRolePolicyRequest &other);

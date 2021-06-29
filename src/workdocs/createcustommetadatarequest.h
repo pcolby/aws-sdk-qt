@@ -27,7 +27,7 @@ namespace WorkDocs {
 
 class CreateCustomMetadataRequestPrivate;
 
-class QTAWS_EXPORT CreateCustomMetadataRequest : public WorkDocsRequest {
+class QTAWSWORKDOCS_EXPORT CreateCustomMetadataRequest : public WorkDocsRequest {
 
 public:
     CreateCustomMetadataRequest(const CreateCustomMetadataRequest &other);

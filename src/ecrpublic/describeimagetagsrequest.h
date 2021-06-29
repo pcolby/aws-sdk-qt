@@ -27,7 +27,7 @@ namespace ECRPublic {
 
 class DescribeImageTagsRequestPrivate;
 
-class QTAWS_EXPORT DescribeImageTagsRequest : public ECRPublicRequest {
+class QTAWSECRPUBLIC_EXPORT DescribeImageTagsRequest : public ECRPublicRequest {
 
 public:
     DescribeImageTagsRequest(const DescribeImageTagsRequest &other);

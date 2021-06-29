@@ -28,7 +28,7 @@ namespace Glue {
 
 class GetResourcePoliciesResponsePrivate;
 
-class QTAWS_EXPORT GetResourcePoliciesResponse : public GlueResponse {
+class QTAWSGLUE_EXPORT GetResourcePoliciesResponse : public GlueResponse {
     Q_OBJECT
 
 public:

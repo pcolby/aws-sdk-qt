@@ -27,7 +27,7 @@ namespace DirectConnect {
 
 class StopBgpFailoverTestRequestPrivate;
 
-class QTAWS_EXPORT StopBgpFailoverTestRequest : public DirectConnectRequest {
+class QTAWSDIRECTCONNECT_EXPORT StopBgpFailoverTestRequest : public DirectConnectRequest {
 
 public:
     StopBgpFailoverTestRequest(const StopBgpFailoverTestRequest &other);

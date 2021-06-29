@@ -27,7 +27,7 @@ namespace CodeStarNotifications {
 
 class ListEventTypesRequestPrivate;
 
-class QTAWS_EXPORT ListEventTypesRequest : public CodeStarNotificationsRequest {
+class QTAWSCODESTARNOTIFICATIONS_EXPORT ListEventTypesRequest : public CodeStarNotificationsRequest {
 
 public:
     ListEventTypesRequest(const ListEventTypesRequest &other);

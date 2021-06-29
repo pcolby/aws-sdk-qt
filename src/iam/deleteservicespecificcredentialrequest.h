@@ -27,7 +27,7 @@ namespace IAM {
 
 class DeleteServiceSpecificCredentialRequestPrivate;
 
-class QTAWS_EXPORT DeleteServiceSpecificCredentialRequest : public IamRequest {
+class QTAWSIAM_EXPORT DeleteServiceSpecificCredentialRequest : public IamRequest {
 
 public:
     DeleteServiceSpecificCredentialRequest(const DeleteServiceSpecificCredentialRequest &other);

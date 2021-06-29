@@ -28,7 +28,7 @@ namespace Personalize {
 
 class ListRecipesResponsePrivate;
 
-class QTAWS_EXPORT ListRecipesResponse : public PersonalizeResponse {
+class QTAWSPERSONALIZE_EXPORT ListRecipesResponse : public PersonalizeResponse {
     Q_OBJECT
 
 public:

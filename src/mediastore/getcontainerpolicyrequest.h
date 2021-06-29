@@ -27,7 +27,7 @@ namespace MediaStore {
 
 class GetContainerPolicyRequestPrivate;
 
-class QTAWS_EXPORT GetContainerPolicyRequest : public MediaStoreRequest {
+class QTAWSMEDIASTORE_EXPORT GetContainerPolicyRequest : public MediaStoreRequest {
 
 public:
     GetContainerPolicyRequest(const GetContainerPolicyRequest &other);

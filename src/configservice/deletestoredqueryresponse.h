@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class DeleteStoredQueryResponsePrivate;
 
-class QTAWS_EXPORT DeleteStoredQueryResponse : public ConfigServiceResponse {
+class QTAWSCONFIGSERVICE_EXPORT DeleteStoredQueryResponse : public ConfigServiceResponse {
     Q_OBJECT
 
 public:

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsmigrationhubconfigglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -35,7 +37,7 @@ class DescribeHomeRegionControlsResponse;
 class GetHomeRegionRequest;
 class GetHomeRegionResponse;
 
-class QTAWS_EXPORT MigrationHubConfigClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSMIGRATIONHUBCONFIG_EXPORT MigrationHubConfigClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

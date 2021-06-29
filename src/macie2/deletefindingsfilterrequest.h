@@ -27,7 +27,7 @@ namespace Macie2 {
 
 class DeleteFindingsFilterRequestPrivate;
 
-class QTAWS_EXPORT DeleteFindingsFilterRequest : public Macie2Request {
+class QTAWSMACIE2_EXPORT DeleteFindingsFilterRequest : public Macie2Request {
 
 public:
     DeleteFindingsFilterRequest(const DeleteFindingsFilterRequest &other);

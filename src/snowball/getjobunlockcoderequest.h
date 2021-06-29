@@ -27,7 +27,7 @@ namespace Snowball {
 
 class GetJobUnlockCodeRequestPrivate;
 
-class QTAWS_EXPORT GetJobUnlockCodeRequest : public SnowballRequest {
+class QTAWSSNOWBALL_EXPORT GetJobUnlockCodeRequest : public SnowballRequest {
 
 public:
     GetJobUnlockCodeRequest(const GetJobUnlockCodeRequest &other);

@@ -27,7 +27,7 @@ namespace IVS {
 
 class DeleteChannelRequestPrivate;
 
-class QTAWS_EXPORT DeleteChannelRequest : public IvsRequest {
+class QTAWSIVS_EXPORT DeleteChannelRequest : public IvsRequest {
 
 public:
     DeleteChannelRequest(const DeleteChannelRequest &other);

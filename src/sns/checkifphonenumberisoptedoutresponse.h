@@ -28,7 +28,7 @@ namespace SNS {
 
 class CheckIfPhoneNumberIsOptedOutResponsePrivate;
 
-class QTAWS_EXPORT CheckIfPhoneNumberIsOptedOutResponse : public SnsResponse {
+class QTAWSSNS_EXPORT CheckIfPhoneNumberIsOptedOutResponse : public SnsResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace TimestreamQuery {
 
 class QueryRequestPrivate;
 
-class QTAWS_EXPORT QueryRequest : public TimestreamQueryRequest {
+class QTAWSTIMESTREAMQUERY_EXPORT QueryRequest : public TimestreamQueryRequest {
 
 public:
     QueryRequest(const QueryRequest &other);

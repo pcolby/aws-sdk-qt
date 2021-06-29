@@ -27,7 +27,7 @@ namespace Schemas {
 
 class CreateRegistryRequestPrivate;
 
-class QTAWS_EXPORT CreateRegistryRequest : public SchemasRequest {
+class QTAWSSCHEMAS_EXPORT CreateRegistryRequest : public SchemasRequest {
 
 public:
     CreateRegistryRequest(const CreateRegistryRequest &other);

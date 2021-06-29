@@ -28,7 +28,7 @@ namespace CostExplorer {
 
 class GetCostForecastResponsePrivate;
 
-class QTAWS_EXPORT GetCostForecastResponse : public CostExplorerResponse {
+class QTAWSCOSTEXPLORER_EXPORT GetCostForecastResponse : public CostExplorerResponse {
     Q_OBJECT
 
 public:

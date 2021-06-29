@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawscostexplorerglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace CostExplorer {
 
 class CostExplorerRequestPrivate;
 
-class QTAWS_EXPORT CostExplorerRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCOSTEXPLORER_EXPORT CostExplorerRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CostExplorer.

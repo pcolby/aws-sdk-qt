@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class SendBulkEmailRequestPrivate;
 
-class QTAWS_EXPORT SendBulkEmailRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT SendBulkEmailRequest : public Sesv2Request {
 
 public:
     SendBulkEmailRequest(const SendBulkEmailRequest &other);

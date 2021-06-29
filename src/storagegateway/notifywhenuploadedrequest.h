@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class NotifyWhenUploadedRequestPrivate;
 
-class QTAWS_EXPORT NotifyWhenUploadedRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT NotifyWhenUploadedRequest : public StorageGatewayRequest {
 
 public:
     NotifyWhenUploadedRequest(const NotifyWhenUploadedRequest &other);

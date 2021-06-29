@@ -27,7 +27,7 @@ namespace MTurk {
 
 class RejectAssignmentRequestPrivate;
 
-class QTAWS_EXPORT RejectAssignmentRequest : public MTurkRequest {
+class QTAWSMTURK_EXPORT RejectAssignmentRequest : public MTurkRequest {
 
 public:
     RejectAssignmentRequest(const RejectAssignmentRequest &other);

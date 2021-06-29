@@ -27,7 +27,7 @@ namespace AppConfig {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public AppConfigRequest {
+class QTAWSAPPCONFIG_EXPORT UntagResourceRequest : public AppConfigRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

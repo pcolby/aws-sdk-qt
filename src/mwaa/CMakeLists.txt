@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSMWAA_LIBRARY)
+
 add_library(QtAwsMwaa
   createclitokenrequest.h
   createclitokenrequest_p.h
@@ -37,6 +39,7 @@ add_library(QtAwsMwaa
   publishmetricsrequest_p.h
   publishmetricsresponse.h
   publishmetricsresponse_p.h
+  qtawsmwaaglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

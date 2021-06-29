@@ -27,7 +27,7 @@ namespace WAFV2 {
 
 class GetRateBasedStatementManagedKeysRequestPrivate;
 
-class QTAWS_EXPORT GetRateBasedStatementManagedKeysRequest : public Wafv2Request {
+class QTAWSWAFV2_EXPORT GetRateBasedStatementManagedKeysRequest : public Wafv2Request {
 
 public:
     GetRateBasedStatementManagedKeysRequest(const GetRateBasedStatementManagedKeysRequest &other);

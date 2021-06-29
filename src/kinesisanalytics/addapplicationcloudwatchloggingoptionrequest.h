@@ -27,7 +27,7 @@ namespace KinesisAnalytics {
 
 class AddApplicationCloudWatchLoggingOptionRequestPrivate;
 
-class QTAWS_EXPORT AddApplicationCloudWatchLoggingOptionRequest : public KinesisAnalyticsRequest {
+class QTAWSKINESISANALYTICS_EXPORT AddApplicationCloudWatchLoggingOptionRequest : public KinesisAnalyticsRequest {
 
 public:
     AddApplicationCloudWatchLoggingOptionRequest(const AddApplicationCloudWatchLoggingOptionRequest &other);

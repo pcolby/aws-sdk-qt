@@ -20,7 +20,7 @@
 #ifndef AWSENDPOINT_P_H
 #define AWSENDPOINT_P_H
 
-#include "qtawsglobal.h"
+#include "qtawscoreglobal.h"
 
 #include "awsendpoint.h"
 

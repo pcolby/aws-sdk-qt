@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeScheduledInstanceAvailabilityResponsePrivate;
 
-class QTAWS_EXPORT DescribeScheduledInstanceAvailabilityResponse : public Ec2Response {
+class QTAWSEC2_EXPORT DescribeScheduledInstanceAvailabilityResponse : public Ec2Response {
     Q_OBJECT
 
 public:

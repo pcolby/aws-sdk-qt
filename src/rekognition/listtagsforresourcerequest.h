@@ -27,7 +27,7 @@ namespace Rekognition {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public RekognitionRequest {
+class QTAWSREKOGNITION_EXPORT ListTagsForResourceRequest : public RekognitionRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

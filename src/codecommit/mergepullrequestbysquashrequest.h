@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class MergePullRequestBySquashRequestPrivate;
 
-class QTAWS_EXPORT MergePullRequestBySquashRequest : public CodeCommitRequest {
+class QTAWSCODECOMMIT_EXPORT MergePullRequestBySquashRequest : public CodeCommitRequest {
 
 public:
     MergePullRequestBySquashRequest(const MergePullRequestBySquashRequest &other);

@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class DisassociateMembersRequestPrivate;
 
-class QTAWS_EXPORT DisassociateMembersRequest : public SecurityHubRequest {
+class QTAWSSECURITYHUB_EXPORT DisassociateMembersRequest : public SecurityHubRequest {
 
 public:
     DisassociateMembersRequest(const DisassociateMembersRequest &other);

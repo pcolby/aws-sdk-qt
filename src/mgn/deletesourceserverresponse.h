@@ -28,7 +28,7 @@ namespace mgn {
 
 class DeleteSourceServerResponsePrivate;
 
-class QTAWS_EXPORT DeleteSourceServerResponse : public mgnResponse {
+class QTAWSMGN_EXPORT DeleteSourceServerResponse : public mgnResponse {
     Q_OBJECT
 
 public:

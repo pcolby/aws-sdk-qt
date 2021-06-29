@@ -21,6 +21,8 @@
 #define QTAWS_COSTANDUSAGEREPORTSERVICERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawscostandusagereportserviceglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace CostandUsageReportService {
 
 class CostandUsageReportServiceResponsePrivate;
 
-class QTAWS_EXPORT CostandUsageReportServiceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCOSTANDUSAGEREPORTSERVICE_EXPORT CostandUsageReportServiceResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

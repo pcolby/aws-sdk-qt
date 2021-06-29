@@ -27,7 +27,7 @@ namespace WorkSpaces {
 
 class RestoreWorkspaceRequestPrivate;
 
-class QTAWS_EXPORT RestoreWorkspaceRequest : public WorkSpacesRequest {
+class QTAWSWORKSPACES_EXPORT RestoreWorkspaceRequest : public WorkSpacesRequest {
 
 public:
     RestoreWorkspaceRequest(const RestoreWorkspaceRequest &other);

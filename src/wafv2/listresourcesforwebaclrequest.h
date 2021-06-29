@@ -27,7 +27,7 @@ namespace WAFV2 {
 
 class ListResourcesForWebACLRequestPrivate;
 
-class QTAWS_EXPORT ListResourcesForWebACLRequest : public Wafv2Request {
+class QTAWSWAFV2_EXPORT ListResourcesForWebACLRequest : public Wafv2Request {
 
 public:
     ListResourcesForWebACLRequest(const ListResourcesForWebACLRequest &other);

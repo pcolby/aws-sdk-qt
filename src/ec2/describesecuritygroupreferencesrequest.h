@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DescribeSecurityGroupReferencesRequestPrivate;
 
-class QTAWS_EXPORT DescribeSecurityGroupReferencesRequest : public Ec2Request {
+class QTAWSEC2_EXPORT DescribeSecurityGroupReferencesRequest : public Ec2Request {
 
 public:
     DescribeSecurityGroupReferencesRequest(const DescribeSecurityGroupReferencesRequest &other);

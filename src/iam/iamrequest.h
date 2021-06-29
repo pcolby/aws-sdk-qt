@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsiamglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace IAM {
 
 class IamRequestPrivate;
 
-class QTAWS_EXPORT IamRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSIAM_EXPORT IamRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by IAM.

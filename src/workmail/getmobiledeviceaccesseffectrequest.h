@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class GetMobileDeviceAccessEffectRequestPrivate;
 
-class QTAWS_EXPORT GetMobileDeviceAccessEffectRequest : public WorkMailRequest {
+class QTAWSWORKMAIL_EXPORT GetMobileDeviceAccessEffectRequest : public WorkMailRequest {
 
 public:
     GetMobileDeviceAccessEffectRequest(const GetMobileDeviceAccessEffectRequest &other);

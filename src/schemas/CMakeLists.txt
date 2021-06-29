@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSCHEMAS_LIBRARY)
+
 add_library(QtAwsSchemas
   creatediscovererrequest.h
   creatediscovererrequest_p.h
@@ -91,6 +93,7 @@ add_library(QtAwsSchemas
   putresourcepolicyrequest_p.h
   putresourcepolicyresponse.h
   putresourcepolicyresponse_p.h
+  qtawsschemasglobal.h
   schemasclient.h
   schemasclient_p.h
   schemasrequest.h

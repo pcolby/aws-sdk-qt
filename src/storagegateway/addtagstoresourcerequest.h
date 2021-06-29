@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class AddTagsToResourceRequestPrivate;
 
-class QTAWS_EXPORT AddTagsToResourceRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT AddTagsToResourceRequest : public StorageGatewayRequest {
 
 public:
     AddTagsToResourceRequest(const AddTagsToResourceRequest &other);

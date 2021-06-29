@@ -28,7 +28,7 @@ namespace MTurk {
 
 class UpdateNotificationSettingsResponsePrivate;
 
-class QTAWS_EXPORT UpdateNotificationSettingsResponse : public MTurkResponse {
+class QTAWSMTURK_EXPORT UpdateNotificationSettingsResponse : public MTurkResponse {
     Q_OBJECT
 
 public:

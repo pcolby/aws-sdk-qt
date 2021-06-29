@@ -27,7 +27,7 @@ namespace WellArchitected {
 
 class ListMilestonesRequestPrivate;
 
-class QTAWS_EXPORT ListMilestonesRequest : public WellArchitectedRequest {
+class QTAWSWELLARCHITECTED_EXPORT ListMilestonesRequest : public WellArchitectedRequest {
 
 public:
     ListMilestonesRequest(const ListMilestonesRequest &other);

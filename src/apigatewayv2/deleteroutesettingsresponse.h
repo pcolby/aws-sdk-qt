@@ -28,7 +28,7 @@ namespace ApiGatewayV2 {
 
 class DeleteRouteSettingsResponsePrivate;
 
-class QTAWS_EXPORT DeleteRouteSettingsResponse : public ApiGatewayV2Response {
+class QTAWSAPIGATEWAYV2_EXPORT DeleteRouteSettingsResponse : public ApiGatewayV2Response {
     Q_OBJECT
 
 public:

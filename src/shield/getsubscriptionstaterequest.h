@@ -27,7 +27,7 @@ namespace Shield {
 
 class GetSubscriptionStateRequestPrivate;
 
-class QTAWS_EXPORT GetSubscriptionStateRequest : public ShieldRequest {
+class QTAWSSHIELD_EXPORT GetSubscriptionStateRequest : public ShieldRequest {
 
 public:
     GetSubscriptionStateRequest(const GetSubscriptionStateRequest &other);

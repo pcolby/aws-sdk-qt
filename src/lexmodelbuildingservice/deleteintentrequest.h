@@ -27,7 +27,7 @@ namespace LexModelBuildingService {
 
 class DeleteIntentRequestPrivate;
 
-class QTAWS_EXPORT DeleteIntentRequest : public LexModelBuildingServiceRequest {
+class QTAWSLEXMODELBUILDINGSERVICE_EXPORT DeleteIntentRequest : public LexModelBuildingServiceRequest {
 
 public:
     DeleteIntentRequest(const DeleteIntentRequest &other);

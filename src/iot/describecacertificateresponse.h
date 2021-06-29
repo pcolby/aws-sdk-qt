@@ -28,7 +28,7 @@ namespace IoT {
 
 class DescribeCACertificateResponsePrivate;
 
-class QTAWS_EXPORT DescribeCACertificateResponse : public IoTResponse {
+class QTAWSIOT_EXPORT DescribeCACertificateResponse : public IoTResponse {
     Q_OBJECT
 
 public:

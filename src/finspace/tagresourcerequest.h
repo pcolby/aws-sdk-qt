@@ -27,7 +27,7 @@ namespace finspace {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public finspaceRequest {
+class QTAWSFINSPACE_EXPORT TagResourceRequest : public finspaceRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

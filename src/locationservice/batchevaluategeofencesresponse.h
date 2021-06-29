@@ -28,7 +28,7 @@ namespace LocationService {
 
 class BatchEvaluateGeofencesResponsePrivate;
 
-class QTAWS_EXPORT BatchEvaluateGeofencesResponse : public LocationServiceResponse {
+class QTAWSLOCATIONSERVICE_EXPORT BatchEvaluateGeofencesResponse : public LocationServiceResponse {
     Q_OBJECT
 
 public:

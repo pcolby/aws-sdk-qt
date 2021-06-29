@@ -28,7 +28,7 @@ namespace AppRegistry {
 
 class ListApplicationsResponsePrivate;
 
-class QTAWS_EXPORT ListApplicationsResponse : public AppRegistryResponse {
+class QTAWSAPPREGISTRY_EXPORT ListApplicationsResponse : public AppRegistryResponse {
     Q_OBJECT
 
 public:

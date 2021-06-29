@@ -27,7 +27,7 @@ namespace Chime {
 
 class DeleteVoiceConnectorEmergencyCallingConfigurationRequestPrivate;
 
-class QTAWS_EXPORT DeleteVoiceConnectorEmergencyCallingConfigurationRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT DeleteVoiceConnectorEmergencyCallingConfigurationRequest : public ChimeRequest {
 
 public:
     DeleteVoiceConnectorEmergencyCallingConfigurationRequest(const DeleteVoiceConnectorEmergencyCallingConfigurationRequest &other);

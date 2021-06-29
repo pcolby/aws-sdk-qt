@@ -27,7 +27,7 @@ namespace EC2 {
 
 class AssignIpv6AddressesRequestPrivate;
 
-class QTAWS_EXPORT AssignIpv6AddressesRequest : public Ec2Request {
+class QTAWSEC2_EXPORT AssignIpv6AddressesRequest : public Ec2Request {
 
 public:
     AssignIpv6AddressesRequest(const AssignIpv6AddressesRequest &other);

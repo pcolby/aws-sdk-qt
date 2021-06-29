@@ -27,7 +27,7 @@ namespace IoTDataPlane {
 
 class DeleteThingShadowRequestPrivate;
 
-class QTAWS_EXPORT DeleteThingShadowRequest : public IoTDataPlaneRequest {
+class QTAWSIOTDATAPLANE_EXPORT DeleteThingShadowRequest : public IoTDataPlaneRequest {
 
 public:
     DeleteThingShadowRequest(const DeleteThingShadowRequest &other);

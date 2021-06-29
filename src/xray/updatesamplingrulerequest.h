@@ -27,7 +27,7 @@ namespace XRay {
 
 class UpdateSamplingRuleRequestPrivate;
 
-class QTAWS_EXPORT UpdateSamplingRuleRequest : public XRayRequest {
+class QTAWSXRAY_EXPORT UpdateSamplingRuleRequest : public XRayRequest {
 
 public:
     UpdateSamplingRuleRequest(const UpdateSamplingRuleRequest &other);

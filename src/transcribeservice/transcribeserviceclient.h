@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawstranscribeserviceglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -83,7 +85,7 @@ class UpdateVocabularyResponse;
 class UpdateVocabularyFilterRequest;
 class UpdateVocabularyFilterResponse;
 
-class QTAWS_EXPORT TranscribeServiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSTRANSCRIBESERVICE_EXPORT TranscribeServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

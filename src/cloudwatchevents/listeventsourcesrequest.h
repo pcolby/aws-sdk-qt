@@ -27,7 +27,7 @@ namespace CloudWatchEvents {
 
 class ListEventSourcesRequestPrivate;
 
-class QTAWS_EXPORT ListEventSourcesRequest : public CloudWatchEventsRequest {
+class QTAWSCLOUDWATCHEVENTS_EXPORT ListEventSourcesRequest : public CloudWatchEventsRequest {
 
 public:
     ListEventSourcesRequest(const ListEventSourcesRequest &other);

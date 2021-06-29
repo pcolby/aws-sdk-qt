@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 
 class DescribeReservedElasticsearchInstancesResponsePrivate;
 
-class QTAWS_EXPORT DescribeReservedElasticsearchInstancesResponse : public ElasticsearchServiceResponse {
+class QTAWSELASTICSEARCHSERVICE_EXPORT DescribeReservedElasticsearchInstancesResponse : public ElasticsearchServiceResponse {
     Q_OBJECT
 
 public:

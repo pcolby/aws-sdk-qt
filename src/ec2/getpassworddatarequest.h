@@ -27,7 +27,7 @@ namespace EC2 {
 
 class GetPasswordDataRequestPrivate;
 
-class QTAWS_EXPORT GetPasswordDataRequest : public Ec2Request {
+class QTAWSEC2_EXPORT GetPasswordDataRequest : public Ec2Request {
 
 public:
     GetPasswordDataRequest(const GetPasswordDataRequest &other);

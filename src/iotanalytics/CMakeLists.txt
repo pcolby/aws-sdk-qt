@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSIOTANALYTICS_LIBRARY)
+
 add_library(QtAwsIoTAnalytics
   batchputmessagerequest.h
   batchputmessagerequest_p.h
@@ -105,6 +107,7 @@ add_library(QtAwsIoTAnalytics
   putloggingoptionsrequest_p.h
   putloggingoptionsresponse.h
   putloggingoptionsresponse_p.h
+  qtawsiotanalyticsglobal.h
   runpipelineactivityrequest.h
   runpipelineactivityrequest_p.h
   runpipelineactivityresponse.h

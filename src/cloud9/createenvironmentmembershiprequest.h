@@ -27,7 +27,7 @@ namespace Cloud9 {
 
 class CreateEnvironmentMembershipRequestPrivate;
 
-class QTAWS_EXPORT CreateEnvironmentMembershipRequest : public Cloud9Request {
+class QTAWSCLOUD9_EXPORT CreateEnvironmentMembershipRequest : public Cloud9Request {
 
 public:
     CreateEnvironmentMembershipRequest(const CreateEnvironmentMembershipRequest &other);

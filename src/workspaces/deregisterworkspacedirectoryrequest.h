@@ -27,7 +27,7 @@ namespace WorkSpaces {
 
 class DeregisterWorkspaceDirectoryRequestPrivate;
 
-class QTAWS_EXPORT DeregisterWorkspaceDirectoryRequest : public WorkSpacesRequest {
+class QTAWSWORKSPACES_EXPORT DeregisterWorkspaceDirectoryRequest : public WorkSpacesRequest {
 
 public:
     DeregisterWorkspaceDirectoryRequest(const DeregisterWorkspaceDirectoryRequest &other);

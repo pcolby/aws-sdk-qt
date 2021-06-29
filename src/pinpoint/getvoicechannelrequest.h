@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class GetVoiceChannelRequestPrivate;
 
-class QTAWS_EXPORT GetVoiceChannelRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT GetVoiceChannelRequest : public PinpointRequest {
 
 public:
     GetVoiceChannelRequest(const GetVoiceChannelRequest &other);

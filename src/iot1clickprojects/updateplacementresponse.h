@@ -28,7 +28,7 @@ namespace IoT1ClickProjects {
 
 class UpdatePlacementResponsePrivate;
 
-class QTAWS_EXPORT UpdatePlacementResponse : public IoT1ClickProjectsResponse {
+class QTAWSIOT1CLICKPROJECTS_EXPORT UpdatePlacementResponse : public IoT1ClickProjectsResponse {
     Q_OBJECT
 
 public:

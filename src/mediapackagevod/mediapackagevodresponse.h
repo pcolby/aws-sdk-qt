@@ -21,6 +21,8 @@
 #define QTAWS_MEDIAPACKAGEVODRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsmediapackagevodglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace MediaPackageVod {
 
 class MediaPackageVodResponsePrivate;
 
-class QTAWS_EXPORT MediaPackageVodResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSMEDIAPACKAGEVOD_EXPORT MediaPackageVodResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

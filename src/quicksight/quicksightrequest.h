@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsquicksightglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace QuickSight {
 
 class QuickSightRequestPrivate;
 
-class QTAWS_EXPORT QuickSightRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSQUICKSIGHT_EXPORT QuickSightRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by QuickSight.

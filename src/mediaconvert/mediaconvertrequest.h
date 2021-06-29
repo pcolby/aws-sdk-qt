@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsmediaconvertglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace MediaConvert {
 
 class MediaConvertRequestPrivate;
 
-class QTAWS_EXPORT MediaConvertRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSMEDIACONVERT_EXPORT MediaConvertRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by MediaConvert.

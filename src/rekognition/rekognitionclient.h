@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsrekognitionglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -131,7 +133,7 @@ class TagResourceResponse;
 class UntagResourceRequest;
 class UntagResourceResponse;
 
-class QTAWS_EXPORT RekognitionClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSREKOGNITION_EXPORT RekognitionClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

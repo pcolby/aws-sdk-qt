@@ -27,7 +27,7 @@ namespace ApiGatewayV2 {
 
 class GetIntegrationRequestPrivate;
 
-class QTAWS_EXPORT GetIntegrationRequest : public ApiGatewayV2Request {
+class QTAWSAPIGATEWAYV2_EXPORT GetIntegrationRequest : public ApiGatewayV2Request {
 
 public:
     GetIntegrationRequest(const GetIntegrationRequest &other);

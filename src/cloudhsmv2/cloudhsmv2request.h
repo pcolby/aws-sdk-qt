@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawscloudhsmv2global.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace CloudHSMV2 {
 
 class CloudHSMV2RequestPrivate;
 
-class QTAWS_EXPORT CloudHSMV2Request : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCLOUDHSMV2_EXPORT CloudHSMV2Request : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CloudHSMV2.

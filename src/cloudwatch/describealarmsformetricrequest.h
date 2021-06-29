@@ -27,7 +27,7 @@ namespace CloudWatch {
 
 class DescribeAlarmsForMetricRequestPrivate;
 
-class QTAWS_EXPORT DescribeAlarmsForMetricRequest : public CloudWatchRequest {
+class QTAWSCLOUDWATCH_EXPORT DescribeAlarmsForMetricRequest : public CloudWatchRequest {
 
 public:
     DescribeAlarmsForMetricRequest(const DescribeAlarmsForMetricRequest &other);

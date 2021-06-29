@@ -28,7 +28,7 @@ namespace IAM {
 
 class ListSigningCertificatesResponsePrivate;
 
-class QTAWS_EXPORT ListSigningCertificatesResponse : public IamResponse {
+class QTAWSIAM_EXPORT ListSigningCertificatesResponse : public IamResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class UpdateConnectorDefinitionRequestPrivate;
 
-class QTAWS_EXPORT UpdateConnectorDefinitionRequest : public GreengrassRequest {
+class QTAWSGREENGRASS_EXPORT UpdateConnectorDefinitionRequest : public GreengrassRequest {
 
 public:
     UpdateConnectorDefinitionRequest(const UpdateConnectorDefinitionRequest &other);

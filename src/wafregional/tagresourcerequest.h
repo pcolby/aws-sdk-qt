@@ -27,7 +27,7 @@ namespace WAFRegional {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public WAFRegionalRequest {
+class QTAWSWAFREGIONAL_EXPORT TagResourceRequest : public WAFRegionalRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

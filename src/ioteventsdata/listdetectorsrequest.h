@@ -27,7 +27,7 @@ namespace IoTEventsData {
 
 class ListDetectorsRequestPrivate;
 
-class QTAWS_EXPORT ListDetectorsRequest : public IoTEventsDataRequest {
+class QTAWSIOTEVENTSDATA_EXPORT ListDetectorsRequest : public IoTEventsDataRequest {
 
 public:
     ListDetectorsRequest(const ListDetectorsRequest &other);

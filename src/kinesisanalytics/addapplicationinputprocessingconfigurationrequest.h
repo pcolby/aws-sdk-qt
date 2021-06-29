@@ -27,7 +27,7 @@ namespace KinesisAnalytics {
 
 class AddApplicationInputProcessingConfigurationRequestPrivate;
 
-class QTAWS_EXPORT AddApplicationInputProcessingConfigurationRequest : public KinesisAnalyticsRequest {
+class QTAWSKINESISANALYTICS_EXPORT AddApplicationInputProcessingConfigurationRequest : public KinesisAnalyticsRequest {
 
 public:
     AddApplicationInputProcessingConfigurationRequest(const AddApplicationInputProcessingConfigurationRequest &other);

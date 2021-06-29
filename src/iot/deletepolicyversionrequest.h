@@ -27,7 +27,7 @@ namespace IoT {
 
 class DeletePolicyVersionRequestPrivate;
 
-class QTAWS_EXPORT DeletePolicyVersionRequest : public IoTRequest {
+class QTAWSIOT_EXPORT DeletePolicyVersionRequest : public IoTRequest {
 
 public:
     DeletePolicyVersionRequest(const DeletePolicyVersionRequest &other);

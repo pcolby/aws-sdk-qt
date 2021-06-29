@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsdaxglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -71,7 +73,7 @@ class UpdateParameterGroupResponse;
 class UpdateSubnetGroupRequest;
 class UpdateSubnetGroupResponse;
 
-class QTAWS_EXPORT DaxClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSDAX_EXPORT DaxClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

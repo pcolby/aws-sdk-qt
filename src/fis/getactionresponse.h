@@ -28,7 +28,7 @@ namespace FIS {
 
 class GetActionResponsePrivate;
 
-class QTAWS_EXPORT GetActionResponse : public FisResponse {
+class QTAWSFIS_EXPORT GetActionResponse : public FisResponse {
     Q_OBJECT
 
 public:

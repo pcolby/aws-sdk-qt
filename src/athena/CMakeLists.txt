@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSATHENA_LIBRARY)
+
 add_library(QtAwsAthena
   athenaclient.h
   athenaclient_p.h
@@ -113,6 +115,7 @@ add_library(QtAwsAthena
   listworkgroupsrequest_p.h
   listworkgroupsresponse.h
   listworkgroupsresponse_p.h
+  qtawsathenaglobal.h
   startqueryexecutionrequest.h
   startqueryexecutionrequest_p.h
   startqueryexecutionresponse.h

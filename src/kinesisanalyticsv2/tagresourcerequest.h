@@ -27,7 +27,7 @@ namespace KinesisAnalyticsV2 {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public KinesisAnalyticsV2Request {
+class QTAWSKINESISANALYTICSV2_EXPORT TagResourceRequest : public KinesisAnalyticsV2Request {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

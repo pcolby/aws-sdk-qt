@@ -28,7 +28,7 @@ namespace Macie2 {
 
 class GetUsageTotalsResponsePrivate;
 
-class QTAWS_EXPORT GetUsageTotalsResponse : public Macie2Response {
+class QTAWSMACIE2_EXPORT GetUsageTotalsResponse : public Macie2Response {
     Q_OBJECT
 
 public:

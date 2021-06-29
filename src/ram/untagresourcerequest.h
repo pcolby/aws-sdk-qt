@@ -27,7 +27,7 @@ namespace RAM {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public RamRequest {
+class QTAWSRAM_EXPORT UntagResourceRequest : public RamRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

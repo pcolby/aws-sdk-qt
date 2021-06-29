@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class DeletePipelineResponsePrivate;
 
-class QTAWS_EXPORT DeletePipelineResponse : public CodePipelineResponse {
+class QTAWSCODEPIPELINE_EXPORT DeletePipelineResponse : public CodePipelineResponse {
     Q_OBJECT
 
 public:

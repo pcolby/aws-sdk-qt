@@ -28,7 +28,7 @@ namespace Chime {
 
 class DeleteVoiceConnectorOriginationResponsePrivate;
 
-class QTAWS_EXPORT DeleteVoiceConnectorOriginationResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT DeleteVoiceConnectorOriginationResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

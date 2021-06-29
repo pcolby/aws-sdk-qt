@@ -28,7 +28,7 @@ namespace Shield {
 
 class DisassociateHealthCheckResponsePrivate;
 
-class QTAWS_EXPORT DisassociateHealthCheckResponse : public ShieldResponse {
+class QTAWSSHIELD_EXPORT DisassociateHealthCheckResponse : public ShieldResponse {
     Q_OBJECT
 
 public:

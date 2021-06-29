@@ -27,7 +27,7 @@ namespace GlobalAccelerator {
 
 class DeleteAcceleratorRequestPrivate;
 
-class QTAWS_EXPORT DeleteAcceleratorRequest : public GlobalAcceleratorRequest {
+class QTAWSGLOBALACCELERATOR_EXPORT DeleteAcceleratorRequest : public GlobalAcceleratorRequest {
 
 public:
     DeleteAcceleratorRequest(const DeleteAcceleratorRequest &other);

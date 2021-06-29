@@ -27,7 +27,7 @@ namespace MarketplaceMetering {
 
 class RegisterUsageRequestPrivate;
 
-class QTAWS_EXPORT RegisterUsageRequest : public MarketplaceMeteringRequest {
+class QTAWSMARKETPLACEMETERING_EXPORT RegisterUsageRequest : public MarketplaceMeteringRequest {
 
 public:
     RegisterUsageRequest(const RegisterUsageRequest &other);

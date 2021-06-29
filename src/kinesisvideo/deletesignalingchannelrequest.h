@@ -27,7 +27,7 @@ namespace KinesisVideo {
 
 class DeleteSignalingChannelRequestPrivate;
 
-class QTAWS_EXPORT DeleteSignalingChannelRequest : public KinesisVideoRequest {
+class QTAWSKINESISVIDEO_EXPORT DeleteSignalingChannelRequest : public KinesisVideoRequest {
 
 public:
     DeleteSignalingChannelRequest(const DeleteSignalingChannelRequest &other);

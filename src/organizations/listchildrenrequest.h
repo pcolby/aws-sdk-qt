@@ -27,7 +27,7 @@ namespace Organizations {
 
 class ListChildrenRequestPrivate;
 
-class QTAWS_EXPORT ListChildrenRequest : public OrganizationsRequest {
+class QTAWSORGANIZATIONS_EXPORT ListChildrenRequest : public OrganizationsRequest {
 
 public:
     ListChildrenRequest(const ListChildrenRequest &other);

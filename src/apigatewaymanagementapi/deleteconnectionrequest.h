@@ -27,7 +27,7 @@ namespace ApiGatewayManagementApi {
 
 class DeleteConnectionRequestPrivate;
 
-class QTAWS_EXPORT DeleteConnectionRequest : public ApiGatewayManagementApiRequest {
+class QTAWSAPIGATEWAYMANAGEMENTAPI_EXPORT DeleteConnectionRequest : public ApiGatewayManagementApiRequest {
 
 public:
     DeleteConnectionRequest(const DeleteConnectionRequest &other);

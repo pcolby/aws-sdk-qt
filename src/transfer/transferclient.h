@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawstransferglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -79,7 +81,7 @@ class UpdateServerResponse;
 class UpdateUserRequest;
 class UpdateUserResponse;
 
-class QTAWS_EXPORT TransferClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSTRANSFER_EXPORT TransferClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

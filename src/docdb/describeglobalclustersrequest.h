@@ -27,7 +27,7 @@ namespace DocDB {
 
 class DescribeGlobalClustersRequestPrivate;
 
-class QTAWS_EXPORT DescribeGlobalClustersRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT DescribeGlobalClustersRequest : public DocDBRequest {
 
 public:
     DescribeGlobalClustersRequest(const DescribeGlobalClustersRequest &other);

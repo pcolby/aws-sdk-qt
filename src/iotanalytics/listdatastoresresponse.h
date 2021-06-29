@@ -28,7 +28,7 @@ namespace IoTAnalytics {
 
 class ListDatastoresResponsePrivate;
 
-class QTAWS_EXPORT ListDatastoresResponse : public IoTAnalyticsResponse {
+class QTAWSIOTANALYTICS_EXPORT ListDatastoresResponse : public IoTAnalyticsResponse {
     Q_OBJECT
 
 public:

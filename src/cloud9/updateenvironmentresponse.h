@@ -28,7 +28,7 @@ namespace Cloud9 {
 
 class UpdateEnvironmentResponsePrivate;
 
-class QTAWS_EXPORT UpdateEnvironmentResponse : public Cloud9Response {
+class QTAWSCLOUD9_EXPORT UpdateEnvironmentResponse : public Cloud9Response {
     Q_OBJECT
 
 public:

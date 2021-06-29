@@ -27,7 +27,7 @@ namespace ElasticBeanstalk {
 
 class UpdateApplicationResourceLifecycleRequestPrivate;
 
-class QTAWS_EXPORT UpdateApplicationResourceLifecycleRequest : public ElasticBeanstalkRequest {
+class QTAWSELASTICBEANSTALK_EXPORT UpdateApplicationResourceLifecycleRequest : public ElasticBeanstalkRequest {
 
 public:
     UpdateApplicationResourceLifecycleRequest(const UpdateApplicationResourceLifecycleRequest &other);

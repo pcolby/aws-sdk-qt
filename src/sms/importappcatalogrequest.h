@@ -27,7 +27,7 @@ namespace SMS {
 
 class ImportAppCatalogRequestPrivate;
 
-class QTAWS_EXPORT ImportAppCatalogRequest : public SmsRequest {
+class QTAWSSMS_EXPORT ImportAppCatalogRequest : public SmsRequest {
 
 public:
     ImportAppCatalogRequest(const ImportAppCatalogRequest &other);

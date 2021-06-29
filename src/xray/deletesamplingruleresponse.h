@@ -28,7 +28,7 @@ namespace XRay {
 
 class DeleteSamplingRuleResponsePrivate;
 
-class QTAWS_EXPORT DeleteSamplingRuleResponse : public XRayResponse {
+class QTAWSXRAY_EXPORT DeleteSamplingRuleResponse : public XRayResponse {
     Q_OBJECT
 
 public:

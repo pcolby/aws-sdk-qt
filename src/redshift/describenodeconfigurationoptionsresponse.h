@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DescribeNodeConfigurationOptionsResponsePrivate;
 
-class QTAWS_EXPORT DescribeNodeConfigurationOptionsResponse : public RedshiftResponse {
+class QTAWSREDSHIFT_EXPORT DescribeNodeConfigurationOptionsResponse : public RedshiftResponse {
     Q_OBJECT
 
 public:

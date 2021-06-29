@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSEMR_LIBRARY)
+
 add_library(QtAwsEmr
   addinstancefleetrequest.h
   addinstancefleetrequest_p.h
@@ -149,6 +151,7 @@ add_library(QtAwsEmr
   putmanagedscalingpolicyrequest_p.h
   putmanagedscalingpolicyresponse.h
   putmanagedscalingpolicyresponse_p.h
+  qtawsemrglobal.h
   removeautoscalingpolicyrequest.h
   removeautoscalingpolicyrequest_p.h
   removeautoscalingpolicyresponse.h

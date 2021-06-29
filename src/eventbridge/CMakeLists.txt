@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSEVENTBRIDGE_LIBRARY)
+
 add_library(QtAwsEventBridge
   activateeventsourcerequest.h
   activateeventsourcerequest_p.h
@@ -173,6 +175,7 @@ add_library(QtAwsEventBridge
   puttargetsrequest_p.h
   puttargetsresponse.h
   puttargetsresponse_p.h
+  qtawseventbridgeglobal.h
   removepermissionrequest.h
   removepermissionrequest_p.h
   removepermissionresponse.h

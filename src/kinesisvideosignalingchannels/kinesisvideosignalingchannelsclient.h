@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawskinesisvideosignalingchannelsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -33,7 +35,7 @@ class GetIceServerConfigResponse;
 class SendAlexaOfferToMasterRequest;
 class SendAlexaOfferToMasterResponse;
 
-class QTAWS_EXPORT KinesisVideoSignalingChannelsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSKINESISVIDEOSIGNALINGCHANNELS_EXPORT KinesisVideoSignalingChannelsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

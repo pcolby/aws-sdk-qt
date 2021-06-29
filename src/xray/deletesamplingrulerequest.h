@@ -27,7 +27,7 @@ namespace XRay {
 
 class DeleteSamplingRuleRequestPrivate;
 
-class QTAWS_EXPORT DeleteSamplingRuleRequest : public XRayRequest {
+class QTAWSXRAY_EXPORT DeleteSamplingRuleRequest : public XRayRequest {
 
 public:
     DeleteSamplingRuleRequest(const DeleteSamplingRuleRequest &other);

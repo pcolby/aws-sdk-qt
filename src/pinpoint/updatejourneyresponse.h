@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class UpdateJourneyResponsePrivate;
 
-class QTAWS_EXPORT UpdateJourneyResponse : public PinpointResponse {
+class QTAWSPINPOINT_EXPORT UpdateJourneyResponse : public PinpointResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace Kafka {
 
 class DescribeConfigurationRevisionRequestPrivate;
 
-class QTAWS_EXPORT DescribeConfigurationRevisionRequest : public KafkaRequest {
+class QTAWSKAFKA_EXPORT DescribeConfigurationRevisionRequest : public KafkaRequest {
 
 public:
     DescribeConfigurationRevisionRequest(const DescribeConfigurationRevisionRequest &other);

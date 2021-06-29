@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class ListDeviceDefinitionsRequestPrivate;
 
-class QTAWS_EXPORT ListDeviceDefinitionsRequest : public GreengrassRequest {
+class QTAWSGREENGRASS_EXPORT ListDeviceDefinitionsRequest : public GreengrassRequest {
 
 public:
     ListDeviceDefinitionsRequest(const ListDeviceDefinitionsRequest &other);

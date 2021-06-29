@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class DescribeLoadBasedAutoScalingResponsePrivate;
 
-class QTAWS_EXPORT DescribeLoadBasedAutoScalingResponse : public OpsWorksResponse {
+class QTAWSOPSWORKS_EXPORT DescribeLoadBasedAutoScalingResponse : public OpsWorksResponse {
     Q_OBJECT
 
 public:

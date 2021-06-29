@@ -27,7 +27,7 @@ namespace ApplicationCostProfiler {
 
 class ListReportDefinitionsRequestPrivate;
 
-class QTAWS_EXPORT ListReportDefinitionsRequest : public ApplicationCostProfilerRequest {
+class QTAWSAPPLICATIONCOSTPROFILER_EXPORT ListReportDefinitionsRequest : public ApplicationCostProfilerRequest {
 
 public:
     ListReportDefinitionsRequest(const ListReportDefinitionsRequest &other);

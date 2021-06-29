@@ -27,7 +27,7 @@ namespace IoTSiteWise {
 
 class DeleteProjectRequestPrivate;
 
-class QTAWS_EXPORT DeleteProjectRequest : public IoTSiteWiseRequest {
+class QTAWSIOTSITEWISE_EXPORT DeleteProjectRequest : public IoTSiteWiseRequest {
 
 public:
     DeleteProjectRequest(const DeleteProjectRequest &other);

@@ -27,7 +27,7 @@ namespace APIGateway {
 
 class FlushStageCacheRequestPrivate;
 
-class QTAWS_EXPORT FlushStageCacheRequest : public APIGatewayRequest {
+class QTAWSAPIGATEWAY_EXPORT FlushStageCacheRequest : public APIGatewayRequest {
 
 public:
     FlushStageCacheRequest(const FlushStageCacheRequest &other);

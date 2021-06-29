@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsmgnglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace mgn {
 
 class mgnRequestPrivate;
 
-class QTAWS_EXPORT mgnRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSMGN_EXPORT mgnRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by mgn.

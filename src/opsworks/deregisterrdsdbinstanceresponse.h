@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class DeregisterRdsDbInstanceResponsePrivate;
 
-class QTAWS_EXPORT DeregisterRdsDbInstanceResponse : public OpsWorksResponse {
+class QTAWSOPSWORKS_EXPORT DeregisterRdsDbInstanceResponse : public OpsWorksResponse {
     Q_OBJECT
 
 public:

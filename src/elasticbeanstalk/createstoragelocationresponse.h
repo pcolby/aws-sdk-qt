@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class CreateStorageLocationResponsePrivate;
 
-class QTAWS_EXPORT CreateStorageLocationResponse : public ElasticBeanstalkResponse {
+class QTAWSELASTICBEANSTALK_EXPORT CreateStorageLocationResponse : public ElasticBeanstalkResponse {
     Q_OBJECT
 
 public:

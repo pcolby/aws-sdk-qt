@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class DescribeProvisioningParametersRequestPrivate;
 
-class QTAWS_EXPORT DescribeProvisioningParametersRequest : public ServiceCatalogRequest {
+class QTAWSSERVICECATALOG_EXPORT DescribeProvisioningParametersRequest : public ServiceCatalogRequest {
 
 public:
     DescribeProvisioningParametersRequest(const DescribeProvisioningParametersRequest &other);

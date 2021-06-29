@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSWAFREGIONAL_LIBRARY)
+
 add_library(QtAwsWAFRegional
   associatewebaclrequest.h
   associatewebaclrequest_p.h
@@ -267,6 +269,7 @@ add_library(QtAwsWAFRegional
   putpermissionpolicyrequest_p.h
   putpermissionpolicyresponse.h
   putpermissionpolicyresponse_p.h
+  qtawswafregionalglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

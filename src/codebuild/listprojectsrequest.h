@@ -27,7 +27,7 @@ namespace CodeBuild {
 
 class ListProjectsRequestPrivate;
 
-class QTAWS_EXPORT ListProjectsRequest : public CodeBuildRequest {
+class QTAWSCODEBUILD_EXPORT ListProjectsRequest : public CodeBuildRequest {
 
 public:
     ListProjectsRequest(const ListProjectsRequest &other);

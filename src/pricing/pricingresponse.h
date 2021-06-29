@@ -21,6 +21,8 @@
 #define QTAWS_PRICINGRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawspricingglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Pricing {
 
 class PricingResponsePrivate;
 
-class QTAWS_EXPORT PricingResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSPRICING_EXPORT PricingResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

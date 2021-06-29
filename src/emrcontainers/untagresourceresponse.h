@@ -28,7 +28,7 @@ namespace EMRContainers {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public EMRContainersResponse {
+class QTAWSEMRCONTAINERS_EXPORT UntagResourceResponse : public EMRContainersResponse {
     Q_OBJECT
 
 public:

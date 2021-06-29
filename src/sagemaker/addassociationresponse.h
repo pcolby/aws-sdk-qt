@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class AddAssociationResponsePrivate;
 
-class QTAWS_EXPORT AddAssociationResponse : public SageMakerResponse {
+class QTAWSSAGEMAKER_EXPORT AddAssociationResponse : public SageMakerResponse {
     Q_OBJECT
 
 public:

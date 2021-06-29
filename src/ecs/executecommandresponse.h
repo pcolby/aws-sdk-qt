@@ -28,7 +28,7 @@ namespace ECS {
 
 class ExecuteCommandResponsePrivate;
 
-class QTAWS_EXPORT ExecuteCommandResponse : public EcsResponse {
+class QTAWSECS_EXPORT ExecuteCommandResponse : public EcsResponse {
     Q_OBJECT
 
 public:

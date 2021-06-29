@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class DescribeConfigurationAggregatorsResponsePrivate;
 
-class QTAWS_EXPORT DescribeConfigurationAggregatorsResponse : public ConfigServiceResponse {
+class QTAWSCONFIGSERVICE_EXPORT DescribeConfigurationAggregatorsResponse : public ConfigServiceResponse {
     Q_OBJECT
 
 public:

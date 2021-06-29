@@ -28,7 +28,7 @@ namespace AppStream {
 
 class BatchDisassociateUserStackResponsePrivate;
 
-class QTAWS_EXPORT BatchDisassociateUserStackResponse : public AppStreamResponse {
+class QTAWSAPPSTREAM_EXPORT BatchDisassociateUserStackResponse : public AppStreamResponse {
     Q_OBJECT
 
 public:

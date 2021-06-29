@@ -27,7 +27,7 @@ namespace CloudWatchLogs {
 
 class DeleteQueryDefinitionRequestPrivate;
 
-class QTAWS_EXPORT DeleteQueryDefinitionRequest : public CloudWatchLogsRequest {
+class QTAWSCLOUDWATCHLOGS_EXPORT DeleteQueryDefinitionRequest : public CloudWatchLogsRequest {
 
 public:
     DeleteQueryDefinitionRequest(const DeleteQueryDefinitionRequest &other);

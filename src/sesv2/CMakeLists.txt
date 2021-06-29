@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSESV2_LIBRARY)
+
 add_library(QtAwsSesv2
   createconfigurationseteventdestinationrequest.h
   createconfigurationseteventdestinationrequest_p.h
@@ -275,6 +277,7 @@ add_library(QtAwsSesv2
   putsuppresseddestinationrequest_p.h
   putsuppresseddestinationresponse.h
   putsuppresseddestinationresponse_p.h
+  qtawssesv2global.h
   sendbulkemailrequest.h
   sendbulkemailrequest_p.h
   sendbulkemailresponse.h

@@ -28,7 +28,7 @@ namespace HealthLake {
 
 class CreateFHIRDatastoreResponsePrivate;
 
-class QTAWS_EXPORT CreateFHIRDatastoreResponse : public HealthLakeResponse {
+class QTAWSHEALTHLAKE_EXPORT CreateFHIRDatastoreResponse : public HealthLakeResponse {
     Q_OBJECT
 
 public:

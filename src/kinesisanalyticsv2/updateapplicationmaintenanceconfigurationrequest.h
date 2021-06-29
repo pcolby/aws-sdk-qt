@@ -27,7 +27,7 @@ namespace KinesisAnalyticsV2 {
 
 class UpdateApplicationMaintenanceConfigurationRequestPrivate;
 
-class QTAWS_EXPORT UpdateApplicationMaintenanceConfigurationRequest : public KinesisAnalyticsV2Request {
+class QTAWSKINESISANALYTICSV2_EXPORT UpdateApplicationMaintenanceConfigurationRequest : public KinesisAnalyticsV2Request {
 
 public:
     UpdateApplicationMaintenanceConfigurationRequest(const UpdateApplicationMaintenanceConfigurationRequest &other);

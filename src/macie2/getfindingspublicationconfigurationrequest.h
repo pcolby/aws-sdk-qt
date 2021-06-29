@@ -27,7 +27,7 @@ namespace Macie2 {
 
 class GetFindingsPublicationConfigurationRequestPrivate;
 
-class QTAWS_EXPORT GetFindingsPublicationConfigurationRequest : public Macie2Request {
+class QTAWSMACIE2_EXPORT GetFindingsPublicationConfigurationRequest : public Macie2Request {
 
 public:
     GetFindingsPublicationConfigurationRequest(const GetFindingsPublicationConfigurationRequest &other);

@@ -27,7 +27,7 @@ namespace ApplicationDiscoveryService {
 
 class CreateApplicationRequestPrivate;
 
-class QTAWS_EXPORT CreateApplicationRequest : public ApplicationDiscoveryServiceRequest {
+class QTAWSAPPLICATIONDISCOVERYSERVICE_EXPORT CreateApplicationRequest : public ApplicationDiscoveryServiceRequest {
 
 public:
     CreateApplicationRequest(const CreateApplicationRequest &other);

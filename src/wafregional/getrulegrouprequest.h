@@ -27,7 +27,7 @@ namespace WAFRegional {
 
 class GetRuleGroupRequestPrivate;
 
-class QTAWS_EXPORT GetRuleGroupRequest : public WAFRegionalRequest {
+class QTAWSWAFREGIONAL_EXPORT GetRuleGroupRequest : public WAFRegionalRequest {
 
 public:
     GetRuleGroupRequest(const GetRuleGroupRequest &other);

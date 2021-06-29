@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class RestoreAnalysisRequestPrivate;
 
-class QTAWS_EXPORT RestoreAnalysisRequest : public QuickSightRequest {
+class QTAWSQUICKSIGHT_EXPORT RestoreAnalysisRequest : public QuickSightRequest {
 
 public:
     RestoreAnalysisRequest(const RestoreAnalysisRequest &other);

@@ -27,7 +27,7 @@ namespace PI {
 
 class GetDimensionKeyDetailsRequestPrivate;
 
-class QTAWS_EXPORT GetDimensionKeyDetailsRequest : public PiRequest {
+class QTAWSPI_EXPORT GetDimensionKeyDetailsRequest : public PiRequest {
 
 public:
     GetDimensionKeyDetailsRequest(const GetDimensionKeyDetailsRequest &other);

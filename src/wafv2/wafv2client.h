@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawswafv2global.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -109,7 +111,7 @@ class UpdateRuleGroupResponse;
 class UpdateWebACLRequest;
 class UpdateWebACLResponse;
 
-class QTAWS_EXPORT Wafv2Client : public QtAws::Core::AwsAbstractClient {
+class QTAWSWAFV2_EXPORT Wafv2Client : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

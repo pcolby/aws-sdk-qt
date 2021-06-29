@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class GetSnapshotLimitsRequestPrivate;
 
-class QTAWS_EXPORT GetSnapshotLimitsRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT GetSnapshotLimitsRequest : public DirectoryServiceRequest {
 
 public:
     GetSnapshotLimitsRequest(const GetSnapshotLimitsRequest &other);

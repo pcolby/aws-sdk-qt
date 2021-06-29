@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsautoscalingplansglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace AutoScalingPlans {
 
 class AutoScalingPlansRequestPrivate;
 
-class QTAWS_EXPORT AutoScalingPlansRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSAUTOSCALINGPLANS_EXPORT AutoScalingPlansRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by AutoScalingPlans.

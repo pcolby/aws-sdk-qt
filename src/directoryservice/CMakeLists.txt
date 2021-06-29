@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSDIRECTORYSERVICE_LIBRARY)
+
 add_library(QtAwsDirectoryService
   acceptshareddirectoryrequest.h
   acceptshareddirectoryrequest_p.h
@@ -189,6 +191,7 @@ add_library(QtAwsDirectoryService
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsdirectoryserviceglobal.h
   registercertificaterequest.h
   registercertificaterequest_p.h
   registercertificateresponse.h

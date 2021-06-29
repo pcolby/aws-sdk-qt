@@ -28,7 +28,7 @@ namespace Connect {
 
 class AssociateSecurityKeyResponsePrivate;
 
-class QTAWS_EXPORT AssociateSecurityKeyResponse : public ConnectResponse {
+class QTAWSCONNECT_EXPORT AssociateSecurityKeyResponse : public ConnectResponse {
     Q_OBJECT
 
 public:

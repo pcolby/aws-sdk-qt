@@ -28,7 +28,7 @@ namespace MediaPackageVod {
 
 class DeletePackagingGroupResponsePrivate;
 
-class QTAWS_EXPORT DeletePackagingGroupResponse : public MediaPackageVodResponse {
+class QTAWSMEDIAPACKAGEVOD_EXPORT DeletePackagingGroupResponse : public MediaPackageVodResponse {
     Q_OBJECT
 
 public:

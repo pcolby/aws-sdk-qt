@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DescribeClusterTracksResponsePrivate;
 
-class QTAWS_EXPORT DescribeClusterTracksResponse : public RedshiftResponse {
+class QTAWSREDSHIFT_EXPORT DescribeClusterTracksResponse : public RedshiftResponse {
     Q_OBJECT
 
 public:

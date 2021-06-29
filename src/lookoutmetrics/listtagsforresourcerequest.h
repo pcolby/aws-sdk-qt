@@ -27,7 +27,7 @@ namespace LookoutMetrics {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public LookoutMetricsRequest {
+class QTAWSLOOKOUTMETRICS_EXPORT ListTagsForResourceRequest : public LookoutMetricsRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

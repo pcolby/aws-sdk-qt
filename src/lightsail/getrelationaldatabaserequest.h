@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class GetRelationalDatabaseRequestPrivate;
 
-class QTAWS_EXPORT GetRelationalDatabaseRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT GetRelationalDatabaseRequest : public LightsailRequest {
 
 public:
     GetRelationalDatabaseRequest(const GetRelationalDatabaseRequest &other);

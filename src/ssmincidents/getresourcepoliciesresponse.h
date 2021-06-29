@@ -28,7 +28,7 @@ namespace SSMIncidents {
 
 class GetResourcePoliciesResponsePrivate;
 
-class QTAWS_EXPORT GetResourcePoliciesResponse : public SSMIncidentsResponse {
+class QTAWSSSMINCIDENTS_EXPORT GetResourcePoliciesResponse : public SSMIncidentsResponse {
     Q_OBJECT
 
 public:

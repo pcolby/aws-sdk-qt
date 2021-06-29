@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CreateFlowLogsRequestPrivate;
 
-class QTAWS_EXPORT CreateFlowLogsRequest : public Ec2Request {
+class QTAWSEC2_EXPORT CreateFlowLogsRequest : public Ec2Request {
 
 public:
     CreateFlowLogsRequest(const CreateFlowLogsRequest &other);

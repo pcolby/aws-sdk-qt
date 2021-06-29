@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawss3outpostsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -35,7 +37,7 @@ class DeleteEndpointResponse;
 class ListEndpointsRequest;
 class ListEndpointsResponse;
 
-class QTAWS_EXPORT S3OutpostsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSS3OUTPOSTS_EXPORT S3OutpostsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace QLDB {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public QldbRequest {
+class QTAWSQLDB_EXPORT UntagResourceRequest : public QldbRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

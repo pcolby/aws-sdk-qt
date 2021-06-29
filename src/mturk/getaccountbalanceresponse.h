@@ -28,7 +28,7 @@ namespace MTurk {
 
 class GetAccountBalanceResponsePrivate;
 
-class QTAWS_EXPORT GetAccountBalanceResponse : public MTurkResponse {
+class QTAWSMTURK_EXPORT GetAccountBalanceResponse : public MTurkResponse {
     Q_OBJECT
 
 public:

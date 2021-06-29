@@ -27,7 +27,7 @@ namespace Support {
 
 class DescribeSeverityLevelsRequestPrivate;
 
-class QTAWS_EXPORT DescribeSeverityLevelsRequest : public SupportRequest {
+class QTAWSSUPPORT_EXPORT DescribeSeverityLevelsRequest : public SupportRequest {
 
 public:
     DescribeSeverityLevelsRequest(const DescribeSeverityLevelsRequest &other);

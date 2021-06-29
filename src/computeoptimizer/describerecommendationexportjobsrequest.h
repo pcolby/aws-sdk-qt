@@ -27,7 +27,7 @@ namespace ComputeOptimizer {
 
 class DescribeRecommendationExportJobsRequestPrivate;
 
-class QTAWS_EXPORT DescribeRecommendationExportJobsRequest : public ComputeOptimizerRequest {
+class QTAWSCOMPUTEOPTIMIZER_EXPORT DescribeRecommendationExportJobsRequest : public ComputeOptimizerRequest {
 
 public:
     DescribeRecommendationExportJobsRequest(const DescribeRecommendationExportJobsRequest &other);

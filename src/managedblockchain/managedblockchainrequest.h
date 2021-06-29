@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsmanagedblockchainglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace ManagedBlockchain {
 
 class ManagedBlockchainRequestPrivate;
 
-class QTAWS_EXPORT ManagedBlockchainRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSMANAGEDBLOCKCHAIN_EXPORT ManagedBlockchainRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ManagedBlockchain.

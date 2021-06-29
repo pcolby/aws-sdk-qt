@@ -27,7 +27,7 @@ namespace KinesisAnalytics {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public KinesisAnalyticsRequest {
+class QTAWSKINESISANALYTICS_EXPORT ListTagsForResourceRequest : public KinesisAnalyticsRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

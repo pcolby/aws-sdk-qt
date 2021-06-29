@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class DescribeReservationResponsePrivate;
 
-class QTAWS_EXPORT DescribeReservationResponse : public MediaLiveResponse {
+class QTAWSMEDIALIVE_EXPORT DescribeReservationResponse : public MediaLiveResponse {
     Q_OBJECT
 
 public:

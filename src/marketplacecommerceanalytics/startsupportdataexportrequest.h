@@ -27,7 +27,7 @@ namespace MarketplaceCommerceAnalytics {
 
 class StartSupportDataExportRequestPrivate;
 
-class QTAWS_EXPORT StartSupportDataExportRequest : public MarketplaceCommerceAnalyticsRequest {
+class QTAWSMARKETPLACECOMMERCEANALYTICS_EXPORT StartSupportDataExportRequest : public MarketplaceCommerceAnalyticsRequest {
 
 public:
     StartSupportDataExportRequest(const StartSupportDataExportRequest &other);

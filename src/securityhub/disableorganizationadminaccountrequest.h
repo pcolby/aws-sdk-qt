@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class DisableOrganizationAdminAccountRequestPrivate;
 
-class QTAWS_EXPORT DisableOrganizationAdminAccountRequest : public SecurityHubRequest {
+class QTAWSSECURITYHUB_EXPORT DisableOrganizationAdminAccountRequest : public SecurityHubRequest {
 
 public:
     DisableOrganizationAdminAccountRequest(const DisableOrganizationAdminAccountRequest &other);

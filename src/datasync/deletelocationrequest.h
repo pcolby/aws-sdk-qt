@@ -27,7 +27,7 @@ namespace DataSync {
 
 class DeleteLocationRequestPrivate;
 
-class QTAWS_EXPORT DeleteLocationRequest : public DataSyncRequest {
+class QTAWSDATASYNC_EXPORT DeleteLocationRequest : public DataSyncRequest {
 
 public:
     DeleteLocationRequest(const DeleteLocationRequest &other);

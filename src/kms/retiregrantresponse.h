@@ -28,7 +28,7 @@ namespace KMS {
 
 class RetireGrantResponsePrivate;
 
-class QTAWS_EXPORT RetireGrantResponse : public KmsResponse {
+class QTAWSKMS_EXPORT RetireGrantResponse : public KmsResponse {
     Q_OBJECT
 
 public:

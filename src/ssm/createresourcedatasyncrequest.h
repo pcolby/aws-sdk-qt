@@ -27,7 +27,7 @@ namespace SSM {
 
 class CreateResourceDataSyncRequestPrivate;
 
-class QTAWS_EXPORT CreateResourceDataSyncRequest : public SsmRequest {
+class QTAWSSSM_EXPORT CreateResourceDataSyncRequest : public SsmRequest {
 
 public:
     CreateResourceDataSyncRequest(const CreateResourceDataSyncRequest &other);

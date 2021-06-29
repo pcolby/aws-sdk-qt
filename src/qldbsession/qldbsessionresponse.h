@@ -21,6 +21,8 @@
 #define QTAWS_QLDBSESSIONRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsqldbsessionglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace QLDBSession {
 
 class QLDBSessionResponsePrivate;
 
-class QTAWS_EXPORT QLDBSessionResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSQLDBSESSION_EXPORT QLDBSessionResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

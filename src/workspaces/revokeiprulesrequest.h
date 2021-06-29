@@ -27,7 +27,7 @@ namespace WorkSpaces {
 
 class RevokeIpRulesRequestPrivate;
 
-class QTAWS_EXPORT RevokeIpRulesRequest : public WorkSpacesRequest {
+class QTAWSWORKSPACES_EXPORT RevokeIpRulesRequest : public WorkSpacesRequest {
 
 public:
     RevokeIpRulesRequest(const RevokeIpRulesRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsssmincidentsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -87,7 +89,7 @@ class UpdateResponsePlanResponse;
 class UpdateTimelineEventRequest;
 class UpdateTimelineEventResponse;
 
-class QTAWS_EXPORT SSMIncidentsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSSMINCIDENTS_EXPORT SSMIncidentsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

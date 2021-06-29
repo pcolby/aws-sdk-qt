@@ -28,7 +28,7 @@ namespace Translate {
 
 class DeleteParallelDataResponsePrivate;
 
-class QTAWS_EXPORT DeleteParallelDataResponse : public TranslateResponse {
+class QTAWSTRANSLATE_EXPORT DeleteParallelDataResponse : public TranslateResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace SSMIncidents {
 
 class ListTimelineEventsRequestPrivate;
 
-class QTAWS_EXPORT ListTimelineEventsRequest : public SSMIncidentsRequest {
+class QTAWSSSMINCIDENTS_EXPORT ListTimelineEventsRequest : public SSMIncidentsRequest {
 
 public:
     ListTimelineEventsRequest(const ListTimelineEventsRequest &other);

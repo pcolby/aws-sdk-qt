@@ -28,7 +28,7 @@ namespace Personalize {
 
 class DeleteSchemaResponsePrivate;
 
-class QTAWS_EXPORT DeleteSchemaResponse : public PersonalizeResponse {
+class QTAWSPERSONALIZE_EXPORT DeleteSchemaResponse : public PersonalizeResponse {
     Q_OBJECT
 
 public:

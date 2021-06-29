@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class MergeBranchesByFastForwardRequestPrivate;
 
-class QTAWS_EXPORT MergeBranchesByFastForwardRequest : public CodeCommitRequest {
+class QTAWSCODECOMMIT_EXPORT MergeBranchesByFastForwardRequest : public CodeCommitRequest {
 
 public:
     MergeBranchesByFastForwardRequest(const MergeBranchesByFastForwardRequest &other);

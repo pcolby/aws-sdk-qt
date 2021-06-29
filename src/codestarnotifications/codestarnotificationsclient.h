@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawscodestarnotificationsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -55,7 +57,7 @@ class UntagResourceResponse;
 class UpdateNotificationRuleRequest;
 class UpdateNotificationRuleResponse;
 
-class QTAWS_EXPORT CodeStarNotificationsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCODESTARNOTIFICATIONS_EXPORT CodeStarNotificationsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

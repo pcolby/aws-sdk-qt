@@ -27,7 +27,7 @@ namespace CognitoIdentityProvider {
 
 class SetUICustomizationRequestPrivate;
 
-class QTAWS_EXPORT SetUICustomizationRequest : public CognitoIdentityProviderRequest {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT SetUICustomizationRequest : public CognitoIdentityProviderRequest {
 
 public:
     SetUICustomizationRequest(const SetUICustomizationRequest &other);

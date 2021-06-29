@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawssfnglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -75,7 +77,7 @@ class UntagResourceResponse;
 class UpdateStateMachineRequest;
 class UpdateStateMachineResponse;
 
-class QTAWS_EXPORT SfnClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSFN_EXPORT SfnClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

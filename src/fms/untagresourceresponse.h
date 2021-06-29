@@ -28,7 +28,7 @@ namespace FMS {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public FmsResponse {
+class QTAWSFMS_EXPORT UntagResourceResponse : public FmsResponse {
     Q_OBJECT
 
 public:

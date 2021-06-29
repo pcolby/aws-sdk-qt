@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class StartMonitoringScheduleResponsePrivate;
 
-class QTAWS_EXPORT StartMonitoringScheduleResponse : public SageMakerResponse {
+class QTAWSSAGEMAKER_EXPORT StartMonitoringScheduleResponse : public SageMakerResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace GlobalAccelerator {
 
 class ProvisionByoipCidrRequestPrivate;
 
-class QTAWS_EXPORT ProvisionByoipCidrRequest : public GlobalAcceleratorRequest {
+class QTAWSGLOBALACCELERATOR_EXPORT ProvisionByoipCidrRequest : public GlobalAcceleratorRequest {
 
 public:
     ProvisionByoipCidrRequest(const ProvisionByoipCidrRequest &other);

@@ -27,7 +27,7 @@ namespace PinpointEmail {
 
 class ListDomainDeliverabilityCampaignsRequestPrivate;
 
-class QTAWS_EXPORT ListDomainDeliverabilityCampaignsRequest : public PinpointEmailRequest {
+class QTAWSPINPOINTEMAIL_EXPORT ListDomainDeliverabilityCampaignsRequest : public PinpointEmailRequest {
 
 public:
     ListDomainDeliverabilityCampaignsRequest(const ListDomainDeliverabilityCampaignsRequest &other);

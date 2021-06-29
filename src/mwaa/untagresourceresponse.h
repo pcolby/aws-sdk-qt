@@ -28,7 +28,7 @@ namespace MWAA {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public MwaaResponse {
+class QTAWSMWAA_EXPORT UntagResourceResponse : public MwaaResponse {
     Q_OBJECT
 
 public:

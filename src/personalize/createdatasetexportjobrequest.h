@@ -27,7 +27,7 @@ namespace Personalize {
 
 class CreateDatasetExportJobRequestPrivate;
 
-class QTAWS_EXPORT CreateDatasetExportJobRequest : public PersonalizeRequest {
+class QTAWSPERSONALIZE_EXPORT CreateDatasetExportJobRequest : public PersonalizeRequest {
 
 public:
     CreateDatasetExportJobRequest(const CreateDatasetExportJobRequest &other);

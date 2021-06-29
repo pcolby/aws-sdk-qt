@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawshoneycodeglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Honeycode {
 
 class HoneycodeRequestPrivate;
 
-class QTAWS_EXPORT HoneycodeRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSHONEYCODE_EXPORT HoneycodeRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Honeycode.

@@ -27,7 +27,7 @@ namespace PinpointEmail {
 
 class GetConfigurationSetRequestPrivate;
 
-class QTAWS_EXPORT GetConfigurationSetRequest : public PinpointEmailRequest {
+class QTAWSPINPOINTEMAIL_EXPORT GetConfigurationSetRequest : public PinpointEmailRequest {
 
 public:
     GetConfigurationSetRequest(const GetConfigurationSetRequest &other);

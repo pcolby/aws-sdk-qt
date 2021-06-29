@@ -27,7 +27,7 @@ namespace Support {
 
 class RefreshTrustedAdvisorCheckRequestPrivate;
 
-class QTAWS_EXPORT RefreshTrustedAdvisorCheckRequest : public SupportRequest {
+class QTAWSSUPPORT_EXPORT RefreshTrustedAdvisorCheckRequest : public SupportRequest {
 
 public:
     RefreshTrustedAdvisorCheckRequest(const RefreshTrustedAdvisorCheckRequest &other);

@@ -27,7 +27,7 @@ namespace AppConfig {
 
 class ListDeploymentStrategiesRequestPrivate;
 
-class QTAWS_EXPORT ListDeploymentStrategiesRequest : public AppConfigRequest {
+class QTAWSAPPCONFIG_EXPORT ListDeploymentStrategiesRequest : public AppConfigRequest {
 
 public:
     ListDeploymentStrategiesRequest(const ListDeploymentStrategiesRequest &other);

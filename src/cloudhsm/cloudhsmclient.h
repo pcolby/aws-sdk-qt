@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawscloudhsmglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -69,7 +71,7 @@ class ModifyLunaClientResponse;
 class RemoveTagsFromResourceRequest;
 class RemoveTagsFromResourceResponse;
 
-class QTAWS_EXPORT CloudHSMClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCLOUDHSM_EXPORT CloudHSMClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

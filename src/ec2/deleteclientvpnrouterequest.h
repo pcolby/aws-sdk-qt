@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DeleteClientVpnRouteRequestPrivate;
 
-class QTAWS_EXPORT DeleteClientVpnRouteRequest : public Ec2Request {
+class QTAWSEC2_EXPORT DeleteClientVpnRouteRequest : public Ec2Request {
 
 public:
     DeleteClientVpnRouteRequest(const DeleteClientVpnRouteRequest &other);

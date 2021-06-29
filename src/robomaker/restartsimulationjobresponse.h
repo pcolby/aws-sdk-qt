@@ -28,7 +28,7 @@ namespace RoboMaker {
 
 class RestartSimulationJobResponsePrivate;
 
-class QTAWS_EXPORT RestartSimulationJobResponse : public RoboMakerResponse {
+class QTAWSROBOMAKER_EXPORT RestartSimulationJobResponse : public RoboMakerResponse {
     Q_OBJECT
 
 public:

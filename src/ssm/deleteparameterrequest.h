@@ -27,7 +27,7 @@ namespace SSM {
 
 class DeleteParameterRequestPrivate;
 
-class QTAWS_EXPORT DeleteParameterRequest : public SsmRequest {
+class QTAWSSSM_EXPORT DeleteParameterRequest : public SsmRequest {
 
 public:
     DeleteParameterRequest(const DeleteParameterRequest &other);

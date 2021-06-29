@@ -27,7 +27,7 @@ namespace EKS {
 
 class AssociateEncryptionConfigRequestPrivate;
 
-class QTAWS_EXPORT AssociateEncryptionConfigRequest : public EksRequest {
+class QTAWSEKS_EXPORT AssociateEncryptionConfigRequest : public EksRequest {
 
 public:
     AssociateEncryptionConfigRequest(const AssociateEncryptionConfigRequest &other);

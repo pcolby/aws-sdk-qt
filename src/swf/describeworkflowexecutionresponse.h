@@ -28,7 +28,7 @@ namespace SWF {
 
 class DescribeWorkflowExecutionResponsePrivate;
 
-class QTAWS_EXPORT DescribeWorkflowExecutionResponse : public SwfResponse {
+class QTAWSSWF_EXPORT DescribeWorkflowExecutionResponse : public SwfResponse {
     Q_OBJECT
 
 public:

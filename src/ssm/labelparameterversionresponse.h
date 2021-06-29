@@ -28,7 +28,7 @@ namespace SSM {
 
 class LabelParameterVersionResponsePrivate;
 
-class QTAWS_EXPORT LabelParameterVersionResponse : public SsmResponse {
+class QTAWSSSM_EXPORT LabelParameterVersionResponse : public SsmResponse {
     Q_OBJECT
 
 public:

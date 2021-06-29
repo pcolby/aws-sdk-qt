@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawstimestreamqueryglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -35,7 +37,7 @@ class DescribeEndpointsResponse;
 class QueryRequest;
 class QueryResponse;
 
-class QTAWS_EXPORT TimestreamQueryClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSTIMESTREAMQUERY_EXPORT TimestreamQueryClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

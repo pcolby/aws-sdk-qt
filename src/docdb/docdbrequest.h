@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsdocdbglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace DocDB {
 
 class DocDBRequestPrivate;
 
-class QTAWS_EXPORT DocDBRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSDOCDB_EXPORT DocDBRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by DocDB.

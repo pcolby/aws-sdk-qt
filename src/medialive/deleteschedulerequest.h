@@ -27,7 +27,7 @@ namespace MediaLive {
 
 class DeleteScheduleRequestPrivate;
 
-class QTAWS_EXPORT DeleteScheduleRequest : public MediaLiveRequest {
+class QTAWSMEDIALIVE_EXPORT DeleteScheduleRequest : public MediaLiveRequest {
 
 public:
     DeleteScheduleRequest(const DeleteScheduleRequest &other);

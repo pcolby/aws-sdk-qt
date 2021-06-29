@@ -27,7 +27,7 @@ namespace Rekognition {
 
 class DetectTextRequestPrivate;
 
-class QTAWS_EXPORT DetectTextRequest : public RekognitionRequest {
+class QTAWSREKOGNITION_EXPORT DetectTextRequest : public RekognitionRequest {
 
 public:
     DetectTextRequest(const DetectTextRequest &other);

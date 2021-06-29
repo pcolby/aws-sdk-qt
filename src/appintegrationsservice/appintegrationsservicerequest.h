@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsappintegrationsserviceglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace AppIntegrationsService {
 
 class AppIntegrationsServiceRequestPrivate;
 
-class QTAWS_EXPORT AppIntegrationsServiceRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSAPPINTEGRATIONSSERVICE_EXPORT AppIntegrationsServiceRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by AppIntegrationsService.

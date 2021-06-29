@@ -27,7 +27,7 @@ namespace RDS {
 
 class CopyDBParameterGroupRequestPrivate;
 
-class QTAWS_EXPORT CopyDBParameterGroupRequest : public RdsRequest {
+class QTAWSRDS_EXPORT CopyDBParameterGroupRequest : public RdsRequest {
 
 public:
     CopyDBParameterGroupRequest(const CopyDBParameterGroupRequest &other);

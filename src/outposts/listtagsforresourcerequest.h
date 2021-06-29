@@ -27,7 +27,7 @@ namespace Outposts {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public OutpostsRequest {
+class QTAWSOUTPOSTS_EXPORT ListTagsForResourceRequest : public OutpostsRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

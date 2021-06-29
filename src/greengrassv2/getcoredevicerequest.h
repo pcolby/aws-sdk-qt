@@ -27,7 +27,7 @@ namespace GreengrassV2 {
 
 class GetCoreDeviceRequestPrivate;
 
-class QTAWS_EXPORT GetCoreDeviceRequest : public GreengrassV2Request {
+class QTAWSGREENGRASSV2_EXPORT GetCoreDeviceRequest : public GreengrassV2Request {
 
 public:
     GetCoreDeviceRequest(const GetCoreDeviceRequest &other);

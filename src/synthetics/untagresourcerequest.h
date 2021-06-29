@@ -27,7 +27,7 @@ namespace Synthetics {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public SyntheticsRequest {
+class QTAWSSYNTHETICS_EXPORT UntagResourceRequest : public SyntheticsRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

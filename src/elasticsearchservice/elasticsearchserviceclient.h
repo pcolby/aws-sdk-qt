@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawselasticsearchserviceglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -109,7 +111,7 @@ class UpdatePackageResponse;
 class UpgradeElasticsearchDomainRequest;
 class UpgradeElasticsearchDomainResponse;
 
-class QTAWS_EXPORT ElasticsearchServiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSELASTICSEARCHSERVICE_EXPORT ElasticsearchServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsiotdeviceadvisorglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace IoTDeviceAdvisor {
 
 class IoTDeviceAdvisorRequestPrivate;
 
-class QTAWS_EXPORT IoTDeviceAdvisorRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSIOTDEVICEADVISOR_EXPORT IoTDeviceAdvisorRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by IoTDeviceAdvisor.

@@ -27,7 +27,7 @@ namespace CloudHSM {
 
 class GetConfigRequestPrivate;
 
-class QTAWS_EXPORT GetConfigRequest : public CloudHSMRequest {
+class QTAWSCLOUDHSM_EXPORT GetConfigRequest : public CloudHSMRequest {
 
 public:
     GetConfigRequest(const GetConfigRequest &other);

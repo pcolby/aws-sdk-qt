@@ -21,6 +21,8 @@
 #define QTAWS_IOT1CLICKDEVICESSERVICERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsiot1clickdevicesserviceglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace IoT1ClickDevicesService {
 
 class IoT1ClickDevicesServiceResponsePrivate;
 
-class QTAWS_EXPORT IoT1ClickDevicesServiceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSIOT1CLICKDEVICESSERVICE_EXPORT IoT1ClickDevicesServiceResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class DeleteVoiceChannelRequestPrivate;
 
-class QTAWS_EXPORT DeleteVoiceChannelRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT DeleteVoiceChannelRequest : public PinpointRequest {
 
 public:
     DeleteVoiceChannelRequest(const DeleteVoiceChannelRequest &other);

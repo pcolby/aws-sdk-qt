@@ -27,7 +27,7 @@ namespace AppConfig {
 
 class GetEnvironmentRequestPrivate;
 
-class QTAWS_EXPORT GetEnvironmentRequest : public AppConfigRequest {
+class QTAWSAPPCONFIG_EXPORT GetEnvironmentRequest : public AppConfigRequest {
 
 public:
     GetEnvironmentRequest(const GetEnvironmentRequest &other);

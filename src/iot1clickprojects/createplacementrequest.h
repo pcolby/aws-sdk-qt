@@ -27,7 +27,7 @@ namespace IoT1ClickProjects {
 
 class CreatePlacementRequestPrivate;
 
-class QTAWS_EXPORT CreatePlacementRequest : public IoT1ClickProjectsRequest {
+class QTAWSIOT1CLICKPROJECTS_EXPORT CreatePlacementRequest : public IoT1ClickProjectsRequest {
 
 public:
     CreatePlacementRequest(const CreatePlacementRequest &other);

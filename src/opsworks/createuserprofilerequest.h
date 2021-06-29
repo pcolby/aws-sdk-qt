@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class CreateUserProfileRequestPrivate;
 
-class QTAWS_EXPORT CreateUserProfileRequest : public OpsWorksRequest {
+class QTAWSOPSWORKS_EXPORT CreateUserProfileRequest : public OpsWorksRequest {
 
 public:
     CreateUserProfileRequest(const CreateUserProfileRequest &other);

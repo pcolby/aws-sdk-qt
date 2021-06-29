@@ -27,7 +27,7 @@ namespace Neptune {
 
 class DeleteEventSubscriptionRequestPrivate;
 
-class QTAWS_EXPORT DeleteEventSubscriptionRequest : public NeptuneRequest {
+class QTAWSNEPTUNE_EXPORT DeleteEventSubscriptionRequest : public NeptuneRequest {
 
 public:
     DeleteEventSubscriptionRequest(const DeleteEventSubscriptionRequest &other);

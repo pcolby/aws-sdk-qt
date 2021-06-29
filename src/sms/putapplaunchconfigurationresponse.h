@@ -28,7 +28,7 @@ namespace SMS {
 
 class PutAppLaunchConfigurationResponsePrivate;
 
-class QTAWS_EXPORT PutAppLaunchConfigurationResponse : public SmsResponse {
+class QTAWSSMS_EXPORT PutAppLaunchConfigurationResponse : public SmsResponse {
     Q_OBJECT
 
 public:

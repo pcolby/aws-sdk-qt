@@ -27,7 +27,7 @@ namespace ECR {
 
 class StartLifecyclePolicyPreviewRequestPrivate;
 
-class QTAWS_EXPORT StartLifecyclePolicyPreviewRequest : public EcrRequest {
+class QTAWSECR_EXPORT StartLifecyclePolicyPreviewRequest : public EcrRequest {
 
 public:
     StartLifecyclePolicyPreviewRequest(const StartLifecyclePolicyPreviewRequest &other);

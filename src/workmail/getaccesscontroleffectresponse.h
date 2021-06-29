@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class GetAccessControlEffectResponsePrivate;
 
-class QTAWS_EXPORT GetAccessControlEffectResponse : public WorkMailResponse {
+class QTAWSWORKMAIL_EXPORT GetAccessControlEffectResponse : public WorkMailResponse {
     Q_OBJECT
 
 public:

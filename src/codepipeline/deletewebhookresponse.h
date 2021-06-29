@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class DeleteWebhookResponsePrivate;
 
-class QTAWS_EXPORT DeleteWebhookResponse : public CodePipelineResponse {
+class QTAWSCODEPIPELINE_EXPORT DeleteWebhookResponse : public CodePipelineResponse {
     Q_OBJECT
 
 public:

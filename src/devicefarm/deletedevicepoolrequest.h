@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class DeleteDevicePoolRequestPrivate;
 
-class QTAWS_EXPORT DeleteDevicePoolRequest : public DeviceFarmRequest {
+class QTAWSDEVICEFARM_EXPORT DeleteDevicePoolRequest : public DeviceFarmRequest {
 
 public:
     DeleteDevicePoolRequest(const DeleteDevicePoolRequest &other);

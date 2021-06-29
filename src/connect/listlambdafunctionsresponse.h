@@ -28,7 +28,7 @@ namespace Connect {
 
 class ListLambdaFunctionsResponsePrivate;
 
-class QTAWS_EXPORT ListLambdaFunctionsResponse : public ConnectResponse {
+class QTAWSCONNECT_EXPORT ListLambdaFunctionsResponse : public ConnectResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace SecretsManager {
 
 class GetRandomPasswordResponsePrivate;
 
-class QTAWS_EXPORT GetRandomPasswordResponse : public SecretsManagerResponse {
+class QTAWSSECRETSMANAGER_EXPORT GetRandomPasswordResponse : public SecretsManagerResponse {
     Q_OBJECT
 
 public:

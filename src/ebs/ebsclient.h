@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsebsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -41,7 +43,7 @@ class PutSnapshotBlockResponse;
 class StartSnapshotRequest;
 class StartSnapshotResponse;
 
-class QTAWS_EXPORT EbsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSEBS_EXPORT EbsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

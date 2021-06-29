@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsstsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -45,7 +47,7 @@ class GetFederationTokenResponse;
 class GetSessionTokenRequest;
 class GetSessionTokenResponse;
 
-class QTAWS_EXPORT StsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSTS_EXPORT StsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

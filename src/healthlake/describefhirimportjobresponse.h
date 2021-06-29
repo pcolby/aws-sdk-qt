@@ -28,7 +28,7 @@ namespace HealthLake {
 
 class DescribeFHIRImportJobResponsePrivate;
 
-class QTAWS_EXPORT DescribeFHIRImportJobResponse : public HealthLakeResponse {
+class QTAWSHEALTHLAKE_EXPORT DescribeFHIRImportJobResponse : public HealthLakeResponse {
     Q_OBJECT
 
 public:

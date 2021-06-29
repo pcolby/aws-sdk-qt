@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class DescribeTableStatisticsResponsePrivate;
 
-class QTAWS_EXPORT DescribeTableStatisticsResponse : public DatabaseMigrationServiceResponse {
+class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DescribeTableStatisticsResponse : public DatabaseMigrationServiceResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace ElasticLoadBalancing {
 
 class RemoveTagsRequestPrivate;
 
-class QTAWS_EXPORT RemoveTagsRequest : public ElasticLoadBalancingRequest {
+class QTAWSELASTICLOADBALANCING_EXPORT RemoveTagsRequest : public ElasticLoadBalancingRequest {
 
 public:
     RemoveTagsRequest(const RemoveTagsRequest &other);

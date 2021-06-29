@@ -28,7 +28,7 @@ namespace S3 {
 
 class GetBucketOwnershipControlsResponsePrivate;
 
-class QTAWS_EXPORT GetBucketOwnershipControlsResponse : public S3Response {
+class QTAWSS3_EXPORT GetBucketOwnershipControlsResponse : public S3Response {
     Q_OBJECT
 
 public:

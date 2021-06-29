@@ -27,7 +27,7 @@ namespace LexModelBuildingService {
 
 class GetUtterancesViewRequestPrivate;
 
-class QTAWS_EXPORT GetUtterancesViewRequest : public LexModelBuildingServiceRequest {
+class QTAWSLEXMODELBUILDINGSERVICE_EXPORT GetUtterancesViewRequest : public LexModelBuildingServiceRequest {
 
 public:
     GetUtterancesViewRequest(const GetUtterancesViewRequest &other);

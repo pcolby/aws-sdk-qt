@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class GetEnabledStandardsRequestPrivate;
 
-class QTAWS_EXPORT GetEnabledStandardsRequest : public SecurityHubRequest {
+class QTAWSSECURITYHUB_EXPORT GetEnabledStandardsRequest : public SecurityHubRequest {
 
 public:
     GetEnabledStandardsRequest(const GetEnabledStandardsRequest &other);

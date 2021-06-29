@@ -21,6 +21,8 @@
 #define QTAWS_FSXRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsfsxglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace FSx {
 
 class FSxResponsePrivate;
 
-class QTAWS_EXPORT FSxResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSFSX_EXPORT FSxResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

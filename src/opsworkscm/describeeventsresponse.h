@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 
 class DescribeEventsResponsePrivate;
 
-class QTAWS_EXPORT DescribeEventsResponse : public OpsWorksCMResponse {
+class QTAWSOPSWORKSCM_EXPORT DescribeEventsResponse : public OpsWorksCMResponse {
     Q_OBJECT
 
 public:

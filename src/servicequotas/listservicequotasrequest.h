@@ -27,7 +27,7 @@ namespace ServiceQuotas {
 
 class ListServiceQuotasRequestPrivate;
 
-class QTAWS_EXPORT ListServiceQuotasRequest : public ServiceQuotasRequest {
+class QTAWSSERVICEQUOTAS_EXPORT ListServiceQuotasRequest : public ServiceQuotasRequest {
 
 public:
     ListServiceQuotasRequest(const ListServiceQuotasRequest &other);

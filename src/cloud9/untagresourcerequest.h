@@ -27,7 +27,7 @@ namespace Cloud9 {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public Cloud9Request {
+class QTAWSCLOUD9_EXPORT UntagResourceRequest : public Cloud9Request {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

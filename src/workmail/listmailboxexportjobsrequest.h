@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class ListMailboxExportJobsRequestPrivate;
 
-class QTAWS_EXPORT ListMailboxExportJobsRequest : public WorkMailRequest {
+class QTAWSWORKMAIL_EXPORT ListMailboxExportJobsRequest : public WorkMailRequest {
 
 public:
     ListMailboxExportJobsRequest(const ListMailboxExportJobsRequest &other);

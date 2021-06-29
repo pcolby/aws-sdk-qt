@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeCustomerGatewaysResponsePrivate;
 
-class QTAWS_EXPORT DescribeCustomerGatewaysResponse : public Ec2Response {
+class QTAWSEC2_EXPORT DescribeCustomerGatewaysResponse : public Ec2Response {
     Q_OBJECT
 
 public:

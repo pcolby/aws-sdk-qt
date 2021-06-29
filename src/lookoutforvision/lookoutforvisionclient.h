@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawslookoutforvisionglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -67,7 +69,7 @@ class UntagResourceResponse;
 class UpdateDatasetEntriesRequest;
 class UpdateDatasetEntriesResponse;
 
-class QTAWS_EXPORT LookoutforVisionClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSLOOKOUTFORVISION_EXPORT LookoutforVisionClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

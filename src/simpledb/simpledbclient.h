@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawssimpledbglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -49,7 +51,7 @@ class PutAttributesResponse;
 class SelectRequest;
 class SelectResponse;
 
-class QTAWS_EXPORT SimpleDBClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSIMPLEDB_EXPORT SimpleDBClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

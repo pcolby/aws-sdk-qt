@@ -27,7 +27,7 @@ namespace Redshift {
 
 class DescribeEndpointAuthorizationRequestPrivate;
 
-class QTAWS_EXPORT DescribeEndpointAuthorizationRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT DescribeEndpointAuthorizationRequest : public RedshiftRequest {
 
 public:
     DescribeEndpointAuthorizationRequest(const DescribeEndpointAuthorizationRequest &other);

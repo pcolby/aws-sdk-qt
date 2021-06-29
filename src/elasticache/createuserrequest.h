@@ -27,7 +27,7 @@ namespace ElastiCache {
 
 class CreateUserRequestPrivate;
 
-class QTAWS_EXPORT CreateUserRequest : public ElastiCacheRequest {
+class QTAWSELASTICACHE_EXPORT CreateUserRequest : public ElastiCacheRequest {
 
 public:
     CreateUserRequest(const CreateUserRequest &other);

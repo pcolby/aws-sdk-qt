@@ -28,7 +28,7 @@ namespace EC2 {
 
 class GetDefaultCreditSpecificationResponsePrivate;
 
-class QTAWS_EXPORT GetDefaultCreditSpecificationResponse : public Ec2Response {
+class QTAWSEC2_EXPORT GetDefaultCreditSpecificationResponse : public Ec2Response {
     Q_OBJECT
 
 public:

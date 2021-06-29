@@ -28,7 +28,7 @@ namespace MachineLearning {
 
 class CreateDataSourceFromS3ResponsePrivate;
 
-class QTAWS_EXPORT CreateDataSourceFromS3Response : public MachineLearningResponse {
+class QTAWSMACHINELEARNING_EXPORT CreateDataSourceFromS3Response : public MachineLearningResponse {
     Q_OBJECT
 
 public:

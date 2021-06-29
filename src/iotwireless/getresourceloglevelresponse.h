@@ -28,7 +28,7 @@ namespace IoTWireless {
 
 class GetResourceLogLevelResponsePrivate;
 
-class QTAWS_EXPORT GetResourceLogLevelResponse : public IoTWirelessResponse {
+class QTAWSIOTWIRELESS_EXPORT GetResourceLogLevelResponse : public IoTWirelessResponse {
     Q_OBJECT
 
 public:

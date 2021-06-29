@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class DeleteAliasRequestPrivate;
 
-class QTAWS_EXPORT DeleteAliasRequest : public WorkMailRequest {
+class QTAWSWORKMAIL_EXPORT DeleteAliasRequest : public WorkMailRequest {
 
 public:
     DeleteAliasRequest(const DeleteAliasRequest &other);

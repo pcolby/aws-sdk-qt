@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class DisassociateApprovalRuleTemplateFromRepositoryResponsePrivate;
 
-class QTAWS_EXPORT DisassociateApprovalRuleTemplateFromRepositoryResponse : public CodeCommitResponse {
+class QTAWSCODECOMMIT_EXPORT DisassociateApprovalRuleTemplateFromRepositoryResponse : public CodeCommitResponse {
     Q_OBJECT
 
 public:

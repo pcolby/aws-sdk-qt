@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class LookupPolicyRequestPrivate;
 
-class QTAWS_EXPORT LookupPolicyRequest : public CloudDirectoryRequest {
+class QTAWSCLOUDDIRECTORY_EXPORT LookupPolicyRequest : public CloudDirectoryRequest {
 
 public:
     LookupPolicyRequest(const LookupPolicyRequest &other);

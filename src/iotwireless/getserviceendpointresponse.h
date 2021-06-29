@@ -28,7 +28,7 @@ namespace IoTWireless {
 
 class GetServiceEndpointResponsePrivate;
 
-class QTAWS_EXPORT GetServiceEndpointResponse : public IoTWirelessResponse {
+class QTAWSIOTWIRELESS_EXPORT GetServiceEndpointResponse : public IoTWirelessResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace AppStream {
 
 class DescribeDirectoryConfigsResponsePrivate;
 
-class QTAWS_EXPORT DescribeDirectoryConfigsResponse : public AppStreamResponse {
+class QTAWSAPPSTREAM_EXPORT DescribeDirectoryConfigsResponse : public AppStreamResponse {
     Q_OBJECT
 
 public:

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSELASTICBEANSTALK_LIBRARY)
+
 add_library(QtAwsElasticBeanstalk
   abortenvironmentupdaterequest.h
   abortenvironmentupdaterequest_p.h
@@ -141,6 +143,7 @@ add_library(QtAwsElasticBeanstalk
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawselasticbeanstalkglobal.h
   rebuildenvironmentrequest.h
   rebuildenvironmentrequest_p.h
   rebuildenvironmentresponse.h

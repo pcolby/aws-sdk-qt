@@ -27,7 +27,7 @@ namespace IVS {
 
 class DeletePlaybackKeyPairRequestPrivate;
 
-class QTAWS_EXPORT DeletePlaybackKeyPairRequest : public IvsRequest {
+class QTAWSIVS_EXPORT DeletePlaybackKeyPairRequest : public IvsRequest {
 
 public:
     DeletePlaybackKeyPairRequest(const DeletePlaybackKeyPairRequest &other);

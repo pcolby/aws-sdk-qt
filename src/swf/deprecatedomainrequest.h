@@ -27,7 +27,7 @@ namespace SWF {
 
 class DeprecateDomainRequestPrivate;
 
-class QTAWS_EXPORT DeprecateDomainRequest : public SwfRequest {
+class QTAWSSWF_EXPORT DeprecateDomainRequest : public SwfRequest {
 
 public:
     DeprecateDomainRequest(const DeprecateDomainRequest &other);

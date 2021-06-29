@@ -28,7 +28,7 @@ namespace AppConfig {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public AppConfigResponse {
+class QTAWSAPPCONFIG_EXPORT ListTagsForResourceResponse : public AppConfigResponse {
     Q_OBJECT
 
 public:

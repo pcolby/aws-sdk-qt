@@ -27,7 +27,7 @@ namespace CloudWatchLogs {
 
 class CancelExportTaskRequestPrivate;
 
-class QTAWS_EXPORT CancelExportTaskRequest : public CloudWatchLogsRequest {
+class QTAWSCLOUDWATCHLOGS_EXPORT CancelExportTaskRequest : public CloudWatchLogsRequest {
 
 public:
     CancelExportTaskRequest(const CancelExportTaskRequest &other);

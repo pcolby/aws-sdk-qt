@@ -28,7 +28,7 @@ namespace Redshift {
 
 class ResizeClusterResponsePrivate;
 
-class QTAWS_EXPORT ResizeClusterResponse : public RedshiftResponse {
+class QTAWSREDSHIFT_EXPORT ResizeClusterResponse : public RedshiftResponse {
     Q_OBJECT
 
 public:

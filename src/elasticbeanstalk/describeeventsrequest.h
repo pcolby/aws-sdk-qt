@@ -27,7 +27,7 @@ namespace ElasticBeanstalk {
 
 class DescribeEventsRequestPrivate;
 
-class QTAWS_EXPORT DescribeEventsRequest : public ElasticBeanstalkRequest {
+class QTAWSELASTICBEANSTALK_EXPORT DescribeEventsRequest : public ElasticBeanstalkRequest {
 
 public:
     DescribeEventsRequest(const DescribeEventsRequest &other);

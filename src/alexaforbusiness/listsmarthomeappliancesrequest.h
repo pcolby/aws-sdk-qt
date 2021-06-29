@@ -27,7 +27,7 @@ namespace AlexaForBusiness {
 
 class ListSmartHomeAppliancesRequestPrivate;
 
-class QTAWS_EXPORT ListSmartHomeAppliancesRequest : public AlexaForBusinessRequest {
+class QTAWSALEXAFORBUSINESS_EXPORT ListSmartHomeAppliancesRequest : public AlexaForBusinessRequest {
 
 public:
     ListSmartHomeAppliancesRequest(const ListSmartHomeAppliancesRequest &other);

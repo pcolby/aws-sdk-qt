@@ -27,7 +27,7 @@ namespace FSx {
 
 class UpdateFileSystemRequestPrivate;
 
-class QTAWS_EXPORT UpdateFileSystemRequest : public FSxRequest {
+class QTAWSFSX_EXPORT UpdateFileSystemRequest : public FSxRequest {
 
 public:
     UpdateFileSystemRequest(const UpdateFileSystemRequest &other);

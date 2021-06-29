@@ -28,7 +28,7 @@ namespace GlobalAccelerator {
 
 class ListCustomRoutingAcceleratorsResponsePrivate;
 
-class QTAWS_EXPORT ListCustomRoutingAcceleratorsResponse : public GlobalAcceleratorResponse {
+class QTAWSGLOBALACCELERATOR_EXPORT ListCustomRoutingAcceleratorsResponse : public GlobalAcceleratorResponse {
     Q_OBJECT
 
 public:

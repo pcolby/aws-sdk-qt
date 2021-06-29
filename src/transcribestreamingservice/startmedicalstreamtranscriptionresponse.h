@@ -28,7 +28,7 @@ namespace TranscribeStreamingService {
 
 class StartMedicalStreamTranscriptionResponsePrivate;
 
-class QTAWS_EXPORT StartMedicalStreamTranscriptionResponse : public TranscribeStreamingServiceResponse {
+class QTAWSTRANSCRIBESTREAMINGSERVICE_EXPORT StartMedicalStreamTranscriptionResponse : public TranscribeStreamingServiceResponse {
     Q_OBJECT
 
 public:

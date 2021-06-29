@@ -27,7 +27,7 @@ namespace CodePipeline {
 
 class CreateCustomActionTypeRequestPrivate;
 
-class QTAWS_EXPORT CreateCustomActionTypeRequest : public CodePipelineRequest {
+class QTAWSCODEPIPELINE_EXPORT CreateCustomActionTypeRequest : public CodePipelineRequest {
 
 public:
     CreateCustomActionTypeRequest(const CreateCustomActionTypeRequest &other);

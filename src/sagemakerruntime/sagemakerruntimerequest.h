@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawssagemakerruntimeglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace SageMakerRuntime {
 
 class SageMakerRuntimeRequestPrivate;
 
-class QTAWS_EXPORT SageMakerRuntimeRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSAGEMAKERRUNTIME_EXPORT SageMakerRuntimeRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SageMakerRuntime.

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawscognitoidentityglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace CognitoIdentity {
 
 class CognitoIdentityRequestPrivate;
 
-class QTAWS_EXPORT CognitoIdentityRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCOGNITOIDENTITY_EXPORT CognitoIdentityRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CognitoIdentity.

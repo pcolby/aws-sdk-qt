@@ -28,7 +28,7 @@ namespace Backup {
 
 class DescribeGlobalSettingsResponsePrivate;
 
-class QTAWS_EXPORT DescribeGlobalSettingsResponse : public BackupResponse {
+class QTAWSBACKUP_EXPORT DescribeGlobalSettingsResponse : public BackupResponse {
     Q_OBJECT
 
 public:

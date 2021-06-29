@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawseksglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -93,7 +95,7 @@ class UpdateNodegroupConfigResponse;
 class UpdateNodegroupVersionRequest;
 class UpdateNodegroupVersionResponse;
 
-class QTAWS_EXPORT EksClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSEKS_EXPORT EksClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

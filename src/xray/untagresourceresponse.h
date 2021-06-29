@@ -28,7 +28,7 @@ namespace XRay {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public XRayResponse {
+class QTAWSXRAY_EXPORT UntagResourceResponse : public XRayResponse {
     Q_OBJECT
 
 public:

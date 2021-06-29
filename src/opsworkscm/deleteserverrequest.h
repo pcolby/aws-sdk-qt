@@ -27,7 +27,7 @@ namespace OpsWorksCM {
 
 class DeleteServerRequestPrivate;
 
-class QTAWS_EXPORT DeleteServerRequest : public OpsWorksCMRequest {
+class QTAWSOPSWORKSCM_EXPORT DeleteServerRequest : public OpsWorksCMRequest {
 
 public:
     DeleteServerRequest(const DeleteServerRequest &other);

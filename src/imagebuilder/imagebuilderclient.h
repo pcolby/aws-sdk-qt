@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsimagebuilderglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -127,7 +129,7 @@ class UpdateImagePipelineResponse;
 class UpdateInfrastructureConfigurationRequest;
 class UpdateInfrastructureConfigurationResponse;
 
-class QTAWS_EXPORT imagebuilderClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSIMAGEBUILDER_EXPORT imagebuilderClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

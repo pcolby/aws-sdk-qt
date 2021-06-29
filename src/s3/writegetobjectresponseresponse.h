@@ -28,7 +28,7 @@ namespace S3 {
 
 class WriteGetObjectResponseResponsePrivate;
 
-class QTAWS_EXPORT WriteGetObjectResponseResponse : public S3Response {
+class QTAWSS3_EXPORT WriteGetObjectResponseResponse : public S3Response {
     Q_OBJECT
 
 public:

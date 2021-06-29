@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class DeleteRelationalDatabaseResponsePrivate;
 
-class QTAWS_EXPORT DeleteRelationalDatabaseResponse : public LightsailResponse {
+class QTAWSLIGHTSAIL_EXPORT DeleteRelationalDatabaseResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

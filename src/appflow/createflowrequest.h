@@ -27,7 +27,7 @@ namespace Appflow {
 
 class CreateFlowRequestPrivate;
 
-class QTAWS_EXPORT CreateFlowRequest : public AppflowRequest {
+class QTAWSAPPFLOW_EXPORT CreateFlowRequest : public AppflowRequest {
 
 public:
     CreateFlowRequest(const CreateFlowRequest &other);

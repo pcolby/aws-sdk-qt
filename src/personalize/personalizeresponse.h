@@ -21,6 +21,8 @@
 #define QTAWS_PERSONALIZERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawspersonalizeglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Personalize {
 
 class PersonalizeResponsePrivate;
 
-class QTAWS_EXPORT PersonalizeResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSPERSONALIZE_EXPORT PersonalizeResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

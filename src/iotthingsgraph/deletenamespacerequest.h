@@ -27,7 +27,7 @@ namespace IoTThingsGraph {
 
 class DeleteNamespaceRequestPrivate;
 
-class QTAWS_EXPORT DeleteNamespaceRequest : public IoTThingsGraphRequest {
+class QTAWSIOTTHINGSGRAPH_EXPORT DeleteNamespaceRequest : public IoTThingsGraphRequest {
 
 public:
     DeleteNamespaceRequest(const DeleteNamespaceRequest &other);

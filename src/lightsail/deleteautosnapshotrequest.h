@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class DeleteAutoSnapshotRequestPrivate;
 
-class QTAWS_EXPORT DeleteAutoSnapshotRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT DeleteAutoSnapshotRequest : public LightsailRequest {
 
 public:
     DeleteAutoSnapshotRequest(const DeleteAutoSnapshotRequest &other);

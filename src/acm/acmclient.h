@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsacmglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -59,7 +61,7 @@ class ResendValidationEmailResponse;
 class UpdateCertificateOptionsRequest;
 class UpdateCertificateOptionsResponse;
 
-class QTAWS_EXPORT AcmClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSACM_EXPORT AcmClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

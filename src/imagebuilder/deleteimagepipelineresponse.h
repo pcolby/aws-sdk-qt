@@ -28,7 +28,7 @@ namespace imagebuilder {
 
 class DeleteImagePipelineResponsePrivate;
 
-class QTAWS_EXPORT DeleteImagePipelineResponse : public imagebuilderResponse {
+class QTAWSIMAGEBUILDER_EXPORT DeleteImagePipelineResponse : public imagebuilderResponse {
     Q_OBJECT
 
 public:

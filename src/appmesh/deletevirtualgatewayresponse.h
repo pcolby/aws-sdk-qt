@@ -28,7 +28,7 @@ namespace AppMesh {
 
 class DeleteVirtualGatewayResponsePrivate;
 
-class QTAWS_EXPORT DeleteVirtualGatewayResponse : public AppMeshResponse {
+class QTAWSAPPMESH_EXPORT DeleteVirtualGatewayResponse : public AppMeshResponse {
     Q_OBJECT
 
 public:

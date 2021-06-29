@@ -27,7 +27,7 @@ namespace AppStream {
 
 class DeleteUserRequestPrivate;
 
-class QTAWS_EXPORT DeleteUserRequest : public AppStreamRequest {
+class QTAWSAPPSTREAM_EXPORT DeleteUserRequest : public AppStreamRequest {
 
 public:
     DeleteUserRequest(const DeleteUserRequest &other);

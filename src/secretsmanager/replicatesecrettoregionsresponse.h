@@ -28,7 +28,7 @@ namespace SecretsManager {
 
 class ReplicateSecretToRegionsResponsePrivate;
 
-class QTAWS_EXPORT ReplicateSecretToRegionsResponse : public SecretsManagerResponse {
+class QTAWSSECRETSMANAGER_EXPORT ReplicateSecretToRegionsResponse : public SecretsManagerResponse {
     Q_OBJECT
 
 public:

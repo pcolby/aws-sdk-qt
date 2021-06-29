@@ -27,7 +27,7 @@ namespace SWF {
 
 class ListDomainsRequestPrivate;
 
-class QTAWS_EXPORT ListDomainsRequest : public SwfRequest {
+class QTAWSSWF_EXPORT ListDomainsRequest : public SwfRequest {
 
 public:
     ListDomainsRequest(const ListDomainsRequest &other);

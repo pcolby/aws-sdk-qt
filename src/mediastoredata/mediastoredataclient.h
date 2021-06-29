@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsmediastoredataglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -39,7 +41,7 @@ class ListItemsResponse;
 class PutObjectRequest;
 class PutObjectResponse;
 
-class QTAWS_EXPORT MediaStoreDataClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSMEDIASTOREDATA_EXPORT MediaStoreDataClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

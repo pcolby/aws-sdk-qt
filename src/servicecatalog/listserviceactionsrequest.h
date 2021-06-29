@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class ListServiceActionsRequestPrivate;
 
-class QTAWS_EXPORT ListServiceActionsRequest : public ServiceCatalogRequest {
+class QTAWSSERVICECATALOG_EXPORT ListServiceActionsRequest : public ServiceCatalogRequest {
 
 public:
     ListServiceActionsRequest(const ListServiceActionsRequest &other);

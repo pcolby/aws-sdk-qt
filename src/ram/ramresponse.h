@@ -21,6 +21,8 @@
 #define QTAWS_RAMRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsramglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace RAM {
 
 class RamResponsePrivate;
 
-class QTAWS_EXPORT RamResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSRAM_EXPORT RamResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

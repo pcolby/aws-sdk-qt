@@ -27,7 +27,7 @@ namespace AugmentedAIRuntime {
 
 class StopHumanLoopRequestPrivate;
 
-class QTAWS_EXPORT StopHumanLoopRequest : public AugmentedAIRuntimeRequest {
+class QTAWSAUGMENTEDAIRUNTIME_EXPORT StopHumanLoopRequest : public AugmentedAIRuntimeRequest {
 
 public:
     StopHumanLoopRequest(const StopHumanLoopRequest &other);

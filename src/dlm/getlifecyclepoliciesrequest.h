@@ -27,7 +27,7 @@ namespace DLM {
 
 class GetLifecyclePoliciesRequestPrivate;
 
-class QTAWS_EXPORT GetLifecyclePoliciesRequest : public DlmRequest {
+class QTAWSDLM_EXPORT GetLifecyclePoliciesRequest : public DlmRequest {
 
 public:
     GetLifecyclePoliciesRequest(const GetLifecyclePoliciesRequest &other);

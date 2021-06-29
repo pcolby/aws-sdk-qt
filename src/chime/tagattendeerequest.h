@@ -27,7 +27,7 @@ namespace Chime {
 
 class TagAttendeeRequestPrivate;
 
-class QTAWS_EXPORT TagAttendeeRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT TagAttendeeRequest : public ChimeRequest {
 
 public:
     TagAttendeeRequest(const TagAttendeeRequest &other);

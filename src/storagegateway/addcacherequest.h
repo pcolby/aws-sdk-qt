@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class AddCacheRequestPrivate;
 
-class QTAWS_EXPORT AddCacheRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT AddCacheRequest : public StorageGatewayRequest {
 
 public:
     AddCacheRequest(const AddCacheRequest &other);

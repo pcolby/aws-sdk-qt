@@ -27,7 +27,7 @@ namespace finspace {
 
 class CreateEnvironmentRequestPrivate;
 
-class QTAWS_EXPORT CreateEnvironmentRequest : public finspaceRequest {
+class QTAWSFINSPACE_EXPORT CreateEnvironmentRequest : public finspaceRequest {
 
 public:
     CreateEnvironmentRequest(const CreateEnvironmentRequest &other);

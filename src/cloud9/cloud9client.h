@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawscloud9global.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -55,7 +57,7 @@ class UpdateEnvironmentResponse;
 class UpdateEnvironmentMembershipRequest;
 class UpdateEnvironmentMembershipResponse;
 
-class QTAWS_EXPORT Cloud9Client : public QtAws::Core::AwsAbstractClient {
+class QTAWSCLOUD9_EXPORT Cloud9Client : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

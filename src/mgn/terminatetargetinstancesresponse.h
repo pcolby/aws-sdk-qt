@@ -28,7 +28,7 @@ namespace mgn {
 
 class TerminateTargetInstancesResponsePrivate;
 
-class QTAWS_EXPORT TerminateTargetInstancesResponse : public mgnResponse {
+class QTAWSMGN_EXPORT TerminateTargetInstancesResponse : public mgnResponse {
     Q_OBJECT
 
 public:

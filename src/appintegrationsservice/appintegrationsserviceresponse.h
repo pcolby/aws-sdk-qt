@@ -21,6 +21,8 @@
 #define QTAWS_APPINTEGRATIONSSERVICERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsappintegrationsserviceglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace AppIntegrationsService {
 
 class AppIntegrationsServiceResponsePrivate;
 
-class QTAWS_EXPORT AppIntegrationsServiceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSAPPINTEGRATIONSSERVICE_EXPORT AppIntegrationsServiceResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

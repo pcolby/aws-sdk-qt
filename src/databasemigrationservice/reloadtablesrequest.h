@@ -27,7 +27,7 @@ namespace DatabaseMigrationService {
 
 class ReloadTablesRequestPrivate;
 
-class QTAWS_EXPORT ReloadTablesRequest : public DatabaseMigrationServiceRequest {
+class QTAWSDATABASEMIGRATIONSERVICE_EXPORT ReloadTablesRequest : public DatabaseMigrationServiceRequest {
 
 public:
     ReloadTablesRequest(const ReloadTablesRequest &other);

@@ -27,7 +27,7 @@ namespace GreengrassV2 {
 
 class ListClientDevicesAssociatedWithCoreDeviceRequestPrivate;
 
-class QTAWS_EXPORT ListClientDevicesAssociatedWithCoreDeviceRequest : public GreengrassV2Request {
+class QTAWSGREENGRASSV2_EXPORT ListClientDevicesAssociatedWithCoreDeviceRequest : public GreengrassV2Request {
 
 public:
     ListClientDevicesAssociatedWithCoreDeviceRequest(const ListClientDevicesAssociatedWithCoreDeviceRequest &other);

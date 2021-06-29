@@ -28,7 +28,7 @@ namespace SMS {
 
 class ImportAppCatalogResponsePrivate;
 
-class QTAWS_EXPORT ImportAppCatalogResponse : public SmsResponse {
+class QTAWSSMS_EXPORT ImportAppCatalogResponse : public SmsResponse {
     Q_OBJECT
 
 public:

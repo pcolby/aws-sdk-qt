@@ -27,7 +27,7 @@ namespace AppRunner {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public AppRunnerRequest {
+class QTAWSAPPRUNNER_EXPORT TagResourceRequest : public AppRunnerRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

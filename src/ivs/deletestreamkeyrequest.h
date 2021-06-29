@@ -27,7 +27,7 @@ namespace IVS {
 
 class DeleteStreamKeyRequestPrivate;
 
-class QTAWS_EXPORT DeleteStreamKeyRequest : public IvsRequest {
+class QTAWSIVS_EXPORT DeleteStreamKeyRequest : public IvsRequest {
 
 public:
     DeleteStreamKeyRequest(const DeleteStreamKeyRequest &other);

@@ -27,7 +27,7 @@ namespace Honeycode {
 
 class GetScreenDataRequestPrivate;
 
-class QTAWS_EXPORT GetScreenDataRequest : public HoneycodeRequest {
+class QTAWSHONEYCODE_EXPORT GetScreenDataRequest : public HoneycodeRequest {
 
 public:
     GetScreenDataRequest(const GetScreenDataRequest &other);

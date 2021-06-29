@@ -27,7 +27,7 @@ namespace SMS {
 
 class GenerateChangeSetRequestPrivate;
 
-class QTAWS_EXPORT GenerateChangeSetRequest : public SmsRequest {
+class QTAWSSMS_EXPORT GenerateChangeSetRequest : public SmsRequest {
 
 public:
     GenerateChangeSetRequest(const GenerateChangeSetRequest &other);

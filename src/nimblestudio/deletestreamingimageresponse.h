@@ -28,7 +28,7 @@ namespace NimbleStudio {
 
 class DeleteStreamingImageResponsePrivate;
 
-class QTAWS_EXPORT DeleteStreamingImageResponse : public NimbleStudioResponse {
+class QTAWSNIMBLESTUDIO_EXPORT DeleteStreamingImageResponse : public NimbleStudioResponse {
     Q_OBJECT
 
 public:

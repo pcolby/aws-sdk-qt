@@ -27,7 +27,7 @@ namespace Route53Resolver {
 
 class CreateFirewallRuleRequestPrivate;
 
-class QTAWS_EXPORT CreateFirewallRuleRequest : public Route53ResolverRequest {
+class QTAWSROUTE53RESOLVER_EXPORT CreateFirewallRuleRequest : public Route53ResolverRequest {
 
 public:
     CreateFirewallRuleRequest(const CreateFirewallRuleRequest &other);

@@ -28,7 +28,7 @@ namespace Route53Domains {
 
 class ListTagsForDomainResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForDomainResponse : public Route53DomainsResponse {
+class QTAWSROUTE53DOMAINS_EXPORT ListTagsForDomainResponse : public Route53DomainsResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace WAFRegional {
 
 class ListSubscribedRuleGroupsRequestPrivate;
 
-class QTAWS_EXPORT ListSubscribedRuleGroupsRequest : public WAFRegionalRequest {
+class QTAWSWAFREGIONAL_EXPORT ListSubscribedRuleGroupsRequest : public WAFRegionalRequest {
 
 public:
     ListSubscribedRuleGroupsRequest(const ListSubscribedRuleGroupsRequest &other);

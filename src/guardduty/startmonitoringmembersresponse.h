@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class StartMonitoringMembersResponsePrivate;
 
-class QTAWS_EXPORT StartMonitoringMembersResponse : public GuardDutyResponse {
+class QTAWSGUARDDUTY_EXPORT StartMonitoringMembersResponse : public GuardDutyResponse {
     Q_OBJECT
 
 public:

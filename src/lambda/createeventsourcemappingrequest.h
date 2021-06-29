@@ -27,7 +27,7 @@ namespace Lambda {
 
 class CreateEventSourceMappingRequestPrivate;
 
-class QTAWS_EXPORT CreateEventSourceMappingRequest : public LambdaRequest {
+class QTAWSLAMBDA_EXPORT CreateEventSourceMappingRequest : public LambdaRequest {
 
 public:
     CreateEventSourceMappingRequest(const CreateEventSourceMappingRequest &other);

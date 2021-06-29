@@ -28,7 +28,7 @@ namespace GlueDataBrew {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public GlueDataBrewResponse {
+class QTAWSGLUEDATABREW_EXPORT UntagResourceResponse : public GlueDataBrewResponse {
     Q_OBJECT
 
 public:

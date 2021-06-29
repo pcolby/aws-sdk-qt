@@ -28,7 +28,7 @@ namespace RAM {
 
 class GetResourceShareAssociationsResponsePrivate;
 
-class QTAWS_EXPORT GetResourceShareAssociationsResponse : public RamResponse {
+class QTAWSRAM_EXPORT GetResourceShareAssociationsResponse : public RamResponse {
     Q_OBJECT
 
 public:

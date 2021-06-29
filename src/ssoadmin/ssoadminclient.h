@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsssoadminglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -91,7 +93,7 @@ class UpdateInstanceAccessControlAttributeConfigurationResponse;
 class UpdatePermissionSetRequest;
 class UpdatePermissionSetResponse;
 
-class QTAWS_EXPORT SSOAdminClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSSOADMIN_EXPORT SSOAdminClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

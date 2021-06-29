@@ -27,7 +27,7 @@ namespace PinpointEmail {
 
 class CreateConfigurationSetEventDestinationRequestPrivate;
 
-class QTAWS_EXPORT CreateConfigurationSetEventDestinationRequest : public PinpointEmailRequest {
+class QTAWSPINPOINTEMAIL_EXPORT CreateConfigurationSetEventDestinationRequest : public PinpointEmailRequest {
 
 public:
     CreateConfigurationSetEventDestinationRequest(const CreateConfigurationSetEventDestinationRequest &other);

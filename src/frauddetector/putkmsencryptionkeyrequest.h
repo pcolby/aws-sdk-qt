@@ -27,7 +27,7 @@ namespace FraudDetector {
 
 class PutKMSEncryptionKeyRequestPrivate;
 
-class QTAWS_EXPORT PutKMSEncryptionKeyRequest : public FraudDetectorRequest {
+class QTAWSFRAUDDETECTOR_EXPORT PutKMSEncryptionKeyRequest : public FraudDetectorRequest {
 
 public:
     PutKMSEncryptionKeyRequest(const PutKMSEncryptionKeyRequest &other);

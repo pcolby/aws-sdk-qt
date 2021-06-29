@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DescribeNetworkInsightsPathsRequestPrivate;
 
-class QTAWS_EXPORT DescribeNetworkInsightsPathsRequest : public Ec2Request {
+class QTAWSEC2_EXPORT DescribeNetworkInsightsPathsRequest : public Ec2Request {
 
 public:
     DescribeNetworkInsightsPathsRequest(const DescribeNetworkInsightsPathsRequest &other);

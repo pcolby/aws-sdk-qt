@@ -27,7 +27,7 @@ namespace ECRPublic {
 
 class BatchDeleteImageRequestPrivate;
 
-class QTAWS_EXPORT BatchDeleteImageRequest : public ECRPublicRequest {
+class QTAWSECRPUBLIC_EXPORT BatchDeleteImageRequest : public ECRPublicRequest {
 
 public:
     BatchDeleteImageRequest(const BatchDeleteImageRequest &other);

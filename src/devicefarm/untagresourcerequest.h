@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public DeviceFarmRequest {
+class QTAWSDEVICEFARM_EXPORT UntagResourceRequest : public DeviceFarmRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

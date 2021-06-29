@@ -28,7 +28,7 @@ namespace Route53 {
 
 class ListHostedZonesResponsePrivate;
 
-class QTAWS_EXPORT ListHostedZonesResponse : public Route53Response {
+class QTAWSROUTE53_EXPORT ListHostedZonesResponse : public Route53Response {
     Q_OBJECT
 
 public:

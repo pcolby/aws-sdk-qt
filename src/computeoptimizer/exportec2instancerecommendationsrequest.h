@@ -27,7 +27,7 @@ namespace ComputeOptimizer {
 
 class ExportEC2InstanceRecommendationsRequestPrivate;
 
-class QTAWS_EXPORT ExportEC2InstanceRecommendationsRequest : public ComputeOptimizerRequest {
+class QTAWSCOMPUTEOPTIMIZER_EXPORT ExportEC2InstanceRecommendationsRequest : public ComputeOptimizerRequest {
 
 public:
     ExportEC2InstanceRecommendationsRequest(const ExportEC2InstanceRecommendationsRequest &other);

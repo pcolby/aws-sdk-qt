@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class DeleteOrganizationConfigRuleResponsePrivate;
 
-class QTAWS_EXPORT DeleteOrganizationConfigRuleResponse : public ConfigServiceResponse {
+class QTAWSCONFIGSERVICE_EXPORT DeleteOrganizationConfigRuleResponse : public ConfigServiceResponse {
     Q_OBJECT
 
 public:

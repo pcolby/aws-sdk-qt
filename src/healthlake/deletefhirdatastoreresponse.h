@@ -28,7 +28,7 @@ namespace HealthLake {
 
 class DeleteFHIRDatastoreResponsePrivate;
 
-class QTAWS_EXPORT DeleteFHIRDatastoreResponse : public HealthLakeResponse {
+class QTAWSHEALTHLAKE_EXPORT DeleteFHIRDatastoreResponse : public HealthLakeResponse {
     Q_OBJECT
 
 public:

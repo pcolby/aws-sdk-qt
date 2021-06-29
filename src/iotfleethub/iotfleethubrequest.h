@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsiotfleethubglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace IoTFleetHub {
 
 class IoTFleetHubRequestPrivate;
 
-class QTAWS_EXPORT IoTFleetHubRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSIOTFLEETHUB_EXPORT IoTFleetHubRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by IoTFleetHub.

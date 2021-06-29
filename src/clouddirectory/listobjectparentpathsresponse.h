@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class ListObjectParentPathsResponsePrivate;
 
-class QTAWS_EXPORT ListObjectParentPathsResponse : public CloudDirectoryResponse {
+class QTAWSCLOUDDIRECTORY_EXPORT ListObjectParentPathsResponse : public CloudDirectoryResponse {
     Q_OBJECT
 
 public:

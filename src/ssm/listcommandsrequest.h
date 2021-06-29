@@ -27,7 +27,7 @@ namespace SSM {
 
 class ListCommandsRequestPrivate;
 
-class QTAWS_EXPORT ListCommandsRequest : public SsmRequest {
+class QTAWSSSM_EXPORT ListCommandsRequest : public SsmRequest {
 
 public:
     ListCommandsRequest(const ListCommandsRequest &other);

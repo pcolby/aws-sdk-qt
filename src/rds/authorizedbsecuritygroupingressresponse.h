@@ -28,7 +28,7 @@ namespace RDS {
 
 class AuthorizeDBSecurityGroupIngressResponsePrivate;
 
-class QTAWS_EXPORT AuthorizeDBSecurityGroupIngressResponse : public RdsResponse {
+class QTAWSRDS_EXPORT AuthorizeDBSecurityGroupIngressResponse : public RdsResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 
 class DescribeAccountLimitsResponsePrivate;
 
-class QTAWS_EXPORT DescribeAccountLimitsResponse : public ElasticLoadBalancingResponse {
+class QTAWSELASTICLOADBALANCING_EXPORT DescribeAccountLimitsResponse : public ElasticLoadBalancingResponse {
     Q_OBJECT
 
 public:

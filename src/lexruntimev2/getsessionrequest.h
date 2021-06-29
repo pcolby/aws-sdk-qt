@@ -27,7 +27,7 @@ namespace LexRuntimeV2 {
 
 class GetSessionRequestPrivate;
 
-class QTAWS_EXPORT GetSessionRequest : public LexRuntimeV2Request {
+class QTAWSLEXRUNTIMEV2_EXPORT GetSessionRequest : public LexRuntimeV2Request {
 
 public:
     GetSessionRequest(const GetSessionRequest &other);

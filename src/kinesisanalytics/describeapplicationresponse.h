@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 
 class DescribeApplicationResponsePrivate;
 
-class QTAWS_EXPORT DescribeApplicationResponse : public KinesisAnalyticsResponse {
+class QTAWSKINESISANALYTICS_EXPORT DescribeApplicationResponse : public KinesisAnalyticsResponse {
     Q_OBJECT
 
 public:

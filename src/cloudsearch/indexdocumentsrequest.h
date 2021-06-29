@@ -27,7 +27,7 @@ namespace CloudSearch {
 
 class IndexDocumentsRequestPrivate;
 
-class QTAWS_EXPORT IndexDocumentsRequest : public CloudSearchRequest {
+class QTAWSCLOUDSEARCH_EXPORT IndexDocumentsRequest : public CloudSearchRequest {
 
 public:
     IndexDocumentsRequest(const IndexDocumentsRequest &other);

@@ -27,7 +27,7 @@ namespace GameLift {
 
 class StopMatchmakingRequestPrivate;
 
-class QTAWS_EXPORT StopMatchmakingRequest : public GameLiftRequest {
+class QTAWSGAMELIFT_EXPORT StopMatchmakingRequest : public GameLiftRequest {
 
 public:
     StopMatchmakingRequest(const StopMatchmakingRequest &other);

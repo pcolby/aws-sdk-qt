@@ -27,7 +27,7 @@ namespace DevOpsGuru {
 
 class UpdateResourceCollectionRequestPrivate;
 
-class QTAWS_EXPORT UpdateResourceCollectionRequest : public DevOpsGuruRequest {
+class QTAWSDEVOPSGURU_EXPORT UpdateResourceCollectionRequest : public DevOpsGuruRequest {
 
 public:
     UpdateResourceCollectionRequest(const UpdateResourceCollectionRequest &other);

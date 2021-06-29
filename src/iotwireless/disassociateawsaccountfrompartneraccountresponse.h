@@ -28,7 +28,7 @@ namespace IoTWireless {
 
 class DisassociateAwsAccountFromPartnerAccountResponsePrivate;
 
-class QTAWS_EXPORT DisassociateAwsAccountFromPartnerAccountResponse : public IoTWirelessResponse {
+class QTAWSIOTWIRELESS_EXPORT DisassociateAwsAccountFromPartnerAccountResponse : public IoTWirelessResponse {
     Q_OBJECT
 
 public:

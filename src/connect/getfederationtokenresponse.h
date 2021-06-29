@@ -28,7 +28,7 @@ namespace Connect {
 
 class GetFederationTokenResponsePrivate;
 
-class QTAWS_EXPORT GetFederationTokenResponse : public ConnectResponse {
+class QTAWSCONNECT_EXPORT GetFederationTokenResponse : public ConnectResponse {
     Q_OBJECT
 
 public:

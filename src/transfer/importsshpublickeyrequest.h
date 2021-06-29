@@ -27,7 +27,7 @@ namespace Transfer {
 
 class ImportSshPublicKeyRequestPrivate;
 
-class QTAWS_EXPORT ImportSshPublicKeyRequest : public TransferRequest {
+class QTAWSTRANSFER_EXPORT ImportSshPublicKeyRequest : public TransferRequest {
 
 public:
     ImportSshPublicKeyRequest(const ImportSshPublicKeyRequest &other);

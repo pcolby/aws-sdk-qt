@@ -21,6 +21,8 @@
 #define QTAWS_SAGEMAKEREDGEMANAGERRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawssagemakeredgemanagerglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace SagemakerEdgeManager {
 
 class SagemakerEdgeManagerResponsePrivate;
 
-class QTAWS_EXPORT SagemakerEdgeManagerResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSAGEMAKEREDGEMANAGER_EXPORT SagemakerEdgeManagerResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

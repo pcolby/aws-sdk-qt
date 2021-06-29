@@ -27,7 +27,7 @@ namespace EMR {
 
 class CancelStepsRequestPrivate;
 
-class QTAWS_EXPORT CancelStepsRequest : public EmrRequest {
+class QTAWSEMR_EXPORT CancelStepsRequest : public EmrRequest {
 
 public:
     CancelStepsRequest(const CancelStepsRequest &other);

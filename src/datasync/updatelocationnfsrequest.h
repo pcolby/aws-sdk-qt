@@ -27,7 +27,7 @@ namespace DataSync {
 
 class UpdateLocationNfsRequestPrivate;
 
-class QTAWS_EXPORT UpdateLocationNfsRequest : public DataSyncRequest {
+class QTAWSDATASYNC_EXPORT UpdateLocationNfsRequest : public DataSyncRequest {
 
 public:
     UpdateLocationNfsRequest(const UpdateLocationNfsRequest &other);

@@ -27,7 +27,7 @@ namespace FSx {
 
 class DeleteBackupRequestPrivate;
 
-class QTAWS_EXPORT DeleteBackupRequest : public FSxRequest {
+class QTAWSFSX_EXPORT DeleteBackupRequest : public FSxRequest {
 
 public:
     DeleteBackupRequest(const DeleteBackupRequest &other);

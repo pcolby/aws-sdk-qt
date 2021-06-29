@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class ListFileSystemAssociationsResponsePrivate;
 
-class QTAWS_EXPORT ListFileSystemAssociationsResponse : public StorageGatewayResponse {
+class QTAWSSTORAGEGATEWAY_EXPORT ListFileSystemAssociationsResponse : public StorageGatewayResponse {
     Q_OBJECT
 
 public:

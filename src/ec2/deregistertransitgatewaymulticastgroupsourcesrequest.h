@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DeregisterTransitGatewayMulticastGroupSourcesRequestPrivate;
 
-class QTAWS_EXPORT DeregisterTransitGatewayMulticastGroupSourcesRequest : public Ec2Request {
+class QTAWSEC2_EXPORT DeregisterTransitGatewayMulticastGroupSourcesRequest : public Ec2Request {
 
 public:
     DeregisterTransitGatewayMulticastGroupSourcesRequest(const DeregisterTransitGatewayMulticastGroupSourcesRequest &other);

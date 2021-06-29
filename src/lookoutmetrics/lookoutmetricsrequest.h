@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawslookoutmetricsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace LookoutMetrics {
 
 class LookoutMetricsRequestPrivate;
 
-class QTAWS_EXPORT LookoutMetricsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSLOOKOUTMETRICS_EXPORT LookoutMetricsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by LookoutMetrics.

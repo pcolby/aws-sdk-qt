@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCOGNITOSYNC_LIBRARY)
+
 add_library(QtAwsCognitoSync
   bulkpublishrequest.h
   bulkpublishrequest_p.h
@@ -49,6 +51,7 @@ add_library(QtAwsCognitoSync
   listrecordsrequest_p.h
   listrecordsresponse.h
   listrecordsresponse_p.h
+  qtawscognitosyncglobal.h
   registerdevicerequest.h
   registerdevicerequest_p.h
   registerdeviceresponse.h

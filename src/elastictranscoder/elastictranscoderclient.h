@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawselastictranscoderglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -63,7 +65,7 @@ class UpdatePipelineNotificationsResponse;
 class UpdatePipelineStatusRequest;
 class UpdatePipelineStatusResponse;
 
-class QTAWS_EXPORT ElasticTranscoderClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSELASTICTRANSCODER_EXPORT ElasticTranscoderClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

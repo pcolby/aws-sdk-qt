@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSRDSDATASERVICE_LIBRARY)
+
 add_library(QtAwsRDSDataService
   batchexecutestatementrequest.h
   batchexecutestatementrequest_p.h
@@ -19,6 +21,7 @@ add_library(QtAwsRDSDataService
   executestatementrequest_p.h
   executestatementresponse.h
   executestatementresponse_p.h
+  qtawsrdsdataserviceglobal.h
   rdsdataserviceclient.h
   rdsdataserviceclient_p.h
   rdsdataservicerequest.h

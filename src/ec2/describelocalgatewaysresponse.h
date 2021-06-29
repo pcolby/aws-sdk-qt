@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeLocalGatewaysResponsePrivate;
 
-class QTAWS_EXPORT DescribeLocalGatewaysResponse : public Ec2Response {
+class QTAWSEC2_EXPORT DescribeLocalGatewaysResponse : public Ec2Response {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace Rekognition {
 
 class CreateCollectionRequestPrivate;
 
-class QTAWS_EXPORT CreateCollectionRequest : public RekognitionRequest {
+class QTAWSREKOGNITION_EXPORT CreateCollectionRequest : public RekognitionRequest {
 
 public:
     CreateCollectionRequest(const CreateCollectionRequest &other);

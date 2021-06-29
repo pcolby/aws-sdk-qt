@@ -28,7 +28,7 @@ namespace AppSync {
 
 class DeleteGraphqlApiResponsePrivate;
 
-class QTAWS_EXPORT DeleteGraphqlApiResponse : public AppSyncResponse {
+class QTAWSAPPSYNC_EXPORT DeleteGraphqlApiResponse : public AppSyncResponse {
     Q_OBJECT
 
 public:

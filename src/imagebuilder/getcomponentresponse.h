@@ -28,7 +28,7 @@ namespace imagebuilder {
 
 class GetComponentResponsePrivate;
 
-class QTAWS_EXPORT GetComponentResponse : public imagebuilderResponse {
+class QTAWSIMAGEBUILDER_EXPORT GetComponentResponse : public imagebuilderResponse {
     Q_OBJECT
 
 public:

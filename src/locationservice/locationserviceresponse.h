@@ -21,6 +21,8 @@
 #define QTAWS_LOCATIONSERVICERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawslocationserviceglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace LocationService {
 
 class LocationServiceResponsePrivate;
 
-class QTAWS_EXPORT LocationServiceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSLOCATIONSERVICE_EXPORT LocationServiceResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

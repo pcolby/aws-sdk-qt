@@ -27,7 +27,7 @@ namespace IAM {
 
 class GetAccountPasswordPolicyRequestPrivate;
 
-class QTAWS_EXPORT GetAccountPasswordPolicyRequest : public IamRequest {
+class QTAWSIAM_EXPORT GetAccountPasswordPolicyRequest : public IamRequest {
 
 public:
     GetAccountPasswordPolicyRequest(const GetAccountPasswordPolicyRequest &other);

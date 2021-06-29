@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class AuthorizeIpRulesResponsePrivate;
 
-class QTAWS_EXPORT AuthorizeIpRulesResponse : public WorkSpacesResponse {
+class QTAWSWORKSPACES_EXPORT AuthorizeIpRulesResponse : public WorkSpacesResponse {
     Q_OBJECT
 
 public:

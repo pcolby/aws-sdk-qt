@@ -21,6 +21,8 @@
 #define QTAWS_OPSWORKSCMRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsopsworkscmglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace OpsWorksCM {
 
 class OpsWorksCMResponsePrivate;
 
-class QTAWS_EXPORT OpsWorksCMResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSOPSWORKSCM_EXPORT OpsWorksCMResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

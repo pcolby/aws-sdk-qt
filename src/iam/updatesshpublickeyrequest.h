@@ -27,7 +27,7 @@ namespace IAM {
 
 class UpdateSSHPublicKeyRequestPrivate;
 
-class QTAWS_EXPORT UpdateSSHPublicKeyRequest : public IamRequest {
+class QTAWSIAM_EXPORT UpdateSSHPublicKeyRequest : public IamRequest {
 
 public:
     UpdateSSHPublicKeyRequest(const UpdateSSHPublicKeyRequest &other);

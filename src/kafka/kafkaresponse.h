@@ -21,6 +21,8 @@
 #define QTAWS_KAFKARESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawskafkaglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Kafka {
 
 class KafkaResponsePrivate;
 
-class QTAWS_EXPORT KafkaResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSKAFKA_EXPORT KafkaResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

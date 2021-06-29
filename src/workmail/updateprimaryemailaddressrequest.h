@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class UpdatePrimaryEmailAddressRequestPrivate;
 
-class QTAWS_EXPORT UpdatePrimaryEmailAddressRequest : public WorkMailRequest {
+class QTAWSWORKMAIL_EXPORT UpdatePrimaryEmailAddressRequest : public WorkMailRequest {
 
 public:
     UpdatePrimaryEmailAddressRequest(const UpdatePrimaryEmailAddressRequest &other);

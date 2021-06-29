@@ -27,7 +27,7 @@ namespace Redshift {
 
 class CreateUsageLimitRequestPrivate;
 
-class QTAWS_EXPORT CreateUsageLimitRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT CreateUsageLimitRequest : public RedshiftRequest {
 
 public:
     CreateUsageLimitRequest(const CreateUsageLimitRequest &other);

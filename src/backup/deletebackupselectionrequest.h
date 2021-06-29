@@ -27,7 +27,7 @@ namespace Backup {
 
 class DeleteBackupSelectionRequestPrivate;
 
-class QTAWS_EXPORT DeleteBackupSelectionRequest : public BackupRequest {
+class QTAWSBACKUP_EXPORT DeleteBackupSelectionRequest : public BackupRequest {
 
 public:
     DeleteBackupSelectionRequest(const DeleteBackupSelectionRequest &other);

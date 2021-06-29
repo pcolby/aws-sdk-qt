@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class DeleteSnapshotScheduleResponsePrivate;
 
-class QTAWS_EXPORT DeleteSnapshotScheduleResponse : public StorageGatewayResponse {
+class QTAWSSTORAGEGATEWAY_EXPORT DeleteSnapshotScheduleResponse : public StorageGatewayResponse {
     Q_OBJECT
 
 public:

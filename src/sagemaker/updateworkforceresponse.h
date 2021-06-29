@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class UpdateWorkforceResponsePrivate;
 
-class QTAWS_EXPORT UpdateWorkforceResponse : public SageMakerResponse {
+class QTAWSSAGEMAKER_EXPORT UpdateWorkforceResponse : public SageMakerResponse {
     Q_OBJECT
 
 public:

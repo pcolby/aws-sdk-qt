@@ -28,7 +28,7 @@ namespace CognitoIdentity {
 
 class SetIdentityPoolRolesResponsePrivate;
 
-class QTAWS_EXPORT SetIdentityPoolRolesResponse : public CognitoIdentityResponse {
+class QTAWSCOGNITOIDENTITY_EXPORT SetIdentityPoolRolesResponse : public CognitoIdentityResponse {
     Q_OBJECT
 
 public:

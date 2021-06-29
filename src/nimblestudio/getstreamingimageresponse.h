@@ -28,7 +28,7 @@ namespace NimbleStudio {
 
 class GetStreamingImageResponsePrivate;
 
-class QTAWS_EXPORT GetStreamingImageResponse : public NimbleStudioResponse {
+class QTAWSNIMBLESTUDIO_EXPORT GetStreamingImageResponse : public NimbleStudioResponse {
     Q_OBJECT
 
 public:

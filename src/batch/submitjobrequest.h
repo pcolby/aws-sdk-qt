@@ -27,7 +27,7 @@ namespace Batch {
 
 class SubmitJobRequestPrivate;
 
-class QTAWS_EXPORT SubmitJobRequest : public BatchRequest {
+class QTAWSBATCH_EXPORT SubmitJobRequest : public BatchRequest {
 
 public:
     SubmitJobRequest(const SubmitJobRequest &other);

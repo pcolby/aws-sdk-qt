@@ -28,7 +28,7 @@ namespace Macie {
 
 class AssociateMemberAccountResponsePrivate;
 
-class QTAWS_EXPORT AssociateMemberAccountResponse : public MacieResponse {
+class QTAWSMACIE_EXPORT AssociateMemberAccountResponse : public MacieResponse {
     Q_OBJECT
 
 public:

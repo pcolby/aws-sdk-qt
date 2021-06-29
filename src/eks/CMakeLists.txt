@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSEKS_LIBRARY)
+
 add_library(QtAwsEks
   associateencryptionconfigrequest.h
   associateencryptionconfigrequest_p.h
@@ -105,6 +107,7 @@ add_library(QtAwsEks
   listupdatesrequest_p.h
   listupdatesresponse.h
   listupdatesresponse_p.h
+  qtawseksglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

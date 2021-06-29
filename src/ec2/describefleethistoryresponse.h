@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeFleetHistoryResponsePrivate;
 
-class QTAWS_EXPORT DescribeFleetHistoryResponse : public Ec2Response {
+class QTAWSEC2_EXPORT DescribeFleetHistoryResponse : public Ec2Response {
     Q_OBJECT
 
 public:

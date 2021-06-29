@@ -27,7 +27,7 @@ namespace ElastiCache {
 
 class ModifyGlobalReplicationGroupRequestPrivate;
 
-class QTAWS_EXPORT ModifyGlobalReplicationGroupRequest : public ElastiCacheRequest {
+class QTAWSELASTICACHE_EXPORT ModifyGlobalReplicationGroupRequest : public ElastiCacheRequest {
 
 public:
     ModifyGlobalReplicationGroupRequest(const ModifyGlobalReplicationGroupRequest &other);

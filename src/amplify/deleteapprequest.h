@@ -27,7 +27,7 @@ namespace Amplify {
 
 class DeleteAppRequestPrivate;
 
-class QTAWS_EXPORT DeleteAppRequest : public AmplifyRequest {
+class QTAWSAMPLIFY_EXPORT DeleteAppRequest : public AmplifyRequest {
 
 public:
     DeleteAppRequest(const DeleteAppRequest &other);

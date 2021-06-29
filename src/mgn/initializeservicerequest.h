@@ -27,7 +27,7 @@ namespace mgn {
 
 class InitializeServiceRequestPrivate;
 
-class QTAWS_EXPORT InitializeServiceRequest : public mgnRequest {
+class QTAWSMGN_EXPORT InitializeServiceRequest : public mgnRequest {
 
 public:
     InitializeServiceRequest(const InitializeServiceRequest &other);

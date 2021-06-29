@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSNS_LIBRARY)
+
 add_library(QtAwsSns
   addpermissionrequest.h
   addpermissionrequest_p.h
@@ -111,6 +113,7 @@ add_library(QtAwsSns
   publishrequest_p.h
   publishresponse.h
   publishresponse_p.h
+  qtawssnsglobal.h
   removepermissionrequest.h
   removepermissionrequest_p.h
   removepermissionresponse.h

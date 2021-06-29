@@ -27,7 +27,7 @@ namespace Schemas {
 
 class DeleteResourcePolicyRequestPrivate;
 
-class QTAWS_EXPORT DeleteResourcePolicyRequest : public SchemasRequest {
+class QTAWSSCHEMAS_EXPORT DeleteResourcePolicyRequest : public SchemasRequest {
 
 public:
     DeleteResourcePolicyRequest(const DeleteResourcePolicyRequest &other);

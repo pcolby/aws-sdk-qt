@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ReplaceRouteTableAssociationRequestPrivate;
 
-class QTAWS_EXPORT ReplaceRouteTableAssociationRequest : public Ec2Request {
+class QTAWSEC2_EXPORT ReplaceRouteTableAssociationRequest : public Ec2Request {
 
 public:
     ReplaceRouteTableAssociationRequest(const ReplaceRouteTableAssociationRequest &other);

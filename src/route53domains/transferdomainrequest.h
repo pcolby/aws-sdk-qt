@@ -27,7 +27,7 @@ namespace Route53Domains {
 
 class TransferDomainRequestPrivate;
 
-class QTAWS_EXPORT TransferDomainRequest : public Route53DomainsRequest {
+class QTAWSROUTE53DOMAINS_EXPORT TransferDomainRequest : public Route53DomainsRequest {
 
 public:
     TransferDomainRequest(const TransferDomainRequest &other);

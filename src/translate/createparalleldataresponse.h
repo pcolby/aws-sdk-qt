@@ -28,7 +28,7 @@ namespace Translate {
 
 class CreateParallelDataResponsePrivate;
 
-class QTAWS_EXPORT CreateParallelDataResponse : public TranslateResponse {
+class QTAWSTRANSLATE_EXPORT CreateParallelDataResponse : public TranslateResponse {
     Q_OBJECT
 
 public:

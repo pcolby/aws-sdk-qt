@@ -28,7 +28,7 @@ namespace FMS {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public FmsResponse {
+class QTAWSFMS_EXPORT TagResourceResponse : public FmsResponse {
     Q_OBJECT
 
 public:

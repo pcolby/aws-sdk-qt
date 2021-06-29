@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class DescribeDataSetPermissionsRequestPrivate;
 
-class QTAWS_EXPORT DescribeDataSetPermissionsRequest : public QuickSightRequest {
+class QTAWSQUICKSIGHT_EXPORT DescribeDataSetPermissionsRequest : public QuickSightRequest {
 
 public:
     DescribeDataSetPermissionsRequest(const DescribeDataSetPermissionsRequest &other);

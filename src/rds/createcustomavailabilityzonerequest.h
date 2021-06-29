@@ -27,7 +27,7 @@ namespace RDS {
 
 class CreateCustomAvailabilityZoneRequestPrivate;
 
-class QTAWS_EXPORT CreateCustomAvailabilityZoneRequest : public RdsRequest {
+class QTAWSRDS_EXPORT CreateCustomAvailabilityZoneRequest : public RdsRequest {
 
 public:
     CreateCustomAvailabilityZoneRequest(const CreateCustomAvailabilityZoneRequest &other);

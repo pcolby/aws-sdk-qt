@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsmachinelearningglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -85,7 +87,7 @@ class UpdateEvaluationResponse;
 class UpdateMLModelRequest;
 class UpdateMLModelResponse;
 
-class QTAWS_EXPORT MachineLearningClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSMACHINELEARNING_EXPORT MachineLearningClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

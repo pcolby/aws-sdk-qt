@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawslakeformationglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace LakeFormation {
 
 class LakeFormationRequestPrivate;
 
-class QTAWS_EXPORT LakeFormationRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSLAKEFORMATION_EXPORT LakeFormationRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by LakeFormation.

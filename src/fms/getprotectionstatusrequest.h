@@ -27,7 +27,7 @@ namespace FMS {
 
 class GetProtectionStatusRequestPrivate;
 
-class QTAWS_EXPORT GetProtectionStatusRequest : public FmsRequest {
+class QTAWSFMS_EXPORT GetProtectionStatusRequest : public FmsRequest {
 
 public:
     GetProtectionStatusRequest(const GetProtectionStatusRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawscognitosyncglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -63,7 +65,7 @@ class UnsubscribeFromDatasetResponse;
 class UpdateRecordsRequest;
 class UpdateRecordsResponse;
 
-class QTAWS_EXPORT CognitoSyncClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCOGNITOSYNC_EXPORT CognitoSyncClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

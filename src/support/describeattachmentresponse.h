@@ -28,7 +28,7 @@ namespace Support {
 
 class DescribeAttachmentResponsePrivate;
 
-class QTAWS_EXPORT DescribeAttachmentResponse : public SupportResponse {
+class QTAWSSUPPORT_EXPORT DescribeAttachmentResponse : public SupportResponse {
     Q_OBJECT
 
 public:

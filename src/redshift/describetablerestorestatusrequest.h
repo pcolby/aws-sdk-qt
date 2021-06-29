@@ -27,7 +27,7 @@ namespace Redshift {
 
 class DescribeTableRestoreStatusRequestPrivate;
 
-class QTAWS_EXPORT DescribeTableRestoreStatusRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT DescribeTableRestoreStatusRequest : public RedshiftRequest {
 
 public:
     DescribeTableRestoreStatusRequest(const DescribeTableRestoreStatusRequest &other);

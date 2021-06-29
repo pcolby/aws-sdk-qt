@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class DeleteWorkspaceImageResponsePrivate;
 
-class QTAWS_EXPORT DeleteWorkspaceImageResponse : public WorkSpacesResponse {
+class QTAWSWORKSPACES_EXPORT DeleteWorkspaceImageResponse : public WorkSpacesResponse {
     Q_OBJECT
 
 public:

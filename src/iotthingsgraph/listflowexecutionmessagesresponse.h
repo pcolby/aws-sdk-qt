@@ -28,7 +28,7 @@ namespace IoTThingsGraph {
 
 class ListFlowExecutionMessagesResponsePrivate;
 
-class QTAWS_EXPORT ListFlowExecutionMessagesResponse : public IoTThingsGraphResponse {
+class QTAWSIOTTHINGSGRAPH_EXPORT ListFlowExecutionMessagesResponse : public IoTThingsGraphResponse {
     Q_OBJECT
 
 public:

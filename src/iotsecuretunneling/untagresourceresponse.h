@@ -28,7 +28,7 @@ namespace IoTSecureTunneling {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public IoTSecureTunnelingResponse {
+class QTAWSIOTSECURETUNNELING_EXPORT UntagResourceResponse : public IoTSecureTunnelingResponse {
     Q_OBJECT
 
 public:

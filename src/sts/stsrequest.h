@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsstsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace STS {
 
 class StsRequestPrivate;
 
-class QTAWS_EXPORT StsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSTS_EXPORT StsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by STS.

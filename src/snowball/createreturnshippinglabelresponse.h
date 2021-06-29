@@ -28,7 +28,7 @@ namespace Snowball {
 
 class CreateReturnShippingLabelResponsePrivate;
 
-class QTAWS_EXPORT CreateReturnShippingLabelResponse : public SnowballResponse {
+class QTAWSSNOWBALL_EXPORT CreateReturnShippingLabelResponse : public SnowballResponse {
     Q_OBJECT
 
 public:

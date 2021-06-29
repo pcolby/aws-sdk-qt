@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSMS_LIBRARY)
+
 add_library(QtAwsSms
   createapprequest.h
   createapprequest_p.h
@@ -111,6 +113,7 @@ add_library(QtAwsSms
   putappvalidationconfigurationrequest_p.h
   putappvalidationconfigurationresponse.h
   putappvalidationconfigurationresponse_p.h
+  qtawssmsglobal.h
   smsclient.h
   smsclient_p.h
   smsrequest.h

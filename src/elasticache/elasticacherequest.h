@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawselasticacheglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace ElastiCache {
 
 class ElastiCacheRequestPrivate;
 
-class QTAWS_EXPORT ElastiCacheRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSELASTICACHE_EXPORT ElastiCacheRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ElastiCache.

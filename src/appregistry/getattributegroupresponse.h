@@ -28,7 +28,7 @@ namespace AppRegistry {
 
 class GetAttributeGroupResponsePrivate;
 
-class QTAWS_EXPORT GetAttributeGroupResponse : public AppRegistryResponse {
+class QTAWSAPPREGISTRY_EXPORT GetAttributeGroupResponse : public AppRegistryResponse {
     Q_OBJECT
 
 public:

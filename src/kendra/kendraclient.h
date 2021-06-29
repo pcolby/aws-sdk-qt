@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawskendraglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -107,7 +109,7 @@ class UpdateQuerySuggestionsConfigResponse;
 class UpdateThesaurusRequest;
 class UpdateThesaurusResponse;
 
-class QTAWS_EXPORT kendraClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSKENDRA_EXPORT kendraClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

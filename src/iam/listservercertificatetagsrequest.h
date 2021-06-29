@@ -27,7 +27,7 @@ namespace IAM {
 
 class ListServerCertificateTagsRequestPrivate;
 
-class QTAWS_EXPORT ListServerCertificateTagsRequest : public IamRequest {
+class QTAWSIAM_EXPORT ListServerCertificateTagsRequest : public IamRequest {
 
 public:
     ListServerCertificateTagsRequest(const ListServerCertificateTagsRequest &other);

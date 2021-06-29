@@ -27,7 +27,7 @@ namespace ElastiCache {
 
 class DeleteCacheSecurityGroupRequestPrivate;
 
-class QTAWS_EXPORT DeleteCacheSecurityGroupRequest : public ElastiCacheRequest {
+class QTAWSELASTICACHE_EXPORT DeleteCacheSecurityGroupRequest : public ElastiCacheRequest {
 
 public:
     DeleteCacheSecurityGroupRequest(const DeleteCacheSecurityGroupRequest &other);

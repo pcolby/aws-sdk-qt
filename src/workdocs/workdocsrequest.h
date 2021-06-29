@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsworkdocsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace WorkDocs {
 
 class WorkDocsRequestPrivate;
 
-class QTAWS_EXPORT WorkDocsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSWORKDOCS_EXPORT WorkDocsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by WorkDocs.

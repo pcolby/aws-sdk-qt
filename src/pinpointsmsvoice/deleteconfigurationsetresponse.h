@@ -28,7 +28,7 @@ namespace PinpointSMSVoice {
 
 class DeleteConfigurationSetResponsePrivate;
 
-class QTAWS_EXPORT DeleteConfigurationSetResponse : public PinpointSMSVoiceResponse {
+class QTAWSPINPOINTSMSVOICE_EXPORT DeleteConfigurationSetResponse : public PinpointSMSVoiceResponse {
     Q_OBJECT
 
 public:

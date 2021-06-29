@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSAGEMAKER_LIBRARY)
+
 add_library(QtAwsSageMaker
   addassociationrequest.h
   addassociationrequest_p.h
@@ -767,6 +769,7 @@ add_library(QtAwsSageMaker
   putmodelpackagegrouppolicyrequest_p.h
   putmodelpackagegrouppolicyresponse.h
   putmodelpackagegrouppolicyresponse_p.h
+  qtawssagemakerglobal.h
   registerdevicesrequest.h
   registerdevicesrequest_p.h
   registerdevicesresponse.h

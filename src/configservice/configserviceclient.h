@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsconfigserviceglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -201,7 +203,7 @@ class TagResourceResponse;
 class UntagResourceRequest;
 class UntagResourceResponse;
 
-class QTAWS_EXPORT ConfigServiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCONFIGSERVICE_EXPORT ConfigServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

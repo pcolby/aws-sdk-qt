@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class TestRepositoryTriggersRequestPrivate;
 
-class QTAWS_EXPORT TestRepositoryTriggersRequest : public CodeCommitRequest {
+class QTAWSCODECOMMIT_EXPORT TestRepositoryTriggersRequest : public CodeCommitRequest {
 
 public:
     TestRepositoryTriggersRequest(const TestRepositoryTriggersRequest &other);

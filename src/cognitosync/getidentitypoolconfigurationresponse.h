@@ -28,7 +28,7 @@ namespace CognitoSync {
 
 class GetIdentityPoolConfigurationResponsePrivate;
 
-class QTAWS_EXPORT GetIdentityPoolConfigurationResponse : public CognitoSyncResponse {
+class QTAWSCOGNITOSYNC_EXPORT GetIdentityPoolConfigurationResponse : public CognitoSyncResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace ApplicationAutoScaling {
 
 class DeregisterScalableTargetResponsePrivate;
 
-class QTAWS_EXPORT DeregisterScalableTargetResponse : public ApplicationAutoScalingResponse {
+class QTAWSAPPLICATIONAUTOSCALING_EXPORT DeregisterScalableTargetResponse : public ApplicationAutoScalingResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace Comprehend {
 
 class DescribeDocumentClassifierResponsePrivate;
 
-class QTAWS_EXPORT DescribeDocumentClassifierResponse : public ComprehendResponse {
+class QTAWSCOMPREHEND_EXPORT DescribeDocumentClassifierResponse : public ComprehendResponse {
     Q_OBJECT
 
 public:

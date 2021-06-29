@@ -27,7 +27,7 @@ namespace AppSync {
 
 class DeleteFunctionRequestPrivate;
 
-class QTAWS_EXPORT DeleteFunctionRequest : public AppSyncRequest {
+class QTAWSAPPSYNC_EXPORT DeleteFunctionRequest : public AppSyncRequest {
 
 public:
     DeleteFunctionRequest(const DeleteFunctionRequest &other);

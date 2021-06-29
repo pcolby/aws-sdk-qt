@@ -27,7 +27,7 @@ namespace MediaTailor {
 
 class DeleteChannelRequestPrivate;
 
-class QTAWS_EXPORT DeleteChannelRequest : public MediaTailorRequest {
+class QTAWSMEDIATAILOR_EXPORT DeleteChannelRequest : public MediaTailorRequest {
 
 public:
     DeleteChannelRequest(const DeleteChannelRequest &other);

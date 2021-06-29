@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class ResetDeploymentsRequestPrivate;
 
-class QTAWS_EXPORT ResetDeploymentsRequest : public GreengrassRequest {
+class QTAWSGREENGRASS_EXPORT ResetDeploymentsRequest : public GreengrassRequest {
 
 public:
     ResetDeploymentsRequest(const ResetDeploymentsRequest &other);

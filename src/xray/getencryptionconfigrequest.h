@@ -27,7 +27,7 @@ namespace XRay {
 
 class GetEncryptionConfigRequestPrivate;
 
-class QTAWS_EXPORT GetEncryptionConfigRequest : public XRayRequest {
+class QTAWSXRAY_EXPORT GetEncryptionConfigRequest : public XRayRequest {
 
 public:
     GetEncryptionConfigRequest(const GetEncryptionConfigRequest &other);

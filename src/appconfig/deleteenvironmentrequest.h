@@ -27,7 +27,7 @@ namespace AppConfig {
 
 class DeleteEnvironmentRequestPrivate;
 
-class QTAWS_EXPORT DeleteEnvironmentRequest : public AppConfigRequest {
+class QTAWSAPPCONFIG_EXPORT DeleteEnvironmentRequest : public AppConfigRequest {
 
 public:
     DeleteEnvironmentRequest(const DeleteEnvironmentRequest &other);

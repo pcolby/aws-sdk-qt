@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsapigatewayglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace APIGateway {
 
 class APIGatewayRequestPrivate;
 
-class QTAWS_EXPORT APIGatewayRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSAPIGATEWAY_EXPORT APIGatewayRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by APIGateway.

@@ -27,7 +27,7 @@ namespace CloudWatchEvents {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public CloudWatchEventsRequest {
+class QTAWSCLOUDWATCHEVENTS_EXPORT TagResourceRequest : public CloudWatchEventsRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

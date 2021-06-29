@@ -27,7 +27,7 @@ namespace RDS {
 
 class AddSourceIdentifierToSubscriptionRequestPrivate;
 
-class QTAWS_EXPORT AddSourceIdentifierToSubscriptionRequest : public RdsRequest {
+class QTAWSRDS_EXPORT AddSourceIdentifierToSubscriptionRequest : public RdsRequest {
 
 public:
     AddSourceIdentifierToSubscriptionRequest(const AddSourceIdentifierToSubscriptionRequest &other);

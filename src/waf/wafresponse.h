@@ -21,6 +21,8 @@
 #define QTAWS_WAFRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawswafglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace WAF {
 
 class WafResponsePrivate;
 
-class QTAWS_EXPORT WafResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSWAF_EXPORT WafResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

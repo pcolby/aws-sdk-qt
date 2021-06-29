@@ -28,7 +28,7 @@ namespace FMS {
 
 class DeletePolicyResponsePrivate;
 
-class QTAWS_EXPORT DeletePolicyResponse : public FmsResponse {
+class QTAWSFMS_EXPORT DeletePolicyResponse : public FmsResponse {
     Q_OBJECT
 
 public:

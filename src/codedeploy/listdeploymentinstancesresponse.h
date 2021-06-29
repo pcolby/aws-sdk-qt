@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class ListDeploymentInstancesResponsePrivate;
 
-class QTAWS_EXPORT ListDeploymentInstancesResponse : public CodeDeployResponse {
+class QTAWSCODEDEPLOY_EXPORT ListDeploymentInstancesResponse : public CodeDeployResponse {
     Q_OBJECT
 
 public:

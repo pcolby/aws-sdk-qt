@@ -27,7 +27,7 @@ namespace GlobalAccelerator {
 
 class DenyCustomRoutingTrafficRequestPrivate;
 
-class QTAWS_EXPORT DenyCustomRoutingTrafficRequest : public GlobalAcceleratorRequest {
+class QTAWSGLOBALACCELERATOR_EXPORT DenyCustomRoutingTrafficRequest : public GlobalAcceleratorRequest {
 
 public:
     DenyCustomRoutingTrafficRequest(const DenyCustomRoutingTrafficRequest &other);

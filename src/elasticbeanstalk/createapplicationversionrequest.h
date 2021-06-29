@@ -27,7 +27,7 @@ namespace ElasticBeanstalk {
 
 class CreateApplicationVersionRequestPrivate;
 
-class QTAWS_EXPORT CreateApplicationVersionRequest : public ElasticBeanstalkRequest {
+class QTAWSELASTICBEANSTALK_EXPORT CreateApplicationVersionRequest : public ElasticBeanstalkRequest {
 
 public:
     CreateApplicationVersionRequest(const CreateApplicationVersionRequest &other);

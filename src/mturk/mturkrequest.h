@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsmturkglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace MTurk {
 
 class MTurkRequestPrivate;
 
-class QTAWS_EXPORT MTurkRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSMTURK_EXPORT MTurkRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by MTurk.

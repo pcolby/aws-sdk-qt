@@ -27,7 +27,7 @@ namespace Rekognition {
 
 class StopProjectVersionRequestPrivate;
 
-class QTAWS_EXPORT StopProjectVersionRequest : public RekognitionRequest {
+class QTAWSREKOGNITION_EXPORT StopProjectVersionRequest : public RekognitionRequest {
 
 public:
     StopProjectVersionRequest(const StopProjectVersionRequest &other);

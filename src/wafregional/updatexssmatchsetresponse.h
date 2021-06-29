@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class UpdateXssMatchSetResponsePrivate;
 
-class QTAWS_EXPORT UpdateXssMatchSetResponse : public WAFRegionalResponse {
+class QTAWSWAFREGIONAL_EXPORT UpdateXssMatchSetResponse : public WAFRegionalResponse {
     Q_OBJECT
 
 public:

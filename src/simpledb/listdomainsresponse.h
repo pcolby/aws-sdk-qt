@@ -28,7 +28,7 @@ namespace SimpleDB {
 
 class ListDomainsResponsePrivate;
 
-class QTAWS_EXPORT ListDomainsResponse : public SimpleDBResponse {
+class QTAWSSIMPLEDB_EXPORT ListDomainsResponse : public SimpleDBResponse {
     Q_OBJECT
 
 public:

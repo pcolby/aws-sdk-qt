@@ -27,7 +27,7 @@ namespace IoTEvents {
 
 class DeleteInputRequestPrivate;
 
-class QTAWS_EXPORT DeleteInputRequest : public IoTEventsRequest {
+class QTAWSIOTEVENTS_EXPORT DeleteInputRequest : public IoTEventsRequest {
 
 public:
     DeleteInputRequest(const DeleteInputRequest &other);

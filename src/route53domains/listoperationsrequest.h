@@ -27,7 +27,7 @@ namespace Route53Domains {
 
 class ListOperationsRequestPrivate;
 
-class QTAWS_EXPORT ListOperationsRequest : public Route53DomainsRequest {
+class QTAWSROUTE53DOMAINS_EXPORT ListOperationsRequest : public Route53DomainsRequest {
 
 public:
     ListOperationsRequest(const ListOperationsRequest &other);

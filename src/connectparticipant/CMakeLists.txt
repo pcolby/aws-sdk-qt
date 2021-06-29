@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCONNECTPARTICIPANT_LIBRARY)
+
 add_library(QtAwsConnectParticipant
   completeattachmentuploadrequest.h
   completeattachmentuploadrequest_p.h
@@ -25,6 +27,7 @@ add_library(QtAwsConnectParticipant
   gettranscriptrequest_p.h
   gettranscriptresponse.h
   gettranscriptresponse_p.h
+  qtawsconnectparticipantglobal.h
   sendeventrequest.h
   sendeventrequest_p.h
   sendeventresponse.h

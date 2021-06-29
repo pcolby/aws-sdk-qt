@@ -27,7 +27,7 @@ namespace Connect {
 
 class ListQueuesRequestPrivate;
 
-class QTAWS_EXPORT ListQueuesRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT ListQueuesRequest : public ConnectRequest {
 
 public:
     ListQueuesRequest(const ListQueuesRequest &other);

@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class CreateStreamingDistributionWithTagsRequestPrivate;
 
-class QTAWS_EXPORT CreateStreamingDistributionWithTagsRequest : public CloudFrontRequest {
+class QTAWSCLOUDFRONT_EXPORT CreateStreamingDistributionWithTagsRequest : public CloudFrontRequest {
 
 public:
     CreateStreamingDistributionWithTagsRequest(const CreateStreamingDistributionWithTagsRequest &other);

@@ -28,7 +28,7 @@ namespace Connect {
 
 class DeleteUseCaseResponsePrivate;
 
-class QTAWS_EXPORT DeleteUseCaseResponse : public ConnectResponse {
+class QTAWSCONNECT_EXPORT DeleteUseCaseResponse : public ConnectResponse {
     Q_OBJECT
 
 public:

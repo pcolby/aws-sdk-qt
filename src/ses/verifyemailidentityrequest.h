@@ -27,7 +27,7 @@ namespace SES {
 
 class VerifyEmailIdentityRequestPrivate;
 
-class QTAWS_EXPORT VerifyEmailIdentityRequest : public SesRequest {
+class QTAWSSES_EXPORT VerifyEmailIdentityRequest : public SesRequest {
 
 public:
     VerifyEmailIdentityRequest(const VerifyEmailIdentityRequest &other);

@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class BatchGetApplicationRevisionsResponsePrivate;
 
-class QTAWS_EXPORT BatchGetApplicationRevisionsResponse : public CodeDeployResponse {
+class QTAWSCODEDEPLOY_EXPORT BatchGetApplicationRevisionsResponse : public CodeDeployResponse {
     Q_OBJECT
 
 public:

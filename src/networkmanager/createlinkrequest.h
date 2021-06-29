@@ -27,7 +27,7 @@ namespace NetworkManager {
 
 class CreateLinkRequestPrivate;
 
-class QTAWS_EXPORT CreateLinkRequest : public NetworkManagerRequest {
+class QTAWSNETWORKMANAGER_EXPORT CreateLinkRequest : public NetworkManagerRequest {
 
 public:
     CreateLinkRequest(const CreateLinkRequest &other);

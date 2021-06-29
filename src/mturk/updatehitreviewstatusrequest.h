@@ -27,7 +27,7 @@ namespace MTurk {
 
 class UpdateHITReviewStatusRequestPrivate;
 
-class QTAWS_EXPORT UpdateHITReviewStatusRequest : public MTurkRequest {
+class QTAWSMTURK_EXPORT UpdateHITReviewStatusRequest : public MTurkRequest {
 
 public:
     UpdateHITReviewStatusRequest(const UpdateHITReviewStatusRequest &other);

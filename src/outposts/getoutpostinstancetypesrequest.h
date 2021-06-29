@@ -27,7 +27,7 @@ namespace Outposts {
 
 class GetOutpostInstanceTypesRequestPrivate;
 
-class QTAWS_EXPORT GetOutpostInstanceTypesRequest : public OutpostsRequest {
+class QTAWSOUTPOSTS_EXPORT GetOutpostInstanceTypesRequest : public OutpostsRequest {
 
 public:
     GetOutpostInstanceTypesRequest(const GetOutpostInstanceTypesRequest &other);

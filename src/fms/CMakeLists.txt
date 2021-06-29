@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSFMS_LIBRARY)
+
 add_library(QtAwsFms
   associateadminaccountrequest.h
   associateadminaccountrequest_p.h
@@ -101,6 +103,7 @@ add_library(QtAwsFms
   putprotocolslistrequest_p.h
   putprotocolslistresponse.h
   putprotocolslistresponse_p.h
+  qtawsfmsglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

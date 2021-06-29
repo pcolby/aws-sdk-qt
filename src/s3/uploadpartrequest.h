@@ -27,7 +27,7 @@ namespace S3 {
 
 class UploadPartRequestPrivate;
 
-class QTAWS_EXPORT UploadPartRequest : public S3Request {
+class QTAWSS3_EXPORT UploadPartRequest : public S3Request {
 
 public:
     UploadPartRequest(const UploadPartRequest &other);

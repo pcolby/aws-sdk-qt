@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class ListNamespacesRequestPrivate;
 
-class QTAWS_EXPORT ListNamespacesRequest : public QuickSightRequest {
+class QTAWSQUICKSIGHT_EXPORT ListNamespacesRequest : public QuickSightRequest {
 
 public:
     ListNamespacesRequest(const ListNamespacesRequest &other);

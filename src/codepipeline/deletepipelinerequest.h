@@ -27,7 +27,7 @@ namespace CodePipeline {
 
 class DeletePipelineRequestPrivate;
 
-class QTAWS_EXPORT DeletePipelineRequest : public CodePipelineRequest {
+class QTAWSCODEPIPELINE_EXPORT DeletePipelineRequest : public CodePipelineRequest {
 
 public:
     DeletePipelineRequest(const DeletePipelineRequest &other);

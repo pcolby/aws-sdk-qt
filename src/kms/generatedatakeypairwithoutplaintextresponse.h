@@ -28,7 +28,7 @@ namespace KMS {
 
 class GenerateDataKeyPairWithoutPlaintextResponsePrivate;
 
-class QTAWS_EXPORT GenerateDataKeyPairWithoutPlaintextResponse : public KmsResponse {
+class QTAWSKMS_EXPORT GenerateDataKeyPairWithoutPlaintextResponse : public KmsResponse {
     Q_OBJECT
 
 public:

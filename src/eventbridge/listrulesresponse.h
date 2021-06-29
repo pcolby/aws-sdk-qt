@@ -28,7 +28,7 @@ namespace EventBridge {
 
 class ListRulesResponsePrivate;
 
-class QTAWS_EXPORT ListRulesResponse : public EventBridgeResponse {
+class QTAWSEVENTBRIDGE_EXPORT ListRulesResponse : public EventBridgeResponse {
     Q_OBJECT
 
 public:

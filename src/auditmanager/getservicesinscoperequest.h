@@ -27,7 +27,7 @@ namespace AuditManager {
 
 class GetServicesInScopeRequestPrivate;
 
-class QTAWS_EXPORT GetServicesInScopeRequest : public AuditManagerRequest {
+class QTAWSAUDITMANAGER_EXPORT GetServicesInScopeRequest : public AuditManagerRequest {
 
 public:
     GetServicesInScopeRequest(const GetServicesInScopeRequest &other);

@@ -28,7 +28,7 @@ namespace RedshiftDataAPIService {
 
 class ListSchemasResponsePrivate;
 
-class QTAWS_EXPORT ListSchemasResponse : public RedshiftDataAPIServiceResponse {
+class QTAWSREDSHIFTDATAAPISERVICE_EXPORT ListSchemasResponse : public RedshiftDataAPIServiceResponse {
     Q_OBJECT
 
 public:

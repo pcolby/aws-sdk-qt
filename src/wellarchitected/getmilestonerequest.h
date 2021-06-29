@@ -27,7 +27,7 @@ namespace WellArchitected {
 
 class GetMilestoneRequestPrivate;
 
-class QTAWS_EXPORT GetMilestoneRequest : public WellArchitectedRequest {
+class QTAWSWELLARCHITECTED_EXPORT GetMilestoneRequest : public WellArchitectedRequest {
 
 public:
     GetMilestoneRequest(const GetMilestoneRequest &other);

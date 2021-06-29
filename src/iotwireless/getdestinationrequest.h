@@ -27,7 +27,7 @@ namespace IoTWireless {
 
 class GetDestinationRequestPrivate;
 
-class QTAWS_EXPORT GetDestinationRequest : public IoTWirelessRequest {
+class QTAWSIOTWIRELESS_EXPORT GetDestinationRequest : public IoTWirelessRequest {
 
 public:
     GetDestinationRequest(const GetDestinationRequest &other);

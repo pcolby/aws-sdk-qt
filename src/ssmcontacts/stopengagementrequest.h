@@ -27,7 +27,7 @@ namespace SSMContacts {
 
 class StopEngagementRequestPrivate;
 
-class QTAWS_EXPORT StopEngagementRequest : public SSMContactsRequest {
+class QTAWSSSMCONTACTS_EXPORT StopEngagementRequest : public SSMContactsRequest {
 
 public:
     StopEngagementRequest(const StopEngagementRequest &other);

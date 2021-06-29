@@ -27,7 +27,7 @@ namespace Route53Domains {
 
 class UpdateDomainContactRequestPrivate;
 
-class QTAWS_EXPORT UpdateDomainContactRequest : public Route53DomainsRequest {
+class QTAWSROUTE53DOMAINS_EXPORT UpdateDomainContactRequest : public Route53DomainsRequest {
 
 public:
     UpdateDomainContactRequest(const UpdateDomainContactRequest &other);

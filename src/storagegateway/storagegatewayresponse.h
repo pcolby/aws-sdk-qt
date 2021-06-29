@@ -21,6 +21,8 @@
 #define QTAWS_STORAGEGATEWAYRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsstoragegatewayglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace StorageGateway {
 
 class StorageGatewayResponsePrivate;
 
-class QTAWS_EXPORT StorageGatewayResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSTORAGEGATEWAY_EXPORT StorageGatewayResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

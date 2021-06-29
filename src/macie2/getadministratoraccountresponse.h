@@ -28,7 +28,7 @@ namespace Macie2 {
 
 class GetAdministratorAccountResponsePrivate;
 
-class QTAWS_EXPORT GetAdministratorAccountResponse : public Macie2Response {
+class QTAWSMACIE2_EXPORT GetAdministratorAccountResponse : public Macie2Response {
     Q_OBJECT
 
 public:

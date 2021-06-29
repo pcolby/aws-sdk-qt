@@ -28,7 +28,7 @@ namespace IoTSiteWise {
 
 class DescribeLoggingOptionsResponsePrivate;
 
-class QTAWS_EXPORT DescribeLoggingOptionsResponse : public IoTSiteWiseResponse {
+class QTAWSIOTSITEWISE_EXPORT DescribeLoggingOptionsResponse : public IoTSiteWiseResponse {
     Q_OBJECT
 
 public:

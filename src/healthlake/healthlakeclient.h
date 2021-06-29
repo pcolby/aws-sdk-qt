@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawshealthlakeglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -45,7 +47,7 @@ class StartFHIRExportJobResponse;
 class StartFHIRImportJobRequest;
 class StartFHIRImportJobResponse;
 
-class QTAWS_EXPORT HealthLakeClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSHEALTHLAKE_EXPORT HealthLakeClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

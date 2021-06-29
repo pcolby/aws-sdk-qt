@@ -14,26 +14,25 @@
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with QtAws.  If not, see <http://www.gnu.org/licenses/>.
+    along with the QtAws.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef QTAWSGLOBAL_H
-#define QTAWSGLOBAL_H
-
+#ifndef QTAWSWAFGLOBAL_H
+#define QTAWSWAFGLOBAL_H
 
 // Export declaration macros.
 #if defined(QTAWS_SHARED) || !defined(QTAWS_STATIC)
 #  ifdef QTAWS_STATIC
 #    error "Both QTAWS_SHARED and QTAWS_STATIC defined."
 #  endif
-#  if defined QTAWS_LIBRARY
-#    define QTAWS_EXPORT Q_DECL_EXPORT
+#  if defined QTAWSWAF_LIBRARY
+#    define QTAWSWAF_EXPORT Q_DECL_EXPORT
 #  else
-#    define QTAWS_EXPORT Q_DECL_IMPORT
+#    define QTAWSWAF_EXPORT Q_DECL_IMPORT
 #  endif
 #else
-#    define QTAWS_EXPORT
+#    define QTAWSWAF_EXPORT
 #endif
 
 
-#endif // QTAWSGLOBAL_H
+#endif // QTAWSWAFGLOBAL_H

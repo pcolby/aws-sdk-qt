@@ -27,7 +27,7 @@ namespace Connect {
 
 class DeleteQuickConnectRequestPrivate;
 
-class QTAWS_EXPORT DeleteQuickConnectRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT DeleteQuickConnectRequest : public ConnectRequest {
 
 public:
     DeleteQuickConnectRequest(const DeleteQuickConnectRequest &other);

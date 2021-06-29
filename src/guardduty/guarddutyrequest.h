@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsguarddutyglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace GuardDuty {
 
 class GuardDutyRequestPrivate;
 
-class QTAWS_EXPORT GuardDutyRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSGUARDDUTY_EXPORT GuardDutyRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by GuardDuty.

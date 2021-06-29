@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class DisableGatewayRequestPrivate;
 
-class QTAWS_EXPORT DisableGatewayRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT DisableGatewayRequest : public StorageGatewayRequest {
 
 public:
     DisableGatewayRequest(const DisableGatewayRequest &other);

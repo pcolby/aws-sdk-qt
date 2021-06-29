@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class DeleteContactRequestPrivate;
 
-class QTAWS_EXPORT DeleteContactRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT DeleteContactRequest : public Sesv2Request {
 
 public:
     DeleteContactRequest(const DeleteContactRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawspinpointemailglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -113,7 +115,7 @@ class UntagResourceResponse;
 class UpdateConfigurationSetEventDestinationRequest;
 class UpdateConfigurationSetEventDestinationResponse;
 
-class QTAWS_EXPORT PinpointEmailClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSPINPOINTEMAIL_EXPORT PinpointEmailClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

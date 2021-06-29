@@ -27,7 +27,7 @@ namespace CloudWatchLogs {
 
 class PutDestinationRequestPrivate;
 
-class QTAWS_EXPORT PutDestinationRequest : public CloudWatchLogsRequest {
+class QTAWSCLOUDWATCHLOGS_EXPORT PutDestinationRequest : public CloudWatchLogsRequest {
 
 public:
     PutDestinationRequest(const PutDestinationRequest &other);

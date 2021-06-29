@@ -27,7 +27,7 @@ namespace CloudWatchEvents {
 
 class RemoveTargetsRequestPrivate;
 
-class QTAWS_EXPORT RemoveTargetsRequest : public CloudWatchEventsRequest {
+class QTAWSCLOUDWATCHEVENTS_EXPORT RemoveTargetsRequest : public CloudWatchEventsRequest {
 
 public:
     RemoveTargetsRequest(const RemoveTargetsRequest &other);

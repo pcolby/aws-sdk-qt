@@ -28,7 +28,7 @@ namespace SecretsManager {
 
 class StopReplicationToReplicaResponsePrivate;
 
-class QTAWS_EXPORT StopReplicationToReplicaResponse : public SecretsManagerResponse {
+class QTAWSSECRETSMANAGER_EXPORT StopReplicationToReplicaResponse : public SecretsManagerResponse {
     Q_OBJECT
 
 public:

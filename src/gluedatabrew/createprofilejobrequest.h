@@ -27,7 +27,7 @@ namespace GlueDataBrew {
 
 class CreateProfileJobRequestPrivate;
 
-class QTAWS_EXPORT CreateProfileJobRequest : public GlueDataBrewRequest {
+class QTAWSGLUEDATABREW_EXPORT CreateProfileJobRequest : public GlueDataBrewRequest {
 
 public:
     CreateProfileJobRequest(const CreateProfileJobRequest &other);

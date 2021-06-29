@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsinspectorglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Inspector {
 
 class InspectorRequestPrivate;
 
-class QTAWS_EXPORT InspectorRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSINSPECTOR_EXPORT InspectorRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Inspector.

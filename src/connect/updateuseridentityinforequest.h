@@ -27,7 +27,7 @@ namespace Connect {
 
 class UpdateUserIdentityInfoRequestPrivate;
 
-class QTAWS_EXPORT UpdateUserIdentityInfoRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT UpdateUserIdentityInfoRequest : public ConnectRequest {
 
 public:
     UpdateUserIdentityInfoRequest(const UpdateUserIdentityInfoRequest &other);

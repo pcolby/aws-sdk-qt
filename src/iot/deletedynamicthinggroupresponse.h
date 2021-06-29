@@ -28,7 +28,7 @@ namespace IoT {
 
 class DeleteDynamicThingGroupResponsePrivate;
 
-class QTAWS_EXPORT DeleteDynamicThingGroupResponse : public IoTResponse {
+class QTAWSIOT_EXPORT DeleteDynamicThingGroupResponse : public IoTResponse {
     Q_OBJECT
 
 public:

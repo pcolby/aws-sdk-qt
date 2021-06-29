@@ -28,7 +28,7 @@ namespace AuditManager {
 
 class BatchDisassociateAssessmentReportEvidenceResponsePrivate;
 
-class QTAWS_EXPORT BatchDisassociateAssessmentReportEvidenceResponse : public AuditManagerResponse {
+class QTAWSAUDITMANAGER_EXPORT BatchDisassociateAssessmentReportEvidenceResponse : public AuditManagerResponse {
     Q_OBJECT
 
 public:

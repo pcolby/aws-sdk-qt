@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawssagemakeredgemanagerglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace SagemakerEdgeManager {
 
 class SagemakerEdgeManagerRequestPrivate;
 
-class QTAWS_EXPORT SagemakerEdgeManagerRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSAGEMAKEREDGEMANAGER_EXPORT SagemakerEdgeManagerRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SagemakerEdgeManager.

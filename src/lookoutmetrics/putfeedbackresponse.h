@@ -28,7 +28,7 @@ namespace LookoutMetrics {
 
 class PutFeedbackResponsePrivate;
 
-class QTAWS_EXPORT PutFeedbackResponse : public LookoutMetricsResponse {
+class QTAWSLOOKOUTMETRICS_EXPORT PutFeedbackResponse : public LookoutMetricsResponse {
     Q_OBJECT
 
 public:

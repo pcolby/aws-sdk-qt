@@ -27,7 +27,7 @@ namespace AccessAnalyzer {
 
 class UpdateArchiveRuleRequestPrivate;
 
-class QTAWS_EXPORT UpdateArchiveRuleRequest : public AccessAnalyzerRequest {
+class QTAWSACCESSANALYZER_EXPORT UpdateArchiveRuleRequest : public AccessAnalyzerRequest {
 
 public:
     UpdateArchiveRuleRequest(const UpdateArchiveRuleRequest &other);

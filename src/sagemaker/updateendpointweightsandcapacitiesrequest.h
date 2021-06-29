@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class UpdateEndpointWeightsAndCapacitiesRequestPrivate;
 
-class QTAWS_EXPORT UpdateEndpointWeightsAndCapacitiesRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT UpdateEndpointWeightsAndCapacitiesRequest : public SageMakerRequest {
 
 public:
     UpdateEndpointWeightsAndCapacitiesRequest(const UpdateEndpointWeightsAndCapacitiesRequest &other);

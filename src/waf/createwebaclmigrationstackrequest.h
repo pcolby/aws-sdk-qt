@@ -27,7 +27,7 @@ namespace WAF {
 
 class CreateWebACLMigrationStackRequestPrivate;
 
-class QTAWS_EXPORT CreateWebACLMigrationStackRequest : public WafRequest {
+class QTAWSWAF_EXPORT CreateWebACLMigrationStackRequest : public WafRequest {
 
 public:
     CreateWebACLMigrationStackRequest(const CreateWebACLMigrationStackRequest &other);

@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class TestFunctionRequestPrivate;
 
-class QTAWS_EXPORT TestFunctionRequest : public CloudFrontRequest {
+class QTAWSCLOUDFRONT_EXPORT TestFunctionRequest : public CloudFrontRequest {
 
 public:
     TestFunctionRequest(const TestFunctionRequest &other);

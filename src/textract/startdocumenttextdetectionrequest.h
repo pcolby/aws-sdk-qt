@@ -27,7 +27,7 @@ namespace Textract {
 
 class StartDocumentTextDetectionRequestPrivate;
 
-class QTAWS_EXPORT StartDocumentTextDetectionRequest : public TextractRequest {
+class QTAWSTEXTRACT_EXPORT StartDocumentTextDetectionRequest : public TextractRequest {
 
 public:
     StartDocumentTextDetectionRequest(const StartDocumentTextDetectionRequest &other);

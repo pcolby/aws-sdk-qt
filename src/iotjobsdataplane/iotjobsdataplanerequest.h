@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsiotjobsdataplaneglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace IoTJobsDataPlane {
 
 class IoTJobsDataPlaneRequestPrivate;
 
-class QTAWS_EXPORT IoTJobsDataPlaneRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSIOTJOBSDATAPLANE_EXPORT IoTJobsDataPlaneRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by IoTJobsDataPlane.

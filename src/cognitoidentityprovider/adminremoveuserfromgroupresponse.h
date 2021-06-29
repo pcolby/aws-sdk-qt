@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class AdminRemoveUserFromGroupResponsePrivate;
 
-class QTAWS_EXPORT AdminRemoveUserFromGroupResponse : public CognitoIdentityProviderResponse {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT AdminRemoveUserFromGroupResponse : public CognitoIdentityProviderResponse {
     Q_OBJECT
 
 public:

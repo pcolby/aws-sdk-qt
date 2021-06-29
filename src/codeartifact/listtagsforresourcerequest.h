@@ -27,7 +27,7 @@ namespace CodeArtifact {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public CodeArtifactRequest {
+class QTAWSCODEARTIFACT_EXPORT ListTagsForResourceRequest : public CodeArtifactRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

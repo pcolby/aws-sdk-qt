@@ -27,7 +27,7 @@ namespace Kafka {
 
 class UpdateClusterKafkaVersionRequestPrivate;
 
-class QTAWS_EXPORT UpdateClusterKafkaVersionRequest : public KafkaRequest {
+class QTAWSKAFKA_EXPORT UpdateClusterKafkaVersionRequest : public KafkaRequest {
 
 public:
     UpdateClusterKafkaVersionRequest(const UpdateClusterKafkaVersionRequest &other);

@@ -21,6 +21,8 @@
 #define QTAWS_POLLYRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawspollyglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Polly {
 
 class PollyResponsePrivate;
 
-class QTAWS_EXPORT PollyResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSPOLLY_EXPORT PollyResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

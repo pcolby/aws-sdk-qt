@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class DeleteProjectRequestPrivate;
 
-class QTAWS_EXPORT DeleteProjectRequest : public DeviceFarmRequest {
+class QTAWSDEVICEFARM_EXPORT DeleteProjectRequest : public DeviceFarmRequest {
 
 public:
     DeleteProjectRequest(const DeleteProjectRequest &other);

@@ -28,7 +28,7 @@ namespace LookoutEquipment {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public LookoutEquipmentResponse {
+class QTAWSLOOKOUTEQUIPMENT_EXPORT UntagResourceResponse : public LookoutEquipmentResponse {
     Q_OBJECT
 
 public:

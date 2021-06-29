@@ -27,7 +27,7 @@ namespace Shield {
 
 class AssociateHealthCheckRequestPrivate;
 
-class QTAWS_EXPORT AssociateHealthCheckRequest : public ShieldRequest {
+class QTAWSSHIELD_EXPORT AssociateHealthCheckRequest : public ShieldRequest {
 
 public:
     AssociateHealthCheckRequest(const AssociateHealthCheckRequest &other);

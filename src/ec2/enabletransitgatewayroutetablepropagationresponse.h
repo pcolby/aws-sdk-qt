@@ -28,7 +28,7 @@ namespace EC2 {
 
 class EnableTransitGatewayRouteTablePropagationResponsePrivate;
 
-class QTAWS_EXPORT EnableTransitGatewayRouteTablePropagationResponse : public Ec2Response {
+class QTAWSEC2_EXPORT EnableTransitGatewayRouteTablePropagationResponse : public Ec2Response {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace SSM {
 
 class DeleteResourceDataSyncRequestPrivate;
 
-class QTAWS_EXPORT DeleteResourceDataSyncRequest : public SsmRequest {
+class QTAWSSSM_EXPORT DeleteResourceDataSyncRequest : public SsmRequest {
 
 public:
     DeleteResourceDataSyncRequest(const DeleteResourceDataSyncRequest &other);

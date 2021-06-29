@@ -27,7 +27,7 @@ namespace EKS {
 
 class ListIdentityProviderConfigsRequestPrivate;
 
-class QTAWS_EXPORT ListIdentityProviderConfigsRequest : public EksRequest {
+class QTAWSEKS_EXPORT ListIdentityProviderConfigsRequest : public EksRequest {
 
 public:
     ListIdentityProviderConfigsRequest(const ListIdentityProviderConfigsRequest &other);

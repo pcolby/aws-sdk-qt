@@ -27,7 +27,7 @@ namespace AppMesh {
 
 class DescribeGatewayRouteRequestPrivate;
 
-class QTAWS_EXPORT DescribeGatewayRouteRequest : public AppMeshRequest {
+class QTAWSAPPMESH_EXPORT DescribeGatewayRouteRequest : public AppMeshRequest {
 
 public:
     DescribeGatewayRouteRequest(const DescribeGatewayRouteRequest &other);

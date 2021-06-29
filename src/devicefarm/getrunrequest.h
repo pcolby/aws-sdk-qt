@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class GetRunRequestPrivate;
 
-class QTAWS_EXPORT GetRunRequest : public DeviceFarmRequest {
+class QTAWSDEVICEFARM_EXPORT GetRunRequest : public DeviceFarmRequest {
 
 public:
     GetRunRequest(const GetRunRequest &other);

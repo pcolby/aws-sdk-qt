@@ -21,6 +21,8 @@
 #define QTAWS_HEALTHRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawshealthglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Health {
 
 class HealthResponsePrivate;
 
-class QTAWS_EXPORT HealthResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSHEALTH_EXPORT HealthResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

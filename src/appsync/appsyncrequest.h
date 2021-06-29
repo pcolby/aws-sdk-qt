@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsappsyncglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace AppSync {
 
 class AppSyncRequestPrivate;
 
-class QTAWS_EXPORT AppSyncRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSAPPSYNC_EXPORT AppSyncRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by AppSync.

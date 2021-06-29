@@ -27,7 +27,7 @@ namespace IAM {
 
 class UntagOpenIDConnectProviderRequestPrivate;
 
-class QTAWS_EXPORT UntagOpenIDConnectProviderRequest : public IamRequest {
+class QTAWSIAM_EXPORT UntagOpenIDConnectProviderRequest : public IamRequest {
 
 public:
     UntagOpenIDConnectProviderRequest(const UntagOpenIDConnectProviderRequest &other);

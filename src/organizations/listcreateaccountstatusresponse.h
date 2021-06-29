@@ -28,7 +28,7 @@ namespace Organizations {
 
 class ListCreateAccountStatusResponsePrivate;
 
-class QTAWS_EXPORT ListCreateAccountStatusResponse : public OrganizationsResponse {
+class QTAWSORGANIZATIONS_EXPORT ListCreateAccountStatusResponse : public OrganizationsResponse {
     Q_OBJECT
 
 public:

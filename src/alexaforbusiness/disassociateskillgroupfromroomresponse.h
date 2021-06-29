@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class DisassociateSkillGroupFromRoomResponsePrivate;
 
-class QTAWS_EXPORT DisassociateSkillGroupFromRoomResponse : public AlexaForBusinessResponse {
+class QTAWSALEXAFORBUSINESS_EXPORT DisassociateSkillGroupFromRoomResponse : public AlexaForBusinessResponse {
     Q_OBJECT
 
 public:

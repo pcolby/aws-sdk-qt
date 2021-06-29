@@ -28,7 +28,7 @@ namespace AppSync {
 
 class UpdateApiKeyResponsePrivate;
 
-class QTAWS_EXPORT UpdateApiKeyResponse : public AppSyncResponse {
+class QTAWSAPPSYNC_EXPORT UpdateApiKeyResponse : public AppSyncResponse {
     Q_OBJECT
 
 public:

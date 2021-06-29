@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class UpdateContactResponsePrivate;
 
-class QTAWS_EXPORT UpdateContactResponse : public Sesv2Response {
+class QTAWSSESV2_EXPORT UpdateContactResponse : public Sesv2Response {
     Q_OBJECT
 
 public:

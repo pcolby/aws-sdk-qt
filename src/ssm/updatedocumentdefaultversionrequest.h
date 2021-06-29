@@ -27,7 +27,7 @@ namespace SSM {
 
 class UpdateDocumentDefaultVersionRequestPrivate;
 
-class QTAWS_EXPORT UpdateDocumentDefaultVersionRequest : public SsmRequest {
+class QTAWSSSM_EXPORT UpdateDocumentDefaultVersionRequest : public SsmRequest {
 
 public:
     UpdateDocumentDefaultVersionRequest(const UpdateDocumentDefaultVersionRequest &other);

@@ -27,7 +27,7 @@ namespace IoTWireless {
 
 class DeleteServiceProfileRequestPrivate;
 
-class QTAWS_EXPORT DeleteServiceProfileRequest : public IoTWirelessRequest {
+class QTAWSIOTWIRELESS_EXPORT DeleteServiceProfileRequest : public IoTWirelessRequest {
 
 public:
     DeleteServiceProfileRequest(const DeleteServiceProfileRequest &other);

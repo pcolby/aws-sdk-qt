@@ -27,7 +27,7 @@ namespace Chime {
 
 class UpdateChannelRequestPrivate;
 
-class QTAWS_EXPORT UpdateChannelRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT UpdateChannelRequest : public ChimeRequest {
 
 public:
     UpdateChannelRequest(const UpdateChannelRequest &other);

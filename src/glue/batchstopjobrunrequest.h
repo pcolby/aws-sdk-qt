@@ -27,7 +27,7 @@ namespace Glue {
 
 class BatchStopJobRunRequestPrivate;
 
-class QTAWS_EXPORT BatchStopJobRunRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT BatchStopJobRunRequest : public GlueRequest {
 
 public:
     BatchStopJobRunRequest(const BatchStopJobRunRequest &other);

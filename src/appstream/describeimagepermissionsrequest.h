@@ -27,7 +27,7 @@ namespace AppStream {
 
 class DescribeImagePermissionsRequestPrivate;
 
-class QTAWS_EXPORT DescribeImagePermissionsRequest : public AppStreamRequest {
+class QTAWSAPPSTREAM_EXPORT DescribeImagePermissionsRequest : public AppStreamRequest {
 
 public:
     DescribeImagePermissionsRequest(const DescribeImagePermissionsRequest &other);

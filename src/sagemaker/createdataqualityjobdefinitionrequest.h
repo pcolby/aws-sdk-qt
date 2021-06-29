@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class CreateDataQualityJobDefinitionRequestPrivate;
 
-class QTAWS_EXPORT CreateDataQualityJobDefinitionRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT CreateDataQualityJobDefinitionRequest : public SageMakerRequest {
 
 public:
     CreateDataQualityJobDefinitionRequest(const CreateDataQualityJobDefinitionRequest &other);

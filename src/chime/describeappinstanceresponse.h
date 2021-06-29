@@ -28,7 +28,7 @@ namespace Chime {
 
 class DescribeAppInstanceResponsePrivate;
 
-class QTAWS_EXPORT DescribeAppInstanceResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT DescribeAppInstanceResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

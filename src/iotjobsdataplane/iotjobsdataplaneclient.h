@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsiotjobsdataplaneglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -37,7 +39,7 @@ class StartNextPendingJobExecutionResponse;
 class UpdateJobExecutionRequest;
 class UpdateJobExecutionResponse;
 
-class QTAWS_EXPORT IoTJobsDataPlaneClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSIOTJOBSDATAPLANE_EXPORT IoTJobsDataPlaneClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

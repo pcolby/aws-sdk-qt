@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeFastSnapshotRestoresResponsePrivate;
 
-class QTAWS_EXPORT DescribeFastSnapshotRestoresResponse : public Ec2Response {
+class QTAWSEC2_EXPORT DescribeFastSnapshotRestoresResponse : public Ec2Response {
     Q_OBJECT
 
 public:

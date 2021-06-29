@@ -27,7 +27,7 @@ namespace mgn {
 
 class GetLaunchConfigurationRequestPrivate;
 
-class QTAWS_EXPORT GetLaunchConfigurationRequest : public mgnRequest {
+class QTAWSMGN_EXPORT GetLaunchConfigurationRequest : public mgnRequest {
 
 public:
     GetLaunchConfigurationRequest(const GetLaunchConfigurationRequest &other);

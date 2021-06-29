@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class GetDirectoryLimitsRequestPrivate;
 
-class QTAWS_EXPORT GetDirectoryLimitsRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT GetDirectoryLimitsRequest : public DirectoryServiceRequest {
 
 public:
     GetDirectoryLimitsRequest(const GetDirectoryLimitsRequest &other);

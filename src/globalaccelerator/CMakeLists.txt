@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSGLOBALACCELERATOR_LIBRARY)
+
 add_library(QtAwsGlobalAccelerator
   addcustomroutingendpointsrequest.h
   addcustomroutingendpointsrequest_p.h
@@ -149,6 +151,7 @@ add_library(QtAwsGlobalAccelerator
   provisionbyoipcidrrequest_p.h
   provisionbyoipcidrresponse.h
   provisionbyoipcidrresponse_p.h
+  qtawsglobalacceleratorglobal.h
   removecustomroutingendpointsrequest.h
   removecustomroutingendpointsrequest_p.h
   removecustomroutingendpointsresponse.h

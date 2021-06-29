@@ -28,7 +28,7 @@ namespace IAM {
 
 class PutUserPermissionsBoundaryResponsePrivate;
 
-class QTAWS_EXPORT PutUserPermissionsBoundaryResponse : public IamResponse {
+class QTAWSIAM_EXPORT PutUserPermissionsBoundaryResponse : public IamResponse {
     Q_OBJECT
 
 public:

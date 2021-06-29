@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class CreateAppResponsePrivate;
 
-class QTAWS_EXPORT CreateAppResponse : public OpsWorksResponse {
+class QTAWSOPSWORKS_EXPORT CreateAppResponse : public OpsWorksResponse {
     Q_OBJECT
 
 public:

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSRAM_LIBRARY)
+
 add_library(QtAwsRam
   acceptresourceshareinvitationrequest.h
   acceptresourceshareinvitationrequest_p.h
@@ -79,6 +81,7 @@ add_library(QtAwsRam
   promoteresourcesharecreatedfrompolicyrequest_p.h
   promoteresourcesharecreatedfrompolicyresponse.h
   promoteresourcesharecreatedfrompolicyresponse_p.h
+  qtawsramglobal.h
   ramclient.h
   ramclient_p.h
   ramrequest.h

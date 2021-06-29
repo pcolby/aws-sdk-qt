@@ -27,7 +27,7 @@ namespace SimpleDB {
 
 class PutAttributesRequestPrivate;
 
-class QTAWS_EXPORT PutAttributesRequest : public SimpleDBRequest {
+class QTAWSSIMPLEDB_EXPORT PutAttributesRequest : public SimpleDBRequest {
 
 public:
     PutAttributesRequest(const PutAttributesRequest &other);

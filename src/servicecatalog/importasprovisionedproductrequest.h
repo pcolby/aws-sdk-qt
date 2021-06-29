@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class ImportAsProvisionedProductRequestPrivate;
 
-class QTAWS_EXPORT ImportAsProvisionedProductRequest : public ServiceCatalogRequest {
+class QTAWSSERVICECATALOG_EXPORT ImportAsProvisionedProductRequest : public ServiceCatalogRequest {
 
 public:
     ImportAsProvisionedProductRequest(const ImportAsProvisionedProductRequest &other);

@@ -28,7 +28,7 @@ namespace CustomerProfiles {
 
 class AddProfileKeyResponsePrivate;
 
-class QTAWS_EXPORT AddProfileKeyResponse : public CustomerProfilesResponse {
+class QTAWSCUSTOMERPROFILES_EXPORT AddProfileKeyResponse : public CustomerProfilesResponse {
     Q_OBJECT
 
 public:

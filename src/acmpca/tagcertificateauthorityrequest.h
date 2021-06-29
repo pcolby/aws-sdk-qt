@@ -27,7 +27,7 @@ namespace ACMPCA {
 
 class TagCertificateAuthorityRequestPrivate;
 
-class QTAWS_EXPORT TagCertificateAuthorityRequest : public AcmpcaRequest {
+class QTAWSACMPCA_EXPORT TagCertificateAuthorityRequest : public AcmpcaRequest {
 
 public:
     TagCertificateAuthorityRequest(const TagCertificateAuthorityRequest &other);

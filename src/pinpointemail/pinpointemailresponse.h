@@ -21,6 +21,8 @@
 #define QTAWS_PINPOINTEMAILRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawspinpointemailglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace PinpointEmail {
 
 class PinpointEmailResponsePrivate;
 
-class QTAWS_EXPORT PinpointEmailResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSPINPOINTEMAIL_EXPORT PinpointEmailResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

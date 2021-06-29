@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class GetSegmentVersionsRequestPrivate;
 
-class QTAWS_EXPORT GetSegmentVersionsRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT GetSegmentVersionsRequest : public PinpointRequest {
 
 public:
     GetSegmentVersionsRequest(const GetSegmentVersionsRequest &other);

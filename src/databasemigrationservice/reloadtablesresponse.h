@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class ReloadTablesResponsePrivate;
 
-class QTAWS_EXPORT ReloadTablesResponse : public DatabaseMigrationServiceResponse {
+class QTAWSDATABASEMIGRATIONSERVICE_EXPORT ReloadTablesResponse : public DatabaseMigrationServiceResponse {
     Q_OBJECT
 
 public:

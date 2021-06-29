@@ -27,7 +27,7 @@ namespace ConnectParticipant {
 
 class SendEventRequestPrivate;
 
-class QTAWS_EXPORT SendEventRequest : public ConnectParticipantRequest {
+class QTAWSCONNECTPARTICIPANT_EXPORT SendEventRequest : public ConnectParticipantRequest {
 
 public:
     SendEventRequest(const SendEventRequest &other);

@@ -27,7 +27,7 @@ namespace SFN {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public SfnRequest {
+class QTAWSSFN_EXPORT TagResourceRequest : public SfnRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

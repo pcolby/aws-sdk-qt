@@ -27,7 +27,7 @@ namespace DatabaseMigrationService {
 
 class DeleteEndpointRequestPrivate;
 
-class QTAWS_EXPORT DeleteEndpointRequest : public DatabaseMigrationServiceRequest {
+class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DeleteEndpointRequest : public DatabaseMigrationServiceRequest {
 
 public:
     DeleteEndpointRequest(const DeleteEndpointRequest &other);

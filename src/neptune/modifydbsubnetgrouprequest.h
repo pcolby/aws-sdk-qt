@@ -27,7 +27,7 @@ namespace Neptune {
 
 class ModifyDBSubnetGroupRequestPrivate;
 
-class QTAWS_EXPORT ModifyDBSubnetGroupRequest : public NeptuneRequest {
+class QTAWSNEPTUNE_EXPORT ModifyDBSubnetGroupRequest : public NeptuneRequest {
 
 public:
     ModifyDBSubnetGroupRequest(const ModifyDBSubnetGroupRequest &other);

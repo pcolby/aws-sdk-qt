@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawslookoutmetricsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -79,7 +81,7 @@ class UpdateAnomalyDetectorResponse;
 class UpdateMetricSetRequest;
 class UpdateMetricSetResponse;
 
-class QTAWS_EXPORT LookoutMetricsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSLOOKOUTMETRICS_EXPORT LookoutMetricsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

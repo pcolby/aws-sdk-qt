@@ -27,7 +27,7 @@ namespace GameLift {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public GameLiftRequest {
+class QTAWSGAMELIFT_EXPORT TagResourceRequest : public GameLiftRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

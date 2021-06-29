@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeDBProxyTargetGroupsResponsePrivate;
 
-class QTAWS_EXPORT DescribeDBProxyTargetGroupsResponse : public RdsResponse {
+class QTAWSRDS_EXPORT DescribeDBProxyTargetGroupsResponse : public RdsResponse {
     Q_OBJECT
 
 public:

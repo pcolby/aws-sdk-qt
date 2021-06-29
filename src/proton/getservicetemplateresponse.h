@@ -28,7 +28,7 @@ namespace Proton {
 
 class GetServiceTemplateResponsePrivate;
 
-class QTAWS_EXPORT GetServiceTemplateResponse : public ProtonResponse {
+class QTAWSPROTON_EXPORT GetServiceTemplateResponse : public ProtonResponse {
     Q_OBJECT
 
 public:

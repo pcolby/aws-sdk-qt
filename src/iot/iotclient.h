@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsiotglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -483,7 +485,7 @@ class UpdateTopicRuleDestinationResponse;
 class ValidateSecurityProfileBehaviorsRequest;
 class ValidateSecurityProfileBehaviorsResponse;
 
-class QTAWS_EXPORT IoTClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSIOT_EXPORT IoTClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

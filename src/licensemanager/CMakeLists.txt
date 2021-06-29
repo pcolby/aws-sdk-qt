@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSLICENSEMANAGER_LIBRARY)
+
 add_library(QtAwsLicenseManager
   acceptgrantrequest.h
   acceptgrantrequest_p.h
@@ -157,6 +159,7 @@ add_library(QtAwsLicenseManager
   listusageforlicenseconfigurationrequest_p.h
   listusageforlicenseconfigurationresponse.h
   listusageforlicenseconfigurationresponse_p.h
+  qtawslicensemanagerglobal.h
   rejectgrantrequest.h
   rejectgrantrequest_p.h
   rejectgrantresponse.h

@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class GetOperationsForResourceResponsePrivate;
 
-class QTAWS_EXPORT GetOperationsForResourceResponse : public LightsailResponse {
+class QTAWSLIGHTSAIL_EXPORT GetOperationsForResourceResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace Chime {
 
 class BatchSuspendUserRequestPrivate;
 
-class QTAWS_EXPORT BatchSuspendUserRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT BatchSuspendUserRequest : public ChimeRequest {
 
 public:
     BatchSuspendUserRequest(const BatchSuspendUserRequest &other);

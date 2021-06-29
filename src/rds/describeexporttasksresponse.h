@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeExportTasksResponsePrivate;
 
-class QTAWS_EXPORT DescribeExportTasksResponse : public RdsResponse {
+class QTAWSRDS_EXPORT DescribeExportTasksResponse : public RdsResponse {
     Q_OBJECT
 
 public:

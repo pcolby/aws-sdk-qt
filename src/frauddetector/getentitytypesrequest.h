@@ -27,7 +27,7 @@ namespace FraudDetector {
 
 class GetEntityTypesRequestPrivate;
 
-class QTAWS_EXPORT GetEntityTypesRequest : public FraudDetectorRequest {
+class QTAWSFRAUDDETECTOR_EXPORT GetEntityTypesRequest : public FraudDetectorRequest {
 
 public:
     GetEntityTypesRequest(const GetEntityTypesRequest &other);

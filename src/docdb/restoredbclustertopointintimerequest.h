@@ -27,7 +27,7 @@ namespace DocDB {
 
 class RestoreDBClusterToPointInTimeRequestPrivate;
 
-class QTAWS_EXPORT RestoreDBClusterToPointInTimeRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT RestoreDBClusterToPointInTimeRequest : public DocDBRequest {
 
 public:
     RestoreDBClusterToPointInTimeRequest(const RestoreDBClusterToPointInTimeRequest &other);

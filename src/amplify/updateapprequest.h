@@ -27,7 +27,7 @@ namespace Amplify {
 
 class UpdateAppRequestPrivate;
 
-class QTAWS_EXPORT UpdateAppRequest : public AmplifyRequest {
+class QTAWSAMPLIFY_EXPORT UpdateAppRequest : public AmplifyRequest {
 
 public:
     UpdateAppRequest(const UpdateAppRequest &other);

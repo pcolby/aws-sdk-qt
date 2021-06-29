@@ -21,6 +21,8 @@
 #define QTAWS_IOTSITEWISERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsiotsitewiseglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace IoTSiteWise {
 
 class IoTSiteWiseResponsePrivate;
 
-class QTAWS_EXPORT IoTSiteWiseResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSIOTSITEWISE_EXPORT IoTSiteWiseResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

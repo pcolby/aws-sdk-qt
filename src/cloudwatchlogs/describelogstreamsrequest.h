@@ -27,7 +27,7 @@ namespace CloudWatchLogs {
 
 class DescribeLogStreamsRequestPrivate;
 
-class QTAWS_EXPORT DescribeLogStreamsRequest : public CloudWatchLogsRequest {
+class QTAWSCLOUDWATCHLOGS_EXPORT DescribeLogStreamsRequest : public CloudWatchLogsRequest {
 
 public:
     DescribeLogStreamsRequest(const DescribeLogStreamsRequest &other);

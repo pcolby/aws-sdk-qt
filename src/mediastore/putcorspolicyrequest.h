@@ -27,7 +27,7 @@ namespace MediaStore {
 
 class PutCorsPolicyRequestPrivate;
 
-class QTAWS_EXPORT PutCorsPolicyRequest : public MediaStoreRequest {
+class QTAWSMEDIASTORE_EXPORT PutCorsPolicyRequest : public MediaStoreRequest {
 
 public:
     PutCorsPolicyRequest(const PutCorsPolicyRequest &other);

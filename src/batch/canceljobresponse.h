@@ -28,7 +28,7 @@ namespace Batch {
 
 class CancelJobResponsePrivate;
 
-class QTAWS_EXPORT CancelJobResponse : public BatchResponse {
+class QTAWSBATCH_EXPORT CancelJobResponse : public BatchResponse {
     Q_OBJECT
 
 public:

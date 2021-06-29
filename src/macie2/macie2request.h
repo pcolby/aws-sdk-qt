@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsmacie2global.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Macie2 {
 
 class Macie2RequestPrivate;
 
-class QTAWS_EXPORT Macie2Request : public QtAws::Core::AwsAbstractRequest {
+class QTAWSMACIE2_EXPORT Macie2Request : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Macie2.

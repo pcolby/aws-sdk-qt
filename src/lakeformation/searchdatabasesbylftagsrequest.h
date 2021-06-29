@@ -27,7 +27,7 @@ namespace LakeFormation {
 
 class SearchDatabasesByLFTagsRequestPrivate;
 
-class QTAWS_EXPORT SearchDatabasesByLFTagsRequest : public LakeFormationRequest {
+class QTAWSLAKEFORMATION_EXPORT SearchDatabasesByLFTagsRequest : public LakeFormationRequest {
 
 public:
     SearchDatabasesByLFTagsRequest(const SearchDatabasesByLFTagsRequest &other);

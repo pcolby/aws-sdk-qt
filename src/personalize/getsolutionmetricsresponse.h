@@ -28,7 +28,7 @@ namespace Personalize {
 
 class GetSolutionMetricsResponsePrivate;
 
-class QTAWS_EXPORT GetSolutionMetricsResponse : public PersonalizeResponse {
+class QTAWSPERSONALIZE_EXPORT GetSolutionMetricsResponse : public PersonalizeResponse {
     Q_OBJECT
 
 public:

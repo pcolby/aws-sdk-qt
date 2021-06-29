@@ -27,7 +27,7 @@ namespace ServerlessApplicationRepository {
 
 class UpdateApplicationRequestPrivate;
 
-class QTAWS_EXPORT UpdateApplicationRequest : public ServerlessApplicationRepositoryRequest {
+class QTAWSSERVERLESSAPPLICATIONREPOSITORY_EXPORT UpdateApplicationRequest : public ServerlessApplicationRepositoryRequest {
 
 public:
     UpdateApplicationRequest(const UpdateApplicationRequest &other);

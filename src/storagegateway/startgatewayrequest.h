@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class StartGatewayRequestPrivate;
 
-class QTAWS_EXPORT StartGatewayRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT StartGatewayRequest : public StorageGatewayRequest {
 
 public:
     StartGatewayRequest(const StartGatewayRequest &other);

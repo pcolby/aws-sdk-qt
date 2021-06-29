@@ -28,7 +28,7 @@ namespace EC2 {
 
 class GetLaunchTemplateDataResponsePrivate;
 
-class QTAWS_EXPORT GetLaunchTemplateDataResponse : public Ec2Response {
+class QTAWSEC2_EXPORT GetLaunchTemplateDataResponse : public Ec2Response {
     Q_OBJECT
 
 public:

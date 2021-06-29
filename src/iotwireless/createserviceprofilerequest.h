@@ -27,7 +27,7 @@ namespace IoTWireless {
 
 class CreateServiceProfileRequestPrivate;
 
-class QTAWS_EXPORT CreateServiceProfileRequest : public IoTWirelessRequest {
+class QTAWSIOTWIRELESS_EXPORT CreateServiceProfileRequest : public IoTWirelessRequest {
 
 public:
     CreateServiceProfileRequest(const CreateServiceProfileRequest &other);

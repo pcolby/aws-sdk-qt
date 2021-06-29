@@ -27,7 +27,7 @@ namespace SimpleDB {
 
 class ListDomainsRequestPrivate;
 
-class QTAWS_EXPORT ListDomainsRequest : public SimpleDBRequest {
+class QTAWSSIMPLEDB_EXPORT ListDomainsRequest : public SimpleDBRequest {
 
 public:
     ListDomainsRequest(const ListDomainsRequest &other);

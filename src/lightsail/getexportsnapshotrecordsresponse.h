@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class GetExportSnapshotRecordsResponsePrivate;
 
-class QTAWS_EXPORT GetExportSnapshotRecordsResponse : public LightsailResponse {
+class QTAWSLIGHTSAIL_EXPORT GetExportSnapshotRecordsResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public DeviceFarmRequest {
+class QTAWSDEVICEFARM_EXPORT ListTagsForResourceRequest : public DeviceFarmRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

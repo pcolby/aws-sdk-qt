@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsredshiftdataapiserviceglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace RedshiftDataAPIService {
 
 class RedshiftDataAPIServiceRequestPrivate;
 
-class QTAWS_EXPORT RedshiftDataAPIServiceRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSREDSHIFTDATAAPISERVICE_EXPORT RedshiftDataAPIServiceRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by RedshiftDataAPIService.

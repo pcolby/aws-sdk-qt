@@ -27,7 +27,7 @@ namespace GuardDuty {
 
 class InviteMembersRequestPrivate;
 
-class QTAWS_EXPORT InviteMembersRequest : public GuardDutyRequest {
+class QTAWSGUARDDUTY_EXPORT InviteMembersRequest : public GuardDutyRequest {
 
 public:
     InviteMembersRequest(const InviteMembersRequest &other);

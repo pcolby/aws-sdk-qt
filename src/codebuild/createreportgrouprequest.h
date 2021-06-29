@@ -27,7 +27,7 @@ namespace CodeBuild {
 
 class CreateReportGroupRequestPrivate;
 
-class QTAWS_EXPORT CreateReportGroupRequest : public CodeBuildRequest {
+class QTAWSCODEBUILD_EXPORT CreateReportGroupRequest : public CodeBuildRequest {
 
 public:
     CreateReportGroupRequest(const CreateReportGroupRequest &other);

@@ -27,7 +27,7 @@ namespace RoboMaker {
 
 class CancelDeploymentJobRequestPrivate;
 
-class QTAWS_EXPORT CancelDeploymentJobRequest : public RoboMakerRequest {
+class QTAWSROBOMAKER_EXPORT CancelDeploymentJobRequest : public RoboMakerRequest {
 
 public:
     CancelDeploymentJobRequest(const CancelDeploymentJobRequest &other);

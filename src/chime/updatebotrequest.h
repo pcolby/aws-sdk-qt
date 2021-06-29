@@ -27,7 +27,7 @@ namespace Chime {
 
 class UpdateBotRequestPrivate;
 
-class QTAWS_EXPORT UpdateBotRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT UpdateBotRequest : public ChimeRequest {
 
 public:
     UpdateBotRequest(const UpdateBotRequest &other);

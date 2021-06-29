@@ -27,7 +27,7 @@ namespace ACMPCA {
 
 class ListTagsRequestPrivate;
 
-class QTAWS_EXPORT ListTagsRequest : public AcmpcaRequest {
+class QTAWSACMPCA_EXPORT ListTagsRequest : public AcmpcaRequest {
 
 public:
     ListTagsRequest(const ListTagsRequest &other);

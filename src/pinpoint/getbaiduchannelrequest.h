@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class GetBaiduChannelRequestPrivate;
 
-class QTAWS_EXPORT GetBaiduChannelRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT GetBaiduChannelRequest : public PinpointRequest {
 
 public:
     GetBaiduChannelRequest(const GetBaiduChannelRequest &other);

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCODESTAR_LIBRARY)
+
 add_library(QtAwsCodeStar
   associateteammemberrequest.h
   associateteammemberrequest_p.h
@@ -57,6 +59,7 @@ add_library(QtAwsCodeStar
   listuserprofilesrequest_p.h
   listuserprofilesresponse.h
   listuserprofilesresponse_p.h
+  qtawscodestarglobal.h
   tagprojectrequest.h
   tagprojectrequest_p.h
   tagprojectresponse.h

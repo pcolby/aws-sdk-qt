@@ -27,7 +27,7 @@ namespace EC2 {
 
 class RejectTransitGatewayMulticastDomainAssociationsRequestPrivate;
 
-class QTAWS_EXPORT RejectTransitGatewayMulticastDomainAssociationsRequest : public Ec2Request {
+class QTAWSEC2_EXPORT RejectTransitGatewayMulticastDomainAssociationsRequest : public Ec2Request {
 
 public:
     RejectTransitGatewayMulticastDomainAssociationsRequest(const RejectTransitGatewayMulticastDomainAssociationsRequest &other);

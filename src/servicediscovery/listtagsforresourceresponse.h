@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public ServiceDiscoveryResponse {
+class QTAWSSERVICEDISCOVERY_EXPORT ListTagsForResourceResponse : public ServiceDiscoveryResponse {
     Q_OBJECT
 
 public:

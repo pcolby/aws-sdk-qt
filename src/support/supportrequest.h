@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawssupportglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Support {
 
 class SupportRequestPrivate;
 
-class QTAWS_EXPORT SupportRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSUPPORT_EXPORT SupportRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Support.

@@ -27,7 +27,7 @@ namespace PinpointEmail {
 
 class GetDedicatedIpsRequestPrivate;
 
-class QTAWS_EXPORT GetDedicatedIpsRequest : public PinpointEmailRequest {
+class QTAWSPINPOINTEMAIL_EXPORT GetDedicatedIpsRequest : public PinpointEmailRequest {
 
 public:
     GetDedicatedIpsRequest(const GetDedicatedIpsRequest &other);

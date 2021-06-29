@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSERVICEDISCOVERY_LIBRARY)
+
 add_library(QtAwsServiceDiscovery
   createhttpnamespacerequest.h
   createhttpnamespacerequest_p.h
@@ -71,6 +73,7 @@ add_library(QtAwsServiceDiscovery
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsservicediscoveryglobal.h
   registerinstancerequest.h
   registerinstancerequest_p.h
   registerinstanceresponse.h

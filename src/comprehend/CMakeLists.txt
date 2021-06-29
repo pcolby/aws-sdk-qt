@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCOMPREHEND_LIBRARY)
+
 add_library(QtAwsComprehend
   batchdetectdominantlanguagerequest.h
   batchdetectdominantlanguagerequest_p.h
@@ -173,6 +175,7 @@ add_library(QtAwsComprehend
   listtopicsdetectionjobsrequest_p.h
   listtopicsdetectionjobsresponse.h
   listtopicsdetectionjobsresponse_p.h
+  qtawscomprehendglobal.h
   startdocumentclassificationjobrequest.h
   startdocumentclassificationjobrequest_p.h
   startdocumentclassificationjobresponse.h

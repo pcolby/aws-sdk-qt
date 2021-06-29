@@ -27,7 +27,7 @@ namespace S3Control {
 
 class DeleteBucketTaggingRequestPrivate;
 
-class QTAWS_EXPORT DeleteBucketTaggingRequest : public S3ControlRequest {
+class QTAWSS3CONTROL_EXPORT DeleteBucketTaggingRequest : public S3ControlRequest {
 
 public:
     DeleteBucketTaggingRequest(const DeleteBucketTaggingRequest &other);

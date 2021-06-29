@@ -27,7 +27,7 @@ namespace Lambda {
 
 class UpdateFunctionCodeRequestPrivate;
 
-class QTAWS_EXPORT UpdateFunctionCodeRequest : public LambdaRequest {
+class QTAWSLAMBDA_EXPORT UpdateFunctionCodeRequest : public LambdaRequest {
 
 public:
     UpdateFunctionCodeRequest(const UpdateFunctionCodeRequest &other);

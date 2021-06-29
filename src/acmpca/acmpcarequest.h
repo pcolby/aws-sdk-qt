@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsacmpcaglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace ACMPCA {
 
 class AcmpcaRequestPrivate;
 
-class QTAWS_EXPORT AcmpcaRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSACMPCA_EXPORT AcmpcaRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ACMPCA.

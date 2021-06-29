@@ -28,7 +28,7 @@ namespace ECS {
 
 class CreateCapacityProviderResponsePrivate;
 
-class QTAWS_EXPORT CreateCapacityProviderResponse : public EcsResponse {
+class QTAWSECS_EXPORT CreateCapacityProviderResponse : public EcsResponse {
     Q_OBJECT
 
 public:

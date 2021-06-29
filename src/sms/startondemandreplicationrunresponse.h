@@ -28,7 +28,7 @@ namespace SMS {
 
 class StartOnDemandReplicationRunResponsePrivate;
 
-class QTAWS_EXPORT StartOnDemandReplicationRunResponse : public SmsResponse {
+class QTAWSSMS_EXPORT StartOnDemandReplicationRunResponse : public SmsResponse {
     Q_OBJECT
 
 public:

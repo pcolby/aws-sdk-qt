@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCODECOMMIT_LIBRARY)
+
 add_library(QtAwsCodeCommit
   associateapprovalruletemplatewithrepositoryrequest.h
   associateapprovalruletemplatewithrepositoryrequest_p.h
@@ -253,6 +255,7 @@ add_library(QtAwsCodeCommit
   putrepositorytriggersrequest_p.h
   putrepositorytriggersresponse.h
   putrepositorytriggersresponse_p.h
+  qtawscodecommitglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class RegisterUserRequestPrivate;
 
-class QTAWS_EXPORT RegisterUserRequest : public QuickSightRequest {
+class QTAWSQUICKSIGHT_EXPORT RegisterUserRequest : public QuickSightRequest {
 
 public:
     RegisterUserRequest(const RegisterUserRequest &other);

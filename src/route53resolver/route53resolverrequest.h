@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsroute53resolverglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Route53Resolver {
 
 class Route53ResolverRequestPrivate;
 
-class QTAWS_EXPORT Route53ResolverRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSROUTE53RESOLVER_EXPORT Route53ResolverRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Route53Resolver.

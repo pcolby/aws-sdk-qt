@@ -27,7 +27,7 @@ namespace Shield {
 
 class ListAttacksRequestPrivate;
 
-class QTAWS_EXPORT ListAttacksRequest : public ShieldRequest {
+class QTAWSSHIELD_EXPORT ListAttacksRequest : public ShieldRequest {
 
 public:
     ListAttacksRequest(const ListAttacksRequest &other);

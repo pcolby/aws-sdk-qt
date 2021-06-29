@@ -28,7 +28,7 @@ namespace GroundStation {
 
 class ListMissionProfilesResponsePrivate;
 
-class QTAWS_EXPORT ListMissionProfilesResponse : public GroundStationResponse {
+class QTAWSGROUNDSTATION_EXPORT ListMissionProfilesResponse : public GroundStationResponse {
     Q_OBJECT
 
 public:

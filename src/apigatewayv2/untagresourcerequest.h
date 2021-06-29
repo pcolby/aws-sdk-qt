@@ -27,7 +27,7 @@ namespace ApiGatewayV2 {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public ApiGatewayV2Request {
+class QTAWSAPIGATEWAYV2_EXPORT UntagResourceRequest : public ApiGatewayV2Request {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

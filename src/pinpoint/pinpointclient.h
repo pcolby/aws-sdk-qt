@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawspinpointglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -253,7 +255,7 @@ class UpdateVoiceChannelResponse;
 class UpdateVoiceTemplateRequest;
 class UpdateVoiceTemplateResponse;
 
-class QTAWS_EXPORT PinpointClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSPINPOINT_EXPORT PinpointClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

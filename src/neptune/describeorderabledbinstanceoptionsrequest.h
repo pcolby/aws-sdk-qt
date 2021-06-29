@@ -27,7 +27,7 @@ namespace Neptune {
 
 class DescribeOrderableDBInstanceOptionsRequestPrivate;
 
-class QTAWS_EXPORT DescribeOrderableDBInstanceOptionsRequest : public NeptuneRequest {
+class QTAWSNEPTUNE_EXPORT DescribeOrderableDBInstanceOptionsRequest : public NeptuneRequest {
 
 public:
     DescribeOrderableDBInstanceOptionsRequest(const DescribeOrderableDBInstanceOptionsRequest &other);

@@ -28,7 +28,7 @@ namespace ECR {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public EcrResponse {
+class QTAWSECR_EXPORT ListTagsForResourceResponse : public EcrResponse {
     Q_OBJECT
 
 public:

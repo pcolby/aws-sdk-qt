@@ -27,7 +27,7 @@ namespace EMR {
 
 class SetTerminationProtectionRequestPrivate;
 
-class QTAWS_EXPORT SetTerminationProtectionRequest : public EmrRequest {
+class QTAWSEMR_EXPORT SetTerminationProtectionRequest : public EmrRequest {
 
 public:
     SetTerminationProtectionRequest(const SetTerminationProtectionRequest &other);

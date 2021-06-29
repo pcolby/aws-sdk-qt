@@ -27,7 +27,7 @@ namespace CloudFormation {
 
 class RecordHandlerProgressRequestPrivate;
 
-class QTAWS_EXPORT RecordHandlerProgressRequest : public CloudFormationRequest {
+class QTAWSCLOUDFORMATION_EXPORT RecordHandlerProgressRequest : public CloudFormationRequest {
 
 public:
     RecordHandlerProgressRequest(const RecordHandlerProgressRequest &other);

@@ -27,7 +27,7 @@ namespace Redshift {
 
 class DescribePartnersRequestPrivate;
 
-class QTAWS_EXPORT DescribePartnersRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT DescribePartnersRequest : public RedshiftRequest {
 
 public:
     DescribePartnersRequest(const DescribePartnersRequest &other);

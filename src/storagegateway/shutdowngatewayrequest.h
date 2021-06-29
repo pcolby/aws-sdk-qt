@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class ShutdownGatewayRequestPrivate;
 
-class QTAWS_EXPORT ShutdownGatewayRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT ShutdownGatewayRequest : public StorageGatewayRequest {
 
 public:
     ShutdownGatewayRequest(const ShutdownGatewayRequest &other);

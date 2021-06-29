@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class AssociatePrincipalWithPortfolioRequestPrivate;
 
-class QTAWS_EXPORT AssociatePrincipalWithPortfolioRequest : public ServiceCatalogRequest {
+class QTAWSSERVICECATALOG_EXPORT AssociatePrincipalWithPortfolioRequest : public ServiceCatalogRequest {
 
 public:
     AssociatePrincipalWithPortfolioRequest(const AssociatePrincipalWithPortfolioRequest &other);

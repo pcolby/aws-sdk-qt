@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsResponsePrivate;
 
-class QTAWS_EXPORT DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsResponse : public Ec2Response {
+class QTAWSEC2_EXPORT DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsResponse : public Ec2Response {
     Q_OBJECT
 
 public:

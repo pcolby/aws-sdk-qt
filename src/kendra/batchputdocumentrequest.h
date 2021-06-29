@@ -27,7 +27,7 @@ namespace kendra {
 
 class BatchPutDocumentRequestPrivate;
 
-class QTAWS_EXPORT BatchPutDocumentRequest : public kendraRequest {
+class QTAWSKENDRA_EXPORT BatchPutDocumentRequest : public kendraRequest {
 
 public:
     BatchPutDocumentRequest(const BatchPutDocumentRequest &other);

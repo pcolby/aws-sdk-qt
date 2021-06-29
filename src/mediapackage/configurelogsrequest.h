@@ -27,7 +27,7 @@ namespace MediaPackage {
 
 class ConfigureLogsRequestPrivate;
 
-class QTAWS_EXPORT ConfigureLogsRequest : public MediaPackageRequest {
+class QTAWSMEDIAPACKAGE_EXPORT ConfigureLogsRequest : public MediaPackageRequest {
 
 public:
     ConfigureLogsRequest(const ConfigureLogsRequest &other);

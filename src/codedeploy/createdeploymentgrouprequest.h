@@ -27,7 +27,7 @@ namespace CodeDeploy {
 
 class CreateDeploymentGroupRequestPrivate;
 
-class QTAWS_EXPORT CreateDeploymentGroupRequest : public CodeDeployRequest {
+class QTAWSCODEDEPLOY_EXPORT CreateDeploymentGroupRequest : public CodeDeployRequest {
 
 public:
     CreateDeploymentGroupRequest(const CreateDeploymentGroupRequest &other);

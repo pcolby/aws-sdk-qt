@@ -28,7 +28,7 @@ namespace Macie2 {
 
 class CreateFindingsFilterResponsePrivate;
 
-class QTAWS_EXPORT CreateFindingsFilterResponse : public Macie2Response {
+class QTAWSMACIE2_EXPORT CreateFindingsFilterResponse : public Macie2Response {
     Q_OBJECT
 
 public:

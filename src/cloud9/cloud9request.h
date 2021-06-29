@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawscloud9global.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Cloud9 {
 
 class Cloud9RequestPrivate;
 
-class QTAWS_EXPORT Cloud9Request : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCLOUD9_EXPORT Cloud9Request : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Cloud9.

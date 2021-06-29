@@ -27,7 +27,7 @@ namespace Comprehend {
 
 class StartSentimentDetectionJobRequestPrivate;
 
-class QTAWS_EXPORT StartSentimentDetectionJobRequest : public ComprehendRequest {
+class QTAWSCOMPREHEND_EXPORT StartSentimentDetectionJobRequest : public ComprehendRequest {
 
 public:
     StartSentimentDetectionJobRequest(const StartSentimentDetectionJobRequest &other);

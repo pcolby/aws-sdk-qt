@@ -21,6 +21,8 @@
 #define QTAWS_DYNAMODBSTREAMSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsdynamodbstreamsglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace DynamoDBStreams {
 
 class DynamoDBStreamsResponsePrivate;
 
-class QTAWS_EXPORT DynamoDBStreamsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSDYNAMODBSTREAMS_EXPORT DynamoDBStreamsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

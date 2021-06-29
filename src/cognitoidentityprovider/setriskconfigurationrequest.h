@@ -27,7 +27,7 @@ namespace CognitoIdentityProvider {
 
 class SetRiskConfigurationRequestPrivate;
 
-class QTAWS_EXPORT SetRiskConfigurationRequest : public CognitoIdentityProviderRequest {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT SetRiskConfigurationRequest : public CognitoIdentityProviderRequest {
 
 public:
     SetRiskConfigurationRequest(const SetRiskConfigurationRequest &other);

@@ -27,7 +27,7 @@ namespace MWAA {
 
 class PublishMetricsRequestPrivate;
 
-class QTAWS_EXPORT PublishMetricsRequest : public MwaaRequest {
+class QTAWSMWAA_EXPORT PublishMetricsRequest : public MwaaRequest {
 
 public:
     PublishMetricsRequest(const PublishMetricsRequest &other);

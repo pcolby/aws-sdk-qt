@@ -28,7 +28,7 @@ namespace Amplify {
 
 class ListBackendEnvironmentsResponsePrivate;
 
-class QTAWS_EXPORT ListBackendEnvironmentsResponse : public AmplifyResponse {
+class QTAWSAMPLIFY_EXPORT ListBackendEnvironmentsResponse : public AmplifyResponse {
     Q_OBJECT
 
 public:

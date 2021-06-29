@@ -27,7 +27,7 @@ namespace CodeStarNotifications {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public CodeStarNotificationsRequest {
+class QTAWSCODESTARNOTIFICATIONS_EXPORT UntagResourceRequest : public CodeStarNotificationsRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

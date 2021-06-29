@@ -28,7 +28,7 @@ namespace LicenseManager {
 
 class CheckoutBorrowLicenseResponsePrivate;
 
-class QTAWS_EXPORT CheckoutBorrowLicenseResponse : public LicenseManagerResponse {
+class QTAWSLICENSEMANAGER_EXPORT CheckoutBorrowLicenseResponse : public LicenseManagerResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace RDSDataService {
 
 class ExecuteStatementResponsePrivate;
 
-class QTAWS_EXPORT ExecuteStatementResponse : public RDSDataServiceResponse {
+class QTAWSRDSDATASERVICE_EXPORT ExecuteStatementResponse : public RDSDataServiceResponse {
     Q_OBJECT
 
 public:

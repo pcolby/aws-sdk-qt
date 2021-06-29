@@ -27,7 +27,7 @@ namespace MigrationHub {
 
 class NotifyApplicationStateRequestPrivate;
 
-class QTAWS_EXPORT NotifyApplicationStateRequest : public MigrationHubRequest {
+class QTAWSMIGRATIONHUB_EXPORT NotifyApplicationStateRequest : public MigrationHubRequest {
 
 public:
     NotifyApplicationStateRequest(const NotifyApplicationStateRequest &other);

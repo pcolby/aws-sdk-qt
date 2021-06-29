@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class DeleteMultiplexResponsePrivate;
 
-class QTAWS_EXPORT DeleteMultiplexResponse : public MediaLiveResponse {
+class QTAWSMEDIALIVE_EXPORT DeleteMultiplexResponse : public MediaLiveResponse {
     Q_OBJECT
 
 public:

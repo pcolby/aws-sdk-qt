@@ -28,7 +28,7 @@ namespace RDS {
 
 class RemoveTagsFromResourceResponsePrivate;
 
-class QTAWS_EXPORT RemoveTagsFromResourceResponse : public RdsResponse {
+class QTAWSRDS_EXPORT RemoveTagsFromResourceResponse : public RdsResponse {
     Q_OBJECT
 
 public:

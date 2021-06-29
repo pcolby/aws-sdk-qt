@@ -27,7 +27,7 @@ namespace S3 {
 
 class ListMultipartUploadsRequestPrivate;
 
-class QTAWS_EXPORT ListMultipartUploadsRequest : public S3Request {
+class QTAWSS3_EXPORT ListMultipartUploadsRequest : public S3Request {
 
 public:
     ListMultipartUploadsRequest(const ListMultipartUploadsRequest &other);

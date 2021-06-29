@@ -27,7 +27,7 @@ namespace AppSync {
 
 class GetSchemaCreationStatusRequestPrivate;
 
-class QTAWS_EXPORT GetSchemaCreationStatusRequest : public AppSyncRequest {
+class QTAWSAPPSYNC_EXPORT GetSchemaCreationStatusRequest : public AppSyncRequest {
 
 public:
     GetSchemaCreationStatusRequest(const GetSchemaCreationStatusRequest &other);

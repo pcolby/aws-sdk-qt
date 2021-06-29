@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public OpsWorksCMResponse {
+class QTAWSOPSWORKSCM_EXPORT UntagResourceResponse : public OpsWorksCMResponse {
     Q_OBJECT
 
 public:

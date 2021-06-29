@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class CreateNFSFileShareRequestPrivate;
 
-class QTAWS_EXPORT CreateNFSFileShareRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT CreateNFSFileShareRequest : public StorageGatewayRequest {
 
 public:
     CreateNFSFileShareRequest(const CreateNFSFileShareRequest &other);

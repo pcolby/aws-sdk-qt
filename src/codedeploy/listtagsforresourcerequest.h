@@ -27,7 +27,7 @@ namespace CodeDeploy {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public CodeDeployRequest {
+class QTAWSCODEDEPLOY_EXPORT ListTagsForResourceRequest : public CodeDeployRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

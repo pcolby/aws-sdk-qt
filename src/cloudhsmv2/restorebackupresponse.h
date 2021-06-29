@@ -28,7 +28,7 @@ namespace CloudHSMV2 {
 
 class RestoreBackupResponsePrivate;
 
-class QTAWS_EXPORT RestoreBackupResponse : public CloudHSMV2Response {
+class QTAWSCLOUDHSMV2_EXPORT RestoreBackupResponse : public CloudHSMV2Response {
     Q_OBJECT
 
 public:

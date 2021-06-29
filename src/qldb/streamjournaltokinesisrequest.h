@@ -27,7 +27,7 @@ namespace QLDB {
 
 class StreamJournalToKinesisRequestPrivate;
 
-class QTAWS_EXPORT StreamJournalToKinesisRequest : public QldbRequest {
+class QTAWSQLDB_EXPORT StreamJournalToKinesisRequest : public QldbRequest {
 
 public:
     StreamJournalToKinesisRequest(const StreamJournalToKinesisRequest &other);

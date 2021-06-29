@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsmgnglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -79,7 +81,7 @@ class UpdateReplicationConfigurationResponse;
 class UpdateReplicationConfigurationTemplateRequest;
 class UpdateReplicationConfigurationTemplateResponse;
 
-class QTAWS_EXPORT mgnClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSMGN_EXPORT mgnClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

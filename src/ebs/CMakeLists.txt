@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSEBS_LIBRARY)
+
 add_library(QtAwsEbs
   completesnapshotrequest.h
   completesnapshotrequest_p.h
@@ -25,6 +27,7 @@ add_library(QtAwsEbs
   putsnapshotblockrequest_p.h
   putsnapshotblockresponse.h
   putsnapshotblockresponse_p.h
+  qtawsebsglobal.h
   startsnapshotrequest.h
   startsnapshotrequest_p.h
   startsnapshotresponse.h

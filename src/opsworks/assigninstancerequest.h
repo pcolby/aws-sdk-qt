@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class AssignInstanceRequestPrivate;
 
-class QTAWS_EXPORT AssignInstanceRequest : public OpsWorksRequest {
+class QTAWSOPSWORKS_EXPORT AssignInstanceRequest : public OpsWorksRequest {
 
 public:
     AssignInstanceRequest(const AssignInstanceRequest &other);

@@ -21,6 +21,8 @@
 #define QTAWS_CONNECTRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsconnectglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Connect {
 
 class ConnectResponsePrivate;
 
-class QTAWS_EXPORT ConnectResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCONNECT_EXPORT ConnectResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

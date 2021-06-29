@@ -27,7 +27,7 @@ namespace ApplicationInsights {
 
 class CreateLogPatternRequestPrivate;
 
-class QTAWS_EXPORT CreateLogPatternRequest : public ApplicationInsightsRequest {
+class QTAWSAPPLICATIONINSIGHTS_EXPORT CreateLogPatternRequest : public ApplicationInsightsRequest {
 
 public:
     CreateLogPatternRequest(const CreateLogPatternRequest &other);

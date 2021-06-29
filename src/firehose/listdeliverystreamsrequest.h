@@ -27,7 +27,7 @@ namespace Firehose {
 
 class ListDeliveryStreamsRequestPrivate;
 
-class QTAWS_EXPORT ListDeliveryStreamsRequest : public FirehoseRequest {
+class QTAWSFIREHOSE_EXPORT ListDeliveryStreamsRequest : public FirehoseRequest {
 
 public:
     ListDeliveryStreamsRequest(const ListDeliveryStreamsRequest &other);

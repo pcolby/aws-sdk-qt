@@ -27,7 +27,7 @@ namespace WAFRegional {
 
 class DeleteIPSetRequestPrivate;
 
-class QTAWS_EXPORT DeleteIPSetRequest : public WAFRegionalRequest {
+class QTAWSWAFREGIONAL_EXPORT DeleteIPSetRequest : public WAFRegionalRequest {
 
 public:
     DeleteIPSetRequest(const DeleteIPSetRequest &other);

@@ -27,7 +27,7 @@ namespace WAF {
 
 class UpdateSizeConstraintSetRequestPrivate;
 
-class QTAWS_EXPORT UpdateSizeConstraintSetRequest : public WafRequest {
+class QTAWSWAF_EXPORT UpdateSizeConstraintSetRequest : public WafRequest {
 
 public:
     UpdateSizeConstraintSetRequest(const UpdateSizeConstraintSetRequest &other);

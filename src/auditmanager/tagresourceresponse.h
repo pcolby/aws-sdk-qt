@@ -28,7 +28,7 @@ namespace AuditManager {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public AuditManagerResponse {
+class QTAWSAUDITMANAGER_EXPORT TagResourceResponse : public AuditManagerResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace Backup {
 
 class DeleteRecoveryPointRequestPrivate;
 
-class QTAWS_EXPORT DeleteRecoveryPointRequest : public BackupRequest {
+class QTAWSBACKUP_EXPORT DeleteRecoveryPointRequest : public BackupRequest {
 
 public:
     DeleteRecoveryPointRequest(const DeleteRecoveryPointRequest &other);

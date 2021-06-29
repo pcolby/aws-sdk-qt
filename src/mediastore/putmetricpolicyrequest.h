@@ -27,7 +27,7 @@ namespace MediaStore {
 
 class PutMetricPolicyRequestPrivate;
 
-class QTAWS_EXPORT PutMetricPolicyRequest : public MediaStoreRequest {
+class QTAWSMEDIASTORE_EXPORT PutMetricPolicyRequest : public MediaStoreRequest {
 
 public:
     PutMetricPolicyRequest(const PutMetricPolicyRequest &other);

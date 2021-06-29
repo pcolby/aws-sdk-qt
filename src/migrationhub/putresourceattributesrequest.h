@@ -27,7 +27,7 @@ namespace MigrationHub {
 
 class PutResourceAttributesRequestPrivate;
 
-class QTAWS_EXPORT PutResourceAttributesRequest : public MigrationHubRequest {
+class QTAWSMIGRATIONHUB_EXPORT PutResourceAttributesRequest : public MigrationHubRequest {
 
 public:
     PutResourceAttributesRequest(const PutResourceAttributesRequest &other);

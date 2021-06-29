@@ -27,7 +27,7 @@ namespace LexModelsV2 {
 
 class DescribeSlotRequestPrivate;
 
-class QTAWS_EXPORT DescribeSlotRequest : public LexModelsV2Request {
+class QTAWSLEXMODELSV2_EXPORT DescribeSlotRequest : public LexModelsV2Request {
 
 public:
     DescribeSlotRequest(const DescribeSlotRequest &other);

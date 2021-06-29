@@ -27,7 +27,7 @@ namespace GreengrassV2 {
 
 class ListInstalledComponentsRequestPrivate;
 
-class QTAWS_EXPORT ListInstalledComponentsRequest : public GreengrassV2Request {
+class QTAWSGREENGRASSV2_EXPORT ListInstalledComponentsRequest : public GreengrassV2Request {
 
 public:
     ListInstalledComponentsRequest(const ListInstalledComponentsRequest &other);

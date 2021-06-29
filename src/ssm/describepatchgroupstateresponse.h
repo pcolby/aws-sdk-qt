@@ -28,7 +28,7 @@ namespace SSM {
 
 class DescribePatchGroupStateResponsePrivate;
 
-class QTAWS_EXPORT DescribePatchGroupStateResponse : public SsmResponse {
+class QTAWSSSM_EXPORT DescribePatchGroupStateResponse : public SsmResponse {
     Q_OBJECT
 
 public:

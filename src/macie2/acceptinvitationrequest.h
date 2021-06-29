@@ -27,7 +27,7 @@ namespace Macie2 {
 
 class AcceptInvitationRequestPrivate;
 
-class QTAWS_EXPORT AcceptInvitationRequest : public Macie2Request {
+class QTAWSMACIE2_EXPORT AcceptInvitationRequest : public Macie2Request {
 
 public:
     AcceptInvitationRequest(const AcceptInvitationRequest &other);

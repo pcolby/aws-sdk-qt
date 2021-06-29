@@ -27,7 +27,7 @@ namespace ServiceQuotas {
 
 class DeleteServiceQuotaIncreaseRequestFromTemplateRequestPrivate;
 
-class QTAWS_EXPORT DeleteServiceQuotaIncreaseRequestFromTemplateRequest : public ServiceQuotasRequest {
+class QTAWSSERVICEQUOTAS_EXPORT DeleteServiceQuotaIncreaseRequestFromTemplateRequest : public ServiceQuotasRequest {
 
 public:
     DeleteServiceQuotaIncreaseRequestFromTemplateRequest(const DeleteServiceQuotaIncreaseRequestFromTemplateRequest &other);

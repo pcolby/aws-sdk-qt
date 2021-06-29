@@ -27,7 +27,7 @@ namespace SQS {
 
 class TagQueueRequestPrivate;
 
-class QTAWS_EXPORT TagQueueRequest : public SqsRequest {
+class QTAWSSQS_EXPORT TagQueueRequest : public SqsRequest {
 
 public:
     TagQueueRequest(const TagQueueRequest &other);

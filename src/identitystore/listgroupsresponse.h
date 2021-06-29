@@ -28,7 +28,7 @@ namespace IdentityStore {
 
 class ListGroupsResponsePrivate;
 
-class QTAWS_EXPORT ListGroupsResponse : public IdentityStoreResponse {
+class QTAWSIDENTITYSTORE_EXPORT ListGroupsResponse : public IdentityStoreResponse {
     Q_OBJECT
 
 public:

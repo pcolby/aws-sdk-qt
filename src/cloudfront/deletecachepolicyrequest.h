@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class DeleteCachePolicyRequestPrivate;
 
-class QTAWS_EXPORT DeleteCachePolicyRequest : public CloudFrontRequest {
+class QTAWSCLOUDFRONT_EXPORT DeleteCachePolicyRequest : public CloudFrontRequest {
 
 public:
     DeleteCachePolicyRequest(const DeleteCachePolicyRequest &other);

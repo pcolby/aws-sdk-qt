@@ -27,7 +27,7 @@ namespace Backup {
 
 class DescribeProtectedResourceRequestPrivate;
 
-class QTAWS_EXPORT DescribeProtectedResourceRequest : public BackupRequest {
+class QTAWSBACKUP_EXPORT DescribeProtectedResourceRequest : public BackupRequest {
 
 public:
     DescribeProtectedResourceRequest(const DescribeProtectedResourceRequest &other);

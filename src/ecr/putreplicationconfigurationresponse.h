@@ -28,7 +28,7 @@ namespace ECR {
 
 class PutReplicationConfigurationResponsePrivate;
 
-class QTAWS_EXPORT PutReplicationConfigurationResponse : public EcrResponse {
+class QTAWSECR_EXPORT PutReplicationConfigurationResponse : public EcrResponse {
     Q_OBJECT
 
 public:

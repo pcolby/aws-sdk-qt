@@ -27,7 +27,7 @@ namespace LexModelBuildingService {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public LexModelBuildingServiceRequest {
+class QTAWSLEXMODELBUILDINGSERVICE_EXPORT UntagResourceRequest : public LexModelBuildingServiceRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

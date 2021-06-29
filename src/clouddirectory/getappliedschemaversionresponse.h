@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class GetAppliedSchemaVersionResponsePrivate;
 
-class QTAWS_EXPORT GetAppliedSchemaVersionResponse : public CloudDirectoryResponse {
+class QTAWSCLOUDDIRECTORY_EXPORT GetAppliedSchemaVersionResponse : public CloudDirectoryResponse {
     Q_OBJECT
 
 public:

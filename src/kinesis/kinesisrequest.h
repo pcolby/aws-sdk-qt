@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawskinesisglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Kinesis {
 
 class KinesisRequestPrivate;
 
-class QTAWS_EXPORT KinesisRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSKINESIS_EXPORT KinesisRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Kinesis.

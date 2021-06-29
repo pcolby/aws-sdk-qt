@@ -28,7 +28,7 @@ namespace Schemas {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public SchemasResponse {
+class QTAWSSCHEMAS_EXPORT ListTagsForResourceResponse : public SchemasResponse {
     Q_OBJECT
 
 public:

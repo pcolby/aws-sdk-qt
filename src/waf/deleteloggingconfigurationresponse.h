@@ -28,7 +28,7 @@ namespace WAF {
 
 class DeleteLoggingConfigurationResponsePrivate;
 
-class QTAWS_EXPORT DeleteLoggingConfigurationResponse : public WafResponse {
+class QTAWSWAF_EXPORT DeleteLoggingConfigurationResponse : public WafResponse {
     Q_OBJECT
 
 public:

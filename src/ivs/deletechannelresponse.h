@@ -28,7 +28,7 @@ namespace IVS {
 
 class DeleteChannelResponsePrivate;
 
-class QTAWS_EXPORT DeleteChannelResponse : public IvsResponse {
+class QTAWSIVS_EXPORT DeleteChannelResponse : public IvsResponse {
     Q_OBJECT
 
 public:

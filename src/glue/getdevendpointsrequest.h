@@ -27,7 +27,7 @@ namespace Glue {
 
 class GetDevEndpointsRequestPrivate;
 
-class QTAWS_EXPORT GetDevEndpointsRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT GetDevEndpointsRequest : public GlueRequest {
 
 public:
     GetDevEndpointsRequest(const GetDevEndpointsRequest &other);

@@ -27,7 +27,7 @@ namespace S3 {
 
 class GetBucketAclRequestPrivate;
 
-class QTAWS_EXPORT GetBucketAclRequest : public S3Request {
+class QTAWSS3_EXPORT GetBucketAclRequest : public S3Request {
 
 public:
     GetBucketAclRequest(const GetBucketAclRequest &other);

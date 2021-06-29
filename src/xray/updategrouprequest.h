@@ -27,7 +27,7 @@ namespace XRay {
 
 class UpdateGroupRequestPrivate;
 
-class QTAWS_EXPORT UpdateGroupRequest : public XRayRequest {
+class QTAWSXRAY_EXPORT UpdateGroupRequest : public XRayRequest {
 
 public:
     UpdateGroupRequest(const UpdateGroupRequest &other);

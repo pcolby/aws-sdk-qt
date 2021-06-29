@@ -28,7 +28,7 @@ namespace XRay {
 
 class GetInsightEventsResponsePrivate;
 
-class QTAWS_EXPORT GetInsightEventsResponse : public XRayResponse {
+class QTAWSXRAY_EXPORT GetInsightEventsResponse : public XRayResponse {
     Q_OBJECT
 
 public:

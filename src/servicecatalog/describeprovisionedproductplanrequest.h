@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class DescribeProvisionedProductPlanRequestPrivate;
 
-class QTAWS_EXPORT DescribeProvisionedProductPlanRequest : public ServiceCatalogRequest {
+class QTAWSSERVICECATALOG_EXPORT DescribeProvisionedProductPlanRequest : public ServiceCatalogRequest {
 
 public:
     DescribeProvisionedProductPlanRequest(const DescribeProvisionedProductPlanRequest &other);

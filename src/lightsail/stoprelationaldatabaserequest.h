@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class StopRelationalDatabaseRequestPrivate;
 
-class QTAWS_EXPORT StopRelationalDatabaseRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT StopRelationalDatabaseRequest : public LightsailRequest {
 
 public:
     StopRelationalDatabaseRequest(const StopRelationalDatabaseRequest &other);

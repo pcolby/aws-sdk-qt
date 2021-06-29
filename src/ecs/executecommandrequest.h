@@ -27,7 +27,7 @@ namespace ECS {
 
 class ExecuteCommandRequestPrivate;
 
-class QTAWS_EXPORT ExecuteCommandRequest : public EcsRequest {
+class QTAWSECS_EXPORT ExecuteCommandRequest : public EcsRequest {
 
 public:
     ExecuteCommandRequest(const ExecuteCommandRequest &other);

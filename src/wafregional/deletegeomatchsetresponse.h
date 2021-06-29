@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class DeleteGeoMatchSetResponsePrivate;
 
-class QTAWS_EXPORT DeleteGeoMatchSetResponse : public WAFRegionalResponse {
+class QTAWSWAFREGIONAL_EXPORT DeleteGeoMatchSetResponse : public WAFRegionalResponse {
     Q_OBJECT
 
 public:

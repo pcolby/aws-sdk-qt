@@ -27,7 +27,7 @@ namespace AmplifyBackend {
 
 class GetBackendAPIRequestPrivate;
 
-class QTAWS_EXPORT GetBackendAPIRequest : public AmplifyBackendRequest {
+class QTAWSAMPLIFYBACKEND_EXPORT GetBackendAPIRequest : public AmplifyBackendRequest {
 
 public:
     GetBackendAPIRequest(const GetBackendAPIRequest &other);

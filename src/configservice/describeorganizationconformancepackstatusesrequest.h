@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class DescribeOrganizationConformancePackStatusesRequestPrivate;
 
-class QTAWS_EXPORT DescribeOrganizationConformancePackStatusesRequest : public ConfigServiceRequest {
+class QTAWSCONFIGSERVICE_EXPORT DescribeOrganizationConformancePackStatusesRequest : public ConfigServiceRequest {
 
 public:
     DescribeOrganizationConformancePackStatusesRequest(const DescribeOrganizationConformancePackStatusesRequest &other);

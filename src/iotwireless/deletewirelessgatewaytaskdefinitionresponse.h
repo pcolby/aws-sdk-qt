@@ -28,7 +28,7 @@ namespace IoTWireless {
 
 class DeleteWirelessGatewayTaskDefinitionResponsePrivate;
 
-class QTAWS_EXPORT DeleteWirelessGatewayTaskDefinitionResponse : public IoTWirelessResponse {
+class QTAWSIOTWIRELESS_EXPORT DeleteWirelessGatewayTaskDefinitionResponse : public IoTWirelessResponse {
     Q_OBJECT
 
 public:

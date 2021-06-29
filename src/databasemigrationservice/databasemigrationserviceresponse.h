@@ -21,6 +21,8 @@
 #define QTAWS_DATABASEMIGRATIONSERVICERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsdatabasemigrationserviceglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace DatabaseMigrationService {
 
 class DatabaseMigrationServiceResponsePrivate;
 
-class QTAWS_EXPORT DatabaseMigrationServiceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DatabaseMigrationServiceResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

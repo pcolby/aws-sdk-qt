@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawscloudwatchglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace CloudWatch {
 
 class CloudWatchRequestPrivate;
 
-class QTAWS_EXPORT CloudWatchRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCLOUDWATCH_EXPORT CloudWatchRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CloudWatch.

@@ -28,7 +28,7 @@ namespace Athena {
 
 class ListQueryExecutionsResponsePrivate;
 
-class QTAWS_EXPORT ListQueryExecutionsResponse : public AthenaResponse {
+class QTAWSATHENA_EXPORT ListQueryExecutionsResponse : public AthenaResponse {
     Q_OBJECT
 
 public:

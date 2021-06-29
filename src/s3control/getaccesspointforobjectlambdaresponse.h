@@ -28,7 +28,7 @@ namespace S3Control {
 
 class GetAccessPointForObjectLambdaResponsePrivate;
 
-class QTAWS_EXPORT GetAccessPointForObjectLambdaResponse : public S3ControlResponse {
+class QTAWSS3CONTROL_EXPORT GetAccessPointForObjectLambdaResponse : public S3ControlResponse {
     Q_OBJECT
 
 public:

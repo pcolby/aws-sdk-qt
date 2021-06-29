@@ -27,7 +27,7 @@ namespace S3Control {
 
 class DeleteAccessPointRequestPrivate;
 
-class QTAWS_EXPORT DeleteAccessPointRequest : public S3ControlRequest {
+class QTAWSS3CONTROL_EXPORT DeleteAccessPointRequest : public S3ControlRequest {
 
 public:
     DeleteAccessPointRequest(const DeleteAccessPointRequest &other);

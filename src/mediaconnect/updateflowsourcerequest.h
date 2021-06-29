@@ -27,7 +27,7 @@ namespace MediaConnect {
 
 class UpdateFlowSourceRequestPrivate;
 
-class QTAWS_EXPORT UpdateFlowSourceRequest : public MediaConnectRequest {
+class QTAWSMEDIACONNECT_EXPORT UpdateFlowSourceRequest : public MediaConnectRequest {
 
 public:
     UpdateFlowSourceRequest(const UpdateFlowSourceRequest &other);

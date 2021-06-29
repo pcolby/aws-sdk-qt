@@ -27,7 +27,7 @@ namespace CloudWatchEvents {
 
 class CancelReplayRequestPrivate;
 
-class QTAWS_EXPORT CancelReplayRequest : public CloudWatchEventsRequest {
+class QTAWSCLOUDWATCHEVENTS_EXPORT CancelReplayRequest : public CloudWatchEventsRequest {
 
 public:
     CancelReplayRequest(const CancelReplayRequest &other);

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSIOT1CLICKPROJECTS_LIBRARY)
+
 add_library(QtAwsIoT1ClickProjects
   associatedevicewithplacementrequest.h
   associatedevicewithplacementrequest_p.h
@@ -53,6 +55,7 @@ add_library(QtAwsIoT1ClickProjects
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsiot1clickprojectsglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

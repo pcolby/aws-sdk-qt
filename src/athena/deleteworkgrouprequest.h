@@ -27,7 +27,7 @@ namespace Athena {
 
 class DeleteWorkGroupRequestPrivate;
 
-class QTAWS_EXPORT DeleteWorkGroupRequest : public AthenaRequest {
+class QTAWSATHENA_EXPORT DeleteWorkGroupRequest : public AthenaRequest {
 
 public:
     DeleteWorkGroupRequest(const DeleteWorkGroupRequest &other);

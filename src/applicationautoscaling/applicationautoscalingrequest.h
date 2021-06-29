@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsapplicationautoscalingglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace ApplicationAutoScaling {
 
 class ApplicationAutoScalingRequestPrivate;
 
-class QTAWS_EXPORT ApplicationAutoScalingRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSAPPLICATIONAUTOSCALING_EXPORT ApplicationAutoScalingRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ApplicationAutoScaling.

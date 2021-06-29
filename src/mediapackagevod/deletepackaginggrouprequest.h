@@ -27,7 +27,7 @@ namespace MediaPackageVod {
 
 class DeletePackagingGroupRequestPrivate;
 
-class QTAWS_EXPORT DeletePackagingGroupRequest : public MediaPackageVodRequest {
+class QTAWSMEDIAPACKAGEVOD_EXPORT DeletePackagingGroupRequest : public MediaPackageVodRequest {
 
 public:
     DeletePackagingGroupRequest(const DeletePackagingGroupRequest &other);

@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DeleteLocalGatewayRouteRequestPrivate;
 
-class QTAWS_EXPORT DeleteLocalGatewayRouteRequest : public Ec2Request {
+class QTAWSEC2_EXPORT DeleteLocalGatewayRouteRequest : public Ec2Request {
 
 public:
     DeleteLocalGatewayRouteRequest(const DeleteLocalGatewayRouteRequest &other);

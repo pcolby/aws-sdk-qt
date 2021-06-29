@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSNOWBALL_LIBRARY)
+
 add_library(QtAwsSnowball
   cancelclusterrequest.h
   cancelclusterrequest_p.h
@@ -83,6 +85,7 @@ add_library(QtAwsSnowball
   listlongtermpricingrequest_p.h
   listlongtermpricingresponse.h
   listlongtermpricingresponse_p.h
+  qtawssnowballglobal.h
   snowballclient.h
   snowballclient_p.h
   snowballrequest.h

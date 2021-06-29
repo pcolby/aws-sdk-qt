@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSS3CONTROL_LIBRARY)
+
 add_library(QtAwsS3Control
   createaccesspointforobjectlambdarequest.h
   createaccesspointforobjectlambdarequest_p.h
@@ -187,6 +189,7 @@ add_library(QtAwsS3Control
   putstoragelensconfigurationtaggingrequest_p.h
   putstoragelensconfigurationtaggingresponse.h
   putstoragelensconfigurationtaggingresponse_p.h
+  qtawss3controlglobal.h
   s3controlclient.h
   s3controlclient_p.h
   s3controlrequest.h

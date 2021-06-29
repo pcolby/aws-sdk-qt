@@ -27,7 +27,7 @@ namespace Route53 {
 
 class ActivateKeySigningKeyRequestPrivate;
 
-class QTAWS_EXPORT ActivateKeySigningKeyRequest : public Route53Request {
+class QTAWSROUTE53_EXPORT ActivateKeySigningKeyRequest : public Route53Request {
 
 public:
     ActivateKeySigningKeyRequest(const ActivateKeySigningKeyRequest &other);

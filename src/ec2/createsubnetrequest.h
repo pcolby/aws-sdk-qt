@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CreateSubnetRequestPrivate;
 
-class QTAWS_EXPORT CreateSubnetRequest : public Ec2Request {
+class QTAWSEC2_EXPORT CreateSubnetRequest : public Ec2Request {
 
 public:
     CreateSubnetRequest(const CreateSubnetRequest &other);

@@ -28,7 +28,7 @@ namespace NetworkManager {
 
 class AssociateCustomerGatewayResponsePrivate;
 
-class QTAWS_EXPORT AssociateCustomerGatewayResponse : public NetworkManagerResponse {
+class QTAWSNETWORKMANAGER_EXPORT AssociateCustomerGatewayResponse : public NetworkManagerResponse {
     Q_OBJECT
 
 public:

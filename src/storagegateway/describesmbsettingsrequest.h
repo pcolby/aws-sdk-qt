@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class DescribeSMBSettingsRequestPrivate;
 
-class QTAWS_EXPORT DescribeSMBSettingsRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT DescribeSMBSettingsRequest : public StorageGatewayRequest {
 
 public:
     DescribeSMBSettingsRequest(const DescribeSMBSettingsRequest &other);

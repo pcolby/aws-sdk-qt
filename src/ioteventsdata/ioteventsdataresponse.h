@@ -21,6 +21,8 @@
 #define QTAWS_IOTEVENTSDATARESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsioteventsdataglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace IoTEventsData {
 
 class IoTEventsDataResponsePrivate;
 
-class QTAWS_EXPORT IoTEventsDataResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSIOTEVENTSDATA_EXPORT IoTEventsDataResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

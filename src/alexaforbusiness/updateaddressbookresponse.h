@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class UpdateAddressBookResponsePrivate;
 
-class QTAWS_EXPORT UpdateAddressBookResponse : public AlexaForBusinessResponse {
+class QTAWSALEXAFORBUSINESS_EXPORT UpdateAddressBookResponse : public AlexaForBusinessResponse {
     Q_OBJECT
 
 public:

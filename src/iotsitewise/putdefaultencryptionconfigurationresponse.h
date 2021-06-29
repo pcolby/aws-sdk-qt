@@ -28,7 +28,7 @@ namespace IoTSiteWise {
 
 class PutDefaultEncryptionConfigurationResponsePrivate;
 
-class QTAWS_EXPORT PutDefaultEncryptionConfigurationResponse : public IoTSiteWiseResponse {
+class QTAWSIOTSITEWISE_EXPORT PutDefaultEncryptionConfigurationResponse : public IoTSiteWiseResponse {
     Q_OBJECT
 
 public:

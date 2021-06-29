@@ -27,7 +27,7 @@ namespace Schemas {
 
 class StopDiscovererRequestPrivate;
 
-class QTAWS_EXPORT StopDiscovererRequest : public SchemasRequest {
+class QTAWSSCHEMAS_EXPORT StopDiscovererRequest : public SchemasRequest {
 
 public:
     StopDiscovererRequest(const StopDiscovererRequest &other);

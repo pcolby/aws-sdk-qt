@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsemrglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -123,7 +125,7 @@ class UpdateStudioResponse;
 class UpdateStudioSessionMappingRequest;
 class UpdateStudioSessionMappingResponse;
 
-class QTAWS_EXPORT EmrClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSEMR_EXPORT EmrClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace Lambda {
 
 class DeleteProvisionedConcurrencyConfigResponsePrivate;
 
-class QTAWS_EXPORT DeleteProvisionedConcurrencyConfigResponse : public LambdaResponse {
+class QTAWSLAMBDA_EXPORT DeleteProvisionedConcurrencyConfigResponse : public LambdaResponse {
     Q_OBJECT
 
 public:

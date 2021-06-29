@@ -27,7 +27,7 @@ namespace ElasticsearchService {
 
 class GetCompatibleElasticsearchVersionsRequestPrivate;
 
-class QTAWS_EXPORT GetCompatibleElasticsearchVersionsRequest : public ElasticsearchServiceRequest {
+class QTAWSELASTICSEARCHSERVICE_EXPORT GetCompatibleElasticsearchVersionsRequest : public ElasticsearchServiceRequest {
 
 public:
     GetCompatibleElasticsearchVersionsRequest(const GetCompatibleElasticsearchVersionsRequest &other);

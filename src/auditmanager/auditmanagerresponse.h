@@ -21,6 +21,8 @@
 #define QTAWS_AUDITMANAGERRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsauditmanagerglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace AuditManager {
 
 class AuditManagerResponsePrivate;
 
-class QTAWS_EXPORT AuditManagerResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSAUDITMANAGER_EXPORT AuditManagerResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

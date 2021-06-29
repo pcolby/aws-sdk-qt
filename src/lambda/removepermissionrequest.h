@@ -27,7 +27,7 @@ namespace Lambda {
 
 class RemovePermissionRequestPrivate;
 
-class QTAWS_EXPORT RemovePermissionRequest : public LambdaRequest {
+class QTAWSLAMBDA_EXPORT RemovePermissionRequest : public LambdaRequest {
 
 public:
     RemovePermissionRequest(const RemovePermissionRequest &other);

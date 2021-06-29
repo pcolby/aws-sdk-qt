@@ -27,7 +27,7 @@ namespace GreengrassV2 {
 
 class ListEffectiveDeploymentsRequestPrivate;
 
-class QTAWS_EXPORT ListEffectiveDeploymentsRequest : public GreengrassV2Request {
+class QTAWSGREENGRASSV2_EXPORT ListEffectiveDeploymentsRequest : public GreengrassV2Request {
 
 public:
     ListEffectiveDeploymentsRequest(const ListEffectiveDeploymentsRequest &other);

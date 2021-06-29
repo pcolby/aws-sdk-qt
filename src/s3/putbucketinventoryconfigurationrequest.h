@@ -27,7 +27,7 @@ namespace S3 {
 
 class PutBucketInventoryConfigurationRequestPrivate;
 
-class QTAWS_EXPORT PutBucketInventoryConfigurationRequest : public S3Request {
+class QTAWSS3_EXPORT PutBucketInventoryConfigurationRequest : public S3Request {
 
 public:
     PutBucketInventoryConfigurationRequest(const PutBucketInventoryConfigurationRequest &other);

@@ -28,7 +28,7 @@ namespace CustomerProfiles {
 
 class GetIntegrationResponsePrivate;
 
-class QTAWS_EXPORT GetIntegrationResponse : public CustomerProfilesResponse {
+class QTAWSCUSTOMERPROFILES_EXPORT GetIntegrationResponse : public CustomerProfilesResponse {
     Q_OBJECT
 
 public:

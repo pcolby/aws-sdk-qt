@@ -27,7 +27,7 @@ namespace Kinesis {
 
 class GetShardIteratorRequestPrivate;
 
-class QTAWS_EXPORT GetShardIteratorRequest : public KinesisRequest {
+class QTAWSKINESIS_EXPORT GetShardIteratorRequest : public KinesisRequest {
 
 public:
     GetShardIteratorRequest(const GetShardIteratorRequest &other);

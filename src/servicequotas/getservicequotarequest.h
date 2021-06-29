@@ -27,7 +27,7 @@ namespace ServiceQuotas {
 
 class GetServiceQuotaRequestPrivate;
 
-class QTAWS_EXPORT GetServiceQuotaRequest : public ServiceQuotasRequest {
+class QTAWSSERVICEQUOTAS_EXPORT GetServiceQuotaRequest : public ServiceQuotasRequest {
 
 public:
     GetServiceQuotaRequest(const GetServiceQuotaRequest &other);

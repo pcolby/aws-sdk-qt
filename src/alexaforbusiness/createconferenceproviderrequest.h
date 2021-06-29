@@ -27,7 +27,7 @@ namespace AlexaForBusiness {
 
 class CreateConferenceProviderRequestPrivate;
 
-class QTAWS_EXPORT CreateConferenceProviderRequest : public AlexaForBusinessRequest {
+class QTAWSALEXAFORBUSINESS_EXPORT CreateConferenceProviderRequest : public AlexaForBusinessRequest {
 
 public:
     CreateConferenceProviderRequest(const CreateConferenceProviderRequest &other);

@@ -28,7 +28,7 @@ namespace LookoutforVision {
 
 class ListProjectsResponsePrivate;
 
-class QTAWS_EXPORT ListProjectsResponse : public LookoutforVisionResponse {
+class QTAWSLOOKOUTFORVISION_EXPORT ListProjectsResponse : public LookoutforVisionResponse {
     Q_OBJECT
 
 public:

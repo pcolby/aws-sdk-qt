@@ -27,7 +27,7 @@ namespace LexModelBuildingService {
 
 class PutBotAliasRequestPrivate;
 
-class QTAWS_EXPORT PutBotAliasRequest : public LexModelBuildingServiceRequest {
+class QTAWSLEXMODELBUILDINGSERVICE_EXPORT PutBotAliasRequest : public LexModelBuildingServiceRequest {
 
 public:
     PutBotAliasRequest(const PutBotAliasRequest &other);

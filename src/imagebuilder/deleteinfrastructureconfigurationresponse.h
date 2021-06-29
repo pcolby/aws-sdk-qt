@@ -28,7 +28,7 @@ namespace imagebuilder {
 
 class DeleteInfrastructureConfigurationResponsePrivate;
 
-class QTAWS_EXPORT DeleteInfrastructureConfigurationResponse : public imagebuilderResponse {
+class QTAWSIMAGEBUILDER_EXPORT DeleteInfrastructureConfigurationResponse : public imagebuilderResponse {
     Q_OBJECT
 
 public:

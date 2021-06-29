@@ -28,7 +28,7 @@ namespace MediaPackageVod {
 
 class ListPackagingGroupsResponsePrivate;
 
-class QTAWS_EXPORT ListPackagingGroupsResponse : public MediaPackageVodResponse {
+class QTAWSMEDIAPACKAGEVOD_EXPORT ListPackagingGroupsResponse : public MediaPackageVodResponse {
     Q_OBJECT
 
 public:

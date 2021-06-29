@@ -27,7 +27,7 @@ namespace Appflow {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public AppflowRequest {
+class QTAWSAPPFLOW_EXPORT UntagResourceRequest : public AppflowRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

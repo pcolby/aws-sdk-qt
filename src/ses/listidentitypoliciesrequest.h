@@ -27,7 +27,7 @@ namespace SES {
 
 class ListIdentityPoliciesRequestPrivate;
 
-class QTAWS_EXPORT ListIdentityPoliciesRequest : public SesRequest {
+class QTAWSSES_EXPORT ListIdentityPoliciesRequest : public SesRequest {
 
 public:
     ListIdentityPoliciesRequest(const ListIdentityPoliciesRequest &other);

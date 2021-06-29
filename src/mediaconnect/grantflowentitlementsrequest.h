@@ -27,7 +27,7 @@ namespace MediaConnect {
 
 class GrantFlowEntitlementsRequestPrivate;
 
-class QTAWS_EXPORT GrantFlowEntitlementsRequest : public MediaConnectRequest {
+class QTAWSMEDIACONNECT_EXPORT GrantFlowEntitlementsRequest : public MediaConnectRequest {
 
 public:
     GrantFlowEntitlementsRequest(const GrantFlowEntitlementsRequest &other);

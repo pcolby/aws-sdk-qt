@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsmwaaglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -51,7 +53,7 @@ class UntagResourceResponse;
 class UpdateEnvironmentRequest;
 class UpdateEnvironmentResponse;
 
-class QTAWS_EXPORT MwaaClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSMWAA_EXPORT MwaaClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace AppRunner {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public AppRunnerRequest {
+class QTAWSAPPRUNNER_EXPORT UntagResourceRequest : public AppRunnerRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

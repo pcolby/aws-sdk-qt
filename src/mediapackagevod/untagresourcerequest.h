@@ -27,7 +27,7 @@ namespace MediaPackageVod {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public MediaPackageVodRequest {
+class QTAWSMEDIAPACKAGEVOD_EXPORT UntagResourceRequest : public MediaPackageVodRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

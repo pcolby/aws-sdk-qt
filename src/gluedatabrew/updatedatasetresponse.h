@@ -28,7 +28,7 @@ namespace GlueDataBrew {
 
 class UpdateDatasetResponsePrivate;
 
-class QTAWS_EXPORT UpdateDatasetResponse : public GlueDataBrewResponse {
+class QTAWSGLUEDATABREW_EXPORT UpdateDatasetResponse : public GlueDataBrewResponse {
     Q_OBJECT
 
 public:

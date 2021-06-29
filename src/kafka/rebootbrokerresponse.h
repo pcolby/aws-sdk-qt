@@ -28,7 +28,7 @@ namespace Kafka {
 
 class RebootBrokerResponsePrivate;
 
-class QTAWS_EXPORT RebootBrokerResponse : public KafkaResponse {
+class QTAWSKAFKA_EXPORT RebootBrokerResponse : public KafkaResponse {
     Q_OBJECT
 
 public:

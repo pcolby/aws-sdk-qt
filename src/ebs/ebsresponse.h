@@ -21,6 +21,8 @@
 #define QTAWS_EBSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsebsglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace EBS {
 
 class EbsResponsePrivate;
 
-class QTAWS_EXPORT EbsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSEBS_EXPORT EbsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

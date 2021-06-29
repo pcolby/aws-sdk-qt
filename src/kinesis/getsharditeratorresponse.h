@@ -28,7 +28,7 @@ namespace Kinesis {
 
 class GetShardIteratorResponsePrivate;
 
-class QTAWS_EXPORT GetShardIteratorResponse : public KinesisResponse {
+class QTAWSKINESIS_EXPORT GetShardIteratorResponse : public KinesisResponse {
     Q_OBJECT
 
 public:

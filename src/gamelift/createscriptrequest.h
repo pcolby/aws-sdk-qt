@@ -27,7 +27,7 @@ namespace GameLift {
 
 class CreateScriptRequestPrivate;
 
-class QTAWS_EXPORT CreateScriptRequest : public GameLiftRequest {
+class QTAWSGAMELIFT_EXPORT CreateScriptRequest : public GameLiftRequest {
 
 public:
     CreateScriptRequest(const CreateScriptRequest &other);

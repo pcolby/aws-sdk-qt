@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class UpdateDataSetPermissionsRequestPrivate;
 
-class QTAWS_EXPORT UpdateDataSetPermissionsRequest : public QuickSightRequest {
+class QTAWSQUICKSIGHT_EXPORT UpdateDataSetPermissionsRequest : public QuickSightRequest {
 
 public:
     UpdateDataSetPermissionsRequest(const UpdateDataSetPermissionsRequest &other);

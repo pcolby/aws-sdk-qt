@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class GetMembersResponsePrivate;
 
-class QTAWS_EXPORT GetMembersResponse : public SecurityHubResponse {
+class QTAWSSECURITYHUB_EXPORT GetMembersResponse : public SecurityHubResponse {
     Q_OBJECT
 
 public:

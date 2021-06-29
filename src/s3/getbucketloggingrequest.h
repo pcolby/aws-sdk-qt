@@ -27,7 +27,7 @@ namespace S3 {
 
 class GetBucketLoggingRequestPrivate;
 
-class QTAWS_EXPORT GetBucketLoggingRequest : public S3Request {
+class QTAWSS3_EXPORT GetBucketLoggingRequest : public S3Request {
 
 public:
     GetBucketLoggingRequest(const GetBucketLoggingRequest &other);

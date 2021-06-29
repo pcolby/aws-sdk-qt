@@ -27,7 +27,7 @@ namespace CloudTrail {
 
 class ListTrailsRequestPrivate;
 
-class QTAWS_EXPORT ListTrailsRequest : public CloudTrailRequest {
+class QTAWSCLOUDTRAIL_EXPORT ListTrailsRequest : public CloudTrailRequest {
 
 public:
     ListTrailsRequest(const ListTrailsRequest &other);

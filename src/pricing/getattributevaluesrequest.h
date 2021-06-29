@@ -27,7 +27,7 @@ namespace Pricing {
 
 class GetAttributeValuesRequestPrivate;
 
-class QTAWS_EXPORT GetAttributeValuesRequest : public PricingRequest {
+class QTAWSPRICING_EXPORT GetAttributeValuesRequest : public PricingRequest {
 
 public:
     GetAttributeValuesRequest(const GetAttributeValuesRequest &other);

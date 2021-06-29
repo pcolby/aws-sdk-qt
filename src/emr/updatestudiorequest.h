@@ -27,7 +27,7 @@ namespace EMR {
 
 class UpdateStudioRequestPrivate;
 
-class QTAWS_EXPORT UpdateStudioRequest : public EmrRequest {
+class QTAWSEMR_EXPORT UpdateStudioRequest : public EmrRequest {
 
 public:
     UpdateStudioRequest(const UpdateStudioRequest &other);

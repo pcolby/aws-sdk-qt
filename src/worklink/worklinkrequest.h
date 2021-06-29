@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsworklinkglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace WorkLink {
 
 class WorkLinkRequestPrivate;
 
-class QTAWS_EXPORT WorkLinkRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSWORKLINK_EXPORT WorkLinkRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by WorkLink.

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsssmcontactsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace SSMContacts {
 
 class SSMContactsRequestPrivate;
 
-class QTAWS_EXPORT SSMContactsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSSMCONTACTS_EXPORT SSMContactsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SSMContacts.

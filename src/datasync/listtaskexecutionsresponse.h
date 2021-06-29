@@ -28,7 +28,7 @@ namespace DataSync {
 
 class ListTaskExecutionsResponsePrivate;
 
-class QTAWS_EXPORT ListTaskExecutionsResponse : public DataSyncResponse {
+class QTAWSDATASYNC_EXPORT ListTaskExecutionsResponse : public DataSyncResponse {
     Q_OBJECT
 
 public:

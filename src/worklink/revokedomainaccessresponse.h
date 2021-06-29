@@ -28,7 +28,7 @@ namespace WorkLink {
 
 class RevokeDomainAccessResponsePrivate;
 
-class QTAWS_EXPORT RevokeDomainAccessResponse : public WorkLinkResponse {
+class QTAWSWORKLINK_EXPORT RevokeDomainAccessResponse : public WorkLinkResponse {
     Q_OBJECT
 
 public:

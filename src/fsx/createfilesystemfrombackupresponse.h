@@ -28,7 +28,7 @@ namespace FSx {
 
 class CreateFileSystemFromBackupResponsePrivate;
 
-class QTAWS_EXPORT CreateFileSystemFromBackupResponse : public FSxResponse {
+class QTAWSFSX_EXPORT CreateFileSystemFromBackupResponse : public FSxResponse {
     Q_OBJECT
 
 public:

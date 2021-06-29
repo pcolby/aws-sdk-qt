@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSGLUEDATABREW_LIBRARY)
+
 add_library(QtAwsGlueDataBrew
   batchdeleterecipeversionrequest.h
   batchdeleterecipeversionrequest_p.h
@@ -113,6 +115,7 @@ add_library(QtAwsGlueDataBrew
   publishreciperequest_p.h
   publishreciperesponse.h
   publishreciperesponse_p.h
+  qtawsgluedatabrewglobal.h
   sendprojectsessionactionrequest.h
   sendprojectsessionactionrequest_p.h
   sendprojectsessionactionresponse.h

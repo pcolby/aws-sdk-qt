@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class CreateCertificateRequestPrivate;
 
-class QTAWS_EXPORT CreateCertificateRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT CreateCertificateRequest : public LightsailRequest {
 
 public:
     CreateCertificateRequest(const CreateCertificateRequest &other);

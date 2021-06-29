@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSIOTSECURETUNNELING_LIBRARY)
+
 add_library(QtAwsIoTSecureTunneling
   closetunnelrequest.h
   closetunnelrequest_p.h
@@ -25,6 +27,7 @@ add_library(QtAwsIoTSecureTunneling
   opentunnelrequest_p.h
   opentunnelresponse.h
   opentunnelresponse_p.h
+  qtawsiotsecuretunnelingglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

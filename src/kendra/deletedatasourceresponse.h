@@ -28,7 +28,7 @@ namespace kendra {
 
 class DeleteDataSourceResponsePrivate;
 
-class QTAWS_EXPORT DeleteDataSourceResponse : public kendraResponse {
+class QTAWSKENDRA_EXPORT DeleteDataSourceResponse : public kendraResponse {
     Q_OBJECT
 
 public:

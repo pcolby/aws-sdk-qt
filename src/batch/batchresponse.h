@@ -21,6 +21,8 @@
 #define QTAWS_BATCHRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsbatchglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Batch {
 
 class BatchResponsePrivate;
 
-class QTAWS_EXPORT BatchResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSBATCH_EXPORT BatchResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

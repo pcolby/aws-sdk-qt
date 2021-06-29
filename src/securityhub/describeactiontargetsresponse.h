@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class DescribeActionTargetsResponsePrivate;
 
-class QTAWS_EXPORT DescribeActionTargetsResponse : public SecurityHubResponse {
+class QTAWSSECURITYHUB_EXPORT DescribeActionTargetsResponse : public SecurityHubResponse {
     Q_OBJECT
 
 public:

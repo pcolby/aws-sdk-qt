@@ -27,7 +27,7 @@ namespace SSOAdmin {
 
 class DeleteAccountAssignmentRequestPrivate;
 
-class QTAWS_EXPORT DeleteAccountAssignmentRequest : public SSOAdminRequest {
+class QTAWSSSOADMIN_EXPORT DeleteAccountAssignmentRequest : public SSOAdminRequest {
 
 public:
     DeleteAccountAssignmentRequest(const DeleteAccountAssignmentRequest &other);

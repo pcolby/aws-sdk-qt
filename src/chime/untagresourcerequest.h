@@ -27,7 +27,7 @@ namespace Chime {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT UntagResourceRequest : public ChimeRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

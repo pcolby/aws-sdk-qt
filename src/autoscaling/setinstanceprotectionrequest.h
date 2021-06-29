@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class SetInstanceProtectionRequestPrivate;
 
-class QTAWS_EXPORT SetInstanceProtectionRequest : public AutoScalingRequest {
+class QTAWSAUTOSCALING_EXPORT SetInstanceProtectionRequest : public AutoScalingRequest {
 
 public:
     SetInstanceProtectionRequest(const SetInstanceProtectionRequest &other);

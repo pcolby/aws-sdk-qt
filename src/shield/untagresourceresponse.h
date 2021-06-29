@@ -28,7 +28,7 @@ namespace Shield {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public ShieldResponse {
+class QTAWSSHIELD_EXPORT UntagResourceResponse : public ShieldResponse {
     Q_OBJECT
 
 public:

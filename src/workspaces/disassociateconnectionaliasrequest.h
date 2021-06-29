@@ -27,7 +27,7 @@ namespace WorkSpaces {
 
 class DisassociateConnectionAliasRequestPrivate;
 
-class QTAWS_EXPORT DisassociateConnectionAliasRequest : public WorkSpacesRequest {
+class QTAWSWORKSPACES_EXPORT DisassociateConnectionAliasRequest : public WorkSpacesRequest {
 
 public:
     DisassociateConnectionAliasRequest(const DisassociateConnectionAliasRequest &other);

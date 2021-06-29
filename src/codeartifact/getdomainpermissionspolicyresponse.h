@@ -28,7 +28,7 @@ namespace CodeArtifact {
 
 class GetDomainPermissionsPolicyResponsePrivate;
 
-class QTAWS_EXPORT GetDomainPermissionsPolicyResponse : public CodeArtifactResponse {
+class QTAWSCODEARTIFACT_EXPORT GetDomainPermissionsPolicyResponse : public CodeArtifactResponse {
     Q_OBJECT
 
 public:

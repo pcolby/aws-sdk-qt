@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class CreateRealtimeLogConfigResponsePrivate;
 
-class QTAWS_EXPORT CreateRealtimeLogConfigResponse : public CloudFrontResponse {
+class QTAWSCLOUDFRONT_EXPORT CreateRealtimeLogConfigResponse : public CloudFrontResponse {
     Q_OBJECT
 
 public:

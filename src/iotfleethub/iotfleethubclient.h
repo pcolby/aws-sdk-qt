@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsiotfleethubglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -45,7 +47,7 @@ class UntagResourceResponse;
 class UpdateApplicationRequest;
 class UpdateApplicationResponse;
 
-class QTAWS_EXPORT IoTFleetHubClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSIOTFLEETHUB_EXPORT IoTFleetHubClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

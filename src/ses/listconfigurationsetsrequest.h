@@ -27,7 +27,7 @@ namespace SES {
 
 class ListConfigurationSetsRequestPrivate;
 
-class QTAWS_EXPORT ListConfigurationSetsRequest : public SesRequest {
+class QTAWSSES_EXPORT ListConfigurationSetsRequest : public SesRequest {
 
 public:
     ListConfigurationSetsRequest(const ListConfigurationSetsRequest &other);

@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class RemoveAttributesResponsePrivate;
 
-class QTAWS_EXPORT RemoveAttributesResponse : public PinpointResponse {
+class QTAWSPINPOINT_EXPORT RemoveAttributesResponse : public PinpointResponse {
     Q_OBJECT
 
 public:

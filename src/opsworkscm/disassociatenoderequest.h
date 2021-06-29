@@ -27,7 +27,7 @@ namespace OpsWorksCM {
 
 class DisassociateNodeRequestPrivate;
 
-class QTAWS_EXPORT DisassociateNodeRequest : public OpsWorksCMRequest {
+class QTAWSOPSWORKSCM_EXPORT DisassociateNodeRequest : public OpsWorksCMRequest {
 
 public:
     DisassociateNodeRequest(const DisassociateNodeRequest &other);

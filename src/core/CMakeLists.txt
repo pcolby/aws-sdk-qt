@@ -1,5 +1,4 @@
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
+add_compile_definitions(QTAWSCORE_LIBRARY)
 
 add_library(
   QtAwsCore

@@ -27,7 +27,7 @@ namespace KMS {
 
 class ConnectCustomKeyStoreRequestPrivate;
 
-class QTAWS_EXPORT ConnectCustomKeyStoreRequest : public KmsRequest {
+class QTAWSKMS_EXPORT ConnectCustomKeyStoreRequest : public KmsRequest {
 
 public:
     ConnectCustomKeyStoreRequest(const ConnectCustomKeyStoreRequest &other);

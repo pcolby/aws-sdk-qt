@@ -28,7 +28,7 @@ namespace ACMPCA {
 
 class PutPolicyResponsePrivate;
 
-class QTAWS_EXPORT PutPolicyResponse : public AcmpcaResponse {
+class QTAWSACMPCA_EXPORT PutPolicyResponse : public AcmpcaResponse {
     Q_OBJECT
 
 public:

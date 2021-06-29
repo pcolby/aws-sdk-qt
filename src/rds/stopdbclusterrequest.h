@@ -27,7 +27,7 @@ namespace RDS {
 
 class StopDBClusterRequestPrivate;
 
-class QTAWS_EXPORT StopDBClusterRequest : public RdsRequest {
+class QTAWSRDS_EXPORT StopDBClusterRequest : public RdsRequest {
 
 public:
     StopDBClusterRequest(const StopDBClusterRequest &other);

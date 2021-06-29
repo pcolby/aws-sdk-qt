@@ -27,7 +27,7 @@ namespace mgn {
 
 class DeleteSourceServerRequestPrivate;
 
-class QTAWS_EXPORT DeleteSourceServerRequest : public mgnRequest {
+class QTAWSMGN_EXPORT DeleteSourceServerRequest : public mgnRequest {
 
 public:
     DeleteSourceServerRequest(const DeleteSourceServerRequest &other);

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSAUGMENTEDAIRUNTIME_LIBRARY)
+
 add_library(QtAwsAugmentedAIRuntime
   augmentedairuntimeclient.h
   augmentedairuntimeclient_p.h
@@ -17,6 +19,7 @@ add_library(QtAwsAugmentedAIRuntime
   listhumanloopsrequest_p.h
   listhumanloopsresponse.h
   listhumanloopsresponse_p.h
+  qtawsaugmentedairuntimeglobal.h
   starthumanlooprequest.h
   starthumanlooprequest_p.h
   starthumanloopresponse.h

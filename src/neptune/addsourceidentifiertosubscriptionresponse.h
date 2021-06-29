@@ -28,7 +28,7 @@ namespace Neptune {
 
 class AddSourceIdentifierToSubscriptionResponsePrivate;
 
-class QTAWS_EXPORT AddSourceIdentifierToSubscriptionResponse : public NeptuneResponse {
+class QTAWSNEPTUNE_EXPORT AddSourceIdentifierToSubscriptionResponse : public NeptuneResponse {
     Q_OBJECT
 
 public:

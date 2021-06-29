@@ -28,7 +28,7 @@ namespace LakeFormation {
 
 class RemoveLFTagsFromResourceResponsePrivate;
 
-class QTAWS_EXPORT RemoveLFTagsFromResourceResponse : public LakeFormationResponse {
+class QTAWSLAKEFORMATION_EXPORT RemoveLFTagsFromResourceResponse : public LakeFormationResponse {
     Q_OBJECT
 
 public:

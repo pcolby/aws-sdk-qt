@@ -27,7 +27,7 @@ namespace WorkSpaces {
 
 class ModifyClientPropertiesRequestPrivate;
 
-class QTAWS_EXPORT ModifyClientPropertiesRequest : public WorkSpacesRequest {
+class QTAWSWORKSPACES_EXPORT ModifyClientPropertiesRequest : public WorkSpacesRequest {
 
 public:
     ModifyClientPropertiesRequest(const ModifyClientPropertiesRequest &other);

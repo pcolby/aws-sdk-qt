@@ -28,7 +28,7 @@ namespace Shield {
 
 class DeleteProtectionGroupResponsePrivate;
 
-class QTAWS_EXPORT DeleteProtectionGroupResponse : public ShieldResponse {
+class QTAWSSHIELD_EXPORT DeleteProtectionGroupResponse : public ShieldResponse {
     Q_OBJECT
 
 public:

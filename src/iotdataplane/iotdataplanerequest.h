@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsiotdataplaneglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace IoTDataPlane {
 
 class IoTDataPlaneRequestPrivate;
 
-class QTAWS_EXPORT IoTDataPlaneRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSIOTDATAPLANE_EXPORT IoTDataPlaneRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by IoTDataPlane.

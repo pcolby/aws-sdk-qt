@@ -28,7 +28,7 @@ namespace DataExchange {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public DataExchangeResponse {
+class QTAWSDATAEXCHANGE_EXPORT ListTagsForResourceResponse : public DataExchangeResponse {
     Q_OBJECT
 
 public:

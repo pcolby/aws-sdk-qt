@@ -28,7 +28,7 @@ namespace Polly {
 
 class PutLexiconResponsePrivate;
 
-class QTAWS_EXPORT PutLexiconResponse : public PollyResponse {
+class QTAWSPOLLY_EXPORT PutLexiconResponse : public PollyResponse {
     Q_OBJECT
 
 public:

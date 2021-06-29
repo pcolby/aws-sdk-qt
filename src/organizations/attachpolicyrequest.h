@@ -27,7 +27,7 @@ namespace Organizations {
 
 class AttachPolicyRequestPrivate;
 
-class QTAWS_EXPORT AttachPolicyRequest : public OrganizationsRequest {
+class QTAWSORGANIZATIONS_EXPORT AttachPolicyRequest : public OrganizationsRequest {
 
 public:
     AttachPolicyRequest(const AttachPolicyRequest &other);

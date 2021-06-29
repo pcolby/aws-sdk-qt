@@ -27,7 +27,7 @@ namespace AppStream {
 
 class DisassociateFleetRequestPrivate;
 
-class QTAWS_EXPORT DisassociateFleetRequest : public AppStreamRequest {
+class QTAWSAPPSTREAM_EXPORT DisassociateFleetRequest : public AppStreamRequest {
 
 public:
     DisassociateFleetRequest(const DisassociateFleetRequest &other);

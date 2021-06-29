@@ -27,7 +27,7 @@ namespace Synthetics {
 
 class GetCanaryRunsRequestPrivate;
 
-class QTAWS_EXPORT GetCanaryRunsRequest : public SyntheticsRequest {
+class QTAWSSYNTHETICS_EXPORT GetCanaryRunsRequest : public SyntheticsRequest {
 
 public:
     GetCanaryRunsRequest(const GetCanaryRunsRequest &other);

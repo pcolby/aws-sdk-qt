@@ -27,7 +27,7 @@ namespace IoT {
 
 class ListIndicesRequestPrivate;
 
-class QTAWS_EXPORT ListIndicesRequest : public IoTRequest {
+class QTAWSIOT_EXPORT ListIndicesRequest : public IoTRequest {
 
 public:
     ListIndicesRequest(const ListIndicesRequest &other);

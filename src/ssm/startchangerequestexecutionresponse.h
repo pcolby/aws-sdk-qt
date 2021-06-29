@@ -28,7 +28,7 @@ namespace SSM {
 
 class StartChangeRequestExecutionResponsePrivate;
 
-class QTAWS_EXPORT StartChangeRequestExecutionResponse : public SsmResponse {
+class QTAWSSSM_EXPORT StartChangeRequestExecutionResponse : public SsmResponse {
     Q_OBJECT
 
 public:

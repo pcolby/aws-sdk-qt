@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeDBInstanceAutomatedBackupsResponsePrivate;
 
-class QTAWS_EXPORT DescribeDBInstanceAutomatedBackupsResponse : public RdsResponse {
+class QTAWSRDS_EXPORT DescribeDBInstanceAutomatedBackupsResponse : public RdsResponse {
     Q_OBJECT
 
 public:

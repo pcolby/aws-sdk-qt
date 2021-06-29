@@ -27,7 +27,7 @@ namespace LakeFormation {
 
 class DeregisterResourceRequestPrivate;
 
-class QTAWS_EXPORT DeregisterResourceRequest : public LakeFormationRequest {
+class QTAWSLAKEFORMATION_EXPORT DeregisterResourceRequest : public LakeFormationRequest {
 
 public:
     DeregisterResourceRequest(const DeregisterResourceRequest &other);

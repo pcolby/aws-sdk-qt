@@ -28,7 +28,7 @@ namespace AppMesh {
 
 class UpdateGatewayRouteResponsePrivate;
 
-class QTAWS_EXPORT UpdateGatewayRouteResponse : public AppMeshResponse {
+class QTAWSAPPMESH_EXPORT UpdateGatewayRouteResponse : public AppMeshResponse {
     Q_OBJECT
 
 public:

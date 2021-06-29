@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsredshiftdataapiserviceglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -47,7 +49,7 @@ class ListStatementsResponse;
 class ListTablesRequest;
 class ListTablesResponse;
 
-class QTAWS_EXPORT RedshiftDataAPIServiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSREDSHIFTDATAAPISERVICE_EXPORT RedshiftDataAPIServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

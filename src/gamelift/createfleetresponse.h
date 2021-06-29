@@ -28,7 +28,7 @@ namespace GameLift {
 
 class CreateFleetResponsePrivate;
 
-class QTAWS_EXPORT CreateFleetResponse : public GameLiftResponse {
+class QTAWSGAMELIFT_EXPORT CreateFleetResponse : public GameLiftResponse {
     Q_OBJECT
 
 public:

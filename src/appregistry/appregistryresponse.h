@@ -21,6 +21,8 @@
 #define QTAWS_APPREGISTRYRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsappregistryglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace AppRegistry {
 
 class AppRegistryResponsePrivate;
 
-class QTAWS_EXPORT AppRegistryResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSAPPREGISTRY_EXPORT AppRegistryResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

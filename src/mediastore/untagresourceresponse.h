@@ -28,7 +28,7 @@ namespace MediaStore {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public MediaStoreResponse {
+class QTAWSMEDIASTORE_EXPORT UntagResourceResponse : public MediaStoreResponse {
     Q_OBJECT
 
 public:

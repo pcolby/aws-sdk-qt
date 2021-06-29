@@ -27,7 +27,7 @@ namespace IoT1ClickDevicesService {
 
 class GetDeviceMethodsRequestPrivate;
 
-class QTAWS_EXPORT GetDeviceMethodsRequest : public IoT1ClickDevicesServiceRequest {
+class QTAWSIOT1CLICKDEVICESSERVICE_EXPORT GetDeviceMethodsRequest : public IoT1ClickDevicesServiceRequest {
 
 public:
     GetDeviceMethodsRequest(const GetDeviceMethodsRequest &other);

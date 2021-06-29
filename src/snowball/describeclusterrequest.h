@@ -27,7 +27,7 @@ namespace Snowball {
 
 class DescribeClusterRequestPrivate;
 
-class QTAWS_EXPORT DescribeClusterRequest : public SnowballRequest {
+class QTAWSSNOWBALL_EXPORT DescribeClusterRequest : public SnowballRequest {
 
 public:
     DescribeClusterRequest(const DescribeClusterRequest &other);

@@ -28,7 +28,7 @@ namespace Connect {
 
 class ListSecurityProfilesResponsePrivate;
 
-class QTAWS_EXPORT ListSecurityProfilesResponse : public ConnectResponse {
+class QTAWSCONNECT_EXPORT ListSecurityProfilesResponse : public ConnectResponse {
     Q_OBJECT
 
 public:

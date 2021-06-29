@@ -27,7 +27,7 @@ namespace Macie2 {
 
 class DeleteMemberRequestPrivate;
 
-class QTAWS_EXPORT DeleteMemberRequest : public Macie2Request {
+class QTAWSMACIE2_EXPORT DeleteMemberRequest : public Macie2Request {
 
 public:
     DeleteMemberRequest(const DeleteMemberRequest &other);

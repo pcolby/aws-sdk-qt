@@ -21,6 +21,8 @@
 #define QTAWS_IOT1CLICKPROJECTSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsiot1clickprojectsglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace IoT1ClickProjects {
 
 class IoT1ClickProjectsResponsePrivate;
 
-class QTAWS_EXPORT IoT1ClickProjectsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSIOT1CLICKPROJECTS_EXPORT IoT1ClickProjectsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace SSMIncidents {
 
 class ListTimelineEventsResponsePrivate;
 
-class QTAWS_EXPORT ListTimelineEventsResponse : public SSMIncidentsResponse {
+class QTAWSSSMINCIDENTS_EXPORT ListTimelineEventsResponse : public SSMIncidentsResponse {
     Q_OBJECT
 
 public:

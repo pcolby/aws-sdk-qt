@@ -27,7 +27,7 @@ namespace DataExchange {
 
 class GetAssetRequestPrivate;
 
-class QTAWS_EXPORT GetAssetRequest : public DataExchangeRequest {
+class QTAWSDATAEXCHANGE_EXPORT GetAssetRequest : public DataExchangeRequest {
 
 public:
     GetAssetRequest(const GetAssetRequest &other);

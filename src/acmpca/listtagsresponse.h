@@ -28,7 +28,7 @@ namespace ACMPCA {
 
 class ListTagsResponsePrivate;
 
-class QTAWS_EXPORT ListTagsResponse : public AcmpcaResponse {
+class QTAWSACMPCA_EXPORT ListTagsResponse : public AcmpcaResponse {
     Q_OBJECT
 
 public:

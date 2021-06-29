@@ -27,7 +27,7 @@ namespace NetworkManager {
 
 class GetConnectionsRequestPrivate;
 
-class QTAWS_EXPORT GetConnectionsRequest : public NetworkManagerRequest {
+class QTAWSNETWORKMANAGER_EXPORT GetConnectionsRequest : public NetworkManagerRequest {
 
 public:
     GetConnectionsRequest(const GetConnectionsRequest &other);

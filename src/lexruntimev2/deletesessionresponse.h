@@ -28,7 +28,7 @@ namespace LexRuntimeV2 {
 
 class DeleteSessionResponsePrivate;
 
-class QTAWS_EXPORT DeleteSessionResponse : public LexRuntimeV2Response {
+class QTAWSLEXRUNTIMEV2_EXPORT DeleteSessionResponse : public LexRuntimeV2Response {
     Q_OBJECT
 
 public:

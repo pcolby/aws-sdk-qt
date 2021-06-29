@@ -28,7 +28,7 @@ namespace ACM {
 
 class RemoveTagsFromCertificateResponsePrivate;
 
-class QTAWS_EXPORT RemoveTagsFromCertificateResponse : public AcmResponse {
+class QTAWSACM_EXPORT RemoveTagsFromCertificateResponse : public AcmResponse {
     Q_OBJECT
 
 public:

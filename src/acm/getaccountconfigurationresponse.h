@@ -28,7 +28,7 @@ namespace ACM {
 
 class GetAccountConfigurationResponsePrivate;
 
-class QTAWS_EXPORT GetAccountConfigurationResponse : public AcmResponse {
+class QTAWSACM_EXPORT GetAccountConfigurationResponse : public AcmResponse {
     Q_OBJECT
 
 public:

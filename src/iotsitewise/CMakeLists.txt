@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSIOTSITEWISE_LIBRARY)
+
 add_library(QtAwsIoTSiteWise
   associateassetsrequest.h
   associateassetsrequest_p.h
@@ -193,6 +195,7 @@ add_library(QtAwsIoTSiteWise
   putloggingoptionsrequest_p.h
   putloggingoptionsresponse.h
   putloggingoptionsresponse_p.h
+  qtawsiotsitewiseglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

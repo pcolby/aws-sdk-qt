@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCODEGURUREVIEWER_LIBRARY)
+
 add_library(QtAwsCodeGuruReviewer
   associaterepositoryrequest.h
   associaterepositoryrequest_p.h
@@ -53,6 +55,7 @@ add_library(QtAwsCodeGuruReviewer
   putrecommendationfeedbackrequest_p.h
   putrecommendationfeedbackresponse.h
   putrecommendationfeedbackresponse_p.h
+  qtawscodegurureviewerglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

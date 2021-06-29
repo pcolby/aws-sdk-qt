@@ -27,7 +27,7 @@ namespace Cloud9 {
 
 class UpdateEnvironmentRequestPrivate;
 
-class QTAWS_EXPORT UpdateEnvironmentRequest : public Cloud9Request {
+class QTAWSCLOUD9_EXPORT UpdateEnvironmentRequest : public Cloud9Request {
 
 public:
     UpdateEnvironmentRequest(const UpdateEnvironmentRequest &other);

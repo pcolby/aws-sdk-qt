@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawslexmodelbuildingserviceglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -107,7 +109,7 @@ class TagResourceResponse;
 class UntagResourceRequest;
 class UntagResourceResponse;
 
-class QTAWS_EXPORT LexModelBuildingServiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSLEXMODELBUILDINGSERVICE_EXPORT LexModelBuildingServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

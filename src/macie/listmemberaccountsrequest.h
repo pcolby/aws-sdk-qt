@@ -27,7 +27,7 @@ namespace Macie {
 
 class ListMemberAccountsRequestPrivate;
 
-class QTAWS_EXPORT ListMemberAccountsRequest : public MacieRequest {
+class QTAWSMACIE_EXPORT ListMemberAccountsRequest : public MacieRequest {
 
 public:
     ListMemberAccountsRequest(const ListMemberAccountsRequest &other);

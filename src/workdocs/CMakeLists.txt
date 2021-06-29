@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSWORKDOCS_LIBRARY)
+
 add_library(QtAwsWorkDocs
   abortdocumentversionuploadrequest.h
   abortdocumentversionuploadrequest_p.h
@@ -139,6 +141,7 @@ add_library(QtAwsWorkDocs
   initiatedocumentversionuploadrequest_p.h
   initiatedocumentversionuploadresponse.h
   initiatedocumentversionuploadresponse_p.h
+  qtawsworkdocsglobal.h
   removeallresourcepermissionsrequest.h
   removeallresourcepermissionsrequest_p.h
   removeallresourcepermissionsresponse.h

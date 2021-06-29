@@ -27,7 +27,7 @@ namespace CloudFormation {
 
 class CancelUpdateStackRequestPrivate;
 
-class QTAWS_EXPORT CancelUpdateStackRequest : public CloudFormationRequest {
+class QTAWSCLOUDFORMATION_EXPORT CancelUpdateStackRequest : public CloudFormationRequest {
 
 public:
     CancelUpdateStackRequest(const CancelUpdateStackRequest &other);

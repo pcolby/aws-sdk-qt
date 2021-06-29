@@ -27,7 +27,7 @@ namespace ComputeOptimizer {
 
 class ExportEBSVolumeRecommendationsRequestPrivate;
 
-class QTAWS_EXPORT ExportEBSVolumeRecommendationsRequest : public ComputeOptimizerRequest {
+class QTAWSCOMPUTEOPTIMIZER_EXPORT ExportEBSVolumeRecommendationsRequest : public ComputeOptimizerRequest {
 
 public:
     ExportEBSVolumeRecommendationsRequest(const ExportEBSVolumeRecommendationsRequest &other);

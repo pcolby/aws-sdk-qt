@@ -21,6 +21,8 @@
 #define QTAWS_MGNRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsmgnglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace mgn {
 
 class mgnResponsePrivate;
 
-class QTAWS_EXPORT mgnResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSMGN_EXPORT mgnResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

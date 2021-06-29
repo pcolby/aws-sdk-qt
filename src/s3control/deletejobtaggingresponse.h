@@ -28,7 +28,7 @@ namespace S3Control {
 
 class DeleteJobTaggingResponsePrivate;
 
-class QTAWS_EXPORT DeleteJobTaggingResponse : public S3ControlResponse {
+class QTAWSS3CONTROL_EXPORT DeleteJobTaggingResponse : public S3ControlResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace ResourceGroups {
 
 class UpdateGroupResponsePrivate;
 
-class QTAWS_EXPORT UpdateGroupResponse : public ResourceGroupsResponse {
+class QTAWSRESOURCEGROUPS_EXPORT UpdateGroupResponse : public ResourceGroupsResponse {
     Q_OBJECT
 
 public:

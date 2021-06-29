@@ -21,6 +21,8 @@
 #define QTAWS_CHIMERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawschimeglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Chime {
 
 class ChimeResponsePrivate;
 
-class QTAWS_EXPORT ChimeResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCHIME_EXPORT ChimeResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace CostExplorer {
 
 class GetSavingsPlansPurchaseRecommendationRequestPrivate;
 
-class QTAWS_EXPORT GetSavingsPlansPurchaseRecommendationRequest : public CostExplorerRequest {
+class QTAWSCOSTEXPLORER_EXPORT GetSavingsPlansPurchaseRecommendationRequest : public CostExplorerRequest {
 
 public:
     GetSavingsPlansPurchaseRecommendationRequest(const GetSavingsPlansPurchaseRecommendationRequest &other);

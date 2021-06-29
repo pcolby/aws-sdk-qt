@@ -27,7 +27,7 @@ namespace ElasticsearchService {
 
 class DescribeElasticsearchInstanceTypeLimitsRequestPrivate;
 
-class QTAWS_EXPORT DescribeElasticsearchInstanceTypeLimitsRequest : public ElasticsearchServiceRequest {
+class QTAWSELASTICSEARCHSERVICE_EXPORT DescribeElasticsearchInstanceTypeLimitsRequest : public ElasticsearchServiceRequest {
 
 public:
     DescribeElasticsearchInstanceTypeLimitsRequest(const DescribeElasticsearchInstanceTypeLimitsRequest &other);

@@ -27,7 +27,7 @@ namespace ECR {
 
 class PutImageScanningConfigurationRequestPrivate;
 
-class QTAWS_EXPORT PutImageScanningConfigurationRequest : public EcrRequest {
+class QTAWSECR_EXPORT PutImageScanningConfigurationRequest : public EcrRequest {
 
 public:
     PutImageScanningConfigurationRequest(const PutImageScanningConfigurationRequest &other);

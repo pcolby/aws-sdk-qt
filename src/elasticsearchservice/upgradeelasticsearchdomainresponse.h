@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 
 class UpgradeElasticsearchDomainResponsePrivate;
 
-class QTAWS_EXPORT UpgradeElasticsearchDomainResponse : public ElasticsearchServiceResponse {
+class QTAWSELASTICSEARCHSERVICE_EXPORT UpgradeElasticsearchDomainResponse : public ElasticsearchServiceResponse {
     Q_OBJECT
 
 public:

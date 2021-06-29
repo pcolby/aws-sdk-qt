@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class GetOriginRequestPolicyResponsePrivate;
 
-class QTAWS_EXPORT GetOriginRequestPolicyResponse : public CloudFrontResponse {
+class QTAWSCLOUDFRONT_EXPORT GetOriginRequestPolicyResponse : public CloudFrontResponse {
     Q_OBJECT
 
 public:

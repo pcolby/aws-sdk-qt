@@ -27,7 +27,7 @@ namespace ApiGatewayV2 {
 
 class UpdateModelRequestPrivate;
 
-class QTAWS_EXPORT UpdateModelRequest : public ApiGatewayV2Request {
+class QTAWSAPIGATEWAYV2_EXPORT UpdateModelRequest : public ApiGatewayV2Request {
 
 public:
     UpdateModelRequest(const UpdateModelRequest &other);

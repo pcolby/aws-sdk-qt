@@ -28,7 +28,7 @@ namespace XRay {
 
 class GetSamplingTargetsResponsePrivate;
 
-class QTAWS_EXPORT GetSamplingTargetsResponse : public XRayResponse {
+class QTAWSXRAY_EXPORT GetSamplingTargetsResponse : public XRayResponse {
     Q_OBJECT
 
 public:

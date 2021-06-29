@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsbatchglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -67,7 +69,7 @@ class UpdateComputeEnvironmentResponse;
 class UpdateJobQueueRequest;
 class UpdateJobQueueResponse;
 
-class QTAWS_EXPORT BatchClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSBATCH_EXPORT BatchClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

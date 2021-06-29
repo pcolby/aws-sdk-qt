@@ -28,7 +28,7 @@ namespace IoTWireless {
 
 class ListWirelessGatewaysResponsePrivate;
 
-class QTAWS_EXPORT ListWirelessGatewaysResponse : public IoTWirelessResponse {
+class QTAWSIOTWIRELESS_EXPORT ListWirelessGatewaysResponse : public IoTWirelessResponse {
     Q_OBJECT
 
 public:

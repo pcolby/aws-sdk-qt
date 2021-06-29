@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 
 class CancelReplayResponsePrivate;
 
-class QTAWS_EXPORT CancelReplayResponse : public CloudWatchEventsResponse {
+class QTAWSCLOUDWATCHEVENTS_EXPORT CancelReplayResponse : public CloudWatchEventsResponse {
     Q_OBJECT
 
 public:

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsefsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace EFS {
 
 class EfsRequestPrivate;
 
-class QTAWS_EXPORT EfsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSEFS_EXPORT EfsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by EFS.

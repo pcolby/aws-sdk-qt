@@ -21,6 +21,8 @@
 #define QTAWS_RESOURCEGROUPSTAGGINGAPIRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsresourcegroupstaggingapiglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace ResourceGroupsTaggingAPI {
 
 class ResourceGroupsTaggingAPIResponsePrivate;
 
-class QTAWS_EXPORT ResourceGroupsTaggingAPIResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSRESOURCEGROUPSTAGGINGAPI_EXPORT ResourceGroupsTaggingAPIResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

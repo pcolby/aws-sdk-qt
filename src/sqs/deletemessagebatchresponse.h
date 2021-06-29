@@ -28,7 +28,7 @@ namespace SQS {
 
 class DeleteMessageBatchResponsePrivate;
 
-class QTAWS_EXPORT DeleteMessageBatchResponse : public SqsResponse {
+class QTAWSSQS_EXPORT DeleteMessageBatchResponse : public SqsResponse {
     Q_OBJECT
 
 public:

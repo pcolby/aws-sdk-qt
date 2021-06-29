@@ -27,7 +27,7 @@ namespace NimbleStudio {
 
 class CreateStudioRequestPrivate;
 
-class QTAWS_EXPORT CreateStudioRequest : public NimbleStudioRequest {
+class QTAWSNIMBLESTUDIO_EXPORT CreateStudioRequest : public NimbleStudioRequest {
 
 public:
     CreateStudioRequest(const CreateStudioRequest &other);

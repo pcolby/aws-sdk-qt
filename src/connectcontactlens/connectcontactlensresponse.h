@@ -21,6 +21,8 @@
 #define QTAWS_CONNECTCONTACTLENSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsconnectcontactlensglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace ConnectContactLens {
 
 class ConnectContactLensResponsePrivate;
 
-class QTAWS_EXPORT ConnectContactLensResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCONNECTCONTACTLENS_EXPORT ConnectContactLensResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

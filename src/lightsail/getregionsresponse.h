@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class GetRegionsResponsePrivate;
 
-class QTAWS_EXPORT GetRegionsResponse : public LightsailResponse {
+class QTAWSLIGHTSAIL_EXPORT GetRegionsResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

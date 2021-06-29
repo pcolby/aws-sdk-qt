@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsmediastoreglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -71,7 +73,7 @@ class TagResourceResponse;
 class UntagResourceRequest;
 class UntagResourceResponse;
 
-class QTAWS_EXPORT MediaStoreClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSMEDIASTORE_EXPORT MediaStoreClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

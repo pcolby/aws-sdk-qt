@@ -27,7 +27,7 @@ namespace Comprehend {
 
 class StartPiiEntitiesDetectionJobRequestPrivate;
 
-class QTAWS_EXPORT StartPiiEntitiesDetectionJobRequest : public ComprehendRequest {
+class QTAWSCOMPREHEND_EXPORT StartPiiEntitiesDetectionJobRequest : public ComprehendRequest {
 
 public:
     StartPiiEntitiesDetectionJobRequest(const StartPiiEntitiesDetectionJobRequest &other);

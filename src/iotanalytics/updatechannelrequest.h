@@ -27,7 +27,7 @@ namespace IoTAnalytics {
 
 class UpdateChannelRequestPrivate;
 
-class QTAWS_EXPORT UpdateChannelRequest : public IoTAnalyticsRequest {
+class QTAWSIOTANALYTICS_EXPORT UpdateChannelRequest : public IoTAnalyticsRequest {
 
 public:
     UpdateChannelRequest(const UpdateChannelRequest &other);

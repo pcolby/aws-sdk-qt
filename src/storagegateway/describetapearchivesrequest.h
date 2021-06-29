@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class DescribeTapeArchivesRequestPrivate;
 
-class QTAWS_EXPORT DescribeTapeArchivesRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT DescribeTapeArchivesRequest : public StorageGatewayRequest {
 
 public:
     DescribeTapeArchivesRequest(const DescribeTapeArchivesRequest &other);

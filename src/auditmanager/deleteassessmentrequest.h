@@ -27,7 +27,7 @@ namespace AuditManager {
 
 class DeleteAssessmentRequestPrivate;
 
-class QTAWS_EXPORT DeleteAssessmentRequest : public AuditManagerRequest {
+class QTAWSAUDITMANAGER_EXPORT DeleteAssessmentRequest : public AuditManagerRequest {
 
 public:
     DeleteAssessmentRequest(const DeleteAssessmentRequest &other);

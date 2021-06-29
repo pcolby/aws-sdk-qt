@@ -28,7 +28,7 @@ namespace FinSpaceData {
 
 class GetWorkingLocationResponsePrivate;
 
-class QTAWS_EXPORT GetWorkingLocationResponse : public FinSpaceDataResponse {
+class QTAWSFINSPACEDATA_EXPORT GetWorkingLocationResponse : public FinSpaceDataResponse {
     Q_OBJECT
 
 public:

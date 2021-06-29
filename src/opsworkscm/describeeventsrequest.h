@@ -27,7 +27,7 @@ namespace OpsWorksCM {
 
 class DescribeEventsRequestPrivate;
 
-class QTAWS_EXPORT DescribeEventsRequest : public OpsWorksCMRequest {
+class QTAWSOPSWORKSCM_EXPORT DescribeEventsRequest : public OpsWorksCMRequest {
 
 public:
     DescribeEventsRequest(const DescribeEventsRequest &other);

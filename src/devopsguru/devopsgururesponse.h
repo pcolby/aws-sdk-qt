@@ -21,6 +21,8 @@
 #define QTAWS_DEVOPSGURURESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsdevopsguruglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace DevOpsGuru {
 
 class DevOpsGuruResponsePrivate;
 
-class QTAWS_EXPORT DevOpsGuruResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSDEVOPSGURU_EXPORT DevOpsGuruResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

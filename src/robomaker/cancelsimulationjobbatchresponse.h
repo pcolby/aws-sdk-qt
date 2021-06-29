@@ -28,7 +28,7 @@ namespace RoboMaker {
 
 class CancelSimulationJobBatchResponsePrivate;
 
-class QTAWS_EXPORT CancelSimulationJobBatchResponse : public RoboMakerResponse {
+class QTAWSROBOMAKER_EXPORT CancelSimulationJobBatchResponse : public RoboMakerResponse {
     Q_OBJECT
 
 public:

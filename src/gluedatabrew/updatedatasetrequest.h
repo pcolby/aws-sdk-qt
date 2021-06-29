@@ -27,7 +27,7 @@ namespace GlueDataBrew {
 
 class UpdateDatasetRequestPrivate;
 
-class QTAWS_EXPORT UpdateDatasetRequest : public GlueDataBrewRequest {
+class QTAWSGLUEDATABREW_EXPORT UpdateDatasetRequest : public GlueDataBrewRequest {
 
 public:
     UpdateDatasetRequest(const UpdateDatasetRequest &other);

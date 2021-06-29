@@ -27,7 +27,7 @@ namespace DatabaseMigrationService {
 
 class DescribeConnectionsRequestPrivate;
 
-class QTAWS_EXPORT DescribeConnectionsRequest : public DatabaseMigrationServiceRequest {
+class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DescribeConnectionsRequest : public DatabaseMigrationServiceRequest {
 
 public:
     DescribeConnectionsRequest(const DescribeConnectionsRequest &other);

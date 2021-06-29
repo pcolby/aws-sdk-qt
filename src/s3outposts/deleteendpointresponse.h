@@ -28,7 +28,7 @@ namespace S3Outposts {
 
 class DeleteEndpointResponsePrivate;
 
-class QTAWS_EXPORT DeleteEndpointResponse : public S3OutpostsResponse {
+class QTAWSS3OUTPOSTS_EXPORT DeleteEndpointResponse : public S3OutpostsResponse {
     Q_OBJECT
 
 public:

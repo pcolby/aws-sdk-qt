@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class ListInstanceProfilesRequestPrivate;
 
-class QTAWS_EXPORT ListInstanceProfilesRequest : public DeviceFarmRequest {
+class QTAWSDEVICEFARM_EXPORT ListInstanceProfilesRequest : public DeviceFarmRequest {
 
 public:
     ListInstanceProfilesRequest(const ListInstanceProfilesRequest &other);

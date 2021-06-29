@@ -27,7 +27,7 @@ namespace Glue {
 
 class StartJobRunRequestPrivate;
 
-class QTAWS_EXPORT StartJobRunRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT StartJobRunRequest : public GlueRequest {
 
 public:
     StartJobRunRequest(const StartJobRunRequest &other);

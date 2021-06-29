@@ -21,6 +21,8 @@
 #define QTAWS_CODEDEPLOYRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawscodedeployglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace CodeDeploy {
 
 class CodeDeployResponsePrivate;
 
-class QTAWS_EXPORT CodeDeployResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCODEDEPLOY_EXPORT CodeDeployResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

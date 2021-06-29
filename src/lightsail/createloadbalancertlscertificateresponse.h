@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class CreateLoadBalancerTlsCertificateResponsePrivate;
 
-class QTAWS_EXPORT CreateLoadBalancerTlsCertificateResponse : public LightsailResponse {
+class QTAWSLIGHTSAIL_EXPORT CreateLoadBalancerTlsCertificateResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

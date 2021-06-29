@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class DeleteGroupMembershipRequestPrivate;
 
-class QTAWS_EXPORT DeleteGroupMembershipRequest : public QuickSightRequest {
+class QTAWSQUICKSIGHT_EXPORT DeleteGroupMembershipRequest : public QuickSightRequest {
 
 public:
     DeleteGroupMembershipRequest(const DeleteGroupMembershipRequest &other);

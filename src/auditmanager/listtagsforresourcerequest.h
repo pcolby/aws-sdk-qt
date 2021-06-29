@@ -27,7 +27,7 @@ namespace AuditManager {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public AuditManagerRequest {
+class QTAWSAUDITMANAGER_EXPORT ListTagsForResourceRequest : public AuditManagerRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

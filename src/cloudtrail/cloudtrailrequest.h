@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawscloudtrailglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace CloudTrail {
 
 class CloudTrailRequestPrivate;
 
-class QTAWS_EXPORT CloudTrailRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCLOUDTRAIL_EXPORT CloudTrailRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CloudTrail.

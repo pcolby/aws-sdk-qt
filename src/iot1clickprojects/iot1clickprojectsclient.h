@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsiot1clickprojectsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -61,7 +63,7 @@ class UpdatePlacementResponse;
 class UpdateProjectRequest;
 class UpdateProjectResponse;
 
-class QTAWS_EXPORT IoT1ClickProjectsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSIOT1CLICKPROJECTS_EXPORT IoT1ClickProjectsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

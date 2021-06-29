@@ -27,7 +27,7 @@ namespace Connect {
 
 class DisassociateSecurityKeyRequestPrivate;
 
-class QTAWS_EXPORT DisassociateSecurityKeyRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT DisassociateSecurityKeyRequest : public ConnectRequest {
 
 public:
     DisassociateSecurityKeyRequest(const DisassociateSecurityKeyRequest &other);

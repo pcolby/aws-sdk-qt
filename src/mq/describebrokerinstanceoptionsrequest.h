@@ -27,7 +27,7 @@ namespace MQ {
 
 class DescribeBrokerInstanceOptionsRequestPrivate;
 
-class QTAWS_EXPORT DescribeBrokerInstanceOptionsRequest : public MqRequest {
+class QTAWSMQ_EXPORT DescribeBrokerInstanceOptionsRequest : public MqRequest {
 
 public:
     DescribeBrokerInstanceOptionsRequest(const DescribeBrokerInstanceOptionsRequest &other);

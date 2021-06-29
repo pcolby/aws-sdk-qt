@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class EnableAddOnRequestPrivate;
 
-class QTAWS_EXPORT EnableAddOnRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT EnableAddOnRequest : public LightsailRequest {
 
 public:
     EnableAddOnRequest(const EnableAddOnRequest &other);

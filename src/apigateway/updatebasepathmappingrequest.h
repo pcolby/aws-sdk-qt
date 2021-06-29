@@ -27,7 +27,7 @@ namespace APIGateway {
 
 class UpdateBasePathMappingRequestPrivate;
 
-class QTAWS_EXPORT UpdateBasePathMappingRequest : public APIGatewayRequest {
+class QTAWSAPIGATEWAY_EXPORT UpdateBasePathMappingRequest : public APIGatewayRequest {
 
 public:
     UpdateBasePathMappingRequest(const UpdateBasePathMappingRequest &other);

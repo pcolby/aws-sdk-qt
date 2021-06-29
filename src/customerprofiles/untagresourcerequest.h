@@ -27,7 +27,7 @@ namespace CustomerProfiles {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public CustomerProfilesRequest {
+class QTAWSCUSTOMERPROFILES_EXPORT UntagResourceRequest : public CustomerProfilesRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

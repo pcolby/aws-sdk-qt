@@ -27,7 +27,7 @@ namespace MediaLive {
 
 class DeleteInputRequestPrivate;
 
-class QTAWS_EXPORT DeleteInputRequest : public MediaLiveRequest {
+class QTAWSMEDIALIVE_EXPORT DeleteInputRequest : public MediaLiveRequest {
 
 public:
     DeleteInputRequest(const DeleteInputRequest &other);

@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class CancelInputDeviceTransferResponsePrivate;
 
-class QTAWS_EXPORT CancelInputDeviceTransferResponse : public MediaLiveResponse {
+class QTAWSMEDIALIVE_EXPORT CancelInputDeviceTransferResponse : public MediaLiveResponse {
     Q_OBJECT
 
 public:

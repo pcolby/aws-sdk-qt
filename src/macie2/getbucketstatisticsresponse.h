@@ -28,7 +28,7 @@ namespace Macie2 {
 
 class GetBucketStatisticsResponsePrivate;
 
-class QTAWS_EXPORT GetBucketStatisticsResponse : public Macie2Response {
+class QTAWSMACIE2_EXPORT GetBucketStatisticsResponse : public Macie2Response {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class DetachCertificateFromDistributionRequestPrivate;
 
-class QTAWS_EXPORT DetachCertificateFromDistributionRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT DetachCertificateFromDistributionRequest : public LightsailRequest {
 
 public:
     DetachCertificateFromDistributionRequest(const DetachCertificateFromDistributionRequest &other);

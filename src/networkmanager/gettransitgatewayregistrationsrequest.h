@@ -27,7 +27,7 @@ namespace NetworkManager {
 
 class GetTransitGatewayRegistrationsRequestPrivate;
 
-class QTAWS_EXPORT GetTransitGatewayRegistrationsRequest : public NetworkManagerRequest {
+class QTAWSNETWORKMANAGER_EXPORT GetTransitGatewayRegistrationsRequest : public NetworkManagerRequest {
 
 public:
     GetTransitGatewayRegistrationsRequest(const GetTransitGatewayRegistrationsRequest &other);

@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class DeregisterEventTopicRequestPrivate;
 
-class QTAWS_EXPORT DeregisterEventTopicRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT DeregisterEventTopicRequest : public DirectoryServiceRequest {
 
 public:
     DeregisterEventTopicRequest(const DeregisterEventTopicRequest &other);

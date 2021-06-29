@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawspollyglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Polly {
 
 class PollyRequestPrivate;
 
-class QTAWS_EXPORT PollyRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSPOLLY_EXPORT PollyRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Polly.

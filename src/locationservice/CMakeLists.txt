@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSLOCATIONSERVICE_LIBRARY)
+
 add_library(QtAwsLocationService
   associatetrackerconsumerrequest.h
   associatetrackerconsumerrequest_p.h
@@ -169,6 +171,7 @@ add_library(QtAwsLocationService
   putgeofencerequest_p.h
   putgeofenceresponse.h
   putgeofenceresponse_p.h
+  qtawslocationserviceglobal.h
   searchplaceindexforpositionrequest.h
   searchplaceindexforpositionrequest_p.h
   searchplaceindexforpositionresponse.h

@@ -27,7 +27,7 @@ namespace ElasticLoadBalancingv2 {
 
 class ModifyLoadBalancerAttributesRequestPrivate;
 
-class QTAWS_EXPORT ModifyLoadBalancerAttributesRequest : public ElasticLoadBalancingv2Request {
+class QTAWSELASTICLOADBALANCINGV2_EXPORT ModifyLoadBalancerAttributesRequest : public ElasticLoadBalancingv2Request {
 
 public:
     ModifyLoadBalancerAttributesRequest(const ModifyLoadBalancerAttributesRequest &other);

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSALEXAFORBUSINESS_LIBRARY)
+
 add_library(QtAwsAlexaForBusiness
   alexaforbusinessclient.h
   alexaforbusinessclient_p.h
@@ -261,6 +263,7 @@ add_library(QtAwsAlexaForBusiness
   putskillauthorizationrequest_p.h
   putskillauthorizationresponse.h
   putskillauthorizationresponse_p.h
+  qtawsalexaforbusinessglobal.h
   registeravsdevicerequest.h
   registeravsdevicerequest_p.h
   registeravsdeviceresponse.h

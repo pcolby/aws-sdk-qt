@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSKINESISVIDEO_LIBRARY)
+
 add_library(QtAwsKinesisVideo
   createsignalingchannelrequest.h
   createsignalingchannelrequest_p.h
@@ -53,6 +55,7 @@ add_library(QtAwsKinesisVideo
   listtagsforstreamrequest_p.h
   listtagsforstreamresponse.h
   listtagsforstreamresponse_p.h
+  qtawskinesisvideoglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

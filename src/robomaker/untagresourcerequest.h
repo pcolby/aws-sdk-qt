@@ -27,7 +27,7 @@ namespace RoboMaker {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public RoboMakerRequest {
+class QTAWSROBOMAKER_EXPORT UntagResourceRequest : public RoboMakerRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

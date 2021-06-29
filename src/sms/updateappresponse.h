@@ -28,7 +28,7 @@ namespace SMS {
 
 class UpdateAppResponsePrivate;
 
-class QTAWS_EXPORT UpdateAppResponse : public SmsResponse {
+class QTAWSSMS_EXPORT UpdateAppResponse : public SmsResponse {
     Q_OBJECT
 
 public:

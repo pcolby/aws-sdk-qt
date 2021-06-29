@@ -27,7 +27,7 @@ namespace AppSync {
 
 class GetIntrospectionSchemaRequestPrivate;
 
-class QTAWS_EXPORT GetIntrospectionSchemaRequest : public AppSyncRequest {
+class QTAWSAPPSYNC_EXPORT GetIntrospectionSchemaRequest : public AppSyncRequest {
 
 public:
     GetIntrospectionSchemaRequest(const GetIntrospectionSchemaRequest &other);

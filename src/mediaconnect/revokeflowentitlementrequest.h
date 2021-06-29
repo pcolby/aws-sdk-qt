@@ -27,7 +27,7 @@ namespace MediaConnect {
 
 class RevokeFlowEntitlementRequestPrivate;
 
-class QTAWS_EXPORT RevokeFlowEntitlementRequest : public MediaConnectRequest {
+class QTAWSMEDIACONNECT_EXPORT RevokeFlowEntitlementRequest : public MediaConnectRequest {
 
 public:
     RevokeFlowEntitlementRequest(const RevokeFlowEntitlementRequest &other);

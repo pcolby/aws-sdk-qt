@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCODEGURUPROFILER_LIBRARY)
+
 add_library(QtAwsCodeGuruProfiler
   addnotificationchannelsrequest.h
   addnotificationchannelsrequest_p.h
@@ -73,6 +75,7 @@ add_library(QtAwsCodeGuruProfiler
   putpermissionrequest_p.h
   putpermissionresponse.h
   putpermissionresponse_p.h
+  qtawscodeguruprofilerglobal.h
   removenotificationchannelrequest.h
   removenotificationchannelrequest_p.h
   removenotificationchannelresponse.h

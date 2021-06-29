@@ -28,7 +28,7 @@ namespace Chime {
 
 class PutAppInstanceRetentionSettingsResponsePrivate;
 
-class QTAWS_EXPORT PutAppInstanceRetentionSettingsResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT PutAppInstanceRetentionSettingsResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

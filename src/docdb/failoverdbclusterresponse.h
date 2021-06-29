@@ -28,7 +28,7 @@ namespace DocDB {
 
 class FailoverDBClusterResponsePrivate;
 
-class QTAWS_EXPORT FailoverDBClusterResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT FailoverDBClusterResponse : public DocDBResponse {
     Q_OBJECT
 
 public:

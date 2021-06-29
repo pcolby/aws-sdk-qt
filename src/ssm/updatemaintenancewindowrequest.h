@@ -27,7 +27,7 @@ namespace SSM {
 
 class UpdateMaintenanceWindowRequestPrivate;
 
-class QTAWS_EXPORT UpdateMaintenanceWindowRequest : public SsmRequest {
+class QTAWSSSM_EXPORT UpdateMaintenanceWindowRequest : public SsmRequest {
 
 public:
     UpdateMaintenanceWindowRequest(const UpdateMaintenanceWindowRequest &other);

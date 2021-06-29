@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSWF_LIBRARY)
+
 add_library(QtAwsSwf
   countclosedworkflowexecutionsrequest.h
   countclosedworkflowexecutionsrequest_p.h
@@ -79,6 +81,7 @@ add_library(QtAwsSwf
   pollfordecisiontaskrequest_p.h
   pollfordecisiontaskresponse.h
   pollfordecisiontaskresponse_p.h
+  qtawsswfglobal.h
   recordactivitytaskheartbeatrequest.h
   recordactivitytaskheartbeatrequest_p.h
   recordactivitytaskheartbeatresponse.h

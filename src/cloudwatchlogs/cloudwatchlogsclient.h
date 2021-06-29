@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawscloudwatchlogsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -113,7 +115,7 @@ class TestMetricFilterResponse;
 class UntagLogGroupRequest;
 class UntagLogGroupResponse;
 
-class QTAWS_EXPORT CloudWatchLogsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCLOUDWATCHLOGS_EXPORT CloudWatchLogsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

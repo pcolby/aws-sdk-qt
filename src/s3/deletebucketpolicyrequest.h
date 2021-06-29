@@ -27,7 +27,7 @@ namespace S3 {
 
 class DeleteBucketPolicyRequestPrivate;
 
-class QTAWS_EXPORT DeleteBucketPolicyRequest : public S3Request {
+class QTAWSS3_EXPORT DeleteBucketPolicyRequest : public S3Request {
 
 public:
     DeleteBucketPolicyRequest(const DeleteBucketPolicyRequest &other);

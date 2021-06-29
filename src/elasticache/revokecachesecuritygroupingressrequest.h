@@ -27,7 +27,7 @@ namespace ElastiCache {
 
 class RevokeCacheSecurityGroupIngressRequestPrivate;
 
-class QTAWS_EXPORT RevokeCacheSecurityGroupIngressRequest : public ElastiCacheRequest {
+class QTAWSELASTICACHE_EXPORT RevokeCacheSecurityGroupIngressRequest : public ElastiCacheRequest {
 
 public:
     RevokeCacheSecurityGroupIngressRequest(const RevokeCacheSecurityGroupIngressRequest &other);

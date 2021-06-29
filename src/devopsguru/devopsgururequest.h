@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsdevopsguruglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace DevOpsGuru {
 
 class DevOpsGuruRequestPrivate;
 
-class QTAWS_EXPORT DevOpsGuruRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSDEVOPSGURU_EXPORT DevOpsGuruRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by DevOpsGuru.

@@ -27,7 +27,7 @@ namespace IoT {
 
 class DescribeRoleAliasRequestPrivate;
 
-class QTAWS_EXPORT DescribeRoleAliasRequest : public IoTRequest {
+class QTAWSIOT_EXPORT DescribeRoleAliasRequest : public IoTRequest {
 
 public:
     DescribeRoleAliasRequest(const DescribeRoleAliasRequest &other);

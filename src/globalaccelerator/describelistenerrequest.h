@@ -27,7 +27,7 @@ namespace GlobalAccelerator {
 
 class DescribeListenerRequestPrivate;
 
-class QTAWS_EXPORT DescribeListenerRequest : public GlobalAcceleratorRequest {
+class QTAWSGLOBALACCELERATOR_EXPORT DescribeListenerRequest : public GlobalAcceleratorRequest {
 
 public:
     DescribeListenerRequest(const DescribeListenerRequest &other);

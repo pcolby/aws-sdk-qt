@@ -20,7 +20,7 @@
 #ifndef AWSSIGNATUREV4_P_H
 #define AWSSIGNATUREV4_P_H
 
-#include "qtawsglobal.h"
+#include "qtawscoreglobal.h"
 #include "awsabstractsignature_p.h"
 
 #include <QCryptographicHash>

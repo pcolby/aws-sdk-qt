@@ -28,7 +28,7 @@ namespace CodeGuruReviewer {
 
 class ListRecommendationFeedbackResponsePrivate;
 
-class QTAWS_EXPORT ListRecommendationFeedbackResponse : public CodeGuruReviewerResponse {
+class QTAWSCODEGURUREVIEWER_EXPORT ListRecommendationFeedbackResponse : public CodeGuruReviewerResponse {
     Q_OBJECT
 
 public:

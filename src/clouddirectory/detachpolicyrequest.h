@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class DetachPolicyRequestPrivate;
 
-class QTAWS_EXPORT DetachPolicyRequest : public CloudDirectoryRequest {
+class QTAWSCLOUDDIRECTORY_EXPORT DetachPolicyRequest : public CloudDirectoryRequest {
 
 public:
     DetachPolicyRequest(const DetachPolicyRequest &other);

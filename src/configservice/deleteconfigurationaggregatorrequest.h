@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class DeleteConfigurationAggregatorRequestPrivate;
 
-class QTAWS_EXPORT DeleteConfigurationAggregatorRequest : public ConfigServiceRequest {
+class QTAWSCONFIGSERVICE_EXPORT DeleteConfigurationAggregatorRequest : public ConfigServiceRequest {
 
 public:
     DeleteConfigurationAggregatorRequest(const DeleteConfigurationAggregatorRequest &other);

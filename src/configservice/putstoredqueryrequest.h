@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class PutStoredQueryRequestPrivate;
 
-class QTAWS_EXPORT PutStoredQueryRequest : public ConfigServiceRequest {
+class QTAWSCONFIGSERVICE_EXPORT PutStoredQueryRequest : public ConfigServiceRequest {
 
 public:
     PutStoredQueryRequest(const PutStoredQueryRequest &other);

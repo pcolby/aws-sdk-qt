@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class DeleteModelPackageGroupPolicyRequestPrivate;
 
-class QTAWS_EXPORT DeleteModelPackageGroupPolicyRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT DeleteModelPackageGroupPolicyRequest : public SageMakerRequest {
 
 public:
     DeleteModelPackageGroupPolicyRequest(const DeleteModelPackageGroupPolicyRequest &other);

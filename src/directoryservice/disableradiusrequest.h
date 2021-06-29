@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class DisableRadiusRequestPrivate;
 
-class QTAWS_EXPORT DisableRadiusRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT DisableRadiusRequest : public DirectoryServiceRequest {
 
 public:
     DisableRadiusRequest(const DisableRadiusRequest &other);

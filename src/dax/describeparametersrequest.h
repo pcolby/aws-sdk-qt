@@ -27,7 +27,7 @@ namespace DAX {
 
 class DescribeParametersRequestPrivate;
 
-class QTAWS_EXPORT DescribeParametersRequest : public DaxRequest {
+class QTAWSDAX_EXPORT DescribeParametersRequest : public DaxRequest {
 
 public:
     DescribeParametersRequest(const DescribeParametersRequest &other);

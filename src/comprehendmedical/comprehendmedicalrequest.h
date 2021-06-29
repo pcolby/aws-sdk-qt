@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawscomprehendmedicalglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace ComprehendMedical {
 
 class ComprehendMedicalRequestPrivate;
 
-class QTAWS_EXPORT ComprehendMedicalRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCOMPREHENDMEDICAL_EXPORT ComprehendMedicalRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ComprehendMedical.

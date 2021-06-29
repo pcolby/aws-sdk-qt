@@ -28,7 +28,7 @@ namespace Detective {
 
 class ListGraphsResponsePrivate;
 
-class QTAWS_EXPORT ListGraphsResponse : public DetectiveResponse {
+class QTAWSDETECTIVE_EXPORT ListGraphsResponse : public DetectiveResponse {
     Q_OBJECT
 
 public:

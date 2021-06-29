@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsiotanalyticsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -97,7 +99,7 @@ class UpdateDatastoreResponse;
 class UpdatePipelineRequest;
 class UpdatePipelineResponse;
 
-class QTAWS_EXPORT IoTAnalyticsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSIOTANALYTICS_EXPORT IoTAnalyticsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

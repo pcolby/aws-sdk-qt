@@ -27,7 +27,7 @@ namespace ECS {
 
 class ListClustersRequestPrivate;
 
-class QTAWS_EXPORT ListClustersRequest : public EcsRequest {
+class QTAWSECS_EXPORT ListClustersRequest : public EcsRequest {
 
 public:
     ListClustersRequest(const ListClustersRequest &other);

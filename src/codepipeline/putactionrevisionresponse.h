@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class PutActionRevisionResponsePrivate;
 
-class QTAWS_EXPORT PutActionRevisionResponse : public CodePipelineResponse {
+class QTAWSCODEPIPELINE_EXPORT PutActionRevisionResponse : public CodePipelineResponse {
     Q_OBJECT
 
 public:

@@ -21,6 +21,8 @@
 #define QTAWS_SSMINCIDENTSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsssmincidentsglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace SSMIncidents {
 
 class SSMIncidentsResponsePrivate;
 
-class QTAWS_EXPORT SSMIncidentsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSSMINCIDENTS_EXPORT SSMIncidentsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

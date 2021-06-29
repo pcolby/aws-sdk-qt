@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSAPPSTREAM_LIBRARY)
+
 add_library(QtAwsAppStream
   appstreamclient.h
   appstreamclient_p.h
@@ -157,6 +159,7 @@ add_library(QtAwsAppStream
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsappstreamglobal.h
   startfleetrequest.h
   startfleetrequest_p.h
   startfleetresponse.h

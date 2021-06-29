@@ -27,7 +27,7 @@ namespace Redshift {
 
 class DescribeClusterDbRevisionsRequestPrivate;
 
-class QTAWS_EXPORT DescribeClusterDbRevisionsRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT DescribeClusterDbRevisionsRequest : public RedshiftRequest {
 
 public:
     DescribeClusterDbRevisionsRequest(const DescribeClusterDbRevisionsRequest &other);

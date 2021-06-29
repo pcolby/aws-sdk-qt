@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsnimblestudioglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -119,7 +121,7 @@ class UpdateStudioResponse;
 class UpdateStudioComponentRequest;
 class UpdateStudioComponentResponse;
 
-class QTAWS_EXPORT NimbleStudioClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSNIMBLESTUDIO_EXPORT NimbleStudioClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

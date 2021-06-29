@@ -28,7 +28,7 @@ namespace CodeStarconnections {
 
 class DeleteConnectionResponsePrivate;
 
-class QTAWS_EXPORT DeleteConnectionResponse : public CodeStarconnectionsResponse {
+class QTAWSCODESTARCONNECTIONS_EXPORT DeleteConnectionResponse : public CodeStarconnectionsResponse {
     Q_OBJECT
 
 public:

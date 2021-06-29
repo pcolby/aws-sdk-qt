@@ -20,7 +20,7 @@
 #ifndef AWSABSTRACTRESPONSE_P_H
 #define AWSABSTRACTRESPONSE_P_H
 
-#include "qtawsglobal.h"
+#include "qtawscoreglobal.h"
 
 #include <QVariantMap>
 #include <QXmlStreamReader>

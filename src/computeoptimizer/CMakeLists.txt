@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCOMPUTEOPTIMIZER_LIBRARY)
+
 add_library(QtAwsComputeOptimizer
   computeoptimizerclient.h
   computeoptimizerclient_p.h
@@ -53,6 +55,7 @@ add_library(QtAwsComputeOptimizer
   getrecommendationsummariesrequest_p.h
   getrecommendationsummariesresponse.h
   getrecommendationsummariesresponse_p.h
+  qtawscomputeoptimizerglobal.h
   updateenrollmentstatusrequest.h
   updateenrollmentstatusrequest_p.h
   updateenrollmentstatusresponse.h

@@ -27,7 +27,7 @@ namespace RDS {
 
 class RegisterDBProxyTargetsRequestPrivate;
 
-class QTAWS_EXPORT RegisterDBProxyTargetsRequest : public RdsRequest {
+class QTAWSRDS_EXPORT RegisterDBProxyTargetsRequest : public RdsRequest {
 
 public:
     RegisterDBProxyTargetsRequest(const RegisterDBProxyTargetsRequest &other);

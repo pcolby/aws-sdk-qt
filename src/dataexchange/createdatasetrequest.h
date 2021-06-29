@@ -27,7 +27,7 @@ namespace DataExchange {
 
 class CreateDataSetRequestPrivate;
 
-class QTAWS_EXPORT CreateDataSetRequest : public DataExchangeRequest {
+class QTAWSDATAEXCHANGE_EXPORT CreateDataSetRequest : public DataExchangeRequest {
 
 public:
     CreateDataSetRequest(const CreateDataSetRequest &other);

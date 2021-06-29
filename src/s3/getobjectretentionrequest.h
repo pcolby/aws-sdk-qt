@@ -27,7 +27,7 @@ namespace S3 {
 
 class GetObjectRetentionRequestPrivate;
 
-class QTAWS_EXPORT GetObjectRetentionRequest : public S3Request {
+class QTAWSS3_EXPORT GetObjectRetentionRequest : public S3Request {
 
 public:
     GetObjectRetentionRequest(const GetObjectRetentionRequest &other);

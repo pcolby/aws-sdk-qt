@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class DeleteNotebookInstanceLifecycleConfigRequestPrivate;
 
-class QTAWS_EXPORT DeleteNotebookInstanceLifecycleConfigRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT DeleteNotebookInstanceLifecycleConfigRequest : public SageMakerRequest {
 
 public:
     DeleteNotebookInstanceLifecycleConfigRequest(const DeleteNotebookInstanceLifecycleConfigRequest &other);

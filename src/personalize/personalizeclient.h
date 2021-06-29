@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawspersonalizeglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -123,7 +125,7 @@ class StopSolutionVersionCreationResponse;
 class UpdateCampaignRequest;
 class UpdateCampaignResponse;
 
-class QTAWS_EXPORT PersonalizeClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSPERSONALIZE_EXPORT PersonalizeClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

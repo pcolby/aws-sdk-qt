@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class CancelInstanceRefreshResponsePrivate;
 
-class QTAWS_EXPORT CancelInstanceRefreshResponse : public AutoScalingResponse {
+class QTAWSAUTOSCALING_EXPORT CancelInstanceRefreshResponse : public AutoScalingResponse {
     Q_OBJECT
 
 public:

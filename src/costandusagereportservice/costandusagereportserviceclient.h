@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawscostandusagereportserviceglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -37,7 +39,7 @@ class ModifyReportDefinitionResponse;
 class PutReportDefinitionRequest;
 class PutReportDefinitionResponse;
 
-class QTAWS_EXPORT CostandUsageReportServiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCOSTANDUSAGEREPORTSERVICE_EXPORT CostandUsageReportServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

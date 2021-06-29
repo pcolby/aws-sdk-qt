@@ -27,7 +27,7 @@ namespace ElastiCache {
 
 class DescribeEventsRequestPrivate;
 
-class QTAWS_EXPORT DescribeEventsRequest : public ElastiCacheRequest {
+class QTAWSELASTICACHE_EXPORT DescribeEventsRequest : public ElastiCacheRequest {
 
 public:
     DescribeEventsRequest(const DescribeEventsRequest &other);

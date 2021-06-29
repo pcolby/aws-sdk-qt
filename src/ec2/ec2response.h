@@ -21,6 +21,8 @@
 #define QTAWS_EC2RESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsec2global.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace EC2 {
 
 class Ec2ResponsePrivate;
 
-class QTAWS_EXPORT Ec2Response : public QtAws::Core::AwsAbstractResponse {
+class QTAWSEC2_EXPORT Ec2Response : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

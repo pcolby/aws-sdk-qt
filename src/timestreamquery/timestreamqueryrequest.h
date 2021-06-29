@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawstimestreamqueryglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace TimestreamQuery {
 
 class TimestreamQueryRequestPrivate;
 
-class QTAWS_EXPORT TimestreamQueryRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSTIMESTREAMQUERY_EXPORT TimestreamQueryRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by TimestreamQuery.

@@ -28,7 +28,7 @@ namespace AppStream {
 
 class DeleteUsageReportSubscriptionResponsePrivate;
 
-class QTAWS_EXPORT DeleteUsageReportSubscriptionResponse : public AppStreamResponse {
+class QTAWSAPPSTREAM_EXPORT DeleteUsageReportSubscriptionResponse : public AppStreamResponse {
     Q_OBJECT
 
 public:

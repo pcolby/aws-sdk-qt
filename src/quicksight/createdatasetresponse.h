@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class CreateDataSetResponsePrivate;
 
-class QTAWS_EXPORT CreateDataSetResponse : public QuickSightResponse {
+class QTAWSQUICKSIGHT_EXPORT CreateDataSetResponse : public QuickSightResponse {
     Q_OBJECT
 
 public:

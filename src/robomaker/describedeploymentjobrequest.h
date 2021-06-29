@@ -27,7 +27,7 @@ namespace RoboMaker {
 
 class DescribeDeploymentJobRequestPrivate;
 
-class QTAWS_EXPORT DescribeDeploymentJobRequest : public RoboMakerRequest {
+class QTAWSROBOMAKER_EXPORT DescribeDeploymentJobRequest : public RoboMakerRequest {
 
 public:
     DescribeDeploymentJobRequest(const DescribeDeploymentJobRequest &other);

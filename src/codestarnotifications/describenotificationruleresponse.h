@@ -28,7 +28,7 @@ namespace CodeStarNotifications {
 
 class DescribeNotificationRuleResponsePrivate;
 
-class QTAWS_EXPORT DescribeNotificationRuleResponse : public CodeStarNotificationsResponse {
+class QTAWSCODESTARNOTIFICATIONS_EXPORT DescribeNotificationRuleResponse : public CodeStarNotificationsResponse {
     Q_OBJECT
 
 public:

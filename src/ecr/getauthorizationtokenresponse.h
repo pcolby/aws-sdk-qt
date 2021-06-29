@@ -28,7 +28,7 @@ namespace ECR {
 
 class GetAuthorizationTokenResponsePrivate;
 
-class QTAWS_EXPORT GetAuthorizationTokenResponse : public EcrResponse {
+class QTAWSECR_EXPORT GetAuthorizationTokenResponse : public EcrResponse {
     Q_OBJECT
 
 public:

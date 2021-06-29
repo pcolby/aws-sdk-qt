@@ -28,7 +28,7 @@ namespace Connect {
 
 class UpdateContactFlowNameResponsePrivate;
 
-class QTAWS_EXPORT UpdateContactFlowNameResponse : public ConnectResponse {
+class QTAWSCONNECT_EXPORT UpdateContactFlowNameResponse : public ConnectResponse {
     Q_OBJECT
 
 public:

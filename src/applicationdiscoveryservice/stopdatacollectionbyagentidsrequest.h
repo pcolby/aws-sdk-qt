@@ -27,7 +27,7 @@ namespace ApplicationDiscoveryService {
 
 class StopDataCollectionByAgentIdsRequestPrivate;
 
-class QTAWS_EXPORT StopDataCollectionByAgentIdsRequest : public ApplicationDiscoveryServiceRequest {
+class QTAWSAPPLICATIONDISCOVERYSERVICE_EXPORT StopDataCollectionByAgentIdsRequest : public ApplicationDiscoveryServiceRequest {
 
 public:
     StopDataCollectionByAgentIdsRequest(const StopDataCollectionByAgentIdsRequest &other);

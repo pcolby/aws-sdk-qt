@@ -27,7 +27,7 @@ namespace Personalize {
 
 class DeleteSolutionRequestPrivate;
 
-class QTAWS_EXPORT DeleteSolutionRequest : public PersonalizeRequest {
+class QTAWSPERSONALIZE_EXPORT DeleteSolutionRequest : public PersonalizeRequest {
 
 public:
     DeleteSolutionRequest(const DeleteSolutionRequest &other);

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSRESOURCEGROUPS_LIBRARY)
+
 add_library(QtAwsResourceGroups
   creategrouprequest.h
   creategrouprequest_p.h
@@ -39,6 +41,7 @@ add_library(QtAwsResourceGroups
   putgroupconfigurationrequest_p.h
   putgroupconfigurationresponse.h
   putgroupconfigurationresponse_p.h
+  qtawsresourcegroupsglobal.h
   resourcegroupsclient.h
   resourcegroupsclient_p.h
   resourcegroupsrequest.h

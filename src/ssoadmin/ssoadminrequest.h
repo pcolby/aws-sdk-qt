@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsssoadminglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace SSOAdmin {
 
 class SSOAdminRequestPrivate;
 
-class QTAWS_EXPORT SSOAdminRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSSOADMIN_EXPORT SSOAdminRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SSOAdmin.

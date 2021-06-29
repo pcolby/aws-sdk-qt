@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSBRAKET_LIBRARY)
+
 add_library(QtAwsBraket
   braketclient.h
   braketclient_p.h
@@ -25,6 +27,7 @@ add_library(QtAwsBraket
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsbraketglobal.h
   searchdevicesrequest.h
   searchdevicesrequest_p.h
   searchdevicesresponse.h

@@ -28,7 +28,7 @@ namespace IoTAnalytics {
 
 class GetDatasetContentResponsePrivate;
 
-class QTAWS_EXPORT GetDatasetContentResponse : public IoTAnalyticsResponse {
+class QTAWSIOTANALYTICS_EXPORT GetDatasetContentResponse : public IoTAnalyticsResponse {
     Q_OBJECT
 
 public:

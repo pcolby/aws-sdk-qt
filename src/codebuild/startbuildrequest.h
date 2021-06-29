@@ -27,7 +27,7 @@ namespace CodeBuild {
 
 class StartBuildRequestPrivate;
 
-class QTAWS_EXPORT StartBuildRequest : public CodeBuildRequest {
+class QTAWSCODEBUILD_EXPORT StartBuildRequest : public CodeBuildRequest {
 
 public:
     StartBuildRequest(const StartBuildRequest &other);

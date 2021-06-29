@@ -27,7 +27,7 @@ namespace Chime {
 
 class CreateChannelRequestPrivate;
 
-class QTAWS_EXPORT CreateChannelRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT CreateChannelRequest : public ChimeRequest {
 
 public:
     CreateChannelRequest(const CreateChannelRequest &other);

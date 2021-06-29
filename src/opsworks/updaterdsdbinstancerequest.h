@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class UpdateRdsDbInstanceRequestPrivate;
 
-class QTAWS_EXPORT UpdateRdsDbInstanceRequest : public OpsWorksRequest {
+class QTAWSOPSWORKS_EXPORT UpdateRdsDbInstanceRequest : public OpsWorksRequest {
 
 public:
     UpdateRdsDbInstanceRequest(const UpdateRdsDbInstanceRequest &other);

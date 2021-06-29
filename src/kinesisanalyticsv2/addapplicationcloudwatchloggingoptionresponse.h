@@ -28,7 +28,7 @@ namespace KinesisAnalyticsV2 {
 
 class AddApplicationCloudWatchLoggingOptionResponsePrivate;
 
-class QTAWS_EXPORT AddApplicationCloudWatchLoggingOptionResponse : public KinesisAnalyticsV2Response {
+class QTAWSKINESISANALYTICSV2_EXPORT AddApplicationCloudWatchLoggingOptionResponse : public KinesisAnalyticsV2Response {
     Q_OBJECT
 
 public:

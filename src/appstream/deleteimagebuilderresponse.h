@@ -28,7 +28,7 @@ namespace AppStream {
 
 class DeleteImageBuilderResponsePrivate;
 
-class QTAWS_EXPORT DeleteImageBuilderResponse : public AppStreamResponse {
+class QTAWSAPPSTREAM_EXPORT DeleteImageBuilderResponse : public AppStreamResponse {
     Q_OBJECT
 
 public:

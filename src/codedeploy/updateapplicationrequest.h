@@ -27,7 +27,7 @@ namespace CodeDeploy {
 
 class UpdateApplicationRequestPrivate;
 
-class QTAWS_EXPORT UpdateApplicationRequest : public CodeDeployRequest {
+class QTAWSCODEDEPLOY_EXPORT UpdateApplicationRequest : public CodeDeployRequest {
 
 public:
     UpdateApplicationRequest(const UpdateApplicationRequest &other);

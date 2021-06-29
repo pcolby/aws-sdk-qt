@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class ListRepositoriesResponsePrivate;
 
-class QTAWS_EXPORT ListRepositoriesResponse : public CodeCommitResponse {
+class QTAWSCODECOMMIT_EXPORT ListRepositoriesResponse : public CodeCommitResponse {
     Q_OBJECT
 
 public:

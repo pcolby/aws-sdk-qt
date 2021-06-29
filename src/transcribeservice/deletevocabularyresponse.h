@@ -28,7 +28,7 @@ namespace TranscribeService {
 
 class DeleteVocabularyResponsePrivate;
 
-class QTAWS_EXPORT DeleteVocabularyResponse : public TranscribeServiceResponse {
+class QTAWSTRANSCRIBESERVICE_EXPORT DeleteVocabularyResponse : public TranscribeServiceResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace ElasticBeanstalk {
 
 class TerminateEnvironmentRequestPrivate;
 
-class QTAWS_EXPORT TerminateEnvironmentRequest : public ElasticBeanstalkRequest {
+class QTAWSELASTICBEANSTALK_EXPORT TerminateEnvironmentRequest : public ElasticBeanstalkRequest {
 
 public:
     TerminateEnvironmentRequest(const TerminateEnvironmentRequest &other);

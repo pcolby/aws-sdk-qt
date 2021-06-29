@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class ListEmailIdentitiesRequestPrivate;
 
-class QTAWS_EXPORT ListEmailIdentitiesRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT ListEmailIdentitiesRequest : public Sesv2Request {
 
 public:
     ListEmailIdentitiesRequest(const ListEmailIdentitiesRequest &other);

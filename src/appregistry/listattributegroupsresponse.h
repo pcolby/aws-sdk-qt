@@ -28,7 +28,7 @@ namespace AppRegistry {
 
 class ListAttributeGroupsResponsePrivate;
 
-class QTAWS_EXPORT ListAttributeGroupsResponse : public AppRegistryResponse {
+class QTAWSAPPREGISTRY_EXPORT ListAttributeGroupsResponse : public AppRegistryResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace ConnectParticipant {
 
 class DisconnectParticipantRequestPrivate;
 
-class QTAWS_EXPORT DisconnectParticipantRequest : public ConnectParticipantRequest {
+class QTAWSCONNECTPARTICIPANT_EXPORT DisconnectParticipantRequest : public ConnectParticipantRequest {
 
 public:
     DisconnectParticipantRequest(const DisconnectParticipantRequest &other);

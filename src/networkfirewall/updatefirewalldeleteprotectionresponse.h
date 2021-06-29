@@ -28,7 +28,7 @@ namespace NetworkFirewall {
 
 class UpdateFirewallDeleteProtectionResponsePrivate;
 
-class QTAWS_EXPORT UpdateFirewallDeleteProtectionResponse : public NetworkFirewallResponse {
+class QTAWSNETWORKFIREWALL_EXPORT UpdateFirewallDeleteProtectionResponse : public NetworkFirewallResponse {
     Q_OBJECT
 
 public:

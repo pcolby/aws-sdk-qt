@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class UpdateResourceDefinitionRequestPrivate;
 
-class QTAWS_EXPORT UpdateResourceDefinitionRequest : public GreengrassRequest {
+class QTAWSGREENGRASS_EXPORT UpdateResourceDefinitionRequest : public GreengrassRequest {
 
 public:
     UpdateResourceDefinitionRequest(const UpdateResourceDefinitionRequest &other);

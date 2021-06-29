@@ -27,7 +27,7 @@ namespace IoTAnalytics {
 
 class DeleteDatasetContentRequestPrivate;
 
-class QTAWS_EXPORT DeleteDatasetContentRequest : public IoTAnalyticsRequest {
+class QTAWSIOTANALYTICS_EXPORT DeleteDatasetContentRequest : public IoTAnalyticsRequest {
 
 public:
     DeleteDatasetContentRequest(const DeleteDatasetContentRequest &other);

@@ -27,7 +27,7 @@ namespace SSMIncidents {
 
 class CreateResponsePlanRequestPrivate;
 
-class QTAWS_EXPORT CreateResponsePlanRequest : public SSMIncidentsRequest {
+class QTAWSSSMINCIDENTS_EXPORT CreateResponsePlanRequest : public SSMIncidentsRequest {
 
 public:
     CreateResponsePlanRequest(const CreateResponsePlanRequest &other);

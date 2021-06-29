@@ -27,7 +27,7 @@ namespace TranscribeService {
 
 class DescribeLanguageModelRequestPrivate;
 
-class QTAWS_EXPORT DescribeLanguageModelRequest : public TranscribeServiceRequest {
+class QTAWSTRANSCRIBESERVICE_EXPORT DescribeLanguageModelRequest : public TranscribeServiceRequest {
 
 public:
     DescribeLanguageModelRequest(const DescribeLanguageModelRequest &other);

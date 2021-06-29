@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawscustomerprofilesglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -89,7 +91,7 @@ class UpdateDomainResponse;
 class UpdateProfileRequest;
 class UpdateProfileResponse;
 
-class QTAWS_EXPORT CustomerProfilesClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCUSTOMERPROFILES_EXPORT CustomerProfilesClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

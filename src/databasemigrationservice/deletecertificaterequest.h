@@ -27,7 +27,7 @@ namespace DatabaseMigrationService {
 
 class DeleteCertificateRequestPrivate;
 
-class QTAWS_EXPORT DeleteCertificateRequest : public DatabaseMigrationServiceRequest {
+class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DeleteCertificateRequest : public DatabaseMigrationServiceRequest {
 
 public:
     DeleteCertificateRequest(const DeleteCertificateRequest &other);

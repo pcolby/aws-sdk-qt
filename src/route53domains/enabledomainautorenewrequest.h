@@ -27,7 +27,7 @@ namespace Route53Domains {
 
 class EnableDomainAutoRenewRequestPrivate;
 
-class QTAWS_EXPORT EnableDomainAutoRenewRequest : public Route53DomainsRequest {
+class QTAWSROUTE53DOMAINS_EXPORT EnableDomainAutoRenewRequest : public Route53DomainsRequest {
 
 public:
     EnableDomainAutoRenewRequest(const EnableDomainAutoRenewRequest &other);

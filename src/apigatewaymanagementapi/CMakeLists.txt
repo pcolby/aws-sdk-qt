@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSAPIGATEWAYMANAGEMENTAPI_LIBRARY)
+
 add_library(QtAwsApiGatewayManagementApi
   apigatewaymanagementapiclient.h
   apigatewaymanagementapiclient_p.h
@@ -17,6 +19,7 @@ add_library(QtAwsApiGatewayManagementApi
   posttoconnectionrequest_p.h
   posttoconnectionresponse.h
   posttoconnectionresponse_p.h
+  qtawsapigatewaymanagementapiglobal.h
   apigatewaymanagementapiclient.cpp
   apigatewaymanagementapirequest.cpp
   apigatewaymanagementapiresponse.cpp

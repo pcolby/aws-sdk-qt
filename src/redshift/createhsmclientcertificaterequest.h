@@ -27,7 +27,7 @@ namespace Redshift {
 
 class CreateHsmClientCertificateRequestPrivate;
 
-class QTAWS_EXPORT CreateHsmClientCertificateRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT CreateHsmClientCertificateRequest : public RedshiftRequest {
 
 public:
     CreateHsmClientCertificateRequest(const CreateHsmClientCertificateRequest &other);

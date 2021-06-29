@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsauditmanagerglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -131,7 +133,7 @@ class UpdateSettingsResponse;
 class ValidateAssessmentReportIntegrityRequest;
 class ValidateAssessmentReportIntegrityResponse;
 
-class QTAWS_EXPORT AuditManagerClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSAUDITMANAGER_EXPORT AuditManagerClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

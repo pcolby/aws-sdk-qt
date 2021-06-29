@@ -27,7 +27,7 @@ namespace AppStream {
 
 class BatchDisassociateUserStackRequestPrivate;
 
-class QTAWS_EXPORT BatchDisassociateUserStackRequest : public AppStreamRequest {
+class QTAWSAPPSTREAM_EXPORT BatchDisassociateUserStackRequest : public AppStreamRequest {
 
 public:
     BatchDisassociateUserStackRequest(const BatchDisassociateUserStackRequest &other);

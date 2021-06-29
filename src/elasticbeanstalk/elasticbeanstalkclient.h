@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawselasticbeanstalkglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -123,7 +125,7 @@ class UpdateTagsForResourceResponse;
 class ValidateConfigurationSettingsRequest;
 class ValidateConfigurationSettingsResponse;
 
-class QTAWS_EXPORT ElasticBeanstalkClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSELASTICBEANSTALK_EXPORT ElasticBeanstalkClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class CreateTestGridProjectResponsePrivate;
 
-class QTAWS_EXPORT CreateTestGridProjectResponse : public DeviceFarmResponse {
+class QTAWSDEVICEFARM_EXPORT CreateTestGridProjectResponse : public DeviceFarmResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace SSMContacts {
 
 class UpdateContactChannelResponsePrivate;
 
-class QTAWS_EXPORT UpdateContactChannelResponse : public SSMContactsResponse {
+class QTAWSSSMCONTACTS_EXPORT UpdateContactChannelResponse : public SSMContactsResponse {
     Q_OBJECT
 
 public:

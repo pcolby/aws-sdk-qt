@@ -27,7 +27,7 @@ namespace CognitoIdentityProvider {
 
 class ConfirmDeviceRequestPrivate;
 
-class QTAWS_EXPORT ConfirmDeviceRequest : public CognitoIdentityProviderRequest {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT ConfirmDeviceRequest : public CognitoIdentityProviderRequest {
 
 public:
     ConfirmDeviceRequest(const ConfirmDeviceRequest &other);

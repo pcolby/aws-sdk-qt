@@ -27,7 +27,7 @@ namespace ImportExport {
 
 class CancelJobRequestPrivate;
 
-class QTAWS_EXPORT CancelJobRequest : public ImportExportRequest {
+class QTAWSIMPORTEXPORT_EXPORT CancelJobRequest : public ImportExportRequest {
 
 public:
     CancelJobRequest(const CancelJobRequest &other);

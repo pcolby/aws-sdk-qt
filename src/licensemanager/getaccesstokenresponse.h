@@ -28,7 +28,7 @@ namespace LicenseManager {
 
 class GetAccessTokenResponsePrivate;
 
-class QTAWS_EXPORT GetAccessTokenResponse : public LicenseManagerResponse {
+class QTAWSLICENSEMANAGER_EXPORT GetAccessTokenResponse : public LicenseManagerResponse {
     Q_OBJECT
 
 public:

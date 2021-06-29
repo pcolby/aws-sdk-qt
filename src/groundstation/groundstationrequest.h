@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsgroundstationglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace GroundStation {
 
 class GroundStationRequestPrivate;
 
-class QTAWS_EXPORT GroundStationRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSGROUNDSTATION_EXPORT GroundStationRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by GroundStation.

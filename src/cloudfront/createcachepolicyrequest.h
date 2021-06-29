@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class CreateCachePolicyRequestPrivate;
 
-class QTAWS_EXPORT CreateCachePolicyRequest : public CloudFrontRequest {
+class QTAWSCLOUDFRONT_EXPORT CreateCachePolicyRequest : public CloudFrontRequest {
 
 public:
     CreateCachePolicyRequest(const CreateCachePolicyRequest &other);

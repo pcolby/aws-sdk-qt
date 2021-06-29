@@ -27,7 +27,7 @@ namespace APIGateway {
 
 class DeleteAuthorizerRequestPrivate;
 
-class QTAWS_EXPORT DeleteAuthorizerRequest : public APIGatewayRequest {
+class QTAWSAPIGATEWAY_EXPORT DeleteAuthorizerRequest : public APIGatewayRequest {
 
 public:
     DeleteAuthorizerRequest(const DeleteAuthorizerRequest &other);

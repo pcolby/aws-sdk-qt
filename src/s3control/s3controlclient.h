@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawss3controlglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -127,7 +129,7 @@ class UpdateJobPriorityResponse;
 class UpdateJobStatusRequest;
 class UpdateJobStatusResponse;
 
-class QTAWS_EXPORT S3ControlClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSS3CONTROL_EXPORT S3ControlClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

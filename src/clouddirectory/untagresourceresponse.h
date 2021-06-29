@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public CloudDirectoryResponse {
+class QTAWSCLOUDDIRECTORY_EXPORT UntagResourceResponse : public CloudDirectoryResponse {
     Q_OBJECT
 
 public:

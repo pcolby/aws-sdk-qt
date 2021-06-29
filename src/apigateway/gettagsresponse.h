@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class GetTagsResponsePrivate;
 
-class QTAWS_EXPORT GetTagsResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT GetTagsResponse : public APIGatewayResponse {
     Q_OBJECT
 
 public:

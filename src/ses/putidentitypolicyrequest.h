@@ -27,7 +27,7 @@ namespace SES {
 
 class PutIdentityPolicyRequestPrivate;
 
-class QTAWS_EXPORT PutIdentityPolicyRequest : public SesRequest {
+class QTAWSSES_EXPORT PutIdentityPolicyRequest : public SesRequest {
 
 public:
     PutIdentityPolicyRequest(const PutIdentityPolicyRequest &other);

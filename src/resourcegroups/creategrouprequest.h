@@ -27,7 +27,7 @@ namespace ResourceGroups {
 
 class CreateGroupRequestPrivate;
 
-class QTAWS_EXPORT CreateGroupRequest : public ResourceGroupsRequest {
+class QTAWSRESOURCEGROUPS_EXPORT CreateGroupRequest : public ResourceGroupsRequest {
 
 public:
     CreateGroupRequest(const CreateGroupRequest &other);

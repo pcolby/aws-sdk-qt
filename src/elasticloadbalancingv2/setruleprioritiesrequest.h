@@ -27,7 +27,7 @@ namespace ElasticLoadBalancingv2 {
 
 class SetRulePrioritiesRequestPrivate;
 
-class QTAWS_EXPORT SetRulePrioritiesRequest : public ElasticLoadBalancingv2Request {
+class QTAWSELASTICLOADBALANCINGV2_EXPORT SetRulePrioritiesRequest : public ElasticLoadBalancingv2Request {
 
 public:
     SetRulePrioritiesRequest(const SetRulePrioritiesRequest &other);

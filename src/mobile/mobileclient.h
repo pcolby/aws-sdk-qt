@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsmobileglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -47,7 +49,7 @@ class ListProjectsResponse;
 class UpdateProjectRequest;
 class UpdateProjectResponse;
 
-class QTAWS_EXPORT MobileClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSMOBILE_EXPORT MobileClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

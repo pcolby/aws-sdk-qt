@@ -27,7 +27,7 @@ namespace AlexaForBusiness {
 
 class SendInvitationRequestPrivate;
 
-class QTAWS_EXPORT SendInvitationRequest : public AlexaForBusinessRequest {
+class QTAWSALEXAFORBUSINESS_EXPORT SendInvitationRequest : public AlexaForBusinessRequest {
 
 public:
     SendInvitationRequest(const SendInvitationRequest &other);

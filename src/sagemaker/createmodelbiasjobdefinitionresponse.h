@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class CreateModelBiasJobDefinitionResponsePrivate;
 
-class QTAWS_EXPORT CreateModelBiasJobDefinitionResponse : public SageMakerResponse {
+class QTAWSSAGEMAKER_EXPORT CreateModelBiasJobDefinitionResponse : public SageMakerResponse {
     Q_OBJECT
 
 public:

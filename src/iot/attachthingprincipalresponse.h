@@ -28,7 +28,7 @@ namespace IoT {
 
 class AttachThingPrincipalResponsePrivate;
 
-class QTAWS_EXPORT AttachThingPrincipalResponse : public IoTResponse {
+class QTAWSIOT_EXPORT AttachThingPrincipalResponse : public IoTResponse {
     Q_OBJECT
 
 public:

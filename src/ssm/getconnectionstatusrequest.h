@@ -27,7 +27,7 @@ namespace SSM {
 
 class GetConnectionStatusRequestPrivate;
 
-class QTAWS_EXPORT GetConnectionStatusRequest : public SsmRequest {
+class QTAWSSSM_EXPORT GetConnectionStatusRequest : public SsmRequest {
 
 public:
     GetConnectionStatusRequest(const GetConnectionStatusRequest &other);

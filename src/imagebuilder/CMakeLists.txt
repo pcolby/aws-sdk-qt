@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSIMAGEBUILDER_LIBRARY)
+
 add_library(QtAwsimagebuilder
   cancelimagecreationrequest.h
   cancelimagecreationrequest_p.h
@@ -177,6 +179,7 @@ add_library(QtAwsimagebuilder
   putimagerecipepolicyrequest_p.h
   putimagerecipepolicyresponse.h
   putimagerecipepolicyresponse_p.h
+  qtawsimagebuilderglobal.h
   startimagepipelineexecutionrequest.h
   startimagepipelineexecutionrequest_p.h
   startimagepipelineexecutionresponse.h

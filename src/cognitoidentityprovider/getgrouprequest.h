@@ -27,7 +27,7 @@ namespace CognitoIdentityProvider {
 
 class GetGroupRequestPrivate;
 
-class QTAWS_EXPORT GetGroupRequest : public CognitoIdentityProviderRequest {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT GetGroupRequest : public CognitoIdentityProviderRequest {
 
 public:
     GetGroupRequest(const GetGroupRequest &other);

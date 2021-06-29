@@ -27,7 +27,7 @@ namespace Chime {
 
 class ListProxySessionsRequestPrivate;
 
-class QTAWS_EXPORT ListProxySessionsRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT ListProxySessionsRequest : public ChimeRequest {
 
 public:
     ListProxySessionsRequest(const ListProxySessionsRequest &other);

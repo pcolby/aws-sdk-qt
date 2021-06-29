@@ -27,7 +27,7 @@ namespace GreengrassV2 {
 
 class CancelDeploymentRequestPrivate;
 
-class QTAWS_EXPORT CancelDeploymentRequest : public GreengrassV2Request {
+class QTAWSGREENGRASSV2_EXPORT CancelDeploymentRequest : public GreengrassV2Request {
 
 public:
     CancelDeploymentRequest(const CancelDeploymentRequest &other);

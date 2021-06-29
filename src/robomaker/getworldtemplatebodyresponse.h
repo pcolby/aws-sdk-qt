@@ -28,7 +28,7 @@ namespace RoboMaker {
 
 class GetWorldTemplateBodyResponsePrivate;
 
-class QTAWS_EXPORT GetWorldTemplateBodyResponse : public RoboMakerResponse {
+class QTAWSROBOMAKER_EXPORT GetWorldTemplateBodyResponse : public RoboMakerResponse {
     Q_OBJECT
 
 public:

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsdatapipelineglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace DataPipeline {
 
 class DataPipelineRequestPrivate;
 
-class QTAWS_EXPORT DataPipelineRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSDATAPIPELINE_EXPORT DataPipelineRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by DataPipeline.

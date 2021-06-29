@@ -27,7 +27,7 @@ namespace SSM {
 
 class CreateActivationRequestPrivate;
 
-class QTAWS_EXPORT CreateActivationRequest : public SsmRequest {
+class QTAWSSSM_EXPORT CreateActivationRequest : public SsmRequest {
 
 public:
     CreateActivationRequest(const CreateActivationRequest &other);

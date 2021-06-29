@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class VerifyTrustRequestPrivate;
 
-class QTAWS_EXPORT VerifyTrustRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT VerifyTrustRequest : public DirectoryServiceRequest {
 
 public:
     VerifyTrustRequest(const VerifyTrustRequest &other);

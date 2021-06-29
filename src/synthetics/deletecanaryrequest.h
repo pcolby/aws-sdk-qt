@@ -27,7 +27,7 @@ namespace Synthetics {
 
 class DeleteCanaryRequestPrivate;
 
-class QTAWS_EXPORT DeleteCanaryRequest : public SyntheticsRequest {
+class QTAWSSYNTHETICS_EXPORT DeleteCanaryRequest : public SyntheticsRequest {
 
 public:
     DeleteCanaryRequest(const DeleteCanaryRequest &other);

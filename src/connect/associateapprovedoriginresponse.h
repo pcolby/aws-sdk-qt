@@ -28,7 +28,7 @@ namespace Connect {
 
 class AssociateApprovedOriginResponsePrivate;
 
-class QTAWS_EXPORT AssociateApprovedOriginResponse : public ConnectResponse {
+class QTAWSCONNECT_EXPORT AssociateApprovedOriginResponse : public ConnectResponse {
     Q_OBJECT
 
 public:

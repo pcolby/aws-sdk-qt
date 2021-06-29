@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsiotthingsgraphglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -99,7 +101,7 @@ class UpdateSystemTemplateResponse;
 class UploadEntityDefinitionsRequest;
 class UploadEntityDefinitionsResponse;
 
-class QTAWS_EXPORT IoTThingsGraphClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSIOTTHINGSGRAPH_EXPORT IoTThingsGraphClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

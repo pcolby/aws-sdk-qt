@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawselasticinferenceglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -41,7 +43,7 @@ class TagResourceResponse;
 class UntagResourceRequest;
 class UntagResourceResponse;
 
-class QTAWS_EXPORT ElasticInferenceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSELASTICINFERENCE_EXPORT ElasticInferenceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

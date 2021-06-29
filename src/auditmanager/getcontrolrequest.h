@@ -27,7 +27,7 @@ namespace AuditManager {
 
 class GetControlRequestPrivate;
 
-class QTAWS_EXPORT GetControlRequest : public AuditManagerRequest {
+class QTAWSAUDITMANAGER_EXPORT GetControlRequest : public AuditManagerRequest {
 
 public:
     GetControlRequest(const GetControlRequest &other);

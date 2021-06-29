@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSWORKSPACES_LIBRARY)
+
 add_library(QtAwsWorkSpaces
   associateconnectionaliasrequest.h
   associateconnectionaliasrequest_p.h
@@ -163,6 +165,7 @@ add_library(QtAwsWorkSpaces
   modifyworkspacestaterequest_p.h
   modifyworkspacestateresponse.h
   modifyworkspacestateresponse_p.h
+  qtawsworkspacesglobal.h
   rebootworkspacesrequest.h
   rebootworkspacesrequest_p.h
   rebootworkspacesresponse.h

@@ -28,7 +28,7 @@ namespace DataPipeline {
 
 class EvaluateExpressionResponsePrivate;
 
-class QTAWS_EXPORT EvaluateExpressionResponse : public DataPipelineResponse {
+class QTAWSDATAPIPELINE_EXPORT EvaluateExpressionResponse : public DataPipelineResponse {
     Q_OBJECT
 
 public:

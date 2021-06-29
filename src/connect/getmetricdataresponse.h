@@ -28,7 +28,7 @@ namespace Connect {
 
 class GetMetricDataResponsePrivate;
 
-class QTAWS_EXPORT GetMetricDataResponse : public ConnectResponse {
+class QTAWSCONNECT_EXPORT GetMetricDataResponse : public ConnectResponse {
     Q_OBJECT
 
 public:

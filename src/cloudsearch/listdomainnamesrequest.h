@@ -27,7 +27,7 @@ namespace CloudSearch {
 
 class ListDomainNamesRequestPrivate;
 
-class QTAWS_EXPORT ListDomainNamesRequest : public CloudSearchRequest {
+class QTAWSCLOUDSEARCH_EXPORT ListDomainNamesRequest : public CloudSearchRequest {
 
 public:
     ListDomainNamesRequest(const ListDomainNamesRequest &other);

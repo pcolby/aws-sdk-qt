@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 
 class DeleteLoadBalancerListenersResponsePrivate;
 
-class QTAWS_EXPORT DeleteLoadBalancerListenersResponse : public ElasticLoadBalancingResponse {
+class QTAWSELASTICLOADBALANCING_EXPORT DeleteLoadBalancerListenersResponse : public ElasticLoadBalancingResponse {
     Q_OBJECT
 
 public:

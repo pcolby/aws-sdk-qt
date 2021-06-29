@@ -28,7 +28,7 @@ namespace LexModelsV2 {
 
 class ListBotAliasesResponsePrivate;
 
-class QTAWS_EXPORT ListBotAliasesResponse : public LexModelsV2Response {
+class QTAWSLEXMODELSV2_EXPORT ListBotAliasesResponse : public LexModelsV2Response {
     Q_OBJECT
 
 public:

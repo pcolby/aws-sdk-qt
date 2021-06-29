@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsforecastserviceglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -99,7 +101,7 @@ class UntagResourceResponse;
 class UpdateDatasetGroupRequest;
 class UpdateDatasetGroupResponse;
 
-class QTAWS_EXPORT ForecastServiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSFORECASTSERVICE_EXPORT ForecastServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

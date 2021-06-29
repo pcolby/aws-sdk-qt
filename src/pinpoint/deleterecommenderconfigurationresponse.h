@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class DeleteRecommenderConfigurationResponsePrivate;
 
-class QTAWS_EXPORT DeleteRecommenderConfigurationResponse : public PinpointResponse {
+class QTAWSPINPOINT_EXPORT DeleteRecommenderConfigurationResponse : public PinpointResponse {
     Q_OBJECT
 
 public:

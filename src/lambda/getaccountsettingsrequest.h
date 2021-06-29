@@ -27,7 +27,7 @@ namespace Lambda {
 
 class GetAccountSettingsRequestPrivate;
 
-class QTAWS_EXPORT GetAccountSettingsRequest : public LambdaRequest {
+class QTAWSLAMBDA_EXPORT GetAccountSettingsRequest : public LambdaRequest {
 
 public:
     GetAccountSettingsRequest(const GetAccountSettingsRequest &other);

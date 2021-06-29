@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class DeleteLoadBalancerRequestPrivate;
 
-class QTAWS_EXPORT DeleteLoadBalancerRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT DeleteLoadBalancerRequest : public LightsailRequest {
 
 public:
     DeleteLoadBalancerRequest(const DeleteLoadBalancerRequest &other);

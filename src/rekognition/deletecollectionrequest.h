@@ -27,7 +27,7 @@ namespace Rekognition {
 
 class DeleteCollectionRequestPrivate;
 
-class QTAWS_EXPORT DeleteCollectionRequest : public RekognitionRequest {
+class QTAWSREKOGNITION_EXPORT DeleteCollectionRequest : public RekognitionRequest {
 
 public:
     DeleteCollectionRequest(const DeleteCollectionRequest &other);

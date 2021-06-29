@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class ReleaseStaticIpRequestPrivate;
 
-class QTAWS_EXPORT ReleaseStaticIpRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT ReleaseStaticIpRequest : public LightsailRequest {
 
 public:
     ReleaseStaticIpRequest(const ReleaseStaticIpRequest &other);

@@ -27,7 +27,7 @@ namespace SMS {
 
 class GetAppValidationConfigurationRequestPrivate;
 
-class QTAWS_EXPORT GetAppValidationConfigurationRequest : public SmsRequest {
+class QTAWSSMS_EXPORT GetAppValidationConfigurationRequest : public SmsRequest {
 
 public:
     GetAppValidationConfigurationRequest(const GetAppValidationConfigurationRequest &other);

@@ -28,7 +28,7 @@ namespace FraudDetector {
 
 class GetKMSEncryptionKeyResponsePrivate;
 
-class QTAWS_EXPORT GetKMSEncryptionKeyResponse : public FraudDetectorResponse {
+class QTAWSFRAUDDETECTOR_EXPORT GetKMSEncryptionKeyResponse : public FraudDetectorResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace WorkLink {
 
 class DescribeDevicePolicyConfigurationResponsePrivate;
 
-class QTAWS_EXPORT DescribeDevicePolicyConfigurationResponse : public WorkLinkResponse {
+class QTAWSWORKLINK_EXPORT DescribeDevicePolicyConfigurationResponse : public WorkLinkResponse {
     Q_OBJECT
 
 public:

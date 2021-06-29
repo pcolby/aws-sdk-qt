@@ -27,7 +27,7 @@ namespace CloudSearch {
 
 class CreateDomainRequestPrivate;
 
-class QTAWS_EXPORT CreateDomainRequest : public CloudSearchRequest {
+class QTAWSCLOUDSEARCH_EXPORT CreateDomainRequest : public CloudSearchRequest {
 
 public:
     CreateDomainRequest(const CreateDomainRequest &other);

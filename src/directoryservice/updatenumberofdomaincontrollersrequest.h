@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class UpdateNumberOfDomainControllersRequestPrivate;
 
-class QTAWS_EXPORT UpdateNumberOfDomainControllersRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT UpdateNumberOfDomainControllersRequest : public DirectoryServiceRequest {
 
 public:
     UpdateNumberOfDomainControllersRequest(const UpdateNumberOfDomainControllersRequest &other);

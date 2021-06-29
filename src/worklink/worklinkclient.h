@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsworklinkglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -95,7 +97,7 @@ class UpdateFleetMetadataResponse;
 class UpdateIdentityProviderConfigurationRequest;
 class UpdateIdentityProviderConfigurationResponse;
 
-class QTAWS_EXPORT WorkLinkClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSWORKLINK_EXPORT WorkLinkClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

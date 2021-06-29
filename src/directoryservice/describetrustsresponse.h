@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class DescribeTrustsResponsePrivate;
 
-class QTAWS_EXPORT DescribeTrustsResponse : public DirectoryServiceResponse {
+class QTAWSDIRECTORYSERVICE_EXPORT DescribeTrustsResponse : public DirectoryServiceResponse {
     Q_OBJECT
 
 public:

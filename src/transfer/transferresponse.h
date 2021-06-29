@@ -21,6 +21,8 @@
 #define QTAWS_TRANSFERRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawstransferglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Transfer {
 
 class TransferResponsePrivate;
 
-class QTAWS_EXPORT TransferResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSTRANSFER_EXPORT TransferResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

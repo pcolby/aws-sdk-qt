@@ -28,7 +28,7 @@ namespace TimestreamWrite {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public TimestreamWriteResponse {
+class QTAWSTIMESTREAMWRITE_EXPORT UntagResourceResponse : public TimestreamWriteResponse {
     Q_OBJECT
 
 public:

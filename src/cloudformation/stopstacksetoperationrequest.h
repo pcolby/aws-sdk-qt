@@ -27,7 +27,7 @@ namespace CloudFormation {
 
 class StopStackSetOperationRequestPrivate;
 
-class QTAWS_EXPORT StopStackSetOperationRequest : public CloudFormationRequest {
+class QTAWSCLOUDFORMATION_EXPORT StopStackSetOperationRequest : public CloudFormationRequest {
 
 public:
     StopStackSetOperationRequest(const StopStackSetOperationRequest &other);

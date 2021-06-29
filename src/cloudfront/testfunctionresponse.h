@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class TestFunctionResponsePrivate;
 
-class QTAWS_EXPORT TestFunctionResponse : public CloudFrontResponse {
+class QTAWSCLOUDFRONT_EXPORT TestFunctionResponse : public CloudFrontResponse {
     Q_OBJECT
 
 public:

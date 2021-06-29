@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class ListTapesResponsePrivate;
 
-class QTAWS_EXPORT ListTapesResponse : public StorageGatewayResponse {
+class QTAWSSTORAGEGATEWAY_EXPORT ListTapesResponse : public StorageGatewayResponse {
     Q_OBJECT
 
 public:

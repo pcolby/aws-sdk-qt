@@ -27,7 +27,7 @@ namespace kendra {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public kendraRequest {
+class QTAWSKENDRA_EXPORT ListTagsForResourceRequest : public kendraRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

@@ -27,7 +27,7 @@ namespace Chime {
 
 class GetAppInstanceStreamingConfigurationsRequestPrivate;
 
-class QTAWS_EXPORT GetAppInstanceStreamingConfigurationsRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT GetAppInstanceStreamingConfigurationsRequest : public ChimeRequest {
 
 public:
     GetAppInstanceStreamingConfigurationsRequest(const GetAppInstanceStreamingConfigurationsRequest &other);

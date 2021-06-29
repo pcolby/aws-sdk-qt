@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class SetIpAddressTypeRequestPrivate;
 
-class QTAWS_EXPORT SetIpAddressTypeRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT SetIpAddressTypeRequest : public LightsailRequest {
 
 public:
     SetIpAddressTypeRequest(const SetIpAddressTypeRequest &other);

@@ -27,7 +27,7 @@ namespace IoTSiteWise {
 
 class UpdateGatewayRequestPrivate;
 
-class QTAWS_EXPORT UpdateGatewayRequest : public IoTSiteWiseRequest {
+class QTAWSIOTSITEWISE_EXPORT UpdateGatewayRequest : public IoTSiteWiseRequest {
 
 public:
     UpdateGatewayRequest(const UpdateGatewayRequest &other);

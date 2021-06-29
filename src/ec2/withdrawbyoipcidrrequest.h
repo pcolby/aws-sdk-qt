@@ -27,7 +27,7 @@ namespace EC2 {
 
 class WithdrawByoipCidrRequestPrivate;
 
-class QTAWS_EXPORT WithdrawByoipCidrRequest : public Ec2Request {
+class QTAWSEC2_EXPORT WithdrawByoipCidrRequest : public Ec2Request {
 
 public:
     WithdrawByoipCidrRequest(const WithdrawByoipCidrRequest &other);

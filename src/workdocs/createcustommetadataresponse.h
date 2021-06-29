@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class CreateCustomMetadataResponsePrivate;
 
-class QTAWS_EXPORT CreateCustomMetadataResponse : public WorkDocsResponse {
+class QTAWSWORKDOCS_EXPORT CreateCustomMetadataResponse : public WorkDocsResponse {
     Q_OBJECT
 
 public:

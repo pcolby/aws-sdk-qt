@@ -28,7 +28,7 @@ namespace NetworkFirewall {
 
 class UpdateLoggingConfigurationResponsePrivate;
 
-class QTAWS_EXPORT UpdateLoggingConfigurationResponse : public NetworkFirewallResponse {
+class QTAWSNETWORKFIREWALL_EXPORT UpdateLoggingConfigurationResponse : public NetworkFirewallResponse {
     Q_OBJECT
 
 public:

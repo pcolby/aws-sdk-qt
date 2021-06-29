@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class GetSdkTypeResponsePrivate;
 
-class QTAWS_EXPORT GetSdkTypeResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT GetSdkTypeResponse : public APIGatewayResponse {
     Q_OBJECT
 
 public:

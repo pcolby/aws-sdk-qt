@@ -27,7 +27,7 @@ namespace SNS {
 
 class SetSMSAttributesRequestPrivate;
 
-class QTAWS_EXPORT SetSMSAttributesRequest : public SnsRequest {
+class QTAWSSNS_EXPORT SetSMSAttributesRequest : public SnsRequest {
 
 public:
     SetSMSAttributesRequest(const SetSMSAttributesRequest &other);

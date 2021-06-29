@@ -28,7 +28,7 @@ namespace Glacier {
 
 class ListProvisionedCapacityResponsePrivate;
 
-class QTAWS_EXPORT ListProvisionedCapacityResponse : public GlacierResponse {
+class QTAWSGLACIER_EXPORT ListProvisionedCapacityResponse : public GlacierResponse {
     Q_OBJECT
 
 public:

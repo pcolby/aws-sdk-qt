@@ -27,7 +27,7 @@ namespace MachineLearning {
 
 class DescribeMLModelsRequestPrivate;
 
-class QTAWS_EXPORT DescribeMLModelsRequest : public MachineLearningRequest {
+class QTAWSMACHINELEARNING_EXPORT DescribeMLModelsRequest : public MachineLearningRequest {
 
 public:
     DescribeMLModelsRequest(const DescribeMLModelsRequest &other);

@@ -27,7 +27,7 @@ namespace Backup {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public BackupRequest {
+class QTAWSBACKUP_EXPORT TagResourceRequest : public BackupRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

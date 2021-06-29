@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSWORKMAIL_LIBRARY)
+
 add_library(QtAwsWorkMail
   associatedelegatetoresourcerequest.h
   associatedelegatetoresourcerequest_p.h
@@ -179,6 +181,7 @@ add_library(QtAwsWorkMail
   putretentionpolicyrequest_p.h
   putretentionpolicyresponse.h
   putretentionpolicyresponse_p.h
+  qtawsworkmailglobal.h
   registertoworkmailrequest.h
   registertoworkmailrequest_p.h
   registertoworkmailresponse.h

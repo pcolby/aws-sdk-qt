@@ -27,7 +27,7 @@ namespace LocationService {
 
 class DescribePlaceIndexRequestPrivate;
 
-class QTAWS_EXPORT DescribePlaceIndexRequest : public LocationServiceRequest {
+class QTAWSLOCATIONSERVICE_EXPORT DescribePlaceIndexRequest : public LocationServiceRequest {
 
 public:
     DescribePlaceIndexRequest(const DescribePlaceIndexRequest &other);

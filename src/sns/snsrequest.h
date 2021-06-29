@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawssnsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace SNS {
 
 class SnsRequestPrivate;
 
-class QTAWS_EXPORT SnsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSNS_EXPORT SnsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SNS.

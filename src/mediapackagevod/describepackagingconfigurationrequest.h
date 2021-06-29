@@ -27,7 +27,7 @@ namespace MediaPackageVod {
 
 class DescribePackagingConfigurationRequestPrivate;
 
-class QTAWS_EXPORT DescribePackagingConfigurationRequest : public MediaPackageVodRequest {
+class QTAWSMEDIAPACKAGEVOD_EXPORT DescribePackagingConfigurationRequest : public MediaPackageVodRequest {
 
 public:
     DescribePackagingConfigurationRequest(const DescribePackagingConfigurationRequest &other);

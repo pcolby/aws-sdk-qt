@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsgameliftglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace GameLift {
 
 class GameLiftRequestPrivate;
 
-class QTAWS_EXPORT GameLiftRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSGAMELIFT_EXPORT GameLiftRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by GameLift.

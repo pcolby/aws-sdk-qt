@@ -27,7 +27,7 @@ namespace APIGateway {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public APIGatewayRequest {
+class QTAWSAPIGATEWAY_EXPORT TagResourceRequest : public APIGatewayRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

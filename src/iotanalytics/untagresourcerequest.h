@@ -27,7 +27,7 @@ namespace IoTAnalytics {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public IoTAnalyticsRequest {
+class QTAWSIOTANALYTICS_EXPORT UntagResourceRequest : public IoTAnalyticsRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public KinesisAnalyticsResponse {
+class QTAWSKINESISANALYTICS_EXPORT ListTagsForResourceResponse : public KinesisAnalyticsResponse {
     Q_OBJECT
 
 public:

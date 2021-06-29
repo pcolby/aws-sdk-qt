@@ -27,7 +27,7 @@ namespace Polly {
 
 class GetSpeechSynthesisTaskRequestPrivate;
 
-class QTAWS_EXPORT GetSpeechSynthesisTaskRequest : public PollyRequest {
+class QTAWSPOLLY_EXPORT GetSpeechSynthesisTaskRequest : public PollyRequest {
 
 public:
     GetSpeechSynthesisTaskRequest(const GetSpeechSynthesisTaskRequest &other);

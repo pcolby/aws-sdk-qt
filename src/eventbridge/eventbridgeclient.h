@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawseventbridgeglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -131,7 +133,7 @@ class UpdateArchiveResponse;
 class UpdateConnectionRequest;
 class UpdateConnectionResponse;
 
-class QTAWS_EXPORT EventBridgeClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSEVENTBRIDGE_EXPORT EventBridgeClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

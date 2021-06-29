@@ -28,7 +28,7 @@ namespace Route53Domains {
 
 class AcceptDomainTransferFromAnotherAwsAccountResponsePrivate;
 
-class QTAWS_EXPORT AcceptDomainTransferFromAnotherAwsAccountResponse : public Route53DomainsResponse {
+class QTAWSROUTE53DOMAINS_EXPORT AcceptDomainTransferFromAnotherAwsAccountResponse : public Route53DomainsResponse {
     Q_OBJECT
 
 public:

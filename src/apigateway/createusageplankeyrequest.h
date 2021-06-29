@@ -27,7 +27,7 @@ namespace APIGateway {
 
 class CreateUsagePlanKeyRequestPrivate;
 
-class QTAWS_EXPORT CreateUsagePlanKeyRequest : public APIGatewayRequest {
+class QTAWSAPIGATEWAY_EXPORT CreateUsagePlanKeyRequest : public APIGatewayRequest {
 
 public:
     CreateUsagePlanKeyRequest(const CreateUsagePlanKeyRequest &other);

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCLOUDSEARCH_LIBRARY)
+
 add_library(QtAwsCloudSearch
   buildsuggestersrequest.h
   buildsuggestersrequest_p.h
@@ -93,6 +95,7 @@ add_library(QtAwsCloudSearch
   listdomainnamesrequest_p.h
   listdomainnamesresponse.h
   listdomainnamesresponse_p.h
+  qtawscloudsearchglobal.h
   updateavailabilityoptionsrequest.h
   updateavailabilityoptionsrequest_p.h
   updateavailabilityoptionsresponse.h

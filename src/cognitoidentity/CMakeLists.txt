@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCOGNITOIDENTITY_LIBRARY)
+
 add_library(QtAwsCognitoIdentity
   cognitoidentityclient.h
   cognitoidentityclient_p.h
@@ -69,6 +71,7 @@ add_library(QtAwsCognitoIdentity
   mergedeveloperidentitiesrequest_p.h
   mergedeveloperidentitiesresponse.h
   mergedeveloperidentitiesresponse_p.h
+  qtawscognitoidentityglobal.h
   setidentitypoolrolesrequest.h
   setidentitypoolrolesrequest_p.h
   setidentitypoolrolesresponse.h

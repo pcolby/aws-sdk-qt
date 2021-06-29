@@ -27,7 +27,7 @@ namespace Redshift {
 
 class DescribeResizeRequestPrivate;
 
-class QTAWS_EXPORT DescribeResizeRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT DescribeResizeRequest : public RedshiftRequest {
 
 public:
     DescribeResizeRequest(const DescribeResizeRequest &other);

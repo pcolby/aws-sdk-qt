@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class GetJourneyExecutionMetricsResponsePrivate;
 
-class QTAWS_EXPORT GetJourneyExecutionMetricsResponse : public PinpointResponse {
+class QTAWSPINPOINT_EXPORT GetJourneyExecutionMetricsResponse : public PinpointResponse {
     Q_OBJECT
 
 public:

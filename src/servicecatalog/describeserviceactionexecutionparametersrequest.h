@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class DescribeServiceActionExecutionParametersRequestPrivate;
 
-class QTAWS_EXPORT DescribeServiceActionExecutionParametersRequest : public ServiceCatalogRequest {
+class QTAWSSERVICECATALOG_EXPORT DescribeServiceActionExecutionParametersRequest : public ServiceCatalogRequest {
 
 public:
     DescribeServiceActionExecutionParametersRequest(const DescribeServiceActionExecutionParametersRequest &other);

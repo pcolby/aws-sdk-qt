@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class ListMobileDeviceAccessRulesRequestPrivate;
 
-class QTAWS_EXPORT ListMobileDeviceAccessRulesRequest : public WorkMailRequest {
+class QTAWSWORKMAIL_EXPORT ListMobileDeviceAccessRulesRequest : public WorkMailRequest {
 
 public:
     ListMobileDeviceAccessRulesRequest(const ListMobileDeviceAccessRulesRequest &other);

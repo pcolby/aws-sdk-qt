@@ -27,7 +27,7 @@ namespace MediaTailor {
 
 class CreateVodSourceRequestPrivate;
 
-class QTAWS_EXPORT CreateVodSourceRequest : public MediaTailorRequest {
+class QTAWSMEDIATAILOR_EXPORT CreateVodSourceRequest : public MediaTailorRequest {
 
 public:
     CreateVodSourceRequest(const CreateVodSourceRequest &other);

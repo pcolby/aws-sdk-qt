@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class PutModelPackageGroupPolicyRequestPrivate;
 
-class QTAWS_EXPORT PutModelPackageGroupPolicyRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT PutModelPackageGroupPolicyRequest : public SageMakerRequest {
 
 public:
     PutModelPackageGroupPolicyRequest(const PutModelPackageGroupPolicyRequest &other);

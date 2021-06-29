@@ -27,7 +27,7 @@ namespace AppRunner {
 
 class DisassociateCustomDomainRequestPrivate;
 
-class QTAWS_EXPORT DisassociateCustomDomainRequest : public AppRunnerRequest {
+class QTAWSAPPRUNNER_EXPORT DisassociateCustomDomainRequest : public AppRunnerRequest {
 
 public:
     DisassociateCustomDomainRequest(const DisassociateCustomDomainRequest &other);

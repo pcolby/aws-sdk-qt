@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class DeleteFileRequestPrivate;
 
-class QTAWS_EXPORT DeleteFileRequest : public CodeCommitRequest {
+class QTAWSCODECOMMIT_EXPORT DeleteFileRequest : public CodeCommitRequest {
 
 public:
     DeleteFileRequest(const DeleteFileRequest &other);

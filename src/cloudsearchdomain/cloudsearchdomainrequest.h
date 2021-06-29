@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawscloudsearchdomainglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace CloudSearchDomain {
 
 class CloudSearchDomainRequestPrivate;
 
-class QTAWS_EXPORT CloudSearchDomainRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCLOUDSEARCHDOMAIN_EXPORT CloudSearchDomainRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CloudSearchDomain.

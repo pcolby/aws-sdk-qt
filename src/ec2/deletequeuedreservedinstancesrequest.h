@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DeleteQueuedReservedInstancesRequestPrivate;
 
-class QTAWS_EXPORT DeleteQueuedReservedInstancesRequest : public Ec2Request {
+class QTAWSEC2_EXPORT DeleteQueuedReservedInstancesRequest : public Ec2Request {
 
 public:
     DeleteQueuedReservedInstancesRequest(const DeleteQueuedReservedInstancesRequest &other);

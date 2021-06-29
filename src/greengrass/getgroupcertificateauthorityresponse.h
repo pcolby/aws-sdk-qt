@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class GetGroupCertificateAuthorityResponsePrivate;
 
-class QTAWS_EXPORT GetGroupCertificateAuthorityResponse : public GreengrassResponse {
+class QTAWSGREENGRASS_EXPORT GetGroupCertificateAuthorityResponse : public GreengrassResponse {
     Q_OBJECT
 
 public:

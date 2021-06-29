@@ -27,7 +27,7 @@ namespace GameLift {
 
 class DeleteFleetLocationsRequestPrivate;
 
-class QTAWS_EXPORT DeleteFleetLocationsRequest : public GameLiftRequest {
+class QTAWSGAMELIFT_EXPORT DeleteFleetLocationsRequest : public GameLiftRequest {
 
 public:
     DeleteFleetLocationsRequest(const DeleteFleetLocationsRequest &other);

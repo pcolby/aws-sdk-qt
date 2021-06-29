@@ -27,7 +27,7 @@ namespace ApiGatewayV2 {
 
 class DeleteCorsConfigurationRequestPrivate;
 
-class QTAWS_EXPORT DeleteCorsConfigurationRequest : public ApiGatewayV2Request {
+class QTAWSAPIGATEWAYV2_EXPORT DeleteCorsConfigurationRequest : public ApiGatewayV2Request {
 
 public:
     DeleteCorsConfigurationRequest(const DeleteCorsConfigurationRequest &other);

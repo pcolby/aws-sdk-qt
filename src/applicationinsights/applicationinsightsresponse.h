@@ -21,6 +21,8 @@
 #define QTAWS_APPLICATIONINSIGHTSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsapplicationinsightsglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace ApplicationInsights {
 
 class ApplicationInsightsResponsePrivate;
 
-class QTAWS_EXPORT ApplicationInsightsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSAPPLICATIONINSIGHTS_EXPORT ApplicationInsightsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

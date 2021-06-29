@@ -27,7 +27,7 @@ namespace TimestreamWrite {
 
 class DescribeEndpointsRequestPrivate;
 
-class QTAWS_EXPORT DescribeEndpointsRequest : public TimestreamWriteRequest {
+class QTAWSTIMESTREAMWRITE_EXPORT DescribeEndpointsRequest : public TimestreamWriteRequest {
 
 public:
     DescribeEndpointsRequest(const DescribeEndpointsRequest &other);

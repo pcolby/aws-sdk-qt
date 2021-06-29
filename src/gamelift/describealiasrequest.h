@@ -27,7 +27,7 @@ namespace GameLift {
 
 class DescribeAliasRequestPrivate;
 
-class QTAWS_EXPORT DescribeAliasRequest : public GameLiftRequest {
+class QTAWSGAMELIFT_EXPORT DescribeAliasRequest : public GameLiftRequest {
 
 public:
     DescribeAliasRequest(const DescribeAliasRequest &other);

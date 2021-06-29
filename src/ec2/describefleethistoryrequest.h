@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DescribeFleetHistoryRequestPrivate;
 
-class QTAWS_EXPORT DescribeFleetHistoryRequest : public Ec2Request {
+class QTAWSEC2_EXPORT DescribeFleetHistoryRequest : public Ec2Request {
 
 public:
     DescribeFleetHistoryRequest(const DescribeFleetHistoryRequest &other);

@@ -27,7 +27,7 @@ namespace IoTEvents {
 
 class PutLoggingOptionsRequestPrivate;
 
-class QTAWS_EXPORT PutLoggingOptionsRequest : public IoTEventsRequest {
+class QTAWSIOTEVENTS_EXPORT PutLoggingOptionsRequest : public IoTEventsRequest {
 
 public:
     PutLoggingOptionsRequest(const PutLoggingOptionsRequest &other);

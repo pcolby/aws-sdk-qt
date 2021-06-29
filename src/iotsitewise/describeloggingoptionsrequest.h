@@ -27,7 +27,7 @@ namespace IoTSiteWise {
 
 class DescribeLoggingOptionsRequestPrivate;
 
-class QTAWS_EXPORT DescribeLoggingOptionsRequest : public IoTSiteWiseRequest {
+class QTAWSIOTSITEWISE_EXPORT DescribeLoggingOptionsRequest : public IoTSiteWiseRequest {
 
 public:
     DescribeLoggingOptionsRequest(const DescribeLoggingOptionsRequest &other);

@@ -27,7 +27,7 @@ namespace OpsWorksCM {
 
 class DescribeNodeAssociationStatusRequestPrivate;
 
-class QTAWS_EXPORT DescribeNodeAssociationStatusRequest : public OpsWorksCMRequest {
+class QTAWSOPSWORKSCM_EXPORT DescribeNodeAssociationStatusRequest : public OpsWorksCMRequest {
 
 public:
     DescribeNodeAssociationStatusRequest(const DescribeNodeAssociationStatusRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsmobileglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Mobile {
 
 class MobileRequestPrivate;
 
-class QTAWS_EXPORT MobileRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSMOBILE_EXPORT MobileRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Mobile.

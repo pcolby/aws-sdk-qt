@@ -21,6 +21,8 @@
 #define QTAWS_FMSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsfmsglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace FMS {
 
 class FmsResponsePrivate;
 
-class QTAWS_EXPORT FmsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSFMS_EXPORT FmsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

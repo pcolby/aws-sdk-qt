@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawscomprehendglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -151,7 +153,7 @@ class UntagResourceResponse;
 class UpdateEndpointRequest;
 class UpdateEndpointResponse;
 
-class QTAWS_EXPORT ComprehendClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCOMPREHEND_EXPORT ComprehendClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

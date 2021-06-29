@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsapprunnerglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace AppRunner {
 
 class AppRunnerRequestPrivate;
 
-class QTAWS_EXPORT AppRunnerRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSAPPRUNNER_EXPORT AppRunnerRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by AppRunner.

@@ -28,7 +28,7 @@ namespace FraudDetector {
 
 class UpdateModelVersionStatusResponsePrivate;
 
-class QTAWS_EXPORT UpdateModelVersionStatusResponse : public FraudDetectorResponse {
+class QTAWSFRAUDDETECTOR_EXPORT UpdateModelVersionStatusResponse : public FraudDetectorResponse {
     Q_OBJECT
 
 public:

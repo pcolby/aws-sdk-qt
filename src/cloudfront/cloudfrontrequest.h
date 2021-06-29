@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawscloudfrontglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace CloudFront {
 
 class CloudFrontRequestPrivate;
 
-class QTAWS_EXPORT CloudFrontRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCLOUDFRONT_EXPORT CloudFrontRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CloudFront.

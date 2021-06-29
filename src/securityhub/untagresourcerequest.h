@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public SecurityHubRequest {
+class QTAWSSECURITYHUB_EXPORT UntagResourceRequest : public SecurityHubRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

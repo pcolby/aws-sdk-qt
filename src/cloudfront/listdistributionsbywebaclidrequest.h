@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class ListDistributionsByWebACLIdRequestPrivate;
 
-class QTAWS_EXPORT ListDistributionsByWebACLIdRequest : public CloudFrontRequest {
+class QTAWSCLOUDFRONT_EXPORT ListDistributionsByWebACLIdRequest : public CloudFrontRequest {
 
 public:
     ListDistributionsByWebACLIdRequest(const ListDistributionsByWebACLIdRequest &other);

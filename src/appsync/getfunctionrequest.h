@@ -27,7 +27,7 @@ namespace AppSync {
 
 class GetFunctionRequestPrivate;
 
-class QTAWS_EXPORT GetFunctionRequest : public AppSyncRequest {
+class QTAWSAPPSYNC_EXPORT GetFunctionRequest : public AppSyncRequest {
 
 public:
     GetFunctionRequest(const GetFunctionRequest &other);

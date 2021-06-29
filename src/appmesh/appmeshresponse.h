@@ -21,6 +21,8 @@
 #define QTAWS_APPMESHRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsappmeshglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace AppMesh {
 
 class AppMeshResponsePrivate;
 
-class QTAWS_EXPORT AppMeshResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSAPPMESH_EXPORT AppMeshResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace GameLift {
 
 class UpdateGameServerRequestPrivate;
 
-class QTAWS_EXPORT UpdateGameServerRequest : public GameLiftRequest {
+class QTAWSGAMELIFT_EXPORT UpdateGameServerRequest : public GameLiftRequest {
 
 public:
     UpdateGameServerRequest(const UpdateGameServerRequest &other);

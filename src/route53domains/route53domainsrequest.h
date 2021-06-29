@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsroute53domainsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Route53Domains {
 
 class Route53DomainsRequestPrivate;
 
-class QTAWS_EXPORT Route53DomainsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSROUTE53DOMAINS_EXPORT Route53DomainsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Route53Domains.

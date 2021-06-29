@@ -28,7 +28,7 @@ namespace IoTThingsGraph {
 
 class DescribeNamespaceResponsePrivate;
 
-class QTAWS_EXPORT DescribeNamespaceResponse : public IoTThingsGraphResponse {
+class QTAWSIOTTHINGSGRAPH_EXPORT DescribeNamespaceResponse : public IoTThingsGraphResponse {
     Q_OBJECT
 
 public:

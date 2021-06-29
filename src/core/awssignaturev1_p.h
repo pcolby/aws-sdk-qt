@@ -20,7 +20,7 @@
 #ifndef AWSSIGNATUREV1_P_H
 #define AWSSIGNATUREV1_P_H
 
-#include "qtawsglobal.h"
+#include "qtawscoreglobal.h"
 #include "awssignaturev0_p.h"
 
 #include <QUrlQuery>

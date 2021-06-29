@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSES_LIBRARY)
+
 add_library(QtAwsSes
   clonereceiptrulesetrequest.h
   clonereceiptrulesetrequest_p.h
@@ -175,6 +177,7 @@ add_library(QtAwsSes
   putidentitypolicyrequest_p.h
   putidentitypolicyresponse.h
   putidentitypolicyresponse_p.h
+  qtawssesglobal.h
   reorderreceiptrulesetrequest.h
   reorderreceiptrulesetrequest_p.h
   reorderreceiptrulesetresponse.h

@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class AttachPolicyRequestPrivate;
 
-class QTAWS_EXPORT AttachPolicyRequest : public CloudDirectoryRequest {
+class QTAWSCLOUDDIRECTORY_EXPORT AttachPolicyRequest : public CloudDirectoryRequest {
 
 public:
     AttachPolicyRequest(const AttachPolicyRequest &other);

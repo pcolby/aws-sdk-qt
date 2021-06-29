@@ -27,7 +27,7 @@ namespace Backup {
 
 class DescribeRegionSettingsRequestPrivate;
 
-class QTAWS_EXPORT DescribeRegionSettingsRequest : public BackupRequest {
+class QTAWSBACKUP_EXPORT DescribeRegionSettingsRequest : public BackupRequest {
 
 public:
     DescribeRegionSettingsRequest(const DescribeRegionSettingsRequest &other);

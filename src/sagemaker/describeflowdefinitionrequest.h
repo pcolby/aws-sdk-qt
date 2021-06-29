@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class DescribeFlowDefinitionRequestPrivate;
 
-class QTAWS_EXPORT DescribeFlowDefinitionRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT DescribeFlowDefinitionRequest : public SageMakerRequest {
 
 public:
     DescribeFlowDefinitionRequest(const DescribeFlowDefinitionRequest &other);

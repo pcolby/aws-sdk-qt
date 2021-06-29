@@ -27,7 +27,7 @@ namespace LexModelBuildingService {
 
 class GetBuiltinIntentsRequestPrivate;
 
-class QTAWS_EXPORT GetBuiltinIntentsRequest : public LexModelBuildingServiceRequest {
+class QTAWSLEXMODELBUILDINGSERVICE_EXPORT GetBuiltinIntentsRequest : public LexModelBuildingServiceRequest {
 
 public:
     GetBuiltinIntentsRequest(const GetBuiltinIntentsRequest &other);

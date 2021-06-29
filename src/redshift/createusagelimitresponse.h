@@ -28,7 +28,7 @@ namespace Redshift {
 
 class CreateUsageLimitResponsePrivate;
 
-class QTAWS_EXPORT CreateUsageLimitResponse : public RedshiftResponse {
+class QTAWSREDSHIFT_EXPORT CreateUsageLimitResponse : public RedshiftResponse {
     Q_OBJECT
 
 public:

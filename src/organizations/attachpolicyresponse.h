@@ -28,7 +28,7 @@ namespace Organizations {
 
 class AttachPolicyResponsePrivate;
 
-class QTAWS_EXPORT AttachPolicyResponse : public OrganizationsResponse {
+class QTAWSORGANIZATIONS_EXPORT AttachPolicyResponse : public OrganizationsResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace AppRunner {
 
 class ResumeServiceRequestPrivate;
 
-class QTAWS_EXPORT ResumeServiceRequest : public AppRunnerRequest {
+class QTAWSAPPRUNNER_EXPORT ResumeServiceRequest : public AppRunnerRequest {
 
 public:
     ResumeServiceRequest(const ResumeServiceRequest &other);

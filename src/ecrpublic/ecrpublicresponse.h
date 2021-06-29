@@ -21,6 +21,8 @@
 #define QTAWS_ECRPUBLICRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsecrpublicglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace ECRPublic {
 
 class ECRPublicResponsePrivate;
 
-class QTAWS_EXPORT ECRPublicResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSECRPUBLIC_EXPORT ECRPublicResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace MediaConnect {
 
 class DescribeOfferingRequestPrivate;
 
-class QTAWS_EXPORT DescribeOfferingRequest : public MediaConnectRequest {
+class QTAWSMEDIACONNECT_EXPORT DescribeOfferingRequest : public MediaConnectRequest {
 
 public:
     DescribeOfferingRequest(const DescribeOfferingRequest &other);

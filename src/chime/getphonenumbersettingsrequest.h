@@ -27,7 +27,7 @@ namespace Chime {
 
 class GetPhoneNumberSettingsRequestPrivate;
 
-class QTAWS_EXPORT GetPhoneNumberSettingsRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT GetPhoneNumberSettingsRequest : public ChimeRequest {
 
 public:
     GetPhoneNumberSettingsRequest(const GetPhoneNumberSettingsRequest &other);

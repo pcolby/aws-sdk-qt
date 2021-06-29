@@ -27,7 +27,7 @@ namespace EFS {
 
 class DescribeFileSystemPolicyRequestPrivate;
 
-class QTAWS_EXPORT DescribeFileSystemPolicyRequest : public EfsRequest {
+class QTAWSEFS_EXPORT DescribeFileSystemPolicyRequest : public EfsRequest {
 
 public:
     DescribeFileSystemPolicyRequest(const DescribeFileSystemPolicyRequest &other);

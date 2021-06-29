@@ -28,7 +28,7 @@ namespace IoT {
 
 class GetBehaviorModelTrainingSummariesResponsePrivate;
 
-class QTAWS_EXPORT GetBehaviorModelTrainingSummariesResponse : public IoTResponse {
+class QTAWSIOT_EXPORT GetBehaviorModelTrainingSummariesResponse : public IoTResponse {
     Q_OBJECT
 
 public:

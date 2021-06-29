@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ReplaceRouteRequestPrivate;
 
-class QTAWS_EXPORT ReplaceRouteRequest : public Ec2Request {
+class QTAWSEC2_EXPORT ReplaceRouteRequest : public Ec2Request {
 
 public:
     ReplaceRouteRequest(const ReplaceRouteRequest &other);

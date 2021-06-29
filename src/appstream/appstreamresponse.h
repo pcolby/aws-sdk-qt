@@ -21,6 +21,8 @@
 #define QTAWS_APPSTREAMRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsappstreamglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace AppStream {
 
 class AppStreamResponsePrivate;
 
-class QTAWS_EXPORT AppStreamResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSAPPSTREAM_EXPORT AppStreamResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

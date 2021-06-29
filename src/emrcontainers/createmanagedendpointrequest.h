@@ -27,7 +27,7 @@ namespace EMRContainers {
 
 class CreateManagedEndpointRequestPrivate;
 
-class QTAWS_EXPORT CreateManagedEndpointRequest : public EMRContainersRequest {
+class QTAWSEMRCONTAINERS_EXPORT CreateManagedEndpointRequest : public EMRContainersRequest {
 
 public:
     CreateManagedEndpointRequest(const CreateManagedEndpointRequest &other);

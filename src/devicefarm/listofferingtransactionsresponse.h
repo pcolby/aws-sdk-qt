@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class ListOfferingTransactionsResponsePrivate;
 
-class QTAWS_EXPORT ListOfferingTransactionsResponse : public DeviceFarmResponse {
+class QTAWSDEVICEFARM_EXPORT ListOfferingTransactionsResponse : public DeviceFarmResponse {
     Q_OBJECT
 
 public:

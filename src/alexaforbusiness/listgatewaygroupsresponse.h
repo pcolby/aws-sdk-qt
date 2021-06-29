@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class ListGatewayGroupsResponsePrivate;
 
-class QTAWS_EXPORT ListGatewayGroupsResponse : public AlexaForBusinessResponse {
+class QTAWSALEXAFORBUSINESS_EXPORT ListGatewayGroupsResponse : public AlexaForBusinessResponse {
     Q_OBJECT
 
 public:

@@ -21,6 +21,8 @@
 #define QTAWS_IMAGEBUILDERRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsimagebuilderglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace imagebuilder {
 
 class imagebuilderResponsePrivate;
 
-class QTAWS_EXPORT imagebuilderResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSIMAGEBUILDER_EXPORT imagebuilderResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

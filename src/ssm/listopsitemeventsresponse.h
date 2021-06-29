@@ -28,7 +28,7 @@ namespace SSM {
 
 class ListOpsItemEventsResponsePrivate;
 
-class QTAWS_EXPORT ListOpsItemEventsResponse : public SsmResponse {
+class QTAWSSSM_EXPORT ListOpsItemEventsResponse : public SsmResponse {
     Q_OBJECT
 
 public:

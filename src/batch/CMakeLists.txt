@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSBATCH_LIBRARY)
+
 add_library(QtAwsBatch
   batchclient.h
   batchclient_p.h
@@ -53,6 +55,7 @@ add_library(QtAwsBatch
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsbatchglobal.h
   registerjobdefinitionrequest.h
   registerjobdefinitionrequest_p.h
   registerjobdefinitionresponse.h

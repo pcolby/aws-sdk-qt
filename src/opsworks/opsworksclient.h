@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsopsworksglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -177,7 +179,7 @@ class UpdateUserProfileResponse;
 class UpdateVolumeRequest;
 class UpdateVolumeResponse;
 
-class QTAWS_EXPORT OpsWorksClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSOPSWORKS_EXPORT OpsWorksClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

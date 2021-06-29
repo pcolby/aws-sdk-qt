@@ -28,7 +28,7 @@ namespace Personalize {
 
 class DescribeFilterResponsePrivate;
 
-class QTAWS_EXPORT DescribeFilterResponse : public PersonalizeResponse {
+class QTAWSPERSONALIZE_EXPORT DescribeFilterResponse : public PersonalizeResponse {
     Q_OBJECT
 
 public:

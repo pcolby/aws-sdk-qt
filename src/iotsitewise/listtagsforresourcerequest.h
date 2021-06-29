@@ -27,7 +27,7 @@ namespace IoTSiteWise {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public IoTSiteWiseRequest {
+class QTAWSIOTSITEWISE_EXPORT ListTagsForResourceRequest : public IoTSiteWiseRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

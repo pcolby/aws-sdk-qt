@@ -27,7 +27,7 @@ namespace KMS {
 
 class DecryptRequestPrivate;
 
-class QTAWS_EXPORT DecryptRequest : public KmsRequest {
+class QTAWSKMS_EXPORT DecryptRequest : public KmsRequest {
 
 public:
     DecryptRequest(const DecryptRequest &other);

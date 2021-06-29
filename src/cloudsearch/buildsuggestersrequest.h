@@ -27,7 +27,7 @@ namespace CloudSearch {
 
 class BuildSuggestersRequestPrivate;
 
-class QTAWS_EXPORT BuildSuggestersRequest : public CloudSearchRequest {
+class QTAWSCLOUDSEARCH_EXPORT BuildSuggestersRequest : public CloudSearchRequest {
 
 public:
     BuildSuggestersRequest(const BuildSuggestersRequest &other);

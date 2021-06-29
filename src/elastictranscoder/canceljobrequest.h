@@ -27,7 +27,7 @@ namespace ElasticTranscoder {
 
 class CancelJobRequestPrivate;
 
-class QTAWS_EXPORT CancelJobRequest : public ElasticTranscoderRequest {
+class QTAWSELASTICTRANSCODER_EXPORT CancelJobRequest : public ElasticTranscoderRequest {
 
 public:
     CancelJobRequest(const CancelJobRequest &other);

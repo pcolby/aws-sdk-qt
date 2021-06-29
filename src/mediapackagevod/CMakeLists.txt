@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSMEDIAPACKAGEVOD_LIBRARY)
+
 add_library(QtAwsMediaPackageVod
   configurelogsrequest.h
   configurelogsrequest_p.h
@@ -61,6 +63,7 @@ add_library(QtAwsMediaPackageVod
   mediapackagevodrequest_p.h
   mediapackagevodresponse.h
   mediapackagevodresponse_p.h
+  qtawsmediapackagevodglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

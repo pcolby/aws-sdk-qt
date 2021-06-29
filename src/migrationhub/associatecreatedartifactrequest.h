@@ -27,7 +27,7 @@ namespace MigrationHub {
 
 class AssociateCreatedArtifactRequestPrivate;
 
-class QTAWS_EXPORT AssociateCreatedArtifactRequest : public MigrationHubRequest {
+class QTAWSMIGRATIONHUB_EXPORT AssociateCreatedArtifactRequest : public MigrationHubRequest {
 
 public:
     AssociateCreatedArtifactRequest(const AssociateCreatedArtifactRequest &other);

@@ -27,7 +27,7 @@ namespace IoT {
 
 class ListAuditSuppressionsRequestPrivate;
 
-class QTAWS_EXPORT ListAuditSuppressionsRequest : public IoTRequest {
+class QTAWSIOT_EXPORT ListAuditSuppressionsRequest : public IoTRequest {
 
 public:
     ListAuditSuppressionsRequest(const ListAuditSuppressionsRequest &other);

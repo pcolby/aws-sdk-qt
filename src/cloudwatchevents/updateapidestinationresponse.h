@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 
 class UpdateApiDestinationResponsePrivate;
 
-class QTAWS_EXPORT UpdateApiDestinationResponse : public CloudWatchEventsResponse {
+class QTAWSCLOUDWATCHEVENTS_EXPORT UpdateApiDestinationResponse : public CloudWatchEventsResponse {
     Q_OBJECT
 
 public:

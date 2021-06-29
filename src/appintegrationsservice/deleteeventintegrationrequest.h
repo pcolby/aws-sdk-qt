@@ -27,7 +27,7 @@ namespace AppIntegrationsService {
 
 class DeleteEventIntegrationRequestPrivate;
 
-class QTAWS_EXPORT DeleteEventIntegrationRequest : public AppIntegrationsServiceRequest {
+class QTAWSAPPINTEGRATIONSSERVICE_EXPORT DeleteEventIntegrationRequest : public AppIntegrationsServiceRequest {
 
 public:
     DeleteEventIntegrationRequest(const DeleteEventIntegrationRequest &other);

@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class ApproveSkillResponsePrivate;
 
-class QTAWS_EXPORT ApproveSkillResponse : public AlexaForBusinessResponse {
+class QTAWSALEXAFORBUSINESS_EXPORT ApproveSkillResponse : public AlexaForBusinessResponse {
     Q_OBJECT
 
 public:

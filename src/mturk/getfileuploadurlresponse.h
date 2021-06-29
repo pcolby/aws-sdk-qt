@@ -28,7 +28,7 @@ namespace MTurk {
 
 class GetFileUploadURLResponsePrivate;
 
-class QTAWS_EXPORT GetFileUploadURLResponse : public MTurkResponse {
+class QTAWSMTURK_EXPORT GetFileUploadURLResponse : public MTurkResponse {
     Q_OBJECT
 
 public:

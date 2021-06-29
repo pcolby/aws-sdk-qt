@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DescribeTrafficMirrorFiltersRequestPrivate;
 
-class QTAWS_EXPORT DescribeTrafficMirrorFiltersRequest : public Ec2Request {
+class QTAWSEC2_EXPORT DescribeTrafficMirrorFiltersRequest : public Ec2Request {
 
 public:
     DescribeTrafficMirrorFiltersRequest(const DescribeTrafficMirrorFiltersRequest &other);

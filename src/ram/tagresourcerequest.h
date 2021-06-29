@@ -27,7 +27,7 @@ namespace RAM {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public RamRequest {
+class QTAWSRAM_EXPORT TagResourceRequest : public RamRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

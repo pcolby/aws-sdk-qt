@@ -27,7 +27,7 @@ namespace AppRunner {
 
 class ListServicesRequestPrivate;
 
-class QTAWS_EXPORT ListServicesRequest : public AppRunnerRequest {
+class QTAWSAPPRUNNER_EXPORT ListServicesRequest : public AppRunnerRequest {
 
 public:
     ListServicesRequest(const ListServicesRequest &other);

@@ -27,7 +27,7 @@ namespace RDS {
 
 class ModifyOptionGroupRequestPrivate;
 
-class QTAWS_EXPORT ModifyOptionGroupRequest : public RdsRequest {
+class QTAWSRDS_EXPORT ModifyOptionGroupRequest : public RdsRequest {
 
 public:
     ModifyOptionGroupRequest(const ModifyOptionGroupRequest &other);

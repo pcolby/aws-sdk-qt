@@ -28,7 +28,7 @@ namespace Kafka {
 
 class DeleteConfigurationResponsePrivate;
 
-class QTAWS_EXPORT DeleteConfigurationResponse : public KafkaResponse {
+class QTAWSKAFKA_EXPORT DeleteConfigurationResponse : public KafkaResponse {
     Q_OBJECT
 
 public:

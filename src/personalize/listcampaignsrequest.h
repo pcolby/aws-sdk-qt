@@ -27,7 +27,7 @@ namespace Personalize {
 
 class ListCampaignsRequestPrivate;
 
-class QTAWS_EXPORT ListCampaignsRequest : public PersonalizeRequest {
+class QTAWSPERSONALIZE_EXPORT ListCampaignsRequest : public PersonalizeRequest {
 
 public:
     ListCampaignsRequest(const ListCampaignsRequest &other);

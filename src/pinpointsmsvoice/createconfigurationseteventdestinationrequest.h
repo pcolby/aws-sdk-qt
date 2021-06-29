@@ -27,7 +27,7 @@ namespace PinpointSMSVoice {
 
 class CreateConfigurationSetEventDestinationRequestPrivate;
 
-class QTAWS_EXPORT CreateConfigurationSetEventDestinationRequest : public PinpointSMSVoiceRequest {
+class QTAWSPINPOINTSMSVOICE_EXPORT CreateConfigurationSetEventDestinationRequest : public PinpointSMSVoiceRequest {
 
 public:
     CreateConfigurationSetEventDestinationRequest(const CreateConfigurationSetEventDestinationRequest &other);

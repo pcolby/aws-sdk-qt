@@ -28,7 +28,7 @@ namespace MQ {
 
 class DeleteTagsResponsePrivate;
 
-class QTAWS_EXPORT DeleteTagsResponse : public MqResponse {
+class QTAWSMQ_EXPORT DeleteTagsResponse : public MqResponse {
     Q_OBJECT
 
 public:

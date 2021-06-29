@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public SecurityHubRequest {
+class QTAWSSECURITYHUB_EXPORT TagResourceRequest : public SecurityHubRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

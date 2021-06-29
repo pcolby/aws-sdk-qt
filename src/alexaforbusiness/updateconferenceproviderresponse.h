@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class UpdateConferenceProviderResponsePrivate;
 
-class QTAWS_EXPORT UpdateConferenceProviderResponse : public AlexaForBusinessResponse {
+class QTAWSALEXAFORBUSINESS_EXPORT UpdateConferenceProviderResponse : public AlexaForBusinessResponse {
     Q_OBJECT
 
 public:

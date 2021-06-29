@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSOPSWORKSCM_LIBRARY)
+
 add_library(QtAwsOpsWorksCM
   associatenoderequest.h
   associatenoderequest_p.h
@@ -57,6 +59,7 @@ add_library(QtAwsOpsWorksCM
   opsworkscmrequest_p.h
   opsworkscmresponse.h
   opsworkscmresponse_p.h
+  qtawsopsworkscmglobal.h
   restoreserverrequest.h
   restoreserverrequest_p.h
   restoreserverresponse.h

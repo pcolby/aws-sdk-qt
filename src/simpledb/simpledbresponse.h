@@ -21,6 +21,8 @@
 #define QTAWS_SIMPLEDBRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawssimpledbglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace SimpleDB {
 
 class SimpleDBResponsePrivate;
 
-class QTAWS_EXPORT SimpleDBResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSIMPLEDB_EXPORT SimpleDBResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

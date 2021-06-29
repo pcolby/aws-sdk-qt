@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class ListFeatureGroupsResponsePrivate;
 
-class QTAWS_EXPORT ListFeatureGroupsResponse : public SageMakerResponse {
+class QTAWSSAGEMAKER_EXPORT ListFeatureGroupsResponse : public SageMakerResponse {
     Q_OBJECT
 
 public:

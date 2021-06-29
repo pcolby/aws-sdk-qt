@@ -28,7 +28,7 @@ namespace CloudTrail {
 
 class LookupEventsResponsePrivate;
 
-class QTAWS_EXPORT LookupEventsResponse : public CloudTrailResponse {
+class QTAWSCLOUDTRAIL_EXPORT LookupEventsResponse : public CloudTrailResponse {
     Q_OBJECT
 
 public:

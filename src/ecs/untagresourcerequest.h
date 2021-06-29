@@ -27,7 +27,7 @@ namespace ECS {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public EcsRequest {
+class QTAWSECS_EXPORT UntagResourceRequest : public EcsRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

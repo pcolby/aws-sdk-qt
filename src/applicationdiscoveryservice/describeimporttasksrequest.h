@@ -27,7 +27,7 @@ namespace ApplicationDiscoveryService {
 
 class DescribeImportTasksRequestPrivate;
 
-class QTAWS_EXPORT DescribeImportTasksRequest : public ApplicationDiscoveryServiceRequest {
+class QTAWSAPPLICATIONDISCOVERYSERVICE_EXPORT DescribeImportTasksRequest : public ApplicationDiscoveryServiceRequest {
 
 public:
     DescribeImportTasksRequest(const DescribeImportTasksRequest &other);

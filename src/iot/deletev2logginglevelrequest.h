@@ -27,7 +27,7 @@ namespace IoT {
 
 class DeleteV2LoggingLevelRequestPrivate;
 
-class QTAWS_EXPORT DeleteV2LoggingLevelRequest : public IoTRequest {
+class QTAWSIOT_EXPORT DeleteV2LoggingLevelRequest : public IoTRequest {
 
 public:
     DeleteV2LoggingLevelRequest(const DeleteV2LoggingLevelRequest &other);

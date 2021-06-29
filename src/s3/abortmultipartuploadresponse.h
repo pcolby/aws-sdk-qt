@@ -28,7 +28,7 @@ namespace S3 {
 
 class AbortMultipartUploadResponsePrivate;
 
-class QTAWS_EXPORT AbortMultipartUploadResponse : public S3Response {
+class QTAWSS3_EXPORT AbortMultipartUploadResponse : public S3Response {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace ElasticsearchService {
 
 class ListPackagesForDomainRequestPrivate;
 
-class QTAWS_EXPORT ListPackagesForDomainRequest : public ElasticsearchServiceRequest {
+class QTAWSELASTICSEARCHSERVICE_EXPORT ListPackagesForDomainRequest : public ElasticsearchServiceRequest {
 
 public:
     ListPackagesForDomainRequest(const ListPackagesForDomainRequest &other);

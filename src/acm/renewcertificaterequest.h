@@ -27,7 +27,7 @@ namespace ACM {
 
 class RenewCertificateRequestPrivate;
 
-class QTAWS_EXPORT RenewCertificateRequest : public AcmRequest {
+class QTAWSACM_EXPORT RenewCertificateRequest : public AcmRequest {
 
 public:
     RenewCertificateRequest(const RenewCertificateRequest &other);

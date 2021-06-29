@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public CodeDeployResponse {
+class QTAWSCODEDEPLOY_EXPORT UntagResourceResponse : public CodeDeployResponse {
     Q_OBJECT
 
 public:

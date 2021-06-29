@@ -27,7 +27,7 @@ namespace KMS {
 
 class ListAliasesRequestPrivate;
 
-class QTAWS_EXPORT ListAliasesRequest : public KmsRequest {
+class QTAWSKMS_EXPORT ListAliasesRequest : public KmsRequest {
 
 public:
     ListAliasesRequest(const ListAliasesRequest &other);

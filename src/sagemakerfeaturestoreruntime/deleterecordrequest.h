@@ -27,7 +27,7 @@ namespace SageMakerFeatureStoreRuntime {
 
 class DeleteRecordRequestPrivate;
 
-class QTAWS_EXPORT DeleteRecordRequest : public SageMakerFeatureStoreRuntimeRequest {
+class QTAWSSAGEMAKERFEATURESTORERUNTIME_EXPORT DeleteRecordRequest : public SageMakerFeatureStoreRuntimeRequest {
 
 public:
     DeleteRecordRequest(const DeleteRecordRequest &other);

@@ -27,7 +27,7 @@ namespace CodeArtifact {
 
 class GetAuthorizationTokenRequestPrivate;
 
-class QTAWS_EXPORT GetAuthorizationTokenRequest : public CodeArtifactRequest {
+class QTAWSCODEARTIFACT_EXPORT GetAuthorizationTokenRequest : public CodeArtifactRequest {
 
 public:
     GetAuthorizationTokenRequest(const GetAuthorizationTokenRequest &other);

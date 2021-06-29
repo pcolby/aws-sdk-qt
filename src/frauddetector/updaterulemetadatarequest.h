@@ -27,7 +27,7 @@ namespace FraudDetector {
 
 class UpdateRuleMetadataRequestPrivate;
 
-class QTAWS_EXPORT UpdateRuleMetadataRequest : public FraudDetectorRequest {
+class QTAWSFRAUDDETECTOR_EXPORT UpdateRuleMetadataRequest : public FraudDetectorRequest {
 
 public:
     UpdateRuleMetadataRequest(const UpdateRuleMetadataRequest &other);

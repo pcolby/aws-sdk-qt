@@ -27,7 +27,7 @@ namespace MTurk {
 
 class ListReviewPolicyResultsForHITRequestPrivate;
 
-class QTAWS_EXPORT ListReviewPolicyResultsForHITRequest : public MTurkRequest {
+class QTAWSMTURK_EXPORT ListReviewPolicyResultsForHITRequest : public MTurkRequest {
 
 public:
     ListReviewPolicyResultsForHITRequest(const ListReviewPolicyResultsForHITRequest &other);

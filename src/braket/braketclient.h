@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsbraketglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -47,7 +49,7 @@ class TagResourceResponse;
 class UntagResourceRequest;
 class UntagResourceResponse;
 
-class QTAWS_EXPORT BraketClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSBRAKET_EXPORT BraketClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

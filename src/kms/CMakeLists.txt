@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSKMS_LIBRARY)
+
 add_library(QtAwsKms
   cancelkeydeletionrequest.h
   cancelkeydeletionrequest_p.h
@@ -145,6 +147,7 @@ add_library(QtAwsKms
   putkeypolicyrequest_p.h
   putkeypolicyresponse.h
   putkeypolicyresponse_p.h
+  qtawskmsglobal.h
   reencryptrequest.h
   reencryptrequest_p.h
   reencryptresponse.h

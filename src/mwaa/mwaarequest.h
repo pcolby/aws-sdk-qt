@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsmwaaglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace MWAA {
 
 class MwaaRequestPrivate;
 
-class QTAWS_EXPORT MwaaRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSMWAA_EXPORT MwaaRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by MWAA.

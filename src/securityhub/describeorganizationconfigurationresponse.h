@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class DescribeOrganizationConfigurationResponsePrivate;
 
-class QTAWS_EXPORT DescribeOrganizationConfigurationResponse : public SecurityHubResponse {
+class QTAWSSECURITYHUB_EXPORT DescribeOrganizationConfigurationResponse : public SecurityHubResponse {
     Q_OBJECT
 
 public:

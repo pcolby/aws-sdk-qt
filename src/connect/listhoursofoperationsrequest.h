@@ -27,7 +27,7 @@ namespace Connect {
 
 class ListHoursOfOperationsRequestPrivate;
 
-class QTAWS_EXPORT ListHoursOfOperationsRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT ListHoursOfOperationsRequest : public ConnectRequest {
 
 public:
     ListHoursOfOperationsRequest(const ListHoursOfOperationsRequest &other);

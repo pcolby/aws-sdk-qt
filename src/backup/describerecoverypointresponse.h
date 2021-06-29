@@ -28,7 +28,7 @@ namespace Backup {
 
 class DescribeRecoveryPointResponsePrivate;
 
-class QTAWS_EXPORT DescribeRecoveryPointResponse : public BackupResponse {
+class QTAWSBACKUP_EXPORT DescribeRecoveryPointResponse : public BackupResponse {
     Q_OBJECT
 
 public:

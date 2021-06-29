@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsecrglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -97,7 +99,7 @@ class UntagResourceResponse;
 class UploadLayerPartRequest;
 class UploadLayerPartResponse;
 
-class QTAWS_EXPORT EcrClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSECR_EXPORT EcrClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

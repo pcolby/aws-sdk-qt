@@ -28,7 +28,7 @@ namespace Glue {
 
 class UpdateColumnStatisticsForPartitionResponsePrivate;
 
-class QTAWS_EXPORT UpdateColumnStatisticsForPartitionResponse : public GlueResponse {
+class QTAWSGLUE_EXPORT UpdateColumnStatisticsForPartitionResponse : public GlueResponse {
     Q_OBJECT
 
 public:

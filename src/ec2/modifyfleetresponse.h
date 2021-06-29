@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ModifyFleetResponsePrivate;
 
-class QTAWS_EXPORT ModifyFleetResponse : public Ec2Response {
+class QTAWSEC2_EXPORT ModifyFleetResponse : public Ec2Response {
     Q_OBJECT
 
 public:

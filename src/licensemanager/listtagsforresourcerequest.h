@@ -27,7 +27,7 @@ namespace LicenseManager {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public LicenseManagerRequest {
+class QTAWSLICENSEMANAGER_EXPORT ListTagsForResourceRequest : public LicenseManagerRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

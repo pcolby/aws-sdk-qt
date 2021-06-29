@@ -1,3 +1,5 @@
+add_compile_definitions({{ModuleName|upper}}_LIBRARY)
+
 add_library(
   {{ModuleName}}
 {% for header in HeaderFiles %}

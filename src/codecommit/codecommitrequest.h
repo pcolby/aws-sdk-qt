@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawscodecommitglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace CodeCommit {
 
 class CodeCommitRequestPrivate;
 
-class QTAWS_EXPORT CodeCommitRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCODECOMMIT_EXPORT CodeCommitRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CodeCommit.

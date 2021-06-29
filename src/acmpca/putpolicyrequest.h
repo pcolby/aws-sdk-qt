@@ -27,7 +27,7 @@ namespace ACMPCA {
 
 class PutPolicyRequestPrivate;
 
-class QTAWS_EXPORT PutPolicyRequest : public AcmpcaRequest {
+class QTAWSACMPCA_EXPORT PutPolicyRequest : public AcmpcaRequest {
 
 public:
     PutPolicyRequest(const PutPolicyRequest &other);

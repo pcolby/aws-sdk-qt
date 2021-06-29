@@ -27,7 +27,7 @@ namespace MediaPackage {
 
 class RotateChannelCredentialsRequestPrivate;
 
-class QTAWS_EXPORT RotateChannelCredentialsRequest : public MediaPackageRequest {
+class QTAWSMEDIAPACKAGE_EXPORT RotateChannelCredentialsRequest : public MediaPackageRequest {
 
 public:
     RotateChannelCredentialsRequest(const RotateChannelCredentialsRequest &other);

@@ -27,7 +27,7 @@ namespace ComprehendMedical {
 
 class ListEntitiesDetectionV2JobsRequestPrivate;
 
-class QTAWS_EXPORT ListEntitiesDetectionV2JobsRequest : public ComprehendMedicalRequest {
+class QTAWSCOMPREHENDMEDICAL_EXPORT ListEntitiesDetectionV2JobsRequest : public ComprehendMedicalRequest {
 
 public:
     ListEntitiesDetectionV2JobsRequest(const ListEntitiesDetectionV2JobsRequest &other);

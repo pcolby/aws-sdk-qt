@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsecsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace ECS {
 
 class EcsRequestPrivate;
 
-class QTAWS_EXPORT EcsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSECS_EXPORT EcsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ECS.

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsappsyncglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -111,7 +113,7 @@ class UpdateResolverResponse;
 class UpdateTypeRequest;
 class UpdateTypeResponse;
 
-class QTAWS_EXPORT AppSyncClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSAPPSYNC_EXPORT AppSyncClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace MediaLive {
 
 class ListChannelsRequestPrivate;
 
-class QTAWS_EXPORT ListChannelsRequest : public MediaLiveRequest {
+class QTAWSMEDIALIVE_EXPORT ListChannelsRequest : public MediaLiveRequest {
 
 public:
     ListChannelsRequest(const ListChannelsRequest &other);

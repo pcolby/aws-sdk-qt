@@ -27,7 +27,7 @@ namespace MediaConvert {
 
 class UpdateQueueRequestPrivate;
 
-class QTAWS_EXPORT UpdateQueueRequest : public MediaConvertRequest {
+class QTAWSMEDIACONVERT_EXPORT UpdateQueueRequest : public MediaConvertRequest {
 
 public:
     UpdateQueueRequest(const UpdateQueueRequest &other);

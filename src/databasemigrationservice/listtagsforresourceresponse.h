@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public DatabaseMigrationServiceResponse {
+class QTAWSDATABASEMIGRATIONSERVICE_EXPORT ListTagsForResourceResponse : public DatabaseMigrationServiceResponse {
     Q_OBJECT
 
 public:

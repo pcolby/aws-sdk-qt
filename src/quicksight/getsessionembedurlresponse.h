@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class GetSessionEmbedUrlResponsePrivate;
 
-class QTAWS_EXPORT GetSessionEmbedUrlResponse : public QuickSightResponse {
+class QTAWSQUICKSIGHT_EXPORT GetSessionEmbedUrlResponse : public QuickSightResponse {
     Q_OBJECT
 
 public:

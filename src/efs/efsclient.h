@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsefsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -83,7 +85,7 @@ class UntagResourceResponse;
 class UpdateFileSystemRequest;
 class UpdateFileSystemResponse;
 
-class QTAWS_EXPORT EfsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSEFS_EXPORT EfsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

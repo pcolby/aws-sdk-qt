@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public CloudFrontResponse {
+class QTAWSCLOUDFRONT_EXPORT ListTagsForResourceResponse : public CloudFrontResponse {
     Q_OBJECT
 
 public:

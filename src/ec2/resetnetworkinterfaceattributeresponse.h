@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ResetNetworkInterfaceAttributeResponsePrivate;
 
-class QTAWS_EXPORT ResetNetworkInterfaceAttributeResponse : public Ec2Response {
+class QTAWSEC2_EXPORT ResetNetworkInterfaceAttributeResponse : public Ec2Response {
     Q_OBJECT
 
 public:

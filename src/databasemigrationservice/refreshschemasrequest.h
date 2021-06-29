@@ -27,7 +27,7 @@ namespace DatabaseMigrationService {
 
 class RefreshSchemasRequestPrivate;
 
-class QTAWS_EXPORT RefreshSchemasRequest : public DatabaseMigrationServiceRequest {
+class QTAWSDATABASEMIGRATIONSERVICE_EXPORT RefreshSchemasRequest : public DatabaseMigrationServiceRequest {
 
 public:
     RefreshSchemasRequest(const RefreshSchemasRequest &other);

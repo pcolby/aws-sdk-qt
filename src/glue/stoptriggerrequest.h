@@ -27,7 +27,7 @@ namespace Glue {
 
 class StopTriggerRequestPrivate;
 
-class QTAWS_EXPORT StopTriggerRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT StopTriggerRequest : public GlueRequest {
 
 public:
     StopTriggerRequest(const StopTriggerRequest &other);

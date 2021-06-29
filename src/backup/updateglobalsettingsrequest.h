@@ -27,7 +27,7 @@ namespace Backup {
 
 class UpdateGlobalSettingsRequestPrivate;
 
-class QTAWS_EXPORT UpdateGlobalSettingsRequest : public BackupRequest {
+class QTAWSBACKUP_EXPORT UpdateGlobalSettingsRequest : public BackupRequest {
 
 public:
     UpdateGlobalSettingsRequest(const UpdateGlobalSettingsRequest &other);

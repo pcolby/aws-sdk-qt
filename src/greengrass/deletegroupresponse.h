@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class DeleteGroupResponsePrivate;
 
-class QTAWS_EXPORT DeleteGroupResponse : public GreengrassResponse {
+class QTAWSGREENGRASS_EXPORT DeleteGroupResponse : public GreengrassResponse {
     Q_OBJECT
 
 public:

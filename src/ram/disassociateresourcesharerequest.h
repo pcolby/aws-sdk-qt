@@ -27,7 +27,7 @@ namespace RAM {
 
 class DisassociateResourceShareRequestPrivate;
 
-class QTAWS_EXPORT DisassociateResourceShareRequest : public RamRequest {
+class QTAWSRAM_EXPORT DisassociateResourceShareRequest : public RamRequest {
 
 public:
     DisassociateResourceShareRequest(const DisassociateResourceShareRequest &other);

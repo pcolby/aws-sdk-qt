@@ -27,7 +27,7 @@ namespace ServiceDiscovery {
 
 class GetInstancesHealthStatusRequestPrivate;
 
-class QTAWS_EXPORT GetInstancesHealthStatusRequest : public ServiceDiscoveryRequest {
+class QTAWSSERVICEDISCOVERY_EXPORT GetInstancesHealthStatusRequest : public ServiceDiscoveryRequest {
 
 public:
     GetInstancesHealthStatusRequest(const GetInstancesHealthStatusRequest &other);

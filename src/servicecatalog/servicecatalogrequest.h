@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsservicecatalogglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace ServiceCatalog {
 
 class ServiceCatalogRequestPrivate;
 
-class QTAWS_EXPORT ServiceCatalogRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSERVICECATALOG_EXPORT ServiceCatalogRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ServiceCatalog.

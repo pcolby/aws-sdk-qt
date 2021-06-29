@@ -28,7 +28,7 @@ namespace CodeGuruProfiler {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public CodeGuruProfilerResponse {
+class QTAWSCODEGURUPROFILER_EXPORT ListTagsForResourceResponse : public CodeGuruProfilerResponse {
     Q_OBJECT
 
 public:

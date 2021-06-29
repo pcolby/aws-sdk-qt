@@ -27,7 +27,7 @@ namespace S3 {
 
 class GetBucketRequestPaymentRequestPrivate;
 
-class QTAWS_EXPORT GetBucketRequestPaymentRequest : public S3Request {
+class QTAWSS3_EXPORT GetBucketRequestPaymentRequest : public S3Request {
 
 public:
     GetBucketRequestPaymentRequest(const GetBucketRequestPaymentRequest &other);

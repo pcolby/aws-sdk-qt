@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 
 class CreateApplicationResponsePrivate;
 
-class QTAWS_EXPORT CreateApplicationResponse : public ApplicationDiscoveryServiceResponse {
+class QTAWSAPPLICATIONDISCOVERYSERVICE_EXPORT CreateApplicationResponse : public ApplicationDiscoveryServiceResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace IoT {
 
 class ReplaceTopicRuleRequestPrivate;
 
-class QTAWS_EXPORT ReplaceTopicRuleRequest : public IoTRequest {
+class QTAWSIOT_EXPORT ReplaceTopicRuleRequest : public IoTRequest {
 
 public:
     ReplaceTopicRuleRequest(const ReplaceTopicRuleRequest &other);

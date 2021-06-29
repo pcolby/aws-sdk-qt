@@ -27,7 +27,7 @@ namespace CodeDeploy {
 
 class RegisterApplicationRevisionRequestPrivate;
 
-class QTAWS_EXPORT RegisterApplicationRevisionRequest : public CodeDeployRequest {
+class QTAWSCODEDEPLOY_EXPORT RegisterApplicationRevisionRequest : public CodeDeployRequest {
 
 public:
     RegisterApplicationRevisionRequest(const RegisterApplicationRevisionRequest &other);

@@ -21,6 +21,8 @@
 #define QTAWS_CLOUDDIRECTORYRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsclouddirectoryglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace CloudDirectory {
 
 class CloudDirectoryResponsePrivate;
 
-class QTAWS_EXPORT CloudDirectoryResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCLOUDDIRECTORY_EXPORT CloudDirectoryResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace EC2 {
 
 class EnableVolumeIORequestPrivate;
 
-class QTAWS_EXPORT EnableVolumeIORequest : public Ec2Request {
+class QTAWSEC2_EXPORT EnableVolumeIORequest : public Ec2Request {
 
 public:
     EnableVolumeIORequest(const EnableVolumeIORequest &other);

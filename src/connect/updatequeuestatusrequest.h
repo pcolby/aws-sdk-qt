@@ -27,7 +27,7 @@ namespace Connect {
 
 class UpdateQueueStatusRequestPrivate;
 
-class QTAWS_EXPORT UpdateQueueStatusRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT UpdateQueueStatusRequest : public ConnectRequest {
 
 public:
     UpdateQueueStatusRequest(const UpdateQueueStatusRequest &other);

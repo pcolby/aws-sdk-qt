@@ -27,7 +27,7 @@ namespace Glue {
 
 class BatchDeletePartitionRequestPrivate;
 
-class QTAWS_EXPORT BatchDeletePartitionRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT BatchDeletePartitionRequest : public GlueRequest {
 
 public:
     BatchDeletePartitionRequest(const BatchDeletePartitionRequest &other);

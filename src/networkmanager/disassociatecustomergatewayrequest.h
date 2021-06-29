@@ -27,7 +27,7 @@ namespace NetworkManager {
 
 class DisassociateCustomerGatewayRequestPrivate;
 
-class QTAWS_EXPORT DisassociateCustomerGatewayRequest : public NetworkManagerRequest {
+class QTAWSNETWORKMANAGER_EXPORT DisassociateCustomerGatewayRequest : public NetworkManagerRequest {
 
 public:
     DisassociateCustomerGatewayRequest(const DisassociateCustomerGatewayRequest &other);

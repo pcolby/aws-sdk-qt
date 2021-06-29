@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsimagebuilderglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace imagebuilder {
 
 class imagebuilderRequestPrivate;
 
-class QTAWS_EXPORT imagebuilderRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSIMAGEBUILDER_EXPORT imagebuilderRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by imagebuilder.

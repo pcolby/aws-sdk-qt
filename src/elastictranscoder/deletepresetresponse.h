@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 
 class DeletePresetResponsePrivate;
 
-class QTAWS_EXPORT DeletePresetResponse : public ElasticTranscoderResponse {
+class QTAWSELASTICTRANSCODER_EXPORT DeletePresetResponse : public ElasticTranscoderResponse {
     Q_OBJECT
 
 public:

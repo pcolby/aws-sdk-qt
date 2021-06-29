@@ -28,7 +28,7 @@ namespace Connect {
 
 class AssociateQueueQuickConnectsResponsePrivate;
 
-class QTAWS_EXPORT AssociateQueueQuickConnectsResponse : public ConnectResponse {
+class QTAWSCONNECT_EXPORT AssociateQueueQuickConnectsResponse : public ConnectResponse {
     Q_OBJECT
 
 public:

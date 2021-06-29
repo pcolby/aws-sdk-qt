@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DeleteTransitGatewayRequestPrivate;
 
-class QTAWS_EXPORT DeleteTransitGatewayRequest : public Ec2Request {
+class QTAWSEC2_EXPORT DeleteTransitGatewayRequest : public Ec2Request {
 
 public:
     DeleteTransitGatewayRequest(const DeleteTransitGatewayRequest &other);

@@ -27,7 +27,7 @@ namespace ElasticBeanstalk {
 
 class ApplyEnvironmentManagedActionRequestPrivate;
 
-class QTAWS_EXPORT ApplyEnvironmentManagedActionRequest : public ElasticBeanstalkRequest {
+class QTAWSELASTICBEANSTALK_EXPORT ApplyEnvironmentManagedActionRequest : public ElasticBeanstalkRequest {
 
 public:
     ApplyEnvironmentManagedActionRequest(const ApplyEnvironmentManagedActionRequest &other);

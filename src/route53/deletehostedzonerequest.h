@@ -27,7 +27,7 @@ namespace Route53 {
 
 class DeleteHostedZoneRequestPrivate;
 
-class QTAWS_EXPORT DeleteHostedZoneRequest : public Route53Request {
+class QTAWSROUTE53_EXPORT DeleteHostedZoneRequest : public Route53Request {
 
 public:
     DeleteHostedZoneRequest(const DeleteHostedZoneRequest &other);

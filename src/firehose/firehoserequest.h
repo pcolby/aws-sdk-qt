@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsfirehoseglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Firehose {
 
 class FirehoseRequestPrivate;
 
-class QTAWS_EXPORT FirehoseRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSFIREHOSE_EXPORT FirehoseRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Firehose.

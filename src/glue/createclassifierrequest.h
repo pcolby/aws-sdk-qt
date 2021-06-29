@@ -27,7 +27,7 @@ namespace Glue {
 
 class CreateClassifierRequestPrivate;
 
-class QTAWS_EXPORT CreateClassifierRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT CreateClassifierRequest : public GlueRequest {
 
 public:
     CreateClassifierRequest(const CreateClassifierRequest &other);

@@ -28,7 +28,7 @@ namespace IVS {
 
 class CreateStreamKeyResponsePrivate;
 
-class QTAWS_EXPORT CreateStreamKeyResponse : public IvsResponse {
+class QTAWSIVS_EXPORT CreateStreamKeyResponse : public IvsResponse {
     Q_OBJECT
 
 public:

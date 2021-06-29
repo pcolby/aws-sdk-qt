@@ -28,7 +28,7 @@ namespace SSMIncidents {
 
 class ListResponsePlansResponsePrivate;
 
-class QTAWS_EXPORT ListResponsePlansResponse : public SSMIncidentsResponse {
+class QTAWSSSMINCIDENTS_EXPORT ListResponsePlansResponse : public SSMIncidentsResponse {
     Q_OBJECT
 
 public:

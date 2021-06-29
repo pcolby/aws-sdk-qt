@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class ListDirectoriesRequestPrivate;
 
-class QTAWS_EXPORT ListDirectoriesRequest : public CloudDirectoryRequest {
+class QTAWSCLOUDDIRECTORY_EXPORT ListDirectoriesRequest : public CloudDirectoryRequest {
 
 public:
     ListDirectoriesRequest(const ListDirectoriesRequest &other);

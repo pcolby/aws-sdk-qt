@@ -27,7 +27,7 @@ namespace Connect {
 
 class UpdateInstanceStorageConfigRequestPrivate;
 
-class QTAWS_EXPORT UpdateInstanceStorageConfigRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT UpdateInstanceStorageConfigRequest : public ConnectRequest {
 
 public:
     UpdateInstanceStorageConfigRequest(const UpdateInstanceStorageConfigRequest &other);

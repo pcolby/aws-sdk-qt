@@ -27,7 +27,7 @@ namespace Proton {
 
 class UpdateAccountSettingsRequestPrivate;
 
-class QTAWS_EXPORT UpdateAccountSettingsRequest : public ProtonRequest {
+class QTAWSPROTON_EXPORT UpdateAccountSettingsRequest : public ProtonRequest {
 
 public:
     UpdateAccountSettingsRequest(const UpdateAccountSettingsRequest &other);

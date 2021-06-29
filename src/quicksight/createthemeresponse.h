@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class CreateThemeResponsePrivate;
 
-class QTAWS_EXPORT CreateThemeResponse : public QuickSightResponse {
+class QTAWSQUICKSIGHT_EXPORT CreateThemeResponse : public QuickSightResponse {
     Q_OBJECT
 
 public:

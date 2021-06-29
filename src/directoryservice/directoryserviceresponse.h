@@ -21,6 +21,8 @@
 #define QTAWS_DIRECTORYSERVICERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsdirectoryserviceglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace DirectoryService {
 
 class DirectoryServiceResponsePrivate;
 
-class QTAWS_EXPORT DirectoryServiceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSDIRECTORYSERVICE_EXPORT DirectoryServiceResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

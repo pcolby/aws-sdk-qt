@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class CreateCacheSubnetGroupResponsePrivate;
 
-class QTAWS_EXPORT CreateCacheSubnetGroupResponse : public ElastiCacheResponse {
+class QTAWSELASTICACHE_EXPORT CreateCacheSubnetGroupResponse : public ElastiCacheResponse {
     Q_OBJECT
 
 public:

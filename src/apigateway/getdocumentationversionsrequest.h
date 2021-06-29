@@ -27,7 +27,7 @@ namespace APIGateway {
 
 class GetDocumentationVersionsRequestPrivate;
 
-class QTAWS_EXPORT GetDocumentationVersionsRequest : public APIGatewayRequest {
+class QTAWSAPIGATEWAY_EXPORT GetDocumentationVersionsRequest : public APIGatewayRequest {
 
 public:
     GetDocumentationVersionsRequest(const GetDocumentationVersionsRequest &other);

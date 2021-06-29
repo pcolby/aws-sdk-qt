@@ -27,7 +27,7 @@ namespace Personalize {
 
 class ListEventTrackersRequestPrivate;
 
-class QTAWS_EXPORT ListEventTrackersRequest : public PersonalizeRequest {
+class QTAWSPERSONALIZE_EXPORT ListEventTrackersRequest : public PersonalizeRequest {
 
 public:
     ListEventTrackersRequest(const ListEventTrackersRequest &other);

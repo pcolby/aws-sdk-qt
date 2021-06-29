@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class DescribeTemplateRequestPrivate;
 
-class QTAWS_EXPORT DescribeTemplateRequest : public QuickSightRequest {
+class QTAWSQUICKSIGHT_EXPORT DescribeTemplateRequest : public QuickSightRequest {
 
 public:
     DescribeTemplateRequest(const DescribeTemplateRequest &other);

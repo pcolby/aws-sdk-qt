@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class DeleteImageRequestPrivate;
 
-class QTAWS_EXPORT DeleteImageRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT DeleteImageRequest : public SageMakerRequest {
 
 public:
     DeleteImageRequest(const DeleteImageRequest &other);

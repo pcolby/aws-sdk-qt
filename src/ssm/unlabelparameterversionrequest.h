@@ -27,7 +27,7 @@ namespace SSM {
 
 class UnlabelParameterVersionRequestPrivate;
 
-class QTAWS_EXPORT UnlabelParameterVersionRequest : public SsmRequest {
+class QTAWSSSM_EXPORT UnlabelParameterVersionRequest : public SsmRequest {
 
 public:
     UnlabelParameterVersionRequest(const UnlabelParameterVersionRequest &other);

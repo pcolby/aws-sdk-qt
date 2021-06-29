@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSGREENGRASS_LIBRARY)
+
 add_library(QtAwsGreengrass
   associateroletogrouprequest.h
   associateroletogrouprequest_p.h
@@ -309,6 +311,7 @@ add_library(QtAwsGreengrass
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsgreengrassglobal.h
   resetdeploymentsrequest.h
   resetdeploymentsrequest_p.h
   resetdeploymentsresponse.h

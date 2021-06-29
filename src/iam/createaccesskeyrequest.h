@@ -27,7 +27,7 @@ namespace IAM {
 
 class CreateAccessKeyRequestPrivate;
 
-class QTAWS_EXPORT CreateAccessKeyRequest : public IamRequest {
+class QTAWSIAM_EXPORT CreateAccessKeyRequest : public IamRequest {
 
 public:
     CreateAccessKeyRequest(const CreateAccessKeyRequest &other);

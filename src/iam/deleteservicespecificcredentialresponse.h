@@ -28,7 +28,7 @@ namespace IAM {
 
 class DeleteServiceSpecificCredentialResponsePrivate;
 
-class QTAWS_EXPORT DeleteServiceSpecificCredentialResponse : public IamResponse {
+class QTAWSIAM_EXPORT DeleteServiceSpecificCredentialResponse : public IamResponse {
     Q_OBJECT
 
 public:

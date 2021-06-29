@@ -28,7 +28,7 @@ namespace IoTWireless {
 
 class GetDeviceProfileResponsePrivate;
 
-class QTAWS_EXPORT GetDeviceProfileResponse : public IoTWirelessResponse {
+class QTAWSIOTWIRELESS_EXPORT GetDeviceProfileResponse : public IoTWirelessResponse {
     Q_OBJECT
 
 public:

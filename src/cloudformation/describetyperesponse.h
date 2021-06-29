@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class DescribeTypeResponsePrivate;
 
-class QTAWS_EXPORT DescribeTypeResponse : public CloudFormationResponse {
+class QTAWSCLOUDFORMATION_EXPORT DescribeTypeResponse : public CloudFormationResponse {
     Q_OBJECT
 
 public:

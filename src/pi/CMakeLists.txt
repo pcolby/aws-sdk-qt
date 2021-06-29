@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSPI_LIBRARY)
+
 add_library(QtAwsPi
   describedimensionkeysrequest.h
   describedimensionkeysrequest_p.h
@@ -17,6 +19,7 @@ add_library(QtAwsPi
   pirequest_p.h
   piresponse.h
   piresponse_p.h
+  qtawspiglobal.h
   describedimensionkeysrequest.cpp
   describedimensionkeysresponse.cpp
   getdimensionkeydetailsrequest.cpp

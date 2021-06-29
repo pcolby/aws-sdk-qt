@@ -27,7 +27,7 @@ namespace ElasticsearchService {
 
 class DescribeReservedElasticsearchInstancesRequestPrivate;
 
-class QTAWS_EXPORT DescribeReservedElasticsearchInstancesRequest : public ElasticsearchServiceRequest {
+class QTAWSELASTICSEARCHSERVICE_EXPORT DescribeReservedElasticsearchInstancesRequest : public ElasticsearchServiceRequest {
 
 public:
     DescribeReservedElasticsearchInstancesRequest(const DescribeReservedElasticsearchInstancesRequest &other);

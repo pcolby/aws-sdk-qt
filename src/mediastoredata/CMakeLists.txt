@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSMEDIASTOREDATA_LIBRARY)
+
 add_library(QtAwsMediaStoreData
   deleteobjectrequest.h
   deleteobjectrequest_p.h
@@ -25,6 +27,7 @@ add_library(QtAwsMediaStoreData
   putobjectrequest_p.h
   putobjectresponse.h
   putobjectresponse_p.h
+  qtawsmediastoredataglobal.h
   deleteobjectrequest.cpp
   deleteobjectresponse.cpp
   describeobjectrequest.cpp

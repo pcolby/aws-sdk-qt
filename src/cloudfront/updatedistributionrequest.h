@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class UpdateDistributionRequestPrivate;
 
-class QTAWS_EXPORT UpdateDistributionRequest : public CloudFrontRequest {
+class QTAWSCLOUDFRONT_EXPORT UpdateDistributionRequest : public CloudFrontRequest {
 
 public:
     UpdateDistributionRequest(const UpdateDistributionRequest &other);

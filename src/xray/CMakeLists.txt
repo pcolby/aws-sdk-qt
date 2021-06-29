@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSXRAY_LIBRARY)
+
 add_library(QtAwsXRay
   batchgettracesrequest.h
   batchgettracesrequest_p.h
@@ -91,6 +93,7 @@ add_library(QtAwsXRay
   puttracesegmentsrequest_p.h
   puttracesegmentsresponse.h
   puttracesegmentsresponse_p.h
+  qtawsxrayglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

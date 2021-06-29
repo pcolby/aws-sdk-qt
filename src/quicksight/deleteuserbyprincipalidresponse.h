@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class DeleteUserByPrincipalIdResponsePrivate;
 
-class QTAWS_EXPORT DeleteUserByPrincipalIdResponse : public QuickSightResponse {
+class QTAWSQUICKSIGHT_EXPORT DeleteUserByPrincipalIdResponse : public QuickSightResponse {
     Q_OBJECT
 
 public:

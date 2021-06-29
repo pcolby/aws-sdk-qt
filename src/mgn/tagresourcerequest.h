@@ -27,7 +27,7 @@ namespace mgn {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public mgnRequest {
+class QTAWSMGN_EXPORT TagResourceRequest : public mgnRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

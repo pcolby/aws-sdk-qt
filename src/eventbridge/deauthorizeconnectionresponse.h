@@ -28,7 +28,7 @@ namespace EventBridge {
 
 class DeauthorizeConnectionResponsePrivate;
 
-class QTAWS_EXPORT DeauthorizeConnectionResponse : public EventBridgeResponse {
+class QTAWSEVENTBRIDGE_EXPORT DeauthorizeConnectionResponse : public EventBridgeResponse {
     Q_OBJECT
 
 public:

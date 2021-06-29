@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class DeleteJourneyResponsePrivate;
 
-class QTAWS_EXPORT DeleteJourneyResponse : public PinpointResponse {
+class QTAWSPINPOINT_EXPORT DeleteJourneyResponse : public PinpointResponse {
     Q_OBJECT
 
 public:

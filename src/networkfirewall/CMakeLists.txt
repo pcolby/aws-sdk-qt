@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSNETWORKFIREWALL_LIBRARY)
+
 add_library(QtAwsNetworkFirewall
   associatefirewallpolicyrequest.h
   associatefirewallpolicyrequest_p.h
@@ -85,6 +87,7 @@ add_library(QtAwsNetworkFirewall
   putresourcepolicyrequest_p.h
   putresourcepolicyresponse.h
   putresourcepolicyresponse_p.h
+  qtawsnetworkfirewallglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

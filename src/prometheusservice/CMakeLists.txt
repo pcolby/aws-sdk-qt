@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSPROMETHEUSSERVICE_LIBRARY)
+
 add_library(QtAwsPrometheusService
   createworkspacerequest.h
   createworkspacerequest_p.h
@@ -21,6 +23,7 @@ add_library(QtAwsPrometheusService
   prometheusservicerequest_p.h
   prometheusserviceresponse.h
   prometheusserviceresponse_p.h
+  qtawsprometheusserviceglobal.h
   updateworkspacealiasrequest.h
   updateworkspacealiasrequest_p.h
   updateworkspacealiasresponse.h

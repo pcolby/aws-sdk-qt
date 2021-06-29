@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class BatchEnableStandardsResponsePrivate;
 
-class QTAWS_EXPORT BatchEnableStandardsResponse : public SecurityHubResponse {
+class QTAWSSECURITYHUB_EXPORT BatchEnableStandardsResponse : public SecurityHubResponse {
     Q_OBJECT
 
 public:

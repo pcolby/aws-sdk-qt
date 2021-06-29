@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSEC2_LIBRARY)
+
 add_library(QtAwsEc2
   acceptreservedinstancesexchangequoterequest.h
   acceptreservedinstancesexchangequoterequest_p.h
@@ -1605,6 +1607,7 @@ add_library(QtAwsEc2
   purchasescheduledinstancesrequest_p.h
   purchasescheduledinstancesresponse.h
   purchasescheduledinstancesresponse_p.h
+  qtawsec2global.h
   rebootinstancesrequest.h
   rebootinstancesrequest_p.h
   rebootinstancesresponse.h

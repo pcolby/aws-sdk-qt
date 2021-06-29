@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class DeleteUploadRequestPrivate;
 
-class QTAWS_EXPORT DeleteUploadRequest : public DeviceFarmRequest {
+class QTAWSDEVICEFARM_EXPORT DeleteUploadRequest : public DeviceFarmRequest {
 
 public:
     DeleteUploadRequest(const DeleteUploadRequest &other);

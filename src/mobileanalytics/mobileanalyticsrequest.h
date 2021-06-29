@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsmobileanalyticsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace MobileAnalytics {
 
 class MobileAnalyticsRequestPrivate;
 
-class QTAWS_EXPORT MobileAnalyticsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSMOBILEANALYTICS_EXPORT MobileAnalyticsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by MobileAnalytics.

@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class DeleteStoredQueryRequestPrivate;
 
-class QTAWS_EXPORT DeleteStoredQueryRequest : public ConfigServiceRequest {
+class QTAWSCONFIGSERVICE_EXPORT DeleteStoredQueryRequest : public ConfigServiceRequest {
 
 public:
     DeleteStoredQueryRequest(const DeleteStoredQueryRequest &other);

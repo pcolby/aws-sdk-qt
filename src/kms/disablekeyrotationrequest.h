@@ -27,7 +27,7 @@ namespace KMS {
 
 class DisableKeyRotationRequestPrivate;
 
-class QTAWS_EXPORT DisableKeyRotationRequest : public KmsRequest {
+class QTAWSKMS_EXPORT DisableKeyRotationRequest : public KmsRequest {
 
 public:
     DisableKeyRotationRequest(const DisableKeyRotationRequest &other);

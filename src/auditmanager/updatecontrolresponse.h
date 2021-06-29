@@ -28,7 +28,7 @@ namespace AuditManager {
 
 class UpdateControlResponsePrivate;
 
-class QTAWS_EXPORT UpdateControlResponse : public AuditManagerResponse {
+class QTAWSAUDITMANAGER_EXPORT UpdateControlResponse : public AuditManagerResponse {
     Q_OBJECT
 
 public:

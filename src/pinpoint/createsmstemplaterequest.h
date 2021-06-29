@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class CreateSmsTemplateRequestPrivate;
 
-class QTAWS_EXPORT CreateSmsTemplateRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT CreateSmsTemplateRequest : public PinpointRequest {
 
 public:
     CreateSmsTemplateRequest(const CreateSmsTemplateRequest &other);

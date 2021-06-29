@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class DetectProtectiveEquipmentResponsePrivate;
 
-class QTAWS_EXPORT DetectProtectiveEquipmentResponse : public RekognitionResponse {
+class QTAWSREKOGNITION_EXPORT DetectProtectiveEquipmentResponse : public RekognitionResponse {
     Q_OBJECT
 
 public:

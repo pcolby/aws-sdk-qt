@@ -27,7 +27,7 @@ namespace S3Control {
 
 class CreateJobRequestPrivate;
 
-class QTAWS_EXPORT CreateJobRequest : public S3ControlRequest {
+class QTAWSS3CONTROL_EXPORT CreateJobRequest : public S3ControlRequest {
 
 public:
     CreateJobRequest(const CreateJobRequest &other);

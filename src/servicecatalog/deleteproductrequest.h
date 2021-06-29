@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class DeleteProductRequestPrivate;
 
-class QTAWS_EXPORT DeleteProductRequest : public ServiceCatalogRequest {
+class QTAWSSERVICECATALOG_EXPORT DeleteProductRequest : public ServiceCatalogRequest {
 
 public:
     DeleteProductRequest(const DeleteProductRequest &other);

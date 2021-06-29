@@ -27,7 +27,7 @@ namespace DocDB {
 
 class DescribeDBEngineVersionsRequestPrivate;
 
-class QTAWS_EXPORT DescribeDBEngineVersionsRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT DescribeDBEngineVersionsRequest : public DocDBRequest {
 
 public:
     DescribeDBEngineVersionsRequest(const DescribeDBEngineVersionsRequest &other);

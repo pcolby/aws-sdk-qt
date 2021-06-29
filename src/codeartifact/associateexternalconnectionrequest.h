@@ -27,7 +27,7 @@ namespace CodeArtifact {
 
 class AssociateExternalConnectionRequestPrivate;
 
-class QTAWS_EXPORT AssociateExternalConnectionRequest : public CodeArtifactRequest {
+class QTAWSCODEARTIFACT_EXPORT AssociateExternalConnectionRequest : public CodeArtifactRequest {
 
 public:
     AssociateExternalConnectionRequest(const AssociateExternalConnectionRequest &other);

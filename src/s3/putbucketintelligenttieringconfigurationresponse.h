@@ -28,7 +28,7 @@ namespace S3 {
 
 class PutBucketIntelligentTieringConfigurationResponsePrivate;
 
-class QTAWS_EXPORT PutBucketIntelligentTieringConfigurationResponse : public S3Response {
+class QTAWSS3_EXPORT PutBucketIntelligentTieringConfigurationResponse : public S3Response {
     Q_OBJECT
 
 public:

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawseksglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace EKS {
 
 class EksRequestPrivate;
 
-class QTAWS_EXPORT EksRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSEKS_EXPORT EksRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by EKS.

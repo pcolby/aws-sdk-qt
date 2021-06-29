@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class DeclineInvitationsResponsePrivate;
 
-class QTAWS_EXPORT DeclineInvitationsResponse : public SecurityHubResponse {
+class QTAWSSECURITYHUB_EXPORT DeclineInvitationsResponse : public SecurityHubResponse {
     Q_OBJECT
 
 public:

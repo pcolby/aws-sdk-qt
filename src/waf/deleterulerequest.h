@@ -27,7 +27,7 @@ namespace WAF {
 
 class DeleteRuleRequestPrivate;
 
-class QTAWS_EXPORT DeleteRuleRequest : public WafRequest {
+class QTAWSWAF_EXPORT DeleteRuleRequest : public WafRequest {
 
 public:
     DeleteRuleRequest(const DeleteRuleRequest &other);

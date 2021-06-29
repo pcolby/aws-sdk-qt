@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSGUARDDUTY_LIBRARY)
+
 add_library(QtAwsGuardDuty
   acceptinvitationrequest.h
   acceptinvitationrequest_p.h
@@ -185,6 +187,7 @@ add_library(QtAwsGuardDuty
   listthreatintelsetsrequest_p.h
   listthreatintelsetsresponse.h
   listthreatintelsetsresponse_p.h
+  qtawsguarddutyglobal.h
   startmonitoringmembersrequest.h
   startmonitoringmembersrequest_p.h
   startmonitoringmembersresponse.h

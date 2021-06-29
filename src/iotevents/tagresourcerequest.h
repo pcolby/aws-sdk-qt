@@ -27,7 +27,7 @@ namespace IoTEvents {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public IoTEventsRequest {
+class QTAWSIOTEVENTS_EXPORT TagResourceRequest : public IoTEventsRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

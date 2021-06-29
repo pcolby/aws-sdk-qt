@@ -28,7 +28,7 @@ namespace ACMPCA {
 
 class CreatePermissionResponsePrivate;
 
-class QTAWS_EXPORT CreatePermissionResponse : public AcmpcaResponse {
+class QTAWSACMPCA_EXPORT CreatePermissionResponse : public AcmpcaResponse {
     Q_OBJECT
 
 public:

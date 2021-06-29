@@ -27,7 +27,7 @@ namespace MarketplaceCatalog {
 
 class StartChangeSetRequestPrivate;
 
-class QTAWS_EXPORT StartChangeSetRequest : public MarketplaceCatalogRequest {
+class QTAWSMARKETPLACECATALOG_EXPORT StartChangeSetRequest : public MarketplaceCatalogRequest {
 
 public:
     StartChangeSetRequest(const StartChangeSetRequest &other);

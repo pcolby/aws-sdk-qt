@@ -27,7 +27,7 @@ namespace IoT {
 
 class ListTargetsForPolicyRequestPrivate;
 
-class QTAWS_EXPORT ListTargetsForPolicyRequest : public IoTRequest {
+class QTAWSIOT_EXPORT ListTargetsForPolicyRequest : public IoTRequest {
 
 public:
     ListTargetsForPolicyRequest(const ListTargetsForPolicyRequest &other);

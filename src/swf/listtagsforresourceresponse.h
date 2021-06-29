@@ -28,7 +28,7 @@ namespace SWF {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public SwfResponse {
+class QTAWSSWF_EXPORT ListTagsForResourceResponse : public SwfResponse {
     Q_OBJECT
 
 public:

@@ -21,6 +21,8 @@
 #define QTAWS_ELASTICBEANSTALKRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawselasticbeanstalkglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace ElasticBeanstalk {
 
 class ElasticBeanstalkResponsePrivate;
 
-class QTAWS_EXPORT ElasticBeanstalkResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSELASTICBEANSTALK_EXPORT ElasticBeanstalkResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

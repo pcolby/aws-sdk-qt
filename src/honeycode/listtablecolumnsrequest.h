@@ -27,7 +27,7 @@ namespace Honeycode {
 
 class ListTableColumnsRequestPrivate;
 
-class QTAWS_EXPORT ListTableColumnsRequest : public HoneycodeRequest {
+class QTAWSHONEYCODE_EXPORT ListTableColumnsRequest : public HoneycodeRequest {
 
 public:
     ListTableColumnsRequest(const ListTableColumnsRequest &other);

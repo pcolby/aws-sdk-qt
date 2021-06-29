@@ -27,7 +27,7 @@ namespace Glue {
 
 class GetDataflowGraphRequestPrivate;
 
-class QTAWS_EXPORT GetDataflowGraphRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT GetDataflowGraphRequest : public GlueRequest {
 
 public:
     GetDataflowGraphRequest(const GetDataflowGraphRequest &other);

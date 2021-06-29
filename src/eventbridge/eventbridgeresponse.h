@@ -21,6 +21,8 @@
 #define QTAWS_EVENTBRIDGERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawseventbridgeglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace EventBridge {
 
 class EventBridgeResponsePrivate;
 
-class QTAWS_EXPORT EventBridgeResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSEVENTBRIDGE_EXPORT EventBridgeResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

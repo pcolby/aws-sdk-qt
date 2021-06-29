@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSEFS_LIBRARY)
+
 add_library(QtAwsEfs
   createaccesspointrequest.h
   createaccesspointrequest_p.h
@@ -101,6 +103,7 @@ add_library(QtAwsEfs
   putlifecycleconfigurationrequest_p.h
   putlifecycleconfigurationresponse.h
   putlifecycleconfigurationresponse_p.h
+  qtawsefsglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

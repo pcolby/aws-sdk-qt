@@ -27,7 +27,7 @@ namespace ManagedBlockchain {
 
 class GetNetworkRequestPrivate;
 
-class QTAWS_EXPORT GetNetworkRequest : public ManagedBlockchainRequest {
+class QTAWSMANAGEDBLOCKCHAIN_EXPORT GetNetworkRequest : public ManagedBlockchainRequest {
 
 public:
     GetNetworkRequest(const GetNetworkRequest &other);

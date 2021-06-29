@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class GetInstanceRequestPrivate;
 
-class QTAWS_EXPORT GetInstanceRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT GetInstanceRequest : public LightsailRequest {
 
 public:
     GetInstanceRequest(const GetInstanceRequest &other);

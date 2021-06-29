@@ -27,7 +27,7 @@ namespace AlexaForBusiness {
 
 class GetContactRequestPrivate;
 
-class QTAWS_EXPORT GetContactRequest : public AlexaForBusinessRequest {
+class QTAWSALEXAFORBUSINESS_EXPORT GetContactRequest : public AlexaForBusinessRequest {
 
 public:
     GetContactRequest(const GetContactRequest &other);

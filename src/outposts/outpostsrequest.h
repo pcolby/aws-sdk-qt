@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsoutpostsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Outposts {
 
 class OutpostsRequestPrivate;
 
-class QTAWS_EXPORT OutpostsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSOUTPOSTS_EXPORT OutpostsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Outposts.

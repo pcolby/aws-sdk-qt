@@ -28,7 +28,7 @@ namespace Backup {
 
 class ListTagsResponsePrivate;
 
-class QTAWS_EXPORT ListTagsResponse : public BackupResponse {
+class QTAWSBACKUP_EXPORT ListTagsResponse : public BackupResponse {
     Q_OBJECT
 
 public:

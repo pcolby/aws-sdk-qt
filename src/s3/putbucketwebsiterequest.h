@@ -27,7 +27,7 @@ namespace S3 {
 
 class PutBucketWebsiteRequestPrivate;
 
-class QTAWS_EXPORT PutBucketWebsiteRequest : public S3Request {
+class QTAWSS3_EXPORT PutBucketWebsiteRequest : public S3Request {
 
 public:
     PutBucketWebsiteRequest(const PutBucketWebsiteRequest &other);

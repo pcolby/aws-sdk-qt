@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ReplaceNetworkAclAssociationRequestPrivate;
 
-class QTAWS_EXPORT ReplaceNetworkAclAssociationRequest : public Ec2Request {
+class QTAWSEC2_EXPORT ReplaceNetworkAclAssociationRequest : public Ec2Request {
 
 public:
     ReplaceNetworkAclAssociationRequest(const ReplaceNetworkAclAssociationRequest &other);

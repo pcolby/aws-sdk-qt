@@ -27,7 +27,7 @@ namespace SQS {
 
 class AddPermissionRequestPrivate;
 
-class QTAWS_EXPORT AddPermissionRequest : public SqsRequest {
+class QTAWSSQS_EXPORT AddPermissionRequest : public SqsRequest {
 
 public:
     AddPermissionRequest(const AddPermissionRequest &other);

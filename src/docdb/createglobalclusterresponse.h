@@ -28,7 +28,7 @@ namespace DocDB {
 
 class CreateGlobalClusterResponsePrivate;
 
-class QTAWS_EXPORT CreateGlobalClusterResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT CreateGlobalClusterResponse : public DocDBResponse {
     Q_OBJECT
 
 public:

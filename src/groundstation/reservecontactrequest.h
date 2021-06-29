@@ -27,7 +27,7 @@ namespace GroundStation {
 
 class ReserveContactRequestPrivate;
 
-class QTAWS_EXPORT ReserveContactRequest : public GroundStationRequest {
+class QTAWSGROUNDSTATION_EXPORT ReserveContactRequest : public GroundStationRequest {
 
 public:
     ReserveContactRequest(const ReserveContactRequest &other);

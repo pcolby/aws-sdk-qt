@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class DeleteLogSubscriptionRequestPrivate;
 
-class QTAWS_EXPORT DeleteLogSubscriptionRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT DeleteLogSubscriptionRequest : public DirectoryServiceRequest {
 
 public:
     DeleteLogSubscriptionRequest(const DeleteLogSubscriptionRequest &other);

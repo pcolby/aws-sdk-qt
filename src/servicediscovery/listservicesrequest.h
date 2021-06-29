@@ -27,7 +27,7 @@ namespace ServiceDiscovery {
 
 class ListServicesRequestPrivate;
 
-class QTAWS_EXPORT ListServicesRequest : public ServiceDiscoveryRequest {
+class QTAWSSERVICEDISCOVERY_EXPORT ListServicesRequest : public ServiceDiscoveryRequest {
 
 public:
     ListServicesRequest(const ListServicesRequest &other);

@@ -28,7 +28,7 @@ namespace IoTSiteWise {
 
 class DeleteGatewayResponsePrivate;
 
-class QTAWS_EXPORT DeleteGatewayResponse : public IoTSiteWiseResponse {
+class QTAWSIOTSITEWISE_EXPORT DeleteGatewayResponse : public IoTSiteWiseResponse {
     Q_OBJECT
 
 public:

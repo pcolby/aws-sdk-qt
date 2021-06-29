@@ -28,7 +28,7 @@ namespace Lambda {
 
 class AddLayerVersionPermissionResponsePrivate;
 
-class QTAWS_EXPORT AddLayerVersionPermissionResponse : public LambdaResponse {
+class QTAWSLAMBDA_EXPORT AddLayerVersionPermissionResponse : public LambdaResponse {
     Q_OBJECT
 
 public:

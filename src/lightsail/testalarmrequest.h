@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class TestAlarmRequestPrivate;
 
-class QTAWS_EXPORT TestAlarmRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT TestAlarmRequest : public LightsailRequest {
 
 public:
     TestAlarmRequest(const TestAlarmRequest &other);

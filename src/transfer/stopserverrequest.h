@@ -27,7 +27,7 @@ namespace Transfer {
 
 class StopServerRequestPrivate;
 
-class QTAWS_EXPORT StopServerRequest : public TransferRequest {
+class QTAWSTRANSFER_EXPORT StopServerRequest : public TransferRequest {
 
 public:
     StopServerRequest(const StopServerRequest &other);

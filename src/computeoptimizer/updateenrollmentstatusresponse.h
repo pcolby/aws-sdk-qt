@@ -28,7 +28,7 @@ namespace ComputeOptimizer {
 
 class UpdateEnrollmentStatusResponsePrivate;
 
-class QTAWS_EXPORT UpdateEnrollmentStatusResponse : public ComputeOptimizerResponse {
+class QTAWSCOMPUTEOPTIMIZER_EXPORT UpdateEnrollmentStatusResponse : public ComputeOptimizerResponse {
     Q_OBJECT
 
 public:

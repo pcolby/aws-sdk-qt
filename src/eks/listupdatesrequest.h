@@ -27,7 +27,7 @@ namespace EKS {
 
 class ListUpdatesRequestPrivate;
 
-class QTAWS_EXPORT ListUpdatesRequest : public EksRequest {
+class QTAWSEKS_EXPORT ListUpdatesRequest : public EksRequest {
 
 public:
     ListUpdatesRequest(const ListUpdatesRequest &other);

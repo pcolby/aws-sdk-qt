@@ -27,7 +27,7 @@ namespace WAFV2 {
 
 class GetWebACLForResourceRequestPrivate;
 
-class QTAWS_EXPORT GetWebACLForResourceRequest : public Wafv2Request {
+class QTAWSWAFV2_EXPORT GetWebACLForResourceRequest : public Wafv2Request {
 
 public:
     GetWebACLForResourceRequest(const GetWebACLForResourceRequest &other);

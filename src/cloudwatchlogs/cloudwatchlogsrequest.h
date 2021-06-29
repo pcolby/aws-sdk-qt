@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawscloudwatchlogsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace CloudWatchLogs {
 
 class CloudWatchLogsRequestPrivate;
 
-class QTAWS_EXPORT CloudWatchLogsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCLOUDWATCHLOGS_EXPORT CloudWatchLogsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CloudWatchLogs.

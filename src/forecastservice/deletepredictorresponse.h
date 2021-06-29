@@ -28,7 +28,7 @@ namespace ForecastService {
 
 class DeletePredictorResponsePrivate;
 
-class QTAWS_EXPORT DeletePredictorResponse : public ForecastServiceResponse {
+class QTAWSFORECASTSERVICE_EXPORT DeletePredictorResponse : public ForecastServiceResponse {
     Q_OBJECT
 
 public:

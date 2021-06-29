@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT TagResourceRequest : public PinpointRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

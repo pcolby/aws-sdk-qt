@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class DescribeHostedConnectionsResponsePrivate;
 
-class QTAWS_EXPORT DescribeHostedConnectionsResponse : public DirectConnectResponse {
+class QTAWSDIRECTCONNECT_EXPORT DescribeHostedConnectionsResponse : public DirectConnectResponse {
     Q_OBJECT
 
 public:

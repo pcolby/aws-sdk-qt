@@ -27,7 +27,7 @@ namespace mgn {
 
 class RetryDataReplicationRequestPrivate;
 
-class QTAWS_EXPORT RetryDataReplicationRequest : public mgnRequest {
+class QTAWSMGN_EXPORT RetryDataReplicationRequest : public mgnRequest {
 
 public:
     RetryDataReplicationRequest(const RetryDataReplicationRequest &other);

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSLEXRUNTIMEV2_LIBRARY)
+
 add_library(QtAwsLexRuntimeV2
   deletesessionrequest.h
   deletesessionrequest_p.h
@@ -17,6 +19,7 @@ add_library(QtAwsLexRuntimeV2
   putsessionrequest_p.h
   putsessionresponse.h
   putsessionresponse_p.h
+  qtawslexruntimev2global.h
   recognizetextrequest.h
   recognizetextrequest_p.h
   recognizetextresponse.h

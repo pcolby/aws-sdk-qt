@@ -27,7 +27,7 @@ namespace IoTDeviceAdvisor {
 
 class DeleteSuiteDefinitionRequestPrivate;
 
-class QTAWS_EXPORT DeleteSuiteDefinitionRequest : public IoTDeviceAdvisorRequest {
+class QTAWSIOTDEVICEADVISOR_EXPORT DeleteSuiteDefinitionRequest : public IoTDeviceAdvisorRequest {
 
 public:
     DeleteSuiteDefinitionRequest(const DeleteSuiteDefinitionRequest &other);

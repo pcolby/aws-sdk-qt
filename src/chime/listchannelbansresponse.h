@@ -28,7 +28,7 @@ namespace Chime {
 
 class ListChannelBansResponsePrivate;
 
-class QTAWS_EXPORT ListChannelBansResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT ListChannelBansResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

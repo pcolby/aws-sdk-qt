@@ -27,7 +27,7 @@ namespace Route53Resolver {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public Route53ResolverRequest {
+class QTAWSROUTE53RESOLVER_EXPORT UntagResourceRequest : public Route53ResolverRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

@@ -28,7 +28,7 @@ namespace Schemas {
 
 class DeleteResourcePolicyResponsePrivate;
 
-class QTAWS_EXPORT DeleteResourcePolicyResponse : public SchemasResponse {
+class QTAWSSCHEMAS_EXPORT DeleteResourcePolicyResponse : public SchemasResponse {
     Q_OBJECT
 
 public:

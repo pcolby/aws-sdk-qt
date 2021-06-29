@@ -28,7 +28,7 @@ namespace Kafka {
 
 class BatchDisassociateScramSecretResponsePrivate;
 
-class QTAWS_EXPORT BatchDisassociateScramSecretResponse : public KafkaResponse {
+class QTAWSKAFKA_EXPORT BatchDisassociateScramSecretResponse : public KafkaResponse {
     Q_OBJECT
 
 public:

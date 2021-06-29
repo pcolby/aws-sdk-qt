@@ -27,7 +27,7 @@ namespace IAM {
 
 class AddClientIDToOpenIDConnectProviderRequestPrivate;
 
-class QTAWS_EXPORT AddClientIDToOpenIDConnectProviderRequest : public IamRequest {
+class QTAWSIAM_EXPORT AddClientIDToOpenIDConnectProviderRequest : public IamRequest {
 
 public:
     AddClientIDToOpenIDConnectProviderRequest(const AddClientIDToOpenIDConnectProviderRequest &other);

@@ -28,7 +28,7 @@ namespace Redshift {
 
 class ModifyEventSubscriptionResponsePrivate;
 
-class QTAWS_EXPORT ModifyEventSubscriptionResponse : public RedshiftResponse {
+class QTAWSREDSHIFT_EXPORT ModifyEventSubscriptionResponse : public RedshiftResponse {
     Q_OBJECT
 
 public:

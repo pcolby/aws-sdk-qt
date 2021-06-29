@@ -27,7 +27,7 @@ namespace RoboMaker {
 
 class UpdateSimulationApplicationRequestPrivate;
 
-class QTAWS_EXPORT UpdateSimulationApplicationRequest : public RoboMakerRequest {
+class QTAWSROBOMAKER_EXPORT UpdateSimulationApplicationRequest : public RoboMakerRequest {
 
 public:
     UpdateSimulationApplicationRequest(const UpdateSimulationApplicationRequest &other);

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSFORECASTSERVICE_LIBRARY)
+
 add_library(QtAwsForecastService
   createdatasetgrouprequest.h
   createdatasetgrouprequest_p.h
@@ -129,6 +131,7 @@ add_library(QtAwsForecastService
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsforecastserviceglobal.h
   stopresourcerequest.h
   stopresourcerequest_p.h
   stopresourceresponse.h

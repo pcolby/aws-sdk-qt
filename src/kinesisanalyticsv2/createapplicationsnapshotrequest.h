@@ -27,7 +27,7 @@ namespace KinesisAnalyticsV2 {
 
 class CreateApplicationSnapshotRequestPrivate;
 
-class QTAWS_EXPORT CreateApplicationSnapshotRequest : public KinesisAnalyticsV2Request {
+class QTAWSKINESISANALYTICSV2_EXPORT CreateApplicationSnapshotRequest : public KinesisAnalyticsV2Request {
 
 public:
     CreateApplicationSnapshotRequest(const CreateApplicationSnapshotRequest &other);

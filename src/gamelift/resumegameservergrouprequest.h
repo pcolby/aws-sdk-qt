@@ -27,7 +27,7 @@ namespace GameLift {
 
 class ResumeGameServerGroupRequestPrivate;
 
-class QTAWS_EXPORT ResumeGameServerGroupRequest : public GameLiftRequest {
+class QTAWSGAMELIFT_EXPORT ResumeGameServerGroupRequest : public GameLiftRequest {
 
 public:
     ResumeGameServerGroupRequest(const ResumeGameServerGroupRequest &other);

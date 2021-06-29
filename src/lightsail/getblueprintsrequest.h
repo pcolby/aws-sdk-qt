@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class GetBlueprintsRequestPrivate;
 
-class QTAWS_EXPORT GetBlueprintsRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT GetBlueprintsRequest : public LightsailRequest {
 
 public:
     GetBlueprintsRequest(const GetBlueprintsRequest &other);

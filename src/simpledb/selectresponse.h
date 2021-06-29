@@ -28,7 +28,7 @@ namespace SimpleDB {
 
 class SelectResponsePrivate;
 
-class QTAWS_EXPORT SelectResponse : public SimpleDBResponse {
+class QTAWSSIMPLEDB_EXPORT SelectResponse : public SimpleDBResponse {
     Q_OBJECT
 
 public:

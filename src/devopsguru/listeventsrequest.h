@@ -27,7 +27,7 @@ namespace DevOpsGuru {
 
 class ListEventsRequestPrivate;
 
-class QTAWS_EXPORT ListEventsRequest : public DevOpsGuruRequest {
+class QTAWSDEVOPSGURU_EXPORT ListEventsRequest : public DevOpsGuruRequest {
 
 public:
     ListEventsRequest(const ListEventsRequest &other);

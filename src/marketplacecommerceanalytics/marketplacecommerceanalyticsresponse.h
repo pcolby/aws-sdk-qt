@@ -21,6 +21,8 @@
 #define QTAWS_MARKETPLACECOMMERCEANALYTICSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsmarketplacecommerceanalyticsglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace MarketplaceCommerceAnalytics {
 
 class MarketplaceCommerceAnalyticsResponsePrivate;
 
-class QTAWS_EXPORT MarketplaceCommerceAnalyticsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSMARKETPLACECOMMERCEANALYTICS_EXPORT MarketplaceCommerceAnalyticsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

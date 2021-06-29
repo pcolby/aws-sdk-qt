@@ -27,7 +27,7 @@ namespace CodePipeline {
 
 class PollForJobsRequestPrivate;
 
-class QTAWS_EXPORT PollForJobsRequest : public CodePipelineRequest {
+class QTAWSCODEPIPELINE_EXPORT PollForJobsRequest : public CodePipelineRequest {
 
 public:
     PollForJobsRequest(const PollForJobsRequest &other);

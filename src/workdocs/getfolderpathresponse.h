@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class GetFolderPathResponsePrivate;
 
-class QTAWS_EXPORT GetFolderPathResponse : public WorkDocsResponse {
+class QTAWSWORKDOCS_EXPORT GetFolderPathResponse : public WorkDocsResponse {
     Q_OBJECT
 
 public:

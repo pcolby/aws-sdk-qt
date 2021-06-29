@@ -28,7 +28,7 @@ namespace KinesisAnalyticsV2 {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public KinesisAnalyticsV2Response {
+class QTAWSKINESISANALYTICSV2_EXPORT TagResourceResponse : public KinesisAnalyticsV2Response {
     Q_OBJECT
 
 public:

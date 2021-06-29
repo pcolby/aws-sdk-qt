@@ -28,7 +28,7 @@ namespace NimbleStudio {
 
 class GetLaunchProfileDetailsResponsePrivate;
 
-class QTAWS_EXPORT GetLaunchProfileDetailsResponse : public NimbleStudioResponse {
+class QTAWSNIMBLESTUDIO_EXPORT GetLaunchProfileDetailsResponse : public NimbleStudioResponse {
     Q_OBJECT
 
 public:

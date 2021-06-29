@@ -27,7 +27,7 @@ namespace WAFV2 {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public Wafv2Request {
+class QTAWSWAFV2_EXPORT ListTagsForResourceRequest : public Wafv2Request {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

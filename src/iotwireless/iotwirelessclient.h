@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsiotwirelessglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -143,7 +145,7 @@ class UpdateWirelessDeviceResponse;
 class UpdateWirelessGatewayRequest;
 class UpdateWirelessGatewayResponse;
 
-class QTAWS_EXPORT IoTWirelessClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSIOTWIRELESS_EXPORT IoTWirelessClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

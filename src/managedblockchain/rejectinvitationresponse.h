@@ -28,7 +28,7 @@ namespace ManagedBlockchain {
 
 class RejectInvitationResponsePrivate;
 
-class QTAWS_EXPORT RejectInvitationResponse : public ManagedBlockchainResponse {
+class QTAWSMANAGEDBLOCKCHAIN_EXPORT RejectInvitationResponse : public ManagedBlockchainResponse {
     Q_OBJECT
 
 public:

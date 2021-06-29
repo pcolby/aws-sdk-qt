@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class DeleteTemplateAliasResponsePrivate;
 
-class QTAWS_EXPORT DeleteTemplateAliasResponse : public QuickSightResponse {
+class QTAWSQUICKSIGHT_EXPORT DeleteTemplateAliasResponse : public QuickSightResponse {
     Q_OBJECT
 
 public:

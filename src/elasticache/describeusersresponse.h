@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class DescribeUsersResponsePrivate;
 
-class QTAWS_EXPORT DescribeUsersResponse : public ElastiCacheResponse {
+class QTAWSELASTICACHE_EXPORT DescribeUsersResponse : public ElastiCacheResponse {
     Q_OBJECT
 
 public:

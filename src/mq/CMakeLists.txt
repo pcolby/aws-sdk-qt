@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSMQ_LIBRARY)
+
 add_library(QtAwsMq
   createbrokerrequest.h
   createbrokerrequest_p.h
@@ -77,6 +79,7 @@ add_library(QtAwsMq
   mqrequest_p.h
   mqresponse.h
   mqresponse_p.h
+  qtawsmqglobal.h
   rebootbrokerrequest.h
   rebootbrokerrequest_p.h
   rebootbrokerresponse.h

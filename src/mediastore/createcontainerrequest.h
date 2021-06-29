@@ -27,7 +27,7 @@ namespace MediaStore {
 
 class CreateContainerRequestPrivate;
 
-class QTAWS_EXPORT CreateContainerRequest : public MediaStoreRequest {
+class QTAWSMEDIASTORE_EXPORT CreateContainerRequest : public MediaStoreRequest {
 
 public:
     CreateContainerRequest(const CreateContainerRequest &other);

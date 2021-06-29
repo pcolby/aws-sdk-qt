@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsappstreamglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -125,7 +127,7 @@ class UpdateImagePermissionsResponse;
 class UpdateStackRequest;
 class UpdateStackResponse;
 
-class QTAWS_EXPORT AppStreamClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSAPPSTREAM_EXPORT AppStreamClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

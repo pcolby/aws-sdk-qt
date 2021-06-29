@@ -27,7 +27,7 @@ namespace MediaConvert {
 
 class DeleteJobTemplateRequestPrivate;
 
-class QTAWS_EXPORT DeleteJobTemplateRequest : public MediaConvertRequest {
+class QTAWSMEDIACONVERT_EXPORT DeleteJobTemplateRequest : public MediaConvertRequest {
 
 public:
     DeleteJobTemplateRequest(const DeleteJobTemplateRequest &other);

@@ -27,7 +27,7 @@ namespace Support {
 
 class AddCommunicationToCaseRequestPrivate;
 
-class QTAWS_EXPORT AddCommunicationToCaseRequest : public SupportRequest {
+class QTAWSSUPPORT_EXPORT AddCommunicationToCaseRequest : public SupportRequest {
 
 public:
     AddCommunicationToCaseRequest(const AddCommunicationToCaseRequest &other);

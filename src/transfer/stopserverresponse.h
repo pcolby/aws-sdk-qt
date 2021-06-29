@@ -28,7 +28,7 @@ namespace Transfer {
 
 class StopServerResponsePrivate;
 
-class QTAWS_EXPORT StopServerResponse : public TransferResponse {
+class QTAWSTRANSFER_EXPORT StopServerResponse : public TransferResponse {
     Q_OBJECT
 
 public:

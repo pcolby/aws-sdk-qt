@@ -28,7 +28,7 @@ namespace QLDB {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public QldbResponse {
+class QTAWSQLDB_EXPORT UntagResourceResponse : public QldbResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace APIGateway {
 
 class CreateStageRequestPrivate;
 
-class QTAWS_EXPORT CreateStageRequest : public APIGatewayRequest {
+class QTAWSAPIGATEWAY_EXPORT CreateStageRequest : public APIGatewayRequest {
 
 public:
     CreateStageRequest(const CreateStageRequest &other);

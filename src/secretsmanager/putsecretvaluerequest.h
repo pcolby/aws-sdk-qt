@@ -27,7 +27,7 @@ namespace SecretsManager {
 
 class PutSecretValueRequestPrivate;
 
-class QTAWS_EXPORT PutSecretValueRequest : public SecretsManagerRequest {
+class QTAWSSECRETSMANAGER_EXPORT PutSecretValueRequest : public SecretsManagerRequest {
 
 public:
     PutSecretValueRequest(const PutSecretValueRequest &other);

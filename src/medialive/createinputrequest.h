@@ -27,7 +27,7 @@ namespace MediaLive {
 
 class CreateInputRequestPrivate;
 
-class QTAWS_EXPORT CreateInputRequest : public MediaLiveRequest {
+class QTAWSMEDIALIVE_EXPORT CreateInputRequest : public MediaLiveRequest {
 
 public:
     CreateInputRequest(const CreateInputRequest &other);

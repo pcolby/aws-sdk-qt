@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSMANAGEDBLOCKCHAIN_LIBRARY)
+
 add_library(QtAwsManagedBlockchain
   creatememberrequest.h
   creatememberrequest_p.h
@@ -73,6 +75,7 @@ add_library(QtAwsManagedBlockchain
   managedblockchainrequest_p.h
   managedblockchainresponse.h
   managedblockchainresponse_p.h
+  qtawsmanagedblockchainglobal.h
   rejectinvitationrequest.h
   rejectinvitationrequest_p.h
   rejectinvitationresponse.h

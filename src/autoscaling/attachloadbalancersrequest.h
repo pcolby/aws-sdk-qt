@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class AttachLoadBalancersRequestPrivate;
 
-class QTAWS_EXPORT AttachLoadBalancersRequest : public AutoScalingRequest {
+class QTAWSAUTOSCALING_EXPORT AttachLoadBalancersRequest : public AutoScalingRequest {
 
 public:
     AttachLoadBalancersRequest(const AttachLoadBalancersRequest &other);

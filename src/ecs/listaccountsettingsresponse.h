@@ -28,7 +28,7 @@ namespace ECS {
 
 class ListAccountSettingsResponsePrivate;
 
-class QTAWS_EXPORT ListAccountSettingsResponse : public EcsResponse {
+class QTAWSECS_EXPORT ListAccountSettingsResponse : public EcsResponse {
     Q_OBJECT
 
 public:

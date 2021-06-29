@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class ListManagedSchemaArnsRequestPrivate;
 
-class QTAWS_EXPORT ListManagedSchemaArnsRequest : public CloudDirectoryRequest {
+class QTAWSCLOUDDIRECTORY_EXPORT ListManagedSchemaArnsRequest : public CloudDirectoryRequest {
 
 public:
     ListManagedSchemaArnsRequest(const ListManagedSchemaArnsRequest &other);

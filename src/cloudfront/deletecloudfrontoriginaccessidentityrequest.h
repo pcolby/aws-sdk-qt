@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class DeleteCloudFrontOriginAccessIdentityRequestPrivate;
 
-class QTAWS_EXPORT DeleteCloudFrontOriginAccessIdentityRequest : public CloudFrontRequest {
+class QTAWSCLOUDFRONT_EXPORT DeleteCloudFrontOriginAccessIdentityRequest : public CloudFrontRequest {
 
 public:
     DeleteCloudFrontOriginAccessIdentityRequest(const DeleteCloudFrontOriginAccessIdentityRequest &other);

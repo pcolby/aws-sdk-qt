@@ -27,7 +27,7 @@ namespace Glue {
 
 class CancelMLTaskRunRequestPrivate;
 
-class QTAWS_EXPORT CancelMLTaskRunRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT CancelMLTaskRunRequest : public GlueRequest {
 
 public:
     CancelMLTaskRunRequest(const CancelMLTaskRunRequest &other);

@@ -21,6 +21,8 @@
 #define QTAWS_SESRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawssesglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace SES {
 
 class SesResponsePrivate;
 
-class QTAWS_EXPORT SesResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSES_EXPORT SesResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

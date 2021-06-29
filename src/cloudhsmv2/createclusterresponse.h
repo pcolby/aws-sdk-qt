@@ -28,7 +28,7 @@ namespace CloudHSMV2 {
 
 class CreateClusterResponsePrivate;
 
-class QTAWS_EXPORT CreateClusterResponse : public CloudHSMV2Response {
+class QTAWSCLOUDHSMV2_EXPORT CreateClusterResponse : public CloudHSMV2Response {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class DeleteAccountCustomizationRequestPrivate;
 
-class QTAWS_EXPORT DeleteAccountCustomizationRequest : public QuickSightRequest {
+class QTAWSQUICKSIGHT_EXPORT DeleteAccountCustomizationRequest : public QuickSightRequest {
 
 public:
     DeleteAccountCustomizationRequest(const DeleteAccountCustomizationRequest &other);

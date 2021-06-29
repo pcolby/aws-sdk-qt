@@ -28,7 +28,7 @@ namespace mgn {
 
 class InitializeServiceResponsePrivate;
 
-class QTAWS_EXPORT InitializeServiceResponse : public mgnResponse {
+class QTAWSMGN_EXPORT InitializeServiceResponse : public mgnResponse {
     Q_OBJECT
 
 public:

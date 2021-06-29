@@ -27,7 +27,7 @@ namespace MediaConvert {
 
 class DescribeEndpointsRequestPrivate;
 
-class QTAWS_EXPORT DescribeEndpointsRequest : public MediaConvertRequest {
+class QTAWSMEDIACONVERT_EXPORT DescribeEndpointsRequest : public MediaConvertRequest {
 
 public:
     DescribeEndpointsRequest(const DescribeEndpointsRequest &other);

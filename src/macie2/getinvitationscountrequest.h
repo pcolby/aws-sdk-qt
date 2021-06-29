@@ -27,7 +27,7 @@ namespace Macie2 {
 
 class GetInvitationsCountRequestPrivate;
 
-class QTAWS_EXPORT GetInvitationsCountRequest : public Macie2Request {
+class QTAWSMACIE2_EXPORT GetInvitationsCountRequest : public Macie2Request {
 
 public:
     GetInvitationsCountRequest(const GetInvitationsCountRequest &other);

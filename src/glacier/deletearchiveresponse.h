@@ -28,7 +28,7 @@ namespace Glacier {
 
 class DeleteArchiveResponsePrivate;
 
-class QTAWS_EXPORT DeleteArchiveResponse : public GlacierResponse {
+class QTAWSGLACIER_EXPORT DeleteArchiveResponse : public GlacierResponse {
     Q_OBJECT
 
 public:

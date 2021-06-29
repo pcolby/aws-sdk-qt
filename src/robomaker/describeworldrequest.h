@@ -27,7 +27,7 @@ namespace RoboMaker {
 
 class DescribeWorldRequestPrivate;
 
-class QTAWS_EXPORT DescribeWorldRequest : public RoboMakerRequest {
+class QTAWSROBOMAKER_EXPORT DescribeWorldRequest : public RoboMakerRequest {
 
 public:
     DescribeWorldRequest(const DescribeWorldRequest &other);

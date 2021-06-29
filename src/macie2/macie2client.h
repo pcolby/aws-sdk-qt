@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsmacie2global.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -141,7 +143,7 @@ class UpdateMemberSessionResponse;
 class UpdateOrganizationConfigurationRequest;
 class UpdateOrganizationConfigurationResponse;
 
-class QTAWS_EXPORT Macie2Client : public QtAws::Core::AwsAbstractClient {
+class QTAWSMACIE2_EXPORT Macie2Client : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

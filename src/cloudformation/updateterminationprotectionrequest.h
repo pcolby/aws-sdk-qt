@@ -27,7 +27,7 @@ namespace CloudFormation {
 
 class UpdateTerminationProtectionRequestPrivate;
 
-class QTAWS_EXPORT UpdateTerminationProtectionRequest : public CloudFormationRequest {
+class QTAWSCLOUDFORMATION_EXPORT UpdateTerminationProtectionRequest : public CloudFormationRequest {
 
 public:
     UpdateTerminationProtectionRequest(const UpdateTerminationProtectionRequest &other);

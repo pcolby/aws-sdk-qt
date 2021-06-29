@@ -27,7 +27,7 @@ namespace Transfer {
 
 class DeleteSshPublicKeyRequestPrivate;
 
-class QTAWS_EXPORT DeleteSshPublicKeyRequest : public TransferRequest {
+class QTAWSTRANSFER_EXPORT DeleteSshPublicKeyRequest : public TransferRequest {
 
 public:
     DeleteSshPublicKeyRequest(const DeleteSshPublicKeyRequest &other);

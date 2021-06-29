@@ -27,7 +27,7 @@ namespace Route53Resolver {
 
 class CreateFirewallDomainListRequestPrivate;
 
-class QTAWS_EXPORT CreateFirewallDomainListRequest : public Route53ResolverRequest {
+class QTAWSROUTE53RESOLVER_EXPORT CreateFirewallDomainListRequest : public Route53ResolverRequest {
 
 public:
     CreateFirewallDomainListRequest(const CreateFirewallDomainListRequest &other);

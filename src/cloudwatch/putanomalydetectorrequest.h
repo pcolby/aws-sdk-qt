@@ -27,7 +27,7 @@ namespace CloudWatch {
 
 class PutAnomalyDetectorRequestPrivate;
 
-class QTAWS_EXPORT PutAnomalyDetectorRequest : public CloudWatchRequest {
+class QTAWSCLOUDWATCH_EXPORT PutAnomalyDetectorRequest : public CloudWatchRequest {
 
 public:
     PutAnomalyDetectorRequest(const PutAnomalyDetectorRequest &other);

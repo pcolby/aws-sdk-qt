@@ -28,7 +28,7 @@ namespace AccessAnalyzer {
 
 class StartResourceScanResponsePrivate;
 
-class QTAWS_EXPORT StartResourceScanResponse : public AccessAnalyzerResponse {
+class QTAWSACCESSANALYZER_EXPORT StartResourceScanResponse : public AccessAnalyzerResponse {
     Q_OBJECT
 
 public:

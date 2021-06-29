@@ -27,7 +27,7 @@ namespace Organizations {
 
 class ListAWSServiceAccessForOrganizationRequestPrivate;
 
-class QTAWS_EXPORT ListAWSServiceAccessForOrganizationRequest : public OrganizationsRequest {
+class QTAWSORGANIZATIONS_EXPORT ListAWSServiceAccessForOrganizationRequest : public OrganizationsRequest {
 
 public:
     ListAWSServiceAccessForOrganizationRequest(const ListAWSServiceAccessForOrganizationRequest &other);

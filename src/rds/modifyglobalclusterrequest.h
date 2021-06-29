@@ -27,7 +27,7 @@ namespace RDS {
 
 class ModifyGlobalClusterRequestPrivate;
 
-class QTAWS_EXPORT ModifyGlobalClusterRequest : public RdsRequest {
+class QTAWSRDS_EXPORT ModifyGlobalClusterRequest : public RdsRequest {
 
 public:
     ModifyGlobalClusterRequest(const ModifyGlobalClusterRequest &other);

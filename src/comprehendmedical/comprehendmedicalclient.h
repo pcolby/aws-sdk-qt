@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawscomprehendmedicalglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -71,7 +73,7 @@ class StopPHIDetectionJobResponse;
 class StopRxNormInferenceJobRequest;
 class StopRxNormInferenceJobResponse;
 
-class QTAWS_EXPORT ComprehendMedicalClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCOMPREHENDMEDICAL_EXPORT ComprehendMedicalClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

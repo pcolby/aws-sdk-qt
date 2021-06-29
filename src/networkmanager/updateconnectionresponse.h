@@ -28,7 +28,7 @@ namespace NetworkManager {
 
 class UpdateConnectionResponsePrivate;
 
-class QTAWS_EXPORT UpdateConnectionResponse : public NetworkManagerResponse {
+class QTAWSNETWORKMANAGER_EXPORT UpdateConnectionResponse : public NetworkManagerResponse {
     Q_OBJECT
 
 public:

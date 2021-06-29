@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DescribeLocalGatewaysRequestPrivate;
 
-class QTAWS_EXPORT DescribeLocalGatewaysRequest : public Ec2Request {
+class QTAWSEC2_EXPORT DescribeLocalGatewaysRequest : public Ec2Request {
 
 public:
     DescribeLocalGatewaysRequest(const DescribeLocalGatewaysRequest &other);

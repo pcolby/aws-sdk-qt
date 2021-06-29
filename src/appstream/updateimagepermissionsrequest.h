@@ -27,7 +27,7 @@ namespace AppStream {
 
 class UpdateImagePermissionsRequestPrivate;
 
-class QTAWS_EXPORT UpdateImagePermissionsRequest : public AppStreamRequest {
+class QTAWSAPPSTREAM_EXPORT UpdateImagePermissionsRequest : public AppStreamRequest {
 
 public:
     UpdateImagePermissionsRequest(const UpdateImagePermissionsRequest &other);

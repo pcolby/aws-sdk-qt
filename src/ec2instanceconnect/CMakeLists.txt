@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSEC2INSTANCECONNECT_LIBRARY)
+
 add_library(QtAwsEC2InstanceConnect
   ec2instanceconnectclient.h
   ec2instanceconnectclient_p.h
@@ -5,6 +7,7 @@ add_library(QtAwsEC2InstanceConnect
   ec2instanceconnectrequest_p.h
   ec2instanceconnectresponse.h
   ec2instanceconnectresponse_p.h
+  qtawsec2instanceconnectglobal.h
   sendserialconsolesshpublickeyrequest.h
   sendserialconsolesshpublickeyrequest_p.h
   sendserialconsolesshpublickeyresponse.h

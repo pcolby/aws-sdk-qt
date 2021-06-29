@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class CreateVPCEConfigurationResponsePrivate;
 
-class QTAWS_EXPORT CreateVPCEConfigurationResponse : public DeviceFarmResponse {
+class QTAWSDEVICEFARM_EXPORT CreateVPCEConfigurationResponse : public DeviceFarmResponse {
     Q_OBJECT
 
 public:

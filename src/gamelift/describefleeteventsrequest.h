@@ -27,7 +27,7 @@ namespace GameLift {
 
 class DescribeFleetEventsRequestPrivate;
 
-class QTAWS_EXPORT DescribeFleetEventsRequest : public GameLiftRequest {
+class QTAWSGAMELIFT_EXPORT DescribeFleetEventsRequest : public GameLiftRequest {
 
 public:
     DescribeFleetEventsRequest(const DescribeFleetEventsRequest &other);

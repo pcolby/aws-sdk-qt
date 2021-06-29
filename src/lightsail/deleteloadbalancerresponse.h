@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class DeleteLoadBalancerResponsePrivate;
 
-class QTAWS_EXPORT DeleteLoadBalancerResponse : public LightsailResponse {
+class QTAWSLIGHTSAIL_EXPORT DeleteLoadBalancerResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

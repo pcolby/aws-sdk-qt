@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsramglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace RAM {
 
 class RamRequestPrivate;
 
-class QTAWS_EXPORT RamRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSRAM_EXPORT RamRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by RAM.

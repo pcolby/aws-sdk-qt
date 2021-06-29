@@ -28,7 +28,7 @@ namespace SQS {
 
 class ListQueueTagsResponsePrivate;
 
-class QTAWS_EXPORT ListQueueTagsResponse : public SqsResponse {
+class QTAWSSQS_EXPORT ListQueueTagsResponse : public SqsResponse {
     Q_OBJECT
 
 public:

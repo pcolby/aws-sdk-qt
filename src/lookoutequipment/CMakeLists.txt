@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSLOOKOUTEQUIPMENT_LIBRARY)
+
 add_library(QtAwsLookoutEquipment
   createdatasetrequest.h
   createdatasetrequest_p.h
@@ -69,6 +71,7 @@ add_library(QtAwsLookoutEquipment
   lookoutequipmentrequest_p.h
   lookoutequipmentresponse.h
   lookoutequipmentresponse_p.h
+  qtawslookoutequipmentglobal.h
   startdataingestionjobrequest.h
   startdataingestionjobrequest_p.h
   startdataingestionjobresponse.h

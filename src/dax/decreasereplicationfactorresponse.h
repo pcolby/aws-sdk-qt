@@ -28,7 +28,7 @@ namespace DAX {
 
 class DecreaseReplicationFactorResponsePrivate;
 
-class QTAWS_EXPORT DecreaseReplicationFactorResponse : public DaxResponse {
+class QTAWSDAX_EXPORT DecreaseReplicationFactorResponse : public DaxResponse {
     Q_OBJECT
 
 public:

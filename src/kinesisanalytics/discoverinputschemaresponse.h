@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 
 class DiscoverInputSchemaResponsePrivate;
 
-class QTAWS_EXPORT DiscoverInputSchemaResponse : public KinesisAnalyticsResponse {
+class QTAWSKINESISANALYTICS_EXPORT DiscoverInputSchemaResponse : public KinesisAnalyticsResponse {
     Q_OBJECT
 
 public:

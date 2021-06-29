@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public ConfigServiceRequest {
+class QTAWSCONFIGSERVICE_EXPORT TagResourceRequest : public ConfigServiceRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

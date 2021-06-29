@@ -27,7 +27,7 @@ namespace FIS {
 
 class DeleteExperimentTemplateRequestPrivate;
 
-class QTAWS_EXPORT DeleteExperimentTemplateRequest : public FisRequest {
+class QTAWSFIS_EXPORT DeleteExperimentTemplateRequest : public FisRequest {
 
 public:
     DeleteExperimentTemplateRequest(const DeleteExperimentTemplateRequest &other);

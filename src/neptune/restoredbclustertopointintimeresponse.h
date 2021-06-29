@@ -28,7 +28,7 @@ namespace Neptune {
 
 class RestoreDBClusterToPointInTimeResponsePrivate;
 
-class QTAWS_EXPORT RestoreDBClusterToPointInTimeResponse : public NeptuneResponse {
+class QTAWSNEPTUNE_EXPORT RestoreDBClusterToPointInTimeResponse : public NeptuneResponse {
     Q_OBJECT
 
 public:

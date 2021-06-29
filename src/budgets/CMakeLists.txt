@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSBUDGETS_LIBRARY)
+
 add_library(QtAwsBudgets
   budgetsclient.h
   budgetsclient_p.h
@@ -77,6 +79,7 @@ add_library(QtAwsBudgets
   executebudgetactionrequest_p.h
   executebudgetactionresponse.h
   executebudgetactionresponse_p.h
+  qtawsbudgetsglobal.h
   updatebudgetactionrequest.h
   updatebudgetactionrequest_p.h
   updatebudgetactionresponse.h

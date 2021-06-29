@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class GetJourneyExecutionActivityMetricsRequestPrivate;
 
-class QTAWS_EXPORT GetJourneyExecutionActivityMetricsRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT GetJourneyExecutionActivityMetricsRequest : public PinpointRequest {
 
 public:
     GetJourneyExecutionActivityMetricsRequest(const GetJourneyExecutionActivityMetricsRequest &other);

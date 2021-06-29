@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class GetAdministratorAccountResponsePrivate;
 
-class QTAWS_EXPORT GetAdministratorAccountResponse : public SecurityHubResponse {
+class QTAWSSECURITYHUB_EXPORT GetAdministratorAccountResponse : public SecurityHubResponse {
     Q_OBJECT
 
 public:

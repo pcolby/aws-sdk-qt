@@ -27,7 +27,7 @@ namespace WAFRegional {
 
 class UpdateIPSetRequestPrivate;
 
-class QTAWS_EXPORT UpdateIPSetRequest : public WAFRegionalRequest {
+class QTAWSWAFREGIONAL_EXPORT UpdateIPSetRequest : public WAFRegionalRequest {
 
 public:
     UpdateIPSetRequest(const UpdateIPSetRequest &other);

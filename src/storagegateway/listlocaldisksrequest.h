@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class ListLocalDisksRequestPrivate;
 
-class QTAWS_EXPORT ListLocalDisksRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT ListLocalDisksRequest : public StorageGatewayRequest {
 
 public:
     ListLocalDisksRequest(const ListLocalDisksRequest &other);

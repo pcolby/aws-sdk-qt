@@ -28,7 +28,7 @@ namespace LexModelsV2 {
 
 class BuildBotLocaleResponsePrivate;
 
-class QTAWS_EXPORT BuildBotLocaleResponse : public LexModelsV2Response {
+class QTAWSLEXMODELSV2_EXPORT BuildBotLocaleResponse : public LexModelsV2Response {
     Q_OBJECT
 
 public:

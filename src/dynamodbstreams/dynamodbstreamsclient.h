@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsdynamodbstreamsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -37,7 +39,7 @@ class GetShardIteratorResponse;
 class ListStreamsRequest;
 class ListStreamsResponse;
 
-class QTAWS_EXPORT DynamoDBStreamsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSDYNAMODBSTREAMS_EXPORT DynamoDBStreamsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

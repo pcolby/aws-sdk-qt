@@ -28,7 +28,7 @@ namespace IoT {
 
 class GetPercentilesResponsePrivate;
 
-class QTAWS_EXPORT GetPercentilesResponse : public IoTResponse {
+class QTAWSIOT_EXPORT GetPercentilesResponse : public IoTResponse {
     Q_OBJECT
 
 public:

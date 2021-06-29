@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawspinpointsmsvoiceglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace PinpointSMSVoice {
 
 class PinpointSMSVoiceRequestPrivate;
 
-class QTAWS_EXPORT PinpointSMSVoiceRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSPINPOINTSMSVOICE_EXPORT PinpointSMSVoiceRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by PinpointSMSVoice.

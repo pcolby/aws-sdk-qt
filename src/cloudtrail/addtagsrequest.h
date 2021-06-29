@@ -27,7 +27,7 @@ namespace CloudTrail {
 
 class AddTagsRequestPrivate;
 
-class QTAWS_EXPORT AddTagsRequest : public CloudTrailRequest {
+class QTAWSCLOUDTRAIL_EXPORT AddTagsRequest : public CloudTrailRequest {
 
 public:
     AddTagsRequest(const AddTagsRequest &other);

@@ -27,7 +27,7 @@ namespace XRay {
 
 class GetGroupsRequestPrivate;
 
-class QTAWS_EXPORT GetGroupsRequest : public XRayRequest {
+class QTAWSXRAY_EXPORT GetGroupsRequest : public XRayRequest {
 
 public:
     GetGroupsRequest(const GetGroupsRequest &other);

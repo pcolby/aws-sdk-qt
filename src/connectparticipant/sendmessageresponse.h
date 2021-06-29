@@ -28,7 +28,7 @@ namespace ConnectParticipant {
 
 class SendMessageResponsePrivate;
 
-class QTAWS_EXPORT SendMessageResponse : public ConnectParticipantResponse {
+class QTAWSCONNECTPARTICIPANT_EXPORT SendMessageResponse : public ConnectParticipantResponse {
     Q_OBJECT
 
 public:

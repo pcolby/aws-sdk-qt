@@ -28,7 +28,7 @@ namespace MWAA {
 
 class PublishMetricsResponsePrivate;
 
-class QTAWS_EXPORT PublishMetricsResponse : public MwaaResponse {
+class QTAWSMWAA_EXPORT PublishMetricsResponse : public MwaaResponse {
     Q_OBJECT
 
 public:

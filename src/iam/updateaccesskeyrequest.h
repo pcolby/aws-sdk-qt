@@ -27,7 +27,7 @@ namespace IAM {
 
 class UpdateAccessKeyRequestPrivate;
 
-class QTAWS_EXPORT UpdateAccessKeyRequest : public IamRequest {
+class QTAWSIAM_EXPORT UpdateAccessKeyRequest : public IamRequest {
 
 public:
     UpdateAccessKeyRequest(const UpdateAccessKeyRequest &other);

@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class GetInvitationsCountResponsePrivate;
 
-class QTAWS_EXPORT GetInvitationsCountResponse : public SecurityHubResponse {
+class QTAWSSECURITYHUB_EXPORT GetInvitationsCountResponse : public SecurityHubResponse {
     Q_OBJECT
 
 public:

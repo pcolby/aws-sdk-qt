@@ -27,7 +27,7 @@ namespace ECRPublic {
 
 class SetRepositoryPolicyRequestPrivate;
 
-class QTAWS_EXPORT SetRepositoryPolicyRequest : public ECRPublicRequest {
+class QTAWSECRPUBLIC_EXPORT SetRepositoryPolicyRequest : public ECRPublicRequest {
 
 public:
     SetRepositoryPolicyRequest(const SetRepositoryPolicyRequest &other);

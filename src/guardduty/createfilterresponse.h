@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class CreateFilterResponsePrivate;
 
-class QTAWS_EXPORT CreateFilterResponse : public GuardDutyResponse {
+class QTAWSGUARDDUTY_EXPORT CreateFilterResponse : public GuardDutyResponse {
     Q_OBJECT
 
 public:

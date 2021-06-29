@@ -27,7 +27,7 @@ namespace Organizations {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public OrganizationsRequest {
+class QTAWSORGANIZATIONS_EXPORT UntagResourceRequest : public OrganizationsRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

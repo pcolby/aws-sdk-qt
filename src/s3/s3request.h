@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawss3global.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace S3 {
 
 class S3RequestPrivate;
 
-class QTAWS_EXPORT S3Request : public QtAws::Core::AwsAbstractRequest {
+class QTAWSS3_EXPORT S3Request : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by S3.

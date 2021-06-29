@@ -27,7 +27,7 @@ namespace KinesisAnalytics {
 
 class DeleteApplicationRequestPrivate;
 
-class QTAWS_EXPORT DeleteApplicationRequest : public KinesisAnalyticsRequest {
+class QTAWSKINESISANALYTICS_EXPORT DeleteApplicationRequest : public KinesisAnalyticsRequest {
 
 public:
     DeleteApplicationRequest(const DeleteApplicationRequest &other);

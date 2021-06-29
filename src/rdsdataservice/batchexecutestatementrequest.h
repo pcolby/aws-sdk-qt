@@ -27,7 +27,7 @@ namespace RDSDataService {
 
 class BatchExecuteStatementRequestPrivate;
 
-class QTAWS_EXPORT BatchExecuteStatementRequest : public RDSDataServiceRequest {
+class QTAWSRDSDATASERVICE_EXPORT BatchExecuteStatementRequest : public RDSDataServiceRequest {
 
 public:
     BatchExecuteStatementRequest(const BatchExecuteStatementRequest &other);

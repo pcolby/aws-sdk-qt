@@ -28,7 +28,7 @@ namespace Backup {
 
 class DescribeRegionSettingsResponsePrivate;
 
-class QTAWS_EXPORT DescribeRegionSettingsResponse : public BackupResponse {
+class QTAWSBACKUP_EXPORT DescribeRegionSettingsResponse : public BackupResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace LakeFormation {
 
 class AddLFTagsToResourceResponsePrivate;
 
-class QTAWS_EXPORT AddLFTagsToResourceResponse : public LakeFormationResponse {
+class QTAWSLAKEFORMATION_EXPORT AddLFTagsToResourceResponse : public LakeFormationResponse {
     Q_OBJECT
 
 public:

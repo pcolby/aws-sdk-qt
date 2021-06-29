@@ -27,7 +27,7 @@ namespace DocDB {
 
 class DeleteDBClusterParameterGroupRequestPrivate;
 
-class QTAWS_EXPORT DeleteDBClusterParameterGroupRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT DeleteDBClusterParameterGroupRequest : public DocDBRequest {
 
 public:
     DeleteDBClusterParameterGroupRequest(const DeleteDBClusterParameterGroupRequest &other);

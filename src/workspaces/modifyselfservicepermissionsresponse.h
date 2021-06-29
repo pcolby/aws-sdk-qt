@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class ModifySelfservicePermissionsResponsePrivate;
 
-class QTAWS_EXPORT ModifySelfservicePermissionsResponse : public WorkSpacesResponse {
+class QTAWSWORKSPACES_EXPORT ModifySelfservicePermissionsResponse : public WorkSpacesResponse {
     Q_OBJECT
 
 public:

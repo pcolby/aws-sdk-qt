@@ -27,7 +27,7 @@ namespace DataSync {
 
 class UpdateAgentRequestPrivate;
 
-class QTAWS_EXPORT UpdateAgentRequest : public DataSyncRequest {
+class QTAWSDATASYNC_EXPORT UpdateAgentRequest : public DataSyncRequest {
 
 public:
     UpdateAgentRequest(const UpdateAgentRequest &other);

@@ -28,7 +28,7 @@ namespace Connect {
 
 class ListHoursOfOperationsResponsePrivate;
 
-class QTAWS_EXPORT ListHoursOfOperationsResponse : public ConnectResponse {
+class QTAWSCONNECT_EXPORT ListHoursOfOperationsResponse : public ConnectResponse {
     Q_OBJECT
 
 public:

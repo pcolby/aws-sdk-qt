@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class CreateTapesRequestPrivate;
 
-class QTAWS_EXPORT CreateTapesRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT CreateTapesRequest : public StorageGatewayRequest {
 
 public:
     CreateTapesRequest(const CreateTapesRequest &other);

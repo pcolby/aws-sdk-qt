@@ -27,7 +27,7 @@ namespace AuditManager {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public AuditManagerRequest {
+class QTAWSAUDITMANAGER_EXPORT UntagResourceRequest : public AuditManagerRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

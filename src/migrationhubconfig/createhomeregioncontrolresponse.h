@@ -28,7 +28,7 @@ namespace MigrationHubConfig {
 
 class CreateHomeRegionControlResponsePrivate;
 
-class QTAWS_EXPORT CreateHomeRegionControlResponse : public MigrationHubConfigResponse {
+class QTAWSMIGRATIONHUBCONFIG_EXPORT CreateHomeRegionControlResponse : public MigrationHubConfigResponse {
     Q_OBJECT
 
 public:

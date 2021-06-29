@@ -27,7 +27,7 @@ namespace ServiceDiscovery {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public ServiceDiscoveryRequest {
+class QTAWSSERVICEDISCOVERY_EXPORT TagResourceRequest : public ServiceDiscoveryRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

@@ -28,7 +28,7 @@ namespace PinpointEmail {
 
 class GetBlacklistReportsResponsePrivate;
 
-class QTAWS_EXPORT GetBlacklistReportsResponse : public PinpointEmailResponse {
+class QTAWSPINPOINTEMAIL_EXPORT GetBlacklistReportsResponse : public PinpointEmailResponse {
     Q_OBJECT
 
 public:

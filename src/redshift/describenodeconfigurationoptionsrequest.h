@@ -27,7 +27,7 @@ namespace Redshift {
 
 class DescribeNodeConfigurationOptionsRequestPrivate;
 
-class QTAWS_EXPORT DescribeNodeConfigurationOptionsRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT DescribeNodeConfigurationOptionsRequest : public RedshiftRequest {
 
 public:
     DescribeNodeConfigurationOptionsRequest(const DescribeNodeConfigurationOptionsRequest &other);

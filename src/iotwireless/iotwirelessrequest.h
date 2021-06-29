@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsiotwirelessglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace IoTWireless {
 
 class IoTWirelessRequestPrivate;
 
-class QTAWS_EXPORT IoTWirelessRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSIOTWIRELESS_EXPORT IoTWirelessRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by IoTWireless.

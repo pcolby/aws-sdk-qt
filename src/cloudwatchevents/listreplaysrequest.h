@@ -27,7 +27,7 @@ namespace CloudWatchEvents {
 
 class ListReplaysRequestPrivate;
 
-class QTAWS_EXPORT ListReplaysRequest : public CloudWatchEventsRequest {
+class QTAWSCLOUDWATCHEVENTS_EXPORT ListReplaysRequest : public CloudWatchEventsRequest {
 
 public:
     ListReplaysRequest(const ListReplaysRequest &other);

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSIOTJOBSDATAPLANE_LIBRARY)
+
 add_library(QtAwsIoTJobsDataPlane
   describejobexecutionrequest.h
   describejobexecutionrequest_p.h
@@ -13,6 +15,7 @@ add_library(QtAwsIoTJobsDataPlane
   iotjobsdataplanerequest_p.h
   iotjobsdataplaneresponse.h
   iotjobsdataplaneresponse_p.h
+  qtawsiotjobsdataplaneglobal.h
   startnextpendingjobexecutionrequest.h
   startnextpendingjobexecutionrequest_p.h
   startnextpendingjobexecutionresponse.h

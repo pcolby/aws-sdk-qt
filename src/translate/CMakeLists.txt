@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSTRANSLATE_LIBRARY)
+
 add_library(QtAwsTranslate
   createparalleldatarequest.h
   createparalleldatarequest_p.h
@@ -39,6 +41,7 @@ add_library(QtAwsTranslate
   listtexttranslationjobsrequest_p.h
   listtexttranslationjobsresponse.h
   listtexttranslationjobsresponse_p.h
+  qtawstranslateglobal.h
   starttexttranslationjobrequest.h
   starttexttranslationjobrequest_p.h
   starttexttranslationjobresponse.h

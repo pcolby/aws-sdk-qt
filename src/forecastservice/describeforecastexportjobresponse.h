@@ -28,7 +28,7 @@ namespace ForecastService {
 
 class DescribeForecastExportJobResponsePrivate;
 
-class QTAWS_EXPORT DescribeForecastExportJobResponse : public ForecastServiceResponse {
+class QTAWSFORECASTSERVICE_EXPORT DescribeForecastExportJobResponse : public ForecastServiceResponse {
     Q_OBJECT
 
 public:

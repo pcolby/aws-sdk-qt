@@ -27,7 +27,7 @@ namespace Kafka {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public KafkaRequest {
+class QTAWSKAFKA_EXPORT TagResourceRequest : public KafkaRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

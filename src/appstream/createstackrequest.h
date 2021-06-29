@@ -27,7 +27,7 @@ namespace AppStream {
 
 class CreateStackRequestPrivate;
 
-class QTAWS_EXPORT CreateStackRequest : public AppStreamRequest {
+class QTAWSAPPSTREAM_EXPORT CreateStackRequest : public AppStreamRequest {
 
 public:
     CreateStackRequest(const CreateStackRequest &other);

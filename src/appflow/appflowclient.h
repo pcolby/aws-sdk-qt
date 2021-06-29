@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsappflowglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -65,7 +67,7 @@ class UpdateConnectorProfileResponse;
 class UpdateFlowRequest;
 class UpdateFlowResponse;
 
-class QTAWS_EXPORT AppflowClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSAPPFLOW_EXPORT AppflowClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

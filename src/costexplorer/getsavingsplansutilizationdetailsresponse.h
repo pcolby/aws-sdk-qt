@@ -28,7 +28,7 @@ namespace CostExplorer {
 
 class GetSavingsPlansUtilizationDetailsResponsePrivate;
 
-class QTAWS_EXPORT GetSavingsPlansUtilizationDetailsResponse : public CostExplorerResponse {
+class QTAWSCOSTEXPLORER_EXPORT GetSavingsPlansUtilizationDetailsResponse : public CostExplorerResponse {
     Q_OBJECT
 
 public:

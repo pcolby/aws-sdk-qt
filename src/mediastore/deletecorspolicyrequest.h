@@ -27,7 +27,7 @@ namespace MediaStore {
 
 class DeleteCorsPolicyRequestPrivate;
 
-class QTAWS_EXPORT DeleteCorsPolicyRequest : public MediaStoreRequest {
+class QTAWSMEDIASTORE_EXPORT DeleteCorsPolicyRequest : public MediaStoreRequest {
 
 public:
     DeleteCorsPolicyRequest(const DeleteCorsPolicyRequest &other);

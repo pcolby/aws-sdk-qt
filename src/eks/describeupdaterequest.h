@@ -27,7 +27,7 @@ namespace EKS {
 
 class DescribeUpdateRequestPrivate;
 
-class QTAWS_EXPORT DescribeUpdateRequest : public EksRequest {
+class QTAWSEKS_EXPORT DescribeUpdateRequest : public EksRequest {
 
 public:
     DescribeUpdateRequest(const DescribeUpdateRequest &other);

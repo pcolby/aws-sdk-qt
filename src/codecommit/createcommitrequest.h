@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class CreateCommitRequestPrivate;
 
-class QTAWS_EXPORT CreateCommitRequest : public CodeCommitRequest {
+class QTAWSCODECOMMIT_EXPORT CreateCommitRequest : public CodeCommitRequest {
 
 public:
     CreateCommitRequest(const CreateCommitRequest &other);

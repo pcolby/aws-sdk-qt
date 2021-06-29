@@ -27,7 +27,7 @@ namespace EFS {
 
 class PutBackupPolicyRequestPrivate;
 
-class QTAWS_EXPORT PutBackupPolicyRequest : public EfsRequest {
+class QTAWSEFS_EXPORT PutBackupPolicyRequest : public EfsRequest {
 
 public:
     PutBackupPolicyRequest(const PutBackupPolicyRequest &other);

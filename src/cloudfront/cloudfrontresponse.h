@@ -21,6 +21,8 @@
 #define QTAWS_CLOUDFRONTRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawscloudfrontglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace CloudFront {
 
 class CloudFrontResponsePrivate;
 
-class QTAWS_EXPORT CloudFrontResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCLOUDFRONT_EXPORT CloudFrontResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

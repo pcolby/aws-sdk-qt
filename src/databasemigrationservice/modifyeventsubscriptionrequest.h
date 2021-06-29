@@ -27,7 +27,7 @@ namespace DatabaseMigrationService {
 
 class ModifyEventSubscriptionRequestPrivate;
 
-class QTAWS_EXPORT ModifyEventSubscriptionRequest : public DatabaseMigrationServiceRequest {
+class QTAWSDATABASEMIGRATIONSERVICE_EXPORT ModifyEventSubscriptionRequest : public DatabaseMigrationServiceRequest {
 
 public:
     ModifyEventSubscriptionRequest(const ModifyEventSubscriptionRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsworkmailglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -137,7 +139,7 @@ class UpdatePrimaryEmailAddressResponse;
 class UpdateResourceRequest;
 class UpdateResourceResponse;
 
-class QTAWS_EXPORT WorkMailClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSWORKMAIL_EXPORT WorkMailClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

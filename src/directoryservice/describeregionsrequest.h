@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class DescribeRegionsRequestPrivate;
 
-class QTAWS_EXPORT DescribeRegionsRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT DescribeRegionsRequest : public DirectoryServiceRequest {
 
 public:
     DescribeRegionsRequest(const DescribeRegionsRequest &other);

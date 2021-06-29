@@ -28,7 +28,7 @@ namespace ECS {
 
 class CreateTaskSetResponsePrivate;
 
-class QTAWS_EXPORT CreateTaskSetResponse : public EcsResponse {
+class QTAWSECS_EXPORT CreateTaskSetResponse : public EcsResponse {
     Q_OBJECT
 
 public:

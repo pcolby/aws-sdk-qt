@@ -27,7 +27,7 @@ namespace Backup {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public BackupRequest {
+class QTAWSBACKUP_EXPORT UntagResourceRequest : public BackupRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

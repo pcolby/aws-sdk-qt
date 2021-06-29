@@ -27,7 +27,7 @@ namespace WAF {
 
 class CreateRateBasedRuleRequestPrivate;
 
-class QTAWS_EXPORT CreateRateBasedRuleRequest : public WafRequest {
+class QTAWSWAF_EXPORT CreateRateBasedRuleRequest : public WafRequest {
 
 public:
     CreateRateBasedRuleRequest(const CreateRateBasedRuleRequest &other);

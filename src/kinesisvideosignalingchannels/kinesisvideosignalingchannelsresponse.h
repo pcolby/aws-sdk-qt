@@ -21,6 +21,8 @@
 #define QTAWS_KINESISVIDEOSIGNALINGCHANNELSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawskinesisvideosignalingchannelsglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace KinesisVideoSignalingChannels {
 
 class KinesisVideoSignalingChannelsResponsePrivate;
 
-class QTAWS_EXPORT KinesisVideoSignalingChannelsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSKINESISVIDEOSIGNALINGCHANNELS_EXPORT KinesisVideoSignalingChannelsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

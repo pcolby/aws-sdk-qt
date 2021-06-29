@@ -27,7 +27,7 @@ namespace EFS {
 
 class DeleteTagsRequestPrivate;
 
-class QTAWS_EXPORT DeleteTagsRequest : public EfsRequest {
+class QTAWSEFS_EXPORT DeleteTagsRequest : public EfsRequest {
 
 public:
     DeleteTagsRequest(const DeleteTagsRequest &other);

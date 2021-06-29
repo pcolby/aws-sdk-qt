@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ResetAddressAttributeRequestPrivate;
 
-class QTAWS_EXPORT ResetAddressAttributeRequest : public Ec2Request {
+class QTAWSEC2_EXPORT ResetAddressAttributeRequest : public Ec2Request {
 
 public:
     ResetAddressAttributeRequest(const ResetAddressAttributeRequest &other);

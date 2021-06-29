@@ -28,7 +28,7 @@ namespace EMR {
 
 class ListClustersResponsePrivate;
 
-class QTAWS_EXPORT ListClustersResponse : public EmrResponse {
+class QTAWSEMR_EXPORT ListClustersResponse : public EmrResponse {
     Q_OBJECT
 
 public:

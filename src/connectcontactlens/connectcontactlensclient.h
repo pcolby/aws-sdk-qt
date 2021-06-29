@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsconnectcontactlensglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -31,7 +33,7 @@ class ConnectContactLensClientPrivate;
 class ListRealtimeContactAnalysisSegmentsRequest;
 class ListRealtimeContactAnalysisSegmentsResponse;
 
-class QTAWS_EXPORT ConnectContactLensClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCONNECTCONTACTLENS_EXPORT ConnectContactLensClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

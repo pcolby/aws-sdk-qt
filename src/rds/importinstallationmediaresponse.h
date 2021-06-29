@@ -28,7 +28,7 @@ namespace RDS {
 
 class ImportInstallationMediaResponsePrivate;
 
-class QTAWS_EXPORT ImportInstallationMediaResponse : public RdsResponse {
+class QTAWSRDS_EXPORT ImportInstallationMediaResponse : public RdsResponse {
     Q_OBJECT
 
 public:

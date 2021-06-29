@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawssmsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace SMS {
 
 class SmsRequestPrivate;
 
-class QTAWS_EXPORT SmsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSMS_EXPORT SmsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SMS.

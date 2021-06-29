@@ -27,7 +27,7 @@ namespace SNS {
 
 class GetSMSSandboxAccountStatusRequestPrivate;
 
-class QTAWS_EXPORT GetSMSSandboxAccountStatusRequest : public SnsRequest {
+class QTAWSSNS_EXPORT GetSMSSandboxAccountStatusRequest : public SnsRequest {
 
 public:
     GetSMSSandboxAccountStatusRequest(const GetSMSSandboxAccountStatusRequest &other);

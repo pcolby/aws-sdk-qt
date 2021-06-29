@@ -3,6 +3,8 @@
 #define QTAWS_{{ClassName|upper}}_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtaws{{ServiceName|lower}}global.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -10,7 +12,7 @@ namespace {{NameSpaceName}} {
 
 class {{ClassName}}Private;
 
-class QTAWS_EXPORT {{ClassName}} : public QtAws::Core::AwsAbstractResponse {
+class QTAWS{{ServiceName|upper}}_EXPORT {{ClassName}} : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class DescribeRootFoldersResponsePrivate;
 
-class QTAWS_EXPORT DescribeRootFoldersResponse : public WorkDocsResponse {
+class QTAWSWORKDOCS_EXPORT DescribeRootFoldersResponse : public WorkDocsResponse {
     Q_OBJECT
 
 public:

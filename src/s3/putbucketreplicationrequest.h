@@ -27,7 +27,7 @@ namespace S3 {
 
 class PutBucketReplicationRequestPrivate;
 
-class QTAWS_EXPORT PutBucketReplicationRequest : public S3Request {
+class QTAWSS3_EXPORT PutBucketReplicationRequest : public S3Request {
 
 public:
     PutBucketReplicationRequest(const PutBucketReplicationRequest &other);

@@ -27,7 +27,7 @@ namespace MTurk {
 
 class ListBonusPaymentsRequestPrivate;
 
-class QTAWS_EXPORT ListBonusPaymentsRequest : public MTurkRequest {
+class QTAWSMTURK_EXPORT ListBonusPaymentsRequest : public MTurkRequest {
 
 public:
     ListBonusPaymentsRequest(const ListBonusPaymentsRequest &other);

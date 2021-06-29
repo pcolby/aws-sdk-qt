@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class DeleteTapeRequestPrivate;
 
-class QTAWS_EXPORT DeleteTapeRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT DeleteTapeRequest : public StorageGatewayRequest {
 
 public:
     DeleteTapeRequest(const DeleteTapeRequest &other);

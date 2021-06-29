@@ -27,7 +27,7 @@ namespace ElasticsearchService {
 
 class UpdatePackageRequestPrivate;
 
-class QTAWS_EXPORT UpdatePackageRequest : public ElasticsearchServiceRequest {
+class QTAWSELASTICSEARCHSERVICE_EXPORT UpdatePackageRequest : public ElasticsearchServiceRequest {
 
 public:
     UpdatePackageRequest(const UpdatePackageRequest &other);

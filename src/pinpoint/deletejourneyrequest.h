@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class DeleteJourneyRequestPrivate;
 
-class QTAWS_EXPORT DeleteJourneyRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT DeleteJourneyRequest : public PinpointRequest {
 
 public:
     DeleteJourneyRequest(const DeleteJourneyRequest &other);

@@ -27,7 +27,7 @@ namespace ImportExport {
 
 class UpdateJobRequestPrivate;
 
-class QTAWS_EXPORT UpdateJobRequest : public ImportExportRequest {
+class QTAWSIMPORTEXPORT_EXPORT UpdateJobRequest : public ImportExportRequest {
 
 public:
     UpdateJobRequest(const UpdateJobRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsglacierglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -95,7 +97,7 @@ class UploadArchiveResponse;
 class UploadMultipartPartRequest;
 class UploadMultipartPartResponse;
 
-class QTAWS_EXPORT GlacierClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSGLACIER_EXPORT GlacierClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

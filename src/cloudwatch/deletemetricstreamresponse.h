@@ -28,7 +28,7 @@ namespace CloudWatch {
 
 class DeleteMetricStreamResponsePrivate;
 
-class QTAWS_EXPORT DeleteMetricStreamResponse : public CloudWatchResponse {
+class QTAWSCLOUDWATCH_EXPORT DeleteMetricStreamResponse : public CloudWatchResponse {
     Q_OBJECT
 
 public:

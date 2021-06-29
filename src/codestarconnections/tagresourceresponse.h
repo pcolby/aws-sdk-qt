@@ -28,7 +28,7 @@ namespace CodeStarconnections {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public CodeStarconnectionsResponse {
+class QTAWSCODESTARCONNECTIONS_EXPORT TagResourceResponse : public CodeStarconnectionsResponse {
     Q_OBJECT
 
 public:

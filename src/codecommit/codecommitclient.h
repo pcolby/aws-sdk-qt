@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawscodecommitglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -183,7 +185,7 @@ class UpdateRepositoryDescriptionResponse;
 class UpdateRepositoryNameRequest;
 class UpdateRepositoryNameResponse;
 
-class QTAWS_EXPORT CodeCommitClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCODECOMMIT_EXPORT CodeCommitClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

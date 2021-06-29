@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class PutDedicatedIpInPoolResponsePrivate;
 
-class QTAWS_EXPORT PutDedicatedIpInPoolResponse : public Sesv2Response {
+class QTAWSSESV2_EXPORT PutDedicatedIpInPoolResponse : public Sesv2Response {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace Redshift {
 
 class DeleteHsmConfigurationRequestPrivate;
 
-class QTAWS_EXPORT DeleteHsmConfigurationRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT DeleteHsmConfigurationRequest : public RedshiftRequest {
 
 public:
     DeleteHsmConfigurationRequest(const DeleteHsmConfigurationRequest &other);

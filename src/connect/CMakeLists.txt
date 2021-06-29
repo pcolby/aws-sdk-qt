@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCONNECT_LIBRARY)
+
 add_library(QtAwsConnect
   associateapprovedoriginrequest.h
   associateapprovedoriginrequest_p.h
@@ -281,6 +283,7 @@ add_library(QtAwsConnect
   listusersrequest_p.h
   listusersresponse.h
   listusersresponse_p.h
+  qtawsconnectglobal.h
   resumecontactrecordingrequest.h
   resumecontactrecordingrequest_p.h
   resumecontactrecordingresponse.h

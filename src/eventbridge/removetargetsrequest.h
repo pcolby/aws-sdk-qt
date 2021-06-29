@@ -27,7 +27,7 @@ namespace EventBridge {
 
 class RemoveTargetsRequestPrivate;
 
-class QTAWS_EXPORT RemoveTargetsRequest : public EventBridgeRequest {
+class QTAWSEVENTBRIDGE_EXPORT RemoveTargetsRequest : public EventBridgeRequest {
 
 public:
     RemoveTargetsRequest(const RemoveTargetsRequest &other);

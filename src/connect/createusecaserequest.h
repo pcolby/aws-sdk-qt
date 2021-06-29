@@ -27,7 +27,7 @@ namespace Connect {
 
 class CreateUseCaseRequestPrivate;
 
-class QTAWS_EXPORT CreateUseCaseRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT CreateUseCaseRequest : public ConnectRequest {
 
 public:
     CreateUseCaseRequest(const CreateUseCaseRequest &other);

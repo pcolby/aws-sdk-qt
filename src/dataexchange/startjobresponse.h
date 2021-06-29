@@ -28,7 +28,7 @@ namespace DataExchange {
 
 class StartJobResponsePrivate;
 
-class QTAWS_EXPORT StartJobResponse : public DataExchangeResponse {
+class QTAWSDATAEXCHANGE_EXPORT StartJobResponse : public DataExchangeResponse {
     Q_OBJECT
 
 public:

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSMARKETPLACECOMMERCEANALYTICS_LIBRARY)
+
 add_library(QtAwsMarketplaceCommerceAnalytics
   generatedatasetrequest.h
   generatedatasetrequest_p.h
@@ -9,6 +11,7 @@ add_library(QtAwsMarketplaceCommerceAnalytics
   marketplacecommerceanalyticsrequest_p.h
   marketplacecommerceanalyticsresponse.h
   marketplacecommerceanalyticsresponse_p.h
+  qtawsmarketplacecommerceanalyticsglobal.h
   startsupportdataexportrequest.h
   startsupportdataexportrequest_p.h
   startsupportdataexportresponse.h

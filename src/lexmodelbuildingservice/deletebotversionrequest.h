@@ -27,7 +27,7 @@ namespace LexModelBuildingService {
 
 class DeleteBotVersionRequestPrivate;
 
-class QTAWS_EXPORT DeleteBotVersionRequest : public LexModelBuildingServiceRequest {
+class QTAWSLEXMODELBUILDINGSERVICE_EXPORT DeleteBotVersionRequest : public LexModelBuildingServiceRequest {
 
 public:
     DeleteBotVersionRequest(const DeleteBotVersionRequest &other);

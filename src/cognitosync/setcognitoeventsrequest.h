@@ -27,7 +27,7 @@ namespace CognitoSync {
 
 class SetCognitoEventsRequestPrivate;
 
-class QTAWS_EXPORT SetCognitoEventsRequest : public CognitoSyncRequest {
+class QTAWSCOGNITOSYNC_EXPORT SetCognitoEventsRequest : public CognitoSyncRequest {
 
 public:
     SetCognitoEventsRequest(const SetCognitoEventsRequest &other);

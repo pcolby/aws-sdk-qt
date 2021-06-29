@@ -21,6 +21,8 @@
 #define QTAWS_EC2INSTANCECONNECTRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsec2instanceconnectglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace EC2InstanceConnect {
 
 class EC2InstanceConnectResponsePrivate;
 
-class QTAWS_EXPORT EC2InstanceConnectResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSEC2INSTANCECONNECT_EXPORT EC2InstanceConnectResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

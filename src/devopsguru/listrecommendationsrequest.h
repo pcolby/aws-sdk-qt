@@ -27,7 +27,7 @@ namespace DevOpsGuru {
 
 class ListRecommendationsRequestPrivate;
 
-class QTAWS_EXPORT ListRecommendationsRequest : public DevOpsGuruRequest {
+class QTAWSDEVOPSGURU_EXPORT ListRecommendationsRequest : public DevOpsGuruRequest {
 
 public:
     ListRecommendationsRequest(const ListRecommendationsRequest &other);

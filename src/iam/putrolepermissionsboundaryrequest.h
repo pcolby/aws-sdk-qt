@@ -27,7 +27,7 @@ namespace IAM {
 
 class PutRolePermissionsBoundaryRequestPrivate;
 
-class QTAWS_EXPORT PutRolePermissionsBoundaryRequest : public IamRequest {
+class QTAWSIAM_EXPORT PutRolePermissionsBoundaryRequest : public IamRequest {
 
 public:
     PutRolePermissionsBoundaryRequest(const PutRolePermissionsBoundaryRequest &other);

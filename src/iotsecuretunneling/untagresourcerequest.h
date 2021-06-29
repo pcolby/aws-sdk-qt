@@ -27,7 +27,7 @@ namespace IoTSecureTunneling {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public IoTSecureTunnelingRequest {
+class QTAWSIOTSECURETUNNELING_EXPORT UntagResourceRequest : public IoTSecureTunnelingRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

@@ -27,7 +27,7 @@ namespace CloudWatchLogs {
 
 class PutRetentionPolicyRequestPrivate;
 
-class QTAWS_EXPORT PutRetentionPolicyRequest : public CloudWatchLogsRequest {
+class QTAWSCLOUDWATCHLOGS_EXPORT PutRetentionPolicyRequest : public CloudWatchLogsRequest {
 
 public:
     PutRetentionPolicyRequest(const PutRetentionPolicyRequest &other);

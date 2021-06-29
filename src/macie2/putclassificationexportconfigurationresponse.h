@@ -28,7 +28,7 @@ namespace Macie2 {
 
 class PutClassificationExportConfigurationResponsePrivate;
 
-class QTAWS_EXPORT PutClassificationExportConfigurationResponse : public Macie2Response {
+class QTAWSMACIE2_EXPORT PutClassificationExportConfigurationResponse : public Macie2Response {
     Q_OBJECT
 
 public:

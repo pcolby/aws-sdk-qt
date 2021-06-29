@@ -21,6 +21,8 @@
 #define QTAWS_LIGHTSAILRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawslightsailglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Lightsail {
 
 class LightsailResponsePrivate;
 
-class QTAWS_EXPORT LightsailResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSLIGHTSAIL_EXPORT LightsailResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

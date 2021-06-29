@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawselasticacheglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -159,7 +161,7 @@ class StartMigrationResponse;
 class TestFailoverRequest;
 class TestFailoverResponse;
 
-class QTAWS_EXPORT ElastiCacheClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSELASTICACHE_EXPORT ElastiCacheClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

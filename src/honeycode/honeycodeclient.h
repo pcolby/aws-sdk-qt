@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawshoneycodeglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -53,7 +55,7 @@ class QueryTableRowsResponse;
 class StartTableDataImportJobRequest;
 class StartTableDataImportJobResponse;
 
-class QTAWS_EXPORT HoneycodeClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSHONEYCODE_EXPORT HoneycodeClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace DataPipeline {
 
 class DeletePipelineResponsePrivate;
 
-class QTAWS_EXPORT DeletePipelineResponse : public DataPipelineResponse {
+class QTAWSDATAPIPELINE_EXPORT DeletePipelineResponse : public DataPipelineResponse {
     Q_OBJECT
 
 public:

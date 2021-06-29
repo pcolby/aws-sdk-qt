@@ -28,7 +28,7 @@ namespace IoTAnalytics {
 
 class CreatePipelineResponsePrivate;
 
-class QTAWS_EXPORT CreatePipelineResponse : public IoTAnalyticsResponse {
+class QTAWSIOTANALYTICS_EXPORT CreatePipelineResponse : public IoTAnalyticsResponse {
     Q_OBJECT
 
 public:

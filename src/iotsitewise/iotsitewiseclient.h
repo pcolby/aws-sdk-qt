@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsiotsitewiseglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -145,7 +147,7 @@ class UpdatePortalResponse;
 class UpdateProjectRequest;
 class UpdateProjectResponse;
 
-class QTAWS_EXPORT IoTSiteWiseClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSIOTSITEWISE_EXPORT IoTSiteWiseClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

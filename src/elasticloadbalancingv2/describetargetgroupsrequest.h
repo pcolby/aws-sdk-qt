@@ -27,7 +27,7 @@ namespace ElasticLoadBalancingv2 {
 
 class DescribeTargetGroupsRequestPrivate;
 
-class QTAWS_EXPORT DescribeTargetGroupsRequest : public ElasticLoadBalancingv2Request {
+class QTAWSELASTICLOADBALANCINGV2_EXPORT DescribeTargetGroupsRequest : public ElasticLoadBalancingv2Request {
 
 public:
     DescribeTargetGroupsRequest(const DescribeTargetGroupsRequest &other);

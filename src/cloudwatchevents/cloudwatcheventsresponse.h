@@ -21,6 +21,8 @@
 #define QTAWS_CLOUDWATCHEVENTSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawscloudwatcheventsglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace CloudWatchEvents {
 
 class CloudWatchEventsResponsePrivate;
 
-class QTAWS_EXPORT CloudWatchEventsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCLOUDWATCHEVENTS_EXPORT CloudWatchEventsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 
 class DeleteBackupResponsePrivate;
 
-class QTAWS_EXPORT DeleteBackupResponse : public OpsWorksCMResponse {
+class QTAWSOPSWORKSCM_EXPORT DeleteBackupResponse : public OpsWorksCMResponse {
     Q_OBJECT
 
 public:

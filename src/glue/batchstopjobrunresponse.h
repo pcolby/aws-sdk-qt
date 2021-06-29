@@ -28,7 +28,7 @@ namespace Glue {
 
 class BatchStopJobRunResponsePrivate;
 
-class QTAWS_EXPORT BatchStopJobRunResponse : public GlueResponse {
+class QTAWSGLUE_EXPORT BatchStopJobRunResponse : public GlueResponse {
     Q_OBJECT
 
 public:

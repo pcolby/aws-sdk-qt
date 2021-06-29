@@ -28,7 +28,7 @@ namespace GroundStation {
 
 class DeleteMissionProfileResponsePrivate;
 
-class QTAWS_EXPORT DeleteMissionProfileResponse : public GroundStationResponse {
+class QTAWSGROUNDSTATION_EXPORT DeleteMissionProfileResponse : public GroundStationResponse {
     Q_OBJECT
 
 public:

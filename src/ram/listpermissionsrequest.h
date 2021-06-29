@@ -27,7 +27,7 @@ namespace RAM {
 
 class ListPermissionsRequestPrivate;
 
-class QTAWS_EXPORT ListPermissionsRequest : public RamRequest {
+class QTAWSRAM_EXPORT ListPermissionsRequest : public RamRequest {
 
 public:
     ListPermissionsRequest(const ListPermissionsRequest &other);

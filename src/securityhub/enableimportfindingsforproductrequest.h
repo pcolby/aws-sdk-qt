@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class EnableImportFindingsForProductRequestPrivate;
 
-class QTAWS_EXPORT EnableImportFindingsForProductRequest : public SecurityHubRequest {
+class QTAWSSECURITYHUB_EXPORT EnableImportFindingsForProductRequest : public SecurityHubRequest {
 
 public:
     EnableImportFindingsForProductRequest(const EnableImportFindingsForProductRequest &other);

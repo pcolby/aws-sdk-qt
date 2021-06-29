@@ -27,7 +27,7 @@ namespace LexRuntimeService {
 
 class PostContentRequestPrivate;
 
-class QTAWS_EXPORT PostContentRequest : public LexRuntimeServiceRequest {
+class QTAWSLEXRUNTIMESERVICE_EXPORT PostContentRequest : public LexRuntimeServiceRequest {
 
 public:
     PostContentRequest(const PostContentRequest &other);

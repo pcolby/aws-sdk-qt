@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsramglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -77,7 +79,7 @@ class UntagResourceResponse;
 class UpdateResourceShareRequest;
 class UpdateResourceShareResponse;
 
-class QTAWS_EXPORT RamClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSRAM_EXPORT RamClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

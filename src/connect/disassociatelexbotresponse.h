@@ -28,7 +28,7 @@ namespace Connect {
 
 class DisassociateLexBotResponsePrivate;
 
-class QTAWS_EXPORT DisassociateLexBotResponse : public ConnectResponse {
+class QTAWSCONNECT_EXPORT DisassociateLexBotResponse : public ConnectResponse {
     Q_OBJECT
 
 public:

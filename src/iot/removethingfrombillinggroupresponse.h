@@ -28,7 +28,7 @@ namespace IoT {
 
 class RemoveThingFromBillingGroupResponsePrivate;
 
-class QTAWS_EXPORT RemoveThingFromBillingGroupResponse : public IoTResponse {
+class QTAWSIOT_EXPORT RemoveThingFromBillingGroupResponse : public IoTResponse {
     Q_OBJECT
 
 public:

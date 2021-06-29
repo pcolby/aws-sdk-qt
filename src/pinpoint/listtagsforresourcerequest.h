@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT ListTagsForResourceRequest : public PinpointRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

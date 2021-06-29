@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class CreateDomainRequestPrivate;
 
-class QTAWS_EXPORT CreateDomainRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT CreateDomainRequest : public LightsailRequest {
 
 public:
     CreateDomainRequest(const CreateDomainRequest &other);

@@ -28,7 +28,7 @@ namespace SMS {
 
 class DeleteAppLaunchConfigurationResponsePrivate;
 
-class QTAWS_EXPORT DeleteAppLaunchConfigurationResponse : public SmsResponse {
+class QTAWSSMS_EXPORT DeleteAppLaunchConfigurationResponse : public SmsResponse {
     Q_OBJECT
 
 public:

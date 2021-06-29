@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawskinesisanalyticsv2global.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace KinesisAnalyticsV2 {
 
 class KinesisAnalyticsV2RequestPrivate;
 
-class QTAWS_EXPORT KinesisAnalyticsV2Request : public QtAws::Core::AwsAbstractRequest {
+class QTAWSKINESISANALYTICSV2_EXPORT KinesisAnalyticsV2Request : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by KinesisAnalyticsV2.

@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class UpdateAppRequestPrivate;
 
-class QTAWS_EXPORT UpdateAppRequest : public OpsWorksRequest {
+class QTAWSOPSWORKS_EXPORT UpdateAppRequest : public OpsWorksRequest {
 
 public:
     UpdateAppRequest(const UpdateAppRequest &other);

@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class DescribeContextRequestPrivate;
 
-class QTAWS_EXPORT DescribeContextRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT DescribeContextRequest : public SageMakerRequest {
 
 public:
     DescribeContextRequest(const DescribeContextRequest &other);

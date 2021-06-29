@@ -27,7 +27,7 @@ namespace QLDB {
 
 class DescribeLedgerRequestPrivate;
 
-class QTAWS_EXPORT DescribeLedgerRequest : public QldbRequest {
+class QTAWSQLDB_EXPORT DescribeLedgerRequest : public QldbRequest {
 
 public:
     DescribeLedgerRequest(const DescribeLedgerRequest &other);

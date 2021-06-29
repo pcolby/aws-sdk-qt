@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsec2instanceconnectglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace EC2InstanceConnect {
 
 class EC2InstanceConnectRequestPrivate;
 
-class QTAWS_EXPORT EC2InstanceConnectRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSEC2INSTANCECONNECT_EXPORT EC2InstanceConnectRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by EC2InstanceConnect.

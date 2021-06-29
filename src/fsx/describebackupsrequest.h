@@ -27,7 +27,7 @@ namespace FSx {
 
 class DescribeBackupsRequestPrivate;
 
-class QTAWS_EXPORT DescribeBackupsRequest : public FSxRequest {
+class QTAWSFSX_EXPORT DescribeBackupsRequest : public FSxRequest {
 
 public:
     DescribeBackupsRequest(const DescribeBackupsRequest &other);

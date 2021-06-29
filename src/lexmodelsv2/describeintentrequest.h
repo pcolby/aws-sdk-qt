@@ -27,7 +27,7 @@ namespace LexModelsV2 {
 
 class DescribeIntentRequestPrivate;
 
-class QTAWS_EXPORT DescribeIntentRequest : public LexModelsV2Request {
+class QTAWSLEXMODELSV2_EXPORT DescribeIntentRequest : public LexModelsV2Request {
 
 public:
     DescribeIntentRequest(const DescribeIntentRequest &other);

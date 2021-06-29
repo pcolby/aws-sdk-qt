@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class CopyProductRequestPrivate;
 
-class QTAWS_EXPORT CopyProductRequest : public ServiceCatalogRequest {
+class QTAWSSERVICECATALOG_EXPORT CopyProductRequest : public ServiceCatalogRequest {
 
 public:
     CopyProductRequest(const CopyProductRequest &other);

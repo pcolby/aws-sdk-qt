@@ -27,7 +27,7 @@ namespace SMS {
 
 class DeleteAppValidationConfigurationRequestPrivate;
 
-class QTAWS_EXPORT DeleteAppValidationConfigurationRequest : public SmsRequest {
+class QTAWSSMS_EXPORT DeleteAppValidationConfigurationRequest : public SmsRequest {
 
 public:
     DeleteAppValidationConfigurationRequest(const DeleteAppValidationConfigurationRequest &other);

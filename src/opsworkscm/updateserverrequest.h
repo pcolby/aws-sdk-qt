@@ -27,7 +27,7 @@ namespace OpsWorksCM {
 
 class UpdateServerRequestPrivate;
 
-class QTAWS_EXPORT UpdateServerRequest : public OpsWorksCMRequest {
+class QTAWSOPSWORKSCM_EXPORT UpdateServerRequest : public OpsWorksCMRequest {
 
 public:
     UpdateServerRequest(const UpdateServerRequest &other);

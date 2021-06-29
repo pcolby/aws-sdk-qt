@@ -27,7 +27,7 @@ namespace Connect {
 
 class DisassociateLexBotRequestPrivate;
 
-class QTAWS_EXPORT DisassociateLexBotRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT DisassociateLexBotRequest : public ConnectRequest {
 
 public:
     DisassociateLexBotRequest(const DisassociateLexBotRequest &other);

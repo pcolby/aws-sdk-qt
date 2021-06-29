@@ -28,7 +28,7 @@ namespace CostExplorer {
 
 class DeleteAnomalySubscriptionResponsePrivate;
 
-class QTAWS_EXPORT DeleteAnomalySubscriptionResponse : public CostExplorerResponse {
+class QTAWSCOSTEXPLORER_EXPORT DeleteAnomalySubscriptionResponse : public CostExplorerResponse {
     Q_OBJECT
 
 public:

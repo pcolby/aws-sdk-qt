@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsiot1clickprojectsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace IoT1ClickProjects {
 
 class IoT1ClickProjectsRequestPrivate;
 
-class QTAWS_EXPORT IoT1ClickProjectsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSIOT1CLICKPROJECTS_EXPORT IoT1ClickProjectsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by IoT1ClickProjects.

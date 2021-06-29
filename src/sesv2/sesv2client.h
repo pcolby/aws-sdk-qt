@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawssesv2global.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -191,7 +193,7 @@ class UpdateEmailIdentityPolicyResponse;
 class UpdateEmailTemplateRequest;
 class UpdateEmailTemplateResponse;
 
-class QTAWS_EXPORT Sesv2Client : public QtAws::Core::AwsAbstractClient {
+class QTAWSSESV2_EXPORT Sesv2Client : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

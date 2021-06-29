@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class DeleteSubscriptionDefinitionRequestPrivate;
 
-class QTAWS_EXPORT DeleteSubscriptionDefinitionRequest : public GreengrassRequest {
+class QTAWSGREENGRASS_EXPORT DeleteSubscriptionDefinitionRequest : public GreengrassRequest {
 
 public:
     DeleteSubscriptionDefinitionRequest(const DeleteSubscriptionDefinitionRequest &other);

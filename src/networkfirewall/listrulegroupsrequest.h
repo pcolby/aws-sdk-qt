@@ -27,7 +27,7 @@ namespace NetworkFirewall {
 
 class ListRuleGroupsRequestPrivate;
 
-class QTAWS_EXPORT ListRuleGroupsRequest : public NetworkFirewallRequest {
+class QTAWSNETWORKFIREWALL_EXPORT ListRuleGroupsRequest : public NetworkFirewallRequest {
 
 public:
     ListRuleGroupsRequest(const ListRuleGroupsRequest &other);

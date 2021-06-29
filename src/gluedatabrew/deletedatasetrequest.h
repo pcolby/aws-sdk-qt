@@ -27,7 +27,7 @@ namespace GlueDataBrew {
 
 class DeleteDatasetRequestPrivate;
 
-class QTAWS_EXPORT DeleteDatasetRequest : public GlueDataBrewRequest {
+class QTAWSGLUEDATABREW_EXPORT DeleteDatasetRequest : public GlueDataBrewRequest {
 
 public:
     DeleteDatasetRequest(const DeleteDatasetRequest &other);

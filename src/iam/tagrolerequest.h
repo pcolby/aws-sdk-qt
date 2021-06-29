@@ -27,7 +27,7 @@ namespace IAM {
 
 class TagRoleRequestPrivate;
 
-class QTAWS_EXPORT TagRoleRequest : public IamRequest {
+class QTAWSIAM_EXPORT TagRoleRequest : public IamRequest {
 
 public:
     TagRoleRequest(const TagRoleRequest &other);

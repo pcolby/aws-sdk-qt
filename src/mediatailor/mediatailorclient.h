@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsmediatailorglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -91,7 +93,7 @@ class UpdateSourceLocationResponse;
 class UpdateVodSourceRequest;
 class UpdateVodSourceResponse;
 
-class QTAWS_EXPORT MediaTailorClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSMEDIATAILOR_EXPORT MediaTailorClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

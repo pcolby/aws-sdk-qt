@@ -27,7 +27,7 @@ namespace Connect {
 
 class ListSecurityProfilesRequestPrivate;
 
-class QTAWS_EXPORT ListSecurityProfilesRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT ListSecurityProfilesRequest : public ConnectRequest {
 
 public:
     ListSecurityProfilesRequest(const ListSecurityProfilesRequest &other);

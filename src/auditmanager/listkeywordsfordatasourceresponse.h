@@ -28,7 +28,7 @@ namespace AuditManager {
 
 class ListKeywordsForDataSourceResponsePrivate;
 
-class QTAWS_EXPORT ListKeywordsForDataSourceResponse : public AuditManagerResponse {
+class QTAWSAUDITMANAGER_EXPORT ListKeywordsForDataSourceResponse : public AuditManagerResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace IoT {
 
 class DeleteRoleAliasResponsePrivate;
 
-class QTAWS_EXPORT DeleteRoleAliasResponse : public IoTResponse {
+class QTAWSIOT_EXPORT DeleteRoleAliasResponse : public IoTResponse {
     Q_OBJECT
 
 public:

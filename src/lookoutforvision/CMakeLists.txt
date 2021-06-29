@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSLOOKOUTFORVISION_LIBRARY)
+
 add_library(QtAwsLookoutforVision
   createdatasetrequest.h
   createdatasetrequest_p.h
@@ -61,6 +63,7 @@ add_library(QtAwsLookoutforVision
   lookoutforvisionrequest_p.h
   lookoutforvisionresponse.h
   lookoutforvisionresponse_p.h
+  qtawslookoutforvisionglobal.h
   startmodelrequest.h
   startmodelrequest_p.h
   startmodelresponse.h

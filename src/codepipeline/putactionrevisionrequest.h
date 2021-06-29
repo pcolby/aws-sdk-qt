@@ -27,7 +27,7 @@ namespace CodePipeline {
 
 class PutActionRevisionRequestPrivate;
 
-class QTAWS_EXPORT PutActionRevisionRequest : public CodePipelineRequest {
+class QTAWSCODEPIPELINE_EXPORT PutActionRevisionRequest : public CodePipelineRequest {
 
 public:
     PutActionRevisionRequest(const PutActionRevisionRequest &other);

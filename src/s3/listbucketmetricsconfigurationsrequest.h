@@ -27,7 +27,7 @@ namespace S3 {
 
 class ListBucketMetricsConfigurationsRequestPrivate;
 
-class QTAWS_EXPORT ListBucketMetricsConfigurationsRequest : public S3Request {
+class QTAWSS3_EXPORT ListBucketMetricsConfigurationsRequest : public S3Request {
 
 public:
     ListBucketMetricsConfigurationsRequest(const ListBucketMetricsConfigurationsRequest &other);

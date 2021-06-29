@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class ListGroupMembershipsResponsePrivate;
 
-class QTAWS_EXPORT ListGroupMembershipsResponse : public QuickSightResponse {
+class QTAWSQUICKSIGHT_EXPORT ListGroupMembershipsResponse : public QuickSightResponse {
     Q_OBJECT
 
 public:

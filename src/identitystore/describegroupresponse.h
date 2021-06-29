@@ -28,7 +28,7 @@ namespace IdentityStore {
 
 class DescribeGroupResponsePrivate;
 
-class QTAWS_EXPORT DescribeGroupResponse : public IdentityStoreResponse {
+class QTAWSIDENTITYSTORE_EXPORT DescribeGroupResponse : public IdentityStoreResponse {
     Q_OBJECT
 
 public:

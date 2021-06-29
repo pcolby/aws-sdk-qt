@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSMEDIACONVERT_LIBRARY)
+
 add_library(QtAwsMediaConvert
   associatecertificaterequest.h
   associatecertificaterequest_p.h
@@ -85,6 +87,7 @@ add_library(QtAwsMediaConvert
   mediaconvertrequest_p.h
   mediaconvertresponse.h
   mediaconvertresponse_p.h
+  qtawsmediaconvertglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

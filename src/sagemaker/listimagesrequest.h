@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class ListImagesRequestPrivate;
 
-class QTAWS_EXPORT ListImagesRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT ListImagesRequest : public SageMakerRequest {
 
 public:
     ListImagesRequest(const ListImagesRequest &other);

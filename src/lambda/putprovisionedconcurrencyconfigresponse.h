@@ -28,7 +28,7 @@ namespace Lambda {
 
 class PutProvisionedConcurrencyConfigResponsePrivate;
 
-class QTAWS_EXPORT PutProvisionedConcurrencyConfigResponse : public LambdaResponse {
+class QTAWSLAMBDA_EXPORT PutProvisionedConcurrencyConfigResponse : public LambdaResponse {
     Q_OBJECT
 
 public:

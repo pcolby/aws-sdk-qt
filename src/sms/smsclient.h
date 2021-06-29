@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawssmsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -99,7 +101,7 @@ class UpdateAppResponse;
 class UpdateReplicationJobRequest;
 class UpdateReplicationJobResponse;
 
-class QTAWS_EXPORT SmsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSMS_EXPORT SmsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class DescribeCommentsResponsePrivate;
 
-class QTAWS_EXPORT DescribeCommentsResponse : public WorkDocsResponse {
+class QTAWSWORKDOCS_EXPORT DescribeCommentsResponse : public WorkDocsResponse {
     Q_OBJECT
 
 public:

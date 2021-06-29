@@ -27,7 +27,7 @@ namespace ElastiCache {
 
 class CreateSnapshotRequestPrivate;
 
-class QTAWS_EXPORT CreateSnapshotRequest : public ElastiCacheRequest {
+class QTAWSELASTICACHE_EXPORT CreateSnapshotRequest : public ElastiCacheRequest {
 
 public:
     CreateSnapshotRequest(const CreateSnapshotRequest &other);

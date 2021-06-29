@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ModifyManagedPrefixListRequestPrivate;
 
-class QTAWS_EXPORT ModifyManagedPrefixListRequest : public Ec2Request {
+class QTAWSEC2_EXPORT ModifyManagedPrefixListRequest : public Ec2Request {
 
 public:
     ModifyManagedPrefixListRequest(const ModifyManagedPrefixListRequest &other);

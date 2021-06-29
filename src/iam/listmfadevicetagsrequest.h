@@ -27,7 +27,7 @@ namespace IAM {
 
 class ListMFADeviceTagsRequestPrivate;
 
-class QTAWS_EXPORT ListMFADeviceTagsRequest : public IamRequest {
+class QTAWSIAM_EXPORT ListMFADeviceTagsRequest : public IamRequest {
 
 public:
     ListMFADeviceTagsRequest(const ListMFADeviceTagsRequest &other);

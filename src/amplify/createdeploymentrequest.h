@@ -27,7 +27,7 @@ namespace Amplify {
 
 class CreateDeploymentRequestPrivate;
 
-class QTAWS_EXPORT CreateDeploymentRequest : public AmplifyRequest {
+class QTAWSAMPLIFY_EXPORT CreateDeploymentRequest : public AmplifyRequest {
 
 public:
     CreateDeploymentRequest(const CreateDeploymentRequest &other);

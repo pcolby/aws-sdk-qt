@@ -28,7 +28,7 @@ namespace Firehose {
 
 class UpdateDestinationResponsePrivate;
 
-class QTAWS_EXPORT UpdateDestinationResponse : public FirehoseResponse {
+class QTAWSFIREHOSE_EXPORT UpdateDestinationResponse : public FirehoseResponse {
     Q_OBJECT
 
 public:

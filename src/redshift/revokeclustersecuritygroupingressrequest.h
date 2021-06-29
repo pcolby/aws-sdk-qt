@@ -27,7 +27,7 @@ namespace Redshift {
 
 class RevokeClusterSecurityGroupIngressRequestPrivate;
 
-class QTAWS_EXPORT RevokeClusterSecurityGroupIngressRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT RevokeClusterSecurityGroupIngressRequest : public RedshiftRequest {
 
 public:
     RevokeClusterSecurityGroupIngressRequest(const RevokeClusterSecurityGroupIngressRequest &other);

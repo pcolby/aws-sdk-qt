@@ -28,7 +28,7 @@ namespace Chime {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT TagResourceResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

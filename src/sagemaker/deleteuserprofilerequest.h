@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class DeleteUserProfileRequestPrivate;
 
-class QTAWS_EXPORT DeleteUserProfileRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT DeleteUserProfileRequest : public SageMakerRequest {
 
 public:
     DeleteUserProfileRequest(const DeleteUserProfileRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawscognitoidentityglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -75,7 +77,7 @@ class UntagResourceResponse;
 class UpdateIdentityPoolRequest;
 class UpdateIdentityPoolResponse;
 
-class QTAWS_EXPORT CognitoIdentityClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCOGNITOIDENTITY_EXPORT CognitoIdentityClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

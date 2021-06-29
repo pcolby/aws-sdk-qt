@@ -27,7 +27,7 @@ namespace GreengrassV2 {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public GreengrassV2Request {
+class QTAWSGREENGRASSV2_EXPORT TagResourceRequest : public GreengrassV2Request {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

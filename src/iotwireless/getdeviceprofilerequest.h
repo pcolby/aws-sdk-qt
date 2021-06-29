@@ -27,7 +27,7 @@ namespace IoTWireless {
 
 class GetDeviceProfileRequestPrivate;
 
-class QTAWS_EXPORT GetDeviceProfileRequest : public IoTWirelessRequest {
+class QTAWSIOTWIRELESS_EXPORT GetDeviceProfileRequest : public IoTWirelessRequest {
 
 public:
     GetDeviceProfileRequest(const GetDeviceProfileRequest &other);

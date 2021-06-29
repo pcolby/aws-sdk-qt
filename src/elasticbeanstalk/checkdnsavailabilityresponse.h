@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class CheckDNSAvailabilityResponsePrivate;
 
-class QTAWS_EXPORT CheckDNSAvailabilityResponse : public ElasticBeanstalkResponse {
+class QTAWSELASTICBEANSTALK_EXPORT CheckDNSAvailabilityResponse : public ElasticBeanstalkResponse {
     Q_OBJECT
 
 public:

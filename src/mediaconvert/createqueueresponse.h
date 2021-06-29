@@ -28,7 +28,7 @@ namespace MediaConvert {
 
 class CreateQueueResponsePrivate;
 
-class QTAWS_EXPORT CreateQueueResponse : public MediaConvertResponse {
+class QTAWSMEDIACONVERT_EXPORT CreateQueueResponse : public MediaConvertResponse {
     Q_OBJECT
 
 public:

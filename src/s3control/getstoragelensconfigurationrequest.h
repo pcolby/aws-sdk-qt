@@ -27,7 +27,7 @@ namespace S3Control {
 
 class GetStorageLensConfigurationRequestPrivate;
 
-class QTAWS_EXPORT GetStorageLensConfigurationRequest : public S3ControlRequest {
+class QTAWSS3CONTROL_EXPORT GetStorageLensConfigurationRequest : public S3ControlRequest {
 
 public:
     GetStorageLensConfigurationRequest(const GetStorageLensConfigurationRequest &other);

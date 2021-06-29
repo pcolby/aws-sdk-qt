@@ -21,6 +21,8 @@
 #define QTAWS_GLACIERRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsglacierglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Glacier {
 
 class GlacierResponsePrivate;
 
-class QTAWS_EXPORT GlacierResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSGLACIER_EXPORT GlacierResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

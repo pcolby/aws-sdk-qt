@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public WorkMailRequest {
+class QTAWSWORKMAIL_EXPORT ListTagsForResourceRequest : public WorkMailRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

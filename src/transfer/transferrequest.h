@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawstransferglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Transfer {
 
 class TransferRequestPrivate;
 
-class QTAWS_EXPORT TransferRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSTRANSFER_EXPORT TransferRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Transfer.

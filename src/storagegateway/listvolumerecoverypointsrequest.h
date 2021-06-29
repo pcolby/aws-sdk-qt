@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class ListVolumeRecoveryPointsRequestPrivate;
 
-class QTAWS_EXPORT ListVolumeRecoveryPointsRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT ListVolumeRecoveryPointsRequest : public StorageGatewayRequest {
 
 public:
     ListVolumeRecoveryPointsRequest(const ListVolumeRecoveryPointsRequest &other);

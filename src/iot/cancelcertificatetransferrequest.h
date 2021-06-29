@@ -27,7 +27,7 @@ namespace IoT {
 
 class CancelCertificateTransferRequestPrivate;
 
-class QTAWS_EXPORT CancelCertificateTransferRequest : public IoTRequest {
+class QTAWSIOT_EXPORT CancelCertificateTransferRequest : public IoTRequest {
 
 public:
     CancelCertificateTransferRequest(const CancelCertificateTransferRequest &other);

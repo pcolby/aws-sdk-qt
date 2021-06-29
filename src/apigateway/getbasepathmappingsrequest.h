@@ -27,7 +27,7 @@ namespace APIGateway {
 
 class GetBasePathMappingsRequestPrivate;
 
-class QTAWS_EXPORT GetBasePathMappingsRequest : public APIGatewayRequest {
+class QTAWSAPIGATEWAY_EXPORT GetBasePathMappingsRequest : public APIGatewayRequest {
 
 public:
     GetBasePathMappingsRequest(const GetBasePathMappingsRequest &other);

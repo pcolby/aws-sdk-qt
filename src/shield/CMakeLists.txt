@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSHIELD_LIBRARY)
+
 add_library(QtAwsShield
   associatedrtlogbucketrequest.h
   associatedrtlogbucketrequest_p.h
@@ -111,6 +113,7 @@ add_library(QtAwsShield
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsshieldglobal.h
   shieldclient.h
   shieldclient_p.h
   shieldrequest.h

@@ -27,7 +27,7 @@ namespace CognitoSync {
 
 class SubscribeToDatasetRequestPrivate;
 
-class QTAWS_EXPORT SubscribeToDatasetRequest : public CognitoSyncRequest {
+class QTAWSCOGNITOSYNC_EXPORT SubscribeToDatasetRequest : public CognitoSyncRequest {
 
 public:
     SubscribeToDatasetRequest(const SubscribeToDatasetRequest &other);

@@ -27,7 +27,7 @@ namespace MachineLearning {
 
 class DeleteBatchPredictionRequestPrivate;
 
-class QTAWS_EXPORT DeleteBatchPredictionRequest : public MachineLearningRequest {
+class QTAWSMACHINELEARNING_EXPORT DeleteBatchPredictionRequest : public MachineLearningRequest {
 
 public:
     DeleteBatchPredictionRequest(const DeleteBatchPredictionRequest &other);

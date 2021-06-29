@@ -27,7 +27,7 @@ namespace Connect {
 
 class DeleteIntegrationAssociationRequestPrivate;
 
-class QTAWS_EXPORT DeleteIntegrationAssociationRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT DeleteIntegrationAssociationRequest : public ConnectRequest {
 
 public:
     DeleteIntegrationAssociationRequest(const DeleteIntegrationAssociationRequest &other);

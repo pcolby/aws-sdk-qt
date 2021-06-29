@@ -21,6 +21,8 @@
 #define QTAWS_SAGEMAKERRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawssagemakerglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace SageMaker {
 
 class SageMakerResponsePrivate;
 
-class QTAWS_EXPORT SageMakerResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSAGEMAKER_EXPORT SageMakerResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

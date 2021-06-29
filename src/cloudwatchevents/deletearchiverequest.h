@@ -27,7 +27,7 @@ namespace CloudWatchEvents {
 
 class DeleteArchiveRequestPrivate;
 
-class QTAWS_EXPORT DeleteArchiveRequest : public CloudWatchEventsRequest {
+class QTAWSCLOUDWATCHEVENTS_EXPORT DeleteArchiveRequest : public CloudWatchEventsRequest {
 
 public:
     DeleteArchiveRequest(const DeleteArchiveRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsiotdataplaneglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -39,7 +41,7 @@ class PublishResponse;
 class UpdateThingShadowRequest;
 class UpdateThingShadowResponse;
 
-class QTAWS_EXPORT IoTDataPlaneClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSIOTDATAPLANE_EXPORT IoTDataPlaneClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

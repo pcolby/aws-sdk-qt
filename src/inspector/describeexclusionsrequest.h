@@ -27,7 +27,7 @@ namespace Inspector {
 
 class DescribeExclusionsRequestPrivate;
 
-class QTAWS_EXPORT DescribeExclusionsRequest : public InspectorRequest {
+class QTAWSINSPECTOR_EXPORT DescribeExclusionsRequest : public InspectorRequest {
 
 public:
     DescribeExclusionsRequest(const DescribeExclusionsRequest &other);

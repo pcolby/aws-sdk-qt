@@ -28,7 +28,7 @@ namespace NimbleStudio {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public NimbleStudioResponse {
+class QTAWSNIMBLESTUDIO_EXPORT ListTagsForResourceResponse : public NimbleStudioResponse {
     Q_OBJECT
 
 public:

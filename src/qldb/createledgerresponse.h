@@ -28,7 +28,7 @@ namespace QLDB {
 
 class CreateLedgerResponsePrivate;
 
-class QTAWS_EXPORT CreateLedgerResponse : public QldbResponse {
+class QTAWSQLDB_EXPORT CreateLedgerResponse : public QldbResponse {
     Q_OBJECT
 
 public:

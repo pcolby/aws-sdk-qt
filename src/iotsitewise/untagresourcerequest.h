@@ -27,7 +27,7 @@ namespace IoTSiteWise {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public IoTSiteWiseRequest {
+class QTAWSIOTSITEWISE_EXPORT UntagResourceRequest : public IoTSiteWiseRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

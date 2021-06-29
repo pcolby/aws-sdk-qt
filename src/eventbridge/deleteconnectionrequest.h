@@ -27,7 +27,7 @@ namespace EventBridge {
 
 class DeleteConnectionRequestPrivate;
 
-class QTAWS_EXPORT DeleteConnectionRequest : public EventBridgeRequest {
+class QTAWSEVENTBRIDGE_EXPORT DeleteConnectionRequest : public EventBridgeRequest {
 
 public:
     DeleteConnectionRequest(const DeleteConnectionRequest &other);

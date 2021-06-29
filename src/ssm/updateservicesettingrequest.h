@@ -27,7 +27,7 @@ namespace SSM {
 
 class UpdateServiceSettingRequestPrivate;
 
-class QTAWS_EXPORT UpdateServiceSettingRequest : public SsmRequest {
+class QTAWSSSM_EXPORT UpdateServiceSettingRequest : public SsmRequest {
 
 public:
     UpdateServiceSettingRequest(const UpdateServiceSettingRequest &other);

@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class StopBulkDeploymentRequestPrivate;
 
-class QTAWS_EXPORT StopBulkDeploymentRequest : public GreengrassRequest {
+class QTAWSGREENGRASS_EXPORT StopBulkDeploymentRequest : public GreengrassRequest {
 
 public:
     StopBulkDeploymentRequest(const StopBulkDeploymentRequest &other);

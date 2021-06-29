@@ -27,7 +27,7 @@ namespace Kinesis {
 
 class ListStreamConsumersRequestPrivate;
 
-class QTAWS_EXPORT ListStreamConsumersRequest : public KinesisRequest {
+class QTAWSKINESIS_EXPORT ListStreamConsumersRequest : public KinesisRequest {
 
 public:
     ListStreamConsumersRequest(const ListStreamConsumersRequest &other);

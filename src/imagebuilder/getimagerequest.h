@@ -27,7 +27,7 @@ namespace imagebuilder {
 
 class GetImageRequestPrivate;
 
-class QTAWS_EXPORT GetImageRequest : public imagebuilderRequest {
+class QTAWSIMAGEBUILDER_EXPORT GetImageRequest : public imagebuilderRequest {
 
 public:
     GetImageRequest(const GetImageRequest &other);

@@ -27,7 +27,7 @@ namespace EC2 {
 
 class RegisterTransitGatewayMulticastGroupSourcesRequestPrivate;
 
-class QTAWS_EXPORT RegisterTransitGatewayMulticastGroupSourcesRequest : public Ec2Request {
+class QTAWSEC2_EXPORT RegisterTransitGatewayMulticastGroupSourcesRequest : public Ec2Request {
 
 public:
     RegisterTransitGatewayMulticastGroupSourcesRequest(const RegisterTransitGatewayMulticastGroupSourcesRequest &other);

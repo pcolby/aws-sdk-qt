@@ -28,7 +28,7 @@ namespace Outposts {
 
 class DeleteSiteResponsePrivate;
 
-class QTAWS_EXPORT DeleteSiteResponse : public OutpostsResponse {
+class QTAWSOUTPOSTS_EXPORT DeleteSiteResponse : public OutpostsResponse {
     Q_OBJECT
 
 public:

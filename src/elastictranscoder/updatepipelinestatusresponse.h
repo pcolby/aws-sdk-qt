@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 
 class UpdatePipelineStatusResponsePrivate;
 
-class QTAWS_EXPORT UpdatePipelineStatusResponse : public ElasticTranscoderResponse {
+class QTAWSELASTICTRANSCODER_EXPORT UpdatePipelineStatusResponse : public ElasticTranscoderResponse {
     Q_OBJECT
 
 public:

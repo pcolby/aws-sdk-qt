@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSMIGRATIONHUB_LIBRARY)
+
 add_library(QtAwsMigrationHub
   associatecreatedartifactrequest.h
   associatecreatedartifactrequest_p.h
@@ -73,6 +75,7 @@ add_library(QtAwsMigrationHub
   putresourceattributesrequest_p.h
   putresourceattributesresponse.h
   putresourceattributesresponse_p.h
+  qtawsmigrationhubglobal.h
   associatecreatedartifactrequest.cpp
   associatecreatedartifactresponse.cpp
   associatediscoveredresourcerequest.cpp

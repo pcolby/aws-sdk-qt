@@ -27,7 +27,7 @@ namespace WAFV2 {
 
 class GetPermissionPolicyRequestPrivate;
 
-class QTAWS_EXPORT GetPermissionPolicyRequest : public Wafv2Request {
+class QTAWSWAFV2_EXPORT GetPermissionPolicyRequest : public Wafv2Request {
 
 public:
     GetPermissionPolicyRequest(const GetPermissionPolicyRequest &other);

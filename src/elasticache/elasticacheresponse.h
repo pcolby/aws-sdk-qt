@@ -21,6 +21,8 @@
 #define QTAWS_ELASTICACHERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawselasticacheglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace ElastiCache {
 
 class ElastiCacheResponsePrivate;
 
-class QTAWS_EXPORT ElastiCacheResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSELASTICACHE_EXPORT ElastiCacheResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class CreateNFSFileShareResponsePrivate;
 
-class QTAWS_EXPORT CreateNFSFileShareResponse : public StorageGatewayResponse {
+class QTAWSSTORAGEGATEWAY_EXPORT CreateNFSFileShareResponse : public StorageGatewayResponse {
     Q_OBJECT
 
 public:

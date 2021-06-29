@@ -28,7 +28,7 @@ namespace SWF {
 
 class DeprecateWorkflowTypeResponsePrivate;
 
-class QTAWS_EXPORT DeprecateWorkflowTypeResponse : public SwfResponse {
+class QTAWSSWF_EXPORT DeprecateWorkflowTypeResponse : public SwfResponse {
     Q_OBJECT
 
 public:

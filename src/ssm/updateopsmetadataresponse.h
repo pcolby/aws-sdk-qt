@@ -28,7 +28,7 @@ namespace SSM {
 
 class UpdateOpsMetadataResponsePrivate;
 
-class QTAWS_EXPORT UpdateOpsMetadataResponse : public SsmResponse {
+class QTAWSSSM_EXPORT UpdateOpsMetadataResponse : public SsmResponse {
     Q_OBJECT
 
 public:

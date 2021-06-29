@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawssesglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -171,7 +173,7 @@ class VerifyEmailAddressResponse;
 class VerifyEmailIdentityRequest;
 class VerifyEmailIdentityResponse;
 
-class QTAWS_EXPORT SesClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSES_EXPORT SesClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

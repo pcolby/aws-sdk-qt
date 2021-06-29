@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class PutEmailIdentityDkimAttributesResponsePrivate;
 
-class QTAWS_EXPORT PutEmailIdentityDkimAttributesResponse : public Sesv2Response {
+class QTAWSSESV2_EXPORT PutEmailIdentityDkimAttributesResponse : public Sesv2Response {
     Q_OBJECT
 
 public:

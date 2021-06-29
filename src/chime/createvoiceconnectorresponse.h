@@ -28,7 +28,7 @@ namespace Chime {
 
 class CreateVoiceConnectorResponsePrivate;
 
-class QTAWS_EXPORT CreateVoiceConnectorResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT CreateVoiceConnectorResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

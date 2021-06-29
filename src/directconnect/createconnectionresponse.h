@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class CreateConnectionResponsePrivate;
 
-class QTAWS_EXPORT CreateConnectionResponse : public DirectConnectResponse {
+class QTAWSDIRECTCONNECT_EXPORT CreateConnectionResponse : public DirectConnectResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace LexModelsV2 {
 
 class DeleteSlotTypeRequestPrivate;
 
-class QTAWS_EXPORT DeleteSlotTypeRequest : public LexModelsV2Request {
+class QTAWSLEXMODELSV2_EXPORT DeleteSlotTypeRequest : public LexModelsV2Request {
 
 public:
     DeleteSlotTypeRequest(const DeleteSlotTypeRequest &other);

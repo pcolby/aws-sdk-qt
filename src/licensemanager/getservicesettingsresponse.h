@@ -28,7 +28,7 @@ namespace LicenseManager {
 
 class GetServiceSettingsResponsePrivate;
 
-class QTAWS_EXPORT GetServiceSettingsResponse : public LicenseManagerResponse {
+class QTAWSLICENSEMANAGER_EXPORT GetServiceSettingsResponse : public LicenseManagerResponse {
     Q_OBJECT
 
 public:

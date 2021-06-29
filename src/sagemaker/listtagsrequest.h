@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class ListTagsRequestPrivate;
 
-class QTAWS_EXPORT ListTagsRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT ListTagsRequest : public SageMakerRequest {
 
 public:
     ListTagsRequest(const ListTagsRequest &other);

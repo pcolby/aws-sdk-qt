@@ -27,7 +27,7 @@ namespace CloudHSMV2 {
 
 class ModifyBackupAttributesRequestPrivate;
 
-class QTAWS_EXPORT ModifyBackupAttributesRequest : public CloudHSMV2Request {
+class QTAWSCLOUDHSMV2_EXPORT ModifyBackupAttributesRequest : public CloudHSMV2Request {
 
 public:
     ModifyBackupAttributesRequest(const ModifyBackupAttributesRequest &other);

@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class DescribeWorkingStorageRequestPrivate;
 
-class QTAWS_EXPORT DescribeWorkingStorageRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT DescribeWorkingStorageRequest : public StorageGatewayRequest {
 
 public:
     DescribeWorkingStorageRequest(const DescribeWorkingStorageRequest &other);

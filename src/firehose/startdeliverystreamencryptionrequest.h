@@ -27,7 +27,7 @@ namespace Firehose {
 
 class StartDeliveryStreamEncryptionRequestPrivate;
 
-class QTAWS_EXPORT StartDeliveryStreamEncryptionRequest : public FirehoseRequest {
+class QTAWSFIREHOSE_EXPORT StartDeliveryStreamEncryptionRequest : public FirehoseRequest {
 
 public:
     StartDeliveryStreamEncryptionRequest(const StartDeliveryStreamEncryptionRequest &other);

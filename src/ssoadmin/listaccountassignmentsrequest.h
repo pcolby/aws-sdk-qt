@@ -27,7 +27,7 @@ namespace SSOAdmin {
 
 class ListAccountAssignmentsRequestPrivate;
 
-class QTAWS_EXPORT ListAccountAssignmentsRequest : public SSOAdminRequest {
+class QTAWSSSOADMIN_EXPORT ListAccountAssignmentsRequest : public SSOAdminRequest {
 
 public:
     ListAccountAssignmentsRequest(const ListAccountAssignmentsRequest &other);

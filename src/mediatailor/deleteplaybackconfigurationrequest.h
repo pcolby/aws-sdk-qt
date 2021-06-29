@@ -27,7 +27,7 @@ namespace MediaTailor {
 
 class DeletePlaybackConfigurationRequestPrivate;
 
-class QTAWS_EXPORT DeletePlaybackConfigurationRequest : public MediaTailorRequest {
+class QTAWSMEDIATAILOR_EXPORT DeletePlaybackConfigurationRequest : public MediaTailorRequest {
 
 public:
     DeletePlaybackConfigurationRequest(const DeletePlaybackConfigurationRequest &other);

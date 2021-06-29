@@ -27,7 +27,7 @@ namespace NetworkFirewall {
 
 class UpdateLoggingConfigurationRequestPrivate;
 
-class QTAWS_EXPORT UpdateLoggingConfigurationRequest : public NetworkFirewallRequest {
+class QTAWSNETWORKFIREWALL_EXPORT UpdateLoggingConfigurationRequest : public NetworkFirewallRequest {
 
 public:
     UpdateLoggingConfigurationRequest(const UpdateLoggingConfigurationRequest &other);

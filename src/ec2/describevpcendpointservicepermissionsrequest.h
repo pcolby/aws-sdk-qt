@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DescribeVpcEndpointServicePermissionsRequestPrivate;
 
-class QTAWS_EXPORT DescribeVpcEndpointServicePermissionsRequest : public Ec2Request {
+class QTAWSEC2_EXPORT DescribeVpcEndpointServicePermissionsRequest : public Ec2Request {
 
 public:
     DescribeVpcEndpointServicePermissionsRequest(const DescribeVpcEndpointServicePermissionsRequest &other);

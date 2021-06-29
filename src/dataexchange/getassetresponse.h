@@ -28,7 +28,7 @@ namespace DataExchange {
 
 class GetAssetResponsePrivate;
 
-class QTAWS_EXPORT GetAssetResponse : public DataExchangeResponse {
+class QTAWSDATAEXCHANGE_EXPORT GetAssetResponse : public DataExchangeResponse {
     Q_OBJECT
 
 public:

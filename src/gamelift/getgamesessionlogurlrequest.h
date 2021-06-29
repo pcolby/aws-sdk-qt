@@ -27,7 +27,7 @@ namespace GameLift {
 
 class GetGameSessionLogUrlRequestPrivate;
 
-class QTAWS_EXPORT GetGameSessionLogUrlRequest : public GameLiftRequest {
+class QTAWSGAMELIFT_EXPORT GetGameSessionLogUrlRequest : public GameLiftRequest {
 
 public:
     GetGameSessionLogUrlRequest(const GetGameSessionLogUrlRequest &other);

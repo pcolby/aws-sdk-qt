@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawskinesisvideoglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -67,7 +69,7 @@ class UpdateSignalingChannelResponse;
 class UpdateStreamRequest;
 class UpdateStreamResponse;
 
-class QTAWS_EXPORT KinesisVideoClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSKINESISVIDEO_EXPORT KinesisVideoClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

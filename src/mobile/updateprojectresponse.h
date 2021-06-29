@@ -28,7 +28,7 @@ namespace Mobile {
 
 class UpdateProjectResponsePrivate;
 
-class QTAWS_EXPORT UpdateProjectResponse : public MobileResponse {
+class QTAWSMOBILE_EXPORT UpdateProjectResponse : public MobileResponse {
     Q_OBJECT
 
 public:

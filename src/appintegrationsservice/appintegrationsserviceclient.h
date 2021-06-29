@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsappintegrationsserviceglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -47,7 +49,7 @@ class UntagResourceResponse;
 class UpdateEventIntegrationRequest;
 class UpdateEventIntegrationResponse;
 
-class QTAWS_EXPORT AppIntegrationsServiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSAPPINTEGRATIONSSERVICE_EXPORT AppIntegrationsServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace GroundStation {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public GroundStationRequest {
+class QTAWSGROUNDSTATION_EXPORT TagResourceRequest : public GroundStationRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

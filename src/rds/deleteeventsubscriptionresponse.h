@@ -28,7 +28,7 @@ namespace RDS {
 
 class DeleteEventSubscriptionResponsePrivate;
 
-class QTAWS_EXPORT DeleteEventSubscriptionResponse : public RdsResponse {
+class QTAWSRDS_EXPORT DeleteEventSubscriptionResponse : public RdsResponse {
     Q_OBJECT
 
 public:

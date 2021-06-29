@@ -27,7 +27,7 @@ namespace CodeArtifact {
 
 class DescribeRepositoryRequestPrivate;
 
-class QTAWS_EXPORT DescribeRepositoryRequest : public CodeArtifactRequest {
+class QTAWSCODEARTIFACT_EXPORT DescribeRepositoryRequest : public CodeArtifactRequest {
 
 public:
     DescribeRepositoryRequest(const DescribeRepositoryRequest &other);

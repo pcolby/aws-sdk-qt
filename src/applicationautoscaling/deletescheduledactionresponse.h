@@ -28,7 +28,7 @@ namespace ApplicationAutoScaling {
 
 class DeleteScheduledActionResponsePrivate;
 
-class QTAWS_EXPORT DeleteScheduledActionResponse : public ApplicationAutoScalingResponse {
+class QTAWSAPPLICATIONAUTOSCALING_EXPORT DeleteScheduledActionResponse : public ApplicationAutoScalingResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class PutEventsRequestPrivate;
 
-class QTAWS_EXPORT PutEventsRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT PutEventsRequest : public PinpointRequest {
 
 public:
     PutEventsRequest(const PutEventsRequest &other);

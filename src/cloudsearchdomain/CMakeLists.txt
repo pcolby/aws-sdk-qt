@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCLOUDSEARCHDOMAIN_LIBRARY)
+
 add_library(QtAwsCloudSearchDomain
   cloudsearchdomainclient.h
   cloudsearchdomainclient_p.h
@@ -5,6 +7,7 @@ add_library(QtAwsCloudSearchDomain
   cloudsearchdomainrequest_p.h
   cloudsearchdomainresponse.h
   cloudsearchdomainresponse_p.h
+  qtawscloudsearchdomainglobal.h
   searchrequest.h
   searchrequest_p.h
   searchresponse.h

@@ -27,7 +27,7 @@ namespace MediaPackageVod {
 
 class ListAssetsRequestPrivate;
 
-class QTAWS_EXPORT ListAssetsRequest : public MediaPackageVodRequest {
+class QTAWSMEDIAPACKAGEVOD_EXPORT ListAssetsRequest : public MediaPackageVodRequest {
 
 public:
     ListAssetsRequest(const ListAssetsRequest &other);

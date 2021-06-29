@@ -27,7 +27,7 @@ namespace CloudWatchEvents {
 
 class DescribeRuleRequestPrivate;
 
-class QTAWS_EXPORT DescribeRuleRequest : public CloudWatchEventsRequest {
+class QTAWSCLOUDWATCHEVENTS_EXPORT DescribeRuleRequest : public CloudWatchEventsRequest {
 
 public:
     DescribeRuleRequest(const DescribeRuleRequest &other);

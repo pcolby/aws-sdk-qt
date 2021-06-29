@@ -21,6 +21,8 @@
 #define QTAWS_CLOUD9RESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawscloud9global.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Cloud9 {
 
 class Cloud9ResponsePrivate;
 
-class QTAWS_EXPORT Cloud9Response : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCLOUD9_EXPORT Cloud9Response : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

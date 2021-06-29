@@ -21,6 +21,8 @@
 #define QTAWS_EKSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawseksglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace EKS {
 
 class EksResponsePrivate;
 
-class QTAWS_EXPORT EksResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSEKS_EXPORT EksResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

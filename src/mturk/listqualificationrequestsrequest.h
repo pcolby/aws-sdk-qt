@@ -27,7 +27,7 @@ namespace MTurk {
 
 class ListQualificationRequestsRequestPrivate;
 
-class QTAWS_EXPORT ListQualificationRequestsRequest : public MTurkRequest {
+class QTAWSMTURK_EXPORT ListQualificationRequestsRequest : public MTurkRequest {
 
 public:
     ListQualificationRequestsRequest(const ListQualificationRequestsRequest &other);

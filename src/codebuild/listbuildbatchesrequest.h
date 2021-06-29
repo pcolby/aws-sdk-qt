@@ -27,7 +27,7 @@ namespace CodeBuild {
 
 class ListBuildBatchesRequestPrivate;
 
-class QTAWS_EXPORT ListBuildBatchesRequest : public CodeBuildRequest {
+class QTAWSCODEBUILD_EXPORT ListBuildBatchesRequest : public CodeBuildRequest {
 
 public:
     ListBuildBatchesRequest(const ListBuildBatchesRequest &other);

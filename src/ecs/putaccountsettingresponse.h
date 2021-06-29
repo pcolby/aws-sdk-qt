@@ -28,7 +28,7 @@ namespace ECS {
 
 class PutAccountSettingResponsePrivate;
 
-class QTAWS_EXPORT PutAccountSettingResponse : public EcsResponse {
+class QTAWSECS_EXPORT PutAccountSettingResponse : public EcsResponse {
     Q_OBJECT
 
 public:

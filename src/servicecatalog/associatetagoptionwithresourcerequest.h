@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class AssociateTagOptionWithResourceRequestPrivate;
 
-class QTAWS_EXPORT AssociateTagOptionWithResourceRequest : public ServiceCatalogRequest {
+class QTAWSSERVICECATALOG_EXPORT AssociateTagOptionWithResourceRequest : public ServiceCatalogRequest {
 
 public:
     AssociateTagOptionWithResourceRequest(const AssociateTagOptionWithResourceRequest &other);

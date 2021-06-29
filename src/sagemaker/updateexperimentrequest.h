@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class UpdateExperimentRequestPrivate;
 
-class QTAWS_EXPORT UpdateExperimentRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT UpdateExperimentRequest : public SageMakerRequest {
 
 public:
     UpdateExperimentRequest(const UpdateExperimentRequest &other);

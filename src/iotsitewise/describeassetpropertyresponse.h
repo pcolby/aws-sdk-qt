@@ -28,7 +28,7 @@ namespace IoTSiteWise {
 
 class DescribeAssetPropertyResponsePrivate;
 
-class QTAWS_EXPORT DescribeAssetPropertyResponse : public IoTSiteWiseResponse {
+class QTAWSIOTSITEWISE_EXPORT DescribeAssetPropertyResponse : public IoTSiteWiseResponse {
     Q_OBJECT
 
 public:

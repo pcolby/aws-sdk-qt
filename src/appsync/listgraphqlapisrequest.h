@@ -27,7 +27,7 @@ namespace AppSync {
 
 class ListGraphqlApisRequestPrivate;
 
-class QTAWS_EXPORT ListGraphqlApisRequest : public AppSyncRequest {
+class QTAWSAPPSYNC_EXPORT ListGraphqlApisRequest : public AppSyncRequest {
 
 public:
     ListGraphqlApisRequest(const ListGraphqlApisRequest &other);

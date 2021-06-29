@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSDYNAMODB_LIBRARY)
+
 add_library(QtAwsDynamoDB
   batchexecutestatementrequest.h
   batchexecutestatementrequest_p.h
@@ -141,6 +143,7 @@ add_library(QtAwsDynamoDB
   putitemrequest_p.h
   putitemresponse.h
   putitemresponse_p.h
+  qtawsdynamodbglobal.h
   queryrequest.h
   queryrequest_p.h
   queryresponse.h

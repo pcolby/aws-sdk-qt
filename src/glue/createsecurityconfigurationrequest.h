@@ -27,7 +27,7 @@ namespace Glue {
 
 class CreateSecurityConfigurationRequestPrivate;
 
-class QTAWS_EXPORT CreateSecurityConfigurationRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT CreateSecurityConfigurationRequest : public GlueRequest {
 
 public:
     CreateSecurityConfigurationRequest(const CreateSecurityConfigurationRequest &other);

@@ -27,7 +27,7 @@ namespace ElasticBeanstalk {
 
 class DeletePlatformVersionRequestPrivate;
 
-class QTAWS_EXPORT DeletePlatformVersionRequest : public ElasticBeanstalkRequest {
+class QTAWSELASTICBEANSTALK_EXPORT DeletePlatformVersionRequest : public ElasticBeanstalkRequest {
 
 public:
     DeletePlatformVersionRequest(const DeletePlatformVersionRequest &other);

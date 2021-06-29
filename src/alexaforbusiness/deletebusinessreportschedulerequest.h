@@ -27,7 +27,7 @@ namespace AlexaForBusiness {
 
 class DeleteBusinessReportScheduleRequestPrivate;
 
-class QTAWS_EXPORT DeleteBusinessReportScheduleRequest : public AlexaForBusinessRequest {
+class QTAWSALEXAFORBUSINESS_EXPORT DeleteBusinessReportScheduleRequest : public AlexaForBusinessRequest {
 
 public:
     DeleteBusinessReportScheduleRequest(const DeleteBusinessReportScheduleRequest &other);

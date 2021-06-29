@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class DescribeEnvironmentHealthResponsePrivate;
 
-class QTAWS_EXPORT DescribeEnvironmentHealthResponse : public ElasticBeanstalkResponse {
+class QTAWSELASTICBEANSTALK_EXPORT DescribeEnvironmentHealthResponse : public ElasticBeanstalkResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class StartConfigurationRecorderRequestPrivate;
 
-class QTAWS_EXPORT StartConfigurationRecorderRequest : public ConfigServiceRequest {
+class QTAWSCONFIGSERVICE_EXPORT StartConfigurationRecorderRequest : public ConfigServiceRequest {
 
 public:
     StartConfigurationRecorderRequest(const StartConfigurationRecorderRequest &other);

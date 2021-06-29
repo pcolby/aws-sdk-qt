@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class DescribeInstanceRefreshesRequestPrivate;
 
-class QTAWS_EXPORT DescribeInstanceRefreshesRequest : public AutoScalingRequest {
+class QTAWSAUTOSCALING_EXPORT DescribeInstanceRefreshesRequest : public AutoScalingRequest {
 
 public:
     DescribeInstanceRefreshesRequest(const DescribeInstanceRefreshesRequest &other);

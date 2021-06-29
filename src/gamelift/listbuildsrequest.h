@@ -27,7 +27,7 @@ namespace GameLift {
 
 class ListBuildsRequestPrivate;
 
-class QTAWS_EXPORT ListBuildsRequest : public GameLiftRequest {
+class QTAWSGAMELIFT_EXPORT ListBuildsRequest : public GameLiftRequest {
 
 public:
     ListBuildsRequest(const ListBuildsRequest &other);

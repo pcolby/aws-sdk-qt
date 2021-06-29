@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawslexmodelsv2global.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace LexModelsV2 {
 
 class LexModelsV2RequestPrivate;
 
-class QTAWS_EXPORT LexModelsV2Request : public QtAws::Core::AwsAbstractRequest {
+class QTAWSLEXMODELSV2_EXPORT LexModelsV2Request : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by LexModelsV2.

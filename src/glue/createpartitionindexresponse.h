@@ -28,7 +28,7 @@ namespace Glue {
 
 class CreatePartitionIndexResponsePrivate;
 
-class QTAWS_EXPORT CreatePartitionIndexResponse : public GlueResponse {
+class QTAWSGLUE_EXPORT CreatePartitionIndexResponse : public GlueResponse {
     Q_OBJECT
 
 public:

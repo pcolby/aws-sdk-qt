@@ -27,7 +27,7 @@ namespace SSM {
 
 class DeregisterPatchBaselineForPatchGroupRequestPrivate;
 
-class QTAWS_EXPORT DeregisterPatchBaselineForPatchGroupRequest : public SsmRequest {
+class QTAWSSSM_EXPORT DeregisterPatchBaselineForPatchGroupRequest : public SsmRequest {
 
 public:
     DeregisterPatchBaselineForPatchGroupRequest(const DeregisterPatchBaselineForPatchGroupRequest &other);

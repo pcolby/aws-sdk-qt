@@ -27,7 +27,7 @@ namespace CloudWatch {
 
 class PutDashboardRequestPrivate;
 
-class QTAWS_EXPORT PutDashboardRequest : public CloudWatchRequest {
+class QTAWSCLOUDWATCH_EXPORT PutDashboardRequest : public CloudWatchRequest {
 
 public:
     PutDashboardRequest(const PutDashboardRequest &other);

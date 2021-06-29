@@ -27,7 +27,7 @@ namespace Lambda {
 
 class ListLayerVersionsRequestPrivate;
 
-class QTAWS_EXPORT ListLayerVersionsRequest : public LambdaRequest {
+class QTAWSLAMBDA_EXPORT ListLayerVersionsRequest : public LambdaRequest {
 
 public:
     ListLayerVersionsRequest(const ListLayerVersionsRequest &other);

@@ -27,7 +27,7 @@ namespace EKS {
 
 class DeleteFargateProfileRequestPrivate;
 
-class QTAWS_EXPORT DeleteFargateProfileRequest : public EksRequest {
+class QTAWSEKS_EXPORT DeleteFargateProfileRequest : public EksRequest {
 
 public:
     DeleteFargateProfileRequest(const DeleteFargateProfileRequest &other);

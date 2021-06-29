@@ -27,7 +27,7 @@ namespace mgn {
 
 class DeleteReplicationConfigurationTemplateRequestPrivate;
 
-class QTAWS_EXPORT DeleteReplicationConfigurationTemplateRequest : public mgnRequest {
+class QTAWSMGN_EXPORT DeleteReplicationConfigurationTemplateRequest : public mgnRequest {
 
 public:
     DeleteReplicationConfigurationTemplateRequest(const DeleteReplicationConfigurationTemplateRequest &other);

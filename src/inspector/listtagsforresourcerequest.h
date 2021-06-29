@@ -27,7 +27,7 @@ namespace Inspector {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public InspectorRequest {
+class QTAWSINSPECTOR_EXPORT ListTagsForResourceRequest : public InspectorRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

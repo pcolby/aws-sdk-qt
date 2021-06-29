@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSMOBILEANALYTICS_LIBRARY)
+
 add_library(QtAwsMobileAnalytics
   mobileanalyticsclient.h
   mobileanalyticsclient_p.h
@@ -9,6 +11,7 @@ add_library(QtAwsMobileAnalytics
   puteventsrequest_p.h
   puteventsresponse.h
   puteventsresponse_p.h
+  qtawsmobileanalyticsglobal.h
   mobileanalyticsclient.cpp
   mobileanalyticsrequest.cpp
   mobileanalyticsresponse.cpp

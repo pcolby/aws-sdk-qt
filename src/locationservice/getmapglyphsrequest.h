@@ -27,7 +27,7 @@ namespace LocationService {
 
 class GetMapGlyphsRequestPrivate;
 
-class QTAWS_EXPORT GetMapGlyphsRequest : public LocationServiceRequest {
+class QTAWSLOCATIONSERVICE_EXPORT GetMapGlyphsRequest : public LocationServiceRequest {
 
 public:
     GetMapGlyphsRequest(const GetMapGlyphsRequest &other);

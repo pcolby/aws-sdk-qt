@@ -27,7 +27,7 @@ namespace ManagedBlockchain {
 
 class CreateNodeRequestPrivate;
 
-class QTAWS_EXPORT CreateNodeRequest : public ManagedBlockchainRequest {
+class QTAWSMANAGEDBLOCKCHAIN_EXPORT CreateNodeRequest : public ManagedBlockchainRequest {
 
 public:
     CreateNodeRequest(const CreateNodeRequest &other);

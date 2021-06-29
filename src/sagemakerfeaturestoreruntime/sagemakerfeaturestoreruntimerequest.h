@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawssagemakerfeaturestoreruntimeglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace SageMakerFeatureStoreRuntime {
 
 class SageMakerFeatureStoreRuntimeRequestPrivate;
 
-class QTAWS_EXPORT SageMakerFeatureStoreRuntimeRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSAGEMAKERFEATURESTORERUNTIME_EXPORT SageMakerFeatureStoreRuntimeRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SageMakerFeatureStoreRuntime.

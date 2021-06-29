@@ -28,7 +28,7 @@ namespace Comprehend {
 
 class DeleteEntityRecognizerResponsePrivate;
 
-class QTAWS_EXPORT DeleteEntityRecognizerResponse : public ComprehendResponse {
+class QTAWSCOMPREHEND_EXPORT DeleteEntityRecognizerResponse : public ComprehendResponse {
     Q_OBJECT
 
 public:

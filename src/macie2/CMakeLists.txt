@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSMACIE2_LIBRARY)
+
 add_library(QtAwsMacie2
   acceptinvitationrequest.h
   acceptinvitationrequest_p.h
@@ -193,6 +195,7 @@ add_library(QtAwsMacie2
   putfindingspublicationconfigurationrequest_p.h
   putfindingspublicationconfigurationresponse.h
   putfindingspublicationconfigurationresponse_p.h
+  qtawsmacie2global.h
   searchresourcesrequest.h
   searchresourcesrequest_p.h
   searchresourcesresponse.h

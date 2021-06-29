@@ -28,7 +28,7 @@ namespace DocDB {
 
 class RestoreDBClusterToPointInTimeResponsePrivate;
 
-class QTAWS_EXPORT RestoreDBClusterToPointInTimeResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT RestoreDBClusterToPointInTimeResponse : public DocDBResponse {
     Q_OBJECT
 
 public:

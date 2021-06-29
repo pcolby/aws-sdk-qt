@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class DescribeIngestionRequestPrivate;
 
-class QTAWS_EXPORT DescribeIngestionRequest : public QuickSightRequest {
+class QTAWSQUICKSIGHT_EXPORT DescribeIngestionRequest : public QuickSightRequest {
 
 public:
     DescribeIngestionRequest(const DescribeIngestionRequest &other);

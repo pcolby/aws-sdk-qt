@@ -28,7 +28,7 @@ namespace SSM {
 
 class ResetServiceSettingResponsePrivate;
 
-class QTAWS_EXPORT ResetServiceSettingResponse : public SsmResponse {
+class QTAWSSSM_EXPORT ResetServiceSettingResponse : public SsmResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace MarketplaceCommerceAnalytics {
 
 class GenerateDataSetRequestPrivate;
 
-class QTAWS_EXPORT GenerateDataSetRequest : public MarketplaceCommerceAnalyticsRequest {
+class QTAWSMARKETPLACECOMMERCEANALYTICS_EXPORT GenerateDataSetRequest : public MarketplaceCommerceAnalyticsRequest {
 
 public:
     GenerateDataSetRequest(const GenerateDataSetRequest &other);

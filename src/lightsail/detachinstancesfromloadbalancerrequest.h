@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class DetachInstancesFromLoadBalancerRequestPrivate;
 
-class QTAWS_EXPORT DetachInstancesFromLoadBalancerRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT DetachInstancesFromLoadBalancerRequest : public LightsailRequest {
 
 public:
     DetachInstancesFromLoadBalancerRequest(const DetachInstancesFromLoadBalancerRequest &other);

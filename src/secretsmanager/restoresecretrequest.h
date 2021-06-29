@@ -27,7 +27,7 @@ namespace SecretsManager {
 
 class RestoreSecretRequestPrivate;
 
-class QTAWS_EXPORT RestoreSecretRequest : public SecretsManagerRequest {
+class QTAWSSECRETSMANAGER_EXPORT RestoreSecretRequest : public SecretsManagerRequest {
 
 public:
     RestoreSecretRequest(const RestoreSecretRequest &other);

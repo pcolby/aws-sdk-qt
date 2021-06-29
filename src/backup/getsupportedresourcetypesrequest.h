@@ -27,7 +27,7 @@ namespace Backup {
 
 class GetSupportedResourceTypesRequestPrivate;
 
-class QTAWS_EXPORT GetSupportedResourceTypesRequest : public BackupRequest {
+class QTAWSBACKUP_EXPORT GetSupportedResourceTypesRequest : public BackupRequest {
 
 public:
     GetSupportedResourceTypesRequest(const GetSupportedResourceTypesRequest &other);

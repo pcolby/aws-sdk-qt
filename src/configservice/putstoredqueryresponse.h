@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class PutStoredQueryResponsePrivate;
 
-class QTAWS_EXPORT PutStoredQueryResponse : public ConfigServiceResponse {
+class QTAWSCONFIGSERVICE_EXPORT PutStoredQueryResponse : public ConfigServiceResponse {
     Q_OBJECT
 
 public:

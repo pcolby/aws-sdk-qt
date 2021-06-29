@@ -27,7 +27,7 @@ namespace GameLift {
 
 class StartFleetActionsRequestPrivate;
 
-class QTAWS_EXPORT StartFleetActionsRequest : public GameLiftRequest {
+class QTAWSGAMELIFT_EXPORT StartFleetActionsRequest : public GameLiftRequest {
 
 public:
     StartFleetActionsRequest(const StartFleetActionsRequest &other);

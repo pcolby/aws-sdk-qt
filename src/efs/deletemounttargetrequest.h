@@ -27,7 +27,7 @@ namespace EFS {
 
 class DeleteMountTargetRequestPrivate;
 
-class QTAWS_EXPORT DeleteMountTargetRequest : public EfsRequest {
+class QTAWSEFS_EXPORT DeleteMountTargetRequest : public EfsRequest {
 
 public:
     DeleteMountTargetRequest(const DeleteMountTargetRequest &other);

@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class CreateConfigurationSetRequestPrivate;
 
-class QTAWS_EXPORT CreateConfigurationSetRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT CreateConfigurationSetRequest : public Sesv2Request {
 
 public:
     CreateConfigurationSetRequest(const CreateConfigurationSetRequest &other);

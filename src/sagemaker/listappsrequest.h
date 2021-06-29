@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class ListAppsRequestPrivate;
 
-class QTAWS_EXPORT ListAppsRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT ListAppsRequest : public SageMakerRequest {
 
 public:
     ListAppsRequest(const ListAppsRequest &other);

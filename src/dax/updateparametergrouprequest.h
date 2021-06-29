@@ -27,7 +27,7 @@ namespace DAX {
 
 class UpdateParameterGroupRequestPrivate;
 
-class QTAWS_EXPORT UpdateParameterGroupRequest : public DaxRequest {
+class QTAWSDAX_EXPORT UpdateParameterGroupRequest : public DaxRequest {
 
 public:
     UpdateParameterGroupRequest(const UpdateParameterGroupRequest &other);

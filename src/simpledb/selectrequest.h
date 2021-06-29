@@ -27,7 +27,7 @@ namespace SimpleDB {
 
 class SelectRequestPrivate;
 
-class QTAWS_EXPORT SelectRequest : public SimpleDBRequest {
+class QTAWSSIMPLEDB_EXPORT SelectRequest : public SimpleDBRequest {
 
 public:
     SelectRequest(const SelectRequest &other);

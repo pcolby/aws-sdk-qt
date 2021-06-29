@@ -27,7 +27,7 @@ namespace WellArchitected {
 
 class CreateWorkloadShareRequestPrivate;
 
-class QTAWS_EXPORT CreateWorkloadShareRequest : public WellArchitectedRequest {
+class QTAWSWELLARCHITECTED_EXPORT CreateWorkloadShareRequest : public WellArchitectedRequest {
 
 public:
     CreateWorkloadShareRequest(const CreateWorkloadShareRequest &other);

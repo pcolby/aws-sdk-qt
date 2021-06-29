@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class UnassignVolumeResponsePrivate;
 
-class QTAWS_EXPORT UnassignVolumeResponse : public OpsWorksResponse {
+class QTAWSOPSWORKS_EXPORT UnassignVolumeResponse : public OpsWorksResponse {
     Q_OBJECT
 
 public:

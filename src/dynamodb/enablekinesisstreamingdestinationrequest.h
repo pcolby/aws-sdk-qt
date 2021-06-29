@@ -27,7 +27,7 @@ namespace DynamoDB {
 
 class EnableKinesisStreamingDestinationRequestPrivate;
 
-class QTAWS_EXPORT EnableKinesisStreamingDestinationRequest : public DynamoDBRequest {
+class QTAWSDYNAMODB_EXPORT EnableKinesisStreamingDestinationRequest : public DynamoDBRequest {
 
 public:
     EnableKinesisStreamingDestinationRequest(const EnableKinesisStreamingDestinationRequest &other);

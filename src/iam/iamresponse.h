@@ -21,6 +21,8 @@
 #define QTAWS_IAMRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsiamglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace IAM {
 
 class IamResponsePrivate;
 
-class QTAWS_EXPORT IamResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSIAM_EXPORT IamResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

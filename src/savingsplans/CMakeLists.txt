@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSAVINGSPLANS_LIBRARY)
+
 add_library(QtAwsSavingsPlans
   createsavingsplanrequest.h
   createsavingsplanrequest_p.h
@@ -27,6 +29,7 @@ add_library(QtAwsSavingsPlans
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawssavingsplansglobal.h
   savingsplansclient.h
   savingsplansclient_p.h
   savingsplansrequest.h

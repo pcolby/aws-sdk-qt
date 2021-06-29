@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class DescribeConfigurationAggregatorSourcesStatusRequestPrivate;
 
-class QTAWS_EXPORT DescribeConfigurationAggregatorSourcesStatusRequest : public ConfigServiceRequest {
+class QTAWSCONFIGSERVICE_EXPORT DescribeConfigurationAggregatorSourcesStatusRequest : public ConfigServiceRequest {
 
 public:
     DescribeConfigurationAggregatorSourcesStatusRequest(const DescribeConfigurationAggregatorSourcesStatusRequest &other);

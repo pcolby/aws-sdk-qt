@@ -28,7 +28,7 @@ namespace WorkLink {
 
 class DisassociateWebsiteCertificateAuthorityResponsePrivate;
 
-class QTAWS_EXPORT DisassociateWebsiteCertificateAuthorityResponse : public WorkLinkResponse {
+class QTAWSWORKLINK_EXPORT DisassociateWebsiteCertificateAuthorityResponse : public WorkLinkResponse {
     Q_OBJECT
 
 public:

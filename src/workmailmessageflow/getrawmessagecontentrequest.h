@@ -27,7 +27,7 @@ namespace WorkMailMessageFlow {
 
 class GetRawMessageContentRequestPrivate;
 
-class QTAWS_EXPORT GetRawMessageContentRequest : public WorkMailMessageFlowRequest {
+class QTAWSWORKMAILMESSAGEFLOW_EXPORT GetRawMessageContentRequest : public WorkMailMessageFlowRequest {
 
 public:
     GetRawMessageContentRequest(const GetRawMessageContentRequest &other);

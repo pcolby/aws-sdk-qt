@@ -27,7 +27,7 @@ namespace ApiGatewayV2 {
 
 class ReimportApiRequestPrivate;
 
-class QTAWS_EXPORT ReimportApiRequest : public ApiGatewayV2Request {
+class QTAWSAPIGATEWAYV2_EXPORT ReimportApiRequest : public ApiGatewayV2Request {
 
 public:
     ReimportApiRequest(const ReimportApiRequest &other);

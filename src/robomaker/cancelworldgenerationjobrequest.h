@@ -27,7 +27,7 @@ namespace RoboMaker {
 
 class CancelWorldGenerationJobRequestPrivate;
 
-class QTAWS_EXPORT CancelWorldGenerationJobRequest : public RoboMakerRequest {
+class QTAWSROBOMAKER_EXPORT CancelWorldGenerationJobRequest : public RoboMakerRequest {
 
 public:
     CancelWorldGenerationJobRequest(const CancelWorldGenerationJobRequest &other);

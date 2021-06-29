@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawssfnglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace SFN {
 
 class SfnRequestPrivate;
 
-class QTAWS_EXPORT SfnRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSFN_EXPORT SfnRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SFN.

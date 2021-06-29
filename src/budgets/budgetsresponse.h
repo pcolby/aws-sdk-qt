@@ -21,6 +21,8 @@
 #define QTAWS_BUDGETSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsbudgetsglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Budgets {
 
 class BudgetsResponsePrivate;
 
-class QTAWS_EXPORT BudgetsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSBUDGETS_EXPORT BudgetsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

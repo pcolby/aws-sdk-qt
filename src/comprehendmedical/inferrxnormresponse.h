@@ -28,7 +28,7 @@ namespace ComprehendMedical {
 
 class InferRxNormResponsePrivate;
 
-class QTAWS_EXPORT InferRxNormResponse : public ComprehendMedicalResponse {
+class QTAWSCOMPREHENDMEDICAL_EXPORT InferRxNormResponse : public ComprehendMedicalResponse {
     Q_OBJECT
 
 public:

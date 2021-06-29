@@ -27,7 +27,7 @@ namespace Glue {
 
 class UpdateWorkflowRequestPrivate;
 
-class QTAWS_EXPORT UpdateWorkflowRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT UpdateWorkflowRequest : public GlueRequest {
 
 public:
     UpdateWorkflowRequest(const UpdateWorkflowRequest &other);

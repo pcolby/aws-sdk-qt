@@ -27,7 +27,7 @@ namespace NetworkFirewall {
 
 class DeleteRuleGroupRequestPrivate;
 
-class QTAWS_EXPORT DeleteRuleGroupRequest : public NetworkFirewallRequest {
+class QTAWSNETWORKFIREWALL_EXPORT DeleteRuleGroupRequest : public NetworkFirewallRequest {
 
 public:
     DeleteRuleGroupRequest(const DeleteRuleGroupRequest &other);

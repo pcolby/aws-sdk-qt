@@ -28,7 +28,7 @@ namespace XRay {
 
 class PutTelemetryRecordsResponsePrivate;
 
-class QTAWS_EXPORT PutTelemetryRecordsResponse : public XRayResponse {
+class QTAWSXRAY_EXPORT PutTelemetryRecordsResponse : public XRayResponse {
     Q_OBJECT
 
 public:

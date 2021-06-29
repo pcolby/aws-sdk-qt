@@ -28,7 +28,7 @@ namespace Schemas {
 
 class DeleteDiscovererResponsePrivate;
 
-class QTAWS_EXPORT DeleteDiscovererResponse : public SchemasResponse {
+class QTAWSSCHEMAS_EXPORT DeleteDiscovererResponse : public SchemasResponse {
     Q_OBJECT
 
 public:

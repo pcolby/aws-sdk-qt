@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class CreateSmsTemplateResponsePrivate;
 
-class QTAWS_EXPORT CreateSmsTemplateResponse : public PinpointResponse {
+class QTAWSPINPOINT_EXPORT CreateSmsTemplateResponse : public PinpointResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace GameLift {
 
 class PutScalingPolicyRequestPrivate;
 
-class QTAWS_EXPORT PutScalingPolicyRequest : public GameLiftRequest {
+class QTAWSGAMELIFT_EXPORT PutScalingPolicyRequest : public GameLiftRequest {
 
 public:
     PutScalingPolicyRequest(const PutScalingPolicyRequest &other);

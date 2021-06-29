@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class DeleteGroupResponsePrivate;
 
-class QTAWS_EXPORT DeleteGroupResponse : public QuickSightResponse {
+class QTAWSQUICKSIGHT_EXPORT DeleteGroupResponse : public QuickSightResponse {
     Q_OBJECT
 
 public:

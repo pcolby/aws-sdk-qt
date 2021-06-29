@@ -27,7 +27,7 @@ namespace CodeStarconnections {
 
 class DeleteHostRequestPrivate;
 
-class QTAWS_EXPORT DeleteHostRequest : public CodeStarconnectionsRequest {
+class QTAWSCODESTARCONNECTIONS_EXPORT DeleteHostRequest : public CodeStarconnectionsRequest {
 
 public:
     DeleteHostRequest(const DeleteHostRequest &other);

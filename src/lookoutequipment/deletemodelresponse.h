@@ -28,7 +28,7 @@ namespace LookoutEquipment {
 
 class DeleteModelResponsePrivate;
 
-class QTAWS_EXPORT DeleteModelResponse : public LookoutEquipmentResponse {
+class QTAWSLOOKOUTEQUIPMENT_EXPORT DeleteModelResponse : public LookoutEquipmentResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace Backup {
 
 class DescribeBackupVaultRequestPrivate;
 
-class QTAWS_EXPORT DescribeBackupVaultRequest : public BackupRequest {
+class QTAWSBACKUP_EXPORT DescribeBackupVaultRequest : public BackupRequest {
 
 public:
     DescribeBackupVaultRequest(const DescribeBackupVaultRequest &other);

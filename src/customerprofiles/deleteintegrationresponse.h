@@ -28,7 +28,7 @@ namespace CustomerProfiles {
 
 class DeleteIntegrationResponsePrivate;
 
-class QTAWS_EXPORT DeleteIntegrationResponse : public CustomerProfilesResponse {
+class QTAWSCUSTOMERPROFILES_EXPORT DeleteIntegrationResponse : public CustomerProfilesResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace Honeycode {
 
 class QueryTableRowsRequestPrivate;
 
-class QTAWS_EXPORT QueryTableRowsRequest : public HoneycodeRequest {
+class QTAWSHONEYCODE_EXPORT QueryTableRowsRequest : public HoneycodeRequest {
 
 public:
     QueryTableRowsRequest(const QueryTableRowsRequest &other);

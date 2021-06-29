@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSELASTICINFERENCE_LIBRARY)
+
 add_library(QtAwsElasticInference
   describeacceleratorofferingsrequest.h
   describeacceleratorofferingsrequest_p.h
@@ -21,6 +23,7 @@ add_library(QtAwsElasticInference
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawselasticinferenceglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

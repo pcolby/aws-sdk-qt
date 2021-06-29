@@ -27,7 +27,7 @@ namespace CodeArtifact {
 
 class PutDomainPermissionsPolicyRequestPrivate;
 
-class QTAWS_EXPORT PutDomainPermissionsPolicyRequest : public CodeArtifactRequest {
+class QTAWSCODEARTIFACT_EXPORT PutDomainPermissionsPolicyRequest : public CodeArtifactRequest {
 
 public:
     PutDomainPermissionsPolicyRequest(const PutDomainPermissionsPolicyRequest &other);

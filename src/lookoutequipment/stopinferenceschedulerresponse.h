@@ -28,7 +28,7 @@ namespace LookoutEquipment {
 
 class StopInferenceSchedulerResponsePrivate;
 
-class QTAWS_EXPORT StopInferenceSchedulerResponse : public LookoutEquipmentResponse {
+class QTAWSLOOKOUTEQUIPMENT_EXPORT StopInferenceSchedulerResponse : public LookoutEquipmentResponse {
     Q_OBJECT
 
 public:

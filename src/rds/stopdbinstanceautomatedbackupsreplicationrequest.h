@@ -27,7 +27,7 @@ namespace RDS {
 
 class StopDBInstanceAutomatedBackupsReplicationRequestPrivate;
 
-class QTAWS_EXPORT StopDBInstanceAutomatedBackupsReplicationRequest : public RdsRequest {
+class QTAWSRDS_EXPORT StopDBInstanceAutomatedBackupsReplicationRequest : public RdsRequest {
 
 public:
     StopDBInstanceAutomatedBackupsReplicationRequest(const StopDBInstanceAutomatedBackupsReplicationRequest &other);

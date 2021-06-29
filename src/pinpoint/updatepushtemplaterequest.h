@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class UpdatePushTemplateRequestPrivate;
 
-class QTAWS_EXPORT UpdatePushTemplateRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT UpdatePushTemplateRequest : public PinpointRequest {
 
 public:
     UpdatePushTemplateRequest(const UpdatePushTemplateRequest &other);

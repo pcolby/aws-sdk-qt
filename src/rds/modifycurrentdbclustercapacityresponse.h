@@ -28,7 +28,7 @@ namespace RDS {
 
 class ModifyCurrentDBClusterCapacityResponsePrivate;
 
-class QTAWS_EXPORT ModifyCurrentDBClusterCapacityResponse : public RdsResponse {
+class QTAWSRDS_EXPORT ModifyCurrentDBClusterCapacityResponse : public RdsResponse {
     Q_OBJECT
 
 public:

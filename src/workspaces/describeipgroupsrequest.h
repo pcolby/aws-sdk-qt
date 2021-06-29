@@ -27,7 +27,7 @@ namespace WorkSpaces {
 
 class DescribeIpGroupsRequestPrivate;
 
-class QTAWS_EXPORT DescribeIpGroupsRequest : public WorkSpacesRequest {
+class QTAWSWORKSPACES_EXPORT DescribeIpGroupsRequest : public WorkSpacesRequest {
 
 public:
     DescribeIpGroupsRequest(const DescribeIpGroupsRequest &other);

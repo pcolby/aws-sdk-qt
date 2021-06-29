@@ -27,7 +27,7 @@ namespace Organizations {
 
 class MoveAccountRequestPrivate;
 
-class QTAWS_EXPORT MoveAccountRequest : public OrganizationsRequest {
+class QTAWSORGANIZATIONS_EXPORT MoveAccountRequest : public OrganizationsRequest {
 
 public:
     MoveAccountRequest(const MoveAccountRequest &other);

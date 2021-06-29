@@ -28,7 +28,7 @@ namespace DataSync {
 
 class DeleteLocationResponsePrivate;
 
-class QTAWS_EXPORT DeleteLocationResponse : public DataSyncResponse {
+class QTAWSDATASYNC_EXPORT DeleteLocationResponse : public DataSyncResponse {
     Q_OBJECT
 
 public:

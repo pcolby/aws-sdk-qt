@@ -27,7 +27,7 @@ namespace Lambda {
 
 class DeleteFunctionConcurrencyRequestPrivate;
 
-class QTAWS_EXPORT DeleteFunctionConcurrencyRequest : public LambdaRequest {
+class QTAWSLAMBDA_EXPORT DeleteFunctionConcurrencyRequest : public LambdaRequest {
 
 public:
     DeleteFunctionConcurrencyRequest(const DeleteFunctionConcurrencyRequest &other);

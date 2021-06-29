@@ -28,7 +28,7 @@ namespace EC2 {
 
 class AllocateAddressResponsePrivate;
 
-class QTAWS_EXPORT AllocateAddressResponse : public Ec2Response {
+class QTAWSEC2_EXPORT AllocateAddressResponse : public Ec2Response {
     Q_OBJECT
 
 public:

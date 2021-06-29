@@ -27,7 +27,7 @@ namespace SES {
 
 class GetIdentityVerificationAttributesRequestPrivate;
 
-class QTAWS_EXPORT GetIdentityVerificationAttributesRequest : public SesRequest {
+class QTAWSSES_EXPORT GetIdentityVerificationAttributesRequest : public SesRequest {
 
 public:
     GetIdentityVerificationAttributesRequest(const GetIdentityVerificationAttributesRequest &other);

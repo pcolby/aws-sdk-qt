@@ -28,7 +28,7 @@ namespace AppConfig {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public AppConfigResponse {
+class QTAWSAPPCONFIG_EXPORT UntagResourceResponse : public AppConfigResponse {
     Q_OBJECT
 
 public:

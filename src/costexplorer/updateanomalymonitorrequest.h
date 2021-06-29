@@ -27,7 +27,7 @@ namespace CostExplorer {
 
 class UpdateAnomalyMonitorRequestPrivate;
 
-class QTAWS_EXPORT UpdateAnomalyMonitorRequest : public CostExplorerRequest {
+class QTAWSCOSTEXPLORER_EXPORT UpdateAnomalyMonitorRequest : public CostExplorerRequest {
 
 public:
     UpdateAnomalyMonitorRequest(const UpdateAnomalyMonitorRequest &other);

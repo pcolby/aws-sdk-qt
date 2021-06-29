@@ -21,6 +21,8 @@
 #define QTAWS_CUSTOMERPROFILESRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawscustomerprofilesglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace CustomerProfiles {
 
 class CustomerProfilesResponsePrivate;
 
-class QTAWS_EXPORT CustomerProfilesResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCUSTOMERPROFILES_EXPORT CustomerProfilesResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace IAM {
 
 class DeleteAccountPasswordPolicyRequestPrivate;
 
-class QTAWS_EXPORT DeleteAccountPasswordPolicyRequest : public IamRequest {
+class QTAWSIAM_EXPORT DeleteAccountPasswordPolicyRequest : public IamRequest {
 
 public:
     DeleteAccountPasswordPolicyRequest(const DeleteAccountPasswordPolicyRequest &other);

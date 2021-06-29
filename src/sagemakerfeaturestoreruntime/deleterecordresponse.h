@@ -28,7 +28,7 @@ namespace SageMakerFeatureStoreRuntime {
 
 class DeleteRecordResponsePrivate;
 
-class QTAWS_EXPORT DeleteRecordResponse : public SageMakerFeatureStoreRuntimeResponse {
+class QTAWSSAGEMAKERFEATURESTORERUNTIME_EXPORT DeleteRecordResponse : public SageMakerFeatureStoreRuntimeResponse {
     Q_OBJECT
 
 public:

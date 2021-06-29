@@ -28,7 +28,7 @@ namespace Shield {
 
 class AssociateProactiveEngagementDetailsResponsePrivate;
 
-class QTAWS_EXPORT AssociateProactiveEngagementDetailsResponse : public ShieldResponse {
+class QTAWSSHIELD_EXPORT AssociateProactiveEngagementDetailsResponse : public ShieldResponse {
     Q_OBJECT
 
 public:

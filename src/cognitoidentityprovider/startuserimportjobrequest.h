@@ -27,7 +27,7 @@ namespace CognitoIdentityProvider {
 
 class StartUserImportJobRequestPrivate;
 
-class QTAWS_EXPORT StartUserImportJobRequest : public CognitoIdentityProviderRequest {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT StartUserImportJobRequest : public CognitoIdentityProviderRequest {
 
 public:
     StartUserImportJobRequest(const StartUserImportJobRequest &other);

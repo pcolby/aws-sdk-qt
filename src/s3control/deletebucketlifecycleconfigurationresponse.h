@@ -28,7 +28,7 @@ namespace S3Control {
 
 class DeleteBucketLifecycleConfigurationResponsePrivate;
 
-class QTAWS_EXPORT DeleteBucketLifecycleConfigurationResponse : public S3ControlResponse {
+class QTAWSS3CONTROL_EXPORT DeleteBucketLifecycleConfigurationResponse : public S3ControlResponse {
     Q_OBJECT
 
 public:

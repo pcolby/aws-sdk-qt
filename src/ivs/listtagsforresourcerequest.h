@@ -27,7 +27,7 @@ namespace IVS {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public IvsRequest {
+class QTAWSIVS_EXPORT ListTagsForResourceRequest : public IvsRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSTIMESTREAMQUERY_LIBRARY)
+
 add_library(QtAwsTimestreamQuery
   cancelqueryrequest.h
   cancelqueryrequest_p.h
@@ -7,6 +9,7 @@ add_library(QtAwsTimestreamQuery
   describeendpointsrequest_p.h
   describeendpointsresponse.h
   describeendpointsresponse_p.h
+  qtawstimestreamqueryglobal.h
   queryrequest.h
   queryrequest_p.h
   queryresponse.h

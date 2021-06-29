@@ -28,7 +28,7 @@ namespace IAM {
 
 class ListInstanceProfileTagsResponsePrivate;
 
-class QTAWS_EXPORT ListInstanceProfileTagsResponse : public IamResponse {
+class QTAWSIAM_EXPORT ListInstanceProfileTagsResponse : public IamResponse {
     Q_OBJECT
 
 public:

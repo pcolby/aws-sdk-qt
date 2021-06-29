@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class DescribePullRequestEventsRequestPrivate;
 
-class QTAWS_EXPORT DescribePullRequestEventsRequest : public CodeCommitRequest {
+class QTAWSCODECOMMIT_EXPORT DescribePullRequestEventsRequest : public CodeCommitRequest {
 
 public:
     DescribePullRequestEventsRequest(const DescribePullRequestEventsRequest &other);

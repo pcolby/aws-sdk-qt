@@ -28,7 +28,7 @@ namespace Synthetics {
 
 class StartCanaryResponsePrivate;
 
-class QTAWS_EXPORT StartCanaryResponse : public SyntheticsResponse {
+class QTAWSSYNTHETICS_EXPORT StartCanaryResponse : public SyntheticsResponse {
     Q_OBJECT
 
 public:

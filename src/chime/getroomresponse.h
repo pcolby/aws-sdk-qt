@@ -28,7 +28,7 @@ namespace Chime {
 
 class GetRoomResponsePrivate;
 
-class QTAWS_EXPORT GetRoomResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT GetRoomResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

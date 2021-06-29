@@ -27,7 +27,7 @@ namespace IoT {
 
 class DescribeAuditFindingRequestPrivate;
 
-class QTAWS_EXPORT DescribeAuditFindingRequest : public IoTRequest {
+class QTAWSIOT_EXPORT DescribeAuditFindingRequest : public IoTRequest {
 
 public:
     DescribeAuditFindingRequest(const DescribeAuditFindingRequest &other);

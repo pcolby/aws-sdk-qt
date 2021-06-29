@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class DisableLDAPSRequestPrivate;
 
-class QTAWS_EXPORT DisableLDAPSRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT DisableLDAPSRequest : public DirectoryServiceRequest {
 
 public:
     DisableLDAPSRequest(const DisableLDAPSRequest &other);

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSPROTON_LIBRARY)
+
 add_library(QtAwsProton
   acceptenvironmentaccountconnectionrequest.h
   acceptenvironmentaccountconnectionrequest_p.h
@@ -149,6 +151,7 @@ add_library(QtAwsProton
   protonrequest_p.h
   protonresponse.h
   protonresponse_p.h
+  qtawsprotonglobal.h
   rejectenvironmentaccountconnectionrequest.h
   rejectenvironmentaccountconnectionrequest_p.h
   rejectenvironmentaccountconnectionresponse.h

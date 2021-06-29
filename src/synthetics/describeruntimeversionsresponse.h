@@ -28,7 +28,7 @@ namespace Synthetics {
 
 class DescribeRuntimeVersionsResponsePrivate;
 
-class QTAWS_EXPORT DescribeRuntimeVersionsResponse : public SyntheticsResponse {
+class QTAWSSYNTHETICS_EXPORT DescribeRuntimeVersionsResponse : public SyntheticsResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace Rekognition {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public RekognitionRequest {
+class QTAWSREKOGNITION_EXPORT UntagResourceRequest : public RekognitionRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

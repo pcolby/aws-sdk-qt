@@ -27,7 +27,7 @@ namespace TimestreamWrite {
 
 class DeleteDatabaseRequestPrivate;
 
-class QTAWS_EXPORT DeleteDatabaseRequest : public TimestreamWriteRequest {
+class QTAWSTIMESTREAMWRITE_EXPORT DeleteDatabaseRequest : public TimestreamWriteRequest {
 
 public:
     DeleteDatabaseRequest(const DeleteDatabaseRequest &other);

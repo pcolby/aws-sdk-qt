@@ -27,7 +27,7 @@ namespace Glacier {
 
 class PurchaseProvisionedCapacityRequestPrivate;
 
-class QTAWS_EXPORT PurchaseProvisionedCapacityRequest : public GlacierRequest {
+class QTAWSGLACIER_EXPORT PurchaseProvisionedCapacityRequest : public GlacierRequest {
 
 public:
     PurchaseProvisionedCapacityRequest(const PurchaseProvisionedCapacityRequest &other);

@@ -27,7 +27,7 @@ namespace WellArchitected {
 
 class ListAnswersRequestPrivate;
 
-class QTAWS_EXPORT ListAnswersRequest : public WellArchitectedRequest {
+class QTAWSWELLARCHITECTED_EXPORT ListAnswersRequest : public WellArchitectedRequest {
 
 public:
     ListAnswersRequest(const ListAnswersRequest &other);

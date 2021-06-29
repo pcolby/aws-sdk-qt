@@ -27,7 +27,7 @@ namespace Route53Resolver {
 
 class DeleteFirewallDomainListRequestPrivate;
 
-class QTAWS_EXPORT DeleteFirewallDomainListRequest : public Route53ResolverRequest {
+class QTAWSROUTE53RESOLVER_EXPORT DeleteFirewallDomainListRequest : public Route53ResolverRequest {
 
 public:
     DeleteFirewallDomainListRequest(const DeleteFirewallDomainListRequest &other);

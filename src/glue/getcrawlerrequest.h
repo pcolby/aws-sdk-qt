@@ -27,7 +27,7 @@ namespace Glue {
 
 class GetCrawlerRequestPrivate;
 
-class QTAWS_EXPORT GetCrawlerRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT GetCrawlerRequest : public GlueRequest {
 
 public:
     GetCrawlerRequest(const GetCrawlerRequest &other);

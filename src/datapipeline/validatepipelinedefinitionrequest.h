@@ -27,7 +27,7 @@ namespace DataPipeline {
 
 class ValidatePipelineDefinitionRequestPrivate;
 
-class QTAWS_EXPORT ValidatePipelineDefinitionRequest : public DataPipelineRequest {
+class QTAWSDATAPIPELINE_EXPORT ValidatePipelineDefinitionRequest : public DataPipelineRequest {
 
 public:
     ValidatePipelineDefinitionRequest(const ValidatePipelineDefinitionRequest &other);

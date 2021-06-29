@@ -28,7 +28,7 @@ namespace Budgets {
 
 class CreateBudgetActionResponsePrivate;
 
-class QTAWS_EXPORT CreateBudgetActionResponse : public BudgetsResponse {
+class QTAWSBUDGETS_EXPORT CreateBudgetActionResponse : public BudgetsResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace WellArchitected {
 
 class ListShareInvitationsRequestPrivate;
 
-class QTAWS_EXPORT ListShareInvitationsRequest : public WellArchitectedRequest {
+class QTAWSWELLARCHITECTED_EXPORT ListShareInvitationsRequest : public WellArchitectedRequest {
 
 public:
     ListShareInvitationsRequest(const ListShareInvitationsRequest &other);

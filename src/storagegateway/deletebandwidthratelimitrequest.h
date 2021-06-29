@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class DeleteBandwidthRateLimitRequestPrivate;
 
-class QTAWS_EXPORT DeleteBandwidthRateLimitRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT DeleteBandwidthRateLimitRequest : public StorageGatewayRequest {
 
 public:
     DeleteBandwidthRateLimitRequest(const DeleteBandwidthRateLimitRequest &other);

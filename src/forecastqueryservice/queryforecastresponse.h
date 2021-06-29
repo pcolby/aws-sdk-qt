@@ -28,7 +28,7 @@ namespace ForecastQueryService {
 
 class QueryForecastResponsePrivate;
 
-class QTAWS_EXPORT QueryForecastResponse : public ForecastQueryServiceResponse {
+class QTAWSFORECASTQUERYSERVICE_EXPORT QueryForecastResponse : public ForecastQueryServiceResponse {
     Q_OBJECT
 
 public:

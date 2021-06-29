@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class DescribeMergeConflictsRequestPrivate;
 
-class QTAWS_EXPORT DescribeMergeConflictsRequest : public CodeCommitRequest {
+class QTAWSCODECOMMIT_EXPORT DescribeMergeConflictsRequest : public CodeCommitRequest {
 
 public:
     DescribeMergeConflictsRequest(const DescribeMergeConflictsRequest &other);

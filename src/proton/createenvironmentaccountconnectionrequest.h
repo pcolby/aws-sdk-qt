@@ -27,7 +27,7 @@ namespace Proton {
 
 class CreateEnvironmentAccountConnectionRequestPrivate;
 
-class QTAWS_EXPORT CreateEnvironmentAccountConnectionRequest : public ProtonRequest {
+class QTAWSPROTON_EXPORT CreateEnvironmentAccountConnectionRequest : public ProtonRequest {
 
 public:
     CreateEnvironmentAccountConnectionRequest(const CreateEnvironmentAccountConnectionRequest &other);

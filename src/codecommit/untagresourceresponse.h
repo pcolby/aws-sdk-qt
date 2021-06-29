@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public CodeCommitResponse {
+class QTAWSCODECOMMIT_EXPORT UntagResourceResponse : public CodeCommitResponse {
     Q_OBJECT
 
 public:

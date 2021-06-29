@@ -27,7 +27,7 @@ namespace FMS {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public FmsRequest {
+class QTAWSFMS_EXPORT UntagResourceRequest : public FmsRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

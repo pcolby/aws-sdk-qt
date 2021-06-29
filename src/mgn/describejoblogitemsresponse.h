@@ -28,7 +28,7 @@ namespace mgn {
 
 class DescribeJobLogItemsResponsePrivate;
 
-class QTAWS_EXPORT DescribeJobLogItemsResponse : public mgnResponse {
+class QTAWSMGN_EXPORT DescribeJobLogItemsResponse : public mgnResponse {
     Q_OBJECT
 
 public:

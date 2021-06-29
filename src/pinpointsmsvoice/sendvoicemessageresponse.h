@@ -28,7 +28,7 @@ namespace PinpointSMSVoice {
 
 class SendVoiceMessageResponsePrivate;
 
-class QTAWS_EXPORT SendVoiceMessageResponse : public PinpointSMSVoiceResponse {
+class QTAWSPINPOINTSMSVOICE_EXPORT SendVoiceMessageResponse : public PinpointSMSVoiceResponse {
     Q_OBJECT
 
 public:

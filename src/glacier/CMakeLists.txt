@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSGLACIER_LIBRARY)
+
 add_library(QtAwsGlacier
   abortmultipartuploadrequest.h
   abortmultipartuploadrequest_p.h
@@ -113,6 +115,7 @@ add_library(QtAwsGlacier
   purchaseprovisionedcapacityrequest_p.h
   purchaseprovisionedcapacityresponse.h
   purchaseprovisionedcapacityresponse_p.h
+  qtawsglacierglobal.h
   removetagsfromvaultrequest.h
   removetagsfromvaultrequest_p.h
   removetagsfromvaultresponse.h

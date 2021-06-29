@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawscodedeployglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace CodeDeploy {
 
 class CodeDeployRequestPrivate;
 
-class QTAWS_EXPORT CodeDeployRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCODEDEPLOY_EXPORT CodeDeployRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CodeDeploy.

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSELASTICSEARCHSERVICE_LIBRARY)
+
 add_library(QtAwsElasticsearchService
   acceptinboundcrossclustersearchconnectionrequest.h
   acceptinboundcrossclustersearchconnectionrequest_p.h
@@ -141,6 +143,7 @@ add_library(QtAwsElasticsearchService
   purchasereservedelasticsearchinstanceofferingrequest_p.h
   purchasereservedelasticsearchinstanceofferingresponse.h
   purchasereservedelasticsearchinstanceofferingresponse_p.h
+  qtawselasticsearchserviceglobal.h
   rejectinboundcrossclustersearchconnectionrequest.h
   rejectinboundcrossclustersearchconnectionrequest_p.h
   rejectinboundcrossclustersearchconnectionresponse.h

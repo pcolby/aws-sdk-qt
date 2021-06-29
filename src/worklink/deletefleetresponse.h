@@ -28,7 +28,7 @@ namespace WorkLink {
 
 class DeleteFleetResponsePrivate;
 
-class QTAWS_EXPORT DeleteFleetResponse : public WorkLinkResponse {
+class QTAWSWORKLINK_EXPORT DeleteFleetResponse : public WorkLinkResponse {
     Q_OBJECT
 
 public:

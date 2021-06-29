@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class ListTypedLinkFacetAttributesRequestPrivate;
 
-class QTAWS_EXPORT ListTypedLinkFacetAttributesRequest : public CloudDirectoryRequest {
+class QTAWSCLOUDDIRECTORY_EXPORT ListTypedLinkFacetAttributesRequest : public CloudDirectoryRequest {
 
 public:
     ListTypedLinkFacetAttributesRequest(const ListTypedLinkFacetAttributesRequest &other);

@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class DeleteEndpointRequestPrivate;
 
-class QTAWS_EXPORT DeleteEndpointRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT DeleteEndpointRequest : public SageMakerRequest {
 
 public:
     DeleteEndpointRequest(const DeleteEndpointRequest &other);

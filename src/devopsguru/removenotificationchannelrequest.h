@@ -27,7 +27,7 @@ namespace DevOpsGuru {
 
 class RemoveNotificationChannelRequestPrivate;
 
-class QTAWS_EXPORT RemoveNotificationChannelRequest : public DevOpsGuruRequest {
+class QTAWSDEVOPSGURU_EXPORT RemoveNotificationChannelRequest : public DevOpsGuruRequest {
 
 public:
     RemoveNotificationChannelRequest(const RemoveNotificationChannelRequest &other);

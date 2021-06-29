@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class DeleteBasePathMappingResponsePrivate;
 
-class QTAWS_EXPORT DeleteBasePathMappingResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT DeleteBasePathMappingResponse : public APIGatewayResponse {
     Q_OBJECT
 
 public:

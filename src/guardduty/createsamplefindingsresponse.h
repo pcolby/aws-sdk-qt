@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class CreateSampleFindingsResponsePrivate;
 
-class QTAWS_EXPORT CreateSampleFindingsResponse : public GuardDutyResponse {
+class QTAWSGUARDDUTY_EXPORT CreateSampleFindingsResponse : public GuardDutyResponse {
     Q_OBJECT
 
 public:

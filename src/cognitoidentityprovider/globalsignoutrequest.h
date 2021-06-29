@@ -27,7 +27,7 @@ namespace CognitoIdentityProvider {
 
 class GlobalSignOutRequestPrivate;
 
-class QTAWS_EXPORT GlobalSignOutRequest : public CognitoIdentityProviderRequest {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT GlobalSignOutRequest : public CognitoIdentityProviderRequest {
 
 public:
     GlobalSignOutRequest(const GlobalSignOutRequest &other);

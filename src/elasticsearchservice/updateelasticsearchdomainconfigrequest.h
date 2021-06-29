@@ -27,7 +27,7 @@ namespace ElasticsearchService {
 
 class UpdateElasticsearchDomainConfigRequestPrivate;
 
-class QTAWS_EXPORT UpdateElasticsearchDomainConfigRequest : public ElasticsearchServiceRequest {
+class QTAWSELASTICSEARCHSERVICE_EXPORT UpdateElasticsearchDomainConfigRequest : public ElasticsearchServiceRequest {
 
 public:
     UpdateElasticsearchDomainConfigRequest(const UpdateElasticsearchDomainConfigRequest &other);

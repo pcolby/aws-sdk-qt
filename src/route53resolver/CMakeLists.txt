@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSROUTE53RESOLVER_LIBRARY)
+
 add_library(QtAwsRoute53Resolver
   associatefirewallrulegrouprequest.h
   associatefirewallrulegrouprequest_p.h
@@ -203,6 +205,7 @@ add_library(QtAwsRoute53Resolver
   putresolverrulepolicyrequest_p.h
   putresolverrulepolicyresponse.h
   putresolverrulepolicyresponse_p.h
+  qtawsroute53resolverglobal.h
   route53resolverclient.h
   route53resolverclient_p.h
   route53resolverrequest.h

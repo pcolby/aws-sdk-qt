@@ -27,7 +27,7 @@ namespace MediaConvert {
 
 class CancelJobRequestPrivate;
 
-class QTAWS_EXPORT CancelJobRequest : public MediaConvertRequest {
+class QTAWSMEDIACONVERT_EXPORT CancelJobRequest : public MediaConvertRequest {
 
 public:
     CancelJobRequest(const CancelJobRequest &other);

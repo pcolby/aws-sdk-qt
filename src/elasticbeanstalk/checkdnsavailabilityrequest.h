@@ -27,7 +27,7 @@ namespace ElasticBeanstalk {
 
 class CheckDNSAvailabilityRequestPrivate;
 
-class QTAWS_EXPORT CheckDNSAvailabilityRequest : public ElasticBeanstalkRequest {
+class QTAWSELASTICBEANSTALK_EXPORT CheckDNSAvailabilityRequest : public ElasticBeanstalkRequest {
 
 public:
     CheckDNSAvailabilityRequest(const CheckDNSAvailabilityRequest &other);

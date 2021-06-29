@@ -27,7 +27,7 @@ namespace CloudWatchLogs {
 
 class ListTagsLogGroupRequestPrivate;
 
-class QTAWS_EXPORT ListTagsLogGroupRequest : public CloudWatchLogsRequest {
+class QTAWSCLOUDWATCHLOGS_EXPORT ListTagsLogGroupRequest : public CloudWatchLogsRequest {
 
 public:
     ListTagsLogGroupRequest(const ListTagsLogGroupRequest &other);

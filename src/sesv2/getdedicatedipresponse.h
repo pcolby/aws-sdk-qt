@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class GetDedicatedIpResponsePrivate;
 
-class QTAWS_EXPORT GetDedicatedIpResponse : public Sesv2Response {
+class QTAWSSESV2_EXPORT GetDedicatedIpResponse : public Sesv2Response {
     Q_OBJECT
 
 public:

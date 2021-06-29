@@ -21,6 +21,8 @@
 #define QTAWS_CODESTARRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawscodestarglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace CodeStar {
 
 class CodeStarResponsePrivate;
 
-class QTAWS_EXPORT CodeStarResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCODESTAR_EXPORT CodeStarResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace AmplifyBackend {
 
 class GetBackendResponsePrivate;
 
-class QTAWS_EXPORT GetBackendResponse : public AmplifyBackendResponse {
+class QTAWSAMPLIFYBACKEND_EXPORT GetBackendResponse : public AmplifyBackendResponse {
     Q_OBJECT
 
 public:

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCLOUDHSM_LIBRARY)
+
 add_library(QtAwsCloudHSM
   addtagstoresourcerequest.h
   addtagstoresourcerequest_p.h
@@ -81,6 +83,7 @@ add_library(QtAwsCloudHSM
   modifylunaclientrequest_p.h
   modifylunaclientresponse.h
   modifylunaclientresponse_p.h
+  qtawscloudhsmglobal.h
   removetagsfromresourcerequest.h
   removetagsfromresourcerequest_p.h
   removetagsfromresourceresponse.h

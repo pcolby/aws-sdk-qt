@@ -27,7 +27,7 @@ namespace SSM {
 
 class DeleteMaintenanceWindowRequestPrivate;
 
-class QTAWS_EXPORT DeleteMaintenanceWindowRequest : public SsmRequest {
+class QTAWSSSM_EXPORT DeleteMaintenanceWindowRequest : public SsmRequest {
 
 public:
     DeleteMaintenanceWindowRequest(const DeleteMaintenanceWindowRequest &other);

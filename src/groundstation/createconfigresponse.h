@@ -28,7 +28,7 @@ namespace GroundStation {
 
 class CreateConfigResponsePrivate;
 
-class QTAWS_EXPORT CreateConfigResponse : public GroundStationResponse {
+class QTAWSGROUNDSTATION_EXPORT CreateConfigResponse : public GroundStationResponse {
     Q_OBJECT
 
 public:

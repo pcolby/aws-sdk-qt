@@ -27,7 +27,7 @@ namespace CloudFormation {
 
 class ValidateTemplateRequestPrivate;
 
-class QTAWS_EXPORT ValidateTemplateRequest : public CloudFormationRequest {
+class QTAWSCLOUDFORMATION_EXPORT ValidateTemplateRequest : public CloudFormationRequest {
 
 public:
     ValidateTemplateRequest(const ValidateTemplateRequest &other);

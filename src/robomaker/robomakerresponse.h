@@ -21,6 +21,8 @@
 #define QTAWS_ROBOMAKERRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsrobomakerglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace RoboMaker {
 
 class RoboMakerResponsePrivate;
 
-class QTAWS_EXPORT RoboMakerResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSROBOMAKER_EXPORT RoboMakerResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace Connect {
 
 class ListSecurityKeysResponsePrivate;
 
-class QTAWS_EXPORT ListSecurityKeysResponse : public ConnectResponse {
+class QTAWSCONNECT_EXPORT ListSecurityKeysResponse : public ConnectResponse {
     Q_OBJECT
 
 public:

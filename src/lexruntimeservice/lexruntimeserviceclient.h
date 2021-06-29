@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawslexruntimeserviceglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -39,7 +41,7 @@ class PostTextResponse;
 class PutSessionRequest;
 class PutSessionResponse;
 
-class QTAWS_EXPORT LexRuntimeServiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSLEXRUNTIMESERVICE_EXPORT LexRuntimeServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

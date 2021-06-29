@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSDYNAMODBSTREAMS_LIBRARY)
+
 add_library(QtAwsDynamoDBStreams
   describestreamrequest.h
   describestreamrequest_p.h
@@ -21,6 +23,7 @@ add_library(QtAwsDynamoDBStreams
   liststreamsrequest_p.h
   liststreamsresponse.h
   liststreamsresponse_p.h
+  qtawsdynamodbstreamsglobal.h
   describestreamrequest.cpp
   describestreamresponse.cpp
   dynamodbstreamsclient.cpp

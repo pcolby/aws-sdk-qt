@@ -27,7 +27,7 @@ namespace FSx {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public FSxRequest {
+class QTAWSFSX_EXPORT ListTagsForResourceRequest : public FSxRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

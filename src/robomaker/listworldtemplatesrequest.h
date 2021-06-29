@@ -27,7 +27,7 @@ namespace RoboMaker {
 
 class ListWorldTemplatesRequestPrivate;
 
-class QTAWS_EXPORT ListWorldTemplatesRequest : public RoboMakerRequest {
+class QTAWSROBOMAKER_EXPORT ListWorldTemplatesRequest : public RoboMakerRequest {
 
 public:
     ListWorldTemplatesRequest(const ListWorldTemplatesRequest &other);

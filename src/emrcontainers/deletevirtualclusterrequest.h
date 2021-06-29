@@ -27,7 +27,7 @@ namespace EMRContainers {
 
 class DeleteVirtualClusterRequestPrivate;
 
-class QTAWS_EXPORT DeleteVirtualClusterRequest : public EMRContainersRequest {
+class QTAWSEMRCONTAINERS_EXPORT DeleteVirtualClusterRequest : public EMRContainersRequest {
 
 public:
     DeleteVirtualClusterRequest(const DeleteVirtualClusterRequest &other);

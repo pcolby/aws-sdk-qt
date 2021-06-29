@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class StartReplicationTaskAssessmentResponsePrivate;
 
-class QTAWS_EXPORT StartReplicationTaskAssessmentResponse : public DatabaseMigrationServiceResponse {
+class QTAWSDATABASEMIGRATIONSERVICE_EXPORT StartReplicationTaskAssessmentResponse : public DatabaseMigrationServiceResponse {
     Q_OBJECT
 
 public:

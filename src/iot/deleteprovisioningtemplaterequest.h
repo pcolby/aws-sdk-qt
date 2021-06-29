@@ -27,7 +27,7 @@ namespace IoT {
 
 class DeleteProvisioningTemplateRequestPrivate;
 
-class QTAWS_EXPORT DeleteProvisioningTemplateRequest : public IoTRequest {
+class QTAWSIOT_EXPORT DeleteProvisioningTemplateRequest : public IoTRequest {
 
 public:
     DeleteProvisioningTemplateRequest(const DeleteProvisioningTemplateRequest &other);

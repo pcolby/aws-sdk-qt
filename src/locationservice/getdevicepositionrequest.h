@@ -27,7 +27,7 @@ namespace LocationService {
 
 class GetDevicePositionRequestPrivate;
 
-class QTAWS_EXPORT GetDevicePositionRequest : public LocationServiceRequest {
+class QTAWSLOCATIONSERVICE_EXPORT GetDevicePositionRequest : public LocationServiceRequest {
 
 public:
     GetDevicePositionRequest(const GetDevicePositionRequest &other);

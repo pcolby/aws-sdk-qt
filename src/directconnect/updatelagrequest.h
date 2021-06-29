@@ -27,7 +27,7 @@ namespace DirectConnect {
 
 class UpdateLagRequestPrivate;
 
-class QTAWS_EXPORT UpdateLagRequest : public DirectConnectRequest {
+class QTAWSDIRECTCONNECT_EXPORT UpdateLagRequest : public DirectConnectRequest {
 
 public:
     UpdateLagRequest(const UpdateLagRequest &other);

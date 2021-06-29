@@ -21,6 +21,8 @@
 #define QTAWS_QLDBRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsqldbglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace QLDB {
 
 class QldbResponsePrivate;
 
-class QTAWS_EXPORT QldbResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSQLDB_EXPORT QldbResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

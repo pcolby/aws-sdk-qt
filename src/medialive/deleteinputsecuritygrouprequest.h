@@ -27,7 +27,7 @@ namespace MediaLive {
 
 class DeleteInputSecurityGroupRequestPrivate;
 
-class QTAWS_EXPORT DeleteInputSecurityGroupRequest : public MediaLiveRequest {
+class QTAWSMEDIALIVE_EXPORT DeleteInputSecurityGroupRequest : public MediaLiveRequest {
 
 public:
     DeleteInputSecurityGroupRequest(const DeleteInputSecurityGroupRequest &other);

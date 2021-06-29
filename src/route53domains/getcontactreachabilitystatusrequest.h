@@ -27,7 +27,7 @@ namespace Route53Domains {
 
 class GetContactReachabilityStatusRequestPrivate;
 
-class QTAWS_EXPORT GetContactReachabilityStatusRequest : public Route53DomainsRequest {
+class QTAWSROUTE53DOMAINS_EXPORT GetContactReachabilityStatusRequest : public Route53DomainsRequest {
 
 public:
     GetContactReachabilityStatusRequest(const GetContactReachabilityStatusRequest &other);

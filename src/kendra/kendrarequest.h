@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawskendraglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace kendra {
 
 class kendraRequestPrivate;
 
-class QTAWS_EXPORT kendraRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSKENDRA_EXPORT kendraRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by kendra.

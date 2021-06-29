@@ -27,7 +27,7 @@ namespace WorkDocs {
 
 class DescribeRootFoldersRequestPrivate;
 
-class QTAWS_EXPORT DescribeRootFoldersRequest : public WorkDocsRequest {
+class QTAWSWORKDOCS_EXPORT DescribeRootFoldersRequest : public WorkDocsRequest {
 
 public:
     DescribeRootFoldersRequest(const DescribeRootFoldersRequest &other);

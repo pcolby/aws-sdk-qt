@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class DeleteConfigRuleRequestPrivate;
 
-class QTAWS_EXPORT DeleteConfigRuleRequest : public ConfigServiceRequest {
+class QTAWSCONFIGSERVICE_EXPORT DeleteConfigRuleRequest : public ConfigServiceRequest {
 
 public:
     DeleteConfigRuleRequest(const DeleteConfigRuleRequest &other);

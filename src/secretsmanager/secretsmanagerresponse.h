@@ -21,6 +21,8 @@
 #define QTAWS_SECRETSMANAGERRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawssecretsmanagerglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace SecretsManager {
 
 class SecretsManagerResponsePrivate;
 
-class QTAWS_EXPORT SecretsManagerResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSECRETSMANAGER_EXPORT SecretsManagerResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class CreateUserResponsePrivate;
 
-class QTAWS_EXPORT CreateUserResponse : public WorkMailResponse {
+class QTAWSWORKMAIL_EXPORT CreateUserResponse : public WorkMailResponse {
     Q_OBJECT
 
 public:

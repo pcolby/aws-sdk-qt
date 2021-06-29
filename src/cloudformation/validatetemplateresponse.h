@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class ValidateTemplateResponsePrivate;
 
-class QTAWS_EXPORT ValidateTemplateResponse : public CloudFormationResponse {
+class QTAWSCLOUDFORMATION_EXPORT ValidateTemplateResponse : public CloudFormationResponse {
     Q_OBJECT
 
 public:

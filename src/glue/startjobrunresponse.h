@@ -28,7 +28,7 @@ namespace Glue {
 
 class StartJobRunResponsePrivate;
 
-class QTAWS_EXPORT StartJobRunResponse : public GlueResponse {
+class QTAWSGLUE_EXPORT StartJobRunResponse : public GlueResponse {
     Q_OBJECT
 
 public:

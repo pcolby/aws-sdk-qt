@@ -28,7 +28,7 @@ namespace Route53Resolver {
 
 class ListFirewallRuleGroupAssociationsResponsePrivate;
 
-class QTAWS_EXPORT ListFirewallRuleGroupAssociationsResponse : public Route53ResolverResponse {
+class QTAWSROUTE53RESOLVER_EXPORT ListFirewallRuleGroupAssociationsResponse : public Route53ResolverResponse {
     Q_OBJECT
 
 public:

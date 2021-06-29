@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class SearchProductsAsAdminResponsePrivate;
 
-class QTAWS_EXPORT SearchProductsAsAdminResponse : public ServiceCatalogResponse {
+class QTAWSSERVICECATALOG_EXPORT SearchProductsAsAdminResponse : public ServiceCatalogResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace IoTSiteWise {
 
 class DescribeDefaultEncryptionConfigurationRequestPrivate;
 
-class QTAWS_EXPORT DescribeDefaultEncryptionConfigurationRequest : public IoTSiteWiseRequest {
+class QTAWSIOTSITEWISE_EXPORT DescribeDefaultEncryptionConfigurationRequest : public IoTSiteWiseRequest {
 
 public:
     DescribeDefaultEncryptionConfigurationRequest(const DescribeDefaultEncryptionConfigurationRequest &other);

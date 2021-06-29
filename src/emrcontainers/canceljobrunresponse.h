@@ -28,7 +28,7 @@ namespace EMRContainers {
 
 class CancelJobRunResponsePrivate;
 
-class QTAWS_EXPORT CancelJobRunResponse : public EMRContainersResponse {
+class QTAWSEMRCONTAINERS_EXPORT CancelJobRunResponse : public EMRContainersResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace GlueDataBrew {
 
 class StopJobRunResponsePrivate;
 
-class QTAWS_EXPORT StopJobRunResponse : public GlueDataBrewResponse {
+class QTAWSGLUEDATABREW_EXPORT StopJobRunResponse : public GlueDataBrewResponse {
     Q_OBJECT
 
 public:

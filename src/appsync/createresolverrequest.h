@@ -27,7 +27,7 @@ namespace AppSync {
 
 class CreateResolverRequestPrivate;
 
-class QTAWS_EXPORT CreateResolverRequest : public AppSyncRequest {
+class QTAWSAPPSYNC_EXPORT CreateResolverRequest : public AppSyncRequest {
 
 public:
     CreateResolverRequest(const CreateResolverRequest &other);

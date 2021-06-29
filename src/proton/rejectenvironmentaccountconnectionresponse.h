@@ -28,7 +28,7 @@ namespace Proton {
 
 class RejectEnvironmentAccountConnectionResponsePrivate;
 
-class QTAWS_EXPORT RejectEnvironmentAccountConnectionResponse : public ProtonResponse {
+class QTAWSPROTON_EXPORT RejectEnvironmentAccountConnectionResponse : public ProtonResponse {
     Q_OBJECT
 
 public:

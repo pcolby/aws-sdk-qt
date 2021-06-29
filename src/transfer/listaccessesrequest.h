@@ -27,7 +27,7 @@ namespace Transfer {
 
 class ListAccessesRequestPrivate;
 
-class QTAWS_EXPORT ListAccessesRequest : public TransferRequest {
+class QTAWSTRANSFER_EXPORT ListAccessesRequest : public TransferRequest {
 
 public:
     ListAccessesRequest(const ListAccessesRequest &other);

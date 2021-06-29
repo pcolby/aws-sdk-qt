@@ -27,7 +27,7 @@ namespace KMS {
 
 class GenerateDataKeyWithoutPlaintextRequestPrivate;
 
-class QTAWS_EXPORT GenerateDataKeyWithoutPlaintextRequest : public KmsRequest {
+class QTAWSKMS_EXPORT GenerateDataKeyWithoutPlaintextRequest : public KmsRequest {
 
 public:
     GenerateDataKeyWithoutPlaintextRequest(const GenerateDataKeyWithoutPlaintextRequest &other);

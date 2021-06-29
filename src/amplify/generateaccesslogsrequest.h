@@ -27,7 +27,7 @@ namespace Amplify {
 
 class GenerateAccessLogsRequestPrivate;
 
-class QTAWS_EXPORT GenerateAccessLogsRequest : public AmplifyRequest {
+class QTAWSAMPLIFY_EXPORT GenerateAccessLogsRequest : public AmplifyRequest {
 
 public:
     GenerateAccessLogsRequest(const GenerateAccessLogsRequest &other);

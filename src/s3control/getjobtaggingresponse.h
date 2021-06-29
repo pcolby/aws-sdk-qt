@@ -28,7 +28,7 @@ namespace S3Control {
 
 class GetJobTaggingResponsePrivate;
 
-class QTAWS_EXPORT GetJobTaggingResponse : public S3ControlResponse {
+class QTAWSS3CONTROL_EXPORT GetJobTaggingResponse : public S3ControlResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace Connect {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT TagResourceRequest : public ConnectRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

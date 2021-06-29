@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class TransactWriteItemsResponsePrivate;
 
-class QTAWS_EXPORT TransactWriteItemsResponse : public DynamoDBResponse {
+class QTAWSDYNAMODB_EXPORT TransactWriteItemsResponse : public DynamoDBResponse {
     Q_OBJECT
 
 public:

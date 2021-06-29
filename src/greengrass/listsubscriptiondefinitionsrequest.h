@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class ListSubscriptionDefinitionsRequestPrivate;
 
-class QTAWS_EXPORT ListSubscriptionDefinitionsRequest : public GreengrassRequest {
+class QTAWSGREENGRASS_EXPORT ListSubscriptionDefinitionsRequest : public GreengrassRequest {
 
 public:
     ListSubscriptionDefinitionsRequest(const ListSubscriptionDefinitionsRequest &other);

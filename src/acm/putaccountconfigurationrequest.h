@@ -27,7 +27,7 @@ namespace ACM {
 
 class PutAccountConfigurationRequestPrivate;
 
-class QTAWS_EXPORT PutAccountConfigurationRequest : public AcmRequest {
+class QTAWSACM_EXPORT PutAccountConfigurationRequest : public AcmRequest {
 
 public:
     PutAccountConfigurationRequest(const PutAccountConfigurationRequest &other);

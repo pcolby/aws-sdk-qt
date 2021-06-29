@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class UpdateDefaultBranchRequestPrivate;
 
-class QTAWS_EXPORT UpdateDefaultBranchRequest : public CodeCommitRequest {
+class QTAWSCODECOMMIT_EXPORT UpdateDefaultBranchRequest : public CodeCommitRequest {
 
 public:
     UpdateDefaultBranchRequest(const UpdateDefaultBranchRequest &other);

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCLOUDFORMATION_LIBRARY)
+
 add_library(QtAwsCloudFormation
   cancelupdatestackrequest.h
   cancelupdatestackrequest_p.h
@@ -181,6 +183,7 @@ add_library(QtAwsCloudFormation
   listtypeversionsrequest_p.h
   listtypeversionsresponse.h
   listtypeversionsresponse_p.h
+  qtawscloudformationglobal.h
   recordhandlerprogressrequest.h
   recordhandlerprogressrequest_p.h
   recordhandlerprogressresponse.h

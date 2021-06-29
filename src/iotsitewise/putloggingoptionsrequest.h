@@ -27,7 +27,7 @@ namespace IoTSiteWise {
 
 class PutLoggingOptionsRequestPrivate;
 
-class QTAWS_EXPORT PutLoggingOptionsRequest : public IoTSiteWiseRequest {
+class QTAWSIOTSITEWISE_EXPORT PutLoggingOptionsRequest : public IoTSiteWiseRequest {
 
 public:
     PutLoggingOptionsRequest(const PutLoggingOptionsRequest &other);

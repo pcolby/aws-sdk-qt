@@ -27,7 +27,7 @@ namespace IoT {
 
 class DeleteDomainConfigurationRequestPrivate;
 
-class QTAWS_EXPORT DeleteDomainConfigurationRequest : public IoTRequest {
+class QTAWSIOT_EXPORT DeleteDomainConfigurationRequest : public IoTRequest {
 
 public:
     DeleteDomainConfigurationRequest(const DeleteDomainConfigurationRequest &other);

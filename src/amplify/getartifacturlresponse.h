@@ -28,7 +28,7 @@ namespace Amplify {
 
 class GetArtifactUrlResponsePrivate;
 
-class QTAWS_EXPORT GetArtifactUrlResponse : public AmplifyResponse {
+class QTAWSAMPLIFY_EXPORT GetArtifactUrlResponse : public AmplifyResponse {
     Q_OBJECT
 
 public:

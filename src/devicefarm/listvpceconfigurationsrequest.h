@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class ListVPCEConfigurationsRequestPrivate;
 
-class QTAWS_EXPORT ListVPCEConfigurationsRequest : public DeviceFarmRequest {
+class QTAWSDEVICEFARM_EXPORT ListVPCEConfigurationsRequest : public DeviceFarmRequest {
 
 public:
     ListVPCEConfigurationsRequest(const ListVPCEConfigurationsRequest &other);

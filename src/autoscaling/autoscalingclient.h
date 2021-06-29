@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsautoscalingglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -151,7 +153,7 @@ class TerminateInstanceInAutoScalingGroupResponse;
 class UpdateAutoScalingGroupRequest;
 class UpdateAutoScalingGroupResponse;
 
-class QTAWS_EXPORT AutoScalingClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSAUTOSCALING_EXPORT AutoScalingClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

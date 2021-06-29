@@ -27,7 +27,7 @@ namespace IAM {
 
 class TagInstanceProfileRequestPrivate;
 
-class QTAWS_EXPORT TagInstanceProfileRequest : public IamRequest {
+class QTAWSIAM_EXPORT TagInstanceProfileRequest : public IamRequest {
 
 public:
     TagInstanceProfileRequest(const TagInstanceProfileRequest &other);

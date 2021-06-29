@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSTRANSFER_LIBRARY)
+
 add_library(QtAwsTransfer
   createaccessrequest.h
   createaccessrequest_p.h
@@ -67,6 +69,7 @@ add_library(QtAwsTransfer
   listusersrequest_p.h
   listusersresponse.h
   listusersresponse_p.h
+  qtawstransferglobal.h
   startserverrequest.h
   startserverrequest_p.h
   startserverresponse.h

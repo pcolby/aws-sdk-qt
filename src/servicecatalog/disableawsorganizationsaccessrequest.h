@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class DisableAWSOrganizationsAccessRequestPrivate;
 
-class QTAWS_EXPORT DisableAWSOrganizationsAccessRequest : public ServiceCatalogRequest {
+class QTAWSSERVICECATALOG_EXPORT DisableAWSOrganizationsAccessRequest : public ServiceCatalogRequest {
 
 public:
     DisableAWSOrganizationsAccessRequest(const DisableAWSOrganizationsAccessRequest &other);

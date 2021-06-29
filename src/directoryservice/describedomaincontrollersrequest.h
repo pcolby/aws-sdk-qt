@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class DescribeDomainControllersRequestPrivate;
 
-class QTAWS_EXPORT DescribeDomainControllersRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT DescribeDomainControllersRequest : public DirectoryServiceRequest {
 
 public:
     DescribeDomainControllersRequest(const DescribeDomainControllersRequest &other);

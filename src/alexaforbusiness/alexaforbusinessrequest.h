@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsalexaforbusinessglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace AlexaForBusiness {
 
 class AlexaForBusinessRequestPrivate;
 
-class QTAWS_EXPORT AlexaForBusinessRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSALEXAFORBUSINESS_EXPORT AlexaForBusinessRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by AlexaForBusiness.

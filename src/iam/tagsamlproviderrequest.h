@@ -27,7 +27,7 @@ namespace IAM {
 
 class TagSAMLProviderRequestPrivate;
 
-class QTAWS_EXPORT TagSAMLProviderRequest : public IamRequest {
+class QTAWSIAM_EXPORT TagSAMLProviderRequest : public IamRequest {
 
 public:
     TagSAMLProviderRequest(const TagSAMLProviderRequest &other);

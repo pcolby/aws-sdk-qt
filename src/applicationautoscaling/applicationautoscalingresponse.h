@@ -21,6 +21,8 @@
 #define QTAWS_APPLICATIONAUTOSCALINGRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsapplicationautoscalingglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace ApplicationAutoScaling {
 
 class ApplicationAutoScalingResponsePrivate;
 
-class QTAWS_EXPORT ApplicationAutoScalingResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSAPPLICATIONAUTOSCALING_EXPORT ApplicationAutoScalingResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

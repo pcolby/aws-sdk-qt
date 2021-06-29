@@ -21,6 +21,8 @@
 #define QTAWS_COSTEXPLORERRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawscostexplorerglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace CostExplorer {
 
 class CostExplorerResponsePrivate;
 
-class QTAWS_EXPORT CostExplorerResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCOSTEXPLORER_EXPORT CostExplorerResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

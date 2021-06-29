@@ -28,7 +28,7 @@ namespace DLM {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public DlmResponse {
+class QTAWSDLM_EXPORT ListTagsForResourceResponse : public DlmResponse {
     Q_OBJECT
 
 public:

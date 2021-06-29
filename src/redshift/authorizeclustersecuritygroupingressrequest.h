@@ -27,7 +27,7 @@ namespace Redshift {
 
 class AuthorizeClusterSecurityGroupIngressRequestPrivate;
 
-class QTAWS_EXPORT AuthorizeClusterSecurityGroupIngressRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT AuthorizeClusterSecurityGroupIngressRequest : public RedshiftRequest {
 
 public:
     AuthorizeClusterSecurityGroupIngressRequest(const AuthorizeClusterSecurityGroupIngressRequest &other);

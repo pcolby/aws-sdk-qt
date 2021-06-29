@@ -27,7 +27,7 @@ namespace EMRContainers {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public EMRContainersRequest {
+class QTAWSEMRCONTAINERS_EXPORT TagResourceRequest : public EMRContainersRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

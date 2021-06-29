@@ -28,7 +28,7 @@ namespace DevOpsGuru {
 
 class DescribeAccountOverviewResponsePrivate;
 
-class QTAWS_EXPORT DescribeAccountOverviewResponse : public DevOpsGuruResponse {
+class QTAWSDEVOPSGURU_EXPORT DescribeAccountOverviewResponse : public DevOpsGuruResponse {
     Q_OBJECT
 
 public:

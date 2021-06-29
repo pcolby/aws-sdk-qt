@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class UpdateSnapshotScheduleRequestPrivate;
 
-class QTAWS_EXPORT UpdateSnapshotScheduleRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT UpdateSnapshotScheduleRequest : public StorageGatewayRequest {
 
 public:
     UpdateSnapshotScheduleRequest(const UpdateSnapshotScheduleRequest &other);

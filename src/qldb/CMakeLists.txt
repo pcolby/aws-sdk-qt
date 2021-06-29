@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSQLDB_LIBRARY)
+
 add_library(QtAwsQldb
   canceljournalkinesisstreamrequest.h
   canceljournalkinesisstreamrequest_p.h
@@ -65,6 +67,7 @@ add_library(QtAwsQldb
   qldbrequest_p.h
   qldbresponse.h
   qldbresponse_p.h
+  qtawsqldbglobal.h
   streamjournaltokinesisrequest.h
   streamjournaltokinesisrequest_p.h
   streamjournaltokinesisresponse.h

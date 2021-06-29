@@ -27,7 +27,7 @@ namespace AlexaForBusiness {
 
 class CreateAddressBookRequestPrivate;
 
-class QTAWS_EXPORT CreateAddressBookRequest : public AlexaForBusinessRequest {
+class QTAWSALEXAFORBUSINESS_EXPORT CreateAddressBookRequest : public AlexaForBusinessRequest {
 
 public:
     CreateAddressBookRequest(const CreateAddressBookRequest &other);

@@ -28,7 +28,7 @@ namespace FraudDetector {
 
 class GetExternalModelsResponsePrivate;
 
-class QTAWS_EXPORT GetExternalModelsResponse : public FraudDetectorResponse {
+class QTAWSFRAUDDETECTOR_EXPORT GetExternalModelsResponse : public FraudDetectorResponse {
     Q_OBJECT
 
 public:

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsioteventsdataglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -51,7 +53,7 @@ class ListAlarmsResponse;
 class ListDetectorsRequest;
 class ListDetectorsResponse;
 
-class QTAWS_EXPORT IoTEventsDataClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSIOTEVENTSDATA_EXPORT IoTEventsDataClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace CloudWatchEvents {
 
 class DescribeApiDestinationRequestPrivate;
 
-class QTAWS_EXPORT DescribeApiDestinationRequest : public CloudWatchEventsRequest {
+class QTAWSCLOUDWATCHEVENTS_EXPORT DescribeApiDestinationRequest : public CloudWatchEventsRequest {
 
 public:
     DescribeApiDestinationRequest(const DescribeApiDestinationRequest &other);

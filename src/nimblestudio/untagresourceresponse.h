@@ -28,7 +28,7 @@ namespace NimbleStudio {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public NimbleStudioResponse {
+class QTAWSNIMBLESTUDIO_EXPORT UntagResourceResponse : public NimbleStudioResponse {
     Q_OBJECT
 
 public:

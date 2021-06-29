@@ -28,7 +28,7 @@ namespace IAM {
 
 class RemoveRoleFromInstanceProfileResponsePrivate;
 
-class QTAWS_EXPORT RemoveRoleFromInstanceProfileResponse : public IamResponse {
+class QTAWSIAM_EXPORT RemoveRoleFromInstanceProfileResponse : public IamResponse {
     Q_OBJECT
 
 public:

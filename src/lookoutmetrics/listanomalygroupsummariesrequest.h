@@ -27,7 +27,7 @@ namespace LookoutMetrics {
 
 class ListAnomalyGroupSummariesRequestPrivate;
 
-class QTAWS_EXPORT ListAnomalyGroupSummariesRequest : public LookoutMetricsRequest {
+class QTAWSLOOKOUTMETRICS_EXPORT ListAnomalyGroupSummariesRequest : public LookoutMetricsRequest {
 
 public:
     ListAnomalyGroupSummariesRequest(const ListAnomalyGroupSummariesRequest &other);

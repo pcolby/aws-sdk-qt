@@ -27,7 +27,7 @@ namespace AppRunner {
 
 class CreateServiceRequestPrivate;
 
-class QTAWS_EXPORT CreateServiceRequest : public AppRunnerRequest {
+class QTAWSAPPRUNNER_EXPORT CreateServiceRequest : public AppRunnerRequest {
 
 public:
     CreateServiceRequest(const CreateServiceRequest &other);

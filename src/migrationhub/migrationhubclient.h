@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsmigrationhubglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -63,7 +65,7 @@ class NotifyMigrationTaskStateResponse;
 class PutResourceAttributesRequest;
 class PutResourceAttributesResponse;
 
-class QTAWS_EXPORT MigrationHubClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSMIGRATIONHUB_EXPORT MigrationHubClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

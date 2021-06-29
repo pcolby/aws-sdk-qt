@@ -28,7 +28,7 @@ namespace SecretsManager {
 
 class PutResourcePolicyResponsePrivate;
 
-class QTAWS_EXPORT PutResourcePolicyResponse : public SecretsManagerResponse {
+class QTAWSSECRETSMANAGER_EXPORT PutResourcePolicyResponse : public SecretsManagerResponse {
     Q_OBJECT
 
 public:

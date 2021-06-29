@@ -28,7 +28,7 @@ namespace CodeGuruProfiler {
 
 class RemovePermissionResponsePrivate;
 
-class QTAWS_EXPORT RemovePermissionResponse : public CodeGuruProfilerResponse {
+class QTAWSCODEGURUPROFILER_EXPORT RemovePermissionResponse : public CodeGuruProfilerResponse {
     Q_OBJECT
 
 public:

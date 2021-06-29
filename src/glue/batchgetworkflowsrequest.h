@@ -27,7 +27,7 @@ namespace Glue {
 
 class BatchGetWorkflowsRequestPrivate;
 
-class QTAWS_EXPORT BatchGetWorkflowsRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT BatchGetWorkflowsRequest : public GlueRequest {
 
 public:
     BatchGetWorkflowsRequest(const BatchGetWorkflowsRequest &other);

@@ -28,7 +28,7 @@ namespace CodeStar {
 
 class TagProjectResponsePrivate;
 
-class QTAWS_EXPORT TagProjectResponse : public CodeStarResponse {
+class QTAWSCODESTAR_EXPORT TagProjectResponse : public CodeStarResponse {
     Q_OBJECT
 
 public:

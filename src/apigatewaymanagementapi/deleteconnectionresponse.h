@@ -28,7 +28,7 @@ namespace ApiGatewayManagementApi {
 
 class DeleteConnectionResponsePrivate;
 
-class QTAWS_EXPORT DeleteConnectionResponse : public ApiGatewayManagementApiResponse {
+class QTAWSAPIGATEWAYMANAGEMENTAPI_EXPORT DeleteConnectionResponse : public ApiGatewayManagementApiResponse {
     Q_OBJECT
 
 public:

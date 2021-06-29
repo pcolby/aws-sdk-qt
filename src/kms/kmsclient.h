@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawskmsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -121,7 +123,7 @@ class UpdateKeyDescriptionResponse;
 class VerifyRequest;
 class VerifyResponse;
 
-class QTAWS_EXPORT KmsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSKMS_EXPORT KmsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

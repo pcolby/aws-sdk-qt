@@ -27,7 +27,7 @@ namespace ElasticLoadBalancingv2 {
 
 class DeleteListenerRequestPrivate;
 
-class QTAWS_EXPORT DeleteListenerRequest : public ElasticLoadBalancingv2Request {
+class QTAWSELASTICLOADBALANCINGV2_EXPORT DeleteListenerRequest : public ElasticLoadBalancingv2Request {
 
 public:
     DeleteListenerRequest(const DeleteListenerRequest &other);

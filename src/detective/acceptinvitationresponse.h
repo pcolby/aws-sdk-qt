@@ -28,7 +28,7 @@ namespace Detective {
 
 class AcceptInvitationResponsePrivate;
 
-class QTAWS_EXPORT AcceptInvitationResponse : public DetectiveResponse {
+class QTAWSDETECTIVE_EXPORT AcceptInvitationResponse : public DetectiveResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeOptionGroupsResponsePrivate;
 
-class QTAWS_EXPORT DescribeOptionGroupsResponse : public RdsResponse {
+class QTAWSRDS_EXPORT DescribeOptionGroupsResponse : public RdsResponse {
     Q_OBJECT
 
 public:

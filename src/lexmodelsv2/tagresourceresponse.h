@@ -28,7 +28,7 @@ namespace LexModelsV2 {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public LexModelsV2Response {
+class QTAWSLEXMODELSV2_EXPORT TagResourceResponse : public LexModelsV2Response {
     Q_OBJECT
 
 public:

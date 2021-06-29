@@ -27,7 +27,7 @@ namespace CodeArtifact {
 
 class GetPackageVersionAssetRequestPrivate;
 
-class QTAWS_EXPORT GetPackageVersionAssetRequest : public CodeArtifactRequest {
+class QTAWSCODEARTIFACT_EXPORT GetPackageVersionAssetRequest : public CodeArtifactRequest {
 
 public:
     GetPackageVersionAssetRequest(const GetPackageVersionAssetRequest &other);

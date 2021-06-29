@@ -28,7 +28,7 @@ namespace Chime {
 
 class ListPhoneNumberOrdersResponsePrivate;
 
-class QTAWS_EXPORT ListPhoneNumberOrdersResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT ListPhoneNumberOrdersResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

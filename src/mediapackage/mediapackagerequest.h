@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsmediapackageglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace MediaPackage {
 
 class MediaPackageRequestPrivate;
 
-class QTAWS_EXPORT MediaPackageRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSMEDIAPACKAGE_EXPORT MediaPackageRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by MediaPackage.

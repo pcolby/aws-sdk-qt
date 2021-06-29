@@ -27,7 +27,7 @@ namespace Neptune {
 
 class DeleteDBInstanceRequestPrivate;
 
-class QTAWS_EXPORT DeleteDBInstanceRequest : public NeptuneRequest {
+class QTAWSNEPTUNE_EXPORT DeleteDBInstanceRequest : public NeptuneRequest {
 
 public:
     DeleteDBInstanceRequest(const DeleteDBInstanceRequest &other);

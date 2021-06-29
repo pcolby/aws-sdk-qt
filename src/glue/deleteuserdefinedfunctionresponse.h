@@ -28,7 +28,7 @@ namespace Glue {
 
 class DeleteUserDefinedFunctionResponsePrivate;
 
-class QTAWS_EXPORT DeleteUserDefinedFunctionResponse : public GlueResponse {
+class QTAWSGLUE_EXPORT DeleteUserDefinedFunctionResponse : public GlueResponse {
     Q_OBJECT
 
 public:

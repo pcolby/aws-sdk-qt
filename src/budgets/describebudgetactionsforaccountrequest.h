@@ -27,7 +27,7 @@ namespace Budgets {
 
 class DescribeBudgetActionsForAccountRequestPrivate;
 
-class QTAWS_EXPORT DescribeBudgetActionsForAccountRequest : public BudgetsRequest {
+class QTAWSBUDGETS_EXPORT DescribeBudgetActionsForAccountRequest : public BudgetsRequest {
 
 public:
     DescribeBudgetActionsForAccountRequest(const DescribeBudgetActionsForAccountRequest &other);

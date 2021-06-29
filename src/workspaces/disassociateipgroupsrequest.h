@@ -27,7 +27,7 @@ namespace WorkSpaces {
 
 class DisassociateIpGroupsRequestPrivate;
 
-class QTAWS_EXPORT DisassociateIpGroupsRequest : public WorkSpacesRequest {
+class QTAWSWORKSPACES_EXPORT DisassociateIpGroupsRequest : public WorkSpacesRequest {
 
 public:
     DisassociateIpGroupsRequest(const DisassociateIpGroupsRequest &other);

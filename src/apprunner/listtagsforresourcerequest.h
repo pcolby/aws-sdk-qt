@@ -27,7 +27,7 @@ namespace AppRunner {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public AppRunnerRequest {
+class QTAWSAPPRUNNER_EXPORT ListTagsForResourceRequest : public AppRunnerRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

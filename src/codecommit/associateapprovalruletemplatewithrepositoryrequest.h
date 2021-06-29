@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class AssociateApprovalRuleTemplateWithRepositoryRequestPrivate;
 
-class QTAWS_EXPORT AssociateApprovalRuleTemplateWithRepositoryRequest : public CodeCommitRequest {
+class QTAWSCODECOMMIT_EXPORT AssociateApprovalRuleTemplateWithRepositoryRequest : public CodeCommitRequest {
 
 public:
     AssociateApprovalRuleTemplateWithRepositoryRequest(const AssociateApprovalRuleTemplateWithRepositoryRequest &other);

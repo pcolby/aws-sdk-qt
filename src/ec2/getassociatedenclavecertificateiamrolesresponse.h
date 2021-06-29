@@ -28,7 +28,7 @@ namespace EC2 {
 
 class GetAssociatedEnclaveCertificateIamRolesResponsePrivate;
 
-class QTAWS_EXPORT GetAssociatedEnclaveCertificateIamRolesResponse : public Ec2Response {
+class QTAWSEC2_EXPORT GetAssociatedEnclaveCertificateIamRolesResponse : public Ec2Response {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace Glue {
 
 class BatchGetJobsResponsePrivate;
 
-class QTAWS_EXPORT BatchGetJobsResponse : public GlueResponse {
+class QTAWSGLUE_EXPORT BatchGetJobsResponse : public GlueResponse {
     Q_OBJECT
 
 public:

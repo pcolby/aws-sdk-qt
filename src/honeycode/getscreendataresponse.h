@@ -28,7 +28,7 @@ namespace Honeycode {
 
 class GetScreenDataResponsePrivate;
 
-class QTAWS_EXPORT GetScreenDataResponse : public HoneycodeResponse {
+class QTAWSHONEYCODE_EXPORT GetScreenDataResponse : public HoneycodeResponse {
     Q_OBJECT
 
 public:

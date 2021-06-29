@@ -27,7 +27,7 @@ namespace CodeBuild {
 
 class BatchGetProjectsRequestPrivate;
 
-class QTAWS_EXPORT BatchGetProjectsRequest : public CodeBuildRequest {
+class QTAWSCODEBUILD_EXPORT BatchGetProjectsRequest : public CodeBuildRequest {
 
 public:
     BatchGetProjectsRequest(const BatchGetProjectsRequest &other);

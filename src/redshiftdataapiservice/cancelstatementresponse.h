@@ -28,7 +28,7 @@ namespace RedshiftDataAPIService {
 
 class CancelStatementResponsePrivate;
 
-class QTAWS_EXPORT CancelStatementResponse : public RedshiftDataAPIServiceResponse {
+class QTAWSREDSHIFTDATAAPISERVICE_EXPORT CancelStatementResponse : public RedshiftDataAPIServiceResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace AppMesh {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public AppMeshRequest {
+class QTAWSAPPMESH_EXPORT UntagResourceRequest : public AppMeshRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

@@ -27,7 +27,7 @@ namespace Outposts {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public OutpostsRequest {
+class QTAWSOUTPOSTS_EXPORT UntagResourceRequest : public OutpostsRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

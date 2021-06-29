@@ -27,7 +27,7 @@ namespace ElastiCache {
 
 class ModifyCacheSubnetGroupRequestPrivate;
 
-class QTAWS_EXPORT ModifyCacheSubnetGroupRequest : public ElastiCacheRequest {
+class QTAWSELASTICACHE_EXPORT ModifyCacheSubnetGroupRequest : public ElastiCacheRequest {
 
 public:
     ModifyCacheSubnetGroupRequest(const ModifyCacheSubnetGroupRequest &other);

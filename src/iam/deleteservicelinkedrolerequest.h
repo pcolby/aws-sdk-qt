@@ -27,7 +27,7 @@ namespace IAM {
 
 class DeleteServiceLinkedRoleRequestPrivate;
 
-class QTAWS_EXPORT DeleteServiceLinkedRoleRequest : public IamRequest {
+class QTAWSIAM_EXPORT DeleteServiceLinkedRoleRequest : public IamRequest {
 
 public:
     DeleteServiceLinkedRoleRequest(const DeleteServiceLinkedRoleRequest &other);

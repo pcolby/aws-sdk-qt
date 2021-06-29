@@ -27,7 +27,7 @@ namespace IAM {
 
 class TagServerCertificateRequestPrivate;
 
-class QTAWS_EXPORT TagServerCertificateRequest : public IamRequest {
+class QTAWSIAM_EXPORT TagServerCertificateRequest : public IamRequest {
 
 public:
     TagServerCertificateRequest(const TagServerCertificateRequest &other);

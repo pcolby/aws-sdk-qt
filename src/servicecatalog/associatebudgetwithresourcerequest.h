@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class AssociateBudgetWithResourceRequestPrivate;
 
-class QTAWS_EXPORT AssociateBudgetWithResourceRequest : public ServiceCatalogRequest {
+class QTAWSSERVICECATALOG_EXPORT AssociateBudgetWithResourceRequest : public ServiceCatalogRequest {
 
 public:
     AssociateBudgetWithResourceRequest(const AssociateBudgetWithResourceRequest &other);

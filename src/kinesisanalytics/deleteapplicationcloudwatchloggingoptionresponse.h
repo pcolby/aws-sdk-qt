@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 
 class DeleteApplicationCloudWatchLoggingOptionResponsePrivate;
 
-class QTAWS_EXPORT DeleteApplicationCloudWatchLoggingOptionResponse : public KinesisAnalyticsResponse {
+class QTAWSKINESISANALYTICS_EXPORT DeleteApplicationCloudWatchLoggingOptionResponse : public KinesisAnalyticsResponse {
     Q_OBJECT
 
 public:

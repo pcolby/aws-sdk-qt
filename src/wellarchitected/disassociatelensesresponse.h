@@ -28,7 +28,7 @@ namespace WellArchitected {
 
 class DisassociateLensesResponsePrivate;
 
-class QTAWS_EXPORT DisassociateLensesResponse : public WellArchitectedResponse {
+class QTAWSWELLARCHITECTED_EXPORT DisassociateLensesResponse : public WellArchitectedResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace IoTWireless {
 
 class GetWirelessDeviceRequestPrivate;
 
-class QTAWS_EXPORT GetWirelessDeviceRequest : public IoTWirelessRequest {
+class QTAWSIOTWIRELESS_EXPORT GetWirelessDeviceRequest : public IoTWirelessRequest {
 
 public:
     GetWirelessDeviceRequest(const GetWirelessDeviceRequest &other);

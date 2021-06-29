@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCLOUDWATCHLOGS_LIBRARY)
+
 add_library(QtAwsCloudWatchLogs
   associatekmskeyrequest.h
   associatekmskeyrequest_p.h
@@ -153,6 +155,7 @@ add_library(QtAwsCloudWatchLogs
   putsubscriptionfilterrequest_p.h
   putsubscriptionfilterresponse.h
   putsubscriptionfilterresponse_p.h
+  qtawscloudwatchlogsglobal.h
   startqueryrequest.h
   startqueryrequest_p.h
   startqueryresponse.h

@@ -27,7 +27,7 @@ namespace Redshift {
 
 class CreateHsmConfigurationRequestPrivate;
 
-class QTAWS_EXPORT CreateHsmConfigurationRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT CreateHsmConfigurationRequest : public RedshiftRequest {
 
 public:
     CreateHsmConfigurationRequest(const CreateHsmConfigurationRequest &other);

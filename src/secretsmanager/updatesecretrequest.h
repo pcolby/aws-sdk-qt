@@ -27,7 +27,7 @@ namespace SecretsManager {
 
 class UpdateSecretRequestPrivate;
 
-class QTAWS_EXPORT UpdateSecretRequest : public SecretsManagerRequest {
+class QTAWSSECRETSMANAGER_EXPORT UpdateSecretRequest : public SecretsManagerRequest {
 
 public:
     UpdateSecretRequest(const UpdateSecretRequest &other);

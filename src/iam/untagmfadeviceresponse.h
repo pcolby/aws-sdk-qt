@@ -28,7 +28,7 @@ namespace IAM {
 
 class UntagMFADeviceResponsePrivate;
 
-class QTAWS_EXPORT UntagMFADeviceResponse : public IamResponse {
+class QTAWSIAM_EXPORT UntagMFADeviceResponse : public IamResponse {
     Q_OBJECT
 
 public:

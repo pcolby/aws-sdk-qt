@@ -27,7 +27,7 @@ namespace ECR {
 
 class StartImageScanRequestPrivate;
 
-class QTAWS_EXPORT StartImageScanRequest : public EcrRequest {
+class QTAWSECR_EXPORT StartImageScanRequest : public EcrRequest {
 
 public:
     StartImageScanRequest(const StartImageScanRequest &other);

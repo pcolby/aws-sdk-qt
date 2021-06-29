@@ -27,7 +27,7 @@ namespace imagebuilder {
 
 class ListImagePipelineImagesRequestPrivate;
 
-class QTAWS_EXPORT ListImagePipelineImagesRequest : public imagebuilderRequest {
+class QTAWSIMAGEBUILDER_EXPORT ListImagePipelineImagesRequest : public imagebuilderRequest {
 
 public:
     ListImagePipelineImagesRequest(const ListImagePipelineImagesRequest &other);

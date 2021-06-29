@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class GetCloudFormationStackRecordsRequestPrivate;
 
-class QTAWS_EXPORT GetCloudFormationStackRecordsRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT GetCloudFormationStackRecordsRequest : public LightsailRequest {
 
 public:
     GetCloudFormationStackRecordsRequest(const GetCloudFormationStackRecordsRequest &other);

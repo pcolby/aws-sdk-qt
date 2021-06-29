@@ -21,6 +21,8 @@
 #define QTAWS_NETWORKFIREWALLRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsnetworkfirewallglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace NetworkFirewall {
 
 class NetworkFirewallResponsePrivate;
 
-class QTAWS_EXPORT NetworkFirewallResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSNETWORKFIREWALL_EXPORT NetworkFirewallResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

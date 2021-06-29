@@ -27,7 +27,7 @@ namespace EventBridge {
 
 class DeactivateEventSourceRequestPrivate;
 
-class QTAWS_EXPORT DeactivateEventSourceRequest : public EventBridgeRequest {
+class QTAWSEVENTBRIDGE_EXPORT DeactivateEventSourceRequest : public EventBridgeRequest {
 
 public:
     DeactivateEventSourceRequest(const DeactivateEventSourceRequest &other);

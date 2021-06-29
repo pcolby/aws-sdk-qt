@@ -27,7 +27,7 @@ namespace IoT1ClickProjects {
 
 class DeleteProjectRequestPrivate;
 
-class QTAWS_EXPORT DeleteProjectRequest : public IoT1ClickProjectsRequest {
+class QTAWSIOT1CLICKPROJECTS_EXPORT DeleteProjectRequest : public IoT1ClickProjectsRequest {
 
 public:
     DeleteProjectRequest(const DeleteProjectRequest &other);

@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 
 class DeregisterInstancesFromLoadBalancerResponsePrivate;
 
-class QTAWS_EXPORT DeregisterInstancesFromLoadBalancerResponse : public ElasticLoadBalancingResponse {
+class QTAWSELASTICLOADBALANCING_EXPORT DeregisterInstancesFromLoadBalancerResponse : public ElasticLoadBalancingResponse {
     Q_OBJECT
 
 public:

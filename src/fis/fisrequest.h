@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsfisglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace FIS {
 
 class FisRequestPrivate;
 
-class QTAWS_EXPORT FisRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSFIS_EXPORT FisRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by FIS.

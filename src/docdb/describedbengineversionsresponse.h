@@ -28,7 +28,7 @@ namespace DocDB {
 
 class DescribeDBEngineVersionsResponsePrivate;
 
-class QTAWS_EXPORT DescribeDBEngineVersionsResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT DescribeDBEngineVersionsResponse : public DocDBResponse {
     Q_OBJECT
 
 public:

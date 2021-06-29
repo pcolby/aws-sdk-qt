@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class StartConfigRulesEvaluationRequestPrivate;
 
-class QTAWS_EXPORT StartConfigRulesEvaluationRequest : public ConfigServiceRequest {
+class QTAWSCONFIGSERVICE_EXPORT StartConfigRulesEvaluationRequest : public ConfigServiceRequest {
 
 public:
     StartConfigRulesEvaluationRequest(const StartConfigRulesEvaluationRequest &other);

@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class StartRelationalDatabaseResponsePrivate;
 
-class QTAWS_EXPORT StartRelationalDatabaseResponse : public LightsailResponse {
+class QTAWSLIGHTSAIL_EXPORT StartRelationalDatabaseResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

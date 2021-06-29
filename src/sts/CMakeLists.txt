@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSTS_LIBRARY)
+
 add_library(QtAwsSts
   assumerolerequest.h
   assumerolerequest_p.h
@@ -31,6 +33,7 @@ add_library(QtAwsSts
   getsessiontokenrequest_p.h
   getsessiontokenresponse.h
   getsessiontokenresponse_p.h
+  qtawsstsglobal.h
   stsclient.h
   stsclient_p.h
   stsrequest.h

@@ -27,7 +27,7 @@ namespace Firehose {
 
 class PutRecordRequestPrivate;
 
-class QTAWS_EXPORT PutRecordRequest : public FirehoseRequest {
+class QTAWSFIREHOSE_EXPORT PutRecordRequest : public FirehoseRequest {
 
 public:
     PutRecordRequest(const PutRecordRequest &other);

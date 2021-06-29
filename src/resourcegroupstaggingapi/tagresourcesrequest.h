@@ -27,7 +27,7 @@ namespace ResourceGroupsTaggingAPI {
 
 class TagResourcesRequestPrivate;
 
-class QTAWS_EXPORT TagResourcesRequest : public ResourceGroupsTaggingAPIRequest {
+class QTAWSRESOURCEGROUPSTAGGINGAPI_EXPORT TagResourcesRequest : public ResourceGroupsTaggingAPIRequest {
 
 public:
     TagResourcesRequest(const TagResourcesRequest &other);

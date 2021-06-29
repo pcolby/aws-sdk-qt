@@ -28,7 +28,7 @@ namespace AppSync {
 
 class ListTypesResponsePrivate;
 
-class QTAWS_EXPORT ListTypesResponse : public AppSyncResponse {
+class QTAWSAPPSYNC_EXPORT ListTypesResponse : public AppSyncResponse {
     Q_OBJECT
 
 public:

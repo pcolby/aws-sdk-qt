@@ -27,7 +27,7 @@ namespace S3 {
 
 class DeleteBucketEncryptionRequestPrivate;
 
-class QTAWS_EXPORT DeleteBucketEncryptionRequest : public S3Request {
+class QTAWSS3_EXPORT DeleteBucketEncryptionRequest : public S3Request {
 
 public:
     DeleteBucketEncryptionRequest(const DeleteBucketEncryptionRequest &other);

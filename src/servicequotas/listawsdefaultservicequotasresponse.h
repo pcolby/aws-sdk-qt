@@ -28,7 +28,7 @@ namespace ServiceQuotas {
 
 class ListAWSDefaultServiceQuotasResponsePrivate;
 
-class QTAWS_EXPORT ListAWSDefaultServiceQuotasResponse : public ServiceQuotasResponse {
+class QTAWSSERVICEQUOTAS_EXPORT ListAWSDefaultServiceQuotasResponse : public ServiceQuotasResponse {
     Q_OBJECT
 
 public:

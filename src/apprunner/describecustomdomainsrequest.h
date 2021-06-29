@@ -27,7 +27,7 @@ namespace AppRunner {
 
 class DescribeCustomDomainsRequestPrivate;
 
-class QTAWS_EXPORT DescribeCustomDomainsRequest : public AppRunnerRequest {
+class QTAWSAPPRUNNER_EXPORT DescribeCustomDomainsRequest : public AppRunnerRequest {
 
 public:
     DescribeCustomDomainsRequest(const DescribeCustomDomainsRequest &other);

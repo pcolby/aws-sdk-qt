@@ -28,7 +28,7 @@ namespace Schemas {
 
 class DeleteSchemaVersionResponsePrivate;
 
-class QTAWS_EXPORT DeleteSchemaVersionResponse : public SchemasResponse {
+class QTAWSSCHEMAS_EXPORT DeleteSchemaVersionResponse : public SchemasResponse {
     Q_OBJECT
 
 public:

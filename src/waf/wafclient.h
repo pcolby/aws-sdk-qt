@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawswafglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -183,7 +185,7 @@ class UpdateWebACLResponse;
 class UpdateXssMatchSetRequest;
 class UpdateXssMatchSetResponse;
 
-class QTAWS_EXPORT WafClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSWAF_EXPORT WafClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace IoT {
 
 class DeleteBillingGroupRequestPrivate;
 
-class QTAWS_EXPORT DeleteBillingGroupRequest : public IoTRequest {
+class QTAWSIOT_EXPORT DeleteBillingGroupRequest : public IoTRequest {
 
 public:
     DeleteBillingGroupRequest(const DeleteBillingGroupRequest &other);

@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class UpdateFunctionRequestPrivate;
 
-class QTAWS_EXPORT UpdateFunctionRequest : public CloudFrontRequest {
+class QTAWSCLOUDFRONT_EXPORT UpdateFunctionRequest : public CloudFrontRequest {
 
 public:
     UpdateFunctionRequest(const UpdateFunctionRequest &other);

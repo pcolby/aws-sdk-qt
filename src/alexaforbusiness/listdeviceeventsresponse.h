@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class ListDeviceEventsResponsePrivate;
 
-class QTAWS_EXPORT ListDeviceEventsResponse : public AlexaForBusinessResponse {
+class QTAWSALEXAFORBUSINESS_EXPORT ListDeviceEventsResponse : public AlexaForBusinessResponse {
     Q_OBJECT
 
 public:

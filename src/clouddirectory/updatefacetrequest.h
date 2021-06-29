@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class UpdateFacetRequestPrivate;
 
-class QTAWS_EXPORT UpdateFacetRequest : public CloudDirectoryRequest {
+class QTAWSCLOUDDIRECTORY_EXPORT UpdateFacetRequest : public CloudDirectoryRequest {
 
 public:
     UpdateFacetRequest(const UpdateFacetRequest &other);

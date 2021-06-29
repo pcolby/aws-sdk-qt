@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 
 class DeletePipelineResponsePrivate;
 
-class QTAWS_EXPORT DeletePipelineResponse : public ElasticTranscoderResponse {
+class QTAWSELASTICTRANSCODER_EXPORT DeletePipelineResponse : public ElasticTranscoderResponse {
     Q_OBJECT
 
 public:

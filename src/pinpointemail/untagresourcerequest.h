@@ -27,7 +27,7 @@ namespace PinpointEmail {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public PinpointEmailRequest {
+class QTAWSPINPOINTEMAIL_EXPORT UntagResourceRequest : public PinpointEmailRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

@@ -28,7 +28,7 @@ namespace ResourceGroups {
 
 class PutGroupConfigurationResponsePrivate;
 
-class QTAWS_EXPORT PutGroupConfigurationResponse : public ResourceGroupsResponse {
+class QTAWSRESOURCEGROUPS_EXPORT PutGroupConfigurationResponse : public ResourceGroupsResponse {
     Q_OBJECT
 
 public:

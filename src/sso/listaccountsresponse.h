@@ -28,7 +28,7 @@ namespace SSO {
 
 class ListAccountsResponsePrivate;
 
-class QTAWS_EXPORT ListAccountsResponse : public SsoResponse {
+class QTAWSSSO_EXPORT ListAccountsResponse : public SsoResponse {
     Q_OBJECT
 
 public:

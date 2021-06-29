@@ -28,7 +28,7 @@ namespace Route53Resolver {
 
 class GetFirewallRuleGroupResponsePrivate;
 
-class QTAWS_EXPORT GetFirewallRuleGroupResponse : public Route53ResolverResponse {
+class QTAWSROUTE53RESOLVER_EXPORT GetFirewallRuleGroupResponse : public Route53ResolverResponse {
     Q_OBJECT
 
 public:

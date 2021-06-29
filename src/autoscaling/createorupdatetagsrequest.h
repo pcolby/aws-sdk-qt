@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class CreateOrUpdateTagsRequestPrivate;
 
-class QTAWS_EXPORT CreateOrUpdateTagsRequest : public AutoScalingRequest {
+class QTAWSAUTOSCALING_EXPORT CreateOrUpdateTagsRequest : public AutoScalingRequest {
 
 public:
     CreateOrUpdateTagsRequest(const CreateOrUpdateTagsRequest &other);

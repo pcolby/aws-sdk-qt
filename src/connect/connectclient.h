@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsconnectglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -233,7 +235,7 @@ class UpdateUserRoutingProfileResponse;
 class UpdateUserSecurityProfilesRequest;
 class UpdateUserSecurityProfilesResponse;
 
-class QTAWS_EXPORT ConnectClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCONNECT_EXPORT ConnectClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -21,6 +21,8 @@
 #define QTAWS_NETWORKMANAGERRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsnetworkmanagerglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace NetworkManager {
 
 class NetworkManagerResponsePrivate;
 
-class QTAWS_EXPORT NetworkManagerResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSNETWORKMANAGER_EXPORT NetworkManagerResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

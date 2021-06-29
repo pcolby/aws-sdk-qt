@@ -27,7 +27,7 @@ namespace IAM {
 
 class ListSAMLProvidersRequestPrivate;
 
-class QTAWS_EXPORT ListSAMLProvidersRequest : public IamRequest {
+class QTAWSIAM_EXPORT ListSAMLProvidersRequest : public IamRequest {
 
 public:
     ListSAMLProvidersRequest(const ListSAMLProvidersRequest &other);

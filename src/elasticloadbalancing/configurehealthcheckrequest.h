@@ -27,7 +27,7 @@ namespace ElasticLoadBalancing {
 
 class ConfigureHealthCheckRequestPrivate;
 
-class QTAWS_EXPORT ConfigureHealthCheckRequest : public ElasticLoadBalancingRequest {
+class QTAWSELASTICLOADBALANCING_EXPORT ConfigureHealthCheckRequest : public ElasticLoadBalancingRequest {
 
 public:
     ConfigureHealthCheckRequest(const ConfigureHealthCheckRequest &other);

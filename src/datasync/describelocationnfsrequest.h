@@ -27,7 +27,7 @@ namespace DataSync {
 
 class DescribeLocationNfsRequestPrivate;
 
-class QTAWS_EXPORT DescribeLocationNfsRequest : public DataSyncRequest {
+class QTAWSDATASYNC_EXPORT DescribeLocationNfsRequest : public DataSyncRequest {
 
 public:
     DescribeLocationNfsRequest(const DescribeLocationNfsRequest &other);

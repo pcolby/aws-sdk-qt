@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsec2global.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -931,7 +933,7 @@ class UpdateSecurityGroupRuleDescriptionsIngressResponse;
 class WithdrawByoipCidrRequest;
 class WithdrawByoipCidrResponse;
 
-class QTAWS_EXPORT Ec2Client : public QtAws::Core::AwsAbstractClient {
+class QTAWSEC2_EXPORT Ec2Client : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

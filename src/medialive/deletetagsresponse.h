@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class DeleteTagsResponsePrivate;
 
-class QTAWS_EXPORT DeleteTagsResponse : public MediaLiveResponse {
+class QTAWSMEDIALIVE_EXPORT DeleteTagsResponse : public MediaLiveResponse {
     Q_OBJECT
 
 public:

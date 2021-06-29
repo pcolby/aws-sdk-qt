@@ -21,6 +21,8 @@
 #define QTAWS_DETECTIVERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsdetectiveglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Detective {
 
 class DetectiveResponsePrivate;
 
-class QTAWS_EXPORT DetectiveResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSDETECTIVE_EXPORT DetectiveResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

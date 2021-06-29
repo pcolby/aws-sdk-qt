@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 
 class GetPackageVersionHistoryResponsePrivate;
 
-class QTAWS_EXPORT GetPackageVersionHistoryResponse : public ElasticsearchServiceResponse {
+class QTAWSELASTICSEARCHSERVICE_EXPORT GetPackageVersionHistoryResponse : public ElasticsearchServiceResponse {
     Q_OBJECT
 
 public:

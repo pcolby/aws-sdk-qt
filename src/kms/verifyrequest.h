@@ -27,7 +27,7 @@ namespace KMS {
 
 class VerifyRequestPrivate;
 
-class QTAWS_EXPORT VerifyRequest : public KmsRequest {
+class QTAWSKMS_EXPORT VerifyRequest : public KmsRequest {
 
 public:
     VerifyRequest(const VerifyRequest &other);

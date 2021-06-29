@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class GetRemoteAccessSessionRequestPrivate;
 
-class QTAWS_EXPORT GetRemoteAccessSessionRequest : public DeviceFarmRequest {
+class QTAWSDEVICEFARM_EXPORT GetRemoteAccessSessionRequest : public DeviceFarmRequest {
 
 public:
     GetRemoteAccessSessionRequest(const GetRemoteAccessSessionRequest &other);

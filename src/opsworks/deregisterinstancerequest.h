@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class DeregisterInstanceRequestPrivate;
 
-class QTAWS_EXPORT DeregisterInstanceRequest : public OpsWorksRequest {
+class QTAWSOPSWORKS_EXPORT DeregisterInstanceRequest : public OpsWorksRequest {
 
 public:
     DeregisterInstanceRequest(const DeregisterInstanceRequest &other);

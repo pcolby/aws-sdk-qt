@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CreateRestoreImageTaskResponsePrivate;
 
-class QTAWS_EXPORT CreateRestoreImageTaskResponse : public Ec2Response {
+class QTAWSEC2_EXPORT CreateRestoreImageTaskResponse : public Ec2Response {
     Q_OBJECT
 
 public:

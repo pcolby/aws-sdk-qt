@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 
 class ListDomainNamesResponsePrivate;
 
-class QTAWS_EXPORT ListDomainNamesResponse : public ElasticsearchServiceResponse {
+class QTAWSELASTICSEARCHSERVICE_EXPORT ListDomainNamesResponse : public ElasticsearchServiceResponse {
     Q_OBJECT
 
 public:

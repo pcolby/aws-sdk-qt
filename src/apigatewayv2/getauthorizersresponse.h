@@ -28,7 +28,7 @@ namespace ApiGatewayV2 {
 
 class GetAuthorizersResponsePrivate;
 
-class QTAWS_EXPORT GetAuthorizersResponse : public ApiGatewayV2Response {
+class QTAWSAPIGATEWAYV2_EXPORT GetAuthorizersResponse : public ApiGatewayV2Response {
     Q_OBJECT
 
 public:

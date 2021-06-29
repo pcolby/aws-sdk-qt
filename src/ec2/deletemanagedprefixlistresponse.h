@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteManagedPrefixListResponsePrivate;
 
-class QTAWS_EXPORT DeleteManagedPrefixListResponse : public Ec2Response {
+class QTAWSEC2_EXPORT DeleteManagedPrefixListResponse : public Ec2Response {
     Q_OBJECT
 
 public:

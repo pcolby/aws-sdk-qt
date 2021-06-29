@@ -27,7 +27,7 @@ namespace KMS {
 
 class SignRequestPrivate;
 
-class QTAWS_EXPORT SignRequest : public KmsRequest {
+class QTAWSKMS_EXPORT SignRequest : public KmsRequest {
 
 public:
     SignRequest(const SignRequest &other);

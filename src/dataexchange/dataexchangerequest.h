@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsdataexchangeglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace DataExchange {
 
 class DataExchangeRequestPrivate;
 
-class QTAWS_EXPORT DataExchangeRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSDATAEXCHANGE_EXPORT DataExchangeRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by DataExchange.

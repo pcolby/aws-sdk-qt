@@ -27,7 +27,7 @@ namespace CloudHSMV2 {
 
 class CreateClusterRequestPrivate;
 
-class QTAWS_EXPORT CreateClusterRequest : public CloudHSMV2Request {
+class QTAWSCLOUDHSMV2_EXPORT CreateClusterRequest : public CloudHSMV2Request {
 
 public:
     CreateClusterRequest(const CreateClusterRequest &other);

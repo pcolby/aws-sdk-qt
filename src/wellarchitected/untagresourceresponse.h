@@ -28,7 +28,7 @@ namespace WellArchitected {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public WellArchitectedResponse {
+class QTAWSWELLARCHITECTED_EXPORT UntagResourceResponse : public WellArchitectedResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace DocDB {
 
 class DescribeCertificatesRequestPrivate;
 
-class QTAWS_EXPORT DescribeCertificatesRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT DescribeCertificatesRequest : public DocDBRequest {
 
 public:
     DescribeCertificatesRequest(const DescribeCertificatesRequest &other);

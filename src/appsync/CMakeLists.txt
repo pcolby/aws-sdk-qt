@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSAPPSYNC_LIBRARY)
+
 add_library(QtAwsAppSync
   appsyncclient.h
   appsyncclient_p.h
@@ -129,6 +131,7 @@ add_library(QtAwsAppSync
   listtypesrequest_p.h
   listtypesresponse.h
   listtypesresponse_p.h
+  qtawsappsyncglobal.h
   startschemacreationrequest.h
   startschemacreationrequest_p.h
   startschemacreationresponse.h

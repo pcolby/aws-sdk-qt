@@ -28,7 +28,7 @@ namespace PinpointEmail {
 
 class GetEmailIdentityResponsePrivate;
 
-class QTAWS_EXPORT GetEmailIdentityResponse : public PinpointEmailResponse {
+class QTAWSPINPOINTEMAIL_EXPORT GetEmailIdentityResponse : public PinpointEmailResponse {
     Q_OBJECT
 
 public:

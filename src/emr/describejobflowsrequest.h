@@ -27,7 +27,7 @@ namespace EMR {
 
 class DescribeJobFlowsRequestPrivate;
 
-class QTAWS_EXPORT DescribeJobFlowsRequest : public EmrRequest {
+class QTAWSEMR_EXPORT DescribeJobFlowsRequest : public EmrRequest {
 
 public:
     DescribeJobFlowsRequest(const DescribeJobFlowsRequest &other);

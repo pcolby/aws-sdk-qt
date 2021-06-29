@@ -28,7 +28,7 @@ namespace ApiGatewayV2 {
 
 class ResetAuthorizersCacheResponsePrivate;
 
-class QTAWS_EXPORT ResetAuthorizersCacheResponse : public ApiGatewayV2Response {
+class QTAWSAPIGATEWAYV2_EXPORT ResetAuthorizersCacheResponse : public ApiGatewayV2Response {
     Q_OBJECT
 
 public:

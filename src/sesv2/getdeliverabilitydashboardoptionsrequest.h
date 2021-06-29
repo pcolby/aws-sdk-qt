@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class GetDeliverabilityDashboardOptionsRequestPrivate;
 
-class QTAWS_EXPORT GetDeliverabilityDashboardOptionsRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT GetDeliverabilityDashboardOptionsRequest : public Sesv2Request {
 
 public:
     GetDeliverabilityDashboardOptionsRequest(const GetDeliverabilityDashboardOptionsRequest &other);

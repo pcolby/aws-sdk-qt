@@ -27,7 +27,7 @@ namespace AccessAnalyzer {
 
 class ListFindingsRequestPrivate;
 
-class QTAWS_EXPORT ListFindingsRequest : public AccessAnalyzerRequest {
+class QTAWSACCESSANALYZER_EXPORT ListFindingsRequest : public AccessAnalyzerRequest {
 
 public:
     ListFindingsRequest(const ListFindingsRequest &other);

@@ -27,7 +27,7 @@ namespace IAM {
 
 class DeleteAccountAliasRequestPrivate;
 
-class QTAWS_EXPORT DeleteAccountAliasRequest : public IamRequest {
+class QTAWSIAM_EXPORT DeleteAccountAliasRequest : public IamRequest {
 
 public:
     DeleteAccountAliasRequest(const DeleteAccountAliasRequest &other);

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSDEVOPSGURU_LIBRARY)
+
 add_library(QtAwsDevOpsGuru
   addnotificationchannelrequest.h
   addnotificationchannelrequest_p.h
@@ -69,6 +71,7 @@ add_library(QtAwsDevOpsGuru
   putfeedbackrequest_p.h
   putfeedbackresponse.h
   putfeedbackresponse_p.h
+  qtawsdevopsguruglobal.h
   removenotificationchannelrequest.h
   removenotificationchannelrequest_p.h
   removenotificationchannelresponse.h

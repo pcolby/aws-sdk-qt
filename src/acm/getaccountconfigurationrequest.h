@@ -27,7 +27,7 @@ namespace ACM {
 
 class GetAccountConfigurationRequestPrivate;
 
-class QTAWS_EXPORT GetAccountConfigurationRequest : public AcmRequest {
+class QTAWSACM_EXPORT GetAccountConfigurationRequest : public AcmRequest {
 
 public:
     GetAccountConfigurationRequest(const GetAccountConfigurationRequest &other);

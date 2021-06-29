@@ -28,7 +28,7 @@ namespace Backup {
 
 class PutBackupVaultAccessPolicyResponsePrivate;
 
-class QTAWS_EXPORT PutBackupVaultAccessPolicyResponse : public BackupResponse {
+class QTAWSBACKUP_EXPORT PutBackupVaultAccessPolicyResponse : public BackupResponse {
     Q_OBJECT
 
 public:

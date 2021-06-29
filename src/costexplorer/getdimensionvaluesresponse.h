@@ -28,7 +28,7 @@ namespace CostExplorer {
 
 class GetDimensionValuesResponsePrivate;
 
-class QTAWS_EXPORT GetDimensionValuesResponse : public CostExplorerResponse {
+class QTAWSCOSTEXPLORER_EXPORT GetDimensionValuesResponse : public CostExplorerResponse {
     Q_OBJECT
 
 public:

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsneptuneglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -155,7 +157,7 @@ class StartDBClusterResponse;
 class StopDBClusterRequest;
 class StopDBClusterResponse;
 
-class QTAWS_EXPORT NeptuneClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSNEPTUNE_EXPORT NeptuneClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

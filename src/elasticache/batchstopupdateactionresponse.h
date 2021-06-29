@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class BatchStopUpdateActionResponsePrivate;
 
-class QTAWS_EXPORT BatchStopUpdateActionResponse : public ElastiCacheResponse {
+class QTAWSELASTICACHE_EXPORT BatchStopUpdateActionResponse : public ElastiCacheResponse {
     Q_OBJECT
 
 public:

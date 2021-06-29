@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSQUICKSIGHT_LIBRARY)
+
 add_library(QtAwsQuickSight
   cancelingestionrequest.h
   cancelingestionrequest_p.h
@@ -291,6 +293,7 @@ add_library(QtAwsQuickSight
   listusersrequest_p.h
   listusersresponse.h
   listusersresponse_p.h
+  qtawsquicksightglobal.h
   quicksightclient.h
   quicksightclient_p.h
   quicksightrequest.h

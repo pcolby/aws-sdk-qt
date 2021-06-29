@@ -28,7 +28,7 @@ namespace Route53Resolver {
 
 class UpdateFirewallRuleResponsePrivate;
 
-class QTAWS_EXPORT UpdateFirewallRuleResponse : public Route53ResolverResponse {
+class QTAWSROUTE53RESOLVER_EXPORT UpdateFirewallRuleResponse : public Route53ResolverResponse {
     Q_OBJECT
 
 public:

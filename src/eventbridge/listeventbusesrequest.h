@@ -27,7 +27,7 @@ namespace EventBridge {
 
 class ListEventBusesRequestPrivate;
 
-class QTAWS_EXPORT ListEventBusesRequest : public EventBridgeRequest {
+class QTAWSEVENTBRIDGE_EXPORT ListEventBusesRequest : public EventBridgeRequest {
 
 public:
     ListEventBusesRequest(const ListEventBusesRequest &other);

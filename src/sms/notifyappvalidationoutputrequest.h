@@ -27,7 +27,7 @@ namespace SMS {
 
 class NotifyAppValidationOutputRequestPrivate;
 
-class QTAWS_EXPORT NotifyAppValidationOutputRequest : public SmsRequest {
+class QTAWSSMS_EXPORT NotifyAppValidationOutputRequest : public SmsRequest {
 
 public:
     NotifyAppValidationOutputRequest(const NotifyAppValidationOutputRequest &other);

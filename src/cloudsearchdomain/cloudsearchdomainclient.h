@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawscloudsearchdomainglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -35,7 +37,7 @@ class SuggestResponse;
 class UploadDocumentsRequest;
 class UploadDocumentsResponse;
 
-class QTAWS_EXPORT CloudSearchDomainClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCLOUDSEARCHDOMAIN_EXPORT CloudSearchDomainClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

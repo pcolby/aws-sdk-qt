@@ -27,7 +27,7 @@ namespace AuditManager {
 
 class ListKeywordsForDataSourceRequestPrivate;
 
-class QTAWS_EXPORT ListKeywordsForDataSourceRequest : public AuditManagerRequest {
+class QTAWSAUDITMANAGER_EXPORT ListKeywordsForDataSourceRequest : public AuditManagerRequest {
 
 public:
     ListKeywordsForDataSourceRequest(const ListKeywordsForDataSourceRequest &other);

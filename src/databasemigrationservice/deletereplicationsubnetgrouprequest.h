@@ -27,7 +27,7 @@ namespace DatabaseMigrationService {
 
 class DeleteReplicationSubnetGroupRequestPrivate;
 
-class QTAWS_EXPORT DeleteReplicationSubnetGroupRequest : public DatabaseMigrationServiceRequest {
+class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DeleteReplicationSubnetGroupRequest : public DatabaseMigrationServiceRequest {
 
 public:
     DeleteReplicationSubnetGroupRequest(const DeleteReplicationSubnetGroupRequest &other);

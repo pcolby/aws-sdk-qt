@@ -27,7 +27,7 @@ namespace IdentityStore {
 
 class ListUsersRequestPrivate;
 
-class QTAWS_EXPORT ListUsersRequest : public IdentityStoreRequest {
+class QTAWSIDENTITYSTORE_EXPORT ListUsersRequest : public IdentityStoreRequest {
 
 public:
     ListUsersRequest(const ListUsersRequest &other);

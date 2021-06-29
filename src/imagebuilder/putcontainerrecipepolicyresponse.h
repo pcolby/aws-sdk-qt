@@ -28,7 +28,7 @@ namespace imagebuilder {
 
 class PutContainerRecipePolicyResponsePrivate;
 
-class QTAWS_EXPORT PutContainerRecipePolicyResponse : public imagebuilderResponse {
+class QTAWSIMAGEBUILDER_EXPORT PutContainerRecipePolicyResponse : public imagebuilderResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace AppMesh {
 
 class DeleteVirtualServiceRequestPrivate;
 
-class QTAWS_EXPORT DeleteVirtualServiceRequest : public AppMeshRequest {
+class QTAWSAPPMESH_EXPORT DeleteVirtualServiceRequest : public AppMeshRequest {
 
 public:
     DeleteVirtualServiceRequest(const DeleteVirtualServiceRequest &other);

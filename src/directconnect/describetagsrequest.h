@@ -27,7 +27,7 @@ namespace DirectConnect {
 
 class DescribeTagsRequestPrivate;
 
-class QTAWS_EXPORT DescribeTagsRequest : public DirectConnectRequest {
+class QTAWSDIRECTCONNECT_EXPORT DescribeTagsRequest : public DirectConnectRequest {
 
 public:
     DescribeTagsRequest(const DescribeTagsRequest &other);

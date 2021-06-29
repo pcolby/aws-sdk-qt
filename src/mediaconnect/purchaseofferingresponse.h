@@ -28,7 +28,7 @@ namespace MediaConnect {
 
 class PurchaseOfferingResponsePrivate;
 
-class QTAWS_EXPORT PurchaseOfferingResponse : public MediaConnectResponse {
+class QTAWSMEDIACONNECT_EXPORT PurchaseOfferingResponse : public MediaConnectResponse {
     Q_OBJECT
 
 public:

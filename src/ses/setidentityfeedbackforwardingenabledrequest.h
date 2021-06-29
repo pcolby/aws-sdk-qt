@@ -27,7 +27,7 @@ namespace SES {
 
 class SetIdentityFeedbackForwardingEnabledRequestPrivate;
 
-class QTAWS_EXPORT SetIdentityFeedbackForwardingEnabledRequest : public SesRequest {
+class QTAWSSES_EXPORT SetIdentityFeedbackForwardingEnabledRequest : public SesRequest {
 
 public:
     SetIdentityFeedbackForwardingEnabledRequest(const SetIdentityFeedbackForwardingEnabledRequest &other);

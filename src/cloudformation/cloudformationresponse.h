@@ -21,6 +21,8 @@
 #define QTAWS_CLOUDFORMATIONRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawscloudformationglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace CloudFormation {
 
 class CloudFormationResponsePrivate;
 
-class QTAWS_EXPORT CloudFormationResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCLOUDFORMATION_EXPORT CloudFormationResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace CloudHSM {
 
 class DeleteHsmRequestPrivate;
 
-class QTAWS_EXPORT DeleteHsmRequest : public CloudHSMRequest {
+class QTAWSCLOUDHSM_EXPORT DeleteHsmRequest : public CloudHSMRequest {
 
 public:
     DeleteHsmRequest(const DeleteHsmRequest &other);

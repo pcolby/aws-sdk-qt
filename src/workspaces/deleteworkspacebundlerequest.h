@@ -27,7 +27,7 @@ namespace WorkSpaces {
 
 class DeleteWorkspaceBundleRequestPrivate;
 
-class QTAWS_EXPORT DeleteWorkspaceBundleRequest : public WorkSpacesRequest {
+class QTAWSWORKSPACES_EXPORT DeleteWorkspaceBundleRequest : public WorkSpacesRequest {
 
 public:
     DeleteWorkspaceBundleRequest(const DeleteWorkspaceBundleRequest &other);

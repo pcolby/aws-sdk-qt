@@ -28,7 +28,7 @@ namespace ECS {
 
 class DiscoverPollEndpointResponsePrivate;
 
-class QTAWS_EXPORT DiscoverPollEndpointResponse : public EcsResponse {
+class QTAWSECS_EXPORT DiscoverPollEndpointResponse : public EcsResponse {
     Q_OBJECT
 
 public:

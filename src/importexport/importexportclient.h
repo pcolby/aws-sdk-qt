@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsimportexportglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -41,7 +43,7 @@ class ListJobsResponse;
 class UpdateJobRequest;
 class UpdateJobResponse;
 
-class QTAWS_EXPORT ImportExportClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSIMPORTEXPORT_EXPORT ImportExportClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

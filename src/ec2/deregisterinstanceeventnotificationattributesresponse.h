@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeregisterInstanceEventNotificationAttributesResponsePrivate;
 
-class QTAWS_EXPORT DeregisterInstanceEventNotificationAttributesResponse : public Ec2Response {
+class QTAWSEC2_EXPORT DeregisterInstanceEventNotificationAttributesResponse : public Ec2Response {
     Q_OBJECT
 
 public:

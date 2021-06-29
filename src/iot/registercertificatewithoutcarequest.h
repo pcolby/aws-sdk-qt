@@ -27,7 +27,7 @@ namespace IoT {
 
 class RegisterCertificateWithoutCARequestPrivate;
 
-class QTAWS_EXPORT RegisterCertificateWithoutCARequest : public IoTRequest {
+class QTAWSIOT_EXPORT RegisterCertificateWithoutCARequest : public IoTRequest {
 
 public:
     RegisterCertificateWithoutCARequest(const RegisterCertificateWithoutCARequest &other);

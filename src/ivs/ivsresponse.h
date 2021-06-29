@@ -21,6 +21,8 @@
 #define QTAWS_IVSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsivsglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace IVS {
 
 class IvsResponsePrivate;
 
-class QTAWS_EXPORT IvsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSIVS_EXPORT IvsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

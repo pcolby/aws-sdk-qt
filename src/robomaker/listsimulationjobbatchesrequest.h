@@ -27,7 +27,7 @@ namespace RoboMaker {
 
 class ListSimulationJobBatchesRequestPrivate;
 
-class QTAWS_EXPORT ListSimulationJobBatchesRequest : public RoboMakerRequest {
+class QTAWSROBOMAKER_EXPORT ListSimulationJobBatchesRequest : public RoboMakerRequest {
 
 public:
     ListSimulationJobBatchesRequest(const ListSimulationJobBatchesRequest &other);

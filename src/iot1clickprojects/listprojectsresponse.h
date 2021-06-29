@@ -28,7 +28,7 @@ namespace IoT1ClickProjects {
 
 class ListProjectsResponsePrivate;
 
-class QTAWS_EXPORT ListProjectsResponse : public IoT1ClickProjectsResponse {
+class QTAWSIOT1CLICKPROJECTS_EXPORT ListProjectsResponse : public IoT1ClickProjectsResponse {
     Q_OBJECT
 
 public:

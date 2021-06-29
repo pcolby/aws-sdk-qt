@@ -27,7 +27,7 @@ namespace DirectConnect {
 
 class CreateLagRequestPrivate;
 
-class QTAWS_EXPORT CreateLagRequest : public DirectConnectRequest {
+class QTAWSDIRECTCONNECT_EXPORT CreateLagRequest : public DirectConnectRequest {
 
 public:
     CreateLagRequest(const CreateLagRequest &other);

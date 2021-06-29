@@ -27,7 +27,7 @@ namespace SSMIncidents {
 
 class UpdateIncidentRecordRequestPrivate;
 
-class QTAWS_EXPORT UpdateIncidentRecordRequest : public SSMIncidentsRequest {
+class QTAWSSSMINCIDENTS_EXPORT UpdateIncidentRecordRequest : public SSMIncidentsRequest {
 
 public:
     UpdateIncidentRecordRequest(const UpdateIncidentRecordRequest &other);

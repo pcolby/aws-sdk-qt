@@ -27,7 +27,7 @@ namespace Connect {
 
 class ListPhoneNumbersRequestPrivate;
 
-class QTAWS_EXPORT ListPhoneNumbersRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT ListPhoneNumbersRequest : public ConnectRequest {
 
 public:
     ListPhoneNumbersRequest(const ListPhoneNumbersRequest &other);

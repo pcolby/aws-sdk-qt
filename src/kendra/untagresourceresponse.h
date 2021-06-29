@@ -28,7 +28,7 @@ namespace kendra {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public kendraResponse {
+class QTAWSKENDRA_EXPORT UntagResourceResponse : public kendraResponse {
     Q_OBJECT
 
 public:

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSQS_LIBRARY)
+
 add_library(QtAwsSqs
   addpermissionrequest.h
   addpermissionrequest_p.h
@@ -51,6 +53,7 @@ add_library(QtAwsSqs
   purgequeuerequest_p.h
   purgequeueresponse.h
   purgequeueresponse_p.h
+  qtawssqsglobal.h
   receivemessagerequest.h
   receivemessagerequest_p.h
   receivemessageresponse.h

@@ -21,6 +21,8 @@
 #define QTAWS_PERSONALIZERUNTIMERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawspersonalizeruntimeglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace PersonalizeRuntime {
 
 class PersonalizeRuntimeResponsePrivate;
 
-class QTAWS_EXPORT PersonalizeRuntimeResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSPERSONALIZERUNTIME_EXPORT PersonalizeRuntimeResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

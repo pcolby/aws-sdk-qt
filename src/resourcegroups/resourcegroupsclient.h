@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsresourcegroupsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -61,7 +63,7 @@ class UpdateGroupResponse;
 class UpdateGroupQueryRequest;
 class UpdateGroupQueryResponse;
 
-class QTAWS_EXPORT ResourceGroupsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSRESOURCEGROUPS_EXPORT ResourceGroupsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

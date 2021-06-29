@@ -27,7 +27,7 @@ namespace Glue {
 
 class GetTriggerRequestPrivate;
 
-class QTAWS_EXPORT GetTriggerRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT GetTriggerRequest : public GlueRequest {
 
 public:
     GetTriggerRequest(const GetTriggerRequest &other);

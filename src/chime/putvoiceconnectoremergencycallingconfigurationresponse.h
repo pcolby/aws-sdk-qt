@@ -28,7 +28,7 @@ namespace Chime {
 
 class PutVoiceConnectorEmergencyCallingConfigurationResponsePrivate;
 
-class QTAWS_EXPORT PutVoiceConnectorEmergencyCallingConfigurationResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT PutVoiceConnectorEmergencyCallingConfigurationResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

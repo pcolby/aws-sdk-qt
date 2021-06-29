@@ -27,7 +27,7 @@ namespace CloudHSMV2 {
 
 class RestoreBackupRequestPrivate;
 
-class QTAWS_EXPORT RestoreBackupRequest : public CloudHSMV2Request {
+class QTAWSCLOUDHSMV2_EXPORT RestoreBackupRequest : public CloudHSMV2Request {
 
 public:
     RestoreBackupRequest(const RestoreBackupRequest &other);

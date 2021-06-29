@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsgroundstationglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -79,7 +81,7 @@ class UpdateConfigResponse;
 class UpdateMissionProfileRequest;
 class UpdateMissionProfileResponse;
 
-class QTAWS_EXPORT GroundStationClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSGROUNDSTATION_EXPORT GroundStationClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

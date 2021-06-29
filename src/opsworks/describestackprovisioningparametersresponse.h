@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class DescribeStackProvisioningParametersResponsePrivate;
 
-class QTAWS_EXPORT DescribeStackProvisioningParametersResponse : public OpsWorksResponse {
+class QTAWSOPSWORKS_EXPORT DescribeStackProvisioningParametersResponse : public OpsWorksResponse {
     Q_OBJECT
 
 public:

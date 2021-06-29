@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsdynamodbglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -129,7 +131,7 @@ class UpdateTableReplicaAutoScalingResponse;
 class UpdateTimeToLiveRequest;
 class UpdateTimeToLiveResponse;
 
-class QTAWS_EXPORT DynamoDBClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSDYNAMODB_EXPORT DynamoDBClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

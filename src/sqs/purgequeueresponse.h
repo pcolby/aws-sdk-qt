@@ -28,7 +28,7 @@ namespace SQS {
 
 class PurgeQueueResponsePrivate;
 
-class QTAWS_EXPORT PurgeQueueResponse : public SqsResponse {
+class QTAWSSQS_EXPORT PurgeQueueResponse : public SqsResponse {
     Q_OBJECT
 
 public:

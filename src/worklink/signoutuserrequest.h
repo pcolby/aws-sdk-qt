@@ -27,7 +27,7 @@ namespace WorkLink {
 
 class SignOutUserRequestPrivate;
 
-class QTAWS_EXPORT SignOutUserRequest : public WorkLinkRequest {
+class QTAWSWORKLINK_EXPORT SignOutUserRequest : public WorkLinkRequest {
 
 public:
     SignOutUserRequest(const SignOutUserRequest &other);

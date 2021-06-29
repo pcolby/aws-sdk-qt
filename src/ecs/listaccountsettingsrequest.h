@@ -27,7 +27,7 @@ namespace ECS {
 
 class ListAccountSettingsRequestPrivate;
 
-class QTAWS_EXPORT ListAccountSettingsRequest : public EcsRequest {
+class QTAWSECS_EXPORT ListAccountSettingsRequest : public EcsRequest {
 
 public:
     ListAccountSettingsRequest(const ListAccountSettingsRequest &other);

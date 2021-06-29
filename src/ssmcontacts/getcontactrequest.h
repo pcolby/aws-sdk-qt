@@ -27,7 +27,7 @@ namespace SSMContacts {
 
 class GetContactRequestPrivate;
 
-class QTAWS_EXPORT GetContactRequest : public SSMContactsRequest {
+class QTAWSSSMCONTACTS_EXPORT GetContactRequest : public SSMContactsRequest {
 
 public:
     GetContactRequest(const GetContactRequest &other);

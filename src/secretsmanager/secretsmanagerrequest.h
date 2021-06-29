@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawssecretsmanagerglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace SecretsManager {
 
 class SecretsManagerRequestPrivate;
 
-class QTAWS_EXPORT SecretsManagerRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSECRETSMANAGER_EXPORT SecretsManagerRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SecretsManager.

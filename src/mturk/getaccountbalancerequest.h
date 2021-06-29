@@ -27,7 +27,7 @@ namespace MTurk {
 
 class GetAccountBalanceRequestPrivate;
 
-class QTAWS_EXPORT GetAccountBalanceRequest : public MTurkRequest {
+class QTAWSMTURK_EXPORT GetAccountBalanceRequest : public MTurkRequest {
 
 public:
     GetAccountBalanceRequest(const GetAccountBalanceRequest &other);

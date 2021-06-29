@@ -28,7 +28,7 @@ namespace CloudWatch {
 
 class PutCompositeAlarmResponsePrivate;
 
-class QTAWS_EXPORT PutCompositeAlarmResponse : public CloudWatchResponse {
+class QTAWSCLOUDWATCH_EXPORT PutCompositeAlarmResponse : public CloudWatchResponse {
     Q_OBJECT
 
 public:

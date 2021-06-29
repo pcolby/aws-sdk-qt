@@ -27,7 +27,7 @@ namespace SES {
 
 class DeleteReceiptRuleRequestPrivate;
 
-class QTAWS_EXPORT DeleteReceiptRuleRequest : public SesRequest {
+class QTAWSSES_EXPORT DeleteReceiptRuleRequest : public SesRequest {
 
 public:
     DeleteReceiptRuleRequest(const DeleteReceiptRuleRequest &other);

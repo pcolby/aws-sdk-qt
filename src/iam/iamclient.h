@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsiamglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -345,7 +347,7 @@ class UploadServerCertificateResponse;
 class UploadSigningCertificateRequest;
 class UploadSigningCertificateResponse;
 
-class QTAWS_EXPORT IamClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSIAM_EXPORT IamClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

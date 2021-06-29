@@ -28,7 +28,7 @@ namespace AuditManager {
 
 class GetSettingsResponsePrivate;
 
-class QTAWS_EXPORT GetSettingsResponse : public AuditManagerResponse {
+class QTAWSAUDITMANAGER_EXPORT GetSettingsResponse : public AuditManagerResponse {
     Q_OBJECT
 
 public:

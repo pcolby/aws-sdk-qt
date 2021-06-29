@@ -28,7 +28,7 @@ namespace DevOpsGuru {
 
 class GetResourceCollectionResponsePrivate;
 
-class QTAWS_EXPORT GetResourceCollectionResponse : public DevOpsGuruResponse {
+class QTAWSDEVOPSGURU_EXPORT GetResourceCollectionResponse : public DevOpsGuruResponse {
     Q_OBJECT
 
 public:

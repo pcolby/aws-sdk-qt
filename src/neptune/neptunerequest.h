@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsneptuneglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Neptune {
 
 class NeptuneRequestPrivate;
 
-class QTAWS_EXPORT NeptuneRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSNEPTUNE_EXPORT NeptuneRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Neptune.

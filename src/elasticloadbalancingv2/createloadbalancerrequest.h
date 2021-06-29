@@ -27,7 +27,7 @@ namespace ElasticLoadBalancingv2 {
 
 class CreateLoadBalancerRequestPrivate;
 
-class QTAWS_EXPORT CreateLoadBalancerRequest : public ElasticLoadBalancingv2Request {
+class QTAWSELASTICLOADBALANCINGV2_EXPORT CreateLoadBalancerRequest : public ElasticLoadBalancingv2Request {
 
 public:
     CreateLoadBalancerRequest(const CreateLoadBalancerRequest &other);

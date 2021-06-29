@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT UntagResourceRequest : public LightsailRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

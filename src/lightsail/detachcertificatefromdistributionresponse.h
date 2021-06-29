@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class DetachCertificateFromDistributionResponsePrivate;
 
-class QTAWS_EXPORT DetachCertificateFromDistributionResponse : public LightsailResponse {
+class QTAWSLIGHTSAIL_EXPORT DetachCertificateFromDistributionResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

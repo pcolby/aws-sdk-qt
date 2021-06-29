@@ -21,6 +21,8 @@
 #define QTAWS_IOTDEVICEADVISORRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsiotdeviceadvisorglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace IoTDeviceAdvisor {
 
 class IoTDeviceAdvisorResponsePrivate;
 
-class QTAWS_EXPORT IoTDeviceAdvisorResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSIOTDEVICEADVISOR_EXPORT IoTDeviceAdvisorResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

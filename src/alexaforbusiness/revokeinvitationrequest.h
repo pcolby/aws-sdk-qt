@@ -27,7 +27,7 @@ namespace AlexaForBusiness {
 
 class RevokeInvitationRequestPrivate;
 
-class QTAWS_EXPORT RevokeInvitationRequest : public AlexaForBusinessRequest {
+class QTAWSALEXAFORBUSINESS_EXPORT RevokeInvitationRequest : public AlexaForBusinessRequest {
 
 public:
     RevokeInvitationRequest(const RevokeInvitationRequest &other);

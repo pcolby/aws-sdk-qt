@@ -28,7 +28,7 @@ namespace CodeGuruProfiler {
 
 class PutPermissionResponsePrivate;
 
-class QTAWS_EXPORT PutPermissionResponse : public CodeGuruProfilerResponse {
+class QTAWSCODEGURUPROFILER_EXPORT PutPermissionResponse : public CodeGuruProfilerResponse {
     Q_OBJECT
 
 public:

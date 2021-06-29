@@ -28,7 +28,7 @@ namespace WAF {
 
 class DeleteRegexMatchSetResponsePrivate;
 
-class QTAWS_EXPORT DeleteRegexMatchSetResponse : public WafResponse {
+class QTAWSWAF_EXPORT DeleteRegexMatchSetResponse : public WafResponse {
     Q_OBJECT
 
 public:

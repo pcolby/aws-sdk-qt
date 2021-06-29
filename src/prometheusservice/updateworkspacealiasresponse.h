@@ -28,7 +28,7 @@ namespace PrometheusService {
 
 class UpdateWorkspaceAliasResponsePrivate;
 
-class QTAWS_EXPORT UpdateWorkspaceAliasResponse : public PrometheusServiceResponse {
+class QTAWSPROMETHEUSSERVICE_EXPORT UpdateWorkspaceAliasResponse : public PrometheusServiceResponse {
     Q_OBJECT
 
 public:

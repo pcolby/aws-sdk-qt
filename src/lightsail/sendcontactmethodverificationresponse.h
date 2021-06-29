@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class SendContactMethodVerificationResponsePrivate;
 
-class QTAWS_EXPORT SendContactMethodVerificationResponse : public LightsailResponse {
+class QTAWSLIGHTSAIL_EXPORT SendContactMethodVerificationResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

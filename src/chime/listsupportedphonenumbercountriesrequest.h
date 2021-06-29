@@ -27,7 +27,7 @@ namespace Chime {
 
 class ListSupportedPhoneNumberCountriesRequestPrivate;
 
-class QTAWS_EXPORT ListSupportedPhoneNumberCountriesRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT ListSupportedPhoneNumberCountriesRequest : public ChimeRequest {
 
 public:
     ListSupportedPhoneNumberCountriesRequest(const ListSupportedPhoneNumberCountriesRequest &other);

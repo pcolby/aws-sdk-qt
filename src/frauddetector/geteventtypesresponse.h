@@ -28,7 +28,7 @@ namespace FraudDetector {
 
 class GetEventTypesResponsePrivate;
 
-class QTAWS_EXPORT GetEventTypesResponse : public FraudDetectorResponse {
+class QTAWSFRAUDDETECTOR_EXPORT GetEventTypesResponse : public FraudDetectorResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace imagebuilder {
 
 class ListImagePipelinesResponsePrivate;
 
-class QTAWS_EXPORT ListImagePipelinesResponse : public imagebuilderResponse {
+class QTAWSIMAGEBUILDER_EXPORT ListImagePipelinesResponse : public imagebuilderResponse {
     Q_OBJECT
 
 public:

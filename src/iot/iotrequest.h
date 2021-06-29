@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsiotglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace IoT {
 
 class IoTRequestPrivate;
 
-class QTAWS_EXPORT IoTRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSIOT_EXPORT IoTRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by IoT.

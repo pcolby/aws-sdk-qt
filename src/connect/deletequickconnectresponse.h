@@ -28,7 +28,7 @@ namespace Connect {
 
 class DeleteQuickConnectResponsePrivate;
 
-class QTAWS_EXPORT DeleteQuickConnectResponse : public ConnectResponse {
+class QTAWSCONNECT_EXPORT DeleteQuickConnectResponse : public ConnectResponse {
     Q_OBJECT
 
 public:

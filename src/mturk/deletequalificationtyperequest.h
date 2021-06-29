@@ -27,7 +27,7 @@ namespace MTurk {
 
 class DeleteQualificationTypeRequestPrivate;
 
-class QTAWS_EXPORT DeleteQualificationTypeRequest : public MTurkRequest {
+class QTAWSMTURK_EXPORT DeleteQualificationTypeRequest : public MTurkRequest {
 
 public:
     DeleteQualificationTypeRequest(const DeleteQualificationTypeRequest &other);

@@ -27,7 +27,7 @@ namespace WorkLink {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public WorkLinkRequest {
+class QTAWSWORKLINK_EXPORT UntagResourceRequest : public WorkLinkRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

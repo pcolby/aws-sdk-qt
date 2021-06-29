@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawslexruntimev2global.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -41,7 +43,7 @@ class RecognizeUtteranceResponse;
 class StartConversationRequest;
 class StartConversationResponse;
 
-class QTAWS_EXPORT LexRuntimeV2Client : public QtAws::Core::AwsAbstractClient {
+class QTAWSLEXRUNTIMEV2_EXPORT LexRuntimeV2Client : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace SSM {
 
 class DisassociateOpsItemRelatedItemRequestPrivate;
 
-class QTAWS_EXPORT DisassociateOpsItemRelatedItemRequest : public SsmRequest {
+class QTAWSSSM_EXPORT DisassociateOpsItemRelatedItemRequest : public SsmRequest {
 
 public:
     DisassociateOpsItemRelatedItemRequest(const DisassociateOpsItemRelatedItemRequest &other);

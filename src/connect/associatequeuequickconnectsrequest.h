@@ -27,7 +27,7 @@ namespace Connect {
 
 class AssociateQueueQuickConnectsRequestPrivate;
 
-class QTAWS_EXPORT AssociateQueueQuickConnectsRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT AssociateQueueQuickConnectsRequest : public ConnectRequest {
 
 public:
     AssociateQueueQuickConnectsRequest(const AssociateQueueQuickConnectsRequest &other);

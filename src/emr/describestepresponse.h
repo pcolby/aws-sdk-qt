@@ -28,7 +28,7 @@ namespace EMR {
 
 class DescribeStepResponsePrivate;
 
-class QTAWS_EXPORT DescribeStepResponse : public EmrResponse {
+class QTAWSEMR_EXPORT DescribeStepResponse : public EmrResponse {
     Q_OBJECT
 
 public:

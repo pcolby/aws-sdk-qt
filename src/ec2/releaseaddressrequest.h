@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ReleaseAddressRequestPrivate;
 
-class QTAWS_EXPORT ReleaseAddressRequest : public Ec2Request {
+class QTAWSEC2_EXPORT ReleaseAddressRequest : public Ec2Request {
 
 public:
     ReleaseAddressRequest(const ReleaseAddressRequest &other);

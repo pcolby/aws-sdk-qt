@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DescribeDhcpOptionsRequestPrivate;
 
-class QTAWS_EXPORT DescribeDhcpOptionsRequest : public Ec2Request {
+class QTAWSEC2_EXPORT DescribeDhcpOptionsRequest : public Ec2Request {
 
 public:
     DescribeDhcpOptionsRequest(const DescribeDhcpOptionsRequest &other);

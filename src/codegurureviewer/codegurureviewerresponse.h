@@ -21,6 +21,8 @@
 #define QTAWS_CODEGURUREVIEWERRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawscodegurureviewerglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace CodeGuruReviewer {
 
 class CodeGuruReviewerResponsePrivate;
 
-class QTAWS_EXPORT CodeGuruReviewerResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCODEGURUREVIEWER_EXPORT CodeGuruReviewerResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace SecretsManager {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public SecretsManagerRequest {
+class QTAWSSECRETSMANAGER_EXPORT TagResourceRequest : public SecretsManagerRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

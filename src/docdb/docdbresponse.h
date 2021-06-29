@@ -21,6 +21,8 @@
 #define QTAWS_DOCDBRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsdocdbglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace DocDB {
 
 class DocDBResponsePrivate;
 
-class QTAWS_EXPORT DocDBResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSDOCDB_EXPORT DocDBResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

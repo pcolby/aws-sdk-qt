@@ -28,7 +28,7 @@ namespace Lambda {
 
 class DeleteEventSourceMappingResponsePrivate;
 
-class QTAWS_EXPORT DeleteEventSourceMappingResponse : public LambdaResponse {
+class QTAWSLAMBDA_EXPORT DeleteEventSourceMappingResponse : public LambdaResponse {
     Q_OBJECT
 
 public:

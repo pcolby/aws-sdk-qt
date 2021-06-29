@@ -28,7 +28,7 @@ namespace IoTAnalytics {
 
 class DescribeChannelResponsePrivate;
 
-class QTAWS_EXPORT DescribeChannelResponse : public IoTAnalyticsResponse {
+class QTAWSIOTANALYTICS_EXPORT DescribeChannelResponse : public IoTAnalyticsResponse {
     Q_OBJECT
 
 public:

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSACM_LIBRARY)
+
 add_library(QtAwsAcm
   acmclient.h
   acmclient_p.h
@@ -45,6 +47,7 @@ add_library(QtAwsAcm
   putaccountconfigurationrequest_p.h
   putaccountconfigurationresponse.h
   putaccountconfigurationresponse_p.h
+  qtawsacmglobal.h
   removetagsfromcertificaterequest.h
   removetagsfromcertificaterequest_p.h
   removetagsfromcertificateresponse.h

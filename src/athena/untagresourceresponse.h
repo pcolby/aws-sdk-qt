@@ -28,7 +28,7 @@ namespace Athena {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public AthenaResponse {
+class QTAWSATHENA_EXPORT UntagResourceResponse : public AthenaResponse {
     Q_OBJECT
 
 public:

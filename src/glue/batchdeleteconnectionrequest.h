@@ -27,7 +27,7 @@ namespace Glue {
 
 class BatchDeleteConnectionRequestPrivate;
 
-class QTAWS_EXPORT BatchDeleteConnectionRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT BatchDeleteConnectionRequest : public GlueRequest {
 
 public:
     BatchDeleteConnectionRequest(const BatchDeleteConnectionRequest &other);

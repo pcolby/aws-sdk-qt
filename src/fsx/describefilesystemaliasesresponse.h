@@ -28,7 +28,7 @@ namespace FSx {
 
 class DescribeFileSystemAliasesResponsePrivate;
 
-class QTAWS_EXPORT DescribeFileSystemAliasesResponse : public FSxResponse {
+class QTAWSFSX_EXPORT DescribeFileSystemAliasesResponse : public FSxResponse {
     Q_OBJECT
 
 public:

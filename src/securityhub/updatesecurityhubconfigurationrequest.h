@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class UpdateSecurityHubConfigurationRequestPrivate;
 
-class QTAWS_EXPORT UpdateSecurityHubConfigurationRequest : public SecurityHubRequest {
+class QTAWSSECURITYHUB_EXPORT UpdateSecurityHubConfigurationRequest : public SecurityHubRequest {
 
 public:
     UpdateSecurityHubConfigurationRequest(const UpdateSecurityHubConfigurationRequest &other);

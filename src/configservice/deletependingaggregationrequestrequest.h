@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class DeletePendingAggregationRequestRequestPrivate;
 
-class QTAWS_EXPORT DeletePendingAggregationRequestRequest : public ConfigServiceRequest {
+class QTAWSCONFIGSERVICE_EXPORT DeletePendingAggregationRequestRequest : public ConfigServiceRequest {
 
 public:
     DeletePendingAggregationRequestRequest(const DeletePendingAggregationRequestRequest &other);

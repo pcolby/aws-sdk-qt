@@ -21,6 +21,8 @@
 #define QTAWS_MEDIASTORERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsmediastoreglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace MediaStore {
 
 class MediaStoreResponsePrivate;
 
-class QTAWS_EXPORT MediaStoreResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSMEDIASTORE_EXPORT MediaStoreResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

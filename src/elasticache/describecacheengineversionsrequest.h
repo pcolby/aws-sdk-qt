@@ -27,7 +27,7 @@ namespace ElastiCache {
 
 class DescribeCacheEngineVersionsRequestPrivate;
 
-class QTAWS_EXPORT DescribeCacheEngineVersionsRequest : public ElastiCacheRequest {
+class QTAWSELASTICACHE_EXPORT DescribeCacheEngineVersionsRequest : public ElastiCacheRequest {
 
 public:
     DescribeCacheEngineVersionsRequest(const DescribeCacheEngineVersionsRequest &other);

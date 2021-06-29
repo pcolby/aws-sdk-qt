@@ -27,7 +27,7 @@ namespace RedshiftDataAPIService {
 
 class ListDatabasesRequestPrivate;
 
-class QTAWS_EXPORT ListDatabasesRequest : public RedshiftDataAPIServiceRequest {
+class QTAWSREDSHIFTDATAAPISERVICE_EXPORT ListDatabasesRequest : public RedshiftDataAPIServiceRequest {
 
 public:
     ListDatabasesRequest(const ListDatabasesRequest &other);

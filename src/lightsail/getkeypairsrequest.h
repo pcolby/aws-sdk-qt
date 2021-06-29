@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class GetKeyPairsRequestPrivate;
 
-class QTAWS_EXPORT GetKeyPairsRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT GetKeyPairsRequest : public LightsailRequest {
 
 public:
     GetKeyPairsRequest(const GetKeyPairsRequest &other);

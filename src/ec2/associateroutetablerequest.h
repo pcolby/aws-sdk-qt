@@ -27,7 +27,7 @@ namespace EC2 {
 
 class AssociateRouteTableRequestPrivate;
 
-class QTAWS_EXPORT AssociateRouteTableRequest : public Ec2Request {
+class QTAWSEC2_EXPORT AssociateRouteTableRequest : public Ec2Request {
 
 public:
     AssociateRouteTableRequest(const AssociateRouteTableRequest &other);

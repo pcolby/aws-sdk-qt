@@ -28,7 +28,7 @@ namespace SSM {
 
 class StartSessionResponsePrivate;
 
-class QTAWS_EXPORT StartSessionResponse : public SsmResponse {
+class QTAWSSSM_EXPORT StartSessionResponse : public SsmResponse {
     Q_OBJECT
 
 public:

@@ -21,6 +21,8 @@
 #define QTAWS_LAKEFORMATIONRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawslakeformationglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace LakeFormation {
 
 class LakeFormationResponsePrivate;
 
-class QTAWS_EXPORT LakeFormationResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSLAKEFORMATION_EXPORT LakeFormationResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

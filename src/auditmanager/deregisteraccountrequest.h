@@ -27,7 +27,7 @@ namespace AuditManager {
 
 class DeregisterAccountRequestPrivate;
 
-class QTAWS_EXPORT DeregisterAccountRequest : public AuditManagerRequest {
+class QTAWSAUDITMANAGER_EXPORT DeregisterAccountRequest : public AuditManagerRequest {
 
 public:
     DeregisterAccountRequest(const DeregisterAccountRequest &other);

@@ -27,7 +27,7 @@ namespace Route53 {
 
 class DeleteKeySigningKeyRequestPrivate;
 
-class QTAWS_EXPORT DeleteKeySigningKeyRequest : public Route53Request {
+class QTAWSROUTE53_EXPORT DeleteKeySigningKeyRequest : public Route53Request {
 
 public:
     DeleteKeySigningKeyRequest(const DeleteKeySigningKeyRequest &other);

@@ -27,7 +27,7 @@ namespace Chime {
 
 class UntagMeetingRequestPrivate;
 
-class QTAWS_EXPORT UntagMeetingRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT UntagMeetingRequest : public ChimeRequest {
 
 public:
     UntagMeetingRequest(const UntagMeetingRequest &other);

@@ -21,6 +21,8 @@
 #define QTAWS_BRAKETRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsbraketglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Braket {
 
 class BraketResponsePrivate;
 
-class QTAWS_EXPORT BraketResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSBRAKET_EXPORT BraketResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

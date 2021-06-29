@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class CreateTapeWithBarcodeRequestPrivate;
 
-class QTAWS_EXPORT CreateTapeWithBarcodeRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT CreateTapeWithBarcodeRequest : public StorageGatewayRequest {
 
 public:
     CreateTapeWithBarcodeRequest(const CreateTapeWithBarcodeRequest &other);

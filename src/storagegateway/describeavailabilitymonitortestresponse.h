@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class DescribeAvailabilityMonitorTestResponsePrivate;
 
-class QTAWS_EXPORT DescribeAvailabilityMonitorTestResponse : public StorageGatewayResponse {
+class QTAWSSTORAGEGATEWAY_EXPORT DescribeAvailabilityMonitorTestResponse : public StorageGatewayResponse {
     Q_OBJECT
 
 public:

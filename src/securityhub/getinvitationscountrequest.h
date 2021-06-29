@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class GetInvitationsCountRequestPrivate;
 
-class QTAWS_EXPORT GetInvitationsCountRequest : public SecurityHubRequest {
+class QTAWSSECURITYHUB_EXPORT GetInvitationsCountRequest : public SecurityHubRequest {
 
 public:
     GetInvitationsCountRequest(const GetInvitationsCountRequest &other);

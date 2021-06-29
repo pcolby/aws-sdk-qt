@@ -27,7 +27,7 @@ namespace DirectConnect {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public DirectConnectRequest {
+class QTAWSDIRECTCONNECT_EXPORT TagResourceRequest : public DirectConnectRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

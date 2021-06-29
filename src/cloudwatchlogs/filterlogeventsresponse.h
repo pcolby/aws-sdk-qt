@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class FilterLogEventsResponsePrivate;
 
-class QTAWS_EXPORT FilterLogEventsResponse : public CloudWatchLogsResponse {
+class QTAWSCLOUDWATCHLOGS_EXPORT FilterLogEventsResponse : public CloudWatchLogsResponse {
     Q_OBJECT
 
 public:

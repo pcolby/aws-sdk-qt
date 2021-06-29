@@ -28,7 +28,7 @@ namespace LicenseManager {
 
 class ExtendLicenseConsumptionResponsePrivate;
 
-class QTAWS_EXPORT ExtendLicenseConsumptionResponse : public LicenseManagerResponse {
+class QTAWSLICENSEMANAGER_EXPORT ExtendLicenseConsumptionResponse : public LicenseManagerResponse {
     Q_OBJECT
 
 public:

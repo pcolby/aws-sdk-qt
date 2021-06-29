@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class PutDestinationPolicyResponsePrivate;
 
-class QTAWS_EXPORT PutDestinationPolicyResponse : public CloudWatchLogsResponse {
+class QTAWSCLOUDWATCHLOGS_EXPORT PutDestinationPolicyResponse : public CloudWatchLogsResponse {
     Q_OBJECT
 
 public:

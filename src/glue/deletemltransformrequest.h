@@ -27,7 +27,7 @@ namespace Glue {
 
 class DeleteMLTransformRequestPrivate;
 
-class QTAWS_EXPORT DeleteMLTransformRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT DeleteMLTransformRequest : public GlueRequest {
 
 public:
     DeleteMLTransformRequest(const DeleteMLTransformRequest &other);

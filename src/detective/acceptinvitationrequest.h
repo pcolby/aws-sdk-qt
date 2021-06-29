@@ -27,7 +27,7 @@ namespace Detective {
 
 class AcceptInvitationRequestPrivate;
 
-class QTAWS_EXPORT AcceptInvitationRequest : public DetectiveRequest {
+class QTAWSDETECTIVE_EXPORT AcceptInvitationRequest : public DetectiveRequest {
 
 public:
     AcceptInvitationRequest(const AcceptInvitationRequest &other);

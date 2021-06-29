@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class CloneStackRequestPrivate;
 
-class QTAWS_EXPORT CloneStackRequest : public OpsWorksRequest {
+class QTAWSOPSWORKS_EXPORT CloneStackRequest : public OpsWorksRequest {
 
 public:
     CloneStackRequest(const CloneStackRequest &other);

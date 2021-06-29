@@ -27,7 +27,7 @@ namespace IoTThingsGraph {
 
 class GetUploadStatusRequestPrivate;
 
-class QTAWS_EXPORT GetUploadStatusRequest : public IoTThingsGraphRequest {
+class QTAWSIOTTHINGSGRAPH_EXPORT GetUploadStatusRequest : public IoTThingsGraphRequest {
 
 public:
     GetUploadStatusRequest(const GetUploadStatusRequest &other);

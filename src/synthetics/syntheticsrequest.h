@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawssyntheticsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Synthetics {
 
 class SyntheticsRequestPrivate;
 
-class QTAWS_EXPORT SyntheticsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSYNTHETICS_EXPORT SyntheticsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Synthetics.

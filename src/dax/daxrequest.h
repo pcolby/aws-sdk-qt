@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsdaxglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace DAX {
 
 class DaxRequestPrivate;
 
-class QTAWS_EXPORT DaxRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSDAX_EXPORT DaxRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by DAX.

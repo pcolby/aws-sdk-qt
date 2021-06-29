@@ -27,7 +27,7 @@ namespace Chime {
 
 class DescribeChannelMembershipForAppInstanceUserRequestPrivate;
 
-class QTAWS_EXPORT DescribeChannelMembershipForAppInstanceUserRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT DescribeChannelMembershipForAppInstanceUserRequest : public ChimeRequest {
 
 public:
     DescribeChannelMembershipForAppInstanceUserRequest(const DescribeChannelMembershipForAppInstanceUserRequest &other);

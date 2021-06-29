@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSREDSHIFT_LIBRARY)
+
 add_library(QtAwsRedshift
   acceptreservednodeexchangerequest.h
   acceptreservednodeexchangerequest_p.h
@@ -371,6 +373,7 @@ add_library(QtAwsRedshift
   purchasereservednodeofferingrequest_p.h
   purchasereservednodeofferingresponse.h
   purchasereservednodeofferingresponse_p.h
+  qtawsredshiftglobal.h
   rebootclusterrequest.h
   rebootclusterrequest_p.h
   rebootclusterresponse.h

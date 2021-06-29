@@ -27,7 +27,7 @@ namespace ElasticLoadBalancingv2 {
 
 class ModifyRuleRequestPrivate;
 
-class QTAWS_EXPORT ModifyRuleRequest : public ElasticLoadBalancingv2Request {
+class QTAWSELASTICLOADBALANCINGV2_EXPORT ModifyRuleRequest : public ElasticLoadBalancingv2Request {
 
 public:
     ModifyRuleRequest(const ModifyRuleRequest &other);

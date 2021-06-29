@@ -27,7 +27,7 @@ namespace MTurk {
 
 class SendBonusRequestPrivate;
 
-class QTAWS_EXPORT SendBonusRequest : public MTurkRequest {
+class QTAWSMTURK_EXPORT SendBonusRequest : public MTurkRequest {
 
 public:
     SendBonusRequest(const SendBonusRequest &other);

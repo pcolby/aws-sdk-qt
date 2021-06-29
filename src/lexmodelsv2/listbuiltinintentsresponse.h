@@ -28,7 +28,7 @@ namespace LexModelsV2 {
 
 class ListBuiltInIntentsResponsePrivate;
 
-class QTAWS_EXPORT ListBuiltInIntentsResponse : public LexModelsV2Response {
+class QTAWSLEXMODELSV2_EXPORT ListBuiltInIntentsResponse : public LexModelsV2Response {
     Q_OBJECT
 
 public:

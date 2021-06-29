@@ -21,6 +21,8 @@
 #define QTAWS_IOTWIRELESSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsiotwirelessglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace IoTWireless {
 
 class IoTWirelessResponsePrivate;
 
-class QTAWS_EXPORT IoTWirelessResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSIOTWIRELESS_EXPORT IoTWirelessResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

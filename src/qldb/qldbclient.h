@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsqldbglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -69,7 +71,7 @@ class UpdateLedgerResponse;
 class UpdateLedgerPermissionsModeRequest;
 class UpdateLedgerPermissionsModeResponse;
 
-class QTAWS_EXPORT QldbClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSQLDB_EXPORT QldbClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

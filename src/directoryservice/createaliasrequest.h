@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class CreateAliasRequestPrivate;
 
-class QTAWS_EXPORT CreateAliasRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT CreateAliasRequest : public DirectoryServiceRequest {
 
 public:
     CreateAliasRequest(const CreateAliasRequest &other);

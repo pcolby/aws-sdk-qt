@@ -27,7 +27,7 @@ namespace AppStream {
 
 class AssociateFleetRequestPrivate;
 
-class QTAWS_EXPORT AssociateFleetRequest : public AppStreamRequest {
+class QTAWSAPPSTREAM_EXPORT AssociateFleetRequest : public AppStreamRequest {
 
 public:
     AssociateFleetRequest(const AssociateFleetRequest &other);

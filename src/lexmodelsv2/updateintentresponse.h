@@ -28,7 +28,7 @@ namespace LexModelsV2 {
 
 class UpdateIntentResponsePrivate;
 
-class QTAWS_EXPORT UpdateIntentResponse : public LexModelsV2Response {
+class QTAWSLEXMODELSV2_EXPORT UpdateIntentResponse : public LexModelsV2Response {
     Q_OBJECT
 
 public:

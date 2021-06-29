@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSNEPTUNE_LIBRARY)
+
 add_library(QtAwsNeptune
   addroletodbclusterrequest.h
   addroletodbclusterrequest_p.h
@@ -217,6 +219,7 @@ add_library(QtAwsNeptune
   promotereadreplicadbclusterrequest_p.h
   promotereadreplicadbclusterresponse.h
   promotereadreplicadbclusterresponse_p.h
+  qtawsneptuneglobal.h
   rebootdbinstancerequest.h
   rebootdbinstancerequest_p.h
   rebootdbinstanceresponse.h

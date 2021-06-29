@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class CreateHumanTaskUiRequestPrivate;
 
-class QTAWS_EXPORT CreateHumanTaskUiRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT CreateHumanTaskUiRequest : public SageMakerRequest {
 
 public:
     CreateHumanTaskUiRequest(const CreateHumanTaskUiRequest &other);

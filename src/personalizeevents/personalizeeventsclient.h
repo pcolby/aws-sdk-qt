@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawspersonalizeeventsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -35,7 +37,7 @@ class PutItemsResponse;
 class PutUsersRequest;
 class PutUsersResponse;
 
-class QTAWS_EXPORT PersonalizeEventsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSPERSONALIZEEVENTS_EXPORT PersonalizeEventsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

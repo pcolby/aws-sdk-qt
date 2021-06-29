@@ -27,7 +27,7 @@ namespace AppSync {
 
 class DeleteGraphqlApiRequestPrivate;
 
-class QTAWS_EXPORT DeleteGraphqlApiRequest : public AppSyncRequest {
+class QTAWSAPPSYNC_EXPORT DeleteGraphqlApiRequest : public AppSyncRequest {
 
 public:
     DeleteGraphqlApiRequest(const DeleteGraphqlApiRequest &other);

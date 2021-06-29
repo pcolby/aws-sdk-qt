@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class DeleteProvisionedProductPlanRequestPrivate;
 
-class QTAWS_EXPORT DeleteProvisionedProductPlanRequest : public ServiceCatalogRequest {
+class QTAWSSERVICECATALOG_EXPORT DeleteProvisionedProductPlanRequest : public ServiceCatalogRequest {
 
 public:
     DeleteProvisionedProductPlanRequest(const DeleteProvisionedProductPlanRequest &other);

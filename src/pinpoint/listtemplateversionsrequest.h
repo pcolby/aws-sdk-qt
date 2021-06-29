@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class ListTemplateVersionsRequestPrivate;
 
-class QTAWS_EXPORT ListTemplateVersionsRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT ListTemplateVersionsRequest : public PinpointRequest {
 
 public:
     ListTemplateVersionsRequest(const ListTemplateVersionsRequest &other);

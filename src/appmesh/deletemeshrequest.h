@@ -27,7 +27,7 @@ namespace AppMesh {
 
 class DeleteMeshRequestPrivate;
 
-class QTAWS_EXPORT DeleteMeshRequest : public AppMeshRequest {
+class QTAWSAPPMESH_EXPORT DeleteMeshRequest : public AppMeshRequest {
 
 public:
     DeleteMeshRequest(const DeleteMeshRequest &other);

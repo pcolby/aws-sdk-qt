@@ -27,7 +27,7 @@ namespace S3 {
 
 class PutObjectRequestPrivate;
 
-class QTAWS_EXPORT PutObjectRequest : public S3Request {
+class QTAWSS3_EXPORT PutObjectRequest : public S3Request {
 
 public:
     PutObjectRequest(const PutObjectRequest &other);

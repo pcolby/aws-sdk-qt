@@ -27,7 +27,7 @@ namespace OpsWorksCM {
 
 class CreateServerRequestPrivate;
 
-class QTAWS_EXPORT CreateServerRequest : public OpsWorksCMRequest {
+class QTAWSOPSWORKSCM_EXPORT CreateServerRequest : public OpsWorksCMRequest {
 
 public:
     CreateServerRequest(const CreateServerRequest &other);

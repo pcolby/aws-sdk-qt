@@ -28,7 +28,7 @@ namespace Amplify {
 
 class ListDomainAssociationsResponsePrivate;
 
-class QTAWS_EXPORT ListDomainAssociationsResponse : public AmplifyResponse {
+class QTAWSAMPLIFY_EXPORT ListDomainAssociationsResponse : public AmplifyResponse {
     Q_OBJECT
 
 public:

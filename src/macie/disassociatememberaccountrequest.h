@@ -27,7 +27,7 @@ namespace Macie {
 
 class DisassociateMemberAccountRequestPrivate;
 
-class QTAWS_EXPORT DisassociateMemberAccountRequest : public MacieRequest {
+class QTAWSMACIE_EXPORT DisassociateMemberAccountRequest : public MacieRequest {
 
 public:
     DisassociateMemberAccountRequest(const DisassociateMemberAccountRequest &other);

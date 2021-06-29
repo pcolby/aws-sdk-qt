@@ -28,7 +28,7 @@ namespace Kafka {
 
 class GetCompatibleKafkaVersionsResponsePrivate;
 
-class QTAWS_EXPORT GetCompatibleKafkaVersionsResponse : public KafkaResponse {
+class QTAWSKAFKA_EXPORT GetCompatibleKafkaVersionsResponse : public KafkaResponse {
     Q_OBJECT
 
 public:

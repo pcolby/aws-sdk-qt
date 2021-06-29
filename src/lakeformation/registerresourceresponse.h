@@ -28,7 +28,7 @@ namespace LakeFormation {
 
 class RegisterResourceResponsePrivate;
 
-class QTAWS_EXPORT RegisterResourceResponse : public LakeFormationResponse {
+class QTAWSLAKEFORMATION_EXPORT RegisterResourceResponse : public LakeFormationResponse {
     Q_OBJECT
 
 public:

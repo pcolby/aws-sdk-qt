@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSWELLARCHITECTED_LIBRARY)
+
 add_library(QtAwsWellArchitected
   associatelensesrequest.h
   associatelensesrequest_p.h
@@ -91,6 +93,7 @@ add_library(QtAwsWellArchitected
   listworkloadsrequest_p.h
   listworkloadsresponse.h
   listworkloadsresponse_p.h
+  qtawswellarchitectedglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

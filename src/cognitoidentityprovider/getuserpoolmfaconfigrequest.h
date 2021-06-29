@@ -27,7 +27,7 @@ namespace CognitoIdentityProvider {
 
 class GetUserPoolMfaConfigRequestPrivate;
 
-class QTAWS_EXPORT GetUserPoolMfaConfigRequest : public CognitoIdentityProviderRequest {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT GetUserPoolMfaConfigRequest : public CognitoIdentityProviderRequest {
 
 public:
     GetUserPoolMfaConfigRequest(const GetUserPoolMfaConfigRequest &other);

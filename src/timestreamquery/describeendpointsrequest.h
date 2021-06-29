@@ -27,7 +27,7 @@ namespace TimestreamQuery {
 
 class DescribeEndpointsRequestPrivate;
 
-class QTAWS_EXPORT DescribeEndpointsRequest : public TimestreamQueryRequest {
+class QTAWSTIMESTREAMQUERY_EXPORT DescribeEndpointsRequest : public TimestreamQueryRequest {
 
 public:
     DescribeEndpointsRequest(const DescribeEndpointsRequest &other);

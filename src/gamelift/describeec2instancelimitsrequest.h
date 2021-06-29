@@ -27,7 +27,7 @@ namespace GameLift {
 
 class DescribeEC2InstanceLimitsRequestPrivate;
 
-class QTAWS_EXPORT DescribeEC2InstanceLimitsRequest : public GameLiftRequest {
+class QTAWSGAMELIFT_EXPORT DescribeEC2InstanceLimitsRequest : public GameLiftRequest {
 
 public:
     DescribeEC2InstanceLimitsRequest(const DescribeEC2InstanceLimitsRequest &other);

@@ -27,7 +27,7 @@ namespace AppStream {
 
 class DescribeUsersRequestPrivate;
 
-class QTAWS_EXPORT DescribeUsersRequest : public AppStreamRequest {
+class QTAWSAPPSTREAM_EXPORT DescribeUsersRequest : public AppStreamRequest {
 
 public:
     DescribeUsersRequest(const DescribeUsersRequest &other);

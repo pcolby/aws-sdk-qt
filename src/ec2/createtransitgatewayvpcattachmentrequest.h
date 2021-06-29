@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CreateTransitGatewayVpcAttachmentRequestPrivate;
 
-class QTAWS_EXPORT CreateTransitGatewayVpcAttachmentRequest : public Ec2Request {
+class QTAWSEC2_EXPORT CreateTransitGatewayVpcAttachmentRequest : public Ec2Request {
 
 public:
     CreateTransitGatewayVpcAttachmentRequest(const CreateTransitGatewayVpcAttachmentRequest &other);

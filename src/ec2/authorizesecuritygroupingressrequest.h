@@ -27,7 +27,7 @@ namespace EC2 {
 
 class AuthorizeSecurityGroupIngressRequestPrivate;
 
-class QTAWS_EXPORT AuthorizeSecurityGroupIngressRequest : public Ec2Request {
+class QTAWSEC2_EXPORT AuthorizeSecurityGroupIngressRequest : public Ec2Request {
 
 public:
     AuthorizeSecurityGroupIngressRequest(const AuthorizeSecurityGroupIngressRequest &other);

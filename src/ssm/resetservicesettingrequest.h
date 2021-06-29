@@ -27,7 +27,7 @@ namespace SSM {
 
 class ResetServiceSettingRequestPrivate;
 
-class QTAWS_EXPORT ResetServiceSettingRequest : public SsmRequest {
+class QTAWSSSM_EXPORT ResetServiceSettingRequest : public SsmRequest {
 
 public:
     ResetServiceSettingRequest(const ResetServiceSettingRequest &other);

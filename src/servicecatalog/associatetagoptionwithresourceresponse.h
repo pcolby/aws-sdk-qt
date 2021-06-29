@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class AssociateTagOptionWithResourceResponsePrivate;
 
-class QTAWS_EXPORT AssociateTagOptionWithResourceResponse : public ServiceCatalogResponse {
+class QTAWSSERVICECATALOG_EXPORT AssociateTagOptionWithResourceResponse : public ServiceCatalogResponse {
     Q_OBJECT
 
 public:

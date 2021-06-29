@@ -27,7 +27,7 @@ namespace AppSync {
 
 class ListDataSourcesRequestPrivate;
 
-class QTAWS_EXPORT ListDataSourcesRequest : public AppSyncRequest {
+class QTAWSAPPSYNC_EXPORT ListDataSourcesRequest : public AppSyncRequest {
 
 public:
     ListDataSourcesRequest(const ListDataSourcesRequest &other);

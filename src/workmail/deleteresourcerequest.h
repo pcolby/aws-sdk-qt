@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class DeleteResourceRequestPrivate;
 
-class QTAWS_EXPORT DeleteResourceRequest : public WorkMailRequest {
+class QTAWSWORKMAIL_EXPORT DeleteResourceRequest : public WorkMailRequest {
 
 public:
     DeleteResourceRequest(const DeleteResourceRequest &other);

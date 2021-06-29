@@ -27,7 +27,7 @@ namespace S3 {
 
 class CopyObjectRequestPrivate;
 
-class QTAWS_EXPORT CopyObjectRequest : public S3Request {
+class QTAWSS3_EXPORT CopyObjectRequest : public S3Request {
 
 public:
     CopyObjectRequest(const CopyObjectRequest &other);

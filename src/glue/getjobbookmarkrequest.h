@@ -27,7 +27,7 @@ namespace Glue {
 
 class GetJobBookmarkRequestPrivate;
 
-class QTAWS_EXPORT GetJobBookmarkRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT GetJobBookmarkRequest : public GlueRequest {
 
 public:
     GetJobBookmarkRequest(const GetJobBookmarkRequest &other);

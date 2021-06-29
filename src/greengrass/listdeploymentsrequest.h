@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class ListDeploymentsRequestPrivate;
 
-class QTAWS_EXPORT ListDeploymentsRequest : public GreengrassRequest {
+class QTAWSGREENGRASS_EXPORT ListDeploymentsRequest : public GreengrassRequest {
 
 public:
     ListDeploymentsRequest(const ListDeploymentsRequest &other);

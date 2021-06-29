@@ -27,7 +27,7 @@ namespace ApiGatewayV2 {
 
 class GetTagsRequestPrivate;
 
-class QTAWS_EXPORT GetTagsRequest : public ApiGatewayV2Request {
+class QTAWSAPIGATEWAYV2_EXPORT GetTagsRequest : public ApiGatewayV2Request {
 
 public:
     GetTagsRequest(const GetTagsRequest &other);

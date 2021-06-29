@@ -27,7 +27,7 @@ namespace KinesisAnalytics {
 
 class AddApplicationReferenceDataSourceRequestPrivate;
 
-class QTAWS_EXPORT AddApplicationReferenceDataSourceRequest : public KinesisAnalyticsRequest {
+class QTAWSKINESISANALYTICS_EXPORT AddApplicationReferenceDataSourceRequest : public KinesisAnalyticsRequest {
 
 public:
     AddApplicationReferenceDataSourceRequest(const AddApplicationReferenceDataSourceRequest &other);

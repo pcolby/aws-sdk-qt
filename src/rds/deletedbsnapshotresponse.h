@@ -28,7 +28,7 @@ namespace RDS {
 
 class DeleteDBSnapshotResponsePrivate;
 
-class QTAWS_EXPORT DeleteDBSnapshotResponse : public RdsResponse {
+class QTAWSRDS_EXPORT DeleteDBSnapshotResponse : public RdsResponse {
     Q_OBJECT
 
 public:

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSPINPOINTEMAIL_LIBRARY)
+
 add_library(QtAwsPinpointEmail
   createconfigurationseteventdestinationrequest.h
   createconfigurationseteventdestinationrequest_p.h
@@ -157,6 +159,7 @@ add_library(QtAwsPinpointEmail
   putemailidentitymailfromattributesrequest_p.h
   putemailidentitymailfromattributesresponse.h
   putemailidentitymailfromattributesresponse_p.h
+  qtawspinpointemailglobal.h
   sendemailrequest.h
   sendemailrequest_p.h
   sendemailresponse.h

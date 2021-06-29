@@ -4,6 +4,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtaws{{ServiceName|lower}}global.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -15,7 +17,7 @@ class {{name}}Request;
 class {{name}}Response;
 {% endfor %}
 
-class QTAWS_EXPORT {{ClassName}} : public QtAws::Core::AwsAbstractClient {
+class QTAWS{{ServiceName|upper}}_EXPORT {{ClassName}} : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

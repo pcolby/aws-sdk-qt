@@ -27,7 +27,7 @@ namespace Redshift {
 
 class DescribeTagsRequestPrivate;
 
-class QTAWS_EXPORT DescribeTagsRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT DescribeTagsRequest : public RedshiftRequest {
 
 public:
     DescribeTagsRequest(const DescribeTagsRequest &other);

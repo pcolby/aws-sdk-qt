@@ -27,7 +27,7 @@ namespace ECRPublic {
 
 class CreateRepositoryRequestPrivate;
 
-class QTAWS_EXPORT CreateRepositoryRequest : public ECRPublicRequest {
+class QTAWSECRPUBLIC_EXPORT CreateRepositoryRequest : public ECRPublicRequest {
 
 public:
     CreateRepositoryRequest(const CreateRepositoryRequest &other);

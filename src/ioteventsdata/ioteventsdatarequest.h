@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsioteventsdataglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace IoTEventsData {
 
 class IoTEventsDataRequestPrivate;
 
-class QTAWS_EXPORT IoTEventsDataRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSIOTEVENTSDATA_EXPORT IoTEventsDataRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by IoTEventsData.

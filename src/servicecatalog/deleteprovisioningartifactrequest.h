@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class DeleteProvisioningArtifactRequestPrivate;
 
-class QTAWS_EXPORT DeleteProvisioningArtifactRequest : public ServiceCatalogRequest {
+class QTAWSSERVICECATALOG_EXPORT DeleteProvisioningArtifactRequest : public ServiceCatalogRequest {
 
 public:
     DeleteProvisioningArtifactRequest(const DeleteProvisioningArtifactRequest &other);

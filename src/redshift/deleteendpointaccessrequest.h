@@ -27,7 +27,7 @@ namespace Redshift {
 
 class DeleteEndpointAccessRequestPrivate;
 
-class QTAWS_EXPORT DeleteEndpointAccessRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT DeleteEndpointAccessRequest : public RedshiftRequest {
 
 public:
     DeleteEndpointAccessRequest(const DeleteEndpointAccessRequest &other);

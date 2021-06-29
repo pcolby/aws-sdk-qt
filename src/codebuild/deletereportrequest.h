@@ -27,7 +27,7 @@ namespace CodeBuild {
 
 class DeleteReportRequestPrivate;
 
-class QTAWS_EXPORT DeleteReportRequest : public CodeBuildRequest {
+class QTAWSCODEBUILD_EXPORT DeleteReportRequest : public CodeBuildRequest {
 
 public:
     DeleteReportRequest(const DeleteReportRequest &other);

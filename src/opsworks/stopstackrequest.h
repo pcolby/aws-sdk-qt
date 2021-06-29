@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class StopStackRequestPrivate;
 
-class QTAWS_EXPORT StopStackRequest : public OpsWorksRequest {
+class QTAWSOPSWORKS_EXPORT StopStackRequest : public OpsWorksRequest {
 
 public:
     StopStackRequest(const StopStackRequest &other);

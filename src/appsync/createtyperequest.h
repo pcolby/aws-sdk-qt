@@ -27,7 +27,7 @@ namespace AppSync {
 
 class CreateTypeRequestPrivate;
 
-class QTAWS_EXPORT CreateTypeRequest : public AppSyncRequest {
+class QTAWSAPPSYNC_EXPORT CreateTypeRequest : public AppSyncRequest {
 
 public:
     CreateTypeRequest(const CreateTypeRequest &other);

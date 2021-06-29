@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class CancelInstanceRefreshRequestPrivate;
 
-class QTAWS_EXPORT CancelInstanceRefreshRequest : public AutoScalingRequest {
+class QTAWSAUTOSCALING_EXPORT CancelInstanceRefreshRequest : public AutoScalingRequest {
 
 public:
     CancelInstanceRefreshRequest(const CancelInstanceRefreshRequest &other);

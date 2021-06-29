@@ -27,7 +27,7 @@ namespace WorkLink {
 
 class DescribeCompanyNetworkConfigurationRequestPrivate;
 
-class QTAWS_EXPORT DescribeCompanyNetworkConfigurationRequest : public WorkLinkRequest {
+class QTAWSWORKLINK_EXPORT DescribeCompanyNetworkConfigurationRequest : public WorkLinkRequest {
 
 public:
     DescribeCompanyNetworkConfigurationRequest(const DescribeCompanyNetworkConfigurationRequest &other);

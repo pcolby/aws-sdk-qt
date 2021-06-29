@@ -27,7 +27,7 @@ namespace Glue {
 
 class CreateConnectionRequestPrivate;
 
-class QTAWS_EXPORT CreateConnectionRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT CreateConnectionRequest : public GlueRequest {
 
 public:
     CreateConnectionRequest(const CreateConnectionRequest &other);

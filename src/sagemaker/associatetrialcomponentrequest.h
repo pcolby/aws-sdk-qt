@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class AssociateTrialComponentRequestPrivate;
 
-class QTAWS_EXPORT AssociateTrialComponentRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT AssociateTrialComponentRequest : public SageMakerRequest {
 
 public:
     AssociateTrialComponentRequest(const AssociateTrialComponentRequest &other);

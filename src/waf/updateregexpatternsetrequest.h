@@ -27,7 +27,7 @@ namespace WAF {
 
 class UpdateRegexPatternSetRequestPrivate;
 
-class QTAWS_EXPORT UpdateRegexPatternSetRequest : public WafRequest {
+class QTAWSWAF_EXPORT UpdateRegexPatternSetRequest : public WafRequest {
 
 public:
     UpdateRegexPatternSetRequest(const UpdateRegexPatternSetRequest &other);

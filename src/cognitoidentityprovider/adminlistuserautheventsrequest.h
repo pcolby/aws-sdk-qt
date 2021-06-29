@@ -27,7 +27,7 @@ namespace CognitoIdentityProvider {
 
 class AdminListUserAuthEventsRequestPrivate;
 
-class QTAWS_EXPORT AdminListUserAuthEventsRequest : public CognitoIdentityProviderRequest {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT AdminListUserAuthEventsRequest : public CognitoIdentityProviderRequest {
 
 public:
     AdminListUserAuthEventsRequest(const AdminListUserAuthEventsRequest &other);

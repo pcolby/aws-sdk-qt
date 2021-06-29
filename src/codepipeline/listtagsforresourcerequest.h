@@ -27,7 +27,7 @@ namespace CodePipeline {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public CodePipelineRequest {
+class QTAWSCODEPIPELINE_EXPORT ListTagsForResourceRequest : public CodePipelineRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

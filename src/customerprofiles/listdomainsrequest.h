@@ -27,7 +27,7 @@ namespace CustomerProfiles {
 
 class ListDomainsRequestPrivate;
 
-class QTAWS_EXPORT ListDomainsRequest : public CustomerProfilesRequest {
+class QTAWSCUSTOMERPROFILES_EXPORT ListDomainsRequest : public CustomerProfilesRequest {
 
 public:
     ListDomainsRequest(const ListDomainsRequest &other);

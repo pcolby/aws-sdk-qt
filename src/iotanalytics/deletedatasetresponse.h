@@ -28,7 +28,7 @@ namespace IoTAnalytics {
 
 class DeleteDatasetResponsePrivate;
 
-class QTAWS_EXPORT DeleteDatasetResponse : public IoTAnalyticsResponse {
+class QTAWSIOTANALYTICS_EXPORT DeleteDatasetResponse : public IoTAnalyticsResponse {
     Q_OBJECT
 
 public:

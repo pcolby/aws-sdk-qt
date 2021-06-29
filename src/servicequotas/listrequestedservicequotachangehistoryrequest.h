@@ -27,7 +27,7 @@ namespace ServiceQuotas {
 
 class ListRequestedServiceQuotaChangeHistoryRequestPrivate;
 
-class QTAWS_EXPORT ListRequestedServiceQuotaChangeHistoryRequest : public ServiceQuotasRequest {
+class QTAWSSERVICEQUOTAS_EXPORT ListRequestedServiceQuotaChangeHistoryRequest : public ServiceQuotasRequest {
 
 public:
     ListRequestedServiceQuotaChangeHistoryRequest(const ListRequestedServiceQuotaChangeHistoryRequest &other);

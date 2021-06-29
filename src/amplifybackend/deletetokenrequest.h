@@ -27,7 +27,7 @@ namespace AmplifyBackend {
 
 class DeleteTokenRequestPrivate;
 
-class QTAWS_EXPORT DeleteTokenRequest : public AmplifyBackendRequest {
+class QTAWSAMPLIFYBACKEND_EXPORT DeleteTokenRequest : public AmplifyBackendRequest {
 
 public:
     DeleteTokenRequest(const DeleteTokenRequest &other);

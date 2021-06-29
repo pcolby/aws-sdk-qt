@@ -27,7 +27,7 @@ namespace FIS {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public FisRequest {
+class QTAWSFIS_EXPORT TagResourceRequest : public FisRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

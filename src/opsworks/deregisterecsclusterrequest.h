@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class DeregisterEcsClusterRequestPrivate;
 
-class QTAWS_EXPORT DeregisterEcsClusterRequest : public OpsWorksRequest {
+class QTAWSOPSWORKS_EXPORT DeregisterEcsClusterRequest : public OpsWorksRequest {
 
 public:
     DeregisterEcsClusterRequest(const DeregisterEcsClusterRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsapplicationautoscalingglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -49,7 +51,7 @@ class PutScheduledActionResponse;
 class RegisterScalableTargetRequest;
 class RegisterScalableTargetResponse;
 
-class QTAWS_EXPORT ApplicationAutoScalingClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSAPPLICATIONAUTOSCALING_EXPORT ApplicationAutoScalingClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace WAF {
 
 class GetByteMatchSetRequestPrivate;
 
-class QTAWS_EXPORT GetByteMatchSetRequest : public WafRequest {
+class QTAWSWAF_EXPORT GetByteMatchSetRequest : public WafRequest {
 
 public:
     GetByteMatchSetRequest(const GetByteMatchSetRequest &other);

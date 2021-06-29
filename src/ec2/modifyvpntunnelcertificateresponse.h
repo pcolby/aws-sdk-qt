@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ModifyVpnTunnelCertificateResponsePrivate;
 
-class QTAWS_EXPORT ModifyVpnTunnelCertificateResponse : public Ec2Response {
+class QTAWSEC2_EXPORT ModifyVpnTunnelCertificateResponse : public Ec2Response {
     Q_OBJECT
 
 public:

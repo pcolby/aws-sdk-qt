@@ -27,7 +27,7 @@ namespace Glue {
 
 class GetTagsRequestPrivate;
 
-class QTAWS_EXPORT GetTagsRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT GetTagsRequest : public GlueRequest {
 
 public:
     GetTagsRequest(const GetTagsRequest &other);

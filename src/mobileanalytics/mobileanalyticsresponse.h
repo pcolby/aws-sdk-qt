@@ -21,6 +21,8 @@
 #define QTAWS_MOBILEANALYTICSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsmobileanalyticsglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace MobileAnalytics {
 
 class MobileAnalyticsResponsePrivate;
 
-class QTAWS_EXPORT MobileAnalyticsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSMOBILEANALYTICS_EXPORT MobileAnalyticsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

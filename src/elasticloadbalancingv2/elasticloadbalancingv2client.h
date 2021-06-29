@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawselasticloadbalancingv2global.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -97,7 +99,7 @@ class SetSecurityGroupsResponse;
 class SetSubnetsRequest;
 class SetSubnetsResponse;
 
-class QTAWS_EXPORT ElasticLoadBalancingv2Client : public QtAws::Core::AwsAbstractClient {
+class QTAWSELASTICLOADBALANCINGV2_EXPORT ElasticLoadBalancingv2Client : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

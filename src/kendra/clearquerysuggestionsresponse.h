@@ -28,7 +28,7 @@ namespace kendra {
 
 class ClearQuerySuggestionsResponsePrivate;
 
-class QTAWS_EXPORT ClearQuerySuggestionsResponse : public kendraResponse {
+class QTAWSKENDRA_EXPORT ClearQuerySuggestionsResponse : public kendraResponse {
     Q_OBJECT
 
 public:

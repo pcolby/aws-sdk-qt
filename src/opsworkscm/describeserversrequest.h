@@ -27,7 +27,7 @@ namespace OpsWorksCM {
 
 class DescribeServersRequestPrivate;
 
-class QTAWS_EXPORT DescribeServersRequest : public OpsWorksCMRequest {
+class QTAWSOPSWORKSCM_EXPORT DescribeServersRequest : public OpsWorksCMRequest {
 
 public:
     DescribeServersRequest(const DescribeServersRequest &other);

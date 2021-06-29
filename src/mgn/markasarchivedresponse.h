@@ -28,7 +28,7 @@ namespace mgn {
 
 class MarkAsArchivedResponsePrivate;
 
-class QTAWS_EXPORT MarkAsArchivedResponse : public mgnResponse {
+class QTAWSMGN_EXPORT MarkAsArchivedResponse : public mgnResponse {
     Q_OBJECT
 
 public:

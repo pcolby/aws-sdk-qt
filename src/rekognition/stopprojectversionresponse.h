@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class StopProjectVersionResponsePrivate;
 
-class QTAWS_EXPORT StopProjectVersionResponse : public RekognitionResponse {
+class QTAWSREKOGNITION_EXPORT StopProjectVersionResponse : public RekognitionResponse {
     Q_OBJECT
 
 public:

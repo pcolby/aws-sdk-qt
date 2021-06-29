@@ -27,7 +27,7 @@ namespace XRay {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public XRayRequest {
+class QTAWSXRAY_EXPORT ListTagsForResourceRequest : public XRayRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

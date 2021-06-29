@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawselasticbeanstalkglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace ElasticBeanstalk {
 
 class ElasticBeanstalkRequestPrivate;
 
-class QTAWS_EXPORT ElasticBeanstalkRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSELASTICBEANSTALK_EXPORT ElasticBeanstalkRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ElasticBeanstalk.

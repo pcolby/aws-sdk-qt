@@ -27,7 +27,7 @@ namespace ApiGatewayV2 {
 
 class DeleteAccessLogSettingsRequestPrivate;
 
-class QTAWS_EXPORT DeleteAccessLogSettingsRequest : public ApiGatewayV2Request {
+class QTAWSAPIGATEWAYV2_EXPORT DeleteAccessLogSettingsRequest : public ApiGatewayV2Request {
 
 public:
     DeleteAccessLogSettingsRequest(const DeleteAccessLogSettingsRequest &other);

@@ -27,7 +27,7 @@ namespace GameLift {
 
 class DeleteScriptRequestPrivate;
 
-class QTAWS_EXPORT DeleteScriptRequest : public GameLiftRequest {
+class QTAWSGAMELIFT_EXPORT DeleteScriptRequest : public GameLiftRequest {
 
 public:
     DeleteScriptRequest(const DeleteScriptRequest &other);

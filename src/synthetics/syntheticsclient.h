@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawssyntheticsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -55,7 +57,7 @@ class UntagResourceResponse;
 class UpdateCanaryRequest;
 class UpdateCanaryResponse;
 
-class QTAWS_EXPORT SyntheticsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSYNTHETICS_EXPORT SyntheticsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

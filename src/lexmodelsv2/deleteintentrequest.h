@@ -27,7 +27,7 @@ namespace LexModelsV2 {
 
 class DeleteIntentRequestPrivate;
 
-class QTAWS_EXPORT DeleteIntentRequest : public LexModelsV2Request {
+class QTAWSLEXMODELSV2_EXPORT DeleteIntentRequest : public LexModelsV2Request {
 
 public:
     DeleteIntentRequest(const DeleteIntentRequest &other);

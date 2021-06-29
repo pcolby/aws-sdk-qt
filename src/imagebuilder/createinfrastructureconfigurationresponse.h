@@ -28,7 +28,7 @@ namespace imagebuilder {
 
 class CreateInfrastructureConfigurationResponsePrivate;
 
-class QTAWS_EXPORT CreateInfrastructureConfigurationResponse : public imagebuilderResponse {
+class QTAWSIMAGEBUILDER_EXPORT CreateInfrastructureConfigurationResponse : public imagebuilderResponse {
     Q_OBJECT
 
 public:

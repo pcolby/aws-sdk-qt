@@ -27,7 +27,7 @@ namespace Organizations {
 
 class ListHandshakesForOrganizationRequestPrivate;
 
-class QTAWS_EXPORT ListHandshakesForOrganizationRequest : public OrganizationsRequest {
+class QTAWSORGANIZATIONS_EXPORT ListHandshakesForOrganizationRequest : public OrganizationsRequest {
 
 public:
     ListHandshakesForOrganizationRequest(const ListHandshakesForOrganizationRequest &other);

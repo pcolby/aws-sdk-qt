@@ -28,7 +28,7 @@ namespace SSM {
 
 class DescribeMaintenanceWindowExecutionTaskInvocationsResponsePrivate;
 
-class QTAWS_EXPORT DescribeMaintenanceWindowExecutionTaskInvocationsResponse : public SsmResponse {
+class QTAWSSSM_EXPORT DescribeMaintenanceWindowExecutionTaskInvocationsResponse : public SsmResponse {
     Q_OBJECT
 
 public:

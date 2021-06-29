@@ -28,7 +28,7 @@ namespace SMS {
 
 class GenerateChangeSetResponsePrivate;
 
-class QTAWS_EXPORT GenerateChangeSetResponse : public SmsResponse {
+class QTAWSSMS_EXPORT GenerateChangeSetResponse : public SmsResponse {
     Q_OBJECT
 
 public:

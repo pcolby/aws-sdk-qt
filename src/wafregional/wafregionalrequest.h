@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawswafregionalglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace WAFRegional {
 
 class WAFRegionalRequestPrivate;
 
-class QTAWS_EXPORT WAFRegionalRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSWAFREGIONAL_EXPORT WAFRegionalRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by WAFRegional.

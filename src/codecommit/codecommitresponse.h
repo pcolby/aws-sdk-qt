@@ -21,6 +21,8 @@
 #define QTAWS_CODECOMMITRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawscodecommitglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace CodeCommit {
 
 class CodeCommitResponsePrivate;
 
-class QTAWS_EXPORT CodeCommitResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCODECOMMIT_EXPORT CodeCommitResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

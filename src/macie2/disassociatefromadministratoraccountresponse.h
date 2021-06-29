@@ -28,7 +28,7 @@ namespace Macie2 {
 
 class DisassociateFromAdministratorAccountResponsePrivate;
 
-class QTAWS_EXPORT DisassociateFromAdministratorAccountResponse : public Macie2Response {
+class QTAWSMACIE2_EXPORT DisassociateFromAdministratorAccountResponse : public Macie2Response {
     Q_OBJECT
 
 public:

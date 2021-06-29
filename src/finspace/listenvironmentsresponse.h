@@ -28,7 +28,7 @@ namespace finspace {
 
 class ListEnvironmentsResponsePrivate;
 
-class QTAWS_EXPORT ListEnvironmentsResponse : public finspaceResponse {
+class QTAWSFINSPACE_EXPORT ListEnvironmentsResponse : public finspaceResponse {
     Q_OBJECT
 
 public:

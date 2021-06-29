@@ -28,7 +28,7 @@ namespace EKS {
 
 class DescribeClusterResponsePrivate;
 
-class QTAWS_EXPORT DescribeClusterResponse : public EksResponse {
+class QTAWSEKS_EXPORT DescribeClusterResponse : public EksResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class ListGlobalTablesResponsePrivate;
 
-class QTAWS_EXPORT ListGlobalTablesResponse : public DynamoDBResponse {
+class QTAWSDYNAMODB_EXPORT ListGlobalTablesResponse : public DynamoDBResponse {
     Q_OBJECT
 
 public:

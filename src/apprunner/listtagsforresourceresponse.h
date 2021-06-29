@@ -28,7 +28,7 @@ namespace AppRunner {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public AppRunnerResponse {
+class QTAWSAPPRUNNER_EXPORT ListTagsForResourceResponse : public AppRunnerResponse {
     Q_OBJECT
 
 public:

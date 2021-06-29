@@ -27,7 +27,7 @@ namespace EKS {
 
 class DescribeNodegroupRequestPrivate;
 
-class QTAWS_EXPORT DescribeNodegroupRequest : public EksRequest {
+class QTAWSEKS_EXPORT DescribeNodegroupRequest : public EksRequest {
 
 public:
     DescribeNodegroupRequest(const DescribeNodegroupRequest &other);

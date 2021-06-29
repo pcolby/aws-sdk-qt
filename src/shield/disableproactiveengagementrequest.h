@@ -27,7 +27,7 @@ namespace Shield {
 
 class DisableProactiveEngagementRequestPrivate;
 
-class QTAWS_EXPORT DisableProactiveEngagementRequest : public ShieldRequest {
+class QTAWSSHIELD_EXPORT DisableProactiveEngagementRequest : public ShieldRequest {
 
 public:
     DisableProactiveEngagementRequest(const DisableProactiveEngagementRequest &other);

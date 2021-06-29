@@ -27,7 +27,7 @@ namespace kendra {
 
 class ListThesauriRequestPrivate;
 
-class QTAWS_EXPORT ListThesauriRequest : public kendraRequest {
+class QTAWSKENDRA_EXPORT ListThesauriRequest : public kendraRequest {
 
 public:
     ListThesauriRequest(const ListThesauriRequest &other);

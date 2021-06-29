@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawscognitosyncglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace CognitoSync {
 
 class CognitoSyncRequestPrivate;
 
-class QTAWS_EXPORT CognitoSyncRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCOGNITOSYNC_EXPORT CognitoSyncRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CognitoSync.

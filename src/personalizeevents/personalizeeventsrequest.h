@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawspersonalizeeventsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace PersonalizeEvents {
 
 class PersonalizeEventsRequestPrivate;
 
-class QTAWS_EXPORT PersonalizeEventsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSPERSONALIZEEVENTS_EXPORT PersonalizeEventsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by PersonalizeEvents.

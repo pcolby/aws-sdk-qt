@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class DeleteNetworkProfileRequestPrivate;
 
-class QTAWS_EXPORT DeleteNetworkProfileRequest : public DeviceFarmRequest {
+class QTAWSDEVICEFARM_EXPORT DeleteNetworkProfileRequest : public DeviceFarmRequest {
 
 public:
     DeleteNetworkProfileRequest(const DeleteNetworkProfileRequest &other);

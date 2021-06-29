@@ -27,7 +27,7 @@ namespace EventBridge {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public EventBridgeRequest {
+class QTAWSEVENTBRIDGE_EXPORT ListTagsForResourceRequest : public EventBridgeRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

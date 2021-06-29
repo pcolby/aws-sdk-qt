@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class DescribeActionTargetsRequestPrivate;
 
-class QTAWS_EXPORT DescribeActionTargetsRequest : public SecurityHubRequest {
+class QTAWSSECURITYHUB_EXPORT DescribeActionTargetsRequest : public SecurityHubRequest {
 
 public:
     DescribeActionTargetsRequest(const DescribeActionTargetsRequest &other);

@@ -28,7 +28,7 @@ namespace LicenseManager {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public LicenseManagerResponse {
+class QTAWSLICENSEMANAGER_EXPORT UntagResourceResponse : public LicenseManagerResponse {
     Q_OBJECT
 
 public:

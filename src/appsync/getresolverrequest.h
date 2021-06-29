@@ -27,7 +27,7 @@ namespace AppSync {
 
 class GetResolverRequestPrivate;
 
-class QTAWS_EXPORT GetResolverRequest : public AppSyncRequest {
+class QTAWSAPPSYNC_EXPORT GetResolverRequest : public AppSyncRequest {
 
 public:
     GetResolverRequest(const GetResolverRequest &other);

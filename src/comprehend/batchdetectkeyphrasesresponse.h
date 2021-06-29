@@ -28,7 +28,7 @@ namespace Comprehend {
 
 class BatchDetectKeyPhrasesResponsePrivate;
 
-class QTAWS_EXPORT BatchDetectKeyPhrasesResponse : public ComprehendResponse {
+class QTAWSCOMPREHEND_EXPORT BatchDetectKeyPhrasesResponse : public ComprehendResponse {
     Q_OBJECT
 
 public:

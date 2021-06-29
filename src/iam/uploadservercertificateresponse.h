@@ -28,7 +28,7 @@ namespace IAM {
 
 class UploadServerCertificateResponsePrivate;
 
-class QTAWS_EXPORT UploadServerCertificateResponse : public IamResponse {
+class QTAWSIAM_EXPORT UploadServerCertificateResponse : public IamResponse {
     Q_OBJECT
 
 public:

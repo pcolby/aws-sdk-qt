@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class DetachFromIndexRequestPrivate;
 
-class QTAWS_EXPORT DetachFromIndexRequest : public CloudDirectoryRequest {
+class QTAWSCLOUDDIRECTORY_EXPORT DetachFromIndexRequest : public CloudDirectoryRequest {
 
 public:
     DetachFromIndexRequest(const DetachFromIndexRequest &other);

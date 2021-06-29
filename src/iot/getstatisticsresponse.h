@@ -28,7 +28,7 @@ namespace IoT {
 
 class GetStatisticsResponsePrivate;
 
-class QTAWS_EXPORT GetStatisticsResponse : public IoTResponse {
+class QTAWSIOT_EXPORT GetStatisticsResponse : public IoTResponse {
     Q_OBJECT
 
 public:

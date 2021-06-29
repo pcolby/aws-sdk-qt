@@ -27,7 +27,7 @@ namespace SSMIncidents {
 
 class DeleteReplicationSetRequestPrivate;
 
-class QTAWS_EXPORT DeleteReplicationSetRequest : public SSMIncidentsRequest {
+class QTAWSSSMINCIDENTS_EXPORT DeleteReplicationSetRequest : public SSMIncidentsRequest {
 
 public:
     DeleteReplicationSetRequest(const DeleteReplicationSetRequest &other);

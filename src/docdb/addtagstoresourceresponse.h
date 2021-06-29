@@ -28,7 +28,7 @@ namespace DocDB {
 
 class AddTagsToResourceResponsePrivate;
 
-class QTAWS_EXPORT AddTagsToResourceResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT AddTagsToResourceResponse : public DocDBResponse {
     Q_OBJECT
 
 public:

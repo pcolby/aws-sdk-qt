@@ -21,6 +21,8 @@
 #define QTAWS_SERVICEQUOTASRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsservicequotasglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace ServiceQuotas {
 
 class ServiceQuotasResponsePrivate;
 
-class QTAWS_EXPORT ServiceQuotasResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSERVICEQUOTAS_EXPORT ServiceQuotasResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

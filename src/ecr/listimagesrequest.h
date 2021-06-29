@@ -27,7 +27,7 @@ namespace ECR {
 
 class ListImagesRequestPrivate;
 
-class QTAWS_EXPORT ListImagesRequest : public EcrRequest {
+class QTAWSECR_EXPORT ListImagesRequest : public EcrRequest {
 
 public:
     ListImagesRequest(const ListImagesRequest &other);

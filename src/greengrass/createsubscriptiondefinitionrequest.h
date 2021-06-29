@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class CreateSubscriptionDefinitionRequestPrivate;
 
-class QTAWS_EXPORT CreateSubscriptionDefinitionRequest : public GreengrassRequest {
+class QTAWSGREENGRASS_EXPORT CreateSubscriptionDefinitionRequest : public GreengrassRequest {
 
 public:
     CreateSubscriptionDefinitionRequest(const CreateSubscriptionDefinitionRequest &other);

@@ -27,7 +27,7 @@ namespace ACMPCA {
 
 class GetPolicyRequestPrivate;
 
-class QTAWS_EXPORT GetPolicyRequest : public AcmpcaRequest {
+class QTAWSACMPCA_EXPORT GetPolicyRequest : public AcmpcaRequest {
 
 public:
     GetPolicyRequest(const GetPolicyRequest &other);

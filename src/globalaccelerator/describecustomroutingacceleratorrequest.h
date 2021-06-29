@@ -27,7 +27,7 @@ namespace GlobalAccelerator {
 
 class DescribeCustomRoutingAcceleratorRequestPrivate;
 
-class QTAWS_EXPORT DescribeCustomRoutingAcceleratorRequest : public GlobalAcceleratorRequest {
+class QTAWSGLOBALACCELERATOR_EXPORT DescribeCustomRoutingAcceleratorRequest : public GlobalAcceleratorRequest {
 
 public:
     DescribeCustomRoutingAcceleratorRequest(const DescribeCustomRoutingAcceleratorRequest &other);

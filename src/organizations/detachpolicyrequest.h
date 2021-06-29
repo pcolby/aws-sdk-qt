@@ -27,7 +27,7 @@ namespace Organizations {
 
 class DetachPolicyRequestPrivate;
 
-class QTAWS_EXPORT DetachPolicyRequest : public OrganizationsRequest {
+class QTAWSORGANIZATIONS_EXPORT DetachPolicyRequest : public OrganizationsRequest {
 
 public:
     DetachPolicyRequest(const DetachPolicyRequest &other);

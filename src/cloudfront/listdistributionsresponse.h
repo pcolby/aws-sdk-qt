@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class ListDistributionsResponsePrivate;
 
-class QTAWS_EXPORT ListDistributionsResponse : public CloudFrontResponse {
+class QTAWSCLOUDFRONT_EXPORT ListDistributionsResponse : public CloudFrontResponse {
     Q_OBJECT
 
 public:

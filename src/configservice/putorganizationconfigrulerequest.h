@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class PutOrganizationConfigRuleRequestPrivate;
 
-class QTAWS_EXPORT PutOrganizationConfigRuleRequest : public ConfigServiceRequest {
+class QTAWSCONFIGSERVICE_EXPORT PutOrganizationConfigRuleRequest : public ConfigServiceRequest {
 
 public:
     PutOrganizationConfigRuleRequest(const PutOrganizationConfigRuleRequest &other);

@@ -27,7 +27,7 @@ namespace WorkDocs {
 
 class GetDocumentRequestPrivate;
 
-class QTAWS_EXPORT GetDocumentRequest : public WorkDocsRequest {
+class QTAWSWORKDOCS_EXPORT GetDocumentRequest : public WorkDocsRequest {
 
 public:
     GetDocumentRequest(const GetDocumentRequest &other);

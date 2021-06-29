@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public ElastiCacheResponse {
+class QTAWSELASTICACHE_EXPORT ListTagsForResourceResponse : public ElastiCacheResponse {
     Q_OBJECT
 
 public:

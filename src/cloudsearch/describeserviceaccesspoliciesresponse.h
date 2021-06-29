@@ -28,7 +28,7 @@ namespace CloudSearch {
 
 class DescribeServiceAccessPoliciesResponsePrivate;
 
-class QTAWS_EXPORT DescribeServiceAccessPoliciesResponse : public CloudSearchResponse {
+class QTAWSCLOUDSEARCH_EXPORT DescribeServiceAccessPoliciesResponse : public CloudSearchResponse {
     Q_OBJECT
 
 public:

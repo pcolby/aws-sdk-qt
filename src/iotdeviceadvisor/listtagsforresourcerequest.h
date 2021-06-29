@@ -27,7 +27,7 @@ namespace IoTDeviceAdvisor {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public IoTDeviceAdvisorRequest {
+class QTAWSIOTDEVICEADVISOR_EXPORT ListTagsForResourceRequest : public IoTDeviceAdvisorRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

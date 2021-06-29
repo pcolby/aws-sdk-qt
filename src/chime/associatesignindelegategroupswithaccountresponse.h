@@ -28,7 +28,7 @@ namespace Chime {
 
 class AssociateSigninDelegateGroupsWithAccountResponsePrivate;
 
-class QTAWS_EXPORT AssociateSigninDelegateGroupsWithAccountResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT AssociateSigninDelegateGroupsWithAccountResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

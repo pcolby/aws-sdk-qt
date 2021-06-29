@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class CreateFolderResponsePrivate;
 
-class QTAWS_EXPORT CreateFolderResponse : public WorkDocsResponse {
+class QTAWSWORKDOCS_EXPORT CreateFolderResponse : public WorkDocsResponse {
     Q_OBJECT
 
 public:

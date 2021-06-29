@@ -27,7 +27,7 @@ namespace AppRunner {
 
 class StartDeploymentRequestPrivate;
 
-class QTAWS_EXPORT StartDeploymentRequest : public AppRunnerRequest {
+class QTAWSAPPRUNNER_EXPORT StartDeploymentRequest : public AppRunnerRequest {
 
 public:
     StartDeploymentRequest(const StartDeploymentRequest &other);

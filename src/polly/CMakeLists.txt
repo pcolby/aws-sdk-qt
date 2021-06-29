@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSPOLLY_LIBRARY)
+
 add_library(QtAwsPolly
   deletelexiconrequest.h
   deletelexiconrequest_p.h
@@ -33,6 +35,7 @@ add_library(QtAwsPolly
   putlexiconrequest_p.h
   putlexiconresponse.h
   putlexiconresponse_p.h
+  qtawspollyglobal.h
   startspeechsynthesistaskrequest.h
   startspeechsynthesistaskrequest_p.h
   startspeechsynthesistaskresponse.h

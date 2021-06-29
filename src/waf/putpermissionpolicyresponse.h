@@ -28,7 +28,7 @@ namespace WAF {
 
 class PutPermissionPolicyResponsePrivate;
 
-class QTAWS_EXPORT PutPermissionPolicyResponse : public WafResponse {
+class QTAWSWAF_EXPORT PutPermissionPolicyResponse : public WafResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class CreateAccountCustomizationRequestPrivate;
 
-class QTAWS_EXPORT CreateAccountCustomizationRequest : public QuickSightRequest {
+class QTAWSQUICKSIGHT_EXPORT CreateAccountCustomizationRequest : public QuickSightRequest {
 
 public:
     CreateAccountCustomizationRequest(const CreateAccountCustomizationRequest &other);

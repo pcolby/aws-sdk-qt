@@ -28,7 +28,7 @@ namespace NimbleStudio {
 
 class UpdateStudioResponsePrivate;
 
-class QTAWS_EXPORT UpdateStudioResponse : public NimbleStudioResponse {
+class QTAWSNIMBLESTUDIO_EXPORT UpdateStudioResponse : public NimbleStudioResponse {
     Q_OBJECT
 
 public:

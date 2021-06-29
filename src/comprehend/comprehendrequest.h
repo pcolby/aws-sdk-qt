@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawscomprehendglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Comprehend {
 
 class ComprehendRequestPrivate;
 
-class QTAWS_EXPORT ComprehendRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCOMPREHEND_EXPORT ComprehendRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Comprehend.

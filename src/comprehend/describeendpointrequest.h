@@ -27,7 +27,7 @@ namespace Comprehend {
 
 class DescribeEndpointRequestPrivate;
 
-class QTAWS_EXPORT DescribeEndpointRequest : public ComprehendRequest {
+class QTAWSCOMPREHEND_EXPORT DescribeEndpointRequest : public ComprehendRequest {
 
 public:
     DescribeEndpointRequest(const DescribeEndpointRequest &other);

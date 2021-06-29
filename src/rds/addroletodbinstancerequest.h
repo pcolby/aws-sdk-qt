@@ -27,7 +27,7 @@ namespace RDS {
 
 class AddRoleToDBInstanceRequestPrivate;
 
-class QTAWS_EXPORT AddRoleToDBInstanceRequest : public RdsRequest {
+class QTAWSRDS_EXPORT AddRoleToDBInstanceRequest : public RdsRequest {
 
 public:
     AddRoleToDBInstanceRequest(const AddRoleToDBInstanceRequest &other);

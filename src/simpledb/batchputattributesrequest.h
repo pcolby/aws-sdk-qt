@@ -27,7 +27,7 @@ namespace SimpleDB {
 
 class BatchPutAttributesRequestPrivate;
 
-class QTAWS_EXPORT BatchPutAttributesRequest : public SimpleDBRequest {
+class QTAWSSIMPLEDB_EXPORT BatchPutAttributesRequest : public SimpleDBRequest {
 
 public:
     BatchPutAttributesRequest(const BatchPutAttributesRequest &other);

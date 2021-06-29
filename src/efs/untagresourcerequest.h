@@ -27,7 +27,7 @@ namespace EFS {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public EfsRequest {
+class QTAWSEFS_EXPORT UntagResourceRequest : public EfsRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

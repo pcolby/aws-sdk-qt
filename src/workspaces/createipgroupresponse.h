@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class CreateIpGroupResponsePrivate;
 
-class QTAWS_EXPORT CreateIpGroupResponse : public WorkSpacesResponse {
+class QTAWSWORKSPACES_EXPORT CreateIpGroupResponse : public WorkSpacesResponse {
     Q_OBJECT
 
 public:

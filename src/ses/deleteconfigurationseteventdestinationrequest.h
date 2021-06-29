@@ -27,7 +27,7 @@ namespace SES {
 
 class DeleteConfigurationSetEventDestinationRequestPrivate;
 
-class QTAWS_EXPORT DeleteConfigurationSetEventDestinationRequest : public SesRequest {
+class QTAWSSES_EXPORT DeleteConfigurationSetEventDestinationRequest : public SesRequest {
 
 public:
     DeleteConfigurationSetEventDestinationRequest(const DeleteConfigurationSetEventDestinationRequest &other);

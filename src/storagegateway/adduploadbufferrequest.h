@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class AddUploadBufferRequestPrivate;
 
-class QTAWS_EXPORT AddUploadBufferRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT AddUploadBufferRequest : public StorageGatewayRequest {
 
 public:
     AddUploadBufferRequest(const AddUploadBufferRequest &other);

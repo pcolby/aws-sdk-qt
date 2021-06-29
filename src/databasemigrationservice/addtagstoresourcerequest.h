@@ -27,7 +27,7 @@ namespace DatabaseMigrationService {
 
 class AddTagsToResourceRequestPrivate;
 
-class QTAWS_EXPORT AddTagsToResourceRequest : public DatabaseMigrationServiceRequest {
+class QTAWSDATABASEMIGRATIONSERVICE_EXPORT AddTagsToResourceRequest : public DatabaseMigrationServiceRequest {
 
 public:
     AddTagsToResourceRequest(const AddTagsToResourceRequest &other);

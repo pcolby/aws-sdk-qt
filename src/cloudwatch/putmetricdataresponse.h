@@ -28,7 +28,7 @@ namespace CloudWatch {
 
 class PutMetricDataResponsePrivate;
 
-class QTAWS_EXPORT PutMetricDataResponse : public CloudWatchResponse {
+class QTAWSCLOUDWATCH_EXPORT PutMetricDataResponse : public CloudWatchResponse {
     Q_OBJECT
 
 public:

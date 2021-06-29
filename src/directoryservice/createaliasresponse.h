@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class CreateAliasResponsePrivate;
 
-class QTAWS_EXPORT CreateAliasResponse : public DirectoryServiceResponse {
+class QTAWSDIRECTORYSERVICE_EXPORT CreateAliasResponse : public DirectoryServiceResponse {
     Q_OBJECT
 
 public:

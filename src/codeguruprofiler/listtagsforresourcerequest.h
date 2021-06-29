@@ -27,7 +27,7 @@ namespace CodeGuruProfiler {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public CodeGuruProfilerRequest {
+class QTAWSCODEGURUPROFILER_EXPORT ListTagsForResourceRequest : public CodeGuruProfilerRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

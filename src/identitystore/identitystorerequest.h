@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsidentitystoreglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace IdentityStore {
 
 class IdentityStoreRequestPrivate;
 
-class QTAWS_EXPORT IdentityStoreRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSIDENTITYSTORE_EXPORT IdentityStoreRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by IdentityStore.

@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class AddTagsToResourceResponsePrivate;
 
-class QTAWS_EXPORT AddTagsToResourceResponse : public DirectoryServiceResponse {
+class QTAWSDIRECTORYSERVICE_EXPORT AddTagsToResourceResponse : public DirectoryServiceResponse {
     Q_OBJECT
 
 public:

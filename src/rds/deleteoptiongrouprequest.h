@@ -27,7 +27,7 @@ namespace RDS {
 
 class DeleteOptionGroupRequestPrivate;
 
-class QTAWS_EXPORT DeleteOptionGroupRequest : public RdsRequest {
+class QTAWSRDS_EXPORT DeleteOptionGroupRequest : public RdsRequest {
 
 public:
     DeleteOptionGroupRequest(const DeleteOptionGroupRequest &other);

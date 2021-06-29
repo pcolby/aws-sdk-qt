@@ -27,7 +27,7 @@ namespace EBS {
 
 class ListChangedBlocksRequestPrivate;
 
-class QTAWS_EXPORT ListChangedBlocksRequest : public EbsRequest {
+class QTAWSEBS_EXPORT ListChangedBlocksRequest : public EbsRequest {
 
 public:
     ListChangedBlocksRequest(const ListChangedBlocksRequest &other);

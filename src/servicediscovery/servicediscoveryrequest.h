@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsservicediscoveryglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace ServiceDiscovery {
 
 class ServiceDiscoveryRequestPrivate;
 
-class QTAWS_EXPORT ServiceDiscoveryRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSERVICEDISCOVERY_EXPORT ServiceDiscoveryRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ServiceDiscovery.

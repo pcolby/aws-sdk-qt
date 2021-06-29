@@ -27,7 +27,7 @@ namespace SSM {
 
 class DescribeOpsItemsRequestPrivate;
 
-class QTAWS_EXPORT DescribeOpsItemsRequest : public SsmRequest {
+class QTAWSSSM_EXPORT DescribeOpsItemsRequest : public SsmRequest {
 
 public:
     DescribeOpsItemsRequest(const DescribeOpsItemsRequest &other);

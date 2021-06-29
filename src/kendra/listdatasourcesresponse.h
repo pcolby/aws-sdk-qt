@@ -28,7 +28,7 @@ namespace kendra {
 
 class ListDataSourcesResponsePrivate;
 
-class QTAWS_EXPORT ListDataSourcesResponse : public kendraResponse {
+class QTAWSKENDRA_EXPORT ListDataSourcesResponse : public kendraResponse {
     Q_OBJECT
 
 public:

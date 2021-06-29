@@ -27,7 +27,7 @@ namespace CognitoIdentityProvider {
 
 class ListUsersRequestPrivate;
 
-class QTAWS_EXPORT ListUsersRequest : public CognitoIdentityProviderRequest {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT ListUsersRequest : public CognitoIdentityProviderRequest {
 
 public:
     ListUsersRequest(const ListUsersRequest &other);

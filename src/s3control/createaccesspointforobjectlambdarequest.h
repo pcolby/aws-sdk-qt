@@ -27,7 +27,7 @@ namespace S3Control {
 
 class CreateAccessPointForObjectLambdaRequestPrivate;
 
-class QTAWS_EXPORT CreateAccessPointForObjectLambdaRequest : public S3ControlRequest {
+class QTAWSS3CONTROL_EXPORT CreateAccessPointForObjectLambdaRequest : public S3ControlRequest {
 
 public:
     CreateAccessPointForObjectLambdaRequest(const CreateAccessPointForObjectLambdaRequest &other);

@@ -1,8 +1,11 @@
+add_compile_definitions(QTAWSSSOOIDC_LIBRARY)
+
 add_library(QtAwsSsooidc
   createtokenrequest.h
   createtokenrequest_p.h
   createtokenresponse.h
   createtokenresponse_p.h
+  qtawsssooidcglobal.h
   registerclientrequest.h
   registerclientrequest_p.h
   registerclientresponse.h

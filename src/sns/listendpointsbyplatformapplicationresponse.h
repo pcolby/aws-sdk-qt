@@ -28,7 +28,7 @@ namespace SNS {
 
 class ListEndpointsByPlatformApplicationResponsePrivate;
 
-class QTAWS_EXPORT ListEndpointsByPlatformApplicationResponse : public SnsResponse {
+class QTAWSSNS_EXPORT ListEndpointsByPlatformApplicationResponse : public SnsResponse {
     Q_OBJECT
 
 public:

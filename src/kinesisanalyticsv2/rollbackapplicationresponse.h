@@ -28,7 +28,7 @@ namespace KinesisAnalyticsV2 {
 
 class RollbackApplicationResponsePrivate;
 
-class QTAWS_EXPORT RollbackApplicationResponse : public KinesisAnalyticsV2Response {
+class QTAWSKINESISANALYTICSV2_EXPORT RollbackApplicationResponse : public KinesisAnalyticsV2Response {
     Q_OBJECT
 
 public:

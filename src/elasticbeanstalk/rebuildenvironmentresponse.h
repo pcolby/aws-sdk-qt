@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class RebuildEnvironmentResponsePrivate;
 
-class QTAWS_EXPORT RebuildEnvironmentResponse : public ElasticBeanstalkResponse {
+class QTAWSELASTICBEANSTALK_EXPORT RebuildEnvironmentResponse : public ElasticBeanstalkResponse {
     Q_OBJECT
 
 public:

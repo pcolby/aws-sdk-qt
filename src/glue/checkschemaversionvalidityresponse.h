@@ -28,7 +28,7 @@ namespace Glue {
 
 class CheckSchemaVersionValidityResponsePrivate;
 
-class QTAWS_EXPORT CheckSchemaVersionValidityResponse : public GlueResponse {
+class QTAWSGLUE_EXPORT CheckSchemaVersionValidityResponse : public GlueResponse {
     Q_OBJECT
 
 public:

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsssooidcglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -35,7 +37,7 @@ class RegisterClientResponse;
 class StartDeviceAuthorizationRequest;
 class StartDeviceAuthorizationResponse;
 
-class QTAWS_EXPORT SsooidcClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSSOOIDC_EXPORT SsooidcClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

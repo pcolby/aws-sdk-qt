@@ -27,7 +27,7 @@ namespace IoTWireless {
 
 class GetWirelessGatewayCertificateRequestPrivate;
 
-class QTAWS_EXPORT GetWirelessGatewayCertificateRequest : public IoTWirelessRequest {
+class QTAWSIOTWIRELESS_EXPORT GetWirelessGatewayCertificateRequest : public IoTWirelessRequest {
 
 public:
     GetWirelessGatewayCertificateRequest(const GetWirelessGatewayCertificateRequest &other);

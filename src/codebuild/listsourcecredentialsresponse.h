@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class ListSourceCredentialsResponsePrivate;
 
-class QTAWS_EXPORT ListSourceCredentialsResponse : public CodeBuildResponse {
+class QTAWSCODEBUILD_EXPORT ListSourceCredentialsResponse : public CodeBuildResponse {
     Q_OBJECT
 
 public:

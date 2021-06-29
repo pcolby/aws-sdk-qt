@@ -27,7 +27,7 @@ namespace Schemas {
 
 class GetDiscoveredSchemaRequestPrivate;
 
-class QTAWS_EXPORT GetDiscoveredSchemaRequest : public SchemasRequest {
+class QTAWSSCHEMAS_EXPORT GetDiscoveredSchemaRequest : public SchemasRequest {
 
 public:
     GetDiscoveredSchemaRequest(const GetDiscoveredSchemaRequest &other);

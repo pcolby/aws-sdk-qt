@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 
 class DeletePackageResponsePrivate;
 
-class QTAWS_EXPORT DeletePackageResponse : public ElasticsearchServiceResponse {
+class QTAWSELASTICSEARCHSERVICE_EXPORT DeletePackageResponse : public ElasticsearchServiceResponse {
     Q_OBJECT
 
 public:

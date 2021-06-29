@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSERVICECATALOG_LIBRARY)
+
 add_library(QtAwsServiceCatalog
   acceptportfoliosharerequest.h
   acceptportfoliosharerequest_p.h
@@ -287,6 +289,7 @@ add_library(QtAwsServiceCatalog
   provisionproductrequest_p.h
   provisionproductresponse.h
   provisionproductresponse_p.h
+  qtawsservicecatalogglobal.h
   rejectportfoliosharerequest.h
   rejectportfoliosharerequest_p.h
   rejectportfolioshareresponse.h

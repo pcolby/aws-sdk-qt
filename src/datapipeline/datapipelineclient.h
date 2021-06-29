@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsdatapipelineglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -67,7 +69,7 @@ class SetTaskStatusResponse;
 class ValidatePipelineDefinitionRequest;
 class ValidatePipelineDefinitionResponse;
 
-class QTAWS_EXPORT DataPipelineClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSDATAPIPELINE_EXPORT DataPipelineClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -21,6 +21,8 @@
 #define QTAWS_CODESTARCONNECTIONSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawscodestarconnectionsglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace CodeStarconnections {
 
 class CodeStarconnectionsResponsePrivate;
 
-class QTAWS_EXPORT CodeStarconnectionsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCODESTARCONNECTIONS_EXPORT CodeStarconnectionsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

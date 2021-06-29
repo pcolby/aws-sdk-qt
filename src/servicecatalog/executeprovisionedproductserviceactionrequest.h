@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class ExecuteProvisionedProductServiceActionRequestPrivate;
 
-class QTAWS_EXPORT ExecuteProvisionedProductServiceActionRequest : public ServiceCatalogRequest {
+class QTAWSSERVICECATALOG_EXPORT ExecuteProvisionedProductServiceActionRequest : public ServiceCatalogRequest {
 
 public:
     ExecuteProvisionedProductServiceActionRequest(const ExecuteProvisionedProductServiceActionRequest &other);

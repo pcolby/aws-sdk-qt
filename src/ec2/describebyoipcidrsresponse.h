@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeByoipCidrsResponsePrivate;
 
-class QTAWS_EXPORT DescribeByoipCidrsResponse : public Ec2Response {
+class QTAWSEC2_EXPORT DescribeByoipCidrsResponse : public Ec2Response {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace FSx {
 
 class DisassociateFileSystemAliasesRequestPrivate;
 
-class QTAWS_EXPORT DisassociateFileSystemAliasesRequest : public FSxRequest {
+class QTAWSFSX_EXPORT DisassociateFileSystemAliasesRequest : public FSxRequest {
 
 public:
     DisassociateFileSystemAliasesRequest(const DisassociateFileSystemAliasesRequest &other);

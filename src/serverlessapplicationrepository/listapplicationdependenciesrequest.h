@@ -27,7 +27,7 @@ namespace ServerlessApplicationRepository {
 
 class ListApplicationDependenciesRequestPrivate;
 
-class QTAWS_EXPORT ListApplicationDependenciesRequest : public ServerlessApplicationRepositoryRequest {
+class QTAWSSERVERLESSAPPLICATIONREPOSITORY_EXPORT ListApplicationDependenciesRequest : public ServerlessApplicationRepositoryRequest {
 
 public:
     ListApplicationDependenciesRequest(const ListApplicationDependenciesRequest &other);

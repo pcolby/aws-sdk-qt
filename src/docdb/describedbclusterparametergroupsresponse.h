@@ -28,7 +28,7 @@ namespace DocDB {
 
 class DescribeDBClusterParameterGroupsResponsePrivate;
 
-class QTAWS_EXPORT DescribeDBClusterParameterGroupsResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT DescribeDBClusterParameterGroupsResponse : public DocDBResponse {
     Q_OBJECT
 
 public:

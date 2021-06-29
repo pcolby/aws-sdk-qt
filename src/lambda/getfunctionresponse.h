@@ -28,7 +28,7 @@ namespace Lambda {
 
 class GetFunctionResponsePrivate;
 
-class QTAWS_EXPORT GetFunctionResponse : public LambdaResponse {
+class QTAWSLAMBDA_EXPORT GetFunctionResponse : public LambdaResponse {
     Q_OBJECT
 
 public:

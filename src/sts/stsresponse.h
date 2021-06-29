@@ -21,6 +21,8 @@
 #define QTAWS_STSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsstsglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace STS {
 
 class StsResponsePrivate;
 
-class QTAWS_EXPORT StsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSTS_EXPORT StsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

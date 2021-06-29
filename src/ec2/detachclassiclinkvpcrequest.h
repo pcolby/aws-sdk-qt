@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DetachClassicLinkVpcRequestPrivate;
 
-class QTAWS_EXPORT DetachClassicLinkVpcRequest : public Ec2Request {
+class QTAWSEC2_EXPORT DetachClassicLinkVpcRequest : public Ec2Request {
 
 public:
     DetachClassicLinkVpcRequest(const DetachClassicLinkVpcRequest &other);

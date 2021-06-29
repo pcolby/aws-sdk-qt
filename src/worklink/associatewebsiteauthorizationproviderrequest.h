@@ -27,7 +27,7 @@ namespace WorkLink {
 
 class AssociateWebsiteAuthorizationProviderRequestPrivate;
 
-class QTAWS_EXPORT AssociateWebsiteAuthorizationProviderRequest : public WorkLinkRequest {
+class QTAWSWORKLINK_EXPORT AssociateWebsiteAuthorizationProviderRequest : public WorkLinkRequest {
 
 public:
     AssociateWebsiteAuthorizationProviderRequest(const AssociateWebsiteAuthorizationProviderRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawstimestreamwriteglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace TimestreamWrite {
 
 class TimestreamWriteRequestPrivate;
 
-class QTAWS_EXPORT TimestreamWriteRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSTIMESTREAMWRITE_EXPORT TimestreamWriteRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by TimestreamWrite.

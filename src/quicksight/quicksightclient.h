@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsquicksightglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -227,7 +229,7 @@ class UpdateThemePermissionsResponse;
 class UpdateUserRequest;
 class UpdateUserResponse;
 
-class QTAWS_EXPORT QuickSightClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSQUICKSIGHT_EXPORT QuickSightClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

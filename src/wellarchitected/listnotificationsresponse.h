@@ -28,7 +28,7 @@ namespace WellArchitected {
 
 class ListNotificationsResponsePrivate;
 
-class QTAWS_EXPORT ListNotificationsResponse : public WellArchitectedResponse {
+class QTAWSWELLARCHITECTED_EXPORT ListNotificationsResponse : public WellArchitectedResponse {
     Q_OBJECT
 
 public:

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsschemasglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -91,7 +93,7 @@ class UpdateRegistryResponse;
 class UpdateSchemaRequest;
 class UpdateSchemaResponse;
 
-class QTAWS_EXPORT SchemasClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSCHEMAS_EXPORT SchemasClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

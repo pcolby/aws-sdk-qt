@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class GetDedicatedIpRequestPrivate;
 
-class QTAWS_EXPORT GetDedicatedIpRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT GetDedicatedIpRequest : public Sesv2Request {
 
 public:
     GetDedicatedIpRequest(const GetDedicatedIpRequest &other);

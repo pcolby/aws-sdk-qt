@@ -27,7 +27,7 @@ namespace CodeGuruProfiler {
 
 class AddNotificationChannelsRequestPrivate;
 
-class QTAWS_EXPORT AddNotificationChannelsRequest : public CodeGuruProfilerRequest {
+class QTAWSCODEGURUPROFILER_EXPORT AddNotificationChannelsRequest : public CodeGuruProfilerRequest {
 
 public:
     AddNotificationChannelsRequest(const AddNotificationChannelsRequest &other);

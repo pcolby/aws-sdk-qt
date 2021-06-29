@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawskinesisvideosignalingchannelsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace KinesisVideoSignalingChannels {
 
 class KinesisVideoSignalingChannelsRequestPrivate;
 
-class QTAWS_EXPORT KinesisVideoSignalingChannelsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSKINESISVIDEOSIGNALINGCHANNELS_EXPORT KinesisVideoSignalingChannelsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by KinesisVideoSignalingChannels.

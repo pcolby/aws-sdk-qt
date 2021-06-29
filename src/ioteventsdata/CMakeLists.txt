@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSIOTEVENTSDATA_LIBRARY)
+
 add_library(QtAwsIoTEventsData
   batchacknowledgealarmrequest.h
   batchacknowledgealarmrequest_p.h
@@ -49,6 +51,7 @@ add_library(QtAwsIoTEventsData
   listdetectorsrequest_p.h
   listdetectorsresponse.h
   listdetectorsresponse_p.h
+  qtawsioteventsdataglobal.h
   batchacknowledgealarmrequest.cpp
   batchacknowledgealarmresponse.cpp
   batchdisablealarmrequest.cpp

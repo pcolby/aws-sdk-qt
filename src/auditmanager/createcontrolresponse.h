@@ -28,7 +28,7 @@ namespace AuditManager {
 
 class CreateControlResponsePrivate;
 
-class QTAWS_EXPORT CreateControlResponse : public AuditManagerResponse {
+class QTAWSAUDITMANAGER_EXPORT CreateControlResponse : public AuditManagerResponse {
     Q_OBJECT
 
 public:

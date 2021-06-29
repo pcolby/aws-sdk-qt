@@ -27,7 +27,7 @@ namespace WellArchitected {
 
 class UpdateWorkloadShareRequestPrivate;
 
-class QTAWS_EXPORT UpdateWorkloadShareRequest : public WellArchitectedRequest {
+class QTAWSWELLARCHITECTED_EXPORT UpdateWorkloadShareRequest : public WellArchitectedRequest {
 
 public:
     UpdateWorkloadShareRequest(const UpdateWorkloadShareRequest &other);

@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class DeleteFunctionRequestPrivate;
 
-class QTAWS_EXPORT DeleteFunctionRequest : public CloudFrontRequest {
+class QTAWSCLOUDFRONT_EXPORT DeleteFunctionRequest : public CloudFrontRequest {
 
 public:
     DeleteFunctionRequest(const DeleteFunctionRequest &other);

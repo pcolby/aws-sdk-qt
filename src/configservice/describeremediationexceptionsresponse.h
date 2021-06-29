@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class DescribeRemediationExceptionsResponsePrivate;
 
-class QTAWS_EXPORT DescribeRemediationExceptionsResponse : public ConfigServiceResponse {
+class QTAWSCONFIGSERVICE_EXPORT DescribeRemediationExceptionsResponse : public ConfigServiceResponse {
     Q_OBJECT
 
 public:

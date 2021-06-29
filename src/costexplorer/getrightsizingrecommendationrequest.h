@@ -27,7 +27,7 @@ namespace CostExplorer {
 
 class GetRightsizingRecommendationRequestPrivate;
 
-class QTAWS_EXPORT GetRightsizingRecommendationRequest : public CostExplorerRequest {
+class QTAWSCOSTEXPLORER_EXPORT GetRightsizingRecommendationRequest : public CostExplorerRequest {
 
 public:
     GetRightsizingRecommendationRequest(const GetRightsizingRecommendationRequest &other);

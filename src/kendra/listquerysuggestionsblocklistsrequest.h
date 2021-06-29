@@ -27,7 +27,7 @@ namespace kendra {
 
 class ListQuerySuggestionsBlockListsRequestPrivate;
 
-class QTAWS_EXPORT ListQuerySuggestionsBlockListsRequest : public kendraRequest {
+class QTAWSKENDRA_EXPORT ListQuerySuggestionsBlockListsRequest : public kendraRequest {
 
 public:
     ListQuerySuggestionsBlockListsRequest(const ListQuerySuggestionsBlockListsRequest &other);

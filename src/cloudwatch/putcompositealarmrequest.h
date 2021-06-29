@@ -27,7 +27,7 @@ namespace CloudWatch {
 
 class PutCompositeAlarmRequestPrivate;
 
-class QTAWS_EXPORT PutCompositeAlarmRequest : public CloudWatchRequest {
+class QTAWSCLOUDWATCH_EXPORT PutCompositeAlarmRequest : public CloudWatchRequest {
 
 public:
     PutCompositeAlarmRequest(const PutCompositeAlarmRequest &other);

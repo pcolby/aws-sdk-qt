@@ -27,7 +27,7 @@ namespace MQ {
 
 class ListBrokersRequestPrivate;
 
-class QTAWS_EXPORT ListBrokersRequest : public MqRequest {
+class QTAWSMQ_EXPORT ListBrokersRequest : public MqRequest {
 
 public:
     ListBrokersRequest(const ListBrokersRequest &other);

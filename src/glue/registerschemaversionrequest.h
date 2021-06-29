@@ -27,7 +27,7 @@ namespace Glue {
 
 class RegisterSchemaVersionRequestPrivate;
 
-class QTAWS_EXPORT RegisterSchemaVersionRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT RegisterSchemaVersionRequest : public GlueRequest {
 
 public:
     RegisterSchemaVersionRequest(const RegisterSchemaVersionRequest &other);

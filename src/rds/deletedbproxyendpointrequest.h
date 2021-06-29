@@ -27,7 +27,7 @@ namespace RDS {
 
 class DeleteDBProxyEndpointRequestPrivate;
 
-class QTAWS_EXPORT DeleteDBProxyEndpointRequest : public RdsRequest {
+class QTAWSRDS_EXPORT DeleteDBProxyEndpointRequest : public RdsRequest {
 
 public:
     DeleteDBProxyEndpointRequest(const DeleteDBProxyEndpointRequest &other);

@@ -27,7 +27,7 @@ namespace EventBridge {
 
 class CancelReplayRequestPrivate;
 
-class QTAWS_EXPORT CancelReplayRequest : public EventBridgeRequest {
+class QTAWSEVENTBRIDGE_EXPORT CancelReplayRequest : public EventBridgeRequest {
 
 public:
     CancelReplayRequest(const CancelReplayRequest &other);

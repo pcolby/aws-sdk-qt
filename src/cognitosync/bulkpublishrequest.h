@@ -27,7 +27,7 @@ namespace CognitoSync {
 
 class BulkPublishRequestPrivate;
 
-class QTAWS_EXPORT BulkPublishRequest : public CognitoSyncRequest {
+class QTAWSCOGNITOSYNC_EXPORT BulkPublishRequest : public CognitoSyncRequest {
 
 public:
     BulkPublishRequest(const BulkPublishRequest &other);

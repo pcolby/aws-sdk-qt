@@ -21,6 +21,8 @@
 #define QTAWS_REKOGNITIONRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsrekognitionglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Rekognition {
 
 class RekognitionResponsePrivate;
 
-class QTAWS_EXPORT RekognitionResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSREKOGNITION_EXPORT RekognitionResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

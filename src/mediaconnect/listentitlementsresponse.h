@@ -28,7 +28,7 @@ namespace MediaConnect {
 
 class ListEntitlementsResponsePrivate;
 
-class QTAWS_EXPORT ListEntitlementsResponse : public MediaConnectResponse {
+class QTAWSMEDIACONNECT_EXPORT ListEntitlementsResponse : public MediaConnectResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace AppSync {
 
 class DeleteTypeRequestPrivate;
 
-class QTAWS_EXPORT DeleteTypeRequest : public AppSyncRequest {
+class QTAWSAPPSYNC_EXPORT DeleteTypeRequest : public AppSyncRequest {
 
 public:
     DeleteTypeRequest(const DeleteTypeRequest &other);

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSIOTDATAPLANE_LIBRARY)
+
 add_library(QtAwsIoTDataPlane
   deletethingshadowrequest.h
   deletethingshadowrequest_p.h
@@ -21,6 +23,7 @@ add_library(QtAwsIoTDataPlane
   publishrequest_p.h
   publishresponse.h
   publishresponse_p.h
+  qtawsiotdataplaneglobal.h
   updatethingshadowrequest.h
   updatethingshadowrequest_p.h
   updatethingshadowresponse.h

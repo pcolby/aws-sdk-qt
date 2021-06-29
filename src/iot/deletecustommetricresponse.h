@@ -28,7 +28,7 @@ namespace IoT {
 
 class DeleteCustomMetricResponsePrivate;
 
-class QTAWS_EXPORT DeleteCustomMetricResponse : public IoTResponse {
+class QTAWSIOT_EXPORT DeleteCustomMetricResponse : public IoTResponse {
     Q_OBJECT
 
 public:

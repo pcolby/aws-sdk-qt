@@ -28,7 +28,7 @@ namespace MediaConvert {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public MediaConvertResponse {
+class QTAWSMEDIACONVERT_EXPORT UntagResourceResponse : public MediaConvertResponse {
     Q_OBJECT
 
 public:

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSIOTEVENTS_LIBRARY)
+
 add_library(QtAwsIoTEvents
   createalarmmodelrequest.h
   createalarmmodelrequest_p.h
@@ -85,6 +87,7 @@ add_library(QtAwsIoTEvents
   putloggingoptionsrequest_p.h
   putloggingoptionsresponse.h
   putloggingoptionsresponse_p.h
+  qtawsioteventsglobal.h
   startdetectormodelanalysisrequest.h
   startdetectormodelanalysisrequest_p.h
   startdetectormodelanalysisresponse.h

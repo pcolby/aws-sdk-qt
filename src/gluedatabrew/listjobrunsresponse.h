@@ -28,7 +28,7 @@ namespace GlueDataBrew {
 
 class ListJobRunsResponsePrivate;
 
-class QTAWS_EXPORT ListJobRunsResponse : public GlueDataBrewResponse {
+class QTAWSGLUEDATABREW_EXPORT ListJobRunsResponse : public GlueDataBrewResponse {
     Q_OBJECT
 
 public:

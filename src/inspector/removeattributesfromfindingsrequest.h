@@ -27,7 +27,7 @@ namespace Inspector {
 
 class RemoveAttributesFromFindingsRequestPrivate;
 
-class QTAWS_EXPORT RemoveAttributesFromFindingsRequest : public InspectorRequest {
+class QTAWSINSPECTOR_EXPORT RemoveAttributesFromFindingsRequest : public InspectorRequest {
 
 public:
     RemoveAttributesFromFindingsRequest(const RemoveAttributesFromFindingsRequest &other);

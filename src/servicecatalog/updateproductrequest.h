@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class UpdateProductRequestPrivate;
 
-class QTAWS_EXPORT UpdateProductRequest : public ServiceCatalogRequest {
+class QTAWSSERVICECATALOG_EXPORT UpdateProductRequest : public ServiceCatalogRequest {
 
 public:
     UpdateProductRequest(const UpdateProductRequest &other);

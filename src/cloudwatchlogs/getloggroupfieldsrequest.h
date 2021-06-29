@@ -27,7 +27,7 @@ namespace CloudWatchLogs {
 
 class GetLogGroupFieldsRequestPrivate;
 
-class QTAWS_EXPORT GetLogGroupFieldsRequest : public CloudWatchLogsRequest {
+class QTAWSCLOUDWATCHLOGS_EXPORT GetLogGroupFieldsRequest : public CloudWatchLogsRequest {
 
 public:
     GetLogGroupFieldsRequest(const GetLogGroupFieldsRequest &other);

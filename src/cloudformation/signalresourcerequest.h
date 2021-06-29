@@ -27,7 +27,7 @@ namespace CloudFormation {
 
 class SignalResourceRequestPrivate;
 
-class QTAWS_EXPORT SignalResourceRequest : public CloudFormationRequest {
+class QTAWSCLOUDFORMATION_EXPORT SignalResourceRequest : public CloudFormationRequest {
 
 public:
     SignalResourceRequest(const SignalResourceRequest &other);

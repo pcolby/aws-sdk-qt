@@ -27,7 +27,7 @@ namespace TranscribeService {
 
 class StartMedicalTranscriptionJobRequestPrivate;
 
-class QTAWS_EXPORT StartMedicalTranscriptionJobRequest : public TranscribeServiceRequest {
+class QTAWSTRANSCRIBESERVICE_EXPORT StartMedicalTranscriptionJobRequest : public TranscribeServiceRequest {
 
 public:
     StartMedicalTranscriptionJobRequest(const StartMedicalTranscriptionJobRequest &other);

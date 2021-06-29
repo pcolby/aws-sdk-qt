@@ -27,7 +27,7 @@ namespace CodeStar {
 
 class TagProjectRequestPrivate;
 
-class QTAWS_EXPORT TagProjectRequest : public CodeStarRequest {
+class QTAWSCODESTAR_EXPORT TagProjectRequest : public CodeStarRequest {
 
 public:
     TagProjectRequest(const TagProjectRequest &other);

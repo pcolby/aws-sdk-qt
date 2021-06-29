@@ -27,7 +27,7 @@ namespace LexModelsV2 {
 
 class DeleteResourcePolicyStatementRequestPrivate;
 
-class QTAWS_EXPORT DeleteResourcePolicyStatementRequest : public LexModelsV2Request {
+class QTAWSLEXMODELSV2_EXPORT DeleteResourcePolicyStatementRequest : public LexModelsV2Request {
 
 public:
     DeleteResourcePolicyStatementRequest(const DeleteResourcePolicyStatementRequest &other);

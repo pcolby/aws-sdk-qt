@@ -28,7 +28,7 @@ namespace WAFV2 {
 
 class GetSampledRequestsResponsePrivate;
 
-class QTAWS_EXPORT GetSampledRequestsResponse : public Wafv2Response {
+class QTAWSWAFV2_EXPORT GetSampledRequestsResponse : public Wafv2Response {
     Q_OBJECT
 
 public:

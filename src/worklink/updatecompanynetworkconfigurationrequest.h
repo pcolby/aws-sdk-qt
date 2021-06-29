@@ -27,7 +27,7 @@ namespace WorkLink {
 
 class UpdateCompanyNetworkConfigurationRequestPrivate;
 
-class QTAWS_EXPORT UpdateCompanyNetworkConfigurationRequest : public WorkLinkRequest {
+class QTAWSWORKLINK_EXPORT UpdateCompanyNetworkConfigurationRequest : public WorkLinkRequest {
 
 public:
     UpdateCompanyNetworkConfigurationRequest(const UpdateCompanyNetworkConfigurationRequest &other);

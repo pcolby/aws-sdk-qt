@@ -27,7 +27,7 @@ namespace XRay {
 
 class GetServiceGraphRequestPrivate;
 
-class QTAWS_EXPORT GetServiceGraphRequest : public XRayRequest {
+class QTAWSXRAY_EXPORT GetServiceGraphRequest : public XRayRequest {
 
 public:
     GetServiceGraphRequest(const GetServiceGraphRequest &other);

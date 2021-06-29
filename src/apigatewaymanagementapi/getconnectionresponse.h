@@ -28,7 +28,7 @@ namespace ApiGatewayManagementApi {
 
 class GetConnectionResponsePrivate;
 
-class QTAWS_EXPORT GetConnectionResponse : public ApiGatewayManagementApiResponse {
+class QTAWSAPIGATEWAYMANAGEMENTAPI_EXPORT GetConnectionResponse : public ApiGatewayManagementApiResponse {
     Q_OBJECT
 
 public:

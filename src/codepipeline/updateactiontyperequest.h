@@ -27,7 +27,7 @@ namespace CodePipeline {
 
 class UpdateActionTypeRequestPrivate;
 
-class QTAWS_EXPORT UpdateActionTypeRequest : public CodePipelineRequest {
+class QTAWSCODEPIPELINE_EXPORT UpdateActionTypeRequest : public CodePipelineRequest {
 
 public:
     UpdateActionTypeRequest(const UpdateActionTypeRequest &other);

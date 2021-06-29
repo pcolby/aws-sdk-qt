@@ -27,7 +27,7 @@ namespace Lambda {
 
 class AddLayerVersionPermissionRequestPrivate;
 
-class QTAWS_EXPORT AddLayerVersionPermissionRequest : public LambdaRequest {
+class QTAWSLAMBDA_EXPORT AddLayerVersionPermissionRequest : public LambdaRequest {
 
 public:
     AddLayerVersionPermissionRequest(const AddLayerVersionPermissionRequest &other);

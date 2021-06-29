@@ -28,7 +28,7 @@ namespace Route53 {
 
 class GetGeoLocationResponsePrivate;
 
-class QTAWS_EXPORT GetGeoLocationResponse : public Route53Response {
+class QTAWSROUTE53_EXPORT GetGeoLocationResponse : public Route53Response {
     Q_OBJECT
 
 public:

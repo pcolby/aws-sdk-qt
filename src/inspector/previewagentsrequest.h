@@ -27,7 +27,7 @@ namespace Inspector {
 
 class PreviewAgentsRequestPrivate;
 
-class QTAWS_EXPORT PreviewAgentsRequest : public InspectorRequest {
+class QTAWSINSPECTOR_EXPORT PreviewAgentsRequest : public InspectorRequest {
 
 public:
     PreviewAgentsRequest(const PreviewAgentsRequest &other);

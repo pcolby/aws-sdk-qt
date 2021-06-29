@@ -27,7 +27,7 @@ namespace Route53Domains {
 
 class CheckDomainAvailabilityRequestPrivate;
 
-class QTAWS_EXPORT CheckDomainAvailabilityRequest : public Route53DomainsRequest {
+class QTAWSROUTE53DOMAINS_EXPORT CheckDomainAvailabilityRequest : public Route53DomainsRequest {
 
 public:
     CheckDomainAvailabilityRequest(const CheckDomainAvailabilityRequest &other);

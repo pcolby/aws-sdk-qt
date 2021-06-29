@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawselasticsearchserviceglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace ElasticsearchService {
 
 class ElasticsearchServiceRequestPrivate;
 
-class QTAWS_EXPORT ElasticsearchServiceRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSELASTICSEARCHSERVICE_EXPORT ElasticsearchServiceRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ElasticsearchService.

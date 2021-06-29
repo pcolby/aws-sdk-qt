@@ -27,7 +27,7 @@ namespace WorkLink {
 
 class ListDevicesRequestPrivate;
 
-class QTAWS_EXPORT ListDevicesRequest : public WorkLinkRequest {
+class QTAWSWORKLINK_EXPORT ListDevicesRequest : public WorkLinkRequest {
 
 public:
     ListDevicesRequest(const ListDevicesRequest &other);

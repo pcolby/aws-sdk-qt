@@ -28,7 +28,7 @@ namespace Kinesis {
 
 class StopStreamEncryptionResponsePrivate;
 
-class QTAWS_EXPORT StopStreamEncryptionResponse : public KinesisResponse {
+class QTAWSKINESIS_EXPORT StopStreamEncryptionResponse : public KinesisResponse {
     Q_OBJECT
 
 public:

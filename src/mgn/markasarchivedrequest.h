@@ -27,7 +27,7 @@ namespace mgn {
 
 class MarkAsArchivedRequestPrivate;
 
-class QTAWS_EXPORT MarkAsArchivedRequest : public mgnRequest {
+class QTAWSMGN_EXPORT MarkAsArchivedRequest : public mgnRequest {
 
 public:
     MarkAsArchivedRequest(const MarkAsArchivedRequest &other);

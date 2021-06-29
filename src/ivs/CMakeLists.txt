@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSIVS_LIBRARY)
+
 add_library(QtAwsIvs
   batchgetchannelrequest.h
   batchgetchannelrequest_p.h
@@ -93,6 +95,7 @@ add_library(QtAwsIvs
   putmetadatarequest_p.h
   putmetadataresponse.h
   putmetadataresponse_p.h
+  qtawsivsglobal.h
   stopstreamrequest.h
   stopstreamrequest_p.h
   stopstreamresponse.h

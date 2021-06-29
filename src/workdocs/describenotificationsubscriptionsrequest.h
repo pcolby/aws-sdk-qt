@@ -27,7 +27,7 @@ namespace WorkDocs {
 
 class DescribeNotificationSubscriptionsRequestPrivate;
 
-class QTAWS_EXPORT DescribeNotificationSubscriptionsRequest : public WorkDocsRequest {
+class QTAWSWORKDOCS_EXPORT DescribeNotificationSubscriptionsRequest : public WorkDocsRequest {
 
 public:
     DescribeNotificationSubscriptionsRequest(const DescribeNotificationSubscriptionsRequest &other);

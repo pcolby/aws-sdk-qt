@@ -27,7 +27,7 @@ namespace Appflow {
 
 class ListFlowsRequestPrivate;
 
-class QTAWS_EXPORT ListFlowsRequest : public AppflowRequest {
+class QTAWSAPPFLOW_EXPORT ListFlowsRequest : public AppflowRequest {
 
 public:
     ListFlowsRequest(const ListFlowsRequest &other);

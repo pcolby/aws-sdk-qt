@@ -27,7 +27,7 @@ namespace Glue {
 
 class GetSchemaVersionsDiffRequestPrivate;
 
-class QTAWS_EXPORT GetSchemaVersionsDiffRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT GetSchemaVersionsDiffRequest : public GlueRequest {
 
 public:
     GetSchemaVersionsDiffRequest(const GetSchemaVersionsDiffRequest &other);

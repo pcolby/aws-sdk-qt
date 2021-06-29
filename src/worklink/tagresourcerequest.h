@@ -27,7 +27,7 @@ namespace WorkLink {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public WorkLinkRequest {
+class QTAWSWORKLINK_EXPORT TagResourceRequest : public WorkLinkRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

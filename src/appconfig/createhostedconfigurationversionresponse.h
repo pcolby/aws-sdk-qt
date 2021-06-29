@@ -28,7 +28,7 @@ namespace AppConfig {
 
 class CreateHostedConfigurationVersionResponsePrivate;
 
-class QTAWS_EXPORT CreateHostedConfigurationVersionResponse : public AppConfigResponse {
+class QTAWSAPPCONFIG_EXPORT CreateHostedConfigurationVersionResponse : public AppConfigResponse {
     Q_OBJECT
 
 public:

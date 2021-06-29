@@ -27,7 +27,7 @@ namespace AppConfig {
 
 class CreateConfigurationProfileRequestPrivate;
 
-class QTAWS_EXPORT CreateConfigurationProfileRequest : public AppConfigRequest {
+class QTAWSAPPCONFIG_EXPORT CreateConfigurationProfileRequest : public AppConfigRequest {
 
 public:
     CreateConfigurationProfileRequest(const CreateConfigurationProfileRequest &other);

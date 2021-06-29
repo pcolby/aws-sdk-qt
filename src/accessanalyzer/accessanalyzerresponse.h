@@ -21,6 +21,8 @@
 #define QTAWS_ACCESSANALYZERRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsaccessanalyzerglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace AccessAnalyzer {
 
 class AccessAnalyzerResponsePrivate;
 
-class QTAWS_EXPORT AccessAnalyzerResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSACCESSANALYZER_EXPORT AccessAnalyzerResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

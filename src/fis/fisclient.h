@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsfisglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -57,7 +59,7 @@ class UntagResourceResponse;
 class UpdateExperimentTemplateRequest;
 class UpdateExperimentTemplateResponse;
 
-class QTAWS_EXPORT FisClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSFIS_EXPORT FisClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

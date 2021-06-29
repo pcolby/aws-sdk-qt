@@ -27,7 +27,7 @@ namespace WAFRegional {
 
 class GetRateBasedRuleManagedKeysRequestPrivate;
 
-class QTAWS_EXPORT GetRateBasedRuleManagedKeysRequest : public WAFRegionalRequest {
+class QTAWSWAFREGIONAL_EXPORT GetRateBasedRuleManagedKeysRequest : public WAFRegionalRequest {
 
 public:
     GetRateBasedRuleManagedKeysRequest(const GetRateBasedRuleManagedKeysRequest &other);

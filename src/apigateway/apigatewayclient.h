@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsapigatewayglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -269,7 +271,7 @@ class UpdateUsagePlanResponse;
 class UpdateVpcLinkRequest;
 class UpdateVpcLinkResponse;
 
-class QTAWS_EXPORT APIGatewayClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSAPIGATEWAY_EXPORT APIGatewayClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

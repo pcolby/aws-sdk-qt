@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class DeleteMembersRequestPrivate;
 
-class QTAWS_EXPORT DeleteMembersRequest : public SecurityHubRequest {
+class QTAWSSECURITYHUB_EXPORT DeleteMembersRequest : public SecurityHubRequest {
 
 public:
     DeleteMembersRequest(const DeleteMembersRequest &other);

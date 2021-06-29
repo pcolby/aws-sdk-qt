@@ -27,7 +27,7 @@ namespace RDS {
 
 class CreateDBProxyEndpointRequestPrivate;
 
-class QTAWS_EXPORT CreateDBProxyEndpointRequest : public RdsRequest {
+class QTAWSRDS_EXPORT CreateDBProxyEndpointRequest : public RdsRequest {
 
 public:
     CreateDBProxyEndpointRequest(const CreateDBProxyEndpointRequest &other);

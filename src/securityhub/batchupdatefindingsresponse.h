@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class BatchUpdateFindingsResponsePrivate;
 
-class QTAWS_EXPORT BatchUpdateFindingsResponse : public SecurityHubResponse {
+class QTAWSSECURITYHUB_EXPORT BatchUpdateFindingsResponse : public SecurityHubResponse {
     Q_OBJECT
 
 public:

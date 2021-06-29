@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSMARKETPLACEMETERING_LIBRARY)
+
 add_library(QtAwsMarketplaceMetering
   batchmeterusagerequest.h
   batchmeterusagerequest_p.h
@@ -13,6 +15,7 @@ add_library(QtAwsMarketplaceMetering
   meterusagerequest_p.h
   meterusageresponse.h
   meterusageresponse_p.h
+  qtawsmarketplacemeteringglobal.h
   registerusagerequest.h
   registerusagerequest_p.h
   registerusageresponse.h

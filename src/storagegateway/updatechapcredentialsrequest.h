@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class UpdateChapCredentialsRequestPrivate;
 
-class QTAWS_EXPORT UpdateChapCredentialsRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT UpdateChapCredentialsRequest : public StorageGatewayRequest {
 
 public:
     UpdateChapCredentialsRequest(const UpdateChapCredentialsRequest &other);

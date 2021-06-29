@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class CreateEmailIdentityRequestPrivate;
 
-class QTAWS_EXPORT CreateEmailIdentityRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT CreateEmailIdentityRequest : public Sesv2Request {
 
 public:
     CreateEmailIdentityRequest(const CreateEmailIdentityRequest &other);

@@ -28,7 +28,7 @@ namespace Glue {
 
 class DeleteMLTransformResponsePrivate;
 
-class QTAWS_EXPORT DeleteMLTransformResponse : public GlueResponse {
+class QTAWSGLUE_EXPORT DeleteMLTransformResponse : public GlueResponse {
     Q_OBJECT
 
 public:

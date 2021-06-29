@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawscodeartifactglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace CodeArtifact {
 
 class CodeArtifactRequestPrivate;
 
-class QTAWS_EXPORT CodeArtifactRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCODEARTIFACT_EXPORT CodeArtifactRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CodeArtifact.

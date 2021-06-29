@@ -28,7 +28,7 @@ namespace IoT {
 
 class SetV2LoggingLevelResponsePrivate;
 
-class QTAWS_EXPORT SetV2LoggingLevelResponse : public IoTResponse {
+class QTAWSIOT_EXPORT SetV2LoggingLevelResponse : public IoTResponse {
     Q_OBJECT
 
 public:

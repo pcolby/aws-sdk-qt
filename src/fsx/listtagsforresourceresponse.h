@@ -28,7 +28,7 @@ namespace FSx {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public FSxResponse {
+class QTAWSFSX_EXPORT ListTagsForResourceResponse : public FSxResponse {
     Q_OBJECT
 
 public:

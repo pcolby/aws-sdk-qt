@@ -21,6 +21,8 @@
 #define QTAWS_TRANSLATERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawstranslateglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Translate {
 
 class TranslateResponsePrivate;
 
-class QTAWS_EXPORT TranslateResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSTRANSLATE_EXPORT TranslateResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

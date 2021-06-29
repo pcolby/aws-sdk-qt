@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawssignerglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace signer {
 
 class signerRequestPrivate;
 
-class QTAWS_EXPORT signerRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSIGNER_EXPORT signerRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by signer.

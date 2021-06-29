@@ -28,7 +28,7 @@ namespace Personalize {
 
 class DeleteFilterResponsePrivate;
 
-class QTAWS_EXPORT DeleteFilterResponse : public PersonalizeResponse {
+class QTAWSPERSONALIZE_EXPORT DeleteFilterResponse : public PersonalizeResponse {
     Q_OBJECT
 
 public:

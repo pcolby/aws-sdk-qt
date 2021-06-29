@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsservicecatalogglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -203,7 +205,7 @@ class UpdateServiceActionResponse;
 class UpdateTagOptionRequest;
 class UpdateTagOptionResponse;
 
-class QTAWS_EXPORT ServiceCatalogClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSERVICECATALOG_EXPORT ServiceCatalogClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsfmsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace FMS {
 
 class FmsRequestPrivate;
 
-class QTAWS_EXPORT FmsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSFMS_EXPORT FmsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by FMS.

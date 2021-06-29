@@ -27,7 +27,7 @@ namespace RedshiftDataAPIService {
 
 class CancelStatementRequestPrivate;
 
-class QTAWS_EXPORT CancelStatementRequest : public RedshiftDataAPIServiceRequest {
+class QTAWSREDSHIFTDATAAPISERVICE_EXPORT CancelStatementRequest : public RedshiftDataAPIServiceRequest {
 
 public:
     CancelStatementRequest(const CancelStatementRequest &other);

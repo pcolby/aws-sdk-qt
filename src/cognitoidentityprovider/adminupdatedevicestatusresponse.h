@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class AdminUpdateDeviceStatusResponsePrivate;
 
-class QTAWS_EXPORT AdminUpdateDeviceStatusResponse : public CognitoIdentityProviderResponse {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT AdminUpdateDeviceStatusResponse : public CognitoIdentityProviderResponse {
     Q_OBJECT
 
 public:

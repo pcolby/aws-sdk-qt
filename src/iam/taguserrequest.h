@@ -27,7 +27,7 @@ namespace IAM {
 
 class TagUserRequestPrivate;
 
-class QTAWS_EXPORT TagUserRequest : public IamRequest {
+class QTAWSIAM_EXPORT TagUserRequest : public IamRequest {
 
 public:
     TagUserRequest(const TagUserRequest &other);

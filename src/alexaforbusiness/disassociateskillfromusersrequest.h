@@ -27,7 +27,7 @@ namespace AlexaForBusiness {
 
 class DisassociateSkillFromUsersRequestPrivate;
 
-class QTAWS_EXPORT DisassociateSkillFromUsersRequest : public AlexaForBusinessRequest {
+class QTAWSALEXAFORBUSINESS_EXPORT DisassociateSkillFromUsersRequest : public AlexaForBusinessRequest {
 
 public:
     DisassociateSkillFromUsersRequest(const DisassociateSkillFromUsersRequest &other);

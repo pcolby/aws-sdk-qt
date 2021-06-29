@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class DeleteCodeRepositoryResponsePrivate;
 
-class QTAWS_EXPORT DeleteCodeRepositoryResponse : public SageMakerResponse {
+class QTAWSSAGEMAKER_EXPORT DeleteCodeRepositoryResponse : public SageMakerResponse {
     Q_OBJECT
 
 public:

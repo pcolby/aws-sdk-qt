@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsdataexchangeglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -73,7 +75,7 @@ class UpdateDataSetResponse;
 class UpdateRevisionRequest;
 class UpdateRevisionResponse;
 
-class QTAWS_EXPORT DataExchangeClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSDATAEXCHANGE_EXPORT DataExchangeClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

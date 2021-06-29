@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class ListFunctionsRequestPrivate;
 
-class QTAWS_EXPORT ListFunctionsRequest : public CloudFrontRequest {
+class QTAWSCLOUDFRONT_EXPORT ListFunctionsRequest : public CloudFrontRequest {
 
 public:
     ListFunctionsRequest(const ListFunctionsRequest &other);

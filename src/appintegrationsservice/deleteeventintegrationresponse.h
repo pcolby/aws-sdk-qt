@@ -28,7 +28,7 @@ namespace AppIntegrationsService {
 
 class DeleteEventIntegrationResponsePrivate;
 
-class QTAWS_EXPORT DeleteEventIntegrationResponse : public AppIntegrationsServiceResponse {
+class QTAWSAPPINTEGRATIONSSERVICE_EXPORT DeleteEventIntegrationResponse : public AppIntegrationsServiceResponse {
     Q_OBJECT
 
 public:

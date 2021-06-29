@@ -28,7 +28,7 @@ namespace AppSync {
 
 class GetApiCacheResponsePrivate;
 
-class QTAWS_EXPORT GetApiCacheResponse : public AppSyncResponse {
+class QTAWSAPPSYNC_EXPORT GetApiCacheResponse : public AppSyncResponse {
     Q_OBJECT
 
 public:

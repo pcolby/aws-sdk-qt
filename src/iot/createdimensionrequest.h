@@ -27,7 +27,7 @@ namespace IoT {
 
 class CreateDimensionRequestPrivate;
 
-class QTAWS_EXPORT CreateDimensionRequest : public IoTRequest {
+class QTAWSIOT_EXPORT CreateDimensionRequest : public IoTRequest {
 
 public:
     CreateDimensionRequest(const CreateDimensionRequest &other);

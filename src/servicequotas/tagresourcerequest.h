@@ -27,7 +27,7 @@ namespace ServiceQuotas {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public ServiceQuotasRequest {
+class QTAWSSERVICEQUOTAS_EXPORT TagResourceRequest : public ServiceQuotasRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsglacierglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Glacier {
 
 class GlacierRequestPrivate;
 
-class QTAWS_EXPORT GlacierRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSGLACIER_EXPORT GlacierRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Glacier.

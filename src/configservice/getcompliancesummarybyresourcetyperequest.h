@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class GetComplianceSummaryByResourceTypeRequestPrivate;
 
-class QTAWS_EXPORT GetComplianceSummaryByResourceTypeRequest : public ConfigServiceRequest {
+class QTAWSCONFIGSERVICE_EXPORT GetComplianceSummaryByResourceTypeRequest : public ConfigServiceRequest {
 
 public:
     GetComplianceSummaryByResourceTypeRequest(const GetComplianceSummaryByResourceTypeRequest &other);

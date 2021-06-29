@@ -28,7 +28,7 @@ namespace AppConfig {
 
 class DeleteDeploymentStrategyResponsePrivate;
 
-class QTAWS_EXPORT DeleteDeploymentStrategyResponse : public AppConfigResponse {
+class QTAWSAPPCONFIG_EXPORT DeleteDeploymentStrategyResponse : public AppConfigResponse {
     Q_OBJECT
 
 public:

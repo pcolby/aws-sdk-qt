@@ -28,7 +28,7 @@ namespace EKS {
 
 class ListUpdatesResponsePrivate;
 
-class QTAWS_EXPORT ListUpdatesResponse : public EksResponse {
+class QTAWSEKS_EXPORT ListUpdatesResponse : public EksResponse {
     Q_OBJECT
 
 public:

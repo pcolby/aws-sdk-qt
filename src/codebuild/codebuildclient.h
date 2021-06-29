@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawscodebuildglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -117,7 +119,7 @@ class UpdateReportGroupResponse;
 class UpdateWebhookRequest;
 class UpdateWebhookResponse;
 
-class QTAWS_EXPORT CodeBuildClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCODEBUILD_EXPORT CodeBuildClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

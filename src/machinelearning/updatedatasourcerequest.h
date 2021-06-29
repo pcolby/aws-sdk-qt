@@ -27,7 +27,7 @@ namespace MachineLearning {
 
 class UpdateDataSourceRequestPrivate;
 
-class QTAWS_EXPORT UpdateDataSourceRequest : public MachineLearningRequest {
+class QTAWSMACHINELEARNING_EXPORT UpdateDataSourceRequest : public MachineLearningRequest {
 
 public:
     UpdateDataSourceRequest(const UpdateDataSourceRequest &other);

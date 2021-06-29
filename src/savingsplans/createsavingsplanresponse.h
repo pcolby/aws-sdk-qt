@@ -28,7 +28,7 @@ namespace SavingsPlans {
 
 class CreateSavingsPlanResponsePrivate;
 
-class QTAWS_EXPORT CreateSavingsPlanResponse : public SavingsPlansResponse {
+class QTAWSSAVINGSPLANS_EXPORT CreateSavingsPlanResponse : public SavingsPlansResponse {
     Q_OBJECT
 
 public:

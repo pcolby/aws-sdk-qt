@@ -27,7 +27,7 @@ namespace Glue {
 
 class DeleteCrawlerRequestPrivate;
 
-class QTAWS_EXPORT DeleteCrawlerRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT DeleteCrawlerRequest : public GlueRequest {
 
 public:
     DeleteCrawlerRequest(const DeleteCrawlerRequest &other);

@@ -27,7 +27,7 @@ namespace GuardDuty {
 
 class GetMasterAccountRequestPrivate;
 
-class QTAWS_EXPORT GetMasterAccountRequest : public GuardDutyRequest {
+class QTAWSGUARDDUTY_EXPORT GetMasterAccountRequest : public GuardDutyRequest {
 
 public:
     GetMasterAccountRequest(const GetMasterAccountRequest &other);

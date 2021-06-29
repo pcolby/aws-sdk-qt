@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class StopTransformJobRequestPrivate;
 
-class QTAWS_EXPORT StopTransformJobRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT StopTransformJobRequest : public SageMakerRequest {
 
 public:
     StopTransformJobRequest(const StopTransformJobRequest &other);

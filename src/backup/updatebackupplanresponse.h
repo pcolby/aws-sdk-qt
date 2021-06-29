@@ -28,7 +28,7 @@ namespace Backup {
 
 class UpdateBackupPlanResponsePrivate;
 
-class QTAWS_EXPORT UpdateBackupPlanResponse : public BackupResponse {
+class QTAWSBACKUP_EXPORT UpdateBackupPlanResponse : public BackupResponse {
     Q_OBJECT
 
 public:

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsimportexportglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace ImportExport {
 
 class ImportExportRequestPrivate;
 
-class QTAWS_EXPORT ImportExportRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSIMPORTEXPORT_EXPORT ImportExportRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ImportExport.

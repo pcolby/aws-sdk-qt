@@ -27,7 +27,7 @@ namespace MediaLive {
 
 class BatchStopRequestPrivate;
 
-class QTAWS_EXPORT BatchStopRequest : public MediaLiveRequest {
+class QTAWSMEDIALIVE_EXPORT BatchStopRequest : public MediaLiveRequest {
 
 public:
     BatchStopRequest(const BatchStopRequest &other);

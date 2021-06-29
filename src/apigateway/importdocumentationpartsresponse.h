@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class ImportDocumentationPartsResponsePrivate;
 
-class QTAWS_EXPORT ImportDocumentationPartsResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT ImportDocumentationPartsResponse : public APIGatewayResponse {
     Q_OBJECT
 
 public:

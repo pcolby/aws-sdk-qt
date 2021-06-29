@@ -28,7 +28,7 @@ namespace IoT1ClickProjects {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public IoT1ClickProjectsResponse {
+class QTAWSIOT1CLICKPROJECTS_EXPORT UntagResourceResponse : public IoT1ClickProjectsResponse {
     Q_OBJECT
 
 public:

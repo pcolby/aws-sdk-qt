@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class DescribeInstancesHealthResponsePrivate;
 
-class QTAWS_EXPORT DescribeInstancesHealthResponse : public ElasticBeanstalkResponse {
+class QTAWSELASTICBEANSTALK_EXPORT DescribeInstancesHealthResponse : public ElasticBeanstalkResponse {
     Q_OBJECT
 
 public:

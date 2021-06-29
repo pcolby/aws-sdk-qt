@@ -27,7 +27,7 @@ namespace WorkDocs {
 
 class DeactivateUserRequestPrivate;
 
-class QTAWS_EXPORT DeactivateUserRequest : public WorkDocsRequest {
+class QTAWSWORKDOCS_EXPORT DeactivateUserRequest : public WorkDocsRequest {
 
 public:
     DeactivateUserRequest(const DeactivateUserRequest &other);

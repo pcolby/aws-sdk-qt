@@ -28,7 +28,7 @@ namespace Connect {
 
 class AssociateBotResponsePrivate;
 
-class QTAWS_EXPORT AssociateBotResponse : public ConnectResponse {
+class QTAWSCONNECT_EXPORT AssociateBotResponse : public ConnectResponse {
     Q_OBJECT
 
 public:

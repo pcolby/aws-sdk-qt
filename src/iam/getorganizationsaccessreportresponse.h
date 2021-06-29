@@ -28,7 +28,7 @@ namespace IAM {
 
 class GetOrganizationsAccessReportResponsePrivate;
 
-class QTAWS_EXPORT GetOrganizationsAccessReportResponse : public IamResponse {
+class QTAWSIAM_EXPORT GetOrganizationsAccessReportResponse : public IamResponse {
     Q_OBJECT
 
 public:

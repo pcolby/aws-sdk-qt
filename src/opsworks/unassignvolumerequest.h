@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class UnassignVolumeRequestPrivate;
 
-class QTAWS_EXPORT UnassignVolumeRequest : public OpsWorksRequest {
+class QTAWSOPSWORKS_EXPORT UnassignVolumeRequest : public OpsWorksRequest {
 
 public:
     UnassignVolumeRequest(const UnassignVolumeRequest &other);

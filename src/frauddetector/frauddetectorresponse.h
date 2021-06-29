@@ -21,6 +21,8 @@
 #define QTAWS_FRAUDDETECTORRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsfrauddetectorglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace FraudDetector {
 
 class FraudDetectorResponsePrivate;
 
-class QTAWS_EXPORT FraudDetectorResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSFRAUDDETECTOR_EXPORT FraudDetectorResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

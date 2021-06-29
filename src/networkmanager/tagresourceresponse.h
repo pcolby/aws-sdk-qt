@@ -28,7 +28,7 @@ namespace NetworkManager {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public NetworkManagerResponse {
+class QTAWSNETWORKMANAGER_EXPORT TagResourceResponse : public NetworkManagerResponse {
     Q_OBJECT
 
 public:

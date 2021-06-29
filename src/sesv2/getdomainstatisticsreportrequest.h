@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class GetDomainStatisticsReportRequestPrivate;
 
-class QTAWS_EXPORT GetDomainStatisticsReportRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT GetDomainStatisticsReportRequest : public Sesv2Request {
 
 public:
     GetDomainStatisticsReportRequest(const GetDomainStatisticsReportRequest &other);

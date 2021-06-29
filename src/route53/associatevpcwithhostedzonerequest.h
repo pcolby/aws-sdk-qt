@@ -27,7 +27,7 @@ namespace Route53 {
 
 class AssociateVPCWithHostedZoneRequestPrivate;
 
-class QTAWS_EXPORT AssociateVPCWithHostedZoneRequest : public Route53Request {
+class QTAWSROUTE53_EXPORT AssociateVPCWithHostedZoneRequest : public Route53Request {
 
 public:
     AssociateVPCWithHostedZoneRequest(const AssociateVPCWithHostedZoneRequest &other);

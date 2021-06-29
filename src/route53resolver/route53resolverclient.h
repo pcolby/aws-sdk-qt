@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsroute53resolverglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -149,7 +151,7 @@ class UpdateResolverEndpointResponse;
 class UpdateResolverRuleRequest;
 class UpdateResolverRuleResponse;
 
-class QTAWS_EXPORT Route53ResolverClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSROUTE53RESOLVER_EXPORT Route53ResolverClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsqldbsessionglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -31,7 +33,7 @@ class QLDBSessionClientPrivate;
 class SendCommandRequest;
 class SendCommandResponse;
 
-class QTAWS_EXPORT QLDBSessionClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSQLDBSESSION_EXPORT QLDBSessionClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

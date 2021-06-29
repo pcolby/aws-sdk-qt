@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class UpdateTerminationProtectionResponsePrivate;
 
-class QTAWS_EXPORT UpdateTerminationProtectionResponse : public CloudFormationResponse {
+class QTAWSCLOUDFORMATION_EXPORT UpdateTerminationProtectionResponse : public CloudFormationResponse {
     Q_OBJECT
 
 public:

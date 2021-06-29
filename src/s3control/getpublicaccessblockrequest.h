@@ -27,7 +27,7 @@ namespace S3Control {
 
 class GetPublicAccessBlockRequestPrivate;
 
-class QTAWS_EXPORT GetPublicAccessBlockRequest : public S3ControlRequest {
+class QTAWSS3CONTROL_EXPORT GetPublicAccessBlockRequest : public S3ControlRequest {
 
 public:
     GetPublicAccessBlockRequest(const GetPublicAccessBlockRequest &other);

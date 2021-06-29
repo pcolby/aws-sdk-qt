@@ -27,7 +27,7 @@ namespace ApiGatewayV2 {
 
 class DeleteVpcLinkRequestPrivate;
 
-class QTAWS_EXPORT DeleteVpcLinkRequest : public ApiGatewayV2Request {
+class QTAWSAPIGATEWAYV2_EXPORT DeleteVpcLinkRequest : public ApiGatewayV2Request {
 
 public:
     DeleteVpcLinkRequest(const DeleteVpcLinkRequest &other);

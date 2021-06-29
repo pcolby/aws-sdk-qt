@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsssoglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace SSO {
 
 class SsoRequestPrivate;
 
-class QTAWS_EXPORT SsoRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSSO_EXPORT SsoRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SSO.

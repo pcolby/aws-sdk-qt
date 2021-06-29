@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CreateCarrierGatewayResponsePrivate;
 
-class QTAWS_EXPORT CreateCarrierGatewayResponse : public Ec2Response {
+class QTAWSEC2_EXPORT CreateCarrierGatewayResponse : public Ec2Response {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace EMRContainers {
 
 class DeleteVirtualClusterResponsePrivate;
 
-class QTAWS_EXPORT DeleteVirtualClusterResponse : public EMRContainersResponse {
+class QTAWSEMRCONTAINERS_EXPORT DeleteVirtualClusterResponse : public EMRContainersResponse {
     Q_OBJECT
 
 public:

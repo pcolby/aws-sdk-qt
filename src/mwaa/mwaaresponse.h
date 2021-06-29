@@ -21,6 +21,8 @@
 #define QTAWS_MWAARESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsmwaaglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace MWAA {
 
 class MwaaResponsePrivate;
 
-class QTAWS_EXPORT MwaaResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSMWAA_EXPORT MwaaResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

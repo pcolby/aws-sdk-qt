@@ -27,7 +27,7 @@ namespace SSMContacts {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public SSMContactsRequest {
+class QTAWSSSMCONTACTS_EXPORT UntagResourceRequest : public SSMContactsRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

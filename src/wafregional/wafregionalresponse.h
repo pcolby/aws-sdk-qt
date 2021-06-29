@@ -21,6 +21,8 @@
 #define QTAWS_WAFREGIONALRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawswafregionalglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace WAFRegional {
 
 class WAFRegionalResponsePrivate;
 
-class QTAWS_EXPORT WAFRegionalResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSWAFREGIONAL_EXPORT WAFRegionalResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace Chime {
 
 class UpdateGlobalSettingsRequestPrivate;
 
-class QTAWS_EXPORT UpdateGlobalSettingsRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT UpdateGlobalSettingsRequest : public ChimeRequest {
 
 public:
     UpdateGlobalSettingsRequest(const UpdateGlobalSettingsRequest &other);

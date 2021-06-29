@@ -27,7 +27,7 @@ namespace WorkSpaces {
 
 class ListAvailableManagementCidrRangesRequestPrivate;
 
-class QTAWS_EXPORT ListAvailableManagementCidrRangesRequest : public WorkSpacesRequest {
+class QTAWSWORKSPACES_EXPORT ListAvailableManagementCidrRangesRequest : public WorkSpacesRequest {
 
 public:
     ListAvailableManagementCidrRangesRequest(const ListAvailableManagementCidrRangesRequest &other);

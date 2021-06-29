@@ -28,7 +28,7 @@ namespace Kafka {
 
 class DescribeClusterResponsePrivate;
 
-class QTAWS_EXPORT DescribeClusterResponse : public KafkaResponse {
+class QTAWSKAFKA_EXPORT DescribeClusterResponse : public KafkaResponse {
     Q_OBJECT
 
 public:

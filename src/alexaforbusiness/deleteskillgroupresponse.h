@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class DeleteSkillGroupResponsePrivate;
 
-class QTAWS_EXPORT DeleteSkillGroupResponse : public AlexaForBusinessResponse {
+class QTAWSALEXAFORBUSINESS_EXPORT DeleteSkillGroupResponse : public AlexaForBusinessResponse {
     Q_OBJECT
 
 public:

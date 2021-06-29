@@ -27,7 +27,7 @@ namespace CloudWatchEvents {
 
 class DeletePartnerEventSourceRequestPrivate;
 
-class QTAWS_EXPORT DeletePartnerEventSourceRequest : public CloudWatchEventsRequest {
+class QTAWSCLOUDWATCHEVENTS_EXPORT DeletePartnerEventSourceRequest : public CloudWatchEventsRequest {
 
 public:
     DeletePartnerEventSourceRequest(const DeletePartnerEventSourceRequest &other);

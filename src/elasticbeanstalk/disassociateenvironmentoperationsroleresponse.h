@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class DisassociateEnvironmentOperationsRoleResponsePrivate;
 
-class QTAWS_EXPORT DisassociateEnvironmentOperationsRoleResponse : public ElasticBeanstalkResponse {
+class QTAWSELASTICBEANSTALK_EXPORT DisassociateEnvironmentOperationsRoleResponse : public ElasticBeanstalkResponse {
     Q_OBJECT
 
 public:

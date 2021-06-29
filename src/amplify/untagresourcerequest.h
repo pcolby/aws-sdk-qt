@@ -27,7 +27,7 @@ namespace Amplify {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public AmplifyRequest {
+class QTAWSAMPLIFY_EXPORT UntagResourceRequest : public AmplifyRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

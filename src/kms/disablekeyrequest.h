@@ -27,7 +27,7 @@ namespace KMS {
 
 class DisableKeyRequestPrivate;
 
-class QTAWS_EXPORT DisableKeyRequest : public KmsRequest {
+class QTAWSKMS_EXPORT DisableKeyRequest : public KmsRequest {
 
 public:
     DisableKeyRequest(const DisableKeyRequest &other);

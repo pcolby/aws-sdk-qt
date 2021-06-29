@@ -27,7 +27,7 @@ namespace EKS {
 
 class DescribeFargateProfileRequestPrivate;
 
-class QTAWS_EXPORT DescribeFargateProfileRequest : public EksRequest {
+class QTAWSEKS_EXPORT DescribeFargateProfileRequest : public EksRequest {
 
 public:
     DescribeFargateProfileRequest(const DescribeFargateProfileRequest &other);

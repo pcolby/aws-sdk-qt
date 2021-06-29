@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class GetAppliedSchemaVersionRequestPrivate;
 
-class QTAWS_EXPORT GetAppliedSchemaVersionRequest : public CloudDirectoryRequest {
+class QTAWSCLOUDDIRECTORY_EXPORT GetAppliedSchemaVersionRequest : public CloudDirectoryRequest {
 
 public:
     GetAppliedSchemaVersionRequest(const GetAppliedSchemaVersionRequest &other);

@@ -27,7 +27,7 @@ namespace Personalize {
 
 class DeleteSchemaRequestPrivate;
 
-class QTAWS_EXPORT DeleteSchemaRequest : public PersonalizeRequest {
+class QTAWSPERSONALIZE_EXPORT DeleteSchemaRequest : public PersonalizeRequest {
 
 public:
     DeleteSchemaRequest(const DeleteSchemaRequest &other);

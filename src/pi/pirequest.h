@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawspiglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace PI {
 
 class PiRequestPrivate;
 
-class QTAWS_EXPORT PiRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSPI_EXPORT PiRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by PI.

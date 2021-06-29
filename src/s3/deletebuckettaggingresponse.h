@@ -28,7 +28,7 @@ namespace S3 {
 
 class DeleteBucketTaggingResponsePrivate;
 
-class QTAWS_EXPORT DeleteBucketTaggingResponse : public S3Response {
+class QTAWSS3_EXPORT DeleteBucketTaggingResponse : public S3Response {
     Q_OBJECT
 
 public:

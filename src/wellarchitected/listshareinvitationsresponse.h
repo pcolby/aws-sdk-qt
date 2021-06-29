@@ -28,7 +28,7 @@ namespace WellArchitected {
 
 class ListShareInvitationsResponsePrivate;
 
-class QTAWS_EXPORT ListShareInvitationsResponse : public WellArchitectedResponse {
+class QTAWSWELLARCHITECTED_EXPORT ListShareInvitationsResponse : public WellArchitectedResponse {
     Q_OBJECT
 
 public:

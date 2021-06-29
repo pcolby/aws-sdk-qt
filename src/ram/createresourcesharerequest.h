@@ -27,7 +27,7 @@ namespace RAM {
 
 class CreateResourceShareRequestPrivate;
 
-class QTAWS_EXPORT CreateResourceShareRequest : public RamRequest {
+class QTAWSRAM_EXPORT CreateResourceShareRequest : public RamRequest {
 
 public:
     CreateResourceShareRequest(const CreateResourceShareRequest &other);

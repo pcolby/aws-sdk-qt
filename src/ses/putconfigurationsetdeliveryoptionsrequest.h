@@ -27,7 +27,7 @@ namespace SES {
 
 class PutConfigurationSetDeliveryOptionsRequestPrivate;
 
-class QTAWS_EXPORT PutConfigurationSetDeliveryOptionsRequest : public SesRequest {
+class QTAWSSES_EXPORT PutConfigurationSetDeliveryOptionsRequest : public SesRequest {
 
 public:
     PutConfigurationSetDeliveryOptionsRequest(const PutConfigurationSetDeliveryOptionsRequest &other);

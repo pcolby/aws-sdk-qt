@@ -27,7 +27,7 @@ namespace WorkSpaces {
 
 class DescribeWorkspaceBundlesRequestPrivate;
 
-class QTAWS_EXPORT DescribeWorkspaceBundlesRequest : public WorkSpacesRequest {
+class QTAWSWORKSPACES_EXPORT DescribeWorkspaceBundlesRequest : public WorkSpacesRequest {
 
 public:
     DescribeWorkspaceBundlesRequest(const DescribeWorkspaceBundlesRequest &other);

@@ -28,7 +28,7 @@ namespace LexModelsV2 {
 
 class DescribeBotVersionResponsePrivate;
 
-class QTAWS_EXPORT DescribeBotVersionResponse : public LexModelsV2Response {
+class QTAWSLEXMODELSV2_EXPORT DescribeBotVersionResponse : public LexModelsV2Response {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace AppRegistry {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public AppRegistryResponse {
+class QTAWSAPPREGISTRY_EXPORT UntagResourceResponse : public AppRegistryResponse {
     Q_OBJECT
 
 public:

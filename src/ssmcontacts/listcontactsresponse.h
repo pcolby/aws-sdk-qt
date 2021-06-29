@@ -28,7 +28,7 @@ namespace SSMContacts {
 
 class ListContactsResponsePrivate;
 
-class QTAWS_EXPORT ListContactsResponse : public SSMContactsResponse {
+class QTAWSSSMCONTACTS_EXPORT ListContactsResponse : public SSMContactsResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class EnableLDAPSResponsePrivate;
 
-class QTAWS_EXPORT EnableLDAPSResponse : public DirectoryServiceResponse {
+class QTAWSDIRECTORYSERVICE_EXPORT EnableLDAPSResponse : public DirectoryServiceResponse {
     Q_OBJECT
 
 public:

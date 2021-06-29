@@ -28,7 +28,7 @@ namespace SNS {
 
 class CreatePlatformApplicationResponsePrivate;
 
-class QTAWS_EXPORT CreatePlatformApplicationResponse : public SnsResponse {
+class QTAWSSNS_EXPORT CreatePlatformApplicationResponse : public SnsResponse {
     Q_OBJECT
 
 public:

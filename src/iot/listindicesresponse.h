@@ -28,7 +28,7 @@ namespace IoT {
 
 class ListIndicesResponsePrivate;
 
-class QTAWS_EXPORT ListIndicesResponse : public IoTResponse {
+class QTAWSIOT_EXPORT ListIndicesResponse : public IoTResponse {
     Q_OBJECT
 
 public:

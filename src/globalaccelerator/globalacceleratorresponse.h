@@ -21,6 +21,8 @@
 #define QTAWS_GLOBALACCELERATORRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsglobalacceleratorglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace GlobalAccelerator {
 
 class GlobalAcceleratorResponsePrivate;
 
-class QTAWS_EXPORT GlobalAcceleratorResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSGLOBALACCELERATOR_EXPORT GlobalAcceleratorResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

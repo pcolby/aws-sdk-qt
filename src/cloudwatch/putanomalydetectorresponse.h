@@ -28,7 +28,7 @@ namespace CloudWatch {
 
 class PutAnomalyDetectorResponsePrivate;
 
-class QTAWS_EXPORT PutAnomalyDetectorResponse : public CloudWatchResponse {
+class QTAWSCLOUDWATCH_EXPORT PutAnomalyDetectorResponse : public CloudWatchResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace ElasticBeanstalk {
 
 class ComposeEnvironmentsRequestPrivate;
 
-class QTAWS_EXPORT ComposeEnvironmentsRequest : public ElasticBeanstalkRequest {
+class QTAWSELASTICBEANSTALK_EXPORT ComposeEnvironmentsRequest : public ElasticBeanstalkRequest {
 
 public:
     ComposeEnvironmentsRequest(const ComposeEnvironmentsRequest &other);

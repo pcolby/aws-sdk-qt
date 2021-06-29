@@ -28,7 +28,7 @@ namespace IoT {
 
 class DeleteSecurityProfileResponsePrivate;
 
-class QTAWS_EXPORT DeleteSecurityProfileResponse : public IoTResponse {
+class QTAWSIOT_EXPORT DeleteSecurityProfileResponse : public IoTResponse {
     Q_OBJECT
 
 public:

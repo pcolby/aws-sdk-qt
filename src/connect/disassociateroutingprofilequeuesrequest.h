@@ -27,7 +27,7 @@ namespace Connect {
 
 class DisassociateRoutingProfileQueuesRequestPrivate;
 
-class QTAWS_EXPORT DisassociateRoutingProfileQueuesRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT DisassociateRoutingProfileQueuesRequest : public ConnectRequest {
 
 public:
     DisassociateRoutingProfileQueuesRequest(const DisassociateRoutingProfileQueuesRequest &other);

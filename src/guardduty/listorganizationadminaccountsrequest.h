@@ -27,7 +27,7 @@ namespace GuardDuty {
 
 class ListOrganizationAdminAccountsRequestPrivate;
 
-class QTAWS_EXPORT ListOrganizationAdminAccountsRequest : public GuardDutyRequest {
+class QTAWSGUARDDUTY_EXPORT ListOrganizationAdminAccountsRequest : public GuardDutyRequest {
 
 public:
     ListOrganizationAdminAccountsRequest(const ListOrganizationAdminAccountsRequest &other);

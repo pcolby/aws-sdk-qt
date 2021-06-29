@@ -27,7 +27,7 @@ namespace IoT {
 
 class ListDimensionsRequestPrivate;
 
-class QTAWS_EXPORT ListDimensionsRequest : public IoTRequest {
+class QTAWSIOT_EXPORT ListDimensionsRequest : public IoTRequest {
 
 public:
     ListDimensionsRequest(const ListDimensionsRequest &other);

@@ -27,7 +27,7 @@ namespace WorkSpaces {
 
 class AuthorizeIpRulesRequestPrivate;
 
-class QTAWS_EXPORT AuthorizeIpRulesRequest : public WorkSpacesRequest {
+class QTAWSWORKSPACES_EXPORT AuthorizeIpRulesRequest : public WorkSpacesRequest {
 
 public:
     AuthorizeIpRulesRequest(const AuthorizeIpRulesRequest &other);

@@ -21,6 +21,8 @@
 #define QTAWS_GREENGRASSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsgreengrassglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Greengrass {
 
 class GreengrassResponsePrivate;
 
-class QTAWS_EXPORT GreengrassResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSGREENGRASS_EXPORT GreengrassResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

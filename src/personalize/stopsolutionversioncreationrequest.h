@@ -27,7 +27,7 @@ namespace Personalize {
 
 class StopSolutionVersionCreationRequestPrivate;
 
-class QTAWS_EXPORT StopSolutionVersionCreationRequest : public PersonalizeRequest {
+class QTAWSPERSONALIZE_EXPORT StopSolutionVersionCreationRequest : public PersonalizeRequest {
 
 public:
     StopSolutionVersionCreationRequest(const StopSolutionVersionCreationRequest &other);

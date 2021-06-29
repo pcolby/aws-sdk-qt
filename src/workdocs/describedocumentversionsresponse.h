@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class DescribeDocumentVersionsResponsePrivate;
 
-class QTAWS_EXPORT DescribeDocumentVersionsResponse : public WorkDocsResponse {
+class QTAWSWORKDOCS_EXPORT DescribeDocumentVersionsResponse : public WorkDocsResponse {
     Q_OBJECT
 
 public:

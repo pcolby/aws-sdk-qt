@@ -27,7 +27,7 @@ namespace LookoutMetrics {
 
 class ActivateAnomalyDetectorRequestPrivate;
 
-class QTAWS_EXPORT ActivateAnomalyDetectorRequest : public LookoutMetricsRequest {
+class QTAWSLOOKOUTMETRICS_EXPORT ActivateAnomalyDetectorRequest : public LookoutMetricsRequest {
 
 public:
     ActivateAnomalyDetectorRequest(const ActivateAnomalyDetectorRequest &other);

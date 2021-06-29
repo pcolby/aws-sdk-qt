@@ -27,7 +27,7 @@ namespace MigrationHub {
 
 class ImportMigrationTaskRequestPrivate;
 
-class QTAWS_EXPORT ImportMigrationTaskRequest : public MigrationHubRequest {
+class QTAWSMIGRATIONHUB_EXPORT ImportMigrationTaskRequest : public MigrationHubRequest {
 
 public:
     ImportMigrationTaskRequest(const ImportMigrationTaskRequest &other);

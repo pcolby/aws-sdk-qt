@@ -27,7 +27,7 @@ namespace SavingsPlans {
 
 class DeleteQueuedSavingsPlanRequestPrivate;
 
-class QTAWS_EXPORT DeleteQueuedSavingsPlanRequest : public SavingsPlansRequest {
+class QTAWSSAVINGSPLANS_EXPORT DeleteQueuedSavingsPlanRequest : public SavingsPlansRequest {
 
 public:
     DeleteQueuedSavingsPlanRequest(const DeleteQueuedSavingsPlanRequest &other);

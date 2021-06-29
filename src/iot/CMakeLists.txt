@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSIOT_LIBRARY)
+
 add_library(QtAwsIoT
   acceptcertificatetransferrequest.h
   acceptcertificatetransferrequest_p.h
@@ -721,6 +723,7 @@ add_library(QtAwsIoT
   listviolationeventsrequest_p.h
   listviolationeventsresponse.h
   listviolationeventsresponse_p.h
+  qtawsiotglobal.h
   registercacertificaterequest.h
   registercacertificaterequest_p.h
   registercacertificateresponse.h

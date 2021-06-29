@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCUSTOMERPROFILES_LIBRARY)
+
 add_library(QtAwsCustomerProfiles
   addprofilekeyrequest.h
   addprofilekeyrequest_p.h
@@ -105,6 +107,7 @@ add_library(QtAwsCustomerProfiles
   putprofileobjecttyperequest_p.h
   putprofileobjecttyperesponse.h
   putprofileobjecttyperesponse_p.h
+  qtawscustomerprofilesglobal.h
   searchprofilesrequest.h
   searchprofilesrequest_p.h
   searchprofilesresponse.h

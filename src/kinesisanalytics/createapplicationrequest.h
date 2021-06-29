@@ -27,7 +27,7 @@ namespace KinesisAnalytics {
 
 class CreateApplicationRequestPrivate;
 
-class QTAWS_EXPORT CreateApplicationRequest : public KinesisAnalyticsRequest {
+class QTAWSKINESISANALYTICS_EXPORT CreateApplicationRequest : public KinesisAnalyticsRequest {
 
 public:
     CreateApplicationRequest(const CreateApplicationRequest &other);

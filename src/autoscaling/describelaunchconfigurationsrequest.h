@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class DescribeLaunchConfigurationsRequestPrivate;
 
-class QTAWS_EXPORT DescribeLaunchConfigurationsRequest : public AutoScalingRequest {
+class QTAWSAUTOSCALING_EXPORT DescribeLaunchConfigurationsRequest : public AutoScalingRequest {
 
 public:
     DescribeLaunchConfigurationsRequest(const DescribeLaunchConfigurationsRequest &other);

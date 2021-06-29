@@ -27,7 +27,7 @@ namespace Organizations {
 
 class DeletePolicyRequestPrivate;
 
-class QTAWS_EXPORT DeletePolicyRequest : public OrganizationsRequest {
+class QTAWSORGANIZATIONS_EXPORT DeletePolicyRequest : public OrganizationsRequest {
 
 public:
     DeletePolicyRequest(const DeletePolicyRequest &other);

@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class GetDiskSnapshotResponsePrivate;
 
-class QTAWS_EXPORT GetDiskSnapshotResponse : public LightsailResponse {
+class QTAWSLIGHTSAIL_EXPORT GetDiskSnapshotResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

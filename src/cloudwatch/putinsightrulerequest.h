@@ -27,7 +27,7 @@ namespace CloudWatch {
 
 class PutInsightRuleRequestPrivate;
 
-class QTAWS_EXPORT PutInsightRuleRequest : public CloudWatchRequest {
+class QTAWSCLOUDWATCH_EXPORT PutInsightRuleRequest : public CloudWatchRequest {
 
 public:
     PutInsightRuleRequest(const PutInsightRuleRequest &other);

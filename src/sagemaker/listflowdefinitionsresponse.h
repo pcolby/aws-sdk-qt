@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class ListFlowDefinitionsResponsePrivate;
 
-class QTAWS_EXPORT ListFlowDefinitionsResponse : public SageMakerResponse {
+class QTAWSSAGEMAKER_EXPORT ListFlowDefinitionsResponse : public SageMakerResponse {
     Q_OBJECT
 
 public:

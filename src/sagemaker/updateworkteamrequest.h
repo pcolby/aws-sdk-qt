@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class UpdateWorkteamRequestPrivate;
 
-class QTAWS_EXPORT UpdateWorkteamRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT UpdateWorkteamRequest : public SageMakerRequest {
 
 public:
     UpdateWorkteamRequest(const UpdateWorkteamRequest &other);

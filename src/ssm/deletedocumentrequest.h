@@ -27,7 +27,7 @@ namespace SSM {
 
 class DeleteDocumentRequestPrivate;
 
-class QTAWS_EXPORT DeleteDocumentRequest : public SsmRequest {
+class QTAWSSSM_EXPORT DeleteDocumentRequest : public SsmRequest {
 
 public:
     DeleteDocumentRequest(const DeleteDocumentRequest &other);

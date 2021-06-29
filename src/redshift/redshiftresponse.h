@@ -21,6 +21,8 @@
 #define QTAWS_REDSHIFTRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsredshiftglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Redshift {
 
 class RedshiftResponsePrivate;
 
-class QTAWS_EXPORT RedshiftResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSREDSHIFT_EXPORT RedshiftResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

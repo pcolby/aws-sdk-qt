@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSKINESISVIDEOSIGNALINGCHANNELS_LIBRARY)
+
 add_library(QtAwsKinesisVideoSignalingChannels
   geticeserverconfigrequest.h
   geticeserverconfigrequest_p.h
@@ -9,6 +11,7 @@ add_library(QtAwsKinesisVideoSignalingChannels
   kinesisvideosignalingchannelsrequest_p.h
   kinesisvideosignalingchannelsresponse.h
   kinesisvideosignalingchannelsresponse_p.h
+  qtawskinesisvideosignalingchannelsglobal.h
   sendalexaoffertomasterrequest.h
   sendalexaoffertomasterrequest_p.h
   sendalexaoffertomasterresponse.h

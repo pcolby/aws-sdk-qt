@@ -27,7 +27,7 @@ namespace ConnectParticipant {
 
 class CompleteAttachmentUploadRequestPrivate;
 
-class QTAWS_EXPORT CompleteAttachmentUploadRequest : public ConnectParticipantRequest {
+class QTAWSCONNECTPARTICIPANT_EXPORT CompleteAttachmentUploadRequest : public ConnectParticipantRequest {
 
 public:
     CompleteAttachmentUploadRequest(const CompleteAttachmentUploadRequest &other);

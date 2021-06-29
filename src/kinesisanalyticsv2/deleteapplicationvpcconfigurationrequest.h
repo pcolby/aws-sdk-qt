@@ -27,7 +27,7 @@ namespace KinesisAnalyticsV2 {
 
 class DeleteApplicationVpcConfigurationRequestPrivate;
 
-class QTAWS_EXPORT DeleteApplicationVpcConfigurationRequest : public KinesisAnalyticsV2Request {
+class QTAWSKINESISANALYTICSV2_EXPORT DeleteApplicationVpcConfigurationRequest : public KinesisAnalyticsV2Request {
 
 public:
     DeleteApplicationVpcConfigurationRequest(const DeleteApplicationVpcConfigurationRequest &other);

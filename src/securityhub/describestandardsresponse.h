@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class DescribeStandardsResponsePrivate;
 
-class QTAWS_EXPORT DescribeStandardsResponse : public SecurityHubResponse {
+class QTAWSSECURITYHUB_EXPORT DescribeStandardsResponse : public SecurityHubResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace MachineLearning {
 
 class GetEvaluationRequestPrivate;
 
-class QTAWS_EXPORT GetEvaluationRequest : public MachineLearningRequest {
+class QTAWSMACHINELEARNING_EXPORT GetEvaluationRequest : public MachineLearningRequest {
 
 public:
     GetEvaluationRequest(const GetEvaluationRequest &other);

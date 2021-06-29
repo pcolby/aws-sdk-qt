@@ -27,7 +27,7 @@ namespace IoTEvents {
 
 class ListDetectorModelVersionsRequestPrivate;
 
-class QTAWS_EXPORT ListDetectorModelVersionsRequest : public IoTEventsRequest {
+class QTAWSIOTEVENTS_EXPORT ListDetectorModelVersionsRequest : public IoTEventsRequest {
 
 public:
     ListDetectorModelVersionsRequest(const ListDetectorModelVersionsRequest &other);

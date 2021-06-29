@@ -27,7 +27,7 @@ namespace IoTAnalytics {
 
 class DescribeChannelRequestPrivate;
 
-class QTAWS_EXPORT DescribeChannelRequest : public IoTAnalyticsRequest {
+class QTAWSIOTANALYTICS_EXPORT DescribeChannelRequest : public IoTAnalyticsRequest {
 
 public:
     DescribeChannelRequest(const DescribeChannelRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsamplifyglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -103,7 +105,7 @@ class UpdateDomainAssociationResponse;
 class UpdateWebhookRequest;
 class UpdateWebhookResponse;
 
-class QTAWS_EXPORT AmplifyClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSAMPLIFY_EXPORT AmplifyClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace MediaConnect {
 
 class AddFlowVpcInterfacesRequestPrivate;
 
-class QTAWS_EXPORT AddFlowVpcInterfacesRequest : public MediaConnectRequest {
+class QTAWSMEDIACONNECT_EXPORT AddFlowVpcInterfacesRequest : public MediaConnectRequest {
 
 public:
     AddFlowVpcInterfacesRequest(const AddFlowVpcInterfacesRequest &other);

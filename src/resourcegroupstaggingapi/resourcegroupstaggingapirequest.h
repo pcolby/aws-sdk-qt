@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsresourcegroupstaggingapiglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace ResourceGroupsTaggingAPI {
 
 class ResourceGroupsTaggingAPIRequestPrivate;
 
-class QTAWS_EXPORT ResourceGroupsTaggingAPIRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSRESOURCEGROUPSTAGGINGAPI_EXPORT ResourceGroupsTaggingAPIRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ResourceGroupsTaggingAPI.

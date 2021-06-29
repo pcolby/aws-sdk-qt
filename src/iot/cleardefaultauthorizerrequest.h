@@ -27,7 +27,7 @@ namespace IoT {
 
 class ClearDefaultAuthorizerRequestPrivate;
 
-class QTAWS_EXPORT ClearDefaultAuthorizerRequest : public IoTRequest {
+class QTAWSIOT_EXPORT ClearDefaultAuthorizerRequest : public IoTRequest {
 
 public:
     ClearDefaultAuthorizerRequest(const ClearDefaultAuthorizerRequest &other);

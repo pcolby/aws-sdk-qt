@@ -28,7 +28,7 @@ namespace RDS {
 
 class AddRoleToDBInstanceResponsePrivate;
 
-class QTAWS_EXPORT AddRoleToDBInstanceResponse : public RdsResponse {
+class QTAWSRDS_EXPORT AddRoleToDBInstanceResponse : public RdsResponse {
     Q_OBJECT
 
 public:

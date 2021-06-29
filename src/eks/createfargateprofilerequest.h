@@ -27,7 +27,7 @@ namespace EKS {
 
 class CreateFargateProfileRequestPrivate;
 
-class QTAWS_EXPORT CreateFargateProfileRequest : public EksRequest {
+class QTAWSEKS_EXPORT CreateFargateProfileRequest : public EksRequest {
 
 public:
     CreateFargateProfileRequest(const CreateFargateProfileRequest &other);

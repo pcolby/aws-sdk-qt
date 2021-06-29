@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class GetDomainStatisticsReportResponsePrivate;
 
-class QTAWS_EXPORT GetDomainStatisticsReportResponse : public Sesv2Response {
+class QTAWSSESV2_EXPORT GetDomainStatisticsReportResponse : public Sesv2Response {
     Q_OBJECT
 
 public:

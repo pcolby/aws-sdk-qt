@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class PutDeliveryChannelRequestPrivate;
 
-class QTAWS_EXPORT PutDeliveryChannelRequest : public ConfigServiceRequest {
+class QTAWSCONFIGSERVICE_EXPORT PutDeliveryChannelRequest : public ConfigServiceRequest {
 
 public:
     PutDeliveryChannelRequest(const PutDeliveryChannelRequest &other);

@@ -27,7 +27,7 @@ namespace KMS {
 
 class ListKeyPoliciesRequestPrivate;
 
-class QTAWS_EXPORT ListKeyPoliciesRequest : public KmsRequest {
+class QTAWSKMS_EXPORT ListKeyPoliciesRequest : public KmsRequest {
 
 public:
     ListKeyPoliciesRequest(const ListKeyPoliciesRequest &other);

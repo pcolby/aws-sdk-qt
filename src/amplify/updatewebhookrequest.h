@@ -27,7 +27,7 @@ namespace Amplify {
 
 class UpdateWebhookRequestPrivate;
 
-class QTAWS_EXPORT UpdateWebhookRequest : public AmplifyRequest {
+class QTAWSAMPLIFY_EXPORT UpdateWebhookRequest : public AmplifyRequest {
 
 public:
     UpdateWebhookRequest(const UpdateWebhookRequest &other);

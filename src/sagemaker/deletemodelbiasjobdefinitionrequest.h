@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class DeleteModelBiasJobDefinitionRequestPrivate;
 
-class QTAWS_EXPORT DeleteModelBiasJobDefinitionRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT DeleteModelBiasJobDefinitionRequest : public SageMakerRequest {
 
 public:
     DeleteModelBiasJobDefinitionRequest(const DeleteModelBiasJobDefinitionRequest &other);

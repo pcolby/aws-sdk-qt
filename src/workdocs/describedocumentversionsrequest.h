@@ -27,7 +27,7 @@ namespace WorkDocs {
 
 class DescribeDocumentVersionsRequestPrivate;
 
-class QTAWS_EXPORT DescribeDocumentVersionsRequest : public WorkDocsRequest {
+class QTAWSWORKDOCS_EXPORT DescribeDocumentVersionsRequest : public WorkDocsRequest {
 
 public:
     DescribeDocumentVersionsRequest(const DescribeDocumentVersionsRequest &other);

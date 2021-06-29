@@ -27,7 +27,7 @@ namespace Inspector {
 
 class GetTelemetryMetadataRequestPrivate;
 
-class QTAWS_EXPORT GetTelemetryMetadataRequest : public InspectorRequest {
+class QTAWSINSPECTOR_EXPORT GetTelemetryMetadataRequest : public InspectorRequest {
 
 public:
     GetTelemetryMetadataRequest(const GetTelemetryMetadataRequest &other);

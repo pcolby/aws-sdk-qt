@@ -21,6 +21,8 @@
 #define QTAWS_FIREHOSERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsfirehoseglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Firehose {
 
 class FirehoseResponsePrivate;
 
-class QTAWS_EXPORT FirehoseResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSFIREHOSE_EXPORT FirehoseResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

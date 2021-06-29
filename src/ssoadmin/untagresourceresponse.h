@@ -28,7 +28,7 @@ namespace SSOAdmin {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public SSOAdminResponse {
+class QTAWSSSOADMIN_EXPORT UntagResourceResponse : public SSOAdminResponse {
     Q_OBJECT
 
 public:

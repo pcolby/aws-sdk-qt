@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawslightsailglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Lightsail {
 
 class LightsailRequestPrivate;
 
-class QTAWS_EXPORT LightsailRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSLIGHTSAIL_EXPORT LightsailRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Lightsail.

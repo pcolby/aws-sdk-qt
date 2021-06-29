@@ -27,7 +27,7 @@ namespace ElasticBeanstalk {
 
 class DisassociateEnvironmentOperationsRoleRequestPrivate;
 
-class QTAWS_EXPORT DisassociateEnvironmentOperationsRoleRequest : public ElasticBeanstalkRequest {
+class QTAWSELASTICBEANSTALK_EXPORT DisassociateEnvironmentOperationsRoleRequest : public ElasticBeanstalkRequest {
 
 public:
     DisassociateEnvironmentOperationsRoleRequest(const DisassociateEnvironmentOperationsRoleRequest &other);

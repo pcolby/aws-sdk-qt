@@ -28,7 +28,7 @@ namespace Amplify {
 
 class CreateDeploymentResponsePrivate;
 
-class QTAWS_EXPORT CreateDeploymentResponse : public AmplifyResponse {
+class QTAWSAMPLIFY_EXPORT CreateDeploymentResponse : public AmplifyResponse {
     Q_OBJECT
 
 public:

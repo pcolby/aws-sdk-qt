@@ -27,7 +27,7 @@ namespace Inspector {
 
 class DeleteAssessmentRunRequestPrivate;
 
-class QTAWS_EXPORT DeleteAssessmentRunRequest : public InspectorRequest {
+class QTAWSINSPECTOR_EXPORT DeleteAssessmentRunRequest : public InspectorRequest {
 
 public:
     DeleteAssessmentRunRequest(const DeleteAssessmentRunRequest &other);

@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public QuickSightResponse {
+class QTAWSQUICKSIGHT_EXPORT UntagResourceResponse : public QuickSightResponse {
     Q_OBJECT
 
 public:

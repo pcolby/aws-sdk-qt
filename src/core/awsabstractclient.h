@@ -36,7 +36,7 @@ class AwsAbstractRequest;
 class AwsAbstractResponse;
 class AwsAbstractSignature;
 
-class QTAWS_EXPORT AwsAbstractClient : public QObject {
+class QTAWSCORE_EXPORT AwsAbstractClient : public QObject {
     Q_OBJECT
 
 public:

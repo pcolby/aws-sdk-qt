@@ -27,7 +27,7 @@ namespace RDS {
 
 class DescribeCertificatesRequestPrivate;
 
-class QTAWS_EXPORT DescribeCertificatesRequest : public RdsRequest {
+class QTAWSRDS_EXPORT DescribeCertificatesRequest : public RdsRequest {
 
 public:
     DescribeCertificatesRequest(const DescribeCertificatesRequest &other);

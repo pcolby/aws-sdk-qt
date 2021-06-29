@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsdlmglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -45,7 +47,7 @@ class UntagResourceResponse;
 class UpdateLifecyclePolicyRequest;
 class UpdateLifecyclePolicyResponse;
 
-class QTAWS_EXPORT DlmClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSDLM_EXPORT DlmClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

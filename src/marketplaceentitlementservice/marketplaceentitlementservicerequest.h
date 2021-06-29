@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsmarketplaceentitlementserviceglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace MarketplaceEntitlementService {
 
 class MarketplaceEntitlementServiceRequestPrivate;
 
-class QTAWS_EXPORT MarketplaceEntitlementServiceRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSMARKETPLACEENTITLEMENTSERVICE_EXPORT MarketplaceEntitlementServiceRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by MarketplaceEntitlementService.

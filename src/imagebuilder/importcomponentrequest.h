@@ -27,7 +27,7 @@ namespace imagebuilder {
 
 class ImportComponentRequestPrivate;
 
-class QTAWS_EXPORT ImportComponentRequest : public imagebuilderRequest {
+class QTAWSIMAGEBUILDER_EXPORT ImportComponentRequest : public imagebuilderRequest {
 
 public:
     ImportComponentRequest(const ImportComponentRequest &other);

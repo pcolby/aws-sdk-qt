@@ -28,7 +28,7 @@ namespace FMS {
 
 class ListMemberAccountsResponsePrivate;
 
-class QTAWS_EXPORT ListMemberAccountsResponse : public FmsResponse {
+class QTAWSFMS_EXPORT ListMemberAccountsResponse : public FmsResponse {
     Q_OBJECT
 
 public:

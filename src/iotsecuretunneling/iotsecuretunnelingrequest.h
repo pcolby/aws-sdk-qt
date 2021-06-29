@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsiotsecuretunnelingglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace IoTSecureTunneling {
 
 class IoTSecureTunnelingRequestPrivate;
 
-class QTAWS_EXPORT IoTSecureTunnelingRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSIOTSECURETUNNELING_EXPORT IoTSecureTunnelingRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by IoTSecureTunneling.

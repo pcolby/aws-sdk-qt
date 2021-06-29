@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class ResumeProcessesResponsePrivate;
 
-class QTAWS_EXPORT ResumeProcessesResponse : public AutoScalingResponse {
+class QTAWSAUTOSCALING_EXPORT ResumeProcessesResponse : public AutoScalingResponse {
     Q_OBJECT
 
 public:

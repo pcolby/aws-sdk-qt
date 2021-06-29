@@ -27,7 +27,7 @@ namespace Chime {
 
 class DeleteChannelMessageRequestPrivate;
 
-class QTAWS_EXPORT DeleteChannelMessageRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT DeleteChannelMessageRequest : public ChimeRequest {
 
 public:
     DeleteChannelMessageRequest(const DeleteChannelMessageRequest &other);

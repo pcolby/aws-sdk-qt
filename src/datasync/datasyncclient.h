@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsdatasyncglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -99,7 +101,7 @@ class UpdateTaskResponse;
 class UpdateTaskExecutionRequest;
 class UpdateTaskExecutionResponse;
 
-class QTAWS_EXPORT DataSyncClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSDATASYNC_EXPORT DataSyncClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

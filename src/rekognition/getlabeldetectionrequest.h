@@ -27,7 +27,7 @@ namespace Rekognition {
 
 class GetLabelDetectionRequestPrivate;
 
-class QTAWS_EXPORT GetLabelDetectionRequest : public RekognitionRequest {
+class QTAWSREKOGNITION_EXPORT GetLabelDetectionRequest : public RekognitionRequest {
 
 public:
     GetLabelDetectionRequest(const GetLabelDetectionRequest &other);

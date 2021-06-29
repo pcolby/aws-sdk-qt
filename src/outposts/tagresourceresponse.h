@@ -28,7 +28,7 @@ namespace Outposts {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public OutpostsResponse {
+class QTAWSOUTPOSTS_EXPORT TagResourceResponse : public OutpostsResponse {
     Q_OBJECT
 
 public:

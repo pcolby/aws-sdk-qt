@@ -27,7 +27,7 @@ namespace kendra {
 
 class DescribeDataSourceRequestPrivate;
 
-class QTAWS_EXPORT DescribeDataSourceRequest : public kendraRequest {
+class QTAWSKENDRA_EXPORT DescribeDataSourceRequest : public kendraRequest {
 
 public:
     DescribeDataSourceRequest(const DescribeDataSourceRequest &other);

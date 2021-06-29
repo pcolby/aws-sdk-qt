@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class ListEndpointsRequestPrivate;
 
-class QTAWS_EXPORT ListEndpointsRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT ListEndpointsRequest : public SageMakerRequest {
 
 public:
     ListEndpointsRequest(const ListEndpointsRequest &other);

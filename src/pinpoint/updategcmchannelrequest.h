@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class UpdateGcmChannelRequestPrivate;
 
-class QTAWS_EXPORT UpdateGcmChannelRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT UpdateGcmChannelRequest : public PinpointRequest {
 
 public:
     UpdateGcmChannelRequest(const UpdateGcmChannelRequest &other);

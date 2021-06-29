@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class GetMonitoringSubscriptionRequestPrivate;
 
-class QTAWS_EXPORT GetMonitoringSubscriptionRequest : public CloudFrontRequest {
+class QTAWSCLOUDFRONT_EXPORT GetMonitoringSubscriptionRequest : public CloudFrontRequest {
 
 public:
     GetMonitoringSubscriptionRequest(const GetMonitoringSubscriptionRequest &other);

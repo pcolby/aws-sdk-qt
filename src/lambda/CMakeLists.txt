@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSLAMBDA_LIBRARY)
+
 add_library(QtAwsLambda
   addlayerversionpermissionrequest.h
   addlayerversionpermissionrequest_p.h
@@ -197,6 +199,7 @@ add_library(QtAwsLambda
   putprovisionedconcurrencyconfigrequest_p.h
   putprovisionedconcurrencyconfigresponse.h
   putprovisionedconcurrencyconfigresponse_p.h
+  qtawslambdaglobal.h
   removelayerversionpermissionrequest.h
   removelayerversionpermissionrequest_p.h
   removelayerversionpermissionresponse.h

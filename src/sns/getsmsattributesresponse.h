@@ -28,7 +28,7 @@ namespace SNS {
 
 class GetSMSAttributesResponsePrivate;
 
-class QTAWS_EXPORT GetSMSAttributesResponse : public SnsResponse {
+class QTAWSSNS_EXPORT GetSMSAttributesResponse : public SnsResponse {
     Q_OBJECT
 
 public:

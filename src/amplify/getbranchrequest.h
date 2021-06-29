@@ -27,7 +27,7 @@ namespace Amplify {
 
 class GetBranchRequestPrivate;
 
-class QTAWS_EXPORT GetBranchRequest : public AmplifyRequest {
+class QTAWSAMPLIFY_EXPORT GetBranchRequest : public AmplifyRequest {
 
 public:
     GetBranchRequest(const GetBranchRequest &other);

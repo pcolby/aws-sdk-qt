@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class ListStreamingDistributionsRequestPrivate;
 
-class QTAWS_EXPORT ListStreamingDistributionsRequest : public CloudFrontRequest {
+class QTAWSCLOUDFRONT_EXPORT ListStreamingDistributionsRequest : public CloudFrontRequest {
 
 public:
     ListStreamingDistributionsRequest(const ListStreamingDistributionsRequest &other);

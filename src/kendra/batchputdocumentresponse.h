@@ -28,7 +28,7 @@ namespace kendra {
 
 class BatchPutDocumentResponsePrivate;
 
-class QTAWS_EXPORT BatchPutDocumentResponse : public kendraResponse {
+class QTAWSKENDRA_EXPORT BatchPutDocumentResponse : public kendraResponse {
     Q_OBJECT
 
 public:

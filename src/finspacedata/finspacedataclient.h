@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsfinspacedataglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -35,7 +37,7 @@ class GetProgrammaticAccessCredentialsResponse;
 class GetWorkingLocationRequest;
 class GetWorkingLocationResponse;
 
-class QTAWS_EXPORT FinSpaceDataClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSFINSPACEDATA_EXPORT FinSpaceDataClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

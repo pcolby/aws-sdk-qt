@@ -28,7 +28,7 @@ namespace AppStream {
 
 class StartImageBuilderResponsePrivate;
 
-class QTAWS_EXPORT StartImageBuilderResponse : public AppStreamResponse {
+class QTAWSAPPSTREAM_EXPORT StartImageBuilderResponse : public AppStreamResponse {
     Q_OBJECT
 
 public:

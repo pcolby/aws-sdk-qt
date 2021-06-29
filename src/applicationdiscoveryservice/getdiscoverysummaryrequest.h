@@ -27,7 +27,7 @@ namespace ApplicationDiscoveryService {
 
 class GetDiscoverySummaryRequestPrivate;
 
-class QTAWS_EXPORT GetDiscoverySummaryRequest : public ApplicationDiscoveryServiceRequest {
+class QTAWSAPPLICATIONDISCOVERYSERVICE_EXPORT GetDiscoverySummaryRequest : public ApplicationDiscoveryServiceRequest {
 
 public:
     GetDiscoverySummaryRequest(const GetDiscoverySummaryRequest &other);

@@ -27,7 +27,7 @@ namespace Athena {
 
 class GetDataCatalogRequestPrivate;
 
-class QTAWS_EXPORT GetDataCatalogRequest : public AthenaRequest {
+class QTAWSATHENA_EXPORT GetDataCatalogRequest : public AthenaRequest {
 
 public:
     GetDataCatalogRequest(const GetDataCatalogRequest &other);

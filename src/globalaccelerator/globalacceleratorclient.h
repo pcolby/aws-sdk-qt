@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsglobalacceleratorglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -123,7 +125,7 @@ class UpdateListenerResponse;
 class WithdrawByoipCidrRequest;
 class WithdrawByoipCidrResponse;
 
-class QTAWS_EXPORT GlobalAcceleratorClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSGLOBALACCELERATOR_EXPORT GlobalAcceleratorClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

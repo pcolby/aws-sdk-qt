@@ -28,7 +28,7 @@ namespace ECS {
 
 class DeleteAccountSettingResponsePrivate;
 
-class QTAWS_EXPORT DeleteAccountSettingResponse : public EcsResponse {
+class QTAWSECS_EXPORT DeleteAccountSettingResponse : public EcsResponse {
     Q_OBJECT
 
 public:

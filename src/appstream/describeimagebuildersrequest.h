@@ -27,7 +27,7 @@ namespace AppStream {
 
 class DescribeImageBuildersRequestPrivate;
 
-class QTAWS_EXPORT DescribeImageBuildersRequest : public AppStreamRequest {
+class QTAWSAPPSTREAM_EXPORT DescribeImageBuildersRequest : public AppStreamRequest {
 
 public:
     DescribeImageBuildersRequest(const DescribeImageBuildersRequest &other);

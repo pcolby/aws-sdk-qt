@@ -27,7 +27,7 @@ namespace S3Control {
 
 class GetBucketLifecycleConfigurationRequestPrivate;
 
-class QTAWS_EXPORT GetBucketLifecycleConfigurationRequest : public S3ControlRequest {
+class QTAWSS3CONTROL_EXPORT GetBucketLifecycleConfigurationRequest : public S3ControlRequest {
 
 public:
     GetBucketLifecycleConfigurationRequest(const GetBucketLifecycleConfigurationRequest &other);

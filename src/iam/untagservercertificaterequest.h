@@ -27,7 +27,7 @@ namespace IAM {
 
 class UntagServerCertificateRequestPrivate;
 
-class QTAWS_EXPORT UntagServerCertificateRequest : public IamRequest {
+class QTAWSIAM_EXPORT UntagServerCertificateRequest : public IamRequest {
 
 public:
     UntagServerCertificateRequest(const UntagServerCertificateRequest &other);

@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeNetworkInsightsPathsResponsePrivate;
 
-class QTAWS_EXPORT DescribeNetworkInsightsPathsResponse : public Ec2Response {
+class QTAWSEC2_EXPORT DescribeNetworkInsightsPathsResponse : public Ec2Response {
     Q_OBJECT
 
 public:

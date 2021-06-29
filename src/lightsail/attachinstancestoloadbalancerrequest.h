@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class AttachInstancesToLoadBalancerRequestPrivate;
 
-class QTAWS_EXPORT AttachInstancesToLoadBalancerRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT AttachInstancesToLoadBalancerRequest : public LightsailRequest {
 
 public:
     AttachInstancesToLoadBalancerRequest(const AttachInstancesToLoadBalancerRequest &other);

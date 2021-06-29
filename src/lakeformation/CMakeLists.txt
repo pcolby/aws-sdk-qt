@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSLAKEFORMATION_LIBRARY)
+
 add_library(QtAwsLakeFormation
   addlftagstoresourcerequest.h
   addlftagstoresourcerequest_p.h
@@ -69,6 +71,7 @@ add_library(QtAwsLakeFormation
   putdatalakesettingsrequest_p.h
   putdatalakesettingsresponse.h
   putdatalakesettingsresponse_p.h
+  qtawslakeformationglobal.h
   registerresourcerequest.h
   registerresourcerequest_p.h
   registerresourceresponse.h

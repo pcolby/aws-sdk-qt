@@ -28,7 +28,7 @@ namespace KMS {
 
 class SignResponsePrivate;
 
-class QTAWS_EXPORT SignResponse : public KmsResponse {
+class QTAWSKMS_EXPORT SignResponse : public KmsResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace Organizations {
 
 class ListPoliciesForTargetRequestPrivate;
 
-class QTAWS_EXPORT ListPoliciesForTargetRequest : public OrganizationsRequest {
+class QTAWSORGANIZATIONS_EXPORT ListPoliciesForTargetRequest : public OrganizationsRequest {
 
 public:
     ListPoliciesForTargetRequest(const ListPoliciesForTargetRequest &other);

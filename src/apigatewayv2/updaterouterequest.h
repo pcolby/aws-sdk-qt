@@ -27,7 +27,7 @@ namespace ApiGatewayV2 {
 
 class UpdateRouteRequestPrivate;
 
-class QTAWS_EXPORT UpdateRouteRequest : public ApiGatewayV2Request {
+class QTAWSAPIGATEWAYV2_EXPORT UpdateRouteRequest : public ApiGatewayV2Request {
 
 public:
     UpdateRouteRequest(const UpdateRouteRequest &other);

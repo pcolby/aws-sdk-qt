@@ -27,7 +27,7 @@ namespace IoT1ClickProjects {
 
 class AssociateDeviceWithPlacementRequestPrivate;
 
-class QTAWS_EXPORT AssociateDeviceWithPlacementRequest : public IoT1ClickProjectsRequest {
+class QTAWSIOT1CLICKPROJECTS_EXPORT AssociateDeviceWithPlacementRequest : public IoT1ClickProjectsRequest {
 
 public:
     AssociateDeviceWithPlacementRequest(const AssociateDeviceWithPlacementRequest &other);

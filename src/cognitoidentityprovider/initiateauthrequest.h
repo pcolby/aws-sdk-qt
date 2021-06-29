@@ -27,7 +27,7 @@ namespace CognitoIdentityProvider {
 
 class InitiateAuthRequestPrivate;
 
-class QTAWS_EXPORT InitiateAuthRequest : public CognitoIdentityProviderRequest {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT InitiateAuthRequest : public CognitoIdentityProviderRequest {
 
 public:
     InitiateAuthRequest(const InitiateAuthRequest &other);

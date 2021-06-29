@@ -21,6 +21,8 @@
 #define QTAWS_INSPECTORRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsinspectorglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Inspector {
 
 class InspectorResponsePrivate;
 
-class QTAWS_EXPORT InspectorResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSINSPECTOR_EXPORT InspectorResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

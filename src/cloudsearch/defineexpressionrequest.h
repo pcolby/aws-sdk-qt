@@ -27,7 +27,7 @@ namespace CloudSearch {
 
 class DefineExpressionRequestPrivate;
 
-class QTAWS_EXPORT DefineExpressionRequest : public CloudSearchRequest {
+class QTAWSCLOUDSEARCH_EXPORT DefineExpressionRequest : public CloudSearchRequest {
 
 public:
     DefineExpressionRequest(const DefineExpressionRequest &other);

@@ -27,7 +27,7 @@ namespace EC2 {
 
 class GetTransitGatewayAttachmentPropagationsRequestPrivate;
 
-class QTAWS_EXPORT GetTransitGatewayAttachmentPropagationsRequest : public Ec2Request {
+class QTAWSEC2_EXPORT GetTransitGatewayAttachmentPropagationsRequest : public Ec2Request {
 
 public:
     GetTransitGatewayAttachmentPropagationsRequest(const GetTransitGatewayAttachmentPropagationsRequest &other);

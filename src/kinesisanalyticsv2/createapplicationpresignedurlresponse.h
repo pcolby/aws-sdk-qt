@@ -28,7 +28,7 @@ namespace KinesisAnalyticsV2 {
 
 class CreateApplicationPresignedUrlResponsePrivate;
 
-class QTAWS_EXPORT CreateApplicationPresignedUrlResponse : public KinesisAnalyticsV2Response {
+class QTAWSKINESISANALYTICSV2_EXPORT CreateApplicationPresignedUrlResponse : public KinesisAnalyticsV2Response {
     Q_OBJECT
 
 public:

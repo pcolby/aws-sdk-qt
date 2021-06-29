@@ -28,7 +28,7 @@ namespace Athena {
 
 class GetDatabaseResponsePrivate;
 
-class QTAWS_EXPORT GetDatabaseResponse : public AthenaResponse {
+class QTAWSATHENA_EXPORT GetDatabaseResponse : public AthenaResponse {
     Q_OBJECT
 
 public:

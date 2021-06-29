@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class StartStreamProcessorResponsePrivate;
 
-class QTAWS_EXPORT StartStreamProcessorResponse : public RekognitionResponse {
+class QTAWSREKOGNITION_EXPORT StartStreamProcessorResponse : public RekognitionResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace Route53 {
 
 class GetQueryLoggingConfigRequestPrivate;
 
-class QTAWS_EXPORT GetQueryLoggingConfigRequest : public Route53Request {
+class QTAWSROUTE53_EXPORT GetQueryLoggingConfigRequest : public Route53Request {
 
 public:
     GetQueryLoggingConfigRequest(const GetQueryLoggingConfigRequest &other);

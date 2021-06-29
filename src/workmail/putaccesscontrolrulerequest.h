@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class PutAccessControlRuleRequestPrivate;
 
-class QTAWS_EXPORT PutAccessControlRuleRequest : public WorkMailRequest {
+class QTAWSWORKMAIL_EXPORT PutAccessControlRuleRequest : public WorkMailRequest {
 
 public:
     PutAccessControlRuleRequest(const PutAccessControlRuleRequest &other);

@@ -27,7 +27,7 @@ namespace Chime {
 
 class RestorePhoneNumberRequestPrivate;
 
-class QTAWS_EXPORT RestorePhoneNumberRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT RestorePhoneNumberRequest : public ChimeRequest {
 
 public:
     RestorePhoneNumberRequest(const RestorePhoneNumberRequest &other);

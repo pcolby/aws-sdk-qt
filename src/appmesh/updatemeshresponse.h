@@ -28,7 +28,7 @@ namespace AppMesh {
 
 class UpdateMeshResponsePrivate;
 
-class QTAWS_EXPORT UpdateMeshResponse : public AppMeshResponse {
+class QTAWSAPPMESH_EXPORT UpdateMeshResponse : public AppMeshResponse {
     Q_OBJECT
 
 public:

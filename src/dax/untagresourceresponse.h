@@ -28,7 +28,7 @@ namespace DAX {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public DaxResponse {
+class QTAWSDAX_EXPORT UntagResourceResponse : public DaxResponse {
     Q_OBJECT
 
 public:

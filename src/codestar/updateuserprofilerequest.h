@@ -27,7 +27,7 @@ namespace CodeStar {
 
 class UpdateUserProfileRequestPrivate;
 
-class QTAWS_EXPORT UpdateUserProfileRequest : public CodeStarRequest {
+class QTAWSCODESTAR_EXPORT UpdateUserProfileRequest : public CodeStarRequest {
 
 public:
     UpdateUserProfileRequest(const UpdateUserProfileRequest &other);

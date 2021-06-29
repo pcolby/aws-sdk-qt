@@ -27,7 +27,7 @@ namespace IVS {
 
 class StopStreamRequestPrivate;
 
-class QTAWS_EXPORT StopStreamRequest : public IvsRequest {
+class QTAWSIVS_EXPORT StopStreamRequest : public IvsRequest {
 
 public:
     StopStreamRequest(const StopStreamRequest &other);

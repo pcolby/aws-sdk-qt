@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public MediaLiveResponse {
+class QTAWSMEDIALIVE_EXPORT ListTagsForResourceResponse : public MediaLiveResponse {
     Q_OBJECT
 
 public:

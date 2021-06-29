@@ -21,6 +21,8 @@
 #define QTAWS_DLMRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsdlmglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace DLM {
 
 class DlmResponsePrivate;
 
-class QTAWS_EXPORT DlmResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSDLM_EXPORT DlmResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

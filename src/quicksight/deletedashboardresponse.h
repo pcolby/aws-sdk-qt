@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class DeleteDashboardResponsePrivate;
 
-class QTAWS_EXPORT DeleteDashboardResponse : public QuickSightResponse {
+class QTAWSQUICKSIGHT_EXPORT DeleteDashboardResponse : public QuickSightResponse {
     Q_OBJECT
 
 public:

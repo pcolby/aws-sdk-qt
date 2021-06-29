@@ -27,7 +27,7 @@ namespace CostExplorer {
 
 class GetCostForecastRequestPrivate;
 
-class QTAWS_EXPORT GetCostForecastRequest : public CostExplorerRequest {
+class QTAWSCOSTEXPLORER_EXPORT GetCostForecastRequest : public CostExplorerRequest {
 
 public:
     GetCostForecastRequest(const GetCostForecastRequest &other);

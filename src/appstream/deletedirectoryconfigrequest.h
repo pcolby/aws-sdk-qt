@@ -27,7 +27,7 @@ namespace AppStream {
 
 class DeleteDirectoryConfigRequestPrivate;
 
-class QTAWS_EXPORT DeleteDirectoryConfigRequest : public AppStreamRequest {
+class QTAWSAPPSTREAM_EXPORT DeleteDirectoryConfigRequest : public AppStreamRequest {
 
 public:
     DeleteDirectoryConfigRequest(const DeleteDirectoryConfigRequest &other);

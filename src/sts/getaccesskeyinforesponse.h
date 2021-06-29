@@ -28,7 +28,7 @@ namespace STS {
 
 class GetAccessKeyInfoResponsePrivate;
 
-class QTAWS_EXPORT GetAccessKeyInfoResponse : public StsResponse {
+class QTAWSSTS_EXPORT GetAccessKeyInfoResponse : public StsResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace CognitoIdentityProvider {
 
 class AdminConfirmSignUpRequestPrivate;
 
-class QTAWS_EXPORT AdminConfirmSignUpRequest : public CognitoIdentityProviderRequest {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT AdminConfirmSignUpRequest : public CognitoIdentityProviderRequest {
 
 public:
     AdminConfirmSignUpRequest(const AdminConfirmSignUpRequest &other);

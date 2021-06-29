@@ -27,7 +27,7 @@ namespace EC2 {
 
 class PurchaseReservedInstancesOfferingRequestPrivate;
 
-class QTAWS_EXPORT PurchaseReservedInstancesOfferingRequest : public Ec2Request {
+class QTAWSEC2_EXPORT PurchaseReservedInstancesOfferingRequest : public Ec2Request {
 
 public:
     PurchaseReservedInstancesOfferingRequest(const PurchaseReservedInstancesOfferingRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsmarketplacecatalogglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace MarketplaceCatalog {
 
 class MarketplaceCatalogRequestPrivate;
 
-class QTAWS_EXPORT MarketplaceCatalogRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSMARKETPLACECATALOG_EXPORT MarketplaceCatalogRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by MarketplaceCatalog.

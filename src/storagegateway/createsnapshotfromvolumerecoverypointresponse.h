@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class CreateSnapshotFromVolumeRecoveryPointResponsePrivate;
 
-class QTAWS_EXPORT CreateSnapshotFromVolumeRecoveryPointResponse : public StorageGatewayResponse {
+class QTAWSSTORAGEGATEWAY_EXPORT CreateSnapshotFromVolumeRecoveryPointResponse : public StorageGatewayResponse {
     Q_OBJECT
 
 public:

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawshealthglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Health {
 
 class HealthRequestPrivate;
 
-class QTAWS_EXPORT HealthRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSHEALTH_EXPORT HealthRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Health.

@@ -27,7 +27,7 @@ namespace WAFRegional {
 
 class UpdateSizeConstraintSetRequestPrivate;
 
-class QTAWS_EXPORT UpdateSizeConstraintSetRequest : public WAFRegionalRequest {
+class QTAWSWAFREGIONAL_EXPORT UpdateSizeConstraintSetRequest : public WAFRegionalRequest {
 
 public:
     UpdateSizeConstraintSetRequest(const UpdateSizeConstraintSetRequest &other);

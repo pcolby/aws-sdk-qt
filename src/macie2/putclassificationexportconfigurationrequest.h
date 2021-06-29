@@ -27,7 +27,7 @@ namespace Macie2 {
 
 class PutClassificationExportConfigurationRequestPrivate;
 
-class QTAWS_EXPORT PutClassificationExportConfigurationRequest : public Macie2Request {
+class QTAWSMACIE2_EXPORT PutClassificationExportConfigurationRequest : public Macie2Request {
 
 public:
     PutClassificationExportConfigurationRequest(const PutClassificationExportConfigurationRequest &other);

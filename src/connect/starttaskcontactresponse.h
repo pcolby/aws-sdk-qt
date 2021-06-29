@@ -28,7 +28,7 @@ namespace Connect {
 
 class StartTaskContactResponsePrivate;
 
-class QTAWS_EXPORT StartTaskContactResponse : public ConnectResponse {
+class QTAWSCONNECT_EXPORT StartTaskContactResponse : public ConnectResponse {
     Q_OBJECT
 
 public:

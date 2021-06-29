@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class CreateGroupVersionRequestPrivate;
 
-class QTAWS_EXPORT CreateGroupVersionRequest : public GreengrassRequest {
+class QTAWSGREENGRASS_EXPORT CreateGroupVersionRequest : public GreengrassRequest {
 
 public:
     CreateGroupVersionRequest(const CreateGroupVersionRequest &other);

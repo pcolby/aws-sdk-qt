@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public CodePipelineResponse {
+class QTAWSCODEPIPELINE_EXPORT ListTagsForResourceResponse : public CodePipelineResponse {
     Q_OBJECT
 
 public:

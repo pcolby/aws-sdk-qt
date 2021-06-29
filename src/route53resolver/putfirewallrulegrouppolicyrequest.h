@@ -27,7 +27,7 @@ namespace Route53Resolver {
 
 class PutFirewallRuleGroupPolicyRequestPrivate;
 
-class QTAWS_EXPORT PutFirewallRuleGroupPolicyRequest : public Route53ResolverRequest {
+class QTAWSROUTE53RESOLVER_EXPORT PutFirewallRuleGroupPolicyRequest : public Route53ResolverRequest {
 
 public:
     PutFirewallRuleGroupPolicyRequest(const PutFirewallRuleGroupPolicyRequest &other);

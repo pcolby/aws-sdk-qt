@@ -21,6 +21,8 @@
 #define QTAWS_DIRECTCONNECTRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsdirectconnectglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace DirectConnect {
 
 class DirectConnectResponsePrivate;
 
-class QTAWS_EXPORT DirectConnectResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSDIRECTCONNECT_EXPORT DirectConnectResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

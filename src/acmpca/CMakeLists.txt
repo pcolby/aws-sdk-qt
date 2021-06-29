@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSACMPCA_LIBRARY)
+
 add_library(QtAwsAcmpca
   acmpcaclient.h
   acmpcaclient_p.h
@@ -77,6 +79,7 @@ add_library(QtAwsAcmpca
   putpolicyrequest_p.h
   putpolicyresponse.h
   putpolicyresponse_p.h
+  qtawsacmpcaglobal.h
   restorecertificateauthorityrequest.h
   restorecertificateauthorityrequest_p.h
   restorecertificateauthorityresponse.h

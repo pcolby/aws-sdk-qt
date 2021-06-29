@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class DescribeModelQualityJobDefinitionRequestPrivate;
 
-class QTAWS_EXPORT DescribeModelQualityJobDefinitionRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT DescribeModelQualityJobDefinitionRequest : public SageMakerRequest {
 
 public:
     DescribeModelQualityJobDefinitionRequest(const DescribeModelQualityJobDefinitionRequest &other);

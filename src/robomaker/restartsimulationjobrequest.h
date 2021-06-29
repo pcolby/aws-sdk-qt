@@ -27,7 +27,7 @@ namespace RoboMaker {
 
 class RestartSimulationJobRequestPrivate;
 
-class QTAWS_EXPORT RestartSimulationJobRequest : public RoboMakerRequest {
+class QTAWSROBOMAKER_EXPORT RestartSimulationJobRequest : public RoboMakerRequest {
 
 public:
     RestartSimulationJobRequest(const RestartSimulationJobRequest &other);

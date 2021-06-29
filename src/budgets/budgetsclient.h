@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsbudgetsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -73,7 +75,7 @@ class UpdateNotificationResponse;
 class UpdateSubscriberRequest;
 class UpdateSubscriberResponse;
 
-class QTAWS_EXPORT BudgetsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSBUDGETS_EXPORT BudgetsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

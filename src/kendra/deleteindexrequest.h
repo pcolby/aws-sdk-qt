@@ -27,7 +27,7 @@ namespace kendra {
 
 class DeleteIndexRequestPrivate;
 
-class QTAWS_EXPORT DeleteIndexRequest : public kendraRequest {
+class QTAWSKENDRA_EXPORT DeleteIndexRequest : public kendraRequest {
 
 public:
     DeleteIndexRequest(const DeleteIndexRequest &other);

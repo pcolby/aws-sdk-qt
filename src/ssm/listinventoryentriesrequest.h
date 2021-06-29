@@ -27,7 +27,7 @@ namespace SSM {
 
 class ListInventoryEntriesRequestPrivate;
 
-class QTAWS_EXPORT ListInventoryEntriesRequest : public SsmRequest {
+class QTAWSSSM_EXPORT ListInventoryEntriesRequest : public SsmRequest {
 
 public:
     ListInventoryEntriesRequest(const ListInventoryEntriesRequest &other);

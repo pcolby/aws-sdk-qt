@@ -27,7 +27,7 @@ namespace IoT {
 
 class ListThingGroupsRequestPrivate;
 
-class QTAWS_EXPORT ListThingGroupsRequest : public IoTRequest {
+class QTAWSIOT_EXPORT ListThingGroupsRequest : public IoTRequest {
 
 public:
     ListThingGroupsRequest(const ListThingGroupsRequest &other);

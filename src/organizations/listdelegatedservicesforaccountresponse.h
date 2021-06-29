@@ -28,7 +28,7 @@ namespace Organizations {
 
 class ListDelegatedServicesForAccountResponsePrivate;
 
-class QTAWS_EXPORT ListDelegatedServicesForAccountResponse : public OrganizationsResponse {
+class QTAWSORGANIZATIONS_EXPORT ListDelegatedServicesForAccountResponse : public OrganizationsResponse {
     Q_OBJECT
 
 public:

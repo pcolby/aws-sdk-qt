@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawswafglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace WAF {
 
 class WafRequestPrivate;
 
-class QTAWS_EXPORT WafRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSWAF_EXPORT WafRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by WAF.

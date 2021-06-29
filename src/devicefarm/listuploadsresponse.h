@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class ListUploadsResponsePrivate;
 
-class QTAWS_EXPORT ListUploadsResponse : public DeviceFarmResponse {
+class QTAWSDEVICEFARM_EXPORT ListUploadsResponse : public DeviceFarmResponse {
     Q_OBJECT
 
 public:

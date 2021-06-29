@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public CloudDirectoryRequest {
+class QTAWSCLOUDDIRECTORY_EXPORT ListTagsForResourceRequest : public CloudDirectoryRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

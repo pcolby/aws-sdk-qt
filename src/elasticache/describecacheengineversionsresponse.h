@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class DescribeCacheEngineVersionsResponsePrivate;
 
-class QTAWS_EXPORT DescribeCacheEngineVersionsResponse : public ElastiCacheResponse {
+class QTAWSELASTICACHE_EXPORT DescribeCacheEngineVersionsResponse : public ElastiCacheResponse {
     Q_OBJECT
 
 public:

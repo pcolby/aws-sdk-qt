@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class CreateDistributionResponsePrivate;
 
-class QTAWS_EXPORT CreateDistributionResponse : public LightsailResponse {
+class QTAWSLIGHTSAIL_EXPORT CreateDistributionResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsrdsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -303,7 +305,7 @@ class StopDBInstanceResponse;
 class StopDBInstanceAutomatedBackupsReplicationRequest;
 class StopDBInstanceAutomatedBackupsReplicationResponse;
 
-class QTAWS_EXPORT RdsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSRDS_EXPORT RdsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

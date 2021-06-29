@@ -27,7 +27,7 @@ namespace FIS {
 
 class ListExperimentsRequestPrivate;
 
-class QTAWS_EXPORT ListExperimentsRequest : public FisRequest {
+class QTAWSFIS_EXPORT ListExperimentsRequest : public FisRequest {
 
 public:
     ListExperimentsRequest(const ListExperimentsRequest &other);

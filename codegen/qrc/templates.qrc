@@ -11,6 +11,7 @@
     <file>templates/src/service/client.cpp</file>
     <file>templates/src/service/client.h</file>
     <file>templates/src/service/client_p.h</file>
+    <file>templates/src/service/qtawsglobal.h</file>
     <file>templates/src/service/request.cpp</file>
     <file>templates/src/service/request.h</file>
     <file>templates/src/service/request_p.h</file>

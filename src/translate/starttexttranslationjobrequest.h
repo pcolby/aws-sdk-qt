@@ -27,7 +27,7 @@ namespace Translate {
 
 class StartTextTranslationJobRequestPrivate;
 
-class QTAWS_EXPORT StartTextTranslationJobRequest : public TranslateRequest {
+class QTAWSTRANSLATE_EXPORT StartTextTranslationJobRequest : public TranslateRequest {
 
 public:
     StartTextTranslationJobRequest(const StartTextTranslationJobRequest &other);

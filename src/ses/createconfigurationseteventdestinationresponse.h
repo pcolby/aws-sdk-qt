@@ -28,7 +28,7 @@ namespace SES {
 
 class CreateConfigurationSetEventDestinationResponsePrivate;
 
-class QTAWS_EXPORT CreateConfigurationSetEventDestinationResponse : public SesResponse {
+class QTAWSSES_EXPORT CreateConfigurationSetEventDestinationResponse : public SesResponse {
     Q_OBJECT
 
 public:

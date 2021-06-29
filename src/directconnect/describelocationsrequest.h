@@ -27,7 +27,7 @@ namespace DirectConnect {
 
 class DescribeLocationsRequestPrivate;
 
-class QTAWS_EXPORT DescribeLocationsRequest : public DirectConnectRequest {
+class QTAWSDIRECTCONNECT_EXPORT DescribeLocationsRequest : public DirectConnectRequest {
 
 public:
     DescribeLocationsRequest(const DescribeLocationsRequest &other);

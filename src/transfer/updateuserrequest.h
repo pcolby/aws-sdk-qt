@@ -27,7 +27,7 @@ namespace Transfer {
 
 class UpdateUserRequestPrivate;
 
-class QTAWS_EXPORT UpdateUserRequest : public TransferRequest {
+class QTAWSTRANSFER_EXPORT UpdateUserRequest : public TransferRequest {
 
 public:
     UpdateUserRequest(const UpdateUserRequest &other);

@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class ListPublishedSchemaArnsRequestPrivate;
 
-class QTAWS_EXPORT ListPublishedSchemaArnsRequest : public CloudDirectoryRequest {
+class QTAWSCLOUDDIRECTORY_EXPORT ListPublishedSchemaArnsRequest : public CloudDirectoryRequest {
 
 public:
     ListPublishedSchemaArnsRequest(const ListPublishedSchemaArnsRequest &other);

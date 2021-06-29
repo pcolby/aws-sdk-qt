@@ -27,7 +27,7 @@ namespace MediaConnect {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public MediaConnectRequest {
+class QTAWSMEDIACONNECT_EXPORT ListTagsForResourceRequest : public MediaConnectRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class ExportTableToPointInTimeResponsePrivate;
 
-class QTAWS_EXPORT ExportTableToPointInTimeResponse : public DynamoDBResponse {
+class QTAWSDYNAMODB_EXPORT ExportTableToPointInTimeResponse : public DynamoDBResponse {
     Q_OBJECT
 
 public:

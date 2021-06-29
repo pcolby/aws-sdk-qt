@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsdatabasemigrationserviceglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace DatabaseMigrationService {
 
 class DatabaseMigrationServiceRequestPrivate;
 
-class QTAWS_EXPORT DatabaseMigrationServiceRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DatabaseMigrationServiceRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by DatabaseMigrationService.

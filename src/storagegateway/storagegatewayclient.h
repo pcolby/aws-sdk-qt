@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsstoragegatewayglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -207,7 +209,7 @@ class UpdateSnapshotScheduleResponse;
 class UpdateVTLDeviceTypeRequest;
 class UpdateVTLDeviceTypeResponse;
 
-class QTAWS_EXPORT StorageGatewayClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSTORAGEGATEWAY_EXPORT StorageGatewayClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

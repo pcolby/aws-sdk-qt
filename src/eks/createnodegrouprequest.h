@@ -27,7 +27,7 @@ namespace EKS {
 
 class CreateNodegroupRequestPrivate;
 
-class QTAWS_EXPORT CreateNodegroupRequest : public EksRequest {
+class QTAWSEKS_EXPORT CreateNodegroupRequest : public EksRequest {
 
 public:
     CreateNodegroupRequest(const CreateNodegroupRequest &other);

@@ -28,7 +28,7 @@ namespace Appflow {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public AppflowResponse {
+class QTAWSAPPFLOW_EXPORT TagResourceResponse : public AppflowResponse {
     Q_OBJECT
 
 public:

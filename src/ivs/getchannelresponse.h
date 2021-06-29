@@ -28,7 +28,7 @@ namespace IVS {
 
 class GetChannelResponsePrivate;
 
-class QTAWS_EXPORT GetChannelResponse : public IvsResponse {
+class QTAWSIVS_EXPORT GetChannelResponse : public IvsResponse {
     Q_OBJECT
 
 public:

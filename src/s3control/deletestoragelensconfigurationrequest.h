@@ -27,7 +27,7 @@ namespace S3Control {
 
 class DeleteStorageLensConfigurationRequestPrivate;
 
-class QTAWS_EXPORT DeleteStorageLensConfigurationRequest : public S3ControlRequest {
+class QTAWSS3CONTROL_EXPORT DeleteStorageLensConfigurationRequest : public S3ControlRequest {
 
 public:
     DeleteStorageLensConfigurationRequest(const DeleteStorageLensConfigurationRequest &other);

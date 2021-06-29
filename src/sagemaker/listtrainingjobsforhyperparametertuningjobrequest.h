@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class ListTrainingJobsForHyperParameterTuningJobRequestPrivate;
 
-class QTAWS_EXPORT ListTrainingJobsForHyperParameterTuningJobRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT ListTrainingJobsForHyperParameterTuningJobRequest : public SageMakerRequest {
 
 public:
     ListTrainingJobsForHyperParameterTuningJobRequest(const ListTrainingJobsForHyperParameterTuningJobRequest &other);

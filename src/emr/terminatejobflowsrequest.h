@@ -27,7 +27,7 @@ namespace EMR {
 
 class TerminateJobFlowsRequestPrivate;
 
-class QTAWS_EXPORT TerminateJobFlowsRequest : public EmrRequest {
+class QTAWSEMR_EXPORT TerminateJobFlowsRequest : public EmrRequest {
 
 public:
     TerminateJobFlowsRequest(const TerminateJobFlowsRequest &other);

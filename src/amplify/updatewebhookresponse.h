@@ -28,7 +28,7 @@ namespace Amplify {
 
 class UpdateWebhookResponsePrivate;
 
-class QTAWS_EXPORT UpdateWebhookResponse : public AmplifyResponse {
+class QTAWSAMPLIFY_EXPORT UpdateWebhookResponse : public AmplifyResponse {
     Q_OBJECT
 
 public:

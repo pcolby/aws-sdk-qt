@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class DescribeRdsDbInstancesRequestPrivate;
 
-class QTAWS_EXPORT DescribeRdsDbInstancesRequest : public OpsWorksRequest {
+class QTAWSOPSWORKS_EXPORT DescribeRdsDbInstancesRequest : public OpsWorksRequest {
 
 public:
     DescribeRdsDbInstancesRequest(const DescribeRdsDbInstancesRequest &other);

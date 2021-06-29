@@ -28,7 +28,7 @@ namespace MediaTailor {
 
 class ListChannelsResponsePrivate;
 
-class QTAWS_EXPORT ListChannelsResponse : public MediaTailorResponse {
+class QTAWSMEDIATAILOR_EXPORT ListChannelsResponse : public MediaTailorResponse {
     Q_OBJECT
 
 public:

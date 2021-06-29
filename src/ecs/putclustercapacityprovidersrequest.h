@@ -27,7 +27,7 @@ namespace ECS {
 
 class PutClusterCapacityProvidersRequestPrivate;
 
-class QTAWS_EXPORT PutClusterCapacityProvidersRequest : public EcsRequest {
+class QTAWSECS_EXPORT PutClusterCapacityProvidersRequest : public EcsRequest {
 
 public:
     PutClusterCapacityProvidersRequest(const PutClusterCapacityProvidersRequest &other);

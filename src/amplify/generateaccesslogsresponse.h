@@ -28,7 +28,7 @@ namespace Amplify {
 
 class GenerateAccessLogsResponsePrivate;
 
-class QTAWS_EXPORT GenerateAccessLogsResponse : public AmplifyResponse {
+class QTAWSAMPLIFY_EXPORT GenerateAccessLogsResponse : public AmplifyResponse {
     Q_OBJECT
 
 public:

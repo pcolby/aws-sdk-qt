@@ -28,7 +28,7 @@ namespace SSMIncidents {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public SSMIncidentsResponse {
+class QTAWSSSMINCIDENTS_EXPORT UntagResourceResponse : public SSMIncidentsResponse {
     Q_OBJECT
 
 public:

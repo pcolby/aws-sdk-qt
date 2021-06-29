@@ -28,7 +28,7 @@ namespace EC2 {
 
 class EnableSerialConsoleAccessResponsePrivate;
 
-class QTAWS_EXPORT EnableSerialConsoleAccessResponse : public Ec2Response {
+class QTAWSEC2_EXPORT EnableSerialConsoleAccessResponse : public Ec2Response {
     Q_OBJECT
 
 public:

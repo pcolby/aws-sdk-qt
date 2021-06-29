@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsappstreamglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace AppStream {
 
 class AppStreamRequestPrivate;
 
-class QTAWS_EXPORT AppStreamRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSAPPSTREAM_EXPORT AppStreamRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by AppStream.

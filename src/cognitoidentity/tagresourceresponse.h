@@ -28,7 +28,7 @@ namespace CognitoIdentity {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public CognitoIdentityResponse {
+class QTAWSCOGNITOIDENTITY_EXPORT TagResourceResponse : public CognitoIdentityResponse {
     Q_OBJECT
 
 public:

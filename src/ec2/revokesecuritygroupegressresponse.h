@@ -28,7 +28,7 @@ namespace EC2 {
 
 class RevokeSecurityGroupEgressResponsePrivate;
 
-class QTAWS_EXPORT RevokeSecurityGroupEgressResponse : public Ec2Response {
+class QTAWSEC2_EXPORT RevokeSecurityGroupEgressResponse : public Ec2Response {
     Q_OBJECT
 
 public:

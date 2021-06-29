@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSOPSWORKS_LIBRARY)
+
 add_library(QtAwsOpsWorks
   assigninstancerequest.h
   assigninstancerequest_p.h
@@ -197,6 +199,7 @@ add_library(QtAwsOpsWorks
   opsworksrequest_p.h
   opsworksresponse.h
   opsworksresponse_p.h
+  qtawsopsworksglobal.h
   rebootinstancerequest.h
   rebootinstancerequest_p.h
   rebootinstanceresponse.h

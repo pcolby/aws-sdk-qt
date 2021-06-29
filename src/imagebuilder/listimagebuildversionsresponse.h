@@ -28,7 +28,7 @@ namespace imagebuilder {
 
 class ListImageBuildVersionsResponsePrivate;
 
-class QTAWS_EXPORT ListImageBuildVersionsResponse : public imagebuilderResponse {
+class QTAWSIMAGEBUILDER_EXPORT ListImageBuildVersionsResponse : public imagebuilderResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace IoTThingsGraph {
 
 class DeleteSystemInstanceRequestPrivate;
 
-class QTAWS_EXPORT DeleteSystemInstanceRequest : public IoTThingsGraphRequest {
+class QTAWSIOTTHINGSGRAPH_EXPORT DeleteSystemInstanceRequest : public IoTThingsGraphRequest {
 
 public:
     DeleteSystemInstanceRequest(const DeleteSystemInstanceRequest &other);

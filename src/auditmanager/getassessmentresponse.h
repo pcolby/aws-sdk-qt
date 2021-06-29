@@ -28,7 +28,7 @@ namespace AuditManager {
 
 class GetAssessmentResponsePrivate;
 
-class QTAWS_EXPORT GetAssessmentResponse : public AuditManagerResponse {
+class QTAWSAUDITMANAGER_EXPORT GetAssessmentResponse : public AuditManagerResponse {
     Q_OBJECT
 
 public:

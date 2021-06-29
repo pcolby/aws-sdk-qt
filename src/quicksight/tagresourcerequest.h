@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public QuickSightRequest {
+class QTAWSQUICKSIGHT_EXPORT TagResourceRequest : public QuickSightRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

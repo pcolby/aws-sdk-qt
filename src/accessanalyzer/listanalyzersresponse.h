@@ -28,7 +28,7 @@ namespace AccessAnalyzer {
 
 class ListAnalyzersResponsePrivate;
 
-class QTAWS_EXPORT ListAnalyzersResponse : public AccessAnalyzerResponse {
+class QTAWSACCESSANALYZER_EXPORT ListAnalyzersResponse : public AccessAnalyzerResponse {
     Q_OBJECT
 
 public:

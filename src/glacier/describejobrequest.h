@@ -27,7 +27,7 @@ namespace Glacier {
 
 class DescribeJobRequestPrivate;
 
-class QTAWS_EXPORT DescribeJobRequest : public GlacierRequest {
+class QTAWSGLACIER_EXPORT DescribeJobRequest : public GlacierRequest {
 
 public:
     DescribeJobRequest(const DescribeJobRequest &other);

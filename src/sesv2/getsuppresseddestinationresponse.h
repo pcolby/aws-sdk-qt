@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class GetSuppressedDestinationResponsePrivate;
 
-class QTAWS_EXPORT GetSuppressedDestinationResponse : public Sesv2Response {
+class QTAWSSESV2_EXPORT GetSuppressedDestinationResponse : public Sesv2Response {
     Q_OBJECT
 
 public:

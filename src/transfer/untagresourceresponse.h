@@ -28,7 +28,7 @@ namespace Transfer {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public TransferResponse {
+class QTAWSTRANSFER_EXPORT UntagResourceResponse : public TransferResponse {
     Q_OBJECT
 
 public:

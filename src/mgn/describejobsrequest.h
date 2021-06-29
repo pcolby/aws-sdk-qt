@@ -27,7 +27,7 @@ namespace mgn {
 
 class DescribeJobsRequestPrivate;
 
-class QTAWS_EXPORT DescribeJobsRequest : public mgnRequest {
+class QTAWSMGN_EXPORT DescribeJobsRequest : public mgnRequest {
 
 public:
     DescribeJobsRequest(const DescribeJobsRequest &other);

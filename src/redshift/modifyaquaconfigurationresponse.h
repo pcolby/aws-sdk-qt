@@ -28,7 +28,7 @@ namespace Redshift {
 
 class ModifyAquaConfigurationResponsePrivate;
 
-class QTAWS_EXPORT ModifyAquaConfigurationResponse : public RedshiftResponse {
+class QTAWSREDSHIFT_EXPORT ModifyAquaConfigurationResponse : public RedshiftResponse {
     Q_OBJECT
 
 public:

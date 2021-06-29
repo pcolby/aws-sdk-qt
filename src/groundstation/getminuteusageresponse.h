@@ -28,7 +28,7 @@ namespace GroundStation {
 
 class GetMinuteUsageResponsePrivate;
 
-class QTAWS_EXPORT GetMinuteUsageResponse : public GroundStationResponse {
+class QTAWSGROUNDSTATION_EXPORT GetMinuteUsageResponse : public GroundStationResponse {
     Q_OBJECT
 
 public:

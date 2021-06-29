@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class ListAutomaticTapeCreationPoliciesResponsePrivate;
 
-class QTAWS_EXPORT ListAutomaticTapeCreationPoliciesResponse : public StorageGatewayResponse {
+class QTAWSSTORAGEGATEWAY_EXPORT ListAutomaticTapeCreationPoliciesResponse : public StorageGatewayResponse {
     Q_OBJECT
 
 public:

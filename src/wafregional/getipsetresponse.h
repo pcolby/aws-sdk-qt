@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class GetIPSetResponsePrivate;
 
-class QTAWS_EXPORT GetIPSetResponse : public WAFRegionalResponse {
+class QTAWSWAFREGIONAL_EXPORT GetIPSetResponse : public WAFRegionalResponse {
     Q_OBJECT
 
 public:

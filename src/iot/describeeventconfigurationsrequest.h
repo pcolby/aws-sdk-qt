@@ -27,7 +27,7 @@ namespace IoT {
 
 class DescribeEventConfigurationsRequestPrivate;
 
-class QTAWS_EXPORT DescribeEventConfigurationsRequest : public IoTRequest {
+class QTAWSIOT_EXPORT DescribeEventConfigurationsRequest : public IoTRequest {
 
 public:
     DescribeEventConfigurationsRequest(const DescribeEventConfigurationsRequest &other);

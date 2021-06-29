@@ -27,7 +27,7 @@ namespace FraudDetector {
 
 class DeleteEntityTypeRequestPrivate;
 
-class QTAWS_EXPORT DeleteEntityTypeRequest : public FraudDetectorRequest {
+class QTAWSFRAUDDETECTOR_EXPORT DeleteEntityTypeRequest : public FraudDetectorRequest {
 
 public:
     DeleteEntityTypeRequest(const DeleteEntityTypeRequest &other);

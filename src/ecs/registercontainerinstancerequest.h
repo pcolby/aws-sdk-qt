@@ -27,7 +27,7 @@ namespace ECS {
 
 class RegisterContainerInstanceRequestPrivate;
 
-class QTAWS_EXPORT RegisterContainerInstanceRequest : public EcsRequest {
+class QTAWSECS_EXPORT RegisterContainerInstanceRequest : public EcsRequest {
 
 public:
     RegisterContainerInstanceRequest(const RegisterContainerInstanceRequest &other);

@@ -28,7 +28,7 @@ namespace ComprehendMedical {
 
 class DescribeEntitiesDetectionV2JobResponsePrivate;
 
-class QTAWS_EXPORT DescribeEntitiesDetectionV2JobResponse : public ComprehendMedicalResponse {
+class QTAWSCOMPREHENDMEDICAL_EXPORT DescribeEntitiesDetectionV2JobResponse : public ComprehendMedicalResponse {
     Q_OBJECT
 
 public:

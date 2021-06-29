@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class DescribeScalingProcessTypesRequestPrivate;
 
-class QTAWS_EXPORT DescribeScalingProcessTypesRequest : public AutoScalingRequest {
+class QTAWSAUTOSCALING_EXPORT DescribeScalingProcessTypesRequest : public AutoScalingRequest {
 
 public:
     DescribeScalingProcessTypesRequest(const DescribeScalingProcessTypesRequest &other);

@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class DeleteCustomMetadataResponsePrivate;
 
-class QTAWS_EXPORT DeleteCustomMetadataResponse : public WorkDocsResponse {
+class QTAWSWORKDOCS_EXPORT DeleteCustomMetadataResponse : public WorkDocsResponse {
     Q_OBJECT
 
 public:

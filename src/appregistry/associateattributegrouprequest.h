@@ -27,7 +27,7 @@ namespace AppRegistry {
 
 class AssociateAttributeGroupRequestPrivate;
 
-class QTAWS_EXPORT AssociateAttributeGroupRequest : public AppRegistryRequest {
+class QTAWSAPPREGISTRY_EXPORT AssociateAttributeGroupRequest : public AppRegistryRequest {
 
 public:
     AssociateAttributeGroupRequest(const AssociateAttributeGroupRequest &other);

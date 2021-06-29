@@ -27,7 +27,7 @@ namespace CodePipeline {
 
 class EnableStageTransitionRequestPrivate;
 
-class QTAWS_EXPORT EnableStageTransitionRequest : public CodePipelineRequest {
+class QTAWSCODEPIPELINE_EXPORT EnableStageTransitionRequest : public CodePipelineRequest {
 
 public:
     EnableStageTransitionRequest(const EnableStageTransitionRequest &other);

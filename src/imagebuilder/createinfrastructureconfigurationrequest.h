@@ -27,7 +27,7 @@ namespace imagebuilder {
 
 class CreateInfrastructureConfigurationRequestPrivate;
 
-class QTAWS_EXPORT CreateInfrastructureConfigurationRequest : public imagebuilderRequest {
+class QTAWSIMAGEBUILDER_EXPORT CreateInfrastructureConfigurationRequest : public imagebuilderRequest {
 
 public:
     CreateInfrastructureConfigurationRequest(const CreateInfrastructureConfigurationRequest &other);

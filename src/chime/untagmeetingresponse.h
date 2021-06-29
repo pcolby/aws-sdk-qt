@@ -28,7 +28,7 @@ namespace Chime {
 
 class UntagMeetingResponsePrivate;
 
-class QTAWS_EXPORT UntagMeetingResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT UntagMeetingResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

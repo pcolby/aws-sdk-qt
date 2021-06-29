@@ -21,6 +21,8 @@
 #define QTAWS_MTURKRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsmturkglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace MTurk {
 
 class MTurkResponsePrivate;
 
-class QTAWS_EXPORT MTurkResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSMTURK_EXPORT MTurkResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace Route53Resolver {
 
 class DisassociateFirewallRuleGroupRequestPrivate;
 
-class QTAWS_EXPORT DisassociateFirewallRuleGroupRequest : public Route53ResolverRequest {
+class QTAWSROUTE53RESOLVER_EXPORT DisassociateFirewallRuleGroupRequest : public Route53ResolverRequest {
 
 public:
     DisassociateFirewallRuleGroupRequest(const DisassociateFirewallRuleGroupRequest &other);

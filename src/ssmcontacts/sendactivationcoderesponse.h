@@ -28,7 +28,7 @@ namespace SSMContacts {
 
 class SendActivationCodeResponsePrivate;
 
-class QTAWS_EXPORT SendActivationCodeResponse : public SSMContactsResponse {
+class QTAWSSSMCONTACTS_EXPORT SendActivationCodeResponse : public SSMContactsResponse {
     Q_OBJECT
 
 public:

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSAPPLICATIONCOSTPROFILER_LIBRARY)
+
 add_library(QtAwsApplicationCostProfiler
   applicationcostprofilerclient.h
   applicationcostprofilerclient_p.h
@@ -25,6 +27,7 @@ add_library(QtAwsApplicationCostProfiler
   putreportdefinitionrequest_p.h
   putreportdefinitionresponse.h
   putreportdefinitionresponse_p.h
+  qtawsapplicationcostprofilerglobal.h
   updatereportdefinitionrequest.h
   updatereportdefinitionrequest_p.h
   updatereportdefinitionresponse.h

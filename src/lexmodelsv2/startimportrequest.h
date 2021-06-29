@@ -27,7 +27,7 @@ namespace LexModelsV2 {
 
 class StartImportRequestPrivate;
 
-class QTAWS_EXPORT StartImportRequest : public LexModelsV2Request {
+class QTAWSLEXMODELSV2_EXPORT StartImportRequest : public LexModelsV2Request {
 
 public:
     StartImportRequest(const StartImportRequest &other);

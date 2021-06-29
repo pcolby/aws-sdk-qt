@@ -27,7 +27,7 @@ namespace XRay {
 
 class GetTimeSeriesServiceStatisticsRequestPrivate;
 
-class QTAWS_EXPORT GetTimeSeriesServiceStatisticsRequest : public XRayRequest {
+class QTAWSXRAY_EXPORT GetTimeSeriesServiceStatisticsRequest : public XRayRequest {
 
 public:
     GetTimeSeriesServiceStatisticsRequest(const GetTimeSeriesServiceStatisticsRequest &other);

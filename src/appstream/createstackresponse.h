@@ -28,7 +28,7 @@ namespace AppStream {
 
 class CreateStackResponsePrivate;
 
-class QTAWS_EXPORT CreateStackResponse : public AppStreamResponse {
+class QTAWSAPPSTREAM_EXPORT CreateStackResponse : public AppStreamResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class GetNetworkProfileRequestPrivate;
 
-class QTAWS_EXPORT GetNetworkProfileRequest : public DeviceFarmRequest {
+class QTAWSDEVICEFARM_EXPORT GetNetworkProfileRequest : public DeviceFarmRequest {
 
 public:
     GetNetworkProfileRequest(const GetNetworkProfileRequest &other);

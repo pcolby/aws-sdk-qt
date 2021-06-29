@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsserverlessapplicationrepositoryglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace ServerlessApplicationRepository {
 
 class ServerlessApplicationRepositoryRequestPrivate;
 
-class QTAWS_EXPORT ServerlessApplicationRepositoryRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSERVERLESSAPPLICATIONREPOSITORY_EXPORT ServerlessApplicationRepositoryRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ServerlessApplicationRepository.

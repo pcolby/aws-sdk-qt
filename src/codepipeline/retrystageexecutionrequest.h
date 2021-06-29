@@ -27,7 +27,7 @@ namespace CodePipeline {
 
 class RetryStageExecutionRequestPrivate;
 
-class QTAWS_EXPORT RetryStageExecutionRequest : public CodePipelineRequest {
+class QTAWSCODEPIPELINE_EXPORT RetryStageExecutionRequest : public CodePipelineRequest {
 
 public:
     RetryStageExecutionRequest(const RetryStageExecutionRequest &other);

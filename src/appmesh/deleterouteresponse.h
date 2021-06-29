@@ -28,7 +28,7 @@ namespace AppMesh {
 
 class DeleteRouteResponsePrivate;
 
-class QTAWS_EXPORT DeleteRouteResponse : public AppMeshResponse {
+class QTAWSAPPMESH_EXPORT DeleteRouteResponse : public AppMeshResponse {
     Q_OBJECT
 
 public:

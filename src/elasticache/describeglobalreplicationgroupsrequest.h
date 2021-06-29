@@ -27,7 +27,7 @@ namespace ElastiCache {
 
 class DescribeGlobalReplicationGroupsRequestPrivate;
 
-class QTAWS_EXPORT DescribeGlobalReplicationGroupsRequest : public ElastiCacheRequest {
+class QTAWSELASTICACHE_EXPORT DescribeGlobalReplicationGroupsRequest : public ElastiCacheRequest {
 
 public:
     DescribeGlobalReplicationGroupsRequest(const DescribeGlobalReplicationGroupsRequest &other);

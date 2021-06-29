@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSRDS_LIBRARY)
+
 add_library(QtAwsRds
   addroletodbclusterrequest.h
   addroletodbclusterrequest_p.h
@@ -447,6 +449,7 @@ add_library(QtAwsRds
   purchasereserveddbinstancesofferingrequest_p.h
   purchasereserveddbinstancesofferingresponse.h
   purchasereserveddbinstancesofferingresponse_p.h
+  qtawsrdsglobal.h
   rdsclient.h
   rdsclient_p.h
   rdsrequest.h

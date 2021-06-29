@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class GetSuiteRequestPrivate;
 
-class QTAWS_EXPORT GetSuiteRequest : public DeviceFarmRequest {
+class QTAWSDEVICEFARM_EXPORT GetSuiteRequest : public DeviceFarmRequest {
 
 public:
     GetSuiteRequest(const GetSuiteRequest &other);

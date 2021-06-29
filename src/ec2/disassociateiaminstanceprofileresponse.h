@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DisassociateIamInstanceProfileResponsePrivate;
 
-class QTAWS_EXPORT DisassociateIamInstanceProfileResponse : public Ec2Response {
+class QTAWSEC2_EXPORT DisassociateIamInstanceProfileResponse : public Ec2Response {
     Q_OBJECT
 
 public:

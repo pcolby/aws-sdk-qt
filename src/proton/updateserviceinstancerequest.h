@@ -27,7 +27,7 @@ namespace Proton {
 
 class UpdateServiceInstanceRequestPrivate;
 
-class QTAWS_EXPORT UpdateServiceInstanceRequest : public ProtonRequest {
+class QTAWSPROTON_EXPORT UpdateServiceInstanceRequest : public ProtonRequest {
 
 public:
     UpdateServiceInstanceRequest(const UpdateServiceInstanceRequest &other);

@@ -27,7 +27,7 @@ namespace Chime {
 
 class CreateUserRequestPrivate;
 
-class QTAWS_EXPORT CreateUserRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT CreateUserRequest : public ChimeRequest {
 
 public:
     CreateUserRequest(const CreateUserRequest &other);

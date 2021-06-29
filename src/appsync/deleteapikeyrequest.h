@@ -27,7 +27,7 @@ namespace AppSync {
 
 class DeleteApiKeyRequestPrivate;
 
-class QTAWS_EXPORT DeleteApiKeyRequest : public AppSyncRequest {
+class QTAWSAPPSYNC_EXPORT DeleteApiKeyRequest : public AppSyncRequest {
 
 public:
     DeleteApiKeyRequest(const DeleteApiKeyRequest &other);

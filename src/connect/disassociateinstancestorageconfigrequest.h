@@ -27,7 +27,7 @@ namespace Connect {
 
 class DisassociateInstanceStorageConfigRequestPrivate;
 
-class QTAWS_EXPORT DisassociateInstanceStorageConfigRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT DisassociateInstanceStorageConfigRequest : public ConnectRequest {
 
 public:
     DisassociateInstanceStorageConfigRequest(const DisassociateInstanceStorageConfigRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsshieldglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -95,7 +97,7 @@ class UpdateProtectionGroupResponse;
 class UpdateSubscriptionRequest;
 class UpdateSubscriptionResponse;
 
-class QTAWS_EXPORT ShieldClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSHIELD_EXPORT ShieldClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

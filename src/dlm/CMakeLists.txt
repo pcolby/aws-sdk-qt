@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSDLM_LIBRARY)
+
 add_library(QtAwsDlm
   createlifecyclepolicyrequest.h
   createlifecyclepolicyrequest_p.h
@@ -25,6 +27,7 @@ add_library(QtAwsDlm
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsdlmglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

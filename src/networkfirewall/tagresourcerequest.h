@@ -27,7 +27,7 @@ namespace NetworkFirewall {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public NetworkFirewallRequest {
+class QTAWSNETWORKFIREWALL_EXPORT TagResourceRequest : public NetworkFirewallRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

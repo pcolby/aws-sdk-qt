@@ -27,7 +27,7 @@ namespace imagebuilder {
 
 class PutComponentPolicyRequestPrivate;
 
-class QTAWS_EXPORT PutComponentPolicyRequest : public imagebuilderRequest {
+class QTAWSIMAGEBUILDER_EXPORT PutComponentPolicyRequest : public imagebuilderRequest {
 
 public:
     PutComponentPolicyRequest(const PutComponentPolicyRequest &other);

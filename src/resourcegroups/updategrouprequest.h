@@ -27,7 +27,7 @@ namespace ResourceGroups {
 
 class UpdateGroupRequestPrivate;
 
-class QTAWS_EXPORT UpdateGroupRequest : public ResourceGroupsRequest {
+class QTAWSRESOURCEGROUPS_EXPORT UpdateGroupRequest : public ResourceGroupsRequest {
 
 public:
     UpdateGroupRequest(const UpdateGroupRequest &other);

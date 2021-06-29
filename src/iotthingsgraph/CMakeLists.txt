@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSIOTTHINGSGRAPH_LIBRARY)
+
 add_library(QtAwsIoTThingsGraph
   associateentitytothingrequest.h
   associateentitytothingrequest_p.h
@@ -97,6 +99,7 @@ add_library(QtAwsIoTThingsGraph
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsiotthingsgraphglobal.h
   searchentitiesrequest.h
   searchentitiesrequest_p.h
   searchentitiesresponse.h

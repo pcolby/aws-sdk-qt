@@ -27,7 +27,7 @@ namespace MediaLive {
 
 class ListInputDevicesRequestPrivate;
 
-class QTAWS_EXPORT ListInputDevicesRequest : public MediaLiveRequest {
+class QTAWSMEDIALIVE_EXPORT ListInputDevicesRequest : public MediaLiveRequest {
 
 public:
     ListInputDevicesRequest(const ListInputDevicesRequest &other);

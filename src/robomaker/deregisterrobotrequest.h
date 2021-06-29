@@ -27,7 +27,7 @@ namespace RoboMaker {
 
 class DeregisterRobotRequestPrivate;
 
-class QTAWS_EXPORT DeregisterRobotRequest : public RoboMakerRequest {
+class QTAWSROBOMAKER_EXPORT DeregisterRobotRequest : public RoboMakerRequest {
 
 public:
     DeregisterRobotRequest(const DeregisterRobotRequest &other);

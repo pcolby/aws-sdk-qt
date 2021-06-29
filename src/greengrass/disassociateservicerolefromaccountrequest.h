@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class DisassociateServiceRoleFromAccountRequestPrivate;
 
-class QTAWS_EXPORT DisassociateServiceRoleFromAccountRequest : public GreengrassRequest {
+class QTAWSGREENGRASS_EXPORT DisassociateServiceRoleFromAccountRequest : public GreengrassRequest {
 
 public:
     DisassociateServiceRoleFromAccountRequest(const DisassociateServiceRoleFromAccountRequest &other);

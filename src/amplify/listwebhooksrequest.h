@@ -27,7 +27,7 @@ namespace Amplify {
 
 class ListWebhooksRequestPrivate;
 
-class QTAWS_EXPORT ListWebhooksRequest : public AmplifyRequest {
+class QTAWSAMPLIFY_EXPORT ListWebhooksRequest : public AmplifyRequest {
 
 public:
     ListWebhooksRequest(const ListWebhooksRequest &other);

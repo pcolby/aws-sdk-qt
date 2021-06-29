@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsdynamodbglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace DynamoDB {
 
 class DynamoDBRequestPrivate;
 
-class QTAWS_EXPORT DynamoDBRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSDYNAMODB_EXPORT DynamoDBRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by DynamoDB.

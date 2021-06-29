@@ -28,7 +28,7 @@ namespace AmplifyBackend {
 
 class CreateBackendAuthResponsePrivate;
 
-class QTAWS_EXPORT CreateBackendAuthResponse : public AmplifyBackendResponse {
+class QTAWSAMPLIFYBACKEND_EXPORT CreateBackendAuthResponse : public AmplifyBackendResponse {
     Q_OBJECT
 
 public:

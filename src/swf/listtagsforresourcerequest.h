@@ -27,7 +27,7 @@ namespace SWF {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public SwfRequest {
+class QTAWSSWF_EXPORT ListTagsForResourceRequest : public SwfRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

@@ -21,6 +21,8 @@
 #define QTAWS_CLOUDSEARCHDOMAINRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawscloudsearchdomainglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace CloudSearchDomain {
 
 class CloudSearchDomainResponsePrivate;
 
-class QTAWS_EXPORT CloudSearchDomainResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCLOUDSEARCHDOMAIN_EXPORT CloudSearchDomainResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

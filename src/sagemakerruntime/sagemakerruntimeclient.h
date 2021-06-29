@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawssagemakerruntimeglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -31,7 +33,7 @@ class SageMakerRuntimeClientPrivate;
 class InvokeEndpointRequest;
 class InvokeEndpointResponse;
 
-class QTAWS_EXPORT SageMakerRuntimeClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSAGEMAKERRUNTIME_EXPORT SageMakerRuntimeClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public SecurityHubResponse {
+class QTAWSSECURITYHUB_EXPORT TagResourceResponse : public SecurityHubResponse {
     Q_OBJECT
 
 public:

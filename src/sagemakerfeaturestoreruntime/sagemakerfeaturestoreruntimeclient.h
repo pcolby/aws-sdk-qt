@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawssagemakerfeaturestoreruntimeglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -37,7 +39,7 @@ class GetRecordResponse;
 class PutRecordRequest;
 class PutRecordResponse;
 
-class QTAWS_EXPORT SageMakerFeatureStoreRuntimeClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSAGEMAKERFEATURESTORERUNTIME_EXPORT SageMakerFeatureStoreRuntimeClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -21,6 +21,8 @@
 #define QTAWS_DEVICEFARMRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsdevicefarmglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace DeviceFarm {
 
 class DeviceFarmResponsePrivate;
 
-class QTAWS_EXPORT DeviceFarmResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSDEVICEFARM_EXPORT DeviceFarmResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

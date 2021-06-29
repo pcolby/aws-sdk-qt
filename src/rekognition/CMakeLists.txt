@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSREKOGNITION_LIBRARY)
+
 add_library(QtAwsRekognition
   comparefacesrequest.h
   comparefacesrequest_p.h
@@ -135,6 +137,7 @@ add_library(QtAwsRekognition
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsrekognitionglobal.h
   recognizecelebritiesrequest.h
   recognizecelebritiesrequest_p.h
   recognizecelebritiesresponse.h

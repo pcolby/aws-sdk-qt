@@ -27,7 +27,7 @@ namespace WAFV2 {
 
 class DeleteRegexPatternSetRequestPrivate;
 
-class QTAWS_EXPORT DeleteRegexPatternSetRequest : public Wafv2Request {
+class QTAWSWAFV2_EXPORT DeleteRegexPatternSetRequest : public Wafv2Request {
 
 public:
     DeleteRegexPatternSetRequest(const DeleteRegexPatternSetRequest &other);

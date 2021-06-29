@@ -21,6 +21,8 @@
 #define QTAWS_AMPLIFYBACKENDRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsamplifybackendglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace AmplifyBackend {
 
 class AmplifyBackendResponsePrivate;
 
-class QTAWS_EXPORT AmplifyBackendResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSAMPLIFYBACKEND_EXPORT AmplifyBackendResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

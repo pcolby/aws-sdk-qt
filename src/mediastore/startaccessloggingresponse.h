@@ -28,7 +28,7 @@ namespace MediaStore {
 
 class StartAccessLoggingResponsePrivate;
 
-class QTAWS_EXPORT StartAccessLoggingResponse : public MediaStoreResponse {
+class QTAWSMEDIASTORE_EXPORT StartAccessLoggingResponse : public MediaStoreResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class GetRelationalDatabaseMasterUserPasswordRequestPrivate;
 
-class QTAWS_EXPORT GetRelationalDatabaseMasterUserPasswordRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT GetRelationalDatabaseMasterUserPasswordRequest : public LightsailRequest {
 
 public:
     GetRelationalDatabaseMasterUserPasswordRequest(const GetRelationalDatabaseMasterUserPasswordRequest &other);

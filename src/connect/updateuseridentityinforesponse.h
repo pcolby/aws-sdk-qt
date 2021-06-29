@@ -28,7 +28,7 @@ namespace Connect {
 
 class UpdateUserIdentityInfoResponsePrivate;
 
-class QTAWS_EXPORT UpdateUserIdentityInfoResponse : public ConnectResponse {
+class QTAWSCONNECT_EXPORT UpdateUserIdentityInfoResponse : public ConnectResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class UpdateProjectRequestPrivate;
 
-class QTAWS_EXPORT UpdateProjectRequest : public DeviceFarmRequest {
+class QTAWSDEVICEFARM_EXPORT UpdateProjectRequest : public DeviceFarmRequest {
 
 public:
     UpdateProjectRequest(const UpdateProjectRequest &other);

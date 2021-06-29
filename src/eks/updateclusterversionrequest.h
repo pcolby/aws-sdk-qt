@@ -27,7 +27,7 @@ namespace EKS {
 
 class UpdateClusterVersionRequestPrivate;
 
-class QTAWS_EXPORT UpdateClusterVersionRequest : public EksRequest {
+class QTAWSEKS_EXPORT UpdateClusterVersionRequest : public EksRequest {
 
 public:
     UpdateClusterVersionRequest(const UpdateClusterVersionRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsmigrationhubglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace MigrationHub {
 
 class MigrationHubRequestPrivate;
 
-class QTAWS_EXPORT MigrationHubRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSMIGRATIONHUB_EXPORT MigrationHubRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by MigrationHub.

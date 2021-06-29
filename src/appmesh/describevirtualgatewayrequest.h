@@ -27,7 +27,7 @@ namespace AppMesh {
 
 class DescribeVirtualGatewayRequestPrivate;
 
-class QTAWS_EXPORT DescribeVirtualGatewayRequest : public AppMeshRequest {
+class QTAWSAPPMESH_EXPORT DescribeVirtualGatewayRequest : public AppMeshRequest {
 
 public:
     DescribeVirtualGatewayRequest(const DescribeVirtualGatewayRequest &other);

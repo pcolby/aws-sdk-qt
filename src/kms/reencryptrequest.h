@@ -27,7 +27,7 @@ namespace KMS {
 
 class ReEncryptRequestPrivate;
 
-class QTAWS_EXPORT ReEncryptRequest : public KmsRequest {
+class QTAWSKMS_EXPORT ReEncryptRequest : public KmsRequest {
 
 public:
     ReEncryptRequest(const ReEncryptRequest &other);

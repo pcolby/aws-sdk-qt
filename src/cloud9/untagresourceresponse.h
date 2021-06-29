@@ -28,7 +28,7 @@ namespace Cloud9 {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public Cloud9Response {
+class QTAWSCLOUD9_EXPORT UntagResourceResponse : public Cloud9Response {
     Q_OBJECT
 
 public:

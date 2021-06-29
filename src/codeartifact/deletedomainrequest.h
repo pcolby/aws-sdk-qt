@@ -27,7 +27,7 @@ namespace CodeArtifact {
 
 class DeleteDomainRequestPrivate;
 
-class QTAWS_EXPORT DeleteDomainRequest : public CodeArtifactRequest {
+class QTAWSCODEARTIFACT_EXPORT DeleteDomainRequest : public CodeArtifactRequest {
 
 public:
     DeleteDomainRequest(const DeleteDomainRequest &other);

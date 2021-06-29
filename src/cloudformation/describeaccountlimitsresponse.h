@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class DescribeAccountLimitsResponsePrivate;
 
-class QTAWS_EXPORT DescribeAccountLimitsResponse : public CloudFormationResponse {
+class QTAWSCLOUDFORMATION_EXPORT DescribeAccountLimitsResponse : public CloudFormationResponse {
     Q_OBJECT
 
 public:

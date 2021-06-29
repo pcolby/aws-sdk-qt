@@ -27,7 +27,7 @@ namespace MachineLearning {
 
 class CreateRealtimeEndpointRequestPrivate;
 
-class QTAWS_EXPORT CreateRealtimeEndpointRequest : public MachineLearningRequest {
+class QTAWSMACHINELEARNING_EXPORT CreateRealtimeEndpointRequest : public MachineLearningRequest {
 
 public:
     CreateRealtimeEndpointRequest(const CreateRealtimeEndpointRequest &other);

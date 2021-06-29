@@ -27,7 +27,7 @@ namespace ACMPCA {
 
 class IssueCertificateRequestPrivate;
 
-class QTAWS_EXPORT IssueCertificateRequest : public AcmpcaRequest {
+class QTAWSACMPCA_EXPORT IssueCertificateRequest : public AcmpcaRequest {
 
 public:
     IssueCertificateRequest(const IssueCertificateRequest &other);

@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class StopPipelineExecutionResponsePrivate;
 
-class QTAWS_EXPORT StopPipelineExecutionResponse : public CodePipelineResponse {
+class QTAWSCODEPIPELINE_EXPORT StopPipelineExecutionResponse : public CodePipelineResponse {
     Q_OBJECT
 
 public:

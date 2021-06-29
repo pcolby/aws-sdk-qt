@@ -28,7 +28,7 @@ namespace MediaConvert {
 
 class AssociateCertificateResponsePrivate;
 
-class QTAWS_EXPORT AssociateCertificateResponse : public MediaConvertResponse {
+class QTAWSMEDIACONVERT_EXPORT AssociateCertificateResponse : public MediaConvertResponse {
     Q_OBJECT
 
 public:

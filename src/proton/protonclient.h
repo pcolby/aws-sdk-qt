@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsprotonglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -127,7 +129,7 @@ class UpdateServiceTemplateResponse;
 class UpdateServiceTemplateVersionRequest;
 class UpdateServiceTemplateVersionResponse;
 
-class QTAWS_EXPORT ProtonClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSPROTON_EXPORT ProtonClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

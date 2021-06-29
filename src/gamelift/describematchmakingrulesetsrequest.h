@@ -27,7 +27,7 @@ namespace GameLift {
 
 class DescribeMatchmakingRuleSetsRequestPrivate;
 
-class QTAWS_EXPORT DescribeMatchmakingRuleSetsRequest : public GameLiftRequest {
+class QTAWSGAMELIFT_EXPORT DescribeMatchmakingRuleSetsRequest : public GameLiftRequest {
 
 public:
     DescribeMatchmakingRuleSetsRequest(const DescribeMatchmakingRuleSetsRequest &other);

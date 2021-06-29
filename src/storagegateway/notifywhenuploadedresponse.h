@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class NotifyWhenUploadedResponsePrivate;
 
-class QTAWS_EXPORT NotifyWhenUploadedResponse : public StorageGatewayResponse {
+class QTAWSSTORAGEGATEWAY_EXPORT NotifyWhenUploadedResponse : public StorageGatewayResponse {
     Q_OBJECT
 
 public:

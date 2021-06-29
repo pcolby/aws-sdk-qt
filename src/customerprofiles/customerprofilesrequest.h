@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawscustomerprofilesglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace CustomerProfiles {
 
 class CustomerProfilesRequestPrivate;
 
-class QTAWS_EXPORT CustomerProfilesRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCUSTOMERPROFILES_EXPORT CustomerProfilesRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CustomerProfiles.

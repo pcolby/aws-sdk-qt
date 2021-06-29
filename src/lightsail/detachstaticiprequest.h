@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class DetachStaticIpRequestPrivate;
 
-class QTAWS_EXPORT DetachStaticIpRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT DetachStaticIpRequest : public LightsailRequest {
 
 public:
     DetachStaticIpRequest(const DetachStaticIpRequest &other);

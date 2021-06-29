@@ -27,7 +27,7 @@ namespace CognitoIdentityProvider {
 
 class ConfirmForgotPasswordRequestPrivate;
 
-class QTAWS_EXPORT ConfirmForgotPasswordRequest : public CognitoIdentityProviderRequest {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT ConfirmForgotPasswordRequest : public CognitoIdentityProviderRequest {
 
 public:
     ConfirmForgotPasswordRequest(const ConfirmForgotPasswordRequest &other);

@@ -27,7 +27,7 @@ namespace Chime {
 
 class UpdateAccountRequestPrivate;
 
-class QTAWS_EXPORT UpdateAccountRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT UpdateAccountRequest : public ChimeRequest {
 
 public:
     UpdateAccountRequest(const UpdateAccountRequest &other);

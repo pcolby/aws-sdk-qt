@@ -27,7 +27,7 @@ namespace LexModelsV2 {
 
 class ListBotLocalesRequestPrivate;
 
-class QTAWS_EXPORT ListBotLocalesRequest : public LexModelsV2Request {
+class QTAWSLEXMODELSV2_EXPORT ListBotLocalesRequest : public LexModelsV2Request {
 
 public:
     ListBotLocalesRequest(const ListBotLocalesRequest &other);

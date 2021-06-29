@@ -27,7 +27,7 @@ namespace IoT {
 
 class GetBehaviorModelTrainingSummariesRequestPrivate;
 
-class QTAWS_EXPORT GetBehaviorModelTrainingSummariesRequest : public IoTRequest {
+class QTAWSIOT_EXPORT GetBehaviorModelTrainingSummariesRequest : public IoTRequest {
 
 public:
     GetBehaviorModelTrainingSummariesRequest(const GetBehaviorModelTrainingSummariesRequest &other);

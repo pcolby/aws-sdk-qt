@@ -27,7 +27,7 @@ namespace CloudFormation {
 
 class EstimateTemplateCostRequestPrivate;
 
-class QTAWS_EXPORT EstimateTemplateCostRequest : public CloudFormationRequest {
+class QTAWSCLOUDFORMATION_EXPORT EstimateTemplateCostRequest : public CloudFormationRequest {
 
 public:
     EstimateTemplateCostRequest(const EstimateTemplateCostRequest &other);

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSDATAPIPELINE_LIBRARY)
+
 add_library(QtAwsDataPipeline
   activatepipelinerequest.h
   activatepipelinerequest_p.h
@@ -53,6 +55,7 @@ add_library(QtAwsDataPipeline
   putpipelinedefinitionrequest_p.h
   putpipelinedefinitionresponse.h
   putpipelinedefinitionresponse_p.h
+  qtawsdatapipelineglobal.h
   queryobjectsrequest.h
   queryobjectsrequest_p.h
   queryobjectsresponse.h

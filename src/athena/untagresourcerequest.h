@@ -27,7 +27,7 @@ namespace Athena {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public AthenaRequest {
+class QTAWSATHENA_EXPORT UntagResourceRequest : public AthenaRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

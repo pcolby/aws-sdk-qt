@@ -27,7 +27,7 @@ namespace Comprehend {
 
 class BatchDetectDominantLanguageRequestPrivate;
 
-class QTAWS_EXPORT BatchDetectDominantLanguageRequest : public ComprehendRequest {
+class QTAWSCOMPREHEND_EXPORT BatchDetectDominantLanguageRequest : public ComprehendRequest {
 
 public:
     BatchDetectDominantLanguageRequest(const BatchDetectDominantLanguageRequest &other);

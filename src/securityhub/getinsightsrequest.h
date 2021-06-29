@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class GetInsightsRequestPrivate;
 
-class QTAWS_EXPORT GetInsightsRequest : public SecurityHubRequest {
+class QTAWSSECURITYHUB_EXPORT GetInsightsRequest : public SecurityHubRequest {
 
 public:
     GetInsightsRequest(const GetInsightsRequest &other);

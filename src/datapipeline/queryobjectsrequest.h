@@ -27,7 +27,7 @@ namespace DataPipeline {
 
 class QueryObjectsRequestPrivate;
 
-class QTAWS_EXPORT QueryObjectsRequest : public DataPipelineRequest {
+class QTAWSDATAPIPELINE_EXPORT QueryObjectsRequest : public DataPipelineRequest {
 
 public:
     QueryObjectsRequest(const QueryObjectsRequest &other);

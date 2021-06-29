@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class DeleteDeviceFleetRequestPrivate;
 
-class QTAWS_EXPORT DeleteDeviceFleetRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT DeleteDeviceFleetRequest : public SageMakerRequest {
 
 public:
     DeleteDeviceFleetRequest(const DeleteDeviceFleetRequest &other);

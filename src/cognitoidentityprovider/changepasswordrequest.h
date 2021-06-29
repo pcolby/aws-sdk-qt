@@ -27,7 +27,7 @@ namespace CognitoIdentityProvider {
 
 class ChangePasswordRequestPrivate;
 
-class QTAWS_EXPORT ChangePasswordRequest : public CognitoIdentityProviderRequest {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT ChangePasswordRequest : public CognitoIdentityProviderRequest {
 
 public:
     ChangePasswordRequest(const ChangePasswordRequest &other);

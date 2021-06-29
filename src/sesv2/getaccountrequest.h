@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class GetAccountRequestPrivate;
 
-class QTAWS_EXPORT GetAccountRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT GetAccountRequest : public Sesv2Request {
 
 public:
     GetAccountRequest(const GetAccountRequest &other);

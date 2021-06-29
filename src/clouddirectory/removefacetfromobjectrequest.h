@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class RemoveFacetFromObjectRequestPrivate;
 
-class QTAWS_EXPORT RemoveFacetFromObjectRequest : public CloudDirectoryRequest {
+class QTAWSCLOUDDIRECTORY_EXPORT RemoveFacetFromObjectRequest : public CloudDirectoryRequest {
 
 public:
     RemoveFacetFromObjectRequest(const RemoveFacetFromObjectRequest &other);

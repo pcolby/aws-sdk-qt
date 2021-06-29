@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsworkmailmessageflowglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -33,7 +35,7 @@ class GetRawMessageContentResponse;
 class PutRawMessageContentRequest;
 class PutRawMessageContentResponse;
 
-class QTAWS_EXPORT WorkMailMessageFlowClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSWORKMAILMESSAGEFLOW_EXPORT WorkMailMessageFlowClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

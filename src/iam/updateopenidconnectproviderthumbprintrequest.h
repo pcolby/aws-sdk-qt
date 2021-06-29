@@ -27,7 +27,7 @@ namespace IAM {
 
 class UpdateOpenIDConnectProviderThumbprintRequestPrivate;
 
-class QTAWS_EXPORT UpdateOpenIDConnectProviderThumbprintRequest : public IamRequest {
+class QTAWSIAM_EXPORT UpdateOpenIDConnectProviderThumbprintRequest : public IamRequest {
 
 public:
     UpdateOpenIDConnectProviderThumbprintRequest(const UpdateOpenIDConnectProviderThumbprintRequest &other);

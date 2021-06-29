@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 
 class CreatePresetResponsePrivate;
 
-class QTAWS_EXPORT CreatePresetResponse : public ElasticTranscoderResponse {
+class QTAWSELASTICTRANSCODER_EXPORT CreatePresetResponse : public ElasticTranscoderResponse {
     Q_OBJECT
 
 public:

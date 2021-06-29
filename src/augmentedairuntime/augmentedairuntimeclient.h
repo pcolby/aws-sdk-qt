@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsaugmentedairuntimeglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -39,7 +41,7 @@ class StartHumanLoopResponse;
 class StopHumanLoopRequest;
 class StopHumanLoopResponse;
 
-class QTAWS_EXPORT AugmentedAIRuntimeClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSAUGMENTEDAIRUNTIME_EXPORT AugmentedAIRuntimeClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

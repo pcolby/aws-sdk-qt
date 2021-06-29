@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSRESOURCEGROUPSTAGGINGAPI_LIBRARY)
+
 add_library(QtAwsResourceGroupsTaggingAPI
   describereportcreationrequest.h
   describereportcreationrequest_p.h
@@ -19,6 +21,7 @@ add_library(QtAwsResourceGroupsTaggingAPI
   gettagvaluesrequest_p.h
   gettagvaluesresponse.h
   gettagvaluesresponse_p.h
+  qtawsresourcegroupstaggingapiglobal.h
   resourcegroupstaggingapiclient.h
   resourcegroupstaggingapiclient_p.h
   resourcegroupstaggingapirequest.h

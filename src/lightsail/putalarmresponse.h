@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class PutAlarmResponsePrivate;
 
-class QTAWS_EXPORT PutAlarmResponse : public LightsailResponse {
+class QTAWSLIGHTSAIL_EXPORT PutAlarmResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

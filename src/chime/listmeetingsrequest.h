@@ -27,7 +27,7 @@ namespace Chime {
 
 class ListMeetingsRequestPrivate;
 
-class QTAWS_EXPORT ListMeetingsRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT ListMeetingsRequest : public ChimeRequest {
 
 public:
     ListMeetingsRequest(const ListMeetingsRequest &other);

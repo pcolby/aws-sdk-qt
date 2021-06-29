@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsgreengrassv2global.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -75,7 +77,7 @@ class TagResourceResponse;
 class UntagResourceRequest;
 class UntagResourceResponse;
 
-class QTAWS_EXPORT GreengrassV2Client : public QtAws::Core::AwsAbstractClient {
+class QTAWSGREENGRASSV2_EXPORT GreengrassV2Client : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

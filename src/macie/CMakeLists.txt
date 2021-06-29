@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSMACIE_LIBRARY)
+
 add_library(QtAwsMacie
   associatememberaccountrequest.h
   associatememberaccountrequest_p.h
@@ -29,6 +31,7 @@ add_library(QtAwsMacie
   macierequest_p.h
   macieresponse.h
   macieresponse_p.h
+  qtawsmacieglobal.h
   updates3resourcesrequest.h
   updates3resourcesrequest_p.h
   updates3resourcesresponse.h

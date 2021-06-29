@@ -21,6 +21,8 @@
 #define QTAWS_SYNTHETICSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawssyntheticsglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Synthetics {
 
 class SyntheticsResponsePrivate;
 
-class QTAWS_EXPORT SyntheticsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSYNTHETICS_EXPORT SyntheticsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

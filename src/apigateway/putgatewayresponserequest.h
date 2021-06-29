@@ -27,7 +27,7 @@ namespace APIGateway {
 
 class PutGatewayResponseRequestPrivate;
 
-class QTAWS_EXPORT PutGatewayResponseRequest : public APIGatewayRequest {
+class QTAWSAPIGATEWAY_EXPORT PutGatewayResponseRequest : public APIGatewayRequest {
 
 public:
     PutGatewayResponseRequest(const PutGatewayResponseRequest &other);

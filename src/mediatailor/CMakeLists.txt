@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSMEDIATAILOR_LIBRARY)
+
 add_library(QtAwsMediaTailor
   createchannelrequest.h
   createchannelrequest_p.h
@@ -101,6 +103,7 @@ add_library(QtAwsMediaTailor
   putplaybackconfigurationrequest_p.h
   putplaybackconfigurationresponse.h
   putplaybackconfigurationresponse_p.h
+  qtawsmediatailorglobal.h
   startchannelrequest.h
   startchannelrequest_p.h
   startchannelresponse.h

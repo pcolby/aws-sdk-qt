@@ -28,7 +28,7 @@ namespace AuditManager {
 
 class DeregisterOrganizationAdminAccountResponsePrivate;
 
-class QTAWS_EXPORT DeregisterOrganizationAdminAccountResponse : public AuditManagerResponse {
+class QTAWSAUDITMANAGER_EXPORT DeregisterOrganizationAdminAccountResponse : public AuditManagerResponse {
     Q_OBJECT
 
 public:

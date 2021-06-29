@@ -27,7 +27,7 @@ namespace DocDB {
 
 class RemoveSourceIdentifierFromSubscriptionRequestPrivate;
 
-class QTAWS_EXPORT RemoveSourceIdentifierFromSubscriptionRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT RemoveSourceIdentifierFromSubscriptionRequest : public DocDBRequest {
 
 public:
     RemoveSourceIdentifierFromSubscriptionRequest(const RemoveSourceIdentifierFromSubscriptionRequest &other);

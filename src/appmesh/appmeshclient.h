@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsappmeshglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -105,7 +107,7 @@ class UpdateVirtualRouterResponse;
 class UpdateVirtualServiceRequest;
 class UpdateVirtualServiceResponse;
 
-class QTAWS_EXPORT AppMeshClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSAPPMESH_EXPORT AppMeshClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

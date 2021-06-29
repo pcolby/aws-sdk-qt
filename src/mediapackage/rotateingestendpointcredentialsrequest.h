@@ -27,7 +27,7 @@ namespace MediaPackage {
 
 class RotateIngestEndpointCredentialsRequestPrivate;
 
-class QTAWS_EXPORT RotateIngestEndpointCredentialsRequest : public MediaPackageRequest {
+class QTAWSMEDIAPACKAGE_EXPORT RotateIngestEndpointCredentialsRequest : public MediaPackageRequest {
 
 public:
     RotateIngestEndpointCredentialsRequest(const RotateIngestEndpointCredentialsRequest &other);

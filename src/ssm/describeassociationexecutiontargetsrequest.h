@@ -27,7 +27,7 @@ namespace SSM {
 
 class DescribeAssociationExecutionTargetsRequestPrivate;
 
-class QTAWS_EXPORT DescribeAssociationExecutionTargetsRequest : public SsmRequest {
+class QTAWSSSM_EXPORT DescribeAssociationExecutionTargetsRequest : public SsmRequest {
 
 public:
     DescribeAssociationExecutionTargetsRequest(const DescribeAssociationExecutionTargetsRequest &other);

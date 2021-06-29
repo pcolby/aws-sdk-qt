@@ -27,7 +27,7 @@ namespace ElasticBeanstalk {
 
 class RestartAppServerRequestPrivate;
 
-class QTAWS_EXPORT RestartAppServerRequest : public ElasticBeanstalkRequest {
+class QTAWSELASTICBEANSTALK_EXPORT RestartAppServerRequest : public ElasticBeanstalkRequest {
 
 public:
     RestartAppServerRequest(const RestartAppServerRequest &other);

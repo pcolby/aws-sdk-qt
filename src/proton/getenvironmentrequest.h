@@ -27,7 +27,7 @@ namespace Proton {
 
 class GetEnvironmentRequestPrivate;
 
-class QTAWS_EXPORT GetEnvironmentRequest : public ProtonRequest {
+class QTAWSPROTON_EXPORT GetEnvironmentRequest : public ProtonRequest {
 
 public:
     GetEnvironmentRequest(const GetEnvironmentRequest &other);

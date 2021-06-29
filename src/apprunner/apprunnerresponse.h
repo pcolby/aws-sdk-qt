@@ -21,6 +21,8 @@
 #define QTAWS_APPRUNNERRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsapprunnerglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace AppRunner {
 
 class AppRunnerResponsePrivate;
 
-class QTAWS_EXPORT AppRunnerResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSAPPRUNNER_EXPORT AppRunnerResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

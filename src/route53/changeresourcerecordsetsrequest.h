@@ -27,7 +27,7 @@ namespace Route53 {
 
 class ChangeResourceRecordSetsRequestPrivate;
 
-class QTAWS_EXPORT ChangeResourceRecordSetsRequest : public Route53Request {
+class QTAWSROUTE53_EXPORT ChangeResourceRecordSetsRequest : public Route53Request {
 
 public:
     ChangeResourceRecordSetsRequest(const ChangeResourceRecordSetsRequest &other);

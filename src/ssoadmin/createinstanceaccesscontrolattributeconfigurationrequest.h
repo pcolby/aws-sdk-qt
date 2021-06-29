@@ -27,7 +27,7 @@ namespace SSOAdmin {
 
 class CreateInstanceAccessControlAttributeConfigurationRequestPrivate;
 
-class QTAWS_EXPORT CreateInstanceAccessControlAttributeConfigurationRequest : public SSOAdminRequest {
+class QTAWSSSOADMIN_EXPORT CreateInstanceAccessControlAttributeConfigurationRequest : public SSOAdminRequest {
 
 public:
     CreateInstanceAccessControlAttributeConfigurationRequest(const CreateInstanceAccessControlAttributeConfigurationRequest &other);

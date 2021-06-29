@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class CreateEmailTemplateRequestPrivate;
 
-class QTAWS_EXPORT CreateEmailTemplateRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT CreateEmailTemplateRequest : public PinpointRequest {
 
 public:
     CreateEmailTemplateRequest(const CreateEmailTemplateRequest &other);

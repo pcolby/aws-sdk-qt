@@ -27,7 +27,7 @@ namespace CloudSearch {
 
 class DescribeAvailabilityOptionsRequestPrivate;
 
-class QTAWS_EXPORT DescribeAvailabilityOptionsRequest : public CloudSearchRequest {
+class QTAWSCLOUDSEARCH_EXPORT DescribeAvailabilityOptionsRequest : public CloudSearchRequest {
 
 public:
     DescribeAvailabilityOptionsRequest(const DescribeAvailabilityOptionsRequest &other);

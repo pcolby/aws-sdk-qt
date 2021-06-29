@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class CreateContainerServiceRegistryLoginResponsePrivate;
 
-class QTAWS_EXPORT CreateContainerServiceRegistryLoginResponse : public LightsailResponse {
+class QTAWSLIGHTSAIL_EXPORT CreateContainerServiceRegistryLoginResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace SFN {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public SfnResponse {
+class QTAWSSFN_EXPORT UntagResourceResponse : public SfnResponse {
     Q_OBJECT
 
 public:

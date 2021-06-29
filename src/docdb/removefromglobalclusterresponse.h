@@ -28,7 +28,7 @@ namespace DocDB {
 
 class RemoveFromGlobalClusterResponsePrivate;
 
-class QTAWS_EXPORT RemoveFromGlobalClusterResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT RemoveFromGlobalClusterResponse : public DocDBResponse {
     Q_OBJECT
 
 public:

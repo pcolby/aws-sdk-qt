@@ -27,7 +27,7 @@ namespace Organizations {
 
 class CreateAccountRequestPrivate;
 
-class QTAWS_EXPORT CreateAccountRequest : public OrganizationsRequest {
+class QTAWSORGANIZATIONS_EXPORT CreateAccountRequest : public OrganizationsRequest {
 
 public:
     CreateAccountRequest(const CreateAccountRequest &other);

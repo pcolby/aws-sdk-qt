@@ -27,7 +27,7 @@ namespace Glue {
 
 class UpdateMLTransformRequestPrivate;
 
-class QTAWS_EXPORT UpdateMLTransformRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT UpdateMLTransformRequest : public GlueRequest {
 
 public:
     UpdateMLTransformRequest(const UpdateMLTransformRequest &other);

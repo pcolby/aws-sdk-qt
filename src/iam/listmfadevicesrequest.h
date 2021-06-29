@@ -27,7 +27,7 @@ namespace IAM {
 
 class ListMFADevicesRequestPrivate;
 
-class QTAWS_EXPORT ListMFADevicesRequest : public IamRequest {
+class QTAWSIAM_EXPORT ListMFADevicesRequest : public IamRequest {
 
 public:
     ListMFADevicesRequest(const ListMFADevicesRequest &other);

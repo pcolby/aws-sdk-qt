@@ -27,7 +27,7 @@ namespace DataPipeline {
 
 class AddTagsRequestPrivate;
 
-class QTAWS_EXPORT AddTagsRequest : public DataPipelineRequest {
+class QTAWSDATAPIPELINE_EXPORT AddTagsRequest : public DataPipelineRequest {
 
 public:
     AddTagsRequest(const AddTagsRequest &other);

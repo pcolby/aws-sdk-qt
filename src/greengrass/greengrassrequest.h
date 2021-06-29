@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsgreengrassglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Greengrass {
 
 class GreengrassRequestPrivate;
 
-class QTAWS_EXPORT GreengrassRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSGREENGRASS_EXPORT GreengrassRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Greengrass.

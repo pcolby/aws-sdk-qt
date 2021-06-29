@@ -28,7 +28,7 @@ namespace LookoutMetrics {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public LookoutMetricsResponse {
+class QTAWSLOOKOUTMETRICS_EXPORT UntagResourceResponse : public LookoutMetricsResponse {
     Q_OBJECT
 
 public:

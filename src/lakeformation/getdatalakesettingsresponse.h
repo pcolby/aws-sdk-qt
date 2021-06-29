@@ -28,7 +28,7 @@ namespace LakeFormation {
 
 class GetDataLakeSettingsResponsePrivate;
 
-class QTAWS_EXPORT GetDataLakeSettingsResponse : public LakeFormationResponse {
+class QTAWSLAKEFORMATION_EXPORT GetDataLakeSettingsResponse : public LakeFormationResponse {
     Q_OBJECT
 
 public:

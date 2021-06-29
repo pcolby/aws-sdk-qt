@@ -27,7 +27,7 @@ namespace GameLift {
 
 class DeleteScalingPolicyRequestPrivate;
 
-class QTAWS_EXPORT DeleteScalingPolicyRequest : public GameLiftRequest {
+class QTAWSGAMELIFT_EXPORT DeleteScalingPolicyRequest : public GameLiftRequest {
 
 public:
     DeleteScalingPolicyRequest(const DeleteScalingPolicyRequest &other);

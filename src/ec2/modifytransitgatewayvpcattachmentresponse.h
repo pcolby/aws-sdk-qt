@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ModifyTransitGatewayVpcAttachmentResponsePrivate;
 
-class QTAWS_EXPORT ModifyTransitGatewayVpcAttachmentResponse : public Ec2Response {
+class QTAWSEC2_EXPORT ModifyTransitGatewayVpcAttachmentResponse : public Ec2Response {
     Q_OBJECT
 
 public:

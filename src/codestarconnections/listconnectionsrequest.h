@@ -27,7 +27,7 @@ namespace CodeStarconnections {
 
 class ListConnectionsRequestPrivate;
 
-class QTAWS_EXPORT ListConnectionsRequest : public CodeStarconnectionsRequest {
+class QTAWSCODESTARCONNECTIONS_EXPORT ListConnectionsRequest : public CodeStarconnectionsRequest {
 
 public:
     ListConnectionsRequest(const ListConnectionsRequest &other);

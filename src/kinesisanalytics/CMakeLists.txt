@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSKINESISANALYTICS_LIBRARY)
+
 add_library(QtAwsKinesisAnalytics
   addapplicationcloudwatchloggingoptionrequest.h
   addapplicationcloudwatchloggingoptionrequest_p.h
@@ -65,6 +67,7 @@ add_library(QtAwsKinesisAnalytics
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawskinesisanalyticsglobal.h
   startapplicationrequest.h
   startapplicationrequest_p.h
   startapplicationresponse.h

@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class GetCachePolicyConfigResponsePrivate;
 
-class QTAWS_EXPORT GetCachePolicyConfigResponse : public CloudFrontResponse {
+class QTAWSCLOUDFRONT_EXPORT GetCachePolicyConfigResponse : public CloudFrontResponse {
     Q_OBJECT
 
 public:

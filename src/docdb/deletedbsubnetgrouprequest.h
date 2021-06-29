@@ -27,7 +27,7 @@ namespace DocDB {
 
 class DeleteDBSubnetGroupRequestPrivate;
 
-class QTAWS_EXPORT DeleteDBSubnetGroupRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT DeleteDBSubnetGroupRequest : public DocDBRequest {
 
 public:
     DeleteDBSubnetGroupRequest(const DeleteDBSubnetGroupRequest &other);

@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class ListCertificatesRequestPrivate;
 
-class QTAWS_EXPORT ListCertificatesRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT ListCertificatesRequest : public DirectoryServiceRequest {
 
 public:
     ListCertificatesRequest(const ListCertificatesRequest &other);

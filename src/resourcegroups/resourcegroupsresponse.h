@@ -21,6 +21,8 @@
 #define QTAWS_RESOURCEGROUPSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsresourcegroupsglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace ResourceGroups {
 
 class ResourceGroupsResponsePrivate;
 
-class QTAWS_EXPORT ResourceGroupsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSRESOURCEGROUPS_EXPORT ResourceGroupsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

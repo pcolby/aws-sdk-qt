@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSERVICEQUOTAS_LIBRARY)
+
 add_library(QtAwsServiceQuotas
   associateservicequotatemplaterequest.h
   associateservicequotatemplaterequest_p.h
@@ -63,6 +65,7 @@ add_library(QtAwsServiceQuotas
   putservicequotaincreaserequestintotemplaterequest_p.h
   putservicequotaincreaserequestintotemplateresponse.h
   putservicequotaincreaserequestintotemplateresponse_p.h
+  qtawsservicequotasglobal.h
   requestservicequotaincreaserequest.h
   requestservicequotaincreaserequest_p.h
   requestservicequotaincreaseresponse.h

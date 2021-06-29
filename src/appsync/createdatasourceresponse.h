@@ -28,7 +28,7 @@ namespace AppSync {
 
 class CreateDataSourceResponsePrivate;
 
-class QTAWS_EXPORT CreateDataSourceResponse : public AppSyncResponse {
+class QTAWSAPPSYNC_EXPORT CreateDataSourceResponse : public AppSyncResponse {
     Q_OBJECT
 
 public:

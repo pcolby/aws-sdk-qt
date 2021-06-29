@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class PutLifecycleHookRequestPrivate;
 
-class QTAWS_EXPORT PutLifecycleHookRequest : public AutoScalingRequest {
+class QTAWSAUTOSCALING_EXPORT PutLifecycleHookRequest : public AutoScalingRequest {
 
 public:
     PutLifecycleHookRequest(const PutLifecycleHookRequest &other);

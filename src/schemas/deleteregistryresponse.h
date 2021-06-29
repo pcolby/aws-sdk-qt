@@ -28,7 +28,7 @@ namespace Schemas {
 
 class DeleteRegistryResponsePrivate;
 
-class QTAWS_EXPORT DeleteRegistryResponse : public SchemasResponse {
+class QTAWSSCHEMAS_EXPORT DeleteRegistryResponse : public SchemasResponse {
     Q_OBJECT
 
 public:

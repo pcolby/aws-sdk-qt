@@ -28,7 +28,7 @@ namespace ManagedBlockchain {
 
 class ListNetworksResponsePrivate;
 
-class QTAWS_EXPORT ListNetworksResponse : public ManagedBlockchainResponse {
+class QTAWSMANAGEDBLOCKCHAIN_EXPORT ListNetworksResponse : public ManagedBlockchainResponse {
     Q_OBJECT
 
 public:

@@ -21,6 +21,8 @@
 #define QTAWS_COGNITOSYNCRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawscognitosyncglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace CognitoSync {
 
 class CognitoSyncResponsePrivate;
 
-class QTAWS_EXPORT CognitoSyncResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCOGNITOSYNC_EXPORT CognitoSyncResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

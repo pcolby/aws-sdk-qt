@@ -27,7 +27,7 @@ namespace LexModelsV2 {
 
 class DescribeBotVersionRequestPrivate;
 
-class QTAWS_EXPORT DescribeBotVersionRequest : public LexModelsV2Request {
+class QTAWSLEXMODELSV2_EXPORT DescribeBotVersionRequest : public LexModelsV2Request {
 
 public:
     DescribeBotVersionRequest(const DescribeBotVersionRequest &other);

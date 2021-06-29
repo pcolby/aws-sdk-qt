@@ -27,7 +27,7 @@ namespace KinesisVideo {
 
 class TagStreamRequestPrivate;
 
-class QTAWS_EXPORT TagStreamRequest : public KinesisVideoRequest {
+class QTAWSKINESISVIDEO_EXPORT TagStreamRequest : public KinesisVideoRequest {
 
 public:
     TagStreamRequest(const TagStreamRequest &other);

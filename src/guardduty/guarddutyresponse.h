@@ -21,6 +21,8 @@
 #define QTAWS_GUARDDUTYRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsguarddutyglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace GuardDuty {
 
 class GuardDutyResponsePrivate;
 
-class QTAWS_EXPORT GuardDutyResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSGUARDDUTY_EXPORT GuardDutyResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace Synthetics {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public SyntheticsRequest {
+class QTAWSSYNTHETICS_EXPORT TagResourceRequest : public SyntheticsRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

@@ -28,7 +28,7 @@ namespace RoboMaker {
 
 class DeleteWorldTemplateResponsePrivate;
 
-class QTAWS_EXPORT DeleteWorldTemplateResponse : public RoboMakerResponse {
+class QTAWSROBOMAKER_EXPORT DeleteWorldTemplateResponse : public RoboMakerResponse {
     Q_OBJECT
 
 public:

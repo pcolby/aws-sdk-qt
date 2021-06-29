@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class DeleteAdmChannelResponsePrivate;
 
-class QTAWS_EXPORT DeleteAdmChannelResponse : public PinpointResponse {
+class QTAWSPINPOINT_EXPORT DeleteAdmChannelResponse : public PinpointResponse {
     Q_OBJECT
 
 public:

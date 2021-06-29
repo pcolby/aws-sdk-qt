@@ -27,7 +27,7 @@ namespace Kinesis {
 
 class DisableEnhancedMonitoringRequestPrivate;
 
-class QTAWS_EXPORT DisableEnhancedMonitoringRequest : public KinesisRequest {
+class QTAWSKINESIS_EXPORT DisableEnhancedMonitoringRequest : public KinesisRequest {
 
 public:
     DisableEnhancedMonitoringRequest(const DisableEnhancedMonitoringRequest &other);

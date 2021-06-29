@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class ListGroupMembersRequestPrivate;
 
-class QTAWS_EXPORT ListGroupMembersRequest : public WorkMailRequest {
+class QTAWSWORKMAIL_EXPORT ListGroupMembersRequest : public WorkMailRequest {
 
 public:
     ListGroupMembersRequest(const ListGroupMembersRequest &other);

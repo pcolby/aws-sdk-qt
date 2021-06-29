@@ -28,7 +28,7 @@ namespace Glue {
 
 class StopWorkflowRunResponsePrivate;
 
-class QTAWS_EXPORT StopWorkflowRunResponse : public GlueResponse {
+class QTAWSGLUE_EXPORT StopWorkflowRunResponse : public GlueResponse {
     Q_OBJECT
 
 public:

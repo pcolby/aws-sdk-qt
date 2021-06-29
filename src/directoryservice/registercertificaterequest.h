@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class RegisterCertificateRequestPrivate;
 
-class QTAWS_EXPORT RegisterCertificateRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT RegisterCertificateRequest : public DirectoryServiceRequest {
 
 public:
     RegisterCertificateRequest(const RegisterCertificateRequest &other);

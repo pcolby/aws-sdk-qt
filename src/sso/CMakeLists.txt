@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSSO_LIBRARY)
+
 add_library(QtAwsSso
   getrolecredentialsrequest.h
   getrolecredentialsrequest_p.h
@@ -15,6 +17,7 @@ add_library(QtAwsSso
   logoutrequest_p.h
   logoutresponse.h
   logoutresponse_p.h
+  qtawsssoglobal.h
   ssoclient.h
   ssoclient_p.h
   ssorequest.h

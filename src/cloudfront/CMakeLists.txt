@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCLOUDFRONT_LIBRARY)
+
 add_library(QtAwsCloudFront
   cloudfrontclient.h
   cloudfrontclient_p.h
@@ -281,6 +283,7 @@ add_library(QtAwsCloudFront
   publishfunctionrequest_p.h
   publishfunctionresponse.h
   publishfunctionresponse_p.h
+  qtawscloudfrontglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

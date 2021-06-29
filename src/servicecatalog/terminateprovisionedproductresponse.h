@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class TerminateProvisionedProductResponsePrivate;
 
-class QTAWS_EXPORT TerminateProvisionedProductResponse : public ServiceCatalogResponse {
+class QTAWSSERVICECATALOG_EXPORT TerminateProvisionedProductResponse : public ServiceCatalogResponse {
     Q_OBJECT
 
 public:

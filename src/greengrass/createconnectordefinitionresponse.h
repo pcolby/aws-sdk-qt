@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class CreateConnectorDefinitionResponsePrivate;
 
-class QTAWS_EXPORT CreateConnectorDefinitionResponse : public GreengrassResponse {
+class QTAWSGREENGRASS_EXPORT CreateConnectorDefinitionResponse : public GreengrassResponse {
     Q_OBJECT
 
 public:

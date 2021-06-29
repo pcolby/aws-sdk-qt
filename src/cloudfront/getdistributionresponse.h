@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class GetDistributionResponsePrivate;
 
-class QTAWS_EXPORT GetDistributionResponse : public CloudFrontResponse {
+class QTAWSCLOUDFRONT_EXPORT GetDistributionResponse : public CloudFrontResponse {
     Q_OBJECT
 
 public:

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawslambdaglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Lambda {
 
 class LambdaRequestPrivate;
 
-class QTAWS_EXPORT LambdaRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSLAMBDA_EXPORT LambdaRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Lambda.

@@ -28,7 +28,7 @@ namespace DynamoDBStreams {
 
 class GetShardIteratorResponsePrivate;
 
-class QTAWS_EXPORT GetShardIteratorResponse : public DynamoDBStreamsResponse {
+class QTAWSDYNAMODBSTREAMS_EXPORT GetShardIteratorResponse : public DynamoDBStreamsResponse {
     Q_OBJECT
 
 public:

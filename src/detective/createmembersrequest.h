@@ -27,7 +27,7 @@ namespace Detective {
 
 class CreateMembersRequestPrivate;
 
-class QTAWS_EXPORT CreateMembersRequest : public DetectiveRequest {
+class QTAWSDETECTIVE_EXPORT CreateMembersRequest : public DetectiveRequest {
 
 public:
     CreateMembersRequest(const CreateMembersRequest &other);

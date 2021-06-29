@@ -27,7 +27,7 @@ namespace MigrationHub {
 
 class DisassociateDiscoveredResourceRequestPrivate;
 
-class QTAWS_EXPORT DisassociateDiscoveredResourceRequest : public MigrationHubRequest {
+class QTAWSMIGRATIONHUB_EXPORT DisassociateDiscoveredResourceRequest : public MigrationHubRequest {
 
 public:
     DisassociateDiscoveredResourceRequest(const DisassociateDiscoveredResourceRequest &other);

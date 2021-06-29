@@ -27,7 +27,7 @@ namespace Mobile {
 
 class DeleteProjectRequestPrivate;
 
-class QTAWS_EXPORT DeleteProjectRequest : public MobileRequest {
+class QTAWSMOBILE_EXPORT DeleteProjectRequest : public MobileRequest {
 
 public:
     DeleteProjectRequest(const DeleteProjectRequest &other);

@@ -28,7 +28,7 @@ namespace DataPipeline {
 
 class SetStatusResponsePrivate;
 
-class QTAWS_EXPORT SetStatusResponse : public DataPipelineResponse {
+class QTAWSDATAPIPELINE_EXPORT SetStatusResponse : public DataPipelineResponse {
     Q_OBJECT
 
 public:

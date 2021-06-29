@@ -21,6 +21,8 @@
 #define QTAWS_ALEXAFORBUSINESSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsalexaforbusinessglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace AlexaForBusiness {
 
 class AlexaForBusinessResponsePrivate;
 
-class QTAWS_EXPORT AlexaForBusinessResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSALEXAFORBUSINESS_EXPORT AlexaForBusinessResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

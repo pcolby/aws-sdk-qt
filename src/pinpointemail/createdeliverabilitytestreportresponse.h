@@ -28,7 +28,7 @@ namespace PinpointEmail {
 
 class CreateDeliverabilityTestReportResponsePrivate;
 
-class QTAWS_EXPORT CreateDeliverabilityTestReportResponse : public PinpointEmailResponse {
+class QTAWSPINPOINTEMAIL_EXPORT CreateDeliverabilityTestReportResponse : public PinpointEmailResponse {
     Q_OBJECT
 
 public:

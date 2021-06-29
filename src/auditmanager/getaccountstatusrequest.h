@@ -27,7 +27,7 @@ namespace AuditManager {
 
 class GetAccountStatusRequestPrivate;
 
-class QTAWS_EXPORT GetAccountStatusRequest : public AuditManagerRequest {
+class QTAWSAUDITMANAGER_EXPORT GetAccountStatusRequest : public AuditManagerRequest {
 
 public:
     GetAccountStatusRequest(const GetAccountStatusRequest &other);

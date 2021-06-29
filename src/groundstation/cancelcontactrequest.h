@@ -27,7 +27,7 @@ namespace GroundStation {
 
 class CancelContactRequestPrivate;
 
-class QTAWS_EXPORT CancelContactRequest : public GroundStationRequest {
+class QTAWSGROUNDSTATION_EXPORT CancelContactRequest : public GroundStationRequest {
 
 public:
     CancelContactRequest(const CancelContactRequest &other);

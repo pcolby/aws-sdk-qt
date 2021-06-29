@@ -28,7 +28,7 @@ namespace AppRunner {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public AppRunnerResponse {
+class QTAWSAPPRUNNER_EXPORT UntagResourceResponse : public AppRunnerResponse {
     Q_OBJECT
 
 public:

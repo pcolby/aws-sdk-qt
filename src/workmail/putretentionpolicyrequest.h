@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class PutRetentionPolicyRequestPrivate;
 
-class QTAWS_EXPORT PutRetentionPolicyRequest : public WorkMailRequest {
+class QTAWSWORKMAIL_EXPORT PutRetentionPolicyRequest : public WorkMailRequest {
 
 public:
     PutRetentionPolicyRequest(const PutRetentionPolicyRequest &other);

@@ -27,7 +27,7 @@ namespace CodePipeline {
 
 class PutJobSuccessResultRequestPrivate;
 
-class QTAWS_EXPORT PutJobSuccessResultRequest : public CodePipelineRequest {
+class QTAWSCODEPIPELINE_EXPORT PutJobSuccessResultRequest : public CodePipelineRequest {
 
 public:
     PutJobSuccessResultRequest(const PutJobSuccessResultRequest &other);

@@ -28,7 +28,7 @@ namespace DevOpsGuru {
 
 class SearchInsightsResponsePrivate;
 
-class QTAWS_EXPORT SearchInsightsResponse : public DevOpsGuruResponse {
+class QTAWSDEVOPSGURU_EXPORT SearchInsightsResponse : public DevOpsGuruResponse {
     Q_OBJECT
 
 public:

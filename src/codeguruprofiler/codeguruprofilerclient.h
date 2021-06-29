@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawscodeguruprofilerglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -75,7 +77,7 @@ class UntagResourceResponse;
 class UpdateProfilingGroupRequest;
 class UpdateProfilingGroupResponse;
 
-class QTAWS_EXPORT CodeGuruProfilerClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCODEGURUPROFILER_EXPORT CodeGuruProfilerClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

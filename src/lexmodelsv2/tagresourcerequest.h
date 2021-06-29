@@ -27,7 +27,7 @@ namespace LexModelsV2 {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public LexModelsV2Request {
+class QTAWSLEXMODELSV2_EXPORT TagResourceRequest : public LexModelsV2Request {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

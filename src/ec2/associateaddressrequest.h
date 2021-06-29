@@ -27,7 +27,7 @@ namespace EC2 {
 
 class AssociateAddressRequestPrivate;
 
-class QTAWS_EXPORT AssociateAddressRequest : public Ec2Request {
+class QTAWSEC2_EXPORT AssociateAddressRequest : public Ec2Request {
 
 public:
     AssociateAddressRequest(const AssociateAddressRequest &other);

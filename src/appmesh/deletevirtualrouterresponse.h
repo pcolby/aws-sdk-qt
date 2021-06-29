@@ -28,7 +28,7 @@ namespace AppMesh {
 
 class DeleteVirtualRouterResponsePrivate;
 
-class QTAWS_EXPORT DeleteVirtualRouterResponse : public AppMeshResponse {
+class QTAWSAPPMESH_EXPORT DeleteVirtualRouterResponse : public AppMeshResponse {
     Q_OBJECT
 
 public:

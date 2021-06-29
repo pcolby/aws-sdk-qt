@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawspinpointglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Pinpoint {
 
 class PinpointRequestPrivate;
 
-class QTAWS_EXPORT PinpointRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSPINPOINT_EXPORT PinpointRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Pinpoint.

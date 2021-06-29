@@ -27,7 +27,7 @@ namespace Glacier {
 
 class ListPartsRequestPrivate;
 
-class QTAWS_EXPORT ListPartsRequest : public GlacierRequest {
+class QTAWSGLACIER_EXPORT ListPartsRequest : public GlacierRequest {
 
 public:
     ListPartsRequest(const ListPartsRequest &other);

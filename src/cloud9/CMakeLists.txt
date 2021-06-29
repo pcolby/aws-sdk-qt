@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCLOUD9_LIBRARY)
+
 add_library(QtAwsCloud9
   cloud9client.h
   cloud9client_p.h
@@ -41,6 +43,7 @@ add_library(QtAwsCloud9
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawscloud9global.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

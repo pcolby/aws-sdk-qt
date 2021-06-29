@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsecsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -133,7 +135,7 @@ class UpdateServicePrimaryTaskSetResponse;
 class UpdateTaskSetRequest;
 class UpdateTaskSetResponse;
 
-class QTAWS_EXPORT EcsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSECS_EXPORT EcsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

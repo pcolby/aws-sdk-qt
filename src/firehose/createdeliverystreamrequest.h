@@ -27,7 +27,7 @@ namespace Firehose {
 
 class CreateDeliveryStreamRequestPrivate;
 
-class QTAWS_EXPORT CreateDeliveryStreamRequest : public FirehoseRequest {
+class QTAWSFIREHOSE_EXPORT CreateDeliveryStreamRequest : public FirehoseRequest {
 
 public:
     CreateDeliveryStreamRequest(const CreateDeliveryStreamRequest &other);

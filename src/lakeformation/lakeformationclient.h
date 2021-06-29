@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawslakeformationglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -75,7 +77,7 @@ class UpdateLFTagResponse;
 class UpdateResourceRequest;
 class UpdateResourceResponse;
 
-class QTAWS_EXPORT LakeFormationClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSLAKEFORMATION_EXPORT LakeFormationClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

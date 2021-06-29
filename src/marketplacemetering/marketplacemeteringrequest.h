@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsmarketplacemeteringglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace MarketplaceMetering {
 
 class MarketplaceMeteringRequestPrivate;
 
-class QTAWS_EXPORT MarketplaceMeteringRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSMARKETPLACEMETERING_EXPORT MarketplaceMeteringRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by MarketplaceMetering.

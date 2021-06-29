@@ -28,7 +28,7 @@ namespace Inspector {
 
 class UnsubscribeFromEventResponsePrivate;
 
-class QTAWS_EXPORT UnsubscribeFromEventResponse : public InspectorResponse {
+class QTAWSINSPECTOR_EXPORT UnsubscribeFromEventResponse : public InspectorResponse {
     Q_OBJECT
 
 public:

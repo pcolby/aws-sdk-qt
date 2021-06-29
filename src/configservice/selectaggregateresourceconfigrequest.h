@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class SelectAggregateResourceConfigRequestPrivate;
 
-class QTAWS_EXPORT SelectAggregateResourceConfigRequest : public ConfigServiceRequest {
+class QTAWSCONFIGSERVICE_EXPORT SelectAggregateResourceConfigRequest : public ConfigServiceRequest {
 
 public:
     SelectAggregateResourceConfigRequest(const SelectAggregateResourceConfigRequest &other);

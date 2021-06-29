@@ -28,7 +28,7 @@ namespace MediaConnect {
 
 class DescribeReservationResponsePrivate;
 
-class QTAWS_EXPORT DescribeReservationResponse : public MediaConnectResponse {
+class QTAWSMEDIACONNECT_EXPORT DescribeReservationResponse : public MediaConnectResponse {
     Q_OBJECT
 
 public:

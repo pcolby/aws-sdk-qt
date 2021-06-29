@@ -28,7 +28,7 @@ namespace S3 {
 
 class GetBucketLoggingResponsePrivate;
 
-class QTAWS_EXPORT GetBucketLoggingResponse : public S3Response {
+class QTAWSS3_EXPORT GetBucketLoggingResponse : public S3Response {
     Q_OBJECT
 
 public:

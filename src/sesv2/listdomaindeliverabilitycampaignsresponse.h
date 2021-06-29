@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class ListDomainDeliverabilityCampaignsResponsePrivate;
 
-class QTAWS_EXPORT ListDomainDeliverabilityCampaignsResponse : public Sesv2Response {
+class QTAWSSESV2_EXPORT ListDomainDeliverabilityCampaignsResponse : public Sesv2Response {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace LookoutEquipment {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public LookoutEquipmentRequest {
+class QTAWSLOOKOUTEQUIPMENT_EXPORT UntagResourceRequest : public LookoutEquipmentRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

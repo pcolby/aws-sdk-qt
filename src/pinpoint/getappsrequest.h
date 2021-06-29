@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class GetAppsRequestPrivate;
 
-class QTAWS_EXPORT GetAppsRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT GetAppsRequest : public PinpointRequest {
 
 public:
     GetAppsRequest(const GetAppsRequest &other);

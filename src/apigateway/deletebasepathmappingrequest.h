@@ -27,7 +27,7 @@ namespace APIGateway {
 
 class DeleteBasePathMappingRequestPrivate;
 
-class QTAWS_EXPORT DeleteBasePathMappingRequest : public APIGatewayRequest {
+class QTAWSAPIGATEWAY_EXPORT DeleteBasePathMappingRequest : public APIGatewayRequest {
 
 public:
     DeleteBasePathMappingRequest(const DeleteBasePathMappingRequest &other);

@@ -21,6 +21,8 @@
 #define QTAWS_SECURITYHUBRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawssecurityhubglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace SecurityHub {
 
 class SecurityHubResponsePrivate;
 
-class QTAWS_EXPORT SecurityHubResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSECURITYHUB_EXPORT SecurityHubResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

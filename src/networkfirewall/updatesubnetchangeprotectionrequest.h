@@ -27,7 +27,7 @@ namespace NetworkFirewall {
 
 class UpdateSubnetChangeProtectionRequestPrivate;
 
-class QTAWS_EXPORT UpdateSubnetChangeProtectionRequest : public NetworkFirewallRequest {
+class QTAWSNETWORKFIREWALL_EXPORT UpdateSubnetChangeProtectionRequest : public NetworkFirewallRequest {
 
 public:
     UpdateSubnetChangeProtectionRequest(const UpdateSubnetChangeProtectionRequest &other);

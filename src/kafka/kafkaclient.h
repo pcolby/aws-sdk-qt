@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawskafkaglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -89,7 +91,7 @@ class UpdateConfigurationResponse;
 class UpdateMonitoringRequest;
 class UpdateMonitoringResponse;
 
-class QTAWS_EXPORT KafkaClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSKAFKA_EXPORT KafkaClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

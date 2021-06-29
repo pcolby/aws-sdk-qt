@@ -27,7 +27,7 @@ namespace DataExchange {
 
 class DeleteAssetRequestPrivate;
 
-class QTAWS_EXPORT DeleteAssetRequest : public DataExchangeRequest {
+class QTAWSDATAEXCHANGE_EXPORT DeleteAssetRequest : public DataExchangeRequest {
 
 public:
     DeleteAssetRequest(const DeleteAssetRequest &other);

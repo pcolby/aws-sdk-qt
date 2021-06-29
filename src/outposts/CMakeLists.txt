@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSOUTPOSTS_LIBRARY)
+
 add_library(QtAwsOutposts
   createoutpostrequest.h
   createoutpostrequest_p.h
@@ -37,6 +39,7 @@ add_library(QtAwsOutposts
   outpostsrequest_p.h
   outpostsresponse.h
   outpostsresponse_p.h
+  qtawsoutpostsglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

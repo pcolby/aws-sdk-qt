@@ -27,7 +27,7 @@ namespace Backup {
 
 class GetRecoveryPointRestoreMetadataRequestPrivate;
 
-class QTAWS_EXPORT GetRecoveryPointRestoreMetadataRequest : public BackupRequest {
+class QTAWSBACKUP_EXPORT GetRecoveryPointRestoreMetadataRequest : public BackupRequest {
 
 public:
     GetRecoveryPointRestoreMetadataRequest(const GetRecoveryPointRestoreMetadataRequest &other);

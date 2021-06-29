@@ -27,7 +27,7 @@ namespace EventBridge {
 
 class EnableRuleRequestPrivate;
 
-class QTAWS_EXPORT EnableRuleRequest : public EventBridgeRequest {
+class QTAWSEVENTBRIDGE_EXPORT EnableRuleRequest : public EventBridgeRequest {
 
 public:
     EnableRuleRequest(const EnableRuleRequest &other);

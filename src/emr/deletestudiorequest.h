@@ -27,7 +27,7 @@ namespace EMR {
 
 class DeleteStudioRequestPrivate;
 
-class QTAWS_EXPORT DeleteStudioRequest : public EmrRequest {
+class QTAWSEMR_EXPORT DeleteStudioRequest : public EmrRequest {
 
 public:
     DeleteStudioRequest(const DeleteStudioRequest &other);

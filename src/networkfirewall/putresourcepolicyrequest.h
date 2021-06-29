@@ -27,7 +27,7 @@ namespace NetworkFirewall {
 
 class PutResourcePolicyRequestPrivate;
 
-class QTAWS_EXPORT PutResourcePolicyRequest : public NetworkFirewallRequest {
+class QTAWSNETWORKFIREWALL_EXPORT PutResourcePolicyRequest : public NetworkFirewallRequest {
 
 public:
     PutResourcePolicyRequest(const PutResourcePolicyRequest &other);

@@ -28,7 +28,7 @@ namespace CodeArtifact {
 
 class UpdatePackageVersionsStatusResponsePrivate;
 
-class QTAWS_EXPORT UpdatePackageVersionsStatusResponse : public CodeArtifactResponse {
+class QTAWSCODEARTIFACT_EXPORT UpdatePackageVersionsStatusResponse : public CodeArtifactResponse {
     Q_OBJECT
 
 public:

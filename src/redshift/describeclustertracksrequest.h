@@ -27,7 +27,7 @@ namespace Redshift {
 
 class DescribeClusterTracksRequestPrivate;
 
-class QTAWS_EXPORT DescribeClusterTracksRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT DescribeClusterTracksRequest : public RedshiftRequest {
 
 public:
     DescribeClusterTracksRequest(const DescribeClusterTracksRequest &other);

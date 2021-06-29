@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class GetTestRequestPrivate;
 
-class QTAWS_EXPORT GetTestRequest : public DeviceFarmRequest {
+class QTAWSDEVICEFARM_EXPORT GetTestRequest : public DeviceFarmRequest {
 
 public:
     GetTestRequest(const GetTestRequest &other);

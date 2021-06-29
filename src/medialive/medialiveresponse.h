@@ -21,6 +21,8 @@
 #define QTAWS_MEDIALIVERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsmedialiveglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace MediaLive {
 
 class MediaLiveResponsePrivate;
 
-class QTAWS_EXPORT MediaLiveResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSMEDIALIVE_EXPORT MediaLiveResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace CognitoIdentityProvider {
 
 class CreateResourceServerRequestPrivate;
 
-class QTAWS_EXPORT CreateResourceServerRequest : public CognitoIdentityProviderRequest {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT CreateResourceServerRequest : public CognitoIdentityProviderRequest {
 
 public:
     CreateResourceServerRequest(const CreateResourceServerRequest &other);

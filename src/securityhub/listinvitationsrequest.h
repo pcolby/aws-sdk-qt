@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class ListInvitationsRequestPrivate;
 
-class QTAWS_EXPORT ListInvitationsRequest : public SecurityHubRequest {
+class QTAWSSECURITYHUB_EXPORT ListInvitationsRequest : public SecurityHubRequest {
 
 public:
     ListInvitationsRequest(const ListInvitationsRequest &other);

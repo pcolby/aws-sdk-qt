@@ -28,7 +28,7 @@ namespace IoT {
 
 class ListBillingGroupsResponsePrivate;
 
-class QTAWS_EXPORT ListBillingGroupsResponse : public IoTResponse {
+class QTAWSIOT_EXPORT ListBillingGroupsResponse : public IoTResponse {
     Q_OBJECT
 
 public:

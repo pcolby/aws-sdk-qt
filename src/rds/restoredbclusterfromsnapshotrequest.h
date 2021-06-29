@@ -27,7 +27,7 @@ namespace RDS {
 
 class RestoreDBClusterFromSnapshotRequestPrivate;
 
-class QTAWS_EXPORT RestoreDBClusterFromSnapshotRequest : public RdsRequest {
+class QTAWSRDS_EXPORT RestoreDBClusterFromSnapshotRequest : public RdsRequest {
 
 public:
     RestoreDBClusterFromSnapshotRequest(const RestoreDBClusterFromSnapshotRequest &other);

@@ -27,7 +27,7 @@ namespace IoTSecureTunneling {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public IoTSecureTunnelingRequest {
+class QTAWSIOTSECURETUNNELING_EXPORT ListTagsForResourceRequest : public IoTSecureTunnelingRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

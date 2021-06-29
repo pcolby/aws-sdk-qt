@@ -27,7 +27,7 @@ namespace KinesisVideo {
 
 class DeleteStreamRequestPrivate;
 
-class QTAWS_EXPORT DeleteStreamRequest : public KinesisVideoRequest {
+class QTAWSKINESISVIDEO_EXPORT DeleteStreamRequest : public KinesisVideoRequest {
 
 public:
     DeleteStreamRequest(const DeleteStreamRequest &other);

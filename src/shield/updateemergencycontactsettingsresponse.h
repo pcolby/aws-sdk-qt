@@ -28,7 +28,7 @@ namespace Shield {
 
 class UpdateEmergencyContactSettingsResponsePrivate;
 
-class QTAWS_EXPORT UpdateEmergencyContactSettingsResponse : public ShieldResponse {
+class QTAWSSHIELD_EXPORT UpdateEmergencyContactSettingsResponse : public ShieldResponse {
     Q_OBJECT
 
 public:

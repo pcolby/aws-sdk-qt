@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class DeleteChapCredentialsResponsePrivate;
 
-class QTAWS_EXPORT DeleteChapCredentialsResponse : public StorageGatewayResponse {
+class QTAWSSTORAGEGATEWAY_EXPORT DeleteChapCredentialsResponse : public StorageGatewayResponse {
     Q_OBJECT
 
 public:

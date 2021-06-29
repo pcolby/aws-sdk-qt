@@ -28,7 +28,7 @@ namespace GameLift {
 
 class DeleteAliasResponsePrivate;
 
-class QTAWS_EXPORT DeleteAliasResponse : public GameLiftResponse {
+class QTAWSGAMELIFT_EXPORT DeleteAliasResponse : public GameLiftResponse {
     Q_OBJECT
 
 public:

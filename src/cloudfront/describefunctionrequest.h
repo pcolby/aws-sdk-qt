@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class DescribeFunctionRequestPrivate;
 
-class QTAWS_EXPORT DescribeFunctionRequest : public CloudFrontRequest {
+class QTAWSCLOUDFRONT_EXPORT DescribeFunctionRequest : public CloudFrontRequest {
 
 public:
     DescribeFunctionRequest(const DescribeFunctionRequest &other);

@@ -28,7 +28,7 @@ namespace SSM {
 
 class CancelMaintenanceWindowExecutionResponsePrivate;
 
-class QTAWS_EXPORT CancelMaintenanceWindowExecutionResponse : public SsmResponse {
+class QTAWSSSM_EXPORT CancelMaintenanceWindowExecutionResponse : public SsmResponse {
     Q_OBJECT
 
 public:

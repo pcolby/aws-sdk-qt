@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class CancelRetrievalRequestPrivate;
 
-class QTAWS_EXPORT CancelRetrievalRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT CancelRetrievalRequest : public StorageGatewayRequest {
 
 public:
     CancelRetrievalRequest(const CancelRetrievalRequest &other);

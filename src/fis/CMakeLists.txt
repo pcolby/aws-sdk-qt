@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSFIS_LIBRARY)
+
 add_library(QtAwsFis
   createexperimenttemplaterequest.h
   createexperimenttemplaterequest_p.h
@@ -41,6 +43,7 @@ add_library(QtAwsFis
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsfisglobal.h
   startexperimentrequest.h
   startexperimentrequest_p.h
   startexperimentresponse.h

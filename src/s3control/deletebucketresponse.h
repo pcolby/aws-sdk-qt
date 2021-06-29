@@ -28,7 +28,7 @@ namespace S3Control {
 
 class DeleteBucketResponsePrivate;
 
-class QTAWS_EXPORT DeleteBucketResponse : public S3ControlResponse {
+class QTAWSS3CONTROL_EXPORT DeleteBucketResponse : public S3ControlResponse {
     Q_OBJECT
 
 public:

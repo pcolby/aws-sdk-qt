@@ -28,7 +28,7 @@ namespace IoTDataPlane {
 
 class UpdateThingShadowResponsePrivate;
 
-class QTAWS_EXPORT UpdateThingShadowResponse : public IoTDataPlaneResponse {
+class QTAWSIOTDATAPLANE_EXPORT UpdateThingShadowResponse : public IoTDataPlaneResponse {
     Q_OBJECT
 
 public:

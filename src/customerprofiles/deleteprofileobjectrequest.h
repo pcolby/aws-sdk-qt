@@ -27,7 +27,7 @@ namespace CustomerProfiles {
 
 class DeleteProfileObjectRequestPrivate;
 
-class QTAWS_EXPORT DeleteProfileObjectRequest : public CustomerProfilesRequest {
+class QTAWSCUSTOMERPROFILES_EXPORT DeleteProfileObjectRequest : public CustomerProfilesRequest {
 
 public:
     DeleteProfileObjectRequest(const DeleteProfileObjectRequest &other);

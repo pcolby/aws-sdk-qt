@@ -27,7 +27,7 @@ namespace CloudFormation {
 
 class DetectStackResourceDriftRequestPrivate;
 
-class QTAWS_EXPORT DetectStackResourceDriftRequest : public CloudFormationRequest {
+class QTAWSCLOUDFORMATION_EXPORT DetectStackResourceDriftRequest : public CloudFormationRequest {
 
 public:
     DetectStackResourceDriftRequest(const DetectStackResourceDriftRequest &other);

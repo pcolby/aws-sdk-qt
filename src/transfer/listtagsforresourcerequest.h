@@ -27,7 +27,7 @@ namespace Transfer {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public TransferRequest {
+class QTAWSTRANSFER_EXPORT ListTagsForResourceRequest : public TransferRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

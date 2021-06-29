@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawscloudwatcheventsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace CloudWatchEvents {
 
 class CloudWatchEventsRequestPrivate;
 
-class QTAWS_EXPORT CloudWatchEventsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCLOUDWATCHEVENTS_EXPORT CloudWatchEventsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CloudWatchEvents.

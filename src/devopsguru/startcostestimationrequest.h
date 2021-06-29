@@ -27,7 +27,7 @@ namespace DevOpsGuru {
 
 class StartCostEstimationRequestPrivate;
 
-class QTAWS_EXPORT StartCostEstimationRequest : public DevOpsGuruRequest {
+class QTAWSDEVOPSGURU_EXPORT StartCostEstimationRequest : public DevOpsGuruRequest {
 
 public:
     StartCostEstimationRequest(const StartCostEstimationRequest &other);

@@ -27,7 +27,7 @@ namespace IoTFleetHub {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public IoTFleetHubRequest {
+class QTAWSIOTFLEETHUB_EXPORT TagResourceRequest : public IoTFleetHubRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

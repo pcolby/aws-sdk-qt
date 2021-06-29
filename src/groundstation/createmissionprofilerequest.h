@@ -27,7 +27,7 @@ namespace GroundStation {
 
 class CreateMissionProfileRequestPrivate;
 
-class QTAWS_EXPORT CreateMissionProfileRequest : public GroundStationRequest {
+class QTAWSGROUNDSTATION_EXPORT CreateMissionProfileRequest : public GroundStationRequest {
 
 public:
     CreateMissionProfileRequest(const CreateMissionProfileRequest &other);

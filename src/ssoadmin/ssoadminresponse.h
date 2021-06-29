@@ -21,6 +21,8 @@
 #define QTAWS_SSOADMINRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsssoadminglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace SSOAdmin {
 
 class SSOAdminResponsePrivate;
 
-class QTAWS_EXPORT SSOAdminResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSSOADMIN_EXPORT SSOAdminResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

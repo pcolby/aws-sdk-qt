@@ -27,7 +27,7 @@ namespace SES {
 
 class GetAccountSendingEnabledRequestPrivate;
 
-class QTAWS_EXPORT GetAccountSendingEnabledRequest : public SesRequest {
+class QTAWSSES_EXPORT GetAccountSendingEnabledRequest : public SesRequest {
 
 public:
     GetAccountSendingEnabledRequest(const GetAccountSendingEnabledRequest &other);

@@ -27,7 +27,7 @@ namespace AppRunner {
 
 class CreateConnectionRequestPrivate;
 
-class QTAWS_EXPORT CreateConnectionRequest : public AppRunnerRequest {
+class QTAWSAPPRUNNER_EXPORT CreateConnectionRequest : public AppRunnerRequest {
 
 public:
     CreateConnectionRequest(const CreateConnectionRequest &other);

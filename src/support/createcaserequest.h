@@ -27,7 +27,7 @@ namespace Support {
 
 class CreateCaseRequestPrivate;
 
-class QTAWS_EXPORT CreateCaseRequest : public SupportRequest {
+class QTAWSSUPPORT_EXPORT CreateCaseRequest : public SupportRequest {
 
 public:
     CreateCaseRequest(const CreateCaseRequest &other);

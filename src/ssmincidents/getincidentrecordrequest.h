@@ -27,7 +27,7 @@ namespace SSMIncidents {
 
 class GetIncidentRecordRequestPrivate;
 
-class QTAWS_EXPORT GetIncidentRecordRequest : public SSMIncidentsRequest {
+class QTAWSSSMINCIDENTS_EXPORT GetIncidentRecordRequest : public SSMIncidentsRequest {
 
 public:
     GetIncidentRecordRequest(const GetIncidentRecordRequest &other);

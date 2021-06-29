@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSKINESISVIDEOMEDIA_LIBRARY)
+
 add_library(QtAwsKinesisVideoMedia
   getmediarequest.h
   getmediarequest_p.h
@@ -9,6 +11,7 @@ add_library(QtAwsKinesisVideoMedia
   kinesisvideomediarequest_p.h
   kinesisvideomediaresponse.h
   kinesisvideomediaresponse_p.h
+  qtawskinesisvideomediaglobal.h
   getmediarequest.cpp
   getmediaresponse.cpp
   kinesisvideomediaclient.cpp

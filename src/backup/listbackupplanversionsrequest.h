@@ -27,7 +27,7 @@ namespace Backup {
 
 class ListBackupPlanVersionsRequestPrivate;
 
-class QTAWS_EXPORT ListBackupPlanVersionsRequest : public BackupRequest {
+class QTAWSBACKUP_EXPORT ListBackupPlanVersionsRequest : public BackupRequest {
 
 public:
     ListBackupPlanVersionsRequest(const ListBackupPlanVersionsRequest &other);

@@ -27,7 +27,7 @@ namespace DynamoDB {
 
 class DescribeTableReplicaAutoScalingRequestPrivate;
 
-class QTAWS_EXPORT DescribeTableReplicaAutoScalingRequest : public DynamoDBRequest {
+class QTAWSDYNAMODB_EXPORT DescribeTableReplicaAutoScalingRequest : public DynamoDBRequest {
 
 public:
     DescribeTableReplicaAutoScalingRequest(const DescribeTableReplicaAutoScalingRequest &other);

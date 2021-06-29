@@ -28,7 +28,7 @@ namespace ECS {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public EcsResponse {
+class QTAWSECS_EXPORT TagResourceResponse : public EcsResponse {
     Q_OBJECT
 
 public:

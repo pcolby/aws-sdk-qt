@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 
 class DeauthorizeConnectionResponsePrivate;
 
-class QTAWS_EXPORT DeauthorizeConnectionResponse : public CloudWatchEventsResponse {
+class QTAWSCLOUDWATCHEVENTS_EXPORT DeauthorizeConnectionResponse : public CloudWatchEventsResponse {
     Q_OBJECT
 
 public:

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsiotdeviceadvisorglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -55,7 +57,7 @@ class UntagResourceResponse;
 class UpdateSuiteDefinitionRequest;
 class UpdateSuiteDefinitionResponse;
 
-class QTAWS_EXPORT IoTDeviceAdvisorClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSIOTDEVICEADVISOR_EXPORT IoTDeviceAdvisorClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

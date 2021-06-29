@@ -27,7 +27,7 @@ namespace EC2 {
 
 class GetTransitGatewayPrefixListReferencesRequestPrivate;
 
-class QTAWS_EXPORT GetTransitGatewayPrefixListReferencesRequest : public Ec2Request {
+class QTAWSEC2_EXPORT GetTransitGatewayPrefixListReferencesRequest : public Ec2Request {
 
 public:
     GetTransitGatewayPrefixListReferencesRequest(const GetTransitGatewayPrefixListReferencesRequest &other);

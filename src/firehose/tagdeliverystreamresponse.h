@@ -28,7 +28,7 @@ namespace Firehose {
 
 class TagDeliveryStreamResponsePrivate;
 
-class QTAWS_EXPORT TagDeliveryStreamResponse : public FirehoseResponse {
+class QTAWSFIREHOSE_EXPORT TagDeliveryStreamResponse : public FirehoseResponse {
     Q_OBJECT
 
 public:

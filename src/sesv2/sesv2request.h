@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawssesv2global.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace SESV2 {
 
 class Sesv2RequestPrivate;
 
-class QTAWS_EXPORT Sesv2Request : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSESV2_EXPORT Sesv2Request : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SESV2.

@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class ListIpRoutesRequestPrivate;
 
-class QTAWS_EXPORT ListIpRoutesRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT ListIpRoutesRequest : public DirectoryServiceRequest {
 
 public:
     ListIpRoutesRequest(const ListIpRoutesRequest &other);

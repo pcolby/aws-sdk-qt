@@ -21,6 +21,8 @@
 #define QTAWS_HEALTHLAKERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawshealthlakeglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace HealthLake {
 
 class HealthLakeResponsePrivate;
 
-class QTAWS_EXPORT HealthLakeResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSHEALTHLAKE_EXPORT HealthLakeResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

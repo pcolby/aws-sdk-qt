@@ -27,7 +27,7 @@ namespace CodeBuild {
 
 class ImportSourceCredentialsRequestPrivate;
 
-class QTAWS_EXPORT ImportSourceCredentialsRequest : public CodeBuildRequest {
+class QTAWSCODEBUILD_EXPORT ImportSourceCredentialsRequest : public CodeBuildRequest {
 
 public:
     ImportSourceCredentialsRequest(const ImportSourceCredentialsRequest &other);

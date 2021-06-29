@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsamplifybackendglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -77,7 +79,7 @@ class UpdateBackendConfigResponse;
 class UpdateBackendJobRequest;
 class UpdateBackendJobResponse;
 
-class QTAWS_EXPORT AmplifyBackendClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSAMPLIFYBACKEND_EXPORT AmplifyBackendClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

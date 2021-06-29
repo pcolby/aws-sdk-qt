@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawselasticinferenceglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace ElasticInference {
 
 class ElasticInferenceRequestPrivate;
 
-class QTAWS_EXPORT ElasticInferenceRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSELASTICINFERENCE_EXPORT ElasticInferenceRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ElasticInference.

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawslookoutequipmentglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace LookoutEquipment {
 
 class LookoutEquipmentRequestPrivate;
 
-class QTAWS_EXPORT LookoutEquipmentRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSLOOKOUTEQUIPMENT_EXPORT LookoutEquipmentRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by LookoutEquipment.

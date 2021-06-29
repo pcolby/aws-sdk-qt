@@ -27,7 +27,7 @@ namespace GameLift {
 
 class DeleteGameSessionQueueRequestPrivate;
 
-class QTAWS_EXPORT DeleteGameSessionQueueRequest : public GameLiftRequest {
+class QTAWSGAMELIFT_EXPORT DeleteGameSessionQueueRequest : public GameLiftRequest {
 
 public:
     DeleteGameSessionQueueRequest(const DeleteGameSessionQueueRequest &other);

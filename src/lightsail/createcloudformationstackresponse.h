@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class CreateCloudFormationStackResponsePrivate;
 
-class QTAWS_EXPORT CreateCloudFormationStackResponse : public LightsailResponse {
+class QTAWSLIGHTSAIL_EXPORT CreateCloudFormationStackResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

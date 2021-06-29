@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class UpdateContainerServiceRequestPrivate;
 
-class QTAWS_EXPORT UpdateContainerServiceRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT UpdateContainerServiceRequest : public LightsailRequest {
 
 public:
     UpdateContainerServiceRequest(const UpdateContainerServiceRequest &other);

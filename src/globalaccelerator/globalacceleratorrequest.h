@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsglobalacceleratorglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace GlobalAccelerator {
 
 class GlobalAcceleratorRequestPrivate;
 
-class QTAWS_EXPORT GlobalAcceleratorRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSGLOBALACCELERATOR_EXPORT GlobalAcceleratorRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by GlobalAccelerator.

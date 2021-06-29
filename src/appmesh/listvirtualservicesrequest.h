@@ -27,7 +27,7 @@ namespace AppMesh {
 
 class ListVirtualServicesRequestPrivate;
 
-class QTAWS_EXPORT ListVirtualServicesRequest : public AppMeshRequest {
+class QTAWSAPPMESH_EXPORT ListVirtualServicesRequest : public AppMeshRequest {
 
 public:
     ListVirtualServicesRequest(const ListVirtualServicesRequest &other);

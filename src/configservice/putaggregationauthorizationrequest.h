@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class PutAggregationAuthorizationRequestPrivate;
 
-class QTAWS_EXPORT PutAggregationAuthorizationRequest : public ConfigServiceRequest {
+class QTAWSCONFIGSERVICE_EXPORT PutAggregationAuthorizationRequest : public ConfigServiceRequest {
 
 public:
     PutAggregationAuthorizationRequest(const PutAggregationAuthorizationRequest &other);

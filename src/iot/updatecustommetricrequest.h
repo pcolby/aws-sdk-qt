@@ -27,7 +27,7 @@ namespace IoT {
 
 class UpdateCustomMetricRequestPrivate;
 
-class QTAWS_EXPORT UpdateCustomMetricRequest : public IoTRequest {
+class QTAWSIOT_EXPORT UpdateCustomMetricRequest : public IoTRequest {
 
 public:
     UpdateCustomMetricRequest(const UpdateCustomMetricRequest &other);

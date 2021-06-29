@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsnetworkfirewallglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -87,7 +89,7 @@ class UpdateRuleGroupResponse;
 class UpdateSubnetChangeProtectionRequest;
 class UpdateSubnetChangeProtectionResponse;
 
-class QTAWS_EXPORT NetworkFirewallClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSNETWORKFIREWALL_EXPORT NetworkFirewallClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

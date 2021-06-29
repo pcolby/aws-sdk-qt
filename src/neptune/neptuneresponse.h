@@ -21,6 +21,8 @@
 #define QTAWS_NEPTUNERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsneptuneglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Neptune {
 
 class NeptuneResponsePrivate;
 
-class QTAWS_EXPORT NeptuneResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSNEPTUNE_EXPORT NeptuneResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

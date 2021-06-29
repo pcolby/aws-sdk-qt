@@ -28,7 +28,7 @@ namespace SavingsPlans {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public SavingsPlansResponse {
+class QTAWSSAVINGSPLANS_EXPORT ListTagsForResourceResponse : public SavingsPlansResponse {
     Q_OBJECT
 
 public:

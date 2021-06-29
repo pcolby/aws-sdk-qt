@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class UpdateStandardsControlRequestPrivate;
 
-class QTAWS_EXPORT UpdateStandardsControlRequest : public SecurityHubRequest {
+class QTAWSSECURITYHUB_EXPORT UpdateStandardsControlRequest : public SecurityHubRequest {
 
 public:
     UpdateStandardsControlRequest(const UpdateStandardsControlRequest &other);

@@ -28,7 +28,7 @@ namespace Textract {
 
 class StartDocumentAnalysisResponsePrivate;
 
-class QTAWS_EXPORT StartDocumentAnalysisResponse : public TextractResponse {
+class QTAWSTEXTRACT_EXPORT StartDocumentAnalysisResponse : public TextractResponse {
     Q_OBJECT
 
 public:

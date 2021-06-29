@@ -28,7 +28,7 @@ namespace GameLift {
 
 class StartMatchBackfillResponsePrivate;
 
-class QTAWS_EXPORT StartMatchBackfillResponse : public GameLiftResponse {
+class QTAWSGAMELIFT_EXPORT StartMatchBackfillResponse : public GameLiftResponse {
     Q_OBJECT
 
 public:

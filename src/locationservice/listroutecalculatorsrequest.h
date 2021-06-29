@@ -27,7 +27,7 @@ namespace LocationService {
 
 class ListRouteCalculatorsRequestPrivate;
 
-class QTAWS_EXPORT ListRouteCalculatorsRequest : public LocationServiceRequest {
+class QTAWSLOCATIONSERVICE_EXPORT ListRouteCalculatorsRequest : public LocationServiceRequest {
 
 public:
     ListRouteCalculatorsRequest(const ListRouteCalculatorsRequest &other);

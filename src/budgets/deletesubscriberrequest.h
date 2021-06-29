@@ -27,7 +27,7 @@ namespace Budgets {
 
 class DeleteSubscriberRequestPrivate;
 
-class QTAWS_EXPORT DeleteSubscriberRequest : public BudgetsRequest {
+class QTAWSBUDGETS_EXPORT DeleteSubscriberRequest : public BudgetsRequest {
 
 public:
     DeleteSubscriberRequest(const DeleteSubscriberRequest &other);

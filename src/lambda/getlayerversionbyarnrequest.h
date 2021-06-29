@@ -27,7 +27,7 @@ namespace Lambda {
 
 class GetLayerVersionByArnRequestPrivate;
 
-class QTAWS_EXPORT GetLayerVersionByArnRequest : public LambdaRequest {
+class QTAWSLAMBDA_EXPORT GetLayerVersionByArnRequest : public LambdaRequest {
 
 public:
     GetLayerVersionByArnRequest(const GetLayerVersionByArnRequest &other);

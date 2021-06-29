@@ -27,7 +27,7 @@ namespace DatabaseMigrationService {
 
 class DescribeReplicationSubnetGroupsRequestPrivate;
 
-class QTAWS_EXPORT DescribeReplicationSubnetGroupsRequest : public DatabaseMigrationServiceRequest {
+class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DescribeReplicationSubnetGroupsRequest : public DatabaseMigrationServiceRequest {
 
 public:
     DescribeReplicationSubnetGroupsRequest(const DescribeReplicationSubnetGroupsRequest &other);

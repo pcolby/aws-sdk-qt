@@ -28,7 +28,7 @@ namespace AppRegistry {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public AppRegistryResponse {
+class QTAWSAPPREGISTRY_EXPORT ListTagsForResourceResponse : public AppRegistryResponse {
     Q_OBJECT
 
 public:

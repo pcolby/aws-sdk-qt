@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class ListContributorInsightsResponsePrivate;
 
-class QTAWS_EXPORT ListContributorInsightsResponse : public DynamoDBResponse {
+class QTAWSDYNAMODB_EXPORT ListContributorInsightsResponse : public DynamoDBResponse {
     Q_OBJECT
 
 public:

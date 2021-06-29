@@ -27,7 +27,7 @@ namespace WorkDocs {
 
 class DeleteFolderRequestPrivate;
 
-class QTAWS_EXPORT DeleteFolderRequest : public WorkDocsRequest {
+class QTAWSWORKDOCS_EXPORT DeleteFolderRequest : public WorkDocsRequest {
 
 public:
     DeleteFolderRequest(const DeleteFolderRequest &other);

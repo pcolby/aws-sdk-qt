@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class DisableAWSOrganizationsAccessResponsePrivate;
 
-class QTAWS_EXPORT DisableAWSOrganizationsAccessResponse : public ServiceCatalogResponse {
+class QTAWSSERVICECATALOG_EXPORT DisableAWSOrganizationsAccessResponse : public ServiceCatalogResponse {
     Q_OBJECT
 
 public:

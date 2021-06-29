@@ -27,7 +27,7 @@ namespace Inspector {
 
 class DeleteAssessmentTemplateRequestPrivate;
 
-class QTAWS_EXPORT DeleteAssessmentTemplateRequest : public InspectorRequest {
+class QTAWSINSPECTOR_EXPORT DeleteAssessmentTemplateRequest : public InspectorRequest {
 
 public:
     DeleteAssessmentTemplateRequest(const DeleteAssessmentTemplateRequest &other);

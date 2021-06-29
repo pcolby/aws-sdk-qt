@@ -28,7 +28,7 @@ namespace FraudDetector {
 
 class UpdateRuleMetadataResponsePrivate;
 
-class QTAWS_EXPORT UpdateRuleMetadataResponse : public FraudDetectorResponse {
+class QTAWSFRAUDDETECTOR_EXPORT UpdateRuleMetadataResponse : public FraudDetectorResponse {
     Q_OBJECT
 
 public:

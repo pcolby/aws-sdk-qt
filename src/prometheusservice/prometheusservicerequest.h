@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsprometheusserviceglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace PrometheusService {
 
 class PrometheusServiceRequestPrivate;
 
-class QTAWS_EXPORT PrometheusServiceRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSPROMETHEUSSERVICE_EXPORT PrometheusServiceRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by PrometheusService.

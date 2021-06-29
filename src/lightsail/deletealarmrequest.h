@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class DeleteAlarmRequestPrivate;
 
-class QTAWS_EXPORT DeleteAlarmRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT DeleteAlarmRequest : public LightsailRequest {
 
 public:
     DeleteAlarmRequest(const DeleteAlarmRequest &other);

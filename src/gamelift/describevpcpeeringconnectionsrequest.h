@@ -27,7 +27,7 @@ namespace GameLift {
 
 class DescribeVpcPeeringConnectionsRequestPrivate;
 
-class QTAWS_EXPORT DescribeVpcPeeringConnectionsRequest : public GameLiftRequest {
+class QTAWSGAMELIFT_EXPORT DescribeVpcPeeringConnectionsRequest : public GameLiftRequest {
 
 public:
     DescribeVpcPeeringConnectionsRequest(const DescribeVpcPeeringConnectionsRequest &other);

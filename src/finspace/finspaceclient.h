@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsfinspaceglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -45,7 +47,7 @@ class UntagResourceResponse;
 class UpdateEnvironmentRequest;
 class UpdateEnvironmentResponse;
 
-class QTAWS_EXPORT finspaceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSFINSPACE_EXPORT finspaceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -21,6 +21,8 @@
 #define QTAWS_CLOUDTRAILRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawscloudtrailglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace CloudTrail {
 
 class CloudTrailResponsePrivate;
 
-class QTAWS_EXPORT CloudTrailResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCLOUDTRAIL_EXPORT CloudTrailResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

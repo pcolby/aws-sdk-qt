@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCOSTANDUSAGEREPORTSERVICE_LIBRARY)
+
 add_library(QtAwsCostandUsageReportService
   costandusagereportserviceclient.h
   costandusagereportserviceclient_p.h
@@ -21,6 +23,7 @@ add_library(QtAwsCostandUsageReportService
   putreportdefinitionrequest_p.h
   putreportdefinitionresponse.h
   putreportdefinitionresponse_p.h
+  qtawscostandusagereportserviceglobal.h
   costandusagereportserviceclient.cpp
   costandusagereportservicerequest.cpp
   costandusagereportserviceresponse.cpp

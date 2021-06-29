@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsiotsecuretunnelingglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -43,7 +45,7 @@ class TagResourceResponse;
 class UntagResourceRequest;
 class UntagResourceResponse;
 
-class QTAWS_EXPORT IoTSecureTunnelingClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSIOTSECURETUNNELING_EXPORT IoTSecureTunnelingClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

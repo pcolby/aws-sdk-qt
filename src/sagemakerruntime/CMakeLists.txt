@@ -1,8 +1,11 @@
+add_compile_definitions(QTAWSSAGEMAKERRUNTIME_LIBRARY)
+
 add_library(QtAwsSageMakerRuntime
   invokeendpointrequest.h
   invokeendpointrequest_p.h
   invokeendpointresponse.h
   invokeendpointresponse_p.h
+  qtawssagemakerruntimeglobal.h
   sagemakerruntimeclient.h
   sagemakerruntimeclient_p.h
   sagemakerruntimerequest.h

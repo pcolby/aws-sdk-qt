@@ -21,6 +21,8 @@
 #define QTAWS_REDSHIFTDATAAPISERVICERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsredshiftdataapiserviceglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace RedshiftDataAPIService {
 
 class RedshiftDataAPIServiceResponsePrivate;
 
-class QTAWS_EXPORT RedshiftDataAPIServiceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSREDSHIFTDATAAPISERVICE_EXPORT RedshiftDataAPIServiceResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace TimestreamWrite {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public TimestreamWriteRequest {
+class QTAWSTIMESTREAMWRITE_EXPORT ListTagsForResourceRequest : public TimestreamWriteRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

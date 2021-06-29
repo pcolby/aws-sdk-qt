@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSWORKLINK_LIBRARY)
+
 add_library(QtAwsWorkLink
   associatedomainrequest.h
   associatedomainrequest_p.h
@@ -87,6 +89,7 @@ add_library(QtAwsWorkLink
   listwebsitecertificateauthoritiesrequest_p.h
   listwebsitecertificateauthoritiesresponse.h
   listwebsitecertificateauthoritiesresponse_p.h
+  qtawsworklinkglobal.h
   restoredomainaccessrequest.h
   restoredomainaccessrequest_p.h
   restoredomainaccessresponse.h

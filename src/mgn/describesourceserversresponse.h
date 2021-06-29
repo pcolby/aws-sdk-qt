@@ -28,7 +28,7 @@ namespace mgn {
 
 class DescribeSourceServersResponsePrivate;
 
-class QTAWS_EXPORT DescribeSourceServersResponse : public mgnResponse {
+class QTAWSMGN_EXPORT DescribeSourceServersResponse : public mgnResponse {
     Q_OBJECT
 
 public:

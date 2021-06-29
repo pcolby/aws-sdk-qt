@@ -27,7 +27,7 @@ namespace SSM {
 
 class StartChangeRequestExecutionRequestPrivate;
 
-class QTAWS_EXPORT StartChangeRequestExecutionRequest : public SsmRequest {
+class QTAWSSSM_EXPORT StartChangeRequestExecutionRequest : public SsmRequest {
 
 public:
     StartChangeRequestExecutionRequest(const StartChangeRequestExecutionRequest &other);

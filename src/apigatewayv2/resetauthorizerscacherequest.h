@@ -27,7 +27,7 @@ namespace ApiGatewayV2 {
 
 class ResetAuthorizersCacheRequestPrivate;
 
-class QTAWS_EXPORT ResetAuthorizersCacheRequest : public ApiGatewayV2Request {
+class QTAWSAPIGATEWAYV2_EXPORT ResetAuthorizersCacheRequest : public ApiGatewayV2Request {
 
 public:
     ResetAuthorizersCacheRequest(const ResetAuthorizersCacheRequest &other);

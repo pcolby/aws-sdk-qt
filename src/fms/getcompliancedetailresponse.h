@@ -28,7 +28,7 @@ namespace FMS {
 
 class GetComplianceDetailResponsePrivate;
 
-class QTAWS_EXPORT GetComplianceDetailResponse : public FmsResponse {
+class QTAWSFMS_EXPORT GetComplianceDetailResponse : public FmsResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class ConnectDirectoryRequestPrivate;
 
-class QTAWS_EXPORT ConnectDirectoryRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT ConnectDirectoryRequest : public DirectoryServiceRequest {
 
 public:
     ConnectDirectoryRequest(const ConnectDirectoryRequest &other);

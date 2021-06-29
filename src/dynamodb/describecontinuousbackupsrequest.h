@@ -27,7 +27,7 @@ namespace DynamoDB {
 
 class DescribeContinuousBackupsRequestPrivate;
 
-class QTAWS_EXPORT DescribeContinuousBackupsRequest : public DynamoDBRequest {
+class QTAWSDYNAMODB_EXPORT DescribeContinuousBackupsRequest : public DynamoDBRequest {
 
 public:
     DescribeContinuousBackupsRequest(const DescribeContinuousBackupsRequest &other);

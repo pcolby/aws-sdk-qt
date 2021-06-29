@@ -27,7 +27,7 @@ namespace IoTAnalytics {
 
 class DeletePipelineRequestPrivate;
 
-class QTAWS_EXPORT DeletePipelineRequest : public IoTAnalyticsRequest {
+class QTAWSIOTANALYTICS_EXPORT DeletePipelineRequest : public IoTAnalyticsRequest {
 
 public:
     DeletePipelineRequest(const DeletePipelineRequest &other);

@@ -28,7 +28,7 @@ namespace GameLift {
 
 class ListScriptsResponsePrivate;
 
-class QTAWS_EXPORT ListScriptsResponse : public GameLiftResponse {
+class QTAWSGAMELIFT_EXPORT ListScriptsResponse : public GameLiftResponse {
     Q_OBJECT
 
 public:

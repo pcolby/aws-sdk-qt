@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class DisassociateBudgetFromResourceRequestPrivate;
 
-class QTAWS_EXPORT DisassociateBudgetFromResourceRequest : public ServiceCatalogRequest {
+class QTAWSSERVICECATALOG_EXPORT DisassociateBudgetFromResourceRequest : public ServiceCatalogRequest {
 
 public:
     DisassociateBudgetFromResourceRequest(const DisassociateBudgetFromResourceRequest &other);

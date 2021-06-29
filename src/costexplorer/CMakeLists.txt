@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCOSTEXPLORER_LIBRARY)
+
 add_library(QtAwsCostExplorer
   costexplorerclient.h
   costexplorerclient_p.h
@@ -113,6 +115,7 @@ add_library(QtAwsCostExplorer
   provideanomalyfeedbackrequest_p.h
   provideanomalyfeedbackresponse.h
   provideanomalyfeedbackresponse_p.h
+  qtawscostexplorerglobal.h
   updateanomalymonitorrequest.h
   updateanomalymonitorrequest_p.h
   updateanomalymonitorresponse.h

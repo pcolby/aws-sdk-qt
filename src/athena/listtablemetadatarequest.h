@@ -27,7 +27,7 @@ namespace Athena {
 
 class ListTableMetadataRequestPrivate;
 
-class QTAWS_EXPORT ListTableMetadataRequest : public AthenaRequest {
+class QTAWSATHENA_EXPORT ListTableMetadataRequest : public AthenaRequest {
 
 public:
     ListTableMetadataRequest(const ListTableMetadataRequest &other);

@@ -27,7 +27,7 @@ namespace MWAA {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public MwaaRequest {
+class QTAWSMWAA_EXPORT ListTagsForResourceRequest : public MwaaRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

@@ -28,7 +28,7 @@ namespace WAFV2 {
 
 class CreateRegexPatternSetResponsePrivate;
 
-class QTAWS_EXPORT CreateRegexPatternSetResponse : public Wafv2Response {
+class QTAWSWAFV2_EXPORT CreateRegexPatternSetResponse : public Wafv2Response {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class UpdateTemplateAliasResponsePrivate;
 
-class QTAWS_EXPORT UpdateTemplateAliasResponse : public QuickSightResponse {
+class QTAWSQUICKSIGHT_EXPORT UpdateTemplateAliasResponse : public QuickSightResponse {
     Q_OBJECT
 
 public:

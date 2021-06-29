@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsrobomakerglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -143,7 +145,7 @@ class UpdateSimulationApplicationResponse;
 class UpdateWorldTemplateRequest;
 class UpdateWorldTemplateResponse;
 
-class QTAWS_EXPORT RoboMakerClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSROBOMAKER_EXPORT RoboMakerClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

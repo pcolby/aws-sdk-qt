@@ -27,7 +27,7 @@ namespace ResourceGroups {
 
 class DeleteGroupRequestPrivate;
 
-class QTAWS_EXPORT DeleteGroupRequest : public ResourceGroupsRequest {
+class QTAWSRESOURCEGROUPS_EXPORT DeleteGroupRequest : public ResourceGroupsRequest {
 
 public:
     DeleteGroupRequest(const DeleteGroupRequest &other);

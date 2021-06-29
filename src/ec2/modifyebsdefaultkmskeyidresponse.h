@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ModifyEbsDefaultKmsKeyIdResponsePrivate;
 
-class QTAWS_EXPORT ModifyEbsDefaultKmsKeyIdResponse : public Ec2Response {
+class QTAWSEC2_EXPORT ModifyEbsDefaultKmsKeyIdResponse : public Ec2Response {
     Q_OBJECT
 
 public:

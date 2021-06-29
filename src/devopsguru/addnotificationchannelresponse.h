@@ -28,7 +28,7 @@ namespace DevOpsGuru {
 
 class AddNotificationChannelResponsePrivate;
 
-class QTAWS_EXPORT AddNotificationChannelResponse : public DevOpsGuruResponse {
+class QTAWSDEVOPSGURU_EXPORT AddNotificationChannelResponse : public DevOpsGuruResponse {
     Q_OBJECT
 
 public:

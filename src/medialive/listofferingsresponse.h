@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class ListOfferingsResponsePrivate;
 
-class QTAWS_EXPORT ListOfferingsResponse : public MediaLiveResponse {
+class QTAWSMEDIALIVE_EXPORT ListOfferingsResponse : public MediaLiveResponse {
     Q_OBJECT
 
 public:

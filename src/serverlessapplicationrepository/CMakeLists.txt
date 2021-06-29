@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSERVERLESSAPPLICATIONREPOSITORY_LIBRARY)
+
 add_library(QtAwsServerlessApplicationRepository
   createapplicationrequest.h
   createapplicationrequest_p.h
@@ -47,6 +49,7 @@ add_library(QtAwsServerlessApplicationRepository
   putapplicationpolicyrequest_p.h
   putapplicationpolicyresponse.h
   putapplicationpolicyresponse_p.h
+  qtawsserverlessapplicationrepositoryglobal.h
   serverlessapplicationrepositoryclient.h
   serverlessapplicationrepositoryclient_p.h
   serverlessapplicationrepositoryrequest.h

@@ -21,6 +21,8 @@
 #define QTAWS_MEDIACONNECTRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsmediaconnectglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace MediaConnect {
 
 class MediaConnectResponsePrivate;
 
-class QTAWS_EXPORT MediaConnectResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSMEDIACONNECT_EXPORT MediaConnectResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawscloudwatcheventsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -131,7 +133,7 @@ class UpdateArchiveResponse;
 class UpdateConnectionRequest;
 class UpdateConnectionResponse;
 
-class QTAWS_EXPORT CloudWatchEventsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCLOUDWATCHEVENTS_EXPORT CloudWatchEventsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

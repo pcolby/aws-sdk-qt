@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class DeleteWarmPoolRequestPrivate;
 
-class QTAWS_EXPORT DeleteWarmPoolRequest : public AutoScalingRequest {
+class QTAWSAUTOSCALING_EXPORT DeleteWarmPoolRequest : public AutoScalingRequest {
 
 public:
     DeleteWarmPoolRequest(const DeleteWarmPoolRequest &other);

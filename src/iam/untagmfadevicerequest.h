@@ -27,7 +27,7 @@ namespace IAM {
 
 class UntagMFADeviceRequestPrivate;
 
-class QTAWS_EXPORT UntagMFADeviceRequest : public IamRequest {
+class QTAWSIAM_EXPORT UntagMFADeviceRequest : public IamRequest {
 
 public:
     UntagMFADeviceRequest(const UntagMFADeviceRequest &other);

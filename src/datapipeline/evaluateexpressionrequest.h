@@ -27,7 +27,7 @@ namespace DataPipeline {
 
 class EvaluateExpressionRequestPrivate;
 
-class QTAWS_EXPORT EvaluateExpressionRequest : public DataPipelineRequest {
+class QTAWSDATAPIPELINE_EXPORT EvaluateExpressionRequest : public DataPipelineRequest {
 
 public:
     EvaluateExpressionRequest(const EvaluateExpressionRequest &other);

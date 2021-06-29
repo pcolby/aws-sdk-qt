@@ -27,7 +27,7 @@ namespace Comprehend {
 
 class ListEntitiesDetectionJobsRequestPrivate;
 
-class QTAWS_EXPORT ListEntitiesDetectionJobsRequest : public ComprehendRequest {
+class QTAWSCOMPREHEND_EXPORT ListEntitiesDetectionJobsRequest : public ComprehendRequest {
 
 public:
     ListEntitiesDetectionJobsRequest(const ListEntitiesDetectionJobsRequest &other);

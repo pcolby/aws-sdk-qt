@@ -27,7 +27,7 @@ namespace NetworkManager {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public NetworkManagerRequest {
+class QTAWSNETWORKMANAGER_EXPORT TagResourceRequest : public NetworkManagerRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

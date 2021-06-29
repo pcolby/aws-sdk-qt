@@ -27,7 +27,7 @@ namespace Macie2 {
 
 class SearchResourcesRequestPrivate;
 
-class QTAWS_EXPORT SearchResourcesRequest : public Macie2Request {
+class QTAWSMACIE2_EXPORT SearchResourcesRequest : public Macie2Request {
 
 public:
     SearchResourcesRequest(const SearchResourcesRequest &other);

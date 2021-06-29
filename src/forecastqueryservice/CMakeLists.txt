@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSFORECASTQUERYSERVICE_LIBRARY)
+
 add_library(QtAwsForecastQueryService
   forecastqueryserviceclient.h
   forecastqueryserviceclient_p.h
@@ -5,6 +7,7 @@ add_library(QtAwsForecastQueryService
   forecastqueryservicerequest_p.h
   forecastqueryserviceresponse.h
   forecastqueryserviceresponse_p.h
+  qtawsforecastqueryserviceglobal.h
   queryforecastrequest.h
   queryforecastrequest_p.h
   queryforecastresponse.h

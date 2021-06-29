@@ -27,7 +27,7 @@ namespace DynamoDB {
 
 class UpdateTimeToLiveRequestPrivate;
 
-class QTAWS_EXPORT UpdateTimeToLiveRequest : public DynamoDBRequest {
+class QTAWSDYNAMODB_EXPORT UpdateTimeToLiveRequest : public DynamoDBRequest {
 
 public:
     UpdateTimeToLiveRequest(const UpdateTimeToLiveRequest &other);

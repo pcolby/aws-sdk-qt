@@ -27,7 +27,7 @@ namespace IoTWireless {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public IoTWirelessRequest {
+class QTAWSIOTWIRELESS_EXPORT ListTagsForResourceRequest : public IoTWirelessRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

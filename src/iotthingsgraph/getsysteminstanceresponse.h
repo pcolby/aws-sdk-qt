@@ -28,7 +28,7 @@ namespace IoTThingsGraph {
 
 class GetSystemInstanceResponsePrivate;
 
-class QTAWS_EXPORT GetSystemInstanceResponse : public IoTThingsGraphResponse {
+class QTAWSIOTTHINGSGRAPH_EXPORT GetSystemInstanceResponse : public IoTThingsGraphResponse {
     Q_OBJECT
 
 public:

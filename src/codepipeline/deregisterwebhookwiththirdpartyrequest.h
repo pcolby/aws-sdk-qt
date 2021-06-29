@@ -27,7 +27,7 @@ namespace CodePipeline {
 
 class DeregisterWebhookWithThirdPartyRequestPrivate;
 
-class QTAWS_EXPORT DeregisterWebhookWithThirdPartyRequest : public CodePipelineRequest {
+class QTAWSCODEPIPELINE_EXPORT DeregisterWebhookWithThirdPartyRequest : public CodePipelineRequest {
 
 public:
     DeregisterWebhookWithThirdPartyRequest(const DeregisterWebhookWithThirdPartyRequest &other);

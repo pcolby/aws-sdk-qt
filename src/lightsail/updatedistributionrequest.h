@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class UpdateDistributionRequestPrivate;
 
-class QTAWS_EXPORT UpdateDistributionRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT UpdateDistributionRequest : public LightsailRequest {
 
 public:
     UpdateDistributionRequest(const UpdateDistributionRequest &other);

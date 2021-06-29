@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawshealthlakeglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace HealthLake {
 
 class HealthLakeRequestPrivate;
 
-class QTAWS_EXPORT HealthLakeRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSHEALTHLAKE_EXPORT HealthLakeRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by HealthLake.

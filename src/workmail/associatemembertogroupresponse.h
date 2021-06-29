@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class AssociateMemberToGroupResponsePrivate;
 
-class QTAWS_EXPORT AssociateMemberToGroupResponse : public WorkMailResponse {
+class QTAWSWORKMAIL_EXPORT AssociateMemberToGroupResponse : public WorkMailResponse {
     Q_OBJECT
 
 public:

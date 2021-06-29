@@ -27,7 +27,7 @@ namespace Route53Domains {
 
 class RenewDomainRequestPrivate;
 
-class QTAWS_EXPORT RenewDomainRequest : public Route53DomainsRequest {
+class QTAWSROUTE53DOMAINS_EXPORT RenewDomainRequest : public Route53DomainsRequest {
 
 public:
     RenewDomainRequest(const RenewDomainRequest &other);

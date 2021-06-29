@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsgreengrassglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -213,7 +215,7 @@ class UpdateSubscriptionDefinitionResponse;
 class UpdateThingRuntimeConfigurationRequest;
 class UpdateThingRuntimeConfigurationResponse;
 
-class QTAWS_EXPORT GreengrassClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSGREENGRASS_EXPORT GreengrassClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

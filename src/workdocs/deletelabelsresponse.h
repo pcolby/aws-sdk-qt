@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class DeleteLabelsResponsePrivate;
 
-class QTAWS_EXPORT DeleteLabelsResponse : public WorkDocsResponse {
+class QTAWSWORKDOCS_EXPORT DeleteLabelsResponse : public WorkDocsResponse {
     Q_OBJECT
 
 public:

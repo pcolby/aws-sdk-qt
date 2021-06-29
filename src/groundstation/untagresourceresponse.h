@@ -28,7 +28,7 @@ namespace GroundStation {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public GroundStationResponse {
+class QTAWSGROUNDSTATION_EXPORT UntagResourceResponse : public GroundStationResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace AppRunner {
 
 class ListServicesResponsePrivate;
 
-class QTAWS_EXPORT ListServicesResponse : public AppRunnerResponse {
+class QTAWSAPPRUNNER_EXPORT ListServicesResponse : public AppRunnerResponse {
     Q_OBJECT
 
 public:

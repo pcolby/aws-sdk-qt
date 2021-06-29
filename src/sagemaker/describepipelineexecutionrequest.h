@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class DescribePipelineExecutionRequestPrivate;
 
-class QTAWS_EXPORT DescribePipelineExecutionRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT DescribePipelineExecutionRequest : public SageMakerRequest {
 
 public:
     DescribePipelineExecutionRequest(const DescribePipelineExecutionRequest &other);

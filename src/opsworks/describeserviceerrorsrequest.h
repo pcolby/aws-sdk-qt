@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class DescribeServiceErrorsRequestPrivate;
 
-class QTAWS_EXPORT DescribeServiceErrorsRequest : public OpsWorksRequest {
+class QTAWSOPSWORKS_EXPORT DescribeServiceErrorsRequest : public OpsWorksRequest {
 
 public:
     DescribeServiceErrorsRequest(const DescribeServiceErrorsRequest &other);

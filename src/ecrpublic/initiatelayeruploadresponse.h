@@ -28,7 +28,7 @@ namespace ECRPublic {
 
 class InitiateLayerUploadResponsePrivate;
 
-class QTAWS_EXPORT InitiateLayerUploadResponse : public ECRPublicResponse {
+class QTAWSECRPUBLIC_EXPORT InitiateLayerUploadResponse : public ECRPublicResponse {
     Q_OBJECT
 
 public:

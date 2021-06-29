@@ -27,7 +27,7 @@ namespace ApiGatewayV2 {
 
 class DeleteStageRequestPrivate;
 
-class QTAWS_EXPORT DeleteStageRequest : public ApiGatewayV2Request {
+class QTAWSAPIGATEWAYV2_EXPORT DeleteStageRequest : public ApiGatewayV2Request {
 
 public:
     DeleteStageRequest(const DeleteStageRequest &other);

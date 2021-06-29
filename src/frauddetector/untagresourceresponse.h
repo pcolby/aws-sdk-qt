@@ -28,7 +28,7 @@ namespace FraudDetector {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public FraudDetectorResponse {
+class QTAWSFRAUDDETECTOR_EXPORT UntagResourceResponse : public FraudDetectorResponse {
     Q_OBJECT
 
 public:

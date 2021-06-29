@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class DisableRadiusResponsePrivate;
 
-class QTAWS_EXPORT DisableRadiusResponse : public DirectoryServiceResponse {
+class QTAWSDIRECTORYSERVICE_EXPORT DisableRadiusResponse : public DirectoryServiceResponse {
     Q_OBJECT
 
 public:

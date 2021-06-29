@@ -28,7 +28,7 @@ namespace DocDB {
 
 class ResetDBClusterParameterGroupResponsePrivate;
 
-class QTAWS_EXPORT ResetDBClusterParameterGroupResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT ResetDBClusterParameterGroupResponse : public DocDBResponse {
     Q_OBJECT
 
 public:

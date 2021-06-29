@@ -28,7 +28,7 @@ namespace IVS {
 
 class GetRecordingConfigurationResponsePrivate;
 
-class QTAWS_EXPORT GetRecordingConfigurationResponse : public IvsResponse {
+class QTAWSIVS_EXPORT GetRecordingConfigurationResponse : public IvsResponse {
     Q_OBJECT
 
 public:

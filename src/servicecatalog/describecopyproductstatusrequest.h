@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class DescribeCopyProductStatusRequestPrivate;
 
-class QTAWS_EXPORT DescribeCopyProductStatusRequest : public ServiceCatalogRequest {
+class QTAWSSERVICECATALOG_EXPORT DescribeCopyProductStatusRequest : public ServiceCatalogRequest {
 
 public:
     DescribeCopyProductStatusRequest(const DescribeCopyProductStatusRequest &other);

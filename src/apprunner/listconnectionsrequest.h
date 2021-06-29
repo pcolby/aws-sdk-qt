@@ -27,7 +27,7 @@ namespace AppRunner {
 
 class ListConnectionsRequestPrivate;
 
-class QTAWS_EXPORT ListConnectionsRequest : public AppRunnerRequest {
+class QTAWSAPPRUNNER_EXPORT ListConnectionsRequest : public AppRunnerRequest {
 
 public:
     ListConnectionsRequest(const ListConnectionsRequest &other);

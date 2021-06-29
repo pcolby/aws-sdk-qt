@@ -27,7 +27,7 @@ namespace GuardDuty {
 
 class GetUsageStatisticsRequestPrivate;
 
-class QTAWS_EXPORT GetUsageStatisticsRequest : public GuardDutyRequest {
+class QTAWSGUARDDUTY_EXPORT GetUsageStatisticsRequest : public GuardDutyRequest {
 
 public:
     GetUsageStatisticsRequest(const GetUsageStatisticsRequest &other);

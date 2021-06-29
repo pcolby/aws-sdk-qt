@@ -28,7 +28,7 @@ namespace MediaPackageVod {
 
 class ConfigureLogsResponsePrivate;
 
-class QTAWS_EXPORT ConfigureLogsResponse : public MediaPackageVodResponse {
+class QTAWSMEDIAPACKAGEVOD_EXPORT ConfigureLogsResponse : public MediaPackageVodResponse {
     Q_OBJECT
 
 public:

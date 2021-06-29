@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class DescribeChapCredentialsRequestPrivate;
 
-class QTAWS_EXPORT DescribeChapCredentialsRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT DescribeChapCredentialsRequest : public StorageGatewayRequest {
 
 public:
     DescribeChapCredentialsRequest(const DescribeChapCredentialsRequest &other);

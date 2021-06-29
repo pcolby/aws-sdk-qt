@@ -145,6 +145,15 @@ int Generator::generate(const QString &serviceFileName,
     render(QSL("doc/module-index.qdoc"), context, docDir, moduleName.toLower() + QSL("-index.qdoc"));
     context.pop();
 
+    // Generate the import/export global file for this service.
+    {
+        const QString globalFileName(QSL("qtaws") + moduleDirName + QSL("global.h"));
+        if (!render(QSL("src/service/qtawsglobal.h"), context, moduleDirPath, globalFileName)) {
+            return -1;
+        }
+        headers.append(globalFileName);
+    }
+
     // Generate ancillary project files.
     context.push();
     headers.sort();

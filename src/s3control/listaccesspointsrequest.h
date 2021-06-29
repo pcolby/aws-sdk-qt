@@ -27,7 +27,7 @@ namespace S3Control {
 
 class ListAccessPointsRequestPrivate;
 
-class QTAWS_EXPORT ListAccessPointsRequest : public S3ControlRequest {
+class QTAWSS3CONTROL_EXPORT ListAccessPointsRequest : public S3ControlRequest {
 
 public:
     ListAccessPointsRequest(const ListAccessPointsRequest &other);

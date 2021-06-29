@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSSMINCIDENTS_LIBRARY)
+
 add_library(QtAwsSSMIncidents
   createreplicationsetrequest.h
   createreplicationsetrequest_p.h
@@ -79,6 +81,7 @@ add_library(QtAwsSSMIncidents
   putresourcepolicyrequest_p.h
   putresourcepolicyresponse.h
   putresourcepolicyresponse_p.h
+  qtawsssmincidentsglobal.h
   ssmincidentsclient.h
   ssmincidentsclient_p.h
   ssmincidentsrequest.h

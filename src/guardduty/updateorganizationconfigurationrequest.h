@@ -27,7 +27,7 @@ namespace GuardDuty {
 
 class UpdateOrganizationConfigurationRequestPrivate;
 
-class QTAWS_EXPORT UpdateOrganizationConfigurationRequest : public GuardDutyRequest {
+class QTAWSGUARDDUTY_EXPORT UpdateOrganizationConfigurationRequest : public GuardDutyRequest {
 
 public:
     UpdateOrganizationConfigurationRequest(const UpdateOrganizationConfigurationRequest &other);

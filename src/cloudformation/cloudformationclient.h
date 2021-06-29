@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawscloudformationglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -139,7 +141,7 @@ class UpdateTerminationProtectionResponse;
 class ValidateTemplateRequest;
 class ValidateTemplateResponse;
 
-class QTAWS_EXPORT CloudFormationClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCLOUDFORMATION_EXPORT CloudFormationClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

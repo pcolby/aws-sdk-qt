@@ -27,7 +27,7 @@ namespace Glue {
 
 class PutWorkflowRunPropertiesRequestPrivate;
 
-class QTAWS_EXPORT PutWorkflowRunPropertiesRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT PutWorkflowRunPropertiesRequest : public GlueRequest {
 
 public:
     PutWorkflowRunPropertiesRequest(const PutWorkflowRunPropertiesRequest &other);

@@ -28,7 +28,7 @@ namespace GlobalAccelerator {
 
 class DescribeEndpointGroupResponsePrivate;
 
-class QTAWS_EXPORT DescribeEndpointGroupResponse : public GlobalAcceleratorResponse {
+class QTAWSGLOBALACCELERATOR_EXPORT DescribeEndpointGroupResponse : public GlobalAcceleratorResponse {
     Q_OBJECT
 
 public:

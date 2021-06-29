@@ -21,6 +21,8 @@
 #define QTAWS_SSMCONTACTSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsssmcontactsglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace SSMContacts {
 
 class SSMContactsResponsePrivate;
 
-class QTAWS_EXPORT SSMContactsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSSMCONTACTS_EXPORT SSMContactsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

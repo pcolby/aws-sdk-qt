@@ -27,7 +27,7 @@ namespace WAF {
 
 class DeleteXssMatchSetRequestPrivate;
 
-class QTAWS_EXPORT DeleteXssMatchSetRequest : public WafRequest {
+class QTAWSWAF_EXPORT DeleteXssMatchSetRequest : public WafRequest {
 
 public:
     DeleteXssMatchSetRequest(const DeleteXssMatchSetRequest &other);

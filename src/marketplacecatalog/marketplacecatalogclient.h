@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsmarketplacecatalogglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -41,7 +43,7 @@ class ListEntitiesResponse;
 class StartChangeSetRequest;
 class StartChangeSetResponse;
 
-class QTAWS_EXPORT MarketplaceCatalogClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSMARKETPLACECATALOG_EXPORT MarketplaceCatalogClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

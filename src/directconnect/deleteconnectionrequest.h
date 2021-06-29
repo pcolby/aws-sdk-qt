@@ -27,7 +27,7 @@ namespace DirectConnect {
 
 class DeleteConnectionRequestPrivate;
 
-class QTAWS_EXPORT DeleteConnectionRequest : public DirectConnectRequest {
+class QTAWSDIRECTCONNECT_EXPORT DeleteConnectionRequest : public DirectConnectRequest {
 
 public:
     DeleteConnectionRequest(const DeleteConnectionRequest &other);

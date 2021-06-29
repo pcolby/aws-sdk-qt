@@ -28,7 +28,7 @@ namespace NetworkManager {
 
 class GetTransitGatewayConnectPeerAssociationsResponsePrivate;
 
-class QTAWS_EXPORT GetTransitGatewayConnectPeerAssociationsResponse : public NetworkManagerResponse {
+class QTAWSNETWORKMANAGER_EXPORT GetTransitGatewayConnectPeerAssociationsResponse : public NetworkManagerResponse {
     Q_OBJECT
 
 public:

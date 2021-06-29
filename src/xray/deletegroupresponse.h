@@ -28,7 +28,7 @@ namespace XRay {
 
 class DeleteGroupResponsePrivate;
 
-class QTAWS_EXPORT DeleteGroupResponse : public XRayResponse {
+class QTAWSXRAY_EXPORT DeleteGroupResponse : public XRayResponse {
     Q_OBJECT
 
 public:

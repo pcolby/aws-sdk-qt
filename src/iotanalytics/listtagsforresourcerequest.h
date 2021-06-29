@@ -27,7 +27,7 @@ namespace IoTAnalytics {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public IoTAnalyticsRequest {
+class QTAWSIOTANALYTICS_EXPORT ListTagsForResourceRequest : public IoTAnalyticsRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

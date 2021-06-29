@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class DescribeRecordResponsePrivate;
 
-class QTAWS_EXPORT DescribeRecordResponse : public ServiceCatalogResponse {
+class QTAWSSERVICECATALOG_EXPORT DescribeRecordResponse : public ServiceCatalogResponse {
     Q_OBJECT
 
 public:

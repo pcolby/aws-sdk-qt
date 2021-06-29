@@ -21,6 +21,8 @@
 #define QTAWS_LOOKOUTEQUIPMENTRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawslookoutequipmentglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace LookoutEquipment {
 
 class LookoutEquipmentResponsePrivate;
 
-class QTAWS_EXPORT LookoutEquipmentResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSLOOKOUTEQUIPMENT_EXPORT LookoutEquipmentResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

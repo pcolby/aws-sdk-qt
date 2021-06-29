@@ -28,7 +28,7 @@ namespace Lambda {
 
 class InvokeAsyncResponsePrivate;
 
-class QTAWS_EXPORT InvokeAsyncResponse : public LambdaResponse {
+class QTAWSLAMBDA_EXPORT InvokeAsyncResponse : public LambdaResponse {
     Q_OBJECT
 
 public:

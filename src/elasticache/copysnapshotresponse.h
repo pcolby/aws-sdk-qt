@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class CopySnapshotResponsePrivate;
 
-class QTAWS_EXPORT CopySnapshotResponse : public ElastiCacheResponse {
+class QTAWSELASTICACHE_EXPORT CopySnapshotResponse : public ElastiCacheResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace ApiGatewayV2 {
 
 class CreateDeploymentRequestPrivate;
 
-class QTAWS_EXPORT CreateDeploymentRequest : public ApiGatewayV2Request {
+class QTAWSAPIGATEWAYV2_EXPORT CreateDeploymentRequest : public ApiGatewayV2Request {
 
 public:
     CreateDeploymentRequest(const CreateDeploymentRequest &other);

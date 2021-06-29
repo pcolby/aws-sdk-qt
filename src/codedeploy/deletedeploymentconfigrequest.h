@@ -27,7 +27,7 @@ namespace CodeDeploy {
 
 class DeleteDeploymentConfigRequestPrivate;
 
-class QTAWS_EXPORT DeleteDeploymentConfigRequest : public CodeDeployRequest {
+class QTAWSCODEDEPLOY_EXPORT DeleteDeploymentConfigRequest : public CodeDeployRequest {
 
 public:
     DeleteDeploymentConfigRequest(const DeleteDeploymentConfigRequest &other);

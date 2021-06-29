@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class GetAlarmsRequestPrivate;
 
-class QTAWS_EXPORT GetAlarmsRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT GetAlarmsRequest : public LightsailRequest {
 
 public:
     GetAlarmsRequest(const GetAlarmsRequest &other);

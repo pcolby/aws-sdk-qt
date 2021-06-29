@@ -27,7 +27,7 @@ namespace APIGateway {
 
 class DeleteMethodResponseRequestPrivate;
 
-class QTAWS_EXPORT DeleteMethodResponseRequest : public APIGatewayRequest {
+class QTAWSAPIGATEWAY_EXPORT DeleteMethodResponseRequest : public APIGatewayRequest {
 
 public:
     DeleteMethodResponseRequest(const DeleteMethodResponseRequest &other);

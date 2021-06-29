@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class StopStackSetOperationResponsePrivate;
 
-class QTAWS_EXPORT StopStackSetOperationResponse : public CloudFormationResponse {
+class QTAWSCLOUDFORMATION_EXPORT StopStackSetOperationResponse : public CloudFormationResponse {
     Q_OBJECT
 
 public:

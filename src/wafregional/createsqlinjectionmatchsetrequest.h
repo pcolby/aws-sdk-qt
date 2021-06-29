@@ -27,7 +27,7 @@ namespace WAFRegional {
 
 class CreateSqlInjectionMatchSetRequestPrivate;
 
-class QTAWS_EXPORT CreateSqlInjectionMatchSetRequest : public WAFRegionalRequest {
+class QTAWSWAFREGIONAL_EXPORT CreateSqlInjectionMatchSetRequest : public WAFRegionalRequest {
 
 public:
     CreateSqlInjectionMatchSetRequest(const CreateSqlInjectionMatchSetRequest &other);

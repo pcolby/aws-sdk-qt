@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class BatchGetProjectsResponsePrivate;
 
-class QTAWS_EXPORT BatchGetProjectsResponse : public CodeBuildResponse {
+class QTAWSCODEBUILD_EXPORT BatchGetProjectsResponse : public CodeBuildResponse {
     Q_OBJECT
 
 public:

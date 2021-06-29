@@ -27,7 +27,7 @@ namespace SecretsManager {
 
 class StopReplicationToReplicaRequestPrivate;
 
-class QTAWS_EXPORT StopReplicationToReplicaRequest : public SecretsManagerRequest {
+class QTAWSSECRETSMANAGER_EXPORT StopReplicationToReplicaRequest : public SecretsManagerRequest {
 
 public:
     StopReplicationToReplicaRequest(const StopReplicationToReplicaRequest &other);

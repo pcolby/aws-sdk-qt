@@ -27,7 +27,7 @@ namespace DataPipeline {
 
 class SetStatusRequestPrivate;
 
-class QTAWS_EXPORT SetStatusRequest : public DataPipelineRequest {
+class QTAWSDATAPIPELINE_EXPORT SetStatusRequest : public DataPipelineRequest {
 
 public:
     SetStatusRequest(const SetStatusRequest &other);

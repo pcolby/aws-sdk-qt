@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsssmcontactsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -83,7 +85,7 @@ class UpdateContactResponse;
 class UpdateContactChannelRequest;
 class UpdateContactChannelResponse;
 
-class QTAWS_EXPORT SSMContactsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSSMCONTACTS_EXPORT SSMContactsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace AuditManager {
 
 class BatchCreateDelegationByAssessmentResponsePrivate;
 
-class QTAWS_EXPORT BatchCreateDelegationByAssessmentResponse : public AuditManagerResponse {
+class QTAWSAUDITMANAGER_EXPORT BatchCreateDelegationByAssessmentResponse : public AuditManagerResponse {
     Q_OBJECT
 
 public:

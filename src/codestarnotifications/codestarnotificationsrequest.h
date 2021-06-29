@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawscodestarnotificationsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace CodeStarNotifications {
 
 class CodeStarNotificationsRequestPrivate;
 
-class QTAWS_EXPORT CodeStarNotificationsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCODESTARNOTIFICATIONS_EXPORT CodeStarNotificationsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CodeStarNotifications.

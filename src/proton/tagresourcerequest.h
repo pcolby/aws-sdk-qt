@@ -27,7 +27,7 @@ namespace Proton {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public ProtonRequest {
+class QTAWSPROTON_EXPORT TagResourceRequest : public ProtonRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class ListManagedSchemaArnsResponsePrivate;
 
-class QTAWS_EXPORT ListManagedSchemaArnsResponse : public CloudDirectoryResponse {
+class QTAWSCLOUDDIRECTORY_EXPORT ListManagedSchemaArnsResponse : public CloudDirectoryResponse {
     Q_OBJECT
 
 public:

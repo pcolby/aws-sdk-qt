@@ -27,7 +27,7 @@ namespace Athena {
 
 class ListNamedQueriesRequestPrivate;
 
-class QTAWS_EXPORT ListNamedQueriesRequest : public AthenaRequest {
+class QTAWSATHENA_EXPORT ListNamedQueriesRequest : public AthenaRequest {
 
 public:
     ListNamedQueriesRequest(const ListNamedQueriesRequest &other);

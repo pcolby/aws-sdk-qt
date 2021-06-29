@@ -28,7 +28,7 @@ namespace mgn {
 
 class DisconnectFromServiceResponsePrivate;
 
-class QTAWS_EXPORT DisconnectFromServiceResponse : public mgnResponse {
+class QTAWSMGN_EXPORT DisconnectFromServiceResponse : public mgnResponse {
     Q_OBJECT
 
 public:

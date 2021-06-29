@@ -28,7 +28,7 @@ namespace SSOOIDC {
 
 class StartDeviceAuthorizationResponsePrivate;
 
-class QTAWS_EXPORT StartDeviceAuthorizationResponse : public SsooidcResponse {
+class QTAWSSSOOIDC_EXPORT StartDeviceAuthorizationResponse : public SsooidcResponse {
     Q_OBJECT
 
 public:

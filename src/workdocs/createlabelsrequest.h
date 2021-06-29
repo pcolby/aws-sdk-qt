@@ -27,7 +27,7 @@ namespace WorkDocs {
 
 class CreateLabelsRequestPrivate;
 
-class QTAWS_EXPORT CreateLabelsRequest : public WorkDocsRequest {
+class QTAWSWORKDOCS_EXPORT CreateLabelsRequest : public WorkDocsRequest {
 
 public:
     CreateLabelsRequest(const CreateLabelsRequest &other);

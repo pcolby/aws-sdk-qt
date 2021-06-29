@@ -28,7 +28,7 @@ namespace FSx {
 
 class DescribeBackupsResponsePrivate;
 
-class QTAWS_EXPORT DescribeBackupsResponse : public FSxResponse {
+class QTAWSFSX_EXPORT DescribeBackupsResponse : public FSxResponse {
     Q_OBJECT
 
 public:

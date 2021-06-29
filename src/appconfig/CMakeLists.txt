@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSAPPCONFIG_LIBRARY)
+
 add_library(QtAwsAppConfig
   appconfigclient.h
   appconfigclient_p.h
@@ -101,6 +103,7 @@ add_library(QtAwsAppConfig
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsappconfigglobal.h
   startdeploymentrequest.h
   startdeploymentrequest_p.h
   startdeploymentresponse.h

@@ -27,7 +27,7 @@ namespace Snowball {
 
 class DescribeAddressesRequestPrivate;
 
-class QTAWS_EXPORT DescribeAddressesRequest : public SnowballRequest {
+class QTAWSSNOWBALL_EXPORT DescribeAddressesRequest : public SnowballRequest {
 
 public:
     DescribeAddressesRequest(const DescribeAddressesRequest &other);

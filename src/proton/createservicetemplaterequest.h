@@ -27,7 +27,7 @@ namespace Proton {
 
 class CreateServiceTemplateRequestPrivate;
 
-class QTAWS_EXPORT CreateServiceTemplateRequest : public ProtonRequest {
+class QTAWSPROTON_EXPORT CreateServiceTemplateRequest : public ProtonRequest {
 
 public:
     CreateServiceTemplateRequest(const CreateServiceTemplateRequest &other);

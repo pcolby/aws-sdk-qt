@@ -27,7 +27,7 @@ namespace SSM {
 
 class DescribeInstancePatchStatesForPatchGroupRequestPrivate;
 
-class QTAWS_EXPORT DescribeInstancePatchStatesForPatchGroupRequest : public SsmRequest {
+class QTAWSSSM_EXPORT DescribeInstancePatchStatesForPatchGroupRequest : public SsmRequest {
 
 public:
     DescribeInstancePatchStatesForPatchGroupRequest(const DescribeInstancePatchStatesForPatchGroupRequest &other);

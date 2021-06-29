@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsbatchglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Batch {
 
 class BatchRequestPrivate;
 
-class QTAWS_EXPORT BatchRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSBATCH_EXPORT BatchRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Batch.

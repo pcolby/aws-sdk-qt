@@ -27,7 +27,7 @@ namespace Macie2 {
 
 class DeleteCustomDataIdentifierRequestPrivate;
 
-class QTAWS_EXPORT DeleteCustomDataIdentifierRequest : public Macie2Request {
+class QTAWSMACIE2_EXPORT DeleteCustomDataIdentifierRequest : public Macie2Request {
 
 public:
     DeleteCustomDataIdentifierRequest(const DeleteCustomDataIdentifierRequest &other);

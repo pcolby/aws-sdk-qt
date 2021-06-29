@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class DeleteInstanceResponsePrivate;
 
-class QTAWS_EXPORT DeleteInstanceResponse : public OpsWorksResponse {
+class QTAWSOPSWORKS_EXPORT DeleteInstanceResponse : public OpsWorksResponse {
     Q_OBJECT
 
 public:

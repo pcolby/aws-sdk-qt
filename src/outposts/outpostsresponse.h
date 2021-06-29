@@ -21,6 +21,8 @@
 #define QTAWS_OUTPOSTSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsoutpostsglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Outposts {
 
 class OutpostsResponsePrivate;
 
-class QTAWS_EXPORT OutpostsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSOUTPOSTS_EXPORT OutpostsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

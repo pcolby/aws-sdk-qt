@@ -27,7 +27,7 @@ namespace WorkSpaces {
 
 class DeleteTagsRequestPrivate;
 
-class QTAWS_EXPORT DeleteTagsRequest : public WorkSpacesRequest {
+class QTAWSWORKSPACES_EXPORT DeleteTagsRequest : public WorkSpacesRequest {
 
 public:
     DeleteTagsRequest(const DeleteTagsRequest &other);

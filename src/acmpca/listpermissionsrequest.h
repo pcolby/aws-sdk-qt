@@ -27,7 +27,7 @@ namespace ACMPCA {
 
 class ListPermissionsRequestPrivate;
 
-class QTAWS_EXPORT ListPermissionsRequest : public AcmpcaRequest {
+class QTAWSACMPCA_EXPORT ListPermissionsRequest : public AcmpcaRequest {
 
 public:
     ListPermissionsRequest(const ListPermissionsRequest &other);

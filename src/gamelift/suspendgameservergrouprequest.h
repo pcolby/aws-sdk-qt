@@ -27,7 +27,7 @@ namespace GameLift {
 
 class SuspendGameServerGroupRequestPrivate;
 
-class QTAWS_EXPORT SuspendGameServerGroupRequest : public GameLiftRequest {
+class QTAWSGAMELIFT_EXPORT SuspendGameServerGroupRequest : public GameLiftRequest {
 
 public:
     SuspendGameServerGroupRequest(const SuspendGameServerGroupRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawslexmodelsv2global.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -141,7 +143,7 @@ class UpdateSlotResponse;
 class UpdateSlotTypeRequest;
 class UpdateSlotTypeResponse;
 
-class QTAWS_EXPORT LexModelsV2Client : public QtAws::Core::AwsAbstractClient {
+class QTAWSLEXMODELSV2_EXPORT LexModelsV2Client : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

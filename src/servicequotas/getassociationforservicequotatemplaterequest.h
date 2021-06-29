@@ -27,7 +27,7 @@ namespace ServiceQuotas {
 
 class GetAssociationForServiceQuotaTemplateRequestPrivate;
 
-class QTAWS_EXPORT GetAssociationForServiceQuotaTemplateRequest : public ServiceQuotasRequest {
+class QTAWSSERVICEQUOTAS_EXPORT GetAssociationForServiceQuotaTemplateRequest : public ServiceQuotasRequest {
 
 public:
     GetAssociationForServiceQuotaTemplateRequest(const GetAssociationForServiceQuotaTemplateRequest &other);

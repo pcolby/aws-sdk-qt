@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsmedialiveglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace MediaLive {
 
 class MediaLiveRequestPrivate;
 
-class QTAWS_EXPORT MediaLiveRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSMEDIALIVE_EXPORT MediaLiveRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by MediaLive.

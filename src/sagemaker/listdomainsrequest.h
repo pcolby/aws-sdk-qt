@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class ListDomainsRequestPrivate;
 
-class QTAWS_EXPORT ListDomainsRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT ListDomainsRequest : public SageMakerRequest {
 
 public:
     ListDomainsRequest(const ListDomainsRequest &other);

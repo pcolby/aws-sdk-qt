@@ -27,7 +27,7 @@ namespace Translate {
 
 class ListParallelDataRequestPrivate;
 
-class QTAWS_EXPORT ListParallelDataRequest : public TranslateRequest {
+class QTAWSTRANSLATE_EXPORT ListParallelDataRequest : public TranslateRequest {
 
 public:
     ListParallelDataRequest(const ListParallelDataRequest &other);

@@ -28,7 +28,7 @@ namespace MQ {
 
 class DescribeBrokerInstanceOptionsResponsePrivate;
 
-class QTAWS_EXPORT DescribeBrokerInstanceOptionsResponse : public MqResponse {
+class QTAWSMQ_EXPORT DescribeBrokerInstanceOptionsResponse : public MqResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace ElastiCache {
 
 class FailoverGlobalReplicationGroupRequestPrivate;
 
-class QTAWS_EXPORT FailoverGlobalReplicationGroupRequest : public ElastiCacheRequest {
+class QTAWSELASTICACHE_EXPORT FailoverGlobalReplicationGroupRequest : public ElastiCacheRequest {
 
 public:
     FailoverGlobalReplicationGroupRequest(const FailoverGlobalReplicationGroupRequest &other);

@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class ListTemplateVersionsRequestPrivate;
 
-class QTAWS_EXPORT ListTemplateVersionsRequest : public QuickSightRequest {
+class QTAWSQUICKSIGHT_EXPORT ListTemplateVersionsRequest : public QuickSightRequest {
 
 public:
     ListTemplateVersionsRequest(const ListTemplateVersionsRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsappregistryglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -69,7 +71,7 @@ class UpdateApplicationResponse;
 class UpdateAttributeGroupRequest;
 class UpdateAttributeGroupResponse;
 
-class QTAWS_EXPORT AppRegistryClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSAPPREGISTRY_EXPORT AppRegistryClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

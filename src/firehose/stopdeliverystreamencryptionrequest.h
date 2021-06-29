@@ -27,7 +27,7 @@ namespace Firehose {
 
 class StopDeliveryStreamEncryptionRequestPrivate;
 
-class QTAWS_EXPORT StopDeliveryStreamEncryptionRequest : public FirehoseRequest {
+class QTAWSFIREHOSE_EXPORT StopDeliveryStreamEncryptionRequest : public FirehoseRequest {
 
 public:
     StopDeliveryStreamEncryptionRequest(const StopDeliveryStreamEncryptionRequest &other);

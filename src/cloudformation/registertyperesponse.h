@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class RegisterTypeResponsePrivate;
 
-class QTAWS_EXPORT RegisterTypeResponse : public CloudFormationResponse {
+class QTAWSCLOUDFORMATION_EXPORT RegisterTypeResponse : public CloudFormationResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace AppStream {
 
 class CreateDirectoryConfigRequestPrivate;
 
-class QTAWS_EXPORT CreateDirectoryConfigRequest : public AppStreamRequest {
+class QTAWSAPPSTREAM_EXPORT CreateDirectoryConfigRequest : public AppStreamRequest {
 
 public:
     CreateDirectoryConfigRequest(const CreateDirectoryConfigRequest &other);

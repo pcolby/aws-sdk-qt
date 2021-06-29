@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class StopInstanceRequestPrivate;
 
-class QTAWS_EXPORT StopInstanceRequest : public OpsWorksRequest {
+class QTAWSOPSWORKS_EXPORT StopInstanceRequest : public OpsWorksRequest {
 
 public:
     StopInstanceRequest(const StopInstanceRequest &other);

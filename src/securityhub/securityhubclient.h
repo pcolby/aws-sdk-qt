@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawssecurityhubglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -131,7 +133,7 @@ class UpdateSecurityHubConfigurationResponse;
 class UpdateStandardsControlRequest;
 class UpdateStandardsControlResponse;
 
-class QTAWS_EXPORT SecurityHubClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSECURITYHUB_EXPORT SecurityHubClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

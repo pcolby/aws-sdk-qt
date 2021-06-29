@@ -27,7 +27,7 @@ namespace ElastiCache {
 
 class DescribeCacheParametersRequestPrivate;
 
-class QTAWS_EXPORT DescribeCacheParametersRequest : public ElastiCacheRequest {
+class QTAWSELASTICACHE_EXPORT DescribeCacheParametersRequest : public ElastiCacheRequest {
 
 public:
     DescribeCacheParametersRequest(const DescribeCacheParametersRequest &other);

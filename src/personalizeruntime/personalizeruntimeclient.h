@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawspersonalizeruntimeglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -33,7 +35,7 @@ class GetPersonalizedRankingResponse;
 class GetRecommendationsRequest;
 class GetRecommendationsResponse;
 
-class QTAWS_EXPORT PersonalizeRuntimeClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSPERSONALIZERUNTIME_EXPORT PersonalizeRuntimeClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

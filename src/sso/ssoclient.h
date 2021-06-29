@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsssoglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -37,7 +39,7 @@ class ListAccountsResponse;
 class LogoutRequest;
 class LogoutResponse;
 
-class QTAWS_EXPORT SsoClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSSO_EXPORT SsoClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

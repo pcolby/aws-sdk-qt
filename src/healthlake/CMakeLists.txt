@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSHEALTHLAKE_LIBRARY)
+
 add_library(QtAwsHealthLake
   createfhirdatastorerequest.h
   createfhirdatastorerequest_p.h
@@ -29,6 +31,7 @@ add_library(QtAwsHealthLake
   listfhirdatastoresrequest_p.h
   listfhirdatastoresresponse.h
   listfhirdatastoresresponse_p.h
+  qtawshealthlakeglobal.h
   startfhirexportjobrequest.h
   startfhirexportjobrequest_p.h
   startfhirexportjobresponse.h

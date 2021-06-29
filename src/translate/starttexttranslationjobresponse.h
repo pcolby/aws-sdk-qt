@@ -28,7 +28,7 @@ namespace Translate {
 
 class StartTextTranslationJobResponsePrivate;
 
-class QTAWS_EXPORT StartTextTranslationJobResponse : public TranslateResponse {
+class QTAWSTRANSLATE_EXPORT StartTextTranslationJobResponse : public TranslateResponse {
     Q_OBJECT
 
 public:

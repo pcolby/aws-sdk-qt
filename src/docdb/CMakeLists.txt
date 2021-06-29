@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSDOCDB_LIBRARY)
+
 add_library(QtAwsDocDB
   addsourceidentifiertosubscriptionrequest.h
   addsourceidentifiertosubscriptionrequest_p.h
@@ -181,6 +183,7 @@ add_library(QtAwsDocDB
   modifyglobalclusterrequest_p.h
   modifyglobalclusterresponse.h
   modifyglobalclusterresponse_p.h
+  qtawsdocdbglobal.h
   rebootdbinstancerequest.h
   rebootdbinstancerequest_p.h
   rebootdbinstanceresponse.h

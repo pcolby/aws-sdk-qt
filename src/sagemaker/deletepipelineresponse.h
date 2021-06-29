@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class DeletePipelineResponsePrivate;
 
-class QTAWS_EXPORT DeletePipelineResponse : public SageMakerResponse {
+class QTAWSSAGEMAKER_EXPORT DeletePipelineResponse : public SageMakerResponse {
     Q_OBJECT
 
 public:

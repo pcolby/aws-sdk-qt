@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public CloudDirectoryRequest {
+class QTAWSCLOUDDIRECTORY_EXPORT UntagResourceRequest : public CloudDirectoryRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

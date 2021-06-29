@@ -27,7 +27,7 @@ namespace SSM {
 
 class ListOpsItemEventsRequestPrivate;
 
-class QTAWS_EXPORT ListOpsItemEventsRequest : public SsmRequest {
+class QTAWSSSM_EXPORT ListOpsItemEventsRequest : public SsmRequest {
 
 public:
     ListOpsItemEventsRequest(const ListOpsItemEventsRequest &other);

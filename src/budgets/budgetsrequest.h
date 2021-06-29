@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsbudgetsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Budgets {
 
 class BudgetsRequestPrivate;
 
-class QTAWS_EXPORT BudgetsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSBUDGETS_EXPORT BudgetsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Budgets.

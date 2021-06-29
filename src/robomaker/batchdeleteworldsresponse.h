@@ -28,7 +28,7 @@ namespace RoboMaker {
 
 class BatchDeleteWorldsResponsePrivate;
 
-class QTAWS_EXPORT BatchDeleteWorldsResponse : public RoboMakerResponse {
+class QTAWSROBOMAKER_EXPORT BatchDeleteWorldsResponse : public RoboMakerResponse {
     Q_OBJECT
 
 public:

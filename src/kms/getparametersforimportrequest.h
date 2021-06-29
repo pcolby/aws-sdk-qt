@@ -27,7 +27,7 @@ namespace KMS {
 
 class GetParametersForImportRequestPrivate;
 
-class QTAWS_EXPORT GetParametersForImportRequest : public KmsRequest {
+class QTAWSKMS_EXPORT GetParametersForImportRequest : public KmsRequest {
 
 public:
     GetParametersForImportRequest(const GetParametersForImportRequest &other);

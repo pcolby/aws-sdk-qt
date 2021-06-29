@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class DescribeMergeConflictsResponsePrivate;
 
-class QTAWS_EXPORT DescribeMergeConflictsResponse : public CodeCommitResponse {
+class QTAWSCODECOMMIT_EXPORT DescribeMergeConflictsResponse : public CodeCommitResponse {
     Q_OBJECT
 
 public:

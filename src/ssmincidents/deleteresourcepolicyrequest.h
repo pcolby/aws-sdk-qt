@@ -27,7 +27,7 @@ namespace SSMIncidents {
 
 class DeleteResourcePolicyRequestPrivate;
 
-class QTAWS_EXPORT DeleteResourcePolicyRequest : public SSMIncidentsRequest {
+class QTAWSSSMINCIDENTS_EXPORT DeleteResourcePolicyRequest : public SSMIncidentsRequest {
 
 public:
     DeleteResourcePolicyRequest(const DeleteResourcePolicyRequest &other);

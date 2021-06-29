@@ -27,7 +27,7 @@ namespace LicenseManager {
 
 class ListLicenseVersionsRequestPrivate;
 
-class QTAWS_EXPORT ListLicenseVersionsRequest : public LicenseManagerRequest {
+class QTAWSLICENSEMANAGER_EXPORT ListLicenseVersionsRequest : public LicenseManagerRequest {
 
 public:
     ListLicenseVersionsRequest(const ListLicenseVersionsRequest &other);

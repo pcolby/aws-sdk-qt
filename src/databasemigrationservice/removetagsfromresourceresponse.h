@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class RemoveTagsFromResourceResponsePrivate;
 
-class QTAWS_EXPORT RemoveTagsFromResourceResponse : public DatabaseMigrationServiceResponse {
+class QTAWSDATABASEMIGRATIONSERVICE_EXPORT RemoveTagsFromResourceResponse : public DatabaseMigrationServiceResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class PutConfigurationAggregatorRequestPrivate;
 
-class QTAWS_EXPORT PutConfigurationAggregatorRequest : public ConfigServiceRequest {
+class QTAWSCONFIGSERVICE_EXPORT PutConfigurationAggregatorRequest : public ConfigServiceRequest {
 
 public:
     PutConfigurationAggregatorRequest(const PutConfigurationAggregatorRequest &other);

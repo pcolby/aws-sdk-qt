@@ -27,7 +27,7 @@ namespace Lambda {
 
 class DeleteCodeSigningConfigRequestPrivate;
 
-class QTAWS_EXPORT DeleteCodeSigningConfigRequest : public LambdaRequest {
+class QTAWSLAMBDA_EXPORT DeleteCodeSigningConfigRequest : public LambdaRequest {
 
 public:
     DeleteCodeSigningConfigRequest(const DeleteCodeSigningConfigRequest &other);

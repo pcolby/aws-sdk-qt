@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class GetRelationalDatabaseEventsResponsePrivate;
 
-class QTAWS_EXPORT GetRelationalDatabaseEventsResponse : public LightsailResponse {
+class QTAWSLIGHTSAIL_EXPORT GetRelationalDatabaseEventsResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

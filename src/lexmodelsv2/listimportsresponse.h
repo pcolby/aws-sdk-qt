@@ -28,7 +28,7 @@ namespace LexModelsV2 {
 
 class ListImportsResponsePrivate;
 
-class QTAWS_EXPORT ListImportsResponse : public LexModelsV2Response {
+class QTAWSLEXMODELSV2_EXPORT ListImportsResponse : public LexModelsV2Response {
     Q_OBJECT
 
 public:

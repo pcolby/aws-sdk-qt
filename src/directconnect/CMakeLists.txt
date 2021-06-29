@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSDIRECTCONNECT_LIBRARY)
+
 add_library(QtAwsDirectConnect
   acceptdirectconnectgatewayassociationproposalrequest.h
   acceptdirectconnectgatewayassociationproposalrequest_p.h
@@ -209,6 +211,7 @@ add_library(QtAwsDirectConnect
   listvirtualinterfacetesthistoryrequest_p.h
   listvirtualinterfacetesthistoryresponse.h
   listvirtualinterfacetesthistoryresponse_p.h
+  qtawsdirectconnectglobal.h
   startbgpfailovertestrequest.h
   startbgpfailovertestrequest_p.h
   startbgpfailovertestresponse.h

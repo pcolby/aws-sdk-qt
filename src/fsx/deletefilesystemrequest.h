@@ -27,7 +27,7 @@ namespace FSx {
 
 class DeleteFileSystemRequestPrivate;
 
-class QTAWS_EXPORT DeleteFileSystemRequest : public FSxRequest {
+class QTAWSFSX_EXPORT DeleteFileSystemRequest : public FSxRequest {
 
 public:
     DeleteFileSystemRequest(const DeleteFileSystemRequest &other);

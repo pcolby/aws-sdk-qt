@@ -27,7 +27,7 @@ namespace ElasticLoadBalancing {
 
 class DeregisterInstancesFromLoadBalancerRequestPrivate;
 
-class QTAWS_EXPORT DeregisterInstancesFromLoadBalancerRequest : public ElasticLoadBalancingRequest {
+class QTAWSELASTICLOADBALANCING_EXPORT DeregisterInstancesFromLoadBalancerRequest : public ElasticLoadBalancingRequest {
 
 public:
     DeregisterInstancesFromLoadBalancerRequest(const DeregisterInstancesFromLoadBalancerRequest &other);

@@ -27,7 +27,7 @@ namespace RDS {
 
 class CreateEventSubscriptionRequestPrivate;
 
-class QTAWS_EXPORT CreateEventSubscriptionRequest : public RdsRequest {
+class QTAWSRDS_EXPORT CreateEventSubscriptionRequest : public RdsRequest {
 
 public:
     CreateEventSubscriptionRequest(const CreateEventSubscriptionRequest &other);

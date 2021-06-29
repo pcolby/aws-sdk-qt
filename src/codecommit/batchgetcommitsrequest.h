@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class BatchGetCommitsRequestPrivate;
 
-class QTAWS_EXPORT BatchGetCommitsRequest : public CodeCommitRequest {
+class QTAWSCODECOMMIT_EXPORT BatchGetCommitsRequest : public CodeCommitRequest {
 
 public:
     BatchGetCommitsRequest(const BatchGetCommitsRequest &other);

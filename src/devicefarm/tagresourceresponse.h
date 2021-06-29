@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public DeviceFarmResponse {
+class QTAWSDEVICEFARM_EXPORT TagResourceResponse : public DeviceFarmResponse {
     Q_OBJECT
 
 public:

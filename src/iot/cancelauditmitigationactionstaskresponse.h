@@ -28,7 +28,7 @@ namespace IoT {
 
 class CancelAuditMitigationActionsTaskResponsePrivate;
 
-class QTAWS_EXPORT CancelAuditMitigationActionsTaskResponse : public IoTResponse {
+class QTAWSIOT_EXPORT CancelAuditMitigationActionsTaskResponse : public IoTResponse {
     Q_OBJECT
 
 public:

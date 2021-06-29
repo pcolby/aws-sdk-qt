@@ -20,7 +20,7 @@
 #ifndef AWSSIGNATUREV0_H
 #define AWSSIGNATUREV0_H
 
-#include "qtawsglobal.h"
+#include "qtawscoreglobal.h"
 #include "awsabstractsignature.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Core {
 
 class AwsSignatureV0Private;
 
-class QTAWS_EXPORT AwsSignatureV0 : public AwsAbstractSignature {
+class QTAWSCORE_EXPORT AwsSignatureV0 : public AwsAbstractSignature {
 
 public:
     AwsSignatureV0();

@@ -28,7 +28,7 @@ namespace ECR {
 
 class PutImageTagMutabilityResponsePrivate;
 
-class QTAWS_EXPORT PutImageTagMutabilityResponse : public EcrResponse {
+class QTAWSECR_EXPORT PutImageTagMutabilityResponse : public EcrResponse {
     Q_OBJECT
 
 public:

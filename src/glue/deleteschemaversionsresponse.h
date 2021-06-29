@@ -28,7 +28,7 @@ namespace Glue {
 
 class DeleteSchemaVersionsResponsePrivate;
 
-class QTAWS_EXPORT DeleteSchemaVersionsResponse : public GlueResponse {
+class QTAWSGLUE_EXPORT DeleteSchemaVersionsResponse : public GlueResponse {
     Q_OBJECT
 
 public:

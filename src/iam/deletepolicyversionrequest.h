@@ -27,7 +27,7 @@ namespace IAM {
 
 class DeletePolicyVersionRequestPrivate;
 
-class QTAWS_EXPORT DeletePolicyVersionRequest : public IamRequest {
+class QTAWSIAM_EXPORT DeletePolicyVersionRequest : public IamRequest {
 
 public:
     DeletePolicyVersionRequest(const DeletePolicyVersionRequest &other);

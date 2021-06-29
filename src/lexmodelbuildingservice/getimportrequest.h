@@ -27,7 +27,7 @@ namespace LexModelBuildingService {
 
 class GetImportRequestPrivate;
 
-class QTAWS_EXPORT GetImportRequest : public LexModelBuildingServiceRequest {
+class QTAWSLEXMODELBUILDINGSERVICE_EXPORT GetImportRequest : public LexModelBuildingServiceRequest {
 
 public:
     GetImportRequest(const GetImportRequest &other);

@@ -21,6 +21,8 @@
 #define QTAWS_MEDIACONVERTRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsmediaconvertglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace MediaConvert {
 
 class MediaConvertResponsePrivate;
 
-class QTAWS_EXPORT MediaConvertResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSMEDIACONVERT_EXPORT MediaConvertResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

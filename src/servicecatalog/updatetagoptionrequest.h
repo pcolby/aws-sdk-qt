@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class UpdateTagOptionRequestPrivate;
 
-class QTAWS_EXPORT UpdateTagOptionRequest : public ServiceCatalogRequest {
+class QTAWSSERVICECATALOG_EXPORT UpdateTagOptionRequest : public ServiceCatalogRequest {
 
 public:
     UpdateTagOptionRequest(const UpdateTagOptionRequest &other);

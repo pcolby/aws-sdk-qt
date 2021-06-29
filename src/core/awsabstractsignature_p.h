@@ -20,7 +20,7 @@
 #ifndef AWSABSTRACTSIGNATURE_P_H
 #define AWSABSTRACTSIGNATURE_P_H
 
-#include "qtawsglobal.h"
+#include "qtawscoreglobal.h"
 
 #include <QNetworkAccessManager>
 #include <QUrlQuery>

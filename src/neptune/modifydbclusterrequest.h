@@ -27,7 +27,7 @@ namespace Neptune {
 
 class ModifyDBClusterRequestPrivate;
 
-class QTAWS_EXPORT ModifyDBClusterRequest : public NeptuneRequest {
+class QTAWSNEPTUNE_EXPORT ModifyDBClusterRequest : public NeptuneRequest {
 
 public:
     ModifyDBClusterRequest(const ModifyDBClusterRequest &other);

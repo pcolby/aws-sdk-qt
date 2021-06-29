@@ -27,7 +27,7 @@ namespace SSOAdmin {
 
 class DeletePermissionSetRequestPrivate;
 
-class QTAWS_EXPORT DeletePermissionSetRequest : public SSOAdminRequest {
+class QTAWSSSOADMIN_EXPORT DeletePermissionSetRequest : public SSOAdminRequest {
 
 public:
     DeletePermissionSetRequest(const DeletePermissionSetRequest &other);

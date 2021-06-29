@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSLEXRUNTIMESERVICE_LIBRARY)
+
 add_library(QtAwsLexRuntimeService
   deletesessionrequest.h
   deletesessionrequest_p.h
@@ -25,6 +27,7 @@ add_library(QtAwsLexRuntimeService
   putsessionrequest_p.h
   putsessionresponse.h
   putsessionresponse_p.h
+  qtawslexruntimeserviceglobal.h
   deletesessionrequest.cpp
   deletesessionresponse.cpp
   getsessionrequest.cpp

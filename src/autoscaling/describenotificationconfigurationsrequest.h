@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class DescribeNotificationConfigurationsRequestPrivate;
 
-class QTAWS_EXPORT DescribeNotificationConfigurationsRequest : public AutoScalingRequest {
+class QTAWSAUTOSCALING_EXPORT DescribeNotificationConfigurationsRequest : public AutoScalingRequest {
 
 public:
     DescribeNotificationConfigurationsRequest(const DescribeNotificationConfigurationsRequest &other);

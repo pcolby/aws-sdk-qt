@@ -27,7 +27,7 @@ namespace CognitoSync {
 
 class RegisterDeviceRequestPrivate;
 
-class QTAWS_EXPORT RegisterDeviceRequest : public CognitoSyncRequest {
+class QTAWSCOGNITOSYNC_EXPORT RegisterDeviceRequest : public CognitoSyncRequest {
 
 public:
     RegisterDeviceRequest(const RegisterDeviceRequest &other);

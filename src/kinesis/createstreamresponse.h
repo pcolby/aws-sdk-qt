@@ -28,7 +28,7 @@ namespace Kinesis {
 
 class CreateStreamResponsePrivate;
 
-class QTAWS_EXPORT CreateStreamResponse : public KinesisResponse {
+class QTAWSKINESIS_EXPORT CreateStreamResponse : public KinesisResponse {
     Q_OBJECT
 
 public:

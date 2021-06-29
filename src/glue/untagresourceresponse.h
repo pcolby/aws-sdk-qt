@@ -28,7 +28,7 @@ namespace Glue {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public GlueResponse {
+class QTAWSGLUE_EXPORT UntagResourceResponse : public GlueResponse {
     Q_OBJECT
 
 public:

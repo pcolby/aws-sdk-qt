@@ -27,7 +27,7 @@ namespace ElasticLoadBalancingv2 {
 
 class AddTagsRequestPrivate;
 
-class QTAWS_EXPORT AddTagsRequest : public ElasticLoadBalancingv2Request {
+class QTAWSELASTICLOADBALANCINGV2_EXPORT AddTagsRequest : public ElasticLoadBalancingv2Request {
 
 public:
     AddTagsRequest(const AddTagsRequest &other);

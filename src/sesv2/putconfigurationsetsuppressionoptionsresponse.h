@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class PutConfigurationSetSuppressionOptionsResponsePrivate;
 
-class QTAWS_EXPORT PutConfigurationSetSuppressionOptionsResponse : public Sesv2Response {
+class QTAWSSESV2_EXPORT PutConfigurationSetSuppressionOptionsResponse : public Sesv2Response {
     Q_OBJECT
 
 public:

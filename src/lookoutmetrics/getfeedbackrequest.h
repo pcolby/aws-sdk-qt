@@ -27,7 +27,7 @@ namespace LookoutMetrics {
 
 class GetFeedbackRequestPrivate;
 
-class QTAWS_EXPORT GetFeedbackRequest : public LookoutMetricsRequest {
+class QTAWSLOOKOUTMETRICS_EXPORT GetFeedbackRequest : public LookoutMetricsRequest {
 
 public:
     GetFeedbackRequest(const GetFeedbackRequest &other);

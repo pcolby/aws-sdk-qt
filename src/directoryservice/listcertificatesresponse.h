@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class ListCertificatesResponsePrivate;
 
-class QTAWS_EXPORT ListCertificatesResponse : public DirectoryServiceResponse {
+class QTAWSDIRECTORYSERVICE_EXPORT ListCertificatesResponse : public DirectoryServiceResponse {
     Q_OBJECT
 
 public:

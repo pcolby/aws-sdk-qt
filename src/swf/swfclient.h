@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsswfglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -103,7 +105,7 @@ class UndeprecateWorkflowTypeResponse;
 class UntagResourceRequest;
 class UntagResourceResponse;
 
-class QTAWS_EXPORT SwfClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSWF_EXPORT SwfClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

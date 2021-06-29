@@ -28,7 +28,7 @@ namespace CloudWatch {
 
 class DisableAlarmActionsResponsePrivate;
 
-class QTAWS_EXPORT DisableAlarmActionsResponse : public CloudWatchResponse {
+class QTAWSCLOUDWATCH_EXPORT DisableAlarmActionsResponse : public CloudWatchResponse {
     Q_OBJECT
 
 public:

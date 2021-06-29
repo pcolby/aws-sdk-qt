@@ -27,7 +27,7 @@ namespace Pricing {
 
 class DescribeServicesRequestPrivate;
 
-class QTAWS_EXPORT DescribeServicesRequest : public PricingRequest {
+class QTAWSPRICING_EXPORT DescribeServicesRequest : public PricingRequest {
 
 public:
     DescribeServicesRequest(const DescribeServicesRequest &other);

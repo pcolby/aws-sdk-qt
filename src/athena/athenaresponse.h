@@ -21,6 +21,8 @@
 #define QTAWS_ATHENARESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsathenaglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Athena {
 
 class AthenaResponsePrivate;
 
-class QTAWS_EXPORT AthenaResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSATHENA_EXPORT AthenaResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

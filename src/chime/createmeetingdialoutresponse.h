@@ -28,7 +28,7 @@ namespace Chime {
 
 class CreateMeetingDialOutResponsePrivate;
 
-class QTAWS_EXPORT CreateMeetingDialOutResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT CreateMeetingDialOutResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace IoTSiteWise {
 
 class ListDashboardsResponsePrivate;
 
-class QTAWS_EXPORT ListDashboardsResponse : public IoTSiteWiseResponse {
+class QTAWSIOTSITEWISE_EXPORT ListDashboardsResponse : public IoTSiteWiseResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace WorkDocs {
 
 class RemoveResourcePermissionRequestPrivate;
 
-class QTAWS_EXPORT RemoveResourcePermissionRequest : public WorkDocsRequest {
+class QTAWSWORKDOCS_EXPORT RemoveResourcePermissionRequest : public WorkDocsRequest {
 
 public:
     RemoveResourcePermissionRequest(const RemoveResourcePermissionRequest &other);

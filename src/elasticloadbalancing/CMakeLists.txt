@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSELASTICLOADBALANCING_LIBRARY)
+
 add_library(QtAwsElasticLoadBalancing
   addtagsrequest.h
   addtagsrequest_p.h
@@ -101,6 +103,7 @@ add_library(QtAwsElasticLoadBalancing
   modifyloadbalancerattributesrequest_p.h
   modifyloadbalancerattributesresponse.h
   modifyloadbalancerattributesresponse_p.h
+  qtawselasticloadbalancingglobal.h
   registerinstanceswithloadbalancerrequest.h
   registerinstanceswithloadbalancerrequest_p.h
   registerinstanceswithloadbalancerresponse.h

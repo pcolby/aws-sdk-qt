@@ -27,7 +27,7 @@ namespace WellArchitected {
 
 class ListWorkloadsRequestPrivate;
 
-class QTAWS_EXPORT ListWorkloadsRequest : public WellArchitectedRequest {
+class QTAWSWELLARCHITECTED_EXPORT ListWorkloadsRequest : public WellArchitectedRequest {
 
 public:
     ListWorkloadsRequest(const ListWorkloadsRequest &other);

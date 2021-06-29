@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class GetSearchSuggestionsRequestPrivate;
 
-class QTAWS_EXPORT GetSearchSuggestionsRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT GetSearchSuggestionsRequest : public SageMakerRequest {
 
 public:
     GetSearchSuggestionsRequest(const GetSearchSuggestionsRequest &other);

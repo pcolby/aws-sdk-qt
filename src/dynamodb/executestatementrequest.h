@@ -27,7 +27,7 @@ namespace DynamoDB {
 
 class ExecuteStatementRequestPrivate;
 
-class QTAWS_EXPORT ExecuteStatementRequest : public DynamoDBRequest {
+class QTAWSDYNAMODB_EXPORT ExecuteStatementRequest : public DynamoDBRequest {
 
 public:
     ExecuteStatementRequest(const ExecuteStatementRequest &other);

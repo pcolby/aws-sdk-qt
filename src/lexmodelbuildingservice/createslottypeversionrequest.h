@@ -27,7 +27,7 @@ namespace LexModelBuildingService {
 
 class CreateSlotTypeVersionRequestPrivate;
 
-class QTAWS_EXPORT CreateSlotTypeVersionRequest : public LexModelBuildingServiceRequest {
+class QTAWSLEXMODELBUILDINGSERVICE_EXPORT CreateSlotTypeVersionRequest : public LexModelBuildingServiceRequest {
 
 public:
     CreateSlotTypeVersionRequest(const CreateSlotTypeVersionRequest &other);

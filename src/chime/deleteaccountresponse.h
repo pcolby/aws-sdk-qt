@@ -28,7 +28,7 @@ namespace Chime {
 
 class DeleteAccountResponsePrivate;
 
-class QTAWS_EXPORT DeleteAccountResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT DeleteAccountResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

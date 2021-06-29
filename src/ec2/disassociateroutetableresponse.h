@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DisassociateRouteTableResponsePrivate;
 
-class QTAWS_EXPORT DisassociateRouteTableResponse : public Ec2Response {
+class QTAWSEC2_EXPORT DisassociateRouteTableResponse : public Ec2Response {
     Q_OBJECT
 
 public:

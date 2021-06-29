@@ -28,7 +28,7 @@ namespace SSMContacts {
 
 class GetContactPolicyResponsePrivate;
 
-class QTAWS_EXPORT GetContactPolicyResponse : public SSMContactsResponse {
+class QTAWSSSMCONTACTS_EXPORT GetContactPolicyResponse : public SSMContactsResponse {
     Q_OBJECT
 
 public:

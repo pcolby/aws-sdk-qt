@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class DescribeLoadBasedAutoScalingRequestPrivate;
 
-class QTAWS_EXPORT DescribeLoadBasedAutoScalingRequest : public OpsWorksRequest {
+class QTAWSOPSWORKS_EXPORT DescribeLoadBasedAutoScalingRequest : public OpsWorksRequest {
 
 public:
     DescribeLoadBasedAutoScalingRequest(const DescribeLoadBasedAutoScalingRequest &other);

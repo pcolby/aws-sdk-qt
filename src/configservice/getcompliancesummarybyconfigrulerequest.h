@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class GetComplianceSummaryByConfigRuleRequestPrivate;
 
-class QTAWS_EXPORT GetComplianceSummaryByConfigRuleRequest : public ConfigServiceRequest {
+class QTAWSCONFIGSERVICE_EXPORT GetComplianceSummaryByConfigRuleRequest : public ConfigServiceRequest {
 
 public:
     GetComplianceSummaryByConfigRuleRequest(const GetComplianceSummaryByConfigRuleRequest &other);

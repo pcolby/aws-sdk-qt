@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class DeleteFunctionDefinitionRequestPrivate;
 
-class QTAWS_EXPORT DeleteFunctionDefinitionRequest : public GreengrassRequest {
+class QTAWSGREENGRASS_EXPORT DeleteFunctionDefinitionRequest : public GreengrassRequest {
 
 public:
     DeleteFunctionDefinitionRequest(const DeleteFunctionDefinitionRequest &other);

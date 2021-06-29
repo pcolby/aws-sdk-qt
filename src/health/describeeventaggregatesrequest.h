@@ -27,7 +27,7 @@ namespace Health {
 
 class DescribeEventAggregatesRequestPrivate;
 
-class QTAWS_EXPORT DescribeEventAggregatesRequest : public HealthRequest {
+class QTAWSHEALTH_EXPORT DescribeEventAggregatesRequest : public HealthRequest {
 
 public:
     DescribeEventAggregatesRequest(const DescribeEventAggregatesRequest &other);

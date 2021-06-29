@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSAPPINTEGRATIONSSERVICE_LIBRARY)
+
 add_library(QtAwsAppIntegrationsService
   appintegrationsserviceclient.h
   appintegrationsserviceclient_p.h
@@ -29,6 +31,7 @@ add_library(QtAwsAppIntegrationsService
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsappintegrationsserviceglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

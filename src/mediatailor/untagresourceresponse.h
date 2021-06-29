@@ -28,7 +28,7 @@ namespace MediaTailor {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public MediaTailorResponse {
+class QTAWSMEDIATAILOR_EXPORT UntagResourceResponse : public MediaTailorResponse {
     Q_OBJECT
 
 public:

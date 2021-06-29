@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class DeleteTagsRequestPrivate;
 
-class QTAWS_EXPORT DeleteTagsRequest : public AutoScalingRequest {
+class QTAWSAUTOSCALING_EXPORT DeleteTagsRequest : public AutoScalingRequest {
 
 public:
     DeleteTagsRequest(const DeleteTagsRequest &other);

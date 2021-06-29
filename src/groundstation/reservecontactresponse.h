@@ -28,7 +28,7 @@ namespace GroundStation {
 
 class ReserveContactResponsePrivate;
 
-class QTAWS_EXPORT ReserveContactResponse : public GroundStationResponse {
+class QTAWSGROUNDSTATION_EXPORT ReserveContactResponse : public GroundStationResponse {
     Q_OBJECT
 
 public:

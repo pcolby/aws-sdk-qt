@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class DeleteMembersResponsePrivate;
 
-class QTAWS_EXPORT DeleteMembersResponse : public GuardDutyResponse {
+class QTAWSGUARDDUTY_EXPORT DeleteMembersResponse : public GuardDutyResponse {
     Q_OBJECT
 
 public:

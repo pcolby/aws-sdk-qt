@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class StopInstanceRequestPrivate;
 
-class QTAWS_EXPORT StopInstanceRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT StopInstanceRequest : public LightsailRequest {
 
 public:
     StopInstanceRequest(const StopInstanceRequest &other);

@@ -27,7 +27,7 @@ namespace AlexaForBusiness {
 
 class RegisterAVSDeviceRequestPrivate;
 
-class QTAWS_EXPORT RegisterAVSDeviceRequest : public AlexaForBusinessRequest {
+class QTAWSALEXAFORBUSINESS_EXPORT RegisterAVSDeviceRequest : public AlexaForBusinessRequest {
 
 public:
     RegisterAVSDeviceRequest(const RegisterAVSDeviceRequest &other);

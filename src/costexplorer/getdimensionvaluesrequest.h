@@ -27,7 +27,7 @@ namespace CostExplorer {
 
 class GetDimensionValuesRequestPrivate;
 
-class QTAWS_EXPORT GetDimensionValuesRequest : public CostExplorerRequest {
+class QTAWSCOSTEXPLORER_EXPORT GetDimensionValuesRequest : public CostExplorerRequest {
 
 public:
     GetDimensionValuesRequest(const GetDimensionValuesRequest &other);

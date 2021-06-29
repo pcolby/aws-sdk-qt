@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class DisableMetricsCollectionResponsePrivate;
 
-class QTAWS_EXPORT DisableMetricsCollectionResponse : public AutoScalingResponse {
+class QTAWSAUTOSCALING_EXPORT DisableMetricsCollectionResponse : public AutoScalingResponse {
     Q_OBJECT
 
 public:

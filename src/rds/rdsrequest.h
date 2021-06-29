@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsrdsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace RDS {
 
 class RdsRequestPrivate;
 
-class QTAWS_EXPORT RdsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSRDS_EXPORT RdsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by RDS.

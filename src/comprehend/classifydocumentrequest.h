@@ -27,7 +27,7 @@ namespace Comprehend {
 
 class ClassifyDocumentRequestPrivate;
 
-class QTAWS_EXPORT ClassifyDocumentRequest : public ComprehendRequest {
+class QTAWSCOMPREHEND_EXPORT ClassifyDocumentRequest : public ComprehendRequest {
 
 public:
     ClassifyDocumentRequest(const ClassifyDocumentRequest &other);

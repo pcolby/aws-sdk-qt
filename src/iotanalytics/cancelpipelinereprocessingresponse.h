@@ -28,7 +28,7 @@ namespace IoTAnalytics {
 
 class CancelPipelineReprocessingResponsePrivate;
 
-class QTAWS_EXPORT CancelPipelineReprocessingResponse : public IoTAnalyticsResponse {
+class QTAWSIOTANALYTICS_EXPORT CancelPipelineReprocessingResponse : public IoTAnalyticsResponse {
     Q_OBJECT
 
 public:

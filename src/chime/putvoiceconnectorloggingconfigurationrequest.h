@@ -27,7 +27,7 @@ namespace Chime {
 
 class PutVoiceConnectorLoggingConfigurationRequestPrivate;
 
-class QTAWS_EXPORT PutVoiceConnectorLoggingConfigurationRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT PutVoiceConnectorLoggingConfigurationRequest : public ChimeRequest {
 
 public:
     PutVoiceConnectorLoggingConfigurationRequest(const PutVoiceConnectorLoggingConfigurationRequest &other);

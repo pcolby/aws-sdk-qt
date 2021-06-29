@@ -28,7 +28,7 @@ namespace MediaStore {
 
 class PutMetricPolicyResponsePrivate;
 
-class QTAWS_EXPORT PutMetricPolicyResponse : public MediaStoreResponse {
+class QTAWSMEDIASTORE_EXPORT PutMetricPolicyResponse : public MediaStoreResponse {
     Q_OBJECT
 
 public:

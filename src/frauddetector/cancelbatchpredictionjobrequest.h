@@ -27,7 +27,7 @@ namespace FraudDetector {
 
 class CancelBatchPredictionJobRequestPrivate;
 
-class QTAWS_EXPORT CancelBatchPredictionJobRequest : public FraudDetectorRequest {
+class QTAWSFRAUDDETECTOR_EXPORT CancelBatchPredictionJobRequest : public FraudDetectorRequest {
 
 public:
     CancelBatchPredictionJobRequest(const CancelBatchPredictionJobRequest &other);

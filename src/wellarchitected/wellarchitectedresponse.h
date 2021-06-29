@@ -21,6 +21,8 @@
 #define QTAWS_WELLARCHITECTEDRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawswellarchitectedglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace WellArchitected {
 
 class WellArchitectedResponsePrivate;
 
-class QTAWS_EXPORT WellArchitectedResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSWELLARCHITECTED_EXPORT WellArchitectedResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

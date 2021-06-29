@@ -28,7 +28,7 @@ namespace AppConfig {
 
 class ValidateConfigurationResponsePrivate;
 
-class QTAWS_EXPORT ValidateConfigurationResponse : public AppConfigResponse {
+class QTAWSAPPCONFIG_EXPORT ValidateConfigurationResponse : public AppConfigResponse {
     Q_OBJECT
 
 public:

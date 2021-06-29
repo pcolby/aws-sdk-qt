@@ -27,7 +27,7 @@ namespace GlobalAccelerator {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public GlobalAcceleratorRequest {
+class QTAWSGLOBALACCELERATOR_EXPORT UntagResourceRequest : public GlobalAcceleratorRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

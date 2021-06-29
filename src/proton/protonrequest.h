@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsprotonglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Proton {
 
 class ProtonRequestPrivate;
 
-class QTAWS_EXPORT ProtonRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSPROTON_EXPORT ProtonRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Proton.

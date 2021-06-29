@@ -27,7 +27,7 @@ namespace MachineLearning {
 
 class DescribeTagsRequestPrivate;
 
-class QTAWS_EXPORT DescribeTagsRequest : public MachineLearningRequest {
+class QTAWSMACHINELEARNING_EXPORT DescribeTagsRequest : public MachineLearningRequest {
 
 public:
     DescribeTagsRequest(const DescribeTagsRequest &other);

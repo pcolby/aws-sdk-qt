@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class UpdateImageRequestPrivate;
 
-class QTAWS_EXPORT UpdateImageRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT UpdateImageRequest : public SageMakerRequest {
 
 public:
     UpdateImageRequest(const UpdateImageRequest &other);

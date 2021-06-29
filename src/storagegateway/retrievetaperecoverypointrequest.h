@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class RetrieveTapeRecoveryPointRequestPrivate;
 
-class QTAWS_EXPORT RetrieveTapeRecoveryPointRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT RetrieveTapeRecoveryPointRequest : public StorageGatewayRequest {
 
 public:
     RetrieveTapeRecoveryPointRequest(const RetrieveTapeRecoveryPointRequest &other);

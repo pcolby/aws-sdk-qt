@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSSMCONTACTS_LIBRARY)
+
 add_library(QtAwsSSMContacts
   acceptpagerequest.h
   acceptpagerequest_p.h
@@ -79,6 +81,7 @@ add_library(QtAwsSSMContacts
   putcontactpolicyrequest_p.h
   putcontactpolicyresponse.h
   putcontactpolicyresponse_p.h
+  qtawsssmcontactsglobal.h
   sendactivationcoderequest.h
   sendactivationcoderequest_p.h
   sendactivationcoderesponse.h

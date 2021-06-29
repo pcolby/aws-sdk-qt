@@ -27,7 +27,7 @@ namespace IAM {
 
 class ListRoleTagsRequestPrivate;
 
-class QTAWS_EXPORT ListRoleTagsRequest : public IamRequest {
+class QTAWSIAM_EXPORT ListRoleTagsRequest : public IamRequest {
 
 public:
     ListRoleTagsRequest(const ListRoleTagsRequest &other);

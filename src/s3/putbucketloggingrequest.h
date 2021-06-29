@@ -27,7 +27,7 @@ namespace S3 {
 
 class PutBucketLoggingRequestPrivate;
 
-class QTAWS_EXPORT PutBucketLoggingRequest : public S3Request {
+class QTAWSS3_EXPORT PutBucketLoggingRequest : public S3Request {
 
 public:
     PutBucketLoggingRequest(const PutBucketLoggingRequest &other);

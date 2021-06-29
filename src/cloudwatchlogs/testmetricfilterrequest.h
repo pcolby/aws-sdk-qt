@@ -27,7 +27,7 @@ namespace CloudWatchLogs {
 
 class TestMetricFilterRequestPrivate;
 
-class QTAWS_EXPORT TestMetricFilterRequest : public CloudWatchLogsRequest {
+class QTAWSCLOUDWATCHLOGS_EXPORT TestMetricFilterRequest : public CloudWatchLogsRequest {
 
 public:
     TestMetricFilterRequest(const TestMetricFilterRequest &other);

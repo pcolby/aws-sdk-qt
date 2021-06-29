@@ -21,6 +21,8 @@
 #define QTAWS_KMSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawskmsglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace KMS {
 
 class KmsResponsePrivate;
 
-class QTAWS_EXPORT KmsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSKMS_EXPORT KmsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

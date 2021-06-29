@@ -28,7 +28,7 @@ namespace WorkLink {
 
 class ListWebsiteCertificateAuthoritiesResponsePrivate;
 
-class QTAWS_EXPORT ListWebsiteCertificateAuthoritiesResponse : public WorkLinkResponse {
+class QTAWSWORKLINK_EXPORT ListWebsiteCertificateAuthoritiesResponse : public WorkLinkResponse {
     Q_OBJECT
 
 public:

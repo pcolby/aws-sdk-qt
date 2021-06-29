@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ModifyClientVpnEndpointRequestPrivate;
 
-class QTAWS_EXPORT ModifyClientVpnEndpointRequest : public Ec2Request {
+class QTAWSEC2_EXPORT ModifyClientVpnEndpointRequest : public Ec2Request {
 
 public:
     ModifyClientVpnEndpointRequest(const ModifyClientVpnEndpointRequest &other);

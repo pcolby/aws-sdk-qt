@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawssecretsmanagerglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -73,7 +75,7 @@ class UpdateSecretVersionStageResponse;
 class ValidateResourcePolicyRequest;
 class ValidateResourcePolicyResponse;
 
-class QTAWS_EXPORT SecretsManagerClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSECRETSMANAGER_EXPORT SecretsManagerClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

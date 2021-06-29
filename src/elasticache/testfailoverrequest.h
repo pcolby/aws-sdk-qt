@@ -27,7 +27,7 @@ namespace ElastiCache {
 
 class TestFailoverRequestPrivate;
 
-class QTAWS_EXPORT TestFailoverRequest : public ElastiCacheRequest {
+class QTAWSELASTICACHE_EXPORT TestFailoverRequest : public ElastiCacheRequest {
 
 public:
     TestFailoverRequest(const TestFailoverRequest &other);

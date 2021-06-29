@@ -27,7 +27,7 @@ namespace DLM {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public DlmRequest {
+class QTAWSDLM_EXPORT UntagResourceRequest : public DlmRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

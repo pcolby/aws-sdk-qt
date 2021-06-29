@@ -27,7 +27,7 @@ namespace MTurk {
 
 class GetAssignmentRequestPrivate;
 
-class QTAWS_EXPORT GetAssignmentRequest : public MTurkRequest {
+class QTAWSMTURK_EXPORT GetAssignmentRequest : public MTurkRequest {
 
 public:
     GetAssignmentRequest(const GetAssignmentRequest &other);

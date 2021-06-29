@@ -28,7 +28,7 @@ namespace AppMesh {
 
 class ListMeshesResponsePrivate;
 
-class QTAWS_EXPORT ListMeshesResponse : public AppMeshResponse {
+class QTAWSAPPMESH_EXPORT ListMeshesResponse : public AppMeshResponse {
     Q_OBJECT
 
 public:

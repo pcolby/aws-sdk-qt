@@ -28,7 +28,7 @@ namespace ManagedBlockchain {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public ManagedBlockchainResponse {
+class QTAWSMANAGEDBLOCKCHAIN_EXPORT UntagResourceResponse : public ManagedBlockchainResponse {
     Q_OBJECT
 
 public:

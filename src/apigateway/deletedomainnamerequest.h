@@ -27,7 +27,7 @@ namespace APIGateway {
 
 class DeleteDomainNameRequestPrivate;
 
-class QTAWS_EXPORT DeleteDomainNameRequest : public APIGatewayRequest {
+class QTAWSAPIGATEWAY_EXPORT DeleteDomainNameRequest : public APIGatewayRequest {
 
 public:
     DeleteDomainNameRequest(const DeleteDomainNameRequest &other);

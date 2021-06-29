@@ -27,7 +27,7 @@ namespace MediaPackage {
 
 class UpdateChannelRequestPrivate;
 
-class QTAWS_EXPORT UpdateChannelRequest : public MediaPackageRequest {
+class QTAWSMEDIAPACKAGE_EXPORT UpdateChannelRequest : public MediaPackageRequest {
 
 public:
     UpdateChannelRequest(const UpdateChannelRequest &other);

@@ -28,7 +28,7 @@ namespace EC2 {
 
 class UnassignIpv6AddressesResponsePrivate;
 
-class QTAWS_EXPORT UnassignIpv6AddressesResponse : public Ec2Response {
+class QTAWSEC2_EXPORT UnassignIpv6AddressesResponse : public Ec2Response {
     Q_OBJECT
 
 public:

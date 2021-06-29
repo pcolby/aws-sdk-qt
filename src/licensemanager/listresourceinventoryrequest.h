@@ -27,7 +27,7 @@ namespace LicenseManager {
 
 class ListResourceInventoryRequestPrivate;
 
-class QTAWS_EXPORT ListResourceInventoryRequest : public LicenseManagerRequest {
+class QTAWSLICENSEMANAGER_EXPORT ListResourceInventoryRequest : public LicenseManagerRequest {
 
 public:
     ListResourceInventoryRequest(const ListResourceInventoryRequest &other);

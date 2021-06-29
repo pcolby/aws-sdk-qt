@@ -27,7 +27,7 @@ namespace Backup {
 
 class DescribeRecoveryPointRequestPrivate;
 
-class QTAWS_EXPORT DescribeRecoveryPointRequest : public BackupRequest {
+class QTAWSBACKUP_EXPORT DescribeRecoveryPointRequest : public BackupRequest {
 
 public:
     DescribeRecoveryPointRequest(const DescribeRecoveryPointRequest &other);

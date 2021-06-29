@@ -28,7 +28,7 @@ namespace LicenseManager {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public LicenseManagerResponse {
+class QTAWSLICENSEMANAGER_EXPORT TagResourceResponse : public LicenseManagerResponse {
     Q_OBJECT
 
 public:

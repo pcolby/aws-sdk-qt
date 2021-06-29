@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsrekognitionglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Rekognition {
 
 class RekognitionRequestPrivate;
 
-class QTAWS_EXPORT RekognitionRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSREKOGNITION_EXPORT RekognitionRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Rekognition.

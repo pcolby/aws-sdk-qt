@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class AssociateDeviceWithNetworkProfileResponsePrivate;
 
-class QTAWS_EXPORT AssociateDeviceWithNetworkProfileResponse : public AlexaForBusinessResponse {
+class QTAWSALEXAFORBUSINESS_EXPORT AssociateDeviceWithNetworkProfileResponse : public AlexaForBusinessResponse {
     Q_OBJECT
 
 public:

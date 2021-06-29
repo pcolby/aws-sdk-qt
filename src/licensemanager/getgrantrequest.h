@@ -27,7 +27,7 @@ namespace LicenseManager {
 
 class GetGrantRequestPrivate;
 
-class QTAWS_EXPORT GetGrantRequest : public LicenseManagerRequest {
+class QTAWSLICENSEMANAGER_EXPORT GetGrantRequest : public LicenseManagerRequest {
 
 public:
     GetGrantRequest(const GetGrantRequest &other);

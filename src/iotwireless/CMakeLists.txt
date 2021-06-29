@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSIOTWIRELESS_LIBRARY)
+
 add_library(QtAwsIoTWireless
   associateawsaccountwithpartneraccountrequest.h
   associateawsaccountwithpartneraccountrequest_p.h
@@ -189,6 +191,7 @@ add_library(QtAwsIoTWireless
   putresourceloglevelrequest_p.h
   putresourceloglevelresponse.h
   putresourceloglevelresponse_p.h
+  qtawsiotwirelessglobal.h
   resetallresourceloglevelsrequest.h
   resetallresourceloglevelsrequest_p.h
   resetallresourceloglevelsresponse.h

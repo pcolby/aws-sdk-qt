@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 
 class DescribeLoadBalancersResponsePrivate;
 
-class QTAWS_EXPORT DescribeLoadBalancersResponse : public ElasticLoadBalancingv2Response {
+class QTAWSELASTICLOADBALANCINGV2_EXPORT DescribeLoadBalancersResponse : public ElasticLoadBalancingv2Response {
     Q_OBJECT
 
 public:

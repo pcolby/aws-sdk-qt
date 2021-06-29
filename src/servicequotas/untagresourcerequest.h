@@ -27,7 +27,7 @@ namespace ServiceQuotas {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public ServiceQuotasRequest {
+class QTAWSSERVICEQUOTAS_EXPORT UntagResourceRequest : public ServiceQuotasRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

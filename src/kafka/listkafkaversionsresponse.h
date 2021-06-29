@@ -28,7 +28,7 @@ namespace Kafka {
 
 class ListKafkaVersionsResponsePrivate;
 
-class QTAWS_EXPORT ListKafkaVersionsResponse : public KafkaResponse {
+class QTAWSKAFKA_EXPORT ListKafkaVersionsResponse : public KafkaResponse {
     Q_OBJECT
 
 public:

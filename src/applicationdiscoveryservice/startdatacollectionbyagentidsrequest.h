@@ -27,7 +27,7 @@ namespace ApplicationDiscoveryService {
 
 class StartDataCollectionByAgentIdsRequestPrivate;
 
-class QTAWS_EXPORT StartDataCollectionByAgentIdsRequest : public ApplicationDiscoveryServiceRequest {
+class QTAWSAPPLICATIONDISCOVERYSERVICE_EXPORT StartDataCollectionByAgentIdsRequest : public ApplicationDiscoveryServiceRequest {
 
 public:
     StartDataCollectionByAgentIdsRequest(const StartDataCollectionByAgentIdsRequest &other);

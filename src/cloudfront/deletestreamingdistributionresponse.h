@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class DeleteStreamingDistributionResponsePrivate;
 
-class QTAWS_EXPORT DeleteStreamingDistributionResponse : public CloudFrontResponse {
+class QTAWSCLOUDFRONT_EXPORT DeleteStreamingDistributionResponse : public CloudFrontResponse {
     Q_OBJECT
 
 public:

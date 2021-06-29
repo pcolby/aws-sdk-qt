@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSFSX_LIBRARY)
+
 add_library(QtAwsFSx
   associatefilesystemaliasesrequest.h
   associatefilesystemaliasesrequest_p.h
@@ -65,6 +67,7 @@ add_library(QtAwsFSx
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsfsxglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

@@ -27,7 +27,7 @@ namespace CognitoIdentityProvider {
 
 class SetUserMFAPreferenceRequestPrivate;
 
-class QTAWS_EXPORT SetUserMFAPreferenceRequest : public CognitoIdentityProviderRequest {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT SetUserMFAPreferenceRequest : public CognitoIdentityProviderRequest {
 
 public:
     SetUserMFAPreferenceRequest(const SetUserMFAPreferenceRequest &other);

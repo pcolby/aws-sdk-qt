@@ -27,7 +27,7 @@ namespace ElasticLoadBalancingv2 {
 
 class DeleteTargetGroupRequestPrivate;
 
-class QTAWS_EXPORT DeleteTargetGroupRequest : public ElasticLoadBalancingv2Request {
+class QTAWSELASTICLOADBALANCINGV2_EXPORT DeleteTargetGroupRequest : public ElasticLoadBalancingv2Request {
 
 public:
     DeleteTargetGroupRequest(const DeleteTargetGroupRequest &other);

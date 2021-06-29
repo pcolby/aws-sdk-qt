@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawstimestreamwriteglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -59,7 +61,7 @@ class UpdateTableResponse;
 class WriteRecordsRequest;
 class WriteRecordsResponse;
 
-class QTAWS_EXPORT TimestreamWriteClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSTIMESTREAMWRITE_EXPORT TimestreamWriteClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

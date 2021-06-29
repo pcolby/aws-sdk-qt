@@ -27,7 +27,7 @@ namespace Lambda {
 
 class GetCodeSigningConfigRequestPrivate;
 
-class QTAWS_EXPORT GetCodeSigningConfigRequest : public LambdaRequest {
+class QTAWSLAMBDA_EXPORT GetCodeSigningConfigRequest : public LambdaRequest {
 
 public:
     GetCodeSigningConfigRequest(const GetCodeSigningConfigRequest &other);

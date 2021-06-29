@@ -27,7 +27,7 @@ namespace CodeArtifact {
 
 class DescribeDomainRequestPrivate;
 
-class QTAWS_EXPORT DescribeDomainRequest : public CodeArtifactRequest {
+class QTAWSCODEARTIFACT_EXPORT DescribeDomainRequest : public CodeArtifactRequest {
 
 public:
     DescribeDomainRequest(const DescribeDomainRequest &other);

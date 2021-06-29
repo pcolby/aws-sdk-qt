@@ -28,7 +28,7 @@ namespace MediaStore {
 
 class GetLifecyclePolicyResponsePrivate;
 
-class QTAWS_EXPORT GetLifecyclePolicyResponse : public MediaStoreResponse {
+class QTAWSMEDIASTORE_EXPORT GetLifecyclePolicyResponse : public MediaStoreResponse {
     Q_OBJECT
 
 public:

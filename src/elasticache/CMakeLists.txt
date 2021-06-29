@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSELASTICACHE_LIBRARY)
+
 add_library(QtAwsElastiCache
   addtagstoresourcerequest.h
   addtagstoresourcerequest_p.h
@@ -237,6 +239,7 @@ add_library(QtAwsElastiCache
   purchasereservedcachenodesofferingrequest_p.h
   purchasereservedcachenodesofferingresponse.h
   purchasereservedcachenodesofferingresponse_p.h
+  qtawselasticacheglobal.h
   rebalanceslotsinglobalreplicationgrouprequest.h
   rebalanceslotsinglobalreplicationgrouprequest_p.h
   rebalanceslotsinglobalreplicationgroupresponse.h

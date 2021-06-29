@@ -27,7 +27,7 @@ namespace IoTAnalytics {
 
 class DeleteChannelRequestPrivate;
 
-class QTAWS_EXPORT DeleteChannelRequest : public IoTAnalyticsRequest {
+class QTAWSIOTANALYTICS_EXPORT DeleteChannelRequest : public IoTAnalyticsRequest {
 
 public:
     DeleteChannelRequest(const DeleteChannelRequest &other);

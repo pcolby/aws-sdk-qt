@@ -28,7 +28,7 @@ namespace Connect {
 
 class ListRoutingProfilesResponsePrivate;
 
-class QTAWS_EXPORT ListRoutingProfilesResponse : public ConnectResponse {
+class QTAWSCONNECT_EXPORT ListRoutingProfilesResponse : public ConnectResponse {
     Q_OBJECT
 
 public:

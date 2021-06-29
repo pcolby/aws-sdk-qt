@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class DeleteHumanTaskUiRequestPrivate;
 
-class QTAWS_EXPORT DeleteHumanTaskUiRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT DeleteHumanTaskUiRequest : public SageMakerRequest {
 
 public:
     DeleteHumanTaskUiRequest(const DeleteHumanTaskUiRequest &other);

@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class SetSMBGuestPasswordResponsePrivate;
 
-class QTAWS_EXPORT SetSMBGuestPasswordResponse : public StorageGatewayResponse {
+class QTAWSSTORAGEGATEWAY_EXPORT SetSMBGuestPasswordResponse : public StorageGatewayResponse {
     Q_OBJECT
 
 public:

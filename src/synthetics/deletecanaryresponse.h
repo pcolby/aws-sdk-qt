@@ -28,7 +28,7 @@ namespace Synthetics {
 
 class DeleteCanaryResponsePrivate;
 
-class QTAWS_EXPORT DeleteCanaryResponse : public SyntheticsResponse {
+class QTAWSSYNTHETICS_EXPORT DeleteCanaryResponse : public SyntheticsResponse {
     Q_OBJECT
 
 public:

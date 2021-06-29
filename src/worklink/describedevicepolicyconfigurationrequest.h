@@ -27,7 +27,7 @@ namespace WorkLink {
 
 class DescribeDevicePolicyConfigurationRequestPrivate;
 
-class QTAWS_EXPORT DescribeDevicePolicyConfigurationRequest : public WorkLinkRequest {
+class QTAWSWORKLINK_EXPORT DescribeDevicePolicyConfigurationRequest : public WorkLinkRequest {
 
 public:
     DescribeDevicePolicyConfigurationRequest(const DescribeDevicePolicyConfigurationRequest &other);

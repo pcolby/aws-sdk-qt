@@ -27,7 +27,7 @@ namespace DatabaseMigrationService {
 
 class DeleteConnectionRequestPrivate;
 
-class QTAWS_EXPORT DeleteConnectionRequest : public DatabaseMigrationServiceRequest {
+class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DeleteConnectionRequest : public DatabaseMigrationServiceRequest {
 
 public:
     DeleteConnectionRequest(const DeleteConnectionRequest &other);

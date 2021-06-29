@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class GetRunResponsePrivate;
 
-class QTAWS_EXPORT GetRunResponse : public DeviceFarmResponse {
+class QTAWSDEVICEFARM_EXPORT GetRunResponse : public DeviceFarmResponse {
     Q_OBJECT
 
 public:

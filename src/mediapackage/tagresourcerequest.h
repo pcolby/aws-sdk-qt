@@ -27,7 +27,7 @@ namespace MediaPackage {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public MediaPackageRequest {
+class QTAWSMEDIAPACKAGE_EXPORT TagResourceRequest : public MediaPackageRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

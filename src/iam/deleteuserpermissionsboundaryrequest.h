@@ -27,7 +27,7 @@ namespace IAM {
 
 class DeleteUserPermissionsBoundaryRequestPrivate;
 
-class QTAWS_EXPORT DeleteUserPermissionsBoundaryRequest : public IamRequest {
+class QTAWSIAM_EXPORT DeleteUserPermissionsBoundaryRequest : public IamRequest {
 
 public:
     DeleteUserPermissionsBoundaryRequest(const DeleteUserPermissionsBoundaryRequest &other);

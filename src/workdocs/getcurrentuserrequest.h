@@ -27,7 +27,7 @@ namespace WorkDocs {
 
 class GetCurrentUserRequestPrivate;
 
-class QTAWS_EXPORT GetCurrentUserRequest : public WorkDocsRequest {
+class QTAWSWORKDOCS_EXPORT GetCurrentUserRequest : public WorkDocsRequest {
 
 public:
     GetCurrentUserRequest(const GetCurrentUserRequest &other);

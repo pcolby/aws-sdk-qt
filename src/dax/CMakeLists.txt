@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSDAX_LIBRARY)
+
 add_library(QtAwsDax
   createclusterrequest.h
   createclusterrequest_p.h
@@ -65,6 +67,7 @@ add_library(QtAwsDax
   listtagsrequest_p.h
   listtagsresponse.h
   listtagsresponse_p.h
+  qtawsdaxglobal.h
   rebootnoderequest.h
   rebootnoderequest_p.h
   rebootnoderesponse.h

@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class JoinDomainRequestPrivate;
 
-class QTAWS_EXPORT JoinDomainRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT JoinDomainRequest : public StorageGatewayRequest {
 
 public:
     JoinDomainRequest(const JoinDomainRequest &other);

@@ -27,7 +27,7 @@ namespace PinpointEmail {
 
 class PutConfigurationSetTrackingOptionsRequestPrivate;
 
-class QTAWS_EXPORT PutConfigurationSetTrackingOptionsRequest : public PinpointEmailRequest {
+class QTAWSPINPOINTEMAIL_EXPORT PutConfigurationSetTrackingOptionsRequest : public PinpointEmailRequest {
 
 public:
     PutConfigurationSetTrackingOptionsRequest(const PutConfigurationSetTrackingOptionsRequest &other);

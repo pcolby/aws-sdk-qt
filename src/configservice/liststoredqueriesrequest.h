@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class ListStoredQueriesRequestPrivate;
 
-class QTAWS_EXPORT ListStoredQueriesRequest : public ConfigServiceRequest {
+class QTAWSCONFIGSERVICE_EXPORT ListStoredQueriesRequest : public ConfigServiceRequest {
 
 public:
     ListStoredQueriesRequest(const ListStoredQueriesRequest &other);

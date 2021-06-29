@@ -27,7 +27,7 @@ namespace AlexaForBusiness {
 
 class AssociateSkillWithSkillGroupRequestPrivate;
 
-class QTAWS_EXPORT AssociateSkillWithSkillGroupRequest : public AlexaForBusinessRequest {
+class QTAWSALEXAFORBUSINESS_EXPORT AssociateSkillWithSkillGroupRequest : public AlexaForBusinessRequest {
 
 public:
     AssociateSkillWithSkillGroupRequest(const AssociateSkillWithSkillGroupRequest &other);

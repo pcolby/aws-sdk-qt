@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCOGNITOIDENTITYPROVIDER_LIBRARY)
+
 add_library(QtAwsCognitoIdentityProvider
   addcustomattributesrequest.h
   addcustomattributesrequest_p.h
@@ -313,6 +315,7 @@ add_library(QtAwsCognitoIdentityProvider
   listusersrequest_p.h
   listusersresponse.h
   listusersresponse_p.h
+  qtawscognitoidentityproviderglobal.h
   resendconfirmationcoderequest.h
   resendconfirmationcoderequest_p.h
   resendconfirmationcoderesponse.h

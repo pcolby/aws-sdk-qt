@@ -28,7 +28,7 @@ namespace GlueDataBrew {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public GlueDataBrewResponse {
+class QTAWSGLUEDATABREW_EXPORT ListTagsForResourceResponse : public GlueDataBrewResponse {
     Q_OBJECT
 
 public:

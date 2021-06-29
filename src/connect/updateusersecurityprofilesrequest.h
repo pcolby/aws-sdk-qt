@@ -27,7 +27,7 @@ namespace Connect {
 
 class UpdateUserSecurityProfilesRequestPrivate;
 
-class QTAWS_EXPORT UpdateUserSecurityProfilesRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT UpdateUserSecurityProfilesRequest : public ConnectRequest {
 
 public:
     UpdateUserSecurityProfilesRequest(const UpdateUserSecurityProfilesRequest &other);

@@ -27,7 +27,7 @@ namespace SSM {
 
 class StartSessionRequestPrivate;
 
-class QTAWS_EXPORT StartSessionRequest : public SsmRequest {
+class QTAWSSSM_EXPORT StartSessionRequest : public SsmRequest {
 
 public:
     StartSessionRequest(const StartSessionRequest &other);

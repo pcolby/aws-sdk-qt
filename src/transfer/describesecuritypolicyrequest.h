@@ -27,7 +27,7 @@ namespace Transfer {
 
 class DescribeSecurityPolicyRequestPrivate;
 
-class QTAWS_EXPORT DescribeSecurityPolicyRequest : public TransferRequest {
+class QTAWSTRANSFER_EXPORT DescribeSecurityPolicyRequest : public TransferRequest {
 
 public:
     DescribeSecurityPolicyRequest(const DescribeSecurityPolicyRequest &other);

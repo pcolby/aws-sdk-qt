@@ -28,7 +28,7 @@ namespace CloudWatch {
 
 class StopMetricStreamsResponsePrivate;
 
-class QTAWS_EXPORT StopMetricStreamsResponse : public CloudWatchResponse {
+class QTAWSCLOUDWATCH_EXPORT StopMetricStreamsResponse : public CloudWatchResponse {
     Q_OBJECT
 
 public:

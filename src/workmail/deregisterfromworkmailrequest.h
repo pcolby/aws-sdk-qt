@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class DeregisterFromWorkMailRequestPrivate;
 
-class QTAWS_EXPORT DeregisterFromWorkMailRequest : public WorkMailRequest {
+class QTAWSWORKMAIL_EXPORT DeregisterFromWorkMailRequest : public WorkMailRequest {
 
 public:
     DeregisterFromWorkMailRequest(const DeregisterFromWorkMailRequest &other);

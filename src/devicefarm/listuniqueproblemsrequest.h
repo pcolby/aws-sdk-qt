@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class ListUniqueProblemsRequestPrivate;
 
-class QTAWS_EXPORT ListUniqueProblemsRequest : public DeviceFarmRequest {
+class QTAWSDEVICEFARM_EXPORT ListUniqueProblemsRequest : public DeviceFarmRequest {
 
 public:
     ListUniqueProblemsRequest(const ListUniqueProblemsRequest &other);

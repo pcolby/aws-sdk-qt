@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawslocationserviceglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace LocationService {
 
 class LocationServiceRequestPrivate;
 
-class QTAWS_EXPORT LocationServiceRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSLOCATIONSERVICE_EXPORT LocationServiceRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by LocationService.

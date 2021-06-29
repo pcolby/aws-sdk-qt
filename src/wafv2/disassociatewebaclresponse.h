@@ -28,7 +28,7 @@ namespace WAFV2 {
 
 class DisassociateWebACLResponsePrivate;
 
-class QTAWS_EXPORT DisassociateWebACLResponse : public Wafv2Response {
+class QTAWSWAFV2_EXPORT DisassociateWebACLResponse : public Wafv2Response {
     Q_OBJECT
 
 public:

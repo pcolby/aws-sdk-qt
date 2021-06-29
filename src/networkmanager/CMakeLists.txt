@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSNETWORKMANAGER_LIBRARY)
+
 add_library(QtAwsNetworkManager
   associatecustomergatewayrequest.h
   associatecustomergatewayrequest_p.h
@@ -113,6 +115,7 @@ add_library(QtAwsNetworkManager
   networkmanagerrequest_p.h
   networkmanagerresponse.h
   networkmanagerresponse_p.h
+  qtawsnetworkmanagerglobal.h
   registertransitgatewayrequest.h
   registertransitgatewayrequest_p.h
   registertransitgatewayresponse.h

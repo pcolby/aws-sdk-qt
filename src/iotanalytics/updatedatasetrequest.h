@@ -27,7 +27,7 @@ namespace IoTAnalytics {
 
 class UpdateDatasetRequestPrivate;
 
-class QTAWS_EXPORT UpdateDatasetRequest : public IoTAnalyticsRequest {
+class QTAWSIOTANALYTICS_EXPORT UpdateDatasetRequest : public IoTAnalyticsRequest {
 
 public:
     UpdateDatasetRequest(const UpdateDatasetRequest &other);

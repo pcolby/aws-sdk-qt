@@ -27,7 +27,7 @@ namespace Kafka {
 
 class ListScramSecretsRequestPrivate;
 
-class QTAWS_EXPORT ListScramSecretsRequest : public KafkaRequest {
+class QTAWSKAFKA_EXPORT ListScramSecretsRequest : public KafkaRequest {
 
 public:
     ListScramSecretsRequest(const ListScramSecretsRequest &other);

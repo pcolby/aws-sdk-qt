@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DescribeClusterSecurityGroupsResponsePrivate;
 
-class QTAWS_EXPORT DescribeClusterSecurityGroupsResponse : public RedshiftResponse {
+class QTAWSREDSHIFT_EXPORT DescribeClusterSecurityGroupsResponse : public RedshiftResponse {
     Q_OBJECT
 
 public:

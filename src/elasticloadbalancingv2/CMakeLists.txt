@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSELASTICLOADBALANCINGV2_LIBRARY)
+
 add_library(QtAwsElasticLoadBalancingv2
   addlistenercertificatesrequest.h
   addlistenercertificatesrequest_p.h
@@ -113,6 +115,7 @@ add_library(QtAwsElasticLoadBalancingv2
   modifytargetgrouprequest_p.h
   modifytargetgroupresponse.h
   modifytargetgroupresponse_p.h
+  qtawselasticloadbalancingv2global.h
   registertargetsrequest.h
   registertargetsrequest_p.h
   registertargetsresponse.h

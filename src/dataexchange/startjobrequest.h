@@ -27,7 +27,7 @@ namespace DataExchange {
 
 class StartJobRequestPrivate;
 
-class QTAWS_EXPORT StartJobRequest : public DataExchangeRequest {
+class QTAWSDATAEXCHANGE_EXPORT StartJobRequest : public DataExchangeRequest {
 
 public:
     StartJobRequest(const StartJobRequest &other);

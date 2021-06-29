@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawslicensemanagerglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace LicenseManager {
 
 class LicenseManagerRequestPrivate;
 
-class QTAWS_EXPORT LicenseManagerRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSLICENSEMANAGER_EXPORT LicenseManagerRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by LicenseManager.

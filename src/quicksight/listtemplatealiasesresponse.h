@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class ListTemplateAliasesResponsePrivate;
 
-class QTAWS_EXPORT ListTemplateAliasesResponse : public QuickSightResponse {
+class QTAWSQUICKSIGHT_EXPORT ListTemplateAliasesResponse : public QuickSightResponse {
     Q_OBJECT
 
 public:

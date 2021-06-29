@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class CreateMicrosoftADRequestPrivate;
 
-class QTAWS_EXPORT CreateMicrosoftADRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT CreateMicrosoftADRequest : public DirectoryServiceRequest {
 
 public:
     CreateMicrosoftADRequest(const CreateMicrosoftADRequest &other);

@@ -28,7 +28,7 @@ namespace Appflow {
 
 class DeleteFlowResponsePrivate;
 
-class QTAWS_EXPORT DeleteFlowResponse : public AppflowResponse {
+class QTAWSAPPFLOW_EXPORT DeleteFlowResponse : public AppflowResponse {
     Q_OBJECT
 
 public:

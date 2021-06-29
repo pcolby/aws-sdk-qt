@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsqldbglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace QLDB {
 
 class QldbRequestPrivate;
 
-class QTAWS_EXPORT QldbRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSQLDB_EXPORT QldbRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by QLDB.

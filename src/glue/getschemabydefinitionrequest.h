@@ -27,7 +27,7 @@ namespace Glue {
 
 class GetSchemaByDefinitionRequestPrivate;
 
-class QTAWS_EXPORT GetSchemaByDefinitionRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT GetSchemaByDefinitionRequest : public GlueRequest {
 
 public:
     GetSchemaByDefinitionRequest(const GetSchemaByDefinitionRequest &other);

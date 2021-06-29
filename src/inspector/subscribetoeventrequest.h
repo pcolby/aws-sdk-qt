@@ -27,7 +27,7 @@ namespace Inspector {
 
 class SubscribeToEventRequestPrivate;
 
-class QTAWS_EXPORT SubscribeToEventRequest : public InspectorRequest {
+class QTAWSINSPECTOR_EXPORT SubscribeToEventRequest : public InspectorRequest {
 
 public:
     SubscribeToEventRequest(const SubscribeToEventRequest &other);

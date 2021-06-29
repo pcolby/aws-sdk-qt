@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class DisableSecurityHubRequestPrivate;
 
-class QTAWS_EXPORT DisableSecurityHubRequest : public SecurityHubRequest {
+class QTAWSSECURITYHUB_EXPORT DisableSecurityHubRequest : public SecurityHubRequest {
 
 public:
     DisableSecurityHubRequest(const DisableSecurityHubRequest &other);

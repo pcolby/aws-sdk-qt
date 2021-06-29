@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class CloseInstancePublicPortsRequestPrivate;
 
-class QTAWS_EXPORT CloseInstancePublicPortsRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT CloseInstancePublicPortsRequest : public LightsailRequest {
 
 public:
     CloseInstancePublicPortsRequest(const CloseInstancePublicPortsRequest &other);

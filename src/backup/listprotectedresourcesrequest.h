@@ -27,7 +27,7 @@ namespace Backup {
 
 class ListProtectedResourcesRequestPrivate;
 
-class QTAWS_EXPORT ListProtectedResourcesRequest : public BackupRequest {
+class QTAWSBACKUP_EXPORT ListProtectedResourcesRequest : public BackupRequest {
 
 public:
     ListProtectedResourcesRequest(const ListProtectedResourcesRequest &other);

@@ -27,7 +27,7 @@ namespace MediaLive {
 
 class DescribeInputSecurityGroupRequestPrivate;
 
-class QTAWS_EXPORT DescribeInputSecurityGroupRequest : public MediaLiveRequest {
+class QTAWSMEDIALIVE_EXPORT DescribeInputSecurityGroupRequest : public MediaLiveRequest {
 
 public:
     DescribeInputSecurityGroupRequest(const DescribeInputSecurityGroupRequest &other);

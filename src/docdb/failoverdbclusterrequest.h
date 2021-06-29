@@ -27,7 +27,7 @@ namespace DocDB {
 
 class FailoverDBClusterRequestPrivate;
 
-class QTAWS_EXPORT FailoverDBClusterRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT FailoverDBClusterRequest : public DocDBRequest {
 
 public:
     FailoverDBClusterRequest(const FailoverDBClusterRequest &other);

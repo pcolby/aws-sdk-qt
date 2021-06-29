@@ -28,7 +28,7 @@ namespace MediaConnect {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public MediaConnectResponse {
+class QTAWSMEDIACONNECT_EXPORT UntagResourceResponse : public MediaConnectResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace Redshift {
 
 class DeletePartnerRequestPrivate;
 
-class QTAWS_EXPORT DeletePartnerRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT DeletePartnerRequest : public RedshiftRequest {
 
 public:
     DeletePartnerRequest(const DeletePartnerRequest &other);

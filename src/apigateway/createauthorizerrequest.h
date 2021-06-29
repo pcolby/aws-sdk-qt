@@ -27,7 +27,7 @@ namespace APIGateway {
 
 class CreateAuthorizerRequestPrivate;
 
-class QTAWS_EXPORT CreateAuthorizerRequest : public APIGatewayRequest {
+class QTAWSAPIGATEWAY_EXPORT CreateAuthorizerRequest : public APIGatewayRequest {
 
 public:
     CreateAuthorizerRequest(const CreateAuthorizerRequest &other);

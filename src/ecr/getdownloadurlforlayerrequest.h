@@ -27,7 +27,7 @@ namespace ECR {
 
 class GetDownloadUrlForLayerRequestPrivate;
 
-class QTAWS_EXPORT GetDownloadUrlForLayerRequest : public EcrRequest {
+class QTAWSECR_EXPORT GetDownloadUrlForLayerRequest : public EcrRequest {
 
 public:
     GetDownloadUrlForLayerRequest(const GetDownloadUrlForLayerRequest &other);

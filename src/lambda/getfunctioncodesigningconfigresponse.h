@@ -28,7 +28,7 @@ namespace Lambda {
 
 class GetFunctionCodeSigningConfigResponsePrivate;
 
-class QTAWS_EXPORT GetFunctionCodeSigningConfigResponse : public LambdaResponse {
+class QTAWSLAMBDA_EXPORT GetFunctionCodeSigningConfigResponse : public LambdaResponse {
     Q_OBJECT
 
 public:

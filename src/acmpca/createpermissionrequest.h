@@ -27,7 +27,7 @@ namespace ACMPCA {
 
 class CreatePermissionRequestPrivate;
 
-class QTAWS_EXPORT CreatePermissionRequest : public AcmpcaRequest {
+class QTAWSACMPCA_EXPORT CreatePermissionRequest : public AcmpcaRequest {
 
 public:
     CreatePermissionRequest(const CreatePermissionRequest &other);

@@ -21,6 +21,8 @@
 #define QTAWS_GAMELIFTRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsgameliftglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace GameLift {
 
 class GameLiftResponsePrivate;
 
-class QTAWS_EXPORT GameLiftResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSGAMELIFT_EXPORT GameLiftResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

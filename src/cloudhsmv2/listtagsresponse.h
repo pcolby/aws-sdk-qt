@@ -28,7 +28,7 @@ namespace CloudHSMV2 {
 
 class ListTagsResponsePrivate;
 
-class QTAWS_EXPORT ListTagsResponse : public CloudHSMV2Response {
+class QTAWSCLOUDHSMV2_EXPORT ListTagsResponse : public CloudHSMV2Response {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class GetDefaultRetentionPolicyRequestPrivate;
 
-class QTAWS_EXPORT GetDefaultRetentionPolicyRequest : public WorkMailRequest {
+class QTAWSWORKMAIL_EXPORT GetDefaultRetentionPolicyRequest : public WorkMailRequest {
 
 public:
     GetDefaultRetentionPolicyRequest(const GetDefaultRetentionPolicyRequest &other);

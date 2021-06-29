@@ -28,7 +28,7 @@ namespace SFN {
 
 class SendTaskSuccessResponsePrivate;
 
-class QTAWS_EXPORT SendTaskSuccessResponse : public SfnResponse {
+class QTAWSSFN_EXPORT SendTaskSuccessResponse : public SfnResponse {
     Q_OBJECT
 
 public:

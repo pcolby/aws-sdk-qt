@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class GetGroupVersionResponsePrivate;
 
-class QTAWS_EXPORT GetGroupVersionResponse : public GreengrassResponse {
+class QTAWSGREENGRASS_EXPORT GetGroupVersionResponse : public GreengrassResponse {
     Q_OBJECT
 
 public:

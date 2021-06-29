@@ -27,7 +27,7 @@ namespace IoTWireless {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public IoTWirelessRequest {
+class QTAWSIOTWIRELESS_EXPORT UntagResourceRequest : public IoTWirelessRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

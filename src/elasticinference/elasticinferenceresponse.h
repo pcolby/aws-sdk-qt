@@ -21,6 +21,8 @@
 #define QTAWS_ELASTICINFERENCERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawselasticinferenceglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace ElasticInference {
 
 class ElasticInferenceResponsePrivate;
 
-class QTAWS_EXPORT ElasticInferenceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSELASTICINFERENCE_EXPORT ElasticInferenceResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

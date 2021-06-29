@@ -27,7 +27,7 @@ namespace Redshift {
 
 class DeleteEventSubscriptionRequestPrivate;
 
-class QTAWS_EXPORT DeleteEventSubscriptionRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT DeleteEventSubscriptionRequest : public RedshiftRequest {
 
 public:
     DeleteEventSubscriptionRequest(const DeleteEventSubscriptionRequest &other);

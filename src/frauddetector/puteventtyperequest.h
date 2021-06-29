@@ -27,7 +27,7 @@ namespace FraudDetector {
 
 class PutEventTypeRequestPrivate;
 
-class QTAWS_EXPORT PutEventTypeRequest : public FraudDetectorRequest {
+class QTAWSFRAUDDETECTOR_EXPORT PutEventTypeRequest : public FraudDetectorRequest {
 
 public:
     PutEventTypeRequest(const PutEventTypeRequest &other);

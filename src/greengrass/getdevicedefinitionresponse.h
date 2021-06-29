@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class GetDeviceDefinitionResponsePrivate;
 
-class QTAWS_EXPORT GetDeviceDefinitionResponse : public GreengrassResponse {
+class QTAWSGREENGRASS_EXPORT GetDeviceDefinitionResponse : public GreengrassResponse {
     Q_OBJECT
 
 public:

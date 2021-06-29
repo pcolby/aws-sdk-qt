@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class CreateContactResponsePrivate;
 
-class QTAWS_EXPORT CreateContactResponse : public AlexaForBusinessResponse {
+class QTAWSALEXAFORBUSINESS_EXPORT CreateContactResponse : public AlexaForBusinessResponse {
     Q_OBJECT
 
 public:

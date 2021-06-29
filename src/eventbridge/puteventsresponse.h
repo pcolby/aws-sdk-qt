@@ -28,7 +28,7 @@ namespace EventBridge {
 
 class PutEventsResponsePrivate;
 
-class QTAWS_EXPORT PutEventsResponse : public EventBridgeResponse {
+class QTAWSEVENTBRIDGE_EXPORT PutEventsResponse : public EventBridgeResponse {
     Q_OBJECT
 
 public:

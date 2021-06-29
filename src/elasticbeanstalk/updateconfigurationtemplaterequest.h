@@ -27,7 +27,7 @@ namespace ElasticBeanstalk {
 
 class UpdateConfigurationTemplateRequestPrivate;
 
-class QTAWS_EXPORT UpdateConfigurationTemplateRequest : public ElasticBeanstalkRequest {
+class QTAWSELASTICBEANSTALK_EXPORT UpdateConfigurationTemplateRequest : public ElasticBeanstalkRequest {
 
 public:
     UpdateConfigurationTemplateRequest(const UpdateConfigurationTemplateRequest &other);

@@ -27,7 +27,7 @@ namespace EFS {
 
 class DescribeAccessPointsRequestPrivate;
 
-class QTAWS_EXPORT DescribeAccessPointsRequest : public EfsRequest {
+class QTAWSEFS_EXPORT DescribeAccessPointsRequest : public EfsRequest {
 
 public:
     DescribeAccessPointsRequest(const DescribeAccessPointsRequest &other);

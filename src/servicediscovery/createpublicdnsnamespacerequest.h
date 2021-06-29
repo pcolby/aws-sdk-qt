@@ -27,7 +27,7 @@ namespace ServiceDiscovery {
 
 class CreatePublicDnsNamespaceRequestPrivate;
 
-class QTAWS_EXPORT CreatePublicDnsNamespaceRequest : public ServiceDiscoveryRequest {
+class QTAWSSERVICEDISCOVERY_EXPORT CreatePublicDnsNamespaceRequest : public ServiceDiscoveryRequest {
 
 public:
     CreatePublicDnsNamespaceRequest(const CreatePublicDnsNamespaceRequest &other);

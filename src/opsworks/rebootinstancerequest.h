@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class RebootInstanceRequestPrivate;
 
-class QTAWS_EXPORT RebootInstanceRequest : public OpsWorksRequest {
+class QTAWSOPSWORKS_EXPORT RebootInstanceRequest : public OpsWorksRequest {
 
 public:
     RebootInstanceRequest(const RebootInstanceRequest &other);

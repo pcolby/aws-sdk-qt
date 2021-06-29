@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class UpdateConstraintRequestPrivate;
 
-class QTAWS_EXPORT UpdateConstraintRequest : public ServiceCatalogRequest {
+class QTAWSSERVICECATALOG_EXPORT UpdateConstraintRequest : public ServiceCatalogRequest {
 
 public:
     UpdateConstraintRequest(const UpdateConstraintRequest &other);

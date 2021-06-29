@@ -28,7 +28,7 @@ namespace CloudSearch {
 
 class DefineIndexFieldResponsePrivate;
 
-class QTAWS_EXPORT DefineIndexFieldResponse : public CloudSearchResponse {
+class QTAWSCLOUDSEARCH_EXPORT DefineIndexFieldResponse : public CloudSearchResponse {
     Q_OBJECT
 
 public:

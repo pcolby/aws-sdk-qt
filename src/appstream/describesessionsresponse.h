@@ -28,7 +28,7 @@ namespace AppStream {
 
 class DescribeSessionsResponsePrivate;
 
-class QTAWS_EXPORT DescribeSessionsResponse : public AppStreamResponse {
+class QTAWSAPPSTREAM_EXPORT DescribeSessionsResponse : public AppStreamResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace DataExchange {
 
 class CreateDataSetResponsePrivate;
 
-class QTAWS_EXPORT CreateDataSetResponse : public DataExchangeResponse {
+class QTAWSDATAEXCHANGE_EXPORT CreateDataSetResponse : public DataExchangeResponse {
     Q_OBJECT
 
 public:

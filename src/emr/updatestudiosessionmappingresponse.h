@@ -28,7 +28,7 @@ namespace EMR {
 
 class UpdateStudioSessionMappingResponsePrivate;
 
-class QTAWS_EXPORT UpdateStudioSessionMappingResponse : public EmrResponse {
+class QTAWSEMR_EXPORT UpdateStudioSessionMappingResponse : public EmrResponse {
     Q_OBJECT
 
 public:

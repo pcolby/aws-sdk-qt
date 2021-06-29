@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class GetPullRequestResponsePrivate;
 
-class QTAWS_EXPORT GetPullRequestResponse : public CodeCommitResponse {
+class QTAWSCODECOMMIT_EXPORT GetPullRequestResponse : public CodeCommitResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace CostExplorer {
 
 class DeleteAnomalyMonitorRequestPrivate;
 
-class QTAWS_EXPORT DeleteAnomalyMonitorRequest : public CostExplorerRequest {
+class QTAWSCOSTEXPLORER_EXPORT DeleteAnomalyMonitorRequest : public CostExplorerRequest {
 
 public:
     DeleteAnomalyMonitorRequest(const DeleteAnomalyMonitorRequest &other);

@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class UpgradePublishedSchemaRequestPrivate;
 
-class QTAWS_EXPORT UpgradePublishedSchemaRequest : public CloudDirectoryRequest {
+class QTAWSCLOUDDIRECTORY_EXPORT UpgradePublishedSchemaRequest : public CloudDirectoryRequest {
 
 public:
     UpgradePublishedSchemaRequest(const UpgradePublishedSchemaRequest &other);

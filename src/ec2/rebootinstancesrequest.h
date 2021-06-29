@@ -27,7 +27,7 @@ namespace EC2 {
 
 class RebootInstancesRequestPrivate;
 
-class QTAWS_EXPORT RebootInstancesRequest : public Ec2Request {
+class QTAWSEC2_EXPORT RebootInstancesRequest : public Ec2Request {
 
 public:
     RebootInstancesRequest(const RebootInstancesRequest &other);

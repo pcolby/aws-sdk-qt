@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsmacieglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -43,7 +45,7 @@ class ListS3ResourcesResponse;
 class UpdateS3ResourcesRequest;
 class UpdateS3ResourcesResponse;
 
-class QTAWS_EXPORT MacieClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSMACIE_EXPORT MacieClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

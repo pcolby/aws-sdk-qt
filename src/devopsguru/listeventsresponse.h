@@ -28,7 +28,7 @@ namespace DevOpsGuru {
 
 class ListEventsResponsePrivate;
 
-class QTAWS_EXPORT ListEventsResponse : public DevOpsGuruResponse {
+class QTAWSDEVOPSGURU_EXPORT ListEventsResponse : public DevOpsGuruResponse {
     Q_OBJECT
 
 public:

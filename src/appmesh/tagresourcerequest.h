@@ -27,7 +27,7 @@ namespace AppMesh {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public AppMeshRequest {
+class QTAWSAPPMESH_EXPORT TagResourceRequest : public AppMeshRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

@@ -27,7 +27,7 @@ namespace Redshift {
 
 class RevokeEndpointAccessRequestPrivate;
 
-class QTAWS_EXPORT RevokeEndpointAccessRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT RevokeEndpointAccessRequest : public RedshiftRequest {
 
 public:
     RevokeEndpointAccessRequest(const RevokeEndpointAccessRequest &other);

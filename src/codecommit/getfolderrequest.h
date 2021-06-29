@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class GetFolderRequestPrivate;
 
-class QTAWS_EXPORT GetFolderRequest : public CodeCommitRequest {
+class QTAWSCODECOMMIT_EXPORT GetFolderRequest : public CodeCommitRequest {
 
 public:
     GetFolderRequest(const GetFolderRequest &other);

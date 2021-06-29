@@ -27,7 +27,7 @@ namespace Athena {
 
 class BatchGetNamedQueryRequestPrivate;
 
-class QTAWS_EXPORT BatchGetNamedQueryRequest : public AthenaRequest {
+class QTAWSATHENA_EXPORT BatchGetNamedQueryRequest : public AthenaRequest {
 
 public:
     BatchGetNamedQueryRequest(const BatchGetNamedQueryRequest &other);

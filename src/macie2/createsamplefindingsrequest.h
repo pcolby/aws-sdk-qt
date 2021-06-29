@@ -27,7 +27,7 @@ namespace Macie2 {
 
 class CreateSampleFindingsRequestPrivate;
 
-class QTAWS_EXPORT CreateSampleFindingsRequest : public Macie2Request {
+class QTAWSMACIE2_EXPORT CreateSampleFindingsRequest : public Macie2Request {
 
 public:
     CreateSampleFindingsRequest(const CreateSampleFindingsRequest &other);

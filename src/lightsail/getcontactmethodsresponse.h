@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class GetContactMethodsResponsePrivate;
 
-class QTAWS_EXPORT GetContactMethodsResponse : public LightsailResponse {
+class QTAWSLIGHTSAIL_EXPORT GetContactMethodsResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

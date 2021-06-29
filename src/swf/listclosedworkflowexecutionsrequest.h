@@ -27,7 +27,7 @@ namespace SWF {
 
 class ListClosedWorkflowExecutionsRequestPrivate;
 
-class QTAWS_EXPORT ListClosedWorkflowExecutionsRequest : public SwfRequest {
+class QTAWSSWF_EXPORT ListClosedWorkflowExecutionsRequest : public SwfRequest {
 
 public:
     ListClosedWorkflowExecutionsRequest(const ListClosedWorkflowExecutionsRequest &other);

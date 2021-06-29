@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class GetApplicationDateRangeKpiResponsePrivate;
 
-class QTAWS_EXPORT GetApplicationDateRangeKpiResponse : public PinpointResponse {
+class QTAWSPINPOINT_EXPORT GetApplicationDateRangeKpiResponse : public PinpointResponse {
     Q_OBJECT
 
 public:

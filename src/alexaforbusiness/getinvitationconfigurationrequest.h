@@ -27,7 +27,7 @@ namespace AlexaForBusiness {
 
 class GetInvitationConfigurationRequestPrivate;
 
-class QTAWS_EXPORT GetInvitationConfigurationRequest : public AlexaForBusinessRequest {
+class QTAWSALEXAFORBUSINESS_EXPORT GetInvitationConfigurationRequest : public AlexaForBusinessRequest {
 
 public:
     GetInvitationConfigurationRequest(const GetInvitationConfigurationRequest &other);

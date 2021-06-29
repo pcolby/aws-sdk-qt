@@ -27,7 +27,7 @@ namespace Kinesis {
 
 class MergeShardsRequestPrivate;
 
-class QTAWS_EXPORT MergeShardsRequest : public KinesisRequest {
+class QTAWSKINESIS_EXPORT MergeShardsRequest : public KinesisRequest {
 
 public:
     MergeShardsRequest(const MergeShardsRequest &other);

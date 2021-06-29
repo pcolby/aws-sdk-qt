@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsfsxglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace FSx {
 
 class FSxRequestPrivate;
 
-class QTAWS_EXPORT FSxRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSFSX_EXPORT FSxRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by FSx.

@@ -27,7 +27,7 @@ namespace AppConfig {
 
 class ListEnvironmentsRequestPrivate;
 
-class QTAWS_EXPORT ListEnvironmentsRequest : public AppConfigRequest {
+class QTAWSAPPCONFIG_EXPORT ListEnvironmentsRequest : public AppConfigRequest {
 
 public:
     ListEnvironmentsRequest(const ListEnvironmentsRequest &other);

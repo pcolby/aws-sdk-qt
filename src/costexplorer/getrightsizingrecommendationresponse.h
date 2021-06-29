@@ -28,7 +28,7 @@ namespace CostExplorer {
 
 class GetRightsizingRecommendationResponsePrivate;
 
-class QTAWS_EXPORT GetRightsizingRecommendationResponse : public CostExplorerResponse {
+class QTAWSCOSTEXPLORER_EXPORT GetRightsizingRecommendationResponse : public CostExplorerResponse {
     Q_OBJECT
 
 public:

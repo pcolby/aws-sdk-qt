@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSSOADMIN_LIBRARY)
+
 add_library(QtAwsSSOAdmin
   attachmanagedpolicytopermissionsetrequest.h
   attachmanagedpolicytopermissionsetrequest_p.h
@@ -107,6 +109,7 @@ add_library(QtAwsSSOAdmin
   putinlinepolicytopermissionsetrequest_p.h
   putinlinepolicytopermissionsetresponse.h
   putinlinepolicytopermissionsetresponse_p.h
+  qtawsssoadminglobal.h
   ssoadminclient.h
   ssoadminclient_p.h
   ssoadminrequest.h

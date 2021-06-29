@@ -21,6 +21,8 @@
 #define QTAWS_TEXTRACTRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawstextractglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Textract {
 
 class TextractResponsePrivate;
 
-class QTAWS_EXPORT TextractResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSTEXTRACT_EXPORT TextractResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace MediaPackage {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public MediaPackageResponse {
+class QTAWSMEDIAPACKAGE_EXPORT UntagResourceResponse : public MediaPackageResponse {
     Q_OBJECT
 
 public:

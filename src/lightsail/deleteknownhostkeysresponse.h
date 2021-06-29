@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class DeleteKnownHostKeysResponsePrivate;
 
-class QTAWS_EXPORT DeleteKnownHostKeysResponse : public LightsailResponse {
+class QTAWSLIGHTSAIL_EXPORT DeleteKnownHostKeysResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

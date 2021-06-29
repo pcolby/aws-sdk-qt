@@ -27,7 +27,7 @@ namespace IoTWireless {
 
 class AssociateAwsAccountWithPartnerAccountRequestPrivate;
 
-class QTAWS_EXPORT AssociateAwsAccountWithPartnerAccountRequest : public IoTWirelessRequest {
+class QTAWSIOTWIRELESS_EXPORT AssociateAwsAccountWithPartnerAccountRequest : public IoTWirelessRequest {
 
 public:
     AssociateAwsAccountWithPartnerAccountRequest(const AssociateAwsAccountWithPartnerAccountRequest &other);

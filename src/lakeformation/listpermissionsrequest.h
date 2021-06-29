@@ -27,7 +27,7 @@ namespace LakeFormation {
 
 class ListPermissionsRequestPrivate;
 
-class QTAWS_EXPORT ListPermissionsRequest : public LakeFormationRequest {
+class QTAWSLAKEFORMATION_EXPORT ListPermissionsRequest : public LakeFormationRequest {
 
 public:
     ListPermissionsRequest(const ListPermissionsRequest &other);

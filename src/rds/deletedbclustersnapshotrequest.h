@@ -27,7 +27,7 @@ namespace RDS {
 
 class DeleteDBClusterSnapshotRequestPrivate;
 
-class QTAWS_EXPORT DeleteDBClusterSnapshotRequest : public RdsRequest {
+class QTAWSRDS_EXPORT DeleteDBClusterSnapshotRequest : public RdsRequest {
 
 public:
     DeleteDBClusterSnapshotRequest(const DeleteDBClusterSnapshotRequest &other);

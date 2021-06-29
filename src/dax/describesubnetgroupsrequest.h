@@ -27,7 +27,7 @@ namespace DAX {
 
 class DescribeSubnetGroupsRequestPrivate;
 
-class QTAWS_EXPORT DescribeSubnetGroupsRequest : public DaxRequest {
+class QTAWSDAX_EXPORT DescribeSubnetGroupsRequest : public DaxRequest {
 
 public:
     DescribeSubnetGroupsRequest(const DescribeSubnetGroupsRequest &other);

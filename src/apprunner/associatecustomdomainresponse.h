@@ -28,7 +28,7 @@ namespace AppRunner {
 
 class AssociateCustomDomainResponsePrivate;
 
-class QTAWS_EXPORT AssociateCustomDomainResponse : public AppRunnerResponse {
+class QTAWSAPPRUNNER_EXPORT AssociateCustomDomainResponse : public AppRunnerResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace DocDB {
 
 class RemoveFromGlobalClusterRequestPrivate;
 
-class QTAWS_EXPORT RemoveFromGlobalClusterRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT RemoveFromGlobalClusterRequest : public DocDBRequest {
 
 public:
     RemoveFromGlobalClusterRequest(const RemoveFromGlobalClusterRequest &other);

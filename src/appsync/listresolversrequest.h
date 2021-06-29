@@ -27,7 +27,7 @@ namespace AppSync {
 
 class ListResolversRequestPrivate;
 
-class QTAWS_EXPORT ListResolversRequest : public AppSyncRequest {
+class QTAWSAPPSYNC_EXPORT ListResolversRequest : public AppSyncRequest {
 
 public:
     ListResolversRequest(const ListResolversRequest &other);

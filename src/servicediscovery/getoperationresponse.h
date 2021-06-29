@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 
 class GetOperationResponsePrivate;
 
-class QTAWS_EXPORT GetOperationResponse : public ServiceDiscoveryResponse {
+class QTAWSSERVICEDISCOVERY_EXPORT GetOperationResponse : public ServiceDiscoveryResponse {
     Q_OBJECT
 
 public:

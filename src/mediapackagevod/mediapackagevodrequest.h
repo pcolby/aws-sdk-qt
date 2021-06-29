@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsmediapackagevodglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace MediaPackageVod {
 
 class MediaPackageVodRequestPrivate;
 
-class QTAWS_EXPORT MediaPackageVodRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSMEDIAPACKAGEVOD_EXPORT MediaPackageVodRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by MediaPackageVod.

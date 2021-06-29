@@ -28,7 +28,7 @@ namespace IAM {
 
 class GetServiceLastAccessedDetailsResponsePrivate;
 
-class QTAWS_EXPORT GetServiceLastAccessedDetailsResponse : public IamResponse {
+class QTAWSIAM_EXPORT GetServiceLastAccessedDetailsResponse : public IamResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class UpdateConfigurationSetEventDestinationResponsePrivate;
 
-class QTAWS_EXPORT UpdateConfigurationSetEventDestinationResponse : public Sesv2Response {
+class QTAWSSESV2_EXPORT UpdateConfigurationSetEventDestinationResponse : public Sesv2Response {
     Q_OBJECT
 
 public:

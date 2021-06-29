@@ -27,7 +27,7 @@ namespace Shield {
 
 class AssociateDRTRoleRequestPrivate;
 
-class QTAWS_EXPORT AssociateDRTRoleRequest : public ShieldRequest {
+class QTAWSSHIELD_EXPORT AssociateDRTRoleRequest : public ShieldRequest {
 
 public:
     AssociateDRTRoleRequest(const AssociateDRTRoleRequest &other);

@@ -28,7 +28,7 @@ namespace Route53 {
 
 class CreateKeySigningKeyResponsePrivate;
 
-class QTAWS_EXPORT CreateKeySigningKeyResponse : public Route53Response {
+class QTAWSROUTE53_EXPORT CreateKeySigningKeyResponse : public Route53Response {
     Q_OBJECT
 
 public:

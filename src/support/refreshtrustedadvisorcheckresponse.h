@@ -28,7 +28,7 @@ namespace Support {
 
 class RefreshTrustedAdvisorCheckResponsePrivate;
 
-class QTAWS_EXPORT RefreshTrustedAdvisorCheckResponse : public SupportResponse {
+class QTAWSSUPPORT_EXPORT RefreshTrustedAdvisorCheckResponse : public SupportResponse {
     Q_OBJECT
 
 public:

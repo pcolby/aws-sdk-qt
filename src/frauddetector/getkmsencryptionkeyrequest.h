@@ -27,7 +27,7 @@ namespace FraudDetector {
 
 class GetKMSEncryptionKeyRequestPrivate;
 
-class QTAWS_EXPORT GetKMSEncryptionKeyRequest : public FraudDetectorRequest {
+class QTAWSFRAUDDETECTOR_EXPORT GetKMSEncryptionKeyRequest : public FraudDetectorRequest {
 
 public:
     GetKMSEncryptionKeyRequest(const GetKMSEncryptionKeyRequest &other);

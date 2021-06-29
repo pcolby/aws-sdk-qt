@@ -27,7 +27,7 @@ namespace MediaLive {
 
 class CreateTagsRequestPrivate;
 
-class QTAWS_EXPORT CreateTagsRequest : public MediaLiveRequest {
+class QTAWSMEDIALIVE_EXPORT CreateTagsRequest : public MediaLiveRequest {
 
 public:
     CreateTagsRequest(const CreateTagsRequest &other);

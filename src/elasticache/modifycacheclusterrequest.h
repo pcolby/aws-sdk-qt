@@ -27,7 +27,7 @@ namespace ElastiCache {
 
 class ModifyCacheClusterRequestPrivate;
 
-class QTAWS_EXPORT ModifyCacheClusterRequest : public ElastiCacheRequest {
+class QTAWSELASTICACHE_EXPORT ModifyCacheClusterRequest : public ElastiCacheRequest {
 
 public:
     ModifyCacheClusterRequest(const ModifyCacheClusterRequest &other);

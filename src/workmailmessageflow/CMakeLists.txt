@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSWORKMAILMESSAGEFLOW_LIBRARY)
+
 add_library(QtAwsWorkMailMessageFlow
   getrawmessagecontentrequest.h
   getrawmessagecontentrequest_p.h
@@ -7,6 +9,7 @@ add_library(QtAwsWorkMailMessageFlow
   putrawmessagecontentrequest_p.h
   putrawmessagecontentresponse.h
   putrawmessagecontentresponse_p.h
+  qtawsworkmailmessageflowglobal.h
   workmailmessageflowclient.h
   workmailmessageflowclient_p.h
   workmailmessageflowrequest.h

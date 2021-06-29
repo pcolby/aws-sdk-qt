@@ -27,7 +27,7 @@ namespace GuardDuty {
 
 class ListFiltersRequestPrivate;
 
-class QTAWS_EXPORT ListFiltersRequest : public GuardDutyRequest {
+class QTAWSGUARDDUTY_EXPORT ListFiltersRequest : public GuardDutyRequest {
 
 public:
     ListFiltersRequest(const ListFiltersRequest &other);

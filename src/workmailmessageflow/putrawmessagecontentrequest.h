@@ -27,7 +27,7 @@ namespace WorkMailMessageFlow {
 
 class PutRawMessageContentRequestPrivate;
 
-class QTAWS_EXPORT PutRawMessageContentRequest : public WorkMailMessageFlowRequest {
+class QTAWSWORKMAILMESSAGEFLOW_EXPORT PutRawMessageContentRequest : public WorkMailMessageFlowRequest {
 
 public:
     PutRawMessageContentRequest(const PutRawMessageContentRequest &other);

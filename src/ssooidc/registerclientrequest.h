@@ -27,7 +27,7 @@ namespace SSOOIDC {
 
 class RegisterClientRequestPrivate;
 
-class QTAWS_EXPORT RegisterClientRequest : public SsooidcRequest {
+class QTAWSSSOOIDC_EXPORT RegisterClientRequest : public SsooidcRequest {
 
 public:
     RegisterClientRequest(const RegisterClientRequest &other);

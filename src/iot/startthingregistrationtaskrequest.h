@@ -27,7 +27,7 @@ namespace IoT {
 
 class StartThingRegistrationTaskRequestPrivate;
 
-class QTAWS_EXPORT StartThingRegistrationTaskRequest : public IoTRequest {
+class QTAWSIOT_EXPORT StartThingRegistrationTaskRequest : public IoTRequest {
 
 public:
     StartThingRegistrationTaskRequest(const StartThingRegistrationTaskRequest &other);

@@ -27,7 +27,7 @@ namespace Lambda {
 
 class DeleteAliasRequestPrivate;
 
-class QTAWS_EXPORT DeleteAliasRequest : public LambdaRequest {
+class QTAWSLAMBDA_EXPORT DeleteAliasRequest : public LambdaRequest {
 
 public:
     DeleteAliasRequest(const DeleteAliasRequest &other);

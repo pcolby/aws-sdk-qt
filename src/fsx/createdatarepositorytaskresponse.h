@@ -28,7 +28,7 @@ namespace FSx {
 
 class CreateDataRepositoryTaskResponsePrivate;
 
-class QTAWS_EXPORT CreateDataRepositoryTaskResponse : public FSxResponse {
+class QTAWSFSX_EXPORT CreateDataRepositoryTaskResponse : public FSxResponse {
     Q_OBJECT
 
 public:

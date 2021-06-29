@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsdevicefarmglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace DeviceFarm {
 
 class DeviceFarmRequestPrivate;
 
-class QTAWS_EXPORT DeviceFarmRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSDEVICEFARM_EXPORT DeviceFarmRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by DeviceFarm.

@@ -27,7 +27,7 @@ namespace TranscribeService {
 
 class GetTranscriptionJobRequestPrivate;
 
-class QTAWS_EXPORT GetTranscriptionJobRequest : public TranscribeServiceRequest {
+class QTAWSTRANSCRIBESERVICE_EXPORT GetTranscriptionJobRequest : public TranscribeServiceRequest {
 
 public:
     GetTranscriptionJobRequest(const GetTranscriptionJobRequest &other);

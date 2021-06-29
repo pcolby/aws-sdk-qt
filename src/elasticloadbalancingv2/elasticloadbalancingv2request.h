@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawselasticloadbalancingv2global.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace ElasticLoadBalancingv2 {
 
 class ElasticLoadBalancingv2RequestPrivate;
 
-class QTAWS_EXPORT ElasticLoadBalancingv2Request : public QtAws::Core::AwsAbstractRequest {
+class QTAWSELASTICLOADBALANCINGV2_EXPORT ElasticLoadBalancingv2Request : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ElasticLoadBalancingv2.

@@ -21,6 +21,8 @@
 #define QTAWS_DATASYNCRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsdatasyncglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace DataSync {
 
 class DataSyncResponsePrivate;
 
-class QTAWS_EXPORT DataSyncResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSDATASYNC_EXPORT DataSyncResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

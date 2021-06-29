@@ -27,7 +27,7 @@ namespace Glue {
 
 class StopCrawlerRequestPrivate;
 
-class QTAWS_EXPORT StopCrawlerRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT StopCrawlerRequest : public GlueRequest {
 
 public:
     StopCrawlerRequest(const StopCrawlerRequest &other);

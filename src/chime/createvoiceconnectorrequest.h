@@ -27,7 +27,7 @@ namespace Chime {
 
 class CreateVoiceConnectorRequestPrivate;
 
-class QTAWS_EXPORT CreateVoiceConnectorRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT CreateVoiceConnectorRequest : public ChimeRequest {
 
 public:
     CreateVoiceConnectorRequest(const CreateVoiceConnectorRequest &other);

@@ -21,6 +21,8 @@
 #define QTAWS_LEXMODELBUILDINGSERVICERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawslexmodelbuildingserviceglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace LexModelBuildingService {
 
 class LexModelBuildingServiceResponsePrivate;
 
-class QTAWS_EXPORT LexModelBuildingServiceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSLEXMODELBUILDINGSERVICE_EXPORT LexModelBuildingServiceResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -21,6 +21,8 @@
 #define QTAWS_LICENSEMANAGERRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawslicensemanagerglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace LicenseManager {
 
 class LicenseManagerResponsePrivate;
 
-class QTAWS_EXPORT LicenseManagerResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSLICENSEMANAGER_EXPORT LicenseManagerResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

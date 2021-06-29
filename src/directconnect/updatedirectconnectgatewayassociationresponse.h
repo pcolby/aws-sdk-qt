@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class UpdateDirectConnectGatewayAssociationResponsePrivate;
 
-class QTAWS_EXPORT UpdateDirectConnectGatewayAssociationResponse : public DirectConnectResponse {
+class QTAWSDIRECTCONNECT_EXPORT UpdateDirectConnectGatewayAssociationResponse : public DirectConnectResponse {
     Q_OBJECT
 
 public:

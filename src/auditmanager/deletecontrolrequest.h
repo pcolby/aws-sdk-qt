@@ -27,7 +27,7 @@ namespace AuditManager {
 
 class DeleteControlRequestPrivate;
 
-class QTAWS_EXPORT DeleteControlRequest : public AuditManagerRequest {
+class QTAWSAUDITMANAGER_EXPORT DeleteControlRequest : public AuditManagerRequest {
 
 public:
     DeleteControlRequest(const DeleteControlRequest &other);

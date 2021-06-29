@@ -27,7 +27,7 @@ namespace IAM {
 
 class UpdateServiceSpecificCredentialRequestPrivate;
 
-class QTAWS_EXPORT UpdateServiceSpecificCredentialRequest : public IamRequest {
+class QTAWSIAM_EXPORT UpdateServiceSpecificCredentialRequest : public IamRequest {
 
 public:
     UpdateServiceSpecificCredentialRequest(const UpdateServiceSpecificCredentialRequest &other);

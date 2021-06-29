@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsredshiftglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -237,7 +239,7 @@ class RotateEncryptionKeyResponse;
 class UpdatePartnerStatusRequest;
 class UpdatePartnerStatusResponse;
 
-class QTAWS_EXPORT RedshiftClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSREDSHIFT_EXPORT RedshiftClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

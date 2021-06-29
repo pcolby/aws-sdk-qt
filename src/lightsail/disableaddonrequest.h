@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class DisableAddOnRequestPrivate;
 
-class QTAWS_EXPORT DisableAddOnRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT DisableAddOnRequest : public LightsailRequest {
 
 public:
     DisableAddOnRequest(const DisableAddOnRequest &other);

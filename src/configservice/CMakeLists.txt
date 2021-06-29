@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCONFIGSERVICE_LIBRARY)
+
 add_library(QtAwsConfigService
   batchgetaggregateresourceconfigrequest.h
   batchgetaggregateresourceconfigrequest_p.h
@@ -317,6 +319,7 @@ add_library(QtAwsConfigService
   putstoredqueryrequest_p.h
   putstoredqueryresponse.h
   putstoredqueryresponse_p.h
+  qtawsconfigserviceglobal.h
   selectaggregateresourceconfigrequest.h
   selectaggregateresourceconfigrequest_p.h
   selectaggregateresourceconfigresponse.h

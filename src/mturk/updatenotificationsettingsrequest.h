@@ -27,7 +27,7 @@ namespace MTurk {
 
 class UpdateNotificationSettingsRequestPrivate;
 
-class QTAWS_EXPORT UpdateNotificationSettingsRequest : public MTurkRequest {
+class QTAWSMTURK_EXPORT UpdateNotificationSettingsRequest : public MTurkRequest {
 
 public:
     UpdateNotificationSettingsRequest(const UpdateNotificationSettingsRequest &other);

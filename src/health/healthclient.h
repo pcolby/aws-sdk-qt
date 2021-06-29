@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawshealthglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -55,7 +57,7 @@ class DisableHealthServiceAccessForOrganizationResponse;
 class EnableHealthServiceAccessForOrganizationRequest;
 class EnableHealthServiceAccessForOrganizationResponse;
 
-class QTAWS_EXPORT HealthClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSHEALTH_EXPORT HealthClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

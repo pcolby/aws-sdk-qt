@@ -27,7 +27,7 @@ namespace FMS {
 
 class ListMemberAccountsRequestPrivate;
 
-class QTAWS_EXPORT ListMemberAccountsRequest : public FmsRequest {
+class QTAWSFMS_EXPORT ListMemberAccountsRequest : public FmsRequest {
 
 public:
     ListMemberAccountsRequest(const ListMemberAccountsRequest &other);

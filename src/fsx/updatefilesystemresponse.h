@@ -28,7 +28,7 @@ namespace FSx {
 
 class UpdateFileSystemResponsePrivate;
 
-class QTAWS_EXPORT UpdateFileSystemResponse : public FSxResponse {
+class QTAWSFSX_EXPORT UpdateFileSystemResponse : public FSxResponse {
     Q_OBJECT
 
 public:

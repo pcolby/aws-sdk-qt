@@ -28,7 +28,7 @@ namespace S3 {
 
 class PutBucketMetricsConfigurationResponsePrivate;
 
-class QTAWS_EXPORT PutBucketMetricsConfigurationResponse : public S3Response {
+class QTAWSS3_EXPORT PutBucketMetricsConfigurationResponse : public S3Response {
     Q_OBJECT
 
 public:

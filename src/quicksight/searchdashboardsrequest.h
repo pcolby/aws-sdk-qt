@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class SearchDashboardsRequestPrivate;
 
-class QTAWS_EXPORT SearchDashboardsRequest : public QuickSightRequest {
+class QTAWSQUICKSIGHT_EXPORT SearchDashboardsRequest : public QuickSightRequest {
 
 public:
     SearchDashboardsRequest(const SearchDashboardsRequest &other);

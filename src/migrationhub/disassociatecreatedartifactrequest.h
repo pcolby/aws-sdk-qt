@@ -27,7 +27,7 @@ namespace MigrationHub {
 
 class DisassociateCreatedArtifactRequestPrivate;
 
-class QTAWS_EXPORT DisassociateCreatedArtifactRequest : public MigrationHubRequest {
+class QTAWSMIGRATIONHUB_EXPORT DisassociateCreatedArtifactRequest : public MigrationHubRequest {
 
 public:
     DisassociateCreatedArtifactRequest(const DisassociateCreatedArtifactRequest &other);

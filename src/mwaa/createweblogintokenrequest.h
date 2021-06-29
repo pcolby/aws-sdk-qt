@@ -27,7 +27,7 @@ namespace MWAA {
 
 class CreateWebLoginTokenRequestPrivate;
 
-class QTAWS_EXPORT CreateWebLoginTokenRequest : public MwaaRequest {
+class QTAWSMWAA_EXPORT CreateWebLoginTokenRequest : public MwaaRequest {
 
 public:
     CreateWebLoginTokenRequest(const CreateWebLoginTokenRequest &other);

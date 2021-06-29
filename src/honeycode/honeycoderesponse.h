@@ -21,6 +21,8 @@
 #define QTAWS_HONEYCODERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawshoneycodeglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Honeycode {
 
 class HoneycodeResponsePrivate;
 
-class QTAWS_EXPORT HoneycodeResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSHONEYCODE_EXPORT HoneycodeResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

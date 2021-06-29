@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSPINPOINT_LIBRARY)
+
 add_library(QtAwsPinpoint
   createapprequest.h
   createapprequest_p.h
@@ -341,6 +343,7 @@ add_library(QtAwsPinpoint
   puteventstreamrequest_p.h
   puteventstreamresponse.h
   puteventstreamresponse_p.h
+  qtawspinpointglobal.h
   removeattributesrequest.h
   removeattributesrequest_p.h
   removeattributesresponse.h

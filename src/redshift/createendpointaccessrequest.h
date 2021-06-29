@@ -27,7 +27,7 @@ namespace Redshift {
 
 class CreateEndpointAccessRequestPrivate;
 
-class QTAWS_EXPORT CreateEndpointAccessRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT CreateEndpointAccessRequest : public RedshiftRequest {
 
 public:
     CreateEndpointAccessRequest(const CreateEndpointAccessRequest &other);

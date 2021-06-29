@@ -27,7 +27,7 @@ namespace Redshift {
 
 class ModifyAquaConfigurationRequestPrivate;
 
-class QTAWS_EXPORT ModifyAquaConfigurationRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT ModifyAquaConfigurationRequest : public RedshiftRequest {
 
 public:
     ModifyAquaConfigurationRequest(const ModifyAquaConfigurationRequest &other);

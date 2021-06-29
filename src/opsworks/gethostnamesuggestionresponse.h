@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class GetHostnameSuggestionResponsePrivate;
 
-class QTAWS_EXPORT GetHostnameSuggestionResponse : public OpsWorksResponse {
+class QTAWSOPSWORKS_EXPORT GetHostnameSuggestionResponse : public OpsWorksResponse {
     Q_OBJECT
 
 public:

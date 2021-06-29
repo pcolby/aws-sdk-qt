@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class GetDefaultRetentionPolicyResponsePrivate;
 
-class QTAWS_EXPORT GetDefaultRetentionPolicyResponse : public WorkMailResponse {
+class QTAWSWORKMAIL_EXPORT GetDefaultRetentionPolicyResponse : public WorkMailResponse {
     Q_OBJECT
 
 public:

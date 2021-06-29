@@ -27,7 +27,7 @@ namespace Batch {
 
 class DescribeJobQueuesRequestPrivate;
 
-class QTAWS_EXPORT DescribeJobQueuesRequest : public BatchRequest {
+class QTAWSBATCH_EXPORT DescribeJobQueuesRequest : public BatchRequest {
 
 public:
     DescribeJobQueuesRequest(const DescribeJobQueuesRequest &other);

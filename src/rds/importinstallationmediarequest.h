@@ -27,7 +27,7 @@ namespace RDS {
 
 class ImportInstallationMediaRequestPrivate;
 
-class QTAWS_EXPORT ImportInstallationMediaRequest : public RdsRequest {
+class QTAWSRDS_EXPORT ImportInstallationMediaRequest : public RdsRequest {
 
 public:
     ImportInstallationMediaRequest(const ImportInstallationMediaRequest &other);

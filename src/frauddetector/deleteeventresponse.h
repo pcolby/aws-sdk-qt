@@ -28,7 +28,7 @@ namespace FraudDetector {
 
 class DeleteEventResponsePrivate;
 
-class QTAWS_EXPORT DeleteEventResponse : public FraudDetectorResponse {
+class QTAWSFRAUDDETECTOR_EXPORT DeleteEventResponse : public FraudDetectorResponse {
     Q_OBJECT
 
 public:

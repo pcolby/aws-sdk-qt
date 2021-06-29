@@ -28,7 +28,7 @@ namespace Organizations {
 
 class InviteAccountToOrganizationResponsePrivate;
 
-class QTAWS_EXPORT InviteAccountToOrganizationResponse : public OrganizationsResponse {
+class QTAWSORGANIZATIONS_EXPORT InviteAccountToOrganizationResponse : public OrganizationsResponse {
     Q_OBJECT
 
 public:

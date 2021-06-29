@@ -28,7 +28,7 @@ namespace Athena {
 
 class CreateWorkGroupResponsePrivate;
 
-class QTAWS_EXPORT CreateWorkGroupResponse : public AthenaResponse {
+class QTAWSATHENA_EXPORT CreateWorkGroupResponse : public AthenaResponse {
     Q_OBJECT
 
 public:

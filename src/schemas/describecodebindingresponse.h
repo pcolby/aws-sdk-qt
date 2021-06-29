@@ -28,7 +28,7 @@ namespace Schemas {
 
 class DescribeCodeBindingResponsePrivate;
 
-class QTAWS_EXPORT DescribeCodeBindingResponse : public SchemasResponse {
+class QTAWSSCHEMAS_EXPORT DescribeCodeBindingResponse : public SchemasResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace SimpleDB {
 
 class BatchDeleteAttributesRequestPrivate;
 
-class QTAWS_EXPORT BatchDeleteAttributesRequest : public SimpleDBRequest {
+class QTAWSSIMPLEDB_EXPORT BatchDeleteAttributesRequest : public SimpleDBRequest {
 
 public:
     BatchDeleteAttributesRequest(const BatchDeleteAttributesRequest &other);

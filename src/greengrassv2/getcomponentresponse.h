@@ -28,7 +28,7 @@ namespace GreengrassV2 {
 
 class GetComponentResponsePrivate;
 
-class QTAWS_EXPORT GetComponentResponse : public GreengrassV2Response {
+class QTAWSGREENGRASSV2_EXPORT GetComponentResponse : public GreengrassV2Response {
     Q_OBJECT
 
 public:

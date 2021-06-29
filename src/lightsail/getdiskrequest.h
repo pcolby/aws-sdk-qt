@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class GetDiskRequestPrivate;
 
-class QTAWS_EXPORT GetDiskRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT GetDiskRequest : public LightsailRequest {
 
 public:
     GetDiskRequest(const GetDiskRequest &other);

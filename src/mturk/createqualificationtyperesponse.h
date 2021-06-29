@@ -28,7 +28,7 @@ namespace MTurk {
 
 class CreateQualificationTypeResponsePrivate;
 
-class QTAWS_EXPORT CreateQualificationTypeResponse : public MTurkResponse {
+class QTAWSMTURK_EXPORT CreateQualificationTypeResponse : public MTurkResponse {
     Q_OBJECT
 
 public:

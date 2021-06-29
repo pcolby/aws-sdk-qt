@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class GetLinkAttributesResponsePrivate;
 
-class QTAWS_EXPORT GetLinkAttributesResponse : public CloudDirectoryResponse {
+class QTAWSCLOUDDIRECTORY_EXPORT GetLinkAttributesResponse : public CloudDirectoryResponse {
     Q_OBJECT
 
 public:

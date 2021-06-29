@@ -27,7 +27,7 @@ namespace ACMPCA {
 
 class DeletePermissionRequestPrivate;
 
-class QTAWS_EXPORT DeletePermissionRequest : public AcmpcaRequest {
+class QTAWSACMPCA_EXPORT DeletePermissionRequest : public AcmpcaRequest {
 
 public:
     DeletePermissionRequest(const DeletePermissionRequest &other);

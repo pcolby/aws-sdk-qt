@@ -27,7 +27,7 @@ namespace CloudWatch {
 
 class ListDashboardsRequestPrivate;
 
-class QTAWS_EXPORT ListDashboardsRequest : public CloudWatchRequest {
+class QTAWSCLOUDWATCH_EXPORT ListDashboardsRequest : public CloudWatchRequest {
 
 public:
     ListDashboardsRequest(const ListDashboardsRequest &other);

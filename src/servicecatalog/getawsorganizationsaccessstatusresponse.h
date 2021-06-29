@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class GetAWSOrganizationsAccessStatusResponsePrivate;
 
-class QTAWS_EXPORT GetAWSOrganizationsAccessStatusResponse : public ServiceCatalogResponse {
+class QTAWSSERVICECATALOG_EXPORT GetAWSOrganizationsAccessStatusResponse : public ServiceCatalogResponse {
     Q_OBJECT
 
 public:

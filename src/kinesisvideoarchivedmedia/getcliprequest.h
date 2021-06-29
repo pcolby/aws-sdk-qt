@@ -27,7 +27,7 @@ namespace KinesisVideoArchivedMedia {
 
 class GetClipRequestPrivate;
 
-class QTAWS_EXPORT GetClipRequest : public KinesisVideoArchivedMediaRequest {
+class QTAWSKINESISVIDEOARCHIVEDMEDIA_EXPORT GetClipRequest : public KinesisVideoArchivedMediaRequest {
 
 public:
     GetClipRequest(const GetClipRequest &other);

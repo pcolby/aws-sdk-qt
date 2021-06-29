@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsssmincidentsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace SSMIncidents {
 
 class SSMIncidentsRequestPrivate;
 
-class QTAWS_EXPORT SSMIncidentsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSSMINCIDENTS_EXPORT SSMIncidentsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SSMIncidents.

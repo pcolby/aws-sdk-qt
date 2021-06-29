@@ -28,7 +28,7 @@ namespace PinpointSMSVoice {
 
 class GetConfigurationSetEventDestinationsResponsePrivate;
 
-class QTAWS_EXPORT GetConfigurationSetEventDestinationsResponse : public PinpointSMSVoiceResponse {
+class QTAWSPINPOINTSMSVOICE_EXPORT GetConfigurationSetEventDestinationsResponse : public PinpointSMSVoiceResponse {
     Q_OBJECT
 
 public:

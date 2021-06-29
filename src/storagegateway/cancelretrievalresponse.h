@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class CancelRetrievalResponsePrivate;
 
-class QTAWS_EXPORT CancelRetrievalResponse : public StorageGatewayResponse {
+class QTAWSSTORAGEGATEWAY_EXPORT CancelRetrievalResponse : public StorageGatewayResponse {
     Q_OBJECT
 
 public:

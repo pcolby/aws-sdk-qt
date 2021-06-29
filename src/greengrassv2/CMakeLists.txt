@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSGREENGRASSV2_LIBRARY)
+
 add_library(QtAwsGreengrassV2
   batchassociateclientdevicewithcoredevicerequest.h
   batchassociateclientdevicewithcoredevicerequest_p.h
@@ -85,6 +87,7 @@ add_library(QtAwsGreengrassV2
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsgreengrassv2global.h
   resolvecomponentcandidatesrequest.h
   resolvecomponentcandidatesrequest_p.h
   resolvecomponentcandidatesresponse.h

@@ -27,7 +27,7 @@ namespace ManagedBlockchain {
 
 class ListMembersRequestPrivate;
 
-class QTAWS_EXPORT ListMembersRequest : public ManagedBlockchainRequest {
+class QTAWSMANAGEDBLOCKCHAIN_EXPORT ListMembersRequest : public ManagedBlockchainRequest {
 
 public:
     ListMembersRequest(const ListMembersRequest &other);

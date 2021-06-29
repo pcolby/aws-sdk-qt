@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSDATAEXCHANGE_LIBRARY)
+
 add_library(QtAwsDataExchange
   canceljobrequest.h
   canceljobrequest_p.h
@@ -69,6 +71,7 @@ add_library(QtAwsDataExchange
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsdataexchangeglobal.h
   startjobrequest.h
   startjobrequest_p.h
   startjobresponse.h

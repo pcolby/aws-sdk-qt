@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsmarketplaceentitlementserviceglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -31,7 +33,7 @@ class MarketplaceEntitlementServiceClientPrivate;
 class GetEntitlementsRequest;
 class GetEntitlementsResponse;
 
-class QTAWS_EXPORT MarketplaceEntitlementServiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSMARKETPLACEENTITLEMENTSERVICE_EXPORT MarketplaceEntitlementServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

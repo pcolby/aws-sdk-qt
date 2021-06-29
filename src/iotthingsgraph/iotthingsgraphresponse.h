@@ -21,6 +21,8 @@
 #define QTAWS_IOTTHINGSGRAPHRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsiotthingsgraphglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace IoTThingsGraph {
 
 class IoTThingsGraphResponsePrivate;
 
-class QTAWS_EXPORT IoTThingsGraphResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSIOTTHINGSGRAPH_EXPORT IoTThingsGraphResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace SFN {
 
 class GetExecutionHistoryRequestPrivate;
 
-class QTAWS_EXPORT GetExecutionHistoryRequest : public SfnRequest {
+class QTAWSSFN_EXPORT GetExecutionHistoryRequest : public SfnRequest {
 
 public:
     GetExecutionHistoryRequest(const GetExecutionHistoryRequest &other);

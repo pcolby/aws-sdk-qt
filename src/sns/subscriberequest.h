@@ -27,7 +27,7 @@ namespace SNS {
 
 class SubscribeRequestPrivate;
 
-class QTAWS_EXPORT SubscribeRequest : public SnsRequest {
+class QTAWSSNS_EXPORT SubscribeRequest : public SnsRequest {
 
 public:
     SubscribeRequest(const SubscribeRequest &other);

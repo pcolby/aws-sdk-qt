@@ -20,7 +20,7 @@
 #ifndef AWSENDPOINT_H
 #define AWSENDPOINT_H
 
-#include "qtawsglobal.h"
+#include "qtawscoreglobal.h"
 
 #include <QFlag>
 #include <QStringList>
@@ -31,7 +31,7 @@ namespace Core {
 
 class AwsEndpointPrivate;
 
-class QTAWS_EXPORT AwsEndpoint {
+class QTAWSCORE_EXPORT AwsEndpoint {
 
 public:
     enum Transport {

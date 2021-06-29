@@ -28,7 +28,7 @@ namespace GlobalAccelerator {
 
 class UpdateAcceleratorAttributesResponsePrivate;
 
-class QTAWS_EXPORT UpdateAcceleratorAttributesResponse : public GlobalAcceleratorResponse {
+class QTAWSGLOBALACCELERATOR_EXPORT UpdateAcceleratorAttributesResponse : public GlobalAcceleratorResponse {
     Q_OBJECT
 
 public:

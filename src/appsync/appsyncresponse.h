@@ -21,6 +21,8 @@
 #define QTAWS_APPSYNCRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsappsyncglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace AppSync {
 
 class AppSyncResponsePrivate;
 
-class QTAWS_EXPORT AppSyncResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSAPPSYNC_EXPORT AppSyncResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

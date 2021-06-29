@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 
 class DeleteRuleResponsePrivate;
 
-class QTAWS_EXPORT DeleteRuleResponse : public CloudWatchEventsResponse {
+class QTAWSCLOUDWATCHEVENTS_EXPORT DeleteRuleResponse : public CloudWatchEventsResponse {
     Q_OBJECT
 
 public:

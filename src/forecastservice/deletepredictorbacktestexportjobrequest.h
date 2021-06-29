@@ -27,7 +27,7 @@ namespace ForecastService {
 
 class DeletePredictorBacktestExportJobRequestPrivate;
 
-class QTAWS_EXPORT DeletePredictorBacktestExportJobRequest : public ForecastServiceRequest {
+class QTAWSFORECASTSERVICE_EXPORT DeletePredictorBacktestExportJobRequest : public ForecastServiceRequest {
 
 public:
     DeletePredictorBacktestExportJobRequest(const DeletePredictorBacktestExportJobRequest &other);

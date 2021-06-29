@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ModifyInstanceEventStartTimeResponsePrivate;
 
-class QTAWS_EXPORT ModifyInstanceEventStartTimeResponse : public Ec2Response {
+class QTAWSEC2_EXPORT ModifyInstanceEventStartTimeResponse : public Ec2Response {
     Q_OBJECT
 
 public:

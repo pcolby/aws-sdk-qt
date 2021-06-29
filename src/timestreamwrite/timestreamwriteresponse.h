@@ -21,6 +21,8 @@
 #define QTAWS_TIMESTREAMWRITERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawstimestreamwriteglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace TimestreamWrite {
 
 class TimestreamWriteResponsePrivate;
 
-class QTAWS_EXPORT TimestreamWriteResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSTIMESTREAMWRITE_EXPORT TimestreamWriteResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

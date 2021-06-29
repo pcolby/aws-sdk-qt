@@ -27,7 +27,7 @@ namespace WorkSpaces {
 
 class DeleteWorkspaceImageRequestPrivate;
 
-class QTAWS_EXPORT DeleteWorkspaceImageRequest : public WorkSpacesRequest {
+class QTAWSWORKSPACES_EXPORT DeleteWorkspaceImageRequest : public WorkSpacesRequest {
 
 public:
     DeleteWorkspaceImageRequest(const DeleteWorkspaceImageRequest &other);

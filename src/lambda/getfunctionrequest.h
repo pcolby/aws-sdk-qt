@@ -27,7 +27,7 @@ namespace Lambda {
 
 class GetFunctionRequestPrivate;
 
-class QTAWS_EXPORT GetFunctionRequest : public LambdaRequest {
+class QTAWSLAMBDA_EXPORT GetFunctionRequest : public LambdaRequest {
 
 public:
     GetFunctionRequest(const GetFunctionRequest &other);

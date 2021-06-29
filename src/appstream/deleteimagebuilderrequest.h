@@ -27,7 +27,7 @@ namespace AppStream {
 
 class DeleteImageBuilderRequestPrivate;
 
-class QTAWS_EXPORT DeleteImageBuilderRequest : public AppStreamRequest {
+class QTAWSAPPSTREAM_EXPORT DeleteImageBuilderRequest : public AppStreamRequest {
 
 public:
     DeleteImageBuilderRequest(const DeleteImageBuilderRequest &other);

@@ -27,7 +27,7 @@ namespace ApplicationDiscoveryService {
 
 class DescribeTagsRequestPrivate;
 
-class QTAWS_EXPORT DescribeTagsRequest : public ApplicationDiscoveryServiceRequest {
+class QTAWSAPPLICATIONDISCOVERYSERVICE_EXPORT DescribeTagsRequest : public ApplicationDiscoveryServiceRequest {
 
 public:
     DescribeTagsRequest(const DescribeTagsRequest &other);

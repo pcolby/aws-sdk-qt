@@ -20,7 +20,7 @@
 #ifndef AWSABSTRACTRESPONSE_H
 #define AWSABSTRACTRESPONSE_H
 
-#include "qtawsglobal.h"
+#include "qtawscoreglobal.h"
 
 #include <QNetworkReply>
 #include <QXmlStreamReader>
@@ -31,7 +31,7 @@ namespace Core {
 class AwsAbstractRequest;
 class AwsAbstractResponsePrivate;
 
-class QTAWS_EXPORT AwsAbstractResponse : public QObject {
+class QTAWSCORE_EXPORT AwsAbstractResponse : public QObject {
     Q_OBJECT
 
 public:

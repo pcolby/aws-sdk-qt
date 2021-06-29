@@ -28,7 +28,7 @@ namespace DataPipeline {
 
 class ReportTaskRunnerHeartbeatResponsePrivate;
 
-class QTAWS_EXPORT ReportTaskRunnerHeartbeatResponse : public DataPipelineResponse {
+class QTAWSDATAPIPELINE_EXPORT ReportTaskRunnerHeartbeatResponse : public DataPipelineResponse {
     Q_OBJECT
 
 public:

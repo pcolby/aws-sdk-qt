@@ -27,7 +27,7 @@ namespace SWF {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public SwfRequest {
+class QTAWSSWF_EXPORT UntagResourceRequest : public SwfRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

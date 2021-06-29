@@ -27,7 +27,7 @@ namespace MediaTailor {
 
 class UpdateSourceLocationRequestPrivate;
 
-class QTAWS_EXPORT UpdateSourceLocationRequest : public MediaTailorRequest {
+class QTAWSMEDIATAILOR_EXPORT UpdateSourceLocationRequest : public MediaTailorRequest {
 
 public:
     UpdateSourceLocationRequest(const UpdateSourceLocationRequest &other);

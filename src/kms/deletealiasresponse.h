@@ -28,7 +28,7 @@ namespace KMS {
 
 class DeleteAliasResponsePrivate;
 
-class QTAWS_EXPORT DeleteAliasResponse : public KmsResponse {
+class QTAWSKMS_EXPORT DeleteAliasResponse : public KmsResponse {
     Q_OBJECT
 
 public:

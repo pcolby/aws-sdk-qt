@@ -28,7 +28,7 @@ namespace Macie2 {
 
 class GetClassificationExportConfigurationResponsePrivate;
 
-class QTAWS_EXPORT GetClassificationExportConfigurationResponse : public Macie2Response {
+class QTAWSMACIE2_EXPORT GetClassificationExportConfigurationResponse : public Macie2Response {
     Q_OBJECT
 
 public:

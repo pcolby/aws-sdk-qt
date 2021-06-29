@@ -28,7 +28,7 @@ namespace Athena {
 
 class ListEngineVersionsResponsePrivate;
 
-class QTAWS_EXPORT ListEngineVersionsResponse : public AthenaResponse {
+class QTAWSATHENA_EXPORT ListEngineVersionsResponse : public AthenaResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class GetTemplateSummaryResponsePrivate;
 
-class QTAWS_EXPORT GetTemplateSummaryResponse : public CloudFormationResponse {
+class QTAWSCLOUDFORMATION_EXPORT GetTemplateSummaryResponse : public CloudFormationResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace FraudDetector {
 
 class DeleteBatchPredictionJobResponsePrivate;
 
-class QTAWS_EXPORT DeleteBatchPredictionJobResponse : public FraudDetectorResponse {
+class QTAWSFRAUDDETECTOR_EXPORT DeleteBatchPredictionJobResponse : public FraudDetectorResponse {
     Q_OBJECT
 
 public:

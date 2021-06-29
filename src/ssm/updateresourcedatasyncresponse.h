@@ -28,7 +28,7 @@ namespace SSM {
 
 class UpdateResourceDataSyncResponsePrivate;
 
-class QTAWS_EXPORT UpdateResourceDataSyncResponse : public SsmResponse {
+class QTAWSSSM_EXPORT UpdateResourceDataSyncResponse : public SsmResponse {
     Q_OBJECT
 
 public:

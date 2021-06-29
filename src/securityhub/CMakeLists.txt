@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSECURITYHUB_LIBRARY)
+
 add_library(QtAwsSecurityHub
   acceptadministratorinvitationrequest.h
   acceptadministratorinvitationrequest_p.h
@@ -171,6 +173,7 @@ add_library(QtAwsSecurityHub
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawssecurityhubglobal.h
   securityhubclient.h
   securityhubclient_p.h
   securityhubrequest.h

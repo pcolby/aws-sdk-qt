@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawssqsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace SQS {
 
 class SqsRequestPrivate;
 
-class QTAWS_EXPORT SqsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSQS_EXPORT SqsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SQS.

@@ -27,7 +27,7 @@ namespace IoT {
 
 class DescribeJobExecutionRequestPrivate;
 
-class QTAWS_EXPORT DescribeJobExecutionRequest : public IoTRequest {
+class QTAWSIOT_EXPORT DescribeJobExecutionRequest : public IoTRequest {
 
 public:
     DescribeJobExecutionRequest(const DescribeJobExecutionRequest &other);

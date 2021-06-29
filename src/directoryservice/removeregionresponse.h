@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class RemoveRegionResponsePrivate;
 
-class QTAWS_EXPORT RemoveRegionResponse : public DirectoryServiceResponse {
+class QTAWSDIRECTORYSERVICE_EXPORT RemoveRegionResponse : public DirectoryServiceResponse {
     Q_OBJECT
 
 public:

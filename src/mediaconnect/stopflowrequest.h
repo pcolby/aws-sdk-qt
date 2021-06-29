@@ -27,7 +27,7 @@ namespace MediaConnect {
 
 class StopFlowRequestPrivate;
 
-class QTAWS_EXPORT StopFlowRequest : public MediaConnectRequest {
+class QTAWSMEDIACONNECT_EXPORT StopFlowRequest : public MediaConnectRequest {
 
 public:
     StopFlowRequest(const StopFlowRequest &other);

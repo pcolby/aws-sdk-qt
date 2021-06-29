@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class AssociateDelegateToResourceRequestPrivate;
 
-class QTAWS_EXPORT AssociateDelegateToResourceRequest : public WorkMailRequest {
+class QTAWSWORKMAIL_EXPORT AssociateDelegateToResourceRequest : public WorkMailRequest {
 
 public:
     AssociateDelegateToResourceRequest(const AssociateDelegateToResourceRequest &other);

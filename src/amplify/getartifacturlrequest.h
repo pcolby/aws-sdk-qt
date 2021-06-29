@@ -27,7 +27,7 @@ namespace Amplify {
 
 class GetArtifactUrlRequestPrivate;
 
-class QTAWS_EXPORT GetArtifactUrlRequest : public AmplifyRequest {
+class QTAWSAMPLIFY_EXPORT GetArtifactUrlRequest : public AmplifyRequest {
 
 public:
     GetArtifactUrlRequest(const GetArtifactUrlRequest &other);

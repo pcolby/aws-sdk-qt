@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsinspectorglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -103,7 +105,7 @@ class UnsubscribeFromEventResponse;
 class UpdateAssessmentTargetRequest;
 class UpdateAssessmentTargetResponse;
 
-class QTAWS_EXPORT InspectorClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSINSPECTOR_EXPORT InspectorClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -21,6 +21,8 @@
 #define QTAWS_PIRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawspiglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace PI {
 
 class PiResponsePrivate;
 
-class QTAWS_EXPORT PiResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSPI_EXPORT PiResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

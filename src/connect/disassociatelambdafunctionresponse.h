@@ -28,7 +28,7 @@ namespace Connect {
 
 class DisassociateLambdaFunctionResponsePrivate;
 
-class QTAWS_EXPORT DisassociateLambdaFunctionResponse : public ConnectResponse {
+class QTAWSCONNECT_EXPORT DisassociateLambdaFunctionResponse : public ConnectResponse {
     Q_OBJECT
 
 public:

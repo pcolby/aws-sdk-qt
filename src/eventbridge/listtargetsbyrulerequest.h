@@ -27,7 +27,7 @@ namespace EventBridge {
 
 class ListTargetsByRuleRequestPrivate;
 
-class QTAWS_EXPORT ListTargetsByRuleRequest : public EventBridgeRequest {
+class QTAWSEVENTBRIDGE_EXPORT ListTargetsByRuleRequest : public EventBridgeRequest {
 
 public:
     ListTargetsByRuleRequest(const ListTargetsByRuleRequest &other);

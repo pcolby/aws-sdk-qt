@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsemrcontainersglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace EMRContainers {
 
 class EMRContainersRequestPrivate;
 
-class QTAWS_EXPORT EMRContainersRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSEMRCONTAINERS_EXPORT EMRContainersRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by EMRContainers.

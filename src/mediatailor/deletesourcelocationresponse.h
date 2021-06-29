@@ -28,7 +28,7 @@ namespace MediaTailor {
 
 class DeleteSourceLocationResponsePrivate;
 
-class QTAWS_EXPORT DeleteSourceLocationResponse : public MediaTailorResponse {
+class QTAWSMEDIATAILOR_EXPORT DeleteSourceLocationResponse : public MediaTailorResponse {
     Q_OBJECT
 
 public:

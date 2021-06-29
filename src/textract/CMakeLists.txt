@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSTEXTRACT_LIBRARY)
+
 add_library(QtAwsTextract
   analyzedocumentrequest.h
   analyzedocumentrequest_p.h
@@ -15,6 +17,7 @@ add_library(QtAwsTextract
   getdocumenttextdetectionrequest_p.h
   getdocumenttextdetectionresponse.h
   getdocumenttextdetectionresponse_p.h
+  qtawstextractglobal.h
   startdocumentanalysisrequest.h
   startdocumentanalysisrequest_p.h
   startdocumentanalysisresponse.h

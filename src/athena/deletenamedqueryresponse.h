@@ -28,7 +28,7 @@ namespace Athena {
 
 class DeleteNamedQueryResponsePrivate;
 
-class QTAWS_EXPORT DeleteNamedQueryResponse : public AthenaResponse {
+class QTAWSATHENA_EXPORT DeleteNamedQueryResponse : public AthenaResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace WAFV2 {
 
 class GetWebACLForResourceResponsePrivate;
 
-class QTAWS_EXPORT GetWebACLForResourceResponse : public Wafv2Response {
+class QTAWSWAFV2_EXPORT GetWebACLForResourceResponse : public Wafv2Response {
     Q_OBJECT
 
 public:

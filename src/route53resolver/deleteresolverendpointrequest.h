@@ -27,7 +27,7 @@ namespace Route53Resolver {
 
 class DeleteResolverEndpointRequestPrivate;
 
-class QTAWS_EXPORT DeleteResolverEndpointRequest : public Route53ResolverRequest {
+class QTAWSROUTE53RESOLVER_EXPORT DeleteResolverEndpointRequest : public Route53ResolverRequest {
 
 public:
     DeleteResolverEndpointRequest(const DeleteResolverEndpointRequest &other);

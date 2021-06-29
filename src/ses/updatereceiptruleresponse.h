@@ -28,7 +28,7 @@ namespace SES {
 
 class UpdateReceiptRuleResponsePrivate;
 
-class QTAWS_EXPORT UpdateReceiptRuleResponse : public SesResponse {
+class QTAWSSES_EXPORT UpdateReceiptRuleResponse : public SesResponse {
     Q_OBJECT
 
 public:

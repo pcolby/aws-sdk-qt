@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class UpdateSMBFileShareVisibilityRequestPrivate;
 
-class QTAWS_EXPORT UpdateSMBFileShareVisibilityRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT UpdateSMBFileShareVisibilityRequest : public StorageGatewayRequest {
 
 public:
     UpdateSMBFileShareVisibilityRequest(const UpdateSMBFileShareVisibilityRequest &other);

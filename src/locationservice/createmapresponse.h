@@ -28,7 +28,7 @@ namespace LocationService {
 
 class CreateMapResponsePrivate;
 
-class QTAWS_EXPORT CreateMapResponse : public LocationServiceResponse {
+class QTAWSLOCATIONSERVICE_EXPORT CreateMapResponse : public LocationServiceResponse {
     Q_OBJECT
 
 public:

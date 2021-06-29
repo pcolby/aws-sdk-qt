@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class PhoneNumberValidateRequestPrivate;
 
-class QTAWS_EXPORT PhoneNumberValidateRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT PhoneNumberValidateRequest : public PinpointRequest {
 
 public:
     PhoneNumberValidateRequest(const PhoneNumberValidateRequest &other);

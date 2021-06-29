@@ -27,7 +27,7 @@ namespace RoboMaker {
 
 class ListWorldExportJobsRequestPrivate;
 
-class QTAWS_EXPORT ListWorldExportJobsRequest : public RoboMakerRequest {
+class QTAWSROBOMAKER_EXPORT ListWorldExportJobsRequest : public RoboMakerRequest {
 
 public:
     ListWorldExportJobsRequest(const ListWorldExportJobsRequest &other);

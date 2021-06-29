@@ -28,7 +28,7 @@ namespace DataSync {
 
 class UpdateLocationSmbResponsePrivate;
 
-class QTAWS_EXPORT UpdateLocationSmbResponse : public DataSyncResponse {
+class QTAWSDATASYNC_EXPORT UpdateLocationSmbResponse : public DataSyncResponse {
     Q_OBJECT
 
 public:

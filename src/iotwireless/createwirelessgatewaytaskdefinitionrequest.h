@@ -27,7 +27,7 @@ namespace IoTWireless {
 
 class CreateWirelessGatewayTaskDefinitionRequestPrivate;
 
-class QTAWS_EXPORT CreateWirelessGatewayTaskDefinitionRequest : public IoTWirelessRequest {
+class QTAWSIOTWIRELESS_EXPORT CreateWirelessGatewayTaskDefinitionRequest : public IoTWirelessRequest {
 
 public:
     CreateWirelessGatewayTaskDefinitionRequest(const CreateWirelessGatewayTaskDefinitionRequest &other);

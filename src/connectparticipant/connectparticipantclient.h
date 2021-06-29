@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsconnectparticipantglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -45,7 +47,7 @@ class SendMessageResponse;
 class StartAttachmentUploadRequest;
 class StartAttachmentUploadResponse;
 
-class QTAWS_EXPORT ConnectParticipantClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCONNECTPARTICIPANT_EXPORT ConnectParticipantClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

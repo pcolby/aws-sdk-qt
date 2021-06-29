@@ -28,7 +28,7 @@ namespace DataPipeline {
 
 class DescribePipelinesResponsePrivate;
 
-class QTAWS_EXPORT DescribePipelinesResponse : public DataPipelineResponse {
+class QTAWSDATAPIPELINE_EXPORT DescribePipelinesResponse : public DataPipelineResponse {
     Q_OBJECT
 
 public:

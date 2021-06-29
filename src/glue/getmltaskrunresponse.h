@@ -28,7 +28,7 @@ namespace Glue {
 
 class GetMLTaskRunResponsePrivate;
 
-class QTAWS_EXPORT GetMLTaskRunResponse : public GlueResponse {
+class QTAWSGLUE_EXPORT GetMLTaskRunResponse : public GlueResponse {
     Q_OBJECT
 
 public:

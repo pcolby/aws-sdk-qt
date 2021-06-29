@@ -28,7 +28,7 @@ namespace Shield {
 
 class DisassociateDRTRoleResponsePrivate;
 
-class QTAWS_EXPORT DisassociateDRTRoleResponse : public ShieldResponse {
+class QTAWSSHIELD_EXPORT DisassociateDRTRoleResponse : public ShieldResponse {
     Q_OBJECT
 
 public:

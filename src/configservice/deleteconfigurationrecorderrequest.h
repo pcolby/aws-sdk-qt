@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class DeleteConfigurationRecorderRequestPrivate;
 
-class QTAWS_EXPORT DeleteConfigurationRecorderRequest : public ConfigServiceRequest {
+class QTAWSCONFIGSERVICE_EXPORT DeleteConfigurationRecorderRequest : public ConfigServiceRequest {
 
 public:
     DeleteConfigurationRecorderRequest(const DeleteConfigurationRecorderRequest &other);

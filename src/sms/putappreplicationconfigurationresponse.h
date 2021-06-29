@@ -28,7 +28,7 @@ namespace SMS {
 
 class PutAppReplicationConfigurationResponsePrivate;
 
-class QTAWS_EXPORT PutAppReplicationConfigurationResponse : public SmsResponse {
+class QTAWSSMS_EXPORT PutAppReplicationConfigurationResponse : public SmsResponse {
     Q_OBJECT
 
 public:

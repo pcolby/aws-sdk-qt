@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSPERSONALIZE_LIBRARY)
+
 add_library(QtAwsPersonalize
   createbatchinferencejobrequest.h
   createbatchinferencejobrequest_p.h
@@ -185,6 +187,7 @@ add_library(QtAwsPersonalize
   personalizerequest_p.h
   personalizeresponse.h
   personalizeresponse_p.h
+  qtawspersonalizeglobal.h
   stopsolutionversioncreationrequest.h
   stopsolutionversioncreationrequest_p.h
   stopsolutionversioncreationresponse.h

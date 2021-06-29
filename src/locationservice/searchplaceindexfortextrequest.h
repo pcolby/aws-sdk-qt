@@ -27,7 +27,7 @@ namespace LocationService {
 
 class SearchPlaceIndexForTextRequestPrivate;
 
-class QTAWS_EXPORT SearchPlaceIndexForTextRequest : public LocationServiceRequest {
+class QTAWSLOCATIONSERVICE_EXPORT SearchPlaceIndexForTextRequest : public LocationServiceRequest {
 
 public:
     SearchPlaceIndexForTextRequest(const SearchPlaceIndexForTextRequest &other);

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSMARKETPLACECATALOG_LIBRARY)
+
 add_library(QtAwsMarketplaceCatalog
   cancelchangesetrequest.h
   cancelchangesetrequest_p.h
@@ -25,6 +27,7 @@ add_library(QtAwsMarketplaceCatalog
   marketplacecatalogrequest_p.h
   marketplacecatalogresponse.h
   marketplacecatalogresponse_p.h
+  qtawsmarketplacecatalogglobal.h
   startchangesetrequest.h
   startchangesetrequest_p.h
   startchangesetresponse.h

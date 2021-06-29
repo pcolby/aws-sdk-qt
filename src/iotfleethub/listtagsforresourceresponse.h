@@ -28,7 +28,7 @@ namespace IoTFleetHub {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public IoTFleetHubResponse {
+class QTAWSIOTFLEETHUB_EXPORT ListTagsForResourceResponse : public IoTFleetHubResponse {
     Q_OBJECT
 
 public:

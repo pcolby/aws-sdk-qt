@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class DeleteAppRequestPrivate;
 
-class QTAWS_EXPORT DeleteAppRequest : public OpsWorksRequest {
+class QTAWSOPSWORKS_EXPORT DeleteAppRequest : public OpsWorksRequest {
 
 public:
     DeleteAppRequest(const DeleteAppRequest &other);

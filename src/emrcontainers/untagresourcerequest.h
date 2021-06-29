@@ -27,7 +27,7 @@ namespace EMRContainers {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public EMRContainersRequest {
+class QTAWSEMRCONTAINERS_EXPORT UntagResourceRequest : public EMRContainersRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

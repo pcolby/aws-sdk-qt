@@ -27,7 +27,7 @@ namespace AlexaForBusiness {
 
 class AssociateDeviceWithNetworkProfileRequestPrivate;
 
-class QTAWS_EXPORT AssociateDeviceWithNetworkProfileRequest : public AlexaForBusinessRequest {
+class QTAWSALEXAFORBUSINESS_EXPORT AssociateDeviceWithNetworkProfileRequest : public AlexaForBusinessRequest {
 
 public:
     AssociateDeviceWithNetworkProfileRequest(const AssociateDeviceWithNetworkProfileRequest &other);

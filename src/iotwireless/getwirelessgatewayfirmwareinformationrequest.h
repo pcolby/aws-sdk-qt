@@ -27,7 +27,7 @@ namespace IoTWireless {
 
 class GetWirelessGatewayFirmwareInformationRequestPrivate;
 
-class QTAWS_EXPORT GetWirelessGatewayFirmwareInformationRequest : public IoTWirelessRequest {
+class QTAWSIOTWIRELESS_EXPORT GetWirelessGatewayFirmwareInformationRequest : public IoTWirelessRequest {
 
 public:
     GetWirelessGatewayFirmwareInformationRequest(const GetWirelessGatewayFirmwareInformationRequest &other);

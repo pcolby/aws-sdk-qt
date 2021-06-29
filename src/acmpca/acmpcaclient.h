@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsacmpcaglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -75,7 +77,7 @@ class UntagCertificateAuthorityResponse;
 class UpdateCertificateAuthorityRequest;
 class UpdateCertificateAuthorityResponse;
 
-class QTAWS_EXPORT AcmpcaClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSACMPCA_EXPORT AcmpcaClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

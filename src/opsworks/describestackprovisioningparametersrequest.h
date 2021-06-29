@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class DescribeStackProvisioningParametersRequestPrivate;
 
-class QTAWS_EXPORT DescribeStackProvisioningParametersRequest : public OpsWorksRequest {
+class QTAWSOPSWORKS_EXPORT DescribeStackProvisioningParametersRequest : public OpsWorksRequest {
 
 public:
     DescribeStackProvisioningParametersRequest(const DescribeStackProvisioningParametersRequest &other);

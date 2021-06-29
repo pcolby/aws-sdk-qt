@@ -27,7 +27,7 @@ namespace SNS {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public SnsRequest {
+class QTAWSSNS_EXPORT UntagResourceRequest : public SnsRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

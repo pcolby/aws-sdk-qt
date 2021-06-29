@@ -27,7 +27,7 @@ namespace AppStream {
 
 class ListAssociatedStacksRequestPrivate;
 
-class QTAWS_EXPORT ListAssociatedStacksRequest : public AppStreamRequest {
+class QTAWSAPPSTREAM_EXPORT ListAssociatedStacksRequest : public AppStreamRequest {
 
 public:
     ListAssociatedStacksRequest(const ListAssociatedStacksRequest &other);

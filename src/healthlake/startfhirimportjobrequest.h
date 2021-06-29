@@ -27,7 +27,7 @@ namespace HealthLake {
 
 class StartFHIRImportJobRequestPrivate;
 
-class QTAWS_EXPORT StartFHIRImportJobRequest : public HealthLakeRequest {
+class QTAWSHEALTHLAKE_EXPORT StartFHIRImportJobRequest : public HealthLakeRequest {
 
 public:
     StartFHIRImportJobRequest(const StartFHIRImportJobRequest &other);

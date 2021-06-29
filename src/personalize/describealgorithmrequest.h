@@ -27,7 +27,7 @@ namespace Personalize {
 
 class DescribeAlgorithmRequestPrivate;
 
-class QTAWS_EXPORT DescribeAlgorithmRequest : public PersonalizeRequest {
+class QTAWSPERSONALIZE_EXPORT DescribeAlgorithmRequest : public PersonalizeRequest {
 
 public:
     DescribeAlgorithmRequest(const DescribeAlgorithmRequest &other);

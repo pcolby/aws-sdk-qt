@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class ListPipelineParametersForExecutionResponsePrivate;
 
-class QTAWS_EXPORT ListPipelineParametersForExecutionResponse : public SageMakerResponse {
+class QTAWSSAGEMAKER_EXPORT ListPipelineParametersForExecutionResponse : public SageMakerResponse {
     Q_OBJECT
 
 public:

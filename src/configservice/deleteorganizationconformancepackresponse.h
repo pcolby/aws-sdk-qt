@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class DeleteOrganizationConformancePackResponsePrivate;
 
-class QTAWS_EXPORT DeleteOrganizationConformancePackResponse : public ConfigServiceResponse {
+class QTAWSCONFIGSERVICE_EXPORT DeleteOrganizationConformancePackResponse : public ConfigServiceResponse {
     Q_OBJECT
 
 public:

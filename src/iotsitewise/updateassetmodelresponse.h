@@ -28,7 +28,7 @@ namespace IoTSiteWise {
 
 class UpdateAssetModelResponsePrivate;
 
-class QTAWS_EXPORT UpdateAssetModelResponse : public IoTSiteWiseResponse {
+class QTAWSIOTSITEWISE_EXPORT UpdateAssetModelResponse : public IoTSiteWiseResponse {
     Q_OBJECT
 
 public:

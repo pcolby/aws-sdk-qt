@@ -27,7 +27,7 @@ namespace IAM {
 
 class DeleteGroupRequestPrivate;
 
-class QTAWS_EXPORT DeleteGroupRequest : public IamRequest {
+class QTAWSIAM_EXPORT DeleteGroupRequest : public IamRequest {
 
 public:
     DeleteGroupRequest(const DeleteGroupRequest &other);

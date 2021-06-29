@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class DeleteFlowDefinitionRequestPrivate;
 
-class QTAWS_EXPORT DeleteFlowDefinitionRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT DeleteFlowDefinitionRequest : public SageMakerRequest {
 
 public:
     DeleteFlowDefinitionRequest(const DeleteFlowDefinitionRequest &other);

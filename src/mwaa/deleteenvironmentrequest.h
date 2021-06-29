@@ -27,7 +27,7 @@ namespace MWAA {
 
 class DeleteEnvironmentRequestPrivate;
 
-class QTAWS_EXPORT DeleteEnvironmentRequest : public MwaaRequest {
+class QTAWSMWAA_EXPORT DeleteEnvironmentRequest : public MwaaRequest {
 
 public:
     DeleteEnvironmentRequest(const DeleteEnvironmentRequest &other);

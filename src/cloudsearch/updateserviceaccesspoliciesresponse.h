@@ -28,7 +28,7 @@ namespace CloudSearch {
 
 class UpdateServiceAccessPoliciesResponsePrivate;
 
-class QTAWS_EXPORT UpdateServiceAccessPoliciesResponse : public CloudSearchResponse {
+class QTAWSCLOUDSEARCH_EXPORT UpdateServiceAccessPoliciesResponse : public CloudSearchResponse {
     Q_OBJECT
 
 public:

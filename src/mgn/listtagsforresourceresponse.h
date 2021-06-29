@@ -28,7 +28,7 @@ namespace mgn {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public mgnResponse {
+class QTAWSMGN_EXPORT ListTagsForResourceResponse : public mgnResponse {
     Q_OBJECT
 
 public:

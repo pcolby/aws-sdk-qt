@@ -27,7 +27,7 @@ namespace Kinesis {
 
 class StartStreamEncryptionRequestPrivate;
 
-class QTAWS_EXPORT StartStreamEncryptionRequest : public KinesisRequest {
+class QTAWSKINESIS_EXPORT StartStreamEncryptionRequest : public KinesisRequest {
 
 public:
     StartStreamEncryptionRequest(const StartStreamEncryptionRequest &other);

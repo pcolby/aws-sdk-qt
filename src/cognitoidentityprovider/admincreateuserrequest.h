@@ -27,7 +27,7 @@ namespace CognitoIdentityProvider {
 
 class AdminCreateUserRequestPrivate;
 
-class QTAWS_EXPORT AdminCreateUserRequest : public CognitoIdentityProviderRequest {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT AdminCreateUserRequest : public CognitoIdentityProviderRequest {
 
 public:
     AdminCreateUserRequest(const AdminCreateUserRequest &other);

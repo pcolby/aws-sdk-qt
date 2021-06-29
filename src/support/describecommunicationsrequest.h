@@ -27,7 +27,7 @@ namespace Support {
 
 class DescribeCommunicationsRequestPrivate;
 
-class QTAWS_EXPORT DescribeCommunicationsRequest : public SupportRequest {
+class QTAWSSUPPORT_EXPORT DescribeCommunicationsRequest : public SupportRequest {
 
 public:
     DescribeCommunicationsRequest(const DescribeCommunicationsRequest &other);

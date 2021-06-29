@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class DescribeOperatingSystemsRequestPrivate;
 
-class QTAWS_EXPORT DescribeOperatingSystemsRequest : public OpsWorksRequest {
+class QTAWSOPSWORKS_EXPORT DescribeOperatingSystemsRequest : public OpsWorksRequest {
 
 public:
     DescribeOperatingSystemsRequest(const DescribeOperatingSystemsRequest &other);

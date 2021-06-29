@@ -27,7 +27,7 @@ namespace XRay {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public XRayRequest {
+class QTAWSXRAY_EXPORT UntagResourceRequest : public XRayRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

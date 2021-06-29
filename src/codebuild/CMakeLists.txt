@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCODEBUILD_LIBRARY)
+
 add_library(QtAwsCodeBuild
   batchdeletebuildsrequest.h
   batchdeletebuildsrequest_p.h
@@ -145,6 +147,7 @@ add_library(QtAwsCodeBuild
   putresourcepolicyrequest_p.h
   putresourcepolicyresponse.h
   putresourcepolicyresponse_p.h
+  qtawscodebuildglobal.h
   retrybuildbatchrequest.h
   retrybuildbatchrequest_p.h
   retrybuildbatchresponse.h

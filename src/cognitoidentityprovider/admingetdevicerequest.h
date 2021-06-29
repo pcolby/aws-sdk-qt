@@ -27,7 +27,7 @@ namespace CognitoIdentityProvider {
 
 class AdminGetDeviceRequestPrivate;
 
-class QTAWS_EXPORT AdminGetDeviceRequest : public CognitoIdentityProviderRequest {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT AdminGetDeviceRequest : public CognitoIdentityProviderRequest {
 
 public:
     AdminGetDeviceRequest(const AdminGetDeviceRequest &other);

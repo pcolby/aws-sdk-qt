@@ -28,7 +28,7 @@ namespace Shield {
 
 class CreateSubscriptionResponsePrivate;
 
-class QTAWS_EXPORT CreateSubscriptionResponse : public ShieldResponse {
+class QTAWSSHIELD_EXPORT CreateSubscriptionResponse : public ShieldResponse {
     Q_OBJECT
 
 public:

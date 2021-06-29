@@ -27,7 +27,7 @@ namespace SES {
 
 class VerifyEmailAddressRequestPrivate;
 
-class QTAWS_EXPORT VerifyEmailAddressRequest : public SesRequest {
+class QTAWSSES_EXPORT VerifyEmailAddressRequest : public SesRequest {
 
 public:
     VerifyEmailAddressRequest(const VerifyEmailAddressRequest &other);

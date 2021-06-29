@@ -27,7 +27,7 @@ namespace AppIntegrationsService {
 
 class UpdateEventIntegrationRequestPrivate;
 
-class QTAWS_EXPORT UpdateEventIntegrationRequest : public AppIntegrationsServiceRequest {
+class QTAWSAPPINTEGRATIONSSERVICE_EXPORT UpdateEventIntegrationRequest : public AppIntegrationsServiceRequest {
 
 public:
     UpdateEventIntegrationRequest(const UpdateEventIntegrationRequest &other);

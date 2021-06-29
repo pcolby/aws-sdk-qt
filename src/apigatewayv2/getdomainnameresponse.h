@@ -28,7 +28,7 @@ namespace ApiGatewayV2 {
 
 class GetDomainNameResponsePrivate;
 
-class QTAWS_EXPORT GetDomainNameResponse : public ApiGatewayV2Response {
+class QTAWSAPIGATEWAYV2_EXPORT GetDomainNameResponse : public ApiGatewayV2Response {
     Q_OBJECT
 
 public:

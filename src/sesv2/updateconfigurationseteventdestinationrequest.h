@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class UpdateConfigurationSetEventDestinationRequestPrivate;
 
-class QTAWS_EXPORT UpdateConfigurationSetEventDestinationRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT UpdateConfigurationSetEventDestinationRequest : public Sesv2Request {
 
 public:
     UpdateConfigurationSetEventDestinationRequest(const UpdateConfigurationSetEventDestinationRequest &other);

@@ -28,7 +28,7 @@ namespace Lambda {
 
 class DeleteLayerVersionResponsePrivate;
 
-class QTAWS_EXPORT DeleteLayerVersionResponse : public LambdaResponse {
+class QTAWSLAMBDA_EXPORT DeleteLayerVersionResponse : public LambdaResponse {
     Q_OBJECT
 
 public:

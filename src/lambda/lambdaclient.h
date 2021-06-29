@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawslambdaglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -145,7 +147,7 @@ class UpdateFunctionConfigurationResponse;
 class UpdateFunctionEventInvokeConfigRequest;
 class UpdateFunctionEventInvokeConfigResponse;
 
-class QTAWS_EXPORT LambdaClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSLAMBDA_EXPORT LambdaClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

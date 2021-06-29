@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawspiglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -35,7 +37,7 @@ class GetDimensionKeyDetailsResponse;
 class GetResourceMetricsRequest;
 class GetResourceMetricsResponse;
 
-class QTAWS_EXPORT PiClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSPI_EXPORT PiClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

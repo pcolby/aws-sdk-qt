@@ -21,6 +21,8 @@
 #define QTAWS_S3CONTROLRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawss3controlglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace S3Control {
 
 class S3ControlResponsePrivate;
 
-class QTAWS_EXPORT S3ControlResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSS3CONTROL_EXPORT S3ControlResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

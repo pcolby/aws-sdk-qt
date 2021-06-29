@@ -27,7 +27,7 @@ namespace Synthetics {
 
 class DescribeRuntimeVersionsRequestPrivate;
 
-class QTAWS_EXPORT DescribeRuntimeVersionsRequest : public SyntheticsRequest {
+class QTAWSSYNTHETICS_EXPORT DescribeRuntimeVersionsRequest : public SyntheticsRequest {
 
 public:
     DescribeRuntimeVersionsRequest(const DescribeRuntimeVersionsRequest &other);

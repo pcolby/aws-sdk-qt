@@ -28,7 +28,7 @@ namespace Redshift {
 
 class RevokeSnapshotAccessResponsePrivate;
 
-class QTAWS_EXPORT RevokeSnapshotAccessResponse : public RedshiftResponse {
+class QTAWSREDSHIFT_EXPORT RevokeSnapshotAccessResponse : public RedshiftResponse {
     Q_OBJECT
 
 public:

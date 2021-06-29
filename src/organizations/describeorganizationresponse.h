@@ -28,7 +28,7 @@ namespace Organizations {
 
 class DescribeOrganizationResponsePrivate;
 
-class QTAWS_EXPORT DescribeOrganizationResponse : public OrganizationsResponse {
+class QTAWSORGANIZATIONS_EXPORT DescribeOrganizationResponse : public OrganizationsResponse {
     Q_OBJECT
 
 public:

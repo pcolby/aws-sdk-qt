@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class DeleteEmailChannelRequestPrivate;
 
-class QTAWS_EXPORT DeleteEmailChannelRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT DeleteEmailChannelRequest : public PinpointRequest {
 
 public:
     DeleteEmailChannelRequest(const DeleteEmailChannelRequest &other);

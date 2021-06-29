@@ -27,7 +27,7 @@ namespace DataSync {
 
 class UpdateLocationObjectStorageRequestPrivate;
 
-class QTAWS_EXPORT UpdateLocationObjectStorageRequest : public DataSyncRequest {
+class QTAWSDATASYNC_EXPORT UpdateLocationObjectStorageRequest : public DataSyncRequest {
 
 public:
     UpdateLocationObjectStorageRequest(const UpdateLocationObjectStorageRequest &other);

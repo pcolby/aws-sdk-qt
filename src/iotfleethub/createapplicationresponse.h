@@ -28,7 +28,7 @@ namespace IoTFleetHub {
 
 class CreateApplicationResponsePrivate;
 
-class QTAWS_EXPORT CreateApplicationResponse : public IoTFleetHubResponse {
+class QTAWSIOTFLEETHUB_EXPORT CreateApplicationResponse : public IoTFleetHubResponse {
     Q_OBJECT
 
 public:

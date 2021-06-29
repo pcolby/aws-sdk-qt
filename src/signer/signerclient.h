@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawssignerglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -63,7 +65,7 @@ class TagResourceResponse;
 class UntagResourceRequest;
 class UntagResourceResponse;
 
-class QTAWS_EXPORT signerClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSIGNER_EXPORT signerClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

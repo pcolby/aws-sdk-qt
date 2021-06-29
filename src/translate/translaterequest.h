@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawstranslateglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Translate {
 
 class TranslateRequestPrivate;
 
-class QTAWS_EXPORT TranslateRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSTRANSLATE_EXPORT TranslateRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Translate.

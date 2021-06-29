@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CreateLocalGatewayRouteTableVpcAssociationResponsePrivate;
 
-class QTAWS_EXPORT CreateLocalGatewayRouteTableVpcAssociationResponse : public Ec2Response {
+class QTAWSEC2_EXPORT CreateLocalGatewayRouteTableVpcAssociationResponse : public Ec2Response {
     Q_OBJECT
 
 public:

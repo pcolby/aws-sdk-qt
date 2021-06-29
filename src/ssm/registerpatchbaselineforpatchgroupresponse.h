@@ -28,7 +28,7 @@ namespace SSM {
 
 class RegisterPatchBaselineForPatchGroupResponsePrivate;
 
-class QTAWS_EXPORT RegisterPatchBaselineForPatchGroupResponse : public SsmResponse {
+class QTAWSSSM_EXPORT RegisterPatchBaselineForPatchGroupResponse : public SsmResponse {
     Q_OBJECT
 
 public:

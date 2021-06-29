@@ -27,7 +27,7 @@ namespace KMS {
 
 class UpdateKeyDescriptionRequestPrivate;
 
-class QTAWS_EXPORT UpdateKeyDescriptionRequest : public KmsRequest {
+class QTAWSKMS_EXPORT UpdateKeyDescriptionRequest : public KmsRequest {
 
 public:
     UpdateKeyDescriptionRequest(const UpdateKeyDescriptionRequest &other);

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSPINPOINTSMSVOICE_LIBRARY)
+
 add_library(QtAwsPinpointSMSVoice
   createconfigurationseteventdestinationrequest.h
   createconfigurationseteventdestinationrequest_p.h
@@ -29,6 +31,7 @@ add_library(QtAwsPinpointSMSVoice
   pinpointsmsvoicerequest_p.h
   pinpointsmsvoiceresponse.h
   pinpointsmsvoiceresponse_p.h
+  qtawspinpointsmsvoiceglobal.h
   sendvoicemessagerequest.h
   sendvoicemessagerequest_p.h
   sendvoicemessageresponse.h

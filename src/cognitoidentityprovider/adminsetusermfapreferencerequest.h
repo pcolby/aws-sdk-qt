@@ -27,7 +27,7 @@ namespace CognitoIdentityProvider {
 
 class AdminSetUserMFAPreferenceRequestPrivate;
 
-class QTAWS_EXPORT AdminSetUserMFAPreferenceRequest : public CognitoIdentityProviderRequest {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT AdminSetUserMFAPreferenceRequest : public CognitoIdentityProviderRequest {
 
 public:
     AdminSetUserMFAPreferenceRequest(const AdminSetUserMFAPreferenceRequest &other);

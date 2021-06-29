@@ -27,7 +27,7 @@ namespace Snowball {
 
 class ListCompatibleImagesRequestPrivate;
 
-class QTAWS_EXPORT ListCompatibleImagesRequest : public SnowballRequest {
+class QTAWSSNOWBALL_EXPORT ListCompatibleImagesRequest : public SnowballRequest {
 
 public:
     ListCompatibleImagesRequest(const ListCompatibleImagesRequest &other);

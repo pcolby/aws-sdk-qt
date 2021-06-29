@@ -27,7 +27,7 @@ namespace ElasticLoadBalancing {
 
 class DisableAvailabilityZonesForLoadBalancerRequestPrivate;
 
-class QTAWS_EXPORT DisableAvailabilityZonesForLoadBalancerRequest : public ElasticLoadBalancingRequest {
+class QTAWSELASTICLOADBALANCING_EXPORT DisableAvailabilityZonesForLoadBalancerRequest : public ElasticLoadBalancingRequest {
 
 public:
     DisableAvailabilityZonesForLoadBalancerRequest(const DisableAvailabilityZonesForLoadBalancerRequest &other);

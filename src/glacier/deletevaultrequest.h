@@ -27,7 +27,7 @@ namespace Glacier {
 
 class DeleteVaultRequestPrivate;
 
-class QTAWS_EXPORT DeleteVaultRequest : public GlacierRequest {
+class QTAWSGLACIER_EXPORT DeleteVaultRequest : public GlacierRequest {
 
 public:
     DeleteVaultRequest(const DeleteVaultRequest &other);

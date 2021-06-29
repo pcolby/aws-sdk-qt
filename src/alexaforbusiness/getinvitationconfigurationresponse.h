@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class GetInvitationConfigurationResponsePrivate;
 
-class QTAWS_EXPORT GetInvitationConfigurationResponse : public AlexaForBusinessResponse {
+class QTAWSALEXAFORBUSINESS_EXPORT GetInvitationConfigurationResponse : public AlexaForBusinessResponse {
     Q_OBJECT
 
 public:

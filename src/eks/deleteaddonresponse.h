@@ -28,7 +28,7 @@ namespace EKS {
 
 class DeleteAddonResponsePrivate;
 
-class QTAWS_EXPORT DeleteAddonResponse : public EksResponse {
+class QTAWSEKS_EXPORT DeleteAddonResponse : public EksResponse {
     Q_OBJECT
 
 public:

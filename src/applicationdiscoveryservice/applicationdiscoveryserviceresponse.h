@@ -21,6 +21,8 @@
 #define QTAWS_APPLICATIONDISCOVERYSERVICERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsapplicationdiscoveryserviceglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace ApplicationDiscoveryService {
 
 class ApplicationDiscoveryServiceResponsePrivate;
 
-class QTAWS_EXPORT ApplicationDiscoveryServiceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSAPPLICATIONDISCOVERYSERVICE_EXPORT ApplicationDiscoveryServiceResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

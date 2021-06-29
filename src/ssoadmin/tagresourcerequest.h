@@ -27,7 +27,7 @@ namespace SSOAdmin {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public SSOAdminRequest {
+class QTAWSSSOADMIN_EXPORT TagResourceRequest : public SSOAdminRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

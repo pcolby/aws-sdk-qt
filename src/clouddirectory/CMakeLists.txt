@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCLOUDDIRECTORY_LIBRARY)
+
 add_library(QtAwsCloudDirectory
   addfacettoobjectrequest.h
   addfacettoobjectrequest_p.h
@@ -229,6 +231,7 @@ add_library(QtAwsCloudDirectory
   putschemafromjsonrequest_p.h
   putschemafromjsonresponse.h
   putschemafromjsonresponse_p.h
+  qtawsclouddirectoryglobal.h
   removefacetfromobjectrequest.h
   removefacetfromobjectrequest_p.h
   removefacetfromobjectresponse.h

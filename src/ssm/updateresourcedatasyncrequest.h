@@ -27,7 +27,7 @@ namespace SSM {
 
 class UpdateResourceDataSyncRequestPrivate;
 
-class QTAWS_EXPORT UpdateResourceDataSyncRequest : public SsmRequest {
+class QTAWSSSM_EXPORT UpdateResourceDataSyncRequest : public SsmRequest {
 
 public:
     UpdateResourceDataSyncRequest(const UpdateResourceDataSyncRequest &other);

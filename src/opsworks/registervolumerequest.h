@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class RegisterVolumeRequestPrivate;
 
-class QTAWS_EXPORT RegisterVolumeRequest : public OpsWorksRequest {
+class QTAWSOPSWORKS_EXPORT RegisterVolumeRequest : public OpsWorksRequest {
 
 public:
     RegisterVolumeRequest(const RegisterVolumeRequest &other);

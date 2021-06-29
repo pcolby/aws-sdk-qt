@@ -27,7 +27,7 @@ namespace MediaTailor {
 
 class CreateChannelRequestPrivate;
 
-class QTAWS_EXPORT CreateChannelRequest : public MediaTailorRequest {
+class QTAWSMEDIATAILOR_EXPORT CreateChannelRequest : public MediaTailorRequest {
 
 public:
     CreateChannelRequest(const CreateChannelRequest &other);

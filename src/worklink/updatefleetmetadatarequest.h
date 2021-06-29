@@ -27,7 +27,7 @@ namespace WorkLink {
 
 class UpdateFleetMetadataRequestPrivate;
 
-class QTAWS_EXPORT UpdateFleetMetadataRequest : public WorkLinkRequest {
+class QTAWSWORKLINK_EXPORT UpdateFleetMetadataRequest : public WorkLinkRequest {
 
 public:
     UpdateFleetMetadataRequest(const UpdateFleetMetadataRequest &other);

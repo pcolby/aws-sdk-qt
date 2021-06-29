@@ -27,7 +27,7 @@ namespace SES {
 
 class CreateReceiptFilterRequestPrivate;
 
-class QTAWS_EXPORT CreateReceiptFilterRequest : public SesRequest {
+class QTAWSSES_EXPORT CreateReceiptFilterRequest : public SesRequest {
 
 public:
     CreateReceiptFilterRequest(const CreateReceiptFilterRequest &other);

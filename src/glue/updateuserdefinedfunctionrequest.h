@@ -27,7 +27,7 @@ namespace Glue {
 
 class UpdateUserDefinedFunctionRequestPrivate;
 
-class QTAWS_EXPORT UpdateUserDefinedFunctionRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT UpdateUserDefinedFunctionRequest : public GlueRequest {
 
 public:
     UpdateUserDefinedFunctionRequest(const UpdateUserDefinedFunctionRequest &other);

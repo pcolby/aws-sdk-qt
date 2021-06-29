@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class GetAdministratorAccountRequestPrivate;
 
-class QTAWS_EXPORT GetAdministratorAccountRequest : public SecurityHubRequest {
+class QTAWSSECURITYHUB_EXPORT GetAdministratorAccountRequest : public SecurityHubRequest {
 
 public:
     GetAdministratorAccountRequest(const GetAdministratorAccountRequest &other);

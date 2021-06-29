@@ -27,7 +27,7 @@ namespace S3 {
 
 class PutBucketOwnershipControlsRequestPrivate;
 
-class QTAWS_EXPORT PutBucketOwnershipControlsRequest : public S3Request {
+class QTAWSS3_EXPORT PutBucketOwnershipControlsRequest : public S3Request {
 
 public:
     PutBucketOwnershipControlsRequest(const PutBucketOwnershipControlsRequest &other);

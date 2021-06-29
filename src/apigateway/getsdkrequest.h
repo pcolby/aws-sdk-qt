@@ -27,7 +27,7 @@ namespace APIGateway {
 
 class GetSdkRequestPrivate;
 
-class QTAWS_EXPORT GetSdkRequest : public APIGatewayRequest {
+class QTAWSAPIGATEWAY_EXPORT GetSdkRequest : public APIGatewayRequest {
 
 public:
     GetSdkRequest(const GetSdkRequest &other);

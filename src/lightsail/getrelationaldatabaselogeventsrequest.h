@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class GetRelationalDatabaseLogEventsRequestPrivate;
 
-class QTAWS_EXPORT GetRelationalDatabaseLogEventsRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT GetRelationalDatabaseLogEventsRequest : public LightsailRequest {
 
 public:
     GetRelationalDatabaseLogEventsRequest(const GetRelationalDatabaseLogEventsRequest &other);

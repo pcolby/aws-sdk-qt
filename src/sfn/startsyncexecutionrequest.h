@@ -27,7 +27,7 @@ namespace SFN {
 
 class StartSyncExecutionRequestPrivate;
 
-class QTAWS_EXPORT StartSyncExecutionRequest : public SfnRequest {
+class QTAWSSFN_EXPORT StartSyncExecutionRequest : public SfnRequest {
 
 public:
     StartSyncExecutionRequest(const StartSyncExecutionRequest &other);

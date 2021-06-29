@@ -27,7 +27,7 @@ namespace DataExchange {
 
 class CreateRevisionRequestPrivate;
 
-class QTAWS_EXPORT CreateRevisionRequest : public DataExchangeRequest {
+class QTAWSDATAEXCHANGE_EXPORT CreateRevisionRequest : public DataExchangeRequest {
 
 public:
     CreateRevisionRequest(const CreateRevisionRequest &other);

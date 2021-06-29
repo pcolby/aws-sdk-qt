@@ -21,6 +21,8 @@
 #define QTAWS_MQRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsmqglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace MQ {
 
 class MqResponsePrivate;
 
-class QTAWS_EXPORT MqResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSMQ_EXPORT MqResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

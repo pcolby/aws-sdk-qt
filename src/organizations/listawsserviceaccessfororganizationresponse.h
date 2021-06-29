@@ -28,7 +28,7 @@ namespace Organizations {
 
 class ListAWSServiceAccessForOrganizationResponsePrivate;
 
-class QTAWS_EXPORT ListAWSServiceAccessForOrganizationResponse : public OrganizationsResponse {
+class QTAWSORGANIZATIONS_EXPORT ListAWSServiceAccessForOrganizationResponse : public OrganizationsResponse {
     Q_OBJECT
 
 public:

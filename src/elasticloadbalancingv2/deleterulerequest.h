@@ -27,7 +27,7 @@ namespace ElasticLoadBalancingv2 {
 
 class DeleteRuleRequestPrivate;
 
-class QTAWS_EXPORT DeleteRuleRequest : public ElasticLoadBalancingv2Request {
+class QTAWSELASTICLOADBALANCINGV2_EXPORT DeleteRuleRequest : public ElasticLoadBalancingv2Request {
 
 public:
     DeleteRuleRequest(const DeleteRuleRequest &other);

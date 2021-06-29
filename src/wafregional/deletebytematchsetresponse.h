@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class DeleteByteMatchSetResponsePrivate;
 
-class QTAWS_EXPORT DeleteByteMatchSetResponse : public WAFRegionalResponse {
+class QTAWSWAFREGIONAL_EXPORT DeleteByteMatchSetResponse : public WAFRegionalResponse {
     Q_OBJECT
 
 public:

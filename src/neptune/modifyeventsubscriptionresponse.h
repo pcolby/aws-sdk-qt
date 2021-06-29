@@ -28,7 +28,7 @@ namespace Neptune {
 
 class ModifyEventSubscriptionResponsePrivate;
 
-class QTAWS_EXPORT ModifyEventSubscriptionResponse : public NeptuneResponse {
+class QTAWSNEPTUNE_EXPORT ModifyEventSubscriptionResponse : public NeptuneResponse {
     Q_OBJECT
 
 public:

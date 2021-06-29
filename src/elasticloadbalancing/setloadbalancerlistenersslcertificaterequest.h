@@ -27,7 +27,7 @@ namespace ElasticLoadBalancing {
 
 class SetLoadBalancerListenerSSLCertificateRequestPrivate;
 
-class QTAWS_EXPORT SetLoadBalancerListenerSSLCertificateRequest : public ElasticLoadBalancingRequest {
+class QTAWSELASTICLOADBALANCING_EXPORT SetLoadBalancerListenerSSLCertificateRequest : public ElasticLoadBalancingRequest {
 
 public:
     SetLoadBalancerListenerSSLCertificateRequest(const SetLoadBalancerListenerSSLCertificateRequest &other);

@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class DeleteResourcePolicyResponsePrivate;
 
-class QTAWS_EXPORT DeleteResourcePolicyResponse : public CodeBuildResponse {
+class QTAWSCODEBUILD_EXPORT DeleteResourcePolicyResponse : public CodeBuildResponse {
     Q_OBJECT
 
 public:

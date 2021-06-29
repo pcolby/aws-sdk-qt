@@ -27,7 +27,7 @@ namespace PersonalizeRuntime {
 
 class GetPersonalizedRankingRequestPrivate;
 
-class QTAWS_EXPORT GetPersonalizedRankingRequest : public PersonalizeRuntimeRequest {
+class QTAWSPERSONALIZERUNTIME_EXPORT GetPersonalizedRankingRequest : public PersonalizeRuntimeRequest {
 
 public:
     GetPersonalizedRankingRequest(const GetPersonalizedRankingRequest &other);

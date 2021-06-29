@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class AssociateRoleToGroupRequestPrivate;
 
-class QTAWS_EXPORT AssociateRoleToGroupRequest : public GreengrassRequest {
+class QTAWSGREENGRASS_EXPORT AssociateRoleToGroupRequest : public GreengrassRequest {
 
 public:
     AssociateRoleToGroupRequest(const AssociateRoleToGroupRequest &other);

@@ -27,7 +27,7 @@ namespace CloudWatch {
 
 class DeleteMetricStreamRequestPrivate;
 
-class QTAWS_EXPORT DeleteMetricStreamRequest : public CloudWatchRequest {
+class QTAWSCLOUDWATCH_EXPORT DeleteMetricStreamRequest : public CloudWatchRequest {
 
 public:
     DeleteMetricStreamRequest(const DeleteMetricStreamRequest &other);

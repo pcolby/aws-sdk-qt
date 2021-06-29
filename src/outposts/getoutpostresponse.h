@@ -28,7 +28,7 @@ namespace Outposts {
 
 class GetOutpostResponsePrivate;
 
-class QTAWS_EXPORT GetOutpostResponse : public OutpostsResponse {
+class QTAWSOUTPOSTS_EXPORT GetOutpostResponse : public OutpostsResponse {
     Q_OBJECT
 
 public:

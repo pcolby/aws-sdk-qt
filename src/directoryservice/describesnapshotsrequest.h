@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class DescribeSnapshotsRequestPrivate;
 
-class QTAWS_EXPORT DescribeSnapshotsRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT DescribeSnapshotsRequest : public DirectoryServiceRequest {
 
 public:
     DescribeSnapshotsRequest(const DescribeSnapshotsRequest &other);

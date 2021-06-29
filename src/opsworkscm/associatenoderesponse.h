@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 
 class AssociateNodeResponsePrivate;
 
-class QTAWS_EXPORT AssociateNodeResponse : public OpsWorksCMResponse {
+class QTAWSOPSWORKSCM_EXPORT AssociateNodeResponse : public OpsWorksCMResponse {
     Q_OBJECT
 
 public:

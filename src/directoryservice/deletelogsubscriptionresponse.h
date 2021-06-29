@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class DeleteLogSubscriptionResponsePrivate;
 
-class QTAWS_EXPORT DeleteLogSubscriptionResponse : public DirectoryServiceResponse {
+class QTAWSDIRECTORYSERVICE_EXPORT DeleteLogSubscriptionResponse : public DirectoryServiceResponse {
     Q_OBJECT
 
 public:

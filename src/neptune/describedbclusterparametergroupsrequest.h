@@ -27,7 +27,7 @@ namespace Neptune {
 
 class DescribeDBClusterParameterGroupsRequestPrivate;
 
-class QTAWS_EXPORT DescribeDBClusterParameterGroupsRequest : public NeptuneRequest {
+class QTAWSNEPTUNE_EXPORT DescribeDBClusterParameterGroupsRequest : public NeptuneRequest {
 
 public:
     DescribeDBClusterParameterGroupsRequest(const DescribeDBClusterParameterGroupsRequest &other);

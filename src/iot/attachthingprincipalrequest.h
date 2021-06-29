@@ -27,7 +27,7 @@ namespace IoT {
 
 class AttachThingPrincipalRequestPrivate;
 
-class QTAWS_EXPORT AttachThingPrincipalRequest : public IoTRequest {
+class QTAWSIOT_EXPORT AttachThingPrincipalRequest : public IoTRequest {
 
 public:
     AttachThingPrincipalRequest(const AttachThingPrincipalRequest &other);

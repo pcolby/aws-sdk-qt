@@ -28,7 +28,7 @@ namespace ECRPublic {
 
 class GetRepositoryPolicyResponsePrivate;
 
-class QTAWS_EXPORT GetRepositoryPolicyResponse : public ECRPublicResponse {
+class QTAWSECRPUBLIC_EXPORT GetRepositoryPolicyResponse : public ECRPublicResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace FIS {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public FisResponse {
+class QTAWSFIS_EXPORT UntagResourceResponse : public FisResponse {
     Q_OBJECT
 
 public:

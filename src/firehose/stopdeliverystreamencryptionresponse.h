@@ -28,7 +28,7 @@ namespace Firehose {
 
 class StopDeliveryStreamEncryptionResponsePrivate;
 
-class QTAWS_EXPORT StopDeliveryStreamEncryptionResponse : public FirehoseResponse {
+class QTAWSFIREHOSE_EXPORT StopDeliveryStreamEncryptionResponse : public FirehoseResponse {
     Q_OBJECT
 
 public:

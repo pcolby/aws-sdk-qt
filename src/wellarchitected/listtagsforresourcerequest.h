@@ -27,7 +27,7 @@ namespace WellArchitected {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public WellArchitectedRequest {
+class QTAWSWELLARCHITECTED_EXPORT ListTagsForResourceRequest : public WellArchitectedRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

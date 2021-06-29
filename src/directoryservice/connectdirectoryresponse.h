@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class ConnectDirectoryResponsePrivate;
 
-class QTAWS_EXPORT ConnectDirectoryResponse : public DirectoryServiceResponse {
+class QTAWSDIRECTORYSERVICE_EXPORT ConnectDirectoryResponse : public DirectoryServiceResponse {
     Q_OBJECT
 
 public:

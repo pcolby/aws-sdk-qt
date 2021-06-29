@@ -28,7 +28,7 @@ namespace Glue {
 
 class DeleteWorkflowResponsePrivate;
 
-class QTAWS_EXPORT DeleteWorkflowResponse : public GlueResponse {
+class QTAWSGLUE_EXPORT DeleteWorkflowResponse : public GlueResponse {
     Q_OBJECT
 
 public:

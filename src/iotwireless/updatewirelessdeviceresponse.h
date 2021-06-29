@@ -28,7 +28,7 @@ namespace IoTWireless {
 
 class UpdateWirelessDeviceResponsePrivate;
 
-class QTAWS_EXPORT UpdateWirelessDeviceResponse : public IoTWirelessResponse {
+class QTAWSIOTWIRELESS_EXPORT UpdateWirelessDeviceResponse : public IoTWirelessResponse {
     Q_OBJECT
 
 public:

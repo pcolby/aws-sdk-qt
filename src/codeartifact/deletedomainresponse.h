@@ -28,7 +28,7 @@ namespace CodeArtifact {
 
 class DeleteDomainResponsePrivate;
 
-class QTAWS_EXPORT DeleteDomainResponse : public CodeArtifactResponse {
+class QTAWSCODEARTIFACT_EXPORT DeleteDomainResponse : public CodeArtifactResponse {
     Q_OBJECT
 
 public:

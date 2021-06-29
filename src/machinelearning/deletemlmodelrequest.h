@@ -27,7 +27,7 @@ namespace MachineLearning {
 
 class DeleteMLModelRequestPrivate;
 
-class QTAWS_EXPORT DeleteMLModelRequest : public MachineLearningRequest {
+class QTAWSMACHINELEARNING_EXPORT DeleteMLModelRequest : public MachineLearningRequest {
 
 public:
     DeleteMLModelRequest(const DeleteMLModelRequest &other);

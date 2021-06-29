@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class RemoveRegionRequestPrivate;
 
-class QTAWS_EXPORT RemoveRegionRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT RemoveRegionRequest : public DirectoryServiceRequest {
 
 public:
     RemoveRegionRequest(const RemoveRegionRequest &other);

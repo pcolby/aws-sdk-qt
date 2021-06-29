@@ -27,7 +27,7 @@ namespace Chime {
 
 class ListSipRulesRequestPrivate;
 
-class QTAWS_EXPORT ListSipRulesRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT ListSipRulesRequest : public ChimeRequest {
 
 public:
     ListSipRulesRequest(const ListSipRulesRequest &other);

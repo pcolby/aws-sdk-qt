@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 
 class DescribeContinuousExportsResponsePrivate;
 
-class QTAWS_EXPORT DescribeContinuousExportsResponse : public ApplicationDiscoveryServiceResponse {
+class QTAWSAPPLICATIONDISCOVERYSERVICE_EXPORT DescribeContinuousExportsResponse : public ApplicationDiscoveryServiceResponse {
     Q_OBJECT
 
 public:

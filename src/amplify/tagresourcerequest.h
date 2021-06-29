@@ -27,7 +27,7 @@ namespace Amplify {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public AmplifyRequest {
+class QTAWSAMPLIFY_EXPORT TagResourceRequest : public AmplifyRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

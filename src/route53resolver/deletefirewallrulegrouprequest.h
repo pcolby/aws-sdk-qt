@@ -27,7 +27,7 @@ namespace Route53Resolver {
 
 class DeleteFirewallRuleGroupRequestPrivate;
 
-class QTAWS_EXPORT DeleteFirewallRuleGroupRequest : public Route53ResolverRequest {
+class QTAWSROUTE53RESOLVER_EXPORT DeleteFirewallRuleGroupRequest : public Route53ResolverRequest {
 
 public:
     DeleteFirewallRuleGroupRequest(const DeleteFirewallRuleGroupRequest &other);

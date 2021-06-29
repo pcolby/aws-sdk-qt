@@ -28,7 +28,7 @@ namespace AppIntegrationsService {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public AppIntegrationsServiceResponse {
+class QTAWSAPPINTEGRATIONSSERVICE_EXPORT UntagResourceResponse : public AppIntegrationsServiceResponse {
     Q_OBJECT
 
 public:

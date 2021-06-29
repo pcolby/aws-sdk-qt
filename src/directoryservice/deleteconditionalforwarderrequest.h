@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class DeleteConditionalForwarderRequestPrivate;
 
-class QTAWS_EXPORT DeleteConditionalForwarderRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT DeleteConditionalForwarderRequest : public DirectoryServiceRequest {
 
 public:
     DeleteConditionalForwarderRequest(const DeleteConditionalForwarderRequest &other);

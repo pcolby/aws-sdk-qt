@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 
 class DeleteApplicationInputProcessingConfigurationResponsePrivate;
 
-class QTAWS_EXPORT DeleteApplicationInputProcessingConfigurationResponse : public KinesisAnalyticsResponse {
+class QTAWSKINESISANALYTICS_EXPORT DeleteApplicationInputProcessingConfigurationResponse : public KinesisAnalyticsResponse {
     Q_OBJECT
 
 public:

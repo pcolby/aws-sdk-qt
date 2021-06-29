@@ -27,7 +27,7 @@ namespace Amplify {
 
 class GetAppRequestPrivate;
 
-class QTAWS_EXPORT GetAppRequest : public AmplifyRequest {
+class QTAWSAMPLIFY_EXPORT GetAppRequest : public AmplifyRequest {
 
 public:
     GetAppRequest(const GetAppRequest &other);

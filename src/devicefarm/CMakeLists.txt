@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSDEVICEFARM_LIBRARY)
+
 add_library(QtAwsDeviceFarm
   createdevicepoolrequest.h
   createdevicepoolrequest_p.h
@@ -253,6 +255,7 @@ add_library(QtAwsDeviceFarm
   purchaseofferingrequest_p.h
   purchaseofferingresponse.h
   purchaseofferingresponse_p.h
+  qtawsdevicefarmglobal.h
   renewofferingrequest.h
   renewofferingrequest_p.h
   renewofferingresponse.h

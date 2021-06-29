@@ -28,7 +28,7 @@ namespace Polly {
 
 class DeleteLexiconResponsePrivate;
 
-class QTAWS_EXPORT DeleteLexiconResponse : public PollyResponse {
+class QTAWSPOLLY_EXPORT DeleteLexiconResponse : public PollyResponse {
     Q_OBJECT
 
 public:

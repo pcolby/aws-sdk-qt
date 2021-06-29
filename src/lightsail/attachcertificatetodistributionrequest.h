@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class AttachCertificateToDistributionRequestPrivate;
 
-class QTAWS_EXPORT AttachCertificateToDistributionRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT AttachCertificateToDistributionRequest : public LightsailRequest {
 
 public:
     AttachCertificateToDistributionRequest(const AttachCertificateToDistributionRequest &other);

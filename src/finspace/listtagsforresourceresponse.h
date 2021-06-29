@@ -28,7 +28,7 @@ namespace finspace {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public finspaceResponse {
+class QTAWSFINSPACE_EXPORT ListTagsForResourceResponse : public finspaceResponse {
     Q_OBJECT
 
 public:

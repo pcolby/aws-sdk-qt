@@ -27,7 +27,7 @@ namespace EC2 {
 
 class AssociateClientVpnTargetNetworkRequestPrivate;
 
-class QTAWS_EXPORT AssociateClientVpnTargetNetworkRequest : public Ec2Request {
+class QTAWSEC2_EXPORT AssociateClientVpnTargetNetworkRequest : public Ec2Request {
 
 public:
     AssociateClientVpnTargetNetworkRequest(const AssociateClientVpnTargetNetworkRequest &other);

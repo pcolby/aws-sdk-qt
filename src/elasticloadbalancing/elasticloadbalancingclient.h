@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawselasticloadbalancingglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -87,7 +89,7 @@ class SetLoadBalancerPoliciesForBackendServerResponse;
 class SetLoadBalancerPoliciesOfListenerRequest;
 class SetLoadBalancerPoliciesOfListenerResponse;
 
-class QTAWS_EXPORT ElasticLoadBalancingClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSELASTICLOADBALANCING_EXPORT ElasticLoadBalancingClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

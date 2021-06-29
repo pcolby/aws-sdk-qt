@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class DeleteApprovalRuleTemplateRequestPrivate;
 
-class QTAWS_EXPORT DeleteApprovalRuleTemplateRequest : public CodeCommitRequest {
+class QTAWSCODECOMMIT_EXPORT DeleteApprovalRuleTemplateRequest : public CodeCommitRequest {
 
 public:
     DeleteApprovalRuleTemplateRequest(const DeleteApprovalRuleTemplateRequest &other);

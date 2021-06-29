@@ -27,7 +27,7 @@ namespace Route53 {
 
 class ListGeoLocationsRequestPrivate;
 
-class QTAWS_EXPORT ListGeoLocationsRequest : public Route53Request {
+class QTAWSROUTE53_EXPORT ListGeoLocationsRequest : public Route53Request {
 
 public:
     ListGeoLocationsRequest(const ListGeoLocationsRequest &other);

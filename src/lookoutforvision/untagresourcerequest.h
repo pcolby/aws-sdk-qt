@@ -27,7 +27,7 @@ namespace LookoutforVision {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public LookoutforVisionRequest {
+class QTAWSLOOKOUTFORVISION_EXPORT UntagResourceRequest : public LookoutforVisionRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

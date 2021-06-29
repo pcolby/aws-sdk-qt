@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsservicequotasglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace ServiceQuotas {
 
 class ServiceQuotasRequestPrivate;
 
-class QTAWS_EXPORT ServiceQuotasRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSERVICEQUOTAS_EXPORT ServiceQuotasRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ServiceQuotas.

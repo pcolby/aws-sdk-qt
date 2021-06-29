@@ -28,7 +28,7 @@ namespace ECR {
 
 class StartImageScanResponsePrivate;
 
-class QTAWS_EXPORT StartImageScanResponse : public EcrResponse {
+class QTAWSECR_EXPORT StartImageScanResponse : public EcrResponse {
     Q_OBJECT
 
 public:

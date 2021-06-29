@@ -27,7 +27,7 @@ namespace CloudDirectory {
 
 class UpdateLinkAttributesRequestPrivate;
 
-class QTAWS_EXPORT UpdateLinkAttributesRequest : public CloudDirectoryRequest {
+class QTAWSCLOUDDIRECTORY_EXPORT UpdateLinkAttributesRequest : public CloudDirectoryRequest {
 
 public:
     UpdateLinkAttributesRequest(const UpdateLinkAttributesRequest &other);

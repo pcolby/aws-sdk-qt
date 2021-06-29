@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class DescribeResourceServerResponsePrivate;
 
-class QTAWS_EXPORT DescribeResourceServerResponse : public CognitoIdentityProviderResponse {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT DescribeResourceServerResponse : public CognitoIdentityProviderResponse {
     Q_OBJECT
 
 public:

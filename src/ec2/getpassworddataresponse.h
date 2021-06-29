@@ -28,7 +28,7 @@ namespace EC2 {
 
 class GetPasswordDataResponsePrivate;
 
-class QTAWS_EXPORT GetPasswordDataResponse : public Ec2Response {
+class QTAWSEC2_EXPORT GetPasswordDataResponse : public Ec2Response {
     Q_OBJECT
 
 public:

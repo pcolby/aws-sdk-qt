@@ -27,7 +27,7 @@ namespace WAFV2 {
 
 class AssociateWebACLRequestPrivate;
 
-class QTAWS_EXPORT AssociateWebACLRequest : public Wafv2Request {
+class QTAWSWAFV2_EXPORT AssociateWebACLRequest : public Wafv2Request {
 
 public:
     AssociateWebACLRequest(const AssociateWebACLRequest &other);

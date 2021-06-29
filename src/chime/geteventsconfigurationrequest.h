@@ -27,7 +27,7 @@ namespace Chime {
 
 class GetEventsConfigurationRequestPrivate;
 
-class QTAWS_EXPORT GetEventsConfigurationRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT GetEventsConfigurationRequest : public ChimeRequest {
 
 public:
     GetEventsConfigurationRequest(const GetEventsConfigurationRequest &other);

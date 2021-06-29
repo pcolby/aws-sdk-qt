@@ -27,7 +27,7 @@ namespace GlobalAccelerator {
 
 class DeleteCustomRoutingEndpointGroupRequestPrivate;
 
-class QTAWS_EXPORT DeleteCustomRoutingEndpointGroupRequest : public GlobalAcceleratorRequest {
+class QTAWSGLOBALACCELERATOR_EXPORT DeleteCustomRoutingEndpointGroupRequest : public GlobalAcceleratorRequest {
 
 public:
     DeleteCustomRoutingEndpointGroupRequest(const DeleteCustomRoutingEndpointGroupRequest &other);

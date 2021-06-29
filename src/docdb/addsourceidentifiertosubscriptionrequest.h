@@ -27,7 +27,7 @@ namespace DocDB {
 
 class AddSourceIdentifierToSubscriptionRequestPrivate;
 
-class QTAWS_EXPORT AddSourceIdentifierToSubscriptionRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT AddSourceIdentifierToSubscriptionRequest : public DocDBRequest {
 
 public:
     AddSourceIdentifierToSubscriptionRequest(const AddSourceIdentifierToSubscriptionRequest &other);

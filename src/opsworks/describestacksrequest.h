@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class DescribeStacksRequestPrivate;
 
-class QTAWS_EXPORT DescribeStacksRequest : public OpsWorksRequest {
+class QTAWSOPSWORKS_EXPORT DescribeStacksRequest : public OpsWorksRequest {
 
 public:
     DescribeStacksRequest(const DescribeStacksRequest &other);

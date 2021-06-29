@@ -27,7 +27,7 @@ namespace RDS {
 
 class DeleteDBInstanceAutomatedBackupRequestPrivate;
 
-class QTAWS_EXPORT DeleteDBInstanceAutomatedBackupRequest : public RdsRequest {
+class QTAWSRDS_EXPORT DeleteDBInstanceAutomatedBackupRequest : public RdsRequest {
 
 public:
     DeleteDBInstanceAutomatedBackupRequest(const DeleteDBInstanceAutomatedBackupRequest &other);

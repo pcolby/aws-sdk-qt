@@ -28,7 +28,7 @@ namespace SSM {
 
 class DeregisterTargetFromMaintenanceWindowResponsePrivate;
 
-class QTAWS_EXPORT DeregisterTargetFromMaintenanceWindowResponse : public SsmResponse {
+class QTAWSSSM_EXPORT DeregisterTargetFromMaintenanceWindowResponse : public SsmResponse {
     Q_OBJECT
 
 public:

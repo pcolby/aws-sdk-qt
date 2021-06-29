@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class GetLoggerDefinitionRequestPrivate;
 
-class QTAWS_EXPORT GetLoggerDefinitionRequest : public GreengrassRequest {
+class QTAWSGREENGRASS_EXPORT GetLoggerDefinitionRequest : public GreengrassRequest {
 
 public:
     GetLoggerDefinitionRequest(const GetLoggerDefinitionRequest &other);

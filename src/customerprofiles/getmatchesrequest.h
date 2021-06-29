@@ -27,7 +27,7 @@ namespace CustomerProfiles {
 
 class GetMatchesRequestPrivate;
 
-class QTAWS_EXPORT GetMatchesRequest : public CustomerProfilesRequest {
+class QTAWSCUSTOMERPROFILES_EXPORT GetMatchesRequest : public CustomerProfilesRequest {
 
 public:
     GetMatchesRequest(const GetMatchesRequest &other);

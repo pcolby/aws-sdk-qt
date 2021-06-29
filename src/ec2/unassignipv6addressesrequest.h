@@ -27,7 +27,7 @@ namespace EC2 {
 
 class UnassignIpv6AddressesRequestPrivate;
 
-class QTAWS_EXPORT UnassignIpv6AddressesRequest : public Ec2Request {
+class QTAWSEC2_EXPORT UnassignIpv6AddressesRequest : public Ec2Request {
 
 public:
     UnassignIpv6AddressesRequest(const UnassignIpv6AddressesRequest &other);

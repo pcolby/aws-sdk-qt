@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawskinesisanalyticsv2global.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -91,7 +93,7 @@ class UpdateApplicationResponse;
 class UpdateApplicationMaintenanceConfigurationRequest;
 class UpdateApplicationMaintenanceConfigurationResponse;
 
-class QTAWS_EXPORT KinesisAnalyticsV2Client : public QtAws::Core::AwsAbstractClient {
+class QTAWSKINESISANALYTICSV2_EXPORT KinesisAnalyticsV2Client : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

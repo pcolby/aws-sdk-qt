@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ModifyVpcTenancyRequestPrivate;
 
-class QTAWS_EXPORT ModifyVpcTenancyRequest : public Ec2Request {
+class QTAWSEC2_EXPORT ModifyVpcTenancyRequest : public Ec2Request {
 
 public:
     ModifyVpcTenancyRequest(const ModifyVpcTenancyRequest &other);

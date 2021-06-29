@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class GetCampaignDateRangeKpiRequestPrivate;
 
-class QTAWS_EXPORT GetCampaignDateRangeKpiRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT GetCampaignDateRangeKpiRequest : public PinpointRequest {
 
 public:
     GetCampaignDateRangeKpiRequest(const GetCampaignDateRangeKpiRequest &other);

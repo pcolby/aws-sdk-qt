@@ -21,6 +21,8 @@
 #define QTAWS_DATAPIPELINERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsdatapipelineglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace DataPipeline {
 
 class DataPipelineResponsePrivate;
 
-class QTAWS_EXPORT DataPipelineResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSDATAPIPELINE_EXPORT DataPipelineResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

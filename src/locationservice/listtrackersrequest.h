@@ -27,7 +27,7 @@ namespace LocationService {
 
 class ListTrackersRequestPrivate;
 
-class QTAWS_EXPORT ListTrackersRequest : public LocationServiceRequest {
+class QTAWSLOCATIONSERVICE_EXPORT ListTrackersRequest : public LocationServiceRequest {
 
 public:
     ListTrackersRequest(const ListTrackersRequest &other);

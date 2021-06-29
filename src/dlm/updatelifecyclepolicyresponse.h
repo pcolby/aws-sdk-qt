@@ -28,7 +28,7 @@ namespace DLM {
 
 class UpdateLifecyclePolicyResponsePrivate;
 
-class QTAWS_EXPORT UpdateLifecyclePolicyResponse : public DlmResponse {
+class QTAWSDLM_EXPORT UpdateLifecyclePolicyResponse : public DlmResponse {
     Q_OBJECT
 
 public:

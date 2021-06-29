@@ -27,7 +27,7 @@ namespace Honeycode {
 
 class DescribeTableDataImportJobRequestPrivate;
 
-class QTAWS_EXPORT DescribeTableDataImportJobRequest : public HoneycodeRequest {
+class QTAWSHONEYCODE_EXPORT DescribeTableDataImportJobRequest : public HoneycodeRequest {
 
 public:
     DescribeTableDataImportJobRequest(const DescribeTableDataImportJobRequest &other);

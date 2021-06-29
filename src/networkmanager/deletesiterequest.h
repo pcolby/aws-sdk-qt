@@ -27,7 +27,7 @@ namespace NetworkManager {
 
 class DeleteSiteRequestPrivate;
 
-class QTAWS_EXPORT DeleteSiteRequest : public NetworkManagerRequest {
+class QTAWSNETWORKMANAGER_EXPORT DeleteSiteRequest : public NetworkManagerRequest {
 
 public:
     DeleteSiteRequest(const DeleteSiteRequest &other);

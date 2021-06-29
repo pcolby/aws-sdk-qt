@@ -27,7 +27,7 @@ namespace IAM {
 
 class ListPolicyVersionsRequestPrivate;
 
-class QTAWS_EXPORT ListPolicyVersionsRequest : public IamRequest {
+class QTAWSIAM_EXPORT ListPolicyVersionsRequest : public IamRequest {
 
 public:
     ListPolicyVersionsRequest(const ListPolicyVersionsRequest &other);

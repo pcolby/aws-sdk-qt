@@ -27,7 +27,7 @@ namespace MediaLive {
 
 class StopMultiplexRequestPrivate;
 
-class QTAWS_EXPORT StopMultiplexRequest : public MediaLiveRequest {
+class QTAWSMEDIALIVE_EXPORT StopMultiplexRequest : public MediaLiveRequest {
 
 public:
     StopMultiplexRequest(const StopMultiplexRequest &other);

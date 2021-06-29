@@ -27,7 +27,7 @@ namespace ApplicationInsights {
 
 class ListProblemsRequestPrivate;
 
-class QTAWS_EXPORT ListProblemsRequest : public ApplicationInsightsRequest {
+class QTAWSAPPLICATIONINSIGHTS_EXPORT ListProblemsRequest : public ApplicationInsightsRequest {
 
 public:
     ListProblemsRequest(const ListProblemsRequest &other);

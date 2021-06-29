@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class UpdateFileSystemAssociationRequestPrivate;
 
-class QTAWS_EXPORT UpdateFileSystemAssociationRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT UpdateFileSystemAssociationRequest : public StorageGatewayRequest {
 
 public:
     UpdateFileSystemAssociationRequest(const UpdateFileSystemAssociationRequest &other);

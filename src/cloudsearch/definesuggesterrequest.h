@@ -27,7 +27,7 @@ namespace CloudSearch {
 
 class DefineSuggesterRequestPrivate;
 
-class QTAWS_EXPORT DefineSuggesterRequest : public CloudSearchRequest {
+class QTAWSCLOUDSEARCH_EXPORT DefineSuggesterRequest : public CloudSearchRequest {
 
 public:
     DefineSuggesterRequest(const DefineSuggesterRequest &other);

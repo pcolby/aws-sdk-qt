@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSKENDRA_LIBRARY)
+
 add_library(QtAwskendra
   batchdeletedocumentrequest.h
   batchdeletedocumentrequest_p.h
@@ -117,6 +119,7 @@ add_library(QtAwskendra
   listthesaurirequest_p.h
   listthesauriresponse.h
   listthesauriresponse_p.h
+  qtawskendraglobal.h
   queryrequest.h
   queryrequest_p.h
   queryresponse.h

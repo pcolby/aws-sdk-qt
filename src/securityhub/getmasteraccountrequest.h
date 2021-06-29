@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class GetMasterAccountRequestPrivate;
 
-class QTAWS_EXPORT GetMasterAccountRequest : public SecurityHubRequest {
+class QTAWSSECURITYHUB_EXPORT GetMasterAccountRequest : public SecurityHubRequest {
 
 public:
     GetMasterAccountRequest(const GetMasterAccountRequest &other);

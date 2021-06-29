@@ -27,7 +27,7 @@ namespace IAM {
 
 class ListAccountAliasesRequestPrivate;
 
-class QTAWS_EXPORT ListAccountAliasesRequest : public IamRequest {
+class QTAWSIAM_EXPORT ListAccountAliasesRequest : public IamRequest {
 
 public:
     ListAccountAliasesRequest(const ListAccountAliasesRequest &other);

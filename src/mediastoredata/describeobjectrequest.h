@@ -27,7 +27,7 @@ namespace MediaStoreData {
 
 class DescribeObjectRequestPrivate;
 
-class QTAWS_EXPORT DescribeObjectRequest : public MediaStoreDataRequest {
+class QTAWSMEDIASTOREDATA_EXPORT DescribeObjectRequest : public MediaStoreDataRequest {
 
 public:
     DescribeObjectRequest(const DescribeObjectRequest &other);

@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class AcceptAdministratorInvitationResponsePrivate;
 
-class QTAWS_EXPORT AcceptAdministratorInvitationResponse : public SecurityHubResponse {
+class QTAWSSECURITYHUB_EXPORT AcceptAdministratorInvitationResponse : public SecurityHubResponse {
     Q_OBJECT
 
 public:

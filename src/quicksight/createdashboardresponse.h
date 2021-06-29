@@ -28,7 +28,7 @@ namespace QuickSight {
 
 class CreateDashboardResponsePrivate;
 
-class QTAWS_EXPORT CreateDashboardResponse : public QuickSightResponse {
+class QTAWSQUICKSIGHT_EXPORT CreateDashboardResponse : public QuickSightResponse {
     Q_OBJECT
 
 public:

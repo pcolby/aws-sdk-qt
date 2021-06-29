@@ -27,7 +27,7 @@ namespace QuickSight {
 
 class SearchAnalysesRequestPrivate;
 
-class QTAWS_EXPORT SearchAnalysesRequest : public QuickSightRequest {
+class QTAWSQUICKSIGHT_EXPORT SearchAnalysesRequest : public QuickSightRequest {
 
 public:
     SearchAnalysesRequest(const SearchAnalysesRequest &other);

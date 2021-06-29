@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class IndexFacesResponsePrivate;
 
-class QTAWS_EXPORT IndexFacesResponse : public RekognitionResponse {
+class QTAWSREKOGNITION_EXPORT IndexFacesResponse : public RekognitionResponse {
     Q_OBJECT
 
 public:

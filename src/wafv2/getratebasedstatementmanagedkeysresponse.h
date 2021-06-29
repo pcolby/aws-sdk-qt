@@ -28,7 +28,7 @@ namespace WAFV2 {
 
 class GetRateBasedStatementManagedKeysResponsePrivate;
 
-class QTAWS_EXPORT GetRateBasedStatementManagedKeysResponse : public Wafv2Response {
+class QTAWSWAFV2_EXPORT GetRateBasedStatementManagedKeysResponse : public Wafv2Response {
     Q_OBJECT
 
 public:

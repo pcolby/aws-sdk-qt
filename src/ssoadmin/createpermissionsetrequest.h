@@ -27,7 +27,7 @@ namespace SSOAdmin {
 
 class CreatePermissionSetRequestPrivate;
 
-class QTAWS_EXPORT CreatePermissionSetRequest : public SSOAdminRequest {
+class QTAWSSSOADMIN_EXPORT CreatePermissionSetRequest : public SSOAdminRequest {
 
 public:
     CreatePermissionSetRequest(const CreatePermissionSetRequest &other);

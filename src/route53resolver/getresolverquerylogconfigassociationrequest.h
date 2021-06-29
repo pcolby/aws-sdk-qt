@@ -27,7 +27,7 @@ namespace Route53Resolver {
 
 class GetResolverQueryLogConfigAssociationRequestPrivate;
 
-class QTAWS_EXPORT GetResolverQueryLogConfigAssociationRequest : public Route53ResolverRequest {
+class QTAWSROUTE53RESOLVER_EXPORT GetResolverQueryLogConfigAssociationRequest : public Route53ResolverRequest {
 
 public:
     GetResolverQueryLogConfigAssociationRequest(const GetResolverQueryLogConfigAssociationRequest &other);

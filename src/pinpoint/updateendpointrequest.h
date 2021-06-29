@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class UpdateEndpointRequestPrivate;
 
-class QTAWS_EXPORT UpdateEndpointRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT UpdateEndpointRequest : public PinpointRequest {
 
 public:
     UpdateEndpointRequest(const UpdateEndpointRequest &other);

@@ -28,7 +28,7 @@ namespace DataSync {
 
 class CreateTaskResponsePrivate;
 
-class QTAWS_EXPORT CreateTaskResponse : public DataSyncResponse {
+class QTAWSDATASYNC_EXPORT CreateTaskResponse : public DataSyncResponse {
     Q_OBJECT
 
 public:

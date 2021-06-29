@@ -27,7 +27,7 @@ namespace imagebuilder {
 
 class CancelImageCreationRequestPrivate;
 
-class QTAWS_EXPORT CancelImageCreationRequest : public imagebuilderRequest {
+class QTAWSIMAGEBUILDER_EXPORT CancelImageCreationRequest : public imagebuilderRequest {
 
 public:
     CancelImageCreationRequest(const CancelImageCreationRequest &other);

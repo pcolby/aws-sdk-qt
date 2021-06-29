@@ -28,7 +28,7 @@ namespace MediaStore {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public MediaStoreResponse {
+class QTAWSMEDIASTORE_EXPORT ListTagsForResourceResponse : public MediaStoreResponse {
     Q_OBJECT
 
 public:

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsworkspacesglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -135,7 +137,7 @@ class UpdateWorkspaceBundleResponse;
 class UpdateWorkspaceImagePermissionRequest;
 class UpdateWorkspaceImagePermissionResponse;
 
-class QTAWS_EXPORT WorkSpacesClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSWORKSPACES_EXPORT WorkSpacesClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public LightsailResponse {
+class QTAWSLIGHTSAIL_EXPORT UntagResourceResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

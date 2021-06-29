@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsfirehoseglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -53,7 +55,7 @@ class UntagDeliveryStreamResponse;
 class UpdateDestinationRequest;
 class UpdateDestinationResponse;
 
-class QTAWS_EXPORT FirehoseClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSFIREHOSE_EXPORT FirehoseClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

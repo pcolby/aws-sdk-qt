@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class DescribeScheduleResponsePrivate;
 
-class QTAWS_EXPORT DescribeScheduleResponse : public MediaLiveResponse {
+class QTAWSMEDIALIVE_EXPORT DescribeScheduleResponse : public MediaLiveResponse {
     Q_OBJECT
 
 public:

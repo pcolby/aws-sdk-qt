@@ -27,7 +27,7 @@ namespace Polly {
 
 class DeleteLexiconRequestPrivate;
 
-class QTAWS_EXPORT DeleteLexiconRequest : public PollyRequest {
+class QTAWSPOLLY_EXPORT DeleteLexiconRequest : public PollyRequest {
 
 public:
     DeleteLexiconRequest(const DeleteLexiconRequest &other);

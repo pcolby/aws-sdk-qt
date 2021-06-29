@@ -28,7 +28,7 @@ namespace Macie2 {
 
 class DeleteCustomDataIdentifierResponsePrivate;
 
-class QTAWS_EXPORT DeleteCustomDataIdentifierResponse : public Macie2Response {
+class QTAWSMACIE2_EXPORT DeleteCustomDataIdentifierResponse : public Macie2Response {
     Q_OBJECT
 
 public:

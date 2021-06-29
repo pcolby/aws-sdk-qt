@@ -27,7 +27,7 @@ namespace ElasticsearchService {
 
 class DeleteElasticsearchDomainRequestPrivate;
 
-class QTAWS_EXPORT DeleteElasticsearchDomainRequest : public ElasticsearchServiceRequest {
+class QTAWSELASTICSEARCHSERVICE_EXPORT DeleteElasticsearchDomainRequest : public ElasticsearchServiceRequest {
 
 public:
     DeleteElasticsearchDomainRequest(const DeleteElasticsearchDomainRequest &other);

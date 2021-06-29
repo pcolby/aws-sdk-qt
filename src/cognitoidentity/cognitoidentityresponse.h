@@ -21,6 +21,8 @@
 #define QTAWS_COGNITOIDENTITYRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawscognitoidentityglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace CognitoIdentity {
 
 class CognitoIdentityResponsePrivate;
 
-class QTAWS_EXPORT CognitoIdentityResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCOGNITOIDENTITY_EXPORT CognitoIdentityResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

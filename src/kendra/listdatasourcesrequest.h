@@ -27,7 +27,7 @@ namespace kendra {
 
 class ListDataSourcesRequestPrivate;
 
-class QTAWS_EXPORT ListDataSourcesRequest : public kendraRequest {
+class QTAWSKENDRA_EXPORT ListDataSourcesRequest : public kendraRequest {
 
 public:
     ListDataSourcesRequest(const ListDataSourcesRequest &other);

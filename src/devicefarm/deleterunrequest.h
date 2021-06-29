@@ -27,7 +27,7 @@ namespace DeviceFarm {
 
 class DeleteRunRequestPrivate;
 
-class QTAWS_EXPORT DeleteRunRequest : public DeviceFarmRequest {
+class QTAWSDEVICEFARM_EXPORT DeleteRunRequest : public DeviceFarmRequest {
 
 public:
     DeleteRunRequest(const DeleteRunRequest &other);

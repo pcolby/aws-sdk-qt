@@ -28,7 +28,7 @@ namespace Snowball {
 
 class ListCompatibleImagesResponsePrivate;
 
-class QTAWS_EXPORT ListCompatibleImagesResponse : public SnowballResponse {
+class QTAWSSNOWBALL_EXPORT ListCompatibleImagesResponse : public SnowballResponse {
     Q_OBJECT
 
 public:

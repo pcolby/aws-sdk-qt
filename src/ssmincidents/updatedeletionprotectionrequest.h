@@ -27,7 +27,7 @@ namespace SSMIncidents {
 
 class UpdateDeletionProtectionRequestPrivate;
 
-class QTAWS_EXPORT UpdateDeletionProtectionRequest : public SSMIncidentsRequest {
+class QTAWSSSMINCIDENTS_EXPORT UpdateDeletionProtectionRequest : public SSMIncidentsRequest {
 
 public:
     UpdateDeletionProtectionRequest(const UpdateDeletionProtectionRequest &other);

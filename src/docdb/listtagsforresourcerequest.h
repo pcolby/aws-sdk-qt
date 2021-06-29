@@ -27,7 +27,7 @@ namespace DocDB {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT ListTagsForResourceRequest : public DocDBRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

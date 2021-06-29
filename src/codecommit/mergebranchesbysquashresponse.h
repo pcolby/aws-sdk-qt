@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class MergeBranchesBySquashResponsePrivate;
 
-class QTAWS_EXPORT MergeBranchesBySquashResponse : public CodeCommitResponse {
+class QTAWSCODECOMMIT_EXPORT MergeBranchesBySquashResponse : public CodeCommitResponse {
     Q_OBJECT
 
 public:

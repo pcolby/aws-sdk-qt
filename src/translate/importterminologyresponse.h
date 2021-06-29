@@ -28,7 +28,7 @@ namespace Translate {
 
 class ImportTerminologyResponsePrivate;
 
-class QTAWS_EXPORT ImportTerminologyResponse : public TranslateResponse {
+class QTAWSTRANSLATE_EXPORT ImportTerminologyResponse : public TranslateResponse {
     Q_OBJECT
 
 public:

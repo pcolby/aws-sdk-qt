@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class SetUICustomizationResponsePrivate;
 
-class QTAWS_EXPORT SetUICustomizationResponse : public CognitoIdentityProviderResponse {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT SetUICustomizationResponse : public CognitoIdentityProviderResponse {
     Q_OBJECT
 
 public:

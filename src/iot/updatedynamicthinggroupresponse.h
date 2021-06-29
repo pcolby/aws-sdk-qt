@@ -28,7 +28,7 @@ namespace IoT {
 
 class UpdateDynamicThingGroupResponsePrivate;
 
-class QTAWS_EXPORT UpdateDynamicThingGroupResponse : public IoTResponse {
+class QTAWSIOT_EXPORT UpdateDynamicThingGroupResponse : public IoTResponse {
     Q_OBJECT
 
 public:

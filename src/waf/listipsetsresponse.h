@@ -28,7 +28,7 @@ namespace WAF {
 
 class ListIPSetsResponsePrivate;
 
-class QTAWS_EXPORT ListIPSetsResponse : public WafResponse {
+class QTAWSWAF_EXPORT ListIPSetsResponse : public WafResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace RDS {
 
 class DeleteDBProxyEndpointResponsePrivate;
 
-class QTAWS_EXPORT DeleteDBProxyEndpointResponse : public RdsResponse {
+class QTAWSRDS_EXPORT DeleteDBProxyEndpointResponse : public RdsResponse {
     Q_OBJECT
 
 public:

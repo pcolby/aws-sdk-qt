@@ -27,7 +27,7 @@ namespace Schemas {
 
 class ListDiscoverersRequestPrivate;
 
-class QTAWS_EXPORT ListDiscoverersRequest : public SchemasRequest {
+class QTAWSSCHEMAS_EXPORT ListDiscoverersRequest : public SchemasRequest {
 
 public:
     ListDiscoverersRequest(const ListDiscoverersRequest &other);

@@ -27,7 +27,7 @@ namespace SMS {
 
 class CreateAppRequestPrivate;
 
-class QTAWS_EXPORT CreateAppRequest : public SmsRequest {
+class QTAWSSMS_EXPORT CreateAppRequest : public SmsRequest {
 
 public:
     CreateAppRequest(const CreateAppRequest &other);

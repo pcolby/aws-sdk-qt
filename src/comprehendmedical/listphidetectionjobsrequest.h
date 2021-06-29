@@ -27,7 +27,7 @@ namespace ComprehendMedical {
 
 class ListPHIDetectionJobsRequestPrivate;
 
-class QTAWS_EXPORT ListPHIDetectionJobsRequest : public ComprehendMedicalRequest {
+class QTAWSCOMPREHENDMEDICAL_EXPORT ListPHIDetectionJobsRequest : public ComprehendMedicalRequest {
 
 public:
     ListPHIDetectionJobsRequest(const ListPHIDetectionJobsRequest &other);

@@ -27,7 +27,7 @@ namespace DynamoDB {
 
 class DescribeExportRequestPrivate;
 
-class QTAWS_EXPORT DescribeExportRequest : public DynamoDBRequest {
+class QTAWSDYNAMODB_EXPORT DescribeExportRequest : public DynamoDBRequest {
 
 public:
     DescribeExportRequest(const DescribeExportRequest &other);

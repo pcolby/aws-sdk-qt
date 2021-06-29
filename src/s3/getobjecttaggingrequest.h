@@ -27,7 +27,7 @@ namespace S3 {
 
 class GetObjectTaggingRequestPrivate;
 
-class QTAWS_EXPORT GetObjectTaggingRequest : public S3Request {
+class QTAWSS3_EXPORT GetObjectTaggingRequest : public S3Request {
 
 public:
     GetObjectTaggingRequest(const GetObjectTaggingRequest &other);

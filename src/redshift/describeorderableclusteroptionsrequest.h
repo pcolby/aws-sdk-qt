@@ -27,7 +27,7 @@ namespace Redshift {
 
 class DescribeOrderableClusterOptionsRequestPrivate;
 
-class QTAWS_EXPORT DescribeOrderableClusterOptionsRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT DescribeOrderableClusterOptionsRequest : public RedshiftRequest {
 
 public:
     DescribeOrderableClusterOptionsRequest(const DescribeOrderableClusterOptionsRequest &other);

@@ -28,7 +28,7 @@ namespace DataSync {
 
 class DeleteAgentResponsePrivate;
 
-class QTAWS_EXPORT DeleteAgentResponse : public DataSyncResponse {
+class QTAWSDATASYNC_EXPORT DeleteAgentResponse : public DataSyncResponse {
     Q_OBJECT
 
 public:

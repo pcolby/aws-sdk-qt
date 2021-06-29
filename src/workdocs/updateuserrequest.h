@@ -27,7 +27,7 @@ namespace WorkDocs {
 
 class UpdateUserRequestPrivate;
 
-class QTAWS_EXPORT UpdateUserRequest : public WorkDocsRequest {
+class QTAWSWORKDOCS_EXPORT UpdateUserRequest : public WorkDocsRequest {
 
 public:
     UpdateUserRequest(const UpdateUserRequest &other);

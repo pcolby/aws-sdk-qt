@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCOMPREHENDMEDICAL_LIBRARY)
+
 add_library(QtAwsComprehendMedical
   comprehendmedicalclient.h
   comprehendmedicalclient_p.h
@@ -57,6 +59,7 @@ add_library(QtAwsComprehendMedical
   listrxnorminferencejobsrequest_p.h
   listrxnorminferencejobsresponse.h
   listrxnorminferencejobsresponse_p.h
+  qtawscomprehendmedicalglobal.h
   startentitiesdetectionv2jobrequest.h
   startentitiesdetectionv2jobrequest_p.h
   startentitiesdetectionv2jobresponse.h

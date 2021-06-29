@@ -28,7 +28,7 @@ namespace signer {
 
 class RemoveProfilePermissionResponsePrivate;
 
-class QTAWS_EXPORT RemoveProfilePermissionResponse : public signerResponse {
+class QTAWSSIGNER_EXPORT RemoveProfilePermissionResponse : public signerResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace Detective {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public DetectiveRequest {
+class QTAWSDETECTIVE_EXPORT ListTagsForResourceRequest : public DetectiveRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

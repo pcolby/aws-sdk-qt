@@ -27,7 +27,7 @@ namespace CodeBuild {
 
 class DescribeCodeCoveragesRequestPrivate;
 
-class QTAWS_EXPORT DescribeCodeCoveragesRequest : public CodeBuildRequest {
+class QTAWSCODEBUILD_EXPORT DescribeCodeCoveragesRequest : public CodeBuildRequest {
 
 public:
     DescribeCodeCoveragesRequest(const DescribeCodeCoveragesRequest &other);

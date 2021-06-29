@@ -27,7 +27,7 @@ namespace S3Outposts {
 
 class ListEndpointsRequestPrivate;
 
-class QTAWS_EXPORT ListEndpointsRequest : public S3OutpostsRequest {
+class QTAWSS3OUTPOSTS_EXPORT ListEndpointsRequest : public S3OutpostsRequest {
 
 public:
     ListEndpointsRequest(const ListEndpointsRequest &other);

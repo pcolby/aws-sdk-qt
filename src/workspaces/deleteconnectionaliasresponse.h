@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class DeleteConnectionAliasResponsePrivate;
 
-class QTAWS_EXPORT DeleteConnectionAliasResponse : public WorkSpacesResponse {
+class QTAWSWORKSPACES_EXPORT DeleteConnectionAliasResponse : public WorkSpacesResponse {
     Q_OBJECT
 
 public:

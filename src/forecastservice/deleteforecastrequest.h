@@ -27,7 +27,7 @@ namespace ForecastService {
 
 class DeleteForecastRequestPrivate;
 
-class QTAWS_EXPORT DeleteForecastRequest : public ForecastServiceRequest {
+class QTAWSFORECASTSERVICE_EXPORT DeleteForecastRequest : public ForecastServiceRequest {
 
 public:
     DeleteForecastRequest(const DeleteForecastRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsxrayglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace XRay {
 
 class XRayRequestPrivate;
 
-class QTAWS_EXPORT XRayRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSXRAY_EXPORT XRayRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by XRay.

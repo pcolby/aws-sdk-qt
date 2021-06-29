@@ -28,7 +28,7 @@ namespace WAF {
 
 class CreateByteMatchSetResponsePrivate;
 
-class QTAWS_EXPORT CreateByteMatchSetResponse : public WafResponse {
+class QTAWSWAF_EXPORT CreateByteMatchSetResponse : public WafResponse {
     Q_OBJECT
 
 public:

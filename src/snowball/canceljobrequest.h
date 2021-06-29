@@ -27,7 +27,7 @@ namespace Snowball {
 
 class CancelJobRequestPrivate;
 
-class QTAWS_EXPORT CancelJobRequest : public SnowballRequest {
+class QTAWSSNOWBALL_EXPORT CancelJobRequest : public SnowballRequest {
 
 public:
     CancelJobRequest(const CancelJobRequest &other);

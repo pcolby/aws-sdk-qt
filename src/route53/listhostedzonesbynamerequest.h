@@ -27,7 +27,7 @@ namespace Route53 {
 
 class ListHostedZonesByNameRequestPrivate;
 
-class QTAWS_EXPORT ListHostedZonesByNameRequest : public Route53Request {
+class QTAWSROUTE53_EXPORT ListHostedZonesByNameRequest : public Route53Request {
 
 public:
     ListHostedZonesByNameRequest(const ListHostedZonesByNameRequest &other);

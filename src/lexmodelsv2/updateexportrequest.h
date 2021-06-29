@@ -27,7 +27,7 @@ namespace LexModelsV2 {
 
 class UpdateExportRequestPrivate;
 
-class QTAWS_EXPORT UpdateExportRequest : public LexModelsV2Request {
+class QTAWSLEXMODELSV2_EXPORT UpdateExportRequest : public LexModelsV2Request {
 
 public:
     UpdateExportRequest(const UpdateExportRequest &other);

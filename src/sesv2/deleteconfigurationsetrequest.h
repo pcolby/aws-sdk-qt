@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class DeleteConfigurationSetRequestPrivate;
 
-class QTAWS_EXPORT DeleteConfigurationSetRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT DeleteConfigurationSetRequest : public Sesv2Request {
 
 public:
     DeleteConfigurationSetRequest(const DeleteConfigurationSetRequest &other);

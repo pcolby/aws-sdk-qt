@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class GetStaticIpResponsePrivate;
 
-class QTAWS_EXPORT GetStaticIpResponse : public LightsailResponse {
+class QTAWSLIGHTSAIL_EXPORT GetStaticIpResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

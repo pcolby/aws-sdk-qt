@@ -27,7 +27,7 @@ namespace SES {
 
 class VerifyDomainDkimRequestPrivate;
 
-class QTAWS_EXPORT VerifyDomainDkimRequest : public SesRequest {
+class QTAWSSES_EXPORT VerifyDomainDkimRequest : public SesRequest {
 
 public:
     VerifyDomainDkimRequest(const VerifyDomainDkimRequest &other);

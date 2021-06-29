@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class DetectStackResourceDriftResponsePrivate;
 
-class QTAWS_EXPORT DetectStackResourceDriftResponse : public CloudFormationResponse {
+class QTAWSCLOUDFORMATION_EXPORT DetectStackResourceDriftResponse : public CloudFormationResponse {
     Q_OBJECT
 
 public:

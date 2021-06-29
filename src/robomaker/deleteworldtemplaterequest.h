@@ -27,7 +27,7 @@ namespace RoboMaker {
 
 class DeleteWorldTemplateRequestPrivate;
 
-class QTAWS_EXPORT DeleteWorldTemplateRequest : public RoboMakerRequest {
+class QTAWSROBOMAKER_EXPORT DeleteWorldTemplateRequest : public RoboMakerRequest {
 
 public:
     DeleteWorldTemplateRequest(const DeleteWorldTemplateRequest &other);

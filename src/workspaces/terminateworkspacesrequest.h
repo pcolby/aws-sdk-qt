@@ -27,7 +27,7 @@ namespace WorkSpaces {
 
 class TerminateWorkspacesRequestPrivate;
 
-class QTAWS_EXPORT TerminateWorkspacesRequest : public WorkSpacesRequest {
+class QTAWSWORKSPACES_EXPORT TerminateWorkspacesRequest : public WorkSpacesRequest {
 
 public:
     TerminateWorkspacesRequest(const TerminateWorkspacesRequest &other);

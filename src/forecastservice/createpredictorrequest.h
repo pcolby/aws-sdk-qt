@@ -27,7 +27,7 @@ namespace ForecastService {
 
 class CreatePredictorRequestPrivate;
 
-class QTAWS_EXPORT CreatePredictorRequest : public ForecastServiceRequest {
+class QTAWSFORECASTSERVICE_EXPORT CreatePredictorRequest : public ForecastServiceRequest {
 
 public:
     CreatePredictorRequest(const CreatePredictorRequest &other);

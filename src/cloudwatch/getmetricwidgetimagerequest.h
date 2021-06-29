@@ -27,7 +27,7 @@ namespace CloudWatch {
 
 class GetMetricWidgetImageRequestPrivate;
 
-class QTAWS_EXPORT GetMetricWidgetImageRequest : public CloudWatchRequest {
+class QTAWSCLOUDWATCH_EXPORT GetMetricWidgetImageRequest : public CloudWatchRequest {
 
 public:
     GetMetricWidgetImageRequest(const GetMetricWidgetImageRequest &other);

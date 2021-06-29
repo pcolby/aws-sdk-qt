@@ -27,7 +27,7 @@ namespace DocDB {
 
 class DescribeEventsRequestPrivate;
 
-class QTAWS_EXPORT DescribeEventsRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT DescribeEventsRequest : public DocDBRequest {
 
 public:
     DescribeEventsRequest(const DescribeEventsRequest &other);

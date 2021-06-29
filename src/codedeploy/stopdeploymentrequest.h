@@ -27,7 +27,7 @@ namespace CodeDeploy {
 
 class StopDeploymentRequestPrivate;
 
-class QTAWS_EXPORT StopDeploymentRequest : public CodeDeployRequest {
+class QTAWSCODEDEPLOY_EXPORT StopDeploymentRequest : public CodeDeployRequest {
 
 public:
     StopDeploymentRequest(const StopDeploymentRequest &other);

@@ -27,7 +27,7 @@ namespace Glue {
 
 class DeleteClassifierRequestPrivate;
 
-class QTAWS_EXPORT DeleteClassifierRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT DeleteClassifierRequest : public GlueRequest {
 
 public:
     DeleteClassifierRequest(const DeleteClassifierRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawspollyglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -47,7 +49,7 @@ class StartSpeechSynthesisTaskResponse;
 class SynthesizeSpeechRequest;
 class SynthesizeSpeechResponse;
 
-class QTAWS_EXPORT PollyClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSPOLLY_EXPORT PollyClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

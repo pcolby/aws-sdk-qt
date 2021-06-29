@@ -28,7 +28,7 @@ namespace SagemakerEdgeManager {
 
 class SendHeartbeatResponsePrivate;
 
-class QTAWS_EXPORT SendHeartbeatResponse : public SagemakerEdgeManagerResponse {
+class QTAWSSAGEMAKEREDGEMANAGER_EXPORT SendHeartbeatResponse : public SagemakerEdgeManagerResponse {
     Q_OBJECT
 
 public:

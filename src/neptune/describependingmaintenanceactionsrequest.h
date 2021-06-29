@@ -27,7 +27,7 @@ namespace Neptune {
 
 class DescribePendingMaintenanceActionsRequestPrivate;
 
-class QTAWS_EXPORT DescribePendingMaintenanceActionsRequest : public NeptuneRequest {
+class QTAWSNEPTUNE_EXPORT DescribePendingMaintenanceActionsRequest : public NeptuneRequest {
 
 public:
     DescribePendingMaintenanceActionsRequest(const DescribePendingMaintenanceActionsRequest &other);

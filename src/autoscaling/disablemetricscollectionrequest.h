@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class DisableMetricsCollectionRequestPrivate;
 
-class QTAWS_EXPORT DisableMetricsCollectionRequest : public AutoScalingRequest {
+class QTAWSAUTOSCALING_EXPORT DisableMetricsCollectionRequest : public AutoScalingRequest {
 
 public:
     DisableMetricsCollectionRequest(const DisableMetricsCollectionRequest &other);

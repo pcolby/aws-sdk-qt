@@ -27,7 +27,7 @@ namespace SFN {
 
 class DeleteActivityRequestPrivate;
 
-class QTAWS_EXPORT DeleteActivityRequest : public SfnRequest {
+class QTAWSSFN_EXPORT DeleteActivityRequest : public SfnRequest {
 
 public:
     DeleteActivityRequest(const DeleteActivityRequest &other);

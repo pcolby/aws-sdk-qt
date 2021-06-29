@@ -28,7 +28,7 @@ namespace CodeArtifact {
 
 class DeleteDomainPermissionsPolicyResponsePrivate;
 
-class QTAWS_EXPORT DeleteDomainPermissionsPolicyResponse : public CodeArtifactResponse {
+class QTAWSCODEARTIFACT_EXPORT DeleteDomainPermissionsPolicyResponse : public CodeArtifactResponse {
     Q_OBJECT
 
 public:

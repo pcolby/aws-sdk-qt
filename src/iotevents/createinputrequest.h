@@ -27,7 +27,7 @@ namespace IoTEvents {
 
 class CreateInputRequestPrivate;
 
-class QTAWS_EXPORT CreateInputRequest : public IoTEventsRequest {
+class QTAWSIOTEVENTS_EXPORT CreateInputRequest : public IoTEventsRequest {
 
 public:
     CreateInputRequest(const CreateInputRequest &other);

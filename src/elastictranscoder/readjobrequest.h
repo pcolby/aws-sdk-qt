@@ -27,7 +27,7 @@ namespace ElasticTranscoder {
 
 class ReadJobRequestPrivate;
 
-class QTAWS_EXPORT ReadJobRequest : public ElasticTranscoderRequest {
+class QTAWSELASTICTRANSCODER_EXPORT ReadJobRequest : public ElasticTranscoderRequest {
 
 public:
     ReadJobRequest(const ReadJobRequest &other);

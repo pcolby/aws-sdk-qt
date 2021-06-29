@@ -28,7 +28,7 @@ namespace IVS {
 
 class PutMetadataResponsePrivate;
 
-class QTAWS_EXPORT PutMetadataResponse : public IvsResponse {
+class QTAWSIVS_EXPORT PutMetadataResponse : public IvsResponse {
     Q_OBJECT
 
 public:

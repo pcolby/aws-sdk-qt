@@ -28,7 +28,7 @@ namespace EventBridge {
 
 class DeleteRuleResponsePrivate;
 
-class QTAWS_EXPORT DeleteRuleResponse : public EventBridgeResponse {
+class QTAWSEVENTBRIDGE_EXPORT DeleteRuleResponse : public EventBridgeResponse {
     Q_OBJECT
 
 public:

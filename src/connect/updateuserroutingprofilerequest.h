@@ -27,7 +27,7 @@ namespace Connect {
 
 class UpdateUserRoutingProfileRequestPrivate;
 
-class QTAWS_EXPORT UpdateUserRoutingProfileRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT UpdateUserRoutingProfileRequest : public ConnectRequest {
 
 public:
     UpdateUserRoutingProfileRequest(const UpdateUserRoutingProfileRequest &other);

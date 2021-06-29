@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class DeregisterVolumeRequestPrivate;
 
-class QTAWS_EXPORT DeregisterVolumeRequest : public OpsWorksRequest {
+class QTAWSOPSWORKS_EXPORT DeregisterVolumeRequest : public OpsWorksRequest {
 
 public:
     DeregisterVolumeRequest(const DeregisterVolumeRequest &other);

@@ -27,7 +27,7 @@ namespace S3 {
 
 class DeleteBucketLifecycleRequestPrivate;
 
-class QTAWS_EXPORT DeleteBucketLifecycleRequest : public S3Request {
+class QTAWSS3_EXPORT DeleteBucketLifecycleRequest : public S3Request {
 
 public:
     DeleteBucketLifecycleRequest(const DeleteBucketLifecycleRequest &other);

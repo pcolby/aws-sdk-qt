@@ -27,7 +27,7 @@ namespace CognitoIdentity {
 
 class MergeDeveloperIdentitiesRequestPrivate;
 
-class QTAWS_EXPORT MergeDeveloperIdentitiesRequest : public CognitoIdentityRequest {
+class QTAWSCOGNITOIDENTITY_EXPORT MergeDeveloperIdentitiesRequest : public CognitoIdentityRequest {
 
 public:
     MergeDeveloperIdentitiesRequest(const MergeDeveloperIdentitiesRequest &other);

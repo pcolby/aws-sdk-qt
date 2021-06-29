@@ -27,7 +27,7 @@ namespace Kinesis {
 
 class SplitShardRequestPrivate;
 
-class QTAWS_EXPORT SplitShardRequest : public KinesisRequest {
+class QTAWSKINESIS_EXPORT SplitShardRequest : public KinesisRequest {
 
 public:
     SplitShardRequest(const SplitShardRequest &other);

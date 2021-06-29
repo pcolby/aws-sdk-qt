@@ -27,7 +27,7 @@ namespace Glue {
 
 class GetPlanRequestPrivate;
 
-class QTAWS_EXPORT GetPlanRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT GetPlanRequest : public GlueRequest {
 
 public:
     GetPlanRequest(const GetPlanRequest &other);

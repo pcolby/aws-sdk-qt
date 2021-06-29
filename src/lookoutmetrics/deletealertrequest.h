@@ -27,7 +27,7 @@ namespace LookoutMetrics {
 
 class DeleteAlertRequestPrivate;
 
-class QTAWS_EXPORT DeleteAlertRequest : public LookoutMetricsRequest {
+class QTAWSLOOKOUTMETRICS_EXPORT DeleteAlertRequest : public LookoutMetricsRequest {
 
 public:
     DeleteAlertRequest(const DeleteAlertRequest &other);

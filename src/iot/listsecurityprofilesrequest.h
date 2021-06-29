@@ -27,7 +27,7 @@ namespace IoT {
 
 class ListSecurityProfilesRequestPrivate;
 
-class QTAWS_EXPORT ListSecurityProfilesRequest : public IoTRequest {
+class QTAWSIOT_EXPORT ListSecurityProfilesRequest : public IoTRequest {
 
 public:
     ListSecurityProfilesRequest(const ListSecurityProfilesRequest &other);

@@ -28,7 +28,7 @@ namespace Appflow {
 
 class DescribeFlowExecutionRecordsResponsePrivate;
 
-class QTAWS_EXPORT DescribeFlowExecutionRecordsResponse : public AppflowResponse {
+class QTAWSAPPFLOW_EXPORT DescribeFlowExecutionRecordsResponse : public AppflowResponse {
     Q_OBJECT
 
 public:

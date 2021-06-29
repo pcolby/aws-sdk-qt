@@ -27,7 +27,7 @@ namespace S3 {
 
 class DeleteBucketIntelligentTieringConfigurationRequestPrivate;
 
-class QTAWS_EXPORT DeleteBucketIntelligentTieringConfigurationRequest : public S3Request {
+class QTAWSS3_EXPORT DeleteBucketIntelligentTieringConfigurationRequest : public S3Request {
 
 public:
     DeleteBucketIntelligentTieringConfigurationRequest(const DeleteBucketIntelligentTieringConfigurationRequest &other);

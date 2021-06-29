@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 
 class ActivateEventSourceResponsePrivate;
 
-class QTAWS_EXPORT ActivateEventSourceResponse : public CloudWatchEventsResponse {
+class QTAWSCLOUDWATCHEVENTS_EXPORT ActivateEventSourceResponse : public CloudWatchEventsResponse {
     Q_OBJECT
 
 public:

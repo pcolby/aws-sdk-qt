@@ -28,7 +28,7 @@ namespace Glacier {
 
 class CreateVaultResponsePrivate;
 
-class QTAWS_EXPORT CreateVaultResponse : public GlacierResponse {
+class QTAWSGLACIER_EXPORT CreateVaultResponse : public GlacierResponse {
     Q_OBJECT
 
 public:

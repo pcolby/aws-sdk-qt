@@ -28,7 +28,7 @@ namespace S3Control {
 
 class ListStorageLensConfigurationsResponsePrivate;
 
-class QTAWS_EXPORT ListStorageLensConfigurationsResponse : public S3ControlResponse {
+class QTAWSS3CONTROL_EXPORT ListStorageLensConfigurationsResponse : public S3ControlResponse {
     Q_OBJECT
 
 public:

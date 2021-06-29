@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsdirectoryserviceglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -153,7 +155,7 @@ class UpdateTrustResponse;
 class VerifyTrustRequest;
 class VerifyTrustResponse;
 
-class QTAWS_EXPORT DirectoryServiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSDIRECTORYSERVICE_EXPORT DirectoryServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

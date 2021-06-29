@@ -21,6 +21,8 @@
 #define QTAWS_TRANSCRIBESTREAMINGSERVICERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawstranscribestreamingserviceglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace TranscribeStreamingService {
 
 class TranscribeStreamingServiceResponsePrivate;
 
-class QTAWS_EXPORT TranscribeStreamingServiceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSTRANSCRIBESTREAMINGSERVICE_EXPORT TranscribeStreamingServiceResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

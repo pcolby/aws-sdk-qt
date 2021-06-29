@@ -28,7 +28,7 @@ namespace ApplicationCostProfiler {
 
 class PutReportDefinitionResponsePrivate;
 
-class QTAWS_EXPORT PutReportDefinitionResponse : public ApplicationCostProfilerResponse {
+class QTAWSAPPLICATIONCOSTPROFILER_EXPORT PutReportDefinitionResponse : public ApplicationCostProfilerResponse {
     Q_OBJECT
 
 public:

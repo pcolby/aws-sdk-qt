@@ -27,7 +27,7 @@ namespace Organizations {
 
 class RegisterDelegatedAdministratorRequestPrivate;
 
-class QTAWS_EXPORT RegisterDelegatedAdministratorRequest : public OrganizationsRequest {
+class QTAWSORGANIZATIONS_EXPORT RegisterDelegatedAdministratorRequest : public OrganizationsRequest {
 
 public:
     RegisterDelegatedAdministratorRequest(const RegisterDelegatedAdministratorRequest &other);

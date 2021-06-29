@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class GetMailboxDetailsResponsePrivate;
 
-class QTAWS_EXPORT GetMailboxDetailsResponse : public WorkMailResponse {
+class QTAWSWORKMAIL_EXPORT GetMailboxDetailsResponse : public WorkMailResponse {
     Q_OBJECT
 
 public:

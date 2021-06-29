@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawssesglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace SES {
 
 class SesRequestPrivate;
 
-class QTAWS_EXPORT SesRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSES_EXPORT SesRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SES.

@@ -27,7 +27,7 @@ namespace LookoutforVision {
 
 class CreateModelRequestPrivate;
 
-class QTAWS_EXPORT CreateModelRequest : public LookoutforVisionRequest {
+class QTAWSLOOKOUTFORVISION_EXPORT CreateModelRequest : public LookoutforVisionRequest {
 
 public:
     CreateModelRequest(const CreateModelRequest &other);

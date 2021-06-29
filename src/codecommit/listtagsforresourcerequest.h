@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public CodeCommitRequest {
+class QTAWSCODECOMMIT_EXPORT ListTagsForResourceRequest : public CodeCommitRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

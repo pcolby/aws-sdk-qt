@@ -28,7 +28,7 @@ namespace Chime {
 
 class UpdateChannelReadMarkerResponsePrivate;
 
-class QTAWS_EXPORT UpdateChannelReadMarkerResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT UpdateChannelReadMarkerResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

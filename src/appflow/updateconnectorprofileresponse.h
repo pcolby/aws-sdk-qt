@@ -28,7 +28,7 @@ namespace Appflow {
 
 class UpdateConnectorProfileResponsePrivate;
 
-class QTAWS_EXPORT UpdateConnectorProfileResponse : public AppflowResponse {
+class QTAWSAPPFLOW_EXPORT UpdateConnectorProfileResponse : public AppflowResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace DataSync {
 
 class CreateLocationS3ResponsePrivate;
 
-class QTAWS_EXPORT CreateLocationS3Response : public DataSyncResponse {
+class QTAWSDATASYNC_EXPORT CreateLocationS3Response : public DataSyncResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ModifyInstanceEventStartTimeRequestPrivate;
 
-class QTAWS_EXPORT ModifyInstanceEventStartTimeRequest : public Ec2Request {
+class QTAWSEC2_EXPORT ModifyInstanceEventStartTimeRequest : public Ec2Request {
 
 public:
     ModifyInstanceEventStartTimeRequest(const ModifyInstanceEventStartTimeRequest &other);

@@ -27,7 +27,7 @@ namespace CloudWatchEvents {
 
 class DeactivateEventSourceRequestPrivate;
 
-class QTAWS_EXPORT DeactivateEventSourceRequest : public CloudWatchEventsRequest {
+class QTAWSCLOUDWATCHEVENTS_EXPORT DeactivateEventSourceRequest : public CloudWatchEventsRequest {
 
 public:
     DeactivateEventSourceRequest(const DeactivateEventSourceRequest &other);

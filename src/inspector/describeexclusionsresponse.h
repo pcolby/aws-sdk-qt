@@ -28,7 +28,7 @@ namespace Inspector {
 
 class DescribeExclusionsResponsePrivate;
 
-class QTAWS_EXPORT DescribeExclusionsResponse : public InspectorResponse {
+class QTAWSINSPECTOR_EXPORT DescribeExclusionsResponse : public InspectorResponse {
     Q_OBJECT
 
 public:

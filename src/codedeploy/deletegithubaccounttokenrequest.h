@@ -27,7 +27,7 @@ namespace CodeDeploy {
 
 class DeleteGitHubAccountTokenRequestPrivate;
 
-class QTAWS_EXPORT DeleteGitHubAccountTokenRequest : public CodeDeployRequest {
+class QTAWSCODEDEPLOY_EXPORT DeleteGitHubAccountTokenRequest : public CodeDeployRequest {
 
 public:
     DeleteGitHubAccountTokenRequest(const DeleteGitHubAccountTokenRequest &other);

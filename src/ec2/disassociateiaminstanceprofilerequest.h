@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DisassociateIamInstanceProfileRequestPrivate;
 
-class QTAWS_EXPORT DisassociateIamInstanceProfileRequest : public Ec2Request {
+class QTAWSEC2_EXPORT DisassociateIamInstanceProfileRequest : public Ec2Request {
 
 public:
     DisassociateIamInstanceProfileRequest(const DisassociateIamInstanceProfileRequest &other);

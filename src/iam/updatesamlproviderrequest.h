@@ -27,7 +27,7 @@ namespace IAM {
 
 class UpdateSAMLProviderRequestPrivate;
 
-class QTAWS_EXPORT UpdateSAMLProviderRequest : public IamRequest {
+class QTAWSIAM_EXPORT UpdateSAMLProviderRequest : public IamRequest {
 
 public:
     UpdateSAMLProviderRequest(const UpdateSAMLProviderRequest &other);

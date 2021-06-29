@@ -27,7 +27,7 @@ namespace GroundStation {
 
 class DeleteConfigRequestPrivate;
 
-class QTAWS_EXPORT DeleteConfigRequest : public GroundStationRequest {
+class QTAWSGROUNDSTATION_EXPORT DeleteConfigRequest : public GroundStationRequest {
 
 public:
     DeleteConfigRequest(const DeleteConfigRequest &other);

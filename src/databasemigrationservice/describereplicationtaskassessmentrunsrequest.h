@@ -27,7 +27,7 @@ namespace DatabaseMigrationService {
 
 class DescribeReplicationTaskAssessmentRunsRequestPrivate;
 
-class QTAWS_EXPORT DescribeReplicationTaskAssessmentRunsRequest : public DatabaseMigrationServiceRequest {
+class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DescribeReplicationTaskAssessmentRunsRequest : public DatabaseMigrationServiceRequest {
 
 public:
     DescribeReplicationTaskAssessmentRunsRequest(const DescribeReplicationTaskAssessmentRunsRequest &other);

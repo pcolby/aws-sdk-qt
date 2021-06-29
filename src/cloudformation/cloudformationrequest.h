@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawscloudformationglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace CloudFormation {
 
 class CloudFormationRequestPrivate;
 
-class QTAWS_EXPORT CloudFormationRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCLOUDFORMATION_EXPORT CloudFormationRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CloudFormation.

@@ -21,6 +21,8 @@
 #define QTAWS_WORKSPACESRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsworkspacesglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace WorkSpaces {
 
 class WorkSpacesResponsePrivate;
 
-class QTAWS_EXPORT WorkSpacesResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSWORKSPACES_EXPORT WorkSpacesResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

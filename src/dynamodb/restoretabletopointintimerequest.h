@@ -27,7 +27,7 @@ namespace DynamoDB {
 
 class RestoreTableToPointInTimeRequestPrivate;
 
-class QTAWS_EXPORT RestoreTableToPointInTimeRequest : public DynamoDBRequest {
+class QTAWSDYNAMODB_EXPORT RestoreTableToPointInTimeRequest : public DynamoDBRequest {
 
 public:
     RestoreTableToPointInTimeRequest(const RestoreTableToPointInTimeRequest &other);

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSDATASYNC_LIBRARY)
+
 add_library(QtAwsDataSync
   canceltaskexecutionrequest.h
   canceltaskexecutionrequest_p.h
@@ -109,6 +111,7 @@ add_library(QtAwsDataSync
   listtasksrequest_p.h
   listtasksresponse.h
   listtasksresponse_p.h
+  qtawsdatasyncglobal.h
   starttaskexecutionrequest.h
   starttaskexecutionrequest_p.h
   starttaskexecutionresponse.h

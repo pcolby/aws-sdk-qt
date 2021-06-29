@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class DescribeGatewayInformationRequestPrivate;
 
-class QTAWS_EXPORT DescribeGatewayInformationRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT DescribeGatewayInformationRequest : public StorageGatewayRequest {
 
 public:
     DescribeGatewayInformationRequest(const DescribeGatewayInformationRequest &other);

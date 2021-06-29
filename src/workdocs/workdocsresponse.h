@@ -21,6 +21,8 @@
 #define QTAWS_WORKDOCSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsworkdocsglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace WorkDocs {
 
 class WorkDocsResponsePrivate;
 
-class QTAWS_EXPORT WorkDocsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSWORKDOCS_EXPORT WorkDocsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

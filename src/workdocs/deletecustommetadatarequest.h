@@ -27,7 +27,7 @@ namespace WorkDocs {
 
 class DeleteCustomMetadataRequestPrivate;
 
-class QTAWS_EXPORT DeleteCustomMetadataRequest : public WorkDocsRequest {
+class QTAWSWORKDOCS_EXPORT DeleteCustomMetadataRequest : public WorkDocsRequest {
 
 public:
     DeleteCustomMetadataRequest(const DeleteCustomMetadataRequest &other);

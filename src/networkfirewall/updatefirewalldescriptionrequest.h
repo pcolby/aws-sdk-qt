@@ -27,7 +27,7 @@ namespace NetworkFirewall {
 
 class UpdateFirewallDescriptionRequestPrivate;
 
-class QTAWS_EXPORT UpdateFirewallDescriptionRequest : public NetworkFirewallRequest {
+class QTAWSNETWORKFIREWALL_EXPORT UpdateFirewallDescriptionRequest : public NetworkFirewallRequest {
 
 public:
     UpdateFirewallDescriptionRequest(const UpdateFirewallDescriptionRequest &other);

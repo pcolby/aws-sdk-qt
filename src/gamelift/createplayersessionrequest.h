@@ -27,7 +27,7 @@ namespace GameLift {
 
 class CreatePlayerSessionRequestPrivate;
 
-class QTAWS_EXPORT CreatePlayerSessionRequest : public GameLiftRequest {
+class QTAWSGAMELIFT_EXPORT CreatePlayerSessionRequest : public GameLiftRequest {
 
 public:
     CreatePlayerSessionRequest(const CreatePlayerSessionRequest &other);

@@ -27,7 +27,7 @@ namespace RDS {
 
 class StopActivityStreamRequestPrivate;
 
-class QTAWS_EXPORT StopActivityStreamRequest : public RdsRequest {
+class QTAWSRDS_EXPORT StopActivityStreamRequest : public RdsRequest {
 
 public:
     StopActivityStreamRequest(const StopActivityStreamRequest &other);

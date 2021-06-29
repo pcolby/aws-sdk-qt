@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class AddTagsToResourceRequestPrivate;
 
-class QTAWS_EXPORT AddTagsToResourceRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT AddTagsToResourceRequest : public DirectoryServiceRequest {
 
 public:
     AddTagsToResourceRequest(const AddTagsToResourceRequest &other);

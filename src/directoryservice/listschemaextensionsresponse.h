@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class ListSchemaExtensionsResponsePrivate;
 
-class QTAWS_EXPORT ListSchemaExtensionsResponse : public DirectoryServiceResponse {
+class QTAWSDIRECTORYSERVICE_EXPORT ListSchemaExtensionsResponse : public DirectoryServiceResponse {
     Q_OBJECT
 
 public:

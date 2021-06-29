@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsxrayglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -83,7 +85,7 @@ class UpdateGroupResponse;
 class UpdateSamplingRuleRequest;
 class UpdateSamplingRuleResponse;
 
-class QTAWS_EXPORT XRayClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSXRAY_EXPORT XRayClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

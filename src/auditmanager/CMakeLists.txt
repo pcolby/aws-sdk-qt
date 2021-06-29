@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSAUDITMANAGER_LIBRARY)
+
 add_library(QtAwsAuditManager
   associateassessmentreportevidencefolderrequest.h
   associateassessmentreportevidencefolderrequest_p.h
@@ -161,6 +163,7 @@ add_library(QtAwsAuditManager
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsauditmanagerglobal.h
   registeraccountrequest.h
   registeraccountrequest_p.h
   registeraccountresponse.h

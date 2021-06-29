@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSIMPORTEXPORT_LIBRARY)
+
 add_library(QtAwsImportExport
   canceljobrequest.h
   canceljobrequest_p.h
@@ -25,6 +27,7 @@ add_library(QtAwsImportExport
   listjobsrequest_p.h
   listjobsresponse.h
   listjobsresponse_p.h
+  qtawsimportexportglobal.h
   updatejobrequest.h
   updatejobrequest_p.h
   updatejobresponse.h

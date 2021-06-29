@@ -28,7 +28,7 @@ namespace AppRegistry {
 
 class DisassociateResourceResponsePrivate;
 
-class QTAWS_EXPORT DisassociateResourceResponse : public AppRegistryResponse {
+class QTAWSAPPREGISTRY_EXPORT DisassociateResourceResponse : public AppRegistryResponse {
     Q_OBJECT
 
 public:

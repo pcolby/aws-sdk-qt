@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class UpdateContextRequestPrivate;
 
-class QTAWS_EXPORT UpdateContextRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT UpdateContextRequest : public SageMakerRequest {
 
 public:
     UpdateContextRequest(const UpdateContextRequest &other);

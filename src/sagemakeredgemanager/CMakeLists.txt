@@ -1,8 +1,11 @@
+add_compile_definitions(QTAWSSAGEMAKEREDGEMANAGER_LIBRARY)
+
 add_library(QtAwsSagemakerEdgeManager
   getdeviceregistrationrequest.h
   getdeviceregistrationrequest_p.h
   getdeviceregistrationresponse.h
   getdeviceregistrationresponse_p.h
+  qtawssagemakeredgemanagerglobal.h
   sagemakeredgemanagerclient.h
   sagemakeredgemanagerclient_p.h
   sagemakeredgemanagerrequest.h

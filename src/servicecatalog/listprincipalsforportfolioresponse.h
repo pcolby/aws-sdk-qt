@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class ListPrincipalsForPortfolioResponsePrivate;
 
-class QTAWS_EXPORT ListPrincipalsForPortfolioResponse : public ServiceCatalogResponse {
+class QTAWSSERVICECATALOG_EXPORT ListPrincipalsForPortfolioResponse : public ServiceCatalogResponse {
     Q_OBJECT
 
 public:

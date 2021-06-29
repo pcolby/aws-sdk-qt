@@ -28,7 +28,7 @@ namespace CloudWatch {
 
 class DescribeInsightRulesResponsePrivate;
 
-class QTAWS_EXPORT DescribeInsightRulesResponse : public CloudWatchResponse {
+class QTAWSCLOUDWATCH_EXPORT DescribeInsightRulesResponse : public CloudWatchResponse {
     Q_OBJECT
 
 public:

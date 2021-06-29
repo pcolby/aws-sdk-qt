@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsaccessanalyzerglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace AccessAnalyzer {
 
 class AccessAnalyzerRequestPrivate;
 
-class QTAWS_EXPORT AccessAnalyzerRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSACCESSANALYZER_EXPORT AccessAnalyzerRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by AccessAnalyzer.

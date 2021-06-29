@@ -27,7 +27,7 @@ namespace GuardDuty {
 
 class ListDetectorsRequestPrivate;
 
-class QTAWS_EXPORT ListDetectorsRequest : public GuardDutyRequest {
+class QTAWSGUARDDUTY_EXPORT ListDetectorsRequest : public GuardDutyRequest {
 
 public:
     ListDetectorsRequest(const ListDetectorsRequest &other);

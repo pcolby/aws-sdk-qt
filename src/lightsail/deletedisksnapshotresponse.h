@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class DeleteDiskSnapshotResponsePrivate;
 
-class QTAWS_EXPORT DeleteDiskSnapshotResponse : public LightsailResponse {
+class QTAWSLIGHTSAIL_EXPORT DeleteDiskSnapshotResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

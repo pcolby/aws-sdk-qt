@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class CreateInputResponsePrivate;
 
-class QTAWS_EXPORT CreateInputResponse : public MediaLiveResponse {
+class QTAWSMEDIALIVE_EXPORT CreateInputResponse : public MediaLiveResponse {
     Q_OBJECT
 
 public:

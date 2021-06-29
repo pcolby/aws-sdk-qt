@@ -27,7 +27,7 @@ namespace NetworkFirewall {
 
 class DescribeLoggingConfigurationRequestPrivate;
 
-class QTAWS_EXPORT DescribeLoggingConfigurationRequest : public NetworkFirewallRequest {
+class QTAWSNETWORKFIREWALL_EXPORT DescribeLoggingConfigurationRequest : public NetworkFirewallRequest {
 
 public:
     DescribeLoggingConfigurationRequest(const DescribeLoggingConfigurationRequest &other);

@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class DisassociateMembersResponsePrivate;
 
-class QTAWS_EXPORT DisassociateMembersResponse : public GuardDutyResponse {
+class QTAWSGUARDDUTY_EXPORT DisassociateMembersResponse : public GuardDutyResponse {
     Q_OBJECT
 
 public:

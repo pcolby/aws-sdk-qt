@@ -28,7 +28,7 @@ namespace EKS {
 
 class AssociateIdentityProviderConfigResponsePrivate;
 
-class QTAWS_EXPORT AssociateIdentityProviderConfigResponse : public EksResponse {
+class QTAWSEKS_EXPORT AssociateIdentityProviderConfigResponse : public EksResponse {
     Q_OBJECT
 
 public:

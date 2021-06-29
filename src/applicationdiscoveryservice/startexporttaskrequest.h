@@ -27,7 +27,7 @@ namespace ApplicationDiscoveryService {
 
 class StartExportTaskRequestPrivate;
 
-class QTAWS_EXPORT StartExportTaskRequest : public ApplicationDiscoveryServiceRequest {
+class QTAWSAPPLICATIONDISCOVERYSERVICE_EXPORT StartExportTaskRequest : public ApplicationDiscoveryServiceRequest {
 
 public:
     StartExportTaskRequest(const StartExportTaskRequest &other);

@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class UpdateThingRuntimeConfigurationRequestPrivate;
 
-class QTAWS_EXPORT UpdateThingRuntimeConfigurationRequest : public GreengrassRequest {
+class QTAWSGREENGRASS_EXPORT UpdateThingRuntimeConfigurationRequest : public GreengrassRequest {
 
 public:
     UpdateThingRuntimeConfigurationRequest(const UpdateThingRuntimeConfigurationRequest &other);

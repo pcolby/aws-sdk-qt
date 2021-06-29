@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public CloudFrontRequest {
+class QTAWSCLOUDFRONT_EXPORT ListTagsForResourceRequest : public CloudFrontRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

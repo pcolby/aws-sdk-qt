@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsapplicationinsightsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace ApplicationInsights {
 
 class ApplicationInsightsRequestPrivate;
 
-class QTAWS_EXPORT ApplicationInsightsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSAPPLICATIONINSIGHTS_EXPORT ApplicationInsightsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ApplicationInsights.

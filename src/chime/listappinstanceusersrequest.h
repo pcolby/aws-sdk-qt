@@ -27,7 +27,7 @@ namespace Chime {
 
 class ListAppInstanceUsersRequestPrivate;
 
-class QTAWS_EXPORT ListAppInstanceUsersRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT ListAppInstanceUsersRequest : public ChimeRequest {
 
 public:
     ListAppInstanceUsersRequest(const ListAppInstanceUsersRequest &other);

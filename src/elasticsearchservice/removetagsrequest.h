@@ -27,7 +27,7 @@ namespace ElasticsearchService {
 
 class RemoveTagsRequestPrivate;
 
-class QTAWS_EXPORT RemoveTagsRequest : public ElasticsearchServiceRequest {
+class QTAWSELASTICSEARCHSERVICE_EXPORT RemoveTagsRequest : public ElasticsearchServiceRequest {
 
 public:
     RemoveTagsRequest(const RemoveTagsRequest &other);

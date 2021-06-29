@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsmanagedblockchainglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -75,7 +77,7 @@ class UpdateNodeResponse;
 class VoteOnProposalRequest;
 class VoteOnProposalResponse;
 
-class QTAWS_EXPORT ManagedBlockchainClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSMANAGEDBLOCKCHAIN_EXPORT ManagedBlockchainClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

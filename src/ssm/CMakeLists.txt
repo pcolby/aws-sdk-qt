@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSSM_LIBRARY)
+
 add_library(QtAwsSsm
   addtagstoresourcerequest.h
   addtagstoresourcerequest_p.h
@@ -419,6 +421,7 @@ add_library(QtAwsSsm
   putparameterrequest_p.h
   putparameterresponse.h
   putparameterresponse_p.h
+  qtawsssmglobal.h
   registerdefaultpatchbaselinerequest.h
   registerdefaultpatchbaselinerequest_p.h
   registerdefaultpatchbaselineresponse.h

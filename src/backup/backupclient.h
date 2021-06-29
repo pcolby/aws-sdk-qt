@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsbackupglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -131,7 +133,7 @@ class UpdateRecoveryPointLifecycleResponse;
 class UpdateRegionSettingsRequest;
 class UpdateRegionSettingsResponse;
 
-class QTAWS_EXPORT BackupClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSBACKUP_EXPORT BackupClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

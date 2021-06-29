@@ -27,7 +27,7 @@ namespace Chime {
 
 class DeleteMeetingRequestPrivate;
 
-class QTAWS_EXPORT DeleteMeetingRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT DeleteMeetingRequest : public ChimeRequest {
 
 public:
     DeleteMeetingRequest(const DeleteMeetingRequest &other);

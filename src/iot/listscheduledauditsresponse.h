@@ -28,7 +28,7 @@ namespace IoT {
 
 class ListScheduledAuditsResponsePrivate;
 
-class QTAWS_EXPORT ListScheduledAuditsResponse : public IoTResponse {
+class QTAWSIOT_EXPORT ListScheduledAuditsResponse : public IoTResponse {
     Q_OBJECT
 
 public:

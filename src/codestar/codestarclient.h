@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawscodestarglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -65,7 +67,7 @@ class UpdateTeamMemberResponse;
 class UpdateUserProfileRequest;
 class UpdateUserProfileResponse;
 
-class QTAWS_EXPORT CodeStarClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCODESTAR_EXPORT CodeStarClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

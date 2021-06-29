@@ -27,7 +27,7 @@ namespace AutoScaling {
 
 class PutScheduledUpdateGroupActionRequestPrivate;
 
-class QTAWS_EXPORT PutScheduledUpdateGroupActionRequest : public AutoScalingRequest {
+class QTAWSAUTOSCALING_EXPORT PutScheduledUpdateGroupActionRequest : public AutoScalingRequest {
 
 public:
     PutScheduledUpdateGroupActionRequest(const PutScheduledUpdateGroupActionRequest &other);

@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class UpdateEmailTemplateResponsePrivate;
 
-class QTAWS_EXPORT UpdateEmailTemplateResponse : public PinpointResponse {
+class QTAWSPINPOINT_EXPORT UpdateEmailTemplateResponse : public PinpointResponse {
     Q_OBJECT
 
 public:

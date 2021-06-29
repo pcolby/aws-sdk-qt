@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class AssociateServiceRoleToAccountResponsePrivate;
 
-class QTAWS_EXPORT AssociateServiceRoleToAccountResponse : public GreengrassResponse {
+class QTAWSGREENGRASS_EXPORT AssociateServiceRoleToAccountResponse : public GreengrassResponse {
     Q_OBJECT
 
 public:

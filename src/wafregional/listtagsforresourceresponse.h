@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public WAFRegionalResponse {
+class QTAWSWAFREGIONAL_EXPORT ListTagsForResourceResponse : public WAFRegionalResponse {
     Q_OBJECT
 
 public:

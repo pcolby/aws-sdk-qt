@@ -27,7 +27,7 @@ namespace Neptune {
 
 class AddTagsToResourceRequestPrivate;
 
-class QTAWS_EXPORT AddTagsToResourceRequest : public NeptuneRequest {
+class QTAWSNEPTUNE_EXPORT AddTagsToResourceRequest : public NeptuneRequest {
 
 public:
     AddTagsToResourceRequest(const AddTagsToResourceRequest &other);

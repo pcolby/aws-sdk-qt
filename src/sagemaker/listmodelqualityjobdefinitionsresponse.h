@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class ListModelQualityJobDefinitionsResponsePrivate;
 
-class QTAWS_EXPORT ListModelQualityJobDefinitionsResponse : public SageMakerResponse {
+class QTAWSSAGEMAKER_EXPORT ListModelQualityJobDefinitionsResponse : public SageMakerResponse {
     Q_OBJECT
 
 public:

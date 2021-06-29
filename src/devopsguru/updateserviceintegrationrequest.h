@@ -27,7 +27,7 @@ namespace DevOpsGuru {
 
 class UpdateServiceIntegrationRequestPrivate;
 
-class QTAWS_EXPORT UpdateServiceIntegrationRequest : public DevOpsGuruRequest {
+class QTAWSDEVOPSGURU_EXPORT UpdateServiceIntegrationRequest : public DevOpsGuruRequest {
 
 public:
     UpdateServiceIntegrationRequest(const UpdateServiceIntegrationRequest &other);

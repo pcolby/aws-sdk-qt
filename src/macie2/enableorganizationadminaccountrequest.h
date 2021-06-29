@@ -27,7 +27,7 @@ namespace Macie2 {
 
 class EnableOrganizationAdminAccountRequestPrivate;
 
-class QTAWS_EXPORT EnableOrganizationAdminAccountRequest : public Macie2Request {
+class QTAWSMACIE2_EXPORT EnableOrganizationAdminAccountRequest : public Macie2Request {
 
 public:
     EnableOrganizationAdminAccountRequest(const EnableOrganizationAdminAccountRequest &other);

@@ -28,7 +28,7 @@ namespace EMRContainers {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public EMRContainersResponse {
+class QTAWSEMRCONTAINERS_EXPORT TagResourceResponse : public EMRContainersResponse {
     Q_OBJECT
 
 public:

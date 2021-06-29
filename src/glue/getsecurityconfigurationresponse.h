@@ -28,7 +28,7 @@ namespace Glue {
 
 class GetSecurityConfigurationResponsePrivate;
 
-class QTAWS_EXPORT GetSecurityConfigurationResponse : public GlueResponse {
+class QTAWSGLUE_EXPORT GetSecurityConfigurationResponse : public GlueResponse {
     Q_OBJECT
 
 public:

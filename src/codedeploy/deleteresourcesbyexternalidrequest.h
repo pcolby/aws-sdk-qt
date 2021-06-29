@@ -27,7 +27,7 @@ namespace CodeDeploy {
 
 class DeleteResourcesByExternalIdRequestPrivate;
 
-class QTAWS_EXPORT DeleteResourcesByExternalIdRequest : public CodeDeployRequest {
+class QTAWSCODEDEPLOY_EXPORT DeleteResourcesByExternalIdRequest : public CodeDeployRequest {
 
 public:
     DeleteResourcesByExternalIdRequest(const DeleteResourcesByExternalIdRequest &other);

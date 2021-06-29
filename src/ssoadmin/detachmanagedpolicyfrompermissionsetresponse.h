@@ -28,7 +28,7 @@ namespace SSOAdmin {
 
 class DetachManagedPolicyFromPermissionSetResponsePrivate;
 
-class QTAWS_EXPORT DetachManagedPolicyFromPermissionSetResponse : public SSOAdminResponse {
+class QTAWSSSOADMIN_EXPORT DetachManagedPolicyFromPermissionSetResponse : public SSOAdminResponse {
     Q_OBJECT
 
 public:

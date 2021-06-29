@@ -28,7 +28,7 @@ namespace PI {
 
 class DescribeDimensionKeysResponsePrivate;
 
-class QTAWS_EXPORT DescribeDimensionKeysResponse : public PiResponse {
+class QTAWSPI_EXPORT DescribeDimensionKeysResponse : public PiResponse {
     Q_OBJECT
 
 public:

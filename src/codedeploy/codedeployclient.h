@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawscodedeployglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -123,7 +125,7 @@ class UpdateApplicationResponse;
 class UpdateDeploymentGroupRequest;
 class UpdateDeploymentGroupResponse;
 
-class QTAWS_EXPORT CodeDeployClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCODEDEPLOY_EXPORT CodeDeployClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

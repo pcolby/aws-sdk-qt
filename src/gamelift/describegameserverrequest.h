@@ -27,7 +27,7 @@ namespace GameLift {
 
 class DescribeGameServerRequestPrivate;
 
-class QTAWS_EXPORT DescribeGameServerRequest : public GameLiftRequest {
+class QTAWSGAMELIFT_EXPORT DescribeGameServerRequest : public GameLiftRequest {
 
 public:
     DescribeGameServerRequest(const DescribeGameServerRequest &other);

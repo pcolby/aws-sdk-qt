@@ -28,7 +28,7 @@ namespace SSM {
 
 class PutParameterResponsePrivate;
 
-class QTAWS_EXPORT PutParameterResponse : public SsmResponse {
+class QTAWSSSM_EXPORT PutParameterResponse : public SsmResponse {
     Q_OBJECT
 
 public:

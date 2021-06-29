@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsconnectglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Connect {
 
 class ConnectRequestPrivate;
 
-class QTAWS_EXPORT ConnectRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCONNECT_EXPORT ConnectRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Connect.

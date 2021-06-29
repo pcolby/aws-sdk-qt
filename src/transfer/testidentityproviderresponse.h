@@ -28,7 +28,7 @@ namespace Transfer {
 
 class TestIdentityProviderResponsePrivate;
 
-class QTAWS_EXPORT TestIdentityProviderResponse : public TransferResponse {
+class QTAWSTRANSFER_EXPORT TestIdentityProviderResponse : public TransferResponse {
     Q_OBJECT
 
 public:

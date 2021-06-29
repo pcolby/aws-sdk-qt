@@ -27,7 +27,7 @@ namespace AppRunner {
 
 class UpdateServiceRequestPrivate;
 
-class QTAWS_EXPORT UpdateServiceRequest : public AppRunnerRequest {
+class QTAWSAPPRUNNER_EXPORT UpdateServiceRequest : public AppRunnerRequest {
 
 public:
     UpdateServiceRequest(const UpdateServiceRequest &other);

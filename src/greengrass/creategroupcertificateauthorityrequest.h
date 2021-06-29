@@ -27,7 +27,7 @@ namespace Greengrass {
 
 class CreateGroupCertificateAuthorityRequestPrivate;
 
-class QTAWS_EXPORT CreateGroupCertificateAuthorityRequest : public GreengrassRequest {
+class QTAWSGREENGRASS_EXPORT CreateGroupCertificateAuthorityRequest : public GreengrassRequest {
 
 public:
     CreateGroupCertificateAuthorityRequest(const CreateGroupCertificateAuthorityRequest &other);

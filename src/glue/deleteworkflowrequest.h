@@ -27,7 +27,7 @@ namespace Glue {
 
 class DeleteWorkflowRequestPrivate;
 
-class QTAWS_EXPORT DeleteWorkflowRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT DeleteWorkflowRequest : public GlueRequest {
 
 public:
     DeleteWorkflowRequest(const DeleteWorkflowRequest &other);

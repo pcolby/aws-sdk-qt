@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class DeleteDirectConnectGatewayAssociationProposalResponsePrivate;
 
-class QTAWS_EXPORT DeleteDirectConnectGatewayAssociationProposalResponse : public DirectConnectResponse {
+class QTAWSDIRECTCONNECT_EXPORT DeleteDirectConnectGatewayAssociationProposalResponse : public DirectConnectResponse {
     Q_OBJECT
 
 public:

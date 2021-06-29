@@ -27,7 +27,7 @@ namespace MediaStore {
 
 class GetLifecyclePolicyRequestPrivate;
 
-class QTAWS_EXPORT GetLifecyclePolicyRequest : public MediaStoreRequest {
+class QTAWSMEDIASTORE_EXPORT GetLifecyclePolicyRequest : public MediaStoreRequest {
 
 public:
     GetLifecyclePolicyRequest(const GetLifecyclePolicyRequest &other);

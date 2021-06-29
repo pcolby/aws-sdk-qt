@@ -27,7 +27,7 @@ namespace AuditManager {
 
 class BatchImportEvidenceToAssessmentControlRequestPrivate;
 
-class QTAWS_EXPORT BatchImportEvidenceToAssessmentControlRequest : public AuditManagerRequest {
+class QTAWSAUDITMANAGER_EXPORT BatchImportEvidenceToAssessmentControlRequest : public AuditManagerRequest {
 
 public:
     BatchImportEvidenceToAssessmentControlRequest(const BatchImportEvidenceToAssessmentControlRequest &other);

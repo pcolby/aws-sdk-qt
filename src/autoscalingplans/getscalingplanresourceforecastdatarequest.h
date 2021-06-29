@@ -27,7 +27,7 @@ namespace AutoScalingPlans {
 
 class GetScalingPlanResourceForecastDataRequestPrivate;
 
-class QTAWS_EXPORT GetScalingPlanResourceForecastDataRequest : public AutoScalingPlansRequest {
+class QTAWSAUTOSCALINGPLANS_EXPORT GetScalingPlanResourceForecastDataRequest : public AutoScalingPlansRequest {
 
 public:
     GetScalingPlanResourceForecastDataRequest(const GetScalingPlanResourceForecastDataRequest &other);

@@ -27,7 +27,7 @@ namespace SSMIncidents {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public SSMIncidentsRequest {
+class QTAWSSSMINCIDENTS_EXPORT TagResourceRequest : public SSMIncidentsRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

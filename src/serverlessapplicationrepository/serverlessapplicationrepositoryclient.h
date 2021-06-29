@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsserverlessapplicationrepositoryglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -57,7 +59,7 @@ class UnshareApplicationResponse;
 class UpdateApplicationRequest;
 class UpdateApplicationResponse;
 
-class QTAWS_EXPORT ServerlessApplicationRepositoryClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSERVERLESSAPPLICATIONREPOSITORY_EXPORT ServerlessApplicationRepositoryClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

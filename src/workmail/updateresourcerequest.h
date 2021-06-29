@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class UpdateResourceRequestPrivate;
 
-class QTAWS_EXPORT UpdateResourceRequest : public WorkMailRequest {
+class QTAWSWORKMAIL_EXPORT UpdateResourceRequest : public WorkMailRequest {
 
 public:
     UpdateResourceRequest(const UpdateResourceRequest &other);

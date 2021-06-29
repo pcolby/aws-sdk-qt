@@ -28,7 +28,7 @@ namespace Amplify {
 
 class UpdateBranchResponsePrivate;
 
-class QTAWS_EXPORT UpdateBranchResponse : public AmplifyResponse {
+class QTAWSAMPLIFY_EXPORT UpdateBranchResponse : public AmplifyResponse {
     Q_OBJECT
 
 public:

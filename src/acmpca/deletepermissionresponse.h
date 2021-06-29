@@ -28,7 +28,7 @@ namespace ACMPCA {
 
 class DeletePermissionResponsePrivate;
 
-class QTAWS_EXPORT DeletePermissionResponse : public AcmpcaResponse {
+class QTAWSACMPCA_EXPORT DeletePermissionResponse : public AcmpcaResponse {
     Q_OBJECT
 
 public:

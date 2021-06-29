@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class AssociateServiceActionWithProvisioningArtifactRequestPrivate;
 
-class QTAWS_EXPORT AssociateServiceActionWithProvisioningArtifactRequest : public ServiceCatalogRequest {
+class QTAWSSERVICECATALOG_EXPORT AssociateServiceActionWithProvisioningArtifactRequest : public ServiceCatalogRequest {
 
 public:
     AssociateServiceActionWithProvisioningArtifactRequest(const AssociateServiceActionWithProvisioningArtifactRequest &other);

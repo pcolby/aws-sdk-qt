@@ -27,7 +27,7 @@ namespace Shield {
 
 class ListResourcesInProtectionGroupRequestPrivate;
 
-class QTAWS_EXPORT ListResourcesInProtectionGroupRequest : public ShieldRequest {
+class QTAWSSHIELD_EXPORT ListResourcesInProtectionGroupRequest : public ShieldRequest {
 
 public:
     ListResourcesInProtectionGroupRequest(const ListResourcesInProtectionGroupRequest &other);

@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class GetInstancePortStatesRequestPrivate;
 
-class QTAWS_EXPORT GetInstancePortStatesRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT GetInstancePortStatesRequest : public LightsailRequest {
 
 public:
     GetInstancePortStatesRequest(const GetInstancePortStatesRequest &other);

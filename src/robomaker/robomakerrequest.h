@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsrobomakerglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace RoboMaker {
 
 class RoboMakerRequestPrivate;
 
-class QTAWS_EXPORT RoboMakerRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSROBOMAKER_EXPORT RoboMakerRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by RoboMaker.

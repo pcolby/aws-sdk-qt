@@ -27,7 +27,7 @@ namespace AppConfig {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public AppConfigRequest {
+class QTAWSAPPCONFIG_EXPORT ListTagsForResourceRequest : public AppConfigRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

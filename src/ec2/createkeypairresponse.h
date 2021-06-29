@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CreateKeyPairResponsePrivate;
 
-class QTAWS_EXPORT CreateKeyPairResponse : public Ec2Response {
+class QTAWSEC2_EXPORT CreateKeyPairResponse : public Ec2Response {
     Q_OBJECT
 
 public:

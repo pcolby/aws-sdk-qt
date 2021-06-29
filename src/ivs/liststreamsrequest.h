@@ -27,7 +27,7 @@ namespace IVS {
 
 class ListStreamsRequestPrivate;
 
-class QTAWS_EXPORT ListStreamsRequest : public IvsRequest {
+class QTAWSIVS_EXPORT ListStreamsRequest : public IvsRequest {
 
 public:
     ListStreamsRequest(const ListStreamsRequest &other);

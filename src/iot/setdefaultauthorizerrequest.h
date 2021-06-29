@@ -27,7 +27,7 @@ namespace IoT {
 
 class SetDefaultAuthorizerRequestPrivate;
 
-class QTAWS_EXPORT SetDefaultAuthorizerRequest : public IoTRequest {
+class QTAWSIOT_EXPORT SetDefaultAuthorizerRequest : public IoTRequest {
 
 public:
     SetDefaultAuthorizerRequest(const SetDefaultAuthorizerRequest &other);

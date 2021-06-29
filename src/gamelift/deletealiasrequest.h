@@ -27,7 +27,7 @@ namespace GameLift {
 
 class DeleteAliasRequestPrivate;
 
-class QTAWS_EXPORT DeleteAliasRequest : public GameLiftRequest {
+class QTAWSGAMELIFT_EXPORT DeleteAliasRequest : public GameLiftRequest {
 
 public:
     DeleteAliasRequest(const DeleteAliasRequest &other);

@@ -28,7 +28,7 @@ namespace LocationService {
 
 class CreatePlaceIndexResponsePrivate;
 
-class QTAWS_EXPORT CreatePlaceIndexResponse : public LocationServiceResponse {
+class QTAWSLOCATIONSERVICE_EXPORT CreatePlaceIndexResponse : public LocationServiceResponse {
     Q_OBJECT
 
 public:

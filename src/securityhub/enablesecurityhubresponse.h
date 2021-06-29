@@ -28,7 +28,7 @@ namespace SecurityHub {
 
 class EnableSecurityHubResponsePrivate;
 
-class QTAWS_EXPORT EnableSecurityHubResponse : public SecurityHubResponse {
+class QTAWSSECURITYHUB_EXPORT EnableSecurityHubResponse : public SecurityHubResponse {
     Q_OBJECT
 
 public:

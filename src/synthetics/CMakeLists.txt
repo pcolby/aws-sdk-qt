@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSYNTHETICS_LIBRARY)
+
 add_library(QtAwsSynthetics
   createcanaryrequest.h
   createcanaryrequest_p.h
@@ -31,6 +33,7 @@ add_library(QtAwsSynthetics
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawssyntheticsglobal.h
   startcanaryrequest.h
   startcanaryrequest_p.h
   startcanaryresponse.h

@@ -28,7 +28,7 @@ namespace Proton {
 
 class CancelServiceInstanceDeploymentResponsePrivate;
 
-class QTAWS_EXPORT CancelServiceInstanceDeploymentResponse : public ProtonResponse {
+class QTAWSPROTON_EXPORT CancelServiceInstanceDeploymentResponse : public ProtonResponse {
     Q_OBJECT
 
 public:

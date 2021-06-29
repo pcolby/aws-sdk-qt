@@ -27,7 +27,7 @@ namespace Redshift {
 
 class PurchaseReservedNodeOfferingRequestPrivate;
 
-class QTAWS_EXPORT PurchaseReservedNodeOfferingRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT PurchaseReservedNodeOfferingRequest : public RedshiftRequest {
 
 public:
     PurchaseReservedNodeOfferingRequest(const PurchaseReservedNodeOfferingRequest &other);

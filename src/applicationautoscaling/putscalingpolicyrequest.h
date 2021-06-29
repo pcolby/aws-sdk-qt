@@ -27,7 +27,7 @@ namespace ApplicationAutoScaling {
 
 class PutScalingPolicyRequestPrivate;
 
-class QTAWS_EXPORT PutScalingPolicyRequest : public ApplicationAutoScalingRequest {
+class QTAWSAPPLICATIONAUTOSCALING_EXPORT PutScalingPolicyRequest : public ApplicationAutoScalingRequest {
 
 public:
     PutScalingPolicyRequest(const PutScalingPolicyRequest &other);

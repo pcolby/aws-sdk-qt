@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSMEDIAPACKAGE_LIBRARY)
+
 add_library(QtAwsMediaPackage
   configurelogsrequest.h
   configurelogsrequest_p.h
@@ -57,6 +59,7 @@ add_library(QtAwsMediaPackage
   mediapackagerequest_p.h
   mediapackageresponse.h
   mediapackageresponse_p.h
+  qtawsmediapackageglobal.h
   rotatechannelcredentialsrequest.h
   rotatechannelcredentialsrequest_p.h
   rotatechannelcredentialsresponse.h

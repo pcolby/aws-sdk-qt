@@ -27,7 +27,7 @@ namespace SSMIncidents {
 
 class ListReplicationSetsRequestPrivate;
 
-class QTAWS_EXPORT ListReplicationSetsRequest : public SSMIncidentsRequest {
+class QTAWSSSMINCIDENTS_EXPORT ListReplicationSetsRequest : public SSMIncidentsRequest {
 
 public:
     ListReplicationSetsRequest(const ListReplicationSetsRequest &other);

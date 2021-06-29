@@ -28,7 +28,7 @@ namespace Chime {
 
 class BatchCreateAttendeeResponsePrivate;
 
-class QTAWS_EXPORT BatchCreateAttendeeResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT BatchCreateAttendeeResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace LakeFormation {
 
 class GrantPermissionsResponsePrivate;
 
-class QTAWS_EXPORT GrantPermissionsResponse : public LakeFormationResponse {
+class QTAWSLAKEFORMATION_EXPORT GrantPermissionsResponse : public LakeFormationResponse {
     Q_OBJECT
 
 public:

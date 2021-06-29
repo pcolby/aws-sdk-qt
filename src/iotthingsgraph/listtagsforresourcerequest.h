@@ -27,7 +27,7 @@ namespace IoTThingsGraph {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public IoTThingsGraphRequest {
+class QTAWSIOTTHINGSGRAPH_EXPORT ListTagsForResourceRequest : public IoTThingsGraphRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

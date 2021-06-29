@@ -27,7 +27,7 @@ namespace Comprehend {
 
 class DescribeTopicsDetectionJobRequestPrivate;
 
-class QTAWS_EXPORT DescribeTopicsDetectionJobRequest : public ComprehendRequest {
+class QTAWSCOMPREHEND_EXPORT DescribeTopicsDetectionJobRequest : public ComprehendRequest {
 
 public:
     DescribeTopicsDetectionJobRequest(const DescribeTopicsDetectionJobRequest &other);

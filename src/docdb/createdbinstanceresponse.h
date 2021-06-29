@@ -28,7 +28,7 @@ namespace DocDB {
 
 class CreateDBInstanceResponsePrivate;
 
-class QTAWS_EXPORT CreateDBInstanceResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT CreateDBInstanceResponse : public DocDBResponse {
     Q_OBJECT
 
 public:

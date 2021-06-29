@@ -27,7 +27,7 @@ namespace KinesisVideo {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public KinesisVideoRequest {
+class QTAWSKINESISVIDEO_EXPORT UntagResourceRequest : public KinesisVideoRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

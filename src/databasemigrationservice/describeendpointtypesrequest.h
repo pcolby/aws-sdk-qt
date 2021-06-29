@@ -27,7 +27,7 @@ namespace DatabaseMigrationService {
 
 class DescribeEndpointTypesRequestPrivate;
 
-class QTAWS_EXPORT DescribeEndpointTypesRequest : public DatabaseMigrationServiceRequest {
+class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DescribeEndpointTypesRequest : public DatabaseMigrationServiceRequest {
 
 public:
     DescribeEndpointTypesRequest(const DescribeEndpointTypesRequest &other);

@@ -27,7 +27,7 @@ namespace EFS {
 
 class CreateMountTargetRequestPrivate;
 
-class QTAWS_EXPORT CreateMountTargetRequest : public EfsRequest {
+class QTAWSEFS_EXPORT CreateMountTargetRequest : public EfsRequest {
 
 public:
     CreateMountTargetRequest(const CreateMountTargetRequest &other);

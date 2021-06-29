@@ -27,7 +27,7 @@ namespace Glue {
 
 class CreateScriptRequestPrivate;
 
-class QTAWS_EXPORT CreateScriptRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT CreateScriptRequest : public GlueRequest {
 
 public:
     CreateScriptRequest(const CreateScriptRequest &other);

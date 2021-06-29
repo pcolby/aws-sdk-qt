@@ -28,7 +28,7 @@ namespace RAM {
 
 class PromoteResourceShareCreatedFromPolicyResponsePrivate;
 
-class QTAWS_EXPORT PromoteResourceShareCreatedFromPolicyResponse : public RamResponse {
+class QTAWSRAM_EXPORT PromoteResourceShareCreatedFromPolicyResponse : public RamResponse {
     Q_OBJECT
 
 public:

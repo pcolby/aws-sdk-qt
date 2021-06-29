@@ -27,7 +27,7 @@ namespace TranscribeService {
 
 class UpdateVocabularyFilterRequestPrivate;
 
-class QTAWS_EXPORT UpdateVocabularyFilterRequest : public TranscribeServiceRequest {
+class QTAWSTRANSCRIBESERVICE_EXPORT UpdateVocabularyFilterRequest : public TranscribeServiceRequest {
 
 public:
     UpdateVocabularyFilterRequest(const UpdateVocabularyFilterRequest &other);

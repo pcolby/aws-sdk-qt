@@ -28,7 +28,7 @@ namespace CloudSearch {
 
 class DescribeDomainEndpointOptionsResponsePrivate;
 
-class QTAWS_EXPORT DescribeDomainEndpointOptionsResponse : public CloudSearchResponse {
+class QTAWSCLOUDSEARCH_EXPORT DescribeDomainEndpointOptionsResponse : public CloudSearchResponse {
     Q_OBJECT
 
 public:

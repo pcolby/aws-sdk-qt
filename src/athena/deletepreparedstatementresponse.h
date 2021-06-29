@@ -28,7 +28,7 @@ namespace Athena {
 
 class DeletePreparedStatementResponsePrivate;
 
-class QTAWS_EXPORT DeletePreparedStatementResponse : public AthenaResponse {
+class QTAWSATHENA_EXPORT DeletePreparedStatementResponse : public AthenaResponse {
     Q_OBJECT
 
 public:

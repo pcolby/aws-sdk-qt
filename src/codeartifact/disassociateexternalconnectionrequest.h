@@ -27,7 +27,7 @@ namespace CodeArtifact {
 
 class DisassociateExternalConnectionRequestPrivate;
 
-class QTAWS_EXPORT DisassociateExternalConnectionRequest : public CodeArtifactRequest {
+class QTAWSCODEARTIFACT_EXPORT DisassociateExternalConnectionRequest : public CodeArtifactRequest {
 
 public:
     DisassociateExternalConnectionRequest(const DisassociateExternalConnectionRequest &other);

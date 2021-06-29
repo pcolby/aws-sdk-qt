@@ -27,7 +27,7 @@ namespace ComprehendMedical {
 
 class DetectPHIRequestPrivate;
 
-class QTAWS_EXPORT DetectPHIRequest : public ComprehendMedicalRequest {
+class QTAWSCOMPREHENDMEDICAL_EXPORT DetectPHIRequest : public ComprehendMedicalRequest {
 
 public:
     DetectPHIRequest(const DetectPHIRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsmobileanalyticsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -31,7 +33,7 @@ class MobileAnalyticsClientPrivate;
 class PutEventsRequest;
 class PutEventsResponse;
 
-class QTAWS_EXPORT MobileAnalyticsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSMOBILEANALYTICS_EXPORT MobileAnalyticsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

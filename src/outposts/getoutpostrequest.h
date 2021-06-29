@@ -27,7 +27,7 @@ namespace Outposts {
 
 class GetOutpostRequestPrivate;
 
-class QTAWS_EXPORT GetOutpostRequest : public OutpostsRequest {
+class QTAWSOUTPOSTS_EXPORT GetOutpostRequest : public OutpostsRequest {
 
 public:
     GetOutpostRequest(const GetOutpostRequest &other);

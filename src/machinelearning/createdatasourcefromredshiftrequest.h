@@ -27,7 +27,7 @@ namespace MachineLearning {
 
 class CreateDataSourceFromRedshiftRequestPrivate;
 
-class QTAWS_EXPORT CreateDataSourceFromRedshiftRequest : public MachineLearningRequest {
+class QTAWSMACHINELEARNING_EXPORT CreateDataSourceFromRedshiftRequest : public MachineLearningRequest {
 
 public:
     CreateDataSourceFromRedshiftRequest(const CreateDataSourceFromRedshiftRequest &other);

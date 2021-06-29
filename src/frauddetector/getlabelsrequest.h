@@ -27,7 +27,7 @@ namespace FraudDetector {
 
 class GetLabelsRequestPrivate;
 
-class QTAWS_EXPORT GetLabelsRequest : public FraudDetectorRequest {
+class QTAWSFRAUDDETECTOR_EXPORT GetLabelsRequest : public FraudDetectorRequest {
 
 public:
     GetLabelsRequest(const GetLabelsRequest &other);

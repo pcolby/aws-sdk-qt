@@ -27,7 +27,7 @@ namespace AppRegistry {
 
 class SyncResourceRequestPrivate;
 
-class QTAWS_EXPORT SyncResourceRequest : public AppRegistryRequest {
+class QTAWSAPPREGISTRY_EXPORT SyncResourceRequest : public AppRegistryRequest {
 
 public:
     SyncResourceRequest(const SyncResourceRequest &other);

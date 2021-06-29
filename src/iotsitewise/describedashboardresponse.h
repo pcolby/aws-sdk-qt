@@ -28,7 +28,7 @@ namespace IoTSiteWise {
 
 class DescribeDashboardResponsePrivate;
 
-class QTAWS_EXPORT DescribeDashboardResponse : public IoTSiteWiseResponse {
+class QTAWSIOTSITEWISE_EXPORT DescribeDashboardResponse : public IoTSiteWiseResponse {
     Q_OBJECT
 
 public:

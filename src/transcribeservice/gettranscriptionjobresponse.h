@@ -28,7 +28,7 @@ namespace TranscribeService {
 
 class GetTranscriptionJobResponsePrivate;
 
-class QTAWS_EXPORT GetTranscriptionJobResponse : public TranscribeServiceResponse {
+class QTAWSTRANSCRIBESERVICE_EXPORT GetTranscriptionJobResponse : public TranscribeServiceResponse {
     Q_OBJECT
 
 public:

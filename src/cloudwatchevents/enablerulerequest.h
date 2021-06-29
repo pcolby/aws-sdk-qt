@@ -27,7 +27,7 @@ namespace CloudWatchEvents {
 
 class EnableRuleRequestPrivate;
 
-class QTAWS_EXPORT EnableRuleRequest : public CloudWatchEventsRequest {
+class QTAWSCLOUDWATCHEVENTS_EXPORT EnableRuleRequest : public CloudWatchEventsRequest {
 
 public:
     EnableRuleRequest(const EnableRuleRequest &other);

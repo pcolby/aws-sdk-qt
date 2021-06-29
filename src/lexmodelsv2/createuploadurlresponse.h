@@ -28,7 +28,7 @@ namespace LexModelsV2 {
 
 class CreateUploadUrlResponsePrivate;
 
-class QTAWS_EXPORT CreateUploadUrlResponse : public LexModelsV2Response {
+class QTAWSLEXMODELSV2_EXPORT CreateUploadUrlResponse : public LexModelsV2Response {
     Q_OBJECT
 
 public:

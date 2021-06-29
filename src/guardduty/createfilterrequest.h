@@ -27,7 +27,7 @@ namespace GuardDuty {
 
 class CreateFilterRequestPrivate;
 
-class QTAWS_EXPORT CreateFilterRequest : public GuardDutyRequest {
+class QTAWSGUARDDUTY_EXPORT CreateFilterRequest : public GuardDutyRequest {
 
 public:
     CreateFilterRequest(const CreateFilterRequest &other);

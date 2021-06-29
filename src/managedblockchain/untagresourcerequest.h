@@ -27,7 +27,7 @@ namespace ManagedBlockchain {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public ManagedBlockchainRequest {
+class QTAWSMANAGEDBLOCKCHAIN_EXPORT UntagResourceRequest : public ManagedBlockchainRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

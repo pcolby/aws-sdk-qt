@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class DeleteFieldLevelEncryptionConfigResponsePrivate;
 
-class QTAWS_EXPORT DeleteFieldLevelEncryptionConfigResponse : public CloudFrontResponse {
+class QTAWSCLOUDFRONT_EXPORT DeleteFieldLevelEncryptionConfigResponse : public CloudFrontResponse {
     Q_OBJECT
 
 public:

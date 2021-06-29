@@ -28,7 +28,7 @@ namespace SFN {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public SfnResponse {
+class QTAWSSFN_EXPORT TagResourceResponse : public SfnResponse {
     Q_OBJECT
 
 public:

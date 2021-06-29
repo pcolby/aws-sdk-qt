@@ -27,7 +27,7 @@ namespace IoT {
 
 class ListV2LoggingLevelsRequestPrivate;
 
-class QTAWS_EXPORT ListV2LoggingLevelsRequest : public IoTRequest {
+class QTAWSIOT_EXPORT ListV2LoggingLevelsRequest : public IoTRequest {
 
 public:
     ListV2LoggingLevelsRequest(const ListV2LoggingLevelsRequest &other);

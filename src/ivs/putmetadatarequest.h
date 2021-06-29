@@ -27,7 +27,7 @@ namespace IVS {
 
 class PutMetadataRequestPrivate;
 
-class QTAWS_EXPORT PutMetadataRequest : public IvsRequest {
+class QTAWSIVS_EXPORT PutMetadataRequest : public IvsRequest {
 
 public:
     PutMetadataRequest(const PutMetadataRequest &other);

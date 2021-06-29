@@ -27,7 +27,7 @@ namespace ApplicationAutoScaling {
 
 class DeleteScalingPolicyRequestPrivate;
 
-class QTAWS_EXPORT DeleteScalingPolicyRequest : public ApplicationAutoScalingRequest {
+class QTAWSAPPLICATIONAUTOSCALING_EXPORT DeleteScalingPolicyRequest : public ApplicationAutoScalingRequest {
 
 public:
     DeleteScalingPolicyRequest(const DeleteScalingPolicyRequest &other);

@@ -28,7 +28,7 @@ namespace Braket {
 
 class CreateQuantumTaskResponsePrivate;
 
-class QTAWS_EXPORT CreateQuantumTaskResponse : public BraketResponse {
+class QTAWSBRAKET_EXPORT CreateQuantumTaskResponse : public BraketResponse {
     Q_OBJECT
 
 public:

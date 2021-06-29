@@ -28,7 +28,7 @@ namespace KinesisVideo {
 
 class ListTagsForStreamResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForStreamResponse : public KinesisVideoResponse {
+class QTAWSKINESISVIDEO_EXPORT ListTagsForStreamResponse : public KinesisVideoResponse {
     Q_OBJECT
 
 public:

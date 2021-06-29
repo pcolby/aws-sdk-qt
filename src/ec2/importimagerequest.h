@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ImportImageRequestPrivate;
 
-class QTAWS_EXPORT ImportImageRequest : public Ec2Request {
+class QTAWSEC2_EXPORT ImportImageRequest : public Ec2Request {
 
 public:
     ImportImageRequest(const ImportImageRequest &other);

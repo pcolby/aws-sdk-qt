@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSLOOKOUTMETRICS_LIBRARY)
+
 add_library(QtAwsLookoutMetrics
   activateanomalydetectorrequest.h
   activateanomalydetectorrequest_p.h
@@ -89,6 +91,7 @@ add_library(QtAwsLookoutMetrics
   putfeedbackrequest_p.h
   putfeedbackresponse.h
   putfeedbackresponse_p.h
+  qtawslookoutmetricsglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

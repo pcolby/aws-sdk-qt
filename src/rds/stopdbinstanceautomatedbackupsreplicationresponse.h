@@ -28,7 +28,7 @@ namespace RDS {
 
 class StopDBInstanceAutomatedBackupsReplicationResponsePrivate;
 
-class QTAWS_EXPORT StopDBInstanceAutomatedBackupsReplicationResponse : public RdsResponse {
+class QTAWSRDS_EXPORT StopDBInstanceAutomatedBackupsReplicationResponse : public RdsResponse {
     Q_OBJECT
 
 public:

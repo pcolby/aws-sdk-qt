@@ -27,7 +27,7 @@ namespace ApiGatewayV2 {
 
 class DeleteIntegrationResponseRequestPrivate;
 
-class QTAWS_EXPORT DeleteIntegrationResponseRequest : public ApiGatewayV2Request {
+class QTAWSAPIGATEWAYV2_EXPORT DeleteIntegrationResponseRequest : public ApiGatewayV2Request {
 
 public:
     DeleteIntegrationResponseRequest(const DeleteIntegrationResponseRequest &other);

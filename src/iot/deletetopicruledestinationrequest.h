@@ -27,7 +27,7 @@ namespace IoT {
 
 class DeleteTopicRuleDestinationRequestPrivate;
 
-class QTAWS_EXPORT DeleteTopicRuleDestinationRequest : public IoTRequest {
+class QTAWSIOT_EXPORT DeleteTopicRuleDestinationRequest : public IoTRequest {
 
 public:
     DeleteTopicRuleDestinationRequest(const DeleteTopicRuleDestinationRequest &other);

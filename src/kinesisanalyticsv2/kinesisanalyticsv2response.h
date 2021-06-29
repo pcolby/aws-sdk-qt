@@ -21,6 +21,8 @@
 #define QTAWS_KINESISANALYTICSV2RESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawskinesisanalyticsv2global.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace KinesisAnalyticsV2 {
 
 class KinesisAnalyticsV2ResponsePrivate;
 
-class QTAWS_EXPORT KinesisAnalyticsV2Response : public QtAws::Core::AwsAbstractResponse {
+class QTAWSKINESISANALYTICSV2_EXPORT KinesisAnalyticsV2Response : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

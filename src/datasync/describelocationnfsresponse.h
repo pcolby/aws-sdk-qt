@@ -28,7 +28,7 @@ namespace DataSync {
 
 class DescribeLocationNfsResponsePrivate;
 
-class QTAWS_EXPORT DescribeLocationNfsResponse : public DataSyncResponse {
+class QTAWSDATASYNC_EXPORT DescribeLocationNfsResponse : public DataSyncResponse {
     Q_OBJECT
 
 public:

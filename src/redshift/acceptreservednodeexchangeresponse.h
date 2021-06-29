@@ -28,7 +28,7 @@ namespace Redshift {
 
 class AcceptReservedNodeExchangeResponsePrivate;
 
-class QTAWS_EXPORT AcceptReservedNodeExchangeResponse : public RedshiftResponse {
+class QTAWSREDSHIFT_EXPORT AcceptReservedNodeExchangeResponse : public RedshiftResponse {
     Q_OBJECT
 
 public:

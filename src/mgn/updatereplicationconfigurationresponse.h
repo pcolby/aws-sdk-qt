@@ -28,7 +28,7 @@ namespace mgn {
 
 class UpdateReplicationConfigurationResponsePrivate;
 
-class QTAWS_EXPORT UpdateReplicationConfigurationResponse : public mgnResponse {
+class QTAWSMGN_EXPORT UpdateReplicationConfigurationResponse : public mgnResponse {
     Q_OBJECT
 
 public:

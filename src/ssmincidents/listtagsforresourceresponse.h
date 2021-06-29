@@ -28,7 +28,7 @@ namespace SSMIncidents {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public SSMIncidentsResponse {
+class QTAWSSSMINCIDENTS_EXPORT ListTagsForResourceResponse : public SSMIncidentsResponse {
     Q_OBJECT
 
 public:

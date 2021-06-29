@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSIAM_LIBRARY)
+
 add_library(QtAwsIam
   addclientidtoopenidconnectproviderrequest.h
   addclientidtoopenidconnectproviderrequest_p.h
@@ -469,6 +471,7 @@ add_library(QtAwsIam
   putuserpolicyrequest_p.h
   putuserpolicyresponse.h
   putuserpolicyresponse_p.h
+  qtawsiamglobal.h
   removeclientidfromopenidconnectproviderrequest.h
   removeclientidfromopenidconnectproviderrequest_p.h
   removeclientidfromopenidconnectproviderresponse.h

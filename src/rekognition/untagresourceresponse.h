@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public RekognitionResponse {
+class QTAWSREKOGNITION_EXPORT UntagResourceResponse : public RekognitionResponse {
     Q_OBJECT
 
 public:

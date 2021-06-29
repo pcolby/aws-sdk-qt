@@ -28,7 +28,7 @@ namespace AppSync {
 
 class GetFunctionResponsePrivate;
 
-class QTAWS_EXPORT GetFunctionResponse : public AppSyncResponse {
+class QTAWSAPPSYNC_EXPORT GetFunctionResponse : public AppSyncResponse {
     Q_OBJECT
 
 public:

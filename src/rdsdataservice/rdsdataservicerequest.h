@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsrdsdataserviceglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace RDSDataService {
 
 class RDSDataServiceRequestPrivate;
 
-class QTAWS_EXPORT RDSDataServiceRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSRDSDATASERVICE_EXPORT RDSDataServiceRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by RDSDataService.

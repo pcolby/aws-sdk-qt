@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawskinesisglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -85,7 +87,7 @@ class SubscribeToShardResponse;
 class UpdateShardCountRequest;
 class UpdateShardCountResponse;
 
-class QTAWS_EXPORT KinesisClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSKINESIS_EXPORT KinesisClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

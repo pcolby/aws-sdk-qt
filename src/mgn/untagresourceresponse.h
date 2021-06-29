@@ -28,7 +28,7 @@ namespace mgn {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public mgnResponse {
+class QTAWSMGN_EXPORT UntagResourceResponse : public mgnResponse {
     Q_OBJECT
 
 public:

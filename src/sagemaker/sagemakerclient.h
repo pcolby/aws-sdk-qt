@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawssagemakerglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -499,7 +501,7 @@ class UpdateWorkforceResponse;
 class UpdateWorkteamRequest;
 class UpdateWorkteamResponse;
 
-class QTAWS_EXPORT SageMakerClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSAGEMAKER_EXPORT SageMakerClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

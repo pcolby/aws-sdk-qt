@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class StopAutoMLJobRequestPrivate;
 
-class QTAWS_EXPORT StopAutoMLJobRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT StopAutoMLJobRequest : public SageMakerRequest {
 
 public:
     StopAutoMLJobRequest(const StopAutoMLJobRequest &other);

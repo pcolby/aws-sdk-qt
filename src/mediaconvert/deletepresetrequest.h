@@ -27,7 +27,7 @@ namespace MediaConvert {
 
 class DeletePresetRequestPrivate;
 
-class QTAWS_EXPORT DeletePresetRequest : public MediaConvertRequest {
+class QTAWSMEDIACONVERT_EXPORT DeletePresetRequest : public MediaConvertRequest {
 
 public:
     DeletePresetRequest(const DeletePresetRequest &other);

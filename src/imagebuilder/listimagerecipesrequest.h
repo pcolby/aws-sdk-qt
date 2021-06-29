@@ -27,7 +27,7 @@ namespace imagebuilder {
 
 class ListImageRecipesRequestPrivate;
 
-class QTAWS_EXPORT ListImageRecipesRequest : public imagebuilderRequest {
+class QTAWSIMAGEBUILDER_EXPORT ListImageRecipesRequest : public imagebuilderRequest {
 
 public:
     ListImageRecipesRequest(const ListImageRecipesRequest &other);

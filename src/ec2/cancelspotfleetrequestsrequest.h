@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CancelSpotFleetRequestsRequestPrivate;
 
-class QTAWS_EXPORT CancelSpotFleetRequestsRequest : public Ec2Request {
+class QTAWSEC2_EXPORT CancelSpotFleetRequestsRequest : public Ec2Request {
 
 public:
     CancelSpotFleetRequestsRequest(const CancelSpotFleetRequestsRequest &other);

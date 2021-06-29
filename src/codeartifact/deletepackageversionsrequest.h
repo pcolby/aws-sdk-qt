@@ -27,7 +27,7 @@ namespace CodeArtifact {
 
 class DeletePackageVersionsRequestPrivate;
 
-class QTAWS_EXPORT DeletePackageVersionsRequest : public CodeArtifactRequest {
+class QTAWSCODEARTIFACT_EXPORT DeletePackageVersionsRequest : public CodeArtifactRequest {
 
 public:
     DeletePackageVersionsRequest(const DeletePackageVersionsRequest &other);

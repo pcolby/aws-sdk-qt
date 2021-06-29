@@ -27,7 +27,7 @@ namespace Connect {
 
 class UpdateQuickConnectNameRequestPrivate;
 
-class QTAWS_EXPORT UpdateQuickConnectNameRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT UpdateQuickConnectNameRequest : public ConnectRequest {
 
 public:
     UpdateQuickConnectNameRequest(const UpdateQuickConnectNameRequest &other);

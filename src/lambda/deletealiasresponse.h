@@ -28,7 +28,7 @@ namespace Lambda {
 
 class DeleteAliasResponsePrivate;
 
-class QTAWS_EXPORT DeleteAliasResponse : public LambdaResponse {
+class QTAWSLAMBDA_EXPORT DeleteAliasResponse : public LambdaResponse {
     Q_OBJECT
 
 public:

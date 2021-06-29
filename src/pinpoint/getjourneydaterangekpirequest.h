@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class GetJourneyDateRangeKpiRequestPrivate;
 
-class QTAWS_EXPORT GetJourneyDateRangeKpiRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT GetJourneyDateRangeKpiRequest : public PinpointRequest {
 
 public:
     GetJourneyDateRangeKpiRequest(const GetJourneyDateRangeKpiRequest &other);

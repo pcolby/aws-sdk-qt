@@ -28,7 +28,7 @@ namespace Comprehend {
 
 class ListEndpointsResponsePrivate;
 
-class QTAWS_EXPORT ListEndpointsResponse : public ComprehendResponse {
+class QTAWSCOMPREHEND_EXPORT ListEndpointsResponse : public ComprehendResponse {
     Q_OBJECT
 
 public:

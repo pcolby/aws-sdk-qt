@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class DescribeInputDeviceThumbnailResponsePrivate;
 
-class QTAWS_EXPORT DescribeInputDeviceThumbnailResponse : public MediaLiveResponse {
+class QTAWSMEDIALIVE_EXPORT DescribeInputDeviceThumbnailResponse : public MediaLiveResponse {
     Q_OBJECT
 
 public:

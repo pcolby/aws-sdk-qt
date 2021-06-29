@@ -27,7 +27,7 @@ namespace CodeDeploy {
 
 class GetOnPremisesInstanceRequestPrivate;
 
-class QTAWS_EXPORT GetOnPremisesInstanceRequest : public CodeDeployRequest {
+class QTAWSCODEDEPLOY_EXPORT GetOnPremisesInstanceRequest : public CodeDeployRequest {
 
 public:
     GetOnPremisesInstanceRequest(const GetOnPremisesInstanceRequest &other);

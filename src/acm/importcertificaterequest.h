@@ -27,7 +27,7 @@ namespace ACM {
 
 class ImportCertificateRequestPrivate;
 
-class QTAWS_EXPORT ImportCertificateRequest : public AcmRequest {
+class QTAWSACM_EXPORT ImportCertificateRequest : public AcmRequest {
 
 public:
     ImportCertificateRequest(const ImportCertificateRequest &other);

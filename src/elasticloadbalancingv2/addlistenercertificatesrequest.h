@@ -27,7 +27,7 @@ namespace ElasticLoadBalancingv2 {
 
 class AddListenerCertificatesRequestPrivate;
 
-class QTAWS_EXPORT AddListenerCertificatesRequest : public ElasticLoadBalancingv2Request {
+class QTAWSELASTICLOADBALANCINGV2_EXPORT AddListenerCertificatesRequest : public ElasticLoadBalancingv2Request {
 
 public:
     AddListenerCertificatesRequest(const AddListenerCertificatesRequest &other);

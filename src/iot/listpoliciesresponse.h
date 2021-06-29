@@ -28,7 +28,7 @@ namespace IoT {
 
 class ListPoliciesResponsePrivate;
 
-class QTAWS_EXPORT ListPoliciesResponse : public IoTResponse {
+class QTAWSIOT_EXPORT ListPoliciesResponse : public IoTResponse {
     Q_OBJECT
 
 public:

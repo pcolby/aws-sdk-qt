@@ -27,7 +27,7 @@ namespace IoT {
 
 class DescribeAuthorizerRequestPrivate;
 
-class QTAWS_EXPORT DescribeAuthorizerRequest : public IoTRequest {
+class QTAWSIOT_EXPORT DescribeAuthorizerRequest : public IoTRequest {
 
 public:
     DescribeAuthorizerRequest(const DescribeAuthorizerRequest &other);

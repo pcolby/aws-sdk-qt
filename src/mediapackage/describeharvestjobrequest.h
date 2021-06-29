@@ -27,7 +27,7 @@ namespace MediaPackage {
 
 class DescribeHarvestJobRequestPrivate;
 
-class QTAWS_EXPORT DescribeHarvestJobRequest : public MediaPackageRequest {
+class QTAWSMEDIAPACKAGE_EXPORT DescribeHarvestJobRequest : public MediaPackageRequest {
 
 public:
     DescribeHarvestJobRequest(const DescribeHarvestJobRequest &other);

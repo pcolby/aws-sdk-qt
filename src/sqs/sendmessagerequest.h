@@ -27,7 +27,7 @@ namespace SQS {
 
 class SendMessageRequestPrivate;
 
-class QTAWS_EXPORT SendMessageRequest : public SqsRequest {
+class QTAWSSQS_EXPORT SendMessageRequest : public SqsRequest {
 
 public:
     SendMessageRequest(const SendMessageRequest &other);

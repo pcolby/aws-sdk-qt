@@ -27,7 +27,7 @@ namespace signer {
 
 class CancelSigningProfileRequestPrivate;
 
-class QTAWS_EXPORT CancelSigningProfileRequest : public signerRequest {
+class QTAWSSIGNER_EXPORT CancelSigningProfileRequest : public signerRequest {
 
 public:
     CancelSigningProfileRequest(const CancelSigningProfileRequest &other);

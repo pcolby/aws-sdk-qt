@@ -21,6 +21,8 @@
 #define QTAWS_MANAGEDBLOCKCHAINRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsmanagedblockchainglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace ManagedBlockchain {
 
 class ManagedBlockchainResponsePrivate;
 
-class QTAWS_EXPORT ManagedBlockchainResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSMANAGEDBLOCKCHAIN_EXPORT ManagedBlockchainResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

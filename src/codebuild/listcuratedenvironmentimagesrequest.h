@@ -27,7 +27,7 @@ namespace CodeBuild {
 
 class ListCuratedEnvironmentImagesRequestPrivate;
 
-class QTAWS_EXPORT ListCuratedEnvironmentImagesRequest : public CodeBuildRequest {
+class QTAWSCODEBUILD_EXPORT ListCuratedEnvironmentImagesRequest : public CodeBuildRequest {
 
 public:
     ListCuratedEnvironmentImagesRequest(const ListCuratedEnvironmentImagesRequest &other);

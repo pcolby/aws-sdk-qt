@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSKINESISVIDEOARCHIVEDMEDIA_LIBRARY)
+
 add_library(QtAwsKinesisVideoArchivedMedia
   getcliprequest.h
   getcliprequest_p.h
@@ -25,6 +27,7 @@ add_library(QtAwsKinesisVideoArchivedMedia
   listfragmentsrequest_p.h
   listfragmentsresponse.h
   listfragmentsresponse_p.h
+  qtawskinesisvideoarchivedmediaglobal.h
   getcliprequest.cpp
   getclipresponse.cpp
   getdashstreamingsessionurlrequest.cpp

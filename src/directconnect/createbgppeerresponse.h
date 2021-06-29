@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class CreateBGPPeerResponsePrivate;
 
-class QTAWS_EXPORT CreateBGPPeerResponse : public DirectConnectResponse {
+class QTAWSDIRECTCONNECT_EXPORT CreateBGPPeerResponse : public DirectConnectResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace AppMesh {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public AppMeshResponse {
+class QTAWSAPPMESH_EXPORT TagResourceResponse : public AppMeshResponse {
     Q_OBJECT
 
 public:

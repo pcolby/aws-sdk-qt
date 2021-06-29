@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class CreateLoadBalancerRequestPrivate;
 
-class QTAWS_EXPORT CreateLoadBalancerRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT CreateLoadBalancerRequest : public LightsailRequest {
 
 public:
     CreateLoadBalancerRequest(const CreateLoadBalancerRequest &other);

@@ -27,7 +27,7 @@ namespace IAM {
 
 class ListOpenIDConnectProvidersRequestPrivate;
 
-class QTAWS_EXPORT ListOpenIDConnectProvidersRequest : public IamRequest {
+class QTAWSIAM_EXPORT ListOpenIDConnectProvidersRequest : public IamRequest {
 
 public:
     ListOpenIDConnectProvidersRequest(const ListOpenIDConnectProvidersRequest &other);

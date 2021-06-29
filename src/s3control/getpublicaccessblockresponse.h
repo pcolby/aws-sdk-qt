@@ -28,7 +28,7 @@ namespace S3Control {
 
 class GetPublicAccessBlockResponsePrivate;
 
-class QTAWS_EXPORT GetPublicAccessBlockResponse : public S3ControlResponse {
+class QTAWSS3CONTROL_EXPORT GetPublicAccessBlockResponse : public S3ControlResponse {
     Q_OBJECT
 
 public:

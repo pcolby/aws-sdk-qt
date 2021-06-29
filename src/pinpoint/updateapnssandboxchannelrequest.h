@@ -27,7 +27,7 @@ namespace Pinpoint {
 
 class UpdateApnsSandboxChannelRequestPrivate;
 
-class QTAWS_EXPORT UpdateApnsSandboxChannelRequest : public PinpointRequest {
+class QTAWSPINPOINT_EXPORT UpdateApnsSandboxChannelRequest : public PinpointRequest {
 
 public:
     UpdateApnsSandboxChannelRequest(const UpdateApnsSandboxChannelRequest &other);

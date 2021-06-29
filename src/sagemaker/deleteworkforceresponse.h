@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class DeleteWorkforceResponsePrivate;
 
-class QTAWS_EXPORT DeleteWorkforceResponse : public SageMakerResponse {
+class QTAWSSAGEMAKER_EXPORT DeleteWorkforceResponse : public SageMakerResponse {
     Q_OBJECT
 
 public:

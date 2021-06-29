@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawstextractglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -41,7 +43,7 @@ class StartDocumentAnalysisResponse;
 class StartDocumentTextDetectionRequest;
 class StartDocumentTextDetectionResponse;
 
-class QTAWS_EXPORT TextractClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSTEXTRACT_EXPORT TextractClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

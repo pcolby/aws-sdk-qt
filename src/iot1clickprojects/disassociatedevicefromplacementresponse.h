@@ -28,7 +28,7 @@ namespace IoT1ClickProjects {
 
 class DisassociateDeviceFromPlacementResponsePrivate;
 
-class QTAWS_EXPORT DisassociateDeviceFromPlacementResponse : public IoT1ClickProjectsResponse {
+class QTAWSIOT1CLICKPROJECTS_EXPORT DisassociateDeviceFromPlacementResponse : public IoT1ClickProjectsResponse {
     Q_OBJECT
 
 public:

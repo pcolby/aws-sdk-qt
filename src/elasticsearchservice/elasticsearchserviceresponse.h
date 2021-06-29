@@ -21,6 +21,8 @@
 #define QTAWS_ELASTICSEARCHSERVICERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawselasticsearchserviceglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace ElasticsearchService {
 
 class ElasticsearchServiceResponsePrivate;
 
-class QTAWS_EXPORT ElasticsearchServiceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSELASTICSEARCHSERVICE_EXPORT ElasticsearchServiceResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

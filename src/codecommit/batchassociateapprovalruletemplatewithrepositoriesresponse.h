@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class BatchAssociateApprovalRuleTemplateWithRepositoriesResponsePrivate;
 
-class QTAWS_EXPORT BatchAssociateApprovalRuleTemplateWithRepositoriesResponse : public CodeCommitResponse {
+class QTAWSCODECOMMIT_EXPORT BatchAssociateApprovalRuleTemplateWithRepositoriesResponse : public CodeCommitResponse {
     Q_OBJECT
 
 public:

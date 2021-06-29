@@ -27,7 +27,7 @@ namespace LexModelsV2 {
 
 class ListIntentsRequestPrivate;
 
-class QTAWS_EXPORT ListIntentsRequest : public LexModelsV2Request {
+class QTAWSLEXMODELSV2_EXPORT ListIntentsRequest : public LexModelsV2Request {
 
 public:
     ListIntentsRequest(const ListIntentsRequest &other);

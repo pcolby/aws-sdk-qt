@@ -21,6 +21,8 @@
 #define QTAWS_SCHEMASRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsschemasglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace Schemas {
 
 class SchemasResponsePrivate;
 
-class QTAWS_EXPORT SchemasResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSCHEMAS_EXPORT SchemasResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

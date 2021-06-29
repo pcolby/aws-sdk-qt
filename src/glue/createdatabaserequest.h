@@ -27,7 +27,7 @@ namespace Glue {
 
 class CreateDatabaseRequestPrivate;
 
-class QTAWS_EXPORT CreateDatabaseRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT CreateDatabaseRequest : public GlueRequest {
 
 public:
     CreateDatabaseRequest(const CreateDatabaseRequest &other);

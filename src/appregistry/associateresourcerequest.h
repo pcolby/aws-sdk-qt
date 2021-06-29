@@ -27,7 +27,7 @@ namespace AppRegistry {
 
 class AssociateResourceRequestPrivate;
 
-class QTAWS_EXPORT AssociateResourceRequest : public AppRegistryRequest {
+class QTAWSAPPREGISTRY_EXPORT AssociateResourceRequest : public AppRegistryRequest {
 
 public:
     AssociateResourceRequest(const AssociateResourceRequest &other);

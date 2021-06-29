@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSROUTE53_LIBRARY)
+
 add_library(QtAwsRoute53
   activatekeysigningkeyrequest.h
   activatekeysigningkeyrequest_p.h
@@ -235,6 +237,7 @@ add_library(QtAwsRoute53
   listvpcassociationauthorizationsrequest_p.h
   listvpcassociationauthorizationsresponse.h
   listvpcassociationauthorizationsresponse_p.h
+  qtawsroute53global.h
   route53client.h
   route53client_p.h
   route53request.h

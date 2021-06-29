@@ -27,7 +27,7 @@ namespace AppMesh {
 
 class DeleteGatewayRouteRequestPrivate;
 
-class QTAWS_EXPORT DeleteGatewayRouteRequest : public AppMeshRequest {
+class QTAWSAPPMESH_EXPORT DeleteGatewayRouteRequest : public AppMeshRequest {
 
 public:
     DeleteGatewayRouteRequest(const DeleteGatewayRouteRequest &other);

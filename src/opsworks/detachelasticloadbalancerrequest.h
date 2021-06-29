@@ -27,7 +27,7 @@ namespace OpsWorks {
 
 class DetachElasticLoadBalancerRequestPrivate;
 
-class QTAWS_EXPORT DetachElasticLoadBalancerRequest : public OpsWorksRequest {
+class QTAWSOPSWORKS_EXPORT DetachElasticLoadBalancerRequest : public OpsWorksRequest {
 
 public:
     DetachElasticLoadBalancerRequest(const DetachElasticLoadBalancerRequest &other);

@@ -28,7 +28,7 @@ namespace Chime {
 
 class PutVoiceConnectorLoggingConfigurationResponsePrivate;
 
-class QTAWS_EXPORT PutVoiceConnectorLoggingConfigurationResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT PutVoiceConnectorLoggingConfigurationResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

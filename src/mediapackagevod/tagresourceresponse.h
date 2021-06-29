@@ -28,7 +28,7 @@ namespace MediaPackageVod {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public MediaPackageVodResponse {
+class QTAWSMEDIAPACKAGEVOD_EXPORT TagResourceResponse : public MediaPackageVodResponse {
     Q_OBJECT
 
 public:

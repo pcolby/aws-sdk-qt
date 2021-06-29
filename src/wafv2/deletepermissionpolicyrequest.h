@@ -27,7 +27,7 @@ namespace WAFV2 {
 
 class DeletePermissionPolicyRequestPrivate;
 
-class QTAWS_EXPORT DeletePermissionPolicyRequest : public Wafv2Request {
+class QTAWSWAFV2_EXPORT DeletePermissionPolicyRequest : public Wafv2Request {
 
 public:
     DeletePermissionPolicyRequest(const DeletePermissionPolicyRequest &other);

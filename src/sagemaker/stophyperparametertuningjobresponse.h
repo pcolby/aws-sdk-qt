@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class StopHyperParameterTuningJobResponsePrivate;
 
-class QTAWS_EXPORT StopHyperParameterTuningJobResponse : public SageMakerResponse {
+class QTAWSSAGEMAKER_EXPORT StopHyperParameterTuningJobResponse : public SageMakerResponse {
     Q_OBJECT
 
 public:

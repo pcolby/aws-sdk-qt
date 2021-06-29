@@ -27,7 +27,7 @@ namespace AppMesh {
 
 class ListMeshesRequestPrivate;
 
-class QTAWS_EXPORT ListMeshesRequest : public AppMeshRequest {
+class QTAWSAPPMESH_EXPORT ListMeshesRequest : public AppMeshRequest {
 
 public:
     ListMeshesRequest(const ListMeshesRequest &other);

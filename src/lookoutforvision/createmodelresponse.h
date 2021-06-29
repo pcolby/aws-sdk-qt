@@ -28,7 +28,7 @@ namespace LookoutforVision {
 
 class CreateModelResponsePrivate;
 
-class QTAWS_EXPORT CreateModelResponse : public LookoutforVisionResponse {
+class QTAWSLOOKOUTFORVISION_EXPORT CreateModelResponse : public LookoutforVisionResponse {
     Q_OBJECT
 
 public:

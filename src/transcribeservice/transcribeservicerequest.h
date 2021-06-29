@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawstranscribeserviceglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace TranscribeService {
 
 class TranscribeServiceRequestPrivate;
 
-class QTAWS_EXPORT TranscribeServiceRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSTRANSCRIBESERVICE_EXPORT TranscribeServiceRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by TranscribeService.

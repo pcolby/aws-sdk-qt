@@ -28,7 +28,7 @@ namespace Glue {
 
 class StartImportLabelsTaskRunResponsePrivate;
 
-class QTAWS_EXPORT StartImportLabelsTaskRunResponse : public GlueResponse {
+class QTAWSGLUE_EXPORT StartImportLabelsTaskRunResponse : public GlueResponse {
     Q_OBJECT
 
 public:

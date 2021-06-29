@@ -27,7 +27,7 @@ namespace Braket {
 
 class CancelQuantumTaskRequestPrivate;
 
-class QTAWS_EXPORT CancelQuantumTaskRequest : public BraketRequest {
+class QTAWSBRAKET_EXPORT CancelQuantumTaskRequest : public BraketRequest {
 
 public:
     CancelQuantumTaskRequest(const CancelQuantumTaskRequest &other);

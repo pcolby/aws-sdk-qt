@@ -28,7 +28,7 @@ namespace S3Outposts {
 
 class CreateEndpointResponsePrivate;
 
-class QTAWS_EXPORT CreateEndpointResponse : public S3OutpostsResponse {
+class QTAWSS3OUTPOSTS_EXPORT CreateEndpointResponse : public S3OutpostsResponse {
     Q_OBJECT
 
 public:

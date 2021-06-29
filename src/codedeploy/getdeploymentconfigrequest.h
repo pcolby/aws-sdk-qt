@@ -27,7 +27,7 @@ namespace CodeDeploy {
 
 class GetDeploymentConfigRequestPrivate;
 
-class QTAWS_EXPORT GetDeploymentConfigRequest : public CodeDeployRequest {
+class QTAWSCODEDEPLOY_EXPORT GetDeploymentConfigRequest : public CodeDeployRequest {
 
 public:
     GetDeploymentConfigRequest(const GetDeploymentConfigRequest &other);

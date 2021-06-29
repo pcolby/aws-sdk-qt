@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class ListSkillsStoreCategoriesResponsePrivate;
 
-class QTAWS_EXPORT ListSkillsStoreCategoriesResponse : public AlexaForBusinessResponse {
+class QTAWSALEXAFORBUSINESS_EXPORT ListSkillsStoreCategoriesResponse : public AlexaForBusinessResponse {
     Q_OBJECT
 
 public:

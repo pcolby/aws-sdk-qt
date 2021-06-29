@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class UpdateImageResponsePrivate;
 
-class QTAWS_EXPORT UpdateImageResponse : public SageMakerResponse {
+class QTAWSSAGEMAKER_EXPORT UpdateImageResponse : public SageMakerResponse {
     Q_OBJECT
 
 public:

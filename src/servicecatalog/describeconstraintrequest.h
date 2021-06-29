@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class DescribeConstraintRequestPrivate;
 
-class QTAWS_EXPORT DescribeConstraintRequest : public ServiceCatalogRequest {
+class QTAWSSERVICECATALOG_EXPORT DescribeConstraintRequest : public ServiceCatalogRequest {
 
 public:
     DescribeConstraintRequest(const DescribeConstraintRequest &other);

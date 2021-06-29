@@ -21,6 +21,8 @@
 #define QTAWS_SESV2RESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawssesv2global.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace SESV2 {
 
 class Sesv2ResponsePrivate;
 
-class QTAWS_EXPORT Sesv2Response : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSESV2_EXPORT Sesv2Response : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

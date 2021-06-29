@@ -27,7 +27,7 @@ namespace Chime {
 
 class GetRoomRequestPrivate;
 
-class QTAWS_EXPORT GetRoomRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT GetRoomRequest : public ChimeRequest {
 
 public:
     GetRoomRequest(const GetRoomRequest &other);

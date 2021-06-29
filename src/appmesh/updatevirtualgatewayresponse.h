@@ -28,7 +28,7 @@ namespace AppMesh {
 
 class UpdateVirtualGatewayResponsePrivate;
 
-class QTAWS_EXPORT UpdateVirtualGatewayResponse : public AppMeshResponse {
+class QTAWSAPPMESH_EXPORT UpdateVirtualGatewayResponse : public AppMeshResponse {
     Q_OBJECT
 
 public:

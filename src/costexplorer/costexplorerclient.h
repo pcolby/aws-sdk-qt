@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawscostexplorerglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -89,7 +91,7 @@ class UpdateAnomalySubscriptionResponse;
 class UpdateCostCategoryDefinitionRequest;
 class UpdateCostCategoryDefinitionResponse;
 
-class QTAWS_EXPORT CostExplorerClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCOSTEXPLORER_EXPORT CostExplorerClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

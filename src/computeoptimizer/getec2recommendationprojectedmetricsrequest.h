@@ -27,7 +27,7 @@ namespace ComputeOptimizer {
 
 class GetEC2RecommendationProjectedMetricsRequestPrivate;
 
-class QTAWS_EXPORT GetEC2RecommendationProjectedMetricsRequest : public ComputeOptimizerRequest {
+class QTAWSCOMPUTEOPTIMIZER_EXPORT GetEC2RecommendationProjectedMetricsRequest : public ComputeOptimizerRequest {
 
 public:
     GetEC2RecommendationProjectedMetricsRequest(const GetEC2RecommendationProjectedMetricsRequest &other);

@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class DeleteDataQualityJobDefinitionResponsePrivate;
 
-class QTAWS_EXPORT DeleteDataQualityJobDefinitionResponse : public SageMakerResponse {
+class QTAWSSAGEMAKER_EXPORT DeleteDataQualityJobDefinitionResponse : public SageMakerResponse {
     Q_OBJECT
 
 public:

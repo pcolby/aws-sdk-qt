@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsforecastqueryserviceglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -31,7 +33,7 @@ class ForecastQueryServiceClientPrivate;
 class QueryForecastRequest;
 class QueryForecastResponse;
 
-class QTAWS_EXPORT ForecastQueryServiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSFORECASTQUERYSERVICE_EXPORT ForecastQueryServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

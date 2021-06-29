@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawseventbridgeglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace EventBridge {
 
 class EventBridgeRequestPrivate;
 
-class QTAWS_EXPORT EventBridgeRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSEVENTBRIDGE_EXPORT EventBridgeRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by EventBridge.

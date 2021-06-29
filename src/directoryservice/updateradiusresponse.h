@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class UpdateRadiusResponsePrivate;
 
-class QTAWS_EXPORT UpdateRadiusResponse : public DirectoryServiceResponse {
+class QTAWSDIRECTORYSERVICE_EXPORT UpdateRadiusResponse : public DirectoryServiceResponse {
     Q_OBJECT
 
 public:

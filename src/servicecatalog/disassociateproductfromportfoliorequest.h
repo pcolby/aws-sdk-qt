@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class DisassociateProductFromPortfolioRequestPrivate;
 
-class QTAWS_EXPORT DisassociateProductFromPortfolioRequest : public ServiceCatalogRequest {
+class QTAWSSERVICECATALOG_EXPORT DisassociateProductFromPortfolioRequest : public ServiceCatalogRequest {
 
 public:
     DisassociateProductFromPortfolioRequest(const DisassociateProductFromPortfolioRequest &other);

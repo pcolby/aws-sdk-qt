@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawspersonalizeruntimeglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace PersonalizeRuntime {
 
 class PersonalizeRuntimeRequestPrivate;
 
-class QTAWS_EXPORT PersonalizeRuntimeRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSPERSONALIZERUNTIME_EXPORT PersonalizeRuntimeRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by PersonalizeRuntime.

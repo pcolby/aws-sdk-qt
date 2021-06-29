@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsssooidcglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace SSOOIDC {
 
 class SsooidcRequestPrivate;
 
-class QTAWS_EXPORT SsooidcRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSSSOOIDC_EXPORT SsooidcRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by SSOOIDC.

@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class GetRoomSkillParameterResponsePrivate;
 
-class QTAWS_EXPORT GetRoomSkillParameterResponse : public AlexaForBusinessResponse {
+class QTAWSALEXAFORBUSINESS_EXPORT GetRoomSkillParameterResponse : public AlexaForBusinessResponse {
     Q_OBJECT
 
 public:

@@ -21,6 +21,8 @@
 #define QTAWS_CLOUDWATCHLOGSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawscloudwatchlogsglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace CloudWatchLogs {
 
 class CloudWatchLogsResponsePrivate;
 
-class QTAWS_EXPORT CloudWatchLogsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCLOUDWATCHLOGS_EXPORT CloudWatchLogsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

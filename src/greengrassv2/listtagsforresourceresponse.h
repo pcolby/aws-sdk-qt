@@ -28,7 +28,7 @@ namespace GreengrassV2 {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public GreengrassV2Response {
+class QTAWSGREENGRASSV2_EXPORT ListTagsForResourceResponse : public GreengrassV2Response {
     Q_OBJECT
 
 public:

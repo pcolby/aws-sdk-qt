@@ -28,7 +28,7 @@ namespace Neptune {
 
 class DescribeOrderableDBInstanceOptionsResponsePrivate;
 
-class QTAWS_EXPORT DescribeOrderableDBInstanceOptionsResponse : public NeptuneResponse {
+class QTAWSNEPTUNE_EXPORT DescribeOrderableDBInstanceOptionsResponse : public NeptuneResponse {
     Q_OBJECT
 
 public:

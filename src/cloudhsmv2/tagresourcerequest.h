@@ -27,7 +27,7 @@ namespace CloudHSMV2 {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public CloudHSMV2Request {
+class QTAWSCLOUDHSMV2_EXPORT TagResourceRequest : public CloudHSMV2Request {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

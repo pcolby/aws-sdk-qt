@@ -27,7 +27,7 @@ namespace EventBridge {
 
 class DeleteArchiveRequestPrivate;
 
-class QTAWS_EXPORT DeleteArchiveRequest : public EventBridgeRequest {
+class QTAWSEVENTBRIDGE_EXPORT DeleteArchiveRequest : public EventBridgeRequest {
 
 public:
     DeleteArchiveRequest(const DeleteArchiveRequest &other);

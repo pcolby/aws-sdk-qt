@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class StopDeploymentResponsePrivate;
 
-class QTAWS_EXPORT StopDeploymentResponse : public CodeDeployResponse {
+class QTAWSCODEDEPLOY_EXPORT StopDeploymentResponse : public CodeDeployResponse {
     Q_OBJECT
 
 public:

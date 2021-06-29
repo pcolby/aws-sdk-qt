@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class DeleteDomainRequestPrivate;
 
-class QTAWS_EXPORT DeleteDomainRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT DeleteDomainRequest : public SageMakerRequest {
 
 public:
     DeleteDomainRequest(const DeleteDomainRequest &other);

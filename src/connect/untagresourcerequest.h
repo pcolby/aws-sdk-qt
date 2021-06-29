@@ -27,7 +27,7 @@ namespace Connect {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT UntagResourceRequest : public ConnectRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

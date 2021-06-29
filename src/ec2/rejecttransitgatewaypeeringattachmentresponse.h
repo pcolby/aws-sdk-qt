@@ -28,7 +28,7 @@ namespace EC2 {
 
 class RejectTransitGatewayPeeringAttachmentResponsePrivate;
 
-class QTAWS_EXPORT RejectTransitGatewayPeeringAttachmentResponse : public Ec2Response {
+class QTAWSEC2_EXPORT RejectTransitGatewayPeeringAttachmentResponse : public Ec2Response {
     Q_OBJECT
 
 public:

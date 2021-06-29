@@ -27,7 +27,7 @@ namespace Kinesis {
 
 class GetRecordsRequestPrivate;
 
-class QTAWS_EXPORT GetRecordsRequest : public KinesisRequest {
+class QTAWSKINESIS_EXPORT GetRecordsRequest : public KinesisRequest {
 
 public:
     GetRecordsRequest(const GetRecordsRequest &other);

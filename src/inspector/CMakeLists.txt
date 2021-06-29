@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSINSPECTOR_LIBRARY)
+
 add_library(QtAwsInspector
   addattributestofindingsrequest.h
   addattributestofindingsrequest_p.h
@@ -121,6 +123,7 @@ add_library(QtAwsInspector
   previewagentsrequest_p.h
   previewagentsresponse.h
   previewagentsresponse_p.h
+  qtawsinspectorglobal.h
   registercrossaccountaccessrolerequest.h
   registercrossaccountaccessrolerequest_p.h
   registercrossaccountaccessroleresponse.h

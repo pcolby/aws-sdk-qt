@@ -28,7 +28,7 @@ namespace EventBridge {
 
 class DeleteEventBusResponsePrivate;
 
-class QTAWS_EXPORT DeleteEventBusResponse : public EventBridgeResponse {
+class QTAWSEVENTBRIDGE_EXPORT DeleteEventBusResponse : public EventBridgeResponse {
     Q_OBJECT
 
 public:

@@ -21,6 +21,8 @@
 #define QTAWS_KENDRARESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawskendraglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace kendra {
 
 class kendraResponsePrivate;
 
-class QTAWS_EXPORT kendraResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSKENDRA_EXPORT kendraResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

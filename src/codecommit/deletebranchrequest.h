@@ -27,7 +27,7 @@ namespace CodeCommit {
 
 class DeleteBranchRequestPrivate;
 
-class QTAWS_EXPORT DeleteBranchRequest : public CodeCommitRequest {
+class QTAWSCODECOMMIT_EXPORT DeleteBranchRequest : public CodeCommitRequest {
 
 public:
     DeleteBranchRequest(const DeleteBranchRequest &other);

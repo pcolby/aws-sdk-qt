@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawslexmodelbuildingserviceglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace LexModelBuildingService {
 
 class LexModelBuildingServiceRequestPrivate;
 
-class QTAWS_EXPORT LexModelBuildingServiceRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSLEXMODELBUILDINGSERVICE_EXPORT LexModelBuildingServiceRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by LexModelBuildingService.

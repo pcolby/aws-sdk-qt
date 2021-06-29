@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteNetworkInsightsAnalysisResponsePrivate;
 
-class QTAWS_EXPORT DeleteNetworkInsightsAnalysisResponse : public Ec2Response {
+class QTAWSEC2_EXPORT DeleteNetworkInsightsAnalysisResponse : public Ec2Response {
     Q_OBJECT
 
 public:

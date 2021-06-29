@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawscodestarconnectionsglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace CodeStarconnections {
 
 class CodeStarconnectionsRequestPrivate;
 
-class QTAWS_EXPORT CodeStarconnectionsRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCODESTARCONNECTIONS_EXPORT CodeStarconnectionsRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CodeStarconnections.

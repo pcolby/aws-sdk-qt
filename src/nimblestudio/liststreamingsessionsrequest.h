@@ -27,7 +27,7 @@ namespace NimbleStudio {
 
 class ListStreamingSessionsRequestPrivate;
 
-class QTAWS_EXPORT ListStreamingSessionsRequest : public NimbleStudioRequest {
+class QTAWSNIMBLESTUDIO_EXPORT ListStreamingSessionsRequest : public NimbleStudioRequest {
 
 public:
     ListStreamingSessionsRequest(const ListStreamingSessionsRequest &other);

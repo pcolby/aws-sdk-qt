@@ -28,7 +28,7 @@ namespace EMRContainers {
 
 class StartJobRunResponsePrivate;
 
-class QTAWS_EXPORT StartJobRunResponse : public EMRContainersResponse {
+class QTAWSEMRCONTAINERS_EXPORT StartJobRunResponse : public EMRContainersResponse {
     Q_OBJECT
 
 public:

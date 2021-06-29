@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSEMRCONTAINERS_LIBRARY)
+
 add_library(QtAwsEMRContainers
   canceljobrunrequest.h
   canceljobrunrequest_p.h
@@ -53,6 +55,7 @@ add_library(QtAwsEMRContainers
   listvirtualclustersrequest_p.h
   listvirtualclustersresponse.h
   listvirtualclustersresponse_p.h
+  qtawsemrcontainersglobal.h
   startjobrunrequest.h
   startjobrunrequest_p.h
   startjobrunresponse.h

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsworkspacesglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace WorkSpaces {
 
 class WorkSpacesRequestPrivate;
 
-class QTAWS_EXPORT WorkSpacesRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSWORKSPACES_EXPORT WorkSpacesRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by WorkSpaces.

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawswellarchitectedglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -91,7 +93,7 @@ class UpdateWorkloadShareResponse;
 class UpgradeLensReviewRequest;
 class UpgradeLensReviewResponse;
 
-class QTAWS_EXPORT WellArchitectedClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSWELLARCHITECTED_EXPORT WellArchitectedClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace EC2InstanceConnect {
 
 class SendSerialConsoleSSHPublicKeyRequestPrivate;
 
-class QTAWS_EXPORT SendSerialConsoleSSHPublicKeyRequest : public EC2InstanceConnectRequest {
+class QTAWSEC2INSTANCECONNECT_EXPORT SendSerialConsoleSSHPublicKeyRequest : public EC2InstanceConnectRequest {
 
 public:
     SendSerialConsoleSSHPublicKeyRequest(const SendSerialConsoleSSHPublicKeyRequest &other);

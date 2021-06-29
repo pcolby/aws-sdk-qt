@@ -27,7 +27,7 @@ namespace ACM {
 
 class RemoveTagsFromCertificateRequestPrivate;
 
-class QTAWS_EXPORT RemoveTagsFromCertificateRequest : public AcmRequest {
+class QTAWSACM_EXPORT RemoveTagsFromCertificateRequest : public AcmRequest {
 
 public:
     RemoveTagsFromCertificateRequest(const RemoveTagsFromCertificateRequest &other);

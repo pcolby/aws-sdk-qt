@@ -21,6 +21,8 @@
 #define QTAWS_PERSONALIZEEVENTSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawspersonalizeeventsglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace PersonalizeEvents {
 
 class PersonalizeEventsResponsePrivate;
 
-class QTAWS_EXPORT PersonalizeEventsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSPERSONALIZEEVENTS_EXPORT PersonalizeEventsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

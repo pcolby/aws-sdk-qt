@@ -27,7 +27,7 @@ namespace WAFRegional {
 
 class GetWebACLForResourceRequestPrivate;
 
-class QTAWS_EXPORT GetWebACLForResourceRequest : public WAFRegionalRequest {
+class QTAWSWAFREGIONAL_EXPORT GetWebACLForResourceRequest : public WAFRegionalRequest {
 
 public:
     GetWebACLForResourceRequest(const GetWebACLForResourceRequest &other);

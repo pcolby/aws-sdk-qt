@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class ListVolumeInitiatorsRequestPrivate;
 
-class QTAWS_EXPORT ListVolumeInitiatorsRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT ListVolumeInitiatorsRequest : public StorageGatewayRequest {
 
 public:
     ListVolumeInitiatorsRequest(const ListVolumeInitiatorsRequest &other);

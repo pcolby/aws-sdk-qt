@@ -28,7 +28,7 @@ namespace Personalize {
 
 class DescribeEventTrackerResponsePrivate;
 
-class QTAWS_EXPORT DescribeEventTrackerResponse : public PersonalizeResponse {
+class QTAWSPERSONALIZE_EXPORT DescribeEventTrackerResponse : public PersonalizeResponse {
     Q_OBJECT
 
 public:

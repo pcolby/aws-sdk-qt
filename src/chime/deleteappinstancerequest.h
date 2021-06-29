@@ -27,7 +27,7 @@ namespace Chime {
 
 class DeleteAppInstanceRequestPrivate;
 
-class QTAWS_EXPORT DeleteAppInstanceRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT DeleteAppInstanceRequest : public ChimeRequest {
 
 public:
     DeleteAppInstanceRequest(const DeleteAppInstanceRequest &other);

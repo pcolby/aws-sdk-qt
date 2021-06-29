@@ -27,7 +27,7 @@ namespace DynamoDB {
 
 class RestoreTableFromBackupRequestPrivate;
 
-class QTAWS_EXPORT RestoreTableFromBackupRequest : public DynamoDBRequest {
+class QTAWSDYNAMODB_EXPORT RestoreTableFromBackupRequest : public DynamoDBRequest {
 
 public:
     RestoreTableFromBackupRequest(const RestoreTableFromBackupRequest &other);

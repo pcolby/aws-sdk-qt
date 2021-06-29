@@ -28,7 +28,7 @@ namespace SSM {
 
 class UnlabelParameterVersionResponsePrivate;
 
-class QTAWS_EXPORT UnlabelParameterVersionResponse : public SsmResponse {
+class QTAWSSSM_EXPORT UnlabelParameterVersionResponse : public SsmResponse {
     Q_OBJECT
 
 public:

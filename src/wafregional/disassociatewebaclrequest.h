@@ -27,7 +27,7 @@ namespace WAFRegional {
 
 class DisassociateWebACLRequestPrivate;
 
-class QTAWS_EXPORT DisassociateWebACLRequest : public WAFRegionalRequest {
+class QTAWSWAFREGIONAL_EXPORT DisassociateWebACLRequest : public WAFRegionalRequest {
 
 public:
     DisassociateWebACLRequest(const DisassociateWebACLRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsamplifyglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Amplify {
 
 class AmplifyRequestPrivate;
 
-class QTAWS_EXPORT AmplifyRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSAMPLIFY_EXPORT AmplifyRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Amplify.

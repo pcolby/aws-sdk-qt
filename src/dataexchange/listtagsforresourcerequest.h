@@ -27,7 +27,7 @@ namespace DataExchange {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public DataExchangeRequest {
+class QTAWSDATAEXCHANGE_EXPORT ListTagsForResourceRequest : public DataExchangeRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

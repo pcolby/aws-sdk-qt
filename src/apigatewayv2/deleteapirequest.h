@@ -27,7 +27,7 @@ namespace ApiGatewayV2 {
 
 class DeleteApiRequestPrivate;
 
-class QTAWS_EXPORT DeleteApiRequest : public ApiGatewayV2Request {
+class QTAWSAPIGATEWAYV2_EXPORT DeleteApiRequest : public ApiGatewayV2Request {
 
 public:
     DeleteApiRequest(const DeleteApiRequest &other);

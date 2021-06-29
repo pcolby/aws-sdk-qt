@@ -21,6 +21,8 @@
 #define QTAWS_CONFIGSERVICERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsconfigserviceglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace ConfigService {
 
 class ConfigServiceResponsePrivate;
 
-class QTAWS_EXPORT ConfigServiceResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCONFIGSERVICE_EXPORT ConfigServiceResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

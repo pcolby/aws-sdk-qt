@@ -28,7 +28,7 @@ namespace DevOpsGuru {
 
 class DescribeServiceIntegrationResponsePrivate;
 
-class QTAWS_EXPORT DescribeServiceIntegrationResponse : public DevOpsGuruResponse {
+class QTAWSDEVOPSGURU_EXPORT DescribeServiceIntegrationResponse : public DevOpsGuruResponse {
     Q_OBJECT
 
 public:

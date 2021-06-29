@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSROUTE53DOMAINS_LIBRARY)
+
 add_library(QtAwsRoute53Domains
   acceptdomaintransferfromanotherawsaccountrequest.h
   acceptdomaintransferfromanotherawsaccountrequest_p.h
@@ -63,6 +65,7 @@ add_library(QtAwsRoute53Domains
   listtagsfordomainrequest_p.h
   listtagsfordomainresponse.h
   listtagsfordomainresponse_p.h
+  qtawsroute53domainsglobal.h
   registerdomainrequest.h
   registerdomainrequest_p.h
   registerdomainresponse.h

@@ -27,7 +27,7 @@ namespace WorkDocs {
 
 class CreateCommentRequestPrivate;
 
-class QTAWS_EXPORT CreateCommentRequest : public WorkDocsRequest {
+class QTAWSWORKDOCS_EXPORT CreateCommentRequest : public WorkDocsRequest {
 
 public:
     CreateCommentRequest(const CreateCommentRequest &other);

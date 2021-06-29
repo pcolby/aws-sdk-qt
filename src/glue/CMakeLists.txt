@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSGLUE_LIBRARY)
+
 add_library(QtAwsGlue
   batchcreatepartitionrequest.h
   batchcreatepartitionrequest_p.h
@@ -481,6 +483,7 @@ add_library(QtAwsGlue
   putworkflowrunpropertiesrequest_p.h
   putworkflowrunpropertiesresponse.h
   putworkflowrunpropertiesresponse_p.h
+  qtawsglueglobal.h
   queryschemaversionmetadatarequest.h
   queryschemaversionmetadatarequest_p.h
   queryschemaversionmetadataresponse.h

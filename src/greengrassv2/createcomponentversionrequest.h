@@ -27,7 +27,7 @@ namespace GreengrassV2 {
 
 class CreateComponentVersionRequestPrivate;
 
-class QTAWS_EXPORT CreateComponentVersionRequest : public GreengrassV2Request {
+class QTAWSGREENGRASSV2_EXPORT CreateComponentVersionRequest : public GreengrassV2Request {
 
 public:
     CreateComponentVersionRequest(const CreateComponentVersionRequest &other);

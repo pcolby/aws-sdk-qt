@@ -27,7 +27,7 @@ namespace CostandUsageReportService {
 
 class DeleteReportDefinitionRequestPrivate;
 
-class QTAWS_EXPORT DeleteReportDefinitionRequest : public CostandUsageReportServiceRequest {
+class QTAWSCOSTANDUSAGEREPORTSERVICE_EXPORT DeleteReportDefinitionRequest : public CostandUsageReportServiceRequest {
 
 public:
     DeleteReportDefinitionRequest(const DeleteReportDefinitionRequest &other);

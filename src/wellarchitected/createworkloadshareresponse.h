@@ -28,7 +28,7 @@ namespace WellArchitected {
 
 class CreateWorkloadShareResponsePrivate;
 
-class QTAWS_EXPORT CreateWorkloadShareResponse : public WellArchitectedResponse {
+class QTAWSWELLARCHITECTED_EXPORT CreateWorkloadShareResponse : public WellArchitectedResponse {
     Q_OBJECT
 
 public:

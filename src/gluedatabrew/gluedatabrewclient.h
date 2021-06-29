@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsgluedatabrewglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -107,7 +109,7 @@ class UpdateRecipeJobResponse;
 class UpdateScheduleRequest;
 class UpdateScheduleResponse;
 
-class QTAWS_EXPORT GlueDataBrewClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSGLUEDATABREW_EXPORT GlueDataBrewClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

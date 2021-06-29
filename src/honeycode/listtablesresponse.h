@@ -28,7 +28,7 @@ namespace Honeycode {
 
 class ListTablesResponsePrivate;
 
-class QTAWS_EXPORT ListTablesResponse : public HoneycodeResponse {
+class QTAWSHONEYCODE_EXPORT ListTablesResponse : public HoneycodeResponse {
     Q_OBJECT
 
 public:

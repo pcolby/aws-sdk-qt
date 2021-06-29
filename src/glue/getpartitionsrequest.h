@@ -27,7 +27,7 @@ namespace Glue {
 
 class GetPartitionsRequestPrivate;
 
-class QTAWS_EXPORT GetPartitionsRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT GetPartitionsRequest : public GlueRequest {
 
 public:
     GetPartitionsRequest(const GetPartitionsRequest &other);

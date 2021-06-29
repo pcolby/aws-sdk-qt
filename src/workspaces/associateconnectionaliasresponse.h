@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class AssociateConnectionAliasResponsePrivate;
 
-class QTAWS_EXPORT AssociateConnectionAliasResponse : public WorkSpacesResponse {
+class QTAWSWORKSPACES_EXPORT AssociateConnectionAliasResponse : public WorkSpacesResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace DocDB {
 
 class DeleteDBInstanceRequestPrivate;
 
-class QTAWS_EXPORT DeleteDBInstanceRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT DeleteDBInstanceRequest : public DocDBRequest {
 
 public:
     DeleteDBInstanceRequest(const DeleteDBInstanceRequest &other);

@@ -27,7 +27,7 @@ namespace Redshift {
 
 class CopyClusterSnapshotRequestPrivate;
 
-class QTAWS_EXPORT CopyClusterSnapshotRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT CopyClusterSnapshotRequest : public RedshiftRequest {
 
 public:
     CopyClusterSnapshotRequest(const CopyClusterSnapshotRequest &other);

@@ -27,7 +27,7 @@ namespace Amplify {
 
 class GetBackendEnvironmentRequestPrivate;
 
-class QTAWS_EXPORT GetBackendEnvironmentRequest : public AmplifyRequest {
+class QTAWSAMPLIFY_EXPORT GetBackendEnvironmentRequest : public AmplifyRequest {
 
 public:
     GetBackendEnvironmentRequest(const GetBackendEnvironmentRequest &other);

@@ -28,7 +28,7 @@ namespace Macie2 {
 
 class DeclineInvitationsResponsePrivate;
 
-class QTAWS_EXPORT DeclineInvitationsResponse : public Macie2Response {
+class QTAWSMACIE2_EXPORT DeclineInvitationsResponse : public Macie2Response {
     Q_OBJECT
 
 public:

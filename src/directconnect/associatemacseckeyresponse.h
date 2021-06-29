@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class AssociateMacSecKeyResponsePrivate;
 
-class QTAWS_EXPORT AssociateMacSecKeyResponse : public DirectConnectResponse {
+class QTAWSDIRECTCONNECT_EXPORT AssociateMacSecKeyResponse : public DirectConnectResponse {
     Q_OBJECT
 
 public:

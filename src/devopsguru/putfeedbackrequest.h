@@ -27,7 +27,7 @@ namespace DevOpsGuru {
 
 class PutFeedbackRequestPrivate;
 
-class QTAWS_EXPORT PutFeedbackRequest : public DevOpsGuruRequest {
+class QTAWSDEVOPSGURU_EXPORT PutFeedbackRequest : public DevOpsGuruRequest {
 
 public:
     PutFeedbackRequest(const PutFeedbackRequest &other);

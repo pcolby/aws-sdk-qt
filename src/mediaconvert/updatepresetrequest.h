@@ -27,7 +27,7 @@ namespace MediaConvert {
 
 class UpdatePresetRequestPrivate;
 
-class QTAWS_EXPORT UpdatePresetRequest : public MediaConvertRequest {
+class QTAWSMEDIACONVERT_EXPORT UpdatePresetRequest : public MediaConvertRequest {
 
 public:
     UpdatePresetRequest(const UpdatePresetRequest &other);

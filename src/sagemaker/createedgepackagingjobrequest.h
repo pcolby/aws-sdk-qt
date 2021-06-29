@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class CreateEdgePackagingJobRequestPrivate;
 
-class QTAWS_EXPORT CreateEdgePackagingJobRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT CreateEdgePackagingJobRequest : public SageMakerRequest {
 
 public:
     CreateEdgePackagingJobRequest(const CreateEdgePackagingJobRequest &other);

@@ -28,7 +28,7 @@ namespace SMS {
 
 class GenerateTemplateResponsePrivate;
 
-class QTAWS_EXPORT GenerateTemplateResponse : public SmsResponse {
+class QTAWSSMS_EXPORT GenerateTemplateResponse : public SmsResponse {
     Q_OBJECT
 
 public:

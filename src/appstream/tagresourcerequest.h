@@ -27,7 +27,7 @@ namespace AppStream {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public AppStreamRequest {
+class QTAWSAPPSTREAM_EXPORT TagResourceRequest : public AppStreamRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

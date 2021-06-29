@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class GetBlacklistReportsResponsePrivate;
 
-class QTAWS_EXPORT GetBlacklistReportsResponse : public Sesv2Response {
+class QTAWSSESV2_EXPORT GetBlacklistReportsResponse : public Sesv2Response {
     Q_OBJECT
 
 public:

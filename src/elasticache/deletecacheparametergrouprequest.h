@@ -27,7 +27,7 @@ namespace ElastiCache {
 
 class DeleteCacheParameterGroupRequestPrivate;
 
-class QTAWS_EXPORT DeleteCacheParameterGroupRequest : public ElastiCacheRequest {
+class QTAWSELASTICACHE_EXPORT DeleteCacheParameterGroupRequest : public ElastiCacheRequest {
 
 public:
     DeleteCacheParameterGroupRequest(const DeleteCacheParameterGroupRequest &other);

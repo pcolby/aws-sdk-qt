@@ -27,7 +27,7 @@ namespace ElasticsearchService {
 
 class GetUpgradeHistoryRequestPrivate;
 
-class QTAWS_EXPORT GetUpgradeHistoryRequest : public ElasticsearchServiceRequest {
+class QTAWSELASTICSEARCHSERVICE_EXPORT GetUpgradeHistoryRequest : public ElasticsearchServiceRequest {
 
 public:
     GetUpgradeHistoryRequest(const GetUpgradeHistoryRequest &other);

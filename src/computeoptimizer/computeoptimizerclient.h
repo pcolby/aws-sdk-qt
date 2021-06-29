@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawscomputeoptimizerglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -55,7 +57,7 @@ class GetRecommendationSummariesResponse;
 class UpdateEnrollmentStatusRequest;
 class UpdateEnrollmentStatusResponse;
 
-class QTAWS_EXPORT ComputeOptimizerClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSCOMPUTEOPTIMIZER_EXPORT ComputeOptimizerClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

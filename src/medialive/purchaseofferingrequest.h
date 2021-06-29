@@ -27,7 +27,7 @@ namespace MediaLive {
 
 class PurchaseOfferingRequestPrivate;
 
-class QTAWS_EXPORT PurchaseOfferingRequest : public MediaLiveRequest {
+class QTAWSMEDIALIVE_EXPORT PurchaseOfferingRequest : public MediaLiveRequest {
 
 public:
     PurchaseOfferingRequest(const PurchaseOfferingRequest &other);

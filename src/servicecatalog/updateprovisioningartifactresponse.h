@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class UpdateProvisioningArtifactResponsePrivate;
 
-class QTAWS_EXPORT UpdateProvisioningArtifactResponse : public ServiceCatalogResponse {
+class QTAWSSERVICECATALOG_EXPORT UpdateProvisioningArtifactResponse : public ServiceCatalogResponse {
     Q_OBJECT
 
 public:

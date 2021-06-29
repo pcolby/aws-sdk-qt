@@ -27,7 +27,7 @@ namespace ElasticLoadBalancingv2 {
 
 class DescribeTargetHealthRequestPrivate;
 
-class QTAWS_EXPORT DescribeTargetHealthRequest : public ElasticLoadBalancingv2Request {
+class QTAWSELASTICLOADBALANCINGV2_EXPORT DescribeTargetHealthRequest : public ElasticLoadBalancingv2Request {
 
 public:
     DescribeTargetHealthRequest(const DescribeTargetHealthRequest &other);

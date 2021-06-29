@@ -28,7 +28,7 @@ namespace Transfer {
 
 class DescribeUserResponsePrivate;
 
-class QTAWS_EXPORT DescribeUserResponse : public TransferResponse {
+class QTAWSTRANSFER_EXPORT DescribeUserResponse : public TransferResponse {
     Q_OBJECT
 
 public:

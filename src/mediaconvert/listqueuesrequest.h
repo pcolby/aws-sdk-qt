@@ -27,7 +27,7 @@ namespace MediaConvert {
 
 class ListQueuesRequestPrivate;
 
-class QTAWS_EXPORT ListQueuesRequest : public MediaConvertRequest {
+class QTAWSMEDIACONVERT_EXPORT ListQueuesRequest : public MediaConvertRequest {
 
 public:
     ListQueuesRequest(const ListQueuesRequest &other);

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsmediapackagevodglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -63,7 +65,7 @@ class UntagResourceResponse;
 class UpdatePackagingGroupRequest;
 class UpdatePackagingGroupResponse;
 
-class QTAWS_EXPORT MediaPackageVodClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSMEDIAPACKAGEVOD_EXPORT MediaPackageVodClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

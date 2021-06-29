@@ -21,6 +21,8 @@
 #define QTAWS_XRAYRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsxrayglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace XRay {
 
 class XRayResponsePrivate;
 
-class QTAWS_EXPORT XRayResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSXRAY_EXPORT XRayResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

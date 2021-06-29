@@ -28,7 +28,7 @@ namespace FSx {
 
 class DeleteBackupResponsePrivate;
 
-class QTAWS_EXPORT DeleteBackupResponse : public FSxResponse {
+class QTAWSFSX_EXPORT DeleteBackupResponse : public FSxResponse {
     Q_OBJECT
 
 public:

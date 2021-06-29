@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class CreateStageResponsePrivate;
 
-class QTAWS_EXPORT CreateStageResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT CreateStageResponse : public APIGatewayResponse {
     Q_OBJECT
 
 public:

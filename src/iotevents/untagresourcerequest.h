@@ -27,7 +27,7 @@ namespace IoTEvents {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public IoTEventsRequest {
+class QTAWSIOTEVENTS_EXPORT UntagResourceRequest : public IoTEventsRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

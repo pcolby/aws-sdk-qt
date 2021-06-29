@@ -27,7 +27,7 @@ namespace IoTEvents {
 
 class ListInputRoutingsRequestPrivate;
 
-class QTAWS_EXPORT ListInputRoutingsRequest : public IoTEventsRequest {
+class QTAWSIOTEVENTS_EXPORT ListInputRoutingsRequest : public IoTEventsRequest {
 
 public:
     ListInputRoutingsRequest(const ListInputRoutingsRequest &other);

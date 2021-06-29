@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class UpdateAutomaticTapeCreationPolicyRequestPrivate;
 
-class QTAWS_EXPORT UpdateAutomaticTapeCreationPolicyRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT UpdateAutomaticTapeCreationPolicyRequest : public StorageGatewayRequest {
 
 public:
     UpdateAutomaticTapeCreationPolicyRequest(const UpdateAutomaticTapeCreationPolicyRequest &other);

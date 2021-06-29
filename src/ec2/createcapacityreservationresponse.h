@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CreateCapacityReservationResponsePrivate;
 
-class QTAWS_EXPORT CreateCapacityReservationResponse : public Ec2Response {
+class QTAWSEC2_EXPORT CreateCapacityReservationResponse : public Ec2Response {
     Q_OBJECT
 
 public:

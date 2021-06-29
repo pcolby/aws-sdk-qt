@@ -27,7 +27,7 @@ namespace Shield {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public ShieldRequest {
+class QTAWSSHIELD_EXPORT ListTagsForResourceRequest : public ShieldRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

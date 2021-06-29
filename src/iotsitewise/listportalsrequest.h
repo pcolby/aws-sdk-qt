@@ -27,7 +27,7 @@ namespace IoTSiteWise {
 
 class ListPortalsRequestPrivate;
 
-class QTAWS_EXPORT ListPortalsRequest : public IoTSiteWiseRequest {
+class QTAWSIOTSITEWISE_EXPORT ListPortalsRequest : public IoTSiteWiseRequest {
 
 public:
     ListPortalsRequest(const ListPortalsRequest &other);

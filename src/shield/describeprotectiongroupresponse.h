@@ -28,7 +28,7 @@ namespace Shield {
 
 class DescribeProtectionGroupResponsePrivate;
 
-class QTAWS_EXPORT DescribeProtectionGroupResponse : public ShieldResponse {
+class QTAWSSHIELD_EXPORT DescribeProtectionGroupResponse : public ShieldResponse {
     Q_OBJECT
 
 public:

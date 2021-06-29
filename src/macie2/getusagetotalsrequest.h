@@ -27,7 +27,7 @@ namespace Macie2 {
 
 class GetUsageTotalsRequestPrivate;
 
-class QTAWS_EXPORT GetUsageTotalsRequest : public Macie2Request {
+class QTAWSMACIE2_EXPORT GetUsageTotalsRequest : public Macie2Request {
 
 public:
     GetUsageTotalsRequest(const GetUsageTotalsRequest &other);

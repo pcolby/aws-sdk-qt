@@ -28,7 +28,7 @@ namespace MarketplaceCatalog {
 
 class ListChangeSetsResponsePrivate;
 
-class QTAWS_EXPORT ListChangeSetsResponse : public MarketplaceCatalogResponse {
+class QTAWSMARKETPLACECATALOG_EXPORT ListChangeSetsResponse : public MarketplaceCatalogResponse {
     Q_OBJECT
 
 public:

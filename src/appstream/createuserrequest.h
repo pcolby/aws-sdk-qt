@@ -27,7 +27,7 @@ namespace AppStream {
 
 class CreateUserRequestPrivate;
 
-class QTAWS_EXPORT CreateUserRequest : public AppStreamRequest {
+class QTAWSAPPSTREAM_EXPORT CreateUserRequest : public AppStreamRequest {
 
 public:
     CreateUserRequest(const CreateUserRequest &other);

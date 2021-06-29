@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCLOUDHSMV2_LIBRARY)
+
 add_library(QtAwsCloudHSMV2
   cloudhsmv2client.h
   cloudhsmv2client_p.h
@@ -53,6 +55,7 @@ add_library(QtAwsCloudHSMV2
   modifyclusterrequest_p.h
   modifyclusterresponse.h
   modifyclusterresponse_p.h
+  qtawscloudhsmv2global.h
   restorebackuprequest.h
   restorebackuprequest_p.h
   restorebackupresponse.h

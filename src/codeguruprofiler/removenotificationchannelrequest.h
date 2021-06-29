@@ -27,7 +27,7 @@ namespace CodeGuruProfiler {
 
 class RemoveNotificationChannelRequestPrivate;
 
-class QTAWS_EXPORT RemoveNotificationChannelRequest : public CodeGuruProfilerRequest {
+class QTAWSCODEGURUPROFILER_EXPORT RemoveNotificationChannelRequest : public CodeGuruProfilerRequest {
 
 public:
     RemoveNotificationChannelRequest(const RemoveNotificationChannelRequest &other);

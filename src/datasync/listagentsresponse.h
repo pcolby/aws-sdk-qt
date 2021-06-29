@@ -28,7 +28,7 @@ namespace DataSync {
 
 class ListAgentsResponsePrivate;
 
-class QTAWS_EXPORT ListAgentsResponse : public DataSyncResponse {
+class QTAWSDATASYNC_EXPORT ListAgentsResponse : public DataSyncResponse {
     Q_OBJECT
 
 public:

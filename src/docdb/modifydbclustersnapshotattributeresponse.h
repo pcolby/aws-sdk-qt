@@ -28,7 +28,7 @@ namespace DocDB {
 
 class ModifyDBClusterSnapshotAttributeResponsePrivate;
 
-class QTAWS_EXPORT ModifyDBClusterSnapshotAttributeResponse : public DocDBResponse {
+class QTAWSDOCDB_EXPORT ModifyDBClusterSnapshotAttributeResponse : public DocDBResponse {
     Q_OBJECT
 
 public:

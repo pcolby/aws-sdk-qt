@@ -27,7 +27,7 @@ namespace Comprehend {
 
 class DetectSyntaxRequestPrivate;
 
-class QTAWS_EXPORT DetectSyntaxRequest : public ComprehendRequest {
+class QTAWSCOMPREHEND_EXPORT DetectSyntaxRequest : public ComprehendRequest {
 
 public:
     DetectSyntaxRequest(const DetectSyntaxRequest &other);

@@ -27,7 +27,7 @@ namespace NimbleStudio {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public NimbleStudioRequest {
+class QTAWSNIMBLESTUDIO_EXPORT TagResourceRequest : public NimbleStudioRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

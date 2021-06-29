@@ -27,7 +27,7 @@ namespace Redshift {
 
 class ResumeClusterRequestPrivate;
 
-class QTAWS_EXPORT ResumeClusterRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT ResumeClusterRequest : public RedshiftRequest {
 
 public:
     ResumeClusterRequest(const ResumeClusterRequest &other);

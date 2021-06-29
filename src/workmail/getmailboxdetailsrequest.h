@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class GetMailboxDetailsRequestPrivate;
 
-class QTAWS_EXPORT GetMailboxDetailsRequest : public WorkMailRequest {
+class QTAWSWORKMAIL_EXPORT GetMailboxDetailsRequest : public WorkMailRequest {
 
 public:
     GetMailboxDetailsRequest(const GetMailboxDetailsRequest &other);

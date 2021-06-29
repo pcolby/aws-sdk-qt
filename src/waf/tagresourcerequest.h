@@ -27,7 +27,7 @@ namespace WAF {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public WafRequest {
+class QTAWSWAF_EXPORT TagResourceRequest : public WafRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

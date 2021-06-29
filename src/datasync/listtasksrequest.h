@@ -27,7 +27,7 @@ namespace DataSync {
 
 class ListTasksRequestPrivate;
 
-class QTAWS_EXPORT ListTasksRequest : public DataSyncRequest {
+class QTAWSDATASYNC_EXPORT ListTasksRequest : public DataSyncRequest {
 
 public:
     ListTasksRequest(const ListTasksRequest &other);

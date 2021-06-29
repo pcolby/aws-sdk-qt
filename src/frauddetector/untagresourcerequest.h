@@ -27,7 +27,7 @@ namespace FraudDetector {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public FraudDetectorRequest {
+class QTAWSFRAUDDETECTOR_EXPORT UntagResourceRequest : public FraudDetectorRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

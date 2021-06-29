@@ -27,7 +27,7 @@ namespace ServiceCatalog {
 
 class DescribeProductAsAdminRequestPrivate;
 
-class QTAWS_EXPORT DescribeProductAsAdminRequest : public ServiceCatalogRequest {
+class QTAWSSERVICECATALOG_EXPORT DescribeProductAsAdminRequest : public ServiceCatalogRequest {
 
 public:
     DescribeProductAsAdminRequest(const DescribeProductAsAdminRequest &other);

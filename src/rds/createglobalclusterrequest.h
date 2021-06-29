@@ -27,7 +27,7 @@ namespace RDS {
 
 class CreateGlobalClusterRequestPrivate;
 
-class QTAWS_EXPORT CreateGlobalClusterRequest : public RdsRequest {
+class QTAWSRDS_EXPORT CreateGlobalClusterRequest : public RdsRequest {
 
 public:
     CreateGlobalClusterRequest(const CreateGlobalClusterRequest &other);

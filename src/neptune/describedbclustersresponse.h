@@ -28,7 +28,7 @@ namespace Neptune {
 
 class DescribeDBClustersResponsePrivate;
 
-class QTAWS_EXPORT DescribeDBClustersResponse : public NeptuneResponse {
+class QTAWSNEPTUNE_EXPORT DescribeDBClustersResponse : public NeptuneResponse {
     Q_OBJECT
 
 public:

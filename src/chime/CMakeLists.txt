@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCHIME_LIBRARY)
+
 add_library(QtAwsChime
   associatephonenumberswithvoiceconnectorgrouprequest.h
   associatephonenumberswithvoiceconnectorgrouprequest_p.h
@@ -601,6 +603,7 @@ add_library(QtAwsChime
   putvoiceconnectorterminationrequest_p.h
   putvoiceconnectorterminationresponse.h
   putvoiceconnectorterminationresponse_p.h
+  qtawschimeglobal.h
   redactchannelmessagerequest.h
   redactchannelmessagerequest_p.h
   redactchannelmessageresponse.h

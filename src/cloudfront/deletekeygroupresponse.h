@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class DeleteKeyGroupResponsePrivate;
 
-class QTAWS_EXPORT DeleteKeyGroupResponse : public CloudFrontResponse {
+class QTAWSCLOUDFRONT_EXPORT DeleteKeyGroupResponse : public CloudFrontResponse {
     Q_OBJECT
 
 public:

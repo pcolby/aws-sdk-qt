@@ -27,7 +27,7 @@ namespace Athena {
 
 class DeleteDataCatalogRequestPrivate;
 
-class QTAWS_EXPORT DeleteDataCatalogRequest : public AthenaRequest {
+class QTAWSATHENA_EXPORT DeleteDataCatalogRequest : public AthenaRequest {
 
 public:
     DeleteDataCatalogRequest(const DeleteDataCatalogRequest &other);

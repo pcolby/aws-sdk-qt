@@ -27,7 +27,7 @@ namespace MQ {
 
 class DescribeBrokerEngineTypesRequestPrivate;
 
-class QTAWS_EXPORT DescribeBrokerEngineTypesRequest : public MqRequest {
+class QTAWSMQ_EXPORT DescribeBrokerEngineTypesRequest : public MqRequest {
 
 public:
     DescribeBrokerEngineTypesRequest(const DescribeBrokerEngineTypesRequest &other);

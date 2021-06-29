@@ -28,7 +28,7 @@ namespace ECS {
 
 class PutClusterCapacityProvidersResponsePrivate;
 
-class QTAWS_EXPORT PutClusterCapacityProvidersResponse : public EcsResponse {
+class QTAWSECS_EXPORT PutClusterCapacityProvidersResponse : public EcsResponse {
     Q_OBJECT
 
 public:

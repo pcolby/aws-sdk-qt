@@ -27,7 +27,7 @@ namespace Lambda {
 
 class InvokeRequestPrivate;
 
-class QTAWS_EXPORT InvokeRequest : public LambdaRequest {
+class QTAWSLAMBDA_EXPORT InvokeRequest : public LambdaRequest {
 
 public:
     InvokeRequest(const InvokeRequest &other);

@@ -27,7 +27,7 @@ namespace Braket {
 
 class GetDeviceRequestPrivate;
 
-class QTAWS_EXPORT GetDeviceRequest : public BraketRequest {
+class QTAWSBRAKET_EXPORT GetDeviceRequest : public BraketRequest {
 
 public:
     GetDeviceRequest(const GetDeviceRequest &other);

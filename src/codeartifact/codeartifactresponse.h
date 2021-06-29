@@ -21,6 +21,8 @@
 #define QTAWS_CODEARTIFACTRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawscodeartifactglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace CodeArtifact {
 
 class CodeArtifactResponsePrivate;
 
-class QTAWS_EXPORT CodeArtifactResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCODEARTIFACT_EXPORT CodeArtifactResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

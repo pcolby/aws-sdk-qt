@@ -27,7 +27,7 @@ namespace WorkMail {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public WorkMailRequest {
+class QTAWSWORKMAIL_EXPORT UntagResourceRequest : public WorkMailRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

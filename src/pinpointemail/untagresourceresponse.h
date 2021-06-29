@@ -28,7 +28,7 @@ namespace PinpointEmail {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public PinpointEmailResponse {
+class QTAWSPINPOINTEMAIL_EXPORT UntagResourceResponse : public PinpointEmailResponse {
     Q_OBJECT
 
 public:

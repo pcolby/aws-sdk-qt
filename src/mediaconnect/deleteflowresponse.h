@@ -28,7 +28,7 @@ namespace MediaConnect {
 
 class DeleteFlowResponsePrivate;
 
-class QTAWS_EXPORT DeleteFlowResponse : public MediaConnectResponse {
+class QTAWSMEDIACONNECT_EXPORT DeleteFlowResponse : public MediaConnectResponse {
     Q_OBJECT
 
 public:

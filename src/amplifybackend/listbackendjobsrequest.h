@@ -27,7 +27,7 @@ namespace AmplifyBackend {
 
 class ListBackendJobsRequestPrivate;
 
-class QTAWS_EXPORT ListBackendJobsRequest : public AmplifyBackendRequest {
+class QTAWSAMPLIFYBACKEND_EXPORT ListBackendJobsRequest : public AmplifyBackendRequest {
 
 public:
     ListBackendJobsRequest(const ListBackendJobsRequest &other);

@@ -21,6 +21,8 @@
 #define QTAWS_IOTRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsiotglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace IoT {
 
 class IoTResponsePrivate;
 
-class QTAWS_EXPORT IoTResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSIOT_EXPORT IoTResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

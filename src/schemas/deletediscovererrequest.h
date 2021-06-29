@@ -27,7 +27,7 @@ namespace Schemas {
 
 class DeleteDiscovererRequestPrivate;
 
-class QTAWS_EXPORT DeleteDiscovererRequest : public SchemasRequest {
+class QTAWSSCHEMAS_EXPORT DeleteDiscovererRequest : public SchemasRequest {
 
 public:
     DeleteDiscovererRequest(const DeleteDiscovererRequest &other);

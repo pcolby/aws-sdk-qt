@@ -27,7 +27,7 @@ namespace NimbleStudio {
 
 class GetEulaRequestPrivate;
 
-class QTAWS_EXPORT GetEulaRequest : public NimbleStudioRequest {
+class QTAWSNIMBLESTUDIO_EXPORT GetEulaRequest : public NimbleStudioRequest {
 
 public:
     GetEulaRequest(const GetEulaRequest &other);

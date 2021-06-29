@@ -28,7 +28,7 @@ namespace NetworkManager {
 
 class GetDevicesResponsePrivate;
 
-class QTAWS_EXPORT GetDevicesResponse : public NetworkManagerResponse {
+class QTAWSNETWORKMANAGER_EXPORT GetDevicesResponse : public NetworkManagerResponse {
     Q_OBJECT
 
 public:

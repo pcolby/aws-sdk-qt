@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsbraketglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Braket {
 
 class BraketRequestPrivate;
 
-class QTAWS_EXPORT BraketRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSBRAKET_EXPORT BraketRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Braket.

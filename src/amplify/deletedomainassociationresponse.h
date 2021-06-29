@@ -28,7 +28,7 @@ namespace Amplify {
 
 class DeleteDomainAssociationResponsePrivate;
 
-class QTAWS_EXPORT DeleteDomainAssociationResponse : public AmplifyResponse {
+class QTAWSAMPLIFY_EXPORT DeleteDomainAssociationResponse : public AmplifyResponse {
     Q_OBJECT
 
 public:

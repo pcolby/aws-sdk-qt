@@ -28,7 +28,7 @@ namespace Snowball {
 
 class UpdateLongTermPricingResponsePrivate;
 
-class QTAWS_EXPORT UpdateLongTermPricingResponse : public SnowballResponse {
+class QTAWSSNOWBALL_EXPORT UpdateLongTermPricingResponse : public SnowballResponse {
     Q_OBJECT
 
 public:

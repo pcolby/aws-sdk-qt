@@ -21,6 +21,8 @@
 #define QTAWS_SIGNERRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawssignerglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace signer {
 
 class signerResponsePrivate;
 
-class QTAWS_EXPORT signerResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSIGNER_EXPORT signerResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

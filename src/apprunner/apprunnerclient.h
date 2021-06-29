@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsapprunnerglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -73,7 +75,7 @@ class UntagResourceResponse;
 class UpdateServiceRequest;
 class UpdateServiceResponse;
 
-class QTAWS_EXPORT AppRunnerClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSAPPRUNNER_EXPORT AppRunnerClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

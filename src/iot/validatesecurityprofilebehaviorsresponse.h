@@ -28,7 +28,7 @@ namespace IoT {
 
 class ValidateSecurityProfileBehaviorsResponsePrivate;
 
-class QTAWS_EXPORT ValidateSecurityProfileBehaviorsResponse : public IoTResponse {
+class QTAWSIOT_EXPORT ValidateSecurityProfileBehaviorsResponse : public IoTResponse {
     Q_OBJECT
 
 public:

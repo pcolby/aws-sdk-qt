@@ -27,7 +27,7 @@ namespace RDS {
 
 class RemoveTagsFromResourceRequestPrivate;
 
-class QTAWS_EXPORT RemoveTagsFromResourceRequest : public RdsRequest {
+class QTAWSRDS_EXPORT RemoveTagsFromResourceRequest : public RdsRequest {
 
 public:
     RemoveTagsFromResourceRequest(const RemoveTagsFromResourceRequest &other);

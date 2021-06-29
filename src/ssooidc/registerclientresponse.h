@@ -28,7 +28,7 @@ namespace SSOOIDC {
 
 class RegisterClientResponsePrivate;
 
-class QTAWS_EXPORT RegisterClientResponse : public SsooidcResponse {
+class QTAWSSSOOIDC_EXPORT RegisterClientResponse : public SsooidcResponse {
     Q_OBJECT
 
 public:

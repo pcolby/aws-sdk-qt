@@ -27,7 +27,7 @@ namespace NimbleStudio {
 
 class ListStreamingImagesRequestPrivate;
 
-class QTAWS_EXPORT ListStreamingImagesRequest : public NimbleStudioRequest {
+class QTAWSNIMBLESTUDIO_EXPORT ListStreamingImagesRequest : public NimbleStudioRequest {
 
 public:
     ListStreamingImagesRequest(const ListStreamingImagesRequest &other);

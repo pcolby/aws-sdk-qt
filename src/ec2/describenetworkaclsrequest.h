@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DescribeNetworkAclsRequestPrivate;
 
-class QTAWS_EXPORT DescribeNetworkAclsRequest : public Ec2Request {
+class QTAWSEC2_EXPORT DescribeNetworkAclsRequest : public Ec2Request {
 
 public:
     DescribeNetworkAclsRequest(const DescribeNetworkAclsRequest &other);

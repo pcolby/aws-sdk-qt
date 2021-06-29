@@ -27,7 +27,7 @@ namespace ECR {
 
 class TagResourceRequestPrivate;
 
-class QTAWS_EXPORT TagResourceRequest : public EcrRequest {
+class QTAWSECR_EXPORT TagResourceRequest : public EcrRequest {
 
 public:
     TagResourceRequest(const TagResourceRequest &other);

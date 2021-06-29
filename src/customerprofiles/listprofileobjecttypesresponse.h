@@ -28,7 +28,7 @@ namespace CustomerProfiles {
 
 class ListProfileObjectTypesResponsePrivate;
 
-class QTAWS_EXPORT ListProfileObjectTypesResponse : public CustomerProfilesResponse {
+class QTAWSCUSTOMERPROFILES_EXPORT ListProfileObjectTypesResponse : public CustomerProfilesResponse {
     Q_OBJECT
 
 public:

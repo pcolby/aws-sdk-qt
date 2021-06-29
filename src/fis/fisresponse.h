@@ -21,6 +21,8 @@
 #define QTAWS_FISRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsfisglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace FIS {
 
 class FisResponsePrivate;
 
-class QTAWS_EXPORT FisResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSFIS_EXPORT FisResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

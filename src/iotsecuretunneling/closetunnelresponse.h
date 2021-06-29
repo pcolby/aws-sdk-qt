@@ -28,7 +28,7 @@ namespace IoTSecureTunneling {
 
 class CloseTunnelResponsePrivate;
 
-class QTAWS_EXPORT CloseTunnelResponse : public IoTSecureTunnelingResponse {
+class QTAWSIOTSECURETUNNELING_EXPORT CloseTunnelResponse : public IoTSecureTunnelingResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace IoTSiteWise {
 
 class CreateAccessPolicyResponsePrivate;
 
-class QTAWS_EXPORT CreateAccessPolicyResponse : public IoTSiteWiseResponse {
+class QTAWSIOTSITEWISE_EXPORT CreateAccessPolicyResponse : public IoTSiteWiseResponse {
     Q_OBJECT
 
 public:

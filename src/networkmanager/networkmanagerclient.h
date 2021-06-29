@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsnetworkmanagerglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -99,7 +101,7 @@ class UpdateLinkResponse;
 class UpdateSiteRequest;
 class UpdateSiteResponse;
 
-class QTAWS_EXPORT NetworkManagerClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSNETWORKMANAGER_EXPORT NetworkManagerClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace EFS {
 
 class DescribeMountTargetSecurityGroupsRequestPrivate;
 
-class QTAWS_EXPORT DescribeMountTargetSecurityGroupsRequest : public EfsRequest {
+class QTAWSEFS_EXPORT DescribeMountTargetSecurityGroupsRequest : public EfsRequest {
 
 public:
     DescribeMountTargetSecurityGroupsRequest(const DescribeMountTargetSecurityGroupsRequest &other);

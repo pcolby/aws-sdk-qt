@@ -27,7 +27,7 @@ namespace Connect {
 
 class StartOutboundVoiceContactRequestPrivate;
 
-class QTAWS_EXPORT StartOutboundVoiceContactRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT StartOutboundVoiceContactRequest : public ConnectRequest {
 
 public:
     StartOutboundVoiceContactRequest(const StartOutboundVoiceContactRequest &other);

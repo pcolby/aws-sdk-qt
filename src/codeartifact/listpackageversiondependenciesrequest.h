@@ -27,7 +27,7 @@ namespace CodeArtifact {
 
 class ListPackageVersionDependenciesRequestPrivate;
 
-class QTAWS_EXPORT ListPackageVersionDependenciesRequest : public CodeArtifactRequest {
+class QTAWSCODEARTIFACT_EXPORT ListPackageVersionDependenciesRequest : public CodeArtifactRequest {
 
 public:
     ListPackageVersionDependenciesRequest(const ListPackageVersionDependenciesRequest &other);

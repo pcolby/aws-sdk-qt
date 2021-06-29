@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsconfigserviceglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace ConfigService {
 
 class ConfigServiceRequestPrivate;
 
-class QTAWS_EXPORT ConfigServiceRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCONFIGSERVICE_EXPORT ConfigServiceRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ConfigService.

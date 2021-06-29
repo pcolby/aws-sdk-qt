@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawstranslateglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -57,7 +59,7 @@ class TranslateTextResponse;
 class UpdateParallelDataRequest;
 class UpdateParallelDataResponse;
 
-class QTAWS_EXPORT TranslateClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSTRANSLATE_EXPORT TranslateClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

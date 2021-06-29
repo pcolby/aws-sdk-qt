@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSWAFV2_LIBRARY)
+
 add_library(QtAwsWafv2
   associatewebaclrequest.h
   associatewebaclrequest_p.h
@@ -135,6 +137,7 @@ add_library(QtAwsWafv2
   putpermissionpolicyrequest_p.h
   putpermissionpolicyresponse.h
   putpermissionpolicyresponse_p.h
+  qtawswafv2global.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

@@ -27,7 +27,7 @@ namespace ConfigService {
 
 class DeleteEvaluationResultsRequestPrivate;
 
-class QTAWS_EXPORT DeleteEvaluationResultsRequest : public ConfigServiceRequest {
+class QTAWSCONFIGSERVICE_EXPORT DeleteEvaluationResultsRequest : public ConfigServiceRequest {
 
 public:
     DeleteEvaluationResultsRequest(const DeleteEvaluationResultsRequest &other);

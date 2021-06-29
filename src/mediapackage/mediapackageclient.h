@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsmediapackageglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -67,7 +69,7 @@ class UpdateChannelResponse;
 class UpdateOriginEndpointRequest;
 class UpdateOriginEndpointResponse;
 
-class QTAWS_EXPORT MediaPackageClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSMEDIAPACKAGE_EXPORT MediaPackageClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

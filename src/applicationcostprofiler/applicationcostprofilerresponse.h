@@ -21,6 +21,8 @@
 #define QTAWS_APPLICATIONCOSTPROFILERRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsapplicationcostprofilerglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace ApplicationCostProfiler {
 
 class ApplicationCostProfilerResponsePrivate;
 
-class QTAWS_EXPORT ApplicationCostProfilerResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSAPPLICATIONCOSTPROFILER_EXPORT ApplicationCostProfilerResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace Kafka {
 
 class GetBootstrapBrokersRequestPrivate;
 
-class QTAWS_EXPORT GetBootstrapBrokersRequest : public KafkaRequest {
+class QTAWSKAFKA_EXPORT GetBootstrapBrokersRequest : public KafkaRequest {
 
 public:
     GetBootstrapBrokersRequest(const GetBootstrapBrokersRequest &other);

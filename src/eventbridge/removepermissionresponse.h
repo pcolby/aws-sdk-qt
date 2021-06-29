@@ -28,7 +28,7 @@ namespace EventBridge {
 
 class RemovePermissionResponsePrivate;
 
-class QTAWS_EXPORT RemovePermissionResponse : public EventBridgeResponse {
+class QTAWSEVENTBRIDGE_EXPORT RemovePermissionResponse : public EventBridgeResponse {
     Q_OBJECT
 
 public:

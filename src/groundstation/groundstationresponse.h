@@ -21,6 +21,8 @@
 #define QTAWS_GROUNDSTATIONRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsgroundstationglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace GroundStation {
 
 class GroundStationResponsePrivate;
 
-class QTAWS_EXPORT GroundStationResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSGROUNDSTATION_EXPORT GroundStationResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

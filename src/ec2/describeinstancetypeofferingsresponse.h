@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeInstanceTypeOfferingsResponsePrivate;
 
-class QTAWS_EXPORT DescribeInstanceTypeOfferingsResponse : public Ec2Response {
+class QTAWSEC2_EXPORT DescribeInstanceTypeOfferingsResponse : public Ec2Response {
     Q_OBJECT
 
 public:

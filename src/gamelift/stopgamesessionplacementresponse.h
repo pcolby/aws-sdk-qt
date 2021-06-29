@@ -28,7 +28,7 @@ namespace GameLift {
 
 class StopGameSessionPlacementResponsePrivate;
 
-class QTAWS_EXPORT StopGameSessionPlacementResponse : public GameLiftResponse {
+class QTAWSGAMELIFT_EXPORT StopGameSessionPlacementResponse : public GameLiftResponse {
     Q_OBJECT
 
 public:

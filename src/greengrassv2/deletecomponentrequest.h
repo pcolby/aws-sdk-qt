@@ -27,7 +27,7 @@ namespace GreengrassV2 {
 
 class DeleteComponentRequestPrivate;
 
-class QTAWS_EXPORT DeleteComponentRequest : public GreengrassV2Request {
+class QTAWSGREENGRASSV2_EXPORT DeleteComponentRequest : public GreengrassV2Request {
 
 public:
     DeleteComponentRequest(const DeleteComponentRequest &other);

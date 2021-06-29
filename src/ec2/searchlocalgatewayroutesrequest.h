@@ -27,7 +27,7 @@ namespace EC2 {
 
 class SearchLocalGatewayRoutesRequestPrivate;
 
-class QTAWS_EXPORT SearchLocalGatewayRoutesRequest : public Ec2Request {
+class QTAWSEC2_EXPORT SearchLocalGatewayRoutesRequest : public Ec2Request {
 
 public:
     SearchLocalGatewayRoutesRequest(const SearchLocalGatewayRoutesRequest &other);

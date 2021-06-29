@@ -27,7 +27,7 @@ namespace WorkLink {
 
 class DescribeAuditStreamConfigurationRequestPrivate;
 
-class QTAWS_EXPORT DescribeAuditStreamConfigurationRequest : public WorkLinkRequest {
+class QTAWSWORKLINK_EXPORT DescribeAuditStreamConfigurationRequest : public WorkLinkRequest {
 
 public:
     DescribeAuditStreamConfigurationRequest(const DescribeAuditStreamConfigurationRequest &other);

@@ -27,7 +27,7 @@ namespace CustomerProfiles {
 
 class SearchProfilesRequestPrivate;
 
-class QTAWS_EXPORT SearchProfilesRequest : public CustomerProfilesRequest {
+class QTAWSCUSTOMERPROFILES_EXPORT SearchProfilesRequest : public CustomerProfilesRequest {
 
 public:
     SearchProfilesRequest(const SearchProfilesRequest &other);

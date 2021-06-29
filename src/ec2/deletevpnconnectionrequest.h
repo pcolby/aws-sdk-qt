@@ -27,7 +27,7 @@ namespace EC2 {
 
 class DeleteVpnConnectionRequestPrivate;
 
-class QTAWS_EXPORT DeleteVpnConnectionRequest : public Ec2Request {
+class QTAWSEC2_EXPORT DeleteVpnConnectionRequest : public Ec2Request {
 
 public:
     DeleteVpnConnectionRequest(const DeleteVpnConnectionRequest &other);

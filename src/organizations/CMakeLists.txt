@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSORGANIZATIONS_LIBRARY)
+
 add_library(QtAwsOrganizations
   accepthandshakerequest.h
   accepthandshakerequest_p.h
@@ -185,6 +187,7 @@ add_library(QtAwsOrganizations
   organizationsrequest_p.h
   organizationsresponse.h
   organizationsresponse_p.h
+  qtawsorganizationsglobal.h
   registerdelegatedadministratorrequest.h
   registerdelegatedadministratorrequest_p.h
   registerdelegatedadministratorresponse.h

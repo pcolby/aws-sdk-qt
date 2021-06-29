@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsopsworkscmglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -67,7 +69,7 @@ class UpdateServerResponse;
 class UpdateServerEngineAttributesRequest;
 class UpdateServerEngineAttributesResponse;
 
-class QTAWS_EXPORT OpsWorksCMClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSOPSWORKSCM_EXPORT OpsWorksCMClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

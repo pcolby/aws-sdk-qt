@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class PutAccessControlRuleResponsePrivate;
 
-class QTAWS_EXPORT PutAccessControlRuleResponse : public WorkMailResponse {
+class QTAWSWORKMAIL_EXPORT PutAccessControlRuleResponse : public WorkMailResponse {
     Q_OBJECT
 
 public:

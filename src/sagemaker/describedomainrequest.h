@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class DescribeDomainRequestPrivate;
 
-class QTAWS_EXPORT DescribeDomainRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT DescribeDomainRequest : public SageMakerRequest {
 
 public:
     DescribeDomainRequest(const DescribeDomainRequest &other);

@@ -28,7 +28,7 @@ namespace Comprehend {
 
 class StopEventsDetectionJobResponsePrivate;
 
-class QTAWS_EXPORT StopEventsDetectionJobResponse : public ComprehendResponse {
+class QTAWSCOMPREHEND_EXPORT StopEventsDetectionJobResponse : public ComprehendResponse {
     Q_OBJECT
 
 public:

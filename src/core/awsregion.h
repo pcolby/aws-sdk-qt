@@ -20,7 +20,7 @@
 #ifndef AWSREGION_H
 #define AWSREGION_H
 
-#include "qtawsglobal.h"
+#include "qtawscoreglobal.h"
 #include "awsendpoint.h"
 
 #include <QFlags>
@@ -31,7 +31,7 @@ namespace Core {
 
 class AwsRegionPrivate;
 
-class QTAWS_EXPORT AwsRegion {
+class QTAWSCORE_EXPORT AwsRegion {
 
 public:
     /// Bit flags representing the possible cardinal directions of

@@ -27,7 +27,7 @@ namespace KMS {
 
 class GenerateDataKeyPairRequestPrivate;
 
-class QTAWS_EXPORT GenerateDataKeyPairRequest : public KmsRequest {
+class QTAWSKMS_EXPORT GenerateDataKeyPairRequest : public KmsRequest {
 
 public:
     GenerateDataKeyPairRequest(const GenerateDataKeyPairRequest &other);

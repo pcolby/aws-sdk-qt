@@ -27,7 +27,7 @@ namespace CloudTrail {
 
 class PutEventSelectorsRequestPrivate;
 
-class QTAWS_EXPORT PutEventSelectorsRequest : public CloudTrailRequest {
+class QTAWSCLOUDTRAIL_EXPORT PutEventSelectorsRequest : public CloudTrailRequest {
 
 public:
     PutEventSelectorsRequest(const PutEventSelectorsRequest &other);

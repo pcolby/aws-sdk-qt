@@ -27,7 +27,7 @@ namespace ManagedBlockchain {
 
 class UpdateMemberRequestPrivate;
 
-class QTAWS_EXPORT UpdateMemberRequest : public ManagedBlockchainRequest {
+class QTAWSMANAGEDBLOCKCHAIN_EXPORT UpdateMemberRequest : public ManagedBlockchainRequest {
 
 public:
     UpdateMemberRequest(const UpdateMemberRequest &other);

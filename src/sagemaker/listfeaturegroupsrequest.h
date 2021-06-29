@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class ListFeatureGroupsRequestPrivate;
 
-class QTAWS_EXPORT ListFeatureGroupsRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT ListFeatureGroupsRequest : public SageMakerRequest {
 
 public:
     ListFeatureGroupsRequest(const ListFeatureGroupsRequest &other);

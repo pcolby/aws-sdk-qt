@@ -27,7 +27,7 @@ namespace ImportExport {
 
 class CreateJobRequestPrivate;
 
-class QTAWS_EXPORT CreateJobRequest : public ImportExportRequest {
+class QTAWSIMPORTEXPORT_EXPORT CreateJobRequest : public ImportExportRequest {
 
 public:
     CreateJobRequest(const CreateJobRequest &other);

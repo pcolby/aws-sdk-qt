@@ -27,7 +27,7 @@ namespace AppConfig {
 
 class DeleteDeploymentStrategyRequestPrivate;
 
-class QTAWS_EXPORT DeleteDeploymentStrategyRequest : public AppConfigRequest {
+class QTAWSAPPCONFIG_EXPORT DeleteDeploymentStrategyRequest : public AppConfigRequest {
 
 public:
     DeleteDeploymentStrategyRequest(const DeleteDeploymentStrategyRequest &other);

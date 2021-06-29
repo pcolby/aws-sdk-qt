@@ -27,7 +27,7 @@ namespace DataSync {
 
 class CancelTaskExecutionRequestPrivate;
 
-class QTAWS_EXPORT CancelTaskExecutionRequest : public DataSyncRequest {
+class QTAWSDATASYNC_EXPORT CancelTaskExecutionRequest : public DataSyncRequest {
 
 public:
     CancelTaskExecutionRequest(const CancelTaskExecutionRequest &other);

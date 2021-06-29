@@ -27,7 +27,7 @@ namespace AppStream {
 
 class UpdateFleetRequestPrivate;
 
-class QTAWS_EXPORT UpdateFleetRequest : public AppStreamRequest {
+class QTAWSAPPSTREAM_EXPORT UpdateFleetRequest : public AppStreamRequest {
 
 public:
     UpdateFleetRequest(const UpdateFleetRequest &other);

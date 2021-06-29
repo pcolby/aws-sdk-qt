@@ -27,7 +27,7 @@ namespace IAM {
 
 class UploadSSHPublicKeyRequestPrivate;
 
-class QTAWS_EXPORT UploadSSHPublicKeyRequest : public IamRequest {
+class QTAWSIAM_EXPORT UploadSSHPublicKeyRequest : public IamRequest {
 
 public:
     UploadSSHPublicKeyRequest(const UploadSSHPublicKeyRequest &other);

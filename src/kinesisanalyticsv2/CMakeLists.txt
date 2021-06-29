@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSKINESISANALYTICSV2_LIBRARY)
+
 add_library(QtAwsKinesisAnalyticsV2
   addapplicationcloudwatchloggingoptionrequest.h
   addapplicationcloudwatchloggingoptionrequest_p.h
@@ -101,6 +103,7 @@ add_library(QtAwsKinesisAnalyticsV2
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawskinesisanalyticsv2global.h
   rollbackapplicationrequest.h
   rollbackapplicationrequest_p.h
   rollbackapplicationresponse.h

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawscodepipelineglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace CodePipeline {
 
 class CodePipelineRequestPrivate;
 
-class QTAWS_EXPORT CodePipelineRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCODEPIPELINE_EXPORT CodePipelineRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CodePipeline.

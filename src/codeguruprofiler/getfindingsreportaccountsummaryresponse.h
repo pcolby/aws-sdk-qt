@@ -28,7 +28,7 @@ namespace CodeGuruProfiler {
 
 class GetFindingsReportAccountSummaryResponsePrivate;
 
-class QTAWS_EXPORT GetFindingsReportAccountSummaryResponse : public CodeGuruProfilerResponse {
+class QTAWSCODEGURUPROFILER_EXPORT GetFindingsReportAccountSummaryResponse : public CodeGuruProfilerResponse {
     Q_OBJECT
 
 public:

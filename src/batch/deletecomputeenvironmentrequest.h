@@ -27,7 +27,7 @@ namespace Batch {
 
 class DeleteComputeEnvironmentRequestPrivate;
 
-class QTAWS_EXPORT DeleteComputeEnvironmentRequest : public BatchRequest {
+class QTAWSBATCH_EXPORT DeleteComputeEnvironmentRequest : public BatchRequest {
 
 public:
     DeleteComputeEnvironmentRequest(const DeleteComputeEnvironmentRequest &other);

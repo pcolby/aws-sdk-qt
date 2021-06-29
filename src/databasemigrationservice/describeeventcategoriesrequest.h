@@ -27,7 +27,7 @@ namespace DatabaseMigrationService {
 
 class DescribeEventCategoriesRequestPrivate;
 
-class QTAWS_EXPORT DescribeEventCategoriesRequest : public DatabaseMigrationServiceRequest {
+class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DescribeEventCategoriesRequest : public DatabaseMigrationServiceRequest {
 
 public:
     DescribeEventCategoriesRequest(const DescribeEventCategoriesRequest &other);

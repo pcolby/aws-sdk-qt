@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsapplicationinsightsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -83,7 +85,7 @@ class UpdateComponentConfigurationResponse;
 class UpdateLogPatternRequest;
 class UpdateLogPatternResponse;
 
-class QTAWS_EXPORT ApplicationInsightsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSAPPLICATIONINSIGHTS_EXPORT ApplicationInsightsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

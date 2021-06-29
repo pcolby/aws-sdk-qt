@@ -27,7 +27,7 @@ namespace kendra {
 
 class UpdateDataSourceRequestPrivate;
 
-class QTAWS_EXPORT UpdateDataSourceRequest : public kendraRequest {
+class QTAWSKENDRA_EXPORT UpdateDataSourceRequest : public kendraRequest {
 
 public:
     UpdateDataSourceRequest(const UpdateDataSourceRequest &other);

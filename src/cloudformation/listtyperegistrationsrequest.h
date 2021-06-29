@@ -27,7 +27,7 @@ namespace CloudFormation {
 
 class ListTypeRegistrationsRequestPrivate;
 
-class QTAWS_EXPORT ListTypeRegistrationsRequest : public CloudFormationRequest {
+class QTAWSCLOUDFORMATION_EXPORT ListTypeRegistrationsRequest : public CloudFormationRequest {
 
 public:
     ListTypeRegistrationsRequest(const ListTypeRegistrationsRequest &other);

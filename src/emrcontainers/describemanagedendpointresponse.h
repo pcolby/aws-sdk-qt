@@ -28,7 +28,7 @@ namespace EMRContainers {
 
 class DescribeManagedEndpointResponsePrivate;
 
-class QTAWS_EXPORT DescribeManagedEndpointResponse : public EMRContainersResponse {
+class QTAWSEMRCONTAINERS_EXPORT DescribeManagedEndpointResponse : public EMRContainersResponse {
     Q_OBJECT
 
 public:

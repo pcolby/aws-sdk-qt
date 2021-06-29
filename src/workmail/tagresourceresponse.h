@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public WorkMailResponse {
+class QTAWSWORKMAIL_EXPORT TagResourceResponse : public WorkMailResponse {
     Q_OBJECT
 
 public:

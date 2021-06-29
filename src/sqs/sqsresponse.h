@@ -21,6 +21,8 @@
 #define QTAWS_SQSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawssqsglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace SQS {
 
 class SqsResponsePrivate;
 
-class QTAWS_EXPORT SqsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSQS_EXPORT SqsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class DeleteConfigurationSetEventDestinationResponsePrivate;
 
-class QTAWS_EXPORT DeleteConfigurationSetEventDestinationResponse : public Sesv2Response {
+class QTAWSSESV2_EXPORT DeleteConfigurationSetEventDestinationResponse : public Sesv2Response {
     Q_OBJECT
 
 public:

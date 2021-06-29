@@ -27,7 +27,7 @@ namespace Chime {
 
 class ListChannelsModeratedByAppInstanceUserRequestPrivate;
 
-class QTAWS_EXPORT ListChannelsModeratedByAppInstanceUserRequest : public ChimeRequest {
+class QTAWSCHIME_EXPORT ListChannelsModeratedByAppInstanceUserRequest : public ChimeRequest {
 
 public:
     ListChannelsModeratedByAppInstanceUserRequest(const ListChannelsModeratedByAppInstanceUserRequest &other);

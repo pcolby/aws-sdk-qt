@@ -27,7 +27,7 @@ namespace Rekognition {
 
 class ListCollectionsRequestPrivate;
 
-class QTAWS_EXPORT ListCollectionsRequest : public RekognitionRequest {
+class QTAWSREKOGNITION_EXPORT ListCollectionsRequest : public RekognitionRequest {
 
 public:
     ListCollectionsRequest(const ListCollectionsRequest &other);

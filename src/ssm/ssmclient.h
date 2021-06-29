@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsssmglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -299,7 +301,7 @@ class UpdateResourceDataSyncResponse;
 class UpdateServiceSettingRequest;
 class UpdateServiceSettingResponse;
 
-class QTAWS_EXPORT SsmClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSSM_EXPORT SsmClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

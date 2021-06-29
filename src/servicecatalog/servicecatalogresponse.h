@@ -21,6 +21,8 @@
 #define QTAWS_SERVICECATALOGRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsservicecatalogglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace ServiceCatalog {
 
 class ServiceCatalogResponsePrivate;
 
-class QTAWS_EXPORT ServiceCatalogResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSERVICECATALOG_EXPORT ServiceCatalogResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

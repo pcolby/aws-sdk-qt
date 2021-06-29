@@ -27,7 +27,7 @@ namespace Organizations {
 
 class DisablePolicyTypeRequestPrivate;
 
-class QTAWS_EXPORT DisablePolicyTypeRequest : public OrganizationsRequest {
+class QTAWSORGANIZATIONS_EXPORT DisablePolicyTypeRequest : public OrganizationsRequest {
 
 public:
     DisablePolicyTypeRequest(const DisablePolicyTypeRequest &other);

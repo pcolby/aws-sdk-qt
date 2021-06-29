@@ -27,7 +27,7 @@ namespace AppStream {
 
 class StartImageBuilderRequestPrivate;
 
-class QTAWS_EXPORT StartImageBuilderRequest : public AppStreamRequest {
+class QTAWSAPPSTREAM_EXPORT StartImageBuilderRequest : public AppStreamRequest {
 
 public:
     StartImageBuilderRequest(const StartImageBuilderRequest &other);

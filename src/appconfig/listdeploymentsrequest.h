@@ -27,7 +27,7 @@ namespace AppConfig {
 
 class ListDeploymentsRequestPrivate;
 
-class QTAWS_EXPORT ListDeploymentsRequest : public AppConfigRequest {
+class QTAWSAPPCONFIG_EXPORT ListDeploymentsRequest : public AppConfigRequest {
 
 public:
     ListDeploymentsRequest(const ListDeploymentsRequest &other);

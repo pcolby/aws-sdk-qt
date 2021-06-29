@@ -27,7 +27,7 @@ namespace CodeDeploy {
 
 class RemoveTagsFromOnPremisesInstancesRequestPrivate;
 
-class QTAWS_EXPORT RemoveTagsFromOnPremisesInstancesRequest : public CodeDeployRequest {
+class QTAWSCODEDEPLOY_EXPORT RemoveTagsFromOnPremisesInstancesRequest : public CodeDeployRequest {
 
 public:
     RemoveTagsFromOnPremisesInstancesRequest(const RemoveTagsFromOnPremisesInstancesRequest &other);

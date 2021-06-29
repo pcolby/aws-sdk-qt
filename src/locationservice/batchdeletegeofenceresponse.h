@@ -28,7 +28,7 @@ namespace LocationService {
 
 class BatchDeleteGeofenceResponsePrivate;
 
-class QTAWS_EXPORT BatchDeleteGeofenceResponse : public LocationServiceResponse {
+class QTAWSLOCATIONSERVICE_EXPORT BatchDeleteGeofenceResponse : public LocationServiceResponse {
     Q_OBJECT
 
 public:

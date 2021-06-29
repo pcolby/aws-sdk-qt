@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSECRETSMANAGER_LIBRARY)
+
 add_library(QtAwsSecretsManager
   cancelrotatesecretrequest.h
   cancelrotatesecretrequest_p.h
@@ -47,6 +49,7 @@ add_library(QtAwsSecretsManager
   putsecretvaluerequest_p.h
   putsecretvalueresponse.h
   putsecretvalueresponse_p.h
+  qtawssecretsmanagerglobal.h
   removeregionsfromreplicationrequest.h
   removeregionsfromreplicationrequest_p.h
   removeregionsfromreplicationresponse.h

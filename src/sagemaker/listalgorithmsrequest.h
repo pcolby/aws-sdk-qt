@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class ListAlgorithmsRequestPrivate;
 
-class QTAWS_EXPORT ListAlgorithmsRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT ListAlgorithmsRequest : public SageMakerRequest {
 
 public:
     ListAlgorithmsRequest(const ListAlgorithmsRequest &other);

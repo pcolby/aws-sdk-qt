@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSFN_LIBRARY)
+
 add_library(QtAwsSfn
   createactivityrequest.h
   createactivityrequest_p.h
@@ -55,6 +57,7 @@ add_library(QtAwsSfn
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawssfnglobal.h
   sendtaskfailurerequest.h
   sendtaskfailurerequest_p.h
   sendtaskfailureresponse.h

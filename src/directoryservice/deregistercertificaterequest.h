@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class DeregisterCertificateRequestPrivate;
 
-class QTAWS_EXPORT DeregisterCertificateRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT DeregisterCertificateRequest : public DirectoryServiceRequest {
 
 public:
     DeregisterCertificateRequest(const DeregisterCertificateRequest &other);

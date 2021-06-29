@@ -27,7 +27,7 @@ namespace ElasticBeanstalk {
 
 class DeleteApplicationRequestPrivate;
 
-class QTAWS_EXPORT DeleteApplicationRequest : public ElasticBeanstalkRequest {
+class QTAWSELASTICBEANSTALK_EXPORT DeleteApplicationRequest : public ElasticBeanstalkRequest {
 
 public:
     DeleteApplicationRequest(const DeleteApplicationRequest &other);

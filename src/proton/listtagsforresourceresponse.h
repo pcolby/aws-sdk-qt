@@ -28,7 +28,7 @@ namespace Proton {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public ProtonResponse {
+class QTAWSPROTON_EXPORT ListTagsForResourceResponse : public ProtonResponse {
     Q_OBJECT
 
 public:

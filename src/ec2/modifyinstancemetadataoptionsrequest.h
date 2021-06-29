@@ -27,7 +27,7 @@ namespace EC2 {
 
 class ModifyInstanceMetadataOptionsRequestPrivate;
 
-class QTAWS_EXPORT ModifyInstanceMetadataOptionsRequest : public Ec2Request {
+class QTAWSEC2_EXPORT ModifyInstanceMetadataOptionsRequest : public Ec2Request {
 
 public:
     ModifyInstanceMetadataOptionsRequest(const ModifyInstanceMetadataOptionsRequest &other);

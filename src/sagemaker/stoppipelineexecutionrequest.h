@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class StopPipelineExecutionRequestPrivate;
 
-class QTAWS_EXPORT StopPipelineExecutionRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT StopPipelineExecutionRequest : public SageMakerRequest {
 
 public:
     StopPipelineExecutionRequest(const StopPipelineExecutionRequest &other);

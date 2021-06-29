@@ -28,7 +28,7 @@ namespace AuditManager {
 
 class GetChangeLogsResponsePrivate;
 
-class QTAWS_EXPORT GetChangeLogsResponse : public AuditManagerResponse {
+class QTAWSAUDITMANAGER_EXPORT GetChangeLogsResponse : public AuditManagerResponse {
     Q_OBJECT
 
 public:

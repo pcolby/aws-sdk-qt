@@ -28,7 +28,7 @@ namespace kendra {
 
 class SubmitFeedbackResponsePrivate;
 
-class QTAWS_EXPORT SubmitFeedbackResponse : public kendraResponse {
+class QTAWSKENDRA_EXPORT SubmitFeedbackResponse : public kendraResponse {
     Q_OBJECT
 
 public:

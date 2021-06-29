@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSWAF_LIBRARY)
+
 add_library(QtAwsWaf
   createbytematchsetrequest.h
   createbytematchsetrequest_p.h
@@ -251,6 +253,7 @@ add_library(QtAwsWaf
   putpermissionpolicyrequest_p.h
   putpermissionpolicyresponse.h
   putpermissionpolicyresponse_p.h
+  qtawswafglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

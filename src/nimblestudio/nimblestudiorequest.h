@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsnimblestudioglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace NimbleStudio {
 
 class NimbleStudioRequestPrivate;
 
-class QTAWS_EXPORT NimbleStudioRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSNIMBLESTUDIO_EXPORT NimbleStudioRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by NimbleStudio.

@@ -27,7 +27,7 @@ namespace Neptune {
 
 class CopyDBClusterParameterGroupRequestPrivate;
 
-class QTAWS_EXPORT CopyDBClusterParameterGroupRequest : public NeptuneRequest {
+class QTAWSNEPTUNE_EXPORT CopyDBClusterParameterGroupRequest : public NeptuneRequest {
 
 public:
     CopyDBClusterParameterGroupRequest(const CopyDBClusterParameterGroupRequest &other);

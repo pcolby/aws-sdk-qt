@@ -21,6 +21,8 @@
 #define QTAWS_SMSRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawssmsglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace SMS {
 
 class SmsResponsePrivate;
 
-class QTAWS_EXPORT SmsResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSSMS_EXPORT SmsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

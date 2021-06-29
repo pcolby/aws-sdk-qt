@@ -27,7 +27,7 @@ namespace KinesisAnalyticsV2 {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public KinesisAnalyticsV2Request {
+class QTAWSKINESISANALYTICSV2_EXPORT UntagResourceRequest : public KinesisAnalyticsV2Request {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

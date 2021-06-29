@@ -27,7 +27,7 @@ namespace Glue {
 
 class GetMappingRequestPrivate;
 
-class QTAWS_EXPORT GetMappingRequest : public GlueRequest {
+class QTAWSGLUE_EXPORT GetMappingRequest : public GlueRequest {
 
 public:
     GetMappingRequest(const GetMappingRequest &other);

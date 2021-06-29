@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawschimeglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace Chime {
 
 class ChimeRequestPrivate;
 
-class QTAWS_EXPORT ChimeRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCHIME_EXPORT ChimeRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by Chime.

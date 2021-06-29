@@ -28,7 +28,7 @@ namespace Glacier {
 
 class GetDataRetrievalPolicyResponsePrivate;
 
-class QTAWS_EXPORT GetDataRetrievalPolicyResponse : public GlacierResponse {
+class QTAWSGLACIER_EXPORT GetDataRetrievalPolicyResponse : public GlacierResponse {
     Q_OBJECT
 
 public:

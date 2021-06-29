@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class EnableKinesisStreamingDestinationResponsePrivate;
 
-class QTAWS_EXPORT EnableKinesisStreamingDestinationResponse : public DynamoDBResponse {
+class QTAWSDYNAMODB_EXPORT EnableKinesisStreamingDestinationResponse : public DynamoDBResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace CloudWatchLogs {
 
 class PutSubscriptionFilterRequestPrivate;
 
-class QTAWS_EXPORT PutSubscriptionFilterRequest : public CloudWatchLogsRequest {
+class QTAWSCLOUDWATCHLOGS_EXPORT PutSubscriptionFilterRequest : public CloudWatchLogsRequest {
 
 public:
     PutSubscriptionFilterRequest(const PutSubscriptionFilterRequest &other);

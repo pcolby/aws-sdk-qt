@@ -28,7 +28,7 @@ namespace kendra {
 
 class DeleteQuerySuggestionsBlockListResponsePrivate;
 
-class QTAWS_EXPORT DeleteQuerySuggestionsBlockListResponse : public kendraResponse {
+class QTAWSKENDRA_EXPORT DeleteQuerySuggestionsBlockListResponse : public kendraResponse {
     Q_OBJECT
 
 public:

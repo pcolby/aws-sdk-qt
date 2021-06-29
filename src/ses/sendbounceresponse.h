@@ -28,7 +28,7 @@ namespace SES {
 
 class SendBounceResponsePrivate;
 
-class QTAWS_EXPORT SendBounceResponse : public SesResponse {
+class QTAWSSES_EXPORT SendBounceResponse : public SesResponse {
     Q_OBJECT
 
 public:

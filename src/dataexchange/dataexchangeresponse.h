@@ -21,6 +21,8 @@
 #define QTAWS_DATAEXCHANGERESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsdataexchangeglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace DataExchange {
 
 class DataExchangeResponsePrivate;
 
-class QTAWS_EXPORT DataExchangeResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSDATAEXCHANGE_EXPORT DataExchangeResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

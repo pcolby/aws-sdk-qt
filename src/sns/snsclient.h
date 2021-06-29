@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawssnsglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -107,7 +109,7 @@ class UntagResourceResponse;
 class VerifySMSSandboxPhoneNumberRequest;
 class VerifySMSSandboxPhoneNumberResponse;
 
-class QTAWS_EXPORT SnsClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSNS_EXPORT SnsClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

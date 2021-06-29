@@ -27,7 +27,7 @@ namespace WorkSpaces {
 
 class UpdateWorkspaceImagePermissionRequestPrivate;
 
-class QTAWS_EXPORT UpdateWorkspaceImagePermissionRequest : public WorkSpacesRequest {
+class QTAWSWORKSPACES_EXPORT UpdateWorkspaceImagePermissionRequest : public WorkSpacesRequest {
 
 public:
     UpdateWorkspaceImagePermissionRequest(const UpdateWorkspaceImagePermissionRequest &other);

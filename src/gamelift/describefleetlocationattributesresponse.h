@@ -28,7 +28,7 @@ namespace GameLift {
 
 class DescribeFleetLocationAttributesResponsePrivate;
 
-class QTAWS_EXPORT DescribeFleetLocationAttributesResponse : public GameLiftResponse {
+class QTAWSGAMELIFT_EXPORT DescribeFleetLocationAttributesResponse : public GameLiftResponse {
     Q_OBJECT
 
 public:

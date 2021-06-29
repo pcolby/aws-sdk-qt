@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class ListUsersInGroupResponsePrivate;
 
-class QTAWS_EXPORT ListUsersInGroupResponse : public CognitoIdentityProviderResponse {
+class QTAWSCOGNITOIDENTITYPROVIDER_EXPORT ListUsersInGroupResponse : public CognitoIdentityProviderResponse {
     Q_OBJECT
 
 public:

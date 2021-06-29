@@ -27,7 +27,7 @@ namespace EC2 {
 
 class AuthorizeClientVpnIngressRequestPrivate;
 
-class QTAWS_EXPORT AuthorizeClientVpnIngressRequest : public Ec2Request {
+class QTAWSEC2_EXPORT AuthorizeClientVpnIngressRequest : public Ec2Request {
 
 public:
     AuthorizeClientVpnIngressRequest(const AuthorizeClientVpnIngressRequest &other);

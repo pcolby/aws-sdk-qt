@@ -27,7 +27,7 @@ namespace CustomerProfiles {
 
 class GetIntegrationRequestPrivate;
 
-class QTAWS_EXPORT GetIntegrationRequest : public CustomerProfilesRequest {
+class QTAWSCUSTOMERPROFILES_EXPORT GetIntegrationRequest : public CustomerProfilesRequest {
 
 public:
     GetIntegrationRequest(const GetIntegrationRequest &other);

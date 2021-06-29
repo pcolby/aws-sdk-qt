@@ -27,7 +27,7 @@ namespace kendra {
 
 class UpdateIndexRequestPrivate;
 
-class QTAWS_EXPORT UpdateIndexRequest : public kendraRequest {
+class QTAWSKENDRA_EXPORT UpdateIndexRequest : public kendraRequest {
 
 public:
     UpdateIndexRequest(const UpdateIndexRequest &other);

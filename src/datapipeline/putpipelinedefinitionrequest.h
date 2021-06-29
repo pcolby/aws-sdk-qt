@@ -27,7 +27,7 @@ namespace DataPipeline {
 
 class PutPipelineDefinitionRequestPrivate;
 
-class QTAWS_EXPORT PutPipelineDefinitionRequest : public DataPipelineRequest {
+class QTAWSDATAPIPELINE_EXPORT PutPipelineDefinitionRequest : public DataPipelineRequest {
 
 public:
     PutPipelineDefinitionRequest(const PutPipelineDefinitionRequest &other);

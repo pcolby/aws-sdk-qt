@@ -27,7 +27,7 @@ namespace SageMaker {
 
 class DeleteAssociationRequestPrivate;
 
-class QTAWS_EXPORT DeleteAssociationRequest : public SageMakerRequest {
+class QTAWSSAGEMAKER_EXPORT DeleteAssociationRequest : public SageMakerRequest {
 
 public:
     DeleteAssociationRequest(const DeleteAssociationRequest &other);

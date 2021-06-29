@@ -28,7 +28,7 @@ namespace ConnectParticipant {
 
 class DisconnectParticipantResponsePrivate;
 
-class QTAWS_EXPORT DisconnectParticipantResponse : public ConnectParticipantResponse {
+class QTAWSCONNECTPARTICIPANT_EXPORT DisconnectParticipantResponse : public ConnectParticipantResponse {
     Q_OBJECT
 
 public:

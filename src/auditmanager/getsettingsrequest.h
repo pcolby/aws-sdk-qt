@@ -27,7 +27,7 @@ namespace AuditManager {
 
 class GetSettingsRequestPrivate;
 
-class QTAWS_EXPORT GetSettingsRequest : public AuditManagerRequest {
+class QTAWSAUDITMANAGER_EXPORT GetSettingsRequest : public AuditManagerRequest {
 
 public:
     GetSettingsRequest(const GetSettingsRequest &other);

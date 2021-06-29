@@ -28,7 +28,7 @@ namespace AppRunner {
 
 class DeleteAutoScalingConfigurationResponsePrivate;
 
-class QTAWS_EXPORT DeleteAutoScalingConfigurationResponse : public AppRunnerResponse {
+class QTAWSAPPRUNNER_EXPORT DeleteAutoScalingConfigurationResponse : public AppRunnerResponse {
     Q_OBJECT
 
 public:

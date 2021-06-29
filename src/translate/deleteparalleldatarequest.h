@@ -27,7 +27,7 @@ namespace Translate {
 
 class DeleteParallelDataRequestPrivate;
 
-class QTAWS_EXPORT DeleteParallelDataRequest : public TranslateRequest {
+class QTAWSTRANSLATE_EXPORT DeleteParallelDataRequest : public TranslateRequest {
 
 public:
     DeleteParallelDataRequest(const DeleteParallelDataRequest &other);

@@ -27,7 +27,7 @@ namespace Redshift {
 
 class DeleteHsmClientCertificateRequestPrivate;
 
-class QTAWS_EXPORT DeleteHsmClientCertificateRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT DeleteHsmClientCertificateRequest : public RedshiftRequest {
 
 public:
     DeleteHsmClientCertificateRequest(const DeleteHsmClientCertificateRequest &other);

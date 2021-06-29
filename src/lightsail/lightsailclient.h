@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawslightsailglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -313,7 +315,7 @@ class UpdateRelationalDatabaseResponse;
 class UpdateRelationalDatabaseParametersRequest;
 class UpdateRelationalDatabaseParametersResponse;
 
-class QTAWS_EXPORT LightsailClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSLIGHTSAIL_EXPORT LightsailClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

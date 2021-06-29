@@ -27,7 +27,7 @@ namespace SSOAdmin {
 
 class UntagResourceRequestPrivate;
 
-class QTAWS_EXPORT UntagResourceRequest : public SSOAdminRequest {
+class QTAWSSSOADMIN_EXPORT UntagResourceRequest : public SSOAdminRequest {
 
 public:
     UntagResourceRequest(const UntagResourceRequest &other);

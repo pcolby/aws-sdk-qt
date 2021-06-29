@@ -27,7 +27,7 @@ namespace Athena {
 
 class UpdateWorkGroupRequestPrivate;
 
-class QTAWS_EXPORT UpdateWorkGroupRequest : public AthenaRequest {
+class QTAWSATHENA_EXPORT UpdateWorkGroupRequest : public AthenaRequest {
 
 public:
     UpdateWorkGroupRequest(const UpdateWorkGroupRequest &other);

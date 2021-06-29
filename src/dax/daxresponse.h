@@ -21,6 +21,8 @@
 #define QTAWS_DAXRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsdaxglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace DAX {
 
 class DaxResponsePrivate;
 
-class QTAWS_EXPORT DaxResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSDAX_EXPORT DaxResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

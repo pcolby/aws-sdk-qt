@@ -28,7 +28,7 @@ namespace Glacier {
 
 class GetVaultNotificationsResponsePrivate;
 
-class QTAWS_EXPORT GetVaultNotificationsResponse : public GlacierResponse {
+class QTAWSGLACIER_EXPORT GetVaultNotificationsResponse : public GlacierResponse {
     Q_OBJECT
 
 public:

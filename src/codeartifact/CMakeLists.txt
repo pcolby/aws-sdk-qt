@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCODEARTIFACT_LIBRARY)
+
 add_library(QtAwsCodeArtifact
   associateexternalconnectionrequest.h
   associateexternalconnectionrequest_p.h
@@ -125,6 +127,7 @@ add_library(QtAwsCodeArtifact
   putrepositorypermissionspolicyrequest_p.h
   putrepositorypermissionspolicyresponse.h
   putrepositorypermissionspolicyresponse_p.h
+  qtawscodeartifactglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

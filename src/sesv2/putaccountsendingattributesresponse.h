@@ -28,7 +28,7 @@ namespace SESV2 {
 
 class PutAccountSendingAttributesResponsePrivate;
 
-class QTAWS_EXPORT PutAccountSendingAttributesResponse : public Sesv2Response {
+class QTAWSSESV2_EXPORT PutAccountSendingAttributesResponse : public Sesv2Response {
     Q_OBJECT
 
 public:

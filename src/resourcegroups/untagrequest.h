@@ -27,7 +27,7 @@ namespace ResourceGroups {
 
 class UntagRequestPrivate;
 
-class QTAWS_EXPORT UntagRequest : public ResourceGroupsRequest {
+class QTAWSRESOURCEGROUPS_EXPORT UntagRequest : public ResourceGroupsRequest {
 
 public:
     UntagRequest(const UntagRequest &other);

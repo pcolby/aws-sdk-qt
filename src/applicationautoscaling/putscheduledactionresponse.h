@@ -28,7 +28,7 @@ namespace ApplicationAutoScaling {
 
 class PutScheduledActionResponsePrivate;
 
-class QTAWS_EXPORT PutScheduledActionResponse : public ApplicationAutoScalingResponse {
+class QTAWSAPPLICATIONAUTOSCALING_EXPORT PutScheduledActionResponse : public ApplicationAutoScalingResponse {
     Q_OBJECT
 
 public:

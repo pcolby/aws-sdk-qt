@@ -27,7 +27,7 @@ namespace DirectoryService {
 
 class DescribeConditionalForwardersRequestPrivate;
 
-class QTAWS_EXPORT DescribeConditionalForwardersRequest : public DirectoryServiceRequest {
+class QTAWSDIRECTORYSERVICE_EXPORT DescribeConditionalForwardersRequest : public DirectoryServiceRequest {
 
 public:
     DescribeConditionalForwardersRequest(const DescribeConditionalForwardersRequest &other);

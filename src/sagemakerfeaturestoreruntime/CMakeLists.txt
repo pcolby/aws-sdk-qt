@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSSAGEMAKERFEATURESTORERUNTIME_LIBRARY)
+
 add_library(QtAwsSageMakerFeatureStoreRuntime
   batchgetrecordrequest.h
   batchgetrecordrequest_p.h
@@ -15,6 +17,7 @@ add_library(QtAwsSageMakerFeatureStoreRuntime
   putrecordrequest_p.h
   putrecordresponse.h
   putrecordresponse_p.h
+  qtawssagemakerfeaturestoreruntimeglobal.h
   sagemakerfeaturestoreruntimeclient.h
   sagemakerfeaturestoreruntimeclient_p.h
   sagemakerfeaturestoreruntimerequest.h

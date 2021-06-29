@@ -27,7 +27,7 @@ namespace IoT {
 
 class DescribeIndexRequestPrivate;
 
-class QTAWS_EXPORT DescribeIndexRequest : public IoTRequest {
+class QTAWSIOT_EXPORT DescribeIndexRequest : public IoTRequest {
 
 public:
     DescribeIndexRequest(const DescribeIndexRequest &other);

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSIOTFLEETHUB_LIBRARY)
+
 add_library(QtAwsIoTFleetHub
   createapplicationrequest.h
   createapplicationrequest_p.h
@@ -25,6 +27,7 @@ add_library(QtAwsIoTFleetHub
   listtagsforresourcerequest_p.h
   listtagsforresourceresponse.h
   listtagsforresourceresponse_p.h
+  qtawsiotfleethubglobal.h
   tagresourcerequest.h
   tagresourcerequest_p.h
   tagresourceresponse.h

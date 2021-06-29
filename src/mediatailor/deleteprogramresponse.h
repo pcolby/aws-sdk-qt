@@ -28,7 +28,7 @@ namespace MediaTailor {
 
 class DeleteProgramResponsePrivate;
 
-class QTAWS_EXPORT DeleteProgramResponse : public MediaTailorResponse {
+class QTAWSMEDIATAILOR_EXPORT DeleteProgramResponse : public MediaTailorResponse {
     Q_OBJECT
 
 public:

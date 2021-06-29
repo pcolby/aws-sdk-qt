@@ -21,6 +21,8 @@
 #define QTAWS_IOTSECURETUNNELINGRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsiotsecuretunnelingglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace IoTSecureTunneling {
 
 class IoTSecureTunnelingResponsePrivate;
 
-class QTAWS_EXPORT IoTSecureTunnelingResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSIOTSECURETUNNELING_EXPORT IoTSecureTunnelingResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

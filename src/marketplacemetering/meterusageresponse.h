@@ -28,7 +28,7 @@ namespace MarketplaceMetering {
 
 class MeterUsageResponsePrivate;
 
-class QTAWS_EXPORT MeterUsageResponse : public MarketplaceMeteringResponse {
+class QTAWSMARKETPLACEMETERING_EXPORT MeterUsageResponse : public MarketplaceMeteringResponse {
     Q_OBJECT
 
 public:

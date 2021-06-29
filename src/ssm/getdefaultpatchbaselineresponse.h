@@ -28,7 +28,7 @@ namespace SSM {
 
 class GetDefaultPatchBaselineResponsePrivate;
 
-class QTAWS_EXPORT GetDefaultPatchBaselineResponse : public SsmResponse {
+class QTAWSSSM_EXPORT GetDefaultPatchBaselineResponse : public SsmResponse {
     Q_OBJECT
 
 public:

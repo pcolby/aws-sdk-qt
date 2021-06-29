@@ -27,7 +27,7 @@ namespace RDS {
 
 class DescribeDBInstanceAutomatedBackupsRequestPrivate;
 
-class QTAWS_EXPORT DescribeDBInstanceAutomatedBackupsRequest : public RdsRequest {
+class QTAWSRDS_EXPORT DescribeDBInstanceAutomatedBackupsRequest : public RdsRequest {
 
 public:
     DescribeDBInstanceAutomatedBackupsRequest(const DescribeDBInstanceAutomatedBackupsRequest &other);

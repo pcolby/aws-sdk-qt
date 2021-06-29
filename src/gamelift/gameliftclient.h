@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsgameliftglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -219,7 +221,7 @@ class UpdateScriptResponse;
 class ValidateMatchmakingRuleSetRequest;
 class ValidateMatchmakingRuleSetResponse;
 
-class QTAWS_EXPORT GameLiftClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSGAMELIFT_EXPORT GameLiftClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

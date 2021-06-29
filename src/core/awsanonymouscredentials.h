@@ -25,7 +25,7 @@
 namespace QtAws {
 namespace Core {
 
-class QTAWS_EXPORT AwsAnonymousCredentials : public AwsAbstractCredentials {
+class QTAWSCORE_EXPORT AwsAnonymousCredentials : public AwsAbstractCredentials {
     Q_OBJECT
 
 public:

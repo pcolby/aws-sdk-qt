@@ -21,6 +21,8 @@
 #define QTAWS_CODEGURUPROFILERRESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawscodeguruprofilerglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace CodeGuruProfiler {
 
 class CodeGuruProfilerResponsePrivate;
 
-class QTAWS_EXPORT CodeGuruProfilerResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSCODEGURUPROFILER_EXPORT CodeGuruProfilerResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsdatabasemigrationserviceglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -139,7 +141,7 @@ class StopReplicationTaskResponse;
 class TestConnectionRequest;
 class TestConnectionResponse;
 
-class QTAWS_EXPORT DatabaseMigrationServiceClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSDATABASEMIGRATIONSERVICE_EXPORT DatabaseMigrationServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

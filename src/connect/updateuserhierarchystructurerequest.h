@@ -27,7 +27,7 @@ namespace Connect {
 
 class UpdateUserHierarchyStructureRequestPrivate;
 
-class QTAWS_EXPORT UpdateUserHierarchyStructureRequest : public ConnectRequest {
+class QTAWSCONNECT_EXPORT UpdateUserHierarchyStructureRequest : public ConnectRequest {
 
 public:
     UpdateUserHierarchyStructureRequest(const UpdateUserHierarchyStructureRequest &other);

@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class DeleteGlobalReplicationGroupResponsePrivate;
 
-class QTAWS_EXPORT DeleteGlobalReplicationGroupResponse : public ElastiCacheResponse {
+class QTAWSELASTICACHE_EXPORT DeleteGlobalReplicationGroupResponse : public ElastiCacheResponse {
     Q_OBJECT
 
 public:

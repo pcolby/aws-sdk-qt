@@ -27,7 +27,7 @@ namespace IoTSiteWise {
 
 class UpdateDashboardRequestPrivate;
 
-class QTAWS_EXPORT UpdateDashboardRequest : public IoTSiteWiseRequest {
+class QTAWSIOTSITEWISE_EXPORT UpdateDashboardRequest : public IoTSiteWiseRequest {
 
 public:
     UpdateDashboardRequest(const UpdateDashboardRequest &other);

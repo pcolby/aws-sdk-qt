@@ -1,4 +1,7 @@
+add_compile_definitions(QTAWSTRANSCRIBESTREAMINGSERVICE_LIBRARY)
+
 add_library(QtAwsTranscribeStreamingService
+  qtawstranscribestreamingserviceglobal.h
   startmedicalstreamtranscriptionrequest.h
   startmedicalstreamtranscriptionrequest_p.h
   startmedicalstreamtranscriptionresponse.h

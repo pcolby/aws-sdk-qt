@@ -28,7 +28,7 @@ namespace Transfer {
 
 class UpdateAccessResponsePrivate;
 
-class QTAWS_EXPORT UpdateAccessResponse : public TransferResponse {
+class QTAWSTRANSFER_EXPORT UpdateAccessResponse : public TransferResponse {
     Q_OBJECT
 
 public:

@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSCODESTARNOTIFICATIONS_LIBRARY)
+
 add_library(QtAwsCodeStarNotifications
   codestarnotificationsclient.h
   codestarnotificationsclient_p.h
@@ -37,6 +39,7 @@ add_library(QtAwsCodeStarNotifications
   listtargetsrequest_p.h
   listtargetsresponse.h
   listtargetsresponse_p.h
+  qtawscodestarnotificationsglobal.h
   subscriberequest.h
   subscriberequest_p.h
   subscriberesponse.h

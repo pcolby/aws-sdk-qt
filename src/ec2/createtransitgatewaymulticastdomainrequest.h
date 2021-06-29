@@ -27,7 +27,7 @@ namespace EC2 {
 
 class CreateTransitGatewayMulticastDomainRequestPrivate;
 
-class QTAWS_EXPORT CreateTransitGatewayMulticastDomainRequest : public Ec2Request {
+class QTAWSEC2_EXPORT CreateTransitGatewayMulticastDomainRequest : public Ec2Request {
 
 public:
     CreateTransitGatewayMulticastDomainRequest(const CreateTransitGatewayMulticastDomainRequest &other);

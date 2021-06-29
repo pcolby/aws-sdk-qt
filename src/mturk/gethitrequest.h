@@ -27,7 +27,7 @@ namespace MTurk {
 
 class GetHITRequestPrivate;
 
-class QTAWS_EXPORT GetHITRequest : public MTurkRequest {
+class QTAWSMTURK_EXPORT GetHITRequest : public MTurkRequest {
 
 public:
     GetHITRequest(const GetHITRequest &other);

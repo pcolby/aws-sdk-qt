@@ -28,7 +28,7 @@ namespace Redshift {
 
 class RestoreTableFromClusterSnapshotResponsePrivate;
 
-class QTAWS_EXPORT RestoreTableFromClusterSnapshotResponse : public RedshiftResponse {
+class QTAWSREDSHIFT_EXPORT RestoreTableFromClusterSnapshotResponse : public RedshiftResponse {
     Q_OBJECT
 
 public:

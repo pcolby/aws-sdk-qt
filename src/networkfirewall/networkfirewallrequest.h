@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsnetworkfirewallglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace NetworkFirewall {
 
 class NetworkFirewallRequestPrivate;
 
-class QTAWS_EXPORT NetworkFirewallRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSNETWORKFIREWALL_EXPORT NetworkFirewallRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by NetworkFirewall.

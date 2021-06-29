@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawsservicediscoveryglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -75,7 +77,7 @@ class UpdateInstanceCustomHealthStatusResponse;
 class UpdateServiceRequest;
 class UpdateServiceResponse;
 
-class QTAWS_EXPORT ServiceDiscoveryClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSERVICEDISCOVERY_EXPORT ServiceDiscoveryClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

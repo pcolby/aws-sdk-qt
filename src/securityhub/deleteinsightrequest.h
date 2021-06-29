@@ -27,7 +27,7 @@ namespace SecurityHub {
 
 class DeleteInsightRequestPrivate;
 
-class QTAWS_EXPORT DeleteInsightRequest : public SecurityHubRequest {
+class QTAWSSECURITYHUB_EXPORT DeleteInsightRequest : public SecurityHubRequest {
 
 public:
     DeleteInsightRequest(const DeleteInsightRequest &other);

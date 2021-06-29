@@ -27,7 +27,7 @@ namespace Backup {
 
 class GetBackupSelectionRequestPrivate;
 
-class QTAWS_EXPORT GetBackupSelectionRequest : public BackupRequest {
+class QTAWSBACKUP_EXPORT GetBackupSelectionRequest : public BackupRequest {
 
 public:
     GetBackupSelectionRequest(const GetBackupSelectionRequest &other);

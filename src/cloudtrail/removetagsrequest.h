@@ -27,7 +27,7 @@ namespace CloudTrail {
 
 class RemoveTagsRequestPrivate;
 
-class QTAWS_EXPORT RemoveTagsRequest : public CloudTrailRequest {
+class QTAWSCLOUDTRAIL_EXPORT RemoveTagsRequest : public CloudTrailRequest {
 
 public:
     RemoveTagsRequest(const RemoveTagsRequest &other);

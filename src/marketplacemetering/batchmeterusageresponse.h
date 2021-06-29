@@ -28,7 +28,7 @@ namespace MarketplaceMetering {
 
 class BatchMeterUsageResponsePrivate;
 
-class QTAWS_EXPORT BatchMeterUsageResponse : public MarketplaceMeteringResponse {
+class QTAWSMARKETPLACEMETERING_EXPORT BatchMeterUsageResponse : public MarketplaceMeteringResponse {
     Q_OBJECT
 
 public:

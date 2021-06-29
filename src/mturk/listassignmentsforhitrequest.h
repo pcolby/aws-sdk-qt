@@ -27,7 +27,7 @@ namespace MTurk {
 
 class ListAssignmentsForHITRequestPrivate;
 
-class QTAWS_EXPORT ListAssignmentsForHITRequest : public MTurkRequest {
+class QTAWSMTURK_EXPORT ListAssignmentsForHITRequest : public MTurkRequest {
 
 public:
     ListAssignmentsForHITRequest(const ListAssignmentsForHITRequest &other);

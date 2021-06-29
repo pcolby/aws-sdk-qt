@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawscloudhsmglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace CloudHSM {
 
 class CloudHSMRequestPrivate;
 
-class QTAWS_EXPORT CloudHSMRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCLOUDHSM_EXPORT CloudHSMRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CloudHSM.

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawscomputeoptimizerglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace ComputeOptimizer {
 
 class ComputeOptimizerRequestPrivate;
 
-class QTAWS_EXPORT ComputeOptimizerRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCOMPUTEOPTIMIZER_EXPORT ComputeOptimizerRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by ComputeOptimizer.

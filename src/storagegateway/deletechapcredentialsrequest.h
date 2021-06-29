@@ -27,7 +27,7 @@ namespace StorageGateway {
 
 class DeleteChapCredentialsRequestPrivate;
 
-class QTAWS_EXPORT DeleteChapCredentialsRequest : public StorageGatewayRequest {
+class QTAWSSTORAGEGATEWAY_EXPORT DeleteChapCredentialsRequest : public StorageGatewayRequest {
 
 public:
     DeleteChapCredentialsRequest(const DeleteChapCredentialsRequest &other);

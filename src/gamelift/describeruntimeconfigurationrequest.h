@@ -27,7 +27,7 @@ namespace GameLift {
 
 class DescribeRuntimeConfigurationRequestPrivate;
 
-class QTAWS_EXPORT DescribeRuntimeConfigurationRequest : public GameLiftRequest {
+class QTAWSGAMELIFT_EXPORT DescribeRuntimeConfigurationRequest : public GameLiftRequest {
 
 public:
     DescribeRuntimeConfigurationRequest(const DescribeRuntimeConfigurationRequest &other);

@@ -28,7 +28,7 @@ namespace ACM {
 
 class AddTagsToCertificateResponsePrivate;
 
-class QTAWS_EXPORT AddTagsToCertificateResponse : public AcmResponse {
+class QTAWSACM_EXPORT AddTagsToCertificateResponse : public AcmResponse {
     Q_OBJECT
 
 public:

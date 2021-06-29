@@ -28,7 +28,7 @@ namespace EventBridge {
 
 class CreateApiDestinationResponsePrivate;
 
-class QTAWS_EXPORT CreateApiDestinationResponse : public EventBridgeResponse {
+class QTAWSEVENTBRIDGE_EXPORT CreateApiDestinationResponse : public EventBridgeResponse {
     Q_OBJECT
 
 public:

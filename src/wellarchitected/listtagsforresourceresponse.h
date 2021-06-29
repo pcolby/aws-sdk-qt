@@ -28,7 +28,7 @@ namespace WellArchitected {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public WellArchitectedResponse {
+class QTAWSWELLARCHITECTED_EXPORT ListTagsForResourceResponse : public WellArchitectedResponse {
     Q_OBJECT
 
 public:

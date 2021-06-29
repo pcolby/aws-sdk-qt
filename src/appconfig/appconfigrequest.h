@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawsappconfigglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace AppConfig {
 
 class AppConfigRequestPrivate;
 
-class QTAWS_EXPORT AppConfigRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSAPPCONFIG_EXPORT AppConfigRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by AppConfig.

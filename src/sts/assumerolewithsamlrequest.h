@@ -27,7 +27,7 @@ namespace STS {
 
 class AssumeRoleWithSAMLRequestPrivate;
 
-class QTAWS_EXPORT AssumeRoleWithSAMLRequest : public StsRequest {
+class QTAWSSTS_EXPORT AssumeRoleWithSAMLRequest : public StsRequest {
 
 public:
     AssumeRoleWithSAMLRequest(const AssumeRoleWithSAMLRequest &other);

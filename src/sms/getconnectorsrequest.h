@@ -27,7 +27,7 @@ namespace SMS {
 
 class GetConnectorsRequestPrivate;
 
-class QTAWS_EXPORT GetConnectorsRequest : public SmsRequest {
+class QTAWSSMS_EXPORT GetConnectorsRequest : public SmsRequest {
 
 public:
     GetConnectorsRequest(const GetConnectorsRequest &other);

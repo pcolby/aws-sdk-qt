@@ -28,7 +28,7 @@ namespace LexModelsV2 {
 
 class ListBuiltInSlotTypesResponsePrivate;
 
-class QTAWS_EXPORT ListBuiltInSlotTypesResponse : public LexModelsV2Response {
+class QTAWSLEXMODELSV2_EXPORT ListBuiltInSlotTypesResponse : public LexModelsV2Response {
     Q_OBJECT
 
 public:

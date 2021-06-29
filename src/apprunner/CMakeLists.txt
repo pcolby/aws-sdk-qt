@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSAPPRUNNER_LIBRARY)
+
 add_library(QtAwsAppRunner
   apprunnerclient.h
   apprunnerclient_p.h
@@ -73,6 +75,7 @@ add_library(QtAwsAppRunner
   pauseservicerequest_p.h
   pauseserviceresponse.h
   pauseserviceresponse_p.h
+  qtawsapprunnerglobal.h
   resumeservicerequest.h
   resumeservicerequest_p.h
   resumeserviceresponse.h

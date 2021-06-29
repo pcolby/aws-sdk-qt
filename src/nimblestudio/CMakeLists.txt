@@ -1,3 +1,5 @@
+add_compile_definitions(QTAWSNIMBLESTUDIO_LIBRARY)
+
 add_library(QtAwsNimbleStudio
   accepteulasrequest.h
   accepteulasrequest_p.h
@@ -153,6 +155,7 @@ add_library(QtAwsNimbleStudio
   putstudiomembersrequest_p.h
   putstudiomembersresponse.h
   putstudiomembersresponse_p.h
+  qtawsnimblestudioglobal.h
   startstudiossoconfigurationrepairrequest.h
   startstudiossoconfigurationrepairrequest_p.h
   startstudiossoconfigurationrepairresponse.h

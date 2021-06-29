@@ -10,7 +10,7 @@ namespace {{NameSpaceName}} {
 
 class {{ClassName}}Private;
 
-class QTAWS_EXPORT {{ClassName}} : public {{ServiceClassName}}Response {
+class QTAWS{{ServiceName|upper}}_EXPORT {{ClassName}} : public {{ServiceClassName}}Response {
     Q_OBJECT
 
 public:

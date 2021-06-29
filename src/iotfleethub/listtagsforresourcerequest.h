@@ -27,7 +27,7 @@ namespace IoTFleetHub {
 
 class ListTagsForResourceRequestPrivate;
 
-class QTAWS_EXPORT ListTagsForResourceRequest : public IoTFleetHubRequest {
+class QTAWSIOTFLEETHUB_EXPORT ListTagsForResourceRequest : public IoTFleetHubRequest {
 
 public:
     ListTagsForResourceRequest(const ListTagsForResourceRequest &other);

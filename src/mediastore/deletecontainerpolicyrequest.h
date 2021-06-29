@@ -27,7 +27,7 @@ namespace MediaStore {
 
 class DeleteContainerPolicyRequestPrivate;
 
-class QTAWS_EXPORT DeleteContainerPolicyRequest : public MediaStoreRequest {
+class QTAWSMEDIASTORE_EXPORT DeleteContainerPolicyRequest : public MediaStoreRequest {
 
 public:
     DeleteContainerPolicyRequest(const DeleteContainerPolicyRequest &other);

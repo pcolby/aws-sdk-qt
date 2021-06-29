@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class GetQueryResultsResponsePrivate;
 
-class QTAWS_EXPORT GetQueryResultsResponse : public CloudWatchLogsResponse {
+class QTAWSCLOUDWATCHLOGS_EXPORT GetQueryResultsResponse : public CloudWatchLogsResponse {
     Q_OBJECT
 
 public:

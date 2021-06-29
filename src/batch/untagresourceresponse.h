@@ -28,7 +28,7 @@ namespace Batch {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public BatchResponse {
+class QTAWSBATCH_EXPORT UntagResourceResponse : public BatchResponse {
     Q_OBJECT
 
 public:

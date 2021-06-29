@@ -27,7 +27,7 @@ namespace CodeArtifact {
 
 class DeleteRepositoryPermissionsPolicyRequestPrivate;
 
-class QTAWS_EXPORT DeleteRepositoryPermissionsPolicyRequest : public CodeArtifactRequest {
+class QTAWSCODEARTIFACT_EXPORT DeleteRepositoryPermissionsPolicyRequest : public CodeArtifactRequest {
 
 public:
     DeleteRepositoryPermissionsPolicyRequest(const DeleteRepositoryPermissionsPolicyRequest &other);

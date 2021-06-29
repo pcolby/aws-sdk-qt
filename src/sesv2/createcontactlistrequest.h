@@ -27,7 +27,7 @@ namespace SESV2 {
 
 class CreateContactListRequestPrivate;
 
-class QTAWS_EXPORT CreateContactListRequest : public Sesv2Request {
+class QTAWSSESV2_EXPORT CreateContactListRequest : public Sesv2Request {
 
 public:
     CreateContactListRequest(const CreateContactListRequest &other);

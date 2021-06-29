@@ -27,7 +27,7 @@ namespace DocDB {
 
 class ModifyDBInstanceRequestPrivate;
 
-class QTAWS_EXPORT ModifyDBInstanceRequest : public DocDBRequest {
+class QTAWSDOCDB_EXPORT ModifyDBInstanceRequest : public DocDBRequest {
 
 public:
     ModifyDBInstanceRequest(const ModifyDBInstanceRequest &other);

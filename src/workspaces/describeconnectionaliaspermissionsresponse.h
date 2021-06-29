@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class DescribeConnectionAliasPermissionsResponsePrivate;
 
-class QTAWS_EXPORT DescribeConnectionAliasPermissionsResponse : public WorkSpacesResponse {
+class QTAWSWORKSPACES_EXPORT DescribeConnectionAliasPermissionsResponse : public WorkSpacesResponse {
     Q_OBJECT
 
 public:

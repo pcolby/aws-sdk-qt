@@ -27,7 +27,7 @@ namespace EC2 {
 
 class RestoreManagedPrefixListVersionRequestPrivate;
 
-class QTAWS_EXPORT RestoreManagedPrefixListVersionRequest : public Ec2Request {
+class QTAWSEC2_EXPORT RestoreManagedPrefixListVersionRequest : public Ec2Request {
 
 public:
     RestoreManagedPrefixListVersionRequest(const RestoreManagedPrefixListVersionRequest &other);

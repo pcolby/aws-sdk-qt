@@ -27,7 +27,7 @@ namespace LexModelsV2 {
 
 class UpdateResourcePolicyRequestPrivate;
 
-class QTAWS_EXPORT UpdateResourcePolicyRequest : public LexModelsV2Request {
+class QTAWSLEXMODELSV2_EXPORT UpdateResourcePolicyRequest : public LexModelsV2Request {
 
 public:
     UpdateResourcePolicyRequest(const UpdateResourcePolicyRequest &other);

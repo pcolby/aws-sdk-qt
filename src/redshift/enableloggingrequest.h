@@ -27,7 +27,7 @@ namespace Redshift {
 
 class EnableLoggingRequestPrivate;
 
-class QTAWS_EXPORT EnableLoggingRequest : public RedshiftRequest {
+class QTAWSREDSHIFT_EXPORT EnableLoggingRequest : public RedshiftRequest {
 
 public:
     EnableLoggingRequest(const EnableLoggingRequest &other);

@@ -28,7 +28,7 @@ namespace FinSpaceData {
 
 class GetProgrammaticAccessCredentialsResponsePrivate;
 
-class QTAWS_EXPORT GetProgrammaticAccessCredentialsResponse : public FinSpaceDataResponse {
+class QTAWSFINSPACEDATA_EXPORT GetProgrammaticAccessCredentialsResponse : public FinSpaceDataResponse {
     Q_OBJECT
 
 public:

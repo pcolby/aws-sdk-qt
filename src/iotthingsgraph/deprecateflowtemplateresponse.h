@@ -28,7 +28,7 @@ namespace IoTThingsGraph {
 
 class DeprecateFlowTemplateResponsePrivate;
 
-class QTAWS_EXPORT DeprecateFlowTemplateResponse : public IoTThingsGraphResponse {
+class QTAWSIOTTHINGSGRAPH_EXPORT DeprecateFlowTemplateResponse : public IoTThingsGraphResponse {
     Q_OBJECT
 
 public:

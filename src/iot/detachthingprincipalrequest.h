@@ -27,7 +27,7 @@ namespace IoT {
 
 class DetachThingPrincipalRequestPrivate;
 
-class QTAWS_EXPORT DetachThingPrincipalRequest : public IoTRequest {
+class QTAWSIOT_EXPORT DetachThingPrincipalRequest : public IoTRequest {
 
 public:
     DetachThingPrincipalRequest(const DetachThingPrincipalRequest &other);

@@ -27,7 +27,7 @@ namespace imagebuilder {
 
 class CreateDistributionConfigurationRequestPrivate;
 
-class QTAWS_EXPORT CreateDistributionConfigurationRequest : public imagebuilderRequest {
+class QTAWSIMAGEBUILDER_EXPORT CreateDistributionConfigurationRequest : public imagebuilderRequest {
 
 public:
     CreateDistributionConfigurationRequest(const CreateDistributionConfigurationRequest &other);

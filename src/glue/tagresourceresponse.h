@@ -28,7 +28,7 @@ namespace Glue {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public GlueResponse {
+class QTAWSGLUE_EXPORT TagResourceResponse : public GlueResponse {
     Q_OBJECT
 
 public:

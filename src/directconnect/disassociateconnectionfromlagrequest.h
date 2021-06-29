@@ -27,7 +27,7 @@ namespace DirectConnect {
 
 class DisassociateConnectionFromLagRequestPrivate;
 
-class QTAWS_EXPORT DisassociateConnectionFromLagRequest : public DirectConnectRequest {
+class QTAWSDIRECTCONNECT_EXPORT DisassociateConnectionFromLagRequest : public DirectConnectRequest {
 
 public:
     DisassociateConnectionFromLagRequest(const DisassociateConnectionFromLagRequest &other);

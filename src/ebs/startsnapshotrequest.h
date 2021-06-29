@@ -27,7 +27,7 @@ namespace EBS {
 
 class StartSnapshotRequestPrivate;
 
-class QTAWS_EXPORT StartSnapshotRequest : public EbsRequest {
+class QTAWSEBS_EXPORT StartSnapshotRequest : public EbsRequest {
 
 public:
     StartSnapshotRequest(const StartSnapshotRequest &other);

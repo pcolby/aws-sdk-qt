@@ -27,7 +27,7 @@ namespace FraudDetector {
 
 class GetRulesRequestPrivate;
 
-class QTAWS_EXPORT GetRulesRequest : public FraudDetectorRequest {
+class QTAWSFRAUDDETECTOR_EXPORT GetRulesRequest : public FraudDetectorRequest {
 
 public:
     GetRulesRequest(const GetRulesRequest &other);

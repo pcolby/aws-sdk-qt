@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawssagemakeredgemanagerglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -33,7 +35,7 @@ class GetDeviceRegistrationResponse;
 class SendHeartbeatRequest;
 class SendHeartbeatResponse;
 
-class QTAWS_EXPORT SagemakerEdgeManagerClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSAGEMAKEREDGEMANAGER_EXPORT SagemakerEdgeManagerClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawssupportglobal.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -57,7 +59,7 @@ class RefreshTrustedAdvisorCheckResponse;
 class ResolveCaseRequest;
 class ResolveCaseResponse;
 
-class QTAWS_EXPORT SupportClient : public QtAws::Core::AwsAbstractClient {
+class QTAWSSUPPORT_EXPORT SupportClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

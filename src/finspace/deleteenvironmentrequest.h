@@ -27,7 +27,7 @@ namespace finspace {
 
 class DeleteEnvironmentRequestPrivate;
 
-class QTAWS_EXPORT DeleteEnvironmentRequest : public finspaceRequest {
+class QTAWSFINSPACE_EXPORT DeleteEnvironmentRequest : public finspaceRequest {
 
 public:
     DeleteEnvironmentRequest(const DeleteEnvironmentRequest &other);

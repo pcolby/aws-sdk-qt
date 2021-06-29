@@ -27,7 +27,7 @@ namespace WorkDocs {
 
 class CreateUserRequestPrivate;
 
-class QTAWS_EXPORT CreateUserRequest : public WorkDocsRequest {
+class QTAWSWORKDOCS_EXPORT CreateUserRequest : public WorkDocsRequest {
 
 public:
     CreateUserRequest(const CreateUserRequest &other);

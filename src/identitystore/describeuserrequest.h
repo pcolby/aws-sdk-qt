@@ -27,7 +27,7 @@ namespace IdentityStore {
 
 class DescribeUserRequestPrivate;
 
-class QTAWS_EXPORT DescribeUserRequest : public IdentityStoreRequest {
+class QTAWSIDENTITYSTORE_EXPORT DescribeUserRequest : public IdentityStoreRequest {
 
 public:
     DescribeUserRequest(const DescribeUserRequest &other);

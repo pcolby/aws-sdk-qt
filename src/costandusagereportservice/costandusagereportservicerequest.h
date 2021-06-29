@@ -22,6 +22,8 @@
 
 #include "core/awsabstractrequest.h"
 
+#include "qtawscostandusagereportserviceglobal.h"
+
 #include <QFlags>
 #include <QObject>
 
@@ -32,7 +34,7 @@ namespace CostandUsageReportService {
 
 class CostandUsageReportServiceRequestPrivate;
 
-class QTAWS_EXPORT CostandUsageReportServiceRequest : public QtAws::Core::AwsAbstractRequest {
+class QTAWSCOSTANDUSAGEREPORTSERVICE_EXPORT CostandUsageReportServiceRequest : public QtAws::Core::AwsAbstractRequest {
 
 public:
     /// Actions supported by CostandUsageReportService.

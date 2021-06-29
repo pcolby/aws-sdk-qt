@@ -28,7 +28,7 @@ namespace Health {
 
 class DescribeAffectedAccountsForOrganizationResponsePrivate;
 
-class QTAWS_EXPORT DescribeAffectedAccountsForOrganizationResponse : public HealthResponse {
+class QTAWSHEALTH_EXPORT DescribeAffectedAccountsForOrganizationResponse : public HealthResponse {
     Q_OBJECT
 
 public:

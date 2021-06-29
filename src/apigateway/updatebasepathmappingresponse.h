@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class UpdateBasePathMappingResponsePrivate;
 
-class QTAWS_EXPORT UpdateBasePathMappingResponse : public APIGatewayResponse {
+class QTAWSAPIGATEWAY_EXPORT UpdateBasePathMappingResponse : public APIGatewayResponse {
     Q_OBJECT
 
 public:

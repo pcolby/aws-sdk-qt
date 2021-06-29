@@ -21,6 +21,8 @@
 #define QTAWS_NIMBLESTUDIORESPONSE_H
 
 #include "core/awsabstractresponse.h"
+
+#include "qtawsnimblestudioglobal.h"
 //#include "@todo-error.h"
 
 namespace QtAws {
@@ -28,7 +30,7 @@ namespace NimbleStudio {
 
 class NimbleStudioResponsePrivate;
 
-class QTAWS_EXPORT NimbleStudioResponse : public QtAws::Core::AwsAbstractResponse {
+class QTAWSNIMBLESTUDIO_EXPORT NimbleStudioResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -27,7 +27,7 @@ namespace FSx {
 
 class CopyBackupRequestPrivate;
 
-class QTAWS_EXPORT CopyBackupRequest : public FSxRequest {
+class QTAWSFSX_EXPORT CopyBackupRequest : public FSxRequest {
 
 public:
     CopyBackupRequest(const CopyBackupRequest &other);

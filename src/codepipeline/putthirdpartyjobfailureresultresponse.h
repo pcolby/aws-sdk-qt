@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class PutThirdPartyJobFailureResultResponsePrivate;
 
-class QTAWS_EXPORT PutThirdPartyJobFailureResultResponse : public CodePipelineResponse {
+class QTAWSCODEPIPELINE_EXPORT PutThirdPartyJobFailureResultResponse : public CodePipelineResponse {
     Q_OBJECT
 
 public:

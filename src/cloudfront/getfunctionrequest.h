@@ -27,7 +27,7 @@ namespace CloudFront {
 
 class GetFunctionRequestPrivate;
 
-class QTAWS_EXPORT GetFunctionRequest : public CloudFrontRequest {
+class QTAWSCLOUDFRONT_EXPORT GetFunctionRequest : public CloudFrontRequest {
 
 public:
     GetFunctionRequest(const GetFunctionRequest &other);

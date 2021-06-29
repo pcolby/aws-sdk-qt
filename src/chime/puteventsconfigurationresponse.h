@@ -28,7 +28,7 @@ namespace Chime {
 
 class PutEventsConfigurationResponsePrivate;
 
-class QTAWS_EXPORT PutEventsConfigurationResponse : public ChimeResponse {
+class QTAWSCHIME_EXPORT PutEventsConfigurationResponse : public ChimeResponse {
     Q_OBJECT
 
 public:

@@ -22,6 +22,8 @@
 
 #include "core/awsabstractclient.h"
 
+#include "qtawscloudhsmv2global.h"
+
 class QNetworkReply;
 
 namespace QtAws {
@@ -59,7 +61,7 @@ class TagResourceResponse;
 class UntagResourceRequest;
 class UntagResourceResponse;
 
-class QTAWS_EXPORT CloudHSMV2Client : public QtAws::Core::AwsAbstractClient {
+class QTAWSCLOUDHSMV2_EXPORT CloudHSMV2Client : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
 
 public:

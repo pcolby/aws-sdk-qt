@@ -27,7 +27,7 @@ namespace Lightsail {
 
 class IsVpcPeeredRequestPrivate;
 
-class QTAWS_EXPORT IsVpcPeeredRequest : public LightsailRequest {
+class QTAWSLIGHTSAIL_EXPORT IsVpcPeeredRequest : public LightsailRequest {
 
 public:
     IsVpcPeeredRequest(const IsVpcPeeredRequest &other);

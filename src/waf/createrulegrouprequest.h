@@ -27,7 +27,7 @@ namespace WAF {
 
 class CreateRuleGroupRequestPrivate;
 
-class QTAWS_EXPORT CreateRuleGroupRequest : public WafRequest {
+class QTAWSWAF_EXPORT CreateRuleGroupRequest : public WafRequest {
 
 public:
     CreateRuleGroupRequest(const CreateRuleGroupRequest &other);
