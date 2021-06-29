@@ -79,8 +79,8 @@ public:
     };
     Q_DECLARE_FLAGS(Regions, Region)
 
-    AwsRegion(const Region region);
-    AwsRegion(const QString &regionName);
+    explicit AwsRegion(const Region region);
+    explicit AwsRegion(const QString &regionName);
     ~AwsRegion();
 
     bool isValid() const;

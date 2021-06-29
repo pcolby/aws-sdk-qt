@@ -36,7 +36,7 @@ public:
     QString secretKey;   ///< AWS Secret Access Key.
     QString token;       ///< AWS Security Token.
 
-    AwsBasicCredentialsPrivate(AwsBasicCredentials * const q);
+    explicit AwsBasicCredentialsPrivate(AwsBasicCredentials * const q);
 
 private:
     Q_DECLARE_PUBLIC(AwsBasicCredentials)

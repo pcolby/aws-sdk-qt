@@ -40,7 +40,7 @@ public:
 
 protected:
     /// @cond internal
-    AwsSignatureV0(AwsSignatureV0Private * const d);
+    explicit AwsSignatureV0(AwsSignatureV0Private * const d);
     /// @endcond
 
 private:

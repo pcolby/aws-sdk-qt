@@ -33,9 +33,9 @@ class AwsSignatureV1;
 class AwsSignatureV1Private : public AwsSignatureV0Private {
 
 public:
-    AwsSignatureV1Private(AwsSignatureV1 * const q);
+    explicit AwsSignatureV1Private(AwsSignatureV1 * const q);
 
-    QByteArray canonicalQuery(const QUrlQuery &query) const;
+    QByteArray canonicalQuery(const QUrlQuery &query) const Q_DECL_OVERRIDE;
 
 protected:
     /// A key-value pair of strings for working with QUrlQuery::queryItems() results.

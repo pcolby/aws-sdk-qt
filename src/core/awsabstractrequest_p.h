@@ -40,7 +40,7 @@ public:
     QByteArray data;                            ///< Data for POST/PUT operations.
     QNetworkAccessManager::Operation operation; ///< Network operation to use.
 
-    AwsAbstractRequestPrivate(AwsAbstractRequest * const q);
+    explicit AwsAbstractRequestPrivate(AwsAbstractRequest * const q);
     AwsAbstractRequestPrivate(const AwsAbstractRequestPrivate &other,
                               AwsAbstractRequest * const q);
 

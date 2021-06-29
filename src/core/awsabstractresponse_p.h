@@ -41,7 +41,7 @@ public:
     QXmlStreamReader::Error xmlError;   ///< XML parse error code.
     QString xmlErrorString;             ///< XML parse error string.
 
-    AwsAbstractResponsePrivate(AwsAbstractResponse * const q);
+    explicit AwsAbstractResponsePrivate(AwsAbstractResponse * const q);
 
     virtual ~AwsAbstractResponsePrivate();
 

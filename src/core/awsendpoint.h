@@ -42,8 +42,8 @@ public:
     };
     Q_DECLARE_FLAGS(Transports, Transport)
 
-    AwsEndpoint(const QByteArray &hostName);
-    AwsEndpoint(const QString &hostName);
+    explicit AwsEndpoint(const QByteArray &hostName);
+    explicit AwsEndpoint(const QString &hostName);
 
     ~AwsEndpoint();
 

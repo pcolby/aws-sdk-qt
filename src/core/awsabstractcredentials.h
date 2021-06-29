@@ -34,7 +34,7 @@ class QTAWSCORE_EXPORT AwsAbstractCredentials : public QObject {
     Q_OBJECT
 
 public:
-    AwsAbstractCredentials(QObject * const parent = 0);
+    explicit AwsAbstractCredentials(QObject * const parent = 0);
 
     virtual ~AwsAbstractCredentials();
 

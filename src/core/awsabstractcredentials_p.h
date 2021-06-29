@@ -30,7 +30,7 @@ class AwsAbstractCredentials;
 class AwsAbstractCredentialsPrivate {
 
 public:
-    AwsAbstractCredentialsPrivate(AwsAbstractCredentials * const q);
+    explicit AwsAbstractCredentialsPrivate(AwsAbstractCredentials * const q);
 
     virtual ~AwsAbstractCredentialsPrivate();
 

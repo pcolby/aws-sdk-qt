@@ -66,7 +66,7 @@ public:
 protected:
     /// @cond internal
     AwsAbstractRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    AwsAbstractRequest(AwsAbstractRequestPrivate * const d);
+    explicit AwsAbstractRequest(AwsAbstractRequestPrivate * const d);
     /// @endcond
 
     void setData(const QByteArray &data);

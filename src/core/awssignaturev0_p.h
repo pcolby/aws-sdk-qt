@@ -33,11 +33,11 @@ class AwsSignatureV0;
 class AwsSignatureV0Private : public AwsAbstractSignaturePrivate {
 
 public:
-    AwsSignatureV0Private(AwsSignatureV0 * const q);
+    explicit AwsSignatureV0Private(AwsSignatureV0 * const q);
 
     void adornRequest(QNetworkRequest &request, const AwsAbstractCredentials &credentials) const;
 
-    virtual QByteArray canonicalQuery(const QUrlQuery &query) const;
+    QByteArray canonicalQuery(const QUrlQuery &query) const Q_DECL_OVERRIDE;
 
 private:
     Q_DECLARE_PUBLIC(AwsSignatureV0)

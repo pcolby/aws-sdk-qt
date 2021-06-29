@@ -42,7 +42,7 @@ public:
     QString regionName;  ///< This endpoint's region name.
     QString serviceName; ///< This endpoint's service name.
 
-    AwsEndpointPrivate(AwsEndpoint * const q);
+    explicit AwsEndpointPrivate(AwsEndpoint * const q);
 
 protected:
     /// The per-host information to load from the endpoints.xml file.

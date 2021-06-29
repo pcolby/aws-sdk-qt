@@ -46,7 +46,7 @@ public:
 protected:
     /// @cond internal
     AwsAbstractSignaturePrivate * const d_ptr; ///< Internal d-pointer.
-    AwsAbstractSignature(AwsAbstractSignaturePrivate * const d);
+    explicit AwsAbstractSignature(AwsAbstractSignaturePrivate * const d);
     /// @endcond
 
 private:

@@ -138,7 +138,7 @@ QByteArray AwsSignatureV3Private::algorithmDesignation(const QCryptographicHash:
  */
 QByteArray AwsSignatureV3Private::authorizationHeaderValue(const AwsAbstractCredentials &credentials,
                                                            const QNetworkAccessManager::Operation operation,
-                                                           QNetworkRequest &request, const QByteArray &payload) const
+                                                           const QNetworkRequest &request, const QByteArray &payload) const
 {
     // Calculate the signature.
     QByteArray signedHeaders;

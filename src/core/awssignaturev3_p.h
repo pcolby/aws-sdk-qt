@@ -52,7 +52,7 @@ protected:
 
     QByteArray authorizationHeaderValue(const AwsAbstractCredentials &credentials,
                                         const QNetworkAccessManager::Operation operation,
-                                        QNetworkRequest &request, const QByteArray &payload) const;
+                                        const QNetworkRequest &request, const QByteArray &payload) const;
 
     QByteArray canonicalHeader(const QByteArray &headerName, const QByteArray &headerValue) const;
 

@@ -48,7 +48,7 @@ public:
     QString serviceName;                          ///< Amazon service name.
     AwsAbstractSignature * signature;             ///< Amazon signature object.
 
-    AwsAbstractClientPrivate(AwsAbstractClient * const q);
+    explicit AwsAbstractClientPrivate(AwsAbstractClient * const q);
 
     virtual ~AwsAbstractClientPrivate();
 

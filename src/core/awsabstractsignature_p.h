@@ -35,11 +35,11 @@ class AwsAbstractSignaturePrivate {
 public:
     virtual ~AwsAbstractSignaturePrivate();
 
-    AwsAbstractSignaturePrivate(AwsAbstractSignature * const q);
+    explicit AwsAbstractSignaturePrivate(AwsAbstractSignature * const q);
 
     QString canonicalPath(const QUrl &url) const;
 
-    QByteArray canonicalQuery(const QUrlQuery &query) const;
+    virtual QByteArray canonicalQuery(const QUrlQuery &query) const;
 
     QString httpMethod(const QNetworkAccessManager::Operation operation) const;
 
