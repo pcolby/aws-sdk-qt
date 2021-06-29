@@ -18,6 +18,6 @@ jobs:
         cmake -D BUILD_CODEGEN=YES -S "$GITHUB_WORKSPACE" -B "$RUNNER_TEMP"
         cmake --build "$RUNNER_TEMP" --target codegen QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
     - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze
+      uses: github/codeql-action/analyze@v1
 
 # @todo cppcheck
