@@ -4,7 +4,6 @@ on: [push, pull_request]
 
 jobs:
   CodeQL:
-    if: false
     runs-on: ubuntu-latest
     steps:
     - name: Install Grantlee
