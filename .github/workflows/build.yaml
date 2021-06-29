@@ -4,6 +4,7 @@ on: [push, pull_request]
 
 jobs:
   linux:
+    if: false
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -24,6 +25,7 @@ jobs:
         cmake --build "$RUNNER_TEMP" --target codegen QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
 
   linux-qts:
+    if: false
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -88,7 +90,7 @@ jobs:
       uses: jurplel/install-qt-action@v2
       with:
         version: ${{ matrix.qt }}
-        arch: win64_mingw81
+        arch: win64_mingw73
     - name: Install Qt (msvc)
       if: ${{ contains(matrix.generator, 'nmake') }}
       uses: jurplel/install-qt-action@v2
