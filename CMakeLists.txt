@@ -1,4 +1,3 @@
-
 cmake_minimum_required(VERSION 3.0)
 message("-- CMake version is ${CMAKE_VERSION}")
 if (DEFINED CMAKE_BUILD_TYPE)
