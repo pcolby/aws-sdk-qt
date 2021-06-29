@@ -102,7 +102,7 @@ jobs:
       with:
         version: ${{ matrix.qt }}
     - name: Configure MSVC
-      if: ${{ contains(matrix.toolchain, 'nmake') }}
+      if: ${{ contains(matrix.generator, 'nmake') }}
       uses: ilammy/msvc-dev-cmd@v1
     - name: Build
       run: |
