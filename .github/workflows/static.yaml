@@ -11,7 +11,8 @@ jobs:
       run: sudo apt install libgrantlee5-dev
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v1
-      languages: cpp
+      with:
+        languages: cpp
     - name: Build
       run: |
         cmake -D BUILD_CODEGEN=YES -S "$GITHUB_WORKSPACE" -B "$RUNNER_TEMP"
