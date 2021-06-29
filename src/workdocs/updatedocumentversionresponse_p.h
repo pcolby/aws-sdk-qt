@@ -31,7 +31,7 @@ class UpdateDocumentVersionResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 
-    UpdateDocumentVersionResponsePrivate(UpdateDocumentVersionResponse * const q);
+    explicit UpdateDocumentVersionResponsePrivate(UpdateDocumentVersionResponse * const q);
 
     void parseUpdateDocumentVersionResponse(QXmlStreamReader &xml);
 

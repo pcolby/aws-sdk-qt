@@ -31,7 +31,7 @@ class UpdateOpsItemResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    UpdateOpsItemResponsePrivate(UpdateOpsItemResponse * const q);
+    explicit UpdateOpsItemResponsePrivate(UpdateOpsItemResponse * const q);
 
     void parseUpdateOpsItemResponse(QXmlStreamReader &xml);
 

@@ -135,7 +135,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    GlobalAcceleratorClient(
+    explicit GlobalAcceleratorClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -192,7 +192,7 @@ public slots:
 protected:
     /// @cond internal
     GlobalAcceleratorClientPrivate * const d_ptr; ///< Internal d-pointer.
-    GlobalAcceleratorClient(GlobalAcceleratorClientPrivate * const d);
+    explicit GlobalAcceleratorClient(GlobalAcceleratorClientPrivate * const d);
     /// @endcond
 
 private:

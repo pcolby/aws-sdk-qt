@@ -31,7 +31,7 @@ class ReleaseHostsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ReleaseHostsResponsePrivate(ReleaseHostsResponse * const q);
+    explicit ReleaseHostsResponsePrivate(ReleaseHostsResponse * const q);
 
     void parseReleaseHostsResponse(QXmlStreamReader &xml);
 

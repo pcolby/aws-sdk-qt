@@ -31,7 +31,7 @@ class StopStreamProcessorResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 
-    StopStreamProcessorResponsePrivate(StopStreamProcessorResponse * const q);
+    explicit StopStreamProcessorResponsePrivate(StopStreamProcessorResponse * const q);
 
     void parseStopStreamProcessorResponse(QXmlStreamReader &xml);
 

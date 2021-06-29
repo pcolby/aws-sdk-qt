@@ -31,7 +31,7 @@ class ModifyReplicationSubnetGroupResponsePrivate : public DatabaseMigrationServ
 
 public:
 
-    ModifyReplicationSubnetGroupResponsePrivate(ModifyReplicationSubnetGroupResponse * const q);
+    explicit ModifyReplicationSubnetGroupResponsePrivate(ModifyReplicationSubnetGroupResponse * const q);
 
     void parseModifyReplicationSubnetGroupResponse(QXmlStreamReader &xml);
 

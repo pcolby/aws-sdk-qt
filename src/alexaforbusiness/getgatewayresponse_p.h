@@ -31,7 +31,7 @@ class GetGatewayResponsePrivate : public AlexaForBusinessResponsePrivate {
 
 public:
 
-    GetGatewayResponsePrivate(GetGatewayResponse * const q);
+    explicit GetGatewayResponsePrivate(GetGatewayResponse * const q);
 
     void parseGetGatewayResponse(QXmlStreamReader &xml);
 

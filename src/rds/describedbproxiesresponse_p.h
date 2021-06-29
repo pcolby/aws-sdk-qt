@@ -31,7 +31,7 @@ class DescribeDBProxiesResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    DescribeDBProxiesResponsePrivate(DescribeDBProxiesResponse * const q);
+    explicit DescribeDBProxiesResponsePrivate(DescribeDBProxiesResponse * const q);
 
     void parseDescribeDBProxiesResponse(QXmlStreamReader &xml);
 

@@ -29,7 +29,7 @@ class ElasticsearchServiceResponsePrivate {
 
 public:
 
-    ElasticsearchServiceResponsePrivate(ElasticsearchServiceResponse * const q);
+    explicit ElasticsearchServiceResponsePrivate(ElasticsearchServiceResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

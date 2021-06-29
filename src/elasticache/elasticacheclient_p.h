@@ -30,7 +30,7 @@ class ElastiCacheClient;
 class ElastiCacheClientPrivate {
 
 public:
-    ElastiCacheClientPrivate(ElastiCacheClient * const q);
+    explicit ElastiCacheClientPrivate(ElastiCacheClient * const q);
 
 protected:
     ElastiCacheClient * const q_ptr; ///< Internal q-pointer.

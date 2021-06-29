@@ -31,7 +31,7 @@ class DeleteAlertResponsePrivate : public LookoutMetricsResponsePrivate {
 
 public:
 
-    DeleteAlertResponsePrivate(DeleteAlertResponse * const q);
+    explicit DeleteAlertResponsePrivate(DeleteAlertResponse * const q);
 
     void parseDeleteAlertResponse(QXmlStreamReader &xml);
 

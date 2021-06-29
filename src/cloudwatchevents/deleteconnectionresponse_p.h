@@ -31,7 +31,7 @@ class DeleteConnectionResponsePrivate : public CloudWatchEventsResponsePrivate {
 
 public:
 
-    DeleteConnectionResponsePrivate(DeleteConnectionResponse * const q);
+    explicit DeleteConnectionResponsePrivate(DeleteConnectionResponse * const q);
 
     void parseDeleteConnectionResponse(QXmlStreamReader &xml);
 

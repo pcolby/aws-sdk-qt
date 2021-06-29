@@ -31,7 +31,7 @@ class GetPullRequestApprovalStatesResponsePrivate : public CodeCommitResponsePri
 
 public:
 
-    GetPullRequestApprovalStatesResponsePrivate(GetPullRequestApprovalStatesResponse * const q);
+    explicit GetPullRequestApprovalStatesResponsePrivate(GetPullRequestApprovalStatesResponse * const q);
 
     void parseGetPullRequestApprovalStatesResponse(QXmlStreamReader &xml);
 

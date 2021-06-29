@@ -31,7 +31,7 @@ class UpdateConfigurationTemplateResponsePrivate : public ElasticBeanstalkRespon
 
 public:
 
-    UpdateConfigurationTemplateResponsePrivate(UpdateConfigurationTemplateResponse * const q);
+    explicit UpdateConfigurationTemplateResponsePrivate(UpdateConfigurationTemplateResponse * const q);
 
     void parseUpdateConfigurationTemplateResponse(QXmlStreamReader &xml);
 

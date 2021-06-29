@@ -31,7 +31,7 @@ class UpdateNFSFileShareResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 
-    UpdateNFSFileShareResponsePrivate(UpdateNFSFileShareResponse * const q);
+    explicit UpdateNFSFileShareResponsePrivate(UpdateNFSFileShareResponse * const q);
 
     void parseUpdateNFSFileShareResponse(QXmlStreamReader &xml);
 

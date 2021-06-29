@@ -31,7 +31,7 @@ class AssociatePrincipalWithPortfolioResponsePrivate : public ServiceCatalogResp
 
 public:
 
-    AssociatePrincipalWithPortfolioResponsePrivate(AssociatePrincipalWithPortfolioResponse * const q);
+    explicit AssociatePrincipalWithPortfolioResponsePrivate(AssociatePrincipalWithPortfolioResponse * const q);
 
     void parseAssociatePrincipalWithPortfolioResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListAssessmentTemplatesResponsePrivate : public InspectorResponsePrivate {
 
 public:
 
-    ListAssessmentTemplatesResponsePrivate(ListAssessmentTemplatesResponse * const q);
+    explicit ListAssessmentTemplatesResponsePrivate(ListAssessmentTemplatesResponse * const q);
 
     void parseListAssessmentTemplatesResponse(QXmlStreamReader &xml);
 

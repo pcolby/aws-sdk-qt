@@ -31,7 +31,7 @@ class DescribeGatewayRouteResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 
-    DescribeGatewayRouteResponsePrivate(DescribeGatewayRouteResponse * const q);
+    explicit DescribeGatewayRouteResponsePrivate(DescribeGatewayRouteResponse * const q);
 
     void parseDescribeGatewayRouteResponse(QXmlStreamReader &xml);
 

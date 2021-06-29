@@ -31,7 +31,7 @@ class DescribeReplicationInstancesResponsePrivate : public DatabaseMigrationServ
 
 public:
 
-    DescribeReplicationInstancesResponsePrivate(DescribeReplicationInstancesResponse * const q);
+    explicit DescribeReplicationInstancesResponsePrivate(DescribeReplicationInstancesResponse * const q);
 
     void parseDescribeReplicationInstancesResponse(QXmlStreamReader &xml);
 

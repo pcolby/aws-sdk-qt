@@ -31,7 +31,7 @@ class DeleteVodSourceResponsePrivate : public MediaTailorResponsePrivate {
 
 public:
 
-    DeleteVodSourceResponsePrivate(DeleteVodSourceResponse * const q);
+    explicit DeleteVodSourceResponsePrivate(DeleteVodSourceResponse * const q);
 
     void parseDeleteVodSourceResponse(QXmlStreamReader &xml);
 

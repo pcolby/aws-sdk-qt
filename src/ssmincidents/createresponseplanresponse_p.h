@@ -31,7 +31,7 @@ class CreateResponsePlanResponsePrivate : public SSMIncidentsResponsePrivate {
 
 public:
 
-    CreateResponsePlanResponsePrivate(CreateResponsePlanResponse * const q);
+    explicit CreateResponsePlanResponsePrivate(CreateResponsePlanResponse * const q);
 
     void parseCreateResponsePlanResponse(QXmlStreamReader &xml);
 

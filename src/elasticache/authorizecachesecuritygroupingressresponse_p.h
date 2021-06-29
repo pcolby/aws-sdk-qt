@@ -31,7 +31,7 @@ class AuthorizeCacheSecurityGroupIngressResponsePrivate : public ElastiCacheResp
 
 public:
 
-    AuthorizeCacheSecurityGroupIngressResponsePrivate(AuthorizeCacheSecurityGroupIngressResponse * const q);
+    explicit AuthorizeCacheSecurityGroupIngressResponsePrivate(AuthorizeCacheSecurityGroupIngressResponse * const q);
 
     void parseAuthorizeCacheSecurityGroupIngressResponse(QXmlStreamReader &xml);
 

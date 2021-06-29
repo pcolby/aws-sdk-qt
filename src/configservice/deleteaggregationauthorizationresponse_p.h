@@ -31,7 +31,7 @@ class DeleteAggregationAuthorizationResponsePrivate : public ConfigServiceRespon
 
 public:
 
-    DeleteAggregationAuthorizationResponsePrivate(DeleteAggregationAuthorizationResponse * const q);
+    explicit DeleteAggregationAuthorizationResponsePrivate(DeleteAggregationAuthorizationResponse * const q);
 
     void parseDeleteAggregationAuthorizationResponse(QXmlStreamReader &xml);
 

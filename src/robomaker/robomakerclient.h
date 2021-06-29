@@ -155,7 +155,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    RoboMakerClient(
+    explicit RoboMakerClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -222,7 +222,7 @@ public slots:
 protected:
     /// @cond internal
     RoboMakerClientPrivate * const d_ptr; ///< Internal d-pointer.
-    RoboMakerClient(RoboMakerClientPrivate * const d);
+    explicit RoboMakerClient(RoboMakerClientPrivate * const d);
     /// @endcond
 
 private:

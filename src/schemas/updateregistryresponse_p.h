@@ -31,7 +31,7 @@ class UpdateRegistryResponsePrivate : public SchemasResponsePrivate {
 
 public:
 
-    UpdateRegistryResponsePrivate(UpdateRegistryResponse * const q);
+    explicit UpdateRegistryResponsePrivate(UpdateRegistryResponse * const q);
 
     void parseUpdateRegistryResponse(QXmlStreamReader &xml);
 

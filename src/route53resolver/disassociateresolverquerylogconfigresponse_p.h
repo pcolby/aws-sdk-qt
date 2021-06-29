@@ -31,7 +31,7 @@ class DisassociateResolverQueryLogConfigResponsePrivate : public Route53Resolver
 
 public:
 
-    DisassociateResolverQueryLogConfigResponsePrivate(DisassociateResolverQueryLogConfigResponse * const q);
+    explicit DisassociateResolverQueryLogConfigResponsePrivate(DisassociateResolverQueryLogConfigResponse * const q);
 
     void parseDisassociateResolverQueryLogConfigResponse(QXmlStreamReader &xml);
 

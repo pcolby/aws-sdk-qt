@@ -90,7 +90,7 @@ public:
 protected:
     /// @cond internal
     WellArchitectedRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    WellArchitectedRequest(WellArchitectedRequestPrivate * const d);
+    explicit WellArchitectedRequest(WellArchitectedRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

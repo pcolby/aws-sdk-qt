@@ -31,7 +31,7 @@ class DeleteFlowDefinitionResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    DeleteFlowDefinitionResponsePrivate(DeleteFlowDefinitionResponse * const q);
+    explicit DeleteFlowDefinitionResponsePrivate(DeleteFlowDefinitionResponse * const q);
 
     void parseDeleteFlowDefinitionResponse(QXmlStreamReader &xml);
 

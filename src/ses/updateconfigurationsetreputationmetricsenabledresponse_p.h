@@ -31,7 +31,7 @@ class UpdateConfigurationSetReputationMetricsEnabledResponsePrivate : public Ses
 
 public:
 
-    UpdateConfigurationSetReputationMetricsEnabledResponsePrivate(UpdateConfigurationSetReputationMetricsEnabledResponse * const q);
+    explicit UpdateConfigurationSetReputationMetricsEnabledResponsePrivate(UpdateConfigurationSetReputationMetricsEnabledResponse * const q);
 
     void parseUpdateConfigurationSetReputationMetricsEnabledResponse(QXmlStreamReader &xml);
 

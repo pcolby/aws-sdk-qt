@@ -31,7 +31,7 @@ class UpdateHITReviewStatusResponsePrivate : public MTurkResponsePrivate {
 
 public:
 
-    UpdateHITReviewStatusResponsePrivate(UpdateHITReviewStatusResponse * const q);
+    explicit UpdateHITReviewStatusResponsePrivate(UpdateHITReviewStatusResponse * const q);
 
     void parseUpdateHITReviewStatusResponse(QXmlStreamReader &xml);
 

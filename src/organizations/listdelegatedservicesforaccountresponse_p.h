@@ -31,7 +31,7 @@ class ListDelegatedServicesForAccountResponsePrivate : public OrganizationsRespo
 
 public:
 
-    ListDelegatedServicesForAccountResponsePrivate(ListDelegatedServicesForAccountResponse * const q);
+    explicit ListDelegatedServicesForAccountResponsePrivate(ListDelegatedServicesForAccountResponse * const q);
 
     void parseListDelegatedServicesForAccountResponse(QXmlStreamReader &xml);
 

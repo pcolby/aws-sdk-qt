@@ -31,7 +31,7 @@ class RestorePhoneNumberResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    RestorePhoneNumberResponsePrivate(RestorePhoneNumberResponse * const q);
+    explicit RestorePhoneNumberResponsePrivate(RestorePhoneNumberResponse * const q);
 
     void parseRestorePhoneNumberResponse(QXmlStreamReader &xml);
 

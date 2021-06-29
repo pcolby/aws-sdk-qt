@@ -31,7 +31,7 @@ class DeleteProgramResponsePrivate : public MediaTailorResponsePrivate {
 
 public:
 
-    DeleteProgramResponsePrivate(DeleteProgramResponse * const q);
+    explicit DeleteProgramResponsePrivate(DeleteProgramResponse * const q);
 
     void parseDeleteProgramResponse(QXmlStreamReader &xml);
 

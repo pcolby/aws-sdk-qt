@@ -31,7 +31,7 @@ class UpdateDeviceFleetResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    UpdateDeviceFleetResponsePrivate(UpdateDeviceFleetResponse * const q);
+    explicit UpdateDeviceFleetResponsePrivate(UpdateDeviceFleetResponse * const q);
 
     void parseUpdateDeviceFleetResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateFileSystemResponsePrivate : public EfsResponsePrivate {
 
 public:
 
-    UpdateFileSystemResponsePrivate(UpdateFileSystemResponse * const q);
+    explicit UpdateFileSystemResponsePrivate(UpdateFileSystemResponse * const q);
 
     void parseUpdateFileSystemResponse(QXmlStreamReader &xml);
 

@@ -29,7 +29,7 @@ class MTurkResponsePrivate {
 
 public:
 
-    MTurkResponsePrivate(MTurkResponse * const q);
+    explicit MTurkResponsePrivate(MTurkResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

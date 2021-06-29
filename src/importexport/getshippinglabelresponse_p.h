@@ -31,7 +31,7 @@ class GetShippingLabelResponsePrivate : public ImportExportResponsePrivate {
 
 public:
 
-    GetShippingLabelResponsePrivate(GetShippingLabelResponse * const q);
+    explicit GetShippingLabelResponsePrivate(GetShippingLabelResponse * const q);
 
     void parseGetShippingLabelResponse(QXmlStreamReader &xml);
 

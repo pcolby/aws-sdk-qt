@@ -31,7 +31,7 @@ class PutPartnerEventsResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 
-    PutPartnerEventsResponsePrivate(PutPartnerEventsResponse * const q);
+    explicit PutPartnerEventsResponsePrivate(PutPartnerEventsResponse * const q);
 
     void parsePutPartnerEventsResponse(QXmlStreamReader &xml);
 

@@ -30,7 +30,7 @@ class TextractClient;
 class TextractClientPrivate {
 
 public:
-    TextractClientPrivate(TextractClient * const q);
+    explicit TextractClientPrivate(TextractClient * const q);
 
 protected:
     TextractClient * const q_ptr; ///< Internal q-pointer.

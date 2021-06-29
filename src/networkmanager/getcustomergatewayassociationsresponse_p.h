@@ -31,7 +31,7 @@ class GetCustomerGatewayAssociationsResponsePrivate : public NetworkManagerRespo
 
 public:
 
-    GetCustomerGatewayAssociationsResponsePrivate(GetCustomerGatewayAssociationsResponse * const q);
+    explicit GetCustomerGatewayAssociationsResponsePrivate(GetCustomerGatewayAssociationsResponse * const q);
 
     void parseGetCustomerGatewayAssociationsResponse(QXmlStreamReader &xml);
 

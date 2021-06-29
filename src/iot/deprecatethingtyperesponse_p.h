@@ -31,7 +31,7 @@ class DeprecateThingTypeResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DeprecateThingTypeResponsePrivate(DeprecateThingTypeResponse * const q);
+    explicit DeprecateThingTypeResponsePrivate(DeprecateThingTypeResponse * const q);
 
     void parseDeprecateThingTypeResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetEmailChannelResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    GetEmailChannelResponsePrivate(GetEmailChannelResponse * const q);
+    explicit GetEmailChannelResponsePrivate(GetEmailChannelResponse * const q);
 
     void parseGetEmailChannelResponse(QXmlStreamReader &xml);
 

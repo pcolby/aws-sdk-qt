@@ -31,7 +31,7 @@ class AssociateNodeResponsePrivate : public OpsWorksCMResponsePrivate {
 
 public:
 
-    AssociateNodeResponsePrivate(AssociateNodeResponse * const q);
+    explicit AssociateNodeResponsePrivate(AssociateNodeResponse * const q);
 
     void parseAssociateNodeResponse(QXmlStreamReader &xml);
 

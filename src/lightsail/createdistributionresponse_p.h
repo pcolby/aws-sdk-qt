@@ -31,7 +31,7 @@ class CreateDistributionResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    CreateDistributionResponsePrivate(CreateDistributionResponse * const q);
+    explicit CreateDistributionResponsePrivate(CreateDistributionResponse * const q);
 
     void parseCreateDistributionResponse(QXmlStreamReader &xml);
 

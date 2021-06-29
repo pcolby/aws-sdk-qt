@@ -31,7 +31,7 @@ class AssociateApprovalRuleTemplateWithRepositoryResponsePrivate : public CodeCo
 
 public:
 
-    AssociateApprovalRuleTemplateWithRepositoryResponsePrivate(AssociateApprovalRuleTemplateWithRepositoryResponse * const q);
+    explicit AssociateApprovalRuleTemplateWithRepositoryResponsePrivate(AssociateApprovalRuleTemplateWithRepositoryResponse * const q);
 
     void parseAssociateApprovalRuleTemplateWithRepositoryResponse(QXmlStreamReader &xml);
 

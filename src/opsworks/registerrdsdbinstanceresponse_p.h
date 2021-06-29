@@ -31,7 +31,7 @@ class RegisterRdsDbInstanceResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    RegisterRdsDbInstanceResponsePrivate(RegisterRdsDbInstanceResponse * const q);
+    explicit RegisterRdsDbInstanceResponsePrivate(RegisterRdsDbInstanceResponse * const q);
 
     void parseRegisterRdsDbInstanceResponse(QXmlStreamReader &xml);
 

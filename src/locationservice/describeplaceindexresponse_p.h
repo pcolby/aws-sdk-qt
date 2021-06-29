@@ -31,7 +31,7 @@ class DescribePlaceIndexResponsePrivate : public LocationServiceResponsePrivate 
 
 public:
 
-    DescribePlaceIndexResponsePrivate(DescribePlaceIndexResponse * const q);
+    explicit DescribePlaceIndexResponsePrivate(DescribePlaceIndexResponse * const q);
 
     void parseDescribePlaceIndexResponse(QXmlStreamReader &xml);
 

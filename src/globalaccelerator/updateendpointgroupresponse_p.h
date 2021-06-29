@@ -31,7 +31,7 @@ class UpdateEndpointGroupResponsePrivate : public GlobalAcceleratorResponsePriva
 
 public:
 
-    UpdateEndpointGroupResponsePrivate(UpdateEndpointGroupResponse * const q);
+    explicit UpdateEndpointGroupResponsePrivate(UpdateEndpointGroupResponse * const q);
 
     void parseUpdateEndpointGroupResponse(QXmlStreamReader &xml);
 

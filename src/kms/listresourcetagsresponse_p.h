@@ -31,7 +31,7 @@ class ListResourceTagsResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    ListResourceTagsResponsePrivate(ListResourceTagsResponse * const q);
+    explicit ListResourceTagsResponsePrivate(ListResourceTagsResponse * const q);
 
     void parseListResourceTagsResponse(QXmlStreamReader &xml);
 

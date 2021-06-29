@@ -31,7 +31,7 @@ class DeleteUtterancesResponsePrivate : public LexModelBuildingServiceResponsePr
 
 public:
 
-    DeleteUtterancesResponsePrivate(DeleteUtterancesResponse * const q);
+    explicit DeleteUtterancesResponsePrivate(DeleteUtterancesResponse * const q);
 
     void parseDeleteUtterancesResponse(QXmlStreamReader &xml);
 

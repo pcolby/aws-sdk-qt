@@ -31,7 +31,7 @@ class ListIpRoutesResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 
-    ListIpRoutesResponsePrivate(ListIpRoutesResponse * const q);
+    explicit ListIpRoutesResponsePrivate(ListIpRoutesResponse * const q);
 
     void parseListIpRoutesResponse(QXmlStreamReader &xml);
 

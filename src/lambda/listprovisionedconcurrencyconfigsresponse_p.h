@@ -31,7 +31,7 @@ class ListProvisionedConcurrencyConfigsResponsePrivate : public LambdaResponsePr
 
 public:
 
-    ListProvisionedConcurrencyConfigsResponsePrivate(ListProvisionedConcurrencyConfigsResponse * const q);
+    explicit ListProvisionedConcurrencyConfigsResponsePrivate(ListProvisionedConcurrencyConfigsResponse * const q);
 
     void parseListProvisionedConcurrencyConfigsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class EnableAWSOrganizationsAccessResponsePrivate : public ServiceCatalogRespons
 
 public:
 
-    EnableAWSOrganizationsAccessResponsePrivate(EnableAWSOrganizationsAccessResponse * const q);
+    explicit EnableAWSOrganizationsAccessResponsePrivate(EnableAWSOrganizationsAccessResponse * const q);
 
     void parseEnableAWSOrganizationsAccessResponse(QXmlStreamReader &xml);
 

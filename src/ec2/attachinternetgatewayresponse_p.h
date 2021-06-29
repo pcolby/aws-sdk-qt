@@ -31,7 +31,7 @@ class AttachInternetGatewayResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    AttachInternetGatewayResponsePrivate(AttachInternetGatewayResponse * const q);
+    explicit AttachInternetGatewayResponsePrivate(AttachInternetGatewayResponse * const q);
 
     void parseAttachInternetGatewayResponse(QXmlStreamReader &xml);
 

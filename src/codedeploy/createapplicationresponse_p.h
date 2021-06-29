@@ -31,7 +31,7 @@ class CreateApplicationResponsePrivate : public CodeDeployResponsePrivate {
 
 public:
 
-    CreateApplicationResponsePrivate(CreateApplicationResponse * const q);
+    explicit CreateApplicationResponsePrivate(CreateApplicationResponse * const q);
 
     void parseCreateApplicationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateSqlInjectionMatchSetResponsePrivate : public WAFRegionalResponsePriv
 
 public:
 
-    UpdateSqlInjectionMatchSetResponsePrivate(UpdateSqlInjectionMatchSetResponse * const q);
+    explicit UpdateSqlInjectionMatchSetResponsePrivate(UpdateSqlInjectionMatchSetResponse * const q);
 
     void parseUpdateSqlInjectionMatchSetResponse(QXmlStreamReader &xml);
 

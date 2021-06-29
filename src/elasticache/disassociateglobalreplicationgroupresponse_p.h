@@ -31,7 +31,7 @@ class DisassociateGlobalReplicationGroupResponsePrivate : public ElastiCacheResp
 
 public:
 
-    DisassociateGlobalReplicationGroupResponsePrivate(DisassociateGlobalReplicationGroupResponse * const q);
+    explicit DisassociateGlobalReplicationGroupResponsePrivate(DisassociateGlobalReplicationGroupResponse * const q);
 
     void parseDisassociateGlobalReplicationGroupResponse(QXmlStreamReader &xml);
 

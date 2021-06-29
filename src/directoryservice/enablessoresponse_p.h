@@ -31,7 +31,7 @@ class EnableSsoResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 
-    EnableSsoResponsePrivate(EnableSsoResponse * const q);
+    explicit EnableSsoResponsePrivate(EnableSsoResponse * const q);
 
     void parseEnableSsoResponse(QXmlStreamReader &xml);
 

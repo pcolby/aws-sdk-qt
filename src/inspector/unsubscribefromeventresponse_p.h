@@ -31,7 +31,7 @@ class UnsubscribeFromEventResponsePrivate : public InspectorResponsePrivate {
 
 public:
 
-    UnsubscribeFromEventResponsePrivate(UnsubscribeFromEventResponse * const q);
+    explicit UnsubscribeFromEventResponsePrivate(UnsubscribeFromEventResponse * const q);
 
     void parseUnsubscribeFromEventResponse(QXmlStreamReader &xml);
 

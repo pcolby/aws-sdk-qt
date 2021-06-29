@@ -31,7 +31,7 @@ class PutLifecycleHookResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 
-    PutLifecycleHookResponsePrivate(PutLifecycleHookResponse * const q);
+    explicit PutLifecycleHookResponsePrivate(PutLifecycleHookResponse * const q);
 
     void parsePutLifecycleHookResponse(QXmlStreamReader &xml);
 

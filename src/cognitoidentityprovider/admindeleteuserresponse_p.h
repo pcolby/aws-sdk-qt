@@ -31,7 +31,7 @@ class AdminDeleteUserResponsePrivate : public CognitoIdentityProviderResponsePri
 
 public:
 
-    AdminDeleteUserResponsePrivate(AdminDeleteUserResponse * const q);
+    explicit AdminDeleteUserResponsePrivate(AdminDeleteUserResponse * const q);
 
     void parseAdminDeleteUserResponse(QXmlStreamReader &xml);
 

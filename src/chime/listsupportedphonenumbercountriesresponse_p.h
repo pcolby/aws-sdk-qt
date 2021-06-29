@@ -31,7 +31,7 @@ class ListSupportedPhoneNumberCountriesResponsePrivate : public ChimeResponsePri
 
 public:
 
-    ListSupportedPhoneNumberCountriesResponsePrivate(ListSupportedPhoneNumberCountriesResponse * const q);
+    explicit ListSupportedPhoneNumberCountriesResponsePrivate(ListSupportedPhoneNumberCountriesResponse * const q);
 
     void parseListSupportedPhoneNumberCountriesResponse(QXmlStreamReader &xml);
 

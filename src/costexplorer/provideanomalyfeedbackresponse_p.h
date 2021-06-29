@@ -31,7 +31,7 @@ class ProvideAnomalyFeedbackResponsePrivate : public CostExplorerResponsePrivate
 
 public:
 
-    ProvideAnomalyFeedbackResponsePrivate(ProvideAnomalyFeedbackResponse * const q);
+    explicit ProvideAnomalyFeedbackResponsePrivate(ProvideAnomalyFeedbackResponse * const q);
 
     void parseProvideAnomalyFeedbackResponse(QXmlStreamReader &xml);
 

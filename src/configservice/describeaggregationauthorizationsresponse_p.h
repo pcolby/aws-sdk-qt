@@ -31,7 +31,7 @@ class DescribeAggregationAuthorizationsResponsePrivate : public ConfigServiceRes
 
 public:
 
-    DescribeAggregationAuthorizationsResponsePrivate(DescribeAggregationAuthorizationsResponse * const q);
+    explicit DescribeAggregationAuthorizationsResponsePrivate(DescribeAggregationAuthorizationsResponse * const q);
 
     void parseDescribeAggregationAuthorizationsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class AssociateAttributeGroupResponsePrivate : public AppRegistryResponsePrivate
 
 public:
 
-    AssociateAttributeGroupResponsePrivate(AssociateAttributeGroupResponse * const q);
+    explicit AssociateAttributeGroupResponsePrivate(AssociateAttributeGroupResponse * const q);
 
     void parseAssociateAttributeGroupResponse(QXmlStreamReader &xml);
 

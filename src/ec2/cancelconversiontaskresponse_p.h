@@ -31,7 +31,7 @@ class CancelConversionTaskResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CancelConversionTaskResponsePrivate(CancelConversionTaskResponse * const q);
+    explicit CancelConversionTaskResponsePrivate(CancelConversionTaskResponse * const q);
 
     void parseCancelConversionTaskResponse(QXmlStreamReader &xml);
 

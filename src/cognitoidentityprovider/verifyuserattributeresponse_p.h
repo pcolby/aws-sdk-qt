@@ -31,7 +31,7 @@ class VerifyUserAttributeResponsePrivate : public CognitoIdentityProviderRespons
 
 public:
 
-    VerifyUserAttributeResponsePrivate(VerifyUserAttributeResponse * const q);
+    explicit VerifyUserAttributeResponsePrivate(VerifyUserAttributeResponse * const q);
 
     void parseVerifyUserAttributeResponse(QXmlStreamReader &xml);
 

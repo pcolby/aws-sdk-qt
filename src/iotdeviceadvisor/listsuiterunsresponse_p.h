@@ -31,7 +31,7 @@ class ListSuiteRunsResponsePrivate : public IoTDeviceAdvisorResponsePrivate {
 
 public:
 
-    ListSuiteRunsResponsePrivate(ListSuiteRunsResponse * const q);
+    explicit ListSuiteRunsResponsePrivate(ListSuiteRunsResponse * const q);
 
     void parseListSuiteRunsResponse(QXmlStreamReader &xml);
 

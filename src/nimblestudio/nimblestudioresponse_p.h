@@ -29,7 +29,7 @@ class NimbleStudioResponsePrivate {
 
 public:
 
-    NimbleStudioResponsePrivate(NimbleStudioResponse * const q);
+    explicit NimbleStudioResponsePrivate(NimbleStudioResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

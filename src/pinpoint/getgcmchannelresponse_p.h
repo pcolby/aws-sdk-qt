@@ -31,7 +31,7 @@ class GetGcmChannelResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    GetGcmChannelResponsePrivate(GetGcmChannelResponse * const q);
+    explicit GetGcmChannelResponsePrivate(GetGcmChannelResponse * const q);
 
     void parseGetGcmChannelResponse(QXmlStreamReader &xml);
 

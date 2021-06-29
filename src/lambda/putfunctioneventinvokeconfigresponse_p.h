@@ -31,7 +31,7 @@ class PutFunctionEventInvokeConfigResponsePrivate : public LambdaResponsePrivate
 
 public:
 
-    PutFunctionEventInvokeConfigResponsePrivate(PutFunctionEventInvokeConfigResponse * const q);
+    explicit PutFunctionEventInvokeConfigResponsePrivate(PutFunctionEventInvokeConfigResponse * const q);
 
     void parsePutFunctionEventInvokeConfigResponse(QXmlStreamReader &xml);
 

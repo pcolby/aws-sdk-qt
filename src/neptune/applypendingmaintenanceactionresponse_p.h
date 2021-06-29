@@ -31,7 +31,7 @@ class ApplyPendingMaintenanceActionResponsePrivate : public NeptuneResponsePriva
 
 public:
 
-    ApplyPendingMaintenanceActionResponsePrivate(ApplyPendingMaintenanceActionResponse * const q);
+    explicit ApplyPendingMaintenanceActionResponsePrivate(ApplyPendingMaintenanceActionResponse * const q);
 
     void parseApplyPendingMaintenanceActionResponse(QXmlStreamReader &xml);
 

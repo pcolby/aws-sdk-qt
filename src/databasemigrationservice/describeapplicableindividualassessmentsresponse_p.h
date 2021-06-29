@@ -31,7 +31,7 @@ class DescribeApplicableIndividualAssessmentsResponsePrivate : public DatabaseMi
 
 public:
 
-    DescribeApplicableIndividualAssessmentsResponsePrivate(DescribeApplicableIndividualAssessmentsResponse * const q);
+    explicit DescribeApplicableIndividualAssessmentsResponsePrivate(DescribeApplicableIndividualAssessmentsResponse * const q);
 
     void parseDescribeApplicableIndividualAssessmentsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateApplicationResponsePrivate : public ElasticBeanstalkResponsePrivate 
 
 public:
 
-    CreateApplicationResponsePrivate(CreateApplicationResponse * const q);
+    explicit CreateApplicationResponsePrivate(CreateApplicationResponse * const q);
 
     void parseCreateApplicationResponse(QXmlStreamReader &xml);
 

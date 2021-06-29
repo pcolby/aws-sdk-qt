@@ -31,7 +31,7 @@ class DeleteFirewallManagerRuleGroupsResponsePrivate : public Wafv2ResponsePriva
 
 public:
 
-    DeleteFirewallManagerRuleGroupsResponsePrivate(DeleteFirewallManagerRuleGroupsResponse * const q);
+    explicit DeleteFirewallManagerRuleGroupsResponsePrivate(DeleteFirewallManagerRuleGroupsResponse * const q);
 
     void parseDeleteFirewallManagerRuleGroupsResponse(QXmlStreamReader &xml);
 

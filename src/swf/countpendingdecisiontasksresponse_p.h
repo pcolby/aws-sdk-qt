@@ -31,7 +31,7 @@ class CountPendingDecisionTasksResponsePrivate : public SwfResponsePrivate {
 
 public:
 
-    CountPendingDecisionTasksResponsePrivate(CountPendingDecisionTasksResponse * const q);
+    explicit CountPendingDecisionTasksResponsePrivate(CountPendingDecisionTasksResponse * const q);
 
     void parseCountPendingDecisionTasksResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListViolationEventsResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    ListViolationEventsResponsePrivate(ListViolationEventsResponse * const q);
+    explicit ListViolationEventsResponsePrivate(ListViolationEventsResponse * const q);
 
     void parseListViolationEventsResponse(QXmlStreamReader &xml);
 

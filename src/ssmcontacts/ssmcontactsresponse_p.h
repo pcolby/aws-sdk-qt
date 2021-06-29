@@ -29,7 +29,7 @@ class SSMContactsResponsePrivate {
 
 public:
 
-    SSMContactsResponsePrivate(SSMContactsResponse * const q);
+    explicit SSMContactsResponsePrivate(SSMContactsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

@@ -31,7 +31,7 @@ class DeleteSipRuleResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    DeleteSipRuleResponsePrivate(DeleteSipRuleResponse * const q);
+    explicit DeleteSipRuleResponsePrivate(DeleteSipRuleResponse * const q);
 
     void parseDeleteSipRuleResponse(QXmlStreamReader &xml);
 

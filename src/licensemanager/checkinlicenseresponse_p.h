@@ -31,7 +31,7 @@ class CheckInLicenseResponsePrivate : public LicenseManagerResponsePrivate {
 
 public:
 
-    CheckInLicenseResponsePrivate(CheckInLicenseResponse * const q);
+    explicit CheckInLicenseResponsePrivate(CheckInLicenseResponse * const q);
 
     void parseCheckInLicenseResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateGraphResponsePrivate : public DetectiveResponsePrivate {
 
 public:
 
-    CreateGraphResponsePrivate(CreateGraphResponse * const q);
+    explicit CreateGraphResponsePrivate(CreateGraphResponse * const q);
 
     void parseCreateGraphResponse(QXmlStreamReader &xml);
 

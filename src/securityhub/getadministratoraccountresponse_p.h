@@ -31,7 +31,7 @@ class GetAdministratorAccountResponsePrivate : public SecurityHubResponsePrivate
 
 public:
 
-    GetAdministratorAccountResponsePrivate(GetAdministratorAccountResponse * const q);
+    explicit GetAdministratorAccountResponsePrivate(GetAdministratorAccountResponse * const q);
 
     void parseGetAdministratorAccountResponse(QXmlStreamReader &xml);
 

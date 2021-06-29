@@ -31,7 +31,7 @@ class BatchAssociateAssessmentReportEvidenceResponsePrivate : public AuditManage
 
 public:
 
-    BatchAssociateAssessmentReportEvidenceResponsePrivate(BatchAssociateAssessmentReportEvidenceResponse * const q);
+    explicit BatchAssociateAssessmentReportEvidenceResponsePrivate(BatchAssociateAssessmentReportEvidenceResponse * const q);
 
     void parseBatchAssociateAssessmentReportEvidenceResponse(QXmlStreamReader &xml);
 

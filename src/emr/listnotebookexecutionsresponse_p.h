@@ -31,7 +31,7 @@ class ListNotebookExecutionsResponsePrivate : public EmrResponsePrivate {
 
 public:
 
-    ListNotebookExecutionsResponsePrivate(ListNotebookExecutionsResponse * const q);
+    explicit ListNotebookExecutionsResponsePrivate(ListNotebookExecutionsResponse * const q);
 
     void parseListNotebookExecutionsResponse(QXmlStreamReader &xml);
 

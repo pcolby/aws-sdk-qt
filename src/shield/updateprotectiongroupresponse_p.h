@@ -31,7 +31,7 @@ class UpdateProtectionGroupResponsePrivate : public ShieldResponsePrivate {
 
 public:
 
-    UpdateProtectionGroupResponsePrivate(UpdateProtectionGroupResponse * const q);
+    explicit UpdateProtectionGroupResponsePrivate(UpdateProtectionGroupResponse * const q);
 
     void parseUpdateProtectionGroupResponse(QXmlStreamReader &xml);
 

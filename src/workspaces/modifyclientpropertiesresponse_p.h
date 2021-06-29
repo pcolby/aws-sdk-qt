@@ -31,7 +31,7 @@ class ModifyClientPropertiesResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 
-    ModifyClientPropertiesResponsePrivate(ModifyClientPropertiesResponse * const q);
+    explicit ModifyClientPropertiesResponsePrivate(ModifyClientPropertiesResponse * const q);
 
     void parseModifyClientPropertiesResponse(QXmlStreamReader &xml);
 

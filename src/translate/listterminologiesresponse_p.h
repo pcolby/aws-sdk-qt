@@ -31,7 +31,7 @@ class ListTerminologiesResponsePrivate : public TranslateResponsePrivate {
 
 public:
 
-    ListTerminologiesResponsePrivate(ListTerminologiesResponse * const q);
+    explicit ListTerminologiesResponsePrivate(ListTerminologiesResponse * const q);
 
     void parseListTerminologiesResponse(QXmlStreamReader &xml);
 

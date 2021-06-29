@@ -31,7 +31,7 @@ class DetachDiskResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    DetachDiskResponsePrivate(DetachDiskResponse * const q);
+    explicit DetachDiskResponsePrivate(DetachDiskResponse * const q);
 
     void parseDetachDiskResponse(QXmlStreamReader &xml);
 

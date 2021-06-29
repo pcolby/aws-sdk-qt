@@ -31,7 +31,7 @@ class CreateSMSSandboxPhoneNumberResponsePrivate : public SnsResponsePrivate {
 
 public:
 
-    CreateSMSSandboxPhoneNumberResponsePrivate(CreateSMSSandboxPhoneNumberResponse * const q);
+    explicit CreateSMSSandboxPhoneNumberResponsePrivate(CreateSMSSandboxPhoneNumberResponse * const q);
 
     void parseCreateSMSSandboxPhoneNumberResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListPlaceIndexesResponsePrivate : public LocationServiceResponsePrivate {
 
 public:
 
-    ListPlaceIndexesResponsePrivate(ListPlaceIndexesResponse * const q);
+    explicit ListPlaceIndexesResponsePrivate(ListPlaceIndexesResponse * const q);
 
     void parseListPlaceIndexesResponse(QXmlStreamReader &xml);
 

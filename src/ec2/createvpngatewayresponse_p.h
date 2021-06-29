@@ -31,7 +31,7 @@ class CreateVpnGatewayResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CreateVpnGatewayResponsePrivate(CreateVpnGatewayResponse * const q);
+    explicit CreateVpnGatewayResponsePrivate(CreateVpnGatewayResponse * const q);
 
     void parseCreateVpnGatewayResponse(QXmlStreamReader &xml);
 

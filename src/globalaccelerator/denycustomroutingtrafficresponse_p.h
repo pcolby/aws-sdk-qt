@@ -31,7 +31,7 @@ class DenyCustomRoutingTrafficResponsePrivate : public GlobalAcceleratorResponse
 
 public:
 
-    DenyCustomRoutingTrafficResponsePrivate(DenyCustomRoutingTrafficResponse * const q);
+    explicit DenyCustomRoutingTrafficResponsePrivate(DenyCustomRoutingTrafficResponse * const q);
 
     void parseDenyCustomRoutingTrafficResponse(QXmlStreamReader &xml);
 

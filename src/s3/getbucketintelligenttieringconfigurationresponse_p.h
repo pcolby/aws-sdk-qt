@@ -31,7 +31,7 @@ class GetBucketIntelligentTieringConfigurationResponsePrivate : public S3Respons
 
 public:
 
-    GetBucketIntelligentTieringConfigurationResponsePrivate(GetBucketIntelligentTieringConfigurationResponse * const q);
+    explicit GetBucketIntelligentTieringConfigurationResponsePrivate(GetBucketIntelligentTieringConfigurationResponse * const q);
 
     void parseGetBucketIntelligentTieringConfigurationResponse(QXmlStreamReader &xml);
 

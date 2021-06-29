@@ -31,7 +31,7 @@ class DeleteOrganizationalUnitResponsePrivate : public OrganizationsResponsePriv
 
 public:
 
-    DeleteOrganizationalUnitResponsePrivate(DeleteOrganizationalUnitResponse * const q);
+    explicit DeleteOrganizationalUnitResponsePrivate(DeleteOrganizationalUnitResponse * const q);
 
     void parseDeleteOrganizationalUnitResponse(QXmlStreamReader &xml);
 

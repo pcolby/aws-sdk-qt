@@ -31,7 +31,7 @@ class CreateAddressBookResponsePrivate : public AlexaForBusinessResponsePrivate 
 
 public:
 
-    CreateAddressBookResponsePrivate(CreateAddressBookResponse * const q);
+    explicit CreateAddressBookResponsePrivate(CreateAddressBookResponse * const q);
 
     void parseCreateAddressBookResponse(QXmlStreamReader &xml);
 

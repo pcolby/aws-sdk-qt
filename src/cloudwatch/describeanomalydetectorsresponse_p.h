@@ -31,7 +31,7 @@ class DescribeAnomalyDetectorsResponsePrivate : public CloudWatchResponsePrivate
 
 public:
 
-    DescribeAnomalyDetectorsResponsePrivate(DescribeAnomalyDetectorsResponse * const q);
+    explicit DescribeAnomalyDetectorsResponsePrivate(DescribeAnomalyDetectorsResponse * const q);
 
     void parseDescribeAnomalyDetectorsResponse(QXmlStreamReader &xml);
 

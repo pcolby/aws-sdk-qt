@@ -31,7 +31,7 @@ class StartHumanLoopResponsePrivate : public AugmentedAIRuntimeResponsePrivate {
 
 public:
 
-    StartHumanLoopResponsePrivate(StartHumanLoopResponse * const q);
+    explicit StartHumanLoopResponsePrivate(StartHumanLoopResponse * const q);
 
     void parseStartHumanLoopResponse(QXmlStreamReader &xml);
 

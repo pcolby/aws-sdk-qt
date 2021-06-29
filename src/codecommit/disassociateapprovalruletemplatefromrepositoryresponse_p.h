@@ -31,7 +31,7 @@ class DisassociateApprovalRuleTemplateFromRepositoryResponsePrivate : public Cod
 
 public:
 
-    DisassociateApprovalRuleTemplateFromRepositoryResponsePrivate(DisassociateApprovalRuleTemplateFromRepositoryResponse * const q);
+    explicit DisassociateApprovalRuleTemplateFromRepositoryResponsePrivate(DisassociateApprovalRuleTemplateFromRepositoryResponse * const q);
 
     void parseDisassociateApprovalRuleTemplateFromRepositoryResponse(QXmlStreamReader &xml);
 

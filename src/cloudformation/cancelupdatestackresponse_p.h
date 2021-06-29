@@ -31,7 +31,7 @@ class CancelUpdateStackResponsePrivate : public CloudFormationResponsePrivate {
 
 public:
 
-    CancelUpdateStackResponsePrivate(CancelUpdateStackResponse * const q);
+    explicit CancelUpdateStackResponsePrivate(CancelUpdateStackResponse * const q);
 
     void parseCancelUpdateStackResponse(QXmlStreamReader &xml);
 

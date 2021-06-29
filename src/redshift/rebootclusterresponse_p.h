@@ -31,7 +31,7 @@ class RebootClusterResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    RebootClusterResponsePrivate(RebootClusterResponse * const q);
+    explicit RebootClusterResponsePrivate(RebootClusterResponse * const q);
 
     void parseRebootClusterResponse(QXmlStreamReader &xml);
 

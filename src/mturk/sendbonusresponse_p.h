@@ -31,7 +31,7 @@ class SendBonusResponsePrivate : public MTurkResponsePrivate {
 
 public:
 
-    SendBonusResponsePrivate(SendBonusResponse * const q);
+    explicit SendBonusResponsePrivate(SendBonusResponse * const q);
 
     void parseSendBonusResponse(QXmlStreamReader &xml);
 

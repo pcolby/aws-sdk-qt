@@ -31,7 +31,7 @@ class UpdateAttributeGroupResponsePrivate : public AppRegistryResponsePrivate {
 
 public:
 
-    UpdateAttributeGroupResponsePrivate(UpdateAttributeGroupResponse * const q);
+    explicit UpdateAttributeGroupResponsePrivate(UpdateAttributeGroupResponse * const q);
 
     void parseUpdateAttributeGroupResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListRequestedServiceQuotaChangeHistoryResponsePrivate : public ServiceQuot
 
 public:
 
-    ListRequestedServiceQuotaChangeHistoryResponsePrivate(ListRequestedServiceQuotaChangeHistoryResponse * const q);
+    explicit ListRequestedServiceQuotaChangeHistoryResponsePrivate(ListRequestedServiceQuotaChangeHistoryResponse * const q);
 
     void parseListRequestedServiceQuotaChangeHistoryResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateReservationResponsePrivate : public MediaLiveResponsePrivate {
 
 public:
 
-    UpdateReservationResponsePrivate(UpdateReservationResponse * const q);
+    explicit UpdateReservationResponsePrivate(UpdateReservationResponse * const q);
 
     void parseUpdateReservationResponse(QXmlStreamReader &xml);
 

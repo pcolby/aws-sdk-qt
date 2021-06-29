@@ -31,7 +31,7 @@ class ResendContactReachabilityEmailResponsePrivate : public Route53DomainsRespo
 
 public:
 
-    ResendContactReachabilityEmailResponsePrivate(ResendContactReachabilityEmailResponse * const q);
+    explicit ResendContactReachabilityEmailResponsePrivate(ResendContactReachabilityEmailResponse * const q);
 
     void parseResendContactReachabilityEmailResponse(QXmlStreamReader &xml);
 

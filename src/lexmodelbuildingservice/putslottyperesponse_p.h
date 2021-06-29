@@ -31,7 +31,7 @@ class PutSlotTypeResponsePrivate : public LexModelBuildingServiceResponsePrivate
 
 public:
 
-    PutSlotTypeResponsePrivate(PutSlotTypeResponse * const q);
+    explicit PutSlotTypeResponsePrivate(PutSlotTypeResponse * const q);
 
     void parsePutSlotTypeResponse(QXmlStreamReader &xml);
 

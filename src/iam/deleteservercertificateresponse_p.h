@@ -31,7 +31,7 @@ class DeleteServerCertificateResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    DeleteServerCertificateResponsePrivate(DeleteServerCertificateResponse * const q);
+    explicit DeleteServerCertificateResponsePrivate(DeleteServerCertificateResponse * const q);
 
     void parseDeleteServerCertificateResponse(QXmlStreamReader &xml);
 

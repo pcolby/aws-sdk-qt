@@ -31,7 +31,7 @@ class SetDesiredCapacityResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 
-    SetDesiredCapacityResponsePrivate(SetDesiredCapacityResponse * const q);
+    explicit SetDesiredCapacityResponsePrivate(SetDesiredCapacityResponse * const q);
 
     void parseSetDesiredCapacityResponse(QXmlStreamReader &xml);
 

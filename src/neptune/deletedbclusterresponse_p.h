@@ -31,7 +31,7 @@ class DeleteDBClusterResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 
-    DeleteDBClusterResponsePrivate(DeleteDBClusterResponse * const q);
+    explicit DeleteDBClusterResponsePrivate(DeleteDBClusterResponse * const q);
 
     void parseDeleteDBClusterResponse(QXmlStreamReader &xml);
 

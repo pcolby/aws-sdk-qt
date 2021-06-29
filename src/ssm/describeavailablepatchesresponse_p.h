@@ -31,7 +31,7 @@ class DescribeAvailablePatchesResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    DescribeAvailablePatchesResponsePrivate(DescribeAvailablePatchesResponse * const q);
+    explicit DescribeAvailablePatchesResponsePrivate(DescribeAvailablePatchesResponse * const q);
 
     void parseDescribeAvailablePatchesResponse(QXmlStreamReader &xml);
 

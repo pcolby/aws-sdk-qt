@@ -31,7 +31,7 @@ class UpdateBasePathMappingResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    UpdateBasePathMappingResponsePrivate(UpdateBasePathMappingResponse * const q);
+    explicit UpdateBasePathMappingResponsePrivate(UpdateBasePathMappingResponse * const q);
 
     void parseUpdateBasePathMappingResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class SignalWorkflowExecutionResponsePrivate : public SwfResponsePrivate {
 
 public:
 
-    SignalWorkflowExecutionResponsePrivate(SignalWorkflowExecutionResponse * const q);
+    explicit SignalWorkflowExecutionResponsePrivate(SignalWorkflowExecutionResponse * const q);
 
     void parseSignalWorkflowExecutionResponse(QXmlStreamReader &xml);
 

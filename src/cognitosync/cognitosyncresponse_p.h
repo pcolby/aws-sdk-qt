@@ -29,7 +29,7 @@ class CognitoSyncResponsePrivate {
 
 public:
 
-    CognitoSyncResponsePrivate(CognitoSyncResponse * const q);
+    explicit CognitoSyncResponsePrivate(CognitoSyncResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

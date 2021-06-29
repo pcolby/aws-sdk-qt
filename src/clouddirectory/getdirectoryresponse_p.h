@@ -31,7 +31,7 @@ class GetDirectoryResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 
-    GetDirectoryResponsePrivate(GetDirectoryResponse * const q);
+    explicit GetDirectoryResponsePrivate(GetDirectoryResponse * const q);
 
     void parseGetDirectoryResponse(QXmlStreamReader &xml);
 

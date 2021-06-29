@@ -31,7 +31,7 @@ class PutClusterCapacityProvidersResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    PutClusterCapacityProvidersResponsePrivate(PutClusterCapacityProvidersResponse * const q);
+    explicit PutClusterCapacityProvidersResponsePrivate(PutClusterCapacityProvidersResponse * const q);
 
     void parsePutClusterCapacityProvidersResponse(QXmlStreamReader &xml);
 

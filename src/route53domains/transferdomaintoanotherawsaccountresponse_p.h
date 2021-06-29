@@ -31,7 +31,7 @@ class TransferDomainToAnotherAwsAccountResponsePrivate : public Route53DomainsRe
 
 public:
 
-    TransferDomainToAnotherAwsAccountResponsePrivate(TransferDomainToAnotherAwsAccountResponse * const q);
+    explicit TransferDomainToAnotherAwsAccountResponsePrivate(TransferDomainToAnotherAwsAccountResponse * const q);
 
     void parseTransferDomainToAnotherAwsAccountResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetBucketLifecycleConfigurationResponsePrivate : public S3ControlResponseP
 
 public:
 
-    GetBucketLifecycleConfigurationResponsePrivate(GetBucketLifecycleConfigurationResponse * const q);
+    explicit GetBucketLifecycleConfigurationResponsePrivate(GetBucketLifecycleConfigurationResponse * const q);
 
     void parseGetBucketLifecycleConfigurationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteDBSnapshotResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    DeleteDBSnapshotResponsePrivate(DeleteDBSnapshotResponse * const q);
+    explicit DeleteDBSnapshotResponsePrivate(DeleteDBSnapshotResponse * const q);
 
     void parseDeleteDBSnapshotResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListBackupsResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 
-    ListBackupsResponsePrivate(ListBackupsResponse * const q);
+    explicit ListBackupsResponsePrivate(ListBackupsResponse * const q);
 
     void parseListBackupsResponse(QXmlStreamReader &xml);
 

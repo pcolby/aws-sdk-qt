@@ -31,7 +31,7 @@ class AssociateDRTLogBucketResponsePrivate : public ShieldResponsePrivate {
 
 public:
 
-    AssociateDRTLogBucketResponsePrivate(AssociateDRTLogBucketResponse * const q);
+    explicit AssociateDRTLogBucketResponsePrivate(AssociateDRTLogBucketResponse * const q);
 
     void parseAssociateDRTLogBucketResponse(QXmlStreamReader &xml);
 

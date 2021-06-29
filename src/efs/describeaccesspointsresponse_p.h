@@ -31,7 +31,7 @@ class DescribeAccessPointsResponsePrivate : public EfsResponsePrivate {
 
 public:
 
-    DescribeAccessPointsResponsePrivate(DescribeAccessPointsResponse * const q);
+    explicit DescribeAccessPointsResponsePrivate(DescribeAccessPointsResponse * const q);
 
     void parseDescribeAccessPointsResponse(QXmlStreamReader &xml);
 

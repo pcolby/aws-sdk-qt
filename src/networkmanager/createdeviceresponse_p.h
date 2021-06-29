@@ -31,7 +31,7 @@ class CreateDeviceResponsePrivate : public NetworkManagerResponsePrivate {
 
 public:
 
-    CreateDeviceResponsePrivate(CreateDeviceResponse * const q);
+    explicit CreateDeviceResponsePrivate(CreateDeviceResponse * const q);
 
     void parseCreateDeviceResponse(QXmlStreamReader &xml);
 

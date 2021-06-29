@@ -31,7 +31,7 @@ class DeregisterElasticIpResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    DeregisterElasticIpResponsePrivate(DeregisterElasticIpResponse * const q);
+    explicit DeregisterElasticIpResponsePrivate(DeregisterElasticIpResponse * const q);
 
     void parseDeregisterElasticIpResponse(QXmlStreamReader &xml);
 

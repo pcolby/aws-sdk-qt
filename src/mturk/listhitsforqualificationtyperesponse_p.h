@@ -31,7 +31,7 @@ class ListHITsForQualificationTypeResponsePrivate : public MTurkResponsePrivate 
 
 public:
 
-    ListHITsForQualificationTypeResponsePrivate(ListHITsForQualificationTypeResponse * const q);
+    explicit ListHITsForQualificationTypeResponsePrivate(ListHITsForQualificationTypeResponse * const q);
 
     void parseListHITsForQualificationTypeResponse(QXmlStreamReader &xml);
 

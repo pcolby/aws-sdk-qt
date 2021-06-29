@@ -31,7 +31,7 @@ class DeleteInboundCrossClusterSearchConnectionResponsePrivate : public Elastics
 
 public:
 
-    DeleteInboundCrossClusterSearchConnectionResponsePrivate(DeleteInboundCrossClusterSearchConnectionResponse * const q);
+    explicit DeleteInboundCrossClusterSearchConnectionResponsePrivate(DeleteInboundCrossClusterSearchConnectionResponse * const q);
 
     void parseDeleteInboundCrossClusterSearchConnectionResponse(QXmlStreamReader &xml);
 

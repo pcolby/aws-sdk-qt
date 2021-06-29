@@ -31,7 +31,7 @@ class AcceptDomainTransferFromAnotherAwsAccountResponsePrivate : public Route53D
 
 public:
 
-    AcceptDomainTransferFromAnotherAwsAccountResponsePrivate(AcceptDomainTransferFromAnotherAwsAccountResponse * const q);
+    explicit AcceptDomainTransferFromAnotherAwsAccountResponsePrivate(AcceptDomainTransferFromAnotherAwsAccountResponse * const q);
 
     void parseAcceptDomainTransferFromAnotherAwsAccountResponse(QXmlStreamReader &xml);
 

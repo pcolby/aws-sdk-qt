@@ -31,7 +31,7 @@ class UpdateQueueHoursOfOperationResponsePrivate : public ConnectResponsePrivate
 
 public:
 
-    UpdateQueueHoursOfOperationResponsePrivate(UpdateQueueHoursOfOperationResponse * const q);
+    explicit UpdateQueueHoursOfOperationResponsePrivate(UpdateQueueHoursOfOperationResponse * const q);
 
     void parseUpdateQueueHoursOfOperationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetTransitGatewayAttachmentPropagationsResponsePrivate : public Ec2Respons
 
 public:
 
-    GetTransitGatewayAttachmentPropagationsResponsePrivate(GetTransitGatewayAttachmentPropagationsResponse * const q);
+    explicit GetTransitGatewayAttachmentPropagationsResponsePrivate(GetTransitGatewayAttachmentPropagationsResponse * const q);
 
     void parseGetTransitGatewayAttachmentPropagationsResponse(QXmlStreamReader &xml);
 

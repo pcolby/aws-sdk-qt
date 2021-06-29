@@ -31,7 +31,7 @@ class ListContactsResponsePrivate : public GroundStationResponsePrivate {
 
 public:
 
-    ListContactsResponsePrivate(ListContactsResponse * const q);
+    explicit ListContactsResponsePrivate(ListContactsResponse * const q);
 
     void parseListContactsResponse(QXmlStreamReader &xml);
 

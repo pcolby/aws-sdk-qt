@@ -31,7 +31,7 @@ class GenerateDataKeyPairResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    GenerateDataKeyPairResponsePrivate(GenerateDataKeyPairResponse * const q);
+    explicit GenerateDataKeyPairResponsePrivate(GenerateDataKeyPairResponse * const q);
 
     void parseGenerateDataKeyPairResponse(QXmlStreamReader &xml);
 

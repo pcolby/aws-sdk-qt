@@ -31,7 +31,7 @@ class CreateEmailTemplateResponsePrivate : public Sesv2ResponsePrivate {
 
 public:
 
-    CreateEmailTemplateResponsePrivate(CreateEmailTemplateResponse * const q);
+    explicit CreateEmailTemplateResponsePrivate(CreateEmailTemplateResponse * const q);
 
     void parseCreateEmailTemplateResponse(QXmlStreamReader &xml);
 

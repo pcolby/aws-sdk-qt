@@ -31,7 +31,7 @@ class DescribeConditionalForwardersResponsePrivate : public DirectoryServiceResp
 
 public:
 
-    DescribeConditionalForwardersResponsePrivate(DescribeConditionalForwardersResponse * const q);
+    explicit DescribeConditionalForwardersResponsePrivate(DescribeConditionalForwardersResponse * const q);
 
     void parseDescribeConditionalForwardersResponse(QXmlStreamReader &xml);
 

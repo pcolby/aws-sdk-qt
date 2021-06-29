@@ -31,7 +31,7 @@ class DeleteUseCaseResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    DeleteUseCaseResponsePrivate(DeleteUseCaseResponse * const q);
+    explicit DeleteUseCaseResponsePrivate(DeleteUseCaseResponse * const q);
 
     void parseDeleteUseCaseResponse(QXmlStreamReader &xml);
 

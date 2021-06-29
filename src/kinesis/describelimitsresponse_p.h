@@ -31,7 +31,7 @@ class DescribeLimitsResponsePrivate : public KinesisResponsePrivate {
 
 public:
 
-    DescribeLimitsResponsePrivate(DescribeLimitsResponse * const q);
+    explicit DescribeLimitsResponsePrivate(DescribeLimitsResponse * const q);
 
     void parseDescribeLimitsResponse(QXmlStreamReader &xml);
 

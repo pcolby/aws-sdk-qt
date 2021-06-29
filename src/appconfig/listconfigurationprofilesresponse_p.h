@@ -31,7 +31,7 @@ class ListConfigurationProfilesResponsePrivate : public AppConfigResponsePrivate
 
 public:
 
-    ListConfigurationProfilesResponsePrivate(ListConfigurationProfilesResponse * const q);
+    explicit ListConfigurationProfilesResponsePrivate(ListConfigurationProfilesResponse * const q);
 
     void parseListConfigurationProfilesResponse(QXmlStreamReader &xml);
 

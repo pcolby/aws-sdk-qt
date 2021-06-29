@@ -31,7 +31,7 @@ class DeleteDomainPermissionsPolicyResponsePrivate : public CodeArtifactResponse
 
 public:
 
-    DeleteDomainPermissionsPolicyResponsePrivate(DeleteDomainPermissionsPolicyResponse * const q);
+    explicit DeleteDomainPermissionsPolicyResponsePrivate(DeleteDomainPermissionsPolicyResponse * const q);
 
     void parseDeleteDomainPermissionsPolicyResponse(QXmlStreamReader &xml);
 

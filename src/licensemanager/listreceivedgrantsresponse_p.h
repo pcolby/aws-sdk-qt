@@ -31,7 +31,7 @@ class ListReceivedGrantsResponsePrivate : public LicenseManagerResponsePrivate {
 
 public:
 
-    ListReceivedGrantsResponsePrivate(ListReceivedGrantsResponse * const q);
+    explicit ListReceivedGrantsResponsePrivate(ListReceivedGrantsResponse * const q);
 
     void parseListReceivedGrantsResponse(QXmlStreamReader &xml);
 

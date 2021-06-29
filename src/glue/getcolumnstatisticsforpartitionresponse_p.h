@@ -31,7 +31,7 @@ class GetColumnStatisticsForPartitionResponsePrivate : public GlueResponsePrivat
 
 public:
 
-    GetColumnStatisticsForPartitionResponsePrivate(GetColumnStatisticsForPartitionResponse * const q);
+    explicit GetColumnStatisticsForPartitionResponsePrivate(GetColumnStatisticsForPartitionResponse * const q);
 
     void parseGetColumnStatisticsForPartitionResponse(QXmlStreamReader &xml);
 

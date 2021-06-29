@@ -31,7 +31,7 @@ class ImportApplicationUsageResponsePrivate : public ApplicationCostProfilerResp
 
 public:
 
-    ImportApplicationUsageResponsePrivate(ImportApplicationUsageResponse * const q);
+    explicit ImportApplicationUsageResponsePrivate(ImportApplicationUsageResponse * const q);
 
     void parseImportApplicationUsageResponse(QXmlStreamReader &xml);
 

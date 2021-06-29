@@ -31,7 +31,7 @@ class StartReplayResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 
-    StartReplayResponsePrivate(StartReplayResponse * const q);
+    explicit StartReplayResponsePrivate(StartReplayResponse * const q);
 
     void parseStartReplayResponse(QXmlStreamReader &xml);
 

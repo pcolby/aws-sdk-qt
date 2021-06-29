@@ -30,7 +30,7 @@ class NetworkFirewallClient;
 class NetworkFirewallClientPrivate {
 
 public:
-    NetworkFirewallClientPrivate(NetworkFirewallClient * const q);
+    explicit NetworkFirewallClientPrivate(NetworkFirewallClient * const q);
 
 protected:
     NetworkFirewallClient * const q_ptr; ///< Internal q-pointer.

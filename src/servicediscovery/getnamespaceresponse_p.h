@@ -31,7 +31,7 @@ class GetNamespaceResponsePrivate : public ServiceDiscoveryResponsePrivate {
 
 public:
 
-    GetNamespaceResponsePrivate(GetNamespaceResponse * const q);
+    explicit GetNamespaceResponsePrivate(GetNamespaceResponse * const q);
 
     void parseGetNamespaceResponse(QXmlStreamReader &xml);
 

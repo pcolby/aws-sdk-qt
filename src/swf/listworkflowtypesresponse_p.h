@@ -31,7 +31,7 @@ class ListWorkflowTypesResponsePrivate : public SwfResponsePrivate {
 
 public:
 
-    ListWorkflowTypesResponsePrivate(ListWorkflowTypesResponse * const q);
+    explicit ListWorkflowTypesResponsePrivate(ListWorkflowTypesResponse * const q);
 
     void parseListWorkflowTypesResponse(QXmlStreamReader &xml);
 

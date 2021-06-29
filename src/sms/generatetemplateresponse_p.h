@@ -31,7 +31,7 @@ class GenerateTemplateResponsePrivate : public SmsResponsePrivate {
 
 public:
 
-    GenerateTemplateResponsePrivate(GenerateTemplateResponse * const q);
+    explicit GenerateTemplateResponsePrivate(GenerateTemplateResponse * const q);
 
     void parseGenerateTemplateResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateRouteResponseResponsePrivate : public ApiGatewayV2ResponsePrivate {
 
 public:
 
-    UpdateRouteResponseResponsePrivate(UpdateRouteResponseResponse * const q);
+    explicit UpdateRouteResponseResponsePrivate(UpdateRouteResponseResponse * const q);
 
     void parseUpdateRouteResponseResponse(QXmlStreamReader &xml);
 

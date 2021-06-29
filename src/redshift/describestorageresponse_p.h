@@ -31,7 +31,7 @@ class DescribeStorageResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    DescribeStorageResponsePrivate(DescribeStorageResponse * const q);
+    explicit DescribeStorageResponsePrivate(DescribeStorageResponse * const q);
 
     void parseDescribeStorageResponse(QXmlStreamReader &xml);
 

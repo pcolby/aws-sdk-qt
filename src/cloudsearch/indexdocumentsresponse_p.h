@@ -31,7 +31,7 @@ class IndexDocumentsResponsePrivate : public CloudSearchResponsePrivate {
 
 public:
 
-    IndexDocumentsResponsePrivate(IndexDocumentsResponse * const q);
+    explicit IndexDocumentsResponsePrivate(IndexDocumentsResponse * const q);
 
     void parseIndexDocumentsResponse(QXmlStreamReader &xml);
 

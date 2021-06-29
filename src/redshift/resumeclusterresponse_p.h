@@ -31,7 +31,7 @@ class ResumeClusterResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    ResumeClusterResponsePrivate(ResumeClusterResponse * const q);
+    explicit ResumeClusterResponsePrivate(ResumeClusterResponse * const q);
 
     void parseResumeClusterResponse(QXmlStreamReader &xml);
 

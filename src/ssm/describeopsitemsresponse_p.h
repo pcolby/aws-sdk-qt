@@ -31,7 +31,7 @@ class DescribeOpsItemsResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    DescribeOpsItemsResponsePrivate(DescribeOpsItemsResponse * const q);
+    explicit DescribeOpsItemsResponsePrivate(DescribeOpsItemsResponse * const q);
 
     void parseDescribeOpsItemsResponse(QXmlStreamReader &xml);
 

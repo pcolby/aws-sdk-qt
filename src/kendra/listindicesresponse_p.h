@@ -31,7 +31,7 @@ class ListIndicesResponsePrivate : public kendraResponsePrivate {
 
 public:
 
-    ListIndicesResponsePrivate(ListIndicesResponse * const q);
+    explicit ListIndicesResponsePrivate(ListIndicesResponse * const q);
 
     void parseListIndicesResponse(QXmlStreamReader &xml);
 

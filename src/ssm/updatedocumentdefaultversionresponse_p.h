@@ -31,7 +31,7 @@ class UpdateDocumentDefaultVersionResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    UpdateDocumentDefaultVersionResponsePrivate(UpdateDocumentDefaultVersionResponse * const q);
+    explicit UpdateDocumentDefaultVersionResponsePrivate(UpdateDocumentDefaultVersionResponse * const q);
 
     void parseUpdateDocumentDefaultVersionResponse(QXmlStreamReader &xml);
 

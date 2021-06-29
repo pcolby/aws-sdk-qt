@@ -31,7 +31,7 @@ class UntagStreamResponsePrivate : public KinesisVideoResponsePrivate {
 
 public:
 
-    UntagStreamResponsePrivate(UntagStreamResponse * const q);
+    explicit UntagStreamResponsePrivate(UntagStreamResponse * const q);
 
     void parseUntagStreamResponse(QXmlStreamReader &xml);
 

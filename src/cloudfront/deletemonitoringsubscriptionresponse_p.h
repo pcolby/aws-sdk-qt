@@ -31,7 +31,7 @@ class DeleteMonitoringSubscriptionResponsePrivate : public CloudFrontResponsePri
 
 public:
 
-    DeleteMonitoringSubscriptionResponsePrivate(DeleteMonitoringSubscriptionResponse * const q);
+    explicit DeleteMonitoringSubscriptionResponsePrivate(DeleteMonitoringSubscriptionResponse * const q);
 
     void parseDeleteMonitoringSubscriptionResponse(QXmlStreamReader &xml);
 

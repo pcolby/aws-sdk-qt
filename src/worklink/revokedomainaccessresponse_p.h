@@ -31,7 +31,7 @@ class RevokeDomainAccessResponsePrivate : public WorkLinkResponsePrivate {
 
 public:
 
-    RevokeDomainAccessResponsePrivate(RevokeDomainAccessResponse * const q);
+    explicit RevokeDomainAccessResponsePrivate(RevokeDomainAccessResponse * const q);
 
     void parseRevokeDomainAccessResponse(QXmlStreamReader &xml);
 

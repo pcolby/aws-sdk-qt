@@ -31,7 +31,7 @@ class DeleteEventsConfigurationResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    DeleteEventsConfigurationResponsePrivate(DeleteEventsConfigurationResponse * const q);
+    explicit DeleteEventsConfigurationResponsePrivate(DeleteEventsConfigurationResponse * const q);
 
     void parseDeleteEventsConfigurationResponse(QXmlStreamReader &xml);
 

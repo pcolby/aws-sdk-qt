@@ -31,7 +31,7 @@ class ListRepositoriesInDomainResponsePrivate : public CodeArtifactResponsePriva
 
 public:
 
-    ListRepositoriesInDomainResponsePrivate(ListRepositoriesInDomainResponse * const q);
+    explicit ListRepositoriesInDomainResponsePrivate(ListRepositoriesInDomainResponse * const q);
 
     void parseListRepositoriesInDomainResponse(QXmlStreamReader &xml);
 

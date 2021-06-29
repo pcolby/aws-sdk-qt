@@ -31,7 +31,7 @@ class DescribeLocalGatewayRouteTableVpcAssociationsResponsePrivate : public Ec2R
 
 public:
 
-    DescribeLocalGatewayRouteTableVpcAssociationsResponsePrivate(DescribeLocalGatewayRouteTableVpcAssociationsResponse * const q);
+    explicit DescribeLocalGatewayRouteTableVpcAssociationsResponsePrivate(DescribeLocalGatewayRouteTableVpcAssociationsResponse * const q);
 
     void parseDescribeLocalGatewayRouteTableVpcAssociationsResponse(QXmlStreamReader &xml);
 

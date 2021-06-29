@@ -31,7 +31,7 @@ class ListBackupPlanVersionsResponsePrivate : public BackupResponsePrivate {
 
 public:
 
-    ListBackupPlanVersionsResponsePrivate(ListBackupPlanVersionsResponse * const q);
+    explicit ListBackupPlanVersionsResponsePrivate(ListBackupPlanVersionsResponse * const q);
 
     void parseListBackupPlanVersionsResponse(QXmlStreamReader &xml);
 

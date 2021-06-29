@@ -31,7 +31,7 @@ class PutBucketIntelligentTieringConfigurationResponsePrivate : public S3Respons
 
 public:
 
-    PutBucketIntelligentTieringConfigurationResponsePrivate(PutBucketIntelligentTieringConfigurationResponse * const q);
+    explicit PutBucketIntelligentTieringConfigurationResponsePrivate(PutBucketIntelligentTieringConfigurationResponse * const q);
 
     void parsePutBucketIntelligentTieringConfigurationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListConfigurationsResponsePrivate : public MqResponsePrivate {
 
 public:
 
-    ListConfigurationsResponsePrivate(ListConfigurationsResponse * const q);
+    explicit ListConfigurationsResponsePrivate(ListConfigurationsResponse * const q);
 
     void parseListConfigurationsResponse(QXmlStreamReader &xml);
 

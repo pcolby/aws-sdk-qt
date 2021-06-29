@@ -31,7 +31,7 @@ class UpdateMacieSessionResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 
-    UpdateMacieSessionResponsePrivate(UpdateMacieSessionResponse * const q);
+    explicit UpdateMacieSessionResponsePrivate(UpdateMacieSessionResponse * const q);
 
     void parseUpdateMacieSessionResponse(QXmlStreamReader &xml);
 

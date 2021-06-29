@@ -31,7 +31,7 @@ class CreateDomainAssociationResponsePrivate : public AmplifyResponsePrivate {
 
 public:
 
-    CreateDomainAssociationResponsePrivate(CreateDomainAssociationResponse * const q);
+    explicit CreateDomainAssociationResponsePrivate(CreateDomainAssociationResponse * const q);
 
     void parseCreateDomainAssociationResponse(QXmlStreamReader &xml);
 

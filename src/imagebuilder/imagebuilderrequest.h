@@ -108,7 +108,7 @@ public:
 protected:
     /// @cond internal
     imagebuilderRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    imagebuilderRequest(imagebuilderRequestPrivate * const d);
+    explicit imagebuilderRequest(imagebuilderRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

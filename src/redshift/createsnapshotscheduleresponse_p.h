@@ -31,7 +31,7 @@ class CreateSnapshotScheduleResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    CreateSnapshotScheduleResponsePrivate(CreateSnapshotScheduleResponse * const q);
+    explicit CreateSnapshotScheduleResponsePrivate(CreateSnapshotScheduleResponse * const q);
 
     void parseCreateSnapshotScheduleResponse(QXmlStreamReader &xml);
 

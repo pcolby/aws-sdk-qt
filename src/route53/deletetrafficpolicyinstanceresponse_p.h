@@ -31,7 +31,7 @@ class DeleteTrafficPolicyInstanceResponsePrivate : public Route53ResponsePrivate
 
 public:
 
-    DeleteTrafficPolicyInstanceResponsePrivate(DeleteTrafficPolicyInstanceResponse * const q);
+    explicit DeleteTrafficPolicyInstanceResponsePrivate(DeleteTrafficPolicyInstanceResponse * const q);
 
     void parseDeleteTrafficPolicyInstanceResponse(QXmlStreamReader &xml);
 

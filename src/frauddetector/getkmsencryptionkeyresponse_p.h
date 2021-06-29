@@ -31,7 +31,7 @@ class GetKMSEncryptionKeyResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 
-    GetKMSEncryptionKeyResponsePrivate(GetKMSEncryptionKeyResponse * const q);
+    explicit GetKMSEncryptionKeyResponsePrivate(GetKMSEncryptionKeyResponse * const q);
 
     void parseGetKMSEncryptionKeyResponse(QXmlStreamReader &xml);
 

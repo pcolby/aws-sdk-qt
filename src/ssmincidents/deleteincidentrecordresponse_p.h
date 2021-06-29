@@ -31,7 +31,7 @@ class DeleteIncidentRecordResponsePrivate : public SSMIncidentsResponsePrivate {
 
 public:
 
-    DeleteIncidentRecordResponsePrivate(DeleteIncidentRecordResponse * const q);
+    explicit DeleteIncidentRecordResponsePrivate(DeleteIncidentRecordResponse * const q);
 
     void parseDeleteIncidentRecordResponse(QXmlStreamReader &xml);
 

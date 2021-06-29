@@ -31,7 +31,7 @@ class TranslateTextResponsePrivate : public TranslateResponsePrivate {
 
 public:
 
-    TranslateTextResponsePrivate(TranslateTextResponse * const q);
+    explicit TranslateTextResponsePrivate(TranslateTextResponse * const q);
 
     void parseTranslateTextResponse(QXmlStreamReader &xml);
 

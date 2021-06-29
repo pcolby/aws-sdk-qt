@@ -29,7 +29,7 @@ class DetectiveResponsePrivate {
 
 public:
 
-    DetectiveResponsePrivate(DetectiveResponse * const q);
+    explicit DetectiveResponsePrivate(DetectiveResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

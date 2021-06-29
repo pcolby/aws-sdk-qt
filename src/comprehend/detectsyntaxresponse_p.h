@@ -31,7 +31,7 @@ class DetectSyntaxResponsePrivate : public ComprehendResponsePrivate {
 
 public:
 
-    DetectSyntaxResponsePrivate(DetectSyntaxResponse * const q);
+    explicit DetectSyntaxResponsePrivate(DetectSyntaxResponse * const q);
 
     void parseDetectSyntaxResponse(QXmlStreamReader &xml);
 

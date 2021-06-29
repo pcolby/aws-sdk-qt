@@ -31,7 +31,7 @@ class CreateTransitVirtualInterfaceResponsePrivate : public DirectConnectRespons
 
 public:
 
-    CreateTransitVirtualInterfaceResponsePrivate(CreateTransitVirtualInterfaceResponse * const q);
+    explicit CreateTransitVirtualInterfaceResponsePrivate(CreateTransitVirtualInterfaceResponse * const q);
 
     void parseCreateTransitVirtualInterfaceResponse(QXmlStreamReader &xml);
 

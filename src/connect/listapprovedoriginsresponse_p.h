@@ -31,7 +31,7 @@ class ListApprovedOriginsResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    ListApprovedOriginsResponsePrivate(ListApprovedOriginsResponse * const q);
+    explicit ListApprovedOriginsResponsePrivate(ListApprovedOriginsResponse * const q);
 
     void parseListApprovedOriginsResponse(QXmlStreamReader &xml);
 

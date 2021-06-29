@@ -31,7 +31,7 @@ class DeregisterWebhookWithThirdPartyResponsePrivate : public CodePipelineRespon
 
 public:
 
-    DeregisterWebhookWithThirdPartyResponsePrivate(DeregisterWebhookWithThirdPartyResponse * const q);
+    explicit DeregisterWebhookWithThirdPartyResponsePrivate(DeregisterWebhookWithThirdPartyResponse * const q);
 
     void parseDeregisterWebhookWithThirdPartyResponse(QXmlStreamReader &xml);
 

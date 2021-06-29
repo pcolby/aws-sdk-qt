@@ -31,7 +31,7 @@ class RemoveAttributesFromFindingsResponsePrivate : public InspectorResponsePriv
 
 public:
 
-    RemoveAttributesFromFindingsResponsePrivate(RemoveAttributesFromFindingsResponse * const q);
+    explicit RemoveAttributesFromFindingsResponsePrivate(RemoveAttributesFromFindingsResponse * const q);
 
     void parseRemoveAttributesFromFindingsResponse(QXmlStreamReader &xml);
 

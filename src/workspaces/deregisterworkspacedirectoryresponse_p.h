@@ -31,7 +31,7 @@ class DeregisterWorkspaceDirectoryResponsePrivate : public WorkSpacesResponsePri
 
 public:
 
-    DeregisterWorkspaceDirectoryResponsePrivate(DeregisterWorkspaceDirectoryResponse * const q);
+    explicit DeregisterWorkspaceDirectoryResponsePrivate(DeregisterWorkspaceDirectoryResponse * const q);
 
     void parseDeregisterWorkspaceDirectoryResponse(QXmlStreamReader &xml);
 

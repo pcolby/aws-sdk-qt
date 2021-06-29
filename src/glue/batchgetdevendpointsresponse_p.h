@@ -31,7 +31,7 @@ class BatchGetDevEndpointsResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    BatchGetDevEndpointsResponsePrivate(BatchGetDevEndpointsResponse * const q);
+    explicit BatchGetDevEndpointsResponsePrivate(BatchGetDevEndpointsResponse * const q);
 
     void parseBatchGetDevEndpointsResponse(QXmlStreamReader &xml);
 

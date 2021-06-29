@@ -31,7 +31,7 @@ class GetThreatIntelSetResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 
-    GetThreatIntelSetResponsePrivate(GetThreatIntelSetResponse * const q);
+    explicit GetThreatIntelSetResponsePrivate(GetThreatIntelSetResponse * const q);
 
     void parseGetThreatIntelSetResponse(QXmlStreamReader &xml);
 

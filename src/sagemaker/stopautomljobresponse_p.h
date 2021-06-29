@@ -31,7 +31,7 @@ class StopAutoMLJobResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    StopAutoMLJobResponsePrivate(StopAutoMLJobResponse * const q);
+    explicit StopAutoMLJobResponsePrivate(StopAutoMLJobResponse * const q);
 
     void parseStopAutoMLJobResponse(QXmlStreamReader &xml);
 

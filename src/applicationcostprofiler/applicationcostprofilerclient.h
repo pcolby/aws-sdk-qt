@@ -53,7 +53,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    ApplicationCostProfilerClient(
+    explicit ApplicationCostProfilerClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -69,7 +69,7 @@ public slots:
 protected:
     /// @cond internal
     ApplicationCostProfilerClientPrivate * const d_ptr; ///< Internal d-pointer.
-    ApplicationCostProfilerClient(ApplicationCostProfilerClientPrivate * const d);
+    explicit ApplicationCostProfilerClient(ApplicationCostProfilerClientPrivate * const d);
     /// @endcond
 
 private:

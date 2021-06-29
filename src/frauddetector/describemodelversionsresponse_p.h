@@ -31,7 +31,7 @@ class DescribeModelVersionsResponsePrivate : public FraudDetectorResponsePrivate
 
 public:
 
-    DescribeModelVersionsResponsePrivate(DescribeModelVersionsResponse * const q);
+    explicit DescribeModelVersionsResponsePrivate(DescribeModelVersionsResponse * const q);
 
     void parseDescribeModelVersionsResponse(QXmlStreamReader &xml);
 

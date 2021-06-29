@@ -31,7 +31,7 @@ class DeleteTypedLinkFacetResponsePrivate : public CloudDirectoryResponsePrivate
 
 public:
 
-    DeleteTypedLinkFacetResponsePrivate(DeleteTypedLinkFacetResponse * const q);
+    explicit DeleteTypedLinkFacetResponsePrivate(DeleteTypedLinkFacetResponse * const q);
 
     void parseDeleteTypedLinkFacetResponse(QXmlStreamReader &xml);
 

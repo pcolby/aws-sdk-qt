@@ -31,7 +31,7 @@ class CreateWebACLResponsePrivate : public Wafv2ResponsePrivate {
 
 public:
 
-    CreateWebACLResponsePrivate(CreateWebACLResponse * const q);
+    explicit CreateWebACLResponsePrivate(CreateWebACLResponse * const q);
 
     void parseCreateWebACLResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateDBClusterResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 
-    CreateDBClusterResponsePrivate(CreateDBClusterResponse * const q);
+    explicit CreateDBClusterResponsePrivate(CreateDBClusterResponse * const q);
 
     void parseCreateDBClusterResponse(QXmlStreamReader &xml);
 

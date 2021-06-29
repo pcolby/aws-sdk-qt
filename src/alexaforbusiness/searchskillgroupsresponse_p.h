@@ -31,7 +31,7 @@ class SearchSkillGroupsResponsePrivate : public AlexaForBusinessResponsePrivate 
 
 public:
 
-    SearchSkillGroupsResponsePrivate(SearchSkillGroupsResponse * const q);
+    explicit SearchSkillGroupsResponsePrivate(SearchSkillGroupsResponse * const q);
 
     void parseSearchSkillGroupsResponse(QXmlStreamReader &xml);
 

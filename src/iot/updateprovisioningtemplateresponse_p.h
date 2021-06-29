@@ -31,7 +31,7 @@ class UpdateProvisioningTemplateResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    UpdateProvisioningTemplateResponsePrivate(UpdateProvisioningTemplateResponse * const q);
+    explicit UpdateProvisioningTemplateResponsePrivate(UpdateProvisioningTemplateResponse * const q);
 
     void parseUpdateProvisioningTemplateResponse(QXmlStreamReader &xml);
 

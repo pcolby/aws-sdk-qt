@@ -31,7 +31,7 @@ class UpdateDiscovererResponsePrivate : public SchemasResponsePrivate {
 
 public:
 
-    UpdateDiscovererResponsePrivate(UpdateDiscovererResponse * const q);
+    explicit UpdateDiscovererResponsePrivate(UpdateDiscovererResponse * const q);
 
     void parseUpdateDiscovererResponse(QXmlStreamReader &xml);
 

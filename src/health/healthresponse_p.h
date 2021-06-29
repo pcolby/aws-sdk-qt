@@ -29,7 +29,7 @@ class HealthResponsePrivate {
 
 public:
 
-    HealthResponsePrivate(HealthResponse * const q);
+    explicit HealthResponsePrivate(HealthResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

@@ -31,7 +31,7 @@ class StopEdgePackagingJobResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    StopEdgePackagingJobResponsePrivate(StopEdgePackagingJobResponse * const q);
+    explicit StopEdgePackagingJobResponsePrivate(StopEdgePackagingJobResponse * const q);
 
     void parseStopEdgePackagingJobResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateServiceActionResponsePrivate : public ServiceCatalogResponsePrivate 
 
 public:
 
-    UpdateServiceActionResponsePrivate(UpdateServiceActionResponse * const q);
+    explicit UpdateServiceActionResponsePrivate(UpdateServiceActionResponse * const q);
 
     void parseUpdateServiceActionResponse(QXmlStreamReader &xml);
 

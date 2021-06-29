@@ -31,7 +31,7 @@ class BatchGetCrawlersResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    BatchGetCrawlersResponsePrivate(BatchGetCrawlersResponse * const q);
+    explicit BatchGetCrawlersResponsePrivate(BatchGetCrawlersResponse * const q);
 
     void parseBatchGetCrawlersResponse(QXmlStreamReader &xml);
 

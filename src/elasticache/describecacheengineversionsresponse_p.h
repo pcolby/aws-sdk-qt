@@ -31,7 +31,7 @@ class DescribeCacheEngineVersionsResponsePrivate : public ElastiCacheResponsePri
 
 public:
 
-    DescribeCacheEngineVersionsResponsePrivate(DescribeCacheEngineVersionsResponse * const q);
+    explicit DescribeCacheEngineVersionsResponsePrivate(DescribeCacheEngineVersionsResponse * const q);
 
     void parseDescribeCacheEngineVersionsResponse(QXmlStreamReader &xml);
 

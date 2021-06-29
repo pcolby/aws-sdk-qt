@@ -31,7 +31,7 @@ class DeleteGatewayGroupResponsePrivate : public AlexaForBusinessResponsePrivate
 
 public:
 
-    DeleteGatewayGroupResponsePrivate(DeleteGatewayGroupResponse * const q);
+    explicit DeleteGatewayGroupResponsePrivate(DeleteGatewayGroupResponse * const q);
 
     void parseDeleteGatewayGroupResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListIdentityProviderConfigsResponsePrivate : public EksResponsePrivate {
 
 public:
 
-    ListIdentityProviderConfigsResponsePrivate(ListIdentityProviderConfigsResponse * const q);
+    explicit ListIdentityProviderConfigsResponsePrivate(ListIdentityProviderConfigsResponse * const q);
 
     void parseListIdentityProviderConfigsResponse(QXmlStreamReader &xml);
 

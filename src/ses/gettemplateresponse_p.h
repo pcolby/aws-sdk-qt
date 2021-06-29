@@ -31,7 +31,7 @@ class GetTemplateResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    GetTemplateResponsePrivate(GetTemplateResponse * const q);
+    explicit GetTemplateResponsePrivate(GetTemplateResponse * const q);
 
     void parseGetTemplateResponse(QXmlStreamReader &xml);
 

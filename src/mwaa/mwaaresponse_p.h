@@ -29,7 +29,7 @@ class MwaaResponsePrivate {
 
 public:
 
-    MwaaResponsePrivate(MwaaResponse * const q);
+    explicit MwaaResponsePrivate(MwaaResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

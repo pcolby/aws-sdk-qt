@@ -31,7 +31,7 @@ class ResumeProcessesResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 
-    ResumeProcessesResponsePrivate(ResumeProcessesResponse * const q);
+    explicit ResumeProcessesResponsePrivate(ResumeProcessesResponse * const q);
 
     void parseResumeProcessesResponse(QXmlStreamReader &xml);
 

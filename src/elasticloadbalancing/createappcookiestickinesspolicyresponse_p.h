@@ -31,7 +31,7 @@ class CreateAppCookieStickinessPolicyResponsePrivate : public ElasticLoadBalanci
 
 public:
 
-    CreateAppCookieStickinessPolicyResponsePrivate(CreateAppCookieStickinessPolicyResponse * const q);
+    explicit CreateAppCookieStickinessPolicyResponsePrivate(CreateAppCookieStickinessPolicyResponse * const q);
 
     void parseCreateAppCookieStickinessPolicyResponse(QXmlStreamReader &xml);
 

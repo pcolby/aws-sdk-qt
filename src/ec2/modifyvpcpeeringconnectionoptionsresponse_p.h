@@ -31,7 +31,7 @@ class ModifyVpcPeeringConnectionOptionsResponsePrivate : public Ec2ResponsePriva
 
 public:
 
-    ModifyVpcPeeringConnectionOptionsResponsePrivate(ModifyVpcPeeringConnectionOptionsResponse * const q);
+    explicit ModifyVpcPeeringConnectionOptionsResponsePrivate(ModifyVpcPeeringConnectionOptionsResponse * const q);
 
     void parseModifyVpcPeeringConnectionOptionsResponse(QXmlStreamReader &xml);
 

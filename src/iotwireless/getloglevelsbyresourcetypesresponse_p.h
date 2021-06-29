@@ -31,7 +31,7 @@ class GetLogLevelsByResourceTypesResponsePrivate : public IoTWirelessResponsePri
 
 public:
 
-    GetLogLevelsByResourceTypesResponsePrivate(GetLogLevelsByResourceTypesResponse * const q);
+    explicit GetLogLevelsByResourceTypesResponsePrivate(GetLogLevelsByResourceTypesResponse * const q);
 
     void parseGetLogLevelsByResourceTypesResponse(QXmlStreamReader &xml);
 

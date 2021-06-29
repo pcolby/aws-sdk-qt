@@ -31,7 +31,7 @@ class UpdateResourceShareResponsePrivate : public RamResponsePrivate {
 
 public:
 
-    UpdateResourceShareResponsePrivate(UpdateResourceShareResponse * const q);
+    explicit UpdateResourceShareResponsePrivate(UpdateResourceShareResponse * const q);
 
     void parseUpdateResourceShareResponse(QXmlStreamReader &xml);
 

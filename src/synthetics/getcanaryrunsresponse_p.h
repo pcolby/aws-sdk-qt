@@ -31,7 +31,7 @@ class GetCanaryRunsResponsePrivate : public SyntheticsResponsePrivate {
 
 public:
 
-    GetCanaryRunsResponsePrivate(GetCanaryRunsResponse * const q);
+    explicit GetCanaryRunsResponsePrivate(GetCanaryRunsResponse * const q);
 
     void parseGetCanaryRunsResponse(QXmlStreamReader &xml);
 

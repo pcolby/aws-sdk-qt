@@ -31,7 +31,7 @@ class DeleteProxySessionResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    DeleteProxySessionResponsePrivate(DeleteProxySessionResponse * const q);
+    explicit DeleteProxySessionResponsePrivate(DeleteProxySessionResponse * const q);
 
     void parseDeleteProxySessionResponse(QXmlStreamReader &xml);
 

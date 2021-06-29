@@ -31,7 +31,7 @@ class DescribeKeyPhrasesDetectionJobResponsePrivate : public ComprehendResponseP
 
 public:
 
-    DescribeKeyPhrasesDetectionJobResponsePrivate(DescribeKeyPhrasesDetectionJobResponse * const q);
+    explicit DescribeKeyPhrasesDetectionJobResponsePrivate(DescribeKeyPhrasesDetectionJobResponse * const q);
 
     void parseDescribeKeyPhrasesDetectionJobResponse(QXmlStreamReader &xml);
 

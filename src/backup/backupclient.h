@@ -143,7 +143,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    BackupClient(
+    explicit BackupClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -205,7 +205,7 @@ public slots:
 protected:
     /// @cond internal
     BackupClientPrivate * const d_ptr; ///< Internal d-pointer.
-    BackupClient(BackupClientPrivate * const d);
+    explicit BackupClient(BackupClientPrivate * const d);
     /// @endcond
 
 private:

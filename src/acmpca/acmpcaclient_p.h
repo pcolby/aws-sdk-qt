@@ -30,7 +30,7 @@ class AcmpcaClient;
 class AcmpcaClientPrivate {
 
 public:
-    AcmpcaClientPrivate(AcmpcaClient * const q);
+    explicit AcmpcaClientPrivate(AcmpcaClient * const q);
 
 protected:
     AcmpcaClient * const q_ptr; ///< Internal q-pointer.

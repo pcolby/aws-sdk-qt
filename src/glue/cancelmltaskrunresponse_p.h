@@ -31,7 +31,7 @@ class CancelMLTaskRunResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    CancelMLTaskRunResponsePrivate(CancelMLTaskRunResponse * const q);
+    explicit CancelMLTaskRunResponsePrivate(CancelMLTaskRunResponse * const q);
 
     void parseCancelMLTaskRunResponse(QXmlStreamReader &xml);
 

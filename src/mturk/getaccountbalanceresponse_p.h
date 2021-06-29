@@ -31,7 +31,7 @@ class GetAccountBalanceResponsePrivate : public MTurkResponsePrivate {
 
 public:
 
-    GetAccountBalanceResponsePrivate(GetAccountBalanceResponse * const q);
+    explicit GetAccountBalanceResponsePrivate(GetAccountBalanceResponse * const q);
 
     void parseGetAccountBalanceResponse(QXmlStreamReader &xml);
 

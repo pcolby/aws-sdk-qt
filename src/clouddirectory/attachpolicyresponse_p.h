@@ -31,7 +31,7 @@ class AttachPolicyResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 
-    AttachPolicyResponsePrivate(AttachPolicyResponse * const q);
+    explicit AttachPolicyResponsePrivate(AttachPolicyResponse * const q);
 
     void parseAttachPolicyResponse(QXmlStreamReader &xml);
 

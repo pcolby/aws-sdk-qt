@@ -31,7 +31,7 @@ class GenerateServiceLastAccessedDetailsResponsePrivate : public IamResponsePriv
 
 public:
 
-    GenerateServiceLastAccessedDetailsResponsePrivate(GenerateServiceLastAccessedDetailsResponse * const q);
+    explicit GenerateServiceLastAccessedDetailsResponsePrivate(GenerateServiceLastAccessedDetailsResponse * const q);
 
     void parseGenerateServiceLastAccessedDetailsResponse(QXmlStreamReader &xml);
 

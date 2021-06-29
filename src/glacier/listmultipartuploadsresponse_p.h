@@ -31,7 +31,7 @@ class ListMultipartUploadsResponsePrivate : public GlacierResponsePrivate {
 
 public:
 
-    ListMultipartUploadsResponsePrivate(ListMultipartUploadsResponse * const q);
+    explicit ListMultipartUploadsResponsePrivate(ListMultipartUploadsResponse * const q);
 
     void parseListMultipartUploadsResponse(QXmlStreamReader &xml);
 

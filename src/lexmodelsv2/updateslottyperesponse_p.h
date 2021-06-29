@@ -31,7 +31,7 @@ class UpdateSlotTypeResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 
-    UpdateSlotTypeResponsePrivate(UpdateSlotTypeResponse * const q);
+    explicit UpdateSlotTypeResponsePrivate(UpdateSlotTypeResponse * const q);
 
     void parseUpdateSlotTypeResponse(QXmlStreamReader &xml);
 

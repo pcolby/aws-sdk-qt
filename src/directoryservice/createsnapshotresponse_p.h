@@ -31,7 +31,7 @@ class CreateSnapshotResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 
-    CreateSnapshotResponsePrivate(CreateSnapshotResponse * const q);
+    explicit CreateSnapshotResponsePrivate(CreateSnapshotResponse * const q);
 
     void parseCreateSnapshotResponse(QXmlStreamReader &xml);
 

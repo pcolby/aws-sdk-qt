@@ -31,7 +31,7 @@ class GetServiceResponsePrivate : public ServiceDiscoveryResponsePrivate {
 
 public:
 
-    GetServiceResponsePrivate(GetServiceResponse * const q);
+    explicit GetServiceResponsePrivate(GetServiceResponse * const q);
 
     void parseGetServiceResponse(QXmlStreamReader &xml);
 

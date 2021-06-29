@@ -31,7 +31,7 @@ class GetDetectorVersionResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 
-    GetDetectorVersionResponsePrivate(GetDetectorVersionResponse * const q);
+    explicit GetDetectorVersionResponsePrivate(GetDetectorVersionResponse * const q);
 
     void parseGetDetectorVersionResponse(QXmlStreamReader &xml);
 

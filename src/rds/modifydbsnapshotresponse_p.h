@@ -31,7 +31,7 @@ class ModifyDBSnapshotResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    ModifyDBSnapshotResponsePrivate(ModifyDBSnapshotResponse * const q);
+    explicit ModifyDBSnapshotResponsePrivate(ModifyDBSnapshotResponse * const q);
 
     void parseModifyDBSnapshotResponse(QXmlStreamReader &xml);
 

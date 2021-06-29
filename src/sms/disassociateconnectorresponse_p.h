@@ -31,7 +31,7 @@ class DisassociateConnectorResponsePrivate : public SmsResponsePrivate {
 
 public:
 
-    DisassociateConnectorResponsePrivate(DisassociateConnectorResponse * const q);
+    explicit DisassociateConnectorResponsePrivate(DisassociateConnectorResponse * const q);
 
     void parseDisassociateConnectorResponse(QXmlStreamReader &xml);
 

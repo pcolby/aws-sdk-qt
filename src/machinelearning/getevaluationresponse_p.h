@@ -31,7 +31,7 @@ class GetEvaluationResponsePrivate : public MachineLearningResponsePrivate {
 
 public:
 
-    GetEvaluationResponsePrivate(GetEvaluationResponse * const q);
+    explicit GetEvaluationResponsePrivate(GetEvaluationResponse * const q);
 
     void parseGetEvaluationResponse(QXmlStreamReader &xml);
 

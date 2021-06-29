@@ -31,7 +31,7 @@ class ApplyPendingMaintenanceActionResponsePrivate : public DocDBResponsePrivate
 
 public:
 
-    ApplyPendingMaintenanceActionResponsePrivate(ApplyPendingMaintenanceActionResponse * const q);
+    explicit ApplyPendingMaintenanceActionResponsePrivate(ApplyPendingMaintenanceActionResponse * const q);
 
     void parseApplyPendingMaintenanceActionResponse(QXmlStreamReader &xml);
 

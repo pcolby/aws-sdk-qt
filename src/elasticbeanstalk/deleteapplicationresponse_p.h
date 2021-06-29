@@ -31,7 +31,7 @@ class DeleteApplicationResponsePrivate : public ElasticBeanstalkResponsePrivate 
 
 public:
 
-    DeleteApplicationResponsePrivate(DeleteApplicationResponse * const q);
+    explicit DeleteApplicationResponsePrivate(DeleteApplicationResponse * const q);
 
     void parseDeleteApplicationResponse(QXmlStreamReader &xml);
 

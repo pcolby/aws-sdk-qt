@@ -31,7 +31,7 @@ class DeprecateDomainResponsePrivate : public SwfResponsePrivate {
 
 public:
 
-    DeprecateDomainResponsePrivate(DeprecateDomainResponse * const q);
+    explicit DeprecateDomainResponsePrivate(DeprecateDomainResponse * const q);
 
     void parseDeprecateDomainResponse(QXmlStreamReader &xml);
 

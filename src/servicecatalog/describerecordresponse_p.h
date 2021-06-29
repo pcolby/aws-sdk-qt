@@ -31,7 +31,7 @@ class DescribeRecordResponsePrivate : public ServiceCatalogResponsePrivate {
 
 public:
 
-    DescribeRecordResponsePrivate(DescribeRecordResponse * const q);
+    explicit DescribeRecordResponsePrivate(DescribeRecordResponse * const q);
 
     void parseDescribeRecordResponse(QXmlStreamReader &xml);
 

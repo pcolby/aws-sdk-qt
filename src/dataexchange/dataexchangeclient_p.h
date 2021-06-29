@@ -30,7 +30,7 @@ class DataExchangeClient;
 class DataExchangeClientPrivate {
 
 public:
-    DataExchangeClientPrivate(DataExchangeClient * const q);
+    explicit DataExchangeClientPrivate(DataExchangeClient * const q);
 
 protected:
     DataExchangeClient * const q_ptr; ///< Internal q-pointer.

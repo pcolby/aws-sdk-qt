@@ -31,7 +31,7 @@ class SubmitFeedbackResponsePrivate : public kendraResponsePrivate {
 
 public:
 
-    SubmitFeedbackResponsePrivate(SubmitFeedbackResponse * const q);
+    explicit SubmitFeedbackResponsePrivate(SubmitFeedbackResponse * const q);
 
     void parseSubmitFeedbackResponse(QXmlStreamReader &xml);
 

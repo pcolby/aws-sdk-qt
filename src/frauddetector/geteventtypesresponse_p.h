@@ -31,7 +31,7 @@ class GetEventTypesResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 
-    GetEventTypesResponsePrivate(GetEventTypesResponse * const q);
+    explicit GetEventTypesResponsePrivate(GetEventTypesResponse * const q);
 
     void parseGetEventTypesResponse(QXmlStreamReader &xml);
 

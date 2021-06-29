@@ -31,7 +31,7 @@ class GetCSVHeaderResponsePrivate : public CognitoIdentityProviderResponsePrivat
 
 public:
 
-    GetCSVHeaderResponsePrivate(GetCSVHeaderResponse * const q);
+    explicit GetCSVHeaderResponsePrivate(GetCSVHeaderResponse * const q);
 
     void parseGetCSVHeaderResponse(QXmlStreamReader &xml);
 

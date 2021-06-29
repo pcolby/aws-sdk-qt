@@ -29,7 +29,7 @@ class WorkSpacesResponsePrivate {
 
 public:
 
-    WorkSpacesResponsePrivate(WorkSpacesResponse * const q);
+    explicit WorkSpacesResponsePrivate(WorkSpacesResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

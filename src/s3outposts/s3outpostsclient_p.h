@@ -30,7 +30,7 @@ class S3OutpostsClient;
 class S3OutpostsClientPrivate {
 
 public:
-    S3OutpostsClientPrivate(S3OutpostsClient * const q);
+    explicit S3OutpostsClientPrivate(S3OutpostsClient * const q);
 
 protected:
     S3OutpostsClient * const q_ptr; ///< Internal q-pointer.

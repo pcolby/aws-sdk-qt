@@ -31,7 +31,7 @@ class AdminSetUserMFAPreferenceResponsePrivate : public CognitoIdentityProviderR
 
 public:
 
-    AdminSetUserMFAPreferenceResponsePrivate(AdminSetUserMFAPreferenceResponse * const q);
+    explicit AdminSetUserMFAPreferenceResponsePrivate(AdminSetUserMFAPreferenceResponse * const q);
 
     void parseAdminSetUserMFAPreferenceResponse(QXmlStreamReader &xml);
 

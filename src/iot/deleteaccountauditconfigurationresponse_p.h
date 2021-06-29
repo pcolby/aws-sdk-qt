@@ -31,7 +31,7 @@ class DeleteAccountAuditConfigurationResponsePrivate : public IoTResponsePrivate
 
 public:
 
-    DeleteAccountAuditConfigurationResponsePrivate(DeleteAccountAuditConfigurationResponse * const q);
+    explicit DeleteAccountAuditConfigurationResponsePrivate(DeleteAccountAuditConfigurationResponse * const q);
 
     void parseDeleteAccountAuditConfigurationResponse(QXmlStreamReader &xml);
 

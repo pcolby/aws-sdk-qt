@@ -31,7 +31,7 @@ class GetApiCacheResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 
-    GetApiCacheResponsePrivate(GetApiCacheResponse * const q);
+    explicit GetApiCacheResponsePrivate(GetApiCacheResponse * const q);
 
     void parseGetApiCacheResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class SearchSystemInstancesResponsePrivate : public IoTThingsGraphResponsePrivat
 
 public:
 
-    SearchSystemInstancesResponsePrivate(SearchSystemInstancesResponse * const q);
+    explicit SearchSystemInstancesResponsePrivate(SearchSystemInstancesResponse * const q);
 
     void parseSearchSystemInstancesResponse(QXmlStreamReader &xml);
 

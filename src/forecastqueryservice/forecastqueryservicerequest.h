@@ -60,7 +60,7 @@ public:
 protected:
     /// @cond internal
     ForecastQueryServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    ForecastQueryServiceRequest(ForecastQueryServiceRequestPrivate * const d);
+    explicit ForecastQueryServiceRequest(ForecastQueryServiceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

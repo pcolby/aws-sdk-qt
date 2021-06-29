@@ -31,7 +31,7 @@ class GenerateRandomResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    GenerateRandomResponsePrivate(GenerateRandomResponse * const q);
+    explicit GenerateRandomResponsePrivate(GenerateRandomResponse * const q);
 
     void parseGenerateRandomResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateApprovalRuleTemplateResponsePrivate : public CodeCommitResponsePriva
 
 public:
 
-    CreateApprovalRuleTemplateResponsePrivate(CreateApprovalRuleTemplateResponse * const q);
+    explicit CreateApprovalRuleTemplateResponsePrivate(CreateApprovalRuleTemplateResponse * const q);
 
     void parseCreateApprovalRuleTemplateResponse(QXmlStreamReader &xml);
 

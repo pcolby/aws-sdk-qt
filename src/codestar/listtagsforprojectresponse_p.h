@@ -31,7 +31,7 @@ class ListTagsForProjectResponsePrivate : public CodeStarResponsePrivate {
 
 public:
 
-    ListTagsForProjectResponsePrivate(ListTagsForProjectResponse * const q);
+    explicit ListTagsForProjectResponsePrivate(ListTagsForProjectResponse * const q);
 
     void parseListTagsForProjectResponse(QXmlStreamReader &xml);
 

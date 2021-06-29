@@ -31,7 +31,7 @@ class DescribeParametersResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    DescribeParametersResponsePrivate(DescribeParametersResponse * const q);
+    explicit DescribeParametersResponsePrivate(DescribeParametersResponse * const q);
 
     void parseDescribeParametersResponse(QXmlStreamReader &xml);
 

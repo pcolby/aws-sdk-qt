@@ -31,7 +31,7 @@ class PutFirewallRuleGroupPolicyResponsePrivate : public Route53ResolverResponse
 
 public:
 
-    PutFirewallRuleGroupPolicyResponsePrivate(PutFirewallRuleGroupPolicyResponse * const q);
+    explicit PutFirewallRuleGroupPolicyResponsePrivate(PutFirewallRuleGroupPolicyResponse * const q);
 
     void parsePutFirewallRuleGroupPolicyResponse(QXmlStreamReader &xml);
 

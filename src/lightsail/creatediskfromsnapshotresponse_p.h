@@ -31,7 +31,7 @@ class CreateDiskFromSnapshotResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    CreateDiskFromSnapshotResponsePrivate(CreateDiskFromSnapshotResponse * const q);
+    explicit CreateDiskFromSnapshotResponsePrivate(CreateDiskFromSnapshotResponse * const q);
 
     void parseCreateDiskFromSnapshotResponse(QXmlStreamReader &xml);
 

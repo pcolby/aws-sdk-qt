@@ -31,7 +31,7 @@ class DeleteItemResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 
-    DeleteItemResponsePrivate(DeleteItemResponse * const q);
+    explicit DeleteItemResponsePrivate(DeleteItemResponse * const q);
 
     void parseDeleteItemResponse(QXmlStreamReader &xml);
 

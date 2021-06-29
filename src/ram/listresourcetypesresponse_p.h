@@ -31,7 +31,7 @@ class ListResourceTypesResponsePrivate : public RamResponsePrivate {
 
 public:
 
-    ListResourceTypesResponsePrivate(ListResourceTypesResponse * const q);
+    explicit ListResourceTypesResponsePrivate(ListResourceTypesResponse * const q);
 
     void parseListResourceTypesResponse(QXmlStreamReader &xml);
 

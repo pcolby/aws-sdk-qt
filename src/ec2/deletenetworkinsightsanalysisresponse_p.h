@@ -31,7 +31,7 @@ class DeleteNetworkInsightsAnalysisResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DeleteNetworkInsightsAnalysisResponsePrivate(DeleteNetworkInsightsAnalysisResponse * const q);
+    explicit DeleteNetworkInsightsAnalysisResponsePrivate(DeleteNetworkInsightsAnalysisResponse * const q);
 
     void parseDeleteNetworkInsightsAnalysisResponse(QXmlStreamReader &xml);
 

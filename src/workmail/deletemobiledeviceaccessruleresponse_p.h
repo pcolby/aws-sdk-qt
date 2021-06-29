@@ -31,7 +31,7 @@ class DeleteMobileDeviceAccessRuleResponsePrivate : public WorkMailResponsePriva
 
 public:
 
-    DeleteMobileDeviceAccessRuleResponsePrivate(DeleteMobileDeviceAccessRuleResponse * const q);
+    explicit DeleteMobileDeviceAccessRuleResponsePrivate(DeleteMobileDeviceAccessRuleResponse * const q);
 
     void parseDeleteMobileDeviceAccessRuleResponse(QXmlStreamReader &xml);
 

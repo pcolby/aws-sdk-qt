@@ -31,7 +31,7 @@ class AssociatePackageResponsePrivate : public ElasticsearchServiceResponsePriva
 
 public:
 
-    AssociatePackageResponsePrivate(AssociatePackageResponse * const q);
+    explicit AssociatePackageResponsePrivate(AssociatePackageResponse * const q);
 
     void parseAssociatePackageResponse(QXmlStreamReader &xml);
 

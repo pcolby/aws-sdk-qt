@@ -31,7 +31,7 @@ class BatchCreateChannelMembershipResponsePrivate : public ChimeResponsePrivate 
 
 public:
 
-    BatchCreateChannelMembershipResponsePrivate(BatchCreateChannelMembershipResponse * const q);
+    explicit BatchCreateChannelMembershipResponsePrivate(BatchCreateChannelMembershipResponse * const q);
 
     void parseBatchCreateChannelMembershipResponse(QXmlStreamReader &xml);
 

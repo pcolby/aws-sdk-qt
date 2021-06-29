@@ -31,7 +31,7 @@ class UpdateCampaignResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    UpdateCampaignResponsePrivate(UpdateCampaignResponse * const q);
+    explicit UpdateCampaignResponsePrivate(UpdateCampaignResponse * const q);
 
     void parseUpdateCampaignResponse(QXmlStreamReader &xml);
 

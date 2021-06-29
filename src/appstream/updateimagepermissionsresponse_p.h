@@ -31,7 +31,7 @@ class UpdateImagePermissionsResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 
-    UpdateImagePermissionsResponsePrivate(UpdateImagePermissionsResponse * const q);
+    explicit UpdateImagePermissionsResponsePrivate(UpdateImagePermissionsResponse * const q);
 
     void parseUpdateImagePermissionsResponse(QXmlStreamReader &xml);
 

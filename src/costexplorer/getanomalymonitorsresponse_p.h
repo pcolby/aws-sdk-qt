@@ -31,7 +31,7 @@ class GetAnomalyMonitorsResponsePrivate : public CostExplorerResponsePrivate {
 
 public:
 
-    GetAnomalyMonitorsResponsePrivate(GetAnomalyMonitorsResponse * const q);
+    explicit GetAnomalyMonitorsResponsePrivate(GetAnomalyMonitorsResponse * const q);
 
     void parseGetAnomalyMonitorsResponse(QXmlStreamReader &xml);
 

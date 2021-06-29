@@ -31,7 +31,7 @@ class ListApiKeysResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 
-    ListApiKeysResponsePrivate(ListApiKeysResponse * const q);
+    explicit ListApiKeysResponsePrivate(ListApiKeysResponse * const q);
 
     void parseListApiKeysResponse(QXmlStreamReader &xml);
 

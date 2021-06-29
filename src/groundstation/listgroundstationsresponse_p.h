@@ -31,7 +31,7 @@ class ListGroundStationsResponsePrivate : public GroundStationResponsePrivate {
 
 public:
 
-    ListGroundStationsResponsePrivate(ListGroundStationsResponse * const q);
+    explicit ListGroundStationsResponsePrivate(ListGroundStationsResponse * const q);
 
     void parseListGroundStationsResponse(QXmlStreamReader &xml);
 

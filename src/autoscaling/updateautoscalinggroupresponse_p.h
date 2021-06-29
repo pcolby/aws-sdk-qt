@@ -31,7 +31,7 @@ class UpdateAutoScalingGroupResponsePrivate : public AutoScalingResponsePrivate 
 
 public:
 
-    UpdateAutoScalingGroupResponsePrivate(UpdateAutoScalingGroupResponse * const q);
+    explicit UpdateAutoScalingGroupResponsePrivate(UpdateAutoScalingGroupResponse * const q);
 
     void parseUpdateAutoScalingGroupResponse(QXmlStreamReader &xml);
 

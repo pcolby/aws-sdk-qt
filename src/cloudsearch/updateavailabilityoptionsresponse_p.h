@@ -31,7 +31,7 @@ class UpdateAvailabilityOptionsResponsePrivate : public CloudSearchResponsePriva
 
 public:
 
-    UpdateAvailabilityOptionsResponsePrivate(UpdateAvailabilityOptionsResponse * const q);
+    explicit UpdateAvailabilityOptionsResponsePrivate(UpdateAvailabilityOptionsResponse * const q);
 
     void parseUpdateAvailabilityOptionsResponse(QXmlStreamReader &xml);
 

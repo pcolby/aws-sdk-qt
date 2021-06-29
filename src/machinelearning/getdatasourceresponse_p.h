@@ -31,7 +31,7 @@ class GetDataSourceResponsePrivate : public MachineLearningResponsePrivate {
 
 public:
 
-    GetDataSourceResponsePrivate(GetDataSourceResponse * const q);
+    explicit GetDataSourceResponsePrivate(GetDataSourceResponse * const q);
 
     void parseGetDataSourceResponse(QXmlStreamReader &xml);
 

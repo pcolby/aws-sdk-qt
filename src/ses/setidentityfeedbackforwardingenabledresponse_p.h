@@ -31,7 +31,7 @@ class SetIdentityFeedbackForwardingEnabledResponsePrivate : public SesResponsePr
 
 public:
 
-    SetIdentityFeedbackForwardingEnabledResponsePrivate(SetIdentityFeedbackForwardingEnabledResponse * const q);
+    explicit SetIdentityFeedbackForwardingEnabledResponsePrivate(SetIdentityFeedbackForwardingEnabledResponse * const q);
 
     void parseSetIdentityFeedbackForwardingEnabledResponse(QXmlStreamReader &xml);
 

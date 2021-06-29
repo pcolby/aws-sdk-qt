@@ -31,7 +31,7 @@ class SetLoadBalancerPoliciesForBackendServerResponsePrivate : public ElasticLoa
 
 public:
 
-    SetLoadBalancerPoliciesForBackendServerResponsePrivate(SetLoadBalancerPoliciesForBackendServerResponse * const q);
+    explicit SetLoadBalancerPoliciesForBackendServerResponsePrivate(SetLoadBalancerPoliciesForBackendServerResponse * const q);
 
     void parseSetLoadBalancerPoliciesForBackendServerResponse(QXmlStreamReader &xml);
 

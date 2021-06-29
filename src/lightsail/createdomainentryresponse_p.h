@@ -31,7 +31,7 @@ class CreateDomainEntryResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    CreateDomainEntryResponsePrivate(CreateDomainEntryResponse * const q);
+    explicit CreateDomainEntryResponsePrivate(CreateDomainEntryResponse * const q);
 
     void parseCreateDomainEntryResponse(QXmlStreamReader &xml);
 

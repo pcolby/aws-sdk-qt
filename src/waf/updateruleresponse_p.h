@@ -31,7 +31,7 @@ class UpdateRuleResponsePrivate : public WafResponsePrivate {
 
 public:
 
-    UpdateRuleResponsePrivate(UpdateRuleResponse * const q);
+    explicit UpdateRuleResponsePrivate(UpdateRuleResponse * const q);
 
     void parseUpdateRuleResponse(QXmlStreamReader &xml);
 

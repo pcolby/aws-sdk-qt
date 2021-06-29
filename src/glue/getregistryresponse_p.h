@@ -31,7 +31,7 @@ class GetRegistryResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    GetRegistryResponsePrivate(GetRegistryResponse * const q);
+    explicit GetRegistryResponsePrivate(GetRegistryResponse * const q);
 
     void parseGetRegistryResponse(QXmlStreamReader &xml);
 

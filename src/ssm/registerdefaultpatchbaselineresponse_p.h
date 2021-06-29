@@ -31,7 +31,7 @@ class RegisterDefaultPatchBaselineResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    RegisterDefaultPatchBaselineResponsePrivate(RegisterDefaultPatchBaselineResponse * const q);
+    explicit RegisterDefaultPatchBaselineResponsePrivate(RegisterDefaultPatchBaselineResponse * const q);
 
     void parseRegisterDefaultPatchBaselineResponse(QXmlStreamReader &xml);
 

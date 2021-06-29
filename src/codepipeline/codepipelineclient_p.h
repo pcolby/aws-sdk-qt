@@ -30,7 +30,7 @@ class CodePipelineClient;
 class CodePipelineClientPrivate {
 
 public:
-    CodePipelineClientPrivate(CodePipelineClient * const q);
+    explicit CodePipelineClientPrivate(CodePipelineClient * const q);
 
 protected:
     CodePipelineClient * const q_ptr; ///< Internal q-pointer.

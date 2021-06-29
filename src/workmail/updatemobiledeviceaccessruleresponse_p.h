@@ -31,7 +31,7 @@ class UpdateMobileDeviceAccessRuleResponsePrivate : public WorkMailResponsePriva
 
 public:
 
-    UpdateMobileDeviceAccessRuleResponsePrivate(UpdateMobileDeviceAccessRuleResponse * const q);
+    explicit UpdateMobileDeviceAccessRuleResponsePrivate(UpdateMobileDeviceAccessRuleResponse * const q);
 
     void parseUpdateMobileDeviceAccessRuleResponse(QXmlStreamReader &xml);
 

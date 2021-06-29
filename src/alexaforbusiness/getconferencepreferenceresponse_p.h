@@ -31,7 +31,7 @@ class GetConferencePreferenceResponsePrivate : public AlexaForBusinessResponsePr
 
 public:
 
-    GetConferencePreferenceResponsePrivate(GetConferencePreferenceResponse * const q);
+    explicit GetConferencePreferenceResponsePrivate(GetConferencePreferenceResponse * const q);
 
     void parseGetConferencePreferenceResponse(QXmlStreamReader &xml);
 

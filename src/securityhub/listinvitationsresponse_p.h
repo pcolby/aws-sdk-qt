@@ -31,7 +31,7 @@ class ListInvitationsResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 
-    ListInvitationsResponsePrivate(ListInvitationsResponse * const q);
+    explicit ListInvitationsResponsePrivate(ListInvitationsResponse * const q);
 
     void parseListInvitationsResponse(QXmlStreamReader &xml);
 

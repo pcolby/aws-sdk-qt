@@ -12,7 +12,7 @@ class {{ClassName}}Private {
 public:
     {# @todo data members go here #}
 
-    {{ClassName}}Private({{ClassName}} * const q);
+    explicit {{ClassName}}Private({{ClassName}} * const q);
 
     {# @todo change parse type XML vs JSON #}
     //void parseErrorResponse(QXmlStreamReader &xml);

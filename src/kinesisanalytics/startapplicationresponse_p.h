@@ -31,7 +31,7 @@ class StartApplicationResponsePrivate : public KinesisAnalyticsResponsePrivate {
 
 public:
 
-    StartApplicationResponsePrivate(StartApplicationResponse * const q);
+    explicit StartApplicationResponsePrivate(StartApplicationResponse * const q);
 
     void parseStartApplicationResponse(QXmlStreamReader &xml);
 

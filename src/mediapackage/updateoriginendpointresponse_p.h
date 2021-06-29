@@ -31,7 +31,7 @@ class UpdateOriginEndpointResponsePrivate : public MediaPackageResponsePrivate {
 
 public:
 
-    UpdateOriginEndpointResponsePrivate(UpdateOriginEndpointResponse * const q);
+    explicit UpdateOriginEndpointResponsePrivate(UpdateOriginEndpointResponse * const q);
 
     void parseUpdateOriginEndpointResponse(QXmlStreamReader &xml);
 

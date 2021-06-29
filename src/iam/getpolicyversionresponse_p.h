@@ -31,7 +31,7 @@ class GetPolicyVersionResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    GetPolicyVersionResponsePrivate(GetPolicyVersionResponse * const q);
+    explicit GetPolicyVersionResponsePrivate(GetPolicyVersionResponse * const q);
 
     void parseGetPolicyVersionResponse(QXmlStreamReader &xml);
 

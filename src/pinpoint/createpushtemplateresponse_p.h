@@ -31,7 +31,7 @@ class CreatePushTemplateResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    CreatePushTemplateResponsePrivate(CreatePushTemplateResponse * const q);
+    explicit CreatePushTemplateResponsePrivate(CreatePushTemplateResponse * const q);
 
     void parseCreatePushTemplateResponse(QXmlStreamReader &xml);
 

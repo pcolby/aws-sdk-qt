@@ -31,7 +31,7 @@ class DeleteFlowLogsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DeleteFlowLogsResponsePrivate(DeleteFlowLogsResponse * const q);
+    explicit DeleteFlowLogsResponsePrivate(DeleteFlowLogsResponse * const q);
 
     void parseDeleteFlowLogsResponse(QXmlStreamReader &xml);
 

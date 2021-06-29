@@ -31,7 +31,7 @@ class AssociateEntityToThingResponsePrivate : public IoTThingsGraphResponsePriva
 
 public:
 
-    AssociateEntityToThingResponsePrivate(AssociateEntityToThingResponse * const q);
+    explicit AssociateEntityToThingResponsePrivate(AssociateEntityToThingResponse * const q);
 
     void parseAssociateEntityToThingResponse(QXmlStreamReader &xml);
 

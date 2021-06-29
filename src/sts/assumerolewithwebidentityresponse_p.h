@@ -31,7 +31,7 @@ class AssumeRoleWithWebIdentityResponsePrivate : public StsResponsePrivate {
 
 public:
 
-    AssumeRoleWithWebIdentityResponsePrivate(AssumeRoleWithWebIdentityResponse * const q);
+    explicit AssumeRoleWithWebIdentityResponsePrivate(AssumeRoleWithWebIdentityResponse * const q);
 
     void parseAssumeRoleWithWebIdentityResponse(QXmlStreamReader &xml);
 

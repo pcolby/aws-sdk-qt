@@ -31,7 +31,7 @@ class CreateBotAliasResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 
-    CreateBotAliasResponsePrivate(CreateBotAliasResponse * const q);
+    explicit CreateBotAliasResponsePrivate(CreateBotAliasResponse * const q);
 
     void parseCreateBotAliasResponse(QXmlStreamReader &xml);
 

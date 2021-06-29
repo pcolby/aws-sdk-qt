@@ -31,7 +31,7 @@ class DeleteColumnStatisticsForTableResponsePrivate : public GlueResponsePrivate
 
 public:
 
-    DeleteColumnStatisticsForTableResponsePrivate(DeleteColumnStatisticsForTableResponse * const q);
+    explicit DeleteColumnStatisticsForTableResponsePrivate(DeleteColumnStatisticsForTableResponse * const q);
 
     void parseDeleteColumnStatisticsForTableResponse(QXmlStreamReader &xml);
 

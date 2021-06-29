@@ -31,7 +31,7 @@ class DeleteBackupResponsePrivate : public OpsWorksCMResponsePrivate {
 
 public:
 
-    DeleteBackupResponsePrivate(DeleteBackupResponse * const q);
+    explicit DeleteBackupResponsePrivate(DeleteBackupResponse * const q);
 
     void parseDeleteBackupResponse(QXmlStreamReader &xml);
 

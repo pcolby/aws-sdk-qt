@@ -31,7 +31,7 @@ class MergeBranchesByThreeWayResponsePrivate : public CodeCommitResponsePrivate 
 
 public:
 
-    MergeBranchesByThreeWayResponsePrivate(MergeBranchesByThreeWayResponse * const q);
+    explicit MergeBranchesByThreeWayResponsePrivate(MergeBranchesByThreeWayResponse * const q);
 
     void parseMergeBranchesByThreeWayResponse(QXmlStreamReader &xml);
 

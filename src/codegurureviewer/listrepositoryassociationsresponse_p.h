@@ -31,7 +31,7 @@ class ListRepositoryAssociationsResponsePrivate : public CodeGuruReviewerRespons
 
 public:
 
-    ListRepositoryAssociationsResponsePrivate(ListRepositoryAssociationsResponse * const q);
+    explicit ListRepositoryAssociationsResponsePrivate(ListRepositoryAssociationsResponse * const q);
 
     void parseListRepositoryAssociationsResponse(QXmlStreamReader &xml);
 

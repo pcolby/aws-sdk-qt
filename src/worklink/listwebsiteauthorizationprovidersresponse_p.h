@@ -31,7 +31,7 @@ class ListWebsiteAuthorizationProvidersResponsePrivate : public WorkLinkResponse
 
 public:
 
-    ListWebsiteAuthorizationProvidersResponsePrivate(ListWebsiteAuthorizationProvidersResponse * const q);
+    explicit ListWebsiteAuthorizationProvidersResponsePrivate(ListWebsiteAuthorizationProvidersResponse * const q);
 
     void parseListWebsiteAuthorizationProvidersResponse(QXmlStreamReader &xml);
 

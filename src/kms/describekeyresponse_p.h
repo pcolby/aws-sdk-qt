@@ -31,7 +31,7 @@ class DescribeKeyResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    DescribeKeyResponsePrivate(DescribeKeyResponse * const q);
+    explicit DescribeKeyResponsePrivate(DescribeKeyResponse * const q);
 
     void parseDescribeKeyResponse(QXmlStreamReader &xml);
 

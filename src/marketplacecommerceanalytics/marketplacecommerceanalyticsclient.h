@@ -45,7 +45,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    MarketplaceCommerceAnalyticsClient(
+    explicit MarketplaceCommerceAnalyticsClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -57,7 +57,7 @@ public slots:
 protected:
     /// @cond internal
     MarketplaceCommerceAnalyticsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    MarketplaceCommerceAnalyticsClient(MarketplaceCommerceAnalyticsClientPrivate * const d);
+    explicit MarketplaceCommerceAnalyticsClient(MarketplaceCommerceAnalyticsClientPrivate * const d);
     /// @endcond
 
 private:

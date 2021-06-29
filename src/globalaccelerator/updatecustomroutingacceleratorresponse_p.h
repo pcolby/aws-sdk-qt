@@ -31,7 +31,7 @@ class UpdateCustomRoutingAcceleratorResponsePrivate : public GlobalAcceleratorRe
 
 public:
 
-    UpdateCustomRoutingAcceleratorResponsePrivate(UpdateCustomRoutingAcceleratorResponse * const q);
+    explicit UpdateCustomRoutingAcceleratorResponsePrivate(UpdateCustomRoutingAcceleratorResponse * const q);
 
     void parseUpdateCustomRoutingAcceleratorResponse(QXmlStreamReader &xml);
 

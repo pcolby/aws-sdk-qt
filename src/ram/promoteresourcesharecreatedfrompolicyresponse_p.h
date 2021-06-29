@@ -31,7 +31,7 @@ class PromoteResourceShareCreatedFromPolicyResponsePrivate : public RamResponseP
 
 public:
 
-    PromoteResourceShareCreatedFromPolicyResponsePrivate(PromoteResourceShareCreatedFromPolicyResponse * const q);
+    explicit PromoteResourceShareCreatedFromPolicyResponsePrivate(PromoteResourceShareCreatedFromPolicyResponse * const q);
 
     void parsePromoteResourceShareCreatedFromPolicyResponse(QXmlStreamReader &xml);
 

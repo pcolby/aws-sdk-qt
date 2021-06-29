@@ -31,7 +31,7 @@ class DescribeOrganizationResponsePrivate : public OrganizationsResponsePrivate 
 
 public:
 
-    DescribeOrganizationResponsePrivate(DescribeOrganizationResponse * const q);
+    explicit DescribeOrganizationResponsePrivate(DescribeOrganizationResponse * const q);
 
     void parseDescribeOrganizationResponse(QXmlStreamReader &xml);
 

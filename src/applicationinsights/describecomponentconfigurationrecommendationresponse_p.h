@@ -31,7 +31,7 @@ class DescribeComponentConfigurationRecommendationResponsePrivate : public Appli
 
 public:
 
-    DescribeComponentConfigurationRecommendationResponsePrivate(DescribeComponentConfigurationRecommendationResponse * const q);
+    explicit DescribeComponentConfigurationRecommendationResponsePrivate(DescribeComponentConfigurationRecommendationResponse * const q);
 
     void parseDescribeComponentConfigurationRecommendationResponse(QXmlStreamReader &xml);
 

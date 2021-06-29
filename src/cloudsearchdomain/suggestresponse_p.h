@@ -31,7 +31,7 @@ class SuggestResponsePrivate : public CloudSearchDomainResponsePrivate {
 
 public:
 
-    SuggestResponsePrivate(SuggestResponse * const q);
+    explicit SuggestResponsePrivate(SuggestResponse * const q);
 
     void parseSuggestResponse(QXmlStreamReader &xml);
 

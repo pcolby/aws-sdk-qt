@@ -31,7 +31,7 @@ class DeleteDatasetResponsePrivate : public LookoutforVisionResponsePrivate {
 
 public:
 
-    DeleteDatasetResponsePrivate(DeleteDatasetResponse * const q);
+    explicit DeleteDatasetResponsePrivate(DeleteDatasetResponse * const q);
 
     void parseDeleteDatasetResponse(QXmlStreamReader &xml);
 

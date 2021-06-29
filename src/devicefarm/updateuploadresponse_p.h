@@ -31,7 +31,7 @@ class UpdateUploadResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    UpdateUploadResponsePrivate(UpdateUploadResponse * const q);
+    explicit UpdateUploadResponsePrivate(UpdateUploadResponse * const q);
 
     void parseUpdateUploadResponse(QXmlStreamReader &xml);
 

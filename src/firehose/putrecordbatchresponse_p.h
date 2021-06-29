@@ -31,7 +31,7 @@ class PutRecordBatchResponsePrivate : public FirehoseResponsePrivate {
 
 public:
 
-    PutRecordBatchResponsePrivate(PutRecordBatchResponse * const q);
+    explicit PutRecordBatchResponsePrivate(PutRecordBatchResponse * const q);
 
     void parsePutRecordBatchResponse(QXmlStreamReader &xml);
 

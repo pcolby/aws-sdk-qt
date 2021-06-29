@@ -31,7 +31,7 @@ class UpdateLensReviewResponsePrivate : public WellArchitectedResponsePrivate {
 
 public:
 
-    UpdateLensReviewResponsePrivate(UpdateLensReviewResponse * const q);
+    explicit UpdateLensReviewResponsePrivate(UpdateLensReviewResponse * const q);
 
     void parseUpdateLensReviewResponse(QXmlStreamReader &xml);
 

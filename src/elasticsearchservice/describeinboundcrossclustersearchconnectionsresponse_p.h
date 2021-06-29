@@ -31,7 +31,7 @@ class DescribeInboundCrossClusterSearchConnectionsResponsePrivate : public Elast
 
 public:
 
-    DescribeInboundCrossClusterSearchConnectionsResponsePrivate(DescribeInboundCrossClusterSearchConnectionsResponse * const q);
+    explicit DescribeInboundCrossClusterSearchConnectionsResponsePrivate(DescribeInboundCrossClusterSearchConnectionsResponse * const q);
 
     void parseDescribeInboundCrossClusterSearchConnectionsResponse(QXmlStreamReader &xml);
 

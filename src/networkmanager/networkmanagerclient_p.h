@@ -30,7 +30,7 @@ class NetworkManagerClient;
 class NetworkManagerClientPrivate {
 
 public:
-    NetworkManagerClientPrivate(NetworkManagerClient * const q);
+    explicit NetworkManagerClientPrivate(NetworkManagerClient * const q);
 
 protected:
     NetworkManagerClient * const q_ptr; ///< Internal q-pointer.

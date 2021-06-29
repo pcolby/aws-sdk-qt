@@ -31,7 +31,7 @@ class GetVoiceConnectorEmergencyCallingConfigurationResponsePrivate : public Chi
 
 public:
 
-    GetVoiceConnectorEmergencyCallingConfigurationResponsePrivate(GetVoiceConnectorEmergencyCallingConfigurationResponse * const q);
+    explicit GetVoiceConnectorEmergencyCallingConfigurationResponsePrivate(GetVoiceConnectorEmergencyCallingConfigurationResponse * const q);
 
     void parseGetVoiceConnectorEmergencyCallingConfigurationResponse(QXmlStreamReader &xml);
 

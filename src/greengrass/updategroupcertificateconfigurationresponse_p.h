@@ -31,7 +31,7 @@ class UpdateGroupCertificateConfigurationResponsePrivate : public GreengrassResp
 
 public:
 
-    UpdateGroupCertificateConfigurationResponsePrivate(UpdateGroupCertificateConfigurationResponse * const q);
+    explicit UpdateGroupCertificateConfigurationResponsePrivate(UpdateGroupCertificateConfigurationResponse * const q);
 
     void parseUpdateGroupCertificateConfigurationResponse(QXmlStreamReader &xml);
 

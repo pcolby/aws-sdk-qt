@@ -31,7 +31,7 @@ class DescribeQuerySuggestionsBlockListResponsePrivate : public kendraResponsePr
 
 public:
 
-    DescribeQuerySuggestionsBlockListResponsePrivate(DescribeQuerySuggestionsBlockListResponse * const q);
+    explicit DescribeQuerySuggestionsBlockListResponsePrivate(DescribeQuerySuggestionsBlockListResponse * const q);
 
     void parseDescribeQuerySuggestionsBlockListResponse(QXmlStreamReader &xml);
 

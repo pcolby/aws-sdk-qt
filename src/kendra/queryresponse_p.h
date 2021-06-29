@@ -31,7 +31,7 @@ class QueryResponsePrivate : public kendraResponsePrivate {
 
 public:
 
-    QueryResponsePrivate(QueryResponse * const q);
+    explicit QueryResponsePrivate(QueryResponse * const q);
 
     void parseQueryResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeSecurityConfigurationResponsePrivate : public EmrResponsePrivate {
 
 public:
 
-    DescribeSecurityConfigurationResponsePrivate(DescribeSecurityConfigurationResponse * const q);
+    explicit DescribeSecurityConfigurationResponsePrivate(DescribeSecurityConfigurationResponse * const q);
 
     void parseDescribeSecurityConfigurationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class AssociateIdentityProviderConfigResponsePrivate : public EksResponsePrivate
 
 public:
 
-    AssociateIdentityProviderConfigResponsePrivate(AssociateIdentityProviderConfigResponse * const q);
+    explicit AssociateIdentityProviderConfigResponsePrivate(AssociateIdentityProviderConfigResponse * const q);
 
     void parseAssociateIdentityProviderConfigResponse(QXmlStreamReader &xml);
 

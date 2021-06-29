@@ -31,7 +31,7 @@ class RegisterDevicesResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    RegisterDevicesResponsePrivate(RegisterDevicesResponse * const q);
+    explicit RegisterDevicesResponsePrivate(RegisterDevicesResponse * const q);
 
     void parseRegisterDevicesResponse(QXmlStreamReader &xml);
 

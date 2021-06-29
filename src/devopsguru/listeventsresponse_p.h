@@ -31,7 +31,7 @@ class ListEventsResponsePrivate : public DevOpsGuruResponsePrivate {
 
 public:
 
-    ListEventsResponsePrivate(ListEventsResponse * const q);
+    explicit ListEventsResponsePrivate(ListEventsResponse * const q);
 
     void parseListEventsResponse(QXmlStreamReader &xml);
 

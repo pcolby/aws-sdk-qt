@@ -31,7 +31,7 @@ class DescribeCrossAccountAccessRoleResponsePrivate : public InspectorResponsePr
 
 public:
 
-    DescribeCrossAccountAccessRoleResponsePrivate(DescribeCrossAccountAccessRoleResponse * const q);
+    explicit DescribeCrossAccountAccessRoleResponsePrivate(DescribeCrossAccountAccessRoleResponse * const q);
 
     void parseDescribeCrossAccountAccessRoleResponse(QXmlStreamReader &xml);
 

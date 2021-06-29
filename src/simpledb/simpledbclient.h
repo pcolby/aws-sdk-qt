@@ -61,7 +61,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    SimpleDBClient(
+    explicit SimpleDBClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -81,7 +81,7 @@ public slots:
 protected:
     /// @cond internal
     SimpleDBClientPrivate * const d_ptr; ///< Internal d-pointer.
-    SimpleDBClient(SimpleDBClientPrivate * const d);
+    explicit SimpleDBClient(SimpleDBClientPrivate * const d);
     /// @endcond
 
 private:

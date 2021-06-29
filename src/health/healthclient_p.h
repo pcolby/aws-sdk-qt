@@ -30,7 +30,7 @@ class HealthClient;
 class HealthClientPrivate {
 
 public:
-    HealthClientPrivate(HealthClient * const q);
+    explicit HealthClientPrivate(HealthClient * const q);
 
 protected:
     HealthClient * const q_ptr; ///< Internal q-pointer.

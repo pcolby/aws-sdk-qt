@@ -31,7 +31,7 @@ class ListIdentityPoolUsageResponsePrivate : public CognitoSyncResponsePrivate {
 
 public:
 
-    ListIdentityPoolUsageResponsePrivate(ListIdentityPoolUsageResponse * const q);
+    explicit ListIdentityPoolUsageResponsePrivate(ListIdentityPoolUsageResponse * const q);
 
     void parseListIdentityPoolUsageResponse(QXmlStreamReader &xml);
 

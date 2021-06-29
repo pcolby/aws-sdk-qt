@@ -31,7 +31,7 @@ class AddRoleToDBClusterResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 
-    AddRoleToDBClusterResponsePrivate(AddRoleToDBClusterResponse * const q);
+    explicit AddRoleToDBClusterResponsePrivate(AddRoleToDBClusterResponse * const q);
 
     void parseAddRoleToDBClusterResponse(QXmlStreamReader &xml);
 

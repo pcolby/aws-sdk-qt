@@ -31,7 +31,7 @@ class ShareDirectoryResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 
-    ShareDirectoryResponsePrivate(ShareDirectoryResponse * const q);
+    explicit ShareDirectoryResponsePrivate(ShareDirectoryResponse * const q);
 
     void parseShareDirectoryResponse(QXmlStreamReader &xml);
 

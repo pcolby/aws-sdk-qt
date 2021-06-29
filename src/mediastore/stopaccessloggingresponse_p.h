@@ -31,7 +31,7 @@ class StopAccessLoggingResponsePrivate : public MediaStoreResponsePrivate {
 
 public:
 
-    StopAccessLoggingResponsePrivate(StopAccessLoggingResponse * const q);
+    explicit StopAccessLoggingResponsePrivate(StopAccessLoggingResponse * const q);
 
     void parseStopAccessLoggingResponse(QXmlStreamReader &xml);
 

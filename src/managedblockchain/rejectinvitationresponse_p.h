@@ -31,7 +31,7 @@ class RejectInvitationResponsePrivate : public ManagedBlockchainResponsePrivate 
 
 public:
 
-    RejectInvitationResponsePrivate(RejectInvitationResponse * const q);
+    explicit RejectInvitationResponsePrivate(RejectInvitationResponse * const q);
 
     void parseRejectInvitationResponse(QXmlStreamReader &xml);
 

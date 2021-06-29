@@ -31,7 +31,7 @@ class DescribeSubscriptionFiltersResponsePrivate : public CloudWatchLogsResponse
 
 public:
 
-    DescribeSubscriptionFiltersResponsePrivate(DescribeSubscriptionFiltersResponse * const q);
+    explicit DescribeSubscriptionFiltersResponsePrivate(DescribeSubscriptionFiltersResponse * const q);
 
     void parseDescribeSubscriptionFiltersResponse(QXmlStreamReader &xml);
 

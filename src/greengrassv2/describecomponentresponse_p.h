@@ -31,7 +31,7 @@ class DescribeComponentResponsePrivate : public GreengrassV2ResponsePrivate {
 
 public:
 
-    DescribeComponentResponsePrivate(DescribeComponentResponse * const q);
+    explicit DescribeComponentResponsePrivate(DescribeComponentResponse * const q);
 
     void parseDescribeComponentResponse(QXmlStreamReader &xml);
 

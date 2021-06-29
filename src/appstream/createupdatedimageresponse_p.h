@@ -31,7 +31,7 @@ class CreateUpdatedImageResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 
-    CreateUpdatedImageResponsePrivate(CreateUpdatedImageResponse * const q);
+    explicit CreateUpdatedImageResponsePrivate(CreateUpdatedImageResponse * const q);
 
     void parseCreateUpdatedImageResponse(QXmlStreamReader &xml);
 

@@ -30,7 +30,7 @@ class DeviceFarmClient;
 class DeviceFarmClientPrivate {
 
 public:
-    DeviceFarmClientPrivate(DeviceFarmClient * const q);
+    explicit DeviceFarmClientPrivate(DeviceFarmClient * const q);
 
 protected:
     DeviceFarmClient * const q_ptr; ///< Internal q-pointer.

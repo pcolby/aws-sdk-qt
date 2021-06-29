@@ -30,7 +30,7 @@ class DetectiveClient;
 class DetectiveClientPrivate {
 
 public:
-    DetectiveClientPrivate(DetectiveClient * const q);
+    explicit DetectiveClientPrivate(DetectiveClient * const q);
 
 protected:
     DetectiveClient * const q_ptr; ///< Internal q-pointer.

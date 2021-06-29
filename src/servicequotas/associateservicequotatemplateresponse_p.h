@@ -31,7 +31,7 @@ class AssociateServiceQuotaTemplateResponsePrivate : public ServiceQuotasRespons
 
 public:
 
-    AssociateServiceQuotaTemplateResponsePrivate(AssociateServiceQuotaTemplateResponse * const q);
+    explicit AssociateServiceQuotaTemplateResponsePrivate(AssociateServiceQuotaTemplateResponse * const q);
 
     void parseAssociateServiceQuotaTemplateResponse(QXmlStreamReader &xml);
 

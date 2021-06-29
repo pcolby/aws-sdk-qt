@@ -31,7 +31,7 @@ class DeleteGcmChannelResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    DeleteGcmChannelResponsePrivate(DeleteGcmChannelResponse * const q);
+    explicit DeleteGcmChannelResponsePrivate(DeleteGcmChannelResponse * const q);
 
     void parseDeleteGcmChannelResponse(QXmlStreamReader &xml);
 

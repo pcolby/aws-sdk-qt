@@ -31,7 +31,7 @@ class ListOrganizationalUnitsForParentResponsePrivate : public OrganizationsResp
 
 public:
 
-    ListOrganizationalUnitsForParentResponsePrivate(ListOrganizationalUnitsForParentResponse * const q);
+    explicit ListOrganizationalUnitsForParentResponsePrivate(ListOrganizationalUnitsForParentResponse * const q);
 
     void parseListOrganizationalUnitsForParentResponse(QXmlStreamReader &xml);
 

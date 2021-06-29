@@ -114,7 +114,7 @@ public:
 protected:
     /// @cond internal
     DatabaseMigrationServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    DatabaseMigrationServiceRequest(DatabaseMigrationServiceRequestPrivate * const d);
+    explicit DatabaseMigrationServiceRequest(DatabaseMigrationServiceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -30,7 +30,7 @@ class BudgetsClient;
 class BudgetsClientPrivate {
 
 public:
-    BudgetsClientPrivate(BudgetsClient * const q);
+    explicit BudgetsClientPrivate(BudgetsClient * const q);
 
 protected:
     BudgetsClient * const q_ptr; ///< Internal q-pointer.

@@ -31,7 +31,7 @@ class DescribeSpotFleetRequestHistoryResponsePrivate : public Ec2ResponsePrivate
 
 public:
 
-    DescribeSpotFleetRequestHistoryResponsePrivate(DescribeSpotFleetRequestHistoryResponse * const q);
+    explicit DescribeSpotFleetRequestHistoryResponsePrivate(DescribeSpotFleetRequestHistoryResponse * const q);
 
     void parseDescribeSpotFleetRequestHistoryResponse(QXmlStreamReader &xml);
 

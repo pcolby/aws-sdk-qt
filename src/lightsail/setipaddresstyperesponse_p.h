@@ -31,7 +31,7 @@ class SetIpAddressTypeResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    SetIpAddressTypeResponsePrivate(SetIpAddressTypeResponse * const q);
+    explicit SetIpAddressTypeResponsePrivate(SetIpAddressTypeResponse * const q);
 
     void parseSetIpAddressTypeResponse(QXmlStreamReader &xml);
 

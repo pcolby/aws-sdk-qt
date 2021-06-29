@@ -31,7 +31,7 @@ class DescribePermissionsResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    DescribePermissionsResponsePrivate(DescribePermissionsResponse * const q);
+    explicit DescribePermissionsResponsePrivate(DescribePermissionsResponse * const q);
 
     void parseDescribePermissionsResponse(QXmlStreamReader &xml);
 

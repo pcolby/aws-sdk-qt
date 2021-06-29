@@ -31,7 +31,7 @@ class GetImportJobsResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    GetImportJobsResponsePrivate(GetImportJobsResponse * const q);
+    explicit GetImportJobsResponsePrivate(GetImportJobsResponse * const q);
 
     void parseGetImportJobsResponse(QXmlStreamReader &xml);
 

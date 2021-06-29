@@ -31,7 +31,7 @@ class GetChannelResponsePrivate : public IvsResponsePrivate {
 
 public:
 
-    GetChannelResponsePrivate(GetChannelResponse * const q);
+    explicit GetChannelResponsePrivate(GetChannelResponse * const q);
 
     void parseGetChannelResponse(QXmlStreamReader &xml);
 

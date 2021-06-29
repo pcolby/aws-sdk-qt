@@ -31,7 +31,7 @@ class GetLabelDetectionResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 
-    GetLabelDetectionResponsePrivate(GetLabelDetectionResponse * const q);
+    explicit GetLabelDetectionResponsePrivate(GetLabelDetectionResponse * const q);
 
     void parseGetLabelDetectionResponse(QXmlStreamReader &xml);
 

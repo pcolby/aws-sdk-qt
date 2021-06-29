@@ -31,7 +31,7 @@ class PutExternalModelResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 
-    PutExternalModelResponsePrivate(PutExternalModelResponse * const q);
+    explicit PutExternalModelResponsePrivate(PutExternalModelResponse * const q);
 
     void parsePutExternalModelResponse(QXmlStreamReader &xml);
 

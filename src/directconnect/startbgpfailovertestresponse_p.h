@@ -31,7 +31,7 @@ class StartBgpFailoverTestResponsePrivate : public DirectConnectResponsePrivate 
 
 public:
 
-    StartBgpFailoverTestResponsePrivate(StartBgpFailoverTestResponse * const q);
+    explicit StartBgpFailoverTestResponsePrivate(StartBgpFailoverTestResponse * const q);
 
     void parseStartBgpFailoverTestResponse(QXmlStreamReader &xml);
 

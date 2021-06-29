@@ -31,7 +31,7 @@ class UpdateSipMediaApplicationResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    UpdateSipMediaApplicationResponsePrivate(UpdateSipMediaApplicationResponse * const q);
+    explicit UpdateSipMediaApplicationResponsePrivate(UpdateSipMediaApplicationResponse * const q);
 
     void parseUpdateSipMediaApplicationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class PutEmailIdentityConfigurationSetAttributesResponsePrivate : public Sesv2Re
 
 public:
 
-    PutEmailIdentityConfigurationSetAttributesResponsePrivate(PutEmailIdentityConfigurationSetAttributesResponse * const q);
+    explicit PutEmailIdentityConfigurationSetAttributesResponsePrivate(PutEmailIdentityConfigurationSetAttributesResponse * const q);
 
     void parsePutEmailIdentityConfigurationSetAttributesResponse(QXmlStreamReader &xml);
 

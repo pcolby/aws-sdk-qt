@@ -31,7 +31,7 @@ class ListServiceInstancesResponsePrivate : public ProtonResponsePrivate {
 
 public:
 
-    ListServiceInstancesResponsePrivate(ListServiceInstancesResponse * const q);
+    explicit ListServiceInstancesResponsePrivate(ListServiceInstancesResponse * const q);
 
     void parseListServiceInstancesResponse(QXmlStreamReader &xml);
 

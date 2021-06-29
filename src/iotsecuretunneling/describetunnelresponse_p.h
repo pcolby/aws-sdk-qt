@@ -31,7 +31,7 @@ class DescribeTunnelResponsePrivate : public IoTSecureTunnelingResponsePrivate {
 
 public:
 
-    DescribeTunnelResponsePrivate(DescribeTunnelResponse * const q);
+    explicit DescribeTunnelResponsePrivate(DescribeTunnelResponse * const q);
 
     void parseDescribeTunnelResponse(QXmlStreamReader &xml);
 

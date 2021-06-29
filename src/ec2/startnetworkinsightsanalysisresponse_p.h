@@ -31,7 +31,7 @@ class StartNetworkInsightsAnalysisResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    StartNetworkInsightsAnalysisResponsePrivate(StartNetworkInsightsAnalysisResponse * const q);
+    explicit StartNetworkInsightsAnalysisResponsePrivate(StartNetworkInsightsAnalysisResponse * const q);
 
     void parseStartNetworkInsightsAnalysisResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateStorageLocationResponsePrivate : public ElasticBeanstalkResponsePriv
 
 public:
 
-    CreateStorageLocationResponsePrivate(CreateStorageLocationResponse * const q);
+    explicit CreateStorageLocationResponsePrivate(CreateStorageLocationResponse * const q);
 
     void parseCreateStorageLocationResponse(QXmlStreamReader &xml);
 

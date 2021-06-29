@@ -31,7 +31,7 @@ class DeleteRevisionResponsePrivate : public DataExchangeResponsePrivate {
 
 public:
 
-    DeleteRevisionResponsePrivate(DeleteRevisionResponse * const q);
+    explicit DeleteRevisionResponsePrivate(DeleteRevisionResponse * const q);
 
     void parseDeleteRevisionResponse(QXmlStreamReader &xml);
 

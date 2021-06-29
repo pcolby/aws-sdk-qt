@@ -31,7 +31,7 @@ class ListDistributionConfigurationsResponsePrivate : public imagebuilderRespons
 
 public:
 
-    ListDistributionConfigurationsResponsePrivate(ListDistributionConfigurationsResponse * const q);
+    explicit ListDistributionConfigurationsResponsePrivate(ListDistributionConfigurationsResponse * const q);
 
     void parseListDistributionConfigurationsResponse(QXmlStreamReader &xml);
 

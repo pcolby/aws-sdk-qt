@@ -31,7 +31,7 @@ class UpdateInstanceResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    UpdateInstanceResponsePrivate(UpdateInstanceResponse * const q);
+    explicit UpdateInstanceResponsePrivate(UpdateInstanceResponse * const q);
 
     void parseUpdateInstanceResponse(QXmlStreamReader &xml);
 

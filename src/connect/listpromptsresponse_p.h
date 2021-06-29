@@ -31,7 +31,7 @@ class ListPromptsResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    ListPromptsResponsePrivate(ListPromptsResponse * const q);
+    explicit ListPromptsResponsePrivate(ListPromptsResponse * const q);
 
     void parseListPromptsResponse(QXmlStreamReader &xml);
 

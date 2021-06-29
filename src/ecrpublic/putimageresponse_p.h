@@ -31,7 +31,7 @@ class PutImageResponsePrivate : public ECRPublicResponsePrivate {
 
 public:
 
-    PutImageResponsePrivate(PutImageResponse * const q);
+    explicit PutImageResponsePrivate(PutImageResponse * const q);
 
     void parsePutImageResponse(QXmlStreamReader &xml);
 

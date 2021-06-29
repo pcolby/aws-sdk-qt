@@ -31,7 +31,7 @@ class BeginTransactionResponsePrivate : public RDSDataServiceResponsePrivate {
 
 public:
 
-    BeginTransactionResponsePrivate(BeginTransactionResponse * const q);
+    explicit BeginTransactionResponsePrivate(BeginTransactionResponse * const q);
 
     void parseBeginTransactionResponse(QXmlStreamReader &xml);
 

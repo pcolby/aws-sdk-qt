@@ -60,7 +60,7 @@ public:
 protected:
     /// @cond internal
     SageMakerRuntimeRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    SageMakerRuntimeRequest(SageMakerRuntimeRequestPrivate * const d);
+    explicit SageMakerRuntimeRequest(SageMakerRuntimeRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

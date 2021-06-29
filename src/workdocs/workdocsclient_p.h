@@ -30,7 +30,7 @@ class WorkDocsClient;
 class WorkDocsClientPrivate {
 
 public:
-    WorkDocsClientPrivate(WorkDocsClient * const q);
+    explicit WorkDocsClientPrivate(WorkDocsClient * const q);
 
 protected:
     WorkDocsClient * const q_ptr; ///< Internal q-pointer.

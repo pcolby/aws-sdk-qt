@@ -30,7 +30,7 @@ class AppConfigClient;
 class AppConfigClientPrivate {
 
 public:
-    AppConfigClientPrivate(AppConfigClient * const q);
+    explicit AppConfigClientPrivate(AppConfigClient * const q);
 
 protected:
     AppConfigClient * const q_ptr; ///< Internal q-pointer.

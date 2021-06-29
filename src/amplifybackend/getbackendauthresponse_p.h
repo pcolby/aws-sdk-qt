@@ -31,7 +31,7 @@ class GetBackendAuthResponsePrivate : public AmplifyBackendResponsePrivate {
 
 public:
 
-    GetBackendAuthResponsePrivate(GetBackendAuthResponse * const q);
+    explicit GetBackendAuthResponsePrivate(GetBackendAuthResponse * const q);
 
     void parseGetBackendAuthResponse(QXmlStreamReader &xml);
 

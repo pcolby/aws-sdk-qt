@@ -31,7 +31,7 @@ class DescribeEgressOnlyInternetGatewaysResponsePrivate : public Ec2ResponsePriv
 
 public:
 
-    DescribeEgressOnlyInternetGatewaysResponsePrivate(DescribeEgressOnlyInternetGatewaysResponse * const q);
+    explicit DescribeEgressOnlyInternetGatewaysResponsePrivate(DescribeEgressOnlyInternetGatewaysResponse * const q);
 
     void parseDescribeEgressOnlyInternetGatewaysResponse(QXmlStreamReader &xml);
 

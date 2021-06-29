@@ -31,7 +31,7 @@ class CreateOTAUpdateResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    CreateOTAUpdateResponsePrivate(CreateOTAUpdateResponse * const q);
+    explicit CreateOTAUpdateResponsePrivate(CreateOTAUpdateResponse * const q);
 
     void parseCreateOTAUpdateResponse(QXmlStreamReader &xml);
 

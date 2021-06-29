@@ -31,7 +31,7 @@ class StopDiscovererResponsePrivate : public SchemasResponsePrivate {
 
 public:
 
-    StopDiscovererResponsePrivate(StopDiscovererResponse * const q);
+    explicit StopDiscovererResponsePrivate(StopDiscovererResponse * const q);
 
     void parseStopDiscovererResponse(QXmlStreamReader &xml);
 

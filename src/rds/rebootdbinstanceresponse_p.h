@@ -31,7 +31,7 @@ class RebootDBInstanceResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    RebootDBInstanceResponsePrivate(RebootDBInstanceResponse * const q);
+    explicit RebootDBInstanceResponsePrivate(RebootDBInstanceResponse * const q);
 
     void parseRebootDBInstanceResponse(QXmlStreamReader &xml);
 

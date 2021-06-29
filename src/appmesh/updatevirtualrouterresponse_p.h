@@ -31,7 +31,7 @@ class UpdateVirtualRouterResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 
-    UpdateVirtualRouterResponsePrivate(UpdateVirtualRouterResponse * const q);
+    explicit UpdateVirtualRouterResponsePrivate(UpdateVirtualRouterResponse * const q);
 
     void parseUpdateVirtualRouterResponse(QXmlStreamReader &xml);
 

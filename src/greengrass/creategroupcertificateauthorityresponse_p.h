@@ -31,7 +31,7 @@ class CreateGroupCertificateAuthorityResponsePrivate : public GreengrassResponse
 
 public:
 
-    CreateGroupCertificateAuthorityResponsePrivate(CreateGroupCertificateAuthorityResponse * const q);
+    explicit CreateGroupCertificateAuthorityResponsePrivate(CreateGroupCertificateAuthorityResponse * const q);
 
     void parseCreateGroupCertificateAuthorityResponse(QXmlStreamReader &xml);
 

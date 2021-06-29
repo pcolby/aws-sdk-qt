@@ -31,7 +31,7 @@ class DecreaseReplicationFactorResponsePrivate : public DaxResponsePrivate {
 
 public:
 
-    DecreaseReplicationFactorResponsePrivate(DecreaseReplicationFactorResponse * const q);
+    explicit DecreaseReplicationFactorResponsePrivate(DecreaseReplicationFactorResponse * const q);
 
     void parseDecreaseReplicationFactorResponse(QXmlStreamReader &xml);
 

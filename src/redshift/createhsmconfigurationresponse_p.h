@@ -31,7 +31,7 @@ class CreateHsmConfigurationResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    CreateHsmConfigurationResponsePrivate(CreateHsmConfigurationResponse * const q);
+    explicit CreateHsmConfigurationResponsePrivate(CreateHsmConfigurationResponse * const q);
 
     void parseCreateHsmConfigurationResponse(QXmlStreamReader &xml);
 

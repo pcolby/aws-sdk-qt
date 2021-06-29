@@ -31,7 +31,7 @@ class GetCompatibleKafkaVersionsResponsePrivate : public KafkaResponsePrivate {
 
 public:
 
-    GetCompatibleKafkaVersionsResponsePrivate(GetCompatibleKafkaVersionsResponse * const q);
+    explicit GetCompatibleKafkaVersionsResponsePrivate(GetCompatibleKafkaVersionsResponse * const q);
 
     void parseGetCompatibleKafkaVersionsResponse(QXmlStreamReader &xml);
 

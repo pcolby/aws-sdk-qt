@@ -31,7 +31,7 @@ class DescribeContactFlowResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    DescribeContactFlowResponsePrivate(DescribeContactFlowResponse * const q);
+    explicit DescribeContactFlowResponsePrivate(DescribeContactFlowResponse * const q);
 
     void parseDescribeContactFlowResponse(QXmlStreamReader &xml);
 

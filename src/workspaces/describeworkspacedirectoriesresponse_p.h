@@ -31,7 +31,7 @@ class DescribeWorkspaceDirectoriesResponsePrivate : public WorkSpacesResponsePri
 
 public:
 
-    DescribeWorkspaceDirectoriesResponsePrivate(DescribeWorkspaceDirectoriesResponse * const q);
+    explicit DescribeWorkspaceDirectoriesResponsePrivate(DescribeWorkspaceDirectoriesResponse * const q);
 
     void parseDescribeWorkspaceDirectoriesResponse(QXmlStreamReader &xml);
 

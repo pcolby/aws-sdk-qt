@@ -31,7 +31,7 @@ class GetTopicAttributesResponsePrivate : public SnsResponsePrivate {
 
 public:
 
-    GetTopicAttributesResponsePrivate(GetTopicAttributesResponse * const q);
+    explicit GetTopicAttributesResponsePrivate(GetTopicAttributesResponse * const q);
 
     void parseGetTopicAttributesResponse(QXmlStreamReader &xml);
 

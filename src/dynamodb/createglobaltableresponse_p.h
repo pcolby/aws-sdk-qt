@@ -31,7 +31,7 @@ class CreateGlobalTableResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 
-    CreateGlobalTableResponsePrivate(CreateGlobalTableResponse * const q);
+    explicit CreateGlobalTableResponsePrivate(CreateGlobalTableResponse * const q);
 
     void parseCreateGlobalTableResponse(QXmlStreamReader &xml);
 

@@ -145,7 +145,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    EcsClient(
+    explicit EcsClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -207,7 +207,7 @@ public slots:
 protected:
     /// @cond internal
     EcsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    EcsClient(EcsClientPrivate * const d);
+    explicit EcsClient(EcsClientPrivate * const d);
     /// @endcond
 
 private:

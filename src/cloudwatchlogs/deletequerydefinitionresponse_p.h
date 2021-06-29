@@ -31,7 +31,7 @@ class DeleteQueryDefinitionResponsePrivate : public CloudWatchLogsResponsePrivat
 
 public:
 
-    DeleteQueryDefinitionResponsePrivate(DeleteQueryDefinitionResponse * const q);
+    explicit DeleteQueryDefinitionResponsePrivate(DeleteQueryDefinitionResponse * const q);
 
     void parseDeleteQueryDefinitionResponse(QXmlStreamReader &xml);
 

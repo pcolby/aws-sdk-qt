@@ -31,7 +31,7 @@ class StartDocumentAnalysisResponsePrivate : public TextractResponsePrivate {
 
 public:
 
-    StartDocumentAnalysisResponsePrivate(StartDocumentAnalysisResponse * const q);
+    explicit StartDocumentAnalysisResponsePrivate(StartDocumentAnalysisResponse * const q);
 
     void parseStartDocumentAnalysisResponse(QXmlStreamReader &xml);
 

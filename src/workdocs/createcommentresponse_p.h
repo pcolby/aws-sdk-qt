@@ -31,7 +31,7 @@ class CreateCommentResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 
-    CreateCommentResponsePrivate(CreateCommentResponse * const q);
+    explicit CreateCommentResponsePrivate(CreateCommentResponse * const q);
 
     void parseCreateCommentResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class TerminateJobResponsePrivate : public BatchResponsePrivate {
 
 public:
 
-    TerminateJobResponsePrivate(TerminateJobResponse * const q);
+    explicit TerminateJobResponsePrivate(TerminateJobResponse * const q);
 
     void parseTerminateJobResponse(QXmlStreamReader &xml);
 

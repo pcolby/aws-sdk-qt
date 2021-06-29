@@ -31,7 +31,7 @@ class DeleteFileShareResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 
-    DeleteFileShareResponsePrivate(DeleteFileShareResponse * const q);
+    explicit DeleteFileShareResponsePrivate(DeleteFileShareResponse * const q);
 
     void parseDeleteFileShareResponse(QXmlStreamReader &xml);
 

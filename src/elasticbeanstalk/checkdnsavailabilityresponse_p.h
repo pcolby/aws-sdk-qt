@@ -31,7 +31,7 @@ class CheckDNSAvailabilityResponsePrivate : public ElasticBeanstalkResponsePriva
 
 public:
 
-    CheckDNSAvailabilityResponsePrivate(CheckDNSAvailabilityResponse * const q);
+    explicit CheckDNSAvailabilityResponsePrivate(CheckDNSAvailabilityResponse * const q);
 
     void parseCheckDNSAvailabilityResponse(QXmlStreamReader &xml);
 

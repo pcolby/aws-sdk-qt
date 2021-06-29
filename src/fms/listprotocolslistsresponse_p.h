@@ -31,7 +31,7 @@ class ListProtocolsListsResponsePrivate : public FmsResponsePrivate {
 
 public:
 
-    ListProtocolsListsResponsePrivate(ListProtocolsListsResponse * const q);
+    explicit ListProtocolsListsResponsePrivate(ListProtocolsListsResponse * const q);
 
     void parseListProtocolsListsResponse(QXmlStreamReader &xml);
 

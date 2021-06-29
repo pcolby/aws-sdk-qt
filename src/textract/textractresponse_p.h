@@ -29,7 +29,7 @@ class TextractResponsePrivate {
 
 public:
 
-    TextractResponsePrivate(TextractResponse * const q);
+    explicit TextractResponsePrivate(TextractResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

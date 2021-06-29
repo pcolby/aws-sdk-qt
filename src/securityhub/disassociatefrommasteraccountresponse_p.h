@@ -31,7 +31,7 @@ class DisassociateFromMasterAccountResponsePrivate : public SecurityHubResponseP
 
 public:
 
-    DisassociateFromMasterAccountResponsePrivate(DisassociateFromMasterAccountResponse * const q);
+    explicit DisassociateFromMasterAccountResponsePrivate(DisassociateFromMasterAccountResponse * const q);
 
     void parseDisassociateFromMasterAccountResponse(QXmlStreamReader &xml);
 

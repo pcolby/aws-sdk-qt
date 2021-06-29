@@ -31,7 +31,7 @@ class SetSecurityGroupsResponsePrivate : public ElasticLoadBalancingv2ResponsePr
 
 public:
 
-    SetSecurityGroupsResponsePrivate(SetSecurityGroupsResponse * const q);
+    explicit SetSecurityGroupsResponsePrivate(SetSecurityGroupsResponse * const q);
 
     void parseSetSecurityGroupsResponse(QXmlStreamReader &xml);
 

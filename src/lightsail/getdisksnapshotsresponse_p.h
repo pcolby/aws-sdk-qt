@@ -31,7 +31,7 @@ class GetDiskSnapshotsResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    GetDiskSnapshotsResponsePrivate(GetDiskSnapshotsResponse * const q);
+    explicit GetDiskSnapshotsResponsePrivate(GetDiskSnapshotsResponse * const q);
 
     void parseGetDiskSnapshotsResponse(QXmlStreamReader &xml);
 

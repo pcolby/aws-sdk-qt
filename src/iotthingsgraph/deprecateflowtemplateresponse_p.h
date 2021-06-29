@@ -31,7 +31,7 @@ class DeprecateFlowTemplateResponsePrivate : public IoTThingsGraphResponsePrivat
 
 public:
 
-    DeprecateFlowTemplateResponsePrivate(DeprecateFlowTemplateResponse * const q);
+    explicit DeprecateFlowTemplateResponsePrivate(DeprecateFlowTemplateResponse * const q);
 
     void parseDeprecateFlowTemplateResponse(QXmlStreamReader &xml);
 

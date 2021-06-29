@@ -31,7 +31,7 @@ class DisassociateRouteTableResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DisassociateRouteTableResponsePrivate(DisassociateRouteTableResponse * const q);
+    explicit DisassociateRouteTableResponsePrivate(DisassociateRouteTableResponse * const q);
 
     void parseDisassociateRouteTableResponse(QXmlStreamReader &xml);
 

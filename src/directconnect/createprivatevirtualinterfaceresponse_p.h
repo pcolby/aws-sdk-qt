@@ -31,7 +31,7 @@ class CreatePrivateVirtualInterfaceResponsePrivate : public DirectConnectRespons
 
 public:
 
-    CreatePrivateVirtualInterfaceResponsePrivate(CreatePrivateVirtualInterfaceResponse * const q);
+    explicit CreatePrivateVirtualInterfaceResponsePrivate(CreatePrivateVirtualInterfaceResponse * const q);
 
     void parseCreatePrivateVirtualInterfaceResponse(QXmlStreamReader &xml);
 

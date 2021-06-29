@@ -31,7 +31,7 @@ class UntagSAMLProviderResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    UntagSAMLProviderResponsePrivate(UntagSAMLProviderResponse * const q);
+    explicit UntagSAMLProviderResponsePrivate(UntagSAMLProviderResponse * const q);
 
     void parseUntagSAMLProviderResponse(QXmlStreamReader &xml);
 

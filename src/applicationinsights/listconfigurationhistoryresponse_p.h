@@ -31,7 +31,7 @@ class ListConfigurationHistoryResponsePrivate : public ApplicationInsightsRespon
 
 public:
 
-    ListConfigurationHistoryResponsePrivate(ListConfigurationHistoryResponse * const q);
+    explicit ListConfigurationHistoryResponsePrivate(ListConfigurationHistoryResponse * const q);
 
     void parseListConfigurationHistoryResponse(QXmlStreamReader &xml);
 

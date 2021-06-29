@@ -31,7 +31,7 @@ class CreateVpcEndpointConnectionNotificationResponsePrivate : public Ec2Respons
 
 public:
 
-    CreateVpcEndpointConnectionNotificationResponsePrivate(CreateVpcEndpointConnectionNotificationResponse * const q);
+    explicit CreateVpcEndpointConnectionNotificationResponsePrivate(CreateVpcEndpointConnectionNotificationResponse * const q);
 
     void parseCreateVpcEndpointConnectionNotificationResponse(QXmlStreamReader &xml);
 

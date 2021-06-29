@@ -31,7 +31,7 @@ class CreateCacheSecurityGroupResponsePrivate : public ElastiCacheResponsePrivat
 
 public:
 
-    CreateCacheSecurityGroupResponsePrivate(CreateCacheSecurityGroupResponse * const q);
+    explicit CreateCacheSecurityGroupResponsePrivate(CreateCacheSecurityGroupResponse * const q);
 
     void parseCreateCacheSecurityGroupResponse(QXmlStreamReader &xml);
 

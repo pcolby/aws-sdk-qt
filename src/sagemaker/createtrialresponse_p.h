@@ -31,7 +31,7 @@ class CreateTrialResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    CreateTrialResponsePrivate(CreateTrialResponse * const q);
+    explicit CreateTrialResponsePrivate(CreateTrialResponse * const q);
 
     void parseCreateTrialResponse(QXmlStreamReader &xml);
 

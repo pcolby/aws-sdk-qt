@@ -31,7 +31,7 @@ class DeleteIPSetResponsePrivate : public Wafv2ResponsePrivate {
 
 public:
 
-    DeleteIPSetResponsePrivate(DeleteIPSetResponse * const q);
+    explicit DeleteIPSetResponsePrivate(DeleteIPSetResponse * const q);
 
     void parseDeleteIPSetResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeFlowLogsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeFlowLogsResponsePrivate(DescribeFlowLogsResponse * const q);
+    explicit DescribeFlowLogsResponsePrivate(DescribeFlowLogsResponse * const q);
 
     void parseDescribeFlowLogsResponse(QXmlStreamReader &xml);
 

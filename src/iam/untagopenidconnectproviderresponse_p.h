@@ -31,7 +31,7 @@ class UntagOpenIDConnectProviderResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    UntagOpenIDConnectProviderResponsePrivate(UntagOpenIDConnectProviderResponse * const q);
+    explicit UntagOpenIDConnectProviderResponsePrivate(UntagOpenIDConnectProviderResponse * const q);
 
     void parseUntagOpenIDConnectProviderResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetChannelScheduleResponsePrivate : public MediaTailorResponsePrivate {
 
 public:
 
-    GetChannelScheduleResponsePrivate(GetChannelScheduleResponse * const q);
+    explicit GetChannelScheduleResponsePrivate(GetChannelScheduleResponse * const q);
 
     void parseGetChannelScheduleResponse(QXmlStreamReader &xml);
 

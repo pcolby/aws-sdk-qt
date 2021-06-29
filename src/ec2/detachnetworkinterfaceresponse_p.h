@@ -31,7 +31,7 @@ class DetachNetworkInterfaceResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DetachNetworkInterfaceResponsePrivate(DetachNetworkInterfaceResponse * const q);
+    explicit DetachNetworkInterfaceResponsePrivate(DetachNetworkInterfaceResponse * const q);
 
     void parseDetachNetworkInterfaceResponse(QXmlStreamReader &xml);
 

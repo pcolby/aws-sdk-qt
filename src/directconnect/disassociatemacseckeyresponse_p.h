@@ -31,7 +31,7 @@ class DisassociateMacSecKeyResponsePrivate : public DirectConnectResponsePrivate
 
 public:
 
-    DisassociateMacSecKeyResponsePrivate(DisassociateMacSecKeyResponse * const q);
+    explicit DisassociateMacSecKeyResponsePrivate(DisassociateMacSecKeyResponse * const q);
 
     void parseDisassociateMacSecKeyResponse(QXmlStreamReader &xml);
 

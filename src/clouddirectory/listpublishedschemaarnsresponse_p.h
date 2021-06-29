@@ -31,7 +31,7 @@ class ListPublishedSchemaArnsResponsePrivate : public CloudDirectoryResponsePriv
 
 public:
 
-    ListPublishedSchemaArnsResponsePrivate(ListPublishedSchemaArnsResponse * const q);
+    explicit ListPublishedSchemaArnsResponsePrivate(ListPublishedSchemaArnsResponse * const q);
 
     void parseListPublishedSchemaArnsResponse(QXmlStreamReader &xml);
 

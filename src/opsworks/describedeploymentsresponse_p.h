@@ -31,7 +31,7 @@ class DescribeDeploymentsResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    DescribeDeploymentsResponsePrivate(DescribeDeploymentsResponse * const q);
+    explicit DescribeDeploymentsResponsePrivate(DescribeDeploymentsResponse * const q);
 
     void parseDescribeDeploymentsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListCompatibleImagesResponsePrivate : public SnowballResponsePrivate {
 
 public:
 
-    ListCompatibleImagesResponsePrivate(ListCompatibleImagesResponse * const q);
+    explicit ListCompatibleImagesResponsePrivate(ListCompatibleImagesResponse * const q);
 
     void parseListCompatibleImagesResponse(QXmlStreamReader &xml);
 

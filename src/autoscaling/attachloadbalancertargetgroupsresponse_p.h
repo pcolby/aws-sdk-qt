@@ -31,7 +31,7 @@ class AttachLoadBalancerTargetGroupsResponsePrivate : public AutoScalingResponse
 
 public:
 
-    AttachLoadBalancerTargetGroupsResponsePrivate(AttachLoadBalancerTargetGroupsResponse * const q);
+    explicit AttachLoadBalancerTargetGroupsResponsePrivate(AttachLoadBalancerTargetGroupsResponse * const q);
 
     void parseAttachLoadBalancerTargetGroupsResponse(QXmlStreamReader &xml);
 

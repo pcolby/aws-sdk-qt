@@ -31,7 +31,7 @@ class ListClassificationJobsResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 
-    ListClassificationJobsResponsePrivate(ListClassificationJobsResponse * const q);
+    explicit ListClassificationJobsResponsePrivate(ListClassificationJobsResponse * const q);
 
     void parseListClassificationJobsResponse(QXmlStreamReader &xml);
 

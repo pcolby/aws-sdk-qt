@@ -31,7 +31,7 @@ class DeleteAuthorizerResponsePrivate : public ApiGatewayV2ResponsePrivate {
 
 public:
 
-    DeleteAuthorizerResponsePrivate(DeleteAuthorizerResponse * const q);
+    explicit DeleteAuthorizerResponsePrivate(DeleteAuthorizerResponse * const q);
 
     void parseDeleteAuthorizerResponse(QXmlStreamReader &xml);
 

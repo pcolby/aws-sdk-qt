@@ -31,7 +31,7 @@ class SetIpAddressTypeResponsePrivate : public ElasticLoadBalancingv2ResponsePri
 
 public:
 
-    SetIpAddressTypeResponsePrivate(SetIpAddressTypeResponse * const q);
+    explicit SetIpAddressTypeResponsePrivate(SetIpAddressTypeResponse * const q);
 
     void parseSetIpAddressTypeResponse(QXmlStreamReader &xml);
 

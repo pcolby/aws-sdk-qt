@@ -31,7 +31,7 @@ class GetAnomalyGroupResponsePrivate : public LookoutMetricsResponsePrivate {
 
 public:
 
-    GetAnomalyGroupResponsePrivate(GetAnomalyGroupResponse * const q);
+    explicit GetAnomalyGroupResponsePrivate(GetAnomalyGroupResponse * const q);
 
     void parseGetAnomalyGroupResponse(QXmlStreamReader &xml);
 

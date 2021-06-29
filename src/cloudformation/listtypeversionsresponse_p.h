@@ -31,7 +31,7 @@ class ListTypeVersionsResponsePrivate : public CloudFormationResponsePrivate {
 
 public:
 
-    ListTypeVersionsResponsePrivate(ListTypeVersionsResponse * const q);
+    explicit ListTypeVersionsResponsePrivate(ListTypeVersionsResponse * const q);
 
     void parseListTypeVersionsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class BatchExecuteStatementResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 
-    BatchExecuteStatementResponsePrivate(BatchExecuteStatementResponse * const q);
+    explicit BatchExecuteStatementResponsePrivate(BatchExecuteStatementResponse * const q);
 
     void parseBatchExecuteStatementResponse(QXmlStreamReader &xml);
 

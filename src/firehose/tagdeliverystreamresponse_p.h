@@ -31,7 +31,7 @@ class TagDeliveryStreamResponsePrivate : public FirehoseResponsePrivate {
 
 public:
 
-    TagDeliveryStreamResponsePrivate(TagDeliveryStreamResponse * const q);
+    explicit TagDeliveryStreamResponsePrivate(TagDeliveryStreamResponse * const q);
 
     void parseTagDeliveryStreamResponse(QXmlStreamReader &xml);
 

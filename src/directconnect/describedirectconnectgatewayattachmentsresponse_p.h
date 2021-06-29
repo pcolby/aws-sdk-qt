@@ -31,7 +31,7 @@ class DescribeDirectConnectGatewayAttachmentsResponsePrivate : public DirectConn
 
 public:
 
-    DescribeDirectConnectGatewayAttachmentsResponsePrivate(DescribeDirectConnectGatewayAttachmentsResponse * const q);
+    explicit DescribeDirectConnectGatewayAttachmentsResponsePrivate(DescribeDirectConnectGatewayAttachmentsResponse * const q);
 
     void parseDescribeDirectConnectGatewayAttachmentsResponse(QXmlStreamReader &xml);
 

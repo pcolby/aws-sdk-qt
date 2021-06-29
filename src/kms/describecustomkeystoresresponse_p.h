@@ -31,7 +31,7 @@ class DescribeCustomKeyStoresResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    DescribeCustomKeyStoresResponsePrivate(DescribeCustomKeyStoresResponse * const q);
+    explicit DescribeCustomKeyStoresResponsePrivate(DescribeCustomKeyStoresResponse * const q);
 
     void parseDescribeCustomKeyStoresResponse(QXmlStreamReader &xml);
 

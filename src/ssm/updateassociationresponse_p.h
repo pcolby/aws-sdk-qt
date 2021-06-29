@@ -31,7 +31,7 @@ class UpdateAssociationResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    UpdateAssociationResponsePrivate(UpdateAssociationResponse * const q);
+    explicit UpdateAssociationResponsePrivate(UpdateAssociationResponse * const q);
 
     void parseUpdateAssociationResponse(QXmlStreamReader &xml);
 

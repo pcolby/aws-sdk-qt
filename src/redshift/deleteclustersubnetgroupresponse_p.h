@@ -31,7 +31,7 @@ class DeleteClusterSubnetGroupResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    DeleteClusterSubnetGroupResponsePrivate(DeleteClusterSubnetGroupResponse * const q);
+    explicit DeleteClusterSubnetGroupResponsePrivate(DeleteClusterSubnetGroupResponse * const q);
 
     void parseDeleteClusterSubnetGroupResponse(QXmlStreamReader &xml);
 

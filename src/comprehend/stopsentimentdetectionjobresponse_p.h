@@ -31,7 +31,7 @@ class StopSentimentDetectionJobResponsePrivate : public ComprehendResponsePrivat
 
 public:
 
-    StopSentimentDetectionJobResponsePrivate(StopSentimentDetectionJobResponse * const q);
+    explicit StopSentimentDetectionJobResponsePrivate(StopSentimentDetectionJobResponse * const q);
 
     void parseStopSentimentDetectionJobResponse(QXmlStreamReader &xml);
 

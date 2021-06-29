@@ -31,7 +31,7 @@ class ListJobRunsResponsePrivate : public EMRContainersResponsePrivate {
 
 public:
 
-    ListJobRunsResponsePrivate(ListJobRunsResponse * const q);
+    explicit ListJobRunsResponsePrivate(ListJobRunsResponse * const q);
 
     void parseListJobRunsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteEnvironmentAccountConnectionResponsePrivate : public ProtonResponseP
 
 public:
 
-    DeleteEnvironmentAccountConnectionResponsePrivate(DeleteEnvironmentAccountConnectionResponse * const q);
+    explicit DeleteEnvironmentAccountConnectionResponsePrivate(DeleteEnvironmentAccountConnectionResponse * const q);
 
     void parseDeleteEnvironmentAccountConnectionResponse(QXmlStreamReader &xml);
 

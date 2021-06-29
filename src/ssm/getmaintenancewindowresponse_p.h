@@ -31,7 +31,7 @@ class GetMaintenanceWindowResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    GetMaintenanceWindowResponsePrivate(GetMaintenanceWindowResponse * const q);
+    explicit GetMaintenanceWindowResponsePrivate(GetMaintenanceWindowResponse * const q);
 
     void parseGetMaintenanceWindowResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteBackupVaultNotificationsResponsePrivate : public BackupResponsePriva
 
 public:
 
-    DeleteBackupVaultNotificationsResponsePrivate(DeleteBackupVaultNotificationsResponse * const q);
+    explicit DeleteBackupVaultNotificationsResponsePrivate(DeleteBackupVaultNotificationsResponse * const q);
 
     void parseDeleteBackupVaultNotificationsResponse(QXmlStreamReader &xml);
 

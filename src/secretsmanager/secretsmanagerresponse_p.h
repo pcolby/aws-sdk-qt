@@ -29,7 +29,7 @@ class SecretsManagerResponsePrivate {
 
 public:
 
-    SecretsManagerResponsePrivate(SecretsManagerResponse * const q);
+    explicit SecretsManagerResponsePrivate(SecretsManagerResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

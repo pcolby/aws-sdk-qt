@@ -31,7 +31,7 @@ class DescribeCommandsResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    DescribeCommandsResponsePrivate(DescribeCommandsResponse * const q);
+    explicit DescribeCommandsResponsePrivate(DescribeCommandsResponse * const q);
 
     void parseDescribeCommandsResponse(QXmlStreamReader &xml);
 

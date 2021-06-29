@@ -31,7 +31,7 @@ class DescribeDBParameterGroupsResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    DescribeDBParameterGroupsResponsePrivate(DescribeDBParameterGroupsResponse * const q);
+    explicit DescribeDBParameterGroupsResponsePrivate(DescribeDBParameterGroupsResponse * const q);
 
     void parseDescribeDBParameterGroupsResponse(QXmlStreamReader &xml);
 

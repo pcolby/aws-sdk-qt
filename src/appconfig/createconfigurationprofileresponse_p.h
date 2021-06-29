@@ -31,7 +31,7 @@ class CreateConfigurationProfileResponsePrivate : public AppConfigResponsePrivat
 
 public:
 
-    CreateConfigurationProfileResponsePrivate(CreateConfigurationProfileResponse * const q);
+    explicit CreateConfigurationProfileResponsePrivate(CreateConfigurationProfileResponse * const q);
 
     void parseCreateConfigurationProfileResponse(QXmlStreamReader &xml);
 

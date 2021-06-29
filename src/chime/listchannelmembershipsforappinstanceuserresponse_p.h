@@ -31,7 +31,7 @@ class ListChannelMembershipsForAppInstanceUserResponsePrivate : public ChimeResp
 
 public:
 
-    ListChannelMembershipsForAppInstanceUserResponsePrivate(ListChannelMembershipsForAppInstanceUserResponse * const q);
+    explicit ListChannelMembershipsForAppInstanceUserResponsePrivate(ListChannelMembershipsForAppInstanceUserResponse * const q);
 
     void parseListChannelMembershipsForAppInstanceUserResponse(QXmlStreamReader &xml);
 

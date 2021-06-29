@@ -31,7 +31,7 @@ class DescribeSeverityLevelsResponsePrivate : public SupportResponsePrivate {
 
 public:
 
-    DescribeSeverityLevelsResponsePrivate(DescribeSeverityLevelsResponse * const q);
+    explicit DescribeSeverityLevelsResponsePrivate(DescribeSeverityLevelsResponse * const q);
 
     void parseDescribeSeverityLevelsResponse(QXmlStreamReader &xml);
 

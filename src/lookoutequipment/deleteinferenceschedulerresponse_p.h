@@ -31,7 +31,7 @@ class DeleteInferenceSchedulerResponsePrivate : public LookoutEquipmentResponseP
 
 public:
 
-    DeleteInferenceSchedulerResponsePrivate(DeleteInferenceSchedulerResponse * const q);
+    explicit DeleteInferenceSchedulerResponsePrivate(DeleteInferenceSchedulerResponse * const q);
 
     void parseDeleteInferenceSchedulerResponse(QXmlStreamReader &xml);
 

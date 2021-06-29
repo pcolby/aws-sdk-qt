@@ -31,7 +31,7 @@ class CancelInstanceRefreshResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 
-    CancelInstanceRefreshResponsePrivate(CancelInstanceRefreshResponse * const q);
+    explicit CancelInstanceRefreshResponsePrivate(CancelInstanceRefreshResponse * const q);
 
     void parseCancelInstanceRefreshResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateDomainEntryResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    UpdateDomainEntryResponsePrivate(UpdateDomainEntryResponse * const q);
+    explicit UpdateDomainEntryResponsePrivate(UpdateDomainEntryResponse * const q);
 
     void parseUpdateDomainEntryResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateDBProxyEndpointResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    CreateDBProxyEndpointResponsePrivate(CreateDBProxyEndpointResponse * const q);
+    explicit CreateDBProxyEndpointResponsePrivate(CreateDBProxyEndpointResponse * const q);
 
     void parseCreateDBProxyEndpointResponse(QXmlStreamReader &xml);
 

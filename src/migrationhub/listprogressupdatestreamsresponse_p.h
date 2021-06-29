@@ -31,7 +31,7 @@ class ListProgressUpdateStreamsResponsePrivate : public MigrationHubResponsePriv
 
 public:
 
-    ListProgressUpdateStreamsResponsePrivate(ListProgressUpdateStreamsResponse * const q);
+    explicit ListProgressUpdateStreamsResponsePrivate(ListProgressUpdateStreamsResponse * const q);
 
     void parseListProgressUpdateStreamsResponse(QXmlStreamReader &xml);
 

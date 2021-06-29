@@ -31,7 +31,7 @@ class DescribePendingAggregationRequestsResponsePrivate : public ConfigServiceRe
 
 public:
 
-    DescribePendingAggregationRequestsResponsePrivate(DescribePendingAggregationRequestsResponse * const q);
+    explicit DescribePendingAggregationRequestsResponsePrivate(DescribePendingAggregationRequestsResponse * const q);
 
     void parseDescribePendingAggregationRequestsResponse(QXmlStreamReader &xml);
 

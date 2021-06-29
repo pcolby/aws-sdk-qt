@@ -31,7 +31,7 @@ class DeleteLoggingConfigurationResponsePrivate : public WAFRegionalResponsePriv
 
 public:
 
-    DeleteLoggingConfigurationResponsePrivate(DeleteLoggingConfigurationResponse * const q);
+    explicit DeleteLoggingConfigurationResponsePrivate(DeleteLoggingConfigurationResponse * const q);
 
     void parseDeleteLoggingConfigurationResponse(QXmlStreamReader &xml);
 

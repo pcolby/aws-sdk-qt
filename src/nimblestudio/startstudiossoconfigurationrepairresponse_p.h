@@ -31,7 +31,7 @@ class StartStudioSSOConfigurationRepairResponsePrivate : public NimbleStudioResp
 
 public:
 
-    StartStudioSSOConfigurationRepairResponsePrivate(StartStudioSSOConfigurationRepairResponse * const q);
+    explicit StartStudioSSOConfigurationRepairResponsePrivate(StartStudioSSOConfigurationRepairResponse * const q);
 
     void parseStartStudioSSOConfigurationRepairResponse(QXmlStreamReader &xml);
 

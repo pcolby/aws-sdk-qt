@@ -31,7 +31,7 @@ class ListHostedConfigurationVersionsResponsePrivate : public AppConfigResponseP
 
 public:
 
-    ListHostedConfigurationVersionsResponsePrivate(ListHostedConfigurationVersionsResponse * const q);
+    explicit ListHostedConfigurationVersionsResponsePrivate(ListHostedConfigurationVersionsResponse * const q);
 
     void parseListHostedConfigurationVersionsResponse(QXmlStreamReader &xml);
 

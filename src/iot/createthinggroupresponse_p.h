@@ -31,7 +31,7 @@ class CreateThingGroupResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    CreateThingGroupResponsePrivate(CreateThingGroupResponse * const q);
+    explicit CreateThingGroupResponsePrivate(CreateThingGroupResponse * const q);
 
     void parseCreateThingGroupResponse(QXmlStreamReader &xml);
 

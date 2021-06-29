@@ -31,7 +31,7 @@ class DeleteTransitGatewayRouteResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DeleteTransitGatewayRouteResponsePrivate(DeleteTransitGatewayRouteResponse * const q);
+    explicit DeleteTransitGatewayRouteResponsePrivate(DeleteTransitGatewayRouteResponse * const q);
 
     void parseDeleteTransitGatewayRouteResponse(QXmlStreamReader &xml);
 

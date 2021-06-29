@@ -31,7 +31,7 @@ class GenerateChangeSetResponsePrivate : public SmsResponsePrivate {
 
 public:
 
-    GenerateChangeSetResponsePrivate(GenerateChangeSetResponse * const q);
+    explicit GenerateChangeSetResponsePrivate(GenerateChangeSetResponse * const q);
 
     void parseGenerateChangeSetResponse(QXmlStreamReader &xml);
 

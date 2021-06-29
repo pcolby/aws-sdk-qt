@@ -31,7 +31,7 @@ class RegisterDBProxyTargetsResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    RegisterDBProxyTargetsResponsePrivate(RegisterDBProxyTargetsResponse * const q);
+    explicit RegisterDBProxyTargetsResponsePrivate(RegisterDBProxyTargetsResponse * const q);
 
     void parseRegisterDBProxyTargetsResponse(QXmlStreamReader &xml);
 

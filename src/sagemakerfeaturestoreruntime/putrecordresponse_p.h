@@ -31,7 +31,7 @@ class PutRecordResponsePrivate : public SageMakerFeatureStoreRuntimeResponsePriv
 
 public:
 
-    PutRecordResponsePrivate(PutRecordResponse * const q);
+    explicit PutRecordResponsePrivate(PutRecordResponse * const q);
 
     void parsePutRecordResponse(QXmlStreamReader &xml);
 

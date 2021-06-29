@@ -31,7 +31,7 @@ class DeleteCustomMetadataResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 
-    DeleteCustomMetadataResponsePrivate(DeleteCustomMetadataResponse * const q);
+    explicit DeleteCustomMetadataResponsePrivate(DeleteCustomMetadataResponse * const q);
 
     void parseDeleteCustomMetadataResponse(QXmlStreamReader &xml);
 

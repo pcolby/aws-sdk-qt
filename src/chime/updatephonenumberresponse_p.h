@@ -31,7 +31,7 @@ class UpdatePhoneNumberResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    UpdatePhoneNumberResponsePrivate(UpdatePhoneNumberResponse * const q);
+    explicit UpdatePhoneNumberResponsePrivate(UpdatePhoneNumberResponse * const q);
 
     void parseUpdatePhoneNumberResponse(QXmlStreamReader &xml);
 

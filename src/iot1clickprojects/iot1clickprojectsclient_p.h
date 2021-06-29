@@ -30,7 +30,7 @@ class IoT1ClickProjectsClient;
 class IoT1ClickProjectsClientPrivate {
 
 public:
-    IoT1ClickProjectsClientPrivate(IoT1ClickProjectsClient * const q);
+    explicit IoT1ClickProjectsClientPrivate(IoT1ClickProjectsClient * const q);
 
 protected:
     IoT1ClickProjectsClient * const q_ptr; ///< Internal q-pointer.

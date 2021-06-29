@@ -31,7 +31,7 @@ class RespondToAuthChallengeResponsePrivate : public CognitoIdentityProviderResp
 
 public:
 
-    RespondToAuthChallengeResponsePrivate(RespondToAuthChallengeResponse * const q);
+    explicit RespondToAuthChallengeResponsePrivate(RespondToAuthChallengeResponse * const q);
 
     void parseRespondToAuthChallengeResponse(QXmlStreamReader &xml);
 

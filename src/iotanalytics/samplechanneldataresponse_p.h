@@ -31,7 +31,7 @@ class SampleChannelDataResponsePrivate : public IoTAnalyticsResponsePrivate {
 
 public:
 
-    SampleChannelDataResponsePrivate(SampleChannelDataResponse * const q);
+    explicit SampleChannelDataResponsePrivate(SampleChannelDataResponse * const q);
 
     void parseSampleChannelDataResponse(QXmlStreamReader &xml);
 

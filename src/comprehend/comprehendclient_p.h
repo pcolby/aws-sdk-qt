@@ -30,7 +30,7 @@ class ComprehendClient;
 class ComprehendClientPrivate {
 
 public:
-    ComprehendClientPrivate(ComprehendClient * const q);
+    explicit ComprehendClientPrivate(ComprehendClient * const q);
 
 protected:
     ComprehendClient * const q_ptr; ///< Internal q-pointer.

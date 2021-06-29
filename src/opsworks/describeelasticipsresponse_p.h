@@ -31,7 +31,7 @@ class DescribeElasticIpsResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    DescribeElasticIpsResponsePrivate(DescribeElasticIpsResponse * const q);
+    explicit DescribeElasticIpsResponsePrivate(DescribeElasticIpsResponse * const q);
 
     void parseDescribeElasticIpsResponse(QXmlStreamReader &xml);
 

@@ -30,7 +30,7 @@ class IamClient;
 class IamClientPrivate {
 
 public:
-    IamClientPrivate(IamClient * const q);
+    explicit IamClientPrivate(IamClient * const q);
 
 protected:
     IamClient * const q_ptr; ///< Internal q-pointer.

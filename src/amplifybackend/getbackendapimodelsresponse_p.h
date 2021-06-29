@@ -31,7 +31,7 @@ class GetBackendAPIModelsResponsePrivate : public AmplifyBackendResponsePrivate 
 
 public:
 
-    GetBackendAPIModelsResponsePrivate(GetBackendAPIModelsResponse * const q);
+    explicit GetBackendAPIModelsResponsePrivate(GetBackendAPIModelsResponse * const q);
 
     void parseGetBackendAPIModelsResponse(QXmlStreamReader &xml);
 

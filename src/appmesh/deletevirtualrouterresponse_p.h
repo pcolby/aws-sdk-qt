@@ -31,7 +31,7 @@ class DeleteVirtualRouterResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 
-    DeleteVirtualRouterResponsePrivate(DeleteVirtualRouterResponse * const q);
+    explicit DeleteVirtualRouterResponsePrivate(DeleteVirtualRouterResponse * const q);
 
     void parseDeleteVirtualRouterResponse(QXmlStreamReader &xml);
 

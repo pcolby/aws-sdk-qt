@@ -51,7 +51,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    IoTDataPlaneClient(
+    explicit IoTDataPlaneClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -66,7 +66,7 @@ public slots:
 protected:
     /// @cond internal
     IoTDataPlaneClientPrivate * const d_ptr; ///< Internal d-pointer.
-    IoTDataPlaneClient(IoTDataPlaneClientPrivate * const d);
+    explicit IoTDataPlaneClient(IoTDataPlaneClientPrivate * const d);
     /// @endcond
 
 private:

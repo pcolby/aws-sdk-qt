@@ -110,7 +110,7 @@ public:
 protected:
     /// @cond internal
     SecurityHubRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    SecurityHubRequest(SecurityHubRequestPrivate * const d);
+    explicit SecurityHubRequest(SecurityHubRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

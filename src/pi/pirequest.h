@@ -62,7 +62,7 @@ public:
 protected:
     /// @cond internal
     PiRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    PiRequest(PiRequestPrivate * const d);
+    explicit PiRequest(PiRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

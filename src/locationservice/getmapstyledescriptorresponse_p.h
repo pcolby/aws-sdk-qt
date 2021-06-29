@@ -31,7 +31,7 @@ class GetMapStyleDescriptorResponsePrivate : public LocationServiceResponsePriva
 
 public:
 
-    GetMapStyleDescriptorResponsePrivate(GetMapStyleDescriptorResponse * const q);
+    explicit GetMapStyleDescriptorResponsePrivate(GetMapStyleDescriptorResponse * const q);
 
     void parseGetMapStyleDescriptorResponse(QXmlStreamReader &xml);
 

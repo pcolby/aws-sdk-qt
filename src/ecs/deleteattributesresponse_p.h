@@ -31,7 +31,7 @@ class DeleteAttributesResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    DeleteAttributesResponsePrivate(DeleteAttributesResponse * const q);
+    explicit DeleteAttributesResponsePrivate(DeleteAttributesResponse * const q);
 
     void parseDeleteAttributesResponse(QXmlStreamReader &xml);
 

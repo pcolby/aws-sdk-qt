@@ -31,7 +31,7 @@ class UpdatePermissionSetResponsePrivate : public SSOAdminResponsePrivate {
 
 public:
 
-    UpdatePermissionSetResponsePrivate(UpdatePermissionSetResponse * const q);
+    explicit UpdatePermissionSetResponsePrivate(UpdatePermissionSetResponse * const q);
 
     void parseUpdatePermissionSetResponse(QXmlStreamReader &xml);
 

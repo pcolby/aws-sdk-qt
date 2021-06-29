@@ -31,7 +31,7 @@ class GetJourneyExecutionMetricsResponsePrivate : public PinpointResponsePrivate
 
 public:
 
-    GetJourneyExecutionMetricsResponsePrivate(GetJourneyExecutionMetricsResponse * const q);
+    explicit GetJourneyExecutionMetricsResponsePrivate(GetJourneyExecutionMetricsResponse * const q);
 
     void parseGetJourneyExecutionMetricsResponse(QXmlStreamReader &xml);
 

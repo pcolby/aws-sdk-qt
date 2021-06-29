@@ -29,7 +29,7 @@ class GlacierResponsePrivate {
 
 public:
 
-    GlacierResponsePrivate(GlacierResponse * const q);
+    explicit GlacierResponsePrivate(GlacierResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

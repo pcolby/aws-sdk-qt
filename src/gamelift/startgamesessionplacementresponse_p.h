@@ -31,7 +31,7 @@ class StartGameSessionPlacementResponsePrivate : public GameLiftResponsePrivate 
 
 public:
 
-    StartGameSessionPlacementResponsePrivate(StartGameSessionPlacementResponse * const q);
+    explicit StartGameSessionPlacementResponsePrivate(StartGameSessionPlacementResponse * const q);
 
     void parseStartGameSessionPlacementResponse(QXmlStreamReader &xml);
 

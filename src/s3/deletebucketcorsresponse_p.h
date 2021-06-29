@@ -31,7 +31,7 @@ class DeleteBucketCorsResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    DeleteBucketCorsResponsePrivate(DeleteBucketCorsResponse * const q);
+    explicit DeleteBucketCorsResponsePrivate(DeleteBucketCorsResponse * const q);
 
     void parseDeleteBucketCorsResponse(QXmlStreamReader &xml);
 

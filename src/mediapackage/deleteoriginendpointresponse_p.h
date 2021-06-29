@@ -31,7 +31,7 @@ class DeleteOriginEndpointResponsePrivate : public MediaPackageResponsePrivate {
 
 public:
 
-    DeleteOriginEndpointResponsePrivate(DeleteOriginEndpointResponse * const q);
+    explicit DeleteOriginEndpointResponsePrivate(DeleteOriginEndpointResponse * const q);
 
     void parseDeleteOriginEndpointResponse(QXmlStreamReader &xml);
 

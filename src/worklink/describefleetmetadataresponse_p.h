@@ -31,7 +31,7 @@ class DescribeFleetMetadataResponsePrivate : public WorkLinkResponsePrivate {
 
 public:
 
-    DescribeFleetMetadataResponsePrivate(DescribeFleetMetadataResponse * const q);
+    explicit DescribeFleetMetadataResponsePrivate(DescribeFleetMetadataResponse * const q);
 
     void parseDescribeFleetMetadataResponse(QXmlStreamReader &xml);
 

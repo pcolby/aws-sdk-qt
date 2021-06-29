@@ -31,7 +31,7 @@ class GetSampleDataResponsePrivate : public LookoutMetricsResponsePrivate {
 
 public:
 
-    GetSampleDataResponsePrivate(GetSampleDataResponse * const q);
+    explicit GetSampleDataResponsePrivate(GetSampleDataResponse * const q);
 
     void parseGetSampleDataResponse(QXmlStreamReader &xml);
 

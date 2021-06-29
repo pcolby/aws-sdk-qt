@@ -31,7 +31,7 @@ class ListDataSourceSyncJobsResponsePrivate : public kendraResponsePrivate {
 
 public:
 
-    ListDataSourceSyncJobsResponsePrivate(ListDataSourceSyncJobsResponse * const q);
+    explicit ListDataSourceSyncJobsResponsePrivate(ListDataSourceSyncJobsResponse * const q);
 
     void parseListDataSourceSyncJobsResponse(QXmlStreamReader &xml);
 

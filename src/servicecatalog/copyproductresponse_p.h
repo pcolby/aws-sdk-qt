@@ -31,7 +31,7 @@ class CopyProductResponsePrivate : public ServiceCatalogResponsePrivate {
 
 public:
 
-    CopyProductResponsePrivate(CopyProductResponse * const q);
+    explicit CopyProductResponsePrivate(CopyProductResponse * const q);
 
     void parseCopyProductResponse(QXmlStreamReader &xml);
 

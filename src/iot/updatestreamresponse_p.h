@@ -31,7 +31,7 @@ class UpdateStreamResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    UpdateStreamResponsePrivate(UpdateStreamResponse * const q);
+    explicit UpdateStreamResponsePrivate(UpdateStreamResponse * const q);
 
     void parseUpdateStreamResponse(QXmlStreamReader &xml);
 

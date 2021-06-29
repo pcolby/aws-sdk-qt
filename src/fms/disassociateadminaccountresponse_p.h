@@ -31,7 +31,7 @@ class DisassociateAdminAccountResponsePrivate : public FmsResponsePrivate {
 
 public:
 
-    DisassociateAdminAccountResponsePrivate(DisassociateAdminAccountResponse * const q);
+    explicit DisassociateAdminAccountResponsePrivate(DisassociateAdminAccountResponse * const q);
 
     void parseDisassociateAdminAccountResponse(QXmlStreamReader &xml);
 

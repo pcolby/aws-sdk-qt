@@ -53,7 +53,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    ImportExportClient(
+    explicit ImportExportClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -69,7 +69,7 @@ public slots:
 protected:
     /// @cond internal
     ImportExportClientPrivate * const d_ptr; ///< Internal d-pointer.
-    ImportExportClient(ImportExportClientPrivate * const d);
+    explicit ImportExportClient(ImportExportClientPrivate * const d);
     /// @endcond
 
 private:

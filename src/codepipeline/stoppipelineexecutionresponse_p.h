@@ -31,7 +31,7 @@ class StopPipelineExecutionResponsePrivate : public CodePipelineResponsePrivate 
 
 public:
 
-    StopPipelineExecutionResponsePrivate(StopPipelineExecutionResponse * const q);
+    explicit StopPipelineExecutionResponsePrivate(StopPipelineExecutionResponse * const q);
 
     void parseStopPipelineExecutionResponse(QXmlStreamReader &xml);
 

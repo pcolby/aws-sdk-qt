@@ -31,7 +31,7 @@ class StartImportTaskResponsePrivate : public ApplicationDiscoveryServiceRespons
 
 public:
 
-    StartImportTaskResponsePrivate(StartImportTaskResponse * const q);
+    explicit StartImportTaskResponsePrivate(StartImportTaskResponse * const q);
 
     void parseStartImportTaskResponse(QXmlStreamReader &xml);
 

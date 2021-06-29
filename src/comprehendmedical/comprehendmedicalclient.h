@@ -83,7 +83,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    ComprehendMedicalClient(
+    explicit ComprehendMedicalClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -114,7 +114,7 @@ public slots:
 protected:
     /// @cond internal
     ComprehendMedicalClientPrivate * const d_ptr; ///< Internal d-pointer.
-    ComprehendMedicalClient(ComprehendMedicalClientPrivate * const d);
+    explicit ComprehendMedicalClient(ComprehendMedicalClientPrivate * const d);
     /// @endcond
 
 private:

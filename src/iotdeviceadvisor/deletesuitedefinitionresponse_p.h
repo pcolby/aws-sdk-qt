@@ -31,7 +31,7 @@ class DeleteSuiteDefinitionResponsePrivate : public IoTDeviceAdvisorResponsePriv
 
 public:
 
-    DeleteSuiteDefinitionResponsePrivate(DeleteSuiteDefinitionResponse * const q);
+    explicit DeleteSuiteDefinitionResponsePrivate(DeleteSuiteDefinitionResponse * const q);
 
     void parseDeleteSuiteDefinitionResponse(QXmlStreamReader &xml);
 

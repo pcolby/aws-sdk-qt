@@ -31,7 +31,7 @@ class DeleteAlgorithmResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    DeleteAlgorithmResponsePrivate(DeleteAlgorithmResponse * const q);
+    explicit DeleteAlgorithmResponsePrivate(DeleteAlgorithmResponse * const q);
 
     void parseDeleteAlgorithmResponse(QXmlStreamReader &xml);
 

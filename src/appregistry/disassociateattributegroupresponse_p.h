@@ -31,7 +31,7 @@ class DisassociateAttributeGroupResponsePrivate : public AppRegistryResponsePriv
 
 public:
 
-    DisassociateAttributeGroupResponsePrivate(DisassociateAttributeGroupResponse * const q);
+    explicit DisassociateAttributeGroupResponsePrivate(DisassociateAttributeGroupResponse * const q);
 
     void parseDisassociateAttributeGroupResponse(QXmlStreamReader &xml);
 

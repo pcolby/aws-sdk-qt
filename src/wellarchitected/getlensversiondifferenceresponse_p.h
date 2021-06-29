@@ -31,7 +31,7 @@ class GetLensVersionDifferenceResponsePrivate : public WellArchitectedResponsePr
 
 public:
 
-    GetLensVersionDifferenceResponsePrivate(GetLensVersionDifferenceResponse * const q);
+    explicit GetLensVersionDifferenceResponsePrivate(GetLensVersionDifferenceResponse * const q);
 
     void parseGetLensVersionDifferenceResponse(QXmlStreamReader &xml);
 

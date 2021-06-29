@@ -31,7 +31,7 @@ class DisableFastSnapshotRestoresResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DisableFastSnapshotRestoresResponsePrivate(DisableFastSnapshotRestoresResponse * const q);
+    explicit DisableFastSnapshotRestoresResponsePrivate(DisableFastSnapshotRestoresResponse * const q);
 
     void parseDisableFastSnapshotRestoresResponse(QXmlStreamReader &xml);
 

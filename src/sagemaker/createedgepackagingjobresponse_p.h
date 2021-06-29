@@ -31,7 +31,7 @@ class CreateEdgePackagingJobResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    CreateEdgePackagingJobResponsePrivate(CreateEdgePackagingJobResponse * const q);
+    explicit CreateEdgePackagingJobResponsePrivate(CreateEdgePackagingJobResponse * const q);
 
     void parseCreateEdgePackagingJobResponse(QXmlStreamReader &xml);
 

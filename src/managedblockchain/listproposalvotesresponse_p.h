@@ -31,7 +31,7 @@ class ListProposalVotesResponsePrivate : public ManagedBlockchainResponsePrivate
 
 public:
 
-    ListProposalVotesResponsePrivate(ListProposalVotesResponse * const q);
+    explicit ListProposalVotesResponsePrivate(ListProposalVotesResponse * const q);
 
     void parseListProposalVotesResponse(QXmlStreamReader &xml);
 

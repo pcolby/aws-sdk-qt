@@ -89,7 +89,7 @@ public:
 protected:
     /// @cond internal
     CostExplorerRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    CostExplorerRequest(CostExplorerRequestPrivate * const d);
+    explicit CostExplorerRequest(CostExplorerRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

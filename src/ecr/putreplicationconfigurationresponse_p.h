@@ -31,7 +31,7 @@ class PutReplicationConfigurationResponsePrivate : public EcrResponsePrivate {
 
 public:
 
-    PutReplicationConfigurationResponsePrivate(PutReplicationConfigurationResponse * const q);
+    explicit PutReplicationConfigurationResponsePrivate(PutReplicationConfigurationResponse * const q);
 
     void parsePutReplicationConfigurationResponse(QXmlStreamReader &xml);
 

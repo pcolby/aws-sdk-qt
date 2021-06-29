@@ -31,7 +31,7 @@ class DescribeMaintenanceWindowTargetsResponsePrivate : public SsmResponsePrivat
 
 public:
 
-    DescribeMaintenanceWindowTargetsResponsePrivate(DescribeMaintenanceWindowTargetsResponse * const q);
+    explicit DescribeMaintenanceWindowTargetsResponsePrivate(DescribeMaintenanceWindowTargetsResponse * const q);
 
     void parseDescribeMaintenanceWindowTargetsResponse(QXmlStreamReader &xml);
 

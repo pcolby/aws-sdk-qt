@@ -31,7 +31,7 @@ class GetRateBasedRuleResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 
-    GetRateBasedRuleResponsePrivate(GetRateBasedRuleResponse * const q);
+    explicit GetRateBasedRuleResponsePrivate(GetRateBasedRuleResponse * const q);
 
     void parseGetRateBasedRuleResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeEndpointGroupResponsePrivate : public GlobalAcceleratorResponsePri
 
 public:
 
-    DescribeEndpointGroupResponsePrivate(DescribeEndpointGroupResponse * const q);
+    explicit DescribeEndpointGroupResponsePrivate(DescribeEndpointGroupResponse * const q);
 
     void parseDescribeEndpointGroupResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class PutIdentityPolicyResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    PutIdentityPolicyResponsePrivate(PutIdentityPolicyResponse * const q);
+    explicit PutIdentityPolicyResponsePrivate(PutIdentityPolicyResponse * const q);
 
     void parsePutIdentityPolicyResponse(QXmlStreamReader &xml);
 

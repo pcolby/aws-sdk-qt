@@ -31,7 +31,7 @@ class GetSampledRequestsResponsePrivate : public Wafv2ResponsePrivate {
 
 public:
 
-    GetSampledRequestsResponsePrivate(GetSampledRequestsResponse * const q);
+    explicit GetSampledRequestsResponsePrivate(GetSampledRequestsResponse * const q);
 
     void parseGetSampledRequestsResponse(QXmlStreamReader &xml);
 

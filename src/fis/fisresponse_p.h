@@ -29,7 +29,7 @@ class FisResponsePrivate {
 
 public:
 
-    FisResponsePrivate(FisResponse * const q);
+    explicit FisResponsePrivate(FisResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

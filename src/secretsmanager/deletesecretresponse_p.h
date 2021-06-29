@@ -31,7 +31,7 @@ class DeleteSecretResponsePrivate : public SecretsManagerResponsePrivate {
 
 public:
 
-    DeleteSecretResponsePrivate(DeleteSecretResponse * const q);
+    explicit DeleteSecretResponsePrivate(DeleteSecretResponse * const q);
 
     void parseDeleteSecretResponse(QXmlStreamReader &xml);
 

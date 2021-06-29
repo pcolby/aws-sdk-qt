@@ -31,7 +31,7 @@ class DescribeProtectedResourceResponsePrivate : public BackupResponsePrivate {
 
 public:
 
-    DescribeProtectedResourceResponsePrivate(DescribeProtectedResourceResponse * const q);
+    explicit DescribeProtectedResourceResponsePrivate(DescribeProtectedResourceResponse * const q);
 
     void parseDescribeProtectedResourceResponse(QXmlStreamReader &xml);
 

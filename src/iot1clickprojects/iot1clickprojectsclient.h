@@ -73,7 +73,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    IoT1ClickProjectsClient(
+    explicit IoT1ClickProjectsClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -99,7 +99,7 @@ public slots:
 protected:
     /// @cond internal
     IoT1ClickProjectsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    IoT1ClickProjectsClient(IoT1ClickProjectsClientPrivate * const d);
+    explicit IoT1ClickProjectsClient(IoT1ClickProjectsClientPrivate * const d);
     /// @endcond
 
 private:

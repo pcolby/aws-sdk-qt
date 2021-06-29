@@ -31,7 +31,7 @@ class UpdateRequestValidatorResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    UpdateRequestValidatorResponsePrivate(UpdateRequestValidatorResponse * const q);
+    explicit UpdateRequestValidatorResponsePrivate(UpdateRequestValidatorResponse * const q);
 
     void parseUpdateRequestValidatorResponse(QXmlStreamReader &xml);
 

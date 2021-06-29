@@ -31,7 +31,7 @@ class ModifyCacheSubnetGroupResponsePrivate : public ElastiCacheResponsePrivate 
 
 public:
 
-    ModifyCacheSubnetGroupResponsePrivate(ModifyCacheSubnetGroupResponse * const q);
+    explicit ModifyCacheSubnetGroupResponsePrivate(ModifyCacheSubnetGroupResponse * const q);
 
     void parseModifyCacheSubnetGroupResponse(QXmlStreamReader &xml);
 

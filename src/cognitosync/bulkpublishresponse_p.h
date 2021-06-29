@@ -31,7 +31,7 @@ class BulkPublishResponsePrivate : public CognitoSyncResponsePrivate {
 
 public:
 
-    BulkPublishResponsePrivate(BulkPublishResponse * const q);
+    explicit BulkPublishResponsePrivate(BulkPublishResponse * const q);
 
     void parseBulkPublishResponse(QXmlStreamReader &xml);
 

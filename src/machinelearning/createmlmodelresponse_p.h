@@ -31,7 +31,7 @@ class CreateMLModelResponsePrivate : public MachineLearningResponsePrivate {
 
 public:
 
-    CreateMLModelResponsePrivate(CreateMLModelResponse * const q);
+    explicit CreateMLModelResponsePrivate(CreateMLModelResponse * const q);
 
     void parseCreateMLModelResponse(QXmlStreamReader &xml);
 

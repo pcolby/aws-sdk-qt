@@ -31,7 +31,7 @@ class CreateAddressResponsePrivate : public SnowballResponsePrivate {
 
 public:
 
-    CreateAddressResponsePrivate(CreateAddressResponse * const q);
+    explicit CreateAddressResponsePrivate(CreateAddressResponse * const q);
 
     void parseCreateAddressResponse(QXmlStreamReader &xml);
 

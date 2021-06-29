@@ -31,7 +31,7 @@ class DeleteGatewayRouteResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 
-    DeleteGatewayRouteResponsePrivate(DeleteGatewayRouteResponse * const q);
+    explicit DeleteGatewayRouteResponsePrivate(DeleteGatewayRouteResponse * const q);
 
     void parseDeleteGatewayRouteResponse(QXmlStreamReader &xml);
 

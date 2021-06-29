@@ -110,7 +110,7 @@ public:
 protected:
     /// @cond internal
     AuditManagerRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    AuditManagerRequest(AuditManagerRequestPrivate * const d);
+    explicit AuditManagerRequest(AuditManagerRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -29,7 +29,7 @@ class ApplicationAutoScalingResponsePrivate {
 
 public:
 
-    ApplicationAutoScalingResponsePrivate(ApplicationAutoScalingResponse * const q);
+    explicit ApplicationAutoScalingResponsePrivate(ApplicationAutoScalingResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

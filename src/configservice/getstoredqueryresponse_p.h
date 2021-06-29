@@ -31,7 +31,7 @@ class GetStoredQueryResponsePrivate : public ConfigServiceResponsePrivate {
 
 public:
 
-    GetStoredQueryResponsePrivate(GetStoredQueryResponse * const q);
+    explicit GetStoredQueryResponsePrivate(GetStoredQueryResponse * const q);
 
     void parseGetStoredQueryResponse(QXmlStreamReader &xml);
 

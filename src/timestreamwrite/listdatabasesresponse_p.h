@@ -31,7 +31,7 @@ class ListDatabasesResponsePrivate : public TimestreamWriteResponsePrivate {
 
 public:
 
-    ListDatabasesResponsePrivate(ListDatabasesResponse * const q);
+    explicit ListDatabasesResponsePrivate(ListDatabasesResponse * const q);
 
     void parseListDatabasesResponse(QXmlStreamReader &xml);
 

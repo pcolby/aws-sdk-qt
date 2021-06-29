@@ -31,7 +31,7 @@ class UpdateDomainNameResponsePrivate : public ApiGatewayV2ResponsePrivate {
 
 public:
 
-    UpdateDomainNameResponsePrivate(UpdateDomainNameResponse * const q);
+    explicit UpdateDomainNameResponsePrivate(UpdateDomainNameResponse * const q);
 
     void parseUpdateDomainNameResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeSnapshotScheduleResponsePrivate : public StorageGatewayResponsePri
 
 public:
 
-    DescribeSnapshotScheduleResponsePrivate(DescribeSnapshotScheduleResponse * const q);
+    explicit DescribeSnapshotScheduleResponsePrivate(DescribeSnapshotScheduleResponse * const q);
 
     void parseDescribeSnapshotScheduleResponse(QXmlStreamReader &xml);
 

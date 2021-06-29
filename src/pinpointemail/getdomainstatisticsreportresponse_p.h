@@ -31,7 +31,7 @@ class GetDomainStatisticsReportResponsePrivate : public PinpointEmailResponsePri
 
 public:
 
-    GetDomainStatisticsReportResponsePrivate(GetDomainStatisticsReportResponse * const q);
+    explicit GetDomainStatisticsReportResponsePrivate(GetDomainStatisticsReportResponse * const q);
 
     void parseGetDomainStatisticsReportResponse(QXmlStreamReader &xml);
 

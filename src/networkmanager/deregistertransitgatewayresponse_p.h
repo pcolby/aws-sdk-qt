@@ -31,7 +31,7 @@ class DeregisterTransitGatewayResponsePrivate : public NetworkManagerResponsePri
 
 public:
 
-    DeregisterTransitGatewayResponsePrivate(DeregisterTransitGatewayResponse * const q);
+    explicit DeregisterTransitGatewayResponsePrivate(DeregisterTransitGatewayResponse * const q);
 
     void parseDeregisterTransitGatewayResponse(QXmlStreamReader &xml);
 

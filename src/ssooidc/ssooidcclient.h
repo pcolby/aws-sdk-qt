@@ -47,7 +47,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    SsooidcClient(
+    explicit SsooidcClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -60,7 +60,7 @@ public slots:
 protected:
     /// @cond internal
     SsooidcClientPrivate * const d_ptr; ///< Internal d-pointer.
-    SsooidcClient(SsooidcClientPrivate * const d);
+    explicit SsooidcClient(SsooidcClientPrivate * const d);
     /// @endcond
 
 private:

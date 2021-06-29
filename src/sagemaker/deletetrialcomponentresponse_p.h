@@ -31,7 +31,7 @@ class DeleteTrialComponentResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    DeleteTrialComponentResponsePrivate(DeleteTrialComponentResponse * const q);
+    explicit DeleteTrialComponentResponsePrivate(DeleteTrialComponentResponse * const q);
 
     void parseDeleteTrialComponentResponse(QXmlStreamReader &xml);
 

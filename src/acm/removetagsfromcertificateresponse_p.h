@@ -31,7 +31,7 @@ class RemoveTagsFromCertificateResponsePrivate : public AcmResponsePrivate {
 
 public:
 
-    RemoveTagsFromCertificateResponsePrivate(RemoveTagsFromCertificateResponse * const q);
+    explicit RemoveTagsFromCertificateResponsePrivate(RemoveTagsFromCertificateResponse * const q);
 
     void parseRemoveTagsFromCertificateResponse(QXmlStreamReader &xml);
 

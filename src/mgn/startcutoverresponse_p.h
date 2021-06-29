@@ -31,7 +31,7 @@ class StartCutoverResponsePrivate : public mgnResponsePrivate {
 
 public:
 
-    StartCutoverResponsePrivate(StartCutoverResponse * const q);
+    explicit StartCutoverResponsePrivate(StartCutoverResponse * const q);
 
     void parseStartCutoverResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateLedgerResponsePrivate : public QldbResponsePrivate {
 
 public:
 
-    CreateLedgerResponsePrivate(CreateLedgerResponse * const q);
+    explicit CreateLedgerResponsePrivate(CreateLedgerResponse * const q);
 
     void parseCreateLedgerResponse(QXmlStreamReader &xml);
 

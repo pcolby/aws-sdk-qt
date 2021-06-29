@@ -31,7 +31,7 @@ class GetExternalModelsResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 
-    GetExternalModelsResponsePrivate(GetExternalModelsResponse * const q);
+    explicit GetExternalModelsResponsePrivate(GetExternalModelsResponse * const q);
 
     void parseGetExternalModelsResponse(QXmlStreamReader &xml);
 

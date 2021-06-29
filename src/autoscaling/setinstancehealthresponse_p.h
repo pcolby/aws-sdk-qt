@@ -31,7 +31,7 @@ class SetInstanceHealthResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 
-    SetInstanceHealthResponsePrivate(SetInstanceHealthResponse * const q);
+    explicit SetInstanceHealthResponsePrivate(SetInstanceHealthResponse * const q);
 
     void parseSetInstanceHealthResponse(QXmlStreamReader &xml);
 

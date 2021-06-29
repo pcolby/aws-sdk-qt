@@ -31,7 +31,7 @@ class CreateFileSystemResponsePrivate : public EfsResponsePrivate {
 
 public:
 
-    CreateFileSystemResponsePrivate(CreateFileSystemResponse * const q);
+    explicit CreateFileSystemResponsePrivate(CreateFileSystemResponse * const q);
 
     void parseCreateFileSystemResponse(QXmlStreamReader &xml);
 

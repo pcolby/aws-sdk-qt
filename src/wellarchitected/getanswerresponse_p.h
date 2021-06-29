@@ -31,7 +31,7 @@ class GetAnswerResponsePrivate : public WellArchitectedResponsePrivate {
 
 public:
 
-    GetAnswerResponsePrivate(GetAnswerResponse * const q);
+    explicit GetAnswerResponsePrivate(GetAnswerResponse * const q);
 
     void parseGetAnswerResponse(QXmlStreamReader &xml);
 

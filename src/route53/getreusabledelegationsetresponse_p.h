@@ -31,7 +31,7 @@ class GetReusableDelegationSetResponsePrivate : public Route53ResponsePrivate {
 
 public:
 
-    GetReusableDelegationSetResponsePrivate(GetReusableDelegationSetResponse * const q);
+    explicit GetReusableDelegationSetResponsePrivate(GetReusableDelegationSetResponse * const q);
 
     void parseGetReusableDelegationSetResponse(QXmlStreamReader &xml);
 

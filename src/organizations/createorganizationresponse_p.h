@@ -31,7 +31,7 @@ class CreateOrganizationResponsePrivate : public OrganizationsResponsePrivate {
 
 public:
 
-    CreateOrganizationResponsePrivate(CreateOrganizationResponse * const q);
+    explicit CreateOrganizationResponsePrivate(CreateOrganizationResponse * const q);
 
     void parseCreateOrganizationResponse(QXmlStreamReader &xml);
 

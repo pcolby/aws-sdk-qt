@@ -31,7 +31,7 @@ class DisassociateTransitGatewayMulticastDomainResponsePrivate : public Ec2Respo
 
 public:
 
-    DisassociateTransitGatewayMulticastDomainResponsePrivate(DisassociateTransitGatewayMulticastDomainResponse * const q);
+    explicit DisassociateTransitGatewayMulticastDomainResponsePrivate(DisassociateTransitGatewayMulticastDomainResponse * const q);
 
     void parseDisassociateTransitGatewayMulticastDomainResponse(QXmlStreamReader &xml);
 

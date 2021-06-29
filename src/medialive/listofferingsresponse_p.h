@@ -31,7 +31,7 @@ class ListOfferingsResponsePrivate : public MediaLiveResponsePrivate {
 
 public:
 
-    ListOfferingsResponsePrivate(ListOfferingsResponse * const q);
+    explicit ListOfferingsResponsePrivate(ListOfferingsResponse * const q);
 
     void parseListOfferingsResponse(QXmlStreamReader &xml);
 

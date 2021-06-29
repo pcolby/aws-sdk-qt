@@ -31,7 +31,7 @@ class GetBlueprintsResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    GetBlueprintsResponsePrivate(GetBlueprintsResponse * const q);
+    explicit GetBlueprintsResponsePrivate(GetBlueprintsResponse * const q);
 
     void parseGetBlueprintsResponse(QXmlStreamReader &xml);
 

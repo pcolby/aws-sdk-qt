@@ -136,7 +136,7 @@ public:
 protected:
     /// @cond internal
     CodeCommitRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    CodeCommitRequest(CodeCommitRequestPrivate * const d);
+    explicit CodeCommitRequest(CodeCommitRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

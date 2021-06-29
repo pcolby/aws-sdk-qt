@@ -31,7 +31,7 @@ class RefreshTrustedAdvisorCheckResponsePrivate : public SupportResponsePrivate 
 
 public:
 
-    RefreshTrustedAdvisorCheckResponsePrivate(RefreshTrustedAdvisorCheckResponse * const q);
+    explicit RefreshTrustedAdvisorCheckResponsePrivate(RefreshTrustedAdvisorCheckResponse * const q);
 
     void parseRefreshTrustedAdvisorCheckResponse(QXmlStreamReader &xml);
 

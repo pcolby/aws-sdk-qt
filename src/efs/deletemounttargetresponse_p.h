@@ -31,7 +31,7 @@ class DeleteMountTargetResponsePrivate : public EfsResponsePrivate {
 
 public:
 
-    DeleteMountTargetResponsePrivate(DeleteMountTargetResponse * const q);
+    explicit DeleteMountTargetResponsePrivate(DeleteMountTargetResponse * const q);
 
     void parseDeleteMountTargetResponse(QXmlStreamReader &xml);
 

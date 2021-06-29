@@ -31,7 +31,7 @@ class DescribeTagsResponsePrivate : public ElasticLoadBalancingResponsePrivate {
 
 public:
 
-    DescribeTagsResponsePrivate(DescribeTagsResponse * const q);
+    explicit DescribeTagsResponsePrivate(DescribeTagsResponse * const q);
 
     void parseDescribeTagsResponse(QXmlStreamReader &xml);
 

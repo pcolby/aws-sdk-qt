@@ -31,7 +31,7 @@ class AssociateClientVpnTargetNetworkResponsePrivate : public Ec2ResponsePrivate
 
 public:
 
-    AssociateClientVpnTargetNetworkResponsePrivate(AssociateClientVpnTargetNetworkResponse * const q);
+    explicit AssociateClientVpnTargetNetworkResponsePrivate(AssociateClientVpnTargetNetworkResponse * const q);
 
     void parseAssociateClientVpnTargetNetworkResponse(QXmlStreamReader &xml);
 

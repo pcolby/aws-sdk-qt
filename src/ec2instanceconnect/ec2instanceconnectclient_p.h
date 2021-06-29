@@ -30,7 +30,7 @@ class EC2InstanceConnectClient;
 class EC2InstanceConnectClientPrivate {
 
 public:
-    EC2InstanceConnectClientPrivate(EC2InstanceConnectClient * const q);
+    explicit EC2InstanceConnectClientPrivate(EC2InstanceConnectClient * const q);
 
 protected:
     EC2InstanceConnectClient * const q_ptr; ///< Internal q-pointer.

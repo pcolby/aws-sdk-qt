@@ -31,7 +31,7 @@ class DeleteElasticsearchDomainResponsePrivate : public ElasticsearchServiceResp
 
 public:
 
-    DeleteElasticsearchDomainResponsePrivate(DeleteElasticsearchDomainResponse * const q);
+    explicit DeleteElasticsearchDomainResponsePrivate(DeleteElasticsearchDomainResponse * const q);
 
     void parseDeleteElasticsearchDomainResponse(QXmlStreamReader &xml);
 

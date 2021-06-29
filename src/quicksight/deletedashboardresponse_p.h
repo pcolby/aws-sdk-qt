@@ -31,7 +31,7 @@ class DeleteDashboardResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    DeleteDashboardResponsePrivate(DeleteDashboardResponse * const q);
+    explicit DeleteDashboardResponsePrivate(DeleteDashboardResponse * const q);
 
     void parseDeleteDashboardResponse(QXmlStreamReader &xml);
 

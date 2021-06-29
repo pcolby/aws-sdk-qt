@@ -31,7 +31,7 @@ class BatchAssociateScramSecretResponsePrivate : public KafkaResponsePrivate {
 
 public:
 
-    BatchAssociateScramSecretResponsePrivate(BatchAssociateScramSecretResponse * const q);
+    explicit BatchAssociateScramSecretResponsePrivate(BatchAssociateScramSecretResponse * const q);
 
     void parseBatchAssociateScramSecretResponse(QXmlStreamReader &xml);
 

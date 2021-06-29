@@ -31,7 +31,7 @@ class ListLambdaFunctionsResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    ListLambdaFunctionsResponsePrivate(ListLambdaFunctionsResponse * const q);
+    explicit ListLambdaFunctionsResponsePrivate(ListLambdaFunctionsResponse * const q);
 
     void parseListLambdaFunctionsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class BatchEvaluateGeofencesResponsePrivate : public LocationServiceResponsePriv
 
 public:
 
-    BatchEvaluateGeofencesResponsePrivate(BatchEvaluateGeofencesResponse * const q);
+    explicit BatchEvaluateGeofencesResponsePrivate(BatchEvaluateGeofencesResponse * const q);
 
     void parseBatchEvaluateGeofencesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetThingRuntimeConfigurationResponsePrivate : public GreengrassResponsePri
 
 public:
 
-    GetThingRuntimeConfigurationResponsePrivate(GetThingRuntimeConfigurationResponse * const q);
+    explicit GetThingRuntimeConfigurationResponsePrivate(GetThingRuntimeConfigurationResponse * const q);
 
     void parseGetThingRuntimeConfigurationResponse(QXmlStreamReader &xml);
 

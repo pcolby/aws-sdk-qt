@@ -31,7 +31,7 @@ class DescribeGatewayResponsePrivate : public IoTSiteWiseResponsePrivate {
 
 public:
 
-    DescribeGatewayResponsePrivate(DescribeGatewayResponse * const q);
+    explicit DescribeGatewayResponsePrivate(DescribeGatewayResponse * const q);
 
     void parseDescribeGatewayResponse(QXmlStreamReader &xml);
 

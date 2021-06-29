@@ -31,7 +31,7 @@ class DeleteMembersResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 
-    DeleteMembersResponsePrivate(DeleteMembersResponse * const q);
+    explicit DeleteMembersResponsePrivate(DeleteMembersResponse * const q);
 
     void parseDeleteMembersResponse(QXmlStreamReader &xml);
 

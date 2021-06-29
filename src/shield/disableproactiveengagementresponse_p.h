@@ -31,7 +31,7 @@ class DisableProactiveEngagementResponsePrivate : public ShieldResponsePrivate {
 
 public:
 
-    DisableProactiveEngagementResponsePrivate(DisableProactiveEngagementResponse * const q);
+    explicit DisableProactiveEngagementResponsePrivate(DisableProactiveEngagementResponse * const q);
 
     void parseDisableProactiveEngagementResponse(QXmlStreamReader &xml);
 

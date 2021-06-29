@@ -31,7 +31,7 @@ class SplitShardResponsePrivate : public KinesisResponsePrivate {
 
 public:
 
-    SplitShardResponsePrivate(SplitShardResponse * const q);
+    explicit SplitShardResponsePrivate(SplitShardResponse * const q);
 
     void parseSplitShardResponse(QXmlStreamReader &xml);
 

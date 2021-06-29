@@ -31,7 +31,7 @@ class VerifyResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    VerifyResponsePrivate(VerifyResponse * const q);
+    explicit VerifyResponsePrivate(VerifyResponse * const q);
 
     void parseVerifyResponse(QXmlStreamReader &xml);
 

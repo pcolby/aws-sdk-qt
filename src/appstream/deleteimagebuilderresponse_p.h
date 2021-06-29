@@ -31,7 +31,7 @@ class DeleteImageBuilderResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 
-    DeleteImageBuilderResponsePrivate(DeleteImageBuilderResponse * const q);
+    explicit DeleteImageBuilderResponsePrivate(DeleteImageBuilderResponse * const q);
 
     void parseDeleteImageBuilderResponse(QXmlStreamReader &xml);
 

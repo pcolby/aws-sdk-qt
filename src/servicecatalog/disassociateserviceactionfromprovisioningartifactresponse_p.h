@@ -31,7 +31,7 @@ class DisassociateServiceActionFromProvisioningArtifactResponsePrivate : public 
 
 public:
 
-    DisassociateServiceActionFromProvisioningArtifactResponsePrivate(DisassociateServiceActionFromProvisioningArtifactResponse * const q);
+    explicit DisassociateServiceActionFromProvisioningArtifactResponsePrivate(DisassociateServiceActionFromProvisioningArtifactResponse * const q);
 
     void parseDisassociateServiceActionFromProvisioningArtifactResponse(QXmlStreamReader &xml);
 

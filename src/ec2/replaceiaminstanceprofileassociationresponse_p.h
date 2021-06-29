@@ -31,7 +31,7 @@ class ReplaceIamInstanceProfileAssociationResponsePrivate : public Ec2ResponsePr
 
 public:
 
-    ReplaceIamInstanceProfileAssociationResponsePrivate(ReplaceIamInstanceProfileAssociationResponse * const q);
+    explicit ReplaceIamInstanceProfileAssociationResponsePrivate(ReplaceIamInstanceProfileAssociationResponse * const q);
 
     void parseReplaceIamInstanceProfileAssociationResponse(QXmlStreamReader &xml);
 

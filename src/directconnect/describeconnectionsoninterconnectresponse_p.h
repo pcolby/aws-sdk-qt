@@ -31,7 +31,7 @@ class DescribeConnectionsOnInterconnectResponsePrivate : public DirectConnectRes
 
 public:
 
-    DescribeConnectionsOnInterconnectResponsePrivate(DescribeConnectionsOnInterconnectResponse * const q);
+    explicit DescribeConnectionsOnInterconnectResponsePrivate(DescribeConnectionsOnInterconnectResponse * const q);
 
     void parseDescribeConnectionsOnInterconnectResponse(QXmlStreamReader &xml);
 

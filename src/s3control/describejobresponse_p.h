@@ -31,7 +31,7 @@ class DescribeJobResponsePrivate : public S3ControlResponsePrivate {
 
 public:
 
-    DescribeJobResponsePrivate(DescribeJobResponse * const q);
+    explicit DescribeJobResponsePrivate(DescribeJobResponse * const q);
 
     void parseDescribeJobResponse(QXmlStreamReader &xml);
 

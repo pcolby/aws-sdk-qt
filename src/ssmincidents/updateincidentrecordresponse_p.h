@@ -31,7 +31,7 @@ class UpdateIncidentRecordResponsePrivate : public SSMIncidentsResponsePrivate {
 
 public:
 
-    UpdateIncidentRecordResponsePrivate(UpdateIncidentRecordResponse * const q);
+    explicit UpdateIncidentRecordResponsePrivate(UpdateIncidentRecordResponse * const q);
 
     void parseUpdateIncidentRecordResponse(QXmlStreamReader &xml);
 

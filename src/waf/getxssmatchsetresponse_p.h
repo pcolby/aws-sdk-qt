@@ -31,7 +31,7 @@ class GetXssMatchSetResponsePrivate : public WafResponsePrivate {
 
 public:
 
-    GetXssMatchSetResponsePrivate(GetXssMatchSetResponse * const q);
+    explicit GetXssMatchSetResponsePrivate(GetXssMatchSetResponse * const q);
 
     void parseGetXssMatchSetResponse(QXmlStreamReader &xml);
 

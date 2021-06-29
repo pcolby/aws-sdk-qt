@@ -31,7 +31,7 @@ class DisableMacieResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 
-    DisableMacieResponsePrivate(DisableMacieResponse * const q);
+    explicit DisableMacieResponsePrivate(DisableMacieResponse * const q);
 
     void parseDisableMacieResponse(QXmlStreamReader &xml);
 

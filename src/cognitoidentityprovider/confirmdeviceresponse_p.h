@@ -31,7 +31,7 @@ class ConfirmDeviceResponsePrivate : public CognitoIdentityProviderResponsePriva
 
 public:
 
-    ConfirmDeviceResponsePrivate(ConfirmDeviceResponse * const q);
+    explicit ConfirmDeviceResponsePrivate(ConfirmDeviceResponse * const q);
 
     void parseConfirmDeviceResponse(QXmlStreamReader &xml);
 

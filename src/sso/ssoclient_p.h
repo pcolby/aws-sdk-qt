@@ -30,7 +30,7 @@ class SsoClient;
 class SsoClientPrivate {
 
 public:
-    SsoClientPrivate(SsoClient * const q);
+    explicit SsoClientPrivate(SsoClient * const q);
 
 protected:
     SsoClient * const q_ptr; ///< Internal q-pointer.

@@ -31,7 +31,7 @@ class DetachInstancesFromLoadBalancerResponsePrivate : public LightsailResponseP
 
 public:
 
-    DetachInstancesFromLoadBalancerResponsePrivate(DetachInstancesFromLoadBalancerResponse * const q);
+    explicit DetachInstancesFromLoadBalancerResponsePrivate(DetachInstancesFromLoadBalancerResponse * const q);
 
     void parseDetachInstancesFromLoadBalancerResponse(QXmlStreamReader &xml);
 

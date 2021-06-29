@@ -31,7 +31,7 @@ class GetContainerRecipePolicyResponsePrivate : public imagebuilderResponsePriva
 
 public:
 
-    GetContainerRecipePolicyResponsePrivate(GetContainerRecipePolicyResponse * const q);
+    explicit GetContainerRecipePolicyResponsePrivate(GetContainerRecipePolicyResponse * const q);
 
     void parseGetContainerRecipePolicyResponse(QXmlStreamReader &xml);
 

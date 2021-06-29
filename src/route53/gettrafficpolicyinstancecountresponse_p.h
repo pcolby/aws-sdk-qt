@@ -31,7 +31,7 @@ class GetTrafficPolicyInstanceCountResponsePrivate : public Route53ResponsePriva
 
 public:
 
-    GetTrafficPolicyInstanceCountResponsePrivate(GetTrafficPolicyInstanceCountResponse * const q);
+    explicit GetTrafficPolicyInstanceCountResponsePrivate(GetTrafficPolicyInstanceCountResponse * const q);
 
     void parseGetTrafficPolicyInstanceCountResponse(QXmlStreamReader &xml);
 

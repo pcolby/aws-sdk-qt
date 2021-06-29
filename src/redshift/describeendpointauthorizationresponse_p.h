@@ -31,7 +31,7 @@ class DescribeEndpointAuthorizationResponsePrivate : public RedshiftResponsePriv
 
 public:
 
-    DescribeEndpointAuthorizationResponsePrivate(DescribeEndpointAuthorizationResponse * const q);
+    explicit DescribeEndpointAuthorizationResponsePrivate(DescribeEndpointAuthorizationResponse * const q);
 
     void parseDescribeEndpointAuthorizationResponse(QXmlStreamReader &xml);
 

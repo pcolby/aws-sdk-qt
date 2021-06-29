@@ -31,7 +31,7 @@ class ListAccountIntegrationsResponsePrivate : public CustomerProfilesResponsePr
 
 public:
 
-    ListAccountIntegrationsResponsePrivate(ListAccountIntegrationsResponse * const q);
+    explicit ListAccountIntegrationsResponsePrivate(ListAccountIntegrationsResponse * const q);
 
     void parseListAccountIntegrationsResponse(QXmlStreamReader &xml);
 

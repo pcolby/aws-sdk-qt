@@ -31,7 +31,7 @@ class DeleteRuleGroupResponsePrivate : public NetworkFirewallResponsePrivate {
 
 public:
 
-    DeleteRuleGroupResponsePrivate(DeleteRuleGroupResponse * const q);
+    explicit DeleteRuleGroupResponsePrivate(DeleteRuleGroupResponse * const q);
 
     void parseDeleteRuleGroupResponse(QXmlStreamReader &xml);
 

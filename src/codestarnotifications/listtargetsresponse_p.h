@@ -31,7 +31,7 @@ class ListTargetsResponsePrivate : public CodeStarNotificationsResponsePrivate {
 
 public:
 
-    ListTargetsResponsePrivate(ListTargetsResponse * const q);
+    explicit ListTargetsResponsePrivate(ListTargetsResponse * const q);
 
     void parseListTargetsResponse(QXmlStreamReader &xml);
 

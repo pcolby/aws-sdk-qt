@@ -31,7 +31,7 @@ class CompareFacesResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 
-    CompareFacesResponsePrivate(CompareFacesResponse * const q);
+    explicit CompareFacesResponsePrivate(CompareFacesResponse * const q);
 
     void parseCompareFacesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class MarkAsArchivedResponsePrivate : public mgnResponsePrivate {
 
 public:
 
-    MarkAsArchivedResponsePrivate(MarkAsArchivedResponse * const q);
+    explicit MarkAsArchivedResponsePrivate(MarkAsArchivedResponse * const q);
 
     void parseMarkAsArchivedResponse(QXmlStreamReader &xml);
 

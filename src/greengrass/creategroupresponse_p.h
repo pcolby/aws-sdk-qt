@@ -31,7 +31,7 @@ class CreateGroupResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 
-    CreateGroupResponsePrivate(CreateGroupResponse * const q);
+    explicit CreateGroupResponsePrivate(CreateGroupResponse * const q);
 
     void parseCreateGroupResponse(QXmlStreamReader &xml);
 

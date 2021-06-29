@@ -31,7 +31,7 @@ class DeleteSnapshotScheduleResponsePrivate : public StorageGatewayResponsePriva
 
 public:
 
-    DeleteSnapshotScheduleResponsePrivate(DeleteSnapshotScheduleResponse * const q);
+    explicit DeleteSnapshotScheduleResponsePrivate(DeleteSnapshotScheduleResponse * const q);
 
     void parseDeleteSnapshotScheduleResponse(QXmlStreamReader &xml);
 

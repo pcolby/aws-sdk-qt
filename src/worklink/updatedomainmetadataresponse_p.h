@@ -31,7 +31,7 @@ class UpdateDomainMetadataResponsePrivate : public WorkLinkResponsePrivate {
 
 public:
 
-    UpdateDomainMetadataResponsePrivate(UpdateDomainMetadataResponse * const q);
+    explicit UpdateDomainMetadataResponsePrivate(UpdateDomainMetadataResponse * const q);
 
     void parseUpdateDomainMetadataResponse(QXmlStreamReader &xml);
 

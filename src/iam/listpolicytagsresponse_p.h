@@ -31,7 +31,7 @@ class ListPolicyTagsResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    ListPolicyTagsResponsePrivate(ListPolicyTagsResponse * const q);
+    explicit ListPolicyTagsResponsePrivate(ListPolicyTagsResponse * const q);
 
     void parseListPolicyTagsResponse(QXmlStreamReader &xml);
 

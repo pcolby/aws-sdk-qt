@@ -31,7 +31,7 @@ class ListEulaAcceptancesResponsePrivate : public NimbleStudioResponsePrivate {
 
 public:
 
-    ListEulaAcceptancesResponsePrivate(ListEulaAcceptancesResponse * const q);
+    explicit ListEulaAcceptancesResponsePrivate(ListEulaAcceptancesResponse * const q);
 
     void parseListEulaAcceptancesResponse(QXmlStreamReader &xml);
 

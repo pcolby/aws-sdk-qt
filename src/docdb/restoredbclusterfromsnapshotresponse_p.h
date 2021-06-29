@@ -31,7 +31,7 @@ class RestoreDBClusterFromSnapshotResponsePrivate : public DocDBResponsePrivate 
 
 public:
 
-    RestoreDBClusterFromSnapshotResponsePrivate(RestoreDBClusterFromSnapshotResponse * const q);
+    explicit RestoreDBClusterFromSnapshotResponsePrivate(RestoreDBClusterFromSnapshotResponse * const q);
 
     void parseRestoreDBClusterFromSnapshotResponse(QXmlStreamReader &xml);
 

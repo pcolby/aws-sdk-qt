@@ -29,7 +29,7 @@ class ComputeOptimizerResponsePrivate {
 
 public:
 
-    ComputeOptimizerResponsePrivate(ComputeOptimizerResponse * const q);
+    explicit ComputeOptimizerResponsePrivate(ComputeOptimizerResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

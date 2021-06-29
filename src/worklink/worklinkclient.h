@@ -107,7 +107,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    WorkLinkClient(
+    explicit WorkLinkClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -150,7 +150,7 @@ public slots:
 protected:
     /// @cond internal
     WorkLinkClientPrivate * const d_ptr; ///< Internal d-pointer.
-    WorkLinkClient(WorkLinkClientPrivate * const d);
+    explicit WorkLinkClient(WorkLinkClientPrivate * const d);
     /// @endcond
 
 private:

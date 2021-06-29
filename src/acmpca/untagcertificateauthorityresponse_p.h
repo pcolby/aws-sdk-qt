@@ -31,7 +31,7 @@ class UntagCertificateAuthorityResponsePrivate : public AcmpcaResponsePrivate {
 
 public:
 
-    UntagCertificateAuthorityResponsePrivate(UntagCertificateAuthorityResponse * const q);
+    explicit UntagCertificateAuthorityResponsePrivate(UntagCertificateAuthorityResponse * const q);
 
     void parseUntagCertificateAuthorityResponse(QXmlStreamReader &xml);
 

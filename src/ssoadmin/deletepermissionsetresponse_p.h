@@ -31,7 +31,7 @@ class DeletePermissionSetResponsePrivate : public SSOAdminResponsePrivate {
 
 public:
 
-    DeletePermissionSetResponsePrivate(DeletePermissionSetResponse * const q);
+    explicit DeletePermissionSetResponsePrivate(DeletePermissionSetResponse * const q);
 
     void parseDeletePermissionSetResponse(QXmlStreamReader &xml);
 

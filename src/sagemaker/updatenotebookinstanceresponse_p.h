@@ -31,7 +31,7 @@ class UpdateNotebookInstanceResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    UpdateNotebookInstanceResponsePrivate(UpdateNotebookInstanceResponse * const q);
+    explicit UpdateNotebookInstanceResponsePrivate(UpdateNotebookInstanceResponse * const q);
 
     void parseUpdateNotebookInstanceResponse(QXmlStreamReader &xml);
 

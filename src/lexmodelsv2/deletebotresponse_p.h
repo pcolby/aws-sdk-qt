@@ -31,7 +31,7 @@ class DeleteBotResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 
-    DeleteBotResponsePrivate(DeleteBotResponse * const q);
+    explicit DeleteBotResponsePrivate(DeleteBotResponse * const q);
 
     void parseDeleteBotResponse(QXmlStreamReader &xml);
 

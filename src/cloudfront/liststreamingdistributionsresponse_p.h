@@ -31,7 +31,7 @@ class ListStreamingDistributionsResponsePrivate : public CloudFrontResponsePriva
 
 public:
 
-    ListStreamingDistributionsResponsePrivate(ListStreamingDistributionsResponse * const q);
+    explicit ListStreamingDistributionsResponsePrivate(ListStreamingDistributionsResponse * const q);
 
     void parseListStreamingDistributionsResponse(QXmlStreamReader &xml);
 

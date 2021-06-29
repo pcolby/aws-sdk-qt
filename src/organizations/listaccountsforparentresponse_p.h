@@ -31,7 +31,7 @@ class ListAccountsForParentResponsePrivate : public OrganizationsResponsePrivate
 
 public:
 
-    ListAccountsForParentResponsePrivate(ListAccountsForParentResponse * const q);
+    explicit ListAccountsForParentResponsePrivate(ListAccountsForParentResponse * const q);
 
     void parseListAccountsForParentResponse(QXmlStreamReader &xml);
 

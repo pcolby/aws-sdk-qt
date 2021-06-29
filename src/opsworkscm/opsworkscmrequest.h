@@ -78,7 +78,7 @@ public:
 protected:
     /// @cond internal
     OpsWorksCMRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    OpsWorksCMRequest(OpsWorksCMRequestPrivate * const d);
+    explicit OpsWorksCMRequest(OpsWorksCMRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -31,7 +31,7 @@ class GetOperationsResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    GetOperationsResponsePrivate(GetOperationsResponse * const q);
+    explicit GetOperationsResponsePrivate(GetOperationsResponse * const q);
 
     void parseGetOperationsResponse(QXmlStreamReader &xml);
 

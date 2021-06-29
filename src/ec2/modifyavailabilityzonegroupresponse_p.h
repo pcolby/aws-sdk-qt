@@ -31,7 +31,7 @@ class ModifyAvailabilityZoneGroupResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ModifyAvailabilityZoneGroupResponsePrivate(ModifyAvailabilityZoneGroupResponse * const q);
+    explicit ModifyAvailabilityZoneGroupResponsePrivate(ModifyAvailabilityZoneGroupResponse * const q);
 
     void parseModifyAvailabilityZoneGroupResponse(QXmlStreamReader &xml);
 

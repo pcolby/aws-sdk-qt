@@ -31,7 +31,7 @@ class GetVoiceConnectorStreamingConfigurationResponsePrivate : public ChimeRespo
 
 public:
 
-    GetVoiceConnectorStreamingConfigurationResponsePrivate(GetVoiceConnectorStreamingConfigurationResponse * const q);
+    explicit GetVoiceConnectorStreamingConfigurationResponsePrivate(GetVoiceConnectorStreamingConfigurationResponse * const q);
 
     void parseGetVoiceConnectorStreamingConfigurationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GrantPermissionsResponsePrivate : public LakeFormationResponsePrivate {
 
 public:
 
-    GrantPermissionsResponsePrivate(GrantPermissionsResponse * const q);
+    explicit GrantPermissionsResponsePrivate(GrantPermissionsResponse * const q);
 
     void parseGrantPermissionsResponse(QXmlStreamReader &xml);
 

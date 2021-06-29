@@ -31,7 +31,7 @@ class ConfigureHealthCheckResponsePrivate : public ElasticLoadBalancingResponseP
 
 public:
 
-    ConfigureHealthCheckResponsePrivate(ConfigureHealthCheckResponse * const q);
+    explicit ConfigureHealthCheckResponsePrivate(ConfigureHealthCheckResponse * const q);
 
     void parseConfigureHealthCheckResponse(QXmlStreamReader &xml);
 

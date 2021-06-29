@@ -31,7 +31,7 @@ class DeleteServiceTemplateVersionResponsePrivate : public ProtonResponsePrivate
 
 public:
 
-    DeleteServiceTemplateVersionResponsePrivate(DeleteServiceTemplateVersionResponse * const q);
+    explicit DeleteServiceTemplateVersionResponsePrivate(DeleteServiceTemplateVersionResponse * const q);
 
     void parseDeleteServiceTemplateVersionResponse(QXmlStreamReader &xml);
 

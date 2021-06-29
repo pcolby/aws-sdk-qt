@@ -31,7 +31,7 @@ class DescribeEventDetailsForOrganizationResponsePrivate : public HealthResponse
 
 public:
 
-    DescribeEventDetailsForOrganizationResponsePrivate(DescribeEventDetailsForOrganizationResponse * const q);
+    explicit DescribeEventDetailsForOrganizationResponsePrivate(DescribeEventDetailsForOrganizationResponse * const q);
 
     void parseDescribeEventDetailsForOrganizationResponse(QXmlStreamReader &xml);
 

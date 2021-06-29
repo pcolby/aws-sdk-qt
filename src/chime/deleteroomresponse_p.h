@@ -31,7 +31,7 @@ class DeleteRoomResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    DeleteRoomResponsePrivate(DeleteRoomResponse * const q);
+    explicit DeleteRoomResponsePrivate(DeleteRoomResponse * const q);
 
     void parseDeleteRoomResponse(QXmlStreamReader &xml);
 

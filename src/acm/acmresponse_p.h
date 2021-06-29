@@ -29,7 +29,7 @@ class AcmResponsePrivate {
 
 public:
 
-    AcmResponsePrivate(AcmResponse * const q);
+    explicit AcmResponsePrivate(AcmResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

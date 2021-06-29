@@ -31,7 +31,7 @@ class GetOpsMetadataResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    GetOpsMetadataResponsePrivate(GetOpsMetadataResponse * const q);
+    explicit GetOpsMetadataResponsePrivate(GetOpsMetadataResponse * const q);
 
     void parseGetOpsMetadataResponse(QXmlStreamReader &xml);
 

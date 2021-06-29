@@ -31,7 +31,7 @@ class UpdatePullRequestApprovalStateResponsePrivate : public CodeCommitResponseP
 
 public:
 
-    UpdatePullRequestApprovalStateResponsePrivate(UpdatePullRequestApprovalStateResponse * const q);
+    explicit UpdatePullRequestApprovalStateResponsePrivate(UpdatePullRequestApprovalStateResponse * const q);
 
     void parseUpdatePullRequestApprovalStateResponse(QXmlStreamReader &xml);
 

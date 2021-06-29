@@ -31,7 +31,7 @@ class ListGroupsForUserResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    ListGroupsForUserResponsePrivate(ListGroupsForUserResponse * const q);
+    explicit ListGroupsForUserResponsePrivate(ListGroupsForUserResponse * const q);
 
     void parseListGroupsForUserResponse(QXmlStreamReader &xml);
 

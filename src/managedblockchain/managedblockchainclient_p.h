@@ -30,7 +30,7 @@ class ManagedBlockchainClient;
 class ManagedBlockchainClientPrivate {
 
 public:
-    ManagedBlockchainClientPrivate(ManagedBlockchainClient * const q);
+    explicit ManagedBlockchainClientPrivate(ManagedBlockchainClient * const q);
 
 protected:
     ManagedBlockchainClient * const q_ptr; ///< Internal q-pointer.

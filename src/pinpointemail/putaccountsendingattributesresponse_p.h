@@ -31,7 +31,7 @@ class PutAccountSendingAttributesResponsePrivate : public PinpointEmailResponseP
 
 public:
 
-    PutAccountSendingAttributesResponsePrivate(PutAccountSendingAttributesResponse * const q);
+    explicit PutAccountSendingAttributesResponsePrivate(PutAccountSendingAttributesResponse * const q);
 
     void parsePutAccountSendingAttributesResponse(QXmlStreamReader &xml);
 

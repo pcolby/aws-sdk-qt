@@ -31,7 +31,7 @@ class ListAssociatedStacksResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 
-    ListAssociatedStacksResponsePrivate(ListAssociatedStacksResponse * const q);
+    explicit ListAssociatedStacksResponsePrivate(ListAssociatedStacksResponse * const q);
 
     void parseListAssociatedStacksResponse(QXmlStreamReader &xml);
 

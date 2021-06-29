@@ -31,7 +31,7 @@ class CreateDBSnapshotResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    CreateDBSnapshotResponsePrivate(CreateDBSnapshotResponse * const q);
+    explicit CreateDBSnapshotResponsePrivate(CreateDBSnapshotResponse * const q);
 
     void parseCreateDBSnapshotResponse(QXmlStreamReader &xml);
 

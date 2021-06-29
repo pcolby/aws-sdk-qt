@@ -31,7 +31,7 @@ class DisableOrganizationAdminAccountResponsePrivate : public Macie2ResponsePriv
 
 public:
 
-    DisableOrganizationAdminAccountResponsePrivate(DisableOrganizationAdminAccountResponse * const q);
+    explicit DisableOrganizationAdminAccountResponsePrivate(DisableOrganizationAdminAccountResponse * const q);
 
     void parseDisableOrganizationAdminAccountResponse(QXmlStreamReader &xml);
 

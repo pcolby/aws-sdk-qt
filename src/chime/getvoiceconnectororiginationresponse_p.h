@@ -31,7 +31,7 @@ class GetVoiceConnectorOriginationResponsePrivate : public ChimeResponsePrivate 
 
 public:
 
-    GetVoiceConnectorOriginationResponsePrivate(GetVoiceConnectorOriginationResponse * const q);
+    explicit GetVoiceConnectorOriginationResponsePrivate(GetVoiceConnectorOriginationResponse * const q);
 
     void parseGetVoiceConnectorOriginationResponse(QXmlStreamReader &xml);
 

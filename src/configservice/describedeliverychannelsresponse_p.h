@@ -31,7 +31,7 @@ class DescribeDeliveryChannelsResponsePrivate : public ConfigServiceResponsePriv
 
 public:
 
-    DescribeDeliveryChannelsResponsePrivate(DescribeDeliveryChannelsResponse * const q);
+    explicit DescribeDeliveryChannelsResponsePrivate(DescribeDeliveryChannelsResponse * const q);
 
     void parseDescribeDeliveryChannelsResponse(QXmlStreamReader &xml);
 

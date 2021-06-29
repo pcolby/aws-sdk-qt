@@ -31,7 +31,7 @@ class StopDBInstanceResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    StopDBInstanceResponsePrivate(StopDBInstanceResponse * const q);
+    explicit StopDBInstanceResponsePrivate(StopDBInstanceResponse * const q);
 
     void parseStopDBInstanceResponse(QXmlStreamReader &xml);
 

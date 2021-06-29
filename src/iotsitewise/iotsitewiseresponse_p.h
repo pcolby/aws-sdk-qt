@@ -29,7 +29,7 @@ class IoTSiteWiseResponsePrivate {
 
 public:
 
-    IoTSiteWiseResponsePrivate(IoTSiteWiseResponse * const q);
+    explicit IoTSiteWiseResponsePrivate(IoTSiteWiseResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

@@ -31,7 +31,7 @@ class PutIntentResponsePrivate : public LexModelBuildingServiceResponsePrivate {
 
 public:
 
-    PutIntentResponsePrivate(PutIntentResponse * const q);
+    explicit PutIntentResponsePrivate(PutIntentResponse * const q);
 
     void parsePutIntentResponse(QXmlStreamReader &xml);
 

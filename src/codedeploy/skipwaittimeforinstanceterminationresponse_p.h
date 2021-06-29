@@ -31,7 +31,7 @@ class SkipWaitTimeForInstanceTerminationResponsePrivate : public CodeDeployRespo
 
 public:
 
-    SkipWaitTimeForInstanceTerminationResponsePrivate(SkipWaitTimeForInstanceTerminationResponse * const q);
+    explicit SkipWaitTimeForInstanceTerminationResponsePrivate(SkipWaitTimeForInstanceTerminationResponse * const q);
 
     void parseSkipWaitTimeForInstanceTerminationResponse(QXmlStreamReader &xml);
 

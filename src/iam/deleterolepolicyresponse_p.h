@@ -31,7 +31,7 @@ class DeleteRolePolicyResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    DeleteRolePolicyResponsePrivate(DeleteRolePolicyResponse * const q);
+    explicit DeleteRolePolicyResponsePrivate(DeleteRolePolicyResponse * const q);
 
     void parseDeleteRolePolicyResponse(QXmlStreamReader &xml);
 

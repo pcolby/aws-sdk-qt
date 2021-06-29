@@ -31,7 +31,7 @@ class ListVodSourcesResponsePrivate : public MediaTailorResponsePrivate {
 
 public:
 
-    ListVodSourcesResponsePrivate(ListVodSourcesResponse * const q);
+    explicit ListVodSourcesResponsePrivate(ListVodSourcesResponse * const q);
 
     void parseListVodSourcesResponse(QXmlStreamReader &xml);
 

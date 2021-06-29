@@ -31,7 +31,7 @@ class ListDocumentVersionsResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    ListDocumentVersionsResponsePrivate(ListDocumentVersionsResponse * const q);
+    explicit ListDocumentVersionsResponsePrivate(ListDocumentVersionsResponse * const q);
 
     void parseListDocumentVersionsResponse(QXmlStreamReader &xml);
 

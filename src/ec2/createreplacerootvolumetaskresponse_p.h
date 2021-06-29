@@ -31,7 +31,7 @@ class CreateReplaceRootVolumeTaskResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CreateReplaceRootVolumeTaskResponsePrivate(CreateReplaceRootVolumeTaskResponse * const q);
+    explicit CreateReplaceRootVolumeTaskResponsePrivate(CreateReplaceRootVolumeTaskResponse * const q);
 
     void parseCreateReplaceRootVolumeTaskResponse(QXmlStreamReader &xml);
 

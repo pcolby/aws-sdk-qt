@@ -31,7 +31,7 @@ class PhoneNumberValidateResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    PhoneNumberValidateResponsePrivate(PhoneNumberValidateResponse * const q);
+    explicit PhoneNumberValidateResponsePrivate(PhoneNumberValidateResponse * const q);
 
     void parsePhoneNumberValidateResponse(QXmlStreamReader &xml);
 

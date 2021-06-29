@@ -31,7 +31,7 @@ class ExportSnapshotResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    ExportSnapshotResponsePrivate(ExportSnapshotResponse * const q);
+    explicit ExportSnapshotResponsePrivate(ExportSnapshotResponse * const q);
 
     void parseExportSnapshotResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ActivatePipelineResponsePrivate : public DataPipelineResponsePrivate {
 
 public:
 
-    ActivatePipelineResponsePrivate(ActivatePipelineResponse * const q);
+    explicit ActivatePipelineResponsePrivate(ActivatePipelineResponse * const q);
 
     void parseActivatePipelineResponse(QXmlStreamReader &xml);
 

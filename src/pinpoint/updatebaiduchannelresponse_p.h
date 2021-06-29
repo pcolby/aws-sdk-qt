@@ -31,7 +31,7 @@ class UpdateBaiduChannelResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    UpdateBaiduChannelResponsePrivate(UpdateBaiduChannelResponse * const q);
+    explicit UpdateBaiduChannelResponsePrivate(UpdateBaiduChannelResponse * const q);
 
     void parseUpdateBaiduChannelResponse(QXmlStreamReader &xml);
 

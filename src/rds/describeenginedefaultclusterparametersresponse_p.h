@@ -31,7 +31,7 @@ class DescribeEngineDefaultClusterParametersResponsePrivate : public RdsResponse
 
 public:
 
-    DescribeEngineDefaultClusterParametersResponsePrivate(DescribeEngineDefaultClusterParametersResponse * const q);
+    explicit DescribeEngineDefaultClusterParametersResponsePrivate(DescribeEngineDefaultClusterParametersResponse * const q);
 
     void parseDescribeEngineDefaultClusterParametersResponse(QXmlStreamReader &xml);
 

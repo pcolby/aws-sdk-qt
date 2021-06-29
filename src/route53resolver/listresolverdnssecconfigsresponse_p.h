@@ -31,7 +31,7 @@ class ListResolverDnssecConfigsResponsePrivate : public Route53ResolverResponseP
 
 public:
 
-    ListResolverDnssecConfigsResponsePrivate(ListResolverDnssecConfigsResponse * const q);
+    explicit ListResolverDnssecConfigsResponsePrivate(ListResolverDnssecConfigsResponse * const q);
 
     void parseListResolverDnssecConfigsResponse(QXmlStreamReader &xml);
 

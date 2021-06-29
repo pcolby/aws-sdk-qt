@@ -31,7 +31,7 @@ class DeleteRecordingConfigurationResponsePrivate : public IvsResponsePrivate {
 
 public:
 
-    DeleteRecordingConfigurationResponsePrivate(DeleteRecordingConfigurationResponse * const q);
+    explicit DeleteRecordingConfigurationResponsePrivate(DeleteRecordingConfigurationResponse * const q);
 
     void parseDeleteRecordingConfigurationResponse(QXmlStreamReader &xml);
 

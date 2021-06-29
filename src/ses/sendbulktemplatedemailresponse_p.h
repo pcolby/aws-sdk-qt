@@ -31,7 +31,7 @@ class SendBulkTemplatedEmailResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    SendBulkTemplatedEmailResponsePrivate(SendBulkTemplatedEmailResponse * const q);
+    explicit SendBulkTemplatedEmailResponsePrivate(SendBulkTemplatedEmailResponse * const q);
 
     void parseSendBulkTemplatedEmailResponse(QXmlStreamReader &xml);
 

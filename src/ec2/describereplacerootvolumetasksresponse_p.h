@@ -31,7 +31,7 @@ class DescribeReplaceRootVolumeTasksResponsePrivate : public Ec2ResponsePrivate 
 
 public:
 
-    DescribeReplaceRootVolumeTasksResponsePrivate(DescribeReplaceRootVolumeTasksResponse * const q);
+    explicit DescribeReplaceRootVolumeTasksResponsePrivate(DescribeReplaceRootVolumeTasksResponse * const q);
 
     void parseDescribeReplaceRootVolumeTasksResponse(QXmlStreamReader &xml);
 

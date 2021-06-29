@@ -31,7 +31,7 @@ class DescribeValidDBInstanceModificationsResponsePrivate : public NeptuneRespon
 
 public:
 
-    DescribeValidDBInstanceModificationsResponsePrivate(DescribeValidDBInstanceModificationsResponse * const q);
+    explicit DescribeValidDBInstanceModificationsResponsePrivate(DescribeValidDBInstanceModificationsResponse * const q);
 
     void parseDescribeValidDBInstanceModificationsResponse(QXmlStreamReader &xml);
 

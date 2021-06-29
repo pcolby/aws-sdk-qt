@@ -31,7 +31,7 @@ class ListStackInstancesForProvisionedProductResponsePrivate : public ServiceCat
 
 public:
 
-    ListStackInstancesForProvisionedProductResponsePrivate(ListStackInstancesForProvisionedProductResponse * const q);
+    explicit ListStackInstancesForProvisionedProductResponsePrivate(ListStackInstancesForProvisionedProductResponse * const q);
 
     void parseListStackInstancesForProvisionedProductResponse(QXmlStreamReader &xml);
 

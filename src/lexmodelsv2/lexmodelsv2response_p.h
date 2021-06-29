@@ -29,7 +29,7 @@ class LexModelsV2ResponsePrivate {
 
 public:
 
-    LexModelsV2ResponsePrivate(LexModelsV2Response * const q);
+    explicit LexModelsV2ResponsePrivate(LexModelsV2Response * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

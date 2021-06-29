@@ -31,7 +31,7 @@ class GetUICustomizationResponsePrivate : public CognitoIdentityProviderResponse
 
 public:
 
-    GetUICustomizationResponsePrivate(GetUICustomizationResponse * const q);
+    explicit GetUICustomizationResponsePrivate(GetUICustomizationResponse * const q);
 
     void parseGetUICustomizationResponse(QXmlStreamReader &xml);
 

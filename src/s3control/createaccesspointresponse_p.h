@@ -31,7 +31,7 @@ class CreateAccessPointResponsePrivate : public S3ControlResponsePrivate {
 
 public:
 
-    CreateAccessPointResponsePrivate(CreateAccessPointResponse * const q);
+    explicit CreateAccessPointResponsePrivate(CreateAccessPointResponse * const q);
 
     void parseCreateAccessPointResponse(QXmlStreamReader &xml);
 

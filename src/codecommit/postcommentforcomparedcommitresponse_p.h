@@ -31,7 +31,7 @@ class PostCommentForComparedCommitResponsePrivate : public CodeCommitResponsePri
 
 public:
 
-    PostCommentForComparedCommitResponsePrivate(PostCommentForComparedCommitResponse * const q);
+    explicit PostCommentForComparedCommitResponsePrivate(PostCommentForComparedCommitResponse * const q);
 
     void parsePostCommentForComparedCommitResponse(QXmlStreamReader &xml);
 

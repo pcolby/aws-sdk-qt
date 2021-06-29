@@ -31,7 +31,7 @@ class BatchGetDocumentStatusResponsePrivate : public kendraResponsePrivate {
 
 public:
 
-    BatchGetDocumentStatusResponsePrivate(BatchGetDocumentStatusResponse * const q);
+    explicit BatchGetDocumentStatusResponsePrivate(BatchGetDocumentStatusResponse * const q);
 
     void parseBatchGetDocumentStatusResponse(QXmlStreamReader &xml);
 

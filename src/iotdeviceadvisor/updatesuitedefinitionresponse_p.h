@@ -31,7 +31,7 @@ class UpdateSuiteDefinitionResponsePrivate : public IoTDeviceAdvisorResponsePriv
 
 public:
 
-    UpdateSuiteDefinitionResponsePrivate(UpdateSuiteDefinitionResponse * const q);
+    explicit UpdateSuiteDefinitionResponsePrivate(UpdateSuiteDefinitionResponse * const q);
 
     void parseUpdateSuiteDefinitionResponse(QXmlStreamReader &xml);
 

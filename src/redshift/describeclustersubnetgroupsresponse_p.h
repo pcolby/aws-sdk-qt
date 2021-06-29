@@ -31,7 +31,7 @@ class DescribeClusterSubnetGroupsResponsePrivate : public RedshiftResponsePrivat
 
 public:
 
-    DescribeClusterSubnetGroupsResponsePrivate(DescribeClusterSubnetGroupsResponse * const q);
+    explicit DescribeClusterSubnetGroupsResponsePrivate(DescribeClusterSubnetGroupsResponse * const q);
 
     void parseDescribeClusterSubnetGroupsResponse(QXmlStreamReader &xml);
 

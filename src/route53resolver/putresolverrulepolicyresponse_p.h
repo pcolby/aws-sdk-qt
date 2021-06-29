@@ -31,7 +31,7 @@ class PutResolverRulePolicyResponsePrivate : public Route53ResolverResponsePriva
 
 public:
 
-    PutResolverRulePolicyResponsePrivate(PutResolverRulePolicyResponse * const q);
+    explicit PutResolverRulePolicyResponsePrivate(PutResolverRulePolicyResponse * const q);
 
     void parsePutResolverRulePolicyResponse(QXmlStreamReader &xml);
 

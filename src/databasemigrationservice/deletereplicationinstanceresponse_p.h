@@ -31,7 +31,7 @@ class DeleteReplicationInstanceResponsePrivate : public DatabaseMigrationService
 
 public:
 
-    DeleteReplicationInstanceResponsePrivate(DeleteReplicationInstanceResponse * const q);
+    explicit DeleteReplicationInstanceResponsePrivate(DeleteReplicationInstanceResponse * const q);
 
     void parseDeleteReplicationInstanceResponse(QXmlStreamReader &xml);
 

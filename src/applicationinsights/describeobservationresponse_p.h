@@ -31,7 +31,7 @@ class DescribeObservationResponsePrivate : public ApplicationInsightsResponsePri
 
 public:
 
-    DescribeObservationResponsePrivate(DescribeObservationResponse * const q);
+    explicit DescribeObservationResponsePrivate(DescribeObservationResponse * const q);
 
     void parseDescribeObservationResponse(QXmlStreamReader &xml);
 

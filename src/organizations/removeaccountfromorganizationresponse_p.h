@@ -31,7 +31,7 @@ class RemoveAccountFromOrganizationResponsePrivate : public OrganizationsRespons
 
 public:
 
-    RemoveAccountFromOrganizationResponsePrivate(RemoveAccountFromOrganizationResponse * const q);
+    explicit RemoveAccountFromOrganizationResponsePrivate(RemoveAccountFromOrganizationResponse * const q);
 
     void parseRemoveAccountFromOrganizationResponse(QXmlStreamReader &xml);
 

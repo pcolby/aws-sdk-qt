@@ -31,7 +31,7 @@ class DeleteApplicationCloudWatchLoggingOptionResponsePrivate : public KinesisAn
 
 public:
 
-    DeleteApplicationCloudWatchLoggingOptionResponsePrivate(DeleteApplicationCloudWatchLoggingOptionResponse * const q);
+    explicit DeleteApplicationCloudWatchLoggingOptionResponsePrivate(DeleteApplicationCloudWatchLoggingOptionResponse * const q);
 
     void parseDeleteApplicationCloudWatchLoggingOptionResponse(QXmlStreamReader &xml);
 

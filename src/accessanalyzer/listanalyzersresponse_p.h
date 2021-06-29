@@ -31,7 +31,7 @@ class ListAnalyzersResponsePrivate : public AccessAnalyzerResponsePrivate {
 
 public:
 
-    ListAnalyzersResponsePrivate(ListAnalyzersResponse * const q);
+    explicit ListAnalyzersResponsePrivate(ListAnalyzersResponse * const q);
 
     void parseListAnalyzersResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListSipMediaApplicationsResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    ListSipMediaApplicationsResponsePrivate(ListSipMediaApplicationsResponse * const q);
+    explicit ListSipMediaApplicationsResponsePrivate(ListSipMediaApplicationsResponse * const q);
 
     void parseListSipMediaApplicationsResponse(QXmlStreamReader &xml);
 

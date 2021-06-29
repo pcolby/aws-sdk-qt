@@ -31,7 +31,7 @@ class DeleteGraphqlApiResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 
-    DeleteGraphqlApiResponsePrivate(DeleteGraphqlApiResponse * const q);
+    explicit DeleteGraphqlApiResponsePrivate(DeleteGraphqlApiResponse * const q);
 
     void parseDeleteGraphqlApiResponse(QXmlStreamReader &xml);
 

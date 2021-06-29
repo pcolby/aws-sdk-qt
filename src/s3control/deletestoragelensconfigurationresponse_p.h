@@ -31,7 +31,7 @@ class DeleteStorageLensConfigurationResponsePrivate : public S3ControlResponsePr
 
 public:
 
-    DeleteStorageLensConfigurationResponsePrivate(DeleteStorageLensConfigurationResponse * const q);
+    explicit DeleteStorageLensConfigurationResponsePrivate(DeleteStorageLensConfigurationResponse * const q);
 
     void parseDeleteStorageLensConfigurationResponse(QXmlStreamReader &xml);
 

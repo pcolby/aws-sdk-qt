@@ -31,7 +31,7 @@ class UpdateCommentResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 
-    UpdateCommentResponsePrivate(UpdateCommentResponse * const q);
+    explicit UpdateCommentResponsePrivate(UpdateCommentResponse * const q);
 
     void parseUpdateCommentResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class EnableAllFeaturesResponsePrivate : public OrganizationsResponsePrivate {
 
 public:
 
-    EnableAllFeaturesResponsePrivate(EnableAllFeaturesResponse * const q);
+    explicit EnableAllFeaturesResponsePrivate(EnableAllFeaturesResponse * const q);
 
     void parseEnableAllFeaturesResponse(QXmlStreamReader &xml);
 

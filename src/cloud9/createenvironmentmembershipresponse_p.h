@@ -31,7 +31,7 @@ class CreateEnvironmentMembershipResponsePrivate : public Cloud9ResponsePrivate 
 
 public:
 
-    CreateEnvironmentMembershipResponsePrivate(CreateEnvironmentMembershipResponse * const q);
+    explicit CreateEnvironmentMembershipResponsePrivate(CreateEnvironmentMembershipResponse * const q);
 
     void parseCreateEnvironmentMembershipResponse(QXmlStreamReader &xml);
 

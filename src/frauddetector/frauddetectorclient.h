@@ -155,7 +155,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    FraudDetectorClient(
+    explicit FraudDetectorClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -223,7 +223,7 @@ public slots:
 protected:
     /// @cond internal
     FraudDetectorClientPrivate * const d_ptr; ///< Internal d-pointer.
-    FraudDetectorClient(FraudDetectorClientPrivate * const d);
+    explicit FraudDetectorClient(FraudDetectorClientPrivate * const d);
     /// @endcond
 
 private:

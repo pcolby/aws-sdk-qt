@@ -31,7 +31,7 @@ class DisassociateClientVpnTargetNetworkResponsePrivate : public Ec2ResponsePriv
 
 public:
 
-    DisassociateClientVpnTargetNetworkResponsePrivate(DisassociateClientVpnTargetNetworkResponse * const q);
+    explicit DisassociateClientVpnTargetNetworkResponsePrivate(DisassociateClientVpnTargetNetworkResponse * const q);
 
     void parseDisassociateClientVpnTargetNetworkResponse(QXmlStreamReader &xml);
 

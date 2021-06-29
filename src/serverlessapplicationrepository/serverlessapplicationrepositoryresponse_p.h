@@ -29,7 +29,7 @@ class ServerlessApplicationRepositoryResponsePrivate {
 
 public:
 
-    ServerlessApplicationRepositoryResponsePrivate(ServerlessApplicationRepositoryResponse * const q);
+    explicit ServerlessApplicationRepositoryResponsePrivate(ServerlessApplicationRepositoryResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

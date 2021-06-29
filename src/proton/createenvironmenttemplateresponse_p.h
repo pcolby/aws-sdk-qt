@@ -31,7 +31,7 @@ class CreateEnvironmentTemplateResponsePrivate : public ProtonResponsePrivate {
 
 public:
 
-    CreateEnvironmentTemplateResponsePrivate(CreateEnvironmentTemplateResponse * const q);
+    explicit CreateEnvironmentTemplateResponsePrivate(CreateEnvironmentTemplateResponse * const q);
 
     void parseCreateEnvironmentTemplateResponse(QXmlStreamReader &xml);
 

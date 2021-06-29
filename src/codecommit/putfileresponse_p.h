@@ -31,7 +31,7 @@ class PutFileResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 
-    PutFileResponsePrivate(PutFileResponse * const q);
+    explicit PutFileResponsePrivate(PutFileResponse * const q);
 
     void parsePutFileResponse(QXmlStreamReader &xml);
 

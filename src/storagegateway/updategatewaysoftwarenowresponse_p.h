@@ -31,7 +31,7 @@ class UpdateGatewaySoftwareNowResponsePrivate : public StorageGatewayResponsePri
 
 public:
 
-    UpdateGatewaySoftwareNowResponsePrivate(UpdateGatewaySoftwareNowResponse * const q);
+    explicit UpdateGatewaySoftwareNowResponsePrivate(UpdateGatewaySoftwareNowResponse * const q);
 
     void parseUpdateGatewaySoftwareNowResponse(QXmlStreamReader &xml);
 

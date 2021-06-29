@@ -31,7 +31,7 @@ class GetIdentityMailFromDomainAttributesResponsePrivate : public SesResponsePri
 
 public:
 
-    GetIdentityMailFromDomainAttributesResponsePrivate(GetIdentityMailFromDomainAttributesResponse * const q);
+    explicit GetIdentityMailFromDomainAttributesResponsePrivate(GetIdentityMailFromDomainAttributesResponse * const q);
 
     void parseGetIdentityMailFromDomainAttributesResponse(QXmlStreamReader &xml);
 

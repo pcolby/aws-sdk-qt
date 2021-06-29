@@ -31,7 +31,7 @@ class DeleteEndpointResponsePrivate : public ComprehendResponsePrivate {
 
 public:
 
-    DeleteEndpointResponsePrivate(DeleteEndpointResponse * const q);
+    explicit DeleteEndpointResponsePrivate(DeleteEndpointResponse * const q);
 
     void parseDeleteEndpointResponse(QXmlStreamReader &xml);
 

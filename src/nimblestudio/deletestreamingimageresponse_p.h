@@ -31,7 +31,7 @@ class DeleteStreamingImageResponsePrivate : public NimbleStudioResponsePrivate {
 
 public:
 
-    DeleteStreamingImageResponsePrivate(DeleteStreamingImageResponse * const q);
+    explicit DeleteStreamingImageResponsePrivate(DeleteStreamingImageResponse * const q);
 
     void parseDeleteStreamingImageResponse(QXmlStreamReader &xml);
 

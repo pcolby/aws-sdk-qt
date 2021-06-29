@@ -31,7 +31,7 @@ class ListConfigurationSetsResponsePrivate : public Sesv2ResponsePrivate {
 
 public:
 
-    ListConfigurationSetsResponsePrivate(ListConfigurationSetsResponse * const q);
+    explicit ListConfigurationSetsResponsePrivate(ListConfigurationSetsResponse * const q);
 
     void parseListConfigurationSetsResponse(QXmlStreamReader &xml);
 

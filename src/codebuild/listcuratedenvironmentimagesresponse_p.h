@@ -31,7 +31,7 @@ class ListCuratedEnvironmentImagesResponsePrivate : public CodeBuildResponsePriv
 
 public:
 
-    ListCuratedEnvironmentImagesResponsePrivate(ListCuratedEnvironmentImagesResponse * const q);
+    explicit ListCuratedEnvironmentImagesResponsePrivate(ListCuratedEnvironmentImagesResponse * const q);
 
     void parseListCuratedEnvironmentImagesResponse(QXmlStreamReader &xml);
 

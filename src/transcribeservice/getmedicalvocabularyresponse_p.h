@@ -31,7 +31,7 @@ class GetMedicalVocabularyResponsePrivate : public TranscribeServiceResponsePriv
 
 public:
 
-    GetMedicalVocabularyResponsePrivate(GetMedicalVocabularyResponse * const q);
+    explicit GetMedicalVocabularyResponsePrivate(GetMedicalVocabularyResponse * const q);
 
     void parseGetMedicalVocabularyResponse(QXmlStreamReader &xml);
 

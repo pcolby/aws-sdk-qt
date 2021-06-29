@@ -31,7 +31,7 @@ class DeletePackageResponsePrivate : public ElasticsearchServiceResponsePrivate 
 
 public:
 
-    DeletePackageResponsePrivate(DeletePackageResponse * const q);
+    explicit DeletePackageResponsePrivate(DeletePackageResponse * const q);
 
     void parseDeletePackageResponse(QXmlStreamReader &xml);
 

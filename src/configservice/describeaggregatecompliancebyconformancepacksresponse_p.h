@@ -31,7 +31,7 @@ class DescribeAggregateComplianceByConformancePacksResponsePrivate : public Conf
 
 public:
 
-    DescribeAggregateComplianceByConformancePacksResponsePrivate(DescribeAggregateComplianceByConformancePacksResponse * const q);
+    explicit DescribeAggregateComplianceByConformancePacksResponsePrivate(DescribeAggregateComplianceByConformancePacksResponse * const q);
 
     void parseDescribeAggregateComplianceByConformancePacksResponse(QXmlStreamReader &xml);
 

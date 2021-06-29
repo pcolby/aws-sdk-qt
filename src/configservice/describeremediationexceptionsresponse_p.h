@@ -31,7 +31,7 @@ class DescribeRemediationExceptionsResponsePrivate : public ConfigServiceRespons
 
 public:
 
-    DescribeRemediationExceptionsResponsePrivate(DescribeRemediationExceptionsResponse * const q);
+    explicit DescribeRemediationExceptionsResponsePrivate(DescribeRemediationExceptionsResponse * const q);
 
     void parseDescribeRemediationExceptionsResponse(QXmlStreamReader &xml);
 

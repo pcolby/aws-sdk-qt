@@ -31,7 +31,7 @@ class ListSchedulesResponsePrivate : public GlueDataBrewResponsePrivate {
 
 public:
 
-    ListSchedulesResponsePrivate(ListSchedulesResponse * const q);
+    explicit ListSchedulesResponsePrivate(ListSchedulesResponse * const q);
 
     void parseListSchedulesResponse(QXmlStreamReader &xml);
 

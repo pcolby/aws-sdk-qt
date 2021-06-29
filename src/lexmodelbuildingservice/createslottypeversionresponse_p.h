@@ -31,7 +31,7 @@ class CreateSlotTypeVersionResponsePrivate : public LexModelBuildingServiceRespo
 
 public:
 
-    CreateSlotTypeVersionResponsePrivate(CreateSlotTypeVersionResponse * const q);
+    explicit CreateSlotTypeVersionResponsePrivate(CreateSlotTypeVersionResponse * const q);
 
     void parseCreateSlotTypeVersionResponse(QXmlStreamReader &xml);
 

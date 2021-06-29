@@ -31,7 +31,7 @@ class ListVocabulariesResponsePrivate : public TranscribeServiceResponsePrivate 
 
 public:
 
-    ListVocabulariesResponsePrivate(ListVocabulariesResponse * const q);
+    explicit ListVocabulariesResponsePrivate(ListVocabulariesResponse * const q);
 
     void parseListVocabulariesResponse(QXmlStreamReader &xml);
 

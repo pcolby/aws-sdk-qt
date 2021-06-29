@@ -31,7 +31,7 @@ class GetTopicRuleResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    GetTopicRuleResponsePrivate(GetTopicRuleResponse * const q);
+    explicit GetTopicRuleResponsePrivate(GetTopicRuleResponse * const q);
 
     void parseGetTopicRuleResponse(QXmlStreamReader &xml);
 

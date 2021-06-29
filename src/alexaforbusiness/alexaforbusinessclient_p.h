@@ -30,7 +30,7 @@ class AlexaForBusinessClient;
 class AlexaForBusinessClientPrivate {
 
 public:
-    AlexaForBusinessClientPrivate(AlexaForBusinessClient * const q);
+    explicit AlexaForBusinessClientPrivate(AlexaForBusinessClient * const q);
 
 protected:
     AlexaForBusinessClient * const q_ptr; ///< Internal q-pointer.

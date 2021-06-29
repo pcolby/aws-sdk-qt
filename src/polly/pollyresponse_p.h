@@ -29,7 +29,7 @@ class PollyResponsePrivate {
 
 public:
 
-    PollyResponsePrivate(PollyResponse * const q);
+    explicit PollyResponsePrivate(PollyResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

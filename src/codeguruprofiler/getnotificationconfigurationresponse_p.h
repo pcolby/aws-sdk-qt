@@ -31,7 +31,7 @@ class GetNotificationConfigurationResponsePrivate : public CodeGuruProfilerRespo
 
 public:
 
-    GetNotificationConfigurationResponsePrivate(GetNotificationConfigurationResponse * const q);
+    explicit GetNotificationConfigurationResponsePrivate(GetNotificationConfigurationResponse * const q);
 
     void parseGetNotificationConfigurationResponse(QXmlStreamReader &xml);
 

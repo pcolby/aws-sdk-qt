@@ -31,7 +31,7 @@ class ListDatasetEntriesResponsePrivate : public LookoutforVisionResponsePrivate
 
 public:
 
-    ListDatasetEntriesResponsePrivate(ListDatasetEntriesResponse * const q);
+    explicit ListDatasetEntriesResponsePrivate(ListDatasetEntriesResponse * const q);
 
     void parseListDatasetEntriesResponse(QXmlStreamReader &xml);
 

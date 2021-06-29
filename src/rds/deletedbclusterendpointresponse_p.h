@@ -31,7 +31,7 @@ class DeleteDBClusterEndpointResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    DeleteDBClusterEndpointResponsePrivate(DeleteDBClusterEndpointResponse * const q);
+    explicit DeleteDBClusterEndpointResponsePrivate(DeleteDBClusterEndpointResponse * const q);
 
     void parseDeleteDBClusterEndpointResponse(QXmlStreamReader &xml);
 

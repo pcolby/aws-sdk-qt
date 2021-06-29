@@ -31,7 +31,7 @@ class StartDeviceAuthorizationResponsePrivate : public SsooidcResponsePrivate {
 
 public:
 
-    StartDeviceAuthorizationResponsePrivate(StartDeviceAuthorizationResponse * const q);
+    explicit StartDeviceAuthorizationResponsePrivate(StartDeviceAuthorizationResponse * const q);
 
     void parseStartDeviceAuthorizationResponse(QXmlStreamReader &xml);
 

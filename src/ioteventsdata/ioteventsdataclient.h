@@ -63,7 +63,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    IoTEventsDataClient(
+    explicit IoTEventsDataClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -84,7 +84,7 @@ public slots:
 protected:
     /// @cond internal
     IoTEventsDataClientPrivate * const d_ptr; ///< Internal d-pointer.
-    IoTEventsDataClient(IoTEventsDataClientPrivate * const d);
+    explicit IoTEventsDataClient(IoTEventsDataClientPrivate * const d);
     /// @endcond
 
 private:

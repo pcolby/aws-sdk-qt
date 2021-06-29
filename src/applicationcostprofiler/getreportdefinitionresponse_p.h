@@ -31,7 +31,7 @@ class GetReportDefinitionResponsePrivate : public ApplicationCostProfilerRespons
 
 public:
 
-    GetReportDefinitionResponsePrivate(GetReportDefinitionResponse * const q);
+    explicit GetReportDefinitionResponsePrivate(GetReportDefinitionResponse * const q);
 
     void parseGetReportDefinitionResponse(QXmlStreamReader &xml);
 

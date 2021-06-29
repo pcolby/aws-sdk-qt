@@ -31,7 +31,7 @@ class TestInvokeMethodResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    TestInvokeMethodResponsePrivate(TestInvokeMethodResponse * const q);
+    explicit TestInvokeMethodResponsePrivate(TestInvokeMethodResponse * const q);
 
     void parseTestInvokeMethodResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeScheduledInstancesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeScheduledInstancesResponsePrivate(DescribeScheduledInstancesResponse * const q);
+    explicit DescribeScheduledInstancesResponsePrivate(DescribeScheduledInstancesResponse * const q);
 
     void parseDescribeScheduledInstancesResponse(QXmlStreamReader &xml);
 

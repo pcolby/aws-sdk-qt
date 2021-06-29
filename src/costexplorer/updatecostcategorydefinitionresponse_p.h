@@ -31,7 +31,7 @@ class UpdateCostCategoryDefinitionResponsePrivate : public CostExplorerResponseP
 
 public:
 
-    UpdateCostCategoryDefinitionResponsePrivate(UpdateCostCategoryDefinitionResponse * const q);
+    explicit UpdateCostCategoryDefinitionResponsePrivate(UpdateCostCategoryDefinitionResponse * const q);
 
     void parseUpdateCostCategoryDefinitionResponse(QXmlStreamReader &xml);
 

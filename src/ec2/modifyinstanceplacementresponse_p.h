@@ -31,7 +31,7 @@ class ModifyInstancePlacementResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ModifyInstancePlacementResponsePrivate(ModifyInstancePlacementResponse * const q);
+    explicit ModifyInstancePlacementResponsePrivate(ModifyInstancePlacementResponse * const q);
 
     void parseModifyInstancePlacementResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribePipelineDefinitionForExecutionResponsePrivate : public SageMakerRe
 
 public:
 
-    DescribePipelineDefinitionForExecutionResponsePrivate(DescribePipelineDefinitionForExecutionResponse * const q);
+    explicit DescribePipelineDefinitionForExecutionResponsePrivate(DescribePipelineDefinitionForExecutionResponse * const q);
 
     void parseDescribePipelineDefinitionForExecutionResponse(QXmlStreamReader &xml);
 

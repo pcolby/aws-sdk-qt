@@ -31,7 +31,7 @@ class ExecutePolicyResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 
-    ExecutePolicyResponsePrivate(ExecutePolicyResponse * const q);
+    explicit ExecutePolicyResponsePrivate(ExecutePolicyResponse * const q);
 
     void parseExecutePolicyResponse(QXmlStreamReader &xml);
 

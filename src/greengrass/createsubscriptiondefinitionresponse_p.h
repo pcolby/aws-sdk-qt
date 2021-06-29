@@ -31,7 +31,7 @@ class CreateSubscriptionDefinitionResponsePrivate : public GreengrassResponsePri
 
 public:
 
-    CreateSubscriptionDefinitionResponsePrivate(CreateSubscriptionDefinitionResponse * const q);
+    explicit CreateSubscriptionDefinitionResponsePrivate(CreateSubscriptionDefinitionResponse * const q);
 
     void parseCreateSubscriptionDefinitionResponse(QXmlStreamReader &xml);
 

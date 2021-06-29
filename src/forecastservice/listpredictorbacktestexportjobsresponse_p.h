@@ -31,7 +31,7 @@ class ListPredictorBacktestExportJobsResponsePrivate : public ForecastServiceRes
 
 public:
 
-    ListPredictorBacktestExportJobsResponsePrivate(ListPredictorBacktestExportJobsResponse * const q);
+    explicit ListPredictorBacktestExportJobsResponsePrivate(ListPredictorBacktestExportJobsResponse * const q);
 
     void parseListPredictorBacktestExportJobsResponse(QXmlStreamReader &xml);
 

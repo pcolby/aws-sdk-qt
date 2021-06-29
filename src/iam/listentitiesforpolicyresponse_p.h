@@ -31,7 +31,7 @@ class ListEntitiesForPolicyResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    ListEntitiesForPolicyResponsePrivate(ListEntitiesForPolicyResponse * const q);
+    explicit ListEntitiesForPolicyResponsePrivate(ListEntitiesForPolicyResponse * const q);
 
     void parseListEntitiesForPolicyResponse(QXmlStreamReader &xml);
 

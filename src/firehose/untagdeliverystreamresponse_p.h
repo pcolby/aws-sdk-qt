@@ -31,7 +31,7 @@ class UntagDeliveryStreamResponsePrivate : public FirehoseResponsePrivate {
 
 public:
 
-    UntagDeliveryStreamResponsePrivate(UntagDeliveryStreamResponse * const q);
+    explicit UntagDeliveryStreamResponsePrivate(UntagDeliveryStreamResponse * const q);
 
     void parseUntagDeliveryStreamResponse(QXmlStreamReader &xml);
 

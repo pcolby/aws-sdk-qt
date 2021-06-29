@@ -30,7 +30,7 @@ class IoTSecureTunnelingClient;
 class IoTSecureTunnelingClientPrivate {
 
 public:
-    IoTSecureTunnelingClientPrivate(IoTSecureTunnelingClient * const q);
+    explicit IoTSecureTunnelingClientPrivate(IoTSecureTunnelingClient * const q);
 
 protected:
     IoTSecureTunnelingClient * const q_ptr; ///< Internal q-pointer.

@@ -31,7 +31,7 @@ class SetPlatformApplicationAttributesResponsePrivate : public SnsResponsePrivat
 
 public:
 
-    SetPlatformApplicationAttributesResponsePrivate(SetPlatformApplicationAttributesResponse * const q);
+    explicit SetPlatformApplicationAttributesResponsePrivate(SetPlatformApplicationAttributesResponse * const q);
 
     void parseSetPlatformApplicationAttributesResponse(QXmlStreamReader &xml);
 

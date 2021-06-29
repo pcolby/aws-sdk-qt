@@ -31,7 +31,7 @@ class UploadPartCopyResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    UploadPartCopyResponsePrivate(UploadPartCopyResponse * const q);
+    explicit UploadPartCopyResponsePrivate(UploadPartCopyResponse * const q);
 
     void parseUploadPartCopyResponse(QXmlStreamReader &xml);
 

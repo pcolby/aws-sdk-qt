@@ -31,7 +31,7 @@ class DescribeEmergencyContactSettingsResponsePrivate : public ShieldResponsePri
 
 public:
 
-    DescribeEmergencyContactSettingsResponsePrivate(DescribeEmergencyContactSettingsResponse * const q);
+    explicit DescribeEmergencyContactSettingsResponsePrivate(DescribeEmergencyContactSettingsResponse * const q);
 
     void parseDescribeEmergencyContactSettingsResponse(QXmlStreamReader &xml);
 

@@ -85,7 +85,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    SecretsManagerClient(
+    explicit SecretsManagerClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -117,7 +117,7 @@ public slots:
 protected:
     /// @cond internal
     SecretsManagerClientPrivate * const d_ptr; ///< Internal d-pointer.
-    SecretsManagerClient(SecretsManagerClientPrivate * const d);
+    explicit SecretsManagerClient(SecretsManagerClientPrivate * const d);
     /// @endcond
 
 private:

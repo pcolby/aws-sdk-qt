@@ -31,7 +31,7 @@ class GetEBSVolumeRecommendationsResponsePrivate : public ComputeOptimizerRespon
 
 public:
 
-    GetEBSVolumeRecommendationsResponsePrivate(GetEBSVolumeRecommendationsResponse * const q);
+    explicit GetEBSVolumeRecommendationsResponsePrivate(GetEBSVolumeRecommendationsResponse * const q);
 
     void parseGetEBSVolumeRecommendationsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeUserProfileResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    DescribeUserProfileResponsePrivate(DescribeUserProfileResponse * const q);
+    explicit DescribeUserProfileResponsePrivate(DescribeUserProfileResponse * const q);
 
     void parseDescribeUserProfileResponse(QXmlStreamReader &xml);
 

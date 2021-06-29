@@ -31,7 +31,7 @@ class GetChannelPolicyResponsePrivate : public MediaTailorResponsePrivate {
 
 public:
 
-    GetChannelPolicyResponsePrivate(GetChannelPolicyResponse * const q);
+    explicit GetChannelPolicyResponsePrivate(GetChannelPolicyResponse * const q);
 
     void parseGetChannelPolicyResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DisableAddOnResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    DisableAddOnResponsePrivate(DisableAddOnResponse * const q);
+    explicit DisableAddOnResponsePrivate(DisableAddOnResponse * const q);
 
     void parseDisableAddOnResponse(QXmlStreamReader &xml);
 

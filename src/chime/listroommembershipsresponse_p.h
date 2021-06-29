@@ -31,7 +31,7 @@ class ListRoomMembershipsResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    ListRoomMembershipsResponsePrivate(ListRoomMembershipsResponse * const q);
+    explicit ListRoomMembershipsResponsePrivate(ListRoomMembershipsResponse * const q);
 
     void parseListRoomMembershipsResponse(QXmlStreamReader &xml);
 

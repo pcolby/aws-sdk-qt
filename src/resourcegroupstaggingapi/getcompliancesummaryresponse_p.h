@@ -31,7 +31,7 @@ class GetComplianceSummaryResponsePrivate : public ResourceGroupsTaggingAPIRespo
 
 public:
 
-    GetComplianceSummaryResponsePrivate(GetComplianceSummaryResponse * const q);
+    explicit GetComplianceSummaryResponsePrivate(GetComplianceSummaryResponse * const q);
 
     void parseGetComplianceSummaryResponse(QXmlStreamReader &xml);
 

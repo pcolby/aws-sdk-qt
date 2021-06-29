@@ -31,7 +31,7 @@ class DescribeWorkspaceBundlesResponsePrivate : public WorkSpacesResponsePrivate
 
 public:
 
-    DescribeWorkspaceBundlesResponsePrivate(DescribeWorkspaceBundlesResponse * const q);
+    explicit DescribeWorkspaceBundlesResponsePrivate(DescribeWorkspaceBundlesResponse * const q);
 
     void parseDescribeWorkspaceBundlesResponse(QXmlStreamReader &xml);
 

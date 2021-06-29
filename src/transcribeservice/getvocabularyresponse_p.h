@@ -31,7 +31,7 @@ class GetVocabularyResponsePrivate : public TranscribeServiceResponsePrivate {
 
 public:
 
-    GetVocabularyResponsePrivate(GetVocabularyResponse * const q);
+    explicit GetVocabularyResponsePrivate(GetVocabularyResponse * const q);
 
     void parseGetVocabularyResponse(QXmlStreamReader &xml);
 

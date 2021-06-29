@@ -31,7 +31,7 @@ class CreateScheduleResponsePrivate : public GlueDataBrewResponsePrivate {
 
 public:
 
-    CreateScheduleResponsePrivate(CreateScheduleResponse * const q);
+    explicit CreateScheduleResponsePrivate(CreateScheduleResponse * const q);
 
     void parseCreateScheduleResponse(QXmlStreamReader &xml);
 

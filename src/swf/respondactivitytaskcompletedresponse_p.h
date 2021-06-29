@@ -31,7 +31,7 @@ class RespondActivityTaskCompletedResponsePrivate : public SwfResponsePrivate {
 
 public:
 
-    RespondActivityTaskCompletedResponsePrivate(RespondActivityTaskCompletedResponse * const q);
+    explicit RespondActivityTaskCompletedResponsePrivate(RespondActivityTaskCompletedResponse * const q);
 
     void parseRespondActivityTaskCompletedResponse(QXmlStreamReader &xml);
 

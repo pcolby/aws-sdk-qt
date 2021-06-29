@@ -30,7 +30,7 @@ class BackupClient;
 class BackupClientPrivate {
 
 public:
-    BackupClientPrivate(BackupClient * const q);
+    explicit BackupClientPrivate(BackupClient * const q);
 
 protected:
     BackupClient * const q_ptr; ///< Internal q-pointer.

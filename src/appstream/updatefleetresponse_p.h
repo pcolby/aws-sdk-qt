@@ -31,7 +31,7 @@ class UpdateFleetResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 
-    UpdateFleetResponsePrivate(UpdateFleetResponse * const q);
+    explicit UpdateFleetResponsePrivate(UpdateFleetResponse * const q);
 
     void parseUpdateFleetResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class AddCacheResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 
-    AddCacheResponsePrivate(AddCacheResponse * const q);
+    explicit AddCacheResponsePrivate(AddCacheResponse * const q);
 
     void parseAddCacheResponse(QXmlStreamReader &xml);
 

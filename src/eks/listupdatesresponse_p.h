@@ -31,7 +31,7 @@ class ListUpdatesResponsePrivate : public EksResponsePrivate {
 
 public:
 
-    ListUpdatesResponsePrivate(ListUpdatesResponse * const q);
+    explicit ListUpdatesResponsePrivate(ListUpdatesResponse * const q);
 
     void parseListUpdatesResponse(QXmlStreamReader &xml);
 

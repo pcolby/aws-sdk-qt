@@ -31,7 +31,7 @@ class RebalanceSlotsInGlobalReplicationGroupResponsePrivate : public ElastiCache
 
 public:
 
-    RebalanceSlotsInGlobalReplicationGroupResponsePrivate(RebalanceSlotsInGlobalReplicationGroupResponse * const q);
+    explicit RebalanceSlotsInGlobalReplicationGroupResponsePrivate(RebalanceSlotsInGlobalReplicationGroupResponse * const q);
 
     void parseRebalanceSlotsInGlobalReplicationGroupResponse(QXmlStreamReader &xml);
 

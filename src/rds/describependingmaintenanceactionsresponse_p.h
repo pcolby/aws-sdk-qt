@@ -31,7 +31,7 @@ class DescribePendingMaintenanceActionsResponsePrivate : public RdsResponsePriva
 
 public:
 
-    DescribePendingMaintenanceActionsResponsePrivate(DescribePendingMaintenanceActionsResponse * const q);
+    explicit DescribePendingMaintenanceActionsResponsePrivate(DescribePendingMaintenanceActionsResponse * const q);
 
     void parseDescribePendingMaintenanceActionsResponse(QXmlStreamReader &xml);
 

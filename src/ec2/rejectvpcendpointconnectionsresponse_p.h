@@ -31,7 +31,7 @@ class RejectVpcEndpointConnectionsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    RejectVpcEndpointConnectionsResponsePrivate(RejectVpcEndpointConnectionsResponse * const q);
+    explicit RejectVpcEndpointConnectionsResponsePrivate(RejectVpcEndpointConnectionsResponse * const q);
 
     void parseRejectVpcEndpointConnectionsResponse(QXmlStreamReader &xml);
 

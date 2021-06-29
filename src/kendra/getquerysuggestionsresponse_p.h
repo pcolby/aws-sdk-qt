@@ -31,7 +31,7 @@ class GetQuerySuggestionsResponsePrivate : public kendraResponsePrivate {
 
 public:
 
-    GetQuerySuggestionsResponsePrivate(GetQuerySuggestionsResponse * const q);
+    explicit GetQuerySuggestionsResponsePrivate(GetQuerySuggestionsResponse * const q);
 
     void parseGetQuerySuggestionsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateRecordsResponsePrivate : public CognitoSyncResponsePrivate {
 
 public:
 
-    UpdateRecordsResponsePrivate(UpdateRecordsResponse * const q);
+    explicit UpdateRecordsResponsePrivate(UpdateRecordsResponse * const q);
 
     void parseUpdateRecordsResponse(QXmlStreamReader &xml);
 

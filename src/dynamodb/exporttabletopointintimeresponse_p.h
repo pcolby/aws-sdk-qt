@@ -31,7 +31,7 @@ class ExportTableToPointInTimeResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 
-    ExportTableToPointInTimeResponsePrivate(ExportTableToPointInTimeResponse * const q);
+    explicit ExportTableToPointInTimeResponsePrivate(ExportTableToPointInTimeResponse * const q);
 
     void parseExportTableToPointInTimeResponse(QXmlStreamReader &xml);
 

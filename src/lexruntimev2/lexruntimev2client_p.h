@@ -30,7 +30,7 @@ class LexRuntimeV2Client;
 class LexRuntimeV2ClientPrivate {
 
 public:
-    LexRuntimeV2ClientPrivate(LexRuntimeV2Client * const q);
+    explicit LexRuntimeV2ClientPrivate(LexRuntimeV2Client * const q);
 
 protected:
     LexRuntimeV2Client * const q_ptr; ///< Internal q-pointer.

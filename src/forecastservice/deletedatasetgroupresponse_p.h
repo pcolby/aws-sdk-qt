@@ -31,7 +31,7 @@ class DeleteDatasetGroupResponsePrivate : public ForecastServiceResponsePrivate 
 
 public:
 
-    DeleteDatasetGroupResponsePrivate(DeleteDatasetGroupResponse * const q);
+    explicit DeleteDatasetGroupResponsePrivate(DeleteDatasetGroupResponse * const q);
 
     void parseDeleteDatasetGroupResponse(QXmlStreamReader &xml);
 

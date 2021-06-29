@@ -31,7 +31,7 @@ class FinalizeDeviceClaimResponsePrivate : public IoT1ClickDevicesServiceRespons
 
 public:
 
-    FinalizeDeviceClaimResponsePrivate(FinalizeDeviceClaimResponse * const q);
+    explicit FinalizeDeviceClaimResponsePrivate(FinalizeDeviceClaimResponse * const q);
 
     void parseFinalizeDeviceClaimResponse(QXmlStreamReader &xml);
 

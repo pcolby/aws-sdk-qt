@@ -79,7 +79,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    LookoutforVisionClient(
+    explicit LookoutforVisionClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -108,7 +108,7 @@ public slots:
 protected:
     /// @cond internal
     LookoutforVisionClientPrivate * const d_ptr; ///< Internal d-pointer.
-    LookoutforVisionClient(LookoutforVisionClientPrivate * const d);
+    explicit LookoutforVisionClient(LookoutforVisionClientPrivate * const d);
     /// @endcond
 
 private:

@@ -31,7 +31,7 @@ class NotifyApplicationStateResponsePrivate : public MigrationHubResponsePrivate
 
 public:
 
-    NotifyApplicationStateResponsePrivate(NotifyApplicationStateResponse * const q);
+    explicit NotifyApplicationStateResponsePrivate(NotifyApplicationStateResponse * const q);
 
     void parseNotifyApplicationStateResponse(QXmlStreamReader &xml);
 

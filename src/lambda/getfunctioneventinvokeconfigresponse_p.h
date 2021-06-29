@@ -31,7 +31,7 @@ class GetFunctionEventInvokeConfigResponsePrivate : public LambdaResponsePrivate
 
 public:
 
-    GetFunctionEventInvokeConfigResponsePrivate(GetFunctionEventInvokeConfigResponse * const q);
+    explicit GetFunctionEventInvokeConfigResponsePrivate(GetFunctionEventInvokeConfigResponse * const q);
 
     void parseGetFunctionEventInvokeConfigResponse(QXmlStreamReader &xml);
 

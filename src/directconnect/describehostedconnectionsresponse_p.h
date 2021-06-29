@@ -31,7 +31,7 @@ class DescribeHostedConnectionsResponsePrivate : public DirectConnectResponsePri
 
 public:
 
-    DescribeHostedConnectionsResponsePrivate(DescribeHostedConnectionsResponse * const q);
+    explicit DescribeHostedConnectionsResponsePrivate(DescribeHostedConnectionsResponse * const q);
 
     void parseDescribeHostedConnectionsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeArchiveResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 
-    DescribeArchiveResponsePrivate(DescribeArchiveResponse * const q);
+    explicit DescribeArchiveResponsePrivate(DescribeArchiveResponse * const q);
 
     void parseDescribeArchiveResponse(QXmlStreamReader &xml);
 

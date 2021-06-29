@@ -31,7 +31,7 @@ class StartVpcEndpointServicePrivateDnsVerificationResponsePrivate : public Ec2R
 
 public:
 
-    StartVpcEndpointServicePrivateDnsVerificationResponsePrivate(StartVpcEndpointServicePrivateDnsVerificationResponse * const q);
+    explicit StartVpcEndpointServicePrivateDnsVerificationResponsePrivate(StartVpcEndpointServicePrivateDnsVerificationResponse * const q);
 
     void parseStartVpcEndpointServicePrivateDnsVerificationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class AddProfilePermissionResponsePrivate : public signerResponsePrivate {
 
 public:
 
-    AddProfilePermissionResponsePrivate(AddProfilePermissionResponse * const q);
+    explicit AddProfilePermissionResponsePrivate(AddProfilePermissionResponse * const q);
 
     void parseAddProfilePermissionResponse(QXmlStreamReader &xml);
 

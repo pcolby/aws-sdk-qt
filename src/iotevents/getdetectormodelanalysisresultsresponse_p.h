@@ -31,7 +31,7 @@ class GetDetectorModelAnalysisResultsResponsePrivate : public IoTEventsResponseP
 
 public:
 
-    GetDetectorModelAnalysisResultsResponsePrivate(GetDetectorModelAnalysisResultsResponse * const q);
+    explicit GetDetectorModelAnalysisResultsResponsePrivate(GetDetectorModelAnalysisResultsResponse * const q);
 
     void parseGetDetectorModelAnalysisResultsResponse(QXmlStreamReader &xml);
 

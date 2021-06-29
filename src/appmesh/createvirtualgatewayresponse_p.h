@@ -31,7 +31,7 @@ class CreateVirtualGatewayResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 
-    CreateVirtualGatewayResponsePrivate(CreateVirtualGatewayResponse * const q);
+    explicit CreateVirtualGatewayResponsePrivate(CreateVirtualGatewayResponse * const q);
 
     void parseCreateVirtualGatewayResponse(QXmlStreamReader &xml);
 

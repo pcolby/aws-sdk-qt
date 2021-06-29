@@ -31,7 +31,7 @@ class PutFunctionCodeSigningConfigResponsePrivate : public LambdaResponsePrivate
 
 public:
 
-    PutFunctionCodeSigningConfigResponsePrivate(PutFunctionCodeSigningConfigResponse * const q);
+    explicit PutFunctionCodeSigningConfigResponsePrivate(PutFunctionCodeSigningConfigResponse * const q);
 
     void parsePutFunctionCodeSigningConfigResponse(QXmlStreamReader &xml);
 

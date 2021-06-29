@@ -31,7 +31,7 @@ class GetNamespaceDeletionStatusResponsePrivate : public IoTThingsGraphResponseP
 
 public:
 
-    GetNamespaceDeletionStatusResponsePrivate(GetNamespaceDeletionStatusResponse * const q);
+    explicit GetNamespaceDeletionStatusResponsePrivate(GetNamespaceDeletionStatusResponse * const q);
 
     void parseGetNamespaceDeletionStatusResponse(QXmlStreamReader &xml);
 

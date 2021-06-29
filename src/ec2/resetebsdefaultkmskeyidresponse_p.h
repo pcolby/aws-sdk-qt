@@ -31,7 +31,7 @@ class ResetEbsDefaultKmsKeyIdResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ResetEbsDefaultKmsKeyIdResponsePrivate(ResetEbsDefaultKmsKeyIdResponse * const q);
+    explicit ResetEbsDefaultKmsKeyIdResponsePrivate(ResetEbsDefaultKmsKeyIdResponse * const q);
 
     void parseResetEbsDefaultKmsKeyIdResponse(QXmlStreamReader &xml);
 

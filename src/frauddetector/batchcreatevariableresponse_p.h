@@ -31,7 +31,7 @@ class BatchCreateVariableResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 
-    BatchCreateVariableResponsePrivate(BatchCreateVariableResponse * const q);
+    explicit BatchCreateVariableResponsePrivate(BatchCreateVariableResponse * const q);
 
     void parseBatchCreateVariableResponse(QXmlStreamReader &xml);
 

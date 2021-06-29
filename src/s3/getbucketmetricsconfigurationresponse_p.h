@@ -31,7 +31,7 @@ class GetBucketMetricsConfigurationResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    GetBucketMetricsConfigurationResponsePrivate(GetBucketMetricsConfigurationResponse * const q);
+    explicit GetBucketMetricsConfigurationResponsePrivate(GetBucketMetricsConfigurationResponse * const q);
 
     void parseGetBucketMetricsConfigurationResponse(QXmlStreamReader &xml);
 

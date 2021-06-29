@@ -31,7 +31,7 @@ class DeregisterJobDefinitionResponsePrivate : public BatchResponsePrivate {
 
 public:
 
-    DeregisterJobDefinitionResponsePrivate(DeregisterJobDefinitionResponse * const q);
+    explicit DeregisterJobDefinitionResponsePrivate(DeregisterJobDefinitionResponse * const q);
 
     void parseDeregisterJobDefinitionResponse(QXmlStreamReader &xml);
 

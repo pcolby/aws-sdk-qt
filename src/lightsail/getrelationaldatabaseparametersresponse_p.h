@@ -31,7 +31,7 @@ class GetRelationalDatabaseParametersResponsePrivate : public LightsailResponseP
 
 public:
 
-    GetRelationalDatabaseParametersResponsePrivate(GetRelationalDatabaseParametersResponse * const q);
+    explicit GetRelationalDatabaseParametersResponsePrivate(GetRelationalDatabaseParametersResponse * const q);
 
     void parseGetRelationalDatabaseParametersResponse(QXmlStreamReader &xml);
 

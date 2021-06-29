@@ -31,7 +31,7 @@ class MergeBranchesByFastForwardResponsePrivate : public CodeCommitResponsePriva
 
 public:
 
-    MergeBranchesByFastForwardResponsePrivate(MergeBranchesByFastForwardResponse * const q);
+    explicit MergeBranchesByFastForwardResponsePrivate(MergeBranchesByFastForwardResponse * const q);
 
     void parseMergeBranchesByFastForwardResponse(QXmlStreamReader &xml);
 

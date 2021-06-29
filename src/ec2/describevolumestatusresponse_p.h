@@ -31,7 +31,7 @@ class DescribeVolumeStatusResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeVolumeStatusResponsePrivate(DescribeVolumeStatusResponse * const q);
+    explicit DescribeVolumeStatusResponsePrivate(DescribeVolumeStatusResponse * const q);
 
     void parseDescribeVolumeStatusResponse(QXmlStreamReader &xml);
 

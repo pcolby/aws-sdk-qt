@@ -31,7 +31,7 @@ class ListAccountAssignmentDeletionStatusResponsePrivate : public SSOAdminRespon
 
 public:
 
-    ListAccountAssignmentDeletionStatusResponsePrivate(ListAccountAssignmentDeletionStatusResponse * const q);
+    explicit ListAccountAssignmentDeletionStatusResponsePrivate(ListAccountAssignmentDeletionStatusResponse * const q);
 
     void parseListAccountAssignmentDeletionStatusResponse(QXmlStreamReader &xml);
 

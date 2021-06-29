@@ -31,7 +31,7 @@ class InvokeDeviceMethodResponsePrivate : public IoT1ClickDevicesServiceResponse
 
 public:
 
-    InvokeDeviceMethodResponsePrivate(InvokeDeviceMethodResponse * const q);
+    explicit InvokeDeviceMethodResponsePrivate(InvokeDeviceMethodResponse * const q);
 
     void parseInvokeDeviceMethodResponse(QXmlStreamReader &xml);
 

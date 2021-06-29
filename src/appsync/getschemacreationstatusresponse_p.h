@@ -31,7 +31,7 @@ class GetSchemaCreationStatusResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 
-    GetSchemaCreationStatusResponsePrivate(GetSchemaCreationStatusResponse * const q);
+    explicit GetSchemaCreationStatusResponsePrivate(GetSchemaCreationStatusResponse * const q);
 
     void parseGetSchemaCreationStatusResponse(QXmlStreamReader &xml);
 

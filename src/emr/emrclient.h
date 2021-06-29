@@ -135,7 +135,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    EmrClient(
+    explicit EmrClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -192,7 +192,7 @@ public slots:
 protected:
     /// @cond internal
     EmrClientPrivate * const d_ptr; ///< Internal d-pointer.
-    EmrClient(EmrClientPrivate * const d);
+    explicit EmrClient(EmrClientPrivate * const d);
     /// @endcond
 
 private:

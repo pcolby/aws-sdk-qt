@@ -31,7 +31,7 @@ class GetComplianceSummaryByResourceTypeResponsePrivate : public ConfigServiceRe
 
 public:
 
-    GetComplianceSummaryByResourceTypeResponsePrivate(GetComplianceSummaryByResourceTypeResponse * const q);
+    explicit GetComplianceSummaryByResourceTypeResponsePrivate(GetComplianceSummaryByResourceTypeResponse * const q);
 
     void parseGetComplianceSummaryByResourceTypeResponse(QXmlStreamReader &xml);
 

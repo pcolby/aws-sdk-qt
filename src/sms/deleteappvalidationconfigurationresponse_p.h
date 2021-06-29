@@ -31,7 +31,7 @@ class DeleteAppValidationConfigurationResponsePrivate : public SmsResponsePrivat
 
 public:
 
-    DeleteAppValidationConfigurationResponsePrivate(DeleteAppValidationConfigurationResponse * const q);
+    explicit DeleteAppValidationConfigurationResponsePrivate(DeleteAppValidationConfigurationResponse * const q);
 
     void parseDeleteAppValidationConfigurationResponse(QXmlStreamReader &xml);
 

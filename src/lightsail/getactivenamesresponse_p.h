@@ -31,7 +31,7 @@ class GetActiveNamesResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    GetActiveNamesResponsePrivate(GetActiveNamesResponse * const q);
+    explicit GetActiveNamesResponsePrivate(GetActiveNamesResponse * const q);
 
     void parseGetActiveNamesResponse(QXmlStreamReader &xml);
 

@@ -215,7 +215,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    ServiceCatalogClient(
+    explicit ServiceCatalogClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -312,7 +312,7 @@ public slots:
 protected:
     /// @cond internal
     ServiceCatalogClientPrivate * const d_ptr; ///< Internal d-pointer.
-    ServiceCatalogClient(ServiceCatalogClientPrivate * const d);
+    explicit ServiceCatalogClient(ServiceCatalogClientPrivate * const d);
     /// @endcond
 
 private:

@@ -31,7 +31,7 @@ class DeleteRecoveryPointResponsePrivate : public BackupResponsePrivate {
 
 public:
 
-    DeleteRecoveryPointResponsePrivate(DeleteRecoveryPointResponse * const q);
+    explicit DeleteRecoveryPointResponsePrivate(DeleteRecoveryPointResponse * const q);
 
     void parseDeleteRecoveryPointResponse(QXmlStreamReader &xml);
 

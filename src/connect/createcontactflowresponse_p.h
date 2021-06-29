@@ -31,7 +31,7 @@ class CreateContactFlowResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    CreateContactFlowResponsePrivate(CreateContactFlowResponse * const q);
+    explicit CreateContactFlowResponsePrivate(CreateContactFlowResponse * const q);
 
     void parseCreateContactFlowResponse(QXmlStreamReader &xml);
 

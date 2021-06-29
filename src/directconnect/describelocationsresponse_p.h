@@ -31,7 +31,7 @@ class DescribeLocationsResponsePrivate : public DirectConnectResponsePrivate {
 
 public:
 
-    DescribeLocationsResponsePrivate(DescribeLocationsResponse * const q);
+    explicit DescribeLocationsResponsePrivate(DescribeLocationsResponse * const q);
 
     void parseDescribeLocationsResponse(QXmlStreamReader &xml);
 

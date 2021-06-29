@@ -31,7 +31,7 @@ class ImportSnapshotResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ImportSnapshotResponsePrivate(ImportSnapshotResponse * const q);
+    explicit ImportSnapshotResponsePrivate(ImportSnapshotResponse * const q);
 
     void parseImportSnapshotResponse(QXmlStreamReader &xml);
 

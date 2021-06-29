@@ -31,7 +31,7 @@ class CreateAlarmModelResponsePrivate : public IoTEventsResponsePrivate {
 
 public:
 
-    CreateAlarmModelResponsePrivate(CreateAlarmModelResponse * const q);
+    explicit CreateAlarmModelResponsePrivate(CreateAlarmModelResponse * const q);
 
     void parseCreateAlarmModelResponse(QXmlStreamReader &xml);
 

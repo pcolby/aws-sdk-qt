@@ -31,7 +31,7 @@ class GetPublicKeyConfigResponsePrivate : public CloudFrontResponsePrivate {
 
 public:
 
-    GetPublicKeyConfigResponsePrivate(GetPublicKeyConfigResponse * const q);
+    explicit GetPublicKeyConfigResponsePrivate(GetPublicKeyConfigResponse * const q);
 
     void parseGetPublicKeyConfigResponse(QXmlStreamReader &xml);
 

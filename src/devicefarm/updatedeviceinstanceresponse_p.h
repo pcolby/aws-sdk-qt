@@ -31,7 +31,7 @@ class UpdateDeviceInstanceResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    UpdateDeviceInstanceResponsePrivate(UpdateDeviceInstanceResponse * const q);
+    explicit UpdateDeviceInstanceResponsePrivate(UpdateDeviceInstanceResponse * const q);
 
     void parseUpdateDeviceInstanceResponse(QXmlStreamReader &xml);
 

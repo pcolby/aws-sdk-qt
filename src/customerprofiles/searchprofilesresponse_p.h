@@ -31,7 +31,7 @@ class SearchProfilesResponsePrivate : public CustomerProfilesResponsePrivate {
 
 public:
 
-    SearchProfilesResponsePrivate(SearchProfilesResponse * const q);
+    explicit SearchProfilesResponsePrivate(SearchProfilesResponse * const q);
 
     void parseSearchProfilesResponse(QXmlStreamReader &xml);
 

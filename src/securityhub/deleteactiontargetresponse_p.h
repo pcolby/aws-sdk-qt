@@ -31,7 +31,7 @@ class DeleteActionTargetResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 
-    DeleteActionTargetResponsePrivate(DeleteActionTargetResponse * const q);
+    explicit DeleteActionTargetResponsePrivate(DeleteActionTargetResponse * const q);
 
     void parseDeleteActionTargetResponse(QXmlStreamReader &xml);
 

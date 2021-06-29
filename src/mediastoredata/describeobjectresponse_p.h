@@ -31,7 +31,7 @@ class DescribeObjectResponsePrivate : public MediaStoreDataResponsePrivate {
 
 public:
 
-    DescribeObjectResponsePrivate(DescribeObjectResponse * const q);
+    explicit DescribeObjectResponsePrivate(DescribeObjectResponse * const q);
 
     void parseDescribeObjectResponse(QXmlStreamReader &xml);
 

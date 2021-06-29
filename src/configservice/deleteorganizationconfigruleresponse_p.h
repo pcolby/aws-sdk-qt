@@ -31,7 +31,7 @@ class DeleteOrganizationConfigRuleResponsePrivate : public ConfigServiceResponse
 
 public:
 
-    DeleteOrganizationConfigRuleResponsePrivate(DeleteOrganizationConfigRuleResponse * const q);
+    explicit DeleteOrganizationConfigRuleResponsePrivate(DeleteOrganizationConfigRuleResponse * const q);
 
     void parseDeleteOrganizationConfigRuleResponse(QXmlStreamReader &xml);
 

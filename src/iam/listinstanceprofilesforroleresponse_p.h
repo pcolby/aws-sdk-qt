@@ -31,7 +31,7 @@ class ListInstanceProfilesForRoleResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    ListInstanceProfilesForRoleResponsePrivate(ListInstanceProfilesForRoleResponse * const q);
+    explicit ListInstanceProfilesForRoleResponsePrivate(ListInstanceProfilesForRoleResponse * const q);
 
     void parseListInstanceProfilesForRoleResponse(QXmlStreamReader &xml);
 

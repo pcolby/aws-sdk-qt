@@ -31,7 +31,7 @@ class BatchEnableAlarmResponsePrivate : public IoTEventsDataResponsePrivate {
 
 public:
 
-    BatchEnableAlarmResponsePrivate(BatchEnableAlarmResponse * const q);
+    explicit BatchEnableAlarmResponsePrivate(BatchEnableAlarmResponse * const q);
 
     void parseBatchEnableAlarmResponse(QXmlStreamReader &xml);
 

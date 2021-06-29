@@ -31,7 +31,7 @@ class UpdateConfigurationSetTrackingOptionsResponsePrivate : public SesResponseP
 
 public:
 
-    UpdateConfigurationSetTrackingOptionsResponsePrivate(UpdateConfigurationSetTrackingOptionsResponse * const q);
+    explicit UpdateConfigurationSetTrackingOptionsResponsePrivate(UpdateConfigurationSetTrackingOptionsResponse * const q);
 
     void parseUpdateConfigurationSetTrackingOptionsResponse(QXmlStreamReader &xml);
 

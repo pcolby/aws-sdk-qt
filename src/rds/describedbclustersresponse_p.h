@@ -31,7 +31,7 @@ class DescribeDBClustersResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    DescribeDBClustersResponsePrivate(DescribeDBClustersResponse * const q);
+    explicit DescribeDBClustersResponsePrivate(DescribeDBClustersResponse * const q);
 
     void parseDescribeDBClustersResponse(QXmlStreamReader &xml);
 

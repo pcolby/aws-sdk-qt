@@ -31,7 +31,7 @@ class GetApplicationRevisionResponsePrivate : public CodeDeployResponsePrivate {
 
 public:
 
-    GetApplicationRevisionResponsePrivate(GetApplicationRevisionResponse * const q);
+    explicit GetApplicationRevisionResponsePrivate(GetApplicationRevisionResponse * const q);
 
     void parseGetApplicationRevisionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteSessionResponsePrivate : public LexRuntimeV2ResponsePrivate {
 
 public:
 
-    DeleteSessionResponsePrivate(DeleteSessionResponse * const q);
+    explicit DeleteSessionResponsePrivate(DeleteSessionResponse * const q);
 
     void parseDeleteSessionResponse(QXmlStreamReader &xml);
 

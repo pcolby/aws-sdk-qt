@@ -31,7 +31,7 @@ class DeleteParameterGroupResponsePrivate : public DaxResponsePrivate {
 
 public:
 
-    DeleteParameterGroupResponsePrivate(DeleteParameterGroupResponse * const q);
+    explicit DeleteParameterGroupResponsePrivate(DeleteParameterGroupResponse * const q);
 
     void parseDeleteParameterGroupResponse(QXmlStreamReader &xml);
 

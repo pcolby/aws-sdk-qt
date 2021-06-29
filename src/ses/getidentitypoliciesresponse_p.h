@@ -31,7 +31,7 @@ class GetIdentityPoliciesResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    GetIdentityPoliciesResponsePrivate(GetIdentityPoliciesResponse * const q);
+    explicit GetIdentityPoliciesResponsePrivate(GetIdentityPoliciesResponse * const q);
 
     void parseGetIdentityPoliciesResponse(QXmlStreamReader &xml);
 

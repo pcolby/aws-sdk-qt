@@ -31,7 +31,7 @@ class UpdateConferenceProviderResponsePrivate : public AlexaForBusinessResponseP
 
 public:
 
-    UpdateConferenceProviderResponsePrivate(UpdateConferenceProviderResponse * const q);
+    explicit UpdateConferenceProviderResponsePrivate(UpdateConferenceProviderResponse * const q);
 
     void parseUpdateConferenceProviderResponse(QXmlStreamReader &xml);
 

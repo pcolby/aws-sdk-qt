@@ -31,7 +31,7 @@ class UpdateSegmentResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    UpdateSegmentResponsePrivate(UpdateSegmentResponse * const q);
+    explicit UpdateSegmentResponsePrivate(UpdateSegmentResponse * const q);
 
     void parseUpdateSegmentResponse(QXmlStreamReader &xml);
 

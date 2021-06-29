@@ -30,7 +30,7 @@ class IoTEventsDataClient;
 class IoTEventsDataClientPrivate {
 
 public:
-    IoTEventsDataClientPrivate(IoTEventsDataClient * const q);
+    explicit IoTEventsDataClientPrivate(IoTEventsDataClient * const q);
 
 protected:
     IoTEventsDataClient * const q_ptr; ///< Internal q-pointer.

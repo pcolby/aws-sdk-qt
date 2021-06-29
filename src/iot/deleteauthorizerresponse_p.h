@@ -31,7 +31,7 @@ class DeleteAuthorizerResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DeleteAuthorizerResponsePrivate(DeleteAuthorizerResponse * const q);
+    explicit DeleteAuthorizerResponsePrivate(DeleteAuthorizerResponse * const q);
 
     void parseDeleteAuthorizerResponse(QXmlStreamReader &xml);
 

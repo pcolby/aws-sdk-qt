@@ -31,7 +31,7 @@ class GetLaunchProfileDetailsResponsePrivate : public NimbleStudioResponsePrivat
 
 public:
 
-    GetLaunchProfileDetailsResponsePrivate(GetLaunchProfileDetailsResponse * const q);
+    explicit GetLaunchProfileDetailsResponsePrivate(GetLaunchProfileDetailsResponse * const q);
 
     void parseGetLaunchProfileDetailsResponse(QXmlStreamReader &xml);
 

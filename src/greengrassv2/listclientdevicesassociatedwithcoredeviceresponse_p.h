@@ -31,7 +31,7 @@ class ListClientDevicesAssociatedWithCoreDeviceResponsePrivate : public Greengra
 
 public:
 
-    ListClientDevicesAssociatedWithCoreDeviceResponsePrivate(ListClientDevicesAssociatedWithCoreDeviceResponse * const q);
+    explicit ListClientDevicesAssociatedWithCoreDeviceResponsePrivate(ListClientDevicesAssociatedWithCoreDeviceResponse * const q);
 
     void parseListClientDevicesAssociatedWithCoreDeviceResponse(QXmlStreamReader &xml);
 

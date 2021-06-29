@@ -31,7 +31,7 @@ class SendVoiceMessageResponsePrivate : public PinpointSMSVoiceResponsePrivate {
 
 public:
 
-    SendVoiceMessageResponsePrivate(SendVoiceMessageResponse * const q);
+    explicit SendVoiceMessageResponsePrivate(SendVoiceMessageResponse * const q);
 
     void parseSendVoiceMessageResponse(QXmlStreamReader &xml);
 

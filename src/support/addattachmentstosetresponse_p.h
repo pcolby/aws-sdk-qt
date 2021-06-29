@@ -31,7 +31,7 @@ class AddAttachmentsToSetResponsePrivate : public SupportResponsePrivate {
 
 public:
 
-    AddAttachmentsToSetResponsePrivate(AddAttachmentsToSetResponse * const q);
+    explicit AddAttachmentsToSetResponsePrivate(AddAttachmentsToSetResponse * const q);
 
     void parseAddAttachmentsToSetResponse(QXmlStreamReader &xml);
 

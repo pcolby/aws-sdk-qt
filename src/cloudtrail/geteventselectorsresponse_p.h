@@ -31,7 +31,7 @@ class GetEventSelectorsResponsePrivate : public CloudTrailResponsePrivate {
 
 public:
 
-    GetEventSelectorsResponsePrivate(GetEventSelectorsResponse * const q);
+    explicit GetEventSelectorsResponsePrivate(GetEventSelectorsResponse * const q);
 
     void parseGetEventSelectorsResponse(QXmlStreamReader &xml);
 

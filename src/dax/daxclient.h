@@ -83,7 +83,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    DaxClient(
+    explicit DaxClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -114,7 +114,7 @@ public slots:
 protected:
     /// @cond internal
     DaxClientPrivate * const d_ptr; ///< Internal d-pointer.
-    DaxClient(DaxClientPrivate * const d);
+    explicit DaxClient(DaxClientPrivate * const d);
     /// @endcond
 
 private:

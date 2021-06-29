@@ -31,7 +31,7 @@ class DescribeConfigurationAggregatorSourcesStatusResponsePrivate : public Confi
 
 public:
 
-    DescribeConfigurationAggregatorSourcesStatusResponsePrivate(DescribeConfigurationAggregatorSourcesStatusResponse * const q);
+    explicit DescribeConfigurationAggregatorSourcesStatusResponsePrivate(DescribeConfigurationAggregatorSourcesStatusResponse * const q);
 
     void parseDescribeConfigurationAggregatorSourcesStatusResponse(QXmlStreamReader &xml);
 

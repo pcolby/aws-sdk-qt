@@ -233,7 +233,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    S3Client(
+    explicit S3Client(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -340,7 +340,7 @@ public slots:
 protected:
     /// @cond internal
     S3ClientPrivate * const d_ptr; ///< Internal d-pointer.
-    S3Client(S3ClientPrivate * const d);
+    explicit S3Client(S3ClientPrivate * const d);
     /// @endcond
 
 private:

@@ -31,7 +31,7 @@ class DeleteEvaluationResultsResponsePrivate : public ConfigServiceResponsePriva
 
 public:
 
-    DeleteEvaluationResultsResponsePrivate(DeleteEvaluationResultsResponse * const q);
+    explicit DeleteEvaluationResultsResponsePrivate(DeleteEvaluationResultsResponse * const q);
 
     void parseDeleteEvaluationResultsResponse(QXmlStreamReader &xml);
 

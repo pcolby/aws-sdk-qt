@@ -31,7 +31,7 @@ class DeleteAccountCustomizationResponsePrivate : public QuickSightResponsePriva
 
 public:
 
-    DeleteAccountCustomizationResponsePrivate(DeleteAccountCustomizationResponse * const q);
+    explicit DeleteAccountCustomizationResponsePrivate(DeleteAccountCustomizationResponse * const q);
 
     void parseDeleteAccountCustomizationResponse(QXmlStreamReader &xml);
 

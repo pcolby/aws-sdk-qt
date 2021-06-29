@@ -29,7 +29,7 @@ class CloudWatchLogsResponsePrivate {
 
 public:
 
-    CloudWatchLogsResponsePrivate(CloudWatchLogsResponse * const q);
+    explicit CloudWatchLogsResponsePrivate(CloudWatchLogsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

@@ -31,7 +31,7 @@ class DisassociateAddressResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DisassociateAddressResponsePrivate(DisassociateAddressResponse * const q);
+    explicit DisassociateAddressResponsePrivate(DisassociateAddressResponse * const q);
 
     void parseDisassociateAddressResponse(QXmlStreamReader &xml);
 

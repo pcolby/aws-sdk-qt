@@ -31,7 +31,7 @@ class GetResourceLFTagsResponsePrivate : public LakeFormationResponsePrivate {
 
 public:
 
-    GetResourceLFTagsResponsePrivate(GetResourceLFTagsResponse * const q);
+    explicit GetResourceLFTagsResponsePrivate(GetResourceLFTagsResponse * const q);
 
     void parseGetResourceLFTagsResponse(QXmlStreamReader &xml);
 

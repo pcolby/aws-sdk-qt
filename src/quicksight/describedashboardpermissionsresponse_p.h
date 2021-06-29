@@ -31,7 +31,7 @@ class DescribeDashboardPermissionsResponsePrivate : public QuickSightResponsePri
 
 public:
 
-    DescribeDashboardPermissionsResponsePrivate(DescribeDashboardPermissionsResponse * const q);
+    explicit DescribeDashboardPermissionsResponsePrivate(DescribeDashboardPermissionsResponse * const q);
 
     void parseDescribeDashboardPermissionsResponse(QXmlStreamReader &xml);
 

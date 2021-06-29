@@ -31,7 +31,7 @@ class DescribeLoadBalancerPoliciesResponsePrivate : public ElasticLoadBalancingR
 
 public:
 
-    DescribeLoadBalancerPoliciesResponsePrivate(DescribeLoadBalancerPoliciesResponse * const q);
+    explicit DescribeLoadBalancerPoliciesResponsePrivate(DescribeLoadBalancerPoliciesResponse * const q);
 
     void parseDescribeLoadBalancerPoliciesResponse(QXmlStreamReader &xml);
 

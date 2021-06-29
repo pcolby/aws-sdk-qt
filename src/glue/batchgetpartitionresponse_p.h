@@ -31,7 +31,7 @@ class BatchGetPartitionResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    BatchGetPartitionResponsePrivate(BatchGetPartitionResponse * const q);
+    explicit BatchGetPartitionResponsePrivate(BatchGetPartitionResponse * const q);
 
     void parseBatchGetPartitionResponse(QXmlStreamReader &xml);
 

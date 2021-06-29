@@ -31,7 +31,7 @@ class DeleteAcceleratorResponsePrivate : public GlobalAcceleratorResponsePrivate
 
 public:
 
-    DeleteAcceleratorResponsePrivate(DeleteAcceleratorResponse * const q);
+    explicit DeleteAcceleratorResponsePrivate(DeleteAcceleratorResponse * const q);
 
     void parseDeleteAcceleratorResponse(QXmlStreamReader &xml);
 

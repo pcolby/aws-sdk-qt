@@ -157,7 +157,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    GuardDutyClient(
+    explicit GuardDutyClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -225,7 +225,7 @@ public slots:
 protected:
     /// @cond internal
     GuardDutyClientPrivate * const d_ptr; ///< Internal d-pointer.
-    GuardDutyClient(GuardDutyClientPrivate * const d);
+    explicit GuardDutyClient(GuardDutyClientPrivate * const d);
     /// @endcond
 
 private:

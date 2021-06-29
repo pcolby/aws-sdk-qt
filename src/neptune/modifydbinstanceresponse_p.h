@@ -31,7 +31,7 @@ class ModifyDBInstanceResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 
-    ModifyDBInstanceResponsePrivate(ModifyDBInstanceResponse * const q);
+    explicit ModifyDBInstanceResponsePrivate(ModifyDBInstanceResponse * const q);
 
     void parseModifyDBInstanceResponse(QXmlStreamReader &xml);
 

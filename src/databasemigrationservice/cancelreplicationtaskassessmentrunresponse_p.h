@@ -31,7 +31,7 @@ class CancelReplicationTaskAssessmentRunResponsePrivate : public DatabaseMigrati
 
 public:
 
-    CancelReplicationTaskAssessmentRunResponsePrivate(CancelReplicationTaskAssessmentRunResponse * const q);
+    explicit CancelReplicationTaskAssessmentRunResponsePrivate(CancelReplicationTaskAssessmentRunResponse * const q);
 
     void parseCancelReplicationTaskAssessmentRunResponse(QXmlStreamReader &xml);
 

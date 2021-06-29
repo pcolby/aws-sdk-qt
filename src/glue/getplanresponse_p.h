@@ -31,7 +31,7 @@ class GetPlanResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    GetPlanResponsePrivate(GetPlanResponse * const q);
+    explicit GetPlanResponsePrivate(GetPlanResponse * const q);
 
     void parseGetPlanResponse(QXmlStreamReader &xml);
 

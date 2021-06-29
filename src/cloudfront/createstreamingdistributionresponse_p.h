@@ -31,7 +31,7 @@ class CreateStreamingDistributionResponsePrivate : public CloudFrontResponsePriv
 
 public:
 
-    CreateStreamingDistributionResponsePrivate(CreateStreamingDistributionResponse * const q);
+    explicit CreateStreamingDistributionResponsePrivate(CreateStreamingDistributionResponse * const q);
 
     void parseCreateStreamingDistributionResponse(QXmlStreamReader &xml);
 

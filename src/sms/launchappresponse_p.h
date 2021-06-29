@@ -31,7 +31,7 @@ class LaunchAppResponsePrivate : public SmsResponsePrivate {
 
 public:
 
-    LaunchAppResponsePrivate(LaunchAppResponse * const q);
+    explicit LaunchAppResponsePrivate(LaunchAppResponse * const q);
 
     void parseLaunchAppResponse(QXmlStreamReader &xml);
 

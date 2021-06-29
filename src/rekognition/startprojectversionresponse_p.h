@@ -31,7 +31,7 @@ class StartProjectVersionResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 
-    StartProjectVersionResponsePrivate(StartProjectVersionResponse * const q);
+    explicit StartProjectVersionResponsePrivate(StartProjectVersionResponse * const q);
 
     void parseStartProjectVersionResponse(QXmlStreamReader &xml);
 

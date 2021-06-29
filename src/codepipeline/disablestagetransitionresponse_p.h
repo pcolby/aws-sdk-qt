@@ -31,7 +31,7 @@ class DisableStageTransitionResponsePrivate : public CodePipelineResponsePrivate
 
 public:
 
-    DisableStageTransitionResponsePrivate(DisableStageTransitionResponse * const q);
+    explicit DisableStageTransitionResponsePrivate(DisableStageTransitionResponse * const q);
 
     void parseDisableStageTransitionResponse(QXmlStreamReader &xml);
 

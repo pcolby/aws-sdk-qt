@@ -31,7 +31,7 @@ class RemoveLayerVersionPermissionResponsePrivate : public LambdaResponsePrivate
 
 public:
 
-    RemoveLayerVersionPermissionResponsePrivate(RemoveLayerVersionPermissionResponse * const q);
+    explicit RemoveLayerVersionPermissionResponsePrivate(RemoveLayerVersionPermissionResponse * const q);
 
     void parseRemoveLayerVersionPermissionResponse(QXmlStreamReader &xml);
 

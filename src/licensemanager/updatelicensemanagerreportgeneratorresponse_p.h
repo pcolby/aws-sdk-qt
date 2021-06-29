@@ -31,7 +31,7 @@ class UpdateLicenseManagerReportGeneratorResponsePrivate : public LicenseManager
 
 public:
 
-    UpdateLicenseManagerReportGeneratorResponsePrivate(UpdateLicenseManagerReportGeneratorResponse * const q);
+    explicit UpdateLicenseManagerReportGeneratorResponsePrivate(UpdateLicenseManagerReportGeneratorResponse * const q);
 
     void parseUpdateLicenseManagerReportGeneratorResponse(QXmlStreamReader &xml);
 

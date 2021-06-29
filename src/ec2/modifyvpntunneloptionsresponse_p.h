@@ -31,7 +31,7 @@ class ModifyVpnTunnelOptionsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ModifyVpnTunnelOptionsResponsePrivate(ModifyVpnTunnelOptionsResponse * const q);
+    explicit ModifyVpnTunnelOptionsResponsePrivate(ModifyVpnTunnelOptionsResponse * const q);
 
     void parseModifyVpnTunnelOptionsResponse(QXmlStreamReader &xml);
 

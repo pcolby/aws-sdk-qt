@@ -31,7 +31,7 @@ class RequestEnvironmentInfoResponsePrivate : public ElasticBeanstalkResponsePri
 
 public:
 
-    RequestEnvironmentInfoResponsePrivate(RequestEnvironmentInfoResponse * const q);
+    explicit RequestEnvironmentInfoResponsePrivate(RequestEnvironmentInfoResponse * const q);
 
     void parseRequestEnvironmentInfoResponse(QXmlStreamReader &xml);
 

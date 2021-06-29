@@ -31,7 +31,7 @@ class GetIntrospectionSchemaResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 
-    GetIntrospectionSchemaResponsePrivate(GetIntrospectionSchemaResponse * const q);
+    explicit GetIntrospectionSchemaResponsePrivate(GetIntrospectionSchemaResponse * const q);
 
     void parseGetIntrospectionSchemaResponse(QXmlStreamReader &xml);
 

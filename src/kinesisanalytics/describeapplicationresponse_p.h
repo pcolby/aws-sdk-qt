@@ -31,7 +31,7 @@ class DescribeApplicationResponsePrivate : public KinesisAnalyticsResponsePrivat
 
 public:
 
-    DescribeApplicationResponsePrivate(DescribeApplicationResponse * const q);
+    explicit DescribeApplicationResponsePrivate(DescribeApplicationResponse * const q);
 
     void parseDescribeApplicationResponse(QXmlStreamReader &xml);
 

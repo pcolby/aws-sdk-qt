@@ -31,7 +31,7 @@ class DescribeTransitGatewayPeeringAttachmentsResponsePrivate : public Ec2Respon
 
 public:
 
-    DescribeTransitGatewayPeeringAttachmentsResponsePrivate(DescribeTransitGatewayPeeringAttachmentsResponse * const q);
+    explicit DescribeTransitGatewayPeeringAttachmentsResponsePrivate(DescribeTransitGatewayPeeringAttachmentsResponse * const q);
 
     void parseDescribeTransitGatewayPeeringAttachmentsResponse(QXmlStreamReader &xml);
 

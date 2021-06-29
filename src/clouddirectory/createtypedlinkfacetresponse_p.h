@@ -31,7 +31,7 @@ class CreateTypedLinkFacetResponsePrivate : public CloudDirectoryResponsePrivate
 
 public:
 
-    CreateTypedLinkFacetResponsePrivate(CreateTypedLinkFacetResponse * const q);
+    explicit CreateTypedLinkFacetResponsePrivate(CreateTypedLinkFacetResponse * const q);
 
     void parseCreateTypedLinkFacetResponse(QXmlStreamReader &xml);
 

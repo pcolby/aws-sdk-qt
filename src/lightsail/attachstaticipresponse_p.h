@@ -31,7 +31,7 @@ class AttachStaticIpResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    AttachStaticIpResponsePrivate(AttachStaticIpResponse * const q);
+    explicit AttachStaticIpResponsePrivate(AttachStaticIpResponse * const q);
 
     void parseAttachStaticIpResponse(QXmlStreamReader &xml);
 

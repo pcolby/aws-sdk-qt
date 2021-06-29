@@ -31,7 +31,7 @@ class UpdateBatchPredictionResponsePrivate : public MachineLearningResponsePriva
 
 public:
 
-    UpdateBatchPredictionResponsePrivate(UpdateBatchPredictionResponse * const q);
+    explicit UpdateBatchPredictionResponsePrivate(UpdateBatchPredictionResponse * const q);
 
     void parseUpdateBatchPredictionResponse(QXmlStreamReader &xml);
 

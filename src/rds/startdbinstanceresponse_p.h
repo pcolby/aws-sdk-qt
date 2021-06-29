@@ -31,7 +31,7 @@ class StartDBInstanceResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    StartDBInstanceResponsePrivate(StartDBInstanceResponse * const q);
+    explicit StartDBInstanceResponsePrivate(StartDBInstanceResponse * const q);
 
     void parseStartDBInstanceResponse(QXmlStreamReader &xml);
 

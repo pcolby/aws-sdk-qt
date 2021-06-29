@@ -31,7 +31,7 @@ class RebuildWorkspacesResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 
-    RebuildWorkspacesResponsePrivate(RebuildWorkspacesResponse * const q);
+    explicit RebuildWorkspacesResponsePrivate(RebuildWorkspacesResponse * const q);
 
     void parseRebuildWorkspacesResponse(QXmlStreamReader &xml);
 

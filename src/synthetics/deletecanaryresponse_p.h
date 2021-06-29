@@ -31,7 +31,7 @@ class DeleteCanaryResponsePrivate : public SyntheticsResponsePrivate {
 
 public:
 
-    DeleteCanaryResponsePrivate(DeleteCanaryResponse * const q);
+    explicit DeleteCanaryResponsePrivate(DeleteCanaryResponse * const q);
 
     void parseDeleteCanaryResponse(QXmlStreamReader &xml);
 

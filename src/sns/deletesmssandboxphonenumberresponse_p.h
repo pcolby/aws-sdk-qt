@@ -31,7 +31,7 @@ class DeleteSMSSandboxPhoneNumberResponsePrivate : public SnsResponsePrivate {
 
 public:
 
-    DeleteSMSSandboxPhoneNumberResponsePrivate(DeleteSMSSandboxPhoneNumberResponse * const q);
+    explicit DeleteSMSSandboxPhoneNumberResponsePrivate(DeleteSMSSandboxPhoneNumberResponse * const q);
 
     void parseDeleteSMSSandboxPhoneNumberResponse(QXmlStreamReader &xml);
 

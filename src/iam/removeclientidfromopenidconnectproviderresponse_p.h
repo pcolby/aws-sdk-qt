@@ -31,7 +31,7 @@ class RemoveClientIDFromOpenIDConnectProviderResponsePrivate : public IamRespons
 
 public:
 
-    RemoveClientIDFromOpenIDConnectProviderResponsePrivate(RemoveClientIDFromOpenIDConnectProviderResponse * const q);
+    explicit RemoveClientIDFromOpenIDConnectProviderResponsePrivate(RemoveClientIDFromOpenIDConnectProviderResponse * const q);
 
     void parseRemoveClientIDFromOpenIDConnectProviderResponse(QXmlStreamReader &xml);
 

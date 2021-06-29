@@ -31,7 +31,7 @@ class UpdateTopicRuleDestinationResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    UpdateTopicRuleDestinationResponsePrivate(UpdateTopicRuleDestinationResponse * const q);
+    explicit UpdateTopicRuleDestinationResponsePrivate(UpdateTopicRuleDestinationResponse * const q);
 
     void parseUpdateTopicRuleDestinationResponse(QXmlStreamReader &xml);
 

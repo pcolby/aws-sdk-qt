@@ -31,7 +31,7 @@ class ListTagsForResourceResponsePrivate : public DocDBResponsePrivate {
 
 public:
 
-    ListTagsForResourceResponsePrivate(ListTagsForResourceResponse * const q);
+    explicit ListTagsForResourceResponsePrivate(ListTagsForResourceResponse * const q);
 
     void parseListTagsForResourceResponse(QXmlStreamReader &xml);
 

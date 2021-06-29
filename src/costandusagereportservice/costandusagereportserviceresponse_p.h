@@ -29,7 +29,7 @@ class CostandUsageReportServiceResponsePrivate {
 
 public:
 
-    CostandUsageReportServiceResponsePrivate(CostandUsageReportServiceResponse * const q);
+    explicit CostandUsageReportServiceResponsePrivate(CostandUsageReportServiceResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

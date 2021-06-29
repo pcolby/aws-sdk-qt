@@ -31,7 +31,7 @@ class ListGroupVersionsResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 
-    ListGroupVersionsResponsePrivate(ListGroupVersionsResponse * const q);
+    explicit ListGroupVersionsResponsePrivate(ListGroupVersionsResponse * const q);
 
     void parseListGroupVersionsResponse(QXmlStreamReader &xml);
 

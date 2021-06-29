@@ -29,7 +29,7 @@ class MqResponsePrivate {
 
 public:
 
-    MqResponsePrivate(MqResponse * const q);
+    explicit MqResponsePrivate(MqResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

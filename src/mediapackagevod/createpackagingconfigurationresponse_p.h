@@ -31,7 +31,7 @@ class CreatePackagingConfigurationResponsePrivate : public MediaPackageVodRespon
 
 public:
 
-    CreatePackagingConfigurationResponsePrivate(CreatePackagingConfigurationResponse * const q);
+    explicit CreatePackagingConfigurationResponsePrivate(CreatePackagingConfigurationResponse * const q);
 
     void parseCreatePackagingConfigurationResponse(QXmlStreamReader &xml);
 

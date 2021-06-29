@@ -31,7 +31,7 @@ class CreateDBSubnetGroupResponsePrivate : public DocDBResponsePrivate {
 
 public:
 
-    CreateDBSubnetGroupResponsePrivate(CreateDBSubnetGroupResponse * const q);
+    explicit CreateDBSubnetGroupResponsePrivate(CreateDBSubnetGroupResponse * const q);
 
     void parseCreateDBSubnetGroupResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteBillingGroupResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DeleteBillingGroupResponsePrivate(DeleteBillingGroupResponse * const q);
+    explicit DeleteBillingGroupResponsePrivate(DeleteBillingGroupResponse * const q);
 
     void parseDeleteBillingGroupResponse(QXmlStreamReader &xml);
 

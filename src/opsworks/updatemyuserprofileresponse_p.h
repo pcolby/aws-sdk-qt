@@ -31,7 +31,7 @@ class UpdateMyUserProfileResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    UpdateMyUserProfileResponsePrivate(UpdateMyUserProfileResponse * const q);
+    explicit UpdateMyUserProfileResponsePrivate(UpdateMyUserProfileResponse * const q);
 
     void parseUpdateMyUserProfileResponse(QXmlStreamReader &xml);
 

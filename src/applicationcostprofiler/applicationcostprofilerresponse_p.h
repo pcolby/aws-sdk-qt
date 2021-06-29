@@ -29,7 +29,7 @@ class ApplicationCostProfilerResponsePrivate {
 
 public:
 
-    ApplicationCostProfilerResponsePrivate(ApplicationCostProfilerResponse * const q);
+    explicit ApplicationCostProfilerResponsePrivate(ApplicationCostProfilerResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

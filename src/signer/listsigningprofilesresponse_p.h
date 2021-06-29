@@ -31,7 +31,7 @@ class ListSigningProfilesResponsePrivate : public signerResponsePrivate {
 
 public:
 
-    ListSigningProfilesResponsePrivate(ListSigningProfilesResponse * const q);
+    explicit ListSigningProfilesResponsePrivate(ListSigningProfilesResponse * const q);
 
     void parseListSigningProfilesResponse(QXmlStreamReader &xml);
 

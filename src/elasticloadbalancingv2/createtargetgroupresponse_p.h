@@ -31,7 +31,7 @@ class CreateTargetGroupResponsePrivate : public ElasticLoadBalancingv2ResponsePr
 
 public:
 
-    CreateTargetGroupResponsePrivate(CreateTargetGroupResponse * const q);
+    explicit CreateTargetGroupResponsePrivate(CreateTargetGroupResponse * const q);
 
     void parseCreateTargetGroupResponse(QXmlStreamReader &xml);
 

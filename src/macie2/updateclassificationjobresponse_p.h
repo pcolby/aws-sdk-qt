@@ -31,7 +31,7 @@ class UpdateClassificationJobResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 
-    UpdateClassificationJobResponsePrivate(UpdateClassificationJobResponse * const q);
+    explicit UpdateClassificationJobResponsePrivate(UpdateClassificationJobResponse * const q);
 
     void parseUpdateClassificationJobResponse(QXmlStreamReader &xml);
 

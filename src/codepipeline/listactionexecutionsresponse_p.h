@@ -31,7 +31,7 @@ class ListActionExecutionsResponsePrivate : public CodePipelineResponsePrivate {
 
 public:
 
-    ListActionExecutionsResponsePrivate(ListActionExecutionsResponse * const q);
+    explicit ListActionExecutionsResponsePrivate(ListActionExecutionsResponse * const q);
 
     void parseListActionExecutionsResponse(QXmlStreamReader &xml);
 

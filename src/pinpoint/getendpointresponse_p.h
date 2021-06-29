@@ -31,7 +31,7 @@ class GetEndpointResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    GetEndpointResponsePrivate(GetEndpointResponse * const q);
+    explicit GetEndpointResponsePrivate(GetEndpointResponse * const q);
 
     void parseGetEndpointResponse(QXmlStreamReader &xml);
 

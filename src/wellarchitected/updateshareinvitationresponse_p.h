@@ -31,7 +31,7 @@ class UpdateShareInvitationResponsePrivate : public WellArchitectedResponsePriva
 
 public:
 
-    UpdateShareInvitationResponsePrivate(UpdateShareInvitationResponse * const q);
+    explicit UpdateShareInvitationResponsePrivate(UpdateShareInvitationResponse * const q);
 
     void parseUpdateShareInvitationResponse(QXmlStreamReader &xml);
 

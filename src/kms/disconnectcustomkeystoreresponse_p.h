@@ -31,7 +31,7 @@ class DisconnectCustomKeyStoreResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    DisconnectCustomKeyStoreResponsePrivate(DisconnectCustomKeyStoreResponse * const q);
+    explicit DisconnectCustomKeyStoreResponsePrivate(DisconnectCustomKeyStoreResponse * const q);
 
     void parseDisconnectCustomKeyStoreResponse(QXmlStreamReader &xml);
 

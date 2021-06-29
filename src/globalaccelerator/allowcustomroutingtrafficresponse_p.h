@@ -31,7 +31,7 @@ class AllowCustomRoutingTrafficResponsePrivate : public GlobalAcceleratorRespons
 
 public:
 
-    AllowCustomRoutingTrafficResponsePrivate(AllowCustomRoutingTrafficResponse * const q);
+    explicit AllowCustomRoutingTrafficResponsePrivate(AllowCustomRoutingTrafficResponse * const q);
 
     void parseAllowCustomRoutingTrafficResponse(QXmlStreamReader &xml);
 

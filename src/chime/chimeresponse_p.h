@@ -29,7 +29,7 @@ class ChimeResponsePrivate {
 
 public:
 
-    ChimeResponsePrivate(ChimeResponse * const q);
+    explicit ChimeResponsePrivate(ChimeResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

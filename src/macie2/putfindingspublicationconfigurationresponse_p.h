@@ -31,7 +31,7 @@ class PutFindingsPublicationConfigurationResponsePrivate : public Macie2Response
 
 public:
 
-    PutFindingsPublicationConfigurationResponsePrivate(PutFindingsPublicationConfigurationResponse * const q);
+    explicit PutFindingsPublicationConfigurationResponsePrivate(PutFindingsPublicationConfigurationResponse * const q);
 
     void parsePutFindingsPublicationConfigurationResponse(QXmlStreamReader &xml);
 

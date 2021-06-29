@@ -31,7 +31,7 @@ class UpdateExperimentTemplateResponsePrivate : public FisResponsePrivate {
 
 public:
 
-    UpdateExperimentTemplateResponsePrivate(UpdateExperimentTemplateResponse * const q);
+    explicit UpdateExperimentTemplateResponsePrivate(UpdateExperimentTemplateResponse * const q);
 
     void parseUpdateExperimentTemplateResponse(QXmlStreamReader &xml);
 

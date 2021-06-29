@@ -31,7 +31,7 @@ class DeleteIpGroupResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 
-    DeleteIpGroupResponsePrivate(DeleteIpGroupResponse * const q);
+    explicit DeleteIpGroupResponsePrivate(DeleteIpGroupResponse * const q);
 
     void parseDeleteIpGroupResponse(QXmlStreamReader &xml);
 

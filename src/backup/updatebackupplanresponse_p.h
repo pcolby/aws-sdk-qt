@@ -31,7 +31,7 @@ class UpdateBackupPlanResponsePrivate : public BackupResponsePrivate {
 
 public:
 
-    UpdateBackupPlanResponsePrivate(UpdateBackupPlanResponse * const q);
+    explicit UpdateBackupPlanResponsePrivate(UpdateBackupPlanResponse * const q);
 
     void parseUpdateBackupPlanResponse(QXmlStreamReader &xml);
 

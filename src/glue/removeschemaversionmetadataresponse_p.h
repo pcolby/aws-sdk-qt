@@ -31,7 +31,7 @@ class RemoveSchemaVersionMetadataResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    RemoveSchemaVersionMetadataResponsePrivate(RemoveSchemaVersionMetadataResponse * const q);
+    explicit RemoveSchemaVersionMetadataResponsePrivate(RemoveSchemaVersionMetadataResponse * const q);
 
     void parseRemoveSchemaVersionMetadataResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateDistributionWithTagsResponsePrivate : public CloudFrontResponsePriva
 
 public:
 
-    CreateDistributionWithTagsResponsePrivate(CreateDistributionWithTagsResponse * const q);
+    explicit CreateDistributionWithTagsResponsePrivate(CreateDistributionWithTagsResponse * const q);
 
     void parseCreateDistributionWithTagsResponse(QXmlStreamReader &xml);
 

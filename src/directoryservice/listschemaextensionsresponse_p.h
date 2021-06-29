@@ -31,7 +31,7 @@ class ListSchemaExtensionsResponsePrivate : public DirectoryServiceResponsePriva
 
 public:
 
-    ListSchemaExtensionsResponsePrivate(ListSchemaExtensionsResponse * const q);
+    explicit ListSchemaExtensionsResponsePrivate(ListSchemaExtensionsResponse * const q);
 
     void parseListSchemaExtensionsResponse(QXmlStreamReader &xml);
 

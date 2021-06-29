@@ -31,7 +31,7 @@ class AssociateResourceShareResponsePrivate : public RamResponsePrivate {
 
 public:
 
-    AssociateResourceShareResponsePrivate(AssociateResourceShareResponse * const q);
+    explicit AssociateResourceShareResponsePrivate(AssociateResourceShareResponse * const q);
 
     void parseAssociateResourceShareResponse(QXmlStreamReader &xml);
 

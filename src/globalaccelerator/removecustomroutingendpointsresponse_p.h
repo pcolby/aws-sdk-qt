@@ -31,7 +31,7 @@ class RemoveCustomRoutingEndpointsResponsePrivate : public GlobalAcceleratorResp
 
 public:
 
-    RemoveCustomRoutingEndpointsResponsePrivate(RemoveCustomRoutingEndpointsResponse * const q);
+    explicit RemoveCustomRoutingEndpointsResponsePrivate(RemoveCustomRoutingEndpointsResponse * const q);
 
     void parseRemoveCustomRoutingEndpointsResponse(QXmlStreamReader &xml);
 

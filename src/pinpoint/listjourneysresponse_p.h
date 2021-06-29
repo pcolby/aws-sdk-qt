@@ -31,7 +31,7 @@ class ListJourneysResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    ListJourneysResponsePrivate(ListJourneysResponse * const q);
+    explicit ListJourneysResponsePrivate(ListJourneysResponse * const q);
 
     void parseListJourneysResponse(QXmlStreamReader &xml);
 

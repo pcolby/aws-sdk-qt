@@ -31,7 +31,7 @@ class AssociateDRTRoleResponsePrivate : public ShieldResponsePrivate {
 
 public:
 
-    AssociateDRTRoleResponsePrivate(AssociateDRTRoleResponse * const q);
+    explicit AssociateDRTRoleResponsePrivate(AssociateDRTRoleResponse * const q);
 
     void parseAssociateDRTRoleResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteLaunchTemplateResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DeleteLaunchTemplateResponsePrivate(DeleteLaunchTemplateResponse * const q);
+    explicit DeleteLaunchTemplateResponsePrivate(DeleteLaunchTemplateResponse * const q);
 
     void parseDeleteLaunchTemplateResponse(QXmlStreamReader &xml);
 

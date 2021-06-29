@@ -31,7 +31,7 @@ class CreateWebhookResponsePrivate : public AmplifyResponsePrivate {
 
 public:
 
-    CreateWebhookResponsePrivate(CreateWebhookResponse * const q);
+    explicit CreateWebhookResponsePrivate(CreateWebhookResponse * const q);
 
     void parseCreateWebhookResponse(QXmlStreamReader &xml);
 

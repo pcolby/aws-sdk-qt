@@ -31,7 +31,7 @@ class DeregisterStreamConsumerResponsePrivate : public KinesisResponsePrivate {
 
 public:
 
-    DeregisterStreamConsumerResponsePrivate(DeregisterStreamConsumerResponse * const q);
+    explicit DeregisterStreamConsumerResponsePrivate(DeregisterStreamConsumerResponse * const q);
 
     void parseDeregisterStreamConsumerResponse(QXmlStreamReader &xml);
 

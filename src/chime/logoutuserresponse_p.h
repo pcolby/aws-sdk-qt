@@ -31,7 +31,7 @@ class LogoutUserResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    LogoutUserResponsePrivate(LogoutUserResponse * const q);
+    explicit LogoutUserResponsePrivate(LogoutUserResponse * const q);
 
     void parseLogoutUserResponse(QXmlStreamReader &xml);
 

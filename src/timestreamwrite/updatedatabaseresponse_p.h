@@ -31,7 +31,7 @@ class UpdateDatabaseResponsePrivate : public TimestreamWriteResponsePrivate {
 
 public:
 
-    UpdateDatabaseResponsePrivate(UpdateDatabaseResponse * const q);
+    explicit UpdateDatabaseResponsePrivate(UpdateDatabaseResponse * const q);
 
     void parseUpdateDatabaseResponse(QXmlStreamReader &xml);
 

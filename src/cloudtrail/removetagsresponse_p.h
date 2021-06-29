@@ -31,7 +31,7 @@ class RemoveTagsResponsePrivate : public CloudTrailResponsePrivate {
 
 public:
 
-    RemoveTagsResponsePrivate(RemoveTagsResponse * const q);
+    explicit RemoveTagsResponsePrivate(RemoveTagsResponse * const q);
 
     void parseRemoveTagsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListLoggingConfigurationsResponsePrivate : public Wafv2ResponsePrivate {
 
 public:
 
-    ListLoggingConfigurationsResponsePrivate(ListLoggingConfigurationsResponse * const q);
+    explicit ListLoggingConfigurationsResponsePrivate(ListLoggingConfigurationsResponse * const q);
 
     void parseListLoggingConfigurationsResponse(QXmlStreamReader &xml);
 

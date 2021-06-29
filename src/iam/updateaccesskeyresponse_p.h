@@ -31,7 +31,7 @@ class UpdateAccessKeyResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    UpdateAccessKeyResponsePrivate(UpdateAccessKeyResponse * const q);
+    explicit UpdateAccessKeyResponsePrivate(UpdateAccessKeyResponse * const q);
 
     void parseUpdateAccessKeyResponse(QXmlStreamReader &xml);
 

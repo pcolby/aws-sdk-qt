@@ -31,7 +31,7 @@ class CreatePlatformEndpointResponsePrivate : public SnsResponsePrivate {
 
 public:
 
-    CreatePlatformEndpointResponsePrivate(CreatePlatformEndpointResponse * const q);
+    explicit CreatePlatformEndpointResponsePrivate(CreatePlatformEndpointResponse * const q);
 
     void parseCreatePlatformEndpointResponse(QXmlStreamReader &xml);
 

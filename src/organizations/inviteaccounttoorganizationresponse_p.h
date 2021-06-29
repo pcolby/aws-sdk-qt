@@ -31,7 +31,7 @@ class InviteAccountToOrganizationResponsePrivate : public OrganizationsResponseP
 
 public:
 
-    InviteAccountToOrganizationResponsePrivate(InviteAccountToOrganizationResponse * const q);
+    explicit InviteAccountToOrganizationResponsePrivate(InviteAccountToOrganizationResponse * const q);
 
     void parseInviteAccountToOrganizationResponse(QXmlStreamReader &xml);
 

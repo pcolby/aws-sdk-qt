@@ -29,7 +29,7 @@ class LookoutEquipmentResponsePrivate {
 
 public:
 
-    LookoutEquipmentResponsePrivate(LookoutEquipmentResponse * const q);
+    explicit LookoutEquipmentResponsePrivate(LookoutEquipmentResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

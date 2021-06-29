@@ -31,7 +31,7 @@ class GetMissionProfileResponsePrivate : public GroundStationResponsePrivate {
 
 public:
 
-    GetMissionProfileResponsePrivate(GetMissionProfileResponse * const q);
+    explicit GetMissionProfileResponsePrivate(GetMissionProfileResponse * const q);
 
     void parseGetMissionProfileResponse(QXmlStreamReader &xml);
 

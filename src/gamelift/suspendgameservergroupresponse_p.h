@@ -31,7 +31,7 @@ class SuspendGameServerGroupResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    SuspendGameServerGroupResponsePrivate(SuspendGameServerGroupResponse * const q);
+    explicit SuspendGameServerGroupResponsePrivate(SuspendGameServerGroupResponse * const q);
 
     void parseSuspendGameServerGroupResponse(QXmlStreamReader &xml);
 

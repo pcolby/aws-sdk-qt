@@ -31,7 +31,7 @@ class ApplySchemaResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 
-    ApplySchemaResponsePrivate(ApplySchemaResponse * const q);
+    explicit ApplySchemaResponsePrivate(ApplySchemaResponse * const q);
 
     void parseApplySchemaResponse(QXmlStreamReader &xml);
 

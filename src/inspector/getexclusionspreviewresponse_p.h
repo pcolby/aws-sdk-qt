@@ -31,7 +31,7 @@ class GetExclusionsPreviewResponsePrivate : public InspectorResponsePrivate {
 
 public:
 
-    GetExclusionsPreviewResponsePrivate(GetExclusionsPreviewResponse * const q);
+    explicit GetExclusionsPreviewResponsePrivate(GetExclusionsPreviewResponse * const q);
 
     void parseGetExclusionsPreviewResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetDatabasesResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    GetDatabasesResponsePrivate(GetDatabasesResponse * const q);
+    explicit GetDatabasesResponsePrivate(GetDatabasesResponse * const q);
 
     void parseGetDatabasesResponse(QXmlStreamReader &xml);
 

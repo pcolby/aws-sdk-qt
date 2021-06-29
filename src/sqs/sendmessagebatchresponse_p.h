@@ -31,7 +31,7 @@ class SendMessageBatchResponsePrivate : public SqsResponsePrivate {
 
 public:
 
-    SendMessageBatchResponsePrivate(SendMessageBatchResponse * const q);
+    explicit SendMessageBatchResponsePrivate(SendMessageBatchResponse * const q);
 
     void parseSendMessageBatchResponse(QXmlStreamReader &xml);
 

@@ -30,7 +30,7 @@ class MarketplaceCommerceAnalyticsClient;
 class MarketplaceCommerceAnalyticsClientPrivate {
 
 public:
-    MarketplaceCommerceAnalyticsClientPrivate(MarketplaceCommerceAnalyticsClient * const q);
+    explicit MarketplaceCommerceAnalyticsClientPrivate(MarketplaceCommerceAnalyticsClient * const q);
 
 protected:
     MarketplaceCommerceAnalyticsClient * const q_ptr; ///< Internal q-pointer.

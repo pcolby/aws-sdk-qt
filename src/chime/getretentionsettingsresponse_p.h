@@ -31,7 +31,7 @@ class GetRetentionSettingsResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    GetRetentionSettingsResponsePrivate(GetRetentionSettingsResponse * const q);
+    explicit GetRetentionSettingsResponsePrivate(GetRetentionSettingsResponse * const q);
 
     void parseGetRetentionSettingsResponse(QXmlStreamReader &xml);
 

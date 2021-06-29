@@ -31,7 +31,7 @@ class UpdateIndexingConfigurationResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    UpdateIndexingConfigurationResponsePrivate(UpdateIndexingConfigurationResponse * const q);
+    explicit UpdateIndexingConfigurationResponsePrivate(UpdateIndexingConfigurationResponse * const q);
 
     void parseUpdateIndexingConfigurationResponse(QXmlStreamReader &xml);
 

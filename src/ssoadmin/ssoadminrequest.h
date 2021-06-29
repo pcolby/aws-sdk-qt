@@ -90,7 +90,7 @@ public:
 protected:
     /// @cond internal
     SSOAdminRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    SSOAdminRequest(SSOAdminRequestPrivate * const d);
+    explicit SSOAdminRequest(SSOAdminRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

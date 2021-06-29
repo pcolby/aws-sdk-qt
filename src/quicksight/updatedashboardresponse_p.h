@@ -31,7 +31,7 @@ class UpdateDashboardResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    UpdateDashboardResponsePrivate(UpdateDashboardResponse * const q);
+    explicit UpdateDashboardResponsePrivate(UpdateDashboardResponse * const q);
 
     void parseUpdateDashboardResponse(QXmlStreamReader &xml);
 

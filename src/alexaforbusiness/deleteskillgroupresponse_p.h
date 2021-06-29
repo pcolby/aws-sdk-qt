@@ -31,7 +31,7 @@ class DeleteSkillGroupResponsePrivate : public AlexaForBusinessResponsePrivate {
 
 public:
 
-    DeleteSkillGroupResponsePrivate(DeleteSkillGroupResponse * const q);
+    explicit DeleteSkillGroupResponsePrivate(DeleteSkillGroupResponse * const q);
 
     void parseDeleteSkillGroupResponse(QXmlStreamReader &xml);
 

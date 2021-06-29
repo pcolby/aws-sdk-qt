@@ -31,7 +31,7 @@ class DisassociateDRTLogBucketResponsePrivate : public ShieldResponsePrivate {
 
 public:
 
-    DisassociateDRTLogBucketResponsePrivate(DisassociateDRTLogBucketResponse * const q);
+    explicit DisassociateDRTLogBucketResponsePrivate(DisassociateDRTLogBucketResponse * const q);
 
     void parseDisassociateDRTLogBucketResponse(QXmlStreamReader &xml);
 

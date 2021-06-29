@@ -31,7 +31,7 @@ class DeleteIdentityProviderResponsePrivate : public CognitoIdentityProviderResp
 
 public:
 
-    DeleteIdentityProviderResponsePrivate(DeleteIdentityProviderResponse * const q);
+    explicit DeleteIdentityProviderResponsePrivate(DeleteIdentityProviderResponse * const q);
 
     void parseDeleteIdentityProviderResponse(QXmlStreamReader &xml);
 

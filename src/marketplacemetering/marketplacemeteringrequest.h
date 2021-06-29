@@ -63,7 +63,7 @@ public:
 protected:
     /// @cond internal
     MarketplaceMeteringRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    MarketplaceMeteringRequest(MarketplaceMeteringRequestPrivate * const d);
+    explicit MarketplaceMeteringRequest(MarketplaceMeteringRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

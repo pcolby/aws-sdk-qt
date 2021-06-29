@@ -31,7 +31,7 @@ class ResetPasswordResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 
-    ResetPasswordResponsePrivate(ResetPasswordResponse * const q);
+    explicit ResetPasswordResponsePrivate(ResetPasswordResponse * const q);
 
     void parseResetPasswordResponse(QXmlStreamReader &xml);
 

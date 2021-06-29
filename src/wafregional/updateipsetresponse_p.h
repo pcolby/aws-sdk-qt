@@ -31,7 +31,7 @@ class UpdateIPSetResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 
-    UpdateIPSetResponsePrivate(UpdateIPSetResponse * const q);
+    explicit UpdateIPSetResponsePrivate(UpdateIPSetResponse * const q);
 
     void parseUpdateIPSetResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class StartServerResponsePrivate : public TransferResponsePrivate {
 
 public:
 
-    StartServerResponsePrivate(StartServerResponse * const q);
+    explicit StartServerResponsePrivate(StartServerResponse * const q);
 
     void parseStartServerResponse(QXmlStreamReader &xml);
 

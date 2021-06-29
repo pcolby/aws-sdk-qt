@@ -31,7 +31,7 @@ class ListUseCasesResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    ListUseCasesResponsePrivate(ListUseCasesResponse * const q);
+    explicit ListUseCasesResponsePrivate(ListUseCasesResponse * const q);
 
     void parseListUseCasesResponse(QXmlStreamReader &xml);
 

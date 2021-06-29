@@ -31,7 +31,7 @@ class ListAuthorizersResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    ListAuthorizersResponsePrivate(ListAuthorizersResponse * const q);
+    explicit ListAuthorizersResponsePrivate(ListAuthorizersResponse * const q);
 
     void parseListAuthorizersResponse(QXmlStreamReader &xml);
 

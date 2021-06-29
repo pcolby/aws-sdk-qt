@@ -31,7 +31,7 @@ class GetResourceShareInvitationsResponsePrivate : public RamResponsePrivate {
 
 public:
 
-    GetResourceShareInvitationsResponsePrivate(GetResourceShareInvitationsResponse * const q);
+    explicit GetResourceShareInvitationsResponsePrivate(GetResourceShareInvitationsResponse * const q);
 
     void parseGetResourceShareInvitationsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetGraphqlApiResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 
-    GetGraphqlApiResponsePrivate(GetGraphqlApiResponse * const q);
+    explicit GetGraphqlApiResponsePrivate(GetGraphqlApiResponse * const q);
 
     void parseGetGraphqlApiResponse(QXmlStreamReader &xml);
 

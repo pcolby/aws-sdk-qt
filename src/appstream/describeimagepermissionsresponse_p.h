@@ -31,7 +31,7 @@ class DescribeImagePermissionsResponsePrivate : public AppStreamResponsePrivate 
 
 public:
 
-    DescribeImagePermissionsResponsePrivate(DescribeImagePermissionsResponse * const q);
+    explicit DescribeImagePermissionsResponsePrivate(DescribeImagePermissionsResponse * const q);
 
     void parseDescribeImagePermissionsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetTranscriptResponsePrivate : public ConnectParticipantResponsePrivate {
 
 public:
 
-    GetTranscriptResponsePrivate(GetTranscriptResponse * const q);
+    explicit GetTranscriptResponsePrivate(GetTranscriptResponse * const q);
 
     void parseGetTranscriptResponse(QXmlStreamReader &xml);
 

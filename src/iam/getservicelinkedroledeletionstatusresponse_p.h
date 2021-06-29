@@ -31,7 +31,7 @@ class GetServiceLinkedRoleDeletionStatusResponsePrivate : public IamResponsePriv
 
 public:
 
-    GetServiceLinkedRoleDeletionStatusResponsePrivate(GetServiceLinkedRoleDeletionStatusResponse * const q);
+    explicit GetServiceLinkedRoleDeletionStatusResponsePrivate(GetServiceLinkedRoleDeletionStatusResponse * const q);
 
     void parseGetServiceLinkedRoleDeletionStatusResponse(QXmlStreamReader &xml);
 

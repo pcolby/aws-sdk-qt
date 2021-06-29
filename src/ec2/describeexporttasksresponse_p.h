@@ -31,7 +31,7 @@ class DescribeExportTasksResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeExportTasksResponsePrivate(DescribeExportTasksResponse * const q);
+    explicit DescribeExportTasksResponsePrivate(DescribeExportTasksResponse * const q);
 
     void parseDescribeExportTasksResponse(QXmlStreamReader &xml);
 

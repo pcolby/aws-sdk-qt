@@ -31,7 +31,7 @@ class ListDomainsResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    ListDomainsResponsePrivate(ListDomainsResponse * const q);
+    explicit ListDomainsResponsePrivate(ListDomainsResponse * const q);
 
     void parseListDomainsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateReplicationJobResponsePrivate : public SmsResponsePrivate {
 
 public:
 
-    UpdateReplicationJobResponsePrivate(UpdateReplicationJobResponse * const q);
+    explicit UpdateReplicationJobResponsePrivate(UpdateReplicationJobResponse * const q);
 
     void parseUpdateReplicationJobResponse(QXmlStreamReader &xml);
 

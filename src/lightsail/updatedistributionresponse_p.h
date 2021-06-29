@@ -31,7 +31,7 @@ class UpdateDistributionResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    UpdateDistributionResponsePrivate(UpdateDistributionResponse * const q);
+    explicit UpdateDistributionResponsePrivate(UpdateDistributionResponse * const q);
 
     void parseUpdateDistributionResponse(QXmlStreamReader &xml);
 

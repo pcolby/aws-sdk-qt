@@ -31,7 +31,7 @@ class AssociateHealthCheckResponsePrivate : public ShieldResponsePrivate {
 
 public:
 
-    AssociateHealthCheckResponsePrivate(AssociateHealthCheckResponse * const q);
+    explicit AssociateHealthCheckResponsePrivate(AssociateHealthCheckResponse * const q);
 
     void parseAssociateHealthCheckResponse(QXmlStreamReader &xml);
 

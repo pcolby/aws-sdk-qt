@@ -31,7 +31,7 @@ class DeleteInstanceProfileResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    DeleteInstanceProfileResponsePrivate(DeleteInstanceProfileResponse * const q);
+    explicit DeleteInstanceProfileResponsePrivate(DeleteInstanceProfileResponse * const q);
 
     void parseDeleteInstanceProfileResponse(QXmlStreamReader &xml);
 

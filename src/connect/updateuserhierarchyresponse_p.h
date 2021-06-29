@@ -31,7 +31,7 @@ class UpdateUserHierarchyResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    UpdateUserHierarchyResponsePrivate(UpdateUserHierarchyResponse * const q);
+    explicit UpdateUserHierarchyResponsePrivate(UpdateUserHierarchyResponse * const q);
 
     void parseUpdateUserHierarchyResponse(QXmlStreamReader &xml);
 

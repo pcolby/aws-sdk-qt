@@ -31,7 +31,7 @@ class BatchDetectEntitiesResponsePrivate : public ComprehendResponsePrivate {
 
 public:
 
-    BatchDetectEntitiesResponsePrivate(BatchDetectEntitiesResponse * const q);
+    explicit BatchDetectEntitiesResponsePrivate(BatchDetectEntitiesResponse * const q);
 
     void parseBatchDetectEntitiesResponse(QXmlStreamReader &xml);
 

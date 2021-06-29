@@ -85,7 +85,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    BudgetsClient(
+    explicit BudgetsClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -117,7 +117,7 @@ public slots:
 protected:
     /// @cond internal
     BudgetsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    BudgetsClient(BudgetsClientPrivate * const d);
+    explicit BudgetsClient(BudgetsClientPrivate * const d);
     /// @endcond
 
 private:

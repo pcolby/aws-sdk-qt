@@ -31,7 +31,7 @@ class RemoveFromGlobalClusterResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    RemoveFromGlobalClusterResponsePrivate(RemoveFromGlobalClusterResponse * const q);
+    explicit RemoveFromGlobalClusterResponsePrivate(RemoveFromGlobalClusterResponse * const q);
 
     void parseRemoveFromGlobalClusterResponse(QXmlStreamReader &xml);
 

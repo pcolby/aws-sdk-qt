@@ -29,7 +29,7 @@ class NetworkFirewallResponsePrivate {
 
 public:
 
-    NetworkFirewallResponsePrivate(NetworkFirewallResponse * const q);
+    explicit NetworkFirewallResponsePrivate(NetworkFirewallResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

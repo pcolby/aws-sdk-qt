@@ -31,7 +31,7 @@ class CreateSolutionResponsePrivate : public PersonalizeResponsePrivate {
 
 public:
 
-    CreateSolutionResponsePrivate(CreateSolutionResponse * const q);
+    explicit CreateSolutionResponsePrivate(CreateSolutionResponse * const q);
 
     void parseCreateSolutionResponse(QXmlStreamReader &xml);
 

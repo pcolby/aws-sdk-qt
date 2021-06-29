@@ -31,7 +31,7 @@ class DescribeDatasetGroupResponsePrivate : public PersonalizeResponsePrivate {
 
 public:
 
-    DescribeDatasetGroupResponsePrivate(DescribeDatasetGroupResponse * const q);
+    explicit DescribeDatasetGroupResponsePrivate(DescribeDatasetGroupResponse * const q);
 
     void parseDescribeDatasetGroupResponse(QXmlStreamReader &xml);
 

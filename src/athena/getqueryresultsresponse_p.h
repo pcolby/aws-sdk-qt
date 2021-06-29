@@ -31,7 +31,7 @@ class GetQueryResultsResponsePrivate : public AthenaResponsePrivate {
 
 public:
 
-    GetQueryResultsResponsePrivate(GetQueryResultsResponse * const q);
+    explicit GetQueryResultsResponsePrivate(GetQueryResultsResponse * const q);
 
     void parseGetQueryResultsResponse(QXmlStreamReader &xml);
 

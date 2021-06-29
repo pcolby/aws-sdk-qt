@@ -31,7 +31,7 @@ class GetRegexMatchSetResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 
-    GetRegexMatchSetResponsePrivate(GetRegexMatchSetResponse * const q);
+    explicit GetRegexMatchSetResponsePrivate(GetRegexMatchSetResponse * const q);
 
     void parseGetRegexMatchSetResponse(QXmlStreamReader &xml);
 

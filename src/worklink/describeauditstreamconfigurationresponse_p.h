@@ -31,7 +31,7 @@ class DescribeAuditStreamConfigurationResponsePrivate : public WorkLinkResponseP
 
 public:
 
-    DescribeAuditStreamConfigurationResponsePrivate(DescribeAuditStreamConfigurationResponse * const q);
+    explicit DescribeAuditStreamConfigurationResponsePrivate(DescribeAuditStreamConfigurationResponse * const q);
 
     void parseDescribeAuditStreamConfigurationResponse(QXmlStreamReader &xml);
 

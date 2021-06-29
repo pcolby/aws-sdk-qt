@@ -31,7 +31,7 @@ class CancelReplayResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 
-    CancelReplayResponsePrivate(CancelReplayResponse * const q);
+    explicit CancelReplayResponsePrivate(CancelReplayResponse * const q);
 
     void parseCancelReplayResponse(QXmlStreamReader &xml);
 

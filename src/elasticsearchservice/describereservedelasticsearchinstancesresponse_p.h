@@ -31,7 +31,7 @@ class DescribeReservedElasticsearchInstancesResponsePrivate : public Elasticsear
 
 public:
 
-    DescribeReservedElasticsearchInstancesResponsePrivate(DescribeReservedElasticsearchInstancesResponse * const q);
+    explicit DescribeReservedElasticsearchInstancesResponsePrivate(DescribeReservedElasticsearchInstancesResponse * const q);
 
     void parseDescribeReservedElasticsearchInstancesResponse(QXmlStreamReader &xml);
 

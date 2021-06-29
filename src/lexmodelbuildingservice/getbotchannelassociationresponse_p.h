@@ -31,7 +31,7 @@ class GetBotChannelAssociationResponsePrivate : public LexModelBuildingServiceRe
 
 public:
 
-    GetBotChannelAssociationResponsePrivate(GetBotChannelAssociationResponse * const q);
+    explicit GetBotChannelAssociationResponsePrivate(GetBotChannelAssociationResponse * const q);
 
     void parseGetBotChannelAssociationResponse(QXmlStreamReader &xml);
 

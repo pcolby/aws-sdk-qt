@@ -31,7 +31,7 @@ class SetV2LoggingOptionsResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    SetV2LoggingOptionsResponsePrivate(SetV2LoggingOptionsResponse * const q);
+    explicit SetV2LoggingOptionsResponsePrivate(SetV2LoggingOptionsResponse * const q);
 
     void parseSetV2LoggingOptionsResponse(QXmlStreamReader &xml);
 

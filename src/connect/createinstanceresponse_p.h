@@ -31,7 +31,7 @@ class CreateInstanceResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    CreateInstanceResponsePrivate(CreateInstanceResponse * const q);
+    explicit CreateInstanceResponsePrivate(CreateInstanceResponse * const q);
 
     void parseCreateInstanceResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeHumanLoopResponsePrivate : public AugmentedAIRuntimeResponsePrivat
 
 public:
 
-    DescribeHumanLoopResponsePrivate(DescribeHumanLoopResponse * const q);
+    explicit DescribeHumanLoopResponsePrivate(DescribeHumanLoopResponse * const q);
 
     void parseDescribeHumanLoopResponse(QXmlStreamReader &xml);
 

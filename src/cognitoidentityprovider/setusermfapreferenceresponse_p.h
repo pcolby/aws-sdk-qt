@@ -31,7 +31,7 @@ class SetUserMFAPreferenceResponsePrivate : public CognitoIdentityProviderRespon
 
 public:
 
-    SetUserMFAPreferenceResponsePrivate(SetUserMFAPreferenceResponse * const q);
+    explicit SetUserMFAPreferenceResponsePrivate(SetUserMFAPreferenceResponse * const q);
 
     void parseSetUserMFAPreferenceResponse(QXmlStreamReader &xml);
 

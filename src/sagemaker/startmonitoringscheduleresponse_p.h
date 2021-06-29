@@ -31,7 +31,7 @@ class StartMonitoringScheduleResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    StartMonitoringScheduleResponsePrivate(StartMonitoringScheduleResponse * const q);
+    explicit StartMonitoringScheduleResponsePrivate(StartMonitoringScheduleResponse * const q);
 
     void parseStartMonitoringScheduleResponse(QXmlStreamReader &xml);
 

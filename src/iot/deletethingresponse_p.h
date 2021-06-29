@@ -31,7 +31,7 @@ class DeleteThingResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DeleteThingResponsePrivate(DeleteThingResponse * const q);
+    explicit DeleteThingResponsePrivate(DeleteThingResponse * const q);
 
     void parseDeleteThingResponse(QXmlStreamReader &xml);
 

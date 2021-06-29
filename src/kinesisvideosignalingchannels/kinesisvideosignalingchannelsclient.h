@@ -45,7 +45,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    KinesisVideoSignalingChannelsClient(
+    explicit KinesisVideoSignalingChannelsClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -57,7 +57,7 @@ public slots:
 protected:
     /// @cond internal
     KinesisVideoSignalingChannelsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    KinesisVideoSignalingChannelsClient(KinesisVideoSignalingChannelsClientPrivate * const d);
+    explicit KinesisVideoSignalingChannelsClient(KinesisVideoSignalingChannelsClientPrivate * const d);
     /// @endcond
 
 private:

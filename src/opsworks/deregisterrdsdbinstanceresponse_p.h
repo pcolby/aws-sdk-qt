@@ -31,7 +31,7 @@ class DeregisterRdsDbInstanceResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    DeregisterRdsDbInstanceResponsePrivate(DeregisterRdsDbInstanceResponse * const q);
+    explicit DeregisterRdsDbInstanceResponsePrivate(DeregisterRdsDbInstanceResponse * const q);
 
     void parseDeregisterRdsDbInstanceResponse(QXmlStreamReader &xml);
 

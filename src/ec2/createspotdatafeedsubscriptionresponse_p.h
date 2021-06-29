@@ -31,7 +31,7 @@ class CreateSpotDatafeedSubscriptionResponsePrivate : public Ec2ResponsePrivate 
 
 public:
 
-    CreateSpotDatafeedSubscriptionResponsePrivate(CreateSpotDatafeedSubscriptionResponse * const q);
+    explicit CreateSpotDatafeedSubscriptionResponsePrivate(CreateSpotDatafeedSubscriptionResponse * const q);
 
     void parseCreateSpotDatafeedSubscriptionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListBillingGroupsResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    ListBillingGroupsResponsePrivate(ListBillingGroupsResponse * const q);
+    explicit ListBillingGroupsResponsePrivate(ListBillingGroupsResponse * const q);
 
     void parseListBillingGroupsResponse(QXmlStreamReader &xml);
 

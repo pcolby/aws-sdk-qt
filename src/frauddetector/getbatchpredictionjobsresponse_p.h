@@ -31,7 +31,7 @@ class GetBatchPredictionJobsResponsePrivate : public FraudDetectorResponsePrivat
 
 public:
 
-    GetBatchPredictionJobsResponsePrivate(GetBatchPredictionJobsResponse * const q);
+    explicit GetBatchPredictionJobsResponsePrivate(GetBatchPredictionJobsResponse * const q);
 
     void parseGetBatchPredictionJobsResponse(QXmlStreamReader &xml);
 

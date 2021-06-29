@@ -31,7 +31,7 @@ class DeleteDeviceProfileResponsePrivate : public IoTWirelessResponsePrivate {
 
 public:
 
-    DeleteDeviceProfileResponsePrivate(DeleteDeviceProfileResponse * const q);
+    explicit DeleteDeviceProfileResponsePrivate(DeleteDeviceProfileResponse * const q);
 
     void parseDeleteDeviceProfileResponse(QXmlStreamReader &xml);
 

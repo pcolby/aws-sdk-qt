@@ -31,7 +31,7 @@ class PurchaseProvisionedCapacityResponsePrivate : public GlacierResponsePrivate
 
 public:
 
-    PurchaseProvisionedCapacityResponsePrivate(PurchaseProvisionedCapacityResponse * const q);
+    explicit PurchaseProvisionedCapacityResponsePrivate(PurchaseProvisionedCapacityResponse * const q);
 
     void parsePurchaseProvisionedCapacityResponse(QXmlStreamReader &xml);
 

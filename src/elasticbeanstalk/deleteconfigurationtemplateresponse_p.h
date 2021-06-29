@@ -31,7 +31,7 @@ class DeleteConfigurationTemplateResponsePrivate : public ElasticBeanstalkRespon
 
 public:
 
-    DeleteConfigurationTemplateResponsePrivate(DeleteConfigurationTemplateResponse * const q);
+    explicit DeleteConfigurationTemplateResponsePrivate(DeleteConfigurationTemplateResponse * const q);
 
     void parseDeleteConfigurationTemplateResponse(QXmlStreamReader &xml);
 

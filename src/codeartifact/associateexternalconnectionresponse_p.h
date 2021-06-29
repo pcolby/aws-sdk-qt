@@ -31,7 +31,7 @@ class AssociateExternalConnectionResponsePrivate : public CodeArtifactResponsePr
 
 public:
 
-    AssociateExternalConnectionResponsePrivate(AssociateExternalConnectionResponse * const q);
+    explicit AssociateExternalConnectionResponsePrivate(AssociateExternalConnectionResponse * const q);
 
     void parseAssociateExternalConnectionResponse(QXmlStreamReader &xml);
 

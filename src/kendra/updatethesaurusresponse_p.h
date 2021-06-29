@@ -31,7 +31,7 @@ class UpdateThesaurusResponsePrivate : public kendraResponsePrivate {
 
 public:
 
-    UpdateThesaurusResponsePrivate(UpdateThesaurusResponse * const q);
+    explicit UpdateThesaurusResponsePrivate(UpdateThesaurusResponse * const q);
 
     void parseUpdateThesaurusResponse(QXmlStreamReader &xml);
 

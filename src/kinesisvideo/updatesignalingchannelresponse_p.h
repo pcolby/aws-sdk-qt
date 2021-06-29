@@ -31,7 +31,7 @@ class UpdateSignalingChannelResponsePrivate : public KinesisVideoResponsePrivate
 
 public:
 
-    UpdateSignalingChannelResponsePrivate(UpdateSignalingChannelResponse * const q);
+    explicit UpdateSignalingChannelResponsePrivate(UpdateSignalingChannelResponse * const q);
 
     void parseUpdateSignalingChannelResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetGlobalSettingsResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    GetGlobalSettingsResponsePrivate(GetGlobalSettingsResponse * const q);
+    explicit GetGlobalSettingsResponsePrivate(GetGlobalSettingsResponse * const q);
 
     void parseGetGlobalSettingsResponse(QXmlStreamReader &xml);
 

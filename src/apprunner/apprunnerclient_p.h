@@ -30,7 +30,7 @@ class AppRunnerClient;
 class AppRunnerClientPrivate {
 
 public:
-    AppRunnerClientPrivate(AppRunnerClient * const q);
+    explicit AppRunnerClientPrivate(AppRunnerClient * const q);
 
 protected:
     AppRunnerClient * const q_ptr; ///< Internal q-pointer.

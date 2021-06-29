@@ -31,7 +31,7 @@ class RemoveRegionResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 
-    RemoveRegionResponsePrivate(RemoveRegionResponse * const q);
+    explicit RemoveRegionResponsePrivate(RemoveRegionResponse * const q);
 
     void parseRemoveRegionResponse(QXmlStreamReader &xml);
 

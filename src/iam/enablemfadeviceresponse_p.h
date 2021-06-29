@@ -31,7 +31,7 @@ class EnableMFADeviceResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    EnableMFADeviceResponsePrivate(EnableMFADeviceResponse * const q);
+    explicit EnableMFADeviceResponsePrivate(EnableMFADeviceResponse * const q);
 
     void parseEnableMFADeviceResponse(QXmlStreamReader &xml);
 

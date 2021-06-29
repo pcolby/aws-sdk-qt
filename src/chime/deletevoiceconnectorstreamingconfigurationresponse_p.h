@@ -31,7 +31,7 @@ class DeleteVoiceConnectorStreamingConfigurationResponsePrivate : public ChimeRe
 
 public:
 
-    DeleteVoiceConnectorStreamingConfigurationResponsePrivate(DeleteVoiceConnectorStreamingConfigurationResponse * const q);
+    explicit DeleteVoiceConnectorStreamingConfigurationResponsePrivate(DeleteVoiceConnectorStreamingConfigurationResponse * const q);
 
     void parseDeleteVoiceConnectorStreamingConfigurationResponse(QXmlStreamReader &xml);
 

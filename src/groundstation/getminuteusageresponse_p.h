@@ -31,7 +31,7 @@ class GetMinuteUsageResponsePrivate : public GroundStationResponsePrivate {
 
 public:
 
-    GetMinuteUsageResponsePrivate(GetMinuteUsageResponse * const q);
+    explicit GetMinuteUsageResponsePrivate(GetMinuteUsageResponse * const q);
 
     void parseGetMinuteUsageResponse(QXmlStreamReader &xml);
 

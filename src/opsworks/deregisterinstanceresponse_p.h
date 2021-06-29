@@ -31,7 +31,7 @@ class DeregisterInstanceResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    DeregisterInstanceResponsePrivate(DeregisterInstanceResponse * const q);
+    explicit DeregisterInstanceResponsePrivate(DeregisterInstanceResponse * const q);
 
     void parseDeregisterInstanceResponse(QXmlStreamReader &xml);
 

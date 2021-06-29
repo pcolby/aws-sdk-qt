@@ -31,7 +31,7 @@ class DeleteAccountResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    DeleteAccountResponsePrivate(DeleteAccountResponse * const q);
+    explicit DeleteAccountResponsePrivate(DeleteAccountResponse * const q);
 
     void parseDeleteAccountResponse(QXmlStreamReader &xml);
 

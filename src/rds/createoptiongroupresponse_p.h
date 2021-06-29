@@ -31,7 +31,7 @@ class CreateOptionGroupResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    CreateOptionGroupResponsePrivate(CreateOptionGroupResponse * const q);
+    explicit CreateOptionGroupResponsePrivate(CreateOptionGroupResponse * const q);
 
     void parseCreateOptionGroupResponse(QXmlStreamReader &xml);
 

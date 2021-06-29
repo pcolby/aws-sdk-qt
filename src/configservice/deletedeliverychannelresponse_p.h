@@ -31,7 +31,7 @@ class DeleteDeliveryChannelResponsePrivate : public ConfigServiceResponsePrivate
 
 public:
 
-    DeleteDeliveryChannelResponsePrivate(DeleteDeliveryChannelResponse * const q);
+    explicit DeleteDeliveryChannelResponsePrivate(DeleteDeliveryChannelResponse * const q);
 
     void parseDeleteDeliveryChannelResponse(QXmlStreamReader &xml);
 

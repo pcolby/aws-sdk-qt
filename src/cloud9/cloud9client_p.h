@@ -30,7 +30,7 @@ class Cloud9Client;
 class Cloud9ClientPrivate {
 
 public:
-    Cloud9ClientPrivate(Cloud9Client * const q);
+    explicit Cloud9ClientPrivate(Cloud9Client * const q);
 
 protected:
     Cloud9Client * const q_ptr; ///< Internal q-pointer.

@@ -30,7 +30,7 @@ class TranscribeServiceClient;
 class TranscribeServiceClientPrivate {
 
 public:
-    TranscribeServiceClientPrivate(TranscribeServiceClient * const q);
+    explicit TranscribeServiceClientPrivate(TranscribeServiceClient * const q);
 
 protected:
     TranscribeServiceClient * const q_ptr; ///< Internal q-pointer.

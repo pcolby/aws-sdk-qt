@@ -31,7 +31,7 @@ class CreateApplicationPresignedUrlResponsePrivate : public KinesisAnalyticsV2Re
 
 public:
 
-    CreateApplicationPresignedUrlResponsePrivate(CreateApplicationPresignedUrlResponse * const q);
+    explicit CreateApplicationPresignedUrlResponsePrivate(CreateApplicationPresignedUrlResponse * const q);
 
     void parseCreateApplicationPresignedUrlResponse(QXmlStreamReader &xml);
 

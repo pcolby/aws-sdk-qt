@@ -31,7 +31,7 @@ class ExportConfigurationsResponsePrivate : public ApplicationDiscoveryServiceRe
 
 public:
 
-    ExportConfigurationsResponsePrivate(ExportConfigurationsResponse * const q);
+    explicit ExportConfigurationsResponsePrivate(ExportConfigurationsResponse * const q);
 
     void parseExportConfigurationsResponse(QXmlStreamReader &xml);
 

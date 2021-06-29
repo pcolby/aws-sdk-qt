@@ -31,7 +31,7 @@ class GetSegmentDetectionResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 
-    GetSegmentDetectionResponsePrivate(GetSegmentDetectionResponse * const q);
+    explicit GetSegmentDetectionResponsePrivate(GetSegmentDetectionResponse * const q);
 
     void parseGetSegmentDetectionResponse(QXmlStreamReader &xml);
 

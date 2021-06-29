@@ -30,7 +30,7 @@ class ApiGatewayManagementApiClient;
 class ApiGatewayManagementApiClientPrivate {
 
 public:
-    ApiGatewayManagementApiClientPrivate(ApiGatewayManagementApiClient * const q);
+    explicit ApiGatewayManagementApiClientPrivate(ApiGatewayManagementApiClient * const q);
 
 protected:
     ApiGatewayManagementApiClient * const q_ptr; ///< Internal q-pointer.

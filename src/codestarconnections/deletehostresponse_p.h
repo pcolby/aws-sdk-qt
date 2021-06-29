@@ -31,7 +31,7 @@ class DeleteHostResponsePrivate : public CodeStarconnectionsResponsePrivate {
 
 public:
 
-    DeleteHostResponsePrivate(DeleteHostResponse * const q);
+    explicit DeleteHostResponsePrivate(DeleteHostResponse * const q);
 
     void parseDeleteHostResponse(QXmlStreamReader &xml);
 

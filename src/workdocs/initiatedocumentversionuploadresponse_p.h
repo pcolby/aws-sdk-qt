@@ -31,7 +31,7 @@ class InitiateDocumentVersionUploadResponsePrivate : public WorkDocsResponsePriv
 
 public:
 
-    InitiateDocumentVersionUploadResponsePrivate(InitiateDocumentVersionUploadResponse * const q);
+    explicit InitiateDocumentVersionUploadResponsePrivate(InitiateDocumentVersionUploadResponse * const q);
 
     void parseInitiateDocumentVersionUploadResponse(QXmlStreamReader &xml);
 

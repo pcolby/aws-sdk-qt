@@ -31,7 +31,7 @@ class DescribeStandardsControlsResponsePrivate : public SecurityHubResponsePriva
 
 public:
 
-    DescribeStandardsControlsResponsePrivate(DescribeStandardsControlsResponse * const q);
+    explicit DescribeStandardsControlsResponsePrivate(DescribeStandardsControlsResponse * const q);
 
     void parseDescribeStandardsControlsResponse(QXmlStreamReader &xml);
 

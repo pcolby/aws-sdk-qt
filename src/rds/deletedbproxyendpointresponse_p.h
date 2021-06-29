@@ -31,7 +31,7 @@ class DeleteDBProxyEndpointResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    DeleteDBProxyEndpointResponsePrivate(DeleteDBProxyEndpointResponse * const q);
+    explicit DeleteDBProxyEndpointResponsePrivate(DeleteDBProxyEndpointResponse * const q);
 
     void parseDeleteDBProxyEndpointResponse(QXmlStreamReader &xml);
 

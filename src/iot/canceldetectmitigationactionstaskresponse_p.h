@@ -31,7 +31,7 @@ class CancelDetectMitigationActionsTaskResponsePrivate : public IoTResponsePriva
 
 public:
 
-    CancelDetectMitigationActionsTaskResponsePrivate(CancelDetectMitigationActionsTaskResponse * const q);
+    explicit CancelDetectMitigationActionsTaskResponsePrivate(CancelDetectMitigationActionsTaskResponse * const q);
 
     void parseCancelDetectMitigationActionsTaskResponse(QXmlStreamReader &xml);
 

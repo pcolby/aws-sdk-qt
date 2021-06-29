@@ -31,7 +31,7 @@ class GetActivityTaskResponsePrivate : public SfnResponsePrivate {
 
 public:
 
-    GetActivityTaskResponsePrivate(GetActivityTaskResponse * const q);
+    explicit GetActivityTaskResponsePrivate(GetActivityTaskResponse * const q);
 
     void parseGetActivityTaskResponse(QXmlStreamReader &xml);
 

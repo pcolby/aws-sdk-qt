@@ -31,7 +31,7 @@ class ImportSourceCredentialsResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 
-    ImportSourceCredentialsResponsePrivate(ImportSourceCredentialsResponse * const q);
+    explicit ImportSourceCredentialsResponsePrivate(ImportSourceCredentialsResponse * const q);
 
     void parseImportSourceCredentialsResponse(QXmlStreamReader &xml);
 

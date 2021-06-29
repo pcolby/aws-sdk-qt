@@ -31,7 +31,7 @@ class CreateServiceActionResponsePrivate : public ServiceCatalogResponsePrivate 
 
 public:
 
-    CreateServiceActionResponsePrivate(CreateServiceActionResponse * const q);
+    explicit CreateServiceActionResponsePrivate(CreateServiceActionResponse * const q);
 
     void parseCreateServiceActionResponse(QXmlStreamReader &xml);
 

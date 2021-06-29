@@ -31,7 +31,7 @@ class DeregisterFromWorkMailResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 
-    DeregisterFromWorkMailResponsePrivate(DeregisterFromWorkMailResponse * const q);
+    explicit DeregisterFromWorkMailResponsePrivate(DeregisterFromWorkMailResponse * const q);
 
     void parseDeregisterFromWorkMailResponse(QXmlStreamReader &xml);
 

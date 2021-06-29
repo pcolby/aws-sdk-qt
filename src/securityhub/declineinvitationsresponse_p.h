@@ -31,7 +31,7 @@ class DeclineInvitationsResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 
-    DeclineInvitationsResponsePrivate(DeclineInvitationsResponse * const q);
+    explicit DeclineInvitationsResponsePrivate(DeclineInvitationsResponse * const q);
 
     void parseDeclineInvitationsResponse(QXmlStreamReader &xml);
 

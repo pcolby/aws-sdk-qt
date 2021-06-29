@@ -31,7 +31,7 @@ class DeleteRealtimeLogConfigResponsePrivate : public CloudFrontResponsePrivate 
 
 public:
 
-    DeleteRealtimeLogConfigResponsePrivate(DeleteRealtimeLogConfigResponse * const q);
+    explicit DeleteRealtimeLogConfigResponsePrivate(DeleteRealtimeLogConfigResponse * const q);
 
     void parseDeleteRealtimeLogConfigResponse(QXmlStreamReader &xml);
 

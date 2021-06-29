@@ -30,7 +30,7 @@ class imagebuilderClient;
 class imagebuilderClientPrivate {
 
 public:
-    imagebuilderClientPrivate(imagebuilderClient * const q);
+    explicit imagebuilderClientPrivate(imagebuilderClient * const q);
 
 protected:
     imagebuilderClient * const q_ptr; ///< Internal q-pointer.

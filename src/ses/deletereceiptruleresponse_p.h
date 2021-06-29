@@ -31,7 +31,7 @@ class DeleteReceiptRuleResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    DeleteReceiptRuleResponsePrivate(DeleteReceiptRuleResponse * const q);
+    explicit DeleteReceiptRuleResponsePrivate(DeleteReceiptRuleResponse * const q);
 
     void parseDeleteReceiptRuleResponse(QXmlStreamReader &xml);
 

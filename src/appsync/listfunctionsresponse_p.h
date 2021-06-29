@@ -31,7 +31,7 @@ class ListFunctionsResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 
-    ListFunctionsResponsePrivate(ListFunctionsResponse * const q);
+    explicit ListFunctionsResponsePrivate(ListFunctionsResponse * const q);
 
     void parseListFunctionsResponse(QXmlStreamReader &xml);
 

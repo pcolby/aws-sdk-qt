@@ -31,7 +31,7 @@ class DeleteComponentResponsePrivate : public GreengrassV2ResponsePrivate {
 
 public:
 
-    DeleteComponentResponsePrivate(DeleteComponentResponse * const q);
+    explicit DeleteComponentResponsePrivate(DeleteComponentResponse * const q);
 
     void parseDeleteComponentResponse(QXmlStreamReader &xml);
 

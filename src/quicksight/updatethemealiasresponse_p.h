@@ -31,7 +31,7 @@ class UpdateThemeAliasResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    UpdateThemeAliasResponsePrivate(UpdateThemeAliasResponse * const q);
+    explicit UpdateThemeAliasResponsePrivate(UpdateThemeAliasResponse * const q);
 
     void parseUpdateThemeAliasResponse(QXmlStreamReader &xml);
 

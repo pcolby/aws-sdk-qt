@@ -31,7 +31,7 @@ class DeleteIndexResponsePrivate : public kendraResponsePrivate {
 
 public:
 
-    DeleteIndexResponsePrivate(DeleteIndexResponse * const q);
+    explicit DeleteIndexResponsePrivate(DeleteIndexResponse * const q);
 
     void parseDeleteIndexResponse(QXmlStreamReader &xml);
 

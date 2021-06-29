@@ -31,7 +31,7 @@ class DescribeMailboxExportJobResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 
-    DescribeMailboxExportJobResponsePrivate(DescribeMailboxExportJobResponse * const q);
+    explicit DescribeMailboxExportJobResponsePrivate(DescribeMailboxExportJobResponse * const q);
 
     void parseDescribeMailboxExportJobResponse(QXmlStreamReader &xml);
 

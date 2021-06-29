@@ -31,7 +31,7 @@ class DisassociateElasticIpResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    DisassociateElasticIpResponsePrivate(DisassociateElasticIpResponse * const q);
+    explicit DisassociateElasticIpResponsePrivate(DisassociateElasticIpResponse * const q);
 
     void parseDisassociateElasticIpResponse(QXmlStreamReader &xml);
 

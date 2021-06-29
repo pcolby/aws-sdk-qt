@@ -31,7 +31,7 @@ class ImportApiResponsePrivate : public ApiGatewayV2ResponsePrivate {
 
 public:
 
-    ImportApiResponsePrivate(ImportApiResponse * const q);
+    explicit ImportApiResponsePrivate(ImportApiResponse * const q);
 
     void parseImportApiResponse(QXmlStreamReader &xml);
 

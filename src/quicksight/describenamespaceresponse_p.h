@@ -31,7 +31,7 @@ class DescribeNamespaceResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    DescribeNamespaceResponsePrivate(DescribeNamespaceResponse * const q);
+    explicit DescribeNamespaceResponsePrivate(DescribeNamespaceResponse * const q);
 
     void parseDescribeNamespaceResponse(QXmlStreamReader &xml);
 

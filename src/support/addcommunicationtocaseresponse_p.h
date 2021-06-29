@@ -31,7 +31,7 @@ class AddCommunicationToCaseResponsePrivate : public SupportResponsePrivate {
 
 public:
 
-    AddCommunicationToCaseResponsePrivate(AddCommunicationToCaseResponse * const q);
+    explicit AddCommunicationToCaseResponsePrivate(AddCommunicationToCaseResponse * const q);
 
     void parseAddCommunicationToCaseResponse(QXmlStreamReader &xml);
 

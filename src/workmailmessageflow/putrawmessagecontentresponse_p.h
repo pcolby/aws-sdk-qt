@@ -31,7 +31,7 @@ class PutRawMessageContentResponsePrivate : public WorkMailMessageFlowResponsePr
 
 public:
 
-    PutRawMessageContentResponsePrivate(PutRawMessageContentResponse * const q);
+    explicit PutRawMessageContentResponsePrivate(PutRawMessageContentResponse * const q);
 
     void parsePutRawMessageContentResponse(QXmlStreamReader &xml);
 

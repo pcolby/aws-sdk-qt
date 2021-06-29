@@ -31,7 +31,7 @@ class GetContainerImagesResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    GetContainerImagesResponsePrivate(GetContainerImagesResponse * const q);
+    explicit GetContainerImagesResponsePrivate(GetContainerImagesResponse * const q);
 
     void parseGetContainerImagesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetConfigurationSetEventDestinationsResponsePrivate : public PinpointEmail
 
 public:
 
-    GetConfigurationSetEventDestinationsResponsePrivate(GetConfigurationSetEventDestinationsResponse * const q);
+    explicit GetConfigurationSetEventDestinationsResponsePrivate(GetConfigurationSetEventDestinationsResponse * const q);
 
     void parseGetConfigurationSetEventDestinationsResponse(QXmlStreamReader &xml);
 

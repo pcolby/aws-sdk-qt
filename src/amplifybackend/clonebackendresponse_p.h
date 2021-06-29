@@ -31,7 +31,7 @@ class CloneBackendResponsePrivate : public AmplifyBackendResponsePrivate {
 
 public:
 
-    CloneBackendResponsePrivate(CloneBackendResponse * const q);
+    explicit CloneBackendResponsePrivate(CloneBackendResponse * const q);
 
     void parseCloneBackendResponse(QXmlStreamReader &xml);
 

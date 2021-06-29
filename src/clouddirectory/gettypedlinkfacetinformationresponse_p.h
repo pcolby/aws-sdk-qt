@@ -31,7 +31,7 @@ class GetTypedLinkFacetInformationResponsePrivate : public CloudDirectoryRespons
 
 public:
 
-    GetTypedLinkFacetInformationResponsePrivate(GetTypedLinkFacetInformationResponse * const q);
+    explicit GetTypedLinkFacetInformationResponsePrivate(GetTypedLinkFacetInformationResponse * const q);
 
     void parseGetTypedLinkFacetInformationResponse(QXmlStreamReader &xml);
 

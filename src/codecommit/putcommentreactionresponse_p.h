@@ -31,7 +31,7 @@ class PutCommentReactionResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 
-    PutCommentReactionResponsePrivate(PutCommentReactionResponse * const q);
+    explicit PutCommentReactionResponsePrivate(PutCommentReactionResponse * const q);
 
     void parsePutCommentReactionResponse(QXmlStreamReader &xml);
 

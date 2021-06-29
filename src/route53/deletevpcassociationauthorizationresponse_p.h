@@ -31,7 +31,7 @@ class DeleteVPCAssociationAuthorizationResponsePrivate : public Route53ResponseP
 
 public:
 
-    DeleteVPCAssociationAuthorizationResponsePrivate(DeleteVPCAssociationAuthorizationResponse * const q);
+    explicit DeleteVPCAssociationAuthorizationResponsePrivate(DeleteVPCAssociationAuthorizationResponse * const q);
 
     void parseDeleteVPCAssociationAuthorizationResponse(QXmlStreamReader &xml);
 

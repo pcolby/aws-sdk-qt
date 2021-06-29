@@ -31,7 +31,7 @@ class ListMilestonesResponsePrivate : public WellArchitectedResponsePrivate {
 
 public:
 
-    ListMilestonesResponsePrivate(ListMilestonesResponse * const q);
+    explicit ListMilestonesResponsePrivate(ListMilestonesResponse * const q);
 
     void parseListMilestonesResponse(QXmlStreamReader &xml);
 

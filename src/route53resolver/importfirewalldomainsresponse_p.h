@@ -31,7 +31,7 @@ class ImportFirewallDomainsResponsePrivate : public Route53ResolverResponsePriva
 
 public:
 
-    ImportFirewallDomainsResponsePrivate(ImportFirewallDomainsResponse * const q);
+    explicit ImportFirewallDomainsResponsePrivate(ImportFirewallDomainsResponse * const q);
 
     void parseImportFirewallDomainsResponse(QXmlStreamReader &xml);
 

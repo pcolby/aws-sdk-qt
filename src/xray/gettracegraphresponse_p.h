@@ -31,7 +31,7 @@ class GetTraceGraphResponsePrivate : public XRayResponsePrivate {
 
 public:
 
-    GetTraceGraphResponsePrivate(GetTraceGraphResponse * const q);
+    explicit GetTraceGraphResponsePrivate(GetTraceGraphResponse * const q);
 
     void parseGetTraceGraphResponse(QXmlStreamReader &xml);
 

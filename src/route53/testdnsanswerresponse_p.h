@@ -31,7 +31,7 @@ class TestDNSAnswerResponsePrivate : public Route53ResponsePrivate {
 
 public:
 
-    TestDNSAnswerResponsePrivate(TestDNSAnswerResponse * const q);
+    explicit TestDNSAnswerResponsePrivate(TestDNSAnswerResponse * const q);
 
     void parseTestDNSAnswerResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ReportTaskRunnerHeartbeatResponsePrivate : public DataPipelineResponsePriv
 
 public:
 
-    ReportTaskRunnerHeartbeatResponsePrivate(ReportTaskRunnerHeartbeatResponse * const q);
+    explicit ReportTaskRunnerHeartbeatResponsePrivate(ReportTaskRunnerHeartbeatResponse * const q);
 
     void parseReportTaskRunnerHeartbeatResponse(QXmlStreamReader &xml);
 

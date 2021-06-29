@@ -31,7 +31,7 @@ class ListCodeReviewsResponsePrivate : public CodeGuruReviewerResponsePrivate {
 
 public:
 
-    ListCodeReviewsResponsePrivate(ListCodeReviewsResponse * const q);
+    explicit ListCodeReviewsResponsePrivate(ListCodeReviewsResponse * const q);
 
     void parseListCodeReviewsResponse(QXmlStreamReader &xml);
 

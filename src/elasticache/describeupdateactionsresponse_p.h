@@ -31,7 +31,7 @@ class DescribeUpdateActionsResponsePrivate : public ElastiCacheResponsePrivate {
 
 public:
 
-    DescribeUpdateActionsResponsePrivate(DescribeUpdateActionsResponse * const q);
+    explicit DescribeUpdateActionsResponsePrivate(DescribeUpdateActionsResponse * const q);
 
     void parseDescribeUpdateActionsResponse(QXmlStreamReader &xml);
 

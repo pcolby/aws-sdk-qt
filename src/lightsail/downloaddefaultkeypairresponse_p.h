@@ -31,7 +31,7 @@ class DownloadDefaultKeyPairResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    DownloadDefaultKeyPairResponsePrivate(DownloadDefaultKeyPairResponse * const q);
+    explicit DownloadDefaultKeyPairResponsePrivate(DownloadDefaultKeyPairResponse * const q);
 
     void parseDownloadDefaultKeyPairResponse(QXmlStreamReader &xml);
 

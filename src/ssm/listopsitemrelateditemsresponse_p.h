@@ -31,7 +31,7 @@ class ListOpsItemRelatedItemsResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    ListOpsItemRelatedItemsResponsePrivate(ListOpsItemRelatedItemsResponse * const q);
+    explicit ListOpsItemRelatedItemsResponsePrivate(ListOpsItemRelatedItemsResponse * const q);
 
     void parseListOpsItemRelatedItemsResponse(QXmlStreamReader &xml);
 

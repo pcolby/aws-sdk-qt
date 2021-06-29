@@ -31,7 +31,7 @@ class DeleteTranscriptionJobResponsePrivate : public TranscribeServiceResponsePr
 
 public:
 
-    DeleteTranscriptionJobResponsePrivate(DeleteTranscriptionJobResponse * const q);
+    explicit DeleteTranscriptionJobResponsePrivate(DeleteTranscriptionJobResponse * const q);
 
     void parseDeleteTranscriptionJobResponse(QXmlStreamReader &xml);
 

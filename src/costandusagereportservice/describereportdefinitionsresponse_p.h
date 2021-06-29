@@ -31,7 +31,7 @@ class DescribeReportDefinitionsResponsePrivate : public CostandUsageReportServic
 
 public:
 
-    DescribeReportDefinitionsResponsePrivate(DescribeReportDefinitionsResponse * const q);
+    explicit DescribeReportDefinitionsResponsePrivate(DescribeReportDefinitionsResponse * const q);
 
     void parseDescribeReportDefinitionsResponse(QXmlStreamReader &xml);
 

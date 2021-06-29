@@ -31,7 +31,7 @@ class UpdateAppImageConfigResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    UpdateAppImageConfigResponsePrivate(UpdateAppImageConfigResponse * const q);
+    explicit UpdateAppImageConfigResponsePrivate(UpdateAppImageConfigResponse * const q);
 
     void parseUpdateAppImageConfigResponse(QXmlStreamReader &xml);
 

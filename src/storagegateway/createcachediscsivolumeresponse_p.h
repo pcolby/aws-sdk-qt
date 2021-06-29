@@ -31,7 +31,7 @@ class CreateCachediSCSIVolumeResponsePrivate : public StorageGatewayResponsePriv
 
 public:
 
-    CreateCachediSCSIVolumeResponsePrivate(CreateCachediSCSIVolumeResponse * const q);
+    explicit CreateCachediSCSIVolumeResponsePrivate(CreateCachediSCSIVolumeResponse * const q);
 
     void parseCreateCachediSCSIVolumeResponse(QXmlStreamReader &xml);
 

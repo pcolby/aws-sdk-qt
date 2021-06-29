@@ -31,7 +31,7 @@ class DisableAWSServiceAccessResponsePrivate : public OrganizationsResponsePriva
 
 public:
 
-    DisableAWSServiceAccessResponsePrivate(DisableAWSServiceAccessResponse * const q);
+    explicit DisableAWSServiceAccessResponsePrivate(DisableAWSServiceAccessResponse * const q);
 
     void parseDisableAWSServiceAccessResponse(QXmlStreamReader &xml);
 

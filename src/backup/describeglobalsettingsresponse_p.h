@@ -31,7 +31,7 @@ class DescribeGlobalSettingsResponsePrivate : public BackupResponsePrivate {
 
 public:
 
-    DescribeGlobalSettingsResponsePrivate(DescribeGlobalSettingsResponse * const q);
+    explicit DescribeGlobalSettingsResponsePrivate(DescribeGlobalSettingsResponse * const q);
 
     void parseDescribeGlobalSettingsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeAnomalyDetectionExecutionsResponsePrivate : public LookoutMetricsR
 
 public:
 
-    DescribeAnomalyDetectionExecutionsResponsePrivate(DescribeAnomalyDetectionExecutionsResponse * const q);
+    explicit DescribeAnomalyDetectionExecutionsResponsePrivate(DescribeAnomalyDetectionExecutionsResponse * const q);
 
     void parseDescribeAnomalyDetectionExecutionsResponse(QXmlStreamReader &xml);
 

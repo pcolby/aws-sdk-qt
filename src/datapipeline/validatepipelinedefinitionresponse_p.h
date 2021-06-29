@@ -31,7 +31,7 @@ class ValidatePipelineDefinitionResponsePrivate : public DataPipelineResponsePri
 
 public:
 
-    ValidatePipelineDefinitionResponsePrivate(ValidatePipelineDefinitionResponse * const q);
+    explicit ValidatePipelineDefinitionResponsePrivate(ValidatePipelineDefinitionResponse * const q);
 
     void parseValidatePipelineDefinitionResponse(QXmlStreamReader &xml);
 

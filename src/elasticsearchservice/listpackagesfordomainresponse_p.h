@@ -31,7 +31,7 @@ class ListPackagesForDomainResponsePrivate : public ElasticsearchServiceResponse
 
 public:
 
-    ListPackagesForDomainResponsePrivate(ListPackagesForDomainResponse * const q);
+    explicit ListPackagesForDomainResponsePrivate(ListPackagesForDomainResponse * const q);
 
     void parseListPackagesForDomainResponse(QXmlStreamReader &xml);
 

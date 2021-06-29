@@ -31,7 +31,7 @@ class RestoreTableToPointInTimeResponsePrivate : public DynamoDBResponsePrivate 
 
 public:
 
-    RestoreTableToPointInTimeResponsePrivate(RestoreTableToPointInTimeResponse * const q);
+    explicit RestoreTableToPointInTimeResponsePrivate(RestoreTableToPointInTimeResponse * const q);
 
     void parseRestoreTableToPointInTimeResponse(QXmlStreamReader &xml);
 

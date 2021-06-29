@@ -31,7 +31,7 @@ class DescribeReplicationTaskAssessmentResultsResponsePrivate : public DatabaseM
 
 public:
 
-    DescribeReplicationTaskAssessmentResultsResponsePrivate(DescribeReplicationTaskAssessmentResultsResponse * const q);
+    explicit DescribeReplicationTaskAssessmentResultsResponsePrivate(DescribeReplicationTaskAssessmentResultsResponse * const q);
 
     void parseDescribeReplicationTaskAssessmentResultsResponse(QXmlStreamReader &xml);
 

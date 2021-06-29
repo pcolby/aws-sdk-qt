@@ -31,7 +31,7 @@ class UpdateEndpointWeightsAndCapacitiesResponsePrivate : public SageMakerRespon
 
 public:
 
-    UpdateEndpointWeightsAndCapacitiesResponsePrivate(UpdateEndpointWeightsAndCapacitiesResponse * const q);
+    explicit UpdateEndpointWeightsAndCapacitiesResponsePrivate(UpdateEndpointWeightsAndCapacitiesResponse * const q);
 
     void parseUpdateEndpointWeightsAndCapacitiesResponse(QXmlStreamReader &xml);
 

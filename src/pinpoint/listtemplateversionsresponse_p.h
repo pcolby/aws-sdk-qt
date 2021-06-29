@@ -31,7 +31,7 @@ class ListTemplateVersionsResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    ListTemplateVersionsResponsePrivate(ListTemplateVersionsResponse * const q);
+    explicit ListTemplateVersionsResponsePrivate(ListTemplateVersionsResponse * const q);
 
     void parseListTemplateVersionsResponse(QXmlStreamReader &xml);
 

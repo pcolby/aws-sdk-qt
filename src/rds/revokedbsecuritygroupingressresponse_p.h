@@ -31,7 +31,7 @@ class RevokeDBSecurityGroupIngressResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    RevokeDBSecurityGroupIngressResponsePrivate(RevokeDBSecurityGroupIngressResponse * const q);
+    explicit RevokeDBSecurityGroupIngressResponsePrivate(RevokeDBSecurityGroupIngressResponse * const q);
 
     void parseRevokeDBSecurityGroupIngressResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class RequestUploadCredentialsResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    RequestUploadCredentialsResponsePrivate(RequestUploadCredentialsResponse * const q);
+    explicit RequestUploadCredentialsResponsePrivate(RequestUploadCredentialsResponse * const q);
 
     void parseRequestUploadCredentialsResponse(QXmlStreamReader &xml);
 

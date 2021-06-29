@@ -31,7 +31,7 @@ class EnableVolumeIOResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    EnableVolumeIOResponsePrivate(EnableVolumeIOResponse * const q);
+    explicit EnableVolumeIOResponsePrivate(EnableVolumeIOResponse * const q);
 
     void parseEnableVolumeIOResponse(QXmlStreamReader &xml);
 

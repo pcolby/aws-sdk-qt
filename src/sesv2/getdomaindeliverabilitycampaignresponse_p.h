@@ -31,7 +31,7 @@ class GetDomainDeliverabilityCampaignResponsePrivate : public Sesv2ResponsePriva
 
 public:
 
-    GetDomainDeliverabilityCampaignResponsePrivate(GetDomainDeliverabilityCampaignResponse * const q);
+    explicit GetDomainDeliverabilityCampaignResponsePrivate(GetDomainDeliverabilityCampaignResponse * const q);
 
     void parseGetDomainDeliverabilityCampaignResponse(QXmlStreamReader &xml);
 

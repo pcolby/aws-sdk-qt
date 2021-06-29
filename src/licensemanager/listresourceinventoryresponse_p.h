@@ -31,7 +31,7 @@ class ListResourceInventoryResponsePrivate : public LicenseManagerResponsePrivat
 
 public:
 
-    ListResourceInventoryResponsePrivate(ListResourceInventoryResponse * const q);
+    explicit ListResourceInventoryResponsePrivate(ListResourceInventoryResponse * const q);
 
     void parseListResourceInventoryResponse(QXmlStreamReader &xml);
 

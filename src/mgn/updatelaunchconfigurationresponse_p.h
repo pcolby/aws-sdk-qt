@@ -31,7 +31,7 @@ class UpdateLaunchConfigurationResponsePrivate : public mgnResponsePrivate {
 
 public:
 
-    UpdateLaunchConfigurationResponsePrivate(UpdateLaunchConfigurationResponse * const q);
+    explicit UpdateLaunchConfigurationResponsePrivate(UpdateLaunchConfigurationResponse * const q);
 
     void parseUpdateLaunchConfigurationResponse(QXmlStreamReader &xml);
 

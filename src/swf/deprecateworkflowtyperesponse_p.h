@@ -31,7 +31,7 @@ class DeprecateWorkflowTypeResponsePrivate : public SwfResponsePrivate {
 
 public:
 
-    DeprecateWorkflowTypeResponsePrivate(DeprecateWorkflowTypeResponse * const q);
+    explicit DeprecateWorkflowTypeResponsePrivate(DeprecateWorkflowTypeResponse * const q);
 
     void parseDeprecateWorkflowTypeResponse(QXmlStreamReader &xml);
 

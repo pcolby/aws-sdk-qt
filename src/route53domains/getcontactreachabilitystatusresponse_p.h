@@ -31,7 +31,7 @@ class GetContactReachabilityStatusResponsePrivate : public Route53DomainsRespons
 
 public:
 
-    GetContactReachabilityStatusResponsePrivate(GetContactReachabilityStatusResponse * const q);
+    explicit GetContactReachabilityStatusResponsePrivate(GetContactReachabilityStatusResponse * const q);
 
     void parseGetContactReachabilityStatusResponse(QXmlStreamReader &xml);
 

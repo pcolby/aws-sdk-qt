@@ -31,7 +31,7 @@ class DescribeFHIRDatastoreResponsePrivate : public HealthLakeResponsePrivate {
 
 public:
 
-    DescribeFHIRDatastoreResponsePrivate(DescribeFHIRDatastoreResponse * const q);
+    explicit DescribeFHIRDatastoreResponsePrivate(DescribeFHIRDatastoreResponse * const q);
 
     void parseDescribeFHIRDatastoreResponse(QXmlStreamReader &xml);
 

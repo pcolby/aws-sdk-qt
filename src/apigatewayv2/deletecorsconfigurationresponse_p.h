@@ -31,7 +31,7 @@ class DeleteCorsConfigurationResponsePrivate : public ApiGatewayV2ResponsePrivat
 
 public:
 
-    DeleteCorsConfigurationResponsePrivate(DeleteCorsConfigurationResponse * const q);
+    explicit DeleteCorsConfigurationResponsePrivate(DeleteCorsConfigurationResponse * const q);
 
     void parseDeleteCorsConfigurationResponse(QXmlStreamReader &xml);
 

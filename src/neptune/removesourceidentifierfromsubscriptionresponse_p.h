@@ -31,7 +31,7 @@ class RemoveSourceIdentifierFromSubscriptionResponsePrivate : public NeptuneResp
 
 public:
 
-    RemoveSourceIdentifierFromSubscriptionResponsePrivate(RemoveSourceIdentifierFromSubscriptionResponse * const q);
+    explicit RemoveSourceIdentifierFromSubscriptionResponsePrivate(RemoveSourceIdentifierFromSubscriptionResponse * const q);
 
     void parseRemoveSourceIdentifierFromSubscriptionResponse(QXmlStreamReader &xml);
 

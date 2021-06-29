@@ -91,7 +91,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    SnowballClient(
+    explicit SnowballClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -126,7 +126,7 @@ public slots:
 protected:
     /// @cond internal
     SnowballClientPrivate * const d_ptr; ///< Internal d-pointer.
-    SnowballClient(SnowballClientPrivate * const d);
+    explicit SnowballClient(SnowballClientPrivate * const d);
     /// @endcond
 
 private:

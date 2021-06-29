@@ -95,7 +95,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    XRayClient(
+    explicit XRayClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -132,7 +132,7 @@ public slots:
 protected:
     /// @cond internal
     XRayClientPrivate * const d_ptr; ///< Internal d-pointer.
-    XRayClient(XRayClientPrivate * const d);
+    explicit XRayClient(XRayClientPrivate * const d);
     /// @endcond
 
 private:

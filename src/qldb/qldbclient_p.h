@@ -30,7 +30,7 @@ class QldbClient;
 class QldbClientPrivate {
 
 public:
-    QldbClientPrivate(QldbClient * const q);
+    explicit QldbClientPrivate(QldbClient * const q);
 
 protected:
     QldbClient * const q_ptr; ///< Internal q-pointer.

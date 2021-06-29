@@ -31,7 +31,7 @@ class DescribeConfigurationSetResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    DescribeConfigurationSetResponsePrivate(DescribeConfigurationSetResponse * const q);
+    explicit DescribeConfigurationSetResponsePrivate(DescribeConfigurationSetResponse * const q);
 
     void parseDescribeConfigurationSetResponse(QXmlStreamReader &xml);
 

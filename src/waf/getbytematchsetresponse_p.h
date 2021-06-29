@@ -31,7 +31,7 @@ class GetByteMatchSetResponsePrivate : public WafResponsePrivate {
 
 public:
 
-    GetByteMatchSetResponsePrivate(GetByteMatchSetResponse * const q);
+    explicit GetByteMatchSetResponsePrivate(GetByteMatchSetResponse * const q);
 
     void parseGetByteMatchSetResponse(QXmlStreamReader &xml);
 

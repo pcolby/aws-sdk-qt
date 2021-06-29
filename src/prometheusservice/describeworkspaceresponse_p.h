@@ -31,7 +31,7 @@ class DescribeWorkspaceResponsePrivate : public PrometheusServiceResponsePrivate
 
 public:
 
-    DescribeWorkspaceResponsePrivate(DescribeWorkspaceResponse * const q);
+    explicit DescribeWorkspaceResponsePrivate(DescribeWorkspaceResponse * const q);
 
     void parseDescribeWorkspaceResponse(QXmlStreamReader &xml);
 

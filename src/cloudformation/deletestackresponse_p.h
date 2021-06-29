@@ -31,7 +31,7 @@ class DeleteStackResponsePrivate : public CloudFormationResponsePrivate {
 
 public:
 
-    DeleteStackResponsePrivate(DeleteStackResponse * const q);
+    explicit DeleteStackResponsePrivate(DeleteStackResponse * const q);
 
     void parseDeleteStackResponse(QXmlStreamReader &xml);
 

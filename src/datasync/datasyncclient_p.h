@@ -30,7 +30,7 @@ class DataSyncClient;
 class DataSyncClientPrivate {
 
 public:
-    DataSyncClientPrivate(DataSyncClient * const q);
+    explicit DataSyncClientPrivate(DataSyncClient * const q);
 
 protected:
     DataSyncClient * const q_ptr; ///< Internal q-pointer.

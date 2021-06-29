@@ -31,7 +31,7 @@ class DeleteNamespaceResponsePrivate : public ServiceDiscoveryResponsePrivate {
 
 public:
 
-    DeleteNamespaceResponsePrivate(DeleteNamespaceResponse * const q);
+    explicit DeleteNamespaceResponsePrivate(DeleteNamespaceResponse * const q);
 
     void parseDeleteNamespaceResponse(QXmlStreamReader &xml);
 

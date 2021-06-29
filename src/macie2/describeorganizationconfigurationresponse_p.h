@@ -31,7 +31,7 @@ class DescribeOrganizationConfigurationResponsePrivate : public Macie2ResponsePr
 
 public:
 
-    DescribeOrganizationConfigurationResponsePrivate(DescribeOrganizationConfigurationResponse * const q);
+    explicit DescribeOrganizationConfigurationResponsePrivate(DescribeOrganizationConfigurationResponse * const q);
 
     void parseDescribeOrganizationConfigurationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListGroupResourcesResponsePrivate : public ResourceGroupsResponsePrivate {
 
 public:
 
-    ListGroupResourcesResponsePrivate(ListGroupResourcesResponse * const q);
+    explicit ListGroupResourcesResponsePrivate(ListGroupResourcesResponse * const q);
 
     void parseListGroupResourcesResponse(QXmlStreamReader &xml);
 

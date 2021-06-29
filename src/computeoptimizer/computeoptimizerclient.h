@@ -67,7 +67,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    ComputeOptimizerClient(
+    explicit ComputeOptimizerClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -90,7 +90,7 @@ public slots:
 protected:
     /// @cond internal
     ComputeOptimizerClientPrivate * const d_ptr; ///< Internal d-pointer.
-    ComputeOptimizerClient(ComputeOptimizerClientPrivate * const d);
+    explicit ComputeOptimizerClient(ComputeOptimizerClientPrivate * const d);
     /// @endcond
 
 private:

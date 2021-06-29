@@ -31,7 +31,7 @@ class SetCognitoEventsResponsePrivate : public CognitoSyncResponsePrivate {
 
 public:
 
-    SetCognitoEventsResponsePrivate(SetCognitoEventsResponse * const q);
+    explicit SetCognitoEventsResponsePrivate(SetCognitoEventsResponse * const q);
 
     void parseSetCognitoEventsResponse(QXmlStreamReader &xml);
 

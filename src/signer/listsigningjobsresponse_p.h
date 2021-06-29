@@ -31,7 +31,7 @@ class ListSigningJobsResponsePrivate : public signerResponsePrivate {
 
 public:
 
-    ListSigningJobsResponsePrivate(ListSigningJobsResponse * const q);
+    explicit ListSigningJobsResponsePrivate(ListSigningJobsResponse * const q);
 
     void parseListSigningJobsResponse(QXmlStreamReader &xml);
 

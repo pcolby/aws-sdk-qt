@@ -31,7 +31,7 @@ class ListPrincipalsResponsePrivate : public RamResponsePrivate {
 
 public:
 
-    ListPrincipalsResponsePrivate(ListPrincipalsResponse * const q);
+    explicit ListPrincipalsResponsePrivate(ListPrincipalsResponse * const q);
 
     void parseListPrincipalsResponse(QXmlStreamReader &xml);
 

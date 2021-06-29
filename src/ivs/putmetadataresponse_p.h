@@ -31,7 +31,7 @@ class PutMetadataResponsePrivate : public IvsResponsePrivate {
 
 public:
 
-    PutMetadataResponsePrivate(PutMetadataResponse * const q);
+    explicit PutMetadataResponsePrivate(PutMetadataResponse * const q);
 
     void parsePutMetadataResponse(QXmlStreamReader &xml);
 

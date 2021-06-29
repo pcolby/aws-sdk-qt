@@ -31,7 +31,7 @@ class UpdateIntegrationResponseResponsePrivate : public ApiGatewayV2ResponsePriv
 
 public:
 
-    UpdateIntegrationResponseResponsePrivate(UpdateIntegrationResponseResponse * const q);
+    explicit UpdateIntegrationResponseResponsePrivate(UpdateIntegrationResponseResponse * const q);
 
     void parseUpdateIntegrationResponseResponse(QXmlStreamReader &xml);
 

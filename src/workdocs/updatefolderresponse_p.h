@@ -31,7 +31,7 @@ class UpdateFolderResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 
-    UpdateFolderResponsePrivate(UpdateFolderResponse * const q);
+    explicit UpdateFolderResponsePrivate(UpdateFolderResponse * const q);
 
     void parseUpdateFolderResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeLoggingOptionsResponsePrivate : public IoTSiteWiseResponsePrivate 
 
 public:
 
-    DescribeLoggingOptionsResponsePrivate(DescribeLoggingOptionsResponse * const q);
+    explicit DescribeLoggingOptionsResponsePrivate(DescribeLoggingOptionsResponse * const q);
 
     void parseDescribeLoggingOptionsResponse(QXmlStreamReader &xml);
 

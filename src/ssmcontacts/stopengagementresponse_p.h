@@ -31,7 +31,7 @@ class StopEngagementResponsePrivate : public SSMContactsResponsePrivate {
 
 public:
 
-    StopEngagementResponsePrivate(StopEngagementResponse * const q);
+    explicit StopEngagementResponsePrivate(StopEngagementResponse * const q);
 
     void parseStopEngagementResponse(QXmlStreamReader &xml);
 

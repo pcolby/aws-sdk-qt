@@ -31,7 +31,7 @@ class ListAvailableSolutionStacksResponsePrivate : public ElasticBeanstalkRespon
 
 public:
 
-    ListAvailableSolutionStacksResponsePrivate(ListAvailableSolutionStacksResponse * const q);
+    explicit ListAvailableSolutionStacksResponsePrivate(ListAvailableSolutionStacksResponse * const q);
 
     void parseListAvailableSolutionStacksResponse(QXmlStreamReader &xml);
 

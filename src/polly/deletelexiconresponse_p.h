@@ -31,7 +31,7 @@ class DeleteLexiconResponsePrivate : public PollyResponsePrivate {
 
 public:
 
-    DeleteLexiconResponsePrivate(DeleteLexiconResponse * const q);
+    explicit DeleteLexiconResponsePrivate(DeleteLexiconResponse * const q);
 
     void parseDeleteLexiconResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class StopSuiteRunResponsePrivate : public IoTDeviceAdvisorResponsePrivate {
 
 public:
 
-    StopSuiteRunResponsePrivate(StopSuiteRunResponse * const q);
+    explicit StopSuiteRunResponsePrivate(StopSuiteRunResponse * const q);
 
     void parseStopSuiteRunResponse(QXmlStreamReader &xml);
 

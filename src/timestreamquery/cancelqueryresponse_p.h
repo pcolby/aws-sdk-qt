@@ -31,7 +31,7 @@ class CancelQueryResponsePrivate : public TimestreamQueryResponsePrivate {
 
 public:
 
-    CancelQueryResponsePrivate(CancelQueryResponse * const q);
+    explicit CancelQueryResponsePrivate(CancelQueryResponse * const q);
 
     void parseCancelQueryResponse(QXmlStreamReader &xml);
 

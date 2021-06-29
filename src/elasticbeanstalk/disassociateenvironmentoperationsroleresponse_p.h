@@ -31,7 +31,7 @@ class DisassociateEnvironmentOperationsRoleResponsePrivate : public ElasticBeans
 
 public:
 
-    DisassociateEnvironmentOperationsRoleResponsePrivate(DisassociateEnvironmentOperationsRoleResponse * const q);
+    explicit DisassociateEnvironmentOperationsRoleResponsePrivate(DisassociateEnvironmentOperationsRoleResponse * const q);
 
     void parseDisassociateEnvironmentOperationsRoleResponse(QXmlStreamReader &xml);
 

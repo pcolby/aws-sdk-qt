@@ -31,7 +31,7 @@ class GetRegistrationCodeResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    GetRegistrationCodeResponsePrivate(GetRegistrationCodeResponse * const q);
+    explicit GetRegistrationCodeResponsePrivate(GetRegistrationCodeResponse * const q);
 
     void parseGetRegistrationCodeResponse(QXmlStreamReader &xml);
 

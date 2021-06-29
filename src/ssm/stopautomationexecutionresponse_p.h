@@ -31,7 +31,7 @@ class StopAutomationExecutionResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    StopAutomationExecutionResponsePrivate(StopAutomationExecutionResponse * const q);
+    explicit StopAutomationExecutionResponsePrivate(StopAutomationExecutionResponse * const q);
 
     void parseStopAutomationExecutionResponse(QXmlStreamReader &xml);
 

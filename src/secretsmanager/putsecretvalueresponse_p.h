@@ -31,7 +31,7 @@ class PutSecretValueResponsePrivate : public SecretsManagerResponsePrivate {
 
 public:
 
-    PutSecretValueResponsePrivate(PutSecretValueResponse * const q);
+    explicit PutSecretValueResponsePrivate(PutSecretValueResponse * const q);
 
     void parsePutSecretValueResponse(QXmlStreamReader &xml);
 

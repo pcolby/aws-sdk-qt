@@ -31,7 +31,7 @@ class CreateClassifierResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    CreateClassifierResponsePrivate(CreateClassifierResponse * const q);
+    explicit CreateClassifierResponsePrivate(CreateClassifierResponse * const q);
 
     void parseCreateClassifierResponse(QXmlStreamReader &xml);
 

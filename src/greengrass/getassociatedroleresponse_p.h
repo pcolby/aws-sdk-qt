@@ -31,7 +31,7 @@ class GetAssociatedRoleResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 
-    GetAssociatedRoleResponsePrivate(GetAssociatedRoleResponse * const q);
+    explicit GetAssociatedRoleResponsePrivate(GetAssociatedRoleResponse * const q);
 
     void parseGetAssociatedRoleResponse(QXmlStreamReader &xml);
 

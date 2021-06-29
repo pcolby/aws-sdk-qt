@@ -30,7 +30,7 @@ class IoTClient;
 class IoTClientPrivate {
 
 public:
-    IoTClientPrivate(IoTClient * const q);
+    explicit IoTClientPrivate(IoTClient * const q);
 
 protected:
     IoTClient * const q_ptr; ///< Internal q-pointer.

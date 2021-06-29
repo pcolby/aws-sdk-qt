@@ -31,7 +31,7 @@ class BatchStartResponsePrivate : public MediaLiveResponsePrivate {
 
 public:
 
-    BatchStartResponsePrivate(BatchStartResponse * const q);
+    explicit BatchStartResponsePrivate(BatchStartResponse * const q);
 
     void parseBatchStartResponse(QXmlStreamReader &xml);
 

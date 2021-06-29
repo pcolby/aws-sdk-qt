@@ -31,7 +31,7 @@ class DisassociateRepositoryResponsePrivate : public CodeGuruReviewerResponsePri
 
 public:
 
-    DisassociateRepositoryResponsePrivate(DisassociateRepositoryResponse * const q);
+    explicit DisassociateRepositoryResponsePrivate(DisassociateRepositoryResponse * const q);
 
     void parseDisassociateRepositoryResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeChannelModeratorResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    DescribeChannelModeratorResponsePrivate(DescribeChannelModeratorResponse * const q);
+    explicit DescribeChannelModeratorResponsePrivate(DescribeChannelModeratorResponse * const q);
 
     void parseDescribeChannelModeratorResponse(QXmlStreamReader &xml);
 

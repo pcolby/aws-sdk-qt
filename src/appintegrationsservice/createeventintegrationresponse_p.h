@@ -31,7 +31,7 @@ class CreateEventIntegrationResponsePrivate : public AppIntegrationsServiceRespo
 
 public:
 
-    CreateEventIntegrationResponsePrivate(CreateEventIntegrationResponse * const q);
+    explicit CreateEventIntegrationResponsePrivate(CreateEventIntegrationResponse * const q);
 
     void parseCreateEventIntegrationResponse(QXmlStreamReader &xml);
 

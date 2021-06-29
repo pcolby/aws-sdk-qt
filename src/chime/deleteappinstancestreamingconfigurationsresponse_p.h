@@ -31,7 +31,7 @@ class DeleteAppInstanceStreamingConfigurationsResponsePrivate : public ChimeResp
 
 public:
 
-    DeleteAppInstanceStreamingConfigurationsResponsePrivate(DeleteAppInstanceStreamingConfigurationsResponse * const q);
+    explicit DeleteAppInstanceStreamingConfigurationsResponsePrivate(DeleteAppInstanceStreamingConfigurationsResponse * const q);
 
     void parseDeleteAppInstanceStreamingConfigurationsResponse(QXmlStreamReader &xml);
 

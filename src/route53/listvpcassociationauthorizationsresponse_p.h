@@ -31,7 +31,7 @@ class ListVPCAssociationAuthorizationsResponsePrivate : public Route53ResponsePr
 
 public:
 
-    ListVPCAssociationAuthorizationsResponsePrivate(ListVPCAssociationAuthorizationsResponse * const q);
+    explicit ListVPCAssociationAuthorizationsResponsePrivate(ListVPCAssociationAuthorizationsResponse * const q);
 
     void parseListVPCAssociationAuthorizationsResponse(QXmlStreamReader &xml);
 

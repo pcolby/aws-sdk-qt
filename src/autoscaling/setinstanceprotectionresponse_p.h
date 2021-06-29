@@ -31,7 +31,7 @@ class SetInstanceProtectionResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 
-    SetInstanceProtectionResponsePrivate(SetInstanceProtectionResponse * const q);
+    explicit SetInstanceProtectionResponsePrivate(SetInstanceProtectionResponse * const q);
 
     void parseSetInstanceProtectionResponse(QXmlStreamReader &xml);
 

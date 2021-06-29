@@ -31,7 +31,7 @@ class ListVoiceConnectorGroupsResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    ListVoiceConnectorGroupsResponsePrivate(ListVoiceConnectorGroupsResponse * const q);
+    explicit ListVoiceConnectorGroupsResponsePrivate(ListVoiceConnectorGroupsResponse * const q);
 
     void parseListVoiceConnectorGroupsResponse(QXmlStreamReader &xml);
 

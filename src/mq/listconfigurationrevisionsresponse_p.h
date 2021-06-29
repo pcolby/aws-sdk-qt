@@ -31,7 +31,7 @@ class ListConfigurationRevisionsResponsePrivate : public MqResponsePrivate {
 
 public:
 
-    ListConfigurationRevisionsResponsePrivate(ListConfigurationRevisionsResponse * const q);
+    explicit ListConfigurationRevisionsResponsePrivate(ListConfigurationRevisionsResponse * const q);
 
     void parseListConfigurationRevisionsResponse(QXmlStreamReader &xml);
 

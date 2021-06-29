@@ -31,7 +31,7 @@ class ExecuteChangeSetResponsePrivate : public CloudFormationResponsePrivate {
 
 public:
 
-    ExecuteChangeSetResponsePrivate(ExecuteChangeSetResponse * const q);
+    explicit ExecuteChangeSetResponsePrivate(ExecuteChangeSetResponse * const q);
 
     void parseExecuteChangeSetResponse(QXmlStreamReader &xml);
 

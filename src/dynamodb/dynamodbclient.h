@@ -141,7 +141,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    DynamoDBClient(
+    explicit DynamoDBClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -201,7 +201,7 @@ public slots:
 protected:
     /// @cond internal
     DynamoDBClientPrivate * const d_ptr; ///< Internal d-pointer.
-    DynamoDBClient(DynamoDBClientPrivate * const d);
+    explicit DynamoDBClient(DynamoDBClientPrivate * const d);
     /// @endcond
 
 private:

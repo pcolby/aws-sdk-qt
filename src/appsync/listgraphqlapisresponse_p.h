@@ -31,7 +31,7 @@ class ListGraphqlApisResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 
-    ListGraphqlApisResponsePrivate(ListGraphqlApisResponse * const q);
+    explicit ListGraphqlApisResponsePrivate(ListGraphqlApisResponse * const q);
 
     void parseListGraphqlApisResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteFileResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 
-    DeleteFileResponsePrivate(DeleteFileResponse * const q);
+    explicit DeleteFileResponsePrivate(DeleteFileResponse * const q);
 
     void parseDeleteFileResponse(QXmlStreamReader &xml);
 

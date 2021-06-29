@@ -31,7 +31,7 @@ class GetBackupVaultAccessPolicyResponsePrivate : public BackupResponsePrivate {
 
 public:
 
-    GetBackupVaultAccessPolicyResponsePrivate(GetBackupVaultAccessPolicyResponse * const q);
+    explicit GetBackupVaultAccessPolicyResponsePrivate(GetBackupVaultAccessPolicyResponse * const q);
 
     void parseGetBackupVaultAccessPolicyResponse(QXmlStreamReader &xml);
 

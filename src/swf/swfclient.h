@@ -115,7 +115,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    SwfClient(
+    explicit SwfClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -162,7 +162,7 @@ public slots:
 protected:
     /// @cond internal
     SwfClientPrivate * const d_ptr; ///< Internal d-pointer.
-    SwfClient(SwfClientPrivate * const d);
+    explicit SwfClient(SwfClientPrivate * const d);
     /// @endcond
 
 private:

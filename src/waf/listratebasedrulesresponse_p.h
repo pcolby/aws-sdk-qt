@@ -31,7 +31,7 @@ class ListRateBasedRulesResponsePrivate : public WafResponsePrivate {
 
 public:
 
-    ListRateBasedRulesResponsePrivate(ListRateBasedRulesResponse * const q);
+    explicit ListRateBasedRulesResponsePrivate(ListRateBasedRulesResponse * const q);
 
     void parseListRateBasedRulesResponse(QXmlStreamReader &xml);
 

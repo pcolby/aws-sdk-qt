@@ -30,7 +30,7 @@ class RDSDataServiceClient;
 class RDSDataServiceClientPrivate {
 
 public:
-    RDSDataServiceClientPrivate(RDSDataServiceClient * const q);
+    explicit RDSDataServiceClientPrivate(RDSDataServiceClient * const q);
 
 protected:
     RDSDataServiceClient * const q_ptr; ///< Internal q-pointer.

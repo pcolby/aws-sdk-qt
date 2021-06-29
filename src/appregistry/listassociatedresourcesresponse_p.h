@@ -31,7 +31,7 @@ class ListAssociatedResourcesResponsePrivate : public AppRegistryResponsePrivate
 
 public:
 
-    ListAssociatedResourcesResponsePrivate(ListAssociatedResourcesResponse * const q);
+    explicit ListAssociatedResourcesResponsePrivate(ListAssociatedResourcesResponse * const q);
 
     void parseListAssociatedResourcesResponse(QXmlStreamReader &xml);
 

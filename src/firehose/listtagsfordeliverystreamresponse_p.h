@@ -31,7 +31,7 @@ class ListTagsForDeliveryStreamResponsePrivate : public FirehoseResponsePrivate 
 
 public:
 
-    ListTagsForDeliveryStreamResponsePrivate(ListTagsForDeliveryStreamResponse * const q);
+    explicit ListTagsForDeliveryStreamResponsePrivate(ListTagsForDeliveryStreamResponse * const q);
 
     void parseListTagsForDeliveryStreamResponse(QXmlStreamReader &xml);
 

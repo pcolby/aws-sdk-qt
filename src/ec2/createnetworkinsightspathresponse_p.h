@@ -31,7 +31,7 @@ class CreateNetworkInsightsPathResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CreateNetworkInsightsPathResponsePrivate(CreateNetworkInsightsPathResponse * const q);
+    explicit CreateNetworkInsightsPathResponsePrivate(CreateNetworkInsightsPathResponse * const q);
 
     void parseCreateNetworkInsightsPathResponse(QXmlStreamReader &xml);
 

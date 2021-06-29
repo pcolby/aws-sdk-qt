@@ -31,7 +31,7 @@ class DescribeBudgetActionHistoriesResponsePrivate : public BudgetsResponsePriva
 
 public:
 
-    DescribeBudgetActionHistoriesResponsePrivate(DescribeBudgetActionHistoriesResponse * const q);
+    explicit DescribeBudgetActionHistoriesResponsePrivate(DescribeBudgetActionHistoriesResponse * const q);
 
     void parseDescribeBudgetActionHistoriesResponse(QXmlStreamReader &xml);
 

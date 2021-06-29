@@ -31,7 +31,7 @@ class SendTaskFailureResponsePrivate : public SfnResponsePrivate {
 
 public:
 
-    SendTaskFailureResponsePrivate(SendTaskFailureResponse * const q);
+    explicit SendTaskFailureResponsePrivate(SendTaskFailureResponse * const q);
 
     void parseSendTaskFailureResponse(QXmlStreamReader &xml);
 

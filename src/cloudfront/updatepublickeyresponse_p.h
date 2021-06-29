@@ -31,7 +31,7 @@ class UpdatePublicKeyResponsePrivate : public CloudFrontResponsePrivate {
 
 public:
 
-    UpdatePublicKeyResponsePrivate(UpdatePublicKeyResponse * const q);
+    explicit UpdatePublicKeyResponsePrivate(UpdatePublicKeyResponse * const q);
 
     void parseUpdatePublicKeyResponse(QXmlStreamReader &xml);
 

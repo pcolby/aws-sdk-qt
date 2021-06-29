@@ -31,7 +31,7 @@ class UpdateSystemTemplateResponsePrivate : public IoTThingsGraphResponsePrivate
 
 public:
 
-    UpdateSystemTemplateResponsePrivate(UpdateSystemTemplateResponse * const q);
+    explicit UpdateSystemTemplateResponsePrivate(UpdateSystemTemplateResponse * const q);
 
     void parseUpdateSystemTemplateResponse(QXmlStreamReader &xml);
 

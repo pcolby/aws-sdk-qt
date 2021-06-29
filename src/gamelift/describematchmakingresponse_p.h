@@ -31,7 +31,7 @@ class DescribeMatchmakingResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    DescribeMatchmakingResponsePrivate(DescribeMatchmakingResponse * const q);
+    explicit DescribeMatchmakingResponsePrivate(DescribeMatchmakingResponse * const q);
 
     void parseDescribeMatchmakingResponse(QXmlStreamReader &xml);
 

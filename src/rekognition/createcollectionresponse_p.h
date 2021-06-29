@@ -31,7 +31,7 @@ class CreateCollectionResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 
-    CreateCollectionResponsePrivate(CreateCollectionResponse * const q);
+    explicit CreateCollectionResponsePrivate(CreateCollectionResponse * const q);
 
     void parseCreateCollectionResponse(QXmlStreamReader &xml);
 

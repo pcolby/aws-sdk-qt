@@ -31,7 +31,7 @@ class RemoveTagsFromStreamResponsePrivate : public KinesisResponsePrivate {
 
 public:
 
-    RemoveTagsFromStreamResponsePrivate(RemoveTagsFromStreamResponse * const q);
+    explicit RemoveTagsFromStreamResponsePrivate(RemoveTagsFromStreamResponse * const q);
 
     void parseRemoveTagsFromStreamResponse(QXmlStreamReader &xml);
 

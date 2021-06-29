@@ -31,7 +31,7 @@ class DescribeCapacityProvidersResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    DescribeCapacityProvidersResponsePrivate(DescribeCapacityProvidersResponse * const q);
+    explicit DescribeCapacityProvidersResponsePrivate(DescribeCapacityProvidersResponse * const q);
 
     void parseDescribeCapacityProvidersResponse(QXmlStreamReader &xml);
 

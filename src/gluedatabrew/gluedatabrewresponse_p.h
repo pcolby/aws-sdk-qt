@@ -29,7 +29,7 @@ class GlueDataBrewResponsePrivate {
 
 public:
 
-    GlueDataBrewResponsePrivate(GlueDataBrewResponse * const q);
+    explicit GlueDataBrewResponsePrivate(GlueDataBrewResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

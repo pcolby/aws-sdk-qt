@@ -31,7 +31,7 @@ class ResetDistributionCacheResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    ResetDistributionCacheResponsePrivate(ResetDistributionCacheResponse * const q);
+    explicit ResetDistributionCacheResponsePrivate(ResetDistributionCacheResponse * const q);
 
     void parseResetDistributionCacheResponse(QXmlStreamReader &xml);
 

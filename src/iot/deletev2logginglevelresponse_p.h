@@ -31,7 +31,7 @@ class DeleteV2LoggingLevelResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DeleteV2LoggingLevelResponsePrivate(DeleteV2LoggingLevelResponse * const q);
+    explicit DeleteV2LoggingLevelResponsePrivate(DeleteV2LoggingLevelResponse * const q);
 
     void parseDeleteV2LoggingLevelResponse(QXmlStreamReader &xml);
 

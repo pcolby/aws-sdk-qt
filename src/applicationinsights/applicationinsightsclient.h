@@ -95,7 +95,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    ApplicationInsightsClient(
+    explicit ApplicationInsightsClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -132,7 +132,7 @@ public slots:
 protected:
     /// @cond internal
     ApplicationInsightsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    ApplicationInsightsClient(ApplicationInsightsClientPrivate * const d);
+    explicit ApplicationInsightsClient(ApplicationInsightsClientPrivate * const d);
     /// @endcond
 
 private:

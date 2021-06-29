@@ -31,7 +31,7 @@ class DeleteXssMatchSetResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 
-    DeleteXssMatchSetResponsePrivate(DeleteXssMatchSetResponse * const q);
+    explicit DeleteXssMatchSetResponsePrivate(DeleteXssMatchSetResponse * const q);
 
     void parseDeleteXssMatchSetResponse(QXmlStreamReader &xml);
 

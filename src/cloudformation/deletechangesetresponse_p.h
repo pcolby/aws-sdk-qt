@@ -31,7 +31,7 @@ class DeleteChangeSetResponsePrivate : public CloudFormationResponsePrivate {
 
 public:
 
-    DeleteChangeSetResponsePrivate(DeleteChangeSetResponse * const q);
+    explicit DeleteChangeSetResponsePrivate(DeleteChangeSetResponse * const q);
 
     void parseDeleteChangeSetResponse(QXmlStreamReader &xml);
 

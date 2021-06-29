@@ -31,7 +31,7 @@ class DescribeActionTargetsResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 
-    DescribeActionTargetsResponsePrivate(DescribeActionTargetsResponse * const q);
+    explicit DescribeActionTargetsResponsePrivate(DescribeActionTargetsResponse * const q);
 
     void parseDescribeActionTargetsResponse(QXmlStreamReader &xml);
 

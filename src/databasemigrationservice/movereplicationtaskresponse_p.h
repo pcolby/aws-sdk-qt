@@ -31,7 +31,7 @@ class MoveReplicationTaskResponsePrivate : public DatabaseMigrationServiceRespon
 
 public:
 
-    MoveReplicationTaskResponsePrivate(MoveReplicationTaskResponse * const q);
+    explicit MoveReplicationTaskResponsePrivate(MoveReplicationTaskResponse * const q);
 
     void parseMoveReplicationTaskResponse(QXmlStreamReader &xml);
 

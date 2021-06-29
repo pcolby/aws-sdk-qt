@@ -31,7 +31,7 @@ class ListModelPackageGroupsResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    ListModelPackageGroupsResponsePrivate(ListModelPackageGroupsResponse * const q);
+    explicit ListModelPackageGroupsResponsePrivate(ListModelPackageGroupsResponse * const q);
 
     void parseListModelPackageGroupsResponse(QXmlStreamReader &xml);
 

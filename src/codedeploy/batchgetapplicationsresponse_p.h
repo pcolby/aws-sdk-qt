@@ -31,7 +31,7 @@ class BatchGetApplicationsResponsePrivate : public CodeDeployResponsePrivate {
 
 public:
 
-    BatchGetApplicationsResponsePrivate(BatchGetApplicationsResponse * const q);
+    explicit BatchGetApplicationsResponsePrivate(BatchGetApplicationsResponse * const q);
 
     void parseBatchGetApplicationsResponse(QXmlStreamReader &xml);
 

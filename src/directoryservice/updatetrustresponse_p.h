@@ -31,7 +31,7 @@ class UpdateTrustResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 
-    UpdateTrustResponsePrivate(UpdateTrustResponse * const q);
+    explicit UpdateTrustResponsePrivate(UpdateTrustResponse * const q);
 
     void parseUpdateTrustResponse(QXmlStreamReader &xml);
 

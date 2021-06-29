@@ -31,7 +31,7 @@ class DescribeAssetPropertyResponsePrivate : public IoTSiteWiseResponsePrivate {
 
 public:
 
-    DescribeAssetPropertyResponsePrivate(DescribeAssetPropertyResponse * const q);
+    explicit DescribeAssetPropertyResponsePrivate(DescribeAssetPropertyResponse * const q);
 
     void parseDescribeAssetPropertyResponse(QXmlStreamReader &xml);
 

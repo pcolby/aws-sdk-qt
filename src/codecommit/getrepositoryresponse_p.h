@@ -31,7 +31,7 @@ class GetRepositoryResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 
-    GetRepositoryResponsePrivate(GetRepositoryResponse * const q);
+    explicit GetRepositoryResponsePrivate(GetRepositoryResponse * const q);
 
     void parseGetRepositoryResponse(QXmlStreamReader &xml);
 

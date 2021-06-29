@@ -31,7 +31,7 @@ class StartDetectorModelAnalysisResponsePrivate : public IoTEventsResponsePrivat
 
 public:
 
-    StartDetectorModelAnalysisResponsePrivate(StartDetectorModelAnalysisResponse * const q);
+    explicit StartDetectorModelAnalysisResponsePrivate(StartDetectorModelAnalysisResponse * const q);
 
     void parseStartDetectorModelAnalysisResponse(QXmlStreamReader &xml);
 

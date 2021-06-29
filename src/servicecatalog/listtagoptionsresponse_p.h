@@ -31,7 +31,7 @@ class ListTagOptionsResponsePrivate : public ServiceCatalogResponsePrivate {
 
 public:
 
-    ListTagOptionsResponsePrivate(ListTagOptionsResponse * const q);
+    explicit ListTagOptionsResponsePrivate(ListTagOptionsResponse * const q);
 
     void parseListTagOptionsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeScalableTargetsResponsePrivate : public ApplicationAutoScalingResp
 
 public:
 
-    DescribeScalableTargetsResponsePrivate(DescribeScalableTargetsResponse * const q);
+    explicit DescribeScalableTargetsResponsePrivate(DescribeScalableTargetsResponse * const q);
 
     void parseDescribeScalableTargetsResponse(QXmlStreamReader &xml);
 

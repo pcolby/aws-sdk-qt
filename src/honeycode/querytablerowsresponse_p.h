@@ -31,7 +31,7 @@ class QueryTableRowsResponsePrivate : public HoneycodeResponsePrivate {
 
 public:
 
-    QueryTableRowsResponsePrivate(QueryTableRowsResponse * const q);
+    explicit QueryTableRowsResponsePrivate(QueryTableRowsResponse * const q);
 
     void parseQueryTableRowsResponse(QXmlStreamReader &xml);
 

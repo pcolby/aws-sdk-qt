@@ -31,7 +31,7 @@ class BatchCreateDelegationByAssessmentResponsePrivate : public AuditManagerResp
 
 public:
 
-    BatchCreateDelegationByAssessmentResponsePrivate(BatchCreateDelegationByAssessmentResponse * const q);
+    explicit BatchCreateDelegationByAssessmentResponsePrivate(BatchCreateDelegationByAssessmentResponse * const q);
 
     void parseBatchCreateDelegationByAssessmentResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class EnableRadiusResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 
-    EnableRadiusResponsePrivate(EnableRadiusResponse * const q);
+    explicit EnableRadiusResponsePrivate(EnableRadiusResponse * const q);
 
     void parseEnableRadiusResponse(QXmlStreamReader &xml);
 

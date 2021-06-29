@@ -31,7 +31,7 @@ class SetUserPoolMfaConfigResponsePrivate : public CognitoIdentityProviderRespon
 
 public:
 
-    SetUserPoolMfaConfigResponsePrivate(SetUserPoolMfaConfigResponse * const q);
+    explicit SetUserPoolMfaConfigResponsePrivate(SetUserPoolMfaConfigResponse * const q);
 
     void parseSetUserPoolMfaConfigResponse(QXmlStreamReader &xml);
 

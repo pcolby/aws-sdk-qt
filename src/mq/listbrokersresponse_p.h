@@ -31,7 +31,7 @@ class ListBrokersResponsePrivate : public MqResponsePrivate {
 
 public:
 
-    ListBrokersResponsePrivate(ListBrokersResponse * const q);
+    explicit ListBrokersResponsePrivate(ListBrokersResponse * const q);
 
     void parseListBrokersResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateTrafficPolicyVersionResponsePrivate : public Route53ResponsePrivate 
 
 public:
 
-    CreateTrafficPolicyVersionResponsePrivate(CreateTrafficPolicyVersionResponse * const q);
+    explicit CreateTrafficPolicyVersionResponsePrivate(CreateTrafficPolicyVersionResponse * const q);
 
     void parseCreateTrafficPolicyVersionResponse(QXmlStreamReader &xml);
 

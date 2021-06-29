@@ -119,7 +119,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    MTurkClient(
+    explicit MTurkClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -168,7 +168,7 @@ public slots:
 protected:
     /// @cond internal
     MTurkClientPrivate * const d_ptr; ///< Internal d-pointer.
-    MTurkClient(MTurkClientPrivate * const d);
+    explicit MTurkClient(MTurkClientPrivate * const d);
     /// @endcond
 
 private:

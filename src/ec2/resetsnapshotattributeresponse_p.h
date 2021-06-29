@@ -31,7 +31,7 @@ class ResetSnapshotAttributeResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ResetSnapshotAttributeResponsePrivate(ResetSnapshotAttributeResponse * const q);
+    explicit ResetSnapshotAttributeResponsePrivate(ResetSnapshotAttributeResponse * const q);
 
     void parseResetSnapshotAttributeResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteAccessPointPolicyResponsePrivate : public S3ControlResponsePrivate {
 
 public:
 
-    DeleteAccessPointPolicyResponsePrivate(DeleteAccessPointPolicyResponse * const q);
+    explicit DeleteAccessPointPolicyResponsePrivate(DeleteAccessPointPolicyResponse * const q);
 
     void parseDeleteAccessPointPolicyResponse(QXmlStreamReader &xml);
 

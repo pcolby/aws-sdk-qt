@@ -31,7 +31,7 @@ class DescribeStaleSecurityGroupsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeStaleSecurityGroupsResponsePrivate(DescribeStaleSecurityGroupsResponse * const q);
+    explicit DescribeStaleSecurityGroupsResponsePrivate(DescribeStaleSecurityGroupsResponse * const q);
 
     void parseDescribeStaleSecurityGroupsResponse(QXmlStreamReader &xml);
 

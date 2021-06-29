@@ -31,7 +31,7 @@ class DeletePreparedStatementResponsePrivate : public AthenaResponsePrivate {
 
 public:
 
-    DeletePreparedStatementResponsePrivate(DeletePreparedStatementResponse * const q);
+    explicit DeletePreparedStatementResponsePrivate(DeletePreparedStatementResponse * const q);
 
     void parseDeletePreparedStatementResponse(QXmlStreamReader &xml);
 

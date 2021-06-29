@@ -31,7 +31,7 @@ class DisassociateSubnetsResponsePrivate : public NetworkFirewallResponsePrivate
 
 public:
 
-    DisassociateSubnetsResponsePrivate(DisassociateSubnetsResponse * const q);
+    explicit DisassociateSubnetsResponsePrivate(DisassociateSubnetsResponse * const q);
 
     void parseDisassociateSubnetsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class PutRecommendationFeedbackResponsePrivate : public CodeGuruReviewerResponse
 
 public:
 
-    PutRecommendationFeedbackResponsePrivate(PutRecommendationFeedbackResponse * const q);
+    explicit PutRecommendationFeedbackResponsePrivate(PutRecommendationFeedbackResponse * const q);
 
     void parsePutRecommendationFeedbackResponse(QXmlStreamReader &xml);
 

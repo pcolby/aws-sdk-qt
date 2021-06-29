@@ -31,7 +31,7 @@ class ListSubscribedWorkteamsResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    ListSubscribedWorkteamsResponsePrivate(ListSubscribedWorkteamsResponse * const q);
+    explicit ListSubscribedWorkteamsResponsePrivate(ListSubscribedWorkteamsResponse * const q);
 
     void parseListSubscribedWorkteamsResponse(QXmlStreamReader &xml);
 

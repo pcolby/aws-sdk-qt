@@ -31,7 +31,7 @@ class ListEnabledProductsForImportResponsePrivate : public SecurityHubResponsePr
 
 public:
 
-    ListEnabledProductsForImportResponsePrivate(ListEnabledProductsForImportResponse * const q);
+    explicit ListEnabledProductsForImportResponsePrivate(ListEnabledProductsForImportResponse * const q);
 
     void parseListEnabledProductsForImportResponse(QXmlStreamReader &xml);
 

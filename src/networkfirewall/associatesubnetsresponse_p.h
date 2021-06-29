@@ -31,7 +31,7 @@ class AssociateSubnetsResponsePrivate : public NetworkFirewallResponsePrivate {
 
 public:
 
-    AssociateSubnetsResponsePrivate(AssociateSubnetsResponse * const q);
+    explicit AssociateSubnetsResponsePrivate(AssociateSubnetsResponse * const q);
 
     void parseAssociateSubnetsResponse(QXmlStreamReader &xml);
 

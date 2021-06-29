@@ -31,7 +31,7 @@ class DeleteAppImageConfigResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    DeleteAppImageConfigResponsePrivate(DeleteAppImageConfigResponse * const q);
+    explicit DeleteAppImageConfigResponsePrivate(DeleteAppImageConfigResponse * const q);
 
     void parseDeleteAppImageConfigResponse(QXmlStreamReader &xml);
 

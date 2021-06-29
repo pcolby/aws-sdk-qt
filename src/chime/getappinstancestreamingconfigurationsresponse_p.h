@@ -31,7 +31,7 @@ class GetAppInstanceStreamingConfigurationsResponsePrivate : public ChimeRespons
 
 public:
 
-    GetAppInstanceStreamingConfigurationsResponsePrivate(GetAppInstanceStreamingConfigurationsResponse * const q);
+    explicit GetAppInstanceStreamingConfigurationsResponsePrivate(GetAppInstanceStreamingConfigurationsResponse * const q);
 
     void parseGetAppInstanceStreamingConfigurationsResponse(QXmlStreamReader &xml);
 

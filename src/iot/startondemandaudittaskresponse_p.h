@@ -31,7 +31,7 @@ class StartOnDemandAuditTaskResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    StartOnDemandAuditTaskResponsePrivate(StartOnDemandAuditTaskResponse * const q);
+    explicit StartOnDemandAuditTaskResponsePrivate(StartOnDemandAuditTaskResponse * const q);
 
     void parseStartOnDemandAuditTaskResponse(QXmlStreamReader &xml);
 

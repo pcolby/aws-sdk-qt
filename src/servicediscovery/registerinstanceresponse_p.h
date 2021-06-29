@@ -31,7 +31,7 @@ class RegisterInstanceResponsePrivate : public ServiceDiscoveryResponsePrivate {
 
 public:
 
-    RegisterInstanceResponsePrivate(RegisterInstanceResponse * const q);
+    explicit RegisterInstanceResponsePrivate(RegisterInstanceResponse * const q);
 
     void parseRegisterInstanceResponse(QXmlStreamReader &xml);
 

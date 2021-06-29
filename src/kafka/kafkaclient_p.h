@@ -30,7 +30,7 @@ class KafkaClient;
 class KafkaClientPrivate {
 
 public:
-    KafkaClientPrivate(KafkaClient * const q);
+    explicit KafkaClientPrivate(KafkaClient * const q);
 
 protected:
     KafkaClient * const q_ptr; ///< Internal q-pointer.

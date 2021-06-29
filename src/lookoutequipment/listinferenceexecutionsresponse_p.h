@@ -31,7 +31,7 @@ class ListInferenceExecutionsResponsePrivate : public LookoutEquipmentResponsePr
 
 public:
 
-    ListInferenceExecutionsResponsePrivate(ListInferenceExecutionsResponse * const q);
+    explicit ListInferenceExecutionsResponsePrivate(ListInferenceExecutionsResponse * const q);
 
     void parseListInferenceExecutionsResponse(QXmlStreamReader &xml);
 

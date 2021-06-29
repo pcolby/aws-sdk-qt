@@ -31,7 +31,7 @@ class CreateDatasetImportJobResponsePrivate : public ForecastServiceResponsePriv
 
 public:
 
-    CreateDatasetImportJobResponsePrivate(CreateDatasetImportJobResponse * const q);
+    explicit CreateDatasetImportJobResponsePrivate(CreateDatasetImportJobResponse * const q);
 
     void parseCreateDatasetImportJobResponse(QXmlStreamReader &xml);
 

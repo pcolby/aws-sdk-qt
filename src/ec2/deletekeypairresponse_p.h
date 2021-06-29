@@ -31,7 +31,7 @@ class DeleteKeyPairResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DeleteKeyPairResponsePrivate(DeleteKeyPairResponse * const q);
+    explicit DeleteKeyPairResponsePrivate(DeleteKeyPairResponse * const q);
 
     void parseDeleteKeyPairResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class RemoveManagedScalingPolicyResponsePrivate : public EmrResponsePrivate {
 
 public:
 
-    RemoveManagedScalingPolicyResponsePrivate(RemoveManagedScalingPolicyResponse * const q);
+    explicit RemoveManagedScalingPolicyResponsePrivate(RemoveManagedScalingPolicyResponse * const q);
 
     void parseRemoveManagedScalingPolicyResponse(QXmlStreamReader &xml);
 

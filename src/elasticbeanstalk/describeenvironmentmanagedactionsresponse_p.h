@@ -31,7 +31,7 @@ class DescribeEnvironmentManagedActionsResponsePrivate : public ElasticBeanstalk
 
 public:
 
-    DescribeEnvironmentManagedActionsResponsePrivate(DescribeEnvironmentManagedActionsResponse * const q);
+    explicit DescribeEnvironmentManagedActionsResponsePrivate(DescribeEnvironmentManagedActionsResponse * const q);
 
     void parseDescribeEnvironmentManagedActionsResponse(QXmlStreamReader &xml);
 

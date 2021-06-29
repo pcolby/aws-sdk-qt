@@ -31,7 +31,7 @@ class UpdateSizeConstraintSetResponsePrivate : public WafResponsePrivate {
 
 public:
 
-    UpdateSizeConstraintSetResponsePrivate(UpdateSizeConstraintSetResponse * const q);
+    explicit UpdateSizeConstraintSetResponsePrivate(UpdateSizeConstraintSetResponse * const q);
 
     void parseUpdateSizeConstraintSetResponse(QXmlStreamReader &xml);
 

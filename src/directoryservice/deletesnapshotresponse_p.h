@@ -31,7 +31,7 @@ class DeleteSnapshotResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 
-    DeleteSnapshotResponsePrivate(DeleteSnapshotResponse * const q);
+    explicit DeleteSnapshotResponsePrivate(DeleteSnapshotResponse * const q);
 
     void parseDeleteSnapshotResponse(QXmlStreamReader &xml);
 

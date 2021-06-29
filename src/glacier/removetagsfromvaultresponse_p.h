@@ -31,7 +31,7 @@ class RemoveTagsFromVaultResponsePrivate : public GlacierResponsePrivate {
 
 public:
 
-    RemoveTagsFromVaultResponsePrivate(RemoveTagsFromVaultResponse * const q);
+    explicit RemoveTagsFromVaultResponsePrivate(RemoveTagsFromVaultResponse * const q);
 
     void parseRemoveTagsFromVaultResponse(QXmlStreamReader &xml);
 

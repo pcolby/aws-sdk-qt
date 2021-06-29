@@ -30,7 +30,7 @@ class ShieldClient;
 class ShieldClientPrivate {
 
 public:
-    ShieldClientPrivate(ShieldClient * const q);
+    explicit ShieldClientPrivate(ShieldClient * const q);
 
 protected:
     ShieldClient * const q_ptr; ///< Internal q-pointer.

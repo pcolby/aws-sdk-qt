@@ -31,7 +31,7 @@ class MergeProfilesResponsePrivate : public CustomerProfilesResponsePrivate {
 
 public:
 
-    MergeProfilesResponsePrivate(MergeProfilesResponse * const q);
+    explicit MergeProfilesResponsePrivate(MergeProfilesResponse * const q);
 
     void parseMergeProfilesResponse(QXmlStreamReader &xml);
 

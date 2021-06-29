@@ -31,7 +31,7 @@ class DeleteThesaurusResponsePrivate : public kendraResponsePrivate {
 
 public:
 
-    DeleteThesaurusResponsePrivate(DeleteThesaurusResponse * const q);
+    explicit DeleteThesaurusResponsePrivate(DeleteThesaurusResponse * const q);
 
     void parseDeleteThesaurusResponse(QXmlStreamReader &xml);
 

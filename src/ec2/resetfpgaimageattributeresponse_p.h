@@ -31,7 +31,7 @@ class ResetFpgaImageAttributeResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ResetFpgaImageAttributeResponsePrivate(ResetFpgaImageAttributeResponse * const q);
+    explicit ResetFpgaImageAttributeResponsePrivate(ResetFpgaImageAttributeResponse * const q);
 
     void parseResetFpgaImageAttributeResponse(QXmlStreamReader &xml);
 

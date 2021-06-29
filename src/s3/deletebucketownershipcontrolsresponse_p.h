@@ -31,7 +31,7 @@ class DeleteBucketOwnershipControlsResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    DeleteBucketOwnershipControlsResponsePrivate(DeleteBucketOwnershipControlsResponse * const q);
+    explicit DeleteBucketOwnershipControlsResponsePrivate(DeleteBucketOwnershipControlsResponse * const q);
 
     void parseDeleteBucketOwnershipControlsResponse(QXmlStreamReader &xml);
 

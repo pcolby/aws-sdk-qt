@@ -31,7 +31,7 @@ class DescribeChannelMembershipForAppInstanceUserResponsePrivate : public ChimeR
 
 public:
 
-    DescribeChannelMembershipForAppInstanceUserResponsePrivate(DescribeChannelMembershipForAppInstanceUserResponse * const q);
+    explicit DescribeChannelMembershipForAppInstanceUserResponsePrivate(DescribeChannelMembershipForAppInstanceUserResponse * const q);
 
     void parseDescribeChannelMembershipForAppInstanceUserResponse(QXmlStreamReader &xml);
 

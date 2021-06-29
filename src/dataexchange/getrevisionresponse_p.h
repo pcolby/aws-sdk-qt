@@ -31,7 +31,7 @@ class GetRevisionResponsePrivate : public DataExchangeResponsePrivate {
 
 public:
 
-    GetRevisionResponsePrivate(GetRevisionResponse * const q);
+    explicit GetRevisionResponsePrivate(GetRevisionResponse * const q);
 
     void parseGetRevisionResponse(QXmlStreamReader &xml);
 

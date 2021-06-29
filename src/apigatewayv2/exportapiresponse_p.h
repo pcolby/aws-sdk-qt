@@ -31,7 +31,7 @@ class ExportApiResponsePrivate : public ApiGatewayV2ResponsePrivate {
 
 public:
 
-    ExportApiResponsePrivate(ExportApiResponse * const q);
+    explicit ExportApiResponsePrivate(ExportApiResponse * const q);
 
     void parseExportApiResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeDomainAutoTunesResponsePrivate : public ElasticsearchServiceRespon
 
 public:
 
-    DescribeDomainAutoTunesResponsePrivate(DescribeDomainAutoTunesResponse * const q);
+    explicit DescribeDomainAutoTunesResponsePrivate(DescribeDomainAutoTunesResponse * const q);
 
     void parseDescribeDomainAutoTunesResponse(QXmlStreamReader &xml);
 

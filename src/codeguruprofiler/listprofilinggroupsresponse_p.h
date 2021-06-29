@@ -31,7 +31,7 @@ class ListProfilingGroupsResponsePrivate : public CodeGuruProfilerResponsePrivat
 
 public:
 
-    ListProfilingGroupsResponsePrivate(ListProfilingGroupsResponse * const q);
+    explicit ListProfilingGroupsResponsePrivate(ListProfilingGroupsResponse * const q);
 
     void parseListProfilingGroupsResponse(QXmlStreamReader &xml);
 

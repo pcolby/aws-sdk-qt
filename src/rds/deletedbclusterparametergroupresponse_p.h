@@ -31,7 +31,7 @@ class DeleteDBClusterParameterGroupResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    DeleteDBClusterParameterGroupResponsePrivate(DeleteDBClusterParameterGroupResponse * const q);
+    explicit DeleteDBClusterParameterGroupResponsePrivate(DeleteDBClusterParameterGroupResponse * const q);
 
     void parseDeleteDBClusterParameterGroupResponse(QXmlStreamReader &xml);
 

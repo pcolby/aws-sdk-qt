@@ -31,7 +31,7 @@ class DisableOrganizationAdminAccountResponsePrivate : public GuardDutyResponseP
 
 public:
 
-    DisableOrganizationAdminAccountResponsePrivate(DisableOrganizationAdminAccountResponse * const q);
+    explicit DisableOrganizationAdminAccountResponsePrivate(DisableOrganizationAdminAccountResponse * const q);
 
     void parseDisableOrganizationAdminAccountResponse(QXmlStreamReader &xml);
 

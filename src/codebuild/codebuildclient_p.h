@@ -30,7 +30,7 @@ class CodeBuildClient;
 class CodeBuildClientPrivate {
 
 public:
-    CodeBuildClientPrivate(CodeBuildClient * const q);
+    explicit CodeBuildClientPrivate(CodeBuildClient * const q);
 
 protected:
     CodeBuildClient * const q_ptr; ///< Internal q-pointer.

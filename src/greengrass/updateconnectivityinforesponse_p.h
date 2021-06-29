@@ -31,7 +31,7 @@ class UpdateConnectivityInfoResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 
-    UpdateConnectivityInfoResponsePrivate(UpdateConnectivityInfoResponse * const q);
+    explicit UpdateConnectivityInfoResponsePrivate(UpdateConnectivityInfoResponse * const q);
 
     void parseUpdateConnectivityInfoResponse(QXmlStreamReader &xml);
 

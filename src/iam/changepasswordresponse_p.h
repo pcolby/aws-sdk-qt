@@ -31,7 +31,7 @@ class ChangePasswordResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    ChangePasswordResponsePrivate(ChangePasswordResponse * const q);
+    explicit ChangePasswordResponsePrivate(ChangePasswordResponse * const q);
 
     void parseChangePasswordResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteFHIRDatastoreResponsePrivate : public HealthLakeResponsePrivate {
 
 public:
 
-    DeleteFHIRDatastoreResponsePrivate(DeleteFHIRDatastoreResponse * const q);
+    explicit DeleteFHIRDatastoreResponsePrivate(DeleteFHIRDatastoreResponse * const q);
 
     void parseDeleteFHIRDatastoreResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateScriptResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    CreateScriptResponsePrivate(CreateScriptResponse * const q);
+    explicit CreateScriptResponsePrivate(CreateScriptResponse * const q);
 
     void parseCreateScriptResponse(QXmlStreamReader &xml);
 

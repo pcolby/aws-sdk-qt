@@ -31,7 +31,7 @@ class UpdateAssessmentControlSetStatusResponsePrivate : public AuditManagerRespo
 
 public:
 
-    UpdateAssessmentControlSetStatusResponsePrivate(UpdateAssessmentControlSetStatusResponse * const q);
+    explicit UpdateAssessmentControlSetStatusResponsePrivate(UpdateAssessmentControlSetStatusResponse * const q);
 
     void parseUpdateAssessmentControlSetStatusResponse(QXmlStreamReader &xml);
 

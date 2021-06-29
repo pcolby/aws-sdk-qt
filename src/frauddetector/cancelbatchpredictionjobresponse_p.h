@@ -31,7 +31,7 @@ class CancelBatchPredictionJobResponsePrivate : public FraudDetectorResponsePriv
 
 public:
 
-    CancelBatchPredictionJobResponsePrivate(CancelBatchPredictionJobResponse * const q);
+    explicit CancelBatchPredictionJobResponsePrivate(CancelBatchPredictionJobResponse * const q);
 
     void parseCancelBatchPredictionJobResponse(QXmlStreamReader &xml);
 

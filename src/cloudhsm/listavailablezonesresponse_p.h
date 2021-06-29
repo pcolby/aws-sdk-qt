@@ -31,7 +31,7 @@ class ListAvailableZonesResponsePrivate : public CloudHSMResponsePrivate {
 
 public:
 
-    ListAvailableZonesResponsePrivate(ListAvailableZonesResponse * const q);
+    explicit ListAvailableZonesResponsePrivate(ListAvailableZonesResponse * const q);
 
     void parseListAvailableZonesResponse(QXmlStreamReader &xml);
 

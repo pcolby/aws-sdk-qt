@@ -31,7 +31,7 @@ class TerminateSessionResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    TerminateSessionResponsePrivate(TerminateSessionResponse * const q);
+    explicit TerminateSessionResponsePrivate(TerminateSessionResponse * const q);
 
     void parseTerminateSessionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteHostedConfigurationVersionResponsePrivate : public AppConfigResponse
 
 public:
 
-    DeleteHostedConfigurationVersionResponsePrivate(DeleteHostedConfigurationVersionResponse * const q);
+    explicit DeleteHostedConfigurationVersionResponsePrivate(DeleteHostedConfigurationVersionResponse * const q);
 
     void parseDeleteHostedConfigurationVersionResponse(QXmlStreamReader &xml);
 

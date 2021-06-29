@@ -53,7 +53,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    MarketplaceCatalogClient(
+    explicit MarketplaceCatalogClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -69,7 +69,7 @@ public slots:
 protected:
     /// @cond internal
     MarketplaceCatalogClientPrivate * const d_ptr; ///< Internal d-pointer.
-    MarketplaceCatalogClient(MarketplaceCatalogClientPrivate * const d);
+    explicit MarketplaceCatalogClient(MarketplaceCatalogClientPrivate * const d);
     /// @endcond
 
 private:

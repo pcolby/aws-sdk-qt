@@ -29,7 +29,7 @@ class MobileResponsePrivate {
 
 public:
 
-    MobileResponsePrivate(MobileResponse * const q);
+    explicit MobileResponsePrivate(MobileResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

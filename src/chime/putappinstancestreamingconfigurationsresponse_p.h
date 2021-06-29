@@ -31,7 +31,7 @@ class PutAppInstanceStreamingConfigurationsResponsePrivate : public ChimeRespons
 
 public:
 
-    PutAppInstanceStreamingConfigurationsResponsePrivate(PutAppInstanceStreamingConfigurationsResponse * const q);
+    explicit PutAppInstanceStreamingConfigurationsResponsePrivate(PutAppInstanceStreamingConfigurationsResponse * const q);
 
     void parsePutAppInstanceStreamingConfigurationsResponse(QXmlStreamReader &xml);
 

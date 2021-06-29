@@ -31,7 +31,7 @@ class DescribeReservedDBInstancesResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    DescribeReservedDBInstancesResponsePrivate(DescribeReservedDBInstancesResponse * const q);
+    explicit DescribeReservedDBInstancesResponsePrivate(DescribeReservedDBInstancesResponse * const q);
 
     void parseDescribeReservedDBInstancesResponse(QXmlStreamReader &xml);
 

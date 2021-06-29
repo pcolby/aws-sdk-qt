@@ -31,7 +31,7 @@ class DeleteLicenseManagerReportGeneratorResponsePrivate : public LicenseManager
 
 public:
 
-    DeleteLicenseManagerReportGeneratorResponsePrivate(DeleteLicenseManagerReportGeneratorResponse * const q);
+    explicit DeleteLicenseManagerReportGeneratorResponsePrivate(DeleteLicenseManagerReportGeneratorResponse * const q);
 
     void parseDeleteLicenseManagerReportGeneratorResponse(QXmlStreamReader &xml);
 

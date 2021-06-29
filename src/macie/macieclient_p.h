@@ -30,7 +30,7 @@ class MacieClient;
 class MacieClientPrivate {
 
 public:
-    MacieClientPrivate(MacieClient * const q);
+    explicit MacieClientPrivate(MacieClient * const q);
 
 protected:
     MacieClient * const q_ptr; ///< Internal q-pointer.

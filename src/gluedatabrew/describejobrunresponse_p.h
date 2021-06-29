@@ -31,7 +31,7 @@ class DescribeJobRunResponsePrivate : public GlueDataBrewResponsePrivate {
 
 public:
 
-    DescribeJobRunResponsePrivate(DescribeJobRunResponse * const q);
+    explicit DescribeJobRunResponsePrivate(DescribeJobRunResponse * const q);
 
     void parseDescribeJobRunResponse(QXmlStreamReader &xml);
 

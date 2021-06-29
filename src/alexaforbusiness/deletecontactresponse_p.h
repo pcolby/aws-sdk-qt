@@ -31,7 +31,7 @@ class DeleteContactResponsePrivate : public AlexaForBusinessResponsePrivate {
 
 public:
 
-    DeleteContactResponsePrivate(DeleteContactResponse * const q);
+    explicit DeleteContactResponsePrivate(DeleteContactResponse * const q);
 
     void parseDeleteContactResponse(QXmlStreamReader &xml);
 

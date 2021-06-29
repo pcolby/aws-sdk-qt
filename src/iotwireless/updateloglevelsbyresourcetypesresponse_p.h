@@ -31,7 +31,7 @@ class UpdateLogLevelsByResourceTypesResponsePrivate : public IoTWirelessResponse
 
 public:
 
-    UpdateLogLevelsByResourceTypesResponsePrivate(UpdateLogLevelsByResourceTypesResponse * const q);
+    explicit UpdateLogLevelsByResourceTypesResponsePrivate(UpdateLogLevelsByResourceTypesResponse * const q);
 
     void parseUpdateLogLevelsByResourceTypesResponse(QXmlStreamReader &xml);
 

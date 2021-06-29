@@ -31,7 +31,7 @@ class DeleteEndpointGroupResponsePrivate : public GlobalAcceleratorResponsePriva
 
 public:
 
-    DeleteEndpointGroupResponsePrivate(DeleteEndpointGroupResponse * const q);
+    explicit DeleteEndpointGroupResponsePrivate(DeleteEndpointGroupResponse * const q);
 
     void parseDeleteEndpointGroupResponse(QXmlStreamReader &xml);
 

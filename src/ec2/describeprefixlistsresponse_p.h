@@ -31,7 +31,7 @@ class DescribePrefixListsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribePrefixListsResponsePrivate(DescribePrefixListsResponse * const q);
+    explicit DescribePrefixListsResponsePrivate(DescribePrefixListsResponse * const q);
 
     void parseDescribePrefixListsResponse(QXmlStreamReader &xml);
 

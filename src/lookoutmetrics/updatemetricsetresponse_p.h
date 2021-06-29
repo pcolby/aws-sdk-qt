@@ -31,7 +31,7 @@ class UpdateMetricSetResponsePrivate : public LookoutMetricsResponsePrivate {
 
 public:
 
-    UpdateMetricSetResponsePrivate(UpdateMetricSetResponse * const q);
+    explicit UpdateMetricSetResponsePrivate(UpdateMetricSetResponse * const q);
 
     void parseUpdateMetricSetResponse(QXmlStreamReader &xml);
 

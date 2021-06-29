@@ -31,7 +31,7 @@ class PutCorsPolicyResponsePrivate : public MediaStoreResponsePrivate {
 
 public:
 
-    PutCorsPolicyResponsePrivate(PutCorsPolicyResponse * const q);
+    explicit PutCorsPolicyResponsePrivate(PutCorsPolicyResponse * const q);
 
     void parsePutCorsPolicyResponse(QXmlStreamReader &xml);
 

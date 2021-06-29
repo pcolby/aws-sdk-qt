@@ -31,7 +31,7 @@ class ListFailuresForLicenseConfigurationOperationsResponsePrivate : public Lice
 
 public:
 
-    ListFailuresForLicenseConfigurationOperationsResponsePrivate(ListFailuresForLicenseConfigurationOperationsResponse * const q);
+    explicit ListFailuresForLicenseConfigurationOperationsResponsePrivate(ListFailuresForLicenseConfigurationOperationsResponse * const q);
 
     void parseListFailuresForLicenseConfigurationOperationsResponse(QXmlStreamReader &xml);
 

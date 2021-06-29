@@ -31,7 +31,7 @@ class DescribeInstancesHealthResponsePrivate : public ElasticBeanstalkResponsePr
 
 public:
 
-    DescribeInstancesHealthResponsePrivate(DescribeInstancesHealthResponse * const q);
+    explicit DescribeInstancesHealthResponsePrivate(DescribeInstancesHealthResponse * const q);
 
     void parseDescribeInstancesHealthResponse(QXmlStreamReader &xml);
 

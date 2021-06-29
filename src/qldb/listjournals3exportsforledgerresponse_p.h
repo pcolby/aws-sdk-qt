@@ -31,7 +31,7 @@ class ListJournalS3ExportsForLedgerResponsePrivate : public QldbResponsePrivate 
 
 public:
 
-    ListJournalS3ExportsForLedgerResponsePrivate(ListJournalS3ExportsForLedgerResponse * const q);
+    explicit ListJournalS3ExportsForLedgerResponsePrivate(ListJournalS3ExportsForLedgerResponse * const q);
 
     void parseListJournalS3ExportsForLedgerResponse(QXmlStreamReader &xml);
 

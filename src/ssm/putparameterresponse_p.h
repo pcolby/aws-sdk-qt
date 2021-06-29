@@ -31,7 +31,7 @@ class PutParameterResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    PutParameterResponsePrivate(PutParameterResponse * const q);
+    explicit PutParameterResponsePrivate(PutParameterResponse * const q);
 
     void parsePutParameterResponse(QXmlStreamReader &xml);
 

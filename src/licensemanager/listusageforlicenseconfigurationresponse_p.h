@@ -31,7 +31,7 @@ class ListUsageForLicenseConfigurationResponsePrivate : public LicenseManagerRes
 
 public:
 
-    ListUsageForLicenseConfigurationResponsePrivate(ListUsageForLicenseConfigurationResponse * const q);
+    explicit ListUsageForLicenseConfigurationResponsePrivate(ListUsageForLicenseConfigurationResponse * const q);
 
     void parseListUsageForLicenseConfigurationResponse(QXmlStreamReader &xml);
 

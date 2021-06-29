@@ -31,7 +31,7 @@ class UpdateUserPoolDomainResponsePrivate : public CognitoIdentityProviderRespon
 
 public:
 
-    UpdateUserPoolDomainResponsePrivate(UpdateUserPoolDomainResponse * const q);
+    explicit UpdateUserPoolDomainResponsePrivate(UpdateUserPoolDomainResponse * const q);
 
     void parseUpdateUserPoolDomainResponse(QXmlStreamReader &xml);
 

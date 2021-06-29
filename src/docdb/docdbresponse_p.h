@@ -29,7 +29,7 @@ class DocDBResponsePrivate {
 
 public:
 
-    DocDBResponsePrivate(DocDBResponse * const q);
+    explicit DocDBResponsePrivate(DocDBResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

@@ -31,7 +31,7 @@ class RollbackTransactionResponsePrivate : public RDSDataServiceResponsePrivate 
 
 public:
 
-    RollbackTransactionResponsePrivate(RollbackTransactionResponse * const q);
+    explicit RollbackTransactionResponsePrivate(RollbackTransactionResponse * const q);
 
     void parseRollbackTransactionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeUserStackAssociationsResponsePrivate : public AppStreamResponsePri
 
 public:
 
-    DescribeUserStackAssociationsResponsePrivate(DescribeUserStackAssociationsResponse * const q);
+    explicit DescribeUserStackAssociationsResponsePrivate(DescribeUserStackAssociationsResponse * const q);
 
     void parseDescribeUserStackAssociationsResponse(QXmlStreamReader &xml);
 

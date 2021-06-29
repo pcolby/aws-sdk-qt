@@ -31,7 +31,7 @@ class DeleteLocalGatewayRouteTableVpcAssociationResponsePrivate : public Ec2Resp
 
 public:
 
-    DeleteLocalGatewayRouteTableVpcAssociationResponsePrivate(DeleteLocalGatewayRouteTableVpcAssociationResponse * const q);
+    explicit DeleteLocalGatewayRouteTableVpcAssociationResponsePrivate(DeleteLocalGatewayRouteTableVpcAssociationResponse * const q);
 
     void parseDeleteLocalGatewayRouteTableVpcAssociationResponse(QXmlStreamReader &xml);
 

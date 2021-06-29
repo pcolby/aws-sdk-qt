@@ -31,7 +31,7 @@ class DeleteApplicationSnapshotResponsePrivate : public KinesisAnalyticsV2Respon
 
 public:
 
-    DeleteApplicationSnapshotResponsePrivate(DeleteApplicationSnapshotResponse * const q);
+    explicit DeleteApplicationSnapshotResponsePrivate(DeleteApplicationSnapshotResponse * const q);
 
     void parseDeleteApplicationSnapshotResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class AssociateDomainResponsePrivate : public WorkLinkResponsePrivate {
 
 public:
 
-    AssociateDomainResponsePrivate(AssociateDomainResponse * const q);
+    explicit AssociateDomainResponsePrivate(AssociateDomainResponse * const q);
 
     void parseAssociateDomainResponse(QXmlStreamReader &xml);
 

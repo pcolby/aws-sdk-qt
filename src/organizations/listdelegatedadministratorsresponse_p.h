@@ -31,7 +31,7 @@ class ListDelegatedAdministratorsResponsePrivate : public OrganizationsResponseP
 
 public:
 
-    ListDelegatedAdministratorsResponsePrivate(ListDelegatedAdministratorsResponse * const q);
+    explicit ListDelegatedAdministratorsResponsePrivate(ListDelegatedAdministratorsResponse * const q);
 
     void parseListDelegatedAdministratorsResponse(QXmlStreamReader &xml);
 

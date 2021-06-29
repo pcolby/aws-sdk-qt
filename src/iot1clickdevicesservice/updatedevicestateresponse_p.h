@@ -31,7 +31,7 @@ class UpdateDeviceStateResponsePrivate : public IoT1ClickDevicesServiceResponseP
 
 public:
 
-    UpdateDeviceStateResponsePrivate(UpdateDeviceStateResponse * const q);
+    explicit UpdateDeviceStateResponsePrivate(UpdateDeviceStateResponse * const q);
 
     void parseUpdateDeviceStateResponse(QXmlStreamReader &xml);
 

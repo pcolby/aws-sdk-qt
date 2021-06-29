@@ -31,7 +31,7 @@ class UpdateGlobalTableResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 
-    UpdateGlobalTableResponsePrivate(UpdateGlobalTableResponse * const q);
+    explicit UpdateGlobalTableResponsePrivate(UpdateGlobalTableResponse * const q);
 
     void parseUpdateGlobalTableResponse(QXmlStreamReader &xml);
 

@@ -30,7 +30,7 @@ class StorageGatewayClient;
 class StorageGatewayClientPrivate {
 
 public:
-    StorageGatewayClientPrivate(StorageGatewayClient * const q);
+    explicit StorageGatewayClientPrivate(StorageGatewayClient * const q);
 
 protected:
     StorageGatewayClient * const q_ptr; ///< Internal q-pointer.

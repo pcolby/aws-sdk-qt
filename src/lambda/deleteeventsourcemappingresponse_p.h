@@ -31,7 +31,7 @@ class DeleteEventSourceMappingResponsePrivate : public LambdaResponsePrivate {
 
 public:
 
-    DeleteEventSourceMappingResponsePrivate(DeleteEventSourceMappingResponse * const q);
+    explicit DeleteEventSourceMappingResponsePrivate(DeleteEventSourceMappingResponse * const q);
 
     void parseDeleteEventSourceMappingResponse(QXmlStreamReader &xml);
 

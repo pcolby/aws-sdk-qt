@@ -31,7 +31,7 @@ class DescribeDBLogFilesResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    DescribeDBLogFilesResponsePrivate(DescribeDBLogFilesResponse * const q);
+    explicit DescribeDBLogFilesResponsePrivate(DescribeDBLogFilesResponse * const q);
 
     void parseDescribeDBLogFilesResponse(QXmlStreamReader &xml);
 

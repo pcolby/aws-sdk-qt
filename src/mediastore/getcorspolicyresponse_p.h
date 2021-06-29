@@ -31,7 +31,7 @@ class GetCorsPolicyResponsePrivate : public MediaStoreResponsePrivate {
 
 public:
 
-    GetCorsPolicyResponsePrivate(GetCorsPolicyResponse * const q);
+    explicit GetCorsPolicyResponsePrivate(GetCorsPolicyResponse * const q);
 
     void parseGetCorsPolicyResponse(QXmlStreamReader &xml);
 

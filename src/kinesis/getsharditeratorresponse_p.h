@@ -31,7 +31,7 @@ class GetShardIteratorResponsePrivate : public KinesisResponsePrivate {
 
 public:
 
-    GetShardIteratorResponsePrivate(GetShardIteratorResponse * const q);
+    explicit GetShardIteratorResponsePrivate(GetShardIteratorResponse * const q);
 
     void parseGetShardIteratorResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateRouteResponseResponsePrivate : public ApiGatewayV2ResponsePrivate {
 
 public:
 
-    CreateRouteResponseResponsePrivate(CreateRouteResponseResponse * const q);
+    explicit CreateRouteResponseResponsePrivate(CreateRouteResponseResponse * const q);
 
     void parseCreateRouteResponseResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class StopTrainingJobResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    StopTrainingJobResponsePrivate(StopTrainingJobResponse * const q);
+    explicit StopTrainingJobResponsePrivate(StopTrainingJobResponse * const q);
 
     void parseStopTrainingJobResponse(QXmlStreamReader &xml);
 

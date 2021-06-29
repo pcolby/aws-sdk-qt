@@ -31,7 +31,7 @@ class AllocateConnectionOnInterconnectResponsePrivate : public DirectConnectResp
 
 public:
 
-    AllocateConnectionOnInterconnectResponsePrivate(AllocateConnectionOnInterconnectResponse * const q);
+    explicit AllocateConnectionOnInterconnectResponsePrivate(AllocateConnectionOnInterconnectResponse * const q);
 
     void parseAllocateConnectionOnInterconnectResponse(QXmlStreamReader &xml);
 

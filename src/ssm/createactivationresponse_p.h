@@ -31,7 +31,7 @@ class CreateActivationResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    CreateActivationResponsePrivate(CreateActivationResponse * const q);
+    explicit CreateActivationResponsePrivate(CreateActivationResponse * const q);
 
     void parseCreateActivationResponse(QXmlStreamReader &xml);
 

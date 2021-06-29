@@ -31,7 +31,7 @@ class SetTaskStatusResponsePrivate : public DataPipelineResponsePrivate {
 
 public:
 
-    SetTaskStatusResponsePrivate(SetTaskStatusResponse * const q);
+    explicit SetTaskStatusResponsePrivate(SetTaskStatusResponse * const q);
 
     void parseSetTaskStatusResponse(QXmlStreamReader &xml);
 

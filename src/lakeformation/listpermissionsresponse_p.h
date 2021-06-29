@@ -31,7 +31,7 @@ class ListPermissionsResponsePrivate : public LakeFormationResponsePrivate {
 
 public:
 
-    ListPermissionsResponsePrivate(ListPermissionsResponse * const q);
+    explicit ListPermissionsResponsePrivate(ListPermissionsResponse * const q);
 
     void parseListPermissionsResponse(QXmlStreamReader &xml);
 

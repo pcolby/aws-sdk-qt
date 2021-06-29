@@ -31,7 +31,7 @@ class DeleteVoiceChannelResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    DeleteVoiceChannelResponsePrivate(DeleteVoiceChannelResponse * const q);
+    explicit DeleteVoiceChannelResponsePrivate(DeleteVoiceChannelResponse * const q);
 
     void parseDeleteVoiceChannelResponse(QXmlStreamReader &xml);
 

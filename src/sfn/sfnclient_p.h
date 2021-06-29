@@ -30,7 +30,7 @@ class SfnClient;
 class SfnClientPrivate {
 
 public:
-    SfnClientPrivate(SfnClient * const q);
+    explicit SfnClientPrivate(SfnClient * const q);
 
 protected:
     SfnClient * const q_ptr; ///< Internal q-pointer.

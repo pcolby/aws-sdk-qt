@@ -31,7 +31,7 @@ class DeleteQualificationTypeResponsePrivate : public MTurkResponsePrivate {
 
 public:
 
-    DeleteQualificationTypeResponsePrivate(DeleteQualificationTypeResponse * const q);
+    explicit DeleteQualificationTypeResponsePrivate(DeleteQualificationTypeResponse * const q);
 
     void parseDeleteQualificationTypeResponse(QXmlStreamReader &xml);
 

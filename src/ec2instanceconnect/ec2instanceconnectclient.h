@@ -45,7 +45,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    EC2InstanceConnectClient(
+    explicit EC2InstanceConnectClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -57,7 +57,7 @@ public slots:
 protected:
     /// @cond internal
     EC2InstanceConnectClientPrivate * const d_ptr; ///< Internal d-pointer.
-    EC2InstanceConnectClient(EC2InstanceConnectClientPrivate * const d);
+    explicit EC2InstanceConnectClient(EC2InstanceConnectClientPrivate * const d);
     /// @endcond
 
 private:

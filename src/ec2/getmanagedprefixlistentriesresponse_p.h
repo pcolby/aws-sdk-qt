@@ -31,7 +31,7 @@ class GetManagedPrefixListEntriesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    GetManagedPrefixListEntriesResponsePrivate(GetManagedPrefixListEntriesResponse * const q);
+    explicit GetManagedPrefixListEntriesResponsePrivate(GetManagedPrefixListEntriesResponse * const q);
 
     void parseGetManagedPrefixListEntriesResponse(QXmlStreamReader &xml);
 

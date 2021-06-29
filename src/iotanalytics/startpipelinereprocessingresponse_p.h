@@ -31,7 +31,7 @@ class StartPipelineReprocessingResponsePrivate : public IoTAnalyticsResponsePriv
 
 public:
 
-    StartPipelineReprocessingResponsePrivate(StartPipelineReprocessingResponse * const q);
+    explicit StartPipelineReprocessingResponsePrivate(StartPipelineReprocessingResponse * const q);
 
     void parseStartPipelineReprocessingResponse(QXmlStreamReader &xml);
 

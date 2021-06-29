@@ -30,7 +30,7 @@ class QLDBSessionClient;
 class QLDBSessionClientPrivate {
 
 public:
-    QLDBSessionClientPrivate(QLDBSessionClient * const q);
+    explicit QLDBSessionClientPrivate(QLDBSessionClient * const q);
 
 protected:
     QLDBSessionClient * const q_ptr; ///< Internal q-pointer.

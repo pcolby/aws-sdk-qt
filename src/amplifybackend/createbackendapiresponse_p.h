@@ -31,7 +31,7 @@ class CreateBackendAPIResponsePrivate : public AmplifyBackendResponsePrivate {
 
 public:
 
-    CreateBackendAPIResponsePrivate(CreateBackendAPIResponse * const q);
+    explicit CreateBackendAPIResponsePrivate(CreateBackendAPIResponse * const q);
 
     void parseCreateBackendAPIResponse(QXmlStreamReader &xml);
 

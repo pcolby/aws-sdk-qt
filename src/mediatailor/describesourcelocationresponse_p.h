@@ -31,7 +31,7 @@ class DescribeSourceLocationResponsePrivate : public MediaTailorResponsePrivate 
 
 public:
 
-    DescribeSourceLocationResponsePrivate(DescribeSourceLocationResponse * const q);
+    explicit DescribeSourceLocationResponsePrivate(DescribeSourceLocationResponse * const q);
 
     void parseDescribeSourceLocationResponse(QXmlStreamReader &xml);
 

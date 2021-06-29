@@ -31,7 +31,7 @@ class GetDeviceRegistrationResponsePrivate : public SagemakerEdgeManagerResponse
 
 public:
 
-    GetDeviceRegistrationResponsePrivate(GetDeviceRegistrationResponse * const q);
+    explicit GetDeviceRegistrationResponsePrivate(GetDeviceRegistrationResponse * const q);
 
     void parseGetDeviceRegistrationResponse(QXmlStreamReader &xml);
 

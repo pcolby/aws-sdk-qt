@@ -31,7 +31,7 @@ class UpdateLoadBalancerAttributeResponsePrivate : public LightsailResponsePriva
 
 public:
 
-    UpdateLoadBalancerAttributeResponsePrivate(UpdateLoadBalancerAttributeResponse * const q);
+    explicit UpdateLoadBalancerAttributeResponsePrivate(UpdateLoadBalancerAttributeResponse * const q);
 
     void parseUpdateLoadBalancerAttributeResponse(QXmlStreamReader &xml);
 

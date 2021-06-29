@@ -31,7 +31,7 @@ class PutAppReplicationConfigurationResponsePrivate : public SmsResponsePrivate 
 
 public:
 
-    PutAppReplicationConfigurationResponsePrivate(PutAppReplicationConfigurationResponse * const q);
+    explicit PutAppReplicationConfigurationResponsePrivate(PutAppReplicationConfigurationResponse * const q);
 
     void parsePutAppReplicationConfigurationResponse(QXmlStreamReader &xml);
 

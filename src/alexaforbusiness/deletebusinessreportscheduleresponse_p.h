@@ -31,7 +31,7 @@ class DeleteBusinessReportScheduleResponsePrivate : public AlexaForBusinessRespo
 
 public:
 
-    DeleteBusinessReportScheduleResponsePrivate(DeleteBusinessReportScheduleResponse * const q);
+    explicit DeleteBusinessReportScheduleResponsePrivate(DeleteBusinessReportScheduleResponse * const q);
 
     void parseDeleteBusinessReportScheduleResponse(QXmlStreamReader &xml);
 

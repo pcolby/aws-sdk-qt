@@ -31,7 +31,7 @@ class GetAccessTokenResponsePrivate : public LicenseManagerResponsePrivate {
 
 public:
 
-    GetAccessTokenResponsePrivate(GetAccessTokenResponse * const q);
+    explicit GetAccessTokenResponsePrivate(GetAccessTokenResponse * const q);
 
     void parseGetAccessTokenResponse(QXmlStreamReader &xml);
 

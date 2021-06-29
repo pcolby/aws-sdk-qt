@@ -71,7 +71,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    TimestreamWriteClient(
+    explicit TimestreamWriteClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -96,7 +96,7 @@ public slots:
 protected:
     /// @cond internal
     TimestreamWriteClientPrivate * const d_ptr; ///< Internal d-pointer.
-    TimestreamWriteClient(TimestreamWriteClientPrivate * const d);
+    explicit TimestreamWriteClient(TimestreamWriteClientPrivate * const d);
     /// @endcond
 
 private:

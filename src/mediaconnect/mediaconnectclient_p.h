@@ -30,7 +30,7 @@ class MediaConnectClient;
 class MediaConnectClientPrivate {
 
 public:
-    MediaConnectClientPrivate(MediaConnectClient * const q);
+    explicit MediaConnectClientPrivate(MediaConnectClient * const q);
 
 protected:
     MediaConnectClient * const q_ptr; ///< Internal q-pointer.

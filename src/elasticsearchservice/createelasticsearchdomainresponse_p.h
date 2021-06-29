@@ -31,7 +31,7 @@ class CreateElasticsearchDomainResponsePrivate : public ElasticsearchServiceResp
 
 public:
 
-    CreateElasticsearchDomainResponsePrivate(CreateElasticsearchDomainResponse * const q);
+    explicit CreateElasticsearchDomainResponsePrivate(CreateElasticsearchDomainResponse * const q);
 
     void parseCreateElasticsearchDomainResponse(QXmlStreamReader &xml);
 

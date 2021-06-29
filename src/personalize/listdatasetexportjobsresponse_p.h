@@ -31,7 +31,7 @@ class ListDatasetExportJobsResponsePrivate : public PersonalizeResponsePrivate {
 
 public:
 
-    ListDatasetExportJobsResponsePrivate(ListDatasetExportJobsResponse * const q);
+    explicit ListDatasetExportJobsResponsePrivate(ListDatasetExportJobsResponse * const q);
 
     void parseListDatasetExportJobsResponse(QXmlStreamReader &xml);
 

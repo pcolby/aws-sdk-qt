@@ -31,7 +31,7 @@ class UpdateDomainAssociationResponsePrivate : public AmplifyResponsePrivate {
 
 public:
 
-    UpdateDomainAssociationResponsePrivate(UpdateDomainAssociationResponse * const q);
+    explicit UpdateDomainAssociationResponsePrivate(UpdateDomainAssociationResponse * const q);
 
     void parseUpdateDomainAssociationResponse(QXmlStreamReader &xml);
 

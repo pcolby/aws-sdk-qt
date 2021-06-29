@@ -29,7 +29,7 @@ class LambdaResponsePrivate {
 
 public:
 
-    LambdaResponsePrivate(LambdaResponse * const q);
+    explicit LambdaResponsePrivate(LambdaResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

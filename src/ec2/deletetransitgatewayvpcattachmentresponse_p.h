@@ -31,7 +31,7 @@ class DeleteTransitGatewayVpcAttachmentResponsePrivate : public Ec2ResponsePriva
 
 public:
 
-    DeleteTransitGatewayVpcAttachmentResponsePrivate(DeleteTransitGatewayVpcAttachmentResponse * const q);
+    explicit DeleteTransitGatewayVpcAttachmentResponsePrivate(DeleteTransitGatewayVpcAttachmentResponse * const q);
 
     void parseDeleteTransitGatewayVpcAttachmentResponse(QXmlStreamReader &xml);
 

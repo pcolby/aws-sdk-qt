@@ -31,7 +31,7 @@ class BatchDisableStandardsResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 
-    BatchDisableStandardsResponsePrivate(BatchDisableStandardsResponse * const q);
+    explicit BatchDisableStandardsResponsePrivate(BatchDisableStandardsResponse * const q);
 
     void parseBatchDisableStandardsResponse(QXmlStreamReader &xml);
 

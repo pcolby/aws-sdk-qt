@@ -31,7 +31,7 @@ class DisassociateWebsiteCertificateAuthorityResponsePrivate : public WorkLinkRe
 
 public:
 
-    DisassociateWebsiteCertificateAuthorityResponsePrivate(DisassociateWebsiteCertificateAuthorityResponse * const q);
+    explicit DisassociateWebsiteCertificateAuthorityResponsePrivate(DisassociateWebsiteCertificateAuthorityResponse * const q);
 
     void parseDisassociateWebsiteCertificateAuthorityResponse(QXmlStreamReader &xml);
 

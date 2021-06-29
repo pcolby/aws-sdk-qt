@@ -31,7 +31,7 @@ class DisassociateWebACLResponsePrivate : public Wafv2ResponsePrivate {
 
 public:
 
-    DisassociateWebACLResponsePrivate(DisassociateWebACLResponse * const q);
+    explicit DisassociateWebACLResponsePrivate(DisassociateWebACLResponse * const q);
 
     void parseDisassociateWebACLResponse(QXmlStreamReader &xml);
 

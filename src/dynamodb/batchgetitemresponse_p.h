@@ -31,7 +31,7 @@ class BatchGetItemResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 
-    BatchGetItemResponsePrivate(BatchGetItemResponse * const q);
+    explicit BatchGetItemResponsePrivate(BatchGetItemResponse * const q);
 
     void parseBatchGetItemResponse(QXmlStreamReader &xml);
 

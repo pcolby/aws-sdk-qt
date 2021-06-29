@@ -31,7 +31,7 @@ class StopWorkflowRunResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    StopWorkflowRunResponsePrivate(StopWorkflowRunResponse * const q);
+    explicit StopWorkflowRunResponsePrivate(StopWorkflowRunResponse * const q);
 
     void parseStopWorkflowRunResponse(QXmlStreamReader &xml);
 

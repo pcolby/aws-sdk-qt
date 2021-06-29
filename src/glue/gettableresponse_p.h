@@ -31,7 +31,7 @@ class GetTableResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    GetTableResponsePrivate(GetTableResponse * const q);
+    explicit GetTableResponsePrivate(GetTableResponse * const q);
 
     void parseGetTableResponse(QXmlStreamReader &xml);
 

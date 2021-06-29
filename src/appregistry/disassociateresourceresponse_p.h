@@ -31,7 +31,7 @@ class DisassociateResourceResponsePrivate : public AppRegistryResponsePrivate {
 
 public:
 
-    DisassociateResourceResponsePrivate(DisassociateResourceResponse * const q);
+    explicit DisassociateResourceResponsePrivate(DisassociateResourceResponse * const q);
 
     void parseDisassociateResourceResponse(QXmlStreamReader &xml);
 

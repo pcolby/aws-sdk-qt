@@ -31,7 +31,7 @@ class GetCallerIdentityResponsePrivate : public StsResponsePrivate {
 
 public:
 
-    GetCallerIdentityResponsePrivate(GetCallerIdentityResponse * const q);
+    explicit GetCallerIdentityResponsePrivate(GetCallerIdentityResponse * const q);
 
     void parseGetCallerIdentityResponse(QXmlStreamReader &xml);
 

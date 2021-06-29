@@ -31,7 +31,7 @@ class DescribeSimulationApplicationResponsePrivate : public RoboMakerResponsePri
 
 public:
 
-    DescribeSimulationApplicationResponsePrivate(DescribeSimulationApplicationResponse * const q);
+    explicit DescribeSimulationApplicationResponsePrivate(DescribeSimulationApplicationResponse * const q);
 
     void parseDescribeSimulationApplicationResponse(QXmlStreamReader &xml);
 

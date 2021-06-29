@@ -31,7 +31,7 @@ class DescribeMountTargetsResponsePrivate : public EfsResponsePrivate {
 
 public:
 
-    DescribeMountTargetsResponsePrivate(DescribeMountTargetsResponse * const q);
+    explicit DescribeMountTargetsResponsePrivate(DescribeMountTargetsResponse * const q);
 
     void parseDescribeMountTargetsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class SyncResourceResponsePrivate : public AppRegistryResponsePrivate {
 
 public:
 
-    SyncResourceResponsePrivate(SyncResourceResponse * const q);
+    explicit SyncResourceResponsePrivate(SyncResourceResponse * const q);
 
     void parseSyncResourceResponse(QXmlStreamReader &xml);
 

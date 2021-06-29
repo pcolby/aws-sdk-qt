@@ -31,7 +31,7 @@ class GetRepositoryTriggersResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 
-    GetRepositoryTriggersResponsePrivate(GetRepositoryTriggersResponse * const q);
+    explicit GetRepositoryTriggersResponsePrivate(GetRepositoryTriggersResponse * const q);
 
     void parseGetRepositoryTriggersResponse(QXmlStreamReader &xml);
 

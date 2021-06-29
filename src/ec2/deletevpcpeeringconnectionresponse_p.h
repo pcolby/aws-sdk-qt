@@ -31,7 +31,7 @@ class DeleteVpcPeeringConnectionResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DeleteVpcPeeringConnectionResponsePrivate(DeleteVpcPeeringConnectionResponse * const q);
+    explicit DeleteVpcPeeringConnectionResponsePrivate(DeleteVpcPeeringConnectionResponse * const q);
 
     void parseDeleteVpcPeeringConnectionResponse(QXmlStreamReader &xml);
 

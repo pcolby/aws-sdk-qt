@@ -31,7 +31,7 @@ class StartReplayResponsePrivate : public CloudWatchEventsResponsePrivate {
 
 public:
 
-    StartReplayResponsePrivate(StartReplayResponse * const q);
+    explicit StartReplayResponsePrivate(StartReplayResponse * const q);
 
     void parseStartReplayResponse(QXmlStreamReader &xml);
 

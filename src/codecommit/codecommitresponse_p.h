@@ -29,7 +29,7 @@ class CodeCommitResponsePrivate {
 
 public:
 
-    CodeCommitResponsePrivate(CodeCommitResponse * const q);
+    explicit CodeCommitResponsePrivate(CodeCommitResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

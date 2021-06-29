@@ -31,7 +31,7 @@ class BatchDeleteConnectionResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    BatchDeleteConnectionResponsePrivate(BatchDeleteConnectionResponse * const q);
+    explicit BatchDeleteConnectionResponsePrivate(BatchDeleteConnectionResponse * const q);
 
     void parseBatchDeleteConnectionResponse(QXmlStreamReader &xml);
 

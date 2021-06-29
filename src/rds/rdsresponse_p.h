@@ -29,7 +29,7 @@ class RdsResponsePrivate {
 
 public:
 
-    RdsResponsePrivate(RdsResponse * const q);
+    explicit RdsResponsePrivate(RdsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

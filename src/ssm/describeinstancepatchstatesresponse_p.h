@@ -31,7 +31,7 @@ class DescribeInstancePatchStatesResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    DescribeInstancePatchStatesResponsePrivate(DescribeInstancePatchStatesResponse * const q);
+    explicit DescribeInstancePatchStatesResponsePrivate(DescribeInstancePatchStatesResponse * const q);
 
     void parseDescribeInstancePatchStatesResponse(QXmlStreamReader &xml);
 

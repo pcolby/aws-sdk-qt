@@ -31,7 +31,7 @@ class CreateGatewayResponsePrivate : public IoTSiteWiseResponsePrivate {
 
 public:
 
-    CreateGatewayResponsePrivate(CreateGatewayResponse * const q);
+    explicit CreateGatewayResponsePrivate(CreateGatewayResponse * const q);
 
     void parseCreateGatewayResponse(QXmlStreamReader &xml);
 

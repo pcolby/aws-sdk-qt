@@ -407,7 +407,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    ChimeClient(
+    explicit ChimeClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -602,7 +602,7 @@ public slots:
 protected:
     /// @cond internal
     ChimeClientPrivate * const d_ptr; ///< Internal d-pointer.
-    ChimeClient(ChimeClientPrivate * const d);
+    explicit ChimeClient(ChimeClientPrivate * const d);
     /// @endcond
 
 private:

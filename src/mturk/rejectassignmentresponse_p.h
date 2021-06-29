@@ -31,7 +31,7 @@ class RejectAssignmentResponsePrivate : public MTurkResponsePrivate {
 
 public:
 
-    RejectAssignmentResponsePrivate(RejectAssignmentResponse * const q);
+    explicit RejectAssignmentResponsePrivate(RejectAssignmentResponse * const q);
 
     void parseRejectAssignmentResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeConformancePacksResponsePrivate : public ConfigServiceResponsePriv
 
 public:
 
-    DescribeConformancePacksResponsePrivate(DescribeConformancePacksResponse * const q);
+    explicit DescribeConformancePacksResponsePrivate(DescribeConformancePacksResponse * const q);
 
     void parseDescribeConformancePacksResponse(QXmlStreamReader &xml);
 

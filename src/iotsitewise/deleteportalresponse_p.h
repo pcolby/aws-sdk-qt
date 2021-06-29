@@ -31,7 +31,7 @@ class DeletePortalResponsePrivate : public IoTSiteWiseResponsePrivate {
 
 public:
 
-    DeletePortalResponsePrivate(DeletePortalResponse * const q);
+    explicit DeletePortalResponsePrivate(DeletePortalResponse * const q);
 
     void parseDeletePortalResponse(QXmlStreamReader &xml);
 

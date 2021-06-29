@@ -31,7 +31,7 @@ class UpdateEventConfigurationsResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    UpdateEventConfigurationsResponsePrivate(UpdateEventConfigurationsResponse * const q);
+    explicit UpdateEventConfigurationsResponsePrivate(UpdateEventConfigurationsResponse * const q);
 
     void parseUpdateEventConfigurationsResponse(QXmlStreamReader &xml);
 

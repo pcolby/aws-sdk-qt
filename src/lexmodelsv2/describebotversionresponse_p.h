@@ -31,7 +31,7 @@ class DescribeBotVersionResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 
-    DescribeBotVersionResponsePrivate(DescribeBotVersionResponse * const q);
+    explicit DescribeBotVersionResponsePrivate(DescribeBotVersionResponse * const q);
 
     void parseDescribeBotVersionResponse(QXmlStreamReader &xml);
 

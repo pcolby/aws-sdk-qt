@@ -31,7 +31,7 @@ class AddLFTagsToResourceResponsePrivate : public LakeFormationResponsePrivate {
 
 public:
 
-    AddLFTagsToResourceResponsePrivate(AddLFTagsToResourceResponse * const q);
+    explicit AddLFTagsToResourceResponsePrivate(AddLFTagsToResourceResponse * const q);
 
     void parseAddLFTagsToResourceResponse(QXmlStreamReader &xml);
 

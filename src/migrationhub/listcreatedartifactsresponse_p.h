@@ -31,7 +31,7 @@ class ListCreatedArtifactsResponsePrivate : public MigrationHubResponsePrivate {
 
 public:
 
-    ListCreatedArtifactsResponsePrivate(ListCreatedArtifactsResponse * const q);
+    explicit ListCreatedArtifactsResponsePrivate(ListCreatedArtifactsResponse * const q);
 
     void parseListCreatedArtifactsResponse(QXmlStreamReader &xml);
 

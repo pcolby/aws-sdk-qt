@@ -31,7 +31,7 @@ class DescribeVaultResponsePrivate : public GlacierResponsePrivate {
 
 public:
 
-    DescribeVaultResponsePrivate(DescribeVaultResponse * const q);
+    explicit DescribeVaultResponsePrivate(DescribeVaultResponse * const q);
 
     void parseDescribeVaultResponse(QXmlStreamReader &xml);
 

@@ -242,7 +242,7 @@ public:
 protected:
     /// @cond internal
     ChimeRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    ChimeRequest(ChimeRequestPrivate * const d);
+    explicit ChimeRequest(ChimeRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

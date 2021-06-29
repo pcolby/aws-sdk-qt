@@ -29,7 +29,7 @@ class AppRunnerResponsePrivate {
 
 public:
 
-    AppRunnerResponsePrivate(AppRunnerResponse * const q);
+    explicit AppRunnerResponsePrivate(AppRunnerResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

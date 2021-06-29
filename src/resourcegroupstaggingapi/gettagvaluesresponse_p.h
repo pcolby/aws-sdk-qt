@@ -31,7 +31,7 @@ class GetTagValuesResponsePrivate : public ResourceGroupsTaggingAPIResponsePriva
 
 public:
 
-    GetTagValuesResponsePrivate(GetTagValuesResponse * const q);
+    explicit GetTagValuesResponsePrivate(GetTagValuesResponse * const q);
 
     void parseGetTagValuesResponse(QXmlStreamReader &xml);
 

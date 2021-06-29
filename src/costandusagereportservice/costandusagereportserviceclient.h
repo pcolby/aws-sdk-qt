@@ -49,7 +49,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    CostandUsageReportServiceClient(
+    explicit CostandUsageReportServiceClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -63,7 +63,7 @@ public slots:
 protected:
     /// @cond internal
     CostandUsageReportServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
-    CostandUsageReportServiceClient(CostandUsageReportServiceClientPrivate * const d);
+    explicit CostandUsageReportServiceClient(CostandUsageReportServiceClientPrivate * const d);
     /// @endcond
 
 private:

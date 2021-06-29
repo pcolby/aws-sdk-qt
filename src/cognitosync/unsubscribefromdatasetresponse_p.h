@@ -31,7 +31,7 @@ class UnsubscribeFromDatasetResponsePrivate : public CognitoSyncResponsePrivate 
 
 public:
 
-    UnsubscribeFromDatasetResponsePrivate(UnsubscribeFromDatasetResponse * const q);
+    explicit UnsubscribeFromDatasetResponsePrivate(UnsubscribeFromDatasetResponse * const q);
 
     void parseUnsubscribeFromDatasetResponse(QXmlStreamReader &xml);
 

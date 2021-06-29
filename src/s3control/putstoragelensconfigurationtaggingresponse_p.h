@@ -31,7 +31,7 @@ class PutStorageLensConfigurationTaggingResponsePrivate : public S3ControlRespon
 
 public:
 
-    PutStorageLensConfigurationTaggingResponsePrivate(PutStorageLensConfigurationTaggingResponse * const q);
+    explicit PutStorageLensConfigurationTaggingResponsePrivate(PutStorageLensConfigurationTaggingResponse * const q);
 
     void parsePutStorageLensConfigurationTaggingResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateDBInstanceResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    CreateDBInstanceResponsePrivate(CreateDBInstanceResponse * const q);
+    explicit CreateDBInstanceResponsePrivate(CreateDBInstanceResponse * const q);
 
     void parseCreateDBInstanceResponse(QXmlStreamReader &xml);
 

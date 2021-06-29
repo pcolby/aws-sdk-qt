@@ -31,7 +31,7 @@ class DeleteRemediationConfigurationResponsePrivate : public ConfigServiceRespon
 
 public:
 
-    DeleteRemediationConfigurationResponsePrivate(DeleteRemediationConfigurationResponse * const q);
+    explicit DeleteRemediationConfigurationResponsePrivate(DeleteRemediationConfigurationResponse * const q);
 
     void parseDeleteRemediationConfigurationResponse(QXmlStreamReader &xml);
 

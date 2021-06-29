@@ -31,7 +31,7 @@ class DeleteNotebookInstanceLifecycleConfigResponsePrivate : public SageMakerRes
 
 public:
 
-    DeleteNotebookInstanceLifecycleConfigResponsePrivate(DeleteNotebookInstanceLifecycleConfigResponse * const q);
+    explicit DeleteNotebookInstanceLifecycleConfigResponsePrivate(DeleteNotebookInstanceLifecycleConfigResponse * const q);
 
     void parseDeleteNotebookInstanceLifecycleConfigResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteLaunchProfileResponsePrivate : public NimbleStudioResponsePrivate {
 
 public:
 
-    DeleteLaunchProfileResponsePrivate(DeleteLaunchProfileResponse * const q);
+    explicit DeleteLaunchProfileResponsePrivate(DeleteLaunchProfileResponse * const q);
 
     void parseDeleteLaunchProfileResponse(QXmlStreamReader &xml);
 

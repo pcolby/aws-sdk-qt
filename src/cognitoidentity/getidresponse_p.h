@@ -31,7 +31,7 @@ class GetIdResponsePrivate : public CognitoIdentityResponsePrivate {
 
 public:
 
-    GetIdResponsePrivate(GetIdResponse * const q);
+    explicit GetIdResponsePrivate(GetIdResponse * const q);
 
     void parseGetIdResponse(QXmlStreamReader &xml);
 

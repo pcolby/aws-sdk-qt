@@ -31,7 +31,7 @@ class CreateWorkspaceBundleResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 
-    CreateWorkspaceBundleResponsePrivate(CreateWorkspaceBundleResponse * const q);
+    explicit CreateWorkspaceBundleResponsePrivate(CreateWorkspaceBundleResponse * const q);
 
     void parseCreateWorkspaceBundleResponse(QXmlStreamReader &xml);
 

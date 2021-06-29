@@ -30,7 +30,7 @@ class MarketplaceEntitlementServiceClient;
 class MarketplaceEntitlementServiceClientPrivate {
 
 public:
-    MarketplaceEntitlementServiceClientPrivate(MarketplaceEntitlementServiceClient * const q);
+    explicit MarketplaceEntitlementServiceClientPrivate(MarketplaceEntitlementServiceClient * const q);
 
 protected:
     MarketplaceEntitlementServiceClient * const q_ptr; ///< Internal q-pointer.

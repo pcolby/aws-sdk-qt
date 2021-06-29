@@ -31,7 +31,7 @@ class GetQueueResponsePrivate : public MediaConvertResponsePrivate {
 
 public:
 
-    GetQueueResponsePrivate(GetQueueResponse * const q);
+    explicit GetQueueResponsePrivate(GetQueueResponse * const q);
 
     void parseGetQueueResponse(QXmlStreamReader &xml);
 

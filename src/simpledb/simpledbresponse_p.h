@@ -29,7 +29,7 @@ class SimpleDBResponsePrivate {
 
 public:
 
-    SimpleDBResponsePrivate(SimpleDBResponse * const q);
+    explicit SimpleDBResponsePrivate(SimpleDBResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

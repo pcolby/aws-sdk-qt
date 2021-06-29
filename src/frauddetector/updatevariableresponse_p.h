@@ -31,7 +31,7 @@ class UpdateVariableResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 
-    UpdateVariableResponsePrivate(UpdateVariableResponse * const q);
+    explicit UpdateVariableResponsePrivate(UpdateVariableResponse * const q);
 
     void parseUpdateVariableResponse(QXmlStreamReader &xml);
 

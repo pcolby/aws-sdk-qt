@@ -31,7 +31,7 @@ class CreateInputSecurityGroupResponsePrivate : public MediaLiveResponsePrivate 
 
 public:
 
-    CreateInputSecurityGroupResponsePrivate(CreateInputSecurityGroupResponse * const q);
+    explicit CreateInputSecurityGroupResponsePrivate(CreateInputSecurityGroupResponse * const q);
 
     void parseCreateInputSecurityGroupResponse(QXmlStreamReader &xml);
 

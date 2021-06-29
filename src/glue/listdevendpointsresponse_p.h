@@ -31,7 +31,7 @@ class ListDevEndpointsResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    ListDevEndpointsResponsePrivate(ListDevEndpointsResponse * const q);
+    explicit ListDevEndpointsResponsePrivate(ListDevEndpointsResponse * const q);
 
     void parseListDevEndpointsResponse(QXmlStreamReader &xml);
 

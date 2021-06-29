@@ -31,7 +31,7 @@ class DeleteFlowTemplateResponsePrivate : public IoTThingsGraphResponsePrivate {
 
 public:
 
-    DeleteFlowTemplateResponsePrivate(DeleteFlowTemplateResponse * const q);
+    explicit DeleteFlowTemplateResponsePrivate(DeleteFlowTemplateResponse * const q);
 
     void parseDeleteFlowTemplateResponse(QXmlStreamReader &xml);
 

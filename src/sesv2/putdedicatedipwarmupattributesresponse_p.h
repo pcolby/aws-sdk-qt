@@ -31,7 +31,7 @@ class PutDedicatedIpWarmupAttributesResponsePrivate : public Sesv2ResponsePrivat
 
 public:
 
-    PutDedicatedIpWarmupAttributesResponsePrivate(PutDedicatedIpWarmupAttributesResponse * const q);
+    explicit PutDedicatedIpWarmupAttributesResponsePrivate(PutDedicatedIpWarmupAttributesResponse * const q);
 
     void parsePutDedicatedIpWarmupAttributesResponse(QXmlStreamReader &xml);
 

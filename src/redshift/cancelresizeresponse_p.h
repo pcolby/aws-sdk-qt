@@ -31,7 +31,7 @@ class CancelResizeResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    CancelResizeResponsePrivate(CancelResizeResponse * const q);
+    explicit CancelResizeResponsePrivate(CancelResizeResponse * const q);
 
     void parseCancelResizeResponse(QXmlStreamReader &xml);
 

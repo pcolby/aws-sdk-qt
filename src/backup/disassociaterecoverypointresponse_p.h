@@ -31,7 +31,7 @@ class DisassociateRecoveryPointResponsePrivate : public BackupResponsePrivate {
 
 public:
 
-    DisassociateRecoveryPointResponsePrivate(DisassociateRecoveryPointResponse * const q);
+    explicit DisassociateRecoveryPointResponsePrivate(DisassociateRecoveryPointResponse * const q);
 
     void parseDisassociateRecoveryPointResponse(QXmlStreamReader &xml);
 

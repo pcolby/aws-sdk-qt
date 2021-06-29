@@ -31,7 +31,7 @@ class ListArtifactsResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    ListArtifactsResponsePrivate(ListArtifactsResponse * const q);
+    explicit ListArtifactsResponsePrivate(ListArtifactsResponse * const q);
 
     void parseListArtifactsResponse(QXmlStreamReader &xml);
 

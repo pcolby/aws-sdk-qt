@@ -31,7 +31,7 @@ class UpdateJobShipmentStateResponsePrivate : public SnowballResponsePrivate {
 
 public:
 
-    UpdateJobShipmentStateResponsePrivate(UpdateJobShipmentStateResponse * const q);
+    explicit UpdateJobShipmentStateResponsePrivate(UpdateJobShipmentStateResponse * const q);
 
     void parseUpdateJobShipmentStateResponse(QXmlStreamReader &xml);
 

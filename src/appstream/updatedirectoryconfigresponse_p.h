@@ -31,7 +31,7 @@ class UpdateDirectoryConfigResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 
-    UpdateDirectoryConfigResponsePrivate(UpdateDirectoryConfigResponse * const q);
+    explicit UpdateDirectoryConfigResponsePrivate(UpdateDirectoryConfigResponse * const q);
 
     void parseUpdateDirectoryConfigResponse(QXmlStreamReader &xml);
 

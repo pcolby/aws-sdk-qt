@@ -31,7 +31,7 @@ class DeleteEventStreamResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    DeleteEventStreamResponsePrivate(DeleteEventStreamResponse * const q);
+    explicit DeleteEventStreamResponsePrivate(DeleteEventStreamResponse * const q);
 
     void parseDeleteEventStreamResponse(QXmlStreamReader &xml);
 

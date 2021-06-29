@@ -31,7 +31,7 @@ class DescribeInputDeviceThumbnailResponsePrivate : public MediaLiveResponsePriv
 
 public:
 
-    DescribeInputDeviceThumbnailResponsePrivate(DescribeInputDeviceThumbnailResponse * const q);
+    explicit DescribeInputDeviceThumbnailResponsePrivate(DescribeInputDeviceThumbnailResponse * const q);
 
     void parseDescribeInputDeviceThumbnailResponse(QXmlStreamReader &xml);
 

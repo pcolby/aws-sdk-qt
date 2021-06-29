@@ -31,7 +31,7 @@ class DescribeFileSystemAliasesResponsePrivate : public FSxResponsePrivate {
 
 public:
 
-    DescribeFileSystemAliasesResponsePrivate(DescribeFileSystemAliasesResponse * const q);
+    explicit DescribeFileSystemAliasesResponsePrivate(DescribeFileSystemAliasesResponse * const q);
 
     void parseDescribeFileSystemAliasesResponse(QXmlStreamReader &xml);
 

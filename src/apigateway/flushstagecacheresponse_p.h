@@ -31,7 +31,7 @@ class FlushStageCacheResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    FlushStageCacheResponsePrivate(FlushStageCacheResponse * const q);
+    explicit FlushStageCacheResponsePrivate(FlushStageCacheResponse * const q);
 
     void parseFlushStageCacheResponse(QXmlStreamReader &xml);
 

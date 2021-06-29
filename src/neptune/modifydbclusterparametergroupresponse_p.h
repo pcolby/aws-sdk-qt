@@ -31,7 +31,7 @@ class ModifyDBClusterParameterGroupResponsePrivate : public NeptuneResponsePriva
 
 public:
 
-    ModifyDBClusterParameterGroupResponsePrivate(ModifyDBClusterParameterGroupResponse * const q);
+    explicit ModifyDBClusterParameterGroupResponsePrivate(ModifyDBClusterParameterGroupResponse * const q);
 
     void parseModifyDBClusterParameterGroupResponse(QXmlStreamReader &xml);
 

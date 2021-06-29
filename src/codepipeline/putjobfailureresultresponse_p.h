@@ -31,7 +31,7 @@ class PutJobFailureResultResponsePrivate : public CodePipelineResponsePrivate {
 
 public:
 
-    PutJobFailureResultResponsePrivate(PutJobFailureResultResponse * const q);
+    explicit PutJobFailureResultResponsePrivate(PutJobFailureResultResponse * const q);
 
     void parsePutJobFailureResultResponse(QXmlStreamReader &xml);
 

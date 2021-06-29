@@ -31,7 +31,7 @@ class DisassociateTransitGatewayRouteTableResponsePrivate : public Ec2ResponsePr
 
 public:
 
-    DisassociateTransitGatewayRouteTableResponsePrivate(DisassociateTransitGatewayRouteTableResponse * const q);
+    explicit DisassociateTransitGatewayRouteTableResponsePrivate(DisassociateTransitGatewayRouteTableResponse * const q);
 
     void parseDisassociateTransitGatewayRouteTableResponse(QXmlStreamReader &xml);
 

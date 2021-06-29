@@ -31,7 +31,7 @@ class DeregisterEcsClusterResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    DeregisterEcsClusterResponsePrivate(DeregisterEcsClusterResponse * const q);
+    explicit DeregisterEcsClusterResponsePrivate(DeregisterEcsClusterResponse * const q);
 
     void parseDeregisterEcsClusterResponse(QXmlStreamReader &xml);
 

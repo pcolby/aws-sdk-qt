@@ -31,7 +31,7 @@ class ListStepsResponsePrivate : public EmrResponsePrivate {
 
 public:
 
-    ListStepsResponsePrivate(ListStepsResponse * const q);
+    explicit ListStepsResponsePrivate(ListStepsResponse * const q);
 
     void parseListStepsResponse(QXmlStreamReader &xml);
 

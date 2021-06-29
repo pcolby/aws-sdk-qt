@@ -31,7 +31,7 @@ class DeleteJobTaggingResponsePrivate : public S3ControlResponsePrivate {
 
 public:
 
-    DeleteJobTaggingResponsePrivate(DeleteJobTaggingResponse * const q);
+    explicit DeleteJobTaggingResponsePrivate(DeleteJobTaggingResponse * const q);
 
     void parseDeleteJobTaggingResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GenerateDataKeyPairWithoutPlaintextResponsePrivate : public KmsResponsePri
 
 public:
 
-    GenerateDataKeyPairWithoutPlaintextResponsePrivate(GenerateDataKeyPairWithoutPlaintextResponse * const q);
+    explicit GenerateDataKeyPairWithoutPlaintextResponsePrivate(GenerateDataKeyPairWithoutPlaintextResponse * const q);
 
     void parseGenerateDataKeyPairWithoutPlaintextResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class StartDBInstanceAutomatedBackupsReplicationResponsePrivate : public RdsResp
 
 public:
 
-    StartDBInstanceAutomatedBackupsReplicationResponsePrivate(StartDBInstanceAutomatedBackupsReplicationResponse * const q);
+    explicit StartDBInstanceAutomatedBackupsReplicationResponsePrivate(StartDBInstanceAutomatedBackupsReplicationResponse * const q);
 
     void parseStartDBInstanceAutomatedBackupsReplicationResponse(QXmlStreamReader &xml);
 

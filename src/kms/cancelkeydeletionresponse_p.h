@@ -31,7 +31,7 @@ class CancelKeyDeletionResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    CancelKeyDeletionResponsePrivate(CancelKeyDeletionResponse * const q);
+    explicit CancelKeyDeletionResponsePrivate(CancelKeyDeletionResponse * const q);
 
     void parseCancelKeyDeletionResponse(QXmlStreamReader &xml);
 

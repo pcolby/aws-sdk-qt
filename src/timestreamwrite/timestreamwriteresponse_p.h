@@ -29,7 +29,7 @@ class TimestreamWriteResponsePrivate {
 
 public:
 
-    TimestreamWriteResponsePrivate(TimestreamWriteResponse * const q);
+    explicit TimestreamWriteResponsePrivate(TimestreamWriteResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

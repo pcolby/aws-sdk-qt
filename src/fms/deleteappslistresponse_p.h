@@ -31,7 +31,7 @@ class DeleteAppsListResponsePrivate : public FmsResponsePrivate {
 
 public:
 
-    DeleteAppsListResponsePrivate(DeleteAppsListResponse * const q);
+    explicit DeleteAppsListResponsePrivate(DeleteAppsListResponse * const q);
 
     void parseDeleteAppsListResponse(QXmlStreamReader &xml);
 

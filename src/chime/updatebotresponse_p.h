@@ -31,7 +31,7 @@ class UpdateBotResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    UpdateBotResponsePrivate(UpdateBotResponse * const q);
+    explicit UpdateBotResponsePrivate(UpdateBotResponse * const q);
 
     void parseUpdateBotResponse(QXmlStreamReader &xml);
 

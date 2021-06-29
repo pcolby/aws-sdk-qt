@@ -31,7 +31,7 @@ class GetDeploymentsResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    GetDeploymentsResponsePrivate(GetDeploymentsResponse * const q);
+    explicit GetDeploymentsResponsePrivate(GetDeploymentsResponse * const q);
 
     void parseGetDeploymentsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteUserHierarchyGroupResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    DeleteUserHierarchyGroupResponsePrivate(DeleteUserHierarchyGroupResponse * const q);
+    explicit DeleteUserHierarchyGroupResponsePrivate(DeleteUserHierarchyGroupResponse * const q);
 
     void parseDeleteUserHierarchyGroupResponse(QXmlStreamReader &xml);
 

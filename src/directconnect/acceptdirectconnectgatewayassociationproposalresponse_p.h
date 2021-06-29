@@ -31,7 +31,7 @@ class AcceptDirectConnectGatewayAssociationProposalResponsePrivate : public Dire
 
 public:
 
-    AcceptDirectConnectGatewayAssociationProposalResponsePrivate(AcceptDirectConnectGatewayAssociationProposalResponse * const q);
+    explicit AcceptDirectConnectGatewayAssociationProposalResponsePrivate(AcceptDirectConnectGatewayAssociationProposalResponse * const q);
 
     void parseAcceptDirectConnectGatewayAssociationProposalResponse(QXmlStreamReader &xml);
 

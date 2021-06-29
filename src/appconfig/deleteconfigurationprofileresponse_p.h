@@ -31,7 +31,7 @@ class DeleteConfigurationProfileResponsePrivate : public AppConfigResponsePrivat
 
 public:
 
-    DeleteConfigurationProfileResponsePrivate(DeleteConfigurationProfileResponse * const q);
+    explicit DeleteConfigurationProfileResponsePrivate(DeleteConfigurationProfileResponse * const q);
 
     void parseDeleteConfigurationProfileResponse(QXmlStreamReader &xml);
 

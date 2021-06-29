@@ -31,7 +31,7 @@ class DeleteBackendAPIResponsePrivate : public AmplifyBackendResponsePrivate {
 
 public:
 
-    DeleteBackendAPIResponsePrivate(DeleteBackendAPIResponse * const q);
+    explicit DeleteBackendAPIResponsePrivate(DeleteBackendAPIResponse * const q);
 
     void parseDeleteBackendAPIResponse(QXmlStreamReader &xml);
 

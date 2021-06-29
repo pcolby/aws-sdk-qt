@@ -31,7 +31,7 @@ class SendProjectSessionActionResponsePrivate : public GlueDataBrewResponsePriva
 
 public:
 
-    SendProjectSessionActionResponsePrivate(SendProjectSessionActionResponse * const q);
+    explicit SendProjectSessionActionResponsePrivate(SendProjectSessionActionResponse * const q);
 
     void parseSendProjectSessionActionResponse(QXmlStreamReader &xml);
 

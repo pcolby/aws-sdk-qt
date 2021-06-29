@@ -31,7 +31,7 @@ class DeleteEnvironmentConfigurationResponsePrivate : public ElasticBeanstalkRes
 
 public:
 
-    DeleteEnvironmentConfigurationResponsePrivate(DeleteEnvironmentConfigurationResponse * const q);
+    explicit DeleteEnvironmentConfigurationResponsePrivate(DeleteEnvironmentConfigurationResponse * const q);
 
     void parseDeleteEnvironmentConfigurationResponse(QXmlStreamReader &xml);
 

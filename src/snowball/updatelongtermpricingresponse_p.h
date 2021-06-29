@@ -31,7 +31,7 @@ class UpdateLongTermPricingResponsePrivate : public SnowballResponsePrivate {
 
 public:
 
-    UpdateLongTermPricingResponsePrivate(UpdateLongTermPricingResponse * const q);
+    explicit UpdateLongTermPricingResponsePrivate(UpdateLongTermPricingResponse * const q);
 
     void parseUpdateLongTermPricingResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateContactChannelResponsePrivate : public SSMContactsResponsePrivate {
 
 public:
 
-    UpdateContactChannelResponsePrivate(UpdateContactChannelResponse * const q);
+    explicit UpdateContactChannelResponsePrivate(UpdateContactChannelResponse * const q);
 
     void parseUpdateContactChannelResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteFargateProfileResponsePrivate : public EksResponsePrivate {
 
 public:
 
-    DeleteFargateProfileResponsePrivate(DeleteFargateProfileResponse * const q);
+    explicit DeleteFargateProfileResponsePrivate(DeleteFargateProfileResponse * const q);
 
     void parseDeleteFargateProfileResponse(QXmlStreamReader &xml);
 

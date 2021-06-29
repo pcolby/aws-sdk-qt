@@ -31,7 +31,7 @@ class UpdateGroupQueryResponsePrivate : public ResourceGroupsResponsePrivate {
 
 public:
 
-    UpdateGroupQueryResponsePrivate(UpdateGroupQueryResponse * const q);
+    explicit UpdateGroupQueryResponsePrivate(UpdateGroupQueryResponse * const q);
 
     void parseUpdateGroupQueryResponse(QXmlStreamReader &xml);
 

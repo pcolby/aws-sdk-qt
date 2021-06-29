@@ -31,7 +31,7 @@ class ReadJobResponsePrivate : public ElasticTranscoderResponsePrivate {
 
 public:
 
-    ReadJobResponsePrivate(ReadJobResponse * const q);
+    explicit ReadJobResponsePrivate(ReadJobResponse * const q);
 
     void parseReadJobResponse(QXmlStreamReader &xml);
 

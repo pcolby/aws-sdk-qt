@@ -31,7 +31,7 @@ class ImportCertificateResponsePrivate : public AcmResponsePrivate {
 
 public:
 
-    ImportCertificateResponsePrivate(ImportCertificateResponse * const q);
+    explicit ImportCertificateResponsePrivate(ImportCertificateResponse * const q);
 
     void parseImportCertificateResponse(QXmlStreamReader &xml);
 

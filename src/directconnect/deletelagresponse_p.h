@@ -31,7 +31,7 @@ class DeleteLagResponsePrivate : public DirectConnectResponsePrivate {
 
 public:
 
-    DeleteLagResponsePrivate(DeleteLagResponse * const q);
+    explicit DeleteLagResponsePrivate(DeleteLagResponse * const q);
 
     void parseDeleteLagResponse(QXmlStreamReader &xml);
 

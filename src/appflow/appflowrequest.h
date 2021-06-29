@@ -77,7 +77,7 @@ public:
 protected:
     /// @cond internal
     AppflowRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    AppflowRequest(AppflowRequestPrivate * const d);
+    explicit AppflowRequest(AppflowRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -31,7 +31,7 @@ class TestRenderTemplateResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    TestRenderTemplateResponsePrivate(TestRenderTemplateResponse * const q);
+    explicit TestRenderTemplateResponsePrivate(TestRenderTemplateResponse * const q);
 
     void parseTestRenderTemplateResponse(QXmlStreamReader &xml);
 

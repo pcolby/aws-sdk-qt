@@ -31,7 +31,7 @@ class CancelMailboxExportJobResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 
-    CancelMailboxExportJobResponsePrivate(CancelMailboxExportJobResponse * const q);
+    explicit CancelMailboxExportJobResponsePrivate(CancelMailboxExportJobResponse * const q);
 
     void parseCancelMailboxExportJobResponse(QXmlStreamReader &xml);
 

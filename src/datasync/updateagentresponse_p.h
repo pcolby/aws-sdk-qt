@@ -31,7 +31,7 @@ class UpdateAgentResponsePrivate : public DataSyncResponsePrivate {
 
 public:
 
-    UpdateAgentResponsePrivate(UpdateAgentResponse * const q);
+    explicit UpdateAgentResponsePrivate(UpdateAgentResponse * const q);
 
     void parseUpdateAgentResponse(QXmlStreamReader &xml);
 

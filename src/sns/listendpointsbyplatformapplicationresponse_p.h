@@ -31,7 +31,7 @@ class ListEndpointsByPlatformApplicationResponsePrivate : public SnsResponsePriv
 
 public:
 
-    ListEndpointsByPlatformApplicationResponsePrivate(ListEndpointsByPlatformApplicationResponse * const q);
+    explicit ListEndpointsByPlatformApplicationResponsePrivate(ListEndpointsByPlatformApplicationResponse * const q);
 
     void parseListEndpointsByPlatformApplicationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListEventTypesResponsePrivate : public CodeStarNotificationsResponsePrivat
 
 public:
 
-    ListEventTypesResponsePrivate(ListEventTypesResponse * const q);
+    explicit ListEventTypesResponsePrivate(ListEventTypesResponse * const q);
 
     void parseListEventTypesResponse(QXmlStreamReader &xml);
 

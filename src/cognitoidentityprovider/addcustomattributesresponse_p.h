@@ -31,7 +31,7 @@ class AddCustomAttributesResponsePrivate : public CognitoIdentityProviderRespons
 
 public:
 
-    AddCustomAttributesResponsePrivate(AddCustomAttributesResponse * const q);
+    explicit AddCustomAttributesResponsePrivate(AddCustomAttributesResponse * const q);
 
     void parseAddCustomAttributesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteConfigurationSetTrackingOptionsResponsePrivate : public SesResponseP
 
 public:
 
-    DeleteConfigurationSetTrackingOptionsResponsePrivate(DeleteConfigurationSetTrackingOptionsResponse * const q);
+    explicit DeleteConfigurationSetTrackingOptionsResponsePrivate(DeleteConfigurationSetTrackingOptionsResponse * const q);
 
     void parseDeleteConfigurationSetTrackingOptionsResponse(QXmlStreamReader &xml);
 

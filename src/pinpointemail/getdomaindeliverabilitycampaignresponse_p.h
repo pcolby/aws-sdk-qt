@@ -31,7 +31,7 @@ class GetDomainDeliverabilityCampaignResponsePrivate : public PinpointEmailRespo
 
 public:
 
-    GetDomainDeliverabilityCampaignResponsePrivate(GetDomainDeliverabilityCampaignResponse * const q);
+    explicit GetDomainDeliverabilityCampaignResponsePrivate(GetDomainDeliverabilityCampaignResponse * const q);
 
     void parseGetDomainDeliverabilityCampaignResponse(QXmlStreamReader &xml);
 

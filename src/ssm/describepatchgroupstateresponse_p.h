@@ -31,7 +31,7 @@ class DescribePatchGroupStateResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    DescribePatchGroupStateResponsePrivate(DescribePatchGroupStateResponse * const q);
+    explicit DescribePatchGroupStateResponsePrivate(DescribePatchGroupStateResponse * const q);
 
     void parseDescribePatchGroupStateResponse(QXmlStreamReader &xml);
 

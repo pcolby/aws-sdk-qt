@@ -31,7 +31,7 @@ class GetServiceQuotaIncreaseRequestFromTemplateResponsePrivate : public Service
 
 public:
 
-    GetServiceQuotaIncreaseRequestFromTemplateResponsePrivate(GetServiceQuotaIncreaseRequestFromTemplateResponse * const q);
+    explicit GetServiceQuotaIncreaseRequestFromTemplateResponsePrivate(GetServiceQuotaIncreaseRequestFromTemplateResponse * const q);
 
     void parseGetServiceQuotaIncreaseRequestFromTemplateResponse(QXmlStreamReader &xml);
 

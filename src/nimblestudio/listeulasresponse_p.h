@@ -31,7 +31,7 @@ class ListEulasResponsePrivate : public NimbleStudioResponsePrivate {
 
 public:
 
-    ListEulasResponsePrivate(ListEulasResponse * const q);
+    explicit ListEulasResponsePrivate(ListEulasResponse * const q);
 
     void parseListEulasResponse(QXmlStreamReader &xml);
 

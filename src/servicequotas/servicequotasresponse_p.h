@@ -29,7 +29,7 @@ class ServiceQuotasResponsePrivate {
 
 public:
 
-    ServiceQuotasResponsePrivate(ServiceQuotasResponse * const q);
+    explicit ServiceQuotasResponsePrivate(ServiceQuotasResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

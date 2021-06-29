@@ -31,7 +31,7 @@ class CreateEgressOnlyInternetGatewayResponsePrivate : public Ec2ResponsePrivate
 
 public:
 
-    CreateEgressOnlyInternetGatewayResponsePrivate(CreateEgressOnlyInternetGatewayResponse * const q);
+    explicit CreateEgressOnlyInternetGatewayResponsePrivate(CreateEgressOnlyInternetGatewayResponse * const q);
 
     void parseCreateEgressOnlyInternetGatewayResponse(QXmlStreamReader &xml);
 

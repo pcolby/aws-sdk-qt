@@ -31,7 +31,7 @@ class ModifyVpcTenancyResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ModifyVpcTenancyResponsePrivate(ModifyVpcTenancyResponse * const q);
+    explicit ModifyVpcTenancyResponsePrivate(ModifyVpcTenancyResponse * const q);
 
     void parseModifyVpcTenancyResponse(QXmlStreamReader &xml);
 

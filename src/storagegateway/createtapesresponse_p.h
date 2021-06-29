@@ -31,7 +31,7 @@ class CreateTapesResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 
-    CreateTapesResponsePrivate(CreateTapesResponse * const q);
+    explicit CreateTapesResponsePrivate(CreateTapesResponse * const q);
 
     void parseCreateTapesResponse(QXmlStreamReader &xml);
 

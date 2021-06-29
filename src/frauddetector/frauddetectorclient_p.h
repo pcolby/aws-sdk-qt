@@ -30,7 +30,7 @@ class FraudDetectorClient;
 class FraudDetectorClientPrivate {
 
 public:
-    FraudDetectorClientPrivate(FraudDetectorClient * const q);
+    explicit FraudDetectorClientPrivate(FraudDetectorClient * const q);
 
 protected:
     FraudDetectorClient * const q_ptr; ///< Internal q-pointer.

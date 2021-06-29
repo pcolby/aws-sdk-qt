@@ -31,7 +31,7 @@ class RemoveUserFromGroupResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    RemoveUserFromGroupResponsePrivate(RemoveUserFromGroupResponse * const q);
+    explicit RemoveUserFromGroupResponsePrivate(RemoveUserFromGroupResponse * const q);
 
     void parseRemoveUserFromGroupResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class RevokeGrantResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    RevokeGrantResponsePrivate(RevokeGrantResponse * const q);
+    explicit RevokeGrantResponsePrivate(RevokeGrantResponse * const q);
 
     void parseRevokeGrantResponse(QXmlStreamReader &xml);
 

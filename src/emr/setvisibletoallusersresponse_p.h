@@ -31,7 +31,7 @@ class SetVisibleToAllUsersResponsePrivate : public EmrResponsePrivate {
 
 public:
 
-    SetVisibleToAllUsersResponsePrivate(SetVisibleToAllUsersResponse * const q);
+    explicit SetVisibleToAllUsersResponsePrivate(SetVisibleToAllUsersResponse * const q);
 
     void parseSetVisibleToAllUsersResponse(QXmlStreamReader &xml);
 

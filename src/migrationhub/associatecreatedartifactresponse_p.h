@@ -31,7 +31,7 @@ class AssociateCreatedArtifactResponsePrivate : public MigrationHubResponsePriva
 
 public:
 
-    AssociateCreatedArtifactResponsePrivate(AssociateCreatedArtifactResponse * const q);
+    explicit AssociateCreatedArtifactResponsePrivate(AssociateCreatedArtifactResponse * const q);
 
     void parseAssociateCreatedArtifactResponse(QXmlStreamReader &xml);
 

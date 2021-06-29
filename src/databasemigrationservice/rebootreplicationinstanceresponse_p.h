@@ -31,7 +31,7 @@ class RebootReplicationInstanceResponsePrivate : public DatabaseMigrationService
 
 public:
 
-    RebootReplicationInstanceResponsePrivate(RebootReplicationInstanceResponse * const q);
+    explicit RebootReplicationInstanceResponsePrivate(RebootReplicationInstanceResponse * const q);
 
     void parseRebootReplicationInstanceResponse(QXmlStreamReader &xml);
 

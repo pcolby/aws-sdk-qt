@@ -31,7 +31,7 @@ class BatchRevokePermissionsResponsePrivate : public LakeFormationResponsePrivat
 
 public:
 
-    BatchRevokePermissionsResponsePrivate(BatchRevokePermissionsResponse * const q);
+    explicit BatchRevokePermissionsResponsePrivate(BatchRevokePermissionsResponse * const q);
 
     void parseBatchRevokePermissionsResponse(QXmlStreamReader &xml);
 

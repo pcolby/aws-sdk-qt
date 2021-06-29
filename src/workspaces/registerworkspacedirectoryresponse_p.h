@@ -31,7 +31,7 @@ class RegisterWorkspaceDirectoryResponsePrivate : public WorkSpacesResponsePriva
 
 public:
 
-    RegisterWorkspaceDirectoryResponsePrivate(RegisterWorkspaceDirectoryResponse * const q);
+    explicit RegisterWorkspaceDirectoryResponsePrivate(RegisterWorkspaceDirectoryResponse * const q);
 
     void parseRegisterWorkspaceDirectoryResponse(QXmlStreamReader &xml);
 

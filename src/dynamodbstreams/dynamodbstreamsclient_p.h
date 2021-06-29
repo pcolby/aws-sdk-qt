@@ -30,7 +30,7 @@ class DynamoDBStreamsClient;
 class DynamoDBStreamsClientPrivate {
 
 public:
-    DynamoDBStreamsClientPrivate(DynamoDBStreamsClient * const q);
+    explicit DynamoDBStreamsClientPrivate(DynamoDBStreamsClient * const q);
 
 protected:
     DynamoDBStreamsClient * const q_ptr; ///< Internal q-pointer.

@@ -31,7 +31,7 @@ class CreateConnectionResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 
-    CreateConnectionResponsePrivate(CreateConnectionResponse * const q);
+    explicit CreateConnectionResponsePrivate(CreateConnectionResponse * const q);
 
     void parseCreateConnectionResponse(QXmlStreamReader &xml);
 

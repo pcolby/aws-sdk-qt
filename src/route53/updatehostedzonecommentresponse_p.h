@@ -31,7 +31,7 @@ class UpdateHostedZoneCommentResponsePrivate : public Route53ResponsePrivate {
 
 public:
 
-    UpdateHostedZoneCommentResponsePrivate(UpdateHostedZoneCommentResponse * const q);
+    explicit UpdateHostedZoneCommentResponsePrivate(UpdateHostedZoneCommentResponse * const q);
 
     void parseUpdateHostedZoneCommentResponse(QXmlStreamReader &xml);
 

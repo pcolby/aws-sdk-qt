@@ -31,7 +31,7 @@ class ListPublicKeysResponsePrivate : public CloudTrailResponsePrivate {
 
 public:
 
-    ListPublicKeysResponsePrivate(ListPublicKeysResponse * const q);
+    explicit ListPublicKeysResponsePrivate(ListPublicKeysResponse * const q);
 
     void parseListPublicKeysResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateAuthEventFeedbackResponsePrivate : public CognitoIdentityProviderRes
 
 public:
 
-    UpdateAuthEventFeedbackResponsePrivate(UpdateAuthEventFeedbackResponse * const q);
+    explicit UpdateAuthEventFeedbackResponsePrivate(UpdateAuthEventFeedbackResponse * const q);
 
     void parseUpdateAuthEventFeedbackResponse(QXmlStreamReader &xml);
 

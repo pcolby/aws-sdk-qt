@@ -31,7 +31,7 @@ class PutStudioMembersResponsePrivate : public NimbleStudioResponsePrivate {
 
 public:
 
-    PutStudioMembersResponsePrivate(PutStudioMembersResponse * const q);
+    explicit PutStudioMembersResponsePrivate(PutStudioMembersResponse * const q);
 
     void parsePutStudioMembersResponse(QXmlStreamReader &xml);
 

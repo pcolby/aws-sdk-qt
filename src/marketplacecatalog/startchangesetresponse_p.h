@@ -31,7 +31,7 @@ class StartChangeSetResponsePrivate : public MarketplaceCatalogResponsePrivate {
 
 public:
 
-    StartChangeSetResponsePrivate(StartChangeSetResponse * const q);
+    explicit StartChangeSetResponsePrivate(StartChangeSetResponse * const q);
 
     void parseStartChangeSetResponse(QXmlStreamReader &xml);
 

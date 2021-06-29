@@ -31,7 +31,7 @@ class BatchDeleteClusterSnapshotsResponsePrivate : public RedshiftResponsePrivat
 
 public:
 
-    BatchDeleteClusterSnapshotsResponsePrivate(BatchDeleteClusterSnapshotsResponse * const q);
+    explicit BatchDeleteClusterSnapshotsResponsePrivate(BatchDeleteClusterSnapshotsResponse * const q);
 
     void parseBatchDeleteClusterSnapshotsResponse(QXmlStreamReader &xml);
 

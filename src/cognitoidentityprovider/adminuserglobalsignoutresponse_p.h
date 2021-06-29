@@ -31,7 +31,7 @@ class AdminUserGlobalSignOutResponsePrivate : public CognitoIdentityProviderResp
 
 public:
 
-    AdminUserGlobalSignOutResponsePrivate(AdminUserGlobalSignOutResponse * const q);
+    explicit AdminUserGlobalSignOutResponsePrivate(AdminUserGlobalSignOutResponse * const q);
 
     void parseAdminUserGlobalSignOutResponse(QXmlStreamReader &xml);
 

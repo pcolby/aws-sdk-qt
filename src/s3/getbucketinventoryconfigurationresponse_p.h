@@ -31,7 +31,7 @@ class GetBucketInventoryConfigurationResponsePrivate : public S3ResponsePrivate 
 
 public:
 
-    GetBucketInventoryConfigurationResponsePrivate(GetBucketInventoryConfigurationResponse * const q);
+    explicit GetBucketInventoryConfigurationResponsePrivate(GetBucketInventoryConfigurationResponse * const q);
 
     void parseGetBucketInventoryConfigurationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListTagsForStreamResponsePrivate : public KinesisResponsePrivate {
 
 public:
 
-    ListTagsForStreamResponsePrivate(ListTagsForStreamResponse * const q);
+    explicit ListTagsForStreamResponsePrivate(ListTagsForStreamResponse * const q);
 
     void parseListTagsForStreamResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ModifyAddressAttributeResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ModifyAddressAttributeResponsePrivate(ModifyAddressAttributeResponse * const q);
+    explicit ModifyAddressAttributeResponsePrivate(ModifyAddressAttributeResponse * const q);
 
     void parseModifyAddressAttributeResponse(QXmlStreamReader &xml);
 

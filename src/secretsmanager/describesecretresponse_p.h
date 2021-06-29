@@ -31,7 +31,7 @@ class DescribeSecretResponsePrivate : public SecretsManagerResponsePrivate {
 
 public:
 
-    DescribeSecretResponsePrivate(DescribeSecretResponse * const q);
+    explicit DescribeSecretResponsePrivate(DescribeSecretResponse * const q);
 
     void parseDescribeSecretResponse(QXmlStreamReader &xml);
 

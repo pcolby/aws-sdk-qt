@@ -31,7 +31,7 @@ class ListStateMachinesResponsePrivate : public SfnResponsePrivate {
 
 public:
 
-    ListStateMachinesResponsePrivate(ListStateMachinesResponse * const q);
+    explicit ListStateMachinesResponsePrivate(ListStateMachinesResponse * const q);
 
     void parseListStateMachinesResponse(QXmlStreamReader &xml);
 

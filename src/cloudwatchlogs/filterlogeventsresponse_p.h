@@ -31,7 +31,7 @@ class FilterLogEventsResponsePrivate : public CloudWatchLogsResponsePrivate {
 
 public:
 
-    FilterLogEventsResponsePrivate(FilterLogEventsResponse * const q);
+    explicit FilterLogEventsResponsePrivate(FilterLogEventsResponse * const q);
 
     void parseFilterLogEventsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListHealthChecksResponsePrivate : public Route53ResponsePrivate {
 
 public:
 
-    ListHealthChecksResponsePrivate(ListHealthChecksResponse * const q);
+    explicit ListHealthChecksResponsePrivate(ListHealthChecksResponse * const q);
 
     void parseListHealthChecksResponse(QXmlStreamReader &xml);
 

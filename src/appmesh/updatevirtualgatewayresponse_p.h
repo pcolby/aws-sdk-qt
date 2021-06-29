@@ -31,7 +31,7 @@ class UpdateVirtualGatewayResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 
-    UpdateVirtualGatewayResponsePrivate(UpdateVirtualGatewayResponse * const q);
+    explicit UpdateVirtualGatewayResponsePrivate(UpdateVirtualGatewayResponse * const q);
 
     void parseUpdateVirtualGatewayResponse(QXmlStreamReader &xml);
 

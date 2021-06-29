@@ -31,7 +31,7 @@ class CancelCommandResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    CancelCommandResponsePrivate(CancelCommandResponse * const q);
+    explicit CancelCommandResponsePrivate(CancelCommandResponse * const q);
 
     void parseCancelCommandResponse(QXmlStreamReader &xml);
 

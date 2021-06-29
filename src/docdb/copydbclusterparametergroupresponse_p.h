@@ -31,7 +31,7 @@ class CopyDBClusterParameterGroupResponsePrivate : public DocDBResponsePrivate {
 
 public:
 
-    CopyDBClusterParameterGroupResponsePrivate(CopyDBClusterParameterGroupResponse * const q);
+    explicit CopyDBClusterParameterGroupResponsePrivate(CopyDBClusterParameterGroupResponse * const q);
 
     void parseCopyDBClusterParameterGroupResponse(QXmlStreamReader &xml);
 

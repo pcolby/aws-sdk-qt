@@ -31,7 +31,7 @@ class CreateParallelDataResponsePrivate : public TranslateResponsePrivate {
 
 public:
 
-    CreateParallelDataResponsePrivate(CreateParallelDataResponse * const q);
+    explicit CreateParallelDataResponsePrivate(CreateParallelDataResponse * const q);
 
     void parseCreateParallelDataResponse(QXmlStreamReader &xml);
 

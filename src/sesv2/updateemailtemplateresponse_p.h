@@ -31,7 +31,7 @@ class UpdateEmailTemplateResponsePrivate : public Sesv2ResponsePrivate {
 
 public:
 
-    UpdateEmailTemplateResponsePrivate(UpdateEmailTemplateResponse * const q);
+    explicit UpdateEmailTemplateResponsePrivate(UpdateEmailTemplateResponse * const q);
 
     void parseUpdateEmailTemplateResponse(QXmlStreamReader &xml);
 

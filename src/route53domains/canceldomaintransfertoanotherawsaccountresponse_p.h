@@ -31,7 +31,7 @@ class CancelDomainTransferToAnotherAwsAccountResponsePrivate : public Route53Dom
 
 public:
 
-    CancelDomainTransferToAnotherAwsAccountResponsePrivate(CancelDomainTransferToAnotherAwsAccountResponse * const q);
+    explicit CancelDomainTransferToAnotherAwsAccountResponsePrivate(CancelDomainTransferToAnotherAwsAccountResponse * const q);
 
     void parseCancelDomainTransferToAnotherAwsAccountResponse(QXmlStreamReader &xml);
 

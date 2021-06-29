@@ -31,7 +31,7 @@ class DisassociateIdentityProviderConfigResponsePrivate : public EksResponsePriv
 
 public:
 
-    DisassociateIdentityProviderConfigResponsePrivate(DisassociateIdentityProviderConfigResponse * const q);
+    explicit DisassociateIdentityProviderConfigResponsePrivate(DisassociateIdentityProviderConfigResponse * const q);
 
     void parseDisassociateIdentityProviderConfigResponse(QXmlStreamReader &xml);
 

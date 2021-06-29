@@ -31,7 +31,7 @@ class UnshareDirectoryResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 
-    UnshareDirectoryResponsePrivate(UnshareDirectoryResponse * const q);
+    explicit UnshareDirectoryResponsePrivate(UnshareDirectoryResponse * const q);
 
     void parseUnshareDirectoryResponse(QXmlStreamReader &xml);
 

@@ -69,7 +69,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    FisClient(
+    explicit FisClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -93,7 +93,7 @@ public slots:
 protected:
     /// @cond internal
     FisClientPrivate * const d_ptr; ///< Internal d-pointer.
-    FisClient(FisClientPrivate * const d);
+    explicit FisClient(FisClientPrivate * const d);
     /// @endcond
 
 private:

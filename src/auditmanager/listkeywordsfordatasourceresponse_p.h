@@ -31,7 +31,7 @@ class ListKeywordsForDataSourceResponsePrivate : public AuditManagerResponsePriv
 
 public:
 
-    ListKeywordsForDataSourceResponsePrivate(ListKeywordsForDataSourceResponse * const q);
+    explicit ListKeywordsForDataSourceResponsePrivate(ListKeywordsForDataSourceResponse * const q);
 
     void parseListKeywordsForDataSourceResponse(QXmlStreamReader &xml);
 

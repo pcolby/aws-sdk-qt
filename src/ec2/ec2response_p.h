@@ -29,7 +29,7 @@ class Ec2ResponsePrivate {
 
 public:
 
-    Ec2ResponsePrivate(Ec2Response * const q);
+    explicit Ec2ResponsePrivate(Ec2Response * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

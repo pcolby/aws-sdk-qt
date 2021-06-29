@@ -31,7 +31,7 @@ class UpdateGlobalSettingsResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    UpdateGlobalSettingsResponsePrivate(UpdateGlobalSettingsResponse * const q);
+    explicit UpdateGlobalSettingsResponsePrivate(UpdateGlobalSettingsResponse * const q);
 
     void parseUpdateGlobalSettingsResponse(QXmlStreamReader &xml);
 

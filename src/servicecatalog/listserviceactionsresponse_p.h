@@ -31,7 +31,7 @@ class ListServiceActionsResponsePrivate : public ServiceCatalogResponsePrivate {
 
 public:
 
-    ListServiceActionsResponsePrivate(ListServiceActionsResponse * const q);
+    explicit ListServiceActionsResponsePrivate(ListServiceActionsResponse * const q);
 
     void parseListServiceActionsResponse(QXmlStreamReader &xml);
 

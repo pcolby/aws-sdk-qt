@@ -31,7 +31,7 @@ class TagMeetingResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    TagMeetingResponsePrivate(TagMeetingResponse * const q);
+    explicit TagMeetingResponsePrivate(TagMeetingResponse * const q);
 
     void parseTagMeetingResponse(QXmlStreamReader &xml);
 

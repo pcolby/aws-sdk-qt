@@ -29,7 +29,7 @@ class CustomerProfilesResponsePrivate {
 
 public:
 
-    CustomerProfilesResponsePrivate(CustomerProfilesResponse * const q);
+    explicit CustomerProfilesResponsePrivate(CustomerProfilesResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

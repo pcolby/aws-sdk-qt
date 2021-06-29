@@ -31,7 +31,7 @@ class DeleteAnalysisResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    DeleteAnalysisResponsePrivate(DeleteAnalysisResponse * const q);
+    explicit DeleteAnalysisResponsePrivate(DeleteAnalysisResponse * const q);
 
     void parseDeleteAnalysisResponse(QXmlStreamReader &xml);
 

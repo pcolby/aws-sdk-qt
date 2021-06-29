@@ -31,7 +31,7 @@ class UpdateSMBFileShareResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 
-    UpdateSMBFileShareResponsePrivate(UpdateSMBFileShareResponse * const q);
+    explicit UpdateSMBFileShareResponsePrivate(UpdateSMBFileShareResponse * const q);
 
     void parseUpdateSMBFileShareResponse(QXmlStreamReader &xml);
 

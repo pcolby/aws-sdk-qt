@@ -31,7 +31,7 @@ class SearchTablesResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    SearchTablesResponsePrivate(SearchTablesResponse * const q);
+    explicit SearchTablesResponsePrivate(SearchTablesResponse * const q);
 
     void parseSearchTablesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteConnectorProfileResponsePrivate : public AppflowResponsePrivate {
 
 public:
 
-    DeleteConnectorProfileResponsePrivate(DeleteConnectorProfileResponse * const q);
+    explicit DeleteConnectorProfileResponsePrivate(DeleteConnectorProfileResponse * const q);
 
     void parseDeleteConnectorProfileResponse(QXmlStreamReader &xml);
 

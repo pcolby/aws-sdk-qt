@@ -31,7 +31,7 @@ class RegisterDomainResponsePrivate : public SwfResponsePrivate {
 
 public:
 
-    RegisterDomainResponsePrivate(RegisterDomainResponse * const q);
+    explicit RegisterDomainResponsePrivate(RegisterDomainResponse * const q);
 
     void parseRegisterDomainResponse(QXmlStreamReader &xml);
 

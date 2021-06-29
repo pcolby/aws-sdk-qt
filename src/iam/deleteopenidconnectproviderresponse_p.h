@@ -31,7 +31,7 @@ class DeleteOpenIDConnectProviderResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    DeleteOpenIDConnectProviderResponsePrivate(DeleteOpenIDConnectProviderResponse * const q);
+    explicit DeleteOpenIDConnectProviderResponsePrivate(DeleteOpenIDConnectProviderResponse * const q);
 
     void parseDeleteOpenIDConnectProviderResponse(QXmlStreamReader &xml);
 

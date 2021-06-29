@@ -31,7 +31,7 @@ class PutBlockPublicAccessConfigurationResponsePrivate : public EmrResponsePriva
 
 public:
 
-    PutBlockPublicAccessConfigurationResponsePrivate(PutBlockPublicAccessConfigurationResponse * const q);
+    explicit PutBlockPublicAccessConfigurationResponsePrivate(PutBlockPublicAccessConfigurationResponse * const q);
 
     void parsePutBlockPublicAccessConfigurationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class SendActivationCodeResponsePrivate : public SSMContactsResponsePrivate {
 
 public:
 
-    SendActivationCodeResponsePrivate(SendActivationCodeResponse * const q);
+    explicit SendActivationCodeResponsePrivate(SendActivationCodeResponse * const q);
 
     void parseSendActivationCodeResponse(QXmlStreamReader &xml);
 

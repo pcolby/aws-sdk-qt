@@ -47,7 +47,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    PiClient(
+    explicit PiClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -60,7 +60,7 @@ public slots:
 protected:
     /// @cond internal
     PiClientPrivate * const d_ptr; ///< Internal d-pointer.
-    PiClient(PiClientPrivate * const d);
+    explicit PiClient(PiClientPrivate * const d);
     /// @endcond
 
 private:

@@ -31,7 +31,7 @@ class CreateParticipantConnectionResponsePrivate : public ConnectParticipantResp
 
 public:
 
-    CreateParticipantConnectionResponsePrivate(CreateParticipantConnectionResponse * const q);
+    explicit CreateParticipantConnectionResponsePrivate(CreateParticipantConnectionResponse * const q);
 
     void parseCreateParticipantConnectionResponse(QXmlStreamReader &xml);
 

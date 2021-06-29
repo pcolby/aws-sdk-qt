@@ -31,7 +31,7 @@ class DeleteLocationResponsePrivate : public DataSyncResponsePrivate {
 
 public:
 
-    DeleteLocationResponsePrivate(DeleteLocationResponse * const q);
+    explicit DeleteLocationResponsePrivate(DeleteLocationResponse * const q);
 
     void parseDeleteLocationResponse(QXmlStreamReader &xml);
 

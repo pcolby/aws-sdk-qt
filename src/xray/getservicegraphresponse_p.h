@@ -31,7 +31,7 @@ class GetServiceGraphResponsePrivate : public XRayResponsePrivate {
 
 public:
 
-    GetServiceGraphResponsePrivate(GetServiceGraphResponse * const q);
+    explicit GetServiceGraphResponsePrivate(GetServiceGraphResponse * const q);
 
     void parseGetServiceGraphResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeWorkspaceImagesResponsePrivate : public WorkSpacesResponsePrivate 
 
 public:
 
-    DescribeWorkspaceImagesResponsePrivate(DescribeWorkspaceImagesResponse * const q);
+    explicit DescribeWorkspaceImagesResponsePrivate(DescribeWorkspaceImagesResponse * const q);
 
     void parseDescribeWorkspaceImagesResponse(QXmlStreamReader &xml);
 

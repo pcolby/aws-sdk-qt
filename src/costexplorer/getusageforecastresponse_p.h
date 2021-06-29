@@ -31,7 +31,7 @@ class GetUsageForecastResponsePrivate : public CostExplorerResponsePrivate {
 
 public:
 
-    GetUsageForecastResponsePrivate(GetUsageForecastResponse * const q);
+    explicit GetUsageForecastResponsePrivate(GetUsageForecastResponse * const q);
 
     void parseGetUsageForecastResponse(QXmlStreamReader &xml);
 

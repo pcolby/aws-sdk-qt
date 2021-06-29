@@ -31,7 +31,7 @@ class DescribeSchemaResponsePrivate : public PersonalizeResponsePrivate {
 
 public:
 
-    DescribeSchemaResponsePrivate(DescribeSchemaResponse * const q);
+    explicit DescribeSchemaResponsePrivate(DescribeSchemaResponse * const q);
 
     void parseDescribeSchemaResponse(QXmlStreamReader &xml);
 

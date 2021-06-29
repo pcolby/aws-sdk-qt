@@ -29,7 +29,7 @@ class RamResponsePrivate {
 
 public:
 
-    RamResponsePrivate(RamResponse * const q);
+    explicit RamResponsePrivate(RamResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

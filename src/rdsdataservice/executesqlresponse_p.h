@@ -31,7 +31,7 @@ class ExecuteSqlResponsePrivate : public RDSDataServiceResponsePrivate {
 
 public:
 
-    ExecuteSqlResponsePrivate(ExecuteSqlResponse * const q);
+    explicit ExecuteSqlResponsePrivate(ExecuteSqlResponse * const q);
 
     void parseExecuteSqlResponse(QXmlStreamReader &xml);
 

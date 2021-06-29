@@ -31,7 +31,7 @@ class ListComponentBuildVersionsResponsePrivate : public imagebuilderResponsePri
 
 public:
 
-    ListComponentBuildVersionsResponsePrivate(ListComponentBuildVersionsResponse * const q);
+    explicit ListComponentBuildVersionsResponsePrivate(ListComponentBuildVersionsResponse * const q);
 
     void parseListComponentBuildVersionsResponse(QXmlStreamReader &xml);
 

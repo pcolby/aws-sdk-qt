@@ -31,7 +31,7 @@ class ListSimulationJobBatchesResponsePrivate : public RoboMakerResponsePrivate 
 
 public:
 
-    ListSimulationJobBatchesResponsePrivate(ListSimulationJobBatchesResponse * const q);
+    explicit ListSimulationJobBatchesResponsePrivate(ListSimulationJobBatchesResponse * const q);
 
     void parseListSimulationJobBatchesResponse(QXmlStreamReader &xml);
 

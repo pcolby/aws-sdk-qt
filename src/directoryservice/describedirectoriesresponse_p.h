@@ -31,7 +31,7 @@ class DescribeDirectoriesResponsePrivate : public DirectoryServiceResponsePrivat
 
 public:
 
-    DescribeDirectoriesResponsePrivate(DescribeDirectoriesResponse * const q);
+    explicit DescribeDirectoriesResponsePrivate(DescribeDirectoriesResponse * const q);
 
     void parseDescribeDirectoriesResponse(QXmlStreamReader &xml);
 

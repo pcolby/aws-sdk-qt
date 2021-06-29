@@ -31,7 +31,7 @@ class UpdateActionTargetResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 
-    UpdateActionTargetResponsePrivate(UpdateActionTargetResponse * const q);
+    explicit UpdateActionTargetResponsePrivate(UpdateActionTargetResponse * const q);
 
     void parseUpdateActionTargetResponse(QXmlStreamReader &xml);
 

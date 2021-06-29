@@ -31,7 +31,7 @@ class CreateHostResponsePrivate : public CodeStarconnectionsResponsePrivate {
 
 public:
 
-    CreateHostResponsePrivate(CreateHostResponse * const q);
+    explicit CreateHostResponsePrivate(CreateHostResponse * const q);
 
     void parseCreateHostResponse(QXmlStreamReader &xml);
 

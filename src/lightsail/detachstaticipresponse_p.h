@@ -31,7 +31,7 @@ class DetachStaticIpResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    DetachStaticIpResponsePrivate(DetachStaticIpResponse * const q);
+    explicit DetachStaticIpResponsePrivate(DetachStaticIpResponse * const q);
 
     void parseDetachStaticIpResponse(QXmlStreamReader &xml);
 

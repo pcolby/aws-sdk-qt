@@ -31,7 +31,7 @@ class RebuildEnvironmentResponsePrivate : public ElasticBeanstalkResponsePrivate
 
 public:
 
-    RebuildEnvironmentResponsePrivate(RebuildEnvironmentResponse * const q);
+    explicit RebuildEnvironmentResponsePrivate(RebuildEnvironmentResponse * const q);
 
     void parseRebuildEnvironmentResponse(QXmlStreamReader &xml);
 

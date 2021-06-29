@@ -31,7 +31,7 @@ class AllocateHostedConnectionResponsePrivate : public DirectConnectResponsePriv
 
 public:
 
-    AllocateHostedConnectionResponsePrivate(AllocateHostedConnectionResponse * const q);
+    explicit AllocateHostedConnectionResponsePrivate(AllocateHostedConnectionResponse * const q);
 
     void parseAllocateHostedConnectionResponse(QXmlStreamReader &xml);
 

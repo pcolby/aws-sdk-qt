@@ -31,7 +31,7 @@ class DissociateEntityFromThingResponsePrivate : public IoTThingsGraphResponsePr
 
 public:
 
-    DissociateEntityFromThingResponsePrivate(DissociateEntityFromThingResponse * const q);
+    explicit DissociateEntityFromThingResponsePrivate(DissociateEntityFromThingResponse * const q);
 
     void parseDissociateEntityFromThingResponse(QXmlStreamReader &xml);
 

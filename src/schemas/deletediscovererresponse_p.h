@@ -31,7 +31,7 @@ class DeleteDiscovererResponsePrivate : public SchemasResponsePrivate {
 
 public:
 
-    DeleteDiscovererResponsePrivate(DeleteDiscovererResponse * const q);
+    explicit DeleteDiscovererResponsePrivate(DeleteDiscovererResponse * const q);
 
     void parseDeleteDiscovererResponse(QXmlStreamReader &xml);
 

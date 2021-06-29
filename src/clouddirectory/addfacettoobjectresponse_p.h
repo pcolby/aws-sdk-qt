@@ -31,7 +31,7 @@ class AddFacetToObjectResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 
-    AddFacetToObjectResponsePrivate(AddFacetToObjectResponse * const q);
+    explicit AddFacetToObjectResponsePrivate(AddFacetToObjectResponse * const q);
 
     void parseAddFacetToObjectResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListFiltersResponsePrivate : public PersonalizeResponsePrivate {
 
 public:
 
-    ListFiltersResponsePrivate(ListFiltersResponse * const q);
+    explicit ListFiltersResponsePrivate(ListFiltersResponse * const q);
 
     void parseListFiltersResponse(QXmlStreamReader &xml);
 

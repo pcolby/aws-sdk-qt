@@ -31,7 +31,7 @@ class ListStreamingImagesResponsePrivate : public NimbleStudioResponsePrivate {
 
 public:
 
-    ListStreamingImagesResponsePrivate(ListStreamingImagesResponse * const q);
+    explicit ListStreamingImagesResponsePrivate(ListStreamingImagesResponse * const q);
 
     void parseListStreamingImagesResponse(QXmlStreamReader &xml);
 

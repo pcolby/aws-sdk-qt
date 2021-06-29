@@ -31,7 +31,7 @@ class GetServerCertificateResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    GetServerCertificateResponsePrivate(GetServerCertificateResponse * const q);
+    explicit GetServerCertificateResponsePrivate(GetServerCertificateResponse * const q);
 
     void parseGetServerCertificateResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeClientPropertiesResponsePrivate : public WorkSpacesResponsePrivate
 
 public:
 
-    DescribeClientPropertiesResponsePrivate(DescribeClientPropertiesResponse * const q);
+    explicit DescribeClientPropertiesResponsePrivate(DescribeClientPropertiesResponse * const q);
 
     void parseDescribeClientPropertiesResponse(QXmlStreamReader &xml);
 

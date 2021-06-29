@@ -31,7 +31,7 @@ class ComposeEnvironmentsResponsePrivate : public ElasticBeanstalkResponsePrivat
 
 public:
 
-    ComposeEnvironmentsResponsePrivate(ComposeEnvironmentsResponse * const q);
+    explicit ComposeEnvironmentsResponsePrivate(ComposeEnvironmentsResponse * const q);
 
     void parseComposeEnvironmentsResponse(QXmlStreamReader &xml);
 

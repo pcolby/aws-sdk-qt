@@ -31,7 +31,7 @@ class DescribeConnectorsResponsePrivate : public AppflowResponsePrivate {
 
 public:
 
-    DescribeConnectorsResponsePrivate(DescribeConnectorsResponse * const q);
+    explicit DescribeConnectorsResponsePrivate(DescribeConnectorsResponse * const q);
 
     void parseDescribeConnectorsResponse(QXmlStreamReader &xml);
 

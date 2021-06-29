@@ -31,7 +31,7 @@ class DeleteEmailIdentityPolicyResponsePrivate : public Sesv2ResponsePrivate {
 
 public:
 
-    DeleteEmailIdentityPolicyResponsePrivate(DeleteEmailIdentityPolicyResponse * const q);
+    explicit DeleteEmailIdentityPolicyResponsePrivate(DeleteEmailIdentityPolicyResponse * const q);
 
     void parseDeleteEmailIdentityPolicyResponse(QXmlStreamReader &xml);
 

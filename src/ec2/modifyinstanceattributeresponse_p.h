@@ -31,7 +31,7 @@ class ModifyInstanceAttributeResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ModifyInstanceAttributeResponsePrivate(ModifyInstanceAttributeResponse * const q);
+    explicit ModifyInstanceAttributeResponsePrivate(ModifyInstanceAttributeResponse * const q);
 
     void parseModifyInstanceAttributeResponse(QXmlStreamReader &xml);
 

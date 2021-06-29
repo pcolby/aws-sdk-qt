@@ -31,7 +31,7 @@ class DetachTypedLinkResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 
-    DetachTypedLinkResponsePrivate(DetachTypedLinkResponse * const q);
+    explicit DetachTypedLinkResponsePrivate(DetachTypedLinkResponse * const q);
 
     void parseDetachTypedLinkResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateSimulationApplicationVersionResponsePrivate : public RoboMakerRespon
 
 public:
 
-    CreateSimulationApplicationVersionResponsePrivate(CreateSimulationApplicationVersionResponse * const q);
+    explicit CreateSimulationApplicationVersionResponsePrivate(CreateSimulationApplicationVersionResponse * const q);
 
     void parseCreateSimulationApplicationVersionResponse(QXmlStreamReader &xml);
 

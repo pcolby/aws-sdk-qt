@@ -31,7 +31,7 @@ class StartSupportDataExportResponsePrivate : public MarketplaceCommerceAnalytic
 
 public:
 
-    StartSupportDataExportResponsePrivate(StartSupportDataExportResponse * const q);
+    explicit StartSupportDataExportResponsePrivate(StartSupportDataExportResponse * const q);
 
     void parseStartSupportDataExportResponse(QXmlStreamReader &xml);
 

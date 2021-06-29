@@ -31,7 +31,7 @@ class GetKeyPairResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    GetKeyPairResponsePrivate(GetKeyPairResponse * const q);
+    explicit GetKeyPairResponsePrivate(GetKeyPairResponse * const q);
 
     void parseGetKeyPairResponse(QXmlStreamReader &xml);
 

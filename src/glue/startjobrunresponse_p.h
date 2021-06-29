@@ -31,7 +31,7 @@ class StartJobRunResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    StartJobRunResponsePrivate(StartJobRunResponse * const q);
+    explicit StartJobRunResponsePrivate(StartJobRunResponse * const q);
 
     void parseStartJobRunResponse(QXmlStreamReader &xml);
 

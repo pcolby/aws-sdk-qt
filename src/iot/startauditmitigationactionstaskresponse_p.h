@@ -31,7 +31,7 @@ class StartAuditMitigationActionsTaskResponsePrivate : public IoTResponsePrivate
 
 public:
 
-    StartAuditMitigationActionsTaskResponsePrivate(StartAuditMitigationActionsTaskResponse * const q);
+    explicit StartAuditMitigationActionsTaskResponsePrivate(StartAuditMitigationActionsTaskResponse * const q);
 
     void parseStartAuditMitigationActionsTaskResponse(QXmlStreamReader &xml);
 

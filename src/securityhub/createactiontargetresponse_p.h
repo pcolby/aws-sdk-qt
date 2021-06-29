@@ -31,7 +31,7 @@ class CreateActionTargetResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 
-    CreateActionTargetResponsePrivate(CreateActionTargetResponse * const q);
+    explicit CreateActionTargetResponsePrivate(CreateActionTargetResponse * const q);
 
     void parseCreateActionTargetResponse(QXmlStreamReader &xml);
 

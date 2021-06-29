@@ -31,7 +31,7 @@ class UpdateSamplingRuleResponsePrivate : public XRayResponsePrivate {
 
 public:
 
-    UpdateSamplingRuleResponsePrivate(UpdateSamplingRuleResponse * const q);
+    explicit UpdateSamplingRuleResponsePrivate(UpdateSamplingRuleResponse * const q);
 
     void parseUpdateSamplingRuleResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class PutAppInstanceRetentionSettingsResponsePrivate : public ChimeResponsePriva
 
 public:
 
-    PutAppInstanceRetentionSettingsResponsePrivate(PutAppInstanceRetentionSettingsResponse * const q);
+    explicit PutAppInstanceRetentionSettingsResponsePrivate(PutAppInstanceRetentionSettingsResponse * const q);
 
     void parsePutAppInstanceRetentionSettingsResponse(QXmlStreamReader &xml);
 

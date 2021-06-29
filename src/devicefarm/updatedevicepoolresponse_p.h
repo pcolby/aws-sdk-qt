@@ -31,7 +31,7 @@ class UpdateDevicePoolResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    UpdateDevicePoolResponsePrivate(UpdateDevicePoolResponse * const q);
+    explicit UpdateDevicePoolResponsePrivate(UpdateDevicePoolResponse * const q);
 
     void parseUpdateDevicePoolResponse(QXmlStreamReader &xml);
 

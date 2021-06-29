@@ -31,7 +31,7 @@ class UpdateLoggerDefinitionResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 
-    UpdateLoggerDefinitionResponsePrivate(UpdateLoggerDefinitionResponse * const q);
+    explicit UpdateLoggerDefinitionResponsePrivate(UpdateLoggerDefinitionResponse * const q);
 
     void parseUpdateLoggerDefinitionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateWirelessGatewayResponsePrivate : public IoTWirelessResponsePrivate {
 
 public:
 
-    UpdateWirelessGatewayResponsePrivate(UpdateWirelessGatewayResponse * const q);
+    explicit UpdateWirelessGatewayResponsePrivate(UpdateWirelessGatewayResponse * const q);
 
     void parseUpdateWirelessGatewayResponse(QXmlStreamReader &xml);
 

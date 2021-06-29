@@ -31,7 +31,7 @@ class ListMonitoringSchedulesResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    ListMonitoringSchedulesResponsePrivate(ListMonitoringSchedulesResponse * const q);
+    explicit ListMonitoringSchedulesResponsePrivate(ListMonitoringSchedulesResponse * const q);
 
     void parseListMonitoringSchedulesResponse(QXmlStreamReader &xml);
 

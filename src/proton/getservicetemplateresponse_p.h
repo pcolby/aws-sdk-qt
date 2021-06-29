@@ -31,7 +31,7 @@ class GetServiceTemplateResponsePrivate : public ProtonResponsePrivate {
 
 public:
 
-    GetServiceTemplateResponsePrivate(GetServiceTemplateResponse * const q);
+    explicit GetServiceTemplateResponsePrivate(GetServiceTemplateResponse * const q);
 
     void parseGetServiceTemplateResponse(QXmlStreamReader &xml);
 

@@ -29,7 +29,7 @@ class PrometheusServiceResponsePrivate {
 
 public:
 
-    PrometheusServiceResponsePrivate(PrometheusServiceResponse * const q);
+    explicit PrometheusServiceResponsePrivate(PrometheusServiceResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

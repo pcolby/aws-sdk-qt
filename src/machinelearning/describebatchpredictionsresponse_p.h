@@ -31,7 +31,7 @@ class DescribeBatchPredictionsResponsePrivate : public MachineLearningResponsePr
 
 public:
 
-    DescribeBatchPredictionsResponsePrivate(DescribeBatchPredictionsResponse * const q);
+    explicit DescribeBatchPredictionsResponsePrivate(DescribeBatchPredictionsResponse * const q);
 
     void parseDescribeBatchPredictionsResponse(QXmlStreamReader &xml);
 

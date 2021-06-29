@@ -157,7 +157,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    IoTSiteWiseClient(
+    explicit IoTSiteWiseClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -225,7 +225,7 @@ public slots:
 protected:
     /// @cond internal
     IoTSiteWiseClientPrivate * const d_ptr; ///< Internal d-pointer.
-    IoTSiteWiseClient(IoTSiteWiseClientPrivate * const d);
+    explicit IoTSiteWiseClient(IoTSiteWiseClientPrivate * const d);
     /// @endcond
 
 private:

@@ -31,7 +31,7 @@ class UpdateGcmChannelResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    UpdateGcmChannelResponsePrivate(UpdateGcmChannelResponse * const q);
+    explicit UpdateGcmChannelResponsePrivate(UpdateGcmChannelResponse * const q);
 
     void parseUpdateGcmChannelResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListPartnerAccountsResponsePrivate : public IoTWirelessResponsePrivate {
 
 public:
 
-    ListPartnerAccountsResponsePrivate(ListPartnerAccountsResponse * const q);
+    explicit ListPartnerAccountsResponsePrivate(ListPartnerAccountsResponse * const q);
 
     void parseListPartnerAccountsResponse(QXmlStreamReader &xml);
 

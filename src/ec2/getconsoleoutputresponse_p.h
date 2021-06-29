@@ -31,7 +31,7 @@ class GetConsoleOutputResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    GetConsoleOutputResponsePrivate(GetConsoleOutputResponse * const q);
+    explicit GetConsoleOutputResponsePrivate(GetConsoleOutputResponse * const q);
 
     void parseGetConsoleOutputResponse(QXmlStreamReader &xml);
 

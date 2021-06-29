@@ -30,7 +30,7 @@ class SecurityHubClient;
 class SecurityHubClientPrivate {
 
 public:
-    SecurityHubClientPrivate(SecurityHubClient * const q);
+    explicit SecurityHubClientPrivate(SecurityHubClient * const q);
 
 protected:
     SecurityHubClient * const q_ptr; ///< Internal q-pointer.

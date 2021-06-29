@@ -29,7 +29,7 @@ class SSMIncidentsResponsePrivate {
 
 public:
 
-    SSMIncidentsResponsePrivate(SSMIncidentsResponse * const q);
+    explicit SSMIncidentsResponsePrivate(SSMIncidentsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

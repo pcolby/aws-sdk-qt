@@ -31,7 +31,7 @@ class DescribeFHIRExportJobResponsePrivate : public HealthLakeResponsePrivate {
 
 public:
 
-    DescribeFHIRExportJobResponsePrivate(DescribeFHIRExportJobResponse * const q);
+    explicit DescribeFHIRExportJobResponsePrivate(DescribeFHIRExportJobResponse * const q);
 
     void parseDescribeFHIRExportJobResponse(QXmlStreamReader &xml);
 

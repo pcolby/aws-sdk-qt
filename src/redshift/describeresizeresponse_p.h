@@ -31,7 +31,7 @@ class DescribeResizeResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    DescribeResizeResponsePrivate(DescribeResizeResponse * const q);
+    explicit DescribeResizeResponsePrivate(DescribeResizeResponse * const q);
 
     void parseDescribeResizeResponse(QXmlStreamReader &xml);
 

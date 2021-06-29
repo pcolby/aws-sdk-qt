@@ -31,7 +31,7 @@ class ListTrafficPolicyInstancesResponsePrivate : public Route53ResponsePrivate 
 
 public:
 
-    ListTrafficPolicyInstancesResponsePrivate(ListTrafficPolicyInstancesResponse * const q);
+    explicit ListTrafficPolicyInstancesResponsePrivate(ListTrafficPolicyInstancesResponse * const q);
 
     void parseListTrafficPolicyInstancesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteEventBusResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 
-    DeleteEventBusResponsePrivate(DeleteEventBusResponse * const q);
+    explicit DeleteEventBusResponsePrivate(DeleteEventBusResponse * const q);
 
     void parseDeleteEventBusResponse(QXmlStreamReader &xml);
 

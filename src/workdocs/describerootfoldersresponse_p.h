@@ -31,7 +31,7 @@ class DescribeRootFoldersResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 
-    DescribeRootFoldersResponsePrivate(DescribeRootFoldersResponse * const q);
+    explicit DescribeRootFoldersResponsePrivate(DescribeRootFoldersResponse * const q);
 
     void parseDescribeRootFoldersResponse(QXmlStreamReader &xml);
 

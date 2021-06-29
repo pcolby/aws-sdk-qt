@@ -31,7 +31,7 @@ class AddUserToGroupResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    AddUserToGroupResponsePrivate(AddUserToGroupResponse * const q);
+    explicit AddUserToGroupResponsePrivate(AddUserToGroupResponse * const q);
 
     void parseAddUserToGroupResponse(QXmlStreamReader &xml);
 

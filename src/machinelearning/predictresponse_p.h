@@ -31,7 +31,7 @@ class PredictResponsePrivate : public MachineLearningResponsePrivate {
 
 public:
 
-    PredictResponsePrivate(PredictResponse * const q);
+    explicit PredictResponsePrivate(PredictResponse * const q);
 
     void parsePredictResponse(QXmlStreamReader &xml);
 

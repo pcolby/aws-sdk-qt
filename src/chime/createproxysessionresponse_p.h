@@ -31,7 +31,7 @@ class CreateProxySessionResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    CreateProxySessionResponsePrivate(CreateProxySessionResponse * const q);
+    explicit CreateProxySessionResponsePrivate(CreateProxySessionResponse * const q);
 
     void parseCreateProxySessionResponse(QXmlStreamReader &xml);
 

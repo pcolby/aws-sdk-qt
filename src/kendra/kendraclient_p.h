@@ -30,7 +30,7 @@ class kendraClient;
 class kendraClientPrivate {
 
 public:
-    kendraClientPrivate(kendraClient * const q);
+    explicit kendraClientPrivate(kendraClient * const q);
 
 protected:
     kendraClient * const q_ptr; ///< Internal q-pointer.

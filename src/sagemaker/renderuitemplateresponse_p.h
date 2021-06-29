@@ -31,7 +31,7 @@ class RenderUiTemplateResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    RenderUiTemplateResponsePrivate(RenderUiTemplateResponse * const q);
+    explicit RenderUiTemplateResponsePrivate(RenderUiTemplateResponse * const q);
 
     void parseRenderUiTemplateResponse(QXmlStreamReader &xml);
 

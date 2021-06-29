@@ -31,7 +31,7 @@ class CreateAccessPolicyResponsePrivate : public IoTSiteWiseResponsePrivate {
 
 public:
 
-    CreateAccessPolicyResponsePrivate(CreateAccessPolicyResponse * const q);
+    explicit CreateAccessPolicyResponsePrivate(CreateAccessPolicyResponse * const q);
 
     void parseCreateAccessPolicyResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class RemoveResourcePermissionResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 
-    RemoveResourcePermissionResponsePrivate(RemoveResourcePermissionResponse * const q);
+    explicit RemoveResourcePermissionResponsePrivate(RemoveResourcePermissionResponse * const q);
 
     void parseRemoveResourcePermissionResponse(QXmlStreamReader &xml);
 

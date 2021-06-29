@@ -31,7 +31,7 @@ class CancelReplayResponsePrivate : public CloudWatchEventsResponsePrivate {
 
 public:
 
-    CancelReplayResponsePrivate(CancelReplayResponse * const q);
+    explicit CancelReplayResponsePrivate(CancelReplayResponse * const q);
 
     void parseCancelReplayResponse(QXmlStreamReader &xml);
 

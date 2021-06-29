@@ -31,7 +31,7 @@ class GetOTAUpdateResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    GetOTAUpdateResponsePrivate(GetOTAUpdateResponse * const q);
+    explicit GetOTAUpdateResponsePrivate(GetOTAUpdateResponse * const q);
 
     void parseGetOTAUpdateResponse(QXmlStreamReader &xml);
 

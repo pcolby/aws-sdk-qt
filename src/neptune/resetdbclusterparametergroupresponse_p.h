@@ -31,7 +31,7 @@ class ResetDBClusterParameterGroupResponsePrivate : public NeptuneResponsePrivat
 
 public:
 
-    ResetDBClusterParameterGroupResponsePrivate(ResetDBClusterParameterGroupResponse * const q);
+    explicit ResetDBClusterParameterGroupResponsePrivate(ResetDBClusterParameterGroupResponse * const q);
 
     void parseResetDBClusterParameterGroupResponse(QXmlStreamReader &xml);
 

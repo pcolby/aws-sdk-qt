@@ -31,7 +31,7 @@ class UpdateAnalysisPermissionsResponsePrivate : public QuickSightResponsePrivat
 
 public:
 
-    UpdateAnalysisPermissionsResponsePrivate(UpdateAnalysisPermissionsResponse * const q);
+    explicit UpdateAnalysisPermissionsResponsePrivate(UpdateAnalysisPermissionsResponse * const q);
 
     void parseUpdateAnalysisPermissionsResponse(QXmlStreamReader &xml);
 

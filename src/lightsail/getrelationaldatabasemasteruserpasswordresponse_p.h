@@ -31,7 +31,7 @@ class GetRelationalDatabaseMasterUserPasswordResponsePrivate : public LightsailR
 
 public:
 
-    GetRelationalDatabaseMasterUserPasswordResponsePrivate(GetRelationalDatabaseMasterUserPasswordResponse * const q);
+    explicit GetRelationalDatabaseMasterUserPasswordResponsePrivate(GetRelationalDatabaseMasterUserPasswordResponse * const q);
 
     void parseGetRelationalDatabaseMasterUserPasswordResponse(QXmlStreamReader &xml);
 

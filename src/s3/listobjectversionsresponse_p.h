@@ -31,7 +31,7 @@ class ListObjectVersionsResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    ListObjectVersionsResponsePrivate(ListObjectVersionsResponse * const q);
+    explicit ListObjectVersionsResponsePrivate(ListObjectVersionsResponse * const q);
 
     void parseListObjectVersionsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class StartFlowResponsePrivate : public AppflowResponsePrivate {
 
 public:
 
-    StartFlowResponsePrivate(StartFlowResponse * const q);
+    explicit StartFlowResponsePrivate(StartFlowResponse * const q);
 
     void parseStartFlowResponse(QXmlStreamReader &xml);
 

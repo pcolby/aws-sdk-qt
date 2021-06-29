@@ -31,7 +31,7 @@ class CreateSignalingChannelResponsePrivate : public KinesisVideoResponsePrivate
 
 public:
 
-    CreateSignalingChannelResponsePrivate(CreateSignalingChannelResponse * const q);
+    explicit CreateSignalingChannelResponsePrivate(CreateSignalingChannelResponse * const q);
 
     void parseCreateSignalingChannelResponse(QXmlStreamReader &xml);
 

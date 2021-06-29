@@ -67,7 +67,7 @@ public:
 protected:
     /// @cond internal
     DlmRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    DlmRequest(DlmRequestPrivate * const d);
+    explicit DlmRequest(DlmRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

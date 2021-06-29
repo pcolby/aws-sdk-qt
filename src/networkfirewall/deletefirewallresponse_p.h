@@ -31,7 +31,7 @@ class DeleteFirewallResponsePrivate : public NetworkFirewallResponsePrivate {
 
 public:
 
-    DeleteFirewallResponsePrivate(DeleteFirewallResponse * const q);
+    explicit DeleteFirewallResponsePrivate(DeleteFirewallResponse * const q);
 
     void parseDeleteFirewallResponse(QXmlStreamReader &xml);
 

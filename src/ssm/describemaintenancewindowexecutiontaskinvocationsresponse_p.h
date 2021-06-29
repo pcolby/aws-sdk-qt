@@ -31,7 +31,7 @@ class DescribeMaintenanceWindowExecutionTaskInvocationsResponsePrivate : public 
 
 public:
 
-    DescribeMaintenanceWindowExecutionTaskInvocationsResponsePrivate(DescribeMaintenanceWindowExecutionTaskInvocationsResponse * const q);
+    explicit DescribeMaintenanceWindowExecutionTaskInvocationsResponsePrivate(DescribeMaintenanceWindowExecutionTaskInvocationsResponse * const q);
 
     void parseDescribeMaintenanceWindowExecutionTaskInvocationsResponse(QXmlStreamReader &xml);
 

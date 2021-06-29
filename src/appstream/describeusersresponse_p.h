@@ -31,7 +31,7 @@ class DescribeUsersResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 
-    DescribeUsersResponsePrivate(DescribeUsersResponse * const q);
+    explicit DescribeUsersResponsePrivate(DescribeUsersResponse * const q);
 
     void parseDescribeUsersResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateUnreferencedMergeCommitResponsePrivate : public CodeCommitResponsePr
 
 public:
 
-    CreateUnreferencedMergeCommitResponsePrivate(CreateUnreferencedMergeCommitResponse * const q);
+    explicit CreateUnreferencedMergeCommitResponsePrivate(CreateUnreferencedMergeCommitResponse * const q);
 
     void parseCreateUnreferencedMergeCommitResponse(QXmlStreamReader &xml);
 

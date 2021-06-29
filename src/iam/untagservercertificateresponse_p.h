@@ -31,7 +31,7 @@ class UntagServerCertificateResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    UntagServerCertificateResponsePrivate(UntagServerCertificateResponse * const q);
+    explicit UntagServerCertificateResponsePrivate(UntagServerCertificateResponse * const q);
 
     void parseUntagServerCertificateResponse(QXmlStreamReader &xml);
 

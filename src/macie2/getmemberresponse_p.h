@@ -31,7 +31,7 @@ class GetMemberResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 
-    GetMemberResponsePrivate(GetMemberResponse * const q);
+    explicit GetMemberResponsePrivate(GetMemberResponse * const q);
 
     void parseGetMemberResponse(QXmlStreamReader &xml);
 

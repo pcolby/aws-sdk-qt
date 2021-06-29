@@ -31,7 +31,7 @@ class DeleteDevEndpointResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    DeleteDevEndpointResponsePrivate(DeleteDevEndpointResponse * const q);
+    explicit DeleteDevEndpointResponsePrivate(DeleteDevEndpointResponse * const q);
 
     void parseDeleteDevEndpointResponse(QXmlStreamReader &xml);
 

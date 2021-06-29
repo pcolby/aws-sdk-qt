@@ -31,7 +31,7 @@ class GetIntentResponsePrivate : public LexModelBuildingServiceResponsePrivate {
 
 public:
 
-    GetIntentResponsePrivate(GetIntentResponse * const q);
+    explicit GetIntentResponsePrivate(GetIntentResponse * const q);
 
     void parseGetIntentResponse(QXmlStreamReader &xml);
 

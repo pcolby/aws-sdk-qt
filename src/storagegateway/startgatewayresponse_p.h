@@ -31,7 +31,7 @@ class StartGatewayResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 
-    StartGatewayResponsePrivate(StartGatewayResponse * const q);
+    explicit StartGatewayResponsePrivate(StartGatewayResponse * const q);
 
     void parseStartGatewayResponse(QXmlStreamReader &xml);
 

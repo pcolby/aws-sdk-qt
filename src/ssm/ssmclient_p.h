@@ -30,7 +30,7 @@ class SsmClient;
 class SsmClientPrivate {
 
 public:
-    SsmClientPrivate(SsmClient * const q);
+    explicit SsmClientPrivate(SsmClient * const q);
 
 protected:
     SsmClient * const q_ptr; ///< Internal q-pointer.

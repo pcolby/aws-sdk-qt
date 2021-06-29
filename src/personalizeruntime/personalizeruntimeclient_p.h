@@ -30,7 +30,7 @@ class PersonalizeRuntimeClient;
 class PersonalizeRuntimeClientPrivate {
 
 public:
-    PersonalizeRuntimeClientPrivate(PersonalizeRuntimeClient * const q);
+    explicit PersonalizeRuntimeClientPrivate(PersonalizeRuntimeClient * const q);
 
 protected:
     PersonalizeRuntimeClient * const q_ptr; ///< Internal q-pointer.

@@ -31,7 +31,7 @@ class UpdateSecretVersionStageResponsePrivate : public SecretsManagerResponsePri
 
 public:
 
-    UpdateSecretVersionStageResponsePrivate(UpdateSecretVersionStageResponse * const q);
+    explicit UpdateSecretVersionStageResponsePrivate(UpdateSecretVersionStageResponse * const q);
 
     void parseUpdateSecretVersionStageResponse(QXmlStreamReader &xml);
 

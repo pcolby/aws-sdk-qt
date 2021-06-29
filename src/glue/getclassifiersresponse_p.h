@@ -31,7 +31,7 @@ class GetClassifiersResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    GetClassifiersResponsePrivate(GetClassifiersResponse * const q);
+    explicit GetClassifiersResponsePrivate(GetClassifiersResponse * const q);
 
     void parseGetClassifiersResponse(QXmlStreamReader &xml);
 

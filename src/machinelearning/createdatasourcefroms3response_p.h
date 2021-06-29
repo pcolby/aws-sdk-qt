@@ -31,7 +31,7 @@ class CreateDataSourceFromS3ResponsePrivate : public MachineLearningResponsePriv
 
 public:
 
-    CreateDataSourceFromS3ResponsePrivate(CreateDataSourceFromS3Response * const q);
+    explicit CreateDataSourceFromS3ResponsePrivate(CreateDataSourceFromS3Response * const q);
 
     void parseCreateDataSourceFromS3Response(QXmlStreamReader &xml);
 

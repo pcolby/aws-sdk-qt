@@ -29,7 +29,7 @@ class ECRPublicResponsePrivate {
 
 public:
 
-    ECRPublicResponsePrivate(ECRPublicResponse * const q);
+    explicit ECRPublicResponsePrivate(ECRPublicResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

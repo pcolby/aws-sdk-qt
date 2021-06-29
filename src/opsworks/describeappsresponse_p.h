@@ -31,7 +31,7 @@ class DescribeAppsResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    DescribeAppsResponsePrivate(DescribeAppsResponse * const q);
+    explicit DescribeAppsResponsePrivate(DescribeAppsResponse * const q);
 
     void parseDescribeAppsResponse(QXmlStreamReader &xml);
 

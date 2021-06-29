@@ -31,7 +31,7 @@ class GetConnectionResponsePrivate : public CodeStarconnectionsResponsePrivate {
 
 public:
 
-    GetConnectionResponsePrivate(GetConnectionResponse * const q);
+    explicit GetConnectionResponsePrivate(GetConnectionResponse * const q);
 
     void parseGetConnectionResponse(QXmlStreamReader &xml);
 

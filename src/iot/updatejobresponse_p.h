@@ -31,7 +31,7 @@ class UpdateJobResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    UpdateJobResponsePrivate(UpdateJobResponse * const q);
+    explicit UpdateJobResponsePrivate(UpdateJobResponse * const q);
 
     void parseUpdateJobResponse(QXmlStreamReader &xml);
 

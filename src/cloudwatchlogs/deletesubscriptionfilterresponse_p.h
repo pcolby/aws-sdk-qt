@@ -31,7 +31,7 @@ class DeleteSubscriptionFilterResponsePrivate : public CloudWatchLogsResponsePri
 
 public:
 
-    DeleteSubscriptionFilterResponsePrivate(DeleteSubscriptionFilterResponse * const q);
+    explicit DeleteSubscriptionFilterResponsePrivate(DeleteSubscriptionFilterResponse * const q);
 
     void parseDeleteSubscriptionFilterResponse(QXmlStreamReader &xml);
 

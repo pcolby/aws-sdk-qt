@@ -31,7 +31,7 @@ class UntagRoleResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    UntagRoleResponsePrivate(UntagRoleResponse * const q);
+    explicit UntagRoleResponsePrivate(UntagRoleResponse * const q);
 
     void parseUntagRoleResponse(QXmlStreamReader &xml);
 

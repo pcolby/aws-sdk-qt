@@ -31,7 +31,7 @@ class TerminateProvisionedProductResponsePrivate : public ServiceCatalogResponse
 
 public:
 
-    TerminateProvisionedProductResponsePrivate(TerminateProvisionedProductResponse * const q);
+    explicit TerminateProvisionedProductResponsePrivate(TerminateProvisionedProductResponse * const q);
 
     void parseTerminateProvisionedProductResponse(QXmlStreamReader &xml);
 

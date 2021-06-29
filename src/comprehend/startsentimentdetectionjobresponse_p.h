@@ -31,7 +31,7 @@ class StartSentimentDetectionJobResponsePrivate : public ComprehendResponsePriva
 
 public:
 
-    StartSentimentDetectionJobResponsePrivate(StartSentimentDetectionJobResponse * const q);
+    explicit StartSentimentDetectionJobResponsePrivate(StartSentimentDetectionJobResponse * const q);
 
     void parseStartSentimentDetectionJobResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateSMBFileShareResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 
-    CreateSMBFileShareResponsePrivate(CreateSMBFileShareResponse * const q);
+    explicit CreateSMBFileShareResponsePrivate(CreateSMBFileShareResponse * const q);
 
     void parseCreateSMBFileShareResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateUserPoolDomainResponsePrivate : public CognitoIdentityProviderRespon
 
 public:
 
-    CreateUserPoolDomainResponsePrivate(CreateUserPoolDomainResponse * const q);
+    explicit CreateUserPoolDomainResponsePrivate(CreateUserPoolDomainResponse * const q);
 
     void parseCreateUserPoolDomainResponse(QXmlStreamReader &xml);
 

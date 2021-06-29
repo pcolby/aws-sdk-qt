@@ -31,7 +31,7 @@ class UpdateScalingParametersResponsePrivate : public CloudSearchResponsePrivate
 
 public:
 
-    UpdateScalingParametersResponsePrivate(UpdateScalingParametersResponse * const q);
+    explicit UpdateScalingParametersResponsePrivate(UpdateScalingParametersResponse * const q);
 
     void parseUpdateScalingParametersResponse(QXmlStreamReader &xml);
 

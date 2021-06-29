@@ -31,7 +31,7 @@ class DisassociateAwsAccountFromPartnerAccountResponsePrivate : public IoTWirele
 
 public:
 
-    DisassociateAwsAccountFromPartnerAccountResponsePrivate(DisassociateAwsAccountFromPartnerAccountResponse * const q);
+    explicit DisassociateAwsAccountFromPartnerAccountResponsePrivate(DisassociateAwsAccountFromPartnerAccountResponse * const q);
 
     void parseDisassociateAwsAccountFromPartnerAccountResponse(QXmlStreamReader &xml);
 

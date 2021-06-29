@@ -31,7 +31,7 @@ class DeleteTargetGroupResponsePrivate : public ElasticLoadBalancingv2ResponsePr
 
 public:
 
-    DeleteTargetGroupResponsePrivate(DeleteTargetGroupResponse * const q);
+    explicit DeleteTargetGroupResponsePrivate(DeleteTargetGroupResponse * const q);
 
     void parseDeleteTargetGroupResponse(QXmlStreamReader &xml);
 

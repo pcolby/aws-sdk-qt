@@ -31,7 +31,7 @@ class SearchProductsAsAdminResponsePrivate : public ServiceCatalogResponsePrivat
 
 public:
 
-    SearchProductsAsAdminResponsePrivate(SearchProductsAsAdminResponse * const q);
+    explicit SearchProductsAsAdminResponsePrivate(SearchProductsAsAdminResponse * const q);
 
     void parseSearchProductsAsAdminResponse(QXmlStreamReader &xml);
 

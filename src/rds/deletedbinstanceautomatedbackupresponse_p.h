@@ -31,7 +31,7 @@ class DeleteDBInstanceAutomatedBackupResponsePrivate : public RdsResponsePrivate
 
 public:
 
-    DeleteDBInstanceAutomatedBackupResponsePrivate(DeleteDBInstanceAutomatedBackupResponse * const q);
+    explicit DeleteDBInstanceAutomatedBackupResponsePrivate(DeleteDBInstanceAutomatedBackupResponse * const q);
 
     void parseDeleteDBInstanceAutomatedBackupResponse(QXmlStreamReader &xml);
 

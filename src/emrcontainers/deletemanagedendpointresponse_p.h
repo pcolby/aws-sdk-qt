@@ -31,7 +31,7 @@ class DeleteManagedEndpointResponsePrivate : public EMRContainersResponsePrivate
 
 public:
 
-    DeleteManagedEndpointResponsePrivate(DeleteManagedEndpointResponse * const q);
+    explicit DeleteManagedEndpointResponsePrivate(DeleteManagedEndpointResponse * const q);
 
     void parseDeleteManagedEndpointResponse(QXmlStreamReader &xml);
 

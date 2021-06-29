@@ -31,7 +31,7 @@ class AssociateBotResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    AssociateBotResponsePrivate(AssociateBotResponse * const q);
+    explicit AssociateBotResponsePrivate(AssociateBotResponse * const q);
 
     void parseAssociateBotResponse(QXmlStreamReader &xml);
 

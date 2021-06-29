@@ -31,7 +31,7 @@ class CreateCacheSubnetGroupResponsePrivate : public ElastiCacheResponsePrivate 
 
 public:
 
-    CreateCacheSubnetGroupResponsePrivate(CreateCacheSubnetGroupResponse * const q);
+    explicit CreateCacheSubnetGroupResponsePrivate(CreateCacheSubnetGroupResponse * const q);
 
     void parseCreateCacheSubnetGroupResponse(QXmlStreamReader &xml);
 

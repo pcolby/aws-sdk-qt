@@ -31,7 +31,7 @@ class ListSecurityKeysResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    ListSecurityKeysResponsePrivate(ListSecurityKeysResponse * const q);
+    explicit ListSecurityKeysResponsePrivate(ListSecurityKeysResponse * const q);
 
     void parseListSecurityKeysResponse(QXmlStreamReader &xml);
 

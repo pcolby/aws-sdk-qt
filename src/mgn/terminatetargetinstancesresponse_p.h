@@ -31,7 +31,7 @@ class TerminateTargetInstancesResponsePrivate : public mgnResponsePrivate {
 
 public:
 
-    TerminateTargetInstancesResponsePrivate(TerminateTargetInstancesResponse * const q);
+    explicit TerminateTargetInstancesResponsePrivate(TerminateTargetInstancesResponse * const q);
 
     void parseTerminateTargetInstancesResponse(QXmlStreamReader &xml);
 

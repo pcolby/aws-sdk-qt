@@ -29,7 +29,7 @@ class MigrationHubConfigResponsePrivate {
 
 public:
 
-    MigrationHubConfigResponsePrivate(MigrationHubConfigResponse * const q);
+    explicit MigrationHubConfigResponsePrivate(MigrationHubConfigResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

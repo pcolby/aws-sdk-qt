@@ -31,7 +31,7 @@ class StopExperimentResponsePrivate : public FisResponsePrivate {
 
 public:
 
-    StopExperimentResponsePrivate(StopExperimentResponse * const q);
+    explicit StopExperimentResponsePrivate(StopExperimentResponse * const q);
 
     void parseStopExperimentResponse(QXmlStreamReader &xml);
 

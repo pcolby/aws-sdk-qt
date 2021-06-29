@@ -31,7 +31,7 @@ class DescribePredictorResponsePrivate : public ForecastServiceResponsePrivate {
 
 public:
 
-    DescribePredictorResponsePrivate(DescribePredictorResponse * const q);
+    explicit DescribePredictorResponsePrivate(DescribePredictorResponse * const q);
 
     void parseDescribePredictorResponse(QXmlStreamReader &xml);
 

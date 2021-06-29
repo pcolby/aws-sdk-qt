@@ -31,7 +31,7 @@ class UpdateReplicationConfigurationTemplateResponsePrivate : public mgnResponse
 
 public:
 
-    UpdateReplicationConfigurationTemplateResponsePrivate(UpdateReplicationConfigurationTemplateResponse * const q);
+    explicit UpdateReplicationConfigurationTemplateResponsePrivate(UpdateReplicationConfigurationTemplateResponse * const q);
 
     void parseUpdateReplicationConfigurationTemplateResponse(QXmlStreamReader &xml);
 

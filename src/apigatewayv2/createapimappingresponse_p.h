@@ -31,7 +31,7 @@ class CreateApiMappingResponsePrivate : public ApiGatewayV2ResponsePrivate {
 
 public:
 
-    CreateApiMappingResponsePrivate(CreateApiMappingResponse * const q);
+    explicit CreateApiMappingResponsePrivate(CreateApiMappingResponse * const q);
 
     void parseCreateApiMappingResponse(QXmlStreamReader &xml);
 

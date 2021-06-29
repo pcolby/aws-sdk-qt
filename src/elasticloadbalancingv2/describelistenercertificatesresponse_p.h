@@ -31,7 +31,7 @@ class DescribeListenerCertificatesResponsePrivate : public ElasticLoadBalancingv
 
 public:
 
-    DescribeListenerCertificatesResponsePrivate(DescribeListenerCertificatesResponse * const q);
+    explicit DescribeListenerCertificatesResponsePrivate(DescribeListenerCertificatesResponse * const q);
 
     void parseDescribeListenerCertificatesResponse(QXmlStreamReader &xml);
 

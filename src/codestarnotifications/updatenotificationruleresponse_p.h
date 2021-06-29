@@ -31,7 +31,7 @@ class UpdateNotificationRuleResponsePrivate : public CodeStarNotificationsRespon
 
 public:
 
-    UpdateNotificationRuleResponsePrivate(UpdateNotificationRuleResponse * const q);
+    explicit UpdateNotificationRuleResponsePrivate(UpdateNotificationRuleResponse * const q);
 
     void parseUpdateNotificationRuleResponse(QXmlStreamReader &xml);
 

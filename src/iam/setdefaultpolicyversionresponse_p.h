@@ -31,7 +31,7 @@ class SetDefaultPolicyVersionResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    SetDefaultPolicyVersionResponsePrivate(SetDefaultPolicyVersionResponse * const q);
+    explicit SetDefaultPolicyVersionResponsePrivate(SetDefaultPolicyVersionResponse * const q);
 
     void parseSetDefaultPolicyVersionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateLaunchConfigurationResponsePrivate : public AutoScalingResponsePriva
 
 public:
 
-    CreateLaunchConfigurationResponsePrivate(CreateLaunchConfigurationResponse * const q);
+    explicit CreateLaunchConfigurationResponsePrivate(CreateLaunchConfigurationResponse * const q);
 
     void parseCreateLaunchConfigurationResponse(QXmlStreamReader &xml);
 

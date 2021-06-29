@@ -31,7 +31,7 @@ class UpdateApplicationMaintenanceConfigurationResponsePrivate : public KinesisA
 
 public:
 
-    UpdateApplicationMaintenanceConfigurationResponsePrivate(UpdateApplicationMaintenanceConfigurationResponse * const q);
+    explicit UpdateApplicationMaintenanceConfigurationResponsePrivate(UpdateApplicationMaintenanceConfigurationResponse * const q);
 
     void parseUpdateApplicationMaintenanceConfigurationResponse(QXmlStreamReader &xml);
 

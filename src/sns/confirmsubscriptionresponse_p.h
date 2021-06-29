@@ -31,7 +31,7 @@ class ConfirmSubscriptionResponsePrivate : public SnsResponsePrivate {
 
 public:
 
-    ConfirmSubscriptionResponsePrivate(ConfirmSubscriptionResponse * const q);
+    explicit ConfirmSubscriptionResponsePrivate(ConfirmSubscriptionResponse * const q);
 
     void parseConfirmSubscriptionResponse(QXmlStreamReader &xml);
 

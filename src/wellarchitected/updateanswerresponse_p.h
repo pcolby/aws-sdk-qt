@@ -31,7 +31,7 @@ class UpdateAnswerResponsePrivate : public WellArchitectedResponsePrivate {
 
 public:
 
-    UpdateAnswerResponsePrivate(UpdateAnswerResponse * const q);
+    explicit UpdateAnswerResponsePrivate(UpdateAnswerResponse * const q);
 
     void parseUpdateAnswerResponse(QXmlStreamReader &xml);
 

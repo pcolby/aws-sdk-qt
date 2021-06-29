@@ -31,7 +31,7 @@ class StartModelResponsePrivate : public LookoutforVisionResponsePrivate {
 
 public:
 
-    StartModelResponsePrivate(StartModelResponse * const q);
+    explicit StartModelResponsePrivate(StartModelResponse * const q);
 
     void parseStartModelResponse(QXmlStreamReader &xml);
 

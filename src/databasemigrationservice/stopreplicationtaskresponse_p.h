@@ -31,7 +31,7 @@ class StopReplicationTaskResponsePrivate : public DatabaseMigrationServiceRespon
 
 public:
 
-    StopReplicationTaskResponsePrivate(StopReplicationTaskResponse * const q);
+    explicit StopReplicationTaskResponsePrivate(StopReplicationTaskResponse * const q);
 
     void parseStopReplicationTaskResponse(QXmlStreamReader &xml);
 

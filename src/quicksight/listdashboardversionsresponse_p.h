@@ -31,7 +31,7 @@ class ListDashboardVersionsResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    ListDashboardVersionsResponsePrivate(ListDashboardVersionsResponse * const q);
+    explicit ListDashboardVersionsResponsePrivate(ListDashboardVersionsResponse * const q);
 
     void parseListDashboardVersionsResponse(QXmlStreamReader &xml);
 

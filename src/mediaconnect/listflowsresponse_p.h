@@ -31,7 +31,7 @@ class ListFlowsResponsePrivate : public MediaConnectResponsePrivate {
 
 public:
 
-    ListFlowsResponsePrivate(ListFlowsResponse * const q);
+    explicit ListFlowsResponsePrivate(ListFlowsResponse * const q);
 
     void parseListFlowsResponse(QXmlStreamReader &xml);
 

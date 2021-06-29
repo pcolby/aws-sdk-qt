@@ -31,7 +31,7 @@ class GetHomeRegionResponsePrivate : public MigrationHubConfigResponsePrivate {
 
 public:
 
-    GetHomeRegionResponsePrivate(GetHomeRegionResponse * const q);
+    explicit GetHomeRegionResponsePrivate(GetHomeRegionResponse * const q);
 
     void parseGetHomeRegionResponse(QXmlStreamReader &xml);
 

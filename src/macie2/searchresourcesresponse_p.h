@@ -31,7 +31,7 @@ class SearchResourcesResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 
-    SearchResourcesResponsePrivate(SearchResourcesResponse * const q);
+    explicit SearchResourcesResponsePrivate(SearchResourcesResponse * const q);
 
     void parseSearchResourcesResponse(QXmlStreamReader &xml);
 

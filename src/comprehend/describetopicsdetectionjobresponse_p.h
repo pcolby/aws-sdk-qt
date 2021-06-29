@@ -31,7 +31,7 @@ class DescribeTopicsDetectionJobResponsePrivate : public ComprehendResponsePriva
 
 public:
 
-    DescribeTopicsDetectionJobResponsePrivate(DescribeTopicsDetectionJobResponse * const q);
+    explicit DescribeTopicsDetectionJobResponsePrivate(DescribeTopicsDetectionJobResponse * const q);
 
     void parseDescribeTopicsDetectionJobResponse(QXmlStreamReader &xml);
 

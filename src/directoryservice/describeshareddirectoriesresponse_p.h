@@ -31,7 +31,7 @@ class DescribeSharedDirectoriesResponsePrivate : public DirectoryServiceResponse
 
 public:
 
-    DescribeSharedDirectoriesResponsePrivate(DescribeSharedDirectoriesResponse * const q);
+    explicit DescribeSharedDirectoriesResponsePrivate(DescribeSharedDirectoriesResponse * const q);
 
     void parseDescribeSharedDirectoriesResponse(QXmlStreamReader &xml);
 

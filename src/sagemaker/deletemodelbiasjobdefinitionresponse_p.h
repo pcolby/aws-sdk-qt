@@ -31,7 +31,7 @@ class DeleteModelBiasJobDefinitionResponsePrivate : public SageMakerResponsePriv
 
 public:
 
-    DeleteModelBiasJobDefinitionResponsePrivate(DeleteModelBiasJobDefinitionResponse * const q);
+    explicit DeleteModelBiasJobDefinitionResponsePrivate(DeleteModelBiasJobDefinitionResponse * const q);
 
     void parseDeleteModelBiasJobDefinitionResponse(QXmlStreamReader &xml);
 

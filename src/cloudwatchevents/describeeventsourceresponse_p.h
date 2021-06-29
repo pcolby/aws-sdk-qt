@@ -31,7 +31,7 @@ class DescribeEventSourceResponsePrivate : public CloudWatchEventsResponsePrivat
 
 public:
 
-    DescribeEventSourceResponsePrivate(DescribeEventSourceResponse * const q);
+    explicit DescribeEventSourceResponsePrivate(DescribeEventSourceResponse * const q);
 
     void parseDescribeEventSourceResponse(QXmlStreamReader &xml);
 

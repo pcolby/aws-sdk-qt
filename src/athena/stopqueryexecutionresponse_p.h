@@ -31,7 +31,7 @@ class StopQueryExecutionResponsePrivate : public AthenaResponsePrivate {
 
 public:
 
-    StopQueryExecutionResponsePrivate(StopQueryExecutionResponse * const q);
+    explicit StopQueryExecutionResponsePrivate(StopQueryExecutionResponse * const q);
 
     void parseStopQueryExecutionResponse(QXmlStreamReader &xml);
 

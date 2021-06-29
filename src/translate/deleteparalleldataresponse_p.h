@@ -31,7 +31,7 @@ class DeleteParallelDataResponsePrivate : public TranslateResponsePrivate {
 
 public:
 
-    DeleteParallelDataResponsePrivate(DeleteParallelDataResponse * const q);
+    explicit DeleteParallelDataResponsePrivate(DeleteParallelDataResponse * const q);
 
     void parseDeleteParallelDataResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeTargetGroupsResponsePrivate : public ElasticLoadBalancingv2Respons
 
 public:
 
-    DescribeTargetGroupsResponsePrivate(DescribeTargetGroupsResponse * const q);
+    explicit DescribeTargetGroupsResponsePrivate(DescribeTargetGroupsResponse * const q);
 
     void parseDescribeTargetGroupsResponse(QXmlStreamReader &xml);
 

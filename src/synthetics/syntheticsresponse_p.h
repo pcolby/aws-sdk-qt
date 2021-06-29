@@ -29,7 +29,7 @@ class SyntheticsResponsePrivate {
 
 public:
 
-    SyntheticsResponsePrivate(SyntheticsResponse * const q);
+    explicit SyntheticsResponsePrivate(SyntheticsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

@@ -31,7 +31,7 @@ class CreateClientVpnRouteResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CreateClientVpnRouteResponsePrivate(CreateClientVpnRouteResponse * const q);
+    explicit CreateClientVpnRouteResponsePrivate(CreateClientVpnRouteResponse * const q);
 
     void parseCreateClientVpnRouteResponse(QXmlStreamReader &xml);
 

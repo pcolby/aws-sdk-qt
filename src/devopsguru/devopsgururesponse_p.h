@@ -29,7 +29,7 @@ class DevOpsGuruResponsePrivate {
 
 public:
 
-    DevOpsGuruResponsePrivate(DevOpsGuruResponse * const q);
+    explicit DevOpsGuruResponsePrivate(DevOpsGuruResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

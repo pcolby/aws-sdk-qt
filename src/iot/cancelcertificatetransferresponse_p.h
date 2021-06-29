@@ -31,7 +31,7 @@ class CancelCertificateTransferResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    CancelCertificateTransferResponsePrivate(CancelCertificateTransferResponse * const q);
+    explicit CancelCertificateTransferResponsePrivate(CancelCertificateTransferResponse * const q);
 
     void parseCancelCertificateTransferResponse(QXmlStreamReader &xml);
 

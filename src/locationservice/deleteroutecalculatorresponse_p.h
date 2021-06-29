@@ -31,7 +31,7 @@ class DeleteRouteCalculatorResponsePrivate : public LocationServiceResponsePriva
 
 public:
 
-    DeleteRouteCalculatorResponsePrivate(DeleteRouteCalculatorResponse * const q);
+    explicit DeleteRouteCalculatorResponsePrivate(DeleteRouteCalculatorResponse * const q);
 
     void parseDeleteRouteCalculatorResponse(QXmlStreamReader &xml);
 

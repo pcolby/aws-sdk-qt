@@ -31,7 +31,7 @@ class DetachManagedPolicyFromPermissionSetResponsePrivate : public SSOAdminRespo
 
 public:
 
-    DetachManagedPolicyFromPermissionSetResponsePrivate(DetachManagedPolicyFromPermissionSetResponse * const q);
+    explicit DetachManagedPolicyFromPermissionSetResponsePrivate(DetachManagedPolicyFromPermissionSetResponse * const q);
 
     void parseDetachManagedPolicyFromPermissionSetResponse(QXmlStreamReader &xml);
 

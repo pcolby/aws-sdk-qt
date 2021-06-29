@@ -31,7 +31,7 @@ class RegisterDeviceResponsePrivate : public CognitoSyncResponsePrivate {
 
 public:
 
-    RegisterDeviceResponsePrivate(RegisterDeviceResponse * const q);
+    explicit RegisterDeviceResponsePrivate(RegisterDeviceResponse * const q);
 
     void parseRegisterDeviceResponse(QXmlStreamReader &xml);
 

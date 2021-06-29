@@ -31,7 +31,7 @@ class DeleteDevicePoolResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    DeleteDevicePoolResponsePrivate(DeleteDevicePoolResponse * const q);
+    explicit DeleteDevicePoolResponsePrivate(DeleteDevicePoolResponse * const q);
 
     void parseDeleteDevicePoolResponse(QXmlStreamReader &xml);
 

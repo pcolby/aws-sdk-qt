@@ -31,7 +31,7 @@ class UpdateRoutingProfileConcurrencyResponsePrivate : public ConnectResponsePri
 
 public:
 
-    UpdateRoutingProfileConcurrencyResponsePrivate(UpdateRoutingProfileConcurrencyResponse * const q);
+    explicit UpdateRoutingProfileConcurrencyResponsePrivate(UpdateRoutingProfileConcurrencyResponse * const q);
 
     void parseUpdateRoutingProfileConcurrencyResponse(QXmlStreamReader &xml);
 

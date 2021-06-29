@@ -31,7 +31,7 @@ class StopPipelineExecutionResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    StopPipelineExecutionResponsePrivate(StopPipelineExecutionResponse * const q);
+    explicit StopPipelineExecutionResponsePrivate(StopPipelineExecutionResponse * const q);
 
     void parseStopPipelineExecutionResponse(QXmlStreamReader &xml);
 

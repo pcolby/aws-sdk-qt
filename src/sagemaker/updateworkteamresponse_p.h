@@ -31,7 +31,7 @@ class UpdateWorkteamResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    UpdateWorkteamResponsePrivate(UpdateWorkteamResponse * const q);
+    explicit UpdateWorkteamResponsePrivate(UpdateWorkteamResponse * const q);
 
     void parseUpdateWorkteamResponse(QXmlStreamReader &xml);
 

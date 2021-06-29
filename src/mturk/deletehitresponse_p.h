@@ -31,7 +31,7 @@ class DeleteHITResponsePrivate : public MTurkResponsePrivate {
 
 public:
 
-    DeleteHITResponsePrivate(DeleteHITResponse * const q);
+    explicit DeleteHITResponsePrivate(DeleteHITResponse * const q);
 
     void parseDeleteHITResponse(QXmlStreamReader &xml);
 

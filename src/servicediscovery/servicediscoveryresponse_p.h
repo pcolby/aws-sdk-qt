@@ -29,7 +29,7 @@ class ServiceDiscoveryResponsePrivate {
 
 public:
 
-    ServiceDiscoveryResponsePrivate(ServiceDiscoveryResponse * const q);
+    explicit ServiceDiscoveryResponsePrivate(ServiceDiscoveryResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

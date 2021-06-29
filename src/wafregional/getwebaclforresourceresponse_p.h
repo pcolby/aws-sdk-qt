@@ -31,7 +31,7 @@ class GetWebACLForResourceResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 
-    GetWebACLForResourceResponsePrivate(GetWebACLForResourceResponse * const q);
+    explicit GetWebACLForResourceResponsePrivate(GetWebACLForResourceResponse * const q);
 
     void parseGetWebACLForResourceResponse(QXmlStreamReader &xml);
 

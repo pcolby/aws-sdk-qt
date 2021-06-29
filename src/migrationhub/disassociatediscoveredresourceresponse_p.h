@@ -31,7 +31,7 @@ class DisassociateDiscoveredResourceResponsePrivate : public MigrationHubRespons
 
 public:
 
-    DisassociateDiscoveredResourceResponsePrivate(DisassociateDiscoveredResourceResponse * const q);
+    explicit DisassociateDiscoveredResourceResponsePrivate(DisassociateDiscoveredResourceResponse * const q);
 
     void parseDisassociateDiscoveredResourceResponse(QXmlStreamReader &xml);
 

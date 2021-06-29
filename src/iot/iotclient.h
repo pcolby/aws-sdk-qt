@@ -495,7 +495,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    IoTClient(
+    explicit IoTClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -732,7 +732,7 @@ public slots:
 protected:
     /// @cond internal
     IoTClientPrivate * const d_ptr; ///< Internal d-pointer.
-    IoTClient(IoTClientPrivate * const d);
+    explicit IoTClient(IoTClientPrivate * const d);
     /// @endcond
 
 private:

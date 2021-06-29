@@ -31,7 +31,7 @@ class UpdateVirtualNodeResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 
-    UpdateVirtualNodeResponsePrivate(UpdateVirtualNodeResponse * const q);
+    explicit UpdateVirtualNodeResponsePrivate(UpdateVirtualNodeResponse * const q);
 
     void parseUpdateVirtualNodeResponse(QXmlStreamReader &xml);
 

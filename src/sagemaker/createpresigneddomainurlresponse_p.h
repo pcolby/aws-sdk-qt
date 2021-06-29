@@ -31,7 +31,7 @@ class CreatePresignedDomainUrlResponsePrivate : public SageMakerResponsePrivate 
 
 public:
 
-    CreatePresignedDomainUrlResponsePrivate(CreatePresignedDomainUrlResponse * const q);
+    explicit CreatePresignedDomainUrlResponsePrivate(CreatePresignedDomainUrlResponse * const q);
 
     void parseCreatePresignedDomainUrlResponse(QXmlStreamReader &xml);
 

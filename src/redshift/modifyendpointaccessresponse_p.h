@@ -31,7 +31,7 @@ class ModifyEndpointAccessResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    ModifyEndpointAccessResponsePrivate(ModifyEndpointAccessResponse * const q);
+    explicit ModifyEndpointAccessResponsePrivate(ModifyEndpointAccessResponse * const q);
 
     void parseModifyEndpointAccessResponse(QXmlStreamReader &xml);
 

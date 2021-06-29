@@ -31,7 +31,7 @@ class DescribePatchPropertiesResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    DescribePatchPropertiesResponsePrivate(DescribePatchPropertiesResponse * const q);
+    explicit DescribePatchPropertiesResponsePrivate(DescribePatchPropertiesResponse * const q);
 
     void parseDescribePatchPropertiesResponse(QXmlStreamReader &xml);
 

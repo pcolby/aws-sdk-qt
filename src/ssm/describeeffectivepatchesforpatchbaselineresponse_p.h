@@ -31,7 +31,7 @@ class DescribeEffectivePatchesForPatchBaselineResponsePrivate : public SsmRespon
 
 public:
 
-    DescribeEffectivePatchesForPatchBaselineResponsePrivate(DescribeEffectivePatchesForPatchBaselineResponse * const q);
+    explicit DescribeEffectivePatchesForPatchBaselineResponsePrivate(DescribeEffectivePatchesForPatchBaselineResponse * const q);
 
     void parseDescribeEffectivePatchesForPatchBaselineResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CompleteMigrationResponsePrivate : public ElastiCacheResponsePrivate {
 
 public:
 
-    CompleteMigrationResponsePrivate(CompleteMigrationResponse * const q);
+    explicit CompleteMigrationResponsePrivate(CompleteMigrationResponse * const q);
 
     void parseCompleteMigrationResponse(QXmlStreamReader &xml);
 

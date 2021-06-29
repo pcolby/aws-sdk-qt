@@ -31,7 +31,7 @@ class GetSagemakerServicecatalogPortfolioStatusResponsePrivate : public SageMake
 
 public:
 
-    GetSagemakerServicecatalogPortfolioStatusResponsePrivate(GetSagemakerServicecatalogPortfolioStatusResponse * const q);
+    explicit GetSagemakerServicecatalogPortfolioStatusResponsePrivate(GetSagemakerServicecatalogPortfolioStatusResponse * const q);
 
     void parseGetSagemakerServicecatalogPortfolioStatusResponse(QXmlStreamReader &xml);
 

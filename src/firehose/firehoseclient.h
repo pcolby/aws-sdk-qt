@@ -65,7 +65,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    FirehoseClient(
+    explicit FirehoseClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -87,7 +87,7 @@ public slots:
 protected:
     /// @cond internal
     FirehoseClientPrivate * const d_ptr; ///< Internal d-pointer.
-    FirehoseClient(FirehoseClientPrivate * const d);
+    explicit FirehoseClient(FirehoseClientPrivate * const d);
     /// @endcond
 
 private:

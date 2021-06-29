@@ -30,7 +30,7 @@ class SsooidcClient;
 class SsooidcClientPrivate {
 
 public:
-    SsooidcClientPrivate(SsooidcClient * const q);
+    explicit SsooidcClientPrivate(SsooidcClient * const q);
 
 protected:
     SsooidcClient * const q_ptr; ///< Internal q-pointer.

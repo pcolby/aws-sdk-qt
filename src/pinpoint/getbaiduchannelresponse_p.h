@@ -31,7 +31,7 @@ class GetBaiduChannelResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    GetBaiduChannelResponsePrivate(GetBaiduChannelResponse * const q);
+    explicit GetBaiduChannelResponsePrivate(GetBaiduChannelResponse * const q);
 
     void parseGetBaiduChannelResponse(QXmlStreamReader &xml);
 

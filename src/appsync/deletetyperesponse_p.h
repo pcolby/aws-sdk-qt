@@ -31,7 +31,7 @@ class DeleteTypeResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 
-    DeleteTypeResponsePrivate(DeleteTypeResponse * const q);
+    explicit DeleteTypeResponsePrivate(DeleteTypeResponse * const q);
 
     void parseDeleteTypeResponse(QXmlStreamReader &xml);
 

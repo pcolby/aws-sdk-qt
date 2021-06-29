@@ -30,7 +30,7 @@ class DirectoryServiceClient;
 class DirectoryServiceClientPrivate {
 
 public:
-    DirectoryServiceClientPrivate(DirectoryServiceClient * const q);
+    explicit DirectoryServiceClientPrivate(DirectoryServiceClient * const q);
 
 protected:
     DirectoryServiceClient * const q_ptr; ///< Internal q-pointer.

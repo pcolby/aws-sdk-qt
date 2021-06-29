@@ -31,7 +31,7 @@ class CreateKeysAndCertificateResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    CreateKeysAndCertificateResponsePrivate(CreateKeysAndCertificateResponse * const q);
+    explicit CreateKeysAndCertificateResponsePrivate(CreateKeysAndCertificateResponse * const q);
 
     void parseCreateKeysAndCertificateResponse(QXmlStreamReader &xml);
 

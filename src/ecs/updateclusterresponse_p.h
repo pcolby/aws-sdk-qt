@@ -31,7 +31,7 @@ class UpdateClusterResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    UpdateClusterResponsePrivate(UpdateClusterResponse * const q);
+    explicit UpdateClusterResponsePrivate(UpdateClusterResponse * const q);
 
     void parseUpdateClusterResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteGeoMatchSetResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 
-    DeleteGeoMatchSetResponsePrivate(DeleteGeoMatchSetResponse * const q);
+    explicit DeleteGeoMatchSetResponsePrivate(DeleteGeoMatchSetResponse * const q);
 
     void parseDeleteGeoMatchSetResponse(QXmlStreamReader &xml);
 

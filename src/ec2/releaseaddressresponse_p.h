@@ -31,7 +31,7 @@ class ReleaseAddressResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ReleaseAddressResponsePrivate(ReleaseAddressResponse * const q);
+    explicit ReleaseAddressResponsePrivate(ReleaseAddressResponse * const q);
 
     void parseReleaseAddressResponse(QXmlStreamReader &xml);
 

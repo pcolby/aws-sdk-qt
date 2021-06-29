@@ -31,7 +31,7 @@ class CreateGroupResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 
-    CreateGroupResponsePrivate(CreateGroupResponse * const q);
+    explicit CreateGroupResponsePrivate(CreateGroupResponse * const q);
 
     void parseCreateGroupResponse(QXmlStreamReader &xml);
 

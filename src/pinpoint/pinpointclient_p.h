@@ -30,7 +30,7 @@ class PinpointClient;
 class PinpointClientPrivate {
 
 public:
-    PinpointClientPrivate(PinpointClient * const q);
+    explicit PinpointClientPrivate(PinpointClient * const q);
 
 protected:
     PinpointClient * const q_ptr; ///< Internal q-pointer.

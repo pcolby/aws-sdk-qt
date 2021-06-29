@@ -31,7 +31,7 @@ class ModifyLaunchTemplateResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ModifyLaunchTemplateResponsePrivate(ModifyLaunchTemplateResponse * const q);
+    explicit ModifyLaunchTemplateResponsePrivate(ModifyLaunchTemplateResponse * const q);
 
     void parseModifyLaunchTemplateResponse(QXmlStreamReader &xml);
 

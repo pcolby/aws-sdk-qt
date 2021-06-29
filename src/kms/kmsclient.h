@@ -133,7 +133,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    KmsClient(
+    explicit KmsClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -189,7 +189,7 @@ public slots:
 protected:
     /// @cond internal
     KmsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    KmsClient(KmsClientPrivate * const d);
+    explicit KmsClient(KmsClientPrivate * const d);
     /// @endcond
 
 private:

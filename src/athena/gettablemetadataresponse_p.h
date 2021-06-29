@@ -31,7 +31,7 @@ class GetTableMetadataResponsePrivate : public AthenaResponsePrivate {
 
 public:
 
-    GetTableMetadataResponsePrivate(GetTableMetadataResponse * const q);
+    explicit GetTableMetadataResponsePrivate(GetTableMetadataResponse * const q);
 
     void parseGetTableMetadataResponse(QXmlStreamReader &xml);
 

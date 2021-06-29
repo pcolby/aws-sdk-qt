@@ -31,7 +31,7 @@ class AllocateStaticIpResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    AllocateStaticIpResponsePrivate(AllocateStaticIpResponse * const q);
+    explicit AllocateStaticIpResponsePrivate(AllocateStaticIpResponse * const q);
 
     void parseAllocateStaticIpResponse(QXmlStreamReader &xml);
 

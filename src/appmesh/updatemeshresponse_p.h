@@ -31,7 +31,7 @@ class UpdateMeshResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 
-    UpdateMeshResponsePrivate(UpdateMeshResponse * const q);
+    explicit UpdateMeshResponsePrivate(UpdateMeshResponse * const q);
 
     void parseUpdateMeshResponse(QXmlStreamReader &xml);
 

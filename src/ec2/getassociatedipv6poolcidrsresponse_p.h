@@ -31,7 +31,7 @@ class GetAssociatedIpv6PoolCidrsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    GetAssociatedIpv6PoolCidrsResponsePrivate(GetAssociatedIpv6PoolCidrsResponse * const q);
+    explicit GetAssociatedIpv6PoolCidrsResponsePrivate(GetAssociatedIpv6PoolCidrsResponse * const q);
 
     void parseGetAssociatedIpv6PoolCidrsResponse(QXmlStreamReader &xml);
 

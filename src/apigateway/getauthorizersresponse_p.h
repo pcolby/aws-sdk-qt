@@ -31,7 +31,7 @@ class GetAuthorizersResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    GetAuthorizersResponsePrivate(GetAuthorizersResponse * const q);
+    explicit GetAuthorizersResponsePrivate(GetAuthorizersResponse * const q);
 
     void parseGetAuthorizersResponse(QXmlStreamReader &xml);
 

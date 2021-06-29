@@ -31,7 +31,7 @@ class ImportDocumentationPartsResponsePrivate : public APIGatewayResponsePrivate
 
 public:
 
-    ImportDocumentationPartsResponsePrivate(ImportDocumentationPartsResponse * const q);
+    explicit ImportDocumentationPartsResponsePrivate(ImportDocumentationPartsResponse * const q);
 
     void parseImportDocumentationPartsResponse(QXmlStreamReader &xml);
 

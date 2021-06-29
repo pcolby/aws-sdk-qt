@@ -31,7 +31,7 @@ class CreateSecretResponsePrivate : public SecretsManagerResponsePrivate {
 
 public:
 
-    CreateSecretResponsePrivate(CreateSecretResponse * const q);
+    explicit CreateSecretResponsePrivate(CreateSecretResponse * const q);
 
     void parseCreateSecretResponse(QXmlStreamReader &xml);
 

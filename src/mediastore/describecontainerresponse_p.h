@@ -31,7 +31,7 @@ class DescribeContainerResponsePrivate : public MediaStoreResponsePrivate {
 
 public:
 
-    DescribeContainerResponsePrivate(DescribeContainerResponse * const q);
+    explicit DescribeContainerResponsePrivate(DescribeContainerResponse * const q);
 
     void parseDescribeContainerResponse(QXmlStreamReader &xml);
 

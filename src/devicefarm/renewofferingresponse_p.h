@@ -31,7 +31,7 @@ class RenewOfferingResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    RenewOfferingResponsePrivate(RenewOfferingResponse * const q);
+    explicit RenewOfferingResponsePrivate(RenewOfferingResponse * const q);
 
     void parseRenewOfferingResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class AssociateSubnetCidrBlockResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    AssociateSubnetCidrBlockResponsePrivate(AssociateSubnetCidrBlockResponse * const q);
+    explicit AssociateSubnetCidrBlockResponsePrivate(AssociateSubnetCidrBlockResponse * const q);
 
     void parseAssociateSubnetCidrBlockResponse(QXmlStreamReader &xml);
 

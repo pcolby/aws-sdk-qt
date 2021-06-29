@@ -31,7 +31,7 @@ class UpdateVocabularyFilterResponsePrivate : public TranscribeServiceResponsePr
 
 public:
 
-    UpdateVocabularyFilterResponsePrivate(UpdateVocabularyFilterResponse * const q);
+    explicit UpdateVocabularyFilterResponsePrivate(UpdateVocabularyFilterResponse * const q);
 
     void parseUpdateVocabularyFilterResponse(QXmlStreamReader &xml);
 

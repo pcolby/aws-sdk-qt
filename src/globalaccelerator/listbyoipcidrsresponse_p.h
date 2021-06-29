@@ -31,7 +31,7 @@ class ListByoipCidrsResponsePrivate : public GlobalAcceleratorResponsePrivate {
 
 public:
 
-    ListByoipCidrsResponsePrivate(ListByoipCidrsResponse * const q);
+    explicit ListByoipCidrsResponsePrivate(ListByoipCidrsResponse * const q);
 
     void parseListByoipCidrsResponse(QXmlStreamReader &xml);
 

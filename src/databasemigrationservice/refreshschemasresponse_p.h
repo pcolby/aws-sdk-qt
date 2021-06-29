@@ -31,7 +31,7 @@ class RefreshSchemasResponsePrivate : public DatabaseMigrationServiceResponsePri
 
 public:
 
-    RefreshSchemasResponsePrivate(RefreshSchemasResponse * const q);
+    explicit RefreshSchemasResponsePrivate(RefreshSchemasResponse * const q);
 
     void parseRefreshSchemasResponse(QXmlStreamReader &xml);
 

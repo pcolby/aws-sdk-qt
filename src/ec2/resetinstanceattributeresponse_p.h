@@ -31,7 +31,7 @@ class ResetInstanceAttributeResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ResetInstanceAttributeResponsePrivate(ResetInstanceAttributeResponse * const q);
+    explicit ResetInstanceAttributeResponsePrivate(ResetInstanceAttributeResponse * const q);
 
     void parseResetInstanceAttributeResponse(QXmlStreamReader &xml);
 

@@ -113,7 +113,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    CloudWatchClient(
+    explicit CloudWatchClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -159,7 +159,7 @@ public slots:
 protected:
     /// @cond internal
     CloudWatchClientPrivate * const d_ptr; ///< Internal d-pointer.
-    CloudWatchClient(CloudWatchClientPrivate * const d);
+    explicit CloudWatchClient(CloudWatchClientPrivate * const d);
     /// @endcond
 
 private:

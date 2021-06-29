@@ -29,7 +29,7 @@ class ConnectContactLensResponsePrivate {
 
 public:
 
-    ConnectContactLensResponsePrivate(ConnectContactLensResponse * const q);
+    explicit ConnectContactLensResponsePrivate(ConnectContactLensResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

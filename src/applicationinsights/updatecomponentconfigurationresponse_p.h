@@ -31,7 +31,7 @@ class UpdateComponentConfigurationResponsePrivate : public ApplicationInsightsRe
 
 public:
 
-    UpdateComponentConfigurationResponsePrivate(UpdateComponentConfigurationResponse * const q);
+    explicit UpdateComponentConfigurationResponsePrivate(UpdateComponentConfigurationResponse * const q);
 
     void parseUpdateComponentConfigurationResponse(QXmlStreamReader &xml);
 

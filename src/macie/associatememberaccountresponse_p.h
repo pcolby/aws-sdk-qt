@@ -31,7 +31,7 @@ class AssociateMemberAccountResponsePrivate : public MacieResponsePrivate {
 
 public:
 
-    AssociateMemberAccountResponsePrivate(AssociateMemberAccountResponse * const q);
+    explicit AssociateMemberAccountResponsePrivate(AssociateMemberAccountResponse * const q);
 
     void parseAssociateMemberAccountResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CancelQuantumTaskResponsePrivate : public BraketResponsePrivate {
 
 public:
 
-    CancelQuantumTaskResponsePrivate(CancelQuantumTaskResponse * const q);
+    explicit CancelQuantumTaskResponsePrivate(CancelQuantumTaskResponse * const q);
 
     void parseCancelQuantumTaskResponse(QXmlStreamReader &xml);
 

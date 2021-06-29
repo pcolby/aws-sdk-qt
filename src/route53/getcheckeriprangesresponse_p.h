@@ -31,7 +31,7 @@ class GetCheckerIpRangesResponsePrivate : public Route53ResponsePrivate {
 
 public:
 
-    GetCheckerIpRangesResponsePrivate(GetCheckerIpRangesResponse * const q);
+    explicit GetCheckerIpRangesResponsePrivate(GetCheckerIpRangesResponse * const q);
 
     void parseGetCheckerIpRangesResponse(QXmlStreamReader &xml);
 

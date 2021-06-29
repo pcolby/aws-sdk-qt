@@ -31,7 +31,7 @@ class UpdateFunctionResponsePrivate : public CloudFrontResponsePrivate {
 
 public:
 
-    UpdateFunctionResponsePrivate(UpdateFunctionResponse * const q);
+    explicit UpdateFunctionResponsePrivate(UpdateFunctionResponse * const q);
 
     void parseUpdateFunctionResponse(QXmlStreamReader &xml);
 

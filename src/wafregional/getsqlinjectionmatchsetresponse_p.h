@@ -31,7 +31,7 @@ class GetSqlInjectionMatchSetResponsePrivate : public WAFRegionalResponsePrivate
 
 public:
 
-    GetSqlInjectionMatchSetResponsePrivate(GetSqlInjectionMatchSetResponse * const q);
+    explicit GetSqlInjectionMatchSetResponsePrivate(GetSqlInjectionMatchSetResponse * const q);
 
     void parseGetSqlInjectionMatchSetResponse(QXmlStreamReader &xml);
 

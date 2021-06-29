@@ -31,7 +31,7 @@ class LeaveOrganizationResponsePrivate : public OrganizationsResponsePrivate {
 
 public:
 
-    LeaveOrganizationResponsePrivate(LeaveOrganizationResponse * const q);
+    explicit LeaveOrganizationResponsePrivate(LeaveOrganizationResponse * const q);
 
     void parseLeaveOrganizationResponse(QXmlStreamReader &xml);
 

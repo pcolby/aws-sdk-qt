@@ -31,7 +31,7 @@ class UpdateFirewallPolicyResponsePrivate : public NetworkFirewallResponsePrivat
 
 public:
 
-    UpdateFirewallPolicyResponsePrivate(UpdateFirewallPolicyResponse * const q);
+    explicit UpdateFirewallPolicyResponsePrivate(UpdateFirewallPolicyResponse * const q);
 
     void parseUpdateFirewallPolicyResponse(QXmlStreamReader &xml);
 

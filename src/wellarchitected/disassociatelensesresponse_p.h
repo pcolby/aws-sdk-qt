@@ -31,7 +31,7 @@ class DisassociateLensesResponsePrivate : public WellArchitectedResponsePrivate 
 
 public:
 
-    DisassociateLensesResponsePrivate(DisassociateLensesResponse * const q);
+    explicit DisassociateLensesResponsePrivate(DisassociateLensesResponse * const q);
 
     void parseDisassociateLensesResponse(QXmlStreamReader &xml);
 

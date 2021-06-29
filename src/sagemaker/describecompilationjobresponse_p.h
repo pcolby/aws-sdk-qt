@@ -31,7 +31,7 @@ class DescribeCompilationJobResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    DescribeCompilationJobResponsePrivate(DescribeCompilationJobResponse * const q);
+    explicit DescribeCompilationJobResponsePrivate(DescribeCompilationJobResponse * const q);
 
     void parseDescribeCompilationJobResponse(QXmlStreamReader &xml);
 

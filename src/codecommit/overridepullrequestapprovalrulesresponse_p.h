@@ -31,7 +31,7 @@ class OverridePullRequestApprovalRulesResponsePrivate : public CodeCommitRespons
 
 public:
 
-    OverridePullRequestApprovalRulesResponsePrivate(OverridePullRequestApprovalRulesResponse * const q);
+    explicit OverridePullRequestApprovalRulesResponsePrivate(OverridePullRequestApprovalRulesResponse * const q);
 
     void parseOverridePullRequestApprovalRulesResponse(QXmlStreamReader &xml);
 

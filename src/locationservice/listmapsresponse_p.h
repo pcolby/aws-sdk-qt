@@ -31,7 +31,7 @@ class ListMapsResponsePrivate : public LocationServiceResponsePrivate {
 
 public:
 
-    ListMapsResponsePrivate(ListMapsResponse * const q);
+    explicit ListMapsResponsePrivate(ListMapsResponse * const q);
 
     void parseListMapsResponse(QXmlStreamReader &xml);
 

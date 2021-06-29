@@ -31,7 +31,7 @@ class ListDevicePositionsResponsePrivate : public LocationServiceResponsePrivate
 
 public:
 
-    ListDevicePositionsResponsePrivate(ListDevicePositionsResponse * const q);
+    explicit ListDevicePositionsResponsePrivate(ListDevicePositionsResponse * const q);
 
     void parseListDevicePositionsResponse(QXmlStreamReader &xml);
 

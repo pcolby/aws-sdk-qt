@@ -31,7 +31,7 @@ class DisassociateFleetResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 
-    DisassociateFleetResponsePrivate(DisassociateFleetResponse * const q);
+    explicit DisassociateFleetResponsePrivate(DisassociateFleetResponse * const q);
 
     void parseDisassociateFleetResponse(QXmlStreamReader &xml);
 

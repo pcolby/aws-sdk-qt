@@ -31,7 +31,7 @@ class DeleteIndexFieldResponsePrivate : public CloudSearchResponsePrivate {
 
 public:
 
-    DeleteIndexFieldResponsePrivate(DeleteIndexFieldResponse * const q);
+    explicit DeleteIndexFieldResponsePrivate(DeleteIndexFieldResponse * const q);
 
     void parseDeleteIndexFieldResponse(QXmlStreamReader &xml);
 

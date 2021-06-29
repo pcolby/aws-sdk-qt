@@ -31,7 +31,7 @@ class DescribeAlarmsForMetricResponsePrivate : public CloudWatchResponsePrivate 
 
 public:
 
-    DescribeAlarmsForMetricResponsePrivate(DescribeAlarmsForMetricResponse * const q);
+    explicit DescribeAlarmsForMetricResponsePrivate(DescribeAlarmsForMetricResponse * const q);
 
     void parseDescribeAlarmsForMetricResponse(QXmlStreamReader &xml);
 

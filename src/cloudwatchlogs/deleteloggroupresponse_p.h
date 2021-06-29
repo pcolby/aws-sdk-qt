@@ -31,7 +31,7 @@ class DeleteLogGroupResponsePrivate : public CloudWatchLogsResponsePrivate {
 
 public:
 
-    DeleteLogGroupResponsePrivate(DeleteLogGroupResponse * const q);
+    explicit DeleteLogGroupResponsePrivate(DeleteLogGroupResponse * const q);
 
     void parseDeleteLogGroupResponse(QXmlStreamReader &xml);
 

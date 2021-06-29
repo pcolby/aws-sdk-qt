@@ -29,7 +29,7 @@ class SnowballResponsePrivate {
 
 public:
 
-    SnowballResponsePrivate(SnowballResponse * const q);
+    explicit SnowballResponsePrivate(SnowballResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

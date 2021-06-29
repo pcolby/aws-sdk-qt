@@ -31,7 +31,7 @@ class DeleteTableVersionResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    DeleteTableVersionResponsePrivate(DeleteTableVersionResponse * const q);
+    explicit DeleteTableVersionResponsePrivate(DeleteTableVersionResponse * const q);
 
     void parseDeleteTableVersionResponse(QXmlStreamReader &xml);
 

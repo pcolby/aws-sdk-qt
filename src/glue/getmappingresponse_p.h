@@ -31,7 +31,7 @@ class GetMappingResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    GetMappingResponsePrivate(GetMappingResponse * const q);
+    explicit GetMappingResponsePrivate(GetMappingResponse * const q);
 
     void parseGetMappingResponse(QXmlStreamReader &xml);
 

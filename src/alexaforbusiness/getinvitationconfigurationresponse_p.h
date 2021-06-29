@@ -31,7 +31,7 @@ class GetInvitationConfigurationResponsePrivate : public AlexaForBusinessRespons
 
 public:
 
-    GetInvitationConfigurationResponsePrivate(GetInvitationConfigurationResponse * const q);
+    explicit GetInvitationConfigurationResponsePrivate(GetInvitationConfigurationResponse * const q);
 
     void parseGetInvitationConfigurationResponse(QXmlStreamReader &xml);
 

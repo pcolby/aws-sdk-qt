@@ -31,7 +31,7 @@ class UpdateDevicesResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    UpdateDevicesResponsePrivate(UpdateDevicesResponse * const q);
+    explicit UpdateDevicesResponsePrivate(UpdateDevicesResponse * const q);
 
     void parseUpdateDevicesResponse(QXmlStreamReader &xml);
 

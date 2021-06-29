@@ -31,7 +31,7 @@ class DescribeIdentityUsageResponsePrivate : public CognitoSyncResponsePrivate {
 
 public:
 
-    DescribeIdentityUsageResponsePrivate(DescribeIdentityUsageResponse * const q);
+    explicit DescribeIdentityUsageResponsePrivate(DescribeIdentityUsageResponse * const q);
 
     void parseDescribeIdentityUsageResponse(QXmlStreamReader &xml);
 

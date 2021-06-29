@@ -31,7 +31,7 @@ class GetRelationalDatabaseMetricDataResponsePrivate : public LightsailResponseP
 
 public:
 
-    GetRelationalDatabaseMetricDataResponsePrivate(GetRelationalDatabaseMetricDataResponse * const q);
+    explicit GetRelationalDatabaseMetricDataResponsePrivate(GetRelationalDatabaseMetricDataResponse * const q);
 
     void parseGetRelationalDatabaseMetricDataResponse(QXmlStreamReader &xml);
 

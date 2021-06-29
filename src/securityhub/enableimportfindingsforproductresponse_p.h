@@ -31,7 +31,7 @@ class EnableImportFindingsForProductResponsePrivate : public SecurityHubResponse
 
 public:
 
-    EnableImportFindingsForProductResponsePrivate(EnableImportFindingsForProductResponse * const q);
+    explicit EnableImportFindingsForProductResponsePrivate(EnableImportFindingsForProductResponse * const q);
 
     void parseEnableImportFindingsForProductResponse(QXmlStreamReader &xml);
 

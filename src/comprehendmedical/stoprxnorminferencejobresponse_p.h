@@ -31,7 +31,7 @@ class StopRxNormInferenceJobResponsePrivate : public ComprehendMedicalResponsePr
 
 public:
 
-    StopRxNormInferenceJobResponsePrivate(StopRxNormInferenceJobResponse * const q);
+    explicit StopRxNormInferenceJobResponsePrivate(StopRxNormInferenceJobResponse * const q);
 
     void parseStopRxNormInferenceJobResponse(QXmlStreamReader &xml);
 

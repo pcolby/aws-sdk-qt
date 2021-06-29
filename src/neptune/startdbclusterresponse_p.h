@@ -31,7 +31,7 @@ class StartDBClusterResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 
-    StartDBClusterResponsePrivate(StartDBClusterResponse * const q);
+    explicit StartDBClusterResponsePrivate(StartDBClusterResponse * const q);
 
     void parseStartDBClusterResponse(QXmlStreamReader &xml);
 

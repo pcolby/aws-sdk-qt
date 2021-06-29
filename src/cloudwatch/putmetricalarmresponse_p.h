@@ -31,7 +31,7 @@ class PutMetricAlarmResponsePrivate : public CloudWatchResponsePrivate {
 
 public:
 
-    PutMetricAlarmResponsePrivate(PutMetricAlarmResponse * const q);
+    explicit PutMetricAlarmResponsePrivate(PutMetricAlarmResponse * const q);
 
     void parsePutMetricAlarmResponse(QXmlStreamReader &xml);
 

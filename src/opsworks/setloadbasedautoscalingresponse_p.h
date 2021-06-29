@@ -31,7 +31,7 @@ class SetLoadBasedAutoScalingResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    SetLoadBasedAutoScalingResponsePrivate(SetLoadBasedAutoScalingResponse * const q);
+    explicit SetLoadBasedAutoScalingResponsePrivate(SetLoadBasedAutoScalingResponse * const q);
 
     void parseSetLoadBasedAutoScalingResponse(QXmlStreamReader &xml);
 

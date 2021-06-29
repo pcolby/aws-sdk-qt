@@ -31,7 +31,7 @@ class SendTaskHeartbeatResponsePrivate : public SfnResponsePrivate {
 
 public:
 
-    SendTaskHeartbeatResponsePrivate(SendTaskHeartbeatResponse * const q);
+    explicit SendTaskHeartbeatResponsePrivate(SendTaskHeartbeatResponse * const q);
 
     void parseSendTaskHeartbeatResponse(QXmlStreamReader &xml);
 

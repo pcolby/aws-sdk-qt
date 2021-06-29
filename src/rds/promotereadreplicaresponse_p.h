@@ -31,7 +31,7 @@ class PromoteReadReplicaResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    PromoteReadReplicaResponsePrivate(PromoteReadReplicaResponse * const q);
+    explicit PromoteReadReplicaResponsePrivate(PromoteReadReplicaResponse * const q);
 
     void parsePromoteReadReplicaResponse(QXmlStreamReader &xml);
 

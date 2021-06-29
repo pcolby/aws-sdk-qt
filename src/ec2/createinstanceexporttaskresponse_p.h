@@ -31,7 +31,7 @@ class CreateInstanceExportTaskResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CreateInstanceExportTaskResponsePrivate(CreateInstanceExportTaskResponse * const q);
+    explicit CreateInstanceExportTaskResponsePrivate(CreateInstanceExportTaskResponse * const q);
 
     void parseCreateInstanceExportTaskResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListVirtualNodesResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 
-    ListVirtualNodesResponsePrivate(ListVirtualNodesResponse * const q);
+    explicit ListVirtualNodesResponsePrivate(ListVirtualNodesResponse * const q);
 
     void parseListVirtualNodesResponse(QXmlStreamReader &xml);
 

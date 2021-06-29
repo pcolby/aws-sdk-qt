@@ -31,7 +31,7 @@ class DescribeRemediationExecutionStatusResponsePrivate : public ConfigServiceRe
 
 public:
 
-    DescribeRemediationExecutionStatusResponsePrivate(DescribeRemediationExecutionStatusResponse * const q);
+    explicit DescribeRemediationExecutionStatusResponsePrivate(DescribeRemediationExecutionStatusResponse * const q);
 
     void parseDescribeRemediationExecutionStatusResponse(QXmlStreamReader &xml);
 

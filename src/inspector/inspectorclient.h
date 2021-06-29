@@ -115,7 +115,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    InspectorClient(
+    explicit InspectorClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -163,7 +163,7 @@ public slots:
 protected:
     /// @cond internal
     InspectorClientPrivate * const d_ptr; ///< Internal d-pointer.
-    InspectorClient(InspectorClientPrivate * const d);
+    explicit InspectorClient(InspectorClientPrivate * const d);
     /// @endcond
 
 private:

@@ -31,7 +31,7 @@ class GetStatementResultResponsePrivate : public RedshiftDataAPIServiceResponseP
 
 public:
 
-    GetStatementResultResponsePrivate(GetStatementResultResponse * const q);
+    explicit GetStatementResultResponsePrivate(GetStatementResultResponse * const q);
 
     void parseGetStatementResultResponse(QXmlStreamReader &xml);
 

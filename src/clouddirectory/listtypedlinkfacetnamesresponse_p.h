@@ -31,7 +31,7 @@ class ListTypedLinkFacetNamesResponsePrivate : public CloudDirectoryResponsePriv
 
 public:
 
-    ListTypedLinkFacetNamesResponsePrivate(ListTypedLinkFacetNamesResponse * const q);
+    explicit ListTypedLinkFacetNamesResponsePrivate(ListTypedLinkFacetNamesResponse * const q);
 
     void parseListTypedLinkFacetNamesResponse(QXmlStreamReader &xml);
 

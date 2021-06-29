@@ -31,7 +31,7 @@ class DeactivateEventSourceResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 
-    DeactivateEventSourceResponsePrivate(DeactivateEventSourceResponse * const q);
+    explicit DeactivateEventSourceResponsePrivate(DeactivateEventSourceResponse * const q);
 
     void parseDeactivateEventSourceResponse(QXmlStreamReader &xml);
 

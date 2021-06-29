@@ -31,7 +31,7 @@ class PutEncryptionConfigResponsePrivate : public XRayResponsePrivate {
 
 public:
 
-    PutEncryptionConfigResponsePrivate(PutEncryptionConfigResponse * const q);
+    explicit PutEncryptionConfigResponsePrivate(PutEncryptionConfigResponse * const q);
 
     void parsePutEncryptionConfigResponse(QXmlStreamReader &xml);
 

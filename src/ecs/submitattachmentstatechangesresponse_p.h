@@ -31,7 +31,7 @@ class SubmitAttachmentStateChangesResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    SubmitAttachmentStateChangesResponsePrivate(SubmitAttachmentStateChangesResponse * const q);
+    explicit SubmitAttachmentStateChangesResponsePrivate(SubmitAttachmentStateChangesResponse * const q);
 
     void parseSubmitAttachmentStateChangesResponse(QXmlStreamReader &xml);
 

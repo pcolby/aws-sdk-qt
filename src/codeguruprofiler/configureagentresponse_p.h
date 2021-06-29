@@ -31,7 +31,7 @@ class ConfigureAgentResponsePrivate : public CodeGuruProfilerResponsePrivate {
 
 public:
 
-    ConfigureAgentResponsePrivate(ConfigureAgentResponse * const q);
+    explicit ConfigureAgentResponsePrivate(ConfigureAgentResponse * const q);
 
     void parseConfigureAgentResponse(QXmlStreamReader &xml);
 

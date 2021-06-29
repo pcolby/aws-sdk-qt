@@ -31,7 +31,7 @@ class UpdateSimulationApplicationResponsePrivate : public RoboMakerResponsePriva
 
 public:
 
-    UpdateSimulationApplicationResponsePrivate(UpdateSimulationApplicationResponse * const q);
+    explicit UpdateSimulationApplicationResponsePrivate(UpdateSimulationApplicationResponse * const q);
 
     void parseUpdateSimulationApplicationResponse(QXmlStreamReader &xml);
 

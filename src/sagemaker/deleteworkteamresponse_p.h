@@ -31,7 +31,7 @@ class DeleteWorkteamResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    DeleteWorkteamResponsePrivate(DeleteWorkteamResponse * const q);
+    explicit DeleteWorkteamResponsePrivate(DeleteWorkteamResponse * const q);
 
     void parseDeleteWorkteamResponse(QXmlStreamReader &xml);
 

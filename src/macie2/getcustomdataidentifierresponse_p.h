@@ -31,7 +31,7 @@ class GetCustomDataIdentifierResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 
-    GetCustomDataIdentifierResponsePrivate(GetCustomDataIdentifierResponse * const q);
+    explicit GetCustomDataIdentifierResponsePrivate(GetCustomDataIdentifierResponse * const q);
 
     void parseGetCustomDataIdentifierResponse(QXmlStreamReader &xml);
 

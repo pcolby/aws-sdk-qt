@@ -31,7 +31,7 @@ class GetViolationDetailsResponsePrivate : public FmsResponsePrivate {
 
 public:
 
-    GetViolationDetailsResponsePrivate(GetViolationDetailsResponse * const q);
+    explicit GetViolationDetailsResponsePrivate(GetViolationDetailsResponse * const q);
 
     void parseGetViolationDetailsResponse(QXmlStreamReader &xml);
 

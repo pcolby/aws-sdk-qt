@@ -31,7 +31,7 @@ class DeleteBranchResponsePrivate : public AmplifyResponsePrivate {
 
 public:
 
-    DeleteBranchResponsePrivate(DeleteBranchResponse * const q);
+    explicit DeleteBranchResponsePrivate(DeleteBranchResponse * const q);
 
     void parseDeleteBranchResponse(QXmlStreamReader &xml);
 

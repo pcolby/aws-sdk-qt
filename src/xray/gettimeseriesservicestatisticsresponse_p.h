@@ -31,7 +31,7 @@ class GetTimeSeriesServiceStatisticsResponsePrivate : public XRayResponsePrivate
 
 public:
 
-    GetTimeSeriesServiceStatisticsResponsePrivate(GetTimeSeriesServiceStatisticsResponse * const q);
+    explicit GetTimeSeriesServiceStatisticsResponsePrivate(GetTimeSeriesServiceStatisticsResponse * const q);
 
     void parseGetTimeSeriesServiceStatisticsResponse(QXmlStreamReader &xml);
 

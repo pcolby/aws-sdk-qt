@@ -31,7 +31,7 @@ class AssociateTargetsWithJobResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    AssociateTargetsWithJobResponsePrivate(AssociateTargetsWithJobResponse * const q);
+    explicit AssociateTargetsWithJobResponsePrivate(AssociateTargetsWithJobResponse * const q);
 
     void parseAssociateTargetsWithJobResponse(QXmlStreamReader &xml);
 

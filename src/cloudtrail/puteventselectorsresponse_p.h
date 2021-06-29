@@ -31,7 +31,7 @@ class PutEventSelectorsResponsePrivate : public CloudTrailResponsePrivate {
 
 public:
 
-    PutEventSelectorsResponsePrivate(PutEventSelectorsResponse * const q);
+    explicit PutEventSelectorsResponsePrivate(PutEventSelectorsResponse * const q);
 
     void parsePutEventSelectorsResponse(QXmlStreamReader &xml);
 

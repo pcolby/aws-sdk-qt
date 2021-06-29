@@ -31,7 +31,7 @@ class DeleteIntentVersionResponsePrivate : public LexModelBuildingServiceRespons
 
 public:
 
-    DeleteIntentVersionResponsePrivate(DeleteIntentVersionResponse * const q);
+    explicit DeleteIntentVersionResponsePrivate(DeleteIntentVersionResponse * const q);
 
     void parseDeleteIntentVersionResponse(QXmlStreamReader &xml);
 

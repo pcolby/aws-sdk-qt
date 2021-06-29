@@ -31,7 +31,7 @@ class DescribeKeyPairsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeKeyPairsResponsePrivate(DescribeKeyPairsResponse * const q);
+    explicit DescribeKeyPairsResponsePrivate(DescribeKeyPairsResponse * const q);
 
     void parseDescribeKeyPairsResponse(QXmlStreamReader &xml);
 

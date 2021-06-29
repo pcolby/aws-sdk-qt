@@ -31,7 +31,7 @@ class DeleteDocumentClassifierResponsePrivate : public ComprehendResponsePrivate
 
 public:
 
-    DeleteDocumentClassifierResponsePrivate(DeleteDocumentClassifierResponse * const q);
+    explicit DeleteDocumentClassifierResponsePrivate(DeleteDocumentClassifierResponse * const q);
 
     void parseDeleteDocumentClassifierResponse(QXmlStreamReader &xml);
 

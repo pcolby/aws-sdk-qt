@@ -31,7 +31,7 @@ class GetClusterCredentialsResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    GetClusterCredentialsResponsePrivate(GetClusterCredentialsResponse * const q);
+    explicit GetClusterCredentialsResponsePrivate(GetClusterCredentialsResponse * const q);
 
     void parseGetClusterCredentialsResponse(QXmlStreamReader &xml);
 

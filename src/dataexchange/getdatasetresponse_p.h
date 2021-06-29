@@ -31,7 +31,7 @@ class GetDataSetResponsePrivate : public DataExchangeResponsePrivate {
 
 public:
 
-    GetDataSetResponsePrivate(GetDataSetResponse * const q);
+    explicit GetDataSetResponsePrivate(GetDataSetResponse * const q);
 
     void parseGetDataSetResponse(QXmlStreamReader &xml);
 

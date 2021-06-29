@@ -31,7 +31,7 @@ class PutGeofenceResponsePrivate : public LocationServiceResponsePrivate {
 
 public:
 
-    PutGeofenceResponsePrivate(PutGeofenceResponse * const q);
+    explicit PutGeofenceResponsePrivate(PutGeofenceResponse * const q);
 
     void parsePutGeofenceResponse(QXmlStreamReader &xml);
 

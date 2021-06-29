@@ -31,7 +31,7 @@ class DetachClassicLinkVpcResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DetachClassicLinkVpcResponsePrivate(DetachClassicLinkVpcResponse * const q);
+    explicit DetachClassicLinkVpcResponsePrivate(DetachClassicLinkVpcResponse * const q);
 
     void parseDetachClassicLinkVpcResponse(QXmlStreamReader &xml);
 

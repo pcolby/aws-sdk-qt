@@ -31,7 +31,7 @@ class AssociateVirtualInterfaceResponsePrivate : public DirectConnectResponsePri
 
 public:
 
-    AssociateVirtualInterfaceResponsePrivate(AssociateVirtualInterfaceResponse * const q);
+    explicit AssociateVirtualInterfaceResponsePrivate(AssociateVirtualInterfaceResponse * const q);
 
     void parseAssociateVirtualInterfaceResponse(QXmlStreamReader &xml);
 

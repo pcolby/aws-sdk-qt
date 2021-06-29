@@ -31,7 +31,7 @@ class CreateAccountAssignmentResponsePrivate : public SSOAdminResponsePrivate {
 
 public:
 
-    CreateAccountAssignmentResponsePrivate(CreateAccountAssignmentResponse * const q);
+    explicit CreateAccountAssignmentResponsePrivate(CreateAccountAssignmentResponse * const q);
 
     void parseCreateAccountAssignmentResponse(QXmlStreamReader &xml);
 

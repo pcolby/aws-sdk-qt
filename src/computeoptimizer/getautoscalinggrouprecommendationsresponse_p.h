@@ -31,7 +31,7 @@ class GetAutoScalingGroupRecommendationsResponsePrivate : public ComputeOptimize
 
 public:
 
-    GetAutoScalingGroupRecommendationsResponsePrivate(GetAutoScalingGroupRecommendationsResponse * const q);
+    explicit GetAutoScalingGroupRecommendationsResponsePrivate(GetAutoScalingGroupRecommendationsResponse * const q);
 
     void parseGetAutoScalingGroupRecommendationsResponse(QXmlStreamReader &xml);
 

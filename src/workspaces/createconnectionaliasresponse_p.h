@@ -31,7 +31,7 @@ class CreateConnectionAliasResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 
-    CreateConnectionAliasResponsePrivate(CreateConnectionAliasResponse * const q);
+    explicit CreateConnectionAliasResponsePrivate(CreateConnectionAliasResponse * const q);
 
     void parseCreateConnectionAliasResponse(QXmlStreamReader &xml);
 

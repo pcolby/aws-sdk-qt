@@ -31,7 +31,7 @@ class GetInventoryResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    GetInventoryResponsePrivate(GetInventoryResponse * const q);
+    explicit GetInventoryResponsePrivate(GetInventoryResponse * const q);
 
     void parseGetInventoryResponse(QXmlStreamReader &xml);
 

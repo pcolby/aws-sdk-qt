@@ -30,7 +30,7 @@ class MarketplaceCatalogClient;
 class MarketplaceCatalogClientPrivate {
 
 public:
-    MarketplaceCatalogClientPrivate(MarketplaceCatalogClient * const q);
+    explicit MarketplaceCatalogClientPrivate(MarketplaceCatalogClient * const q);
 
 protected:
     MarketplaceCatalogClient * const q_ptr; ///< Internal q-pointer.

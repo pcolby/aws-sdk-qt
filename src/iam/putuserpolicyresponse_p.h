@@ -31,7 +31,7 @@ class PutUserPolicyResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    PutUserPolicyResponsePrivate(PutUserPolicyResponse * const q);
+    explicit PutUserPolicyResponsePrivate(PutUserPolicyResponse * const q);
 
     void parsePutUserPolicyResponse(QXmlStreamReader &xml);
 

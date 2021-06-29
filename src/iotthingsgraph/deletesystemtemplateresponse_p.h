@@ -31,7 +31,7 @@ class DeleteSystemTemplateResponsePrivate : public IoTThingsGraphResponsePrivate
 
 public:
 
-    DeleteSystemTemplateResponsePrivate(DeleteSystemTemplateResponse * const q);
+    explicit DeleteSystemTemplateResponsePrivate(DeleteSystemTemplateResponse * const q);
 
     void parseDeleteSystemTemplateResponse(QXmlStreamReader &xml);
 

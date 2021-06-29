@@ -31,7 +31,7 @@ class PutContactPolicyResponsePrivate : public SSMContactsResponsePrivate {
 
 public:
 
-    PutContactPolicyResponsePrivate(PutContactPolicyResponse * const q);
+    explicit PutContactPolicyResponsePrivate(PutContactPolicyResponse * const q);
 
     void parsePutContactPolicyResponse(QXmlStreamReader &xml);
 

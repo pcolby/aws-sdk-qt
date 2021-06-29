@@ -31,7 +31,7 @@ class DeleteRegistryPolicyResponsePrivate : public EcrResponsePrivate {
 
 public:
 
-    DeleteRegistryPolicyResponsePrivate(DeleteRegistryPolicyResponse * const q);
+    explicit DeleteRegistryPolicyResponsePrivate(DeleteRegistryPolicyResponse * const q);
 
     void parseDeleteRegistryPolicyResponse(QXmlStreamReader &xml);
 

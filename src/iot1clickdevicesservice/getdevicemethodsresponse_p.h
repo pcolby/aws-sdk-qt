@@ -31,7 +31,7 @@ class GetDeviceMethodsResponsePrivate : public IoT1ClickDevicesServiceResponsePr
 
 public:
 
-    GetDeviceMethodsResponsePrivate(GetDeviceMethodsResponse * const q);
+    explicit GetDeviceMethodsResponsePrivate(GetDeviceMethodsResponse * const q);
 
     void parseGetDeviceMethodsResponse(QXmlStreamReader &xml);
 

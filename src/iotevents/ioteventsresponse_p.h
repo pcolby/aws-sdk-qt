@@ -29,7 +29,7 @@ class IoTEventsResponsePrivate {
 
 public:
 
-    IoTEventsResponsePrivate(IoTEventsResponse * const q);
+    explicit IoTEventsResponsePrivate(IoTEventsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

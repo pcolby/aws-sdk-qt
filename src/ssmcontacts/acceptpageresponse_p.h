@@ -31,7 +31,7 @@ class AcceptPageResponsePrivate : public SSMContactsResponsePrivate {
 
 public:
 
-    AcceptPageResponsePrivate(AcceptPageResponse * const q);
+    explicit AcceptPageResponsePrivate(AcceptPageResponse * const q);
 
     void parseAcceptPageResponse(QXmlStreamReader &xml);
 

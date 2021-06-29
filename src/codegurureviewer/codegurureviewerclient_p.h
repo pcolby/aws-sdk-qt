@@ -30,7 +30,7 @@ class CodeGuruReviewerClient;
 class CodeGuruReviewerClientPrivate {
 
 public:
-    CodeGuruReviewerClientPrivate(CodeGuruReviewerClient * const q);
+    explicit CodeGuruReviewerClientPrivate(CodeGuruReviewerClient * const q);
 
 protected:
     CodeGuruReviewerClient * const q_ptr; ///< Internal q-pointer.

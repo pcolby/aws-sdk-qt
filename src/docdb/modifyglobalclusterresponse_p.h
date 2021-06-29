@@ -31,7 +31,7 @@ class ModifyGlobalClusterResponsePrivate : public DocDBResponsePrivate {
 
 public:
 
-    ModifyGlobalClusterResponsePrivate(ModifyGlobalClusterResponse * const q);
+    explicit ModifyGlobalClusterResponsePrivate(ModifyGlobalClusterResponse * const q);
 
     void parseModifyGlobalClusterResponse(QXmlStreamReader &xml);
 

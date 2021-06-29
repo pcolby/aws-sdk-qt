@@ -31,7 +31,7 @@ class UpdateStreamingDistributionResponsePrivate : public CloudFrontResponsePriv
 
 public:
 
-    UpdateStreamingDistributionResponsePrivate(UpdateStreamingDistributionResponse * const q);
+    explicit UpdateStreamingDistributionResponsePrivate(UpdateStreamingDistributionResponse * const q);
 
     void parseUpdateStreamingDistributionResponse(QXmlStreamReader &xml);
 

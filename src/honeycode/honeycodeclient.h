@@ -65,7 +65,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    HoneycodeClient(
+    explicit HoneycodeClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -87,7 +87,7 @@ public slots:
 protected:
     /// @cond internal
     HoneycodeClientPrivate * const d_ptr; ///< Internal d-pointer.
-    HoneycodeClient(HoneycodeClientPrivate * const d);
+    explicit HoneycodeClient(HoneycodeClientPrivate * const d);
     /// @endcond
 
 private:

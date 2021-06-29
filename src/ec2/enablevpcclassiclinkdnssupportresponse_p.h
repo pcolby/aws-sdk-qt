@@ -31,7 +31,7 @@ class EnableVpcClassicLinkDnsSupportResponsePrivate : public Ec2ResponsePrivate 
 
 public:
 
-    EnableVpcClassicLinkDnsSupportResponsePrivate(EnableVpcClassicLinkDnsSupportResponse * const q);
+    explicit EnableVpcClassicLinkDnsSupportResponsePrivate(EnableVpcClassicLinkDnsSupportResponse * const q);
 
     void parseEnableVpcClassicLinkDnsSupportResponse(QXmlStreamReader &xml);
 

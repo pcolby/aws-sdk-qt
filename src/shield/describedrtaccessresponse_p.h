@@ -31,7 +31,7 @@ class DescribeDRTAccessResponsePrivate : public ShieldResponsePrivate {
 
 public:
 
-    DescribeDRTAccessResponsePrivate(DescribeDRTAccessResponse * const q);
+    explicit DescribeDRTAccessResponsePrivate(DescribeDRTAccessResponse * const q);
 
     void parseDescribeDRTAccessResponse(QXmlStreamReader &xml);
 

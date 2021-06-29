@@ -31,7 +31,7 @@ class DeleteScalingPlanResponsePrivate : public AutoScalingPlansResponsePrivate 
 
 public:
 
-    DeleteScalingPlanResponsePrivate(DeleteScalingPlanResponse * const q);
+    explicit DeleteScalingPlanResponsePrivate(DeleteScalingPlanResponse * const q);
 
     void parseDeleteScalingPlanResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetIdentityDkimAttributesResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    GetIdentityDkimAttributesResponsePrivate(GetIdentityDkimAttributesResponse * const q);
+    explicit GetIdentityDkimAttributesResponsePrivate(GetIdentityDkimAttributesResponse * const q);
 
     void parseGetIdentityDkimAttributesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteConnectorDefinitionResponsePrivate : public GreengrassResponsePrivat
 
 public:
 
-    DeleteConnectorDefinitionResponsePrivate(DeleteConnectorDefinitionResponse * const q);
+    explicit DeleteConnectorDefinitionResponsePrivate(DeleteConnectorDefinitionResponse * const q);
 
     void parseDeleteConnectorDefinitionResponse(QXmlStreamReader &xml);
 

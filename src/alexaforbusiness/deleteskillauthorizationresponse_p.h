@@ -31,7 +31,7 @@ class DeleteSkillAuthorizationResponsePrivate : public AlexaForBusinessResponseP
 
 public:
 
-    DeleteSkillAuthorizationResponsePrivate(DeleteSkillAuthorizationResponse * const q);
+    explicit DeleteSkillAuthorizationResponsePrivate(DeleteSkillAuthorizationResponse * const q);
 
     void parseDeleteSkillAuthorizationResponse(QXmlStreamReader &xml);
 

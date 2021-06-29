@@ -31,7 +31,7 @@ class PublishVersionResponsePrivate : public LambdaResponsePrivate {
 
 public:
 
-    PublishVersionResponsePrivate(PublishVersionResponse * const q);
+    explicit PublishVersionResponsePrivate(PublishVersionResponse * const q);
 
     void parsePublishVersionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class AuthorizeIpRulesResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 
-    AuthorizeIpRulesResponsePrivate(AuthorizeIpRulesResponse * const q);
+    explicit AuthorizeIpRulesResponsePrivate(AuthorizeIpRulesResponse * const q);
 
     void parseAuthorizeIpRulesResponse(QXmlStreamReader &xml);
 

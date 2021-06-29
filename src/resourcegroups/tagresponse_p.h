@@ -31,7 +31,7 @@ class TagResponsePrivate : public ResourceGroupsResponsePrivate {
 
 public:
 
-    TagResponsePrivate(TagResponse * const q);
+    explicit TagResponsePrivate(TagResponse * const q);
 
     void parseTagResponse(QXmlStreamReader &xml);
 

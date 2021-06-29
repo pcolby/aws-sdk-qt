@@ -30,7 +30,7 @@ class EventBridgeClient;
 class EventBridgeClientPrivate {
 
 public:
-    EventBridgeClientPrivate(EventBridgeClient * const q);
+    explicit EventBridgeClientPrivate(EventBridgeClient * const q);
 
 protected:
     EventBridgeClient * const q_ptr; ///< Internal q-pointer.

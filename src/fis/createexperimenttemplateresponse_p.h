@@ -31,7 +31,7 @@ class CreateExperimentTemplateResponsePrivate : public FisResponsePrivate {
 
 public:
 
-    CreateExperimentTemplateResponsePrivate(CreateExperimentTemplateResponse * const q);
+    explicit CreateExperimentTemplateResponsePrivate(CreateExperimentTemplateResponse * const q);
 
     void parseCreateExperimentTemplateResponse(QXmlStreamReader &xml);
 

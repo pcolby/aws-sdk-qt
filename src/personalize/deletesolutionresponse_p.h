@@ -31,7 +31,7 @@ class DeleteSolutionResponsePrivate : public PersonalizeResponsePrivate {
 
 public:
 
-    DeleteSolutionResponsePrivate(DeleteSolutionResponse * const q);
+    explicit DeleteSolutionResponsePrivate(DeleteSolutionResponse * const q);
 
     void parseDeleteSolutionResponse(QXmlStreamReader &xml);
 

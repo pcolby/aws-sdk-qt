@@ -31,7 +31,7 @@ class ListWebhooksResponsePrivate : public CodePipelineResponsePrivate {
 
 public:
 
-    ListWebhooksResponsePrivate(ListWebhooksResponse * const q);
+    explicit ListWebhooksResponsePrivate(ListWebhooksResponse * const q);
 
     void parseListWebhooksResponse(QXmlStreamReader &xml);
 

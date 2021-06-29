@@ -31,7 +31,7 @@ class ValidateAssessmentReportIntegrityResponsePrivate : public AuditManagerResp
 
 public:
 
-    ValidateAssessmentReportIntegrityResponsePrivate(ValidateAssessmentReportIntegrityResponse * const q);
+    explicit ValidateAssessmentReportIntegrityResponsePrivate(ValidateAssessmentReportIntegrityResponse * const q);
 
     void parseValidateAssessmentReportIntegrityResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeGroupsResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 
-    DescribeGroupsResponsePrivate(DescribeGroupsResponse * const q);
+    explicit DescribeGroupsResponsePrivate(DescribeGroupsResponse * const q);
 
     void parseDescribeGroupsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateVPCEConfigurationResponsePrivate : public DeviceFarmResponsePrivate 
 
 public:
 
-    UpdateVPCEConfigurationResponsePrivate(UpdateVPCEConfigurationResponse * const q);
+    explicit UpdateVPCEConfigurationResponsePrivate(UpdateVPCEConfigurationResponse * const q);
 
     void parseUpdateVPCEConfigurationResponse(QXmlStreamReader &xml);
 

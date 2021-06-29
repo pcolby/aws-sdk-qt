@@ -31,7 +31,7 @@ class ListBotLocalesResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 
-    ListBotLocalesResponsePrivate(ListBotLocalesResponse * const q);
+    explicit ListBotLocalesResponsePrivate(ListBotLocalesResponse * const q);
 
     void parseListBotLocalesResponse(QXmlStreamReader &xml);
 

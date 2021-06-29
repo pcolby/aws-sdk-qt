@@ -31,7 +31,7 @@ class UpdateInstanceProfileResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    UpdateInstanceProfileResponsePrivate(UpdateInstanceProfileResponse * const q);
+    explicit UpdateInstanceProfileResponsePrivate(UpdateInstanceProfileResponse * const q);
 
     void parseUpdateInstanceProfileResponse(QXmlStreamReader &xml);
 

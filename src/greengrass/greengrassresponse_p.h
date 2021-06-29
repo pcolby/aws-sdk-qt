@@ -29,7 +29,7 @@ class GreengrassResponsePrivate {
 
 public:
 
-    GreengrassResponsePrivate(GreengrassResponse * const q);
+    explicit GreengrassResponsePrivate(GreengrassResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

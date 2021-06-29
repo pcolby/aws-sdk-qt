@@ -31,7 +31,7 @@ class DeleteRepositoryPermissionsPolicyResponsePrivate : public CodeArtifactResp
 
 public:
 
-    DeleteRepositoryPermissionsPolicyResponsePrivate(DeleteRepositoryPermissionsPolicyResponse * const q);
+    explicit DeleteRepositoryPermissionsPolicyResponsePrivate(DeleteRepositoryPermissionsPolicyResponse * const q);
 
     void parseDeleteRepositoryPermissionsPolicyResponse(QXmlStreamReader &xml);
 

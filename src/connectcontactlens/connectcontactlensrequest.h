@@ -60,7 +60,7 @@ public:
 protected:
     /// @cond internal
     ConnectContactLensRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    ConnectContactLensRequest(ConnectContactLensRequestPrivate * const d);
+    explicit ConnectContactLensRequest(ConnectContactLensRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

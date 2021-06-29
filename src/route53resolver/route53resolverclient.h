@@ -161,7 +161,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    Route53ResolverClient(
+    explicit Route53ResolverClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -231,7 +231,7 @@ public slots:
 protected:
     /// @cond internal
     Route53ResolverClientPrivate * const d_ptr; ///< Internal d-pointer.
-    Route53ResolverClient(Route53ResolverClientPrivate * const d);
+    explicit Route53ResolverClient(Route53ResolverClientPrivate * const d);
     /// @endcond
 
 private:

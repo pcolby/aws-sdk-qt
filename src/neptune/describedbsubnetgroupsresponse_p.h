@@ -31,7 +31,7 @@ class DescribeDBSubnetGroupsResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 
-    DescribeDBSubnetGroupsResponsePrivate(DescribeDBSubnetGroupsResponse * const q);
+    explicit DescribeDBSubnetGroupsResponsePrivate(DescribeDBSubnetGroupsResponse * const q);
 
     void parseDescribeDBSubnetGroupsResponse(QXmlStreamReader &xml);
 

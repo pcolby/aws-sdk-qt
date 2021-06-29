@@ -30,7 +30,7 @@ class ProtonClient;
 class ProtonClientPrivate {
 
 public:
-    ProtonClientPrivate(ProtonClient * const q);
+    explicit ProtonClientPrivate(ProtonClient * const q);
 
 protected:
     ProtonClient * const q_ptr; ///< Internal q-pointer.

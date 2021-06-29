@@ -31,7 +31,7 @@ class GetEvidenceFoldersByAssessmentResponsePrivate : public AuditManagerRespons
 
 public:
 
-    GetEvidenceFoldersByAssessmentResponsePrivate(GetEvidenceFoldersByAssessmentResponse * const q);
+    explicit GetEvidenceFoldersByAssessmentResponsePrivate(GetEvidenceFoldersByAssessmentResponse * const q);
 
     void parseGetEvidenceFoldersByAssessmentResponse(QXmlStreamReader &xml);
 

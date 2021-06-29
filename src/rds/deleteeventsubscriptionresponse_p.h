@@ -31,7 +31,7 @@ class DeleteEventSubscriptionResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    DeleteEventSubscriptionResponsePrivate(DeleteEventSubscriptionResponse * const q);
+    explicit DeleteEventSubscriptionResponsePrivate(DeleteEventSubscriptionResponse * const q);
 
     void parseDeleteEventSubscriptionResponse(QXmlStreamReader &xml);
 

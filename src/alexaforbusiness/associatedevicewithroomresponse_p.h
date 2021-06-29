@@ -31,7 +31,7 @@ class AssociateDeviceWithRoomResponsePrivate : public AlexaForBusinessResponsePr
 
 public:
 
-    AssociateDeviceWithRoomResponsePrivate(AssociateDeviceWithRoomResponse * const q);
+    explicit AssociateDeviceWithRoomResponsePrivate(AssociateDeviceWithRoomResponse * const q);
 
     void parseAssociateDeviceWithRoomResponse(QXmlStreamReader &xml);
 

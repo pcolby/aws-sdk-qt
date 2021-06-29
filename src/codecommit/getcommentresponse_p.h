@@ -31,7 +31,7 @@ class GetCommentResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 
-    GetCommentResponsePrivate(GetCommentResponse * const q);
+    explicit GetCommentResponsePrivate(GetCommentResponse * const q);
 
     void parseGetCommentResponse(QXmlStreamReader &xml);
 

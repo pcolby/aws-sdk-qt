@@ -31,7 +31,7 @@ class DeletePermissionResponsePrivate : public AcmpcaResponsePrivate {
 
 public:
 
-    DeletePermissionResponsePrivate(DeletePermissionResponse * const q);
+    explicit DeletePermissionResponsePrivate(DeletePermissionResponse * const q);
 
     void parseDeletePermissionResponse(QXmlStreamReader &xml);
 

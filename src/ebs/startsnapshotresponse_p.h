@@ -31,7 +31,7 @@ class StartSnapshotResponsePrivate : public EbsResponsePrivate {
 
 public:
 
-    StartSnapshotResponsePrivate(StartSnapshotResponse * const q);
+    explicit StartSnapshotResponsePrivate(StartSnapshotResponse * const q);
 
     void parseStartSnapshotResponse(QXmlStreamReader &xml);
 

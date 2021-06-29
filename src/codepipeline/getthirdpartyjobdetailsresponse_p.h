@@ -31,7 +31,7 @@ class GetThirdPartyJobDetailsResponsePrivate : public CodePipelineResponsePrivat
 
 public:
 
-    GetThirdPartyJobDetailsResponsePrivate(GetThirdPartyJobDetailsResponse * const q);
+    explicit GetThirdPartyJobDetailsResponsePrivate(GetThirdPartyJobDetailsResponse * const q);
 
     void parseGetThirdPartyJobDetailsResponse(QXmlStreamReader &xml);
 

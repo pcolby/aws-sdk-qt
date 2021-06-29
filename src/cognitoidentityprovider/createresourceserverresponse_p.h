@@ -31,7 +31,7 @@ class CreateResourceServerResponsePrivate : public CognitoIdentityProviderRespon
 
 public:
 
-    CreateResourceServerResponsePrivate(CreateResourceServerResponse * const q);
+    explicit CreateResourceServerResponsePrivate(CreateResourceServerResponse * const q);
 
     void parseCreateResourceServerResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteCollectionResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 
-    DeleteCollectionResponsePrivate(DeleteCollectionResponse * const q);
+    explicit DeleteCollectionResponsePrivate(DeleteCollectionResponse * const q);
 
     void parseDeleteCollectionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListEventIntegrationsResponsePrivate : public AppIntegrationsServiceRespon
 
 public:
 
-    ListEventIntegrationsResponsePrivate(ListEventIntegrationsResponse * const q);
+    explicit ListEventIntegrationsResponsePrivate(ListEventIntegrationsResponse * const q);
 
     void parseListEventIntegrationsResponse(QXmlStreamReader &xml);
 

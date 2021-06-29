@@ -31,7 +31,7 @@ class DeleteBudgetActionResponsePrivate : public BudgetsResponsePrivate {
 
 public:
 
-    DeleteBudgetActionResponsePrivate(DeleteBudgetActionResponse * const q);
+    explicit DeleteBudgetActionResponsePrivate(DeleteBudgetActionResponse * const q);
 
     void parseDeleteBudgetActionResponse(QXmlStreamReader &xml);
 

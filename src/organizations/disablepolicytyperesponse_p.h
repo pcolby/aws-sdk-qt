@@ -31,7 +31,7 @@ class DisablePolicyTypeResponsePrivate : public OrganizationsResponsePrivate {
 
 public:
 
-    DisablePolicyTypeResponsePrivate(DisablePolicyTypeResponse * const q);
+    explicit DisablePolicyTypeResponsePrivate(DisablePolicyTypeResponse * const q);
 
     void parseDisablePolicyTypeResponse(QXmlStreamReader &xml);
 

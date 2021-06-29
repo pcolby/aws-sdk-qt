@@ -30,7 +30,7 @@ class OpsWorksCMClient;
 class OpsWorksCMClientPrivate {
 
 public:
-    OpsWorksCMClientPrivate(OpsWorksCMClient * const q);
+    explicit OpsWorksCMClientPrivate(OpsWorksCMClient * const q);
 
 protected:
     OpsWorksCMClient * const q_ptr; ///< Internal q-pointer.

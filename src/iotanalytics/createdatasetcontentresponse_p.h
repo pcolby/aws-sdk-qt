@@ -31,7 +31,7 @@ class CreateDatasetContentResponsePrivate : public IoTAnalyticsResponsePrivate {
 
 public:
 
-    CreateDatasetContentResponsePrivate(CreateDatasetContentResponse * const q);
+    explicit CreateDatasetContentResponsePrivate(CreateDatasetContentResponse * const q);
 
     void parseCreateDatasetContentResponse(QXmlStreamReader &xml);
 

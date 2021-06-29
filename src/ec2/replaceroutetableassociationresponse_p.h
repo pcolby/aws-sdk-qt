@@ -31,7 +31,7 @@ class ReplaceRouteTableAssociationResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ReplaceRouteTableAssociationResponsePrivate(ReplaceRouteTableAssociationResponse * const q);
+    explicit ReplaceRouteTableAssociationResponsePrivate(ReplaceRouteTableAssociationResponse * const q);
 
     void parseReplaceRouteTableAssociationResponse(QXmlStreamReader &xml);
 

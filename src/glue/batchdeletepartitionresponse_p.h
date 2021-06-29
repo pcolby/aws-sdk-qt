@@ -31,7 +31,7 @@ class BatchDeletePartitionResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    BatchDeletePartitionResponsePrivate(BatchDeletePartitionResponse * const q);
+    explicit BatchDeletePartitionResponsePrivate(BatchDeletePartitionResponse * const q);
 
     void parseBatchDeletePartitionResponse(QXmlStreamReader &xml);
 

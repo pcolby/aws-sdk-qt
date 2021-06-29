@@ -31,7 +31,7 @@ class UpdateVirtualInterfaceAttributesResponsePrivate : public DirectConnectResp
 
 public:
 
-    UpdateVirtualInterfaceAttributesResponsePrivate(UpdateVirtualInterfaceAttributesResponse * const q);
+    explicit UpdateVirtualInterfaceAttributesResponsePrivate(UpdateVirtualInterfaceAttributesResponse * const q);
 
     void parseUpdateVirtualInterfaceAttributesResponse(QXmlStreamReader &xml);
 

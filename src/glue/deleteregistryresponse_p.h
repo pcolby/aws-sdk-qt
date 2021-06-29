@@ -31,7 +31,7 @@ class DeleteRegistryResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    DeleteRegistryResponsePrivate(DeleteRegistryResponse * const q);
+    explicit DeleteRegistryResponsePrivate(DeleteRegistryResponse * const q);
 
     void parseDeleteRegistryResponse(QXmlStreamReader &xml);
 

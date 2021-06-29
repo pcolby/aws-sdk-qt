@@ -31,7 +31,7 @@ class GetPermissionPolicyResponsePrivate : public WafResponsePrivate {
 
 public:
 
-    GetPermissionPolicyResponsePrivate(GetPermissionPolicyResponse * const q);
+    explicit GetPermissionPolicyResponsePrivate(GetPermissionPolicyResponse * const q);
 
     void parseGetPermissionPolicyResponse(QXmlStreamReader &xml);
 

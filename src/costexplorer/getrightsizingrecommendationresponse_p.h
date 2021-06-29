@@ -31,7 +31,7 @@ class GetRightsizingRecommendationResponsePrivate : public CostExplorerResponseP
 
 public:
 
-    GetRightsizingRecommendationResponsePrivate(GetRightsizingRecommendationResponse * const q);
+    explicit GetRightsizingRecommendationResponsePrivate(GetRightsizingRecommendationResponse * const q);
 
     void parseGetRightsizingRecommendationResponse(QXmlStreamReader &xml);
 

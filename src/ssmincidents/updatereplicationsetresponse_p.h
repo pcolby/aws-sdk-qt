@@ -31,7 +31,7 @@ class UpdateReplicationSetResponsePrivate : public SSMIncidentsResponsePrivate {
 
 public:
 
-    UpdateReplicationSetResponsePrivate(UpdateReplicationSetResponse * const q);
+    explicit UpdateReplicationSetResponsePrivate(UpdateReplicationSetResponse * const q);
 
     void parseUpdateReplicationSetResponse(QXmlStreamReader &xml);
 

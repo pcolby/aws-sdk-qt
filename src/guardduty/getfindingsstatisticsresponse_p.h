@@ -31,7 +31,7 @@ class GetFindingsStatisticsResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 
-    GetFindingsStatisticsResponsePrivate(GetFindingsStatisticsResponse * const q);
+    explicit GetFindingsStatisticsResponsePrivate(GetFindingsStatisticsResponse * const q);
 
     void parseGetFindingsStatisticsResponse(QXmlStreamReader &xml);
 

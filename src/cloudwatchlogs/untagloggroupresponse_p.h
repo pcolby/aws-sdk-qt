@@ -31,7 +31,7 @@ class UntagLogGroupResponsePrivate : public CloudWatchLogsResponsePrivate {
 
 public:
 
-    UntagLogGroupResponsePrivate(UntagLogGroupResponse * const q);
+    explicit UntagLogGroupResponsePrivate(UntagLogGroupResponse * const q);
 
     void parseUntagLogGroupResponse(QXmlStreamReader &xml);
 

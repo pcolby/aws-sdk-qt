@@ -49,7 +49,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    IdentityStoreClient(
+    explicit IdentityStoreClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -63,7 +63,7 @@ public slots:
 protected:
     /// @cond internal
     IdentityStoreClientPrivate * const d_ptr; ///< Internal d-pointer.
-    IdentityStoreClient(IdentityStoreClientPrivate * const d);
+    explicit IdentityStoreClient(IdentityStoreClientPrivate * const d);
     /// @endcond
 
 private:

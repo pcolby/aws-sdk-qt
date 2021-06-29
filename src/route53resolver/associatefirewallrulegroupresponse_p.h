@@ -31,7 +31,7 @@ class AssociateFirewallRuleGroupResponsePrivate : public Route53ResolverResponse
 
 public:
 
-    AssociateFirewallRuleGroupResponsePrivate(AssociateFirewallRuleGroupResponse * const q);
+    explicit AssociateFirewallRuleGroupResponsePrivate(AssociateFirewallRuleGroupResponse * const q);
 
     void parseAssociateFirewallRuleGroupResponse(QXmlStreamReader &xml);
 

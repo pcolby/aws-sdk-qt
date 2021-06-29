@@ -31,7 +31,7 @@ class CopyBackupResponsePrivate : public FSxResponsePrivate {
 
 public:
 
-    CopyBackupResponsePrivate(CopyBackupResponse * const q);
+    explicit CopyBackupResponsePrivate(CopyBackupResponse * const q);
 
     void parseCopyBackupResponse(QXmlStreamReader &xml);
 

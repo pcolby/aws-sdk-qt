@@ -31,7 +31,7 @@ class ListDetectMitigationActionsExecutionsResponsePrivate : public IoTResponseP
 
 public:
 
-    ListDetectMitigationActionsExecutionsResponsePrivate(ListDetectMitigationActionsExecutionsResponse * const q);
+    explicit ListDetectMitigationActionsExecutionsResponsePrivate(ListDetectMitigationActionsExecutionsResponse * const q);
 
     void parseListDetectMitigationActionsExecutionsResponse(QXmlStreamReader &xml);
 

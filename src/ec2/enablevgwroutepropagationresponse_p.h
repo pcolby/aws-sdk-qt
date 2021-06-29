@@ -31,7 +31,7 @@ class EnableVgwRoutePropagationResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    EnableVgwRoutePropagationResponsePrivate(EnableVgwRoutePropagationResponse * const q);
+    explicit EnableVgwRoutePropagationResponsePrivate(EnableVgwRoutePropagationResponse * const q);
 
     void parseEnableVgwRoutePropagationResponse(QXmlStreamReader &xml);
 

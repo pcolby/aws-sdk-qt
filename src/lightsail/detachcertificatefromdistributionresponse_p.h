@@ -31,7 +31,7 @@ class DetachCertificateFromDistributionResponsePrivate : public LightsailRespons
 
 public:
 
-    DetachCertificateFromDistributionResponsePrivate(DetachCertificateFromDistributionResponse * const q);
+    explicit DetachCertificateFromDistributionResponsePrivate(DetachCertificateFromDistributionResponse * const q);
 
     void parseDetachCertificateFromDistributionResponse(QXmlStreamReader &xml);
 

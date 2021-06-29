@@ -31,7 +31,7 @@ class BatchPutMessageResponsePrivate : public IoTAnalyticsResponsePrivate {
 
 public:
 
-    BatchPutMessageResponsePrivate(BatchPutMessageResponse * const q);
+    explicit BatchPutMessageResponsePrivate(BatchPutMessageResponse * const q);
 
     void parseBatchPutMessageResponse(QXmlStreamReader &xml);
 

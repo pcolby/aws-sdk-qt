@@ -31,7 +31,7 @@ class CreateCodeRepositoryResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    CreateCodeRepositoryResponsePrivate(CreateCodeRepositoryResponse * const q);
+    explicit CreateCodeRepositoryResponsePrivate(CreateCodeRepositoryResponse * const q);
 
     void parseCreateCodeRepositoryResponse(QXmlStreamReader &xml);
 

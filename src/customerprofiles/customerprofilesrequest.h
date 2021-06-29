@@ -89,7 +89,7 @@ public:
 protected:
     /// @cond internal
     CustomerProfilesRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    CustomerProfilesRequest(CustomerProfilesRequestPrivate * const d);
+    explicit CustomerProfilesRequest(CustomerProfilesRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

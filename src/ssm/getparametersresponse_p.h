@@ -31,7 +31,7 @@ class GetParametersResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    GetParametersResponsePrivate(GetParametersResponse * const q);
+    explicit GetParametersResponsePrivate(GetParametersResponse * const q);
 
     void parseGetParametersResponse(QXmlStreamReader &xml);
 

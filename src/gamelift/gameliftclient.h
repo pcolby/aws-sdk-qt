@@ -231,7 +231,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    GameLiftClient(
+    explicit GameLiftClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -336,7 +336,7 @@ public slots:
 protected:
     /// @cond internal
     GameLiftClientPrivate * const d_ptr; ///< Internal d-pointer.
-    GameLiftClient(GameLiftClientPrivate * const d);
+    explicit GameLiftClient(GameLiftClientPrivate * const d);
     /// @endcond
 
 private:

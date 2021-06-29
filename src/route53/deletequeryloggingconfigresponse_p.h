@@ -31,7 +31,7 @@ class DeleteQueryLoggingConfigResponsePrivate : public Route53ResponsePrivate {
 
 public:
 
-    DeleteQueryLoggingConfigResponsePrivate(DeleteQueryLoggingConfigResponse * const q);
+    explicit DeleteQueryLoggingConfigResponsePrivate(DeleteQueryLoggingConfigResponse * const q);
 
     void parseDeleteQueryLoggingConfigResponse(QXmlStreamReader &xml);
 

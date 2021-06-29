@@ -31,7 +31,7 @@ class UpdateBandwidthRateLimitResponsePrivate : public StorageGatewayResponsePri
 
 public:
 
-    UpdateBandwidthRateLimitResponsePrivate(UpdateBandwidthRateLimitResponse * const q);
+    explicit UpdateBandwidthRateLimitResponsePrivate(UpdateBandwidthRateLimitResponse * const q);
 
     void parseUpdateBandwidthRateLimitResponse(QXmlStreamReader &xml);
 

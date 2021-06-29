@@ -31,7 +31,7 @@ class AddApplicationInputProcessingConfigurationResponsePrivate : public Kinesis
 
 public:
 
-    AddApplicationInputProcessingConfigurationResponsePrivate(AddApplicationInputProcessingConfigurationResponse * const q);
+    explicit AddApplicationInputProcessingConfigurationResponsePrivate(AddApplicationInputProcessingConfigurationResponse * const q);
 
     void parseAddApplicationInputProcessingConfigurationResponse(QXmlStreamReader &xml);
 

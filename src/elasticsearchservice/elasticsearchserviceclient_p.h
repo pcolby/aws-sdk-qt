@@ -30,7 +30,7 @@ class ElasticsearchServiceClient;
 class ElasticsearchServiceClientPrivate {
 
 public:
-    ElasticsearchServiceClientPrivate(ElasticsearchServiceClient * const q);
+    explicit ElasticsearchServiceClientPrivate(ElasticsearchServiceClient * const q);
 
 protected:
     ElasticsearchServiceClient * const q_ptr; ///< Internal q-pointer.

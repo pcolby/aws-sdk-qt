@@ -30,7 +30,7 @@ class SchemasClient;
 class SchemasClientPrivate {
 
 public:
-    SchemasClientPrivate(SchemasClient * const q);
+    explicit SchemasClientPrivate(SchemasClient * const q);
 
 protected:
     SchemasClient * const q_ptr; ///< Internal q-pointer.

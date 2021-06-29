@@ -31,7 +31,7 @@ class DescribeAgentVersionsResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    DescribeAgentVersionsResponsePrivate(DescribeAgentVersionsResponse * const q);
+    explicit DescribeAgentVersionsResponsePrivate(DescribeAgentVersionsResponse * const q);
 
     void parseDescribeAgentVersionsResponse(QXmlStreamReader &xml);
 

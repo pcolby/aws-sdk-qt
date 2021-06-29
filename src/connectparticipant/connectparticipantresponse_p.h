@@ -29,7 +29,7 @@ class ConnectParticipantResponsePrivate {
 
 public:
 
-    ConnectParticipantResponsePrivate(ConnectParticipantResponse * const q);
+    explicit ConnectParticipantResponsePrivate(ConnectParticipantResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

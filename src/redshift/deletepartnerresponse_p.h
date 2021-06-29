@@ -31,7 +31,7 @@ class DeletePartnerResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    DeletePartnerResponsePrivate(DeletePartnerResponse * const q);
+    explicit DeletePartnerResponsePrivate(DeletePartnerResponse * const q);
 
     void parseDeletePartnerResponse(QXmlStreamReader &xml);
 

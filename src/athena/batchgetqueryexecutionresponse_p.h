@@ -31,7 +31,7 @@ class BatchGetQueryExecutionResponsePrivate : public AthenaResponsePrivate {
 
 public:
 
-    BatchGetQueryExecutionResponsePrivate(BatchGetQueryExecutionResponse * const q);
+    explicit BatchGetQueryExecutionResponsePrivate(BatchGetQueryExecutionResponse * const q);
 
     void parseBatchGetQueryExecutionResponse(QXmlStreamReader &xml);
 

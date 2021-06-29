@@ -31,7 +31,7 @@ class DescribeClustersResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    DescribeClustersResponsePrivate(DescribeClustersResponse * const q);
+    explicit DescribeClustersResponsePrivate(DescribeClustersResponse * const q);
 
     void parseDescribeClustersResponse(QXmlStreamReader &xml);
 

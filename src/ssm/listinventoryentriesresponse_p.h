@@ -31,7 +31,7 @@ class ListInventoryEntriesResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    ListInventoryEntriesResponsePrivate(ListInventoryEntriesResponse * const q);
+    explicit ListInventoryEntriesResponsePrivate(ListInventoryEntriesResponse * const q);
 
     void parseListInventoryEntriesResponse(QXmlStreamReader &xml);
 

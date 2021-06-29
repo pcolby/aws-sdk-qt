@@ -30,7 +30,7 @@ class StsClient;
 class StsClientPrivate {
 
 public:
-    StsClientPrivate(StsClient * const q);
+    explicit StsClientPrivate(StsClient * const q);
 
 protected:
     StsClient * const q_ptr; ///< Internal q-pointer.

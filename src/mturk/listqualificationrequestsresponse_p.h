@@ -31,7 +31,7 @@ class ListQualificationRequestsResponsePrivate : public MTurkResponsePrivate {
 
 public:
 
-    ListQualificationRequestsResponsePrivate(ListQualificationRequestsResponse * const q);
+    explicit ListQualificationRequestsResponsePrivate(ListQualificationRequestsResponse * const q);
 
     void parseListQualificationRequestsResponse(QXmlStreamReader &xml);
 

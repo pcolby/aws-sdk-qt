@@ -31,7 +31,7 @@ class ListModelQualityJobDefinitionsResponsePrivate : public SageMakerResponsePr
 
 public:
 
-    ListModelQualityJobDefinitionsResponsePrivate(ListModelQualityJobDefinitionsResponse * const q);
+    explicit ListModelQualityJobDefinitionsResponsePrivate(ListModelQualityJobDefinitionsResponse * const q);
 
     void parseListModelQualityJobDefinitionsResponse(QXmlStreamReader &xml);
 

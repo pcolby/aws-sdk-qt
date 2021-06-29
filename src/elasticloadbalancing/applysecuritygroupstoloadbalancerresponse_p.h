@@ -31,7 +31,7 @@ class ApplySecurityGroupsToLoadBalancerResponsePrivate : public ElasticLoadBalan
 
 public:
 
-    ApplySecurityGroupsToLoadBalancerResponsePrivate(ApplySecurityGroupsToLoadBalancerResponse * const q);
+    explicit ApplySecurityGroupsToLoadBalancerResponsePrivate(ApplySecurityGroupsToLoadBalancerResponse * const q);
 
     void parseApplySecurityGroupsToLoadBalancerResponse(QXmlStreamReader &xml);
 

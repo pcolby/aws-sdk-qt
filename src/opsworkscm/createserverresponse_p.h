@@ -31,7 +31,7 @@ class CreateServerResponsePrivate : public OpsWorksCMResponsePrivate {
 
 public:
 
-    CreateServerResponsePrivate(CreateServerResponse * const q);
+    explicit CreateServerResponsePrivate(CreateServerResponse * const q);
 
     void parseCreateServerResponse(QXmlStreamReader &xml);
 

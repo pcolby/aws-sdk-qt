@@ -31,7 +31,7 @@ class StartMaintenanceResponsePrivate : public OpsWorksCMResponsePrivate {
 
 public:
 
-    StartMaintenanceResponsePrivate(StartMaintenanceResponse * const q);
+    explicit StartMaintenanceResponsePrivate(StartMaintenanceResponse * const q);
 
     void parseStartMaintenanceResponse(QXmlStreamReader &xml);
 

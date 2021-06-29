@@ -31,7 +31,7 @@ class ListKeysResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    ListKeysResponsePrivate(ListKeysResponse * const q);
+    explicit ListKeysResponsePrivate(ListKeysResponse * const q);
 
     void parseListKeysResponse(QXmlStreamReader &xml);
 

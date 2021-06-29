@@ -31,7 +31,7 @@ class ListDomainConfigurationsResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    ListDomainConfigurationsResponsePrivate(ListDomainConfigurationsResponse * const q);
+    explicit ListDomainConfigurationsResponsePrivate(ListDomainConfigurationsResponse * const q);
 
     void parseListDomainConfigurationsResponse(QXmlStreamReader &xml);
 

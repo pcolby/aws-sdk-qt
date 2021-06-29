@@ -31,7 +31,7 @@ class PutFileSystemPolicyResponsePrivate : public EfsResponsePrivate {
 
 public:
 
-    PutFileSystemPolicyResponsePrivate(PutFileSystemPolicyResponse * const q);
+    explicit PutFileSystemPolicyResponsePrivate(PutFileSystemPolicyResponse * const q);
 
     void parsePutFileSystemPolicyResponse(QXmlStreamReader &xml);
 

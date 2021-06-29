@@ -31,7 +31,7 @@ class ListUserHierarchyGroupsResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    ListUserHierarchyGroupsResponsePrivate(ListUserHierarchyGroupsResponse * const q);
+    explicit ListUserHierarchyGroupsResponsePrivate(ListUserHierarchyGroupsResponse * const q);
 
     void parseListUserHierarchyGroupsResponse(QXmlStreamReader &xml);
 

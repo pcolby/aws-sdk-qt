@@ -31,7 +31,7 @@ class UpdateStackResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 
-    UpdateStackResponsePrivate(UpdateStackResponse * const q);
+    explicit UpdateStackResponsePrivate(UpdateStackResponse * const q);
 
     void parseUpdateStackResponse(QXmlStreamReader &xml);
 

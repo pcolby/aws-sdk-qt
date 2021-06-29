@@ -29,7 +29,7 @@ class StsResponsePrivate {
 
 public:
 
-    StsResponsePrivate(StsResponse * const q);
+    explicit StsResponsePrivate(StsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

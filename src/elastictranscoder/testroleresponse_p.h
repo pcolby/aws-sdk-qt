@@ -31,7 +31,7 @@ class TestRoleResponsePrivate : public ElasticTranscoderResponsePrivate {
 
 public:
 
-    TestRoleResponsePrivate(TestRoleResponse * const q);
+    explicit TestRoleResponsePrivate(TestRoleResponse * const q);
 
     void parseTestRoleResponse(QXmlStreamReader &xml);
 

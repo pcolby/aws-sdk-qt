@@ -31,7 +31,7 @@ class UpdateMaintenanceStartTimeResponsePrivate : public StorageGatewayResponseP
 
 public:
 
-    UpdateMaintenanceStartTimeResponsePrivate(UpdateMaintenanceStartTimeResponse * const q);
+    explicit UpdateMaintenanceStartTimeResponsePrivate(UpdateMaintenanceStartTimeResponse * const q);
 
     void parseUpdateMaintenanceStartTimeResponse(QXmlStreamReader &xml);
 

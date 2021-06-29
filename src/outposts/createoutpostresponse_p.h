@@ -31,7 +31,7 @@ class CreateOutpostResponsePrivate : public OutpostsResponsePrivate {
 
 public:
 
-    CreateOutpostResponsePrivate(CreateOutpostResponse * const q);
+    explicit CreateOutpostResponsePrivate(CreateOutpostResponse * const q);
 
     void parseCreateOutpostResponse(QXmlStreamReader &xml);
 

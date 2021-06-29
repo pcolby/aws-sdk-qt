@@ -31,7 +31,7 @@ class DeleteThreatIntelSetResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 
-    DeleteThreatIntelSetResponsePrivate(DeleteThreatIntelSetResponse * const q);
+    explicit DeleteThreatIntelSetResponsePrivate(DeleteThreatIntelSetResponse * const q);
 
     void parseDeleteThreatIntelSetResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteLoadBalancerPolicyResponsePrivate : public ElasticLoadBalancingRespo
 
 public:
 
-    DeleteLoadBalancerPolicyResponsePrivate(DeleteLoadBalancerPolicyResponse * const q);
+    explicit DeleteLoadBalancerPolicyResponsePrivate(DeleteLoadBalancerPolicyResponse * const q);
 
     void parseDeleteLoadBalancerPolicyResponse(QXmlStreamReader &xml);
 

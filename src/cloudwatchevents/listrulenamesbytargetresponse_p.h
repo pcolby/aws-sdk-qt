@@ -31,7 +31,7 @@ class ListRuleNamesByTargetResponsePrivate : public CloudWatchEventsResponsePriv
 
 public:
 
-    ListRuleNamesByTargetResponsePrivate(ListRuleNamesByTargetResponse * const q);
+    explicit ListRuleNamesByTargetResponsePrivate(ListRuleNamesByTargetResponse * const q);
 
     void parseListRuleNamesByTargetResponse(QXmlStreamReader &xml);
 

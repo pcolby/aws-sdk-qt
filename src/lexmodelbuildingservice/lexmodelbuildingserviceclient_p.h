@@ -30,7 +30,7 @@ class LexModelBuildingServiceClient;
 class LexModelBuildingServiceClientPrivate {
 
 public:
-    LexModelBuildingServiceClientPrivate(LexModelBuildingServiceClient * const q);
+    explicit LexModelBuildingServiceClientPrivate(LexModelBuildingServiceClient * const q);
 
 protected:
     LexModelBuildingServiceClient * const q_ptr; ///< Internal q-pointer.

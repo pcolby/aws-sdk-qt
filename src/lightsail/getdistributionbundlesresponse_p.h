@@ -31,7 +31,7 @@ class GetDistributionBundlesResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    GetDistributionBundlesResponsePrivate(GetDistributionBundlesResponse * const q);
+    explicit GetDistributionBundlesResponsePrivate(GetDistributionBundlesResponse * const q);
 
     void parseGetDistributionBundlesResponse(QXmlStreamReader &xml);
 

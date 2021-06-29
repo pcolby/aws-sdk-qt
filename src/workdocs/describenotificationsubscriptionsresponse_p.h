@@ -31,7 +31,7 @@ class DescribeNotificationSubscriptionsResponsePrivate : public WorkDocsResponse
 
 public:
 
-    DescribeNotificationSubscriptionsResponsePrivate(DescribeNotificationSubscriptionsResponse * const q);
+    explicit DescribeNotificationSubscriptionsResponsePrivate(DescribeNotificationSubscriptionsResponse * const q);
 
     void parseDescribeNotificationSubscriptionsResponse(QXmlStreamReader &xml);
 

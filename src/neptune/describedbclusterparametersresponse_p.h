@@ -31,7 +31,7 @@ class DescribeDBClusterParametersResponsePrivate : public NeptuneResponsePrivate
 
 public:
 
-    DescribeDBClusterParametersResponsePrivate(DescribeDBClusterParametersResponse * const q);
+    explicit DescribeDBClusterParametersResponsePrivate(DescribeDBClusterParametersResponse * const q);
 
     void parseDescribeDBClusterParametersResponse(QXmlStreamReader &xml);
 

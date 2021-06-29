@@ -31,7 +31,7 @@ class ListPhoneNumberOrdersResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    ListPhoneNumberOrdersResponsePrivate(ListPhoneNumberOrdersResponse * const q);
+    explicit ListPhoneNumberOrdersResponsePrivate(ListPhoneNumberOrdersResponse * const q);
 
     void parseListPhoneNumberOrdersResponse(QXmlStreamReader &xml);
 

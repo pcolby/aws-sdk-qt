@@ -31,7 +31,7 @@ class PutRoomSkillParameterResponsePrivate : public AlexaForBusinessResponsePriv
 
 public:
 
-    PutRoomSkillParameterResponsePrivate(PutRoomSkillParameterResponse * const q);
+    explicit PutRoomSkillParameterResponsePrivate(PutRoomSkillParameterResponse * const q);
 
     void parsePutRoomSkillParameterResponse(QXmlStreamReader &xml);
 

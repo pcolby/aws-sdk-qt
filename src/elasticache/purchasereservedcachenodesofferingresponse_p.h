@@ -31,7 +31,7 @@ class PurchaseReservedCacheNodesOfferingResponsePrivate : public ElastiCacheResp
 
 public:
 
-    PurchaseReservedCacheNodesOfferingResponsePrivate(PurchaseReservedCacheNodesOfferingResponse * const q);
+    explicit PurchaseReservedCacheNodesOfferingResponsePrivate(PurchaseReservedCacheNodesOfferingResponse * const q);
 
     void parsePurchaseReservedCacheNodesOfferingResponse(QXmlStreamReader &xml);
 

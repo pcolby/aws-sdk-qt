@@ -31,7 +31,7 @@ class SimulateCustomPolicyResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    SimulateCustomPolicyResponsePrivate(SimulateCustomPolicyResponse * const q);
+    explicit SimulateCustomPolicyResponsePrivate(SimulateCustomPolicyResponse * const q);
 
     void parseSimulateCustomPolicyResponse(QXmlStreamReader &xml);
 

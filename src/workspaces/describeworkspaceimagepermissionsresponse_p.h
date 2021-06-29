@@ -31,7 +31,7 @@ class DescribeWorkspaceImagePermissionsResponsePrivate : public WorkSpacesRespon
 
 public:
 
-    DescribeWorkspaceImagePermissionsResponsePrivate(DescribeWorkspaceImagePermissionsResponse * const q);
+    explicit DescribeWorkspaceImagePermissionsResponsePrivate(DescribeWorkspaceImagePermissionsResponse * const q);
 
     void parseDescribeWorkspaceImagePermissionsResponse(QXmlStreamReader &xml);
 

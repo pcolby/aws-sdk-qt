@@ -31,7 +31,7 @@ class DescribeConnectionAliasesResponsePrivate : public WorkSpacesResponsePrivat
 
 public:
 
-    DescribeConnectionAliasesResponsePrivate(DescribeConnectionAliasesResponse * const q);
+    explicit DescribeConnectionAliasesResponsePrivate(DescribeConnectionAliasesResponse * const q);
 
     void parseDescribeConnectionAliasesResponse(QXmlStreamReader &xml);
 

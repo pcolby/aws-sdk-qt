@@ -31,7 +31,7 @@ class SendUsersMessagesResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    SendUsersMessagesResponsePrivate(SendUsersMessagesResponse * const q);
+    explicit SendUsersMessagesResponsePrivate(SendUsersMessagesResponse * const q);
 
     void parseSendUsersMessagesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeOperatingSystemsResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    DescribeOperatingSystemsResponsePrivate(DescribeOperatingSystemsResponse * const q);
+    explicit DescribeOperatingSystemsResponsePrivate(DescribeOperatingSystemsResponse * const q);
 
     void parseDescribeOperatingSystemsResponse(QXmlStreamReader &xml);
 

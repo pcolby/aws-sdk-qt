@@ -31,7 +31,7 @@ class GetRulesResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 
-    GetRulesResponsePrivate(GetRulesResponse * const q);
+    explicit GetRulesResponsePrivate(GetRulesResponse * const q);
 
     void parseGetRulesResponse(QXmlStreamReader &xml);
 

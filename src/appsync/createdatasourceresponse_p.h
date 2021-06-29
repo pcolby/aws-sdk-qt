@@ -31,7 +31,7 @@ class CreateDataSourceResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 
-    CreateDataSourceResponsePrivate(CreateDataSourceResponse * const q);
+    explicit CreateDataSourceResponsePrivate(CreateDataSourceResponse * const q);
 
     void parseCreateDataSourceResponse(QXmlStreamReader &xml);
 

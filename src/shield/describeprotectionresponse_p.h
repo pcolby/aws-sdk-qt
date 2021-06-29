@@ -31,7 +31,7 @@ class DescribeProtectionResponsePrivate : public ShieldResponsePrivate {
 
 public:
 
-    DescribeProtectionResponsePrivate(DescribeProtectionResponse * const q);
+    explicit DescribeProtectionResponsePrivate(DescribeProtectionResponse * const q);
 
     void parseDescribeProtectionResponse(QXmlStreamReader &xml);
 

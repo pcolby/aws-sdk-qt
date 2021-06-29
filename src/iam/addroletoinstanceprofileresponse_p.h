@@ -31,7 +31,7 @@ class AddRoleToInstanceProfileResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    AddRoleToInstanceProfileResponsePrivate(AddRoleToInstanceProfileResponse * const q);
+    explicit AddRoleToInstanceProfileResponsePrivate(AddRoleToInstanceProfileResponse * const q);
 
     void parseAddRoleToInstanceProfileResponse(QXmlStreamReader &xml);
 

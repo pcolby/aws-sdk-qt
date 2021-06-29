@@ -31,7 +31,7 @@ class GenerateDataSetResponsePrivate : public MarketplaceCommerceAnalyticsRespon
 
 public:
 
-    GenerateDataSetResponsePrivate(GenerateDataSetResponse * const q);
+    explicit GenerateDataSetResponsePrivate(GenerateDataSetResponse * const q);
 
     void parseGenerateDataSetResponse(QXmlStreamReader &xml);
 

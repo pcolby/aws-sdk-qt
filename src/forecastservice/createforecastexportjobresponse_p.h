@@ -31,7 +31,7 @@ class CreateForecastExportJobResponsePrivate : public ForecastServiceResponsePri
 
 public:
 
-    CreateForecastExportJobResponsePrivate(CreateForecastExportJobResponse * const q);
+    explicit CreateForecastExportJobResponsePrivate(CreateForecastExportJobResponse * const q);
 
     void parseCreateForecastExportJobResponse(QXmlStreamReader &xml);
 

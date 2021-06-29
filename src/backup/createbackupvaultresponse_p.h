@@ -31,7 +31,7 @@ class CreateBackupVaultResponsePrivate : public BackupResponsePrivate {
 
 public:
 
-    CreateBackupVaultResponsePrivate(CreateBackupVaultResponse * const q);
+    explicit CreateBackupVaultResponsePrivate(CreateBackupVaultResponse * const q);
 
     void parseCreateBackupVaultResponse(QXmlStreamReader &xml);
 

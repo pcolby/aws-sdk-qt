@@ -31,7 +31,7 @@ class StartChangeRequestExecutionResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    StartChangeRequestExecutionResponsePrivate(StartChangeRequestExecutionResponse * const q);
+    explicit StartChangeRequestExecutionResponsePrivate(StartChangeRequestExecutionResponse * const q);
 
     void parseStartChangeRequestExecutionResponse(QXmlStreamReader &xml);
 

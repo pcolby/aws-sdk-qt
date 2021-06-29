@@ -29,7 +29,7 @@ class DatabaseMigrationServiceResponsePrivate {
 
 public:
 
-    DatabaseMigrationServiceResponsePrivate(DatabaseMigrationServiceResponse * const q);
+    explicit DatabaseMigrationServiceResponsePrivate(DatabaseMigrationServiceResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

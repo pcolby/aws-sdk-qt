@@ -31,7 +31,7 @@ class StartMLEvaluationTaskRunResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    StartMLEvaluationTaskRunResponsePrivate(StartMLEvaluationTaskRunResponse * const q);
+    explicit StartMLEvaluationTaskRunResponsePrivate(StartMLEvaluationTaskRunResponse * const q);
 
     void parseStartMLEvaluationTaskRunResponse(QXmlStreamReader &xml);
 

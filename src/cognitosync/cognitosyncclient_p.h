@@ -30,7 +30,7 @@ class CognitoSyncClient;
 class CognitoSyncClientPrivate {
 
 public:
-    CognitoSyncClientPrivate(CognitoSyncClient * const q);
+    explicit CognitoSyncClientPrivate(CognitoSyncClient * const q);
 
 protected:
     CognitoSyncClient * const q_ptr; ///< Internal q-pointer.

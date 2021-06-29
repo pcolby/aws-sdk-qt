@@ -31,7 +31,7 @@ class DescribeCommentsResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 
-    DescribeCommentsResponsePrivate(DescribeCommentsResponse * const q);
+    explicit DescribeCommentsResponsePrivate(DescribeCommentsResponse * const q);
 
     void parseDescribeCommentsResponse(QXmlStreamReader &xml);
 

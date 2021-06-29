@@ -31,7 +31,7 @@ class GetBranchResponsePrivate : public AmplifyResponsePrivate {
 
 public:
 
-    GetBranchResponsePrivate(GetBranchResponse * const q);
+    explicit GetBranchResponsePrivate(GetBranchResponse * const q);
 
     void parseGetBranchResponse(QXmlStreamReader &xml);
 

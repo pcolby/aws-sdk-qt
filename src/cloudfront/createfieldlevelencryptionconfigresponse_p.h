@@ -31,7 +31,7 @@ class CreateFieldLevelEncryptionConfigResponsePrivate : public CloudFrontRespons
 
 public:
 
-    CreateFieldLevelEncryptionConfigResponsePrivate(CreateFieldLevelEncryptionConfigResponse * const q);
+    explicit CreateFieldLevelEncryptionConfigResponsePrivate(CreateFieldLevelEncryptionConfigResponse * const q);
 
     void parseCreateFieldLevelEncryptionConfigResponse(QXmlStreamReader &xml);
 

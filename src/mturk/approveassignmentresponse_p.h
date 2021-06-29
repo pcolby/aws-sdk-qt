@@ -31,7 +31,7 @@ class ApproveAssignmentResponsePrivate : public MTurkResponsePrivate {
 
 public:
 
-    ApproveAssignmentResponsePrivate(ApproveAssignmentResponse * const q);
+    explicit ApproveAssignmentResponsePrivate(ApproveAssignmentResponse * const q);
 
     void parseApproveAssignmentResponse(QXmlStreamReader &xml);
 

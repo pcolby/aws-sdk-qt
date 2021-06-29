@@ -29,7 +29,7 @@ class KinesisVideoSignalingChannelsResponsePrivate {
 
 public:
 
-    KinesisVideoSignalingChannelsResponsePrivate(KinesisVideoSignalingChannelsResponse * const q);
+    explicit KinesisVideoSignalingChannelsResponsePrivate(KinesisVideoSignalingChannelsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

@@ -31,7 +31,7 @@ class SendBounceResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    SendBounceResponsePrivate(SendBounceResponse * const q);
+    explicit SendBounceResponsePrivate(SendBounceResponse * const q);
 
     void parseSendBounceResponse(QXmlStreamReader &xml);
 

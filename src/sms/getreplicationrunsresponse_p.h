@@ -31,7 +31,7 @@ class GetReplicationRunsResponsePrivate : public SmsResponsePrivate {
 
 public:
 
-    GetReplicationRunsResponsePrivate(GetReplicationRunsResponse * const q);
+    explicit GetReplicationRunsResponsePrivate(GetReplicationRunsResponse * const q);
 
     void parseGetReplicationRunsResponse(QXmlStreamReader &xml);
 

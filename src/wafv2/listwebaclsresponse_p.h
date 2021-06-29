@@ -31,7 +31,7 @@ class ListWebACLsResponsePrivate : public Wafv2ResponsePrivate {
 
 public:
 
-    ListWebACLsResponsePrivate(ListWebACLsResponse * const q);
+    explicit ListWebACLsResponsePrivate(ListWebACLsResponse * const q);
 
     void parseListWebACLsResponse(QXmlStreamReader &xml);
 

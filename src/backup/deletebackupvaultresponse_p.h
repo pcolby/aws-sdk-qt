@@ -31,7 +31,7 @@ class DeleteBackupVaultResponsePrivate : public BackupResponsePrivate {
 
 public:
 
-    DeleteBackupVaultResponsePrivate(DeleteBackupVaultResponse * const q);
+    explicit DeleteBackupVaultResponsePrivate(DeleteBackupVaultResponse * const q);
 
     void parseDeleteBackupVaultResponse(QXmlStreamReader &xml);
 

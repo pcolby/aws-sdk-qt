@@ -31,7 +31,7 @@ class ListTeamMembersResponsePrivate : public CodeStarResponsePrivate {
 
 public:
 
-    ListTeamMembersResponsePrivate(ListTeamMembersResponse * const q);
+    explicit ListTeamMembersResponsePrivate(ListTeamMembersResponse * const q);
 
     void parseListTeamMembersResponse(QXmlStreamReader &xml);
 

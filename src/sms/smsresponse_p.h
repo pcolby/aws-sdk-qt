@@ -29,7 +29,7 @@ class SmsResponsePrivate {
 
 public:
 
-    SmsResponsePrivate(SmsResponse * const q);
+    explicit SmsResponsePrivate(SmsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

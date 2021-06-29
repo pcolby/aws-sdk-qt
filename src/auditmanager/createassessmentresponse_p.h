@@ -31,7 +31,7 @@ class CreateAssessmentResponsePrivate : public AuditManagerResponsePrivate {
 
 public:
 
-    CreateAssessmentResponsePrivate(CreateAssessmentResponse * const q);
+    explicit CreateAssessmentResponsePrivate(CreateAssessmentResponse * const q);
 
     void parseCreateAssessmentResponse(QXmlStreamReader &xml);
 

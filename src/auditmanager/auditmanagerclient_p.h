@@ -30,7 +30,7 @@ class AuditManagerClient;
 class AuditManagerClientPrivate {
 
 public:
-    AuditManagerClientPrivate(AuditManagerClient * const q);
+    explicit AuditManagerClientPrivate(AuditManagerClient * const q);
 
 protected:
     AuditManagerClient * const q_ptr; ///< Internal q-pointer.

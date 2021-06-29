@@ -31,7 +31,7 @@ class AssociateSigninDelegateGroupsWithAccountResponsePrivate : public ChimeResp
 
 public:
 
-    AssociateSigninDelegateGroupsWithAccountResponsePrivate(AssociateSigninDelegateGroupsWithAccountResponse * const q);
+    explicit AssociateSigninDelegateGroupsWithAccountResponsePrivate(AssociateSigninDelegateGroupsWithAccountResponse * const q);
 
     void parseAssociateSigninDelegateGroupsWithAccountResponse(QXmlStreamReader &xml);
 

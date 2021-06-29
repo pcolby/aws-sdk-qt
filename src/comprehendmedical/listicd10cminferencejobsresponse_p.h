@@ -31,7 +31,7 @@ class ListICD10CMInferenceJobsResponsePrivate : public ComprehendMedicalResponse
 
 public:
 
-    ListICD10CMInferenceJobsResponsePrivate(ListICD10CMInferenceJobsResponse * const q);
+    explicit ListICD10CMInferenceJobsResponsePrivate(ListICD10CMInferenceJobsResponse * const q);
 
     void parseListICD10CMInferenceJobsResponse(QXmlStreamReader &xml);
 

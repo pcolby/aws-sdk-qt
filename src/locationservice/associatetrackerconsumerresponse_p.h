@@ -31,7 +31,7 @@ class AssociateTrackerConsumerResponsePrivate : public LocationServiceResponsePr
 
 public:
 
-    AssociateTrackerConsumerResponsePrivate(AssociateTrackerConsumerResponse * const q);
+    explicit AssociateTrackerConsumerResponsePrivate(AssociateTrackerConsumerResponse * const q);
 
     void parseAssociateTrackerConsumerResponse(QXmlStreamReader &xml);
 

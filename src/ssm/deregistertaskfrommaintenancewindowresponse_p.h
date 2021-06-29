@@ -31,7 +31,7 @@ class DeregisterTaskFromMaintenanceWindowResponsePrivate : public SsmResponsePri
 
 public:
 
-    DeregisterTaskFromMaintenanceWindowResponsePrivate(DeregisterTaskFromMaintenanceWindowResponse * const q);
+    explicit DeregisterTaskFromMaintenanceWindowResponsePrivate(DeregisterTaskFromMaintenanceWindowResponse * const q);
 
     void parseDeregisterTaskFromMaintenanceWindowResponse(QXmlStreamReader &xml);
 

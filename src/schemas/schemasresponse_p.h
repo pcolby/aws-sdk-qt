@@ -29,7 +29,7 @@ class SchemasResponsePrivate {
 
 public:
 
-    SchemasResponsePrivate(SchemasResponse * const q);
+    explicit SchemasResponsePrivate(SchemasResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

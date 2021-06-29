@@ -106,7 +106,7 @@ public:
 protected:
     /// @cond internal
     EmrRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    EmrRequest(EmrRequestPrivate * const d);
+    explicit EmrRequest(EmrRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -31,7 +31,7 @@ class DescribeTaskSetsResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    DescribeTaskSetsResponsePrivate(DescribeTaskSetsResponse * const q);
+    explicit DescribeTaskSetsResponsePrivate(DescribeTaskSetsResponse * const q);
 
     void parseDescribeTaskSetsResponse(QXmlStreamReader &xml);
 

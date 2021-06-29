@@ -31,7 +31,7 @@ class RestoreDBInstanceFromS3ResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    RestoreDBInstanceFromS3ResponsePrivate(RestoreDBInstanceFromS3Response * const q);
+    explicit RestoreDBInstanceFromS3ResponsePrivate(RestoreDBInstanceFromS3Response * const q);
 
     void parseRestoreDBInstanceFromS3Response(QXmlStreamReader &xml);
 

@@ -29,7 +29,7 @@ class IdentityStoreResponsePrivate {
 
 public:
 
-    IdentityStoreResponsePrivate(IdentityStoreResponse * const q);
+    explicit IdentityStoreResponsePrivate(IdentityStoreResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

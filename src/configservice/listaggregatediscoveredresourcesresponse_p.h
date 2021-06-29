@@ -31,7 +31,7 @@ class ListAggregateDiscoveredResourcesResponsePrivate : public ConfigServiceResp
 
 public:
 
-    ListAggregateDiscoveredResourcesResponsePrivate(ListAggregateDiscoveredResourcesResponse * const q);
+    explicit ListAggregateDiscoveredResourcesResponsePrivate(ListAggregateDiscoveredResourcesResponse * const q);
 
     void parseListAggregateDiscoveredResourcesResponse(QXmlStreamReader &xml);
 

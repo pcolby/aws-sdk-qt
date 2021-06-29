@@ -31,7 +31,7 @@ class BatchStopJobRunResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    BatchStopJobRunResponsePrivate(BatchStopJobRunResponse * const q);
+    explicit BatchStopJobRunResponsePrivate(BatchStopJobRunResponse * const q);
 
     void parseBatchStopJobRunResponse(QXmlStreamReader &xml);
 

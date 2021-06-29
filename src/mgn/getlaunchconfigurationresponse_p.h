@@ -31,7 +31,7 @@ class GetLaunchConfigurationResponsePrivate : public mgnResponsePrivate {
 
 public:
 
-    GetLaunchConfigurationResponsePrivate(GetLaunchConfigurationResponse * const q);
+    explicit GetLaunchConfigurationResponsePrivate(GetLaunchConfigurationResponse * const q);
 
     void parseGetLaunchConfigurationResponse(QXmlStreamReader &xml);
 

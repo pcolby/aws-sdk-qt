@@ -31,7 +31,7 @@ class UpdateConnectionResponsePrivate : public NetworkManagerResponsePrivate {
 
 public:
 
-    UpdateConnectionResponsePrivate(UpdateConnectionResponse * const q);
+    explicit UpdateConnectionResponsePrivate(UpdateConnectionResponse * const q);
 
     void parseUpdateConnectionResponse(QXmlStreamReader &xml);
 

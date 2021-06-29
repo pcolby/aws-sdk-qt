@@ -31,7 +31,7 @@ class PutWebhookResponsePrivate : public CodePipelineResponsePrivate {
 
 public:
 
-    PutWebhookResponsePrivate(PutWebhookResponse * const q);
+    explicit PutWebhookResponsePrivate(PutWebhookResponse * const q);
 
     void parsePutWebhookResponse(QXmlStreamReader &xml);
 

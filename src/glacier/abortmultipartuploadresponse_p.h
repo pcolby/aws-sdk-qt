@@ -31,7 +31,7 @@ class AbortMultipartUploadResponsePrivate : public GlacierResponsePrivate {
 
 public:
 
-    AbortMultipartUploadResponsePrivate(AbortMultipartUploadResponse * const q);
+    explicit AbortMultipartUploadResponsePrivate(AbortMultipartUploadResponse * const q);
 
     void parseAbortMultipartUploadResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class SearchDatabasesByLFTagsResponsePrivate : public LakeFormationResponsePriva
 
 public:
 
-    SearchDatabasesByLFTagsResponsePrivate(SearchDatabasesByLFTagsResponse * const q);
+    explicit SearchDatabasesByLFTagsResponsePrivate(SearchDatabasesByLFTagsResponse * const q);
 
     void parseSearchDatabasesByLFTagsResponse(QXmlStreamReader &xml);
 

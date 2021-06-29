@@ -31,7 +31,7 @@ class DisassociateConfigurationItemsFromApplicationResponsePrivate : public Appl
 
 public:
 
-    DisassociateConfigurationItemsFromApplicationResponsePrivate(DisassociateConfigurationItemsFromApplicationResponse * const q);
+    explicit DisassociateConfigurationItemsFromApplicationResponsePrivate(DisassociateConfigurationItemsFromApplicationResponse * const q);
 
     void parseDisassociateConfigurationItemsFromApplicationResponse(QXmlStreamReader &xml);
 

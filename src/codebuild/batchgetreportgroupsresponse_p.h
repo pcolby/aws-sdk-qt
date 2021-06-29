@@ -31,7 +31,7 @@ class BatchGetReportGroupsResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 
-    BatchGetReportGroupsResponsePrivate(BatchGetReportGroupsResponse * const q);
+    explicit BatchGetReportGroupsResponsePrivate(BatchGetReportGroupsResponse * const q);
 
     void parseBatchGetReportGroupsResponse(QXmlStreamReader &xml);
 

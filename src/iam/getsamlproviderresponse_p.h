@@ -31,7 +31,7 @@ class GetSAMLProviderResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    GetSAMLProviderResponsePrivate(GetSAMLProviderResponse * const q);
+    explicit GetSAMLProviderResponsePrivate(GetSAMLProviderResponse * const q);
 
     void parseGetSAMLProviderResponse(QXmlStreamReader &xml);
 

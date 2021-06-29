@@ -31,7 +31,7 @@ class AddTagsToOnPremisesInstancesResponsePrivate : public CodeDeployResponsePri
 
 public:
 
-    AddTagsToOnPremisesInstancesResponsePrivate(AddTagsToOnPremisesInstancesResponse * const q);
+    explicit AddTagsToOnPremisesInstancesResponsePrivate(AddTagsToOnPremisesInstancesResponse * const q);
 
     void parseAddTagsToOnPremisesInstancesResponse(QXmlStreamReader &xml);
 

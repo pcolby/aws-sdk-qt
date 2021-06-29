@@ -31,7 +31,7 @@ class GetMacieSessionResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 
-    GetMacieSessionResponsePrivate(GetMacieSessionResponse * const q);
+    explicit GetMacieSessionResponsePrivate(GetMacieSessionResponse * const q);
 
     void parseGetMacieSessionResponse(QXmlStreamReader &xml);
 

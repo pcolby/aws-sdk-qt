@@ -31,7 +31,7 @@ class DescribeThemePermissionsResponsePrivate : public QuickSightResponsePrivate
 
 public:
 
-    DescribeThemePermissionsResponsePrivate(DescribeThemePermissionsResponse * const q);
+    explicit DescribeThemePermissionsResponsePrivate(DescribeThemePermissionsResponse * const q);
 
     void parseDescribeThemePermissionsResponse(QXmlStreamReader &xml);
 

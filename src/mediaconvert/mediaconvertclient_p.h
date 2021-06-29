@@ -30,7 +30,7 @@ class MediaConvertClient;
 class MediaConvertClientPrivate {
 
 public:
-    MediaConvertClientPrivate(MediaConvertClient * const q);
+    explicit MediaConvertClientPrivate(MediaConvertClient * const q);
 
 protected:
     MediaConvertClient * const q_ptr; ///< Internal q-pointer.

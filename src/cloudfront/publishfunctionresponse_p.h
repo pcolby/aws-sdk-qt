@@ -31,7 +31,7 @@ class PublishFunctionResponsePrivate : public CloudFrontResponsePrivate {
 
 public:
 
-    PublishFunctionResponsePrivate(PublishFunctionResponse * const q);
+    explicit PublishFunctionResponsePrivate(PublishFunctionResponse * const q);
 
     void parsePublishFunctionResponse(QXmlStreamReader &xml);
 

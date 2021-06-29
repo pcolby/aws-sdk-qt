@@ -31,7 +31,7 @@ class DefineAnalysisSchemeResponsePrivate : public CloudSearchResponsePrivate {
 
 public:
 
-    DefineAnalysisSchemeResponsePrivate(DefineAnalysisSchemeResponse * const q);
+    explicit DefineAnalysisSchemeResponsePrivate(DefineAnalysisSchemeResponse * const q);
 
     void parseDefineAnalysisSchemeResponse(QXmlStreamReader &xml);
 

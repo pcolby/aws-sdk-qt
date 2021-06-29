@@ -31,7 +31,7 @@ class PutPipelineDefinitionResponsePrivate : public DataPipelineResponsePrivate 
 
 public:
 
-    PutPipelineDefinitionResponsePrivate(PutPipelineDefinitionResponse * const q);
+    explicit PutPipelineDefinitionResponsePrivate(PutPipelineDefinitionResponse * const q);
 
     void parsePutPipelineDefinitionResponse(QXmlStreamReader &xml);
 

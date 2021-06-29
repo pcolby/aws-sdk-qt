@@ -31,7 +31,7 @@ class GetAttendeeResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    GetAttendeeResponsePrivate(GetAttendeeResponse * const q);
+    explicit GetAttendeeResponsePrivate(GetAttendeeResponse * const q);
 
     void parseGetAttendeeResponse(QXmlStreamReader &xml);
 

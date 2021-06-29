@@ -31,7 +31,7 @@ class GetLogGroupFieldsResponsePrivate : public CloudWatchLogsResponsePrivate {
 
 public:
 
-    GetLogGroupFieldsResponsePrivate(GetLogGroupFieldsResponse * const q);
+    explicit GetLogGroupFieldsResponsePrivate(GetLogGroupFieldsResponse * const q);
 
     void parseGetLogGroupFieldsResponse(QXmlStreamReader &xml);
 

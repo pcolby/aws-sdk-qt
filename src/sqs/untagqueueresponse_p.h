@@ -31,7 +31,7 @@ class UntagQueueResponsePrivate : public SqsResponsePrivate {
 
 public:
 
-    UntagQueueResponsePrivate(UntagQueueResponse * const q);
+    explicit UntagQueueResponsePrivate(UntagQueueResponse * const q);
 
     void parseUntagQueueResponse(QXmlStreamReader &xml);
 

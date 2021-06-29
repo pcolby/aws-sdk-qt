@@ -79,7 +79,7 @@ public:
 protected:
     /// @cond internal
     KinesisAnalyticsRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    KinesisAnalyticsRequest(KinesisAnalyticsRequestPrivate * const d);
+    explicit KinesisAnalyticsRequest(KinesisAnalyticsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -31,7 +31,7 @@ class RetryDataReplicationResponsePrivate : public mgnResponsePrivate {
 
 public:
 
-    RetryDataReplicationResponsePrivate(RetryDataReplicationResponse * const q);
+    explicit RetryDataReplicationResponsePrivate(RetryDataReplicationResponse * const q);
 
     void parseRetryDataReplicationResponse(QXmlStreamReader &xml);
 

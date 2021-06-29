@@ -31,7 +31,7 @@ class CreateConnectionResponsePrivate : public CodeStarconnectionsResponsePrivat
 
 public:
 
-    CreateConnectionResponsePrivate(CreateConnectionResponse * const q);
+    explicit CreateConnectionResponsePrivate(CreateConnectionResponse * const q);
 
     void parseCreateConnectionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateDBClusterParameterGroupResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    CreateDBClusterParameterGroupResponsePrivate(CreateDBClusterParameterGroupResponse * const q);
+    explicit CreateDBClusterParameterGroupResponsePrivate(CreateDBClusterParameterGroupResponse * const q);
 
     void parseCreateDBClusterParameterGroupResponse(QXmlStreamReader &xml);
 

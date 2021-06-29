@@ -31,7 +31,7 @@ class CreateSlotTypeResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 
-    CreateSlotTypeResponsePrivate(CreateSlotTypeResponse * const q);
+    explicit CreateSlotTypeResponsePrivate(CreateSlotTypeResponse * const q);
 
     void parseCreateSlotTypeResponse(QXmlStreamReader &xml);
 

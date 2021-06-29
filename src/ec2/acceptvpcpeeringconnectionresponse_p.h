@@ -31,7 +31,7 @@ class AcceptVpcPeeringConnectionResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    AcceptVpcPeeringConnectionResponsePrivate(AcceptVpcPeeringConnectionResponse * const q);
+    explicit AcceptVpcPeeringConnectionResponsePrivate(AcceptVpcPeeringConnectionResponse * const q);
 
     void parseAcceptVpcPeeringConnectionResponse(QXmlStreamReader &xml);
 

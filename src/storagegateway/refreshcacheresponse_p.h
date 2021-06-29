@@ -31,7 +31,7 @@ class RefreshCacheResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 
-    RefreshCacheResponsePrivate(RefreshCacheResponse * const q);
+    explicit RefreshCacheResponsePrivate(RefreshCacheResponse * const q);
 
     void parseRefreshCacheResponse(QXmlStreamReader &xml);
 

@@ -30,7 +30,7 @@ class MobileClient;
 class MobileClientPrivate {
 
 public:
-    MobileClientPrivate(MobileClient * const q);
+    explicit MobileClientPrivate(MobileClient * const q);
 
 protected:
     MobileClient * const q_ptr; ///< Internal q-pointer.

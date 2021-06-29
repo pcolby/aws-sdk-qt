@@ -31,7 +31,7 @@ class SetTypeDefaultVersionResponsePrivate : public CloudFormationResponsePrivat
 
 public:
 
-    SetTypeDefaultVersionResponsePrivate(SetTypeDefaultVersionResponse * const q);
+    explicit SetTypeDefaultVersionResponsePrivate(SetTypeDefaultVersionResponse * const q);
 
     void parseSetTypeDefaultVersionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteClassifierResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    DeleteClassifierResponsePrivate(DeleteClassifierResponse * const q);
+    explicit DeleteClassifierResponsePrivate(DeleteClassifierResponse * const q);
 
     void parseDeleteClassifierResponse(QXmlStreamReader &xml);
 

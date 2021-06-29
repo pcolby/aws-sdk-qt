@@ -31,7 +31,7 @@ class DescribeLayersResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    DescribeLayersResponsePrivate(DescribeLayersResponse * const q);
+    explicit DescribeLayersResponsePrivate(DescribeLayersResponse * const q);
 
     void parseDescribeLayersResponse(QXmlStreamReader &xml);
 

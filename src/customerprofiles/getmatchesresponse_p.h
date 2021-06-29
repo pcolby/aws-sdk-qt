@@ -31,7 +31,7 @@ class GetMatchesResponsePrivate : public CustomerProfilesResponsePrivate {
 
 public:
 
-    GetMatchesResponsePrivate(GetMatchesResponse * const q);
+    explicit GetMatchesResponsePrivate(GetMatchesResponse * const q);
 
     void parseGetMatchesResponse(QXmlStreamReader &xml);
 

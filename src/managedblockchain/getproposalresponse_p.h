@@ -31,7 +31,7 @@ class GetProposalResponsePrivate : public ManagedBlockchainResponsePrivate {
 
 public:
 
-    GetProposalResponsePrivate(GetProposalResponse * const q);
+    explicit GetProposalResponsePrivate(GetProposalResponse * const q);
 
     void parseGetProposalResponse(QXmlStreamReader &xml);
 

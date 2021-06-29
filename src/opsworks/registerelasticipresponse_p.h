@@ -31,7 +31,7 @@ class RegisterElasticIpResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    RegisterElasticIpResponsePrivate(RegisterElasticIpResponse * const q);
+    explicit RegisterElasticIpResponsePrivate(RegisterElasticIpResponse * const q);
 
     void parseRegisterElasticIpResponse(QXmlStreamReader &xml);
 

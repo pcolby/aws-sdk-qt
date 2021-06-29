@@ -31,7 +31,7 @@ class ModifyEndpointResponsePrivate : public DatabaseMigrationServiceResponsePri
 
 public:
 
-    ModifyEndpointResponsePrivate(ModifyEndpointResponse * const q);
+    explicit ModifyEndpointResponsePrivate(ModifyEndpointResponse * const q);
 
     void parseModifyEndpointResponse(QXmlStreamReader &xml);
 

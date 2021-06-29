@@ -31,7 +31,7 @@ class UpdateCACertificateResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    UpdateCACertificateResponsePrivate(UpdateCACertificateResponse * const q);
+    explicit UpdateCACertificateResponsePrivate(UpdateCACertificateResponse * const q);
 
     void parseUpdateCACertificateResponse(QXmlStreamReader &xml);
 

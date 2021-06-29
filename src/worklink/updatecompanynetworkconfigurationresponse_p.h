@@ -31,7 +31,7 @@ class UpdateCompanyNetworkConfigurationResponsePrivate : public WorkLinkResponse
 
 public:
 
-    UpdateCompanyNetworkConfigurationResponsePrivate(UpdateCompanyNetworkConfigurationResponse * const q);
+    explicit UpdateCompanyNetworkConfigurationResponsePrivate(UpdateCompanyNetworkConfigurationResponse * const q);
 
     void parseUpdateCompanyNetworkConfigurationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeAvailabilityMonitorTestResponsePrivate : public StorageGatewayResp
 
 public:
 
-    DescribeAvailabilityMonitorTestResponsePrivate(DescribeAvailabilityMonitorTestResponse * const q);
+    explicit DescribeAvailabilityMonitorTestResponsePrivate(DescribeAvailabilityMonitorTestResponse * const q);
 
     void parseDescribeAvailabilityMonitorTestResponse(QXmlStreamReader &xml);
 

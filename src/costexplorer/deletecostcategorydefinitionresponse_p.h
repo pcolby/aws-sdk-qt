@@ -31,7 +31,7 @@ class DeleteCostCategoryDefinitionResponsePrivate : public CostExplorerResponseP
 
 public:
 
-    DeleteCostCategoryDefinitionResponsePrivate(DeleteCostCategoryDefinitionResponse * const q);
+    explicit DeleteCostCategoryDefinitionResponsePrivate(DeleteCostCategoryDefinitionResponse * const q);
 
     void parseDeleteCostCategoryDefinitionResponse(QXmlStreamReader &xml);
 

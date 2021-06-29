@@ -31,7 +31,7 @@ class ListPermissionSetsProvisionedToAccountResponsePrivate : public SSOAdminRes
 
 public:
 
-    ListPermissionSetsProvisionedToAccountResponsePrivate(ListPermissionSetsProvisionedToAccountResponse * const q);
+    explicit ListPermissionSetsProvisionedToAccountResponsePrivate(ListPermissionSetsProvisionedToAccountResponse * const q);
 
     void parseListPermissionSetsProvisionedToAccountResponse(QXmlStreamReader &xml);
 

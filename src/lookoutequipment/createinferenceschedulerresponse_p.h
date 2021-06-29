@@ -31,7 +31,7 @@ class CreateInferenceSchedulerResponsePrivate : public LookoutEquipmentResponseP
 
 public:
 
-    CreateInferenceSchedulerResponsePrivate(CreateInferenceSchedulerResponse * const q);
+    explicit CreateInferenceSchedulerResponsePrivate(CreateInferenceSchedulerResponse * const q);
 
     void parseCreateInferenceSchedulerResponse(QXmlStreamReader &xml);
 

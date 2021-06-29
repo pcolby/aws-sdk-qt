@@ -31,7 +31,7 @@ class DeleteCustomActionTypeResponsePrivate : public CodePipelineResponsePrivate
 
 public:
 
-    DeleteCustomActionTypeResponsePrivate(DeleteCustomActionTypeResponse * const q);
+    explicit DeleteCustomActionTypeResponsePrivate(DeleteCustomActionTypeResponse * const q);
 
     void parseDeleteCustomActionTypeResponse(QXmlStreamReader &xml);
 

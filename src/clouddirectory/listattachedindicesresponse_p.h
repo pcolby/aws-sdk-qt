@@ -31,7 +31,7 @@ class ListAttachedIndicesResponsePrivate : public CloudDirectoryResponsePrivate 
 
 public:
 
-    ListAttachedIndicesResponsePrivate(ListAttachedIndicesResponse * const q);
+    explicit ListAttachedIndicesResponsePrivate(ListAttachedIndicesResponse * const q);
 
     void parseListAttachedIndicesResponse(QXmlStreamReader &xml);
 

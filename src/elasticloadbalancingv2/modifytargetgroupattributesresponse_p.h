@@ -31,7 +31,7 @@ class ModifyTargetGroupAttributesResponsePrivate : public ElasticLoadBalancingv2
 
 public:
 
-    ModifyTargetGroupAttributesResponsePrivate(ModifyTargetGroupAttributesResponse * const q);
+    explicit ModifyTargetGroupAttributesResponsePrivate(ModifyTargetGroupAttributesResponse * const q);
 
     void parseModifyTargetGroupAttributesResponse(QXmlStreamReader &xml);
 

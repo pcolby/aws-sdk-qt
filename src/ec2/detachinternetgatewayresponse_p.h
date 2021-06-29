@@ -31,7 +31,7 @@ class DetachInternetGatewayResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DetachInternetGatewayResponsePrivate(DetachInternetGatewayResponse * const q);
+    explicit DetachInternetGatewayResponsePrivate(DetachInternetGatewayResponse * const q);
 
     void parseDetachInternetGatewayResponse(QXmlStreamReader &xml);
 

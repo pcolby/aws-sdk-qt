@@ -31,7 +31,7 @@ class AdminRemoveUserFromGroupResponsePrivate : public CognitoIdentityProviderRe
 
 public:
 
-    AdminRemoveUserFromGroupResponsePrivate(AdminRemoveUserFromGroupResponse * const q);
+    explicit AdminRemoveUserFromGroupResponsePrivate(AdminRemoveUserFromGroupResponse * const q);
 
     void parseAdminRemoveUserFromGroupResponse(QXmlStreamReader &xml);
 

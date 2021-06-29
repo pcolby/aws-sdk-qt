@@ -31,7 +31,7 @@ class UpdateLaunchProfileResponsePrivate : public NimbleStudioResponsePrivate {
 
 public:
 
-    UpdateLaunchProfileResponsePrivate(UpdateLaunchProfileResponse * const q);
+    explicit UpdateLaunchProfileResponsePrivate(UpdateLaunchProfileResponse * const q);
 
     void parseUpdateLaunchProfileResponse(QXmlStreamReader &xml);
 

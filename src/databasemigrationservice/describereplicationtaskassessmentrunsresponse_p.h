@@ -31,7 +31,7 @@ class DescribeReplicationTaskAssessmentRunsResponsePrivate : public DatabaseMigr
 
 public:
 
-    DescribeReplicationTaskAssessmentRunsResponsePrivate(DescribeReplicationTaskAssessmentRunsResponse * const q);
+    explicit DescribeReplicationTaskAssessmentRunsResponsePrivate(DescribeReplicationTaskAssessmentRunsResponse * const q);
 
     void parseDescribeReplicationTaskAssessmentRunsResponse(QXmlStreamReader &xml);
 

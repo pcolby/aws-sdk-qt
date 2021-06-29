@@ -31,7 +31,7 @@ class UpdateUserSettingsResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    UpdateUserSettingsResponsePrivate(UpdateUserSettingsResponse * const q);
+    explicit UpdateUserSettingsResponsePrivate(UpdateUserSettingsResponse * const q);
 
     void parseUpdateUserSettingsResponse(QXmlStreamReader &xml);
 

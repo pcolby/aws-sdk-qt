@@ -31,7 +31,7 @@ class GetResourceSharesResponsePrivate : public RamResponsePrivate {
 
 public:
 
-    GetResourceSharesResponsePrivate(GetResourceSharesResponse * const q);
+    explicit GetResourceSharesResponsePrivate(GetResourceSharesResponse * const q);
 
     void parseGetResourceSharesResponse(QXmlStreamReader &xml);
 

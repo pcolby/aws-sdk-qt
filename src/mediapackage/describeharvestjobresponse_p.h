@@ -31,7 +31,7 @@ class DescribeHarvestJobResponsePrivate : public MediaPackageResponsePrivate {
 
 public:
 
-    DescribeHarvestJobResponsePrivate(DescribeHarvestJobResponse * const q);
+    explicit DescribeHarvestJobResponsePrivate(DescribeHarvestJobResponse * const q);
 
     void parseDescribeHarvestJobResponse(QXmlStreamReader &xml);
 

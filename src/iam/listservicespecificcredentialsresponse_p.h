@@ -31,7 +31,7 @@ class ListServiceSpecificCredentialsResponsePrivate : public IamResponsePrivate 
 
 public:
 
-    ListServiceSpecificCredentialsResponsePrivate(ListServiceSpecificCredentialsResponse * const q);
+    explicit ListServiceSpecificCredentialsResponsePrivate(ListServiceSpecificCredentialsResponse * const q);
 
     void parseListServiceSpecificCredentialsResponse(QXmlStreamReader &xml);
 

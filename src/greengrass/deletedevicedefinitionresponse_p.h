@@ -31,7 +31,7 @@ class DeleteDeviceDefinitionResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 
-    DeleteDeviceDefinitionResponsePrivate(DeleteDeviceDefinitionResponse * const q);
+    explicit DeleteDeviceDefinitionResponsePrivate(DeleteDeviceDefinitionResponse * const q);
 
     void parseDeleteDeviceDefinitionResponse(QXmlStreamReader &xml);
 

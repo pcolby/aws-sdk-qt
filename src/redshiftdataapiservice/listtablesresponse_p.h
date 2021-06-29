@@ -31,7 +31,7 @@ class ListTablesResponsePrivate : public RedshiftDataAPIServiceResponsePrivate {
 
 public:
 
-    ListTablesResponsePrivate(ListTablesResponse * const q);
+    explicit ListTablesResponsePrivate(ListTablesResponse * const q);
 
     void parseListTablesResponse(QXmlStreamReader &xml);
 

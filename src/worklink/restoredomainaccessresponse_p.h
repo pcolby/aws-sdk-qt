@@ -31,7 +31,7 @@ class RestoreDomainAccessResponsePrivate : public WorkLinkResponsePrivate {
 
 public:
 
-    RestoreDomainAccessResponsePrivate(RestoreDomainAccessResponse * const q);
+    explicit RestoreDomainAccessResponsePrivate(RestoreDomainAccessResponse * const q);
 
     void parseRestoreDomainAccessResponse(QXmlStreamReader &xml);
 

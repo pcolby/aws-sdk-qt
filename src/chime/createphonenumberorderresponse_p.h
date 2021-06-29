@@ -31,7 +31,7 @@ class CreatePhoneNumberOrderResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    CreatePhoneNumberOrderResponsePrivate(CreatePhoneNumberOrderResponse * const q);
+    explicit CreatePhoneNumberOrderResponsePrivate(CreatePhoneNumberOrderResponse * const q);
 
     void parseCreatePhoneNumberOrderResponse(QXmlStreamReader &xml);
 

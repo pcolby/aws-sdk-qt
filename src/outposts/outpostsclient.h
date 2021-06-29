@@ -61,7 +61,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    OutpostsClient(
+    explicit OutpostsClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -81,7 +81,7 @@ public slots:
 protected:
     /// @cond internal
     OutpostsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    OutpostsClient(OutpostsClientPrivate * const d);
+    explicit OutpostsClient(OutpostsClientPrivate * const d);
     /// @endcond
 
 private:

@@ -31,7 +31,7 @@ class GetChannelsResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    GetChannelsResponsePrivate(GetChannelsResponse * const q);
+    explicit GetChannelsResponsePrivate(GetChannelsResponse * const q);
 
     void parseGetChannelsResponse(QXmlStreamReader &xml);
 

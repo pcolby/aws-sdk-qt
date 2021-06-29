@@ -31,7 +31,7 @@ class DeleteQuickConnectResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    DeleteQuickConnectResponsePrivate(DeleteQuickConnectResponse * const q);
+    explicit DeleteQuickConnectResponsePrivate(DeleteQuickConnectResponse * const q);
 
     void parseDeleteQuickConnectResponse(QXmlStreamReader &xml);
 

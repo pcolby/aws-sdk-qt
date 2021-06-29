@@ -31,7 +31,7 @@ class RotateSecretResponsePrivate : public SecretsManagerResponsePrivate {
 
 public:
 
-    RotateSecretResponsePrivate(RotateSecretResponse * const q);
+    explicit RotateSecretResponsePrivate(RotateSecretResponse * const q);
 
     void parseRotateSecretResponse(QXmlStreamReader &xml);
 

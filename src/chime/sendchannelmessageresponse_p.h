@@ -31,7 +31,7 @@ class SendChannelMessageResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    SendChannelMessageResponsePrivate(SendChannelMessageResponse * const q);
+    explicit SendChannelMessageResponsePrivate(SendChannelMessageResponse * const q);
 
     void parseSendChannelMessageResponse(QXmlStreamReader &xml);
 

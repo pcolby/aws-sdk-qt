@@ -31,7 +31,7 @@ class DeleteClusterSecurityGroupResponsePrivate : public RedshiftResponsePrivate
 
 public:
 
-    DeleteClusterSecurityGroupResponsePrivate(DeleteClusterSecurityGroupResponse * const q);
+    explicit DeleteClusterSecurityGroupResponsePrivate(DeleteClusterSecurityGroupResponse * const q);
 
     void parseDeleteClusterSecurityGroupResponse(QXmlStreamReader &xml);
 

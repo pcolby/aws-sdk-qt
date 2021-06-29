@@ -31,7 +31,7 @@ class CreateEndpointResponsePrivate : public S3OutpostsResponsePrivate {
 
 public:
 
-    CreateEndpointResponsePrivate(CreateEndpointResponse * const q);
+    explicit CreateEndpointResponsePrivate(CreateEndpointResponse * const q);
 
     void parseCreateEndpointResponse(QXmlStreamReader &xml);
 

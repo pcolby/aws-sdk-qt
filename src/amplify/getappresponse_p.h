@@ -31,7 +31,7 @@ class GetAppResponsePrivate : public AmplifyResponsePrivate {
 
 public:
 
-    GetAppResponsePrivate(GetAppResponse * const q);
+    explicit GetAppResponsePrivate(GetAppResponse * const q);
 
     void parseGetAppResponse(QXmlStreamReader &xml);
 

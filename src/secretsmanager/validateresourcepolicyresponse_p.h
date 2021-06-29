@@ -31,7 +31,7 @@ class ValidateResourcePolicyResponsePrivate : public SecretsManagerResponsePriva
 
 public:
 
-    ValidateResourcePolicyResponsePrivate(ValidateResourcePolicyResponse * const q);
+    explicit ValidateResourcePolicyResponsePrivate(ValidateResourcePolicyResponse * const q);
 
     void parseValidateResourcePolicyResponse(QXmlStreamReader &xml);
 

@@ -29,7 +29,7 @@ class SSOAdminResponsePrivate {
 
 public:
 
-    SSOAdminResponsePrivate(SSOAdminResponse * const q);
+    explicit SSOAdminResponsePrivate(SSOAdminResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

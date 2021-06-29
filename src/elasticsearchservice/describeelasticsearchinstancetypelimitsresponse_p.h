@@ -31,7 +31,7 @@ class DescribeElasticsearchInstanceTypeLimitsResponsePrivate : public Elasticsea
 
 public:
 
-    DescribeElasticsearchInstanceTypeLimitsResponsePrivate(DescribeElasticsearchInstanceTypeLimitsResponse * const q);
+    explicit DescribeElasticsearchInstanceTypeLimitsResponsePrivate(DescribeElasticsearchInstanceTypeLimitsResponse * const q);
 
     void parseDescribeElasticsearchInstanceTypeLimitsResponse(QXmlStreamReader &xml);
 

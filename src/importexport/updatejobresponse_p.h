@@ -31,7 +31,7 @@ class UpdateJobResponsePrivate : public ImportExportResponsePrivate {
 
 public:
 
-    UpdateJobResponsePrivate(UpdateJobResponse * const q);
+    explicit UpdateJobResponsePrivate(UpdateJobResponse * const q);
 
     void parseUpdateJobResponse(QXmlStreamReader &xml);
 

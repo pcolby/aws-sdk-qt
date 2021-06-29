@@ -31,7 +31,7 @@ class UpdateParameterGroupResponsePrivate : public DaxResponsePrivate {
 
 public:
 
-    UpdateParameterGroupResponsePrivate(UpdateParameterGroupResponse * const q);
+    explicit UpdateParameterGroupResponsePrivate(UpdateParameterGroupResponse * const q);
 
     void parseUpdateParameterGroupResponse(QXmlStreamReader &xml);
 

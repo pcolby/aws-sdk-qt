@@ -31,7 +31,7 @@ class CancelSigningProfileResponsePrivate : public signerResponsePrivate {
 
 public:
 
-    CancelSigningProfileResponsePrivate(CancelSigningProfileResponse * const q);
+    explicit CancelSigningProfileResponsePrivate(CancelSigningProfileResponse * const q);
 
     void parseCancelSigningProfileResponse(QXmlStreamReader &xml);
 

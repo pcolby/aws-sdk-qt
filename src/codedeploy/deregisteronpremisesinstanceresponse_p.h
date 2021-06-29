@@ -31,7 +31,7 @@ class DeregisterOnPremisesInstanceResponsePrivate : public CodeDeployResponsePri
 
 public:
 
-    DeregisterOnPremisesInstanceResponsePrivate(DeregisterOnPremisesInstanceResponse * const q);
+    explicit DeregisterOnPremisesInstanceResponsePrivate(DeregisterOnPremisesInstanceResponse * const q);
 
     void parseDeregisterOnPremisesInstanceResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateComputeEnvironmentResponsePrivate : public BatchResponsePrivate {
 
 public:
 
-    UpdateComputeEnvironmentResponsePrivate(UpdateComputeEnvironmentResponse * const q);
+    explicit UpdateComputeEnvironmentResponsePrivate(UpdateComputeEnvironmentResponse * const q);
 
     void parseUpdateComputeEnvironmentResponse(QXmlStreamReader &xml);
 

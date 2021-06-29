@@ -31,7 +31,7 @@ class DeleteFeatureGroupResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    DeleteFeatureGroupResponsePrivate(DeleteFeatureGroupResponse * const q);
+    explicit DeleteFeatureGroupResponsePrivate(DeleteFeatureGroupResponse * const q);
 
     void parseDeleteFeatureGroupResponse(QXmlStreamReader &xml);
 

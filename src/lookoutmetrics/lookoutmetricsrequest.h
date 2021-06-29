@@ -84,7 +84,7 @@ public:
 protected:
     /// @cond internal
     LookoutMetricsRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    LookoutMetricsRequest(LookoutMetricsRequestPrivate * const d);
+    explicit LookoutMetricsRequest(LookoutMetricsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

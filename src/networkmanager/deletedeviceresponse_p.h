@@ -31,7 +31,7 @@ class DeleteDeviceResponsePrivate : public NetworkManagerResponsePrivate {
 
 public:
 
-    DeleteDeviceResponsePrivate(DeleteDeviceResponse * const q);
+    explicit DeleteDeviceResponsePrivate(DeleteDeviceResponse * const q);
 
     void parseDeleteDeviceResponse(QXmlStreamReader &xml);
 

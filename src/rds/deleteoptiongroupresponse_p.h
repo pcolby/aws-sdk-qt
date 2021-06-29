@@ -31,7 +31,7 @@ class DeleteOptionGroupResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    DeleteOptionGroupResponsePrivate(DeleteOptionGroupResponse * const q);
+    explicit DeleteOptionGroupResponsePrivate(DeleteOptionGroupResponse * const q);
 
     void parseDeleteOptionGroupResponse(QXmlStreamReader &xml);
 

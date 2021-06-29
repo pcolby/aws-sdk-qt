@@ -31,7 +31,7 @@ class GetMilestoneResponsePrivate : public WellArchitectedResponsePrivate {
 
 public:
 
-    GetMilestoneResponsePrivate(GetMilestoneResponse * const q);
+    explicit GetMilestoneResponsePrivate(GetMilestoneResponse * const q);
 
     void parseGetMilestoneResponse(QXmlStreamReader &xml);
 

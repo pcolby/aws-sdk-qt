@@ -31,7 +31,7 @@ class DescribeAutomationExecutionsResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    DescribeAutomationExecutionsResponsePrivate(DescribeAutomationExecutionsResponse * const q);
+    explicit DescribeAutomationExecutionsResponsePrivate(DescribeAutomationExecutionsResponse * const q);
 
     void parseDescribeAutomationExecutionsResponse(QXmlStreamReader &xml);
 

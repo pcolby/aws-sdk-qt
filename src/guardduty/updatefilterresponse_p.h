@@ -31,7 +31,7 @@ class UpdateFilterResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 
-    UpdateFilterResponsePrivate(UpdateFilterResponse * const q);
+    explicit UpdateFilterResponsePrivate(UpdateFilterResponse * const q);
 
     void parseUpdateFilterResponse(QXmlStreamReader &xml);
 

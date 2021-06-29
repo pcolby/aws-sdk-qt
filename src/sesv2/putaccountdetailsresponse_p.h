@@ -31,7 +31,7 @@ class PutAccountDetailsResponsePrivate : public Sesv2ResponsePrivate {
 
 public:
 
-    PutAccountDetailsResponsePrivate(PutAccountDetailsResponse * const q);
+    explicit PutAccountDetailsResponsePrivate(PutAccountDetailsResponse * const q);
 
     void parsePutAccountDetailsResponse(QXmlStreamReader &xml);
 

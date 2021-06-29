@@ -31,7 +31,7 @@ class DeregisterInstanceEventNotificationAttributesResponsePrivate : public Ec2R
 
 public:
 
-    DeregisterInstanceEventNotificationAttributesResponsePrivate(DeregisterInstanceEventNotificationAttributesResponse * const q);
+    explicit DeregisterInstanceEventNotificationAttributesResponsePrivate(DeregisterInstanceEventNotificationAttributesResponse * const q);
 
     void parseDeregisterInstanceEventNotificationAttributesResponse(QXmlStreamReader &xml);
 

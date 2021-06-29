@@ -31,7 +31,7 @@ class UpdateKeyDescriptionResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    UpdateKeyDescriptionResponsePrivate(UpdateKeyDescriptionResponse * const q);
+    explicit UpdateKeyDescriptionResponsePrivate(UpdateKeyDescriptionResponse * const q);
 
     void parseUpdateKeyDescriptionResponse(QXmlStreamReader &xml);
 

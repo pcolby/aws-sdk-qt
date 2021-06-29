@@ -31,7 +31,7 @@ class GetCrawlerMetricsResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    GetCrawlerMetricsResponsePrivate(GetCrawlerMetricsResponse * const q);
+    explicit GetCrawlerMetricsResponsePrivate(GetCrawlerMetricsResponse * const q);
 
     void parseGetCrawlerMetricsResponse(QXmlStreamReader &xml);
 

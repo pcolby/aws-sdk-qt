@@ -31,7 +31,7 @@ class DescribeValidDBInstanceModificationsResponsePrivate : public RdsResponsePr
 
 public:
 
-    DescribeValidDBInstanceModificationsResponsePrivate(DescribeValidDBInstanceModificationsResponse * const q);
+    explicit DescribeValidDBInstanceModificationsResponsePrivate(DescribeValidDBInstanceModificationsResponse * const q);
 
     void parseDescribeValidDBInstanceModificationsResponse(QXmlStreamReader &xml);
 

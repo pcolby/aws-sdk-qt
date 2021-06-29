@@ -31,7 +31,7 @@ class StartMedicalStreamTranscriptionResponsePrivate : public TranscribeStreamin
 
 public:
 
-    StartMedicalStreamTranscriptionResponsePrivate(StartMedicalStreamTranscriptionResponse * const q);
+    explicit StartMedicalStreamTranscriptionResponsePrivate(StartMedicalStreamTranscriptionResponse * const q);
 
     void parseStartMedicalStreamTranscriptionResponse(QXmlStreamReader &xml);
 

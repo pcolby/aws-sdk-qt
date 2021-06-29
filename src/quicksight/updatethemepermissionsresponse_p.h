@@ -31,7 +31,7 @@ class UpdateThemePermissionsResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    UpdateThemePermissionsResponsePrivate(UpdateThemePermissionsResponse * const q);
+    explicit UpdateThemePermissionsResponsePrivate(UpdateThemePermissionsResponse * const q);
 
     void parseUpdateThemePermissionsResponse(QXmlStreamReader &xml);
 

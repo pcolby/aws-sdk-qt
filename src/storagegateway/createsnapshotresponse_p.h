@@ -31,7 +31,7 @@ class CreateSnapshotResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 
-    CreateSnapshotResponsePrivate(CreateSnapshotResponse * const q);
+    explicit CreateSnapshotResponsePrivate(CreateSnapshotResponse * const q);
 
     void parseCreateSnapshotResponse(QXmlStreamReader &xml);
 

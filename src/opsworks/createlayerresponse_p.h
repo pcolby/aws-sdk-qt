@@ -31,7 +31,7 @@ class CreateLayerResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    CreateLayerResponsePrivate(CreateLayerResponse * const q);
+    explicit CreateLayerResponsePrivate(CreateLayerResponse * const q);
 
     void parseCreateLayerResponse(QXmlStreamReader &xml);
 

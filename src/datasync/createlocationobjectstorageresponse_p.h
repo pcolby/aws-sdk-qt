@@ -31,7 +31,7 @@ class CreateLocationObjectStorageResponsePrivate : public DataSyncResponsePrivat
 
 public:
 
-    CreateLocationObjectStorageResponsePrivate(CreateLocationObjectStorageResponse * const q);
+    explicit CreateLocationObjectStorageResponsePrivate(CreateLocationObjectStorageResponse * const q);
 
     void parseCreateLocationObjectStorageResponse(QXmlStreamReader &xml);
 

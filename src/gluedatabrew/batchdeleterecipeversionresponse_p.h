@@ -31,7 +31,7 @@ class BatchDeleteRecipeVersionResponsePrivate : public GlueDataBrewResponsePriva
 
 public:
 
-    BatchDeleteRecipeVersionResponsePrivate(BatchDeleteRecipeVersionResponse * const q);
+    explicit BatchDeleteRecipeVersionResponsePrivate(BatchDeleteRecipeVersionResponse * const q);
 
     void parseBatchDeleteRecipeVersionResponse(QXmlStreamReader &xml);
 

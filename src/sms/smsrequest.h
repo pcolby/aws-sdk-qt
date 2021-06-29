@@ -94,7 +94,7 @@ public:
 protected:
     /// @cond internal
     SmsRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    SmsRequest(SmsRequestPrivate * const d);
+    explicit SmsRequest(SmsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

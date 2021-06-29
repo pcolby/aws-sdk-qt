@@ -31,7 +31,7 @@ class UpdateDataRetentionResponsePrivate : public KinesisVideoResponsePrivate {
 
 public:
 
-    UpdateDataRetentionResponsePrivate(UpdateDataRetentionResponse * const q);
+    explicit UpdateDataRetentionResponsePrivate(UpdateDataRetentionResponse * const q);
 
     void parseUpdateDataRetentionResponse(QXmlStreamReader &xml);
 

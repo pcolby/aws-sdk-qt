@@ -31,7 +31,7 @@ class StopInferenceSchedulerResponsePrivate : public LookoutEquipmentResponsePri
 
 public:
 
-    StopInferenceSchedulerResponsePrivate(StopInferenceSchedulerResponse * const q);
+    explicit StopInferenceSchedulerResponsePrivate(StopInferenceSchedulerResponse * const q);
 
     void parseStopInferenceSchedulerResponse(QXmlStreamReader &xml);
 

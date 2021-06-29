@@ -31,7 +31,7 @@ class StopTrainingEntityRecognizerResponsePrivate : public ComprehendResponsePri
 
 public:
 
-    StopTrainingEntityRecognizerResponsePrivate(StopTrainingEntityRecognizerResponse * const q);
+    explicit StopTrainingEntityRecognizerResponsePrivate(StopTrainingEntityRecognizerResponse * const q);
 
     void parseStopTrainingEntityRecognizerResponse(QXmlStreamReader &xml);
 

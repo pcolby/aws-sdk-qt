@@ -31,7 +31,7 @@ class GetUploadResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    GetUploadResponsePrivate(GetUploadResponse * const q);
+    explicit GetUploadResponsePrivate(GetUploadResponse * const q);
 
     void parseGetUploadResponse(QXmlStreamReader &xml);
 

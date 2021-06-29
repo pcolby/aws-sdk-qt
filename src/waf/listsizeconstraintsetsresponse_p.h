@@ -31,7 +31,7 @@ class ListSizeConstraintSetsResponsePrivate : public WafResponsePrivate {
 
 public:
 
-    ListSizeConstraintSetsResponsePrivate(ListSizeConstraintSetsResponse * const q);
+    explicit ListSizeConstraintSetsResponsePrivate(ListSizeConstraintSetsResponse * const q);
 
     void parseListSizeConstraintSetsResponse(QXmlStreamReader &xml);
 

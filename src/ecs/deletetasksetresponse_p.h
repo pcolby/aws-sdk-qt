@@ -31,7 +31,7 @@ class DeleteTaskSetResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    DeleteTaskSetResponsePrivate(DeleteTaskSetResponse * const q);
+    explicit DeleteTaskSetResponsePrivate(DeleteTaskSetResponse * const q);
 
     void parseDeleteTaskSetResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeJournalKinesisStreamResponsePrivate : public QldbResponsePrivate {
 
 public:
 
-    DescribeJournalKinesisStreamResponsePrivate(DescribeJournalKinesisStreamResponse * const q);
+    explicit DescribeJournalKinesisStreamResponsePrivate(DescribeJournalKinesisStreamResponse * const q);
 
     void parseDescribeJournalKinesisStreamResponse(QXmlStreamReader &xml);
 

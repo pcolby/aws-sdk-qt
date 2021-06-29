@@ -31,7 +31,7 @@ class StartFHIRExportJobResponsePrivate : public HealthLakeResponsePrivate {
 
 public:
 
-    StartFHIRExportJobResponsePrivate(StartFHIRExportJobResponse * const q);
+    explicit StartFHIRExportJobResponsePrivate(StartFHIRExportJobResponse * const q);
 
     void parseStartFHIRExportJobResponse(QXmlStreamReader &xml);
 

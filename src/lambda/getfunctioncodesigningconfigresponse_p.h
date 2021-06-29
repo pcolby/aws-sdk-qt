@@ -31,7 +31,7 @@ class GetFunctionCodeSigningConfigResponsePrivate : public LambdaResponsePrivate
 
 public:
 
-    GetFunctionCodeSigningConfigResponsePrivate(GetFunctionCodeSigningConfigResponse * const q);
+    explicit GetFunctionCodeSigningConfigResponsePrivate(GetFunctionCodeSigningConfigResponse * const q);
 
     void parseGetFunctionCodeSigningConfigResponse(QXmlStreamReader &xml);
 

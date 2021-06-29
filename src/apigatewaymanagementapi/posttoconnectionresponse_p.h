@@ -31,7 +31,7 @@ class PostToConnectionResponsePrivate : public ApiGatewayManagementApiResponsePr
 
 public:
 
-    PostToConnectionResponsePrivate(PostToConnectionResponse * const q);
+    explicit PostToConnectionResponsePrivate(PostToConnectionResponse * const q);
 
     void parsePostToConnectionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateSMBFileShareVisibilityResponsePrivate : public StorageGatewayRespons
 
 public:
 
-    UpdateSMBFileShareVisibilityResponsePrivate(UpdateSMBFileShareVisibilityResponse * const q);
+    explicit UpdateSMBFileShareVisibilityResponsePrivate(UpdateSMBFileShareVisibilityResponse * const q);
 
     void parseUpdateSMBFileShareVisibilityResponse(QXmlStreamReader &xml);
 

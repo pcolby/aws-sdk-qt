@@ -31,7 +31,7 @@ class ListGeoLocationsResponsePrivate : public Route53ResponsePrivate {
 
 public:
 
-    ListGeoLocationsResponsePrivate(ListGeoLocationsResponse * const q);
+    explicit ListGeoLocationsResponsePrivate(ListGeoLocationsResponse * const q);
 
     void parseListGeoLocationsResponse(QXmlStreamReader &xml);
 

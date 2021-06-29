@@ -31,7 +31,7 @@ class GetReservedInstancesExchangeQuoteResponsePrivate : public Ec2ResponsePriva
 
 public:
 
-    GetReservedInstancesExchangeQuoteResponsePrivate(GetReservedInstancesExchangeQuoteResponse * const q);
+    explicit GetReservedInstancesExchangeQuoteResponsePrivate(GetReservedInstancesExchangeQuoteResponse * const q);
 
     void parseGetReservedInstancesExchangeQuoteResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateWebACLResponsePrivate : public WafResponsePrivate {
 
 public:
 
-    UpdateWebACLResponsePrivate(UpdateWebACLResponse * const q);
+    explicit UpdateWebACLResponsePrivate(UpdateWebACLResponse * const q);
 
     void parseUpdateWebACLResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeCodeCoveragesResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 
-    DescribeCodeCoveragesResponsePrivate(DescribeCodeCoveragesResponse * const q);
+    explicit DescribeCodeCoveragesResponsePrivate(DescribeCodeCoveragesResponse * const q);
 
     void parseDescribeCodeCoveragesResponse(QXmlStreamReader &xml);
 

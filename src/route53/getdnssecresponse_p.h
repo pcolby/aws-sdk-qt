@@ -31,7 +31,7 @@ class GetDNSSECResponsePrivate : public Route53ResponsePrivate {
 
 public:
 
-    GetDNSSECResponsePrivate(GetDNSSECResponse * const q);
+    explicit GetDNSSECResponsePrivate(GetDNSSECResponse * const q);
 
     void parseGetDNSSECResponse(QXmlStreamReader &xml);
 

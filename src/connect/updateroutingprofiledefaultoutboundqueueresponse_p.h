@@ -31,7 +31,7 @@ class UpdateRoutingProfileDefaultOutboundQueueResponsePrivate : public ConnectRe
 
 public:
 
-    UpdateRoutingProfileDefaultOutboundQueueResponsePrivate(UpdateRoutingProfileDefaultOutboundQueueResponse * const q);
+    explicit UpdateRoutingProfileDefaultOutboundQueueResponsePrivate(UpdateRoutingProfileDefaultOutboundQueueResponse * const q);
 
     void parseUpdateRoutingProfileDefaultOutboundQueueResponse(QXmlStreamReader &xml);
 

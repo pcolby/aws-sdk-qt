@@ -31,7 +31,7 @@ class InitializeClusterResponsePrivate : public CloudHSMV2ResponsePrivate {
 
 public:
 
-    InitializeClusterResponsePrivate(InitializeClusterResponse * const q);
+    explicit InitializeClusterResponsePrivate(InitializeClusterResponse * const q);
 
     void parseInitializeClusterResponse(QXmlStreamReader &xml);
 

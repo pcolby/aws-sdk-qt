@@ -31,7 +31,7 @@ class UpdateContributorInsightsResponsePrivate : public DynamoDBResponsePrivate 
 
 public:
 
-    UpdateContributorInsightsResponsePrivate(UpdateContributorInsightsResponse * const q);
+    explicit UpdateContributorInsightsResponsePrivate(UpdateContributorInsightsResponse * const q);
 
     void parseUpdateContributorInsightsResponse(QXmlStreamReader &xml);
 

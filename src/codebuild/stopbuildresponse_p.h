@@ -31,7 +31,7 @@ class StopBuildResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 
-    StopBuildResponsePrivate(StopBuildResponse * const q);
+    explicit StopBuildResponsePrivate(StopBuildResponse * const q);
 
     void parseStopBuildResponse(QXmlStreamReader &xml);
 

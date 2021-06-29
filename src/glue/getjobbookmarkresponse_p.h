@@ -31,7 +31,7 @@ class GetJobBookmarkResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    GetJobBookmarkResponsePrivate(GetJobBookmarkResponse * const q);
+    explicit GetJobBookmarkResponsePrivate(GetJobBookmarkResponse * const q);
 
     void parseGetJobBookmarkResponse(QXmlStreamReader &xml);
 

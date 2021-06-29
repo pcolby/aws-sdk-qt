@@ -31,7 +31,7 @@ class CreateInstanceAccessControlAttributeConfigurationResponsePrivate : public 
 
 public:
 
-    CreateInstanceAccessControlAttributeConfigurationResponsePrivate(CreateInstanceAccessControlAttributeConfigurationResponse * const q);
+    explicit CreateInstanceAccessControlAttributeConfigurationResponsePrivate(CreateInstanceAccessControlAttributeConfigurationResponse * const q);
 
     void parseCreateInstanceAccessControlAttributeConfigurationResponse(QXmlStreamReader &xml);
 

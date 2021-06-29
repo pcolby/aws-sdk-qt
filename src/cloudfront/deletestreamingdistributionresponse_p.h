@@ -31,7 +31,7 @@ class DeleteStreamingDistributionResponsePrivate : public CloudFrontResponsePriv
 
 public:
 
-    DeleteStreamingDistributionResponsePrivate(DeleteStreamingDistributionResponse * const q);
+    explicit DeleteStreamingDistributionResponsePrivate(DeleteStreamingDistributionResponse * const q);
 
     void parseDeleteStreamingDistributionResponse(QXmlStreamReader &xml);
 

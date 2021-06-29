@@ -31,7 +31,7 @@ class GetBlobResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 
-    GetBlobResponsePrivate(GetBlobResponse * const q);
+    explicit GetBlobResponsePrivate(GetBlobResponse * const q);
 
     void parseGetBlobResponse(QXmlStreamReader &xml);
 

@@ -29,7 +29,7 @@ class RekognitionResponsePrivate {
 
 public:
 
-    RekognitionResponsePrivate(RekognitionResponse * const q);
+    explicit RekognitionResponsePrivate(RekognitionResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

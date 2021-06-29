@@ -31,7 +31,7 @@ class GetClientCertificateResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    GetClientCertificateResponsePrivate(GetClientCertificateResponse * const q);
+    explicit GetClientCertificateResponsePrivate(GetClientCertificateResponse * const q);
 
     void parseGetClientCertificateResponse(QXmlStreamReader &xml);
 

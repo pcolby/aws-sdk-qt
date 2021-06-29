@@ -31,7 +31,7 @@ class DeleteSecurityGroupResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DeleteSecurityGroupResponsePrivate(DeleteSecurityGroupResponse * const q);
+    explicit DeleteSecurityGroupResponsePrivate(DeleteSecurityGroupResponse * const q);
 
     void parseDeleteSecurityGroupResponse(QXmlStreamReader &xml);
 

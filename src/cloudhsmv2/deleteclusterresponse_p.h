@@ -31,7 +31,7 @@ class DeleteClusterResponsePrivate : public CloudHSMV2ResponsePrivate {
 
 public:
 
-    DeleteClusterResponsePrivate(DeleteClusterResponse * const q);
+    explicit DeleteClusterResponsePrivate(DeleteClusterResponse * const q);
 
     void parseDeleteClusterResponse(QXmlStreamReader &xml);
 

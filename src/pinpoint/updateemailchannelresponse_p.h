@@ -31,7 +31,7 @@ class UpdateEmailChannelResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    UpdateEmailChannelResponsePrivate(UpdateEmailChannelResponse * const q);
+    explicit UpdateEmailChannelResponsePrivate(UpdateEmailChannelResponse * const q);
 
     void parseUpdateEmailChannelResponse(QXmlStreamReader &xml);
 

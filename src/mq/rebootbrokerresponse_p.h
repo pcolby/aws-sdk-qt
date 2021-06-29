@@ -31,7 +31,7 @@ class RebootBrokerResponsePrivate : public MqResponsePrivate {
 
 public:
 
-    RebootBrokerResponsePrivate(RebootBrokerResponse * const q);
+    explicit RebootBrokerResponsePrivate(RebootBrokerResponse * const q);
 
     void parseRebootBrokerResponse(QXmlStreamReader &xml);
 

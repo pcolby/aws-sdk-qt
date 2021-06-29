@@ -31,7 +31,7 @@ class DescribeServiceAccessPoliciesResponsePrivate : public CloudSearchResponseP
 
 public:
 
-    DescribeServiceAccessPoliciesResponsePrivate(DescribeServiceAccessPoliciesResponse * const q);
+    explicit DescribeServiceAccessPoliciesResponsePrivate(DescribeServiceAccessPoliciesResponse * const q);
 
     void parseDescribeServiceAccessPoliciesResponse(QXmlStreamReader &xml);
 

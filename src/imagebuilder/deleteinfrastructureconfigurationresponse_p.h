@@ -31,7 +31,7 @@ class DeleteInfrastructureConfigurationResponsePrivate : public imagebuilderResp
 
 public:
 
-    DeleteInfrastructureConfigurationResponsePrivate(DeleteInfrastructureConfigurationResponse * const q);
+    explicit DeleteInfrastructureConfigurationResponsePrivate(DeleteInfrastructureConfigurationResponse * const q);
 
     void parseDeleteInfrastructureConfigurationResponse(QXmlStreamReader &xml);
 

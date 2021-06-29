@@ -31,7 +31,7 @@ class DeleteKnownHostKeysResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    DeleteKnownHostKeysResponsePrivate(DeleteKnownHostKeysResponse * const q);
+    explicit DeleteKnownHostKeysResponsePrivate(DeleteKnownHostKeysResponse * const q);
 
     void parseDeleteKnownHostKeysResponse(QXmlStreamReader &xml);
 

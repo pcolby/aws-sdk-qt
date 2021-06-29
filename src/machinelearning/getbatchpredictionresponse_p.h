@@ -31,7 +31,7 @@ class GetBatchPredictionResponsePrivate : public MachineLearningResponsePrivate 
 
 public:
 
-    GetBatchPredictionResponsePrivate(GetBatchPredictionResponse * const q);
+    explicit GetBatchPredictionResponsePrivate(GetBatchPredictionResponse * const q);
 
     void parseGetBatchPredictionResponse(QXmlStreamReader &xml);
 

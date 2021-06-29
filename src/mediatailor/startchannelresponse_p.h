@@ -31,7 +31,7 @@ class StartChannelResponsePrivate : public MediaTailorResponsePrivate {
 
 public:
 
-    StartChannelResponsePrivate(StartChannelResponse * const q);
+    explicit StartChannelResponsePrivate(StartChannelResponse * const q);
 
     void parseStartChannelResponse(QXmlStreamReader &xml);
 

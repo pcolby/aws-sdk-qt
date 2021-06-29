@@ -31,7 +31,7 @@ class UpdateQueueMaxContactsResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    UpdateQueueMaxContactsResponsePrivate(UpdateQueueMaxContactsResponse * const q);
+    explicit UpdateQueueMaxContactsResponsePrivate(UpdateQueueMaxContactsResponse * const q);
 
     void parseUpdateQueueMaxContactsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteFunctionConcurrencyResponsePrivate : public LambdaResponsePrivate {
 
 public:
 
-    DeleteFunctionConcurrencyResponsePrivate(DeleteFunctionConcurrencyResponse * const q);
+    explicit DeleteFunctionConcurrencyResponsePrivate(DeleteFunctionConcurrencyResponse * const q);
 
     void parseDeleteFunctionConcurrencyResponse(QXmlStreamReader &xml);
 

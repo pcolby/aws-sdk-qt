@@ -31,7 +31,7 @@ class GetMapGlyphsResponsePrivate : public LocationServiceResponsePrivate {
 
 public:
 
-    GetMapGlyphsResponsePrivate(GetMapGlyphsResponse * const q);
+    explicit GetMapGlyphsResponsePrivate(GetMapGlyphsResponse * const q);
 
     void parseGetMapGlyphsResponse(QXmlStreamReader &xml);
 

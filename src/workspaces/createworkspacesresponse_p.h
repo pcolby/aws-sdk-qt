@@ -31,7 +31,7 @@ class CreateWorkspacesResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 
-    CreateWorkspacesResponsePrivate(CreateWorkspacesResponse * const q);
+    explicit CreateWorkspacesResponsePrivate(CreateWorkspacesResponse * const q);
 
     void parseCreateWorkspacesResponse(QXmlStreamReader &xml);
 

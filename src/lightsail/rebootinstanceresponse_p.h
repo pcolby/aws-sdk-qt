@@ -31,7 +31,7 @@ class RebootInstanceResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    RebootInstanceResponsePrivate(RebootInstanceResponse * const q);
+    explicit RebootInstanceResponsePrivate(RebootInstanceResponse * const q);
 
     void parseRebootInstanceResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListResourceServersResponsePrivate : public CognitoIdentityProviderRespons
 
 public:
 
-    ListResourceServersResponsePrivate(ListResourceServersResponse * const q);
+    explicit ListResourceServersResponsePrivate(ListResourceServersResponse * const q);
 
     void parseListResourceServersResponse(QXmlStreamReader &xml);
 

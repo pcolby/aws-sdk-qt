@@ -31,7 +31,7 @@ class DescribeListenersResponsePrivate : public ElasticLoadBalancingv2ResponsePr
 
 public:
 
-    DescribeListenersResponsePrivate(DescribeListenersResponse * const q);
+    explicit DescribeListenersResponsePrivate(DescribeListenersResponse * const q);
 
     void parseDescribeListenersResponse(QXmlStreamReader &xml);
 

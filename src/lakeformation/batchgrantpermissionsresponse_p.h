@@ -31,7 +31,7 @@ class BatchGrantPermissionsResponsePrivate : public LakeFormationResponsePrivate
 
 public:
 
-    BatchGrantPermissionsResponsePrivate(BatchGrantPermissionsResponse * const q);
+    explicit BatchGrantPermissionsResponsePrivate(BatchGrantPermissionsResponse * const q);
 
     void parseBatchGrantPermissionsResponse(QXmlStreamReader &xml);
 

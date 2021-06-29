@@ -31,7 +31,7 @@ class ListGameServerGroupsResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    ListGameServerGroupsResponsePrivate(ListGameServerGroupsResponse * const q);
+    explicit ListGameServerGroupsResponsePrivate(ListGameServerGroupsResponse * const q);
 
     void parseListGameServerGroupsResponse(QXmlStreamReader &xml);
 

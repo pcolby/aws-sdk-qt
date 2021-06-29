@@ -31,7 +31,7 @@ class DescribeExportConfigurationsResponsePrivate : public ApplicationDiscoveryS
 
 public:
 
-    DescribeExportConfigurationsResponsePrivate(DescribeExportConfigurationsResponse * const q);
+    explicit DescribeExportConfigurationsResponsePrivate(DescribeExportConfigurationsResponse * const q);
 
     void parseDescribeExportConfigurationsResponse(QXmlStreamReader &xml);
 

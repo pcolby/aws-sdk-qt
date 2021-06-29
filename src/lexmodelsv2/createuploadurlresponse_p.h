@@ -31,7 +31,7 @@ class CreateUploadUrlResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 
-    CreateUploadUrlResponsePrivate(CreateUploadUrlResponse * const q);
+    explicit CreateUploadUrlResponsePrivate(CreateUploadUrlResponse * const q);
 
     void parseCreateUploadUrlResponse(QXmlStreamReader &xml);
 

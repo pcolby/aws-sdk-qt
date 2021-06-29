@@ -29,7 +29,7 @@ class LicenseManagerResponsePrivate {
 
 public:
 
-    LicenseManagerResponsePrivate(LicenseManagerResponse * const q);
+    explicit LicenseManagerResponsePrivate(LicenseManagerResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

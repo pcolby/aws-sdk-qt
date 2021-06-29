@@ -31,7 +31,7 @@ class DeleteFilterResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 
-    DeleteFilterResponsePrivate(DeleteFilterResponse * const q);
+    explicit DeleteFilterResponsePrivate(DeleteFilterResponse * const q);
 
     void parseDeleteFilterResponse(QXmlStreamReader &xml);
 

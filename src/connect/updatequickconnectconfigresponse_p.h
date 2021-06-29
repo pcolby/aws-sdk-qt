@@ -31,7 +31,7 @@ class UpdateQuickConnectConfigResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    UpdateQuickConnectConfigResponsePrivate(UpdateQuickConnectConfigResponse * const q);
+    explicit UpdateQuickConnectConfigResponsePrivate(UpdateQuickConnectConfigResponse * const q);
 
     void parseUpdateQuickConnectConfigResponse(QXmlStreamReader &xml);
 

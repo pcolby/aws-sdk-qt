@@ -30,7 +30,7 @@ class WellArchitectedClient;
 class WellArchitectedClientPrivate {
 
 public:
-    WellArchitectedClientPrivate(WellArchitectedClient * const q);
+    explicit WellArchitectedClientPrivate(WellArchitectedClient * const q);
 
 protected:
     WellArchitectedClient * const q_ptr; ///< Internal q-pointer.

@@ -31,7 +31,7 @@ class ListThemeAliasesResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    ListThemeAliasesResponsePrivate(ListThemeAliasesResponse * const q);
+    explicit ListThemeAliasesResponsePrivate(ListThemeAliasesResponse * const q);
 
     void parseListThemeAliasesResponse(QXmlStreamReader &xml);
 

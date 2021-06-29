@@ -31,7 +31,7 @@ class CancelServicePipelineDeploymentResponsePrivate : public ProtonResponsePriv
 
 public:
 
-    CancelServicePipelineDeploymentResponsePrivate(CancelServicePipelineDeploymentResponse * const q);
+    explicit CancelServicePipelineDeploymentResponsePrivate(CancelServicePipelineDeploymentResponse * const q);
 
     void parseCancelServicePipelineDeploymentResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeTargetGroupAttributesResponsePrivate : public ElasticLoadBalancing
 
 public:
 
-    DescribeTargetGroupAttributesResponsePrivate(DescribeTargetGroupAttributesResponse * const q);
+    explicit DescribeTargetGroupAttributesResponsePrivate(DescribeTargetGroupAttributesResponse * const q);
 
     void parseDescribeTargetGroupAttributesResponse(QXmlStreamReader &xml);
 

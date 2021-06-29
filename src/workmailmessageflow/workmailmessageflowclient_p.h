@@ -30,7 +30,7 @@ class WorkMailMessageFlowClient;
 class WorkMailMessageFlowClientPrivate {
 
 public:
-    WorkMailMessageFlowClientPrivate(WorkMailMessageFlowClient * const q);
+    explicit WorkMailMessageFlowClientPrivate(WorkMailMessageFlowClient * const q);
 
 protected:
     WorkMailMessageFlowClient * const q_ptr; ///< Internal q-pointer.

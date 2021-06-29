@@ -31,7 +31,7 @@ class StopBgpFailoverTestResponsePrivate : public DirectConnectResponsePrivate {
 
 public:
 
-    StopBgpFailoverTestResponsePrivate(StopBgpFailoverTestResponse * const q);
+    explicit StopBgpFailoverTestResponsePrivate(StopBgpFailoverTestResponse * const q);
 
     void parseStopBgpFailoverTestResponse(QXmlStreamReader &xml);
 

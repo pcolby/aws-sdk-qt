@@ -31,7 +31,7 @@ class ResetServiceSpecificCredentialResponsePrivate : public IamResponsePrivate 
 
 public:
 
-    ResetServiceSpecificCredentialResponsePrivate(ResetServiceSpecificCredentialResponse * const q);
+    explicit ResetServiceSpecificCredentialResponsePrivate(ResetServiceSpecificCredentialResponse * const q);
 
     void parseResetServiceSpecificCredentialResponse(QXmlStreamReader &xml);
 

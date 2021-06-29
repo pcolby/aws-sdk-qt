@@ -31,7 +31,7 @@ class StartRemediationExecutionResponsePrivate : public ConfigServiceResponsePri
 
 public:
 
-    StartRemediationExecutionResponsePrivate(StartRemediationExecutionResponse * const q);
+    explicit StartRemediationExecutionResponsePrivate(StartRemediationExecutionResponse * const q);
 
     void parseStartRemediationExecutionResponse(QXmlStreamReader &xml);
 

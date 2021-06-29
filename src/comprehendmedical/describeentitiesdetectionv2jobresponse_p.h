@@ -31,7 +31,7 @@ class DescribeEntitiesDetectionV2JobResponsePrivate : public ComprehendMedicalRe
 
 public:
 
-    DescribeEntitiesDetectionV2JobResponsePrivate(DescribeEntitiesDetectionV2JobResponse * const q);
+    explicit DescribeEntitiesDetectionV2JobResponsePrivate(DescribeEntitiesDetectionV2JobResponse * const q);
 
     void parseDescribeEntitiesDetectionV2JobResponse(QXmlStreamReader &xml);
 

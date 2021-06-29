@@ -31,7 +31,7 @@ class ExportJournalToS3ResponsePrivate : public QldbResponsePrivate {
 
 public:
 
-    ExportJournalToS3ResponsePrivate(ExportJournalToS3Response * const q);
+    explicit ExportJournalToS3ResponsePrivate(ExportJournalToS3Response * const q);
 
     void parseExportJournalToS3Response(QXmlStreamReader &xml);
 

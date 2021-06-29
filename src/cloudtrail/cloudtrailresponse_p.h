@@ -29,7 +29,7 @@ class CloudTrailResponsePrivate {
 
 public:
 
-    CloudTrailResponsePrivate(CloudTrailResponse * const q);
+    explicit CloudTrailResponsePrivate(CloudTrailResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

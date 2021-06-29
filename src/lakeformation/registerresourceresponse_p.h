@@ -31,7 +31,7 @@ class RegisterResourceResponsePrivate : public LakeFormationResponsePrivate {
 
 public:
 
-    RegisterResourceResponsePrivate(RegisterResourceResponse * const q);
+    explicit RegisterResourceResponsePrivate(RegisterResourceResponse * const q);
 
     void parseRegisterResourceResponse(QXmlStreamReader &xml);
 

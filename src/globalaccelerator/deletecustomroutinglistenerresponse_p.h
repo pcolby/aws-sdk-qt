@@ -31,7 +31,7 @@ class DeleteCustomRoutingListenerResponsePrivate : public GlobalAcceleratorRespo
 
 public:
 
-    DeleteCustomRoutingListenerResponsePrivate(DeleteCustomRoutingListenerResponse * const q);
+    explicit DeleteCustomRoutingListenerResponsePrivate(DeleteCustomRoutingListenerResponse * const q);
 
     void parseDeleteCustomRoutingListenerResponse(QXmlStreamReader &xml);
 

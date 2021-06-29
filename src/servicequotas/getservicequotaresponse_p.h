@@ -31,7 +31,7 @@ class GetServiceQuotaResponsePrivate : public ServiceQuotasResponsePrivate {
 
 public:
 
-    GetServiceQuotaResponsePrivate(GetServiceQuotaResponse * const q);
+    explicit GetServiceQuotaResponsePrivate(GetServiceQuotaResponse * const q);
 
     void parseGetServiceQuotaResponse(QXmlStreamReader &xml);
 

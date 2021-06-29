@@ -31,7 +31,7 @@ class ListDatasetsResponsePrivate : public GlueDataBrewResponsePrivate {
 
 public:
 
-    ListDatasetsResponsePrivate(ListDatasetsResponse * const q);
+    explicit ListDatasetsResponsePrivate(ListDatasetsResponse * const q);
 
     void parseListDatasetsResponse(QXmlStreamReader &xml);
 

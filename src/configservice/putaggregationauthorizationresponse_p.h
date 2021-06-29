@@ -31,7 +31,7 @@ class PutAggregationAuthorizationResponsePrivate : public ConfigServiceResponseP
 
 public:
 
-    PutAggregationAuthorizationResponsePrivate(PutAggregationAuthorizationResponse * const q);
+    explicit PutAggregationAuthorizationResponsePrivate(PutAggregationAuthorizationResponse * const q);
 
     void parsePutAggregationAuthorizationResponse(QXmlStreamReader &xml);
 

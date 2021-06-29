@@ -31,7 +31,7 @@ class DisassociatePhoneNumbersFromVoiceConnectorResponsePrivate : public ChimeRe
 
 public:
 
-    DisassociatePhoneNumbersFromVoiceConnectorResponsePrivate(DisassociatePhoneNumbersFromVoiceConnectorResponse * const q);
+    explicit DisassociatePhoneNumbersFromVoiceConnectorResponsePrivate(DisassociatePhoneNumbersFromVoiceConnectorResponse * const q);
 
     void parseDisassociatePhoneNumbersFromVoiceConnectorResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribePolicyResponsePrivate : public OrganizationsResponsePrivate {
 
 public:
 
-    DescribePolicyResponsePrivate(DescribePolicyResponse * const q);
+    explicit DescribePolicyResponsePrivate(DescribePolicyResponse * const q);
 
     void parseDescribePolicyResponse(QXmlStreamReader &xml);
 

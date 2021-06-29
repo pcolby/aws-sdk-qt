@@ -31,7 +31,7 @@ class GetPersonTrackingResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 
-    GetPersonTrackingResponsePrivate(GetPersonTrackingResponse * const q);
+    explicit GetPersonTrackingResponsePrivate(GetPersonTrackingResponse * const q);
 
     void parseGetPersonTrackingResponse(QXmlStreamReader &xml);
 

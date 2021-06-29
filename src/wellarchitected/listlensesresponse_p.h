@@ -31,7 +31,7 @@ class ListLensesResponsePrivate : public WellArchitectedResponsePrivate {
 
 public:
 
-    ListLensesResponsePrivate(ListLensesResponse * const q);
+    explicit ListLensesResponsePrivate(ListLensesResponse * const q);
 
     void parseListLensesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetEntitlementsResponsePrivate : public MarketplaceEntitlementServiceRespo
 
 public:
 
-    GetEntitlementsResponsePrivate(GetEntitlementsResponse * const q);
+    explicit GetEntitlementsResponsePrivate(GetEntitlementsResponse * const q);
 
     void parseGetEntitlementsResponse(QXmlStreamReader &xml);
 

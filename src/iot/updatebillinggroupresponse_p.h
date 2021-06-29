@@ -31,7 +31,7 @@ class UpdateBillingGroupResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    UpdateBillingGroupResponsePrivate(UpdateBillingGroupResponse * const q);
+    explicit UpdateBillingGroupResponsePrivate(UpdateBillingGroupResponse * const q);
 
     void parseUpdateBillingGroupResponse(QXmlStreamReader &xml);
 

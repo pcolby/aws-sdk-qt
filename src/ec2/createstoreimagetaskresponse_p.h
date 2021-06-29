@@ -31,7 +31,7 @@ class CreateStoreImageTaskResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CreateStoreImageTaskResponsePrivate(CreateStoreImageTaskResponse * const q);
+    explicit CreateStoreImageTaskResponsePrivate(CreateStoreImageTaskResponse * const q);
 
     void parseCreateStoreImageTaskResponse(QXmlStreamReader &xml);
 

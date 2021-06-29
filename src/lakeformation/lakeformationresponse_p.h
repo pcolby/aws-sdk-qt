@@ -29,7 +29,7 @@ class LakeFormationResponsePrivate {
 
 public:
 
-    LakeFormationResponsePrivate(LakeFormationResponse * const q);
+    explicit LakeFormationResponsePrivate(LakeFormationResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

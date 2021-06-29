@@ -31,7 +31,7 @@ class ModifySubnetAttributeResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ModifySubnetAttributeResponsePrivate(ModifySubnetAttributeResponse * const q);
+    explicit ModifySubnetAttributeResponsePrivate(ModifySubnetAttributeResponse * const q);
 
     void parseModifySubnetAttributeResponse(QXmlStreamReader &xml);
 

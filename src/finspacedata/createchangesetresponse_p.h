@@ -31,7 +31,7 @@ class CreateChangesetResponsePrivate : public FinSpaceDataResponsePrivate {
 
 public:
 
-    CreateChangesetResponsePrivate(CreateChangesetResponse * const q);
+    explicit CreateChangesetResponsePrivate(CreateChangesetResponse * const q);
 
     void parseCreateChangesetResponse(QXmlStreamReader &xml);
 

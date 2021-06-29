@@ -31,7 +31,7 @@ class GetRealtimeLogConfigResponsePrivate : public CloudFrontResponsePrivate {
 
 public:
 
-    GetRealtimeLogConfigResponsePrivate(GetRealtimeLogConfigResponse * const q);
+    explicit GetRealtimeLogConfigResponsePrivate(GetRealtimeLogConfigResponse * const q);
 
     void parseGetRealtimeLogConfigResponse(QXmlStreamReader &xml);
 

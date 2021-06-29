@@ -31,7 +31,7 @@ class DeleteDatasetImportJobResponsePrivate : public ForecastServiceResponsePriv
 
 public:
 
-    DeleteDatasetImportJobResponsePrivate(DeleteDatasetImportJobResponse * const q);
+    explicit DeleteDatasetImportJobResponsePrivate(DeleteDatasetImportJobResponse * const q);
 
     void parseDeleteDatasetImportJobResponse(QXmlStreamReader &xml);
 

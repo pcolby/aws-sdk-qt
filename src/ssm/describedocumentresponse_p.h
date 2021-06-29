@@ -31,7 +31,7 @@ class DescribeDocumentResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    DescribeDocumentResponsePrivate(DescribeDocumentResponse * const q);
+    explicit DescribeDocumentResponsePrivate(DescribeDocumentResponse * const q);
 
     void parseDescribeDocumentResponse(QXmlStreamReader &xml);
 

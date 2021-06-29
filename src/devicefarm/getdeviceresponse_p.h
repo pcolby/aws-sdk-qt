@@ -31,7 +31,7 @@ class GetDeviceResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    GetDeviceResponsePrivate(GetDeviceResponse * const q);
+    explicit GetDeviceResponsePrivate(GetDeviceResponse * const q);
 
     void parseGetDeviceResponse(QXmlStreamReader &xml);
 

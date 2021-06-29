@@ -31,7 +31,7 @@ class DescribeDocumentClassificationJobResponsePrivate : public ComprehendRespon
 
 public:
 
-    DescribeDocumentClassificationJobResponsePrivate(DescribeDocumentClassificationJobResponse * const q);
+    explicit DescribeDocumentClassificationJobResponsePrivate(DescribeDocumentClassificationJobResponse * const q);
 
     void parseDescribeDocumentClassificationJobResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class StopNotebookInstanceResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    StopNotebookInstanceResponsePrivate(StopNotebookInstanceResponse * const q);
+    explicit StopNotebookInstanceResponsePrivate(StopNotebookInstanceResponse * const q);
 
     void parseStopNotebookInstanceResponse(QXmlStreamReader &xml);
 

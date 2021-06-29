@@ -31,7 +31,7 @@ class GetMapSpritesResponsePrivate : public LocationServiceResponsePrivate {
 
 public:
 
-    GetMapSpritesResponsePrivate(GetMapSpritesResponse * const q);
+    explicit GetMapSpritesResponsePrivate(GetMapSpritesResponse * const q);
 
     void parseGetMapSpritesResponse(QXmlStreamReader &xml);
 

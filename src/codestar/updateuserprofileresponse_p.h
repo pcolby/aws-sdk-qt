@@ -31,7 +31,7 @@ class UpdateUserProfileResponsePrivate : public CodeStarResponsePrivate {
 
 public:
 
-    UpdateUserProfileResponsePrivate(UpdateUserProfileResponse * const q);
+    explicit UpdateUserProfileResponsePrivate(UpdateUserProfileResponse * const q);
 
     void parseUpdateUserProfileResponse(QXmlStreamReader &xml);
 

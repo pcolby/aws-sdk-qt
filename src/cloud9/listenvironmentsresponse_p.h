@@ -31,7 +31,7 @@ class ListEnvironmentsResponsePrivate : public Cloud9ResponsePrivate {
 
 public:
 
-    ListEnvironmentsResponsePrivate(ListEnvironmentsResponse * const q);
+    explicit ListEnvironmentsResponsePrivate(ListEnvironmentsResponse * const q);
 
     void parseListEnvironmentsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListFindingsReportsResponsePrivate : public CodeGuruProfilerResponsePrivat
 
 public:
 
-    ListFindingsReportsResponsePrivate(ListFindingsReportsResponse * const q);
+    explicit ListFindingsReportsResponsePrivate(ListFindingsReportsResponse * const q);
 
     void parseListFindingsReportsResponse(QXmlStreamReader &xml);
 

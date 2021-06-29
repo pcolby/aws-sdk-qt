@@ -31,7 +31,7 @@ class DescribeExecutionResponsePrivate : public SfnResponsePrivate {
 
 public:
 
-    DescribeExecutionResponsePrivate(DescribeExecutionResponse * const q);
+    explicit DescribeExecutionResponsePrivate(DescribeExecutionResponse * const q);
 
     void parseDescribeExecutionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class AssociateQueueQuickConnectsResponsePrivate : public ConnectResponsePrivate
 
 public:
 
-    AssociateQueueQuickConnectsResponsePrivate(AssociateQueueQuickConnectsResponse * const q);
+    explicit AssociateQueueQuickConnectsResponsePrivate(AssociateQueueQuickConnectsResponse * const q);
 
     void parseAssociateQueueQuickConnectsResponse(QXmlStreamReader &xml);
 

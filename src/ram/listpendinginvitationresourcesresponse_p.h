@@ -31,7 +31,7 @@ class ListPendingInvitationResourcesResponsePrivate : public RamResponsePrivate 
 
 public:
 
-    ListPendingInvitationResourcesResponsePrivate(ListPendingInvitationResourcesResponse * const q);
+    explicit ListPendingInvitationResourcesResponsePrivate(ListPendingInvitationResourcesResponse * const q);
 
     void parseListPendingInvitationResourcesResponse(QXmlStreamReader &xml);
 

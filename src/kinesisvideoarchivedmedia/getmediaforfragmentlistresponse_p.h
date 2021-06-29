@@ -31,7 +31,7 @@ class GetMediaForFragmentListResponsePrivate : public KinesisVideoArchivedMediaR
 
 public:
 
-    GetMediaForFragmentListResponsePrivate(GetMediaForFragmentListResponse * const q);
+    explicit GetMediaForFragmentListResponsePrivate(GetMediaForFragmentListResponse * const q);
 
     void parseGetMediaForFragmentListResponse(QXmlStreamReader &xml);
 

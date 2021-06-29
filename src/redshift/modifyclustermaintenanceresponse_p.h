@@ -31,7 +31,7 @@ class ModifyClusterMaintenanceResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    ModifyClusterMaintenanceResponsePrivate(ModifyClusterMaintenanceResponse * const q);
+    explicit ModifyClusterMaintenanceResponsePrivate(ModifyClusterMaintenanceResponse * const q);
 
     void parseModifyClusterMaintenanceResponse(QXmlStreamReader &xml);
 

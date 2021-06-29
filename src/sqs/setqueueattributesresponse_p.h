@@ -31,7 +31,7 @@ class SetQueueAttributesResponsePrivate : public SqsResponsePrivate {
 
 public:
 
-    SetQueueAttributesResponsePrivate(SetQueueAttributesResponse * const q);
+    explicit SetQueueAttributesResponsePrivate(SetQueueAttributesResponse * const q);
 
     void parseSetQueueAttributesResponse(QXmlStreamReader &xml);
 

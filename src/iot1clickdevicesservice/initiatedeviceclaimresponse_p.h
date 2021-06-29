@@ -31,7 +31,7 @@ class InitiateDeviceClaimResponsePrivate : public IoT1ClickDevicesServiceRespons
 
 public:
 
-    InitiateDeviceClaimResponsePrivate(InitiateDeviceClaimResponse * const q);
+    explicit InitiateDeviceClaimResponsePrivate(InitiateDeviceClaimResponse * const q);
 
     void parseInitiateDeviceClaimResponse(QXmlStreamReader &xml);
 

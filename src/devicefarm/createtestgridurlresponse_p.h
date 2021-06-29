@@ -31,7 +31,7 @@ class CreateTestGridUrlResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    CreateTestGridUrlResponsePrivate(CreateTestGridUrlResponse * const q);
+    explicit CreateTestGridUrlResponsePrivate(CreateTestGridUrlResponse * const q);
 
     void parseCreateTestGridUrlResponse(QXmlStreamReader &xml);
 

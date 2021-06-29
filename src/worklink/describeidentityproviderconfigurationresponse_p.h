@@ -31,7 +31,7 @@ class DescribeIdentityProviderConfigurationResponsePrivate : public WorkLinkResp
 
 public:
 
-    DescribeIdentityProviderConfigurationResponsePrivate(DescribeIdentityProviderConfigurationResponse * const q);
+    explicit DescribeIdentityProviderConfigurationResponsePrivate(DescribeIdentityProviderConfigurationResponse * const q);
 
     void parseDescribeIdentityProviderConfigurationResponse(QXmlStreamReader &xml);
 

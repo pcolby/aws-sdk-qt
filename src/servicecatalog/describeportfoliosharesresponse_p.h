@@ -31,7 +31,7 @@ class DescribePortfolioSharesResponsePrivate : public ServiceCatalogResponsePriv
 
 public:
 
-    DescribePortfolioSharesResponsePrivate(DescribePortfolioSharesResponse * const q);
+    explicit DescribePortfolioSharesResponsePrivate(DescribePortfolioSharesResponse * const q);
 
     void parseDescribePortfolioSharesResponse(QXmlStreamReader &xml);
 

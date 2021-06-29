@@ -31,7 +31,7 @@ class GetIdentityPoolRolesResponsePrivate : public CognitoIdentityResponsePrivat
 
 public:
 
-    GetIdentityPoolRolesResponsePrivate(GetIdentityPoolRolesResponse * const q);
+    explicit GetIdentityPoolRolesResponsePrivate(GetIdentityPoolRolesResponse * const q);
 
     void parseGetIdentityPoolRolesResponse(QXmlStreamReader &xml);
 

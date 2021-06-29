@@ -31,7 +31,7 @@ class CreateDomainConfigurationResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    CreateDomainConfigurationResponsePrivate(CreateDomainConfigurationResponse * const q);
+    explicit CreateDomainConfigurationResponsePrivate(CreateDomainConfigurationResponse * const q);
 
     void parseCreateDomainConfigurationResponse(QXmlStreamReader &xml);
 

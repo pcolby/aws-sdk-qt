@@ -31,7 +31,7 @@ class DescribeDefaultParametersResponsePrivate : public DaxResponsePrivate {
 
 public:
 
-    DescribeDefaultParametersResponsePrivate(DescribeDefaultParametersResponse * const q);
+    explicit DescribeDefaultParametersResponsePrivate(DescribeDefaultParametersResponse * const q);
 
     void parseDescribeDefaultParametersResponse(QXmlStreamReader &xml);
 

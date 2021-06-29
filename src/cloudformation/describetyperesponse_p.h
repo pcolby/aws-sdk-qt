@@ -31,7 +31,7 @@ class DescribeTypeResponsePrivate : public CloudFormationResponsePrivate {
 
 public:
 
-    DescribeTypeResponsePrivate(DescribeTypeResponse * const q);
+    explicit DescribeTypeResponsePrivate(DescribeTypeResponse * const q);
 
     void parseDescribeTypeResponse(QXmlStreamReader &xml);
 

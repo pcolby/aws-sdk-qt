@@ -31,7 +31,7 @@ class GetMapTileResponsePrivate : public LocationServiceResponsePrivate {
 
 public:
 
-    GetMapTileResponsePrivate(GetMapTileResponse * const q);
+    explicit GetMapTileResponsePrivate(GetMapTileResponse * const q);
 
     void parseGetMapTileResponse(QXmlStreamReader &xml);
 

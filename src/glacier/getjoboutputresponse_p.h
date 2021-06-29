@@ -31,7 +31,7 @@ class GetJobOutputResponsePrivate : public GlacierResponsePrivate {
 
 public:
 
-    GetJobOutputResponsePrivate(GetJobOutputResponse * const q);
+    explicit GetJobOutputResponsePrivate(GetJobOutputResponse * const q);
 
     void parseGetJobOutputResponse(QXmlStreamReader &xml);
 

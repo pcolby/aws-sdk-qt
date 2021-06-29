@@ -29,7 +29,7 @@ class LexRuntimeV2ResponsePrivate {
 
 public:
 
-    LexRuntimeV2ResponsePrivate(LexRuntimeV2Response * const q);
+    explicit LexRuntimeV2ResponsePrivate(LexRuntimeV2Response * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

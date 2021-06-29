@@ -31,7 +31,7 @@ class DescribeNotebookInstanceResponsePrivate : public SageMakerResponsePrivate 
 
 public:
 
-    DescribeNotebookInstanceResponsePrivate(DescribeNotebookInstanceResponse * const q);
+    explicit DescribeNotebookInstanceResponsePrivate(DescribeNotebookInstanceResponse * const q);
 
     void parseDescribeNotebookInstanceResponse(QXmlStreamReader &xml);
 

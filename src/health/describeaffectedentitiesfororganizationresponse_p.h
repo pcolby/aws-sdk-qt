@@ -31,7 +31,7 @@ class DescribeAffectedEntitiesForOrganizationResponsePrivate : public HealthResp
 
 public:
 
-    DescribeAffectedEntitiesForOrganizationResponsePrivate(DescribeAffectedEntitiesForOrganizationResponse * const q);
+    explicit DescribeAffectedEntitiesForOrganizationResponsePrivate(DescribeAffectedEntitiesForOrganizationResponse * const q);
 
     void parseDescribeAffectedEntitiesForOrganizationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class StopContinuousExportResponsePrivate : public ApplicationDiscoveryServiceRe
 
 public:
 
-    StopContinuousExportResponsePrivate(StopContinuousExportResponse * const q);
+    explicit StopContinuousExportResponsePrivate(StopContinuousExportResponse * const q);
 
     void parseStopContinuousExportResponse(QXmlStreamReader &xml);
 

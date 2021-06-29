@@ -31,7 +31,7 @@ class UpdateNotificationResponsePrivate : public BudgetsResponsePrivate {
 
 public:
 
-    UpdateNotificationResponsePrivate(UpdateNotificationResponse * const q);
+    explicit UpdateNotificationResponsePrivate(UpdateNotificationResponse * const q);
 
     void parseUpdateNotificationResponse(QXmlStreamReader &xml);
 

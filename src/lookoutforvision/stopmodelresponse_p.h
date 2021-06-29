@@ -31,7 +31,7 @@ class StopModelResponsePrivate : public LookoutforVisionResponsePrivate {
 
 public:
 
-    StopModelResponsePrivate(StopModelResponse * const q);
+    explicit StopModelResponsePrivate(StopModelResponse * const q);
 
     void parseStopModelResponse(QXmlStreamReader &xml);
 

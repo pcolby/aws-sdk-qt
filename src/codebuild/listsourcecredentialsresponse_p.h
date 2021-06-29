@@ -31,7 +31,7 @@ class ListSourceCredentialsResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 
-    ListSourceCredentialsResponsePrivate(ListSourceCredentialsResponse * const q);
+    explicit ListSourceCredentialsResponsePrivate(ListSourceCredentialsResponse * const q);
 
     void parseListSourceCredentialsResponse(QXmlStreamReader &xml);
 

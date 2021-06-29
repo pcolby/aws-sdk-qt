@@ -61,7 +61,7 @@ public:
 protected:
     /// @cond internal
     SagemakerEdgeManagerRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    SagemakerEdgeManagerRequest(SagemakerEdgeManagerRequestPrivate * const d);
+    explicit SagemakerEdgeManagerRequest(SagemakerEdgeManagerRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

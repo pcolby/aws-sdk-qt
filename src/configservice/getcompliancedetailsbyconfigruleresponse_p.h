@@ -31,7 +31,7 @@ class GetComplianceDetailsByConfigRuleResponsePrivate : public ConfigServiceResp
 
 public:
 
-    GetComplianceDetailsByConfigRuleResponsePrivate(GetComplianceDetailsByConfigRuleResponse * const q);
+    explicit GetComplianceDetailsByConfigRuleResponsePrivate(GetComplianceDetailsByConfigRuleResponse * const q);
 
     void parseGetComplianceDetailsByConfigRuleResponse(QXmlStreamReader &xml);
 

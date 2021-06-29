@@ -31,7 +31,7 @@ class UpdateQuickConnectNameResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    UpdateQuickConnectNameResponsePrivate(UpdateQuickConnectNameResponse * const q);
+    explicit UpdateQuickConnectNameResponsePrivate(UpdateQuickConnectNameResponse * const q);
 
     void parseUpdateQuickConnectNameResponse(QXmlStreamReader &xml);
 

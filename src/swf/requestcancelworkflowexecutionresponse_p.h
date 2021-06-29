@@ -31,7 +31,7 @@ class RequestCancelWorkflowExecutionResponsePrivate : public SwfResponsePrivate 
 
 public:
 
-    RequestCancelWorkflowExecutionResponsePrivate(RequestCancelWorkflowExecutionResponse * const q);
+    explicit RequestCancelWorkflowExecutionResponsePrivate(RequestCancelWorkflowExecutionResponse * const q);
 
     void parseRequestCancelWorkflowExecutionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteRunResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    DeleteRunResponsePrivate(DeleteRunResponse * const q);
+    explicit DeleteRunResponsePrivate(DeleteRunResponse * const q);
 
     void parseDeleteRunResponse(QXmlStreamReader &xml);
 

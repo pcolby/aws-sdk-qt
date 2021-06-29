@@ -31,7 +31,7 @@ class CreateInterconnectResponsePrivate : public DirectConnectResponsePrivate {
 
 public:
 
-    CreateInterconnectResponsePrivate(CreateInterconnectResponse * const q);
+    explicit CreateInterconnectResponsePrivate(CreateInterconnectResponse * const q);
 
     void parseCreateInterconnectResponse(QXmlStreamReader &xml);
 

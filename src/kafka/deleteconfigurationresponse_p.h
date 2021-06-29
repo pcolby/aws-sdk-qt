@@ -31,7 +31,7 @@ class DeleteConfigurationResponsePrivate : public KafkaResponsePrivate {
 
 public:
 
-    DeleteConfigurationResponsePrivate(DeleteConfigurationResponse * const q);
+    explicit DeleteConfigurationResponsePrivate(DeleteConfigurationResponse * const q);
 
     void parseDeleteConfigurationResponse(QXmlStreamReader &xml);
 

@@ -43,7 +43,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    MarketplaceEntitlementServiceClient(
+    explicit MarketplaceEntitlementServiceClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -54,7 +54,7 @@ public slots:
 protected:
     /// @cond internal
     MarketplaceEntitlementServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
-    MarketplaceEntitlementServiceClient(MarketplaceEntitlementServiceClientPrivate * const d);
+    explicit MarketplaceEntitlementServiceClient(MarketplaceEntitlementServiceClientPrivate * const d);
     /// @endcond
 
 private:

@@ -125,7 +125,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    PinpointEmailClient(
+    explicit PinpointEmailClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -177,7 +177,7 @@ public slots:
 protected:
     /// @cond internal
     PinpointEmailClientPrivate * const d_ptr; ///< Internal d-pointer.
-    PinpointEmailClient(PinpointEmailClientPrivate * const d);
+    explicit PinpointEmailClient(PinpointEmailClientPrivate * const d);
     /// @endcond
 
 private:

@@ -31,7 +31,7 @@ class DeleteSourceCredentialsResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 
-    DeleteSourceCredentialsResponsePrivate(DeleteSourceCredentialsResponse * const q);
+    explicit DeleteSourceCredentialsResponsePrivate(DeleteSourceCredentialsResponse * const q);
 
     void parseDeleteSourceCredentialsResponse(QXmlStreamReader &xml);
 

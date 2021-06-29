@@ -31,7 +31,7 @@ class ListDocumentsResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    ListDocumentsResponsePrivate(ListDocumentsResponse * const q);
+    explicit ListDocumentsResponsePrivate(ListDocumentsResponse * const q);
 
     void parseListDocumentsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteHsmConfigurationResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    DeleteHsmConfigurationResponsePrivate(DeleteHsmConfigurationResponse * const q);
+    explicit DeleteHsmConfigurationResponsePrivate(DeleteHsmConfigurationResponse * const q);
 
     void parseDeleteHsmConfigurationResponse(QXmlStreamReader &xml);
 

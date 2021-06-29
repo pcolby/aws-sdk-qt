@@ -31,7 +31,7 @@ class PutBucketAccelerateConfigurationResponsePrivate : public S3ResponsePrivate
 
 public:
 
-    PutBucketAccelerateConfigurationResponsePrivate(PutBucketAccelerateConfigurationResponse * const q);
+    explicit PutBucketAccelerateConfigurationResponsePrivate(PutBucketAccelerateConfigurationResponse * const q);
 
     void parsePutBucketAccelerateConfigurationResponse(QXmlStreamReader &xml);
 

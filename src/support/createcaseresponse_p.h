@@ -31,7 +31,7 @@ class CreateCaseResponsePrivate : public SupportResponsePrivate {
 
 public:
 
-    CreateCaseResponsePrivate(CreateCaseResponse * const q);
+    explicit CreateCaseResponsePrivate(CreateCaseResponse * const q);
 
     void parseCreateCaseResponse(QXmlStreamReader &xml);
 

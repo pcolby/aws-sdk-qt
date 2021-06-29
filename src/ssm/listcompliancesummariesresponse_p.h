@@ -31,7 +31,7 @@ class ListComplianceSummariesResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    ListComplianceSummariesResponsePrivate(ListComplianceSummariesResponse * const q);
+    explicit ListComplianceSummariesResponsePrivate(ListComplianceSummariesResponse * const q);
 
     void parseListComplianceSummariesResponse(QXmlStreamReader &xml);
 

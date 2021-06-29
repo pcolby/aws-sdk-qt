@@ -31,7 +31,7 @@ class DeleteNodegroupResponsePrivate : public EksResponsePrivate {
 
 public:
 
-    DeleteNodegroupResponsePrivate(DeleteNodegroupResponse * const q);
+    explicit DeleteNodegroupResponsePrivate(DeleteNodegroupResponse * const q);
 
     void parseDeleteNodegroupResponse(QXmlStreamReader &xml);
 

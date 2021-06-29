@@ -31,7 +31,7 @@ class DescribeStreamProcessorResponsePrivate : public RekognitionResponsePrivate
 
 public:
 
-    DescribeStreamProcessorResponsePrivate(DescribeStreamProcessorResponse * const q);
+    explicit DescribeStreamProcessorResponsePrivate(DescribeStreamProcessorResponse * const q);
 
     void parseDescribeStreamProcessorResponse(QXmlStreamReader &xml);
 

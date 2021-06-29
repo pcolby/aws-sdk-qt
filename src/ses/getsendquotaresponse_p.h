@@ -31,7 +31,7 @@ class GetSendQuotaResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    GetSendQuotaResponsePrivate(GetSendQuotaResponse * const q);
+    explicit GetSendQuotaResponsePrivate(GetSendQuotaResponse * const q);
 
     void parseGetSendQuotaResponse(QXmlStreamReader &xml);
 

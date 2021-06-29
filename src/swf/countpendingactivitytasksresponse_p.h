@@ -31,7 +31,7 @@ class CountPendingActivityTasksResponsePrivate : public SwfResponsePrivate {
 
 public:
 
-    CountPendingActivityTasksResponsePrivate(CountPendingActivityTasksResponse * const q);
+    explicit CountPendingActivityTasksResponsePrivate(CountPendingActivityTasksResponse * const q);
 
     void parseCountPendingActivityTasksResponse(QXmlStreamReader &xml);
 

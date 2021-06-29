@@ -31,7 +31,7 @@ class UpdatePullRequestApprovalRuleContentResponsePrivate : public CodeCommitRes
 
 public:
 
-    UpdatePullRequestApprovalRuleContentResponsePrivate(UpdatePullRequestApprovalRuleContentResponse * const q);
+    explicit UpdatePullRequestApprovalRuleContentResponsePrivate(UpdatePullRequestApprovalRuleContentResponse * const q);
 
     void parseUpdatePullRequestApprovalRuleContentResponse(QXmlStreamReader &xml);
 

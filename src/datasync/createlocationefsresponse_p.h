@@ -31,7 +31,7 @@ class CreateLocationEfsResponsePrivate : public DataSyncResponsePrivate {
 
 public:
 
-    CreateLocationEfsResponsePrivate(CreateLocationEfsResponse * const q);
+    explicit CreateLocationEfsResponsePrivate(CreateLocationEfsResponse * const q);
 
     void parseCreateLocationEfsResponse(QXmlStreamReader &xml);
 

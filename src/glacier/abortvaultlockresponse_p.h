@@ -31,7 +31,7 @@ class AbortVaultLockResponsePrivate : public GlacierResponsePrivate {
 
 public:
 
-    AbortVaultLockResponsePrivate(AbortVaultLockResponse * const q);
+    explicit AbortVaultLockResponsePrivate(AbortVaultLockResponse * const q);
 
     void parseAbortVaultLockResponse(QXmlStreamReader &xml);
 

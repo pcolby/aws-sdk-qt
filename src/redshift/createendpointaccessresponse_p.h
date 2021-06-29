@@ -31,7 +31,7 @@ class CreateEndpointAccessResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    CreateEndpointAccessResponsePrivate(CreateEndpointAccessResponse * const q);
+    explicit CreateEndpointAccessResponsePrivate(CreateEndpointAccessResponse * const q);
 
     void parseCreateEndpointAccessResponse(QXmlStreamReader &xml);
 

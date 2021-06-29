@@ -31,7 +31,7 @@ class DeleteRetentionConfigurationResponsePrivate : public ConfigServiceResponse
 
 public:
 
-    DeleteRetentionConfigurationResponsePrivate(DeleteRetentionConfigurationResponse * const q);
+    explicit DeleteRetentionConfigurationResponsePrivate(DeleteRetentionConfigurationResponse * const q);
 
     void parseDeleteRetentionConfigurationResponse(QXmlStreamReader &xml);
 

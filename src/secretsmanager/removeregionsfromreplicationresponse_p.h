@@ -31,7 +31,7 @@ class RemoveRegionsFromReplicationResponsePrivate : public SecretsManagerRespons
 
 public:
 
-    RemoveRegionsFromReplicationResponsePrivate(RemoveRegionsFromReplicationResponse * const q);
+    explicit RemoveRegionsFromReplicationResponsePrivate(RemoveRegionsFromReplicationResponse * const q);
 
     void parseRemoveRegionsFromReplicationResponse(QXmlStreamReader &xml);
 

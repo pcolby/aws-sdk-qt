@@ -31,7 +31,7 @@ class CreateVaultResponsePrivate : public GlacierResponsePrivate {
 
 public:
 
-    CreateVaultResponsePrivate(CreateVaultResponse * const q);
+    explicit CreateVaultResponsePrivate(CreateVaultResponse * const q);
 
     void parseCreateVaultResponse(QXmlStreamReader &xml);
 

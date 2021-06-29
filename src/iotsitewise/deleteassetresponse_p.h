@@ -31,7 +31,7 @@ class DeleteAssetResponsePrivate : public IoTSiteWiseResponsePrivate {
 
 public:
 
-    DeleteAssetResponsePrivate(DeleteAssetResponse * const q);
+    explicit DeleteAssetResponsePrivate(DeleteAssetResponse * const q);
 
     void parseDeleteAssetResponse(QXmlStreamReader &xml);
 

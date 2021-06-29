@@ -31,7 +31,7 @@ class CreateDataSourceResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    CreateDataSourceResponsePrivate(CreateDataSourceResponse * const q);
+    explicit CreateDataSourceResponsePrivate(CreateDataSourceResponse * const q);
 
     void parseCreateDataSourceResponse(QXmlStreamReader &xml);
 

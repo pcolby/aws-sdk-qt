@@ -31,7 +31,7 @@ class GetSMSAttributesResponsePrivate : public SnsResponsePrivate {
 
 public:
 
-    GetSMSAttributesResponsePrivate(GetSMSAttributesResponse * const q);
+    explicit GetSMSAttributesResponsePrivate(GetSMSAttributesResponse * const q);
 
     void parseGetSMSAttributesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetArtifactUrlResponsePrivate : public AmplifyResponsePrivate {
 
 public:
 
-    GetArtifactUrlResponsePrivate(GetArtifactUrlResponse * const q);
+    explicit GetArtifactUrlResponsePrivate(GetArtifactUrlResponse * const q);
 
     void parseGetArtifactUrlResponse(QXmlStreamReader &xml);
 

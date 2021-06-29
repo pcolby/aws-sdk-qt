@@ -31,7 +31,7 @@ class CreateMLTransformResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    CreateMLTransformResponsePrivate(CreateMLTransformResponse * const q);
+    explicit CreateMLTransformResponsePrivate(CreateMLTransformResponse * const q);
 
     void parseCreateMLTransformResponse(QXmlStreamReader &xml);
 

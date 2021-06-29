@@ -31,7 +31,7 @@ class PollForJobsResponsePrivate : public CodePipelineResponsePrivate {
 
 public:
 
-    PollForJobsResponsePrivate(PollForJobsResponse * const q);
+    explicit PollForJobsResponsePrivate(PollForJobsResponse * const q);
 
     void parsePollForJobsResponse(QXmlStreamReader &xml);
 

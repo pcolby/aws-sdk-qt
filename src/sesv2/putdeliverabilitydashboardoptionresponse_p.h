@@ -31,7 +31,7 @@ class PutDeliverabilityDashboardOptionResponsePrivate : public Sesv2ResponsePriv
 
 public:
 
-    PutDeliverabilityDashboardOptionResponsePrivate(PutDeliverabilityDashboardOptionResponse * const q);
+    explicit PutDeliverabilityDashboardOptionResponsePrivate(PutDeliverabilityDashboardOptionResponse * const q);
 
     void parsePutDeliverabilityDashboardOptionResponse(QXmlStreamReader &xml);
 

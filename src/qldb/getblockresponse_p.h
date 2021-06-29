@@ -31,7 +31,7 @@ class GetBlockResponsePrivate : public QldbResponsePrivate {
 
 public:
 
-    GetBlockResponsePrivate(GetBlockResponse * const q);
+    explicit GetBlockResponsePrivate(GetBlockResponse * const q);
 
     void parseGetBlockResponse(QXmlStreamReader &xml);
 

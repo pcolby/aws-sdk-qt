@@ -67,7 +67,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    Cloud9Client(
+    explicit Cloud9Client(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -90,7 +90,7 @@ public slots:
 protected:
     /// @cond internal
     Cloud9ClientPrivate * const d_ptr; ///< Internal d-pointer.
-    Cloud9Client(Cloud9ClientPrivate * const d);
+    explicit Cloud9Client(Cloud9ClientPrivate * const d);
     /// @endcond
 
 private:

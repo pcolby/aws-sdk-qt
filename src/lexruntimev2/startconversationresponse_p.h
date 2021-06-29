@@ -31,7 +31,7 @@ class StartConversationResponsePrivate : public LexRuntimeV2ResponsePrivate {
 
 public:
 
-    StartConversationResponsePrivate(StartConversationResponse * const q);
+    explicit StartConversationResponsePrivate(StartConversationResponse * const q);
 
     void parseStartConversationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteElasticsearchServiceRoleResponsePrivate : public ElasticsearchServic
 
 public:
 
-    DeleteElasticsearchServiceRoleResponsePrivate(DeleteElasticsearchServiceRoleResponse * const q);
+    explicit DeleteElasticsearchServiceRoleResponsePrivate(DeleteElasticsearchServiceRoleResponse * const q);
 
     void parseDeleteElasticsearchServiceRoleResponse(QXmlStreamReader &xml);
 

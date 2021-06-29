@@ -31,7 +31,7 @@ class SelectResourceConfigResponsePrivate : public ConfigServiceResponsePrivate 
 
 public:
 
-    SelectResourceConfigResponsePrivate(SelectResourceConfigResponse * const q);
+    explicit SelectResourceConfigResponsePrivate(SelectResourceConfigResponse * const q);
 
     void parseSelectResourceConfigResponse(QXmlStreamReader &xml);
 

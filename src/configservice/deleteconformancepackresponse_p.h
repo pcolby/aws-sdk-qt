@@ -31,7 +31,7 @@ class DeleteConformancePackResponsePrivate : public ConfigServiceResponsePrivate
 
 public:
 
-    DeleteConformancePackResponsePrivate(DeleteConformancePackResponse * const q);
+    explicit DeleteConformancePackResponsePrivate(DeleteConformancePackResponse * const q);
 
     void parseDeleteConformancePackResponse(QXmlStreamReader &xml);
 

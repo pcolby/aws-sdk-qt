@@ -31,7 +31,7 @@ class ListEngineVersionsResponsePrivate : public AthenaResponsePrivate {
 
 public:
 
-    ListEngineVersionsResponsePrivate(ListEngineVersionsResponse * const q);
+    explicit ListEngineVersionsResponsePrivate(ListEngineVersionsResponse * const q);
 
     void parseListEngineVersionsResponse(QXmlStreamReader &xml);
 

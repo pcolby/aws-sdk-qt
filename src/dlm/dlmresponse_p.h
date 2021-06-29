@@ -29,7 +29,7 @@ class DlmResponsePrivate {
 
 public:
 
-    DlmResponsePrivate(DlmResponse * const q);
+    explicit DlmResponsePrivate(DlmResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

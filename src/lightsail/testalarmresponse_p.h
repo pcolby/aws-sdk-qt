@@ -31,7 +31,7 @@ class TestAlarmResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    TestAlarmResponsePrivate(TestAlarmResponse * const q);
+    explicit TestAlarmResponsePrivate(TestAlarmResponse * const q);
 
     void parseTestAlarmResponse(QXmlStreamReader &xml);
 

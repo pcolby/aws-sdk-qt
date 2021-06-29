@@ -71,7 +71,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    CloudHSMV2Client(
+    explicit CloudHSMV2Client(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -96,7 +96,7 @@ public slots:
 protected:
     /// @cond internal
     CloudHSMV2ClientPrivate * const d_ptr; ///< Internal d-pointer.
-    CloudHSMV2Client(CloudHSMV2ClientPrivate * const d);
+    explicit CloudHSMV2Client(CloudHSMV2ClientPrivate * const d);
     /// @endcond
 
 private:

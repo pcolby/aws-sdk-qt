@@ -31,7 +31,7 @@ class UpdateWorkspaceImagePermissionResponsePrivate : public WorkSpacesResponseP
 
 public:
 
-    UpdateWorkspaceImagePermissionResponsePrivate(UpdateWorkspaceImagePermissionResponse * const q);
+    explicit UpdateWorkspaceImagePermissionResponsePrivate(UpdateWorkspaceImagePermissionResponse * const q);
 
     void parseUpdateWorkspaceImagePermissionResponse(QXmlStreamReader &xml);
 

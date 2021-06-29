@@ -31,7 +31,7 @@ class GetFeedbackResponsePrivate : public LookoutMetricsResponsePrivate {
 
 public:
 
-    GetFeedbackResponsePrivate(GetFeedbackResponse * const q);
+    explicit GetFeedbackResponsePrivate(GetFeedbackResponse * const q);
 
     void parseGetFeedbackResponse(QXmlStreamReader &xml);
 

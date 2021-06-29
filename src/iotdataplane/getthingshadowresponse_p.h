@@ -31,7 +31,7 @@ class GetThingShadowResponsePrivate : public IoTDataPlaneResponsePrivate {
 
 public:
 
-    GetThingShadowResponsePrivate(GetThingShadowResponse * const q);
+    explicit GetThingShadowResponsePrivate(GetThingShadowResponse * const q);
 
     void parseGetThingShadowResponse(QXmlStreamReader &xml);
 

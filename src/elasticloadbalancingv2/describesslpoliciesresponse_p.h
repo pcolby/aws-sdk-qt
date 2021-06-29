@@ -31,7 +31,7 @@ class DescribeSSLPoliciesResponsePrivate : public ElasticLoadBalancingv2Response
 
 public:
 
-    DescribeSSLPoliciesResponsePrivate(DescribeSSLPoliciesResponse * const q);
+    explicit DescribeSSLPoliciesResponsePrivate(DescribeSSLPoliciesResponse * const q);
 
     void parseDescribeSSLPoliciesResponse(QXmlStreamReader &xml);
 

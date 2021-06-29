@@ -31,7 +31,7 @@ class UpdateGameSessionQueueResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    UpdateGameSessionQueueResponsePrivate(UpdateGameSessionQueueResponse * const q);
+    explicit UpdateGameSessionQueueResponsePrivate(UpdateGameSessionQueueResponse * const q);
 
     void parseUpdateGameSessionQueueResponse(QXmlStreamReader &xml);
 

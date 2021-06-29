@@ -31,7 +31,7 @@ class ListSkillsStoreSkillsByCategoryResponsePrivate : public AlexaForBusinessRe
 
 public:
 
-    ListSkillsStoreSkillsByCategoryResponsePrivate(ListSkillsStoreSkillsByCategoryResponse * const q);
+    explicit ListSkillsStoreSkillsByCategoryResponsePrivate(ListSkillsStoreSkillsByCategoryResponse * const q);
 
     void parseListSkillsStoreSkillsByCategoryResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ResumeSessionResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    ResumeSessionResponsePrivate(ResumeSessionResponse * const q);
+    explicit ResumeSessionResponsePrivate(ResumeSessionResponse * const q);
 
     void parseResumeSessionResponse(QXmlStreamReader &xml);
 

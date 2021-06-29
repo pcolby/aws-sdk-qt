@@ -31,7 +31,7 @@ class CancelSchemaExtensionResponsePrivate : public DirectoryServiceResponsePriv
 
 public:
 
-    CancelSchemaExtensionResponsePrivate(CancelSchemaExtensionResponse * const q);
+    explicit CancelSchemaExtensionResponsePrivate(CancelSchemaExtensionResponse * const q);
 
     void parseCancelSchemaExtensionResponse(QXmlStreamReader &xml);
 

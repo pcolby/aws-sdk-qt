@@ -31,7 +31,7 @@ class DescribePartnerEventSourceResponsePrivate : public EventBridgeResponsePriv
 
 public:
 
-    DescribePartnerEventSourceResponsePrivate(DescribePartnerEventSourceResponse * const q);
+    explicit DescribePartnerEventSourceResponsePrivate(DescribePartnerEventSourceResponse * const q);
 
     void parseDescribePartnerEventSourceResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ChangeServerLifeCycleStateResponsePrivate : public mgnResponsePrivate {
 
 public:
 
-    ChangeServerLifeCycleStateResponsePrivate(ChangeServerLifeCycleStateResponse * const q);
+    explicit ChangeServerLifeCycleStateResponsePrivate(ChangeServerLifeCycleStateResponse * const q);
 
     void parseChangeServerLifeCycleStateResponse(QXmlStreamReader &xml);
 

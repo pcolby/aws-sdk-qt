@@ -31,7 +31,7 @@ class UnlinkDeveloperIdentityResponsePrivate : public CognitoIdentityResponsePri
 
 public:
 
-    UnlinkDeveloperIdentityResponsePrivate(UnlinkDeveloperIdentityResponse * const q);
+    explicit UnlinkDeveloperIdentityResponsePrivate(UnlinkDeveloperIdentityResponse * const q);
 
     void parseUnlinkDeveloperIdentityResponse(QXmlStreamReader &xml);
 

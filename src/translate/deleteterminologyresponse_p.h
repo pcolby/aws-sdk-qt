@@ -31,7 +31,7 @@ class DeleteTerminologyResponsePrivate : public TranslateResponsePrivate {
 
 public:
 
-    DeleteTerminologyResponsePrivate(DeleteTerminologyResponse * const q);
+    explicit DeleteTerminologyResponsePrivate(DeleteTerminologyResponse * const q);
 
     void parseDeleteTerminologyResponse(QXmlStreamReader &xml);
 

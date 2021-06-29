@@ -31,7 +31,7 @@ class ListArchivesResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 
-    ListArchivesResponsePrivate(ListArchivesResponse * const q);
+    explicit ListArchivesResponsePrivate(ListArchivesResponse * const q);
 
     void parseListArchivesResponse(QXmlStreamReader &xml);
 

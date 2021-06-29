@@ -30,7 +30,7 @@ class Route53ResolverClient;
 class Route53ResolverClientPrivate {
 
 public:
-    Route53ResolverClientPrivate(Route53ResolverClient * const q);
+    explicit Route53ResolverClientPrivate(Route53ResolverClient * const q);
 
 protected:
     Route53ResolverClient * const q_ptr; ///< Internal q-pointer.

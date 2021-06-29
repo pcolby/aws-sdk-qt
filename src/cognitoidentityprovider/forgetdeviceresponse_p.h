@@ -31,7 +31,7 @@ class ForgetDeviceResponsePrivate : public CognitoIdentityProviderResponsePrivat
 
 public:
 
-    ForgetDeviceResponsePrivate(ForgetDeviceResponse * const q);
+    explicit ForgetDeviceResponsePrivate(ForgetDeviceResponse * const q);
 
     void parseForgetDeviceResponse(QXmlStreamReader &xml);
 

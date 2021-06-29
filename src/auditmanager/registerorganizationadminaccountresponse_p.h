@@ -31,7 +31,7 @@ class RegisterOrganizationAdminAccountResponsePrivate : public AuditManagerRespo
 
 public:
 
-    RegisterOrganizationAdminAccountResponsePrivate(RegisterOrganizationAdminAccountResponse * const q);
+    explicit RegisterOrganizationAdminAccountResponsePrivate(RegisterOrganizationAdminAccountResponse * const q);
 
     void parseRegisterOrganizationAdminAccountResponse(QXmlStreamReader &xml);
 

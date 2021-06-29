@@ -31,7 +31,7 @@ class DescribeEntityAggregatesResponsePrivate : public HealthResponsePrivate {
 
 public:
 
-    DescribeEntityAggregatesResponsePrivate(DescribeEntityAggregatesResponse * const q);
+    explicit DescribeEntityAggregatesResponsePrivate(DescribeEntityAggregatesResponse * const q);
 
     void parseDescribeEntityAggregatesResponse(QXmlStreamReader &xml);
 

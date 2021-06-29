@@ -31,7 +31,7 @@ class ModifyDBSubnetGroupResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 
-    ModifyDBSubnetGroupResponsePrivate(ModifyDBSubnetGroupResponse * const q);
+    explicit ModifyDBSubnetGroupResponsePrivate(ModifyDBSubnetGroupResponse * const q);
 
     void parseModifyDBSubnetGroupResponse(QXmlStreamReader &xml);
 

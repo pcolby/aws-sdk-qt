@@ -31,7 +31,7 @@ class DescribeRulesPackagesResponsePrivate : public InspectorResponsePrivate {
 
 public:
 
-    DescribeRulesPackagesResponsePrivate(DescribeRulesPackagesResponse * const q);
+    explicit DescribeRulesPackagesResponsePrivate(DescribeRulesPackagesResponse * const q);
 
     void parseDescribeRulesPackagesResponse(QXmlStreamReader &xml);
 

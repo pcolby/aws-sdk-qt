@@ -31,7 +31,7 @@ class DescribeDomainResponsePrivate : public WorkLinkResponsePrivate {
 
 public:
 
-    DescribeDomainResponsePrivate(DescribeDomainResponse * const q);
+    explicit DescribeDomainResponsePrivate(DescribeDomainResponse * const q);
 
     void parseDescribeDomainResponse(QXmlStreamReader &xml);
 

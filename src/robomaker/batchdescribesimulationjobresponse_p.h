@@ -31,7 +31,7 @@ class BatchDescribeSimulationJobResponsePrivate : public RoboMakerResponsePrivat
 
 public:
 
-    BatchDescribeSimulationJobResponsePrivate(BatchDescribeSimulationJobResponse * const q);
+    explicit BatchDescribeSimulationJobResponsePrivate(BatchDescribeSimulationJobResponse * const q);
 
     void parseBatchDescribeSimulationJobResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListApplicationStatesResponsePrivate : public MigrationHubResponsePrivate 
 
 public:
 
-    ListApplicationStatesResponsePrivate(ListApplicationStatesResponse * const q);
+    explicit ListApplicationStatesResponsePrivate(ListApplicationStatesResponse * const q);
 
     void parseListApplicationStatesResponse(QXmlStreamReader &xml);
 

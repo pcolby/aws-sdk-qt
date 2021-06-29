@@ -31,7 +31,7 @@ class CreateExportTaskResponsePrivate : public CloudWatchLogsResponsePrivate {
 
 public:
 
-    CreateExportTaskResponsePrivate(CreateExportTaskResponse * const q);
+    explicit CreateExportTaskResponsePrivate(CreateExportTaskResponse * const q);
 
     void parseCreateExportTaskResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class PutJobSuccessResultResponsePrivate : public CodePipelineResponsePrivate {
 
 public:
 
-    PutJobSuccessResultResponsePrivate(PutJobSuccessResultResponse * const q);
+    explicit PutJobSuccessResultResponsePrivate(PutJobSuccessResultResponse * const q);
 
     void parsePutJobSuccessResultResponse(QXmlStreamReader &xml);
 

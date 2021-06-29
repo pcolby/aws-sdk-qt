@@ -31,7 +31,7 @@ class AssociateMacSecKeyResponsePrivate : public DirectConnectResponsePrivate {
 
 public:
 
-    AssociateMacSecKeyResponsePrivate(AssociateMacSecKeyResponse * const q);
+    explicit AssociateMacSecKeyResponsePrivate(AssociateMacSecKeyResponse * const q);
 
     void parseAssociateMacSecKeyResponse(QXmlStreamReader &xml);
 

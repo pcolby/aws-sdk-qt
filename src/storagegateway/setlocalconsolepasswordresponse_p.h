@@ -31,7 +31,7 @@ class SetLocalConsolePasswordResponsePrivate : public StorageGatewayResponsePriv
 
 public:
 
-    SetLocalConsolePasswordResponsePrivate(SetLocalConsolePasswordResponse * const q);
+    explicit SetLocalConsolePasswordResponsePrivate(SetLocalConsolePasswordResponse * const q);
 
     void parseSetLocalConsolePasswordResponse(QXmlStreamReader &xml);
 

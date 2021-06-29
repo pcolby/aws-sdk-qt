@@ -31,7 +31,7 @@ class DescribeOrderableClusterOptionsResponsePrivate : public RedshiftResponsePr
 
 public:
 
-    DescribeOrderableClusterOptionsResponsePrivate(DescribeOrderableClusterOptionsResponse * const q);
+    explicit DescribeOrderableClusterOptionsResponsePrivate(DescribeOrderableClusterOptionsResponse * const q);
 
     void parseDescribeOrderableClusterOptionsResponse(QXmlStreamReader &xml);
 

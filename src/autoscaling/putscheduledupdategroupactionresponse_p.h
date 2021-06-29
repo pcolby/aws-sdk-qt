@@ -31,7 +31,7 @@ class PutScheduledUpdateGroupActionResponsePrivate : public AutoScalingResponseP
 
 public:
 
-    PutScheduledUpdateGroupActionResponsePrivate(PutScheduledUpdateGroupActionResponse * const q);
+    explicit PutScheduledUpdateGroupActionResponsePrivate(PutScheduledUpdateGroupActionResponse * const q);
 
     void parsePutScheduledUpdateGroupActionResponse(QXmlStreamReader &xml);
 

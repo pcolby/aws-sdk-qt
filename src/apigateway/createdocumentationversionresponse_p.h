@@ -31,7 +31,7 @@ class CreateDocumentationVersionResponsePrivate : public APIGatewayResponsePriva
 
 public:
 
-    CreateDocumentationVersionResponsePrivate(CreateDocumentationVersionResponse * const q);
+    explicit CreateDocumentationVersionResponsePrivate(CreateDocumentationVersionResponse * const q);
 
     void parseCreateDocumentationVersionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeUsageLimitsResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    DescribeUsageLimitsResponsePrivate(DescribeUsageLimitsResponse * const q);
+    explicit DescribeUsageLimitsResponsePrivate(DescribeUsageLimitsResponse * const q);
 
     void parseDescribeUsageLimitsResponse(QXmlStreamReader &xml);
 

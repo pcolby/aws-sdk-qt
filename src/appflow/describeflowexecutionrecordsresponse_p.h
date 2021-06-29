@@ -31,7 +31,7 @@ class DescribeFlowExecutionRecordsResponsePrivate : public AppflowResponsePrivat
 
 public:
 
-    DescribeFlowExecutionRecordsResponsePrivate(DescribeFlowExecutionRecordsResponse * const q);
+    explicit DescribeFlowExecutionRecordsResponsePrivate(DescribeFlowExecutionRecordsResponse * const q);
 
     void parseDescribeFlowExecutionRecordsResponse(QXmlStreamReader &xml);
 

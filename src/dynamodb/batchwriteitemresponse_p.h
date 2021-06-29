@@ -31,7 +31,7 @@ class BatchWriteItemResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 
-    BatchWriteItemResponsePrivate(BatchWriteItemResponse * const q);
+    explicit BatchWriteItemResponsePrivate(BatchWriteItemResponse * const q);
 
     void parseBatchWriteItemResponse(QXmlStreamReader &xml);
 

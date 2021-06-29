@@ -31,7 +31,7 @@ class DescribeFeedbackResponsePrivate : public DevOpsGuruResponsePrivate {
 
 public:
 
-    DescribeFeedbackResponsePrivate(DescribeFeedbackResponse * const q);
+    explicit DescribeFeedbackResponsePrivate(DescribeFeedbackResponse * const q);
 
     void parseDescribeFeedbackResponse(QXmlStreamReader &xml);
 

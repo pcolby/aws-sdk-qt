@@ -131,7 +131,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    NimbleStudioClient(
+    explicit NimbleStudioClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -186,7 +186,7 @@ public slots:
 protected:
     /// @cond internal
     NimbleStudioClientPrivate * const d_ptr; ///< Internal d-pointer.
-    NimbleStudioClient(NimbleStudioClientPrivate * const d);
+    explicit NimbleStudioClient(NimbleStudioClientPrivate * const d);
     /// @endcond
 
 private:

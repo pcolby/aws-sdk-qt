@@ -31,7 +31,7 @@ class StopMetricStreamsResponsePrivate : public CloudWatchResponsePrivate {
 
 public:
 
-    StopMetricStreamsResponsePrivate(StopMetricStreamsResponse * const q);
+    explicit StopMetricStreamsResponsePrivate(StopMetricStreamsResponse * const q);
 
     void parseStopMetricStreamsResponse(QXmlStreamReader &xml);
 

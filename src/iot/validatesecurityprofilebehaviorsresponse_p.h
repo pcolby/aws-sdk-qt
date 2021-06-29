@@ -31,7 +31,7 @@ class ValidateSecurityProfileBehaviorsResponsePrivate : public IoTResponsePrivat
 
 public:
 
-    ValidateSecurityProfileBehaviorsResponsePrivate(ValidateSecurityProfileBehaviorsResponse * const q);
+    explicit ValidateSecurityProfileBehaviorsResponsePrivate(ValidateSecurityProfileBehaviorsResponse * const q);
 
     void parseValidateSecurityProfileBehaviorsResponse(QXmlStreamReader &xml);
 

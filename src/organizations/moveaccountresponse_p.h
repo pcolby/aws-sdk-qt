@@ -31,7 +31,7 @@ class MoveAccountResponsePrivate : public OrganizationsResponsePrivate {
 
 public:
 
-    MoveAccountResponsePrivate(MoveAccountResponse * const q);
+    explicit MoveAccountResponsePrivate(MoveAccountResponse * const q);
 
     void parseMoveAccountResponse(QXmlStreamReader &xml);
 

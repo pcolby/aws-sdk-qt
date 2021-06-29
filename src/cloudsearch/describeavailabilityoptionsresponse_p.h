@@ -31,7 +31,7 @@ class DescribeAvailabilityOptionsResponsePrivate : public CloudSearchResponsePri
 
 public:
 
-    DescribeAvailabilityOptionsResponsePrivate(DescribeAvailabilityOptionsResponse * const q);
+    explicit DescribeAvailabilityOptionsResponsePrivate(DescribeAvailabilityOptionsResponse * const q);
 
     void parseDescribeAvailabilityOptionsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class HeadBucketResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    HeadBucketResponsePrivate(HeadBucketResponse * const q);
+    explicit HeadBucketResponsePrivate(HeadBucketResponse * const q);
 
     void parseHeadBucketResponse(QXmlStreamReader &xml);
 

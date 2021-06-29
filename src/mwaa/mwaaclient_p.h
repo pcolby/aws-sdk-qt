@@ -30,7 +30,7 @@ class MwaaClient;
 class MwaaClientPrivate {
 
 public:
-    MwaaClientPrivate(MwaaClient * const q);
+    explicit MwaaClientPrivate(MwaaClient * const q);
 
 protected:
     MwaaClient * const q_ptr; ///< Internal q-pointer.

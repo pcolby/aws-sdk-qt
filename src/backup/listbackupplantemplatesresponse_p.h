@@ -31,7 +31,7 @@ class ListBackupPlanTemplatesResponsePrivate : public BackupResponsePrivate {
 
 public:
 
-    ListBackupPlanTemplatesResponsePrivate(ListBackupPlanTemplatesResponse * const q);
+    explicit ListBackupPlanTemplatesResponsePrivate(ListBackupPlanTemplatesResponse * const q);
 
     void parseListBackupPlanTemplatesResponse(QXmlStreamReader &xml);
 

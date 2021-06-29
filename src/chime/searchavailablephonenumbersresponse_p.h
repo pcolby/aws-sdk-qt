@@ -31,7 +31,7 @@ class SearchAvailablePhoneNumbersResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    SearchAvailablePhoneNumbersResponsePrivate(SearchAvailablePhoneNumbersResponse * const q);
+    explicit SearchAvailablePhoneNumbersResponsePrivate(SearchAvailablePhoneNumbersResponse * const q);
 
     void parseSearchAvailablePhoneNumbersResponse(QXmlStreamReader &xml);
 

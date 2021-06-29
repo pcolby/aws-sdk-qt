@@ -31,7 +31,7 @@ class ListAttributesResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    ListAttributesResponsePrivate(ListAttributesResponse * const q);
+    explicit ListAttributesResponsePrivate(ListAttributesResponse * const q);
 
     void parseListAttributesResponse(QXmlStreamReader &xml);
 

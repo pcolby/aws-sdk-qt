@@ -31,7 +31,7 @@ class ExitStandbyResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 
-    ExitStandbyResponsePrivate(ExitStandbyResponse * const q);
+    explicit ExitStandbyResponsePrivate(ExitStandbyResponse * const q);
 
     void parseExitStandbyResponse(QXmlStreamReader &xml);
 

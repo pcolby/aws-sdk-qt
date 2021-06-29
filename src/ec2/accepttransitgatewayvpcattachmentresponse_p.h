@@ -31,7 +31,7 @@ class AcceptTransitGatewayVpcAttachmentResponsePrivate : public Ec2ResponsePriva
 
 public:
 
-    AcceptTransitGatewayVpcAttachmentResponsePrivate(AcceptTransitGatewayVpcAttachmentResponse * const q);
+    explicit AcceptTransitGatewayVpcAttachmentResponsePrivate(AcceptTransitGatewayVpcAttachmentResponse * const q);
 
     void parseAcceptTransitGatewayVpcAttachmentResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateLedgerPermissionsModeResponsePrivate : public QldbResponsePrivate {
 
 public:
 
-    UpdateLedgerPermissionsModeResponsePrivate(UpdateLedgerPermissionsModeResponse * const q);
+    explicit UpdateLedgerPermissionsModeResponsePrivate(UpdateLedgerPermissionsModeResponse * const q);
 
     void parseUpdateLedgerPermissionsModeResponse(QXmlStreamReader &xml);
 

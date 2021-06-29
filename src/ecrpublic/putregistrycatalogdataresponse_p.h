@@ -31,7 +31,7 @@ class PutRegistryCatalogDataResponsePrivate : public ECRPublicResponsePrivate {
 
 public:
 
-    PutRegistryCatalogDataResponsePrivate(PutRegistryCatalogDataResponse * const q);
+    explicit PutRegistryCatalogDataResponsePrivate(PutRegistryCatalogDataResponse * const q);
 
     void parsePutRegistryCatalogDataResponse(QXmlStreamReader &xml);
 

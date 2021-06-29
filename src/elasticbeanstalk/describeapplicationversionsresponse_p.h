@@ -31,7 +31,7 @@ class DescribeApplicationVersionsResponsePrivate : public ElasticBeanstalkRespon
 
 public:
 
-    DescribeApplicationVersionsResponsePrivate(DescribeApplicationVersionsResponse * const q);
+    explicit DescribeApplicationVersionsResponsePrivate(DescribeApplicationVersionsResponse * const q);
 
     void parseDescribeApplicationVersionsResponse(QXmlStreamReader &xml);
 

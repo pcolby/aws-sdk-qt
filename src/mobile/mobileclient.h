@@ -59,7 +59,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    MobileClient(
+    explicit MobileClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -78,7 +78,7 @@ public slots:
 protected:
     /// @cond internal
     MobileClientPrivate * const d_ptr; ///< Internal d-pointer.
-    MobileClient(MobileClientPrivate * const d);
+    explicit MobileClient(MobileClientPrivate * const d);
     /// @endcond
 
 private:

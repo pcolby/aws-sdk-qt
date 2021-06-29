@@ -31,7 +31,7 @@ class ModifyImageAttributeResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ModifyImageAttributeResponsePrivate(ModifyImageAttributeResponse * const q);
+    explicit ModifyImageAttributeResponsePrivate(ModifyImageAttributeResponse * const q);
 
     void parseModifyImageAttributeResponse(QXmlStreamReader &xml);
 

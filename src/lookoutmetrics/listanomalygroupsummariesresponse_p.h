@@ -31,7 +31,7 @@ class ListAnomalyGroupSummariesResponsePrivate : public LookoutMetricsResponsePr
 
 public:
 
-    ListAnomalyGroupSummariesResponsePrivate(ListAnomalyGroupSummariesResponse * const q);
+    explicit ListAnomalyGroupSummariesResponsePrivate(ListAnomalyGroupSummariesResponse * const q);
 
     void parseListAnomalyGroupSummariesResponse(QXmlStreamReader &xml);
 

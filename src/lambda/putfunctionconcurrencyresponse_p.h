@@ -31,7 +31,7 @@ class PutFunctionConcurrencyResponsePrivate : public LambdaResponsePrivate {
 
 public:
 
-    PutFunctionConcurrencyResponsePrivate(PutFunctionConcurrencyResponse * const q);
+    explicit PutFunctionConcurrencyResponsePrivate(PutFunctionConcurrencyResponse * const q);
 
     void parsePutFunctionConcurrencyResponse(QXmlStreamReader &xml);
 

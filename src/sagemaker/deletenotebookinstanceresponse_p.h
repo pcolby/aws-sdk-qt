@@ -31,7 +31,7 @@ class DeleteNotebookInstanceResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    DeleteNotebookInstanceResponsePrivate(DeleteNotebookInstanceResponse * const q);
+    explicit DeleteNotebookInstanceResponsePrivate(DeleteNotebookInstanceResponse * const q);
 
     void parseDeleteNotebookInstanceResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DisposePackageVersionsResponsePrivate : public CodeArtifactResponsePrivate
 
 public:
 
-    DisposePackageVersionsResponsePrivate(DisposePackageVersionsResponse * const q);
+    explicit DisposePackageVersionsResponsePrivate(DisposePackageVersionsResponse * const q);
 
     void parseDisposePackageVersionsResponse(QXmlStreamReader &xml);
 

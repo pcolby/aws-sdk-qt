@@ -31,7 +31,7 @@ class CreateIPSetResponsePrivate : public Wafv2ResponsePrivate {
 
 public:
 
-    CreateIPSetResponsePrivate(CreateIPSetResponse * const q);
+    explicit CreateIPSetResponsePrivate(CreateIPSetResponse * const q);
 
     void parseCreateIPSetResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetChangeLogsResponsePrivate : public AuditManagerResponsePrivate {
 
 public:
 
-    GetChangeLogsResponsePrivate(GetChangeLogsResponse * const q);
+    explicit GetChangeLogsResponsePrivate(GetChangeLogsResponse * const q);
 
     void parseGetChangeLogsResponse(QXmlStreamReader &xml);
 

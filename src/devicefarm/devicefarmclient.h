@@ -195,7 +195,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    DeviceFarmClient(
+    explicit DeviceFarmClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -282,7 +282,7 @@ public slots:
 protected:
     /// @cond internal
     DeviceFarmClientPrivate * const d_ptr; ///< Internal d-pointer.
-    DeviceFarmClient(DeviceFarmClientPrivate * const d);
+    explicit DeviceFarmClient(DeviceFarmClientPrivate * const d);
     /// @endcond
 
 private:

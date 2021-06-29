@@ -31,7 +31,7 @@ class DescribeRepositoriesResponsePrivate : public ECRPublicResponsePrivate {
 
 public:
 
-    DescribeRepositoriesResponsePrivate(DescribeRepositoriesResponse * const q);
+    explicit DescribeRepositoriesResponsePrivate(DescribeRepositoriesResponse * const q);
 
     void parseDescribeRepositoriesResponse(QXmlStreamReader &xml);
 

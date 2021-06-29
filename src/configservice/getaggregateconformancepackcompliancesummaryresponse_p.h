@@ -31,7 +31,7 @@ class GetAggregateConformancePackComplianceSummaryResponsePrivate : public Confi
 
 public:
 
-    GetAggregateConformancePackComplianceSummaryResponsePrivate(GetAggregateConformancePackComplianceSummaryResponse * const q);
+    explicit GetAggregateConformancePackComplianceSummaryResponsePrivate(GetAggregateConformancePackComplianceSummaryResponse * const q);
 
     void parseGetAggregateConformancePackComplianceSummaryResponse(QXmlStreamReader &xml);
 

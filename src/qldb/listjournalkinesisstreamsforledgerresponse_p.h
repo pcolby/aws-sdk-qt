@@ -31,7 +31,7 @@ class ListJournalKinesisStreamsForLedgerResponsePrivate : public QldbResponsePri
 
 public:
 
-    ListJournalKinesisStreamsForLedgerResponsePrivate(ListJournalKinesisStreamsForLedgerResponse * const q);
+    explicit ListJournalKinesisStreamsForLedgerResponsePrivate(ListJournalKinesisStreamsForLedgerResponse * const q);
 
     void parseListJournalKinesisStreamsForLedgerResponse(QXmlStreamReader &xml);
 

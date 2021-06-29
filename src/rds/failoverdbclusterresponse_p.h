@@ -31,7 +31,7 @@ class FailoverDBClusterResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    FailoverDBClusterResponsePrivate(FailoverDBClusterResponse * const q);
+    explicit FailoverDBClusterResponsePrivate(FailoverDBClusterResponse * const q);
 
     void parseFailoverDBClusterResponse(QXmlStreamReader &xml);
 

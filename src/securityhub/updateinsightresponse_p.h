@@ -31,7 +31,7 @@ class UpdateInsightResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 
-    UpdateInsightResponsePrivate(UpdateInsightResponse * const q);
+    explicit UpdateInsightResponsePrivate(UpdateInsightResponse * const q);
 
     void parseUpdateInsightResponse(QXmlStreamReader &xml);
 

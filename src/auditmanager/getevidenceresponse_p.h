@@ -31,7 +31,7 @@ class GetEvidenceResponsePrivate : public AuditManagerResponsePrivate {
 
 public:
 
-    GetEvidenceResponsePrivate(GetEvidenceResponse * const q);
+    explicit GetEvidenceResponsePrivate(GetEvidenceResponse * const q);
 
     void parseGetEvidenceResponse(QXmlStreamReader &xml);
 

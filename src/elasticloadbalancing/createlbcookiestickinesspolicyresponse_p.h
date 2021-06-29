@@ -31,7 +31,7 @@ class CreateLBCookieStickinessPolicyResponsePrivate : public ElasticLoadBalancin
 
 public:
 
-    CreateLBCookieStickinessPolicyResponsePrivate(CreateLBCookieStickinessPolicyResponse * const q);
+    explicit CreateLBCookieStickinessPolicyResponsePrivate(CreateLBCookieStickinessPolicyResponse * const q);
 
     void parseCreateLBCookieStickinessPolicyResponse(QXmlStreamReader &xml);
 

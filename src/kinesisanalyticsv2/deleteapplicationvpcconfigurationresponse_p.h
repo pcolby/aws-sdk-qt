@@ -31,7 +31,7 @@ class DeleteApplicationVpcConfigurationResponsePrivate : public KinesisAnalytics
 
 public:
 
-    DeleteApplicationVpcConfigurationResponsePrivate(DeleteApplicationVpcConfigurationResponse * const q);
+    explicit DeleteApplicationVpcConfigurationResponsePrivate(DeleteApplicationVpcConfigurationResponse * const q);
 
     void parseDeleteApplicationVpcConfigurationResponse(QXmlStreamReader &xml);
 

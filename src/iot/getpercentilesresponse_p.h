@@ -31,7 +31,7 @@ class GetPercentilesResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    GetPercentilesResponsePrivate(GetPercentilesResponse * const q);
+    explicit GetPercentilesResponsePrivate(GetPercentilesResponse * const q);
 
     void parseGetPercentilesResponse(QXmlStreamReader &xml);
 

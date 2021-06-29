@@ -31,7 +31,7 @@ class UpdateDatastoreResponsePrivate : public IoTAnalyticsResponsePrivate {
 
 public:
 
-    UpdateDatastoreResponsePrivate(UpdateDatastoreResponse * const q);
+    explicit UpdateDatastoreResponsePrivate(UpdateDatastoreResponse * const q);
 
     void parseUpdateDatastoreResponse(QXmlStreamReader &xml);
 

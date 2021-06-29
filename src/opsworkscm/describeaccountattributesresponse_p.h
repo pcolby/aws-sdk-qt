@@ -31,7 +31,7 @@ class DescribeAccountAttributesResponsePrivate : public OpsWorksCMResponsePrivat
 
 public:
 
-    DescribeAccountAttributesResponsePrivate(DescribeAccountAttributesResponse * const q);
+    explicit DescribeAccountAttributesResponsePrivate(DescribeAccountAttributesResponse * const q);
 
     void parseDescribeAccountAttributesResponse(QXmlStreamReader &xml);
 

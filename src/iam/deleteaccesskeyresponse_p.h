@@ -31,7 +31,7 @@ class DeleteAccessKeyResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    DeleteAccessKeyResponsePrivate(DeleteAccessKeyResponse * const q);
+    explicit DeleteAccessKeyResponsePrivate(DeleteAccessKeyResponse * const q);
 
     void parseDeleteAccessKeyResponse(QXmlStreamReader &xml);
 

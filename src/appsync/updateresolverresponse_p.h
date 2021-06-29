@@ -31,7 +31,7 @@ class UpdateResolverResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 
-    UpdateResolverResponsePrivate(UpdateResolverResponse * const q);
+    explicit UpdateResolverResponsePrivate(UpdateResolverResponse * const q);
 
     void parseUpdateResolverResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListTagsForCertificateResponsePrivate : public AcmResponsePrivate {
 
 public:
 
-    ListTagsForCertificateResponsePrivate(ListTagsForCertificateResponse * const q);
+    explicit ListTagsForCertificateResponsePrivate(ListTagsForCertificateResponse * const q);
 
     void parseListTagsForCertificateResponse(QXmlStreamReader &xml);
 

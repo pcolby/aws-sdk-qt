@@ -31,7 +31,7 @@ class ListSlotTypesResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 
-    ListSlotTypesResponsePrivate(ListSlotTypesResponse * const q);
+    explicit ListSlotTypesResponsePrivate(ListSlotTypesResponse * const q);
 
     void parseListSlotTypesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class StartDeploymentResponsePrivate : public AppConfigResponsePrivate {
 
 public:
 
-    StartDeploymentResponsePrivate(StartDeploymentResponse * const q);
+    explicit StartDeploymentResponsePrivate(StartDeploymentResponse * const q);
 
     void parseStartDeploymentResponse(QXmlStreamReader &xml);
 

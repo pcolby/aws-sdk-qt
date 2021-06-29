@@ -31,7 +31,7 @@ class StopQueryResponsePrivate : public CloudWatchLogsResponsePrivate {
 
 public:
 
-    StopQueryResponsePrivate(StopQueryResponse * const q);
+    explicit StopQueryResponsePrivate(StopQueryResponse * const q);
 
     void parseStopQueryResponse(QXmlStreamReader &xml);
 

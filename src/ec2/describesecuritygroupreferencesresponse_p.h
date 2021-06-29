@@ -31,7 +31,7 @@ class DescribeSecurityGroupReferencesResponsePrivate : public Ec2ResponsePrivate
 
 public:
 
-    DescribeSecurityGroupReferencesResponsePrivate(DescribeSecurityGroupReferencesResponse * const q);
+    explicit DescribeSecurityGroupReferencesResponsePrivate(DescribeSecurityGroupReferencesResponse * const q);
 
     void parseDescribeSecurityGroupReferencesResponse(QXmlStreamReader &xml);
 

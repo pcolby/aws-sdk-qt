@@ -31,7 +31,7 @@ class PutVoiceConnectorStreamingConfigurationResponsePrivate : public ChimeRespo
 
 public:
 
-    PutVoiceConnectorStreamingConfigurationResponsePrivate(PutVoiceConnectorStreamingConfigurationResponse * const q);
+    explicit PutVoiceConnectorStreamingConfigurationResponsePrivate(PutVoiceConnectorStreamingConfigurationResponse * const q);
 
     void parsePutVoiceConnectorStreamingConfigurationResponse(QXmlStreamReader &xml);
 

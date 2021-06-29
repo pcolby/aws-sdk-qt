@@ -31,7 +31,7 @@ class DetachRolePolicyResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    DetachRolePolicyResponsePrivate(DetachRolePolicyResponse * const q);
+    explicit DetachRolePolicyResponsePrivate(DetachRolePolicyResponse * const q);
 
     void parseDetachRolePolicyResponse(QXmlStreamReader &xml);
 

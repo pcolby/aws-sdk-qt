@@ -31,7 +31,7 @@ class ListPartnerEventSourceAccountsResponsePrivate : public EventBridgeResponse
 
 public:
 
-    ListPartnerEventSourceAccountsResponsePrivate(ListPartnerEventSourceAccountsResponse * const q);
+    explicit ListPartnerEventSourceAccountsResponsePrivate(ListPartnerEventSourceAccountsResponse * const q);
 
     void parseListPartnerEventSourceAccountsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribePoliciesResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 
-    DescribePoliciesResponsePrivate(DescribePoliciesResponse * const q);
+    explicit DescribePoliciesResponsePrivate(DescribePoliciesResponse * const q);
 
     void parseDescribePoliciesResponse(QXmlStreamReader &xml);
 

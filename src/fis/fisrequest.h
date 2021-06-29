@@ -73,7 +73,7 @@ public:
 protected:
     /// @cond internal
     FisRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    FisRequest(FisRequestPrivate * const d);
+    explicit FisRequest(FisRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

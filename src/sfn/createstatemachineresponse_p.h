@@ -31,7 +31,7 @@ class CreateStateMachineResponsePrivate : public SfnResponsePrivate {
 
 public:
 
-    CreateStateMachineResponsePrivate(CreateStateMachineResponse * const q);
+    explicit CreateStateMachineResponsePrivate(CreateStateMachineResponse * const q);
 
     void parseCreateStateMachineResponse(QXmlStreamReader &xml);
 

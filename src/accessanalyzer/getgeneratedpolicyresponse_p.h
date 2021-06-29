@@ -31,7 +31,7 @@ class GetGeneratedPolicyResponsePrivate : public AccessAnalyzerResponsePrivate {
 
 public:
 
-    GetGeneratedPolicyResponsePrivate(GetGeneratedPolicyResponse * const q);
+    explicit GetGeneratedPolicyResponsePrivate(GetGeneratedPolicyResponse * const q);
 
     void parseGetGeneratedPolicyResponse(QXmlStreamReader &xml);
 

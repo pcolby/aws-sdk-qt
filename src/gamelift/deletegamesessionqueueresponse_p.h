@@ -31,7 +31,7 @@ class DeleteGameSessionQueueResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    DeleteGameSessionQueueResponsePrivate(DeleteGameSessionQueueResponse * const q);
+    explicit DeleteGameSessionQueueResponsePrivate(DeleteGameSessionQueueResponse * const q);
 
     void parseDeleteGameSessionQueueResponse(QXmlStreamReader &xml);
 

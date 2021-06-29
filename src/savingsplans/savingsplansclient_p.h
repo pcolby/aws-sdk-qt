@@ -30,7 +30,7 @@ class SavingsPlansClient;
 class SavingsPlansClientPrivate {
 
 public:
-    SavingsPlansClientPrivate(SavingsPlansClient * const q);
+    explicit SavingsPlansClientPrivate(SavingsPlansClient * const q);
 
 protected:
     SavingsPlansClient * const q_ptr; ///< Internal q-pointer.

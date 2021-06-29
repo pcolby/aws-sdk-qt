@@ -31,7 +31,7 @@ class UpdateArchiveRuleResponsePrivate : public AccessAnalyzerResponsePrivate {
 
 public:
 
-    UpdateArchiveRuleResponsePrivate(UpdateArchiveRuleResponse * const q);
+    explicit UpdateArchiveRuleResponsePrivate(UpdateArchiveRuleResponse * const q);
 
     void parseUpdateArchiveRuleResponse(QXmlStreamReader &xml);
 

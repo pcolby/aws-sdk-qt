@@ -31,7 +31,7 @@ class DeleteContactListResponsePrivate : public Sesv2ResponsePrivate {
 
 public:
 
-    DeleteContactListResponsePrivate(DeleteContactListResponse * const q);
+    explicit DeleteContactListResponsePrivate(DeleteContactListResponse * const q);
 
     void parseDeleteContactListResponse(QXmlStreamReader &xml);
 

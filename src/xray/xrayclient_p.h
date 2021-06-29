@@ -30,7 +30,7 @@ class XRayClient;
 class XRayClientPrivate {
 
 public:
-    XRayClientPrivate(XRayClient * const q);
+    explicit XRayClientPrivate(XRayClient * const q);
 
 protected:
     XRayClient * const q_ptr; ///< Internal q-pointer.

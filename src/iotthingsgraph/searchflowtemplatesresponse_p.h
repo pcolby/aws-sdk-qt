@@ -31,7 +31,7 @@ class SearchFlowTemplatesResponsePrivate : public IoTThingsGraphResponsePrivate 
 
 public:
 
-    SearchFlowTemplatesResponsePrivate(SearchFlowTemplatesResponse * const q);
+    explicit SearchFlowTemplatesResponsePrivate(SearchFlowTemplatesResponse * const q);
 
     void parseSearchFlowTemplatesResponse(QXmlStreamReader &xml);
 

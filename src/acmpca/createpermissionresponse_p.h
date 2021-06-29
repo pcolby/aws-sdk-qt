@@ -31,7 +31,7 @@ class CreatePermissionResponsePrivate : public AcmpcaResponsePrivate {
 
 public:
 
-    CreatePermissionResponsePrivate(CreatePermissionResponse * const q);
+    explicit CreatePermissionResponsePrivate(CreatePermissionResponse * const q);
 
     void parseCreatePermissionResponse(QXmlStreamReader &xml);
 

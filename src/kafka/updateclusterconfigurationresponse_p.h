@@ -31,7 +31,7 @@ class UpdateClusterConfigurationResponsePrivate : public KafkaResponsePrivate {
 
 public:
 
-    UpdateClusterConfigurationResponsePrivate(UpdateClusterConfigurationResponse * const q);
+    explicit UpdateClusterConfigurationResponsePrivate(UpdateClusterConfigurationResponse * const q);
 
     void parseUpdateClusterConfigurationResponse(QXmlStreamReader &xml);
 

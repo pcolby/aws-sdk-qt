@@ -31,7 +31,7 @@ class CreateGovCloudAccountResponsePrivate : public OrganizationsResponsePrivate
 
 public:
 
-    CreateGovCloudAccountResponsePrivate(CreateGovCloudAccountResponse * const q);
+    explicit CreateGovCloudAccountResponsePrivate(CreateGovCloudAccountResponse * const q);
 
     void parseCreateGovCloudAccountResponse(QXmlStreamReader &xml);
 

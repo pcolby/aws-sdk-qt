@@ -31,7 +31,7 @@ class DeleteOrganizationResponsePrivate : public OrganizationsResponsePrivate {
 
 public:
 
-    DeleteOrganizationResponsePrivate(DeleteOrganizationResponse * const q);
+    explicit DeleteOrganizationResponsePrivate(DeleteOrganizationResponse * const q);
 
     void parseDeleteOrganizationResponse(QXmlStreamReader &xml);
 

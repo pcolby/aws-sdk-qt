@@ -31,7 +31,7 @@ class DescribeConnectionResponsePrivate : public CloudWatchEventsResponsePrivate
 
 public:
 
-    DescribeConnectionResponsePrivate(DescribeConnectionResponse * const q);
+    explicit DescribeConnectionResponsePrivate(DescribeConnectionResponse * const q);
 
     void parseDescribeConnectionResponse(QXmlStreamReader &xml);
 

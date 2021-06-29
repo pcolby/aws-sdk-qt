@@ -29,7 +29,7 @@ class PersonalizeEventsResponsePrivate {
 
 public:
 
-    PersonalizeEventsResponsePrivate(PersonalizeEventsResponse * const q);
+    explicit PersonalizeEventsResponsePrivate(PersonalizeEventsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

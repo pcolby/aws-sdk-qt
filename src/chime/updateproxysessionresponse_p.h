@@ -31,7 +31,7 @@ class UpdateProxySessionResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    UpdateProxySessionResponsePrivate(UpdateProxySessionResponse * const q);
+    explicit UpdateProxySessionResponsePrivate(UpdateProxySessionResponse * const q);
 
     void parseUpdateProxySessionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListUserPoolsResponsePrivate : public CognitoIdentityProviderResponsePriva
 
 public:
 
-    ListUserPoolsResponsePrivate(ListUserPoolsResponse * const q);
+    explicit ListUserPoolsResponsePrivate(ListUserPoolsResponse * const q);
 
     void parseListUserPoolsResponse(QXmlStreamReader &xml);
 

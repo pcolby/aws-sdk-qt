@@ -31,7 +31,7 @@ class UpdateRelationalDatabaseResponsePrivate : public LightsailResponsePrivate 
 
 public:
 
-    UpdateRelationalDatabaseResponsePrivate(UpdateRelationalDatabaseResponse * const q);
+    explicit UpdateRelationalDatabaseResponsePrivate(UpdateRelationalDatabaseResponse * const q);
 
     void parseUpdateRelationalDatabaseResponse(QXmlStreamReader &xml);
 

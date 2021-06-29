@@ -31,7 +31,7 @@ class StopLoggingResponsePrivate : public CloudTrailResponsePrivate {
 
 public:
 
-    StopLoggingResponsePrivate(StopLoggingResponse * const q);
+    explicit StopLoggingResponsePrivate(StopLoggingResponse * const q);
 
     void parseStopLoggingResponse(QXmlStreamReader &xml);
 

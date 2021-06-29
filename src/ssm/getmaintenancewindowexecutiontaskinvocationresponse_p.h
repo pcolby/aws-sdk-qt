@@ -31,7 +31,7 @@ class GetMaintenanceWindowExecutionTaskInvocationResponsePrivate : public SsmRes
 
 public:
 
-    GetMaintenanceWindowExecutionTaskInvocationResponsePrivate(GetMaintenanceWindowExecutionTaskInvocationResponse * const q);
+    explicit GetMaintenanceWindowExecutionTaskInvocationResponsePrivate(GetMaintenanceWindowExecutionTaskInvocationResponse * const q);
 
     void parseGetMaintenanceWindowExecutionTaskInvocationResponse(QXmlStreamReader &xml);
 

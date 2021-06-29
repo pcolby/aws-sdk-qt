@@ -31,7 +31,7 @@ class CreateArtifactResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    CreateArtifactResponsePrivate(CreateArtifactResponse * const q);
+    explicit CreateArtifactResponsePrivate(CreateArtifactResponse * const q);
 
     void parseCreateArtifactResponse(QXmlStreamReader &xml);
 

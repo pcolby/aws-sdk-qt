@@ -31,7 +31,7 @@ class DeleteCustomMetricResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DeleteCustomMetricResponsePrivate(DeleteCustomMetricResponse * const q);
+    explicit DeleteCustomMetricResponsePrivate(DeleteCustomMetricResponse * const q);
 
     void parseDeleteCustomMetricResponse(QXmlStreamReader &xml);
 

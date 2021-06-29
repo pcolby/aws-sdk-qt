@@ -31,7 +31,7 @@ class DeleteConfigResponsePrivate : public GroundStationResponsePrivate {
 
 public:
 
-    DeleteConfigResponsePrivate(DeleteConfigResponse * const q);
+    explicit DeleteConfigResponsePrivate(DeleteConfigResponse * const q);
 
     void parseDeleteConfigResponse(QXmlStreamReader &xml);
 

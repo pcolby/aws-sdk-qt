@@ -30,7 +30,7 @@ class CloudWatchEventsClient;
 class CloudWatchEventsClientPrivate {
 
 public:
-    CloudWatchEventsClientPrivate(CloudWatchEventsClient * const q);
+    explicit CloudWatchEventsClientPrivate(CloudWatchEventsClient * const q);
 
 protected:
     CloudWatchEventsClient * const q_ptr; ///< Internal q-pointer.

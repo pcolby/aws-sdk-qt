@@ -31,7 +31,7 @@ class DescribeVpcEndpointConnectionsResponsePrivate : public Ec2ResponsePrivate 
 
 public:
 
-    DescribeVpcEndpointConnectionsResponsePrivate(DescribeVpcEndpointConnectionsResponse * const q);
+    explicit DescribeVpcEndpointConnectionsResponsePrivate(DescribeVpcEndpointConnectionsResponse * const q);
 
     void parseDescribeVpcEndpointConnectionsResponse(QXmlStreamReader &xml);
 

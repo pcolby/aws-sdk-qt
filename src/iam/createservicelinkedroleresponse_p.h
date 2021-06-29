@@ -31,7 +31,7 @@ class CreateServiceLinkedRoleResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    CreateServiceLinkedRoleResponsePrivate(CreateServiceLinkedRoleResponse * const q);
+    explicit CreateServiceLinkedRoleResponsePrivate(CreateServiceLinkedRoleResponse * const q);
 
     void parseCreateServiceLinkedRoleResponse(QXmlStreamReader &xml);
 

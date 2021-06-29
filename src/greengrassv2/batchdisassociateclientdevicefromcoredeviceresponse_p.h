@@ -31,7 +31,7 @@ class BatchDisassociateClientDeviceFromCoreDeviceResponsePrivate : public Greeng
 
 public:
 
-    BatchDisassociateClientDeviceFromCoreDeviceResponsePrivate(BatchDisassociateClientDeviceFromCoreDeviceResponse * const q);
+    explicit BatchDisassociateClientDeviceFromCoreDeviceResponsePrivate(BatchDisassociateClientDeviceFromCoreDeviceResponse * const q);
 
     void parseBatchDisassociateClientDeviceFromCoreDeviceResponse(QXmlStreamReader &xml);
 

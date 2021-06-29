@@ -31,7 +31,7 @@ class DeleteWorldTemplateResponsePrivate : public RoboMakerResponsePrivate {
 
 public:
 
-    DeleteWorldTemplateResponsePrivate(DeleteWorldTemplateResponse * const q);
+    explicit DeleteWorldTemplateResponsePrivate(DeleteWorldTemplateResponse * const q);
 
     void parseDeleteWorldTemplateResponse(QXmlStreamReader &xml);
 

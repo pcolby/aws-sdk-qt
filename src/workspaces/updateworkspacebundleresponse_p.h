@@ -31,7 +31,7 @@ class UpdateWorkspaceBundleResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 
-    UpdateWorkspaceBundleResponsePrivate(UpdateWorkspaceBundleResponse * const q);
+    explicit UpdateWorkspaceBundleResponsePrivate(UpdateWorkspaceBundleResponse * const q);
 
     void parseUpdateWorkspaceBundleResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ResetServiceSettingResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    ResetServiceSettingResponsePrivate(ResetServiceSettingResponse * const q);
+    explicit ResetServiceSettingResponsePrivate(ResetServiceSettingResponse * const q);
 
     void parseResetServiceSettingResponse(QXmlStreamReader &xml);
 

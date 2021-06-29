@@ -31,7 +31,7 @@ class PutOrganizationConfigRuleResponsePrivate : public ConfigServiceResponsePri
 
 public:
 
-    PutOrganizationConfigRuleResponsePrivate(PutOrganizationConfigRuleResponse * const q);
+    explicit PutOrganizationConfigRuleResponsePrivate(PutOrganizationConfigRuleResponse * const q);
 
     void parsePutOrganizationConfigRuleResponse(QXmlStreamReader &xml);
 

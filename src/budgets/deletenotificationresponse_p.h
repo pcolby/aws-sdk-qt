@@ -31,7 +31,7 @@ class DeleteNotificationResponsePrivate : public BudgetsResponsePrivate {
 
 public:
 
-    DeleteNotificationResponsePrivate(DeleteNotificationResponse * const q);
+    explicit DeleteNotificationResponsePrivate(DeleteNotificationResponse * const q);
 
     void parseDeleteNotificationResponse(QXmlStreamReader &xml);
 

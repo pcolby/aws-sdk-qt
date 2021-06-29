@@ -31,7 +31,7 @@ class GetMemberDetectorsResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 
-    GetMemberDetectorsResponsePrivate(GetMemberDetectorsResponse * const q);
+    explicit GetMemberDetectorsResponsePrivate(GetMemberDetectorsResponse * const q);
 
     void parseGetMemberDetectorsResponse(QXmlStreamReader &xml);
 

@@ -29,7 +29,7 @@ class SwfResponsePrivate {
 
 public:
 
-    SwfResponsePrivate(SwfResponse * const q);
+    explicit SwfResponsePrivate(SwfResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

@@ -31,7 +31,7 @@ class CreateStreamKeyResponsePrivate : public IvsResponsePrivate {
 
 public:
 
-    CreateStreamKeyResponsePrivate(CreateStreamKeyResponse * const q);
+    explicit CreateStreamKeyResponsePrivate(CreateStreamKeyResponse * const q);
 
     void parseCreateStreamKeyResponse(QXmlStreamReader &xml);
 

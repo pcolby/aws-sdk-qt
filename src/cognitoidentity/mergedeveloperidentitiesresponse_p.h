@@ -31,7 +31,7 @@ class MergeDeveloperIdentitiesResponsePrivate : public CognitoIdentityResponsePr
 
 public:
 
-    MergeDeveloperIdentitiesResponsePrivate(MergeDeveloperIdentitiesResponse * const q);
+    explicit MergeDeveloperIdentitiesResponsePrivate(MergeDeveloperIdentitiesResponse * const q);
 
     void parseMergeDeveloperIdentitiesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class RebootInstancesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    RebootInstancesResponsePrivate(RebootInstancesResponse * const q);
+    explicit RebootInstancesResponsePrivate(RebootInstancesResponse * const q);
 
     void parseRebootInstancesResponse(QXmlStreamReader &xml);
 

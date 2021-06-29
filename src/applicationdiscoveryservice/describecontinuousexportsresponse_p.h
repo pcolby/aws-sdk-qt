@@ -31,7 +31,7 @@ class DescribeContinuousExportsResponsePrivate : public ApplicationDiscoveryServ
 
 public:
 
-    DescribeContinuousExportsResponsePrivate(DescribeContinuousExportsResponse * const q);
+    explicit DescribeContinuousExportsResponsePrivate(DescribeContinuousExportsResponse * const q);
 
     void parseDescribeContinuousExportsResponse(QXmlStreamReader &xml);
 

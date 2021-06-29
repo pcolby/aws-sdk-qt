@@ -31,7 +31,7 @@ class GetResolverQueryLogConfigResponsePrivate : public Route53ResolverResponseP
 
 public:
 
-    GetResolverQueryLogConfigResponsePrivate(GetResolverQueryLogConfigResponse * const q);
+    explicit GetResolverQueryLogConfigResponsePrivate(GetResolverQueryLogConfigResponse * const q);
 
     void parseGetResolverQueryLogConfigResponse(QXmlStreamReader &xml);
 

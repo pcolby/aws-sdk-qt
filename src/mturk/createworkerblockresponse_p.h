@@ -31,7 +31,7 @@ class CreateWorkerBlockResponsePrivate : public MTurkResponsePrivate {
 
 public:
 
-    CreateWorkerBlockResponsePrivate(CreateWorkerBlockResponse * const q);
+    explicit CreateWorkerBlockResponsePrivate(CreateWorkerBlockResponse * const q);
 
     void parseCreateWorkerBlockResponse(QXmlStreamReader &xml);
 

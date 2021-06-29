@@ -31,7 +31,7 @@ class CreatePortalResponsePrivate : public IoTSiteWiseResponsePrivate {
 
 public:
 
-    CreatePortalResponsePrivate(CreatePortalResponse * const q);
+    explicit CreatePortalResponsePrivate(CreatePortalResponse * const q);
 
     void parseCreatePortalResponse(QXmlStreamReader &xml);
 

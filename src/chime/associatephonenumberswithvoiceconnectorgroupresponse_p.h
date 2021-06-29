@@ -31,7 +31,7 @@ class AssociatePhoneNumbersWithVoiceConnectorGroupResponsePrivate : public Chime
 
 public:
 
-    AssociatePhoneNumbersWithVoiceConnectorGroupResponsePrivate(AssociatePhoneNumbersWithVoiceConnectorGroupResponse * const q);
+    explicit AssociatePhoneNumbersWithVoiceConnectorGroupResponsePrivate(AssociatePhoneNumbersWithVoiceConnectorGroupResponse * const q);
 
     void parseAssociatePhoneNumbersWithVoiceConnectorGroupResponse(QXmlStreamReader &xml);
 

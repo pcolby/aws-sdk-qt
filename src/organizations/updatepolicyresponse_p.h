@@ -31,7 +31,7 @@ class UpdatePolicyResponsePrivate : public OrganizationsResponsePrivate {
 
 public:
 
-    UpdatePolicyResponsePrivate(UpdatePolicyResponse * const q);
+    explicit UpdatePolicyResponsePrivate(UpdatePolicyResponse * const q);
 
     void parseUpdatePolicyResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeServiceActionExecutionParametersResponsePrivate : public ServiceCa
 
 public:
 
-    DescribeServiceActionExecutionParametersResponsePrivate(DescribeServiceActionExecutionParametersResponse * const q);
+    explicit DescribeServiceActionExecutionParametersResponsePrivate(DescribeServiceActionExecutionParametersResponse * const q);
 
     void parseDescribeServiceActionExecutionParametersResponse(QXmlStreamReader &xml);
 

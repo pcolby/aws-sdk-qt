@@ -31,7 +31,7 @@ class DescribeTimeBasedAutoScalingResponsePrivate : public OpsWorksResponsePriva
 
 public:
 
-    DescribeTimeBasedAutoScalingResponsePrivate(DescribeTimeBasedAutoScalingResponse * const q);
+    explicit DescribeTimeBasedAutoScalingResponsePrivate(DescribeTimeBasedAutoScalingResponse * const q);
 
     void parseDescribeTimeBasedAutoScalingResponse(QXmlStreamReader &xml);
 

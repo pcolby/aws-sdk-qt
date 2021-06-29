@@ -31,7 +31,7 @@ class CreateConfigurationTemplateResponsePrivate : public ElasticBeanstalkRespon
 
 public:
 
-    CreateConfigurationTemplateResponsePrivate(CreateConfigurationTemplateResponse * const q);
+    explicit CreateConfigurationTemplateResponsePrivate(CreateConfigurationTemplateResponse * const q);
 
     void parseCreateConfigurationTemplateResponse(QXmlStreamReader &xml);
 

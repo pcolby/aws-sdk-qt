@@ -31,7 +31,7 @@ class UpdateFlowEntitlementResponsePrivate : public MediaConnectResponsePrivate 
 
 public:
 
-    UpdateFlowEntitlementResponsePrivate(UpdateFlowEntitlementResponse * const q);
+    explicit UpdateFlowEntitlementResponsePrivate(UpdateFlowEntitlementResponse * const q);
 
     void parseUpdateFlowEntitlementResponse(QXmlStreamReader &xml);
 

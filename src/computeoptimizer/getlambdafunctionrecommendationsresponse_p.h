@@ -31,7 +31,7 @@ class GetLambdaFunctionRecommendationsResponsePrivate : public ComputeOptimizerR
 
 public:
 
-    GetLambdaFunctionRecommendationsResponsePrivate(GetLambdaFunctionRecommendationsResponse * const q);
+    explicit GetLambdaFunctionRecommendationsResponsePrivate(GetLambdaFunctionRecommendationsResponse * const q);
 
     void parseGetLambdaFunctionRecommendationsResponse(QXmlStreamReader &xml);
 

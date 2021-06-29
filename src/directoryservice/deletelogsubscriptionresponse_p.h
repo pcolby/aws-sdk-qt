@@ -31,7 +31,7 @@ class DeleteLogSubscriptionResponsePrivate : public DirectoryServiceResponsePriv
 
 public:
 
-    DeleteLogSubscriptionResponsePrivate(DeleteLogSubscriptionResponse * const q);
+    explicit DeleteLogSubscriptionResponsePrivate(DeleteLogSubscriptionResponse * const q);
 
     void parseDeleteLogSubscriptionResponse(QXmlStreamReader &xml);
 

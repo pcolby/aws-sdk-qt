@@ -31,7 +31,7 @@ class DescribeComputeEnvironmentsResponsePrivate : public BatchResponsePrivate {
 
 public:
 
-    DescribeComputeEnvironmentsResponsePrivate(DescribeComputeEnvironmentsResponse * const q);
+    explicit DescribeComputeEnvironmentsResponsePrivate(DescribeComputeEnvironmentsResponse * const q);
 
     void parseDescribeComputeEnvironmentsResponse(QXmlStreamReader &xml);
 

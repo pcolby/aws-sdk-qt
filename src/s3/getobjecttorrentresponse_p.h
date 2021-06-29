@@ -31,7 +31,7 @@ class GetObjectTorrentResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    GetObjectTorrentResponsePrivate(GetObjectTorrentResponse * const q);
+    explicit GetObjectTorrentResponsePrivate(GetObjectTorrentResponse * const q);
 
     void parseGetObjectTorrentResponse(QXmlStreamReader &xml);
 

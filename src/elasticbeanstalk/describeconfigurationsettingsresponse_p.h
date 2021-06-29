@@ -31,7 +31,7 @@ class DescribeConfigurationSettingsResponsePrivate : public ElasticBeanstalkResp
 
 public:
 
-    DescribeConfigurationSettingsResponsePrivate(DescribeConfigurationSettingsResponse * const q);
+    explicit DescribeConfigurationSettingsResponsePrivate(DescribeConfigurationSettingsResponse * const q);
 
     void parseDescribeConfigurationSettingsResponse(QXmlStreamReader &xml);
 

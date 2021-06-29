@@ -31,7 +31,7 @@ class DescribeReservedCacheNodesOfferingsResponsePrivate : public ElastiCacheRes
 
 public:
 
-    DescribeReservedCacheNodesOfferingsResponsePrivate(DescribeReservedCacheNodesOfferingsResponse * const q);
+    explicit DescribeReservedCacheNodesOfferingsResponsePrivate(DescribeReservedCacheNodesOfferingsResponse * const q);
 
     void parseDescribeReservedCacheNodesOfferingsResponse(QXmlStreamReader &xml);
 

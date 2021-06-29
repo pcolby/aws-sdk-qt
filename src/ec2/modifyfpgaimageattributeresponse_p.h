@@ -31,7 +31,7 @@ class ModifyFpgaImageAttributeResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ModifyFpgaImageAttributeResponsePrivate(ModifyFpgaImageAttributeResponse * const q);
+    explicit ModifyFpgaImageAttributeResponsePrivate(ModifyFpgaImageAttributeResponse * const q);
 
     void parseModifyFpgaImageAttributeResponse(QXmlStreamReader &xml);
 

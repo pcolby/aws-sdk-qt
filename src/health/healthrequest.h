@@ -72,7 +72,7 @@ public:
 protected:
     /// @cond internal
     HealthRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    HealthRequest(HealthRequestPrivate * const d);
+    explicit HealthRequest(HealthRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

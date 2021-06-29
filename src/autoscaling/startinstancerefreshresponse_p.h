@@ -31,7 +31,7 @@ class StartInstanceRefreshResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 
-    StartInstanceRefreshResponsePrivate(StartInstanceRefreshResponse * const q);
+    explicit StartInstanceRefreshResponsePrivate(StartInstanceRefreshResponse * const q);
 
     void parseStartInstanceRefreshResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UploadLayerPartResponsePrivate : public EcrResponsePrivate {
 
 public:
 
-    UploadLayerPartResponsePrivate(UploadLayerPartResponse * const q);
+    explicit UploadLayerPartResponsePrivate(UploadLayerPartResponse * const q);
 
     void parseUploadLayerPartResponse(QXmlStreamReader &xml);
 

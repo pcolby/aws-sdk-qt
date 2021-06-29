@@ -31,7 +31,7 @@ class GetCredentialsForIdentityResponsePrivate : public CognitoIdentityResponseP
 
 public:
 
-    GetCredentialsForIdentityResponsePrivate(GetCredentialsForIdentityResponse * const q);
+    explicit GetCredentialsForIdentityResponsePrivate(GetCredentialsForIdentityResponse * const q);
 
     void parseGetCredentialsForIdentityResponse(QXmlStreamReader &xml);
 

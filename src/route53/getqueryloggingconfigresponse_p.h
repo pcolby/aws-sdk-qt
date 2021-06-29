@@ -31,7 +31,7 @@ class GetQueryLoggingConfigResponsePrivate : public Route53ResponsePrivate {
 
 public:
 
-    GetQueryLoggingConfigResponsePrivate(GetQueryLoggingConfigResponse * const q);
+    explicit GetQueryLoggingConfigResponsePrivate(GetQueryLoggingConfigResponse * const q);
 
     void parseGetQueryLoggingConfigResponse(QXmlStreamReader &xml);
 

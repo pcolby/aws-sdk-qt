@@ -31,7 +31,7 @@ class ModifyCacheClusterResponsePrivate : public ElastiCacheResponsePrivate {
 
 public:
 
-    ModifyCacheClusterResponsePrivate(ModifyCacheClusterResponse * const q);
+    explicit ModifyCacheClusterResponsePrivate(ModifyCacheClusterResponse * const q);
 
     void parseModifyCacheClusterResponse(QXmlStreamReader &xml);
 

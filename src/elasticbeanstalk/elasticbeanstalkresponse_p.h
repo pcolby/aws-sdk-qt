@@ -29,7 +29,7 @@ class ElasticBeanstalkResponsePrivate {
 
 public:
 
-    ElasticBeanstalkResponsePrivate(ElasticBeanstalkResponse * const q);
+    explicit ElasticBeanstalkResponsePrivate(ElasticBeanstalkResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

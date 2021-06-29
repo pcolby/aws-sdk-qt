@@ -31,7 +31,7 @@ class DeleteTrailResponsePrivate : public CloudTrailResponsePrivate {
 
 public:
 
-    DeleteTrailResponsePrivate(DeleteTrailResponse * const q);
+    explicit DeleteTrailResponsePrivate(DeleteTrailResponse * const q);
 
     void parseDeleteTrailResponse(QXmlStreamReader &xml);
 

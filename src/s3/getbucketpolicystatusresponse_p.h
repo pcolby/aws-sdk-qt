@@ -31,7 +31,7 @@ class GetBucketPolicyStatusResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    GetBucketPolicyStatusResponsePrivate(GetBucketPolicyStatusResponse * const q);
+    explicit GetBucketPolicyStatusResponsePrivate(GetBucketPolicyStatusResponse * const q);
 
     void parseGetBucketPolicyStatusResponse(QXmlStreamReader &xml);
 

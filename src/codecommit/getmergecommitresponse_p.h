@@ -31,7 +31,7 @@ class GetMergeCommitResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 
-    GetMergeCommitResponsePrivate(GetMergeCommitResponse * const q);
+    explicit GetMergeCommitResponsePrivate(GetMergeCommitResponse * const q);
 
     void parseGetMergeCommitResponse(QXmlStreamReader &xml);
 

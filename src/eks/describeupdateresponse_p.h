@@ -31,7 +31,7 @@ class DescribeUpdateResponsePrivate : public EksResponsePrivate {
 
 public:
 
-    DescribeUpdateResponsePrivate(DescribeUpdateResponse * const q);
+    explicit DescribeUpdateResponsePrivate(DescribeUpdateResponse * const q);
 
     void parseDescribeUpdateResponse(QXmlStreamReader &xml);
 

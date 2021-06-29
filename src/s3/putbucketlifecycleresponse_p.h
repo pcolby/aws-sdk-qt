@@ -31,7 +31,7 @@ class PutBucketLifecycleResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    PutBucketLifecycleResponsePrivate(PutBucketLifecycleResponse * const q);
+    explicit PutBucketLifecycleResponsePrivate(PutBucketLifecycleResponse * const q);
 
     void parsePutBucketLifecycleResponse(QXmlStreamReader &xml);
 

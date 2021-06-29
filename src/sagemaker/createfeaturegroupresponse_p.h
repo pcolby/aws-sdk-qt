@@ -31,7 +31,7 @@ class CreateFeatureGroupResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    CreateFeatureGroupResponsePrivate(CreateFeatureGroupResponse * const q);
+    explicit CreateFeatureGroupResponsePrivate(CreateFeatureGroupResponse * const q);
 
     void parseCreateFeatureGroupResponse(QXmlStreamReader &xml);
 

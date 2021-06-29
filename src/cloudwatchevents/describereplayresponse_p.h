@@ -31,7 +31,7 @@ class DescribeReplayResponsePrivate : public CloudWatchEventsResponsePrivate {
 
 public:
 
-    DescribeReplayResponsePrivate(DescribeReplayResponse * const q);
+    explicit DescribeReplayResponsePrivate(DescribeReplayResponse * const q);
 
     void parseDescribeReplayResponse(QXmlStreamReader &xml);
 

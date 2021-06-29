@@ -31,7 +31,7 @@ class DeleteVpcPeeringAuthorizationResponsePrivate : public GameLiftResponsePriv
 
 public:
 
-    DeleteVpcPeeringAuthorizationResponsePrivate(DeleteVpcPeeringAuthorizationResponse * const q);
+    explicit DeleteVpcPeeringAuthorizationResponsePrivate(DeleteVpcPeeringAuthorizationResponse * const q);
 
     void parseDeleteVpcPeeringAuthorizationResponse(QXmlStreamReader &xml);
 

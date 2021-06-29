@@ -31,7 +31,7 @@ class CreateSimulationApplicationResponsePrivate : public RoboMakerResponsePriva
 
 public:
 
-    CreateSimulationApplicationResponsePrivate(CreateSimulationApplicationResponse * const q);
+    explicit CreateSimulationApplicationResponsePrivate(CreateSimulationApplicationResponse * const q);
 
     void parseCreateSimulationApplicationResponse(QXmlStreamReader &xml);
 

@@ -93,7 +93,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    FmsClient(
+    explicit FmsClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -129,7 +129,7 @@ public slots:
 protected:
     /// @cond internal
     FmsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    FmsClient(FmsClientPrivate * const d);
+    explicit FmsClient(FmsClientPrivate * const d);
     /// @endcond
 
 private:

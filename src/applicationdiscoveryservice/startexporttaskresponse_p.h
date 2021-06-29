@@ -31,7 +31,7 @@ class StartExportTaskResponsePrivate : public ApplicationDiscoveryServiceRespons
 
 public:
 
-    StartExportTaskResponsePrivate(StartExportTaskResponse * const q);
+    explicit StartExportTaskResponsePrivate(StartExportTaskResponse * const q);
 
     void parseStartExportTaskResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateCoreDefinitionResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 
-    CreateCoreDefinitionResponsePrivate(CreateCoreDefinitionResponse * const q);
+    explicit CreateCoreDefinitionResponsePrivate(CreateCoreDefinitionResponse * const q);
 
     void parseCreateCoreDefinitionResponse(QXmlStreamReader &xml);
 

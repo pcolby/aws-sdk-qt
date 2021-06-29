@@ -31,7 +31,7 @@ class DescribeDocumentVersionsResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 
-    DescribeDocumentVersionsResponsePrivate(DescribeDocumentVersionsResponse * const q);
+    explicit DescribeDocumentVersionsResponsePrivate(DescribeDocumentVersionsResponse * const q);
 
     void parseDescribeDocumentVersionsResponse(QXmlStreamReader &xml);
 

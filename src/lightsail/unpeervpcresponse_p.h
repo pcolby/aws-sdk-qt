@@ -31,7 +31,7 @@ class UnpeerVpcResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    UnpeerVpcResponsePrivate(UnpeerVpcResponse * const q);
+    explicit UnpeerVpcResponsePrivate(UnpeerVpcResponse * const q);
 
     void parseUnpeerVpcResponse(QXmlStreamReader &xml);
 

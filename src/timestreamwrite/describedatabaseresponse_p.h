@@ -31,7 +31,7 @@ class DescribeDatabaseResponsePrivate : public TimestreamWriteResponsePrivate {
 
 public:
 
-    DescribeDatabaseResponsePrivate(DescribeDatabaseResponse * const q);
+    explicit DescribeDatabaseResponsePrivate(DescribeDatabaseResponse * const q);
 
     void parseDescribeDatabaseResponse(QXmlStreamReader &xml);
 

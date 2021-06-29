@@ -31,7 +31,7 @@ class DescribeFleetsResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 
-    DescribeFleetsResponsePrivate(DescribeFleetsResponse * const q);
+    explicit DescribeFleetsResponsePrivate(DescribeFleetsResponse * const q);
 
     void parseDescribeFleetsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetUpgradeStatusResponsePrivate : public ElasticsearchServiceResponsePriva
 
 public:
 
-    GetUpgradeStatusResponsePrivate(GetUpgradeStatusResponse * const q);
+    explicit GetUpgradeStatusResponsePrivate(GetUpgradeStatusResponse * const q);
 
     void parseGetUpgradeStatusResponse(QXmlStreamReader &xml);
 

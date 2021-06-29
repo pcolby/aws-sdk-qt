@@ -31,7 +31,7 @@ class ListQueuesResponsePrivate : public SqsResponsePrivate {
 
 public:
 
-    ListQueuesResponsePrivate(ListQueuesResponse * const q);
+    explicit ListQueuesResponsePrivate(ListQueuesResponse * const q);
 
     void parseListQueuesResponse(QXmlStreamReader &xml);
 

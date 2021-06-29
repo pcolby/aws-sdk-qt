@@ -31,7 +31,7 @@ class GetSchemaVersionResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    GetSchemaVersionResponsePrivate(GetSchemaVersionResponse * const q);
+    explicit GetSchemaVersionResponsePrivate(GetSchemaVersionResponse * const q);
 
     void parseGetSchemaVersionResponse(QXmlStreamReader &xml);
 

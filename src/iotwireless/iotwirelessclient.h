@@ -155,7 +155,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    IoTWirelessClient(
+    explicit IoTWirelessClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -222,7 +222,7 @@ public slots:
 protected:
     /// @cond internal
     IoTWirelessClientPrivate * const d_ptr; ///< Internal d-pointer.
-    IoTWirelessClient(IoTWirelessClientPrivate * const d);
+    explicit IoTWirelessClient(IoTWirelessClientPrivate * const d);
     /// @endcond
 
 private:

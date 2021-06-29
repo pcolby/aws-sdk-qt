@@ -29,7 +29,7 @@ class IoTDeviceAdvisorResponsePrivate {
 
 public:
 
-    IoTDeviceAdvisorResponsePrivate(IoTDeviceAdvisorResponse * const q);
+    explicit IoTDeviceAdvisorResponsePrivate(IoTDeviceAdvisorResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

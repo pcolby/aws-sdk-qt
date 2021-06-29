@@ -29,7 +29,7 @@ class QuickSightResponsePrivate {
 
 public:
 
-    QuickSightResponsePrivate(QuickSightResponse * const q);
+    explicit QuickSightResponsePrivate(QuickSightResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

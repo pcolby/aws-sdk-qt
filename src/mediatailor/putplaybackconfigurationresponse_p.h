@@ -31,7 +31,7 @@ class PutPlaybackConfigurationResponsePrivate : public MediaTailorResponsePrivat
 
 public:
 
-    PutPlaybackConfigurationResponsePrivate(PutPlaybackConfigurationResponse * const q);
+    explicit PutPlaybackConfigurationResponsePrivate(PutPlaybackConfigurationResponse * const q);
 
     void parsePutPlaybackConfigurationResponse(QXmlStreamReader &xml);
 

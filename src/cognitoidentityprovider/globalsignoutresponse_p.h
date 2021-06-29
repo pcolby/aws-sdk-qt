@@ -31,7 +31,7 @@ class GlobalSignOutResponsePrivate : public CognitoIdentityProviderResponsePriva
 
 public:
 
-    GlobalSignOutResponsePrivate(GlobalSignOutResponse * const q);
+    explicit GlobalSignOutResponsePrivate(GlobalSignOutResponse * const q);
 
     void parseGlobalSignOutResponse(QXmlStreamReader &xml);
 

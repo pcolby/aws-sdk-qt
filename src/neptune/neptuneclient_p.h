@@ -30,7 +30,7 @@ class NeptuneClient;
 class NeptuneClientPrivate {
 
 public:
-    NeptuneClientPrivate(NeptuneClient * const q);
+    explicit NeptuneClientPrivate(NeptuneClient * const q);
 
 protected:
     NeptuneClient * const q_ptr; ///< Internal q-pointer.

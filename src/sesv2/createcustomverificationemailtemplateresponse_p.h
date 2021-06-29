@@ -31,7 +31,7 @@ class CreateCustomVerificationEmailTemplateResponsePrivate : public Sesv2Respons
 
 public:
 
-    CreateCustomVerificationEmailTemplateResponsePrivate(CreateCustomVerificationEmailTemplateResponse * const q);
+    explicit CreateCustomVerificationEmailTemplateResponsePrivate(CreateCustomVerificationEmailTemplateResponse * const q);
 
     void parseCreateCustomVerificationEmailTemplateResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class BatchExecuteStatementResponsePrivate : public RDSDataServiceResponsePrivat
 
 public:
 
-    BatchExecuteStatementResponsePrivate(BatchExecuteStatementResponse * const q);
+    explicit BatchExecuteStatementResponsePrivate(BatchExecuteStatementResponse * const q);
 
     void parseBatchExecuteStatementResponse(QXmlStreamReader &xml);
 

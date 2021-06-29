@@ -31,7 +31,7 @@ class ListPublishingDestinationsResponsePrivate : public GuardDutyResponsePrivat
 
 public:
 
-    ListPublishingDestinationsResponsePrivate(ListPublishingDestinationsResponse * const q);
+    explicit ListPublishingDestinationsResponsePrivate(ListPublishingDestinationsResponse * const q);
 
     void parseListPublishingDestinationsResponse(QXmlStreamReader &xml);
 

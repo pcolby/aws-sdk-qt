@@ -29,7 +29,7 @@ class DirectoryServiceResponsePrivate {
 
 public:
 
-    DirectoryServiceResponsePrivate(DirectoryServiceResponse * const q);
+    explicit DirectoryServiceResponsePrivate(DirectoryServiceResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

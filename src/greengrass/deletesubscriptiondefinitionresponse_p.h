@@ -31,7 +31,7 @@ class DeleteSubscriptionDefinitionResponsePrivate : public GreengrassResponsePri
 
 public:
 
-    DeleteSubscriptionDefinitionResponsePrivate(DeleteSubscriptionDefinitionResponse * const q);
+    explicit DeleteSubscriptionDefinitionResponsePrivate(DeleteSubscriptionDefinitionResponse * const q);
 
     void parseDeleteSubscriptionDefinitionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class AssociateS3ResourcesResponsePrivate : public MacieResponsePrivate {
 
 public:
 
-    AssociateS3ResourcesResponsePrivate(AssociateS3ResourcesResponse * const q);
+    explicit AssociateS3ResourcesResponsePrivate(AssociateS3ResourcesResponse * const q);
 
     void parseAssociateS3ResourcesResponse(QXmlStreamReader &xml);
 

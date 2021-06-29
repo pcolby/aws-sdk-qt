@@ -29,7 +29,7 @@ class NetworkManagerResponsePrivate {
 
 public:
 
-    NetworkManagerResponsePrivate(NetworkManagerResponse * const q);
+    explicit NetworkManagerResponsePrivate(NetworkManagerResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

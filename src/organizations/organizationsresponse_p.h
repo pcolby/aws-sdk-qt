@@ -29,7 +29,7 @@ class OrganizationsResponsePrivate {
 
 public:
 
-    OrganizationsResponsePrivate(OrganizationsResponse * const q);
+    explicit OrganizationsResponsePrivate(OrganizationsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

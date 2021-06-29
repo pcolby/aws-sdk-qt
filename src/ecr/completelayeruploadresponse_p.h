@@ -31,7 +31,7 @@ class CompleteLayerUploadResponsePrivate : public EcrResponsePrivate {
 
 public:
 
-    CompleteLayerUploadResponsePrivate(CompleteLayerUploadResponse * const q);
+    explicit CompleteLayerUploadResponsePrivate(CompleteLayerUploadResponse * const q);
 
     void parseCompleteLayerUploadResponse(QXmlStreamReader &xml);
 

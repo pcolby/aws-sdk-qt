@@ -31,7 +31,7 @@ class ListWorkspacesResponsePrivate : public PrometheusServiceResponsePrivate {
 
 public:
 
-    ListWorkspacesResponsePrivate(ListWorkspacesResponse * const q);
+    explicit ListWorkspacesResponsePrivate(ListWorkspacesResponse * const q);
 
     void parseListWorkspacesResponse(QXmlStreamReader &xml);
 

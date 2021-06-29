@@ -29,7 +29,7 @@ class MediaTailorResponsePrivate {
 
 public:
 
-    MediaTailorResponsePrivate(MediaTailorResponse * const q);
+    explicit MediaTailorResponsePrivate(MediaTailorResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

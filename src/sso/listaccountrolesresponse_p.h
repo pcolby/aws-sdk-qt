@@ -31,7 +31,7 @@ class ListAccountRolesResponsePrivate : public SsoResponsePrivate {
 
 public:
 
-    ListAccountRolesResponsePrivate(ListAccountRolesResponse * const q);
+    explicit ListAccountRolesResponsePrivate(ListAccountRolesResponse * const q);
 
     void parseListAccountRolesResponse(QXmlStreamReader &xml);
 

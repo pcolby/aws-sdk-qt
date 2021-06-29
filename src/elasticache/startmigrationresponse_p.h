@@ -31,7 +31,7 @@ class StartMigrationResponsePrivate : public ElastiCacheResponsePrivate {
 
 public:
 
-    StartMigrationResponsePrivate(StartMigrationResponse * const q);
+    explicit StartMigrationResponsePrivate(StartMigrationResponse * const q);
 
     void parseStartMigrationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateTrailResponsePrivate : public CloudTrailResponsePrivate {
 
 public:
 
-    UpdateTrailResponsePrivate(UpdateTrailResponse * const q);
+    explicit UpdateTrailResponsePrivate(UpdateTrailResponse * const q);
 
     void parseUpdateTrailResponse(QXmlStreamReader &xml);
 

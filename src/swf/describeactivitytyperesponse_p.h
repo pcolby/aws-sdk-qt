@@ -31,7 +31,7 @@ class DescribeActivityTypeResponsePrivate : public SwfResponsePrivate {
 
 public:
 
-    DescribeActivityTypeResponsePrivate(DescribeActivityTypeResponse * const q);
+    explicit DescribeActivityTypeResponsePrivate(DescribeActivityTypeResponse * const q);
 
     void parseDescribeActivityTypeResponse(QXmlStreamReader &xml);
 

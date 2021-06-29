@@ -31,7 +31,7 @@ class DescribeAuthorizerResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DescribeAuthorizerResponsePrivate(DescribeAuthorizerResponse * const q);
+    explicit DescribeAuthorizerResponsePrivate(DescribeAuthorizerResponse * const q);
 
     void parseDescribeAuthorizerResponse(QXmlStreamReader &xml);
 

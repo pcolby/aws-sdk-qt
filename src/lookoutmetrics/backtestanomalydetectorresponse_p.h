@@ -31,7 +31,7 @@ class BackTestAnomalyDetectorResponsePrivate : public LookoutMetricsResponsePriv
 
 public:
 
-    BackTestAnomalyDetectorResponsePrivate(BackTestAnomalyDetectorResponse * const q);
+    explicit BackTestAnomalyDetectorResponsePrivate(BackTestAnomalyDetectorResponse * const q);
 
     void parseBackTestAnomalyDetectorResponse(QXmlStreamReader &xml);
 

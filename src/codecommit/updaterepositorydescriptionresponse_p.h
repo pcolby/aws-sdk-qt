@@ -31,7 +31,7 @@ class UpdateRepositoryDescriptionResponsePrivate : public CodeCommitResponsePriv
 
 public:
 
-    UpdateRepositoryDescriptionResponsePrivate(UpdateRepositoryDescriptionResponse * const q);
+    explicit UpdateRepositoryDescriptionResponsePrivate(UpdateRepositoryDescriptionResponse * const q);
 
     void parseUpdateRepositoryDescriptionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeResourceCollectionHealthResponsePrivate : public DevOpsGuruRespons
 
 public:
 
-    DescribeResourceCollectionHealthResponsePrivate(DescribeResourceCollectionHealthResponse * const q);
+    explicit DescribeResourceCollectionHealthResponsePrivate(DescribeResourceCollectionHealthResponse * const q);
 
     void parseDescribeResourceCollectionHealthResponse(QXmlStreamReader &xml);
 

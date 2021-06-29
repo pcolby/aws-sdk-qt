@@ -31,7 +31,7 @@ class DescribeModelExplainabilityJobDefinitionResponsePrivate : public SageMaker
 
 public:
 
-    DescribeModelExplainabilityJobDefinitionResponsePrivate(DescribeModelExplainabilityJobDefinitionResponse * const q);
+    explicit DescribeModelExplainabilityJobDefinitionResponsePrivate(DescribeModelExplainabilityJobDefinitionResponse * const q);
 
     void parseDescribeModelExplainabilityJobDefinitionResponse(QXmlStreamReader &xml);
 

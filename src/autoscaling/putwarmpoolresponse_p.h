@@ -31,7 +31,7 @@ class PutWarmPoolResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 
-    PutWarmPoolResponsePrivate(PutWarmPoolResponse * const q);
+    explicit PutWarmPoolResponsePrivate(PutWarmPoolResponse * const q);
 
     void parsePutWarmPoolResponse(QXmlStreamReader &xml);
 

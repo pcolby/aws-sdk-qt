@@ -31,7 +31,7 @@ class CreateMembersResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 
-    CreateMembersResponsePrivate(CreateMembersResponse * const q);
+    explicit CreateMembersResponsePrivate(CreateMembersResponse * const q);
 
     void parseCreateMembersResponse(QXmlStreamReader &xml);
 

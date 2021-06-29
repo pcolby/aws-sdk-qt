@@ -31,7 +31,7 @@ class UpdateDatasetResponsePrivate : public GlueDataBrewResponsePrivate {
 
 public:
 
-    UpdateDatasetResponsePrivate(UpdateDatasetResponse * const q);
+    explicit UpdateDatasetResponsePrivate(UpdateDatasetResponse * const q);
 
     void parseUpdateDatasetResponse(QXmlStreamReader &xml);
 

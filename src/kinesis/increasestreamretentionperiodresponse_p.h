@@ -31,7 +31,7 @@ class IncreaseStreamRetentionPeriodResponsePrivate : public KinesisResponsePriva
 
 public:
 
-    IncreaseStreamRetentionPeriodResponsePrivate(IncreaseStreamRetentionPeriodResponse * const q);
+    explicit IncreaseStreamRetentionPeriodResponsePrivate(IncreaseStreamRetentionPeriodResponse * const q);
 
     void parseIncreaseStreamRetentionPeriodResponse(QXmlStreamReader &xml);
 

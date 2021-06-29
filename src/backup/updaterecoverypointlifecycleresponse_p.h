@@ -31,7 +31,7 @@ class UpdateRecoveryPointLifecycleResponsePrivate : public BackupResponsePrivate
 
 public:
 
-    UpdateRecoveryPointLifecycleResponsePrivate(UpdateRecoveryPointLifecycleResponse * const q);
+    explicit UpdateRecoveryPointLifecycleResponsePrivate(UpdateRecoveryPointLifecycleResponse * const q);
 
     void parseUpdateRecoveryPointLifecycleResponse(QXmlStreamReader &xml);
 

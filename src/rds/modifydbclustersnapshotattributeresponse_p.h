@@ -31,7 +31,7 @@ class ModifyDBClusterSnapshotAttributeResponsePrivate : public RdsResponsePrivat
 
 public:
 
-    ModifyDBClusterSnapshotAttributeResponsePrivate(ModifyDBClusterSnapshotAttributeResponse * const q);
+    explicit ModifyDBClusterSnapshotAttributeResponsePrivate(ModifyDBClusterSnapshotAttributeResponse * const q);
 
     void parseModifyDBClusterSnapshotAttributeResponse(QXmlStreamReader &xml);
 

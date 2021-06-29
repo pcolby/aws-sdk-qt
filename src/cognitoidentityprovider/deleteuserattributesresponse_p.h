@@ -31,7 +31,7 @@ class DeleteUserAttributesResponsePrivate : public CognitoIdentityProviderRespon
 
 public:
 
-    DeleteUserAttributesResponsePrivate(DeleteUserAttributesResponse * const q);
+    explicit DeleteUserAttributesResponsePrivate(DeleteUserAttributesResponse * const q);
 
     void parseDeleteUserAttributesResponse(QXmlStreamReader &xml);
 

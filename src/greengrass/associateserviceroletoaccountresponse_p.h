@@ -31,7 +31,7 @@ class AssociateServiceRoleToAccountResponsePrivate : public GreengrassResponsePr
 
 public:
 
-    AssociateServiceRoleToAccountResponsePrivate(AssociateServiceRoleToAccountResponse * const q);
+    explicit AssociateServiceRoleToAccountResponsePrivate(AssociateServiceRoleToAccountResponse * const q);
 
     void parseAssociateServiceRoleToAccountResponse(QXmlStreamReader &xml);
 

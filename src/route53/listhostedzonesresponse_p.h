@@ -31,7 +31,7 @@ class ListHostedZonesResponsePrivate : public Route53ResponsePrivate {
 
 public:
 
-    ListHostedZonesResponsePrivate(ListHostedZonesResponse * const q);
+    explicit ListHostedZonesResponsePrivate(ListHostedZonesResponse * const q);
 
     void parseListHostedZonesResponse(QXmlStreamReader &xml);
 

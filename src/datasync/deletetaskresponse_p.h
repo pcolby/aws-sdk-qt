@@ -31,7 +31,7 @@ class DeleteTaskResponsePrivate : public DataSyncResponsePrivate {
 
 public:
 
-    DeleteTaskResponsePrivate(DeleteTaskResponse * const q);
+    explicit DeleteTaskResponsePrivate(DeleteTaskResponse * const q);
 
     void parseDeleteTaskResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteTapeArchiveResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 
-    DeleteTapeArchiveResponsePrivate(DeleteTapeArchiveResponse * const q);
+    explicit DeleteTapeArchiveResponsePrivate(DeleteTapeArchiveResponse * const q);
 
     void parseDeleteTapeArchiveResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateWorkspaceAliasResponsePrivate : public PrometheusServiceResponsePriv
 
 public:
 
-    UpdateWorkspaceAliasResponsePrivate(UpdateWorkspaceAliasResponse * const q);
+    explicit UpdateWorkspaceAliasResponsePrivate(UpdateWorkspaceAliasResponse * const q);
 
     void parseUpdateWorkspaceAliasResponse(QXmlStreamReader &xml);
 

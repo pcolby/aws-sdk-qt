@@ -31,7 +31,7 @@ class ListEventSourcesResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 
-    ListEventSourcesResponsePrivate(ListEventSourcesResponse * const q);
+    explicit ListEventSourcesResponsePrivate(ListEventSourcesResponse * const q);
 
     void parseListEventSourcesResponse(QXmlStreamReader &xml);
 

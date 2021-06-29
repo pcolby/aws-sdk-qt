@@ -31,7 +31,7 @@ class SetSubnetsResponsePrivate : public ElasticLoadBalancingv2ResponsePrivate {
 
 public:
 
-    SetSubnetsResponsePrivate(SetSubnetsResponse * const q);
+    explicit SetSubnetsResponsePrivate(SetSubnetsResponse * const q);
 
     void parseSetSubnetsResponse(QXmlStreamReader &xml);
 

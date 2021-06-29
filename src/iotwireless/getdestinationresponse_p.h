@@ -31,7 +31,7 @@ class GetDestinationResponsePrivate : public IoTWirelessResponsePrivate {
 
 public:
 
-    GetDestinationResponsePrivate(GetDestinationResponse * const q);
+    explicit GetDestinationResponsePrivate(GetDestinationResponse * const q);
 
     void parseGetDestinationResponse(QXmlStreamReader &xml);
 

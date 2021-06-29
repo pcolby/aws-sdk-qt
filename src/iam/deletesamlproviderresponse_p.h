@@ -31,7 +31,7 @@ class DeleteSAMLProviderResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    DeleteSAMLProviderResponsePrivate(DeleteSAMLProviderResponse * const q);
+    explicit DeleteSAMLProviderResponsePrivate(DeleteSAMLProviderResponse * const q);
 
     void parseDeleteSAMLProviderResponse(QXmlStreamReader &xml);
 

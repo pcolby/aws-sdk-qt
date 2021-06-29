@@ -31,7 +31,7 @@ class UpdatePrimaryEmailAddressResponsePrivate : public WorkMailResponsePrivate 
 
 public:
 
-    UpdatePrimaryEmailAddressResponsePrivate(UpdatePrimaryEmailAddressResponse * const q);
+    explicit UpdatePrimaryEmailAddressResponsePrivate(UpdatePrimaryEmailAddressResponse * const q);
 
     void parseUpdatePrimaryEmailAddressResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ValidateConfigurationResponsePrivate : public AppConfigResponsePrivate {
 
 public:
 
-    ValidateConfigurationResponsePrivate(ValidateConfigurationResponse * const q);
+    explicit ValidateConfigurationResponsePrivate(ValidateConfigurationResponse * const q);
 
     void parseValidateConfigurationResponse(QXmlStreamReader &xml);
 

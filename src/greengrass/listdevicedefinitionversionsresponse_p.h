@@ -31,7 +31,7 @@ class ListDeviceDefinitionVersionsResponsePrivate : public GreengrassResponsePri
 
 public:
 
-    ListDeviceDefinitionVersionsResponsePrivate(ListDeviceDefinitionVersionsResponse * const q);
+    explicit ListDeviceDefinitionVersionsResponsePrivate(ListDeviceDefinitionVersionsResponse * const q);
 
     void parseListDeviceDefinitionVersionsResponse(QXmlStreamReader &xml);
 

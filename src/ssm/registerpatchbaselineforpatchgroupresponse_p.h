@@ -31,7 +31,7 @@ class RegisterPatchBaselineForPatchGroupResponsePrivate : public SsmResponsePriv
 
 public:
 
-    RegisterPatchBaselineForPatchGroupResponsePrivate(RegisterPatchBaselineForPatchGroupResponse * const q);
+    explicit RegisterPatchBaselineForPatchGroupResponsePrivate(RegisterPatchBaselineForPatchGroupResponse * const q);
 
     void parseRegisterPatchBaselineForPatchGroupResponse(QXmlStreamReader &xml);
 

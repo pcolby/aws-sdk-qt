@@ -31,7 +31,7 @@ class GetPublicAccessBlockResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    GetPublicAccessBlockResponsePrivate(GetPublicAccessBlockResponse * const q);
+    explicit GetPublicAccessBlockResponsePrivate(GetPublicAccessBlockResponse * const q);
 
     void parseGetPublicAccessBlockResponse(QXmlStreamReader &xml);
 

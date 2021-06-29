@@ -31,7 +31,7 @@ class RemoveLFTagsFromResourceResponsePrivate : public LakeFormationResponsePriv
 
 public:
 
-    RemoveLFTagsFromResourceResponsePrivate(RemoveLFTagsFromResourceResponse * const q);
+    explicit RemoveLFTagsFromResourceResponsePrivate(RemoveLFTagsFromResourceResponse * const q);
 
     void parseRemoveLFTagsFromResourceResponse(QXmlStreamReader &xml);
 

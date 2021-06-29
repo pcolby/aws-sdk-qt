@@ -31,7 +31,7 @@ class RemoveNotificationChannelResponsePrivate : public DevOpsGuruResponsePrivat
 
 public:
 
-    RemoveNotificationChannelResponsePrivate(RemoveNotificationChannelResponse * const q);
+    explicit RemoveNotificationChannelResponsePrivate(RemoveNotificationChannelResponse * const q);
 
     void parseRemoveNotificationChannelResponse(QXmlStreamReader &xml);
 

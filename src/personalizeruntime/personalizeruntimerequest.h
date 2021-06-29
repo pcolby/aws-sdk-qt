@@ -61,7 +61,7 @@ public:
 protected:
     /// @cond internal
     PersonalizeRuntimeRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    PersonalizeRuntimeRequest(PersonalizeRuntimeRequestPrivate * const d);
+    explicit PersonalizeRuntimeRequest(PersonalizeRuntimeRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

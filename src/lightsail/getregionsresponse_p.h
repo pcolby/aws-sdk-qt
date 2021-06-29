@@ -31,7 +31,7 @@ class GetRegionsResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    GetRegionsResponsePrivate(GetRegionsResponse * const q);
+    explicit GetRegionsResponsePrivate(GetRegionsResponse * const q);
 
     void parseGetRegionsResponse(QXmlStreamReader &xml);
 

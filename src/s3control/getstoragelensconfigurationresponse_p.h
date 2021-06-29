@@ -31,7 +31,7 @@ class GetStorageLensConfigurationResponsePrivate : public S3ControlResponsePriva
 
 public:
 
-    GetStorageLensConfigurationResponsePrivate(GetStorageLensConfigurationResponse * const q);
+    explicit GetStorageLensConfigurationResponsePrivate(GetStorageLensConfigurationResponse * const q);
 
     void parseGetStorageLensConfigurationResponse(QXmlStreamReader &xml);
 

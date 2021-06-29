@@ -31,7 +31,7 @@ class PutConfigRuleResponsePrivate : public ConfigServiceResponsePrivate {
 
 public:
 
-    PutConfigRuleResponsePrivate(PutConfigRuleResponse * const q);
+    explicit PutConfigRuleResponsePrivate(PutConfigRuleResponse * const q);
 
     void parsePutConfigRuleResponse(QXmlStreamReader &xml);
 

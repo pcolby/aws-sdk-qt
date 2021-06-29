@@ -31,7 +31,7 @@ class GetLifecyclePoliciesResponsePrivate : public DlmResponsePrivate {
 
 public:
 
-    GetLifecyclePoliciesResponsePrivate(GetLifecyclePoliciesResponse * const q);
+    explicit GetLifecyclePoliciesResponsePrivate(GetLifecyclePoliciesResponse * const q);
 
     void parseGetLifecyclePoliciesResponse(QXmlStreamReader &xml);
 

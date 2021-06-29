@@ -31,7 +31,7 @@ class DeploySystemInstanceResponsePrivate : public IoTThingsGraphResponsePrivate
 
 public:
 
-    DeploySystemInstanceResponsePrivate(DeploySystemInstanceResponse * const q);
+    explicit DeploySystemInstanceResponsePrivate(DeploySystemInstanceResponse * const q);
 
     void parseDeploySystemInstanceResponse(QXmlStreamReader &xml);
 

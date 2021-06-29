@@ -31,7 +31,7 @@ class GetAggregateDiscoveredResourceCountsResponsePrivate : public ConfigService
 
 public:
 
-    GetAggregateDiscoveredResourceCountsResponsePrivate(GetAggregateDiscoveredResourceCountsResponse * const q);
+    explicit GetAggregateDiscoveredResourceCountsResponsePrivate(GetAggregateDiscoveredResourceCountsResponse * const q);
 
     void parseGetAggregateDiscoveredResourceCountsResponse(QXmlStreamReader &xml);
 

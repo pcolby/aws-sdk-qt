@@ -31,7 +31,7 @@ class ModifyReplicationGroupResponsePrivate : public ElastiCacheResponsePrivate 
 
 public:
 
-    ModifyReplicationGroupResponsePrivate(ModifyReplicationGroupResponse * const q);
+    explicit ModifyReplicationGroupResponsePrivate(ModifyReplicationGroupResponse * const q);
 
     void parseModifyReplicationGroupResponse(QXmlStreamReader &xml);
 

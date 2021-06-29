@@ -29,7 +29,7 @@ class CodeGuruReviewerResponsePrivate {
 
 public:
 
-    CodeGuruReviewerResponsePrivate(CodeGuruReviewerResponse * const q);
+    explicit CodeGuruReviewerResponsePrivate(CodeGuruReviewerResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

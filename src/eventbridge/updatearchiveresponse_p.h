@@ -31,7 +31,7 @@ class UpdateArchiveResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 
-    UpdateArchiveResponsePrivate(UpdateArchiveResponse * const q);
+    explicit UpdateArchiveResponsePrivate(UpdateArchiveResponse * const q);
 
     void parseUpdateArchiveResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeCacheParametersResponsePrivate : public ElastiCacheResponsePrivate
 
 public:
 
-    DescribeCacheParametersResponsePrivate(DescribeCacheParametersResponse * const q);
+    explicit DescribeCacheParametersResponsePrivate(DescribeCacheParametersResponse * const q);
 
     void parseDescribeCacheParametersResponse(QXmlStreamReader &xml);
 

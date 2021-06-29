@@ -30,7 +30,7 @@ class AthenaClient;
 class AthenaClientPrivate {
 
 public:
-    AthenaClientPrivate(AthenaClient * const q);
+    explicit AthenaClientPrivate(AthenaClient * const q);
 
 protected:
     AthenaClient * const q_ptr; ///< Internal q-pointer.

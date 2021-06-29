@@ -159,7 +159,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    DirectConnectClient(
+    explicit DirectConnectClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -230,7 +230,7 @@ public slots:
 protected:
     /// @cond internal
     DirectConnectClientPrivate * const d_ptr; ///< Internal d-pointer.
-    DirectConnectClient(DirectConnectClientPrivate * const d);
+    explicit DirectConnectClient(DirectConnectClientPrivate * const d);
     /// @endcond
 
 private:

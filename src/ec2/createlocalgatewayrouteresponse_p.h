@@ -31,7 +31,7 @@ class CreateLocalGatewayRouteResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CreateLocalGatewayRouteResponsePrivate(CreateLocalGatewayRouteResponse * const q);
+    explicit CreateLocalGatewayRouteResponsePrivate(CreateLocalGatewayRouteResponse * const q);
 
     void parseCreateLocalGatewayRouteResponse(QXmlStreamReader &xml);
 

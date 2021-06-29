@@ -31,7 +31,7 @@ class ListMailboxPermissionsResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 
-    ListMailboxPermissionsResponsePrivate(ListMailboxPermissionsResponse * const q);
+    explicit ListMailboxPermissionsResponsePrivate(ListMailboxPermissionsResponse * const q);
 
     void parseListMailboxPermissionsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListTypesResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 
-    ListTypesResponsePrivate(ListTypesResponse * const q);
+    explicit ListTypesResponsePrivate(ListTypesResponse * const q);
 
     void parseListTypesResponse(QXmlStreamReader &xml);
 

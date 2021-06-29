@@ -31,7 +31,7 @@ class RemoveTagsFromResourceResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    RemoveTagsFromResourceResponsePrivate(RemoveTagsFromResourceResponse * const q);
+    explicit RemoveTagsFromResourceResponsePrivate(RemoveTagsFromResourceResponse * const q);
 
     void parseRemoveTagsFromResourceResponse(QXmlStreamReader &xml);
 

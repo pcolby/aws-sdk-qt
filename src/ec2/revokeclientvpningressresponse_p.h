@@ -31,7 +31,7 @@ class RevokeClientVpnIngressResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    RevokeClientVpnIngressResponsePrivate(RevokeClientVpnIngressResponse * const q);
+    explicit RevokeClientVpnIngressResponsePrivate(RevokeClientVpnIngressResponse * const q);
 
     void parseRevokeClientVpnIngressResponse(QXmlStreamReader &xml);
 

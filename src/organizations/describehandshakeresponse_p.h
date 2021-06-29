@@ -31,7 +31,7 @@ class DescribeHandshakeResponsePrivate : public OrganizationsResponsePrivate {
 
 public:
 
-    DescribeHandshakeResponsePrivate(DescribeHandshakeResponse * const q);
+    explicit DescribeHandshakeResponsePrivate(DescribeHandshakeResponse * const q);
 
     void parseDescribeHandshakeResponse(QXmlStreamReader &xml);
 

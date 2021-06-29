@@ -101,7 +101,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    CustomerProfilesClient(
+    explicit CustomerProfilesClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -141,7 +141,7 @@ public slots:
 protected:
     /// @cond internal
     CustomerProfilesClientPrivate * const d_ptr; ///< Internal d-pointer.
-    CustomerProfilesClient(CustomerProfilesClientPrivate * const d);
+    explicit CustomerProfilesClient(CustomerProfilesClientPrivate * const d);
     /// @endcond
 
 private:

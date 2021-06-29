@@ -31,7 +31,7 @@ class GetSessionResponsePrivate : public LexRuntimeServiceResponsePrivate {
 
 public:
 
-    GetSessionResponsePrivate(GetSessionResponse * const q);
+    explicit GetSessionResponsePrivate(GetSessionResponse * const q);
 
     void parseGetSessionResponse(QXmlStreamReader &xml);
 

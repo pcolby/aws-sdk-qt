@@ -31,7 +31,7 @@ class ListPlatformBranchesResponsePrivate : public ElasticBeanstalkResponsePriva
 
 public:
 
-    ListPlatformBranchesResponsePrivate(ListPlatformBranchesResponse * const q);
+    explicit ListPlatformBranchesResponsePrivate(ListPlatformBranchesResponse * const q);
 
     void parseListPlatformBranchesResponse(QXmlStreamReader &xml);
 

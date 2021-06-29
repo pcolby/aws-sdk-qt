@@ -31,7 +31,7 @@ class DescribeAssetResponsePrivate : public MediaPackageVodResponsePrivate {
 
 public:
 
-    DescribeAssetResponsePrivate(DescribeAssetResponse * const q);
+    explicit DescribeAssetResponsePrivate(DescribeAssetResponse * const q);
 
     void parseDescribeAssetResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateFlowTemplateResponsePrivate : public IoTThingsGraphResponsePrivate {
 
 public:
 
-    UpdateFlowTemplateResponsePrivate(UpdateFlowTemplateResponse * const q);
+    explicit UpdateFlowTemplateResponsePrivate(UpdateFlowTemplateResponse * const q);
 
     void parseUpdateFlowTemplateResponse(QXmlStreamReader &xml);
 

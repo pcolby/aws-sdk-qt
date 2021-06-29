@@ -31,7 +31,7 @@ class DeleteAddonResponsePrivate : public EksResponsePrivate {
 
 public:
 
-    DeleteAddonResponsePrivate(DeleteAddonResponse * const q);
+    explicit DeleteAddonResponsePrivate(DeleteAddonResponse * const q);
 
     void parseDeleteAddonResponse(QXmlStreamReader &xml);
 

@@ -30,7 +30,7 @@ class ImportExportClient;
 class ImportExportClientPrivate {
 
 public:
-    ImportExportClientPrivate(ImportExportClient * const q);
+    explicit ImportExportClientPrivate(ImportExportClient * const q);
 
 protected:
     ImportExportClient * const q_ptr; ///< Internal q-pointer.

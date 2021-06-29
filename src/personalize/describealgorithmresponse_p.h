@@ -31,7 +31,7 @@ class DescribeAlgorithmResponsePrivate : public PersonalizeResponsePrivate {
 
 public:
 
-    DescribeAlgorithmResponsePrivate(DescribeAlgorithmResponse * const q);
+    explicit DescribeAlgorithmResponsePrivate(DescribeAlgorithmResponse * const q);
 
     void parseDescribeAlgorithmResponse(QXmlStreamReader &xml);
 

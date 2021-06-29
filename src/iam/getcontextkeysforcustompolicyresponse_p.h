@@ -31,7 +31,7 @@ class GetContextKeysForCustomPolicyResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    GetContextKeysForCustomPolicyResponsePrivate(GetContextKeysForCustomPolicyResponse * const q);
+    explicit GetContextKeysForCustomPolicyResponsePrivate(GetContextKeysForCustomPolicyResponse * const q);
 
     void parseGetContextKeysForCustomPolicyResponse(QXmlStreamReader &xml);
 

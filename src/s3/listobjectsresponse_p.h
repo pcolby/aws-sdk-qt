@@ -31,7 +31,7 @@ class ListObjectsResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    ListObjectsResponsePrivate(ListObjectsResponse * const q);
+    explicit ListObjectsResponsePrivate(ListObjectsResponse * const q);
 
     void parseListObjectsResponse(QXmlStreamReader &xml);
 

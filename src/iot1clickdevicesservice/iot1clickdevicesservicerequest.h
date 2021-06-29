@@ -72,7 +72,7 @@ public:
 protected:
     /// @cond internal
     IoT1ClickDevicesServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    IoT1ClickDevicesServiceRequest(IoT1ClickDevicesServiceRequestPrivate * const d);
+    explicit IoT1ClickDevicesServiceRequest(IoT1ClickDevicesServiceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

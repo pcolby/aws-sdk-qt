@@ -31,7 +31,7 @@ class DeletePresetResponsePrivate : public ElasticTranscoderResponsePrivate {
 
 public:
 
-    DeletePresetResponsePrivate(DeletePresetResponse * const q);
+    explicit DeletePresetResponsePrivate(DeletePresetResponse * const q);
 
     void parseDeletePresetResponse(QXmlStreamReader &xml);
 

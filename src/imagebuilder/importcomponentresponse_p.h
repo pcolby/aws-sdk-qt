@@ -31,7 +31,7 @@ class ImportComponentResponsePrivate : public imagebuilderResponsePrivate {
 
 public:
 
-    ImportComponentResponsePrivate(ImportComponentResponse * const q);
+    explicit ImportComponentResponsePrivate(ImportComponentResponse * const q);
 
     void parseImportComponentResponse(QXmlStreamReader &xml);
 

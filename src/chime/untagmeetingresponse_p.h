@@ -31,7 +31,7 @@ class UntagMeetingResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    UntagMeetingResponsePrivate(UntagMeetingResponse * const q);
+    explicit UntagMeetingResponsePrivate(UntagMeetingResponse * const q);
 
     void parseUntagMeetingResponse(QXmlStreamReader &xml);
 

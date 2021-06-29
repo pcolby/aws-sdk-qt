@@ -31,7 +31,7 @@ class UpdateXssMatchSetResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 
-    UpdateXssMatchSetResponsePrivate(UpdateXssMatchSetResponse * const q);
+    explicit UpdateXssMatchSetResponsePrivate(UpdateXssMatchSetResponse * const q);
 
     void parseUpdateXssMatchSetResponse(QXmlStreamReader &xml);
 

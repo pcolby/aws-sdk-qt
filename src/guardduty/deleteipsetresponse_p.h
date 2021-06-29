@@ -31,7 +31,7 @@ class DeleteIPSetResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 
-    DeleteIPSetResponsePrivate(DeleteIPSetResponse * const q);
+    explicit DeleteIPSetResponsePrivate(DeleteIPSetResponse * const q);
 
     void parseDeleteIPSetResponse(QXmlStreamReader &xml);
 

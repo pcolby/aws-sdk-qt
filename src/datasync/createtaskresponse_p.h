@@ -31,7 +31,7 @@ class CreateTaskResponsePrivate : public DataSyncResponsePrivate {
 
 public:
 
-    CreateTaskResponsePrivate(CreateTaskResponse * const q);
+    explicit CreateTaskResponsePrivate(CreateTaskResponse * const q);
 
     void parseCreateTaskResponse(QXmlStreamReader &xml);
 

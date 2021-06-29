@@ -31,7 +31,7 @@ class DeleteWorkspaceImageResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 
-    DeleteWorkspaceImageResponsePrivate(DeleteWorkspaceImageResponse * const q);
+    explicit DeleteWorkspaceImageResponsePrivate(DeleteWorkspaceImageResponse * const q);
 
     void parseDeleteWorkspaceImageResponse(QXmlStreamReader &xml);
 

@@ -30,7 +30,7 @@ class GlobalAcceleratorClient;
 class GlobalAcceleratorClientPrivate {
 
 public:
-    GlobalAcceleratorClientPrivate(GlobalAcceleratorClient * const q);
+    explicit GlobalAcceleratorClientPrivate(GlobalAcceleratorClient * const q);
 
 protected:
     GlobalAcceleratorClient * const q_ptr; ///< Internal q-pointer.

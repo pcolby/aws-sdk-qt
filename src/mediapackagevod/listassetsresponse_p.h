@@ -31,7 +31,7 @@ class ListAssetsResponsePrivate : public MediaPackageVodResponsePrivate {
 
 public:
 
-    ListAssetsResponsePrivate(ListAssetsResponse * const q);
+    explicit ListAssetsResponsePrivate(ListAssetsResponse * const q);
 
     void parseListAssetsResponse(QXmlStreamReader &xml);
 

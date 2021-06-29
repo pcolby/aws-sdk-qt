@@ -31,7 +31,7 @@ class DeleteApplicationsResponsePrivate : public ApplicationDiscoveryServiceResp
 
 public:
 
-    DeleteApplicationsResponsePrivate(DeleteApplicationsResponse * const q);
+    explicit DeleteApplicationsResponsePrivate(DeleteApplicationsResponse * const q);
 
     void parseDeleteApplicationsResponse(QXmlStreamReader &xml);
 

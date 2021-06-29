@@ -31,7 +31,7 @@ class StartResourceScanResponsePrivate : public AccessAnalyzerResponsePrivate {
 
 public:
 
-    StartResourceScanResponsePrivate(StartResourceScanResponse * const q);
+    explicit StartResourceScanResponsePrivate(StartResourceScanResponse * const q);
 
     void parseStartResourceScanResponse(QXmlStreamReader &xml);
 

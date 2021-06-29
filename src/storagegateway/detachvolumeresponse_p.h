@@ -31,7 +31,7 @@ class DetachVolumeResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 
-    DetachVolumeResponsePrivate(DetachVolumeResponse * const q);
+    explicit DetachVolumeResponsePrivate(DetachVolumeResponse * const q);
 
     void parseDetachVolumeResponse(QXmlStreamReader &xml);
 

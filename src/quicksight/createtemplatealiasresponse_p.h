@@ -31,7 +31,7 @@ class CreateTemplateAliasResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    CreateTemplateAliasResponsePrivate(CreateTemplateAliasResponse * const q);
+    explicit CreateTemplateAliasResponsePrivate(CreateTemplateAliasResponse * const q);
 
     void parseCreateTemplateAliasResponse(QXmlStreamReader &xml);
 

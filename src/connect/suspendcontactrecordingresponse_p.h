@@ -31,7 +31,7 @@ class SuspendContactRecordingResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    SuspendContactRecordingResponsePrivate(SuspendContactRecordingResponse * const q);
+    explicit SuspendContactRecordingResponsePrivate(SuspendContactRecordingResponse * const q);
 
     void parseSuspendContactRecordingResponse(QXmlStreamReader &xml);
 

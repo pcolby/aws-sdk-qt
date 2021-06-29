@@ -31,7 +31,7 @@ class DeleteVoiceTemplateResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    DeleteVoiceTemplateResponsePrivate(DeleteVoiceTemplateResponse * const q);
+    explicit DeleteVoiceTemplateResponsePrivate(DeleteVoiceTemplateResponse * const q);
 
     void parseDeleteVoiceTemplateResponse(QXmlStreamReader &xml);
 

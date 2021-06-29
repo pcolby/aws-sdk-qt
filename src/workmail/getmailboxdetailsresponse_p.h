@@ -31,7 +31,7 @@ class GetMailboxDetailsResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 
-    GetMailboxDetailsResponsePrivate(GetMailboxDetailsResponse * const q);
+    explicit GetMailboxDetailsResponsePrivate(GetMailboxDetailsResponse * const q);
 
     void parseGetMailboxDetailsResponse(QXmlStreamReader &xml);
 

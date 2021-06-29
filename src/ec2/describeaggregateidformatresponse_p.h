@@ -31,7 +31,7 @@ class DescribeAggregateIdFormatResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeAggregateIdFormatResponsePrivate(DescribeAggregateIdFormatResponse * const q);
+    explicit DescribeAggregateIdFormatResponsePrivate(DescribeAggregateIdFormatResponse * const q);
 
     void parseDescribeAggregateIdFormatResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetRequestedServiceQuotaChangeResponsePrivate : public ServiceQuotasRespon
 
 public:
 
-    GetRequestedServiceQuotaChangeResponsePrivate(GetRequestedServiceQuotaChangeResponse * const q);
+    explicit GetRequestedServiceQuotaChangeResponsePrivate(GetRequestedServiceQuotaChangeResponse * const q);
 
     void parseGetRequestedServiceQuotaChangeResponse(QXmlStreamReader &xml);
 

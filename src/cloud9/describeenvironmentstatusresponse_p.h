@@ -31,7 +31,7 @@ class DescribeEnvironmentStatusResponsePrivate : public Cloud9ResponsePrivate {
 
 public:
 
-    DescribeEnvironmentStatusResponsePrivate(DescribeEnvironmentStatusResponse * const q);
+    explicit DescribeEnvironmentStatusResponsePrivate(DescribeEnvironmentStatusResponse * const q);
 
     void parseDescribeEnvironmentStatusResponse(QXmlStreamReader &xml);
 

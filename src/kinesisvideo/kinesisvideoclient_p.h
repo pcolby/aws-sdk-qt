@@ -30,7 +30,7 @@ class KinesisVideoClient;
 class KinesisVideoClientPrivate {
 
 public:
-    KinesisVideoClientPrivate(KinesisVideoClient * const q);
+    explicit KinesisVideoClientPrivate(KinesisVideoClient * const q);
 
 protected:
     KinesisVideoClient * const q_ptr; ///< Internal q-pointer.

@@ -31,7 +31,7 @@ class ListResourceRecordSetsResponsePrivate : public Route53ResponsePrivate {
 
 public:
 
-    ListResourceRecordSetsResponsePrivate(ListResourceRecordSetsResponse * const q);
+    explicit ListResourceRecordSetsResponsePrivate(ListResourceRecordSetsResponse * const q);
 
     void parseListResourceRecordSetsResponse(QXmlStreamReader &xml);
 

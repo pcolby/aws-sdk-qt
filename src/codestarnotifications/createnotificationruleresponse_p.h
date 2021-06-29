@@ -31,7 +31,7 @@ class CreateNotificationRuleResponsePrivate : public CodeStarNotificationsRespon
 
 public:
 
-    CreateNotificationRuleResponsePrivate(CreateNotificationRuleResponse * const q);
+    explicit CreateNotificationRuleResponsePrivate(CreateNotificationRuleResponse * const q);
 
     void parseCreateNotificationRuleResponse(QXmlStreamReader &xml);
 

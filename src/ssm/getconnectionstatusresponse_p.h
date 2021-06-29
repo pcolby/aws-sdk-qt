@@ -31,7 +31,7 @@ class GetConnectionStatusResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    GetConnectionStatusResponsePrivate(GetConnectionStatusResponse * const q);
+    explicit GetConnectionStatusResponsePrivate(GetConnectionStatusResponse * const q);
 
     void parseGetConnectionStatusResponse(QXmlStreamReader &xml);
 

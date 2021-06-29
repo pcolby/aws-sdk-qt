@@ -31,7 +31,7 @@ class ListConfigsResponsePrivate : public GroundStationResponsePrivate {
 
 public:
 
-    ListConfigsResponsePrivate(ListConfigsResponse * const q);
+    explicit ListConfigsResponsePrivate(ListConfigsResponse * const q);
 
     void parseListConfigsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ModifyCurrentDBClusterCapacityResponsePrivate : public RdsResponsePrivate 
 
 public:
 
-    ModifyCurrentDBClusterCapacityResponsePrivate(ModifyCurrentDBClusterCapacityResponse * const q);
+    explicit ModifyCurrentDBClusterCapacityResponsePrivate(ModifyCurrentDBClusterCapacityResponse * const q);
 
     void parseModifyCurrentDBClusterCapacityResponse(QXmlStreamReader &xml);
 

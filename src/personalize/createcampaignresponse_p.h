@@ -31,7 +31,7 @@ class CreateCampaignResponsePrivate : public PersonalizeResponsePrivate {
 
 public:
 
-    CreateCampaignResponsePrivate(CreateCampaignResponse * const q);
+    explicit CreateCampaignResponsePrivate(CreateCampaignResponse * const q);
 
     void parseCreateCampaignResponse(QXmlStreamReader &xml);
 

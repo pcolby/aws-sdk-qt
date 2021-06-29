@@ -31,7 +31,7 @@ class DeleteReplicationTaskAssessmentRunResponsePrivate : public DatabaseMigrati
 
 public:
 
-    DeleteReplicationTaskAssessmentRunResponsePrivate(DeleteReplicationTaskAssessmentRunResponse * const q);
+    explicit DeleteReplicationTaskAssessmentRunResponsePrivate(DeleteReplicationTaskAssessmentRunResponse * const q);
 
     void parseDeleteReplicationTaskAssessmentRunResponse(QXmlStreamReader &xml);
 

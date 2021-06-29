@@ -31,7 +31,7 @@ class ReplaceTopicRuleResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    ReplaceTopicRuleResponsePrivate(ReplaceTopicRuleResponse * const q);
+    explicit ReplaceTopicRuleResponsePrivate(ReplaceTopicRuleResponse * const q);
 
     void parseReplaceTopicRuleResponse(QXmlStreamReader &xml);
 

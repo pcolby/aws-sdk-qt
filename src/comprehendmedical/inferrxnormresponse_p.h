@@ -31,7 +31,7 @@ class InferRxNormResponsePrivate : public ComprehendMedicalResponsePrivate {
 
 public:
 
-    InferRxNormResponsePrivate(InferRxNormResponse * const q);
+    explicit InferRxNormResponsePrivate(InferRxNormResponse * const q);
 
     void parseInferRxNormResponse(QXmlStreamReader &xml);
 

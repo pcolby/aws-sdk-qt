@@ -31,7 +31,7 @@ class CreateEndpointConfigResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    CreateEndpointConfigResponsePrivate(CreateEndpointConfigResponse * const q);
+    explicit CreateEndpointConfigResponsePrivate(CreateEndpointConfigResponse * const q);
 
     void parseCreateEndpointConfigResponse(QXmlStreamReader &xml);
 

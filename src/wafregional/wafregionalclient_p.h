@@ -30,7 +30,7 @@ class WAFRegionalClient;
 class WAFRegionalClientPrivate {
 
 public:
-    WAFRegionalClientPrivate(WAFRegionalClient * const q);
+    explicit WAFRegionalClientPrivate(WAFRegionalClient * const q);
 
 protected:
     WAFRegionalClient * const q_ptr; ///< Internal q-pointer.

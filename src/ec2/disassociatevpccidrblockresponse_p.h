@@ -31,7 +31,7 @@ class DisassociateVpcCidrBlockResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DisassociateVpcCidrBlockResponsePrivate(DisassociateVpcCidrBlockResponse * const q);
+    explicit DisassociateVpcCidrBlockResponsePrivate(DisassociateVpcCidrBlockResponse * const q);
 
     void parseDisassociateVpcCidrBlockResponse(QXmlStreamReader &xml);
 

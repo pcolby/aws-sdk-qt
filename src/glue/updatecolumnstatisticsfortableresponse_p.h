@@ -31,7 +31,7 @@ class UpdateColumnStatisticsForTableResponsePrivate : public GlueResponsePrivate
 
 public:
 
-    UpdateColumnStatisticsForTableResponsePrivate(UpdateColumnStatisticsForTableResponse * const q);
+    explicit UpdateColumnStatisticsForTableResponsePrivate(UpdateColumnStatisticsForTableResponse * const q);
 
     void parseUpdateColumnStatisticsForTableResponse(QXmlStreamReader &xml);
 

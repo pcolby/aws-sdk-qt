@@ -31,7 +31,7 @@ class ListTrailsResponsePrivate : public CloudTrailResponsePrivate {
 
 public:
 
-    ListTrailsResponsePrivate(ListTrailsResponse * const q);
+    explicit ListTrailsResponsePrivate(ListTrailsResponse * const q);
 
     void parseListTrailsResponse(QXmlStreamReader &xml);
 

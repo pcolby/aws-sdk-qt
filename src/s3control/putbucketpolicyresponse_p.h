@@ -31,7 +31,7 @@ class PutBucketPolicyResponsePrivate : public S3ControlResponsePrivate {
 
 public:
 
-    PutBucketPolicyResponsePrivate(PutBucketPolicyResponse * const q);
+    explicit PutBucketPolicyResponsePrivate(PutBucketPolicyResponse * const q);
 
     void parsePutBucketPolicyResponse(QXmlStreamReader &xml);
 

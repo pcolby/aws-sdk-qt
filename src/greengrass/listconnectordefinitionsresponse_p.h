@@ -31,7 +31,7 @@ class ListConnectorDefinitionsResponsePrivate : public GreengrassResponsePrivate
 
 public:
 
-    ListConnectorDefinitionsResponsePrivate(ListConnectorDefinitionsResponse * const q);
+    explicit ListConnectorDefinitionsResponsePrivate(ListConnectorDefinitionsResponse * const q);
 
     void parseListConnectorDefinitionsResponse(QXmlStreamReader &xml);
 

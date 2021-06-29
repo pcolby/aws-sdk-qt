@@ -31,7 +31,7 @@ class DeleteKeySigningKeyResponsePrivate : public Route53ResponsePrivate {
 
 public:
 
-    DeleteKeySigningKeyResponsePrivate(DeleteKeySigningKeyResponse * const q);
+    explicit DeleteKeySigningKeyResponsePrivate(DeleteKeySigningKeyResponse * const q);
 
     void parseDeleteKeySigningKeyResponse(QXmlStreamReader &xml);
 

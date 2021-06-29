@@ -31,7 +31,7 @@ class CompleteVaultLockResponsePrivate : public GlacierResponsePrivate {
 
 public:
 
-    CompleteVaultLockResponsePrivate(CompleteVaultLockResponse * const q);
+    explicit CompleteVaultLockResponsePrivate(CompleteVaultLockResponse * const q);
 
     void parseCompleteVaultLockResponse(QXmlStreamReader &xml);
 

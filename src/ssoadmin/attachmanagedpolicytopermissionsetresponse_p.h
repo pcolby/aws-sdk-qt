@@ -31,7 +31,7 @@ class AttachManagedPolicyToPermissionSetResponsePrivate : public SSOAdminRespons
 
 public:
 
-    AttachManagedPolicyToPermissionSetResponsePrivate(AttachManagedPolicyToPermissionSetResponse * const q);
+    explicit AttachManagedPolicyToPermissionSetResponsePrivate(AttachManagedPolicyToPermissionSetResponse * const q);
 
     void parseAttachManagedPolicyToPermissionSetResponse(QXmlStreamReader &xml);
 

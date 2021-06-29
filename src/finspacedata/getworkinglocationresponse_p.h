@@ -31,7 +31,7 @@ class GetWorkingLocationResponsePrivate : public FinSpaceDataResponsePrivate {
 
 public:
 
-    GetWorkingLocationResponsePrivate(GetWorkingLocationResponse * const q);
+    explicit GetWorkingLocationResponsePrivate(GetWorkingLocationResponse * const q);
 
     void parseGetWorkingLocationResponse(QXmlStreamReader &xml);
 

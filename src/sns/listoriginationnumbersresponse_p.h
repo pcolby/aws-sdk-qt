@@ -31,7 +31,7 @@ class ListOriginationNumbersResponsePrivate : public SnsResponsePrivate {
 
 public:
 
-    ListOriginationNumbersResponsePrivate(ListOriginationNumbersResponse * const q);
+    explicit ListOriginationNumbersResponsePrivate(ListOriginationNumbersResponse * const q);
 
     void parseListOriginationNumbersResponse(QXmlStreamReader &xml);
 

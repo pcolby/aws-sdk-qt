@@ -31,7 +31,7 @@ class GetJobUnlockCodeResponsePrivate : public SnowballResponsePrivate {
 
 public:
 
-    GetJobUnlockCodeResponsePrivate(GetJobUnlockCodeResponse * const q);
+    explicit GetJobUnlockCodeResponsePrivate(GetJobUnlockCodeResponse * const q);
 
     void parseGetJobUnlockCodeResponse(QXmlStreamReader &xml);
 

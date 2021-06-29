@@ -31,7 +31,7 @@ class ListIdentityProvidersResponsePrivate : public CognitoIdentityProviderRespo
 
 public:
 
-    ListIdentityProvidersResponsePrivate(ListIdentityProvidersResponse * const q);
+    explicit ListIdentityProvidersResponsePrivate(ListIdentityProvidersResponse * const q);
 
     void parseListIdentityProvidersResponse(QXmlStreamReader &xml);
 

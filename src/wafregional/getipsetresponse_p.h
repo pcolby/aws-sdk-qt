@@ -31,7 +31,7 @@ class GetIPSetResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 
-    GetIPSetResponsePrivate(GetIPSetResponse * const q);
+    explicit GetIPSetResponsePrivate(GetIPSetResponse * const q);
 
     void parseGetIPSetResponse(QXmlStreamReader &xml);
 

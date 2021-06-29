@@ -31,7 +31,7 @@ class CreateFunctionDefinitionResponsePrivate : public GreengrassResponsePrivate
 
 public:
 
-    CreateFunctionDefinitionResponsePrivate(CreateFunctionDefinitionResponse * const q);
+    explicit CreateFunctionDefinitionResponsePrivate(CreateFunctionDefinitionResponse * const q);
 
     void parseCreateFunctionDefinitionResponse(QXmlStreamReader &xml);
 

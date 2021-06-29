@@ -31,7 +31,7 @@ class DescribeWorldGenerationJobResponsePrivate : public RoboMakerResponsePrivat
 
 public:
 
-    DescribeWorldGenerationJobResponsePrivate(DescribeWorldGenerationJobResponse * const q);
+    explicit DescribeWorldGenerationJobResponsePrivate(DescribeWorldGenerationJobResponse * const q);
 
     void parseDescribeWorldGenerationJobResponse(QXmlStreamReader &xml);
 

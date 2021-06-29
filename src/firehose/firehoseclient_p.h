@@ -30,7 +30,7 @@ class FirehoseClient;
 class FirehoseClientPrivate {
 
 public:
-    FirehoseClientPrivate(FirehoseClient * const q);
+    explicit FirehoseClientPrivate(FirehoseClient * const q);
 
 protected:
     FirehoseClient * const q_ptr; ///< Internal q-pointer.

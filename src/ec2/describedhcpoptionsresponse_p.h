@@ -31,7 +31,7 @@ class DescribeDhcpOptionsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeDhcpOptionsResponsePrivate(DescribeDhcpOptionsResponse * const q);
+    explicit DescribeDhcpOptionsResponsePrivate(DescribeDhcpOptionsResponse * const q);
 
     void parseDescribeDhcpOptionsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateTransitGatewayRouteTableResponsePrivate : public Ec2ResponsePrivate 
 
 public:
 
-    CreateTransitGatewayRouteTableResponsePrivate(CreateTransitGatewayRouteTableResponse * const q);
+    explicit CreateTransitGatewayRouteTableResponsePrivate(CreateTransitGatewayRouteTableResponse * const q);
 
     void parseCreateTransitGatewayRouteTableResponse(QXmlStreamReader &xml);
 

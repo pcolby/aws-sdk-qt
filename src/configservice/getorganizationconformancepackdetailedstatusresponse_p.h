@@ -31,7 +31,7 @@ class GetOrganizationConformancePackDetailedStatusResponsePrivate : public Confi
 
 public:
 
-    GetOrganizationConformancePackDetailedStatusResponsePrivate(GetOrganizationConformancePackDetailedStatusResponse * const q);
+    explicit GetOrganizationConformancePackDetailedStatusResponsePrivate(GetOrganizationConformancePackDetailedStatusResponse * const q);
 
     void parseGetOrganizationConformancePackDetailedStatusResponse(QXmlStreamReader &xml);
 

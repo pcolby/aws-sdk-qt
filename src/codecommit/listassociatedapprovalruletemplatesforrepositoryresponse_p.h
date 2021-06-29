@@ -31,7 +31,7 @@ class ListAssociatedApprovalRuleTemplatesForRepositoryResponsePrivate : public C
 
 public:
 
-    ListAssociatedApprovalRuleTemplatesForRepositoryResponsePrivate(ListAssociatedApprovalRuleTemplatesForRepositoryResponse * const q);
+    explicit ListAssociatedApprovalRuleTemplatesForRepositoryResponsePrivate(ListAssociatedApprovalRuleTemplatesForRepositoryResponse * const q);
 
     void parseListAssociatedApprovalRuleTemplatesForRepositoryResponse(QXmlStreamReader &xml);
 

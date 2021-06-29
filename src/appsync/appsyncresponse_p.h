@@ -29,7 +29,7 @@ class AppSyncResponsePrivate {
 
 public:
 
-    AppSyncResponsePrivate(AppSyncResponse * const q);
+    explicit AppSyncResponsePrivate(AppSyncResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

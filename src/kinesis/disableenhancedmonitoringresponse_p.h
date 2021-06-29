@@ -31,7 +31,7 @@ class DisableEnhancedMonitoringResponsePrivate : public KinesisResponsePrivate {
 
 public:
 
-    DisableEnhancedMonitoringResponsePrivate(DisableEnhancedMonitoringResponse * const q);
+    explicit DisableEnhancedMonitoringResponsePrivate(DisableEnhancedMonitoringResponse * const q);
 
     void parseDisableEnhancedMonitoringResponse(QXmlStreamReader &xml);
 

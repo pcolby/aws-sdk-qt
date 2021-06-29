@@ -30,7 +30,7 @@ class GlacierClient;
 class GlacierClientPrivate {
 
 public:
-    GlacierClientPrivate(GlacierClient * const q);
+    explicit GlacierClientPrivate(GlacierClient * const q);
 
 protected:
     GlacierClient * const q_ptr; ///< Internal q-pointer.

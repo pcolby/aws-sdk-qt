@@ -31,7 +31,7 @@ class UpdateTerminationProtectionResponsePrivate : public CloudFormationResponse
 
 public:
 
-    UpdateTerminationProtectionResponsePrivate(UpdateTerminationProtectionResponse * const q);
+    explicit UpdateTerminationProtectionResponsePrivate(UpdateTerminationProtectionResponse * const q);
 
     void parseUpdateTerminationProtectionResponse(QXmlStreamReader &xml);
 

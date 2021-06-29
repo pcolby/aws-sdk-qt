@@ -31,7 +31,7 @@ class DescribeDBEngineVersionsResponsePrivate : public DocDBResponsePrivate {
 
 public:
 
-    DescribeDBEngineVersionsResponsePrivate(DescribeDBEngineVersionsResponse * const q);
+    explicit DescribeDBEngineVersionsResponsePrivate(DescribeDBEngineVersionsResponse * const q);
 
     void parseDescribeDBEngineVersionsResponse(QXmlStreamReader &xml);
 

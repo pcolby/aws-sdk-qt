@@ -31,7 +31,7 @@ class DeleteLayerVersionResponsePrivate : public LambdaResponsePrivate {
 
 public:
 
-    DeleteLayerVersionResponsePrivate(DeleteLayerVersionResponse * const q);
+    explicit DeleteLayerVersionResponsePrivate(DeleteLayerVersionResponse * const q);
 
     void parseDeleteLayerVersionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListIntentsResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 
-    ListIntentsResponsePrivate(ListIntentsResponse * const q);
+    explicit ListIntentsResponsePrivate(ListIntentsResponse * const q);
 
     void parseListIntentsResponse(QXmlStreamReader &xml);
 

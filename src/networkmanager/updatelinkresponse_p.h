@@ -31,7 +31,7 @@ class UpdateLinkResponsePrivate : public NetworkManagerResponsePrivate {
 
 public:
 
-    UpdateLinkResponsePrivate(UpdateLinkResponse * const q);
+    explicit UpdateLinkResponsePrivate(UpdateLinkResponse * const q);
 
     void parseUpdateLinkResponse(QXmlStreamReader &xml);
 

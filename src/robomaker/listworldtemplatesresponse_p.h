@@ -31,7 +31,7 @@ class ListWorldTemplatesResponsePrivate : public RoboMakerResponsePrivate {
 
 public:
 
-    ListWorldTemplatesResponsePrivate(ListWorldTemplatesResponse * const q);
+    explicit ListWorldTemplatesResponsePrivate(ListWorldTemplatesResponse * const q);
 
     void parseListWorldTemplatesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetSegmentResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    GetSegmentResponsePrivate(GetSegmentResponse * const q);
+    explicit GetSegmentResponsePrivate(GetSegmentResponse * const q);
 
     void parseGetSegmentResponse(QXmlStreamReader &xml);
 

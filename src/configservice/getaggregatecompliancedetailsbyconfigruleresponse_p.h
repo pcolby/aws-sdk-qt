@@ -31,7 +31,7 @@ class GetAggregateComplianceDetailsByConfigRuleResponsePrivate : public ConfigSe
 
 public:
 
-    GetAggregateComplianceDetailsByConfigRuleResponsePrivate(GetAggregateComplianceDetailsByConfigRuleResponse * const q);
+    explicit GetAggregateComplianceDetailsByConfigRuleResponsePrivate(GetAggregateComplianceDetailsByConfigRuleResponse * const q);
 
     void parseGetAggregateComplianceDetailsByConfigRuleResponse(QXmlStreamReader &xml);
 

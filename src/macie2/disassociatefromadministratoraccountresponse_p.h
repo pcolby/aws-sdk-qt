@@ -31,7 +31,7 @@ class DisassociateFromAdministratorAccountResponsePrivate : public Macie2Respons
 
 public:
 
-    DisassociateFromAdministratorAccountResponsePrivate(DisassociateFromAdministratorAccountResponse * const q);
+    explicit DisassociateFromAdministratorAccountResponsePrivate(DisassociateFromAdministratorAccountResponse * const q);
 
     void parseDisassociateFromAdministratorAccountResponse(QXmlStreamReader &xml);
 

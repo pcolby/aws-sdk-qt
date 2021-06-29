@@ -31,7 +31,7 @@ class UpdateRoleResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    UpdateRoleResponsePrivate(UpdateRoleResponse * const q);
+    explicit UpdateRoleResponsePrivate(UpdateRoleResponse * const q);
 
     void parseUpdateRoleResponse(QXmlStreamReader &xml);
 

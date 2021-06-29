@@ -31,7 +31,7 @@ class GetSecretValueResponsePrivate : public SecretsManagerResponsePrivate {
 
 public:
 
-    GetSecretValueResponsePrivate(GetSecretValueResponse * const q);
+    explicit GetSecretValueResponsePrivate(GetSecretValueResponse * const q);
 
     void parseGetSecretValueResponse(QXmlStreamReader &xml);
 

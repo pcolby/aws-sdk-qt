@@ -31,7 +31,7 @@ class DeleteApiMappingResponsePrivate : public ApiGatewayV2ResponsePrivate {
 
 public:
 
-    DeleteApiMappingResponsePrivate(DeleteApiMappingResponse * const q);
+    explicit DeleteApiMappingResponsePrivate(DeleteApiMappingResponse * const q);
 
     void parseDeleteApiMappingResponse(QXmlStreamReader &xml);
 

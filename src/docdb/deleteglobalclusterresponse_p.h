@@ -31,7 +31,7 @@ class DeleteGlobalClusterResponsePrivate : public DocDBResponsePrivate {
 
 public:
 
-    DeleteGlobalClusterResponsePrivate(DeleteGlobalClusterResponse * const q);
+    explicit DeleteGlobalClusterResponsePrivate(DeleteGlobalClusterResponse * const q);
 
     void parseDeleteGlobalClusterResponse(QXmlStreamReader &xml);
 

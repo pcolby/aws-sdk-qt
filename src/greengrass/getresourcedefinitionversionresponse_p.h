@@ -31,7 +31,7 @@ class GetResourceDefinitionVersionResponsePrivate : public GreengrassResponsePri
 
 public:
 
-    GetResourceDefinitionVersionResponsePrivate(GetResourceDefinitionVersionResponse * const q);
+    explicit GetResourceDefinitionVersionResponsePrivate(GetResourceDefinitionVersionResponse * const q);
 
     void parseGetResourceDefinitionVersionResponse(QXmlStreamReader &xml);
 

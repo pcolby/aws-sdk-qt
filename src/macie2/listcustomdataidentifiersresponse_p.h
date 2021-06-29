@@ -31,7 +31,7 @@ class ListCustomDataIdentifiersResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 
-    ListCustomDataIdentifiersResponsePrivate(ListCustomDataIdentifiersResponse * const q);
+    explicit ListCustomDataIdentifiersResponsePrivate(ListCustomDataIdentifiersResponse * const q);
 
     void parseListCustomDataIdentifiersResponse(QXmlStreamReader &xml);
 

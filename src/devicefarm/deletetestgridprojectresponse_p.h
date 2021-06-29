@@ -31,7 +31,7 @@ class DeleteTestGridProjectResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    DeleteTestGridProjectResponsePrivate(DeleteTestGridProjectResponse * const q);
+    explicit DeleteTestGridProjectResponsePrivate(DeleteTestGridProjectResponse * const q);
 
     void parseDeleteTestGridProjectResponse(QXmlStreamReader &xml);
 

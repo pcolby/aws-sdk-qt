@@ -119,7 +119,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    kendraClient(
+    explicit kendraClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -168,7 +168,7 @@ public slots:
 protected:
     /// @cond internal
     kendraClientPrivate * const d_ptr; ///< Internal d-pointer.
-    kendraClient(kendraClientPrivate * const d);
+    explicit kendraClient(kendraClientPrivate * const d);
     /// @endcond
 
 private:

@@ -31,7 +31,7 @@ class DeactivateUserResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 
-    DeactivateUserResponsePrivate(DeactivateUserResponse * const q);
+    explicit DeactivateUserResponsePrivate(DeactivateUserResponse * const q);
 
     void parseDeactivateUserResponse(QXmlStreamReader &xml);
 

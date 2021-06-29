@@ -29,7 +29,7 @@ class CloudFormationResponsePrivate {
 
 public:
 
-    CloudFormationResponsePrivate(CloudFormationResponse * const q);
+    explicit CloudFormationResponsePrivate(CloudFormationResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

@@ -31,7 +31,7 @@ class DescribeClustersResponsePrivate : public CloudHSMV2ResponsePrivate {
 
 public:
 
-    DescribeClustersResponsePrivate(DescribeClustersResponse * const q);
+    explicit DescribeClustersResponsePrivate(DescribeClustersResponse * const q);
 
     void parseDescribeClustersResponse(QXmlStreamReader &xml);
 

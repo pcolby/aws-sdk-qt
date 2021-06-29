@@ -31,7 +31,7 @@ class StopTaskResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    StopTaskResponsePrivate(StopTaskResponse * const q);
+    explicit StopTaskResponsePrivate(StopTaskResponse * const q);
 
     void parseStopTaskResponse(QXmlStreamReader &xml);
 

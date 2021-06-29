@@ -31,7 +31,7 @@ class CreateReplicationJobResponsePrivate : public SmsResponsePrivate {
 
 public:
 
-    CreateReplicationJobResponsePrivate(CreateReplicationJobResponse * const q);
+    explicit CreateReplicationJobResponsePrivate(CreateReplicationJobResponse * const q);
 
     void parseCreateReplicationJobResponse(QXmlStreamReader &xml);
 

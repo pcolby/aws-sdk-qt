@@ -29,7 +29,7 @@ class PricingResponsePrivate {
 
 public:
 
-    PricingResponsePrivate(PricingResponse * const q);
+    explicit PricingResponsePrivate(PricingResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

@@ -31,7 +31,7 @@ class DescribeJobLogItemsResponsePrivate : public mgnResponsePrivate {
 
 public:
 
-    DescribeJobLogItemsResponsePrivate(DescribeJobLogItemsResponse * const q);
+    explicit DescribeJobLogItemsResponsePrivate(DescribeJobLogItemsResponse * const q);
 
     void parseDescribeJobLogItemsResponse(QXmlStreamReader &xml);
 

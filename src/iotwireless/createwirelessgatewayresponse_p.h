@@ -31,7 +31,7 @@ class CreateWirelessGatewayResponsePrivate : public IoTWirelessResponsePrivate {
 
 public:
 
-    CreateWirelessGatewayResponsePrivate(CreateWirelessGatewayResponse * const q);
+    explicit CreateWirelessGatewayResponsePrivate(CreateWirelessGatewayResponse * const q);
 
     void parseCreateWirelessGatewayResponse(QXmlStreamReader &xml);
 

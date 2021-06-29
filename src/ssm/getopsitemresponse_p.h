@@ -31,7 +31,7 @@ class GetOpsItemResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    GetOpsItemResponsePrivate(GetOpsItemResponse * const q);
+    explicit GetOpsItemResponsePrivate(GetOpsItemResponse * const q);
 
     void parseGetOpsItemResponse(QXmlStreamReader &xml);
 

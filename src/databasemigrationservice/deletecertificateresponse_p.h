@@ -31,7 +31,7 @@ class DeleteCertificateResponsePrivate : public DatabaseMigrationServiceResponse
 
 public:
 
-    DeleteCertificateResponsePrivate(DeleteCertificateResponse * const q);
+    explicit DeleteCertificateResponsePrivate(DeleteCertificateResponse * const q);
 
     void parseDeleteCertificateResponse(QXmlStreamReader &xml);
 

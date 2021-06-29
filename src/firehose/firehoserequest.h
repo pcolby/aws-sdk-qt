@@ -71,7 +71,7 @@ public:
 protected:
     /// @cond internal
     FirehoseRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    FirehoseRequest(FirehoseRequestPrivate * const d);
+    explicit FirehoseRequest(FirehoseRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

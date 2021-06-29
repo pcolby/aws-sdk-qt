@@ -49,7 +49,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    DynamoDBStreamsClient(
+    explicit DynamoDBStreamsClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -63,7 +63,7 @@ public slots:
 protected:
     /// @cond internal
     DynamoDBStreamsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    DynamoDBStreamsClient(DynamoDBStreamsClientPrivate * const d);
+    explicit DynamoDBStreamsClient(DynamoDBStreamsClientPrivate * const d);
     /// @endcond
 
 private:

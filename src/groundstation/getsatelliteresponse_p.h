@@ -31,7 +31,7 @@ class GetSatelliteResponsePrivate : public GroundStationResponsePrivate {
 
 public:
 
-    GetSatelliteResponsePrivate(GetSatelliteResponse * const q);
+    explicit GetSatelliteResponsePrivate(GetSatelliteResponse * const q);
 
     void parseGetSatelliteResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetEndpointAttributesResponsePrivate : public SnsResponsePrivate {
 
 public:
 
-    GetEndpointAttributesResponsePrivate(GetEndpointAttributesResponse * const q);
+    explicit GetEndpointAttributesResponsePrivate(GetEndpointAttributesResponse * const q);
 
     void parseGetEndpointAttributesResponse(QXmlStreamReader &xml);
 

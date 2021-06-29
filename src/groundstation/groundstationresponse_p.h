@@ -29,7 +29,7 @@ class GroundStationResponsePrivate {
 
 public:
 
-    GroundStationResponsePrivate(GroundStationResponse * const q);
+    explicit GroundStationResponsePrivate(GroundStationResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

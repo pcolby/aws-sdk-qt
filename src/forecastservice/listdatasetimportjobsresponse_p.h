@@ -31,7 +31,7 @@ class ListDatasetImportJobsResponsePrivate : public ForecastServiceResponsePriva
 
 public:
 
-    ListDatasetImportJobsResponsePrivate(ListDatasetImportJobsResponse * const q);
+    explicit ListDatasetImportJobsResponsePrivate(ListDatasetImportJobsResponse * const q);
 
     void parseListDatasetImportJobsResponse(QXmlStreamReader &xml);
 

@@ -30,7 +30,7 @@ class MediaLiveClient;
 class MediaLiveClientPrivate {
 
 public:
-    MediaLiveClientPrivate(MediaLiveClient * const q);
+    explicit MediaLiveClientPrivate(MediaLiveClient * const q);
 
 protected:
     MediaLiveClient * const q_ptr; ///< Internal q-pointer.

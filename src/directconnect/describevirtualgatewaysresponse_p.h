@@ -31,7 +31,7 @@ class DescribeVirtualGatewaysResponsePrivate : public DirectConnectResponsePriva
 
 public:
 
-    DescribeVirtualGatewaysResponsePrivate(DescribeVirtualGatewaysResponse * const q);
+    explicit DescribeVirtualGatewaysResponsePrivate(DescribeVirtualGatewaysResponse * const q);
 
     void parseDescribeVirtualGatewaysResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class PutPolicyResponsePrivate : public AcmpcaResponsePrivate {
 
 public:
 
-    PutPolicyResponsePrivate(PutPolicyResponse * const q);
+    explicit PutPolicyResponsePrivate(PutPolicyResponse * const q);
 
     void parsePutPolicyResponse(QXmlStreamReader &xml);
 

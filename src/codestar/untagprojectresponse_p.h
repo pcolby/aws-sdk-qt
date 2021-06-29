@@ -31,7 +31,7 @@ class UntagProjectResponsePrivate : public CodeStarResponsePrivate {
 
 public:
 
-    UntagProjectResponsePrivate(UntagProjectResponse * const q);
+    explicit UntagProjectResponsePrivate(UntagProjectResponse * const q);
 
     void parseUntagProjectResponse(QXmlStreamReader &xml);
 

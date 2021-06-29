@@ -31,7 +31,7 @@ class ListElasticsearchVersionsResponsePrivate : public ElasticsearchServiceResp
 
 public:
 
-    ListElasticsearchVersionsResponsePrivate(ListElasticsearchVersionsResponse * const q);
+    explicit ListElasticsearchVersionsResponsePrivate(ListElasticsearchVersionsResponse * const q);
 
     void parseListElasticsearchVersionsResponse(QXmlStreamReader &xml);
 

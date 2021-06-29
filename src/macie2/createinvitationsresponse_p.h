@@ -31,7 +31,7 @@ class CreateInvitationsResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 
-    CreateInvitationsResponsePrivate(CreateInvitationsResponse * const q);
+    explicit CreateInvitationsResponsePrivate(CreateInvitationsResponse * const q);
 
     void parseCreateInvitationsResponse(QXmlStreamReader &xml);
 

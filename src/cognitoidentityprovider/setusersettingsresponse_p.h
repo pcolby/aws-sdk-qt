@@ -31,7 +31,7 @@ class SetUserSettingsResponsePrivate : public CognitoIdentityProviderResponsePri
 
 public:
 
-    SetUserSettingsResponsePrivate(SetUserSettingsResponse * const q);
+    explicit SetUserSettingsResponsePrivate(SetUserSettingsResponse * const q);
 
     void parseSetUserSettingsResponse(QXmlStreamReader &xml);
 

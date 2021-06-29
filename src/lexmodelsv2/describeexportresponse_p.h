@@ -31,7 +31,7 @@ class DescribeExportResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 
-    DescribeExportResponsePrivate(DescribeExportResponse * const q);
+    explicit DescribeExportResponsePrivate(DescribeExportResponse * const q);
 
     void parseDescribeExportResponse(QXmlStreamReader &xml);
 

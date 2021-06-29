@@ -31,7 +31,7 @@ class GetEulaResponsePrivate : public NimbleStudioResponsePrivate {
 
 public:
 
-    GetEulaResponsePrivate(GetEulaResponse * const q);
+    explicit GetEulaResponsePrivate(GetEulaResponse * const q);
 
     void parseGetEulaResponse(QXmlStreamReader &xml);
 

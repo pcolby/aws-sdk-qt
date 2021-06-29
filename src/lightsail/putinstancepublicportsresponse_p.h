@@ -31,7 +31,7 @@ class PutInstancePublicPortsResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    PutInstancePublicPortsResponsePrivate(PutInstancePublicPortsResponse * const q);
+    explicit PutInstancePublicPortsResponsePrivate(PutInstancePublicPortsResponse * const q);
 
     void parsePutInstancePublicPortsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetOperationDetailResponsePrivate : public Route53DomainsResponsePrivate {
 
 public:
 
-    GetOperationDetailResponsePrivate(GetOperationDetailResponse * const q);
+    explicit GetOperationDetailResponsePrivate(GetOperationDetailResponse * const q);
 
     void parseGetOperationDetailResponse(QXmlStreamReader &xml);
 

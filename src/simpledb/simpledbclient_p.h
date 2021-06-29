@@ -30,7 +30,7 @@ class SimpleDBClient;
 class SimpleDBClientPrivate {
 
 public:
-    SimpleDBClientPrivate(SimpleDBClient * const q);
+    explicit SimpleDBClientPrivate(SimpleDBClient * const q);
 
 protected:
     SimpleDBClient * const q_ptr; ///< Internal q-pointer.

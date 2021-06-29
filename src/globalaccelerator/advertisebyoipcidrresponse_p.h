@@ -31,7 +31,7 @@ class AdvertiseByoipCidrResponsePrivate : public GlobalAcceleratorResponsePrivat
 
 public:
 
-    AdvertiseByoipCidrResponsePrivate(AdvertiseByoipCidrResponse * const q);
+    explicit AdvertiseByoipCidrResponsePrivate(AdvertiseByoipCidrResponse * const q);
 
     void parseAdvertiseByoipCidrResponse(QXmlStreamReader &xml);
 

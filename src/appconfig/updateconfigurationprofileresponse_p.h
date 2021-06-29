@@ -31,7 +31,7 @@ class UpdateConfigurationProfileResponsePrivate : public AppConfigResponsePrivat
 
 public:
 
-    UpdateConfigurationProfileResponsePrivate(UpdateConfigurationProfileResponse * const q);
+    explicit UpdateConfigurationProfileResponsePrivate(UpdateConfigurationProfileResponse * const q);
 
     void parseUpdateConfigurationProfileResponse(QXmlStreamReader &xml);
 

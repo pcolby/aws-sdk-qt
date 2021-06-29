@@ -31,7 +31,7 @@ class AdminListGroupsForUserResponsePrivate : public CognitoIdentityProviderResp
 
 public:
 
-    AdminListGroupsForUserResponsePrivate(AdminListGroupsForUserResponse * const q);
+    explicit AdminListGroupsForUserResponsePrivate(AdminListGroupsForUserResponse * const q);
 
     void parseAdminListGroupsForUserResponse(QXmlStreamReader &xml);
 

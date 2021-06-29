@@ -29,7 +29,7 @@ class AppStreamResponsePrivate {
 
 public:
 
-    AppStreamResponsePrivate(AppStreamResponse * const q);
+    explicit AppStreamResponsePrivate(AppStreamResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

@@ -31,7 +31,7 @@ class AuthorizeEndpointAccessResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    AuthorizeEndpointAccessResponsePrivate(AuthorizeEndpointAccessResponse * const q);
+    explicit AuthorizeEndpointAccessResponsePrivate(AuthorizeEndpointAccessResponse * const q);
 
     void parseAuthorizeEndpointAccessResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class LogoutResponsePrivate : public SsoResponsePrivate {
 
 public:
 
-    LogoutResponsePrivate(LogoutResponse * const q);
+    explicit LogoutResponsePrivate(LogoutResponse * const q);
 
     void parseLogoutResponse(QXmlStreamReader &xml);
 

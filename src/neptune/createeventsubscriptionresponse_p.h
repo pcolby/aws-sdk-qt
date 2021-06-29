@@ -31,7 +31,7 @@ class CreateEventSubscriptionResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 
-    CreateEventSubscriptionResponsePrivate(CreateEventSubscriptionResponse * const q);
+    explicit CreateEventSubscriptionResponsePrivate(CreateEventSubscriptionResponse * const q);
 
     void parseCreateEventSubscriptionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeTableReplicaAutoScalingResponsePrivate : public DynamoDBResponsePr
 
 public:
 
-    DescribeTableReplicaAutoScalingResponsePrivate(DescribeTableReplicaAutoScalingResponse * const q);
+    explicit DescribeTableReplicaAutoScalingResponsePrivate(DescribeTableReplicaAutoScalingResponse * const q);
 
     void parseDescribeTableReplicaAutoScalingResponse(QXmlStreamReader &xml);
 

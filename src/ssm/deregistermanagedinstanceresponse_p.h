@@ -31,7 +31,7 @@ class DeregisterManagedInstanceResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    DeregisterManagedInstanceResponsePrivate(DeregisterManagedInstanceResponse * const q);
+    explicit DeregisterManagedInstanceResponsePrivate(DeregisterManagedInstanceResponse * const q);
 
     void parseDeregisterManagedInstanceResponse(QXmlStreamReader &xml);
 

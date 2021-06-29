@@ -31,7 +31,7 @@ class ListGeofencesResponsePrivate : public LocationServiceResponsePrivate {
 
 public:
 
-    ListGeofencesResponsePrivate(ListGeofencesResponse * const q);
+    explicit ListGeofencesResponsePrivate(ListGeofencesResponse * const q);
 
     void parseListGeofencesResponse(QXmlStreamReader &xml);
 

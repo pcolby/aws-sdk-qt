@@ -31,7 +31,7 @@ class GetDataflowGraphResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    GetDataflowGraphResponsePrivate(GetDataflowGraphResponse * const q);
+    explicit GetDataflowGraphResponsePrivate(GetDataflowGraphResponse * const q);
 
     void parseGetDataflowGraphResponse(QXmlStreamReader &xml);
 

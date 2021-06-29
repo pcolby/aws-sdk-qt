@@ -31,7 +31,7 @@ class DeactivatePipelineResponsePrivate : public DataPipelineResponsePrivate {
 
 public:
 
-    DeactivatePipelineResponsePrivate(DeactivatePipelineResponse * const q);
+    explicit DeactivatePipelineResponsePrivate(DeactivatePipelineResponse * const q);
 
     void parseDeactivatePipelineResponse(QXmlStreamReader &xml);
 

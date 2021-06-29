@@ -31,7 +31,7 @@ class ListVersionsByFunctionResponsePrivate : public LambdaResponsePrivate {
 
 public:
 
-    ListVersionsByFunctionResponsePrivate(ListVersionsByFunctionResponse * const q);
+    explicit ListVersionsByFunctionResponsePrivate(ListVersionsByFunctionResponse * const q);
 
     void parseListVersionsByFunctionResponse(QXmlStreamReader &xml);
 

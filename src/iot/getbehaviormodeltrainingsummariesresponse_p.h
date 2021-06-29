@@ -31,7 +31,7 @@ class GetBehaviorModelTrainingSummariesResponsePrivate : public IoTResponsePriva
 
 public:
 
-    GetBehaviorModelTrainingSummariesResponsePrivate(GetBehaviorModelTrainingSummariesResponse * const q);
+    explicit GetBehaviorModelTrainingSummariesResponsePrivate(GetBehaviorModelTrainingSummariesResponse * const q);
 
     void parseGetBehaviorModelTrainingSummariesResponse(QXmlStreamReader &xml);
 

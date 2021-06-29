@@ -31,7 +31,7 @@ class DeleteWorkspaceResponsePrivate : public PrometheusServiceResponsePrivate {
 
 public:
 
-    DeleteWorkspaceResponsePrivate(DeleteWorkspaceResponse * const q);
+    explicit DeleteWorkspaceResponsePrivate(DeleteWorkspaceResponse * const q);
 
     void parseDeleteWorkspaceResponse(QXmlStreamReader &xml);
 

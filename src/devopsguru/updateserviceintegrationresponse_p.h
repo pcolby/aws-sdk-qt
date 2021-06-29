@@ -31,7 +31,7 @@ class UpdateServiceIntegrationResponsePrivate : public DevOpsGuruResponsePrivate
 
 public:
 
-    UpdateServiceIntegrationResponsePrivate(UpdateServiceIntegrationResponse * const q);
+    explicit UpdateServiceIntegrationResponsePrivate(UpdateServiceIntegrationResponse * const q);
 
     void parseUpdateServiceIntegrationResponse(QXmlStreamReader &xml);
 

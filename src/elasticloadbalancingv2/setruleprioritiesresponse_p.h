@@ -31,7 +31,7 @@ class SetRulePrioritiesResponsePrivate : public ElasticLoadBalancingv2ResponsePr
 
 public:
 
-    SetRulePrioritiesResponsePrivate(SetRulePrioritiesResponse * const q);
+    explicit SetRulePrioritiesResponsePrivate(SetRulePrioritiesResponse * const q);
 
     void parseSetRulePrioritiesResponse(QXmlStreamReader &xml);
 

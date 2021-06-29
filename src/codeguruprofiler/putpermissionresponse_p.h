@@ -31,7 +31,7 @@ class PutPermissionResponsePrivate : public CodeGuruProfilerResponsePrivate {
 
 public:
 
-    PutPermissionResponsePrivate(PutPermissionResponse * const q);
+    explicit PutPermissionResponsePrivate(PutPermissionResponse * const q);
 
     void parsePutPermissionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateRealtimeEndpointResponsePrivate : public MachineLearningResponsePriv
 
 public:
 
-    CreateRealtimeEndpointResponsePrivate(CreateRealtimeEndpointResponse * const q);
+    explicit CreateRealtimeEndpointResponsePrivate(CreateRealtimeEndpointResponse * const q);
 
     void parseCreateRealtimeEndpointResponse(QXmlStreamReader &xml);
 

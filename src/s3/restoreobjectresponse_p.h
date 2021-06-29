@@ -31,7 +31,7 @@ class RestoreObjectResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    RestoreObjectResponsePrivate(RestoreObjectResponse * const q);
+    explicit RestoreObjectResponsePrivate(RestoreObjectResponse * const q);
 
     void parseRestoreObjectResponse(QXmlStreamReader &xml);
 

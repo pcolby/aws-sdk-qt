@@ -30,7 +30,7 @@ class EbsClient;
 class EbsClientPrivate {
 
 public:
-    EbsClientPrivate(EbsClient * const q);
+    explicit EbsClientPrivate(EbsClient * const q);
 
 protected:
     EbsClient * const q_ptr; ///< Internal q-pointer.

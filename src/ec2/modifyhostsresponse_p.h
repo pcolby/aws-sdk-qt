@@ -31,7 +31,7 @@ class ModifyHostsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ModifyHostsResponsePrivate(ModifyHostsResponse * const q);
+    explicit ModifyHostsResponsePrivate(ModifyHostsResponse * const q);
 
     void parseModifyHostsResponse(QXmlStreamReader &xml);
 

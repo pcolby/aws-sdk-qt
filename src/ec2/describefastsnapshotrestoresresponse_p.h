@@ -31,7 +31,7 @@ class DescribeFastSnapshotRestoresResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeFastSnapshotRestoresResponsePrivate(DescribeFastSnapshotRestoresResponse * const q);
+    explicit DescribeFastSnapshotRestoresResponsePrivate(DescribeFastSnapshotRestoresResponse * const q);
 
     void parseDescribeFastSnapshotRestoresResponse(QXmlStreamReader &xml);
 

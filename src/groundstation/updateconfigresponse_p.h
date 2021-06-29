@@ -31,7 +31,7 @@ class UpdateConfigResponsePrivate : public GroundStationResponsePrivate {
 
 public:
 
-    UpdateConfigResponsePrivate(UpdateConfigResponse * const q);
+    explicit UpdateConfigResponsePrivate(UpdateConfigResponse * const q);
 
     void parseUpdateConfigResponse(QXmlStreamReader &xml);
 

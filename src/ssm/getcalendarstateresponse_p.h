@@ -31,7 +31,7 @@ class GetCalendarStateResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    GetCalendarStateResponsePrivate(GetCalendarStateResponse * const q);
+    explicit GetCalendarStateResponsePrivate(GetCalendarStateResponse * const q);
 
     void parseGetCalendarStateResponse(QXmlStreamReader &xml);
 

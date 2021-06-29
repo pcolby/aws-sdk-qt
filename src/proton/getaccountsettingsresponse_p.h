@@ -31,7 +31,7 @@ class GetAccountSettingsResponsePrivate : public ProtonResponsePrivate {
 
 public:
 
-    GetAccountSettingsResponsePrivate(GetAccountSettingsResponse * const q);
+    explicit GetAccountSettingsResponsePrivate(GetAccountSettingsResponse * const q);
 
     void parseGetAccountSettingsResponse(QXmlStreamReader &xml);
 

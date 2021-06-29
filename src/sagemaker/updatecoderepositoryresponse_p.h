@@ -31,7 +31,7 @@ class UpdateCodeRepositoryResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    UpdateCodeRepositoryResponsePrivate(UpdateCodeRepositoryResponse * const q);
+    explicit UpdateCodeRepositoryResponsePrivate(UpdateCodeRepositoryResponse * const q);
 
     void parseUpdateCodeRepositoryResponse(QXmlStreamReader &xml);
 

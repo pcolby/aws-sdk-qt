@@ -30,7 +30,7 @@ class ServiceQuotasClient;
 class ServiceQuotasClientPrivate {
 
 public:
-    ServiceQuotasClientPrivate(ServiceQuotasClient * const q);
+    explicit ServiceQuotasClientPrivate(ServiceQuotasClient * const q);
 
 protected:
     ServiceQuotasClient * const q_ptr; ///< Internal q-pointer.

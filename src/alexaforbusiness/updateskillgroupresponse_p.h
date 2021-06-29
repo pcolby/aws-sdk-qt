@@ -31,7 +31,7 @@ class UpdateSkillGroupResponsePrivate : public AlexaForBusinessResponsePrivate {
 
 public:
 
-    UpdateSkillGroupResponsePrivate(UpdateSkillGroupResponse * const q);
+    explicit UpdateSkillGroupResponsePrivate(UpdateSkillGroupResponse * const q);
 
     void parseUpdateSkillGroupResponse(QXmlStreamReader &xml);
 

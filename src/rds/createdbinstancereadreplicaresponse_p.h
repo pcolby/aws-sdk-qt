@@ -31,7 +31,7 @@ class CreateDBInstanceReadReplicaResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    CreateDBInstanceReadReplicaResponsePrivate(CreateDBInstanceReadReplicaResponse * const q);
+    explicit CreateDBInstanceReadReplicaResponsePrivate(CreateDBInstanceReadReplicaResponse * const q);
 
     void parseCreateDBInstanceReadReplicaResponse(QXmlStreamReader &xml);
 

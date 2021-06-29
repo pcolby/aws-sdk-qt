@@ -31,7 +31,7 @@ class GetDocumentVersionResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 
-    GetDocumentVersionResponsePrivate(GetDocumentVersionResponse * const q);
+    explicit GetDocumentVersionResponsePrivate(GetDocumentVersionResponse * const q);
 
     void parseGetDocumentVersionResponse(QXmlStreamReader &xml);
 

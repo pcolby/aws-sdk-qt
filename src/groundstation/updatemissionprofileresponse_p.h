@@ -31,7 +31,7 @@ class UpdateMissionProfileResponsePrivate : public GroundStationResponsePrivate 
 
 public:
 
-    UpdateMissionProfileResponsePrivate(UpdateMissionProfileResponse * const q);
+    explicit UpdateMissionProfileResponsePrivate(UpdateMissionProfileResponse * const q);
 
     void parseUpdateMissionProfileResponse(QXmlStreamReader &xml);
 

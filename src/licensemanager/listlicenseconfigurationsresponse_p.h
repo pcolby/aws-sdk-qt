@@ -31,7 +31,7 @@ class ListLicenseConfigurationsResponsePrivate : public LicenseManagerResponsePr
 
 public:
 
-    ListLicenseConfigurationsResponsePrivate(ListLicenseConfigurationsResponse * const q);
+    explicit ListLicenseConfigurationsResponsePrivate(ListLicenseConfigurationsResponse * const q);
 
     void parseListLicenseConfigurationsResponse(QXmlStreamReader &xml);
 

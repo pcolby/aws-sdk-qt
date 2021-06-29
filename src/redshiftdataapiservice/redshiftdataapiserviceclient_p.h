@@ -30,7 +30,7 @@ class RedshiftDataAPIServiceClient;
 class RedshiftDataAPIServiceClientPrivate {
 
 public:
-    RedshiftDataAPIServiceClientPrivate(RedshiftDataAPIServiceClient * const q);
+    explicit RedshiftDataAPIServiceClientPrivate(RedshiftDataAPIServiceClient * const q);
 
 protected:
     RedshiftDataAPIServiceClient * const q_ptr; ///< Internal q-pointer.

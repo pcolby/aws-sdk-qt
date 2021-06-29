@@ -31,7 +31,7 @@ class StopMultiplexResponsePrivate : public MediaLiveResponsePrivate {
 
 public:
 
-    StopMultiplexResponsePrivate(StopMultiplexResponse * const q);
+    explicit StopMultiplexResponsePrivate(StopMultiplexResponse * const q);
 
     void parseStopMultiplexResponse(QXmlStreamReader &xml);
 

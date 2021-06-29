@@ -29,7 +29,7 @@ class CognitoIdentityProviderResponsePrivate {
 
 public:
 
-    CognitoIdentityProviderResponsePrivate(CognitoIdentityProviderResponse * const q);
+    explicit CognitoIdentityProviderResponsePrivate(CognitoIdentityProviderResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

@@ -31,7 +31,7 @@ class ListComplianceStatusResponsePrivate : public FmsResponsePrivate {
 
 public:
 
-    ListComplianceStatusResponsePrivate(ListComplianceStatusResponse * const q);
+    explicit ListComplianceStatusResponsePrivate(ListComplianceStatusResponse * const q);
 
     void parseListComplianceStatusResponse(QXmlStreamReader &xml);
 

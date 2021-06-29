@@ -31,7 +31,7 @@ class CopyClusterSnapshotResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    CopyClusterSnapshotResponsePrivate(CopyClusterSnapshotResponse * const q);
+    explicit CopyClusterSnapshotResponsePrivate(CopyClusterSnapshotResponse * const q);
 
     void parseCopyClusterSnapshotResponse(QXmlStreamReader &xml);
 

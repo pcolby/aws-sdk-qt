@@ -31,7 +31,7 @@ class DeleteVoiceConnectorResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    DeleteVoiceConnectorResponsePrivate(DeleteVoiceConnectorResponse * const q);
+    explicit DeleteVoiceConnectorResponsePrivate(DeleteVoiceConnectorResponse * const q);
 
     void parseDeleteVoiceConnectorResponse(QXmlStreamReader &xml);
 

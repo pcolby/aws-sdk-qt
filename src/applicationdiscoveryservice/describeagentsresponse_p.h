@@ -31,7 +31,7 @@ class DescribeAgentsResponsePrivate : public ApplicationDiscoveryServiceResponse
 
 public:
 
-    DescribeAgentsResponsePrivate(DescribeAgentsResponse * const q);
+    explicit DescribeAgentsResponsePrivate(DescribeAgentsResponse * const q);
 
     void parseDescribeAgentsResponse(QXmlStreamReader &xml);
 

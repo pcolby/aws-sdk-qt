@@ -31,7 +31,7 @@ class UpdateConnectorDefinitionResponsePrivate : public GreengrassResponsePrivat
 
 public:
 
-    UpdateConnectorDefinitionResponsePrivate(UpdateConnectorDefinitionResponse * const q);
+    explicit UpdateConnectorDefinitionResponsePrivate(UpdateConnectorDefinitionResponse * const q);
 
     void parseUpdateConnectorDefinitionResponse(QXmlStreamReader &xml);
 

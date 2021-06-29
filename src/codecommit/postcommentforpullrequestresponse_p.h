@@ -31,7 +31,7 @@ class PostCommentForPullRequestResponsePrivate : public CodeCommitResponsePrivat
 
 public:
 
-    PostCommentForPullRequestResponsePrivate(PostCommentForPullRequestResponse * const q);
+    explicit PostCommentForPullRequestResponsePrivate(PostCommentForPullRequestResponse * const q);
 
     void parsePostCommentForPullRequestResponse(QXmlStreamReader &xml);
 

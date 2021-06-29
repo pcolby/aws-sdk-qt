@@ -31,7 +31,7 @@ class RemoveFlowVpcInterfaceResponsePrivate : public MediaConnectResponsePrivate
 
 public:
 
-    RemoveFlowVpcInterfaceResponsePrivate(RemoveFlowVpcInterfaceResponse * const q);
+    explicit RemoveFlowVpcInterfaceResponsePrivate(RemoveFlowVpcInterfaceResponse * const q);
 
     void parseRemoveFlowVpcInterfaceResponse(QXmlStreamReader &xml);
 

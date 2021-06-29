@@ -31,7 +31,7 @@ class PutRetentionSettingsResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    PutRetentionSettingsResponsePrivate(PutRetentionSettingsResponse * const q);
+    explicit PutRetentionSettingsResponsePrivate(PutRetentionSettingsResponse * const q);
 
     void parsePutRetentionSettingsResponse(QXmlStreamReader &xml);
 

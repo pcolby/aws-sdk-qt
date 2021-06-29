@@ -31,7 +31,7 @@ class GetAssociatedEnclaveCertificateIamRolesResponsePrivate : public Ec2Respons
 
 public:
 
-    GetAssociatedEnclaveCertificateIamRolesResponsePrivate(GetAssociatedEnclaveCertificateIamRolesResponse * const q);
+    explicit GetAssociatedEnclaveCertificateIamRolesResponsePrivate(GetAssociatedEnclaveCertificateIamRolesResponse * const q);
 
     void parseGetAssociatedEnclaveCertificateIamRolesResponse(QXmlStreamReader &xml);
 

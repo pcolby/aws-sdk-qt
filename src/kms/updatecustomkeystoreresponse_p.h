@@ -31,7 +31,7 @@ class UpdateCustomKeyStoreResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    UpdateCustomKeyStoreResponsePrivate(UpdateCustomKeyStoreResponse * const q);
+    explicit UpdateCustomKeyStoreResponsePrivate(UpdateCustomKeyStoreResponse * const q);
 
     void parseUpdateCustomKeyStoreResponse(QXmlStreamReader &xml);
 

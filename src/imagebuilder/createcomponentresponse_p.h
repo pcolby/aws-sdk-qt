@@ -31,7 +31,7 @@ class CreateComponentResponsePrivate : public imagebuilderResponsePrivate {
 
 public:
 
-    CreateComponentResponsePrivate(CreateComponentResponse * const q);
+    explicit CreateComponentResponsePrivate(CreateComponentResponse * const q);
 
     void parseCreateComponentResponse(QXmlStreamReader &xml);
 

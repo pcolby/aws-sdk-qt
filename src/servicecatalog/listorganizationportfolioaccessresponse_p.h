@@ -31,7 +31,7 @@ class ListOrganizationPortfolioAccessResponsePrivate : public ServiceCatalogResp
 
 public:
 
-    ListOrganizationPortfolioAccessResponsePrivate(ListOrganizationPortfolioAccessResponse * const q);
+    explicit ListOrganizationPortfolioAccessResponsePrivate(ListOrganizationPortfolioAccessResponse * const q);
 
     void parseListOrganizationPortfolioAccessResponse(QXmlStreamReader &xml);
 

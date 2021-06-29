@@ -31,7 +31,7 @@ class DeleteVaultNotificationsResponsePrivate : public GlacierResponsePrivate {
 
 public:
 
-    DeleteVaultNotificationsResponsePrivate(DeleteVaultNotificationsResponse * const q);
+    explicit DeleteVaultNotificationsResponsePrivate(DeleteVaultNotificationsResponse * const q);
 
     void parseDeleteVaultNotificationsResponse(QXmlStreamReader &xml);
 

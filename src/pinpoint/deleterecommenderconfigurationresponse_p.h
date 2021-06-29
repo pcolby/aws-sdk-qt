@@ -31,7 +31,7 @@ class DeleteRecommenderConfigurationResponsePrivate : public PinpointResponsePri
 
 public:
 
-    DeleteRecommenderConfigurationResponsePrivate(DeleteRecommenderConfigurationResponse * const q);
+    explicit DeleteRecommenderConfigurationResponsePrivate(DeleteRecommenderConfigurationResponse * const q);
 
     void parseDeleteRecommenderConfigurationResponse(QXmlStreamReader &xml);
 

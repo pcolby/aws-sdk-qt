@@ -31,7 +31,7 @@ class StartSmartHomeApplianceDiscoveryResponsePrivate : public AlexaForBusinessR
 
 public:
 
-    StartSmartHomeApplianceDiscoveryResponsePrivate(StartSmartHomeApplianceDiscoveryResponse * const q);
+    explicit StartSmartHomeApplianceDiscoveryResponsePrivate(StartSmartHomeApplianceDiscoveryResponse * const q);
 
     void parseStartSmartHomeApplianceDiscoveryResponse(QXmlStreamReader &xml);
 

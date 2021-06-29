@@ -31,7 +31,7 @@ class DescribeThingRegistrationTaskResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DescribeThingRegistrationTaskResponsePrivate(DescribeThingRegistrationTaskResponse * const q);
+    explicit DescribeThingRegistrationTaskResponsePrivate(DescribeThingRegistrationTaskResponse * const q);
 
     void parseDescribeThingRegistrationTaskResponse(QXmlStreamReader &xml);
 

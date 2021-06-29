@@ -31,7 +31,7 @@ class CreateDashboardResponsePrivate : public IoTSiteWiseResponsePrivate {
 
 public:
 
-    CreateDashboardResponsePrivate(CreateDashboardResponse * const q);
+    explicit CreateDashboardResponsePrivate(CreateDashboardResponse * const q);
 
     void parseCreateDashboardResponse(QXmlStreamReader &xml);
 

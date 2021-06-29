@@ -31,7 +31,7 @@ class RedactConversationMessageResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    RedactConversationMessageResponsePrivate(RedactConversationMessageResponse * const q);
+    explicit RedactConversationMessageResponsePrivate(RedactConversationMessageResponse * const q);
 
     void parseRedactConversationMessageResponse(QXmlStreamReader &xml);
 

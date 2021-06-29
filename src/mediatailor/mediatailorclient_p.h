@@ -30,7 +30,7 @@ class MediaTailorClient;
 class MediaTailorClientPrivate {
 
 public:
-    MediaTailorClientPrivate(MediaTailorClient * const q);
+    explicit MediaTailorClientPrivate(MediaTailorClient * const q);
 
 protected:
     MediaTailorClient * const q_ptr; ///< Internal q-pointer.

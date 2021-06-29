@@ -31,7 +31,7 @@ class DeleteNotificationRuleResponsePrivate : public CodeStarNotificationsRespon
 
 public:
 
-    DeleteNotificationRuleResponsePrivate(DeleteNotificationRuleResponse * const q);
+    explicit DeleteNotificationRuleResponsePrivate(DeleteNotificationRuleResponse * const q);
 
     void parseDeleteNotificationRuleResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateConfigurationSetResponsePrivate : public PinpointEmailResponsePrivat
 
 public:
 
-    CreateConfigurationSetResponsePrivate(CreateConfigurationSetResponse * const q);
+    explicit CreateConfigurationSetResponsePrivate(CreateConfigurationSetResponse * const q);
 
     void parseCreateConfigurationSetResponse(QXmlStreamReader &xml);
 

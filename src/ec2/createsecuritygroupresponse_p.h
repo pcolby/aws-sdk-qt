@@ -31,7 +31,7 @@ class CreateSecurityGroupResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CreateSecurityGroupResponsePrivate(CreateSecurityGroupResponse * const q);
+    explicit CreateSecurityGroupResponsePrivate(CreateSecurityGroupResponse * const q);
 
     void parseCreateSecurityGroupResponse(QXmlStreamReader &xml);
 

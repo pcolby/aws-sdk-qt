@@ -31,7 +31,7 @@ class RegisterClientResponsePrivate : public SsooidcResponsePrivate {
 
 public:
 
-    RegisterClientResponsePrivate(RegisterClientResponse * const q);
+    explicit RegisterClientResponsePrivate(RegisterClientResponse * const q);
 
     void parseRegisterClientResponse(QXmlStreamReader &xml);
 

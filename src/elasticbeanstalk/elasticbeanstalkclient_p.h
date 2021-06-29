@@ -30,7 +30,7 @@ class ElasticBeanstalkClient;
 class ElasticBeanstalkClientPrivate {
 
 public:
-    ElasticBeanstalkClientPrivate(ElasticBeanstalkClient * const q);
+    explicit ElasticBeanstalkClientPrivate(ElasticBeanstalkClient * const q);
 
 protected:
     ElasticBeanstalkClient * const q_ptr; ///< Internal q-pointer.

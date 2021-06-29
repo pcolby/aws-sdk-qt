@@ -31,7 +31,7 @@ class UnshareApplicationResponsePrivate : public ServerlessApplicationRepository
 
 public:
 
-    UnshareApplicationResponsePrivate(UnshareApplicationResponse * const q);
+    explicit UnshareApplicationResponsePrivate(UnshareApplicationResponse * const q);
 
     void parseUnshareApplicationResponse(QXmlStreamReader &xml);
 

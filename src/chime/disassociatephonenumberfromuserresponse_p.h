@@ -31,7 +31,7 @@ class DisassociatePhoneNumberFromUserResponsePrivate : public ChimeResponsePriva
 
 public:
 
-    DisassociatePhoneNumberFromUserResponsePrivate(DisassociatePhoneNumberFromUserResponse * const q);
+    explicit DisassociatePhoneNumberFromUserResponsePrivate(DisassociatePhoneNumberFromUserResponse * const q);
 
     void parseDisassociatePhoneNumberFromUserResponse(QXmlStreamReader &xml);
 

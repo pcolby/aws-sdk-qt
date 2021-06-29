@@ -31,7 +31,7 @@ class SearchTransitGatewayRoutesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    SearchTransitGatewayRoutesResponsePrivate(SearchTransitGatewayRoutesResponse * const q);
+    explicit SearchTransitGatewayRoutesResponsePrivate(SearchTransitGatewayRoutesResponse * const q);
 
     void parseSearchTransitGatewayRoutesResponse(QXmlStreamReader &xml);
 

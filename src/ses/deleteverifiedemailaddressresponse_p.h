@@ -31,7 +31,7 @@ class DeleteVerifiedEmailAddressResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    DeleteVerifiedEmailAddressResponsePrivate(DeleteVerifiedEmailAddressResponse * const q);
+    explicit DeleteVerifiedEmailAddressResponsePrivate(DeleteVerifiedEmailAddressResponse * const q);
 
     void parseDeleteVerifiedEmailAddressResponse(QXmlStreamReader &xml);
 

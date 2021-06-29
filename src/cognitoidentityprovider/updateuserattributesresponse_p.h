@@ -31,7 +31,7 @@ class UpdateUserAttributesResponsePrivate : public CognitoIdentityProviderRespon
 
 public:
 
-    UpdateUserAttributesResponsePrivate(UpdateUserAttributesResponse * const q);
+    explicit UpdateUserAttributesResponsePrivate(UpdateUserAttributesResponse * const q);
 
     void parseUpdateUserAttributesResponse(QXmlStreamReader &xml);
 

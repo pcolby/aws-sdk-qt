@@ -31,7 +31,7 @@ class GetFunctionDefinitionVersionResponsePrivate : public GreengrassResponsePri
 
 public:
 
-    GetFunctionDefinitionVersionResponsePrivate(GetFunctionDefinitionVersionResponse * const q);
+    explicit GetFunctionDefinitionVersionResponsePrivate(GetFunctionDefinitionVersionResponse * const q);
 
     void parseGetFunctionDefinitionVersionResponse(QXmlStreamReader &xml);
 

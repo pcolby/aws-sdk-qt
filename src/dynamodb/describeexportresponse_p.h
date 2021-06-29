@@ -31,7 +31,7 @@ class DescribeExportResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 
-    DescribeExportResponsePrivate(DescribeExportResponse * const q);
+    explicit DescribeExportResponsePrivate(DescribeExportResponse * const q);
 
     void parseDescribeExportResponse(QXmlStreamReader &xml);
 

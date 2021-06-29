@@ -31,7 +31,7 @@ class RunScheduledInstancesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    RunScheduledInstancesResponsePrivate(RunScheduledInstancesResponse * const q);
+    explicit RunScheduledInstancesResponsePrivate(RunScheduledInstancesResponse * const q);
 
     void parseRunScheduledInstancesResponse(QXmlStreamReader &xml);
 

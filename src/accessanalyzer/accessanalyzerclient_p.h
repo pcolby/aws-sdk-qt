@@ -30,7 +30,7 @@ class AccessAnalyzerClient;
 class AccessAnalyzerClientPrivate {
 
 public:
-    AccessAnalyzerClientPrivate(AccessAnalyzerClient * const q);
+    explicit AccessAnalyzerClientPrivate(AccessAnalyzerClient * const q);
 
 protected:
     AccessAnalyzerClient * const q_ptr; ///< Internal q-pointer.

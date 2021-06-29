@@ -31,7 +31,7 @@ class DescribeElasticLoadBalancersResponsePrivate : public OpsWorksResponsePriva
 
 public:
 
-    DescribeElasticLoadBalancersResponsePrivate(DescribeElasticLoadBalancersResponse * const q);
+    explicit DescribeElasticLoadBalancersResponsePrivate(DescribeElasticLoadBalancersResponse * const q);
 
     void parseDescribeElasticLoadBalancersResponse(QXmlStreamReader &xml);
 

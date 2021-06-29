@@ -31,7 +31,7 @@ class DeregisterDevicesResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    DeregisterDevicesResponsePrivate(DeregisterDevicesResponse * const q);
+    explicit DeregisterDevicesResponsePrivate(DeregisterDevicesResponse * const q);
 
     void parseDeregisterDevicesResponse(QXmlStreamReader &xml);
 

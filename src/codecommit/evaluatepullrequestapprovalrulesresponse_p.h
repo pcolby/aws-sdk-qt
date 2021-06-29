@@ -31,7 +31,7 @@ class EvaluatePullRequestApprovalRulesResponsePrivate : public CodeCommitRespons
 
 public:
 
-    EvaluatePullRequestApprovalRulesResponsePrivate(EvaluatePullRequestApprovalRulesResponse * const q);
+    explicit EvaluatePullRequestApprovalRulesResponsePrivate(EvaluatePullRequestApprovalRulesResponse * const q);
 
     void parseEvaluatePullRequestApprovalRulesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateIndexResponsePrivate : public kendraResponsePrivate {
 
 public:
 
-    UpdateIndexResponsePrivate(UpdateIndexResponse * const q);
+    explicit UpdateIndexResponsePrivate(UpdateIndexResponse * const q);
 
     void parseUpdateIndexResponse(QXmlStreamReader &xml);
 

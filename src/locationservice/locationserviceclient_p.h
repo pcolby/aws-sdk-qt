@@ -30,7 +30,7 @@ class LocationServiceClient;
 class LocationServiceClientPrivate {
 
 public:
-    LocationServiceClientPrivate(LocationServiceClient * const q);
+    explicit LocationServiceClientPrivate(LocationServiceClient * const q);
 
 protected:
     LocationServiceClient * const q_ptr; ///< Internal q-pointer.

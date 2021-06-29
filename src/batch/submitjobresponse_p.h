@@ -31,7 +31,7 @@ class SubmitJobResponsePrivate : public BatchResponsePrivate {
 
 public:
 
-    SubmitJobResponsePrivate(SubmitJobResponse * const q);
+    explicit SubmitJobResponsePrivate(SubmitJobResponse * const q);
 
     void parseSubmitJobResponse(QXmlStreamReader &xml);
 

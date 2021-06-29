@@ -31,7 +31,7 @@ class DescribeTableDataImportJobResponsePrivate : public HoneycodeResponsePrivat
 
 public:
 
-    DescribeTableDataImportJobResponsePrivate(DescribeTableDataImportJobResponse * const q);
+    explicit DescribeTableDataImportJobResponsePrivate(DescribeTableDataImportJobResponse * const q);
 
     void parseDescribeTableDataImportJobResponse(QXmlStreamReader &xml);
 

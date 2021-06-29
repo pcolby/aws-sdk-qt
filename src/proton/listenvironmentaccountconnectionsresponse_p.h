@@ -31,7 +31,7 @@ class ListEnvironmentAccountConnectionsResponsePrivate : public ProtonResponsePr
 
 public:
 
-    ListEnvironmentAccountConnectionsResponsePrivate(ListEnvironmentAccountConnectionsResponse * const q);
+    explicit ListEnvironmentAccountConnectionsResponsePrivate(ListEnvironmentAccountConnectionsResponse * const q);
 
     void parseListEnvironmentAccountConnectionsResponse(QXmlStreamReader &xml);
 

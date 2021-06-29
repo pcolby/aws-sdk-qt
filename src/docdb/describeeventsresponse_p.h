@@ -31,7 +31,7 @@ class DescribeEventsResponsePrivate : public DocDBResponsePrivate {
 
 public:
 
-    DescribeEventsResponsePrivate(DescribeEventsResponse * const q);
+    explicit DescribeEventsResponsePrivate(DescribeEventsResponse * const q);
 
     void parseDescribeEventsResponse(QXmlStreamReader &xml);
 

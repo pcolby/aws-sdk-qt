@@ -31,7 +31,7 @@ class DescribeIdentityResponsePrivate : public CognitoIdentityResponsePrivate {
 
 public:
 
-    DescribeIdentityResponsePrivate(DescribeIdentityResponse * const q);
+    explicit DescribeIdentityResponsePrivate(DescribeIdentityResponse * const q);
 
     void parseDescribeIdentityResponse(QXmlStreamReader &xml);
 

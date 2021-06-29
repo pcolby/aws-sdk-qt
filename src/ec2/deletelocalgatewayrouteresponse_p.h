@@ -31,7 +31,7 @@ class DeleteLocalGatewayRouteResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DeleteLocalGatewayRouteResponsePrivate(DeleteLocalGatewayRouteResponse * const q);
+    explicit DeleteLocalGatewayRouteResponsePrivate(DeleteLocalGatewayRouteResponse * const q);
 
     void parseDeleteLocalGatewayRouteResponse(QXmlStreamReader &xml);
 

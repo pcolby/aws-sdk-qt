@@ -31,7 +31,7 @@ class GetApplicationResponsePrivate : public AppConfigResponsePrivate {
 
 public:
 
-    GetApplicationResponsePrivate(GetApplicationResponse * const q);
+    explicit GetApplicationResponsePrivate(GetApplicationResponse * const q);
 
     void parseGetApplicationResponse(QXmlStreamReader &xml);
 

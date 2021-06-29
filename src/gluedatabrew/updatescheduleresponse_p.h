@@ -31,7 +31,7 @@ class UpdateScheduleResponsePrivate : public GlueDataBrewResponsePrivate {
 
 public:
 
-    UpdateScheduleResponsePrivate(UpdateScheduleResponse * const q);
+    explicit UpdateScheduleResponsePrivate(UpdateScheduleResponse * const q);
 
     void parseUpdateScheduleResponse(QXmlStreamReader &xml);
 

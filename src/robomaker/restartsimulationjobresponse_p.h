@@ -31,7 +31,7 @@ class RestartSimulationJobResponsePrivate : public RoboMakerResponsePrivate {
 
 public:
 
-    RestartSimulationJobResponsePrivate(RestartSimulationJobResponse * const q);
+    explicit RestartSimulationJobResponsePrivate(RestartSimulationJobResponse * const q);
 
     void parseRestartSimulationJobResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListRegistriesResponsePrivate : public SchemasResponsePrivate {
 
 public:
 
-    ListRegistriesResponsePrivate(ListRegistriesResponse * const q);
+    explicit ListRegistriesResponsePrivate(ListRegistriesResponse * const q);
 
     void parseListRegistriesResponse(QXmlStreamReader &xml);
 

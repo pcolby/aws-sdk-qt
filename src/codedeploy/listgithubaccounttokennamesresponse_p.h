@@ -31,7 +31,7 @@ class ListGitHubAccountTokenNamesResponsePrivate : public CodeDeployResponsePriv
 
 public:
 
-    ListGitHubAccountTokenNamesResponsePrivate(ListGitHubAccountTokenNamesResponse * const q);
+    explicit ListGitHubAccountTokenNamesResponsePrivate(ListGitHubAccountTokenNamesResponse * const q);
 
     void parseListGitHubAccountTokenNamesResponse(QXmlStreamReader &xml);
 

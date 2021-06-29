@@ -153,7 +153,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    LexModelsV2Client(
+    explicit LexModelsV2Client(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -219,7 +219,7 @@ public slots:
 protected:
     /// @cond internal
     LexModelsV2ClientPrivate * const d_ptr; ///< Internal d-pointer.
-    LexModelsV2Client(LexModelsV2ClientPrivate * const d);
+    explicit LexModelsV2Client(LexModelsV2ClientPrivate * const d);
     /// @endcond
 
 private:

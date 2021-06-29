@@ -31,7 +31,7 @@ class EnableHealthServiceAccessForOrganizationResponsePrivate : public HealthRes
 
 public:
 
-    EnableHealthServiceAccessForOrganizationResponsePrivate(EnableHealthServiceAccessForOrganizationResponse * const q);
+    explicit EnableHealthServiceAccessForOrganizationResponsePrivate(EnableHealthServiceAccessForOrganizationResponse * const q);
 
     void parseEnableHealthServiceAccessForOrganizationResponse(QXmlStreamReader &xml);
 

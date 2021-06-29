@@ -31,7 +31,7 @@ class ListClusterJobsResponsePrivate : public SnowballResponsePrivate {
 
 public:
 
-    ListClusterJobsResponsePrivate(ListClusterJobsResponse * const q);
+    explicit ListClusterJobsResponsePrivate(ListClusterJobsResponse * const q);
 
     void parseListClusterJobsResponse(QXmlStreamReader &xml);
 

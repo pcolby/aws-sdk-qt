@@ -31,7 +31,7 @@ class UpdateServerEngineAttributesResponsePrivate : public OpsWorksCMResponsePri
 
 public:
 
-    UpdateServerEngineAttributesResponsePrivate(UpdateServerEngineAttributesResponse * const q);
+    explicit UpdateServerEngineAttributesResponsePrivate(UpdateServerEngineAttributesResponse * const q);
 
     void parseUpdateServerEngineAttributesResponse(QXmlStreamReader &xml);
 

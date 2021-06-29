@@ -31,7 +31,7 @@ class GetTerminologyResponsePrivate : public TranslateResponsePrivate {
 
 public:
 
-    GetTerminologyResponsePrivate(GetTerminologyResponse * const q);
+    explicit GetTerminologyResponsePrivate(GetTerminologyResponse * const q);
 
     void parseGetTerminologyResponse(QXmlStreamReader &xml);
 

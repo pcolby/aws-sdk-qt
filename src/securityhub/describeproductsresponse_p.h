@@ -31,7 +31,7 @@ class DescribeProductsResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 
-    DescribeProductsResponsePrivate(DescribeProductsResponse * const q);
+    explicit DescribeProductsResponsePrivate(DescribeProductsResponse * const q);
 
     void parseDescribeProductsResponse(QXmlStreamReader &xml);
 

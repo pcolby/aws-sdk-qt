@@ -31,7 +31,7 @@ class CopySnapshotResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CopySnapshotResponsePrivate(CopySnapshotResponse * const q);
+    explicit CopySnapshotResponsePrivate(CopySnapshotResponse * const q);
 
     void parseCopySnapshotResponse(QXmlStreamReader &xml);
 

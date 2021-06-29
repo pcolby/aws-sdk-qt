@@ -31,7 +31,7 @@ class DeleteResourcesByExternalIdResponsePrivate : public CodeDeployResponsePriv
 
 public:
 
-    DeleteResourcesByExternalIdResponsePrivate(DeleteResourcesByExternalIdResponse * const q);
+    explicit DeleteResourcesByExternalIdResponsePrivate(DeleteResourcesByExternalIdResponse * const q);
 
     void parseDeleteResourcesByExternalIdResponse(QXmlStreamReader &xml);
 

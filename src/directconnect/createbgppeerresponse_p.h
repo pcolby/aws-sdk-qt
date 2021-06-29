@@ -31,7 +31,7 @@ class CreateBGPPeerResponsePrivate : public DirectConnectResponsePrivate {
 
 public:
 
-    CreateBGPPeerResponsePrivate(CreateBGPPeerResponse * const q);
+    explicit CreateBGPPeerResponsePrivate(CreateBGPPeerResponse * const q);
 
     void parseCreateBGPPeerResponse(QXmlStreamReader &xml);
 

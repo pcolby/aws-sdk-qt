@@ -31,7 +31,7 @@ class ListProtectionGroupsResponsePrivate : public ShieldResponsePrivate {
 
 public:
 
-    ListProtectionGroupsResponsePrivate(ListProtectionGroupsResponse * const q);
+    explicit ListProtectionGroupsResponsePrivate(ListProtectionGroupsResponse * const q);
 
     void parseListProtectionGroupsResponse(QXmlStreamReader &xml);
 

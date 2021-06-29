@@ -31,7 +31,7 @@ class GetWorkflowExecutionHistoryResponsePrivate : public SwfResponsePrivate {
 
 public:
 
-    GetWorkflowExecutionHistoryResponsePrivate(GetWorkflowExecutionHistoryResponse * const q);
+    explicit GetWorkflowExecutionHistoryResponsePrivate(GetWorkflowExecutionHistoryResponse * const q);
 
     void parseGetWorkflowExecutionHistoryResponse(QXmlStreamReader &xml);
 

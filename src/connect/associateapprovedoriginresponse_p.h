@@ -31,7 +31,7 @@ class AssociateApprovedOriginResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    AssociateApprovedOriginResponsePrivate(AssociateApprovedOriginResponse * const q);
+    explicit AssociateApprovedOriginResponsePrivate(AssociateApprovedOriginResponse * const q);
 
     void parseAssociateApprovedOriginResponse(QXmlStreamReader &xml);
 

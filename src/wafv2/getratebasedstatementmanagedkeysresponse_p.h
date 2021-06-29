@@ -31,7 +31,7 @@ class GetRateBasedStatementManagedKeysResponsePrivate : public Wafv2ResponsePriv
 
 public:
 
-    GetRateBasedStatementManagedKeysResponsePrivate(GetRateBasedStatementManagedKeysResponse * const q);
+    explicit GetRateBasedStatementManagedKeysResponsePrivate(GetRateBasedStatementManagedKeysResponse * const q);
 
     void parseGetRateBasedStatementManagedKeysResponse(QXmlStreamReader &xml);
 

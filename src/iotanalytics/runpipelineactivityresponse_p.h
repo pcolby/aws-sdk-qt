@@ -31,7 +31,7 @@ class RunPipelineActivityResponsePrivate : public IoTAnalyticsResponsePrivate {
 
 public:
 
-    RunPipelineActivityResponsePrivate(RunPipelineActivityResponse * const q);
+    explicit RunPipelineActivityResponsePrivate(RunPipelineActivityResponse * const q);
 
     void parseRunPipelineActivityResponse(QXmlStreamReader &xml);
 

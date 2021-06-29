@@ -31,7 +31,7 @@ class ListEventBusesResponsePrivate : public CloudWatchEventsResponsePrivate {
 
 public:
 
-    ListEventBusesResponsePrivate(ListEventBusesResponse * const q);
+    explicit ListEventBusesResponsePrivate(ListEventBusesResponse * const q);
 
     void parseListEventBusesResponse(QXmlStreamReader &xml);
 

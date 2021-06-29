@@ -29,7 +29,7 @@ class ElastiCacheResponsePrivate {
 
 public:
 
-    ElastiCacheResponsePrivate(ElastiCacheResponse * const q);
+    explicit ElastiCacheResponsePrivate(ElastiCacheResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

@@ -31,7 +31,7 @@ class PollForDecisionTaskResponsePrivate : public SwfResponsePrivate {
 
 public:
 
-    PollForDecisionTaskResponsePrivate(PollForDecisionTaskResponse * const q);
+    explicit PollForDecisionTaskResponsePrivate(PollForDecisionTaskResponse * const q);
 
     void parsePollForDecisionTaskResponse(QXmlStreamReader &xml);
 

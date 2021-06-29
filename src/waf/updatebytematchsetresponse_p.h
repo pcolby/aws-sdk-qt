@@ -31,7 +31,7 @@ class UpdateByteMatchSetResponsePrivate : public WafResponsePrivate {
 
 public:
 
-    UpdateByteMatchSetResponsePrivate(UpdateByteMatchSetResponse * const q);
+    explicit UpdateByteMatchSetResponsePrivate(UpdateByteMatchSetResponse * const q);
 
     void parseUpdateByteMatchSetResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class AssumeRoleWithSAMLResponsePrivate : public StsResponsePrivate {
 
 public:
 
-    AssumeRoleWithSAMLResponsePrivate(AssumeRoleWithSAMLResponse * const q);
+    explicit AssumeRoleWithSAMLResponsePrivate(AssumeRoleWithSAMLResponse * const q);
 
     void parseAssumeRoleWithSAMLResponse(QXmlStreamReader &xml);
 

@@ -29,7 +29,7 @@ class MachineLearningResponsePrivate {
 
 public:
 
-    MachineLearningResponsePrivate(MachineLearningResponse * const q);
+    explicit MachineLearningResponsePrivate(MachineLearningResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

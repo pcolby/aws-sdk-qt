@@ -31,7 +31,7 @@ class BatchImportFindingsResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 
-    BatchImportFindingsResponsePrivate(BatchImportFindingsResponse * const q);
+    explicit BatchImportFindingsResponsePrivate(BatchImportFindingsResponse * const q);
 
     void parseBatchImportFindingsResponse(QXmlStreamReader &xml);
 

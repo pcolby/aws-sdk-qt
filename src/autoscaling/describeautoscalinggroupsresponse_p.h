@@ -31,7 +31,7 @@ class DescribeAutoScalingGroupsResponsePrivate : public AutoScalingResponsePriva
 
 public:
 
-    DescribeAutoScalingGroupsResponsePrivate(DescribeAutoScalingGroupsResponse * const q);
+    explicit DescribeAutoScalingGroupsResponsePrivate(DescribeAutoScalingGroupsResponse * const q);
 
     void parseDescribeAutoScalingGroupsResponse(QXmlStreamReader &xml);
 

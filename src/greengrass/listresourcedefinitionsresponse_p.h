@@ -31,7 +31,7 @@ class ListResourceDefinitionsResponsePrivate : public GreengrassResponsePrivate 
 
 public:
 
-    ListResourceDefinitionsResponsePrivate(ListResourceDefinitionsResponse * const q);
+    explicit ListResourceDefinitionsResponsePrivate(ListResourceDefinitionsResponse * const q);
 
     void parseListResourceDefinitionsResponse(QXmlStreamReader &xml);
 

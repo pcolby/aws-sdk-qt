@@ -31,7 +31,7 @@ class GetDeliverabilityTestReportResponsePrivate : public Sesv2ResponsePrivate {
 
 public:
 
-    GetDeliverabilityTestReportResponsePrivate(GetDeliverabilityTestReportResponse * const q);
+    explicit GetDeliverabilityTestReportResponsePrivate(GetDeliverabilityTestReportResponse * const q);
 
     void parseGetDeliverabilityTestReportResponse(QXmlStreamReader &xml);
 

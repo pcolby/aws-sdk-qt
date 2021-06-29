@@ -98,7 +98,7 @@ public:
 protected:
     /// @cond internal
     kendraRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    kendraRequest(kendraRequestPrivate * const d);
+    explicit kendraRequest(kendraRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

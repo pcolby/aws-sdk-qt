@@ -31,7 +31,7 @@ class CreateInstancesFromSnapshotResponsePrivate : public LightsailResponsePriva
 
 public:
 
-    CreateInstancesFromSnapshotResponsePrivate(CreateInstancesFromSnapshotResponse * const q);
+    explicit CreateInstancesFromSnapshotResponsePrivate(CreateInstancesFromSnapshotResponse * const q);
 
     void parseCreateInstancesFromSnapshotResponse(QXmlStreamReader &xml);
 

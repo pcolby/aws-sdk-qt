@@ -31,7 +31,7 @@ class GetServersResponsePrivate : public SmsResponsePrivate {
 
 public:
 
-    GetServersResponsePrivate(GetServersResponse * const q);
+    explicit GetServersResponsePrivate(GetServersResponse * const q);
 
     void parseGetServersResponse(QXmlStreamReader &xml);
 

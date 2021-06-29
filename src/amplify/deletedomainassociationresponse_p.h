@@ -31,7 +31,7 @@ class DeleteDomainAssociationResponsePrivate : public AmplifyResponsePrivate {
 
 public:
 
-    DeleteDomainAssociationResponsePrivate(DeleteDomainAssociationResponse * const q);
+    explicit DeleteDomainAssociationResponsePrivate(DeleteDomainAssociationResponse * const q);
 
     void parseDeleteDomainAssociationResponse(QXmlStreamReader &xml);
 

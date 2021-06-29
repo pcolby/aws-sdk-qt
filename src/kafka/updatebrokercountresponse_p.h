@@ -31,7 +31,7 @@ class UpdateBrokerCountResponsePrivate : public KafkaResponsePrivate {
 
 public:
 
-    UpdateBrokerCountResponsePrivate(UpdateBrokerCountResponse * const q);
+    explicit UpdateBrokerCountResponsePrivate(UpdateBrokerCountResponse * const q);
 
     void parseUpdateBrokerCountResponse(QXmlStreamReader &xml);
 

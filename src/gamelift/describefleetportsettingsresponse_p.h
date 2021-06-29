@@ -31,7 +31,7 @@ class DescribeFleetPortSettingsResponsePrivate : public GameLiftResponsePrivate 
 
 public:
 
-    DescribeFleetPortSettingsResponsePrivate(DescribeFleetPortSettingsResponse * const q);
+    explicit DescribeFleetPortSettingsResponsePrivate(DescribeFleetPortSettingsResponse * const q);
 
     void parseDescribeFleetPortSettingsResponse(QXmlStreamReader &xml);
 

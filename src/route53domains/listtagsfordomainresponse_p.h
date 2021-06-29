@@ -31,7 +31,7 @@ class ListTagsForDomainResponsePrivate : public Route53DomainsResponsePrivate {
 
 public:
 
-    ListTagsForDomainResponsePrivate(ListTagsForDomainResponse * const q);
+    explicit ListTagsForDomainResponsePrivate(ListTagsForDomainResponse * const q);
 
     void parseListTagsForDomainResponse(QXmlStreamReader &xml);
 

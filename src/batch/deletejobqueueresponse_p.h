@@ -31,7 +31,7 @@ class DeleteJobQueueResponsePrivate : public BatchResponsePrivate {
 
 public:
 
-    DeleteJobQueueResponsePrivate(DeleteJobQueueResponse * const q);
+    explicit DeleteJobQueueResponsePrivate(DeleteJobQueueResponse * const q);
 
     void parseDeleteJobQueueResponse(QXmlStreamReader &xml);
 

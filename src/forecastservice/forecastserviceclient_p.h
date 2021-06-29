@@ -30,7 +30,7 @@ class ForecastServiceClient;
 class ForecastServiceClientPrivate {
 
 public:
-    ForecastServiceClientPrivate(ForecastServiceClient * const q);
+    explicit ForecastServiceClientPrivate(ForecastServiceClient * const q);
 
 protected:
     ForecastServiceClient * const q_ptr; ///< Internal q-pointer.

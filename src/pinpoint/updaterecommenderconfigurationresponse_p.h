@@ -31,7 +31,7 @@ class UpdateRecommenderConfigurationResponsePrivate : public PinpointResponsePri
 
 public:
 
-    UpdateRecommenderConfigurationResponsePrivate(UpdateRecommenderConfigurationResponse * const q);
+    explicit UpdateRecommenderConfigurationResponsePrivate(UpdateRecommenderConfigurationResponse * const q);
 
     void parseUpdateRecommenderConfigurationResponse(QXmlStreamReader &xml);
 

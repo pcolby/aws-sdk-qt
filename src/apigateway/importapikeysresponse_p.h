@@ -31,7 +31,7 @@ class ImportApiKeysResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    ImportApiKeysResponsePrivate(ImportApiKeysResponse * const q);
+    explicit ImportApiKeysResponsePrivate(ImportApiKeysResponse * const q);
 
     void parseImportApiKeysResponse(QXmlStreamReader &xml);
 

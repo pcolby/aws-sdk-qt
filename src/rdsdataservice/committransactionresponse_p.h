@@ -31,7 +31,7 @@ class CommitTransactionResponsePrivate : public RDSDataServiceResponsePrivate {
 
 public:
 
-    CommitTransactionResponsePrivate(CommitTransactionResponse * const q);
+    explicit CommitTransactionResponsePrivate(CommitTransactionResponse * const q);
 
     void parseCommitTransactionResponse(QXmlStreamReader &xml);
 

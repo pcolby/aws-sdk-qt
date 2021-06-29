@@ -31,7 +31,7 @@ class DeleteApnsVoipChannelResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    DeleteApnsVoipChannelResponsePrivate(DeleteApnsVoipChannelResponse * const q);
+    explicit DeleteApnsVoipChannelResponsePrivate(DeleteApnsVoipChannelResponse * const q);
 
     void parseDeleteApnsVoipChannelResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteResourceDefinitionResponsePrivate : public GreengrassResponsePrivate
 
 public:
 
-    DeleteResourceDefinitionResponsePrivate(DeleteResourceDefinitionResponse * const q);
+    explicit DeleteResourceDefinitionResponsePrivate(DeleteResourceDefinitionResponse * const q);
 
     void parseDeleteResourceDefinitionResponse(QXmlStreamReader &xml);
 

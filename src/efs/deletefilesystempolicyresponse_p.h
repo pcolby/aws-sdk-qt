@@ -31,7 +31,7 @@ class DeleteFileSystemPolicyResponsePrivate : public EfsResponsePrivate {
 
 public:
 
-    DeleteFileSystemPolicyResponsePrivate(DeleteFileSystemPolicyResponse * const q);
+    explicit DeleteFileSystemPolicyResponsePrivate(DeleteFileSystemPolicyResponse * const q);
 
     void parseDeleteFileSystemPolicyResponse(QXmlStreamReader &xml);
 

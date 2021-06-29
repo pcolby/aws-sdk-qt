@@ -29,7 +29,7 @@ class ResourceGroupsTaggingAPIResponsePrivate {
 
 public:
 
-    ResourceGroupsTaggingAPIResponsePrivate(ResourceGroupsTaggingAPIResponse * const q);
+    explicit ResourceGroupsTaggingAPIResponsePrivate(ResourceGroupsTaggingAPIResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

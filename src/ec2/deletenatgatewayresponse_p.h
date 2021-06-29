@@ -31,7 +31,7 @@ class DeleteNatGatewayResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DeleteNatGatewayResponsePrivate(DeleteNatGatewayResponse * const q);
+    explicit DeleteNatGatewayResponsePrivate(DeleteNatGatewayResponse * const q);
 
     void parseDeleteNatGatewayResponse(QXmlStreamReader &xml);
 

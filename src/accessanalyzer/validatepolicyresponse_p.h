@@ -31,7 +31,7 @@ class ValidatePolicyResponsePrivate : public AccessAnalyzerResponsePrivate {
 
 public:
 
-    ValidatePolicyResponsePrivate(ValidatePolicyResponse * const q);
+    explicit ValidatePolicyResponsePrivate(ValidatePolicyResponse * const q);
 
     void parseValidatePolicyResponse(QXmlStreamReader &xml);
 

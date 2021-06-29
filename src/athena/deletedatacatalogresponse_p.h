@@ -31,7 +31,7 @@ class DeleteDataCatalogResponsePrivate : public AthenaResponsePrivate {
 
 public:
 
-    DeleteDataCatalogResponsePrivate(DeleteDataCatalogResponse * const q);
+    explicit DeleteDataCatalogResponsePrivate(DeleteDataCatalogResponse * const q);
 
     void parseDeleteDataCatalogResponse(QXmlStreamReader &xml);
 

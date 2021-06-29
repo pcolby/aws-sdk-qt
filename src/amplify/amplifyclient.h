@@ -115,7 +115,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    AmplifyClient(
+    explicit AmplifyClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -162,7 +162,7 @@ public slots:
 protected:
     /// @cond internal
     AmplifyClientPrivate * const d_ptr; ///< Internal d-pointer.
-    AmplifyClient(AmplifyClientPrivate * const d);
+    explicit AmplifyClient(AmplifyClientPrivate * const d);
     /// @endcond
 
 private:

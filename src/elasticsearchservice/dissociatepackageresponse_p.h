@@ -31,7 +31,7 @@ class DissociatePackageResponsePrivate : public ElasticsearchServiceResponsePriv
 
 public:
 
-    DissociatePackageResponsePrivate(DissociatePackageResponse * const q);
+    explicit DissociatePackageResponsePrivate(DissociatePackageResponse * const q);
 
     void parseDissociatePackageResponse(QXmlStreamReader &xml);
 

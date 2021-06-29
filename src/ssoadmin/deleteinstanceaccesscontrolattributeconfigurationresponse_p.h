@@ -31,7 +31,7 @@ class DeleteInstanceAccessControlAttributeConfigurationResponsePrivate : public 
 
 public:
 
-    DeleteInstanceAccessControlAttributeConfigurationResponsePrivate(DeleteInstanceAccessControlAttributeConfigurationResponse * const q);
+    explicit DeleteInstanceAccessControlAttributeConfigurationResponsePrivate(DeleteInstanceAccessControlAttributeConfigurationResponse * const q);
 
     void parseDeleteInstanceAccessControlAttributeConfigurationResponse(QXmlStreamReader &xml);
 

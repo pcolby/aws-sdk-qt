@@ -30,7 +30,7 @@ class CloudFrontClient;
 class CloudFrontClientPrivate {
 
 public:
-    CloudFrontClientPrivate(CloudFrontClient * const q);
+    explicit CloudFrontClientPrivate(CloudFrontClient * const q);
 
 protected:
     CloudFrontClient * const q_ptr; ///< Internal q-pointer.

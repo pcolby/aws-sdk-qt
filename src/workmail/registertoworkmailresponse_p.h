@@ -31,7 +31,7 @@ class RegisterToWorkMailResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 
-    RegisterToWorkMailResponsePrivate(RegisterToWorkMailResponse * const q);
+    explicit RegisterToWorkMailResponsePrivate(RegisterToWorkMailResponse * const q);
 
     void parseRegisterToWorkMailResponse(QXmlStreamReader &xml);
 

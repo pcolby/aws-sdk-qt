@@ -30,7 +30,7 @@ class SnowballClient;
 class SnowballClientPrivate {
 
 public:
-    SnowballClientPrivate(SnowballClient * const q);
+    explicit SnowballClientPrivate(SnowballClient * const q);
 
 protected:
     SnowballClient * const q_ptr; ///< Internal q-pointer.

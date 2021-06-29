@@ -31,7 +31,7 @@ class ApproveSkillResponsePrivate : public AlexaForBusinessResponsePrivate {
 
 public:
 
-    ApproveSkillResponsePrivate(ApproveSkillResponse * const q);
+    explicit ApproveSkillResponsePrivate(ApproveSkillResponse * const q);
 
     void parseApproveSkillResponse(QXmlStreamReader &xml);
 

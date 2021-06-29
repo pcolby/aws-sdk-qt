@@ -31,7 +31,7 @@ class CreateAddonResponsePrivate : public EksResponsePrivate {
 
 public:
 
-    CreateAddonResponsePrivate(CreateAddonResponse * const q);
+    explicit CreateAddonResponsePrivate(CreateAddonResponse * const q);
 
     void parseCreateAddonResponse(QXmlStreamReader &xml);
 

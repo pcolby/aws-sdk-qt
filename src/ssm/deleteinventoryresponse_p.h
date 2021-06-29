@@ -31,7 +31,7 @@ class DeleteInventoryResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    DeleteInventoryResponsePrivate(DeleteInventoryResponse * const q);
+    explicit DeleteInventoryResponsePrivate(DeleteInventoryResponse * const q);
 
     void parseDeleteInventoryResponse(QXmlStreamReader &xml);
 

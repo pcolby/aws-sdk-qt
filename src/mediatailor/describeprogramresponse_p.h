@@ -31,7 +31,7 @@ class DescribeProgramResponsePrivate : public MediaTailorResponsePrivate {
 
 public:
 
-    DescribeProgramResponsePrivate(DescribeProgramResponse * const q);
+    explicit DescribeProgramResponsePrivate(DescribeProgramResponse * const q);
 
     void parseDescribeProgramResponse(QXmlStreamReader &xml);
 

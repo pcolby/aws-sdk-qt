@@ -31,7 +31,7 @@ class DescribeWorkingStorageResponsePrivate : public StorageGatewayResponsePriva
 
 public:
 
-    DescribeWorkingStorageResponsePrivate(DescribeWorkingStorageResponse * const q);
+    explicit DescribeWorkingStorageResponsePrivate(DescribeWorkingStorageResponse * const q);
 
     void parseDescribeWorkingStorageResponse(QXmlStreamReader &xml);
 

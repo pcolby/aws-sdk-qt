@@ -31,7 +31,7 @@ class GetReportGroupTrendResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 
-    GetReportGroupTrendResponsePrivate(GetReportGroupTrendResponse * const q);
+    explicit GetReportGroupTrendResponsePrivate(GetReportGroupTrendResponse * const q);
 
     void parseGetReportGroupTrendResponse(QXmlStreamReader &xml);
 

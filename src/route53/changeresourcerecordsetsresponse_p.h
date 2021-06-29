@@ -31,7 +31,7 @@ class ChangeResourceRecordSetsResponsePrivate : public Route53ResponsePrivate {
 
 public:
 
-    ChangeResourceRecordSetsResponsePrivate(ChangeResourceRecordSetsResponse * const q);
+    explicit ChangeResourceRecordSetsResponsePrivate(ChangeResourceRecordSetsResponse * const q);
 
     void parseChangeResourceRecordSetsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteAssessmentFrameworkResponsePrivate : public AuditManagerResponsePriv
 
 public:
 
-    DeleteAssessmentFrameworkResponsePrivate(DeleteAssessmentFrameworkResponse * const q);
+    explicit DeleteAssessmentFrameworkResponsePrivate(DeleteAssessmentFrameworkResponse * const q);
 
     void parseDeleteAssessmentFrameworkResponse(QXmlStreamReader &xml);
 

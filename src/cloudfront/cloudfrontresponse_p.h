@@ -29,7 +29,7 @@ class CloudFrontResponsePrivate {
 
 public:
 
-    CloudFrontResponsePrivate(CloudFrontResponse * const q);
+    explicit CloudFrontResponsePrivate(CloudFrontResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

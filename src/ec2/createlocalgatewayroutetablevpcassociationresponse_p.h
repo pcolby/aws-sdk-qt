@@ -31,7 +31,7 @@ class CreateLocalGatewayRouteTableVpcAssociationResponsePrivate : public Ec2Resp
 
 public:
 
-    CreateLocalGatewayRouteTableVpcAssociationResponsePrivate(CreateLocalGatewayRouteTableVpcAssociationResponse * const q);
+    explicit CreateLocalGatewayRouteTableVpcAssociationResponsePrivate(CreateLocalGatewayRouteTableVpcAssociationResponse * const q);
 
     void parseCreateLocalGatewayRouteTableVpcAssociationResponse(QXmlStreamReader &xml);
 

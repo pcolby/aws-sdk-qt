@@ -31,7 +31,7 @@ class StartMonitoringMemberResponsePrivate : public DetectiveResponsePrivate {
 
 public:
 
-    StartMonitoringMemberResponsePrivate(StartMonitoringMemberResponse * const q);
+    explicit StartMonitoringMemberResponsePrivate(StartMonitoringMemberResponse * const q);
 
     void parseStartMonitoringMemberResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListChannelMembershipsResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    ListChannelMembershipsResponsePrivate(ListChannelMembershipsResponse * const q);
+    explicit ListChannelMembershipsResponsePrivate(ListChannelMembershipsResponse * const q);
 
     void parseListChannelMembershipsResponse(QXmlStreamReader &xml);
 

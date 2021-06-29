@@ -31,7 +31,7 @@ class DescribeHealthServiceStatusForOrganizationResponsePrivate : public HealthR
 
 public:
 
-    DescribeHealthServiceStatusForOrganizationResponsePrivate(DescribeHealthServiceStatusForOrganizationResponse * const q);
+    explicit DescribeHealthServiceStatusForOrganizationResponsePrivate(DescribeHealthServiceStatusForOrganizationResponse * const q);
 
     void parseDescribeHealthServiceStatusForOrganizationResponse(QXmlStreamReader &xml);
 

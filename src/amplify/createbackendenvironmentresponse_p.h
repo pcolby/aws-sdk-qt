@@ -31,7 +31,7 @@ class CreateBackendEnvironmentResponsePrivate : public AmplifyResponsePrivate {
 
 public:
 
-    CreateBackendEnvironmentResponsePrivate(CreateBackendEnvironmentResponse * const q);
+    explicit CreateBackendEnvironmentResponsePrivate(CreateBackendEnvironmentResponse * const q);
 
     void parseCreateBackendEnvironmentResponse(QXmlStreamReader &xml);
 

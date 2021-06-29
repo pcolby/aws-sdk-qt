@@ -31,7 +31,7 @@ class PutResourcePolicyResponsePrivate : public SchemasResponsePrivate {
 
 public:
 
-    PutResourcePolicyResponsePrivate(PutResourcePolicyResponse * const q);
+    explicit PutResourcePolicyResponsePrivate(PutResourcePolicyResponse * const q);
 
     void parsePutResourcePolicyResponse(QXmlStreamReader &xml);
 

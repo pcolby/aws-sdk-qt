@@ -31,7 +31,7 @@ class DescribeNotebookExecutionResponsePrivate : public EmrResponsePrivate {
 
 public:
 
-    DescribeNotebookExecutionResponsePrivate(DescribeNotebookExecutionResponse * const q);
+    explicit DescribeNotebookExecutionResponsePrivate(DescribeNotebookExecutionResponse * const q);
 
     void parseDescribeNotebookExecutionResponse(QXmlStreamReader &xml);
 

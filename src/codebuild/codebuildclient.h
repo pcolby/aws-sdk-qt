@@ -129,7 +129,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    CodeBuildClient(
+    explicit CodeBuildClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -183,7 +183,7 @@ public slots:
 protected:
     /// @cond internal
     CodeBuildClientPrivate * const d_ptr; ///< Internal d-pointer.
-    CodeBuildClient(CodeBuildClientPrivate * const d);
+    explicit CodeBuildClient(CodeBuildClientPrivate * const d);
     /// @endcond
 
 private:

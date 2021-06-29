@@ -31,7 +31,7 @@ class RotateChannelCredentialsResponsePrivate : public MediaPackageResponsePriva
 
 public:
 
-    RotateChannelCredentialsResponsePrivate(RotateChannelCredentialsResponse * const q);
+    explicit RotateChannelCredentialsResponsePrivate(RotateChannelCredentialsResponse * const q);
 
     void parseRotateChannelCredentialsResponse(QXmlStreamReader &xml);
 

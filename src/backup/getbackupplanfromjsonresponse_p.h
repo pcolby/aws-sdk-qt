@@ -31,7 +31,7 @@ class GetBackupPlanFromJSONResponsePrivate : public BackupResponsePrivate {
 
 public:
 
-    GetBackupPlanFromJSONResponsePrivate(GetBackupPlanFromJSONResponse * const q);
+    explicit GetBackupPlanFromJSONResponsePrivate(GetBackupPlanFromJSONResponse * const q);
 
     void parseGetBackupPlanFromJSONResponse(QXmlStreamReader &xml);
 

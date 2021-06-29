@@ -31,7 +31,7 @@ class ModifyTrafficMirrorFilterNetworkServicesResponsePrivate : public Ec2Respon
 
 public:
 
-    ModifyTrafficMirrorFilterNetworkServicesResponsePrivate(ModifyTrafficMirrorFilterNetworkServicesResponse * const q);
+    explicit ModifyTrafficMirrorFilterNetworkServicesResponsePrivate(ModifyTrafficMirrorFilterNetworkServicesResponse * const q);
 
     void parseModifyTrafficMirrorFilterNetworkServicesResponse(QXmlStreamReader &xml);
 

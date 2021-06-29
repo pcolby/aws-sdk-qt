@@ -31,7 +31,7 @@ class DeleteLogPatternResponsePrivate : public ApplicationInsightsResponsePrivat
 
 public:
 
-    DeleteLogPatternResponsePrivate(DeleteLogPatternResponse * const q);
+    explicit DeleteLogPatternResponsePrivate(DeleteLogPatternResponse * const q);
 
     void parseDeleteLogPatternResponse(QXmlStreamReader &xml);
 

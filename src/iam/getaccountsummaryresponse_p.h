@@ -31,7 +31,7 @@ class GetAccountSummaryResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    GetAccountSummaryResponsePrivate(GetAccountSummaryResponse * const q);
+    explicit GetAccountSummaryResponsePrivate(GetAccountSummaryResponse * const q);
 
     void parseGetAccountSummaryResponse(QXmlStreamReader &xml);
 

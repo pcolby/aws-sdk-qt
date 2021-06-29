@@ -31,7 +31,7 @@ class DeleteNetworkProfileResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    DeleteNetworkProfileResponsePrivate(DeleteNetworkProfileResponse * const q);
+    explicit DeleteNetworkProfileResponsePrivate(DeleteNetworkProfileResponse * const q);
 
     void parseDeleteNetworkProfileResponse(QXmlStreamReader &xml);
 

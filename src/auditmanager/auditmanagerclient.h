@@ -143,7 +143,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    AuditManagerClient(
+    explicit AuditManagerClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -204,7 +204,7 @@ public slots:
 protected:
     /// @cond internal
     AuditManagerClientPrivate * const d_ptr; ///< Internal d-pointer.
-    AuditManagerClient(AuditManagerClientPrivate * const d);
+    explicit AuditManagerClient(AuditManagerClientPrivate * const d);
     /// @endcond
 
 private:

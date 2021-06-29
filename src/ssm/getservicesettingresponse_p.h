@@ -31,7 +31,7 @@ class GetServiceSettingResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    GetServiceSettingResponsePrivate(GetServiceSettingResponse * const q);
+    explicit GetServiceSettingResponsePrivate(GetServiceSettingResponse * const q);
 
     void parseGetServiceSettingResponse(QXmlStreamReader &xml);
 

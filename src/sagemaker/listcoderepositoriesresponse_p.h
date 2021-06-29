@@ -31,7 +31,7 @@ class ListCodeRepositoriesResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    ListCodeRepositoriesResponsePrivate(ListCodeRepositoriesResponse * const q);
+    explicit ListCodeRepositoriesResponsePrivate(ListCodeRepositoriesResponse * const q);
 
     void parseListCodeRepositoriesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateLoginProfileResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    CreateLoginProfileResponsePrivate(CreateLoginProfileResponse * const q);
+    explicit CreateLoginProfileResponsePrivate(CreateLoginProfileResponse * const q);
 
     void parseCreateLoginProfileResponse(QXmlStreamReader &xml);
 

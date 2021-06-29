@@ -31,7 +31,7 @@ class ListBulkDeploymentDetailedReportsResponsePrivate : public GreengrassRespon
 
 public:
 
-    ListBulkDeploymentDetailedReportsResponsePrivate(ListBulkDeploymentDetailedReportsResponse * const q);
+    explicit ListBulkDeploymentDetailedReportsResponsePrivate(ListBulkDeploymentDetailedReportsResponse * const q);
 
     void parseListBulkDeploymentDetailedReportsResponse(QXmlStreamReader &xml);
 

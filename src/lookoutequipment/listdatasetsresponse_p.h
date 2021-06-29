@@ -31,7 +31,7 @@ class ListDatasetsResponsePrivate : public LookoutEquipmentResponsePrivate {
 
 public:
 
-    ListDatasetsResponsePrivate(ListDatasetsResponse * const q);
+    explicit ListDatasetsResponsePrivate(ListDatasetsResponse * const q);
 
     void parseListDatasetsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class AcceptEulasResponsePrivate : public NimbleStudioResponsePrivate {
 
 public:
 
-    AcceptEulasResponsePrivate(AcceptEulasResponse * const q);
+    explicit AcceptEulasResponsePrivate(AcceptEulasResponse * const q);
 
     void parseAcceptEulasResponse(QXmlStreamReader &xml);
 

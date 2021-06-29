@@ -31,7 +31,7 @@ class DeleteWorkflowResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    DeleteWorkflowResponsePrivate(DeleteWorkflowResponse * const q);
+    explicit DeleteWorkflowResponsePrivate(DeleteWorkflowResponse * const q);
 
     void parseDeleteWorkflowResponse(QXmlStreamReader &xml);
 

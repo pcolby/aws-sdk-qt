@@ -31,7 +31,7 @@ class DisableLoggingResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    DisableLoggingResponsePrivate(DisableLoggingResponse * const q);
+    explicit DisableLoggingResponsePrivate(DisableLoggingResponse * const q);
 
     void parseDisableLoggingResponse(QXmlStreamReader &xml);
 

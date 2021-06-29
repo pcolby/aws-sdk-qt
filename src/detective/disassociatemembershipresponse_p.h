@@ -31,7 +31,7 @@ class DisassociateMembershipResponsePrivate : public DetectiveResponsePrivate {
 
 public:
 
-    DisassociateMembershipResponsePrivate(DisassociateMembershipResponse * const q);
+    explicit DisassociateMembershipResponsePrivate(DisassociateMembershipResponse * const q);
 
     void parseDisassociateMembershipResponse(QXmlStreamReader &xml);
 

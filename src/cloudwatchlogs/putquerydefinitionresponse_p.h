@@ -31,7 +31,7 @@ class PutQueryDefinitionResponsePrivate : public CloudWatchLogsResponsePrivate {
 
 public:
 
-    PutQueryDefinitionResponsePrivate(PutQueryDefinitionResponse * const q);
+    explicit PutQueryDefinitionResponsePrivate(PutQueryDefinitionResponse * const q);
 
     void parsePutQueryDefinitionResponse(QXmlStreamReader &xml);
 

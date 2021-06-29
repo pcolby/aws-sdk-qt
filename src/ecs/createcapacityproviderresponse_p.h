@@ -31,7 +31,7 @@ class CreateCapacityProviderResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    CreateCapacityProviderResponsePrivate(CreateCapacityProviderResponse * const q);
+    explicit CreateCapacityProviderResponsePrivate(CreateCapacityProviderResponse * const q);
 
     void parseCreateCapacityProviderResponse(QXmlStreamReader &xml);
 

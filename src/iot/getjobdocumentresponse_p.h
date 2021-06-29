@@ -31,7 +31,7 @@ class GetJobDocumentResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    GetJobDocumentResponsePrivate(GetJobDocumentResponse * const q);
+    explicit GetJobDocumentResponsePrivate(GetJobDocumentResponse * const q);
 
     void parseGetJobDocumentResponse(QXmlStreamReader &xml);
 

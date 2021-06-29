@@ -31,7 +31,7 @@ class DescribeProductAsAdminResponsePrivate : public ServiceCatalogResponsePriva
 
 public:
 
-    DescribeProductAsAdminResponsePrivate(DescribeProductAsAdminResponse * const q);
+    explicit DescribeProductAsAdminResponsePrivate(DescribeProductAsAdminResponse * const q);
 
     void parseDescribeProductAsAdminResponse(QXmlStreamReader &xml);
 

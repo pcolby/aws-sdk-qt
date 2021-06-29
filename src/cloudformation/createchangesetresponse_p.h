@@ -31,7 +31,7 @@ class CreateChangeSetResponsePrivate : public CloudFormationResponsePrivate {
 
 public:
 
-    CreateChangeSetResponsePrivate(CreateChangeSetResponse * const q);
+    explicit CreateChangeSetResponsePrivate(CreateChangeSetResponse * const q);
 
     void parseCreateChangeSetResponse(QXmlStreamReader &xml);
 

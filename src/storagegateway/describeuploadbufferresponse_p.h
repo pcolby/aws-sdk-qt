@@ -31,7 +31,7 @@ class DescribeUploadBufferResponsePrivate : public StorageGatewayResponsePrivate
 
 public:
 
-    DescribeUploadBufferResponsePrivate(DescribeUploadBufferResponse * const q);
+    explicit DescribeUploadBufferResponsePrivate(DescribeUploadBufferResponse * const q);
 
     void parseDescribeUploadBufferResponse(QXmlStreamReader &xml);
 

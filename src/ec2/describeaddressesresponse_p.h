@@ -31,7 +31,7 @@ class DescribeAddressesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeAddressesResponsePrivate(DescribeAddressesResponse * const q);
+    explicit DescribeAddressesResponsePrivate(DescribeAddressesResponse * const q);
 
     void parseDescribeAddressesResponse(QXmlStreamReader &xml);
 

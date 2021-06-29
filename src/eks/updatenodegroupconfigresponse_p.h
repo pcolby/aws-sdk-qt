@@ -31,7 +31,7 @@ class UpdateNodegroupConfigResponsePrivate : public EksResponsePrivate {
 
 public:
 
-    UpdateNodegroupConfigResponsePrivate(UpdateNodegroupConfigResponse * const q);
+    explicit UpdateNodegroupConfigResponsePrivate(UpdateNodegroupConfigResponse * const q);
 
     void parseUpdateNodegroupConfigResponse(QXmlStreamReader &xml);
 

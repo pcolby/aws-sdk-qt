@@ -31,7 +31,7 @@ class InviteUsersResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    InviteUsersResponsePrivate(InviteUsersResponse * const q);
+    explicit InviteUsersResponsePrivate(InviteUsersResponse * const q);
 
     void parseInviteUsersResponse(QXmlStreamReader &xml);
 

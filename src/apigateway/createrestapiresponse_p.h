@@ -31,7 +31,7 @@ class CreateRestApiResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    CreateRestApiResponsePrivate(CreateRestApiResponse * const q);
+    explicit CreateRestApiResponsePrivate(CreateRestApiResponse * const q);
 
     void parseCreateRestApiResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteSubnetGroupResponsePrivate : public DaxResponsePrivate {
 
 public:
 
-    DeleteSubnetGroupResponsePrivate(DeleteSubnetGroupResponse * const q);
+    explicit DeleteSubnetGroupResponsePrivate(DeleteSubnetGroupResponse * const q);
 
     void parseDeleteSubnetGroupResponse(QXmlStreamReader &xml);
 

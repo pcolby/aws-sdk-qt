@@ -31,7 +31,7 @@ class GetUpgradeHistoryResponsePrivate : public ElasticsearchServiceResponsePriv
 
 public:
 
-    GetUpgradeHistoryResponsePrivate(GetUpgradeHistoryResponse * const q);
+    explicit GetUpgradeHistoryResponsePrivate(GetUpgradeHistoryResponse * const q);
 
     void parseGetUpgradeHistoryResponse(QXmlStreamReader &xml);
 

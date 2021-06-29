@@ -31,7 +31,7 @@ class GetApplicationPolicyResponsePrivate : public ServerlessApplicationReposito
 
 public:
 
-    GetApplicationPolicyResponsePrivate(GetApplicationPolicyResponse * const q);
+    explicit GetApplicationPolicyResponsePrivate(GetApplicationPolicyResponse * const q);
 
     void parseGetApplicationPolicyResponse(QXmlStreamReader &xml);
 

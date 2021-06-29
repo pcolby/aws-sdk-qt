@@ -31,7 +31,7 @@ class BatchDeleteScheduledActionResponsePrivate : public AutoScalingResponsePriv
 
 public:
 
-    BatchDeleteScheduledActionResponsePrivate(BatchDeleteScheduledActionResponse * const q);
+    explicit BatchDeleteScheduledActionResponsePrivate(BatchDeleteScheduledActionResponse * const q);
 
     void parseBatchDeleteScheduledActionResponse(QXmlStreamReader &xml);
 

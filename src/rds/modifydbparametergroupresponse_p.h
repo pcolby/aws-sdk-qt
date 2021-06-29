@@ -31,7 +31,7 @@ class ModifyDBParameterGroupResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    ModifyDBParameterGroupResponsePrivate(ModifyDBParameterGroupResponse * const q);
+    explicit ModifyDBParameterGroupResponsePrivate(ModifyDBParameterGroupResponse * const q);
 
     void parseModifyDBParameterGroupResponse(QXmlStreamReader &xml);
 

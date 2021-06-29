@@ -31,7 +31,7 @@ class ListAnomaliesForInsightResponsePrivate : public DevOpsGuruResponsePrivate 
 
 public:
 
-    ListAnomaliesForInsightResponsePrivate(ListAnomaliesForInsightResponse * const q);
+    explicit ListAnomaliesForInsightResponsePrivate(ListAnomaliesForInsightResponse * const q);
 
     void parseListAnomaliesForInsightResponse(QXmlStreamReader &xml);
 

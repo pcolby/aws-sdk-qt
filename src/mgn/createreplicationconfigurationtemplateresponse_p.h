@@ -31,7 +31,7 @@ class CreateReplicationConfigurationTemplateResponsePrivate : public mgnResponse
 
 public:
 
-    CreateReplicationConfigurationTemplateResponsePrivate(CreateReplicationConfigurationTemplateResponse * const q);
+    explicit CreateReplicationConfigurationTemplateResponsePrivate(CreateReplicationConfigurationTemplateResponse * const q);
 
     void parseCreateReplicationConfigurationTemplateResponse(QXmlStreamReader &xml);
 

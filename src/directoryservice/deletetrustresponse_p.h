@@ -31,7 +31,7 @@ class DeleteTrustResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 
-    DeleteTrustResponsePrivate(DeleteTrustResponse * const q);
+    explicit DeleteTrustResponsePrivate(DeleteTrustResponse * const q);
 
     void parseDeleteTrustResponse(QXmlStreamReader &xml);
 

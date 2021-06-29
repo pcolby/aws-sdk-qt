@@ -31,7 +31,7 @@ class ListImportsResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 
-    ListImportsResponsePrivate(ListImportsResponse * const q);
+    explicit ListImportsResponsePrivate(ListImportsResponse * const q);
 
     void parseListImportsResponse(QXmlStreamReader &xml);
 

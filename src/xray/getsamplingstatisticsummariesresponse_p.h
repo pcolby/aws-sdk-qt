@@ -31,7 +31,7 @@ class GetSamplingStatisticSummariesResponsePrivate : public XRayResponsePrivate 
 
 public:
 
-    GetSamplingStatisticSummariesResponsePrivate(GetSamplingStatisticSummariesResponse * const q);
+    explicit GetSamplingStatisticSummariesResponsePrivate(GetSamplingStatisticSummariesResponse * const q);
 
     void parseGetSamplingStatisticSummariesResponse(QXmlStreamReader &xml);
 

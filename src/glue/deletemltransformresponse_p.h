@@ -31,7 +31,7 @@ class DeleteMLTransformResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    DeleteMLTransformResponsePrivate(DeleteMLTransformResponse * const q);
+    explicit DeleteMLTransformResponsePrivate(DeleteMLTransformResponse * const q);
 
     void parseDeleteMLTransformResponse(QXmlStreamReader &xml);
 

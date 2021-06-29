@@ -29,7 +29,7 @@ class SageMakerRuntimeResponsePrivate {
 
 public:
 
-    SageMakerRuntimeResponsePrivate(SageMakerRuntimeResponse * const q);
+    explicit SageMakerRuntimeResponsePrivate(SageMakerRuntimeResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

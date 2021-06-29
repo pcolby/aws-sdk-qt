@@ -31,7 +31,7 @@ class UpdateStackSetResponsePrivate : public CloudFormationResponsePrivate {
 
 public:
 
-    UpdateStackSetResponsePrivate(UpdateStackSetResponse * const q);
+    explicit UpdateStackSetResponsePrivate(UpdateStackSetResponse * const q);
 
     void parseUpdateStackSetResponse(QXmlStreamReader &xml);
 

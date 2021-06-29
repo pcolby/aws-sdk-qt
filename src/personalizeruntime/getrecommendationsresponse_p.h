@@ -31,7 +31,7 @@ class GetRecommendationsResponsePrivate : public PersonalizeRuntimeResponsePriva
 
 public:
 
-    GetRecommendationsResponsePrivate(GetRecommendationsResponse * const q);
+    explicit GetRecommendationsResponsePrivate(GetRecommendationsResponse * const q);
 
     void parseGetRecommendationsResponse(QXmlStreamReader &xml);
 

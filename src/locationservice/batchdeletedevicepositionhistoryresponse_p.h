@@ -31,7 +31,7 @@ class BatchDeleteDevicePositionHistoryResponsePrivate : public LocationServiceRe
 
 public:
 
-    BatchDeleteDevicePositionHistoryResponsePrivate(BatchDeleteDevicePositionHistoryResponse * const q);
+    explicit BatchDeleteDevicePositionHistoryResponsePrivate(BatchDeleteDevicePositionHistoryResponse * const q);
 
     void parseBatchDeleteDevicePositionHistoryResponse(QXmlStreamReader &xml);
 

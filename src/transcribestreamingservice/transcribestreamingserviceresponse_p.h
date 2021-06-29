@@ -29,7 +29,7 @@ class TranscribeStreamingServiceResponsePrivate {
 
 public:
 
-    TranscribeStreamingServiceResponsePrivate(TranscribeStreamingServiceResponse * const q);
+    explicit TranscribeStreamingServiceResponsePrivate(TranscribeStreamingServiceResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

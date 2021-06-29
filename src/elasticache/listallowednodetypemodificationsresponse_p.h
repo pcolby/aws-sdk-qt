@@ -31,7 +31,7 @@ class ListAllowedNodeTypeModificationsResponsePrivate : public ElastiCacheRespon
 
 public:
 
-    ListAllowedNodeTypeModificationsResponsePrivate(ListAllowedNodeTypeModificationsResponse * const q);
+    explicit ListAllowedNodeTypeModificationsResponsePrivate(ListAllowedNodeTypeModificationsResponse * const q);
 
     void parseListAllowedNodeTypeModificationsResponse(QXmlStreamReader &xml);
 

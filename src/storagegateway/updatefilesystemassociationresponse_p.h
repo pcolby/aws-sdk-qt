@@ -31,7 +31,7 @@ class UpdateFileSystemAssociationResponsePrivate : public StorageGatewayResponse
 
 public:
 
-    UpdateFileSystemAssociationResponsePrivate(UpdateFileSystemAssociationResponse * const q);
+    explicit UpdateFileSystemAssociationResponsePrivate(UpdateFileSystemAssociationResponse * const q);
 
     void parseUpdateFileSystemAssociationResponse(QXmlStreamReader &xml);
 

@@ -92,7 +92,7 @@ public:
 protected:
     /// @cond internal
     AppConfigRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    AppConfigRequest(AppConfigRequestPrivate * const d);
+    explicit AppConfigRequest(AppConfigRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

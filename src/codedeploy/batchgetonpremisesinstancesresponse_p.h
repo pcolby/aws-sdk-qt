@@ -31,7 +31,7 @@ class BatchGetOnPremisesInstancesResponsePrivate : public CodeDeployResponsePriv
 
 public:
 
-    BatchGetOnPremisesInstancesResponsePrivate(BatchGetOnPremisesInstancesResponse * const q);
+    explicit BatchGetOnPremisesInstancesResponsePrivate(BatchGetOnPremisesInstancesResponse * const q);
 
     void parseBatchGetOnPremisesInstancesResponse(QXmlStreamReader &xml);
 

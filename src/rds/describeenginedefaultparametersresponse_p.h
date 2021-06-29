@@ -31,7 +31,7 @@ class DescribeEngineDefaultParametersResponsePrivate : public RdsResponsePrivate
 
 public:
 
-    DescribeEngineDefaultParametersResponsePrivate(DescribeEngineDefaultParametersResponse * const q);
+    explicit DescribeEngineDefaultParametersResponsePrivate(DescribeEngineDefaultParametersResponse * const q);
 
     void parseDescribeEngineDefaultParametersResponse(QXmlStreamReader &xml);
 

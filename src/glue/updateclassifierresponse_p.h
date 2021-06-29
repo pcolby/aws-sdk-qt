@@ -31,7 +31,7 @@ class UpdateClassifierResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    UpdateClassifierResponsePrivate(UpdateClassifierResponse * const q);
+    explicit UpdateClassifierResponsePrivate(UpdateClassifierResponse * const q);
 
     void parseUpdateClassifierResponse(QXmlStreamReader &xml);
 

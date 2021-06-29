@@ -31,7 +31,7 @@ class BatchDetectSentimentResponsePrivate : public ComprehendResponsePrivate {
 
 public:
 
-    BatchDetectSentimentResponsePrivate(BatchDetectSentimentResponse * const q);
+    explicit BatchDetectSentimentResponsePrivate(BatchDetectSentimentResponse * const q);
 
     void parseBatchDetectSentimentResponse(QXmlStreamReader &xml);
 

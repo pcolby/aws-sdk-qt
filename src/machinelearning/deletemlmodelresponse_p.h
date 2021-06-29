@@ -31,7 +31,7 @@ class DeleteMLModelResponsePrivate : public MachineLearningResponsePrivate {
 
 public:
 
-    DeleteMLModelResponsePrivate(DeleteMLModelResponse * const q);
+    explicit DeleteMLModelResponsePrivate(DeleteMLModelResponse * const q);
 
     void parseDeleteMLModelResponse(QXmlStreamReader &xml);
 

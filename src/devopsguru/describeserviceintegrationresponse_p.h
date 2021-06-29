@@ -31,7 +31,7 @@ class DescribeServiceIntegrationResponsePrivate : public DevOpsGuruResponsePriva
 
 public:
 
-    DescribeServiceIntegrationResponsePrivate(DescribeServiceIntegrationResponse * const q);
+    explicit DescribeServiceIntegrationResponsePrivate(DescribeServiceIntegrationResponse * const q);
 
     void parseDescribeServiceIntegrationResponse(QXmlStreamReader &xml);
 

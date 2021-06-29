@@ -31,7 +31,7 @@ class StartElasticsearchServiceSoftwareUpdateResponsePrivate : public Elasticsea
 
 public:
 
-    StartElasticsearchServiceSoftwareUpdateResponsePrivate(StartElasticsearchServiceSoftwareUpdateResponse * const q);
+    explicit StartElasticsearchServiceSoftwareUpdateResponsePrivate(StartElasticsearchServiceSoftwareUpdateResponse * const q);
 
     void parseStartElasticsearchServiceSoftwareUpdateResponse(QXmlStreamReader &xml);
 

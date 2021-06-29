@@ -31,7 +31,7 @@ class UpdateDatasetGroupResponsePrivate : public ForecastServiceResponsePrivate 
 
 public:
 
-    UpdateDatasetGroupResponsePrivate(UpdateDatasetGroupResponse * const q);
+    explicit UpdateDatasetGroupResponsePrivate(UpdateDatasetGroupResponse * const q);
 
     void parseUpdateDatasetGroupResponse(QXmlStreamReader &xml);
 

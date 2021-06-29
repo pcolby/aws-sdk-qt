@@ -31,7 +31,7 @@ class GetFindingResponsePrivate : public AccessAnalyzerResponsePrivate {
 
 public:
 
-    GetFindingResponsePrivate(GetFindingResponse * const q);
+    explicit GetFindingResponsePrivate(GetFindingResponse * const q);
 
     void parseGetFindingResponse(QXmlStreamReader &xml);
 

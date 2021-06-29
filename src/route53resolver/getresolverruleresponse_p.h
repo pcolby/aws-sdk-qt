@@ -31,7 +31,7 @@ class GetResolverRuleResponsePrivate : public Route53ResolverResponsePrivate {
 
 public:
 
-    GetResolverRuleResponsePrivate(GetResolverRuleResponse * const q);
+    explicit GetResolverRuleResponsePrivate(GetResolverRuleResponse * const q);
 
     void parseGetResolverRuleResponse(QXmlStreamReader &xml);
 

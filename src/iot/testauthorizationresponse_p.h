@@ -31,7 +31,7 @@ class TestAuthorizationResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    TestAuthorizationResponsePrivate(TestAuthorizationResponse * const q);
+    explicit TestAuthorizationResponsePrivate(TestAuthorizationResponse * const q);
 
     void parseTestAuthorizationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetModelPackageGroupPolicyResponsePrivate : public SageMakerResponsePrivat
 
 public:
 
-    GetModelPackageGroupPolicyResponsePrivate(GetModelPackageGroupPolicyResponse * const q);
+    explicit GetModelPackageGroupPolicyResponsePrivate(GetModelPackageGroupPolicyResponse * const q);
 
     void parseGetModelPackageGroupPolicyResponse(QXmlStreamReader &xml);
 

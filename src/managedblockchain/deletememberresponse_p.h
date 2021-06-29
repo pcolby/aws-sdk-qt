@@ -31,7 +31,7 @@ class DeleteMemberResponsePrivate : public ManagedBlockchainResponsePrivate {
 
 public:
 
-    DeleteMemberResponsePrivate(DeleteMemberResponse * const q);
+    explicit DeleteMemberResponsePrivate(DeleteMemberResponse * const q);
 
     void parseDeleteMemberResponse(QXmlStreamReader &xml);
 

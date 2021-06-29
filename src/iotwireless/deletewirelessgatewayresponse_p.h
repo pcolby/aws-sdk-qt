@@ -31,7 +31,7 @@ class DeleteWirelessGatewayResponsePrivate : public IoTWirelessResponsePrivate {
 
 public:
 
-    DeleteWirelessGatewayResponsePrivate(DeleteWirelessGatewayResponse * const q);
+    explicit DeleteWirelessGatewayResponsePrivate(DeleteWirelessGatewayResponse * const q);
 
     void parseDeleteWirelessGatewayResponse(QXmlStreamReader &xml);
 

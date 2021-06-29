@@ -31,7 +31,7 @@ class GetCapacityReservationUsageResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    GetCapacityReservationUsageResponsePrivate(GetCapacityReservationUsageResponse * const q);
+    explicit GetCapacityReservationUsageResponsePrivate(GetCapacityReservationUsageResponse * const q);
 
     void parseGetCapacityReservationUsageResponse(QXmlStreamReader &xml);
 

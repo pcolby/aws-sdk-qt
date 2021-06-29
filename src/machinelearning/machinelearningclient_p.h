@@ -30,7 +30,7 @@ class MachineLearningClient;
 class MachineLearningClientPrivate {
 
 public:
-    MachineLearningClientPrivate(MachineLearningClient * const q);
+    explicit MachineLearningClientPrivate(MachineLearningClient * const q);
 
 protected:
     MachineLearningClient * const q_ptr; ///< Internal q-pointer.

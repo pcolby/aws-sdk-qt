@@ -31,7 +31,7 @@ class GetAccountConfigurationResponsePrivate : public AcmResponsePrivate {
 
 public:
 
-    GetAccountConfigurationResponsePrivate(GetAccountConfigurationResponse * const q);
+    explicit GetAccountConfigurationResponsePrivate(GetAccountConfigurationResponse * const q);
 
     void parseGetAccountConfigurationResponse(QXmlStreamReader &xml);
 

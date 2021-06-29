@@ -31,7 +31,7 @@ class ListDistributionsByWebACLIdResponsePrivate : public CloudFrontResponsePriv
 
 public:
 
-    ListDistributionsByWebACLIdResponsePrivate(ListDistributionsByWebACLIdResponse * const q);
+    explicit ListDistributionsByWebACLIdResponsePrivate(ListDistributionsByWebACLIdResponse * const q);
 
     void parseListDistributionsByWebACLIdResponse(QXmlStreamReader &xml);
 

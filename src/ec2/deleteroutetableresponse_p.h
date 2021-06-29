@@ -31,7 +31,7 @@ class DeleteRouteTableResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DeleteRouteTableResponsePrivate(DeleteRouteTableResponse * const q);
+    explicit DeleteRouteTableResponsePrivate(DeleteRouteTableResponse * const q);
 
     void parseDeleteRouteTableResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetSSHPublicKeyResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    GetSSHPublicKeyResponsePrivate(GetSSHPublicKeyResponse * const q);
+    explicit GetSSHPublicKeyResponsePrivate(GetSSHPublicKeyResponse * const q);
 
     void parseGetSSHPublicKeyResponse(QXmlStreamReader &xml);
 

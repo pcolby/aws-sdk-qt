@@ -31,7 +31,7 @@ class CreateAccountResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    CreateAccountResponsePrivate(CreateAccountResponse * const q);
+    explicit CreateAccountResponsePrivate(CreateAccountResponse * const q);
 
     void parseCreateAccountResponse(QXmlStreamReader &xml);
 

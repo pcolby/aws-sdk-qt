@@ -31,7 +31,7 @@ class PutSubscriptionFilterResponsePrivate : public CloudWatchLogsResponsePrivat
 
 public:
 
-    PutSubscriptionFilterResponsePrivate(PutSubscriptionFilterResponse * const q);
+    explicit PutSubscriptionFilterResponsePrivate(PutSubscriptionFilterResponse * const q);
 
     void parsePutSubscriptionFilterResponse(QXmlStreamReader &xml);
 

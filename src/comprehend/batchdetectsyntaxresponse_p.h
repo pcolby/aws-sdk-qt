@@ -31,7 +31,7 @@ class BatchDetectSyntaxResponsePrivate : public ComprehendResponsePrivate {
 
 public:
 
-    BatchDetectSyntaxResponsePrivate(BatchDetectSyntaxResponse * const q);
+    explicit BatchDetectSyntaxResponsePrivate(BatchDetectSyntaxResponse * const q);
 
     void parseBatchDetectSyntaxResponse(QXmlStreamReader &xml);
 

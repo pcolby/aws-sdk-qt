@@ -31,7 +31,7 @@ class ListTagsForResourceResponsePrivate : public KinesisAnalyticsV2ResponsePriv
 
 public:
 
-    ListTagsForResourceResponsePrivate(ListTagsForResourceResponse * const q);
+    explicit ListTagsForResourceResponsePrivate(ListTagsForResourceResponse * const q);
 
     void parseListTagsForResourceResponse(QXmlStreamReader &xml);
 

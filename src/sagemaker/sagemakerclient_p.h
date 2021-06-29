@@ -30,7 +30,7 @@ class SageMakerClient;
 class SageMakerClientPrivate {
 
 public:
-    SageMakerClientPrivate(SageMakerClient * const q);
+    explicit SageMakerClientPrivate(SageMakerClient * const q);
 
 protected:
     SageMakerClient * const q_ptr; ///< Internal q-pointer.

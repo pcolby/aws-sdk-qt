@@ -31,7 +31,7 @@ class GetAccessPointPolicyStatusForObjectLambdaResponsePrivate : public S3Contro
 
 public:
 
-    GetAccessPointPolicyStatusForObjectLambdaResponsePrivate(GetAccessPointPolicyStatusForObjectLambdaResponse * const q);
+    explicit GetAccessPointPolicyStatusForObjectLambdaResponsePrivate(GetAccessPointPolicyStatusForObjectLambdaResponse * const q);
 
     void parseGetAccessPointPolicyStatusForObjectLambdaResponse(QXmlStreamReader &xml);
 

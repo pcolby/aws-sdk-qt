@@ -31,7 +31,7 @@ class UpdateGeoMatchSetResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 
-    UpdateGeoMatchSetResponsePrivate(UpdateGeoMatchSetResponse * const q);
+    explicit UpdateGeoMatchSetResponsePrivate(UpdateGeoMatchSetResponse * const q);
 
     void parseUpdateGeoMatchSetResponse(QXmlStreamReader &xml);
 

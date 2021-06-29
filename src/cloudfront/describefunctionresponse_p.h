@@ -31,7 +31,7 @@ class DescribeFunctionResponsePrivate : public CloudFrontResponsePrivate {
 
 public:
 
-    DescribeFunctionResponsePrivate(DescribeFunctionResponse * const q);
+    explicit DescribeFunctionResponsePrivate(DescribeFunctionResponse * const q);
 
     void parseDescribeFunctionResponse(QXmlStreamReader &xml);
 

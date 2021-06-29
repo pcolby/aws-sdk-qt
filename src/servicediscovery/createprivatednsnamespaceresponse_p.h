@@ -31,7 +31,7 @@ class CreatePrivateDnsNamespaceResponsePrivate : public ServiceDiscoveryResponse
 
 public:
 
-    CreatePrivateDnsNamespaceResponsePrivate(CreatePrivateDnsNamespaceResponse * const q);
+    explicit CreatePrivateDnsNamespaceResponsePrivate(CreatePrivateDnsNamespaceResponse * const q);
 
     void parseCreatePrivateDnsNamespaceResponse(QXmlStreamReader &xml);
 

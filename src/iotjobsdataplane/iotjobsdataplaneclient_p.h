@@ -30,7 +30,7 @@ class IoTJobsDataPlaneClient;
 class IoTJobsDataPlaneClientPrivate {
 
 public:
-    IoTJobsDataPlaneClientPrivate(IoTJobsDataPlaneClient * const q);
+    explicit IoTJobsDataPlaneClientPrivate(IoTJobsDataPlaneClient * const q);
 
 protected:
     IoTJobsDataPlaneClient * const q_ptr; ///< Internal q-pointer.

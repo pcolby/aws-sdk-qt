@@ -31,7 +31,7 @@ class DescribeFileSystemsResponsePrivate : public EfsResponsePrivate {
 
 public:
 
-    DescribeFileSystemsResponsePrivate(DescribeFileSystemsResponse * const q);
+    explicit DescribeFileSystemsResponsePrivate(DescribeFileSystemsResponse * const q);
 
     void parseDescribeFileSystemsResponse(QXmlStreamReader &xml);
 

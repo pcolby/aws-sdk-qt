@@ -29,7 +29,7 @@ class ServiceCatalogResponsePrivate {
 
 public:
 
-    ServiceCatalogResponsePrivate(ServiceCatalogResponse * const q);
+    explicit ServiceCatalogResponsePrivate(ServiceCatalogResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

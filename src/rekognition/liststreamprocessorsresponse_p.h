@@ -31,7 +31,7 @@ class ListStreamProcessorsResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 
-    ListStreamProcessorsResponsePrivate(ListStreamProcessorsResponse * const q);
+    explicit ListStreamProcessorsResponsePrivate(ListStreamProcessorsResponse * const q);
 
     void parseListStreamProcessorsResponse(QXmlStreamReader &xml);
 

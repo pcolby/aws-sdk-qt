@@ -31,7 +31,7 @@ class DescribeNetworkInterfaceAttributeResponsePrivate : public Ec2ResponsePriva
 
 public:
 
-    DescribeNetworkInterfaceAttributeResponsePrivate(DescribeNetworkInterfaceAttributeResponse * const q);
+    explicit DescribeNetworkInterfaceAttributeResponsePrivate(DescribeNetworkInterfaceAttributeResponse * const q);
 
     void parseDescribeNetworkInterfaceAttributeResponse(QXmlStreamReader &xml);
 

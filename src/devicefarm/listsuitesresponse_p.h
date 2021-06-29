@@ -31,7 +31,7 @@ class ListSuitesResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    ListSuitesResponsePrivate(ListSuitesResponse * const q);
+    explicit ListSuitesResponsePrivate(ListSuitesResponse * const q);
 
     void parseListSuitesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetRemoteAccessSessionResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    GetRemoteAccessSessionResponsePrivate(GetRemoteAccessSessionResponse * const q);
+    explicit GetRemoteAccessSessionResponsePrivate(GetRemoteAccessSessionResponse * const q);
 
     void parseGetRemoteAccessSessionResponse(QXmlStreamReader &xml);
 

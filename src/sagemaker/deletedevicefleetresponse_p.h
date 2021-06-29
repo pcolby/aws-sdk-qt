@@ -31,7 +31,7 @@ class DeleteDeviceFleetResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    DeleteDeviceFleetResponsePrivate(DeleteDeviceFleetResponse * const q);
+    explicit DeleteDeviceFleetResponsePrivate(DeleteDeviceFleetResponse * const q);
 
     void parseDeleteDeviceFleetResponse(QXmlStreamReader &xml);
 

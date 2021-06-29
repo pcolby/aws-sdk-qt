@@ -31,7 +31,7 @@ class ListUniqueProblemsResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    ListUniqueProblemsResponsePrivate(ListUniqueProblemsResponse * const q);
+    explicit ListUniqueProblemsResponsePrivate(ListUniqueProblemsResponse * const q);
 
     void parseListUniqueProblemsResponse(QXmlStreamReader &xml);
 

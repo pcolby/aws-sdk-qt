@@ -31,7 +31,7 @@ class CopyBackupToRegionResponsePrivate : public CloudHSMV2ResponsePrivate {
 
 public:
 
-    CopyBackupToRegionResponsePrivate(CopyBackupToRegionResponse * const q);
+    explicit CopyBackupToRegionResponsePrivate(CopyBackupToRegionResponse * const q);
 
     void parseCopyBackupToRegionResponse(QXmlStreamReader &xml);
 

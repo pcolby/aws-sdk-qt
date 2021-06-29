@@ -31,7 +31,7 @@ class UpdateNetworkProfileResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    UpdateNetworkProfileResponsePrivate(UpdateNetworkProfileResponse * const q);
+    explicit UpdateNetworkProfileResponsePrivate(UpdateNetworkProfileResponse * const q);
 
     void parseUpdateNetworkProfileResponse(QXmlStreamReader &xml);
 

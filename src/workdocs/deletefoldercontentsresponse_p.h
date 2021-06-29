@@ -31,7 +31,7 @@ class DeleteFolderContentsResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 
-    DeleteFolderContentsResponsePrivate(DeleteFolderContentsResponse * const q);
+    explicit DeleteFolderContentsResponsePrivate(DeleteFolderContentsResponse * const q);
 
     void parseDeleteFolderContentsResponse(QXmlStreamReader &xml);
 

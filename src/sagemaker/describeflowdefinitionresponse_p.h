@@ -31,7 +31,7 @@ class DescribeFlowDefinitionResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    DescribeFlowDefinitionResponsePrivate(DescribeFlowDefinitionResponse * const q);
+    explicit DescribeFlowDefinitionResponsePrivate(DescribeFlowDefinitionResponse * const q);
 
     void parseDescribeFlowDefinitionResponse(QXmlStreamReader &xml);
 

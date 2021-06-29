@@ -30,7 +30,7 @@ class DlmClient;
 class DlmClientPrivate {
 
 public:
-    DlmClientPrivate(DlmClient * const q);
+    explicit DlmClientPrivate(DlmClient * const q);
 
 protected:
     DlmClient * const q_ptr; ///< Internal q-pointer.

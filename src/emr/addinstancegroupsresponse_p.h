@@ -31,7 +31,7 @@ class AddInstanceGroupsResponsePrivate : public EmrResponsePrivate {
 
 public:
 
-    AddInstanceGroupsResponsePrivate(AddInstanceGroupsResponse * const q);
+    explicit AddInstanceGroupsResponsePrivate(AddInstanceGroupsResponse * const q);
 
     void parseAddInstanceGroupsResponse(QXmlStreamReader &xml);
 

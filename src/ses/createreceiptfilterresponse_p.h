@@ -31,7 +31,7 @@ class CreateReceiptFilterResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    CreateReceiptFilterResponsePrivate(CreateReceiptFilterResponse * const q);
+    explicit CreateReceiptFilterResponsePrivate(CreateReceiptFilterResponse * const q);
 
     void parseCreateReceiptFilterResponse(QXmlStreamReader &xml);
 

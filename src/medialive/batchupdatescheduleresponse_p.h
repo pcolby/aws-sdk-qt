@@ -31,7 +31,7 @@ class BatchUpdateScheduleResponsePrivate : public MediaLiveResponsePrivate {
 
 public:
 
-    BatchUpdateScheduleResponsePrivate(BatchUpdateScheduleResponse * const q);
+    explicit BatchUpdateScheduleResponsePrivate(BatchUpdateScheduleResponse * const q);
 
     void parseBatchUpdateScheduleResponse(QXmlStreamReader &xml);
 

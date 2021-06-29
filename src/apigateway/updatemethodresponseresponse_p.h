@@ -31,7 +31,7 @@ class UpdateMethodResponseResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    UpdateMethodResponseResponsePrivate(UpdateMethodResponseResponse * const q);
+    explicit UpdateMethodResponseResponsePrivate(UpdateMethodResponseResponse * const q);
 
     void parseUpdateMethodResponseResponse(QXmlStreamReader &xml);
 

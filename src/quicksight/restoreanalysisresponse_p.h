@@ -31,7 +31,7 @@ class RestoreAnalysisResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    RestoreAnalysisResponsePrivate(RestoreAnalysisResponse * const q);
+    explicit RestoreAnalysisResponsePrivate(RestoreAnalysisResponse * const q);
 
     void parseRestoreAnalysisResponse(QXmlStreamReader &xml);
 

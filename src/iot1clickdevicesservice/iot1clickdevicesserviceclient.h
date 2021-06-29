@@ -67,7 +67,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    IoT1ClickDevicesServiceClient(
+    explicit IoT1ClickDevicesServiceClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -90,7 +90,7 @@ public slots:
 protected:
     /// @cond internal
     IoT1ClickDevicesServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
-    IoT1ClickDevicesServiceClient(IoT1ClickDevicesServiceClientPrivate * const d);
+    explicit IoT1ClickDevicesServiceClient(IoT1ClickDevicesServiceClientPrivate * const d);
     /// @endcond
 
 private:

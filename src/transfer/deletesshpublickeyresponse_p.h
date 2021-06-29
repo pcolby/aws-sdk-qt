@@ -31,7 +31,7 @@ class DeleteSshPublicKeyResponsePrivate : public TransferResponsePrivate {
 
 public:
 
-    DeleteSshPublicKeyResponsePrivate(DeleteSshPublicKeyResponse * const q);
+    explicit DeleteSshPublicKeyResponsePrivate(DeleteSshPublicKeyResponse * const q);
 
     void parseDeleteSshPublicKeyResponse(QXmlStreamReader &xml);
 

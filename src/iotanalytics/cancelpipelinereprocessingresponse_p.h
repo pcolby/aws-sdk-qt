@@ -31,7 +31,7 @@ class CancelPipelineReprocessingResponsePrivate : public IoTAnalyticsResponsePri
 
 public:
 
-    CancelPipelineReprocessingResponsePrivate(CancelPipelineReprocessingResponse * const q);
+    explicit CancelPipelineReprocessingResponsePrivate(CancelPipelineReprocessingResponse * const q);
 
     void parseCancelPipelineReprocessingResponse(QXmlStreamReader &xml);
 

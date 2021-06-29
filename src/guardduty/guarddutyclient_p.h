@@ -30,7 +30,7 @@ class GuardDutyClient;
 class GuardDutyClientPrivate {
 
 public:
-    GuardDutyClientPrivate(GuardDutyClient * const q);
+    explicit GuardDutyClientPrivate(GuardDutyClient * const q);
 
 protected:
     GuardDutyClient * const q_ptr; ///< Internal q-pointer.

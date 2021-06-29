@@ -31,7 +31,7 @@ class DeletePlacementResponsePrivate : public IoT1ClickProjectsResponsePrivate {
 
 public:
 
-    DeletePlacementResponsePrivate(DeletePlacementResponse * const q);
+    explicit DeletePlacementResponsePrivate(DeletePlacementResponse * const q);
 
     void parseDeletePlacementResponse(QXmlStreamReader &xml);
 

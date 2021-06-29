@@ -31,7 +31,7 @@ class DescribeIamInstanceProfileAssociationsResponsePrivate : public Ec2Response
 
 public:
 
-    DescribeIamInstanceProfileAssociationsResponsePrivate(DescribeIamInstanceProfileAssociationsResponse * const q);
+    explicit DescribeIamInstanceProfileAssociationsResponsePrivate(DescribeIamInstanceProfileAssociationsResponse * const q);
 
     void parseDescribeIamInstanceProfileAssociationsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DetachInstancesResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 
-    DetachInstancesResponsePrivate(DetachInstancesResponse * const q);
+    explicit DetachInstancesResponsePrivate(DetachInstancesResponse * const q);
 
     void parseDetachInstancesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteAdmChannelResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    DeleteAdmChannelResponsePrivate(DeleteAdmChannelResponse * const q);
+    explicit DeleteAdmChannelResponsePrivate(DeleteAdmChannelResponse * const q);
 
     void parseDeleteAdmChannelResponse(QXmlStreamReader &xml);
 

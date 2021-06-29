@@ -31,7 +31,7 @@ class PutAccountPreferencesResponsePrivate : public EfsResponsePrivate {
 
 public:
 
-    PutAccountPreferencesResponsePrivate(PutAccountPreferencesResponse * const q);
+    explicit PutAccountPreferencesResponsePrivate(PutAccountPreferencesResponse * const q);
 
     void parsePutAccountPreferencesResponse(QXmlStreamReader &xml);
 

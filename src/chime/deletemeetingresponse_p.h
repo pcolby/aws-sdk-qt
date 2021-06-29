@@ -31,7 +31,7 @@ class DeleteMeetingResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    DeleteMeetingResponsePrivate(DeleteMeetingResponse * const q);
+    explicit DeleteMeetingResponsePrivate(DeleteMeetingResponse * const q);
 
     void parseDeleteMeetingResponse(QXmlStreamReader &xml);
 

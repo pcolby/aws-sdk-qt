@@ -31,7 +31,7 @@ class DescribeCertificatesResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    DescribeCertificatesResponsePrivate(DescribeCertificatesResponse * const q);
+    explicit DescribeCertificatesResponsePrivate(DescribeCertificatesResponse * const q);
 
     void parseDescribeCertificatesResponse(QXmlStreamReader &xml);
 

@@ -29,7 +29,7 @@ class SavingsPlansResponsePrivate {
 
 public:
 
-    SavingsPlansResponsePrivate(SavingsPlansResponse * const q);
+    explicit SavingsPlansResponsePrivate(SavingsPlansResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

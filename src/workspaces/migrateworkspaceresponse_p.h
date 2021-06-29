@@ -31,7 +31,7 @@ class MigrateWorkspaceResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 
-    MigrateWorkspaceResponsePrivate(MigrateWorkspaceResponse * const q);
+    explicit MigrateWorkspaceResponsePrivate(MigrateWorkspaceResponse * const q);
 
     void parseMigrateWorkspaceResponse(QXmlStreamReader &xml);
 

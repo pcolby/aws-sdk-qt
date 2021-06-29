@@ -31,7 +31,7 @@ class EnableKeyRotationResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    EnableKeyRotationResponsePrivate(EnableKeyRotationResponse * const q);
+    explicit EnableKeyRotationResponsePrivate(EnableKeyRotationResponse * const q);
 
     void parseEnableKeyRotationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateQualificationTypeResponsePrivate : public MTurkResponsePrivate {
 
 public:
 
-    UpdateQualificationTypeResponsePrivate(UpdateQualificationTypeResponse * const q);
+    explicit UpdateQualificationTypeResponsePrivate(UpdateQualificationTypeResponse * const q);
 
     void parseUpdateQualificationTypeResponse(QXmlStreamReader &xml);
 

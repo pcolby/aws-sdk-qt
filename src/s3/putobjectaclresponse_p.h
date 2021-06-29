@@ -31,7 +31,7 @@ class PutObjectAclResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    PutObjectAclResponsePrivate(PutObjectAclResponse * const q);
+    explicit PutObjectAclResponsePrivate(PutObjectAclResponse * const q);
 
     void parsePutObjectAclResponse(QXmlStreamReader &xml);
 

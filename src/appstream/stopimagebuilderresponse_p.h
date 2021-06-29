@@ -31,7 +31,7 @@ class StopImageBuilderResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 
-    StopImageBuilderResponsePrivate(StopImageBuilderResponse * const q);
+    explicit StopImageBuilderResponsePrivate(StopImageBuilderResponse * const q);
 
     void parseStopImageBuilderResponse(QXmlStreamReader &xml);
 

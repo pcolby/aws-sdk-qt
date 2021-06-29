@@ -31,7 +31,7 @@ class AddNotificationChannelsResponsePrivate : public CodeGuruProfilerResponsePr
 
 public:
 
-    AddNotificationChannelsResponsePrivate(AddNotificationChannelsResponse * const q);
+    explicit AddNotificationChannelsResponsePrivate(AddNotificationChannelsResponse * const q);
 
     void parseAddNotificationChannelsResponse(QXmlStreamReader &xml);
 

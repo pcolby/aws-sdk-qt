@@ -31,7 +31,7 @@ class DescribeTrustsResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 
-    DescribeTrustsResponsePrivate(DescribeTrustsResponse * const q);
+    explicit DescribeTrustsResponsePrivate(DescribeTrustsResponse * const q);
 
     void parseDescribeTrustsResponse(QXmlStreamReader &xml);
 

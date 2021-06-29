@@ -31,7 +31,7 @@ class ListHyperParameterTuningJobsResponsePrivate : public SageMakerResponsePriv
 
 public:
 
-    ListHyperParameterTuningJobsResponsePrivate(ListHyperParameterTuningJobsResponse * const q);
+    explicit ListHyperParameterTuningJobsResponsePrivate(ListHyperParameterTuningJobsResponse * const q);
 
     void parseListHyperParameterTuningJobsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteFacesResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 
-    DeleteFacesResponsePrivate(DeleteFacesResponse * const q);
+    explicit DeleteFacesResponsePrivate(DeleteFacesResponse * const q);
 
     void parseDeleteFacesResponse(QXmlStreamReader &xml);
 

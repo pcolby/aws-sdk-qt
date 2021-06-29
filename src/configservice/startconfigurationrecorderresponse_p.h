@@ -31,7 +31,7 @@ class StartConfigurationRecorderResponsePrivate : public ConfigServiceResponsePr
 
 public:
 
-    StartConfigurationRecorderResponsePrivate(StartConfigurationRecorderResponse * const q);
+    explicit StartConfigurationRecorderResponsePrivate(StartConfigurationRecorderResponse * const q);
 
     void parseStartConfigurationRecorderResponse(QXmlStreamReader &xml);
 

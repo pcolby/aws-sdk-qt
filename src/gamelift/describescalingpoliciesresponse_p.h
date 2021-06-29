@@ -31,7 +31,7 @@ class DescribeScalingPoliciesResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    DescribeScalingPoliciesResponsePrivate(DescribeScalingPoliciesResponse * const q);
+    explicit DescribeScalingPoliciesResponsePrivate(DescribeScalingPoliciesResponse * const q);
 
     void parseDescribeScalingPoliciesResponse(QXmlStreamReader &xml);
 

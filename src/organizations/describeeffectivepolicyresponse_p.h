@@ -31,7 +31,7 @@ class DescribeEffectivePolicyResponsePrivate : public OrganizationsResponsePriva
 
 public:
 
-    DescribeEffectivePolicyResponsePrivate(DescribeEffectivePolicyResponse * const q);
+    explicit DescribeEffectivePolicyResponsePrivate(DescribeEffectivePolicyResponse * const q);
 
     void parseDescribeEffectivePolicyResponse(QXmlStreamReader &xml);
 

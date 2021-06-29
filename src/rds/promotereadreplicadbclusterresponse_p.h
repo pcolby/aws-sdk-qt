@@ -31,7 +31,7 @@ class PromoteReadReplicaDBClusterResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    PromoteReadReplicaDBClusterResponsePrivate(PromoteReadReplicaDBClusterResponse * const q);
+    explicit PromoteReadReplicaDBClusterResponsePrivate(PromoteReadReplicaDBClusterResponse * const q);
 
     void parsePromoteReadReplicaDBClusterResponse(QXmlStreamReader &xml);
 

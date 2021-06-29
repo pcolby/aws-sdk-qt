@@ -31,7 +31,7 @@ class EnableAddOnResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    EnableAddOnResponsePrivate(EnableAddOnResponse * const q);
+    explicit EnableAddOnResponsePrivate(EnableAddOnResponse * const q);
 
     void parseEnableAddOnResponse(QXmlStreamReader &xml);
 

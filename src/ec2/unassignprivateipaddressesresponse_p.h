@@ -31,7 +31,7 @@ class UnassignPrivateIpAddressesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    UnassignPrivateIpAddressesResponsePrivate(UnassignPrivateIpAddressesResponse * const q);
+    explicit UnassignPrivateIpAddressesResponsePrivate(UnassignPrivateIpAddressesResponse * const q);
 
     void parseUnassignPrivateIpAddressesResponse(QXmlStreamReader &xml);
 

@@ -29,7 +29,7 @@ class EventBridgeResponsePrivate {
 
 public:
 
-    EventBridgeResponsePrivate(EventBridgeResponse * const q);
+    explicit EventBridgeResponsePrivate(EventBridgeResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

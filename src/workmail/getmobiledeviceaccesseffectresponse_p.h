@@ -31,7 +31,7 @@ class GetMobileDeviceAccessEffectResponsePrivate : public WorkMailResponsePrivat
 
 public:
 
-    GetMobileDeviceAccessEffectResponsePrivate(GetMobileDeviceAccessEffectResponse * const q);
+    explicit GetMobileDeviceAccessEffectResponsePrivate(GetMobileDeviceAccessEffectResponse * const q);
 
     void parseGetMobileDeviceAccessEffectResponse(QXmlStreamReader &xml);
 

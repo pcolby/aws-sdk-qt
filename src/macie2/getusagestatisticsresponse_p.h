@@ -31,7 +31,7 @@ class GetUsageStatisticsResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 
-    GetUsageStatisticsResponsePrivate(GetUsageStatisticsResponse * const q);
+    explicit GetUsageStatisticsResponsePrivate(GetUsageStatisticsResponse * const q);
 
     void parseGetUsageStatisticsResponse(QXmlStreamReader &xml);
 

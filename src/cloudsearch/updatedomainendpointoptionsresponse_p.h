@@ -31,7 +31,7 @@ class UpdateDomainEndpointOptionsResponsePrivate : public CloudSearchResponsePri
 
 public:
 
-    UpdateDomainEndpointOptionsResponsePrivate(UpdateDomainEndpointOptionsResponse * const q);
+    explicit UpdateDomainEndpointOptionsResponsePrivate(UpdateDomainEndpointOptionsResponse * const q);
 
     void parseUpdateDomainEndpointOptionsResponse(QXmlStreamReader &xml);
 

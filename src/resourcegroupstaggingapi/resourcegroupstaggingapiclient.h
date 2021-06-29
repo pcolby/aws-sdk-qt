@@ -57,7 +57,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    ResourceGroupsTaggingAPIClient(
+    explicit ResourceGroupsTaggingAPIClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -75,7 +75,7 @@ public slots:
 protected:
     /// @cond internal
     ResourceGroupsTaggingAPIClientPrivate * const d_ptr; ///< Internal d-pointer.
-    ResourceGroupsTaggingAPIClient(ResourceGroupsTaggingAPIClientPrivate * const d);
+    explicit ResourceGroupsTaggingAPIClient(ResourceGroupsTaggingAPIClientPrivate * const d);
     /// @endcond
 
 private:

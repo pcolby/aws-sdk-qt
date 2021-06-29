@@ -31,7 +31,7 @@ class DescribeWorkflowExecutionResponsePrivate : public SwfResponsePrivate {
 
 public:
 
-    DescribeWorkflowExecutionResponsePrivate(DescribeWorkflowExecutionResponse * const q);
+    explicit DescribeWorkflowExecutionResponsePrivate(DescribeWorkflowExecutionResponse * const q);
 
     void parseDescribeWorkflowExecutionResponse(QXmlStreamReader &xml);
 

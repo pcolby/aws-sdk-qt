@@ -31,7 +31,7 @@ class PutCodeBindingResponsePrivate : public SchemasResponsePrivate {
 
 public:
 
-    PutCodeBindingResponsePrivate(PutCodeBindingResponse * const q);
+    explicit PutCodeBindingResponsePrivate(PutCodeBindingResponse * const q);
 
     void parsePutCodeBindingResponse(QXmlStreamReader &xml);
 

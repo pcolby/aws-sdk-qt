@@ -31,7 +31,7 @@ class SetSMBGuestPasswordResponsePrivate : public StorageGatewayResponsePrivate 
 
 public:
 
-    SetSMBGuestPasswordResponsePrivate(SetSMBGuestPasswordResponse * const q);
+    explicit SetSMBGuestPasswordResponsePrivate(SetSMBGuestPasswordResponse * const q);
 
     void parseSetSMBGuestPasswordResponse(QXmlStreamReader &xml);
 

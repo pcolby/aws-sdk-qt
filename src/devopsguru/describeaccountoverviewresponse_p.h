@@ -31,7 +31,7 @@ class DescribeAccountOverviewResponsePrivate : public DevOpsGuruResponsePrivate 
 
 public:
 
-    DescribeAccountOverviewResponsePrivate(DescribeAccountOverviewResponse * const q);
+    explicit DescribeAccountOverviewResponsePrivate(DescribeAccountOverviewResponse * const q);
 
     void parseDescribeAccountOverviewResponse(QXmlStreamReader &xml);
 

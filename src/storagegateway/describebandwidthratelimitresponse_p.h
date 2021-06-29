@@ -31,7 +31,7 @@ class DescribeBandwidthRateLimitResponsePrivate : public StorageGatewayResponseP
 
 public:
 
-    DescribeBandwidthRateLimitResponsePrivate(DescribeBandwidthRateLimitResponse * const q);
+    explicit DescribeBandwidthRateLimitResponsePrivate(DescribeBandwidthRateLimitResponse * const q);
 
     void parseDescribeBandwidthRateLimitResponse(QXmlStreamReader &xml);
 

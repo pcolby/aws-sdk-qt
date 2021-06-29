@@ -31,7 +31,7 @@ class UpdateTrialComponentResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    UpdateTrialComponentResponsePrivate(UpdateTrialComponentResponse * const q);
+    explicit UpdateTrialComponentResponsePrivate(UpdateTrialComponentResponse * const q);
 
     void parseUpdateTrialComponentResponse(QXmlStreamReader &xml);
 

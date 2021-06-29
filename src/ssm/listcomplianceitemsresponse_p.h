@@ -31,7 +31,7 @@ class ListComplianceItemsResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    ListComplianceItemsResponsePrivate(ListComplianceItemsResponse * const q);
+    explicit ListComplianceItemsResponsePrivate(ListComplianceItemsResponse * const q);
 
     void parseListComplianceItemsResponse(QXmlStreamReader &xml);
 

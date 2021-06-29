@@ -31,7 +31,7 @@ class UpdateSipRuleResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    UpdateSipRuleResponsePrivate(UpdateSipRuleResponse * const q);
+    explicit UpdateSipRuleResponsePrivate(UpdateSipRuleResponse * const q);
 
     void parseUpdateSipRuleResponse(QXmlStreamReader &xml);
 

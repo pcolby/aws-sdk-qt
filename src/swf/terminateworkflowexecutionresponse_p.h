@@ -31,7 +31,7 @@ class TerminateWorkflowExecutionResponsePrivate : public SwfResponsePrivate {
 
 public:
 
-    TerminateWorkflowExecutionResponsePrivate(TerminateWorkflowExecutionResponse * const q);
+    explicit TerminateWorkflowExecutionResponsePrivate(TerminateWorkflowExecutionResponse * const q);
 
     void parseTerminateWorkflowExecutionResponse(QXmlStreamReader &xml);
 

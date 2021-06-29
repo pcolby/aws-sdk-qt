@@ -31,7 +31,7 @@ class EnterStandbyResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 
-    EnterStandbyResponsePrivate(EnterStandbyResponse * const q);
+    explicit EnterStandbyResponsePrivate(EnterStandbyResponse * const q);
 
     void parseEnterStandbyResponse(QXmlStreamReader &xml);
 

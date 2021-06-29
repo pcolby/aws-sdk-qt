@@ -31,7 +31,7 @@ class ListAssessmentFrameworksResponsePrivate : public AuditManagerResponsePriva
 
 public:
 
-    ListAssessmentFrameworksResponsePrivate(ListAssessmentFrameworksResponse * const q);
+    explicit ListAssessmentFrameworksResponsePrivate(ListAssessmentFrameworksResponse * const q);
 
     void parseListAssessmentFrameworksResponse(QXmlStreamReader &xml);
 

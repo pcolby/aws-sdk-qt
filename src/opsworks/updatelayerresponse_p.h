@@ -31,7 +31,7 @@ class UpdateLayerResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    UpdateLayerResponsePrivate(UpdateLayerResponse * const q);
+    explicit UpdateLayerResponsePrivate(UpdateLayerResponse * const q);
 
     void parseUpdateLayerResponse(QXmlStreamReader &xml);
 

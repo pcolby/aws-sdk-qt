@@ -31,7 +31,7 @@ class UpdateTimelineEventResponsePrivate : public SSMIncidentsResponsePrivate {
 
 public:
 
-    UpdateTimelineEventResponsePrivate(UpdateTimelineEventResponse * const q);
+    explicit UpdateTimelineEventResponsePrivate(UpdateTimelineEventResponse * const q);
 
     void parseUpdateTimelineEventResponse(QXmlStreamReader &xml);
 

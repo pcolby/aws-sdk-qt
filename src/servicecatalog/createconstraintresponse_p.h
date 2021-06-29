@@ -31,7 +31,7 @@ class CreateConstraintResponsePrivate : public ServiceCatalogResponsePrivate {
 
 public:
 
-    CreateConstraintResponsePrivate(CreateConstraintResponse * const q);
+    explicit CreateConstraintResponsePrivate(CreateConstraintResponse * const q);
 
     void parseCreateConstraintResponse(QXmlStreamReader &xml);
 

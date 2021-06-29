@@ -31,7 +31,7 @@ class ListConstraintsForPortfolioResponsePrivate : public ServiceCatalogResponse
 
 public:
 
-    ListConstraintsForPortfolioResponsePrivate(ListConstraintsForPortfolioResponse * const q);
+    explicit ListConstraintsForPortfolioResponsePrivate(ListConstraintsForPortfolioResponse * const q);
 
     void parseListConstraintsForPortfolioResponse(QXmlStreamReader &xml);
 

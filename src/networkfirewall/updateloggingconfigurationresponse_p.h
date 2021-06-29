@@ -31,7 +31,7 @@ class UpdateLoggingConfigurationResponsePrivate : public NetworkFirewallResponse
 
 public:
 
-    UpdateLoggingConfigurationResponsePrivate(UpdateLoggingConfigurationResponse * const q);
+    explicit UpdateLoggingConfigurationResponsePrivate(UpdateLoggingConfigurationResponse * const q);
 
     void parseUpdateLoggingConfigurationResponse(QXmlStreamReader &xml);
 

@@ -14,7 +14,7 @@ class {{ClassName}}Private : public {{ServiceClassName}}ResponsePrivate {
 public:
     {# @todo data members go here #}
 
-    {{ClassName}}Private({{ClassName}} * const q);
+    explicit {{ClassName}}Private({{ClassName}} * const q);
 
     {# @todo change parse type XML vs JSON #}
     void parse{{OperationName}}Response(QXmlStreamReader &xml);

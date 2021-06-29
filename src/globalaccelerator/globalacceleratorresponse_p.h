@@ -29,7 +29,7 @@ class GlobalAcceleratorResponsePrivate {
 
 public:
 
-    GlobalAcceleratorResponsePrivate(GlobalAcceleratorResponse * const q);
+    explicit GlobalAcceleratorResponsePrivate(GlobalAcceleratorResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

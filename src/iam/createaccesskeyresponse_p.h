@@ -31,7 +31,7 @@ class CreateAccessKeyResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    CreateAccessKeyResponsePrivate(CreateAccessKeyResponse * const q);
+    explicit CreateAccessKeyResponsePrivate(CreateAccessKeyResponse * const q);
 
     void parseCreateAccessKeyResponse(QXmlStreamReader &xml);
 

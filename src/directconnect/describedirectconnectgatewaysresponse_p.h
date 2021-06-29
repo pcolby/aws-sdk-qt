@@ -31,7 +31,7 @@ class DescribeDirectConnectGatewaysResponsePrivate : public DirectConnectRespons
 
 public:
 
-    DescribeDirectConnectGatewaysResponsePrivate(DescribeDirectConnectGatewaysResponse * const q);
+    explicit DescribeDirectConnectGatewaysResponsePrivate(DescribeDirectConnectGatewaysResponse * const q);
 
     void parseDescribeDirectConnectGatewaysResponse(QXmlStreamReader &xml);
 

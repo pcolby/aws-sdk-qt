@@ -165,7 +165,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    DirectoryServiceClient(
+    explicit DirectoryServiceClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -237,7 +237,7 @@ public slots:
 protected:
     /// @cond internal
     DirectoryServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
-    DirectoryServiceClient(DirectoryServiceClientPrivate * const d);
+    explicit DirectoryServiceClient(DirectoryServiceClientPrivate * const d);
     /// @endcond
 
 private:

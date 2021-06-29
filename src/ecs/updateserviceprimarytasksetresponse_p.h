@@ -31,7 +31,7 @@ class UpdateServicePrimaryTaskSetResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    UpdateServicePrimaryTaskSetResponsePrivate(UpdateServicePrimaryTaskSetResponse * const q);
+    explicit UpdateServicePrimaryTaskSetResponsePrivate(UpdateServicePrimaryTaskSetResponse * const q);
 
     void parseUpdateServicePrimaryTaskSetResponse(QXmlStreamReader &xml);
 

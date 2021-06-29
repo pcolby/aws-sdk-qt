@@ -31,7 +31,7 @@ class DisassociateExternalConnectionResponsePrivate : public CodeArtifactRespons
 
 public:
 
-    DisassociateExternalConnectionResponsePrivate(DisassociateExternalConnectionResponse * const q);
+    explicit DisassociateExternalConnectionResponsePrivate(DisassociateExternalConnectionResponse * const q);
 
     void parseDisassociateExternalConnectionResponse(QXmlStreamReader &xml);
 

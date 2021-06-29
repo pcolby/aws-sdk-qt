@@ -31,7 +31,7 @@ class DeleteGroupResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    DeleteGroupResponsePrivate(DeleteGroupResponse * const q);
+    explicit DeleteGroupResponsePrivate(DeleteGroupResponse * const q);
 
     void parseDeleteGroupResponse(QXmlStreamReader &xml);
 

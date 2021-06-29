@@ -31,7 +31,7 @@ class ListNamespacesResponsePrivate : public ServiceDiscoveryResponsePrivate {
 
 public:
 
-    ListNamespacesResponsePrivate(ListNamespacesResponse * const q);
+    explicit ListNamespacesResponsePrivate(ListNamespacesResponse * const q);
 
     void parseListNamespacesResponse(QXmlStreamReader &xml);
 

@@ -30,7 +30,7 @@ class LambdaClient;
 class LambdaClientPrivate {
 
 public:
-    LambdaClientPrivate(LambdaClient * const q);
+    explicit LambdaClientPrivate(LambdaClient * const q);
 
 protected:
     LambdaClient * const q_ptr; ///< Internal q-pointer.

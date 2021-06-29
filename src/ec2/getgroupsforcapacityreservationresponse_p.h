@@ -31,7 +31,7 @@ class GetGroupsForCapacityReservationResponsePrivate : public Ec2ResponsePrivate
 
 public:
 
-    GetGroupsForCapacityReservationResponsePrivate(GetGroupsForCapacityReservationResponse * const q);
+    explicit GetGroupsForCapacityReservationResponsePrivate(GetGroupsForCapacityReservationResponse * const q);
 
     void parseGetGroupsForCapacityReservationResponse(QXmlStreamReader &xml);
 

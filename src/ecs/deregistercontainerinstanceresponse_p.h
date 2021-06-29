@@ -31,7 +31,7 @@ class DeregisterContainerInstanceResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    DeregisterContainerInstanceResponsePrivate(DeregisterContainerInstanceResponse * const q);
+    explicit DeregisterContainerInstanceResponsePrivate(DeregisterContainerInstanceResponse * const q);
 
     void parseDeregisterContainerInstanceResponse(QXmlStreamReader &xml);
 

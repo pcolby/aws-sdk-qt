@@ -31,7 +31,7 @@ class DescribeCompanyNetworkConfigurationResponsePrivate : public WorkLinkRespon
 
 public:
 
-    DescribeCompanyNetworkConfigurationResponsePrivate(DescribeCompanyNetworkConfigurationResponse * const q);
+    explicit DescribeCompanyNetworkConfigurationResponsePrivate(DescribeCompanyNetworkConfigurationResponse * const q);
 
     void parseDescribeCompanyNetworkConfigurationResponse(QXmlStreamReader &xml);
 

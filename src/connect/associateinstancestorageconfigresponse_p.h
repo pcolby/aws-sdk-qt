@@ -31,7 +31,7 @@ class AssociateInstanceStorageConfigResponsePrivate : public ConnectResponsePriv
 
 public:
 
-    AssociateInstanceStorageConfigResponsePrivate(AssociateInstanceStorageConfigResponse * const q);
+    explicit AssociateInstanceStorageConfigResponsePrivate(AssociateInstanceStorageConfigResponse * const q);
 
     void parseAssociateInstanceStorageConfigResponse(QXmlStreamReader &xml);
 

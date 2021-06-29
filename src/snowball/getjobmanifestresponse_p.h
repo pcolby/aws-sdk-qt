@@ -31,7 +31,7 @@ class GetJobManifestResponsePrivate : public SnowballResponsePrivate {
 
 public:
 
-    GetJobManifestResponsePrivate(GetJobManifestResponse * const q);
+    explicit GetJobManifestResponsePrivate(GetJobManifestResponse * const q);
 
     void parseGetJobManifestResponse(QXmlStreamReader &xml);
 

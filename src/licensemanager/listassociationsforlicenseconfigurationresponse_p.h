@@ -31,7 +31,7 @@ class ListAssociationsForLicenseConfigurationResponsePrivate : public LicenseMan
 
 public:
 
-    ListAssociationsForLicenseConfigurationResponsePrivate(ListAssociationsForLicenseConfigurationResponse * const q);
+    explicit ListAssociationsForLicenseConfigurationResponsePrivate(ListAssociationsForLicenseConfigurationResponse * const q);
 
     void parseListAssociationsForLicenseConfigurationResponse(QXmlStreamReader &xml);
 

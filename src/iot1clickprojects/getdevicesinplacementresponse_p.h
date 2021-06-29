@@ -31,7 +31,7 @@ class GetDevicesInPlacementResponsePrivate : public IoT1ClickProjectsResponsePri
 
 public:
 
-    GetDevicesInPlacementResponsePrivate(GetDevicesInPlacementResponse * const q);
+    explicit GetDevicesInPlacementResponsePrivate(GetDevicesInPlacementResponse * const q);
 
     void parseGetDevicesInPlacementResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class RestoreFromSnapshotResponsePrivate : public DirectoryServiceResponsePrivat
 
 public:
 
-    RestoreFromSnapshotResponsePrivate(RestoreFromSnapshotResponse * const q);
+    explicit RestoreFromSnapshotResponsePrivate(RestoreFromSnapshotResponse * const q);
 
     void parseRestoreFromSnapshotResponse(QXmlStreamReader &xml);
 

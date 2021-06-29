@@ -31,7 +31,7 @@ class DeleteMemberResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 
-    DeleteMemberResponsePrivate(DeleteMemberResponse * const q);
+    explicit DeleteMemberResponsePrivate(DeleteMemberResponse * const q);
 
     void parseDeleteMemberResponse(QXmlStreamReader &xml);
 

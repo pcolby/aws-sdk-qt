@@ -31,7 +31,7 @@ class ListApplicationDependenciesResponsePrivate : public ServerlessApplicationR
 
 public:
 
-    ListApplicationDependenciesResponsePrivate(ListApplicationDependenciesResponse * const q);
+    explicit ListApplicationDependenciesResponsePrivate(ListApplicationDependenciesResponse * const q);
 
     void parseListApplicationDependenciesResponse(QXmlStreamReader &xml);
 

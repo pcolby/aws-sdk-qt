@@ -30,7 +30,7 @@ class QuickSightClient;
 class QuickSightClientPrivate {
 
 public:
-    QuickSightClientPrivate(QuickSightClient * const q);
+    explicit QuickSightClientPrivate(QuickSightClient * const q);
 
 protected:
     QuickSightClient * const q_ptr; ///< Internal q-pointer.

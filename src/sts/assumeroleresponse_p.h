@@ -31,7 +31,7 @@ class AssumeRoleResponsePrivate : public StsResponsePrivate {
 
 public:
 
-    AssumeRoleResponsePrivate(AssumeRoleResponse * const q);
+    explicit AssumeRoleResponsePrivate(AssumeRoleResponse * const q);
 
     void parseAssumeRoleResponse(QXmlStreamReader &xml);
 

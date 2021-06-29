@@ -31,7 +31,7 @@ class UpdateDomainConfigurationResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    UpdateDomainConfigurationResponsePrivate(UpdateDomainConfigurationResponse * const q);
+    explicit UpdateDomainConfigurationResponsePrivate(UpdateDomainConfigurationResponse * const q);
 
     void parseUpdateDomainConfigurationResponse(QXmlStreamReader &xml);
 

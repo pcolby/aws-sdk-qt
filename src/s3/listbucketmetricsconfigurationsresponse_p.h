@@ -31,7 +31,7 @@ class ListBucketMetricsConfigurationsResponsePrivate : public S3ResponsePrivate 
 
 public:
 
-    ListBucketMetricsConfigurationsResponsePrivate(ListBucketMetricsConfigurationsResponse * const q);
+    explicit ListBucketMetricsConfigurationsResponsePrivate(ListBucketMetricsConfigurationsResponse * const q);
 
     void parseListBucketMetricsConfigurationsResponse(QXmlStreamReader &xml);
 

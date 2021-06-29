@@ -31,7 +31,7 @@ class VerifyTrustResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 
-    VerifyTrustResponsePrivate(VerifyTrustResponse * const q);
+    explicit VerifyTrustResponsePrivate(VerifyTrustResponse * const q);
 
     void parseVerifyTrustResponse(QXmlStreamReader &xml);
 

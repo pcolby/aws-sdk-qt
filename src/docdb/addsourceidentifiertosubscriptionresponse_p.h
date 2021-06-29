@@ -31,7 +31,7 @@ class AddSourceIdentifierToSubscriptionResponsePrivate : public DocDBResponsePri
 
 public:
 
-    AddSourceIdentifierToSubscriptionResponsePrivate(AddSourceIdentifierToSubscriptionResponse * const q);
+    explicit AddSourceIdentifierToSubscriptionResponsePrivate(AddSourceIdentifierToSubscriptionResponse * const q);
 
     void parseAddSourceIdentifierToSubscriptionResponse(QXmlStreamReader &xml);
 

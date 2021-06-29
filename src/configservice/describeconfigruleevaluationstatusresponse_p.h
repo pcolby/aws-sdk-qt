@@ -31,7 +31,7 @@ class DescribeConfigRuleEvaluationStatusResponsePrivate : public ConfigServiceRe
 
 public:
 
-    DescribeConfigRuleEvaluationStatusResponsePrivate(DescribeConfigRuleEvaluationStatusResponse * const q);
+    explicit DescribeConfigRuleEvaluationStatusResponsePrivate(DescribeConfigRuleEvaluationStatusResponse * const q);
 
     void parseDescribeConfigRuleEvaluationStatusResponse(QXmlStreamReader &xml);
 

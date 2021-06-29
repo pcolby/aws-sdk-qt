@@ -31,7 +31,7 @@ class CancelPolicyGenerationResponsePrivate : public AccessAnalyzerResponsePriva
 
 public:
 
-    CancelPolicyGenerationResponsePrivate(CancelPolicyGenerationResponse * const q);
+    explicit CancelPolicyGenerationResponsePrivate(CancelPolicyGenerationResponse * const q);
 
     void parseCancelPolicyGenerationResponse(QXmlStreamReader &xml);
 

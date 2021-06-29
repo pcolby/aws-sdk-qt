@@ -31,7 +31,7 @@ class DeleteAnalyzerResponsePrivate : public AccessAnalyzerResponsePrivate {
 
 public:
 
-    DeleteAnalyzerResponsePrivate(DeleteAnalyzerResponse * const q);
+    explicit DeleteAnalyzerResponsePrivate(DeleteAnalyzerResponse * const q);
 
     void parseDeleteAnalyzerResponse(QXmlStreamReader &xml);
 

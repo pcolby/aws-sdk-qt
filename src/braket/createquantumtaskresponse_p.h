@@ -31,7 +31,7 @@ class CreateQuantumTaskResponsePrivate : public BraketResponsePrivate {
 
 public:
 
-    CreateQuantumTaskResponsePrivate(CreateQuantumTaskResponse * const q);
+    explicit CreateQuantumTaskResponsePrivate(CreateQuantumTaskResponse * const q);
 
     void parseCreateQuantumTaskResponse(QXmlStreamReader &xml);
 

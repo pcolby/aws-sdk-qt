@@ -31,7 +31,7 @@ class GetAccountAuthorizationDetailsResponsePrivate : public IamResponsePrivate 
 
 public:
 
-    GetAccountAuthorizationDetailsResponsePrivate(GetAccountAuthorizationDetailsResponse * const q);
+    explicit GetAccountAuthorizationDetailsResponsePrivate(GetAccountAuthorizationDetailsResponse * const q);
 
     void parseGetAccountAuthorizationDetailsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class WithdrawByoipCidrResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    WithdrawByoipCidrResponsePrivate(WithdrawByoipCidrResponse * const q);
+    explicit WithdrawByoipCidrResponsePrivate(WithdrawByoipCidrResponse * const q);
 
     void parseWithdrawByoipCidrResponse(QXmlStreamReader &xml);
 

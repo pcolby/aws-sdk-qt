@@ -31,7 +31,7 @@ class CreateDiscovererResponsePrivate : public SchemasResponsePrivate {
 
 public:
 
-    CreateDiscovererResponsePrivate(CreateDiscovererResponse * const q);
+    explicit CreateDiscovererResponsePrivate(CreateDiscovererResponse * const q);
 
     void parseCreateDiscovererResponse(QXmlStreamReader &xml);
 

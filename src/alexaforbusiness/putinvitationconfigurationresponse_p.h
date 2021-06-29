@@ -31,7 +31,7 @@ class PutInvitationConfigurationResponsePrivate : public AlexaForBusinessRespons
 
 public:
 
-    PutInvitationConfigurationResponsePrivate(PutInvitationConfigurationResponse * const q);
+    explicit PutInvitationConfigurationResponsePrivate(PutInvitationConfigurationResponse * const q);
 
     void parsePutInvitationConfigurationResponse(QXmlStreamReader &xml);
 

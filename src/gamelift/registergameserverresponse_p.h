@@ -31,7 +31,7 @@ class RegisterGameServerResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    RegisterGameServerResponsePrivate(RegisterGameServerResponse * const q);
+    explicit RegisterGameServerResponsePrivate(RegisterGameServerResponse * const q);
 
     void parseRegisterGameServerResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CancelWorldExportJobResponsePrivate : public RoboMakerResponsePrivate {
 
 public:
 
-    CancelWorldExportJobResponsePrivate(CancelWorldExportJobResponse * const q);
+    explicit CancelWorldExportJobResponsePrivate(CancelWorldExportJobResponse * const q);
 
     void parseCancelWorldExportJobResponse(QXmlStreamReader &xml);
 

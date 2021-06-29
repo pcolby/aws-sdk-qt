@@ -31,7 +31,7 @@ class ListChannelMessagesResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    ListChannelMessagesResponsePrivate(ListChannelMessagesResponse * const q);
+    explicit ListChannelMessagesResponsePrivate(ListChannelMessagesResponse * const q);
 
     void parseListChannelMessagesResponse(QXmlStreamReader &xml);
 

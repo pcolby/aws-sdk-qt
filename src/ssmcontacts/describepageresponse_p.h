@@ -31,7 +31,7 @@ class DescribePageResponsePrivate : public SSMContactsResponsePrivate {
 
 public:
 
-    DescribePageResponsePrivate(DescribePageResponse * const q);
+    explicit DescribePageResponsePrivate(DescribePageResponse * const q);
 
     void parseDescribePageResponse(QXmlStreamReader &xml);
 

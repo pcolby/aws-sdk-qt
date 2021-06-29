@@ -29,7 +29,7 @@ class AppMeshResponsePrivate {
 
 public:
 
-    AppMeshResponsePrivate(AppMeshResponse * const q);
+    explicit AppMeshResponsePrivate(AppMeshResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

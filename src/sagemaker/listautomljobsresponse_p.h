@@ -31,7 +31,7 @@ class ListAutoMLJobsResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    ListAutoMLJobsResponsePrivate(ListAutoMLJobsResponse * const q);
+    explicit ListAutoMLJobsResponsePrivate(ListAutoMLJobsResponse * const q);
 
     void parseListAutoMLJobsResponse(QXmlStreamReader &xml);
 

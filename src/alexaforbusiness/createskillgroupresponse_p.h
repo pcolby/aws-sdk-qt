@@ -31,7 +31,7 @@ class CreateSkillGroupResponsePrivate : public AlexaForBusinessResponsePrivate {
 
 public:
 
-    CreateSkillGroupResponsePrivate(CreateSkillGroupResponse * const q);
+    explicit CreateSkillGroupResponsePrivate(CreateSkillGroupResponse * const q);
 
     void parseCreateSkillGroupResponse(QXmlStreamReader &xml);
 

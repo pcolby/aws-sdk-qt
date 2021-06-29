@@ -31,7 +31,7 @@ class ListStorageLensConfigurationsResponsePrivate : public S3ControlResponsePri
 
 public:
 
-    ListStorageLensConfigurationsResponsePrivate(ListStorageLensConfigurationsResponse * const q);
+    explicit ListStorageLensConfigurationsResponsePrivate(ListStorageLensConfigurationsResponse * const q);
 
     void parseListStorageLensConfigurationsResponse(QXmlStreamReader &xml);
 

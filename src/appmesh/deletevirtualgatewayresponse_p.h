@@ -31,7 +31,7 @@ class DeleteVirtualGatewayResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 
-    DeleteVirtualGatewayResponsePrivate(DeleteVirtualGatewayResponse * const q);
+    explicit DeleteVirtualGatewayResponsePrivate(DeleteVirtualGatewayResponse * const q);
 
     void parseDeleteVirtualGatewayResponse(QXmlStreamReader &xml);
 

@@ -49,7 +49,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    SageMakerFeatureStoreRuntimeClient(
+    explicit SageMakerFeatureStoreRuntimeClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -63,7 +63,7 @@ public slots:
 protected:
     /// @cond internal
     SageMakerFeatureStoreRuntimeClientPrivate * const d_ptr; ///< Internal d-pointer.
-    SageMakerFeatureStoreRuntimeClient(SageMakerFeatureStoreRuntimeClientPrivate * const d);
+    explicit SageMakerFeatureStoreRuntimeClient(SageMakerFeatureStoreRuntimeClientPrivate * const d);
     /// @endcond
 
 private:

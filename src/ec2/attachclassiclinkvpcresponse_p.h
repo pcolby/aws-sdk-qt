@@ -31,7 +31,7 @@ class AttachClassicLinkVpcResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    AttachClassicLinkVpcResponsePrivate(AttachClassicLinkVpcResponse * const q);
+    explicit AttachClassicLinkVpcResponsePrivate(AttachClassicLinkVpcResponse * const q);
 
     void parseAttachClassicLinkVpcResponse(QXmlStreamReader &xml);
 

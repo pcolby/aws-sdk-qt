@@ -31,7 +31,7 @@ class PutDetectorResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 
-    PutDetectorResponsePrivate(PutDetectorResponse * const q);
+    explicit PutDetectorResponsePrivate(PutDetectorResponse * const q);
 
     void parsePutDetectorResponse(QXmlStreamReader &xml);
 

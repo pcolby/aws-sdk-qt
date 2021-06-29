@@ -31,7 +31,7 @@ class DeactivateMFADeviceResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    DeactivateMFADeviceResponsePrivate(DeactivateMFADeviceResponse * const q);
+    explicit DeactivateMFADeviceResponsePrivate(DeactivateMFADeviceResponse * const q);
 
     void parseDeactivateMFADeviceResponse(QXmlStreamReader &xml);
 

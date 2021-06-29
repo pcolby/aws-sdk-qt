@@ -31,7 +31,7 @@ class SetTerminationProtectionResponsePrivate : public EmrResponsePrivate {
 
 public:
 
-    SetTerminationProtectionResponsePrivate(SetTerminationProtectionResponse * const q);
+    explicit SetTerminationProtectionResponsePrivate(SetTerminationProtectionResponse * const q);
 
     void parseSetTerminationProtectionResponse(QXmlStreamReader &xml);
 

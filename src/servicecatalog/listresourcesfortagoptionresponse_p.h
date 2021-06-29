@@ -31,7 +31,7 @@ class ListResourcesForTagOptionResponsePrivate : public ServiceCatalogResponsePr
 
 public:
 
-    ListResourcesForTagOptionResponsePrivate(ListResourcesForTagOptionResponse * const q);
+    explicit ListResourcesForTagOptionResponsePrivate(ListResourcesForTagOptionResponse * const q);
 
     void parseListResourcesForTagOptionResponse(QXmlStreamReader &xml);
 

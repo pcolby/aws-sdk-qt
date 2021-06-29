@@ -30,7 +30,7 @@ class ElasticInferenceClient;
 class ElasticInferenceClientPrivate {
 
 public:
-    ElasticInferenceClientPrivate(ElasticInferenceClient * const q);
+    explicit ElasticInferenceClientPrivate(ElasticInferenceClient * const q);
 
 protected:
     ElasticInferenceClient * const q_ptr; ///< Internal q-pointer.

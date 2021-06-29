@@ -31,7 +31,7 @@ class UpdateTagOptionResponsePrivate : public ServiceCatalogResponsePrivate {
 
 public:
 
-    UpdateTagOptionResponsePrivate(UpdateTagOptionResponse * const q);
+    explicit UpdateTagOptionResponsePrivate(UpdateTagOptionResponse * const q);
 
     void parseUpdateTagOptionResponse(QXmlStreamReader &xml);
 

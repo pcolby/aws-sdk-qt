@@ -31,7 +31,7 @@ class ReimportApiResponsePrivate : public ApiGatewayV2ResponsePrivate {
 
 public:
 
-    ReimportApiResponsePrivate(ReimportApiResponse * const q);
+    explicit ReimportApiResponsePrivate(ReimportApiResponse * const q);
 
     void parseReimportApiResponse(QXmlStreamReader &xml);
 

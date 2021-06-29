@@ -31,7 +31,7 @@ class GetGroupConfigurationResponsePrivate : public ResourceGroupsResponsePrivat
 
 public:
 
-    GetGroupConfigurationResponsePrivate(GetGroupConfigurationResponse * const q);
+    explicit GetGroupConfigurationResponsePrivate(GetGroupConfigurationResponse * const q);
 
     void parseGetGroupConfigurationResponse(QXmlStreamReader &xml);
 

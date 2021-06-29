@@ -31,7 +31,7 @@ class ListVPCEConfigurationsResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    ListVPCEConfigurationsResponsePrivate(ListVPCEConfigurationsResponse * const q);
+    explicit ListVPCEConfigurationsResponsePrivate(ListVPCEConfigurationsResponse * const q);
 
     void parseListVPCEConfigurationsResponse(QXmlStreamReader &xml);
 

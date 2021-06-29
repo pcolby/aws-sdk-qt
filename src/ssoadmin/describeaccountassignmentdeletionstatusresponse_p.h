@@ -31,7 +31,7 @@ class DescribeAccountAssignmentDeletionStatusResponsePrivate : public SSOAdminRe
 
 public:
 
-    DescribeAccountAssignmentDeletionStatusResponsePrivate(DescribeAccountAssignmentDeletionStatusResponse * const q);
+    explicit DescribeAccountAssignmentDeletionStatusResponsePrivate(DescribeAccountAssignmentDeletionStatusResponse * const q);
 
     void parseDescribeAccountAssignmentDeletionStatusResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class BatchGetImageResponsePrivate : public EcrResponsePrivate {
 
 public:
 
-    BatchGetImageResponsePrivate(BatchGetImageResponse * const q);
+    explicit BatchGetImageResponsePrivate(BatchGetImageResponse * const q);
 
     void parseBatchGetImageResponse(QXmlStreamReader &xml);
 

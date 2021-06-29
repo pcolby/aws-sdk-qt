@@ -31,7 +31,7 @@ class StartSchemaExtensionResponsePrivate : public DirectoryServiceResponsePriva
 
 public:
 
-    StartSchemaExtensionResponsePrivate(StartSchemaExtensionResponse * const q);
+    explicit StartSchemaExtensionResponsePrivate(StartSchemaExtensionResponse * const q);
 
     void parseStartSchemaExtensionResponse(QXmlStreamReader &xml);
 

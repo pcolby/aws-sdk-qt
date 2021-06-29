@@ -117,7 +117,7 @@ public:
 protected:
     /// @cond internal
     GuardDutyRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    GuardDutyRequest(GuardDutyRequestPrivate * const d);
+    explicit GuardDutyRequest(GuardDutyRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

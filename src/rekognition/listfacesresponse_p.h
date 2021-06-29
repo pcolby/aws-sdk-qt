@@ -31,7 +31,7 @@ class ListFacesResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 
-    ListFacesResponsePrivate(ListFacesResponse * const q);
+    explicit ListFacesResponsePrivate(ListFacesResponse * const q);
 
     void parseListFacesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeRepositoryResponsePrivate : public CodeArtifactResponsePrivate {
 
 public:
 
-    DescribeRepositoryResponsePrivate(DescribeRepositoryResponse * const q);
+    explicit DescribeRepositoryResponsePrivate(DescribeRepositoryResponse * const q);
 
     void parseDescribeRepositoryResponse(QXmlStreamReader &xml);
 

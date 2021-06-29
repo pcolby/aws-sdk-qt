@@ -31,7 +31,7 @@ class ListSolutionsResponsePrivate : public PersonalizeResponsePrivate {
 
 public:
 
-    ListSolutionsResponsePrivate(ListSolutionsResponse * const q);
+    explicit ListSolutionsResponsePrivate(ListSolutionsResponse * const q);
 
     void parseListSolutionsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateApiKeyResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 
-    CreateApiKeyResponsePrivate(CreateApiKeyResponse * const q);
+    explicit CreateApiKeyResponsePrivate(CreateApiKeyResponse * const q);
 
     void parseCreateApiKeyResponse(QXmlStreamReader &xml);
 

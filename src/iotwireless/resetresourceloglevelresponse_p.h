@@ -31,7 +31,7 @@ class ResetResourceLogLevelResponsePrivate : public IoTWirelessResponsePrivate {
 
 public:
 
-    ResetResourceLogLevelResponsePrivate(ResetResourceLogLevelResponse * const q);
+    explicit ResetResourceLogLevelResponsePrivate(ResetResourceLogLevelResponse * const q);
 
     void parseResetResourceLogLevelResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeletePullRequestApprovalRuleResponsePrivate : public CodeCommitResponsePr
 
 public:
 
-    DeletePullRequestApprovalRuleResponsePrivate(DeletePullRequestApprovalRuleResponse * const q);
+    explicit DeletePullRequestApprovalRuleResponsePrivate(DeletePullRequestApprovalRuleResponse * const q);
 
     void parseDeletePullRequestApprovalRuleResponse(QXmlStreamReader &xml);
 

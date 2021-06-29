@@ -31,7 +31,7 @@ class DeleteLabelsResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 
-    DeleteLabelsResponsePrivate(DeleteLabelsResponse * const q);
+    explicit DeleteLabelsResponsePrivate(DeleteLabelsResponse * const q);
 
     void parseDeleteLabelsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeScriptResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    DescribeScriptResponsePrivate(DescribeScriptResponse * const q);
+    explicit DescribeScriptResponsePrivate(DescribeScriptResponse * const q);
 
     void parseDescribeScriptResponse(QXmlStreamReader &xml);
 

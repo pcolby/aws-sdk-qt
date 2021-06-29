@@ -31,7 +31,7 @@ class DescribeDestinationsResponsePrivate : public CloudWatchLogsResponsePrivate
 
 public:
 
-    DescribeDestinationsResponsePrivate(DescribeDestinationsResponse * const q);
+    explicit DescribeDestinationsResponsePrivate(DescribeDestinationsResponse * const q);
 
     void parseDescribeDestinationsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class SetReceiptRulePositionResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    SetReceiptRulePositionResponsePrivate(SetReceiptRulePositionResponse * const q);
+    explicit SetReceiptRulePositionResponsePrivate(SetReceiptRulePositionResponse * const q);
 
     void parseSetReceiptRulePositionResponse(QXmlStreamReader &xml);
 

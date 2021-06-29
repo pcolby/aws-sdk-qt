@@ -31,7 +31,7 @@ class UpdateMonitoringResponsePrivate : public KafkaResponsePrivate {
 
 public:
 
-    UpdateMonitoringResponsePrivate(UpdateMonitoringResponse * const q);
+    explicit UpdateMonitoringResponsePrivate(UpdateMonitoringResponse * const q);
 
     void parseUpdateMonitoringResponse(QXmlStreamReader &xml);
 

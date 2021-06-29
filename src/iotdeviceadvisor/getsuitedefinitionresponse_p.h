@@ -31,7 +31,7 @@ class GetSuiteDefinitionResponsePrivate : public IoTDeviceAdvisorResponsePrivate
 
 public:
 
-    GetSuiteDefinitionResponsePrivate(GetSuiteDefinitionResponse * const q);
+    explicit GetSuiteDefinitionResponsePrivate(GetSuiteDefinitionResponse * const q);
 
     void parseGetSuiteDefinitionResponse(QXmlStreamReader &xml);
 

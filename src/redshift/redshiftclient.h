@@ -249,7 +249,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    RedshiftClient(
+    explicit RedshiftClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -364,7 +364,7 @@ public slots:
 protected:
     /// @cond internal
     RedshiftClientPrivate * const d_ptr; ///< Internal d-pointer.
-    RedshiftClient(RedshiftClientPrivate * const d);
+    explicit RedshiftClient(RedshiftClientPrivate * const d);
     /// @endcond
 
 private:

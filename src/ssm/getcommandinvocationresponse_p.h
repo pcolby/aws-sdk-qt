@@ -31,7 +31,7 @@ class GetCommandInvocationResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    GetCommandInvocationResponsePrivate(GetCommandInvocationResponse * const q);
+    explicit GetCommandInvocationResponsePrivate(GetCommandInvocationResponse * const q);
 
     void parseGetCommandInvocationResponse(QXmlStreamReader &xml);
 

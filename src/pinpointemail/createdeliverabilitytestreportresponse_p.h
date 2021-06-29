@@ -31,7 +31,7 @@ class CreateDeliverabilityTestReportResponsePrivate : public PinpointEmailRespon
 
 public:
 
-    CreateDeliverabilityTestReportResponsePrivate(CreateDeliverabilityTestReportResponse * const q);
+    explicit CreateDeliverabilityTestReportResponsePrivate(CreateDeliverabilityTestReportResponse * const q);
 
     void parseCreateDeliverabilityTestReportResponse(QXmlStreamReader &xml);
 

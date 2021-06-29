@@ -31,7 +31,7 @@ class ListDocumentMetadataHistoryResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    ListDocumentMetadataHistoryResponsePrivate(ListDocumentMetadataHistoryResponse * const q);
+    explicit ListDocumentMetadataHistoryResponsePrivate(ListDocumentMetadataHistoryResponse * const q);
 
     void parseListDocumentMetadataHistoryResponse(QXmlStreamReader &xml);
 

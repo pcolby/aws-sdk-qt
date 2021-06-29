@@ -31,7 +31,7 @@ class DeleteConnectionAliasResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 
-    DeleteConnectionAliasResponsePrivate(DeleteConnectionAliasResponse * const q);
+    explicit DeleteConnectionAliasResponsePrivate(DeleteConnectionAliasResponse * const q);
 
     void parseDeleteConnectionAliasResponse(QXmlStreamReader &xml);
 

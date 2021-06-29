@@ -31,7 +31,7 @@ class GetReusableDelegationSetLimitResponsePrivate : public Route53ResponsePriva
 
 public:
 
-    GetReusableDelegationSetLimitResponsePrivate(GetReusableDelegationSetLimitResponse * const q);
+    explicit GetReusableDelegationSetLimitResponsePrivate(GetReusableDelegationSetLimitResponse * const q);
 
     void parseGetReusableDelegationSetLimitResponse(QXmlStreamReader &xml);
 

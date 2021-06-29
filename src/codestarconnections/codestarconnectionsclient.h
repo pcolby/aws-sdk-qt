@@ -65,7 +65,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    CodeStarconnectionsClient(
+    explicit CodeStarconnectionsClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -87,7 +87,7 @@ public slots:
 protected:
     /// @cond internal
     CodeStarconnectionsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    CodeStarconnectionsClient(CodeStarconnectionsClientPrivate * const d);
+    explicit CodeStarconnectionsClient(CodeStarconnectionsClientPrivate * const d);
     /// @endcond
 
 private:

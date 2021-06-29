@@ -31,7 +31,7 @@ class DeleteDBSubnetGroupResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 
-    DeleteDBSubnetGroupResponsePrivate(DeleteDBSubnetGroupResponse * const q);
+    explicit DeleteDBSubnetGroupResponsePrivate(DeleteDBSubnetGroupResponse * const q);
 
     void parseDeleteDBSubnetGroupResponse(QXmlStreamReader &xml);
 

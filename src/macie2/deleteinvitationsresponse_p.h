@@ -31,7 +31,7 @@ class DeleteInvitationsResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 
-    DeleteInvitationsResponsePrivate(DeleteInvitationsResponse * const q);
+    explicit DeleteInvitationsResponsePrivate(DeleteInvitationsResponse * const q);
 
     void parseDeleteInvitationsResponse(QXmlStreamReader &xml);
 

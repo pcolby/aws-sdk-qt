@@ -31,7 +31,7 @@ class DomainMetadataResponsePrivate : public SimpleDBResponsePrivate {
 
 public:
 
-    DomainMetadataResponsePrivate(DomainMetadataResponse * const q);
+    explicit DomainMetadataResponsePrivate(DomainMetadataResponse * const q);
 
     void parseDomainMetadataResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateSecurityHubConfigurationResponsePrivate : public SecurityHubResponse
 
 public:
 
-    UpdateSecurityHubConfigurationResponsePrivate(UpdateSecurityHubConfigurationResponse * const q);
+    explicit UpdateSecurityHubConfigurationResponsePrivate(UpdateSecurityHubConfigurationResponse * const q);
 
     void parseUpdateSecurityHubConfigurationResponse(QXmlStreamReader &xml);
 

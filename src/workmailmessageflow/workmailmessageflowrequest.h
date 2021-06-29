@@ -61,7 +61,7 @@ public:
 protected:
     /// @cond internal
     WorkMailMessageFlowRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    WorkMailMessageFlowRequest(WorkMailMessageFlowRequestPrivate * const d);
+    explicit WorkMailMessageFlowRequest(WorkMailMessageFlowRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

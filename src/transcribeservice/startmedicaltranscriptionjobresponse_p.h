@@ -31,7 +31,7 @@ class StartMedicalTranscriptionJobResponsePrivate : public TranscribeServiceResp
 
 public:
 
-    StartMedicalTranscriptionJobResponsePrivate(StartMedicalTranscriptionJobResponse * const q);
+    explicit StartMedicalTranscriptionJobResponsePrivate(StartMedicalTranscriptionJobResponse * const q);
 
     void parseStartMedicalTranscriptionJobResponse(QXmlStreamReader &xml);
 

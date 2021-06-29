@@ -31,7 +31,7 @@ class CreateSmsTemplateResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    CreateSmsTemplateResponsePrivate(CreateSmsTemplateResponse * const q);
+    explicit CreateSmsTemplateResponsePrivate(CreateSmsTemplateResponse * const q);
 
     void parseCreateSmsTemplateResponse(QXmlStreamReader &xml);
 

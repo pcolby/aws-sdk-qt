@@ -31,7 +31,7 @@ class ListDeviceEventsResponsePrivate : public AlexaForBusinessResponsePrivate {
 
 public:
 
-    ListDeviceEventsResponsePrivate(ListDeviceEventsResponse * const q);
+    explicit ListDeviceEventsResponsePrivate(ListDeviceEventsResponse * const q);
 
     void parseListDeviceEventsResponse(QXmlStreamReader &xml);
 

@@ -30,7 +30,7 @@ class HoneycodeClient;
 class HoneycodeClientPrivate {
 
 public:
-    HoneycodeClientPrivate(HoneycodeClient * const q);
+    explicit HoneycodeClientPrivate(HoneycodeClient * const q);
 
 protected:
     HoneycodeClient * const q_ptr; ///< Internal q-pointer.

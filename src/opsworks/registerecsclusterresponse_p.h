@@ -31,7 +31,7 @@ class RegisterEcsClusterResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    RegisterEcsClusterResponsePrivate(RegisterEcsClusterResponse * const q);
+    explicit RegisterEcsClusterResponsePrivate(RegisterEcsClusterResponse * const q);
 
     void parseRegisterEcsClusterResponse(QXmlStreamReader &xml);
 

@@ -95,7 +95,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    TranscribeServiceClient(
+    explicit TranscribeServiceClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -132,7 +132,7 @@ public slots:
 protected:
     /// @cond internal
     TranscribeServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
-    TranscribeServiceClient(TranscribeServiceClientPrivate * const d);
+    explicit TranscribeServiceClient(TranscribeServiceClientPrivate * const d);
     /// @endcond
 
 private:

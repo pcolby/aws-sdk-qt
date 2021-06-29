@@ -31,7 +31,7 @@ class ListBackupVaultsResponsePrivate : public BackupResponsePrivate {
 
 public:
 
-    ListBackupVaultsResponsePrivate(ListBackupVaultsResponse * const q);
+    explicit ListBackupVaultsResponsePrivate(ListBackupVaultsResponse * const q);
 
     void parseListBackupVaultsResponse(QXmlStreamReader &xml);
 

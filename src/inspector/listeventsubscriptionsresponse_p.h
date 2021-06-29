@@ -31,7 +31,7 @@ class ListEventSubscriptionsResponsePrivate : public InspectorResponsePrivate {
 
 public:
 
-    ListEventSubscriptionsResponsePrivate(ListEventSubscriptionsResponse * const q);
+    explicit ListEventSubscriptionsResponsePrivate(ListEventSubscriptionsResponse * const q);
 
     void parseListEventSubscriptionsResponse(QXmlStreamReader &xml);
 

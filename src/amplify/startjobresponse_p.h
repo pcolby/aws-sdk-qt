@@ -31,7 +31,7 @@ class StartJobResponsePrivate : public AmplifyResponsePrivate {
 
 public:
 
-    StartJobResponsePrivate(StartJobResponse * const q);
+    explicit StartJobResponsePrivate(StartJobResponse * const q);
 
     void parseStartJobResponse(QXmlStreamReader &xml);
 

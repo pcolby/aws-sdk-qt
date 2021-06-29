@@ -31,7 +31,7 @@ class DescribeGlobalReplicationGroupsResponsePrivate : public ElastiCacheRespons
 
 public:
 
-    DescribeGlobalReplicationGroupsResponsePrivate(DescribeGlobalReplicationGroupsResponse * const q);
+    explicit DescribeGlobalReplicationGroupsResponsePrivate(DescribeGlobalReplicationGroupsResponse * const q);
 
     void parseDescribeGlobalReplicationGroupsResponse(QXmlStreamReader &xml);
 

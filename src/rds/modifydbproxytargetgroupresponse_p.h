@@ -31,7 +31,7 @@ class ModifyDBProxyTargetGroupResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    ModifyDBProxyTargetGroupResponsePrivate(ModifyDBProxyTargetGroupResponse * const q);
+    explicit ModifyDBProxyTargetGroupResponsePrivate(ModifyDBProxyTargetGroupResponse * const q);
 
     void parseModifyDBProxyTargetGroupResponse(QXmlStreamReader &xml);
 

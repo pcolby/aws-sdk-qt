@@ -30,7 +30,7 @@ class ConfigServiceClient;
 class ConfigServiceClientPrivate {
 
 public:
-    ConfigServiceClientPrivate(ConfigServiceClient * const q);
+    explicit ConfigServiceClientPrivate(ConfigServiceClient * const q);
 
 protected:
     ConfigServiceClient * const q_ptr; ///< Internal q-pointer.

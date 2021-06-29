@@ -31,7 +31,7 @@ class DeleteAutoSnapshotResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    DeleteAutoSnapshotResponsePrivate(DeleteAutoSnapshotResponse * const q);
+    explicit DeleteAutoSnapshotResponsePrivate(DeleteAutoSnapshotResponse * const q);
 
     void parseDeleteAutoSnapshotResponse(QXmlStreamReader &xml);
 

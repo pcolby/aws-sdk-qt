@@ -31,7 +31,7 @@ class GetUploadStatusResponsePrivate : public IoTThingsGraphResponsePrivate {
 
 public:
 
-    GetUploadStatusResponsePrivate(GetUploadStatusResponse * const q);
+    explicit GetUploadStatusResponsePrivate(GetUploadStatusResponse * const q);
 
     void parseGetUploadStatusResponse(QXmlStreamReader &xml);
 

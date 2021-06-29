@@ -31,7 +31,7 @@ class PutBucketLoggingResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    PutBucketLoggingResponsePrivate(PutBucketLoggingResponse * const q);
+    explicit PutBucketLoggingResponsePrivate(PutBucketLoggingResponse * const q);
 
     void parsePutBucketLoggingResponse(QXmlStreamReader &xml);
 

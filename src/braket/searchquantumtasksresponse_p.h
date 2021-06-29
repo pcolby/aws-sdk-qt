@@ -31,7 +31,7 @@ class SearchQuantumTasksResponsePrivate : public BraketResponsePrivate {
 
 public:
 
-    SearchQuantumTasksResponsePrivate(SearchQuantumTasksResponse * const q);
+    explicit SearchQuantumTasksResponsePrivate(SearchQuantumTasksResponse * const q);
 
     void parseSearchQuantumTasksResponse(QXmlStreamReader &xml);
 

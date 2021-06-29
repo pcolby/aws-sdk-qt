@@ -31,7 +31,7 @@ class CreateDatasetExportJobResponsePrivate : public PersonalizeResponsePrivate 
 
 public:
 
-    CreateDatasetExportJobResponsePrivate(CreateDatasetExportJobResponse * const q);
+    explicit CreateDatasetExportJobResponsePrivate(CreateDatasetExportJobResponse * const q);
 
     void parseCreateDatasetExportJobResponse(QXmlStreamReader &xml);
 

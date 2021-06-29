@@ -31,7 +31,7 @@ class GetInterpolatedAssetPropertyValuesResponsePrivate : public IoTSiteWiseResp
 
 public:
 
-    GetInterpolatedAssetPropertyValuesResponsePrivate(GetInterpolatedAssetPropertyValuesResponse * const q);
+    explicit GetInterpolatedAssetPropertyValuesResponsePrivate(GetInterpolatedAssetPropertyValuesResponse * const q);
 
     void parseGetInterpolatedAssetPropertyValuesResponse(QXmlStreamReader &xml);
 

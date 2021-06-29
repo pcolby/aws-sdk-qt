@@ -31,7 +31,7 @@ class ListChannelsModeratedByAppInstanceUserResponsePrivate : public ChimeRespon
 
 public:
 
-    ListChannelsModeratedByAppInstanceUserResponsePrivate(ListChannelsModeratedByAppInstanceUserResponse * const q);
+    explicit ListChannelsModeratedByAppInstanceUserResponsePrivate(ListChannelsModeratedByAppInstanceUserResponse * const q);
 
     void parseListChannelsModeratedByAppInstanceUserResponse(QXmlStreamReader &xml);
 

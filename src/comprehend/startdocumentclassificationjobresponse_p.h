@@ -31,7 +31,7 @@ class StartDocumentClassificationJobResponsePrivate : public ComprehendResponseP
 
 public:
 
-    StartDocumentClassificationJobResponsePrivate(StartDocumentClassificationJobResponse * const q);
+    explicit StartDocumentClassificationJobResponsePrivate(StartDocumentClassificationJobResponse * const q);
 
     void parseStartDocumentClassificationJobResponse(QXmlStreamReader &xml);
 

@@ -29,7 +29,7 @@ class WAFRegionalResponsePrivate {
 
 public:
 
-    WAFRegionalResponsePrivate(WAFRegionalResponse * const q);
+    explicit WAFRegionalResponsePrivate(WAFRegionalResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

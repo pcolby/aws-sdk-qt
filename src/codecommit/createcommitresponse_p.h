@@ -31,7 +31,7 @@ class CreateCommitResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 
-    CreateCommitResponsePrivate(CreateCommitResponse * const q);
+    explicit CreateCommitResponsePrivate(CreateCommitResponse * const q);
 
     void parseCreateCommitResponse(QXmlStreamReader &xml);
 

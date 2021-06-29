@@ -31,7 +31,7 @@ class BatchDisassociateApprovalRuleTemplateFromRepositoriesResponsePrivate : pub
 
 public:
 
-    BatchDisassociateApprovalRuleTemplateFromRepositoriesResponsePrivate(BatchDisassociateApprovalRuleTemplateFromRepositoriesResponse * const q);
+    explicit BatchDisassociateApprovalRuleTemplateFromRepositoriesResponsePrivate(BatchDisassociateApprovalRuleTemplateFromRepositoriesResponse * const q);
 
     void parseBatchDisassociateApprovalRuleTemplateFromRepositoriesResponse(QXmlStreamReader &xml);
 

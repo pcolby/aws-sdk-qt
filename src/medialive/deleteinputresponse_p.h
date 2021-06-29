@@ -31,7 +31,7 @@ class DeleteInputResponsePrivate : public MediaLiveResponsePrivate {
 
 public:
 
-    DeleteInputResponsePrivate(DeleteInputResponse * const q);
+    explicit DeleteInputResponsePrivate(DeleteInputResponse * const q);
 
     void parseDeleteInputResponse(QXmlStreamReader &xml);
 

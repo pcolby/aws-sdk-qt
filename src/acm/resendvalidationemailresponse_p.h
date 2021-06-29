@@ -31,7 +31,7 @@ class ResendValidationEmailResponsePrivate : public AcmResponsePrivate {
 
 public:
 
-    ResendValidationEmailResponsePrivate(ResendValidationEmailResponse * const q);
+    explicit ResendValidationEmailResponsePrivate(ResendValidationEmailResponse * const q);
 
     void parseResendValidationEmailResponse(QXmlStreamReader &xml);
 

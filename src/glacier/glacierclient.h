@@ -107,7 +107,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    GlacierClient(
+    explicit GlacierClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -150,7 +150,7 @@ public slots:
 protected:
     /// @cond internal
     GlacierClientPrivate * const d_ptr; ///< Internal d-pointer.
-    GlacierClient(GlacierClientPrivate * const d);
+    explicit GlacierClient(GlacierClientPrivate * const d);
     /// @endcond
 
 private:

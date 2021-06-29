@@ -109,7 +109,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    IoTAnalyticsClient(
+    explicit IoTAnalyticsClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -153,7 +153,7 @@ public slots:
 protected:
     /// @cond internal
     IoTAnalyticsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    IoTAnalyticsClient(IoTAnalyticsClientPrivate * const d);
+    explicit IoTAnalyticsClient(IoTAnalyticsClientPrivate * const d);
     /// @endcond
 
 private:

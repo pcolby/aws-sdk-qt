@@ -31,7 +31,7 @@ class ListPrincipalPoliciesResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    ListPrincipalPoliciesResponsePrivate(ListPrincipalPoliciesResponse * const q);
+    explicit ListPrincipalPoliciesResponsePrivate(ListPrincipalPoliciesResponse * const q);
 
     void parseListPrincipalPoliciesResponse(QXmlStreamReader &xml);
 

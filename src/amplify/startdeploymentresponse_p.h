@@ -31,7 +31,7 @@ class StartDeploymentResponsePrivate : public AmplifyResponsePrivate {
 
 public:
 
-    StartDeploymentResponsePrivate(StartDeploymentResponse * const q);
+    explicit StartDeploymentResponsePrivate(StartDeploymentResponse * const q);
 
     void parseStartDeploymentResponse(QXmlStreamReader &xml);
 

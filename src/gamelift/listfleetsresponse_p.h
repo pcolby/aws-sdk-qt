@@ -31,7 +31,7 @@ class ListFleetsResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    ListFleetsResponsePrivate(ListFleetsResponse * const q);
+    explicit ListFleetsResponsePrivate(ListFleetsResponse * const q);
 
     void parseListFleetsResponse(QXmlStreamReader &xml);
 

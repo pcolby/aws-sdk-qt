@@ -31,7 +31,7 @@ class CreateNatGatewayResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CreateNatGatewayResponsePrivate(CreateNatGatewayResponse * const q);
+    explicit CreateNatGatewayResponsePrivate(CreateNatGatewayResponse * const q);
 
     void parseCreateNatGatewayResponse(QXmlStreamReader &xml);
 

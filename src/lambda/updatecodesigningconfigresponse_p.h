@@ -31,7 +31,7 @@ class UpdateCodeSigningConfigResponsePrivate : public LambdaResponsePrivate {
 
 public:
 
-    UpdateCodeSigningConfigResponsePrivate(UpdateCodeSigningConfigResponse * const q);
+    explicit UpdateCodeSigningConfigResponsePrivate(UpdateCodeSigningConfigResponse * const q);
 
     void parseUpdateCodeSigningConfigResponse(QXmlStreamReader &xml);
 

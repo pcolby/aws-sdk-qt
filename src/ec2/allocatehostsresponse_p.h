@@ -31,7 +31,7 @@ class AllocateHostsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    AllocateHostsResponsePrivate(AllocateHostsResponse * const q);
+    explicit AllocateHostsResponsePrivate(AllocateHostsResponse * const q);
 
     void parseAllocateHostsResponse(QXmlStreamReader &xml);
 

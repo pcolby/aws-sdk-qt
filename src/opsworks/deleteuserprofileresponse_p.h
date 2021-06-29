@@ -31,7 +31,7 @@ class DeleteUserProfileResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    DeleteUserProfileResponsePrivate(DeleteUserProfileResponse * const q);
+    explicit DeleteUserProfileResponsePrivate(DeleteUserProfileResponse * const q);
 
     void parseDeleteUserProfileResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ResetUserPasswordResponsePrivate : public DirectoryServiceResponsePrivate 
 
 public:
 
-    ResetUserPasswordResponsePrivate(ResetUserPasswordResponse * const q);
+    explicit ResetUserPasswordResponsePrivate(ResetUserPasswordResponse * const q);
 
     void parseResetUserPasswordResponse(QXmlStreamReader &xml);
 

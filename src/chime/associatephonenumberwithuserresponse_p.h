@@ -31,7 +31,7 @@ class AssociatePhoneNumberWithUserResponsePrivate : public ChimeResponsePrivate 
 
 public:
 
-    AssociatePhoneNumberWithUserResponsePrivate(AssociatePhoneNumberWithUserResponse * const q);
+    explicit AssociatePhoneNumberWithUserResponsePrivate(AssociatePhoneNumberWithUserResponse * const q);
 
     void parseAssociatePhoneNumberWithUserResponse(QXmlStreamReader &xml);
 

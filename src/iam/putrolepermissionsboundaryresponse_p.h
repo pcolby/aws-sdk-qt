@@ -31,7 +31,7 @@ class PutRolePermissionsBoundaryResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    PutRolePermissionsBoundaryResponsePrivate(PutRolePermissionsBoundaryResponse * const q);
+    explicit PutRolePermissionsBoundaryResponsePrivate(PutRolePermissionsBoundaryResponse * const q);
 
     void parsePutRolePermissionsBoundaryResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class AdminLinkProviderForUserResponsePrivate : public CognitoIdentityProviderRe
 
 public:
 
-    AdminLinkProviderForUserResponsePrivate(AdminLinkProviderForUserResponse * const q);
+    explicit AdminLinkProviderForUserResponsePrivate(AdminLinkProviderForUserResponse * const q);
 
     void parseAdminLinkProviderForUserResponse(QXmlStreamReader &xml);
 

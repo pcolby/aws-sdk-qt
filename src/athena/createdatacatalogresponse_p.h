@@ -31,7 +31,7 @@ class CreateDataCatalogResponsePrivate : public AthenaResponsePrivate {
 
 public:
 
-    CreateDataCatalogResponsePrivate(CreateDataCatalogResponse * const q);
+    explicit CreateDataCatalogResponsePrivate(CreateDataCatalogResponse * const q);
 
     void parseCreateDataCatalogResponse(QXmlStreamReader &xml);
 

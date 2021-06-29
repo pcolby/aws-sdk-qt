@@ -31,7 +31,7 @@ class ModifyInstanceFleetResponsePrivate : public EmrResponsePrivate {
 
 public:
 
-    ModifyInstanceFleetResponsePrivate(ModifyInstanceFleetResponse * const q);
+    explicit ModifyInstanceFleetResponsePrivate(ModifyInstanceFleetResponse * const q);
 
     void parseModifyInstanceFleetResponse(QXmlStreamReader &xml);
 

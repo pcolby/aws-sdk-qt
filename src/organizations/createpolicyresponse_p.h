@@ -31,7 +31,7 @@ class CreatePolicyResponsePrivate : public OrganizationsResponsePrivate {
 
 public:
 
-    CreatePolicyResponsePrivate(CreatePolicyResponse * const q);
+    explicit CreatePolicyResponsePrivate(CreatePolicyResponse * const q);
 
     void parseCreatePolicyResponse(QXmlStreamReader &xml);
 

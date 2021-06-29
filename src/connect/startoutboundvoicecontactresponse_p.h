@@ -31,7 +31,7 @@ class StartOutboundVoiceContactResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    StartOutboundVoiceContactResponsePrivate(StartOutboundVoiceContactResponse * const q);
+    explicit StartOutboundVoiceContactResponsePrivate(StartOutboundVoiceContactResponse * const q);
 
     void parseStartOutboundVoiceContactResponse(QXmlStreamReader &xml);
 

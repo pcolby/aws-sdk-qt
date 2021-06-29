@@ -31,7 +31,7 @@ class ConnectCustomKeyStoreResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    ConnectCustomKeyStoreResponsePrivate(ConnectCustomKeyStoreResponse * const q);
+    explicit ConnectCustomKeyStoreResponsePrivate(ConnectCustomKeyStoreResponse * const q);
 
     void parseConnectCustomKeyStoreResponse(QXmlStreamReader &xml);
 

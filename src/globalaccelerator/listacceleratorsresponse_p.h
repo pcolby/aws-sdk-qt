@@ -31,7 +31,7 @@ class ListAcceleratorsResponsePrivate : public GlobalAcceleratorResponsePrivate 
 
 public:
 
-    ListAcceleratorsResponsePrivate(ListAcceleratorsResponse * const q);
+    explicit ListAcceleratorsResponsePrivate(ListAcceleratorsResponse * const q);
 
     void parseListAcceleratorsResponse(QXmlStreamReader &xml);
 

@@ -71,7 +71,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    DetectiveClient(
+    explicit DetectiveClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -96,7 +96,7 @@ public slots:
 protected:
     /// @cond internal
     DetectiveClientPrivate * const d_ptr; ///< Internal d-pointer.
-    DetectiveClient(DetectiveClientPrivate * const d);
+    explicit DetectiveClient(DetectiveClientPrivate * const d);
     /// @endcond
 
 private:

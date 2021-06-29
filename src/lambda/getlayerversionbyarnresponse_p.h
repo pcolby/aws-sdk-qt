@@ -31,7 +31,7 @@ class GetLayerVersionByArnResponsePrivate : public LambdaResponsePrivate {
 
 public:
 
-    GetLayerVersionByArnResponsePrivate(GetLayerVersionByArnResponse * const q);
+    explicit GetLayerVersionByArnResponsePrivate(GetLayerVersionByArnResponse * const q);
 
     void parseGetLayerVersionByArnResponse(QXmlStreamReader &xml);
 

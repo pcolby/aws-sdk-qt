@@ -31,7 +31,7 @@ class ListSecurityProfilesForTargetResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    ListSecurityProfilesForTargetResponsePrivate(ListSecurityProfilesForTargetResponse * const q);
+    explicit ListSecurityProfilesForTargetResponsePrivate(ListSecurityProfilesForTargetResponse * const q);
 
     void parseListSecurityProfilesForTargetResponse(QXmlStreamReader &xml);
 

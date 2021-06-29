@@ -31,7 +31,7 @@ class UpdateTrafficPolicyCommentResponsePrivate : public Route53ResponsePrivate 
 
 public:
 
-    UpdateTrafficPolicyCommentResponsePrivate(UpdateTrafficPolicyCommentResponse * const q);
+    explicit UpdateTrafficPolicyCommentResponsePrivate(UpdateTrafficPolicyCommentResponse * const q);
 
     void parseUpdateTrafficPolicyCommentResponse(QXmlStreamReader &xml);
 

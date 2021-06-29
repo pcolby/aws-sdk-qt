@@ -78,7 +78,7 @@ public:
 protected:
     /// @cond internal
     ServiceQuotasRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    ServiceQuotasRequest(ServiceQuotasRequestPrivate * const d);
+    explicit ServiceQuotasRequest(ServiceQuotasRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

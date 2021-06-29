@@ -31,7 +31,7 @@ class DeleteReplicationSetResponsePrivate : public SSMIncidentsResponsePrivate {
 
 public:
 
-    DeleteReplicationSetResponsePrivate(DeleteReplicationSetResponse * const q);
+    explicit DeleteReplicationSetResponsePrivate(DeleteReplicationSetResponse * const q);
 
     void parseDeleteReplicationSetResponse(QXmlStreamReader &xml);
 

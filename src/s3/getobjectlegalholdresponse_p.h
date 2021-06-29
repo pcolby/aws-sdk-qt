@@ -31,7 +31,7 @@ class GetObjectLegalHoldResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    GetObjectLegalHoldResponsePrivate(GetObjectLegalHoldResponse * const q);
+    explicit GetObjectLegalHoldResponsePrivate(GetObjectLegalHoldResponse * const q);
 
     void parseGetObjectLegalHoldResponse(QXmlStreamReader &xml);
 

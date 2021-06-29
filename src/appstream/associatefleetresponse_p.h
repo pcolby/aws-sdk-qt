@@ -31,7 +31,7 @@ class AssociateFleetResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 
-    AssociateFleetResponsePrivate(AssociateFleetResponse * const q);
+    explicit AssociateFleetResponsePrivate(AssociateFleetResponse * const q);
 
     void parseAssociateFleetResponse(QXmlStreamReader &xml);
 

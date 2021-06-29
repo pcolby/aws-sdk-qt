@@ -31,7 +31,7 @@ class UpdateFieldLevelEncryptionConfigResponsePrivate : public CloudFrontRespons
 
 public:
 
-    UpdateFieldLevelEncryptionConfigResponsePrivate(UpdateFieldLevelEncryptionConfigResponse * const q);
+    explicit UpdateFieldLevelEncryptionConfigResponsePrivate(UpdateFieldLevelEncryptionConfigResponse * const q);
 
     void parseUpdateFieldLevelEncryptionConfigResponse(QXmlStreamReader &xml);
 

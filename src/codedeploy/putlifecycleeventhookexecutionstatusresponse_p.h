@@ -31,7 +31,7 @@ class PutLifecycleEventHookExecutionStatusResponsePrivate : public CodeDeployRes
 
 public:
 
-    PutLifecycleEventHookExecutionStatusResponsePrivate(PutLifecycleEventHookExecutionStatusResponse * const q);
+    explicit PutLifecycleEventHookExecutionStatusResponsePrivate(PutLifecycleEventHookExecutionStatusResponse * const q);
 
     void parsePutLifecycleEventHookExecutionStatusResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeRetentionConfigurationsResponsePrivate : public ConfigServiceRespo
 
 public:
 
-    DescribeRetentionConfigurationsResponsePrivate(DescribeRetentionConfigurationsResponse * const q);
+    explicit DescribeRetentionConfigurationsResponsePrivate(DescribeRetentionConfigurationsResponse * const q);
 
     void parseDescribeRetentionConfigurationsResponse(QXmlStreamReader &xml);
 

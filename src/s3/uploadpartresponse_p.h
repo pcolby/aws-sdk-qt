@@ -31,7 +31,7 @@ class UploadPartResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    UploadPartResponsePrivate(UploadPartResponse * const q);
+    explicit UploadPartResponsePrivate(UploadPartResponse * const q);
 
     void parseUploadPartResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class EnableSnapshotCopyResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    EnableSnapshotCopyResponsePrivate(EnableSnapshotCopyResponse * const q);
+    explicit EnableSnapshotCopyResponsePrivate(EnableSnapshotCopyResponse * const q);
 
     void parseEnableSnapshotCopyResponse(QXmlStreamReader &xml);
 

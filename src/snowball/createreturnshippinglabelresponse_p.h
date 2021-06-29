@@ -31,7 +31,7 @@ class CreateReturnShippingLabelResponsePrivate : public SnowballResponsePrivate 
 
 public:
 
-    CreateReturnShippingLabelResponsePrivate(CreateReturnShippingLabelResponse * const q);
+    explicit CreateReturnShippingLabelResponsePrivate(CreateReturnShippingLabelResponse * const q);
 
     void parseCreateReturnShippingLabelResponse(QXmlStreamReader &xml);
 

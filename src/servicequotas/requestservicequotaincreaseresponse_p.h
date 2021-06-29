@@ -31,7 +31,7 @@ class RequestServiceQuotaIncreaseResponsePrivate : public ServiceQuotasResponseP
 
 public:
 
-    RequestServiceQuotaIncreaseResponsePrivate(RequestServiceQuotaIncreaseResponse * const q);
+    explicit RequestServiceQuotaIncreaseResponsePrivate(RequestServiceQuotaIncreaseResponse * const q);
 
     void parseRequestServiceQuotaIncreaseResponse(QXmlStreamReader &xml);
 

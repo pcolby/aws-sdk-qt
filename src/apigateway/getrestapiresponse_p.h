@@ -31,7 +31,7 @@ class GetRestApiResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    GetRestApiResponsePrivate(GetRestApiResponse * const q);
+    explicit GetRestApiResponsePrivate(GetRestApiResponse * const q);
 
     void parseGetRestApiResponse(QXmlStreamReader &xml);
 

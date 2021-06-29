@@ -31,7 +31,7 @@ class BatchDescribeMergeConflictsResponsePrivate : public CodeCommitResponsePriv
 
 public:
 
-    BatchDescribeMergeConflictsResponsePrivate(BatchDescribeMergeConflictsResponse * const q);
+    explicit BatchDescribeMergeConflictsResponsePrivate(BatchDescribeMergeConflictsResponse * const q);
 
     void parseBatchDescribeMergeConflictsResponse(QXmlStreamReader &xml);
 

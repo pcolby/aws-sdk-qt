@@ -31,7 +31,7 @@ class GetRoomSkillParameterResponsePrivate : public AlexaForBusinessResponsePriv
 
 public:
 
-    GetRoomSkillParameterResponsePrivate(GetRoomSkillParameterResponse * const q);
+    explicit GetRoomSkillParameterResponsePrivate(GetRoomSkillParameterResponse * const q);
 
     void parseGetRoomSkillParameterResponse(QXmlStreamReader &xml);
 

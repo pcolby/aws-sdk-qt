@@ -31,7 +31,7 @@ class GetMLTransformsResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    GetMLTransformsResponsePrivate(GetMLTransformsResponse * const q);
+    explicit GetMLTransformsResponsePrivate(GetMLTransformsResponse * const q);
 
     void parseGetMLTransformsResponse(QXmlStreamReader &xml);
 

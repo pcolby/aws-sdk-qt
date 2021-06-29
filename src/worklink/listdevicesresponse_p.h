@@ -31,7 +31,7 @@ class ListDevicesResponsePrivate : public WorkLinkResponsePrivate {
 
 public:
 
-    ListDevicesResponsePrivate(ListDevicesResponse * const q);
+    explicit ListDevicesResponsePrivate(ListDevicesResponse * const q);
 
     void parseListDevicesResponse(QXmlStreamReader &xml);
 

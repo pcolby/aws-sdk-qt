@@ -31,7 +31,7 @@ class GetAssetResponsePrivate : public DataExchangeResponsePrivate {
 
 public:
 
-    GetAssetResponsePrivate(GetAssetResponse * const q);
+    explicit GetAssetResponsePrivate(GetAssetResponse * const q);
 
     void parseGetAssetResponse(QXmlStreamReader &xml);
 

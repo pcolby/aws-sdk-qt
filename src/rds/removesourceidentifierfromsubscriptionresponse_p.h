@@ -31,7 +31,7 @@ class RemoveSourceIdentifierFromSubscriptionResponsePrivate : public RdsResponse
 
 public:
 
-    RemoveSourceIdentifierFromSubscriptionResponsePrivate(RemoveSourceIdentifierFromSubscriptionResponse * const q);
+    explicit RemoveSourceIdentifierFromSubscriptionResponsePrivate(RemoveSourceIdentifierFromSubscriptionResponse * const q);
 
     void parseRemoveSourceIdentifierFromSubscriptionResponse(QXmlStreamReader &xml);
 

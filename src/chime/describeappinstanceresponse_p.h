@@ -31,7 +31,7 @@ class DescribeAppInstanceResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    DescribeAppInstanceResponsePrivate(DescribeAppInstanceResponse * const q);
+    explicit DescribeAppInstanceResponsePrivate(DescribeAppInstanceResponse * const q);
 
     void parseDescribeAppInstanceResponse(QXmlStreamReader &xml);
 

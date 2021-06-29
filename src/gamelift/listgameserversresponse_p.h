@@ -31,7 +31,7 @@ class ListGameServersResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    ListGameServersResponsePrivate(ListGameServersResponse * const q);
+    explicit ListGameServersResponsePrivate(ListGameServersResponse * const q);
 
     void parseListGameServersResponse(QXmlStreamReader &xml);
 

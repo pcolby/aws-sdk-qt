@@ -31,7 +31,7 @@ class DeleteBucketAnalyticsConfigurationResponsePrivate : public S3ResponsePriva
 
 public:
 
-    DeleteBucketAnalyticsConfigurationResponsePrivate(DeleteBucketAnalyticsConfigurationResponse * const q);
+    explicit DeleteBucketAnalyticsConfigurationResponsePrivate(DeleteBucketAnalyticsConfigurationResponse * const q);
 
     void parseDeleteBucketAnalyticsConfigurationResponse(QXmlStreamReader &xml);
 

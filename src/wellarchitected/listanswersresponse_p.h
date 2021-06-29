@@ -31,7 +31,7 @@ class ListAnswersResponsePrivate : public WellArchitectedResponsePrivate {
 
 public:
 
-    ListAnswersResponsePrivate(ListAnswersResponse * const q);
+    explicit ListAnswersResponsePrivate(ListAnswersResponse * const q);
 
     void parseListAnswersResponse(QXmlStreamReader &xml);
 

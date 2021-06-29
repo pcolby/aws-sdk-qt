@@ -31,7 +31,7 @@ class BatchDeleteImageResponsePrivate : public EcrResponsePrivate {
 
 public:
 
-    BatchDeleteImageResponsePrivate(BatchDeleteImageResponse * const q);
+    explicit BatchDeleteImageResponsePrivate(BatchDeleteImageResponse * const q);
 
     void parseBatchDeleteImageResponse(QXmlStreamReader &xml);
 

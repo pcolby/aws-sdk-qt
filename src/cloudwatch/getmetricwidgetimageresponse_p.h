@@ -31,7 +31,7 @@ class GetMetricWidgetImageResponsePrivate : public CloudWatchResponsePrivate {
 
 public:
 
-    GetMetricWidgetImageResponsePrivate(GetMetricWidgetImageResponse * const q);
+    explicit GetMetricWidgetImageResponsePrivate(GetMetricWidgetImageResponse * const q);
 
     void parseGetMetricWidgetImageResponse(QXmlStreamReader &xml);
 

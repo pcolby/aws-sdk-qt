@@ -29,7 +29,7 @@ class BackupResponsePrivate {
 
 public:
 
-    BackupResponsePrivate(BackupResponse * const q);
+    explicit BackupResponsePrivate(BackupResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

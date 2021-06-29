@@ -31,7 +31,7 @@ class DeleteInstanceProfileResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    DeleteInstanceProfileResponsePrivate(DeleteInstanceProfileResponse * const q);
+    explicit DeleteInstanceProfileResponsePrivate(DeleteInstanceProfileResponse * const q);
 
     void parseDeleteInstanceProfileResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListCommandsResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    ListCommandsResponsePrivate(ListCommandsResponse * const q);
+    explicit ListCommandsResponsePrivate(ListCommandsResponse * const q);
 
     void parseListCommandsResponse(QXmlStreamReader &xml);
 

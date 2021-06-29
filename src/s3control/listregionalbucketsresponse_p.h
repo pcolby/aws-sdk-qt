@@ -31,7 +31,7 @@ class ListRegionalBucketsResponsePrivate : public S3ControlResponsePrivate {
 
 public:
 
-    ListRegionalBucketsResponsePrivate(ListRegionalBucketsResponse * const q);
+    explicit ListRegionalBucketsResponsePrivate(ListRegionalBucketsResponse * const q);
 
     void parseListRegionalBucketsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetCertificatesResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    GetCertificatesResponsePrivate(GetCertificatesResponse * const q);
+    explicit GetCertificatesResponsePrivate(GetCertificatesResponse * const q);
 
     void parseGetCertificatesResponse(QXmlStreamReader &xml);
 

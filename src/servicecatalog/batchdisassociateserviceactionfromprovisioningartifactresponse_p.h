@@ -31,7 +31,7 @@ class BatchDisassociateServiceActionFromProvisioningArtifactResponsePrivate : pu
 
 public:
 
-    BatchDisassociateServiceActionFromProvisioningArtifactResponsePrivate(BatchDisassociateServiceActionFromProvisioningArtifactResponse * const q);
+    explicit BatchDisassociateServiceActionFromProvisioningArtifactResponsePrivate(BatchDisassociateServiceActionFromProvisioningArtifactResponse * const q);
 
     void parseBatchDisassociateServiceActionFromProvisioningArtifactResponse(QXmlStreamReader &xml);
 

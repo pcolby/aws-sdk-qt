@@ -31,7 +31,7 @@ class DeleteInlinePolicyFromPermissionSetResponsePrivate : public SSOAdminRespon
 
 public:
 
-    DeleteInlinePolicyFromPermissionSetResponsePrivate(DeleteInlinePolicyFromPermissionSetResponse * const q);
+    explicit DeleteInlinePolicyFromPermissionSetResponsePrivate(DeleteInlinePolicyFromPermissionSetResponse * const q);
 
     void parseDeleteInlinePolicyFromPermissionSetResponse(QXmlStreamReader &xml);
 

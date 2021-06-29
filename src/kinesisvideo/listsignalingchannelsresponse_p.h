@@ -31,7 +31,7 @@ class ListSignalingChannelsResponsePrivate : public KinesisVideoResponsePrivate 
 
 public:
 
-    ListSignalingChannelsResponsePrivate(ListSignalingChannelsResponse * const q);
+    explicit ListSignalingChannelsResponsePrivate(ListSignalingChannelsResponse * const q);
 
     void parseListSignalingChannelsResponse(QXmlStreamReader &xml);
 

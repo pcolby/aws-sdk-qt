@@ -31,7 +31,7 @@ class DescribeCacheClustersResponsePrivate : public ElastiCacheResponsePrivate {
 
 public:
 
-    DescribeCacheClustersResponsePrivate(DescribeCacheClustersResponse * const q);
+    explicit DescribeCacheClustersResponsePrivate(DescribeCacheClustersResponse * const q);
 
     void parseDescribeCacheClustersResponse(QXmlStreamReader &xml);
 

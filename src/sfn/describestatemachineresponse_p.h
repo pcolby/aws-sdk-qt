@@ -31,7 +31,7 @@ class DescribeStateMachineResponsePrivate : public SfnResponsePrivate {
 
 public:
 
-    DescribeStateMachineResponsePrivate(DescribeStateMachineResponse * const q);
+    explicit DescribeStateMachineResponsePrivate(DescribeStateMachineResponse * const q);
 
     void parseDescribeStateMachineResponse(QXmlStreamReader &xml);
 

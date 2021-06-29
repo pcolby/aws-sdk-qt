@@ -31,7 +31,7 @@ class DescribeStreamResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DescribeStreamResponsePrivate(DescribeStreamResponse * const q);
+    explicit DescribeStreamResponsePrivate(DescribeStreamResponse * const q);
 
     void parseDescribeStreamResponse(QXmlStreamReader &xml);
 

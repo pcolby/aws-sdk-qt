@@ -31,7 +31,7 @@ class UpdateDomainResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    UpdateDomainResponsePrivate(UpdateDomainResponse * const q);
+    explicit UpdateDomainResponsePrivate(UpdateDomainResponse * const q);
 
     void parseUpdateDomainResponse(QXmlStreamReader &xml);
 

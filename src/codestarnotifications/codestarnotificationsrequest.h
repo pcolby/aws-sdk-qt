@@ -72,7 +72,7 @@ public:
 protected:
     /// @cond internal
     CodeStarNotificationsRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    CodeStarNotificationsRequest(CodeStarNotificationsRequestPrivate * const d);
+    explicit CodeStarNotificationsRequest(CodeStarNotificationsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

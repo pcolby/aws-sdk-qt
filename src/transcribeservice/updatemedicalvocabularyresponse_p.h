@@ -31,7 +31,7 @@ class UpdateMedicalVocabularyResponsePrivate : public TranscribeServiceResponseP
 
 public:
 
-    UpdateMedicalVocabularyResponsePrivate(UpdateMedicalVocabularyResponse * const q);
+    explicit UpdateMedicalVocabularyResponsePrivate(UpdateMedicalVocabularyResponse * const q);
 
     void parseUpdateMedicalVocabularyResponse(QXmlStreamReader &xml);
 

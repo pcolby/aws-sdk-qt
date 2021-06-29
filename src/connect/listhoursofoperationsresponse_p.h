@@ -31,7 +31,7 @@ class ListHoursOfOperationsResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    ListHoursOfOperationsResponsePrivate(ListHoursOfOperationsResponse * const q);
+    explicit ListHoursOfOperationsResponsePrivate(ListHoursOfOperationsResponse * const q);
 
     void parseListHoursOfOperationsResponse(QXmlStreamReader &xml);
 

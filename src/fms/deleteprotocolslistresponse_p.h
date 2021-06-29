@@ -31,7 +31,7 @@ class DeleteProtocolsListResponsePrivate : public FmsResponsePrivate {
 
 public:
 
-    DeleteProtocolsListResponsePrivate(DeleteProtocolsListResponse * const q);
+    explicit DeleteProtocolsListResponsePrivate(DeleteProtocolsListResponse * const q);
 
     void parseDeleteProtocolsListResponse(QXmlStreamReader &xml);
 

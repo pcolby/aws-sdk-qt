@@ -31,7 +31,7 @@ class CancelCapacityReservationResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CancelCapacityReservationResponsePrivate(CancelCapacityReservationResponse * const q);
+    explicit CancelCapacityReservationResponsePrivate(CancelCapacityReservationResponse * const q);
 
     void parseCancelCapacityReservationResponse(QXmlStreamReader &xml);
 

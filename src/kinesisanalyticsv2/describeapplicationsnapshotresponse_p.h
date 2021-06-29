@@ -31,7 +31,7 @@ class DescribeApplicationSnapshotResponsePrivate : public KinesisAnalyticsV2Resp
 
 public:
 
-    DescribeApplicationSnapshotResponsePrivate(DescribeApplicationSnapshotResponse * const q);
+    explicit DescribeApplicationSnapshotResponsePrivate(DescribeApplicationSnapshotResponse * const q);
 
     void parseDescribeApplicationSnapshotResponse(QXmlStreamReader &xml);
 

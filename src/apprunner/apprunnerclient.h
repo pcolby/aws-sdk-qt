@@ -85,7 +85,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    AppRunnerClient(
+    explicit AppRunnerClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -117,7 +117,7 @@ public slots:
 protected:
     /// @cond internal
     AppRunnerClientPrivate * const d_ptr; ///< Internal d-pointer.
-    AppRunnerClient(AppRunnerClientPrivate * const d);
+    explicit AppRunnerClient(AppRunnerClientPrivate * const d);
     /// @endcond
 
 private:

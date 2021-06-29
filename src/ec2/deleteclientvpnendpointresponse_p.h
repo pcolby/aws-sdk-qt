@@ -31,7 +31,7 @@ class DeleteClientVpnEndpointResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DeleteClientVpnEndpointResponsePrivate(DeleteClientVpnEndpointResponse * const q);
+    explicit DeleteClientVpnEndpointResponsePrivate(DeleteClientVpnEndpointResponse * const q);
 
     void parseDeleteClientVpnEndpointResponse(QXmlStreamReader &xml);
 

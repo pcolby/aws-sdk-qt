@@ -31,7 +31,7 @@ class GetRoleCredentialsResponsePrivate : public SsoResponsePrivate {
 
 public:
 
-    GetRoleCredentialsResponsePrivate(GetRoleCredentialsResponse * const q);
+    explicit GetRoleCredentialsResponsePrivate(GetRoleCredentialsResponse * const q);
 
     void parseGetRoleCredentialsResponse(QXmlStreamReader &xml);
 

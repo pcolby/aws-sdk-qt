@@ -31,7 +31,7 @@ class CreateReportGroupResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 
-    CreateReportGroupResponsePrivate(CreateReportGroupResponse * const q);
+    explicit CreateReportGroupResponsePrivate(CreateReportGroupResponse * const q);
 
     void parseCreateReportGroupResponse(QXmlStreamReader &xml);
 

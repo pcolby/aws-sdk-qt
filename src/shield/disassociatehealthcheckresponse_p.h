@@ -31,7 +31,7 @@ class DisassociateHealthCheckResponsePrivate : public ShieldResponsePrivate {
 
 public:
 
-    DisassociateHealthCheckResponsePrivate(DisassociateHealthCheckResponse * const q);
+    explicit DisassociateHealthCheckResponsePrivate(DisassociateHealthCheckResponse * const q);
 
     void parseDisassociateHealthCheckResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeDeliveryStreamResponsePrivate : public FirehoseResponsePrivate {
 
 public:
 
-    DescribeDeliveryStreamResponsePrivate(DescribeDeliveryStreamResponse * const q);
+    explicit DescribeDeliveryStreamResponsePrivate(DescribeDeliveryStreamResponse * const q);
 
     void parseDescribeDeliveryStreamResponse(QXmlStreamReader &xml);
 

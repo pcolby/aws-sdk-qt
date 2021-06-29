@@ -47,7 +47,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    MigrationHubConfigClient(
+    explicit MigrationHubConfigClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -60,7 +60,7 @@ public slots:
 protected:
     /// @cond internal
     MigrationHubConfigClientPrivate * const d_ptr; ///< Internal d-pointer.
-    MigrationHubConfigClient(MigrationHubConfigClientPrivate * const d);
+    explicit MigrationHubConfigClient(MigrationHubConfigClientPrivate * const d);
     /// @endcond
 
 private:

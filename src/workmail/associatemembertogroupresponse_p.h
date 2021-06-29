@@ -31,7 +31,7 @@ class AssociateMemberToGroupResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 
-    AssociateMemberToGroupResponsePrivate(AssociateMemberToGroupResponse * const q);
+    explicit AssociateMemberToGroupResponsePrivate(AssociateMemberToGroupResponse * const q);
 
     void parseAssociateMemberToGroupResponse(QXmlStreamReader &xml);
 

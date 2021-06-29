@@ -31,7 +31,7 @@ class AttachElasticLoadBalancerResponsePrivate : public OpsWorksResponsePrivate 
 
 public:
 
-    AttachElasticLoadBalancerResponsePrivate(AttachElasticLoadBalancerResponse * const q);
+    explicit AttachElasticLoadBalancerResponsePrivate(AttachElasticLoadBalancerResponse * const q);
 
     void parseAttachElasticLoadBalancerResponse(QXmlStreamReader &xml);
 

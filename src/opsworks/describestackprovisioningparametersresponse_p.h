@@ -31,7 +31,7 @@ class DescribeStackProvisioningParametersResponsePrivate : public OpsWorksRespon
 
 public:
 
-    DescribeStackProvisioningParametersResponsePrivate(DescribeStackProvisioningParametersResponse * const q);
+    explicit DescribeStackProvisioningParametersResponsePrivate(DescribeStackProvisioningParametersResponse * const q);
 
     void parseDescribeStackProvisioningParametersResponse(QXmlStreamReader &xml);
 

@@ -179,7 +179,7 @@ public:
 protected:
     /// @cond internal
     APIGatewayRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    APIGatewayRequest(APIGatewayRequestPrivate * const d);
+    explicit APIGatewayRequest(APIGatewayRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -31,7 +31,7 @@ class DescribeInstanceAccessControlAttributeConfigurationResponsePrivate : publi
 
 public:
 
-    DescribeInstanceAccessControlAttributeConfigurationResponsePrivate(DescribeInstanceAccessControlAttributeConfigurationResponse * const q);
+    explicit DescribeInstanceAccessControlAttributeConfigurationResponsePrivate(DescribeInstanceAccessControlAttributeConfigurationResponse * const q);
 
     void parseDescribeInstanceAccessControlAttributeConfigurationResponse(QXmlStreamReader &xml);
 

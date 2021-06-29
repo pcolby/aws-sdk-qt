@@ -31,7 +31,7 @@ class ExecuteTransactionResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 
-    ExecuteTransactionResponsePrivate(ExecuteTransactionResponse * const q);
+    explicit ExecuteTransactionResponsePrivate(ExecuteTransactionResponse * const q);
 
     void parseExecuteTransactionResponse(QXmlStreamReader &xml);
 

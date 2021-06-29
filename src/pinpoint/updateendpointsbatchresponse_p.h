@@ -31,7 +31,7 @@ class UpdateEndpointsBatchResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    UpdateEndpointsBatchResponsePrivate(UpdateEndpointsBatchResponse * const q);
+    explicit UpdateEndpointsBatchResponsePrivate(UpdateEndpointsBatchResponse * const q);
 
     void parseUpdateEndpointsBatchResponse(QXmlStreamReader &xml);
 

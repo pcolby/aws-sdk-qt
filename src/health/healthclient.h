@@ -67,7 +67,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    HealthClient(
+    explicit HealthClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -93,7 +93,7 @@ public slots:
 protected:
     /// @cond internal
     HealthClientPrivate * const d_ptr; ///< Internal d-pointer.
-    HealthClient(HealthClientPrivate * const d);
+    explicit HealthClient(HealthClientPrivate * const d);
     /// @endcond
 
 private:

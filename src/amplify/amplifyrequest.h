@@ -96,7 +96,7 @@ public:
 protected:
     /// @cond internal
     AmplifyRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    AmplifyRequest(AmplifyRequestPrivate * const d);
+    explicit AmplifyRequest(AmplifyRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

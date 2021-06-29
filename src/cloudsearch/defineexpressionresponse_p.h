@@ -31,7 +31,7 @@ class DefineExpressionResponsePrivate : public CloudSearchResponsePrivate {
 
 public:
 
-    DefineExpressionResponsePrivate(DefineExpressionResponse * const q);
+    explicit DefineExpressionResponsePrivate(DefineExpressionResponse * const q);
 
     void parseDefineExpressionResponse(QXmlStreamReader &xml);
 

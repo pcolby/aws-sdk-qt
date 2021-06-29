@@ -69,7 +69,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    TranslateClient(
+    explicit TranslateClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -93,7 +93,7 @@ public slots:
 protected:
     /// @cond internal
     TranslateClientPrivate * const d_ptr; ///< Internal d-pointer.
-    TranslateClient(TranslateClientPrivate * const d);
+    explicit TranslateClient(TranslateClientPrivate * const d);
     /// @endcond
 
 private:

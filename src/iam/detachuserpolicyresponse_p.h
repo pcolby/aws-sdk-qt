@@ -31,7 +31,7 @@ class DetachUserPolicyResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    DetachUserPolicyResponsePrivate(DetachUserPolicyResponse * const q);
+    explicit DetachUserPolicyResponsePrivate(DetachUserPolicyResponse * const q);
 
     void parseDetachUserPolicyResponse(QXmlStreamReader &xml);
 

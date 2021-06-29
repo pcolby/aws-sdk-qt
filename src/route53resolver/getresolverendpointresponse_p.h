@@ -31,7 +31,7 @@ class GetResolverEndpointResponsePrivate : public Route53ResolverResponsePrivate
 
 public:
 
-    GetResolverEndpointResponsePrivate(GetResolverEndpointResponse * const q);
+    explicit GetResolverEndpointResponsePrivate(GetResolverEndpointResponse * const q);
 
     void parseGetResolverEndpointResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListAWSDefaultServiceQuotasResponsePrivate : public ServiceQuotasResponseP
 
 public:
 
-    ListAWSDefaultServiceQuotasResponsePrivate(ListAWSDefaultServiceQuotasResponse * const q);
+    explicit ListAWSDefaultServiceQuotasResponsePrivate(ListAWSDefaultServiceQuotasResponse * const q);
 
     void parseListAWSDefaultServiceQuotasResponse(QXmlStreamReader &xml);
 

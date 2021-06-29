@@ -31,7 +31,7 @@ class ListBudgetsForResourceResponsePrivate : public ServiceCatalogResponsePriva
 
 public:
 
-    ListBudgetsForResourceResponsePrivate(ListBudgetsForResourceResponse * const q);
+    explicit ListBudgetsForResourceResponsePrivate(ListBudgetsForResourceResponse * const q);
 
     void parseListBudgetsForResourceResponse(QXmlStreamReader &xml);
 

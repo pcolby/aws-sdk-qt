@@ -31,7 +31,7 @@ class GetBuiltinSlotTypesResponsePrivate : public LexModelBuildingServiceRespons
 
 public:
 
-    GetBuiltinSlotTypesResponsePrivate(GetBuiltinSlotTypesResponse * const q);
+    explicit GetBuiltinSlotTypesResponsePrivate(GetBuiltinSlotTypesResponse * const q);
 
     void parseGetBuiltinSlotTypesResponse(QXmlStreamReader &xml);
 

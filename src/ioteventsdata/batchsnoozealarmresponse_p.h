@@ -31,7 +31,7 @@ class BatchSnoozeAlarmResponsePrivate : public IoTEventsDataResponsePrivate {
 
 public:
 
-    BatchSnoozeAlarmResponsePrivate(BatchSnoozeAlarmResponse * const q);
+    explicit BatchSnoozeAlarmResponsePrivate(BatchSnoozeAlarmResponse * const q);
 
     void parseBatchSnoozeAlarmResponse(QXmlStreamReader &xml);
 

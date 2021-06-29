@@ -31,7 +31,7 @@ class DeleteApplicationReferenceDataSourceResponsePrivate : public KinesisAnalyt
 
 public:
 
-    DeleteApplicationReferenceDataSourceResponsePrivate(DeleteApplicationReferenceDataSourceResponse * const q);
+    explicit DeleteApplicationReferenceDataSourceResponsePrivate(DeleteApplicationReferenceDataSourceResponse * const q);
 
     void parseDeleteApplicationReferenceDataSourceResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateArchiveRuleResponsePrivate : public AccessAnalyzerResponsePrivate {
 
 public:
 
-    CreateArchiveRuleResponsePrivate(CreateArchiveRuleResponse * const q);
+    explicit CreateArchiveRuleResponsePrivate(CreateArchiveRuleResponse * const q);
 
     void parseCreateArchiveRuleResponse(QXmlStreamReader &xml);
 

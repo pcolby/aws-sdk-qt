@@ -31,7 +31,7 @@ class RevokeClusterSecurityGroupIngressResponsePrivate : public RedshiftResponse
 
 public:
 
-    RevokeClusterSecurityGroupIngressResponsePrivate(RevokeClusterSecurityGroupIngressResponse * const q);
+    explicit RevokeClusterSecurityGroupIngressResponsePrivate(RevokeClusterSecurityGroupIngressResponse * const q);
 
     void parseRevokeClusterSecurityGroupIngressResponse(QXmlStreamReader &xml);
 

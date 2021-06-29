@@ -31,7 +31,7 @@ class CreateCloudFormationStackResponsePrivate : public LightsailResponsePrivate
 
 public:
 
-    CreateCloudFormationStackResponsePrivate(CreateCloudFormationStackResponse * const q);
+    explicit CreateCloudFormationStackResponsePrivate(CreateCloudFormationStackResponse * const q);
 
     void parseCreateCloudFormationStackResponse(QXmlStreamReader &xml);
 

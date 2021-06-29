@@ -31,7 +31,7 @@ class GetDedicatedIpsResponsePrivate : public PinpointEmailResponsePrivate {
 
 public:
 
-    GetDedicatedIpsResponsePrivate(GetDedicatedIpsResponse * const q);
+    explicit GetDedicatedIpsResponsePrivate(GetDedicatedIpsResponse * const q);
 
     void parseGetDedicatedIpsResponse(QXmlStreamReader &xml);
 

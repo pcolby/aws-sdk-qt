@@ -31,7 +31,7 @@ class RotateEncryptionKeyResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    RotateEncryptionKeyResponsePrivate(RotateEncryptionKeyResponse * const q);
+    explicit RotateEncryptionKeyResponsePrivate(RotateEncryptionKeyResponse * const q);
 
     void parseRotateEncryptionKeyResponse(QXmlStreamReader &xml);
 

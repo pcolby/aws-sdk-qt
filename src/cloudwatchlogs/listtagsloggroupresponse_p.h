@@ -31,7 +31,7 @@ class ListTagsLogGroupResponsePrivate : public CloudWatchLogsResponsePrivate {
 
 public:
 
-    ListTagsLogGroupResponsePrivate(ListTagsLogGroupResponse * const q);
+    explicit ListTagsLogGroupResponsePrivate(ListTagsLogGroupResponse * const q);
 
     void parseListTagsLogGroupResponse(QXmlStreamReader &xml);
 

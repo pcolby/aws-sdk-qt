@@ -83,7 +83,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    DevOpsGuruClient(
+    explicit DevOpsGuruClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -114,7 +114,7 @@ public slots:
 protected:
     /// @cond internal
     DevOpsGuruClientPrivate * const d_ptr; ///< Internal d-pointer.
-    DevOpsGuruClient(DevOpsGuruClientPrivate * const d);
+    explicit DevOpsGuruClient(DevOpsGuruClientPrivate * const d);
     /// @endcond
 
 private:

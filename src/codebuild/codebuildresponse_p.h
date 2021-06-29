@@ -29,7 +29,7 @@ class CodeBuildResponsePrivate {
 
 public:
 
-    CodeBuildResponsePrivate(CodeBuildResponse * const q);
+    explicit CodeBuildResponsePrivate(CodeBuildResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

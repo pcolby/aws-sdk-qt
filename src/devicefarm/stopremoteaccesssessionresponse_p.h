@@ -31,7 +31,7 @@ class StopRemoteAccessSessionResponsePrivate : public DeviceFarmResponsePrivate 
 
 public:
 
-    StopRemoteAccessSessionResponsePrivate(StopRemoteAccessSessionResponse * const q);
+    explicit StopRemoteAccessSessionResponsePrivate(StopRemoteAccessSessionResponse * const q);
 
     void parseStopRemoteAccessSessionResponse(QXmlStreamReader &xml);
 

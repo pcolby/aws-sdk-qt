@@ -31,7 +31,7 @@ class PutEmailIdentityDkimSigningAttributesResponsePrivate : public Sesv2Respons
 
 public:
 
-    PutEmailIdentityDkimSigningAttributesResponsePrivate(PutEmailIdentityDkimSigningAttributesResponse * const q);
+    explicit PutEmailIdentityDkimSigningAttributesResponsePrivate(PutEmailIdentityDkimSigningAttributesResponse * const q);
 
     void parsePutEmailIdentityDkimSigningAttributesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeScalingActivitiesResponsePrivate : public ApplicationAutoScalingRe
 
 public:
 
-    DescribeScalingActivitiesResponsePrivate(DescribeScalingActivitiesResponse * const q);
+    explicit DescribeScalingActivitiesResponsePrivate(DescribeScalingActivitiesResponse * const q);
 
     void parseDescribeScalingActivitiesResponse(QXmlStreamReader &xml);
 

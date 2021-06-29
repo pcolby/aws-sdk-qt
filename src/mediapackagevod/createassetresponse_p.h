@@ -31,7 +31,7 @@ class CreateAssetResponsePrivate : public MediaPackageVodResponsePrivate {
 
 public:
 
-    CreateAssetResponsePrivate(CreateAssetResponse * const q);
+    explicit CreateAssetResponsePrivate(CreateAssetResponse * const q);
 
     void parseCreateAssetResponse(QXmlStreamReader &xml);
 

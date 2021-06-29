@@ -31,7 +31,7 @@ class DescribeStackResourceResponsePrivate : public CloudFormationResponsePrivat
 
 public:
 
-    DescribeStackResourceResponsePrivate(DescribeStackResourceResponse * const q);
+    explicit DescribeStackResourceResponsePrivate(DescribeStackResourceResponse * const q);
 
     void parseDescribeStackResourceResponse(QXmlStreamReader &xml);
 

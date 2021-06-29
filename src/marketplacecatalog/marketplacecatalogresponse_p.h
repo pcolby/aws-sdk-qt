@@ -29,7 +29,7 @@ class MarketplaceCatalogResponsePrivate {
 
 public:
 
-    MarketplaceCatalogResponsePrivate(MarketplaceCatalogResponse * const q);
+    explicit MarketplaceCatalogResponsePrivate(MarketplaceCatalogResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

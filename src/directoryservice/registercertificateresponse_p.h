@@ -31,7 +31,7 @@ class RegisterCertificateResponsePrivate : public DirectoryServiceResponsePrivat
 
 public:
 
-    RegisterCertificateResponsePrivate(RegisterCertificateResponse * const q);
+    explicit RegisterCertificateResponsePrivate(RegisterCertificateResponse * const q);
 
     void parseRegisterCertificateResponse(QXmlStreamReader &xml);
 

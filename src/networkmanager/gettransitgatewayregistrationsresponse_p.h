@@ -31,7 +31,7 @@ class GetTransitGatewayRegistrationsResponsePrivate : public NetworkManagerRespo
 
 public:
 
-    GetTransitGatewayRegistrationsResponsePrivate(GetTransitGatewayRegistrationsResponse * const q);
+    explicit GetTransitGatewayRegistrationsResponsePrivate(GetTransitGatewayRegistrationsResponse * const q);
 
     void parseGetTransitGatewayRegistrationsResponse(QXmlStreamReader &xml);
 

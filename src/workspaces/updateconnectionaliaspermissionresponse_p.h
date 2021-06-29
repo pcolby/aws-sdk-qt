@@ -31,7 +31,7 @@ class UpdateConnectionAliasPermissionResponsePrivate : public WorkSpacesResponse
 
 public:
 
-    UpdateConnectionAliasPermissionResponsePrivate(UpdateConnectionAliasPermissionResponse * const q);
+    explicit UpdateConnectionAliasPermissionResponsePrivate(UpdateConnectionAliasPermissionResponse * const q);
 
     void parseUpdateConnectionAliasPermissionResponse(QXmlStreamReader &xml);
 

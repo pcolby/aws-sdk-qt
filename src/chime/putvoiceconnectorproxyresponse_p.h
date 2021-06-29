@@ -31,7 +31,7 @@ class PutVoiceConnectorProxyResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    PutVoiceConnectorProxyResponsePrivate(PutVoiceConnectorProxyResponse * const q);
+    explicit PutVoiceConnectorProxyResponsePrivate(PutVoiceConnectorProxyResponse * const q);
 
     void parsePutVoiceConnectorProxyResponse(QXmlStreamReader &xml);
 

@@ -72,7 +72,7 @@ public:
 protected:
     /// @cond internal
     ComputeOptimizerRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    ComputeOptimizerRequest(ComputeOptimizerRequestPrivate * const d);
+    explicit ComputeOptimizerRequest(ComputeOptimizerRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

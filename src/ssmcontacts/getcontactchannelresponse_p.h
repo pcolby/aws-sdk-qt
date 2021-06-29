@@ -31,7 +31,7 @@ class GetContactChannelResponsePrivate : public SSMContactsResponsePrivate {
 
 public:
 
-    GetContactChannelResponsePrivate(GetContactChannelResponse * const q);
+    explicit GetContactChannelResponsePrivate(GetContactChannelResponse * const q);
 
     void parseGetContactChannelResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class InvokeEndpointResponsePrivate : public SageMakerRuntimeResponsePrivate {
 
 public:
 
-    InvokeEndpointResponsePrivate(InvokeEndpointResponse * const q);
+    explicit InvokeEndpointResponsePrivate(InvokeEndpointResponse * const q);
 
     void parseInvokeEndpointResponse(QXmlStreamReader &xml);
 

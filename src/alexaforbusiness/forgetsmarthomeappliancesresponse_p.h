@@ -31,7 +31,7 @@ class ForgetSmartHomeAppliancesResponsePrivate : public AlexaForBusinessResponse
 
 public:
 
-    ForgetSmartHomeAppliancesResponsePrivate(ForgetSmartHomeAppliancesResponse * const q);
+    explicit ForgetSmartHomeAppliancesResponsePrivate(ForgetSmartHomeAppliancesResponse * const q);
 
     void parseForgetSmartHomeAppliancesResponse(QXmlStreamReader &xml);
 

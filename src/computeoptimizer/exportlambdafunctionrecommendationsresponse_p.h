@@ -31,7 +31,7 @@ class ExportLambdaFunctionRecommendationsResponsePrivate : public ComputeOptimiz
 
 public:
 
-    ExportLambdaFunctionRecommendationsResponsePrivate(ExportLambdaFunctionRecommendationsResponse * const q);
+    explicit ExportLambdaFunctionRecommendationsResponsePrivate(ExportLambdaFunctionRecommendationsResponse * const q);
 
     void parseExportLambdaFunctionRecommendationsResponse(QXmlStreamReader &xml);
 

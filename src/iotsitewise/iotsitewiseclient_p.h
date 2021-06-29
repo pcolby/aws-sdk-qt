@@ -30,7 +30,7 @@ class IoTSiteWiseClient;
 class IoTSiteWiseClientPrivate {
 
 public:
-    IoTSiteWiseClientPrivate(IoTSiteWiseClient * const q);
+    explicit IoTSiteWiseClientPrivate(IoTSiteWiseClient * const q);
 
 protected:
     IoTSiteWiseClient * const q_ptr; ///< Internal q-pointer.

@@ -31,7 +31,7 @@ class CreateTapeWithBarcodeResponsePrivate : public StorageGatewayResponsePrivat
 
 public:
 
-    CreateTapeWithBarcodeResponsePrivate(CreateTapeWithBarcodeResponse * const q);
+    explicit CreateTapeWithBarcodeResponsePrivate(CreateTapeWithBarcodeResponse * const q);
 
     void parseCreateTapeWithBarcodeResponse(QXmlStreamReader &xml);
 

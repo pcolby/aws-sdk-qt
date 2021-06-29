@@ -30,7 +30,7 @@ class S3Client;
 class S3ClientPrivate {
 
 public:
-    S3ClientPrivate(S3Client * const q);
+    explicit S3ClientPrivate(S3Client * const q);
 
 protected:
     S3Client * const q_ptr; ///< Internal q-pointer.

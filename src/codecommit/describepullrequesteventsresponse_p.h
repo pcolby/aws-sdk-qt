@@ -31,7 +31,7 @@ class DescribePullRequestEventsResponsePrivate : public CodeCommitResponsePrivat
 
 public:
 
-    DescribePullRequestEventsResponsePrivate(DescribePullRequestEventsResponse * const q);
+    explicit DescribePullRequestEventsResponsePrivate(DescribePullRequestEventsResponse * const q);
 
     void parseDescribePullRequestEventsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeGatewayInformationResponsePrivate : public StorageGatewayResponseP
 
 public:
 
-    DescribeGatewayInformationResponsePrivate(DescribeGatewayInformationResponse * const q);
+    explicit DescribeGatewayInformationResponsePrivate(DescribeGatewayInformationResponse * const q);
 
     void parseDescribeGatewayInformationResponse(QXmlStreamReader &xml);
 

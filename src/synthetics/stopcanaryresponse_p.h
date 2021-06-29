@@ -31,7 +31,7 @@ class StopCanaryResponsePrivate : public SyntheticsResponsePrivate {
 
 public:
 
-    StopCanaryResponsePrivate(StopCanaryResponse * const q);
+    explicit StopCanaryResponsePrivate(StopCanaryResponse * const q);
 
     void parseStopCanaryResponse(QXmlStreamReader &xml);
 

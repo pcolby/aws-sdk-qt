@@ -31,7 +31,7 @@ class GetQueueUrlResponsePrivate : public SqsResponsePrivate {
 
 public:
 
-    GetQueueUrlResponsePrivate(GetQueueUrlResponse * const q);
+    explicit GetQueueUrlResponsePrivate(GetQueueUrlResponse * const q);
 
     void parseGetQueueUrlResponse(QXmlStreamReader &xml);
 

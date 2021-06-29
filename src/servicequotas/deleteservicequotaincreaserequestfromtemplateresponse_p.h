@@ -31,7 +31,7 @@ class DeleteServiceQuotaIncreaseRequestFromTemplateResponsePrivate : public Serv
 
 public:
 
-    DeleteServiceQuotaIncreaseRequestFromTemplateResponsePrivate(DeleteServiceQuotaIncreaseRequestFromTemplateResponse * const q);
+    explicit DeleteServiceQuotaIncreaseRequestFromTemplateResponsePrivate(DeleteServiceQuotaIncreaseRequestFromTemplateResponse * const q);
 
     void parseDeleteServiceQuotaIncreaseRequestFromTemplateResponse(QXmlStreamReader &xml);
 

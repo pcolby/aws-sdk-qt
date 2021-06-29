@@ -31,7 +31,7 @@ class ListCustomRoutingPortMappingsByDestinationResponsePrivate : public GlobalA
 
 public:
 
-    ListCustomRoutingPortMappingsByDestinationResponsePrivate(ListCustomRoutingPortMappingsByDestinationResponse * const q);
+    explicit ListCustomRoutingPortMappingsByDestinationResponsePrivate(ListCustomRoutingPortMappingsByDestinationResponse * const q);
 
     void parseListCustomRoutingPortMappingsByDestinationResponse(QXmlStreamReader &xml);
 

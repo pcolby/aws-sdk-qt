@@ -31,7 +31,7 @@ class DescribeCustomAvailabilityZonesResponsePrivate : public RdsResponsePrivate
 
 public:
 
-    DescribeCustomAvailabilityZonesResponsePrivate(DescribeCustomAvailabilityZonesResponse * const q);
+    explicit DescribeCustomAvailabilityZonesResponsePrivate(DescribeCustomAvailabilityZonesResponse * const q);
 
     void parseDescribeCustomAvailabilityZonesResponse(QXmlStreamReader &xml);
 

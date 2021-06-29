@@ -31,7 +31,7 @@ class DescribeConstraintResponsePrivate : public ServiceCatalogResponsePrivate {
 
 public:
 
-    DescribeConstraintResponsePrivate(DescribeConstraintResponse * const q);
+    explicit DescribeConstraintResponsePrivate(DescribeConstraintResponse * const q);
 
     void parseDescribeConstraintResponse(QXmlStreamReader &xml);
 

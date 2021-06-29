@@ -31,7 +31,7 @@ class ListNodesResponsePrivate : public KafkaResponsePrivate {
 
 public:
 
-    ListNodesResponsePrivate(ListNodesResponse * const q);
+    explicit ListNodesResponsePrivate(ListNodesResponse * const q);
 
     void parseListNodesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteRelationalDatabaseResponsePrivate : public LightsailResponsePrivate 
 
 public:
 
-    DeleteRelationalDatabaseResponsePrivate(DeleteRelationalDatabaseResponse * const q);
+    explicit DeleteRelationalDatabaseResponsePrivate(DeleteRelationalDatabaseResponse * const q);
 
     void parseDeleteRelationalDatabaseResponse(QXmlStreamReader &xml);
 

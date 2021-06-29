@@ -31,7 +31,7 @@ class PutVoiceConnectorTerminationCredentialsResponsePrivate : public ChimeRespo
 
 public:
 
-    PutVoiceConnectorTerminationCredentialsResponsePrivate(PutVoiceConnectorTerminationCredentialsResponse * const q);
+    explicit PutVoiceConnectorTerminationCredentialsResponsePrivate(PutVoiceConnectorTerminationCredentialsResponse * const q);
 
     void parsePutVoiceConnectorTerminationCredentialsResponse(QXmlStreamReader &xml);
 

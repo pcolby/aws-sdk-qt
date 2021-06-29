@@ -31,7 +31,7 @@ class GetBackupVaultNotificationsResponsePrivate : public BackupResponsePrivate 
 
 public:
 
-    GetBackupVaultNotificationsResponsePrivate(GetBackupVaultNotificationsResponse * const q);
+    explicit GetBackupVaultNotificationsResponsePrivate(GetBackupVaultNotificationsResponse * const q);
 
     void parseGetBackupVaultNotificationsResponse(QXmlStreamReader &xml);
 

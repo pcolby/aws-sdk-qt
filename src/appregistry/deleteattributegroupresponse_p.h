@@ -31,7 +31,7 @@ class DeleteAttributeGroupResponsePrivate : public AppRegistryResponsePrivate {
 
 public:
 
-    DeleteAttributeGroupResponsePrivate(DeleteAttributeGroupResponse * const q);
+    explicit DeleteAttributeGroupResponsePrivate(DeleteAttributeGroupResponse * const q);
 
     void parseDeleteAttributeGroupResponse(QXmlStreamReader &xml);
 

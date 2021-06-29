@@ -31,7 +31,7 @@ class UpdateEventIntegrationResponsePrivate : public AppIntegrationsServiceRespo
 
 public:
 
-    UpdateEventIntegrationResponsePrivate(UpdateEventIntegrationResponse * const q);
+    explicit UpdateEventIntegrationResponsePrivate(UpdateEventIntegrationResponse * const q);
 
     void parseUpdateEventIntegrationResponse(QXmlStreamReader &xml);
 

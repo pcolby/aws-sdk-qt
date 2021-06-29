@@ -31,7 +31,7 @@ class NotifyWorkersResponsePrivate : public MTurkResponsePrivate {
 
 public:
 
-    NotifyWorkersResponsePrivate(NotifyWorkersResponse * const q);
+    explicit NotifyWorkersResponsePrivate(NotifyWorkersResponse * const q);
 
     void parseNotifyWorkersResponse(QXmlStreamReader &xml);
 

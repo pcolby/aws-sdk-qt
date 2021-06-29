@@ -31,7 +31,7 @@ class DescribeLocalGatewayVirtualInterfaceGroupsResponsePrivate : public Ec2Resp
 
 public:
 
-    DescribeLocalGatewayVirtualInterfaceGroupsResponsePrivate(DescribeLocalGatewayVirtualInterfaceGroupsResponse * const q);
+    explicit DescribeLocalGatewayVirtualInterfaceGroupsResponsePrivate(DescribeLocalGatewayVirtualInterfaceGroupsResponse * const q);
 
     void parseDescribeLocalGatewayVirtualInterfaceGroupsResponse(QXmlStreamReader &xml);
 

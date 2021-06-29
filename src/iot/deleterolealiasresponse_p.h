@@ -31,7 +31,7 @@ class DeleteRoleAliasResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DeleteRoleAliasResponsePrivate(DeleteRoleAliasResponse * const q);
+    explicit DeleteRoleAliasResponsePrivate(DeleteRoleAliasResponse * const q);
 
     void parseDeleteRoleAliasResponse(QXmlStreamReader &xml);
 

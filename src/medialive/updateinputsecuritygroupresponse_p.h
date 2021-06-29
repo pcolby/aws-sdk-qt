@@ -31,7 +31,7 @@ class UpdateInputSecurityGroupResponsePrivate : public MediaLiveResponsePrivate 
 
 public:
 
-    UpdateInputSecurityGroupResponsePrivate(UpdateInputSecurityGroupResponse * const q);
+    explicit UpdateInputSecurityGroupResponsePrivate(UpdateInputSecurityGroupResponse * const q);
 
     void parseUpdateInputSecurityGroupResponse(QXmlStreamReader &xml);
 

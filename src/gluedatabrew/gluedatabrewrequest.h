@@ -98,7 +98,7 @@ public:
 protected:
     /// @cond internal
     GlueDataBrewRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    GlueDataBrewRequest(GlueDataBrewRequestPrivate * const d);
+    explicit GlueDataBrewRequest(GlueDataBrewRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

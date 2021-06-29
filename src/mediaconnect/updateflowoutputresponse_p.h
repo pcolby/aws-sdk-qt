@@ -31,7 +31,7 @@ class UpdateFlowOutputResponsePrivate : public MediaConnectResponsePrivate {
 
 public:
 
-    UpdateFlowOutputResponsePrivate(UpdateFlowOutputResponse * const q);
+    explicit UpdateFlowOutputResponsePrivate(UpdateFlowOutputResponse * const q);
 
     void parseUpdateFlowOutputResponse(QXmlStreamReader &xml);
 

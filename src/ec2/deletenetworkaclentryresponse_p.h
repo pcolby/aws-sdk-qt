@@ -31,7 +31,7 @@ class DeleteNetworkAclEntryResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DeleteNetworkAclEntryResponsePrivate(DeleteNetworkAclEntryResponse * const q);
+    explicit DeleteNetworkAclEntryResponsePrivate(DeleteNetworkAclEntryResponse * const q);
 
     void parseDeleteNetworkAclEntryResponse(QXmlStreamReader &xml);
 

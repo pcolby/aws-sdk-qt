@@ -31,7 +31,7 @@ class DeleteVpcLinkResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    DeleteVpcLinkResponsePrivate(DeleteVpcLinkResponse * const q);
+    explicit DeleteVpcLinkResponsePrivate(DeleteVpcLinkResponse * const q);
 
     void parseDeleteVpcLinkResponse(QXmlStreamReader &xml);
 

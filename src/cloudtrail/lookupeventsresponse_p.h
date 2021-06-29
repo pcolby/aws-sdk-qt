@@ -31,7 +31,7 @@ class LookupEventsResponsePrivate : public CloudTrailResponsePrivate {
 
 public:
 
-    LookupEventsResponsePrivate(LookupEventsResponse * const q);
+    explicit LookupEventsResponsePrivate(LookupEventsResponse * const q);
 
     void parseLookupEventsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetOutcomesResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 
-    GetOutcomesResponsePrivate(GetOutcomesResponse * const q);
+    explicit GetOutcomesResponsePrivate(GetOutcomesResponse * const q);
 
     void parseGetOutcomesResponse(QXmlStreamReader &xml);
 

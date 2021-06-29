@@ -29,7 +29,7 @@ class KmsResponsePrivate {
 
 public:
 
-    KmsResponsePrivate(KmsResponse * const q);
+    explicit KmsResponsePrivate(KmsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

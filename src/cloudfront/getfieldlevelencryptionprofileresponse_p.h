@@ -31,7 +31,7 @@ class GetFieldLevelEncryptionProfileResponsePrivate : public CloudFrontResponseP
 
 public:
 
-    GetFieldLevelEncryptionProfileResponsePrivate(GetFieldLevelEncryptionProfileResponse * const q);
+    explicit GetFieldLevelEncryptionProfileResponsePrivate(GetFieldLevelEncryptionProfileResponse * const q);
 
     void parseGetFieldLevelEncryptionProfileResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class StopPiiEntitiesDetectionJobResponsePrivate : public ComprehendResponsePriv
 
 public:
 
-    StopPiiEntitiesDetectionJobResponsePrivate(StopPiiEntitiesDetectionJobResponse * const q);
+    explicit StopPiiEntitiesDetectionJobResponsePrivate(StopPiiEntitiesDetectionJobResponse * const q);
 
     void parseStopPiiEntitiesDetectionJobResponse(QXmlStreamReader &xml);
 

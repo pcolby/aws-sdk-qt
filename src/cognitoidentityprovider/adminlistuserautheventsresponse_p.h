@@ -31,7 +31,7 @@ class AdminListUserAuthEventsResponsePrivate : public CognitoIdentityProviderRes
 
 public:
 
-    AdminListUserAuthEventsResponsePrivate(AdminListUserAuthEventsResponse * const q);
+    explicit AdminListUserAuthEventsResponsePrivate(AdminListUserAuthEventsResponse * const q);
 
     void parseAdminListUserAuthEventsResponse(QXmlStreamReader &xml);
 

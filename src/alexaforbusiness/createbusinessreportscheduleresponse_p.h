@@ -31,7 +31,7 @@ class CreateBusinessReportScheduleResponsePrivate : public AlexaForBusinessRespo
 
 public:
 
-    CreateBusinessReportScheduleResponsePrivate(CreateBusinessReportScheduleResponse * const q);
+    explicit CreateBusinessReportScheduleResponsePrivate(CreateBusinessReportScheduleResponse * const q);
 
     void parseCreateBusinessReportScheduleResponse(QXmlStreamReader &xml);
 

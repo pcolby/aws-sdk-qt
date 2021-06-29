@@ -31,7 +31,7 @@ class GetCurrentMetricDataResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    GetCurrentMetricDataResponsePrivate(GetCurrentMetricDataResponse * const q);
+    explicit GetCurrentMetricDataResponsePrivate(GetCurrentMetricDataResponse * const q);
 
     void parseGetCurrentMetricDataResponse(QXmlStreamReader &xml);
 

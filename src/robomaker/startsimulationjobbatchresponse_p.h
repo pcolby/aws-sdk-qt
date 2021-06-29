@@ -31,7 +31,7 @@ class StartSimulationJobBatchResponsePrivate : public RoboMakerResponsePrivate {
 
 public:
 
-    StartSimulationJobBatchResponsePrivate(StartSimulationJobBatchResponse * const q);
+    explicit StartSimulationJobBatchResponsePrivate(StartSimulationJobBatchResponse * const q);
 
     void parseStartSimulationJobBatchResponse(QXmlStreamReader &xml);
 

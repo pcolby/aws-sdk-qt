@@ -31,7 +31,7 @@ class AssociateHostedConnectionResponsePrivate : public DirectConnectResponsePri
 
 public:
 
-    AssociateHostedConnectionResponsePrivate(AssociateHostedConnectionResponse * const q);
+    explicit AssociateHostedConnectionResponsePrivate(AssociateHostedConnectionResponse * const q);
 
     void parseAssociateHostedConnectionResponse(QXmlStreamReader &xml);
 

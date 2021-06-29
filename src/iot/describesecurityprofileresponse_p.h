@@ -31,7 +31,7 @@ class DescribeSecurityProfileResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DescribeSecurityProfileResponsePrivate(DescribeSecurityProfileResponse * const q);
+    explicit DescribeSecurityProfileResponsePrivate(DescribeSecurityProfileResponse * const q);
 
     void parseDescribeSecurityProfileResponse(QXmlStreamReader &xml);
 

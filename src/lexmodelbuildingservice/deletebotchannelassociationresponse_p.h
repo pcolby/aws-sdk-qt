@@ -31,7 +31,7 @@ class DeleteBotChannelAssociationResponsePrivate : public LexModelBuildingServic
 
 public:
 
-    DeleteBotChannelAssociationResponsePrivate(DeleteBotChannelAssociationResponse * const q);
+    explicit DeleteBotChannelAssociationResponsePrivate(DeleteBotChannelAssociationResponse * const q);
 
     void parseDeleteBotChannelAssociationResponse(QXmlStreamReader &xml);
 

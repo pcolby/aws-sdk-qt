@@ -31,7 +31,7 @@ class UntagMFADeviceResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    UntagMFADeviceResponsePrivate(UntagMFADeviceResponse * const q);
+    explicit UntagMFADeviceResponsePrivate(UntagMFADeviceResponse * const q);
 
     void parseUntagMFADeviceResponse(QXmlStreamReader &xml);
 

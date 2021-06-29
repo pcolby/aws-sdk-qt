@@ -31,7 +31,7 @@ class GetFilterResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 
-    GetFilterResponsePrivate(GetFilterResponse * const q);
+    explicit GetFilterResponsePrivate(GetFilterResponse * const q);
 
     void parseGetFilterResponse(QXmlStreamReader &xml);
 

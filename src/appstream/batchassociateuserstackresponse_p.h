@@ -31,7 +31,7 @@ class BatchAssociateUserStackResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 
-    BatchAssociateUserStackResponsePrivate(BatchAssociateUserStackResponse * const q);
+    explicit BatchAssociateUserStackResponsePrivate(BatchAssociateUserStackResponse * const q);
 
     void parseBatchAssociateUserStackResponse(QXmlStreamReader &xml);
 

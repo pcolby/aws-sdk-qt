@@ -31,7 +31,7 @@ class CreateClusterSnapshotResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    CreateClusterSnapshotResponsePrivate(CreateClusterSnapshotResponse * const q);
+    explicit CreateClusterSnapshotResponsePrivate(CreateClusterSnapshotResponse * const q);
 
     void parseCreateClusterSnapshotResponse(QXmlStreamReader &xml);
 

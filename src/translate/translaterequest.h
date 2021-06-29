@@ -73,7 +73,7 @@ public:
 protected:
     /// @cond internal
     TranslateRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    TranslateRequest(TranslateRequestPrivate * const d);
+    explicit TranslateRequest(TranslateRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

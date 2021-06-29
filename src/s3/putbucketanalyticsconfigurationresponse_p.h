@@ -31,7 +31,7 @@ class PutBucketAnalyticsConfigurationResponsePrivate : public S3ResponsePrivate 
 
 public:
 
-    PutBucketAnalyticsConfigurationResponsePrivate(PutBucketAnalyticsConfigurationResponse * const q);
+    explicit PutBucketAnalyticsConfigurationResponsePrivate(PutBucketAnalyticsConfigurationResponse * const q);
 
     void parsePutBucketAnalyticsConfigurationResponse(QXmlStreamReader &xml);
 

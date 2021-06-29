@@ -31,7 +31,7 @@ class CheckCapacityResponsePrivate : public Wafv2ResponsePrivate {
 
 public:
 
-    CheckCapacityResponsePrivate(CheckCapacityResponse * const q);
+    explicit CheckCapacityResponsePrivate(CheckCapacityResponse * const q);
 
     void parseCheckCapacityResponse(QXmlStreamReader &xml);
 

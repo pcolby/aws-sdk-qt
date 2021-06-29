@@ -31,7 +31,7 @@ class ListAccessKeysResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    ListAccessKeysResponsePrivate(ListAccessKeysResponse * const q);
+    explicit ListAccessKeysResponsePrivate(ListAccessKeysResponse * const q);
 
     void parseListAccessKeysResponse(QXmlStreamReader &xml);
 

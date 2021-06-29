@@ -31,7 +31,7 @@ class DescribeMaintenanceStartTimeResponsePrivate : public StorageGatewayRespons
 
 public:
 
-    DescribeMaintenanceStartTimeResponsePrivate(DescribeMaintenanceStartTimeResponse * const q);
+    explicit DescribeMaintenanceStartTimeResponsePrivate(DescribeMaintenanceStartTimeResponse * const q);
 
     void parseDescribeMaintenanceStartTimeResponse(QXmlStreamReader &xml);
 

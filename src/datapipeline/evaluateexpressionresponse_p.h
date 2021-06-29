@@ -31,7 +31,7 @@ class EvaluateExpressionResponsePrivate : public DataPipelineResponsePrivate {
 
 public:
 
-    EvaluateExpressionResponsePrivate(EvaluateExpressionResponse * const q);
+    explicit EvaluateExpressionResponsePrivate(EvaluateExpressionResponse * const q);
 
     void parseEvaluateExpressionResponse(QXmlStreamReader &xml);
 

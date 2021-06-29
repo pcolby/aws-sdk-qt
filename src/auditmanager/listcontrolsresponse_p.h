@@ -31,7 +31,7 @@ class ListControlsResponsePrivate : public AuditManagerResponsePrivate {
 
 public:
 
-    ListControlsResponsePrivate(ListControlsResponse * const q);
+    explicit ListControlsResponsePrivate(ListControlsResponse * const q);
 
     void parseListControlsResponse(QXmlStreamReader &xml);
 

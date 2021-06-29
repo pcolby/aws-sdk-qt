@@ -31,7 +31,7 @@ class SynthesizeSpeechResponsePrivate : public PollyResponsePrivate {
 
 public:
 
-    SynthesizeSpeechResponsePrivate(SynthesizeSpeechResponse * const q);
+    explicit SynthesizeSpeechResponsePrivate(SynthesizeSpeechResponse * const q);
 
     void parseSynthesizeSpeechResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeletePlatformVersionResponsePrivate : public ElasticBeanstalkResponsePriv
 
 public:
 
-    DeletePlatformVersionResponsePrivate(DeletePlatformVersionResponse * const q);
+    explicit DeletePlatformVersionResponsePrivate(DeletePlatformVersionResponse * const q);
 
     void parseDeletePlatformVersionResponse(QXmlStreamReader &xml);
 

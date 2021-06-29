@@ -31,7 +31,7 @@ class DeleteDimensionResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DeleteDimensionResponsePrivate(DeleteDimensionResponse * const q);
+    explicit DeleteDimensionResponsePrivate(DeleteDimensionResponse * const q);
 
     void parseDeleteDimensionResponse(QXmlStreamReader &xml);
 

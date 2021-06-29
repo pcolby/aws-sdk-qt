@@ -31,7 +31,7 @@ class GetLinkAttributesResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 
-    GetLinkAttributesResponsePrivate(GetLinkAttributesResponse * const q);
+    explicit GetLinkAttributesResponsePrivate(GetLinkAttributesResponse * const q);
 
     void parseGetLinkAttributesResponse(QXmlStreamReader &xml);
 

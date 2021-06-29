@@ -31,7 +31,7 @@ class DescribeAccessResponsePrivate : public TransferResponsePrivate {
 
 public:
 
-    DescribeAccessResponsePrivate(DescribeAccessResponse * const q);
+    explicit DescribeAccessResponsePrivate(DescribeAccessResponse * const q);
 
     void parseDescribeAccessResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeOrganizationConformancePacksResponsePrivate : public ConfigService
 
 public:
 
-    DescribeOrganizationConformancePacksResponsePrivate(DescribeOrganizationConformancePacksResponse * const q);
+    explicit DescribeOrganizationConformancePacksResponsePrivate(DescribeOrganizationConformancePacksResponse * const q);
 
     void parseDescribeOrganizationConformancePacksResponse(QXmlStreamReader &xml);
 

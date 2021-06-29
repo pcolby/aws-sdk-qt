@@ -31,7 +31,7 @@ class ListComponentsResponsePrivate : public ApplicationInsightsResponsePrivate 
 
 public:
 
-    ListComponentsResponsePrivate(ListComponentsResponse * const q);
+    explicit ListComponentsResponsePrivate(ListComponentsResponse * const q);
 
     void parseListComponentsResponse(QXmlStreamReader &xml);
 

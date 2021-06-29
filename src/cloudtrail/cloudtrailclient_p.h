@@ -30,7 +30,7 @@ class CloudTrailClient;
 class CloudTrailClientPrivate {
 
 public:
-    CloudTrailClientPrivate(CloudTrailClient * const q);
+    explicit CloudTrailClientPrivate(CloudTrailClient * const q);
 
 protected:
     CloudTrailClient * const q_ptr; ///< Internal q-pointer.

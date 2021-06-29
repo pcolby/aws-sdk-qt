@@ -31,7 +31,7 @@ class UpdateTypedLinkFacetResponsePrivate : public CloudDirectoryResponsePrivate
 
 public:
 
-    UpdateTypedLinkFacetResponsePrivate(UpdateTypedLinkFacetResponse * const q);
+    explicit UpdateTypedLinkFacetResponsePrivate(UpdateTypedLinkFacetResponse * const q);
 
     void parseUpdateTypedLinkFacetResponse(QXmlStreamReader &xml);
 

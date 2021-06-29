@@ -31,7 +31,7 @@ class ListPipelineExecutionStepsResponsePrivate : public SageMakerResponsePrivat
 
 public:
 
-    ListPipelineExecutionStepsResponsePrivate(ListPipelineExecutionStepsResponse * const q);
+    explicit ListPipelineExecutionStepsResponsePrivate(ListPipelineExecutionStepsResponse * const q);
 
     void parseListPipelineExecutionStepsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeChannelModeratedByAppInstanceUserResponsePrivate : public ChimeRes
 
 public:
 
-    DescribeChannelModeratedByAppInstanceUserResponsePrivate(DescribeChannelModeratedByAppInstanceUserResponse * const q);
+    explicit DescribeChannelModeratedByAppInstanceUserResponsePrivate(DescribeChannelModeratedByAppInstanceUserResponse * const q);
 
     void parseDescribeChannelModeratedByAppInstanceUserResponse(QXmlStreamReader &xml);
 

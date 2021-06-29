@@ -29,7 +29,7 @@ class MediaPackageVodResponsePrivate {
 
 public:
 
-    MediaPackageVodResponsePrivate(MediaPackageVodResponse * const q);
+    explicit MediaPackageVodResponsePrivate(MediaPackageVodResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

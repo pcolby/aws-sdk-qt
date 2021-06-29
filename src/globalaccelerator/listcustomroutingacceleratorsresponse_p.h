@@ -31,7 +31,7 @@ class ListCustomRoutingAcceleratorsResponsePrivate : public GlobalAcceleratorRes
 
 public:
 
-    ListCustomRoutingAcceleratorsResponsePrivate(ListCustomRoutingAcceleratorsResponse * const q);
+    explicit ListCustomRoutingAcceleratorsResponsePrivate(ListCustomRoutingAcceleratorsResponse * const q);
 
     void parseListCustomRoutingAcceleratorsResponse(QXmlStreamReader &xml);
 

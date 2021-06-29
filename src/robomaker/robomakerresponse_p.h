@@ -29,7 +29,7 @@ class RoboMakerResponsePrivate {
 
 public:
 
-    RoboMakerResponsePrivate(RoboMakerResponse * const q);
+    explicit RoboMakerResponsePrivate(RoboMakerResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

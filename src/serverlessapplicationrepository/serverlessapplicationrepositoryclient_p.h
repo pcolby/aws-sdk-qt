@@ -30,7 +30,7 @@ class ServerlessApplicationRepositoryClient;
 class ServerlessApplicationRepositoryClientPrivate {
 
 public:
-    ServerlessApplicationRepositoryClientPrivate(ServerlessApplicationRepositoryClient * const q);
+    explicit ServerlessApplicationRepositoryClientPrivate(ServerlessApplicationRepositoryClient * const q);
 
 protected:
     ServerlessApplicationRepositoryClient * const q_ptr; ///< Internal q-pointer.

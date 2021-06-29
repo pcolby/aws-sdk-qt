@@ -31,7 +31,7 @@ class DeleteGatewayResponsePrivate : public IoTSiteWiseResponsePrivate {
 
 public:
 
-    DeleteGatewayResponsePrivate(DeleteGatewayResponse * const q);
+    explicit DeleteGatewayResponsePrivate(DeleteGatewayResponse * const q);
 
     void parseDeleteGatewayResponse(QXmlStreamReader &xml);
 

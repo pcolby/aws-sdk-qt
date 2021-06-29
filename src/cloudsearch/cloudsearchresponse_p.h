@@ -29,7 +29,7 @@ class CloudSearchResponsePrivate {
 
 public:
 
-    CloudSearchResponsePrivate(CloudSearchResponse * const q);
+    explicit CloudSearchResponsePrivate(CloudSearchResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

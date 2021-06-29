@@ -31,7 +31,7 @@ class GetFolderResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 
-    GetFolderResponsePrivate(GetFolderResponse * const q);
+    explicit GetFolderResponsePrivate(GetFolderResponse * const q);
 
     void parseGetFolderResponse(QXmlStreamReader &xml);
 

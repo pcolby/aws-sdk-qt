@@ -31,7 +31,7 @@ class DescribeByoipCidrsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeByoipCidrsResponsePrivate(DescribeByoipCidrsResponse * const q);
+    explicit DescribeByoipCidrsResponsePrivate(DescribeByoipCidrsResponse * const q);
 
     void parseDescribeByoipCidrsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetDifferencesResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 
-    GetDifferencesResponsePrivate(GetDifferencesResponse * const q);
+    explicit GetDifferencesResponsePrivate(GetDifferencesResponse * const q);
 
     void parseGetDifferencesResponse(QXmlStreamReader &xml);
 

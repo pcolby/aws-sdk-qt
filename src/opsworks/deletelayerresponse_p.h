@@ -31,7 +31,7 @@ class DeleteLayerResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    DeleteLayerResponsePrivate(DeleteLayerResponse * const q);
+    explicit DeleteLayerResponsePrivate(DeleteLayerResponse * const q);
 
     void parseDeleteLayerResponse(QXmlStreamReader &xml);
 

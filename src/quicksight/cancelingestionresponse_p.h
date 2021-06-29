@@ -31,7 +31,7 @@ class CancelIngestionResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    CancelIngestionResponsePrivate(CancelIngestionResponse * const q);
+    explicit CancelIngestionResponsePrivate(CancelIngestionResponse * const q);
 
     void parseCancelIngestionResponse(QXmlStreamReader &xml);
 

@@ -91,7 +91,7 @@ public:
 protected:
     /// @cond internal
     EksRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    EksRequest(EksRequestPrivate * const d);
+    explicit EksRequest(EksRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

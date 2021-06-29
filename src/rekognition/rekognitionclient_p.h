@@ -30,7 +30,7 @@ class RekognitionClient;
 class RekognitionClientPrivate {
 
 public:
-    RekognitionClientPrivate(RekognitionClient * const q);
+    explicit RekognitionClientPrivate(RekognitionClient * const q);
 
 protected:
     RekognitionClient * const q_ptr; ///< Internal q-pointer.

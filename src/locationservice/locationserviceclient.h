@@ -131,7 +131,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    LocationServiceClient(
+    explicit LocationServiceClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -186,7 +186,7 @@ public slots:
 protected:
     /// @cond internal
     LocationServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
-    LocationServiceClient(LocationServiceClientPrivate * const d);
+    explicit LocationServiceClient(LocationServiceClientPrivate * const d);
     /// @endcond
 
 private:

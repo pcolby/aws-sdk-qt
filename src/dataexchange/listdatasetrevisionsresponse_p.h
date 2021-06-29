@@ -31,7 +31,7 @@ class ListDataSetRevisionsResponsePrivate : public DataExchangeResponsePrivate {
 
 public:
 
-    ListDataSetRevisionsResponsePrivate(ListDataSetRevisionsResponse * const q);
+    explicit ListDataSetRevisionsResponsePrivate(ListDataSetRevisionsResponse * const q);
 
     void parseListDataSetRevisionsResponse(QXmlStreamReader &xml);
 

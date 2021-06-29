@@ -31,7 +31,7 @@ class ListElasticsearchInstanceTypesResponsePrivate : public ElasticsearchServic
 
 public:
 
-    ListElasticsearchInstanceTypesResponsePrivate(ListElasticsearchInstanceTypesResponse * const q);
+    explicit ListElasticsearchInstanceTypesResponsePrivate(ListElasticsearchInstanceTypesResponse * const q);
 
     void parseListElasticsearchInstanceTypesResponse(QXmlStreamReader &xml);
 

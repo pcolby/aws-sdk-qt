@@ -31,7 +31,7 @@ class DescribeDatasetResponsePrivate : public IoTAnalyticsResponsePrivate {
 
 public:
 
-    DescribeDatasetResponsePrivate(DescribeDatasetResponse * const q);
+    explicit DescribeDatasetResponsePrivate(DescribeDatasetResponse * const q);
 
     void parseDescribeDatasetResponse(QXmlStreamReader &xml);
 

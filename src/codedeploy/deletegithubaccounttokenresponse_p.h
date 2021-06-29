@@ -31,7 +31,7 @@ class DeleteGitHubAccountTokenResponsePrivate : public CodeDeployResponsePrivate
 
 public:
 
-    DeleteGitHubAccountTokenResponsePrivate(DeleteGitHubAccountTokenResponse * const q);
+    explicit DeleteGitHubAccountTokenResponsePrivate(DeleteGitHubAccountTokenResponse * const q);
 
     void parseDeleteGitHubAccountTokenResponse(QXmlStreamReader &xml);
 

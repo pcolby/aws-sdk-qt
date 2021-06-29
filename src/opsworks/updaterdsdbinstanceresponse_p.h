@@ -31,7 +31,7 @@ class UpdateRdsDbInstanceResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    UpdateRdsDbInstanceResponsePrivate(UpdateRdsDbInstanceResponse * const q);
+    explicit UpdateRdsDbInstanceResponsePrivate(UpdateRdsDbInstanceResponse * const q);
 
     void parseUpdateRdsDbInstanceResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ImportInstallationMediaResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    ImportInstallationMediaResponsePrivate(ImportInstallationMediaResponse * const q);
+    explicit ImportInstallationMediaResponsePrivate(ImportInstallationMediaResponse * const q);
 
     void parseImportInstallationMediaResponse(QXmlStreamReader &xml);
 

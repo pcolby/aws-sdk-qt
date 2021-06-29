@@ -30,7 +30,7 @@ class OutpostsClient;
 class OutpostsClientPrivate {
 
 public:
-    OutpostsClientPrivate(OutpostsClient * const q);
+    explicit OutpostsClientPrivate(OutpostsClient * const q);
 
 protected:
     OutpostsClient * const q_ptr; ///< Internal q-pointer.

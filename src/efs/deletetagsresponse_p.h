@@ -31,7 +31,7 @@ class DeleteTagsResponsePrivate : public EfsResponsePrivate {
 
 public:
 
-    DeleteTagsResponsePrivate(DeleteTagsResponse * const q);
+    explicit DeleteTagsResponsePrivate(DeleteTagsResponse * const q);
 
     void parseDeleteTagsResponse(QXmlStreamReader &xml);
 

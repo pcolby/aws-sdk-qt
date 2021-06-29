@@ -31,7 +31,7 @@ class PutGroupConfigurationResponsePrivate : public ResourceGroupsResponsePrivat
 
 public:
 
-    PutGroupConfigurationResponsePrivate(PutGroupConfigurationResponse * const q);
+    explicit PutGroupConfigurationResponsePrivate(PutGroupConfigurationResponse * const q);
 
     void parsePutGroupConfigurationResponse(QXmlStreamReader &xml);
 

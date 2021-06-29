@@ -31,7 +31,7 @@ class SendRawEmailResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    SendRawEmailResponsePrivate(SendRawEmailResponse * const q);
+    explicit SendRawEmailResponsePrivate(SendRawEmailResponse * const q);
 
     void parseSendRawEmailResponse(QXmlStreamReader &xml);
 

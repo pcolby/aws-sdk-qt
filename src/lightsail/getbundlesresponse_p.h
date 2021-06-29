@@ -31,7 +31,7 @@ class GetBundlesResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    GetBundlesResponsePrivate(GetBundlesResponse * const q);
+    explicit GetBundlesResponsePrivate(GetBundlesResponse * const q);
 
     void parseGetBundlesResponse(QXmlStreamReader &xml);
 

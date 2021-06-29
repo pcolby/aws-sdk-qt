@@ -29,7 +29,7 @@ class LookoutMetricsResponsePrivate {
 
 public:
 
-    LookoutMetricsResponsePrivate(LookoutMetricsResponse * const q);
+    explicit LookoutMetricsResponsePrivate(LookoutMetricsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

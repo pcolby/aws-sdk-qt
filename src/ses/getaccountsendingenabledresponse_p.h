@@ -31,7 +31,7 @@ class GetAccountSendingEnabledResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    GetAccountSendingEnabledResponsePrivate(GetAccountSendingEnabledResponse * const q);
+    explicit GetAccountSendingEnabledResponsePrivate(GetAccountSendingEnabledResponse * const q);
 
     void parseGetAccountSendingEnabledResponse(QXmlStreamReader &xml);
 

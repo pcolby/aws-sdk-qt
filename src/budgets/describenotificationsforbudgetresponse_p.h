@@ -31,7 +31,7 @@ class DescribeNotificationsForBudgetResponsePrivate : public BudgetsResponsePriv
 
 public:
 
-    DescribeNotificationsForBudgetResponsePrivate(DescribeNotificationsForBudgetResponse * const q);
+    explicit DescribeNotificationsForBudgetResponsePrivate(DescribeNotificationsForBudgetResponse * const q);
 
     void parseDescribeNotificationsForBudgetResponse(QXmlStreamReader &xml);
 

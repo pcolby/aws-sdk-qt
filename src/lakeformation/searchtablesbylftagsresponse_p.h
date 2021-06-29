@@ -31,7 +31,7 @@ class SearchTablesByLFTagsResponsePrivate : public LakeFormationResponsePrivate 
 
 public:
 
-    SearchTablesByLFTagsResponsePrivate(SearchTablesByLFTagsResponse * const q);
+    explicit SearchTablesByLFTagsResponsePrivate(SearchTablesByLFTagsResponse * const q);
 
     void parseSearchTablesByLFTagsResponse(QXmlStreamReader &xml);
 

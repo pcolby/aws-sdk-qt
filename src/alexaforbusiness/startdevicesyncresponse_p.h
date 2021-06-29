@@ -31,7 +31,7 @@ class StartDeviceSyncResponsePrivate : public AlexaForBusinessResponsePrivate {
 
 public:
 
-    StartDeviceSyncResponsePrivate(StartDeviceSyncResponse * const q);
+    explicit StartDeviceSyncResponsePrivate(StartDeviceSyncResponse * const q);
 
     void parseStartDeviceSyncResponse(QXmlStreamReader &xml);
 

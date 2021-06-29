@@ -31,7 +31,7 @@ class CreateRequestValidatorResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    CreateRequestValidatorResponsePrivate(CreateRequestValidatorResponse * const q);
+    explicit CreateRequestValidatorResponsePrivate(CreateRequestValidatorResponse * const q);
 
     void parseCreateRequestValidatorResponse(QXmlStreamReader &xml);
 

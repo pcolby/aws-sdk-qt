@@ -31,7 +31,7 @@ class DescribeDashboardResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    DescribeDashboardResponsePrivate(DescribeDashboardResponse * const q);
+    explicit DescribeDashboardResponsePrivate(DescribeDashboardResponse * const q);
 
     void parseDescribeDashboardResponse(QXmlStreamReader &xml);
 

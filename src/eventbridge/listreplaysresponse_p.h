@@ -31,7 +31,7 @@ class ListReplaysResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 
-    ListReplaysResponsePrivate(ListReplaysResponse * const q);
+    explicit ListReplaysResponsePrivate(ListReplaysResponse * const q);
 
     void parseListReplaysResponse(QXmlStreamReader &xml);
 

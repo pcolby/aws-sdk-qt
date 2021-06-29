@@ -31,7 +31,7 @@ class DisassociateVPCFromHostedZoneResponsePrivate : public Route53ResponsePriva
 
 public:
 
-    DisassociateVPCFromHostedZoneResponsePrivate(DisassociateVPCFromHostedZoneResponse * const q);
+    explicit DisassociateVPCFromHostedZoneResponsePrivate(DisassociateVPCFromHostedZoneResponse * const q);
 
     void parseDisassociateVPCFromHostedZoneResponse(QXmlStreamReader &xml);
 

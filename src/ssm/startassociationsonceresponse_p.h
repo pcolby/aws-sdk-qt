@@ -31,7 +31,7 @@ class StartAssociationsOnceResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    StartAssociationsOnceResponsePrivate(StartAssociationsOnceResponse * const q);
+    explicit StartAssociationsOnceResponsePrivate(StartAssociationsOnceResponse * const q);
 
     void parseStartAssociationsOnceResponse(QXmlStreamReader &xml);
 

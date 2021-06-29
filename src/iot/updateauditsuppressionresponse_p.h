@@ -31,7 +31,7 @@ class UpdateAuditSuppressionResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    UpdateAuditSuppressionResponsePrivate(UpdateAuditSuppressionResponse * const q);
+    explicit UpdateAuditSuppressionResponsePrivate(UpdateAuditSuppressionResponse * const q);
 
     void parseUpdateAuditSuppressionResponse(QXmlStreamReader &xml);
 

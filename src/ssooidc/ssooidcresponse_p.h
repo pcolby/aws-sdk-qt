@@ -29,7 +29,7 @@ class SsooidcResponsePrivate {
 
 public:
 
-    SsooidcResponsePrivate(SsooidcResponse * const q);
+    explicit SsooidcResponsePrivate(SsooidcResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

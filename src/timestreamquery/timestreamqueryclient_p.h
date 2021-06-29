@@ -30,7 +30,7 @@ class TimestreamQueryClient;
 class TimestreamQueryClientPrivate {
 
 public:
-    TimestreamQueryClientPrivate(TimestreamQueryClient * const q);
+    explicit TimestreamQueryClientPrivate(TimestreamQueryClient * const q);
 
 protected:
     TimestreamQueryClient * const q_ptr; ///< Internal q-pointer.

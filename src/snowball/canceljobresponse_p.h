@@ -31,7 +31,7 @@ class CancelJobResponsePrivate : public SnowballResponsePrivate {
 
 public:
 
-    CancelJobResponsePrivate(CancelJobResponse * const q);
+    explicit CancelJobResponsePrivate(CancelJobResponse * const q);
 
     void parseCancelJobResponse(QXmlStreamReader &xml);
 

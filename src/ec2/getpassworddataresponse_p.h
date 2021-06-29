@@ -31,7 +31,7 @@ class GetPasswordDataResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    GetPasswordDataResponsePrivate(GetPasswordDataResponse * const q);
+    explicit GetPasswordDataResponsePrivate(GetPasswordDataResponse * const q);
 
     void parseGetPasswordDataResponse(QXmlStreamReader &xml);
 

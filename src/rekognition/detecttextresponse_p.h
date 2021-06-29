@@ -31,7 +31,7 @@ class DetectTextResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 
-    DetectTextResponsePrivate(DetectTextResponse * const q);
+    explicit DetectTextResponsePrivate(DetectTextResponse * const q);
 
     void parseDetectTextResponse(QXmlStreamReader &xml);
 

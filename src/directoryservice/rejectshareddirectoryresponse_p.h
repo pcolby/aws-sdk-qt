@@ -31,7 +31,7 @@ class RejectSharedDirectoryResponsePrivate : public DirectoryServiceResponsePriv
 
 public:
 
-    RejectSharedDirectoryResponsePrivate(RejectSharedDirectoryResponse * const q);
+    explicit RejectSharedDirectoryResponsePrivate(RejectSharedDirectoryResponse * const q);
 
     void parseRejectSharedDirectoryResponse(QXmlStreamReader &xml);
 

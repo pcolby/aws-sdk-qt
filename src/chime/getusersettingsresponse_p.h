@@ -31,7 +31,7 @@ class GetUserSettingsResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    GetUserSettingsResponsePrivate(GetUserSettingsResponse * const q);
+    explicit GetUserSettingsResponsePrivate(GetUserSettingsResponse * const q);
 
     void parseGetUserSettingsResponse(QXmlStreamReader &xml);
 

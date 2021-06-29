@@ -31,7 +31,7 @@ class StartPipelineExecutionResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    StartPipelineExecutionResponsePrivate(StartPipelineExecutionResponse * const q);
+    explicit StartPipelineExecutionResponsePrivate(StartPipelineExecutionResponse * const q);
 
     void parseStartPipelineExecutionResponse(QXmlStreamReader &xml);
 

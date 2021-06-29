@@ -31,7 +31,7 @@ class GetDeviceFleetReportResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    GetDeviceFleetReportResponsePrivate(GetDeviceFleetReportResponse * const q);
+    explicit GetDeviceFleetReportResponsePrivate(GetDeviceFleetReportResponse * const q);
 
     void parseGetDeviceFleetReportResponse(QXmlStreamReader &xml);
 

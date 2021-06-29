@@ -31,7 +31,7 @@ class CreateLFTagResponsePrivate : public LakeFormationResponsePrivate {
 
 public:
 
-    CreateLFTagResponsePrivate(CreateLFTagResponse * const q);
+    explicit CreateLFTagResponsePrivate(CreateLFTagResponse * const q);
 
     void parseCreateLFTagResponse(QXmlStreamReader &xml);
 

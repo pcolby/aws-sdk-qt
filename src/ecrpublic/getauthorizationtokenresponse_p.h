@@ -31,7 +31,7 @@ class GetAuthorizationTokenResponsePrivate : public ECRPublicResponsePrivate {
 
 public:
 
-    GetAuthorizationTokenResponsePrivate(GetAuthorizationTokenResponse * const q);
+    explicit GetAuthorizationTokenResponsePrivate(GetAuthorizationTokenResponse * const q);
 
     void parseGetAuthorizationTokenResponse(QXmlStreamReader &xml);
 

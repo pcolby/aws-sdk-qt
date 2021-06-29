@@ -31,7 +31,7 @@ class ListAccessControlRulesResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 
-    ListAccessControlRulesResponsePrivate(ListAccessControlRulesResponse * const q);
+    explicit ListAccessControlRulesResponsePrivate(ListAccessControlRulesResponse * const q);
 
     void parseListAccessControlRulesResponse(QXmlStreamReader &xml);
 

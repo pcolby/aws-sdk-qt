@@ -31,7 +31,7 @@ class AddApplicationCloudWatchLoggingOptionResponsePrivate : public KinesisAnaly
 
 public:
 
-    AddApplicationCloudWatchLoggingOptionResponsePrivate(AddApplicationCloudWatchLoggingOptionResponse * const q);
+    explicit AddApplicationCloudWatchLoggingOptionResponsePrivate(AddApplicationCloudWatchLoggingOptionResponse * const q);
 
     void parseAddApplicationCloudWatchLoggingOptionResponse(QXmlStreamReader &xml);
 

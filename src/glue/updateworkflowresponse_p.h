@@ -31,7 +31,7 @@ class UpdateWorkflowResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    UpdateWorkflowResponsePrivate(UpdateWorkflowResponse * const q);
+    explicit UpdateWorkflowResponsePrivate(UpdateWorkflowResponse * const q);
 
     void parseUpdateWorkflowResponse(QXmlStreamReader &xml);
 

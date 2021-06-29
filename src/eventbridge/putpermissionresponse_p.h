@@ -31,7 +31,7 @@ class PutPermissionResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 
-    PutPermissionResponsePrivate(PutPermissionResponse * const q);
+    explicit PutPermissionResponsePrivate(PutPermissionResponse * const q);
 
     void parsePutPermissionResponse(QXmlStreamReader &xml);
 

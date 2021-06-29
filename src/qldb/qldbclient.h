@@ -81,7 +81,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    QldbClient(
+    explicit QldbClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -111,7 +111,7 @@ public slots:
 protected:
     /// @cond internal
     QldbClientPrivate * const d_ptr; ///< Internal d-pointer.
-    QldbClient(QldbClientPrivate * const d);
+    explicit QldbClient(QldbClientPrivate * const d);
     /// @endcond
 
 private:

@@ -31,7 +31,7 @@ class DeleteCustomVerificationEmailTemplateResponsePrivate : public SesResponseP
 
 public:
 
-    DeleteCustomVerificationEmailTemplateResponsePrivate(DeleteCustomVerificationEmailTemplateResponse * const q);
+    explicit DeleteCustomVerificationEmailTemplateResponsePrivate(DeleteCustomVerificationEmailTemplateResponse * const q);
 
     void parseDeleteCustomVerificationEmailTemplateResponse(QXmlStreamReader &xml);
 

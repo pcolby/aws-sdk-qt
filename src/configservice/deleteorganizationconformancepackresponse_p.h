@@ -31,7 +31,7 @@ class DeleteOrganizationConformancePackResponsePrivate : public ConfigServiceRes
 
 public:
 
-    DeleteOrganizationConformancePackResponsePrivate(DeleteOrganizationConformancePackResponse * const q);
+    explicit DeleteOrganizationConformancePackResponsePrivate(DeleteOrganizationConformancePackResponse * const q);
 
     void parseDeleteOrganizationConformancePackResponse(QXmlStreamReader &xml);
 

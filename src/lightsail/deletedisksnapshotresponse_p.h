@@ -31,7 +31,7 @@ class DeleteDiskSnapshotResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    DeleteDiskSnapshotResponsePrivate(DeleteDiskSnapshotResponse * const q);
+    explicit DeleteDiskSnapshotResponsePrivate(DeleteDiskSnapshotResponse * const q);
 
     void parseDeleteDiskSnapshotResponse(QXmlStreamReader &xml);
 

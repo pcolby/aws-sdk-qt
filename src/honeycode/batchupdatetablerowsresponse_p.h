@@ -31,7 +31,7 @@ class BatchUpdateTableRowsResponsePrivate : public HoneycodeResponsePrivate {
 
 public:
 
-    BatchUpdateTableRowsResponsePrivate(BatchUpdateTableRowsResponse * const q);
+    explicit BatchUpdateTableRowsResponsePrivate(BatchUpdateTableRowsResponse * const q);
 
     void parseBatchUpdateTableRowsResponse(QXmlStreamReader &xml);
 

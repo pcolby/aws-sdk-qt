@@ -31,7 +31,7 @@ class DeleteDatasetContentResponsePrivate : public IoTAnalyticsResponsePrivate {
 
 public:
 
-    DeleteDatasetContentResponsePrivate(DeleteDatasetContentResponse * const q);
+    explicit DeleteDatasetContentResponsePrivate(DeleteDatasetContentResponse * const q);
 
     void parseDeleteDatasetContentResponse(QXmlStreamReader &xml);
 

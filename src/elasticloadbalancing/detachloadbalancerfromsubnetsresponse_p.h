@@ -31,7 +31,7 @@ class DetachLoadBalancerFromSubnetsResponsePrivate : public ElasticLoadBalancing
 
 public:
 
-    DetachLoadBalancerFromSubnetsResponsePrivate(DetachLoadBalancerFromSubnetsResponse * const q);
+    explicit DetachLoadBalancerFromSubnetsResponsePrivate(DetachLoadBalancerFromSubnetsResponse * const q);
 
     void parseDetachLoadBalancerFromSubnetsResponse(QXmlStreamReader &xml);
 

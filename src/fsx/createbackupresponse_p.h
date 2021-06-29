@@ -31,7 +31,7 @@ class CreateBackupResponsePrivate : public FSxResponsePrivate {
 
 public:
 
-    CreateBackupResponsePrivate(CreateBackupResponse * const q);
+    explicit CreateBackupResponsePrivate(CreateBackupResponse * const q);
 
     void parseCreateBackupResponse(QXmlStreamReader &xml);
 

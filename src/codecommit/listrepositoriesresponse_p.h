@@ -31,7 +31,7 @@ class ListRepositoriesResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 
-    ListRepositoriesResponsePrivate(ListRepositoriesResponse * const q);
+    explicit ListRepositoriesResponsePrivate(ListRepositoriesResponse * const q);
 
     void parseListRepositoriesResponse(QXmlStreamReader &xml);
 

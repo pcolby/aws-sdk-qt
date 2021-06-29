@@ -31,7 +31,7 @@ class ListResourcesForWebACLResponsePrivate : public Wafv2ResponsePrivate {
 
 public:
 
-    ListResourcesForWebACLResponsePrivate(ListResourcesForWebACLResponse * const q);
+    explicit ListResourcesForWebACLResponsePrivate(ListResourcesForWebACLResponse * const q);
 
     void parseListResourcesForWebACLResponse(QXmlStreamReader &xml);
 

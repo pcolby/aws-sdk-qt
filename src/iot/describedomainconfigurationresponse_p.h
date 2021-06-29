@@ -31,7 +31,7 @@ class DescribeDomainConfigurationResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DescribeDomainConfigurationResponsePrivate(DescribeDomainConfigurationResponse * const q);
+    explicit DescribeDomainConfigurationResponsePrivate(DescribeDomainConfigurationResponse * const q);
 
     void parseDescribeDomainConfigurationResponse(QXmlStreamReader &xml);
 

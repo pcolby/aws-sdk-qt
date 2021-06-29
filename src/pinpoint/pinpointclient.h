@@ -265,7 +265,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    PinpointClient(
+    explicit PinpointClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -387,7 +387,7 @@ public slots:
 protected:
     /// @cond internal
     PinpointClientPrivate * const d_ptr; ///< Internal d-pointer.
-    PinpointClient(PinpointClientPrivate * const d);
+    explicit PinpointClient(PinpointClientPrivate * const d);
     /// @endcond
 
 private:

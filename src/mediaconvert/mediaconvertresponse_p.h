@@ -29,7 +29,7 @@ class MediaConvertResponsePrivate {
 
 public:
 
-    MediaConvertResponsePrivate(MediaConvertResponse * const q);
+    explicit MediaConvertResponsePrivate(MediaConvertResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

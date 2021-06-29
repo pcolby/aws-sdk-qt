@@ -31,7 +31,7 @@ class DescribeImageBuildersResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 
-    DescribeImageBuildersResponsePrivate(DescribeImageBuildersResponse * const q);
+    explicit DescribeImageBuildersResponsePrivate(DescribeImageBuildersResponse * const q);
 
     void parseDescribeImageBuildersResponse(QXmlStreamReader &xml);
 

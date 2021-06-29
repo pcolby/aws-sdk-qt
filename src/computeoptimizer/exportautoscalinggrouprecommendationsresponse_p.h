@@ -31,7 +31,7 @@ class ExportAutoScalingGroupRecommendationsResponsePrivate : public ComputeOptim
 
 public:
 
-    ExportAutoScalingGroupRecommendationsResponsePrivate(ExportAutoScalingGroupRecommendationsResponse * const q);
+    explicit ExportAutoScalingGroupRecommendationsResponsePrivate(ExportAutoScalingGroupRecommendationsResponse * const q);
 
     void parseExportAutoScalingGroupRecommendationsResponse(QXmlStreamReader &xml);
 

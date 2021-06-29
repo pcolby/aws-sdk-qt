@@ -31,7 +31,7 @@ class DescribeSecurityPolicyResponsePrivate : public TransferResponsePrivate {
 
 public:
 
-    DescribeSecurityPolicyResponsePrivate(DescribeSecurityPolicyResponse * const q);
+    explicit DescribeSecurityPolicyResponsePrivate(DescribeSecurityPolicyResponse * const q);
 
     void parseDescribeSecurityPolicyResponse(QXmlStreamReader &xml);
 

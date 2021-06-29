@@ -31,7 +31,7 @@ class PutMetricDataResponsePrivate : public CloudWatchResponsePrivate {
 
 public:
 
-    PutMetricDataResponsePrivate(PutMetricDataResponse * const q);
+    explicit PutMetricDataResponsePrivate(PutMetricDataResponse * const q);
 
     void parsePutMetricDataResponse(QXmlStreamReader &xml);
 

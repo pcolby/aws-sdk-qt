@@ -29,7 +29,7 @@ class PinpointEmailResponsePrivate {
 
 public:
 
-    PinpointEmailResponsePrivate(PinpointEmailResponse * const q);
+    explicit PinpointEmailResponsePrivate(PinpointEmailResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

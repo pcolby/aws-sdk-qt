@@ -31,7 +31,7 @@ class AssociateCertificateResponsePrivate : public MediaConvertResponsePrivate {
 
 public:
 
-    AssociateCertificateResponsePrivate(AssociateCertificateResponse * const q);
+    explicit AssociateCertificateResponsePrivate(AssociateCertificateResponse * const q);
 
     void parseAssociateCertificateResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateFirewallRuleResponsePrivate : public Route53ResolverResponsePrivate 
 
 public:
 
-    UpdateFirewallRuleResponsePrivate(UpdateFirewallRuleResponse * const q);
+    explicit UpdateFirewallRuleResponsePrivate(UpdateFirewallRuleResponse * const q);
 
     void parseUpdateFirewallRuleResponse(QXmlStreamReader &xml);
 

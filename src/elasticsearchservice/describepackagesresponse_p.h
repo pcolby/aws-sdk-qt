@@ -31,7 +31,7 @@ class DescribePackagesResponsePrivate : public ElasticsearchServiceResponsePriva
 
 public:
 
-    DescribePackagesResponsePrivate(DescribePackagesResponse * const q);
+    explicit DescribePackagesResponsePrivate(DescribePackagesResponse * const q);
 
     void parseDescribePackagesResponse(QXmlStreamReader &xml);
 

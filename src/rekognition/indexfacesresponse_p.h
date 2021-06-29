@@ -31,7 +31,7 @@ class IndexFacesResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 
-    IndexFacesResponsePrivate(IndexFacesResponse * const q);
+    explicit IndexFacesResponsePrivate(IndexFacesResponse * const q);
 
     void parseIndexFacesResponse(QXmlStreamReader &xml);
 

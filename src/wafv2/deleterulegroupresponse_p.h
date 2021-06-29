@@ -31,7 +31,7 @@ class DeleteRuleGroupResponsePrivate : public Wafv2ResponsePrivate {
 
 public:
 
-    DeleteRuleGroupResponsePrivate(DeleteRuleGroupResponse * const q);
+    explicit DeleteRuleGroupResponsePrivate(DeleteRuleGroupResponse * const q);
 
     void parseDeleteRuleGroupResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class BatchGetTracesResponsePrivate : public XRayResponsePrivate {
 
 public:
 
-    BatchGetTracesResponsePrivate(BatchGetTracesResponse * const q);
+    explicit BatchGetTracesResponsePrivate(BatchGetTracesResponse * const q);
 
     void parseBatchGetTracesResponse(QXmlStreamReader &xml);
 

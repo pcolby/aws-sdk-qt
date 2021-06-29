@@ -31,7 +31,7 @@ class DeletePipelineResponsePrivate : public IoTAnalyticsResponsePrivate {
 
 public:
 
-    DeletePipelineResponsePrivate(DeletePipelineResponse * const q);
+    explicit DeletePipelineResponsePrivate(DeletePipelineResponse * const q);
 
     void parseDeletePipelineResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ResetPersonalPINResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    ResetPersonalPINResponsePrivate(ResetPersonalPINResponse * const q);
+    explicit ResetPersonalPINResponsePrivate(ResetPersonalPINResponse * const q);
 
     void parseResetPersonalPINResponse(QXmlStreamReader &xml);
 

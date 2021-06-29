@@ -31,7 +31,7 @@ class CreatePlatformVersionResponsePrivate : public ElasticBeanstalkResponsePriv
 
 public:
 
-    CreatePlatformVersionResponsePrivate(CreatePlatformVersionResponse * const q);
+    explicit CreatePlatformVersionResponsePrivate(CreatePlatformVersionResponse * const q);
 
     void parseCreatePlatformVersionResponse(QXmlStreamReader &xml);
 

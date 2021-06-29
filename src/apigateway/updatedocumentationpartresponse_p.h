@@ -31,7 +31,7 @@ class UpdateDocumentationPartResponsePrivate : public APIGatewayResponsePrivate 
 
 public:
 
-    UpdateDocumentationPartResponsePrivate(UpdateDocumentationPartResponse * const q);
+    explicit UpdateDocumentationPartResponsePrivate(UpdateDocumentationPartResponse * const q);
 
     void parseUpdateDocumentationPartResponse(QXmlStreamReader &xml);
 

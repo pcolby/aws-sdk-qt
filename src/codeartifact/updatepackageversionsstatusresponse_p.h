@@ -31,7 +31,7 @@ class UpdatePackageVersionsStatusResponsePrivate : public CodeArtifactResponsePr
 
 public:
 
-    UpdatePackageVersionsStatusResponsePrivate(UpdatePackageVersionsStatusResponse * const q);
+    explicit UpdatePackageVersionsStatusResponsePrivate(UpdatePackageVersionsStatusResponse * const q);
 
     void parseUpdatePackageVersionsStatusResponse(QXmlStreamReader &xml);
 

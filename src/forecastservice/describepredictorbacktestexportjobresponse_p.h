@@ -31,7 +31,7 @@ class DescribePredictorBacktestExportJobResponsePrivate : public ForecastService
 
 public:
 
-    DescribePredictorBacktestExportJobResponsePrivate(DescribePredictorBacktestExportJobResponse * const q);
+    explicit DescribePredictorBacktestExportJobResponsePrivate(DescribePredictorBacktestExportJobResponse * const q);
 
     void parseDescribePredictorBacktestExportJobResponse(QXmlStreamReader &xml);
 

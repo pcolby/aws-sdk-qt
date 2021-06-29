@@ -31,7 +31,7 @@ class VerifyEmailAddressResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    VerifyEmailAddressResponsePrivate(VerifyEmailAddressResponse * const q);
+    explicit VerifyEmailAddressResponsePrivate(VerifyEmailAddressResponse * const q);
 
     void parseVerifyEmailAddressResponse(QXmlStreamReader &xml);
 

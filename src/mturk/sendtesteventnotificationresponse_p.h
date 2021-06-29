@@ -31,7 +31,7 @@ class SendTestEventNotificationResponsePrivate : public MTurkResponsePrivate {
 
 public:
 
-    SendTestEventNotificationResponsePrivate(SendTestEventNotificationResponse * const q);
+    explicit SendTestEventNotificationResponsePrivate(SendTestEventNotificationResponse * const q);
 
     void parseSendTestEventNotificationResponse(QXmlStreamReader &xml);
 

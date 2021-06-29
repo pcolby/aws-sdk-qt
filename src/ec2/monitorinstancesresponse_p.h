@@ -31,7 +31,7 @@ class MonitorInstancesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    MonitorInstancesResponsePrivate(MonitorInstancesResponse * const q);
+    explicit MonitorInstancesResponsePrivate(MonitorInstancesResponse * const q);
 
     void parseMonitorInstancesResponse(QXmlStreamReader &xml);
 

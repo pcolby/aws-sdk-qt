@@ -31,7 +31,7 @@ class BatchModifyClusterSnapshotsResponsePrivate : public RedshiftResponsePrivat
 
 public:
 
-    BatchModifyClusterSnapshotsResponsePrivate(BatchModifyClusterSnapshotsResponse * const q);
+    explicit BatchModifyClusterSnapshotsResponsePrivate(BatchModifyClusterSnapshotsResponse * const q);
 
     void parseBatchModifyClusterSnapshotsResponse(QXmlStreamReader &xml);
 

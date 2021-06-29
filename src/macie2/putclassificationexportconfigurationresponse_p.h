@@ -31,7 +31,7 @@ class PutClassificationExportConfigurationResponsePrivate : public Macie2Respons
 
 public:
 
-    PutClassificationExportConfigurationResponsePrivate(PutClassificationExportConfigurationResponse * const q);
+    explicit PutClassificationExportConfigurationResponsePrivate(PutClassificationExportConfigurationResponse * const q);
 
     void parsePutClassificationExportConfigurationResponse(QXmlStreamReader &xml);
 

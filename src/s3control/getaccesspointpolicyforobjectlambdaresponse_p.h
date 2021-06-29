@@ -31,7 +31,7 @@ class GetAccessPointPolicyForObjectLambdaResponsePrivate : public S3ControlRespo
 
 public:
 
-    GetAccessPointPolicyForObjectLambdaResponsePrivate(GetAccessPointPolicyForObjectLambdaResponse * const q);
+    explicit GetAccessPointPolicyForObjectLambdaResponsePrivate(GetAccessPointPolicyForObjectLambdaResponse * const q);
 
     void parseGetAccessPointPolicyForObjectLambdaResponse(QXmlStreamReader &xml);
 

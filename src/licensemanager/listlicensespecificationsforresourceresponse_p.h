@@ -31,7 +31,7 @@ class ListLicenseSpecificationsForResourceResponsePrivate : public LicenseManage
 
 public:
 
-    ListLicenseSpecificationsForResourceResponsePrivate(ListLicenseSpecificationsForResourceResponse * const q);
+    explicit ListLicenseSpecificationsForResourceResponsePrivate(ListLicenseSpecificationsForResourceResponse * const q);
 
     void parseListLicenseSpecificationsForResourceResponse(QXmlStreamReader &xml);
 

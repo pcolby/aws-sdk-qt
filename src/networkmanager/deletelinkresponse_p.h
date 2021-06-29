@@ -31,7 +31,7 @@ class DeleteLinkResponsePrivate : public NetworkManagerResponsePrivate {
 
 public:
 
-    DeleteLinkResponsePrivate(DeleteLinkResponse * const q);
+    explicit DeleteLinkResponsePrivate(DeleteLinkResponse * const q);
 
     void parseDeleteLinkResponse(QXmlStreamReader &xml);
 

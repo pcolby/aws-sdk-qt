@@ -31,7 +31,7 @@ class DeactivateKeySigningKeyResponsePrivate : public Route53ResponsePrivate {
 
 public:
 
-    DeactivateKeySigningKeyResponsePrivate(DeactivateKeySigningKeyResponse * const q);
+    explicit DeactivateKeySigningKeyResponsePrivate(DeactivateKeySigningKeyResponse * const q);
 
     void parseDeactivateKeySigningKeyResponse(QXmlStreamReader &xml);
 

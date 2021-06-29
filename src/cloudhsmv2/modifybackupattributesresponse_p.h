@@ -31,7 +31,7 @@ class ModifyBackupAttributesResponsePrivate : public CloudHSMV2ResponsePrivate {
 
 public:
 
-    ModifyBackupAttributesResponsePrivate(ModifyBackupAttributesResponse * const q);
+    explicit ModifyBackupAttributesResponsePrivate(ModifyBackupAttributesResponse * const q);
 
     void parseModifyBackupAttributesResponse(QXmlStreamReader &xml);
 

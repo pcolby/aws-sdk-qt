@@ -31,7 +31,7 @@ class ModifySnapshotScheduleResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    ModifySnapshotScheduleResponsePrivate(ModifySnapshotScheduleResponse * const q);
+    explicit ModifySnapshotScheduleResponsePrivate(ModifySnapshotScheduleResponse * const q);
 
     void parseModifySnapshotScheduleResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListLedgersResponsePrivate : public QldbResponsePrivate {
 
 public:
 
-    ListLedgersResponsePrivate(ListLedgersResponse * const q);
+    explicit ListLedgersResponsePrivate(ListLedgersResponse * const q);
 
     void parseListLedgersResponse(QXmlStreamReader &xml);
 

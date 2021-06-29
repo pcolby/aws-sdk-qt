@@ -31,7 +31,7 @@ class QuerySchemaVersionMetadataResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    QuerySchemaVersionMetadataResponsePrivate(QuerySchemaVersionMetadataResponse * const q);
+    explicit QuerySchemaVersionMetadataResponsePrivate(QuerySchemaVersionMetadataResponse * const q);
 
     void parseQuerySchemaVersionMetadataResponse(QXmlStreamReader &xml);
 

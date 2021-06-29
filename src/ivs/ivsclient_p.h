@@ -30,7 +30,7 @@ class IvsClient;
 class IvsClientPrivate {
 
 public:
-    IvsClientPrivate(IvsClient * const q);
+    explicit IvsClientPrivate(IvsClient * const q);
 
 protected:
     IvsClient * const q_ptr; ///< Internal q-pointer.

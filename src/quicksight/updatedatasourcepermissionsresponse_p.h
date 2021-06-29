@@ -31,7 +31,7 @@ class UpdateDataSourcePermissionsResponsePrivate : public QuickSightResponsePriv
 
 public:
 
-    UpdateDataSourcePermissionsResponsePrivate(UpdateDataSourcePermissionsResponse * const q);
+    explicit UpdateDataSourcePermissionsResponsePrivate(UpdateDataSourcePermissionsResponse * const q);
 
     void parseUpdateDataSourcePermissionsResponse(QXmlStreamReader &xml);
 

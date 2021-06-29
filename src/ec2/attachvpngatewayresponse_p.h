@@ -31,7 +31,7 @@ class AttachVpnGatewayResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    AttachVpnGatewayResponsePrivate(AttachVpnGatewayResponse * const q);
+    explicit AttachVpnGatewayResponsePrivate(AttachVpnGatewayResponse * const q);
 
     void parseAttachVpnGatewayResponse(QXmlStreamReader &xml);
 

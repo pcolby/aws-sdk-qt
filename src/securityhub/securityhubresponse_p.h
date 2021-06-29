@@ -29,7 +29,7 @@ class SecurityHubResponsePrivate {
 
 public:
 
-    SecurityHubResponsePrivate(SecurityHubResponse * const q);
+    explicit SecurityHubResponsePrivate(SecurityHubResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

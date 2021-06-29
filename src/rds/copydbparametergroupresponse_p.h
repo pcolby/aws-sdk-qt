@@ -31,7 +31,7 @@ class CopyDBParameterGroupResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    CopyDBParameterGroupResponsePrivate(CopyDBParameterGroupResponse * const q);
+    explicit CopyDBParameterGroupResponsePrivate(CopyDBParameterGroupResponse * const q);
 
     void parseCopyDBParameterGroupResponse(QXmlStreamReader &xml);
 

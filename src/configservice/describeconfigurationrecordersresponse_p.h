@@ -31,7 +31,7 @@ class DescribeConfigurationRecordersResponsePrivate : public ConfigServiceRespon
 
 public:
 
-    DescribeConfigurationRecordersResponsePrivate(DescribeConfigurationRecordersResponse * const q);
+    explicit DescribeConfigurationRecordersResponsePrivate(DescribeConfigurationRecordersResponse * const q);
 
     void parseDescribeConfigurationRecordersResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class SearchInsightsResponsePrivate : public DevOpsGuruResponsePrivate {
 
 public:
 
-    SearchInsightsResponsePrivate(SearchInsightsResponse * const q);
+    explicit SearchInsightsResponsePrivate(SearchInsightsResponse * const q);
 
     void parseSearchInsightsResponse(QXmlStreamReader &xml);
 

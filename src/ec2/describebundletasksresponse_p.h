@@ -31,7 +31,7 @@ class DescribeBundleTasksResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeBundleTasksResponsePrivate(DescribeBundleTasksResponse * const q);
+    explicit DescribeBundleTasksResponsePrivate(DescribeBundleTasksResponse * const q);
 
     void parseDescribeBundleTasksResponse(QXmlStreamReader &xml);
 

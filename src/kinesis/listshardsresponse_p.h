@@ -31,7 +31,7 @@ class ListShardsResponsePrivate : public KinesisResponsePrivate {
 
 public:
 
-    ListShardsResponsePrivate(ListShardsResponse * const q);
+    explicit ListShardsResponsePrivate(ListShardsResponse * const q);
 
     void parseListShardsResponse(QXmlStreamReader &xml);
 

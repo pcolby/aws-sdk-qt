@@ -31,7 +31,7 @@ class CreateIngestionResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    CreateIngestionResponsePrivate(CreateIngestionResponse * const q);
+    explicit CreateIngestionResponsePrivate(CreateIngestionResponse * const q);
 
     void parseCreateIngestionResponse(QXmlStreamReader &xml);
 

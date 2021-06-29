@@ -31,7 +31,7 @@ class DescribeReplicationInstanceTaskLogsResponsePrivate : public DatabaseMigrat
 
 public:
 
-    DescribeReplicationInstanceTaskLogsResponsePrivate(DescribeReplicationInstanceTaskLogsResponse * const q);
+    explicit DescribeReplicationInstanceTaskLogsResponsePrivate(DescribeReplicationInstanceTaskLogsResponse * const q);
 
     void parseDescribeReplicationInstanceTaskLogsResponse(QXmlStreamReader &xml);
 

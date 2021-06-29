@@ -31,7 +31,7 @@ class UpdateResourceCollectionResponsePrivate : public DevOpsGuruResponsePrivate
 
 public:
 
-    UpdateResourceCollectionResponsePrivate(UpdateResourceCollectionResponse * const q);
+    explicit UpdateResourceCollectionResponsePrivate(UpdateResourceCollectionResponse * const q);
 
     void parseUpdateResourceCollectionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribePublishingDestinationResponsePrivate : public GuardDutyResponsePri
 
 public:
 
-    DescribePublishingDestinationResponsePrivate(DescribePublishingDestinationResponse * const q);
+    explicit DescribePublishingDestinationResponsePrivate(DescribePublishingDestinationResponse * const q);
 
     void parseDescribePublishingDestinationResponse(QXmlStreamReader &xml);
 

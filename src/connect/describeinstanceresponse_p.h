@@ -31,7 +31,7 @@ class DescribeInstanceResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    DescribeInstanceResponsePrivate(DescribeInstanceResponse * const q);
+    explicit DescribeInstanceResponsePrivate(DescribeInstanceResponse * const q);
 
     void parseDescribeInstanceResponse(QXmlStreamReader &xml);
 

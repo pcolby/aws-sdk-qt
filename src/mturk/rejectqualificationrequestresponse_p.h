@@ -31,7 +31,7 @@ class RejectQualificationRequestResponsePrivate : public MTurkResponsePrivate {
 
 public:
 
-    RejectQualificationRequestResponsePrivate(RejectQualificationRequestResponse * const q);
+    explicit RejectQualificationRequestResponsePrivate(RejectQualificationRequestResponse * const q);
 
     void parseRejectQualificationRequestResponse(QXmlStreamReader &xml);
 

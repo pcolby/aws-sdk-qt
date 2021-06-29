@@ -31,7 +31,7 @@ class GetWorkflowRunPropertiesResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    GetWorkflowRunPropertiesResponsePrivate(GetWorkflowRunPropertiesResponse * const q);
+    explicit GetWorkflowRunPropertiesResponsePrivate(GetWorkflowRunPropertiesResponse * const q);
 
     void parseGetWorkflowRunPropertiesResponse(QXmlStreamReader &xml);
 

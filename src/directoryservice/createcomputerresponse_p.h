@@ -31,7 +31,7 @@ class CreateComputerResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 
-    CreateComputerResponsePrivate(CreateComputerResponse * const q);
+    explicit CreateComputerResponsePrivate(CreateComputerResponse * const q);
 
     void parseCreateComputerResponse(QXmlStreamReader &xml);
 

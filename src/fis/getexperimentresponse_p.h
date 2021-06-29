@@ -31,7 +31,7 @@ class GetExperimentResponsePrivate : public FisResponsePrivate {
 
 public:
 
-    GetExperimentResponsePrivate(GetExperimentResponse * const q);
+    explicit GetExperimentResponsePrivate(GetExperimentResponse * const q);
 
     void parseGetExperimentResponse(QXmlStreamReader &xml);
 

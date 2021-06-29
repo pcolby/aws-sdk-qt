@@ -31,7 +31,7 @@ class ListOfferingTransactionsResponsePrivate : public DeviceFarmResponsePrivate
 
 public:
 
-    ListOfferingTransactionsResponsePrivate(ListOfferingTransactionsResponse * const q);
+    explicit ListOfferingTransactionsResponsePrivate(ListOfferingTransactionsResponse * const q);
 
     void parseListOfferingTransactionsResponse(QXmlStreamReader &xml);
 

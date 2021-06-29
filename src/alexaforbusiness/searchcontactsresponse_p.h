@@ -31,7 +31,7 @@ class SearchContactsResponsePrivate : public AlexaForBusinessResponsePrivate {
 
 public:
 
-    SearchContactsResponsePrivate(SearchContactsResponse * const q);
+    explicit SearchContactsResponsePrivate(SearchContactsResponse * const q);
 
     void parseSearchContactsResponse(QXmlStreamReader &xml);
 

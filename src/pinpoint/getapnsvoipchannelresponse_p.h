@@ -31,7 +31,7 @@ class GetApnsVoipChannelResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    GetApnsVoipChannelResponsePrivate(GetApnsVoipChannelResponse * const q);
+    explicit GetApnsVoipChannelResponsePrivate(GetApnsVoipChannelResponse * const q);
 
     void parseGetApnsVoipChannelResponse(QXmlStreamReader &xml);
 

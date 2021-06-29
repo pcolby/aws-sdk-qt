@@ -29,7 +29,7 @@ class CodeStarconnectionsResponsePrivate {
 
 public:
 
-    CodeStarconnectionsResponsePrivate(CodeStarconnectionsResponse * const q);
+    explicit CodeStarconnectionsResponsePrivate(CodeStarconnectionsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

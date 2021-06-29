@@ -31,7 +31,7 @@ class LookupPolicyResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 
-    LookupPolicyResponsePrivate(LookupPolicyResponse * const q);
+    explicit LookupPolicyResponsePrivate(LookupPolicyResponse * const q);
 
     void parseLookupPolicyResponse(QXmlStreamReader &xml);
 

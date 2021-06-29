@@ -31,7 +31,7 @@ class CreateCertificateFromCsrResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    CreateCertificateFromCsrResponsePrivate(CreateCertificateFromCsrResponse * const q);
+    explicit CreateCertificateFromCsrResponsePrivate(CreateCertificateFromCsrResponse * const q);
 
     void parseCreateCertificateFromCsrResponse(QXmlStreamReader &xml);
 

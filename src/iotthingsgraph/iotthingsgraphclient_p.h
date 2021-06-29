@@ -30,7 +30,7 @@ class IoTThingsGraphClient;
 class IoTThingsGraphClientPrivate {
 
 public:
-    IoTThingsGraphClientPrivate(IoTThingsGraphClient * const q);
+    explicit IoTThingsGraphClientPrivate(IoTThingsGraphClient * const q);
 
 protected:
     IoTThingsGraphClient * const q_ptr; ///< Internal q-pointer.

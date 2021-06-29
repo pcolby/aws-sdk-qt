@@ -31,7 +31,7 @@ class RemoveTagsFromOnPremisesInstancesResponsePrivate : public CodeDeployRespon
 
 public:
 
-    RemoveTagsFromOnPremisesInstancesResponsePrivate(RemoveTagsFromOnPremisesInstancesResponse * const q);
+    explicit RemoveTagsFromOnPremisesInstancesResponsePrivate(RemoveTagsFromOnPremisesInstancesResponse * const q);
 
     void parseRemoveTagsFromOnPremisesInstancesResponse(QXmlStreamReader &xml);
 

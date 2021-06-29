@@ -31,7 +31,7 @@ class PutAccessPointPolicyResponsePrivate : public S3ControlResponsePrivate {
 
 public:
 
-    PutAccessPointPolicyResponsePrivate(PutAccessPointPolicyResponse * const q);
+    explicit PutAccessPointPolicyResponsePrivate(PutAccessPointPolicyResponse * const q);
 
     void parsePutAccessPointPolicyResponse(QXmlStreamReader &xml);
 

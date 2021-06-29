@@ -31,7 +31,7 @@ class GetPresetResponsePrivate : public MediaConvertResponsePrivate {
 
 public:
 
-    GetPresetResponsePrivate(GetPresetResponse * const q);
+    explicit GetPresetResponsePrivate(GetPresetResponse * const q);
 
     void parseGetPresetResponse(QXmlStreamReader &xml);
 

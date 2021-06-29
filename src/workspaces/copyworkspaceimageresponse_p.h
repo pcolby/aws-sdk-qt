@@ -31,7 +31,7 @@ class CopyWorkspaceImageResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 
-    CopyWorkspaceImageResponsePrivate(CopyWorkspaceImageResponse * const q);
+    explicit CopyWorkspaceImageResponsePrivate(CopyWorkspaceImageResponse * const q);
 
     void parseCopyWorkspaceImageResponse(QXmlStreamReader &xml);
 

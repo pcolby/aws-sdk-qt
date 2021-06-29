@@ -30,7 +30,7 @@ class WorkSpacesClient;
 class WorkSpacesClientPrivate {
 
 public:
-    WorkSpacesClientPrivate(WorkSpacesClient * const q);
+    explicit WorkSpacesClientPrivate(WorkSpacesClient * const q);
 
 protected:
     WorkSpacesClient * const q_ptr; ///< Internal q-pointer.

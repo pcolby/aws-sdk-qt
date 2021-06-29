@@ -31,7 +31,7 @@ class DescribeProductViewResponsePrivate : public ServiceCatalogResponsePrivate 
 
 public:
 
-    DescribeProductViewResponsePrivate(DescribeProductViewResponse * const q);
+    explicit DescribeProductViewResponsePrivate(DescribeProductViewResponse * const q);
 
     void parseDescribeProductViewResponse(QXmlStreamReader &xml);
 

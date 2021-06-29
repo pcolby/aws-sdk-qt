@@ -31,7 +31,7 @@ class GetAliasResponsePrivate : public LambdaResponsePrivate {
 
 public:
 
-    GetAliasResponsePrivate(GetAliasResponse * const q);
+    explicit GetAliasResponsePrivate(GetAliasResponse * const q);
 
     void parseGetAliasResponse(QXmlStreamReader &xml);
 

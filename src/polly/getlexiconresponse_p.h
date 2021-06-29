@@ -31,7 +31,7 @@ class GetLexiconResponsePrivate : public PollyResponsePrivate {
 
 public:
 
-    GetLexiconResponsePrivate(GetLexiconResponse * const q);
+    explicit GetLexiconResponsePrivate(GetLexiconResponse * const q);
 
     void parseGetLexiconResponse(QXmlStreamReader &xml);
 

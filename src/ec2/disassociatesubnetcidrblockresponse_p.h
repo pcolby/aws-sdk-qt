@@ -31,7 +31,7 @@ class DisassociateSubnetCidrBlockResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DisassociateSubnetCidrBlockResponsePrivate(DisassociateSubnetCidrBlockResponse * const q);
+    explicit DisassociateSubnetCidrBlockResponsePrivate(DisassociateSubnetCidrBlockResponse * const q);
 
     void parseDisassociateSubnetCidrBlockResponse(QXmlStreamReader &xml);
 

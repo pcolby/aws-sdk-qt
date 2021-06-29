@@ -31,7 +31,7 @@ class SubmitContainerStateChangeResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    SubmitContainerStateChangeResponsePrivate(SubmitContainerStateChangeResponse * const q);
+    explicit SubmitContainerStateChangeResponsePrivate(SubmitContainerStateChangeResponse * const q);
 
     void parseSubmitContainerStateChangeResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class VoteOnProposalResponsePrivate : public ManagedBlockchainResponsePrivate {
 
 public:
 
-    VoteOnProposalResponsePrivate(VoteOnProposalResponse * const q);
+    explicit VoteOnProposalResponsePrivate(VoteOnProposalResponse * const q);
 
     void parseVoteOnProposalResponse(QXmlStreamReader &xml);
 

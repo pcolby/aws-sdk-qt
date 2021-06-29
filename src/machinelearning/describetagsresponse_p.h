@@ -31,7 +31,7 @@ class DescribeTagsResponsePrivate : public MachineLearningResponsePrivate {
 
 public:
 
-    DescribeTagsResponsePrivate(DescribeTagsResponse * const q);
+    explicit DescribeTagsResponsePrivate(DescribeTagsResponse * const q);
 
     void parseDescribeTagsResponse(QXmlStreamReader &xml);
 

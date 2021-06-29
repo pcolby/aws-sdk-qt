@@ -31,7 +31,7 @@ class CreateDirectoryConfigResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 
-    CreateDirectoryConfigResponsePrivate(CreateDirectoryConfigResponse * const q);
+    explicit CreateDirectoryConfigResponsePrivate(CreateDirectoryConfigResponse * const q);
 
     void parseCreateDirectoryConfigResponse(QXmlStreamReader &xml);
 

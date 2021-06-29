@@ -31,7 +31,7 @@ class DisableAlarmActionsResponsePrivate : public CloudWatchResponsePrivate {
 
 public:
 
-    DisableAlarmActionsResponsePrivate(DisableAlarmActionsResponse * const q);
+    explicit DisableAlarmActionsResponsePrivate(DisableAlarmActionsResponse * const q);
 
     void parseDisableAlarmActionsResponse(QXmlStreamReader &xml);
 

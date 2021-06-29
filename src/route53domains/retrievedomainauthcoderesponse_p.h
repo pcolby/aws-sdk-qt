@@ -31,7 +31,7 @@ class RetrieveDomainAuthCodeResponsePrivate : public Route53DomainsResponsePriva
 
 public:
 
-    RetrieveDomainAuthCodeResponsePrivate(RetrieveDomainAuthCodeResponse * const q);
+    explicit RetrieveDomainAuthCodeResponsePrivate(RetrieveDomainAuthCodeResponse * const q);
 
     void parseRetrieveDomainAuthCodeResponse(QXmlStreamReader &xml);
 

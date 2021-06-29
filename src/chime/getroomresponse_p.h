@@ -31,7 +31,7 @@ class GetRoomResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    GetRoomResponsePrivate(GetRoomResponse * const q);
+    explicit GetRoomResponsePrivate(GetRoomResponse * const q);
 
     void parseGetRoomResponse(QXmlStreamReader &xml);
 

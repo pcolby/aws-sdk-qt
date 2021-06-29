@@ -31,7 +31,7 @@ class AddLayerVersionPermissionResponsePrivate : public LambdaResponsePrivate {
 
 public:
 
-    AddLayerVersionPermissionResponsePrivate(AddLayerVersionPermissionResponse * const q);
+    explicit AddLayerVersionPermissionResponsePrivate(AddLayerVersionPermissionResponse * const q);
 
     void parseAddLayerVersionPermissionResponse(QXmlStreamReader &xml);
 

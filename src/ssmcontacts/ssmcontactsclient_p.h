@@ -30,7 +30,7 @@ class SSMContactsClient;
 class SSMContactsClientPrivate {
 
 public:
-    SSMContactsClientPrivate(SSMContactsClient * const q);
+    explicit SSMContactsClientPrivate(SSMContactsClient * const q);
 
 protected:
     SSMContactsClient * const q_ptr; ///< Internal q-pointer.

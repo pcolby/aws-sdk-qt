@@ -31,7 +31,7 @@ class CreateApiDestinationResponsePrivate : public CloudWatchEventsResponsePriva
 
 public:
 
-    CreateApiDestinationResponsePrivate(CreateApiDestinationResponse * const q);
+    explicit CreateApiDestinationResponsePrivate(CreateApiDestinationResponse * const q);
 
     void parseCreateApiDestinationResponse(QXmlStreamReader &xml);
 

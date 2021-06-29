@@ -31,7 +31,7 @@ class AllocateTransitVirtualInterfaceResponsePrivate : public DirectConnectRespo
 
 public:
 
-    AllocateTransitVirtualInterfaceResponsePrivate(AllocateTransitVirtualInterfaceResponse * const q);
+    explicit AllocateTransitVirtualInterfaceResponsePrivate(AllocateTransitVirtualInterfaceResponse * const q);
 
     void parseAllocateTransitVirtualInterfaceResponse(QXmlStreamReader &xml);
 

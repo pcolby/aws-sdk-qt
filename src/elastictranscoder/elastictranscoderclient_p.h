@@ -30,7 +30,7 @@ class ElasticTranscoderClient;
 class ElasticTranscoderClientPrivate {
 
 public:
-    ElasticTranscoderClientPrivate(ElasticTranscoderClient * const q);
+    explicit ElasticTranscoderClientPrivate(ElasticTranscoderClient * const q);
 
 protected:
     ElasticTranscoderClient * const q_ptr; ///< Internal q-pointer.

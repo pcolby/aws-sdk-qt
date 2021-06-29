@@ -31,7 +31,7 @@ class CreateDevEndpointResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    CreateDevEndpointResponsePrivate(CreateDevEndpointResponse * const q);
+    explicit CreateDevEndpointResponsePrivate(CreateDevEndpointResponse * const q);
 
     void parseCreateDevEndpointResponse(QXmlStreamReader &xml);
 

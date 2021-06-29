@@ -31,7 +31,7 @@ class GetPackageVersionAssetResponsePrivate : public CodeArtifactResponsePrivate
 
 public:
 
-    GetPackageVersionAssetResponsePrivate(GetPackageVersionAssetResponse * const q);
+    explicit GetPackageVersionAssetResponsePrivate(GetPackageVersionAssetResponse * const q);
 
     void parseGetPackageVersionAssetResponse(QXmlStreamReader &xml);
 

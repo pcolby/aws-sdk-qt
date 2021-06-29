@@ -31,7 +31,7 @@ class CreateBatchInferenceJobResponsePrivate : public PersonalizeResponsePrivate
 
 public:
 
-    CreateBatchInferenceJobResponsePrivate(CreateBatchInferenceJobResponse * const q);
+    explicit CreateBatchInferenceJobResponsePrivate(CreateBatchInferenceJobResponse * const q);
 
     void parseCreateBatchInferenceJobResponse(QXmlStreamReader &xml);
 

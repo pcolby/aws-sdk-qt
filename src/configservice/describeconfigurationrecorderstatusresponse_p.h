@@ -31,7 +31,7 @@ class DescribeConfigurationRecorderStatusResponsePrivate : public ConfigServiceR
 
 public:
 
-    DescribeConfigurationRecorderStatusResponsePrivate(DescribeConfigurationRecorderStatusResponse * const q);
+    explicit DescribeConfigurationRecorderStatusResponsePrivate(DescribeConfigurationRecorderStatusResponse * const q);
 
     void parseDescribeConfigurationRecorderStatusResponse(QXmlStreamReader &xml);
 

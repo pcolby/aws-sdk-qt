@@ -31,7 +31,7 @@ class GetOriginRequestPolicyConfigResponsePrivate : public CloudFrontResponsePri
 
 public:
 
-    GetOriginRequestPolicyConfigResponsePrivate(GetOriginRequestPolicyConfigResponse * const q);
+    explicit GetOriginRequestPolicyConfigResponsePrivate(GetOriginRequestPolicyConfigResponse * const q);
 
     void parseGetOriginRequestPolicyConfigResponse(QXmlStreamReader &xml);
 

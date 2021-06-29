@@ -31,7 +31,7 @@ class DescribeVTLDevicesResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 
-    DescribeVTLDevicesResponsePrivate(DescribeVTLDevicesResponse * const q);
+    explicit DescribeVTLDevicesResponsePrivate(DescribeVTLDevicesResponse * const q);
 
     void parseDescribeVTLDevicesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeEnvironmentHealthResponsePrivate : public ElasticBeanstalkResponse
 
 public:
 
-    DescribeEnvironmentHealthResponsePrivate(DescribeEnvironmentHealthResponse * const q);
+    explicit DescribeEnvironmentHealthResponsePrivate(DescribeEnvironmentHealthResponse * const q);
 
     void parseDescribeEnvironmentHealthResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdatePresetResponsePrivate : public MediaConvertResponsePrivate {
 
 public:
 
-    UpdatePresetResponsePrivate(UpdatePresetResponse * const q);
+    explicit UpdatePresetResponsePrivate(UpdatePresetResponse * const q);
 
     void parseUpdatePresetResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListDeploymentStrategiesResponsePrivate : public AppConfigResponsePrivate 
 
 public:
 
-    ListDeploymentStrategiesResponsePrivate(ListDeploymentStrategiesResponse * const q);
+    explicit ListDeploymentStrategiesResponsePrivate(ListDeploymentStrategiesResponse * const q);
 
     void parseListDeploymentStrategiesResponse(QXmlStreamReader &xml);
 

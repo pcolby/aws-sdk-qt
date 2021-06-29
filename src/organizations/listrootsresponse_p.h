@@ -31,7 +31,7 @@ class ListRootsResponsePrivate : public OrganizationsResponsePrivate {
 
 public:
 
-    ListRootsResponsePrivate(ListRootsResponse * const q);
+    explicit ListRootsResponsePrivate(ListRootsResponse * const q);
 
     void parseListRootsResponse(QXmlStreamReader &xml);
 

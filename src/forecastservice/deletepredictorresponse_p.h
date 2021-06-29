@@ -31,7 +31,7 @@ class DeletePredictorResponsePrivate : public ForecastServiceResponsePrivate {
 
 public:
 
-    DeletePredictorResponsePrivate(DeletePredictorResponse * const q);
+    explicit DeletePredictorResponsePrivate(DeletePredictorResponse * const q);
 
     void parseDeletePredictorResponse(QXmlStreamReader &xml);
 

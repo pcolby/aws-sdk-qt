@@ -31,7 +31,7 @@ class DeleteTopicRuleDestinationResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DeleteTopicRuleDestinationResponsePrivate(DeleteTopicRuleDestinationResponse * const q);
+    explicit DeleteTopicRuleDestinationResponsePrivate(DeleteTopicRuleDestinationResponse * const q);
 
     void parseDeleteTopicRuleDestinationResponse(QXmlStreamReader &xml);
 

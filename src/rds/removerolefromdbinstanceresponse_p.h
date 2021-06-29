@@ -31,7 +31,7 @@ class RemoveRoleFromDBInstanceResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    RemoveRoleFromDBInstanceResponsePrivate(RemoveRoleFromDBInstanceResponse * const q);
+    explicit RemoveRoleFromDBInstanceResponsePrivate(RemoveRoleFromDBInstanceResponse * const q);
 
     void parseRemoveRoleFromDBInstanceResponse(QXmlStreamReader &xml);
 

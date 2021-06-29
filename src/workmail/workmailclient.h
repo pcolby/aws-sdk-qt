@@ -149,7 +149,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    WorkMailClient(
+    explicit WorkMailClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -213,7 +213,7 @@ public slots:
 protected:
     /// @cond internal
     WorkMailClientPrivate * const d_ptr; ///< Internal d-pointer.
-    WorkMailClient(WorkMailClientPrivate * const d);
+    explicit WorkMailClient(WorkMailClientPrivate * const d);
     /// @endcond
 
 private:

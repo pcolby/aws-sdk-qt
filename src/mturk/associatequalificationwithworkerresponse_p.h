@@ -31,7 +31,7 @@ class AssociateQualificationWithWorkerResponsePrivate : public MTurkResponsePriv
 
 public:
 
-    AssociateQualificationWithWorkerResponsePrivate(AssociateQualificationWithWorkerResponse * const q);
+    explicit AssociateQualificationWithWorkerResponsePrivate(AssociateQualificationWithWorkerResponse * const q);
 
     void parseAssociateQualificationWithWorkerResponse(QXmlStreamReader &xml);
 

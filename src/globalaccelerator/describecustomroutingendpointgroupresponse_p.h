@@ -31,7 +31,7 @@ class DescribeCustomRoutingEndpointGroupResponsePrivate : public GlobalAccelerat
 
 public:
 
-    DescribeCustomRoutingEndpointGroupResponsePrivate(DescribeCustomRoutingEndpointGroupResponse * const q);
+    explicit DescribeCustomRoutingEndpointGroupResponsePrivate(DescribeCustomRoutingEndpointGroupResponse * const q);
 
     void parseDescribeCustomRoutingEndpointGroupResponse(QXmlStreamReader &xml);
 

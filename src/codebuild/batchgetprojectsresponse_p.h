@@ -31,7 +31,7 @@ class BatchGetProjectsResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 
-    BatchGetProjectsResponsePrivate(BatchGetProjectsResponse * const q);
+    explicit BatchGetProjectsResponsePrivate(BatchGetProjectsResponse * const q);
 
     void parseBatchGetProjectsResponse(QXmlStreamReader &xml);
 

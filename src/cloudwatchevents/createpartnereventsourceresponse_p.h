@@ -31,7 +31,7 @@ class CreatePartnerEventSourceResponsePrivate : public CloudWatchEventsResponseP
 
 public:
 
-    CreatePartnerEventSourceResponsePrivate(CreatePartnerEventSourceResponse * const q);
+    explicit CreatePartnerEventSourceResponsePrivate(CreatePartnerEventSourceResponse * const q);
 
     void parseCreatePartnerEventSourceResponse(QXmlStreamReader &xml);
 

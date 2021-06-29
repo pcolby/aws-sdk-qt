@@ -31,7 +31,7 @@ class DescribeSubscribersForNotificationResponsePrivate : public BudgetsResponse
 
 public:
 
-    DescribeSubscribersForNotificationResponsePrivate(DescribeSubscribersForNotificationResponse * const q);
+    explicit DescribeSubscribersForNotificationResponsePrivate(DescribeSubscribersForNotificationResponse * const q);
 
     void parseDescribeSubscribersForNotificationResponse(QXmlStreamReader &xml);
 

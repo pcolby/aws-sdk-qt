@@ -31,7 +31,7 @@ class CreateAliasResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 
-    CreateAliasResponsePrivate(CreateAliasResponse * const q);
+    explicit CreateAliasResponsePrivate(CreateAliasResponse * const q);
 
     void parseCreateAliasResponse(QXmlStreamReader &xml);
 

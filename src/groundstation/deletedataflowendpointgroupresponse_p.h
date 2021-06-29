@@ -31,7 +31,7 @@ class DeleteDataflowEndpointGroupResponsePrivate : public GroundStationResponseP
 
 public:
 
-    DeleteDataflowEndpointGroupResponsePrivate(DeleteDataflowEndpointGroupResponse * const q);
+    explicit DeleteDataflowEndpointGroupResponsePrivate(DeleteDataflowEndpointGroupResponse * const q);
 
     void parseDeleteDataflowEndpointGroupResponse(QXmlStreamReader &xml);
 

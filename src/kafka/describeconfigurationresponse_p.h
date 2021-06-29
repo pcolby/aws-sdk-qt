@@ -31,7 +31,7 @@ class DescribeConfigurationResponsePrivate : public KafkaResponsePrivate {
 
 public:
 
-    DescribeConfigurationResponsePrivate(DescribeConfigurationResponse * const q);
+    explicit DescribeConfigurationResponsePrivate(DescribeConfigurationResponse * const q);
 
     void parseDescribeConfigurationResponse(QXmlStreamReader &xml);
 

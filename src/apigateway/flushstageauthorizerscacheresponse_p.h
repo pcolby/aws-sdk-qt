@@ -31,7 +31,7 @@ class FlushStageAuthorizersCacheResponsePrivate : public APIGatewayResponsePriva
 
 public:
 
-    FlushStageAuthorizersCacheResponsePrivate(FlushStageAuthorizersCacheResponse * const q);
+    explicit FlushStageAuthorizersCacheResponsePrivate(FlushStageAuthorizersCacheResponse * const q);
 
     void parseFlushStageAuthorizersCacheResponse(QXmlStreamReader &xml);
 

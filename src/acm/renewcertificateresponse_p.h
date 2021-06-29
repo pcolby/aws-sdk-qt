@@ -31,7 +31,7 @@ class RenewCertificateResponsePrivate : public AcmResponsePrivate {
 
 public:
 
-    RenewCertificateResponsePrivate(RenewCertificateResponse * const q);
+    explicit RenewCertificateResponsePrivate(RenewCertificateResponse * const q);
 
     void parseRenewCertificateResponse(QXmlStreamReader &xml);
 

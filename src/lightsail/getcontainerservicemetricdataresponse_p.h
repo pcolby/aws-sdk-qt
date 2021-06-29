@@ -31,7 +31,7 @@ class GetContainerServiceMetricDataResponsePrivate : public LightsailResponsePri
 
 public:
 
-    GetContainerServiceMetricDataResponsePrivate(GetContainerServiceMetricDataResponse * const q);
+    explicit GetContainerServiceMetricDataResponsePrivate(GetContainerServiceMetricDataResponse * const q);
 
     void parseGetContainerServiceMetricDataResponse(QXmlStreamReader &xml);
 

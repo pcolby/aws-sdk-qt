@@ -31,7 +31,7 @@ class DeleteRealtimeEndpointResponsePrivate : public MachineLearningResponsePriv
 
 public:
 
-    DeleteRealtimeEndpointResponsePrivate(DeleteRealtimeEndpointResponse * const q);
+    explicit DeleteRealtimeEndpointResponsePrivate(DeleteRealtimeEndpointResponse * const q);
 
     void parseDeleteRealtimeEndpointResponse(QXmlStreamReader &xml);
 

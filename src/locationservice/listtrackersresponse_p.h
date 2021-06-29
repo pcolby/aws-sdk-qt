@@ -31,7 +31,7 @@ class ListTrackersResponsePrivate : public LocationServiceResponsePrivate {
 
 public:
 
-    ListTrackersResponsePrivate(ListTrackersResponse * const q);
+    explicit ListTrackersResponsePrivate(ListTrackersResponse * const q);
 
     void parseListTrackersResponse(QXmlStreamReader &xml);
 

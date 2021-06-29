@@ -31,7 +31,7 @@ class DisassociateResolverRuleResponsePrivate : public Route53ResolverResponsePr
 
 public:
 
-    DisassociateResolverRuleResponsePrivate(DisassociateResolverRuleResponse * const q);
+    explicit DisassociateResolverRuleResponsePrivate(DisassociateResolverRuleResponse * const q);
 
     void parseDisassociateResolverRuleResponse(QXmlStreamReader &xml);
 

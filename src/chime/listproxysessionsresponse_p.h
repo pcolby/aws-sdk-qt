@@ -31,7 +31,7 @@ class ListProxySessionsResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    ListProxySessionsResponsePrivate(ListProxySessionsResponse * const q);
+    explicit ListProxySessionsResponsePrivate(ListProxySessionsResponse * const q);
 
     void parseListProxySessionsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeServerResponsePrivate : public TransferResponsePrivate {
 
 public:
 
-    DescribeServerResponsePrivate(DescribeServerResponse * const q);
+    explicit DescribeServerResponsePrivate(DescribeServerResponse * const q);
 
     void parseDescribeServerResponse(QXmlStreamReader &xml);
 

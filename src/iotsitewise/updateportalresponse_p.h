@@ -31,7 +31,7 @@ class UpdatePortalResponsePrivate : public IoTSiteWiseResponsePrivate {
 
 public:
 
-    UpdatePortalResponsePrivate(UpdatePortalResponse * const q);
+    explicit UpdatePortalResponsePrivate(UpdatePortalResponse * const q);
 
     void parseUpdatePortalResponse(QXmlStreamReader &xml);
 

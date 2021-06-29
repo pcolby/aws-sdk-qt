@@ -31,7 +31,7 @@ class GetDigestResponsePrivate : public QldbResponsePrivate {
 
 public:
 
-    GetDigestResponsePrivate(GetDigestResponse * const q);
+    explicit GetDigestResponsePrivate(GetDigestResponse * const q);
 
     void parseGetDigestResponse(QXmlStreamReader &xml);
 

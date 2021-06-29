@@ -31,7 +31,7 @@ class CopyOptionGroupResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    CopyOptionGroupResponsePrivate(CopyOptionGroupResponse * const q);
+    explicit CopyOptionGroupResponsePrivate(CopyOptionGroupResponse * const q);
 
     void parseCopyOptionGroupResponse(QXmlStreamReader &xml);
 

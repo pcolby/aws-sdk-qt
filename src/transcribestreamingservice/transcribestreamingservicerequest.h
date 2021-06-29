@@ -61,7 +61,7 @@ public:
 protected:
     /// @cond internal
     TranscribeStreamingServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    TranscribeStreamingServiceRequest(TranscribeStreamingServiceRequestPrivate * const d);
+    explicit TranscribeStreamingServiceRequest(TranscribeStreamingServiceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

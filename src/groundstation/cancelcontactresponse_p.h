@@ -31,7 +31,7 @@ class CancelContactResponsePrivate : public GroundStationResponsePrivate {
 
 public:
 
-    CancelContactResponsePrivate(CancelContactResponse * const q);
+    explicit CancelContactResponsePrivate(CancelContactResponse * const q);
 
     void parseCancelContactResponse(QXmlStreamReader &xml);
 

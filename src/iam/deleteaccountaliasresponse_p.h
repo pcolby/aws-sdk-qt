@@ -31,7 +31,7 @@ class DeleteAccountAliasResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    DeleteAccountAliasResponsePrivate(DeleteAccountAliasResponse * const q);
+    explicit DeleteAccountAliasResponsePrivate(DeleteAccountAliasResponse * const q);
 
     void parseDeleteAccountAliasResponse(QXmlStreamReader &xml);
 

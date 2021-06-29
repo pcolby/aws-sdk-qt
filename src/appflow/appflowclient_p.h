@@ -30,7 +30,7 @@ class AppflowClient;
 class AppflowClientPrivate {
 
 public:
-    AppflowClientPrivate(AppflowClient * const q);
+    explicit AppflowClientPrivate(AppflowClient * const q);
 
 protected:
     AppflowClient * const q_ptr; ///< Internal q-pointer.

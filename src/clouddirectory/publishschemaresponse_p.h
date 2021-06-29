@@ -31,7 +31,7 @@ class PublishSchemaResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 
-    PublishSchemaResponsePrivate(PublishSchemaResponse * const q);
+    explicit PublishSchemaResponsePrivate(PublishSchemaResponse * const q);
 
     void parsePublishSchemaResponse(QXmlStreamReader &xml);
 

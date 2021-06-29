@@ -31,7 +31,7 @@ class ListRecipesResponsePrivate : public PersonalizeResponsePrivate {
 
 public:
 
-    ListRecipesResponsePrivate(ListRecipesResponse * const q);
+    explicit ListRecipesResponsePrivate(ListRecipesResponse * const q);
 
     void parseListRecipesResponse(QXmlStreamReader &xml);
 

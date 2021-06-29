@@ -29,7 +29,7 @@ class OutpostsResponsePrivate {
 
 public:
 
-    OutpostsResponsePrivate(OutpostsResponse * const q);
+    explicit OutpostsResponsePrivate(OutpostsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

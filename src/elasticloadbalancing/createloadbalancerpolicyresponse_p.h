@@ -31,7 +31,7 @@ class CreateLoadBalancerPolicyResponsePrivate : public ElasticLoadBalancingRespo
 
 public:
 
-    CreateLoadBalancerPolicyResponsePrivate(CreateLoadBalancerPolicyResponse * const q);
+    explicit CreateLoadBalancerPolicyResponsePrivate(CreateLoadBalancerPolicyResponse * const q);
 
     void parseCreateLoadBalancerPolicyResponse(QXmlStreamReader &xml);
 

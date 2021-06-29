@@ -31,7 +31,7 @@ class ExportClientVpnClientConfigurationResponsePrivate : public Ec2ResponsePriv
 
 public:
 
-    ExportClientVpnClientConfigurationResponsePrivate(ExportClientVpnClientConfigurationResponse * const q);
+    explicit ExportClientVpnClientConfigurationResponsePrivate(ExportClientVpnClientConfigurationResponse * const q);
 
     void parseExportClientVpnClientConfigurationResponse(QXmlStreamReader &xml);
 

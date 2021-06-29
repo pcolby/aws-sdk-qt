@@ -29,7 +29,7 @@ class MobileAnalyticsResponsePrivate {
 
 public:
 
-    MobileAnalyticsResponsePrivate(MobileAnalyticsResponse * const q);
+    explicit MobileAnalyticsResponsePrivate(MobileAnalyticsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

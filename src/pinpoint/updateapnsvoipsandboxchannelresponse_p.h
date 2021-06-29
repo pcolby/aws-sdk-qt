@@ -31,7 +31,7 @@ class UpdateApnsVoipSandboxChannelResponsePrivate : public PinpointResponsePriva
 
 public:
 
-    UpdateApnsVoipSandboxChannelResponsePrivate(UpdateApnsVoipSandboxChannelResponse * const q);
+    explicit UpdateApnsVoipSandboxChannelResponsePrivate(UpdateApnsVoipSandboxChannelResponse * const q);
 
     void parseUpdateApnsVoipSandboxChannelResponse(QXmlStreamReader &xml);
 

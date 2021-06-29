@@ -31,7 +31,7 @@ class ListFirewallDomainsResponsePrivate : public Route53ResolverResponsePrivate
 
 public:
 
-    ListFirewallDomainsResponsePrivate(ListFirewallDomainsResponse * const q);
+    explicit ListFirewallDomainsResponsePrivate(ListFirewallDomainsResponse * const q);
 
     void parseListFirewallDomainsResponse(QXmlStreamReader &xml);
 

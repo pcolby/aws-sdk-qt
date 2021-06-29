@@ -31,7 +31,7 @@ class ListFHIRDatastoresResponsePrivate : public HealthLakeResponsePrivate {
 
 public:
 
-    ListFHIRDatastoresResponsePrivate(ListFHIRDatastoresResponse * const q);
+    explicit ListFHIRDatastoresResponsePrivate(ListFHIRDatastoresResponse * const q);
 
     void parseListFHIRDatastoresResponse(QXmlStreamReader &xml);
 

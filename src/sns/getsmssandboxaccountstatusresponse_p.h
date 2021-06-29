@@ -31,7 +31,7 @@ class GetSMSSandboxAccountStatusResponsePrivate : public SnsResponsePrivate {
 
 public:
 
-    GetSMSSandboxAccountStatusResponsePrivate(GetSMSSandboxAccountStatusResponse * const q);
+    explicit GetSMSSandboxAccountStatusResponsePrivate(GetSMSSandboxAccountStatusResponse * const q);
 
     void parseGetSMSSandboxAccountStatusResponse(QXmlStreamReader &xml);
 

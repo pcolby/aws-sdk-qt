@@ -31,7 +31,7 @@ class UpdateContinuousBackupsResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 
-    UpdateContinuousBackupsResponsePrivate(UpdateContinuousBackupsResponse * const q);
+    explicit UpdateContinuousBackupsResponsePrivate(UpdateContinuousBackupsResponse * const q);
 
     void parseUpdateContinuousBackupsResponse(QXmlStreamReader &xml);
 

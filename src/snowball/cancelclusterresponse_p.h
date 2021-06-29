@@ -31,7 +31,7 @@ class CancelClusterResponsePrivate : public SnowballResponsePrivate {
 
 public:
 
-    CancelClusterResponsePrivate(CancelClusterResponse * const q);
+    explicit CancelClusterResponsePrivate(CancelClusterResponse * const q);
 
     void parseCancelClusterResponse(QXmlStreamReader &xml);
 

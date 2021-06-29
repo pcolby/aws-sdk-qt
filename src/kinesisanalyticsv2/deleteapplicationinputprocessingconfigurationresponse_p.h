@@ -31,7 +31,7 @@ class DeleteApplicationInputProcessingConfigurationResponsePrivate : public Kine
 
 public:
 
-    DeleteApplicationInputProcessingConfigurationResponsePrivate(DeleteApplicationInputProcessingConfigurationResponse * const q);
+    explicit DeleteApplicationInputProcessingConfigurationResponsePrivate(DeleteApplicationInputProcessingConfigurationResponse * const q);
 
     void parseDeleteApplicationInputProcessingConfigurationResponse(QXmlStreamReader &xml);
 

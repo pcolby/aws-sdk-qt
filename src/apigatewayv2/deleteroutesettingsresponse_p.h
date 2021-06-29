@@ -31,7 +31,7 @@ class DeleteRouteSettingsResponsePrivate : public ApiGatewayV2ResponsePrivate {
 
 public:
 
-    DeleteRouteSettingsResponsePrivate(DeleteRouteSettingsResponse * const q);
+    explicit DeleteRouteSettingsResponsePrivate(DeleteRouteSettingsResponse * const q);
 
     void parseDeleteRouteSettingsResponse(QXmlStreamReader &xml);
 

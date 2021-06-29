@@ -31,7 +31,7 @@ class MergePullRequestByFastForwardResponsePrivate : public CodeCommitResponsePr
 
 public:
 
-    MergePullRequestByFastForwardResponsePrivate(MergePullRequestByFastForwardResponse * const q);
+    explicit MergePullRequestByFastForwardResponsePrivate(MergePullRequestByFastForwardResponse * const q);
 
     void parseMergePullRequestByFastForwardResponse(QXmlStreamReader &xml);
 

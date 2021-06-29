@@ -31,7 +31,7 @@ class StopStreamResponsePrivate : public IvsResponsePrivate {
 
 public:
 
-    StopStreamResponsePrivate(StopStreamResponse * const q);
+    explicit StopStreamResponsePrivate(StopStreamResponse * const q);
 
     void parseStopStreamResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeBudgetActionsForBudgetResponsePrivate : public BudgetsResponsePriv
 
 public:
 
-    DescribeBudgetActionsForBudgetResponsePrivate(DescribeBudgetActionsForBudgetResponse * const q);
+    explicit DescribeBudgetActionsForBudgetResponsePrivate(DescribeBudgetActionsForBudgetResponse * const q);
 
     void parseDescribeBudgetActionsForBudgetResponse(QXmlStreamReader &xml);
 

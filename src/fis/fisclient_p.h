@@ -30,7 +30,7 @@ class FisClient;
 class FisClientPrivate {
 
 public:
-    FisClientPrivate(FisClient * const q);
+    explicit FisClientPrivate(FisClient * const q);
 
 protected:
     FisClient * const q_ptr; ///< Internal q-pointer.

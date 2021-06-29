@@ -31,7 +31,7 @@ class AcceptTransitGatewayMulticastDomainAssociationsResponsePrivate : public Ec
 
 public:
 
-    AcceptTransitGatewayMulticastDomainAssociationsResponsePrivate(AcceptTransitGatewayMulticastDomainAssociationsResponse * const q);
+    explicit AcceptTransitGatewayMulticastDomainAssociationsResponsePrivate(AcceptTransitGatewayMulticastDomainAssociationsResponse * const q);
 
     void parseAcceptTransitGatewayMulticastDomainAssociationsResponse(QXmlStreamReader &xml);
 

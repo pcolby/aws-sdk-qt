@@ -31,7 +31,7 @@ class DisableSsoResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 
-    DisableSsoResponsePrivate(DisableSsoResponse * const q);
+    explicit DisableSsoResponsePrivate(DisableSsoResponse * const q);
 
     void parseDisableSsoResponse(QXmlStreamReader &xml);
 

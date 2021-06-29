@@ -31,7 +31,7 @@ class ListCustomRoutingPortMappingsResponsePrivate : public GlobalAcceleratorRes
 
 public:
 
-    ListCustomRoutingPortMappingsResponsePrivate(ListCustomRoutingPortMappingsResponse * const q);
+    explicit ListCustomRoutingPortMappingsResponsePrivate(ListCustomRoutingPortMappingsResponse * const q);
 
     void parseListCustomRoutingPortMappingsResponse(QXmlStreamReader &xml);
 

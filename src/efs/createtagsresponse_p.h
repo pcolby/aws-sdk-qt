@@ -31,7 +31,7 @@ class CreateTagsResponsePrivate : public EfsResponsePrivate {
 
 public:
 
-    CreateTagsResponsePrivate(CreateTagsResponse * const q);
+    explicit CreateTagsResponsePrivate(CreateTagsResponse * const q);
 
     void parseCreateTagsResponse(QXmlStreamReader &xml);
 

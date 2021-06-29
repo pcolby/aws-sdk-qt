@@ -31,7 +31,7 @@ class DeleteAnomalyDetectorResponsePrivate : public LookoutMetricsResponsePrivat
 
 public:
 
-    DeleteAnomalyDetectorResponsePrivate(DeleteAnomalyDetectorResponse * const q);
+    explicit DeleteAnomalyDetectorResponsePrivate(DeleteAnomalyDetectorResponse * const q);
 
     void parseDeleteAnomalyDetectorResponse(QXmlStreamReader &xml);
 

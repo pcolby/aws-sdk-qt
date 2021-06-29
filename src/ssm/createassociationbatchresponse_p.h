@@ -31,7 +31,7 @@ class CreateAssociationBatchResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    CreateAssociationBatchResponsePrivate(CreateAssociationBatchResponse * const q);
+    explicit CreateAssociationBatchResponsePrivate(CreateAssociationBatchResponse * const q);
 
     void parseCreateAssociationBatchResponse(QXmlStreamReader &xml);
 

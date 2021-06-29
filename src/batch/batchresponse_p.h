@@ -29,7 +29,7 @@ class BatchResponsePrivate {
 
 public:
 
-    BatchResponsePrivate(BatchResponse * const q);
+    explicit BatchResponsePrivate(BatchResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

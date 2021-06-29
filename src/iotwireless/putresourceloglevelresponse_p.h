@@ -31,7 +31,7 @@ class PutResourceLogLevelResponsePrivate : public IoTWirelessResponsePrivate {
 
 public:
 
-    PutResourceLogLevelResponsePrivate(PutResourceLogLevelResponse * const q);
+    explicit PutResourceLogLevelResponsePrivate(PutResourceLogLevelResponse * const q);
 
     void parsePutResourceLogLevelResponse(QXmlStreamReader &xml);
 

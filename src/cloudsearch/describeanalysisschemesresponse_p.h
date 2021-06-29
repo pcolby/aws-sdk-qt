@@ -31,7 +31,7 @@ class DescribeAnalysisSchemesResponsePrivate : public CloudSearchResponsePrivate
 
 public:
 
-    DescribeAnalysisSchemesResponsePrivate(DescribeAnalysisSchemesResponse * const q);
+    explicit DescribeAnalysisSchemesResponsePrivate(DescribeAnalysisSchemesResponse * const q);
 
     void parseDescribeAnalysisSchemesResponse(QXmlStreamReader &xml);
 

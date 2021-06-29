@@ -31,7 +31,7 @@ class GetInstanceAccessResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    GetInstanceAccessResponsePrivate(GetInstanceAccessResponse * const q);
+    explicit GetInstanceAccessResponsePrivate(GetInstanceAccessResponse * const q);
 
     void parseGetInstanceAccessResponse(QXmlStreamReader &xml);
 

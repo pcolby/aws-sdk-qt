@@ -31,7 +31,7 @@ class CreateEventSubscriptionResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    CreateEventSubscriptionResponsePrivate(CreateEventSubscriptionResponse * const q);
+    explicit CreateEventSubscriptionResponsePrivate(CreateEventSubscriptionResponse * const q);
 
     void parseCreateEventSubscriptionResponse(QXmlStreamReader &xml);
 

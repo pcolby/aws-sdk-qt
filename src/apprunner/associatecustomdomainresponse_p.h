@@ -31,7 +31,7 @@ class AssociateCustomDomainResponsePrivate : public AppRunnerResponsePrivate {
 
 public:
 
-    AssociateCustomDomainResponsePrivate(AssociateCustomDomainResponse * const q);
+    explicit AssociateCustomDomainResponsePrivate(AssociateCustomDomainResponse * const q);
 
     void parseAssociateCustomDomainResponse(QXmlStreamReader &xml);
 

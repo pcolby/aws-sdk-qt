@@ -31,7 +31,7 @@ class CreateAssessmentTemplateResponsePrivate : public InspectorResponsePrivate 
 
 public:
 
-    CreateAssessmentTemplateResponsePrivate(CreateAssessmentTemplateResponse * const q);
+    explicit CreateAssessmentTemplateResponsePrivate(CreateAssessmentTemplateResponse * const q);
 
     void parseCreateAssessmentTemplateResponse(QXmlStreamReader &xml);
 

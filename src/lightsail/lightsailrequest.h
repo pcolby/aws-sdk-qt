@@ -201,7 +201,7 @@ public:
 protected:
     /// @cond internal
     LightsailRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    LightsailRequest(LightsailRequestPrivate * const d);
+    explicit LightsailRequest(LightsailRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

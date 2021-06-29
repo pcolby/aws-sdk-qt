@@ -31,7 +31,7 @@ class GetConnectorDefinitionResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 
-    GetConnectorDefinitionResponsePrivate(GetConnectorDefinitionResponse * const q);
+    explicit GetConnectorDefinitionResponsePrivate(GetConnectorDefinitionResponse * const q);
 
     void parseGetConnectorDefinitionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeStreamSummaryResponsePrivate : public KinesisResponsePrivate {
 
 public:
 
-    DescribeStreamSummaryResponsePrivate(DescribeStreamSummaryResponse * const q);
+    explicit DescribeStreamSummaryResponsePrivate(DescribeStreamSummaryResponse * const q);
 
     void parseDescribeStreamSummaryResponse(QXmlStreamReader &xml);
 

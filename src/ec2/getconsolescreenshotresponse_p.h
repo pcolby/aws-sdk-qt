@@ -31,7 +31,7 @@ class GetConsoleScreenshotResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    GetConsoleScreenshotResponsePrivate(GetConsoleScreenshotResponse * const q);
+    explicit GetConsoleScreenshotResponsePrivate(GetConsoleScreenshotResponse * const q);
 
     void parseGetConsoleScreenshotResponse(QXmlStreamReader &xml);
 

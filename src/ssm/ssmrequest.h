@@ -194,7 +194,7 @@ public:
 protected:
     /// @cond internal
     SsmRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    SsmRequest(SsmRequestPrivate * const d);
+    explicit SsmRequest(SsmRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

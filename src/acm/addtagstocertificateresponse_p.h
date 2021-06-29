@@ -31,7 +31,7 @@ class AddTagsToCertificateResponsePrivate : public AcmResponsePrivate {
 
 public:
 
-    AddTagsToCertificateResponsePrivate(AddTagsToCertificateResponse * const q);
+    explicit AddTagsToCertificateResponsePrivate(AddTagsToCertificateResponse * const q);
 
     void parseAddTagsToCertificateResponse(QXmlStreamReader &xml);
 

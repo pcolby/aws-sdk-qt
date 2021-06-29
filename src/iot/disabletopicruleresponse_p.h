@@ -31,7 +31,7 @@ class DisableTopicRuleResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DisableTopicRuleResponsePrivate(DisableTopicRuleResponse * const q);
+    explicit DisableTopicRuleResponsePrivate(DisableTopicRuleResponse * const q);
 
     void parseDisableTopicRuleResponse(QXmlStreamReader &xml);
 

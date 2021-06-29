@@ -31,7 +31,7 @@ class ReadPipelineResponsePrivate : public ElasticTranscoderResponsePrivate {
 
 public:
 
-    ReadPipelineResponsePrivate(ReadPipelineResponse * const q);
+    explicit ReadPipelineResponsePrivate(ReadPipelineResponse * const q);
 
     void parseReadPipelineResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class StopDBInstanceAutomatedBackupsReplicationResponsePrivate : public RdsRespo
 
 public:
 
-    StopDBInstanceAutomatedBackupsReplicationResponsePrivate(StopDBInstanceAutomatedBackupsReplicationResponse * const q);
+    explicit StopDBInstanceAutomatedBackupsReplicationResponsePrivate(StopDBInstanceAutomatedBackupsReplicationResponse * const q);
 
     void parseStopDBInstanceAutomatedBackupsReplicationResponse(QXmlStreamReader &xml);
 

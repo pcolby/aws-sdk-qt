@@ -31,7 +31,7 @@ class DisassociateDelegateFromResourceResponsePrivate : public WorkMailResponseP
 
 public:
 
-    DisassociateDelegateFromResourceResponsePrivate(DisassociateDelegateFromResourceResponse * const q);
+    explicit DisassociateDelegateFromResourceResponsePrivate(DisassociateDelegateFromResourceResponse * const q);
 
     void parseDisassociateDelegateFromResourceResponse(QXmlStreamReader &xml);
 

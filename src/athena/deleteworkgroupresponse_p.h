@@ -31,7 +31,7 @@ class DeleteWorkGroupResponsePrivate : public AthenaResponsePrivate {
 
 public:
 
-    DeleteWorkGroupResponsePrivate(DeleteWorkGroupResponse * const q);
+    explicit DeleteWorkGroupResponsePrivate(DeleteWorkGroupResponse * const q);
 
     void parseDeleteWorkGroupResponse(QXmlStreamReader &xml);
 

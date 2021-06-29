@@ -31,7 +31,7 @@ class GetEnabledStandardsResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 
-    GetEnabledStandardsResponsePrivate(GetEnabledStandardsResponse * const q);
+    explicit GetEnabledStandardsResponsePrivate(GetEnabledStandardsResponse * const q);
 
     void parseGetEnabledStandardsResponse(QXmlStreamReader &xml);
 

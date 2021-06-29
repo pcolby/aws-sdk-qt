@@ -31,7 +31,7 @@ class StopCrawlerResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    StopCrawlerResponsePrivate(StopCrawlerResponse * const q);
+    explicit StopCrawlerResponsePrivate(StopCrawlerResponse * const q);
 
     void parseStopCrawlerResponse(QXmlStreamReader &xml);
 

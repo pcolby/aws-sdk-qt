@@ -31,7 +31,7 @@ class ModifyEventSubscriptionResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 
-    ModifyEventSubscriptionResponsePrivate(ModifyEventSubscriptionResponse * const q);
+    explicit ModifyEventSubscriptionResponsePrivate(ModifyEventSubscriptionResponse * const q);
 
     void parseModifyEventSubscriptionResponse(QXmlStreamReader &xml);
 

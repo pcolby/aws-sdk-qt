@@ -31,7 +31,7 @@ class DescribeGameSessionDetailsResponsePrivate : public GameLiftResponsePrivate
 
 public:
 
-    DescribeGameSessionDetailsResponsePrivate(DescribeGameSessionDetailsResponse * const q);
+    explicit DescribeGameSessionDetailsResponsePrivate(DescribeGameSessionDetailsResponse * const q);
 
     void parseDescribeGameSessionDetailsResponse(QXmlStreamReader &xml);
 

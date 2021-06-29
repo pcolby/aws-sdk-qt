@@ -31,7 +31,7 @@ class GetFindingsFilterResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 
-    GetFindingsFilterResponsePrivate(GetFindingsFilterResponse * const q);
+    explicit GetFindingsFilterResponsePrivate(GetFindingsFilterResponse * const q);
 
     void parseGetFindingsFilterResponse(QXmlStreamReader &xml);
 

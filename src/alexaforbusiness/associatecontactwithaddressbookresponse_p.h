@@ -31,7 +31,7 @@ class AssociateContactWithAddressBookResponsePrivate : public AlexaForBusinessRe
 
 public:
 
-    AssociateContactWithAddressBookResponsePrivate(AssociateContactWithAddressBookResponse * const q);
+    explicit AssociateContactWithAddressBookResponsePrivate(AssociateContactWithAddressBookResponse * const q);
 
     void parseAssociateContactWithAddressBookResponse(QXmlStreamReader &xml);
 

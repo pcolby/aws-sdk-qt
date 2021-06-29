@@ -31,7 +31,7 @@ class DeleteRegistrationCodeResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DeleteRegistrationCodeResponsePrivate(DeleteRegistrationCodeResponse * const q);
+    explicit DeleteRegistrationCodeResponsePrivate(DeleteRegistrationCodeResponse * const q);
 
     void parseDeleteRegistrationCodeResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateStudioSessionMappingResponsePrivate : public EmrResponsePrivate {
 
 public:
 
-    CreateStudioSessionMappingResponsePrivate(CreateStudioSessionMappingResponse * const q);
+    explicit CreateStudioSessionMappingResponsePrivate(CreateStudioSessionMappingResponse * const q);
 
     void parseCreateStudioSessionMappingResponse(QXmlStreamReader &xml);
 

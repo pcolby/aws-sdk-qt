@@ -31,7 +31,7 @@ class CreateAccountCustomizationResponsePrivate : public QuickSightResponsePriva
 
 public:
 
-    CreateAccountCustomizationResponsePrivate(CreateAccountCustomizationResponse * const q);
+    explicit CreateAccountCustomizationResponsePrivate(CreateAccountCustomizationResponse * const q);
 
     void parseCreateAccountCustomizationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateGlobalClusterResponsePrivate : public DocDBResponsePrivate {
 
 public:
 
-    CreateGlobalClusterResponsePrivate(CreateGlobalClusterResponse * const q);
+    explicit CreateGlobalClusterResponsePrivate(CreateGlobalClusterResponse * const q);
 
     void parseCreateGlobalClusterResponse(QXmlStreamReader &xml);
 

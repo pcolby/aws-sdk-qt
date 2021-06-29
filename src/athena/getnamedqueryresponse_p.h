@@ -31,7 +31,7 @@ class GetNamedQueryResponsePrivate : public AthenaResponsePrivate {
 
 public:
 
-    GetNamedQueryResponsePrivate(GetNamedQueryResponse * const q);
+    explicit GetNamedQueryResponsePrivate(GetNamedQueryResponse * const q);
 
     void parseGetNamedQueryResponse(QXmlStreamReader &xml);
 

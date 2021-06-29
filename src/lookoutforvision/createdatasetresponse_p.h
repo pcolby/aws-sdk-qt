@@ -31,7 +31,7 @@ class CreateDatasetResponsePrivate : public LookoutforVisionResponsePrivate {
 
 public:
 
-    CreateDatasetResponsePrivate(CreateDatasetResponse * const q);
+    explicit CreateDatasetResponsePrivate(CreateDatasetResponse * const q);
 
     void parseCreateDatasetResponse(QXmlStreamReader &xml);
 

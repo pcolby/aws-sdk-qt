@@ -31,7 +31,7 @@ class ResetJobBookmarkResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    ResetJobBookmarkResponsePrivate(ResetJobBookmarkResponse * const q);
+    explicit ResetJobBookmarkResponsePrivate(ResetJobBookmarkResponse * const q);
 
     void parseResetJobBookmarkResponse(QXmlStreamReader &xml);
 

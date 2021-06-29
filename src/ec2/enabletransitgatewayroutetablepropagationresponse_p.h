@@ -31,7 +31,7 @@ class EnableTransitGatewayRouteTablePropagationResponsePrivate : public Ec2Respo
 
 public:
 
-    EnableTransitGatewayRouteTablePropagationResponsePrivate(EnableTransitGatewayRouteTablePropagationResponse * const q);
+    explicit EnableTransitGatewayRouteTablePropagationResponsePrivate(EnableTransitGatewayRouteTablePropagationResponse * const q);
 
     void parseEnableTransitGatewayRouteTablePropagationResponse(QXmlStreamReader &xml);
 

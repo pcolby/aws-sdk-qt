@@ -31,7 +31,7 @@ class CreateIpGroupResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 
-    CreateIpGroupResponsePrivate(CreateIpGroupResponse * const q);
+    explicit CreateIpGroupResponsePrivate(CreateIpGroupResponse * const q);
 
     void parseCreateIpGroupResponse(QXmlStreamReader &xml);
 

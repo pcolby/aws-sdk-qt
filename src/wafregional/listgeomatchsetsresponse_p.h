@@ -31,7 +31,7 @@ class ListGeoMatchSetsResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 
-    ListGeoMatchSetsResponsePrivate(ListGeoMatchSetsResponse * const q);
+    explicit ListGeoMatchSetsResponsePrivate(ListGeoMatchSetsResponse * const q);
 
     void parseListGeoMatchSetsResponse(QXmlStreamReader &xml);
 

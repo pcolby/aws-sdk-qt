@@ -31,7 +31,7 @@ class DisassociateCreatedArtifactResponsePrivate : public MigrationHubResponsePr
 
 public:
 
-    DisassociateCreatedArtifactResponsePrivate(DisassociateCreatedArtifactResponse * const q);
+    explicit DisassociateCreatedArtifactResponsePrivate(DisassociateCreatedArtifactResponse * const q);
 
     void parseDisassociateCreatedArtifactResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class TerminateInstancesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    TerminateInstancesResponsePrivate(TerminateInstancesResponse * const q);
+    explicit TerminateInstancesResponsePrivate(TerminateInstancesResponse * const q);
 
     void parseTerminateInstancesResponse(QXmlStreamReader &xml);
 

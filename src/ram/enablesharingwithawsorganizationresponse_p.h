@@ -31,7 +31,7 @@ class EnableSharingWithAwsOrganizationResponsePrivate : public RamResponsePrivat
 
 public:
 
-    EnableSharingWithAwsOrganizationResponsePrivate(EnableSharingWithAwsOrganizationResponse * const q);
+    explicit EnableSharingWithAwsOrganizationResponsePrivate(EnableSharingWithAwsOrganizationResponse * const q);
 
     void parseEnableSharingWithAwsOrganizationResponse(QXmlStreamReader &xml);
 

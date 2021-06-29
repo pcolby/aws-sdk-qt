@@ -31,7 +31,7 @@ class ListSnapshotBlocksResponsePrivate : public EbsResponsePrivate {
 
 public:
 
-    ListSnapshotBlocksResponsePrivate(ListSnapshotBlocksResponse * const q);
+    explicit ListSnapshotBlocksResponsePrivate(ListSnapshotBlocksResponse * const q);
 
     void parseListSnapshotBlocksResponse(QXmlStreamReader &xml);
 

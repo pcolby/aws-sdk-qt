@@ -31,7 +31,7 @@ class DescribeBrokerInstanceOptionsResponsePrivate : public MqResponsePrivate {
 
 public:
 
-    DescribeBrokerInstanceOptionsResponsePrivate(DescribeBrokerInstanceOptionsResponse * const q);
+    explicit DescribeBrokerInstanceOptionsResponsePrivate(DescribeBrokerInstanceOptionsResponse * const q);
 
     void parseDescribeBrokerInstanceOptionsResponse(QXmlStreamReader &xml);
 

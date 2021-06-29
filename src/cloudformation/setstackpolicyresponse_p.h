@@ -31,7 +31,7 @@ class SetStackPolicyResponsePrivate : public CloudFormationResponsePrivate {
 
 public:
 
-    SetStackPolicyResponsePrivate(SetStackPolicyResponse * const q);
+    explicit SetStackPolicyResponsePrivate(SetStackPolicyResponse * const q);
 
     void parseSetStackPolicyResponse(QXmlStreamReader &xml);
 

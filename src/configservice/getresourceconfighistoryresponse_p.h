@@ -31,7 +31,7 @@ class GetResourceConfigHistoryResponsePrivate : public ConfigServiceResponsePriv
 
 public:
 
-    GetResourceConfigHistoryResponsePrivate(GetResourceConfigHistoryResponse * const q);
+    explicit GetResourceConfigHistoryResponsePrivate(GetResourceConfigHistoryResponse * const q);
 
     void parseGetResourceConfigHistoryResponse(QXmlStreamReader &xml);
 

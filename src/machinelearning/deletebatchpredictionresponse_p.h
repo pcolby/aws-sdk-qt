@@ -31,7 +31,7 @@ class DeleteBatchPredictionResponsePrivate : public MachineLearningResponsePriva
 
 public:
 
-    DeleteBatchPredictionResponsePrivate(DeleteBatchPredictionResponse * const q);
+    explicit DeleteBatchPredictionResponsePrivate(DeleteBatchPredictionResponse * const q);
 
     void parseDeleteBatchPredictionResponse(QXmlStreamReader &xml);
 

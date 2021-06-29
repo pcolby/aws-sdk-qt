@@ -31,7 +31,7 @@ class GetEbsDefaultKmsKeyIdResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    GetEbsDefaultKmsKeyIdResponsePrivate(GetEbsDefaultKmsKeyIdResponse * const q);
+    explicit GetEbsDefaultKmsKeyIdResponsePrivate(GetEbsDefaultKmsKeyIdResponse * const q);
 
     void parseGetEbsDefaultKmsKeyIdResponse(QXmlStreamReader &xml);
 

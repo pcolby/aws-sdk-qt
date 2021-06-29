@@ -31,7 +31,7 @@ class ListEntitlementsResponsePrivate : public MediaConnectResponsePrivate {
 
 public:
 
-    ListEntitlementsResponsePrivate(ListEntitlementsResponse * const q);
+    explicit ListEntitlementsResponsePrivate(ListEntitlementsResponse * const q);
 
     void parseListEntitlementsResponse(QXmlStreamReader &xml);
 

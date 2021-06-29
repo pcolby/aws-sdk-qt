@@ -31,7 +31,7 @@ class TestConnectionResponsePrivate : public DatabaseMigrationServiceResponsePri
 
 public:
 
-    TestConnectionResponsePrivate(TestConnectionResponse * const q);
+    explicit TestConnectionResponsePrivate(TestConnectionResponse * const q);
 
     void parseTestConnectionResponse(QXmlStreamReader &xml);
 

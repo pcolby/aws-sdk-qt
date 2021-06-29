@@ -31,7 +31,7 @@ class CreatePartnerInputResponsePrivate : public MediaLiveResponsePrivate {
 
 public:
 
-    CreatePartnerInputResponsePrivate(CreatePartnerInputResponse * const q);
+    explicit CreatePartnerInputResponsePrivate(CreatePartnerInputResponse * const q);
 
     void parseCreatePartnerInputResponse(QXmlStreamReader &xml);
 

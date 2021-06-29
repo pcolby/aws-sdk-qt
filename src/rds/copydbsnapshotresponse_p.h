@@ -31,7 +31,7 @@ class CopyDBSnapshotResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    CopyDBSnapshotResponsePrivate(CopyDBSnapshotResponse * const q);
+    explicit CopyDBSnapshotResponsePrivate(CopyDBSnapshotResponse * const q);
 
     void parseCopyDBSnapshotResponse(QXmlStreamReader &xml);
 

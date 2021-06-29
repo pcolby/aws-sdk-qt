@@ -31,7 +31,7 @@ class ListRepositoriesForApprovalRuleTemplateResponsePrivate : public CodeCommit
 
 public:
 
-    ListRepositoriesForApprovalRuleTemplateResponsePrivate(ListRepositoriesForApprovalRuleTemplateResponse * const q);
+    explicit ListRepositoriesForApprovalRuleTemplateResponsePrivate(ListRepositoriesForApprovalRuleTemplateResponse * const q);
 
     void parseListRepositoriesForApprovalRuleTemplateResponse(QXmlStreamReader &xml);
 

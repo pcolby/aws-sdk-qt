@@ -31,7 +31,7 @@ class ListAssessmentRunsResponsePrivate : public InspectorResponsePrivate {
 
 public:
 
-    ListAssessmentRunsResponsePrivate(ListAssessmentRunsResponse * const q);
+    explicit ListAssessmentRunsResponsePrivate(ListAssessmentRunsResponse * const q);
 
     void parseListAssessmentRunsResponse(QXmlStreamReader &xml);
 

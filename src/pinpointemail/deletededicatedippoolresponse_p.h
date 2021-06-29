@@ -31,7 +31,7 @@ class DeleteDedicatedIpPoolResponsePrivate : public PinpointEmailResponsePrivate
 
 public:
 
-    DeleteDedicatedIpPoolResponsePrivate(DeleteDedicatedIpPoolResponse * const q);
+    explicit DeleteDedicatedIpPoolResponsePrivate(DeleteDedicatedIpPoolResponse * const q);
 
     void parseDeleteDedicatedIpPoolResponse(QXmlStreamReader &xml);
 

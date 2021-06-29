@@ -29,7 +29,7 @@ class ShieldResponsePrivate {
 
 public:
 
-    ShieldResponsePrivate(ShieldResponse * const q);
+    explicit ShieldResponsePrivate(ShieldResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

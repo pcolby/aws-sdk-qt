@@ -31,7 +31,7 @@ class DescribeDBClusterParameterGroupsResponsePrivate : public DocDBResponsePriv
 
 public:
 
-    DescribeDBClusterParameterGroupsResponsePrivate(DescribeDBClusterParameterGroupsResponse * const q);
+    explicit DescribeDBClusterParameterGroupsResponsePrivate(DescribeDBClusterParameterGroupsResponse * const q);
 
     void parseDescribeDBClusterParameterGroupsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class AssociateRouteTableResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    AssociateRouteTableResponsePrivate(AssociateRouteTableResponse * const q);
+    explicit AssociateRouteTableResponsePrivate(AssociateRouteTableResponse * const q);
 
     void parseAssociateRouteTableResponse(QXmlStreamReader &xml);
 

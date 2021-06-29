@@ -31,7 +31,7 @@ class ListVirtualServicesResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 
-    ListVirtualServicesResponsePrivate(ListVirtualServicesResponse * const q);
+    explicit ListVirtualServicesResponsePrivate(ListVirtualServicesResponse * const q);
 
     void parseListVirtualServicesResponse(QXmlStreamReader &xml);
 

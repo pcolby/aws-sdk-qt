@@ -31,7 +31,7 @@ class DeregisterResourceResponsePrivate : public LakeFormationResponsePrivate {
 
 public:
 
-    DeregisterResourceResponsePrivate(DeregisterResourceResponse * const q);
+    explicit DeregisterResourceResponsePrivate(DeregisterResourceResponse * const q);
 
     void parseDeregisterResourceResponse(QXmlStreamReader &xml);
 

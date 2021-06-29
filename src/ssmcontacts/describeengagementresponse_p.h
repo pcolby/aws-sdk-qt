@@ -31,7 +31,7 @@ class DescribeEngagementResponsePrivate : public SSMContactsResponsePrivate {
 
 public:
 
-    DescribeEngagementResponsePrivate(DescribeEngagementResponse * const q);
+    explicit DescribeEngagementResponsePrivate(DescribeEngagementResponse * const q);
 
     void parseDescribeEngagementResponse(QXmlStreamReader &xml);
 

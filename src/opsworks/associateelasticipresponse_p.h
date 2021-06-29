@@ -31,7 +31,7 @@ class AssociateElasticIpResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    AssociateElasticIpResponsePrivate(AssociateElasticIpResponse * const q);
+    explicit AssociateElasticIpResponsePrivate(AssociateElasticIpResponse * const q);
 
     void parseAssociateElasticIpResponse(QXmlStreamReader &xml);
 

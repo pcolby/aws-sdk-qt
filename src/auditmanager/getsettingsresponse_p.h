@@ -31,7 +31,7 @@ class GetSettingsResponsePrivate : public AuditManagerResponsePrivate {
 
 public:
 
-    GetSettingsResponsePrivate(GetSettingsResponse * const q);
+    explicit GetSettingsResponsePrivate(GetSettingsResponse * const q);
 
     void parseGetSettingsResponse(QXmlStreamReader &xml);
 

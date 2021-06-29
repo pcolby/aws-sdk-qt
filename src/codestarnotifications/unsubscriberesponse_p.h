@@ -31,7 +31,7 @@ class UnsubscribeResponsePrivate : public CodeStarNotificationsResponsePrivate {
 
 public:
 
-    UnsubscribeResponsePrivate(UnsubscribeResponse * const q);
+    explicit UnsubscribeResponsePrivate(UnsubscribeResponse * const q);
 
     void parseUnsubscribeResponse(QXmlStreamReader &xml);
 

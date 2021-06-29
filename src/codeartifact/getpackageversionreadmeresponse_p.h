@@ -31,7 +31,7 @@ class GetPackageVersionReadmeResponsePrivate : public CodeArtifactResponsePrivat
 
 public:
 
-    GetPackageVersionReadmeResponsePrivate(GetPackageVersionReadmeResponse * const q);
+    explicit GetPackageVersionReadmeResponsePrivate(GetPackageVersionReadmeResponse * const q);
 
     void parseGetPackageVersionReadmeResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateCertificateAuthorityResponsePrivate : public AcmpcaResponsePrivate {
 
 public:
 
-    UpdateCertificateAuthorityResponsePrivate(UpdateCertificateAuthorityResponse * const q);
+    explicit UpdateCertificateAuthorityResponsePrivate(UpdateCertificateAuthorityResponse * const q);
 
     void parseUpdateCertificateAuthorityResponse(QXmlStreamReader &xml);
 

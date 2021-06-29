@@ -31,7 +31,7 @@ class CreateClusterParameterGroupResponsePrivate : public RedshiftResponsePrivat
 
 public:
 
-    CreateClusterParameterGroupResponsePrivate(CreateClusterParameterGroupResponse * const q);
+    explicit CreateClusterParameterGroupResponsePrivate(CreateClusterParameterGroupResponse * const q);
 
     void parseCreateClusterParameterGroupResponse(QXmlStreamReader &xml);
 

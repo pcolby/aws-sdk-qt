@@ -31,7 +31,7 @@ class CreateDirectConnectGatewayAssociationResponsePrivate : public DirectConnec
 
 public:
 
-    CreateDirectConnectGatewayAssociationResponsePrivate(CreateDirectConnectGatewayAssociationResponse * const q);
+    explicit CreateDirectConnectGatewayAssociationResponsePrivate(CreateDirectConnectGatewayAssociationResponse * const q);
 
     void parseCreateDirectConnectGatewayAssociationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class AttachNetworkInterfaceResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    AttachNetworkInterfaceResponsePrivate(AttachNetworkInterfaceResponse * const q);
+    explicit AttachNetworkInterfaceResponsePrivate(AttachNetworkInterfaceResponse * const q);
 
     void parseAttachNetworkInterfaceResponse(QXmlStreamReader &xml);
 

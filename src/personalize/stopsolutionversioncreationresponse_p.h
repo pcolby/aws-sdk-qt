@@ -31,7 +31,7 @@ class StopSolutionVersionCreationResponsePrivate : public PersonalizeResponsePri
 
 public:
 
-    StopSolutionVersionCreationResponsePrivate(StopSolutionVersionCreationResponse * const q);
+    explicit StopSolutionVersionCreationResponsePrivate(StopSolutionVersionCreationResponse * const q);
 
     void parseStopSolutionVersionCreationResponse(QXmlStreamReader &xml);
 

@@ -29,7 +29,7 @@ class WafResponsePrivate {
 
 public:
 
-    WafResponsePrivate(WafResponse * const q);
+    explicit WafResponsePrivate(WafResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

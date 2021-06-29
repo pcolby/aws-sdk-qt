@@ -31,7 +31,7 @@ class UpdateFunctionCodeResponsePrivate : public LambdaResponsePrivate {
 
 public:
 
-    UpdateFunctionCodeResponsePrivate(UpdateFunctionCodeResponse * const q);
+    explicit UpdateFunctionCodeResponsePrivate(UpdateFunctionCodeResponse * const q);
 
     void parseUpdateFunctionCodeResponse(QXmlStreamReader &xml);
 

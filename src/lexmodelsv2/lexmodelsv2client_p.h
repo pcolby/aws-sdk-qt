@@ -30,7 +30,7 @@ class LexModelsV2Client;
 class LexModelsV2ClientPrivate {
 
 public:
-    LexModelsV2ClientPrivate(LexModelsV2Client * const q);
+    explicit LexModelsV2ClientPrivate(LexModelsV2Client * const q);
 
 protected:
     LexModelsV2Client * const q_ptr; ///< Internal q-pointer.

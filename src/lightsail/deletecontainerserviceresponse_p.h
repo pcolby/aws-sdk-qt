@@ -31,7 +31,7 @@ class DeleteContainerServiceResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    DeleteContainerServiceResponsePrivate(DeleteContainerServiceResponse * const q);
+    explicit DeleteContainerServiceResponsePrivate(DeleteContainerServiceResponse * const q);
 
     void parseDeleteContainerServiceResponse(QXmlStreamReader &xml);
 

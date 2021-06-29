@@ -31,7 +31,7 @@ class GetExecutionHistoryResponsePrivate : public SfnResponsePrivate {
 
 public:
 
-    GetExecutionHistoryResponsePrivate(GetExecutionHistoryResponse * const q);
+    explicit GetExecutionHistoryResponsePrivate(GetExecutionHistoryResponse * const q);
 
     void parseGetExecutionHistoryResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetProvisionedProductOutputsResponsePrivate : public ServiceCatalogRespons
 
 public:
 
-    GetProvisionedProductOutputsResponsePrivate(GetProvisionedProductOutputsResponse * const q);
+    explicit GetProvisionedProductOutputsResponsePrivate(GetProvisionedProductOutputsResponse * const q);
 
     void parseGetProvisionedProductOutputsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdatePartnerAccountResponsePrivate : public IoTWirelessResponsePrivate {
 
 public:
 
-    UpdatePartnerAccountResponsePrivate(UpdatePartnerAccountResponse * const q);
+    explicit UpdatePartnerAccountResponsePrivate(UpdatePartnerAccountResponse * const q);
 
     void parseUpdatePartnerAccountResponse(QXmlStreamReader &xml);
 

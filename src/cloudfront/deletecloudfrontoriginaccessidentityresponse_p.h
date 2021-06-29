@@ -31,7 +31,7 @@ class DeleteCloudFrontOriginAccessIdentityResponsePrivate : public CloudFrontRes
 
 public:
 
-    DeleteCloudFrontOriginAccessIdentityResponsePrivate(DeleteCloudFrontOriginAccessIdentityResponse * const q);
+    explicit DeleteCloudFrontOriginAccessIdentityResponsePrivate(DeleteCloudFrontOriginAccessIdentityResponse * const q);
 
     void parseDeleteCloudFrontOriginAccessIdentityResponse(QXmlStreamReader &xml);
 

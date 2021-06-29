@@ -61,7 +61,7 @@ public:
 protected:
     /// @cond internal
     KinesisVideoSignalingChannelsRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    KinesisVideoSignalingChannelsRequest(KinesisVideoSignalingChannelsRequestPrivate * const d);
+    explicit KinesisVideoSignalingChannelsRequest(KinesisVideoSignalingChannelsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

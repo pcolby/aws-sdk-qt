@@ -31,7 +31,7 @@ class MergeShardsResponsePrivate : public KinesisResponsePrivate {
 
 public:
 
-    MergeShardsResponsePrivate(MergeShardsResponse * const q);
+    explicit MergeShardsResponsePrivate(MergeShardsResponse * const q);
 
     void parseMergeShardsResponse(QXmlStreamReader &xml);
 

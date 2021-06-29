@@ -30,7 +30,7 @@ class GameLiftClient;
 class GameLiftClientPrivate {
 
 public:
-    GameLiftClientPrivate(GameLiftClient * const q);
+    explicit GameLiftClientPrivate(GameLiftClient * const q);
 
 protected:
     GameLiftClient * const q_ptr; ///< Internal q-pointer.

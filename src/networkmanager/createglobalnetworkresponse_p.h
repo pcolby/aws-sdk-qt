@@ -31,7 +31,7 @@ class CreateGlobalNetworkResponsePrivate : public NetworkManagerResponsePrivate 
 
 public:
 
-    CreateGlobalNetworkResponsePrivate(CreateGlobalNetworkResponse * const q);
+    explicit CreateGlobalNetworkResponsePrivate(CreateGlobalNetworkResponse * const q);
 
     void parseCreateGlobalNetworkResponse(QXmlStreamReader &xml);
 

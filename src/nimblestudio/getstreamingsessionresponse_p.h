@@ -31,7 +31,7 @@ class GetStreamingSessionResponsePrivate : public NimbleStudioResponsePrivate {
 
 public:
 
-    GetStreamingSessionResponsePrivate(GetStreamingSessionResponse * const q);
+    explicit GetStreamingSessionResponsePrivate(GetStreamingSessionResponse * const q);
 
     void parseGetStreamingSessionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetInsightSummariesResponsePrivate : public XRayResponsePrivate {
 
 public:
 
-    GetInsightSummariesResponsePrivate(GetInsightSummariesResponse * const q);
+    explicit GetInsightSummariesResponsePrivate(GetInsightSummariesResponse * const q);
 
     void parseGetInsightSummariesResponse(QXmlStreamReader &xml);
 

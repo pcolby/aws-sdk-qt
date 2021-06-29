@@ -31,7 +31,7 @@ class UnclaimDeviceResponsePrivate : public IoT1ClickDevicesServiceResponsePriva
 
 public:
 
-    UnclaimDeviceResponsePrivate(UnclaimDeviceResponse * const q);
+    explicit UnclaimDeviceResponsePrivate(UnclaimDeviceResponse * const q);
 
     void parseUnclaimDeviceResponse(QXmlStreamReader &xml);
 

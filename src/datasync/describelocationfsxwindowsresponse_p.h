@@ -31,7 +31,7 @@ class DescribeLocationFsxWindowsResponsePrivate : public DataSyncResponsePrivate
 
 public:
 
-    DescribeLocationFsxWindowsResponsePrivate(DescribeLocationFsxWindowsResponse * const q);
+    explicit DescribeLocationFsxWindowsResponsePrivate(DescribeLocationFsxWindowsResponse * const q);
 
     void parseDescribeLocationFsxWindowsResponse(QXmlStreamReader &xml);
 

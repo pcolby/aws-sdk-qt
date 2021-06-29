@@ -31,7 +31,7 @@ class RegisterUsageResponsePrivate : public MarketplaceMeteringResponsePrivate {
 
 public:
 
-    RegisterUsageResponsePrivate(RegisterUsageResponse * const q);
+    explicit RegisterUsageResponsePrivate(RegisterUsageResponse * const q);
 
     void parseRegisterUsageResponse(QXmlStreamReader &xml);
 

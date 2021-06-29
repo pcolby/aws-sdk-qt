@@ -31,7 +31,7 @@ class DescribeSpotDatafeedSubscriptionResponsePrivate : public Ec2ResponsePrivat
 
 public:
 
-    DescribeSpotDatafeedSubscriptionResponsePrivate(DescribeSpotDatafeedSubscriptionResponse * const q);
+    explicit DescribeSpotDatafeedSubscriptionResponsePrivate(DescribeSpotDatafeedSubscriptionResponse * const q);
 
     void parseDescribeSpotDatafeedSubscriptionResponse(QXmlStreamReader &xml);
 

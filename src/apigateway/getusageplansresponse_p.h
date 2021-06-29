@@ -31,7 +31,7 @@ class GetUsagePlansResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    GetUsagePlansResponsePrivate(GetUsagePlansResponse * const q);
+    explicit GetUsagePlansResponsePrivate(GetUsagePlansResponse * const q);
 
     void parseGetUsagePlansResponse(QXmlStreamReader &xml);
 

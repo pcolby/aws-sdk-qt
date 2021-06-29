@@ -31,7 +31,7 @@ class DeleteLedgerResponsePrivate : public QldbResponsePrivate {
 
 public:
 
-    DeleteLedgerResponsePrivate(DeleteLedgerResponse * const q);
+    explicit DeleteLedgerResponsePrivate(DeleteLedgerResponse * const q);
 
     void parseDeleteLedgerResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class SetRiskConfigurationResponsePrivate : public CognitoIdentityProviderRespon
 
 public:
 
-    SetRiskConfigurationResponsePrivate(SetRiskConfigurationResponse * const q);
+    explicit SetRiskConfigurationResponsePrivate(SetRiskConfigurationResponse * const q);
 
     void parseSetRiskConfigurationResponse(QXmlStreamReader &xml);
 

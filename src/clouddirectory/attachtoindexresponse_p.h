@@ -31,7 +31,7 @@ class AttachToIndexResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 
-    AttachToIndexResponsePrivate(AttachToIndexResponse * const q);
+    explicit AttachToIndexResponsePrivate(AttachToIndexResponse * const q);
 
     void parseAttachToIndexResponse(QXmlStreamReader &xml);
 

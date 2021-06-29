@@ -31,7 +31,7 @@ class StopUserImportJobResponsePrivate : public CognitoIdentityProviderResponseP
 
 public:
 
-    StopUserImportJobResponsePrivate(StopUserImportJobResponse * const q);
+    explicit StopUserImportJobResponsePrivate(StopUserImportJobResponse * const q);
 
     void parseStopUserImportJobResponse(QXmlStreamReader &xml);
 

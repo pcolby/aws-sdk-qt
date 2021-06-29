@@ -31,7 +31,7 @@ class GetEffectivePermissionsForPathResponsePrivate : public LakeFormationRespon
 
 public:
 
-    GetEffectivePermissionsForPathResponsePrivate(GetEffectivePermissionsForPathResponse * const q);
+    explicit GetEffectivePermissionsForPathResponsePrivate(GetEffectivePermissionsForPathResponse * const q);
 
     void parseGetEffectivePermissionsForPathResponse(QXmlStreamReader &xml);
 

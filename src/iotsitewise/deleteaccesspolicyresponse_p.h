@@ -31,7 +31,7 @@ class DeleteAccessPolicyResponsePrivate : public IoTSiteWiseResponsePrivate {
 
 public:
 
-    DeleteAccessPolicyResponsePrivate(DeleteAccessPolicyResponse * const q);
+    explicit DeleteAccessPolicyResponsePrivate(DeleteAccessPolicyResponse * const q);
 
     void parseDeleteAccessPolicyResponse(QXmlStreamReader &xml);
 

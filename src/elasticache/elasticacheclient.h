@@ -171,7 +171,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    ElastiCacheClient(
+    explicit ElastiCacheClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -246,7 +246,7 @@ public slots:
 protected:
     /// @cond internal
     ElastiCacheClientPrivate * const d_ptr; ///< Internal d-pointer.
-    ElastiCacheClient(ElastiCacheClientPrivate * const d);
+    explicit ElastiCacheClient(ElastiCacheClientPrivate * const d);
     /// @endcond
 
 private:

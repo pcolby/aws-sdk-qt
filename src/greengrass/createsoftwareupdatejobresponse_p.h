@@ -31,7 +31,7 @@ class CreateSoftwareUpdateJobResponsePrivate : public GreengrassResponsePrivate 
 
 public:
 
-    CreateSoftwareUpdateJobResponsePrivate(CreateSoftwareUpdateJobResponse * const q);
+    explicit CreateSoftwareUpdateJobResponsePrivate(CreateSoftwareUpdateJobResponse * const q);
 
     void parseCreateSoftwareUpdateJobResponse(QXmlStreamReader &xml);
 

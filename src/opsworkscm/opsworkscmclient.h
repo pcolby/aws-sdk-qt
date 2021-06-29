@@ -79,7 +79,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    OpsWorksCMClient(
+    explicit OpsWorksCMClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -108,7 +108,7 @@ public slots:
 protected:
     /// @cond internal
     OpsWorksCMClientPrivate * const d_ptr; ///< Internal d-pointer.
-    OpsWorksCMClient(OpsWorksCMClientPrivate * const d);
+    explicit OpsWorksCMClient(OpsWorksCMClientPrivate * const d);
     /// @endcond
 
 private:

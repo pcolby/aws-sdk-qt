@@ -31,7 +31,7 @@ class ImportSshPublicKeyResponsePrivate : public TransferResponsePrivate {
 
 public:
 
-    ImportSshPublicKeyResponsePrivate(ImportSshPublicKeyResponse * const q);
+    explicit ImportSshPublicKeyResponsePrivate(ImportSshPublicKeyResponse * const q);
 
     void parseImportSshPublicKeyResponse(QXmlStreamReader &xml);
 

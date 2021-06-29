@@ -31,7 +31,7 @@ class DeleteClusterParameterGroupResponsePrivate : public RedshiftResponsePrivat
 
 public:
 
-    DeleteClusterParameterGroupResponsePrivate(DeleteClusterParameterGroupResponse * const q);
+    explicit DeleteClusterParameterGroupResponsePrivate(DeleteClusterParameterGroupResponse * const q);
 
     void parseDeleteClusterParameterGroupResponse(QXmlStreamReader &xml);
 

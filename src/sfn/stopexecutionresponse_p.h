@@ -31,7 +31,7 @@ class StopExecutionResponsePrivate : public SfnResponsePrivate {
 
 public:
 
-    StopExecutionResponsePrivate(StopExecutionResponse * const q);
+    explicit StopExecutionResponsePrivate(StopExecutionResponse * const q);
 
     void parseStopExecutionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListConnectionsResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 
-    ListConnectionsResponsePrivate(ListConnectionsResponse * const q);
+    explicit ListConnectionsResponsePrivate(ListConnectionsResponse * const q);
 
     void parseListConnectionsResponse(QXmlStreamReader &xml);
 

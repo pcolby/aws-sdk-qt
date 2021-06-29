@@ -31,7 +31,7 @@ class DescribeDatasetImportJobResponsePrivate : public PersonalizeResponsePrivat
 
 public:
 
-    DescribeDatasetImportJobResponsePrivate(DescribeDatasetImportJobResponse * const q);
+    explicit DescribeDatasetImportJobResponsePrivate(DescribeDatasetImportJobResponse * const q);
 
     void parseDescribeDatasetImportJobResponse(QXmlStreamReader &xml);
 

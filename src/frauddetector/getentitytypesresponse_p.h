@@ -31,7 +31,7 @@ class GetEntityTypesResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 
-    GetEntityTypesResponsePrivate(GetEntityTypesResponse * const q);
+    explicit GetEntityTypesResponsePrivate(GetEntityTypesResponse * const q);
 
     void parseGetEntityTypesResponse(QXmlStreamReader &xml);
 

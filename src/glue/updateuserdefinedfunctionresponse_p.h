@@ -31,7 +31,7 @@ class UpdateUserDefinedFunctionResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    UpdateUserDefinedFunctionResponsePrivate(UpdateUserDefinedFunctionResponse * const q);
+    explicit UpdateUserDefinedFunctionResponsePrivate(UpdateUserDefinedFunctionResponse * const q);
 
     void parseUpdateUserDefinedFunctionResponse(QXmlStreamReader &xml);
 

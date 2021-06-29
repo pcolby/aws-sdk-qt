@@ -31,7 +31,7 @@ class GetBlockPublicAccessConfigurationResponsePrivate : public EmrResponsePriva
 
 public:
 
-    GetBlockPublicAccessConfigurationResponsePrivate(GetBlockPublicAccessConfigurationResponse * const q);
+    explicit GetBlockPublicAccessConfigurationResponsePrivate(GetBlockPublicAccessConfigurationResponse * const q);
 
     void parseGetBlockPublicAccessConfigurationResponse(QXmlStreamReader &xml);
 

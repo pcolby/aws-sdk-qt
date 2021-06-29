@@ -31,7 +31,7 @@ class BatchDeleteResponsePrivate : public MediaLiveResponsePrivate {
 
 public:
 
-    BatchDeleteResponsePrivate(BatchDeleteResponse * const q);
+    explicit BatchDeleteResponsePrivate(BatchDeleteResponse * const q);
 
     void parseBatchDeleteResponse(QXmlStreamReader &xml);
 

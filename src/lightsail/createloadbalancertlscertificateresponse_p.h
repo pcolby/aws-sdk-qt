@@ -31,7 +31,7 @@ class CreateLoadBalancerTlsCertificateResponsePrivate : public LightsailResponse
 
 public:
 
-    CreateLoadBalancerTlsCertificateResponsePrivate(CreateLoadBalancerTlsCertificateResponse * const q);
+    explicit CreateLoadBalancerTlsCertificateResponsePrivate(CreateLoadBalancerTlsCertificateResponse * const q);
 
     void parseCreateLoadBalancerTlsCertificateResponse(QXmlStreamReader &xml);
 

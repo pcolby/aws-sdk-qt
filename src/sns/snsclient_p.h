@@ -30,7 +30,7 @@ class SnsClient;
 class SnsClientPrivate {
 
 public:
-    SnsClientPrivate(SnsClient * const q);
+    explicit SnsClientPrivate(SnsClient * const q);
 
 protected:
     SnsClient * const q_ptr; ///< Internal q-pointer.

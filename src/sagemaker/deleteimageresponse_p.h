@@ -31,7 +31,7 @@ class DeleteImageResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    DeleteImageResponsePrivate(DeleteImageResponse * const q);
+    explicit DeleteImageResponsePrivate(DeleteImageResponse * const q);
 
     void parseDeleteImageResponse(QXmlStreamReader &xml);
 

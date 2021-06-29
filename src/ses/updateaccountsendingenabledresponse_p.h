@@ -31,7 +31,7 @@ class UpdateAccountSendingEnabledResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    UpdateAccountSendingEnabledResponsePrivate(UpdateAccountSendingEnabledResponse * const q);
+    explicit UpdateAccountSendingEnabledResponsePrivate(UpdateAccountSendingEnabledResponse * const q);
 
     void parseUpdateAccountSendingEnabledResponse(QXmlStreamReader &xml);
 

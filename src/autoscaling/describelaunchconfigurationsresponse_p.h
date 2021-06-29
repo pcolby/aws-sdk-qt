@@ -31,7 +31,7 @@ class DescribeLaunchConfigurationsResponsePrivate : public AutoScalingResponsePr
 
 public:
 
-    DescribeLaunchConfigurationsResponsePrivate(DescribeLaunchConfigurationsResponse * const q);
+    explicit DescribeLaunchConfigurationsResponsePrivate(DescribeLaunchConfigurationsResponse * const q);
 
     void parseDescribeLaunchConfigurationsResponse(QXmlStreamReader &xml);
 

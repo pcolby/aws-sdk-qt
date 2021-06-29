@@ -31,7 +31,7 @@ class DeleteProgressUpdateStreamResponsePrivate : public MigrationHubResponsePri
 
 public:
 
-    DeleteProgressUpdateStreamResponsePrivate(DeleteProgressUpdateStreamResponse * const q);
+    explicit DeleteProgressUpdateStreamResponsePrivate(DeleteProgressUpdateStreamResponse * const q);
 
     void parseDeleteProgressUpdateStreamResponse(QXmlStreamReader &xml);
 

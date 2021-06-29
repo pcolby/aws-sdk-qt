@@ -31,7 +31,7 @@ class DecodeAuthorizationMessageResponsePrivate : public StsResponsePrivate {
 
 public:
 
-    DecodeAuthorizationMessageResponsePrivate(DecodeAuthorizationMessageResponse * const q);
+    explicit DecodeAuthorizationMessageResponsePrivate(DecodeAuthorizationMessageResponse * const q);
 
     void parseDecodeAuthorizationMessageResponse(QXmlStreamReader &xml);
 

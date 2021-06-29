@@ -31,7 +31,7 @@ class ListBuildsForProjectResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 
-    ListBuildsForProjectResponsePrivate(ListBuildsForProjectResponse * const q);
+    explicit ListBuildsForProjectResponsePrivate(ListBuildsForProjectResponse * const q);
 
     void parseListBuildsForProjectResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetAuthorizerResponsePrivate : public ApiGatewayV2ResponsePrivate {
 
 public:
 
-    GetAuthorizerResponsePrivate(GetAuthorizerResponse * const q);
+    explicit GetAuthorizerResponsePrivate(GetAuthorizerResponse * const q);
 
     void parseGetAuthorizerResponse(QXmlStreamReader &xml);
 

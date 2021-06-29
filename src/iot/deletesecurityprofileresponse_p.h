@@ -31,7 +31,7 @@ class DeleteSecurityProfileResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DeleteSecurityProfileResponsePrivate(DeleteSecurityProfileResponse * const q);
+    explicit DeleteSecurityProfileResponsePrivate(DeleteSecurityProfileResponse * const q);
 
     void parseDeleteSecurityProfileResponse(QXmlStreamReader &xml);
 

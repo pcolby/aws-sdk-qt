@@ -29,7 +29,7 @@ class Sesv2ResponsePrivate {
 
 public:
 
-    Sesv2ResponsePrivate(Sesv2Response * const q);
+    explicit Sesv2ResponsePrivate(Sesv2Response * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

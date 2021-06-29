@@ -31,7 +31,7 @@ class AuthorizeDBSecurityGroupIngressResponsePrivate : public RdsResponsePrivate
 
 public:
 
-    AuthorizeDBSecurityGroupIngressResponsePrivate(AuthorizeDBSecurityGroupIngressResponse * const q);
+    explicit AuthorizeDBSecurityGroupIngressResponsePrivate(AuthorizeDBSecurityGroupIngressResponse * const q);
 
     void parseAuthorizeDBSecurityGroupIngressResponse(QXmlStreamReader &xml);
 

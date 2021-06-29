@@ -31,7 +31,7 @@ class CreateFleetResponsePrivate : public WorkLinkResponsePrivate {
 
 public:
 
-    CreateFleetResponsePrivate(CreateFleetResponse * const q);
+    explicit CreateFleetResponsePrivate(CreateFleetResponse * const q);
 
     void parseCreateFleetResponse(QXmlStreamReader &xml);
 

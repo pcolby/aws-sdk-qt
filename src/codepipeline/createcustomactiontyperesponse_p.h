@@ -31,7 +31,7 @@ class CreateCustomActionTypeResponsePrivate : public CodePipelineResponsePrivate
 
 public:
 
-    CreateCustomActionTypeResponsePrivate(CreateCustomActionTypeResponse * const q);
+    explicit CreateCustomActionTypeResponsePrivate(CreateCustomActionTypeResponse * const q);
 
     void parseCreateCustomActionTypeResponse(QXmlStreamReader &xml);
 

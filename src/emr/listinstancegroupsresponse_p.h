@@ -31,7 +31,7 @@ class ListInstanceGroupsResponsePrivate : public EmrResponsePrivate {
 
 public:
 
-    ListInstanceGroupsResponsePrivate(ListInstanceGroupsResponse * const q);
+    explicit ListInstanceGroupsResponsePrivate(ListInstanceGroupsResponse * const q);
 
     void parseListInstanceGroupsResponse(QXmlStreamReader &xml);
 

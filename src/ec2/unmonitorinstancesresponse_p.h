@@ -31,7 +31,7 @@ class UnmonitorInstancesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    UnmonitorInstancesResponsePrivate(UnmonitorInstancesResponse * const q);
+    explicit UnmonitorInstancesResponsePrivate(UnmonitorInstancesResponse * const q);
 
     void parseUnmonitorInstancesResponse(QXmlStreamReader &xml);
 

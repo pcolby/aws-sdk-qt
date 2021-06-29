@@ -31,7 +31,7 @@ class RejectSkillResponsePrivate : public AlexaForBusinessResponsePrivate {
 
 public:
 
-    RejectSkillResponsePrivate(RejectSkillResponse * const q);
+    explicit RejectSkillResponsePrivate(RejectSkillResponse * const q);
 
     void parseRejectSkillResponse(QXmlStreamReader &xml);
 

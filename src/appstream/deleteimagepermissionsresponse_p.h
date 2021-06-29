@@ -31,7 +31,7 @@ class DeleteImagePermissionsResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 
-    DeleteImagePermissionsResponsePrivate(DeleteImagePermissionsResponse * const q);
+    explicit DeleteImagePermissionsResponsePrivate(DeleteImagePermissionsResponse * const q);
 
     void parseDeleteImagePermissionsResponse(QXmlStreamReader &xml);
 

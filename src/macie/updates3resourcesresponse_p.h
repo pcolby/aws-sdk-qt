@@ -31,7 +31,7 @@ class UpdateS3ResourcesResponsePrivate : public MacieResponsePrivate {
 
 public:
 
-    UpdateS3ResourcesResponsePrivate(UpdateS3ResourcesResponse * const q);
+    explicit UpdateS3ResourcesResponsePrivate(UpdateS3ResourcesResponse * const q);
 
     void parseUpdateS3ResourcesResponse(QXmlStreamReader &xml);
 

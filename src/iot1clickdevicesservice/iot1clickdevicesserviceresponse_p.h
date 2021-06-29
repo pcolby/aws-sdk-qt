@@ -29,7 +29,7 @@ class IoT1ClickDevicesServiceResponsePrivate {
 
 public:
 
-    IoT1ClickDevicesServiceResponsePrivate(IoT1ClickDevicesServiceResponse * const q);
+    explicit IoT1ClickDevicesServiceResponsePrivate(IoT1ClickDevicesServiceResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

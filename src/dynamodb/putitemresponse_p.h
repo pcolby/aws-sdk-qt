@@ -31,7 +31,7 @@ class PutItemResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 
-    PutItemResponsePrivate(PutItemResponse * const q);
+    explicit PutItemResponsePrivate(PutItemResponse * const q);
 
     void parsePutItemResponse(QXmlStreamReader &xml);
 

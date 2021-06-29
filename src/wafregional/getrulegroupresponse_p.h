@@ -31,7 +31,7 @@ class GetRuleGroupResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 
-    GetRuleGroupResponsePrivate(GetRuleGroupResponse * const q);
+    explicit GetRuleGroupResponsePrivate(GetRuleGroupResponse * const q);
 
     void parseGetRuleGroupResponse(QXmlStreamReader &xml);
 

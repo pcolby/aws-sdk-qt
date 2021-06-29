@@ -31,7 +31,7 @@ class IssueCertificateResponsePrivate : public AcmpcaResponsePrivate {
 
 public:
 
-    IssueCertificateResponsePrivate(IssueCertificateResponse * const q);
+    explicit IssueCertificateResponsePrivate(IssueCertificateResponse * const q);
 
     void parseIssueCertificateResponse(QXmlStreamReader &xml);
 

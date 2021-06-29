@@ -31,7 +31,7 @@ class ListResolversByFunctionResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 
-    ListResolversByFunctionResponsePrivate(ListResolversByFunctionResponse * const q);
+    explicit ListResolversByFunctionResponsePrivate(ListResolversByFunctionResponse * const q);
 
     void parseListResolversByFunctionResponse(QXmlStreamReader &xml);
 

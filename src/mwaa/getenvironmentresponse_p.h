@@ -31,7 +31,7 @@ class GetEnvironmentResponsePrivate : public MwaaResponsePrivate {
 
 public:
 
-    GetEnvironmentResponsePrivate(GetEnvironmentResponse * const q);
+    explicit GetEnvironmentResponsePrivate(GetEnvironmentResponse * const q);
 
     void parseGetEnvironmentResponse(QXmlStreamReader &xml);
 

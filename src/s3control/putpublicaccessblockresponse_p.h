@@ -31,7 +31,7 @@ class PutPublicAccessBlockResponsePrivate : public S3ControlResponsePrivate {
 
 public:
 
-    PutPublicAccessBlockResponsePrivate(PutPublicAccessBlockResponse * const q);
+    explicit PutPublicAccessBlockResponsePrivate(PutPublicAccessBlockResponse * const q);
 
     void parsePutPublicAccessBlockResponse(QXmlStreamReader &xml);
 

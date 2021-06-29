@@ -31,7 +31,7 @@ class DeleteMapResponsePrivate : public LocationServiceResponsePrivate {
 
 public:
 
-    DeleteMapResponsePrivate(DeleteMapResponse * const q);
+    explicit DeleteMapResponsePrivate(DeleteMapResponse * const q);
 
     void parseDeleteMapResponse(QXmlStreamReader &xml);
 

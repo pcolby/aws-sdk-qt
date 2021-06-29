@@ -31,7 +31,7 @@ class UpdateQuerySuggestionsBlockListResponsePrivate : public kendraResponsePriv
 
 public:
 
-    UpdateQuerySuggestionsBlockListResponsePrivate(UpdateQuerySuggestionsBlockListResponse * const q);
+    explicit UpdateQuerySuggestionsBlockListResponsePrivate(UpdateQuerySuggestionsBlockListResponse * const q);
 
     void parseUpdateQuerySuggestionsBlockListResponse(QXmlStreamReader &xml);
 

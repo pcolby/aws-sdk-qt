@@ -31,7 +31,7 @@ class AbortEnvironmentUpdateResponsePrivate : public ElasticBeanstalkResponsePri
 
 public:
 
-    AbortEnvironmentUpdateResponsePrivate(AbortEnvironmentUpdateResponse * const q);
+    explicit AbortEnvironmentUpdateResponsePrivate(AbortEnvironmentUpdateResponse * const q);
 
     void parseAbortEnvironmentUpdateResponse(QXmlStreamReader &xml);
 

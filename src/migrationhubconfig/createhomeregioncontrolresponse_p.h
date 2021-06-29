@@ -31,7 +31,7 @@ class CreateHomeRegionControlResponsePrivate : public MigrationHubConfigResponse
 
 public:
 
-    CreateHomeRegionControlResponsePrivate(CreateHomeRegionControlResponse * const q);
+    explicit CreateHomeRegionControlResponsePrivate(CreateHomeRegionControlResponse * const q);
 
     void parseCreateHomeRegionControlResponse(QXmlStreamReader &xml);
 

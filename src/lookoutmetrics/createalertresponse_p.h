@@ -31,7 +31,7 @@ class CreateAlertResponsePrivate : public LookoutMetricsResponsePrivate {
 
 public:
 
-    CreateAlertResponsePrivate(CreateAlertResponse * const q);
+    explicit CreateAlertResponsePrivate(CreateAlertResponse * const q);
 
     void parseCreateAlertResponse(QXmlStreamReader &xml);
 

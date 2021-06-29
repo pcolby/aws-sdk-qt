@@ -31,7 +31,7 @@ class RegisterVolumeResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    RegisterVolumeResponsePrivate(RegisterVolumeResponse * const q);
+    explicit RegisterVolumeResponsePrivate(RegisterVolumeResponse * const q);
 
     void parseRegisterVolumeResponse(QXmlStreamReader &xml);
 

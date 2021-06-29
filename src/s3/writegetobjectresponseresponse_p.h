@@ -31,7 +31,7 @@ class WriteGetObjectResponseResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    WriteGetObjectResponseResponsePrivate(WriteGetObjectResponseResponse * const q);
+    explicit WriteGetObjectResponseResponsePrivate(WriteGetObjectResponseResponse * const q);
 
     void parseWriteGetObjectResponseResponse(QXmlStreamReader &xml);
 

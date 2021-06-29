@@ -31,7 +31,7 @@ class UpdateConfigurationResponsePrivate : public MqResponsePrivate {
 
 public:
 
-    UpdateConfigurationResponsePrivate(UpdateConfigurationResponse * const q);
+    explicit UpdateConfigurationResponsePrivate(UpdateConfigurationResponse * const q);
 
     void parseUpdateConfigurationResponse(QXmlStreamReader &xml);
 

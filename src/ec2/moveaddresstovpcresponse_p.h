@@ -31,7 +31,7 @@ class MoveAddressToVpcResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    MoveAddressToVpcResponsePrivate(MoveAddressToVpcResponse * const q);
+    explicit MoveAddressToVpcResponsePrivate(MoveAddressToVpcResponse * const q);
 
     void parseMoveAddressToVpcResponse(QXmlStreamReader &xml);
 

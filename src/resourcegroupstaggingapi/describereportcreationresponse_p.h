@@ -31,7 +31,7 @@ class DescribeReportCreationResponsePrivate : public ResourceGroupsTaggingAPIRes
 
 public:
 
-    DescribeReportCreationResponsePrivate(DescribeReportCreationResponse * const q);
+    explicit DescribeReportCreationResponsePrivate(DescribeReportCreationResponse * const q);
 
     void parseDescribeReportCreationResponse(QXmlStreamReader &xml);
 

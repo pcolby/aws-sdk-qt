@@ -31,7 +31,7 @@ class CancelBundleTaskResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CancelBundleTaskResponsePrivate(CancelBundleTaskResponse * const q);
+    explicit CancelBundleTaskResponsePrivate(CancelBundleTaskResponse * const q);
 
     void parseCancelBundleTaskResponse(QXmlStreamReader &xml);
 

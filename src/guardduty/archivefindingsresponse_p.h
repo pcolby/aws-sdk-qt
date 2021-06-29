@@ -31,7 +31,7 @@ class ArchiveFindingsResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 
-    ArchiveFindingsResponsePrivate(ArchiveFindingsResponse * const q);
+    explicit ArchiveFindingsResponsePrivate(ArchiveFindingsResponse * const q);
 
     void parseArchiveFindingsResponse(QXmlStreamReader &xml);
 

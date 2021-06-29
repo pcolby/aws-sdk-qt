@@ -31,7 +31,7 @@ class DescribeMyUserProfileResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    DescribeMyUserProfileResponsePrivate(DescribeMyUserProfileResponse * const q);
+    explicit DescribeMyUserProfileResponsePrivate(DescribeMyUserProfileResponse * const q);
 
     void parseDescribeMyUserProfileResponse(QXmlStreamReader &xml);
 

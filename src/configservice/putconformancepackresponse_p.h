@@ -31,7 +31,7 @@ class PutConformancePackResponsePrivate : public ConfigServiceResponsePrivate {
 
 public:
 
-    PutConformancePackResponsePrivate(PutConformancePackResponse * const q);
+    explicit PutConformancePackResponsePrivate(PutConformancePackResponse * const q);
 
     void parsePutConformancePackResponse(QXmlStreamReader &xml);
 

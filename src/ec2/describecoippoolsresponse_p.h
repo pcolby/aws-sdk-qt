@@ -31,7 +31,7 @@ class DescribeCoipPoolsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeCoipPoolsResponsePrivate(DescribeCoipPoolsResponse * const q);
+    explicit DescribeCoipPoolsResponsePrivate(DescribeCoipPoolsResponse * const q);
 
     void parseDescribeCoipPoolsResponse(QXmlStreamReader &xml);
 

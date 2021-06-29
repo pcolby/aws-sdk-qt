@@ -31,7 +31,7 @@ class DescribeRiskConfigurationResponsePrivate : public CognitoIdentityProviderR
 
 public:
 
-    DescribeRiskConfigurationResponsePrivate(DescribeRiskConfigurationResponse * const q);
+    explicit DescribeRiskConfigurationResponsePrivate(DescribeRiskConfigurationResponse * const q);
 
     void parseDescribeRiskConfigurationResponse(QXmlStreamReader &xml);
 

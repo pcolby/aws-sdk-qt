@@ -31,7 +31,7 @@ class DescribeReservedInstancesModificationsResponsePrivate : public Ec2Response
 
 public:
 
-    DescribeReservedInstancesModificationsResponsePrivate(DescribeReservedInstancesModificationsResponse * const q);
+    explicit DescribeReservedInstancesModificationsResponsePrivate(DescribeReservedInstancesModificationsResponse * const q);
 
     void parseDescribeReservedInstancesModificationsResponse(QXmlStreamReader &xml);
 

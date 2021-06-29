@@ -31,7 +31,7 @@ class ListSourceLocationsResponsePrivate : public MediaTailorResponsePrivate {
 
 public:
 
-    ListSourceLocationsResponsePrivate(ListSourceLocationsResponse * const q);
+    explicit ListSourceLocationsResponsePrivate(ListSourceLocationsResponse * const q);
 
     void parseListSourceLocationsResponse(QXmlStreamReader &xml);
 

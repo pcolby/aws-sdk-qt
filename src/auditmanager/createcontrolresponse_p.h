@@ -31,7 +31,7 @@ class CreateControlResponsePrivate : public AuditManagerResponsePrivate {
 
 public:
 
-    CreateControlResponsePrivate(CreateControlResponse * const q);
+    explicit CreateControlResponsePrivate(CreateControlResponse * const q);
 
     void parseCreateControlResponse(QXmlStreamReader &xml);
 

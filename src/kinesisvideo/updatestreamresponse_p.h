@@ -31,7 +31,7 @@ class UpdateStreamResponsePrivate : public KinesisVideoResponsePrivate {
 
 public:
 
-    UpdateStreamResponsePrivate(UpdateStreamResponse * const q);
+    explicit UpdateStreamResponsePrivate(UpdateStreamResponse * const q);
 
     void parseUpdateStreamResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdatePushTemplateResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    UpdatePushTemplateResponsePrivate(UpdatePushTemplateResponse * const q);
+    explicit UpdatePushTemplateResponsePrivate(UpdatePushTemplateResponse * const q);
 
     void parseUpdatePushTemplateResponse(QXmlStreamReader &xml);
 

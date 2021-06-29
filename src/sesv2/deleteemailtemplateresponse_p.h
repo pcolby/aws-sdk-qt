@@ -31,7 +31,7 @@ class DeleteEmailTemplateResponsePrivate : public Sesv2ResponsePrivate {
 
 public:
 
-    DeleteEmailTemplateResponsePrivate(DeleteEmailTemplateResponse * const q);
+    explicit DeleteEmailTemplateResponsePrivate(DeleteEmailTemplateResponse * const q);
 
     void parseDeleteEmailTemplateResponse(QXmlStreamReader &xml);
 

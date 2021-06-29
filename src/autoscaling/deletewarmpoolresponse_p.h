@@ -31,7 +31,7 @@ class DeleteWarmPoolResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 
-    DeleteWarmPoolResponsePrivate(DeleteWarmPoolResponse * const q);
+    explicit DeleteWarmPoolResponsePrivate(DeleteWarmPoolResponse * const q);
 
     void parseDeleteWarmPoolResponse(QXmlStreamReader &xml);
 

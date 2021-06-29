@@ -31,7 +31,7 @@ class UpdateStudioSessionMappingResponsePrivate : public EmrResponsePrivate {
 
 public:
 
-    UpdateStudioSessionMappingResponsePrivate(UpdateStudioSessionMappingResponse * const q);
+    explicit UpdateStudioSessionMappingResponsePrivate(UpdateStudioSessionMappingResponse * const q);
 
     void parseUpdateStudioSessionMappingResponse(QXmlStreamReader &xml);
 

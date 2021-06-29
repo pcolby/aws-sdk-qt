@@ -31,7 +31,7 @@ class SetTagsForResourceResponsePrivate : public InspectorResponsePrivate {
 
 public:
 
-    SetTagsForResourceResponsePrivate(SetTagsForResourceResponse * const q);
+    explicit SetTagsForResourceResponsePrivate(SetTagsForResourceResponse * const q);
 
     void parseSetTagsForResourceResponse(QXmlStreamReader &xml);
 

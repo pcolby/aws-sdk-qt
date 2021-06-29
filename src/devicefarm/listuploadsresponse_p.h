@@ -31,7 +31,7 @@ class ListUploadsResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    ListUploadsResponsePrivate(ListUploadsResponse * const q);
+    explicit ListUploadsResponsePrivate(ListUploadsResponse * const q);
 
     void parseListUploadsResponse(QXmlStreamReader &xml);
 

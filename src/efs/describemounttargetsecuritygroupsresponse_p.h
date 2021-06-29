@@ -31,7 +31,7 @@ class DescribeMountTargetSecurityGroupsResponsePrivate : public EfsResponsePriva
 
 public:
 
-    DescribeMountTargetSecurityGroupsResponsePrivate(DescribeMountTargetSecurityGroupsResponse * const q);
+    explicit DescribeMountTargetSecurityGroupsResponsePrivate(DescribeMountTargetSecurityGroupsResponse * const q);
 
     void parseDescribeMountTargetSecurityGroupsResponse(QXmlStreamReader &xml);
 

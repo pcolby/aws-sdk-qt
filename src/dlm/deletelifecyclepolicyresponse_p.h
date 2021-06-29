@@ -31,7 +31,7 @@ class DeleteLifecyclePolicyResponsePrivate : public DlmResponsePrivate {
 
 public:
 
-    DeleteLifecyclePolicyResponsePrivate(DeleteLifecyclePolicyResponse * const q);
+    explicit DeleteLifecyclePolicyResponsePrivate(DeleteLifecyclePolicyResponse * const q);
 
     void parseDeleteLifecyclePolicyResponse(QXmlStreamReader &xml);
 

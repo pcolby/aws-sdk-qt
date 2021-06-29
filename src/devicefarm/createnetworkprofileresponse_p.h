@@ -31,7 +31,7 @@ class CreateNetworkProfileResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    CreateNetworkProfileResponsePrivate(CreateNetworkProfileResponse * const q);
+    explicit CreateNetworkProfileResponsePrivate(CreateNetworkProfileResponse * const q);
 
     void parseCreateNetworkProfileResponse(QXmlStreamReader &xml);
 

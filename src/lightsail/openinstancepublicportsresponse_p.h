@@ -31,7 +31,7 @@ class OpenInstancePublicPortsResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    OpenInstancePublicPortsResponsePrivate(OpenInstancePublicPortsResponse * const q);
+    explicit OpenInstancePublicPortsResponsePrivate(OpenInstancePublicPortsResponse * const q);
 
     void parseOpenInstancePublicPortsResponse(QXmlStreamReader &xml);
 

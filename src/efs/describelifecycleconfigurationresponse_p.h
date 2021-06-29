@@ -31,7 +31,7 @@ class DescribeLifecycleConfigurationResponsePrivate : public EfsResponsePrivate 
 
 public:
 
-    DescribeLifecycleConfigurationResponsePrivate(DescribeLifecycleConfigurationResponse * const q);
+    explicit DescribeLifecycleConfigurationResponsePrivate(DescribeLifecycleConfigurationResponse * const q);
 
     void parseDescribeLifecycleConfigurationResponse(QXmlStreamReader &xml);
 

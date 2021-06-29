@@ -31,7 +31,7 @@ class UpdateOrganizationalUnitResponsePrivate : public OrganizationsResponsePriv
 
 public:
 
-    UpdateOrganizationalUnitResponsePrivate(UpdateOrganizationalUnitResponse * const q);
+    explicit UpdateOrganizationalUnitResponsePrivate(UpdateOrganizationalUnitResponse * const q);
 
     void parseUpdateOrganizationalUnitResponse(QXmlStreamReader &xml);
 

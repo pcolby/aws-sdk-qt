@@ -31,7 +31,7 @@ class GetAnalyzedResourceResponsePrivate : public AccessAnalyzerResponsePrivate 
 
 public:
 
-    GetAnalyzedResourceResponsePrivate(GetAnalyzedResourceResponse * const q);
+    explicit GetAnalyzedResourceResponsePrivate(GetAnalyzedResourceResponse * const q);
 
     void parseGetAnalyzedResourceResponse(QXmlStreamReader &xml);
 

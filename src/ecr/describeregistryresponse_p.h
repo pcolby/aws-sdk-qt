@@ -31,7 +31,7 @@ class DescribeRegistryResponsePrivate : public EcrResponsePrivate {
 
 public:
 
-    DescribeRegistryResponsePrivate(DescribeRegistryResponse * const q);
+    explicit DescribeRegistryResponsePrivate(DescribeRegistryResponse * const q);
 
     void parseDescribeRegistryResponse(QXmlStreamReader &xml);
 

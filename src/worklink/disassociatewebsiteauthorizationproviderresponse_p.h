@@ -31,7 +31,7 @@ class DisassociateWebsiteAuthorizationProviderResponsePrivate : public WorkLinkR
 
 public:
 
-    DisassociateWebsiteAuthorizationProviderResponsePrivate(DisassociateWebsiteAuthorizationProviderResponse * const q);
+    explicit DisassociateWebsiteAuthorizationProviderResponsePrivate(DisassociateWebsiteAuthorizationProviderResponse * const q);
 
     void parseDisassociateWebsiteAuthorizationProviderResponse(QXmlStreamReader &xml);
 

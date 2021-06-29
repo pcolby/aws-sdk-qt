@@ -31,7 +31,7 @@ class DescribeFleetResponsePrivate : public RoboMakerResponsePrivate {
 
 public:
 
-    DescribeFleetResponsePrivate(DescribeFleetResponse * const q);
+    explicit DescribeFleetResponsePrivate(DescribeFleetResponse * const q);
 
     void parseDescribeFleetResponse(QXmlStreamReader &xml);
 

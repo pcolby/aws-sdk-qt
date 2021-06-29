@@ -31,7 +31,7 @@ class ListSharedProjectsResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 
-    ListSharedProjectsResponsePrivate(ListSharedProjectsResponse * const q);
+    explicit ListSharedProjectsResponsePrivate(ListSharedProjectsResponse * const q);
 
     void parseListSharedProjectsResponse(QXmlStreamReader &xml);
 

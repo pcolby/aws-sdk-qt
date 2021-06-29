@@ -31,7 +31,7 @@ class StartContactRecordingResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    StartContactRecordingResponsePrivate(StartContactRecordingResponse * const q);
+    explicit StartContactRecordingResponsePrivate(StartContactRecordingResponse * const q);
 
     void parseStartContactRecordingResponse(QXmlStreamReader &xml);
 

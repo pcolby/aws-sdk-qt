@@ -31,7 +31,7 @@ class AdminUpdateUserAttributesResponsePrivate : public CognitoIdentityProviderR
 
 public:
 
-    AdminUpdateUserAttributesResponsePrivate(AdminUpdateUserAttributesResponse * const q);
+    explicit AdminUpdateUserAttributesResponsePrivate(AdminUpdateUserAttributesResponse * const q);
 
     void parseAdminUpdateUserAttributesResponse(QXmlStreamReader &xml);
 

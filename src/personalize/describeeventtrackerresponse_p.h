@@ -31,7 +31,7 @@ class DescribeEventTrackerResponsePrivate : public PersonalizeResponsePrivate {
 
 public:
 
-    DescribeEventTrackerResponsePrivate(DescribeEventTrackerResponse * const q);
+    explicit DescribeEventTrackerResponsePrivate(DescribeEventTrackerResponse * const q);
 
     void parseDescribeEventTrackerResponse(QXmlStreamReader &xml);
 

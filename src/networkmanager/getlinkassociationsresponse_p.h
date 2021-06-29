@@ -31,7 +31,7 @@ class GetLinkAssociationsResponsePrivate : public NetworkManagerResponsePrivate 
 
 public:
 
-    GetLinkAssociationsResponsePrivate(GetLinkAssociationsResponse * const q);
+    explicit GetLinkAssociationsResponsePrivate(GetLinkAssociationsResponse * const q);
 
     void parseGetLinkAssociationsResponse(QXmlStreamReader &xml);
 

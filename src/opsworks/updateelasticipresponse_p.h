@@ -31,7 +31,7 @@ class UpdateElasticIpResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    UpdateElasticIpResponsePrivate(UpdateElasticIpResponse * const q);
+    explicit UpdateElasticIpResponsePrivate(UpdateElasticIpResponse * const q);
 
     void parseUpdateElasticIpResponse(QXmlStreamReader &xml);
 

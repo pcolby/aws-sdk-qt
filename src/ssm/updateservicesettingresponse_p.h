@@ -31,7 +31,7 @@ class UpdateServiceSettingResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    UpdateServiceSettingResponsePrivate(UpdateServiceSettingResponse * const q);
+    explicit UpdateServiceSettingResponsePrivate(UpdateServiceSettingResponse * const q);
 
     void parseUpdateServiceSettingResponse(QXmlStreamReader &xml);
 

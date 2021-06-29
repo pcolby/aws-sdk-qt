@@ -31,7 +31,7 @@ class DeleteEnvironmentResponsePrivate : public Cloud9ResponsePrivate {
 
 public:
 
-    DeleteEnvironmentResponsePrivate(DeleteEnvironmentResponse * const q);
+    explicit DeleteEnvironmentResponsePrivate(DeleteEnvironmentResponse * const q);
 
     void parseDeleteEnvironmentResponse(QXmlStreamReader &xml);
 

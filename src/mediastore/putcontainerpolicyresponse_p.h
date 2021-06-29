@@ -31,7 +31,7 @@ class PutContainerPolicyResponsePrivate : public MediaStoreResponsePrivate {
 
 public:
 
-    PutContainerPolicyResponsePrivate(PutContainerPolicyResponse * const q);
+    explicit PutContainerPolicyResponsePrivate(PutContainerPolicyResponse * const q);
 
     void parsePutContainerPolicyResponse(QXmlStreamReader &xml);
 

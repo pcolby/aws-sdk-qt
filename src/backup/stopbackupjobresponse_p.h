@@ -31,7 +31,7 @@ class StopBackupJobResponsePrivate : public BackupResponsePrivate {
 
 public:
 
-    StopBackupJobResponsePrivate(StopBackupJobResponse * const q);
+    explicit StopBackupJobResponsePrivate(StopBackupJobResponse * const q);
 
     void parseStopBackupJobResponse(QXmlStreamReader &xml);
 

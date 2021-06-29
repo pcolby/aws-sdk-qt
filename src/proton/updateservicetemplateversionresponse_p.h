@@ -31,7 +31,7 @@ class UpdateServiceTemplateVersionResponsePrivate : public ProtonResponsePrivate
 
 public:
 
-    UpdateServiceTemplateVersionResponsePrivate(UpdateServiceTemplateVersionResponse * const q);
+    explicit UpdateServiceTemplateVersionResponsePrivate(UpdateServiceTemplateVersionResponse * const q);
 
     void parseUpdateServiceTemplateVersionResponse(QXmlStreamReader &xml);
 

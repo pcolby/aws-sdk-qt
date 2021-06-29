@@ -31,7 +31,7 @@ class DescribeJobExecutionResponsePrivate : public IoTJobsDataPlaneResponsePriva
 
 public:
 
-    DescribeJobExecutionResponsePrivate(DescribeJobExecutionResponse * const q);
+    explicit DescribeJobExecutionResponsePrivate(DescribeJobExecutionResponse * const q);
 
     void parseDescribeJobExecutionResponse(QXmlStreamReader &xml);
 

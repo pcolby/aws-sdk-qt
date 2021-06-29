@@ -31,7 +31,7 @@ class UndeploySystemInstanceResponsePrivate : public IoTThingsGraphResponsePriva
 
 public:
 
-    UndeploySystemInstanceResponsePrivate(UndeploySystemInstanceResponse * const q);
+    explicit UndeploySystemInstanceResponsePrivate(UndeploySystemInstanceResponse * const q);
 
     void parseUndeploySystemInstanceResponse(QXmlStreamReader &xml);
 

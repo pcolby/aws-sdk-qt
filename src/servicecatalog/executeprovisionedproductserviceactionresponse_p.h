@@ -31,7 +31,7 @@ class ExecuteProvisionedProductServiceActionResponsePrivate : public ServiceCata
 
 public:
 
-    ExecuteProvisionedProductServiceActionResponsePrivate(ExecuteProvisionedProductServiceActionResponse * const q);
+    explicit ExecuteProvisionedProductServiceActionResponsePrivate(ExecuteProvisionedProductServiceActionResponse * const q);
 
     void parseExecuteProvisionedProductServiceActionResponse(QXmlStreamReader &xml);
 

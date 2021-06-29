@@ -31,7 +31,7 @@ class DescribeClusterOperationResponsePrivate : public KafkaResponsePrivate {
 
 public:
 
-    DescribeClusterOperationResponsePrivate(DescribeClusterOperationResponse * const q);
+    explicit DescribeClusterOperationResponsePrivate(DescribeClusterOperationResponse * const q);
 
     void parseDescribeClusterOperationResponse(QXmlStreamReader &xml);
 

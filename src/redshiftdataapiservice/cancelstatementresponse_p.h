@@ -31,7 +31,7 @@ class CancelStatementResponsePrivate : public RedshiftDataAPIServiceResponsePriv
 
 public:
 
-    CancelStatementResponsePrivate(CancelStatementResponse * const q);
+    explicit CancelStatementResponsePrivate(CancelStatementResponse * const q);
 
     void parseCancelStatementResponse(QXmlStreamReader &xml);
 

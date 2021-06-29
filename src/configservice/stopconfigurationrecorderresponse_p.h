@@ -31,7 +31,7 @@ class StopConfigurationRecorderResponsePrivate : public ConfigServiceResponsePri
 
 public:
 
-    StopConfigurationRecorderResponsePrivate(StopConfigurationRecorderResponse * const q);
+    explicit StopConfigurationRecorderResponsePrivate(StopConfigurationRecorderResponse * const q);
 
     void parseStopConfigurationRecorderResponse(QXmlStreamReader &xml);
 

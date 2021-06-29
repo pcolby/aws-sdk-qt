@@ -31,7 +31,7 @@ class UpdateEnvironmentMembershipResponsePrivate : public Cloud9ResponsePrivate 
 
 public:
 
-    UpdateEnvironmentMembershipResponsePrivate(UpdateEnvironmentMembershipResponse * const q);
+    explicit UpdateEnvironmentMembershipResponsePrivate(UpdateEnvironmentMembershipResponse * const q);
 
     void parseUpdateEnvironmentMembershipResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class PutRetentionConfigurationResponsePrivate : public ConfigServiceResponsePri
 
 public:
 
-    PutRetentionConfigurationResponsePrivate(PutRetentionConfigurationResponse * const q);
+    explicit PutRetentionConfigurationResponsePrivate(PutRetentionConfigurationResponse * const q);
 
     void parsePutRetentionConfigurationResponse(QXmlStreamReader &xml);
 

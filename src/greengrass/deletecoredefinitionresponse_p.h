@@ -31,7 +31,7 @@ class DeleteCoreDefinitionResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 
-    DeleteCoreDefinitionResponsePrivate(DeleteCoreDefinitionResponse * const q);
+    explicit DeleteCoreDefinitionResponsePrivate(DeleteCoreDefinitionResponse * const q);
 
     void parseDeleteCoreDefinitionResponse(QXmlStreamReader &xml);
 

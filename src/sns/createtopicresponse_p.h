@@ -31,7 +31,7 @@ class CreateTopicResponsePrivate : public SnsResponsePrivate {
 
 public:
 
-    CreateTopicResponsePrivate(CreateTopicResponse * const q);
+    explicit CreateTopicResponsePrivate(CreateTopicResponse * const q);
 
     void parseCreateTopicResponse(QXmlStreamReader &xml);
 

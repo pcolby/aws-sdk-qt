@@ -31,7 +31,7 @@ class PutResourceConfigResponsePrivate : public ConfigServiceResponsePrivate {
 
 public:
 
-    PutResourceConfigResponsePrivate(PutResourceConfigResponse * const q);
+    explicit PutResourceConfigResponsePrivate(PutResourceConfigResponse * const q);
 
     void parsePutResourceConfigResponse(QXmlStreamReader &xml);
 

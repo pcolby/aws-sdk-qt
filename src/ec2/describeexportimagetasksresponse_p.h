@@ -31,7 +31,7 @@ class DescribeExportImageTasksResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeExportImageTasksResponsePrivate(DescribeExportImageTasksResponse * const q);
+    explicit DescribeExportImageTasksResponsePrivate(DescribeExportImageTasksResponse * const q);
 
     void parseDescribeExportImageTasksResponse(QXmlStreamReader &xml);
 

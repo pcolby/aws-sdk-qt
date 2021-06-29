@@ -31,7 +31,7 @@ class CreateInputResponsePrivate : public IoTEventsResponsePrivate {
 
 public:
 
-    CreateInputResponsePrivate(CreateInputResponse * const q);
+    explicit CreateInputResponsePrivate(CreateInputResponse * const q);
 
     void parseCreateInputResponse(QXmlStreamReader &xml);
 

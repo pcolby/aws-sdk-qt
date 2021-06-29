@@ -31,7 +31,7 @@ class GetSoftwareUpdatesResponsePrivate : public SnowballResponsePrivate {
 
 public:
 
-    GetSoftwareUpdatesResponsePrivate(GetSoftwareUpdatesResponse * const q);
+    explicit GetSoftwareUpdatesResponsePrivate(GetSoftwareUpdatesResponse * const q);
 
     void parseGetSoftwareUpdatesResponse(QXmlStreamReader &xml);
 

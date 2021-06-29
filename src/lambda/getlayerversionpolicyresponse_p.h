@@ -31,7 +31,7 @@ class GetLayerVersionPolicyResponsePrivate : public LambdaResponsePrivate {
 
 public:
 
-    GetLayerVersionPolicyResponsePrivate(GetLayerVersionPolicyResponse * const q);
+    explicit GetLayerVersionPolicyResponsePrivate(GetLayerVersionPolicyResponse * const q);
 
     void parseGetLayerVersionPolicyResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class RevokeSignatureResponsePrivate : public signerResponsePrivate {
 
 public:
 
-    RevokeSignatureResponsePrivate(RevokeSignatureResponse * const q);
+    explicit RevokeSignatureResponsePrivate(RevokeSignatureResponse * const q);
 
     void parseRevokeSignatureResponse(QXmlStreamReader &xml);
 

@@ -30,7 +30,7 @@ class LookoutEquipmentClient;
 class LookoutEquipmentClientPrivate {
 
 public:
-    LookoutEquipmentClientPrivate(LookoutEquipmentClient * const q);
+    explicit LookoutEquipmentClientPrivate(LookoutEquipmentClient * const q);
 
 protected:
     LookoutEquipmentClient * const q_ptr; ///< Internal q-pointer.

@@ -31,7 +31,7 @@ class CreateIAMPolicyAssignmentResponsePrivate : public QuickSightResponsePrivat
 
 public:
 
-    CreateIAMPolicyAssignmentResponsePrivate(CreateIAMPolicyAssignmentResponse * const q);
+    explicit CreateIAMPolicyAssignmentResponsePrivate(CreateIAMPolicyAssignmentResponse * const q);
 
     void parseCreateIAMPolicyAssignmentResponse(QXmlStreamReader &xml);
 

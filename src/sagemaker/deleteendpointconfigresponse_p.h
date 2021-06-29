@@ -31,7 +31,7 @@ class DeleteEndpointConfigResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    DeleteEndpointConfigResponsePrivate(DeleteEndpointConfigResponse * const q);
+    explicit DeleteEndpointConfigResponsePrivate(DeleteEndpointConfigResponse * const q);
 
     void parseDeleteEndpointConfigResponse(QXmlStreamReader &xml);
 

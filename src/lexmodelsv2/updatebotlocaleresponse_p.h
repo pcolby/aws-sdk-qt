@@ -31,7 +31,7 @@ class UpdateBotLocaleResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 
-    UpdateBotLocaleResponsePrivate(UpdateBotLocaleResponse * const q);
+    explicit UpdateBotLocaleResponsePrivate(UpdateBotLocaleResponse * const q);
 
     void parseUpdateBotLocaleResponse(QXmlStreamReader &xml);
 

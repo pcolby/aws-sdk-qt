@@ -31,7 +31,7 @@ class GetPolicyVersionResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    GetPolicyVersionResponsePrivate(GetPolicyVersionResponse * const q);
+    explicit GetPolicyVersionResponsePrivate(GetPolicyVersionResponse * const q);
 
     void parseGetPolicyVersionResponse(QXmlStreamReader &xml);
 

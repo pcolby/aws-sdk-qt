@@ -29,7 +29,7 @@ class S3OutpostsResponsePrivate {
 
 public:
 
-    S3OutpostsResponsePrivate(S3OutpostsResponse * const q);
+    explicit S3OutpostsResponsePrivate(S3OutpostsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

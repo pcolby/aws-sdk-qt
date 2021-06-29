@@ -31,7 +31,7 @@ class SetVaultNotificationsResponsePrivate : public GlacierResponsePrivate {
 
 public:
 
-    SetVaultNotificationsResponsePrivate(SetVaultNotificationsResponse * const q);
+    explicit SetVaultNotificationsResponsePrivate(SetVaultNotificationsResponse * const q);
 
     void parseSetVaultNotificationsResponse(QXmlStreamReader &xml);
 

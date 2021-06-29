@@ -29,7 +29,7 @@ class FraudDetectorResponsePrivate {
 
 public:
 
-    FraudDetectorResponsePrivate(FraudDetectorResponse * const q);
+    explicit FraudDetectorResponsePrivate(FraudDetectorResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

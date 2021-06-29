@@ -31,7 +31,7 @@ class DisassociateFirewallRuleGroupResponsePrivate : public Route53ResolverRespo
 
 public:
 
-    DisassociateFirewallRuleGroupResponsePrivate(DisassociateFirewallRuleGroupResponse * const q);
+    explicit DisassociateFirewallRuleGroupResponsePrivate(DisassociateFirewallRuleGroupResponse * const q);
 
     void parseDisassociateFirewallRuleGroupResponse(QXmlStreamReader &xml);
 

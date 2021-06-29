@@ -31,7 +31,7 @@ class AttachInstancesResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 
-    AttachInstancesResponsePrivate(AttachInstancesResponse * const q);
+    explicit AttachInstancesResponsePrivate(AttachInstancesResponse * const q);
 
     void parseAttachInstancesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetOutpostInstanceTypesResponsePrivate : public OutpostsResponsePrivate {
 
 public:
 
-    GetOutpostInstanceTypesResponsePrivate(GetOutpostInstanceTypesResponse * const q);
+    explicit GetOutpostInstanceTypesResponsePrivate(GetOutpostInstanceTypesResponse * const q);
 
     void parseGetOutpostInstanceTypesResponse(QXmlStreamReader &xml);
 

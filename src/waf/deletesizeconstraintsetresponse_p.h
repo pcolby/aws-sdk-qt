@@ -31,7 +31,7 @@ class DeleteSizeConstraintSetResponsePrivate : public WafResponsePrivate {
 
 public:
 
-    DeleteSizeConstraintSetResponsePrivate(DeleteSizeConstraintSetResponse * const q);
+    explicit DeleteSizeConstraintSetResponsePrivate(DeleteSizeConstraintSetResponse * const q);
 
     void parseDeleteSizeConstraintSetResponse(QXmlStreamReader &xml);
 

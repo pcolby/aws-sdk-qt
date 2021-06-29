@@ -31,7 +31,7 @@ class DeleteUserEndpointsResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    DeleteUserEndpointsResponsePrivate(DeleteUserEndpointsResponse * const q);
+    explicit DeleteUserEndpointsResponsePrivate(DeleteUserEndpointsResponse * const q);
 
     void parseDeleteUserEndpointsResponse(QXmlStreamReader &xml);
 

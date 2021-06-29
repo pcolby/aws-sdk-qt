@@ -31,7 +31,7 @@ class EnableSagemakerServicecatalogPortfolioResponsePrivate : public SageMakerRe
 
 public:
 
-    EnableSagemakerServicecatalogPortfolioResponsePrivate(EnableSagemakerServicecatalogPortfolioResponse * const q);
+    explicit EnableSagemakerServicecatalogPortfolioResponsePrivate(EnableSagemakerServicecatalogPortfolioResponse * const q);
 
     void parseEnableSagemakerServicecatalogPortfolioResponse(QXmlStreamReader &xml);
 

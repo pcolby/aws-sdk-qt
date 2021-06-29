@@ -31,7 +31,7 @@ class DisassociateResourceShareResponsePrivate : public RamResponsePrivate {
 
 public:
 
-    DisassociateResourceShareResponsePrivate(DisassociateResourceShareResponse * const q);
+    explicit DisassociateResourceShareResponsePrivate(DisassociateResourceShareResponse * const q);
 
     void parseDisassociateResourceShareResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteResourcePolicyResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 
-    DeleteResourcePolicyResponsePrivate(DeleteResourcePolicyResponse * const q);
+    explicit DeleteResourcePolicyResponsePrivate(DeleteResourcePolicyResponse * const q);
 
     void parseDeleteResourcePolicyResponse(QXmlStreamReader &xml);
 

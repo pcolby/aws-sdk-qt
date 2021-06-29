@@ -31,7 +31,7 @@ class ListJobTemplatesResponsePrivate : public MediaConvertResponsePrivate {
 
 public:
 
-    ListJobTemplatesResponsePrivate(ListJobTemplatesResponse * const q);
+    explicit ListJobTemplatesResponsePrivate(ListJobTemplatesResponse * const q);
 
     void parseListJobTemplatesResponse(QXmlStreamReader &xml);
 

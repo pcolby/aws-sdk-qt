@@ -31,7 +31,7 @@ class UpdatePackagingGroupResponsePrivate : public MediaPackageVodResponsePrivat
 
 public:
 
-    UpdatePackagingGroupResponsePrivate(UpdatePackagingGroupResponse * const q);
+    explicit UpdatePackagingGroupResponsePrivate(UpdatePackagingGroupResponse * const q);
 
     void parseUpdatePackagingGroupResponse(QXmlStreamReader &xml);
 

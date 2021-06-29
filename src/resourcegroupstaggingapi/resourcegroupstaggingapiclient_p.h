@@ -30,7 +30,7 @@ class ResourceGroupsTaggingAPIClient;
 class ResourceGroupsTaggingAPIClientPrivate {
 
 public:
-    ResourceGroupsTaggingAPIClientPrivate(ResourceGroupsTaggingAPIClient * const q);
+    explicit ResourceGroupsTaggingAPIClientPrivate(ResourceGroupsTaggingAPIClient * const q);
 
 protected:
     ResourceGroupsTaggingAPIClient * const q_ptr; ///< Internal q-pointer.

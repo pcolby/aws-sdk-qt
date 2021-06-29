@@ -31,7 +31,7 @@ class RemoveRoleFromDBClusterResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 
-    RemoveRoleFromDBClusterResponsePrivate(RemoveRoleFromDBClusterResponse * const q);
+    explicit RemoveRoleFromDBClusterResponsePrivate(RemoveRoleFromDBClusterResponse * const q);
 
     void parseRemoveRoleFromDBClusterResponse(QXmlStreamReader &xml);
 

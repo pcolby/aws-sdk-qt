@@ -31,7 +31,7 @@ class DescribeAnomalyResponsePrivate : public DevOpsGuruResponsePrivate {
 
 public:
 
-    DescribeAnomalyResponsePrivate(DescribeAnomalyResponse * const q);
+    explicit DescribeAnomalyResponsePrivate(DescribeAnomalyResponse * const q);
 
     void parseDescribeAnomalyResponse(QXmlStreamReader &xml);
 

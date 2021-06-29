@@ -31,7 +31,7 @@ class UpdateProvisionedProductPropertiesResponsePrivate : public ServiceCatalogR
 
 public:
 
-    UpdateProvisionedProductPropertiesResponsePrivate(UpdateProvisionedProductPropertiesResponse * const q);
+    explicit UpdateProvisionedProductPropertiesResponsePrivate(UpdateProvisionedProductPropertiesResponse * const q);
 
     void parseUpdateProvisionedProductPropertiesResponse(QXmlStreamReader &xml);
 

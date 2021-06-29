@@ -31,7 +31,7 @@ class ModifyFleetResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ModifyFleetResponsePrivate(ModifyFleetResponse * const q);
+    explicit ModifyFleetResponsePrivate(ModifyFleetResponse * const q);
 
     void parseModifyFleetResponse(QXmlStreamReader &xml);
 

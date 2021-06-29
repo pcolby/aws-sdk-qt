@@ -31,7 +31,7 @@ class DescribeTagOptionResponsePrivate : public ServiceCatalogResponsePrivate {
 
 public:
 
-    DescribeTagOptionResponsePrivate(DescribeTagOptionResponse * const q);
+    explicit DescribeTagOptionResponsePrivate(DescribeTagOptionResponse * const q);
 
     void parseDescribeTagOptionResponse(QXmlStreamReader &xml);
 

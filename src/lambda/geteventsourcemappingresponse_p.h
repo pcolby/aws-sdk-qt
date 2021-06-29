@@ -31,7 +31,7 @@ class GetEventSourceMappingResponsePrivate : public LambdaResponsePrivate {
 
 public:
 
-    GetEventSourceMappingResponsePrivate(GetEventSourceMappingResponse * const q);
+    explicit GetEventSourceMappingResponsePrivate(GetEventSourceMappingResponse * const q);
 
     void parseGetEventSourceMappingResponse(QXmlStreamReader &xml);
 

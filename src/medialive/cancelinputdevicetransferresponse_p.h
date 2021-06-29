@@ -31,7 +31,7 @@ class CancelInputDeviceTransferResponsePrivate : public MediaLiveResponsePrivate
 
 public:
 
-    CancelInputDeviceTransferResponsePrivate(CancelInputDeviceTransferResponse * const q);
+    explicit CancelInputDeviceTransferResponsePrivate(CancelInputDeviceTransferResponse * const q);
 
     void parseCancelInputDeviceTransferResponse(QXmlStreamReader &xml);
 

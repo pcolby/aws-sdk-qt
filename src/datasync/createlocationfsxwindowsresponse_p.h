@@ -31,7 +31,7 @@ class CreateLocationFsxWindowsResponsePrivate : public DataSyncResponsePrivate {
 
 public:
 
-    CreateLocationFsxWindowsResponsePrivate(CreateLocationFsxWindowsResponse * const q);
+    explicit CreateLocationFsxWindowsResponsePrivate(CreateLocationFsxWindowsResponse * const q);
 
     void parseCreateLocationFsxWindowsResponse(QXmlStreamReader &xml);
 

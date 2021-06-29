@@ -30,7 +30,7 @@ class ServiceCatalogClient;
 class ServiceCatalogClientPrivate {
 
 public:
-    ServiceCatalogClientPrivate(ServiceCatalogClient * const q);
+    explicit ServiceCatalogClientPrivate(ServiceCatalogClient * const q);
 
 protected:
     ServiceCatalogClient * const q_ptr; ///< Internal q-pointer.

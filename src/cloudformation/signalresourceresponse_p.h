@@ -31,7 +31,7 @@ class SignalResourceResponsePrivate : public CloudFormationResponsePrivate {
 
 public:
 
-    SignalResourceResponsePrivate(SignalResourceResponse * const q);
+    explicit SignalResourceResponsePrivate(SignalResourceResponse * const q);
 
     void parseSignalResourceResponse(QXmlStreamReader &xml);
 

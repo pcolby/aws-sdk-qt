@@ -31,7 +31,7 @@ class StartDataSourceSyncJobResponsePrivate : public kendraResponsePrivate {
 
 public:
 
-    StartDataSourceSyncJobResponsePrivate(StartDataSourceSyncJobResponse * const q);
+    explicit StartDataSourceSyncJobResponsePrivate(StartDataSourceSyncJobResponse * const q);
 
     void parseStartDataSourceSyncJobResponse(QXmlStreamReader &xml);
 

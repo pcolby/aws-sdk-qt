@@ -31,7 +31,7 @@ class DescribeLedgerResponsePrivate : public QldbResponsePrivate {
 
 public:
 
-    DescribeLedgerResponsePrivate(DescribeLedgerResponse * const q);
+    explicit DescribeLedgerResponsePrivate(DescribeLedgerResponse * const q);
 
     void parseDescribeLedgerResponse(QXmlStreamReader &xml);
 

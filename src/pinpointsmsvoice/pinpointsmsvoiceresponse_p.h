@@ -29,7 +29,7 @@ class PinpointSMSVoiceResponsePrivate {
 
 public:
 
-    PinpointSMSVoiceResponsePrivate(PinpointSMSVoiceResponse * const q);
+    explicit PinpointSMSVoiceResponsePrivate(PinpointSMSVoiceResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

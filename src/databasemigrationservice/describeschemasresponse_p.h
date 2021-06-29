@@ -31,7 +31,7 @@ class DescribeSchemasResponsePrivate : public DatabaseMigrationServiceResponsePr
 
 public:
 
-    DescribeSchemasResponsePrivate(DescribeSchemasResponse * const q);
+    explicit DescribeSchemasResponsePrivate(DescribeSchemasResponse * const q);
 
     void parseDescribeSchemasResponse(QXmlStreamReader &xml);
 

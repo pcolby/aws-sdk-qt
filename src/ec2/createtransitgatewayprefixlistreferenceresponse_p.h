@@ -31,7 +31,7 @@ class CreateTransitGatewayPrefixListReferenceResponsePrivate : public Ec2Respons
 
 public:
 
-    CreateTransitGatewayPrefixListReferenceResponsePrivate(CreateTransitGatewayPrefixListReferenceResponse * const q);
+    explicit CreateTransitGatewayPrefixListReferenceResponsePrivate(CreateTransitGatewayPrefixListReferenceResponse * const q);
 
     void parseCreateTransitGatewayPrefixListReferenceResponse(QXmlStreamReader &xml);
 

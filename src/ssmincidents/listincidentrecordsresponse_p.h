@@ -31,7 +31,7 @@ class ListIncidentRecordsResponsePrivate : public SSMIncidentsResponsePrivate {
 
 public:
 
-    ListIncidentRecordsResponsePrivate(ListIncidentRecordsResponse * const q);
+    explicit ListIncidentRecordsResponsePrivate(ListIncidentRecordsResponse * const q);
 
     void parseListIncidentRecordsResponse(QXmlStreamReader &xml);
 

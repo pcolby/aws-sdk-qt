@@ -31,7 +31,7 @@ class AttachLoadBalancerToSubnetsResponsePrivate : public ElasticLoadBalancingRe
 
 public:
 
-    AttachLoadBalancerToSubnetsResponsePrivate(AttachLoadBalancerToSubnetsResponse * const q);
+    explicit AttachLoadBalancerToSubnetsResponsePrivate(AttachLoadBalancerToSubnetsResponse * const q);
 
     void parseAttachLoadBalancerToSubnetsResponse(QXmlStreamReader &xml);
 

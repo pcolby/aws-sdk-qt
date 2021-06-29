@@ -31,7 +31,7 @@ class ListDeviceEventsResponsePrivate : public IoT1ClickDevicesServiceResponsePr
 
 public:
 
-    ListDeviceEventsResponsePrivate(ListDeviceEventsResponse * const q);
+    explicit ListDeviceEventsResponsePrivate(ListDeviceEventsResponse * const q);
 
     void parseListDeviceEventsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class LookupDeveloperIdentityResponsePrivate : public CognitoIdentityResponsePri
 
 public:
 
-    LookupDeveloperIdentityResponsePrivate(LookupDeveloperIdentityResponse * const q);
+    explicit LookupDeveloperIdentityResponsePrivate(LookupDeveloperIdentityResponse * const q);
 
     void parseLookupDeveloperIdentityResponse(QXmlStreamReader &xml);
 

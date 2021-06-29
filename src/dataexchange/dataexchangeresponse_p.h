@@ -29,7 +29,7 @@ class DataExchangeResponsePrivate {
 
 public:
 
-    DataExchangeResponsePrivate(DataExchangeResponse * const q);
+    explicit DataExchangeResponsePrivate(DataExchangeResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

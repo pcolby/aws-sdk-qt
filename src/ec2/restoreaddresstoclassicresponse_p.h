@@ -31,7 +31,7 @@ class RestoreAddressToClassicResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    RestoreAddressToClassicResponsePrivate(RestoreAddressToClassicResponse * const q);
+    explicit RestoreAddressToClassicResponsePrivate(RestoreAddressToClassicResponse * const q);
 
     void parseRestoreAddressToClassicResponse(QXmlStreamReader &xml);
 

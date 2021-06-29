@@ -31,7 +31,7 @@ class ListResolverEndpointIpAddressesResponsePrivate : public Route53ResolverRes
 
 public:
 
-    ListResolverEndpointIpAddressesResponsePrivate(ListResolverEndpointIpAddressesResponse * const q);
+    explicit ListResolverEndpointIpAddressesResponsePrivate(ListResolverEndpointIpAddressesResponse * const q);
 
     void parseListResolverEndpointIpAddressesResponse(QXmlStreamReader &xml);
 

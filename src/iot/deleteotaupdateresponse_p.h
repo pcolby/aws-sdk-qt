@@ -31,7 +31,7 @@ class DeleteOTAUpdateResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DeleteOTAUpdateResponsePrivate(DeleteOTAUpdateResponse * const q);
+    explicit DeleteOTAUpdateResponsePrivate(DeleteOTAUpdateResponse * const q);
 
     void parseDeleteOTAUpdateResponse(QXmlStreamReader &xml);
 

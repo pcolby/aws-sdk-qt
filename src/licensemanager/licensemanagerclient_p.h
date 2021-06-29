@@ -30,7 +30,7 @@ class LicenseManagerClient;
 class LicenseManagerClientPrivate {
 
 public:
-    LicenseManagerClientPrivate(LicenseManagerClient * const q);
+    explicit LicenseManagerClientPrivate(LicenseManagerClient * const q);
 
 protected:
     LicenseManagerClient * const q_ptr; ///< Internal q-pointer.

@@ -31,7 +31,7 @@ class CreateDirectoryResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 
-    CreateDirectoryResponsePrivate(CreateDirectoryResponse * const q);
+    explicit CreateDirectoryResponsePrivate(CreateDirectoryResponse * const q);
 
     void parseCreateDirectoryResponse(QXmlStreamReader &xml);
 

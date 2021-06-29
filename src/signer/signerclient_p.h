@@ -30,7 +30,7 @@ class signerClient;
 class signerClientPrivate {
 
 public:
-    signerClientPrivate(signerClient * const q);
+    explicit signerClientPrivate(signerClient * const q);
 
 protected:
     signerClient * const q_ptr; ///< Internal q-pointer.

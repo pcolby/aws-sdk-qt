@@ -87,7 +87,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    CognitoIdentityClient(
+    explicit CognitoIdentityClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -120,7 +120,7 @@ public slots:
 protected:
     /// @cond internal
     CognitoIdentityClientPrivate * const d_ptr; ///< Internal d-pointer.
-    CognitoIdentityClient(CognitoIdentityClientPrivate * const d);
+    explicit CognitoIdentityClient(CognitoIdentityClientPrivate * const d);
     /// @endcond
 
 private:

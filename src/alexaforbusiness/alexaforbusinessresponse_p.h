@@ -29,7 +29,7 @@ class AlexaForBusinessResponsePrivate {
 
 public:
 
-    AlexaForBusinessResponsePrivate(AlexaForBusinessResponse * const q);
+    explicit AlexaForBusinessResponsePrivate(AlexaForBusinessResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

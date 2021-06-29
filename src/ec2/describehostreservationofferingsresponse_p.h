@@ -31,7 +31,7 @@ class DescribeHostReservationOfferingsResponsePrivate : public Ec2ResponsePrivat
 
 public:
 
-    DescribeHostReservationOfferingsResponsePrivate(DescribeHostReservationOfferingsResponse * const q);
+    explicit DescribeHostReservationOfferingsResponsePrivate(DescribeHostReservationOfferingsResponse * const q);
 
     void parseDescribeHostReservationOfferingsResponse(QXmlStreamReader &xml);
 

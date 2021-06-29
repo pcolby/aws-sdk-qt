@@ -31,7 +31,7 @@ class CreateProjectVersionResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 
-    CreateProjectVersionResponsePrivate(CreateProjectVersionResponse * const q);
+    explicit CreateProjectVersionResponsePrivate(CreateProjectVersionResponse * const q);
 
     void parseCreateProjectVersionResponse(QXmlStreamReader &xml);
 

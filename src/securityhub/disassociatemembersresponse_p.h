@@ -31,7 +31,7 @@ class DisassociateMembersResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 
-    DisassociateMembersResponsePrivate(DisassociateMembersResponse * const q);
+    explicit DisassociateMembersResponsePrivate(DisassociateMembersResponse * const q);
 
     void parseDisassociateMembersResponse(QXmlStreamReader &xml);
 

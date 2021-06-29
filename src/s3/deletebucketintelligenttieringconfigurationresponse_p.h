@@ -31,7 +31,7 @@ class DeleteBucketIntelligentTieringConfigurationResponsePrivate : public S3Resp
 
 public:
 
-    DeleteBucketIntelligentTieringConfigurationResponsePrivate(DeleteBucketIntelligentTieringConfigurationResponse * const q);
+    explicit DeleteBucketIntelligentTieringConfigurationResponsePrivate(DeleteBucketIntelligentTieringConfigurationResponse * const q);
 
     void parseDeleteBucketIntelligentTieringConfigurationResponse(QXmlStreamReader &xml);
 

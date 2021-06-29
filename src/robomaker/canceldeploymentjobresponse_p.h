@@ -31,7 +31,7 @@ class CancelDeploymentJobResponsePrivate : public RoboMakerResponsePrivate {
 
 public:
 
-    CancelDeploymentJobResponsePrivate(CancelDeploymentJobResponse * const q);
+    explicit CancelDeploymentJobResponsePrivate(CancelDeploymentJobResponse * const q);
 
     void parseCancelDeploymentJobResponse(QXmlStreamReader &xml);
 

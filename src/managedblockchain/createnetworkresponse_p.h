@@ -31,7 +31,7 @@ class CreateNetworkResponsePrivate : public ManagedBlockchainResponsePrivate {
 
 public:
 
-    CreateNetworkResponsePrivate(CreateNetworkResponse * const q);
+    explicit CreateNetworkResponsePrivate(CreateNetworkResponse * const q);
 
     void parseCreateNetworkResponse(QXmlStreamReader &xml);
 

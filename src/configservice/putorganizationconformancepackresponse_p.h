@@ -31,7 +31,7 @@ class PutOrganizationConformancePackResponsePrivate : public ConfigServiceRespon
 
 public:
 
-    PutOrganizationConformancePackResponsePrivate(PutOrganizationConformancePackResponse * const q);
+    explicit PutOrganizationConformancePackResponsePrivate(PutOrganizationConformancePackResponse * const q);
 
     void parsePutOrganizationConformancePackResponse(QXmlStreamReader &xml);
 

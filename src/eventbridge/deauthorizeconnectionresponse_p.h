@@ -31,7 +31,7 @@ class DeauthorizeConnectionResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 
-    DeauthorizeConnectionResponsePrivate(DeauthorizeConnectionResponse * const q);
+    explicit DeauthorizeConnectionResponsePrivate(DeauthorizeConnectionResponse * const q);
 
     void parseDeauthorizeConnectionResponse(QXmlStreamReader &xml);
 

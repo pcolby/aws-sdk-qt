@@ -31,7 +31,7 @@ class ModifyClientVpnEndpointResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ModifyClientVpnEndpointResponsePrivate(ModifyClientVpnEndpointResponse * const q);
+    explicit ModifyClientVpnEndpointResponsePrivate(ModifyClientVpnEndpointResponse * const q);
 
     void parseModifyClientVpnEndpointResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateDataSourceFromRedshiftResponsePrivate : public MachineLearningRespon
 
 public:
 
-    CreateDataSourceFromRedshiftResponsePrivate(CreateDataSourceFromRedshiftResponse * const q);
+    explicit CreateDataSourceFromRedshiftResponsePrivate(CreateDataSourceFromRedshiftResponse * const q);
 
     void parseCreateDataSourceFromRedshiftResponse(QXmlStreamReader &xml);
 

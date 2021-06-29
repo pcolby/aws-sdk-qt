@@ -31,7 +31,7 @@ class DeleteVariableResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 
-    DeleteVariableResponsePrivate(DeleteVariableResponse * const q);
+    explicit DeleteVariableResponsePrivate(DeleteVariableResponse * const q);
 
     void parseDeleteVariableResponse(QXmlStreamReader &xml);
 

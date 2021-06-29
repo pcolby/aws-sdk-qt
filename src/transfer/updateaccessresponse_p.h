@@ -31,7 +31,7 @@ class UpdateAccessResponsePrivate : public TransferResponsePrivate {
 
 public:
 
-    UpdateAccessResponsePrivate(UpdateAccessResponse * const q);
+    explicit UpdateAccessResponsePrivate(UpdateAccessResponse * const q);
 
     void parseUpdateAccessResponse(QXmlStreamReader &xml);
 

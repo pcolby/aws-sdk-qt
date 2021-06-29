@@ -31,7 +31,7 @@ class DescribeHoursOfOperationResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    DescribeHoursOfOperationResponsePrivate(DescribeHoursOfOperationResponse * const q);
+    explicit DescribeHoursOfOperationResponsePrivate(DescribeHoursOfOperationResponse * const q);
 
     void parseDescribeHoursOfOperationResponse(QXmlStreamReader &xml);
 

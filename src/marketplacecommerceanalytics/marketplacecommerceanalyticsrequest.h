@@ -61,7 +61,7 @@ public:
 protected:
     /// @cond internal
     MarketplaceCommerceAnalyticsRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    MarketplaceCommerceAnalyticsRequest(MarketplaceCommerceAnalyticsRequestPrivate * const d);
+    explicit MarketplaceCommerceAnalyticsRequest(MarketplaceCommerceAnalyticsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

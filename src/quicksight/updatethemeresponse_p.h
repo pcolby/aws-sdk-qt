@@ -31,7 +31,7 @@ class UpdateThemeResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    UpdateThemeResponsePrivate(UpdateThemeResponse * const q);
+    explicit UpdateThemeResponsePrivate(UpdateThemeResponse * const q);
 
     void parseUpdateThemeResponse(QXmlStreamReader &xml);
 

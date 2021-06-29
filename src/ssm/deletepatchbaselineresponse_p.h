@@ -31,7 +31,7 @@ class DeletePatchBaselineResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    DeletePatchBaselineResponsePrivate(DeletePatchBaselineResponse * const q);
+    explicit DeletePatchBaselineResponsePrivate(DeletePatchBaselineResponse * const q);
 
     void parseDeletePatchBaselineResponse(QXmlStreamReader &xml);
 

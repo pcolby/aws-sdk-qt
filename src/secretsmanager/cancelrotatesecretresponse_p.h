@@ -31,7 +31,7 @@ class CancelRotateSecretResponsePrivate : public SecretsManagerResponsePrivate {
 
 public:
 
-    CancelRotateSecretResponsePrivate(CancelRotateSecretResponse * const q);
+    explicit CancelRotateSecretResponsePrivate(CancelRotateSecretResponse * const q);
 
     void parseCancelRotateSecretResponse(QXmlStreamReader &xml);
 

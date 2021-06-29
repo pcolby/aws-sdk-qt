@@ -31,7 +31,7 @@ class UpdatePackageResponsePrivate : public ElasticsearchServiceResponsePrivate 
 
 public:
 
-    UpdatePackageResponsePrivate(UpdatePackageResponse * const q);
+    explicit UpdatePackageResponsePrivate(UpdatePackageResponse * const q);
 
     void parseUpdatePackageResponse(QXmlStreamReader &xml);
 

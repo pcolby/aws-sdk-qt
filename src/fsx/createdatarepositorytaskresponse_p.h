@@ -31,7 +31,7 @@ class CreateDataRepositoryTaskResponsePrivate : public FSxResponsePrivate {
 
 public:
 
-    CreateDataRepositoryTaskResponsePrivate(CreateDataRepositoryTaskResponse * const q);
+    explicit CreateDataRepositoryTaskResponsePrivate(CreateDataRepositoryTaskResponse * const q);
 
     void parseCreateDataRepositoryTaskResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class StartEngagementResponsePrivate : public SSMContactsResponsePrivate {
 
 public:
 
-    StartEngagementResponsePrivate(StartEngagementResponse * const q);
+    explicit StartEngagementResponsePrivate(StartEngagementResponse * const q);
 
     void parseStartEngagementResponse(QXmlStreamReader &xml);
 

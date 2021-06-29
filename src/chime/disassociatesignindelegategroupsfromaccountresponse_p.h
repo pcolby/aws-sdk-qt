@@ -31,7 +31,7 @@ class DisassociateSigninDelegateGroupsFromAccountResponsePrivate : public ChimeR
 
 public:
 
-    DisassociateSigninDelegateGroupsFromAccountResponsePrivate(DisassociateSigninDelegateGroupsFromAccountResponse * const q);
+    explicit DisassociateSigninDelegateGroupsFromAccountResponsePrivate(DisassociateSigninDelegateGroupsFromAccountResponse * const q);
 
     void parseDisassociateSigninDelegateGroupsFromAccountResponse(QXmlStreamReader &xml);
 

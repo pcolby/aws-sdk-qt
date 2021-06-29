@@ -31,7 +31,7 @@ class GetHostReservationPurchasePreviewResponsePrivate : public Ec2ResponsePriva
 
 public:
 
-    GetHostReservationPurchasePreviewResponsePrivate(GetHostReservationPurchasePreviewResponse * const q);
+    explicit GetHostReservationPurchasePreviewResponsePrivate(GetHostReservationPurchasePreviewResponse * const q);
 
     void parseGetHostReservationPurchasePreviewResponse(QXmlStreamReader &xml);
 

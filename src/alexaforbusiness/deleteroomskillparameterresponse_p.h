@@ -31,7 +31,7 @@ class DeleteRoomSkillParameterResponsePrivate : public AlexaForBusinessResponseP
 
 public:
 
-    DeleteRoomSkillParameterResponsePrivate(DeleteRoomSkillParameterResponse * const q);
+    explicit DeleteRoomSkillParameterResponsePrivate(DeleteRoomSkillParameterResponse * const q);
 
     void parseDeleteRoomSkillParameterResponse(QXmlStreamReader &xml);
 

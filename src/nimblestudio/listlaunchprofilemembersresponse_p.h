@@ -31,7 +31,7 @@ class ListLaunchProfileMembersResponsePrivate : public NimbleStudioResponsePriva
 
 public:
 
-    ListLaunchProfileMembersResponsePrivate(ListLaunchProfileMembersResponse * const q);
+    explicit ListLaunchProfileMembersResponsePrivate(ListLaunchProfileMembersResponse * const q);
 
     void parseListLaunchProfileMembersResponse(QXmlStreamReader &xml);
 

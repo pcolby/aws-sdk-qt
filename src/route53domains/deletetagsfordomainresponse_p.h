@@ -31,7 +31,7 @@ class DeleteTagsForDomainResponsePrivate : public Route53DomainsResponsePrivate 
 
 public:
 
-    DeleteTagsForDomainResponsePrivate(DeleteTagsForDomainResponse * const q);
+    explicit DeleteTagsForDomainResponsePrivate(DeleteTagsForDomainResponse * const q);
 
     void parseDeleteTagsForDomainResponse(QXmlStreamReader &xml);
 

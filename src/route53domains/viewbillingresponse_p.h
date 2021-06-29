@@ -31,7 +31,7 @@ class ViewBillingResponsePrivate : public Route53DomainsResponsePrivate {
 
 public:
 
-    ViewBillingResponsePrivate(ViewBillingResponse * const q);
+    explicit ViewBillingResponsePrivate(ViewBillingResponse * const q);
 
     void parseViewBillingResponse(QXmlStreamReader &xml);
 

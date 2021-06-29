@@ -31,7 +31,7 @@ class ValidateMatchmakingRuleSetResponsePrivate : public GameLiftResponsePrivate
 
 public:
 
-    ValidateMatchmakingRuleSetResponsePrivate(ValidateMatchmakingRuleSetResponse * const q);
+    explicit ValidateMatchmakingRuleSetResponsePrivate(ValidateMatchmakingRuleSetResponse * const q);
 
     void parseValidateMatchmakingRuleSetResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class AuthorizeSecurityGroupEgressResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    AuthorizeSecurityGroupEgressResponsePrivate(AuthorizeSecurityGroupEgressResponse * const q);
+    explicit AuthorizeSecurityGroupEgressResponsePrivate(AuthorizeSecurityGroupEgressResponse * const q);
 
     void parseAuthorizeSecurityGroupEgressResponse(QXmlStreamReader &xml);
 

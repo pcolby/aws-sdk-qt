@@ -31,7 +31,7 @@ class UpdateUserPhoneConfigResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    UpdateUserPhoneConfigResponsePrivate(UpdateUserPhoneConfigResponse * const q);
+    explicit UpdateUserPhoneConfigResponsePrivate(UpdateUserPhoneConfigResponse * const q);
 
     void parseUpdateUserPhoneConfigResponse(QXmlStreamReader &xml);
 

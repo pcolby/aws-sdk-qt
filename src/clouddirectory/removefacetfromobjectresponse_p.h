@@ -31,7 +31,7 @@ class RemoveFacetFromObjectResponsePrivate : public CloudDirectoryResponsePrivat
 
 public:
 
-    RemoveFacetFromObjectResponsePrivate(RemoveFacetFromObjectResponse * const q);
+    explicit RemoveFacetFromObjectResponsePrivate(RemoveFacetFromObjectResponse * const q);
 
     void parseRemoveFacetFromObjectResponse(QXmlStreamReader &xml);
 

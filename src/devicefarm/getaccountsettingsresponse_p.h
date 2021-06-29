@@ -31,7 +31,7 @@ class GetAccountSettingsResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    GetAccountSettingsResponsePrivate(GetAccountSettingsResponse * const q);
+    explicit GetAccountSettingsResponsePrivate(GetAccountSettingsResponse * const q);
 
     void parseGetAccountSettingsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteLoadBalancerTlsCertificateResponsePrivate : public LightsailResponse
 
 public:
 
-    DeleteLoadBalancerTlsCertificateResponsePrivate(DeleteLoadBalancerTlsCertificateResponse * const q);
+    explicit DeleteLoadBalancerTlsCertificateResponsePrivate(DeleteLoadBalancerTlsCertificateResponse * const q);
 
     void parseDeleteLoadBalancerTlsCertificateResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribePlatformVersionResponsePrivate : public ElasticBeanstalkResponsePr
 
 public:
 
-    DescribePlatformVersionResponsePrivate(DescribePlatformVersionResponse * const q);
+    explicit DescribePlatformVersionResponsePrivate(DescribePlatformVersionResponse * const q);
 
     void parseDescribePlatformVersionResponse(QXmlStreamReader &xml);
 

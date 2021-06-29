@@ -31,7 +31,7 @@ class SearchTransitGatewayMulticastGroupsResponsePrivate : public Ec2ResponsePri
 
 public:
 
-    SearchTransitGatewayMulticastGroupsResponsePrivate(SearchTransitGatewayMulticastGroupsResponse * const q);
+    explicit SearchTransitGatewayMulticastGroupsResponsePrivate(SearchTransitGatewayMulticastGroupsResponse * const q);
 
     void parseSearchTransitGatewayMulticastGroupsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateServiceAccessPoliciesResponsePrivate : public CloudSearchResponsePri
 
 public:
 
-    UpdateServiceAccessPoliciesResponsePrivate(UpdateServiceAccessPoliciesResponse * const q);
+    explicit UpdateServiceAccessPoliciesResponsePrivate(UpdateServiceAccessPoliciesResponse * const q);
 
     void parseUpdateServiceAccessPoliciesResponse(QXmlStreamReader &xml);
 

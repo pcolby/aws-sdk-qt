@@ -31,7 +31,7 @@ class DeleteApnsSandboxChannelResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    DeleteApnsSandboxChannelResponsePrivate(DeleteApnsSandboxChannelResponse * const q);
+    explicit DeleteApnsSandboxChannelResponsePrivate(DeleteApnsSandboxChannelResponse * const q);
 
     void parseDeleteApnsSandboxChannelResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateServiceSpecificCredentialResponsePrivate : public IamResponsePrivate
 
 public:
 
-    CreateServiceSpecificCredentialResponsePrivate(CreateServiceSpecificCredentialResponse * const q);
+    explicit CreateServiceSpecificCredentialResponsePrivate(CreateServiceSpecificCredentialResponse * const q);
 
     void parseCreateServiceSpecificCredentialResponse(QXmlStreamReader &xml);
 

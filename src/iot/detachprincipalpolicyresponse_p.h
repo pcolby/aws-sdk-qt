@@ -31,7 +31,7 @@ class DetachPrincipalPolicyResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DetachPrincipalPolicyResponsePrivate(DetachPrincipalPolicyResponse * const q);
+    explicit DetachPrincipalPolicyResponsePrivate(DetachPrincipalPolicyResponse * const q);
 
     void parseDetachPrincipalPolicyResponse(QXmlStreamReader &xml);
 

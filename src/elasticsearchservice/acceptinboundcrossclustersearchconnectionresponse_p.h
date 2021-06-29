@@ -31,7 +31,7 @@ class AcceptInboundCrossClusterSearchConnectionResponsePrivate : public Elastics
 
 public:
 
-    AcceptInboundCrossClusterSearchConnectionResponsePrivate(AcceptInboundCrossClusterSearchConnectionResponse * const q);
+    explicit AcceptInboundCrossClusterSearchConnectionResponsePrivate(AcceptInboundCrossClusterSearchConnectionResponse * const q);
 
     void parseAcceptInboundCrossClusterSearchConnectionResponse(QXmlStreamReader &xml);
 

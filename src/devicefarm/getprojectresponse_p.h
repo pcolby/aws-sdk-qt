@@ -31,7 +31,7 @@ class GetProjectResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    GetProjectResponsePrivate(GetProjectResponse * const q);
+    explicit GetProjectResponsePrivate(GetProjectResponse * const q);
 
     void parseGetProjectResponse(QXmlStreamReader &xml);
 

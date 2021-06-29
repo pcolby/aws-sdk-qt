@@ -31,7 +31,7 @@ class CreateRuleResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 
-    CreateRuleResponsePrivate(CreateRuleResponse * const q);
+    explicit CreateRuleResponsePrivate(CreateRuleResponse * const q);
 
     void parseCreateRuleResponse(QXmlStreamReader &xml);
 

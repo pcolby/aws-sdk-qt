@@ -31,7 +31,7 @@ class StopDeploymentResponsePrivate : public CodeDeployResponsePrivate {
 
 public:
 
-    StopDeploymentResponsePrivate(StopDeploymentResponse * const q);
+    explicit StopDeploymentResponsePrivate(StopDeploymentResponse * const q);
 
     void parseStopDeploymentResponse(QXmlStreamReader &xml);
 

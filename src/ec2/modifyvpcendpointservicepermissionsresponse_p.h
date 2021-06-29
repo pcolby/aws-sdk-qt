@@ -31,7 +31,7 @@ class ModifyVpcEndpointServicePermissionsResponsePrivate : public Ec2ResponsePri
 
 public:
 
-    ModifyVpcEndpointServicePermissionsResponsePrivate(ModifyVpcEndpointServicePermissionsResponse * const q);
+    explicit ModifyVpcEndpointServicePermissionsResponsePrivate(ModifyVpcEndpointServicePermissionsResponse * const q);
 
     void parseModifyVpcEndpointServicePermissionsResponse(QXmlStreamReader &xml);
 

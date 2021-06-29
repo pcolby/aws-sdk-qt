@@ -31,7 +31,7 @@ class PutConfigurationSetReputationOptionsResponsePrivate : public Sesv2Response
 
 public:
 
-    PutConfigurationSetReputationOptionsResponsePrivate(PutConfigurationSetReputationOptionsResponse * const q);
+    explicit PutConfigurationSetReputationOptionsResponsePrivate(PutConfigurationSetReputationOptionsResponse * const q);
 
     void parsePutConfigurationSetReputationOptionsResponse(QXmlStreamReader &xml);
 

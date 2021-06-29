@@ -31,7 +31,7 @@ class UpdateResponsePlanResponsePrivate : public SSMIncidentsResponsePrivate {
 
 public:
 
-    UpdateResponsePlanResponsePrivate(UpdateResponsePlanResponse * const q);
+    explicit UpdateResponsePlanResponsePrivate(UpdateResponsePlanResponse * const q);
 
     void parseUpdateResponsePlanResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeAccountHealthResponsePrivate : public DevOpsGuruResponsePrivate {
 
 public:
 
-    DescribeAccountHealthResponsePrivate(DescribeAccountHealthResponse * const q);
+    explicit DescribeAccountHealthResponsePrivate(DescribeAccountHealthResponse * const q);
 
     void parseDescribeAccountHealthResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CancelSpotInstanceRequestsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CancelSpotInstanceRequestsResponsePrivate(CancelSpotInstanceRequestsResponse * const q);
+    explicit CancelSpotInstanceRequestsResponsePrivate(CancelSpotInstanceRequestsResponse * const q);
 
     void parseCancelSpotInstanceRequestsResponse(QXmlStreamReader &xml);
 

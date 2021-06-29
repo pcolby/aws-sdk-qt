@@ -31,7 +31,7 @@ class UpgradeElasticsearchDomainResponsePrivate : public ElasticsearchServiceRes
 
 public:
 
-    UpgradeElasticsearchDomainResponsePrivate(UpgradeElasticsearchDomainResponse * const q);
+    explicit UpgradeElasticsearchDomainResponsePrivate(UpgradeElasticsearchDomainResponse * const q);
 
     void parseUpgradeElasticsearchDomainResponse(QXmlStreamReader &xml);
 

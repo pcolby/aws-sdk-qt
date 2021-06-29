@@ -31,7 +31,7 @@ class DeprecateActivityTypeResponsePrivate : public SwfResponsePrivate {
 
 public:
 
-    DeprecateActivityTypeResponsePrivate(DeprecateActivityTypeResponse * const q);
+    explicit DeprecateActivityTypeResponsePrivate(DeprecateActivityTypeResponse * const q);
 
     void parseDeprecateActivityTypeResponse(QXmlStreamReader &xml);
 

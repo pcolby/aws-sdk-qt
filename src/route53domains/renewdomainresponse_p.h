@@ -31,7 +31,7 @@ class RenewDomainResponsePrivate : public Route53DomainsResponsePrivate {
 
 public:
 
-    RenewDomainResponsePrivate(RenewDomainResponse * const q);
+    explicit RenewDomainResponsePrivate(RenewDomainResponse * const q);
 
     void parseRenewDomainResponse(QXmlStreamReader &xml);
 

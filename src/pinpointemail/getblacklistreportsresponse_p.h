@@ -31,7 +31,7 @@ class GetBlacklistReportsResponsePrivate : public PinpointEmailResponsePrivate {
 
 public:
 
-    GetBlacklistReportsResponsePrivate(GetBlacklistReportsResponse * const q);
+    explicit GetBlacklistReportsResponsePrivate(GetBlacklistReportsResponse * const q);
 
     void parseGetBlacklistReportsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteDomainResponsePrivate : public SimpleDBResponsePrivate {
 
 public:
 
-    DeleteDomainResponsePrivate(DeleteDomainResponse * const q);
+    explicit DeleteDomainResponsePrivate(DeleteDomainResponse * const q);
 
     void parseDeleteDomainResponse(QXmlStreamReader &xml);
 

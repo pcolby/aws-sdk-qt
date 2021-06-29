@@ -31,7 +31,7 @@ class BatchApplyUpdateActionResponsePrivate : public ElastiCacheResponsePrivate 
 
 public:
 
-    BatchApplyUpdateActionResponsePrivate(BatchApplyUpdateActionResponse * const q);
+    explicit BatchApplyUpdateActionResponsePrivate(BatchApplyUpdateActionResponse * const q);
 
     void parseBatchApplyUpdateActionResponse(QXmlStreamReader &xml);
 

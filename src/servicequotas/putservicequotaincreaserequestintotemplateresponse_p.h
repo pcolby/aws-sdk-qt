@@ -31,7 +31,7 @@ class PutServiceQuotaIncreaseRequestIntoTemplateResponsePrivate : public Service
 
 public:
 
-    PutServiceQuotaIncreaseRequestIntoTemplateResponsePrivate(PutServiceQuotaIncreaseRequestIntoTemplateResponse * const q);
+    explicit PutServiceQuotaIncreaseRequestIntoTemplateResponsePrivate(PutServiceQuotaIncreaseRequestIntoTemplateResponse * const q);
 
     void parsePutServiceQuotaIncreaseRequestIntoTemplateResponse(QXmlStreamReader &xml);
 

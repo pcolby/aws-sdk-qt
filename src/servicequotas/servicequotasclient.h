@@ -79,7 +79,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    ServiceQuotasClient(
+    explicit ServiceQuotasClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -108,7 +108,7 @@ public slots:
 protected:
     /// @cond internal
     ServiceQuotasClientPrivate * const d_ptr; ///< Internal d-pointer.
-    ServiceQuotasClient(ServiceQuotasClientPrivate * const d);
+    explicit ServiceQuotasClient(ServiceQuotasClientPrivate * const d);
     /// @endcond
 
 private:

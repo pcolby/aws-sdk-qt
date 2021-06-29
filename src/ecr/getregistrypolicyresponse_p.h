@@ -31,7 +31,7 @@ class GetRegistryPolicyResponsePrivate : public EcrResponsePrivate {
 
 public:
 
-    GetRegistryPolicyResponsePrivate(GetRegistryPolicyResponse * const q);
+    explicit GetRegistryPolicyResponsePrivate(GetRegistryPolicyResponse * const q);
 
     void parseGetRegistryPolicyResponse(QXmlStreamReader &xml);
 

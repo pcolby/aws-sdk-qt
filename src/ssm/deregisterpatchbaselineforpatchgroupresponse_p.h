@@ -31,7 +31,7 @@ class DeregisterPatchBaselineForPatchGroupResponsePrivate : public SsmResponsePr
 
 public:
 
-    DeregisterPatchBaselineForPatchGroupResponsePrivate(DeregisterPatchBaselineForPatchGroupResponse * const q);
+    explicit DeregisterPatchBaselineForPatchGroupResponsePrivate(DeregisterPatchBaselineForPatchGroupResponse * const q);
 
     void parseDeregisterPatchBaselineForPatchGroupResponse(QXmlStreamReader &xml);
 

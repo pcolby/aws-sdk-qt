@@ -31,7 +31,7 @@ class PutComplianceItemsResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    PutComplianceItemsResponsePrivate(PutComplianceItemsResponse * const q);
+    explicit PutComplianceItemsResponsePrivate(PutComplianceItemsResponse * const q);
 
     void parsePutComplianceItemsResponse(QXmlStreamReader &xml);
 

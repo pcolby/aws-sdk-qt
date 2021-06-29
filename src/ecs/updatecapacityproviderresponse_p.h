@@ -31,7 +31,7 @@ class UpdateCapacityProviderResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    UpdateCapacityProviderResponsePrivate(UpdateCapacityProviderResponse * const q);
+    explicit UpdateCapacityProviderResponsePrivate(UpdateCapacityProviderResponse * const q);
 
     void parseUpdateCapacityProviderResponse(QXmlStreamReader &xml);
 

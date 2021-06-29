@@ -31,7 +31,7 @@ class GetTokenResponsePrivate : public AmplifyBackendResponsePrivate {
 
 public:
 
-    GetTokenResponsePrivate(GetTokenResponse * const q);
+    explicit GetTokenResponsePrivate(GetTokenResponse * const q);
 
     void parseGetTokenResponse(QXmlStreamReader &xml);
 

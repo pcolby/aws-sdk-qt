@@ -31,7 +31,7 @@ class GetTriggerResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    GetTriggerResponsePrivate(GetTriggerResponse * const q);
+    explicit GetTriggerResponsePrivate(GetTriggerResponse * const q);
 
     void parseGetTriggerResponse(QXmlStreamReader &xml);
 

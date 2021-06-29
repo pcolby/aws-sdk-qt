@@ -31,7 +31,7 @@ class RebootNodeResponsePrivate : public DaxResponsePrivate {
 
 public:
 
-    RebootNodeResponsePrivate(RebootNodeResponse * const q);
+    explicit RebootNodeResponsePrivate(RebootNodeResponse * const q);
 
     void parseRebootNodeResponse(QXmlStreamReader &xml);
 

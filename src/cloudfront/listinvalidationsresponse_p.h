@@ -31,7 +31,7 @@ class ListInvalidationsResponsePrivate : public CloudFrontResponsePrivate {
 
 public:
 
-    ListInvalidationsResponsePrivate(ListInvalidationsResponse * const q);
+    explicit ListInvalidationsResponsePrivate(ListInvalidationsResponse * const q);
 
     void parseListInvalidationsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListProfilePermissionsResponsePrivate : public signerResponsePrivate {
 
 public:
 
-    ListProfilePermissionsResponsePrivate(ListProfilePermissionsResponse * const q);
+    explicit ListProfilePermissionsResponsePrivate(ListProfilePermissionsResponse * const q);
 
     void parseListProfilePermissionsResponse(QXmlStreamReader &xml);
 

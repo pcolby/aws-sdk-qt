@@ -30,7 +30,7 @@ class IdentityStoreClient;
 class IdentityStoreClientPrivate {
 
 public:
-    IdentityStoreClientPrivate(IdentityStoreClient * const q);
+    explicit IdentityStoreClientPrivate(IdentityStoreClient * const q);
 
 protected:
     IdentityStoreClient * const q_ptr; ///< Internal q-pointer.

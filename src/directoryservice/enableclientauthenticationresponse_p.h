@@ -31,7 +31,7 @@ class EnableClientAuthenticationResponsePrivate : public DirectoryServiceRespons
 
 public:
 
-    EnableClientAuthenticationResponsePrivate(EnableClientAuthenticationResponse * const q);
+    explicit EnableClientAuthenticationResponsePrivate(EnableClientAuthenticationResponse * const q);
 
     void parseEnableClientAuthenticationResponse(QXmlStreamReader &xml);
 

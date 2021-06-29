@@ -31,7 +31,7 @@ class DeleteEnvironmentMembershipResponsePrivate : public Cloud9ResponsePrivate 
 
 public:
 
-    DeleteEnvironmentMembershipResponsePrivate(DeleteEnvironmentMembershipResponse * const q);
+    explicit DeleteEnvironmentMembershipResponsePrivate(DeleteEnvironmentMembershipResponse * const q);
 
     void parseDeleteEnvironmentMembershipResponse(QXmlStreamReader &xml);
 

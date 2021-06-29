@@ -31,7 +31,7 @@ class DeleteOutboundCrossClusterSearchConnectionResponsePrivate : public Elastic
 
 public:
 
-    DeleteOutboundCrossClusterSearchConnectionResponsePrivate(DeleteOutboundCrossClusterSearchConnectionResponse * const q);
+    explicit DeleteOutboundCrossClusterSearchConnectionResponsePrivate(DeleteOutboundCrossClusterSearchConnectionResponse * const q);
 
     void parseDeleteOutboundCrossClusterSearchConnectionResponse(QXmlStreamReader &xml);
 

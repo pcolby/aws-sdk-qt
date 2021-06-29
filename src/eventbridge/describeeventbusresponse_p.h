@@ -31,7 +31,7 @@ class DescribeEventBusResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 
-    DescribeEventBusResponsePrivate(DescribeEventBusResponse * const q);
+    explicit DescribeEventBusResponsePrivate(DescribeEventBusResponse * const q);
 
     void parseDescribeEventBusResponse(QXmlStreamReader &xml);
 

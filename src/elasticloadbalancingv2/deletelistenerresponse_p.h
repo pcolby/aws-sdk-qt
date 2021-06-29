@@ -31,7 +31,7 @@ class DeleteListenerResponsePrivate : public ElasticLoadBalancingv2ResponsePriva
 
 public:
 
-    DeleteListenerResponsePrivate(DeleteListenerResponse * const q);
+    explicit DeleteListenerResponsePrivate(DeleteListenerResponse * const q);
 
     void parseDeleteListenerResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteDBParameterGroupResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 
-    DeleteDBParameterGroupResponsePrivate(DeleteDBParameterGroupResponse * const q);
+    explicit DeleteDBParameterGroupResponsePrivate(DeleteDBParameterGroupResponse * const q);
 
     void parseDeleteDBParameterGroupResponse(QXmlStreamReader &xml);
 

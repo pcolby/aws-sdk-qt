@@ -120,7 +120,7 @@ public:
 protected:
     /// @cond internal
     AutoScalingRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    AutoScalingRequest(AutoScalingRequestPrivate * const d);
+    explicit AutoScalingRequest(AutoScalingRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

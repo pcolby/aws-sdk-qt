@@ -31,7 +31,7 @@ class CreateAssociationResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    CreateAssociationResponsePrivate(CreateAssociationResponse * const q);
+    explicit CreateAssociationResponsePrivate(CreateAssociationResponse * const q);
 
     void parseCreateAssociationResponse(QXmlStreamReader &xml);
 

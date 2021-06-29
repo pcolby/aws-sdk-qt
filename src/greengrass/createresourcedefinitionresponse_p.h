@@ -31,7 +31,7 @@ class CreateResourceDefinitionResponsePrivate : public GreengrassResponsePrivate
 
 public:
 
-    CreateResourceDefinitionResponsePrivate(CreateResourceDefinitionResponse * const q);
+    explicit CreateResourceDefinitionResponsePrivate(CreateResourceDefinitionResponse * const q);
 
     void parseCreateResourceDefinitionResponse(QXmlStreamReader &xml);
 

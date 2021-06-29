@@ -30,7 +30,7 @@ class SageMakerFeatureStoreRuntimeClient;
 class SageMakerFeatureStoreRuntimeClientPrivate {
 
 public:
-    SageMakerFeatureStoreRuntimeClientPrivate(SageMakerFeatureStoreRuntimeClient * const q);
+    explicit SageMakerFeatureStoreRuntimeClientPrivate(SageMakerFeatureStoreRuntimeClient * const q);
 
 protected:
     SageMakerFeatureStoreRuntimeClient * const q_ptr; ///< Internal q-pointer.

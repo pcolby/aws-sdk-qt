@@ -31,7 +31,7 @@ class PutRetentionPolicyResponsePrivate : public CloudWatchLogsResponsePrivate {
 
 public:
 
-    PutRetentionPolicyResponsePrivate(PutRetentionPolicyResponse * const q);
+    explicit PutRetentionPolicyResponsePrivate(PutRetentionPolicyResponse * const q);
 
     void parsePutRetentionPolicyResponse(QXmlStreamReader &xml);
 

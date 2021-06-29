@@ -31,7 +31,7 @@ class ListUserTagsResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    ListUserTagsResponsePrivate(ListUserTagsResponse * const q);
+    explicit ListUserTagsResponsePrivate(ListUserTagsResponse * const q);
 
     void parseListUserTagsResponse(QXmlStreamReader &xml);
 

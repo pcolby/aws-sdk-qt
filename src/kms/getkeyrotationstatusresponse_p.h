@@ -31,7 +31,7 @@ class GetKeyRotationStatusResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    GetKeyRotationStatusResponsePrivate(GetKeyRotationStatusResponse * const q);
+    explicit GetKeyRotationStatusResponsePrivate(GetKeyRotationStatusResponse * const q);
 
     void parseGetKeyRotationStatusResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateScalingPlanResponsePrivate : public AutoScalingPlansResponsePrivate 
 
 public:
 
-    UpdateScalingPlanResponsePrivate(UpdateScalingPlanResponse * const q);
+    explicit UpdateScalingPlanResponsePrivate(UpdateScalingPlanResponse * const q);
 
     void parseUpdateScalingPlanResponse(QXmlStreamReader &xml);
 

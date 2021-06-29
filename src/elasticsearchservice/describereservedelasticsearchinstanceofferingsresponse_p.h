@@ -31,7 +31,7 @@ class DescribeReservedElasticsearchInstanceOfferingsResponsePrivate : public Ela
 
 public:
 
-    DescribeReservedElasticsearchInstanceOfferingsResponsePrivate(DescribeReservedElasticsearchInstanceOfferingsResponse * const q);
+    explicit DescribeReservedElasticsearchInstanceOfferingsResponsePrivate(DescribeReservedElasticsearchInstanceOfferingsResponse * const q);
 
     void parseDescribeReservedElasticsearchInstanceOfferingsResponse(QXmlStreamReader &xml);
 

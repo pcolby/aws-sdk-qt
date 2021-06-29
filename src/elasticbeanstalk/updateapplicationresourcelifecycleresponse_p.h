@@ -31,7 +31,7 @@ class UpdateApplicationResourceLifecycleResponsePrivate : public ElasticBeanstal
 
 public:
 
-    UpdateApplicationResourceLifecycleResponsePrivate(UpdateApplicationResourceLifecycleResponse * const q);
+    explicit UpdateApplicationResourceLifecycleResponsePrivate(UpdateApplicationResourceLifecycleResponse * const q);
 
     void parseUpdateApplicationResourceLifecycleResponse(QXmlStreamReader &xml);
 

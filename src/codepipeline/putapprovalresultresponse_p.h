@@ -31,7 +31,7 @@ class PutApprovalResultResponsePrivate : public CodePipelineResponsePrivate {
 
 public:
 
-    PutApprovalResultResponsePrivate(PutApprovalResultResponse * const q);
+    explicit PutApprovalResultResponsePrivate(PutApprovalResultResponse * const q);
 
     void parsePutApprovalResultResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListDominantLanguageDetectionJobsResponsePrivate : public ComprehendRespon
 
 public:
 
-    ListDominantLanguageDetectionJobsResponsePrivate(ListDominantLanguageDetectionJobsResponse * const q);
+    explicit ListDominantLanguageDetectionJobsResponsePrivate(ListDominantLanguageDetectionJobsResponse * const q);
 
     void parseListDominantLanguageDetectionJobsResponse(QXmlStreamReader &xml);
 

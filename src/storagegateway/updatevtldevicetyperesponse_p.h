@@ -31,7 +31,7 @@ class UpdateVTLDeviceTypeResponsePrivate : public StorageGatewayResponsePrivate 
 
 public:
 
-    UpdateVTLDeviceTypeResponsePrivate(UpdateVTLDeviceTypeResponse * const q);
+    explicit UpdateVTLDeviceTypeResponsePrivate(UpdateVTLDeviceTypeResponse * const q);
 
     void parseUpdateVTLDeviceTypeResponse(QXmlStreamReader &xml);
 

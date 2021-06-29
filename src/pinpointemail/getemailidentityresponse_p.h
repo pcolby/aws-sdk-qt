@@ -31,7 +31,7 @@ class GetEmailIdentityResponsePrivate : public PinpointEmailResponsePrivate {
 
 public:
 
-    GetEmailIdentityResponsePrivate(GetEmailIdentityResponse * const q);
+    explicit GetEmailIdentityResponsePrivate(GetEmailIdentityResponse * const q);
 
     void parseGetEmailIdentityResponse(QXmlStreamReader &xml);
 

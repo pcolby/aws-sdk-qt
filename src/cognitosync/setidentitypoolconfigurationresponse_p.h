@@ -31,7 +31,7 @@ class SetIdentityPoolConfigurationResponsePrivate : public CognitoSyncResponsePr
 
 public:
 
-    SetIdentityPoolConfigurationResponsePrivate(SetIdentityPoolConfigurationResponse * const q);
+    explicit SetIdentityPoolConfigurationResponsePrivate(SetIdentityPoolConfigurationResponse * const q);
 
     void parseSetIdentityPoolConfigurationResponse(QXmlStreamReader &xml);
 

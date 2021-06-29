@@ -31,7 +31,7 @@ class DetachObjectResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 
-    DetachObjectResponsePrivate(DetachObjectResponse * const q);
+    explicit DetachObjectResponsePrivate(DetachObjectResponse * const q);
 
     void parseDetachObjectResponse(QXmlStreamReader &xml);
 

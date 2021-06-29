@@ -31,7 +31,7 @@ class ImportVolumeResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ImportVolumeResponsePrivate(ImportVolumeResponse * const q);
+    explicit ImportVolumeResponsePrivate(ImportVolumeResponse * const q);
 
     void parseImportVolumeResponse(QXmlStreamReader &xml);
 

@@ -29,7 +29,7 @@ class ImportExportResponsePrivate {
 
 public:
 
-    ImportExportResponsePrivate(ImportExportResponse * const q);
+    explicit ImportExportResponsePrivate(ImportExportResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

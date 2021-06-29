@@ -31,7 +31,7 @@ class RegisterEventTopicResponsePrivate : public DirectoryServiceResponsePrivate
 
 public:
 
-    RegisterEventTopicResponsePrivate(RegisterEventTopicResponse * const q);
+    explicit RegisterEventTopicResponsePrivate(RegisterEventTopicResponse * const q);
 
     void parseRegisterEventTopicResponse(QXmlStreamReader &xml);
 

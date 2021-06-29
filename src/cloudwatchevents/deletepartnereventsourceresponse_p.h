@@ -31,7 +31,7 @@ class DeletePartnerEventSourceResponsePrivate : public CloudWatchEventsResponseP
 
 public:
 
-    DeletePartnerEventSourceResponsePrivate(DeletePartnerEventSourceResponse * const q);
+    explicit DeletePartnerEventSourceResponsePrivate(DeletePartnerEventSourceResponse * const q);
 
     void parseDeletePartnerEventSourceResponse(QXmlStreamReader &xml);
 

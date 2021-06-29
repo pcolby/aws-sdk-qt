@@ -31,7 +31,7 @@ class RevokeIpRulesResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 
-    RevokeIpRulesResponsePrivate(RevokeIpRulesResponse * const q);
+    explicit RevokeIpRulesResponsePrivate(RevokeIpRulesResponse * const q);
 
     void parseRevokeIpRulesResponse(QXmlStreamReader &xml);
 

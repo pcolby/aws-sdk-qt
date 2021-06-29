@@ -31,7 +31,7 @@ class DeleteMonitoringScheduleResponsePrivate : public SageMakerResponsePrivate 
 
 public:
 
-    DeleteMonitoringScheduleResponsePrivate(DeleteMonitoringScheduleResponse * const q);
+    explicit DeleteMonitoringScheduleResponsePrivate(DeleteMonitoringScheduleResponse * const q);
 
     void parseDeleteMonitoringScheduleResponse(QXmlStreamReader &xml);
 

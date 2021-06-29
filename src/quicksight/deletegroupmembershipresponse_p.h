@@ -31,7 +31,7 @@ class DeleteGroupMembershipResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    DeleteGroupMembershipResponsePrivate(DeleteGroupMembershipResponse * const q);
+    explicit DeleteGroupMembershipResponsePrivate(DeleteGroupMembershipResponse * const q);
 
     void parseDeleteGroupMembershipResponse(QXmlStreamReader &xml);
 

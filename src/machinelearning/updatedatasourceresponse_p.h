@@ -31,7 +31,7 @@ class UpdateDataSourceResponsePrivate : public MachineLearningResponsePrivate {
 
 public:
 
-    UpdateDataSourceResponsePrivate(UpdateDataSourceResponse * const q);
+    explicit UpdateDataSourceResponsePrivate(UpdateDataSourceResponse * const q);
 
     void parseUpdateDataSourceResponse(QXmlStreamReader &xml);
 

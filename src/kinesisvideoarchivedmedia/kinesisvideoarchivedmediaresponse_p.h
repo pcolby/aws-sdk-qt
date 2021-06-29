@@ -29,7 +29,7 @@ class KinesisVideoArchivedMediaResponsePrivate {
 
 public:
 
-    KinesisVideoArchivedMediaResponsePrivate(KinesisVideoArchivedMediaResponse * const q);
+    explicit KinesisVideoArchivedMediaResponsePrivate(KinesisVideoArchivedMediaResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

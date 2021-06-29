@@ -31,7 +31,7 @@ class DescribeVirtualInterfacesResponsePrivate : public DirectConnectResponsePri
 
 public:
 
-    DescribeVirtualInterfacesResponsePrivate(DescribeVirtualInterfacesResponse * const q);
+    explicit DescribeVirtualInterfacesResponsePrivate(DescribeVirtualInterfacesResponse * const q);
 
     void parseDescribeVirtualInterfacesResponse(QXmlStreamReader &xml);
 

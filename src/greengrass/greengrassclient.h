@@ -225,7 +225,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    GreengrassClient(
+    explicit GreengrassClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -327,7 +327,7 @@ public slots:
 protected:
     /// @cond internal
     GreengrassClientPrivate * const d_ptr; ///< Internal d-pointer.
-    GreengrassClient(GreengrassClientPrivate * const d);
+    explicit GreengrassClient(GreengrassClientPrivate * const d);
     /// @endcond
 
 private:

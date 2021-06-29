@@ -116,7 +116,7 @@ public:
 protected:
     /// @cond internal
     IoTWirelessRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    IoTWirelessRequest(IoTWirelessRequestPrivate * const d);
+    explicit IoTWirelessRequest(IoTWirelessRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

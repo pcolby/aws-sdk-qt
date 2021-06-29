@@ -31,7 +31,7 @@ class CreateContactListResponsePrivate : public Sesv2ResponsePrivate {
 
 public:
 
-    CreateContactListResponsePrivate(CreateContactListResponse * const q);
+    explicit CreateContactListResponsePrivate(CreateContactListResponse * const q);
 
     void parseCreateContactListResponse(QXmlStreamReader &xml);
 

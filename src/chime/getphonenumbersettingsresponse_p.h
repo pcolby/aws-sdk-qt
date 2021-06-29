@@ -31,7 +31,7 @@ class GetPhoneNumberSettingsResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    GetPhoneNumberSettingsResponsePrivate(GetPhoneNumberSettingsResponse * const q);
+    explicit GetPhoneNumberSettingsResponsePrivate(GetPhoneNumberSettingsResponse * const q);
 
     void parseGetPhoneNumberSettingsResponse(QXmlStreamReader &xml);
 

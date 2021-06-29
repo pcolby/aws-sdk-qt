@@ -31,7 +31,7 @@ class StopTrainingDocumentClassifierResponsePrivate : public ComprehendResponseP
 
 public:
 
-    StopTrainingDocumentClassifierResponsePrivate(StopTrainingDocumentClassifierResponse * const q);
+    explicit StopTrainingDocumentClassifierResponsePrivate(StopTrainingDocumentClassifierResponse * const q);
 
     void parseStopTrainingDocumentClassifierResponse(QXmlStreamReader &xml);
 

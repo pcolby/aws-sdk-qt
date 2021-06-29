@@ -31,7 +31,7 @@ class ListTasksResponsePrivate : public DataSyncResponsePrivate {
 
 public:
 
-    ListTasksResponsePrivate(ListTasksResponse * const q);
+    explicit ListTasksResponsePrivate(ListTasksResponse * const q);
 
     void parseListTasksResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class BatchDeleteDocumentResponsePrivate : public kendraResponsePrivate {
 
 public:
 
-    BatchDeleteDocumentResponsePrivate(BatchDeleteDocumentResponse * const q);
+    explicit BatchDeleteDocumentResponsePrivate(BatchDeleteDocumentResponse * const q);
 
     void parseBatchDeleteDocumentResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class SendPipelineExecutionStepFailureResponsePrivate : public SageMakerResponse
 
 public:
 
-    SendPipelineExecutionStepFailureResponsePrivate(SendPipelineExecutionStepFailureResponse * const q);
+    explicit SendPipelineExecutionStepFailureResponsePrivate(SendPipelineExecutionStepFailureResponse * const q);
 
     void parseSendPipelineExecutionStepFailureResponse(QXmlStreamReader &xml);
 

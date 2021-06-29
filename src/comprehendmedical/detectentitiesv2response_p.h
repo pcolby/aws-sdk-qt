@@ -31,7 +31,7 @@ class DetectEntitiesV2ResponsePrivate : public ComprehendMedicalResponsePrivate 
 
 public:
 
-    DetectEntitiesV2ResponsePrivate(DetectEntitiesV2Response * const q);
+    explicit DetectEntitiesV2ResponsePrivate(DetectEntitiesV2Response * const q);
 
     void parseDetectEntitiesV2Response(QXmlStreamReader &xml);
 

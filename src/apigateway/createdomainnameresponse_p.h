@@ -31,7 +31,7 @@ class CreateDomainNameResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    CreateDomainNameResponsePrivate(CreateDomainNameResponse * const q);
+    explicit CreateDomainNameResponsePrivate(CreateDomainNameResponse * const q);
 
     void parseCreateDomainNameResponse(QXmlStreamReader &xml);
 

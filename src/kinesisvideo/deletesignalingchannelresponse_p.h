@@ -31,7 +31,7 @@ class DeleteSignalingChannelResponsePrivate : public KinesisVideoResponsePrivate
 
 public:
 
-    DeleteSignalingChannelResponsePrivate(DeleteSignalingChannelResponse * const q);
+    explicit DeleteSignalingChannelResponsePrivate(DeleteSignalingChannelResponse * const q);
 
     void parseDeleteSignalingChannelResponse(QXmlStreamReader &xml);
 

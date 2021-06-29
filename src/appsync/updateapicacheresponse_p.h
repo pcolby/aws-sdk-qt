@@ -31,7 +31,7 @@ class UpdateApiCacheResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 
-    UpdateApiCacheResponsePrivate(UpdateApiCacheResponse * const q);
+    explicit UpdateApiCacheResponsePrivate(UpdateApiCacheResponse * const q);
 
     void parseUpdateApiCacheResponse(QXmlStreamReader &xml);
 

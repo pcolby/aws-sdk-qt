@@ -139,7 +139,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    ProtonClient(
+    explicit ProtonClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -198,7 +198,7 @@ public slots:
 protected:
     /// @cond internal
     ProtonClientPrivate * const d_ptr; ///< Internal d-pointer.
-    ProtonClient(ProtonClientPrivate * const d);
+    explicit ProtonClient(ProtonClientPrivate * const d);
     /// @endcond
 
 private:

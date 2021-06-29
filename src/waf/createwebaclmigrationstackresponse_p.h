@@ -31,7 +31,7 @@ class CreateWebACLMigrationStackResponsePrivate : public WafResponsePrivate {
 
 public:
 
-    CreateWebACLMigrationStackResponsePrivate(CreateWebACLMigrationStackResponse * const q);
+    explicit CreateWebACLMigrationStackResponsePrivate(CreateWebACLMigrationStackResponse * const q);
 
     void parseCreateWebACLMigrationStackResponse(QXmlStreamReader &xml);
 

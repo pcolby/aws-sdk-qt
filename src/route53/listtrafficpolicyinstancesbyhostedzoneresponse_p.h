@@ -31,7 +31,7 @@ class ListTrafficPolicyInstancesByHostedZoneResponsePrivate : public Route53Resp
 
 public:
 
-    ListTrafficPolicyInstancesByHostedZoneResponsePrivate(ListTrafficPolicyInstancesByHostedZoneResponse * const q);
+    explicit ListTrafficPolicyInstancesByHostedZoneResponsePrivate(ListTrafficPolicyInstancesByHostedZoneResponse * const q);
 
     void parseListTrafficPolicyInstancesByHostedZoneResponse(QXmlStreamReader &xml);
 

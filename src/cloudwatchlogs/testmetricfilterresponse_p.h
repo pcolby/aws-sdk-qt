@@ -31,7 +31,7 @@ class TestMetricFilterResponsePrivate : public CloudWatchLogsResponsePrivate {
 
 public:
 
-    TestMetricFilterResponsePrivate(TestMetricFilterResponse * const q);
+    explicit TestMetricFilterResponsePrivate(TestMetricFilterResponse * const q);
 
     void parseTestMetricFilterResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateChannelClassResponsePrivate : public MediaLiveResponsePrivate {
 
 public:
 
-    UpdateChannelClassResponsePrivate(UpdateChannelClassResponse * const q);
+    explicit UpdateChannelClassResponsePrivate(UpdateChannelClassResponse * const q);
 
     void parseUpdateChannelClassResponse(QXmlStreamReader &xml);
 

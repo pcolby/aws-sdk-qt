@@ -31,7 +31,7 @@ class CreateTrafficMirrorFilterResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CreateTrafficMirrorFilterResponsePrivate(CreateTrafficMirrorFilterResponse * const q);
+    explicit CreateTrafficMirrorFilterResponsePrivate(CreateTrafficMirrorFilterResponse * const q);
 
     void parseCreateTrafficMirrorFilterResponse(QXmlStreamReader &xml);
 

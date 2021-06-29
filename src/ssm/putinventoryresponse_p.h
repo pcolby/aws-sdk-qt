@@ -31,7 +31,7 @@ class PutInventoryResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    PutInventoryResponsePrivate(PutInventoryResponse * const q);
+    explicit PutInventoryResponsePrivate(PutInventoryResponse * const q);
 
     void parsePutInventoryResponse(QXmlStreamReader &xml);
 

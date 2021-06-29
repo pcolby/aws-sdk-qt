@@ -31,7 +31,7 @@ class DeletePendingAggregationRequestResponsePrivate : public ConfigServiceRespo
 
 public:
 
-    DeletePendingAggregationRequestResponsePrivate(DeletePendingAggregationRequestResponse * const q);
+    explicit DeletePendingAggregationRequestResponsePrivate(DeletePendingAggregationRequestResponse * const q);
 
     void parseDeletePendingAggregationRequestResponse(QXmlStreamReader &xml);
 

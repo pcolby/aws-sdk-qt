@@ -31,7 +31,7 @@ class DeleteUserPoolDomainResponsePrivate : public CognitoIdentityProviderRespon
 
 public:
 
-    DeleteUserPoolDomainResponsePrivate(DeleteUserPoolDomainResponse * const q);
+    explicit DeleteUserPoolDomainResponsePrivate(DeleteUserPoolDomainResponse * const q);
 
     void parseDeleteUserPoolDomainResponse(QXmlStreamReader &xml);
 

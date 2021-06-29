@@ -31,7 +31,7 @@ class DescribeTrainingJobResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    DescribeTrainingJobResponsePrivate(DescribeTrainingJobResponse * const q);
+    explicit DescribeTrainingJobResponsePrivate(DescribeTrainingJobResponse * const q);
 
     void parseDescribeTrainingJobResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class RejectTransitGatewayMulticastDomainAssociationsResponsePrivate : public Ec
 
 public:
 
-    RejectTransitGatewayMulticastDomainAssociationsResponsePrivate(RejectTransitGatewayMulticastDomainAssociationsResponse * const q);
+    explicit RejectTransitGatewayMulticastDomainAssociationsResponsePrivate(RejectTransitGatewayMulticastDomainAssociationsResponse * const q);
 
     void parseRejectTransitGatewayMulticastDomainAssociationsResponse(QXmlStreamReader &xml);
 

@@ -30,7 +30,7 @@ class MarketplaceMeteringClient;
 class MarketplaceMeteringClientPrivate {
 
 public:
-    MarketplaceMeteringClientPrivate(MarketplaceMeteringClient * const q);
+    explicit MarketplaceMeteringClientPrivate(MarketplaceMeteringClient * const q);
 
 protected:
     MarketplaceMeteringClient * const q_ptr; ///< Internal q-pointer.

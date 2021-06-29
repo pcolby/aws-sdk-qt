@@ -31,7 +31,7 @@ class ResyncMFADeviceResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    ResyncMFADeviceResponsePrivate(ResyncMFADeviceResponse * const q);
+    explicit ResyncMFADeviceResponsePrivate(ResyncMFADeviceResponse * const q);
 
     void parseResyncMFADeviceResponse(QXmlStreamReader &xml);
 

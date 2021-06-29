@@ -30,7 +30,7 @@ class TimestreamWriteClient;
 class TimestreamWriteClientPrivate {
 
 public:
-    TimestreamWriteClientPrivate(TimestreamWriteClient * const q);
+    explicit TimestreamWriteClientPrivate(TimestreamWriteClient * const q);
 
 protected:
     TimestreamWriteClient * const q_ptr; ///< Internal q-pointer.

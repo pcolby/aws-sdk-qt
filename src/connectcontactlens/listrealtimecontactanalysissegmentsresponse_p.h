@@ -31,7 +31,7 @@ class ListRealtimeContactAnalysisSegmentsResponsePrivate : public ConnectContact
 
 public:
 
-    ListRealtimeContactAnalysisSegmentsResponsePrivate(ListRealtimeContactAnalysisSegmentsResponse * const q);
+    explicit ListRealtimeContactAnalysisSegmentsResponsePrivate(ListRealtimeContactAnalysisSegmentsResponse * const q);
 
     void parseListRealtimeContactAnalysisSegmentsResponse(QXmlStreamReader &xml);
 

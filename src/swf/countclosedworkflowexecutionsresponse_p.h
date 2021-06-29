@@ -31,7 +31,7 @@ class CountClosedWorkflowExecutionsResponsePrivate : public SwfResponsePrivate {
 
 public:
 
-    CountClosedWorkflowExecutionsResponsePrivate(CountClosedWorkflowExecutionsResponse * const q);
+    explicit CountClosedWorkflowExecutionsResponsePrivate(CountClosedWorkflowExecutionsResponse * const q);
 
     void parseCountClosedWorkflowExecutionsResponse(QXmlStreamReader &xml);
 

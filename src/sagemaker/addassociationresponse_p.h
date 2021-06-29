@@ -31,7 +31,7 @@ class AddAssociationResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    AddAssociationResponsePrivate(AddAssociationResponse * const q);
+    explicit AddAssociationResponsePrivate(AddAssociationResponse * const q);
 
     void parseAddAssociationResponse(QXmlStreamReader &xml);
 

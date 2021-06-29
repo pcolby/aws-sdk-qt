@@ -31,7 +31,7 @@ class PutLoggingOptionsResponsePrivate : public IoTSiteWiseResponsePrivate {
 
 public:
 
-    PutLoggingOptionsResponsePrivate(PutLoggingOptionsResponse * const q);
+    explicit PutLoggingOptionsResponsePrivate(PutLoggingOptionsResponse * const q);
 
     void parsePutLoggingOptionsResponse(QXmlStreamReader &xml);
 

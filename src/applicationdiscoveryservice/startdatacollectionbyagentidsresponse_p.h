@@ -31,7 +31,7 @@ class StartDataCollectionByAgentIdsResponsePrivate : public ApplicationDiscovery
 
 public:
 
-    StartDataCollectionByAgentIdsResponsePrivate(StartDataCollectionByAgentIdsResponse * const q);
+    explicit StartDataCollectionByAgentIdsResponsePrivate(StartDataCollectionByAgentIdsResponse * const q);
 
     void parseStartDataCollectionByAgentIdsResponse(QXmlStreamReader &xml);
 

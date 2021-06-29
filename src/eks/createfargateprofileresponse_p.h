@@ -31,7 +31,7 @@ class CreateFargateProfileResponsePrivate : public EksResponsePrivate {
 
 public:
 
-    CreateFargateProfileResponsePrivate(CreateFargateProfileResponse * const q);
+    explicit CreateFargateProfileResponsePrivate(CreateFargateProfileResponse * const q);
 
     void parseCreateFargateProfileResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeEventAggregatesResponsePrivate : public HealthResponsePrivate {
 
 public:
 
-    DescribeEventAggregatesResponsePrivate(DescribeEventAggregatesResponse * const q);
+    explicit DescribeEventAggregatesResponsePrivate(DescribeEventAggregatesResponse * const q);
 
     void parseDescribeEventAggregatesResponse(QXmlStreamReader &xml);
 

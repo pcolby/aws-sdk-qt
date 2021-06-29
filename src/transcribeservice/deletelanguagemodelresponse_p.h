@@ -31,7 +31,7 @@ class DeleteLanguageModelResponsePrivate : public TranscribeServiceResponsePriva
 
 public:
 
-    DeleteLanguageModelResponsePrivate(DeleteLanguageModelResponse * const q);
+    explicit DeleteLanguageModelResponsePrivate(DeleteLanguageModelResponse * const q);
 
     void parseDeleteLanguageModelResponse(QXmlStreamReader &xml);
 

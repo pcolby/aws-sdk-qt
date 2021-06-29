@@ -31,7 +31,7 @@ class UpdateAddonResponsePrivate : public EksResponsePrivate {
 
 public:
 
-    UpdateAddonResponsePrivate(UpdateAddonResponse * const q);
+    explicit UpdateAddonResponsePrivate(UpdateAddonResponse * const q);
 
     void parseUpdateAddonResponse(QXmlStreamReader &xml);
 

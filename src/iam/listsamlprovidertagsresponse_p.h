@@ -31,7 +31,7 @@ class ListSAMLProviderTagsResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    ListSAMLProviderTagsResponsePrivate(ListSAMLProviderTagsResponse * const q);
+    explicit ListSAMLProviderTagsResponsePrivate(ListSAMLProviderTagsResponse * const q);
 
     void parseListSAMLProviderTagsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ExecuteCommandResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    ExecuteCommandResponsePrivate(ExecuteCommandResponse * const q);
+    explicit ExecuteCommandResponsePrivate(ExecuteCommandResponse * const q);
 
     void parseExecuteCommandResponse(QXmlStreamReader &xml);
 

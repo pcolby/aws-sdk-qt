@@ -53,7 +53,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    EbsClient(
+    explicit EbsClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -69,7 +69,7 @@ public slots:
 protected:
     /// @cond internal
     EbsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    EbsClient(EbsClientPrivate * const d);
+    explicit EbsClient(EbsClientPrivate * const d);
     /// @endcond
 
 private:

@@ -31,7 +31,7 @@ class UploadSSHPublicKeyResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    UploadSSHPublicKeyResponsePrivate(UploadSSHPublicKeyResponse * const q);
+    explicit UploadSSHPublicKeyResponsePrivate(UploadSSHPublicKeyResponse * const q);
 
     void parseUploadSSHPublicKeyResponse(QXmlStreamReader &xml);
 

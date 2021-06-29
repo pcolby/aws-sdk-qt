@@ -31,7 +31,7 @@ class ListGroupMembershipsResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    ListGroupMembershipsResponsePrivate(ListGroupMembershipsResponse * const q);
+    explicit ListGroupMembershipsResponsePrivate(ListGroupMembershipsResponse * const q);
 
     void parseListGroupMembershipsResponse(QXmlStreamReader &xml);
 

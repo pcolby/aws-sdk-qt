@@ -31,7 +31,7 @@ class UpdateInstanceCustomHealthStatusResponsePrivate : public ServiceDiscoveryR
 
 public:
 
-    UpdateInstanceCustomHealthStatusResponsePrivate(UpdateInstanceCustomHealthStatusResponse * const q);
+    explicit UpdateInstanceCustomHealthStatusResponsePrivate(UpdateInstanceCustomHealthStatusResponse * const q);
 
     void parseUpdateInstanceCustomHealthStatusResponse(QXmlStreamReader &xml);
 

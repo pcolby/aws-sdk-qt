@@ -31,7 +31,7 @@ class DetectPiiEntitiesResponsePrivate : public ComprehendResponsePrivate {
 
 public:
 
-    DetectPiiEntitiesResponsePrivate(DetectPiiEntitiesResponse * const q);
+    explicit DetectPiiEntitiesResponsePrivate(DetectPiiEntitiesResponse * const q);
 
     void parseDetectPiiEntitiesResponse(QXmlStreamReader &xml);
 

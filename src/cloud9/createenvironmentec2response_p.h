@@ -31,7 +31,7 @@ class CreateEnvironmentEC2ResponsePrivate : public Cloud9ResponsePrivate {
 
 public:
 
-    CreateEnvironmentEC2ResponsePrivate(CreateEnvironmentEC2Response * const q);
+    explicit CreateEnvironmentEC2ResponsePrivate(CreateEnvironmentEC2Response * const q);
 
     void parseCreateEnvironmentEC2Response(QXmlStreamReader &xml);
 

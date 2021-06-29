@@ -31,7 +31,7 @@ class CreateMaintenanceWindowResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    CreateMaintenanceWindowResponsePrivate(CreateMaintenanceWindowResponse * const q);
+    explicit CreateMaintenanceWindowResponsePrivate(CreateMaintenanceWindowResponse * const q);
 
     void parseCreateMaintenanceWindowResponse(QXmlStreamReader &xml);
 

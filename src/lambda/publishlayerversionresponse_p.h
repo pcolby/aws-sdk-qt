@@ -31,7 +31,7 @@ class PublishLayerVersionResponsePrivate : public LambdaResponsePrivate {
 
 public:
 
-    PublishLayerVersionResponsePrivate(PublishLayerVersionResponse * const q);
+    explicit PublishLayerVersionResponsePrivate(PublishLayerVersionResponse * const q);
 
     void parsePublishLayerVersionResponse(QXmlStreamReader &xml);
 

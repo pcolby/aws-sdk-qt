@@ -31,7 +31,7 @@ class GetPullRequestOverrideStateResponsePrivate : public CodeCommitResponsePriv
 
 public:
 
-    GetPullRequestOverrideStateResponsePrivate(GetPullRequestOverrideStateResponse * const q);
+    explicit GetPullRequestOverrideStateResponsePrivate(GetPullRequestOverrideStateResponse * const q);
 
     void parseGetPullRequestOverrideStateResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class PutBucketRequestPaymentResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    PutBucketRequestPaymentResponsePrivate(PutBucketRequestPaymentResponse * const q);
+    explicit PutBucketRequestPaymentResponsePrivate(PutBucketRequestPaymentResponse * const q);
 
     void parsePutBucketRequestPaymentResponse(QXmlStreamReader &xml);
 

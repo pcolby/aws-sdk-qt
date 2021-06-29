@@ -31,7 +31,7 @@ class CreateUploadResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    CreateUploadResponsePrivate(CreateUploadResponse * const q);
+    explicit CreateUploadResponsePrivate(CreateUploadResponse * const q);
 
     void parseCreateUploadResponse(QXmlStreamReader &xml);
 

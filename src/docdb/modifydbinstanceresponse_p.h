@@ -31,7 +31,7 @@ class ModifyDBInstanceResponsePrivate : public DocDBResponsePrivate {
 
 public:
 
-    ModifyDBInstanceResponsePrivate(ModifyDBInstanceResponse * const q);
+    explicit ModifyDBInstanceResponsePrivate(ModifyDBInstanceResponse * const q);
 
     void parseModifyDBInstanceResponse(QXmlStreamReader &xml);
 

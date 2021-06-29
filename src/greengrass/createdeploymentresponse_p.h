@@ -31,7 +31,7 @@ class CreateDeploymentResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 
-    CreateDeploymentResponsePrivate(CreateDeploymentResponse * const q);
+    explicit CreateDeploymentResponsePrivate(CreateDeploymentResponse * const q);
 
     void parseCreateDeploymentResponse(QXmlStreamReader &xml);
 

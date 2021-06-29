@@ -31,7 +31,7 @@ class UpdateSubscriptionDefinitionResponsePrivate : public GreengrassResponsePri
 
 public:
 
-    UpdateSubscriptionDefinitionResponsePrivate(UpdateSubscriptionDefinitionResponse * const q);
+    explicit UpdateSubscriptionDefinitionResponsePrivate(UpdateSubscriptionDefinitionResponse * const q);
 
     void parseUpdateSubscriptionDefinitionResponse(QXmlStreamReader &xml);
 

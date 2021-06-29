@@ -31,7 +31,7 @@ class AttachInstancesToLoadBalancerResponsePrivate : public LightsailResponsePri
 
 public:
 
-    AttachInstancesToLoadBalancerResponsePrivate(AttachInstancesToLoadBalancerResponse * const q);
+    explicit AttachInstancesToLoadBalancerResponsePrivate(AttachInstancesToLoadBalancerResponse * const q);
 
     void parseAttachInstancesToLoadBalancerResponse(QXmlStreamReader &xml);
 

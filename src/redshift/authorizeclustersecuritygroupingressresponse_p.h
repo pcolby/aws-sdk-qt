@@ -31,7 +31,7 @@ class AuthorizeClusterSecurityGroupIngressResponsePrivate : public RedshiftRespo
 
 public:
 
-    AuthorizeClusterSecurityGroupIngressResponsePrivate(AuthorizeClusterSecurityGroupIngressResponse * const q);
+    explicit AuthorizeClusterSecurityGroupIngressResponsePrivate(AuthorizeClusterSecurityGroupIngressResponse * const q);
 
     void parseAuthorizeClusterSecurityGroupIngressResponse(QXmlStreamReader &xml);
 

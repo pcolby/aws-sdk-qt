@@ -31,7 +31,7 @@ class ListResourcesResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 
-    ListResourcesResponsePrivate(ListResourcesResponse * const q);
+    explicit ListResourcesResponsePrivate(ListResourcesResponse * const q);
 
     void parseListResourcesResponse(QXmlStreamReader &xml);
 

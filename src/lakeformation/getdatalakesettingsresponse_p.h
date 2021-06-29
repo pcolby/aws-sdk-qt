@@ -31,7 +31,7 @@ class GetDataLakeSettingsResponsePrivate : public LakeFormationResponsePrivate {
 
 public:
 
-    GetDataLakeSettingsResponsePrivate(GetDataLakeSettingsResponse * const q);
+    explicit GetDataLakeSettingsResponsePrivate(GetDataLakeSettingsResponse * const q);
 
     void parseGetDataLakeSettingsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeSlotResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 
-    DescribeSlotResponsePrivate(DescribeSlotResponse * const q);
+    explicit DescribeSlotResponsePrivate(DescribeSlotResponse * const q);
 
     void parseDescribeSlotResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateReportDefinitionResponsePrivate : public ApplicationCostProfilerResp
 
 public:
 
-    UpdateReportDefinitionResponsePrivate(UpdateReportDefinitionResponse * const q);
+    explicit UpdateReportDefinitionResponsePrivate(UpdateReportDefinitionResponse * const q);
 
     void parseUpdateReportDefinitionResponse(QXmlStreamReader &xml);
 

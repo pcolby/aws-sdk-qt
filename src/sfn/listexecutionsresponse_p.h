@@ -31,7 +31,7 @@ class ListExecutionsResponsePrivate : public SfnResponsePrivate {
 
 public:
 
-    ListExecutionsResponsePrivate(ListExecutionsResponse * const q);
+    explicit ListExecutionsResponsePrivate(ListExecutionsResponse * const q);
 
     void parseListExecutionsResponse(QXmlStreamReader &xml);
 

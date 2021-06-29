@@ -31,7 +31,7 @@ class ListDetectorModelVersionsResponsePrivate : public IoTEventsResponsePrivate
 
 public:
 
-    ListDetectorModelVersionsResponsePrivate(ListDetectorModelVersionsResponse * const q);
+    explicit ListDetectorModelVersionsResponsePrivate(ListDetectorModelVersionsResponse * const q);
 
     void parseListDetectorModelVersionsResponse(QXmlStreamReader &xml);
 

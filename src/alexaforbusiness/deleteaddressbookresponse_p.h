@@ -31,7 +31,7 @@ class DeleteAddressBookResponsePrivate : public AlexaForBusinessResponsePrivate 
 
 public:
 
-    DeleteAddressBookResponsePrivate(DeleteAddressBookResponse * const q);
+    explicit DeleteAddressBookResponsePrivate(DeleteAddressBookResponse * const q);
 
     void parseDeleteAddressBookResponse(QXmlStreamReader &xml);
 

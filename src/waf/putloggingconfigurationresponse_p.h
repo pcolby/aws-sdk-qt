@@ -31,7 +31,7 @@ class PutLoggingConfigurationResponsePrivate : public WafResponsePrivate {
 
 public:
 
-    PutLoggingConfigurationResponsePrivate(PutLoggingConfigurationResponse * const q);
+    explicit PutLoggingConfigurationResponsePrivate(PutLoggingConfigurationResponse * const q);
 
     void parsePutLoggingConfigurationResponse(QXmlStreamReader &xml);
 

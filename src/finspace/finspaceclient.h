@@ -57,7 +57,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    finspaceClient(
+    explicit finspaceClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -75,7 +75,7 @@ public slots:
 protected:
     /// @cond internal
     finspaceClientPrivate * const d_ptr; ///< Internal d-pointer.
-    finspaceClient(finspaceClientPrivate * const d);
+    explicit finspaceClient(finspaceClientPrivate * const d);
     /// @endcond
 
 private:

@@ -31,7 +31,7 @@ class AssociateKmsKeyResponsePrivate : public CloudWatchLogsResponsePrivate {
 
 public:
 
-    AssociateKmsKeyResponsePrivate(AssociateKmsKeyResponse * const q);
+    explicit AssociateKmsKeyResponsePrivate(AssociateKmsKeyResponse * const q);
 
     void parseAssociateKmsKeyResponse(QXmlStreamReader &xml);
 

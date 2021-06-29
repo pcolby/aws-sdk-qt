@@ -31,7 +31,7 @@ class DetectSentimentResponsePrivate : public ComprehendResponsePrivate {
 
 public:
 
-    DetectSentimentResponsePrivate(DetectSentimentResponse * const q);
+    explicit DetectSentimentResponsePrivate(DetectSentimentResponse * const q);
 
     void parseDetectSentimentResponse(QXmlStreamReader &xml);
 

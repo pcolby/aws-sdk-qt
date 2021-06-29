@@ -31,7 +31,7 @@ class CreateLagResponsePrivate : public DirectConnectResponsePrivate {
 
 public:
 
-    CreateLagResponsePrivate(CreateLagResponse * const q);
+    explicit CreateLagResponsePrivate(CreateLagResponse * const q);
 
     void parseCreateLagResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeNodegroupResponsePrivate : public EksResponsePrivate {
 
 public:
 
-    DescribeNodegroupResponsePrivate(DescribeNodegroupResponse * const q);
+    explicit DescribeNodegroupResponsePrivate(DescribeNodegroupResponse * const q);
 
     void parseDescribeNodegroupResponse(QXmlStreamReader &xml);
 

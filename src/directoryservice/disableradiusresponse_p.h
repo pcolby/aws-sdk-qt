@@ -31,7 +31,7 @@ class DisableRadiusResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 
-    DisableRadiusResponsePrivate(DisableRadiusResponse * const q);
+    explicit DisableRadiusResponsePrivate(DisableRadiusResponse * const q);
 
     void parseDisableRadiusResponse(QXmlStreamReader &xml);
 

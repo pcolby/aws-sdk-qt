@@ -31,7 +31,7 @@ class GetSamplingTargetsResponsePrivate : public XRayResponsePrivate {
 
 public:
 
-    GetSamplingTargetsResponsePrivate(GetSamplingTargetsResponse * const q);
+    explicit GetSamplingTargetsResponsePrivate(GetSamplingTargetsResponse * const q);
 
     void parseGetSamplingTargetsResponse(QXmlStreamReader &xml);
 

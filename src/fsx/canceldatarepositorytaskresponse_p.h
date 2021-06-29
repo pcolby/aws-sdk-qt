@@ -31,7 +31,7 @@ class CancelDataRepositoryTaskResponsePrivate : public FSxResponsePrivate {
 
 public:
 
-    CancelDataRepositoryTaskResponsePrivate(CancelDataRepositoryTaskResponse * const q);
+    explicit CancelDataRepositoryTaskResponsePrivate(CancelDataRepositoryTaskResponse * const q);
 
     void parseCancelDataRepositoryTaskResponse(QXmlStreamReader &xml);
 

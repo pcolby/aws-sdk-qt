@@ -31,7 +31,7 @@ class DescribeTerminationPolicyTypesResponsePrivate : public AutoScalingResponse
 
 public:
 
-    DescribeTerminationPolicyTypesResponsePrivate(DescribeTerminationPolicyTypesResponse * const q);
+    explicit DescribeTerminationPolicyTypesResponsePrivate(DescribeTerminationPolicyTypesResponse * const q);
 
     void parseDescribeTerminationPolicyTypesResponse(QXmlStreamReader &xml);
 

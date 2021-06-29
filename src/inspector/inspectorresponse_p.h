@@ -29,7 +29,7 @@ class InspectorResponsePrivate {
 
 public:
 
-    InspectorResponsePrivate(InspectorResponse * const q);
+    explicit InspectorResponsePrivate(InspectorResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

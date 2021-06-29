@@ -31,7 +31,7 @@ class DeleteProjectResponsePrivate : public LookoutforVisionResponsePrivate {
 
 public:
 
-    DeleteProjectResponsePrivate(DeleteProjectResponse * const q);
+    explicit DeleteProjectResponsePrivate(DeleteProjectResponse * const q);
 
     void parseDeleteProjectResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListTestsResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    ListTestsResponsePrivate(ListTestsResponse * const q);
+    explicit ListTestsResponsePrivate(ListTestsResponse * const q);
 
     void parseListTestsResponse(QXmlStreamReader &xml);
 

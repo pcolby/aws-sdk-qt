@@ -31,7 +31,7 @@ class CancelExportTaskResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CancelExportTaskResponsePrivate(CancelExportTaskResponse * const q);
+    explicit CancelExportTaskResponsePrivate(CancelExportTaskResponse * const q);
 
     void parseCancelExportTaskResponse(QXmlStreamReader &xml);
 

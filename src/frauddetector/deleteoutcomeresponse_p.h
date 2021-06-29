@@ -31,7 +31,7 @@ class DeleteOutcomeResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 
-    DeleteOutcomeResponsePrivate(DeleteOutcomeResponse * const q);
+    explicit DeleteOutcomeResponsePrivate(DeleteOutcomeResponse * const q);
 
     void parseDeleteOutcomeResponse(QXmlStreamReader &xml);
 

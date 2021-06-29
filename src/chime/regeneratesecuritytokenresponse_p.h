@@ -31,7 +31,7 @@ class RegenerateSecurityTokenResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    RegenerateSecurityTokenResponsePrivate(RegenerateSecurityTokenResponse * const q);
+    explicit RegenerateSecurityTokenResponsePrivate(RegenerateSecurityTokenResponse * const q);
 
     void parseRegenerateSecurityTokenResponse(QXmlStreamReader &xml);
 

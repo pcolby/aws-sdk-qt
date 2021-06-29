@@ -31,7 +31,7 @@ class GetApplicationDateRangeKpiResponsePrivate : public PinpointResponsePrivate
 
 public:
 
-    GetApplicationDateRangeKpiResponsePrivate(GetApplicationDateRangeKpiResponse * const q);
+    explicit GetApplicationDateRangeKpiResponsePrivate(GetApplicationDateRangeKpiResponse * const q);
 
     void parseGetApplicationDateRangeKpiResponse(QXmlStreamReader &xml);
 

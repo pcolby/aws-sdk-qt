@@ -31,7 +31,7 @@ class DeleteJourneyResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    DeleteJourneyResponsePrivate(DeleteJourneyResponse * const q);
+    explicit DeleteJourneyResponsePrivate(DeleteJourneyResponse * const q);
 
     void parseDeleteJourneyResponse(QXmlStreamReader &xml);
 

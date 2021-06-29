@@ -31,7 +31,7 @@ class UpdateStateMachineResponsePrivate : public SfnResponsePrivate {
 
 public:
 
-    UpdateStateMachineResponsePrivate(UpdateStateMachineResponse * const q);
+    explicit UpdateStateMachineResponsePrivate(UpdateStateMachineResponse * const q);
 
     void parseUpdateStateMachineResponse(QXmlStreamReader &xml);
 

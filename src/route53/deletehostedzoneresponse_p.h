@@ -31,7 +31,7 @@ class DeleteHostedZoneResponsePrivate : public Route53ResponsePrivate {
 
 public:
 
-    DeleteHostedZoneResponsePrivate(DeleteHostedZoneResponse * const q);
+    explicit DeleteHostedZoneResponsePrivate(DeleteHostedZoneResponse * const q);
 
     void parseDeleteHostedZoneResponse(QXmlStreamReader &xml);
 

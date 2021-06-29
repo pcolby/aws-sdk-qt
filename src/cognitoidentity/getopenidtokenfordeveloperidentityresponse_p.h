@@ -31,7 +31,7 @@ class GetOpenIdTokenForDeveloperIdentityResponsePrivate : public CognitoIdentity
 
 public:
 
-    GetOpenIdTokenForDeveloperIdentityResponsePrivate(GetOpenIdTokenForDeveloperIdentityResponse * const q);
+    explicit GetOpenIdTokenForDeveloperIdentityResponsePrivate(GetOpenIdTokenForDeveloperIdentityResponse * const q);
 
     void parseGetOpenIdTokenForDeveloperIdentityResponse(QXmlStreamReader &xml);
 

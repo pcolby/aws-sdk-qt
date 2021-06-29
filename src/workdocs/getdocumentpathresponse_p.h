@@ -31,7 +31,7 @@ class GetDocumentPathResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 
-    GetDocumentPathResponsePrivate(GetDocumentPathResponse * const q);
+    explicit GetDocumentPathResponsePrivate(GetDocumentPathResponse * const q);
 
     void parseGetDocumentPathResponse(QXmlStreamReader &xml);
 

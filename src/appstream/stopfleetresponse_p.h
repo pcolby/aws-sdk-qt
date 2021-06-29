@@ -31,7 +31,7 @@ class StopFleetResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 
-    StopFleetResponsePrivate(StopFleetResponse * const q);
+    explicit StopFleetResponsePrivate(StopFleetResponse * const q);
 
     void parseStopFleetResponse(QXmlStreamReader &xml);
 

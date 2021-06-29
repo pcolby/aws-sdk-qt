@@ -31,7 +31,7 @@ class DescribeTrustedAdvisorChecksResponsePrivate : public SupportResponsePrivat
 
 public:
 
-    DescribeTrustedAdvisorChecksResponsePrivate(DescribeTrustedAdvisorChecksResponse * const q);
+    explicit DescribeTrustedAdvisorChecksResponsePrivate(DescribeTrustedAdvisorChecksResponse * const q);
 
     void parseDescribeTrustedAdvisorChecksResponse(QXmlStreamReader &xml);
 

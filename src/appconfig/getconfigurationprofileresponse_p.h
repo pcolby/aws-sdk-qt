@@ -31,7 +31,7 @@ class GetConfigurationProfileResponsePrivate : public AppConfigResponsePrivate {
 
 public:
 
-    GetConfigurationProfileResponsePrivate(GetConfigurationProfileResponse * const q);
+    explicit GetConfigurationProfileResponsePrivate(GetConfigurationProfileResponse * const q);
 
     void parseGetConfigurationProfileResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteAnomalySubscriptionResponsePrivate : public CostExplorerResponsePriv
 
 public:
 
-    DeleteAnomalySubscriptionResponsePrivate(DeleteAnomalySubscriptionResponse * const q);
+    explicit DeleteAnomalySubscriptionResponsePrivate(DeleteAnomalySubscriptionResponse * const q);
 
     void parseDeleteAnomalySubscriptionResponse(QXmlStreamReader &xml);
 

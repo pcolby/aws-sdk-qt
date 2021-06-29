@@ -31,7 +31,7 @@ class CreateOrUpdateTagsResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 
-    CreateOrUpdateTagsResponsePrivate(CreateOrUpdateTagsResponse * const q);
+    explicit CreateOrUpdateTagsResponsePrivate(CreateOrUpdateTagsResponse * const q);
 
     void parseCreateOrUpdateTagsResponse(QXmlStreamReader &xml);
 

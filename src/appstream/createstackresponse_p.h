@@ -31,7 +31,7 @@ class CreateStackResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 
-    CreateStackResponsePrivate(CreateStackResponse * const q);
+    explicit CreateStackResponsePrivate(CreateStackResponse * const q);
 
     void parseCreateStackResponse(QXmlStreamReader &xml);
 

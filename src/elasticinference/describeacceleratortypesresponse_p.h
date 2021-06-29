@@ -31,7 +31,7 @@ class DescribeAcceleratorTypesResponsePrivate : public ElasticInferenceResponseP
 
 public:
 
-    DescribeAcceleratorTypesResponsePrivate(DescribeAcceleratorTypesResponse * const q);
+    explicit DescribeAcceleratorTypesResponsePrivate(DescribeAcceleratorTypesResponse * const q);
 
     void parseDescribeAcceleratorTypesResponse(QXmlStreamReader &xml);
 

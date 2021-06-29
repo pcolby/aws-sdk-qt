@@ -31,7 +31,7 @@ class DescribeImportTasksResponsePrivate : public ApplicationDiscoveryServiceRes
 
 public:
 
-    DescribeImportTasksResponsePrivate(DescribeImportTasksResponse * const q);
+    explicit DescribeImportTasksResponsePrivate(DescribeImportTasksResponse * const q);
 
     void parseDescribeImportTasksResponse(QXmlStreamReader &xml);
 

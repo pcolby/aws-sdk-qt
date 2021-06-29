@@ -31,7 +31,7 @@ class PutConfigurationRecorderResponsePrivate : public ConfigServiceResponsePriv
 
 public:
 
-    PutConfigurationRecorderResponsePrivate(PutConfigurationRecorderResponse * const q);
+    explicit PutConfigurationRecorderResponsePrivate(PutConfigurationRecorderResponse * const q);
 
     void parsePutConfigurationRecorderResponse(QXmlStreamReader &xml);
 

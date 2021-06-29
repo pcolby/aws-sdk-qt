@@ -31,7 +31,7 @@ class GetEC2RecommendationProjectedMetricsResponsePrivate : public ComputeOptimi
 
 public:
 
-    GetEC2RecommendationProjectedMetricsResponsePrivate(GetEC2RecommendationProjectedMetricsResponse * const q);
+    explicit GetEC2RecommendationProjectedMetricsResponsePrivate(GetEC2RecommendationProjectedMetricsResponse * const q);
 
     void parseGetEC2RecommendationProjectedMetricsResponse(QXmlStreamReader &xml);
 

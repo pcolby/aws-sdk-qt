@@ -29,7 +29,7 @@ class GameLiftResponsePrivate {
 
 public:
 
-    GameLiftResponsePrivate(GameLiftResponse * const q);
+    explicit GameLiftResponsePrivate(GameLiftResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

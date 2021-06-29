@@ -31,7 +31,7 @@ class RejectGrantResponsePrivate : public LicenseManagerResponsePrivate {
 
 public:
 
-    RejectGrantResponsePrivate(RejectGrantResponse * const q);
+    explicit RejectGrantResponsePrivate(RejectGrantResponse * const q);
 
     void parseRejectGrantResponse(QXmlStreamReader &xml);
 

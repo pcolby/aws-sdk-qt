@@ -29,7 +29,7 @@ class EmrResponsePrivate {
 
 public:
 
-    EmrResponsePrivate(EmrResponse * const q);
+    explicit EmrResponsePrivate(EmrResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

@@ -31,7 +31,7 @@ class StartConfigRulesEvaluationResponsePrivate : public ConfigServiceResponsePr
 
 public:
 
-    StartConfigRulesEvaluationResponsePrivate(StartConfigRulesEvaluationResponse * const q);
+    explicit StartConfigRulesEvaluationResponsePrivate(StartConfigRulesEvaluationResponse * const q);
 
     void parseStartConfigRulesEvaluationResponse(QXmlStreamReader &xml);
 

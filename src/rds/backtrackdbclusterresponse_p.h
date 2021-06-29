@@ -31,7 +31,7 @@ class BacktrackDBClusterResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    BacktrackDBClusterResponsePrivate(BacktrackDBClusterResponse * const q);
+    explicit BacktrackDBClusterResponsePrivate(BacktrackDBClusterResponse * const q);
 
     void parseBacktrackDBClusterResponse(QXmlStreamReader &xml);
 

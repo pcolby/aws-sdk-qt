@@ -31,7 +31,7 @@ class DeleteMatchmakingRuleSetResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    DeleteMatchmakingRuleSetResponsePrivate(DeleteMatchmakingRuleSetResponse * const q);
+    explicit DeleteMatchmakingRuleSetResponsePrivate(DeleteMatchmakingRuleSetResponse * const q);
 
     void parseDeleteMatchmakingRuleSetResponse(QXmlStreamReader &xml);
 

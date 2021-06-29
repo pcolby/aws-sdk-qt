@@ -31,7 +31,7 @@ class ListThingRegistrationTaskReportsResponsePrivate : public IoTResponsePrivat
 
 public:
 
-    ListThingRegistrationTaskReportsResponsePrivate(ListThingRegistrationTaskReportsResponse * const q);
+    explicit ListThingRegistrationTaskReportsResponsePrivate(ListThingRegistrationTaskReportsResponse * const q);
 
     void parseListThingRegistrationTaskReportsResponse(QXmlStreamReader &xml);
 

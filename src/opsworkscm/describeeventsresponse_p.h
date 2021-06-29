@@ -31,7 +31,7 @@ class DescribeEventsResponsePrivate : public OpsWorksCMResponsePrivate {
 
 public:
 
-    DescribeEventsResponsePrivate(DescribeEventsResponse * const q);
+    explicit DescribeEventsResponsePrivate(DescribeEventsResponse * const q);
 
     void parseDescribeEventsResponse(QXmlStreamReader &xml);
 

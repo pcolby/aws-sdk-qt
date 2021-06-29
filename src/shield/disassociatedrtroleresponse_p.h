@@ -31,7 +31,7 @@ class DisassociateDRTRoleResponsePrivate : public ShieldResponsePrivate {
 
 public:
 
-    DisassociateDRTRoleResponsePrivate(DisassociateDRTRoleResponse * const q);
+    explicit DisassociateDRTRoleResponsePrivate(DisassociateDRTRoleResponse * const q);
 
     void parseDisassociateDRTRoleResponse(QXmlStreamReader &xml);
 

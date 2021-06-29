@@ -31,7 +31,7 @@ class CreatePackageResponsePrivate : public ElasticsearchServiceResponsePrivate 
 
 public:
 
-    CreatePackageResponsePrivate(CreatePackageResponse * const q);
+    explicit CreatePackageResponsePrivate(CreatePackageResponse * const q);
 
     void parseCreatePackageResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateInternetGatewayResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CreateInternetGatewayResponsePrivate(CreateInternetGatewayResponse * const q);
+    explicit CreateInternetGatewayResponsePrivate(CreateInternetGatewayResponse * const q);
 
     void parseCreateInternetGatewayResponse(QXmlStreamReader &xml);
 

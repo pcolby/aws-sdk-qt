@@ -31,7 +31,7 @@ class ModifyIdentityIdFormatResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ModifyIdentityIdFormatResponsePrivate(ModifyIdentityIdFormatResponse * const q);
+    explicit ModifyIdentityIdFormatResponsePrivate(ModifyIdentityIdFormatResponse * const q);
 
     void parseModifyIdentityIdFormatResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeResourcePermissionsResponsePrivate : public WorkDocsResponsePrivat
 
 public:
 
-    DescribeResourcePermissionsResponsePrivate(DescribeResourcePermissionsResponse * const q);
+    explicit DescribeResourcePermissionsResponsePrivate(DescribeResourcePermissionsResponse * const q);
 
     void parseDescribeResourcePermissionsResponse(QXmlStreamReader &xml);
 

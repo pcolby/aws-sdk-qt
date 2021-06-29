@@ -31,7 +31,7 @@ class DescribeCanariesResponsePrivate : public SyntheticsResponsePrivate {
 
 public:
 
-    DescribeCanariesResponsePrivate(DescribeCanariesResponse * const q);
+    explicit DescribeCanariesResponsePrivate(DescribeCanariesResponse * const q);
 
     void parseDescribeCanariesResponse(QXmlStreamReader &xml);
 

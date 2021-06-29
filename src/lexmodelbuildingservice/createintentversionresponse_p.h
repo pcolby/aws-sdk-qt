@@ -31,7 +31,7 @@ class CreateIntentVersionResponsePrivate : public LexModelBuildingServiceRespons
 
 public:
 
-    CreateIntentVersionResponsePrivate(CreateIntentVersionResponse * const q);
+    explicit CreateIntentVersionResponsePrivate(CreateIntentVersionResponse * const q);
 
     void parseCreateIntentVersionResponse(QXmlStreamReader &xml);
 

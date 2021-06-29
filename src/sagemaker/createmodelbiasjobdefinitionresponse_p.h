@@ -31,7 +31,7 @@ class CreateModelBiasJobDefinitionResponsePrivate : public SageMakerResponsePriv
 
 public:
 
-    CreateModelBiasJobDefinitionResponsePrivate(CreateModelBiasJobDefinitionResponse * const q);
+    explicit CreateModelBiasJobDefinitionResponsePrivate(CreateModelBiasJobDefinitionResponse * const q);
 
     void parseCreateModelBiasJobDefinitionResponse(QXmlStreamReader &xml);
 

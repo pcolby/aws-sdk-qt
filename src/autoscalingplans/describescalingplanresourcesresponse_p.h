@@ -31,7 +31,7 @@ class DescribeScalingPlanResourcesResponsePrivate : public AutoScalingPlansRespo
 
 public:
 
-    DescribeScalingPlanResourcesResponsePrivate(DescribeScalingPlanResourcesResponse * const q);
+    explicit DescribeScalingPlanResourcesResponsePrivate(DescribeScalingPlanResourcesResponse * const q);
 
     void parseDescribeScalingPlanResourcesResponse(QXmlStreamReader &xml);
 

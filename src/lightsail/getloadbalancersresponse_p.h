@@ -31,7 +31,7 @@ class GetLoadBalancersResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    GetLoadBalancersResponsePrivate(GetLoadBalancersResponse * const q);
+    explicit GetLoadBalancersResponsePrivate(GetLoadBalancersResponse * const q);
 
     void parseGetLoadBalancersResponse(QXmlStreamReader &xml);
 

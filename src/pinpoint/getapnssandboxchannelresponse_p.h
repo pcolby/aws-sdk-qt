@@ -31,7 +31,7 @@ class GetApnsSandboxChannelResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    GetApnsSandboxChannelResponsePrivate(GetApnsSandboxChannelResponse * const q);
+    explicit GetApnsSandboxChannelResponsePrivate(GetApnsSandboxChannelResponse * const q);
 
     void parseGetApnsSandboxChannelResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListDedicatedIpPoolsResponsePrivate : public PinpointEmailResponsePrivate 
 
 public:
 
-    ListDedicatedIpPoolsResponsePrivate(ListDedicatedIpPoolsResponse * const q);
+    explicit ListDedicatedIpPoolsResponsePrivate(ListDedicatedIpPoolsResponse * const q);
 
     void parseListDedicatedIpPoolsResponse(QXmlStreamReader &xml);
 

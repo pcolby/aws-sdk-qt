@@ -31,7 +31,7 @@ class DisassociateServiceQuotaTemplateResponsePrivate : public ServiceQuotasResp
 
 public:
 
-    DisassociateServiceQuotaTemplateResponsePrivate(DisassociateServiceQuotaTemplateResponse * const q);
+    explicit DisassociateServiceQuotaTemplateResponsePrivate(DisassociateServiceQuotaTemplateResponse * const q);
 
     void parseDisassociateServiceQuotaTemplateResponse(QXmlStreamReader &xml);
 

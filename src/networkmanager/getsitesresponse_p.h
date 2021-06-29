@@ -31,7 +31,7 @@ class GetSitesResponsePrivate : public NetworkManagerResponsePrivate {
 
 public:
 
-    GetSitesResponsePrivate(GetSitesResponse * const q);
+    explicit GetSitesResponsePrivate(GetSitesResponse * const q);
 
     void parseGetSitesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetDownloadUrlForLayerResponsePrivate : public EcrResponsePrivate {
 
 public:
 
-    GetDownloadUrlForLayerResponsePrivate(GetDownloadUrlForLayerResponse * const q);
+    explicit GetDownloadUrlForLayerResponsePrivate(GetDownloadUrlForLayerResponse * const q);
 
     void parseGetDownloadUrlForLayerResponse(QXmlStreamReader &xml);
 

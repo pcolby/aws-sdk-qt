@@ -31,7 +31,7 @@ class UpdateContactListResponsePrivate : public Sesv2ResponsePrivate {
 
 public:
 
-    UpdateContactListResponsePrivate(UpdateContactListResponse * const q);
+    explicit UpdateContactListResponsePrivate(UpdateContactListResponse * const q);
 
     void parseUpdateContactListResponse(QXmlStreamReader &xml);
 

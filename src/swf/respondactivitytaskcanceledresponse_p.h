@@ -31,7 +31,7 @@ class RespondActivityTaskCanceledResponsePrivate : public SwfResponsePrivate {
 
 public:
 
-    RespondActivityTaskCanceledResponsePrivate(RespondActivityTaskCanceledResponse * const q);
+    explicit RespondActivityTaskCanceledResponsePrivate(RespondActivityTaskCanceledResponse * const q);
 
     void parseRespondActivityTaskCanceledResponse(QXmlStreamReader &xml);
 

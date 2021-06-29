@@ -31,7 +31,7 @@ class DescribeEC2InstanceLimitsResponsePrivate : public GameLiftResponsePrivate 
 
 public:
 
-    DescribeEC2InstanceLimitsResponsePrivate(DescribeEC2InstanceLimitsResponse * const q);
+    explicit DescribeEC2InstanceLimitsResponsePrivate(DescribeEC2InstanceLimitsResponse * const q);
 
     void parseDescribeEC2InstanceLimitsResponse(QXmlStreamReader &xml);
 

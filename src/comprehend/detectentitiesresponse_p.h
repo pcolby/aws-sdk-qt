@@ -31,7 +31,7 @@ class DetectEntitiesResponsePrivate : public ComprehendResponsePrivate {
 
 public:
 
-    DetectEntitiesResponsePrivate(DetectEntitiesResponse * const q);
+    explicit DetectEntitiesResponsePrivate(DetectEntitiesResponse * const q);
 
     void parseDetectEntitiesResponse(QXmlStreamReader &xml);
 

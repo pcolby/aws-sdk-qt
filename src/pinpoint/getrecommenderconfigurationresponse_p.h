@@ -31,7 +31,7 @@ class GetRecommenderConfigurationResponsePrivate : public PinpointResponsePrivat
 
 public:
 
-    GetRecommenderConfigurationResponsePrivate(GetRecommenderConfigurationResponse * const q);
+    explicit GetRecommenderConfigurationResponsePrivate(GetRecommenderConfigurationResponse * const q);
 
     void parseGetRecommenderConfigurationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class StartImageScanResponsePrivate : public EcrResponsePrivate {
 
 public:
 
-    StartImageScanResponsePrivate(StartImageScanResponse * const q);
+    explicit StartImageScanResponsePrivate(StartImageScanResponse * const q);
 
     void parseStartImageScanResponse(QXmlStreamReader &xml);
 

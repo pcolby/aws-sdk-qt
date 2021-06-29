@@ -31,7 +31,7 @@ class GetRecoveryPointRestoreMetadataResponsePrivate : public BackupResponsePriv
 
 public:
 
-    GetRecoveryPointRestoreMetadataResponsePrivate(GetRecoveryPointRestoreMetadataResponse * const q);
+    explicit GetRecoveryPointRestoreMetadataResponsePrivate(GetRecoveryPointRestoreMetadataResponse * const q);
 
     void parseGetRecoveryPointRestoreMetadataResponse(QXmlStreamReader &xml);
 

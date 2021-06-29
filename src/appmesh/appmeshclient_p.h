@@ -30,7 +30,7 @@ class AppMeshClient;
 class AppMeshClientPrivate {
 
 public:
-    AppMeshClientPrivate(AppMeshClient * const q);
+    explicit AppMeshClientPrivate(AppMeshClient * const q);
 
 protected:
     AppMeshClient * const q_ptr; ///< Internal q-pointer.

@@ -31,7 +31,7 @@ class GetSegmentExportJobsResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    GetSegmentExportJobsResponsePrivate(GetSegmentExportJobsResponse * const q);
+    explicit GetSegmentExportJobsResponsePrivate(GetSegmentExportJobsResponse * const q);
 
     void parseGetSegmentExportJobsResponse(QXmlStreamReader &xml);
 

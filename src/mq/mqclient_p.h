@@ -30,7 +30,7 @@ class MqClient;
 class MqClientPrivate {
 
 public:
-    MqClientPrivate(MqClient * const q);
+    explicit MqClientPrivate(MqClient * const q);
 
 protected:
     MqClient * const q_ptr; ///< Internal q-pointer.

@@ -31,7 +31,7 @@ class PutImagePolicyResponsePrivate : public imagebuilderResponsePrivate {
 
 public:
 
-    PutImagePolicyResponsePrivate(PutImagePolicyResponse * const q);
+    explicit PutImagePolicyResponsePrivate(PutImagePolicyResponse * const q);
 
     void parsePutImagePolicyResponse(QXmlStreamReader &xml);
 

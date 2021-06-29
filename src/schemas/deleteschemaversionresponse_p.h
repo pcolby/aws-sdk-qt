@@ -31,7 +31,7 @@ class DeleteSchemaVersionResponsePrivate : public SchemasResponsePrivate {
 
 public:
 
-    DeleteSchemaVersionResponsePrivate(DeleteSchemaVersionResponse * const q);
+    explicit DeleteSchemaVersionResponsePrivate(DeleteSchemaVersionResponse * const q);
 
     void parseDeleteSchemaVersionResponse(QXmlStreamReader &xml);
 

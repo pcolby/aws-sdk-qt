@@ -31,7 +31,7 @@ class GetGroupQueryResponsePrivate : public ResourceGroupsResponsePrivate {
 
 public:
 
-    GetGroupQueryResponsePrivate(GetGroupQueryResponse * const q);
+    explicit GetGroupQueryResponsePrivate(GetGroupQueryResponse * const q);
 
     void parseGetGroupQueryResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteChannelPolicyResponsePrivate : public MediaTailorResponsePrivate {
 
 public:
 
-    DeleteChannelPolicyResponsePrivate(DeleteChannelPolicyResponse * const q);
+    explicit DeleteChannelPolicyResponsePrivate(DeleteChannelPolicyResponse * const q);
 
     void parseDeleteChannelPolicyResponse(QXmlStreamReader &xml);
 

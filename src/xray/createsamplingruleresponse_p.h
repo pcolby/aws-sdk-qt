@@ -31,7 +31,7 @@ class CreateSamplingRuleResponsePrivate : public XRayResponsePrivate {
 
 public:
 
-    CreateSamplingRuleResponsePrivate(CreateSamplingRuleResponse * const q);
+    explicit CreateSamplingRuleResponsePrivate(CreateSamplingRuleResponse * const q);
 
     void parseCreateSamplingRuleResponse(QXmlStreamReader &xml);
 

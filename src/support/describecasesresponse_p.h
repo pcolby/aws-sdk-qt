@@ -31,7 +31,7 @@ class DescribeCasesResponsePrivate : public SupportResponsePrivate {
 
 public:
 
-    DescribeCasesResponsePrivate(DescribeCasesResponse * const q);
+    explicit DescribeCasesResponsePrivate(DescribeCasesResponse * const q);
 
     void parseDescribeCasesResponse(QXmlStreamReader &xml);
 

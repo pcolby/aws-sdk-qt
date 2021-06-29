@@ -31,7 +31,7 @@ class AssociateAdminAccountResponsePrivate : public FmsResponsePrivate {
 
 public:
 
-    AssociateAdminAccountResponsePrivate(AssociateAdminAccountResponse * const q);
+    explicit AssociateAdminAccountResponsePrivate(AssociateAdminAccountResponse * const q);
 
     void parseAssociateAdminAccountResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListQueryLoggingConfigsResponsePrivate : public Route53ResponsePrivate {
 
 public:
 
-    ListQueryLoggingConfigsResponsePrivate(ListQueryLoggingConfigsResponse * const q);
+    explicit ListQueryLoggingConfigsResponsePrivate(ListQueryLoggingConfigsResponse * const q);
 
     void parseListQueryLoggingConfigsResponse(QXmlStreamReader &xml);
 

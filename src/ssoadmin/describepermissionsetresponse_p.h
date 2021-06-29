@@ -31,7 +31,7 @@ class DescribePermissionSetResponsePrivate : public SSOAdminResponsePrivate {
 
 public:
 
-    DescribePermissionSetResponsePrivate(DescribePermissionSetResponse * const q);
+    explicit DescribePermissionSetResponsePrivate(DescribePermissionSetResponse * const q);
 
     void parseDescribePermissionSetResponse(QXmlStreamReader &xml);
 

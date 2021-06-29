@@ -31,7 +31,7 @@ class ListBonusPaymentsResponsePrivate : public MTurkResponsePrivate {
 
 public:
 
-    ListBonusPaymentsResponsePrivate(ListBonusPaymentsResponse * const q);
+    explicit ListBonusPaymentsResponsePrivate(ListBonusPaymentsResponse * const q);
 
     void parseListBonusPaymentsResponse(QXmlStreamReader &xml);
 

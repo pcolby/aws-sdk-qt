@@ -31,7 +31,7 @@ class DescribeContactResponsePrivate : public GroundStationResponsePrivate {
 
 public:
 
-    DescribeContactResponsePrivate(DescribeContactResponse * const q);
+    explicit DescribeContactResponsePrivate(DescribeContactResponse * const q);
 
     void parseDescribeContactResponse(QXmlStreamReader &xml);
 

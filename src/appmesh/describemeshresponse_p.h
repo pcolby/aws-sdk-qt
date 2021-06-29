@@ -31,7 +31,7 @@ class DescribeMeshResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 
-    DescribeMeshResponsePrivate(DescribeMeshResponse * const q);
+    explicit DescribeMeshResponsePrivate(DescribeMeshResponse * const q);
 
     void parseDescribeMeshResponse(QXmlStreamReader &xml);
 

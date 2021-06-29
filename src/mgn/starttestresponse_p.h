@@ -31,7 +31,7 @@ class StartTestResponsePrivate : public mgnResponsePrivate {
 
 public:
 
-    StartTestResponsePrivate(StartTestResponse * const q);
+    explicit StartTestResponsePrivate(StartTestResponse * const q);
 
     void parseStartTestResponse(QXmlStreamReader &xml);
 

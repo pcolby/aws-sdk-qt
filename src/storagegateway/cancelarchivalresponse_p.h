@@ -31,7 +31,7 @@ class CancelArchivalResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 
-    CancelArchivalResponsePrivate(CancelArchivalResponse * const q);
+    explicit CancelArchivalResponsePrivate(CancelArchivalResponse * const q);
 
     void parseCancelArchivalResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class SetPermissionResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    SetPermissionResponsePrivate(SetPermissionResponse * const q);
+    explicit SetPermissionResponsePrivate(SetPermissionResponse * const q);
 
     void parseSetPermissionResponse(QXmlStreamReader &xml);
 

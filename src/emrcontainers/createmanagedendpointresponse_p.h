@@ -31,7 +31,7 @@ class CreateManagedEndpointResponsePrivate : public EMRContainersResponsePrivate
 
 public:
 
-    CreateManagedEndpointResponsePrivate(CreateManagedEndpointResponse * const q);
+    explicit CreateManagedEndpointResponsePrivate(CreateManagedEndpointResponse * const q);
 
     void parseCreateManagedEndpointResponse(QXmlStreamReader &xml);
 

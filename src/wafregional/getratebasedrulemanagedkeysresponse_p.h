@@ -31,7 +31,7 @@ class GetRateBasedRuleManagedKeysResponsePrivate : public WAFRegionalResponsePri
 
 public:
 
-    GetRateBasedRuleManagedKeysResponsePrivate(GetRateBasedRuleManagedKeysResponse * const q);
+    explicit GetRateBasedRuleManagedKeysResponsePrivate(GetRateBasedRuleManagedKeysResponse * const q);
 
     void parseGetRateBasedRuleManagedKeysResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class StartTableDataImportJobResponsePrivate : public HoneycodeResponsePrivate {
 
 public:
 
-    StartTableDataImportJobResponsePrivate(StartTableDataImportJobResponse * const q);
+    explicit StartTableDataImportJobResponsePrivate(StartTableDataImportJobResponse * const q);
 
     void parseStartTableDataImportJobResponse(QXmlStreamReader &xml);
 

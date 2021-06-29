@@ -31,7 +31,7 @@ class ListWorkersWithQualificationTypeResponsePrivate : public MTurkResponsePriv
 
 public:
 
-    ListWorkersWithQualificationTypeResponsePrivate(ListWorkersWithQualificationTypeResponse * const q);
+    explicit ListWorkersWithQualificationTypeResponsePrivate(ListWorkersWithQualificationTypeResponse * const q);
 
     void parseListWorkersWithQualificationTypeResponse(QXmlStreamReader &xml);
 

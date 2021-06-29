@@ -31,7 +31,7 @@ class ListCloudFrontOriginAccessIdentitiesResponsePrivate : public CloudFrontRes
 
 public:
 
-    ListCloudFrontOriginAccessIdentitiesResponsePrivate(ListCloudFrontOriginAccessIdentitiesResponse * const q);
+    explicit ListCloudFrontOriginAccessIdentitiesResponsePrivate(ListCloudFrontOriginAccessIdentitiesResponse * const q);
 
     void parseListCloudFrontOriginAccessIdentitiesResponse(QXmlStreamReader &xml);
 

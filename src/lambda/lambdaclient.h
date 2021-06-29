@@ -157,7 +157,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    LambdaClient(
+    explicit LambdaClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -225,7 +225,7 @@ public slots:
 protected:
     /// @cond internal
     LambdaClientPrivate * const d_ptr; ///< Internal d-pointer.
-    LambdaClient(LambdaClientPrivate * const d);
+    explicit LambdaClient(LambdaClientPrivate * const d);
     /// @endcond
 
 private:

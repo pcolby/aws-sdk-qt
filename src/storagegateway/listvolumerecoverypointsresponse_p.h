@@ -31,7 +31,7 @@ class ListVolumeRecoveryPointsResponsePrivate : public StorageGatewayResponsePri
 
 public:
 
-    ListVolumeRecoveryPointsResponsePrivate(ListVolumeRecoveryPointsResponse * const q);
+    explicit ListVolumeRecoveryPointsResponsePrivate(ListVolumeRecoveryPointsResponse * const q);
 
     void parseListVolumeRecoveryPointsResponse(QXmlStreamReader &xml);
 

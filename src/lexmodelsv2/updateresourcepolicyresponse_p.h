@@ -31,7 +31,7 @@ class UpdateResourcePolicyResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 
-    UpdateResourcePolicyResponsePrivate(UpdateResourcePolicyResponse * const q);
+    explicit UpdateResourcePolicyResponsePrivate(UpdateResourcePolicyResponse * const q);
 
     void parseUpdateResourcePolicyResponse(QXmlStreamReader &xml);
 

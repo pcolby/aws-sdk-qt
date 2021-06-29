@@ -31,7 +31,7 @@ class DescribePlacementGroupsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribePlacementGroupsResponsePrivate(DescribePlacementGroupsResponse * const q);
+    explicit DescribePlacementGroupsResponsePrivate(DescribePlacementGroupsResponse * const q);
 
     void parseDescribePlacementGroupsResponse(QXmlStreamReader &xml);
 

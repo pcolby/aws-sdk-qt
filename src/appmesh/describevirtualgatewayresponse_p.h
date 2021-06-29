@@ -31,7 +31,7 @@ class DescribeVirtualGatewayResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 
-    DescribeVirtualGatewayResponsePrivate(DescribeVirtualGatewayResponse * const q);
+    explicit DescribeVirtualGatewayResponsePrivate(DescribeVirtualGatewayResponse * const q);
 
     void parseDescribeVirtualGatewayResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteMetricPolicyResponsePrivate : public MediaStoreResponsePrivate {
 
 public:
 
-    DeleteMetricPolicyResponsePrivate(DeleteMetricPolicyResponse * const q);
+    explicit DeleteMetricPolicyResponsePrivate(DeleteMetricPolicyResponse * const q);
 
     void parseDeleteMetricPolicyResponse(QXmlStreamReader &xml);
 

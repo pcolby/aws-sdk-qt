@@ -31,7 +31,7 @@ class GetCatalogImportStatusResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    GetCatalogImportStatusResponsePrivate(GetCatalogImportStatusResponse * const q);
+    explicit GetCatalogImportStatusResponsePrivate(GetCatalogImportStatusResponse * const q);
 
     void parseGetCatalogImportStatusResponse(QXmlStreamReader &xml);
 

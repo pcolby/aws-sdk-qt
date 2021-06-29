@@ -31,7 +31,7 @@ class UpdateExpirationForHITResponsePrivate : public MTurkResponsePrivate {
 
 public:
 
-    UpdateExpirationForHITResponsePrivate(UpdateExpirationForHITResponse * const q);
+    explicit UpdateExpirationForHITResponsePrivate(UpdateExpirationForHITResponse * const q);
 
     void parseUpdateExpirationForHITResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class StartSessionResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    StartSessionResponsePrivate(StartSessionResponse * const q);
+    explicit StartSessionResponsePrivate(StartSessionResponse * const q);
 
     void parseStartSessionResponse(QXmlStreamReader &xml);
 

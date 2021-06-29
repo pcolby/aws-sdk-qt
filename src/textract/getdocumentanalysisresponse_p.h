@@ -31,7 +31,7 @@ class GetDocumentAnalysisResponsePrivate : public TextractResponsePrivate {
 
 public:
 
-    GetDocumentAnalysisResponsePrivate(GetDocumentAnalysisResponse * const q);
+    explicit GetDocumentAnalysisResponsePrivate(GetDocumentAnalysisResponse * const q);
 
     void parseGetDocumentAnalysisResponse(QXmlStreamReader &xml);
 

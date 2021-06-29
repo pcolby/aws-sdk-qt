@@ -355,7 +355,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    GlueClient(
+    explicit GlueClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -522,7 +522,7 @@ public slots:
 protected:
     /// @cond internal
     GlueClientPrivate * const d_ptr; ///< Internal d-pointer.
-    GlueClient(GlueClientPrivate * const d);
+    explicit GlueClient(GlueClientPrivate * const d);
     /// @endcond
 
 private:

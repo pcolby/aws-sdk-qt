@@ -31,7 +31,7 @@ class PutDataCatalogEncryptionSettingsResponsePrivate : public GlueResponsePriva
 
 public:
 
-    PutDataCatalogEncryptionSettingsResponsePrivate(PutDataCatalogEncryptionSettingsResponse * const q);
+    explicit PutDataCatalogEncryptionSettingsResponsePrivate(PutDataCatalogEncryptionSettingsResponse * const q);
 
     void parsePutDataCatalogEncryptionSettingsResponse(QXmlStreamReader &xml);
 

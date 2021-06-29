@@ -31,7 +31,7 @@ class VerifySMSSandboxPhoneNumberResponsePrivate : public SnsResponsePrivate {
 
 public:
 
-    VerifySMSSandboxPhoneNumberResponsePrivate(VerifySMSSandboxPhoneNumberResponse * const q);
+    explicit VerifySMSSandboxPhoneNumberResponsePrivate(VerifySMSSandboxPhoneNumberResponse * const q);
 
     void parseVerifySMSSandboxPhoneNumberResponse(QXmlStreamReader &xml);
 

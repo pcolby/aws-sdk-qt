@@ -29,7 +29,7 @@ class AmplifyResponsePrivate {
 
 public:
 
-    AmplifyResponsePrivate(AmplifyResponse * const q);
+    explicit AmplifyResponsePrivate(AmplifyResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

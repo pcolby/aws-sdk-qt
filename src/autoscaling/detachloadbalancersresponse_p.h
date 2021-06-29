@@ -31,7 +31,7 @@ class DetachLoadBalancersResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 
-    DetachLoadBalancersResponsePrivate(DetachLoadBalancersResponse * const q);
+    explicit DetachLoadBalancersResponsePrivate(DetachLoadBalancersResponse * const q);
 
     void parseDetachLoadBalancersResponse(QXmlStreamReader &xml);
 

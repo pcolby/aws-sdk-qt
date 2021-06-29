@@ -31,7 +31,7 @@ class GetAttachmentResponsePrivate : public ConnectParticipantResponsePrivate {
 
 public:
 
-    GetAttachmentResponsePrivate(GetAttachmentResponse * const q);
+    explicit GetAttachmentResponsePrivate(GetAttachmentResponse * const q);
 
     void parseGetAttachmentResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetPersonalizedRankingResponsePrivate : public PersonalizeRuntimeResponseP
 
 public:
 
-    GetPersonalizedRankingResponsePrivate(GetPersonalizedRankingResponse * const q);
+    explicit GetPersonalizedRankingResponsePrivate(GetPersonalizedRankingResponse * const q);
 
     void parseGetPersonalizedRankingResponse(QXmlStreamReader &xml);
 

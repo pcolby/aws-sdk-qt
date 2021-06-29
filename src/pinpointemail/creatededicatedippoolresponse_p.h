@@ -31,7 +31,7 @@ class CreateDedicatedIpPoolResponsePrivate : public PinpointEmailResponsePrivate
 
 public:
 
-    CreateDedicatedIpPoolResponsePrivate(CreateDedicatedIpPoolResponse * const q);
+    explicit CreateDedicatedIpPoolResponsePrivate(CreateDedicatedIpPoolResponse * const q);
 
     void parseCreateDedicatedIpPoolResponse(QXmlStreamReader &xml);
 

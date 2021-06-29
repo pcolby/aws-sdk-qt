@@ -31,7 +31,7 @@ class AssociateEncryptionConfigResponsePrivate : public EksResponsePrivate {
 
 public:
 
-    AssociateEncryptionConfigResponsePrivate(AssociateEncryptionConfigResponse * const q);
+    explicit AssociateEncryptionConfigResponsePrivate(AssociateEncryptionConfigResponse * const q);
 
     void parseAssociateEncryptionConfigResponse(QXmlStreamReader &xml);
 

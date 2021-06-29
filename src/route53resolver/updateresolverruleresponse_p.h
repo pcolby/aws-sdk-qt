@@ -31,7 +31,7 @@ class UpdateResolverRuleResponsePrivate : public Route53ResolverResponsePrivate 
 
 public:
 
-    UpdateResolverRuleResponsePrivate(UpdateResolverRuleResponse * const q);
+    explicit UpdateResolverRuleResponsePrivate(UpdateResolverRuleResponse * const q);
 
     void parseUpdateResolverRuleResponse(QXmlStreamReader &xml);
 

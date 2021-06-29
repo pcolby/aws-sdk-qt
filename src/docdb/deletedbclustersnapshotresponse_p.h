@@ -31,7 +31,7 @@ class DeleteDBClusterSnapshotResponsePrivate : public DocDBResponsePrivate {
 
 public:
 
-    DeleteDBClusterSnapshotResponsePrivate(DeleteDBClusterSnapshotResponse * const q);
+    explicit DeleteDBClusterSnapshotResponsePrivate(DeleteDBClusterSnapshotResponse * const q);
 
     void parseDeleteDBClusterSnapshotResponse(QXmlStreamReader &xml);
 

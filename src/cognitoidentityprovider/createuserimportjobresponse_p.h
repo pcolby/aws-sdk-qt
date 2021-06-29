@@ -31,7 +31,7 @@ class CreateUserImportJobResponsePrivate : public CognitoIdentityProviderRespons
 
 public:
 
-    CreateUserImportJobResponsePrivate(CreateUserImportJobResponse * const q);
+    explicit CreateUserImportJobResponsePrivate(CreateUserImportJobResponse * const q);
 
     void parseCreateUserImportJobResponse(QXmlStreamReader &xml);
 

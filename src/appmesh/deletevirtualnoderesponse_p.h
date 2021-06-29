@@ -31,7 +31,7 @@ class DeleteVirtualNodeResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 
-    DeleteVirtualNodeResponsePrivate(DeleteVirtualNodeResponse * const q);
+    explicit DeleteVirtualNodeResponsePrivate(DeleteVirtualNodeResponse * const q);
 
     void parseDeleteVirtualNodeResponse(QXmlStreamReader &xml);
 

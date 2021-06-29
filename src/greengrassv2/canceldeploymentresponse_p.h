@@ -31,7 +31,7 @@ class CancelDeploymentResponsePrivate : public GreengrassV2ResponsePrivate {
 
 public:
 
-    CancelDeploymentResponsePrivate(CancelDeploymentResponse * const q);
+    explicit CancelDeploymentResponsePrivate(CancelDeploymentResponse * const q);
 
     void parseCancelDeploymentResponse(QXmlStreamReader &xml);
 

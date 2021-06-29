@@ -31,7 +31,7 @@ class StartDeliveryStreamEncryptionResponsePrivate : public FirehoseResponsePriv
 
 public:
 
-    StartDeliveryStreamEncryptionResponsePrivate(StartDeliveryStreamEncryptionResponse * const q);
+    explicit StartDeliveryStreamEncryptionResponsePrivate(StartDeliveryStreamEncryptionResponse * const q);
 
     void parseStartDeliveryStreamEncryptionResponse(QXmlStreamReader &xml);
 

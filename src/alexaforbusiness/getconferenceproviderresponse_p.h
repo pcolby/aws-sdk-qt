@@ -31,7 +31,7 @@ class GetConferenceProviderResponsePrivate : public AlexaForBusinessResponsePriv
 
 public:
 
-    GetConferenceProviderResponsePrivate(GetConferenceProviderResponse * const q);
+    explicit GetConferenceProviderResponsePrivate(GetConferenceProviderResponse * const q);
 
     void parseGetConferenceProviderResponse(QXmlStreamReader &xml);
 

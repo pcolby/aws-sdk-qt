@@ -89,7 +89,7 @@ public:
 protected:
     /// @cond internal
     MediaConnectRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    MediaConnectRequest(MediaConnectRequestPrivate * const d);
+    explicit MediaConnectRequest(MediaConnectRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -31,7 +31,7 @@ class TerminateClientVpnConnectionsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    TerminateClientVpnConnectionsResponsePrivate(TerminateClientVpnConnectionsResponse * const q);
+    explicit TerminateClientVpnConnectionsResponsePrivate(TerminateClientVpnConnectionsResponse * const q);
 
     void parseTerminateClientVpnConnectionsResponse(QXmlStreamReader &xml);
 

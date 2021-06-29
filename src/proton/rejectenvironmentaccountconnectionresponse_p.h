@@ -31,7 +31,7 @@ class RejectEnvironmentAccountConnectionResponsePrivate : public ProtonResponseP
 
 public:
 
-    RejectEnvironmentAccountConnectionResponsePrivate(RejectEnvironmentAccountConnectionResponse * const q);
+    explicit RejectEnvironmentAccountConnectionResponsePrivate(RejectEnvironmentAccountConnectionResponse * const q);
 
     void parseRejectEnvironmentAccountConnectionResponse(QXmlStreamReader &xml);
 

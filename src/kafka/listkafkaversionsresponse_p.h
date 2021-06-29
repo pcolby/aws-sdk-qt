@@ -31,7 +31,7 @@ class ListKafkaVersionsResponsePrivate : public KafkaResponsePrivate {
 
 public:
 
-    ListKafkaVersionsResponsePrivate(ListKafkaVersionsResponse * const q);
+    explicit ListKafkaVersionsResponsePrivate(ListKafkaVersionsResponse * const q);
 
     void parseListKafkaVersionsResponse(QXmlStreamReader &xml);
 

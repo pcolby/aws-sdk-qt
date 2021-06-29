@@ -31,7 +31,7 @@ class PutObjectLegalHoldResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    PutObjectLegalHoldResponsePrivate(PutObjectLegalHoldResponse * const q);
+    explicit PutObjectLegalHoldResponsePrivate(PutObjectLegalHoldResponse * const q);
 
     void parsePutObjectLegalHoldResponse(QXmlStreamReader &xml);
 

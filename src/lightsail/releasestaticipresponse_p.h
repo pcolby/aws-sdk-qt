@@ -31,7 +31,7 @@ class ReleaseStaticIpResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    ReleaseStaticIpResponsePrivate(ReleaseStaticIpResponse * const q);
+    explicit ReleaseStaticIpResponsePrivate(ReleaseStaticIpResponse * const q);
 
     void parseReleaseStaticIpResponse(QXmlStreamReader &xml);
 

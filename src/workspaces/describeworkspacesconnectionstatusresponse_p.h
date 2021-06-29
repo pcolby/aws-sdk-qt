@@ -31,7 +31,7 @@ class DescribeWorkspacesConnectionStatusResponsePrivate : public WorkSpacesRespo
 
 public:
 
-    DescribeWorkspacesConnectionStatusResponsePrivate(DescribeWorkspacesConnectionStatusResponse * const q);
+    explicit DescribeWorkspacesConnectionStatusResponsePrivate(DescribeWorkspacesConnectionStatusResponse * const q);
 
     void parseDescribeWorkspacesConnectionStatusResponse(QXmlStreamReader &xml);
 

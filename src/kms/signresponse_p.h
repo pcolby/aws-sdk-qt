@@ -31,7 +31,7 @@ class SignResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    SignResponsePrivate(SignResponse * const q);
+    explicit SignResponsePrivate(SignResponse * const q);
 
     void parseSignResponse(QXmlStreamReader &xml);
 

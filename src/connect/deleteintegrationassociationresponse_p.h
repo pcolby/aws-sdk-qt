@@ -31,7 +31,7 @@ class DeleteIntegrationAssociationResponsePrivate : public ConnectResponsePrivat
 
 public:
 
-    DeleteIntegrationAssociationResponsePrivate(DeleteIntegrationAssociationResponse * const q);
+    explicit DeleteIntegrationAssociationResponsePrivate(DeleteIntegrationAssociationResponse * const q);
 
     void parseDeleteIntegrationAssociationResponse(QXmlStreamReader &xml);
 

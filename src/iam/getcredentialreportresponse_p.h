@@ -31,7 +31,7 @@ class GetCredentialReportResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    GetCredentialReportResponsePrivate(GetCredentialReportResponse * const q);
+    explicit GetCredentialReportResponsePrivate(GetCredentialReportResponse * const q);
 
     void parseGetCredentialReportResponse(QXmlStreamReader &xml);
 

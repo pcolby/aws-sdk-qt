@@ -31,7 +31,7 @@ class StartDetectMitigationActionsTaskResponsePrivate : public IoTResponsePrivat
 
 public:
 
-    StartDetectMitigationActionsTaskResponsePrivate(StartDetectMitigationActionsTaskResponse * const q);
+    explicit StartDetectMitigationActionsTaskResponsePrivate(StartDetectMitigationActionsTaskResponse * const q);
 
     void parseStartDetectMitigationActionsTaskResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteCustomAvailabilityZoneResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    DeleteCustomAvailabilityZoneResponsePrivate(DeleteCustomAvailabilityZoneResponse * const q);
+    explicit DeleteCustomAvailabilityZoneResponsePrivate(DeleteCustomAvailabilityZoneResponse * const q);
 
     void parseDeleteCustomAvailabilityZoneResponse(QXmlStreamReader &xml);
 

@@ -77,7 +77,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    AppflowClient(
+    explicit AppflowClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -105,7 +105,7 @@ public slots:
 protected:
     /// @cond internal
     AppflowClientPrivate * const d_ptr; ///< Internal d-pointer.
-    AppflowClient(AppflowClientPrivate * const d);
+    explicit AppflowClient(AppflowClientPrivate * const d);
     /// @endcond
 
 private:

@@ -31,7 +31,7 @@ class PutDashboardResponsePrivate : public CloudWatchResponsePrivate {
 
 public:
 
-    PutDashboardResponsePrivate(PutDashboardResponse * const q);
+    explicit PutDashboardResponsePrivate(PutDashboardResponse * const q);
 
     void parsePutDashboardResponse(QXmlStreamReader &xml);
 

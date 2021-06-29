@@ -31,7 +31,7 @@ class GetModelVersionResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 
-    GetModelVersionResponsePrivate(GetModelVersionResponse * const q);
+    explicit GetModelVersionResponsePrivate(GetModelVersionResponse * const q);
 
     void parseGetModelVersionResponse(QXmlStreamReader &xml);
 

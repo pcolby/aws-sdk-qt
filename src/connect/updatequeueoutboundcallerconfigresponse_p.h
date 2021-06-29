@@ -31,7 +31,7 @@ class UpdateQueueOutboundCallerConfigResponsePrivate : public ConnectResponsePri
 
 public:
 
-    UpdateQueueOutboundCallerConfigResponsePrivate(UpdateQueueOutboundCallerConfigResponse * const q);
+    explicit UpdateQueueOutboundCallerConfigResponsePrivate(UpdateQueueOutboundCallerConfigResponse * const q);
 
     void parseUpdateQueueOutboundCallerConfigResponse(QXmlStreamReader &xml);
 

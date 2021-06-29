@@ -30,7 +30,7 @@ class DevOpsGuruClient;
 class DevOpsGuruClientPrivate {
 
 public:
-    DevOpsGuruClientPrivate(DevOpsGuruClient * const q);
+    explicit DevOpsGuruClientPrivate(DevOpsGuruClient * const q);
 
 protected:
     DevOpsGuruClient * const q_ptr; ///< Internal q-pointer.

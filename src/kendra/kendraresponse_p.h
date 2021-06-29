@@ -29,7 +29,7 @@ class kendraResponsePrivate {
 
 public:
 
-    kendraResponsePrivate(kendraResponse * const q);
+    explicit kendraResponsePrivate(kendraResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

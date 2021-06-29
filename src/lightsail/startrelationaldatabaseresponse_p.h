@@ -31,7 +31,7 @@ class StartRelationalDatabaseResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    StartRelationalDatabaseResponsePrivate(StartRelationalDatabaseResponse * const q);
+    explicit StartRelationalDatabaseResponsePrivate(StartRelationalDatabaseResponse * const q);
 
     void parseStartRelationalDatabaseResponse(QXmlStreamReader &xml);
 

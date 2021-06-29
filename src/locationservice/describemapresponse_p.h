@@ -31,7 +31,7 @@ class DescribeMapResponsePrivate : public LocationServiceResponsePrivate {
 
 public:
 
-    DescribeMapResponsePrivate(DescribeMapResponse * const q);
+    explicit DescribeMapResponsePrivate(DescribeMapResponse * const q);
 
     void parseDescribeMapResponse(QXmlStreamReader &xml);
 

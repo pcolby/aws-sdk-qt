@@ -31,7 +31,7 @@ class DescribeVpcClassicLinkResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeVpcClassicLinkResponsePrivate(DescribeVpcClassicLinkResponse * const q);
+    explicit DescribeVpcClassicLinkResponsePrivate(DescribeVpcClassicLinkResponse * const q);
 
     void parseDescribeVpcClassicLinkResponse(QXmlStreamReader &xml);
 

@@ -101,7 +101,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    KafkaClient(
+    explicit KafkaClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -141,7 +141,7 @@ public slots:
 protected:
     /// @cond internal
     KafkaClientPrivate * const d_ptr; ///< Internal d-pointer.
-    KafkaClient(KafkaClientPrivate * const d);
+    explicit KafkaClient(KafkaClientPrivate * const d);
     /// @endcond
 
 private:

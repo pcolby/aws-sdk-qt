@@ -31,7 +31,7 @@ class ApplySecurityGroupsToClientVpnTargetNetworkResponsePrivate : public Ec2Res
 
 public:
 
-    ApplySecurityGroupsToClientVpnTargetNetworkResponsePrivate(ApplySecurityGroupsToClientVpnTargetNetworkResponse * const q);
+    explicit ApplySecurityGroupsToClientVpnTargetNetworkResponsePrivate(ApplySecurityGroupsToClientVpnTargetNetworkResponse * const q);
 
     void parseApplySecurityGroupsToClientVpnTargetNetworkResponse(QXmlStreamReader &xml);
 

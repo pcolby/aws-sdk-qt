@@ -31,7 +31,7 @@ class ListRetirableGrantsResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    ListRetirableGrantsResponsePrivate(ListRetirableGrantsResponse * const q);
+    explicit ListRetirableGrantsResponsePrivate(ListRetirableGrantsResponse * const q);
 
     void parseListRetirableGrantsResponse(QXmlStreamReader &xml);
 

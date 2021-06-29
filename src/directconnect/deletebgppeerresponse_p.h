@@ -31,7 +31,7 @@ class DeleteBGPPeerResponsePrivate : public DirectConnectResponsePrivate {
 
 public:
 
-    DeleteBGPPeerResponsePrivate(DeleteBGPPeerResponse * const q);
+    explicit DeleteBGPPeerResponsePrivate(DeleteBGPPeerResponse * const q);
 
     void parseDeleteBGPPeerResponse(QXmlStreamReader &xml);
 

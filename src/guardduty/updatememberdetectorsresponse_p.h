@@ -31,7 +31,7 @@ class UpdateMemberDetectorsResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 
-    UpdateMemberDetectorsResponsePrivate(UpdateMemberDetectorsResponse * const q);
+    explicit UpdateMemberDetectorsResponsePrivate(UpdateMemberDetectorsResponse * const q);
 
     void parseUpdateMemberDetectorsResponse(QXmlStreamReader &xml);
 

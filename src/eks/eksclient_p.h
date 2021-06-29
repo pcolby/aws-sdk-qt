@@ -30,7 +30,7 @@ class EksClient;
 class EksClientPrivate {
 
 public:
-    EksClientPrivate(EksClient * const q);
+    explicit EksClientPrivate(EksClient * const q);
 
 protected:
     EksClient * const q_ptr; ///< Internal q-pointer.

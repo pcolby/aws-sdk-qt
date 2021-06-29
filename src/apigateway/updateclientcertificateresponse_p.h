@@ -31,7 +31,7 @@ class UpdateClientCertificateResponsePrivate : public APIGatewayResponsePrivate 
 
 public:
 
-    UpdateClientCertificateResponsePrivate(UpdateClientCertificateResponse * const q);
+    explicit UpdateClientCertificateResponsePrivate(UpdateClientCertificateResponse * const q);
 
     void parseUpdateClientCertificateResponse(QXmlStreamReader &xml);
 

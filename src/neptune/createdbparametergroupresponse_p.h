@@ -31,7 +31,7 @@ class CreateDBParameterGroupResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 
-    CreateDBParameterGroupResponsePrivate(CreateDBParameterGroupResponse * const q);
+    explicit CreateDBParameterGroupResponsePrivate(CreateDBParameterGroupResponse * const q);
 
     void parseCreateDBParameterGroupResponse(QXmlStreamReader &xml);
 

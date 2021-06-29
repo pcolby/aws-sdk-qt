@@ -31,7 +31,7 @@ class DescribeHomeRegionControlsResponsePrivate : public MigrationHubConfigRespo
 
 public:
 
-    DescribeHomeRegionControlsResponsePrivate(DescribeHomeRegionControlsResponse * const q);
+    explicit DescribeHomeRegionControlsResponsePrivate(DescribeHomeRegionControlsResponse * const q);
 
     void parseDescribeHomeRegionControlsResponse(QXmlStreamReader &xml);
 

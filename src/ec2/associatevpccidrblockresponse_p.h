@@ -31,7 +31,7 @@ class AssociateVpcCidrBlockResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    AssociateVpcCidrBlockResponsePrivate(AssociateVpcCidrBlockResponse * const q);
+    explicit AssociateVpcCidrBlockResponsePrivate(AssociateVpcCidrBlockResponse * const q);
 
     void parseAssociateVpcCidrBlockResponse(QXmlStreamReader &xml);
 

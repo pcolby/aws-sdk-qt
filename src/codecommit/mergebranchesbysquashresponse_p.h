@@ -31,7 +31,7 @@ class MergeBranchesBySquashResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 
-    MergeBranchesBySquashResponsePrivate(MergeBranchesBySquashResponse * const q);
+    explicit MergeBranchesBySquashResponsePrivate(MergeBranchesBySquashResponse * const q);
 
     void parseMergeBranchesBySquashResponse(QXmlStreamReader &xml);
 

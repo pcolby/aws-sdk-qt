@@ -31,7 +31,7 @@ class DescribePlacementResponsePrivate : public IoT1ClickProjectsResponsePrivate
 
 public:
 
-    DescribePlacementResponsePrivate(DescribePlacementResponse * const q);
+    explicit DescribePlacementResponsePrivate(DescribePlacementResponse * const q);
 
     void parseDescribePlacementResponse(QXmlStreamReader &xml);
 

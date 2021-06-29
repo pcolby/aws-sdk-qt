@@ -31,7 +31,7 @@ class InitiateJobResponsePrivate : public GlacierResponsePrivate {
 
 public:
 
-    InitiateJobResponsePrivate(InitiateJobResponse * const q);
+    explicit InitiateJobResponsePrivate(InitiateJobResponse * const q);
 
     void parseInitiateJobResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetPolicyResponsePrivate : public LambdaResponsePrivate {
 
 public:
 
-    GetPolicyResponsePrivate(GetPolicyResponse * const q);
+    explicit GetPolicyResponsePrivate(GetPolicyResponse * const q);
 
     void parseGetPolicyResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteParametersResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    DeleteParametersResponsePrivate(DeleteParametersResponse * const q);
+    explicit DeleteParametersResponsePrivate(DeleteParametersResponse * const q);
 
     void parseDeleteParametersResponse(QXmlStreamReader &xml);
 

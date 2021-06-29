@@ -31,7 +31,7 @@ class UpdateLinkAttributesResponsePrivate : public CloudDirectoryResponsePrivate
 
 public:
 
-    UpdateLinkAttributesResponsePrivate(UpdateLinkAttributesResponse * const q);
+    explicit UpdateLinkAttributesResponsePrivate(UpdateLinkAttributesResponse * const q);
 
     void parseUpdateLinkAttributesResponse(QXmlStreamReader &xml);
 

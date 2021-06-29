@@ -31,7 +31,7 @@ class DisassociateAssessmentReportEvidenceFolderResponsePrivate : public AuditMa
 
 public:
 
-    DisassociateAssessmentReportEvidenceFolderResponsePrivate(DisassociateAssessmentReportEvidenceFolderResponse * const q);
+    explicit DisassociateAssessmentReportEvidenceFolderResponsePrivate(DisassociateAssessmentReportEvidenceFolderResponse * const q);
 
     void parseDisassociateAssessmentReportEvidenceFolderResponse(QXmlStreamReader &xml);
 

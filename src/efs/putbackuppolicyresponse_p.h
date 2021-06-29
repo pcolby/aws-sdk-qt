@@ -31,7 +31,7 @@ class PutBackupPolicyResponsePrivate : public EfsResponsePrivate {
 
 public:
 
-    PutBackupPolicyResponsePrivate(PutBackupPolicyResponse * const q);
+    explicit PutBackupPolicyResponsePrivate(PutBackupPolicyResponse * const q);
 
     void parsePutBackupPolicyResponse(QXmlStreamReader &xml);
 

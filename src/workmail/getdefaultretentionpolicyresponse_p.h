@@ -31,7 +31,7 @@ class GetDefaultRetentionPolicyResponsePrivate : public WorkMailResponsePrivate 
 
 public:
 
-    GetDefaultRetentionPolicyResponsePrivate(GetDefaultRetentionPolicyResponse * const q);
+    explicit GetDefaultRetentionPolicyResponsePrivate(GetDefaultRetentionPolicyResponse * const q);
 
     void parseGetDefaultRetentionPolicyResponse(QXmlStreamReader &xml);
 

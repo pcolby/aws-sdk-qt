@@ -31,7 +31,7 @@ class CreateAccountResponsePrivate : public OrganizationsResponsePrivate {
 
 public:
 
-    CreateAccountResponsePrivate(CreateAccountResponse * const q);
+    explicit CreateAccountResponsePrivate(CreateAccountResponse * const q);
 
     void parseCreateAccountResponse(QXmlStreamReader &xml);
 

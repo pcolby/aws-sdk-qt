@@ -31,7 +31,7 @@ class DescribeNetworkInterfacePermissionsResponsePrivate : public Ec2ResponsePri
 
 public:
 
-    DescribeNetworkInterfacePermissionsResponsePrivate(DescribeNetworkInterfacePermissionsResponse * const q);
+    explicit DescribeNetworkInterfacePermissionsResponsePrivate(DescribeNetworkInterfacePermissionsResponse * const q);
 
     void parseDescribeNetworkInterfacePermissionsResponse(QXmlStreamReader &xml);
 

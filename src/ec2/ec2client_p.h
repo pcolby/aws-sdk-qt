@@ -30,7 +30,7 @@ class Ec2Client;
 class Ec2ClientPrivate {
 
 public:
-    Ec2ClientPrivate(Ec2Client * const q);
+    explicit Ec2ClientPrivate(Ec2Client * const q);
 
 protected:
     Ec2Client * const q_ptr; ///< Internal q-pointer.

@@ -31,7 +31,7 @@ class DeleteCustomDataIdentifierResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 
-    DeleteCustomDataIdentifierResponsePrivate(DeleteCustomDataIdentifierResponse * const q);
+    explicit DeleteCustomDataIdentifierResponsePrivate(DeleteCustomDataIdentifierResponse * const q);
 
     void parseDeleteCustomDataIdentifierResponse(QXmlStreamReader &xml);
 

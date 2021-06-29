@@ -31,7 +31,7 @@ class ResetAuthorizersCacheResponsePrivate : public ApiGatewayV2ResponsePrivate 
 
 public:
 
-    ResetAuthorizersCacheResponsePrivate(ResetAuthorizersCacheResponse * const q);
+    explicit ResetAuthorizersCacheResponsePrivate(ResetAuthorizersCacheResponse * const q);
 
     void parseResetAuthorizersCacheResponse(QXmlStreamReader &xml);
 

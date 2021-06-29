@@ -31,7 +31,7 @@ class CreateWorkloadShareResponsePrivate : public WellArchitectedResponsePrivate
 
 public:
 
-    CreateWorkloadShareResponsePrivate(CreateWorkloadShareResponse * const q);
+    explicit CreateWorkloadShareResponsePrivate(CreateWorkloadShareResponse * const q);
 
     void parseCreateWorkloadShareResponse(QXmlStreamReader &xml);
 

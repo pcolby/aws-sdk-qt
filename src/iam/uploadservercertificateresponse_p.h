@@ -31,7 +31,7 @@ class UploadServerCertificateResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    UploadServerCertificateResponsePrivate(UploadServerCertificateResponse * const q);
+    explicit UploadServerCertificateResponsePrivate(UploadServerCertificateResponse * const q);
 
     void parseUploadServerCertificateResponse(QXmlStreamReader &xml);
 

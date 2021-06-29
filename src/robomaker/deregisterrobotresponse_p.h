@@ -31,7 +31,7 @@ class DeregisterRobotResponsePrivate : public RoboMakerResponsePrivate {
 
 public:
 
-    DeregisterRobotResponsePrivate(DeregisterRobotResponse * const q);
+    explicit DeregisterRobotResponsePrivate(DeregisterRobotResponse * const q);
 
     void parseDeregisterRobotResponse(QXmlStreamReader &xml);
 

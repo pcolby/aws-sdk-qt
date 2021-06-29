@@ -31,7 +31,7 @@ class DeleteSuggesterResponsePrivate : public CloudSearchResponsePrivate {
 
 public:
 
-    DeleteSuggesterResponsePrivate(DeleteSuggesterResponse * const q);
+    explicit DeleteSuggesterResponsePrivate(DeleteSuggesterResponse * const q);
 
     void parseDeleteSuggesterResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DetectModerationLabelsResponsePrivate : public RekognitionResponsePrivate 
 
 public:
 
-    DetectModerationLabelsResponsePrivate(DetectModerationLabelsResponse * const q);
+    explicit DetectModerationLabelsResponsePrivate(DetectModerationLabelsResponse * const q);
 
     void parseDetectModerationLabelsResponse(QXmlStreamReader &xml);
 

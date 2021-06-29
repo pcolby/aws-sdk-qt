@@ -31,7 +31,7 @@ class CancelRetrievalResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 
-    CancelRetrievalResponsePrivate(CancelRetrievalResponse * const q);
+    explicit CancelRetrievalResponsePrivate(CancelRetrievalResponse * const q);
 
     void parseCancelRetrievalResponse(QXmlStreamReader &xml);
 

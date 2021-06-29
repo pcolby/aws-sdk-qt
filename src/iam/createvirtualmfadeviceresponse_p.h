@@ -31,7 +31,7 @@ class CreateVirtualMFADeviceResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    CreateVirtualMFADeviceResponsePrivate(CreateVirtualMFADeviceResponse * const q);
+    explicit CreateVirtualMFADeviceResponsePrivate(CreateVirtualMFADeviceResponse * const q);
 
     void parseCreateVirtualMFADeviceResponse(QXmlStreamReader &xml);
 

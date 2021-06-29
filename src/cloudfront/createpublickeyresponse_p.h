@@ -31,7 +31,7 @@ class CreatePublicKeyResponsePrivate : public CloudFrontResponsePrivate {
 
 public:
 
-    CreatePublicKeyResponsePrivate(CreatePublicKeyResponse * const q);
+    explicit CreatePublicKeyResponsePrivate(CreatePublicKeyResponse * const q);
 
     void parseCreatePublicKeyResponse(QXmlStreamReader &xml);
 

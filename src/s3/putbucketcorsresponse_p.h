@@ -31,7 +31,7 @@ class PutBucketCorsResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    PutBucketCorsResponsePrivate(PutBucketCorsResponse * const q);
+    explicit PutBucketCorsResponsePrivate(PutBucketCorsResponse * const q);
 
     void parsePutBucketCorsResponse(QXmlStreamReader &xml);
 

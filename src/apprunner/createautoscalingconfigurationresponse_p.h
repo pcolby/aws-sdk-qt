@@ -31,7 +31,7 @@ class CreateAutoScalingConfigurationResponsePrivate : public AppRunnerResponsePr
 
 public:
 
-    CreateAutoScalingConfigurationResponsePrivate(CreateAutoScalingConfigurationResponse * const q);
+    explicit CreateAutoScalingConfigurationResponsePrivate(CreateAutoScalingConfigurationResponse * const q);
 
     void parseCreateAutoScalingConfigurationResponse(QXmlStreamReader &xml);
 

@@ -173,7 +173,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    CloudDirectoryClient(
+    explicit CloudDirectoryClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -249,7 +249,7 @@ public slots:
 protected:
     /// @cond internal
     CloudDirectoryClientPrivate * const d_ptr; ///< Internal d-pointer.
-    CloudDirectoryClient(CloudDirectoryClientPrivate * const d);
+    explicit CloudDirectoryClient(CloudDirectoryClientPrivate * const d);
     /// @endcond
 
 private:

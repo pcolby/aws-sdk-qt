@@ -31,7 +31,7 @@ class ListImageRecipesResponsePrivate : public imagebuilderResponsePrivate {
 
 public:
 
-    ListImageRecipesResponsePrivate(ListImageRecipesResponse * const q);
+    explicit ListImageRecipesResponsePrivate(ListImageRecipesResponse * const q);
 
     void parseListImageRecipesResponse(QXmlStreamReader &xml);
 

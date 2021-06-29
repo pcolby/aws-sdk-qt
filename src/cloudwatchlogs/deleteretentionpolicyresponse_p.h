@@ -31,7 +31,7 @@ class DeleteRetentionPolicyResponsePrivate : public CloudWatchLogsResponsePrivat
 
 public:
 
-    DeleteRetentionPolicyResponsePrivate(DeleteRetentionPolicyResponse * const q);
+    explicit DeleteRetentionPolicyResponsePrivate(DeleteRetentionPolicyResponse * const q);
 
     void parseDeleteRetentionPolicyResponse(QXmlStreamReader &xml);
 

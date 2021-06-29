@@ -31,7 +31,7 @@ class GetIncidentRecordResponsePrivate : public SSMIncidentsResponsePrivate {
 
 public:
 
-    GetIncidentRecordResponsePrivate(GetIncidentRecordResponse * const q);
+    explicit GetIncidentRecordResponsePrivate(GetIncidentRecordResponse * const q);
 
     void parseGetIncidentRecordResponse(QXmlStreamReader &xml);
 

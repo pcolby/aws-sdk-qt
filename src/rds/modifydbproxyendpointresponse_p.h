@@ -31,7 +31,7 @@ class ModifyDBProxyEndpointResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    ModifyDBProxyEndpointResponsePrivate(ModifyDBProxyEndpointResponse * const q);
+    explicit ModifyDBProxyEndpointResponsePrivate(ModifyDBProxyEndpointResponse * const q);
 
     void parseModifyDBProxyEndpointResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class BatchGetCustomDataIdentifiersResponsePrivate : public Macie2ResponsePrivat
 
 public:
 
-    BatchGetCustomDataIdentifiersResponsePrivate(BatchGetCustomDataIdentifiersResponse * const q);
+    explicit BatchGetCustomDataIdentifiersResponsePrivate(BatchGetCustomDataIdentifiersResponse * const q);
 
     void parseBatchGetCustomDataIdentifiersResponse(QXmlStreamReader &xml);
 

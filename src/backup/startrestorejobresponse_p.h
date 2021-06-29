@@ -31,7 +31,7 @@ class StartRestoreJobResponsePrivate : public BackupResponsePrivate {
 
 public:
 
-    StartRestoreJobResponsePrivate(StartRestoreJobResponse * const q);
+    explicit StartRestoreJobResponsePrivate(StartRestoreJobResponse * const q);
 
     void parseStartRestoreJobResponse(QXmlStreamReader &xml);
 

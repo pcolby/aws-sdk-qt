@@ -31,7 +31,7 @@ class EnableOrganizationAdminAccountResponsePrivate : public SecurityHubResponse
 
 public:
 
-    EnableOrganizationAdminAccountResponsePrivate(EnableOrganizationAdminAccountResponse * const q);
+    explicit EnableOrganizationAdminAccountResponsePrivate(EnableOrganizationAdminAccountResponse * const q);
 
     void parseEnableOrganizationAdminAccountResponse(QXmlStreamReader &xml);
 

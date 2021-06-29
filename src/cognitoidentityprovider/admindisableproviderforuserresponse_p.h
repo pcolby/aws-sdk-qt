@@ -31,7 +31,7 @@ class AdminDisableProviderForUserResponsePrivate : public CognitoIdentityProvide
 
 public:
 
-    AdminDisableProviderForUserResponsePrivate(AdminDisableProviderForUserResponse * const q);
+    explicit AdminDisableProviderForUserResponsePrivate(AdminDisableProviderForUserResponse * const q);
 
     void parseAdminDisableProviderForUserResponse(QXmlStreamReader &xml);
 

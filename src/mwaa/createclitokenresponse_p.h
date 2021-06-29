@@ -31,7 +31,7 @@ class CreateCliTokenResponsePrivate : public MwaaResponsePrivate {
 
 public:
 
-    CreateCliTokenResponsePrivate(CreateCliTokenResponse * const q);
+    explicit CreateCliTokenResponsePrivate(CreateCliTokenResponse * const q);
 
     void parseCreateCliTokenResponse(QXmlStreamReader &xml);
 

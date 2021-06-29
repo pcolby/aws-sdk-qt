@@ -31,7 +31,7 @@ class AssignPrivateIpAddressesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    AssignPrivateIpAddressesResponsePrivate(AssignPrivateIpAddressesResponse * const q);
+    explicit AssignPrivateIpAddressesResponsePrivate(AssignPrivateIpAddressesResponse * const q);
 
     void parseAssignPrivateIpAddressesResponse(QXmlStreamReader &xml);
 

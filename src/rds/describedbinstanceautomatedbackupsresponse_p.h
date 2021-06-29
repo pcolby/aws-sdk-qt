@@ -31,7 +31,7 @@ class DescribeDBInstanceAutomatedBackupsResponsePrivate : public RdsResponsePriv
 
 public:
 
-    DescribeDBInstanceAutomatedBackupsResponsePrivate(DescribeDBInstanceAutomatedBackupsResponse * const q);
+    explicit DescribeDBInstanceAutomatedBackupsResponsePrivate(DescribeDBInstanceAutomatedBackupsResponse * const q);
 
     void parseDescribeDBInstanceAutomatedBackupsResponse(QXmlStreamReader &xml);
 

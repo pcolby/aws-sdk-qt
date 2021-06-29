@@ -31,7 +31,7 @@ class StopKeyPhrasesDetectionJobResponsePrivate : public ComprehendResponsePriva
 
 public:
 
-    StopKeyPhrasesDetectionJobResponsePrivate(StopKeyPhrasesDetectionJobResponse * const q);
+    explicit StopKeyPhrasesDetectionJobResponsePrivate(StopKeyPhrasesDetectionJobResponse * const q);
 
     void parseStopKeyPhrasesDetectionJobResponse(QXmlStreamReader &xml);
 

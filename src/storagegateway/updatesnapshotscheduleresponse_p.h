@@ -31,7 +31,7 @@ class UpdateSnapshotScheduleResponsePrivate : public StorageGatewayResponsePriva
 
 public:
 
-    UpdateSnapshotScheduleResponsePrivate(UpdateSnapshotScheduleResponse * const q);
+    explicit UpdateSnapshotScheduleResponsePrivate(UpdateSnapshotScheduleResponse * const q);
 
     void parseUpdateSnapshotScheduleResponse(QXmlStreamReader &xml);
 

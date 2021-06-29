@@ -31,7 +31,7 @@ class BatchUpdateDetectorResponsePrivate : public IoTEventsDataResponsePrivate {
 
 public:
 
-    BatchUpdateDetectorResponsePrivate(BatchUpdateDetectorResponse * const q);
+    explicit BatchUpdateDetectorResponsePrivate(BatchUpdateDetectorResponse * const q);
 
     void parseBatchUpdateDetectorResponse(QXmlStreamReader &xml);
 

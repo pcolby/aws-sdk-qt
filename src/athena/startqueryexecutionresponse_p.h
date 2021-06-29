@@ -31,7 +31,7 @@ class StartQueryExecutionResponsePrivate : public AthenaResponsePrivate {
 
 public:
 
-    StartQueryExecutionResponsePrivate(StartQueryExecutionResponse * const q);
+    explicit StartQueryExecutionResponsePrivate(StartQueryExecutionResponse * const q);
 
     void parseStartQueryExecutionResponse(QXmlStreamReader &xml);
 

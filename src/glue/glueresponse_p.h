@@ -29,7 +29,7 @@ class GlueResponsePrivate {
 
 public:
 
-    GlueResponsePrivate(GlueResponse * const q);
+    explicit GlueResponsePrivate(GlueResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

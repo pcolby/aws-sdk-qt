@@ -31,7 +31,7 @@ class BatchDeleteWorldsResponsePrivate : public RoboMakerResponsePrivate {
 
 public:
 
-    BatchDeleteWorldsResponsePrivate(BatchDeleteWorldsResponse * const q);
+    explicit BatchDeleteWorldsResponsePrivate(BatchDeleteWorldsResponse * const q);
 
     void parseBatchDeleteWorldsResponse(QXmlStreamReader &xml);
 

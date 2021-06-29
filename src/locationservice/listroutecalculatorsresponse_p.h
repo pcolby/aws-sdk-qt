@@ -31,7 +31,7 @@ class ListRouteCalculatorsResponsePrivate : public LocationServiceResponsePrivat
 
 public:
 
-    ListRouteCalculatorsResponsePrivate(ListRouteCalculatorsResponse * const q);
+    explicit ListRouteCalculatorsResponsePrivate(ListRouteCalculatorsResponse * const q);
 
     void parseListRouteCalculatorsResponse(QXmlStreamReader &xml);
 

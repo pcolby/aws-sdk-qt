@@ -31,7 +31,7 @@ class CreateCarrierGatewayResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CreateCarrierGatewayResponsePrivate(CreateCarrierGatewayResponse * const q);
+    explicit CreateCarrierGatewayResponsePrivate(CreateCarrierGatewayResponse * const q);
 
     void parseCreateCarrierGatewayResponse(QXmlStreamReader &xml);
 

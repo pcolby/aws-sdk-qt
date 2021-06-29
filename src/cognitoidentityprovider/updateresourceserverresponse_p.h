@@ -31,7 +31,7 @@ class UpdateResourceServerResponsePrivate : public CognitoIdentityProviderRespon
 
 public:
 
-    UpdateResourceServerResponsePrivate(UpdateResourceServerResponse * const q);
+    explicit UpdateResourceServerResponsePrivate(UpdateResourceServerResponse * const q);
 
     void parseUpdateResourceServerResponse(QXmlStreamReader &xml);
 

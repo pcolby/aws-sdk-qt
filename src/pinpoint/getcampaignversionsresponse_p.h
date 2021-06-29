@@ -31,7 +31,7 @@ class GetCampaignVersionsResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    GetCampaignVersionsResponsePrivate(GetCampaignVersionsResponse * const q);
+    explicit GetCampaignVersionsResponsePrivate(GetCampaignVersionsResponse * const q);
 
     void parseGetCampaignVersionsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DisassociateWirelessDeviceFromThingResponsePrivate : public IoTWirelessRes
 
 public:
 
-    DisassociateWirelessDeviceFromThingResponsePrivate(DisassociateWirelessDeviceFromThingResponse * const q);
+    explicit DisassociateWirelessDeviceFromThingResponsePrivate(DisassociateWirelessDeviceFromThingResponse * const q);
 
     void parseDisassociateWirelessDeviceFromThingResponse(QXmlStreamReader &xml);
 

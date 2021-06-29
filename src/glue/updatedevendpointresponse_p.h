@@ -31,7 +31,7 @@ class UpdateDevEndpointResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    UpdateDevEndpointResponsePrivate(UpdateDevEndpointResponse * const q);
+    explicit UpdateDevEndpointResponsePrivate(UpdateDevEndpointResponse * const q);
 
     void parseUpdateDevEndpointResponse(QXmlStreamReader &xml);
 

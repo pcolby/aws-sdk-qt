@@ -31,7 +31,7 @@ class ListIdentitiesResponsePrivate : public CognitoIdentityResponsePrivate {
 
 public:
 
-    ListIdentitiesResponsePrivate(ListIdentitiesResponse * const q);
+    explicit ListIdentitiesResponsePrivate(ListIdentitiesResponse * const q);
 
     void parseListIdentitiesResponse(QXmlStreamReader &xml);
 

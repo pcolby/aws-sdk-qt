@@ -31,7 +31,7 @@ class DescribeCertificateAuthorityResponsePrivate : public AcmpcaResponsePrivate
 
 public:
 
-    DescribeCertificateAuthorityResponsePrivate(DescribeCertificateAuthorityResponse * const q);
+    explicit DescribeCertificateAuthorityResponsePrivate(DescribeCertificateAuthorityResponse * const q);
 
     void parseDescribeCertificateAuthorityResponse(QXmlStreamReader &xml);
 

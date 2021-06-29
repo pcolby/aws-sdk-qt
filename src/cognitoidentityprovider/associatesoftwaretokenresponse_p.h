@@ -31,7 +31,7 @@ class AssociateSoftwareTokenResponsePrivate : public CognitoIdentityProviderResp
 
 public:
 
-    AssociateSoftwareTokenResponsePrivate(AssociateSoftwareTokenResponse * const q);
+    explicit AssociateSoftwareTokenResponsePrivate(AssociateSoftwareTokenResponse * const q);
 
     void parseAssociateSoftwareTokenResponse(QXmlStreamReader &xml);
 

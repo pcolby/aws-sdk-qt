@@ -31,7 +31,7 @@ class UpdateRouteResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 
-    UpdateRouteResponsePrivate(UpdateRouteResponse * const q);
+    explicit UpdateRouteResponsePrivate(UpdateRouteResponse * const q);
 
     void parseUpdateRouteResponse(QXmlStreamReader &xml);
 

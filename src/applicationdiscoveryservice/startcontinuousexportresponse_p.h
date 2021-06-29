@@ -31,7 +31,7 @@ class StartContinuousExportResponsePrivate : public ApplicationDiscoveryServiceR
 
 public:
 
-    StartContinuousExportResponsePrivate(StartContinuousExportResponse * const q);
+    explicit StartContinuousExportResponsePrivate(StartContinuousExportResponse * const q);
 
     void parseStartContinuousExportResponse(QXmlStreamReader &xml);
 

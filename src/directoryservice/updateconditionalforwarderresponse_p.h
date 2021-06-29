@@ -31,7 +31,7 @@ class UpdateConditionalForwarderResponsePrivate : public DirectoryServiceRespons
 
 public:
 
-    UpdateConditionalForwarderResponsePrivate(UpdateConditionalForwarderResponse * const q);
+    explicit UpdateConditionalForwarderResponsePrivate(UpdateConditionalForwarderResponse * const q);
 
     void parseUpdateConditionalForwarderResponse(QXmlStreamReader &xml);
 

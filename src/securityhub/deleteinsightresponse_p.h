@@ -31,7 +31,7 @@ class DeleteInsightResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 
-    DeleteInsightResponsePrivate(DeleteInsightResponse * const q);
+    explicit DeleteInsightResponsePrivate(DeleteInsightResponse * const q);
 
     void parseDeleteInsightResponse(QXmlStreamReader &xml);
 

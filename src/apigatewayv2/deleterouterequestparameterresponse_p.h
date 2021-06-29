@@ -31,7 +31,7 @@ class DeleteRouteRequestParameterResponsePrivate : public ApiGatewayV2ResponsePr
 
 public:
 
-    DeleteRouteRequestParameterResponsePrivate(DeleteRouteRequestParameterResponse * const q);
+    explicit DeleteRouteRequestParameterResponsePrivate(DeleteRouteRequestParameterResponse * const q);
 
     void parseDeleteRouteRequestParameterResponse(QXmlStreamReader &xml);
 

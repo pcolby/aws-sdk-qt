@@ -31,7 +31,7 @@ class ListFindingsResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 
-    ListFindingsResponsePrivate(ListFindingsResponse * const q);
+    explicit ListFindingsResponsePrivate(ListFindingsResponse * const q);
 
     void parseListFindingsResponse(QXmlStreamReader &xml);
 

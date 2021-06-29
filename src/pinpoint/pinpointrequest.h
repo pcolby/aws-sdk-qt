@@ -171,7 +171,7 @@ public:
 protected:
     /// @cond internal
     PinpointRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    PinpointRequest(PinpointRequestPrivate * const d);
+    explicit PinpointRequest(PinpointRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -31,7 +31,7 @@ class DiscoverInputSchemaResponsePrivate : public KinesisAnalyticsV2ResponsePriv
 
 public:
 
-    DiscoverInputSchemaResponsePrivate(DiscoverInputSchemaResponse * const q);
+    explicit DiscoverInputSchemaResponsePrivate(DiscoverInputSchemaResponse * const q);
 
     void parseDiscoverInputSchemaResponse(QXmlStreamReader &xml);
 

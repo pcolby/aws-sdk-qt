@@ -29,7 +29,7 @@ class AcmpcaResponsePrivate {
 
 public:
 
-    AcmpcaResponsePrivate(AcmpcaResponse * const q);
+    explicit AcmpcaResponsePrivate(AcmpcaResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

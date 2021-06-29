@@ -29,7 +29,7 @@ class ConnectResponsePrivate {
 
 public:
 
-    ConnectResponsePrivate(ConnectResponse * const q);
+    explicit ConnectResponsePrivate(ConnectResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

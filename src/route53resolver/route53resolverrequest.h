@@ -119,7 +119,7 @@ public:
 protected:
     /// @cond internal
     Route53ResolverRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    Route53ResolverRequest(Route53ResolverRequestPrivate * const d);
+    explicit Route53ResolverRequest(Route53ResolverRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

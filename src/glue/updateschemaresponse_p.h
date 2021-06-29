@@ -31,7 +31,7 @@ class UpdateSchemaResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    UpdateSchemaResponsePrivate(UpdateSchemaResponse * const q);
+    explicit UpdateSchemaResponsePrivate(UpdateSchemaResponse * const q);
 
     void parseUpdateSchemaResponse(QXmlStreamReader &xml);
 

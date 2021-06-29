@@ -31,7 +31,7 @@ class DeleteCertificateAuthorityResponsePrivate : public AcmpcaResponsePrivate {
 
 public:
 
-    DeleteCertificateAuthorityResponsePrivate(DeleteCertificateAuthorityResponse * const q);
+    explicit DeleteCertificateAuthorityResponsePrivate(DeleteCertificateAuthorityResponse * const q);
 
     void parseDeleteCertificateAuthorityResponse(QXmlStreamReader &xml);
 

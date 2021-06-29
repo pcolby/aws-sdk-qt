@@ -29,7 +29,7 @@ class LookoutforVisionResponsePrivate {
 
 public:
 
-    LookoutforVisionResponsePrivate(LookoutforVisionResponse * const q);
+    explicit LookoutforVisionResponsePrivate(LookoutforVisionResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

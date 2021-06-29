@@ -30,7 +30,7 @@ class CloudFormationClient;
 class CloudFormationClientPrivate {
 
 public:
-    CloudFormationClientPrivate(CloudFormationClient * const q);
+    explicit CloudFormationClientPrivate(CloudFormationClient * const q);
 
 protected:
     CloudFormationClient * const q_ptr; ///< Internal q-pointer.

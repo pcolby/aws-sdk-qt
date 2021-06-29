@@ -31,7 +31,7 @@ class DescribeScheduleResponsePrivate : public MediaLiveResponsePrivate {
 
 public:
 
-    DescribeScheduleResponsePrivate(DescribeScheduleResponse * const q);
+    explicit DescribeScheduleResponsePrivate(DescribeScheduleResponse * const q);
 
     void parseDescribeScheduleResponse(QXmlStreamReader &xml);
 

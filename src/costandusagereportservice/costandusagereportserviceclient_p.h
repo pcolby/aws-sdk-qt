@@ -30,7 +30,7 @@ class CostandUsageReportServiceClient;
 class CostandUsageReportServiceClientPrivate {
 
 public:
-    CostandUsageReportServiceClientPrivate(CostandUsageReportServiceClient * const q);
+    explicit CostandUsageReportServiceClientPrivate(CostandUsageReportServiceClient * const q);
 
 protected:
     CostandUsageReportServiceClient * const q_ptr; ///< Internal q-pointer.

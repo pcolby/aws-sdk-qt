@@ -31,7 +31,7 @@ class UpdateBackendJobResponsePrivate : public AmplifyBackendResponsePrivate {
 
 public:
 
-    UpdateBackendJobResponsePrivate(UpdateBackendJobResponse * const q);
+    explicit UpdateBackendJobResponsePrivate(UpdateBackendJobResponse * const q);
 
     void parseUpdateBackendJobResponse(QXmlStreamReader &xml);
 

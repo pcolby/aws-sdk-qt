@@ -31,7 +31,7 @@ class AssociateIamInstanceProfileResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    AssociateIamInstanceProfileResponsePrivate(AssociateIamInstanceProfileResponse * const q);
+    explicit AssociateIamInstanceProfileResponsePrivate(AssociateIamInstanceProfileResponse * const q);
 
     void parseAssociateIamInstanceProfileResponse(QXmlStreamReader &xml);
 

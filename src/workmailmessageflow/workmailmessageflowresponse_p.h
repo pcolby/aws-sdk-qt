@@ -29,7 +29,7 @@ class WorkMailMessageFlowResponsePrivate {
 
 public:
 
-    WorkMailMessageFlowResponsePrivate(WorkMailMessageFlowResponse * const q);
+    explicit WorkMailMessageFlowResponsePrivate(WorkMailMessageFlowResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

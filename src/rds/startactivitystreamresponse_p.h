@@ -31,7 +31,7 @@ class StartActivityStreamResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    StartActivityStreamResponsePrivate(StartActivityStreamResponse * const q);
+    explicit StartActivityStreamResponsePrivate(StartActivityStreamResponse * const q);
 
     void parseStartActivityStreamResponse(QXmlStreamReader &xml);
 

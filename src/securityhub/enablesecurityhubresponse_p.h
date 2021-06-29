@@ -31,7 +31,7 @@ class EnableSecurityHubResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 
-    EnableSecurityHubResponsePrivate(EnableSecurityHubResponse * const q);
+    explicit EnableSecurityHubResponsePrivate(EnableSecurityHubResponse * const q);
 
     void parseEnableSecurityHubResponse(QXmlStreamReader &xml);
 

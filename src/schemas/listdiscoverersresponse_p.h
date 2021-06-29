@@ -31,7 +31,7 @@ class ListDiscoverersResponsePrivate : public SchemasResponsePrivate {
 
 public:
 
-    ListDiscoverersResponsePrivate(ListDiscoverersResponse * const q);
+    explicit ListDiscoverersResponsePrivate(ListDiscoverersResponse * const q);
 
     void parseListDiscoverersResponse(QXmlStreamReader &xml);
 

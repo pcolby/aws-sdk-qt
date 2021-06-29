@@ -29,7 +29,7 @@ class KinesisAnalyticsV2ResponsePrivate {
 
 public:
 
-    KinesisAnalyticsV2ResponsePrivate(KinesisAnalyticsV2Response * const q);
+    explicit KinesisAnalyticsV2ResponsePrivate(KinesisAnalyticsV2Response * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

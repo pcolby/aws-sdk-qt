@@ -29,7 +29,7 @@ class ProtonResponsePrivate {
 
 public:
 
-    ProtonResponsePrivate(ProtonResponse * const q);
+    explicit ProtonResponsePrivate(ProtonResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

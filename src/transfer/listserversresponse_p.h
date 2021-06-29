@@ -31,7 +31,7 @@ class ListServersResponsePrivate : public TransferResponsePrivate {
 
 public:
 
-    ListServersResponsePrivate(ListServersResponse * const q);
+    explicit ListServersResponsePrivate(ListServersResponse * const q);
 
     void parseListServersResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetParametersByPathResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    GetParametersByPathResponsePrivate(GetParametersByPathResponse * const q);
+    explicit GetParametersByPathResponsePrivate(GetParametersByPathResponse * const q);
 
     void parseGetParametersByPathResponse(QXmlStreamReader &xml);
 

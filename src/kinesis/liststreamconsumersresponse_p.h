@@ -31,7 +31,7 @@ class ListStreamConsumersResponsePrivate : public KinesisResponsePrivate {
 
 public:
 
-    ListStreamConsumersResponsePrivate(ListStreamConsumersResponse * const q);
+    explicit ListStreamConsumersResponsePrivate(ListStreamConsumersResponse * const q);
 
     void parseListStreamConsumersResponse(QXmlStreamReader &xml);
 

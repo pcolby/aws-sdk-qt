@@ -31,7 +31,7 @@ class ClearQuerySuggestionsResponsePrivate : public kendraResponsePrivate {
 
 public:
 
-    ClearQuerySuggestionsResponsePrivate(ClearQuerySuggestionsResponse * const q);
+    explicit ClearQuerySuggestionsResponsePrivate(ClearQuerySuggestionsResponse * const q);
 
     void parseClearQuerySuggestionsResponse(QXmlStreamReader &xml);
 

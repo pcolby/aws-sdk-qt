@@ -31,7 +31,7 @@ class UpdateContactFlowNameResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    UpdateContactFlowNameResponsePrivate(UpdateContactFlowNameResponse * const q);
+    explicit UpdateContactFlowNameResponsePrivate(UpdateContactFlowNameResponse * const q);
 
     void parseUpdateContactFlowNameResponse(QXmlStreamReader &xml);
 

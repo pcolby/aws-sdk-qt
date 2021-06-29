@@ -31,7 +31,7 @@ class AssociateAddressResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    AssociateAddressResponsePrivate(AssociateAddressResponse * const q);
+    explicit AssociateAddressResponsePrivate(AssociateAddressResponse * const q);
 
     void parseAssociateAddressResponse(QXmlStreamReader &xml);
 

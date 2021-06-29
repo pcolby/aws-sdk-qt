@@ -31,7 +31,7 @@ class DeleteTransitGatewayPrefixListReferenceResponsePrivate : public Ec2Respons
 
 public:
 
-    DeleteTransitGatewayPrefixListReferenceResponsePrivate(DeleteTransitGatewayPrefixListReferenceResponse * const q);
+    explicit DeleteTransitGatewayPrefixListReferenceResponsePrivate(DeleteTransitGatewayPrefixListReferenceResponse * const q);
 
     void parseDeleteTransitGatewayPrefixListReferenceResponse(QXmlStreamReader &xml);
 

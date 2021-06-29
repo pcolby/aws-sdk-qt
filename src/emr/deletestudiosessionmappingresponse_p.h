@@ -31,7 +31,7 @@ class DeleteStudioSessionMappingResponsePrivate : public EmrResponsePrivate {
 
 public:
 
-    DeleteStudioSessionMappingResponsePrivate(DeleteStudioSessionMappingResponse * const q);
+    explicit DeleteStudioSessionMappingResponsePrivate(DeleteStudioSessionMappingResponse * const q);
 
     void parseDeleteStudioSessionMappingResponse(QXmlStreamReader &xml);
 

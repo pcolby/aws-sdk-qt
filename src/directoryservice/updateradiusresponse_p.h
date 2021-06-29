@@ -31,7 +31,7 @@ class UpdateRadiusResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 
-    UpdateRadiusResponsePrivate(UpdateRadiusResponse * const q);
+    explicit UpdateRadiusResponsePrivate(UpdateRadiusResponse * const q);
 
     void parseUpdateRadiusResponse(QXmlStreamReader &xml);
 

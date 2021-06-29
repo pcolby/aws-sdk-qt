@@ -31,7 +31,7 @@ class CreateGatewayGroupResponsePrivate : public AlexaForBusinessResponsePrivate
 
 public:
 
-    CreateGatewayGroupResponsePrivate(CreateGatewayGroupResponse * const q);
+    explicit CreateGatewayGroupResponsePrivate(CreateGatewayGroupResponse * const q);
 
     void parseCreateGatewayGroupResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CopyDBClusterSnapshotResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 
-    CopyDBClusterSnapshotResponsePrivate(CopyDBClusterSnapshotResponse * const q);
+    explicit CopyDBClusterSnapshotResponsePrivate(CopyDBClusterSnapshotResponse * const q);
 
     void parseCopyDBClusterSnapshotResponse(QXmlStreamReader &xml);
 

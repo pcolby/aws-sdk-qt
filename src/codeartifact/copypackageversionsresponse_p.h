@@ -31,7 +31,7 @@ class CopyPackageVersionsResponsePrivate : public CodeArtifactResponsePrivate {
 
 public:
 
-    CopyPackageVersionsResponsePrivate(CopyPackageVersionsResponse * const q);
+    explicit CopyPackageVersionsResponsePrivate(CopyPackageVersionsResponse * const q);
 
     void parseCopyPackageVersionsResponse(QXmlStreamReader &xml);
 

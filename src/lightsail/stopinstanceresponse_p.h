@@ -31,7 +31,7 @@ class StopInstanceResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    StopInstanceResponsePrivate(StopInstanceResponse * const q);
+    explicit StopInstanceResponsePrivate(StopInstanceResponse * const q);
 
     void parseStopInstanceResponse(QXmlStreamReader &xml);
 

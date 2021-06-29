@@ -31,7 +31,7 @@ class ListVirtualInterfaceTestHistoryResponsePrivate : public DirectConnectRespo
 
 public:
 
-    ListVirtualInterfaceTestHistoryResponsePrivate(ListVirtualInterfaceTestHistoryResponse * const q);
+    explicit ListVirtualInterfaceTestHistoryResponsePrivate(ListVirtualInterfaceTestHistoryResponse * const q);
 
     void parseListVirtualInterfaceTestHistoryResponse(QXmlStreamReader &xml);
 

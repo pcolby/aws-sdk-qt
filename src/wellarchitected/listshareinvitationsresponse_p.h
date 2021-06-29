@@ -31,7 +31,7 @@ class ListShareInvitationsResponsePrivate : public WellArchitectedResponsePrivat
 
 public:
 
-    ListShareInvitationsResponsePrivate(ListShareInvitationsResponse * const q);
+    explicit ListShareInvitationsResponsePrivate(ListShareInvitationsResponse * const q);
 
     void parseListShareInvitationsResponse(QXmlStreamReader &xml);
 

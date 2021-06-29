@@ -31,7 +31,7 @@ class DescribeEndpointTypesResponsePrivate : public DatabaseMigrationServiceResp
 
 public:
 
-    DescribeEndpointTypesResponsePrivate(DescribeEndpointTypesResponse * const q);
+    explicit DescribeEndpointTypesResponsePrivate(DescribeEndpointTypesResponse * const q);
 
     void parseDescribeEndpointTypesResponse(QXmlStreamReader &xml);
 

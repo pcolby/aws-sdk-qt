@@ -31,7 +31,7 @@ class InitiateLayerUploadResponsePrivate : public EcrResponsePrivate {
 
 public:
 
-    InitiateLayerUploadResponsePrivate(InitiateLayerUploadResponse * const q);
+    explicit InitiateLayerUploadResponsePrivate(InitiateLayerUploadResponse * const q);
 
     void parseInitiateLayerUploadResponse(QXmlStreamReader &xml);
 

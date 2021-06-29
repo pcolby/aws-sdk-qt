@@ -31,7 +31,7 @@ class DescribeRuleGroupResponsePrivate : public NetworkFirewallResponsePrivate {
 
 public:
 
-    DescribeRuleGroupResponsePrivate(DescribeRuleGroupResponse * const q);
+    explicit DescribeRuleGroupResponsePrivate(DescribeRuleGroupResponse * const q);
 
     void parseDescribeRuleGroupResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ImportInstanceResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ImportInstanceResponsePrivate(ImportInstanceResponse * const q);
+    explicit ImportInstanceResponsePrivate(ImportInstanceResponse * const q);
 
     void parseImportInstanceResponse(QXmlStreamReader &xml);
 

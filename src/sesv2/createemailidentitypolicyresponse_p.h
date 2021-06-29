@@ -31,7 +31,7 @@ class CreateEmailIdentityPolicyResponsePrivate : public Sesv2ResponsePrivate {
 
 public:
 
-    CreateEmailIdentityPolicyResponsePrivate(CreateEmailIdentityPolicyResponse * const q);
+    explicit CreateEmailIdentityPolicyResponsePrivate(CreateEmailIdentityPolicyResponse * const q);
 
     void parseCreateEmailIdentityPolicyResponse(QXmlStreamReader &xml);
 

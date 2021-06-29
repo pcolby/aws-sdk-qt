@@ -31,7 +31,7 @@ class DescribeRecoveryPointResponsePrivate : public BackupResponsePrivate {
 
 public:
 
-    DescribeRecoveryPointResponsePrivate(DescribeRecoveryPointResponse * const q);
+    explicit DescribeRecoveryPointResponsePrivate(DescribeRecoveryPointResponse * const q);
 
     void parseDescribeRecoveryPointResponse(QXmlStreamReader &xml);
 

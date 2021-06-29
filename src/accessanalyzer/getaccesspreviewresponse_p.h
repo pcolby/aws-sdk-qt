@@ -31,7 +31,7 @@ class GetAccessPreviewResponsePrivate : public AccessAnalyzerResponsePrivate {
 
 public:
 
-    GetAccessPreviewResponsePrivate(GetAccessPreviewResponse * const q);
+    explicit GetAccessPreviewResponsePrivate(GetAccessPreviewResponse * const q);
 
     void parseGetAccessPreviewResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeCapacityReservationsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeCapacityReservationsResponsePrivate(DescribeCapacityReservationsResponse * const q);
+    explicit DescribeCapacityReservationsResponsePrivate(DescribeCapacityReservationsResponse * const q);
 
     void parseDescribeCapacityReservationsResponse(QXmlStreamReader &xml);
 

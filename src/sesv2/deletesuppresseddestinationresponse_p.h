@@ -31,7 +31,7 @@ class DeleteSuppressedDestinationResponsePrivate : public Sesv2ResponsePrivate {
 
 public:
 
-    DeleteSuppressedDestinationResponsePrivate(DeleteSuppressedDestinationResponse * const q);
+    explicit DeleteSuppressedDestinationResponsePrivate(DeleteSuppressedDestinationResponse * const q);
 
     void parseDeleteSuppressedDestinationResponse(QXmlStreamReader &xml);
 

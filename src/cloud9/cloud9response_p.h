@@ -29,7 +29,7 @@ class Cloud9ResponsePrivate {
 
 public:
 
-    Cloud9ResponsePrivate(Cloud9Response * const q);
+    explicit Cloud9ResponsePrivate(Cloud9Response * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

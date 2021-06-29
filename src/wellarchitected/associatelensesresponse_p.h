@@ -31,7 +31,7 @@ class AssociateLensesResponsePrivate : public WellArchitectedResponsePrivate {
 
 public:
 
-    AssociateLensesResponsePrivate(AssociateLensesResponse * const q);
+    explicit AssociateLensesResponsePrivate(AssociateLensesResponse * const q);
 
     void parseAssociateLensesResponse(QXmlStreamReader &xml);
 

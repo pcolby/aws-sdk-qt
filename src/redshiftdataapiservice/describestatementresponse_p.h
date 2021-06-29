@@ -31,7 +31,7 @@ class DescribeStatementResponsePrivate : public RedshiftDataAPIServiceResponsePr
 
 public:
 
-    DescribeStatementResponsePrivate(DescribeStatementResponse * const q);
+    explicit DescribeStatementResponsePrivate(DescribeStatementResponse * const q);
 
     void parseDescribeStatementResponse(QXmlStreamReader &xml);
 

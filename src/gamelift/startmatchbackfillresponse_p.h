@@ -31,7 +31,7 @@ class StartMatchBackfillResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    StartMatchBackfillResponsePrivate(StartMatchBackfillResponse * const q);
+    explicit StartMatchBackfillResponsePrivate(StartMatchBackfillResponse * const q);
 
     void parseStartMatchBackfillResponse(QXmlStreamReader &xml);
 

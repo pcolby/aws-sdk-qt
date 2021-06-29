@@ -31,7 +31,7 @@ class DescribeAccountResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 
-    DescribeAccountResponsePrivate(DescribeAccountResponse * const q);
+    explicit DescribeAccountResponsePrivate(DescribeAccountResponse * const q);
 
     void parseDescribeAccountResponse(QXmlStreamReader &xml);
 

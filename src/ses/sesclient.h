@@ -183,7 +183,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    SesClient(
+    explicit SesClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -268,7 +268,7 @@ public slots:
 protected:
     /// @cond internal
     SesClientPrivate * const d_ptr; ///< Internal d-pointer.
-    SesClient(SesClientPrivate * const d);
+    explicit SesClient(SesClientPrivate * const d);
     /// @endcond
 
 private:

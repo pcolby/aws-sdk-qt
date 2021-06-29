@@ -31,7 +31,7 @@ class DeleteChannelResponsePrivate : public MediaLiveResponsePrivate {
 
 public:
 
-    DeleteChannelResponsePrivate(DeleteChannelResponse * const q);
+    explicit DeleteChannelResponsePrivate(DeleteChannelResponse * const q);
 
     void parseDeleteChannelResponse(QXmlStreamReader &xml);
 

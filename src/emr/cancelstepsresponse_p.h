@@ -31,7 +31,7 @@ class CancelStepsResponsePrivate : public EmrResponsePrivate {
 
 public:
 
-    CancelStepsResponsePrivate(CancelStepsResponse * const q);
+    explicit CancelStepsResponsePrivate(CancelStepsResponse * const q);
 
     void parseCancelStepsResponse(QXmlStreamReader &xml);
 

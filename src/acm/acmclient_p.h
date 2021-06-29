@@ -30,7 +30,7 @@ class AcmClient;
 class AcmClientPrivate {
 
 public:
-    AcmClientPrivate(AcmClient * const q);
+    explicit AcmClientPrivate(AcmClient * const q);
 
 protected:
     AcmClient * const q_ptr; ///< Internal q-pointer.

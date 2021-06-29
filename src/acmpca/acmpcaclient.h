@@ -87,7 +87,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    AcmpcaClient(
+    explicit AcmpcaClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -120,7 +120,7 @@ public slots:
 protected:
     /// @cond internal
     AcmpcaClientPrivate * const d_ptr; ///< Internal d-pointer.
-    AcmpcaClient(AcmpcaClientPrivate * const d);
+    explicit AcmpcaClient(AcmpcaClientPrivate * const d);
     /// @endcond
 
 private:

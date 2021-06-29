@@ -31,7 +31,7 @@ class AddListenerCertificatesResponsePrivate : public ElasticLoadBalancingv2Resp
 
 public:
 
-    AddListenerCertificatesResponsePrivate(AddListenerCertificatesResponse * const q);
+    explicit AddListenerCertificatesResponsePrivate(AddListenerCertificatesResponse * const q);
 
     void parseAddListenerCertificatesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateApiMappingResponsePrivate : public ApiGatewayV2ResponsePrivate {
 
 public:
 
-    UpdateApiMappingResponsePrivate(UpdateApiMappingResponse * const q);
+    explicit UpdateApiMappingResponsePrivate(UpdateApiMappingResponse * const q);
 
     void parseUpdateApiMappingResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetJobResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    GetJobResponsePrivate(GetJobResponse * const q);
+    explicit GetJobResponsePrivate(GetJobResponse * const q);
 
     void parseGetJobResponse(QXmlStreamReader &xml);
 

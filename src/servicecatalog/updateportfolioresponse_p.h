@@ -31,7 +31,7 @@ class UpdatePortfolioResponsePrivate : public ServiceCatalogResponsePrivate {
 
 public:
 
-    UpdatePortfolioResponsePrivate(UpdatePortfolioResponse * const q);
+    explicit UpdatePortfolioResponsePrivate(UpdatePortfolioResponse * const q);
 
     void parseUpdatePortfolioResponse(QXmlStreamReader &xml);
 

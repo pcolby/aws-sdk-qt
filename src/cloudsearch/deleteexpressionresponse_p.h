@@ -31,7 +31,7 @@ class DeleteExpressionResponsePrivate : public CloudSearchResponsePrivate {
 
 public:
 
-    DeleteExpressionResponsePrivate(DeleteExpressionResponse * const q);
+    explicit DeleteExpressionResponsePrivate(DeleteExpressionResponse * const q);
 
     void parseDeleteExpressionResponse(QXmlStreamReader &xml);
 

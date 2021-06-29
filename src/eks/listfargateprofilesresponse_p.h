@@ -31,7 +31,7 @@ class ListFargateProfilesResponsePrivate : public EksResponsePrivate {
 
 public:
 
-    ListFargateProfilesResponsePrivate(ListFargateProfilesResponse * const q);
+    explicit ListFargateProfilesResponsePrivate(ListFargateProfilesResponse * const q);
 
     void parseListFargateProfilesResponse(QXmlStreamReader &xml);
 

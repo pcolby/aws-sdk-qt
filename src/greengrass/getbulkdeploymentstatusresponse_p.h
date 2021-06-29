@@ -31,7 +31,7 @@ class GetBulkDeploymentStatusResponsePrivate : public GreengrassResponsePrivate 
 
 public:
 
-    GetBulkDeploymentStatusResponsePrivate(GetBulkDeploymentStatusResponse * const q);
+    explicit GetBulkDeploymentStatusResponsePrivate(GetBulkDeploymentStatusResponse * const q);
 
     void parseGetBulkDeploymentStatusResponse(QXmlStreamReader &xml);
 

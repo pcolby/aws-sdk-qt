@@ -31,7 +31,7 @@ class BatchUpdateUserResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    BatchUpdateUserResponsePrivate(BatchUpdateUserResponse * const q);
+    explicit BatchUpdateUserResponsePrivate(BatchUpdateUserResponse * const q);
 
     void parseBatchUpdateUserResponse(QXmlStreamReader &xml);
 

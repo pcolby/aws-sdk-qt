@@ -31,7 +31,7 @@ class AttachUserPolicyResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    AttachUserPolicyResponsePrivate(AttachUserPolicyResponse * const q);
+    explicit AttachUserPolicyResponsePrivate(AttachUserPolicyResponse * const q);
 
     void parseAttachUserPolicyResponse(QXmlStreamReader &xml);
 

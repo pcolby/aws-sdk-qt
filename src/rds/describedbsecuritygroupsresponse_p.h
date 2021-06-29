@@ -31,7 +31,7 @@ class DescribeDBSecurityGroupsResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    DescribeDBSecurityGroupsResponsePrivate(DescribeDBSecurityGroupsResponse * const q);
+    explicit DescribeDBSecurityGroupsResponsePrivate(DescribeDBSecurityGroupsResponse * const q);
 
     void parseDescribeDBSecurityGroupsResponse(QXmlStreamReader &xml);
 

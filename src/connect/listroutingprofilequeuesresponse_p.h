@@ -31,7 +31,7 @@ class ListRoutingProfileQueuesResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    ListRoutingProfileQueuesResponsePrivate(ListRoutingProfileQueuesResponse * const q);
+    explicit ListRoutingProfileQueuesResponsePrivate(ListRoutingProfileQueuesResponse * const q);
 
     void parseListRoutingProfileQueuesResponse(QXmlStreamReader &xml);
 

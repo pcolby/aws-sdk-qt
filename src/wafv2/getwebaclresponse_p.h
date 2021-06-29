@@ -31,7 +31,7 @@ class GetWebACLResponsePrivate : public Wafv2ResponsePrivate {
 
 public:
 
-    GetWebACLResponsePrivate(GetWebACLResponse * const q);
+    explicit GetWebACLResponsePrivate(GetWebACLResponse * const q);
 
     void parseGetWebACLResponse(QXmlStreamReader &xml);
 

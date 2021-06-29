@@ -31,7 +31,7 @@ class UpdateDeviceStatusResponsePrivate : public CognitoIdentityProviderResponse
 
 public:
 
-    UpdateDeviceStatusResponsePrivate(UpdateDeviceStatusResponse * const q);
+    explicit UpdateDeviceStatusResponsePrivate(UpdateDeviceStatusResponse * const q);
 
     void parseUpdateDeviceStatusResponse(QXmlStreamReader &xml);
 

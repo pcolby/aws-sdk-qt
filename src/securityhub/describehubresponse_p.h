@@ -31,7 +31,7 @@ class DescribeHubResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 
-    DescribeHubResponsePrivate(DescribeHubResponse * const q);
+    explicit DescribeHubResponsePrivate(DescribeHubResponse * const q);
 
     void parseDescribeHubResponse(QXmlStreamReader &xml);
 

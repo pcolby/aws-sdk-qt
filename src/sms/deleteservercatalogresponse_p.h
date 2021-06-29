@@ -31,7 +31,7 @@ class DeleteServerCatalogResponsePrivate : public SmsResponsePrivate {
 
 public:
 
-    DeleteServerCatalogResponsePrivate(DeleteServerCatalogResponse * const q);
+    explicit DeleteServerCatalogResponsePrivate(DeleteServerCatalogResponse * const q);
 
     void parseDeleteServerCatalogResponse(QXmlStreamReader &xml);
 

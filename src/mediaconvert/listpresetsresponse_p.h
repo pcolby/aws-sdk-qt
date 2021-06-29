@@ -31,7 +31,7 @@ class ListPresetsResponsePrivate : public MediaConvertResponsePrivate {
 
 public:
 
-    ListPresetsResponsePrivate(ListPresetsResponse * const q);
+    explicit ListPresetsResponsePrivate(ListPresetsResponse * const q);
 
     void parseListPresetsResponse(QXmlStreamReader &xml);
 

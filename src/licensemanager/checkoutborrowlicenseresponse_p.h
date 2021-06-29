@@ -31,7 +31,7 @@ class CheckoutBorrowLicenseResponsePrivate : public LicenseManagerResponsePrivat
 
 public:
 
-    CheckoutBorrowLicenseResponsePrivate(CheckoutBorrowLicenseResponse * const q);
+    explicit CheckoutBorrowLicenseResponsePrivate(CheckoutBorrowLicenseResponse * const q);
 
     void parseCheckoutBorrowLicenseResponse(QXmlStreamReader &xml);
 

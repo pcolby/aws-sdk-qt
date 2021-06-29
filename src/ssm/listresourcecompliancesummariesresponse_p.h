@@ -31,7 +31,7 @@ class ListResourceComplianceSummariesResponsePrivate : public SsmResponsePrivate
 
 public:
 
-    ListResourceComplianceSummariesResponsePrivate(ListResourceComplianceSummariesResponse * const q);
+    explicit ListResourceComplianceSummariesResponsePrivate(ListResourceComplianceSummariesResponse * const q);
 
     void parseListResourceComplianceSummariesResponse(QXmlStreamReader &xml);
 

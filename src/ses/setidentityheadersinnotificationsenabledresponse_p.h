@@ -31,7 +31,7 @@ class SetIdentityHeadersInNotificationsEnabledResponsePrivate : public SesRespon
 
 public:
 
-    SetIdentityHeadersInNotificationsEnabledResponsePrivate(SetIdentityHeadersInNotificationsEnabledResponse * const q);
+    explicit SetIdentityHeadersInNotificationsEnabledResponsePrivate(SetIdentityHeadersInNotificationsEnabledResponse * const q);
 
     void parseSetIdentityHeadersInNotificationsEnabledResponse(QXmlStreamReader &xml);
 

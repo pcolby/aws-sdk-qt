@@ -31,7 +31,7 @@ class ListBuildBatchesForProjectResponsePrivate : public CodeBuildResponsePrivat
 
 public:
 
-    ListBuildBatchesForProjectResponsePrivate(ListBuildBatchesForProjectResponse * const q);
+    explicit ListBuildBatchesForProjectResponsePrivate(ListBuildBatchesForProjectResponse * const q);
 
     void parseListBuildBatchesForProjectResponse(QXmlStreamReader &xml);
 

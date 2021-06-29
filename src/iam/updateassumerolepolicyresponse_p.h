@@ -31,7 +31,7 @@ class UpdateAssumeRolePolicyResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    UpdateAssumeRolePolicyResponsePrivate(UpdateAssumeRolePolicyResponse * const q);
+    explicit UpdateAssumeRolePolicyResponsePrivate(UpdateAssumeRolePolicyResponse * const q);
 
     void parseUpdateAssumeRolePolicyResponse(QXmlStreamReader &xml);
 

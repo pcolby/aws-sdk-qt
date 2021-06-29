@@ -29,7 +29,7 @@ class finspaceResponsePrivate {
 
 public:
 
-    finspaceResponsePrivate(finspaceResponse * const q);
+    explicit finspaceResponsePrivate(finspaceResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

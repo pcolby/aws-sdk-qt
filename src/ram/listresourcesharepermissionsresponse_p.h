@@ -31,7 +31,7 @@ class ListResourceSharePermissionsResponsePrivate : public RamResponsePrivate {
 
 public:
 
-    ListResourceSharePermissionsResponsePrivate(ListResourceSharePermissionsResponse * const q);
+    explicit ListResourceSharePermissionsResponsePrivate(ListResourceSharePermissionsResponse * const q);
 
     void parseListResourceSharePermissionsResponse(QXmlStreamReader &xml);
 

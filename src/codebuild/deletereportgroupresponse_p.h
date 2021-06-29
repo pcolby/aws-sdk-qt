@@ -31,7 +31,7 @@ class DeleteReportGroupResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 
-    DeleteReportGroupResponsePrivate(DeleteReportGroupResponse * const q);
+    explicit DeleteReportGroupResponsePrivate(DeleteReportGroupResponse * const q);
 
     void parseDeleteReportGroupResponse(QXmlStreamReader &xml);
 

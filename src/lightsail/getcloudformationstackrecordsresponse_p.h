@@ -31,7 +31,7 @@ class GetCloudFormationStackRecordsResponsePrivate : public LightsailResponsePri
 
 public:
 
-    GetCloudFormationStackRecordsResponsePrivate(GetCloudFormationStackRecordsResponse * const q);
+    explicit GetCloudFormationStackRecordsResponsePrivate(GetCloudFormationStackRecordsResponse * const q);
 
     void parseGetCloudFormationStackRecordsResponse(QXmlStreamReader &xml);
 

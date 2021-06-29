@@ -31,7 +31,7 @@ class AdminGetDeviceResponsePrivate : public CognitoIdentityProviderResponsePriv
 
 public:
 
-    AdminGetDeviceResponsePrivate(AdminGetDeviceResponse * const q);
+    explicit AdminGetDeviceResponsePrivate(AdminGetDeviceResponse * const q);
 
     void parseAdminGetDeviceResponse(QXmlStreamReader &xml);
 

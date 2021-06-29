@@ -31,7 +31,7 @@ class DescribeTableRestoreStatusResponsePrivate : public RedshiftResponsePrivate
 
 public:
 
-    DescribeTableRestoreStatusResponsePrivate(DescribeTableRestoreStatusResponse * const q);
+    explicit DescribeTableRestoreStatusResponsePrivate(DescribeTableRestoreStatusResponse * const q);
 
     void parseDescribeTableRestoreStatusResponse(QXmlStreamReader &xml);
 

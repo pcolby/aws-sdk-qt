@@ -30,7 +30,7 @@ class BraketClient;
 class BraketClientPrivate {
 
 public:
-    BraketClientPrivate(BraketClient * const q);
+    explicit BraketClientPrivate(BraketClient * const q);
 
 protected:
     BraketClient * const q_ptr; ///< Internal q-pointer.

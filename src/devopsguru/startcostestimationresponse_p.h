@@ -31,7 +31,7 @@ class StartCostEstimationResponsePrivate : public DevOpsGuruResponsePrivate {
 
 public:
 
-    StartCostEstimationResponsePrivate(StartCostEstimationResponse * const q);
+    explicit StartCostEstimationResponsePrivate(StartCostEstimationResponse * const q);
 
     void parseStartCostEstimationResponse(QXmlStreamReader &xml);
 

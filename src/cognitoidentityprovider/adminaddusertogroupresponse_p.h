@@ -31,7 +31,7 @@ class AdminAddUserToGroupResponsePrivate : public CognitoIdentityProviderRespons
 
 public:
 
-    AdminAddUserToGroupResponsePrivate(AdminAddUserToGroupResponse * const q);
+    explicit AdminAddUserToGroupResponsePrivate(AdminAddUserToGroupResponse * const q);
 
     void parseAdminAddUserToGroupResponse(QXmlStreamReader &xml);
 

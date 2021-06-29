@@ -31,7 +31,7 @@ class DeleteDhcpOptionsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DeleteDhcpOptionsResponsePrivate(DeleteDhcpOptionsResponse * const q);
+    explicit DeleteDhcpOptionsResponsePrivate(DeleteDhcpOptionsResponse * const q);
 
     void parseDeleteDhcpOptionsResponse(QXmlStreamReader &xml);
 

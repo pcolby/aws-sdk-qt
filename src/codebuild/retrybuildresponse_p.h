@@ -31,7 +31,7 @@ class RetryBuildResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 
-    RetryBuildResponsePrivate(RetryBuildResponse * const q);
+    explicit RetryBuildResponsePrivate(RetryBuildResponse * const q);
 
     void parseRetryBuildResponse(QXmlStreamReader &xml);
 

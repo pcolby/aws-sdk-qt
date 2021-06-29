@@ -31,7 +31,7 @@ class RegisterTargetsResponsePrivate : public ElasticLoadBalancingv2ResponsePriv
 
 public:
 
-    RegisterTargetsResponsePrivate(RegisterTargetsResponse * const q);
+    explicit RegisterTargetsResponsePrivate(RegisterTargetsResponse * const q);
 
     void parseRegisterTargetsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class BatchAssociateServiceActionWithProvisioningArtifactResponsePrivate : publi
 
 public:
 
-    BatchAssociateServiceActionWithProvisioningArtifactResponsePrivate(BatchAssociateServiceActionWithProvisioningArtifactResponse * const q);
+    explicit BatchAssociateServiceActionWithProvisioningArtifactResponsePrivate(BatchAssociateServiceActionWithProvisioningArtifactResponse * const q);
 
     void parseBatchAssociateServiceActionWithProvisioningArtifactResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DisassociateCertificateResponsePrivate : public MediaConvertResponsePrivat
 
 public:
 
-    DisassociateCertificateResponsePrivate(DisassociateCertificateResponse * const q);
+    explicit DisassociateCertificateResponsePrivate(DisassociateCertificateResponse * const q);
 
     void parseDisassociateCertificateResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateMailboxQuotaResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 
-    UpdateMailboxQuotaResponsePrivate(UpdateMailboxQuotaResponse * const q);
+    explicit UpdateMailboxQuotaResponsePrivate(UpdateMailboxQuotaResponse * const q);
 
     void parseUpdateMailboxQuotaResponse(QXmlStreamReader &xml);
 

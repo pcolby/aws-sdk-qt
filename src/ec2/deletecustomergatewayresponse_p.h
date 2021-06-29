@@ -31,7 +31,7 @@ class DeleteCustomerGatewayResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DeleteCustomerGatewayResponsePrivate(DeleteCustomerGatewayResponse * const q);
+    explicit DeleteCustomerGatewayResponsePrivate(DeleteCustomerGatewayResponse * const q);
 
     void parseDeleteCustomerGatewayResponse(QXmlStreamReader &xml);
 

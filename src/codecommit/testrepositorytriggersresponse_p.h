@@ -31,7 +31,7 @@ class TestRepositoryTriggersResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 
-    TestRepositoryTriggersResponsePrivate(TestRepositoryTriggersResponse * const q);
+    explicit TestRepositoryTriggersResponsePrivate(TestRepositoryTriggersResponse * const q);
 
     void parseTestRepositoryTriggersResponse(QXmlStreamReader &xml);
 

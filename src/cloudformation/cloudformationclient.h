@@ -151,7 +151,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    CloudFormationClient(
+    explicit CloudFormationClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -216,7 +216,7 @@ public slots:
 protected:
     /// @cond internal
     CloudFormationClientPrivate * const d_ptr; ///< Internal d-pointer.
-    CloudFormationClient(CloudFormationClientPrivate * const d);
+    explicit CloudFormationClient(CloudFormationClientPrivate * const d);
     /// @endcond
 
 private:

@@ -29,7 +29,7 @@ class AppConfigResponsePrivate {
 
 public:
 
-    AppConfigResponsePrivate(AppConfigResponse * const q);
+    explicit AppConfigResponsePrivate(AppConfigResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

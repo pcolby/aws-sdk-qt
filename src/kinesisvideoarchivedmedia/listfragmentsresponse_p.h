@@ -31,7 +31,7 @@ class ListFragmentsResponsePrivate : public KinesisVideoArchivedMediaResponsePri
 
 public:
 
-    ListFragmentsResponsePrivate(ListFragmentsResponse * const q);
+    explicit ListFragmentsResponsePrivate(ListFragmentsResponse * const q);
 
     void parseListFragmentsResponse(QXmlStreamReader &xml);
 

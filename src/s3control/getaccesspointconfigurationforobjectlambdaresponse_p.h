@@ -31,7 +31,7 @@ class GetAccessPointConfigurationForObjectLambdaResponsePrivate : public S3Contr
 
 public:
 
-    GetAccessPointConfigurationForObjectLambdaResponsePrivate(GetAccessPointConfigurationForObjectLambdaResponse * const q);
+    explicit GetAccessPointConfigurationForObjectLambdaResponsePrivate(GetAccessPointConfigurationForObjectLambdaResponse * const q);
 
     void parseGetAccessPointConfigurationForObjectLambdaResponse(QXmlStreamReader &xml);
 

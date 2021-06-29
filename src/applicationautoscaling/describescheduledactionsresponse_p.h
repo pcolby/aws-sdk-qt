@@ -31,7 +31,7 @@ class DescribeScheduledActionsResponsePrivate : public ApplicationAutoScalingRes
 
 public:
 
-    DescribeScheduledActionsResponsePrivate(DescribeScheduledActionsResponse * const q);
+    explicit DescribeScheduledActionsResponsePrivate(DescribeScheduledActionsResponse * const q);
 
     void parseDescribeScheduledActionsResponse(QXmlStreamReader &xml);
 

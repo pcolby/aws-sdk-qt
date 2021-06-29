@@ -31,7 +31,7 @@ class PutKeyPolicyResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    PutKeyPolicyResponsePrivate(PutKeyPolicyResponse * const q);
+    explicit PutKeyPolicyResponsePrivate(PutKeyPolicyResponse * const q);
 
     void parsePutKeyPolicyResponse(QXmlStreamReader &xml);
 

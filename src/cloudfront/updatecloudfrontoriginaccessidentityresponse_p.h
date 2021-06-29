@@ -31,7 +31,7 @@ class UpdateCloudFrontOriginAccessIdentityResponsePrivate : public CloudFrontRes
 
 public:
 
-    UpdateCloudFrontOriginAccessIdentityResponsePrivate(UpdateCloudFrontOriginAccessIdentityResponse * const q);
+    explicit UpdateCloudFrontOriginAccessIdentityResponsePrivate(UpdateCloudFrontOriginAccessIdentityResponse * const q);
 
     void parseUpdateCloudFrontOriginAccessIdentityResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateContextResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    CreateContextResponsePrivate(CreateContextResponse * const q);
+    explicit CreateContextResponsePrivate(CreateContextResponse * const q);
 
     void parseCreateContextResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListBranchesResponsePrivate : public AmplifyResponsePrivate {
 
 public:
 
-    ListBranchesResponsePrivate(ListBranchesResponse * const q);
+    explicit ListBranchesResponsePrivate(ListBranchesResponse * const q);
 
     void parseListBranchesResponse(QXmlStreamReader &xml);
 

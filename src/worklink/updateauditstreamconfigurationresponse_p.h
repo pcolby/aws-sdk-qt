@@ -31,7 +31,7 @@ class UpdateAuditStreamConfigurationResponsePrivate : public WorkLinkResponsePri
 
 public:
 
-    UpdateAuditStreamConfigurationResponsePrivate(UpdateAuditStreamConfigurationResponse * const q);
+    explicit UpdateAuditStreamConfigurationResponsePrivate(UpdateAuditStreamConfigurationResponse * const q);
 
     void parseUpdateAuditStreamConfigurationResponse(QXmlStreamReader &xml);
 

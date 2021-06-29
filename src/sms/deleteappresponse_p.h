@@ -31,7 +31,7 @@ class DeleteAppResponsePrivate : public SmsResponsePrivate {
 
 public:
 
-    DeleteAppResponsePrivate(DeleteAppResponse * const q);
+    explicit DeleteAppResponsePrivate(DeleteAppResponse * const q);
 
     void parseDeleteAppResponse(QXmlStreamReader &xml);
 

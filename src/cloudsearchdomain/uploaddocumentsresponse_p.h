@@ -31,7 +31,7 @@ class UploadDocumentsResponsePrivate : public CloudSearchDomainResponsePrivate {
 
 public:
 
-    UploadDocumentsResponsePrivate(UploadDocumentsResponse * const q);
+    explicit UploadDocumentsResponsePrivate(UploadDocumentsResponse * const q);
 
     void parseUploadDocumentsResponse(QXmlStreamReader &xml);
 

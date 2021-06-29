@@ -31,7 +31,7 @@ class DescribeInstanceStatusResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeInstanceStatusResponsePrivate(DescribeInstanceStatusResponse * const q);
+    explicit DescribeInstanceStatusResponsePrivate(DescribeInstanceStatusResponse * const q);
 
     void parseDescribeInstanceStatusResponse(QXmlStreamReader &xml);
 

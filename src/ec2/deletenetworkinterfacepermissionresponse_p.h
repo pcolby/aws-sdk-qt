@@ -31,7 +31,7 @@ class DeleteNetworkInterfacePermissionResponsePrivate : public Ec2ResponsePrivat
 
 public:
 
-    DeleteNetworkInterfacePermissionResponsePrivate(DeleteNetworkInterfacePermissionResponse * const q);
+    explicit DeleteNetworkInterfacePermissionResponsePrivate(DeleteNetworkInterfacePermissionResponse * const q);
 
     void parseDeleteNetworkInterfacePermissionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListBackendJobsResponsePrivate : public AmplifyBackendResponsePrivate {
 
 public:
 
-    ListBackendJobsResponsePrivate(ListBackendJobsResponse * const q);
+    explicit ListBackendJobsResponsePrivate(ListBackendJobsResponse * const q);
 
     void parseListBackendJobsResponse(QXmlStreamReader &xml);
 

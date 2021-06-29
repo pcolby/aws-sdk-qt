@@ -85,7 +85,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    MqClient(
+    explicit MqClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -117,7 +117,7 @@ public slots:
 protected:
     /// @cond internal
     MqClientPrivate * const d_ptr; ///< Internal d-pointer.
-    MqClient(MqClientPrivate * const d);
+    explicit MqClient(MqClientPrivate * const d);
     /// @endcond
 
 private:

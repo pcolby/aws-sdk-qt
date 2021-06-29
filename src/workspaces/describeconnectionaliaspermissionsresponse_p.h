@@ -31,7 +31,7 @@ class DescribeConnectionAliasPermissionsResponsePrivate : public WorkSpacesRespo
 
 public:
 
-    DescribeConnectionAliasPermissionsResponsePrivate(DescribeConnectionAliasPermissionsResponse * const q);
+    explicit DescribeConnectionAliasPermissionsResponsePrivate(DescribeConnectionAliasPermissionsResponse * const q);
 
     void parseDescribeConnectionAliasPermissionsResponse(QXmlStreamReader &xml);
 

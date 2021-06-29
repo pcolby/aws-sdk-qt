@@ -31,7 +31,7 @@ class ImportPlaybackKeyPairResponsePrivate : public IvsResponsePrivate {
 
 public:
 
-    ImportPlaybackKeyPairResponsePrivate(ImportPlaybackKeyPairResponse * const q);
+    explicit ImportPlaybackKeyPairResponsePrivate(ImportPlaybackKeyPairResponse * const q);
 
     void parseImportPlaybackKeyPairResponse(QXmlStreamReader &xml);
 

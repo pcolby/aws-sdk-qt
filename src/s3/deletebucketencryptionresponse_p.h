@@ -31,7 +31,7 @@ class DeleteBucketEncryptionResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    DeleteBucketEncryptionResponsePrivate(DeleteBucketEncryptionResponse * const q);
+    explicit DeleteBucketEncryptionResponsePrivate(DeleteBucketEncryptionResponse * const q);
 
     void parseDeleteBucketEncryptionResponse(QXmlStreamReader &xml);
 

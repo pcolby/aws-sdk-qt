@@ -31,7 +31,7 @@ class RemovePermissionResponsePrivate : public CodeGuruProfilerResponsePrivate {
 
 public:
 
-    RemovePermissionResponsePrivate(RemovePermissionResponse * const q);
+    explicit RemovePermissionResponsePrivate(RemovePermissionResponse * const q);
 
     void parseRemovePermissionResponse(QXmlStreamReader &xml);
 

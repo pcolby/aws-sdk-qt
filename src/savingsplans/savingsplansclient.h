@@ -59,7 +59,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    SavingsPlansClient(
+    explicit SavingsPlansClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -78,7 +78,7 @@ public slots:
 protected:
     /// @cond internal
     SavingsPlansClientPrivate * const d_ptr; ///< Internal d-pointer.
-    SavingsPlansClient(SavingsPlansClientPrivate * const d);
+    explicit SavingsPlansClient(SavingsPlansClientPrivate * const d);
     /// @endcond
 
 private:

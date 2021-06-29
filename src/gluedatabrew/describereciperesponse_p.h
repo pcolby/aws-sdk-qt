@@ -31,7 +31,7 @@ class DescribeRecipeResponsePrivate : public GlueDataBrewResponsePrivate {
 
 public:
 
-    DescribeRecipeResponsePrivate(DescribeRecipeResponse * const q);
+    explicit DescribeRecipeResponsePrivate(DescribeRecipeResponse * const q);
 
     void parseDescribeRecipeResponse(QXmlStreamReader &xml);
 

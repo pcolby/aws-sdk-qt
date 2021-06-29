@@ -31,7 +31,7 @@ class StartImageBuilderResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 
-    StartImageBuilderResponsePrivate(StartImageBuilderResponse * const q);
+    explicit StartImageBuilderResponsePrivate(StartImageBuilderResponse * const q);
 
     void parseStartImageBuilderResponse(QXmlStreamReader &xml);
 

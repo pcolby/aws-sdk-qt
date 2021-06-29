@@ -31,7 +31,7 @@ class CreateLoggerDefinitionResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 
-    CreateLoggerDefinitionResponsePrivate(CreateLoggerDefinitionResponse * const q);
+    explicit CreateLoggerDefinitionResponsePrivate(CreateLoggerDefinitionResponse * const q);
 
     void parseCreateLoggerDefinitionResponse(QXmlStreamReader &xml);
 

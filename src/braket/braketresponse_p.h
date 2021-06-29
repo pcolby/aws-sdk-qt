@@ -29,7 +29,7 @@ class BraketResponsePrivate {
 
 public:
 
-    BraketResponsePrivate(BraketResponse * const q);
+    explicit BraketResponsePrivate(BraketResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

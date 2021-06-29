@@ -31,7 +31,7 @@ class AddJobFlowStepsResponsePrivate : public EmrResponsePrivate {
 
 public:
 
-    AddJobFlowStepsResponsePrivate(AddJobFlowStepsResponse * const q);
+    explicit AddJobFlowStepsResponsePrivate(AddJobFlowStepsResponse * const q);
 
     void parseAddJobFlowStepsResponse(QXmlStreamReader &xml);
 

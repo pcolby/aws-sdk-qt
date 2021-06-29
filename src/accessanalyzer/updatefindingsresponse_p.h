@@ -31,7 +31,7 @@ class UpdateFindingsResponsePrivate : public AccessAnalyzerResponsePrivate {
 
 public:
 
-    UpdateFindingsResponsePrivate(UpdateFindingsResponse * const q);
+    explicit UpdateFindingsResponsePrivate(UpdateFindingsResponse * const q);
 
     void parseUpdateFindingsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class EnableDomainTransferLockResponsePrivate : public Route53DomainsResponsePri
 
 public:
 
-    EnableDomainTransferLockResponsePrivate(EnableDomainTransferLockResponse * const q);
+    explicit EnableDomainTransferLockResponsePrivate(EnableDomainTransferLockResponse * const q);
 
     void parseEnableDomainTransferLockResponse(QXmlStreamReader &xml);
 

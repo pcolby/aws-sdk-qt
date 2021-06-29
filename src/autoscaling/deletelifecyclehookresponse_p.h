@@ -31,7 +31,7 @@ class DeleteLifecycleHookResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 
-    DeleteLifecycleHookResponsePrivate(DeleteLifecycleHookResponse * const q);
+    explicit DeleteLifecycleHookResponsePrivate(DeleteLifecycleHookResponse * const q);
 
     void parseDeleteLifecycleHookResponse(QXmlStreamReader &xml);
 

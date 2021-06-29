@@ -31,7 +31,7 @@ class CreateTemplateResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    CreateTemplateResponsePrivate(CreateTemplateResponse * const q);
+    explicit CreateTemplateResponsePrivate(CreateTemplateResponse * const q);
 
     void parseCreateTemplateResponse(QXmlStreamReader &xml);
 

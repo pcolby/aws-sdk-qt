@@ -31,7 +31,7 @@ class CreateEndpointGroupResponsePrivate : public GlobalAcceleratorResponsePriva
 
 public:
 
-    CreateEndpointGroupResponsePrivate(CreateEndpointGroupResponse * const q);
+    explicit CreateEndpointGroupResponsePrivate(CreateEndpointGroupResponse * const q);
 
     void parseCreateEndpointGroupResponse(QXmlStreamReader &xml);
 

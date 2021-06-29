@@ -31,7 +31,7 @@ class PutReportDefinitionResponsePrivate : public CostandUsageReportServiceRespo
 
 public:
 
-    PutReportDefinitionResponsePrivate(PutReportDefinitionResponse * const q);
+    explicit PutReportDefinitionResponsePrivate(PutReportDefinitionResponse * const q);
 
     void parsePutReportDefinitionResponse(QXmlStreamReader &xml);
 

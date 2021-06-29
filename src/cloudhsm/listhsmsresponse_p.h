@@ -31,7 +31,7 @@ class ListHsmsResponsePrivate : public CloudHSMResponsePrivate {
 
 public:
 
-    ListHsmsResponsePrivate(ListHsmsResponse * const q);
+    explicit ListHsmsResponsePrivate(ListHsmsResponse * const q);
 
     void parseListHsmsResponse(QXmlStreamReader &xml);
 

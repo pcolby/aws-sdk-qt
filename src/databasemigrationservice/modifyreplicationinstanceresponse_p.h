@@ -31,7 +31,7 @@ class ModifyReplicationInstanceResponsePrivate : public DatabaseMigrationService
 
 public:
 
-    ModifyReplicationInstanceResponsePrivate(ModifyReplicationInstanceResponse * const q);
+    explicit ModifyReplicationInstanceResponsePrivate(ModifyReplicationInstanceResponse * const q);
 
     void parseModifyReplicationInstanceResponse(QXmlStreamReader &xml);
 

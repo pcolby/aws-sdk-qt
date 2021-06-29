@@ -55,7 +55,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    IoTSecureTunnelingClient(
+    explicit IoTSecureTunnelingClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -72,7 +72,7 @@ public slots:
 protected:
     /// @cond internal
     IoTSecureTunnelingClientPrivate * const d_ptr; ///< Internal d-pointer.
-    IoTSecureTunnelingClient(IoTSecureTunnelingClientPrivate * const d);
+    explicit IoTSecureTunnelingClient(IoTSecureTunnelingClientPrivate * const d);
     /// @endcond
 
 private:

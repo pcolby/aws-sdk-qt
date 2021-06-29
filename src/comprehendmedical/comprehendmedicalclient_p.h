@@ -30,7 +30,7 @@ class ComprehendMedicalClient;
 class ComprehendMedicalClientPrivate {
 
 public:
-    ComprehendMedicalClientPrivate(ComprehendMedicalClient * const q);
+    explicit ComprehendMedicalClientPrivate(ComprehendMedicalClient * const q);
 
 protected:
     ComprehendMedicalClient * const q_ptr; ///< Internal q-pointer.

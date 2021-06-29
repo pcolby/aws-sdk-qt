@@ -31,7 +31,7 @@ class UpdateAccountCustomizationResponsePrivate : public QuickSightResponsePriva
 
 public:
 
-    UpdateAccountCustomizationResponsePrivate(UpdateAccountCustomizationResponse * const q);
+    explicit UpdateAccountCustomizationResponsePrivate(UpdateAccountCustomizationResponse * const q);
 
     void parseUpdateAccountCustomizationResponse(QXmlStreamReader &xml);
 

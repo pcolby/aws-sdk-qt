@@ -30,7 +30,7 @@ class PinpointSMSVoiceClient;
 class PinpointSMSVoiceClientPrivate {
 
 public:
-    PinpointSMSVoiceClientPrivate(PinpointSMSVoiceClient * const q);
+    explicit PinpointSMSVoiceClientPrivate(PinpointSMSVoiceClient * const q);
 
 protected:
     PinpointSMSVoiceClient * const q_ptr; ///< Internal q-pointer.

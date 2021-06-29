@@ -31,7 +31,7 @@ class DecryptResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    DecryptResponsePrivate(DecryptResponse * const q);
+    explicit DecryptResponsePrivate(DecryptResponse * const q);
 
     void parseDecryptResponse(QXmlStreamReader &xml);
 

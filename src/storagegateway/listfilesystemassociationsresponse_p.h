@@ -31,7 +31,7 @@ class ListFileSystemAssociationsResponsePrivate : public StorageGatewayResponseP
 
 public:
 
-    ListFileSystemAssociationsResponsePrivate(ListFileSystemAssociationsResponse * const q);
+    explicit ListFileSystemAssociationsResponsePrivate(ListFileSystemAssociationsResponse * const q);
 
     void parseListFileSystemAssociationsResponse(QXmlStreamReader &xml);
 

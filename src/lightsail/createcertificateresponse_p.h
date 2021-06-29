@@ -31,7 +31,7 @@ class CreateCertificateResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    CreateCertificateResponsePrivate(CreateCertificateResponse * const q);
+    explicit CreateCertificateResponsePrivate(CreateCertificateResponse * const q);
 
     void parseCreateCertificateResponse(QXmlStreamReader &xml);
 

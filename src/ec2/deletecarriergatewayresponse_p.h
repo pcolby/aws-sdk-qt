@@ -31,7 +31,7 @@ class DeleteCarrierGatewayResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DeleteCarrierGatewayResponsePrivate(DeleteCarrierGatewayResponse * const q);
+    explicit DeleteCarrierGatewayResponsePrivate(DeleteCarrierGatewayResponse * const q);
 
     void parseDeleteCarrierGatewayResponse(QXmlStreamReader &xml);
 

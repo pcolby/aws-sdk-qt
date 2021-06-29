@@ -31,7 +31,7 @@ class ListChangeSetsResponsePrivate : public MarketplaceCatalogResponsePrivate {
 
 public:
 
-    ListChangeSetsResponsePrivate(ListChangeSetsResponse * const q);
+    explicit ListChangeSetsResponsePrivate(ListChangeSetsResponse * const q);
 
     void parseListChangeSetsResponse(QXmlStreamReader &xml);
 

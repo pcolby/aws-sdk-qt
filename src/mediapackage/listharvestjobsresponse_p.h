@@ -31,7 +31,7 @@ class ListHarvestJobsResponsePrivate : public MediaPackageResponsePrivate {
 
 public:
 
-    ListHarvestJobsResponsePrivate(ListHarvestJobsResponse * const q);
+    explicit ListHarvestJobsResponsePrivate(ListHarvestJobsResponse * const q);
 
     void parseListHarvestJobsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateGrantVersionResponsePrivate : public LicenseManagerResponsePrivate {
 
 public:
 
-    CreateGrantVersionResponsePrivate(CreateGrantVersionResponse * const q);
+    explicit CreateGrantVersionResponsePrivate(CreateGrantVersionResponse * const q);
 
     void parseCreateGrantVersionResponse(QXmlStreamReader &xml);
 

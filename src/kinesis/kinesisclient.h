@@ -97,7 +97,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    KinesisClient(
+    explicit KinesisClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -135,7 +135,7 @@ public slots:
 protected:
     /// @cond internal
     KinesisClientPrivate * const d_ptr; ///< Internal d-pointer.
-    KinesisClient(KinesisClientPrivate * const d);
+    explicit KinesisClient(KinesisClientPrivate * const d);
     /// @endcond
 
 private:

@@ -31,7 +31,7 @@ class ModifyReplicationGroupShardConfigurationResponsePrivate : public ElastiCac
 
 public:
 
-    ModifyReplicationGroupShardConfigurationResponsePrivate(ModifyReplicationGroupShardConfigurationResponse * const q);
+    explicit ModifyReplicationGroupShardConfigurationResponsePrivate(ModifyReplicationGroupShardConfigurationResponse * const q);
 
     void parseModifyReplicationGroupShardConfigurationResponse(QXmlStreamReader &xml);
 

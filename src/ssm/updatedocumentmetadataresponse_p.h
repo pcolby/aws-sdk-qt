@@ -31,7 +31,7 @@ class UpdateDocumentMetadataResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    UpdateDocumentMetadataResponsePrivate(UpdateDocumentMetadataResponse * const q);
+    explicit UpdateDocumentMetadataResponsePrivate(UpdateDocumentMetadataResponse * const q);
 
     void parseUpdateDocumentMetadataResponse(QXmlStreamReader &xml);
 

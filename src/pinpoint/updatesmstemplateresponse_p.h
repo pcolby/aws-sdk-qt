@@ -31,7 +31,7 @@ class UpdateSmsTemplateResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    UpdateSmsTemplateResponsePrivate(UpdateSmsTemplateResponse * const q);
+    explicit UpdateSmsTemplateResponsePrivate(UpdateSmsTemplateResponse * const q);
 
     void parseUpdateSmsTemplateResponse(QXmlStreamReader &xml);
 

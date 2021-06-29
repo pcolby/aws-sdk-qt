@@ -31,7 +31,7 @@ class DescribeMaintenanceWindowsResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    DescribeMaintenanceWindowsResponsePrivate(DescribeMaintenanceWindowsResponse * const q);
+    explicit DescribeMaintenanceWindowsResponsePrivate(DescribeMaintenanceWindowsResponse * const q);
 
     void parseDescribeMaintenanceWindowsResponse(QXmlStreamReader &xml);
 

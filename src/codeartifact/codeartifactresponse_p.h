@@ -29,7 +29,7 @@ class CodeArtifactResponsePrivate {
 
 public:
 
-    CodeArtifactResponsePrivate(CodeArtifactResponse * const q);
+    explicit CodeArtifactResponsePrivate(CodeArtifactResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

@@ -31,7 +31,7 @@ class CreateNFSFileShareResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 
-    CreateNFSFileShareResponsePrivate(CreateNFSFileShareResponse * const q);
+    explicit CreateNFSFileShareResponsePrivate(CreateNFSFileShareResponse * const q);
 
     void parseCreateNFSFileShareResponse(QXmlStreamReader &xml);
 

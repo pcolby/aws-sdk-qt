@@ -31,7 +31,7 @@ class ListGroupMembersResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 
-    ListGroupMembersResponsePrivate(ListGroupMembersResponse * const q);
+    explicit ListGroupMembersResponsePrivate(ListGroupMembersResponse * const q);
 
     void parseListGroupMembersResponse(QXmlStreamReader &xml);
 

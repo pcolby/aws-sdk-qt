@@ -31,7 +31,7 @@ class GetBucketAccelerateConfigurationResponsePrivate : public S3ResponsePrivate
 
 public:
 
-    GetBucketAccelerateConfigurationResponsePrivate(GetBucketAccelerateConfigurationResponse * const q);
+    explicit GetBucketAccelerateConfigurationResponsePrivate(GetBucketAccelerateConfigurationResponse * const q);
 
     void parseGetBucketAccelerateConfigurationResponse(QXmlStreamReader &xml);
 

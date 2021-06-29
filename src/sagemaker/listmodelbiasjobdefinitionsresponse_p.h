@@ -31,7 +31,7 @@ class ListModelBiasJobDefinitionsResponsePrivate : public SageMakerResponsePriva
 
 public:
 
-    ListModelBiasJobDefinitionsResponsePrivate(ListModelBiasJobDefinitionsResponse * const q);
+    explicit ListModelBiasJobDefinitionsResponsePrivate(ListModelBiasJobDefinitionsResponse * const q);
 
     void parseListModelBiasJobDefinitionsResponse(QXmlStreamReader &xml);
 

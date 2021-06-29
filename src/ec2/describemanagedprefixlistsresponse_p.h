@@ -31,7 +31,7 @@ class DescribeManagedPrefixListsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeManagedPrefixListsResponsePrivate(DescribeManagedPrefixListsResponse * const q);
+    explicit DescribeManagedPrefixListsResponsePrivate(DescribeManagedPrefixListsResponse * const q);
 
     void parseDescribeManagedPrefixListsResponse(QXmlStreamReader &xml);
 

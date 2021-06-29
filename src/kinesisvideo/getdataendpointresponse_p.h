@@ -31,7 +31,7 @@ class GetDataEndpointResponsePrivate : public KinesisVideoResponsePrivate {
 
 public:
 
-    GetDataEndpointResponsePrivate(GetDataEndpointResponse * const q);
+    explicit GetDataEndpointResponsePrivate(GetDataEndpointResponse * const q);
 
     void parseGetDataEndpointResponse(QXmlStreamReader &xml);
 

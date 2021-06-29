@@ -31,7 +31,7 @@ class ListTextTranslationJobsResponsePrivate : public TranslateResponsePrivate {
 
 public:
 
-    ListTextTranslationJobsResponsePrivate(ListTextTranslationJobsResponse * const q);
+    explicit ListTextTranslationJobsResponsePrivate(ListTextTranslationJobsResponse * const q);
 
     void parseListTextTranslationJobsResponse(QXmlStreamReader &xml);
 

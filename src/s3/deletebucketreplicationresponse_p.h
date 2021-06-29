@@ -31,7 +31,7 @@ class DeleteBucketReplicationResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    DeleteBucketReplicationResponsePrivate(DeleteBucketReplicationResponse * const q);
+    explicit DeleteBucketReplicationResponsePrivate(DeleteBucketReplicationResponse * const q);
 
     void parseDeleteBucketReplicationResponse(QXmlStreamReader &xml);
 

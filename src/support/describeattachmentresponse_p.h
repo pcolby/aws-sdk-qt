@@ -31,7 +31,7 @@ class DescribeAttachmentResponsePrivate : public SupportResponsePrivate {
 
 public:
 
-    DescribeAttachmentResponsePrivate(DescribeAttachmentResponse * const q);
+    explicit DescribeAttachmentResponsePrivate(DescribeAttachmentResponse * const q);
 
     void parseDescribeAttachmentResponse(QXmlStreamReader &xml);
 

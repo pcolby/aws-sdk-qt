@@ -31,7 +31,7 @@ class ActivateAnomalyDetectorResponsePrivate : public LookoutMetricsResponsePriv
 
 public:
 
-    ActivateAnomalyDetectorResponsePrivate(ActivateAnomalyDetectorResponse * const q);
+    explicit ActivateAnomalyDetectorResponsePrivate(ActivateAnomalyDetectorResponse * const q);
 
     void parseActivateAnomalyDetectorResponse(QXmlStreamReader &xml);
 

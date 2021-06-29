@@ -31,7 +31,7 @@ class CalculateRouteResponsePrivate : public LocationServiceResponsePrivate {
 
 public:
 
-    CalculateRouteResponsePrivate(CalculateRouteResponse * const q);
+    explicit CalculateRouteResponsePrivate(CalculateRouteResponse * const q);
 
     void parseCalculateRouteResponse(QXmlStreamReader &xml);
 

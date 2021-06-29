@@ -31,7 +31,7 @@ class AddInstanceFleetResponsePrivate : public EmrResponsePrivate {
 
 public:
 
-    AddInstanceFleetResponsePrivate(AddInstanceFleetResponse * const q);
+    explicit AddInstanceFleetResponsePrivate(AddInstanceFleetResponse * const q);
 
     void parseAddInstanceFleetResponse(QXmlStreamReader &xml);
 

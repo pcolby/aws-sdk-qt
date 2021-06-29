@@ -31,7 +31,7 @@ class AssociateResolverRuleResponsePrivate : public Route53ResolverResponsePriva
 
 public:
 
-    AssociateResolverRuleResponsePrivate(AssociateResolverRuleResponse * const q);
+    explicit AssociateResolverRuleResponsePrivate(AssociateResolverRuleResponse * const q);
 
     void parseAssociateResolverRuleResponse(QXmlStreamReader &xml);
 

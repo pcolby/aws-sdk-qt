@@ -31,7 +31,7 @@ class PutEmailIdentityDkimAttributesResponsePrivate : public PinpointEmailRespon
 
 public:
 
-    PutEmailIdentityDkimAttributesResponsePrivate(PutEmailIdentityDkimAttributesResponse * const q);
+    explicit PutEmailIdentityDkimAttributesResponsePrivate(PutEmailIdentityDkimAttributesResponse * const q);
 
     void parsePutEmailIdentityDkimAttributesResponse(QXmlStreamReader &xml);
 

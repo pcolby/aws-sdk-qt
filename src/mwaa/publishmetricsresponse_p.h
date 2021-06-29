@@ -31,7 +31,7 @@ class PublishMetricsResponsePrivate : public MwaaResponsePrivate {
 
 public:
 
-    PublishMetricsResponsePrivate(PublishMetricsResponse * const q);
+    explicit PublishMetricsResponsePrivate(PublishMetricsResponse * const q);
 
     void parsePublishMetricsResponse(QXmlStreamReader &xml);
 

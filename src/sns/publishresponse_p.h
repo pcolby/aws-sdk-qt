@@ -31,7 +31,7 @@ class PublishResponsePrivate : public SnsResponsePrivate {
 
 public:
 
-    PublishResponsePrivate(PublishResponse * const q);
+    explicit PublishResponsePrivate(PublishResponse * const q);
 
     void parsePublishResponse(QXmlStreamReader &xml);
 

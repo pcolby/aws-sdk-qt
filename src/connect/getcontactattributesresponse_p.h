@@ -31,7 +31,7 @@ class GetContactAttributesResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    GetContactAttributesResponsePrivate(GetContactAttributesResponse * const q);
+    explicit GetContactAttributesResponsePrivate(GetContactAttributesResponse * const q);
 
     void parseGetContactAttributesResponse(QXmlStreamReader &xml);
 

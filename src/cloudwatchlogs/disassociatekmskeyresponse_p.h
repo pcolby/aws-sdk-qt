@@ -31,7 +31,7 @@ class DisassociateKmsKeyResponsePrivate : public CloudWatchLogsResponsePrivate {
 
 public:
 
-    DisassociateKmsKeyResponsePrivate(DisassociateKmsKeyResponse * const q);
+    explicit DisassociateKmsKeyResponsePrivate(DisassociateKmsKeyResponse * const q);
 
     void parseDisassociateKmsKeyResponse(QXmlStreamReader &xml);
 

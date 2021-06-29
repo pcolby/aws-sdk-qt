@@ -31,7 +31,7 @@ class DescribeTypeRegistrationResponsePrivate : public CloudFormationResponsePri
 
 public:
 
-    DescribeTypeRegistrationResponsePrivate(DescribeTypeRegistrationResponse * const q);
+    explicit DescribeTypeRegistrationResponsePrivate(DescribeTypeRegistrationResponse * const q);
 
     void parseDescribeTypeRegistrationResponse(QXmlStreamReader &xml);
 

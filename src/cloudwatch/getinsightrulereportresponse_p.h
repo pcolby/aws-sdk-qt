@@ -31,7 +31,7 @@ class GetInsightRuleReportResponsePrivate : public CloudWatchResponsePrivate {
 
 public:
 
-    GetInsightRuleReportResponsePrivate(GetInsightRuleReportResponse * const q);
+    explicit GetInsightRuleReportResponsePrivate(GetInsightRuleReportResponse * const q);
 
     void parseGetInsightRuleReportResponse(QXmlStreamReader &xml);
 

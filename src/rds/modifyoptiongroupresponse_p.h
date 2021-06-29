@@ -31,7 +31,7 @@ class ModifyOptionGroupResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    ModifyOptionGroupResponsePrivate(ModifyOptionGroupResponse * const q);
+    explicit ModifyOptionGroupResponsePrivate(ModifyOptionGroupResponse * const q);
 
     void parseModifyOptionGroupResponse(QXmlStreamReader &xml);
 

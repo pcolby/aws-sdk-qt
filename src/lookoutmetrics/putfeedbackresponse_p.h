@@ -31,7 +31,7 @@ class PutFeedbackResponsePrivate : public LookoutMetricsResponsePrivate {
 
 public:
 
-    PutFeedbackResponsePrivate(PutFeedbackResponse * const q);
+    explicit PutFeedbackResponsePrivate(PutFeedbackResponse * const q);
 
     void parsePutFeedbackResponse(QXmlStreamReader &xml);
 

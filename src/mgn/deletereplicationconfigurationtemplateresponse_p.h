@@ -31,7 +31,7 @@ class DeleteReplicationConfigurationTemplateResponsePrivate : public mgnResponse
 
 public:
 
-    DeleteReplicationConfigurationTemplateResponsePrivate(DeleteReplicationConfigurationTemplateResponse * const q);
+    explicit DeleteReplicationConfigurationTemplateResponsePrivate(DeleteReplicationConfigurationTemplateResponse * const q);
 
     void parseDeleteReplicationConfigurationTemplateResponse(QXmlStreamReader &xml);
 

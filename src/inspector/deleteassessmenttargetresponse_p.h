@@ -31,7 +31,7 @@ class DeleteAssessmentTargetResponsePrivate : public InspectorResponsePrivate {
 
 public:
 
-    DeleteAssessmentTargetResponsePrivate(DeleteAssessmentTargetResponse * const q);
+    explicit DeleteAssessmentTargetResponsePrivate(DeleteAssessmentTargetResponse * const q);
 
     void parseDeleteAssessmentTargetResponse(QXmlStreamReader &xml);
 

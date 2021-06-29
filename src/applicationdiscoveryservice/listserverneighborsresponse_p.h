@@ -31,7 +31,7 @@ class ListServerNeighborsResponsePrivate : public ApplicationDiscoveryServiceRes
 
 public:
 
-    ListServerNeighborsResponsePrivate(ListServerNeighborsResponse * const q);
+    explicit ListServerNeighborsResponsePrivate(ListServerNeighborsResponse * const q);
 
     void parseListServerNeighborsResponse(QXmlStreamReader &xml);
 

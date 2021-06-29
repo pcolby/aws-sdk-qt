@@ -30,7 +30,7 @@ class AppRegistryClient;
 class AppRegistryClientPrivate {
 
 public:
-    AppRegistryClientPrivate(AppRegistryClient * const q);
+    explicit AppRegistryClientPrivate(AppRegistryClient * const q);
 
 protected:
     AppRegistryClient * const q_ptr; ///< Internal q-pointer.

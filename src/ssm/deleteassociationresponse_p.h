@@ -31,7 +31,7 @@ class DeleteAssociationResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    DeleteAssociationResponsePrivate(DeleteAssociationResponse * const q);
+    explicit DeleteAssociationResponsePrivate(DeleteAssociationResponse * const q);
 
     void parseDeleteAssociationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateLinkResponsePrivate : public NetworkManagerResponsePrivate {
 
 public:
 
-    CreateLinkResponsePrivate(CreateLinkResponse * const q);
+    explicit CreateLinkResponsePrivate(CreateLinkResponse * const q);
 
     void parseCreateLinkResponse(QXmlStreamReader &xml);
 

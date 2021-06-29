@@ -31,7 +31,7 @@ class DeleteGlobalReplicationGroupResponsePrivate : public ElastiCacheResponsePr
 
 public:
 
-    DeleteGlobalReplicationGroupResponsePrivate(DeleteGlobalReplicationGroupResponse * const q);
+    explicit DeleteGlobalReplicationGroupResponsePrivate(DeleteGlobalReplicationGroupResponse * const q);
 
     void parseDeleteGlobalReplicationGroupResponse(QXmlStreamReader &xml);
 

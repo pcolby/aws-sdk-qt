@@ -31,7 +31,7 @@ class AssociateConfigurationItemsToApplicationResponsePrivate : public Applicati
 
 public:
 
-    AssociateConfigurationItemsToApplicationResponsePrivate(AssociateConfigurationItemsToApplicationResponse * const q);
+    explicit AssociateConfigurationItemsToApplicationResponsePrivate(AssociateConfigurationItemsToApplicationResponse * const q);
 
     void parseAssociateConfigurationItemsToApplicationResponse(QXmlStreamReader &xml);
 

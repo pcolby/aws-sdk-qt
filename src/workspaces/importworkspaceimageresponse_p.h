@@ -31,7 +31,7 @@ class ImportWorkspaceImageResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 
-    ImportWorkspaceImageResponsePrivate(ImportWorkspaceImageResponse * const q);
+    explicit ImportWorkspaceImageResponsePrivate(ImportWorkspaceImageResponse * const q);
 
     void parseImportWorkspaceImageResponse(QXmlStreamReader &xml);
 

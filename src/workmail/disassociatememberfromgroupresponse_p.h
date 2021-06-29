@@ -31,7 +31,7 @@ class DisassociateMemberFromGroupResponsePrivate : public WorkMailResponsePrivat
 
 public:
 
-    DisassociateMemberFromGroupResponsePrivate(DisassociateMemberFromGroupResponse * const q);
+    explicit DisassociateMemberFromGroupResponsePrivate(DisassociateMemberFromGroupResponse * const q);
 
     void parseDisassociateMemberFromGroupResponse(QXmlStreamReader &xml);
 

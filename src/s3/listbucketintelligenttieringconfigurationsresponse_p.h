@@ -31,7 +31,7 @@ class ListBucketIntelligentTieringConfigurationsResponsePrivate : public S3Respo
 
 public:
 
-    ListBucketIntelligentTieringConfigurationsResponsePrivate(ListBucketIntelligentTieringConfigurationsResponse * const q);
+    explicit ListBucketIntelligentTieringConfigurationsResponsePrivate(ListBucketIntelligentTieringConfigurationsResponse * const q);
 
     void parseListBucketIntelligentTieringConfigurationsResponse(QXmlStreamReader &xml);
 

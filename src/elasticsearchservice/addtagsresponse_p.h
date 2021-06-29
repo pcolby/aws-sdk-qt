@@ -31,7 +31,7 @@ class AddTagsResponsePrivate : public ElasticsearchServiceResponsePrivate {
 
 public:
 
-    AddTagsResponsePrivate(AddTagsResponse * const q);
+    explicit AddTagsResponsePrivate(AddTagsResponse * const q);
 
     void parseAddTagsResponse(QXmlStreamReader &xml);
 

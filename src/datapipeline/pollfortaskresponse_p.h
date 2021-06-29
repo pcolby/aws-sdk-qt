@@ -31,7 +31,7 @@ class PollForTaskResponsePrivate : public DataPipelineResponsePrivate {
 
 public:
 
-    PollForTaskResponsePrivate(PollForTaskResponse * const q);
+    explicit PollForTaskResponsePrivate(PollForTaskResponse * const q);
 
     void parsePollForTaskResponse(QXmlStreamReader &xml);
 

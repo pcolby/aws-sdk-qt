@@ -31,7 +31,7 @@ class CompleteAttachmentUploadResponsePrivate : public ConnectParticipantRespons
 
 public:
 
-    CompleteAttachmentUploadResponsePrivate(CompleteAttachmentUploadResponse * const q);
+    explicit CompleteAttachmentUploadResponsePrivate(CompleteAttachmentUploadResponse * const q);
 
     void parseCompleteAttachmentUploadResponse(QXmlStreamReader &xml);
 

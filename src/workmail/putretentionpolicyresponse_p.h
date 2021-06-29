@@ -31,7 +31,7 @@ class PutRetentionPolicyResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 
-    PutRetentionPolicyResponsePrivate(PutRetentionPolicyResponse * const q);
+    explicit PutRetentionPolicyResponsePrivate(PutRetentionPolicyResponse * const q);
 
     void parsePutRetentionPolicyResponse(QXmlStreamReader &xml);
 

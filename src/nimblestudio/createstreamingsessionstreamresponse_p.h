@@ -31,7 +31,7 @@ class CreateStreamingSessionStreamResponsePrivate : public NimbleStudioResponseP
 
 public:
 
-    CreateStreamingSessionStreamResponsePrivate(CreateStreamingSessionStreamResponse * const q);
+    explicit CreateStreamingSessionStreamResponsePrivate(CreateStreamingSessionStreamResponse * const q);
 
     void parseCreateStreamingSessionStreamResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeUsageReportSubscriptionsResponsePrivate : public AppStreamResponse
 
 public:
 
-    DescribeUsageReportSubscriptionsResponsePrivate(DescribeUsageReportSubscriptionsResponse * const q);
+    explicit DescribeUsageReportSubscriptionsResponsePrivate(DescribeUsageReportSubscriptionsResponse * const q);
 
     void parseDescribeUsageReportSubscriptionsResponse(QXmlStreamReader &xml);
 

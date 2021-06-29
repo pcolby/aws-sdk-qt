@@ -31,7 +31,7 @@ class AssociateDeviceWithNetworkProfileResponsePrivate : public AlexaForBusiness
 
 public:
 
-    AssociateDeviceWithNetworkProfileResponsePrivate(AssociateDeviceWithNetworkProfileResponse * const q);
+    explicit AssociateDeviceWithNetworkProfileResponsePrivate(AssociateDeviceWithNetworkProfileResponse * const q);
 
     void parseAssociateDeviceWithNetworkProfileResponse(QXmlStreamReader &xml);
 

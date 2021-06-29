@@ -30,7 +30,7 @@ class PersonalizeClient;
 class PersonalizeClientPrivate {
 
 public:
-    PersonalizeClientPrivate(PersonalizeClient * const q);
+    explicit PersonalizeClientPrivate(PersonalizeClient * const q);
 
 protected:
     PersonalizeClient * const q_ptr; ///< Internal q-pointer.

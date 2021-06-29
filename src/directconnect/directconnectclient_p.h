@@ -30,7 +30,7 @@ class DirectConnectClient;
 class DirectConnectClientPrivate {
 
 public:
-    DirectConnectClientPrivate(DirectConnectClient * const q);
+    explicit DirectConnectClientPrivate(DirectConnectClient * const q);
 
 protected:
     DirectConnectClient * const q_ptr; ///< Internal q-pointer.

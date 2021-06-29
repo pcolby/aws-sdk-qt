@@ -31,7 +31,7 @@ class DeleteAlarmResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    DeleteAlarmResponsePrivate(DeleteAlarmResponse * const q);
+    explicit DeleteAlarmResponsePrivate(DeleteAlarmResponse * const q);
 
     void parseDeleteAlarmResponse(QXmlStreamReader &xml);
 

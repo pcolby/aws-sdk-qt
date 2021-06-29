@@ -31,7 +31,7 @@ class CreateModelPackageResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    CreateModelPackageResponsePrivate(CreateModelPackageResponse * const q);
+    explicit CreateModelPackageResponsePrivate(CreateModelPackageResponse * const q);
 
     void parseCreateModelPackageResponse(QXmlStreamReader &xml);
 

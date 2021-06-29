@@ -31,7 +31,7 @@ class DisassociateRoutingProfileQueuesResponsePrivate : public ConnectResponsePr
 
 public:
 
-    DisassociateRoutingProfileQueuesResponsePrivate(DisassociateRoutingProfileQueuesResponse * const q);
+    explicit DisassociateRoutingProfileQueuesResponsePrivate(DisassociateRoutingProfileQueuesResponse * const q);
 
     void parseDisassociateRoutingProfileQueuesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeAdjustmentTypesResponsePrivate : public AutoScalingResponsePrivate
 
 public:
 
-    DescribeAdjustmentTypesResponsePrivate(DescribeAdjustmentTypesResponse * const q);
+    explicit DescribeAdjustmentTypesResponsePrivate(DescribeAdjustmentTypesResponse * const q);
 
     void parseDescribeAdjustmentTypesResponse(QXmlStreamReader &xml);
 

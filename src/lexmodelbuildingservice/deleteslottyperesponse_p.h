@@ -31,7 +31,7 @@ class DeleteSlotTypeResponsePrivate : public LexModelBuildingServiceResponsePriv
 
 public:
 
-    DeleteSlotTypeResponsePrivate(DeleteSlotTypeResponse * const q);
+    explicit DeleteSlotTypeResponsePrivate(DeleteSlotTypeResponse * const q);
 
     void parseDeleteSlotTypeResponse(QXmlStreamReader &xml);
 

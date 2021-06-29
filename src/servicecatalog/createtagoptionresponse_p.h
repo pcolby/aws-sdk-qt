@@ -31,7 +31,7 @@ class CreateTagOptionResponsePrivate : public ServiceCatalogResponsePrivate {
 
 public:
 
-    CreateTagOptionResponsePrivate(CreateTagOptionResponse * const q);
+    explicit CreateTagOptionResponsePrivate(CreateTagOptionResponse * const q);
 
     void parseCreateTagOptionResponse(QXmlStreamReader &xml);
 

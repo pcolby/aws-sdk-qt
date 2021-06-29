@@ -31,7 +31,7 @@ class DeletePartitionResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    DeletePartitionResponsePrivate(DeletePartitionResponse * const q);
+    explicit DeletePartitionResponsePrivate(DeletePartitionResponse * const q);
 
     void parseDeletePartitionResponse(QXmlStreamReader &xml);
 

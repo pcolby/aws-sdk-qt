@@ -31,7 +31,7 @@ class CreateChannelMembershipResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    CreateChannelMembershipResponsePrivate(CreateChannelMembershipResponse * const q);
+    explicit CreateChannelMembershipResponsePrivate(CreateChannelMembershipResponse * const q);
 
     void parseCreateChannelMembershipResponse(QXmlStreamReader &xml);
 

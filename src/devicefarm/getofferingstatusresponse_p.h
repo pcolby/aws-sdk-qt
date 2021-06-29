@@ -31,7 +31,7 @@ class GetOfferingStatusResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    GetOfferingStatusResponsePrivate(GetOfferingStatusResponse * const q);
+    explicit GetOfferingStatusResponsePrivate(GetOfferingStatusResponse * const q);
 
     void parseGetOfferingStatusResponse(QXmlStreamReader &xml);
 

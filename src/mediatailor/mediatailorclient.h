@@ -103,7 +103,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    MediaTailorClient(
+    explicit MediaTailorClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -144,7 +144,7 @@ public slots:
 protected:
     /// @cond internal
     MediaTailorClientPrivate * const d_ptr; ///< Internal d-pointer.
-    MediaTailorClient(MediaTailorClientPrivate * const d);
+    explicit MediaTailorClient(MediaTailorClientPrivate * const d);
     /// @endcond
 
 private:

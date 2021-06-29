@@ -31,7 +31,7 @@ class CreateDBClusterSnapshotResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    CreateDBClusterSnapshotResponsePrivate(CreateDBClusterSnapshotResponse * const q);
+    explicit CreateDBClusterSnapshotResponsePrivate(CreateDBClusterSnapshotResponse * const q);
 
     void parseCreateDBClusterSnapshotResponse(QXmlStreamReader &xml);
 

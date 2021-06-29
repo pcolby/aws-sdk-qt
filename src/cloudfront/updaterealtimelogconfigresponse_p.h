@@ -31,7 +31,7 @@ class UpdateRealtimeLogConfigResponsePrivate : public CloudFrontResponsePrivate 
 
 public:
 
-    UpdateRealtimeLogConfigResponsePrivate(UpdateRealtimeLogConfigResponse * const q);
+    explicit UpdateRealtimeLogConfigResponsePrivate(UpdateRealtimeLogConfigResponse * const q);
 
     void parseUpdateRealtimeLogConfigResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetGameSessionLogUrlResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    GetGameSessionLogUrlResponsePrivate(GetGameSessionLogUrlResponse * const q);
+    explicit GetGameSessionLogUrlResponsePrivate(GetGameSessionLogUrlResponse * const q);
 
     void parseGetGameSessionLogUrlResponse(QXmlStreamReader &xml);
 

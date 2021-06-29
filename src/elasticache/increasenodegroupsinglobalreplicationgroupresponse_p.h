@@ -31,7 +31,7 @@ class IncreaseNodeGroupsInGlobalReplicationGroupResponsePrivate : public ElastiC
 
 public:
 
-    IncreaseNodeGroupsInGlobalReplicationGroupResponsePrivate(IncreaseNodeGroupsInGlobalReplicationGroupResponse * const q);
+    explicit IncreaseNodeGroupsInGlobalReplicationGroupResponsePrivate(IncreaseNodeGroupsInGlobalReplicationGroupResponse * const q);
 
     void parseIncreaseNodeGroupsInGlobalReplicationGroupResponse(QXmlStreamReader &xml);
 

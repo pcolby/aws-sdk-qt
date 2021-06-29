@@ -31,7 +31,7 @@ class DeleteSourceServerResponsePrivate : public mgnResponsePrivate {
 
 public:
 
-    DeleteSourceServerResponsePrivate(DeleteSourceServerResponse * const q);
+    explicit DeleteSourceServerResponsePrivate(DeleteSourceServerResponse * const q);
 
     void parseDeleteSourceServerResponse(QXmlStreamReader &xml);
 

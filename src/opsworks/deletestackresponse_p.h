@@ -31,7 +31,7 @@ class DeleteStackResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    DeleteStackResponsePrivate(DeleteStackResponse * const q);
+    explicit DeleteStackResponsePrivate(DeleteStackResponse * const q);
 
     void parseDeleteStackResponse(QXmlStreamReader &xml);
 

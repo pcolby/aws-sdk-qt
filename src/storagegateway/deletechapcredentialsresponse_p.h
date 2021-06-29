@@ -31,7 +31,7 @@ class DeleteChapCredentialsResponsePrivate : public StorageGatewayResponsePrivat
 
 public:
 
-    DeleteChapCredentialsResponsePrivate(DeleteChapCredentialsResponse * const q);
+    explicit DeleteChapCredentialsResponsePrivate(DeleteChapCredentialsResponse * const q);
 
     void parseDeleteChapCredentialsResponse(QXmlStreamReader &xml);
 

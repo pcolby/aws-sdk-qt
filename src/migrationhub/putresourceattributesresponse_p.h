@@ -31,7 +31,7 @@ class PutResourceAttributesResponsePrivate : public MigrationHubResponsePrivate 
 
 public:
 
-    PutResourceAttributesResponsePrivate(PutResourceAttributesResponse * const q);
+    explicit PutResourceAttributesResponsePrivate(PutResourceAttributesResponse * const q);
 
     void parsePutResourceAttributesResponse(QXmlStreamReader &xml);
 

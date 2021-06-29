@@ -31,7 +31,7 @@ class UpdateJobQueueResponsePrivate : public BatchResponsePrivate {
 
 public:
 
-    UpdateJobQueueResponsePrivate(UpdateJobQueueResponse * const q);
+    explicit UpdateJobQueueResponsePrivate(UpdateJobQueueResponse * const q);
 
     void parseUpdateJobQueueResponse(QXmlStreamReader &xml);
 

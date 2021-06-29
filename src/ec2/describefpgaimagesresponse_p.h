@@ -31,7 +31,7 @@ class DescribeFpgaImagesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeFpgaImagesResponsePrivate(DescribeFpgaImagesResponse * const q);
+    explicit DescribeFpgaImagesResponsePrivate(DescribeFpgaImagesResponse * const q);
 
     void parseDescribeFpgaImagesResponse(QXmlStreamReader &xml);
 

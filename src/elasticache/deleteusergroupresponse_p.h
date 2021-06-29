@@ -31,7 +31,7 @@ class DeleteUserGroupResponsePrivate : public ElastiCacheResponsePrivate {
 
 public:
 
-    DeleteUserGroupResponsePrivate(DeleteUserGroupResponse * const q);
+    explicit DeleteUserGroupResponsePrivate(DeleteUserGroupResponse * const q);
 
     void parseDeleteUserGroupResponse(QXmlStreamReader &xml);
 

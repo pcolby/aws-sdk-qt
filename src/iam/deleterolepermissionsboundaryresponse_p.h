@@ -31,7 +31,7 @@ class DeleteRolePermissionsBoundaryResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    DeleteRolePermissionsBoundaryResponsePrivate(DeleteRolePermissionsBoundaryResponse * const q);
+    explicit DeleteRolePermissionsBoundaryResponsePrivate(DeleteRolePermissionsBoundaryResponse * const q);
 
     void parseDeleteRolePermissionsBoundaryResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DisassociateDeviceFromRoomResponsePrivate : public AlexaForBusinessRespons
 
 public:
 
-    DisassociateDeviceFromRoomResponsePrivate(DisassociateDeviceFromRoomResponse * const q);
+    explicit DisassociateDeviceFromRoomResponsePrivate(DisassociateDeviceFromRoomResponse * const q);
 
     void parseDisassociateDeviceFromRoomResponse(QXmlStreamReader &xml);
 

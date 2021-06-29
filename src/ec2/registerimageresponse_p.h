@@ -31,7 +31,7 @@ class RegisterImageResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    RegisterImageResponsePrivate(RegisterImageResponse * const q);
+    explicit RegisterImageResponsePrivate(RegisterImageResponse * const q);
 
     void parseRegisterImageResponse(QXmlStreamReader &xml);
 

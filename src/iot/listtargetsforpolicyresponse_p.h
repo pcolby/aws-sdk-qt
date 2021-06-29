@@ -31,7 +31,7 @@ class ListTargetsForPolicyResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    ListTargetsForPolicyResponsePrivate(ListTargetsForPolicyResponse * const q);
+    explicit ListTargetsForPolicyResponsePrivate(ListTargetsForPolicyResponse * const q);
 
     void parseListTargetsForPolicyResponse(QXmlStreamReader &xml);
 

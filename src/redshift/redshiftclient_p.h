@@ -30,7 +30,7 @@ class RedshiftClient;
 class RedshiftClientPrivate {
 
 public:
-    RedshiftClientPrivate(RedshiftClient * const q);
+    explicit RedshiftClientPrivate(RedshiftClient * const q);
 
 protected:
     RedshiftClient * const q_ptr; ///< Internal q-pointer.

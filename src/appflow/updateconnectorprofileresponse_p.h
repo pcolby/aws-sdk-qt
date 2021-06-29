@@ -31,7 +31,7 @@ class UpdateConnectorProfileResponsePrivate : public AppflowResponsePrivate {
 
 public:
 
-    UpdateConnectorProfileResponsePrivate(UpdateConnectorProfileResponse * const q);
+    explicit UpdateConnectorProfileResponsePrivate(UpdateConnectorProfileResponse * const q);
 
     void parseUpdateConnectorProfileResponse(QXmlStreamReader &xml);
 

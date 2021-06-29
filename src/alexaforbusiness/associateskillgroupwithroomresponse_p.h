@@ -31,7 +31,7 @@ class AssociateSkillGroupWithRoomResponsePrivate : public AlexaForBusinessRespon
 
 public:
 
-    AssociateSkillGroupWithRoomResponsePrivate(AssociateSkillGroupWithRoomResponse * const q);
+    explicit AssociateSkillGroupWithRoomResponsePrivate(AssociateSkillGroupWithRoomResponse * const q);
 
     void parseAssociateSkillGroupWithRoomResponse(QXmlStreamReader &xml);
 

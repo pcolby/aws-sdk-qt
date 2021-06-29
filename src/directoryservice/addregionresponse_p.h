@@ -31,7 +31,7 @@ class AddRegionResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 
-    AddRegionResponsePrivate(AddRegionResponse * const q);
+    explicit AddRegionResponsePrivate(AddRegionResponse * const q);
 
     void parseAddRegionResponse(QXmlStreamReader &xml);
 

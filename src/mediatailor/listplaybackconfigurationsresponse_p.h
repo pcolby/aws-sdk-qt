@@ -31,7 +31,7 @@ class ListPlaybackConfigurationsResponsePrivate : public MediaTailorResponsePriv
 
 public:
 
-    ListPlaybackConfigurationsResponsePrivate(ListPlaybackConfigurationsResponse * const q);
+    explicit ListPlaybackConfigurationsResponsePrivate(ListPlaybackConfigurationsResponse * const q);
 
     void parseListPlaybackConfigurationsResponse(QXmlStreamReader &xml);
 

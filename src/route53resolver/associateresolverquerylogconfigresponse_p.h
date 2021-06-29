@@ -31,7 +31,7 @@ class AssociateResolverQueryLogConfigResponsePrivate : public Route53ResolverRes
 
 public:
 
-    AssociateResolverQueryLogConfigResponsePrivate(AssociateResolverQueryLogConfigResponse * const q);
+    explicit AssociateResolverQueryLogConfigResponsePrivate(AssociateResolverQueryLogConfigResponse * const q);
 
     void parseAssociateResolverQueryLogConfigResponse(QXmlStreamReader &xml);
 

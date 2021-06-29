@@ -31,7 +31,7 @@ class PutAppsListResponsePrivate : public FmsResponsePrivate {
 
 public:
 
-    PutAppsListResponsePrivate(PutAppsListResponse * const q);
+    explicit PutAppsListResponsePrivate(PutAppsListResponse * const q);
 
     void parsePutAppsListResponse(QXmlStreamReader &xml);
 

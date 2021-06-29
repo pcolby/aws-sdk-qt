@@ -31,7 +31,7 @@ class StopInstancesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    StopInstancesResponsePrivate(StopInstancesResponse * const q);
+    explicit StopInstancesResponsePrivate(StopInstancesResponse * const q);
 
     void parseStopInstancesResponse(QXmlStreamReader &xml);
 

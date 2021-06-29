@@ -31,7 +31,7 @@ class GetProtectionStatusResponsePrivate : public FmsResponsePrivate {
 
 public:
 
-    GetProtectionStatusResponsePrivate(GetProtectionStatusResponse * const q);
+    explicit GetProtectionStatusResponsePrivate(GetProtectionStatusResponse * const q);
 
     void parseGetProtectionStatusResponse(QXmlStreamReader &xml);
 

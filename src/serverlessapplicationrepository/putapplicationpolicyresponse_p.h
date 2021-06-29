@@ -31,7 +31,7 @@ class PutApplicationPolicyResponsePrivate : public ServerlessApplicationReposito
 
 public:
 
-    PutApplicationPolicyResponsePrivate(PutApplicationPolicyResponse * const q);
+    explicit PutApplicationPolicyResponsePrivate(PutApplicationPolicyResponse * const q);
 
     void parsePutApplicationPolicyResponse(QXmlStreamReader &xml);
 

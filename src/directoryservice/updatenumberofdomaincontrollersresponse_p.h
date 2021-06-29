@@ -31,7 +31,7 @@ class UpdateNumberOfDomainControllersResponsePrivate : public DirectoryServiceRe
 
 public:
 
-    UpdateNumberOfDomainControllersResponsePrivate(UpdateNumberOfDomainControllersResponse * const q);
+    explicit UpdateNumberOfDomainControllersResponsePrivate(UpdateNumberOfDomainControllersResponse * const q);
 
     void parseUpdateNumberOfDomainControllersResponse(QXmlStreamReader &xml);
 

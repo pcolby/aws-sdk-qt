@@ -31,7 +31,7 @@ class DeleteDetectorModelResponsePrivate : public IoTEventsResponsePrivate {
 
 public:
 
-    DeleteDetectorModelResponsePrivate(DeleteDetectorModelResponse * const q);
+    explicit DeleteDetectorModelResponsePrivate(DeleteDetectorModelResponse * const q);
 
     void parseDeleteDetectorModelResponse(QXmlStreamReader &xml);
 

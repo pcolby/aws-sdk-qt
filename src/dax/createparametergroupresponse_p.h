@@ -31,7 +31,7 @@ class CreateParameterGroupResponsePrivate : public DaxResponsePrivate {
 
 public:
 
-    CreateParameterGroupResponsePrivate(CreateParameterGroupResponse * const q);
+    explicit CreateParameterGroupResponsePrivate(CreateParameterGroupResponse * const q);
 
     void parseCreateParameterGroupResponse(QXmlStreamReader &xml);
 

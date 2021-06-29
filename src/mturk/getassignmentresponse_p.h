@@ -31,7 +31,7 @@ class GetAssignmentResponsePrivate : public MTurkResponsePrivate {
 
 public:
 
-    GetAssignmentResponsePrivate(GetAssignmentResponse * const q);
+    explicit GetAssignmentResponsePrivate(GetAssignmentResponse * const q);
 
     void parseGetAssignmentResponse(QXmlStreamReader &xml);
 

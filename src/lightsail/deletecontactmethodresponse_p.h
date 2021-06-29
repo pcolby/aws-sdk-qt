@@ -31,7 +31,7 @@ class DeleteContactMethodResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    DeleteContactMethodResponsePrivate(DeleteContactMethodResponse * const q);
+    explicit DeleteContactMethodResponsePrivate(DeleteContactMethodResponse * const q);
 
     void parseDeleteContactMethodResponse(QXmlStreamReader &xml);
 

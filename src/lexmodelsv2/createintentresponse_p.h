@@ -31,7 +31,7 @@ class CreateIntentResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 
-    CreateIntentResponsePrivate(CreateIntentResponse * const q);
+    explicit CreateIntentResponsePrivate(CreateIntentResponse * const q);
 
     void parseCreateIntentResponse(QXmlStreamReader &xml);
 

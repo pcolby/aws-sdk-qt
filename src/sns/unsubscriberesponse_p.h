@@ -31,7 +31,7 @@ class UnsubscribeResponsePrivate : public SnsResponsePrivate {
 
 public:
 
-    UnsubscribeResponsePrivate(UnsubscribeResponse * const q);
+    explicit UnsubscribeResponsePrivate(UnsubscribeResponse * const q);
 
     void parseUnsubscribeResponse(QXmlStreamReader &xml);
 

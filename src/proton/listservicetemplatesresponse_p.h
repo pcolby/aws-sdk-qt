@@ -31,7 +31,7 @@ class ListServiceTemplatesResponsePrivate : public ProtonResponsePrivate {
 
 public:
 
-    ListServiceTemplatesResponsePrivate(ListServiceTemplatesResponse * const q);
+    explicit ListServiceTemplatesResponsePrivate(ListServiceTemplatesResponse * const q);
 
     void parseListServiceTemplatesResponse(QXmlStreamReader &xml);
 

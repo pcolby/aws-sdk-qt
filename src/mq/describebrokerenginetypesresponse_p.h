@@ -31,7 +31,7 @@ class DescribeBrokerEngineTypesResponsePrivate : public MqResponsePrivate {
 
 public:
 
-    DescribeBrokerEngineTypesResponsePrivate(DescribeBrokerEngineTypesResponse * const q);
+    explicit DescribeBrokerEngineTypesResponsePrivate(DescribeBrokerEngineTypesResponse * const q);
 
     void parseDescribeBrokerEngineTypesResponse(QXmlStreamReader &xml);
 

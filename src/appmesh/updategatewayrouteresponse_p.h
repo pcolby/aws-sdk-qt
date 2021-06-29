@@ -31,7 +31,7 @@ class UpdateGatewayRouteResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 
-    UpdateGatewayRouteResponsePrivate(UpdateGatewayRouteResponse * const q);
+    explicit UpdateGatewayRouteResponsePrivate(UpdateGatewayRouteResponse * const q);
 
     void parseUpdateGatewayRouteResponse(QXmlStreamReader &xml);
 

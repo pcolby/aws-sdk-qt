@@ -31,7 +31,7 @@ class TagQueueResponsePrivate : public SqsResponsePrivate {
 
 public:
 
-    TagQueueResponsePrivate(TagQueueResponse * const q);
+    explicit TagQueueResponsePrivate(TagQueueResponse * const q);
 
     void parseTagQueueResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateDimensionResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    UpdateDimensionResponsePrivate(UpdateDimensionResponse * const q);
+    explicit UpdateDimensionResponsePrivate(UpdateDimensionResponse * const q);
 
     void parseUpdateDimensionResponse(QXmlStreamReader &xml);
 

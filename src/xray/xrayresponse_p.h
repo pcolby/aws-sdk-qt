@@ -29,7 +29,7 @@ class XRayResponsePrivate {
 
 public:
 
-    XRayResponsePrivate(XRayResponse * const q);
+    explicit XRayResponsePrivate(XRayResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

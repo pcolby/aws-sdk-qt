@@ -31,7 +31,7 @@ class DeleteEnvironmentResponsePrivate : public MwaaResponsePrivate {
 
 public:
 
-    DeleteEnvironmentResponsePrivate(DeleteEnvironmentResponse * const q);
+    explicit DeleteEnvironmentResponsePrivate(DeleteEnvironmentResponse * const q);
 
     void parseDeleteEnvironmentResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class AssociateDiscoveredResourceResponsePrivate : public MigrationHubResponsePr
 
 public:
 
-    AssociateDiscoveredResourceResponsePrivate(AssociateDiscoveredResourceResponse * const q);
+    explicit AssociateDiscoveredResourceResponsePrivate(AssociateDiscoveredResourceResponse * const q);
 
     void parseAssociateDiscoveredResourceResponse(QXmlStreamReader &xml);
 

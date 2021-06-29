@@ -31,7 +31,7 @@ class DeleteSqlInjectionMatchSetResponsePrivate : public WAFRegionalResponsePriv
 
 public:
 
-    DeleteSqlInjectionMatchSetResponsePrivate(DeleteSqlInjectionMatchSetResponse * const q);
+    explicit DeleteSqlInjectionMatchSetResponsePrivate(DeleteSqlInjectionMatchSetResponse * const q);
 
     void parseDeleteSqlInjectionMatchSetResponse(QXmlStreamReader &xml);
 

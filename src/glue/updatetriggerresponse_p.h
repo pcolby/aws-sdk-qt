@@ -31,7 +31,7 @@ class UpdateTriggerResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    UpdateTriggerResponsePrivate(UpdateTriggerResponse * const q);
+    explicit UpdateTriggerResponsePrivate(UpdateTriggerResponse * const q);
 
     void parseUpdateTriggerResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetDataRetrievalPolicyResponsePrivate : public GlacierResponsePrivate {
 
 public:
 
-    GetDataRetrievalPolicyResponsePrivate(GetDataRetrievalPolicyResponse * const q);
+    explicit GetDataRetrievalPolicyResponsePrivate(GetDataRetrievalPolicyResponse * const q);
 
     void parseGetDataRetrievalPolicyResponse(QXmlStreamReader &xml);
 

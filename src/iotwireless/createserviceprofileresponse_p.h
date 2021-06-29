@@ -31,7 +31,7 @@ class CreateServiceProfileResponsePrivate : public IoTWirelessResponsePrivate {
 
 public:
 
-    CreateServiceProfileResponsePrivate(CreateServiceProfileResponse * const q);
+    explicit CreateServiceProfileResponsePrivate(CreateServiceProfileResponse * const q);
 
     void parseCreateServiceProfileResponse(QXmlStreamReader &xml);
 

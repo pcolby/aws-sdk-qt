@@ -79,7 +79,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    BatchClient(
+    explicit BatchClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -108,7 +108,7 @@ public slots:
 protected:
     /// @cond internal
     BatchClientPrivate * const d_ptr; ///< Internal d-pointer.
-    BatchClient(BatchClientPrivate * const d);
+    explicit BatchClient(BatchClientPrivate * const d);
     /// @endcond
 
 private:

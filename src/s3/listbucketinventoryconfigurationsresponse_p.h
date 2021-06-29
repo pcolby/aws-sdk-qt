@@ -31,7 +31,7 @@ class ListBucketInventoryConfigurationsResponsePrivate : public S3ResponsePrivat
 
 public:
 
-    ListBucketInventoryConfigurationsResponsePrivate(ListBucketInventoryConfigurationsResponse * const q);
+    explicit ListBucketInventoryConfigurationsResponsePrivate(ListBucketInventoryConfigurationsResponse * const q);
 
     void parseListBucketInventoryConfigurationsResponse(QXmlStreamReader &xml);
 

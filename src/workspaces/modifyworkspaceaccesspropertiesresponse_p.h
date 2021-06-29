@@ -31,7 +31,7 @@ class ModifyWorkspaceAccessPropertiesResponsePrivate : public WorkSpacesResponse
 
 public:
 
-    ModifyWorkspaceAccessPropertiesResponsePrivate(ModifyWorkspaceAccessPropertiesResponse * const q);
+    explicit ModifyWorkspaceAccessPropertiesResponsePrivate(ModifyWorkspaceAccessPropertiesResponse * const q);
 
     void parseModifyWorkspaceAccessPropertiesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class StartReplicationTaskAssessmentRunResponsePrivate : public DatabaseMigratio
 
 public:
 
-    StartReplicationTaskAssessmentRunResponsePrivate(StartReplicationTaskAssessmentRunResponse * const q);
+    explicit StartReplicationTaskAssessmentRunResponsePrivate(StartReplicationTaskAssessmentRunResponse * const q);
 
     void parseStartReplicationTaskAssessmentRunResponse(QXmlStreamReader &xml);
 

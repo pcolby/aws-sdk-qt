@@ -31,7 +31,7 @@ class CreateDeviceDefinitionResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 
-    CreateDeviceDefinitionResponsePrivate(CreateDeviceDefinitionResponse * const q);
+    explicit CreateDeviceDefinitionResponsePrivate(CreateDeviceDefinitionResponse * const q);
 
     void parseCreateDeviceDefinitionResponse(QXmlStreamReader &xml);
 

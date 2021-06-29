@@ -31,7 +31,7 @@ class ListAvailableManagementCidrRangesResponsePrivate : public WorkSpacesRespon
 
 public:
 
-    ListAvailableManagementCidrRangesResponsePrivate(ListAvailableManagementCidrRangesResponse * const q);
+    explicit ListAvailableManagementCidrRangesResponsePrivate(ListAvailableManagementCidrRangesResponse * const q);
 
     void parseListAvailableManagementCidrRangesResponse(QXmlStreamReader &xml);
 

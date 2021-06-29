@@ -30,7 +30,7 @@ class PollyClient;
 class PollyClientPrivate {
 
 public:
-    PollyClientPrivate(PollyClient * const q);
+    explicit PollyClientPrivate(PollyClient * const q);
 
 protected:
     PollyClient * const q_ptr; ///< Internal q-pointer.

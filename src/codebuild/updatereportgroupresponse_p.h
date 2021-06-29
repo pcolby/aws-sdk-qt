@@ -31,7 +31,7 @@ class UpdateReportGroupResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 
-    UpdateReportGroupResponsePrivate(UpdateReportGroupResponse * const q);
+    explicit UpdateReportGroupResponsePrivate(UpdateReportGroupResponse * const q);
 
     void parseUpdateReportGroupResponse(QXmlStreamReader &xml);
 

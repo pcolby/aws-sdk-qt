@@ -31,7 +31,7 @@ class RevokeTokenResponsePrivate : public CognitoIdentityProviderResponsePrivate
 
 public:
 
-    RevokeTokenResponsePrivate(RevokeTokenResponse * const q);
+    explicit RevokeTokenResponsePrivate(RevokeTokenResponse * const q);
 
     void parseRevokeTokenResponse(QXmlStreamReader &xml);
 

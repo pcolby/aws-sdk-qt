@@ -31,7 +31,7 @@ class CreateDirectConnectGatewayAssociationProposalResponsePrivate : public Dire
 
 public:
 
-    CreateDirectConnectGatewayAssociationProposalResponsePrivate(CreateDirectConnectGatewayAssociationProposalResponse * const q);
+    explicit CreateDirectConnectGatewayAssociationProposalResponsePrivate(CreateDirectConnectGatewayAssociationProposalResponse * const q);
 
     void parseCreateDirectConnectGatewayAssociationProposalResponse(QXmlStreamReader &xml);
 

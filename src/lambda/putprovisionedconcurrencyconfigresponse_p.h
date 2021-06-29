@@ -31,7 +31,7 @@ class PutProvisionedConcurrencyConfigResponsePrivate : public LambdaResponsePriv
 
 public:
 
-    PutProvisionedConcurrencyConfigResponsePrivate(PutProvisionedConcurrencyConfigResponse * const q);
+    explicit PutProvisionedConcurrencyConfigResponsePrivate(PutProvisionedConcurrencyConfigResponse * const q);
 
     void parsePutProvisionedConcurrencyConfigResponse(QXmlStreamReader &xml);
 

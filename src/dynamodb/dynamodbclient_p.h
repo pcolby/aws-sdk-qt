@@ -30,7 +30,7 @@ class DynamoDBClient;
 class DynamoDBClientPrivate {
 
 public:
-    DynamoDBClientPrivate(DynamoDBClient * const q);
+    explicit DynamoDBClientPrivate(DynamoDBClient * const q);
 
 protected:
     DynamoDBClient * const q_ptr; ///< Internal q-pointer.

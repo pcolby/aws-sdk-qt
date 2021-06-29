@@ -31,7 +31,7 @@ class GetEntitiesResponsePrivate : public IoTThingsGraphResponsePrivate {
 
 public:
 
-    GetEntitiesResponsePrivate(GetEntitiesResponse * const q);
+    explicit GetEntitiesResponsePrivate(GetEntitiesResponse * const q);
 
     void parseGetEntitiesResponse(QXmlStreamReader &xml);
 

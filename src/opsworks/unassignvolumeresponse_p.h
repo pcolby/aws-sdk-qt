@@ -31,7 +31,7 @@ class UnassignVolumeResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    UnassignVolumeResponsePrivate(UnassignVolumeResponse * const q);
+    explicit UnassignVolumeResponsePrivate(UnassignVolumeResponse * const q);
 
     void parseUnassignVolumeResponse(QXmlStreamReader &xml);
 

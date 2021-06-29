@@ -31,7 +31,7 @@ class DescribeResourcePoliciesResponsePrivate : public CloudWatchLogsResponsePri
 
 public:
 
-    DescribeResourcePoliciesResponsePrivate(DescribeResourcePoliciesResponse * const q);
+    explicit DescribeResourcePoliciesResponsePrivate(DescribeResourcePoliciesResponse * const q);
 
     void parseDescribeResourcePoliciesResponse(QXmlStreamReader &xml);
 

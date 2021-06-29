@@ -31,7 +31,7 @@ class ModifyInstanceCreditSpecificationResponsePrivate : public Ec2ResponsePriva
 
 public:
 
-    ModifyInstanceCreditSpecificationResponsePrivate(ModifyInstanceCreditSpecificationResponse * const q);
+    explicit ModifyInstanceCreditSpecificationResponsePrivate(ModifyInstanceCreditSpecificationResponse * const q);
 
     void parseModifyInstanceCreditSpecificationResponse(QXmlStreamReader &xml);
 

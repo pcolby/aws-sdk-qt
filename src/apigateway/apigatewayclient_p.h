@@ -30,7 +30,7 @@ class APIGatewayClient;
 class APIGatewayClientPrivate {
 
 public:
-    APIGatewayClientPrivate(APIGatewayClient * const q);
+    explicit APIGatewayClientPrivate(APIGatewayClient * const q);
 
 protected:
     APIGatewayClient * const q_ptr; ///< Internal q-pointer.

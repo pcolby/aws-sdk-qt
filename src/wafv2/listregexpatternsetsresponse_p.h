@@ -31,7 +31,7 @@ class ListRegexPatternSetsResponsePrivate : public Wafv2ResponsePrivate {
 
 public:
 
-    ListRegexPatternSetsResponsePrivate(ListRegexPatternSetsResponse * const q);
+    explicit ListRegexPatternSetsResponsePrivate(ListRegexPatternSetsResponse * const q);
 
     void parseListRegexPatternSetsResponse(QXmlStreamReader &xml);
 

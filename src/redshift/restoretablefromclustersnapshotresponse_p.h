@@ -31,7 +31,7 @@ class RestoreTableFromClusterSnapshotResponsePrivate : public RedshiftResponsePr
 
 public:
 
-    RestoreTableFromClusterSnapshotResponsePrivate(RestoreTableFromClusterSnapshotResponse * const q);
+    explicit RestoreTableFromClusterSnapshotResponsePrivate(RestoreTableFromClusterSnapshotResponse * const q);
 
     void parseRestoreTableFromClusterSnapshotResponse(QXmlStreamReader &xml);
 

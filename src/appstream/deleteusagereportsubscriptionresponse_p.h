@@ -31,7 +31,7 @@ class DeleteUsageReportSubscriptionResponsePrivate : public AppStreamResponsePri
 
 public:
 
-    DeleteUsageReportSubscriptionResponsePrivate(DeleteUsageReportSubscriptionResponse * const q);
+    explicit DeleteUsageReportSubscriptionResponsePrivate(DeleteUsageReportSubscriptionResponse * const q);
 
     void parseDeleteUsageReportSubscriptionResponse(QXmlStreamReader &xml);
 

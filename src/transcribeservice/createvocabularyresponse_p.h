@@ -31,7 +31,7 @@ class CreateVocabularyResponsePrivate : public TranscribeServiceResponsePrivate 
 
 public:
 
-    CreateVocabularyResponsePrivate(CreateVocabularyResponse * const q);
+    explicit CreateVocabularyResponsePrivate(CreateVocabularyResponse * const q);
 
     void parseCreateVocabularyResponse(QXmlStreamReader &xml);
 

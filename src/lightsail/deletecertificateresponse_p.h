@@ -31,7 +31,7 @@ class DeleteCertificateResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    DeleteCertificateResponsePrivate(DeleteCertificateResponse * const q);
+    explicit DeleteCertificateResponsePrivate(DeleteCertificateResponse * const q);
 
     void parseDeleteCertificateResponse(QXmlStreamReader &xml);
 

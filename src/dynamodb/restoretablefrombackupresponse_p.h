@@ -31,7 +31,7 @@ class RestoreTableFromBackupResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 
-    RestoreTableFromBackupResponsePrivate(RestoreTableFromBackupResponse * const q);
+    explicit RestoreTableFromBackupResponsePrivate(RestoreTableFromBackupResponse * const q);
 
     void parseRestoreTableFromBackupResponse(QXmlStreamReader &xml);
 

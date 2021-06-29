@@ -31,7 +31,7 @@ class GetJobDetailsResponsePrivate : public CodePipelineResponsePrivate {
 
 public:
 
-    GetJobDetailsResponsePrivate(GetJobDetailsResponse * const q);
+    explicit GetJobDetailsResponsePrivate(GetJobDetailsResponse * const q);
 
     void parseGetJobDetailsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class AddFlowSourcesResponsePrivate : public MediaConnectResponsePrivate {
 
 public:
 
-    AddFlowSourcesResponsePrivate(AddFlowSourcesResponse * const q);
+    explicit AddFlowSourcesResponsePrivate(AddFlowSourcesResponse * const q);
 
     void parseAddFlowSourcesResponse(QXmlStreamReader &xml);
 

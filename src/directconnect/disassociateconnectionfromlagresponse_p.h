@@ -31,7 +31,7 @@ class DisassociateConnectionFromLagResponsePrivate : public DirectConnectRespons
 
 public:
 
-    DisassociateConnectionFromLagResponsePrivate(DisassociateConnectionFromLagResponse * const q);
+    explicit DisassociateConnectionFromLagResponsePrivate(DisassociateConnectionFromLagResponse * const q);
 
     void parseDisassociateConnectionFromLagResponse(QXmlStreamReader &xml);
 

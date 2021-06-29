@@ -31,7 +31,7 @@ class UpdateIdentityProviderConfigurationResponsePrivate : public WorkLinkRespon
 
 public:
 
-    UpdateIdentityProviderConfigurationResponsePrivate(UpdateIdentityProviderConfigurationResponse * const q);
+    explicit UpdateIdentityProviderConfigurationResponsePrivate(UpdateIdentityProviderConfigurationResponse * const q);
 
     void parseUpdateIdentityProviderConfigurationResponse(QXmlStreamReader &xml);
 

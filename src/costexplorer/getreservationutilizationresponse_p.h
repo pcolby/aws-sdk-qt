@@ -31,7 +31,7 @@ class GetReservationUtilizationResponsePrivate : public CostExplorerResponsePriv
 
 public:
 
-    GetReservationUtilizationResponsePrivate(GetReservationUtilizationResponse * const q);
+    explicit GetReservationUtilizationResponsePrivate(GetReservationUtilizationResponse * const q);
 
     void parseGetReservationUtilizationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class StartBuildBatchResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 
-    StartBuildBatchResponsePrivate(StartBuildBatchResponse * const q);
+    explicit StartBuildBatchResponsePrivate(StartBuildBatchResponse * const q);
 
     void parseStartBuildBatchResponse(QXmlStreamReader &xml);
 

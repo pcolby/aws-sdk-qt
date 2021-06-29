@@ -31,7 +31,7 @@ class DescribeBudgetResponsePrivate : public BudgetsResponsePrivate {
 
 public:
 
-    DescribeBudgetResponsePrivate(DescribeBudgetResponse * const q);
+    explicit DescribeBudgetResponsePrivate(DescribeBudgetResponse * const q);
 
     void parseDescribeBudgetResponse(QXmlStreamReader &xml);
 

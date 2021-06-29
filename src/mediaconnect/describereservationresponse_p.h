@@ -31,7 +31,7 @@ class DescribeReservationResponsePrivate : public MediaConnectResponsePrivate {
 
 public:
 
-    DescribeReservationResponsePrivate(DescribeReservationResponse * const q);
+    explicit DescribeReservationResponsePrivate(DescribeReservationResponse * const q);
 
     void parseDescribeReservationResponse(QXmlStreamReader &xml);
 

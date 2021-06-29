@@ -31,7 +31,7 @@ class CreateTaskSetResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    CreateTaskSetResponsePrivate(CreateTaskSetResponse * const q);
+    explicit CreateTaskSetResponsePrivate(CreateTaskSetResponse * const q);
 
     void parseCreateTaskSetResponse(QXmlStreamReader &xml);
 

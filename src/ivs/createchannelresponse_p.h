@@ -31,7 +31,7 @@ class CreateChannelResponsePrivate : public IvsResponsePrivate {
 
 public:
 
-    CreateChannelResponsePrivate(CreateChannelResponse * const q);
+    explicit CreateChannelResponsePrivate(CreateChannelResponse * const q);
 
     void parseCreateChannelResponse(QXmlStreamReader &xml);
 

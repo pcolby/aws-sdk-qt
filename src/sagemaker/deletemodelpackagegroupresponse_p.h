@@ -31,7 +31,7 @@ class DeleteModelPackageGroupResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    DeleteModelPackageGroupResponsePrivate(DeleteModelPackageGroupResponse * const q);
+    explicit DeleteModelPackageGroupResponsePrivate(DeleteModelPackageGroupResponse * const q);
 
     void parseDeleteModelPackageGroupResponse(QXmlStreamReader &xml);
 

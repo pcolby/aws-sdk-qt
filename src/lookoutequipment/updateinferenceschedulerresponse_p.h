@@ -31,7 +31,7 @@ class UpdateInferenceSchedulerResponsePrivate : public LookoutEquipmentResponseP
 
 public:
 
-    UpdateInferenceSchedulerResponsePrivate(UpdateInferenceSchedulerResponse * const q);
+    explicit UpdateInferenceSchedulerResponsePrivate(UpdateInferenceSchedulerResponse * const q);
 
     void parseUpdateInferenceSchedulerResponse(QXmlStreamReader &xml);
 

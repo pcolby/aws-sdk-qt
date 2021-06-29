@@ -31,7 +31,7 @@ class DeleteJobResponsePrivate : public GlueDataBrewResponsePrivate {
 
 public:
 
-    DeleteJobResponsePrivate(DeleteJobResponse * const q);
+    explicit DeleteJobResponsePrivate(DeleteJobResponse * const q);
 
     void parseDeleteJobResponse(QXmlStreamReader &xml);
 

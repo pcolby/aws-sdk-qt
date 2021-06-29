@@ -31,7 +31,7 @@ class CreateSourceLocationResponsePrivate : public MediaTailorResponsePrivate {
 
 public:
 
-    CreateSourceLocationResponsePrivate(CreateSourceLocationResponse * const q);
+    explicit CreateSourceLocationResponsePrivate(CreateSourceLocationResponse * const q);
 
     void parseCreateSourceLocationResponse(QXmlStreamReader &xml);
 

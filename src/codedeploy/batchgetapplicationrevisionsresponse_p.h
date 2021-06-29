@@ -31,7 +31,7 @@ class BatchGetApplicationRevisionsResponsePrivate : public CodeDeployResponsePri
 
 public:
 
-    BatchGetApplicationRevisionsResponsePrivate(BatchGetApplicationRevisionsResponse * const q);
+    explicit BatchGetApplicationRevisionsResponsePrivate(BatchGetApplicationRevisionsResponse * const q);
 
     void parseBatchGetApplicationRevisionsResponse(QXmlStreamReader &xml);
 

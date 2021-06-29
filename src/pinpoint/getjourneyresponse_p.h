@@ -31,7 +31,7 @@ class GetJourneyResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    GetJourneyResponsePrivate(GetJourneyResponse * const q);
+    explicit GetJourneyResponsePrivate(GetJourneyResponse * const q);
 
     void parseGetJourneyResponse(QXmlStreamReader &xml);
 

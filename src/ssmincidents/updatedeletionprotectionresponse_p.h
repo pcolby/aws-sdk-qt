@@ -31,7 +31,7 @@ class UpdateDeletionProtectionResponsePrivate : public SSMIncidentsResponsePriva
 
 public:
 
-    UpdateDeletionProtectionResponsePrivate(UpdateDeletionProtectionResponse * const q);
+    explicit UpdateDeletionProtectionResponsePrivate(UpdateDeletionProtectionResponse * const q);
 
     void parseUpdateDeletionProtectionResponse(QXmlStreamReader &xml);
 

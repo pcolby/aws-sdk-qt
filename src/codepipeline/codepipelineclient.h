@@ -119,7 +119,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    CodePipelineClient(
+    explicit CodePipelineClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -168,7 +168,7 @@ public slots:
 protected:
     /// @cond internal
     CodePipelineClientPrivate * const d_ptr; ///< Internal d-pointer.
-    CodePipelineClient(CodePipelineClientPrivate * const d);
+    explicit CodePipelineClient(CodePipelineClientPrivate * const d);
     /// @endcond
 
 private:

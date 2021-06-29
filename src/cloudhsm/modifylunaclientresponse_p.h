@@ -31,7 +31,7 @@ class ModifyLunaClientResponsePrivate : public CloudHSMResponsePrivate {
 
 public:
 
-    ModifyLunaClientResponsePrivate(ModifyLunaClientResponse * const q);
+    explicit ModifyLunaClientResponsePrivate(ModifyLunaClientResponse * const q);
 
     void parseModifyLunaClientResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class SearchGameSessionsResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    SearchGameSessionsResponsePrivate(SearchGameSessionsResponse * const q);
+    explicit SearchGameSessionsResponsePrivate(SearchGameSessionsResponse * const q);
 
     void parseSearchGameSessionsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateGroupResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    UpdateGroupResponsePrivate(UpdateGroupResponse * const q);
+    explicit UpdateGroupResponsePrivate(UpdateGroupResponse * const q);
 
     void parseUpdateGroupResponse(QXmlStreamReader &xml);
 

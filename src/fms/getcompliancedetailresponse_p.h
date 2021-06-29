@@ -31,7 +31,7 @@ class GetComplianceDetailResponsePrivate : public FmsResponsePrivate {
 
 public:
 
-    GetComplianceDetailResponsePrivate(GetComplianceDetailResponse * const q);
+    explicit GetComplianceDetailResponsePrivate(GetComplianceDetailResponse * const q);
 
     void parseGetComplianceDetailResponse(QXmlStreamReader &xml);
 

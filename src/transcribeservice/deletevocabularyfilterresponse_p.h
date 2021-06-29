@@ -31,7 +31,7 @@ class DeleteVocabularyFilterResponsePrivate : public TranscribeServiceResponsePr
 
 public:
 
-    DeleteVocabularyFilterResponsePrivate(DeleteVocabularyFilterResponse * const q);
+    explicit DeleteVocabularyFilterResponsePrivate(DeleteVocabularyFilterResponse * const q);
 
     void parseDeleteVocabularyFilterResponse(QXmlStreamReader &xml);
 

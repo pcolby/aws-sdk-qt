@@ -31,7 +31,7 @@ class UpdateFunctionConfigurationResponsePrivate : public LambdaResponsePrivate 
 
 public:
 
-    UpdateFunctionConfigurationResponsePrivate(UpdateFunctionConfigurationResponse * const q);
+    explicit UpdateFunctionConfigurationResponsePrivate(UpdateFunctionConfigurationResponse * const q);
 
     void parseUpdateFunctionConfigurationResponse(QXmlStreamReader &xml);
 

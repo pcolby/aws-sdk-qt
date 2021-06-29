@@ -31,7 +31,7 @@ class ListFiltersResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 
-    ListFiltersResponsePrivate(ListFiltersResponse * const q);
+    explicit ListFiltersResponsePrivate(ListFiltersResponse * const q);
 
     void parseListFiltersResponse(QXmlStreamReader &xml);
 

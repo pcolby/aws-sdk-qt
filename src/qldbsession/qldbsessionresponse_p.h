@@ -29,7 +29,7 @@ class QLDBSessionResponsePrivate {
 
 public:
 
-    QLDBSessionResponsePrivate(QLDBSessionResponse * const q);
+    explicit QLDBSessionResponsePrivate(QLDBSessionResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

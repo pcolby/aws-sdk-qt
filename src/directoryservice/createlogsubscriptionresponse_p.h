@@ -31,7 +31,7 @@ class CreateLogSubscriptionResponsePrivate : public DirectoryServiceResponsePriv
 
 public:
 
-    CreateLogSubscriptionResponsePrivate(CreateLogSubscriptionResponse * const q);
+    explicit CreateLogSubscriptionResponsePrivate(CreateLogSubscriptionResponse * const q);
 
     void parseCreateLogSubscriptionResponse(QXmlStreamReader &xml);
 

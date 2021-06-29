@@ -31,7 +31,7 @@ class DeleteMethodResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    DeleteMethodResponsePrivate(DeleteMethodResponse * const q);
+    explicit DeleteMethodResponsePrivate(DeleteMethodResponse * const q);
 
     void parseDeleteMethodResponse(QXmlStreamReader &xml);
 

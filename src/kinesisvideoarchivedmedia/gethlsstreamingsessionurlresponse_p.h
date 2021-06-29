@@ -31,7 +31,7 @@ class GetHLSStreamingSessionURLResponsePrivate : public KinesisVideoArchivedMedi
 
 public:
 
-    GetHLSStreamingSessionURLResponsePrivate(GetHLSStreamingSessionURLResponse * const q);
+    explicit GetHLSStreamingSessionURLResponsePrivate(GetHLSStreamingSessionURLResponse * const q);
 
     void parseGetHLSStreamingSessionURLResponse(QXmlStreamReader &xml);
 

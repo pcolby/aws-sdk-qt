@@ -31,7 +31,7 @@ class GetConfigResponsePrivate : public CloudHSMResponsePrivate {
 
 public:
 
-    GetConfigResponsePrivate(GetConfigResponse * const q);
+    explicit GetConfigResponsePrivate(GetConfigResponse * const q);
 
     void parseGetConfigResponse(QXmlStreamReader &xml);
 

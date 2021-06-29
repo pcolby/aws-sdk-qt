@@ -31,7 +31,7 @@ class ListTestGridSessionArtifactsResponsePrivate : public DeviceFarmResponsePri
 
 public:
 
-    ListTestGridSessionArtifactsResponsePrivate(ListTestGridSessionArtifactsResponse * const q);
+    explicit ListTestGridSessionArtifactsResponsePrivate(ListTestGridSessionArtifactsResponse * const q);
 
     void parseListTestGridSessionArtifactsResponse(QXmlStreamReader &xml);
 

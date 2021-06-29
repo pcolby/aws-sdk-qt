@@ -31,7 +31,7 @@ class UpdateBandwidthRateLimitScheduleResponsePrivate : public StorageGatewayRes
 
 public:
 
-    UpdateBandwidthRateLimitScheduleResponsePrivate(UpdateBandwidthRateLimitScheduleResponse * const q);
+    explicit UpdateBandwidthRateLimitScheduleResponsePrivate(UpdateBandwidthRateLimitScheduleResponse * const q);
 
     void parseUpdateBandwidthRateLimitScheduleResponse(QXmlStreamReader &xml);
 

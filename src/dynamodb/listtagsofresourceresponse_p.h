@@ -31,7 +31,7 @@ class ListTagsOfResourceResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 
-    ListTagsOfResourceResponsePrivate(ListTagsOfResourceResponse * const q);
+    explicit ListTagsOfResourceResponsePrivate(ListTagsOfResourceResponse * const q);
 
     void parseListTagsOfResourceResponse(QXmlStreamReader &xml);
 

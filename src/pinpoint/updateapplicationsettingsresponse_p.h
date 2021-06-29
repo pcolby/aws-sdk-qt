@@ -31,7 +31,7 @@ class UpdateApplicationSettingsResponsePrivate : public PinpointResponsePrivate 
 
 public:
 
-    UpdateApplicationSettingsResponsePrivate(UpdateApplicationSettingsResponse * const q);
+    explicit UpdateApplicationSettingsResponsePrivate(UpdateApplicationSettingsResponse * const q);
 
     void parseUpdateApplicationSettingsResponse(QXmlStreamReader &xml);
 

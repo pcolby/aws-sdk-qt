@@ -31,7 +31,7 @@ class GetCostCategoriesResponsePrivate : public CostExplorerResponsePrivate {
 
 public:
 
-    GetCostCategoriesResponsePrivate(GetCostCategoriesResponse * const q);
+    explicit GetCostCategoriesResponsePrivate(GetCostCategoriesResponse * const q);
 
     void parseGetCostCategoriesResponse(QXmlStreamReader &xml);
 

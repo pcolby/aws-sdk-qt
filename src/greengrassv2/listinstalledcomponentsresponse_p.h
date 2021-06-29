@@ -31,7 +31,7 @@ class ListInstalledComponentsResponsePrivate : public GreengrassV2ResponsePrivat
 
 public:
 
-    ListInstalledComponentsResponsePrivate(ListInstalledComponentsResponse * const q);
+    explicit ListInstalledComponentsResponsePrivate(ListInstalledComponentsResponse * const q);
 
     void parseListInstalledComponentsResponse(QXmlStreamReader &xml);
 

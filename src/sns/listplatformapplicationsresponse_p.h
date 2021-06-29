@@ -31,7 +31,7 @@ class ListPlatformApplicationsResponsePrivate : public SnsResponsePrivate {
 
 public:
 
-    ListPlatformApplicationsResponsePrivate(ListPlatformApplicationsResponse * const q);
+    explicit ListPlatformApplicationsResponsePrivate(ListPlatformApplicationsResponse * const q);
 
     void parseListPlatformApplicationsResponse(QXmlStreamReader &xml);
 

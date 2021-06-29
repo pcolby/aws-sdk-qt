@@ -31,7 +31,7 @@ class DescribeAccountSettingsResponsePrivate : public QuickSightResponsePrivate 
 
 public:
 
-    DescribeAccountSettingsResponsePrivate(DescribeAccountSettingsResponse * const q);
+    explicit DescribeAccountSettingsResponsePrivate(DescribeAccountSettingsResponse * const q);
 
     void parseDescribeAccountSettingsResponse(QXmlStreamReader &xml);
 

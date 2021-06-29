@@ -29,7 +29,7 @@ class FirehoseResponsePrivate {
 
 public:
 
-    FirehoseResponsePrivate(FirehoseResponse * const q);
+    explicit FirehoseResponsePrivate(FirehoseResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

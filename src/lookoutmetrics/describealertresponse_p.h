@@ -31,7 +31,7 @@ class DescribeAlertResponsePrivate : public LookoutMetricsResponsePrivate {
 
 public:
 
-    DescribeAlertResponsePrivate(DescribeAlertResponse * const q);
+    explicit DescribeAlertResponsePrivate(DescribeAlertResponse * const q);
 
     void parseDescribeAlertResponse(QXmlStreamReader &xml);
 

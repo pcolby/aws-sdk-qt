@@ -31,7 +31,7 @@ class CreateVirtualServiceResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 
-    CreateVirtualServiceResponsePrivate(CreateVirtualServiceResponse * const q);
+    explicit CreateVirtualServiceResponsePrivate(CreateVirtualServiceResponse * const q);
 
     void parseCreateVirtualServiceResponse(QXmlStreamReader &xml);
 

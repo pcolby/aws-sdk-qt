@@ -31,7 +31,7 @@ class StopJobRunResponsePrivate : public GlueDataBrewResponsePrivate {
 
 public:
 
-    StopJobRunResponsePrivate(StopJobRunResponse * const q);
+    explicit StopJobRunResponsePrivate(StopJobRunResponse * const q);
 
     void parseStopJobRunResponse(QXmlStreamReader &xml);
 

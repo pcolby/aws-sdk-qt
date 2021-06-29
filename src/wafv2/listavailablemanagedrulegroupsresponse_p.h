@@ -31,7 +31,7 @@ class ListAvailableManagedRuleGroupsResponsePrivate : public Wafv2ResponsePrivat
 
 public:
 
-    ListAvailableManagedRuleGroupsResponsePrivate(ListAvailableManagedRuleGroupsResponse * const q);
+    explicit ListAvailableManagedRuleGroupsResponsePrivate(ListAvailableManagedRuleGroupsResponse * const q);
 
     void parseListAvailableManagedRuleGroupsResponse(QXmlStreamReader &xml);
 

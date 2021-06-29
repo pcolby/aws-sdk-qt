@@ -31,7 +31,7 @@ class GetCardinalityResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    GetCardinalityResponsePrivate(GetCardinalityResponse * const q);
+    explicit GetCardinalityResponsePrivate(GetCardinalityResponse * const q);
 
     void parseGetCardinalityResponse(QXmlStreamReader &xml);
 

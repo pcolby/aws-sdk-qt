@@ -31,7 +31,7 @@ class BatchPutAttributesResponsePrivate : public SimpleDBResponsePrivate {
 
 public:
 
-    BatchPutAttributesResponsePrivate(BatchPutAttributesResponse * const q);
+    explicit BatchPutAttributesResponsePrivate(BatchPutAttributesResponse * const q);
 
     void parseBatchPutAttributesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetSamplingRulesResponsePrivate : public XRayResponsePrivate {
 
 public:
 
-    GetSamplingRulesResponsePrivate(GetSamplingRulesResponse * const q);
+    explicit GetSamplingRulesResponsePrivate(GetSamplingRulesResponse * const q);
 
     void parseGetSamplingRulesResponse(QXmlStreamReader &xml);
 

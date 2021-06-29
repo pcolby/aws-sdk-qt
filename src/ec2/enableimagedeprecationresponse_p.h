@@ -31,7 +31,7 @@ class EnableImageDeprecationResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    EnableImageDeprecationResponsePrivate(EnableImageDeprecationResponse * const q);
+    explicit EnableImageDeprecationResponsePrivate(EnableImageDeprecationResponse * const q);
 
     void parseEnableImageDeprecationResponse(QXmlStreamReader &xml);
 

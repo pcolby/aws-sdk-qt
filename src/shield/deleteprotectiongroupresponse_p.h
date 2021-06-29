@@ -31,7 +31,7 @@ class DeleteProtectionGroupResponsePrivate : public ShieldResponsePrivate {
 
 public:
 
-    DeleteProtectionGroupResponsePrivate(DeleteProtectionGroupResponse * const q);
+    explicit DeleteProtectionGroupResponsePrivate(DeleteProtectionGroupResponse * const q);
 
     void parseDeleteProtectionGroupResponse(QXmlStreamReader &xml);
 

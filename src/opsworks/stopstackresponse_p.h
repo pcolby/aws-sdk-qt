@@ -31,7 +31,7 @@ class StopStackResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    StopStackResponsePrivate(StopStackResponse * const q);
+    explicit StopStackResponsePrivate(StopStackResponse * const q);
 
     void parseStopStackResponse(QXmlStreamReader &xml);
 

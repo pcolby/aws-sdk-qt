@@ -31,7 +31,7 @@ class StartEntitiesDetectionV2JobResponsePrivate : public ComprehendMedicalRespo
 
 public:
 
-    StartEntitiesDetectionV2JobResponsePrivate(StartEntitiesDetectionV2JobResponse * const q);
+    explicit StartEntitiesDetectionV2JobResponsePrivate(StartEntitiesDetectionV2JobResponse * const q);
 
     void parseStartEntitiesDetectionV2JobResponse(QXmlStreamReader &xml);
 

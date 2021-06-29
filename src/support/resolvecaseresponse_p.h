@@ -31,7 +31,7 @@ class ResolveCaseResponsePrivate : public SupportResponsePrivate {
 
 public:
 
-    ResolveCaseResponsePrivate(ResolveCaseResponse * const q);
+    explicit ResolveCaseResponsePrivate(ResolveCaseResponse * const q);
 
     void parseResolveCaseResponse(QXmlStreamReader &xml);
 

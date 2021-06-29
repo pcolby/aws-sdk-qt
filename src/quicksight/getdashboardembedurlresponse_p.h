@@ -31,7 +31,7 @@ class GetDashboardEmbedUrlResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    GetDashboardEmbedUrlResponsePrivate(GetDashboardEmbedUrlResponse * const q);
+    explicit GetDashboardEmbedUrlResponsePrivate(GetDashboardEmbedUrlResponse * const q);
 
     void parseGetDashboardEmbedUrlResponse(QXmlStreamReader &xml);
 

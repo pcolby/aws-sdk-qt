@@ -29,7 +29,7 @@ class WorkLinkResponsePrivate {
 
 public:
 
-    WorkLinkResponsePrivate(WorkLinkResponse * const q);
+    explicit WorkLinkResponsePrivate(WorkLinkResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

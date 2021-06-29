@@ -31,7 +31,7 @@ class DescribeVirtualClusterResponsePrivate : public EMRContainersResponsePrivat
 
 public:
 
-    DescribeVirtualClusterResponsePrivate(DescribeVirtualClusterResponse * const q);
+    explicit DescribeVirtualClusterResponsePrivate(DescribeVirtualClusterResponse * const q);
 
     void parseDescribeVirtualClusterResponse(QXmlStreamReader &xml);
 

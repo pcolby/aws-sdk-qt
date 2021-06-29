@@ -31,7 +31,7 @@ class RestoreDBClusterToPointInTimeResponsePrivate : public DocDBResponsePrivate
 
 public:
 
-    RestoreDBClusterToPointInTimeResponsePrivate(RestoreDBClusterToPointInTimeResponse * const q);
+    explicit RestoreDBClusterToPointInTimeResponsePrivate(RestoreDBClusterToPointInTimeResponse * const q);
 
     void parseRestoreDBClusterToPointInTimeResponse(QXmlStreamReader &xml);
 

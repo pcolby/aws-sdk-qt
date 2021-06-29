@@ -31,7 +31,7 @@ class DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsResponsePri
 
 public:
 
-    DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsResponsePrivate(DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsResponse * const q);
+    explicit DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsResponsePrivate(DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsResponse * const q);
 
     void parseDescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UngroupResourcesResponsePrivate : public ResourceGroupsResponsePrivate {
 
 public:
 
-    UngroupResourcesResponsePrivate(UngroupResourcesResponse * const q);
+    explicit UngroupResourcesResponsePrivate(UngroupResourcesResponse * const q);
 
     void parseUngroupResourcesResponse(QXmlStreamReader &xml);
 

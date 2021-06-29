@@ -31,7 +31,7 @@ class DeleteResolverRuleResponsePrivate : public Route53ResolverResponsePrivate 
 
 public:
 
-    DeleteResolverRuleResponsePrivate(DeleteResolverRuleResponse * const q);
+    explicit DeleteResolverRuleResponsePrivate(DeleteResolverRuleResponse * const q);
 
     void parseDeleteResolverRuleResponse(QXmlStreamReader &xml);
 

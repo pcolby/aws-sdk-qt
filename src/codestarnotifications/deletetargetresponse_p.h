@@ -31,7 +31,7 @@ class DeleteTargetResponsePrivate : public CodeStarNotificationsResponsePrivate 
 
 public:
 
-    DeleteTargetResponsePrivate(DeleteTargetResponse * const q);
+    explicit DeleteTargetResponsePrivate(DeleteTargetResponse * const q);
 
     void parseDeleteTargetResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateRepositoryResponsePrivate : public ECRPublicResponsePrivate {
 
 public:
 
-    CreateRepositoryResponsePrivate(CreateRepositoryResponse * const q);
+    explicit CreateRepositoryResponsePrivate(CreateRepositoryResponse * const q);
 
     void parseCreateRepositoryResponse(QXmlStreamReader &xml);
 

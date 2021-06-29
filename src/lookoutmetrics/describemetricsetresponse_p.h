@@ -31,7 +31,7 @@ class DescribeMetricSetResponsePrivate : public LookoutMetricsResponsePrivate {
 
 public:
 
-    DescribeMetricSetResponsePrivate(DescribeMetricSetResponse * const q);
+    explicit DescribeMetricSetResponsePrivate(DescribeMetricSetResponse * const q);
 
     void parseDescribeMetricSetResponse(QXmlStreamReader &xml);
 

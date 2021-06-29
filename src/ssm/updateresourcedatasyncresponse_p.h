@@ -31,7 +31,7 @@ class UpdateResourceDataSyncResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    UpdateResourceDataSyncResponsePrivate(UpdateResourceDataSyncResponse * const q);
+    explicit UpdateResourceDataSyncResponsePrivate(UpdateResourceDataSyncResponse * const q);
 
     void parseUpdateResourceDataSyncResponse(QXmlStreamReader &xml);
 

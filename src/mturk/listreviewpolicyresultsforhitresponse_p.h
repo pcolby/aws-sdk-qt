@@ -31,7 +31,7 @@ class ListReviewPolicyResultsForHITResponsePrivate : public MTurkResponsePrivate
 
 public:
 
-    ListReviewPolicyResultsForHITResponsePrivate(ListReviewPolicyResultsForHITResponse * const q);
+    explicit ListReviewPolicyResultsForHITResponsePrivate(ListReviewPolicyResultsForHITResponse * const q);
 
     void parseListReviewPolicyResultsForHITResponse(QXmlStreamReader &xml);
 

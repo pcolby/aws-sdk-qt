@@ -29,7 +29,7 @@ class EC2InstanceConnectResponsePrivate {
 
 public:
 
-    EC2InstanceConnectResponsePrivate(EC2InstanceConnectResponse * const q);
+    explicit EC2InstanceConnectResponsePrivate(EC2InstanceConnectResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

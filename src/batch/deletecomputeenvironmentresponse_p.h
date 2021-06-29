@@ -31,7 +31,7 @@ class DeleteComputeEnvironmentResponsePrivate : public BatchResponsePrivate {
 
 public:
 
-    DeleteComputeEnvironmentResponsePrivate(DeleteComputeEnvironmentResponse * const q);
+    explicit DeleteComputeEnvironmentResponsePrivate(DeleteComputeEnvironmentResponse * const q);
 
     void parseDeleteComputeEnvironmentResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetAutomationExecutionResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    GetAutomationExecutionResponsePrivate(GetAutomationExecutionResponse * const q);
+    explicit GetAutomationExecutionResponsePrivate(GetAutomationExecutionResponse * const q);
 
     void parseGetAutomationExecutionResponse(QXmlStreamReader &xml);
 

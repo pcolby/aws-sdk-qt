@@ -31,7 +31,7 @@ class UpdateFindingsFeedbackResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 
-    UpdateFindingsFeedbackResponsePrivate(UpdateFindingsFeedbackResponse * const q);
+    explicit UpdateFindingsFeedbackResponsePrivate(UpdateFindingsFeedbackResponse * const q);
 
     void parseUpdateFindingsFeedbackResponse(QXmlStreamReader &xml);
 

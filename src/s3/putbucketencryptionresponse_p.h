@@ -31,7 +31,7 @@ class PutBucketEncryptionResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    PutBucketEncryptionResponsePrivate(PutBucketEncryptionResponse * const q);
+    explicit PutBucketEncryptionResponsePrivate(PutBucketEncryptionResponse * const q);
 
     void parsePutBucketEncryptionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeregisterDBProxyTargetsResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    DeregisterDBProxyTargetsResponsePrivate(DeregisterDBProxyTargetsResponse * const q);
+    explicit DeregisterDBProxyTargetsResponsePrivate(DeregisterDBProxyTargetsResponse * const q);
 
     void parseDeregisterDBProxyTargetsResponse(QXmlStreamReader &xml);
 

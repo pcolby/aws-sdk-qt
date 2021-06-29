@@ -31,7 +31,7 @@ class ListV2LoggingLevelsResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    ListV2LoggingLevelsResponsePrivate(ListV2LoggingLevelsResponse * const q);
+    explicit ListV2LoggingLevelsResponsePrivate(ListV2LoggingLevelsResponse * const q);
 
     void parseListV2LoggingLevelsResponse(QXmlStreamReader &xml);
 

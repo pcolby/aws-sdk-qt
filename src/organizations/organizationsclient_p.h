@@ -30,7 +30,7 @@ class OrganizationsClient;
 class OrganizationsClientPrivate {
 
 public:
-    OrganizationsClientPrivate(OrganizationsClient * const q);
+    explicit OrganizationsClientPrivate(OrganizationsClient * const q);
 
 protected:
     OrganizationsClient * const q_ptr; ///< Internal q-pointer.

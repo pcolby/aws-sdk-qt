@@ -31,7 +31,7 @@ class UpdateLedgerResponsePrivate : public QldbResponsePrivate {
 
 public:
 
-    UpdateLedgerResponsePrivate(UpdateLedgerResponse * const q);
+    explicit UpdateLedgerResponsePrivate(UpdateLedgerResponse * const q);
 
     void parseUpdateLedgerResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateAgentResponsePrivate : public DataSyncResponsePrivate {
 
 public:
 
-    CreateAgentResponsePrivate(CreateAgentResponse * const q);
+    explicit CreateAgentResponsePrivate(CreateAgentResponse * const q);
 
     void parseCreateAgentResponse(QXmlStreamReader &xml);
 

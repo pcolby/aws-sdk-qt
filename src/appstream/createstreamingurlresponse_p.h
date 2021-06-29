@@ -31,7 +31,7 @@ class CreateStreamingURLResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 
-    CreateStreamingURLResponsePrivate(CreateStreamingURLResponse * const q);
+    explicit CreateStreamingURLResponsePrivate(CreateStreamingURLResponse * const q);
 
     void parseCreateStreamingURLResponse(QXmlStreamReader &xml);
 

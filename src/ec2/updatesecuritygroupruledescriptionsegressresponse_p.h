@@ -31,7 +31,7 @@ class UpdateSecurityGroupRuleDescriptionsEgressResponsePrivate : public Ec2Respo
 
 public:
 
-    UpdateSecurityGroupRuleDescriptionsEgressResponsePrivate(UpdateSecurityGroupRuleDescriptionsEgressResponse * const q);
+    explicit UpdateSecurityGroupRuleDescriptionsEgressResponsePrivate(UpdateSecurityGroupRuleDescriptionsEgressResponse * const q);
 
     void parseUpdateSecurityGroupRuleDescriptionsEgressResponse(QXmlStreamReader &xml);
 

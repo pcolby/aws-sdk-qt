@@ -76,7 +76,7 @@ public:
 protected:
     /// @cond internal
     CognitoSyncRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    CognitoSyncRequest(CognitoSyncRequestPrivate * const d);
+    explicit CognitoSyncRequest(CognitoSyncRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

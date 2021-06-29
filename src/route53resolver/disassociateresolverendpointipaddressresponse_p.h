@@ -31,7 +31,7 @@ class DisassociateResolverEndpointIpAddressResponsePrivate : public Route53Resol
 
 public:
 
-    DisassociateResolverEndpointIpAddressResponsePrivate(DisassociateResolverEndpointIpAddressResponse * const q);
+    explicit DisassociateResolverEndpointIpAddressResponsePrivate(DisassociateResolverEndpointIpAddressResponse * const q);
 
     void parseDisassociateResolverEndpointIpAddressResponse(QXmlStreamReader &xml);
 

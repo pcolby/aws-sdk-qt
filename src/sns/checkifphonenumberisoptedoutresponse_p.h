@@ -31,7 +31,7 @@ class CheckIfPhoneNumberIsOptedOutResponsePrivate : public SnsResponsePrivate {
 
 public:
 
-    CheckIfPhoneNumberIsOptedOutResponsePrivate(CheckIfPhoneNumberIsOptedOutResponse * const q);
+    explicit CheckIfPhoneNumberIsOptedOutResponsePrivate(CheckIfPhoneNumberIsOptedOutResponse * const q);
 
     void parseCheckIfPhoneNumberIsOptedOutResponse(QXmlStreamReader &xml);
 

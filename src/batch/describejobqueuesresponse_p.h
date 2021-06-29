@@ -31,7 +31,7 @@ class DescribeJobQueuesResponsePrivate : public BatchResponsePrivate {
 
 public:
 
-    DescribeJobQueuesResponsePrivate(DescribeJobQueuesResponse * const q);
+    explicit DescribeJobQueuesResponsePrivate(DescribeJobQueuesResponse * const q);
 
     void parseDescribeJobQueuesResponse(QXmlStreamReader &xml);
 

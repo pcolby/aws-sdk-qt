@@ -31,7 +31,7 @@ class DescribeInstanceCreditSpecificationsResponsePrivate : public Ec2ResponsePr
 
 public:
 
-    DescribeInstanceCreditSpecificationsResponsePrivate(DescribeInstanceCreditSpecificationsResponse * const q);
+    explicit DescribeInstanceCreditSpecificationsResponsePrivate(DescribeInstanceCreditSpecificationsResponse * const q);
 
     void parseDescribeInstanceCreditSpecificationsResponse(QXmlStreamReader &xml);
 

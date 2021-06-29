@@ -31,7 +31,7 @@ class CreateKeyPairResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CreateKeyPairResponsePrivate(CreateKeyPairResponse * const q);
+    explicit CreateKeyPairResponsePrivate(CreateKeyPairResponse * const q);
 
     void parseCreateKeyPairResponse(QXmlStreamReader &xml);
 

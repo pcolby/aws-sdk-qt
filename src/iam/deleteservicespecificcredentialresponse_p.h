@@ -31,7 +31,7 @@ class DeleteServiceSpecificCredentialResponsePrivate : public IamResponsePrivate
 
 public:
 
-    DeleteServiceSpecificCredentialResponsePrivate(DeleteServiceSpecificCredentialResponse * const q);
+    explicit DeleteServiceSpecificCredentialResponsePrivate(DeleteServiceSpecificCredentialResponse * const q);
 
     void parseDeleteServiceSpecificCredentialResponse(QXmlStreamReader &xml);
 

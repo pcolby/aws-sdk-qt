@@ -31,7 +31,7 @@ class UploadArchiveResponsePrivate : public GlacierResponsePrivate {
 
 public:
 
-    UploadArchiveResponsePrivate(UploadArchiveResponse * const q);
+    explicit UploadArchiveResponsePrivate(UploadArchiveResponse * const q);
 
     void parseUploadArchiveResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class StartMLLabelingSetGenerationTaskRunResponsePrivate : public GlueResponsePr
 
 public:
 
-    StartMLLabelingSetGenerationTaskRunResponsePrivate(StartMLLabelingSetGenerationTaskRunResponse * const q);
+    explicit StartMLLabelingSetGenerationTaskRunResponsePrivate(StartMLLabelingSetGenerationTaskRunResponse * const q);
 
     void parseStartMLLabelingSetGenerationTaskRunResponse(QXmlStreamReader &xml);
 

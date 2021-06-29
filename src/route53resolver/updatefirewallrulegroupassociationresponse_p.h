@@ -31,7 +31,7 @@ class UpdateFirewallRuleGroupAssociationResponsePrivate : public Route53Resolver
 
 public:
 
-    UpdateFirewallRuleGroupAssociationResponsePrivate(UpdateFirewallRuleGroupAssociationResponse * const q);
+    explicit UpdateFirewallRuleGroupAssociationResponsePrivate(UpdateFirewallRuleGroupAssociationResponse * const q);
 
     void parseUpdateFirewallRuleGroupAssociationResponse(QXmlStreamReader &xml);
 

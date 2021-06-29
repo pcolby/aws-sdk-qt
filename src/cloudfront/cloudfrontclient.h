@@ -207,7 +207,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    CloudFrontClient(
+    explicit CloudFrontClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -300,7 +300,7 @@ public slots:
 protected:
     /// @cond internal
     CloudFrontClientPrivate * const d_ptr; ///< Internal d-pointer.
-    CloudFrontClient(CloudFrontClientPrivate * const d);
+    explicit CloudFrontClient(CloudFrontClientPrivate * const d);
     /// @endcond
 
 private:

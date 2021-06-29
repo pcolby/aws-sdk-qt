@@ -29,7 +29,7 @@ class IoTDataPlaneResponsePrivate {
 
 public:
 
-    IoTDataPlaneResponsePrivate(IoTDataPlaneResponse * const q);
+    explicit IoTDataPlaneResponsePrivate(IoTDataPlaneResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

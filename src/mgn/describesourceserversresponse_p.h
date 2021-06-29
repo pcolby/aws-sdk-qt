@@ -31,7 +31,7 @@ class DescribeSourceServersResponsePrivate : public mgnResponsePrivate {
 
 public:
 
-    DescribeSourceServersResponsePrivate(DescribeSourceServersResponse * const q);
+    explicit DescribeSourceServersResponsePrivate(DescribeSourceServersResponse * const q);
 
     void parseDescribeSourceServersResponse(QXmlStreamReader &xml);
 

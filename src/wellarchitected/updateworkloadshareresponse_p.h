@@ -31,7 +31,7 @@ class UpdateWorkloadShareResponsePrivate : public WellArchitectedResponsePrivate
 
 public:
 
-    UpdateWorkloadShareResponsePrivate(UpdateWorkloadShareResponse * const q);
+    explicit UpdateWorkloadShareResponsePrivate(UpdateWorkloadShareResponse * const q);
 
     void parseUpdateWorkloadShareResponse(QXmlStreamReader &xml);
 

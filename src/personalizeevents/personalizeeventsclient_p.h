@@ -30,7 +30,7 @@ class PersonalizeEventsClient;
 class PersonalizeEventsClientPrivate {
 
 public:
-    PersonalizeEventsClientPrivate(PersonalizeEventsClient * const q);
+    explicit PersonalizeEventsClientPrivate(PersonalizeEventsClient * const q);
 
 protected:
     PersonalizeEventsClient * const q_ptr; ///< Internal q-pointer.

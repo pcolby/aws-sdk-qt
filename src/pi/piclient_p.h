@@ -30,7 +30,7 @@ class PiClient;
 class PiClientPrivate {
 
 public:
-    PiClientPrivate(PiClient * const q);
+    explicit PiClientPrivate(PiClient * const q);
 
 protected:
     PiClient * const q_ptr; ///< Internal q-pointer.

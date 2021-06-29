@@ -31,7 +31,7 @@ class CreateFleetResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CreateFleetResponsePrivate(CreateFleetResponse * const q);
+    explicit CreateFleetResponsePrivate(CreateFleetResponse * const q);
 
     void parseCreateFleetResponse(QXmlStreamReader &xml);
 

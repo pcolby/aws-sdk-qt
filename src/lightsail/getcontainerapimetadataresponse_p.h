@@ -31,7 +31,7 @@ class GetContainerAPIMetadataResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    GetContainerAPIMetadataResponsePrivate(GetContainerAPIMetadataResponse * const q);
+    explicit GetContainerAPIMetadataResponsePrivate(GetContainerAPIMetadataResponse * const q);
 
     void parseGetContainerAPIMetadataResponse(QXmlStreamReader &xml);
 

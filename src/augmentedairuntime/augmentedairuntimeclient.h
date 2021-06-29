@@ -51,7 +51,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    AugmentedAIRuntimeClient(
+    explicit AugmentedAIRuntimeClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -66,7 +66,7 @@ public slots:
 protected:
     /// @cond internal
     AugmentedAIRuntimeClientPrivate * const d_ptr; ///< Internal d-pointer.
-    AugmentedAIRuntimeClient(AugmentedAIRuntimeClientPrivate * const d);
+    explicit AugmentedAIRuntimeClient(AugmentedAIRuntimeClientPrivate * const d);
     /// @endcond
 
 private:

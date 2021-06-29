@@ -29,7 +29,7 @@ class TranslateResponsePrivate {
 
 public:
 
-    TranslateResponsePrivate(TranslateResponse * const q);
+    explicit TranslateResponsePrivate(TranslateResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

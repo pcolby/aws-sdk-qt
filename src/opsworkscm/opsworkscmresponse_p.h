@@ -29,7 +29,7 @@ class OpsWorksCMResponsePrivate {
 
 public:
 
-    OpsWorksCMResponsePrivate(OpsWorksCMResponse * const q);
+    explicit OpsWorksCMResponsePrivate(OpsWorksCMResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

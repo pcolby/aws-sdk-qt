@@ -31,7 +31,7 @@ class GetAppLaunchConfigurationResponsePrivate : public SmsResponsePrivate {
 
 public:
 
-    GetAppLaunchConfigurationResponsePrivate(GetAppLaunchConfigurationResponse * const q);
+    explicit GetAppLaunchConfigurationResponsePrivate(GetAppLaunchConfigurationResponse * const q);
 
     void parseGetAppLaunchConfigurationResponse(QXmlStreamReader &xml);
 

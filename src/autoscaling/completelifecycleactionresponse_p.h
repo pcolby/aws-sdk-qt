@@ -31,7 +31,7 @@ class CompleteLifecycleActionResponsePrivate : public AutoScalingResponsePrivate
 
 public:
 
-    CompleteLifecycleActionResponsePrivate(CompleteLifecycleActionResponse * const q);
+    explicit CompleteLifecycleActionResponsePrivate(CompleteLifecycleActionResponse * const q);
 
     void parseCompleteLifecycleActionResponse(QXmlStreamReader &xml);
 

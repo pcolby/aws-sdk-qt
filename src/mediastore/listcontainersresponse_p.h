@@ -31,7 +31,7 @@ class ListContainersResponsePrivate : public MediaStoreResponsePrivate {
 
 public:
 
-    ListContainersResponsePrivate(ListContainersResponse * const q);
+    explicit ListContainersResponsePrivate(ListContainersResponse * const q);
 
     void parseListContainersResponse(QXmlStreamReader &xml);
 

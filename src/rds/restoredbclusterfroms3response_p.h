@@ -31,7 +31,7 @@ class RestoreDBClusterFromS3ResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    RestoreDBClusterFromS3ResponsePrivate(RestoreDBClusterFromS3Response * const q);
+    explicit RestoreDBClusterFromS3ResponsePrivate(RestoreDBClusterFromS3Response * const q);
 
     void parseRestoreDBClusterFromS3Response(QXmlStreamReader &xml);
 

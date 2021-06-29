@@ -99,7 +99,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    ElasticLoadBalancingClient(
+    explicit ElasticLoadBalancingClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -138,7 +138,7 @@ public slots:
 protected:
     /// @cond internal
     ElasticLoadBalancingClientPrivate * const d_ptr; ///< Internal d-pointer.
-    ElasticLoadBalancingClient(ElasticLoadBalancingClientPrivate * const d);
+    explicit ElasticLoadBalancingClient(ElasticLoadBalancingClientPrivate * const d);
     /// @endcond
 
 private:

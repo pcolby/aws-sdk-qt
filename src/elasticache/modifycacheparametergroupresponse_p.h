@@ -31,7 +31,7 @@ class ModifyCacheParameterGroupResponsePrivate : public ElastiCacheResponsePriva
 
 public:
 
-    ModifyCacheParameterGroupResponsePrivate(ModifyCacheParameterGroupResponse * const q);
+    explicit ModifyCacheParameterGroupResponsePrivate(ModifyCacheParameterGroupResponse * const q);
 
     void parseModifyCacheParameterGroupResponse(QXmlStreamReader &xml);
 

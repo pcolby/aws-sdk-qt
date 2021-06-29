@@ -31,7 +31,7 @@ class DescribeStackDriftDetectionStatusResponsePrivate : public CloudFormationRe
 
 public:
 
-    DescribeStackDriftDetectionStatusResponsePrivate(DescribeStackDriftDetectionStatusResponse * const q);
+    explicit DescribeStackDriftDetectionStatusResponsePrivate(DescribeStackDriftDetectionStatusResponse * const q);
 
     void parseDescribeStackDriftDetectionStatusResponse(QXmlStreamReader &xml);
 

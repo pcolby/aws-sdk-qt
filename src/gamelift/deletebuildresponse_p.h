@@ -31,7 +31,7 @@ class DeleteBuildResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    DeleteBuildResponsePrivate(DeleteBuildResponse * const q);
+    explicit DeleteBuildResponsePrivate(DeleteBuildResponse * const q);
 
     void parseDeleteBuildResponse(QXmlStreamReader &xml);
 

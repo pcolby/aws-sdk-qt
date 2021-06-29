@@ -31,7 +31,7 @@ class AssociateTagOptionWithResourceResponsePrivate : public ServiceCatalogRespo
 
 public:
 
-    AssociateTagOptionWithResourceResponsePrivate(AssociateTagOptionWithResourceResponse * const q);
+    explicit AssociateTagOptionWithResourceResponsePrivate(AssociateTagOptionWithResourceResponse * const q);
 
     void parseAssociateTagOptionWithResourceResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeElasticGpusResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeElasticGpusResponsePrivate(DescribeElasticGpusResponse * const q);
+    explicit DescribeElasticGpusResponsePrivate(DescribeElasticGpusResponse * const q);
 
     void parseDescribeElasticGpusResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class PutSigningProfileResponsePrivate : public signerResponsePrivate {
 
 public:
 
-    PutSigningProfileResponsePrivate(PutSigningProfileResponse * const q);
+    explicit PutSigningProfileResponsePrivate(PutSigningProfileResponse * const q);
 
     void parsePutSigningProfileResponse(QXmlStreamReader &xml);
 

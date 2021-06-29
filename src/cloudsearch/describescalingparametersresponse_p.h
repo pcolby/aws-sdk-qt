@@ -31,7 +31,7 @@ class DescribeScalingParametersResponsePrivate : public CloudSearchResponsePriva
 
 public:
 
-    DescribeScalingParametersResponsePrivate(DescribeScalingParametersResponse * const q);
+    explicit DescribeScalingParametersResponsePrivate(DescribeScalingParametersResponse * const q);
 
     void parseDescribeScalingParametersResponse(QXmlStreamReader &xml);
 

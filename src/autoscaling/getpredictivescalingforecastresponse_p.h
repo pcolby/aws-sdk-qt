@@ -31,7 +31,7 @@ class GetPredictiveScalingForecastResponsePrivate : public AutoScalingResponsePr
 
 public:
 
-    GetPredictiveScalingForecastResponsePrivate(GetPredictiveScalingForecastResponse * const q);
+    explicit GetPredictiveScalingForecastResponsePrivate(GetPredictiveScalingForecastResponse * const q);
 
     void parseGetPredictiveScalingForecastResponse(QXmlStreamReader &xml);
 

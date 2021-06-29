@@ -31,7 +31,7 @@ class DeleteManagedPrefixListResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DeleteManagedPrefixListResponsePrivate(DeleteManagedPrefixListResponse * const q);
+    explicit DeleteManagedPrefixListResponsePrivate(DeleteManagedPrefixListResponse * const q);
 
     void parseDeleteManagedPrefixListResponse(QXmlStreamReader &xml);
 

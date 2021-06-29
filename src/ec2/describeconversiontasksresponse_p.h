@@ -31,7 +31,7 @@ class DescribeConversionTasksResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeConversionTasksResponsePrivate(DescribeConversionTasksResponse * const q);
+    explicit DescribeConversionTasksResponsePrivate(DescribeConversionTasksResponse * const q);
 
     void parseDescribeConversionTasksResponse(QXmlStreamReader &xml);
 

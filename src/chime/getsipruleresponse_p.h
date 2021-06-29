@@ -31,7 +31,7 @@ class GetSipRuleResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    GetSipRuleResponsePrivate(GetSipRuleResponse * const q);
+    explicit GetSipRuleResponsePrivate(GetSipRuleResponse * const q);
 
     void parseGetSipRuleResponse(QXmlStreamReader &xml);
 

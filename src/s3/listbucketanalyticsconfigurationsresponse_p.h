@@ -31,7 +31,7 @@ class ListBucketAnalyticsConfigurationsResponsePrivate : public S3ResponsePrivat
 
 public:
 
-    ListBucketAnalyticsConfigurationsResponsePrivate(ListBucketAnalyticsConfigurationsResponse * const q);
+    explicit ListBucketAnalyticsConfigurationsResponsePrivate(ListBucketAnalyticsConfigurationsResponse * const q);
 
     void parseListBucketAnalyticsConfigurationsResponse(QXmlStreamReader &xml);
 

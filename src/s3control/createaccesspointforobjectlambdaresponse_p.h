@@ -31,7 +31,7 @@ class CreateAccessPointForObjectLambdaResponsePrivate : public S3ControlResponse
 
 public:
 
-    CreateAccessPointForObjectLambdaResponsePrivate(CreateAccessPointForObjectLambdaResponse * const q);
+    explicit CreateAccessPointForObjectLambdaResponsePrivate(CreateAccessPointForObjectLambdaResponse * const q);
 
     void parseCreateAccessPointForObjectLambdaResponse(QXmlStreamReader &xml);
 

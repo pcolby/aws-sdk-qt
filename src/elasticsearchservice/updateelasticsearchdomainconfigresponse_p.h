@@ -31,7 +31,7 @@ class UpdateElasticsearchDomainConfigResponsePrivate : public ElasticsearchServi
 
 public:
 
-    UpdateElasticsearchDomainConfigResponsePrivate(UpdateElasticsearchDomainConfigResponse * const q);
+    explicit UpdateElasticsearchDomainConfigResponsePrivate(UpdateElasticsearchDomainConfigResponse * const q);
 
     void parseUpdateElasticsearchDomainConfigResponse(QXmlStreamReader &xml);
 

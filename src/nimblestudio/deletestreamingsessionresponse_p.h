@@ -31,7 +31,7 @@ class DeleteStreamingSessionResponsePrivate : public NimbleStudioResponsePrivate
 
 public:
 
-    DeleteStreamingSessionResponsePrivate(DeleteStreamingSessionResponse * const q);
+    explicit DeleteStreamingSessionResponsePrivate(DeleteStreamingSessionResponse * const q);
 
     void parseDeleteStreamingSessionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteControlResponsePrivate : public AuditManagerResponsePrivate {
 
 public:
 
-    DeleteControlResponsePrivate(DeleteControlResponse * const q);
+    explicit DeleteControlResponsePrivate(DeleteControlResponse * const q);
 
     void parseDeleteControlResponse(QXmlStreamReader &xml);
 

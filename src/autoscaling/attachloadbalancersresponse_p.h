@@ -31,7 +31,7 @@ class AttachLoadBalancersResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 
-    AttachLoadBalancersResponsePrivate(AttachLoadBalancersResponse * const q);
+    explicit AttachLoadBalancersResponsePrivate(AttachLoadBalancersResponse * const q);
 
     void parseAttachLoadBalancersResponse(QXmlStreamReader &xml);
 

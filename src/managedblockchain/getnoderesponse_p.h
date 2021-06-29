@@ -31,7 +31,7 @@ class GetNodeResponsePrivate : public ManagedBlockchainResponsePrivate {
 
 public:
 
-    GetNodeResponsePrivate(GetNodeResponse * const q);
+    explicit GetNodeResponsePrivate(GetNodeResponse * const q);
 
     void parseGetNodeResponse(QXmlStreamReader &xml);
 

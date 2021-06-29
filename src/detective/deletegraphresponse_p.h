@@ -31,7 +31,7 @@ class DeleteGraphResponsePrivate : public DetectiveResponsePrivate {
 
 public:
 
-    DeleteGraphResponsePrivate(DeleteGraphResponse * const q);
+    explicit DeleteGraphResponsePrivate(DeleteGraphResponse * const q);
 
     void parseDeleteGraphResponse(QXmlStreamReader &xml);
 

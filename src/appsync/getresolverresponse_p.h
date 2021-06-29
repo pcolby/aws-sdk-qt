@@ -31,7 +31,7 @@ class GetResolverResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 
-    GetResolverResponsePrivate(GetResolverResponse * const q);
+    explicit GetResolverResponsePrivate(GetResolverResponse * const q);
 
     void parseGetResolverResponse(QXmlStreamReader &xml);
 

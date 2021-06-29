@@ -31,7 +31,7 @@ class ListDomainsResponsePrivate : public Route53DomainsResponsePrivate {
 
 public:
 
-    ListDomainsResponsePrivate(ListDomainsResponse * const q);
+    explicit ListDomainsResponsePrivate(ListDomainsResponse * const q);
 
     void parseListDomainsResponse(QXmlStreamReader &xml);
 

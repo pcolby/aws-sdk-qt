@@ -31,7 +31,7 @@ class ListAnomalyDetectorsResponsePrivate : public LookoutMetricsResponsePrivate
 
 public:
 
-    ListAnomalyDetectorsResponsePrivate(ListAnomalyDetectorsResponse * const q);
+    explicit ListAnomalyDetectorsResponsePrivate(ListAnomalyDetectorsResponse * const q);
 
     void parseListAnomalyDetectorsResponse(QXmlStreamReader &xml);
 

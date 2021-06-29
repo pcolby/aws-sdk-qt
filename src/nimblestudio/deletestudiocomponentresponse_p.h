@@ -31,7 +31,7 @@ class DeleteStudioComponentResponsePrivate : public NimbleStudioResponsePrivate 
 
 public:
 
-    DeleteStudioComponentResponsePrivate(DeleteStudioComponentResponse * const q);
+    explicit DeleteStudioComponentResponsePrivate(DeleteStudioComponentResponse * const q);
 
     void parseDeleteStudioComponentResponse(QXmlStreamReader &xml);
 

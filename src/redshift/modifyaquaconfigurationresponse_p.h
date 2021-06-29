@@ -31,7 +31,7 @@ class ModifyAquaConfigurationResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    ModifyAquaConfigurationResponsePrivate(ModifyAquaConfigurationResponse * const q);
+    explicit ModifyAquaConfigurationResponsePrivate(ModifyAquaConfigurationResponse * const q);
 
     void parseModifyAquaConfigurationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class SetSecurityTokenServicePreferencesResponsePrivate : public IamResponsePriv
 
 public:
 
-    SetSecurityTokenServicePreferencesResponsePrivate(SetSecurityTokenServicePreferencesResponse * const q);
+    explicit SetSecurityTokenServicePreferencesResponsePrivate(SetSecurityTokenServicePreferencesResponse * const q);
 
     void parseSetSecurityTokenServicePreferencesResponse(QXmlStreamReader &xml);
 

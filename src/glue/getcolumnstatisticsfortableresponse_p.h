@@ -31,7 +31,7 @@ class GetColumnStatisticsForTableResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    GetColumnStatisticsForTableResponsePrivate(GetColumnStatisticsForTableResponse * const q);
+    explicit GetColumnStatisticsForTableResponsePrivate(GetColumnStatisticsForTableResponse * const q);
 
     void parseGetColumnStatisticsForTableResponse(QXmlStreamReader &xml);
 

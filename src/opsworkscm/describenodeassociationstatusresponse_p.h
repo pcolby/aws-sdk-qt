@@ -31,7 +31,7 @@ class DescribeNodeAssociationStatusResponsePrivate : public OpsWorksCMResponsePr
 
 public:
 
-    DescribeNodeAssociationStatusResponsePrivate(DescribeNodeAssociationStatusResponse * const q);
+    explicit DescribeNodeAssociationStatusResponsePrivate(DescribeNodeAssociationStatusResponse * const q);
 
     void parseDescribeNodeAssociationStatusResponse(QXmlStreamReader &xml);
 

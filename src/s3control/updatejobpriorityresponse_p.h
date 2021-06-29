@@ -31,7 +31,7 @@ class UpdateJobPriorityResponsePrivate : public S3ControlResponsePrivate {
 
 public:
 
-    UpdateJobPriorityResponsePrivate(UpdateJobPriorityResponse * const q);
+    explicit UpdateJobPriorityResponsePrivate(UpdateJobPriorityResponse * const q);
 
     void parseUpdateJobPriorityResponse(QXmlStreamReader &xml);
 

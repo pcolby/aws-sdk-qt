@@ -31,7 +31,7 @@ class ImportKeyMaterialResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    ImportKeyMaterialResponsePrivate(ImportKeyMaterialResponse * const q);
+    explicit ImportKeyMaterialResponsePrivate(ImportKeyMaterialResponse * const q);
 
     void parseImportKeyMaterialResponse(QXmlStreamReader &xml);
 

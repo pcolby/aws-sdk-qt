@@ -31,7 +31,7 @@ class ListAccountAliasesResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    ListAccountAliasesResponsePrivate(ListAccountAliasesResponse * const q);
+    explicit ListAccountAliasesResponsePrivate(ListAccountAliasesResponse * const q);
 
     void parseListAccountAliasesResponse(QXmlStreamReader &xml);
 

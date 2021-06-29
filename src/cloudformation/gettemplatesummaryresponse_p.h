@@ -31,7 +31,7 @@ class GetTemplateSummaryResponsePrivate : public CloudFormationResponsePrivate {
 
 public:
 
-    GetTemplateSummaryResponsePrivate(GetTemplateSummaryResponse * const q);
+    explicit GetTemplateSummaryResponsePrivate(GetTemplateSummaryResponse * const q);
 
     void parseGetTemplateSummaryResponse(QXmlStreamReader &xml);
 

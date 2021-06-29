@@ -31,7 +31,7 @@ class DeleteSnapshotCopyGrantResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    DeleteSnapshotCopyGrantResponsePrivate(DeleteSnapshotCopyGrantResponse * const q);
+    explicit DeleteSnapshotCopyGrantResponsePrivate(DeleteSnapshotCopyGrantResponse * const q);
 
     void parseDeleteSnapshotCopyGrantResponse(QXmlStreamReader &xml);
 

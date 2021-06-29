@@ -31,7 +31,7 @@ class DetachSecurityProfileResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DetachSecurityProfileResponsePrivate(DetachSecurityProfileResponse * const q);
+    explicit DetachSecurityProfileResponsePrivate(DetachSecurityProfileResponse * const q);
 
     void parseDetachSecurityProfileResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListAWSServiceAccessForOrganizationResponsePrivate : public OrganizationsR
 
 public:
 
-    ListAWSServiceAccessForOrganizationResponsePrivate(ListAWSServiceAccessForOrganizationResponse * const q);
+    explicit ListAWSServiceAccessForOrganizationResponsePrivate(ListAWSServiceAccessForOrganizationResponse * const q);
 
     void parseListAWSServiceAccessForOrganizationResponse(QXmlStreamReader &xml);
 

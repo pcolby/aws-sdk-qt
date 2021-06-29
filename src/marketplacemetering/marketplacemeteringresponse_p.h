@@ -29,7 +29,7 @@ class MarketplaceMeteringResponsePrivate {
 
 public:
 
-    MarketplaceMeteringResponsePrivate(MarketplaceMeteringResponse * const q);
+    explicit MarketplaceMeteringResponsePrivate(MarketplaceMeteringResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

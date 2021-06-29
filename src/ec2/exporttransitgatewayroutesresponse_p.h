@@ -31,7 +31,7 @@ class ExportTransitGatewayRoutesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ExportTransitGatewayRoutesResponsePrivate(ExportTransitGatewayRoutesResponse * const q);
+    explicit ExportTransitGatewayRoutesResponsePrivate(ExportTransitGatewayRoutesResponse * const q);
 
     void parseExportTransitGatewayRoutesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class SendCommandResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    SendCommandResponsePrivate(SendCommandResponse * const q);
+    explicit SendCommandResponsePrivate(SendCommandResponse * const q);
 
     void parseSendCommandResponse(QXmlStreamReader &xml);
 

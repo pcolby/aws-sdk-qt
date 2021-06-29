@@ -31,7 +31,7 @@ class BatchGetResourceConfigResponsePrivate : public ConfigServiceResponsePrivat
 
 public:
 
-    BatchGetResourceConfigResponsePrivate(BatchGetResourceConfigResponse * const q);
+    explicit BatchGetResourceConfigResponsePrivate(BatchGetResourceConfigResponse * const q);
 
     void parseBatchGetResourceConfigResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListAnomalyGroupTimeSeriesResponsePrivate : public LookoutMetricsResponseP
 
 public:
 
-    ListAnomalyGroupTimeSeriesResponsePrivate(ListAnomalyGroupTimeSeriesResponse * const q);
+    explicit ListAnomalyGroupTimeSeriesResponsePrivate(ListAnomalyGroupTimeSeriesResponse * const q);
 
     void parseListAnomalyGroupTimeSeriesResponse(QXmlStreamReader &xml);
 

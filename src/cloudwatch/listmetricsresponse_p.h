@@ -31,7 +31,7 @@ class ListMetricsResponsePrivate : public CloudWatchResponsePrivate {
 
 public:
 
-    ListMetricsResponsePrivate(ListMetricsResponse * const q);
+    explicit ListMetricsResponsePrivate(ListMetricsResponse * const q);
 
     void parseListMetricsResponse(QXmlStreamReader &xml);
 

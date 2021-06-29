@@ -135,7 +135,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    ElasticBeanstalkClient(
+    explicit ElasticBeanstalkClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -195,7 +195,7 @@ public slots:
 protected:
     /// @cond internal
     ElasticBeanstalkClientPrivate * const d_ptr; ///< Internal d-pointer.
-    ElasticBeanstalkClient(ElasticBeanstalkClientPrivate * const d);
+    explicit ElasticBeanstalkClient(ElasticBeanstalkClientPrivate * const d);
     /// @endcond
 
 private:

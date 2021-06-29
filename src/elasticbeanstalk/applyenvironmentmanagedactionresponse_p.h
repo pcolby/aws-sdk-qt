@@ -31,7 +31,7 @@ class ApplyEnvironmentManagedActionResponsePrivate : public ElasticBeanstalkResp
 
 public:
 
-    ApplyEnvironmentManagedActionResponsePrivate(ApplyEnvironmentManagedActionResponse * const q);
+    explicit ApplyEnvironmentManagedActionResponsePrivate(ApplyEnvironmentManagedActionResponse * const q);
 
     void parseApplyEnvironmentManagedActionResponse(QXmlStreamReader &xml);
 

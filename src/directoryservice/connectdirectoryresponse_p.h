@@ -31,7 +31,7 @@ class ConnectDirectoryResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 
-    ConnectDirectoryResponsePrivate(ConnectDirectoryResponse * const q);
+    explicit ConnectDirectoryResponsePrivate(ConnectDirectoryResponse * const q);
 
     void parseConnectDirectoryResponse(QXmlStreamReader &xml);
 

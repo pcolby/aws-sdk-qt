@@ -31,7 +31,7 @@ class DeleteStoredQueryResponsePrivate : public ConfigServiceResponsePrivate {
 
 public:
 
-    DeleteStoredQueryResponsePrivate(DeleteStoredQueryResponse * const q);
+    explicit DeleteStoredQueryResponsePrivate(DeleteStoredQueryResponse * const q);
 
     void parseDeleteStoredQueryResponse(QXmlStreamReader &xml);
 

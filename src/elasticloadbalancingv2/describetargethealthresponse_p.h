@@ -31,7 +31,7 @@ class DescribeTargetHealthResponsePrivate : public ElasticLoadBalancingv2Respons
 
 public:
 
-    DescribeTargetHealthResponsePrivate(DescribeTargetHealthResponse * const q);
+    explicit DescribeTargetHealthResponsePrivate(DescribeTargetHealthResponse * const q);
 
     void parseDescribeTargetHealthResponse(QXmlStreamReader &xml);
 

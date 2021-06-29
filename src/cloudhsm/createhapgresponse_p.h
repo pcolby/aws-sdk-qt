@@ -31,7 +31,7 @@ class CreateHapgResponsePrivate : public CloudHSMResponsePrivate {
 
 public:
 
-    CreateHapgResponsePrivate(CreateHapgResponse * const q);
+    explicit CreateHapgResponsePrivate(CreateHapgResponse * const q);
 
     void parseCreateHapgResponse(QXmlStreamReader &xml);
 

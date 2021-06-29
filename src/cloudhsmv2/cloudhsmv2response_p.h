@@ -29,7 +29,7 @@ class CloudHSMV2ResponsePrivate {
 
 public:
 
-    CloudHSMV2ResponsePrivate(CloudHSMV2Response * const q);
+    explicit CloudHSMV2ResponsePrivate(CloudHSMV2Response * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

@@ -31,7 +31,7 @@ class GetAppsResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    GetAppsResponsePrivate(GetAppsResponse * const q);
+    explicit GetAppsResponsePrivate(GetAppsResponse * const q);
 
     void parseGetAppsResponse(QXmlStreamReader &xml);
 

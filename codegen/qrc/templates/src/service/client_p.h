@@ -12,7 +12,7 @@ class {{ClassName}};
 class {{ClassName}}Private {
 
 public:
-    {{ClassName}}Private({{ClassName}} * const q);
+    explicit {{ClassName}}Private({{ClassName}} * const q);
 
 protected:
     {{ClassName}} * const q_ptr; ///< Internal q-pointer.

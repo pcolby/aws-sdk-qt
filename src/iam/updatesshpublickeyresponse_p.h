@@ -31,7 +31,7 @@ class UpdateSSHPublicKeyResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    UpdateSSHPublicKeyResponsePrivate(UpdateSSHPublicKeyResponse * const q);
+    explicit UpdateSSHPublicKeyResponsePrivate(UpdateSSHPublicKeyResponse * const q);
 
     void parseUpdateSSHPublicKeyResponse(QXmlStreamReader &xml);
 

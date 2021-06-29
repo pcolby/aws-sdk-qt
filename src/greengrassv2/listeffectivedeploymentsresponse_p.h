@@ -31,7 +31,7 @@ class ListEffectiveDeploymentsResponsePrivate : public GreengrassV2ResponsePriva
 
 public:
 
-    ListEffectiveDeploymentsResponsePrivate(ListEffectiveDeploymentsResponse * const q);
+    explicit ListEffectiveDeploymentsResponsePrivate(ListEffectiveDeploymentsResponse * const q);
 
     void parseListEffectiveDeploymentsResponse(QXmlStreamReader &xml);
 

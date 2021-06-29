@@ -31,7 +31,7 @@ class GetSavingsPlansUtilizationResponsePrivate : public CostExplorerResponsePri
 
 public:
 
-    GetSavingsPlansUtilizationResponsePrivate(GetSavingsPlansUtilizationResponse * const q);
+    explicit GetSavingsPlansUtilizationResponsePrivate(GetSavingsPlansUtilizationResponse * const q);
 
     void parseGetSavingsPlansUtilizationResponse(QXmlStreamReader &xml);
 

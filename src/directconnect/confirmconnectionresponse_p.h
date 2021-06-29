@@ -31,7 +31,7 @@ class ConfirmConnectionResponsePrivate : public DirectConnectResponsePrivate {
 
 public:
 
-    ConfirmConnectionResponsePrivate(ConfirmConnectionResponse * const q);
+    explicit ConfirmConnectionResponsePrivate(ConfirmConnectionResponse * const q);
 
     void parseConfirmConnectionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class BatchPutDocumentResponsePrivate : public kendraResponsePrivate {
 
 public:
 
-    BatchPutDocumentResponsePrivate(BatchPutDocumentResponse * const q);
+    explicit BatchPutDocumentResponsePrivate(BatchPutDocumentResponse * const q);
 
     void parseBatchPutDocumentResponse(QXmlStreamReader &xml);
 

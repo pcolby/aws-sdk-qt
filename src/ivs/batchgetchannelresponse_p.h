@@ -31,7 +31,7 @@ class BatchGetChannelResponsePrivate : public IvsResponsePrivate {
 
 public:
 
-    BatchGetChannelResponsePrivate(BatchGetChannelResponse * const q);
+    explicit BatchGetChannelResponsePrivate(BatchGetChannelResponse * const q);
 
     void parseBatchGetChannelResponse(QXmlStreamReader &xml);
 

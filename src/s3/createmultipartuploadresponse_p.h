@@ -31,7 +31,7 @@ class CreateMultipartUploadResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    CreateMultipartUploadResponsePrivate(CreateMultipartUploadResponse * const q);
+    explicit CreateMultipartUploadResponsePrivate(CreateMultipartUploadResponse * const q);
 
     void parseCreateMultipartUploadResponse(QXmlStreamReader &xml);
 

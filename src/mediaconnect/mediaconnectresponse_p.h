@@ -29,7 +29,7 @@ class MediaConnectResponsePrivate {
 
 public:
 
-    MediaConnectResponsePrivate(MediaConnectResponse * const q);
+    explicit MediaConnectResponsePrivate(MediaConnectResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

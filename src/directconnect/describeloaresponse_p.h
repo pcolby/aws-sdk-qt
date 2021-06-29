@@ -31,7 +31,7 @@ class DescribeLoaResponsePrivate : public DirectConnectResponsePrivate {
 
 public:
 
-    DescribeLoaResponsePrivate(DescribeLoaResponse * const q);
+    explicit DescribeLoaResponsePrivate(DescribeLoaResponse * const q);
 
     void parseDescribeLoaResponse(QXmlStreamReader &xml);
 

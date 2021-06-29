@@ -31,7 +31,7 @@ class DeleteDeploymentGroupResponsePrivate : public CodeDeployResponsePrivate {
 
 public:
 
-    DeleteDeploymentGroupResponsePrivate(DeleteDeploymentGroupResponse * const q);
+    explicit DeleteDeploymentGroupResponsePrivate(DeleteDeploymentGroupResponse * const q);
 
     void parseDeleteDeploymentGroupResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListImagesResponsePrivate : public EcrResponsePrivate {
 
 public:
 
-    ListImagesResponsePrivate(ListImagesResponse * const q);
+    explicit ListImagesResponsePrivate(ListImagesResponse * const q);
 
     void parseListImagesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeServiceResponsePrivate : public AppRunnerResponsePrivate {
 
 public:
 
-    DescribeServiceResponsePrivate(DescribeServiceResponse * const q);
+    explicit DescribeServiceResponsePrivate(DescribeServiceResponse * const q);
 
     void parseDescribeServiceResponse(QXmlStreamReader &xml);
 

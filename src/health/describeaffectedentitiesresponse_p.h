@@ -31,7 +31,7 @@ class DescribeAffectedEntitiesResponsePrivate : public HealthResponsePrivate {
 
 public:
 
-    DescribeAffectedEntitiesResponsePrivate(DescribeAffectedEntitiesResponse * const q);
+    explicit DescribeAffectedEntitiesResponsePrivate(DescribeAffectedEntitiesResponse * const q);
 
     void parseDescribeAffectedEntitiesResponse(QXmlStreamReader &xml);
 

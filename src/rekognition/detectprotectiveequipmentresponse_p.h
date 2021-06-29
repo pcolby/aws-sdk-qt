@@ -31,7 +31,7 @@ class DetectProtectiveEquipmentResponsePrivate : public RekognitionResponsePriva
 
 public:
 
-    DetectProtectiveEquipmentResponsePrivate(DetectProtectiveEquipmentResponse * const q);
+    explicit DetectProtectiveEquipmentResponsePrivate(DetectProtectiveEquipmentResponse * const q);
 
     void parseDetectProtectiveEquipmentResponse(QXmlStreamReader &xml);
 

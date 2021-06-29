@@ -31,7 +31,7 @@ class DeleteDistributionConfigurationResponsePrivate : public imagebuilderRespon
 
 public:
 
-    DeleteDistributionConfigurationResponsePrivate(DeleteDistributionConfigurationResponse * const q);
+    explicit DeleteDistributionConfigurationResponsePrivate(DeleteDistributionConfigurationResponse * const q);
 
     void parseDeleteDistributionConfigurationResponse(QXmlStreamReader &xml);
 

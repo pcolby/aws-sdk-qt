@@ -31,7 +31,7 @@ class PutDestinationPolicyResponsePrivate : public CloudWatchLogsResponsePrivate
 
 public:
 
-    PutDestinationPolicyResponsePrivate(PutDestinationPolicyResponse * const q);
+    explicit PutDestinationPolicyResponsePrivate(PutDestinationPolicyResponse * const q);
 
     void parsePutDestinationPolicyResponse(QXmlStreamReader &xml);
 

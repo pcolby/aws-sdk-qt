@@ -31,7 +31,7 @@ class UpdateEventSourceMappingResponsePrivate : public LambdaResponsePrivate {
 
 public:
 
-    UpdateEventSourceMappingResponsePrivate(UpdateEventSourceMappingResponse * const q);
+    explicit UpdateEventSourceMappingResponsePrivate(UpdateEventSourceMappingResponse * const q);
 
     void parseUpdateEventSourceMappingResponse(QXmlStreamReader &xml);
 

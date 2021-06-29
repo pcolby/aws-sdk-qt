@@ -31,7 +31,7 @@ class CreateDomainResponsePrivate : public CustomerProfilesResponsePrivate {
 
 public:
 
-    CreateDomainResponsePrivate(CreateDomainResponse * const q);
+    explicit CreateDomainResponsePrivate(CreateDomainResponse * const q);
 
     void parseCreateDomainResponse(QXmlStreamReader &xml);
 

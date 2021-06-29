@@ -31,7 +31,7 @@ class GetIdentityNotificationAttributesResponsePrivate : public SesResponsePriva
 
 public:
 
-    GetIdentityNotificationAttributesResponsePrivate(GetIdentityNotificationAttributesResponse * const q);
+    explicit GetIdentityNotificationAttributesResponsePrivate(GetIdentityNotificationAttributesResponse * const q);
 
     void parseGetIdentityNotificationAttributesResponse(QXmlStreamReader &xml);
 

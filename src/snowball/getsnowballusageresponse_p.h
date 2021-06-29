@@ -31,7 +31,7 @@ class GetSnowballUsageResponsePrivate : public SnowballResponsePrivate {
 
 public:
 
-    GetSnowballUsageResponsePrivate(GetSnowballUsageResponse * const q);
+    explicit GetSnowballUsageResponsePrivate(GetSnowballUsageResponse * const q);
 
     void parseGetSnowballUsageResponse(QXmlStreamReader &xml);
 

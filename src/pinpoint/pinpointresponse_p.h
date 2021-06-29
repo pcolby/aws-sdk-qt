@@ -29,7 +29,7 @@ class PinpointResponsePrivate {
 
 public:
 
-    PinpointResponsePrivate(PinpointResponse * const q);
+    explicit PinpointResponsePrivate(PinpointResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

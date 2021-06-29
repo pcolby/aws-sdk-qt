@@ -31,7 +31,7 @@ class GetPartitionResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    GetPartitionResponsePrivate(GetPartitionResponse * const q);
+    explicit GetPartitionResponsePrivate(GetPartitionResponse * const q);
 
     void parseGetPartitionResponse(QXmlStreamReader &xml);
 

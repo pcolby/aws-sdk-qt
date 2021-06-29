@@ -31,7 +31,7 @@ class DescribeStacksResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 
-    DescribeStacksResponsePrivate(DescribeStacksResponse * const q);
+    explicit DescribeStacksResponsePrivate(DescribeStacksResponse * const q);
 
     void parseDescribeStacksResponse(QXmlStreamReader &xml);
 

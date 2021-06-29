@@ -31,7 +31,7 @@ class DescribeRoleAliasResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DescribeRoleAliasResponsePrivate(DescribeRoleAliasResponse * const q);
+    explicit DescribeRoleAliasResponsePrivate(DescribeRoleAliasResponse * const q);
 
     void parseDescribeRoleAliasResponse(QXmlStreamReader &xml);
 

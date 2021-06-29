@@ -31,7 +31,7 @@ class BatchDeletePhoneNumberResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    BatchDeletePhoneNumberResponsePrivate(BatchDeletePhoneNumberResponse * const q);
+    explicit BatchDeletePhoneNumberResponsePrivate(BatchDeletePhoneNumberResponse * const q);
 
     void parseBatchDeletePhoneNumberResponse(QXmlStreamReader &xml);
 

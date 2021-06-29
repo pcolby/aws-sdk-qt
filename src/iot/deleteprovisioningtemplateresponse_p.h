@@ -31,7 +31,7 @@ class DeleteProvisioningTemplateResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DeleteProvisioningTemplateResponsePrivate(DeleteProvisioningTemplateResponse * const q);
+    explicit DeleteProvisioningTemplateResponsePrivate(DeleteProvisioningTemplateResponse * const q);
 
     void parseDeleteProvisioningTemplateResponse(QXmlStreamReader &xml);
 

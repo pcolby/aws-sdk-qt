@@ -31,7 +31,7 @@ class ListDataSourcesResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 
-    ListDataSourcesResponsePrivate(ListDataSourcesResponse * const q);
+    explicit ListDataSourcesResponsePrivate(ListDataSourcesResponse * const q);
 
     void parseListDataSourcesResponse(QXmlStreamReader &xml);
 

@@ -53,7 +53,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    AutoScalingPlansClient(
+    explicit AutoScalingPlansClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -69,7 +69,7 @@ public slots:
 protected:
     /// @cond internal
     AutoScalingPlansClientPrivate * const d_ptr; ///< Internal d-pointer.
-    AutoScalingPlansClient(AutoScalingPlansClientPrivate * const d);
+    explicit AutoScalingPlansClient(AutoScalingPlansClientPrivate * const d);
     /// @endcond
 
 private:

@@ -31,7 +31,7 @@ class CreateSubnetGroupResponsePrivate : public DaxResponsePrivate {
 
 public:
 
-    CreateSubnetGroupResponsePrivate(CreateSubnetGroupResponse * const q);
+    explicit CreateSubnetGroupResponsePrivate(CreateSubnetGroupResponse * const q);
 
     void parseCreateSubnetGroupResponse(QXmlStreamReader &xml);
 

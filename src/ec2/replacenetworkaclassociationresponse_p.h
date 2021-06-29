@@ -31,7 +31,7 @@ class ReplaceNetworkAclAssociationResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ReplaceNetworkAclAssociationResponsePrivate(ReplaceNetworkAclAssociationResponse * const q);
+    explicit ReplaceNetworkAclAssociationResponsePrivate(ReplaceNetworkAclAssociationResponse * const q);
 
     void parseReplaceNetworkAclAssociationResponse(QXmlStreamReader &xml);
 

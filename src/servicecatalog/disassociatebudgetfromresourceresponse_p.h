@@ -31,7 +31,7 @@ class DisassociateBudgetFromResourceResponsePrivate : public ServiceCatalogRespo
 
 public:
 
-    DisassociateBudgetFromResourceResponsePrivate(DisassociateBudgetFromResourceResponse * const q);
+    explicit DisassociateBudgetFromResourceResponsePrivate(DisassociateBudgetFromResourceResponse * const q);
 
     void parseDisassociateBudgetFromResourceResponse(QXmlStreamReader &xml);
 

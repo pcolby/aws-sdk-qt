@@ -29,7 +29,7 @@ class Route53ResolverResponsePrivate {
 
 public:
 
-    Route53ResolverResponsePrivate(Route53ResolverResponse * const q);
+    explicit Route53ResolverResponsePrivate(Route53ResolverResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

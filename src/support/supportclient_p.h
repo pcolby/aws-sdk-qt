@@ -30,7 +30,7 @@ class SupportClient;
 class SupportClientPrivate {
 
 public:
-    SupportClientPrivate(SupportClient * const q);
+    explicit SupportClientPrivate(SupportClient * const q);
 
 protected:
     SupportClient * const q_ptr; ///< Internal q-pointer.

@@ -31,7 +31,7 @@ class GetBasePathMappingResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    GetBasePathMappingResponsePrivate(GetBasePathMappingResponse * const q);
+    explicit GetBasePathMappingResponsePrivate(GetBasePathMappingResponse * const q);
 
     void parseGetBasePathMappingResponse(QXmlStreamReader &xml);
 

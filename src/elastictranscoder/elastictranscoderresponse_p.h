@@ -29,7 +29,7 @@ class ElasticTranscoderResponsePrivate {
 
 public:
 
-    ElasticTranscoderResponsePrivate(ElasticTranscoderResponse * const q);
+    explicit ElasticTranscoderResponsePrivate(ElasticTranscoderResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

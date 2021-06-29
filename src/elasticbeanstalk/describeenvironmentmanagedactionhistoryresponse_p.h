@@ -31,7 +31,7 @@ class DescribeEnvironmentManagedActionHistoryResponsePrivate : public ElasticBea
 
 public:
 
-    DescribeEnvironmentManagedActionHistoryResponsePrivate(DescribeEnvironmentManagedActionHistoryResponse * const q);
+    explicit DescribeEnvironmentManagedActionHistoryResponsePrivate(DescribeEnvironmentManagedActionHistoryResponse * const q);
 
     void parseDescribeEnvironmentManagedActionHistoryResponse(QXmlStreamReader &xml);
 

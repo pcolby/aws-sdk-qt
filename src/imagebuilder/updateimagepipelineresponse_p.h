@@ -31,7 +31,7 @@ class UpdateImagePipelineResponsePrivate : public imagebuilderResponsePrivate {
 
 public:
 
-    UpdateImagePipelineResponsePrivate(UpdateImagePipelineResponse * const q);
+    explicit UpdateImagePipelineResponsePrivate(UpdateImagePipelineResponse * const q);
 
     void parseUpdateImagePipelineResponse(QXmlStreamReader &xml);
 

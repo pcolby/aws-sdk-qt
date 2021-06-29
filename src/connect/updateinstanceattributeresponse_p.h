@@ -31,7 +31,7 @@ class UpdateInstanceAttributeResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    UpdateInstanceAttributeResponsePrivate(UpdateInstanceAttributeResponse * const q);
+    explicit UpdateInstanceAttributeResponsePrivate(UpdateInstanceAttributeResponse * const q);
 
     void parseUpdateInstanceAttributeResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UntagResourceResponsePrivate : public CodeGuruProfilerResponsePrivate {
 
 public:
 
-    UntagResourceResponsePrivate(UntagResourceResponse * const q);
+    explicit UntagResourceResponsePrivate(UntagResourceResponse * const q);
 
     void parseUntagResourceResponse(QXmlStreamReader &xml);
 

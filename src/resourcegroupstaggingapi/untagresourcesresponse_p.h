@@ -31,7 +31,7 @@ class UntagResourcesResponsePrivate : public ResourceGroupsTaggingAPIResponsePri
 
 public:
 
-    UntagResourcesResponsePrivate(UntagResourcesResponse * const q);
+    explicit UntagResourcesResponsePrivate(UntagResourcesResponse * const q);
 
     void parseUntagResourcesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListExclusionsResponsePrivate : public InspectorResponsePrivate {
 
 public:
 
-    ListExclusionsResponsePrivate(ListExclusionsResponse * const q);
+    explicit ListExclusionsResponsePrivate(ListExclusionsResponse * const q);
 
     void parseListExclusionsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeBucketsResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 
-    DescribeBucketsResponsePrivate(DescribeBucketsResponse * const q);
+    explicit DescribeBucketsResponsePrivate(DescribeBucketsResponse * const q);
 
     void parseDescribeBucketsResponse(QXmlStreamReader &xml);
 

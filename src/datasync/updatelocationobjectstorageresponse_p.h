@@ -31,7 +31,7 @@ class UpdateLocationObjectStorageResponsePrivate : public DataSyncResponsePrivat
 
 public:
 
-    UpdateLocationObjectStorageResponsePrivate(UpdateLocationObjectStorageResponse * const q);
+    explicit UpdateLocationObjectStorageResponsePrivate(UpdateLocationObjectStorageResponse * const q);
 
     void parseUpdateLocationObjectStorageResponse(QXmlStreamReader &xml);
 

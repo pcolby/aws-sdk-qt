@@ -31,7 +31,7 @@ class ListAttachedRolePoliciesResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    ListAttachedRolePoliciesResponsePrivate(ListAttachedRolePoliciesResponse * const q);
+    explicit ListAttachedRolePoliciesResponsePrivate(ListAttachedRolePoliciesResponse * const q);
 
     void parseListAttachedRolePoliciesResponse(QXmlStreamReader &xml);
 

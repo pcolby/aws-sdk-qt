@@ -31,7 +31,7 @@ class DescribePipelineResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    DescribePipelineResponsePrivate(DescribePipelineResponse * const q);
+    explicit DescribePipelineResponsePrivate(DescribePipelineResponse * const q);
 
     void parseDescribePipelineResponse(QXmlStreamReader &xml);
 

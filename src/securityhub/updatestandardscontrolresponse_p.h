@@ -31,7 +31,7 @@ class UpdateStandardsControlResponsePrivate : public SecurityHubResponsePrivate 
 
 public:
 
-    UpdateStandardsControlResponsePrivate(UpdateStandardsControlResponse * const q);
+    explicit UpdateStandardsControlResponsePrivate(UpdateStandardsControlResponse * const q);
 
     void parseUpdateStandardsControlResponse(QXmlStreamReader &xml);
 

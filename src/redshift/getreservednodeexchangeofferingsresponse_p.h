@@ -31,7 +31,7 @@ class GetReservedNodeExchangeOfferingsResponsePrivate : public RedshiftResponseP
 
 public:
 
-    GetReservedNodeExchangeOfferingsResponsePrivate(GetReservedNodeExchangeOfferingsResponse * const q);
+    explicit GetReservedNodeExchangeOfferingsResponsePrivate(GetReservedNodeExchangeOfferingsResponse * const q);
 
     void parseGetReservedNodeExchangeOfferingsResponse(QXmlStreamReader &xml);
 

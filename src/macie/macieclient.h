@@ -55,7 +55,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    MacieClient(
+    explicit MacieClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -72,7 +72,7 @@ public slots:
 protected:
     /// @cond internal
     MacieClientPrivate * const d_ptr; ///< Internal d-pointer.
-    MacieClient(MacieClientPrivate * const d);
+    explicit MacieClient(MacieClientPrivate * const d);
     /// @endcond
 
 private:

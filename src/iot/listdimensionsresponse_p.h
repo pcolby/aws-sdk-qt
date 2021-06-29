@@ -31,7 +31,7 @@ class ListDimensionsResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    ListDimensionsResponsePrivate(ListDimensionsResponse * const q);
+    explicit ListDimensionsResponsePrivate(ListDimensionsResponse * const q);
 
     void parseListDimensionsResponse(QXmlStreamReader &xml);
 

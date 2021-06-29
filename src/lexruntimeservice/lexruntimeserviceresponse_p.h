@@ -29,7 +29,7 @@ class LexRuntimeServiceResponsePrivate {
 
 public:
 
-    LexRuntimeServiceResponsePrivate(LexRuntimeServiceResponse * const q);
+    explicit LexRuntimeServiceResponsePrivate(LexRuntimeServiceResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

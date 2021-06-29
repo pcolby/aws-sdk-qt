@@ -31,7 +31,7 @@ class DescribeQueueResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    DescribeQueueResponsePrivate(DescribeQueueResponse * const q);
+    explicit DescribeQueueResponsePrivate(DescribeQueueResponse * const q);
 
     void parseDescribeQueueResponse(QXmlStreamReader &xml);
 

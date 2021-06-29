@@ -31,7 +31,7 @@ class AssociateEnvironmentOperationsRoleResponsePrivate : public ElasticBeanstal
 
 public:
 
-    AssociateEnvironmentOperationsRoleResponsePrivate(AssociateEnvironmentOperationsRoleResponse * const q);
+    explicit AssociateEnvironmentOperationsRoleResponsePrivate(AssociateEnvironmentOperationsRoleResponse * const q);
 
     void parseAssociateEnvironmentOperationsRoleResponse(QXmlStreamReader &xml);
 

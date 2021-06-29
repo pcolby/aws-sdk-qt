@@ -31,7 +31,7 @@ class UpdateThingRuntimeConfigurationResponsePrivate : public GreengrassResponse
 
 public:
 
-    UpdateThingRuntimeConfigurationResponsePrivate(UpdateThingRuntimeConfigurationResponse * const q);
+    explicit UpdateThingRuntimeConfigurationResponsePrivate(UpdateThingRuntimeConfigurationResponse * const q);
 
     void parseUpdateThingRuntimeConfigurationResponse(QXmlStreamReader &xml);
 

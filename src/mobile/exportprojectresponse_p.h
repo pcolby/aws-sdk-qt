@@ -31,7 +31,7 @@ class ExportProjectResponsePrivate : public MobileResponsePrivate {
 
 public:
 
-    ExportProjectResponsePrivate(ExportProjectResponse * const q);
+    explicit ExportProjectResponsePrivate(ExportProjectResponse * const q);
 
     void parseExportProjectResponse(QXmlStreamReader &xml);
 

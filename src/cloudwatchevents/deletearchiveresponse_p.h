@@ -31,7 +31,7 @@ class DeleteArchiveResponsePrivate : public CloudWatchEventsResponsePrivate {
 
 public:
 
-    DeleteArchiveResponsePrivate(DeleteArchiveResponse * const q);
+    explicit DeleteArchiveResponsePrivate(DeleteArchiveResponse * const q);
 
     void parseDeleteArchiveResponse(QXmlStreamReader &xml);
 

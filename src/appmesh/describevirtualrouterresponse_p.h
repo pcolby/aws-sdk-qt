@@ -31,7 +31,7 @@ class DescribeVirtualRouterResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 
-    DescribeVirtualRouterResponsePrivate(DescribeVirtualRouterResponse * const q);
+    explicit DescribeVirtualRouterResponsePrivate(DescribeVirtualRouterResponse * const q);
 
     void parseDescribeVirtualRouterResponse(QXmlStreamReader &xml);
 

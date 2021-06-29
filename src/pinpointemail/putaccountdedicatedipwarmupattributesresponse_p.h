@@ -31,7 +31,7 @@ class PutAccountDedicatedIpWarmupAttributesResponsePrivate : public PinpointEmai
 
 public:
 
-    PutAccountDedicatedIpWarmupAttributesResponsePrivate(PutAccountDedicatedIpWarmupAttributesResponse * const q);
+    explicit PutAccountDedicatedIpWarmupAttributesResponsePrivate(PutAccountDedicatedIpWarmupAttributesResponse * const q);
 
     void parsePutAccountDedicatedIpWarmupAttributesResponse(QXmlStreamReader &xml);
 

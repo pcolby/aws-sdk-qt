@@ -31,7 +31,7 @@ class DeleteRemoteAccessSessionResponsePrivate : public DeviceFarmResponsePrivat
 
 public:
 
-    DeleteRemoteAccessSessionResponsePrivate(DeleteRemoteAccessSessionResponse * const q);
+    explicit DeleteRemoteAccessSessionResponsePrivate(DeleteRemoteAccessSessionResponse * const q);
 
     void parseDeleteRemoteAccessSessionResponse(QXmlStreamReader &xml);
 

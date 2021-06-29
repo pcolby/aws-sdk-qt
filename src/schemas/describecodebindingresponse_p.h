@@ -31,7 +31,7 @@ class DescribeCodeBindingResponsePrivate : public SchemasResponsePrivate {
 
 public:
 
-    DescribeCodeBindingResponsePrivate(DescribeCodeBindingResponse * const q);
+    explicit DescribeCodeBindingResponsePrivate(DescribeCodeBindingResponse * const q);
 
     void parseDescribeCodeBindingResponse(QXmlStreamReader &xml);
 

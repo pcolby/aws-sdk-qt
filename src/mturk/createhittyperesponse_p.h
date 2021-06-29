@@ -31,7 +31,7 @@ class CreateHITTypeResponsePrivate : public MTurkResponsePrivate {
 
 public:
 
-    CreateHITTypeResponsePrivate(CreateHITTypeResponse * const q);
+    explicit CreateHITTypeResponsePrivate(CreateHITTypeResponse * const q);
 
     void parseCreateHITTypeResponse(QXmlStreamReader &xml);
 

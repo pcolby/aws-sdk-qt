@@ -31,7 +31,7 @@ class DeleteProfileObjectTypeResponsePrivate : public CustomerProfilesResponsePr
 
 public:
 
-    DeleteProfileObjectTypeResponsePrivate(DeleteProfileObjectTypeResponse * const q);
+    explicit DeleteProfileObjectTypeResponsePrivate(DeleteProfileObjectTypeResponse * const q);
 
     void parseDeleteProfileObjectTypeResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class PeerVpcResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    PeerVpcResponsePrivate(PeerVpcResponse * const q);
+    explicit PeerVpcResponsePrivate(PeerVpcResponse * const q);
 
     void parsePeerVpcResponse(QXmlStreamReader &xml);
 

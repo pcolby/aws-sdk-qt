@@ -31,7 +31,7 @@ class UpdateSettingsResponsePrivate : public AuditManagerResponsePrivate {
 
 public:
 
-    UpdateSettingsResponsePrivate(UpdateSettingsResponse * const q);
+    explicit UpdateSettingsResponsePrivate(UpdateSettingsResponse * const q);
 
     void parseUpdateSettingsResponse(QXmlStreamReader &xml);
 

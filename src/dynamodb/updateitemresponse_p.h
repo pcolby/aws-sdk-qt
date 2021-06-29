@@ -31,7 +31,7 @@ class UpdateItemResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 
-    UpdateItemResponsePrivate(UpdateItemResponse * const q);
+    explicit UpdateItemResponsePrivate(UpdateItemResponse * const q);
 
     void parseUpdateItemResponse(QXmlStreamReader &xml);
 

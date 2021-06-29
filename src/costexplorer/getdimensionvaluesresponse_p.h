@@ -31,7 +31,7 @@ class GetDimensionValuesResponsePrivate : public CostExplorerResponsePrivate {
 
 public:
 
-    GetDimensionValuesResponsePrivate(GetDimensionValuesResponse * const q);
+    explicit GetDimensionValuesResponsePrivate(GetDimensionValuesResponse * const q);
 
     void parseGetDimensionValuesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListTestGridSessionActionsResponsePrivate : public DeviceFarmResponsePriva
 
 public:
 
-    ListTestGridSessionActionsResponsePrivate(ListTestGridSessionActionsResponse * const q);
+    explicit ListTestGridSessionActionsResponsePrivate(ListTestGridSessionActionsResponse * const q);
 
     void parseListTestGridSessionActionsResponse(QXmlStreamReader &xml);
 

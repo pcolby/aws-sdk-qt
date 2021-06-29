@@ -31,7 +31,7 @@ class PutAccountConfigurationResponsePrivate : public AcmResponsePrivate {
 
 public:
 
-    PutAccountConfigurationResponsePrivate(PutAccountConfigurationResponse * const q);
+    explicit PutAccountConfigurationResponsePrivate(PutAccountConfigurationResponse * const q);
 
     void parsePutAccountConfigurationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetSdkTypesResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    GetSdkTypesResponsePrivate(GetSdkTypesResponse * const q);
+    explicit GetSdkTypesResponsePrivate(GetSdkTypesResponse * const q);
 
     void parseGetSdkTypesResponse(QXmlStreamReader &xml);
 

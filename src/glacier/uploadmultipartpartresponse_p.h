@@ -31,7 +31,7 @@ class UploadMultipartPartResponsePrivate : public GlacierResponsePrivate {
 
 public:
 
-    UploadMultipartPartResponsePrivate(UploadMultipartPartResponse * const q);
+    explicit UploadMultipartPartResponsePrivate(UploadMultipartPartResponse * const q);
 
     void parseUploadMultipartPartResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribePHIDetectionJobResponsePrivate : public ComprehendMedicalResponseP
 
 public:
 
-    DescribePHIDetectionJobResponsePrivate(DescribePHIDetectionJobResponse * const q);
+    explicit DescribePHIDetectionJobResponsePrivate(DescribePHIDetectionJobResponse * const q);
 
     void parseDescribePHIDetectionJobResponse(QXmlStreamReader &xml);
 

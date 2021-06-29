@@ -31,7 +31,7 @@ class CancelHandshakeResponsePrivate : public OrganizationsResponsePrivate {
 
 public:
 
-    CancelHandshakeResponsePrivate(CancelHandshakeResponse * const q);
+    explicit CancelHandshakeResponsePrivate(CancelHandshakeResponse * const q);
 
     void parseCancelHandshakeResponse(QXmlStreamReader &xml);
 

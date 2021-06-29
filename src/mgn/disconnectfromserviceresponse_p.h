@@ -31,7 +31,7 @@ class DisconnectFromServiceResponsePrivate : public mgnResponsePrivate {
 
 public:
 
-    DisconnectFromServiceResponsePrivate(DisconnectFromServiceResponse * const q);
+    explicit DisconnectFromServiceResponsePrivate(DisconnectFromServiceResponse * const q);
 
     void parseDisconnectFromServiceResponse(QXmlStreamReader &xml);
 

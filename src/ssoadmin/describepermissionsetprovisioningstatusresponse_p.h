@@ -31,7 +31,7 @@ class DescribePermissionSetProvisioningStatusResponsePrivate : public SSOAdminRe
 
 public:
 
-    DescribePermissionSetProvisioningStatusResponsePrivate(DescribePermissionSetProvisioningStatusResponse * const q);
+    explicit DescribePermissionSetProvisioningStatusResponsePrivate(DescribePermissionSetProvisioningStatusResponse * const q);
 
     void parseDescribePermissionSetProvisioningStatusResponse(QXmlStreamReader &xml);
 

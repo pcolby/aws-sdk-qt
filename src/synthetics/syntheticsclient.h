@@ -67,7 +67,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    SyntheticsClient(
+    explicit SyntheticsClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -90,7 +90,7 @@ public slots:
 protected:
     /// @cond internal
     SyntheticsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    SyntheticsClient(SyntheticsClientPrivate * const d);
+    explicit SyntheticsClient(SyntheticsClientPrivate * const d);
     /// @endcond
 
 private:

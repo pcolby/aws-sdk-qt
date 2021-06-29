@@ -151,7 +151,7 @@ public:
 protected:
     /// @cond internal
     GreengrassRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    GreengrassRequest(GreengrassRequestPrivate * const d);
+    explicit GreengrassRequest(GreengrassRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -31,7 +31,7 @@ class DeleteNotificationConfigurationResponsePrivate : public AutoScalingRespons
 
 public:
 
-    DeleteNotificationConfigurationResponsePrivate(DeleteNotificationConfigurationResponse * const q);
+    explicit DeleteNotificationConfigurationResponsePrivate(DeleteNotificationConfigurationResponse * const q);
 
     void parseDeleteNotificationConfigurationResponse(QXmlStreamReader &xml);
 

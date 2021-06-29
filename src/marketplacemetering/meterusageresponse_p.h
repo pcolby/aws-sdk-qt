@@ -31,7 +31,7 @@ class MeterUsageResponsePrivate : public MarketplaceMeteringResponsePrivate {
 
 public:
 
-    MeterUsageResponsePrivate(MeterUsageResponse * const q);
+    explicit MeterUsageResponsePrivate(MeterUsageResponse * const q);
 
     void parseMeterUsageResponse(QXmlStreamReader &xml);
 

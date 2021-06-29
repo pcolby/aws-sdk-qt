@@ -30,7 +30,7 @@ class FmsClient;
 class FmsClientPrivate {
 
 public:
-    FmsClientPrivate(FmsClient * const q);
+    explicit FmsClientPrivate(FmsClient * const q);
 
 protected:
     FmsClient * const q_ptr; ///< Internal q-pointer.

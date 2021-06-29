@@ -31,7 +31,7 @@ class DeleteAccessLogSettingsResponsePrivate : public ApiGatewayV2ResponsePrivat
 
 public:
 
-    DeleteAccessLogSettingsResponsePrivate(DeleteAccessLogSettingsResponse * const q);
+    explicit DeleteAccessLogSettingsResponsePrivate(DeleteAccessLogSettingsResponse * const q);
 
     void parseDeleteAccessLogSettingsResponse(QXmlStreamReader &xml);
 

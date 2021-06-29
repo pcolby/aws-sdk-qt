@@ -30,7 +30,7 @@ class AutoScalingPlansClient;
 class AutoScalingPlansClientPrivate {
 
 public:
-    AutoScalingPlansClientPrivate(AutoScalingPlansClient * const q);
+    explicit AutoScalingPlansClientPrivate(AutoScalingPlansClient * const q);
 
 protected:
     AutoScalingPlansClient * const q_ptr; ///< Internal q-pointer.

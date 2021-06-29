@@ -31,7 +31,7 @@ class GetRequestValidatorsResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    GetRequestValidatorsResponsePrivate(GetRequestValidatorsResponse * const q);
+    explicit GetRequestValidatorsResponsePrivate(GetRequestValidatorsResponse * const q);
 
     void parseGetRequestValidatorsResponse(QXmlStreamReader &xml);
 

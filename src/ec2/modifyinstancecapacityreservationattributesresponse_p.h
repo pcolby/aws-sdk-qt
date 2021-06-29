@@ -31,7 +31,7 @@ class ModifyInstanceCapacityReservationAttributesResponsePrivate : public Ec2Res
 
 public:
 
-    ModifyInstanceCapacityReservationAttributesResponsePrivate(ModifyInstanceCapacityReservationAttributesResponse * const q);
+    explicit ModifyInstanceCapacityReservationAttributesResponsePrivate(ModifyInstanceCapacityReservationAttributesResponse * const q);
 
     void parseModifyInstanceCapacityReservationAttributesResponse(QXmlStreamReader &xml);
 

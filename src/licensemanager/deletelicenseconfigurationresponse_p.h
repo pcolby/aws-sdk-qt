@@ -31,7 +31,7 @@ class DeleteLicenseConfigurationResponsePrivate : public LicenseManagerResponseP
 
 public:
 
-    DeleteLicenseConfigurationResponsePrivate(DeleteLicenseConfigurationResponse * const q);
+    explicit DeleteLicenseConfigurationResponsePrivate(DeleteLicenseConfigurationResponse * const q);
 
     void parseDeleteLicenseConfigurationResponse(QXmlStreamReader &xml);
 

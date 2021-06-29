@@ -31,7 +31,7 @@ class DescribeSavingsPlansOfferingRatesResponsePrivate : public SavingsPlansResp
 
 public:
 
-    DescribeSavingsPlansOfferingRatesResponsePrivate(DescribeSavingsPlansOfferingRatesResponse * const q);
+    explicit DescribeSavingsPlansOfferingRatesResponsePrivate(DescribeSavingsPlansOfferingRatesResponse * const q);
 
     void parseDescribeSavingsPlansOfferingRatesResponse(QXmlStreamReader &xml);
 

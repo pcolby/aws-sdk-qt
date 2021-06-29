@@ -31,7 +31,7 @@ class AssociateFirewallPolicyResponsePrivate : public NetworkFirewallResponsePri
 
 public:
 
-    AssociateFirewallPolicyResponsePrivate(AssociateFirewallPolicyResponse * const q);
+    explicit AssociateFirewallPolicyResponsePrivate(AssociateFirewallPolicyResponse * const q);
 
     void parseAssociateFirewallPolicyResponse(QXmlStreamReader &xml);
 

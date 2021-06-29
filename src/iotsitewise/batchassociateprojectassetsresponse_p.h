@@ -31,7 +31,7 @@ class BatchAssociateProjectAssetsResponsePrivate : public IoTSiteWiseResponsePri
 
 public:
 
-    BatchAssociateProjectAssetsResponsePrivate(BatchAssociateProjectAssetsResponse * const q);
+    explicit BatchAssociateProjectAssetsResponsePrivate(BatchAssociateProjectAssetsResponse * const q);
 
     void parseBatchAssociateProjectAssetsResponse(QXmlStreamReader &xml);
 

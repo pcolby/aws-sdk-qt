@@ -31,7 +31,7 @@ class CreateVirtualNodeResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 
-    CreateVirtualNodeResponsePrivate(CreateVirtualNodeResponse * const q);
+    explicit CreateVirtualNodeResponsePrivate(CreateVirtualNodeResponse * const q);
 
     void parseCreateVirtualNodeResponse(QXmlStreamReader &xml);
 

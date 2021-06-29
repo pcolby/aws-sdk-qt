@@ -31,7 +31,7 @@ class DescribeJobFlowsResponsePrivate : public EmrResponsePrivate {
 
 public:
 
-    DescribeJobFlowsResponsePrivate(DescribeJobFlowsResponse * const q);
+    explicit DescribeJobFlowsResponsePrivate(DescribeJobFlowsResponse * const q);
 
     void parseDescribeJobFlowsResponse(QXmlStreamReader &xml);
 

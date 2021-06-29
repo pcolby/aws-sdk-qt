@@ -31,7 +31,7 @@ class CreateNetworkInterfaceResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CreateNetworkInterfaceResponsePrivate(CreateNetworkInterfaceResponse * const q);
+    explicit CreateNetworkInterfaceResponsePrivate(CreateNetworkInterfaceResponse * const q);
 
     void parseCreateNetworkInterfaceResponse(QXmlStreamReader &xml);
 

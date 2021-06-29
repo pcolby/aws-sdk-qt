@@ -31,7 +31,7 @@ class DeleteServiceProfileResponsePrivate : public IoTWirelessResponsePrivate {
 
 public:
 
-    DeleteServiceProfileResponsePrivate(DeleteServiceProfileResponse * const q);
+    explicit DeleteServiceProfileResponsePrivate(DeleteServiceProfileResponse * const q);
 
     void parseDeleteServiceProfileResponse(QXmlStreamReader &xml);
 

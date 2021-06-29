@@ -31,7 +31,7 @@ class CancelJobExecutionResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    CancelJobExecutionResponsePrivate(CancelJobExecutionResponse * const q);
+    explicit CancelJobExecutionResponsePrivate(CancelJobExecutionResponse * const q);
 
     void parseCancelJobExecutionResponse(QXmlStreamReader &xml);
 

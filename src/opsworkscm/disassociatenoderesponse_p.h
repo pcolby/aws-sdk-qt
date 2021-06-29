@@ -31,7 +31,7 @@ class DisassociateNodeResponsePrivate : public OpsWorksCMResponsePrivate {
 
 public:
 
-    DisassociateNodeResponsePrivate(DisassociateNodeResponse * const q);
+    explicit DisassociateNodeResponsePrivate(DisassociateNodeResponse * const q);
 
     void parseDisassociateNodeResponse(QXmlStreamReader &xml);
 

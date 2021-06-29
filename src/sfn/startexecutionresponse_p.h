@@ -31,7 +31,7 @@ class StartExecutionResponsePrivate : public SfnResponsePrivate {
 
 public:
 
-    StartExecutionResponsePrivate(StartExecutionResponse * const q);
+    explicit StartExecutionResponsePrivate(StartExecutionResponse * const q);
 
     void parseStartExecutionResponse(QXmlStreamReader &xml);
 

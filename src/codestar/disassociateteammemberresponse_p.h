@@ -31,7 +31,7 @@ class DisassociateTeamMemberResponsePrivate : public CodeStarResponsePrivate {
 
 public:
 
-    DisassociateTeamMemberResponsePrivate(DisassociateTeamMemberResponse * const q);
+    explicit DisassociateTeamMemberResponsePrivate(DisassociateTeamMemberResponse * const q);
 
     void parseDisassociateTeamMemberResponse(QXmlStreamReader &xml);
 

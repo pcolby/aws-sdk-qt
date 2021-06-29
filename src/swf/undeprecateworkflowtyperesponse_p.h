@@ -31,7 +31,7 @@ class UndeprecateWorkflowTypeResponsePrivate : public SwfResponsePrivate {
 
 public:
 
-    UndeprecateWorkflowTypeResponsePrivate(UndeprecateWorkflowTypeResponse * const q);
+    explicit UndeprecateWorkflowTypeResponsePrivate(UndeprecateWorkflowTypeResponse * const q);
 
     void parseUndeprecateWorkflowTypeResponse(QXmlStreamReader &xml);
 

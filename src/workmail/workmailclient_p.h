@@ -30,7 +30,7 @@ class WorkMailClient;
 class WorkMailClientPrivate {
 
 public:
-    WorkMailClientPrivate(WorkMailClient * const q);
+    explicit WorkMailClientPrivate(WorkMailClient * const q);
 
 protected:
     WorkMailClient * const q_ptr; ///< Internal q-pointer.

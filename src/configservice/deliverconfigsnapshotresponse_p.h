@@ -31,7 +31,7 @@ class DeliverConfigSnapshotResponsePrivate : public ConfigServiceResponsePrivate
 
 public:
 
-    DeliverConfigSnapshotResponsePrivate(DeliverConfigSnapshotResponse * const q);
+    explicit DeliverConfigSnapshotResponsePrivate(DeliverConfigSnapshotResponse * const q);
 
     void parseDeliverConfigSnapshotResponse(QXmlStreamReader &xml);
 

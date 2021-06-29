@@ -31,7 +31,7 @@ class AssociateTeamMemberResponsePrivate : public CodeStarResponsePrivate {
 
 public:
 
-    AssociateTeamMemberResponsePrivate(AssociateTeamMemberResponse * const q);
+    explicit AssociateTeamMemberResponsePrivate(AssociateTeamMemberResponse * const q);
 
     void parseAssociateTeamMemberResponse(QXmlStreamReader &xml);
 

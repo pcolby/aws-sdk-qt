@@ -31,7 +31,7 @@ class ListFunctionEventInvokeConfigsResponsePrivate : public LambdaResponsePriva
 
 public:
 
-    ListFunctionEventInvokeConfigsResponsePrivate(ListFunctionEventInvokeConfigsResponse * const q);
+    explicit ListFunctionEventInvokeConfigsResponsePrivate(ListFunctionEventInvokeConfigsResponse * const q);
 
     void parseListFunctionEventInvokeConfigsResponse(QXmlStreamReader &xml);
 

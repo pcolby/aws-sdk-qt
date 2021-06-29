@@ -31,7 +31,7 @@ class DeleteUserByPrincipalIdResponsePrivate : public QuickSightResponsePrivate 
 
 public:
 
-    DeleteUserByPrincipalIdResponsePrivate(DeleteUserByPrincipalIdResponse * const q);
+    explicit DeleteUserByPrincipalIdResponsePrivate(DeleteUserByPrincipalIdResponse * const q);
 
     void parseDeleteUserByPrincipalIdResponse(QXmlStreamReader &xml);
 

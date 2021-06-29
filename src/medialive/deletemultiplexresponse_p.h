@@ -31,7 +31,7 @@ class DeleteMultiplexResponsePrivate : public MediaLiveResponsePrivate {
 
 public:
 
-    DeleteMultiplexResponsePrivate(DeleteMultiplexResponse * const q);
+    explicit DeleteMultiplexResponsePrivate(DeleteMultiplexResponse * const q);
 
     void parseDeleteMultiplexResponse(QXmlStreamReader &xml);
 

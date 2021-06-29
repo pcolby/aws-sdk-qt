@@ -31,7 +31,7 @@ class GetRelationalDatabaseEventsResponsePrivate : public LightsailResponsePriva
 
 public:
 
-    GetRelationalDatabaseEventsResponsePrivate(GetRelationalDatabaseEventsResponse * const q);
+    explicit GetRelationalDatabaseEventsResponsePrivate(GetRelationalDatabaseEventsResponse * const q);
 
     void parseGetRelationalDatabaseEventsResponse(QXmlStreamReader &xml);
 

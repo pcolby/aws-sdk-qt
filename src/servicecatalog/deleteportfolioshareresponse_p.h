@@ -31,7 +31,7 @@ class DeletePortfolioShareResponsePrivate : public ServiceCatalogResponsePrivate
 
 public:
 
-    DeletePortfolioShareResponsePrivate(DeletePortfolioShareResponse * const q);
+    explicit DeletePortfolioShareResponsePrivate(DeletePortfolioShareResponse * const q);
 
     void parseDeletePortfolioShareResponse(QXmlStreamReader &xml);
 

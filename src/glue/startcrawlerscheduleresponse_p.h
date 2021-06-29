@@ -31,7 +31,7 @@ class StartCrawlerScheduleResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    StartCrawlerScheduleResponsePrivate(StartCrawlerScheduleResponse * const q);
+    explicit StartCrawlerScheduleResponsePrivate(StartCrawlerScheduleResponse * const q);
 
     void parseStartCrawlerScheduleResponse(QXmlStreamReader &xml);
 

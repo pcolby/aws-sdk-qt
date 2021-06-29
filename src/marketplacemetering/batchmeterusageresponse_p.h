@@ -31,7 +31,7 @@ class BatchMeterUsageResponsePrivate : public MarketplaceMeteringResponsePrivate
 
 public:
 
-    BatchMeterUsageResponsePrivate(BatchMeterUsageResponse * const q);
+    explicit BatchMeterUsageResponsePrivate(BatchMeterUsageResponse * const q);
 
     void parseBatchMeterUsageResponse(QXmlStreamReader &xml);
 

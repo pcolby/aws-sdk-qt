@@ -31,7 +31,7 @@ class DescribeSpotPriceHistoryResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeSpotPriceHistoryResponsePrivate(DescribeSpotPriceHistoryResponse * const q);
+    explicit DescribeSpotPriceHistoryResponsePrivate(DescribeSpotPriceHistoryResponse * const q);
 
     void parseDescribeSpotPriceHistoryResponse(QXmlStreamReader &xml);
 

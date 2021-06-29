@@ -31,7 +31,7 @@ class CreateProjectResponsePrivate : public GlueDataBrewResponsePrivate {
 
 public:
 
-    CreateProjectResponsePrivate(CreateProjectResponse * const q);
+    explicit CreateProjectResponsePrivate(CreateProjectResponse * const q);
 
     void parseCreateProjectResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetWirelessGatewayFirmwareInformationResponsePrivate : public IoTWirelessR
 
 public:
 
-    GetWirelessGatewayFirmwareInformationResponsePrivate(GetWirelessGatewayFirmwareInformationResponse * const q);
+    explicit GetWirelessGatewayFirmwareInformationResponsePrivate(GetWirelessGatewayFirmwareInformationResponse * const q);
 
     void parseGetWirelessGatewayFirmwareInformationResponse(QXmlStreamReader &xml);
 

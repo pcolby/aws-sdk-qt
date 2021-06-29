@@ -31,7 +31,7 @@ class RegisterScalableTargetResponsePrivate : public ApplicationAutoScalingRespo
 
 public:
 
-    RegisterScalableTargetResponsePrivate(RegisterScalableTargetResponse * const q);
+    explicit RegisterScalableTargetResponsePrivate(RegisterScalableTargetResponse * const q);
 
     void parseRegisterScalableTargetResponse(QXmlStreamReader &xml);
 

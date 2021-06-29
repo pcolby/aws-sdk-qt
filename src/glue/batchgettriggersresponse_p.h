@@ -31,7 +31,7 @@ class BatchGetTriggersResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    BatchGetTriggersResponsePrivate(BatchGetTriggersResponse * const q);
+    explicit BatchGetTriggersResponsePrivate(BatchGetTriggersResponse * const q);
 
     void parseBatchGetTriggersResponse(QXmlStreamReader &xml);
 

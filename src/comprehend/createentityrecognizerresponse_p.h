@@ -31,7 +31,7 @@ class CreateEntityRecognizerResponsePrivate : public ComprehendResponsePrivate {
 
 public:
 
-    CreateEntityRecognizerResponsePrivate(CreateEntityRecognizerResponse * const q);
+    explicit CreateEntityRecognizerResponsePrivate(CreateEntityRecognizerResponse * const q);
 
     void parseCreateEntityRecognizerResponse(QXmlStreamReader &xml);
 

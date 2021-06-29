@@ -31,7 +31,7 @@ class GetWorldTemplateBodyResponsePrivate : public RoboMakerResponsePrivate {
 
 public:
 
-    GetWorldTemplateBodyResponsePrivate(GetWorldTemplateBodyResponse * const q);
+    explicit GetWorldTemplateBodyResponsePrivate(GetWorldTemplateBodyResponse * const q);
 
     void parseGetWorldTemplateBodyResponse(QXmlStreamReader &xml);
 

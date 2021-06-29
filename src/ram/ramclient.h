@@ -89,7 +89,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    RamClient(
+    explicit RamClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -123,7 +123,7 @@ public slots:
 protected:
     /// @cond internal
     RamClientPrivate * const d_ptr; ///< Internal d-pointer.
-    RamClient(RamClientPrivate * const d);
+    explicit RamClient(RamClientPrivate * const d);
     /// @endcond
 
 private:

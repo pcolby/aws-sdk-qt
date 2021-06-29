@@ -31,7 +31,7 @@ class ExportImageResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ExportImageResponsePrivate(ExportImageResponse * const q);
+    explicit ExportImageResponsePrivate(ExportImageResponse * const q);
 
     void parseExportImageResponse(QXmlStreamReader &xml);
 

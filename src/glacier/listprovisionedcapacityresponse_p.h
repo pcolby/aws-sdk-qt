@@ -31,7 +31,7 @@ class ListProvisionedCapacityResponsePrivate : public GlacierResponsePrivate {
 
 public:
 
-    ListProvisionedCapacityResponsePrivate(ListProvisionedCapacityResponse * const q);
+    explicit ListProvisionedCapacityResponsePrivate(ListProvisionedCapacityResponse * const q);
 
     void parseListProvisionedCapacityResponse(QXmlStreamReader &xml);
 

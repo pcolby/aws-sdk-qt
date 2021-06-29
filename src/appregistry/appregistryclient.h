@@ -81,7 +81,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    AppRegistryClient(
+    explicit AppRegistryClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -111,7 +111,7 @@ public slots:
 protected:
     /// @cond internal
     AppRegistryClientPrivate * const d_ptr; ///< Internal d-pointer.
-    AppRegistryClient(AppRegistryClientPrivate * const d);
+    explicit AppRegistryClient(AppRegistryClientPrivate * const d);
     /// @endcond
 
 private:

@@ -31,7 +31,7 @@ class DescribeRuntimeConfigurationResponsePrivate : public GameLiftResponsePriva
 
 public:
 
-    DescribeRuntimeConfigurationResponsePrivate(DescribeRuntimeConfigurationResponse * const q);
+    explicit DescribeRuntimeConfigurationResponsePrivate(DescribeRuntimeConfigurationResponse * const q);
 
     void parseDescribeRuntimeConfigurationResponse(QXmlStreamReader &xml);
 

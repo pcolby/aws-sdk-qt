@@ -30,7 +30,7 @@ class RdsClient;
 class RdsClientPrivate {
 
 public:
-    RdsClientPrivate(RdsClient * const q);
+    explicit RdsClientPrivate(RdsClient * const q);
 
 protected:
     RdsClient * const q_ptr; ///< Internal q-pointer.

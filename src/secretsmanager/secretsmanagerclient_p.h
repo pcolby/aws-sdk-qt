@@ -30,7 +30,7 @@ class SecretsManagerClient;
 class SecretsManagerClientPrivate {
 
 public:
-    SecretsManagerClientPrivate(SecretsManagerClient * const q);
+    explicit SecretsManagerClientPrivate(SecretsManagerClient * const q);
 
 protected:
     SecretsManagerClient * const q_ptr; ///< Internal q-pointer.

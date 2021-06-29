@@ -31,7 +31,7 @@ class CreateNodeResponsePrivate : public ManagedBlockchainResponsePrivate {
 
 public:
 
-    CreateNodeResponsePrivate(CreateNodeResponse * const q);
+    explicit CreateNodeResponsePrivate(CreateNodeResponse * const q);
 
     void parseCreateNodeResponse(QXmlStreamReader &xml);
 

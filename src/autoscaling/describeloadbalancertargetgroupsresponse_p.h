@@ -31,7 +31,7 @@ class DescribeLoadBalancerTargetGroupsResponsePrivate : public AutoScalingRespon
 
 public:
 
-    DescribeLoadBalancerTargetGroupsResponsePrivate(DescribeLoadBalancerTargetGroupsResponse * const q);
+    explicit DescribeLoadBalancerTargetGroupsResponsePrivate(DescribeLoadBalancerTargetGroupsResponse * const q);
 
     void parseDescribeLoadBalancerTargetGroupsResponse(QXmlStreamReader &xml);
 

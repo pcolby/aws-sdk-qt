@@ -31,7 +31,7 @@ class DeleteLoginProfileResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    DeleteLoginProfileResponsePrivate(DeleteLoginProfileResponse * const q);
+    explicit DeleteLoginProfileResponsePrivate(DeleteLoginProfileResponse * const q);
 
     void parseDeleteLoginProfileResponse(QXmlStreamReader &xml);
 

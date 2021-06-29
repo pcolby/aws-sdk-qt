@@ -31,7 +31,7 @@ class PutRuleResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 
-    PutRuleResponsePrivate(PutRuleResponse * const q);
+    explicit PutRuleResponsePrivate(PutRuleResponse * const q);
 
     void parsePutRuleResponse(QXmlStreamReader &xml);
 

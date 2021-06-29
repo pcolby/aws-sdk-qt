@@ -31,7 +31,7 @@ class DescribeStackSummaryResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    DescribeStackSummaryResponsePrivate(DescribeStackSummaryResponse * const q);
+    explicit DescribeStackSummaryResponsePrivate(DescribeStackSummaryResponse * const q);
 
     void parseDescribeStackSummaryResponse(QXmlStreamReader &xml);
 

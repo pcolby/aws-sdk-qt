@@ -31,7 +31,7 @@ class DeleteTrafficMirrorTargetResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DeleteTrafficMirrorTargetResponsePrivate(DeleteTrafficMirrorTargetResponse * const q);
+    explicit DeleteTrafficMirrorTargetResponsePrivate(DeleteTrafficMirrorTargetResponse * const q);
 
     void parseDeleteTrafficMirrorTargetResponse(QXmlStreamReader &xml);
 

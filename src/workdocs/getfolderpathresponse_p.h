@@ -31,7 +31,7 @@ class GetFolderPathResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 
-    GetFolderPathResponsePrivate(GetFolderPathResponse * const q);
+    explicit GetFolderPathResponsePrivate(GetFolderPathResponse * const q);
 
     void parseGetFolderPathResponse(QXmlStreamReader &xml);
 

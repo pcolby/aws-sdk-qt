@@ -115,7 +115,7 @@ public:
 protected:
     /// @cond internal
     LexModelsV2RequestPrivate * const d_ptr; ///< Internal d-pointer.
-    LexModelsV2Request(LexModelsV2RequestPrivate * const d);
+    explicit LexModelsV2Request(LexModelsV2RequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

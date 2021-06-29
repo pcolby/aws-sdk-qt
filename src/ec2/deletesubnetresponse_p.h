@@ -31,7 +31,7 @@ class DeleteSubnetResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DeleteSubnetResponsePrivate(DeleteSubnetResponse * const q);
+    explicit DeleteSubnetResponsePrivate(DeleteSubnetResponse * const q);
 
     void parseDeleteSubnetResponse(QXmlStreamReader &xml);
 

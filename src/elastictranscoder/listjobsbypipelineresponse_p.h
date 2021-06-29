@@ -31,7 +31,7 @@ class ListJobsByPipelineResponsePrivate : public ElasticTranscoderResponsePrivat
 
 public:
 
-    ListJobsByPipelineResponsePrivate(ListJobsByPipelineResponse * const q);
+    explicit ListJobsByPipelineResponsePrivate(ListJobsByPipelineResponse * const q);
 
     void parseListJobsByPipelineResponse(QXmlStreamReader &xml);
 

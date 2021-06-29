@@ -31,7 +31,7 @@ class ListMFADevicesResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    ListMFADevicesResponsePrivate(ListMFADevicesResponse * const q);
+    explicit ListMFADevicesResponsePrivate(ListMFADevicesResponse * const q);
 
     void parseListMFADevicesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListResolverRulesResponsePrivate : public Route53ResolverResponsePrivate {
 
 public:
 
-    ListResolverRulesResponsePrivate(ListResolverRulesResponse * const q);
+    explicit ListResolverRulesResponsePrivate(ListResolverRulesResponse * const q);
 
     void parseListResolverRulesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetEventPredictionResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 
-    GetEventPredictionResponsePrivate(GetEventPredictionResponse * const q);
+    explicit GetEventPredictionResponsePrivate(GetEventPredictionResponse * const q);
 
     void parseGetEventPredictionResponse(QXmlStreamReader &xml);
 

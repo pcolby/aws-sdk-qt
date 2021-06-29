@@ -31,7 +31,7 @@ class ListBotsResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    ListBotsResponsePrivate(ListBotsResponse * const q);
+    explicit ListBotsResponsePrivate(ListBotsResponse * const q);
 
     void parseListBotsResponse(QXmlStreamReader &xml);
 

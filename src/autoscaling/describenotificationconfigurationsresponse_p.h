@@ -31,7 +31,7 @@ class DescribeNotificationConfigurationsResponsePrivate : public AutoScalingResp
 
 public:
 
-    DescribeNotificationConfigurationsResponsePrivate(DescribeNotificationConfigurationsResponse * const q);
+    explicit DescribeNotificationConfigurationsResponsePrivate(DescribeNotificationConfigurationsResponse * const q);
 
     void parseDescribeNotificationConfigurationsResponse(QXmlStreamReader &xml);
 

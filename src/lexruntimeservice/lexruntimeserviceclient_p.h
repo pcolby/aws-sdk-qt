@@ -30,7 +30,7 @@ class LexRuntimeServiceClient;
 class LexRuntimeServiceClientPrivate {
 
 public:
-    LexRuntimeServiceClientPrivate(LexRuntimeServiceClient * const q);
+    explicit LexRuntimeServiceClientPrivate(LexRuntimeServiceClient * const q);
 
 protected:
     LexRuntimeServiceClient * const q_ptr; ///< Internal q-pointer.

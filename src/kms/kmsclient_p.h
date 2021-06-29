@@ -30,7 +30,7 @@ class KmsClient;
 class KmsClientPrivate {
 
 public:
-    KmsClientPrivate(KmsClient * const q);
+    explicit KmsClientPrivate(KmsClient * const q);
 
 protected:
     KmsClient * const q_ptr; ///< Internal q-pointer.

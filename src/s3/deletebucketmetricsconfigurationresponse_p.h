@@ -31,7 +31,7 @@ class DeleteBucketMetricsConfigurationResponsePrivate : public S3ResponsePrivate
 
 public:
 
-    DeleteBucketMetricsConfigurationResponsePrivate(DeleteBucketMetricsConfigurationResponse * const q);
+    explicit DeleteBucketMetricsConfigurationResponsePrivate(DeleteBucketMetricsConfigurationResponse * const q);
 
     void parseDeleteBucketMetricsConfigurationResponse(QXmlStreamReader &xml);
 

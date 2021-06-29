@@ -31,7 +31,7 @@ class StartStreamTranscriptionResponsePrivate : public TranscribeStreamingServic
 
 public:
 
-    StartStreamTranscriptionResponsePrivate(StartStreamTranscriptionResponse * const q);
+    explicit StartStreamTranscriptionResponsePrivate(StartStreamTranscriptionResponse * const q);
 
     void parseStartStreamTranscriptionResponse(QXmlStreamReader &xml);
 

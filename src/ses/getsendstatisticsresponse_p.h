@@ -31,7 +31,7 @@ class GetSendStatisticsResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    GetSendStatisticsResponsePrivate(GetSendStatisticsResponse * const q);
+    explicit GetSendStatisticsResponsePrivate(GetSendStatisticsResponse * const q);
 
     void parseGetSendStatisticsResponse(QXmlStreamReader &xml);
 

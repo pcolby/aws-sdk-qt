@@ -31,7 +31,7 @@ class ConfirmPublicVirtualInterfaceResponsePrivate : public DirectConnectRespons
 
 public:
 
-    ConfirmPublicVirtualInterfaceResponsePrivate(ConfirmPublicVirtualInterfaceResponse * const q);
+    explicit ConfirmPublicVirtualInterfaceResponsePrivate(ConfirmPublicVirtualInterfaceResponse * const q);
 
     void parseConfirmPublicVirtualInterfaceResponse(QXmlStreamReader &xml);
 

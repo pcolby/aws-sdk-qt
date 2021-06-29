@@ -31,7 +31,7 @@ class ListStreamingSessionsResponsePrivate : public NimbleStudioResponsePrivate 
 
 public:
 
-    ListStreamingSessionsResponsePrivate(ListStreamingSessionsResponse * const q);
+    explicit ListStreamingSessionsResponsePrivate(ListStreamingSessionsResponse * const q);
 
     void parseListStreamingSessionsResponse(QXmlStreamReader &xml);
 

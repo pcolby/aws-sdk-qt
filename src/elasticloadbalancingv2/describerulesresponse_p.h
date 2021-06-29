@@ -31,7 +31,7 @@ class DescribeRulesResponsePrivate : public ElasticLoadBalancingv2ResponsePrivat
 
 public:
 
-    DescribeRulesResponsePrivate(DescribeRulesResponse * const q);
+    explicit DescribeRulesResponsePrivate(DescribeRulesResponse * const q);
 
     void parseDescribeRulesResponse(QXmlStreamReader &xml);
 

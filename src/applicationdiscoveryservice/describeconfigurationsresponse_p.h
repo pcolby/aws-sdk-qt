@@ -31,7 +31,7 @@ class DescribeConfigurationsResponsePrivate : public ApplicationDiscoveryService
 
 public:
 
-    DescribeConfigurationsResponsePrivate(DescribeConfigurationsResponse * const q);
+    explicit DescribeConfigurationsResponsePrivate(DescribeConfigurationsResponse * const q);
 
     void parseDescribeConfigurationsResponse(QXmlStreamReader &xml);
 

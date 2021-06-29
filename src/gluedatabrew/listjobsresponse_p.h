@@ -31,7 +31,7 @@ class ListJobsResponsePrivate : public GlueDataBrewResponsePrivate {
 
 public:
 
-    ListJobsResponsePrivate(ListJobsResponse * const q);
+    explicit ListJobsResponsePrivate(ListJobsResponse * const q);
 
     void parseListJobsResponse(QXmlStreamReader &xml);
 

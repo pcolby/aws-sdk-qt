@@ -31,7 +31,7 @@ class DescribeDBClusterSnapshotAttributesResponsePrivate : public DocDBResponseP
 
 public:
 
-    DescribeDBClusterSnapshotAttributesResponsePrivate(DescribeDBClusterSnapshotAttributesResponse * const q);
+    explicit DescribeDBClusterSnapshotAttributesResponsePrivate(DescribeDBClusterSnapshotAttributesResponse * const q);
 
     void parseDescribeDBClusterSnapshotAttributesResponse(QXmlStreamReader &xml);
 

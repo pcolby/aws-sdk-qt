@@ -31,7 +31,7 @@ class CreateRateBasedRuleResponsePrivate : public WafResponsePrivate {
 
 public:
 
-    CreateRateBasedRuleResponsePrivate(CreateRateBasedRuleResponse * const q);
+    explicit CreateRateBasedRuleResponsePrivate(CreateRateBasedRuleResponse * const q);
 
     void parseCreateRateBasedRuleResponse(QXmlStreamReader &xml);
 

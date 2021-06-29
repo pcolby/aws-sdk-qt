@@ -31,7 +31,7 @@ class DeleteConfigurationAggregatorResponsePrivate : public ConfigServiceRespons
 
 public:
 
-    DeleteConfigurationAggregatorResponsePrivate(DeleteConfigurationAggregatorResponse * const q);
+    explicit DeleteConfigurationAggregatorResponsePrivate(DeleteConfigurationAggregatorResponse * const q);
 
     void parseDeleteConfigurationAggregatorResponse(QXmlStreamReader &xml);
 

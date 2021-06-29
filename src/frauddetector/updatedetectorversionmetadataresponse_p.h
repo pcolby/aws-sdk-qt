@@ -31,7 +31,7 @@ class UpdateDetectorVersionMetadataResponsePrivate : public FraudDetectorRespons
 
 public:
 
-    UpdateDetectorVersionMetadataResponsePrivate(UpdateDetectorVersionMetadataResponse * const q);
+    explicit UpdateDetectorVersionMetadataResponsePrivate(UpdateDetectorVersionMetadataResponse * const q);
 
     void parseUpdateDetectorVersionMetadataResponse(QXmlStreamReader &xml);
 

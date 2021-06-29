@@ -31,7 +31,7 @@ class RemoveIpRoutesResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 
-    RemoveIpRoutesResponsePrivate(RemoveIpRoutesResponse * const q);
+    explicit RemoveIpRoutesResponsePrivate(RemoveIpRoutesResponse * const q);
 
     void parseRemoveIpRoutesResponse(QXmlStreamReader &xml);
 

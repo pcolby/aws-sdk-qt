@@ -103,7 +103,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    WellArchitectedClient(
+    explicit WellArchitectedClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -144,7 +144,7 @@ public slots:
 protected:
     /// @cond internal
     WellArchitectedClientPrivate * const d_ptr; ///< Internal d-pointer.
-    WellArchitectedClient(WellArchitectedClientPrivate * const d);
+    explicit WellArchitectedClient(WellArchitectedClientPrivate * const d);
     /// @endcond
 
 private:

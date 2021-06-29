@@ -31,7 +31,7 @@ class DeleteSnapshotScheduleResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    DeleteSnapshotScheduleResponsePrivate(DeleteSnapshotScheduleResponse * const q);
+    explicit DeleteSnapshotScheduleResponsePrivate(DeleteSnapshotScheduleResponse * const q);
 
     void parseDeleteSnapshotScheduleResponse(QXmlStreamReader &xml);
 

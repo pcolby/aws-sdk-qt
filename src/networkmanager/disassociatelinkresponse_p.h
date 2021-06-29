@@ -31,7 +31,7 @@ class DisassociateLinkResponsePrivate : public NetworkManagerResponsePrivate {
 
 public:
 
-    DisassociateLinkResponsePrivate(DisassociateLinkResponse * const q);
+    explicit DisassociateLinkResponsePrivate(DisassociateLinkResponse * const q);
 
     void parseDisassociateLinkResponse(QXmlStreamReader &xml);
 

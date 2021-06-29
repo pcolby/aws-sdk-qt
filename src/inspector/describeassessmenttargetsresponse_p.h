@@ -31,7 +31,7 @@ class DescribeAssessmentTargetsResponsePrivate : public InspectorResponsePrivate
 
 public:
 
-    DescribeAssessmentTargetsResponsePrivate(DescribeAssessmentTargetsResponse * const q);
+    explicit DescribeAssessmentTargetsResponsePrivate(DescribeAssessmentTargetsResponse * const q);
 
     void parseDescribeAssessmentTargetsResponse(QXmlStreamReader &xml);
 

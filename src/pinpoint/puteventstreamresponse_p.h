@@ -31,7 +31,7 @@ class PutEventStreamResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    PutEventStreamResponsePrivate(PutEventStreamResponse * const q);
+    explicit PutEventStreamResponsePrivate(PutEventStreamResponse * const q);
 
     void parsePutEventStreamResponse(QXmlStreamReader &xml);
 

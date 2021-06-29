@@ -31,7 +31,7 @@ class GetOrganizationAdminAccountResponsePrivate : public AuditManagerResponsePr
 
 public:
 
-    GetOrganizationAdminAccountResponsePrivate(GetOrganizationAdminAccountResponse * const q);
+    explicit GetOrganizationAdminAccountResponsePrivate(GetOrganizationAdminAccountResponse * const q);
 
     void parseGetOrganizationAdminAccountResponse(QXmlStreamReader &xml);
 

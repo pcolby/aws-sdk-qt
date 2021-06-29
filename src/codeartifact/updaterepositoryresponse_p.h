@@ -31,7 +31,7 @@ class UpdateRepositoryResponsePrivate : public CodeArtifactResponsePrivate {
 
 public:
 
-    UpdateRepositoryResponsePrivate(UpdateRepositoryResponse * const q);
+    explicit UpdateRepositoryResponsePrivate(UpdateRepositoryResponse * const q);
 
     void parseUpdateRepositoryResponse(QXmlStreamReader &xml);
 

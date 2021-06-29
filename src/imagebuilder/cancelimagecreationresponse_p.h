@@ -31,7 +31,7 @@ class CancelImageCreationResponsePrivate : public imagebuilderResponsePrivate {
 
 public:
 
-    CancelImageCreationResponsePrivate(CancelImageCreationResponse * const q);
+    explicit CancelImageCreationResponsePrivate(CancelImageCreationResponse * const q);
 
     void parseCancelImageCreationResponse(QXmlStreamReader &xml);
 

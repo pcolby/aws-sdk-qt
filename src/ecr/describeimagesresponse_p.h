@@ -31,7 +31,7 @@ class DescribeImagesResponsePrivate : public EcrResponsePrivate {
 
 public:
 
-    DescribeImagesResponsePrivate(DescribeImagesResponse * const q);
+    explicit DescribeImagesResponsePrivate(DescribeImagesResponse * const q);
 
     void parseDescribeImagesResponse(QXmlStreamReader &xml);
 

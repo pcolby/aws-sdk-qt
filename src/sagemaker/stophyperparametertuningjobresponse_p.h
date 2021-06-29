@@ -31,7 +31,7 @@ class StopHyperParameterTuningJobResponsePrivate : public SageMakerResponsePriva
 
 public:
 
-    StopHyperParameterTuningJobResponsePrivate(StopHyperParameterTuningJobResponse * const q);
+    explicit StopHyperParameterTuningJobResponsePrivate(StopHyperParameterTuningJobResponse * const q);
 
     void parseStopHyperParameterTuningJobResponse(QXmlStreamReader &xml);
 

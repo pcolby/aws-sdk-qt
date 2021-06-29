@@ -31,7 +31,7 @@ class ListKeyPoliciesResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    ListKeyPoliciesResponsePrivate(ListKeyPoliciesResponse * const q);
+    explicit ListKeyPoliciesResponsePrivate(ListKeyPoliciesResponse * const q);
 
     void parseListKeyPoliciesResponse(QXmlStreamReader &xml);
 

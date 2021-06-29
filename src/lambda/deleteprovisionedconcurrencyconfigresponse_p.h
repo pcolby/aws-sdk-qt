@@ -31,7 +31,7 @@ class DeleteProvisionedConcurrencyConfigResponsePrivate : public LambdaResponseP
 
 public:
 
-    DeleteProvisionedConcurrencyConfigResponsePrivate(DeleteProvisionedConcurrencyConfigResponse * const q);
+    explicit DeleteProvisionedConcurrencyConfigResponsePrivate(DeleteProvisionedConcurrencyConfigResponse * const q);
 
     void parseDeleteProvisionedConcurrencyConfigResponse(QXmlStreamReader &xml);
 

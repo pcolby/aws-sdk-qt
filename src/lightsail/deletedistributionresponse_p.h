@@ -31,7 +31,7 @@ class DeleteDistributionResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    DeleteDistributionResponsePrivate(DeleteDistributionResponse * const q);
+    explicit DeleteDistributionResponsePrivate(DeleteDistributionResponse * const q);
 
     void parseDeleteDistributionResponse(QXmlStreamReader &xml);
 

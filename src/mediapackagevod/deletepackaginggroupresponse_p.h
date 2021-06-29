@@ -31,7 +31,7 @@ class DeletePackagingGroupResponsePrivate : public MediaPackageVodResponsePrivat
 
 public:
 
-    DeletePackagingGroupResponsePrivate(DeletePackagingGroupResponse * const q);
+    explicit DeletePackagingGroupResponsePrivate(DeletePackagingGroupResponse * const q);
 
     void parseDeletePackagingGroupResponse(QXmlStreamReader &xml);
 

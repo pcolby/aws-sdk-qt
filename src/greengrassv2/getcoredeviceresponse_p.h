@@ -31,7 +31,7 @@ class GetCoreDeviceResponsePrivate : public GreengrassV2ResponsePrivate {
 
 public:
 
-    GetCoreDeviceResponsePrivate(GetCoreDeviceResponse * const q);
+    explicit GetCoreDeviceResponsePrivate(GetCoreDeviceResponse * const q);
 
     void parseGetCoreDeviceResponse(QXmlStreamReader &xml);
 

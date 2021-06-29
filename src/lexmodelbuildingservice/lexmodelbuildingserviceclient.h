@@ -119,7 +119,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    LexModelBuildingServiceClient(
+    explicit LexModelBuildingServiceClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -168,7 +168,7 @@ public slots:
 protected:
     /// @cond internal
     LexModelBuildingServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
-    LexModelBuildingServiceClient(LexModelBuildingServiceClientPrivate * const d);
+    explicit LexModelBuildingServiceClient(LexModelBuildingServiceClientPrivate * const d);
     /// @endcond
 
 private:

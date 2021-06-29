@@ -31,7 +31,7 @@ class GetTransitGatewayRouteTableAssociationsResponsePrivate : public Ec2Respons
 
 public:
 
-    GetTransitGatewayRouteTableAssociationsResponsePrivate(GetTransitGatewayRouteTableAssociationsResponse * const q);
+    explicit GetTransitGatewayRouteTableAssociationsResponsePrivate(GetTransitGatewayRouteTableAssociationsResponse * const q);
 
     void parseGetTransitGatewayRouteTableAssociationsResponse(QXmlStreamReader &xml);
 

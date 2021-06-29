@@ -31,7 +31,7 @@ class AddProfileKeyResponsePrivate : public CustomerProfilesResponsePrivate {
 
 public:
 
-    AddProfileKeyResponsePrivate(AddProfileKeyResponse * const q);
+    explicit AddProfileKeyResponsePrivate(AddProfileKeyResponse * const q);
 
     void parseAddProfileKeyResponse(QXmlStreamReader &xml);
 

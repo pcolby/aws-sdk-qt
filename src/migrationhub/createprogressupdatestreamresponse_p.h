@@ -31,7 +31,7 @@ class CreateProgressUpdateStreamResponsePrivate : public MigrationHubResponsePri
 
 public:
 
-    CreateProgressUpdateStreamResponsePrivate(CreateProgressUpdateStreamResponse * const q);
+    explicit CreateProgressUpdateStreamResponsePrivate(CreateProgressUpdateStreamResponse * const q);
 
     void parseCreateProgressUpdateStreamResponse(QXmlStreamReader &xml);
 

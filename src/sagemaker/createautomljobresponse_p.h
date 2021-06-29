@@ -31,7 +31,7 @@ class CreateAutoMLJobResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    CreateAutoMLJobResponsePrivate(CreateAutoMLJobResponse * const q);
+    explicit CreateAutoMLJobResponsePrivate(CreateAutoMLJobResponse * const q);
 
     void parseCreateAutoMLJobResponse(QXmlStreamReader &xml);
 

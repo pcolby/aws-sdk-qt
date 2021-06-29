@@ -31,7 +31,7 @@ class StartSigningJobResponsePrivate : public signerResponsePrivate {
 
 public:
 
-    StartSigningJobResponsePrivate(StartSigningJobResponse * const q);
+    explicit StartSigningJobResponsePrivate(StartSigningJobResponse * const q);
 
     void parseStartSigningJobResponse(QXmlStreamReader &xml);
 

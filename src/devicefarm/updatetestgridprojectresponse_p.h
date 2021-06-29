@@ -31,7 +31,7 @@ class UpdateTestGridProjectResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    UpdateTestGridProjectResponsePrivate(UpdateTestGridProjectResponse * const q);
+    explicit UpdateTestGridProjectResponsePrivate(UpdateTestGridProjectResponse * const q);
 
     void parseUpdateTestGridProjectResponse(QXmlStreamReader &xml);
 

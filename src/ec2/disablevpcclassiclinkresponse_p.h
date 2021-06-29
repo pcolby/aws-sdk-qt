@@ -31,7 +31,7 @@ class DisableVpcClassicLinkResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DisableVpcClassicLinkResponsePrivate(DisableVpcClassicLinkResponse * const q);
+    explicit DisableVpcClassicLinkResponsePrivate(DisableVpcClassicLinkResponse * const q);
 
     void parseDisableVpcClassicLinkResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteEnvironmentTemplateResponsePrivate : public ProtonResponsePrivate {
 
 public:
 
-    DeleteEnvironmentTemplateResponsePrivate(DeleteEnvironmentTemplateResponse * const q);
+    explicit DeleteEnvironmentTemplateResponsePrivate(DeleteEnvironmentTemplateResponse * const q);
 
     void parseDeleteEnvironmentTemplateResponse(QXmlStreamReader &xml);
 

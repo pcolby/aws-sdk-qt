@@ -31,7 +31,7 @@ class AddTagsToResourceResponsePrivate : public CloudHSMResponsePrivate {
 
 public:
 
-    AddTagsToResourceResponsePrivate(AddTagsToResourceResponse * const q);
+    explicit AddTagsToResourceResponsePrivate(AddTagsToResourceResponse * const q);
 
     void parseAddTagsToResourceResponse(QXmlStreamReader &xml);
 

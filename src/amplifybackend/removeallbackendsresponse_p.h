@@ -31,7 +31,7 @@ class RemoveAllBackendsResponsePrivate : public AmplifyBackendResponsePrivate {
 
 public:
 
-    RemoveAllBackendsResponsePrivate(RemoveAllBackendsResponse * const q);
+    explicit RemoveAllBackendsResponsePrivate(RemoveAllBackendsResponse * const q);
 
     void parseRemoveAllBackendsResponse(QXmlStreamReader &xml);
 

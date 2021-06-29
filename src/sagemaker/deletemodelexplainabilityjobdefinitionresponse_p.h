@@ -31,7 +31,7 @@ class DeleteModelExplainabilityJobDefinitionResponsePrivate : public SageMakerRe
 
 public:
 
-    DeleteModelExplainabilityJobDefinitionResponsePrivate(DeleteModelExplainabilityJobDefinitionResponse * const q);
+    explicit DeleteModelExplainabilityJobDefinitionResponsePrivate(DeleteModelExplainabilityJobDefinitionResponse * const q);
 
     void parseDeleteModelExplainabilityJobDefinitionResponse(QXmlStreamReader &xml);
 

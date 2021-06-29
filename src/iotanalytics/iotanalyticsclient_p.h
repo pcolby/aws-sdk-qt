@@ -30,7 +30,7 @@ class IoTAnalyticsClient;
 class IoTAnalyticsClientPrivate {
 
 public:
-    IoTAnalyticsClientPrivate(IoTAnalyticsClient * const q);
+    explicit IoTAnalyticsClientPrivate(IoTAnalyticsClient * const q);
 
 protected:
     IoTAnalyticsClient * const q_ptr; ///< Internal q-pointer.

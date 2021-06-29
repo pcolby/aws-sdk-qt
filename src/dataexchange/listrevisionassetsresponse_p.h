@@ -31,7 +31,7 @@ class ListRevisionAssetsResponsePrivate : public DataExchangeResponsePrivate {
 
 public:
 
-    ListRevisionAssetsResponsePrivate(ListRevisionAssetsResponse * const q);
+    explicit ListRevisionAssetsResponsePrivate(ListRevisionAssetsResponse * const q);
 
     void parseListRevisionAssetsResponse(QXmlStreamReader &xml);
 

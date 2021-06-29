@@ -31,7 +31,7 @@ class DeletePermissionPolicyResponsePrivate : public WAFRegionalResponsePrivate 
 
 public:
 
-    DeletePermissionPolicyResponsePrivate(DeletePermissionPolicyResponse * const q);
+    explicit DeletePermissionPolicyResponsePrivate(DeletePermissionPolicyResponse * const q);
 
     void parseDeletePermissionPolicyResponse(QXmlStreamReader &xml);
 

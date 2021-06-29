@@ -31,7 +31,7 @@ class DisassociateTransitGatewayConnectPeerResponsePrivate : public NetworkManag
 
 public:
 
-    DisassociateTransitGatewayConnectPeerResponsePrivate(DisassociateTransitGatewayConnectPeerResponse * const q);
+    explicit DisassociateTransitGatewayConnectPeerResponsePrivate(DisassociateTransitGatewayConnectPeerResponse * const q);
 
     void parseDisassociateTransitGatewayConnectPeerResponse(QXmlStreamReader &xml);
 

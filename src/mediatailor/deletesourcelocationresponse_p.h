@@ -31,7 +31,7 @@ class DeleteSourceLocationResponsePrivate : public MediaTailorResponsePrivate {
 
 public:
 
-    DeleteSourceLocationResponsePrivate(DeleteSourceLocationResponse * const q);
+    explicit DeleteSourceLocationResponsePrivate(DeleteSourceLocationResponse * const q);
 
     void parseDeleteSourceLocationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListVaultsResponsePrivate : public GlacierResponsePrivate {
 
 public:
 
-    ListVaultsResponsePrivate(ListVaultsResponse * const q);
+    explicit ListVaultsResponsePrivate(ListVaultsResponse * const q);
 
     void parseListVaultsResponse(QXmlStreamReader &xml);
 

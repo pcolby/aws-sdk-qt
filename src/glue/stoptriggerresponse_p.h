@@ -31,7 +31,7 @@ class StopTriggerResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    StopTriggerResponsePrivate(StopTriggerResponse * const q);
+    explicit StopTriggerResponsePrivate(StopTriggerResponse * const q);
 
     void parseStopTriggerResponse(QXmlStreamReader &xml);
 

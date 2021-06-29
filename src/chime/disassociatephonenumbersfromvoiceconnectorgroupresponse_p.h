@@ -31,7 +31,7 @@ class DisassociatePhoneNumbersFromVoiceConnectorGroupResponsePrivate : public Ch
 
 public:
 
-    DisassociatePhoneNumbersFromVoiceConnectorGroupResponsePrivate(DisassociatePhoneNumbersFromVoiceConnectorGroupResponse * const q);
+    explicit DisassociatePhoneNumbersFromVoiceConnectorGroupResponsePrivate(DisassociatePhoneNumbersFromVoiceConnectorGroupResponse * const q);
 
     void parseDisassociatePhoneNumbersFromVoiceConnectorGroupResponse(QXmlStreamReader &xml);
 

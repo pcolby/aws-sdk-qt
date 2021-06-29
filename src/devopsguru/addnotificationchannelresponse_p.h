@@ -31,7 +31,7 @@ class AddNotificationChannelResponsePrivate : public DevOpsGuruResponsePrivate {
 
 public:
 
-    AddNotificationChannelResponsePrivate(AddNotificationChannelResponse * const q);
+    explicit AddNotificationChannelResponsePrivate(AddNotificationChannelResponse * const q);
 
     void parseAddNotificationChannelResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateLFTagResponsePrivate : public LakeFormationResponsePrivate {
 
 public:
 
-    UpdateLFTagResponsePrivate(UpdateLFTagResponse * const q);
+    explicit UpdateLFTagResponsePrivate(UpdateLFTagResponse * const q);
 
     void parseUpdateLFTagResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DisassociateSkillGroupFromRoomResponsePrivate : public AlexaForBusinessRes
 
 public:
 
-    DisassociateSkillGroupFromRoomResponsePrivate(DisassociateSkillGroupFromRoomResponse * const q);
+    explicit DisassociateSkillGroupFromRoomResponsePrivate(DisassociateSkillGroupFromRoomResponse * const q);
 
     void parseDisassociateSkillGroupFromRoomResponse(QXmlStreamReader &xml);
 

@@ -30,7 +30,7 @@ class CloudSearchDomainClient;
 class CloudSearchDomainClientPrivate {
 
 public:
-    CloudSearchDomainClientPrivate(CloudSearchDomainClient * const q);
+    explicit CloudSearchDomainClientPrivate(CloudSearchDomainClient * const q);
 
 protected:
     CloudSearchDomainClient * const q_ptr; ///< Internal q-pointer.

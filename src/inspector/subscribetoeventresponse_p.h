@@ -31,7 +31,7 @@ class SubscribeToEventResponsePrivate : public InspectorResponsePrivate {
 
 public:
 
-    SubscribeToEventResponsePrivate(SubscribeToEventResponse * const q);
+    explicit SubscribeToEventResponsePrivate(SubscribeToEventResponse * const q);
 
     void parseSubscribeToEventResponse(QXmlStreamReader &xml);
 

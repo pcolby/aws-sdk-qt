@@ -69,7 +69,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    CodeGuruReviewerClient(
+    explicit CodeGuruReviewerClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -93,7 +93,7 @@ public slots:
 protected:
     /// @cond internal
     CodeGuruReviewerClientPrivate * const d_ptr; ///< Internal d-pointer.
-    CodeGuruReviewerClient(CodeGuruReviewerClientPrivate * const d);
+    explicit CodeGuruReviewerClient(CodeGuruReviewerClientPrivate * const d);
     /// @endcond
 
 private:

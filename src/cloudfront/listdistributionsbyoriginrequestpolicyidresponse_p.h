@@ -31,7 +31,7 @@ class ListDistributionsByOriginRequestPolicyIdResponsePrivate : public CloudFron
 
 public:
 
-    ListDistributionsByOriginRequestPolicyIdResponsePrivate(ListDistributionsByOriginRequestPolicyIdResponse * const q);
+    explicit ListDistributionsByOriginRequestPolicyIdResponsePrivate(ListDistributionsByOriginRequestPolicyIdResponse * const q);
 
     void parseListDistributionsByOriginRequestPolicyIdResponse(QXmlStreamReader &xml);
 

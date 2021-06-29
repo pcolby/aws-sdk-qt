@@ -31,7 +31,7 @@ class GetNotificationChannelResponsePrivate : public FmsResponsePrivate {
 
 public:
 
-    GetNotificationChannelResponsePrivate(GetNotificationChannelResponse * const q);
+    explicit GetNotificationChannelResponsePrivate(GetNotificationChannelResponse * const q);
 
     void parseGetNotificationChannelResponse(QXmlStreamReader &xml);
 

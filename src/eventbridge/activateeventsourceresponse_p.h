@@ -31,7 +31,7 @@ class ActivateEventSourceResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 
-    ActivateEventSourceResponsePrivate(ActivateEventSourceResponse * const q);
+    explicit ActivateEventSourceResponsePrivate(ActivateEventSourceResponse * const q);
 
     void parseActivateEventSourceResponse(QXmlStreamReader &xml);
 

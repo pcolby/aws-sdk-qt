@@ -31,7 +31,7 @@ class UpdateObjectAttributesResponsePrivate : public CloudDirectoryResponsePriva
 
 public:
 
-    UpdateObjectAttributesResponsePrivate(UpdateObjectAttributesResponse * const q);
+    explicit UpdateObjectAttributesResponsePrivate(UpdateObjectAttributesResponse * const q);
 
     void parseUpdateObjectAttributesResponse(QXmlStreamReader &xml);
 

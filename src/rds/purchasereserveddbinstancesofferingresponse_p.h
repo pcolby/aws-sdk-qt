@@ -31,7 +31,7 @@ class PurchaseReservedDBInstancesOfferingResponsePrivate : public RdsResponsePri
 
 public:
 
-    PurchaseReservedDBInstancesOfferingResponsePrivate(PurchaseReservedDBInstancesOfferingResponse * const q);
+    explicit PurchaseReservedDBInstancesOfferingResponsePrivate(PurchaseReservedDBInstancesOfferingResponse * const q);
 
     void parsePurchaseReservedDBInstancesOfferingResponse(QXmlStreamReader &xml);
 

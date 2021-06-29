@@ -31,7 +31,7 @@ class GetTelemetryMetadataResponsePrivate : public InspectorResponsePrivate {
 
 public:
 
-    GetTelemetryMetadataResponsePrivate(GetTelemetryMetadataResponse * const q);
+    explicit GetTelemetryMetadataResponsePrivate(GetTelemetryMetadataResponse * const q);
 
     void parseGetTelemetryMetadataResponse(QXmlStreamReader &xml);
 

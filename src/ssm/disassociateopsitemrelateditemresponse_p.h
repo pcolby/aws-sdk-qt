@@ -31,7 +31,7 @@ class DisassociateOpsItemRelatedItemResponsePrivate : public SsmResponsePrivate 
 
 public:
 
-    DisassociateOpsItemRelatedItemResponsePrivate(DisassociateOpsItemRelatedItemResponse * const q);
+    explicit DisassociateOpsItemRelatedItemResponsePrivate(DisassociateOpsItemRelatedItemResponse * const q);
 
     void parseDisassociateOpsItemRelatedItemResponse(QXmlStreamReader &xml);
 

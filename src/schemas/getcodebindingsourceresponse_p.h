@@ -31,7 +31,7 @@ class GetCodeBindingSourceResponsePrivate : public SchemasResponsePrivate {
 
 public:
 
-    GetCodeBindingSourceResponsePrivate(GetCodeBindingSourceResponse * const q);
+    explicit GetCodeBindingSourceResponsePrivate(GetCodeBindingSourceResponse * const q);
 
     void parseGetCodeBindingSourceResponse(QXmlStreamReader &xml);
 

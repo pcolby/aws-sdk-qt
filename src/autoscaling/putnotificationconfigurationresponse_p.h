@@ -31,7 +31,7 @@ class PutNotificationConfigurationResponsePrivate : public AutoScalingResponsePr
 
 public:
 
-    PutNotificationConfigurationResponsePrivate(PutNotificationConfigurationResponse * const q);
+    explicit PutNotificationConfigurationResponsePrivate(PutNotificationConfigurationResponse * const q);
 
     void parsePutNotificationConfigurationResponse(QXmlStreamReader &xml);
 

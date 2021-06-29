@@ -31,7 +31,7 @@ class DescribeApplicationVersionResponsePrivate : public KinesisAnalyticsV2Respo
 
 public:
 
-    DescribeApplicationVersionResponsePrivate(DescribeApplicationVersionResponse * const q);
+    explicit DescribeApplicationVersionResponsePrivate(DescribeApplicationVersionResponse * const q);
 
     void parseDescribeApplicationVersionResponse(QXmlStreamReader &xml);
 

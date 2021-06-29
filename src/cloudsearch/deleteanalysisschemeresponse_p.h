@@ -31,7 +31,7 @@ class DeleteAnalysisSchemeResponsePrivate : public CloudSearchResponsePrivate {
 
 public:
 
-    DeleteAnalysisSchemeResponsePrivate(DeleteAnalysisSchemeResponse * const q);
+    explicit DeleteAnalysisSchemeResponsePrivate(DeleteAnalysisSchemeResponse * const q);
 
     void parseDeleteAnalysisSchemeResponse(QXmlStreamReader &xml);
 

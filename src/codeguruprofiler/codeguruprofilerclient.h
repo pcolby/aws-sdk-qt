@@ -87,7 +87,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    CodeGuruProfilerClient(
+    explicit CodeGuruProfilerClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -120,7 +120,7 @@ public slots:
 protected:
     /// @cond internal
     CodeGuruProfilerClientPrivate * const d_ptr; ///< Internal d-pointer.
-    CodeGuruProfilerClient(CodeGuruProfilerClientPrivate * const d);
+    explicit CodeGuruProfilerClient(CodeGuruProfilerClientPrivate * const d);
     /// @endcond
 
 private:

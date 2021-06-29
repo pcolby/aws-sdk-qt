@@ -31,7 +31,7 @@ class GetLabelsResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 
-    GetLabelsResponsePrivate(GetLabelsResponse * const q);
+    explicit GetLabelsResponsePrivate(GetLabelsResponse * const q);
 
     void parseGetLabelsResponse(QXmlStreamReader &xml);
 

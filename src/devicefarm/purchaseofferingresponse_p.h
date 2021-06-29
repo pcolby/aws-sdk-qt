@@ -31,7 +31,7 @@ class PurchaseOfferingResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    PurchaseOfferingResponsePrivate(PurchaseOfferingResponse * const q);
+    explicit PurchaseOfferingResponsePrivate(PurchaseOfferingResponse * const q);
 
     void parsePurchaseOfferingResponse(QXmlStreamReader &xml);
 

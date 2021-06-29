@@ -31,7 +31,7 @@ class UpdateFacetResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 
-    UpdateFacetResponsePrivate(UpdateFacetResponse * const q);
+    explicit UpdateFacetResponsePrivate(UpdateFacetResponse * const q);
 
     void parseUpdateFacetResponse(QXmlStreamReader &xml);
 

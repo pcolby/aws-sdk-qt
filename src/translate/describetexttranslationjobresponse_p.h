@@ -31,7 +31,7 @@ class DescribeTextTranslationJobResponsePrivate : public TranslateResponsePrivat
 
 public:
 
-    DescribeTextTranslationJobResponsePrivate(DescribeTextTranslationJobResponse * const q);
+    explicit DescribeTextTranslationJobResponsePrivate(DescribeTextTranslationJobResponse * const q);
 
     void parseDescribeTextTranslationJobResponse(QXmlStreamReader &xml);
 

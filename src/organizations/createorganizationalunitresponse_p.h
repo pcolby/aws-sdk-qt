@@ -31,7 +31,7 @@ class CreateOrganizationalUnitResponsePrivate : public OrganizationsResponsePriv
 
 public:
 
-    CreateOrganizationalUnitResponsePrivate(CreateOrganizationalUnitResponse * const q);
+    explicit CreateOrganizationalUnitResponsePrivate(CreateOrganizationalUnitResponse * const q);
 
     void parseCreateOrganizationalUnitResponse(QXmlStreamReader &xml);
 

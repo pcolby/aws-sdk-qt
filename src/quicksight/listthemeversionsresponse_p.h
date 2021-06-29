@@ -31,7 +31,7 @@ class ListThemeVersionsResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    ListThemeVersionsResponsePrivate(ListThemeVersionsResponse * const q);
+    explicit ListThemeVersionsResponsePrivate(ListThemeVersionsResponse * const q);
 
     void parseListThemeVersionsResponse(QXmlStreamReader &xml);
 

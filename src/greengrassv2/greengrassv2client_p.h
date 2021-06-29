@@ -30,7 +30,7 @@ class GreengrassV2Client;
 class GreengrassV2ClientPrivate {
 
 public:
-    GreengrassV2ClientPrivate(GreengrassV2Client * const q);
+    explicit GreengrassV2ClientPrivate(GreengrassV2Client * const q);
 
 protected:
     GreengrassV2Client * const q_ptr; ///< Internal q-pointer.

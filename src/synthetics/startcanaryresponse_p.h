@@ -31,7 +31,7 @@ class StartCanaryResponsePrivate : public SyntheticsResponsePrivate {
 
 public:
 
-    StartCanaryResponsePrivate(StartCanaryResponse * const q);
+    explicit StartCanaryResponsePrivate(StartCanaryResponse * const q);
 
     void parseStartCanaryResponse(QXmlStreamReader &xml);
 

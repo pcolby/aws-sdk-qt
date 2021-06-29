@@ -31,7 +31,7 @@ class DescribeRepositoryAssociationResponsePrivate : public CodeGuruReviewerResp
 
 public:
 
-    DescribeRepositoryAssociationResponsePrivate(DescribeRepositoryAssociationResponse * const q);
+    explicit DescribeRepositoryAssociationResponsePrivate(DescribeRepositoryAssociationResponse * const q);
 
     void parseDescribeRepositoryAssociationResponse(QXmlStreamReader &xml);
 

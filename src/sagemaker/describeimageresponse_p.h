@@ -31,7 +31,7 @@ class DescribeImageResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    DescribeImageResponsePrivate(DescribeImageResponse * const q);
+    explicit DescribeImageResponsePrivate(DescribeImageResponse * const q);
 
     void parseDescribeImageResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteFaqResponsePrivate : public kendraResponsePrivate {
 
 public:
 
-    DeleteFaqResponsePrivate(DeleteFaqResponse * const q);
+    explicit DeleteFaqResponsePrivate(DeleteFaqResponse * const q);
 
     void parseDeleteFaqResponse(QXmlStreamReader &xml);
 

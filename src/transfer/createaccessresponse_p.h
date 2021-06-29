@@ -31,7 +31,7 @@ class CreateAccessResponsePrivate : public TransferResponsePrivate {
 
 public:
 
-    CreateAccessResponsePrivate(CreateAccessResponse * const q);
+    explicit CreateAccessResponsePrivate(CreateAccessResponse * const q);
 
     void parseCreateAccessResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class SetIdentityMailFromDomainResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    SetIdentityMailFromDomainResponsePrivate(SetIdentityMailFromDomainResponse * const q);
+    explicit SetIdentityMailFromDomainResponsePrivate(SetIdentityMailFromDomainResponse * const q);
 
     void parseSetIdentityMailFromDomainResponse(QXmlStreamReader &xml);
 

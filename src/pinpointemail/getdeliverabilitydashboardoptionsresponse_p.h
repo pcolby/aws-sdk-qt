@@ -31,7 +31,7 @@ class GetDeliverabilityDashboardOptionsResponsePrivate : public PinpointEmailRes
 
 public:
 
-    GetDeliverabilityDashboardOptionsResponsePrivate(GetDeliverabilityDashboardOptionsResponse * const q);
+    explicit GetDeliverabilityDashboardOptionsResponsePrivate(GetDeliverabilityDashboardOptionsResponse * const q);
 
     void parseGetDeliverabilityDashboardOptionsResponse(QXmlStreamReader &xml);
 

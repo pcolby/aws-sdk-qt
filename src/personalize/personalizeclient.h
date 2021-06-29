@@ -135,7 +135,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    PersonalizeClient(
+    explicit PersonalizeClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -192,7 +192,7 @@ public slots:
 protected:
     /// @cond internal
     PersonalizeClientPrivate * const d_ptr; ///< Internal d-pointer.
-    PersonalizeClient(PersonalizeClientPrivate * const d);
+    explicit PersonalizeClient(PersonalizeClientPrivate * const d);
     /// @endcond
 
 private:

@@ -31,7 +31,7 @@ class DescribeTableStatisticsResponsePrivate : public DatabaseMigrationServiceRe
 
 public:
 
-    DescribeTableStatisticsResponsePrivate(DescribeTableStatisticsResponse * const q);
+    explicit DescribeTableStatisticsResponsePrivate(DescribeTableStatisticsResponse * const q);
 
     void parseDescribeTableStatisticsResponse(QXmlStreamReader &xml);
 

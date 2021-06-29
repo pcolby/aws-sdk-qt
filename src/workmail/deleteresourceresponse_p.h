@@ -31,7 +31,7 @@ class DeleteResourceResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 
-    DeleteResourceResponsePrivate(DeleteResourceResponse * const q);
+    explicit DeleteResourceResponsePrivate(DeleteResourceResponse * const q);
 
     void parseDeleteResourceResponse(QXmlStreamReader &xml);
 

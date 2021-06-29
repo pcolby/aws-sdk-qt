@@ -31,7 +31,7 @@ class CreateAnomalySubscriptionResponsePrivate : public CostExplorerResponsePriv
 
 public:
 
-    CreateAnomalySubscriptionResponsePrivate(CreateAnomalySubscriptionResponse * const q);
+    explicit CreateAnomalySubscriptionResponsePrivate(CreateAnomalySubscriptionResponse * const q);
 
     void parseCreateAnomalySubscriptionResponse(QXmlStreamReader &xml);
 

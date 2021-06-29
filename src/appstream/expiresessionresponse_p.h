@@ -31,7 +31,7 @@ class ExpireSessionResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 
-    ExpireSessionResponsePrivate(ExpireSessionResponse * const q);
+    explicit ExpireSessionResponsePrivate(ExpireSessionResponse * const q);
 
     void parseExpireSessionResponse(QXmlStreamReader &xml);
 

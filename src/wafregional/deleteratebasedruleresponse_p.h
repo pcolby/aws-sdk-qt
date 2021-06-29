@@ -31,7 +31,7 @@ class DeleteRateBasedRuleResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 
-    DeleteRateBasedRuleResponsePrivate(DeleteRateBasedRuleResponse * const q);
+    explicit DeleteRateBasedRuleResponsePrivate(DeleteRateBasedRuleResponse * const q);
 
     void parseDeleteRateBasedRuleResponse(QXmlStreamReader &xml);
 

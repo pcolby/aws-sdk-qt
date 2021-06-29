@@ -31,7 +31,7 @@ class PutRegistryPolicyResponsePrivate : public EcrResponsePrivate {
 
 public:
 
-    PutRegistryPolicyResponsePrivate(PutRegistryPolicyResponse * const q);
+    explicit PutRegistryPolicyResponsePrivate(PutRegistryPolicyResponse * const q);
 
     void parsePutRegistryPolicyResponse(QXmlStreamReader &xml);
 

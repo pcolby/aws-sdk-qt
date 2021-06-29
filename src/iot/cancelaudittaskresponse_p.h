@@ -31,7 +31,7 @@ class CancelAuditTaskResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    CancelAuditTaskResponsePrivate(CancelAuditTaskResponse * const q);
+    explicit CancelAuditTaskResponsePrivate(CancelAuditTaskResponse * const q);
 
     void parseCancelAuditTaskResponse(QXmlStreamReader &xml);
 

@@ -79,7 +79,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    MediaPackageClient(
+    explicit MediaPackageClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -108,7 +108,7 @@ public slots:
 protected:
     /// @cond internal
     MediaPackageClientPrivate * const d_ptr; ///< Internal d-pointer.
-    MediaPackageClient(MediaPackageClientPrivate * const d);
+    explicit MediaPackageClient(MediaPackageClientPrivate * const d);
     /// @endcond
 
 private:

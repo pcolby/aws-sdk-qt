@@ -31,7 +31,7 @@ class DescribeFeatureTransformationResponsePrivate : public PersonalizeResponseP
 
 public:
 
-    DescribeFeatureTransformationResponsePrivate(DescribeFeatureTransformationResponse * const q);
+    explicit DescribeFeatureTransformationResponsePrivate(DescribeFeatureTransformationResponse * const q);
 
     void parseDescribeFeatureTransformationResponse(QXmlStreamReader &xml);
 

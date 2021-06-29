@@ -31,7 +31,7 @@ class ListActivitiesResponsePrivate : public SfnResponsePrivate {
 
 public:
 
-    ListActivitiesResponsePrivate(ListActivitiesResponse * const q);
+    explicit ListActivitiesResponsePrivate(ListActivitiesResponse * const q);
 
     void parseListActivitiesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetJobTaggingResponsePrivate : public S3ControlResponsePrivate {
 
 public:
 
-    GetJobTaggingResponsePrivate(GetJobTaggingResponse * const q);
+    explicit GetJobTaggingResponsePrivate(GetJobTaggingResponse * const q);
 
     void parseGetJobTaggingResponse(QXmlStreamReader &xml);
 

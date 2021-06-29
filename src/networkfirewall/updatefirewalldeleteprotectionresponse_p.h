@@ -31,7 +31,7 @@ class UpdateFirewallDeleteProtectionResponsePrivate : public NetworkFirewallResp
 
 public:
 
-    UpdateFirewallDeleteProtectionResponsePrivate(UpdateFirewallDeleteProtectionResponse * const q);
+    explicit UpdateFirewallDeleteProtectionResponsePrivate(UpdateFirewallDeleteProtectionResponse * const q);
 
     void parseUpdateFirewallDeleteProtectionResponse(QXmlStreamReader &xml);
 

@@ -57,7 +57,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    DlmClient(
+    explicit DlmClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -75,7 +75,7 @@ public slots:
 protected:
     /// @cond internal
     DlmClientPrivate * const d_ptr; ///< Internal d-pointer.
-    DlmClient(DlmClientPrivate * const d);
+    explicit DlmClient(DlmClientPrivate * const d);
     /// @endcond
 
 private:

@@ -31,7 +31,7 @@ class UpdateUserSecurityProfilesResponsePrivate : public ConnectResponsePrivate 
 
 public:
 
-    UpdateUserSecurityProfilesResponsePrivate(UpdateUserSecurityProfilesResponse * const q);
+    explicit UpdateUserSecurityProfilesResponsePrivate(UpdateUserSecurityProfilesResponse * const q);
 
     void parseUpdateUserSecurityProfilesResponse(QXmlStreamReader &xml);
 

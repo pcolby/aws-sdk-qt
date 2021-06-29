@@ -31,7 +31,7 @@ class UpdateGraphqlApiResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 
-    UpdateGraphqlApiResponsePrivate(UpdateGraphqlApiResponse * const q);
+    explicit UpdateGraphqlApiResponsePrivate(UpdateGraphqlApiResponse * const q);
 
     void parseUpdateGraphqlApiResponse(QXmlStreamReader &xml);
 

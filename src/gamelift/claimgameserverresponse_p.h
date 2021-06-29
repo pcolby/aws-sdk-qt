@@ -31,7 +31,7 @@ class ClaimGameServerResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    ClaimGameServerResponsePrivate(ClaimGameServerResponse * const q);
+    explicit ClaimGameServerResponsePrivate(ClaimGameServerResponse * const q);
 
     void parseClaimGameServerResponse(QXmlStreamReader &xml);
 

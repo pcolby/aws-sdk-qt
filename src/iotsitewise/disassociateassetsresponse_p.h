@@ -31,7 +31,7 @@ class DisassociateAssetsResponsePrivate : public IoTSiteWiseResponsePrivate {
 
 public:
 
-    DisassociateAssetsResponsePrivate(DisassociateAssetsResponse * const q);
+    explicit DisassociateAssetsResponsePrivate(DisassociateAssetsResponse * const q);
 
     void parseDisassociateAssetsResponse(QXmlStreamReader &xml);
 

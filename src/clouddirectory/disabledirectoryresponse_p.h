@@ -31,7 +31,7 @@ class DisableDirectoryResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 
-    DisableDirectoryResponsePrivate(DisableDirectoryResponse * const q);
+    explicit DisableDirectoryResponsePrivate(DisableDirectoryResponse * const q);
 
     void parseDisableDirectoryResponse(QXmlStreamReader &xml);
 

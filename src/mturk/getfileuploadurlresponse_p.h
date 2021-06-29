@@ -31,7 +31,7 @@ class GetFileUploadURLResponsePrivate : public MTurkResponsePrivate {
 
 public:
 
-    GetFileUploadURLResponsePrivate(GetFileUploadURLResponse * const q);
+    explicit GetFileUploadURLResponsePrivate(GetFileUploadURLResponse * const q);
 
     void parseGetFileUploadURLResponse(QXmlStreamReader &xml);
 

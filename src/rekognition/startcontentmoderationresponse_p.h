@@ -31,7 +31,7 @@ class StartContentModerationResponsePrivate : public RekognitionResponsePrivate 
 
 public:
 
-    StartContentModerationResponsePrivate(StartContentModerationResponse * const q);
+    explicit StartContentModerationResponsePrivate(StartContentModerationResponse * const q);
 
     void parseStartContentModerationResponse(QXmlStreamReader &xml);
 

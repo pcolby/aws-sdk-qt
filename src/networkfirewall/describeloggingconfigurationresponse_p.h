@@ -31,7 +31,7 @@ class DescribeLoggingConfigurationResponsePrivate : public NetworkFirewallRespon
 
 public:
 
-    DescribeLoggingConfigurationResponsePrivate(DescribeLoggingConfigurationResponse * const q);
+    explicit DescribeLoggingConfigurationResponsePrivate(DescribeLoggingConfigurationResponse * const q);
 
     void parseDescribeLoggingConfigurationResponse(QXmlStreamReader &xml);
 

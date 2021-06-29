@@ -31,7 +31,7 @@ class GetSchemaByDefinitionResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    GetSchemaByDefinitionResponsePrivate(GetSchemaByDefinitionResponse * const q);
+    explicit GetSchemaByDefinitionResponsePrivate(GetSchemaByDefinitionResponse * const q);
 
     void parseGetSchemaByDefinitionResponse(QXmlStreamReader &xml);
 

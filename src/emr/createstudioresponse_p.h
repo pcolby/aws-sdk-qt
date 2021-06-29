@@ -31,7 +31,7 @@ class CreateStudioResponsePrivate : public EmrResponsePrivate {
 
 public:
 
-    CreateStudioResponsePrivate(CreateStudioResponse * const q);
+    explicit CreateStudioResponsePrivate(CreateStudioResponse * const q);
 
     void parseCreateStudioResponse(QXmlStreamReader &xml);
 

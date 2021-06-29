@@ -31,7 +31,7 @@ class VerifyDomainDkimResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    VerifyDomainDkimResponsePrivate(VerifyDomainDkimResponse * const q);
+    explicit VerifyDomainDkimResponsePrivate(VerifyDomainDkimResponse * const q);
 
     void parseVerifyDomainDkimResponse(QXmlStreamReader &xml);
 

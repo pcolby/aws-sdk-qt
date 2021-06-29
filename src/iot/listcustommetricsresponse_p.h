@@ -31,7 +31,7 @@ class ListCustomMetricsResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    ListCustomMetricsResponsePrivate(ListCustomMetricsResponse * const q);
+    explicit ListCustomMetricsResponsePrivate(ListCustomMetricsResponse * const q);
 
     void parseListCustomMetricsResponse(QXmlStreamReader &xml);
 

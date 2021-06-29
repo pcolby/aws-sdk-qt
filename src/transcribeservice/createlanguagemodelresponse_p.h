@@ -31,7 +31,7 @@ class CreateLanguageModelResponsePrivate : public TranscribeServiceResponsePriva
 
 public:
 
-    CreateLanguageModelResponsePrivate(CreateLanguageModelResponse * const q);
+    explicit CreateLanguageModelResponsePrivate(CreateLanguageModelResponse * const q);
 
     void parseCreateLanguageModelResponse(QXmlStreamReader &xml);
 

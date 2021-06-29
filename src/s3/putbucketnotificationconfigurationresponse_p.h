@@ -31,7 +31,7 @@ class PutBucketNotificationConfigurationResponsePrivate : public S3ResponsePriva
 
 public:
 
-    PutBucketNotificationConfigurationResponsePrivate(PutBucketNotificationConfigurationResponse * const q);
+    explicit PutBucketNotificationConfigurationResponsePrivate(PutBucketNotificationConfigurationResponse * const q);
 
     void parsePutBucketNotificationConfigurationResponse(QXmlStreamReader &xml);
 

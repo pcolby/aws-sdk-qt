@@ -31,7 +31,7 @@ class DisableInsightRulesResponsePrivate : public CloudWatchResponsePrivate {
 
 public:
 
-    DisableInsightRulesResponsePrivate(DisableInsightRulesResponse * const q);
+    explicit DisableInsightRulesResponsePrivate(DisableInsightRulesResponse * const q);
 
     void parseDisableInsightRulesResponse(QXmlStreamReader &xml);
 

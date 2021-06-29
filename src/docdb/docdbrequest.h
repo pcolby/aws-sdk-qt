@@ -112,7 +112,7 @@ public:
 protected:
     /// @cond internal
     DocDBRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    DocDBRequest(DocDBRequestPrivate * const d);
+    explicit DocDBRequest(DocDBRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -31,7 +31,7 @@ class DisassociateTagOptionFromResourceResponsePrivate : public ServiceCatalogRe
 
 public:
 
-    DisassociateTagOptionFromResourceResponsePrivate(DisassociateTagOptionFromResourceResponse * const q);
+    explicit DisassociateTagOptionFromResourceResponsePrivate(DisassociateTagOptionFromResourceResponse * const q);
 
     void parseDisassociateTagOptionFromResourceResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateStudioResponsePrivate : public EmrResponsePrivate {
 
 public:
 
-    UpdateStudioResponsePrivate(UpdateStudioResponse * const q);
+    explicit UpdateStudioResponsePrivate(UpdateStudioResponse * const q);
 
     void parseUpdateStudioResponse(QXmlStreamReader &xml);
 

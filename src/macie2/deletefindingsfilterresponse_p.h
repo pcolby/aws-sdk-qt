@@ -31,7 +31,7 @@ class DeleteFindingsFilterResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 
-    DeleteFindingsFilterResponsePrivate(DeleteFindingsFilterResponse * const q);
+    explicit DeleteFindingsFilterResponsePrivate(DeleteFindingsFilterResponse * const q);
 
     void parseDeleteFindingsFilterResponse(QXmlStreamReader &xml);
 

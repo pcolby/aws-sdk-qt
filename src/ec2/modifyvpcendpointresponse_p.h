@@ -31,7 +31,7 @@ class ModifyVpcEndpointResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ModifyVpcEndpointResponsePrivate(ModifyVpcEndpointResponse * const q);
+    explicit ModifyVpcEndpointResponsePrivate(ModifyVpcEndpointResponse * const q);
 
     void parseModifyVpcEndpointResponse(QXmlStreamReader &xml);
 

@@ -29,7 +29,7 @@ class signerResponsePrivate {
 
 public:
 
-    signerResponsePrivate(signerResponse * const q);
+    explicit signerResponsePrivate(signerResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

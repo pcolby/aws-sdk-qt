@@ -31,7 +31,7 @@ class AllocateAddressResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    AllocateAddressResponsePrivate(AllocateAddressResponse * const q);
+    explicit AllocateAddressResponsePrivate(AllocateAddressResponse * const q);
 
     void parseAllocateAddressResponse(QXmlStreamReader &xml);
 

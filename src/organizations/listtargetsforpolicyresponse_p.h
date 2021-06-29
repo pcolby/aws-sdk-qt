@@ -31,7 +31,7 @@ class ListTargetsForPolicyResponsePrivate : public OrganizationsResponsePrivate 
 
 public:
 
-    ListTargetsForPolicyResponsePrivate(ListTargetsForPolicyResponse * const q);
+    explicit ListTargetsForPolicyResponsePrivate(ListTargetsForPolicyResponse * const q);
 
     void parseListTargetsForPolicyResponse(QXmlStreamReader &xml);
 

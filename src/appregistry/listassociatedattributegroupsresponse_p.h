@@ -31,7 +31,7 @@ class ListAssociatedAttributeGroupsResponsePrivate : public AppRegistryResponseP
 
 public:
 
-    ListAssociatedAttributeGroupsResponsePrivate(ListAssociatedAttributeGroupsResponse * const q);
+    explicit ListAssociatedAttributeGroupsResponsePrivate(ListAssociatedAttributeGroupsResponse * const q);
 
     void parseListAssociatedAttributeGroupsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetBotResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    GetBotResponsePrivate(GetBotResponse * const q);
+    explicit GetBotResponsePrivate(GetBotResponse * const q);
 
     void parseGetBotResponse(QXmlStreamReader &xml);
 

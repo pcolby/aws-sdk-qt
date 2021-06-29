@@ -31,7 +31,7 @@ class TagResourceResponsePrivate : public EksResponsePrivate {
 
 public:
 
-    TagResourceResponsePrivate(TagResourceResponse * const q);
+    explicit TagResourceResponsePrivate(TagResourceResponse * const q);
 
     void parseTagResourceResponse(QXmlStreamReader &xml);
 

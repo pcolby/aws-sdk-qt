@@ -31,7 +31,7 @@ class ImportAsProvisionedProductResponsePrivate : public ServiceCatalogResponseP
 
 public:
 
-    ImportAsProvisionedProductResponsePrivate(ImportAsProvisionedProductResponse * const q);
+    explicit ImportAsProvisionedProductResponsePrivate(ImportAsProvisionedProductResponse * const q);
 
     void parseImportAsProvisionedProductResponse(QXmlStreamReader &xml);
 

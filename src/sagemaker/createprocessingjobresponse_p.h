@@ -31,7 +31,7 @@ class CreateProcessingJobResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    CreateProcessingJobResponsePrivate(CreateProcessingJobResponse * const q);
+    explicit CreateProcessingJobResponsePrivate(CreateProcessingJobResponse * const q);
 
     void parseCreateProcessingJobResponse(QXmlStreamReader &xml);
 

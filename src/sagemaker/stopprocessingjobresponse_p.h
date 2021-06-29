@@ -31,7 +31,7 @@ class StopProcessingJobResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    StopProcessingJobResponsePrivate(StopProcessingJobResponse * const q);
+    explicit StopProcessingJobResponsePrivate(StopProcessingJobResponse * const q);
 
     void parseStopProcessingJobResponse(QXmlStreamReader &xml);
 

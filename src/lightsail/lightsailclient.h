@@ -325,7 +325,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    LightsailClient(
+    explicit LightsailClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -477,7 +477,7 @@ public slots:
 protected:
     /// @cond internal
     LightsailClientPrivate * const d_ptr; ///< Internal d-pointer.
-    LightsailClient(LightsailClientPrivate * const d);
+    explicit LightsailClient(LightsailClientPrivate * const d);
     /// @endcond
 
 private:

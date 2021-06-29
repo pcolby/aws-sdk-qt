@@ -31,7 +31,7 @@ class ListRelatedItemsResponsePrivate : public SSMIncidentsResponsePrivate {
 
 public:
 
-    ListRelatedItemsResponsePrivate(ListRelatedItemsResponse * const q);
+    explicit ListRelatedItemsResponsePrivate(ListRelatedItemsResponse * const q);
 
     void parseListRelatedItemsResponse(QXmlStreamReader &xml);
 

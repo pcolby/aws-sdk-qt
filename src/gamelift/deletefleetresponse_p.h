@@ -31,7 +31,7 @@ class DeleteFleetResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    DeleteFleetResponsePrivate(DeleteFleetResponse * const q);
+    explicit DeleteFleetResponsePrivate(DeleteFleetResponse * const q);
 
     void parseDeleteFleetResponse(QXmlStreamReader &xml);
 

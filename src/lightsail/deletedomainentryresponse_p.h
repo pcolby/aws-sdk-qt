@@ -31,7 +31,7 @@ class DeleteDomainEntryResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    DeleteDomainEntryResponsePrivate(DeleteDomainEntryResponse * const q);
+    explicit DeleteDomainEntryResponsePrivate(DeleteDomainEntryResponse * const q);
 
     void parseDeleteDomainEntryResponse(QXmlStreamReader &xml);
 

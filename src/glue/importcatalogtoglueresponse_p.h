@@ -31,7 +31,7 @@ class ImportCatalogToGlueResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    ImportCatalogToGlueResponsePrivate(ImportCatalogToGlueResponse * const q);
+    explicit ImportCatalogToGlueResponsePrivate(ImportCatalogToGlueResponse * const q);
 
     void parseImportCatalogToGlueResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListRoleTagsResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    ListRoleTagsResponsePrivate(ListRoleTagsResponse * const q);
+    explicit ListRoleTagsResponsePrivate(ListRoleTagsResponse * const q);
 
     void parseListRoleTagsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class BatchGetDeploymentTargetsResponsePrivate : public CodeDeployResponsePrivat
 
 public:
 
-    BatchGetDeploymentTargetsResponsePrivate(BatchGetDeploymentTargetsResponse * const q);
+    explicit BatchGetDeploymentTargetsResponsePrivate(BatchGetDeploymentTargetsResponse * const q);
 
     void parseBatchGetDeploymentTargetsResponse(QXmlStreamReader &xml);
 

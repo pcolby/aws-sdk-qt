@@ -31,7 +31,7 @@ class StopEventsDetectionJobResponsePrivate : public ComprehendResponsePrivate {
 
 public:
 
-    StopEventsDetectionJobResponsePrivate(StopEventsDetectionJobResponse * const q);
+    explicit StopEventsDetectionJobResponsePrivate(StopEventsDetectionJobResponse * const q);
 
     void parseStopEventsDetectionJobResponse(QXmlStreamReader &xml);
 

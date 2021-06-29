@@ -109,7 +109,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    AthenaClient(
+    explicit AthenaClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -153,7 +153,7 @@ public slots:
 protected:
     /// @cond internal
     AthenaClientPrivate * const d_ptr; ///< Internal d-pointer.
-    AthenaClient(AthenaClientPrivate * const d);
+    explicit AthenaClient(AthenaClientPrivate * const d);
     /// @endcond
 
 private:

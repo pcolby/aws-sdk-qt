@@ -31,7 +31,7 @@ class ReorderReceiptRuleSetResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    ReorderReceiptRuleSetResponsePrivate(ReorderReceiptRuleSetResponse * const q);
+    explicit ReorderReceiptRuleSetResponsePrivate(ReorderReceiptRuleSetResponse * const q);
 
     void parseReorderReceiptRuleSetResponse(QXmlStreamReader &xml);
 

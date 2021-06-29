@@ -31,7 +31,7 @@ class BatchAssociateClientDeviceWithCoreDeviceResponsePrivate : public Greengras
 
 public:
 
-    BatchAssociateClientDeviceWithCoreDeviceResponsePrivate(BatchAssociateClientDeviceWithCoreDeviceResponse * const q);
+    explicit BatchAssociateClientDeviceWithCoreDeviceResponsePrivate(BatchAssociateClientDeviceWithCoreDeviceResponse * const q);
 
     void parseBatchAssociateClientDeviceWithCoreDeviceResponse(QXmlStreamReader &xml);
 

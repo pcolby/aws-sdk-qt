@@ -31,7 +31,7 @@ class UpdateVirtualServiceResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 
-    UpdateVirtualServiceResponsePrivate(UpdateVirtualServiceResponse * const q);
+    explicit UpdateVirtualServiceResponsePrivate(UpdateVirtualServiceResponse * const q);
 
     void parseUpdateVirtualServiceResponse(QXmlStreamReader &xml);
 

@@ -30,7 +30,7 @@ class SqsClient;
 class SqsClientPrivate {
 
 public:
-    SqsClientPrivate(SqsClient * const q);
+    explicit SqsClientPrivate(SqsClient * const q);
 
 protected:
     SqsClient * const q_ptr; ///< Internal q-pointer.

@@ -31,7 +31,7 @@ class AssociateBudgetWithResourceResponsePrivate : public ServiceCatalogResponse
 
 public:
 
-    AssociateBudgetWithResourceResponsePrivate(AssociateBudgetWithResourceResponse * const q);
+    explicit AssociateBudgetWithResourceResponsePrivate(AssociateBudgetWithResourceResponse * const q);
 
     void parseAssociateBudgetWithResourceResponse(QXmlStreamReader &xml);
 

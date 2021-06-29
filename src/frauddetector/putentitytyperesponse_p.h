@@ -31,7 +31,7 @@ class PutEntityTypeResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 
-    PutEntityTypeResponsePrivate(PutEntityTypeResponse * const q);
+    explicit PutEntityTypeResponsePrivate(PutEntityTypeResponse * const q);
 
     void parsePutEntityTypeResponse(QXmlStreamReader &xml);
 

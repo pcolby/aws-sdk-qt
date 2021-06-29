@@ -31,7 +31,7 @@ class TagUserResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    TagUserResponsePrivate(TagUserResponse * const q);
+    explicit TagUserResponsePrivate(TagUserResponse * const q);
 
     void parseTagUserResponse(QXmlStreamReader &xml);
 

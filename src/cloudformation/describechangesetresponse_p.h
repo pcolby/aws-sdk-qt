@@ -31,7 +31,7 @@ class DescribeChangeSetResponsePrivate : public CloudFormationResponsePrivate {
 
 public:
 
-    DescribeChangeSetResponsePrivate(DescribeChangeSetResponse * const q);
+    explicit DescribeChangeSetResponsePrivate(DescribeChangeSetResponse * const q);
 
     void parseDescribeChangeSetResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateLocationNfsResponsePrivate : public DataSyncResponsePrivate {
 
 public:
 
-    UpdateLocationNfsResponsePrivate(UpdateLocationNfsResponse * const q);
+    explicit UpdateLocationNfsResponsePrivate(UpdateLocationNfsResponse * const q);
 
     void parseUpdateLocationNfsResponse(QXmlStreamReader &xml);
 

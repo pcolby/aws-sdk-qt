@@ -31,7 +31,7 @@ class DeleteColumnStatisticsForPartitionResponsePrivate : public GlueResponsePri
 
 public:
 
-    DeleteColumnStatisticsForPartitionResponsePrivate(DeleteColumnStatisticsForPartitionResponse * const q);
+    explicit DeleteColumnStatisticsForPartitionResponsePrivate(DeleteColumnStatisticsForPartitionResponse * const q);
 
     void parseDeleteColumnStatisticsForPartitionResponse(QXmlStreamReader &xml);
 

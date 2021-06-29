@@ -31,7 +31,7 @@ class RemoveProfilePermissionResponsePrivate : public signerResponsePrivate {
 
 public:
 
-    RemoveProfilePermissionResponsePrivate(RemoveProfilePermissionResponse * const q);
+    explicit RemoveProfilePermissionResponsePrivate(RemoveProfilePermissionResponse * const q);
 
     void parseRemoveProfilePermissionResponse(QXmlStreamReader &xml);
 

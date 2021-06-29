@@ -31,7 +31,7 @@ class GetSubscriptionStateResponsePrivate : public ShieldResponsePrivate {
 
 public:
 
-    GetSubscriptionStateResponsePrivate(GetSubscriptionStateResponse * const q);
+    explicit GetSubscriptionStateResponsePrivate(GetSubscriptionStateResponse * const q);
 
     void parseGetSubscriptionStateResponse(QXmlStreamReader &xml);
 

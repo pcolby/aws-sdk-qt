@@ -31,7 +31,7 @@ class PutSkillAuthorizationResponsePrivate : public AlexaForBusinessResponsePriv
 
 public:
 
-    PutSkillAuthorizationResponsePrivate(PutSkillAuthorizationResponse * const q);
+    explicit PutSkillAuthorizationResponsePrivate(PutSkillAuthorizationResponse * const q);
 
     void parsePutSkillAuthorizationResponse(QXmlStreamReader &xml);
 

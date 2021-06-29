@@ -31,7 +31,7 @@ class FailoverGlobalClusterResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    FailoverGlobalClusterResponsePrivate(FailoverGlobalClusterResponse * const q);
+    explicit FailoverGlobalClusterResponsePrivate(FailoverGlobalClusterResponse * const q);
 
     void parseFailoverGlobalClusterResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ImportAppCatalogResponsePrivate : public SmsResponsePrivate {
 
 public:
 
-    ImportAppCatalogResponsePrivate(ImportAppCatalogResponse * const q);
+    explicit ImportAppCatalogResponsePrivate(ImportAppCatalogResponse * const q);
 
     void parseImportAppCatalogResponse(QXmlStreamReader &xml);
 

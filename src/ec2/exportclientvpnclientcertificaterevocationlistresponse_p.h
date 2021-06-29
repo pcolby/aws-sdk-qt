@@ -31,7 +31,7 @@ class ExportClientVpnClientCertificateRevocationListResponsePrivate : public Ec2
 
 public:
 
-    ExportClientVpnClientCertificateRevocationListResponsePrivate(ExportClientVpnClientCertificateRevocationListResponse * const q);
+    explicit ExportClientVpnClientCertificateRevocationListResponsePrivate(ExportClientVpnClientCertificateRevocationListResponse * const q);
 
     void parseExportClientVpnClientCertificateRevocationListResponse(QXmlStreamReader &xml);
 

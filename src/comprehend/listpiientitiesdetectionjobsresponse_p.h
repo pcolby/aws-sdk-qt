@@ -31,7 +31,7 @@ class ListPiiEntitiesDetectionJobsResponsePrivate : public ComprehendResponsePri
 
 public:
 
-    ListPiiEntitiesDetectionJobsResponsePrivate(ListPiiEntitiesDetectionJobsResponse * const q);
+    explicit ListPiiEntitiesDetectionJobsResponsePrivate(ListPiiEntitiesDetectionJobsResponse * const q);
 
     void parseListPiiEntitiesDetectionJobsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListReportDefinitionsResponsePrivate : public ApplicationCostProfilerRespo
 
 public:
 
-    ListReportDefinitionsResponsePrivate(ListReportDefinitionsResponse * const q);
+    explicit ListReportDefinitionsResponsePrivate(ListReportDefinitionsResponse * const q);
 
     void parseListReportDefinitionsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateTaskSetResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    UpdateTaskSetResponsePrivate(UpdateTaskSetResponse * const q);
+    explicit UpdateTaskSetResponsePrivate(UpdateTaskSetResponse * const q);
 
     void parseUpdateTaskSetResponse(QXmlStreamReader &xml);
 

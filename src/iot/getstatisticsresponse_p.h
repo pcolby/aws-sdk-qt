@@ -31,7 +31,7 @@ class GetStatisticsResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    GetStatisticsResponsePrivate(GetStatisticsResponse * const q);
+    explicit GetStatisticsResponsePrivate(GetStatisticsResponse * const q);
 
     void parseGetStatisticsResponse(QXmlStreamReader &xml);
 

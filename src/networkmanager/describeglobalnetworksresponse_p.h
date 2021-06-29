@@ -31,7 +31,7 @@ class DescribeGlobalNetworksResponsePrivate : public NetworkManagerResponsePriva
 
 public:
 
-    DescribeGlobalNetworksResponsePrivate(DescribeGlobalNetworksResponse * const q);
+    explicit DescribeGlobalNetworksResponsePrivate(DescribeGlobalNetworksResponse * const q);
 
     void parseDescribeGlobalNetworksResponse(QXmlStreamReader &xml);
 

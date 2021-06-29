@@ -87,7 +87,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    SfnClient(
+    explicit SfnClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -120,7 +120,7 @@ public slots:
 protected:
     /// @cond internal
     SfnClientPrivate * const d_ptr; ///< Internal d-pointer.
-    SfnClient(SfnClientPrivate * const d);
+    explicit SfnClient(SfnClientPrivate * const d);
     /// @endcond
 
 private:

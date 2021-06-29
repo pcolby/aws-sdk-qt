@@ -31,7 +31,7 @@ class RebootCacheClusterResponsePrivate : public ElastiCacheResponsePrivate {
 
 public:
 
-    RebootCacheClusterResponsePrivate(RebootCacheClusterResponse * const q);
+    explicit RebootCacheClusterResponsePrivate(RebootCacheClusterResponse * const q);
 
     void parseRebootCacheClusterResponse(QXmlStreamReader &xml);
 

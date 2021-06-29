@@ -31,7 +31,7 @@ class SearchIndexResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    SearchIndexResponsePrivate(SearchIndexResponse * const q);
+    explicit SearchIndexResponsePrivate(SearchIndexResponse * const q);
 
     void parseSearchIndexResponse(QXmlStreamReader &xml);
 

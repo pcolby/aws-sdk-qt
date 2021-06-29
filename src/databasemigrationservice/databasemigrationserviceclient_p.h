@@ -30,7 +30,7 @@ class DatabaseMigrationServiceClient;
 class DatabaseMigrationServiceClientPrivate {
 
 public:
-    DatabaseMigrationServiceClientPrivate(DatabaseMigrationServiceClient * const q);
+    explicit DatabaseMigrationServiceClientPrivate(DatabaseMigrationServiceClient * const q);
 
 protected:
     DatabaseMigrationServiceClient * const q_ptr; ///< Internal q-pointer.

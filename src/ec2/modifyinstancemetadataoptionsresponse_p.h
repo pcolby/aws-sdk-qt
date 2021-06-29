@@ -31,7 +31,7 @@ class ModifyInstanceMetadataOptionsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ModifyInstanceMetadataOptionsResponsePrivate(ModifyInstanceMetadataOptionsResponse * const q);
+    explicit ModifyInstanceMetadataOptionsResponsePrivate(ModifyInstanceMetadataOptionsResponse * const q);
 
     void parseModifyInstanceMetadataOptionsResponse(QXmlStreamReader &xml);
 

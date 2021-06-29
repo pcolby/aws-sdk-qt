@@ -31,7 +31,7 @@ class RejectInvitationResponsePrivate : public DetectiveResponsePrivate {
 
 public:
 
-    RejectInvitationResponsePrivate(RejectInvitationResponse * const q);
+    explicit RejectInvitationResponsePrivate(RejectInvitationResponse * const q);
 
     void parseRejectInvitationResponse(QXmlStreamReader &xml);
 

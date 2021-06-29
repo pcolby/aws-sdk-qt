@@ -31,7 +31,7 @@ class ListProvisioningArtifactsResponsePrivate : public ServiceCatalogResponsePr
 
 public:
 
-    ListProvisioningArtifactsResponsePrivate(ListProvisioningArtifactsResponse * const q);
+    explicit ListProvisioningArtifactsResponsePrivate(ListProvisioningArtifactsResponse * const q);
 
     void parseListProvisioningArtifactsResponse(QXmlStreamReader &xml);
 

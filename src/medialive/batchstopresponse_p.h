@@ -31,7 +31,7 @@ class BatchStopResponsePrivate : public MediaLiveResponsePrivate {
 
 public:
 
-    BatchStopResponsePrivate(BatchStopResponse * const q);
+    explicit BatchStopResponsePrivate(BatchStopResponse * const q);
 
     void parseBatchStopResponse(QXmlStreamReader &xml);
 

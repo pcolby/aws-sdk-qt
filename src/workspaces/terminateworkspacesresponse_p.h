@@ -31,7 +31,7 @@ class TerminateWorkspacesResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 
-    TerminateWorkspacesResponsePrivate(TerminateWorkspacesResponse * const q);
+    explicit TerminateWorkspacesResponsePrivate(TerminateWorkspacesResponse * const q);
 
     void parseTerminateWorkspacesResponse(QXmlStreamReader &xml);
 

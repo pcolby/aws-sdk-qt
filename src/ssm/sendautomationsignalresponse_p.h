@@ -31,7 +31,7 @@ class SendAutomationSignalResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    SendAutomationSignalResponsePrivate(SendAutomationSignalResponse * const q);
+    explicit SendAutomationSignalResponsePrivate(SendAutomationSignalResponse * const q);
 
     void parseSendAutomationSignalResponse(QXmlStreamReader &xml);
 

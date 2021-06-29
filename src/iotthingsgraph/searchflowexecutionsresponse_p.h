@@ -31,7 +31,7 @@ class SearchFlowExecutionsResponsePrivate : public IoTThingsGraphResponsePrivate
 
 public:
 
-    SearchFlowExecutionsResponsePrivate(SearchFlowExecutionsResponse * const q);
+    explicit SearchFlowExecutionsResponsePrivate(SearchFlowExecutionsResponse * const q);
 
     void parseSearchFlowExecutionsResponse(QXmlStreamReader &xml);
 

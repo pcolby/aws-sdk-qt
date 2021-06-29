@@ -31,7 +31,7 @@ class GetActionResponsePrivate : public FisResponsePrivate {
 
 public:
 
-    GetActionResponsePrivate(GetActionResponse * const q);
+    explicit GetActionResponsePrivate(GetActionResponse * const q);
 
     void parseGetActionResponse(QXmlStreamReader &xml);
 

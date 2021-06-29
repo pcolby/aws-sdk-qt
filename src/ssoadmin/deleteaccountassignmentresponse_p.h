@@ -31,7 +31,7 @@ class DeleteAccountAssignmentResponsePrivate : public SSOAdminResponsePrivate {
 
 public:
 
-    DeleteAccountAssignmentResponsePrivate(DeleteAccountAssignmentResponse * const q);
+    explicit DeleteAccountAssignmentResponsePrivate(DeleteAccountAssignmentResponse * const q);
 
     void parseDeleteAccountAssignmentResponse(QXmlStreamReader &xml);
 

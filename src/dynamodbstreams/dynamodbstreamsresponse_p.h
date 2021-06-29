@@ -29,7 +29,7 @@ class DynamoDBStreamsResponsePrivate {
 
 public:
 
-    DynamoDBStreamsResponsePrivate(DynamoDBStreamsResponse * const q);
+    explicit DynamoDBStreamsResponsePrivate(DynamoDBStreamsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

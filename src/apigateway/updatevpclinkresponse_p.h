@@ -31,7 +31,7 @@ class UpdateVpcLinkResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    UpdateVpcLinkResponsePrivate(UpdateVpcLinkResponse * const q);
+    explicit UpdateVpcLinkResponsePrivate(UpdateVpcLinkResponse * const q);
 
     void parseUpdateVpcLinkResponse(QXmlStreamReader &xml);
 

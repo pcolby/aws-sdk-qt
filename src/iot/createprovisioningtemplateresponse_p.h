@@ -31,7 +31,7 @@ class CreateProvisioningTemplateResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    CreateProvisioningTemplateResponsePrivate(CreateProvisioningTemplateResponse * const q);
+    explicit CreateProvisioningTemplateResponsePrivate(CreateProvisioningTemplateResponse * const q);
 
     void parseCreateProvisioningTemplateResponse(QXmlStreamReader &xml);
 

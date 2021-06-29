@@ -31,7 +31,7 @@ class UpdateProfileResponsePrivate : public AlexaForBusinessResponsePrivate {
 
 public:
 
-    UpdateProfileResponsePrivate(UpdateProfileResponse * const q);
+    explicit UpdateProfileResponsePrivate(UpdateProfileResponse * const q);
 
     void parseUpdateProfileResponse(QXmlStreamReader &xml);
 

@@ -29,7 +29,7 @@ class DeviceFarmResponsePrivate {
 
 public:
 
-    DeviceFarmResponsePrivate(DeviceFarmResponse * const q);
+    explicit DeviceFarmResponsePrivate(DeviceFarmResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

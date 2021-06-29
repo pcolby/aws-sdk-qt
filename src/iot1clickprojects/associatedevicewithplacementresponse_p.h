@@ -31,7 +31,7 @@ class AssociateDeviceWithPlacementResponsePrivate : public IoT1ClickProjectsResp
 
 public:
 
-    AssociateDeviceWithPlacementResponsePrivate(AssociateDeviceWithPlacementResponse * const q);
+    explicit AssociateDeviceWithPlacementResponsePrivate(AssociateDeviceWithPlacementResponse * const q);
 
     void parseAssociateDeviceWithPlacementResponse(QXmlStreamReader &xml);
 

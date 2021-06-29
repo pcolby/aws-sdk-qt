@@ -31,7 +31,7 @@ class ListFunctionDefinitionsResponsePrivate : public GreengrassResponsePrivate 
 
 public:
 
-    ListFunctionDefinitionsResponsePrivate(ListFunctionDefinitionsResponse * const q);
+    explicit ListFunctionDefinitionsResponsePrivate(ListFunctionDefinitionsResponse * const q);
 
     void parseListFunctionDefinitionsResponse(QXmlStreamReader &xml);
 

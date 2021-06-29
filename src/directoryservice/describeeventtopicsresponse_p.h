@@ -31,7 +31,7 @@ class DescribeEventTopicsResponsePrivate : public DirectoryServiceResponsePrivat
 
 public:
 
-    DescribeEventTopicsResponsePrivate(DescribeEventTopicsResponse * const q);
+    explicit DescribeEventTopicsResponsePrivate(DescribeEventTopicsResponse * const q);
 
     void parseDescribeEventTopicsResponse(QXmlStreamReader &xml);
 

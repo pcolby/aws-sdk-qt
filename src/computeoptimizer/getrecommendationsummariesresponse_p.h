@@ -31,7 +31,7 @@ class GetRecommendationSummariesResponsePrivate : public ComputeOptimizerRespons
 
 public:
 
-    GetRecommendationSummariesResponsePrivate(GetRecommendationSummariesResponse * const q);
+    explicit GetRecommendationSummariesResponsePrivate(GetRecommendationSummariesResponse * const q);
 
     void parseGetRecommendationSummariesResponse(QXmlStreamReader &xml);
 

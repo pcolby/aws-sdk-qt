@@ -31,7 +31,7 @@ class ListInputDevicesResponsePrivate : public MediaLiveResponsePrivate {
 
 public:
 
-    ListInputDevicesResponsePrivate(ListInputDevicesResponse * const q);
+    explicit ListInputDevicesResponsePrivate(ListInputDevicesResponse * const q);
 
     void parseListInputDevicesResponse(QXmlStreamReader &xml);
 

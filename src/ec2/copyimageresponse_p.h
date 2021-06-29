@@ -31,7 +31,7 @@ class CopyImageResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CopyImageResponsePrivate(CopyImageResponse * const q);
+    explicit CopyImageResponsePrivate(CopyImageResponse * const q);
 
     void parseCopyImageResponse(QXmlStreamReader &xml);
 

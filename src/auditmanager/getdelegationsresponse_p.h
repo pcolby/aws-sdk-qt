@@ -31,7 +31,7 @@ class GetDelegationsResponsePrivate : public AuditManagerResponsePrivate {
 
 public:
 
-    GetDelegationsResponsePrivate(GetDelegationsResponse * const q);
+    explicit GetDelegationsResponsePrivate(GetDelegationsResponse * const q);
 
     void parseGetDelegationsResponse(QXmlStreamReader &xml);
 

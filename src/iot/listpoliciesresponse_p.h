@@ -31,7 +31,7 @@ class ListPoliciesResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    ListPoliciesResponsePrivate(ListPoliciesResponse * const q);
+    explicit ListPoliciesResponsePrivate(ListPoliciesResponse * const q);
 
     void parseListPoliciesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeClientVpnEndpointsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeClientVpnEndpointsResponsePrivate(DescribeClientVpnEndpointsResponse * const q);
+    explicit DescribeClientVpnEndpointsResponsePrivate(DescribeClientVpnEndpointsResponse * const q);
 
     void parseDescribeClientVpnEndpointsResponse(QXmlStreamReader &xml);
 

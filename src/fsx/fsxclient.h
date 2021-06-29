@@ -77,7 +77,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    FSxClient(
+    explicit FSxClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -105,7 +105,7 @@ public slots:
 protected:
     /// @cond internal
     FSxClientPrivate * const d_ptr; ///< Internal d-pointer.
-    FSxClient(FSxClientPrivate * const d);
+    explicit FSxClient(FSxClientPrivate * const d);
     /// @endcond
 
 private:

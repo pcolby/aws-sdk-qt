@@ -31,7 +31,7 @@ class DescribeScalingProcessTypesResponsePrivate : public AutoScalingResponsePri
 
 public:
 
-    DescribeScalingProcessTypesResponsePrivate(DescribeScalingProcessTypesResponse * const q);
+    explicit DescribeScalingProcessTypesResponsePrivate(DescribeScalingProcessTypesResponse * const q);
 
     void parseDescribeScalingProcessTypesResponse(QXmlStreamReader &xml);
 

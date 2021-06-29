@@ -31,7 +31,7 @@ class TagCertificateAuthorityResponsePrivate : public AcmpcaResponsePrivate {
 
 public:
 
-    TagCertificateAuthorityResponsePrivate(TagCertificateAuthorityResponse * const q);
+    explicit TagCertificateAuthorityResponsePrivate(TagCertificateAuthorityResponse * const q);
 
     void parseTagCertificateAuthorityResponse(QXmlStreamReader &xml);
 

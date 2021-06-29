@@ -31,7 +31,7 @@ class ListAppInstancesResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    ListAppInstancesResponsePrivate(ListAppInstancesResponse * const q);
+    explicit ListAppInstancesResponsePrivate(ListAppInstancesResponse * const q);
 
     void parseListAppInstancesResponse(QXmlStreamReader &xml);
 

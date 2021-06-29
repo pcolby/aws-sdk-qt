@@ -69,7 +69,7 @@ public:
 protected:
     /// @cond internal
     OutpostsRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    OutpostsRequest(OutpostsRequestPrivate * const d);
+    explicit OutpostsRequest(OutpostsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

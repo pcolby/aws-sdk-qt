@@ -31,7 +31,7 @@ class DeleteIntegrationResponsePrivate : public ApiGatewayV2ResponsePrivate {
 
 public:
 
-    DeleteIntegrationResponsePrivate(DeleteIntegrationResponse * const q);
+    explicit DeleteIntegrationResponsePrivate(DeleteIntegrationResponse * const q);
 
     void parseDeleteIntegrationResponse(QXmlStreamReader &xml);
 

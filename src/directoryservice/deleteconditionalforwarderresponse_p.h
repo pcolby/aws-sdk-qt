@@ -31,7 +31,7 @@ class DeleteConditionalForwarderResponsePrivate : public DirectoryServiceRespons
 
 public:
 
-    DeleteConditionalForwarderResponsePrivate(DeleteConditionalForwarderResponse * const q);
+    explicit DeleteConditionalForwarderResponsePrivate(DeleteConditionalForwarderResponse * const q);
 
     void parseDeleteConditionalForwarderResponse(QXmlStreamReader &xml);
 

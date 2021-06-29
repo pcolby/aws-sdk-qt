@@ -30,7 +30,7 @@ class DocDBClient;
 class DocDBClientPrivate {
 
 public:
-    DocDBClientPrivate(DocDBClient * const q);
+    explicit DocDBClientPrivate(DocDBClient * const q);
 
 protected:
     DocDBClient * const q_ptr; ///< Internal q-pointer.

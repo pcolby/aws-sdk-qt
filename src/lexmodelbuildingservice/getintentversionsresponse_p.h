@@ -31,7 +31,7 @@ class GetIntentVersionsResponsePrivate : public LexModelBuildingServiceResponseP
 
 public:
 
-    GetIntentVersionsResponsePrivate(GetIntentVersionsResponse * const q);
+    explicit GetIntentVersionsResponsePrivate(GetIntentVersionsResponse * const q);
 
     void parseGetIntentVersionsResponse(QXmlStreamReader &xml);
 

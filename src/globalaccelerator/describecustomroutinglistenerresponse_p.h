@@ -31,7 +31,7 @@ class DescribeCustomRoutingListenerResponsePrivate : public GlobalAcceleratorRes
 
 public:
 
-    DescribeCustomRoutingListenerResponsePrivate(DescribeCustomRoutingListenerResponse * const q);
+    explicit DescribeCustomRoutingListenerResponsePrivate(DescribeCustomRoutingListenerResponse * const q);
 
     void parseDescribeCustomRoutingListenerResponse(QXmlStreamReader &xml);
 

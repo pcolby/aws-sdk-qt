@@ -31,7 +31,7 @@ class UpdateHITTypeOfHITResponsePrivate : public MTurkResponsePrivate {
 
 public:
 
-    UpdateHITTypeOfHITResponsePrivate(UpdateHITTypeOfHITResponse * const q);
+    explicit UpdateHITTypeOfHITResponsePrivate(UpdateHITTypeOfHITResponse * const q);
 
     void parseUpdateHITTypeOfHITResponse(QXmlStreamReader &xml);
 

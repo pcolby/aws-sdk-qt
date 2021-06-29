@@ -47,7 +47,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    PricingClient(
+    explicit PricingClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -60,7 +60,7 @@ public slots:
 protected:
     /// @cond internal
     PricingClientPrivate * const d_ptr; ///< Internal d-pointer.
-    PricingClient(PricingClientPrivate * const d);
+    explicit PricingClient(PricingClientPrivate * const d);
     /// @endcond
 
 private:

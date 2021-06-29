@@ -31,7 +31,7 @@ class SignUpResponsePrivate : public CognitoIdentityProviderResponsePrivate {
 
 public:
 
-    SignUpResponsePrivate(SignUpResponse * const q);
+    explicit SignUpResponsePrivate(SignUpResponse * const q);
 
     void parseSignUpResponse(QXmlStreamReader &xml);
 

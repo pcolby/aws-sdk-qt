@@ -31,7 +31,7 @@ class GetComponentVersionArtifactResponsePrivate : public GreengrassV2ResponsePr
 
 public:
 
-    GetComponentVersionArtifactResponsePrivate(GetComponentVersionArtifactResponse * const q);
+    explicit GetComponentVersionArtifactResponsePrivate(GetComponentVersionArtifactResponse * const q);
 
     void parseGetComponentVersionArtifactResponse(QXmlStreamReader &xml);
 

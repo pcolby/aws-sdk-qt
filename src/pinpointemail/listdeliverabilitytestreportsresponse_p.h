@@ -31,7 +31,7 @@ class ListDeliverabilityTestReportsResponsePrivate : public PinpointEmailRespons
 
 public:
 
-    ListDeliverabilityTestReportsResponsePrivate(ListDeliverabilityTestReportsResponse * const q);
+    explicit ListDeliverabilityTestReportsResponsePrivate(ListDeliverabilityTestReportsResponse * const q);
 
     void parseListDeliverabilityTestReportsResponse(QXmlStreamReader &xml);
 

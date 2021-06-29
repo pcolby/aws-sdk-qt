@@ -31,7 +31,7 @@ class ListCopyJobsResponsePrivate : public BackupResponsePrivate {
 
 public:
 
-    ListCopyJobsResponsePrivate(ListCopyJobsResponse * const q);
+    explicit ListCopyJobsResponsePrivate(ListCopyJobsResponse * const q);
 
     void parseListCopyJobsResponse(QXmlStreamReader &xml);
 

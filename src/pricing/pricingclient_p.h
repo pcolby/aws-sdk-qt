@@ -30,7 +30,7 @@ class PricingClient;
 class PricingClientPrivate {
 
 public:
-    PricingClientPrivate(PricingClient * const q);
+    explicit PricingClientPrivate(PricingClient * const q);
 
 protected:
     PricingClient * const q_ptr; ///< Internal q-pointer.

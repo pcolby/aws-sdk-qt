@@ -31,7 +31,7 @@ class UpdateClusterVersionResponsePrivate : public EksResponsePrivate {
 
 public:
 
-    UpdateClusterVersionResponsePrivate(UpdateClusterVersionResponse * const q);
+    explicit UpdateClusterVersionResponsePrivate(UpdateClusterVersionResponse * const q);
 
     void parseUpdateClusterVersionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeDataSourceResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    DescribeDataSourceResponsePrivate(DescribeDataSourceResponse * const q);
+    explicit DescribeDataSourceResponsePrivate(DescribeDataSourceResponse * const q);
 
     void parseDescribeDataSourceResponse(QXmlStreamReader &xml);
 

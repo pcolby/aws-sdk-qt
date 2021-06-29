@@ -31,7 +31,7 @@ class DescribeOrderableReplicationInstancesResponsePrivate : public DatabaseMigr
 
 public:
 
-    DescribeOrderableReplicationInstancesResponsePrivate(DescribeOrderableReplicationInstancesResponse * const q);
+    explicit DescribeOrderableReplicationInstancesResponsePrivate(DescribeOrderableReplicationInstancesResponse * const q);
 
     void parseDescribeOrderableReplicationInstancesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetDocumentTextDetectionResponsePrivate : public TextractResponsePrivate {
 
 public:
 
-    GetDocumentTextDetectionResponsePrivate(GetDocumentTextDetectionResponse * const q);
+    explicit GetDocumentTextDetectionResponsePrivate(GetDocumentTextDetectionResponse * const q);
 
     void parseGetDocumentTextDetectionResponse(QXmlStreamReader &xml);
 

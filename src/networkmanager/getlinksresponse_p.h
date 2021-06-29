@@ -31,7 +31,7 @@ class GetLinksResponsePrivate : public NetworkManagerResponsePrivate {
 
 public:
 
-    GetLinksResponsePrivate(GetLinksResponse * const q);
+    explicit GetLinksResponsePrivate(GetLinksResponse * const q);
 
     void parseGetLinksResponse(QXmlStreamReader &xml);
 

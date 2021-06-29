@@ -31,7 +31,7 @@ class StopRelationalDatabaseResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    StopRelationalDatabaseResponsePrivate(StopRelationalDatabaseResponse * const q);
+    explicit StopRelationalDatabaseResponsePrivate(StopRelationalDatabaseResponse * const q);
 
     void parseStopRelationalDatabaseResponse(QXmlStreamReader &xml);
 

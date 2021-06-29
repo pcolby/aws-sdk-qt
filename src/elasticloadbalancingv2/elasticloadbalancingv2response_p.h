@@ -29,7 +29,7 @@ class ElasticLoadBalancingv2ResponsePrivate {
 
 public:
 
-    ElasticLoadBalancingv2ResponsePrivate(ElasticLoadBalancingv2Response * const q);
+    explicit ElasticLoadBalancingv2ResponsePrivate(ElasticLoadBalancingv2Response * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

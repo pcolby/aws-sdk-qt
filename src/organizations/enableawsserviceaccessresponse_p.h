@@ -31,7 +31,7 @@ class EnableAWSServiceAccessResponsePrivate : public OrganizationsResponsePrivat
 
 public:
 
-    EnableAWSServiceAccessResponsePrivate(EnableAWSServiceAccessResponse * const q);
+    explicit EnableAWSServiceAccessResponsePrivate(EnableAWSServiceAccessResponse * const q);
 
     void parseEnableAWSServiceAccessResponse(QXmlStreamReader &xml);
 

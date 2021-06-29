@@ -31,7 +31,7 @@ class ListAlarmModelVersionsResponsePrivate : public IoTEventsResponsePrivate {
 
 public:
 
-    ListAlarmModelVersionsResponsePrivate(ListAlarmModelVersionsResponse * const q);
+    explicit ListAlarmModelVersionsResponsePrivate(ListAlarmModelVersionsResponse * const q);
 
     void parseListAlarmModelVersionsResponse(QXmlStreamReader &xml);
 

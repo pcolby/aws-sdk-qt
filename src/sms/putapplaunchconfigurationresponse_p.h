@@ -31,7 +31,7 @@ class PutAppLaunchConfigurationResponsePrivate : public SmsResponsePrivate {
 
 public:
 
-    PutAppLaunchConfigurationResponsePrivate(PutAppLaunchConfigurationResponse * const q);
+    explicit PutAppLaunchConfigurationResponsePrivate(PutAppLaunchConfigurationResponse * const q);
 
     void parsePutAppLaunchConfigurationResponse(QXmlStreamReader &xml);
 

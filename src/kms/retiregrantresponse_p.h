@@ -31,7 +31,7 @@ class RetireGrantResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    RetireGrantResponsePrivate(RetireGrantResponse * const q);
+    explicit RetireGrantResponsePrivate(RetireGrantResponse * const q);
 
     void parseRetireGrantResponse(QXmlStreamReader &xml);
 

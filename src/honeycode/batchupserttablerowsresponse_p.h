@@ -31,7 +31,7 @@ class BatchUpsertTableRowsResponsePrivate : public HoneycodeResponsePrivate {
 
 public:
 
-    BatchUpsertTableRowsResponsePrivate(BatchUpsertTableRowsResponse * const q);
+    explicit BatchUpsertTableRowsResponsePrivate(BatchUpsertTableRowsResponse * const q);
 
     void parseBatchUpsertTableRowsResponse(QXmlStreamReader &xml);
 

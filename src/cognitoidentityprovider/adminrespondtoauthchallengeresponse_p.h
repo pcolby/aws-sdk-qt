@@ -31,7 +31,7 @@ class AdminRespondToAuthChallengeResponsePrivate : public CognitoIdentityProvide
 
 public:
 
-    AdminRespondToAuthChallengeResponsePrivate(AdminRespondToAuthChallengeResponse * const q);
+    explicit AdminRespondToAuthChallengeResponsePrivate(AdminRespondToAuthChallengeResponse * const q);
 
     void parseAdminRespondToAuthChallengeResponse(QXmlStreamReader &xml);
 

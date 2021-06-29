@@ -30,7 +30,7 @@ class AppSyncClient;
 class AppSyncClientPrivate {
 
 public:
-    AppSyncClientPrivate(AppSyncClient * const q);
+    explicit AppSyncClientPrivate(AppSyncClient * const q);
 
 protected:
     AppSyncClient * const q_ptr; ///< Internal q-pointer.

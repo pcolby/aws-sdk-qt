@@ -31,7 +31,7 @@ class UpdateEndpointResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    UpdateEndpointResponsePrivate(UpdateEndpointResponse * const q);
+    explicit UpdateEndpointResponsePrivate(UpdateEndpointResponse * const q);
 
     void parseUpdateEndpointResponse(QXmlStreamReader &xml);
 

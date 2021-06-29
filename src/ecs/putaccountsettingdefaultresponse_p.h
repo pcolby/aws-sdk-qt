@@ -31,7 +31,7 @@ class PutAccountSettingDefaultResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    PutAccountSettingDefaultResponsePrivate(PutAccountSettingDefaultResponse * const q);
+    explicit PutAccountSettingDefaultResponsePrivate(PutAccountSettingDefaultResponse * const q);
 
     void parsePutAccountSettingDefaultResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListLayersResponsePrivate : public LambdaResponsePrivate {
 
 public:
 
-    ListLayersResponsePrivate(ListLayersResponse * const q);
+    explicit ListLayersResponsePrivate(ListLayersResponse * const q);
 
     void parseListLayersResponse(QXmlStreamReader &xml);
 

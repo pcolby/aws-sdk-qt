@@ -31,7 +31,7 @@ class AssociateLexBotResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    AssociateLexBotResponsePrivate(AssociateLexBotResponse * const q);
+    explicit AssociateLexBotResponsePrivate(AssociateLexBotResponse * const q);
 
     void parseAssociateLexBotResponse(QXmlStreamReader &xml);
 

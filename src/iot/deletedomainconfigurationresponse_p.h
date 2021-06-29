@@ -31,7 +31,7 @@ class DeleteDomainConfigurationResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DeleteDomainConfigurationResponsePrivate(DeleteDomainConfigurationResponse * const q);
+    explicit DeleteDomainConfigurationResponsePrivate(DeleteDomainConfigurationResponse * const q);
 
     void parseDeleteDomainConfigurationResponse(QXmlStreamReader &xml);
 

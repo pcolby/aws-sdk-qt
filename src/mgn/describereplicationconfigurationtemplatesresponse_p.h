@@ -31,7 +31,7 @@ class DescribeReplicationConfigurationTemplatesResponsePrivate : public mgnRespo
 
 public:
 
-    DescribeReplicationConfigurationTemplatesResponsePrivate(DescribeReplicationConfigurationTemplatesResponse * const q);
+    explicit DescribeReplicationConfigurationTemplatesResponsePrivate(DescribeReplicationConfigurationTemplatesResponse * const q);
 
     void parseDescribeReplicationConfigurationTemplatesResponse(QXmlStreamReader &xml);
 

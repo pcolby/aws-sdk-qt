@@ -31,7 +31,7 @@ class UpdateChannelResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    UpdateChannelResponsePrivate(UpdateChannelResponse * const q);
+    explicit UpdateChannelResponsePrivate(UpdateChannelResponse * const q);
 
     void parseUpdateChannelResponse(QXmlStreamReader &xml);
 

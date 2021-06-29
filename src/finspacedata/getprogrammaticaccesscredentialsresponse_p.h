@@ -31,7 +31,7 @@ class GetProgrammaticAccessCredentialsResponsePrivate : public FinSpaceDataRespo
 
 public:
 
-    GetProgrammaticAccessCredentialsResponsePrivate(GetProgrammaticAccessCredentialsResponse * const q);
+    explicit GetProgrammaticAccessCredentialsResponsePrivate(GetProgrammaticAccessCredentialsResponse * const q);
 
     void parseGetProgrammaticAccessCredentialsResponse(QXmlStreamReader &xml);
 

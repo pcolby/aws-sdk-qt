@@ -31,7 +31,7 @@ class CreateAppImageConfigResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    CreateAppImageConfigResponsePrivate(CreateAppImageConfigResponse * const q);
+    explicit CreateAppImageConfigResponsePrivate(CreateAppImageConfigResponse * const q);
 
     void parseCreateAppImageConfigResponse(QXmlStreamReader &xml);
 

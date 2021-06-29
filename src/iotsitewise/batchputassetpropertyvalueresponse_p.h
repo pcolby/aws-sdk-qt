@@ -31,7 +31,7 @@ class BatchPutAssetPropertyValueResponsePrivate : public IoTSiteWiseResponsePriv
 
 public:
 
-    BatchPutAssetPropertyValueResponsePrivate(BatchPutAssetPropertyValueResponse * const q);
+    explicit BatchPutAssetPropertyValueResponsePrivate(BatchPutAssetPropertyValueResponse * const q);
 
     void parseBatchPutAssetPropertyValueResponse(QXmlStreamReader &xml);
 

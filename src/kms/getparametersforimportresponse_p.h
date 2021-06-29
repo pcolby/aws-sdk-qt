@@ -31,7 +31,7 @@ class GetParametersForImportResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    GetParametersForImportResponsePrivate(GetParametersForImportResponse * const q);
+    explicit GetParametersForImportResponsePrivate(GetParametersForImportResponse * const q);
 
     void parseGetParametersForImportResponse(QXmlStreamReader &xml);
 

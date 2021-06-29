@@ -31,7 +31,7 @@ class ListAccountSettingsResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    ListAccountSettingsResponsePrivate(ListAccountSettingsResponse * const q);
+    explicit ListAccountSettingsResponsePrivate(ListAccountSettingsResponse * const q);
 
     void parseListAccountSettingsResponse(QXmlStreamReader &xml);
 

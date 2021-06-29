@@ -31,7 +31,7 @@ class CreateQualificationTypeResponsePrivate : public MTurkResponsePrivate {
 
 public:
 
-    CreateQualificationTypeResponsePrivate(CreateQualificationTypeResponse * const q);
+    explicit CreateQualificationTypeResponsePrivate(CreateQualificationTypeResponse * const q);
 
     void parseCreateQualificationTypeResponse(QXmlStreamReader &xml);
 

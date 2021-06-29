@@ -31,7 +31,7 @@ class DescribeDataSourcePermissionsResponsePrivate : public QuickSightResponsePr
 
 public:
 
-    DescribeDataSourcePermissionsResponsePrivate(DescribeDataSourcePermissionsResponse * const q);
+    explicit DescribeDataSourcePermissionsResponsePrivate(DescribeDataSourcePermissionsResponse * const q);
 
     void parseDescribeDataSourcePermissionsResponse(QXmlStreamReader &xml);
 

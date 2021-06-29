@@ -31,7 +31,7 @@ class GetSolutionMetricsResponsePrivate : public PersonalizeResponsePrivate {
 
 public:
 
-    GetSolutionMetricsResponsePrivate(GetSolutionMetricsResponse * const q);
+    explicit GetSolutionMetricsResponsePrivate(GetSolutionMetricsResponse * const q);
 
     void parseGetSolutionMetricsResponse(QXmlStreamReader &xml);
 

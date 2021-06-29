@@ -29,7 +29,7 @@ class AugmentedAIRuntimeResponsePrivate {
 
 public:
 
-    AugmentedAIRuntimeResponsePrivate(AugmentedAIRuntimeResponse * const q);
+    explicit AugmentedAIRuntimeResponsePrivate(AugmentedAIRuntimeResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

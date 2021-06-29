@@ -31,7 +31,7 @@ class DeleteLaunchConfigurationResponsePrivate : public AutoScalingResponsePriva
 
 public:
 
-    DeleteLaunchConfigurationResponsePrivate(DeleteLaunchConfigurationResponse * const q);
+    explicit DeleteLaunchConfigurationResponsePrivate(DeleteLaunchConfigurationResponse * const q);
 
     void parseDeleteLaunchConfigurationResponse(QXmlStreamReader &xml);
 

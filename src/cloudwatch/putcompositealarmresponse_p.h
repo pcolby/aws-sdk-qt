@@ -31,7 +31,7 @@ class PutCompositeAlarmResponsePrivate : public CloudWatchResponsePrivate {
 
 public:
 
-    PutCompositeAlarmResponsePrivate(PutCompositeAlarmResponse * const q);
+    explicit PutCompositeAlarmResponsePrivate(PutCompositeAlarmResponse * const q);
 
     void parsePutCompositeAlarmResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class StopGameSessionPlacementResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    StopGameSessionPlacementResponsePrivate(StopGameSessionPlacementResponse * const q);
+    explicit StopGameSessionPlacementResponsePrivate(StopGameSessionPlacementResponse * const q);
 
     void parseStopGameSessionPlacementResponse(QXmlStreamReader &xml);
 

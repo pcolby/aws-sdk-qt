@@ -31,7 +31,7 @@ class DescribeCampaignResponsePrivate : public PersonalizeResponsePrivate {
 
 public:
 
-    DescribeCampaignResponsePrivate(DescribeCampaignResponse * const q);
+    explicit DescribeCampaignResponsePrivate(DescribeCampaignResponse * const q);
 
     void parseDescribeCampaignResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteDeploymentConfigResponsePrivate : public CodeDeployResponsePrivate {
 
 public:
 
-    DeleteDeploymentConfigResponsePrivate(DeleteDeploymentConfigResponse * const q);
+    explicit DeleteDeploymentConfigResponsePrivate(DeleteDeploymentConfigResponse * const q);
 
     void parseDeleteDeploymentConfigResponse(QXmlStreamReader &xml);
 

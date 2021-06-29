@@ -31,7 +31,7 @@ class DeleteVolumeResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 
-    DeleteVolumeResponsePrivate(DeleteVolumeResponse * const q);
+    explicit DeleteVolumeResponsePrivate(DeleteVolumeResponse * const q);
 
     void parseDeleteVolumeResponse(QXmlStreamReader &xml);
 

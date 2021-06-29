@@ -31,7 +31,7 @@ class UpdateProjectResponsePrivate : public IoT1ClickProjectsResponsePrivate {
 
 public:
 
-    UpdateProjectResponsePrivate(UpdateProjectResponse * const q);
+    explicit UpdateProjectResponsePrivate(UpdateProjectResponse * const q);
 
     void parseUpdateProjectResponse(QXmlStreamReader &xml);
 

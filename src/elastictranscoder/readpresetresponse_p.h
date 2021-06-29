@@ -31,7 +31,7 @@ class ReadPresetResponsePrivate : public ElasticTranscoderResponsePrivate {
 
 public:
 
-    ReadPresetResponsePrivate(ReadPresetResponse * const q);
+    explicit ReadPresetResponsePrivate(ReadPresetResponse * const q);
 
     void parseReadPresetResponse(QXmlStreamReader &xml);
 

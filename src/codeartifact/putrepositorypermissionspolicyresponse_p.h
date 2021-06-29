@@ -31,7 +31,7 @@ class PutRepositoryPermissionsPolicyResponsePrivate : public CodeArtifactRespons
 
 public:
 
-    PutRepositoryPermissionsPolicyResponsePrivate(PutRepositoryPermissionsPolicyResponse * const q);
+    explicit PutRepositoryPermissionsPolicyResponsePrivate(PutRepositoryPermissionsPolicyResponse * const q);
 
     void parsePutRepositoryPermissionsPolicyResponse(QXmlStreamReader &xml);
 

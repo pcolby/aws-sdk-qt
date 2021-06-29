@@ -31,7 +31,7 @@ class DeleteContainerRecipeResponsePrivate : public imagebuilderResponsePrivate 
 
 public:
 
-    DeleteContainerRecipeResponsePrivate(DeleteContainerRecipeResponse * const q);
+    explicit DeleteContainerRecipeResponsePrivate(DeleteContainerRecipeResponse * const q);
 
     void parseDeleteContainerRecipeResponse(QXmlStreamReader &xml);
 

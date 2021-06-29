@@ -31,7 +31,7 @@ class DisableKeyResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    DisableKeyResponsePrivate(DisableKeyResponse * const q);
+    explicit DisableKeyResponsePrivate(DisableKeyResponse * const q);
 
     void parseDisableKeyResponse(QXmlStreamReader &xml);
 

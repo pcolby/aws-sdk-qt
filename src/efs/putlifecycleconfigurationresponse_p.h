@@ -31,7 +31,7 @@ class PutLifecycleConfigurationResponsePrivate : public EfsResponsePrivate {
 
 public:
 
-    PutLifecycleConfigurationResponsePrivate(PutLifecycleConfigurationResponse * const q);
+    explicit PutLifecycleConfigurationResponsePrivate(PutLifecycleConfigurationResponse * const q);
 
     void parsePutLifecycleConfigurationResponse(QXmlStreamReader &xml);
 

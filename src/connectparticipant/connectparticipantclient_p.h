@@ -30,7 +30,7 @@ class ConnectParticipantClient;
 class ConnectParticipantClientPrivate {
 
 public:
-    ConnectParticipantClientPrivate(ConnectParticipantClient * const q);
+    explicit ConnectParticipantClientPrivate(ConnectParticipantClient * const q);
 
 protected:
     ConnectParticipantClient * const q_ptr; ///< Internal q-pointer.

@@ -31,7 +31,7 @@ class ExportBundleResponsePrivate : public MobileResponsePrivate {
 
 public:
 
-    ExportBundleResponsePrivate(ExportBundleResponse * const q);
+    explicit ExportBundleResponsePrivate(ExportBundleResponse * const q);
 
     void parseExportBundleResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class RecordHandlerProgressResponsePrivate : public CloudFormationResponsePrivat
 
 public:
 
-    RecordHandlerProgressResponsePrivate(RecordHandlerProgressResponse * const q);
+    explicit RecordHandlerProgressResponsePrivate(RecordHandlerProgressResponse * const q);
 
     void parseRecordHandlerProgressResponse(QXmlStreamReader &xml);
 

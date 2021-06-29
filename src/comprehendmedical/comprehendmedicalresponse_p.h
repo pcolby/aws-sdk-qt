@@ -29,7 +29,7 @@ class ComprehendMedicalResponsePrivate {
 
 public:
 
-    ComprehendMedicalResponsePrivate(ComprehendMedicalResponse * const q);
+    explicit ComprehendMedicalResponsePrivate(ComprehendMedicalResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

@@ -31,7 +31,7 @@ class GetCompatibleElasticsearchVersionsResponsePrivate : public ElasticsearchSe
 
 public:
 
-    GetCompatibleElasticsearchVersionsResponsePrivate(GetCompatibleElasticsearchVersionsResponse * const q);
+    explicit GetCompatibleElasticsearchVersionsResponsePrivate(GetCompatibleElasticsearchVersionsResponse * const q);
 
     void parseGetCompatibleElasticsearchVersionsResponse(QXmlStreamReader &xml);
 

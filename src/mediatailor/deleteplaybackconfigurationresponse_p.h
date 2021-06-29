@@ -31,7 +31,7 @@ class DeletePlaybackConfigurationResponsePrivate : public MediaTailorResponsePri
 
 public:
 
-    DeletePlaybackConfigurationResponsePrivate(DeletePlaybackConfigurationResponse * const q);
+    explicit DeletePlaybackConfigurationResponsePrivate(DeletePlaybackConfigurationResponse * const q);
 
     void parseDeletePlaybackConfigurationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class AssociateWebACLResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 
-    AssociateWebACLResponsePrivate(AssociateWebACLResponse * const q);
+    explicit AssociateWebACLResponsePrivate(AssociateWebACLResponse * const q);
 
     void parseAssociateWebACLResponse(QXmlStreamReader &xml);
 

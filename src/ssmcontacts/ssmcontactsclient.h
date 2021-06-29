@@ -95,7 +95,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    SSMContactsClient(
+    explicit SSMContactsClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -132,7 +132,7 @@ public slots:
 protected:
     /// @cond internal
     SSMContactsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    SSMContactsClient(SSMContactsClientPrivate * const d);
+    explicit SSMContactsClient(SSMContactsClientPrivate * const d);
     /// @endcond
 
 private:

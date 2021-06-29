@@ -31,7 +31,7 @@ class GetDirectoryLimitsResponsePrivate : public DirectoryServiceResponsePrivate
 
 public:
 
-    GetDirectoryLimitsResponsePrivate(GetDirectoryLimitsResponse * const q);
+    explicit GetDirectoryLimitsResponsePrivate(GetDirectoryLimitsResponse * const q);
 
     void parseGetDirectoryLimitsResponse(QXmlStreamReader &xml);
 

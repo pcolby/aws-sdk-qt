@@ -227,7 +227,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    AlexaForBusinessClient(
+    explicit AlexaForBusinessClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -330,7 +330,7 @@ public slots:
 protected:
     /// @cond internal
     AlexaForBusinessClientPrivate * const d_ptr; ///< Internal d-pointer.
-    AlexaForBusinessClient(AlexaForBusinessClientPrivate * const d);
+    explicit AlexaForBusinessClient(AlexaForBusinessClientPrivate * const d);
     /// @endcond
 
 private:

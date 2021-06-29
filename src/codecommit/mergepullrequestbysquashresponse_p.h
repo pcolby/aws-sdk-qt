@@ -31,7 +31,7 @@ class MergePullRequestBySquashResponsePrivate : public CodeCommitResponsePrivate
 
 public:
 
-    MergePullRequestBySquashResponsePrivate(MergePullRequestBySquashResponse * const q);
+    explicit MergePullRequestBySquashResponsePrivate(MergePullRequestBySquashResponse * const q);
 
     void parseMergePullRequestBySquashResponse(QXmlStreamReader &xml);
 

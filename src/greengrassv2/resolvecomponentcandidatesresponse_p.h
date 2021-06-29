@@ -31,7 +31,7 @@ class ResolveComponentCandidatesResponsePrivate : public GreengrassV2ResponsePri
 
 public:
 
-    ResolveComponentCandidatesResponsePrivate(ResolveComponentCandidatesResponse * const q);
+    explicit ResolveComponentCandidatesResponsePrivate(ResolveComponentCandidatesResponse * const q);
 
     void parseResolveComponentCandidatesResponse(QXmlStreamReader &xml);
 

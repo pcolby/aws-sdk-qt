@@ -31,7 +31,7 @@ class AssociateWirelessGatewayWithThingResponsePrivate : public IoTWirelessRespo
 
 public:
 
-    AssociateWirelessGatewayWithThingResponsePrivate(AssociateWirelessGatewayWithThingResponse * const q);
+    explicit AssociateWirelessGatewayWithThingResponsePrivate(AssociateWirelessGatewayWithThingResponse * const q);
 
     void parseAssociateWirelessGatewayWithThingResponse(QXmlStreamReader &xml);
 

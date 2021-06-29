@@ -31,7 +31,7 @@ class DescribeProvisioningArtifactResponsePrivate : public ServiceCatalogRespons
 
 public:
 
-    DescribeProvisioningArtifactResponsePrivate(DescribeProvisioningArtifactResponse * const q);
+    explicit DescribeProvisioningArtifactResponsePrivate(DescribeProvisioningArtifactResponse * const q);
 
     void parseDescribeProvisioningArtifactResponse(QXmlStreamReader &xml);
 

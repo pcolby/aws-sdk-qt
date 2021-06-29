@@ -31,7 +31,7 @@ class DeleteStreamKeyResponsePrivate : public IvsResponsePrivate {
 
 public:
 
-    DeleteStreamKeyResponsePrivate(DeleteStreamKeyResponse * const q);
+    explicit DeleteStreamKeyResponsePrivate(DeleteStreamKeyResponse * const q);
 
     void parseDeleteStreamKeyResponse(QXmlStreamReader &xml);
 

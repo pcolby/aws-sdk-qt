@@ -31,7 +31,7 @@ class DescribeNetworkInsightsAnalysesResponsePrivate : public Ec2ResponsePrivate
 
 public:
 
-    DescribeNetworkInsightsAnalysesResponsePrivate(DescribeNetworkInsightsAnalysesResponse * const q);
+    explicit DescribeNetworkInsightsAnalysesResponsePrivate(DescribeNetworkInsightsAnalysesResponse * const q);
 
     void parseDescribeNetworkInsightsAnalysesResponse(QXmlStreamReader &xml);
 

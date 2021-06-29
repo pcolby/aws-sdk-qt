@@ -31,7 +31,7 @@ class DescribeActivationsResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    DescribeActivationsResponsePrivate(DescribeActivationsResponse * const q);
+    explicit DescribeActivationsResponsePrivate(DescribeActivationsResponse * const q);
 
     void parseDescribeActivationsResponse(QXmlStreamReader &xml);
 

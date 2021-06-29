@@ -31,7 +31,7 @@ class GetClassificationExportConfigurationResponsePrivate : public Macie2Respons
 
 public:
 
-    GetClassificationExportConfigurationResponsePrivate(GetClassificationExportConfigurationResponse * const q);
+    explicit GetClassificationExportConfigurationResponsePrivate(GetClassificationExportConfigurationResponse * const q);
 
     void parseGetClassificationExportConfigurationResponse(QXmlStreamReader &xml);
 

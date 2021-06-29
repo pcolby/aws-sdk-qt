@@ -115,7 +115,7 @@ public:
 protected:
     /// @cond internal
     MediaLiveRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    MediaLiveRequest(MediaLiveRequestPrivate * const d);
+    explicit MediaLiveRequest(MediaLiveRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

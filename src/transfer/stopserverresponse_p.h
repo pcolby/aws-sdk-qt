@@ -31,7 +31,7 @@ class StopServerResponsePrivate : public TransferResponsePrivate {
 
 public:
 
-    StopServerResponsePrivate(StopServerResponse * const q);
+    explicit StopServerResponsePrivate(StopServerResponse * const q);
 
     void parseStopServerResponse(QXmlStreamReader &xml);
 

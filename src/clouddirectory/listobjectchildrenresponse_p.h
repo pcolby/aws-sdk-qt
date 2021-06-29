@@ -31,7 +31,7 @@ class ListObjectChildrenResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 
-    ListObjectChildrenResponsePrivate(ListObjectChildrenResponse * const q);
+    explicit ListObjectChildrenResponsePrivate(ListObjectChildrenResponse * const q);
 
     void parseListObjectChildrenResponse(QXmlStreamReader &xml);
 

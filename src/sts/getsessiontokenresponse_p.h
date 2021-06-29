@@ -31,7 +31,7 @@ class GetSessionTokenResponsePrivate : public StsResponsePrivate {
 
 public:
 
-    GetSessionTokenResponsePrivate(GetSessionTokenResponse * const q);
+    explicit GetSessionTokenResponsePrivate(GetSessionTokenResponse * const q);
 
     void parseGetSessionTokenResponse(QXmlStreamReader &xml);
 

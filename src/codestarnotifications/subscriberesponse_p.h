@@ -31,7 +31,7 @@ class SubscribeResponsePrivate : public CodeStarNotificationsResponsePrivate {
 
 public:
 
-    SubscribeResponsePrivate(SubscribeResponse * const q);
+    explicit SubscribeResponsePrivate(SubscribeResponse * const q);
 
     void parseSubscribeResponse(QXmlStreamReader &xml);
 

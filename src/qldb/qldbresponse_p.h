@@ -29,7 +29,7 @@ class QldbResponsePrivate {
 
 public:
 
-    QldbResponsePrivate(QldbResponse * const q);
+    explicit QldbResponsePrivate(QldbResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

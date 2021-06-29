@@ -30,7 +30,7 @@ class Sesv2Client;
 class Sesv2ClientPrivate {
 
 public:
-    Sesv2ClientPrivate(Sesv2Client * const q);
+    explicit Sesv2ClientPrivate(Sesv2Client * const q);
 
 protected:
     Sesv2Client * const q_ptr; ///< Internal q-pointer.

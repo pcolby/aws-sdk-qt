@@ -91,7 +91,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    LookoutMetricsClient(
+    explicit LookoutMetricsClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -126,7 +126,7 @@ public slots:
 protected:
     /// @cond internal
     LookoutMetricsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    LookoutMetricsClient(LookoutMetricsClientPrivate * const d);
+    explicit LookoutMetricsClient(LookoutMetricsClientPrivate * const d);
     /// @endcond
 
 private:

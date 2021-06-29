@@ -31,7 +31,7 @@ class GetCommentsForComparedCommitResponsePrivate : public CodeCommitResponsePri
 
 public:
 
-    GetCommentsForComparedCommitResponsePrivate(GetCommentsForComparedCommitResponse * const q);
+    explicit GetCommentsForComparedCommitResponsePrivate(GetCommentsForComparedCommitResponse * const q);
 
     void parseGetCommentsForComparedCommitResponse(QXmlStreamReader &xml);
 

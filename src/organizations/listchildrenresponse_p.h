@@ -31,7 +31,7 @@ class ListChildrenResponsePrivate : public OrganizationsResponsePrivate {
 
 public:
 
-    ListChildrenResponsePrivate(ListChildrenResponse * const q);
+    explicit ListChildrenResponsePrivate(ListChildrenResponse * const q);
 
     void parseListChildrenResponse(QXmlStreamReader &xml);
 

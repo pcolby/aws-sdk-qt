@@ -31,7 +31,7 @@ class ListHandshakesForAccountResponsePrivate : public OrganizationsResponsePriv
 
 public:
 
-    ListHandshakesForAccountResponsePrivate(ListHandshakesForAccountResponse * const q);
+    explicit ListHandshakesForAccountResponsePrivate(ListHandshakesForAccountResponse * const q);
 
     void parseListHandshakesForAccountResponse(QXmlStreamReader &xml);
 

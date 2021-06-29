@@ -31,7 +31,7 @@ class GetIdentityProviderByIdentifierResponsePrivate : public CognitoIdentityPro
 
 public:
 
-    GetIdentityProviderByIdentifierResponsePrivate(GetIdentityProviderByIdentifierResponse * const q);
+    explicit GetIdentityProviderByIdentifierResponsePrivate(GetIdentityProviderByIdentifierResponse * const q);
 
     void parseGetIdentityProviderByIdentifierResponse(QXmlStreamReader &xml);
 

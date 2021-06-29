@@ -31,7 +31,7 @@ class DeleteFleetsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DeleteFleetsResponsePrivate(DeleteFleetsResponse * const q);
+    explicit DeleteFleetsResponsePrivate(DeleteFleetsResponse * const q);
 
     void parseDeleteFleetsResponse(QXmlStreamReader &xml);
 

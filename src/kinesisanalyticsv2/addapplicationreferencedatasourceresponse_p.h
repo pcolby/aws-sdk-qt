@@ -31,7 +31,7 @@ class AddApplicationReferenceDataSourceResponsePrivate : public KinesisAnalytics
 
 public:
 
-    AddApplicationReferenceDataSourceResponsePrivate(AddApplicationReferenceDataSourceResponse * const q);
+    explicit AddApplicationReferenceDataSourceResponsePrivate(AddApplicationReferenceDataSourceResponse * const q);
 
     void parseAddApplicationReferenceDataSourceResponse(QXmlStreamReader &xml);
 

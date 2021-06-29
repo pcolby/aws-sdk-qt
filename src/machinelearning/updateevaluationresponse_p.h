@@ -31,7 +31,7 @@ class UpdateEvaluationResponsePrivate : public MachineLearningResponsePrivate {
 
 public:
 
-    UpdateEvaluationResponsePrivate(UpdateEvaluationResponse * const q);
+    explicit UpdateEvaluationResponsePrivate(UpdateEvaluationResponse * const q);
 
     void parseUpdateEvaluationResponse(QXmlStreamReader &xml);
 

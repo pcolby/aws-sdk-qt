@@ -31,7 +31,7 @@ class BatchUpdatePhoneNumberResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    BatchUpdatePhoneNumberResponsePrivate(BatchUpdatePhoneNumberResponse * const q);
+    explicit BatchUpdatePhoneNumberResponsePrivate(BatchUpdatePhoneNumberResponse * const q);
 
     void parseBatchUpdatePhoneNumberResponse(QXmlStreamReader &xml);
 

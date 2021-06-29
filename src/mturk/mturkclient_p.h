@@ -30,7 +30,7 @@ class MTurkClient;
 class MTurkClientPrivate {
 
 public:
-    MTurkClientPrivate(MTurkClient * const q);
+    explicit MTurkClientPrivate(MTurkClient * const q);
 
 protected:
     MTurkClient * const q_ptr; ///< Internal q-pointer.

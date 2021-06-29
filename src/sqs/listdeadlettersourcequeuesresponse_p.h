@@ -31,7 +31,7 @@ class ListDeadLetterSourceQueuesResponsePrivate : public SqsResponsePrivate {
 
 public:
 
-    ListDeadLetterSourceQueuesResponsePrivate(ListDeadLetterSourceQueuesResponse * const q);
+    explicit ListDeadLetterSourceQueuesResponsePrivate(ListDeadLetterSourceQueuesResponse * const q);
 
     void parseListDeadLetterSourceQueuesResponse(QXmlStreamReader &xml);
 

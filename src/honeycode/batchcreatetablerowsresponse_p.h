@@ -31,7 +31,7 @@ class BatchCreateTableRowsResponsePrivate : public HoneycodeResponsePrivate {
 
 public:
 
-    BatchCreateTableRowsResponsePrivate(BatchCreateTableRowsResponse * const q);
+    explicit BatchCreateTableRowsResponsePrivate(BatchCreateTableRowsResponse * const q);
 
     void parseBatchCreateTableRowsResponse(QXmlStreamReader &xml);
 

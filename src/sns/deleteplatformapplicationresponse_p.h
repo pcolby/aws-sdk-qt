@@ -31,7 +31,7 @@ class DeletePlatformApplicationResponsePrivate : public SnsResponsePrivate {
 
 public:
 
-    DeletePlatformApplicationResponsePrivate(DeletePlatformApplicationResponse * const q);
+    explicit DeletePlatformApplicationResponsePrivate(DeletePlatformApplicationResponse * const q);
 
     void parseDeletePlatformApplicationResponse(QXmlStreamReader &xml);
 

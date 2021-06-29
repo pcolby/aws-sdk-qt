@@ -31,7 +31,7 @@ class GetSupportedResourceTypesResponsePrivate : public BackupResponsePrivate {
 
 public:
 
-    GetSupportedResourceTypesResponsePrivate(GetSupportedResourceTypesResponse * const q);
+    explicit GetSupportedResourceTypesResponsePrivate(GetSupportedResourceTypesResponse * const q);
 
     void parseGetSupportedResourceTypesResponse(QXmlStreamReader &xml);
 

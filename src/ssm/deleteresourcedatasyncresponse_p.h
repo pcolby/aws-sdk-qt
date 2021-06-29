@@ -31,7 +31,7 @@ class DeleteResourceDataSyncResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    DeleteResourceDataSyncResponsePrivate(DeleteResourceDataSyncResponse * const q);
+    explicit DeleteResourceDataSyncResponsePrivate(DeleteResourceDataSyncResponse * const q);
 
     void parseDeleteResourceDataSyncResponse(QXmlStreamReader &xml);
 

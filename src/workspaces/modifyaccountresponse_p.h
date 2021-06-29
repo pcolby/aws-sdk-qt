@@ -31,7 +31,7 @@ class ModifyAccountResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 
-    ModifyAccountResponsePrivate(ModifyAccountResponse * const q);
+    explicit ModifyAccountResponsePrivate(ModifyAccountResponse * const q);
 
     void parseModifyAccountResponse(QXmlStreamReader &xml);
 

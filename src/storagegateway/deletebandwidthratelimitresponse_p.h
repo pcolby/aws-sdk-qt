@@ -31,7 +31,7 @@ class DeleteBandwidthRateLimitResponsePrivate : public StorageGatewayResponsePri
 
 public:
 
-    DeleteBandwidthRateLimitResponsePrivate(DeleteBandwidthRateLimitResponse * const q);
+    explicit DeleteBandwidthRateLimitResponsePrivate(DeleteBandwidthRateLimitResponse * const q);
 
     void parseDeleteBandwidthRateLimitResponse(QXmlStreamReader &xml);
 

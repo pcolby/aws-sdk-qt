@@ -31,7 +31,7 @@ class UpdateServerCertificateResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    UpdateServerCertificateResponsePrivate(UpdateServerCertificateResponse * const q);
+    explicit UpdateServerCertificateResponsePrivate(UpdateServerCertificateResponse * const q);
 
     void parseUpdateServerCertificateResponse(QXmlStreamReader &xml);
 

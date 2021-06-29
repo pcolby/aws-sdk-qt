@@ -85,7 +85,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    LookoutEquipmentClient(
+    explicit LookoutEquipmentClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -117,7 +117,7 @@ public slots:
 protected:
     /// @cond internal
     LookoutEquipmentClientPrivate * const d_ptr; ///< Internal d-pointer.
-    LookoutEquipmentClient(LookoutEquipmentClientPrivate * const d);
+    explicit LookoutEquipmentClient(LookoutEquipmentClientPrivate * const d);
     /// @endcond
 
 private:

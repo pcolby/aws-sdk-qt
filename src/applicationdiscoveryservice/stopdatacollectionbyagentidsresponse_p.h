@@ -31,7 +31,7 @@ class StopDataCollectionByAgentIdsResponsePrivate : public ApplicationDiscoveryS
 
 public:
 
-    StopDataCollectionByAgentIdsResponsePrivate(StopDataCollectionByAgentIdsResponse * const q);
+    explicit StopDataCollectionByAgentIdsResponsePrivate(StopDataCollectionByAgentIdsResponse * const q);
 
     void parseStopDataCollectionByAgentIdsResponse(QXmlStreamReader &xml);
 

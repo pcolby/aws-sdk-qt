@@ -31,7 +31,7 @@ class UpdateDevicePolicyConfigurationResponsePrivate : public WorkLinkResponsePr
 
 public:
 
-    UpdateDevicePolicyConfigurationResponsePrivate(UpdateDevicePolicyConfigurationResponse * const q);
+    explicit UpdateDevicePolicyConfigurationResponsePrivate(UpdateDevicePolicyConfigurationResponse * const q);
 
     void parseUpdateDevicePolicyConfigurationResponse(QXmlStreamReader &xml);
 

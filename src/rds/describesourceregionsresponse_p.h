@@ -31,7 +31,7 @@ class DescribeSourceRegionsResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    DescribeSourceRegionsResponsePrivate(DescribeSourceRegionsResponse * const q);
+    explicit DescribeSourceRegionsResponsePrivate(DescribeSourceRegionsResponse * const q);
 
     void parseDescribeSourceRegionsResponse(QXmlStreamReader &xml);
 

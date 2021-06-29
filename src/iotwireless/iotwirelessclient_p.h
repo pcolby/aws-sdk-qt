@@ -30,7 +30,7 @@ class IoTWirelessClient;
 class IoTWirelessClientPrivate {
 
 public:
-    IoTWirelessClientPrivate(IoTWirelessClient * const q);
+    explicit IoTWirelessClientPrivate(IoTWirelessClient * const q);
 
 protected:
     IoTWirelessClient * const q_ptr; ///< Internal q-pointer.

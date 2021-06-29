@@ -31,7 +31,7 @@ class ListClosedWorkflowExecutionsResponsePrivate : public SwfResponsePrivate {
 
 public:
 
-    ListClosedWorkflowExecutionsResponsePrivate(ListClosedWorkflowExecutionsResponse * const q);
+    explicit ListClosedWorkflowExecutionsResponsePrivate(ListClosedWorkflowExecutionsResponse * const q);
 
     void parseListClosedWorkflowExecutionsResponse(QXmlStreamReader &xml);
 

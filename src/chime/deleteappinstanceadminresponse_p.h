@@ -31,7 +31,7 @@ class DeleteAppInstanceAdminResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    DeleteAppInstanceAdminResponsePrivate(DeleteAppInstanceAdminResponse * const q);
+    explicit DeleteAppInstanceAdminResponsePrivate(DeleteAppInstanceAdminResponse * const q);
 
     void parseDeleteAppInstanceAdminResponse(QXmlStreamReader &xml);
 

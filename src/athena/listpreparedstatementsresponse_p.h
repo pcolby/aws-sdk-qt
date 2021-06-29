@@ -31,7 +31,7 @@ class ListPreparedStatementsResponsePrivate : public AthenaResponsePrivate {
 
 public:
 
-    ListPreparedStatementsResponsePrivate(ListPreparedStatementsResponse * const q);
+    explicit ListPreparedStatementsResponsePrivate(ListPreparedStatementsResponse * const q);
 
     void parseListPreparedStatementsResponse(QXmlStreamReader &xml);
 

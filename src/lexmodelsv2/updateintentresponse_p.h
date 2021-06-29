@@ -31,7 +31,7 @@ class UpdateIntentResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 
-    UpdateIntentResponsePrivate(UpdateIntentResponse * const q);
+    explicit UpdateIntentResponsePrivate(UpdateIntentResponse * const q);
 
     void parseUpdateIntentResponse(QXmlStreamReader &xml);
 

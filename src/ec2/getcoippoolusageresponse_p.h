@@ -31,7 +31,7 @@ class GetCoipPoolUsageResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    GetCoipPoolUsageResponsePrivate(GetCoipPoolUsageResponse * const q);
+    explicit GetCoipPoolUsageResponsePrivate(GetCoipPoolUsageResponse * const q);
 
     void parseGetCoipPoolUsageResponse(QXmlStreamReader &xml);
 

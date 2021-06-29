@@ -31,7 +31,7 @@ class DeleteVirtualInterfaceResponsePrivate : public DirectConnectResponsePrivat
 
 public:
 
-    DeleteVirtualInterfaceResponsePrivate(DeleteVirtualInterfaceResponse * const q);
+    explicit DeleteVirtualInterfaceResponsePrivate(DeleteVirtualInterfaceResponse * const q);
 
     void parseDeleteVirtualInterfaceResponse(QXmlStreamReader &xml);
 

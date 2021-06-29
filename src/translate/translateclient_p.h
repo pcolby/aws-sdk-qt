@@ -30,7 +30,7 @@ class TranslateClient;
 class TranslateClientPrivate {
 
 public:
-    TranslateClientPrivate(TranslateClient * const q);
+    explicit TranslateClientPrivate(TranslateClient * const q);
 
 protected:
     TranslateClient * const q_ptr; ///< Internal q-pointer.

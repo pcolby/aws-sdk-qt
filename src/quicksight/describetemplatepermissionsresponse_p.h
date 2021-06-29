@@ -31,7 +31,7 @@ class DescribeTemplatePermissionsResponsePrivate : public QuickSightResponsePriv
 
 public:
 
-    DescribeTemplatePermissionsResponsePrivate(DescribeTemplatePermissionsResponse * const q);
+    explicit DescribeTemplatePermissionsResponsePrivate(DescribeTemplatePermissionsResponse * const q);
 
     void parseDescribeTemplatePermissionsResponse(QXmlStreamReader &xml);
 

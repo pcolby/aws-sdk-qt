@@ -31,7 +31,7 @@ class DeleteAccountSettingResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    DeleteAccountSettingResponsePrivate(DeleteAccountSettingResponse * const q);
+    explicit DeleteAccountSettingResponsePrivate(DeleteAccountSettingResponse * const q);
 
     void parseDeleteAccountSettingResponse(QXmlStreamReader &xml);
 

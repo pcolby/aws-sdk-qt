@@ -31,7 +31,7 @@ class ListServiceQuotasResponsePrivate : public ServiceQuotasResponsePrivate {
 
 public:
 
-    ListServiceQuotasResponsePrivate(ListServiceQuotasResponse * const q);
+    explicit ListServiceQuotasResponsePrivate(ListServiceQuotasResponse * const q);
 
     void parseListServiceQuotasResponse(QXmlStreamReader &xml);
 

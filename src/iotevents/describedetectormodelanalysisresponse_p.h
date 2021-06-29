@@ -31,7 +31,7 @@ class DescribeDetectorModelAnalysisResponsePrivate : public IoTEventsResponsePri
 
 public:
 
-    DescribeDetectorModelAnalysisResponsePrivate(DescribeDetectorModelAnalysisResponse * const q);
+    explicit DescribeDetectorModelAnalysisResponsePrivate(DescribeDetectorModelAnalysisResponse * const q);
 
     void parseDescribeDetectorModelAnalysisResponse(QXmlStreamReader &xml);
 

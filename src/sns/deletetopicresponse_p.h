@@ -31,7 +31,7 @@ class DeleteTopicResponsePrivate : public SnsResponsePrivate {
 
 public:
 
-    DeleteTopicResponsePrivate(DeleteTopicResponse * const q);
+    explicit DeleteTopicResponsePrivate(DeleteTopicResponse * const q);
 
     void parseDeleteTopicResponse(QXmlStreamReader &xml);
 

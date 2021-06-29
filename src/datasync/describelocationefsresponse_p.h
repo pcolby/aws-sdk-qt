@@ -31,7 +31,7 @@ class DescribeLocationEfsResponsePrivate : public DataSyncResponsePrivate {
 
 public:
 
-    DescribeLocationEfsResponsePrivate(DescribeLocationEfsResponse * const q);
+    explicit DescribeLocationEfsResponsePrivate(DescribeLocationEfsResponse * const q);
 
     void parseDescribeLocationEfsResponse(QXmlStreamReader &xml);
 

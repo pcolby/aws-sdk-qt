@@ -31,7 +31,7 @@ class UpdateBotAliasResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 
-    UpdateBotAliasResponsePrivate(UpdateBotAliasResponse * const q);
+    explicit UpdateBotAliasResponsePrivate(UpdateBotAliasResponse * const q);
 
     void parseUpdateBotAliasResponse(QXmlStreamReader &xml);
 

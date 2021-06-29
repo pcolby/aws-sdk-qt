@@ -31,7 +31,7 @@ class PutConfigurationSetTrackingOptionsResponsePrivate : public PinpointEmailRe
 
 public:
 
-    PutConfigurationSetTrackingOptionsResponsePrivate(PutConfigurationSetTrackingOptionsResponse * const q);
+    explicit PutConfigurationSetTrackingOptionsResponsePrivate(PutConfigurationSetTrackingOptionsResponse * const q);
 
     void parsePutConfigurationSetTrackingOptionsResponse(QXmlStreamReader &xml);
 

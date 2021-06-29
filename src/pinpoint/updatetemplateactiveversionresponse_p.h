@@ -31,7 +31,7 @@ class UpdateTemplateActiveVersionResponsePrivate : public PinpointResponsePrivat
 
 public:
 
-    UpdateTemplateActiveVersionResponsePrivate(UpdateTemplateActiveVersionResponse * const q);
+    explicit UpdateTemplateActiveVersionResponsePrivate(UpdateTemplateActiveVersionResponse * const q);
 
     void parseUpdateTemplateActiveVersionResponse(QXmlStreamReader &xml);
 

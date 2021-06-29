@@ -31,7 +31,7 @@ class DeleteQueueResponsePrivate : public MediaConvertResponsePrivate {
 
 public:
 
-    DeleteQueueResponsePrivate(DeleteQueueResponse * const q);
+    explicit DeleteQueueResponsePrivate(DeleteQueueResponse * const q);
 
     void parseDeleteQueueResponse(QXmlStreamReader &xml);
 

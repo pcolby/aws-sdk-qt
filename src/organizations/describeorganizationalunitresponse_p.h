@@ -31,7 +31,7 @@ class DescribeOrganizationalUnitResponsePrivate : public OrganizationsResponsePr
 
 public:
 
-    DescribeOrganizationalUnitResponsePrivate(DescribeOrganizationalUnitResponse * const q);
+    explicit DescribeOrganizationalUnitResponsePrivate(DescribeOrganizationalUnitResponse * const q);
 
     void parseDescribeOrganizationalUnitResponse(QXmlStreamReader &xml);
 

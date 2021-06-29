@@ -31,7 +31,7 @@ class DownloadDBLogFilePortionResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    DownloadDBLogFilePortionResponsePrivate(DownloadDBLogFilePortionResponse * const q);
+    explicit DownloadDBLogFilePortionResponsePrivate(DownloadDBLogFilePortionResponse * const q);
 
     void parseDownloadDBLogFilePortionResponse(QXmlStreamReader &xml);
 

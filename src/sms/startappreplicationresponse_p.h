@@ -31,7 +31,7 @@ class StartAppReplicationResponsePrivate : public SmsResponsePrivate {
 
 public:
 
-    StartAppReplicationResponsePrivate(StartAppReplicationResponse * const q);
+    explicit StartAppReplicationResponsePrivate(StartAppReplicationResponse * const q);
 
     void parseStartAppReplicationResponse(QXmlStreamReader &xml);
 

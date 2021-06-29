@@ -31,7 +31,7 @@ class DeleteDashboardsResponsePrivate : public CloudWatchResponsePrivate {
 
 public:
 
-    DeleteDashboardsResponsePrivate(DeleteDashboardsResponse * const q);
+    explicit DeleteDashboardsResponsePrivate(DeleteDashboardsResponse * const q);
 
     void parseDeleteDashboardsResponse(QXmlStreamReader &xml);
 

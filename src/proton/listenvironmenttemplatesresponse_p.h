@@ -31,7 +31,7 @@ class ListEnvironmentTemplatesResponsePrivate : public ProtonResponsePrivate {
 
 public:
 
-    ListEnvironmentTemplatesResponsePrivate(ListEnvironmentTemplatesResponse * const q);
+    explicit ListEnvironmentTemplatesResponsePrivate(ListEnvironmentTemplatesResponse * const q);
 
     void parseListEnvironmentTemplatesResponse(QXmlStreamReader &xml);
 

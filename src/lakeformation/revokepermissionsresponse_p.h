@@ -31,7 +31,7 @@ class RevokePermissionsResponsePrivate : public LakeFormationResponsePrivate {
 
 public:
 
-    RevokePermissionsResponsePrivate(RevokePermissionsResponse * const q);
+    explicit RevokePermissionsResponsePrivate(RevokePermissionsResponse * const q);
 
     void parseRevokePermissionsResponse(QXmlStreamReader &xml);
 

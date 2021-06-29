@@ -31,7 +31,7 @@ class DisassociateWirelessGatewayFromCertificateResponsePrivate : public IoTWire
 
 public:
 
-    DisassociateWirelessGatewayFromCertificateResponsePrivate(DisassociateWirelessGatewayFromCertificateResponse * const q);
+    explicit DisassociateWirelessGatewayFromCertificateResponsePrivate(DisassociateWirelessGatewayFromCertificateResponse * const q);
 
     void parseDisassociateWirelessGatewayFromCertificateResponse(QXmlStreamReader &xml);
 

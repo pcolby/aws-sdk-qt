@@ -31,7 +31,7 @@ class DeleteBucketInventoryConfigurationResponsePrivate : public S3ResponsePriva
 
 public:
 
-    DeleteBucketInventoryConfigurationResponsePrivate(DeleteBucketInventoryConfigurationResponse * const q);
+    explicit DeleteBucketInventoryConfigurationResponsePrivate(DeleteBucketInventoryConfigurationResponse * const q);
 
     void parseDeleteBucketInventoryConfigurationResponse(QXmlStreamReader &xml);
 

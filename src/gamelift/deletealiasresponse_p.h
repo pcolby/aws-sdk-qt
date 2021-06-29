@@ -31,7 +31,7 @@ class DeleteAliasResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    DeleteAliasResponsePrivate(DeleteAliasResponse * const q);
+    explicit DeleteAliasResponsePrivate(DeleteAliasResponse * const q);
 
     void parseDeleteAliasResponse(QXmlStreamReader &xml);
 

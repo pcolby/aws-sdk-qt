@@ -31,7 +31,7 @@ class DescribeEntityResponsePrivate : public MarketplaceCatalogResponsePrivate {
 
 public:
 
-    DescribeEntityResponsePrivate(DescribeEntityResponse * const q);
+    explicit DescribeEntityResponsePrivate(DescribeEntityResponse * const q);
 
     void parseDescribeEntityResponse(QXmlStreamReader &xml);
 

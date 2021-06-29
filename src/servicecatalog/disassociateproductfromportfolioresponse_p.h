@@ -31,7 +31,7 @@ class DisassociateProductFromPortfolioResponsePrivate : public ServiceCatalogRes
 
 public:
 
-    DisassociateProductFromPortfolioResponsePrivate(DisassociateProductFromPortfolioResponse * const q);
+    explicit DisassociateProductFromPortfolioResponsePrivate(DisassociateProductFromPortfolioResponse * const q);
 
     void parseDisassociateProductFromPortfolioResponse(QXmlStreamReader &xml);
 

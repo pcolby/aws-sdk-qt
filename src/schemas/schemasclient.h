@@ -103,7 +103,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    SchemasClient(
+    explicit SchemasClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -144,7 +144,7 @@ public slots:
 protected:
     /// @cond internal
     SchemasClientPrivate * const d_ptr; ///< Internal d-pointer.
-    SchemasClient(SchemasClientPrivate * const d);
+    explicit SchemasClient(SchemasClientPrivate * const d);
     /// @endcond
 
 private:

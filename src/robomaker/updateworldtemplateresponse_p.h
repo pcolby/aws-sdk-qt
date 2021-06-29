@@ -31,7 +31,7 @@ class UpdateWorldTemplateResponsePrivate : public RoboMakerResponsePrivate {
 
 public:
 
-    UpdateWorldTemplateResponsePrivate(UpdateWorldTemplateResponse * const q);
+    explicit UpdateWorldTemplateResponsePrivate(UpdateWorldTemplateResponse * const q);
 
     void parseUpdateWorldTemplateResponse(QXmlStreamReader &xml);
 

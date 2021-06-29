@@ -31,7 +31,7 @@ class PutConfigurationSetDeliveryOptionsResponsePrivate : public PinpointEmailRe
 
 public:
 
-    PutConfigurationSetDeliveryOptionsResponsePrivate(PutConfigurationSetDeliveryOptionsResponse * const q);
+    explicit PutConfigurationSetDeliveryOptionsResponsePrivate(PutConfigurationSetDeliveryOptionsResponse * const q);
 
     void parsePutConfigurationSetDeliveryOptionsResponse(QXmlStreamReader &xml);
 

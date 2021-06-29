@@ -31,7 +31,7 @@ class CreatePlacementGroupResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CreatePlacementGroupResponsePrivate(CreatePlacementGroupResponse * const q);
+    explicit CreatePlacementGroupResponsePrivate(CreatePlacementGroupResponse * const q);
 
     void parseCreatePlacementGroupResponse(QXmlStreamReader &xml);
 

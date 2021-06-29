@@ -86,7 +86,7 @@ public:
 protected:
     /// @cond internal
     TranscribeServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    TranscribeServiceRequest(TranscribeServiceRequestPrivate * const d);
+    explicit TranscribeServiceRequest(TranscribeServiceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

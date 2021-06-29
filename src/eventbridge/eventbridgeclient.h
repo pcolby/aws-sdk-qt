@@ -143,7 +143,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    EventBridgeClient(
+    explicit EventBridgeClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -204,7 +204,7 @@ public slots:
 protected:
     /// @cond internal
     EventBridgeClientPrivate * const d_ptr; ///< Internal d-pointer.
-    EventBridgeClient(EventBridgeClientPrivate * const d);
+    explicit EventBridgeClient(EventBridgeClientPrivate * const d);
     /// @endcond
 
 private:

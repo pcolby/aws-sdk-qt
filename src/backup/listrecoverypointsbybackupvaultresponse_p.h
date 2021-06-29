@@ -31,7 +31,7 @@ class ListRecoveryPointsByBackupVaultResponsePrivate : public BackupResponsePriv
 
 public:
 
-    ListRecoveryPointsByBackupVaultResponsePrivate(ListRecoveryPointsByBackupVaultResponse * const q);
+    explicit ListRecoveryPointsByBackupVaultResponsePrivate(ListRecoveryPointsByBackupVaultResponse * const q);
 
     void parseListRecoveryPointsByBackupVaultResponse(QXmlStreamReader &xml);
 

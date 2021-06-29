@@ -31,7 +31,7 @@ class DescribeDatasetGroupResponsePrivate : public ForecastServiceResponsePrivat
 
 public:
 
-    DescribeDatasetGroupResponsePrivate(DescribeDatasetGroupResponse * const q);
+    explicit DescribeDatasetGroupResponsePrivate(DescribeDatasetGroupResponse * const q);
 
     void parseDescribeDatasetGroupResponse(QXmlStreamReader &xml);
 

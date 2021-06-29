@@ -31,7 +31,7 @@ class DeleteProjectResponsePrivate : public CodeStarResponsePrivate {
 
 public:
 
-    DeleteProjectResponsePrivate(DeleteProjectResponse * const q);
+    explicit DeleteProjectResponsePrivate(DeleteProjectResponse * const q);
 
     void parseDeleteProjectResponse(QXmlStreamReader &xml);
 

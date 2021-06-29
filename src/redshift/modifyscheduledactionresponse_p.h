@@ -31,7 +31,7 @@ class ModifyScheduledActionResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    ModifyScheduledActionResponsePrivate(ModifyScheduledActionResponse * const q);
+    explicit ModifyScheduledActionResponsePrivate(ModifyScheduledActionResponse * const q);
 
     void parseModifyScheduledActionResponse(QXmlStreamReader &xml);
 

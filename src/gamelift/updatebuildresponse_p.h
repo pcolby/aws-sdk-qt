@@ -31,7 +31,7 @@ class UpdateBuildResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    UpdateBuildResponsePrivate(UpdateBuildResponse * const q);
+    explicit UpdateBuildResponsePrivate(UpdateBuildResponse * const q);
 
     void parseUpdateBuildResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class RestoreManagedPrefixListVersionResponsePrivate : public Ec2ResponsePrivate
 
 public:
 
-    RestoreManagedPrefixListVersionResponsePrivate(RestoreManagedPrefixListVersionResponse * const q);
+    explicit RestoreManagedPrefixListVersionResponsePrivate(RestoreManagedPrefixListVersionResponse * const q);
 
     void parseRestoreManagedPrefixListVersionResponse(QXmlStreamReader &xml);
 

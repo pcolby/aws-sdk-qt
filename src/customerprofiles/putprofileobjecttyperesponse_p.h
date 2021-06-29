@@ -31,7 +31,7 @@ class PutProfileObjectTypeResponsePrivate : public CustomerProfilesResponsePriva
 
 public:
 
-    PutProfileObjectTypeResponsePrivate(PutProfileObjectTypeResponse * const q);
+    explicit PutProfileObjectTypeResponsePrivate(PutProfileObjectTypeResponse * const q);
 
     void parsePutProfileObjectTypeResponse(QXmlStreamReader &xml);
 

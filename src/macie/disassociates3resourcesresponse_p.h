@@ -31,7 +31,7 @@ class DisassociateS3ResourcesResponsePrivate : public MacieResponsePrivate {
 
 public:
 
-    DisassociateS3ResourcesResponsePrivate(DisassociateS3ResourcesResponse * const q);
+    explicit DisassociateS3ResourcesResponsePrivate(DisassociateS3ResourcesResponse * const q);
 
     void parseDisassociateS3ResourcesResponse(QXmlStreamReader &xml);
 

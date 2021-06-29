@@ -31,7 +31,7 @@ class DescribeClusterSecurityGroupsResponsePrivate : public RedshiftResponsePriv
 
 public:
 
-    DescribeClusterSecurityGroupsResponsePrivate(DescribeClusterSecurityGroupsResponse * const q);
+    explicit DescribeClusterSecurityGroupsResponsePrivate(DescribeClusterSecurityGroupsResponse * const q);
 
     void parseDescribeClusterSecurityGroupsResponse(QXmlStreamReader &xml);
 

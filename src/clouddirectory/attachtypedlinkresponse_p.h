@@ -31,7 +31,7 @@ class AttachTypedLinkResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 
-    AttachTypedLinkResponsePrivate(AttachTypedLinkResponse * const q);
+    explicit AttachTypedLinkResponsePrivate(AttachTypedLinkResponse * const q);
 
     void parseAttachTypedLinkResponse(QXmlStreamReader &xml);
 

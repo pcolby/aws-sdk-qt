@@ -30,7 +30,7 @@ class NimbleStudioClient;
 class NimbleStudioClientPrivate {
 
 public:
-    NimbleStudioClientPrivate(NimbleStudioClient * const q);
+    explicit NimbleStudioClientPrivate(NimbleStudioClient * const q);
 
 protected:
     NimbleStudioClient * const q_ptr; ///< Internal q-pointer.

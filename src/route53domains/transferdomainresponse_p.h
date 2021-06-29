@@ -31,7 +31,7 @@ class TransferDomainResponsePrivate : public Route53DomainsResponsePrivate {
 
 public:
 
-    TransferDomainResponsePrivate(TransferDomainResponse * const q);
+    explicit TransferDomainResponsePrivate(TransferDomainResponse * const q);
 
     void parseTransferDomainResponse(QXmlStreamReader &xml);
 

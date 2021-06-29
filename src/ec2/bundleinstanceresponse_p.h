@@ -31,7 +31,7 @@ class BundleInstanceResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    BundleInstanceResponsePrivate(BundleInstanceResponse * const q);
+    explicit BundleInstanceResponsePrivate(BundleInstanceResponse * const q);
 
     void parseBundleInstanceResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetAssetPropertyValueHistoryResponsePrivate : public IoTSiteWiseResponsePr
 
 public:
 
-    GetAssetPropertyValueHistoryResponsePrivate(GetAssetPropertyValueHistoryResponse * const q);
+    explicit GetAssetPropertyValueHistoryResponsePrivate(GetAssetPropertyValueHistoryResponse * const q);
 
     void parseGetAssetPropertyValueHistoryResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateRealtimeLogConfigResponsePrivate : public CloudFrontResponsePrivate 
 
 public:
 
-    CreateRealtimeLogConfigResponsePrivate(CreateRealtimeLogConfigResponse * const q);
+    explicit CreateRealtimeLogConfigResponsePrivate(CreateRealtimeLogConfigResponse * const q);
 
     void parseCreateRealtimeLogConfigResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetAccessKeyInfoResponsePrivate : public StsResponsePrivate {
 
 public:
 
-    GetAccessKeyInfoResponsePrivate(GetAccessKeyInfoResponse * const q);
+    explicit GetAccessKeyInfoResponsePrivate(GetAccessKeyInfoResponse * const q);
 
     void parseGetAccessKeyInfoResponse(QXmlStreamReader &xml);
 

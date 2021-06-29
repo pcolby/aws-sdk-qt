@@ -31,7 +31,7 @@ class AssociateRepositoryResponsePrivate : public CodeGuruReviewerResponsePrivat
 
 public:
 
-    AssociateRepositoryResponsePrivate(AssociateRepositoryResponse * const q);
+    explicit AssociateRepositoryResponsePrivate(AssociateRepositoryResponse * const q);
 
     void parseAssociateRepositoryResponse(QXmlStreamReader &xml);
 

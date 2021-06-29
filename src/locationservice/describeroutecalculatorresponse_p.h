@@ -31,7 +31,7 @@ class DescribeRouteCalculatorResponsePrivate : public LocationServiceResponsePri
 
 public:
 
-    DescribeRouteCalculatorResponsePrivate(DescribeRouteCalculatorResponse * const q);
+    explicit DescribeRouteCalculatorResponsePrivate(DescribeRouteCalculatorResponse * const q);
 
     void parseDescribeRouteCalculatorResponse(QXmlStreamReader &xml);
 

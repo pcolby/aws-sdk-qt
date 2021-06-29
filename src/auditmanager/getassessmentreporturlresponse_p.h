@@ -31,7 +31,7 @@ class GetAssessmentReportUrlResponsePrivate : public AuditManagerResponsePrivate
 
 public:
 
-    GetAssessmentReportUrlResponsePrivate(GetAssessmentReportUrlResponse * const q);
+    explicit GetAssessmentReportUrlResponsePrivate(GetAssessmentReportUrlResponse * const q);
 
     void parseGetAssessmentReportUrlResponse(QXmlStreamReader &xml);
 

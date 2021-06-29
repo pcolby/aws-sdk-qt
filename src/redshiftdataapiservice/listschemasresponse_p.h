@@ -31,7 +31,7 @@ class ListSchemasResponsePrivate : public RedshiftDataAPIServiceResponsePrivate 
 
 public:
 
-    ListSchemasResponsePrivate(ListSchemasResponse * const q);
+    explicit ListSchemasResponsePrivate(ListSchemasResponse * const q);
 
     void parseListSchemasResponse(QXmlStreamReader &xml);
 

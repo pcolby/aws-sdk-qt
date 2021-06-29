@@ -31,7 +31,7 @@ class CreateConnectorDefinitionVersionResponsePrivate : public GreengrassRespons
 
 public:
 
-    CreateConnectorDefinitionVersionResponsePrivate(CreateConnectorDefinitionVersionResponse * const q);
+    explicit CreateConnectorDefinitionVersionResponsePrivate(CreateConnectorDefinitionVersionResponse * const q);
 
     void parseCreateConnectorDefinitionVersionResponse(QXmlStreamReader &xml);
 

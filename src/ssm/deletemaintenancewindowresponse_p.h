@@ -31,7 +31,7 @@ class DeleteMaintenanceWindowResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    DeleteMaintenanceWindowResponsePrivate(DeleteMaintenanceWindowResponse * const q);
+    explicit DeleteMaintenanceWindowResponsePrivate(DeleteMaintenanceWindowResponse * const q);
 
     void parseDeleteMaintenanceWindowResponse(QXmlStreamReader &xml);
 

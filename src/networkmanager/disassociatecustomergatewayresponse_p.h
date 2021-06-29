@@ -31,7 +31,7 @@ class DisassociateCustomerGatewayResponsePrivate : public NetworkManagerResponse
 
 public:
 
-    DisassociateCustomerGatewayResponsePrivate(DisassociateCustomerGatewayResponse * const q);
+    explicit DisassociateCustomerGatewayResponsePrivate(DisassociateCustomerGatewayResponse * const q);
 
     void parseDisassociateCustomerGatewayResponse(QXmlStreamReader &xml);
 

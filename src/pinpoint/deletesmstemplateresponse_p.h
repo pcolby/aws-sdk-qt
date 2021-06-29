@@ -31,7 +31,7 @@ class DeleteSmsTemplateResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    DeleteSmsTemplateResponsePrivate(DeleteSmsTemplateResponse * const q);
+    explicit DeleteSmsTemplateResponsePrivate(DeleteSmsTemplateResponse * const q);
 
     void parseDeleteSmsTemplateResponse(QXmlStreamReader &xml);
 

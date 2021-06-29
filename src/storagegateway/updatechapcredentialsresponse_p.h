@@ -31,7 +31,7 @@ class UpdateChapCredentialsResponsePrivate : public StorageGatewayResponsePrivat
 
 public:
 
-    UpdateChapCredentialsResponsePrivate(UpdateChapCredentialsResponse * const q);
+    explicit UpdateChapCredentialsResponsePrivate(UpdateChapCredentialsResponse * const q);
 
     void parseUpdateChapCredentialsResponse(QXmlStreamReader &xml);
 

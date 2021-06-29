@@ -31,7 +31,7 @@ class DescribeSnapshotsResponsePrivate : public DirectoryServiceResponsePrivate 
 
 public:
 
-    DescribeSnapshotsResponsePrivate(DescribeSnapshotsResponse * const q);
+    explicit DescribeSnapshotsResponsePrivate(DescribeSnapshotsResponse * const q);
 
     void parseDescribeSnapshotsResponse(QXmlStreamReader &xml);
 

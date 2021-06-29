@@ -31,7 +31,7 @@ class DeleteFacetResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 
-    DeleteFacetResponsePrivate(DeleteFacetResponse * const q);
+    explicit DeleteFacetResponsePrivate(DeleteFacetResponse * const q);
 
     void parseDeleteFacetResponse(QXmlStreamReader &xml);
 

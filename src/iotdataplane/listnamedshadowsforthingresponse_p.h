@@ -31,7 +31,7 @@ class ListNamedShadowsForThingResponsePrivate : public IoTDataPlaneResponsePriva
 
 public:
 
-    ListNamedShadowsForThingResponsePrivate(ListNamedShadowsForThingResponse * const q);
+    explicit ListNamedShadowsForThingResponsePrivate(ListNamedShadowsForThingResponse * const q);
 
     void parseListNamedShadowsForThingResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListThreatIntelSetsResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 
-    ListThreatIntelSetsResponsePrivate(ListThreatIntelSetsResponse * const q);
+    explicit ListThreatIntelSetsResponsePrivate(ListThreatIntelSetsResponse * const q);
 
     void parseListThreatIntelSetsResponse(QXmlStreamReader &xml);
 

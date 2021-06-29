@@ -31,7 +31,7 @@ class UpdateEnrollmentStatusResponsePrivate : public ComputeOptimizerResponsePri
 
 public:
 
-    UpdateEnrollmentStatusResponsePrivate(UpdateEnrollmentStatusResponse * const q);
+    explicit UpdateEnrollmentStatusResponsePrivate(UpdateEnrollmentStatusResponse * const q);
 
     void parseUpdateEnrollmentStatusResponse(QXmlStreamReader &xml);
 

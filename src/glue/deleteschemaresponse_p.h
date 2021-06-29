@@ -31,7 +31,7 @@ class DeleteSchemaResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    DeleteSchemaResponsePrivate(DeleteSchemaResponse * const q);
+    explicit DeleteSchemaResponsePrivate(DeleteSchemaResponse * const q);
 
     void parseDeleteSchemaResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class RunJobFlowResponsePrivate : public EmrResponsePrivate {
 
 public:
 
-    RunJobFlowResponsePrivate(RunJobFlowResponse * const q);
+    explicit RunJobFlowResponsePrivate(RunJobFlowResponse * const q);
 
     void parseRunJobFlowResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteContactChannelResponsePrivate : public SSMContactsResponsePrivate {
 
 public:
 
-    DeleteContactChannelResponsePrivate(DeleteContactChannelResponse * const q);
+    explicit DeleteContactChannelResponsePrivate(DeleteContactChannelResponse * const q);
 
     void parseDeleteContactChannelResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class SetLoadBalancerListenerSSLCertificateResponsePrivate : public ElasticLoadB
 
 public:
 
-    SetLoadBalancerListenerSSLCertificateResponsePrivate(SetLoadBalancerListenerSSLCertificateResponse * const q);
+    explicit SetLoadBalancerListenerSSLCertificateResponsePrivate(SetLoadBalancerListenerSSLCertificateResponse * const q);
 
     void parseSetLoadBalancerListenerSSLCertificateResponse(QXmlStreamReader &xml);
 

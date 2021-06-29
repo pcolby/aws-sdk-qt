@@ -31,7 +31,7 @@ class AssociateTransitGatewayConnectPeerResponsePrivate : public NetworkManagerR
 
 public:
 
-    AssociateTransitGatewayConnectPeerResponsePrivate(AssociateTransitGatewayConnectPeerResponse * const q);
+    explicit AssociateTransitGatewayConnectPeerResponsePrivate(AssociateTransitGatewayConnectPeerResponse * const q);
 
     void parseAssociateTransitGatewayConnectPeerResponse(QXmlStreamReader &xml);
 

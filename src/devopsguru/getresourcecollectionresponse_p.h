@@ -31,7 +31,7 @@ class GetResourceCollectionResponsePrivate : public DevOpsGuruResponsePrivate {
 
 public:
 
-    GetResourceCollectionResponsePrivate(GetResourceCollectionResponse * const q);
+    explicit GetResourceCollectionResponsePrivate(GetResourceCollectionResponse * const q);
 
     void parseGetResourceCollectionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateHostResponsePrivate : public CodeStarconnectionsResponsePrivate {
 
 public:
 
-    UpdateHostResponsePrivate(UpdateHostResponse * const q);
+    explicit UpdateHostResponsePrivate(UpdateHostResponse * const q);
 
     void parseUpdateHostResponse(QXmlStreamReader &xml);
 

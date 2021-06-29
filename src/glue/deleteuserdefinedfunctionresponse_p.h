@@ -31,7 +31,7 @@ class DeleteUserDefinedFunctionResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    DeleteUserDefinedFunctionResponsePrivate(DeleteUserDefinedFunctionResponse * const q);
+    explicit DeleteUserDefinedFunctionResponsePrivate(DeleteUserDefinedFunctionResponse * const q);
 
     void parseDeleteUserDefinedFunctionResponse(QXmlStreamReader &xml);
 

@@ -61,7 +61,7 @@ public:
 protected:
     /// @cond internal
     EC2InstanceConnectRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    EC2InstanceConnectRequest(EC2InstanceConnectRequestPrivate * const d);
+    explicit EC2InstanceConnectRequest(EC2InstanceConnectRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

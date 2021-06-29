@@ -315,7 +315,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    RdsClient(
+    explicit RdsClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -462,7 +462,7 @@ public slots:
 protected:
     /// @cond internal
     RdsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    RdsClient(RdsClientPrivate * const d);
+    explicit RdsClient(RdsClientPrivate * const d);
     /// @endcond
 
 private:

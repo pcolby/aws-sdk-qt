@@ -31,7 +31,7 @@ class CreateLoadBalancerListenersResponsePrivate : public ElasticLoadBalancingRe
 
 public:
 
-    CreateLoadBalancerListenersResponsePrivate(CreateLoadBalancerListenersResponse * const q);
+    explicit CreateLoadBalancerListenersResponsePrivate(CreateLoadBalancerListenersResponse * const q);
 
     void parseCreateLoadBalancerListenersResponse(QXmlStreamReader &xml);
 

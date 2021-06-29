@@ -31,7 +31,7 @@ class StopFleetActionsResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    StopFleetActionsResponsePrivate(StopFleetActionsResponse * const q);
+    explicit StopFleetActionsResponsePrivate(StopFleetActionsResponse * const q);
 
     void parseStopFleetActionsResponse(QXmlStreamReader &xml);
 

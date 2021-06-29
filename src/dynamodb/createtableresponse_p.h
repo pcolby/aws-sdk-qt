@@ -31,7 +31,7 @@ class CreateTableResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 
-    CreateTableResponsePrivate(CreateTableResponse * const q);
+    explicit CreateTableResponsePrivate(CreateTableResponse * const q);
 
     void parseCreateTableResponse(QXmlStreamReader &xml);
 

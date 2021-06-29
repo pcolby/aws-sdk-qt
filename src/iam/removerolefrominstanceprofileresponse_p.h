@@ -31,7 +31,7 @@ class RemoveRoleFromInstanceProfileResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    RemoveRoleFromInstanceProfileResponsePrivate(RemoveRoleFromInstanceProfileResponse * const q);
+    explicit RemoveRoleFromInstanceProfileResponsePrivate(RemoveRoleFromInstanceProfileResponse * const q);
 
     void parseRemoveRoleFromInstanceProfileResponse(QXmlStreamReader &xml);
 

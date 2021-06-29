@@ -31,7 +31,7 @@ class EnableSerialConsoleAccessResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    EnableSerialConsoleAccessResponsePrivate(EnableSerialConsoleAccessResponse * const q);
+    explicit EnableSerialConsoleAccessResponsePrivate(EnableSerialConsoleAccessResponse * const q);
 
     void parseEnableSerialConsoleAccessResponse(QXmlStreamReader &xml);
 

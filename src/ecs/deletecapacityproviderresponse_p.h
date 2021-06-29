@@ -31,7 +31,7 @@ class DeleteCapacityProviderResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    DeleteCapacityProviderResponsePrivate(DeleteCapacityProviderResponse * const q);
+    explicit DeleteCapacityProviderResponsePrivate(DeleteCapacityProviderResponse * const q);
 
     void parseDeleteCapacityProviderResponse(QXmlStreamReader &xml);
 

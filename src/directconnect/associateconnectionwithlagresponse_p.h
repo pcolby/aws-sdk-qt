@@ -31,7 +31,7 @@ class AssociateConnectionWithLagResponsePrivate : public DirectConnectResponsePr
 
 public:
 
-    AssociateConnectionWithLagResponsePrivate(AssociateConnectionWithLagResponse * const q);
+    explicit AssociateConnectionWithLagResponsePrivate(AssociateConnectionWithLagResponse * const q);
 
     void parseAssociateConnectionWithLagResponse(QXmlStreamReader &xml);
 

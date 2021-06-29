@@ -31,7 +31,7 @@ class UpdateBudgetActionResponsePrivate : public BudgetsResponsePrivate {
 
 public:
 
-    UpdateBudgetActionResponsePrivate(UpdateBudgetActionResponse * const q);
+    explicit UpdateBudgetActionResponsePrivate(UpdateBudgetActionResponse * const q);
 
     void parseUpdateBudgetActionResponse(QXmlStreamReader &xml);
 

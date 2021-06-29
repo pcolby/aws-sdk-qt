@@ -31,7 +31,7 @@ class StartPolicyGenerationResponsePrivate : public AccessAnalyzerResponsePrivat
 
 public:
 
-    StartPolicyGenerationResponsePrivate(StartPolicyGenerationResponse * const q);
+    explicit StartPolicyGenerationResponsePrivate(StartPolicyGenerationResponse * const q);
 
     void parseStartPolicyGenerationResponse(QXmlStreamReader &xml);
 

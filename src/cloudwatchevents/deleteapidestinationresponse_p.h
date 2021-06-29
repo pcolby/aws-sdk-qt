@@ -31,7 +31,7 @@ class DeleteApiDestinationResponsePrivate : public CloudWatchEventsResponsePriva
 
 public:
 
-    DeleteApiDestinationResponsePrivate(DeleteApiDestinationResponse * const q);
+    explicit DeleteApiDestinationResponsePrivate(DeleteApiDestinationResponse * const q);
 
     void parseDeleteApiDestinationResponse(QXmlStreamReader &xml);
 

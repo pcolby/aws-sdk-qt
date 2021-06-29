@@ -31,7 +31,7 @@ class ChangeTagsForResourceResponsePrivate : public Route53ResponsePrivate {
 
 public:
 
-    ChangeTagsForResourceResponsePrivate(ChangeTagsForResourceResponse * const q);
+    explicit ChangeTagsForResourceResponsePrivate(ChangeTagsForResourceResponse * const q);
 
     void parseChangeTagsForResourceResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class AssociateProactiveEngagementDetailsResponsePrivate : public ShieldResponse
 
 public:
 
-    AssociateProactiveEngagementDetailsResponsePrivate(AssociateProactiveEngagementDetailsResponse * const q);
+    explicit AssociateProactiveEngagementDetailsResponsePrivate(AssociateProactiveEngagementDetailsResponse * const q);
 
     void parseAssociateProactiveEngagementDetailsResponse(QXmlStreamReader &xml);
 

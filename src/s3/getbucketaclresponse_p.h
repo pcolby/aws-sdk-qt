@@ -31,7 +31,7 @@ class GetBucketAclResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    GetBucketAclResponsePrivate(GetBucketAclResponse * const q);
+    explicit GetBucketAclResponsePrivate(GetBucketAclResponse * const q);
 
     void parseGetBucketAclResponse(QXmlStreamReader &xml);
 

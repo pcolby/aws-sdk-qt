@@ -31,7 +31,7 @@ class PutImageScanningConfigurationResponsePrivate : public EcrResponsePrivate {
 
 public:
 
-    PutImageScanningConfigurationResponsePrivate(PutImageScanningConfigurationResponse * const q);
+    explicit PutImageScanningConfigurationResponsePrivate(PutImageScanningConfigurationResponse * const q);
 
     void parsePutImageScanningConfigurationResponse(QXmlStreamReader &xml);
 

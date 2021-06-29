@@ -29,7 +29,7 @@ class StorageGatewayResponsePrivate {
 
 public:
 
-    StorageGatewayResponsePrivate(StorageGatewayResponse * const q);
+    explicit StorageGatewayResponsePrivate(StorageGatewayResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

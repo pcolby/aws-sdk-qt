@@ -31,7 +31,7 @@ class GetBackupSelectionResponsePrivate : public BackupResponsePrivate {
 
 public:
 
-    GetBackupSelectionResponsePrivate(GetBackupSelectionResponse * const q);
+    explicit GetBackupSelectionResponsePrivate(GetBackupSelectionResponse * const q);
 
     void parseGetBackupSelectionResponse(QXmlStreamReader &xml);
 

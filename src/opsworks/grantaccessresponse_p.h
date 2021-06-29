@@ -31,7 +31,7 @@ class GrantAccessResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    GrantAccessResponsePrivate(GrantAccessResponse * const q);
+    explicit GrantAccessResponsePrivate(GrantAccessResponse * const q);
 
     void parseGrantAccessResponse(QXmlStreamReader &xml);
 

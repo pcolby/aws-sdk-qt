@@ -31,7 +31,7 @@ class DisassociateContactFromAddressBookResponsePrivate : public AlexaForBusines
 
 public:
 
-    DisassociateContactFromAddressBookResponsePrivate(DisassociateContactFromAddressBookResponse * const q);
+    explicit DisassociateContactFromAddressBookResponsePrivate(DisassociateContactFromAddressBookResponse * const q);
 
     void parseDisassociateContactFromAddressBookResponse(QXmlStreamReader &xml);
 

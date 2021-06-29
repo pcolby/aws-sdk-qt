@@ -31,7 +31,7 @@ class ListImportJobsResponsePrivate : public Sesv2ResponsePrivate {
 
 public:
 
-    ListImportJobsResponsePrivate(ListImportJobsResponse * const q);
+    explicit ListImportJobsResponsePrivate(ListImportJobsResponse * const q);
 
     void parseListImportJobsResponse(QXmlStreamReader &xml);
 

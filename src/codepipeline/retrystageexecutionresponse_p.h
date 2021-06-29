@@ -31,7 +31,7 @@ class RetryStageExecutionResponsePrivate : public CodePipelineResponsePrivate {
 
 public:
 
-    RetryStageExecutionResponsePrivate(RetryStageExecutionResponse * const q);
+    explicit RetryStageExecutionResponsePrivate(RetryStageExecutionResponse * const q);
 
     void parseRetryStageExecutionResponse(QXmlStreamReader &xml);
 

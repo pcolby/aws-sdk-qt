@@ -31,7 +31,7 @@ class GetAdministratorAccountResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 
-    GetAdministratorAccountResponsePrivate(GetAdministratorAccountResponse * const q);
+    explicit GetAdministratorAccountResponsePrivate(GetAdministratorAccountResponse * const q);
 
     void parseGetAdministratorAccountResponse(QXmlStreamReader &xml);
 

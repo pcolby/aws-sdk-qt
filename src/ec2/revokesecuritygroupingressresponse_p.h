@@ -31,7 +31,7 @@ class RevokeSecurityGroupIngressResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    RevokeSecurityGroupIngressResponsePrivate(RevokeSecurityGroupIngressResponse * const q);
+    explicit RevokeSecurityGroupIngressResponsePrivate(RevokeSecurityGroupIngressResponse * const q);
 
     void parseRevokeSecurityGroupIngressResponse(QXmlStreamReader &xml);
 

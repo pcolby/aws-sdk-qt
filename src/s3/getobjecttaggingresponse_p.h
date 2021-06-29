@@ -31,7 +31,7 @@ class GetObjectTaggingResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    GetObjectTaggingResponsePrivate(GetObjectTaggingResponse * const q);
+    explicit GetObjectTaggingResponsePrivate(GetObjectTaggingResponse * const q);
 
     void parseGetObjectTaggingResponse(QXmlStreamReader &xml);
 

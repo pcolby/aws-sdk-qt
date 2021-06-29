@@ -31,7 +31,7 @@ class SetRepositoryPolicyResponsePrivate : public EcrResponsePrivate {
 
 public:
 
-    SetRepositoryPolicyResponsePrivate(SetRepositoryPolicyResponse * const q);
+    explicit SetRepositoryPolicyResponsePrivate(SetRepositoryPolicyResponse * const q);
 
     void parseSetRepositoryPolicyResponse(QXmlStreamReader &xml);
 

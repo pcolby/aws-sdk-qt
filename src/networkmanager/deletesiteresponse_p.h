@@ -31,7 +31,7 @@ class DeleteSiteResponsePrivate : public NetworkManagerResponsePrivate {
 
 public:
 
-    DeleteSiteResponsePrivate(DeleteSiteResponse * const q);
+    explicit DeleteSiteResponsePrivate(DeleteSiteResponse * const q);
 
     void parseDeleteSiteResponse(QXmlStreamReader &xml);
 

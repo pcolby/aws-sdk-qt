@@ -99,7 +99,7 @@ public:
 protected:
     /// @cond internal
     ElasticsearchServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    ElasticsearchServiceRequest(ElasticsearchServiceRequestPrivate * const d);
+    explicit ElasticsearchServiceRequest(ElasticsearchServiceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

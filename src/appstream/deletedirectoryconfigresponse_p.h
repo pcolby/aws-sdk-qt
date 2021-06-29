@@ -31,7 +31,7 @@ class DeleteDirectoryConfigResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 
-    DeleteDirectoryConfigResponsePrivate(DeleteDirectoryConfigResponse * const q);
+    explicit DeleteDirectoryConfigResponsePrivate(DeleteDirectoryConfigResponse * const q);
 
     void parseDeleteDirectoryConfigResponse(QXmlStreamReader &xml);
 

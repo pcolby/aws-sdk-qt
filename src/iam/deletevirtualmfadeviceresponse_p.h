@@ -31,7 +31,7 @@ class DeleteVirtualMFADeviceResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    DeleteVirtualMFADeviceResponsePrivate(DeleteVirtualMFADeviceResponse * const q);
+    explicit DeleteVirtualMFADeviceResponsePrivate(DeleteVirtualMFADeviceResponse * const q);
 
     void parseDeleteVirtualMFADeviceResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetIceServerConfigResponsePrivate : public KinesisVideoSignalingChannelsRe
 
 public:
 
-    GetIceServerConfigResponsePrivate(GetIceServerConfigResponse * const q);
+    explicit GetIceServerConfigResponsePrivate(GetIceServerConfigResponse * const q);
 
     void parseGetIceServerConfigResponse(QXmlStreamReader &xml);
 

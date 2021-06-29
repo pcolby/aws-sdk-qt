@@ -31,7 +31,7 @@ class CancelReservedInstancesListingResponsePrivate : public Ec2ResponsePrivate 
 
 public:
 
-    CancelReservedInstancesListingResponsePrivate(CancelReservedInstancesListingResponse * const q);
+    explicit CancelReservedInstancesListingResponsePrivate(CancelReservedInstancesListingResponse * const q);
 
     void parseCancelReservedInstancesListingResponse(QXmlStreamReader &xml);
 

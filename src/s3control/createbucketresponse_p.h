@@ -31,7 +31,7 @@ class CreateBucketResponsePrivate : public S3ControlResponsePrivate {
 
 public:
 
-    CreateBucketResponsePrivate(CreateBucketResponse * const q);
+    explicit CreateBucketResponsePrivate(CreateBucketResponse * const q);
 
     void parseCreateBucketResponse(QXmlStreamReader &xml);
 

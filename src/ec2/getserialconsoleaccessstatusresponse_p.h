@@ -31,7 +31,7 @@ class GetSerialConsoleAccessStatusResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    GetSerialConsoleAccessStatusResponsePrivate(GetSerialConsoleAccessStatusResponse * const q);
+    explicit GetSerialConsoleAccessStatusResponsePrivate(GetSerialConsoleAccessStatusResponse * const q);
 
     void parseGetSerialConsoleAccessStatusResponse(QXmlStreamReader &xml);
 

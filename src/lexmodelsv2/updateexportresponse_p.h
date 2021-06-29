@@ -31,7 +31,7 @@ class UpdateExportResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 
-    UpdateExportResponsePrivate(UpdateExportResponse * const q);
+    explicit UpdateExportResponsePrivate(UpdateExportResponse * const q);
 
     void parseUpdateExportResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class BatchImportEvidenceToAssessmentControlResponsePrivate : public AuditManage
 
 public:
 
-    BatchImportEvidenceToAssessmentControlResponsePrivate(BatchImportEvidenceToAssessmentControlResponse * const q);
+    explicit BatchImportEvidenceToAssessmentControlResponsePrivate(BatchImportEvidenceToAssessmentControlResponse * const q);
 
     void parseBatchImportEvidenceToAssessmentControlResponse(QXmlStreamReader &xml);
 

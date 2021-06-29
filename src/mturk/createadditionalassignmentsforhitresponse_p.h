@@ -31,7 +31,7 @@ class CreateAdditionalAssignmentsForHITResponsePrivate : public MTurkResponsePri
 
 public:
 
-    CreateAdditionalAssignmentsForHITResponsePrivate(CreateAdditionalAssignmentsForHITResponse * const q);
+    explicit CreateAdditionalAssignmentsForHITResponsePrivate(CreateAdditionalAssignmentsForHITResponse * const q);
 
     void parseCreateAdditionalAssignmentsForHITResponse(QXmlStreamReader &xml);
 

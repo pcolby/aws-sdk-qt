@@ -31,7 +31,7 @@ class ListStoredQueriesResponsePrivate : public ConfigServiceResponsePrivate {
 
 public:
 
-    ListStoredQueriesResponsePrivate(ListStoredQueriesResponse * const q);
+    explicit ListStoredQueriesResponsePrivate(ListStoredQueriesResponse * const q);
 
     void parseListStoredQueriesResponse(QXmlStreamReader &xml);
 

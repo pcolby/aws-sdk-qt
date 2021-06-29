@@ -31,7 +31,7 @@ class UpdateConstraintResponsePrivate : public ServiceCatalogResponsePrivate {
 
 public:
 
-    UpdateConstraintResponsePrivate(UpdateConstraintResponse * const q);
+    explicit UpdateConstraintResponsePrivate(UpdateConstraintResponse * const q);
 
     void parseUpdateConstraintResponse(QXmlStreamReader &xml);
 

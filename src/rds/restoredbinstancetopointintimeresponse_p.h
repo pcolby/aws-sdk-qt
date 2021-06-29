@@ -31,7 +31,7 @@ class RestoreDBInstanceToPointInTimeResponsePrivate : public RdsResponsePrivate 
 
 public:
 
-    RestoreDBInstanceToPointInTimeResponsePrivate(RestoreDBInstanceToPointInTimeResponse * const q);
+    explicit RestoreDBInstanceToPointInTimeResponsePrivate(RestoreDBInstanceToPointInTimeResponse * const q);
 
     void parseRestoreDBInstanceToPointInTimeResponse(QXmlStreamReader &xml);
 

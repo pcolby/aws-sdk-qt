@@ -31,7 +31,7 @@ class UpdateGlobalNetworkResponsePrivate : public NetworkManagerResponsePrivate 
 
 public:
 
-    UpdateGlobalNetworkResponsePrivate(UpdateGlobalNetworkResponse * const q);
+    explicit UpdateGlobalNetworkResponsePrivate(UpdateGlobalNetworkResponse * const q);
 
     void parseUpdateGlobalNetworkResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListImageVersionsResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    ListImageVersionsResponsePrivate(ListImageVersionsResponse * const q);
+    explicit ListImageVersionsResponsePrivate(ListImageVersionsResponse * const q);
 
     void parseListImageVersionsResponse(QXmlStreamReader &xml);
 

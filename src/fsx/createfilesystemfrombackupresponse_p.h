@@ -31,7 +31,7 @@ class CreateFileSystemFromBackupResponsePrivate : public FSxResponsePrivate {
 
 public:
 
-    CreateFileSystemFromBackupResponsePrivate(CreateFileSystemFromBackupResponse * const q);
+    explicit CreateFileSystemFromBackupResponsePrivate(CreateFileSystemFromBackupResponse * const q);
 
     void parseCreateFileSystemFromBackupResponse(QXmlStreamReader &xml);
 

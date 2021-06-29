@@ -31,7 +31,7 @@ class DeregisterImageResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DeregisterImageResponsePrivate(DeregisterImageResponse * const q);
+    explicit DeregisterImageResponsePrivate(DeregisterImageResponse * const q);
 
     void parseDeregisterImageResponse(QXmlStreamReader &xml);
 

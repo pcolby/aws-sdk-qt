@@ -31,7 +31,7 @@ class ReplaceRouteResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ReplaceRouteResponsePrivate(ReplaceRouteResponse * const q);
+    explicit ReplaceRouteResponsePrivate(ReplaceRouteResponse * const q);
 
     void parseReplaceRouteResponse(QXmlStreamReader &xml);
 

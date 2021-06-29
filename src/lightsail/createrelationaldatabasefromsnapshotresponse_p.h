@@ -31,7 +31,7 @@ class CreateRelationalDatabaseFromSnapshotResponsePrivate : public LightsailResp
 
 public:
 
-    CreateRelationalDatabaseFromSnapshotResponsePrivate(CreateRelationalDatabaseFromSnapshotResponse * const q);
+    explicit CreateRelationalDatabaseFromSnapshotResponsePrivate(CreateRelationalDatabaseFromSnapshotResponse * const q);
 
     void parseCreateRelationalDatabaseFromSnapshotResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteCacheParameterGroupResponsePrivate : public ElastiCacheResponsePriva
 
 public:
 
-    DeleteCacheParameterGroupResponsePrivate(DeleteCacheParameterGroupResponse * const q);
+    explicit DeleteCacheParameterGroupResponsePrivate(DeleteCacheParameterGroupResponse * const q);
 
     void parseDeleteCacheParameterGroupResponse(QXmlStreamReader &xml);
 

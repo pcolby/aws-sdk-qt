@@ -31,7 +31,7 @@ class CreateThemeAliasResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    CreateThemeAliasResponsePrivate(CreateThemeAliasResponse * const q);
+    explicit CreateThemeAliasResponsePrivate(CreateThemeAliasResponse * const q);
 
     void parseCreateThemeAliasResponse(QXmlStreamReader &xml);
 

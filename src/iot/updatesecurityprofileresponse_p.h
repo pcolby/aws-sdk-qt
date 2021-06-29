@@ -31,7 +31,7 @@ class UpdateSecurityProfileResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    UpdateSecurityProfileResponsePrivate(UpdateSecurityProfileResponse * const q);
+    explicit UpdateSecurityProfileResponsePrivate(UpdateSecurityProfileResponse * const q);
 
     void parseUpdateSecurityProfileResponse(QXmlStreamReader &xml);
 

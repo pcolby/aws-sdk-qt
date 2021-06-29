@@ -31,7 +31,7 @@ class RegisterAccountResponsePrivate : public AuditManagerResponsePrivate {
 
 public:
 
-    RegisterAccountResponsePrivate(RegisterAccountResponse * const q);
+    explicit RegisterAccountResponsePrivate(RegisterAccountResponse * const q);
 
     void parseRegisterAccountResponse(QXmlStreamReader &xml);
 

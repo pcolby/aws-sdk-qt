@@ -31,7 +31,7 @@ class GetBucketVersioningResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    GetBucketVersioningResponsePrivate(GetBucketVersioningResponse * const q);
+    explicit GetBucketVersioningResponsePrivate(GetBucketVersioningResponse * const q);
 
     void parseGetBucketVersioningResponse(QXmlStreamReader &xml);
 

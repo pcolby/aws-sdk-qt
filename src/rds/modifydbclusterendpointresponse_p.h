@@ -31,7 +31,7 @@ class ModifyDBClusterEndpointResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    ModifyDBClusterEndpointResponsePrivate(ModifyDBClusterEndpointResponse * const q);
+    explicit ModifyDBClusterEndpointResponsePrivate(ModifyDBClusterEndpointResponse * const q);
 
     void parseModifyDBClusterEndpointResponse(QXmlStreamReader &xml);
 

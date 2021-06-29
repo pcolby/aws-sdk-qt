@@ -31,7 +31,7 @@ class AcceptCertificateTransferResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    AcceptCertificateTransferResponsePrivate(AcceptCertificateTransferResponse * const q);
+    explicit AcceptCertificateTransferResponsePrivate(AcceptCertificateTransferResponse * const q);
 
     void parseAcceptCertificateTransferResponse(QXmlStreamReader &xml);
 

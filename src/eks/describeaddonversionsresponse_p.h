@@ -31,7 +31,7 @@ class DescribeAddonVersionsResponsePrivate : public EksResponsePrivate {
 
 public:
 
-    DescribeAddonVersionsResponsePrivate(DescribeAddonVersionsResponse * const q);
+    explicit DescribeAddonVersionsResponsePrivate(DescribeAddonVersionsResponse * const q);
 
     void parseDescribeAddonVersionsResponse(QXmlStreamReader &xml);
 

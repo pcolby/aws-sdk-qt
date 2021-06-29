@@ -31,7 +31,7 @@ class ListAssociatedAssetsResponsePrivate : public IoTSiteWiseResponsePrivate {
 
 public:
 
-    ListAssociatedAssetsResponsePrivate(ListAssociatedAssetsResponse * const q);
+    explicit ListAssociatedAssetsResponsePrivate(ListAssociatedAssetsResponse * const q);
 
     void parseListAssociatedAssetsResponse(QXmlStreamReader &xml);
 

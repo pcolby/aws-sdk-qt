@@ -31,7 +31,7 @@ class DeleteApplicationOutputResponsePrivate : public KinesisAnalyticsV2Response
 
 public:
 
-    DeleteApplicationOutputResponsePrivate(DeleteApplicationOutputResponse * const q);
+    explicit DeleteApplicationOutputResponsePrivate(DeleteApplicationOutputResponse * const q);
 
     void parseDeleteApplicationOutputResponse(QXmlStreamReader &xml);
 

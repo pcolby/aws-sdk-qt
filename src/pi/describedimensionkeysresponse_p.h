@@ -31,7 +31,7 @@ class DescribeDimensionKeysResponsePrivate : public PiResponsePrivate {
 
 public:
 
-    DescribeDimensionKeysResponsePrivate(DescribeDimensionKeysResponse * const q);
+    explicit DescribeDimensionKeysResponsePrivate(DescribeDimensionKeysResponse * const q);
 
     void parseDescribeDimensionKeysResponse(QXmlStreamReader &xml);
 

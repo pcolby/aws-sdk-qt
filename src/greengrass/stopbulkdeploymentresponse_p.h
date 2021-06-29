@@ -31,7 +31,7 @@ class StopBulkDeploymentResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 
-    StopBulkDeploymentResponsePrivate(StopBulkDeploymentResponse * const q);
+    explicit StopBulkDeploymentResponsePrivate(StopBulkDeploymentResponse * const q);
 
     void parseStopBulkDeploymentResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class AcceptMatchResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    AcceptMatchResponsePrivate(AcceptMatchResponse * const q);
+    explicit AcceptMatchResponsePrivate(AcceptMatchResponse * const q);
 
     void parseAcceptMatchResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ChangeMessageVisibilityResponsePrivate : public SqsResponsePrivate {
 
 public:
 
-    ChangeMessageVisibilityResponsePrivate(ChangeMessageVisibilityResponse * const q);
+    explicit ChangeMessageVisibilityResponsePrivate(ChangeMessageVisibilityResponse * const q);
 
     void parseChangeMessageVisibilityResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class AssociateLinkResponsePrivate : public NetworkManagerResponsePrivate {
 
 public:
 
-    AssociateLinkResponsePrivate(AssociateLinkResponse * const q);
+    explicit AssociateLinkResponsePrivate(AssociateLinkResponse * const q);
 
     void parseAssociateLinkResponse(QXmlStreamReader &xml);
 

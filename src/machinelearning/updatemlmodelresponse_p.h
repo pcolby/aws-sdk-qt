@@ -31,7 +31,7 @@ class UpdateMLModelResponsePrivate : public MachineLearningResponsePrivate {
 
 public:
 
-    UpdateMLModelResponsePrivate(UpdateMLModelResponse * const q);
+    explicit UpdateMLModelResponsePrivate(UpdateMLModelResponse * const q);
 
     void parseUpdateMLModelResponse(QXmlStreamReader &xml);
 

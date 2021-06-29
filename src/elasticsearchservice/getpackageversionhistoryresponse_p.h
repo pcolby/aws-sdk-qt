@@ -31,7 +31,7 @@ class GetPackageVersionHistoryResponsePrivate : public ElasticsearchServiceRespo
 
 public:
 
-    GetPackageVersionHistoryResponsePrivate(GetPackageVersionHistoryResponse * const q);
+    explicit GetPackageVersionHistoryResponsePrivate(GetPackageVersionHistoryResponse * const q);
 
     void parseGetPackageVersionHistoryResponse(QXmlStreamReader &xml);
 

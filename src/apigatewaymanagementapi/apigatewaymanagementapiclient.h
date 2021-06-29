@@ -47,7 +47,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    ApiGatewayManagementApiClient(
+    explicit ApiGatewayManagementApiClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -60,7 +60,7 @@ public slots:
 protected:
     /// @cond internal
     ApiGatewayManagementApiClientPrivate * const d_ptr; ///< Internal d-pointer.
-    ApiGatewayManagementApiClient(ApiGatewayManagementApiClientPrivate * const d);
+    explicit ApiGatewayManagementApiClient(ApiGatewayManagementApiClientPrivate * const d);
     /// @endcond
 
 private:

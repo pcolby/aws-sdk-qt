@@ -31,7 +31,7 @@ class ConfigureLogsResponsePrivate : public MediaPackageVodResponsePrivate {
 
 public:
 
-    ConfigureLogsResponsePrivate(ConfigureLogsResponse * const q);
+    explicit ConfigureLogsResponsePrivate(ConfigureLogsResponse * const q);
 
     void parseConfigureLogsResponse(QXmlStreamReader &xml);
 

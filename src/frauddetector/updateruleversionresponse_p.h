@@ -31,7 +31,7 @@ class UpdateRuleVersionResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 
-    UpdateRuleVersionResponsePrivate(UpdateRuleVersionResponse * const q);
+    explicit UpdateRuleVersionResponsePrivate(UpdateRuleVersionResponse * const q);
 
     void parseUpdateRuleVersionResponse(QXmlStreamReader &xml);
 

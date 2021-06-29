@@ -31,7 +31,7 @@ class DeleteBasePathMappingResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    DeleteBasePathMappingResponsePrivate(DeleteBasePathMappingResponse * const q);
+    explicit DeleteBasePathMappingResponsePrivate(DeleteBasePathMappingResponse * const q);
 
     void parseDeleteBasePathMappingResponse(QXmlStreamReader &xml);
 

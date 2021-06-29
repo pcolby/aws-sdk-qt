@@ -31,7 +31,7 @@ class ListFlowDefinitionsResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    ListFlowDefinitionsResponsePrivate(ListFlowDefinitionsResponse * const q);
+    explicit ListFlowDefinitionsResponsePrivate(ListFlowDefinitionsResponse * const q);
 
     void parseListFlowDefinitionsResponse(QXmlStreamReader &xml);
 

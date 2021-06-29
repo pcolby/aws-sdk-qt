@@ -31,7 +31,7 @@ class ResetImageAttributeResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ResetImageAttributeResponsePrivate(ResetImageAttributeResponse * const q);
+    explicit ResetImageAttributeResponsePrivate(ResetImageAttributeResponse * const q);
 
     void parseResetImageAttributeResponse(QXmlStreamReader &xml);
 

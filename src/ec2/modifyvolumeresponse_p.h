@@ -31,7 +31,7 @@ class ModifyVolumeResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ModifyVolumeResponsePrivate(ModifyVolumeResponse * const q);
+    explicit ModifyVolumeResponsePrivate(ModifyVolumeResponse * const q);
 
     void parseModifyVolumeResponse(QXmlStreamReader &xml);
 

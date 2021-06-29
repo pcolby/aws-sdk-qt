@@ -31,7 +31,7 @@ class UpdatePipelineStatusResponsePrivate : public ElasticTranscoderResponsePriv
 
 public:
 
-    UpdatePipelineStatusResponsePrivate(UpdatePipelineStatusResponse * const q);
+    explicit UpdatePipelineStatusResponsePrivate(UpdatePipelineStatusResponse * const q);
 
     void parseUpdatePipelineStatusResponse(QXmlStreamReader &xml);
 

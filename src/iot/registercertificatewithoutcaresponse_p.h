@@ -31,7 +31,7 @@ class RegisterCertificateWithoutCAResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    RegisterCertificateWithoutCAResponsePrivate(RegisterCertificateWithoutCAResponse * const q);
+    explicit RegisterCertificateWithoutCAResponsePrivate(RegisterCertificateWithoutCAResponse * const q);
 
     void parseRegisterCertificateWithoutCAResponse(QXmlStreamReader &xml);
 

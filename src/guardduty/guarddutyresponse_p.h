@@ -29,7 +29,7 @@ class GuardDutyResponsePrivate {
 
 public:
 
-    GuardDutyResponsePrivate(GuardDutyResponse * const q);
+    explicit GuardDutyResponsePrivate(GuardDutyResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

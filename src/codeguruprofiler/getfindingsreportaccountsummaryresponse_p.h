@@ -31,7 +31,7 @@ class GetFindingsReportAccountSummaryResponsePrivate : public CodeGuruProfilerRe
 
 public:
 
-    GetFindingsReportAccountSummaryResponsePrivate(GetFindingsReportAccountSummaryResponse * const q);
+    explicit GetFindingsReportAccountSummaryResponsePrivate(GetFindingsReportAccountSummaryResponse * const q);
 
     void parseGetFindingsReportAccountSummaryResponse(QXmlStreamReader &xml);
 

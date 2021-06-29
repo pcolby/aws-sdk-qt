@@ -31,7 +31,7 @@ class StartAvailabilityMonitorTestResponsePrivate : public StorageGatewayRespons
 
 public:
 
-    StartAvailabilityMonitorTestResponsePrivate(StartAvailabilityMonitorTestResponse * const q);
+    explicit StartAvailabilityMonitorTestResponsePrivate(StartAvailabilityMonitorTestResponse * const q);
 
     void parseStartAvailabilityMonitorTestResponse(QXmlStreamReader &xml);
 

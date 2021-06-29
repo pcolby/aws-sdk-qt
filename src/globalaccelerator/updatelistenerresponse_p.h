@@ -31,7 +31,7 @@ class UpdateListenerResponsePrivate : public GlobalAcceleratorResponsePrivate {
 
 public:
 
-    UpdateListenerResponsePrivate(UpdateListenerResponse * const q);
+    explicit UpdateListenerResponsePrivate(UpdateListenerResponse * const q);
 
     void parseUpdateListenerResponse(QXmlStreamReader &xml);
 

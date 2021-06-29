@@ -31,7 +31,7 @@ class PutActionRevisionResponsePrivate : public CodePipelineResponsePrivate {
 
 public:
 
-    PutActionRevisionResponsePrivate(PutActionRevisionResponse * const q);
+    explicit PutActionRevisionResponsePrivate(PutActionRevisionResponse * const q);
 
     void parsePutActionRevisionResponse(QXmlStreamReader &xml);
 

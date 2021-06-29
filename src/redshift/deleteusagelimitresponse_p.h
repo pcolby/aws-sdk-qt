@@ -31,7 +31,7 @@ class DeleteUsageLimitResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    DeleteUsageLimitResponsePrivate(DeleteUsageLimitResponse * const q);
+    explicit DeleteUsageLimitResponsePrivate(DeleteUsageLimitResponse * const q);
 
     void parseDeleteUsageLimitResponse(QXmlStreamReader &xml);
 

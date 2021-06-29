@@ -31,7 +31,7 @@ class ContinueUpdateRollbackResponsePrivate : public CloudFormationResponsePriva
 
 public:
 
-    ContinueUpdateRollbackResponsePrivate(ContinueUpdateRollbackResponse * const q);
+    explicit ContinueUpdateRollbackResponsePrivate(ContinueUpdateRollbackResponse * const q);
 
     void parseContinueUpdateRollbackResponse(QXmlStreamReader &xml);
 

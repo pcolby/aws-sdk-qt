@@ -31,7 +31,7 @@ class GetPipelineStateResponsePrivate : public CodePipelineResponsePrivate {
 
 public:
 
-    GetPipelineStateResponsePrivate(GetPipelineStateResponse * const q);
+    explicit GetPipelineStateResponsePrivate(GetPipelineStateResponse * const q);
 
     void parseGetPipelineStateResponse(QXmlStreamReader &xml);
 

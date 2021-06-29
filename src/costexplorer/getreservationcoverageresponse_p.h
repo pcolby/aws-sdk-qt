@@ -31,7 +31,7 @@ class GetReservationCoverageResponsePrivate : public CostExplorerResponsePrivate
 
 public:
 
-    GetReservationCoverageResponsePrivate(GetReservationCoverageResponse * const q);
+    explicit GetReservationCoverageResponsePrivate(GetReservationCoverageResponse * const q);
 
     void parseGetReservationCoverageResponse(QXmlStreamReader &xml);
 

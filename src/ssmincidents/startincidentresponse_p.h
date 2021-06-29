@@ -31,7 +31,7 @@ class StartIncidentResponsePrivate : public SSMIncidentsResponsePrivate {
 
 public:
 
-    StartIncidentResponsePrivate(StartIncidentResponse * const q);
+    explicit StartIncidentResponsePrivate(StartIncidentResponse * const q);
 
     void parseStartIncidentResponse(QXmlStreamReader &xml);
 

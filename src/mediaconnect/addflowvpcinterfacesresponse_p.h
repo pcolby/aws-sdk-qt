@@ -31,7 +31,7 @@ class AddFlowVpcInterfacesResponsePrivate : public MediaConnectResponsePrivate {
 
 public:
 
-    AddFlowVpcInterfacesResponsePrivate(AddFlowVpcInterfacesResponse * const q);
+    explicit AddFlowVpcInterfacesResponsePrivate(AddFlowVpcInterfacesResponse * const q);
 
     void parseAddFlowVpcInterfacesResponse(QXmlStreamReader &xml);
 

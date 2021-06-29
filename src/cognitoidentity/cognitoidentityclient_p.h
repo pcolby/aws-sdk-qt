@@ -30,7 +30,7 @@ class CognitoIdentityClient;
 class CognitoIdentityClientPrivate {
 
 public:
-    CognitoIdentityClientPrivate(CognitoIdentityClient * const q);
+    explicit CognitoIdentityClientPrivate(CognitoIdentityClient * const q);
 
 protected:
     CognitoIdentityClient * const q_ptr; ///< Internal q-pointer.

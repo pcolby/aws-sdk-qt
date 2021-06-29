@@ -31,7 +31,7 @@ class DescribeLocalGatewaysResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeLocalGatewaysResponsePrivate(DescribeLocalGatewaysResponse * const q);
+    explicit DescribeLocalGatewaysResponsePrivate(DescribeLocalGatewaysResponse * const q);
 
     void parseDescribeLocalGatewaysResponse(QXmlStreamReader &xml);
 

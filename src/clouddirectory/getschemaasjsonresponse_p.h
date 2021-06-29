@@ -31,7 +31,7 @@ class GetSchemaAsJsonResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 
-    GetSchemaAsJsonResponsePrivate(GetSchemaAsJsonResponse * const q);
+    explicit GetSchemaAsJsonResponsePrivate(GetSchemaAsJsonResponse * const q);
 
     void parseGetSchemaAsJsonResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteDirectConnectGatewayAssociationResponsePrivate : public DirectConnec
 
 public:
 
-    DeleteDirectConnectGatewayAssociationResponsePrivate(DeleteDirectConnectGatewayAssociationResponse * const q);
+    explicit DeleteDirectConnectGatewayAssociationResponsePrivate(DeleteDirectConnectGatewayAssociationResponse * const q);
 
     void parseDeleteDirectConnectGatewayAssociationResponse(QXmlStreamReader &xml);
 

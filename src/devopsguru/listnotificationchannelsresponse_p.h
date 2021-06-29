@@ -31,7 +31,7 @@ class ListNotificationChannelsResponsePrivate : public DevOpsGuruResponsePrivate
 
 public:
 
-    ListNotificationChannelsResponsePrivate(ListNotificationChannelsResponse * const q);
+    explicit ListNotificationChannelsResponsePrivate(ListNotificationChannelsResponse * const q);
 
     void parseListNotificationChannelsResponse(QXmlStreamReader &xml);
 

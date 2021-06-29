@@ -29,7 +29,7 @@ class AthenaResponsePrivate {
 
 public:
 
-    AthenaResponsePrivate(AthenaResponse * const q);
+    explicit AthenaResponsePrivate(AthenaResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

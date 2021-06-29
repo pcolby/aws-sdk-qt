@@ -31,7 +31,7 @@ class UpdateTimeToLiveResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 
-    UpdateTimeToLiveResponsePrivate(UpdateTimeToLiveResponse * const q);
+    explicit UpdateTimeToLiveResponsePrivate(UpdateTimeToLiveResponse * const q);
 
     void parseUpdateTimeToLiveResponse(QXmlStreamReader &xml);
 

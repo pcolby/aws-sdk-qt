@@ -31,7 +31,7 @@ class DeleteChannelBanResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    DeleteChannelBanResponsePrivate(DeleteChannelBanResponse * const q);
+    explicit DeleteChannelBanResponsePrivate(DeleteChannelBanResponse * const q);
 
     void parseDeleteChannelBanResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class AssociateSecurityKeyResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    AssociateSecurityKeyResponsePrivate(AssociateSecurityKeyResponse * const q);
+    explicit AssociateSecurityKeyResponsePrivate(AssociateSecurityKeyResponse * const q);
 
     void parseAssociateSecurityKeyResponse(QXmlStreamReader &xml);
 

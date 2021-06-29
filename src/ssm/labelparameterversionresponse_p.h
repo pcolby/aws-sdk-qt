@@ -31,7 +31,7 @@ class LabelParameterVersionResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    LabelParameterVersionResponsePrivate(LabelParameterVersionResponse * const q);
+    explicit LabelParameterVersionResponsePrivate(LabelParameterVersionResponse * const q);
 
     void parseLabelParameterVersionResponse(QXmlStreamReader &xml);
 

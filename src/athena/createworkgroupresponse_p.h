@@ -31,7 +31,7 @@ class CreateWorkGroupResponsePrivate : public AthenaResponsePrivate {
 
 public:
 
-    CreateWorkGroupResponsePrivate(CreateWorkGroupResponse * const q);
+    explicit CreateWorkGroupResponsePrivate(CreateWorkGroupResponse * const q);
 
     void parseCreateWorkGroupResponse(QXmlStreamReader &xml);
 

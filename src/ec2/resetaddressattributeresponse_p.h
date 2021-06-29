@@ -31,7 +31,7 @@ class ResetAddressAttributeResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ResetAddressAttributeResponsePrivate(ResetAddressAttributeResponse * const q);
+    explicit ResetAddressAttributeResponsePrivate(ResetAddressAttributeResponse * const q);
 
     void parseResetAddressAttributeResponse(QXmlStreamReader &xml);
 

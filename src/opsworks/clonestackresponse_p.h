@@ -31,7 +31,7 @@ class CloneStackResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    CloneStackResponsePrivate(CloneStackResponse * const q);
+    explicit CloneStackResponsePrivate(CloneStackResponse * const q);
 
     void parseCloneStackResponse(QXmlStreamReader &xml);
 

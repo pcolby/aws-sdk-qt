@@ -31,7 +31,7 @@ class CreateReservedInstancesListingResponsePrivate : public Ec2ResponsePrivate 
 
 public:
 
-    CreateReservedInstancesListingResponsePrivate(CreateReservedInstancesListingResponse * const q);
+    explicit CreateReservedInstancesListingResponsePrivate(CreateReservedInstancesListingResponse * const q);
 
     void parseCreateReservedInstancesListingResponse(QXmlStreamReader &xml);
 

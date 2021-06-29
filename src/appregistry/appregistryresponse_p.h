@@ -29,7 +29,7 @@ class AppRegistryResponsePrivate {
 
 public:
 
-    AppRegistryResponsePrivate(AppRegistryResponse * const q);
+    explicit AppRegistryResponsePrivate(AppRegistryResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

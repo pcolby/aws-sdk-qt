@@ -29,7 +29,7 @@ class ApiGatewayV2ResponsePrivate {
 
 public:
 
-    ApiGatewayV2ResponsePrivate(ApiGatewayV2Response * const q);
+    explicit ApiGatewayV2ResponsePrivate(ApiGatewayV2Response * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

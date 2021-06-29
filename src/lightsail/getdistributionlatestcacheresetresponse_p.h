@@ -31,7 +31,7 @@ class GetDistributionLatestCacheResetResponsePrivate : public LightsailResponseP
 
 public:
 
-    GetDistributionLatestCacheResetResponsePrivate(GetDistributionLatestCacheResetResponse * const q);
+    explicit GetDistributionLatestCacheResetResponsePrivate(GetDistributionLatestCacheResetResponse * const q);
 
     void parseGetDistributionLatestCacheResetResponse(QXmlStreamReader &xml);
 

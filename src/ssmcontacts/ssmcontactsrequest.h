@@ -86,7 +86,7 @@ public:
 protected:
     /// @cond internal
     SSMContactsRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    SSMContactsRequest(SSMContactsRequestPrivate * const d);
+    explicit SSMContactsRequest(SSMContactsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

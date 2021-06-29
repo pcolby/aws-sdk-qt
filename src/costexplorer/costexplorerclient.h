@@ -101,7 +101,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    CostExplorerClient(
+    explicit CostExplorerClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -141,7 +141,7 @@ public slots:
 protected:
     /// @cond internal
     CostExplorerClientPrivate * const d_ptr; ///< Internal d-pointer.
-    CostExplorerClient(CostExplorerClientPrivate * const d);
+    explicit CostExplorerClient(CostExplorerClientPrivate * const d);
     /// @endcond
 
 private:

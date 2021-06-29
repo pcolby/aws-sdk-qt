@@ -31,7 +31,7 @@ class DescribePublicIpv4PoolsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribePublicIpv4PoolsResponsePrivate(DescribePublicIpv4PoolsResponse * const q);
+    explicit DescribePublicIpv4PoolsResponsePrivate(DescribePublicIpv4PoolsResponse * const q);
 
     void parseDescribePublicIpv4PoolsResponse(QXmlStreamReader &xml);
 

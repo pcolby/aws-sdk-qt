@@ -29,7 +29,7 @@ class CodeDeployResponsePrivate {
 
 public:
 
-    CodeDeployResponsePrivate(CodeDeployResponse * const q);
+    explicit CodeDeployResponsePrivate(CodeDeployResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

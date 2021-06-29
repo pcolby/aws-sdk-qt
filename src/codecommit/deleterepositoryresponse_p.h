@@ -31,7 +31,7 @@ class DeleteRepositoryResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 
-    DeleteRepositoryResponsePrivate(DeleteRepositoryResponse * const q);
+    explicit DeleteRepositoryResponsePrivate(DeleteRepositoryResponse * const q);
 
     void parseDeleteRepositoryResponse(QXmlStreamReader &xml);
 

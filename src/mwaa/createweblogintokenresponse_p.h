@@ -31,7 +31,7 @@ class CreateWebLoginTokenResponsePrivate : public MwaaResponsePrivate {
 
 public:
 
-    CreateWebLoginTokenResponsePrivate(CreateWebLoginTokenResponse * const q);
+    explicit CreateWebLoginTokenResponsePrivate(CreateWebLoginTokenResponse * const q);
 
     void parseCreateWebLoginTokenResponse(QXmlStreamReader &xml);
 

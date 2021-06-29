@@ -31,7 +31,7 @@ class PutObjectResponsePrivate : public MediaStoreDataResponsePrivate {
 
 public:
 
-    PutObjectResponsePrivate(PutObjectResponse * const q);
+    explicit PutObjectResponsePrivate(PutObjectResponse * const q);
 
     void parsePutObjectResponse(QXmlStreamReader &xml);
 

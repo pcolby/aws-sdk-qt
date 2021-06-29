@@ -31,7 +31,7 @@ class GetObjectLockConfigurationResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    GetObjectLockConfigurationResponsePrivate(GetObjectLockConfigurationResponse * const q);
+    explicit GetObjectLockConfigurationResponsePrivate(GetObjectLockConfigurationResponse * const q);
 
     void parseGetObjectLockConfigurationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteDBSecurityGroupResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    DeleteDBSecurityGroupResponsePrivate(DeleteDBSecurityGroupResponse * const q);
+    explicit DeleteDBSecurityGroupResponsePrivate(DeleteDBSecurityGroupResponse * const q);
 
     void parseDeleteDBSecurityGroupResponse(QXmlStreamReader &xml);
 

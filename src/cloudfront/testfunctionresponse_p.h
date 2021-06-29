@@ -31,7 +31,7 @@ class TestFunctionResponsePrivate : public CloudFrontResponsePrivate {
 
 public:
 
-    TestFunctionResponsePrivate(TestFunctionResponse * const q);
+    explicit TestFunctionResponsePrivate(TestFunctionResponse * const q);
 
     void parseTestFunctionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateDomainContactPrivacyResponsePrivate : public Route53DomainsResponseP
 
 public:
 
-    UpdateDomainContactPrivacyResponsePrivate(UpdateDomainContactPrivacyResponse * const q);
+    explicit UpdateDomainContactPrivacyResponsePrivate(UpdateDomainContactPrivacyResponse * const q);
 
     void parseUpdateDomainContactPrivacyResponse(QXmlStreamReader &xml);
 

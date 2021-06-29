@@ -31,7 +31,7 @@ class DeleteObjectsResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    DeleteObjectsResponsePrivate(DeleteObjectsResponse * const q);
+    explicit DeleteObjectsResponsePrivate(DeleteObjectsResponse * const q);
 
     void parseDeleteObjectsResponse(QXmlStreamReader &xml);
 

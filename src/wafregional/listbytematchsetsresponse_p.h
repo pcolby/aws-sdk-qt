@@ -31,7 +31,7 @@ class ListByteMatchSetsResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 
-    ListByteMatchSetsResponsePrivate(ListByteMatchSetsResponse * const q);
+    explicit ListByteMatchSetsResponsePrivate(ListByteMatchSetsResponse * const q);
 
     void parseListByteMatchSetsResponse(QXmlStreamReader &xml);
 

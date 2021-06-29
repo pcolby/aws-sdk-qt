@@ -29,7 +29,7 @@ class SnsResponsePrivate {
 
 public:
 
-    SnsResponsePrivate(SnsResponse * const q);
+    explicit SnsResponsePrivate(SnsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

@@ -31,7 +31,7 @@ class UpgradeAppliedSchemaResponsePrivate : public CloudDirectoryResponsePrivate
 
 public:
 
-    UpgradeAppliedSchemaResponsePrivate(UpgradeAppliedSchemaResponse * const q);
+    explicit UpgradeAppliedSchemaResponsePrivate(UpgradeAppliedSchemaResponse * const q);
 
     void parseUpgradeAppliedSchemaResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteArchiveRuleResponsePrivate : public AccessAnalyzerResponsePrivate {
 
 public:
 
-    DeleteArchiveRuleResponsePrivate(DeleteArchiveRuleResponse * const q);
+    explicit DeleteArchiveRuleResponsePrivate(DeleteArchiveRuleResponse * const q);
 
     void parseDeleteArchiveRuleResponse(QXmlStreamReader &xml);
 

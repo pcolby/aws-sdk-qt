@@ -31,7 +31,7 @@ class DeleteMailboxPermissionsResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 
-    DeleteMailboxPermissionsResponsePrivate(DeleteMailboxPermissionsResponse * const q);
+    explicit DeleteMailboxPermissionsResponsePrivate(DeleteMailboxPermissionsResponse * const q);
 
     void parseDeleteMailboxPermissionsResponse(QXmlStreamReader &xml);
 

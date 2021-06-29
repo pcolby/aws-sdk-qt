@@ -31,7 +31,7 @@ class ReserveContactResponsePrivate : public GroundStationResponsePrivate {
 
 public:
 
-    ReserveContactResponsePrivate(ReserveContactResponse * const q);
+    explicit ReserveContactResponsePrivate(ReserveContactResponse * const q);
 
     void parseReserveContactResponse(QXmlStreamReader &xml);
 

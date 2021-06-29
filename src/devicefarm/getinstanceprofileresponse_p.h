@@ -31,7 +31,7 @@ class GetInstanceProfileResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    GetInstanceProfileResponsePrivate(GetInstanceProfileResponse * const q);
+    explicit GetInstanceProfileResponsePrivate(GetInstanceProfileResponse * const q);
 
     void parseGetInstanceProfileResponse(QXmlStreamReader &xml);
 

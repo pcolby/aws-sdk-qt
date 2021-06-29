@@ -31,7 +31,7 @@ class UpdateGroupResponsePrivate : public XRayResponsePrivate {
 
 public:
 
-    UpdateGroupResponsePrivate(UpdateGroupResponse * const q);
+    explicit UpdateGroupResponsePrivate(UpdateGroupResponse * const q);
 
     void parseUpdateGroupResponse(QXmlStreamReader &xml);
 

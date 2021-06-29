@@ -31,7 +31,7 @@ class GetWorkGroupResponsePrivate : public AthenaResponsePrivate {
 
 public:
 
-    GetWorkGroupResponsePrivate(GetWorkGroupResponse * const q);
+    explicit GetWorkGroupResponsePrivate(GetWorkGroupResponse * const q);
 
     void parseGetWorkGroupResponse(QXmlStreamReader &xml);
 

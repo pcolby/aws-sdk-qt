@@ -31,7 +31,7 @@ class DeleteAlarmModelResponsePrivate : public IoTEventsResponsePrivate {
 
 public:
 
-    DeleteAlarmModelResponsePrivate(DeleteAlarmModelResponse * const q);
+    explicit DeleteAlarmModelResponsePrivate(DeleteAlarmModelResponse * const q);
 
     void parseDeleteAlarmModelResponse(QXmlStreamReader &xml);
 

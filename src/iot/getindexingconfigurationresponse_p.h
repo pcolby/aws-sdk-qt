@@ -31,7 +31,7 @@ class GetIndexingConfigurationResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    GetIndexingConfigurationResponsePrivate(GetIndexingConfigurationResponse * const q);
+    explicit GetIndexingConfigurationResponsePrivate(GetIndexingConfigurationResponse * const q);
 
     void parseGetIndexingConfigurationResponse(QXmlStreamReader &xml);
 

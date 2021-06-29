@@ -31,7 +31,7 @@ class CreateConditionalForwarderResponsePrivate : public DirectoryServiceRespons
 
 public:
 
-    CreateConditionalForwarderResponsePrivate(CreateConditionalForwarderResponse * const q);
+    explicit CreateConditionalForwarderResponsePrivate(CreateConditionalForwarderResponse * const q);
 
     void parseCreateConditionalForwarderResponse(QXmlStreamReader &xml);
 

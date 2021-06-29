@@ -31,7 +31,7 @@ class AdminGetUserResponsePrivate : public CognitoIdentityProviderResponsePrivat
 
 public:
 
-    AdminGetUserResponsePrivate(AdminGetUserResponse * const q);
+    explicit AdminGetUserResponsePrivate(AdminGetUserResponse * const q);
 
     void parseAdminGetUserResponse(QXmlStreamReader &xml);
 

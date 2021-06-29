@@ -31,7 +31,7 @@ class DescribeTapeArchivesResponsePrivate : public StorageGatewayResponsePrivate
 
 public:
 
-    DescribeTapeArchivesResponsePrivate(DescribeTapeArchivesResponse * const q);
+    explicit DescribeTapeArchivesResponsePrivate(DescribeTapeArchivesResponse * const q);
 
     void parseDescribeTapeArchivesResponse(QXmlStreamReader &xml);
 

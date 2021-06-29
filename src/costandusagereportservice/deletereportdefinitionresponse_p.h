@@ -31,7 +31,7 @@ class DeleteReportDefinitionResponsePrivate : public CostandUsageReportServiceRe
 
 public:
 
-    DeleteReportDefinitionResponsePrivate(DeleteReportDefinitionResponse * const q);
+    explicit DeleteReportDefinitionResponsePrivate(DeleteReportDefinitionResponse * const q);
 
     void parseDeleteReportDefinitionResponse(QXmlStreamReader &xml);
 

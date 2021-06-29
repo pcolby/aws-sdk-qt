@@ -31,7 +31,7 @@ class AttachPrincipalPolicyResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    AttachPrincipalPolicyResponsePrivate(AttachPrincipalPolicyResponse * const q);
+    explicit AttachPrincipalPolicyResponsePrivate(AttachPrincipalPolicyResponse * const q);
 
     void parseAttachPrincipalPolicyResponse(QXmlStreamReader &xml);
 

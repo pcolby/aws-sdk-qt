@@ -31,7 +31,7 @@ class GetOrganizationsAccessReportResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    GetOrganizationsAccessReportResponsePrivate(GetOrganizationsAccessReportResponse * const q);
+    explicit GetOrganizationsAccessReportResponsePrivate(GetOrganizationsAccessReportResponse * const q);
 
     void parseGetOrganizationsAccessReportResponse(QXmlStreamReader &xml);
 

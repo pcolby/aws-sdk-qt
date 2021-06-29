@@ -31,7 +31,7 @@ class DetectKeyPhrasesResponsePrivate : public ComprehendResponsePrivate {
 
 public:
 
-    DetectKeyPhrasesResponsePrivate(DetectKeyPhrasesResponse * const q);
+    explicit DetectKeyPhrasesResponsePrivate(DetectKeyPhrasesResponse * const q);
 
     void parseDetectKeyPhrasesResponse(QXmlStreamReader &xml);
 

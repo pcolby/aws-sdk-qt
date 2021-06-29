@@ -31,7 +31,7 @@ class ListDetectorModelsResponsePrivate : public IoTEventsResponsePrivate {
 
 public:
 
-    ListDetectorModelsResponsePrivate(ListDetectorModelsResponse * const q);
+    explicit ListDetectorModelsResponsePrivate(ListDetectorModelsResponse * const q);
 
     void parseListDetectorModelsResponse(QXmlStreamReader &xml);
 

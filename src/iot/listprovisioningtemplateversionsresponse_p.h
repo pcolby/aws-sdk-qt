@@ -31,7 +31,7 @@ class ListProvisioningTemplateVersionsResponsePrivate : public IoTResponsePrivat
 
 public:
 
-    ListProvisioningTemplateVersionsResponsePrivate(ListProvisioningTemplateVersionsResponse * const q);
+    explicit ListProvisioningTemplateVersionsResponsePrivate(ListProvisioningTemplateVersionsResponse * const q);
 
     void parseListProvisioningTemplateVersionsResponse(QXmlStreamReader &xml);
 

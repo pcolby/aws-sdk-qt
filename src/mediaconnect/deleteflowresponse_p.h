@@ -31,7 +31,7 @@ class DeleteFlowResponsePrivate : public MediaConnectResponsePrivate {
 
 public:
 
-    DeleteFlowResponsePrivate(DeleteFlowResponse * const q);
+    explicit DeleteFlowResponsePrivate(DeleteFlowResponse * const q);
 
     void parseDeleteFlowResponse(QXmlStreamReader &xml);
 

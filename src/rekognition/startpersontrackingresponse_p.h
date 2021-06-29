@@ -31,7 +31,7 @@ class StartPersonTrackingResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 
-    StartPersonTrackingResponsePrivate(StartPersonTrackingResponse * const q);
+    explicit StartPersonTrackingResponsePrivate(StartPersonTrackingResponse * const q);
 
     void parseStartPersonTrackingResponse(QXmlStreamReader &xml);
 

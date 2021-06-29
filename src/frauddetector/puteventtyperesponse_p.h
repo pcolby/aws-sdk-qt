@@ -31,7 +31,7 @@ class PutEventTypeResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 
-    PutEventTypeResponsePrivate(PutEventTypeResponse * const q);
+    explicit PutEventTypeResponsePrivate(PutEventTypeResponse * const q);
 
     void parsePutEventTypeResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class RejectInboundCrossClusterSearchConnectionResponsePrivate : public Elastics
 
 public:
 
-    RejectInboundCrossClusterSearchConnectionResponsePrivate(RejectInboundCrossClusterSearchConnectionResponse * const q);
+    explicit RejectInboundCrossClusterSearchConnectionResponsePrivate(RejectInboundCrossClusterSearchConnectionResponse * const q);
 
     void parseRejectInboundCrossClusterSearchConnectionResponse(QXmlStreamReader &xml);
 

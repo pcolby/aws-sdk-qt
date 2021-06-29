@@ -31,7 +31,7 @@ class DescribeRxNormInferenceJobResponsePrivate : public ComprehendMedicalRespon
 
 public:
 
-    DescribeRxNormInferenceJobResponsePrivate(DescribeRxNormInferenceJobResponse * const q);
+    explicit DescribeRxNormInferenceJobResponsePrivate(DescribeRxNormInferenceJobResponse * const q);
 
     void parseDescribeRxNormInferenceJobResponse(QXmlStreamReader &xml);
 

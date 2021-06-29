@@ -31,7 +31,7 @@ class DeleteIntentResponsePrivate : public LexModelBuildingServiceResponsePrivat
 
 public:
 
-    DeleteIntentResponsePrivate(DeleteIntentResponse * const q);
+    explicit DeleteIntentResponsePrivate(DeleteIntentResponse * const q);
 
     void parseDeleteIntentResponse(QXmlStreamReader &xml);
 

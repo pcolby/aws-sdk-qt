@@ -31,7 +31,7 @@ class GetInsightResultsResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 
-    GetInsightResultsResponsePrivate(GetInsightResultsResponse * const q);
+    explicit GetInsightResultsResponsePrivate(GetInsightResultsResponse * const q);
 
     void parseGetInsightResultsResponse(QXmlStreamReader &xml);
 

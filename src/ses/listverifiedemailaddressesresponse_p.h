@@ -31,7 +31,7 @@ class ListVerifiedEmailAddressesResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    ListVerifiedEmailAddressesResponsePrivate(ListVerifiedEmailAddressesResponse * const q);
+    explicit ListVerifiedEmailAddressesResponsePrivate(ListVerifiedEmailAddressesResponse * const q);
 
     void parseListVerifiedEmailAddressesResponse(QXmlStreamReader &xml);
 

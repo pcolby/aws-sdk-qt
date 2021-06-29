@@ -31,7 +31,7 @@ class GetStageResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    GetStageResponsePrivate(GetStageResponse * const q);
+    explicit GetStageResponsePrivate(GetStageResponse * const q);
 
     void parseGetStageResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateApnsVoipChannelResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    UpdateApnsVoipChannelResponsePrivate(UpdateApnsVoipChannelResponse * const q);
+    explicit UpdateApnsVoipChannelResponsePrivate(UpdateApnsVoipChannelResponse * const q);
 
     void parseUpdateApnsVoipChannelResponse(QXmlStreamReader &xml);
 

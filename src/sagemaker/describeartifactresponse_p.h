@@ -31,7 +31,7 @@ class DescribeArtifactResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    DescribeArtifactResponsePrivate(DescribeArtifactResponse * const q);
+    explicit DescribeArtifactResponsePrivate(DescribeArtifactResponse * const q);
 
     void parseDescribeArtifactResponse(QXmlStreamReader &xml);
 

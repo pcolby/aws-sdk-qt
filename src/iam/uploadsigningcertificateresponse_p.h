@@ -31,7 +31,7 @@ class UploadSigningCertificateResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    UploadSigningCertificateResponsePrivate(UploadSigningCertificateResponse * const q);
+    explicit UploadSigningCertificateResponsePrivate(UploadSigningCertificateResponse * const q);
 
     void parseUploadSigningCertificateResponse(QXmlStreamReader &xml);
 

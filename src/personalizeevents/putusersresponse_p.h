@@ -31,7 +31,7 @@ class PutUsersResponsePrivate : public PersonalizeEventsResponsePrivate {
 
 public:
 
-    PutUsersResponsePrivate(PutUsersResponse * const q);
+    explicit PutUsersResponsePrivate(PutUsersResponse * const q);
 
     void parsePutUsersResponse(QXmlStreamReader &xml);
 

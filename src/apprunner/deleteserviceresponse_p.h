@@ -31,7 +31,7 @@ class DeleteServiceResponsePrivate : public AppRunnerResponsePrivate {
 
 public:
 
-    DeleteServiceResponsePrivate(DeleteServiceResponse * const q);
+    explicit DeleteServiceResponsePrivate(DeleteServiceResponse * const q);
 
     void parseDeleteServiceResponse(QXmlStreamReader &xml);
 

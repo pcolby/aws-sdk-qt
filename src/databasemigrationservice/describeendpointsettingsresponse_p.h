@@ -31,7 +31,7 @@ class DescribeEndpointSettingsResponsePrivate : public DatabaseMigrationServiceR
 
 public:
 
-    DescribeEndpointSettingsResponsePrivate(DescribeEndpointSettingsResponse * const q);
+    explicit DescribeEndpointSettingsResponsePrivate(DescribeEndpointSettingsResponse * const q);
 
     void parseDescribeEndpointSettingsResponse(QXmlStreamReader &xml);
 

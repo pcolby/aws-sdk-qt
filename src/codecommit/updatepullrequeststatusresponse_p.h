@@ -31,7 +31,7 @@ class UpdatePullRequestStatusResponsePrivate : public CodeCommitResponsePrivate 
 
 public:
 
-    UpdatePullRequestStatusResponsePrivate(UpdatePullRequestStatusResponse * const q);
+    explicit UpdatePullRequestStatusResponsePrivate(UpdatePullRequestStatusResponse * const q);
 
     void parseUpdatePullRequestStatusResponse(QXmlStreamReader &xml);
 

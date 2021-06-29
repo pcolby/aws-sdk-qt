@@ -31,7 +31,7 @@ class DeleteProvisioningArtifactResponsePrivate : public ServiceCatalogResponseP
 
 public:
 
-    DeleteProvisioningArtifactResponsePrivate(DeleteProvisioningArtifactResponse * const q);
+    explicit DeleteProvisioningArtifactResponsePrivate(DeleteProvisioningArtifactResponse * const q);
 
     void parseDeleteProvisioningArtifactResponse(QXmlStreamReader &xml);
 

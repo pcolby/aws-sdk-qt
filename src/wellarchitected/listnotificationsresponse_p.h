@@ -31,7 +31,7 @@ class ListNotificationsResponsePrivate : public WellArchitectedResponsePrivate {
 
 public:
 
-    ListNotificationsResponsePrivate(ListNotificationsResponse * const q);
+    explicit ListNotificationsResponsePrivate(ListNotificationsResponse * const q);
 
     void parseListNotificationsResponse(QXmlStreamReader &xml);
 

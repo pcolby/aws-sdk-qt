@@ -31,7 +31,7 @@ class UpdateApplicationResponsePrivate : public KinesisAnalyticsResponsePrivate 
 
 public:
 
-    UpdateApplicationResponsePrivate(UpdateApplicationResponse * const q);
+    explicit UpdateApplicationResponsePrivate(UpdateApplicationResponse * const q);
 
     void parseUpdateApplicationResponse(QXmlStreamReader &xml);
 

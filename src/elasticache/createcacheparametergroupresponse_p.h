@@ -31,7 +31,7 @@ class CreateCacheParameterGroupResponsePrivate : public ElastiCacheResponsePriva
 
 public:
 
-    CreateCacheParameterGroupResponsePrivate(CreateCacheParameterGroupResponse * const q);
+    explicit CreateCacheParameterGroupResponsePrivate(CreateCacheParameterGroupResponse * const q);
 
     void parseCreateCacheParameterGroupResponse(QXmlStreamReader &xml);
 

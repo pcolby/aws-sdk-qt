@@ -31,7 +31,7 @@ class BatchStopUpdateActionResponsePrivate : public ElastiCacheResponsePrivate {
 
 public:
 
-    BatchStopUpdateActionResponsePrivate(BatchStopUpdateActionResponse * const q);
+    explicit BatchStopUpdateActionResponsePrivate(BatchStopUpdateActionResponse * const q);
 
     void parseBatchStopUpdateActionResponse(QXmlStreamReader &xml);
 

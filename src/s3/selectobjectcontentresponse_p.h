@@ -31,7 +31,7 @@ class SelectObjectContentResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    SelectObjectContentResponsePrivate(SelectObjectContentResponse * const q);
+    explicit SelectObjectContentResponsePrivate(SelectObjectContentResponse * const q);
 
     void parseSelectObjectContentResponse(QXmlStreamReader &xml);
 

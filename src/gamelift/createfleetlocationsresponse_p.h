@@ -31,7 +31,7 @@ class CreateFleetLocationsResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    CreateFleetLocationsResponsePrivate(CreateFleetLocationsResponse * const q);
+    explicit CreateFleetLocationsResponsePrivate(CreateFleetLocationsResponse * const q);
 
     void parseCreateFleetLocationsResponse(QXmlStreamReader &xml);
 

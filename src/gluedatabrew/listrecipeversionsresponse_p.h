@@ -31,7 +31,7 @@ class ListRecipeVersionsResponsePrivate : public GlueDataBrewResponsePrivate {
 
 public:
 
-    ListRecipeVersionsResponsePrivate(ListRecipeVersionsResponse * const q);
+    explicit ListRecipeVersionsResponsePrivate(ListRecipeVersionsResponse * const q);
 
     void parseListRecipeVersionsResponse(QXmlStreamReader &xml);
 

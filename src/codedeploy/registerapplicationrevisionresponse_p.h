@@ -31,7 +31,7 @@ class RegisterApplicationRevisionResponsePrivate : public CodeDeployResponsePriv
 
 public:
 
-    RegisterApplicationRevisionResponsePrivate(RegisterApplicationRevisionResponse * const q);
+    explicit RegisterApplicationRevisionResponsePrivate(RegisterApplicationRevisionResponse * const q);
 
     void parseRegisterApplicationRevisionResponse(QXmlStreamReader &xml);
 

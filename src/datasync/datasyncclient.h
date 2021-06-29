@@ -111,7 +111,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    DataSyncClient(
+    explicit DataSyncClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -156,7 +156,7 @@ public slots:
 protected:
     /// @cond internal
     DataSyncClientPrivate * const d_ptr; ///< Internal d-pointer.
-    DataSyncClient(DataSyncClientPrivate * const d);
+    explicit DataSyncClient(DataSyncClientPrivate * const d);
     /// @endcond
 
 private:

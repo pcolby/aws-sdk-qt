@@ -31,7 +31,7 @@ class DeleteBuildBatchResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 
-    DeleteBuildBatchResponsePrivate(DeleteBuildBatchResponse * const q);
+    explicit DeleteBuildBatchResponsePrivate(DeleteBuildBatchResponse * const q);
 
     void parseDeleteBuildBatchResponse(QXmlStreamReader &xml);
 

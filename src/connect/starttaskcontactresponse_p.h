@@ -31,7 +31,7 @@ class StartTaskContactResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    StartTaskContactResponsePrivate(StartTaskContactResponse * const q);
+    explicit StartTaskContactResponsePrivate(StartTaskContactResponse * const q);
 
     void parseStartTaskContactResponse(QXmlStreamReader &xml);
 

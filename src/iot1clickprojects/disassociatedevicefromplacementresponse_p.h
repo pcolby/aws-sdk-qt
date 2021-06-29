@@ -31,7 +31,7 @@ class DisassociateDeviceFromPlacementResponsePrivate : public IoT1ClickProjectsR
 
 public:
 
-    DisassociateDeviceFromPlacementResponsePrivate(DisassociateDeviceFromPlacementResponse * const q);
+    explicit DisassociateDeviceFromPlacementResponsePrivate(DisassociateDeviceFromPlacementResponse * const q);
 
     void parseDisassociateDeviceFromPlacementResponse(QXmlStreamReader &xml);
 

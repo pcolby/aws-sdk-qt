@@ -31,7 +31,7 @@ class ConfirmProductInstanceResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ConfirmProductInstanceResponsePrivate(ConfirmProductInstanceResponse * const q);
+    explicit ConfirmProductInstanceResponsePrivate(ConfirmProductInstanceResponse * const q);
 
     void parseConfirmProductInstanceResponse(QXmlStreamReader &xml);
 

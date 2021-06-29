@@ -106,7 +106,7 @@ public:
 protected:
     /// @cond internal
     ElasticBeanstalkRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    ElasticBeanstalkRequest(ElasticBeanstalkRequestPrivate * const d);
+    explicit ElasticBeanstalkRequest(ElasticBeanstalkRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

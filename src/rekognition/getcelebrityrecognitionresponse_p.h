@@ -31,7 +31,7 @@ class GetCelebrityRecognitionResponsePrivate : public RekognitionResponsePrivate
 
 public:
 
-    GetCelebrityRecognitionResponsePrivate(GetCelebrityRecognitionResponse * const q);
+    explicit GetCelebrityRecognitionResponsePrivate(GetCelebrityRecognitionResponse * const q);
 
     void parseGetCelebrityRecognitionResponse(QXmlStreamReader &xml);
 

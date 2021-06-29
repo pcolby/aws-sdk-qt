@@ -31,7 +31,7 @@ class GetTransitGatewayConnectPeerAssociationsResponsePrivate : public NetworkMa
 
 public:
 
-    GetTransitGatewayConnectPeerAssociationsResponsePrivate(GetTransitGatewayConnectPeerAssociationsResponse * const q);
+    explicit GetTransitGatewayConnectPeerAssociationsResponsePrivate(GetTransitGatewayConnectPeerAssociationsResponse * const q);
 
     void parseGetTransitGatewayConnectPeerAssociationsResponse(QXmlStreamReader &xml);
 

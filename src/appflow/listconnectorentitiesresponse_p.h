@@ -31,7 +31,7 @@ class ListConnectorEntitiesResponsePrivate : public AppflowResponsePrivate {
 
 public:
 
-    ListConnectorEntitiesResponsePrivate(ListConnectorEntitiesResponse * const q);
+    explicit ListConnectorEntitiesResponsePrivate(ListConnectorEntitiesResponse * const q);
 
     void parseListConnectorEntitiesResponse(QXmlStreamReader &xml);
 

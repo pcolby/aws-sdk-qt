@@ -31,7 +31,7 @@ class ListRobotsResponsePrivate : public RoboMakerResponsePrivate {
 
 public:
 
-    ListRobotsResponsePrivate(ListRobotsResponse * const q);
+    explicit ListRobotsResponsePrivate(ListRobotsResponse * const q);
 
     void parseListRobotsResponse(QXmlStreamReader &xml);
 

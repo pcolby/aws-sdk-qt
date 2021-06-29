@@ -31,7 +31,7 @@ class GetEC2InstanceRecommendationsResponsePrivate : public ComputeOptimizerResp
 
 public:
 
-    GetEC2InstanceRecommendationsResponsePrivate(GetEC2InstanceRecommendationsResponse * const q);
+    explicit GetEC2InstanceRecommendationsResponsePrivate(GetEC2InstanceRecommendationsResponse * const q);
 
     void parseGetEC2InstanceRecommendationsResponse(QXmlStreamReader &xml);
 

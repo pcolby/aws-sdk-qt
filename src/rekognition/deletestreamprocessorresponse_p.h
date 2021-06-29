@@ -31,7 +31,7 @@ class DeleteStreamProcessorResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 
-    DeleteStreamProcessorResponsePrivate(DeleteStreamProcessorResponse * const q);
+    explicit DeleteStreamProcessorResponsePrivate(DeleteStreamProcessorResponse * const q);
 
     void parseDeleteStreamProcessorResponse(QXmlStreamReader &xml);
 

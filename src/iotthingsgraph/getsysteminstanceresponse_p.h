@@ -31,7 +31,7 @@ class GetSystemInstanceResponsePrivate : public IoTThingsGraphResponsePrivate {
 
 public:
 
-    GetSystemInstanceResponsePrivate(GetSystemInstanceResponse * const q);
+    explicit GetSystemInstanceResponsePrivate(GetSystemInstanceResponse * const q);
 
     void parseGetSystemInstanceResponse(QXmlStreamReader &xml);
 

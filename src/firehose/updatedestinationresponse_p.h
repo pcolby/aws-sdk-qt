@@ -31,7 +31,7 @@ class UpdateDestinationResponsePrivate : public FirehoseResponsePrivate {
 
 public:
 
-    UpdateDestinationResponsePrivate(UpdateDestinationResponse * const q);
+    explicit UpdateDestinationResponsePrivate(UpdateDestinationResponse * const q);
 
     void parseUpdateDestinationResponse(QXmlStreamReader &xml);
 

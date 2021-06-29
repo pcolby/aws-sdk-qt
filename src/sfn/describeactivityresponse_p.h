@@ -31,7 +31,7 @@ class DescribeActivityResponsePrivate : public SfnResponsePrivate {
 
 public:
 
-    DescribeActivityResponsePrivate(DescribeActivityResponse * const q);
+    explicit DescribeActivityResponsePrivate(DescribeActivityResponse * const q);
 
     void parseDescribeActivityResponse(QXmlStreamReader &xml);
 

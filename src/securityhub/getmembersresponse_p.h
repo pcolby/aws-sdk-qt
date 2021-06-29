@@ -31,7 +31,7 @@ class GetMembersResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 
-    GetMembersResponsePrivate(GetMembersResponse * const q);
+    explicit GetMembersResponsePrivate(GetMembersResponse * const q);
 
     void parseGetMembersResponse(QXmlStreamReader &xml);
 

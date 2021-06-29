@@ -31,7 +31,7 @@ class GetSignalingChannelEndpointResponsePrivate : public KinesisVideoResponsePr
 
 public:
 
-    GetSignalingChannelEndpointResponsePrivate(GetSignalingChannelEndpointResponse * const q);
+    explicit GetSignalingChannelEndpointResponsePrivate(GetSignalingChannelEndpointResponse * const q);
 
     void parseGetSignalingChannelEndpointResponse(QXmlStreamReader &xml);
 

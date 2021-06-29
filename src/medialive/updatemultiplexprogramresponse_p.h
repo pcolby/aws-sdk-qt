@@ -31,7 +31,7 @@ class UpdateMultiplexProgramResponsePrivate : public MediaLiveResponsePrivate {
 
 public:
 
-    UpdateMultiplexProgramResponsePrivate(UpdateMultiplexProgramResponse * const q);
+    explicit UpdateMultiplexProgramResponsePrivate(UpdateMultiplexProgramResponse * const q);
 
     void parseUpdateMultiplexProgramResponse(QXmlStreamReader &xml);
 

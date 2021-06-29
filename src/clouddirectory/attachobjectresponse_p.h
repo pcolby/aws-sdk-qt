@@ -31,7 +31,7 @@ class AttachObjectResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 
-    AttachObjectResponsePrivate(AttachObjectResponse * const q);
+    explicit AttachObjectResponsePrivate(AttachObjectResponse * const q);
 
     void parseAttachObjectResponse(QXmlStreamReader &xml);
 

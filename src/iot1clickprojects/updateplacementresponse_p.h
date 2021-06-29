@@ -31,7 +31,7 @@ class UpdatePlacementResponsePrivate : public IoT1ClickProjectsResponsePrivate {
 
 public:
 
-    UpdatePlacementResponsePrivate(UpdatePlacementResponse * const q);
+    explicit UpdatePlacementResponsePrivate(UpdatePlacementResponse * const q);
 
     void parseUpdatePlacementResponse(QXmlStreamReader &xml);
 

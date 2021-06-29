@@ -31,7 +31,7 @@ class GetInlinePolicyForPermissionSetResponsePrivate : public SSOAdminResponsePr
 
 public:
 
-    GetInlinePolicyForPermissionSetResponsePrivate(GetInlinePolicyForPermissionSetResponse * const q);
+    explicit GetInlinePolicyForPermissionSetResponsePrivate(GetInlinePolicyForPermissionSetResponse * const q);
 
     void parseGetInlinePolicyForPermissionSetResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class RevokeFlowEntitlementResponsePrivate : public MediaConnectResponsePrivate 
 
 public:
 
-    RevokeFlowEntitlementResponsePrivate(RevokeFlowEntitlementResponse * const q);
+    explicit RevokeFlowEntitlementResponsePrivate(RevokeFlowEntitlementResponse * const q);
 
     void parseRevokeFlowEntitlementResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListTokensResponsePrivate : public LicenseManagerResponsePrivate {
 
 public:
 
-    ListTokensResponsePrivate(ListTokensResponse * const q);
+    explicit ListTokensResponsePrivate(ListTokensResponse * const q);
 
     void parseListTokensResponse(QXmlStreamReader &xml);
 

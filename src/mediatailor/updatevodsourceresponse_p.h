@@ -31,7 +31,7 @@ class UpdateVodSourceResponsePrivate : public MediaTailorResponsePrivate {
 
 public:
 
-    UpdateVodSourceResponsePrivate(UpdateVodSourceResponse * const q);
+    explicit UpdateVodSourceResponsePrivate(UpdateVodSourceResponse * const q);
 
     void parseUpdateVodSourceResponse(QXmlStreamReader &xml);
 

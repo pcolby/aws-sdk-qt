@@ -31,7 +31,7 @@ class UpdateDataCatalogResponsePrivate : public AthenaResponsePrivate {
 
 public:
 
-    UpdateDataCatalogResponsePrivate(UpdateDataCatalogResponse * const q);
+    explicit UpdateDataCatalogResponsePrivate(UpdateDataCatalogResponse * const q);
 
     void parseUpdateDataCatalogResponse(QXmlStreamReader &xml);
 

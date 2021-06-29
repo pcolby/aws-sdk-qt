@@ -31,7 +31,7 @@ class ListQueryExecutionsResponsePrivate : public AthenaResponsePrivate {
 
 public:
 
-    ListQueryExecutionsResponsePrivate(ListQueryExecutionsResponse * const q);
+    explicit ListQueryExecutionsResponsePrivate(ListQueryExecutionsResponse * const q);
 
     void parseListQueryExecutionsResponse(QXmlStreamReader &xml);
 

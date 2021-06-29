@@ -31,7 +31,7 @@ class GetDevicePositionHistoryResponsePrivate : public LocationServiceResponsePr
 
 public:
 
-    GetDevicePositionHistoryResponsePrivate(GetDevicePositionHistoryResponse * const q);
+    explicit GetDevicePositionHistoryResponsePrivate(GetDevicePositionHistoryResponse * const q);
 
     void parseGetDevicePositionHistoryResponse(QXmlStreamReader &xml);
 

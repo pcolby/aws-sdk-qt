@@ -31,7 +31,7 @@ class ListThesauriResponsePrivate : public kendraResponsePrivate {
 
 public:
 
-    ListThesauriResponsePrivate(ListThesauriResponse * const q);
+    explicit ListThesauriResponsePrivate(ListThesauriResponse * const q);
 
     void parseListThesauriResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeletePlaybackKeyPairResponsePrivate : public IvsResponsePrivate {
 
 public:
 
-    DeletePlaybackKeyPairResponsePrivate(DeletePlaybackKeyPairResponse * const q);
+    explicit DeletePlaybackKeyPairResponsePrivate(DeletePlaybackKeyPairResponse * const q);
 
     void parseDeletePlaybackKeyPairResponse(QXmlStreamReader &xml);
 

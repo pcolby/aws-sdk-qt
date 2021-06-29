@@ -31,7 +31,7 @@ class GetClipResponsePrivate : public KinesisVideoArchivedMediaResponsePrivate {
 
 public:
 
-    GetClipResponsePrivate(GetClipResponse * const q);
+    explicit GetClipResponsePrivate(GetClipResponse * const q);
 
     void parseGetClipResponse(QXmlStreamReader &xml);
 

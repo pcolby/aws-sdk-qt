@@ -85,7 +85,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    DataExchangeClient(
+    explicit DataExchangeClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -117,7 +117,7 @@ public slots:
 protected:
     /// @cond internal
     DataExchangeClientPrivate * const d_ptr; ///< Internal d-pointer.
-    DataExchangeClient(DataExchangeClientPrivate * const d);
+    explicit DataExchangeClient(DataExchangeClientPrivate * const d);
     /// @endcond
 
 private:

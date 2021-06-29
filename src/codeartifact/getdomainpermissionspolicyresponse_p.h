@@ -31,7 +31,7 @@ class GetDomainPermissionsPolicyResponsePrivate : public CodeArtifactResponsePri
 
 public:
 
-    GetDomainPermissionsPolicyResponsePrivate(GetDomainPermissionsPolicyResponse * const q);
+    explicit GetDomainPermissionsPolicyResponsePrivate(GetDomainPermissionsPolicyResponse * const q);
 
     void parseGetDomainPermissionsPolicyResponse(QXmlStreamReader &xml);
 

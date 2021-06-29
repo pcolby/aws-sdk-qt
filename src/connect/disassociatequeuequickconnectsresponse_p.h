@@ -31,7 +31,7 @@ class DisassociateQueueQuickConnectsResponsePrivate : public ConnectResponsePriv
 
 public:
 
-    DisassociateQueueQuickConnectsResponsePrivate(DisassociateQueueQuickConnectsResponse * const q);
+    explicit DisassociateQueueQuickConnectsResponsePrivate(DisassociateQueueQuickConnectsResponse * const q);
 
     void parseDisassociateQueueQuickConnectsResponse(QXmlStreamReader &xml);
 

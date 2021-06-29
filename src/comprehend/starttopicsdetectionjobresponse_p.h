@@ -31,7 +31,7 @@ class StartTopicsDetectionJobResponsePrivate : public ComprehendResponsePrivate 
 
 public:
 
-    StartTopicsDetectionJobResponsePrivate(StartTopicsDetectionJobResponse * const q);
+    explicit StartTopicsDetectionJobResponsePrivate(StartTopicsDetectionJobResponse * const q);
 
     void parseStartTopicsDetectionJobResponse(QXmlStreamReader &xml);
 

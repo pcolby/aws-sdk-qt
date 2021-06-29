@@ -143,7 +143,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    RekognitionClient(
+    explicit RekognitionClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -204,7 +204,7 @@ public slots:
 protected:
     /// @cond internal
     RekognitionClientPrivate * const d_ptr; ///< Internal d-pointer.
-    RekognitionClient(RekognitionClientPrivate * const d);
+    explicit RekognitionClient(RekognitionClientPrivate * const d);
     /// @endcond
 
 private:

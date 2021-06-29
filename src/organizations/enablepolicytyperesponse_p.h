@@ -31,7 +31,7 @@ class EnablePolicyTypeResponsePrivate : public OrganizationsResponsePrivate {
 
 public:
 
-    EnablePolicyTypeResponsePrivate(EnablePolicyTypeResponse * const q);
+    explicit EnablePolicyTypeResponsePrivate(EnablePolicyTypeResponse * const q);
 
     void parseEnablePolicyTypeResponse(QXmlStreamReader &xml);
 

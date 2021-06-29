@@ -31,7 +31,7 @@ class StartProjectSessionResponsePrivate : public GlueDataBrewResponsePrivate {
 
 public:
 
-    StartProjectSessionResponsePrivate(StartProjectSessionResponse * const q);
+    explicit StartProjectSessionResponsePrivate(StartProjectSessionResponse * const q);
 
     void parseStartProjectSessionResponse(QXmlStreamReader &xml);
 

@@ -29,7 +29,7 @@ class DataPipelineResponsePrivate {
 
 public:
 
-    DataPipelineResponsePrivate(DataPipelineResponse * const q);
+    explicit DataPipelineResponsePrivate(DataPipelineResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

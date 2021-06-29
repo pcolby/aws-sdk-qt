@@ -31,7 +31,7 @@ class UpdateAliasResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    UpdateAliasResponsePrivate(UpdateAliasResponse * const q);
+    explicit UpdateAliasResponsePrivate(UpdateAliasResponse * const q);
 
     void parseUpdateAliasResponse(QXmlStreamReader &xml);
 

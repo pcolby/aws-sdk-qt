@@ -31,7 +31,7 @@ class DescribeEntitiesDetectionJobResponsePrivate : public ComprehendResponsePri
 
 public:
 
-    DescribeEntitiesDetectionJobResponsePrivate(DescribeEntitiesDetectionJobResponse * const q);
+    explicit DescribeEntitiesDetectionJobResponsePrivate(DescribeEntitiesDetectionJobResponse * const q);
 
     void parseDescribeEntitiesDetectionJobResponse(QXmlStreamReader &xml);
 

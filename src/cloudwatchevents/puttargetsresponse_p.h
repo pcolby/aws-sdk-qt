@@ -31,7 +31,7 @@ class PutTargetsResponsePrivate : public CloudWatchEventsResponsePrivate {
 
 public:
 
-    PutTargetsResponsePrivate(PutTargetsResponse * const q);
+    explicit PutTargetsResponsePrivate(PutTargetsResponse * const q);
 
     void parsePutTargetsResponse(QXmlStreamReader &xml);
 

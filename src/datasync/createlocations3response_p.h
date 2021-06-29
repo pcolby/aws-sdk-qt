@@ -31,7 +31,7 @@ class CreateLocationS3ResponsePrivate : public DataSyncResponsePrivate {
 
 public:
 
-    CreateLocationS3ResponsePrivate(CreateLocationS3Response * const q);
+    explicit CreateLocationS3ResponsePrivate(CreateLocationS3Response * const q);
 
     void parseCreateLocationS3Response(QXmlStreamReader &xml);
 

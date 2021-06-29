@@ -31,7 +31,7 @@ class GetDistributionMetricDataResponsePrivate : public LightsailResponsePrivate
 
 public:
 
-    GetDistributionMetricDataResponsePrivate(GetDistributionMetricDataResponse * const q);
+    explicit GetDistributionMetricDataResponsePrivate(GetDistributionMetricDataResponse * const q);
 
     void parseGetDistributionMetricDataResponse(QXmlStreamReader &xml);
 

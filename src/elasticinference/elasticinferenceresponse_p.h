@@ -29,7 +29,7 @@ class ElasticInferenceResponsePrivate {
 
 public:
 
-    ElasticInferenceResponsePrivate(ElasticInferenceResponse * const q);
+    explicit ElasticInferenceResponsePrivate(ElasticInferenceResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

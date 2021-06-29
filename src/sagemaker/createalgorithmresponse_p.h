@@ -31,7 +31,7 @@ class CreateAlgorithmResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    CreateAlgorithmResponsePrivate(CreateAlgorithmResponse * const q);
+    explicit CreateAlgorithmResponsePrivate(CreateAlgorithmResponse * const q);
 
     void parseCreateAlgorithmResponse(QXmlStreamReader &xml);
 

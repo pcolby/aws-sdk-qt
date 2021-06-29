@@ -31,7 +31,7 @@ class GetAccountPasswordPolicyResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    GetAccountPasswordPolicyResponsePrivate(GetAccountPasswordPolicyResponse * const q);
+    explicit GetAccountPasswordPolicyResponsePrivate(GetAccountPasswordPolicyResponse * const q);
 
     void parseGetAccountPasswordPolicyResponse(QXmlStreamReader &xml);
 

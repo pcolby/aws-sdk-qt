@@ -31,7 +31,7 @@ class UpdateModelPackageResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    UpdateModelPackageResponsePrivate(UpdateModelPackageResponse * const q);
+    explicit UpdateModelPackageResponsePrivate(UpdateModelPackageResponse * const q);
 
     void parseUpdateModelPackageResponse(QXmlStreamReader &xml);
 

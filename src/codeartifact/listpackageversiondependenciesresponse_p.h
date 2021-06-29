@@ -31,7 +31,7 @@ class ListPackageVersionDependenciesResponsePrivate : public CodeArtifactRespons
 
 public:
 
-    ListPackageVersionDependenciesResponsePrivate(ListPackageVersionDependenciesResponse * const q);
+    explicit ListPackageVersionDependenciesResponsePrivate(ListPackageVersionDependenciesResponse * const q);
 
     void parseListPackageVersionDependenciesResponse(QXmlStreamReader &xml);
 

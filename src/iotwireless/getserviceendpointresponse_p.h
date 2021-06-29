@@ -31,7 +31,7 @@ class GetServiceEndpointResponsePrivate : public IoTWirelessResponsePrivate {
 
 public:
 
-    GetServiceEndpointResponsePrivate(GetServiceEndpointResponse * const q);
+    explicit GetServiceEndpointResponsePrivate(GetServiceEndpointResponse * const q);
 
     void parseGetServiceEndpointResponse(QXmlStreamReader &xml);
 

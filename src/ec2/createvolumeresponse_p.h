@@ -31,7 +31,7 @@ class CreateVolumeResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CreateVolumeResponsePrivate(CreateVolumeResponse * const q);
+    explicit CreateVolumeResponsePrivate(CreateVolumeResponse * const q);
 
     void parseCreateVolumeResponse(QXmlStreamReader &xml);
 

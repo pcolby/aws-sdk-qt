@@ -31,7 +31,7 @@ class DeleteReservationResponsePrivate : public MediaLiveResponsePrivate {
 
 public:
 
-    DeleteReservationResponsePrivate(DeleteReservationResponse * const q);
+    explicit DeleteReservationResponsePrivate(DeleteReservationResponse * const q);
 
     void parseDeleteReservationResponse(QXmlStreamReader &xml);
 

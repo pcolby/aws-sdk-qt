@@ -31,7 +31,7 @@ class UpdateLagResponsePrivate : public DirectConnectResponsePrivate {
 
 public:
 
-    UpdateLagResponsePrivate(UpdateLagResponse * const q);
+    explicit UpdateLagResponsePrivate(UpdateLagResponse * const q);
 
     void parseUpdateLagResponse(QXmlStreamReader &xml);
 

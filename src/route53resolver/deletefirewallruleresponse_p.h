@@ -31,7 +31,7 @@ class DeleteFirewallRuleResponsePrivate : public Route53ResolverResponsePrivate 
 
 public:
 
-    DeleteFirewallRuleResponsePrivate(DeleteFirewallRuleResponse * const q);
+    explicit DeleteFirewallRuleResponsePrivate(DeleteFirewallRuleResponse * const q);
 
     void parseDeleteFirewallRuleResponse(QXmlStreamReader &xml);
 

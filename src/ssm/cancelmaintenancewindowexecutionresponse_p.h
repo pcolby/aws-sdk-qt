@@ -31,7 +31,7 @@ class CancelMaintenanceWindowExecutionResponsePrivate : public SsmResponsePrivat
 
 public:
 
-    CancelMaintenanceWindowExecutionResponsePrivate(CancelMaintenanceWindowExecutionResponse * const q);
+    explicit CancelMaintenanceWindowExecutionResponsePrivate(CancelMaintenanceWindowExecutionResponse * const q);
 
     void parseCancelMaintenanceWindowExecutionResponse(QXmlStreamReader &xml);
 

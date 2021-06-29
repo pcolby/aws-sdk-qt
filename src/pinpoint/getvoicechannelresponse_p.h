@@ -31,7 +31,7 @@ class GetVoiceChannelResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    GetVoiceChannelResponsePrivate(GetVoiceChannelResponse * const q);
+    explicit GetVoiceChannelResponsePrivate(GetVoiceChannelResponse * const q);
 
     void parseGetVoiceChannelResponse(QXmlStreamReader &xml);
 

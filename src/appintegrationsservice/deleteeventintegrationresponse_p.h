@@ -31,7 +31,7 @@ class DeleteEventIntegrationResponsePrivate : public AppIntegrationsServiceRespo
 
 public:
 
-    DeleteEventIntegrationResponsePrivate(DeleteEventIntegrationResponse * const q);
+    explicit DeleteEventIntegrationResponsePrivate(DeleteEventIntegrationResponse * const q);
 
     void parseDeleteEventIntegrationResponse(QXmlStreamReader &xml);
 

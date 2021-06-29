@@ -31,7 +31,7 @@ class InvalidateProjectCacheResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 
-    InvalidateProjectCacheResponsePrivate(InvalidateProjectCacheResponse * const q);
+    explicit InvalidateProjectCacheResponsePrivate(InvalidateProjectCacheResponse * const q);
 
     void parseInvalidateProjectCacheResponse(QXmlStreamReader &xml);
 

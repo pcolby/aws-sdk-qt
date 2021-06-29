@@ -31,7 +31,7 @@ class UpdateApprovalRuleTemplateContentResponsePrivate : public CodeCommitRespon
 
 public:
 
-    UpdateApprovalRuleTemplateContentResponsePrivate(UpdateApprovalRuleTemplateContentResponse * const q);
+    explicit UpdateApprovalRuleTemplateContentResponsePrivate(UpdateApprovalRuleTemplateContentResponse * const q);
 
     void parseUpdateApprovalRuleTemplateContentResponse(QXmlStreamReader &xml);
 

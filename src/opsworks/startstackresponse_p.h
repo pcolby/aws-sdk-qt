@@ -31,7 +31,7 @@ class StartStackResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    StartStackResponsePrivate(StartStackResponse * const q);
+    explicit StartStackResponsePrivate(StartStackResponse * const q);
 
     void parseStartStackResponse(QXmlStreamReader &xml);
 

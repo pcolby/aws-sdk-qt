@@ -31,7 +31,7 @@ class DescribeMigrationTaskResponsePrivate : public MigrationHubResponsePrivate 
 
 public:
 
-    DescribeMigrationTaskResponsePrivate(DescribeMigrationTaskResponse * const q);
+    explicit DescribeMigrationTaskResponsePrivate(DescribeMigrationTaskResponse * const q);
 
     void parseDescribeMigrationTaskResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetChangeTokenStatusResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 
-    GetChangeTokenStatusResponsePrivate(GetChangeTokenStatusResponse * const q);
+    explicit GetChangeTokenStatusResponsePrivate(GetChangeTokenStatusResponse * const q);
 
     void parseGetChangeTokenStatusResponse(QXmlStreamReader &xml);
 

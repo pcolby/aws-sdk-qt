@@ -31,7 +31,7 @@ class AssociateCustomerGatewayResponsePrivate : public NetworkManagerResponsePri
 
 public:
 
-    AssociateCustomerGatewayResponsePrivate(AssociateCustomerGatewayResponse * const q);
+    explicit AssociateCustomerGatewayResponsePrivate(AssociateCustomerGatewayResponse * const q);
 
     void parseAssociateCustomerGatewayResponse(QXmlStreamReader &xml);
 

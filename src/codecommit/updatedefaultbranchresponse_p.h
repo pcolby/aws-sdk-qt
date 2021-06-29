@@ -31,7 +31,7 @@ class UpdateDefaultBranchResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 
-    UpdateDefaultBranchResponsePrivate(UpdateDefaultBranchResponse * const q);
+    explicit UpdateDefaultBranchResponsePrivate(UpdateDefaultBranchResponse * const q);
 
     void parseUpdateDefaultBranchResponse(QXmlStreamReader &xml);
 

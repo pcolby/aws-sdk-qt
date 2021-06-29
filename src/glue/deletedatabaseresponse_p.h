@@ -31,7 +31,7 @@ class DeleteDatabaseResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    DeleteDatabaseResponsePrivate(DeleteDatabaseResponse * const q);
+    explicit DeleteDatabaseResponsePrivate(DeleteDatabaseResponse * const q);
 
     void parseDeleteDatabaseResponse(QXmlStreamReader &xml);
 

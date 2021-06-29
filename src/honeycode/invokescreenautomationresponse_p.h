@@ -31,7 +31,7 @@ class InvokeScreenAutomationResponsePrivate : public HoneycodeResponsePrivate {
 
 public:
 
-    InvokeScreenAutomationResponsePrivate(InvokeScreenAutomationResponse * const q);
+    explicit InvokeScreenAutomationResponsePrivate(InvokeScreenAutomationResponse * const q);
 
     void parseInvokeScreenAutomationResponse(QXmlStreamReader &xml);
 

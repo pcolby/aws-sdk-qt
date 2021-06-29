@@ -31,7 +31,7 @@ class CreateTrustResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 
-    CreateTrustResponsePrivate(CreateTrustResponse * const q);
+    explicit CreateTrustResponsePrivate(CreateTrustResponse * const q);
 
     void parseCreateTrustResponse(QXmlStreamReader &xml);
 

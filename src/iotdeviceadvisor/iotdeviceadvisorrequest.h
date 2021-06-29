@@ -72,7 +72,7 @@ public:
 protected:
     /// @cond internal
     IoTDeviceAdvisorRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    IoTDeviceAdvisorRequest(IoTDeviceAdvisorRequestPrivate * const d);
+    explicit IoTDeviceAdvisorRequest(IoTDeviceAdvisorRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

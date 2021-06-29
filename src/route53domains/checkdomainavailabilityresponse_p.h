@@ -31,7 +31,7 @@ class CheckDomainAvailabilityResponsePrivate : public Route53DomainsResponsePriv
 
 public:
 
-    CheckDomainAvailabilityResponsePrivate(CheckDomainAvailabilityResponse * const q);
+    explicit CheckDomainAvailabilityResponsePrivate(CheckDomainAvailabilityResponse * const q);
 
     void parseCheckDomainAvailabilityResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ModifyRuleResponsePrivate : public ElasticLoadBalancingv2ResponsePrivate {
 
 public:
 
-    ModifyRuleResponsePrivate(ModifyRuleResponse * const q);
+    explicit ModifyRuleResponsePrivate(ModifyRuleResponse * const q);
 
     void parseModifyRuleResponse(QXmlStreamReader &xml);
 

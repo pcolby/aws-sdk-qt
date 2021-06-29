@@ -31,7 +31,7 @@ class StartExportLabelsTaskRunResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    StartExportLabelsTaskRunResponsePrivate(StartExportLabelsTaskRunResponse * const q);
+    explicit StartExportLabelsTaskRunResponsePrivate(StartExportLabelsTaskRunResponse * const q);
 
     void parseStartExportLabelsTaskRunResponse(QXmlStreamReader &xml);
 

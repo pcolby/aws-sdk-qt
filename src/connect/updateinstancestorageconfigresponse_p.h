@@ -31,7 +31,7 @@ class UpdateInstanceStorageConfigResponsePrivate : public ConnectResponsePrivate
 
 public:
 
-    UpdateInstanceStorageConfigResponsePrivate(UpdateInstanceStorageConfigResponse * const q);
+    explicit UpdateInstanceStorageConfigResponsePrivate(UpdateInstanceStorageConfigResponse * const q);
 
     void parseUpdateInstanceStorageConfigResponse(QXmlStreamReader &xml);
 

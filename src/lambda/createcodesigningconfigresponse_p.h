@@ -31,7 +31,7 @@ class CreateCodeSigningConfigResponsePrivate : public LambdaResponsePrivate {
 
 public:
 
-    CreateCodeSigningConfigResponsePrivate(CreateCodeSigningConfigResponse * const q);
+    explicit CreateCodeSigningConfigResponsePrivate(CreateCodeSigningConfigResponse * const q);
 
     void parseCreateCodeSigningConfigResponse(QXmlStreamReader &xml);
 

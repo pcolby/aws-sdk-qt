@@ -31,7 +31,7 @@ class DeleteNetworkInsightsPathResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DeleteNetworkInsightsPathResponsePrivate(DeleteNetworkInsightsPathResponse * const q);
+    explicit DeleteNetworkInsightsPathResponsePrivate(DeleteNetworkInsightsPathResponse * const q);
 
     void parseDeleteNetworkInsightsPathResponse(QXmlStreamReader &xml);
 

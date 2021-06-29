@@ -31,7 +31,7 @@ class GetResourceMetricsResponsePrivate : public PiResponsePrivate {
 
 public:
 
-    GetResourceMetricsResponsePrivate(GetResourceMetricsResponse * const q);
+    explicit GetResourceMetricsResponsePrivate(GetResourceMetricsResponse * const q);
 
     void parseGetResourceMetricsResponse(QXmlStreamReader &xml);
 

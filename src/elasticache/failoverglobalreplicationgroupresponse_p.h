@@ -31,7 +31,7 @@ class FailoverGlobalReplicationGroupResponsePrivate : public ElastiCacheResponse
 
 public:
 
-    FailoverGlobalReplicationGroupResponsePrivate(FailoverGlobalReplicationGroupResponse * const q);
+    explicit FailoverGlobalReplicationGroupResponsePrivate(FailoverGlobalReplicationGroupResponse * const q);
 
     void parseFailoverGlobalReplicationGroupResponse(QXmlStreamReader &xml);
 

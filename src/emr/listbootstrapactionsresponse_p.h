@@ -31,7 +31,7 @@ class ListBootstrapActionsResponsePrivate : public EmrResponsePrivate {
 
 public:
 
-    ListBootstrapActionsResponsePrivate(ListBootstrapActionsResponse * const q);
+    explicit ListBootstrapActionsResponsePrivate(ListBootstrapActionsResponse * const q);
 
     void parseListBootstrapActionsResponse(QXmlStreamReader &xml);
 

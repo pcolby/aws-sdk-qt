@@ -31,7 +31,7 @@ class UpdateSMBSecurityStrategyResponsePrivate : public StorageGatewayResponsePr
 
 public:
 
-    UpdateSMBSecurityStrategyResponsePrivate(UpdateSMBSecurityStrategyResponse * const q);
+    explicit UpdateSMBSecurityStrategyResponsePrivate(UpdateSMBSecurityStrategyResponse * const q);
 
     void parseUpdateSMBSecurityStrategyResponse(QXmlStreamReader &xml);
 

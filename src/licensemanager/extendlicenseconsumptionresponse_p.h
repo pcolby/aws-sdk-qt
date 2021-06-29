@@ -31,7 +31,7 @@ class ExtendLicenseConsumptionResponsePrivate : public LicenseManagerResponsePri
 
 public:
 
-    ExtendLicenseConsumptionResponsePrivate(ExtendLicenseConsumptionResponse * const q);
+    explicit ExtendLicenseConsumptionResponsePrivate(ExtendLicenseConsumptionResponse * const q);
 
     void parseExtendLicenseConsumptionResponse(QXmlStreamReader &xml);
 

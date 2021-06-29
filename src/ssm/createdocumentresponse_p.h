@@ -31,7 +31,7 @@ class CreateDocumentResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    CreateDocumentResponsePrivate(CreateDocumentResponse * const q);
+    explicit CreateDocumentResponsePrivate(CreateDocumentResponse * const q);
 
     void parseCreateDocumentResponse(QXmlStreamReader &xml);
 

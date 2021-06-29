@@ -31,7 +31,7 @@ class BatchDeleteTableVersionResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    BatchDeleteTableVersionResponsePrivate(BatchDeleteTableVersionResponse * const q);
+    explicit BatchDeleteTableVersionResponsePrivate(BatchDeleteTableVersionResponse * const q);
 
     void parseBatchDeleteTableVersionResponse(QXmlStreamReader &xml);
 

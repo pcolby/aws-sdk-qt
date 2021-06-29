@@ -31,7 +31,7 @@ class GetHostnameSuggestionResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    GetHostnameSuggestionResponsePrivate(GetHostnameSuggestionResponse * const q);
+    explicit GetHostnameSuggestionResponsePrivate(GetHostnameSuggestionResponse * const q);
 
     void parseGetHostnameSuggestionResponse(QXmlStreamReader &xml);
 

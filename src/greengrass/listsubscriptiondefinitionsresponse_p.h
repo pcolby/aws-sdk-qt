@@ -31,7 +31,7 @@ class ListSubscriptionDefinitionsResponsePrivate : public GreengrassResponsePriv
 
 public:
 
-    ListSubscriptionDefinitionsResponsePrivate(ListSubscriptionDefinitionsResponse * const q);
+    explicit ListSubscriptionDefinitionsResponsePrivate(ListSubscriptionDefinitionsResponse * const q);
 
     void parseListSubscriptionDefinitionsResponse(QXmlStreamReader &xml);
 

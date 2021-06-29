@@ -30,7 +30,7 @@ class AmplifyBackendClient;
 class AmplifyBackendClientPrivate {
 
 public:
-    AmplifyBackendClientPrivate(AmplifyBackendClient * const q);
+    explicit AmplifyBackendClientPrivate(AmplifyBackendClient * const q);
 
 protected:
     AmplifyBackendClient * const q_ptr; ///< Internal q-pointer.

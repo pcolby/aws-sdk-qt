@@ -31,7 +31,7 @@ class AssociateLambdaFunctionResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    AssociateLambdaFunctionResponsePrivate(AssociateLambdaFunctionResponse * const q);
+    explicit AssociateLambdaFunctionResponsePrivate(AssociateLambdaFunctionResponse * const q);
 
     void parseAssociateLambdaFunctionResponse(QXmlStreamReader &xml);
 

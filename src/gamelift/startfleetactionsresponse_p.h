@@ -31,7 +31,7 @@ class StartFleetActionsResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    StartFleetActionsResponsePrivate(StartFleetActionsResponse * const q);
+    explicit StartFleetActionsResponsePrivate(StartFleetActionsResponse * const q);
 
     void parseStartFleetActionsResponse(QXmlStreamReader &xml);
 

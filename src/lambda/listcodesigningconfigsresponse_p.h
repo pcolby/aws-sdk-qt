@@ -31,7 +31,7 @@ class ListCodeSigningConfigsResponsePrivate : public LambdaResponsePrivate {
 
 public:
 
-    ListCodeSigningConfigsResponsePrivate(ListCodeSigningConfigsResponse * const q);
+    explicit ListCodeSigningConfigsResponsePrivate(ListCodeSigningConfigsResponse * const q);
 
     void parseListCodeSigningConfigsResponse(QXmlStreamReader &xml);
 

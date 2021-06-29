@@ -30,7 +30,7 @@ class SagemakerEdgeManagerClient;
 class SagemakerEdgeManagerClientPrivate {
 
 public:
-    SagemakerEdgeManagerClientPrivate(SagemakerEdgeManagerClient * const q);
+    explicit SagemakerEdgeManagerClientPrivate(SagemakerEdgeManagerClient * const q);
 
 protected:
     SagemakerEdgeManagerClient * const q_ptr; ///< Internal q-pointer.

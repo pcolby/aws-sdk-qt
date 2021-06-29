@@ -31,7 +31,7 @@ class AllocatePublicVirtualInterfaceResponsePrivate : public DirectConnectRespon
 
 public:
 
-    AllocatePublicVirtualInterfaceResponsePrivate(AllocatePublicVirtualInterfaceResponse * const q);
+    explicit AllocatePublicVirtualInterfaceResponsePrivate(AllocatePublicVirtualInterfaceResponse * const q);
 
     void parseAllocatePublicVirtualInterfaceResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetAWSDefaultServiceQuotaResponsePrivate : public ServiceQuotasResponsePri
 
 public:
 
-    GetAWSDefaultServiceQuotaResponsePrivate(GetAWSDefaultServiceQuotaResponse * const q);
+    explicit GetAWSDefaultServiceQuotaResponsePrivate(GetAWSDefaultServiceQuotaResponse * const q);
 
     void parseGetAWSDefaultServiceQuotaResponse(QXmlStreamReader &xml);
 

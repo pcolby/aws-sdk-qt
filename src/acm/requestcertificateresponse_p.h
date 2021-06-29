@@ -31,7 +31,7 @@ class RequestCertificateResponsePrivate : public AcmResponsePrivate {
 
 public:
 
-    RequestCertificateResponsePrivate(RequestCertificateResponse * const q);
+    explicit RequestCertificateResponsePrivate(RequestCertificateResponse * const q);
 
     void parseRequestCertificateResponse(QXmlStreamReader &xml);
 

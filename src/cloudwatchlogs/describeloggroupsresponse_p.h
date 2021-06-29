@@ -31,7 +31,7 @@ class DescribeLogGroupsResponsePrivate : public CloudWatchLogsResponsePrivate {
 
 public:
 
-    DescribeLogGroupsResponsePrivate(DescribeLogGroupsResponse * const q);
+    explicit DescribeLogGroupsResponsePrivate(DescribeLogGroupsResponse * const q);
 
     void parseDescribeLogGroupsResponse(QXmlStreamReader &xml);
 

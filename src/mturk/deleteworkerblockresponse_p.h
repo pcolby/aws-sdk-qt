@@ -31,7 +31,7 @@ class DeleteWorkerBlockResponsePrivate : public MTurkResponsePrivate {
 
 public:
 
-    DeleteWorkerBlockResponsePrivate(DeleteWorkerBlockResponse * const q);
+    explicit DeleteWorkerBlockResponsePrivate(DeleteWorkerBlockResponse * const q);
 
     void parseDeleteWorkerBlockResponse(QXmlStreamReader &xml);
 

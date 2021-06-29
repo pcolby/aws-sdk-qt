@@ -31,7 +31,7 @@ class DescribeAccountLimitsResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 
-    DescribeAccountLimitsResponsePrivate(DescribeAccountLimitsResponse * const q);
+    explicit DescribeAccountLimitsResponsePrivate(DescribeAccountLimitsResponse * const q);
 
     void parseDescribeAccountLimitsResponse(QXmlStreamReader &xml);
 

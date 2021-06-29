@@ -31,7 +31,7 @@ class DescribeClusterVersionsResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    DescribeClusterVersionsResponsePrivate(DescribeClusterVersionsResponse * const q);
+    explicit DescribeClusterVersionsResponsePrivate(DescribeClusterVersionsResponse * const q);
 
     void parseDescribeClusterVersionsResponse(QXmlStreamReader &xml);
 

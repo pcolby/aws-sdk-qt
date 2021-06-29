@@ -31,7 +31,7 @@ class CreateGroupMembershipResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    CreateGroupMembershipResponsePrivate(CreateGroupMembershipResponse * const q);
+    explicit CreateGroupMembershipResponsePrivate(CreateGroupMembershipResponse * const q);
 
     void parseCreateGroupMembershipResponse(QXmlStreamReader &xml);
 

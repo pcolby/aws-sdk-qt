@@ -31,7 +31,7 @@ class CreateMicrosoftADResponsePrivate : public DirectoryServiceResponsePrivate 
 
 public:
 
-    CreateMicrosoftADResponsePrivate(CreateMicrosoftADResponse * const q);
+    explicit CreateMicrosoftADResponsePrivate(CreateMicrosoftADResponse * const q);
 
     void parseCreateMicrosoftADResponse(QXmlStreamReader &xml);
 

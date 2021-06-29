@@ -31,7 +31,7 @@ class CreateEnvironmentResponsePrivate : public ElasticBeanstalkResponsePrivate 
 
 public:
 
-    CreateEnvironmentResponsePrivate(CreateEnvironmentResponse * const q);
+    explicit CreateEnvironmentResponsePrivate(CreateEnvironmentResponse * const q);
 
     void parseCreateEnvironmentResponse(QXmlStreamReader &xml);
 

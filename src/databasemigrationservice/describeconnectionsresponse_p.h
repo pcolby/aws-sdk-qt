@@ -31,7 +31,7 @@ class DescribeConnectionsResponsePrivate : public DatabaseMigrationServiceRespon
 
 public:
 
-    DescribeConnectionsResponsePrivate(DescribeConnectionsResponse * const q);
+    explicit DescribeConnectionsResponsePrivate(DescribeConnectionsResponse * const q);
 
     void parseDescribeConnectionsResponse(QXmlStreamReader &xml);
 

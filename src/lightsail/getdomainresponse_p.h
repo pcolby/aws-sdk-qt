@@ -31,7 +31,7 @@ class GetDomainResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    GetDomainResponsePrivate(GetDomainResponse * const q);
+    explicit GetDomainResponsePrivate(GetDomainResponse * const q);
 
     void parseGetDomainResponse(QXmlStreamReader &xml);
 

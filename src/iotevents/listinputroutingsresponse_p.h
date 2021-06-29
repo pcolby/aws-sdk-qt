@@ -31,7 +31,7 @@ class ListInputRoutingsResponsePrivate : public IoTEventsResponsePrivate {
 
 public:
 
-    ListInputRoutingsResponsePrivate(ListInputRoutingsResponse * const q);
+    explicit ListInputRoutingsResponsePrivate(ListInputRoutingsResponse * const q);
 
     void parseListInputRoutingsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListMailboxExportJobsResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 
-    ListMailboxExportJobsResponsePrivate(ListMailboxExportJobsResponse * const q);
+    explicit ListMailboxExportJobsResponsePrivate(ListMailboxExportJobsResponse * const q);
 
     void parseListMailboxExportJobsResponse(QXmlStreamReader &xml);
 

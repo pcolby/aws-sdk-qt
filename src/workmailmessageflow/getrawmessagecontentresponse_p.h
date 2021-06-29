@@ -31,7 +31,7 @@ class GetRawMessageContentResponsePrivate : public WorkMailMessageFlowResponsePr
 
 public:
 
-    GetRawMessageContentResponsePrivate(GetRawMessageContentResponse * const q);
+    explicit GetRawMessageContentResponsePrivate(GetRawMessageContentResponse * const q);
 
     void parseGetRawMessageContentResponse(QXmlStreamReader &xml);
 

@@ -29,7 +29,7 @@ class SfnResponsePrivate {
 
 public:
 
-    SfnResponsePrivate(SfnResponse * const q);
+    explicit SfnResponsePrivate(SfnResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

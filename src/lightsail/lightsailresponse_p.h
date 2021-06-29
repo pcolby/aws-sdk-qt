@@ -29,7 +29,7 @@ class LightsailResponsePrivate {
 
 public:
 
-    LightsailResponsePrivate(LightsailResponse * const q);
+    explicit LightsailResponsePrivate(LightsailResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

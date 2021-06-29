@@ -31,7 +31,7 @@ class ValidateConfigurationSettingsResponsePrivate : public ElasticBeanstalkResp
 
 public:
 
-    ValidateConfigurationSettingsResponsePrivate(ValidateConfigurationSettingsResponse * const q);
+    explicit ValidateConfigurationSettingsResponsePrivate(ValidateConfigurationSettingsResponse * const q);
 
     void parseValidateConfigurationSettingsResponse(QXmlStreamReader &xml);
 

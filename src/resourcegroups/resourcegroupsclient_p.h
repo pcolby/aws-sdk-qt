@@ -30,7 +30,7 @@ class ResourceGroupsClient;
 class ResourceGroupsClientPrivate {
 
 public:
-    ResourceGroupsClientPrivate(ResourceGroupsClient * const q);
+    explicit ResourceGroupsClientPrivate(ResourceGroupsClient * const q);
 
 protected:
     ResourceGroupsClient * const q_ptr; ///< Internal q-pointer.

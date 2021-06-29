@@ -31,7 +31,7 @@ class DescribeSnapshotCopyGrantsResponsePrivate : public RedshiftResponsePrivate
 
 public:
 
-    DescribeSnapshotCopyGrantsResponsePrivate(DescribeSnapshotCopyGrantsResponse * const q);
+    explicit DescribeSnapshotCopyGrantsResponsePrivate(DescribeSnapshotCopyGrantsResponse * const q);
 
     void parseDescribeSnapshotCopyGrantsResponse(QXmlStreamReader &xml);
 

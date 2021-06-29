@@ -31,7 +31,7 @@ class GetDomainNameResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    GetDomainNameResponsePrivate(GetDomainNameResponse * const q);
+    explicit GetDomainNameResponsePrivate(GetDomainNameResponse * const q);
 
     void parseGetDomainNameResponse(QXmlStreamReader &xml);
 

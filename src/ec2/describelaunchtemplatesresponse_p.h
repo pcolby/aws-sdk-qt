@@ -31,7 +31,7 @@ class DescribeLaunchTemplatesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeLaunchTemplatesResponsePrivate(DescribeLaunchTemplatesResponse * const q);
+    explicit DescribeLaunchTemplatesResponsePrivate(DescribeLaunchTemplatesResponse * const q);
 
     void parseDescribeLaunchTemplatesResponse(QXmlStreamReader &xml);
 

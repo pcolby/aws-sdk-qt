@@ -31,7 +31,7 @@ class DisassociateBotResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    DisassociateBotResponsePrivate(DisassociateBotResponse * const q);
+    explicit DisassociateBotResponsePrivate(DisassociateBotResponse * const q);
 
     void parseDisassociateBotResponse(QXmlStreamReader &xml);
 

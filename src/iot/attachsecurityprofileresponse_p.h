@@ -31,7 +31,7 @@ class AttachSecurityProfileResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    AttachSecurityProfileResponsePrivate(AttachSecurityProfileResponse * const q);
+    explicit AttachSecurityProfileResponsePrivate(AttachSecurityProfileResponse * const q);
 
     void parseAttachSecurityProfileResponse(QXmlStreamReader &xml);
 

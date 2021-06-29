@@ -31,7 +31,7 @@ class UpdateBrokerResponsePrivate : public MqResponsePrivate {
 
 public:
 
-    UpdateBrokerResponsePrivate(UpdateBrokerResponse * const q);
+    explicit UpdateBrokerResponsePrivate(UpdateBrokerResponse * const q);
 
     void parseUpdateBrokerResponse(QXmlStreamReader &xml);
 

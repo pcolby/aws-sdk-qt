@@ -31,7 +31,7 @@ class GetMLTaskRunResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    GetMLTaskRunResponsePrivate(GetMLTaskRunResponse * const q);
+    explicit GetMLTaskRunResponsePrivate(GetMLTaskRunResponse * const q);
 
     void parseGetMLTaskRunResponse(QXmlStreamReader &xml);
 

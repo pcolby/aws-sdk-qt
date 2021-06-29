@@ -31,7 +31,7 @@ class DeleteDeliveryStreamResponsePrivate : public FirehoseResponsePrivate {
 
 public:
 
-    DeleteDeliveryStreamResponsePrivate(DeleteDeliveryStreamResponse * const q);
+    explicit DeleteDeliveryStreamResponsePrivate(DeleteDeliveryStreamResponse * const q);
 
     void parseDeleteDeliveryStreamResponse(QXmlStreamReader &xml);
 

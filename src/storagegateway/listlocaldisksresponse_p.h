@@ -31,7 +31,7 @@ class ListLocalDisksResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 
-    ListLocalDisksResponsePrivate(ListLocalDisksResponse * const q);
+    explicit ListLocalDisksResponsePrivate(ListLocalDisksResponse * const q);
 
     void parseListLocalDisksResponse(QXmlStreamReader &xml);
 

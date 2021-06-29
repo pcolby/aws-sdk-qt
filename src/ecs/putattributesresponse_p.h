@@ -31,7 +31,7 @@ class PutAttributesResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    PutAttributesResponsePrivate(PutAttributesResponse * const q);
+    explicit PutAttributesResponsePrivate(PutAttributesResponse * const q);
 
     void parsePutAttributesResponse(QXmlStreamReader &xml);
 

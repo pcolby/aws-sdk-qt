@@ -30,7 +30,7 @@ class ApplicationCostProfilerClient;
 class ApplicationCostProfilerClientPrivate {
 
 public:
-    ApplicationCostProfilerClientPrivate(ApplicationCostProfilerClient * const q);
+    explicit ApplicationCostProfilerClientPrivate(ApplicationCostProfilerClient * const q);
 
 protected:
     ApplicationCostProfilerClient * const q_ptr; ///< Internal q-pointer.

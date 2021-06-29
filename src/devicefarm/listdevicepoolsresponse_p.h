@@ -31,7 +31,7 @@ class ListDevicePoolsResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    ListDevicePoolsResponsePrivate(ListDevicePoolsResponse * const q);
+    explicit ListDevicePoolsResponsePrivate(ListDevicePoolsResponse * const q);
 
     void parseListDevicePoolsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetAccountResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    GetAccountResponsePrivate(GetAccountResponse * const q);
+    explicit GetAccountResponsePrivate(GetAccountResponse * const q);
 
     void parseGetAccountResponse(QXmlStreamReader &xml);
 

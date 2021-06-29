@@ -31,7 +31,7 @@ class DescribeRecommendationExportJobsResponsePrivate : public ComputeOptimizerR
 
 public:
 
-    DescribeRecommendationExportJobsResponsePrivate(DescribeRecommendationExportJobsResponse * const q);
+    explicit DescribeRecommendationExportJobsResponsePrivate(DescribeRecommendationExportJobsResponse * const q);
 
     void parseDescribeRecommendationExportJobsResponse(QXmlStreamReader &xml);
 

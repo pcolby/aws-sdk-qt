@@ -31,7 +31,7 @@ class DescribeInstanceEventNotificationAttributesResponsePrivate : public Ec2Res
 
 public:
 
-    DescribeInstanceEventNotificationAttributesResponsePrivate(DescribeInstanceEventNotificationAttributesResponse * const q);
+    explicit DescribeInstanceEventNotificationAttributesResponsePrivate(DescribeInstanceEventNotificationAttributesResponse * const q);
 
     void parseDescribeInstanceEventNotificationAttributesResponse(QXmlStreamReader &xml);
 

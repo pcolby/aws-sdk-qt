@@ -31,7 +31,7 @@ class DeleteConfigurationSetResponsePrivate : public PinpointEmailResponsePrivat
 
 public:
 
-    DeleteConfigurationSetResponsePrivate(DeleteConfigurationSetResponse * const q);
+    explicit DeleteConfigurationSetResponsePrivate(DeleteConfigurationSetResponse * const q);
 
     void parseDeleteConfigurationSetResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateComponentVersionResponsePrivate : public GreengrassV2ResponsePrivate
 
 public:
 
-    CreateComponentVersionResponsePrivate(CreateComponentVersionResponse * const q);
+    explicit CreateComponentVersionResponsePrivate(CreateComponentVersionResponse * const q);
 
     void parseCreateComponentVersionResponse(QXmlStreamReader &xml);
 

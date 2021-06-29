@@ -30,7 +30,7 @@ class mgnClient;
 class mgnClientPrivate {
 
 public:
-    mgnClientPrivate(mgnClient * const q);
+    explicit mgnClientPrivate(mgnClient * const q);
 
 protected:
     mgnClient * const q_ptr; ///< Internal q-pointer.

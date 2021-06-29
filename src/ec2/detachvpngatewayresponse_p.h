@@ -31,7 +31,7 @@ class DetachVpnGatewayResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DetachVpnGatewayResponsePrivate(DetachVpnGatewayResponse * const q);
+    explicit DetachVpnGatewayResponsePrivate(DetachVpnGatewayResponse * const q);
 
     void parseDetachVpnGatewayResponse(QXmlStreamReader &xml);
 

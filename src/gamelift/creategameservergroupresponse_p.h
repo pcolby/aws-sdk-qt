@@ -31,7 +31,7 @@ class CreateGameServerGroupResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    CreateGameServerGroupResponsePrivate(CreateGameServerGroupResponse * const q);
+    explicit CreateGameServerGroupResponsePrivate(CreateGameServerGroupResponse * const q);
 
     void parseCreateGameServerGroupResponse(QXmlStreamReader &xml);
 

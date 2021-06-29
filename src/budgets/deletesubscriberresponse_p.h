@@ -31,7 +31,7 @@ class DeleteSubscriberResponsePrivate : public BudgetsResponsePrivate {
 
 public:
 
-    DeleteSubscriberResponsePrivate(DeleteSubscriberResponse * const q);
+    explicit DeleteSubscriberResponsePrivate(DeleteSubscriberResponse * const q);
 
     void parseDeleteSubscriberResponse(QXmlStreamReader &xml);
 

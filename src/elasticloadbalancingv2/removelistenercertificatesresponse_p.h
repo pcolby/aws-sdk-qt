@@ -31,7 +31,7 @@ class RemoveListenerCertificatesResponsePrivate : public ElasticLoadBalancingv2R
 
 public:
 
-    RemoveListenerCertificatesResponsePrivate(RemoveListenerCertificatesResponse * const q);
+    explicit RemoveListenerCertificatesResponsePrivate(RemoveListenerCertificatesResponse * const q);
 
     void parseRemoveListenerCertificatesResponse(QXmlStreamReader &xml);
 

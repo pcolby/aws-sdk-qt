@@ -31,7 +31,7 @@ class PutScheduledActionResponsePrivate : public ApplicationAutoScalingResponseP
 
 public:
 
-    PutScheduledActionResponsePrivate(PutScheduledActionResponse * const q);
+    explicit PutScheduledActionResponsePrivate(PutScheduledActionResponse * const q);
 
     void parsePutScheduledActionResponse(QXmlStreamReader &xml);
 

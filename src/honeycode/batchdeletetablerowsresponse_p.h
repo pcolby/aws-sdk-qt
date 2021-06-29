@@ -31,7 +31,7 @@ class BatchDeleteTableRowsResponsePrivate : public HoneycodeResponsePrivate {
 
 public:
 
-    BatchDeleteTableRowsResponsePrivate(BatchDeleteTableRowsResponse * const q);
+    explicit BatchDeleteTableRowsResponsePrivate(BatchDeleteTableRowsResponse * const q);
 
     void parseBatchDeleteTableRowsResponse(QXmlStreamReader &xml);
 

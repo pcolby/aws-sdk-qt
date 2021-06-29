@@ -31,7 +31,7 @@ class GetGroupCertificateConfigurationResponsePrivate : public GreengrassRespons
 
 public:
 
-    GetGroupCertificateConfigurationResponsePrivate(GetGroupCertificateConfigurationResponse * const q);
+    explicit GetGroupCertificateConfigurationResponsePrivate(GetGroupCertificateConfigurationResponse * const q);
 
     void parseGetGroupCertificateConfigurationResponse(QXmlStreamReader &xml);
 

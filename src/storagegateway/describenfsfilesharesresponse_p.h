@@ -31,7 +31,7 @@ class DescribeNFSFileSharesResponsePrivate : public StorageGatewayResponsePrivat
 
 public:
 
-    DescribeNFSFileSharesResponsePrivate(DescribeNFSFileSharesResponse * const q);
+    explicit DescribeNFSFileSharesResponsePrivate(DescribeNFSFileSharesResponse * const q);
 
     void parseDescribeNFSFileSharesResponse(QXmlStreamReader &xml);
 

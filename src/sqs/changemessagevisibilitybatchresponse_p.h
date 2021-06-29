@@ -31,7 +31,7 @@ class ChangeMessageVisibilityBatchResponsePrivate : public SqsResponsePrivate {
 
 public:
 
-    ChangeMessageVisibilityBatchResponsePrivate(ChangeMessageVisibilityBatchResponse * const q);
+    explicit ChangeMessageVisibilityBatchResponsePrivate(ChangeMessageVisibilityBatchResponse * const q);
 
     void parseChangeMessageVisibilityBatchResponse(QXmlStreamReader &xml);
 

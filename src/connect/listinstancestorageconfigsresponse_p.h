@@ -31,7 +31,7 @@ class ListInstanceStorageConfigsResponsePrivate : public ConnectResponsePrivate 
 
 public:
 
-    ListInstanceStorageConfigsResponsePrivate(ListInstanceStorageConfigsResponse * const q);
+    explicit ListInstanceStorageConfigsResponsePrivate(ListInstanceStorageConfigsResponse * const q);
 
     void parseListInstanceStorageConfigsResponse(QXmlStreamReader &xml);
 

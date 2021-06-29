@@ -31,7 +31,7 @@ class GetProductsResponsePrivate : public PricingResponsePrivate {
 
 public:
 
-    GetProductsResponsePrivate(GetProductsResponse * const q);
+    explicit GetProductsResponsePrivate(GetProductsResponse * const q);
 
     void parseGetProductsResponse(QXmlStreamReader &xml);
 

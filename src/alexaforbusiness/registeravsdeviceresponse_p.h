@@ -31,7 +31,7 @@ class RegisterAVSDeviceResponsePrivate : public AlexaForBusinessResponsePrivate 
 
 public:
 
-    RegisterAVSDeviceResponsePrivate(RegisterAVSDeviceResponse * const q);
+    explicit RegisterAVSDeviceResponsePrivate(RegisterAVSDeviceResponse * const q);
 
     void parseRegisterAVSDeviceResponse(QXmlStreamReader &xml);
 

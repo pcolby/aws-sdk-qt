@@ -31,7 +31,7 @@ class BatchGetDevicePositionResponsePrivate : public LocationServiceResponsePriv
 
 public:
 
-    BatchGetDevicePositionResponsePrivate(BatchGetDevicePositionResponse * const q);
+    explicit BatchGetDevicePositionResponsePrivate(BatchGetDevicePositionResponse * const q);
 
     void parseBatchGetDevicePositionResponse(QXmlStreamReader &xml);
 

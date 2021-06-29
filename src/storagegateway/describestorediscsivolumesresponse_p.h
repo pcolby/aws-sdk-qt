@@ -31,7 +31,7 @@ class DescribeStorediSCSIVolumesResponsePrivate : public StorageGatewayResponseP
 
 public:
 
-    DescribeStorediSCSIVolumesResponsePrivate(DescribeStorediSCSIVolumesResponse * const q);
+    explicit DescribeStorediSCSIVolumesResponsePrivate(DescribeStorediSCSIVolumesResponse * const q);
 
     void parseDescribeStorediSCSIVolumesResponse(QXmlStreamReader &xml);
 

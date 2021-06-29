@@ -30,7 +30,7 @@ class GlueClient;
 class GlueClientPrivate {
 
 public:
-    GlueClientPrivate(GlueClient * const q);
+    explicit GlueClientPrivate(GlueClient * const q);
 
 protected:
     GlueClient * const q_ptr; ///< Internal q-pointer.

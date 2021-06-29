@@ -31,7 +31,7 @@ class UpdateTagsForDomainResponsePrivate : public Route53DomainsResponsePrivate 
 
 public:
 
-    UpdateTagsForDomainResponsePrivate(UpdateTagsForDomainResponse * const q);
+    explicit UpdateTagsForDomainResponsePrivate(UpdateTagsForDomainResponse * const q);
 
     void parseUpdateTagsForDomainResponse(QXmlStreamReader &xml);
 

@@ -121,7 +121,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    ElasticsearchServiceClient(
+    explicit ElasticsearchServiceClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -173,7 +173,7 @@ public slots:
 protected:
     /// @cond internal
     ElasticsearchServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
-    ElasticsearchServiceClient(ElasticsearchServiceClientPrivate * const d);
+    explicit ElasticsearchServiceClient(ElasticsearchServiceClientPrivate * const d);
     /// @endcond
 
 private:

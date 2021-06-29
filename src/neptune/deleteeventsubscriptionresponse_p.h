@@ -31,7 +31,7 @@ class DeleteEventSubscriptionResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 
-    DeleteEventSubscriptionResponsePrivate(DeleteEventSubscriptionResponse * const q);
+    explicit DeleteEventSubscriptionResponsePrivate(DeleteEventSubscriptionResponse * const q);
 
     void parseDeleteEventSubscriptionResponse(QXmlStreamReader &xml);
 

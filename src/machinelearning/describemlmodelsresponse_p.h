@@ -31,7 +31,7 @@ class DescribeMLModelsResponsePrivate : public MachineLearningResponsePrivate {
 
 public:
 
-    DescribeMLModelsResponsePrivate(DescribeMLModelsResponse * const q);
+    explicit DescribeMLModelsResponsePrivate(DescribeMLModelsResponse * const q);
 
     void parseDescribeMLModelsResponse(QXmlStreamReader &xml);
 

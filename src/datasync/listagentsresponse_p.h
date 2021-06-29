@@ -31,7 +31,7 @@ class ListAgentsResponsePrivate : public DataSyncResponsePrivate {
 
 public:
 
-    ListAgentsResponsePrivate(ListAgentsResponse * const q);
+    explicit ListAgentsResponsePrivate(ListAgentsResponse * const q);
 
     void parseListAgentsResponse(QXmlStreamReader &xml);
 

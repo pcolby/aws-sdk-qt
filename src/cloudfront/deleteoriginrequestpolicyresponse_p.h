@@ -31,7 +31,7 @@ class DeleteOriginRequestPolicyResponsePrivate : public CloudFrontResponsePrivat
 
 public:
 
-    DeleteOriginRequestPolicyResponsePrivate(DeleteOriginRequestPolicyResponse * const q);
+    explicit DeleteOriginRequestPolicyResponsePrivate(DeleteOriginRequestPolicyResponse * const q);
 
     void parseDeleteOriginRequestPolicyResponse(QXmlStreamReader &xml);
 

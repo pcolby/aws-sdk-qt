@@ -31,7 +31,7 @@ class CreateCustomAvailabilityZoneResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    CreateCustomAvailabilityZoneResponsePrivate(CreateCustomAvailabilityZoneResponse * const q);
+    explicit CreateCustomAvailabilityZoneResponsePrivate(CreateCustomAvailabilityZoneResponse * const q);
 
     void parseCreateCustomAvailabilityZoneResponse(QXmlStreamReader &xml);
 

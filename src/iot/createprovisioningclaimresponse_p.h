@@ -31,7 +31,7 @@ class CreateProvisioningClaimResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    CreateProvisioningClaimResponsePrivate(CreateProvisioningClaimResponse * const q);
+    explicit CreateProvisioningClaimResponsePrivate(CreateProvisioningClaimResponse * const q);
 
     void parseCreateProvisioningClaimResponse(QXmlStreamReader &xml);
 

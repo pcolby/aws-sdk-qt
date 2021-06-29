@@ -31,7 +31,7 @@ class CreateIntegrationAssociationResponsePrivate : public ConnectResponsePrivat
 
 public:
 
-    CreateIntegrationAssociationResponsePrivate(CreateIntegrationAssociationResponse * const q);
+    explicit CreateIntegrationAssociationResponsePrivate(CreateIntegrationAssociationResponse * const q);
 
     void parseCreateIntegrationAssociationResponse(QXmlStreamReader &xml);
 

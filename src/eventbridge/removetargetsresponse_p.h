@@ -31,7 +31,7 @@ class RemoveTargetsResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 
-    RemoveTargetsResponsePrivate(RemoveTargetsResponse * const q);
+    explicit RemoveTargetsResponsePrivate(RemoveTargetsResponse * const q);
 
     void parseRemoveTargetsResponse(QXmlStreamReader &xml);
 

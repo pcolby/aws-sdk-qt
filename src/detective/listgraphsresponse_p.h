@@ -31,7 +31,7 @@ class ListGraphsResponsePrivate : public DetectiveResponsePrivate {
 
 public:
 
-    ListGraphsResponsePrivate(ListGraphsResponse * const q);
+    explicit ListGraphsResponsePrivate(ListGraphsResponse * const q);
 
     void parseListGraphsResponse(QXmlStreamReader &xml);
 

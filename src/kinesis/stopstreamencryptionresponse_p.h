@@ -31,7 +31,7 @@ class StopStreamEncryptionResponsePrivate : public KinesisResponsePrivate {
 
 public:
 
-    StopStreamEncryptionResponsePrivate(StopStreamEncryptionResponse * const q);
+    explicit StopStreamEncryptionResponsePrivate(StopStreamEncryptionResponse * const q);
 
     void parseStopStreamEncryptionResponse(QXmlStreamReader &xml);
 

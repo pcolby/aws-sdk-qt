@@ -31,7 +31,7 @@ class PutAccessControlRuleResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 
-    PutAccessControlRuleResponsePrivate(PutAccessControlRuleResponse * const q);
+    explicit PutAccessControlRuleResponsePrivate(PutAccessControlRuleResponse * const q);
 
     void parsePutAccessControlRuleResponse(QXmlStreamReader &xml);
 

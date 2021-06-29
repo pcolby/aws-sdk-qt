@@ -31,7 +31,7 @@ class CreateWirelessDeviceResponsePrivate : public IoTWirelessResponsePrivate {
 
 public:
 
-    CreateWirelessDeviceResponsePrivate(CreateWirelessDeviceResponse * const q);
+    explicit CreateWirelessDeviceResponsePrivate(CreateWirelessDeviceResponse * const q);
 
     void parseCreateWirelessDeviceResponse(QXmlStreamReader &xml);
 

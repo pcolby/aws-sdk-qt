@@ -31,7 +31,7 @@ class DeregisterScalableTargetResponsePrivate : public ApplicationAutoScalingRes
 
 public:
 
-    DeregisterScalableTargetResponsePrivate(DeregisterScalableTargetResponse * const q);
+    explicit DeregisterScalableTargetResponsePrivate(DeregisterScalableTargetResponse * const q);
 
     void parseDeregisterScalableTargetResponse(QXmlStreamReader &xml);
 

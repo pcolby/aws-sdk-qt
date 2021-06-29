@@ -30,7 +30,7 @@ class RamClient;
 class RamClientPrivate {
 
 public:
-    RamClientPrivate(RamClient * const q);
+    explicit RamClientPrivate(RamClient * const q);
 
 protected:
     RamClient * const q_ptr; ///< Internal q-pointer.

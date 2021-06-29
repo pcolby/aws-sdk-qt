@@ -31,7 +31,7 @@ class ListDeviceProfilesResponsePrivate : public IoTWirelessResponsePrivate {
 
 public:
 
-    ListDeviceProfilesResponsePrivate(ListDeviceProfilesResponse * const q);
+    explicit ListDeviceProfilesResponsePrivate(ListDeviceProfilesResponse * const q);
 
     void parseListDeviceProfilesResponse(QXmlStreamReader &xml);
 

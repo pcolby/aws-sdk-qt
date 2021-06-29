@@ -31,7 +31,7 @@ class ModifyDBClusterResponsePrivate : public DocDBResponsePrivate {
 
 public:
 
-    ModifyDBClusterResponsePrivate(ModifyDBClusterResponse * const q);
+    explicit ModifyDBClusterResponsePrivate(ModifyDBClusterResponse * const q);
 
     void parseModifyDBClusterResponse(QXmlStreamReader &xml);
 

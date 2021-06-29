@@ -31,7 +31,7 @@ class CreateHttpNamespaceResponsePrivate : public ServiceDiscoveryResponsePrivat
 
 public:
 
-    CreateHttpNamespaceResponsePrivate(CreateHttpNamespaceResponse * const q);
+    explicit CreateHttpNamespaceResponsePrivate(CreateHttpNamespaceResponse * const q);
 
     void parseCreateHttpNamespaceResponse(QXmlStreamReader &xml);
 

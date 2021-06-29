@@ -31,7 +31,7 @@ class ListSMSSandboxPhoneNumbersResponsePrivate : public SnsResponsePrivate {
 
 public:
 
-    ListSMSSandboxPhoneNumbersResponsePrivate(ListSMSSandboxPhoneNumbersResponse * const q);
+    explicit ListSMSSandboxPhoneNumbersResponsePrivate(ListSMSSandboxPhoneNumbersResponse * const q);
 
     void parseListSMSSandboxPhoneNumbersResponse(QXmlStreamReader &xml);
 

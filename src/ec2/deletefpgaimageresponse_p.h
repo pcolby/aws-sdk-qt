@@ -31,7 +31,7 @@ class DeleteFpgaImageResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DeleteFpgaImageResponsePrivate(DeleteFpgaImageResponse * const q);
+    explicit DeleteFpgaImageResponsePrivate(DeleteFpgaImageResponse * const q);
 
     void parseDeleteFpgaImageResponse(QXmlStreamReader &xml);
 

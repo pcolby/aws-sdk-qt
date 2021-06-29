@@ -31,7 +31,7 @@ class StartOnDemandReplicationRunResponsePrivate : public SmsResponsePrivate {
 
 public:
 
-    StartOnDemandReplicationRunResponsePrivate(StartOnDemandReplicationRunResponse * const q);
+    explicit StartOnDemandReplicationRunResponsePrivate(StartOnDemandReplicationRunResponse * const q);
 
     void parseStartOnDemandReplicationRunResponse(QXmlStreamReader &xml);
 

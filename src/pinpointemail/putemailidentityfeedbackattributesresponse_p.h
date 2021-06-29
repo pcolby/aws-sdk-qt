@@ -31,7 +31,7 @@ class PutEmailIdentityFeedbackAttributesResponsePrivate : public PinpointEmailRe
 
 public:
 
-    PutEmailIdentityFeedbackAttributesResponsePrivate(PutEmailIdentityFeedbackAttributesResponse * const q);
+    explicit PutEmailIdentityFeedbackAttributesResponsePrivate(PutEmailIdentityFeedbackAttributesResponse * const q);
 
     void parsePutEmailIdentityFeedbackAttributesResponse(QXmlStreamReader &xml);
 

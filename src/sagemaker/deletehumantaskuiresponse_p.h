@@ -31,7 +31,7 @@ class DeleteHumanTaskUiResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    DeleteHumanTaskUiResponsePrivate(DeleteHumanTaskUiResponse * const q);
+    explicit DeleteHumanTaskUiResponsePrivate(DeleteHumanTaskUiResponse * const q);
 
     void parseDeleteHumanTaskUiResponse(QXmlStreamReader &xml);
 

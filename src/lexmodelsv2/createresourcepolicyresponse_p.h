@@ -31,7 +31,7 @@ class CreateResourcePolicyResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 
-    CreateResourcePolicyResponsePrivate(CreateResourcePolicyResponse * const q);
+    explicit CreateResourcePolicyResponsePrivate(CreateResourcePolicyResponse * const q);
 
     void parseCreateResourcePolicyResponse(QXmlStreamReader &xml);
 

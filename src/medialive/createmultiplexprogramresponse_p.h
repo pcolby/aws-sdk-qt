@@ -31,7 +31,7 @@ class CreateMultiplexProgramResponsePrivate : public MediaLiveResponsePrivate {
 
 public:
 
-    CreateMultiplexProgramResponsePrivate(CreateMultiplexProgramResponse * const q);
+    explicit CreateMultiplexProgramResponsePrivate(CreateMultiplexProgramResponse * const q);
 
     void parseCreateMultiplexProgramResponse(QXmlStreamReader &xml);
 

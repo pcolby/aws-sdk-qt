@@ -31,7 +31,7 @@ class UpdateVolumeResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    UpdateVolumeResponsePrivate(UpdateVolumeResponse * const q);
+    explicit UpdateVolumeResponsePrivate(UpdateVolumeResponse * const q);
 
     void parseUpdateVolumeResponse(QXmlStreamReader &xml);
 

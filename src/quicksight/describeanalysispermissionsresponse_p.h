@@ -31,7 +31,7 @@ class DescribeAnalysisPermissionsResponsePrivate : public QuickSightResponsePriv
 
 public:
 
-    DescribeAnalysisPermissionsResponsePrivate(DescribeAnalysisPermissionsResponse * const q);
+    explicit DescribeAnalysisPermissionsResponsePrivate(DescribeAnalysisPermissionsResponse * const q);
 
     void parseDescribeAnalysisPermissionsResponse(QXmlStreamReader &xml);
 

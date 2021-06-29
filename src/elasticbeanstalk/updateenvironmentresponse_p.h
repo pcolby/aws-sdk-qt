@@ -31,7 +31,7 @@ class UpdateEnvironmentResponsePrivate : public ElasticBeanstalkResponsePrivate 
 
 public:
 
-    UpdateEnvironmentResponsePrivate(UpdateEnvironmentResponse * const q);
+    explicit UpdateEnvironmentResponsePrivate(UpdateEnvironmentResponse * const q);
 
     void parseUpdateEnvironmentResponse(QXmlStreamReader &xml);
 

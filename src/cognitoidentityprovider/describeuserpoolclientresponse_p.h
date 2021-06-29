@@ -31,7 +31,7 @@ class DescribeUserPoolClientResponsePrivate : public CognitoIdentityProviderResp
 
 public:
 
-    DescribeUserPoolClientResponsePrivate(DescribeUserPoolClientResponse * const q);
+    explicit DescribeUserPoolClientResponsePrivate(DescribeUserPoolClientResponse * const q);
 
     void parseDescribeUserPoolClientResponse(QXmlStreamReader &xml);
 

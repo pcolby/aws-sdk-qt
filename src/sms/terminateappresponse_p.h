@@ -31,7 +31,7 @@ class TerminateAppResponsePrivate : public SmsResponsePrivate {
 
 public:
 
-    TerminateAppResponsePrivate(TerminateAppResponse * const q);
+    explicit TerminateAppResponsePrivate(TerminateAppResponse * const q);
 
     void parseTerminateAppResponse(QXmlStreamReader &xml);
 

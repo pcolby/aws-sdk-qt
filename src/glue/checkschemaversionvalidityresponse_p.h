@@ -31,7 +31,7 @@ class CheckSchemaVersionValidityResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    CheckSchemaVersionValidityResponsePrivate(CheckSchemaVersionValidityResponse * const q);
+    explicit CheckSchemaVersionValidityResponsePrivate(CheckSchemaVersionValidityResponse * const q);
 
     void parseCheckSchemaVersionValidityResponse(QXmlStreamReader &xml);
 

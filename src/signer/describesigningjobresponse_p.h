@@ -31,7 +31,7 @@ class DescribeSigningJobResponsePrivate : public signerResponsePrivate {
 
 public:
 
-    DescribeSigningJobResponsePrivate(DescribeSigningJobResponse * const q);
+    explicit DescribeSigningJobResponsePrivate(DescribeSigningJobResponse * const q);
 
     void parseDescribeSigningJobResponse(QXmlStreamReader &xml);
 

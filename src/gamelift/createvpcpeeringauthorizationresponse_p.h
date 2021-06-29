@@ -31,7 +31,7 @@ class CreateVpcPeeringAuthorizationResponsePrivate : public GameLiftResponsePriv
 
 public:
 
-    CreateVpcPeeringAuthorizationResponsePrivate(CreateVpcPeeringAuthorizationResponse * const q);
+    explicit CreateVpcPeeringAuthorizationResponsePrivate(CreateVpcPeeringAuthorizationResponse * const q);
 
     void parseCreateVpcPeeringAuthorizationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteReplicationSubnetGroupResponsePrivate : public DatabaseMigrationServ
 
 public:
 
-    DeleteReplicationSubnetGroupResponsePrivate(DeleteReplicationSubnetGroupResponse * const q);
+    explicit DeleteReplicationSubnetGroupResponsePrivate(DeleteReplicationSubnetGroupResponse * const q);
 
     void parseDeleteReplicationSubnetGroupResponse(QXmlStreamReader &xml);
 

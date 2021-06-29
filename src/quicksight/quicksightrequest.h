@@ -158,7 +158,7 @@ public:
 protected:
     /// @cond internal
     QuickSightRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    QuickSightRequest(QuickSightRequestPrivate * const d);
+    explicit QuickSightRequest(QuickSightRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

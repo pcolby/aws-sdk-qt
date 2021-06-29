@@ -31,7 +31,7 @@ class DeleteConfigurationSetEventDestinationResponsePrivate : public PinpointSMS
 
 public:
 
-    DeleteConfigurationSetEventDestinationResponsePrivate(DeleteConfigurationSetEventDestinationResponse * const q);
+    explicit DeleteConfigurationSetEventDestinationResponsePrivate(DeleteConfigurationSetEventDestinationResponse * const q);
 
     void parseDeleteConfigurationSetEventDestinationResponse(QXmlStreamReader &xml);
 

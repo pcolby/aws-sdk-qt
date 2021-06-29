@@ -29,7 +29,7 @@ class IoTWirelessResponsePrivate {
 
 public:
 
-    IoTWirelessResponsePrivate(IoTWirelessResponse * const q);
+    explicit IoTWirelessResponsePrivate(IoTWirelessResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

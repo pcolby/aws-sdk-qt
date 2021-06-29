@@ -31,7 +31,7 @@ class DeactivateContactChannelResponsePrivate : public SSMContactsResponsePrivat
 
 public:
 
-    DeactivateContactChannelResponsePrivate(DeactivateContactChannelResponse * const q);
+    explicit DeactivateContactChannelResponsePrivate(DeactivateContactChannelResponse * const q);
 
     void parseDeactivateContactChannelResponse(QXmlStreamReader &xml);
 

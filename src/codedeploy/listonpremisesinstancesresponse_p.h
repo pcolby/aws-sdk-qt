@@ -31,7 +31,7 @@ class ListOnPremisesInstancesResponsePrivate : public CodeDeployResponsePrivate 
 
 public:
 
-    ListOnPremisesInstancesResponsePrivate(ListOnPremisesInstancesResponse * const q);
+    explicit ListOnPremisesInstancesResponsePrivate(ListOnPremisesInstancesResponse * const q);
 
     void parseListOnPremisesInstancesResponse(QXmlStreamReader &xml);
 

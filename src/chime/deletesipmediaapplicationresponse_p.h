@@ -31,7 +31,7 @@ class DeleteSipMediaApplicationResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    DeleteSipMediaApplicationResponsePrivate(DeleteSipMediaApplicationResponse * const q);
+    explicit DeleteSipMediaApplicationResponsePrivate(DeleteSipMediaApplicationResponse * const q);
 
     void parseDeleteSipMediaApplicationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateKeySigningKeyResponsePrivate : public Route53ResponsePrivate {
 
 public:
 
-    CreateKeySigningKeyResponsePrivate(CreateKeySigningKeyResponse * const q);
+    explicit CreateKeySigningKeyResponsePrivate(CreateKeySigningKeyResponse * const q);
 
     void parseCreateKeySigningKeyResponse(QXmlStreamReader &xml);
 

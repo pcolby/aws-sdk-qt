@@ -31,7 +31,7 @@ class CreateMeshResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 
-    CreateMeshResponsePrivate(CreateMeshResponse * const q);
+    explicit CreateMeshResponsePrivate(CreateMeshResponse * const q);
 
     void parseCreateMeshResponse(QXmlStreamReader &xml);
 

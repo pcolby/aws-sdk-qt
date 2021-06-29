@@ -31,7 +31,7 @@ class DescribeAuditTaskResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DescribeAuditTaskResponsePrivate(DescribeAuditTaskResponse * const q);
+    explicit DescribeAuditTaskResponsePrivate(DescribeAuditTaskResponse * const q);
 
     void parseDescribeAuditTaskResponse(QXmlStreamReader &xml);
 

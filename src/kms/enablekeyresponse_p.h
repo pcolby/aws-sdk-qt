@@ -31,7 +31,7 @@ class EnableKeyResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    EnableKeyResponsePrivate(EnableKeyResponse * const q);
+    explicit EnableKeyResponsePrivate(EnableKeyResponse * const q);
 
     void parseEnableKeyResponse(QXmlStreamReader &xml);
 

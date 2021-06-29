@@ -31,7 +31,7 @@ class AssociateWebsiteAuthorizationProviderResponsePrivate : public WorkLinkResp
 
 public:
 
-    AssociateWebsiteAuthorizationProviderResponsePrivate(AssociateWebsiteAuthorizationProviderResponse * const q);
+    explicit AssociateWebsiteAuthorizationProviderResponsePrivate(AssociateWebsiteAuthorizationProviderResponse * const q);
 
     void parseAssociateWebsiteAuthorizationProviderResponse(QXmlStreamReader &xml);
 

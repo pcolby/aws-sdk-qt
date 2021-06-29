@@ -31,7 +31,7 @@ class CreateDeploymentStrategyResponsePrivate : public AppConfigResponsePrivate 
 
 public:
 
-    CreateDeploymentStrategyResponsePrivate(CreateDeploymentStrategyResponse * const q);
+    explicit CreateDeploymentStrategyResponsePrivate(CreateDeploymentStrategyResponse * const q);
 
     void parseCreateDeploymentStrategyResponse(QXmlStreamReader &xml);
 

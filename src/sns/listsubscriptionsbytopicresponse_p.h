@@ -31,7 +31,7 @@ class ListSubscriptionsByTopicResponsePrivate : public SnsResponsePrivate {
 
 public:
 
-    ListSubscriptionsByTopicResponsePrivate(ListSubscriptionsByTopicResponse * const q);
+    explicit ListSubscriptionsByTopicResponsePrivate(ListSubscriptionsByTopicResponse * const q);
 
     void parseListSubscriptionsByTopicResponse(QXmlStreamReader &xml);
 

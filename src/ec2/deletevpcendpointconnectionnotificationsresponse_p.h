@@ -31,7 +31,7 @@ class DeleteVpcEndpointConnectionNotificationsResponsePrivate : public Ec2Respon
 
 public:
 
-    DeleteVpcEndpointConnectionNotificationsResponsePrivate(DeleteVpcEndpointConnectionNotificationsResponse * const q);
+    explicit DeleteVpcEndpointConnectionNotificationsResponsePrivate(DeleteVpcEndpointConnectionNotificationsResponse * const q);
 
     void parseDeleteVpcEndpointConnectionNotificationsResponse(QXmlStreamReader &xml);
 

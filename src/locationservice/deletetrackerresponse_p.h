@@ -31,7 +31,7 @@ class DeleteTrackerResponsePrivate : public LocationServiceResponsePrivate {
 
 public:
 
-    DeleteTrackerResponsePrivate(DeleteTrackerResponse * const q);
+    explicit DeleteTrackerResponsePrivate(DeleteTrackerResponse * const q);
 
     void parseDeleteTrackerResponse(QXmlStreamReader &xml);
 

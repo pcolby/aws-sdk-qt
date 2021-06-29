@@ -31,7 +31,7 @@ class GetServicesInScopeResponsePrivate : public AuditManagerResponsePrivate {
 
 public:
 
-    GetServicesInScopeResponsePrivate(GetServicesInScopeResponse * const q);
+    explicit GetServicesInScopeResponsePrivate(GetServicesInScopeResponse * const q);
 
     void parseGetServicesInScopeResponse(QXmlStreamReader &xml);
 

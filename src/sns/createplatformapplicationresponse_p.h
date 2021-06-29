@@ -31,7 +31,7 @@ class CreatePlatformApplicationResponsePrivate : public SnsResponsePrivate {
 
 public:
 
-    CreatePlatformApplicationResponsePrivate(CreatePlatformApplicationResponse * const q);
+    explicit CreatePlatformApplicationResponsePrivate(CreatePlatformApplicationResponse * const q);
 
     void parseCreatePlatformApplicationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateStackResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    UpdateStackResponsePrivate(UpdateStackResponse * const q);
+    explicit UpdateStackResponsePrivate(UpdateStackResponse * const q);
 
     void parseUpdateStackResponse(QXmlStreamReader &xml);
 

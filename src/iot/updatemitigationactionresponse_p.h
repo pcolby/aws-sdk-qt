@@ -31,7 +31,7 @@ class UpdateMitigationActionResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    UpdateMitigationActionResponsePrivate(UpdateMitigationActionResponse * const q);
+    explicit UpdateMitigationActionResponsePrivate(UpdateMitigationActionResponse * const q);
 
     void parseUpdateMitigationActionResponse(QXmlStreamReader &xml);
 

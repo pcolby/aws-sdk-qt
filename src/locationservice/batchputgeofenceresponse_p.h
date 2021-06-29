@@ -31,7 +31,7 @@ class BatchPutGeofenceResponsePrivate : public LocationServiceResponsePrivate {
 
 public:
 
-    BatchPutGeofenceResponsePrivate(BatchPutGeofenceResponse * const q);
+    explicit BatchPutGeofenceResponsePrivate(BatchPutGeofenceResponse * const q);
 
     void parseBatchPutGeofenceResponse(QXmlStreamReader &xml);
 

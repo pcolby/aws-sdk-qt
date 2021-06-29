@@ -31,7 +31,7 @@ class UpdateConfigurationSetSendingEnabledResponsePrivate : public SesResponsePr
 
 public:
 
-    UpdateConfigurationSetSendingEnabledResponsePrivate(UpdateConfigurationSetSendingEnabledResponse * const q);
+    explicit UpdateConfigurationSetSendingEnabledResponsePrivate(UpdateConfigurationSetSendingEnabledResponse * const q);
 
     void parseUpdateConfigurationSetSendingEnabledResponse(QXmlStreamReader &xml);
 

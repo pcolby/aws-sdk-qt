@@ -31,7 +31,7 @@ class GetGroupsResponsePrivate : public XRayResponsePrivate {
 
 public:
 
-    GetGroupsResponsePrivate(GetGroupsResponse * const q);
+    explicit GetGroupsResponsePrivate(GetGroupsResponse * const q);
 
     void parseGetGroupsResponse(QXmlStreamReader &xml);
 

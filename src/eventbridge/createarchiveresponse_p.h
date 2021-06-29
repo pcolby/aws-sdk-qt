@@ -31,7 +31,7 @@ class CreateArchiveResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 
-    CreateArchiveResponsePrivate(CreateArchiveResponse * const q);
+    explicit CreateArchiveResponsePrivate(CreateArchiveResponse * const q);
 
     void parseCreateArchiveResponse(QXmlStreamReader &xml);
 

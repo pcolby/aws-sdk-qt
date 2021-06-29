@@ -31,7 +31,7 @@ class CreateBuildResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    CreateBuildResponsePrivate(CreateBuildResponse * const q);
+    explicit CreateBuildResponsePrivate(CreateBuildResponse * const q);
 
     void parseCreateBuildResponse(QXmlStreamReader &xml);
 

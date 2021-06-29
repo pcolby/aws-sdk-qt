@@ -29,7 +29,7 @@ class ConfigServiceResponsePrivate {
 
 public:
 
-    ConfigServiceResponsePrivate(ConfigServiceResponse * const q);
+    explicit ConfigServiceResponsePrivate(ConfigServiceResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

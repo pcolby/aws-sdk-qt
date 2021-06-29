@@ -31,7 +31,7 @@ class UpdateAccountPasswordPolicyResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    UpdateAccountPasswordPolicyResponsePrivate(UpdateAccountPasswordPolicyResponse * const q);
+    explicit UpdateAccountPasswordPolicyResponsePrivate(UpdateAccountPasswordPolicyResponse * const q);
 
     void parseUpdateAccountPasswordPolicyResponse(QXmlStreamReader &xml);
 

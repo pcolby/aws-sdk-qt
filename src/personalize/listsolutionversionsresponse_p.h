@@ -31,7 +31,7 @@ class ListSolutionVersionsResponsePrivate : public PersonalizeResponsePrivate {
 
 public:
 
-    ListSolutionVersionsResponsePrivate(ListSolutionVersionsResponse * const q);
+    explicit ListSolutionVersionsResponsePrivate(ListSolutionVersionsResponse * const q);
 
     void parseListSolutionVersionsResponse(QXmlStreamReader &xml);
 

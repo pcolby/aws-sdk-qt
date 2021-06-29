@@ -31,7 +31,7 @@ class GetServiceProfileResponsePrivate : public IoTWirelessResponsePrivate {
 
 public:
 
-    GetServiceProfileResponsePrivate(GetServiceProfileResponse * const q);
+    explicit GetServiceProfileResponsePrivate(GetServiceProfileResponse * const q);
 
     void parseGetServiceProfileResponse(QXmlStreamReader &xml);
 

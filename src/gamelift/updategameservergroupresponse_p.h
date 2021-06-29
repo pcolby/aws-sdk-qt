@@ -31,7 +31,7 @@ class UpdateGameServerGroupResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    UpdateGameServerGroupResponsePrivate(UpdateGameServerGroupResponse * const q);
+    explicit UpdateGameServerGroupResponsePrivate(UpdateGameServerGroupResponse * const q);
 
     void parseUpdateGameServerGroupResponse(QXmlStreamReader &xml);
 

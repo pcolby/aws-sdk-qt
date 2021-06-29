@@ -31,7 +31,7 @@ class GetInstanceStateResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    GetInstanceStateResponsePrivate(GetInstanceStateResponse * const q);
+    explicit GetInstanceStateResponsePrivate(GetInstanceStateResponse * const q);
 
     void parseGetInstanceStateResponse(QXmlStreamReader &xml);
 

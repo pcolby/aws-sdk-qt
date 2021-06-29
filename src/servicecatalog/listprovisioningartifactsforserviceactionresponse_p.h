@@ -31,7 +31,7 @@ class ListProvisioningArtifactsForServiceActionResponsePrivate : public ServiceC
 
 public:
 
-    ListProvisioningArtifactsForServiceActionResponsePrivate(ListProvisioningArtifactsForServiceActionResponse * const q);
+    explicit ListProvisioningArtifactsForServiceActionResponsePrivate(ListProvisioningArtifactsForServiceActionResponse * const q);
 
     void parseListProvisioningArtifactsForServiceActionResponse(QXmlStreamReader &xml);
 

@@ -30,7 +30,7 @@ class CodeStarClient;
 class CodeStarClientPrivate {
 
 public:
-    CodeStarClientPrivate(CodeStarClient * const q);
+    explicit CodeStarClientPrivate(CodeStarClient * const q);
 
 protected:
     CodeStarClient * const q_ptr; ///< Internal q-pointer.

@@ -31,7 +31,7 @@ class DetachThingPrincipalResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DetachThingPrincipalResponsePrivate(DetachThingPrincipalResponse * const q);
+    explicit DetachThingPrincipalResponsePrivate(DetachThingPrincipalResponse * const q);
 
     void parseDetachThingPrincipalResponse(QXmlStreamReader &xml);
 

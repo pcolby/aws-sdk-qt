@@ -31,7 +31,7 @@ class DisassociateRoleFromGroupResponsePrivate : public GreengrassResponsePrivat
 
 public:
 
-    DisassociateRoleFromGroupResponsePrivate(DisassociateRoleFromGroupResponse * const q);
+    explicit DisassociateRoleFromGroupResponsePrivate(DisassociateRoleFromGroupResponse * const q);
 
     void parseDisassociateRoleFromGroupResponse(QXmlStreamReader &xml);
 

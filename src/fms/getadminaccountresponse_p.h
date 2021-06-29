@@ -31,7 +31,7 @@ class GetAdminAccountResponsePrivate : public FmsResponsePrivate {
 
 public:
 
-    GetAdminAccountResponsePrivate(GetAdminAccountResponse * const q);
+    explicit GetAdminAccountResponsePrivate(GetAdminAccountResponse * const q);
 
     void parseGetAdminAccountResponse(QXmlStreamReader &xml);
 

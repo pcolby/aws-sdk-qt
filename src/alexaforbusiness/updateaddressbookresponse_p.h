@@ -31,7 +31,7 @@ class UpdateAddressBookResponsePrivate : public AlexaForBusinessResponsePrivate 
 
 public:
 
-    UpdateAddressBookResponsePrivate(UpdateAddressBookResponse * const q);
+    explicit UpdateAddressBookResponsePrivate(UpdateAddressBookResponse * const q);
 
     void parseUpdateAddressBookResponse(QXmlStreamReader &xml);
 

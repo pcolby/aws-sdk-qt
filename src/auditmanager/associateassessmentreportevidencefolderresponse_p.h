@@ -31,7 +31,7 @@ class AssociateAssessmentReportEvidenceFolderResponsePrivate : public AuditManag
 
 public:
 
-    AssociateAssessmentReportEvidenceFolderResponsePrivate(AssociateAssessmentReportEvidenceFolderResponse * const q);
+    explicit AssociateAssessmentReportEvidenceFolderResponsePrivate(AssociateAssessmentReportEvidenceFolderResponse * const q);
 
     void parseAssociateAssessmentReportEvidenceFolderResponse(QXmlStreamReader &xml);
 

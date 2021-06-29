@@ -31,7 +31,7 @@ class DeleteAccessPointForObjectLambdaResponsePrivate : public S3ControlResponse
 
 public:
 
-    DeleteAccessPointForObjectLambdaResponsePrivate(DeleteAccessPointForObjectLambdaResponse * const q);
+    explicit DeleteAccessPointForObjectLambdaResponsePrivate(DeleteAccessPointForObjectLambdaResponse * const q);
 
     void parseDeleteAccessPointForObjectLambdaResponse(QXmlStreamReader &xml);
 

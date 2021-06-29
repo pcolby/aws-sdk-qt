@@ -31,7 +31,7 @@ class UpdateBackendAPIResponsePrivate : public AmplifyBackendResponsePrivate {
 
 public:
 
-    UpdateBackendAPIResponsePrivate(UpdateBackendAPIResponse * const q);
+    explicit UpdateBackendAPIResponsePrivate(UpdateBackendAPIResponse * const q);
 
     void parseUpdateBackendAPIResponse(QXmlStreamReader &xml);
 

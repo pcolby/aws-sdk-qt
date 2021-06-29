@@ -31,7 +31,7 @@ class DeleteWorkloadShareResponsePrivate : public WellArchitectedResponsePrivate
 
 public:
 
-    DeleteWorkloadShareResponsePrivate(DeleteWorkloadShareResponse * const q);
+    explicit DeleteWorkloadShareResponsePrivate(DeleteWorkloadShareResponse * const q);
 
     void parseDeleteWorkloadShareResponse(QXmlStreamReader &xml);
 

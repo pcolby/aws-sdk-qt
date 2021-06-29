@@ -31,7 +31,7 @@ class GetUserAttributeVerificationCodeResponsePrivate : public CognitoIdentityPr
 
 public:
 
-    GetUserAttributeVerificationCodeResponsePrivate(GetUserAttributeVerificationCodeResponse * const q);
+    explicit GetUserAttributeVerificationCodeResponsePrivate(GetUserAttributeVerificationCodeResponse * const q);
 
     void parseGetUserAttributeVerificationCodeResponse(QXmlStreamReader &xml);
 

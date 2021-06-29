@@ -31,7 +31,7 @@ class DescribeFleetLocationUtilizationResponsePrivate : public GameLiftResponseP
 
 public:
 
-    DescribeFleetLocationUtilizationResponsePrivate(DescribeFleetLocationUtilizationResponse * const q);
+    explicit DescribeFleetLocationUtilizationResponsePrivate(DescribeFleetLocationUtilizationResponse * const q);
 
     void parseDescribeFleetLocationUtilizationResponse(QXmlStreamReader &xml);
 

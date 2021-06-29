@@ -75,7 +75,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    ElasticTranscoderClient(
+    explicit ElasticTranscoderClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -102,7 +102,7 @@ public slots:
 protected:
     /// @cond internal
     ElasticTranscoderClientPrivate * const d_ptr; ///< Internal d-pointer.
-    ElasticTranscoderClient(ElasticTranscoderClientPrivate * const d);
+    explicit ElasticTranscoderClient(ElasticTranscoderClientPrivate * const d);
     /// @endcond
 
 private:

@@ -31,7 +31,7 @@ class ListSecretVersionIdsResponsePrivate : public SecretsManagerResponsePrivate
 
 public:
 
-    ListSecretVersionIdsResponsePrivate(ListSecretVersionIdsResponse * const q);
+    explicit ListSecretVersionIdsResponsePrivate(ListSecretVersionIdsResponse * const q);
 
     void parseListSecretVersionIdsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListAutoScalingConfigurationsResponsePrivate : public AppRunnerResponsePri
 
 public:
 
-    ListAutoScalingConfigurationsResponsePrivate(ListAutoScalingConfigurationsResponse * const q);
+    explicit ListAutoScalingConfigurationsResponsePrivate(ListAutoScalingConfigurationsResponse * const q);
 
     void parseListAutoScalingConfigurationsResponse(QXmlStreamReader &xml);
 

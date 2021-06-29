@@ -31,7 +31,7 @@ class DeleteTagOptionResponsePrivate : public ServiceCatalogResponsePrivate {
 
 public:
 
-    DeleteTagOptionResponsePrivate(DeleteTagOptionResponse * const q);
+    explicit DeleteTagOptionResponsePrivate(DeleteTagOptionResponse * const q);
 
     void parseDeleteTagOptionResponse(QXmlStreamReader &xml);
 

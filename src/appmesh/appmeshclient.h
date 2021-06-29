@@ -117,7 +117,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    AppMeshClient(
+    explicit AppMeshClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -165,7 +165,7 @@ public slots:
 protected:
     /// @cond internal
     AppMeshClientPrivate * const d_ptr; ///< Internal d-pointer.
-    AppMeshClient(AppMeshClientPrivate * const d);
+    explicit AppMeshClient(AppMeshClientPrivate * const d);
     /// @endcond
 
 private:

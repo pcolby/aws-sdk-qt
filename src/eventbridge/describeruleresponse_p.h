@@ -31,7 +31,7 @@ class DescribeRuleResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 
-    DescribeRuleResponsePrivate(DescribeRuleResponse * const q);
+    explicit DescribeRuleResponsePrivate(DescribeRuleResponse * const q);
 
     void parseDescribeRuleResponse(QXmlStreamReader &xml);
 

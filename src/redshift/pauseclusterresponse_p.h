@@ -31,7 +31,7 @@ class PauseClusterResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    PauseClusterResponsePrivate(PauseClusterResponse * const q);
+    explicit PauseClusterResponsePrivate(PauseClusterResponse * const q);
 
     void parsePauseClusterResponse(QXmlStreamReader &xml);
 

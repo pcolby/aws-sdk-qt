@@ -31,7 +31,7 @@ class AssignVolumeResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    AssignVolumeResponsePrivate(AssignVolumeResponse * const q);
+    explicit AssignVolumeResponsePrivate(AssignVolumeResponse * const q);
 
     void parseAssignVolumeResponse(QXmlStreamReader &xml);
 

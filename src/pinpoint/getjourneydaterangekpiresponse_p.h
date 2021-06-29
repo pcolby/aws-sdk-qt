@@ -31,7 +31,7 @@ class GetJourneyDateRangeKpiResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    GetJourneyDateRangeKpiResponsePrivate(GetJourneyDateRangeKpiResponse * const q);
+    explicit GetJourneyDateRangeKpiResponsePrivate(GetJourneyDateRangeKpiResponse * const q);
 
     void parseGetJourneyDateRangeKpiResponse(QXmlStreamReader &xml);
 

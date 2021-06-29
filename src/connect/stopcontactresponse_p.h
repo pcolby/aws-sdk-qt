@@ -31,7 +31,7 @@ class StopContactResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    StopContactResponsePrivate(StopContactResponse * const q);
+    explicit StopContactResponsePrivate(StopContactResponse * const q);
 
     void parseStopContactResponse(QXmlStreamReader &xml);
 

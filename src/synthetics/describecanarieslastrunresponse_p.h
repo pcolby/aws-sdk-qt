@@ -31,7 +31,7 @@ class DescribeCanariesLastRunResponsePrivate : public SyntheticsResponsePrivate 
 
 public:
 
-    DescribeCanariesLastRunResponsePrivate(DescribeCanariesLastRunResponse * const q);
+    explicit DescribeCanariesLastRunResponsePrivate(DescribeCanariesLastRunResponse * const q);
 
     void parseDescribeCanariesLastRunResponse(QXmlStreamReader &xml);
 

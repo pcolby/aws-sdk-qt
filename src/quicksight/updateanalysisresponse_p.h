@@ -31,7 +31,7 @@ class UpdateAnalysisResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    UpdateAnalysisResponsePrivate(UpdateAnalysisResponse * const q);
+    explicit UpdateAnalysisResponsePrivate(UpdateAnalysisResponse * const q);
 
     void parseUpdateAnalysisResponse(QXmlStreamReader &xml);
 

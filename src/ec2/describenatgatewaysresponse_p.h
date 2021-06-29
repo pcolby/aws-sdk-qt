@@ -31,7 +31,7 @@ class DescribeNatGatewaysResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeNatGatewaysResponsePrivate(DescribeNatGatewaysResponse * const q);
+    explicit DescribeNatGatewaysResponsePrivate(DescribeNatGatewaysResponse * const q);
 
     void parseDescribeNatGatewaysResponse(QXmlStreamReader &xml);
 

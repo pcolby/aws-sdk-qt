@@ -31,7 +31,7 @@ class CreateInstancesResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    CreateInstancesResponsePrivate(CreateInstancesResponse * const q);
+    explicit CreateInstancesResponsePrivate(CreateInstancesResponse * const q);
 
     void parseCreateInstancesResponse(QXmlStreamReader &xml);
 

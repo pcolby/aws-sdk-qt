@@ -31,7 +31,7 @@ class RotateIngestEndpointCredentialsResponsePrivate : public MediaPackageRespon
 
 public:
 
-    RotateIngestEndpointCredentialsResponsePrivate(RotateIngestEndpointCredentialsResponse * const q);
+    explicit RotateIngestEndpointCredentialsResponsePrivate(RotateIngestEndpointCredentialsResponse * const q);
 
     void parseRotateIngestEndpointCredentialsResponse(QXmlStreamReader &xml);
 

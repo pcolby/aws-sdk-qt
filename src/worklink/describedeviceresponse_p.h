@@ -31,7 +31,7 @@ class DescribeDeviceResponsePrivate : public WorkLinkResponsePrivate {
 
 public:
 
-    DescribeDeviceResponsePrivate(DescribeDeviceResponse * const q);
+    explicit DescribeDeviceResponsePrivate(DescribeDeviceResponse * const q);
 
     void parseDescribeDeviceResponse(QXmlStreamReader &xml);
 

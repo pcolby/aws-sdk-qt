@@ -31,7 +31,7 @@ class AddClientIDToOpenIDConnectProviderResponsePrivate : public IamResponsePriv
 
 public:
 
-    AddClientIDToOpenIDConnectProviderResponsePrivate(AddClientIDToOpenIDConnectProviderResponse * const q);
+    explicit AddClientIDToOpenIDConnectProviderResponsePrivate(AddClientIDToOpenIDConnectProviderResponse * const q);
 
     void parseAddClientIDToOpenIDConnectProviderResponse(QXmlStreamReader &xml);
 

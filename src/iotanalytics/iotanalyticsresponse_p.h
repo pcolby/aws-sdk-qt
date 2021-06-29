@@ -29,7 +29,7 @@ class IoTAnalyticsResponsePrivate {
 
 public:
 
-    IoTAnalyticsResponsePrivate(IoTAnalyticsResponse * const q);
+    explicit IoTAnalyticsResponsePrivate(IoTAnalyticsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

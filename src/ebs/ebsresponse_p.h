@@ -29,7 +29,7 @@ class EbsResponsePrivate {
 
 public:
 
-    EbsResponsePrivate(EbsResponse * const q);
+    explicit EbsResponsePrivate(EbsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

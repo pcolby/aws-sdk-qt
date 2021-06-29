@@ -31,7 +31,7 @@ class DescribeConfigurationAggregatorsResponsePrivate : public ConfigServiceResp
 
 public:
 
-    DescribeConfigurationAggregatorsResponsePrivate(DescribeConfigurationAggregatorsResponse * const q);
+    explicit DescribeConfigurationAggregatorsResponsePrivate(DescribeConfigurationAggregatorsResponse * const q);
 
     void parseDescribeConfigurationAggregatorsResponse(QXmlStreamReader &xml);
 

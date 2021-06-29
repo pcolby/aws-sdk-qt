@@ -31,7 +31,7 @@ class ModifyListenerResponsePrivate : public ElasticLoadBalancingv2ResponsePriva
 
 public:
 
-    ModifyListenerResponsePrivate(ModifyListenerResponse * const q);
+    explicit ModifyListenerResponsePrivate(ModifyListenerResponse * const q);
 
     void parseModifyListenerResponse(QXmlStreamReader &xml);
 

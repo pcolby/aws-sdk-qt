@@ -31,7 +31,7 @@ class ListArchiveRulesResponsePrivate : public AccessAnalyzerResponsePrivate {
 
 public:
 
-    ListArchiveRulesResponsePrivate(ListArchiveRulesResponse * const q);
+    explicit ListArchiveRulesResponsePrivate(ListArchiveRulesResponse * const q);
 
     void parseListArchiveRulesResponse(QXmlStreamReader &xml);
 

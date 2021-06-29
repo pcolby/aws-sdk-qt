@@ -31,7 +31,7 @@ class StopNotebookExecutionResponsePrivate : public EmrResponsePrivate {
 
 public:
 
-    StopNotebookExecutionResponsePrivate(StopNotebookExecutionResponse * const q);
+    explicit StopNotebookExecutionResponsePrivate(StopNotebookExecutionResponse * const q);
 
     void parseStopNotebookExecutionResponse(QXmlStreamReader &xml);
 

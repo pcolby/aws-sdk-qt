@@ -31,7 +31,7 @@ class CreateWorkteamResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    CreateWorkteamResponsePrivate(CreateWorkteamResponse * const q);
+    explicit CreateWorkteamResponsePrivate(CreateWorkteamResponse * const q);
 
     void parseCreateWorkteamResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteImportedKeyMaterialResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    DeleteImportedKeyMaterialResponsePrivate(DeleteImportedKeyMaterialResponse * const q);
+    explicit DeleteImportedKeyMaterialResponsePrivate(DeleteImportedKeyMaterialResponse * const q);
 
     void parseDeleteImportedKeyMaterialResponse(QXmlStreamReader &xml);
 

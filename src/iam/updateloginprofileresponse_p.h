@@ -31,7 +31,7 @@ class UpdateLoginProfileResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    UpdateLoginProfileResponsePrivate(UpdateLoginProfileResponse * const q);
+    explicit UpdateLoginProfileResponsePrivate(UpdateLoginProfileResponse * const q);
 
     void parseUpdateLoginProfileResponse(QXmlStreamReader &xml);
 

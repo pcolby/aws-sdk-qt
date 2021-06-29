@@ -31,7 +31,7 @@ class ListObjectParentPathsResponsePrivate : public CloudDirectoryResponsePrivat
 
 public:
 
-    ListObjectParentPathsResponsePrivate(ListObjectParentPathsResponse * const q);
+    explicit ListObjectParentPathsResponsePrivate(ListObjectParentPathsResponse * const q);
 
     void parseListObjectParentPathsResponse(QXmlStreamReader &xml);
 

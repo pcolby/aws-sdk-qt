@@ -31,7 +31,7 @@ class SearchResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    SearchResponsePrivate(SearchResponse * const q);
+    explicit SearchResponsePrivate(SearchResponse * const q);
 
     void parseSearchResponse(QXmlStreamReader &xml);
 

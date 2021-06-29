@@ -31,7 +31,7 @@ class DescribeFleetInstancesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeFleetInstancesResponsePrivate(DescribeFleetInstancesResponse * const q);
+    explicit DescribeFleetInstancesResponsePrivate(DescribeFleetInstancesResponse * const q);
 
     void parseDescribeFleetInstancesResponse(QXmlStreamReader &xml);
 

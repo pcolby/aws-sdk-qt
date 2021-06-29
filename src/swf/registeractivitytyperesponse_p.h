@@ -31,7 +31,7 @@ class RegisterActivityTypeResponsePrivate : public SwfResponsePrivate {
 
 public:
 
-    RegisterActivityTypeResponsePrivate(RegisterActivityTypeResponse * const q);
+    explicit RegisterActivityTypeResponsePrivate(RegisterActivityTypeResponse * const q);
 
     void parseRegisterActivityTypeResponse(QXmlStreamReader &xml);
 

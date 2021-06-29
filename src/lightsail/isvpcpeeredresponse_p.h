@@ -31,7 +31,7 @@ class IsVpcPeeredResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    IsVpcPeeredResponsePrivate(IsVpcPeeredResponse * const q);
+    explicit IsVpcPeeredResponsePrivate(IsVpcPeeredResponse * const q);
 
     void parseIsVpcPeeredResponse(QXmlStreamReader &xml);
 

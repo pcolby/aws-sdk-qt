@@ -31,7 +31,7 @@ class UpdateAssetResponsePrivate : public IoTSiteWiseResponsePrivate {
 
 public:
 
-    UpdateAssetResponsePrivate(UpdateAssetResponse * const q);
+    explicit UpdateAssetResponsePrivate(UpdateAssetResponse * const q);
 
     void parseUpdateAssetResponse(QXmlStreamReader &xml);
 

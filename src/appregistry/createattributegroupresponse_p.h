@@ -31,7 +31,7 @@ class CreateAttributeGroupResponsePrivate : public AppRegistryResponsePrivate {
 
 public:
 
-    CreateAttributeGroupResponsePrivate(CreateAttributeGroupResponse * const q);
+    explicit CreateAttributeGroupResponsePrivate(CreateAttributeGroupResponse * const q);
 
     void parseCreateAttributeGroupResponse(QXmlStreamReader &xml);
 

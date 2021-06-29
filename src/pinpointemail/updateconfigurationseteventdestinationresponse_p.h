@@ -31,7 +31,7 @@ class UpdateConfigurationSetEventDestinationResponsePrivate : public PinpointEma
 
 public:
 
-    UpdateConfigurationSetEventDestinationResponsePrivate(UpdateConfigurationSetEventDestinationResponse * const q);
+    explicit UpdateConfigurationSetEventDestinationResponsePrivate(UpdateConfigurationSetEventDestinationResponse * const q);
 
     void parseUpdateConfigurationSetEventDestinationResponse(QXmlStreamReader &xml);
 

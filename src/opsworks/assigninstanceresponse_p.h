@@ -31,7 +31,7 @@ class AssignInstanceResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    AssignInstanceResponsePrivate(AssignInstanceResponse * const q);
+    explicit AssignInstanceResponsePrivate(AssignInstanceResponse * const q);
 
     void parseAssignInstanceResponse(QXmlStreamReader &xml);
 

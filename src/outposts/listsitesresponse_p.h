@@ -31,7 +31,7 @@ class ListSitesResponsePrivate : public OutpostsResponsePrivate {
 
 public:
 
-    ListSitesResponsePrivate(ListSitesResponse * const q);
+    explicit ListSitesResponsePrivate(ListSitesResponse * const q);
 
     void parseListSitesResponse(QXmlStreamReader &xml);
 

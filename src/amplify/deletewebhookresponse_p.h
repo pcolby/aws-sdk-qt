@@ -31,7 +31,7 @@ class DeleteWebhookResponsePrivate : public AmplifyResponsePrivate {
 
 public:
 
-    DeleteWebhookResponsePrivate(DeleteWebhookResponse * const q);
+    explicit DeleteWebhookResponsePrivate(DeleteWebhookResponse * const q);
 
     void parseDeleteWebhookResponse(QXmlStreamReader &xml);
 

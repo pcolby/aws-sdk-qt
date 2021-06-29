@@ -31,7 +31,7 @@ class CloseInstancePublicPortsResponsePrivate : public LightsailResponsePrivate 
 
 public:
 
-    CloseInstancePublicPortsResponsePrivate(CloseInstancePublicPortsResponse * const q);
+    explicit CloseInstancePublicPortsResponsePrivate(CloseInstancePublicPortsResponse * const q);
 
     void parseCloseInstancePublicPortsResponse(QXmlStreamReader &xml);
 

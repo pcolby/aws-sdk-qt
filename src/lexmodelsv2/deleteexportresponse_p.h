@@ -31,7 +31,7 @@ class DeleteExportResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 
-    DeleteExportResponsePrivate(DeleteExportResponse * const q);
+    explicit DeleteExportResponsePrivate(DeleteExportResponse * const q);
 
     void parseDeleteExportResponse(QXmlStreamReader &xml);
 

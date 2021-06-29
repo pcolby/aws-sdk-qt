@@ -31,7 +31,7 @@ class TransactGetItemsResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 
-    TransactGetItemsResponsePrivate(TransactGetItemsResponse * const q);
+    explicit TransactGetItemsResponsePrivate(TransactGetItemsResponse * const q);
 
     void parseTransactGetItemsResponse(QXmlStreamReader &xml);
 

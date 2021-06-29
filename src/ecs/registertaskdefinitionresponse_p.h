@@ -31,7 +31,7 @@ class RegisterTaskDefinitionResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    RegisterTaskDefinitionResponsePrivate(RegisterTaskDefinitionResponse * const q);
+    explicit RegisterTaskDefinitionResponsePrivate(RegisterTaskDefinitionResponse * const q);
 
     void parseRegisterTaskDefinitionResponse(QXmlStreamReader &xml);
 

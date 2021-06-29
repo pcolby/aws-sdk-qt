@@ -43,7 +43,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    ConnectContactLensClient(
+    explicit ConnectContactLensClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -54,7 +54,7 @@ public slots:
 protected:
     /// @cond internal
     ConnectContactLensClientPrivate * const d_ptr; ///< Internal d-pointer.
-    ConnectContactLensClient(ConnectContactLensClientPrivate * const d);
+    explicit ConnectContactLensClient(ConnectContactLensClientPrivate * const d);
     /// @endcond
 
 private:

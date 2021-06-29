@@ -31,7 +31,7 @@ class DeleteIAMPolicyAssignmentResponsePrivate : public QuickSightResponsePrivat
 
 public:
 
-    DeleteIAMPolicyAssignmentResponsePrivate(DeleteIAMPolicyAssignmentResponse * const q);
+    explicit DeleteIAMPolicyAssignmentResponsePrivate(DeleteIAMPolicyAssignmentResponse * const q);
 
     void parseDeleteIAMPolicyAssignmentResponse(QXmlStreamReader &xml);
 

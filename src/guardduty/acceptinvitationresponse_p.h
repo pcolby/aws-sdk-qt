@@ -31,7 +31,7 @@ class AcceptInvitationResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 
-    AcceptInvitationResponsePrivate(AcceptInvitationResponse * const q);
+    explicit AcceptInvitationResponsePrivate(AcceptInvitationResponse * const q);
 
     void parseAcceptInvitationResponse(QXmlStreamReader &xml);
 

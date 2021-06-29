@@ -31,7 +31,7 @@ class AdminUpdateDeviceStatusResponsePrivate : public CognitoIdentityProviderRes
 
 public:
 
-    AdminUpdateDeviceStatusResponsePrivate(AdminUpdateDeviceStatusResponse * const q);
+    explicit AdminUpdateDeviceStatusResponsePrivate(AdminUpdateDeviceStatusResponse * const q);
 
     void parseAdminUpdateDeviceStatusResponse(QXmlStreamReader &xml);
 

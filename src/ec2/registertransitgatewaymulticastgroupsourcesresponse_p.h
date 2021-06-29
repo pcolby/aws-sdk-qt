@@ -31,7 +31,7 @@ class RegisterTransitGatewayMulticastGroupSourcesResponsePrivate : public Ec2Res
 
 public:
 
-    RegisterTransitGatewayMulticastGroupSourcesResponsePrivate(RegisterTransitGatewayMulticastGroupSourcesResponse * const q);
+    explicit RegisterTransitGatewayMulticastGroupSourcesResponsePrivate(RegisterTransitGatewayMulticastGroupSourcesResponse * const q);
 
     void parseRegisterTransitGatewayMulticastGroupSourcesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ProvisionPermissionSetResponsePrivate : public SSOAdminResponsePrivate {
 
 public:
 
-    ProvisionPermissionSetResponsePrivate(ProvisionPermissionSetResponse * const q);
+    explicit ProvisionPermissionSetResponsePrivate(ProvisionPermissionSetResponse * const q);
 
     void parseProvisionPermissionSetResponse(QXmlStreamReader &xml);
 

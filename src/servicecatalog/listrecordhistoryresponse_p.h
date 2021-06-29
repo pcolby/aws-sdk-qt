@@ -31,7 +31,7 @@ class ListRecordHistoryResponsePrivate : public ServiceCatalogResponsePrivate {
 
 public:
 
-    ListRecordHistoryResponsePrivate(ListRecordHistoryResponse * const q);
+    explicit ListRecordHistoryResponsePrivate(ListRecordHistoryResponse * const q);
 
     void parseListRecordHistoryResponse(QXmlStreamReader &xml);
 

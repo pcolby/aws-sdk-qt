@@ -31,7 +31,7 @@ class ListCollectionsResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 
-    ListCollectionsResponsePrivate(ListCollectionsResponse * const q);
+    explicit ListCollectionsResponsePrivate(ListCollectionsResponse * const q);
 
     void parseListCollectionsResponse(QXmlStreamReader &xml);
 

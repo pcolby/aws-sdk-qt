@@ -31,7 +31,7 @@ class DescribeRuntimeVersionsResponsePrivate : public SyntheticsResponsePrivate 
 
 public:
 
-    DescribeRuntimeVersionsResponsePrivate(DescribeRuntimeVersionsResponse * const q);
+    explicit DescribeRuntimeVersionsResponsePrivate(DescribeRuntimeVersionsResponse * const q);
 
     void parseDescribeRuntimeVersionsResponse(QXmlStreamReader &xml);
 

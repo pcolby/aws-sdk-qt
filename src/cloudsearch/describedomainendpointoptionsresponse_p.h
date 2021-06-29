@@ -31,7 +31,7 @@ class DescribeDomainEndpointOptionsResponsePrivate : public CloudSearchResponseP
 
 public:
 
-    DescribeDomainEndpointOptionsResponsePrivate(DescribeDomainEndpointOptionsResponse * const q);
+    explicit DescribeDomainEndpointOptionsResponsePrivate(DescribeDomainEndpointOptionsResponse * const q);
 
     void parseDescribeDomainEndpointOptionsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteConstraintResponsePrivate : public ServiceCatalogResponsePrivate {
 
 public:
 
-    DeleteConstraintResponsePrivate(DeleteConstraintResponse * const q);
+    explicit DeleteConstraintResponsePrivate(DeleteConstraintResponse * const q);
 
     void parseDeleteConstraintResponse(QXmlStreamReader &xml);
 

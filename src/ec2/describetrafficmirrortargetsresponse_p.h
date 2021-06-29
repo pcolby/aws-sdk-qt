@@ -31,7 +31,7 @@ class DescribeTrafficMirrorTargetsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeTrafficMirrorTargetsResponsePrivate(DescribeTrafficMirrorTargetsResponse * const q);
+    explicit DescribeTrafficMirrorTargetsResponsePrivate(DescribeTrafficMirrorTargetsResponse * const q);
 
     void parseDescribeTrafficMirrorTargetsResponse(QXmlStreamReader &xml);
 

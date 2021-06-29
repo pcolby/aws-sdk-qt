@@ -31,7 +31,7 @@ class RemoveThingFromThingGroupResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    RemoveThingFromThingGroupResponsePrivate(RemoveThingFromThingGroupResponse * const q);
+    explicit RemoveThingFromThingGroupResponsePrivate(RemoveThingFromThingGroupResponse * const q);
 
     void parseRemoveThingFromThingGroupResponse(QXmlStreamReader &xml);
 

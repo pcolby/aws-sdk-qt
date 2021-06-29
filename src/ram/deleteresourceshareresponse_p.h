@@ -31,7 +31,7 @@ class DeleteResourceShareResponsePrivate : public RamResponsePrivate {
 
 public:
 
-    DeleteResourceShareResponsePrivate(DeleteResourceShareResponse * const q);
+    explicit DeleteResourceShareResponsePrivate(DeleteResourceShareResponse * const q);
 
     void parseDeleteResourceShareResponse(QXmlStreamReader &xml);
 

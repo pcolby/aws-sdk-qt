@@ -31,7 +31,7 @@ class DeleteDBInstanceResponsePrivate : public DocDBResponsePrivate {
 
 public:
 
-    DeleteDBInstanceResponsePrivate(DeleteDBInstanceResponse * const q);
+    explicit DeleteDBInstanceResponsePrivate(DeleteDBInstanceResponse * const q);
 
     void parseDeleteDBInstanceResponse(QXmlStreamReader &xml);
 

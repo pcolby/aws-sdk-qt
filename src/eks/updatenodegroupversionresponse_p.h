@@ -31,7 +31,7 @@ class UpdateNodegroupVersionResponsePrivate : public EksResponsePrivate {
 
 public:
 
-    UpdateNodegroupVersionResponsePrivate(UpdateNodegroupVersionResponse * const q);
+    explicit UpdateNodegroupVersionResponsePrivate(UpdateNodegroupVersionResponse * const q);
 
     void parseUpdateNodegroupVersionResponse(QXmlStreamReader &xml);
 

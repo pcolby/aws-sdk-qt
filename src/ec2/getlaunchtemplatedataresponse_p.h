@@ -31,7 +31,7 @@ class GetLaunchTemplateDataResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    GetLaunchTemplateDataResponsePrivate(GetLaunchTemplateDataResponse * const q);
+    explicit GetLaunchTemplateDataResponsePrivate(GetLaunchTemplateDataResponse * const q);
 
     void parseGetLaunchTemplateDataResponse(QXmlStreamReader &xml);
 

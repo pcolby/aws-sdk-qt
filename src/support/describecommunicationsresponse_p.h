@@ -31,7 +31,7 @@ class DescribeCommunicationsResponsePrivate : public SupportResponsePrivate {
 
 public:
 
-    DescribeCommunicationsResponsePrivate(DescribeCommunicationsResponse * const q);
+    explicit DescribeCommunicationsResponsePrivate(DescribeCommunicationsResponse * const q);
 
     void parseDescribeCommunicationsResponse(QXmlStreamReader &xml);
 

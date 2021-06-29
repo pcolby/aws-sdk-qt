@@ -31,7 +31,7 @@ class UpdateMaintenanceWindowResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    UpdateMaintenanceWindowResponsePrivate(UpdateMaintenanceWindowResponse * const q);
+    explicit UpdateMaintenanceWindowResponsePrivate(UpdateMaintenanceWindowResponse * const q);
 
     void parseUpdateMaintenanceWindowResponse(QXmlStreamReader &xml);
 

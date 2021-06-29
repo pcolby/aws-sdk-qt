@@ -31,7 +31,7 @@ class RetrieveTapeArchiveResponsePrivate : public StorageGatewayResponsePrivate 
 
 public:
 
-    RetrieveTapeArchiveResponsePrivate(RetrieveTapeArchiveResponse * const q);
+    explicit RetrieveTapeArchiveResponsePrivate(RetrieveTapeArchiveResponse * const q);
 
     void parseRetrieveTapeArchiveResponse(QXmlStreamReader &xml);
 

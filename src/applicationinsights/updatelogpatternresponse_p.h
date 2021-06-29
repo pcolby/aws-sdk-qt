@@ -31,7 +31,7 @@ class UpdateLogPatternResponsePrivate : public ApplicationInsightsResponsePrivat
 
 public:
 
-    UpdateLogPatternResponsePrivate(UpdateLogPatternResponse * const q);
+    explicit UpdateLogPatternResponsePrivate(UpdateLogPatternResponse * const q);
 
     void parseUpdateLogPatternResponse(QXmlStreamReader &xml);
 

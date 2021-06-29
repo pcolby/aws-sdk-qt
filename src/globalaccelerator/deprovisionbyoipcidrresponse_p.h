@@ -31,7 +31,7 @@ class DeprovisionByoipCidrResponsePrivate : public GlobalAcceleratorResponsePriv
 
 public:
 
-    DeprovisionByoipCidrResponsePrivate(DeprovisionByoipCidrResponse * const q);
+    explicit DeprovisionByoipCidrResponsePrivate(DeprovisionByoipCidrResponse * const q);
 
     void parseDeprovisionByoipCidrResponse(QXmlStreamReader &xml);
 

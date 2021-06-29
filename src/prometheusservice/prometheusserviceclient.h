@@ -51,7 +51,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    PrometheusServiceClient(
+    explicit PrometheusServiceClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -66,7 +66,7 @@ public slots:
 protected:
     /// @cond internal
     PrometheusServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
-    PrometheusServiceClient(PrometheusServiceClientPrivate * const d);
+    explicit PrometheusServiceClient(PrometheusServiceClientPrivate * const d);
     /// @endcond
 
 private:

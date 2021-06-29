@@ -31,7 +31,7 @@ class DisableRuleResponsePrivate : public CloudWatchEventsResponsePrivate {
 
 public:
 
-    DisableRuleResponsePrivate(DisableRuleResponse * const q);
+    explicit DisableRuleResponsePrivate(DisableRuleResponse * const q);
 
     void parseDisableRuleResponse(QXmlStreamReader &xml);
 

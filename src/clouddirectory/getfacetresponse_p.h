@@ -31,7 +31,7 @@ class GetFacetResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 
-    GetFacetResponsePrivate(GetFacetResponse * const q);
+    explicit GetFacetResponsePrivate(GetFacetResponse * const q);
 
     void parseGetFacetResponse(QXmlStreamReader &xml);
 

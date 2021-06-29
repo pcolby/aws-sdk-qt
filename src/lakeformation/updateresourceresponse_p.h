@@ -31,7 +31,7 @@ class UpdateResourceResponsePrivate : public LakeFormationResponsePrivate {
 
 public:
 
-    UpdateResourceResponsePrivate(UpdateResourceResponse * const q);
+    explicit UpdateResourceResponsePrivate(UpdateResourceResponse * const q);
 
     void parseUpdateResourceResponse(QXmlStreamReader &xml);
 

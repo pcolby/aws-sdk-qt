@@ -31,7 +31,7 @@ class DeleteGroupPolicyResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    DeleteGroupPolicyResponsePrivate(DeleteGroupPolicyResponse * const q);
+    explicit DeleteGroupPolicyResponsePrivate(DeleteGroupPolicyResponse * const q);
 
     void parseDeleteGroupPolicyResponse(QXmlStreamReader &xml);
 

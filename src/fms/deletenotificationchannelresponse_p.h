@@ -31,7 +31,7 @@ class DeleteNotificationChannelResponsePrivate : public FmsResponsePrivate {
 
 public:
 
-    DeleteNotificationChannelResponsePrivate(DeleteNotificationChannelResponse * const q);
+    explicit DeleteNotificationChannelResponsePrivate(DeleteNotificationChannelResponse * const q);
 
     void parseDeleteNotificationChannelResponse(QXmlStreamReader &xml);
 

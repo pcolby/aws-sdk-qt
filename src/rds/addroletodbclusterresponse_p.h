@@ -31,7 +31,7 @@ class AddRoleToDBClusterResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    AddRoleToDBClusterResponsePrivate(AddRoleToDBClusterResponse * const q);
+    explicit AddRoleToDBClusterResponsePrivate(AddRoleToDBClusterResponse * const q);
 
     void parseAddRoleToDBClusterResponse(QXmlStreamReader &xml);
 

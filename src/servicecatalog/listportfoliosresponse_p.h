@@ -31,7 +31,7 @@ class ListPortfoliosResponsePrivate : public ServiceCatalogResponsePrivate {
 
 public:
 
-    ListPortfoliosResponsePrivate(ListPortfoliosResponse * const q);
+    explicit ListPortfoliosResponsePrivate(ListPortfoliosResponse * const q);
 
     void parseListPortfoliosResponse(QXmlStreamReader &xml);
 

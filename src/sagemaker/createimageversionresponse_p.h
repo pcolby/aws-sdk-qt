@@ -31,7 +31,7 @@ class CreateImageVersionResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    CreateImageVersionResponsePrivate(CreateImageVersionResponse * const q);
+    explicit CreateImageVersionResponsePrivate(CreateImageVersionResponse * const q);
 
     void parseCreateImageVersionResponse(QXmlStreamReader &xml);
 

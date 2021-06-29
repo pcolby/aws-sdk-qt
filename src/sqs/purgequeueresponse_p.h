@@ -31,7 +31,7 @@ class PurgeQueueResponsePrivate : public SqsResponsePrivate {
 
 public:
 
-    PurgeQueueResponsePrivate(PurgeQueueResponse * const q);
+    explicit PurgeQueueResponsePrivate(PurgeQueueResponse * const q);
 
     void parsePurgeQueueResponse(QXmlStreamReader &xml);
 

@@ -67,7 +67,7 @@ public:
 protected:
     /// @cond internal
     ConnectParticipantRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    ConnectParticipantRequest(ConnectParticipantRequestPrivate * const d);
+    explicit ConnectParticipantRequest(ConnectParticipantRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

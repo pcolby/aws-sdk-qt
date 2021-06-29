@@ -87,7 +87,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    LakeFormationClient(
+    explicit LakeFormationClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -120,7 +120,7 @@ public slots:
 protected:
     /// @cond internal
     LakeFormationClientPrivate * const d_ptr; ///< Internal d-pointer.
-    LakeFormationClient(LakeFormationClientPrivate * const d);
+    explicit LakeFormationClient(LakeFormationClientPrivate * const d);
     /// @endcond
 
 private:

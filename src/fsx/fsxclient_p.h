@@ -30,7 +30,7 @@ class FSxClient;
 class FSxClientPrivate {
 
 public:
-    FSxClientPrivate(FSxClient * const q);
+    explicit FSxClientPrivate(FSxClient * const q);
 
 protected:
     FSxClient * const q_ptr; ///< Internal q-pointer.

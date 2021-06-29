@@ -31,7 +31,7 @@ class TerminateInstanceInAutoScalingGroupResponsePrivate : public AutoScalingRes
 
 public:
 
-    TerminateInstanceInAutoScalingGroupResponsePrivate(TerminateInstanceInAutoScalingGroupResponse * const q);
+    explicit TerminateInstanceInAutoScalingGroupResponsePrivate(TerminateInstanceInAutoScalingGroupResponse * const q);
 
     void parseTerminateInstanceInAutoScalingGroupResponse(QXmlStreamReader &xml);
 

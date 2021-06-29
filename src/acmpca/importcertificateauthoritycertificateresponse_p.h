@@ -31,7 +31,7 @@ class ImportCertificateAuthorityCertificateResponsePrivate : public AcmpcaRespon
 
 public:
 
-    ImportCertificateAuthorityCertificateResponsePrivate(ImportCertificateAuthorityCertificateResponse * const q);
+    explicit ImportCertificateAuthorityCertificateResponsePrivate(ImportCertificateAuthorityCertificateResponse * const q);
 
     void parseImportCertificateAuthorityCertificateResponse(QXmlStreamReader &xml);
 

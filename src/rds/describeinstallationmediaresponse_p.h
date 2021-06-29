@@ -31,7 +31,7 @@ class DescribeInstallationMediaResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    DescribeInstallationMediaResponsePrivate(DescribeInstallationMediaResponse * const q);
+    explicit DescribeInstallationMediaResponsePrivate(DescribeInstallationMediaResponse * const q);
 
     void parseDescribeInstallationMediaResponse(QXmlStreamReader &xml);
 

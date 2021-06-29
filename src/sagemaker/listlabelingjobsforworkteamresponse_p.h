@@ -31,7 +31,7 @@ class ListLabelingJobsForWorkteamResponsePrivate : public SageMakerResponsePriva
 
 public:
 
-    ListLabelingJobsForWorkteamResponsePrivate(ListLabelingJobsForWorkteamResponse * const q);
+    explicit ListLabelingJobsForWorkteamResponsePrivate(ListLabelingJobsForWorkteamResponse * const q);
 
     void parseListLabelingJobsForWorkteamResponse(QXmlStreamReader &xml);
 

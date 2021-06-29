@@ -31,7 +31,7 @@ class DeleteGlobalNetworkResponsePrivate : public NetworkManagerResponsePrivate 
 
 public:
 
-    DeleteGlobalNetworkResponsePrivate(DeleteGlobalNetworkResponse * const q);
+    explicit DeleteGlobalNetworkResponsePrivate(DeleteGlobalNetworkResponse * const q);
 
     void parseDeleteGlobalNetworkResponse(QXmlStreamReader &xml);
 

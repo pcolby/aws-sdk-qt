@@ -31,7 +31,7 @@ class SendTemplatedEmailResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    SendTemplatedEmailResponsePrivate(SendTemplatedEmailResponse * const q);
+    explicit SendTemplatedEmailResponsePrivate(SendTemplatedEmailResponse * const q);
 
     void parseSendTemplatedEmailResponse(QXmlStreamReader &xml);
 

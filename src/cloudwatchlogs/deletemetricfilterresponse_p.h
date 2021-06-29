@@ -31,7 +31,7 @@ class DeleteMetricFilterResponsePrivate : public CloudWatchLogsResponsePrivate {
 
 public:
 
-    DeleteMetricFilterResponsePrivate(DeleteMetricFilterResponse * const q);
+    explicit DeleteMetricFilterResponsePrivate(DeleteMetricFilterResponse * const q);
 
     void parseDeleteMetricFilterResponse(QXmlStreamReader &xml);
 

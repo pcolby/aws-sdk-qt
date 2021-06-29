@@ -31,7 +31,7 @@ class GetReservationPurchaseRecommendationResponsePrivate : public CostExplorerR
 
 public:
 
-    GetReservationPurchaseRecommendationResponsePrivate(GetReservationPurchaseRecommendationResponse * const q);
+    explicit GetReservationPurchaseRecommendationResponsePrivate(GetReservationPurchaseRecommendationResponse * const q);
 
     void parseGetReservationPurchaseRecommendationResponse(QXmlStreamReader &xml);
 

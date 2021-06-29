@@ -30,7 +30,7 @@ class CloudDirectoryClient;
 class CloudDirectoryClientPrivate {
 
 public:
-    CloudDirectoryClientPrivate(CloudDirectoryClient * const q);
+    explicit CloudDirectoryClientPrivate(CloudDirectoryClient * const q);
 
 protected:
     CloudDirectoryClient * const q_ptr; ///< Internal q-pointer.

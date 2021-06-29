@@ -31,7 +31,7 @@ class DescribeHapgResponsePrivate : public CloudHSMResponsePrivate {
 
 public:
 
-    DescribeHapgResponsePrivate(DescribeHapgResponse * const q);
+    explicit DescribeHapgResponsePrivate(DescribeHapgResponse * const q);
 
     void parseDescribeHapgResponse(QXmlStreamReader &xml);
 

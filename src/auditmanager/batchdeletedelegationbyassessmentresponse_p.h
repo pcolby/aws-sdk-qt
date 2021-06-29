@@ -31,7 +31,7 @@ class BatchDeleteDelegationByAssessmentResponsePrivate : public AuditManagerResp
 
 public:
 
-    BatchDeleteDelegationByAssessmentResponsePrivate(BatchDeleteDelegationByAssessmentResponse * const q);
+    explicit BatchDeleteDelegationByAssessmentResponsePrivate(BatchDeleteDelegationByAssessmentResponse * const q);
 
     void parseBatchDeleteDelegationByAssessmentResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListFileSharesResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 
-    ListFileSharesResponsePrivate(ListFileSharesResponse * const q);
+    explicit ListFileSharesResponsePrivate(ListFileSharesResponse * const q);
 
     void parseListFileSharesResponse(QXmlStreamReader &xml);
 

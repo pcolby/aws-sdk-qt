@@ -31,7 +31,7 @@ class PostTextResponsePrivate : public LexRuntimeServiceResponsePrivate {
 
 public:
 
-    PostTextResponsePrivate(PostTextResponse * const q);
+    explicit PostTextResponsePrivate(PostTextResponse * const q);
 
     void parsePostTextResponse(QXmlStreamReader &xml);
 

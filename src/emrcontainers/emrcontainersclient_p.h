@@ -30,7 +30,7 @@ class EMRContainersClient;
 class EMRContainersClientPrivate {
 
 public:
-    EMRContainersClientPrivate(EMRContainersClient * const q);
+    explicit EMRContainersClientPrivate(EMRContainersClient * const q);
 
 protected:
     EMRContainersClient * const q_ptr; ///< Internal q-pointer.

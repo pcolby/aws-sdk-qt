@@ -31,7 +31,7 @@ class ListResolversResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 
-    ListResolversResponsePrivate(ListResolversResponse * const q);
+    explicit ListResolversResponsePrivate(ListResolversResponse * const q);
 
     void parseListResolversResponse(QXmlStreamReader &xml);
 

@@ -30,7 +30,7 @@ class SyntheticsClient;
 class SyntheticsClientPrivate {
 
 public:
-    SyntheticsClientPrivate(SyntheticsClient * const q);
+    explicit SyntheticsClientPrivate(SyntheticsClient * const q);
 
 protected:
     SyntheticsClient * const q_ptr; ///< Internal q-pointer.

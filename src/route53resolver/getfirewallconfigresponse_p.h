@@ -31,7 +31,7 @@ class GetFirewallConfigResponsePrivate : public Route53ResolverResponsePrivate {
 
 public:
 
-    GetFirewallConfigResponsePrivate(GetFirewallConfigResponse * const q);
+    explicit GetFirewallConfigResponsePrivate(GetFirewallConfigResponse * const q);
 
     void parseGetFirewallConfigResponse(QXmlStreamReader &xml);
 

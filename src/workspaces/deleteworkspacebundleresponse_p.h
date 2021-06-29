@@ -31,7 +31,7 @@ class DeleteWorkspaceBundleResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 
-    DeleteWorkspaceBundleResponsePrivate(DeleteWorkspaceBundleResponse * const q);
+    explicit DeleteWorkspaceBundleResponsePrivate(DeleteWorkspaceBundleResponse * const q);
 
     void parseDeleteWorkspaceBundleResponse(QXmlStreamReader &xml);
 

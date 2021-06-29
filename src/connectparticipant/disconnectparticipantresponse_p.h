@@ -31,7 +31,7 @@ class DisconnectParticipantResponsePrivate : public ConnectParticipantResponsePr
 
 public:
 
-    DisconnectParticipantResponsePrivate(DisconnectParticipantResponse * const q);
+    explicit DisconnectParticipantResponsePrivate(DisconnectParticipantResponse * const q);
 
     void parseDisconnectParticipantResponse(QXmlStreamReader &xml);
 

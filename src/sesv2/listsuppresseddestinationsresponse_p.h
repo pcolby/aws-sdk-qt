@@ -31,7 +31,7 @@ class ListSuppressedDestinationsResponsePrivate : public Sesv2ResponsePrivate {
 
 public:
 
-    ListSuppressedDestinationsResponsePrivate(ListSuppressedDestinationsResponse * const q);
+    explicit ListSuppressedDestinationsResponsePrivate(ListSuppressedDestinationsResponse * const q);
 
     void parseListSuppressedDestinationsResponse(QXmlStreamReader &xml);
 

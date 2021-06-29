@@ -31,7 +31,7 @@ class GetImageResponsePrivate : public imagebuilderResponsePrivate {
 
 public:
 
-    GetImageResponsePrivate(GetImageResponse * const q);
+    explicit GetImageResponsePrivate(GetImageResponse * const q);
 
     void parseGetImageResponse(QXmlStreamReader &xml);
 

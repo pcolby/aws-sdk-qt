@@ -31,7 +31,7 @@ class DeleteVirtualServiceResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 
-    DeleteVirtualServiceResponsePrivate(DeleteVirtualServiceResponse * const q);
+    explicit DeleteVirtualServiceResponsePrivate(DeleteVirtualServiceResponse * const q);
 
     void parseDeleteVirtualServiceResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeDBParametersResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 
-    DescribeDBParametersResponsePrivate(DescribeDBParametersResponse * const q);
+    explicit DescribeDBParametersResponsePrivate(DescribeDBParametersResponse * const q);
 
     void parseDescribeDBParametersResponse(QXmlStreamReader &xml);
 

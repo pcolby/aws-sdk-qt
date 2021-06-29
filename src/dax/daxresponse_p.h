@@ -29,7 +29,7 @@ class DaxResponsePrivate {
 
 public:
 
-    DaxResponsePrivate(DaxResponse * const q);
+    explicit DaxResponsePrivate(DaxResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

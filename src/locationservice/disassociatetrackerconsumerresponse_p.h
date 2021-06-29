@@ -31,7 +31,7 @@ class DisassociateTrackerConsumerResponsePrivate : public LocationServiceRespons
 
 public:
 
-    DisassociateTrackerConsumerResponsePrivate(DisassociateTrackerConsumerResponse * const q);
+    explicit DisassociateTrackerConsumerResponsePrivate(DisassociateTrackerConsumerResponse * const q);
 
     void parseDisassociateTrackerConsumerResponse(QXmlStreamReader &xml);
 

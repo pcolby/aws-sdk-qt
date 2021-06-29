@@ -31,7 +31,7 @@ class UpdateTrainingJobResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    UpdateTrainingJobResponsePrivate(UpdateTrainingJobResponse * const q);
+    explicit UpdateTrainingJobResponsePrivate(UpdateTrainingJobResponse * const q);
 
     void parseUpdateTrainingJobResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteHsmClientCertificateResponsePrivate : public RedshiftResponsePrivate
 
 public:
 
-    DeleteHsmClientCertificateResponsePrivate(DeleteHsmClientCertificateResponse * const q);
+    explicit DeleteHsmClientCertificateResponsePrivate(DeleteHsmClientCertificateResponse * const q);
 
     void parseDeleteHsmClientCertificateResponse(QXmlStreamReader &xml);
 

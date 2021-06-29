@@ -31,7 +31,7 @@ class SendTaskSuccessResponsePrivate : public SfnResponsePrivate {
 
 public:
 
-    SendTaskSuccessResponsePrivate(SendTaskSuccessResponse * const q);
+    explicit SendTaskSuccessResponsePrivate(SendTaskSuccessResponse * const q);
 
     void parseSendTaskSuccessResponse(QXmlStreamReader &xml);
 

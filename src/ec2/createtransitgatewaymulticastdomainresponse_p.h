@@ -31,7 +31,7 @@ class CreateTransitGatewayMulticastDomainResponsePrivate : public Ec2ResponsePri
 
 public:
 
-    CreateTransitGatewayMulticastDomainResponsePrivate(CreateTransitGatewayMulticastDomainResponse * const q);
+    explicit CreateTransitGatewayMulticastDomainResponsePrivate(CreateTransitGatewayMulticastDomainResponse * const q);
 
     void parseCreateTransitGatewayMulticastDomainResponse(QXmlStreamReader &xml);
 

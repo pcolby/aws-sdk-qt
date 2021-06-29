@@ -31,7 +31,7 @@ class DeleteOpsMetadataResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    DeleteOpsMetadataResponsePrivate(DeleteOpsMetadataResponse * const q);
+    explicit DeleteOpsMetadataResponsePrivate(DeleteOpsMetadataResponse * const q);
 
     void parseDeleteOpsMetadataResponse(QXmlStreamReader &xml);
 

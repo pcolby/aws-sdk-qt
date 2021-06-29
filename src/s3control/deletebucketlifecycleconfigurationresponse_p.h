@@ -31,7 +31,7 @@ class DeleteBucketLifecycleConfigurationResponsePrivate : public S3ControlRespon
 
 public:
 
-    DeleteBucketLifecycleConfigurationResponsePrivate(DeleteBucketLifecycleConfigurationResponse * const q);
+    explicit DeleteBucketLifecycleConfigurationResponsePrivate(DeleteBucketLifecycleConfigurationResponse * const q);
 
     void parseDeleteBucketLifecycleConfigurationResponse(QXmlStreamReader &xml);
 

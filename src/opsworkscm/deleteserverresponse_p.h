@@ -31,7 +31,7 @@ class DeleteServerResponsePrivate : public OpsWorksCMResponsePrivate {
 
 public:
 
-    DeleteServerResponsePrivate(DeleteServerResponse * const q);
+    explicit DeleteServerResponsePrivate(DeleteServerResponse * const q);
 
     void parseDeleteServerResponse(QXmlStreamReader &xml);
 

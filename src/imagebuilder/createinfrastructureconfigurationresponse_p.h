@@ -31,7 +31,7 @@ class CreateInfrastructureConfigurationResponsePrivate : public imagebuilderResp
 
 public:
 
-    CreateInfrastructureConfigurationResponsePrivate(CreateInfrastructureConfigurationResponse * const q);
+    explicit CreateInfrastructureConfigurationResponsePrivate(CreateInfrastructureConfigurationResponse * const q);
 
     void parseCreateInfrastructureConfigurationResponse(QXmlStreamReader &xml);
 

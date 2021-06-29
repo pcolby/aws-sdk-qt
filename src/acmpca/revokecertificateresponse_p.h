@@ -31,7 +31,7 @@ class RevokeCertificateResponsePrivate : public AcmpcaResponsePrivate {
 
 public:
 
-    RevokeCertificateResponsePrivate(RevokeCertificateResponse * const q);
+    explicit RevokeCertificateResponsePrivate(RevokeCertificateResponse * const q);
 
     void parseRevokeCertificateResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListResourcesInProtectionGroupResponsePrivate : public ShieldResponsePriva
 
 public:
 
-    ListResourcesInProtectionGroupResponsePrivate(ListResourcesInProtectionGroupResponse * const q);
+    explicit ListResourcesInProtectionGroupResponsePrivate(ListResourcesInProtectionGroupResponse * const q);
 
     void parseListResourcesInProtectionGroupResponse(QXmlStreamReader &xml);
 

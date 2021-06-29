@@ -31,7 +31,7 @@ class DeleteSimulationApplicationResponsePrivate : public RoboMakerResponsePriva
 
 public:
 
-    DeleteSimulationApplicationResponsePrivate(DeleteSimulationApplicationResponse * const q);
+    explicit DeleteSimulationApplicationResponsePrivate(DeleteSimulationApplicationResponse * const q);
 
     void parseDeleteSimulationApplicationResponse(QXmlStreamReader &xml);
 

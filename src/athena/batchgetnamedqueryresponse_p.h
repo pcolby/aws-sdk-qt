@@ -31,7 +31,7 @@ class BatchGetNamedQueryResponsePrivate : public AthenaResponsePrivate {
 
 public:
 
-    BatchGetNamedQueryResponsePrivate(BatchGetNamedQueryResponse * const q);
+    explicit BatchGetNamedQueryResponsePrivate(BatchGetNamedQueryResponse * const q);
 
     void parseBatchGetNamedQueryResponse(QXmlStreamReader &xml);
 

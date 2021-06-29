@@ -31,7 +31,7 @@ class DeleteTriggerResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    DeleteTriggerResponsePrivate(DeleteTriggerResponse * const q);
+    explicit DeleteTriggerResponsePrivate(DeleteTriggerResponse * const q);
 
     void parseDeleteTriggerResponse(QXmlStreamReader &xml);
 

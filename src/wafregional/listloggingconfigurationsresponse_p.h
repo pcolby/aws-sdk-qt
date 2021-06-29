@@ -31,7 +31,7 @@ class ListLoggingConfigurationsResponsePrivate : public WAFRegionalResponsePriva
 
 public:
 
-    ListLoggingConfigurationsResponsePrivate(ListLoggingConfigurationsResponse * const q);
+    explicit ListLoggingConfigurationsResponsePrivate(ListLoggingConfigurationsResponse * const q);
 
     void parseListLoggingConfigurationsResponse(QXmlStreamReader &xml);
 

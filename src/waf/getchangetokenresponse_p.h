@@ -31,7 +31,7 @@ class GetChangeTokenResponsePrivate : public WafResponsePrivate {
 
 public:
 
-    GetChangeTokenResponsePrivate(GetChangeTokenResponse * const q);
+    explicit GetChangeTokenResponsePrivate(GetChangeTokenResponse * const q);
 
     void parseGetChangeTokenResponse(QXmlStreamReader &xml);
 

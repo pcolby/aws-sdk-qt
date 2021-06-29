@@ -31,7 +31,7 @@ class DescribeDomainControllersResponsePrivate : public DirectoryServiceResponse
 
 public:
 
-    DescribeDomainControllersResponsePrivate(DescribeDomainControllersResponse * const q);
+    explicit DescribeDomainControllersResponsePrivate(DescribeDomainControllersResponse * const q);
 
     void parseDescribeDomainControllersResponse(QXmlStreamReader &xml);
 

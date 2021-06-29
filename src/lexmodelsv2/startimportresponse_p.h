@@ -31,7 +31,7 @@ class StartImportResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 
-    StartImportResponsePrivate(StartImportResponse * const q);
+    explicit StartImportResponsePrivate(StartImportResponse * const q);
 
     void parseStartImportResponse(QXmlStreamReader &xml);
 

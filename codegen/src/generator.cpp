@@ -269,7 +269,7 @@ QString Generator::getServiceName(const QJsonObject &metaData)
 // Grantlee output stream that does *no* content escaping.
 class NoEscapeStream : public Grantlee::OutputStream {
 public:
-    NoEscapeStream(QTextStream * stream) : Grantlee::OutputStream(stream) { }
+    explicit NoEscapeStream(QTextStream * stream) : Grantlee::OutputStream(stream) { }
 
     virtual QString escape(const QString &input) const { return input; }
 

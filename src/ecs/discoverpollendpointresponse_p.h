@@ -31,7 +31,7 @@ class DiscoverPollEndpointResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    DiscoverPollEndpointResponsePrivate(DiscoverPollEndpointResponse * const q);
+    explicit DiscoverPollEndpointResponsePrivate(DiscoverPollEndpointResponse * const q);
 
     void parseDiscoverPollEndpointResponse(QXmlStreamReader &xml);
 

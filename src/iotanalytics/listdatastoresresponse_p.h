@@ -31,7 +31,7 @@ class ListDatastoresResponsePrivate : public IoTAnalyticsResponsePrivate {
 
 public:
 
-    ListDatastoresResponsePrivate(ListDatastoresResponse * const q);
+    explicit ListDatastoresResponsePrivate(ListDatastoresResponse * const q);
 
     void parseListDatastoresResponse(QXmlStreamReader &xml);
 

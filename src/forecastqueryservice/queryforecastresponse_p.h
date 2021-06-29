@@ -31,7 +31,7 @@ class QueryForecastResponsePrivate : public ForecastQueryServiceResponsePrivate 
 
 public:
 
-    QueryForecastResponsePrivate(QueryForecastResponse * const q);
+    explicit QueryForecastResponsePrivate(QueryForecastResponse * const q);
 
     void parseQueryForecastResponse(QXmlStreamReader &xml);
 

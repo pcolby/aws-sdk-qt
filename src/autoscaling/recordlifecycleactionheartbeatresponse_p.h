@@ -31,7 +31,7 @@ class RecordLifecycleActionHeartbeatResponsePrivate : public AutoScalingResponse
 
 public:
 
-    RecordLifecycleActionHeartbeatResponsePrivate(RecordLifecycleActionHeartbeatResponse * const q);
+    explicit RecordLifecycleActionHeartbeatResponsePrivate(RecordLifecycleActionHeartbeatResponse * const q);
 
     void parseRecordLifecycleActionHeartbeatResponse(QXmlStreamReader &xml);
 

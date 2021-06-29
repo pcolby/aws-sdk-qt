@@ -31,7 +31,7 @@ class DescribeFileSystemPolicyResponsePrivate : public EfsResponsePrivate {
 
 public:
 
-    DescribeFileSystemPolicyResponsePrivate(DescribeFileSystemPolicyResponse * const q);
+    explicit DescribeFileSystemPolicyResponsePrivate(DescribeFileSystemPolicyResponse * const q);
 
     void parseDescribeFileSystemPolicyResponse(QXmlStreamReader &xml);
 

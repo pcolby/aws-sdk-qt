@@ -31,7 +31,7 @@ class ListGrantsResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    ListGrantsResponsePrivate(ListGrantsResponse * const q);
+    explicit ListGrantsResponsePrivate(ListGrantsResponse * const q);
 
     void parseListGrantsResponse(QXmlStreamReader &xml);
 

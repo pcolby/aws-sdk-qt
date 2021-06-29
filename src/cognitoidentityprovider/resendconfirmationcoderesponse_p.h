@@ -31,7 +31,7 @@ class ResendConfirmationCodeResponsePrivate : public CognitoIdentityProviderResp
 
 public:
 
-    ResendConfirmationCodeResponsePrivate(ResendConfirmationCodeResponse * const q);
+    explicit ResendConfirmationCodeResponsePrivate(ResendConfirmationCodeResponse * const q);
 
     void parseResendConfirmationCodeResponse(QXmlStreamReader &xml);
 

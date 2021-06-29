@@ -31,7 +31,7 @@ class DescribeVoicesResponsePrivate : public PollyResponsePrivate {
 
 public:
 
-    DescribeVoicesResponsePrivate(DescribeVoicesResponse * const q);
+    explicit DescribeVoicesResponsePrivate(DescribeVoicesResponse * const q);
 
     void parseDescribeVoicesResponse(QXmlStreamReader &xml);
 

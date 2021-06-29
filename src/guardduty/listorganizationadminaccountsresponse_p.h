@@ -31,7 +31,7 @@ class ListOrganizationAdminAccountsResponsePrivate : public GuardDutyResponsePri
 
 public:
 
-    ListOrganizationAdminAccountsResponsePrivate(ListOrganizationAdminAccountsResponse * const q);
+    explicit ListOrganizationAdminAccountsResponsePrivate(ListOrganizationAdminAccountsResponse * const q);
 
     void parseListOrganizationAdminAccountsResponse(QXmlStreamReader &xml);
 

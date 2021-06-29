@@ -31,7 +31,7 @@ class UpdateServiceResponsePrivate : public ServiceDiscoveryResponsePrivate {
 
 public:
 
-    UpdateServiceResponsePrivate(UpdateServiceResponse * const q);
+    explicit UpdateServiceResponsePrivate(UpdateServiceResponse * const q);
 
     void parseUpdateServiceResponse(QXmlStreamReader &xml);
 

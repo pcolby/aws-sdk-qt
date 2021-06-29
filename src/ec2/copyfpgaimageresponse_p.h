@@ -31,7 +31,7 @@ class CopyFpgaImageResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CopyFpgaImageResponsePrivate(CopyFpgaImageResponse * const q);
+    explicit CopyFpgaImageResponsePrivate(CopyFpgaImageResponse * const q);
 
     void parseCopyFpgaImageResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteIntegrationResponsePrivate : public CustomerProfilesResponsePrivate 
 
 public:
 
-    DeleteIntegrationResponsePrivate(DeleteIntegrationResponse * const q);
+    explicit DeleteIntegrationResponsePrivate(DeleteIntegrationResponse * const q);
 
     void parseDeleteIntegrationResponse(QXmlStreamReader &xml);
 

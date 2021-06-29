@@ -31,7 +31,7 @@ class PutTelemetryRecordsResponsePrivate : public XRayResponsePrivate {
 
 public:
 
-    PutTelemetryRecordsResponsePrivate(PutTelemetryRecordsResponse * const q);
+    explicit PutTelemetryRecordsResponsePrivate(PutTelemetryRecordsResponse * const q);
 
     void parsePutTelemetryRecordsResponse(QXmlStreamReader &xml);
 

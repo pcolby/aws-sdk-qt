@@ -31,7 +31,7 @@ class DisassociateIpGroupsResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 
-    DisassociateIpGroupsResponsePrivate(DisassociateIpGroupsResponse * const q);
+    explicit DisassociateIpGroupsResponsePrivate(DisassociateIpGroupsResponse * const q);
 
     void parseDisassociateIpGroupsResponse(QXmlStreamReader &xml);
 

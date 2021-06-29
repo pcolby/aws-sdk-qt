@@ -31,7 +31,7 @@ class ResetCacheResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 
-    ResetCacheResponsePrivate(ResetCacheResponse * const q);
+    explicit ResetCacheResponsePrivate(ResetCacheResponse * const q);
 
     void parseResetCacheResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateVoiceTemplateResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    CreateVoiceTemplateResponsePrivate(CreateVoiceTemplateResponse * const q);
+    explicit CreateVoiceTemplateResponsePrivate(CreateVoiceTemplateResponse * const q);
 
     void parseCreateVoiceTemplateResponse(QXmlStreamReader &xml);
 

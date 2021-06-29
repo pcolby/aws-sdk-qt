@@ -31,7 +31,7 @@ class CreateSizeConstraintSetResponsePrivate : public WAFRegionalResponsePrivate
 
 public:
 
-    CreateSizeConstraintSetResponsePrivate(CreateSizeConstraintSetResponse * const q);
+    explicit CreateSizeConstraintSetResponsePrivate(CreateSizeConstraintSetResponse * const q);
 
     void parseCreateSizeConstraintSetResponse(QXmlStreamReader &xml);
 

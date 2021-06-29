@@ -31,7 +31,7 @@ class GetAccountStatusResponsePrivate : public AuditManagerResponsePrivate {
 
 public:
 
-    GetAccountStatusResponsePrivate(GetAccountStatusResponse * const q);
+    explicit GetAccountStatusResponsePrivate(GetAccountStatusResponse * const q);
 
     void parseGetAccountStatusResponse(QXmlStreamReader &xml);
 

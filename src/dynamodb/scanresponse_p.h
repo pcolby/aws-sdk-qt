@@ -31,7 +31,7 @@ class ScanResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 
-    ScanResponsePrivate(ScanResponse * const q);
+    explicit ScanResponsePrivate(ScanResponse * const q);
 
     void parseScanResponse(QXmlStreamReader &xml);
 

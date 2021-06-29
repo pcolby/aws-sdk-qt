@@ -31,7 +31,7 @@ class PutSipMediaApplicationLoggingConfigurationResponsePrivate : public ChimeRe
 
 public:
 
-    PutSipMediaApplicationLoggingConfigurationResponsePrivate(PutSipMediaApplicationLoggingConfigurationResponse * const q);
+    explicit PutSipMediaApplicationLoggingConfigurationResponsePrivate(PutSipMediaApplicationLoggingConfigurationResponse * const q);
 
     void parsePutSipMediaApplicationLoggingConfigurationResponse(QXmlStreamReader &xml);
 

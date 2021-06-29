@@ -31,7 +31,7 @@ class UpdateApiKeyResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 
-    UpdateApiKeyResponsePrivate(UpdateApiKeyResponse * const q);
+    explicit UpdateApiKeyResponsePrivate(UpdateApiKeyResponse * const q);
 
     void parseUpdateApiKeyResponse(QXmlStreamReader &xml);
 

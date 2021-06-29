@@ -31,7 +31,7 @@ class ReceiveMessageResponsePrivate : public SqsResponsePrivate {
 
 public:
 
-    ReceiveMessageResponsePrivate(ReceiveMessageResponse * const q);
+    explicit ReceiveMessageResponsePrivate(ReceiveMessageResponse * const q);
 
     void parseReceiveMessageResponse(QXmlStreamReader &xml);
 

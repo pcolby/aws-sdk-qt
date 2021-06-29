@@ -31,7 +31,7 @@ class GetSessionEmbedUrlResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    GetSessionEmbedUrlResponsePrivate(GetSessionEmbedUrlResponse * const q);
+    explicit GetSessionEmbedUrlResponsePrivate(GetSessionEmbedUrlResponse * const q);
 
     void parseGetSessionEmbedUrlResponse(QXmlStreamReader &xml);
 

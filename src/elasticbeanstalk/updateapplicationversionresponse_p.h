@@ -31,7 +31,7 @@ class UpdateApplicationVersionResponsePrivate : public ElasticBeanstalkResponseP
 
 public:
 
-    UpdateApplicationVersionResponsePrivate(UpdateApplicationVersionResponse * const q);
+    explicit UpdateApplicationVersionResponsePrivate(UpdateApplicationVersionResponse * const q);
 
     void parseUpdateApplicationVersionResponse(QXmlStreamReader &xml);
 

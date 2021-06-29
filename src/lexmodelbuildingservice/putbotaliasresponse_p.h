@@ -31,7 +31,7 @@ class PutBotAliasResponsePrivate : public LexModelBuildingServiceResponsePrivate
 
 public:
 
-    PutBotAliasResponsePrivate(PutBotAliasResponse * const q);
+    explicit PutBotAliasResponsePrivate(PutBotAliasResponse * const q);
 
     void parsePutBotAliasResponse(QXmlStreamReader &xml);
 

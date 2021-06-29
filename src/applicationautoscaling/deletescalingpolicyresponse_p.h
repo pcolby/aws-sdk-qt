@@ -31,7 +31,7 @@ class DeleteScalingPolicyResponsePrivate : public ApplicationAutoScalingResponse
 
 public:
 
-    DeleteScalingPolicyResponsePrivate(DeleteScalingPolicyResponse * const q);
+    explicit DeleteScalingPolicyResponsePrivate(DeleteScalingPolicyResponse * const q);
 
     void parseDeleteScalingPolicyResponse(QXmlStreamReader &xml);
 

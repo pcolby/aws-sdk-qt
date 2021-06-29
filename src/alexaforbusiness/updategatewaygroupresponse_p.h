@@ -31,7 +31,7 @@ class UpdateGatewayGroupResponsePrivate : public AlexaForBusinessResponsePrivate
 
 public:
 
-    UpdateGatewayGroupResponsePrivate(UpdateGatewayGroupResponse * const q);
+    explicit UpdateGatewayGroupResponsePrivate(UpdateGatewayGroupResponse * const q);
 
     void parseUpdateGatewayGroupResponse(QXmlStreamReader &xml);
 

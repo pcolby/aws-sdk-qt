@@ -31,7 +31,7 @@ class DeleteActivationResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    DeleteActivationResponsePrivate(DeleteActivationResponse * const q);
+    explicit DeleteActivationResponsePrivate(DeleteActivationResponse * const q);
 
     void parseDeleteActivationResponse(QXmlStreamReader &xml);
 

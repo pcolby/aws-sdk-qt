@@ -65,7 +65,7 @@ public:
 protected:
     /// @cond internal
     LexRuntimeV2RequestPrivate * const d_ptr; ///< Internal d-pointer.
-    LexRuntimeV2Request(LexRuntimeV2RequestPrivate * const d);
+    explicit LexRuntimeV2Request(LexRuntimeV2RequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

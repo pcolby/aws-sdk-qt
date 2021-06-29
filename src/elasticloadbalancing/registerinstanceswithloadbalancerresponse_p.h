@@ -31,7 +31,7 @@ class RegisterInstancesWithLoadBalancerResponsePrivate : public ElasticLoadBalan
 
 public:
 
-    RegisterInstancesWithLoadBalancerResponsePrivate(RegisterInstancesWithLoadBalancerResponse * const q);
+    explicit RegisterInstancesWithLoadBalancerResponsePrivate(RegisterInstancesWithLoadBalancerResponse * const q);
 
     void parseRegisterInstancesWithLoadBalancerResponse(QXmlStreamReader &xml);
 

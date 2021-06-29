@@ -31,7 +31,7 @@ class DeleteRecipeVersionResponsePrivate : public GlueDataBrewResponsePrivate {
 
 public:
 
-    DeleteRecipeVersionResponsePrivate(DeleteRecipeVersionResponse * const q);
+    explicit DeleteRecipeVersionResponsePrivate(DeleteRecipeVersionResponse * const q);
 
     void parseDeleteRecipeVersionResponse(QXmlStreamReader &xml);
 

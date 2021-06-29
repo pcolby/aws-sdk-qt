@@ -31,7 +31,7 @@ class CreateWorldTemplateResponsePrivate : public RoboMakerResponsePrivate {
 
 public:
 
-    CreateWorldTemplateResponsePrivate(CreateWorldTemplateResponse * const q);
+    explicit CreateWorldTemplateResponsePrivate(CreateWorldTemplateResponse * const q);
 
     void parseCreateWorldTemplateResponse(QXmlStreamReader &xml);
 

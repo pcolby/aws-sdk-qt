@@ -31,7 +31,7 @@ class SetLoadBalancerPoliciesOfListenerResponsePrivate : public ElasticLoadBalan
 
 public:
 
-    SetLoadBalancerPoliciesOfListenerResponsePrivate(SetLoadBalancerPoliciesOfListenerResponse * const q);
+    explicit SetLoadBalancerPoliciesOfListenerResponsePrivate(SetLoadBalancerPoliciesOfListenerResponse * const q);
 
     void parseSetLoadBalancerPoliciesOfListenerResponse(QXmlStreamReader &xml);
 

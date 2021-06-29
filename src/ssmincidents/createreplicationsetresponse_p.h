@@ -31,7 +31,7 @@ class CreateReplicationSetResponsePrivate : public SSMIncidentsResponsePrivate {
 
 public:
 
-    CreateReplicationSetResponsePrivate(CreateReplicationSetResponse * const q);
+    explicit CreateReplicationSetResponsePrivate(CreateReplicationSetResponse * const q);
 
     void parseCreateReplicationSetResponse(QXmlStreamReader &xml);
 

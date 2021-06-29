@@ -30,7 +30,7 @@ class SwfClient;
 class SwfClientPrivate {
 
 public:
-    SwfClientPrivate(SwfClient * const q);
+    explicit SwfClientPrivate(SwfClient * const q);
 
 protected:
     SwfClient * const q_ptr; ///< Internal q-pointer.

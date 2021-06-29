@@ -31,7 +31,7 @@ class ClaimDevicesByClaimCodeResponsePrivate : public IoT1ClickDevicesServiceRes
 
 public:
 
-    ClaimDevicesByClaimCodeResponsePrivate(ClaimDevicesByClaimCodeResponse * const q);
+    explicit ClaimDevicesByClaimCodeResponsePrivate(ClaimDevicesByClaimCodeResponse * const q);
 
     void parseClaimDevicesByClaimCodeResponse(QXmlStreamReader &xml);
 

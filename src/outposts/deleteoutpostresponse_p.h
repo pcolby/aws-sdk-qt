@@ -31,7 +31,7 @@ class DeleteOutpostResponsePrivate : public OutpostsResponsePrivate {
 
 public:
 
-    DeleteOutpostResponsePrivate(DeleteOutpostResponse * const q);
+    explicit DeleteOutpostResponsePrivate(DeleteOutpostResponse * const q);
 
     void parseDeleteOutpostResponse(QXmlStreamReader &xml);
 

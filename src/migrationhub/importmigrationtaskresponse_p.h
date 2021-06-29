@@ -31,7 +31,7 @@ class ImportMigrationTaskResponsePrivate : public MigrationHubResponsePrivate {
 
 public:
 
-    ImportMigrationTaskResponsePrivate(ImportMigrationTaskResponse * const q);
+    explicit ImportMigrationTaskResponsePrivate(ImportMigrationTaskResponse * const q);
 
     void parseImportMigrationTaskResponse(QXmlStreamReader &xml);
 

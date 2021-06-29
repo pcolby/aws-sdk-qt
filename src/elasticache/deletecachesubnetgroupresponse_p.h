@@ -31,7 +31,7 @@ class DeleteCacheSubnetGroupResponsePrivate : public ElastiCacheResponsePrivate 
 
 public:
 
-    DeleteCacheSubnetGroupResponsePrivate(DeleteCacheSubnetGroupResponse * const q);
+    explicit DeleteCacheSubnetGroupResponsePrivate(DeleteCacheSubnetGroupResponse * const q);
 
     void parseDeleteCacheSubnetGroupResponse(QXmlStreamReader &xml);
 

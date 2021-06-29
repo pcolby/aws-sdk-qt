@@ -31,7 +31,7 @@ class DeleteResourceTreeResponsePrivate : public ForecastServiceResponsePrivate 
 
 public:
 
-    DeleteResourceTreeResponsePrivate(DeleteResourceTreeResponse * const q);
+    explicit DeleteResourceTreeResponsePrivate(DeleteResourceTreeResponse * const q);
 
     void parseDeleteResourceTreeResponse(QXmlStreamReader &xml);
 

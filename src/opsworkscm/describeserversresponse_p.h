@@ -31,7 +31,7 @@ class DescribeServersResponsePrivate : public OpsWorksCMResponsePrivate {
 
 public:
 
-    DescribeServersResponsePrivate(DescribeServersResponse * const q);
+    explicit DescribeServersResponsePrivate(DescribeServersResponse * const q);
 
     void parseDescribeServersResponse(QXmlStreamReader &xml);
 

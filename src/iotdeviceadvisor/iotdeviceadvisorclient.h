@@ -67,7 +67,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    IoTDeviceAdvisorClient(
+    explicit IoTDeviceAdvisorClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -90,7 +90,7 @@ public slots:
 protected:
     /// @cond internal
     IoTDeviceAdvisorClientPrivate * const d_ptr; ///< Internal d-pointer.
-    IoTDeviceAdvisorClient(IoTDeviceAdvisorClientPrivate * const d);
+    explicit IoTDeviceAdvisorClient(IoTDeviceAdvisorClientPrivate * const d);
     /// @endcond
 
 private:

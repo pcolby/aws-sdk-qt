@@ -31,7 +31,7 @@ class GetSuiteResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    GetSuiteResponsePrivate(GetSuiteResponse * const q);
+    explicit GetSuiteResponsePrivate(GetSuiteResponse * const q);
 
     void parseGetSuiteResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateProfileJobResponsePrivate : public GlueDataBrewResponsePrivate {
 
 public:
 
-    UpdateProfileJobResponsePrivate(UpdateProfileJobResponse * const q);
+    explicit UpdateProfileJobResponsePrivate(UpdateProfileJobResponse * const q);
 
     void parseUpdateProfileJobResponse(QXmlStreamReader &xml);
 

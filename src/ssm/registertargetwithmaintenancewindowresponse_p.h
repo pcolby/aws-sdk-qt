@@ -31,7 +31,7 @@ class RegisterTargetWithMaintenanceWindowResponsePrivate : public SsmResponsePri
 
 public:
 
-    RegisterTargetWithMaintenanceWindowResponsePrivate(RegisterTargetWithMaintenanceWindowResponse * const q);
+    explicit RegisterTargetWithMaintenanceWindowResponsePrivate(RegisterTargetWithMaintenanceWindowResponse * const q);
 
     void parseRegisterTargetWithMaintenanceWindowResponse(QXmlStreamReader &xml);
 

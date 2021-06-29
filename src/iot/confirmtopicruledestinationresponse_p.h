@@ -31,7 +31,7 @@ class ConfirmTopicRuleDestinationResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    ConfirmTopicRuleDestinationResponsePrivate(ConfirmTopicRuleDestinationResponse * const q);
+    explicit ConfirmTopicRuleDestinationResponsePrivate(ConfirmTopicRuleDestinationResponse * const q);
 
     void parseConfirmTopicRuleDestinationResponse(QXmlStreamReader &xml);
 

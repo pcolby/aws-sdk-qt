@@ -121,7 +121,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    Wafv2Client(
+    explicit Wafv2Client(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -171,7 +171,7 @@ public slots:
 protected:
     /// @cond internal
     Wafv2ClientPrivate * const d_ptr; ///< Internal d-pointer.
-    Wafv2Client(Wafv2ClientPrivate * const d);
+    explicit Wafv2Client(Wafv2ClientPrivate * const d);
     /// @endcond
 
 private:

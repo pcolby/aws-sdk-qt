@@ -31,7 +31,7 @@ class DescribeBackupResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 
-    DescribeBackupResponsePrivate(DescribeBackupResponse * const q);
+    explicit DescribeBackupResponsePrivate(DescribeBackupResponse * const q);
 
     void parseDescribeBackupResponse(QXmlStreamReader &xml);
 

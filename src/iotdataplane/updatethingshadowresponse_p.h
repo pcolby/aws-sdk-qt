@@ -31,7 +31,7 @@ class UpdateThingShadowResponsePrivate : public IoTDataPlaneResponsePrivate {
 
 public:
 
-    UpdateThingShadowResponsePrivate(UpdateThingShadowResponse * const q);
+    explicit UpdateThingShadowResponsePrivate(UpdateThingShadowResponse * const q);
 
     void parseUpdateThingShadowResponse(QXmlStreamReader &xml);
 

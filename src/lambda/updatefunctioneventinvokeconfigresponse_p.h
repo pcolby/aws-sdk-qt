@@ -31,7 +31,7 @@ class UpdateFunctionEventInvokeConfigResponsePrivate : public LambdaResponsePriv
 
 public:
 
-    UpdateFunctionEventInvokeConfigResponsePrivate(UpdateFunctionEventInvokeConfigResponse * const q);
+    explicit UpdateFunctionEventInvokeConfigResponsePrivate(UpdateFunctionEventInvokeConfigResponse * const q);
 
     void parseUpdateFunctionEventInvokeConfigResponse(QXmlStreamReader &xml);
 

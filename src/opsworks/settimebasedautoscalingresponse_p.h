@@ -31,7 +31,7 @@ class SetTimeBasedAutoScalingResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    SetTimeBasedAutoScalingResponsePrivate(SetTimeBasedAutoScalingResponse * const q);
+    explicit SetTimeBasedAutoScalingResponsePrivate(SetTimeBasedAutoScalingResponse * const q);
 
     void parseSetTimeBasedAutoScalingResponse(QXmlStreamReader &xml);
 

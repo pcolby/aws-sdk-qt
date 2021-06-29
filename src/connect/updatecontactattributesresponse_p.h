@@ -31,7 +31,7 @@ class UpdateContactAttributesResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    UpdateContactAttributesResponsePrivate(UpdateContactAttributesResponse * const q);
+    explicit UpdateContactAttributesResponsePrivate(UpdateContactAttributesResponse * const q);
 
     void parseUpdateContactAttributesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListVolumesResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 
-    ListVolumesResponsePrivate(ListVolumesResponse * const q);
+    explicit ListVolumesResponsePrivate(ListVolumesResponse * const q);
 
     void parseListVolumesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ReloadTablesResponsePrivate : public DatabaseMigrationServiceResponsePriva
 
 public:
 
-    ReloadTablesResponsePrivate(ReloadTablesResponse * const q);
+    explicit ReloadTablesResponsePrivate(ReloadTablesResponse * const q);
 
     void parseReloadTablesResponse(QXmlStreamReader &xml);
 

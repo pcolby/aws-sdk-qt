@@ -29,7 +29,7 @@ class MarketplaceCommerceAnalyticsResponsePrivate {
 
 public:
 
-    MarketplaceCommerceAnalyticsResponsePrivate(MarketplaceCommerceAnalyticsResponse * const q);
+    explicit MarketplaceCommerceAnalyticsResponsePrivate(MarketplaceCommerceAnalyticsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

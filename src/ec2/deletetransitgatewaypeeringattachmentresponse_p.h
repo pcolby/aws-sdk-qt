@@ -31,7 +31,7 @@ class DeleteTransitGatewayPeeringAttachmentResponsePrivate : public Ec2ResponseP
 
 public:
 
-    DeleteTransitGatewayPeeringAttachmentResponsePrivate(DeleteTransitGatewayPeeringAttachmentResponse * const q);
+    explicit DeleteTransitGatewayPeeringAttachmentResponsePrivate(DeleteTransitGatewayPeeringAttachmentResponse * const q);
 
     void parseDeleteTransitGatewayPeeringAttachmentResponse(QXmlStreamReader &xml);
 

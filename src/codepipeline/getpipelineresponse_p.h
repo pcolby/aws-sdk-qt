@@ -31,7 +31,7 @@ class GetPipelineResponsePrivate : public CodePipelineResponsePrivate {
 
 public:
 
-    GetPipelineResponsePrivate(GetPipelineResponse * const q);
+    explicit GetPipelineResponsePrivate(GetPipelineResponse * const q);
 
     void parseGetPipelineResponse(QXmlStreamReader &xml);
 

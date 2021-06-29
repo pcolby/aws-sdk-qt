@@ -31,7 +31,7 @@ class DeleteHealthCheckResponsePrivate : public Route53ResponsePrivate {
 
 public:
 
-    DeleteHealthCheckResponsePrivate(DeleteHealthCheckResponse * const q);
+    explicit DeleteHealthCheckResponsePrivate(DeleteHealthCheckResponse * const q);
 
     void parseDeleteHealthCheckResponse(QXmlStreamReader &xml);
 

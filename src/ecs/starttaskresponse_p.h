@@ -31,7 +31,7 @@ class StartTaskResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    StartTaskResponsePrivate(StartTaskResponse * const q);
+    explicit StartTaskResponsePrivate(StartTaskResponse * const q);
 
     void parseStartTaskResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateCachePolicyResponsePrivate : public CloudFrontResponsePrivate {
 
 public:
 
-    CreateCachePolicyResponsePrivate(CreateCachePolicyResponse * const q);
+    explicit CreateCachePolicyResponsePrivate(CreateCachePolicyResponse * const q);
 
     void parseCreateCachePolicyResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetAttributesResponsePrivate : public SimpleDBResponsePrivate {
 
 public:
 
-    GetAttributesResponsePrivate(GetAttributesResponse * const q);
+    explicit GetAttributesResponsePrivate(GetAttributesResponse * const q);
 
     void parseGetAttributesResponse(QXmlStreamReader &xml);
 

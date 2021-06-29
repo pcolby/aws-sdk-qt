@@ -31,7 +31,7 @@ class GetQuantumTaskResponsePrivate : public BraketResponsePrivate {
 
 public:
 
-    GetQuantumTaskResponsePrivate(GetQuantumTaskResponse * const q);
+    explicit GetQuantumTaskResponsePrivate(GetQuantumTaskResponse * const q);
 
     void parseGetQuantumTaskResponse(QXmlStreamReader &xml);
 

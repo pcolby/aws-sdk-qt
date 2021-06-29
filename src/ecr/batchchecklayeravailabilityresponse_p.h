@@ -31,7 +31,7 @@ class BatchCheckLayerAvailabilityResponsePrivate : public EcrResponsePrivate {
 
 public:
 
-    BatchCheckLayerAvailabilityResponsePrivate(BatchCheckLayerAvailabilityResponse * const q);
+    explicit BatchCheckLayerAvailabilityResponsePrivate(BatchCheckLayerAvailabilityResponse * const q);
 
     void parseBatchCheckLayerAvailabilityResponse(QXmlStreamReader &xml);
 

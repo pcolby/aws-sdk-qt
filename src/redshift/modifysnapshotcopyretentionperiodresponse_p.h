@@ -31,7 +31,7 @@ class ModifySnapshotCopyRetentionPeriodResponsePrivate : public RedshiftResponse
 
 public:
 
-    ModifySnapshotCopyRetentionPeriodResponsePrivate(ModifySnapshotCopyRetentionPeriodResponse * const q);
+    explicit ModifySnapshotCopyRetentionPeriodResponsePrivate(ModifySnapshotCopyRetentionPeriodResponse * const q);
 
     void parseModifySnapshotCopyRetentionPeriodResponse(QXmlStreamReader &xml);
 

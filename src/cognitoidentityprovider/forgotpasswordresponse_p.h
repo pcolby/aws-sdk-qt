@@ -31,7 +31,7 @@ class ForgotPasswordResponsePrivate : public CognitoIdentityProviderResponsePriv
 
 public:
 
-    ForgotPasswordResponsePrivate(ForgotPasswordResponse * const q);
+    explicit ForgotPasswordResponsePrivate(ForgotPasswordResponse * const q);
 
     void parseForgotPasswordResponse(QXmlStreamReader &xml);
 

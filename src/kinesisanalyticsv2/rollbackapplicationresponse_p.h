@@ -31,7 +31,7 @@ class RollbackApplicationResponsePrivate : public KinesisAnalyticsV2ResponsePriv
 
 public:
 
-    RollbackApplicationResponsePrivate(RollbackApplicationResponse * const q);
+    explicit RollbackApplicationResponsePrivate(RollbackApplicationResponse * const q);
 
     void parseRollbackApplicationResponse(QXmlStreamReader &xml);
 

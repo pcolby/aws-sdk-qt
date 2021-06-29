@@ -31,7 +31,7 @@ class CreateResourceDataSyncResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    CreateResourceDataSyncResponsePrivate(CreateResourceDataSyncResponse * const q);
+    explicit CreateResourceDataSyncResponsePrivate(CreateResourceDataSyncResponse * const q);
 
     void parseCreateResourceDataSyncResponse(QXmlStreamReader &xml);
 

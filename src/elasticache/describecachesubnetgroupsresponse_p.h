@@ -31,7 +31,7 @@ class DescribeCacheSubnetGroupsResponsePrivate : public ElastiCacheResponsePriva
 
 public:
 
-    DescribeCacheSubnetGroupsResponsePrivate(DescribeCacheSubnetGroupsResponse * const q);
+    explicit DescribeCacheSubnetGroupsResponsePrivate(DescribeCacheSubnetGroupsResponse * const q);
 
     void parseDescribeCacheSubnetGroupsResponse(QXmlStreamReader &xml);
 

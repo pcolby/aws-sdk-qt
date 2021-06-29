@@ -31,7 +31,7 @@ class BatchSuspendUserResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    BatchSuspendUserResponsePrivate(BatchSuspendUserResponse * const q);
+    explicit BatchSuspendUserResponsePrivate(BatchSuspendUserResponse * const q);
 
     void parseBatchSuspendUserResponse(QXmlStreamReader &xml);
 

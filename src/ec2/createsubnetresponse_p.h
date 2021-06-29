@@ -31,7 +31,7 @@ class CreateSubnetResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CreateSubnetResponsePrivate(CreateSubnetResponse * const q);
+    explicit CreateSubnetResponsePrivate(CreateSubnetResponse * const q);
 
     void parseCreateSubnetResponse(QXmlStreamReader &xml);
 

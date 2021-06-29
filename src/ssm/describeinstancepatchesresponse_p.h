@@ -31,7 +31,7 @@ class DescribeInstancePatchesResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    DescribeInstancePatchesResponsePrivate(DescribeInstancePatchesResponse * const q);
+    explicit DescribeInstancePatchesResponsePrivate(DescribeInstancePatchesResponse * const q);
 
     void parseDescribeInstancePatchesResponse(QXmlStreamReader &xml);
 

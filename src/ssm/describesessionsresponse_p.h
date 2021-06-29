@@ -31,7 +31,7 @@ class DescribeSessionsResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    DescribeSessionsResponsePrivate(DescribeSessionsResponse * const q);
+    explicit DescribeSessionsResponsePrivate(DescribeSessionsResponse * const q);
 
     void parseDescribeSessionsResponse(QXmlStreamReader &xml);
 

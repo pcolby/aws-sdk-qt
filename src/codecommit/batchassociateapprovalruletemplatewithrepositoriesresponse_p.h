@@ -31,7 +31,7 @@ class BatchAssociateApprovalRuleTemplateWithRepositoriesResponsePrivate : public
 
 public:
 
-    BatchAssociateApprovalRuleTemplateWithRepositoriesResponsePrivate(BatchAssociateApprovalRuleTemplateWithRepositoriesResponse * const q);
+    explicit BatchAssociateApprovalRuleTemplateWithRepositoriesResponsePrivate(BatchAssociateApprovalRuleTemplateWithRepositoriesResponse * const q);
 
     void parseBatchAssociateApprovalRuleTemplateWithRepositoriesResponse(QXmlStreamReader &xml);
 

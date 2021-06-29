@@ -31,7 +31,7 @@ class UpdateProvisioningArtifactResponsePrivate : public ServiceCatalogResponseP
 
 public:
 
-    UpdateProvisioningArtifactResponsePrivate(UpdateProvisioningArtifactResponse * const q);
+    explicit UpdateProvisioningArtifactResponsePrivate(UpdateProvisioningArtifactResponse * const q);
 
     void parseUpdateProvisioningArtifactResponse(QXmlStreamReader &xml);
 

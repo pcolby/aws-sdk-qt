@@ -31,7 +31,7 @@ class CreateTypeResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 
-    CreateTypeResponsePrivate(CreateTypeResponse * const q);
+    explicit CreateTypeResponsePrivate(CreateTypeResponse * const q);
 
     void parseCreateTypeResponse(QXmlStreamReader &xml);
 

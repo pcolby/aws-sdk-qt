@@ -31,7 +31,7 @@ class DeregisterDelegatedAdministratorResponsePrivate : public OrganizationsResp
 
 public:
 
-    DeregisterDelegatedAdministratorResponsePrivate(DeregisterDelegatedAdministratorResponse * const q);
+    explicit DeregisterDelegatedAdministratorResponsePrivate(DeregisterDelegatedAdministratorResponse * const q);
 
     void parseDeregisterDelegatedAdministratorResponse(QXmlStreamReader &xml);
 

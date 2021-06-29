@@ -31,7 +31,7 @@ class CreateBranchResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 
-    CreateBranchResponsePrivate(CreateBranchResponse * const q);
+    explicit CreateBranchResponsePrivate(CreateBranchResponse * const q);
 
     void parseCreateBranchResponse(QXmlStreamReader &xml);
 

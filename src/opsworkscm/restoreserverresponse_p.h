@@ -31,7 +31,7 @@ class RestoreServerResponsePrivate : public OpsWorksCMResponsePrivate {
 
 public:
 
-    RestoreServerResponsePrivate(RestoreServerResponse * const q);
+    explicit RestoreServerResponsePrivate(RestoreServerResponse * const q);
 
     void parseRestoreServerResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeHumanTaskUiResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    DescribeHumanTaskUiResponsePrivate(DescribeHumanTaskUiResponse * const q);
+    explicit DescribeHumanTaskUiResponsePrivate(DescribeHumanTaskUiResponse * const q);
 
     void parseDescribeHumanTaskUiResponse(QXmlStreamReader &xml);
 

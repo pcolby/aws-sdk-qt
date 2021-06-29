@@ -31,7 +31,7 @@ class CreateLongTermPricingResponsePrivate : public SnowballResponsePrivate {
 
 public:
 
-    CreateLongTermPricingResponsePrivate(CreateLongTermPricingResponse * const q);
+    explicit CreateLongTermPricingResponsePrivate(CreateLongTermPricingResponse * const q);
 
     void parseCreateLongTermPricingResponse(QXmlStreamReader &xml);
 

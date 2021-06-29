@@ -31,7 +31,7 @@ class AddPermissionResponsePrivate : public LambdaResponsePrivate {
 
 public:
 
-    AddPermissionResponsePrivate(AddPermissionResponse * const q);
+    explicit AddPermissionResponsePrivate(AddPermissionResponse * const q);
 
     void parseAddPermissionResponse(QXmlStreamReader &xml);
 

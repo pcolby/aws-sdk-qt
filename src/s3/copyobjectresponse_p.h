@@ -31,7 +31,7 @@ class CopyObjectResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    CopyObjectResponsePrivate(CopyObjectResponse * const q);
+    explicit CopyObjectResponsePrivate(CopyObjectResponse * const q);
 
     void parseCopyObjectResponse(QXmlStreamReader &xml);
 

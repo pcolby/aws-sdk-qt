@@ -31,7 +31,7 @@ class CreateMeetingDialOutResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    CreateMeetingDialOutResponsePrivate(CreateMeetingDialOutResponse * const q);
+    explicit CreateMeetingDialOutResponsePrivate(CreateMeetingDialOutResponse * const q);
 
     void parseCreateMeetingDialOutResponse(QXmlStreamReader &xml);
 

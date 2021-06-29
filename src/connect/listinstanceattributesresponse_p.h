@@ -31,7 +31,7 @@ class ListInstanceAttributesResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    ListInstanceAttributesResponsePrivate(ListInstanceAttributesResponse * const q);
+    explicit ListInstanceAttributesResponsePrivate(ListInstanceAttributesResponse * const q);
 
     void parseListInstanceAttributesResponse(QXmlStreamReader &xml);
 

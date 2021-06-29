@@ -31,7 +31,7 @@ class UpdatePipelineExecutionResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    UpdatePipelineExecutionResponsePrivate(UpdatePipelineExecutionResponse * const q);
+    explicit UpdatePipelineExecutionResponsePrivate(UpdatePipelineExecutionResponse * const q);
 
     void parseUpdatePipelineExecutionResponse(QXmlStreamReader &xml);
 

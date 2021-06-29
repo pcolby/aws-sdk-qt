@@ -31,7 +31,7 @@ class PauseServiceResponsePrivate : public AppRunnerResponsePrivate {
 
 public:
 
-    PauseServiceResponsePrivate(PauseServiceResponse * const q);
+    explicit PauseServiceResponsePrivate(PauseServiceResponse * const q);
 
     void parsePauseServiceResponse(QXmlStreamReader &xml);
 

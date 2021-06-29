@@ -31,7 +31,7 @@ class ListPoliciesGrantingServiceAccessResponsePrivate : public IamResponsePriva
 
 public:
 
-    ListPoliciesGrantingServiceAccessResponsePrivate(ListPoliciesGrantingServiceAccessResponse * const q);
+    explicit ListPoliciesGrantingServiceAccessResponsePrivate(ListPoliciesGrantingServiceAccessResponse * const q);
 
     void parseListPoliciesGrantingServiceAccessResponse(QXmlStreamReader &xml);
 

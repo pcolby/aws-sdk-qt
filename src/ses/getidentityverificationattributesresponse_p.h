@@ -31,7 +31,7 @@ class GetIdentityVerificationAttributesResponsePrivate : public SesResponsePriva
 
 public:
 
-    GetIdentityVerificationAttributesResponsePrivate(GetIdentityVerificationAttributesResponse * const q);
+    explicit GetIdentityVerificationAttributesResponsePrivate(GetIdentityVerificationAttributesResponse * const q);
 
     void parseGetIdentityVerificationAttributesResponse(QXmlStreamReader &xml);
 

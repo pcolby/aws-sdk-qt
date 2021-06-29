@@ -31,7 +31,7 @@ class DisassociateApprovedOriginResponsePrivate : public ConnectResponsePrivate 
 
 public:
 
-    DisassociateApprovedOriginResponsePrivate(DisassociateApprovedOriginResponse * const q);
+    explicit DisassociateApprovedOriginResponsePrivate(DisassociateApprovedOriginResponse * const q);
 
     void parseDisassociateApprovedOriginResponse(QXmlStreamReader &xml);
 

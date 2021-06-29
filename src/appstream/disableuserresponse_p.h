@@ -31,7 +31,7 @@ class DisableUserResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 
-    DisableUserResponsePrivate(DisableUserResponse * const q);
+    explicit DisableUserResponsePrivate(DisableUserResponse * const q);
 
     void parseDisableUserResponse(QXmlStreamReader &xml);
 

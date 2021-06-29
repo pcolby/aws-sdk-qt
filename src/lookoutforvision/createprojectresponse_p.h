@@ -31,7 +31,7 @@ class CreateProjectResponsePrivate : public LookoutforVisionResponsePrivate {
 
 public:
 
-    CreateProjectResponsePrivate(CreateProjectResponse * const q);
+    explicit CreateProjectResponsePrivate(CreateProjectResponse * const q);
 
     void parseCreateProjectResponse(QXmlStreamReader &xml);
 

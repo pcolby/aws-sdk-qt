@@ -31,7 +31,7 @@ class ListFaqsResponsePrivate : public kendraResponsePrivate {
 
 public:
 
-    ListFaqsResponsePrivate(ListFaqsResponse * const q);
+    explicit ListFaqsResponsePrivate(ListFaqsResponse * const q);
 
     void parseListFaqsResponse(QXmlStreamReader &xml);
 

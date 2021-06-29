@@ -31,7 +31,7 @@ class DescribeIndexResponsePrivate : public kendraResponsePrivate {
 
 public:
 
-    DescribeIndexResponsePrivate(DescribeIndexResponse * const q);
+    explicit DescribeIndexResponsePrivate(DescribeIndexResponse * const q);
 
     void parseDescribeIndexResponse(QXmlStreamReader &xml);
 

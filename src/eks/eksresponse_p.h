@@ -29,7 +29,7 @@ class EksResponsePrivate {
 
 public:
 
-    EksResponsePrivate(EksResponse * const q);
+    explicit EksResponsePrivate(EksResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

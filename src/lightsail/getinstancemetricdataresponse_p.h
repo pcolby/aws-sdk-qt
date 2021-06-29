@@ -31,7 +31,7 @@ class GetInstanceMetricDataResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    GetInstanceMetricDataResponsePrivate(GetInstanceMetricDataResponse * const q);
+    explicit GetInstanceMetricDataResponsePrivate(GetInstanceMetricDataResponse * const q);
 
     void parseGetInstanceMetricDataResponse(QXmlStreamReader &xml);
 

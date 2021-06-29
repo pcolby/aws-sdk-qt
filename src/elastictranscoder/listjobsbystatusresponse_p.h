@@ -31,7 +31,7 @@ class ListJobsByStatusResponsePrivate : public ElasticTranscoderResponsePrivate 
 
 public:
 
-    ListJobsByStatusResponsePrivate(ListJobsByStatusResponse * const q);
+    explicit ListJobsByStatusResponsePrivate(ListJobsByStatusResponse * const q);
 
     void parseListJobsByStatusResponse(QXmlStreamReader &xml);
 

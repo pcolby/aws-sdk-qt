@@ -31,7 +31,7 @@ class DeleteVpcEndpointsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DeleteVpcEndpointsResponsePrivate(DeleteVpcEndpointsResponse * const q);
+    explicit DeleteVpcEndpointsResponsePrivate(DeleteVpcEndpointsResponse * const q);
 
     void parseDeleteVpcEndpointsResponse(QXmlStreamReader &xml);
 

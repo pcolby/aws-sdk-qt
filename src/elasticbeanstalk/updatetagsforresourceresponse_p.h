@@ -31,7 +31,7 @@ class UpdateTagsForResourceResponsePrivate : public ElasticBeanstalkResponsePriv
 
 public:
 
-    UpdateTagsForResourceResponsePrivate(UpdateTagsForResourceResponse * const q);
+    explicit UpdateTagsForResourceResponsePrivate(UpdateTagsForResourceResponse * const q);
 
     void parseUpdateTagsForResourceResponse(QXmlStreamReader &xml);
 

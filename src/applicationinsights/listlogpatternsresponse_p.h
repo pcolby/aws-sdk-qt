@@ -31,7 +31,7 @@ class ListLogPatternsResponsePrivate : public ApplicationInsightsResponsePrivate
 
 public:
 
-    ListLogPatternsResponsePrivate(ListLogPatternsResponse * const q);
+    explicit ListLogPatternsResponsePrivate(ListLogPatternsResponse * const q);
 
     void parseListLogPatternsResponse(QXmlStreamReader &xml);
 

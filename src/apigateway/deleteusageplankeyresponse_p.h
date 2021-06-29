@@ -31,7 +31,7 @@ class DeleteUsagePlanKeyResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    DeleteUsagePlanKeyResponsePrivate(DeleteUsagePlanKeyResponse * const q);
+    explicit DeleteUsagePlanKeyResponsePrivate(DeleteUsagePlanKeyResponse * const q);
 
     void parseDeleteUsagePlanKeyResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeKinesisStreamingDestinationResponsePrivate : public DynamoDBRespon
 
 public:
 
-    DescribeKinesisStreamingDestinationResponsePrivate(DescribeKinesisStreamingDestinationResponse * const q);
+    explicit DescribeKinesisStreamingDestinationResponsePrivate(DescribeKinesisStreamingDestinationResponse * const q);
 
     void parseDescribeKinesisStreamingDestinationResponse(QXmlStreamReader &xml);
 

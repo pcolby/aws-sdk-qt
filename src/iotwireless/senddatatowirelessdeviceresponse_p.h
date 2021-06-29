@@ -31,7 +31,7 @@ class SendDataToWirelessDeviceResponsePrivate : public IoTWirelessResponsePrivat
 
 public:
 
-    SendDataToWirelessDeviceResponsePrivate(SendDataToWirelessDeviceResponse * const q);
+    explicit SendDataToWirelessDeviceResponsePrivate(SendDataToWirelessDeviceResponse * const q);
 
     void parseSendDataToWirelessDeviceResponse(QXmlStreamReader &xml);
 

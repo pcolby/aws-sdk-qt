@@ -31,7 +31,7 @@ class ResolveCustomerResponsePrivate : public MarketplaceMeteringResponsePrivate
 
 public:
 
-    ResolveCustomerResponsePrivate(ResolveCustomerResponse * const q);
+    explicit ResolveCustomerResponsePrivate(ResolveCustomerResponse * const q);
 
     void parseResolveCustomerResponse(QXmlStreamReader &xml);
 

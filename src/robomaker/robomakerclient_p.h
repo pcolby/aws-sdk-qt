@@ -30,7 +30,7 @@ class RoboMakerClient;
 class RoboMakerClientPrivate {
 
 public:
-    RoboMakerClientPrivate(RoboMakerClient * const q);
+    explicit RoboMakerClientPrivate(RoboMakerClient * const q);
 
 protected:
     RoboMakerClient * const q_ptr; ///< Internal q-pointer.

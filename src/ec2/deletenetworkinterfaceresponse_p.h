@@ -31,7 +31,7 @@ class DeleteNetworkInterfaceResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DeleteNetworkInterfaceResponsePrivate(DeleteNetworkInterfaceResponse * const q);
+    explicit DeleteNetworkInterfaceResponsePrivate(DeleteNetworkInterfaceResponse * const q);
 
     void parseDeleteNetworkInterfaceResponse(QXmlStreamReader &xml);
 

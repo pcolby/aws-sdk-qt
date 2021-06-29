@@ -31,7 +31,7 @@ class DisassociateCustomDomainResponsePrivate : public AppRunnerResponsePrivate 
 
 public:
 
-    DisassociateCustomDomainResponsePrivate(DisassociateCustomDomainResponse * const q);
+    explicit DisassociateCustomDomainResponsePrivate(DisassociateCustomDomainResponse * const q);
 
     void parseDisassociateCustomDomainResponse(QXmlStreamReader &xml);
 

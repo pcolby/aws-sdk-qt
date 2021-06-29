@@ -31,7 +31,7 @@ class CreateQuerySuggestionsBlockListResponsePrivate : public kendraResponsePriv
 
 public:
 
-    CreateQuerySuggestionsBlockListResponsePrivate(CreateQuerySuggestionsBlockListResponse * const q);
+    explicit CreateQuerySuggestionsBlockListResponsePrivate(CreateQuerySuggestionsBlockListResponse * const q);
 
     void parseCreateQuerySuggestionsBlockListResponse(QXmlStreamReader &xml);
 

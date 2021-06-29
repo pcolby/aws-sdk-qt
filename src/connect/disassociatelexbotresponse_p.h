@@ -31,7 +31,7 @@ class DisassociateLexBotResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    DisassociateLexBotResponsePrivate(DisassociateLexBotResponse * const q);
+    explicit DisassociateLexBotResponsePrivate(DisassociateLexBotResponse * const q);
 
     void parseDisassociateLexBotResponse(QXmlStreamReader &xml);
 

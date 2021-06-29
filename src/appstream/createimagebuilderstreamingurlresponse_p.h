@@ -31,7 +31,7 @@ class CreateImageBuilderStreamingURLResponsePrivate : public AppStreamResponsePr
 
 public:
 
-    CreateImageBuilderStreamingURLResponsePrivate(CreateImageBuilderStreamingURLResponse * const q);
+    explicit CreateImageBuilderStreamingURLResponsePrivate(CreateImageBuilderStreamingURLResponse * const q);
 
     void parseCreateImageBuilderStreamingURLResponse(QXmlStreamReader &xml);
 

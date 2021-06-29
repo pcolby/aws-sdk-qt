@@ -31,7 +31,7 @@ class SendAlexaOfferToMasterResponsePrivate : public KinesisVideoSignalingChanne
 
 public:
 
-    SendAlexaOfferToMasterResponsePrivate(SendAlexaOfferToMasterResponse * const q);
+    explicit SendAlexaOfferToMasterResponsePrivate(SendAlexaOfferToMasterResponse * const q);
 
     void parseSendAlexaOfferToMasterResponse(QXmlStreamReader &xml);
 

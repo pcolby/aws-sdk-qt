@@ -31,7 +31,7 @@ class GetApplicationResponsePrivate : public ServerlessApplicationRepositoryResp
 
 public:
 
-    GetApplicationResponsePrivate(GetApplicationResponse * const q);
+    explicit GetApplicationResponsePrivate(GetApplicationResponse * const q);
 
     void parseGetApplicationResponse(QXmlStreamReader &xml);
 

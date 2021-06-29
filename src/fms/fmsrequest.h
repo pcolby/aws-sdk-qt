@@ -85,7 +85,7 @@ public:
 protected:
     /// @cond internal
     FmsRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    FmsRequest(FmsRequestPrivate * const d);
+    explicit FmsRequest(FmsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

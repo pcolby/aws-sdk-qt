@@ -31,7 +31,7 @@ class UpdateInfrastructureConfigurationResponsePrivate : public imagebuilderResp
 
 public:
 
-    UpdateInfrastructureConfigurationResponsePrivate(UpdateInfrastructureConfigurationResponse * const q);
+    explicit UpdateInfrastructureConfigurationResponsePrivate(UpdateInfrastructureConfigurationResponse * const q);
 
     void parseUpdateInfrastructureConfigurationResponse(QXmlStreamReader &xml);
 

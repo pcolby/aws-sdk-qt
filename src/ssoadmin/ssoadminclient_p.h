@@ -30,7 +30,7 @@ class SSOAdminClient;
 class SSOAdminClientPrivate {
 
 public:
-    SSOAdminClientPrivate(SSOAdminClient * const q);
+    explicit SSOAdminClientPrivate(SSOAdminClient * const q);
 
 protected:
     SSOAdminClient * const q_ptr; ///< Internal q-pointer.

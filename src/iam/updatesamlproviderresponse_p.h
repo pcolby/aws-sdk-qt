@@ -31,7 +31,7 @@ class UpdateSAMLProviderResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    UpdateSAMLProviderResponsePrivate(UpdateSAMLProviderResponse * const q);
+    explicit UpdateSAMLProviderResponsePrivate(UpdateSAMLProviderResponse * const q);
 
     void parseUpdateSAMLProviderResponse(QXmlStreamReader &xml);
 

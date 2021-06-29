@@ -31,7 +31,7 @@ class GetInsightSelectorsResponsePrivate : public CloudTrailResponsePrivate {
 
 public:
 
-    GetInsightSelectorsResponsePrivate(GetInsightSelectorsResponse * const q);
+    explicit GetInsightSelectorsResponsePrivate(GetInsightSelectorsResponse * const q);
 
     void parseGetInsightSelectorsResponse(QXmlStreamReader &xml);
 

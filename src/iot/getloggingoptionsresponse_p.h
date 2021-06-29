@@ -31,7 +31,7 @@ class GetLoggingOptionsResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    GetLoggingOptionsResponsePrivate(GetLoggingOptionsResponse * const q);
+    explicit GetLoggingOptionsResponsePrivate(GetLoggingOptionsResponse * const q);
 
     void parseGetLoggingOptionsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateParallelDataResponsePrivate : public TranslateResponsePrivate {
 
 public:
 
-    UpdateParallelDataResponsePrivate(UpdateParallelDataResponse * const q);
+    explicit UpdateParallelDataResponsePrivate(UpdateParallelDataResponse * const q);
 
     void parseUpdateParallelDataResponse(QXmlStreamReader &xml);
 

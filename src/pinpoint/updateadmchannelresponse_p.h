@@ -31,7 +31,7 @@ class UpdateAdmChannelResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    UpdateAdmChannelResponsePrivate(UpdateAdmChannelResponse * const q);
+    explicit UpdateAdmChannelResponsePrivate(UpdateAdmChannelResponse * const q);
 
     void parseUpdateAdmChannelResponse(QXmlStreamReader &xml);
 

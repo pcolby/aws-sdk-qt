@@ -31,7 +31,7 @@ class CreateDatastoreResponsePrivate : public IoTAnalyticsResponsePrivate {
 
 public:
 
-    CreateDatastoreResponsePrivate(CreateDatastoreResponse * const q);
+    explicit CreateDatastoreResponsePrivate(CreateDatastoreResponse * const q);
 
     void parseCreateDatastoreResponse(QXmlStreamReader &xml);
 

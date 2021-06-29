@@ -31,7 +31,7 @@ class AddPartnerResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    AddPartnerResponsePrivate(AddPartnerResponse * const q);
+    explicit AddPartnerResponsePrivate(AddPartnerResponse * const q);
 
     void parseAddPartnerResponse(QXmlStreamReader &xml);
 

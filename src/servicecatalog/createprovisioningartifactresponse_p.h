@@ -31,7 +31,7 @@ class CreateProvisioningArtifactResponsePrivate : public ServiceCatalogResponseP
 
 public:
 
-    CreateProvisioningArtifactResponsePrivate(CreateProvisioningArtifactResponse * const q);
+    explicit CreateProvisioningArtifactResponsePrivate(CreateProvisioningArtifactResponse * const q);
 
     void parseCreateProvisioningArtifactResponse(QXmlStreamReader &xml);
 

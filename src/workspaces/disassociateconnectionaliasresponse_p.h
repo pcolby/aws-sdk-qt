@@ -31,7 +31,7 @@ class DisassociateConnectionAliasResponsePrivate : public WorkSpacesResponsePriv
 
 public:
 
-    DisassociateConnectionAliasResponsePrivate(DisassociateConnectionAliasResponse * const q);
+    explicit DisassociateConnectionAliasResponsePrivate(DisassociateConnectionAliasResponse * const q);
 
     void parseDisassociateConnectionAliasResponse(QXmlStreamReader &xml);
 

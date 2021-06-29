@@ -31,7 +31,7 @@ class CreatePlacementResponsePrivate : public IoT1ClickProjectsResponsePrivate {
 
 public:
 
-    CreatePlacementResponsePrivate(CreatePlacementResponse * const q);
+    explicit CreatePlacementResponsePrivate(CreatePlacementResponse * const q);
 
     void parseCreatePlacementResponse(QXmlStreamReader &xml);
 

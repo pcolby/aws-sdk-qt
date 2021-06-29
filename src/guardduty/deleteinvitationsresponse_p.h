@@ -31,7 +31,7 @@ class DeleteInvitationsResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 
-    DeleteInvitationsResponsePrivate(DeleteInvitationsResponse * const q);
+    explicit DeleteInvitationsResponsePrivate(DeleteInvitationsResponse * const q);
 
     void parseDeleteInvitationsResponse(QXmlStreamReader &xml);
 

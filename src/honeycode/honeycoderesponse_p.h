@@ -29,7 +29,7 @@ class HoneycodeResponsePrivate {
 
 public:
 
-    HoneycodeResponsePrivate(HoneycodeResponse * const q);
+    explicit HoneycodeResponsePrivate(HoneycodeResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

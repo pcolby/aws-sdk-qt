@@ -68,7 +68,7 @@ public:
 protected:
     /// @cond internal
     MobileRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    MobileRequest(MobileRequestPrivate * const d);
+    explicit MobileRequest(MobileRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

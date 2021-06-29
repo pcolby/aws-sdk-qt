@@ -31,7 +31,7 @@ class GetDiscoverySummaryResponsePrivate : public ApplicationDiscoveryServiceRes
 
 public:
 
-    GetDiscoverySummaryResponsePrivate(GetDiscoverySummaryResponse * const q);
+    explicit GetDiscoverySummaryResponsePrivate(GetDiscoverySummaryResponse * const q);
 
     void parseGetDiscoverySummaryResponse(QXmlStreamReader &xml);
 

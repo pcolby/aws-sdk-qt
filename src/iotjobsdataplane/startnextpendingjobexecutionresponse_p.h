@@ -31,7 +31,7 @@ class StartNextPendingJobExecutionResponsePrivate : public IoTJobsDataPlaneRespo
 
 public:
 
-    StartNextPendingJobExecutionResponsePrivate(StartNextPendingJobExecutionResponse * const q);
+    explicit StartNextPendingJobExecutionResponsePrivate(StartNextPendingJobExecutionResponse * const q);
 
     void parseStartNextPendingJobExecutionResponse(QXmlStreamReader &xml);
 

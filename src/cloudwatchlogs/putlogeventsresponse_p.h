@@ -31,7 +31,7 @@ class PutLogEventsResponsePrivate : public CloudWatchLogsResponsePrivate {
 
 public:
 
-    PutLogEventsResponsePrivate(PutLogEventsResponse * const q);
+    explicit PutLogEventsResponsePrivate(PutLogEventsResponse * const q);
 
     void parsePutLogEventsResponse(QXmlStreamReader &xml);
 

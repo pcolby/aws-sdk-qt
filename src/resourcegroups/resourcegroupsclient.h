@@ -73,7 +73,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    ResourceGroupsClient(
+    explicit ResourceGroupsClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -99,7 +99,7 @@ public slots:
 protected:
     /// @cond internal
     ResourceGroupsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    ResourceGroupsClient(ResourceGroupsClientPrivate * const d);
+    explicit ResourceGroupsClient(ResourceGroupsClientPrivate * const d);
     /// @endcond
 
 private:

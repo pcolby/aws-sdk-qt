@@ -31,7 +31,7 @@ class UpdateBranchResponsePrivate : public AmplifyResponsePrivate {
 
 public:
 
-    UpdateBranchResponsePrivate(UpdateBranchResponse * const q);
+    explicit UpdateBranchResponsePrivate(UpdateBranchResponse * const q);
 
     void parseUpdateBranchResponse(QXmlStreamReader &xml);
 

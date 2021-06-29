@@ -31,7 +31,7 @@ class RestoreDBInstanceFromDBSnapshotResponsePrivate : public RdsResponsePrivate
 
 public:
 
-    RestoreDBInstanceFromDBSnapshotResponsePrivate(RestoreDBInstanceFromDBSnapshotResponse * const q);
+    explicit RestoreDBInstanceFromDBSnapshotResponsePrivate(RestoreDBInstanceFromDBSnapshotResponse * const q);
 
     void parseRestoreDBInstanceFromDBSnapshotResponse(QXmlStreamReader &xml);
 

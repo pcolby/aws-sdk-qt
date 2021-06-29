@@ -31,7 +31,7 @@ class DescribeWorkspacesResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 
-    DescribeWorkspacesResponsePrivate(DescribeWorkspacesResponse * const q);
+    explicit DescribeWorkspacesResponsePrivate(DescribeWorkspacesResponse * const q);
 
     void parseDescribeWorkspacesResponse(QXmlStreamReader &xml);
 

@@ -30,7 +30,7 @@ class IoTDataPlaneClient;
 class IoTDataPlaneClientPrivate {
 
 public:
-    IoTDataPlaneClientPrivate(IoTDataPlaneClient * const q);
+    explicit IoTDataPlaneClientPrivate(IoTDataPlaneClient * const q);
 
 protected:
     IoTDataPlaneClient * const q_ptr; ///< Internal q-pointer.

@@ -31,7 +31,7 @@ class GetSavingsPlansPurchaseRecommendationResponsePrivate : public CostExplorer
 
 public:
 
-    GetSavingsPlansPurchaseRecommendationResponsePrivate(GetSavingsPlansPurchaseRecommendationResponse * const q);
+    explicit GetSavingsPlansPurchaseRecommendationResponsePrivate(GetSavingsPlansPurchaseRecommendationResponse * const q);
 
     void parseGetSavingsPlansPurchaseRecommendationResponse(QXmlStreamReader &xml);
 

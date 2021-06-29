@@ -31,7 +31,7 @@ class DescribeLifecycleHooksResponsePrivate : public AutoScalingResponsePrivate 
 
 public:
 
-    DescribeLifecycleHooksResponsePrivate(DescribeLifecycleHooksResponse * const q);
+    explicit DescribeLifecycleHooksResponsePrivate(DescribeLifecycleHooksResponse * const q);
 
     void parseDescribeLifecycleHooksResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteSubscriptionResponsePrivate : public ShieldResponsePrivate {
 
 public:
 
-    DeleteSubscriptionResponsePrivate(DeleteSubscriptionResponse * const q);
+    explicit DeleteSubscriptionResponsePrivate(DeleteSubscriptionResponse * const q);
 
     void parseDeleteSubscriptionResponse(QXmlStreamReader &xml);
 

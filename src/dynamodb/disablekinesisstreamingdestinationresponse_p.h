@@ -31,7 +31,7 @@ class DisableKinesisStreamingDestinationResponsePrivate : public DynamoDBRespons
 
 public:
 
-    DisableKinesisStreamingDestinationResponsePrivate(DisableKinesisStreamingDestinationResponse * const q);
+    explicit DisableKinesisStreamingDestinationResponsePrivate(DisableKinesisStreamingDestinationResponse * const q);
 
     void parseDisableKinesisStreamingDestinationResponse(QXmlStreamReader &xml);
 

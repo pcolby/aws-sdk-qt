@@ -31,7 +31,7 @@ class PutStoredQueryResponsePrivate : public ConfigServiceResponsePrivate {
 
 public:
 
-    PutStoredQueryResponsePrivate(PutStoredQueryResponse * const q);
+    explicit PutStoredQueryResponsePrivate(PutStoredQueryResponse * const q);
 
     void parsePutStoredQueryResponse(QXmlStreamReader &xml);
 

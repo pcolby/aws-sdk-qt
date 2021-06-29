@@ -31,7 +31,7 @@ class DescribeCopyProductStatusResponsePrivate : public ServiceCatalogResponsePr
 
 public:
 
-    DescribeCopyProductStatusResponsePrivate(DescribeCopyProductStatusResponse * const q);
+    explicit DescribeCopyProductStatusResponsePrivate(DescribeCopyProductStatusResponse * const q);
 
     void parseDescribeCopyProductStatusResponse(QXmlStreamReader &xml);
 

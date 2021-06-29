@@ -31,7 +31,7 @@ class ScheduleRunResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    ScheduleRunResponsePrivate(ScheduleRunResponse * const q);
+    explicit ScheduleRunResponsePrivate(ScheduleRunResponse * const q);
 
     void parseScheduleRunResponse(QXmlStreamReader &xml);
 

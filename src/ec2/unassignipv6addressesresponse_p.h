@@ -31,7 +31,7 @@ class UnassignIpv6AddressesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    UnassignIpv6AddressesResponsePrivate(UnassignIpv6AddressesResponse * const q);
+    explicit UnassignIpv6AddressesResponsePrivate(UnassignIpv6AddressesResponse * const q);
 
     void parseUnassignIpv6AddressesResponse(QXmlStreamReader &xml);
 

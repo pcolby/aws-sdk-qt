@@ -31,7 +31,7 @@ class FlushApiCacheResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 
-    FlushApiCacheResponsePrivate(FlushApiCacheResponse * const q);
+    explicit FlushApiCacheResponsePrivate(FlushApiCacheResponse * const q);
 
     void parseFlushApiCacheResponse(QXmlStreamReader &xml);
 

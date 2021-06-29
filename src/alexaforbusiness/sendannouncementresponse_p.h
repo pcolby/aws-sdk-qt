@@ -31,7 +31,7 @@ class SendAnnouncementResponsePrivate : public AlexaForBusinessResponsePrivate {
 
 public:
 
-    SendAnnouncementResponsePrivate(SendAnnouncementResponse * const q);
+    explicit SendAnnouncementResponsePrivate(SendAnnouncementResponse * const q);
 
     void parseSendAnnouncementResponse(QXmlStreamReader &xml);
 

@@ -103,7 +103,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    SSOAdminClient(
+    explicit SSOAdminClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -144,7 +144,7 @@ public slots:
 protected:
     /// @cond internal
     SSOAdminClientPrivate * const d_ptr; ///< Internal d-pointer.
-    SSOAdminClient(SSOAdminClientPrivate * const d);
+    explicit SSOAdminClient(SSOAdminClientPrivate * const d);
     /// @endcond
 
 private:

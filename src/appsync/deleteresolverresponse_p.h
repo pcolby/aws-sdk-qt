@@ -31,7 +31,7 @@ class DeleteResolverResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 
-    DeleteResolverResponsePrivate(DeleteResolverResponse * const q);
+    explicit DeleteResolverResponsePrivate(DeleteResolverResponse * const q);
 
     void parseDeleteResolverResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteDestinationResponsePrivate : public CloudWatchLogsResponsePrivate {
 
 public:
 
-    DeleteDestinationResponsePrivate(DeleteDestinationResponse * const q);
+    explicit DeleteDestinationResponsePrivate(DeleteDestinationResponse * const q);
 
     void parseDeleteDestinationResponse(QXmlStreamReader &xml);
 

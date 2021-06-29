@@ -31,7 +31,7 @@ class ActivateUserResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 
-    ActivateUserResponsePrivate(ActivateUserResponse * const q);
+    explicit ActivateUserResponsePrivate(ActivateUserResponse * const q);
 
     void parseActivateUserResponse(QXmlStreamReader &xml);
 

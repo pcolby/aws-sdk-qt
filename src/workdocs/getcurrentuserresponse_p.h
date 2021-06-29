@@ -31,7 +31,7 @@ class GetCurrentUserResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 
-    GetCurrentUserResponsePrivate(GetCurrentUserResponse * const q);
+    explicit GetCurrentUserResponsePrivate(GetCurrentUserResponse * const q);
 
     void parseGetCurrentUserResponse(QXmlStreamReader &xml);
 

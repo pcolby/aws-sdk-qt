@@ -31,7 +31,7 @@ class ListBackendEnvironmentsResponsePrivate : public AmplifyResponsePrivate {
 
 public:
 
-    ListBackendEnvironmentsResponsePrivate(ListBackendEnvironmentsResponse * const q);
+    explicit ListBackendEnvironmentsResponsePrivate(ListBackendEnvironmentsResponse * const q);
 
     void parseListBackendEnvironmentsResponse(QXmlStreamReader &xml);
 

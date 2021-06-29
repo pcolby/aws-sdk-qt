@@ -30,7 +30,7 @@ class MigrationHubConfigClient;
 class MigrationHubConfigClientPrivate {
 
 public:
-    MigrationHubConfigClientPrivate(MigrationHubConfigClient * const q);
+    explicit MigrationHubConfigClientPrivate(MigrationHubConfigClient * const q);
 
 protected:
     MigrationHubConfigClient * const q_ptr; ///< Internal q-pointer.

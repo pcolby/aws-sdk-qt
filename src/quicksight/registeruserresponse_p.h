@@ -31,7 +31,7 @@ class RegisterUserResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    RegisterUserResponsePrivate(RegisterUserResponse * const q);
+    explicit RegisterUserResponsePrivate(RegisterUserResponse * const q);
 
     void parseRegisterUserResponse(QXmlStreamReader &xml);
 

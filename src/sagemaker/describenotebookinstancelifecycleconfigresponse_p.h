@@ -31,7 +31,7 @@ class DescribeNotebookInstanceLifecycleConfigResponsePrivate : public SageMakerR
 
 public:
 
-    DescribeNotebookInstanceLifecycleConfigResponsePrivate(DescribeNotebookInstanceLifecycleConfigResponse * const q);
+    explicit DescribeNotebookInstanceLifecycleConfigResponsePrivate(DescribeNotebookInstanceLifecycleConfigResponse * const q);
 
     void parseDescribeNotebookInstanceLifecycleConfigResponse(QXmlStreamReader &xml);
 

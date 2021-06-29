@@ -31,7 +31,7 @@ class CreateIndexResponsePrivate : public kendraResponsePrivate {
 
 public:
 
-    CreateIndexResponsePrivate(CreateIndexResponse * const q);
+    explicit CreateIndexResponsePrivate(CreateIndexResponse * const q);
 
     void parseCreateIndexResponse(QXmlStreamReader &xml);
 

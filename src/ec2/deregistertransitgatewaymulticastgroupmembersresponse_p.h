@@ -31,7 +31,7 @@ class DeregisterTransitGatewayMulticastGroupMembersResponsePrivate : public Ec2R
 
 public:
 
-    DeregisterTransitGatewayMulticastGroupMembersResponsePrivate(DeregisterTransitGatewayMulticastGroupMembersResponse * const q);
+    explicit DeregisterTransitGatewayMulticastGroupMembersResponsePrivate(DeregisterTransitGatewayMulticastGroupMembersResponse * const q);
 
     void parseDeregisterTransitGatewayMulticastGroupMembersResponse(QXmlStreamReader &xml);
 

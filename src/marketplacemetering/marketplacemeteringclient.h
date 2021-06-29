@@ -49,7 +49,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    MarketplaceMeteringClient(
+    explicit MarketplaceMeteringClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -63,7 +63,7 @@ public slots:
 protected:
     /// @cond internal
     MarketplaceMeteringClientPrivate * const d_ptr; ///< Internal d-pointer.
-    MarketplaceMeteringClient(MarketplaceMeteringClientPrivate * const d);
+    explicit MarketplaceMeteringClient(MarketplaceMeteringClientPrivate * const d);
     /// @endcond
 
 private:

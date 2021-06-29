@@ -31,7 +31,7 @@ class ListChangedBlocksResponsePrivate : public EbsResponsePrivate {
 
 public:
 
-    ListChangedBlocksResponsePrivate(ListChangedBlocksResponse * const q);
+    explicit ListChangedBlocksResponsePrivate(ListChangedBlocksResponse * const q);
 
     void parseListChangedBlocksResponse(QXmlStreamReader &xml);
 

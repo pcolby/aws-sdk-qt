@@ -31,7 +31,7 @@ class ListPhoneNumbersOptedOutResponsePrivate : public SnsResponsePrivate {
 
 public:
 
-    ListPhoneNumbersOptedOutResponsePrivate(ListPhoneNumbersOptedOutResponse * const q);
+    explicit ListPhoneNumbersOptedOutResponsePrivate(ListPhoneNumbersOptedOutResponse * const q);
 
     void parseListPhoneNumbersOptedOutResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateAlarmModelResponsePrivate : public IoTEventsResponsePrivate {
 
 public:
 
-    UpdateAlarmModelResponsePrivate(UpdateAlarmModelResponse * const q);
+    explicit UpdateAlarmModelResponsePrivate(UpdateAlarmModelResponse * const q);
 
     void parseUpdateAlarmModelResponse(QXmlStreamReader &xml);
 

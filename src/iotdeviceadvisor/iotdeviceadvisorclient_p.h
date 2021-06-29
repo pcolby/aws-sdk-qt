@@ -30,7 +30,7 @@ class IoTDeviceAdvisorClient;
 class IoTDeviceAdvisorClientPrivate {
 
 public:
-    IoTDeviceAdvisorClientPrivate(IoTDeviceAdvisorClient * const q);
+    explicit IoTDeviceAdvisorClientPrivate(IoTDeviceAdvisorClient * const q);
 
 protected:
     IoTDeviceAdvisorClient * const q_ptr; ///< Internal q-pointer.

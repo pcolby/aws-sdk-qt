@@ -31,7 +31,7 @@ class NotifyWhenUploadedResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 
-    NotifyWhenUploadedResponsePrivate(NotifyWhenUploadedResponse * const q);
+    explicit NotifyWhenUploadedResponsePrivate(NotifyWhenUploadedResponse * const q);
 
     void parseNotifyWhenUploadedResponse(QXmlStreamReader &xml);
 

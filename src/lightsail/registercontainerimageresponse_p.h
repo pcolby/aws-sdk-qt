@@ -31,7 +31,7 @@ class RegisterContainerImageResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    RegisterContainerImageResponsePrivate(RegisterContainerImageResponse * const q);
+    explicit RegisterContainerImageResponsePrivate(RegisterContainerImageResponse * const q);
 
     void parseRegisterContainerImageResponse(QXmlStreamReader &xml);
 

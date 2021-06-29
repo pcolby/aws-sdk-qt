@@ -31,7 +31,7 @@ class StopICD10CMInferenceJobResponsePrivate : public ComprehendMedicalResponseP
 
 public:
 
-    StopICD10CMInferenceJobResponsePrivate(StopICD10CMInferenceJobResponse * const q);
+    explicit StopICD10CMInferenceJobResponsePrivate(StopICD10CMInferenceJobResponse * const q);
 
     void parseStopICD10CMInferenceJobResponse(QXmlStreamReader &xml);
 

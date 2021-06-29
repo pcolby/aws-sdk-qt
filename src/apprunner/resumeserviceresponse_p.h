@@ -31,7 +31,7 @@ class ResumeServiceResponsePrivate : public AppRunnerResponsePrivate {
 
 public:
 
-    ResumeServiceResponsePrivate(ResumeServiceResponse * const q);
+    explicit ResumeServiceResponsePrivate(ResumeServiceResponse * const q);
 
     void parseResumeServiceResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetAggregateResourceConfigResponsePrivate : public ConfigServiceResponsePr
 
 public:
 
-    GetAggregateResourceConfigResponsePrivate(GetAggregateResourceConfigResponse * const q);
+    explicit GetAggregateResourceConfigResponsePrivate(GetAggregateResourceConfigResponse * const q);
 
     void parseGetAggregateResourceConfigResponse(QXmlStreamReader &xml);
 

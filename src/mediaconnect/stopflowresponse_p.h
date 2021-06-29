@@ -31,7 +31,7 @@ class StopFlowResponsePrivate : public MediaConnectResponsePrivate {
 
 public:
 
-    StopFlowResponsePrivate(StopFlowResponse * const q);
+    explicit StopFlowResponsePrivate(StopFlowResponse * const q);
 
     void parseStopFlowResponse(QXmlStreamReader &xml);
 

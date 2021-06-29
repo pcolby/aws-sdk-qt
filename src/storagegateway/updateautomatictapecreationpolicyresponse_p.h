@@ -31,7 +31,7 @@ class UpdateAutomaticTapeCreationPolicyResponsePrivate : public StorageGatewayRe
 
 public:
 
-    UpdateAutomaticTapeCreationPolicyResponsePrivate(UpdateAutomaticTapeCreationPolicyResponse * const q);
+    explicit UpdateAutomaticTapeCreationPolicyResponsePrivate(UpdateAutomaticTapeCreationPolicyResponse * const q);
 
     void parseUpdateAutomaticTapeCreationPolicyResponse(QXmlStreamReader &xml);
 

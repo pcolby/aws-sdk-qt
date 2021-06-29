@@ -31,7 +31,7 @@ class GetRuleResponsePrivate : public WafResponsePrivate {
 
 public:
 
-    GetRuleResponsePrivate(GetRuleResponse * const q);
+    explicit GetRuleResponsePrivate(GetRuleResponse * const q);
 
     void parseGetRuleResponse(QXmlStreamReader &xml);
 

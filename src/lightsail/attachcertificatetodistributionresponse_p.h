@@ -31,7 +31,7 @@ class AttachCertificateToDistributionResponsePrivate : public LightsailResponseP
 
 public:
 
-    AttachCertificateToDistributionResponsePrivate(AttachCertificateToDistributionResponse * const q);
+    explicit AttachCertificateToDistributionResponsePrivate(AttachCertificateToDistributionResponse * const q);
 
     void parseAttachCertificateToDistributionResponse(QXmlStreamReader &xml);
 

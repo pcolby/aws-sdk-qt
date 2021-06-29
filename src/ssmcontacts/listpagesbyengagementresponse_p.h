@@ -31,7 +31,7 @@ class ListPagesByEngagementResponsePrivate : public SSMContactsResponsePrivate {
 
 public:
 
-    ListPagesByEngagementResponsePrivate(ListPagesByEngagementResponse * const q);
+    explicit ListPagesByEngagementResponsePrivate(ListPagesByEngagementResponse * const q);
 
     void parseListPagesByEngagementResponse(QXmlStreamReader &xml);
 

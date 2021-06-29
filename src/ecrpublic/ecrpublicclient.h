@@ -87,7 +87,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    ECRPublicClient(
+    explicit ECRPublicClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -120,7 +120,7 @@ public slots:
 protected:
     /// @cond internal
     ECRPublicClientPrivate * const d_ptr; ///< Internal d-pointer.
-    ECRPublicClient(ECRPublicClientPrivate * const d);
+    explicit ECRPublicClient(ECRPublicClientPrivate * const d);
     /// @endcond
 
 private:

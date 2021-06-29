@@ -31,7 +31,7 @@ class AddWorkingStorageResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 
-    AddWorkingStorageResponsePrivate(AddWorkingStorageResponse * const q);
+    explicit AddWorkingStorageResponsePrivate(AddWorkingStorageResponse * const q);
 
     void parseAddWorkingStorageResponse(QXmlStreamReader &xml);
 

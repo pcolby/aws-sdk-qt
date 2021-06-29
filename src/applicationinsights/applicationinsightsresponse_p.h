@@ -29,7 +29,7 @@ class ApplicationInsightsResponsePrivate {
 
 public:
 
-    ApplicationInsightsResponsePrivate(ApplicationInsightsResponse * const q);
+    explicit ApplicationInsightsResponsePrivate(ApplicationInsightsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

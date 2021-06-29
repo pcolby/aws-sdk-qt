@@ -31,7 +31,7 @@ class UpdateJobStatusResponsePrivate : public S3ControlResponsePrivate {
 
 public:
 
-    UpdateJobStatusResponsePrivate(UpdateJobStatusResponse * const q);
+    explicit UpdateJobStatusResponsePrivate(UpdateJobStatusResponse * const q);
 
     void parseUpdateJobStatusResponse(QXmlStreamReader &xml);
 

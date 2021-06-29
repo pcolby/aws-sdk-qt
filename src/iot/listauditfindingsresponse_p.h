@@ -31,7 +31,7 @@ class ListAuditFindingsResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    ListAuditFindingsResponsePrivate(ListAuditFindingsResponse * const q);
+    explicit ListAuditFindingsResponsePrivate(ListAuditFindingsResponse * const q);
 
     void parseListAuditFindingsResponse(QXmlStreamReader &xml);
 

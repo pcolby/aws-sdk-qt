@@ -31,7 +31,7 @@ class AssociateAwsAccountWithPartnerAccountResponsePrivate : public IoTWirelessR
 
 public:
 
-    AssociateAwsAccountWithPartnerAccountResponsePrivate(AssociateAwsAccountWithPartnerAccountResponse * const q);
+    explicit AssociateAwsAccountWithPartnerAccountResponsePrivate(AssociateAwsAccountWithPartnerAccountResponse * const q);
 
     void parseAssociateAwsAccountWithPartnerAccountResponse(QXmlStreamReader &xml);
 

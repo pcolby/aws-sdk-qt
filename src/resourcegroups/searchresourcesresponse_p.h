@@ -31,7 +31,7 @@ class SearchResourcesResponsePrivate : public ResourceGroupsResponsePrivate {
 
 public:
 
-    SearchResourcesResponsePrivate(SearchResourcesResponse * const q);
+    explicit SearchResourcesResponsePrivate(SearchResourcesResponse * const q);
 
     void parseSearchResourcesResponse(QXmlStreamReader &xml);
 

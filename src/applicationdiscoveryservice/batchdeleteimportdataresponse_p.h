@@ -31,7 +31,7 @@ class BatchDeleteImportDataResponsePrivate : public ApplicationDiscoveryServiceR
 
 public:
 
-    BatchDeleteImportDataResponsePrivate(BatchDeleteImportDataResponse * const q);
+    explicit BatchDeleteImportDataResponsePrivate(BatchDeleteImportDataResponse * const q);
 
     void parseBatchDeleteImportDataResponse(QXmlStreamReader &xml);
 

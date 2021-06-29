@@ -31,7 +31,7 @@ class GetMonitoringSubscriptionResponsePrivate : public CloudFrontResponsePrivat
 
 public:
 
-    GetMonitoringSubscriptionResponsePrivate(GetMonitoringSubscriptionResponse * const q);
+    explicit GetMonitoringSubscriptionResponsePrivate(GetMonitoringSubscriptionResponse * const q);
 
     void parseGetMonitoringSubscriptionResponse(QXmlStreamReader &xml);
 

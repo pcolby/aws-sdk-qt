@@ -31,7 +31,7 @@ class BatchCreateAttendeeResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    BatchCreateAttendeeResponsePrivate(BatchCreateAttendeeResponse * const q);
+    explicit BatchCreateAttendeeResponsePrivate(BatchCreateAttendeeResponse * const q);
 
     void parseBatchCreateAttendeeResponse(QXmlStreamReader &xml);
 

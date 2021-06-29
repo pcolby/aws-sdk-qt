@@ -31,7 +31,7 @@ class UnlabelParameterVersionResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    UnlabelParameterVersionResponsePrivate(UnlabelParameterVersionResponse * const q);
+    explicit UnlabelParameterVersionResponsePrivate(UnlabelParameterVersionResponse * const q);
 
     void parseUnlabelParameterVersionResponse(QXmlStreamReader &xml);
 

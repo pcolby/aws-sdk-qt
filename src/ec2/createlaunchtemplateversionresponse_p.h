@@ -31,7 +31,7 @@ class CreateLaunchTemplateVersionResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CreateLaunchTemplateVersionResponsePrivate(CreateLaunchTemplateVersionResponse * const q);
+    explicit CreateLaunchTemplateVersionResponsePrivate(CreateLaunchTemplateVersionResponse * const q);
 
     void parseCreateLaunchTemplateVersionResponse(QXmlStreamReader &xml);
 

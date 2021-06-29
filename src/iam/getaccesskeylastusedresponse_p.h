@@ -31,7 +31,7 @@ class GetAccessKeyLastUsedResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    GetAccessKeyLastUsedResponsePrivate(GetAccessKeyLastUsedResponse * const q);
+    explicit GetAccessKeyLastUsedResponsePrivate(GetAccessKeyLastUsedResponse * const q);
 
     void parseGetAccessKeyLastUsedResponse(QXmlStreamReader &xml);
 

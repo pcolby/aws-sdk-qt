@@ -31,7 +31,7 @@ class PutSchemaVersionMetadataResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    PutSchemaVersionMetadataResponsePrivate(PutSchemaVersionMetadataResponse * const q);
+    explicit PutSchemaVersionMetadataResponsePrivate(PutSchemaVersionMetadataResponse * const q);
 
     void parsePutSchemaVersionMetadataResponse(QXmlStreamReader &xml);
 

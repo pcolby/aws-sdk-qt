@@ -31,7 +31,7 @@ class ListTrainingJobsForHyperParameterTuningJobResponsePrivate : public SageMak
 
 public:
 
-    ListTrainingJobsForHyperParameterTuningJobResponsePrivate(ListTrainingJobsForHyperParameterTuningJobResponse * const q);
+    explicit ListTrainingJobsForHyperParameterTuningJobResponsePrivate(ListTrainingJobsForHyperParameterTuningJobResponse * const q);
 
     void parseListTrainingJobsForHyperParameterTuningJobResponse(QXmlStreamReader &xml);
 

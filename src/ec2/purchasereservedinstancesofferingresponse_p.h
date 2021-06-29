@@ -31,7 +31,7 @@ class PurchaseReservedInstancesOfferingResponsePrivate : public Ec2ResponsePriva
 
 public:
 
-    PurchaseReservedInstancesOfferingResponsePrivate(PurchaseReservedInstancesOfferingResponse * const q);
+    explicit PurchaseReservedInstancesOfferingResponsePrivate(PurchaseReservedInstancesOfferingResponse * const q);
 
     void parsePurchaseReservedInstancesOfferingResponse(QXmlStreamReader &xml);
 

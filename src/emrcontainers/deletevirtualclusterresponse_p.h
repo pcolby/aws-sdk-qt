@@ -31,7 +31,7 @@ class DeleteVirtualClusterResponsePrivate : public EMRContainersResponsePrivate 
 
 public:
 
-    DeleteVirtualClusterResponsePrivate(DeleteVirtualClusterResponse * const q);
+    explicit DeleteVirtualClusterResponsePrivate(DeleteVirtualClusterResponse * const q);
 
     void parseDeleteVirtualClusterResponse(QXmlStreamReader &xml);
 

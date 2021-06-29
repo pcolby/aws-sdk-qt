@@ -31,7 +31,7 @@ class CreateHostedConfigurationVersionResponsePrivate : public AppConfigResponse
 
 public:
 
-    CreateHostedConfigurationVersionResponsePrivate(CreateHostedConfigurationVersionResponse * const q);
+    explicit CreateHostedConfigurationVersionResponsePrivate(CreateHostedConfigurationVersionResponse * const q);
 
     void parseCreateHostedConfigurationVersionResponse(QXmlStreamReader &xml);
 

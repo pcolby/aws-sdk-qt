@@ -31,7 +31,7 @@ class DeleteIdentityPolicyResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    DeleteIdentityPolicyResponsePrivate(DeleteIdentityPolicyResponse * const q);
+    explicit DeleteIdentityPolicyResponsePrivate(DeleteIdentityPolicyResponse * const q);
 
     void parseDeleteIdentityPolicyResponse(QXmlStreamReader &xml);
 

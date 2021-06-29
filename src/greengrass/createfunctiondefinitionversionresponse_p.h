@@ -31,7 +31,7 @@ class CreateFunctionDefinitionVersionResponsePrivate : public GreengrassResponse
 
 public:
 
-    CreateFunctionDefinitionVersionResponsePrivate(CreateFunctionDefinitionVersionResponse * const q);
+    explicit CreateFunctionDefinitionVersionResponsePrivate(CreateFunctionDefinitionVersionResponse * const q);
 
     void parseCreateFunctionDefinitionVersionResponse(QXmlStreamReader &xml);
 

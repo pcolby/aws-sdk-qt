@@ -31,7 +31,7 @@ class StartInstanceResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    StartInstanceResponsePrivate(StartInstanceResponse * const q);
+    explicit StartInstanceResponsePrivate(StartInstanceResponse * const q);
 
     void parseStartInstanceResponse(QXmlStreamReader &xml);
 

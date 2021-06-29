@@ -31,7 +31,7 @@ class ListProblemsResponsePrivate : public ApplicationInsightsResponsePrivate {
 
 public:
 
-    ListProblemsResponsePrivate(ListProblemsResponse * const q);
+    explicit ListProblemsResponsePrivate(ListProblemsResponse * const q);
 
     void parseListProblemsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListHostedZonesByVPCResponsePrivate : public Route53ResponsePrivate {
 
 public:
 
-    ListHostedZonesByVPCResponsePrivate(ListHostedZonesByVPCResponse * const q);
+    explicit ListHostedZonesByVPCResponsePrivate(ListHostedZonesByVPCResponse * const q);
 
     void parseListHostedZonesByVPCResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListWorkflowsResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    ListWorkflowsResponsePrivate(ListWorkflowsResponse * const q);
+    explicit ListWorkflowsResponsePrivate(ListWorkflowsResponse * const q);
 
     void parseListWorkflowsResponse(QXmlStreamReader &xml);
 

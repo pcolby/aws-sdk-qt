@@ -31,7 +31,7 @@ class CreateRuleGroupResponsePrivate : public Wafv2ResponsePrivate {
 
 public:
 
-    CreateRuleGroupResponsePrivate(CreateRuleGroupResponse * const q);
+    explicit CreateRuleGroupResponsePrivate(CreateRuleGroupResponse * const q);
 
     void parseCreateRuleGroupResponse(QXmlStreamReader &xml);
 

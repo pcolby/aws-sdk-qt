@@ -31,7 +31,7 @@ class CreatePullRequestApprovalRuleResponsePrivate : public CodeCommitResponsePr
 
 public:
 
-    CreatePullRequestApprovalRuleResponsePrivate(CreatePullRequestApprovalRuleResponse * const q);
+    explicit CreatePullRequestApprovalRuleResponsePrivate(CreatePullRequestApprovalRuleResponse * const q);
 
     void parseCreatePullRequestApprovalRuleResponse(QXmlStreamReader &xml);
 

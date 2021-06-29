@@ -31,7 +31,7 @@ class ListOfferingPromotionsResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    ListOfferingPromotionsResponsePrivate(ListOfferingPromotionsResponse * const q);
+    explicit ListOfferingPromotionsResponsePrivate(ListOfferingPromotionsResponse * const q);
 
     void parseListOfferingPromotionsResponse(QXmlStreamReader &xml);
 

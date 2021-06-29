@@ -31,7 +31,7 @@ class ListDeploymentInstancesResponsePrivate : public CodeDeployResponsePrivate 
 
 public:
 
-    ListDeploymentInstancesResponsePrivate(ListDeploymentInstancesResponse * const q);
+    explicit ListDeploymentInstancesResponsePrivate(ListDeploymentInstancesResponse * const q);
 
     void parseListDeploymentInstancesResponse(QXmlStreamReader &xml);
 

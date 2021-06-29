@@ -31,7 +31,7 @@ class UpdateSecretResponsePrivate : public SecretsManagerResponsePrivate {
 
 public:
 
-    UpdateSecretResponsePrivate(UpdateSecretResponse * const q);
+    explicit UpdateSecretResponsePrivate(UpdateSecretResponse * const q);
 
     void parseUpdateSecretResponse(QXmlStreamReader &xml);
 

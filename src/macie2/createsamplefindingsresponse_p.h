@@ -31,7 +31,7 @@ class CreateSampleFindingsResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 
-    CreateSampleFindingsResponsePrivate(CreateSampleFindingsResponse * const q);
+    explicit CreateSampleFindingsResponsePrivate(CreateSampleFindingsResponse * const q);
 
     void parseCreateSampleFindingsResponse(QXmlStreamReader &xml);
 

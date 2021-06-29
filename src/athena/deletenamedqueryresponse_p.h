@@ -31,7 +31,7 @@ class DeleteNamedQueryResponsePrivate : public AthenaResponsePrivate {
 
 public:
 
-    DeleteNamedQueryResponsePrivate(DeleteNamedQueryResponse * const q);
+    explicit DeleteNamedQueryResponsePrivate(DeleteNamedQueryResponse * const q);
 
     void parseDeleteNamedQueryResponse(QXmlStreamReader &xml);
 

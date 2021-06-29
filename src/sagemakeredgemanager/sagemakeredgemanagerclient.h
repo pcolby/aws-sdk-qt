@@ -45,7 +45,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    SagemakerEdgeManagerClient(
+    explicit SagemakerEdgeManagerClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -57,7 +57,7 @@ public slots:
 protected:
     /// @cond internal
     SagemakerEdgeManagerClientPrivate * const d_ptr; ///< Internal d-pointer.
-    SagemakerEdgeManagerClient(SagemakerEdgeManagerClientPrivate * const d);
+    explicit SagemakerEdgeManagerClient(SagemakerEdgeManagerClientPrivate * const d);
     /// @endcond
 
 private:

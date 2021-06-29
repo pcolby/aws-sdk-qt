@@ -31,7 +31,7 @@ class GetVoiceConnectorTerminationResponsePrivate : public ChimeResponsePrivate 
 
 public:
 
-    GetVoiceConnectorTerminationResponsePrivate(GetVoiceConnectorTerminationResponse * const q);
+    explicit GetVoiceConnectorTerminationResponsePrivate(GetVoiceConnectorTerminationResponse * const q);
 
     void parseGetVoiceConnectorTerminationResponse(QXmlStreamReader &xml);
 

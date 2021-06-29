@@ -31,7 +31,7 @@ class PutRecordsResponsePrivate : public KinesisResponsePrivate {
 
 public:
 
-    PutRecordsResponsePrivate(PutRecordsResponse * const q);
+    explicit PutRecordsResponsePrivate(PutRecordsResponse * const q);
 
     void parsePutRecordsResponse(QXmlStreamReader &xml);
 

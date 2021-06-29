@@ -31,7 +31,7 @@ class CompleteSnapshotResponsePrivate : public EbsResponsePrivate {
 
 public:
 
-    CompleteSnapshotResponsePrivate(CompleteSnapshotResponse * const q);
+    explicit CompleteSnapshotResponsePrivate(CompleteSnapshotResponse * const q);
 
     void parseCompleteSnapshotResponse(QXmlStreamReader &xml);
 

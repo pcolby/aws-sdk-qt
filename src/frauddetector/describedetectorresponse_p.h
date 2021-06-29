@@ -31,7 +31,7 @@ class DescribeDetectorResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 
-    DescribeDetectorResponsePrivate(DescribeDetectorResponse * const q);
+    explicit DescribeDetectorResponsePrivate(DescribeDetectorResponse * const q);
 
     void parseDescribeDetectorResponse(QXmlStreamReader &xml);
 

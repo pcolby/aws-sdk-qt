@@ -31,7 +31,7 @@ class GetOnPremisesInstanceResponsePrivate : public CodeDeployResponsePrivate {
 
 public:
 
-    GetOnPremisesInstanceResponsePrivate(GetOnPremisesInstanceResponse * const q);
+    explicit GetOnPremisesInstanceResponsePrivate(GetOnPremisesInstanceResponse * const q);
 
     void parseGetOnPremisesInstanceResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateInstanceAccessControlAttributeConfigurationResponsePrivate : public 
 
 public:
 
-    UpdateInstanceAccessControlAttributeConfigurationResponsePrivate(UpdateInstanceAccessControlAttributeConfigurationResponse * const q);
+    explicit UpdateInstanceAccessControlAttributeConfigurationResponsePrivate(UpdateInstanceAccessControlAttributeConfigurationResponse * const q);
 
     void parseUpdateInstanceAccessControlAttributeConfigurationResponse(QXmlStreamReader &xml);
 

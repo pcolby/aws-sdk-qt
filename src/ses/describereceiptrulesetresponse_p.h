@@ -31,7 +31,7 @@ class DescribeReceiptRuleSetResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    DescribeReceiptRuleSetResponsePrivate(DescribeReceiptRuleSetResponse * const q);
+    explicit DescribeReceiptRuleSetResponsePrivate(DescribeReceiptRuleSetResponse * const q);
 
     void parseDescribeReceiptRuleSetResponse(QXmlStreamReader &xml);
 

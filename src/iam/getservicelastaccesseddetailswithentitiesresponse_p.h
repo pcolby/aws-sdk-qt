@@ -31,7 +31,7 @@ class GetServiceLastAccessedDetailsWithEntitiesResponsePrivate : public IamRespo
 
 public:
 
-    GetServiceLastAccessedDetailsWithEntitiesResponsePrivate(GetServiceLastAccessedDetailsWithEntitiesResponse * const q);
+    explicit GetServiceLastAccessedDetailsWithEntitiesResponsePrivate(GetServiceLastAccessedDetailsWithEntitiesResponse * const q);
 
     void parseGetServiceLastAccessedDetailsWithEntitiesResponse(QXmlStreamReader &xml);
 

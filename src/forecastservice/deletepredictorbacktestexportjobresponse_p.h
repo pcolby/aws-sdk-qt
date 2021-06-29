@@ -31,7 +31,7 @@ class DeletePredictorBacktestExportJobResponsePrivate : public ForecastServiceRe
 
 public:
 
-    DeletePredictorBacktestExportJobResponsePrivate(DeletePredictorBacktestExportJobResponse * const q);
+    explicit DeletePredictorBacktestExportJobResponsePrivate(DeletePredictorBacktestExportJobResponse * const q);
 
     void parseDeletePredictorBacktestExportJobResponse(QXmlStreamReader &xml);
 

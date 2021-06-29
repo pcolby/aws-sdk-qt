@@ -31,7 +31,7 @@ class StopStackSetOperationResponsePrivate : public CloudFormationResponsePrivat
 
 public:
 
-    StopStackSetOperationResponsePrivate(StopStackSetOperationResponse * const q);
+    explicit StopStackSetOperationResponsePrivate(StopStackSetOperationResponse * const q);
 
     void parseStopStackSetOperationResponse(QXmlStreamReader &xml);
 

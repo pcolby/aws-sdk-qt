@@ -31,7 +31,7 @@ class SendContactMethodVerificationResponsePrivate : public LightsailResponsePri
 
 public:
 
-    SendContactMethodVerificationResponsePrivate(SendContactMethodVerificationResponse * const q);
+    explicit SendContactMethodVerificationResponsePrivate(SendContactMethodVerificationResponse * const q);
 
     void parseSendContactMethodVerificationResponse(QXmlStreamReader &xml);
 

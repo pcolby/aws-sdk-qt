@@ -31,7 +31,7 @@ class ContinueDeploymentResponsePrivate : public CodeDeployResponsePrivate {
 
 public:
 
-    ContinueDeploymentResponsePrivate(ContinueDeploymentResponse * const q);
+    explicit ContinueDeploymentResponsePrivate(ContinueDeploymentResponse * const q);
 
     void parseContinueDeploymentResponse(QXmlStreamReader &xml);
 

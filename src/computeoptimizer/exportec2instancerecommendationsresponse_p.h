@@ -31,7 +31,7 @@ class ExportEC2InstanceRecommendationsResponsePrivate : public ComputeOptimizerR
 
 public:
 
-    ExportEC2InstanceRecommendationsResponsePrivate(ExportEC2InstanceRecommendationsResponse * const q);
+    explicit ExportEC2InstanceRecommendationsResponsePrivate(ExportEC2InstanceRecommendationsResponse * const q);
 
     void parseExportEC2InstanceRecommendationsResponse(QXmlStreamReader &xml);
 

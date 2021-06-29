@@ -31,7 +31,7 @@ class DescribeWorldResponsePrivate : public RoboMakerResponsePrivate {
 
 public:
 
-    DescribeWorldResponsePrivate(DescribeWorldResponse * const q);
+    explicit DescribeWorldResponsePrivate(DescribeWorldResponse * const q);
 
     void parseDescribeWorldResponse(QXmlStreamReader &xml);
 

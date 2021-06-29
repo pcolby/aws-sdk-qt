@@ -31,7 +31,7 @@ class ListMedicalTranscriptionJobsResponsePrivate : public TranscribeServiceResp
 
 public:
 
-    ListMedicalTranscriptionJobsResponsePrivate(ListMedicalTranscriptionJobsResponse * const q);
+    explicit ListMedicalTranscriptionJobsResponsePrivate(ListMedicalTranscriptionJobsResponse * const q);
 
     void parseListMedicalTranscriptionJobsResponse(QXmlStreamReader &xml);
 

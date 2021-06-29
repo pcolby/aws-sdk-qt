@@ -63,7 +63,7 @@ public:
 protected:
     /// @cond internal
     SsoRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    SsoRequest(SsoRequestPrivate * const d);
+    explicit SsoRequest(SsoRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

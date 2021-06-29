@@ -31,7 +31,7 @@ class DeleteCustomRoutingEndpointGroupResponsePrivate : public GlobalAccelerator
 
 public:
 
-    DeleteCustomRoutingEndpointGroupResponsePrivate(DeleteCustomRoutingEndpointGroupResponse * const q);
+    explicit DeleteCustomRoutingEndpointGroupResponsePrivate(DeleteCustomRoutingEndpointGroupResponse * const q);
 
     void parseDeleteCustomRoutingEndpointGroupResponse(QXmlStreamReader &xml);
 

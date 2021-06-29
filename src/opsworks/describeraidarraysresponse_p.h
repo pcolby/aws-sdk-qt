@@ -31,7 +31,7 @@ class DescribeRaidArraysResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    DescribeRaidArraysResponsePrivate(DescribeRaidArraysResponse * const q);
+    explicit DescribeRaidArraysResponsePrivate(DescribeRaidArraysResponse * const q);
 
     void parseDescribeRaidArraysResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class StartReplicationTaskResponsePrivate : public DatabaseMigrationServiceRespo
 
 public:
 
-    StartReplicationTaskResponsePrivate(StartReplicationTaskResponse * const q);
+    explicit StartReplicationTaskResponsePrivate(StartReplicationTaskResponse * const q);
 
     void parseStartReplicationTaskResponse(QXmlStreamReader &xml);
 

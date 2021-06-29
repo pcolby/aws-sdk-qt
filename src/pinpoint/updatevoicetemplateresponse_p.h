@@ -31,7 +31,7 @@ class UpdateVoiceTemplateResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    UpdateVoiceTemplateResponsePrivate(UpdateVoiceTemplateResponse * const q);
+    explicit UpdateVoiceTemplateResponsePrivate(UpdateVoiceTemplateResponse * const q);
 
     void parseUpdateVoiceTemplateResponse(QXmlStreamReader &xml);
 

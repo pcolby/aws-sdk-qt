@@ -31,7 +31,7 @@ class ListPartsResponsePrivate : public GlacierResponsePrivate {
 
 public:
 
-    ListPartsResponsePrivate(ListPartsResponse * const q);
+    explicit ListPartsResponsePrivate(ListPartsResponse * const q);
 
     void parseListPartsResponse(QXmlStreamReader &xml);
 

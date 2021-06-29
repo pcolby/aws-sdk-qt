@@ -31,7 +31,7 @@ class GetSipMediaApplicationResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    GetSipMediaApplicationResponsePrivate(GetSipMediaApplicationResponse * const q);
+    explicit GetSipMediaApplicationResponsePrivate(GetSipMediaApplicationResponse * const q);
 
     void parseGetSipMediaApplicationResponse(QXmlStreamReader &xml);
 

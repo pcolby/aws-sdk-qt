@@ -31,7 +31,7 @@ class PutBotResponsePrivate : public LexModelBuildingServiceResponsePrivate {
 
 public:
 
-    PutBotResponsePrivate(PutBotResponse * const q);
+    explicit PutBotResponsePrivate(PutBotResponse * const q);
 
     void parsePutBotResponse(QXmlStreamReader &xml);
 

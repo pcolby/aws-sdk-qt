@@ -31,7 +31,7 @@ class UpdateDomainNameserversResponsePrivate : public Route53DomainsResponsePriv
 
 public:
 
-    UpdateDomainNameserversResponsePrivate(UpdateDomainNameserversResponse * const q);
+    explicit UpdateDomainNameserversResponsePrivate(UpdateDomainNameserversResponse * const q);
 
     void parseUpdateDomainNameserversResponse(QXmlStreamReader &xml);
 

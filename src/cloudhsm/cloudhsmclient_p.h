@@ -30,7 +30,7 @@ class CloudHSMClient;
 class CloudHSMClientPrivate {
 
 public:
-    CloudHSMClientPrivate(CloudHSMClient * const q);
+    explicit CloudHSMClientPrivate(CloudHSMClient * const q);
 
 protected:
     CloudHSMClient * const q_ptr; ///< Internal q-pointer.

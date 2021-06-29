@@ -31,7 +31,7 @@ class PutDeliveryChannelResponsePrivate : public ConfigServiceResponsePrivate {
 
 public:
 
-    PutDeliveryChannelResponsePrivate(PutDeliveryChannelResponse * const q);
+    explicit PutDeliveryChannelResponsePrivate(PutDeliveryChannelResponse * const q);
 
     void parsePutDeliveryChannelResponse(QXmlStreamReader &xml);
 

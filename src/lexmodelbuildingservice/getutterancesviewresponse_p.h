@@ -31,7 +31,7 @@ class GetUtterancesViewResponsePrivate : public LexModelBuildingServiceResponseP
 
 public:
 
-    GetUtterancesViewResponsePrivate(GetUtterancesViewResponse * const q);
+    explicit GetUtterancesViewResponsePrivate(GetUtterancesViewResponse * const q);
 
     void parseGetUtterancesViewResponse(QXmlStreamReader &xml);
 

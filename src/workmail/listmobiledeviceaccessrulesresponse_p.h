@@ -31,7 +31,7 @@ class ListMobileDeviceAccessRulesResponsePrivate : public WorkMailResponsePrivat
 
 public:
 
-    ListMobileDeviceAccessRulesResponsePrivate(ListMobileDeviceAccessRulesResponse * const q);
+    explicit ListMobileDeviceAccessRulesResponsePrivate(ListMobileDeviceAccessRulesResponse * const q);
 
     void parseListMobileDeviceAccessRulesResponse(QXmlStreamReader &xml);
 

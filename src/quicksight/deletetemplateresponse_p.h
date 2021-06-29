@@ -31,7 +31,7 @@ class DeleteTemplateResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    DeleteTemplateResponsePrivate(DeleteTemplateResponse * const q);
+    explicit DeleteTemplateResponsePrivate(DeleteTemplateResponse * const q);
 
     void parseDeleteTemplateResponse(QXmlStreamReader &xml);
 

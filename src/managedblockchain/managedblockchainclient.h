@@ -87,7 +87,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    ManagedBlockchainClient(
+    explicit ManagedBlockchainClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -120,7 +120,7 @@ public slots:
 protected:
     /// @cond internal
     ManagedBlockchainClientPrivate * const d_ptr; ///< Internal d-pointer.
-    ManagedBlockchainClient(ManagedBlockchainClientPrivate * const d);
+    explicit ManagedBlockchainClient(ManagedBlockchainClientPrivate * const d);
     /// @endcond
 
 private:

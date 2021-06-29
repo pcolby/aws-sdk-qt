@@ -31,7 +31,7 @@ class DisassociateLambdaFunctionResponsePrivate : public ConnectResponsePrivate 
 
 public:
 
-    DisassociateLambdaFunctionResponsePrivate(DisassociateLambdaFunctionResponse * const q);
+    explicit DisassociateLambdaFunctionResponsePrivate(DisassociateLambdaFunctionResponse * const q);
 
     void parseDisassociateLambdaFunctionResponse(QXmlStreamReader &xml);
 

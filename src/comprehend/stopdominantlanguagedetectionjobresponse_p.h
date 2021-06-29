@@ -31,7 +31,7 @@ class StopDominantLanguageDetectionJobResponsePrivate : public ComprehendRespons
 
 public:
 
-    StopDominantLanguageDetectionJobResponsePrivate(StopDominantLanguageDetectionJobResponse * const q);
+    explicit StopDominantLanguageDetectionJobResponsePrivate(StopDominantLanguageDetectionJobResponse * const q);
 
     void parseStopDominantLanguageDetectionJobResponse(QXmlStreamReader &xml);
 

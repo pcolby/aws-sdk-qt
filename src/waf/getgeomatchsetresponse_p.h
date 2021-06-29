@@ -31,7 +31,7 @@ class GetGeoMatchSetResponsePrivate : public WafResponsePrivate {
 
 public:
 
-    GetGeoMatchSetResponsePrivate(GetGeoMatchSetResponse * const q);
+    explicit GetGeoMatchSetResponsePrivate(GetGeoMatchSetResponse * const q);
 
     void parseGetGeoMatchSetResponse(QXmlStreamReader &xml);
 

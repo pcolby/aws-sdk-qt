@@ -31,7 +31,7 @@ class GetResourcesResponsePrivate : public ResourceGroupsTaggingAPIResponsePriva
 
 public:
 
-    GetResourcesResponsePrivate(GetResourcesResponse * const q);
+    explicit GetResourcesResponsePrivate(GetResourcesResponse * const q);
 
     void parseGetResourcesResponse(QXmlStreamReader &xml);
 

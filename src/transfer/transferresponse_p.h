@@ -29,7 +29,7 @@ class TransferResponsePrivate {
 
 public:
 
-    TransferResponsePrivate(TransferResponse * const q);
+    explicit TransferResponsePrivate(TransferResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

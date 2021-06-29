@@ -31,7 +31,7 @@ class CreateHumanTaskUiResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    CreateHumanTaskUiResponsePrivate(CreateHumanTaskUiResponse * const q);
+    explicit CreateHumanTaskUiResponsePrivate(CreateHumanTaskUiResponse * const q);
 
     void parseCreateHumanTaskUiResponse(QXmlStreamReader &xml);
 

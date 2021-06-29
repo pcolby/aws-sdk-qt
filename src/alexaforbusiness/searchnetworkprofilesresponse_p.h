@@ -31,7 +31,7 @@ class SearchNetworkProfilesResponsePrivate : public AlexaForBusinessResponsePriv
 
 public:
 
-    SearchNetworkProfilesResponsePrivate(SearchNetworkProfilesResponse * const q);
+    explicit SearchNetworkProfilesResponsePrivate(SearchNetworkProfilesResponse * const q);
 
     void parseSearchNetworkProfilesResponse(QXmlStreamReader &xml);
 

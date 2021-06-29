@@ -31,7 +31,7 @@ class ListStackResourcesResponsePrivate : public CloudFormationResponsePrivate {
 
 public:
 
-    ListStackResourcesResponsePrivate(ListStackResourcesResponse * const q);
+    explicit ListStackResourcesResponsePrivate(ListStackResourcesResponse * const q);
 
     void parseListStackResourcesResponse(QXmlStreamReader &xml);
 

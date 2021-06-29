@@ -31,7 +31,7 @@ class DescribeProvisioningParametersResponsePrivate : public ServiceCatalogRespo
 
 public:
 
-    DescribeProvisioningParametersResponsePrivate(DescribeProvisioningParametersResponse * const q);
+    explicit DescribeProvisioningParametersResponsePrivate(DescribeProvisioningParametersResponse * const q);
 
     void parseDescribeProvisioningParametersResponse(QXmlStreamReader &xml);
 

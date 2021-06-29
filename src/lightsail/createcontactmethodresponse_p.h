@@ -31,7 +31,7 @@ class CreateContactMethodResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    CreateContactMethodResponsePrivate(CreateContactMethodResponse * const q);
+    explicit CreateContactMethodResponsePrivate(CreateContactMethodResponse * const q);
 
     void parseCreateContactMethodResponse(QXmlStreamReader &xml);
 

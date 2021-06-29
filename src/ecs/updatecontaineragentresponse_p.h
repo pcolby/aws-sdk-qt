@@ -31,7 +31,7 @@ class UpdateContainerAgentResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    UpdateContainerAgentResponsePrivate(UpdateContainerAgentResponse * const q);
+    explicit UpdateContainerAgentResponsePrivate(UpdateContainerAgentResponse * const q);
 
     void parseUpdateContainerAgentResponse(QXmlStreamReader &xml);
 

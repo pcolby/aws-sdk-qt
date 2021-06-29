@@ -31,7 +31,7 @@ class ListFindingsFiltersResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 
-    ListFindingsFiltersResponsePrivate(ListFindingsFiltersResponse * const q);
+    explicit ListFindingsFiltersResponsePrivate(ListFindingsFiltersResponse * const q);
 
     void parseListFindingsFiltersResponse(QXmlStreamReader &xml);
 

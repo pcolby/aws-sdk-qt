@@ -30,7 +30,7 @@ class LakeFormationClient;
 class LakeFormationClientPrivate {
 
 public:
-    LakeFormationClientPrivate(LakeFormationClient * const q);
+    explicit LakeFormationClientPrivate(LakeFormationClient * const q);
 
 protected:
     LakeFormationClient * const q_ptr; ///< Internal q-pointer.

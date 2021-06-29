@@ -31,7 +31,7 @@ class DeleteGameServerGroupResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    DeleteGameServerGroupResponsePrivate(DeleteGameServerGroupResponse * const q);
+    explicit DeleteGameServerGroupResponsePrivate(DeleteGameServerGroupResponse * const q);
 
     void parseDeleteGameServerGroupResponse(QXmlStreamReader &xml);
 

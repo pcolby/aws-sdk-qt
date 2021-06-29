@@ -31,7 +31,7 @@ class GetHostedZoneResponsePrivate : public Route53ResponsePrivate {
 
 public:
 
-    GetHostedZoneResponsePrivate(GetHostedZoneResponse * const q);
+    explicit GetHostedZoneResponsePrivate(GetHostedZoneResponse * const q);
 
     void parseGetHostedZoneResponse(QXmlStreamReader &xml);
 

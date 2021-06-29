@@ -31,7 +31,7 @@ class DeleteCoreDeviceResponsePrivate : public GreengrassV2ResponsePrivate {
 
 public:
 
-    DeleteCoreDeviceResponsePrivate(DeleteCoreDeviceResponse * const q);
+    explicit DeleteCoreDeviceResponsePrivate(DeleteCoreDeviceResponse * const q);
 
     void parseDeleteCoreDeviceResponse(QXmlStreamReader &xml);
 

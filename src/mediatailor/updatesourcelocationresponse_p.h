@@ -31,7 +31,7 @@ class UpdateSourceLocationResponsePrivate : public MediaTailorResponsePrivate {
 
 public:
 
-    UpdateSourceLocationResponsePrivate(UpdateSourceLocationResponse * const q);
+    explicit UpdateSourceLocationResponsePrivate(UpdateSourceLocationResponse * const q);
 
     void parseUpdateSourceLocationResponse(QXmlStreamReader &xml);
 

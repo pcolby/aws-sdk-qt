@@ -31,7 +31,7 @@ class ListGlobalTablesResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 
-    ListGlobalTablesResponsePrivate(ListGlobalTablesResponse * const q);
+    explicit ListGlobalTablesResponsePrivate(ListGlobalTablesResponse * const q);
 
     void parseListGlobalTablesResponse(QXmlStreamReader &xml);
 

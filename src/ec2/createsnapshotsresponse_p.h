@@ -31,7 +31,7 @@ class CreateSnapshotsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CreateSnapshotsResponsePrivate(CreateSnapshotsResponse * const q);
+    explicit CreateSnapshotsResponsePrivate(CreateSnapshotsResponse * const q);
 
     void parseCreateSnapshotsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteMissionProfileResponsePrivate : public GroundStationResponsePrivate 
 
 public:
 
-    DeleteMissionProfileResponsePrivate(DeleteMissionProfileResponse * const q);
+    explicit DeleteMissionProfileResponsePrivate(DeleteMissionProfileResponse * const q);
 
     void parseDeleteMissionProfileResponse(QXmlStreamReader &xml);
 

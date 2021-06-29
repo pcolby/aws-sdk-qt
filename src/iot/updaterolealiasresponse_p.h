@@ -31,7 +31,7 @@ class UpdateRoleAliasResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    UpdateRoleAliasResponsePrivate(UpdateRoleAliasResponse * const q);
+    explicit UpdateRoleAliasResponsePrivate(UpdateRoleAliasResponse * const q);
 
     void parseUpdateRoleAliasResponse(QXmlStreamReader &xml);
 

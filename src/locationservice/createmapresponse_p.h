@@ -31,7 +31,7 @@ class CreateMapResponsePrivate : public LocationServiceResponsePrivate {
 
 public:
 
-    CreateMapResponsePrivate(CreateMapResponse * const q);
+    explicit CreateMapResponsePrivate(CreateMapResponse * const q);
 
     void parseCreateMapResponse(QXmlStreamReader &xml);
 

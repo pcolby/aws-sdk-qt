@@ -31,7 +31,7 @@ class ResetDeploymentsResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 
-    ResetDeploymentsResponsePrivate(ResetDeploymentsResponse * const q);
+    explicit ResetDeploymentsResponsePrivate(ResetDeploymentsResponse * const q);
 
     void parseResetDeploymentsResponse(QXmlStreamReader &xml);
 

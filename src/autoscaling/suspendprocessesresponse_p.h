@@ -31,7 +31,7 @@ class SuspendProcessesResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 
-    SuspendProcessesResponsePrivate(SuspendProcessesResponse * const q);
+    explicit SuspendProcessesResponsePrivate(SuspendProcessesResponse * const q);
 
     void parseSuspendProcessesResponse(QXmlStreamReader &xml);
 

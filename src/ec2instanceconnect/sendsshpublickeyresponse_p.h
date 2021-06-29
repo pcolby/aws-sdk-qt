@@ -31,7 +31,7 @@ class SendSSHPublicKeyResponsePrivate : public EC2InstanceConnectResponsePrivate
 
 public:
 
-    SendSSHPublicKeyResponsePrivate(SendSSHPublicKeyResponse * const q);
+    explicit SendSSHPublicKeyResponsePrivate(SendSSHPublicKeyResponse * const q);
 
     void parseSendSSHPublicKeyResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ExportEBSVolumeRecommendationsResponsePrivate : public ComputeOptimizerRes
 
 public:
 
-    ExportEBSVolumeRecommendationsResponsePrivate(ExportEBSVolumeRecommendationsResponse * const q);
+    explicit ExportEBSVolumeRecommendationsResponsePrivate(ExportEBSVolumeRecommendationsResponse * const q);
 
     void parseExportEBSVolumeRecommendationsResponse(QXmlStreamReader &xml);
 

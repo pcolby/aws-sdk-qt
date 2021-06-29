@@ -31,7 +31,7 @@ class DeleteCustomKeyStoreResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    DeleteCustomKeyStoreResponsePrivate(DeleteCustomKeyStoreResponse * const q);
+    explicit DeleteCustomKeyStoreResponsePrivate(DeleteCustomKeyStoreResponse * const q);
 
     void parseDeleteCustomKeyStoreResponse(QXmlStreamReader &xml);
 

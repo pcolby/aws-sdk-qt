@@ -31,7 +31,7 @@ class RegisterWebhookWithThirdPartyResponsePrivate : public CodePipelineResponse
 
 public:
 
-    RegisterWebhookWithThirdPartyResponsePrivate(RegisterWebhookWithThirdPartyResponse * const q);
+    explicit RegisterWebhookWithThirdPartyResponsePrivate(RegisterWebhookWithThirdPartyResponse * const q);
 
     void parseRegisterWebhookWithThirdPartyResponse(QXmlStreamReader &xml);
 

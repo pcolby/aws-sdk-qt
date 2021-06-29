@@ -31,7 +31,7 @@ class CreateRoleAliasResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    CreateRoleAliasResponsePrivate(CreateRoleAliasResponse * const q);
+    explicit CreateRoleAliasResponsePrivate(CreateRoleAliasResponse * const q);
 
     void parseCreateRoleAliasResponse(QXmlStreamReader &xml);
 

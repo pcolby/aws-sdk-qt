@@ -30,7 +30,7 @@ class EmrClient;
 class EmrClientPrivate {
 
 public:
-    EmrClientPrivate(EmrClient * const q);
+    explicit EmrClientPrivate(EmrClient * const q);
 
 protected:
     EmrClient * const q_ptr; ///< Internal q-pointer.

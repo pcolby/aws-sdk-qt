@@ -31,7 +31,7 @@ class CreateOutboundCrossClusterSearchConnectionResponsePrivate : public Elastic
 
 public:
 
-    CreateOutboundCrossClusterSearchConnectionResponsePrivate(CreateOutboundCrossClusterSearchConnectionResponse * const q);
+    explicit CreateOutboundCrossClusterSearchConnectionResponsePrivate(CreateOutboundCrossClusterSearchConnectionResponse * const q);
 
     void parseCreateOutboundCrossClusterSearchConnectionResponse(QXmlStreamReader &xml);
 

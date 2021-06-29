@@ -31,7 +31,7 @@ class EnableLDAPSResponsePrivate : public DirectoryServiceResponsePrivate {
 
 public:
 
-    EnableLDAPSResponsePrivate(EnableLDAPSResponse * const q);
+    explicit EnableLDAPSResponsePrivate(EnableLDAPSResponse * const q);
 
     void parseEnableLDAPSResponse(QXmlStreamReader &xml);
 

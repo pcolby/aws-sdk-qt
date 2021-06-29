@@ -31,7 +31,7 @@ class GetProfileResponsePrivate : public CodeGuruProfilerResponsePrivate {
 
 public:
 
-    GetProfileResponsePrivate(GetProfileResponse * const q);
+    explicit GetProfileResponsePrivate(GetProfileResponse * const q);
 
     void parseGetProfileResponse(QXmlStreamReader &xml);
 

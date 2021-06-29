@@ -31,7 +31,7 @@ class ScanProvisionedProductsResponsePrivate : public ServiceCatalogResponsePriv
 
 public:
 
-    ScanProvisionedProductsResponsePrivate(ScanProvisionedProductsResponse * const q);
+    explicit ScanProvisionedProductsResponsePrivate(ScanProvisionedProductsResponse * const q);
 
     void parseScanProvisionedProductsResponse(QXmlStreamReader &xml);
 

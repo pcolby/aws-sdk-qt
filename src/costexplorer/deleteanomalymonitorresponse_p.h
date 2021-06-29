@@ -31,7 +31,7 @@ class DeleteAnomalyMonitorResponsePrivate : public CostExplorerResponsePrivate {
 
 public:
 
-    DeleteAnomalyMonitorResponsePrivate(DeleteAnomalyMonitorResponse * const q);
+    explicit DeleteAnomalyMonitorResponsePrivate(DeleteAnomalyMonitorResponse * const q);
 
     void parseDeleteAnomalyMonitorResponse(QXmlStreamReader &xml);
 

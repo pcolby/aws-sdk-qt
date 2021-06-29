@@ -31,7 +31,7 @@ class DeleteByteMatchSetResponsePrivate : public WafResponsePrivate {
 
 public:
 
-    DeleteByteMatchSetResponsePrivate(DeleteByteMatchSetResponse * const q);
+    explicit DeleteByteMatchSetResponsePrivate(DeleteByteMatchSetResponse * const q);
 
     void parseDeleteByteMatchSetResponse(QXmlStreamReader &xml);
 

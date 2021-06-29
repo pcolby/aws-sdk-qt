@@ -31,7 +31,7 @@ class ListVirtualGatewaysResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 
-    ListVirtualGatewaysResponsePrivate(ListVirtualGatewaysResponse * const q);
+    explicit ListVirtualGatewaysResponsePrivate(ListVirtualGatewaysResponse * const q);
 
     void parseListVirtualGatewaysResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateFunctionResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 
-    CreateFunctionResponsePrivate(CreateFunctionResponse * const q);
+    explicit CreateFunctionResponsePrivate(CreateFunctionResponse * const q);
 
     void parseCreateFunctionResponse(QXmlStreamReader &xml);
 

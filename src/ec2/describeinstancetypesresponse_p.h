@@ -31,7 +31,7 @@ class DescribeInstanceTypesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeInstanceTypesResponsePrivate(DescribeInstanceTypesResponse * const q);
+    explicit DescribeInstanceTypesResponsePrivate(DescribeInstanceTypesResponse * const q);
 
     void parseDescribeInstanceTypesResponse(QXmlStreamReader &xml);
 

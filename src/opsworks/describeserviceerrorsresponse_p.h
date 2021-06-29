@@ -31,7 +31,7 @@ class DescribeServiceErrorsResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    DescribeServiceErrorsResponsePrivate(DescribeServiceErrorsResponse * const q);
+    explicit DescribeServiceErrorsResponsePrivate(DescribeServiceErrorsResponse * const q);
 
     void parseDescribeServiceErrorsResponse(QXmlStreamReader &xml);
 

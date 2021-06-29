@@ -31,7 +31,7 @@ class ListAssignmentsForHITResponsePrivate : public MTurkResponsePrivate {
 
 public:
 
-    ListAssignmentsForHITResponsePrivate(ListAssignmentsForHITResponse * const q);
+    explicit ListAssignmentsForHITResponsePrivate(ListAssignmentsForHITResponse * const q);
 
     void parseListAssignmentsForHITResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CancelElasticsearchServiceSoftwareUpdateResponsePrivate : public Elasticse
 
 public:
 
-    CancelElasticsearchServiceSoftwareUpdateResponsePrivate(CancelElasticsearchServiceSoftwareUpdateResponse * const q);
+    explicit CancelElasticsearchServiceSoftwareUpdateResponsePrivate(CancelElasticsearchServiceSoftwareUpdateResponse * const q);
 
     void parseCancelElasticsearchServiceSoftwareUpdateResponse(QXmlStreamReader &xml);
 

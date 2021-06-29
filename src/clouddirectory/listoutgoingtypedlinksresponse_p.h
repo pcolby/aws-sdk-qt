@@ -31,7 +31,7 @@ class ListOutgoingTypedLinksResponsePrivate : public CloudDirectoryResponsePriva
 
 public:
 
-    ListOutgoingTypedLinksResponsePrivate(ListOutgoingTypedLinksResponse * const q);
+    explicit ListOutgoingTypedLinksResponsePrivate(ListOutgoingTypedLinksResponse * const q);
 
     void parseListOutgoingTypedLinksResponse(QXmlStreamReader &xml);
 

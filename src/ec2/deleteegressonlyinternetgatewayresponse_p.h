@@ -31,7 +31,7 @@ class DeleteEgressOnlyInternetGatewayResponsePrivate : public Ec2ResponsePrivate
 
 public:
 
-    DeleteEgressOnlyInternetGatewayResponsePrivate(DeleteEgressOnlyInternetGatewayResponse * const q);
+    explicit DeleteEgressOnlyInternetGatewayResponsePrivate(DeleteEgressOnlyInternetGatewayResponse * const q);
 
     void parseDeleteEgressOnlyInternetGatewayResponse(QXmlStreamReader &xml);
 

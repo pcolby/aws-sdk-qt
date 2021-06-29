@@ -31,7 +31,7 @@ class DeleteWirelessDeviceResponsePrivate : public IoTWirelessResponsePrivate {
 
 public:
 
-    DeleteWirelessDeviceResponsePrivate(DeleteWirelessDeviceResponse * const q);
+    explicit DeleteWirelessDeviceResponsePrivate(DeleteWirelessDeviceResponse * const q);
 
     void parseDeleteWirelessDeviceResponse(QXmlStreamReader &xml);
 

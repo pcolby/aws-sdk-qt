@@ -31,7 +31,7 @@ class DescribeDBSnapshotAttributesResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    DescribeDBSnapshotAttributesResponsePrivate(DescribeDBSnapshotAttributesResponse * const q);
+    explicit DescribeDBSnapshotAttributesResponsePrivate(DescribeDBSnapshotAttributesResponse * const q);
 
     void parseDescribeDBSnapshotAttributesResponse(QXmlStreamReader &xml);
 

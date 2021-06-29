@@ -31,7 +31,7 @@ class TagResourceResponsePrivate : public CodeDeployResponsePrivate {
 
 public:
 
-    TagResourceResponsePrivate(TagResourceResponse * const q);
+    explicit TagResourceResponsePrivate(TagResourceResponse * const q);
 
     void parseTagResourceResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class RemoveBackendConfigResponsePrivate : public AmplifyBackendResponsePrivate 
 
 public:
 
-    RemoveBackendConfigResponsePrivate(RemoveBackendConfigResponse * const q);
+    explicit RemoveBackendConfigResponsePrivate(RemoveBackendConfigResponse * const q);
 
     void parseRemoveBackendConfigResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateDeploymentStrategyResponsePrivate : public AppConfigResponsePrivate 
 
 public:
 
-    UpdateDeploymentStrategyResponsePrivate(UpdateDeploymentStrategyResponse * const q);
+    explicit UpdateDeploymentStrategyResponsePrivate(UpdateDeploymentStrategyResponse * const q);
 
     void parseUpdateDeploymentStrategyResponse(QXmlStreamReader &xml);
 

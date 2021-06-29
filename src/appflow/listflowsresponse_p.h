@@ -31,7 +31,7 @@ class ListFlowsResponsePrivate : public AppflowResponsePrivate {
 
 public:
 
-    ListFlowsResponsePrivate(ListFlowsResponse * const q);
+    explicit ListFlowsResponsePrivate(ListFlowsResponse * const q);
 
     void parseListFlowsResponse(QXmlStreamReader &xml);
 

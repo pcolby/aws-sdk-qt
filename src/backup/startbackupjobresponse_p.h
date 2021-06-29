@@ -31,7 +31,7 @@ class StartBackupJobResponsePrivate : public BackupResponsePrivate {
 
 public:
 
-    StartBackupJobResponsePrivate(StartBackupJobResponse * const q);
+    explicit StartBackupJobResponsePrivate(StartBackupJobResponse * const q);
 
     void parseStartBackupJobResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeExclusionsResponsePrivate : public InspectorResponsePrivate {
 
 public:
 
-    DescribeExclusionsResponsePrivate(DescribeExclusionsResponse * const q);
+    explicit DescribeExclusionsResponsePrivate(DescribeExclusionsResponse * const q);
 
     void parseDescribeExclusionsResponse(QXmlStreamReader &xml);
 

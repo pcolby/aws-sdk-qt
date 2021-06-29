@@ -27,7 +27,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    {{ClassName}}(
+    explicit {{ClassName}}(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -43,7 +43,7 @@ public slots:
 protected:
     /// @cond internal
     {{ClassName}}Private * const d_ptr; ///< Internal d-pointer.
-    {{ClassName}}({{ClassName}}Private * const d);
+    explicit {{ClassName}}({{ClassName}}Private * const d);
     /// @endcond
 
 private:

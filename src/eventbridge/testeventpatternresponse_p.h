@@ -31,7 +31,7 @@ class TestEventPatternResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 
-    TestEventPatternResponsePrivate(TestEventPatternResponse * const q);
+    explicit TestEventPatternResponsePrivate(TestEventPatternResponse * const q);
 
     void parseTestEventPatternResponse(QXmlStreamReader &xml);
 

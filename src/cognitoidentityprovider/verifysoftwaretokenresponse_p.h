@@ -31,7 +31,7 @@ class VerifySoftwareTokenResponsePrivate : public CognitoIdentityProviderRespons
 
 public:
 
-    VerifySoftwareTokenResponsePrivate(VerifySoftwareTokenResponse * const q);
+    explicit VerifySoftwareTokenResponsePrivate(VerifySoftwareTokenResponse * const q);
 
     void parseVerifySoftwareTokenResponse(QXmlStreamReader &xml);
 

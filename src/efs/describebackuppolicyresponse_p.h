@@ -31,7 +31,7 @@ class DescribeBackupPolicyResponsePrivate : public EfsResponsePrivate {
 
 public:
 
-    DescribeBackupPolicyResponsePrivate(DescribeBackupPolicyResponse * const q);
+    explicit DescribeBackupPolicyResponsePrivate(DescribeBackupPolicyResponse * const q);
 
     void parseDescribeBackupPolicyResponse(QXmlStreamReader &xml);
 

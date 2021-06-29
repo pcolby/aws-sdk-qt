@@ -31,7 +31,7 @@ class ModifyInstanceEventStartTimeResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ModifyInstanceEventStartTimeResponsePrivate(ModifyInstanceEventStartTimeResponse * const q);
+    explicit ModifyInstanceEventStartTimeResponsePrivate(ModifyInstanceEventStartTimeResponse * const q);
 
     void parseModifyInstanceEventStartTimeResponse(QXmlStreamReader &xml);
 

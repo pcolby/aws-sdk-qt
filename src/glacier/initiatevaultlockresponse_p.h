@@ -31,7 +31,7 @@ class InitiateVaultLockResponsePrivate : public GlacierResponsePrivate {
 
 public:
 
-    InitiateVaultLockResponsePrivate(InitiateVaultLockResponse * const q);
+    explicit InitiateVaultLockResponsePrivate(InitiateVaultLockResponse * const q);
 
     void parseInitiateVaultLockResponse(QXmlStreamReader &xml);
 

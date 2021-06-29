@@ -110,7 +110,7 @@ public:
 protected:
     /// @cond internal
     EventBridgeRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    EventBridgeRequest(EventBridgeRequestPrivate * const d);
+    explicit EventBridgeRequest(EventBridgeRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

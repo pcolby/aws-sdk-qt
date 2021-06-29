@@ -31,7 +31,7 @@ class DeleteBrokerResponsePrivate : public MqResponsePrivate {
 
 public:
 
-    DeleteBrokerResponsePrivate(DeleteBrokerResponse * const q);
+    explicit DeleteBrokerResponsePrivate(DeleteBrokerResponse * const q);
 
     void parseDeleteBrokerResponse(QXmlStreamReader &xml);
 

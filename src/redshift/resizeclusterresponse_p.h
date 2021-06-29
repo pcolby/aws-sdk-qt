@@ -31,7 +31,7 @@ class ResizeClusterResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    ResizeClusterResponsePrivate(ResizeClusterResponse * const q);
+    explicit ResizeClusterResponsePrivate(ResizeClusterResponse * const q);
 
     void parseResizeClusterResponse(QXmlStreamReader &xml);
 

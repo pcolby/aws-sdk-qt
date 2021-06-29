@@ -31,7 +31,7 @@ class DeleteCACertificateResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DeleteCACertificateResponsePrivate(DeleteCACertificateResponse * const q);
+    explicit DeleteCACertificateResponsePrivate(DeleteCACertificateResponse * const q);
 
     void parseDeleteCACertificateResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ModifyGlobalClusterResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    ModifyGlobalClusterResponsePrivate(ModifyGlobalClusterResponse * const q);
+    explicit ModifyGlobalClusterResponsePrivate(ModifyGlobalClusterResponse * const q);
 
     void parseModifyGlobalClusterResponse(QXmlStreamReader &xml);
 

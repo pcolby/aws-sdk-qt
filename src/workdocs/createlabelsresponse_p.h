@@ -31,7 +31,7 @@ class CreateLabelsResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 
-    CreateLabelsResponsePrivate(CreateLabelsResponse * const q);
+    explicit CreateLabelsResponsePrivate(CreateLabelsResponse * const q);
 
     void parseCreateLabelsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateColumnStatisticsForPartitionResponsePrivate : public GlueResponsePri
 
 public:
 
-    UpdateColumnStatisticsForPartitionResponsePrivate(UpdateColumnStatisticsForPartitionResponse * const q);
+    explicit UpdateColumnStatisticsForPartitionResponsePrivate(UpdateColumnStatisticsForPartitionResponse * const q);
 
     void parseUpdateColumnStatisticsForPartitionResponse(QXmlStreamReader &xml);
 

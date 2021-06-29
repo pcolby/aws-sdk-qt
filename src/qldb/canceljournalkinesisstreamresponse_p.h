@@ -31,7 +31,7 @@ class CancelJournalKinesisStreamResponsePrivate : public QldbResponsePrivate {
 
 public:
 
-    CancelJournalKinesisStreamResponsePrivate(CancelJournalKinesisStreamResponse * const q);
+    explicit CancelJournalKinesisStreamResponsePrivate(CancelJournalKinesisStreamResponse * const q);
 
     void parseCancelJournalKinesisStreamResponse(QXmlStreamReader &xml);
 

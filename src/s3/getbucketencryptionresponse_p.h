@@ -31,7 +31,7 @@ class GetBucketEncryptionResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    GetBucketEncryptionResponsePrivate(GetBucketEncryptionResponse * const q);
+    explicit GetBucketEncryptionResponsePrivate(GetBucketEncryptionResponse * const q);
 
     void parseGetBucketEncryptionResponse(QXmlStreamReader &xml);
 

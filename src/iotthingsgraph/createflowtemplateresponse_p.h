@@ -31,7 +31,7 @@ class CreateFlowTemplateResponsePrivate : public IoTThingsGraphResponsePrivate {
 
 public:
 
-    CreateFlowTemplateResponsePrivate(CreateFlowTemplateResponse * const q);
+    explicit CreateFlowTemplateResponsePrivate(CreateFlowTemplateResponse * const q);
 
     void parseCreateFlowTemplateResponse(QXmlStreamReader &xml);
 

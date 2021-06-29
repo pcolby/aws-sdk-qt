@@ -31,7 +31,7 @@ class CreateWorldGenerationJobResponsePrivate : public RoboMakerResponsePrivate 
 
 public:
 
-    CreateWorldGenerationJobResponsePrivate(CreateWorldGenerationJobResponse * const q);
+    explicit CreateWorldGenerationJobResponsePrivate(CreateWorldGenerationJobResponse * const q);
 
     void parseCreateWorldGenerationJobResponse(QXmlStreamReader &xml);
 

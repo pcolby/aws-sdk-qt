@@ -31,7 +31,7 @@ class DescribeClusterResponsePrivate : public EksResponsePrivate {
 
 public:
 
-    DescribeClusterResponsePrivate(DescribeClusterResponse * const q);
+    explicit DescribeClusterResponsePrivate(DescribeClusterResponse * const q);
 
     void parseDescribeClusterResponse(QXmlStreamReader &xml);
 

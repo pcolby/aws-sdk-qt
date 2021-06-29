@@ -31,7 +31,7 @@ class PutConfigurationSetSuppressionOptionsResponsePrivate : public Sesv2Respons
 
 public:
 
-    PutConfigurationSetSuppressionOptionsResponsePrivate(PutConfigurationSetSuppressionOptionsResponse * const q);
+    explicit PutConfigurationSetSuppressionOptionsResponsePrivate(PutConfigurationSetSuppressionOptionsResponse * const q);
 
     void parsePutConfigurationSetSuppressionOptionsResponse(QXmlStreamReader &xml);
 

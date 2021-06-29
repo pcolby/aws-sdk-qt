@@ -31,7 +31,7 @@ class CreateExportResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 
-    CreateExportResponsePrivate(CreateExportResponse * const q);
+    explicit CreateExportResponsePrivate(CreateExportResponse * const q);
 
     void parseCreateExportResponse(QXmlStreamReader &xml);
 

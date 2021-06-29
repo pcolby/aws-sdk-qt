@@ -31,7 +31,7 @@ class MergePullRequestByThreeWayResponsePrivate : public CodeCommitResponsePriva
 
 public:
 
-    MergePullRequestByThreeWayResponsePrivate(MergePullRequestByThreeWayResponse * const q);
+    explicit MergePullRequestByThreeWayResponsePrivate(MergePullRequestByThreeWayResponse * const q);
 
     void parseMergePullRequestByThreeWayResponse(QXmlStreamReader &xml);
 

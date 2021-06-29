@@ -31,7 +31,7 @@ class DeleteHumanLoopResponsePrivate : public AugmentedAIRuntimeResponsePrivate 
 
 public:
 
-    DeleteHumanLoopResponsePrivate(DeleteHumanLoopResponse * const q);
+    explicit DeleteHumanLoopResponsePrivate(DeleteHumanLoopResponse * const q);
 
     void parseDeleteHumanLoopResponse(QXmlStreamReader &xml);
 

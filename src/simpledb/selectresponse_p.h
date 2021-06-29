@@ -31,7 +31,7 @@ class SelectResponsePrivate : public SimpleDBResponsePrivate {
 
 public:
 
-    SelectResponsePrivate(SelectResponse * const q);
+    explicit SelectResponsePrivate(SelectResponse * const q);
 
     void parseSelectResponse(QXmlStreamReader &xml);
 

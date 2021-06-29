@@ -31,7 +31,7 @@ class GetMasterAccountResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 
-    GetMasterAccountResponsePrivate(GetMasterAccountResponse * const q);
+    explicit GetMasterAccountResponsePrivate(GetMasterAccountResponse * const q);
 
     void parseGetMasterAccountResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateRuntimeConfigurationResponsePrivate : public GameLiftResponsePrivate
 
 public:
 
-    UpdateRuntimeConfigurationResponsePrivate(UpdateRuntimeConfigurationResponse * const q);
+    explicit UpdateRuntimeConfigurationResponsePrivate(UpdateRuntimeConfigurationResponse * const q);
 
     void parseUpdateRuntimeConfigurationResponse(QXmlStreamReader &xml);
 

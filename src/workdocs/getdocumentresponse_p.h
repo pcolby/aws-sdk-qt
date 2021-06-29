@@ -31,7 +31,7 @@ class GetDocumentResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 
-    GetDocumentResponsePrivate(GetDocumentResponse * const q);
+    explicit GetDocumentResponsePrivate(GetDocumentResponse * const q);
 
     void parseGetDocumentResponse(QXmlStreamReader &xml);
 

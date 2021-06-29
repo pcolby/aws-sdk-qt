@@ -31,7 +31,7 @@ class BatchDeleteAttributesResponsePrivate : public SimpleDBResponsePrivate {
 
 public:
 
-    BatchDeleteAttributesResponsePrivate(BatchDeleteAttributesResponse * const q);
+    explicit BatchDeleteAttributesResponsePrivate(BatchDeleteAttributesResponse * const q);
 
     void parseBatchDeleteAttributesResponse(QXmlStreamReader &xml);
 

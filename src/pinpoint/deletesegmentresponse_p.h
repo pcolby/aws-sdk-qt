@@ -31,7 +31,7 @@ class DeleteSegmentResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    DeleteSegmentResponsePrivate(DeleteSegmentResponse * const q);
+    explicit DeleteSegmentResponsePrivate(DeleteSegmentResponse * const q);
 
     void parseDeleteSegmentResponse(QXmlStreamReader &xml);
 

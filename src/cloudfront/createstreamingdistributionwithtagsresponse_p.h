@@ -31,7 +31,7 @@ class CreateStreamingDistributionWithTagsResponsePrivate : public CloudFrontResp
 
 public:
 
-    CreateStreamingDistributionWithTagsResponsePrivate(CreateStreamingDistributionWithTagsResponse * const q);
+    explicit CreateStreamingDistributionWithTagsResponsePrivate(CreateStreamingDistributionWithTagsResponse * const q);
 
     void parseCreateStreamingDistributionWithTagsResponse(QXmlStreamReader &xml);
 

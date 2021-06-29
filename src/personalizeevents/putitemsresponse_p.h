@@ -31,7 +31,7 @@ class PutItemsResponsePrivate : public PersonalizeEventsResponsePrivate {
 
 public:
 
-    PutItemsResponsePrivate(PutItemsResponse * const q);
+    explicit PutItemsResponsePrivate(PutItemsResponse * const q);
 
     void parsePutItemsResponse(QXmlStreamReader &xml);
 

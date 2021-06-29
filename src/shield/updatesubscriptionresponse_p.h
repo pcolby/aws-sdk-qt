@@ -31,7 +31,7 @@ class UpdateSubscriptionResponsePrivate : public ShieldResponsePrivate {
 
 public:
 
-    UpdateSubscriptionResponsePrivate(UpdateSubscriptionResponse * const q);
+    explicit UpdateSubscriptionResponsePrivate(UpdateSubscriptionResponse * const q);
 
     void parseUpdateSubscriptionResponse(QXmlStreamReader &xml);
 

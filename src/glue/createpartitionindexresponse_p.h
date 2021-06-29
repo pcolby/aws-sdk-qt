@@ -31,7 +31,7 @@ class CreatePartitionIndexResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    CreatePartitionIndexResponsePrivate(CreatePartitionIndexResponse * const q);
+    explicit CreatePartitionIndexResponsePrivate(CreatePartitionIndexResponse * const q);
 
     void parseCreatePartitionIndexResponse(QXmlStreamReader &xml);
 

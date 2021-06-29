@@ -31,7 +31,7 @@ class IncreaseReplicaCountResponsePrivate : public ElastiCacheResponsePrivate {
 
 public:
 
-    IncreaseReplicaCountResponsePrivate(IncreaseReplicaCountResponse * const q);
+    explicit IncreaseReplicaCountResponsePrivate(IncreaseReplicaCountResponse * const q);
 
     void parseIncreaseReplicaCountResponse(QXmlStreamReader &xml);
 

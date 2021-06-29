@@ -31,7 +31,7 @@ class UpdatePatchBaselineResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    UpdatePatchBaselineResponsePrivate(UpdatePatchBaselineResponse * const q);
+    explicit UpdatePatchBaselineResponsePrivate(UpdatePatchBaselineResponse * const q);
 
     void parseUpdatePatchBaselineResponse(QXmlStreamReader &xml);
 

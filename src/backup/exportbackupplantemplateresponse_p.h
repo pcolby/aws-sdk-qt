@@ -31,7 +31,7 @@ class ExportBackupPlanTemplateResponsePrivate : public BackupResponsePrivate {
 
 public:
 
-    ExportBackupPlanTemplateResponsePrivate(ExportBackupPlanTemplateResponse * const q);
+    explicit ExportBackupPlanTemplateResponsePrivate(ExportBackupPlanTemplateResponse * const q);
 
     void parseExportBackupPlanTemplateResponse(QXmlStreamReader &xml);
 

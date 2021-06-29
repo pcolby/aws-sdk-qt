@@ -31,7 +31,7 @@ class PutSessionResponsePrivate : public LexRuntimeV2ResponsePrivate {
 
 public:
 
-    PutSessionResponsePrivate(PutSessionResponse * const q);
+    explicit PutSessionResponsePrivate(PutSessionResponse * const q);
 
     void parsePutSessionResponse(QXmlStreamReader &xml);
 

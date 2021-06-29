@@ -31,7 +31,7 @@ class PutConfigurationAggregatorResponsePrivate : public ConfigServiceResponsePr
 
 public:
 
-    PutConfigurationAggregatorResponsePrivate(PutConfigurationAggregatorResponse * const q);
+    explicit PutConfigurationAggregatorResponsePrivate(PutConfigurationAggregatorResponse * const q);
 
     void parsePutConfigurationAggregatorResponse(QXmlStreamReader &xml);
 

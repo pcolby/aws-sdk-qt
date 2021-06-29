@@ -31,7 +31,7 @@ class ListChannelBansResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    ListChannelBansResponsePrivate(ListChannelBansResponse * const q);
+    explicit ListChannelBansResponsePrivate(ListChannelBansResponse * const q);
 
     void parseListChannelBansResponse(QXmlStreamReader &xml);
 

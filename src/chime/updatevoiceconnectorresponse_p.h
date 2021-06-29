@@ -31,7 +31,7 @@ class UpdateVoiceConnectorResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    UpdateVoiceConnectorResponsePrivate(UpdateVoiceConnectorResponse * const q);
+    explicit UpdateVoiceConnectorResponsePrivate(UpdateVoiceConnectorResponse * const q);
 
     void parseUpdateVoiceConnectorResponse(QXmlStreamReader &xml);
 

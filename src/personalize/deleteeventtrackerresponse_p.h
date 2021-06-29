@@ -31,7 +31,7 @@ class DeleteEventTrackerResponsePrivate : public PersonalizeResponsePrivate {
 
 public:
 
-    DeleteEventTrackerResponsePrivate(DeleteEventTrackerResponse * const q);
+    explicit DeleteEventTrackerResponsePrivate(DeleteEventTrackerResponse * const q);
 
     void parseDeleteEventTrackerResponse(QXmlStreamReader &xml);
 

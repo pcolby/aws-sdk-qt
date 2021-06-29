@@ -31,7 +31,7 @@ class TestFailoverResponsePrivate : public ElastiCacheResponsePrivate {
 
 public:
 
-    TestFailoverResponsePrivate(TestFailoverResponse * const q);
+    explicit TestFailoverResponsePrivate(TestFailoverResponse * const q);
 
     void parseTestFailoverResponse(QXmlStreamReader &xml);
 

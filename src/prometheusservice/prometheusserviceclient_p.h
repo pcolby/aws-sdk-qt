@@ -30,7 +30,7 @@ class PrometheusServiceClient;
 class PrometheusServiceClientPrivate {
 
 public:
-    PrometheusServiceClientPrivate(PrometheusServiceClient * const q);
+    explicit PrometheusServiceClientPrivate(PrometheusServiceClient * const q);
 
 protected:
     PrometheusServiceClient * const q_ptr; ///< Internal q-pointer.

@@ -31,7 +31,7 @@ class AssociateWirelessGatewayWithCertificateResponsePrivate : public IoTWireles
 
 public:
 
-    AssociateWirelessGatewayWithCertificateResponsePrivate(AssociateWirelessGatewayWithCertificateResponse * const q);
+    explicit AssociateWirelessGatewayWithCertificateResponsePrivate(AssociateWirelessGatewayWithCertificateResponse * const q);
 
     void parseAssociateWirelessGatewayWithCertificateResponse(QXmlStreamReader &xml);
 

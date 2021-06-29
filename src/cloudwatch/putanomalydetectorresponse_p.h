@@ -31,7 +31,7 @@ class PutAnomalyDetectorResponsePrivate : public CloudWatchResponsePrivate {
 
 public:
 
-    PutAnomalyDetectorResponsePrivate(PutAnomalyDetectorResponse * const q);
+    explicit PutAnomalyDetectorResponsePrivate(PutAnomalyDetectorResponse * const q);
 
     void parsePutAnomalyDetectorResponse(QXmlStreamReader &xml);
 

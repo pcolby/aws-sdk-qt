@@ -31,7 +31,7 @@ class DeleteFunctionDefinitionResponsePrivate : public GreengrassResponsePrivate
 
 public:
 
-    DeleteFunctionDefinitionResponsePrivate(DeleteFunctionDefinitionResponse * const q);
+    explicit DeleteFunctionDefinitionResponsePrivate(DeleteFunctionDefinitionResponse * const q);
 
     void parseDeleteFunctionDefinitionResponse(QXmlStreamReader &xml);
 

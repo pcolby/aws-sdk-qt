@@ -31,7 +31,7 @@ class DeleteGeofenceCollectionResponsePrivate : public LocationServiceResponsePr
 
 public:
 
-    DeleteGeofenceCollectionResponsePrivate(DeleteGeofenceCollectionResponse * const q);
+    explicit DeleteGeofenceCollectionResponsePrivate(DeleteGeofenceCollectionResponse * const q);
 
     void parseDeleteGeofenceCollectionResponse(QXmlStreamReader &xml);
 

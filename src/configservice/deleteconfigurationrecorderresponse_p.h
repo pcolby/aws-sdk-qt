@@ -31,7 +31,7 @@ class DeleteConfigurationRecorderResponsePrivate : public ConfigServiceResponseP
 
 public:
 
-    DeleteConfigurationRecorderResponsePrivate(DeleteConfigurationRecorderResponse * const q);
+    explicit DeleteConfigurationRecorderResponsePrivate(DeleteConfigurationRecorderResponse * const q);
 
     void parseDeleteConfigurationRecorderResponse(QXmlStreamReader &xml);
 

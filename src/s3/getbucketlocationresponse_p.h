@@ -31,7 +31,7 @@ class GetBucketLocationResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    GetBucketLocationResponsePrivate(GetBucketLocationResponse * const q);
+    explicit GetBucketLocationResponsePrivate(GetBucketLocationResponse * const q);
 
     void parseGetBucketLocationResponse(QXmlStreamReader &xml);
 

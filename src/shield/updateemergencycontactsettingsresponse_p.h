@@ -31,7 +31,7 @@ class UpdateEmergencyContactSettingsResponsePrivate : public ShieldResponsePriva
 
 public:
 
-    UpdateEmergencyContactSettingsResponsePrivate(UpdateEmergencyContactSettingsResponse * const q);
+    explicit UpdateEmergencyContactSettingsResponsePrivate(UpdateEmergencyContactSettingsResponse * const q);
 
     void parseUpdateEmergencyContactSettingsResponse(QXmlStreamReader &xml);
 

@@ -53,7 +53,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    ElasticInferenceClient(
+    explicit ElasticInferenceClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -69,7 +69,7 @@ public slots:
 protected:
     /// @cond internal
     ElasticInferenceClientPrivate * const d_ptr; ///< Internal d-pointer.
-    ElasticInferenceClient(ElasticInferenceClientPrivate * const d);
+    explicit ElasticInferenceClient(ElasticInferenceClientPrivate * const d);
     /// @endcond
 
 private:

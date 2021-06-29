@@ -31,7 +31,7 @@ class AddApplicationOutputResponsePrivate : public KinesisAnalyticsResponsePriva
 
 public:
 
-    AddApplicationOutputResponsePrivate(AddApplicationOutputResponse * const q);
+    explicit AddApplicationOutputResponsePrivate(AddApplicationOutputResponse * const q);
 
     void parseAddApplicationOutputResponse(QXmlStreamReader &xml);
 

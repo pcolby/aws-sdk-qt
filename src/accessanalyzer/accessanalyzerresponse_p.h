@@ -29,7 +29,7 @@ class AccessAnalyzerResponsePrivate {
 
 public:
 
-    AccessAnalyzerResponsePrivate(AccessAnalyzerResponse * const q);
+    explicit AccessAnalyzerResponsePrivate(AccessAnalyzerResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

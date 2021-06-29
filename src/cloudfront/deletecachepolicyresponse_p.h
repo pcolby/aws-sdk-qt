@@ -31,7 +31,7 @@ class DeleteCachePolicyResponsePrivate : public CloudFrontResponsePrivate {
 
 public:
 
-    DeleteCachePolicyResponsePrivate(DeleteCachePolicyResponse * const q);
+    explicit DeleteCachePolicyResponsePrivate(DeleteCachePolicyResponse * const q);
 
     void parseDeleteCachePolicyResponse(QXmlStreamReader &xml);
 

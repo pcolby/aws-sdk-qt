@@ -31,7 +31,7 @@ class DisassociateFileSystemResponsePrivate : public StorageGatewayResponsePriva
 
 public:
 
-    DisassociateFileSystemResponsePrivate(DisassociateFileSystemResponse * const q);
+    explicit DisassociateFileSystemResponsePrivate(DisassociateFileSystemResponse * const q);
 
     void parseDisassociateFileSystemResponse(QXmlStreamReader &xml);
 

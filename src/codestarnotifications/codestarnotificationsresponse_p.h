@@ -29,7 +29,7 @@ class CodeStarNotificationsResponsePrivate {
 
 public:
 
-    CodeStarNotificationsResponsePrivate(CodeStarNotificationsResponse * const q);
+    explicit CodeStarNotificationsResponsePrivate(CodeStarNotificationsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

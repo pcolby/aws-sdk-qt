@@ -31,7 +31,7 @@ class CreateConfigurationSetTrackingOptionsResponsePrivate : public SesResponseP
 
 public:
 
-    CreateConfigurationSetTrackingOptionsResponsePrivate(CreateConfigurationSetTrackingOptionsResponse * const q);
+    explicit CreateConfigurationSetTrackingOptionsResponsePrivate(CreateConfigurationSetTrackingOptionsResponse * const q);
 
     void parseCreateConfigurationSetTrackingOptionsResponse(QXmlStreamReader &xml);
 

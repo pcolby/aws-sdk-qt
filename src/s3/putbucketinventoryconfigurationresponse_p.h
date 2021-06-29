@@ -31,7 +31,7 @@ class PutBucketInventoryConfigurationResponsePrivate : public S3ResponsePrivate 
 
 public:
 
-    PutBucketInventoryConfigurationResponsePrivate(PutBucketInventoryConfigurationResponse * const q);
+    explicit PutBucketInventoryConfigurationResponsePrivate(PutBucketInventoryConfigurationResponse * const q);
 
     void parsePutBucketInventoryConfigurationResponse(QXmlStreamReader &xml);
 

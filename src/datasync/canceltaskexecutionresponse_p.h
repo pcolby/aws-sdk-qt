@@ -31,7 +31,7 @@ class CancelTaskExecutionResponsePrivate : public DataSyncResponsePrivate {
 
 public:
 
-    CancelTaskExecutionResponsePrivate(CancelTaskExecutionResponse * const q);
+    explicit CancelTaskExecutionResponsePrivate(CancelTaskExecutionResponse * const q);
 
     void parseCancelTaskExecutionResponse(QXmlStreamReader &xml);
 

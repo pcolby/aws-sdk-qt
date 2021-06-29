@@ -31,7 +31,7 @@ class AssociateDhcpOptionsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    AssociateDhcpOptionsResponsePrivate(AssociateDhcpOptionsResponse * const q);
+    explicit AssociateDhcpOptionsResponsePrivate(AssociateDhcpOptionsResponse * const q);
 
     void parseAssociateDhcpOptionsResponse(QXmlStreamReader &xml);
 

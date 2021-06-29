@@ -31,7 +31,7 @@ class GetTestResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    GetTestResponsePrivate(GetTestResponse * const q);
+    explicit GetTestResponsePrivate(GetTestResponse * const q);
 
     void parseGetTestResponse(QXmlStreamReader &xml);
 

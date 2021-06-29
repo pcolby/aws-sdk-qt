@@ -31,7 +31,7 @@ class CreatePortfolioShareResponsePrivate : public ServiceCatalogResponsePrivate
 
 public:
 
-    CreatePortfolioShareResponsePrivate(CreatePortfolioShareResponse * const q);
+    explicit CreatePortfolioShareResponsePrivate(CreatePortfolioShareResponse * const q);
 
     void parseCreatePortfolioShareResponse(QXmlStreamReader &xml);
 

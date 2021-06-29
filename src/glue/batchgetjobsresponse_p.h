@@ -31,7 +31,7 @@ class BatchGetJobsResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    BatchGetJobsResponsePrivate(BatchGetJobsResponse * const q);
+    explicit BatchGetJobsResponsePrivate(BatchGetJobsResponse * const q);
 
     void parseBatchGetJobsResponse(QXmlStreamReader &xml);
 

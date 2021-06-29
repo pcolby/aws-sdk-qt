@@ -31,7 +31,7 @@ class DeleteMedicalVocabularyResponsePrivate : public TranscribeServiceResponseP
 
 public:
 
-    DeleteMedicalVocabularyResponsePrivate(DeleteMedicalVocabularyResponse * const q);
+    explicit DeleteMedicalVocabularyResponsePrivate(DeleteMedicalVocabularyResponse * const q);
 
     void parseDeleteMedicalVocabularyResponse(QXmlStreamReader &xml);
 

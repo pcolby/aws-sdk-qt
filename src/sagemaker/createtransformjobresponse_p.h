@@ -31,7 +31,7 @@ class CreateTransformJobResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    CreateTransformJobResponsePrivate(CreateTransformJobResponse * const q);
+    explicit CreateTransformJobResponsePrivate(CreateTransformJobResponse * const q);
 
     void parseCreateTransformJobResponse(QXmlStreamReader &xml);
 

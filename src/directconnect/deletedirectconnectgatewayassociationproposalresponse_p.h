@@ -31,7 +31,7 @@ class DeleteDirectConnectGatewayAssociationProposalResponsePrivate : public Dire
 
 public:
 
-    DeleteDirectConnectGatewayAssociationProposalResponsePrivate(DeleteDirectConnectGatewayAssociationProposalResponse * const q);
+    explicit DeleteDirectConnectGatewayAssociationProposalResponsePrivate(DeleteDirectConnectGatewayAssociationProposalResponse * const q);
 
     void parseDeleteDirectConnectGatewayAssociationProposalResponse(QXmlStreamReader &xml);
 

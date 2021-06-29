@@ -31,7 +31,7 @@ class ListEndpointsResponsePrivate : public S3OutpostsResponsePrivate {
 
 public:
 
-    ListEndpointsResponsePrivate(ListEndpointsResponse * const q);
+    explicit ListEndpointsResponsePrivate(ListEndpointsResponse * const q);
 
     void parseListEndpointsResponse(QXmlStreamReader &xml);
 

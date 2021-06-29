@@ -77,7 +77,7 @@ public:
 protected:
     /// @cond internal
     FSxRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    FSxRequest(FSxRequestPrivate * const d);
+    explicit FSxRequest(FSxRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

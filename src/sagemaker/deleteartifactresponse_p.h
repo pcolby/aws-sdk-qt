@@ -31,7 +31,7 @@ class DeleteArtifactResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    DeleteArtifactResponsePrivate(DeleteArtifactResponse * const q);
+    explicit DeleteArtifactResponsePrivate(DeleteArtifactResponse * const q);
 
     void parseDeleteArtifactResponse(QXmlStreamReader &xml);
 

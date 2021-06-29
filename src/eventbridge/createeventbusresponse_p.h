@@ -31,7 +31,7 @@ class CreateEventBusResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 
-    CreateEventBusResponsePrivate(CreateEventBusResponse * const q);
+    explicit CreateEventBusResponsePrivate(CreateEventBusResponse * const q);
 
     void parseCreateEventBusResponse(QXmlStreamReader &xml);
 

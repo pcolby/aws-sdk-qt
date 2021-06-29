@@ -31,7 +31,7 @@ class CreateHsmResponsePrivate : public CloudHSMV2ResponsePrivate {
 
 public:
 
-    CreateHsmResponsePrivate(CreateHsmResponse * const q);
+    explicit CreateHsmResponsePrivate(CreateHsmResponse * const q);
 
     void parseCreateHsmResponse(QXmlStreamReader &xml);
 

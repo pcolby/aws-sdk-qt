@@ -31,7 +31,7 @@ class RevokeCacheSecurityGroupIngressResponsePrivate : public ElastiCacheRespons
 
 public:
 
-    RevokeCacheSecurityGroupIngressResponsePrivate(RevokeCacheSecurityGroupIngressResponse * const q);
+    explicit RevokeCacheSecurityGroupIngressResponsePrivate(RevokeCacheSecurityGroupIngressResponse * const q);
 
     void parseRevokeCacheSecurityGroupIngressResponse(QXmlStreamReader &xml);
 

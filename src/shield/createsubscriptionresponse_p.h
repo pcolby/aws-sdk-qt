@@ -31,7 +31,7 @@ class CreateSubscriptionResponsePrivate : public ShieldResponsePrivate {
 
 public:
 
-    CreateSubscriptionResponsePrivate(CreateSubscriptionResponse * const q);
+    explicit CreateSubscriptionResponsePrivate(CreateSubscriptionResponse * const q);
 
     void parseCreateSubscriptionResponse(QXmlStreamReader &xml);
 

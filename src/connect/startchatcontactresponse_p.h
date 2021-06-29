@@ -31,7 +31,7 @@ class StartChatContactResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    StartChatContactResponsePrivate(StartChatContactResponse * const q);
+    explicit StartChatContactResponsePrivate(StartChatContactResponse * const q);
 
     void parseStartChatContactResponse(QXmlStreamReader &xml);
 

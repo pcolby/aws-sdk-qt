@@ -31,7 +31,7 @@ class CreatePullRequestResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 
-    CreatePullRequestResponsePrivate(CreatePullRequestResponse * const q);
+    explicit CreatePullRequestResponsePrivate(CreatePullRequestResponse * const q);
 
     void parseCreatePullRequestResponse(QXmlStreamReader &xml);
 

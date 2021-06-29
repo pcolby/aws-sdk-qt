@@ -31,7 +31,7 @@ class StartAttachmentUploadResponsePrivate : public ConnectParticipantResponsePr
 
 public:
 
-    StartAttachmentUploadResponsePrivate(StartAttachmentUploadResponse * const q);
+    explicit StartAttachmentUploadResponsePrivate(StartAttachmentUploadResponse * const q);
 
     void parseStartAttachmentUploadResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class StartTriggerResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    StartTriggerResponsePrivate(StartTriggerResponse * const q);
+    explicit StartTriggerResponsePrivate(StartTriggerResponse * const q);
 
     void parseStartTriggerResponse(QXmlStreamReader &xml);
 

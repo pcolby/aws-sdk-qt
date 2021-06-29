@@ -31,7 +31,7 @@ class ListTagsForResourceResponsePrivate : public IoT1ClickDevicesServiceRespons
 
 public:
 
-    ListTagsForResourceResponsePrivate(ListTagsForResourceResponse * const q);
+    explicit ListTagsForResourceResponsePrivate(ListTagsForResourceResponse * const q);
 
     void parseListTagsForResourceResponse(QXmlStreamReader &xml);
 

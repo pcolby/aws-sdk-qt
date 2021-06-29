@@ -31,7 +31,7 @@ class CreateReplicationInstanceResponsePrivate : public DatabaseMigrationService
 
 public:
 
-    CreateReplicationInstanceResponsePrivate(CreateReplicationInstanceResponse * const q);
+    explicit CreateReplicationInstanceResponsePrivate(CreateReplicationInstanceResponse * const q);
 
     void parseCreateReplicationInstanceResponse(QXmlStreamReader &xml);
 

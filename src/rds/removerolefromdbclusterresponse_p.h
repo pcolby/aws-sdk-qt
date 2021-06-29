@@ -31,7 +31,7 @@ class RemoveRoleFromDBClusterResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    RemoveRoleFromDBClusterResponsePrivate(RemoveRoleFromDBClusterResponse * const q);
+    explicit RemoveRoleFromDBClusterResponsePrivate(RemoveRoleFromDBClusterResponse * const q);
 
     void parseRemoveRoleFromDBClusterResponse(QXmlStreamReader &xml);
 

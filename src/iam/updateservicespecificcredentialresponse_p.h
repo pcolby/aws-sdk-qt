@@ -31,7 +31,7 @@ class UpdateServiceSpecificCredentialResponsePrivate : public IamResponsePrivate
 
 public:
 
-    UpdateServiceSpecificCredentialResponsePrivate(UpdateServiceSpecificCredentialResponse * const q);
+    explicit UpdateServiceSpecificCredentialResponsePrivate(UpdateServiceSpecificCredentialResponse * const q);
 
     void parseUpdateServiceSpecificCredentialResponse(QXmlStreamReader &xml);
 

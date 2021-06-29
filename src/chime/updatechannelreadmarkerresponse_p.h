@@ -31,7 +31,7 @@ class UpdateChannelReadMarkerResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    UpdateChannelReadMarkerResponsePrivate(UpdateChannelReadMarkerResponse * const q);
+    explicit UpdateChannelReadMarkerResponsePrivate(UpdateChannelReadMarkerResponse * const q);
 
     void parseUpdateChannelReadMarkerResponse(QXmlStreamReader &xml);
 

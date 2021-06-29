@@ -31,7 +31,7 @@ class DeleteExperimentTemplateResponsePrivate : public FisResponsePrivate {
 
 public:
 
-    DeleteExperimentTemplateResponsePrivate(DeleteExperimentTemplateResponse * const q);
+    explicit DeleteExperimentTemplateResponsePrivate(DeleteExperimentTemplateResponse * const q);
 
     void parseDeleteExperimentTemplateResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeGlobalTableSettingsResponsePrivate : public DynamoDBResponsePrivat
 
 public:
 
-    DescribeGlobalTableSettingsResponsePrivate(DescribeGlobalTableSettingsResponse * const q);
+    explicit DescribeGlobalTableSettingsResponsePrivate(DescribeGlobalTableSettingsResponse * const q);
 
     void parseDescribeGlobalTableSettingsResponse(QXmlStreamReader &xml);
 

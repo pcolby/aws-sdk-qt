@@ -31,7 +31,7 @@ class ListDashboardsResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    ListDashboardsResponsePrivate(ListDashboardsResponse * const q);
+    explicit ListDashboardsResponsePrivate(ListDashboardsResponse * const q);
 
     void parseListDashboardsResponse(QXmlStreamReader &xml);
 

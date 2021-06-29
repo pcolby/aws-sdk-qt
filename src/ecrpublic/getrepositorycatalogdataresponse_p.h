@@ -31,7 +31,7 @@ class GetRepositoryCatalogDataResponsePrivate : public ECRPublicResponsePrivate 
 
 public:
 
-    GetRepositoryCatalogDataResponsePrivate(GetRepositoryCatalogDataResponse * const q);
+    explicit GetRepositoryCatalogDataResponsePrivate(GetRepositoryCatalogDataResponse * const q);
 
     void parseGetRepositoryCatalogDataResponse(QXmlStreamReader &xml);
 

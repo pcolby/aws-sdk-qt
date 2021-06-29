@@ -31,7 +31,7 @@ class GetSecurityConfigurationResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    GetSecurityConfigurationResponsePrivate(GetSecurityConfigurationResponse * const q);
+    explicit GetSecurityConfigurationResponsePrivate(GetSecurityConfigurationResponse * const q);
 
     void parseGetSecurityConfigurationResponse(QXmlStreamReader &xml);
 

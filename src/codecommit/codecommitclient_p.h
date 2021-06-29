@@ -30,7 +30,7 @@ class CodeCommitClient;
 class CodeCommitClientPrivate {
 
 public:
-    CodeCommitClientPrivate(CodeCommitClient * const q);
+    explicit CodeCommitClientPrivate(CodeCommitClient * const q);
 
 protected:
     CodeCommitClient * const q_ptr; ///< Internal q-pointer.

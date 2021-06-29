@@ -31,7 +31,7 @@ class ListManagedPoliciesInPermissionSetResponsePrivate : public SSOAdminRespons
 
 public:
 
-    ListManagedPoliciesInPermissionSetResponsePrivate(ListManagedPoliciesInPermissionSetResponse * const q);
+    explicit ListManagedPoliciesInPermissionSetResponsePrivate(ListManagedPoliciesInPermissionSetResponse * const q);
 
     void parseListManagedPoliciesInPermissionSetResponse(QXmlStreamReader &xml);
 

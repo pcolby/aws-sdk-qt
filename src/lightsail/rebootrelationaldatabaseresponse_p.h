@@ -31,7 +31,7 @@ class RebootRelationalDatabaseResponsePrivate : public LightsailResponsePrivate 
 
 public:
 
-    RebootRelationalDatabaseResponsePrivate(RebootRelationalDatabaseResponse * const q);
+    explicit RebootRelationalDatabaseResponsePrivate(RebootRelationalDatabaseResponse * const q);
 
     void parseRebootRelationalDatabaseResponse(QXmlStreamReader &xml);
 

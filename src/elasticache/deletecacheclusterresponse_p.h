@@ -31,7 +31,7 @@ class DeleteCacheClusterResponsePrivate : public ElastiCacheResponsePrivate {
 
 public:
 
-    DeleteCacheClusterResponsePrivate(DeleteCacheClusterResponse * const q);
+    explicit DeleteCacheClusterResponsePrivate(DeleteCacheClusterResponse * const q);
 
     void parseDeleteCacheClusterResponse(QXmlStreamReader &xml);
 

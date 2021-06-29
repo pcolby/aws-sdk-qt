@@ -31,7 +31,7 @@ class DescribeEndpointsResponsePrivate : public MediaConvertResponsePrivate {
 
 public:
 
-    DescribeEndpointsResponsePrivate(DescribeEndpointsResponse * const q);
+    explicit DescribeEndpointsResponsePrivate(DescribeEndpointsResponse * const q);
 
     void parseDescribeEndpointsResponse(QXmlStreamReader &xml);
 

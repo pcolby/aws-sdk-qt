@@ -31,7 +31,7 @@ class StartReportCreationResponsePrivate : public ResourceGroupsTaggingAPIRespon
 
 public:
 
-    StartReportCreationResponsePrivate(StartReportCreationResponse * const q);
+    explicit StartReportCreationResponsePrivate(StartReportCreationResponse * const q);
 
     void parseStartReportCreationResponse(QXmlStreamReader &xml);
 

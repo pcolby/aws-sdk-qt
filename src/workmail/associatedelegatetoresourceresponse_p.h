@@ -31,7 +31,7 @@ class AssociateDelegateToResourceResponsePrivate : public WorkMailResponsePrivat
 
 public:
 
-    AssociateDelegateToResourceResponsePrivate(AssociateDelegateToResourceResponse * const q);
+    explicit AssociateDelegateToResourceResponsePrivate(AssociateDelegateToResourceResponse * const q);
 
     void parseAssociateDelegateToResourceResponse(QXmlStreamReader &xml);
 

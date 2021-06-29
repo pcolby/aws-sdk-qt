@@ -31,7 +31,7 @@ class ListSizeConstraintSetsResponsePrivate : public WAFRegionalResponsePrivate 
 
 public:
 
-    ListSizeConstraintSetsResponsePrivate(ListSizeConstraintSetsResponse * const q);
+    explicit ListSizeConstraintSetsResponsePrivate(ListSizeConstraintSetsResponse * const q);
 
     void parseListSizeConstraintSetsResponse(QXmlStreamReader &xml);
 

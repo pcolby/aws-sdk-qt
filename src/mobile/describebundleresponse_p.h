@@ -31,7 +31,7 @@ class DescribeBundleResponsePrivate : public MobileResponsePrivate {
 
 public:
 
-    DescribeBundleResponsePrivate(DescribeBundleResponse * const q);
+    explicit DescribeBundleResponsePrivate(DescribeBundleResponse * const q);
 
     void parseDescribeBundleResponse(QXmlStreamReader &xml);
 

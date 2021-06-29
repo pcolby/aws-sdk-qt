@@ -31,7 +31,7 @@ class GetMetricPolicyResponsePrivate : public MediaStoreResponsePrivate {
 
 public:
 
-    GetMetricPolicyResponsePrivate(GetMetricPolicyResponse * const q);
+    explicit GetMetricPolicyResponsePrivate(GetMetricPolicyResponse * const q);
 
     void parseGetMetricPolicyResponse(QXmlStreamReader &xml);
 

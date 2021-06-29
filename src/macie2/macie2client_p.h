@@ -30,7 +30,7 @@ class Macie2Client;
 class Macie2ClientPrivate {
 
 public:
-    Macie2ClientPrivate(Macie2Client * const q);
+    explicit Macie2ClientPrivate(Macie2Client * const q);
 
 protected:
     Macie2Client * const q_ptr; ///< Internal q-pointer.

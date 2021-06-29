@@ -31,7 +31,7 @@ class DescribeCreateAccountStatusResponsePrivate : public OrganizationsResponseP
 
 public:
 
-    DescribeCreateAccountStatusResponsePrivate(DescribeCreateAccountStatusResponse * const q);
+    explicit DescribeCreateAccountStatusResponsePrivate(DescribeCreateAccountStatusResponse * const q);
 
     void parseDescribeCreateAccountStatusResponse(QXmlStreamReader &xml);
 

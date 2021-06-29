@@ -31,7 +31,7 @@ class DeleteReusableDelegationSetResponsePrivate : public Route53ResponsePrivate
 
 public:
 
-    DeleteReusableDelegationSetResponsePrivate(DeleteReusableDelegationSetResponse * const q);
+    explicit DeleteReusableDelegationSetResponsePrivate(DeleteReusableDelegationSetResponse * const q);
 
     void parseDeleteReusableDelegationSetResponse(QXmlStreamReader &xml);
 

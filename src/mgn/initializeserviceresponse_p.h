@@ -31,7 +31,7 @@ class InitializeServiceResponsePrivate : public mgnResponsePrivate {
 
 public:
 
-    InitializeServiceResponsePrivate(InitializeServiceResponse * const q);
+    explicit InitializeServiceResponsePrivate(InitializeServiceResponse * const q);
 
     void parseInitializeServiceResponse(QXmlStreamReader &xml);
 

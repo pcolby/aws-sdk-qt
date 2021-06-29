@@ -31,7 +31,7 @@ class PutVoiceConnectorEmergencyCallingConfigurationResponsePrivate : public Chi
 
 public:
 
-    PutVoiceConnectorEmergencyCallingConfigurationResponsePrivate(PutVoiceConnectorEmergencyCallingConfigurationResponse * const q);
+    explicit PutVoiceConnectorEmergencyCallingConfigurationResponsePrivate(PutVoiceConnectorEmergencyCallingConfigurationResponse * const q);
 
     void parsePutVoiceConnectorEmergencyCallingConfigurationResponse(QXmlStreamReader &xml);
 

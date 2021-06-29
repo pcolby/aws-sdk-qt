@@ -31,7 +31,7 @@ class DeregisterEventTopicResponsePrivate : public DirectoryServiceResponsePriva
 
 public:
 
-    DeregisterEventTopicResponsePrivate(DeregisterEventTopicResponse * const q);
+    explicit DeregisterEventTopicResponsePrivate(DeregisterEventTopicResponse * const q);
 
     void parseDeregisterEventTopicResponse(QXmlStreamReader &xml);
 

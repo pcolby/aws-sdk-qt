@@ -31,7 +31,7 @@ class DeletePhoneNumberResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    DeletePhoneNumberResponsePrivate(DeletePhoneNumberResponse * const q);
+    explicit DeletePhoneNumberResponsePrivate(DeletePhoneNumberResponse * const q);
 
     void parseDeletePhoneNumberResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateGatewayCapabilityConfigurationResponsePrivate : public IoTSiteWiseRe
 
 public:
 
-    UpdateGatewayCapabilityConfigurationResponsePrivate(UpdateGatewayCapabilityConfigurationResponse * const q);
+    explicit UpdateGatewayCapabilityConfigurationResponsePrivate(UpdateGatewayCapabilityConfigurationResponse * const q);
 
     void parseUpdateGatewayCapabilityConfigurationResponse(QXmlStreamReader &xml);
 

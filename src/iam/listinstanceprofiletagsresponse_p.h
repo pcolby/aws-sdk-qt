@@ -31,7 +31,7 @@ class ListInstanceProfileTagsResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    ListInstanceProfileTagsResponsePrivate(ListInstanceProfileTagsResponse * const q);
+    explicit ListInstanceProfileTagsResponsePrivate(ListInstanceProfileTagsResponse * const q);
 
     void parseListInstanceProfileTagsResponse(QXmlStreamReader &xml);
 

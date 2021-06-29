@@ -31,7 +31,7 @@ class DescribePackageVersionResponsePrivate : public CodeArtifactResponsePrivate
 
 public:
 
-    DescribePackageVersionResponsePrivate(DescribePackageVersionResponse * const q);
+    explicit DescribePackageVersionResponsePrivate(DescribePackageVersionResponse * const q);
 
     void parseDescribePackageVersionResponse(QXmlStreamReader &xml);
 

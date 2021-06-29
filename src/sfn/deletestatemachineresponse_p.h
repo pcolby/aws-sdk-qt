@@ -31,7 +31,7 @@ class DeleteStateMachineResponsePrivate : public SfnResponsePrivate {
 
 public:
 
-    DeleteStateMachineResponsePrivate(DeleteStateMachineResponse * const q);
+    explicit DeleteStateMachineResponsePrivate(DeleteStateMachineResponse * const q);
 
     void parseDeleteStateMachineResponse(QXmlStreamReader &xml);
 

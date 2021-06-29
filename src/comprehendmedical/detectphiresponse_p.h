@@ -31,7 +31,7 @@ class DetectPHIResponsePrivate : public ComprehendMedicalResponsePrivate {
 
 public:
 
-    DetectPHIResponsePrivate(DetectPHIResponse * const q);
+    explicit DetectPHIResponsePrivate(DetectPHIResponse * const q);
 
     void parseDetectPHIResponse(QXmlStreamReader &xml);
 

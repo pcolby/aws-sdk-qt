@@ -31,7 +31,7 @@ class ListSigningCertificatesResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    ListSigningCertificatesResponsePrivate(ListSigningCertificatesResponse * const q);
+    explicit ListSigningCertificatesResponsePrivate(ListSigningCertificatesResponse * const q);
 
     void parseListSigningCertificatesResponse(QXmlStreamReader &xml);
 

@@ -30,7 +30,7 @@ class PinpointEmailClient;
 class PinpointEmailClientPrivate {
 
 public:
-    PinpointEmailClientPrivate(PinpointEmailClient * const q);
+    explicit PinpointEmailClientPrivate(PinpointEmailClient * const q);
 
 protected:
     PinpointEmailClient * const q_ptr; ///< Internal q-pointer.

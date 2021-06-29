@@ -29,7 +29,7 @@ class CloudDirectoryResponsePrivate {
 
 public:
 
-    CloudDirectoryResponsePrivate(CloudDirectoryResponse * const q);
+    explicit CloudDirectoryResponsePrivate(CloudDirectoryResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

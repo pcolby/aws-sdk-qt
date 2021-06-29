@@ -97,7 +97,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    MachineLearningClient(
+    explicit MachineLearningClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -135,7 +135,7 @@ public slots:
 protected:
     /// @cond internal
     MachineLearningClientPrivate * const d_ptr; ///< Internal d-pointer.
-    MachineLearningClient(MachineLearningClientPrivate * const d);
+    explicit MachineLearningClient(MachineLearningClientPrivate * const d);
     /// @endcond
 
 private:

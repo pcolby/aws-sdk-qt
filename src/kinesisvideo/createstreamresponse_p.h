@@ -31,7 +31,7 @@ class CreateStreamResponsePrivate : public KinesisVideoResponsePrivate {
 
 public:
 
-    CreateStreamResponsePrivate(CreateStreamResponse * const q);
+    explicit CreateStreamResponsePrivate(CreateStreamResponse * const q);
 
     void parseCreateStreamResponse(QXmlStreamReader &xml);
 

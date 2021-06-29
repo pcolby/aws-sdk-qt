@@ -31,7 +31,7 @@ class DeleteClientCertificateResponsePrivate : public APIGatewayResponsePrivate 
 
 public:
 
-    DeleteClientCertificateResponsePrivate(DeleteClientCertificateResponse * const q);
+    explicit DeleteClientCertificateResponsePrivate(DeleteClientCertificateResponse * const q);
 
     void parseDeleteClientCertificateResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class RestartAppServerResponsePrivate : public ElasticBeanstalkResponsePrivate {
 
 public:
 
-    RestartAppServerResponsePrivate(RestartAppServerResponse * const q);
+    explicit RestartAppServerResponsePrivate(RestartAppServerResponse * const q);
 
     void parseRestartAppServerResponse(QXmlStreamReader &xml);
 

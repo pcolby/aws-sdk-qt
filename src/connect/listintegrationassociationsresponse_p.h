@@ -31,7 +31,7 @@ class ListIntegrationAssociationsResponsePrivate : public ConnectResponsePrivate
 
 public:
 
-    ListIntegrationAssociationsResponsePrivate(ListIntegrationAssociationsResponse * const q);
+    explicit ListIntegrationAssociationsResponsePrivate(ListIntegrationAssociationsResponse * const q);
 
     void parseListIntegrationAssociationsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class RequestSpotInstancesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    RequestSpotInstancesResponsePrivate(RequestSpotInstancesResponse * const q);
+    explicit RequestSpotInstancesResponsePrivate(RequestSpotInstancesResponse * const q);
 
     void parseRequestSpotInstancesResponse(QXmlStreamReader &xml);
 

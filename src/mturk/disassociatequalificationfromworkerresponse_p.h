@@ -31,7 +31,7 @@ class DisassociateQualificationFromWorkerResponsePrivate : public MTurkResponseP
 
 public:
 
-    DisassociateQualificationFromWorkerResponsePrivate(DisassociateQualificationFromWorkerResponse * const q);
+    explicit DisassociateQualificationFromWorkerResponsePrivate(DisassociateQualificationFromWorkerResponse * const q);
 
     void parseDisassociateQualificationFromWorkerResponse(QXmlStreamReader &xml);
 

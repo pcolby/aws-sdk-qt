@@ -31,7 +31,7 @@ class DeleteSamplingRuleResponsePrivate : public XRayResponsePrivate {
 
 public:
 
-    DeleteSamplingRuleResponsePrivate(DeleteSamplingRuleResponse * const q);
+    explicit DeleteSamplingRuleResponsePrivate(DeleteSamplingRuleResponse * const q);
 
     void parseDeleteSamplingRuleResponse(QXmlStreamReader &xml);
 

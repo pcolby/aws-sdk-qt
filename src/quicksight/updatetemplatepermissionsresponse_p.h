@@ -31,7 +31,7 @@ class UpdateTemplatePermissionsResponsePrivate : public QuickSightResponsePrivat
 
 public:
 
-    UpdateTemplatePermissionsResponsePrivate(UpdateTemplatePermissionsResponse * const q);
+    explicit UpdateTemplatePermissionsResponsePrivate(UpdateTemplatePermissionsResponse * const q);
 
     void parseUpdateTemplatePermissionsResponse(QXmlStreamReader &xml);
 

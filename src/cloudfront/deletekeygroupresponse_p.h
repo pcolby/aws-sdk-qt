@@ -31,7 +31,7 @@ class DeleteKeyGroupResponsePrivate : public CloudFrontResponsePrivate {
 
 public:
 
-    DeleteKeyGroupResponsePrivate(DeleteKeyGroupResponse * const q);
+    explicit DeleteKeyGroupResponsePrivate(DeleteKeyGroupResponse * const q);
 
     void parseDeleteKeyGroupResponse(QXmlStreamReader &xml);
 

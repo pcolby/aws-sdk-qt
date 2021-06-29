@@ -31,7 +31,7 @@ class DeleteEndpointAccessResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    DeleteEndpointAccessResponsePrivate(DeleteEndpointAccessResponse * const q);
+    explicit DeleteEndpointAccessResponsePrivate(DeleteEndpointAccessResponse * const q);
 
     void parseDeleteEndpointAccessResponse(QXmlStreamReader &xml);
 

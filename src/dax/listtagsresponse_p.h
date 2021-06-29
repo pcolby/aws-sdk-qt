@@ -31,7 +31,7 @@ class ListTagsResponsePrivate : public DaxResponsePrivate {
 
 public:
 
-    ListTagsResponsePrivate(ListTagsResponse * const q);
+    explicit ListTagsResponsePrivate(ListTagsResponse * const q);
 
     void parseListTagsResponse(QXmlStreamReader &xml);
 

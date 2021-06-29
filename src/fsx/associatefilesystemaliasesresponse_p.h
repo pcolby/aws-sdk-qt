@@ -31,7 +31,7 @@ class AssociateFileSystemAliasesResponsePrivate : public FSxResponsePrivate {
 
 public:
 
-    AssociateFileSystemAliasesResponsePrivate(AssociateFileSystemAliasesResponse * const q);
+    explicit AssociateFileSystemAliasesResponsePrivate(AssociateFileSystemAliasesResponse * const q);
 
     void parseAssociateFileSystemAliasesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeInstanceInformationResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    DescribeInstanceInformationResponsePrivate(DescribeInstanceInformationResponse * const q);
+    explicit DescribeInstanceInformationResponsePrivate(DescribeInstanceInformationResponse * const q);
 
     void parseDescribeInstanceInformationResponse(QXmlStreamReader &xml);
 

@@ -29,7 +29,7 @@ class DirectConnectResponsePrivate {
 
 public:
 
-    DirectConnectResponsePrivate(DirectConnectResponse * const q);
+    explicit DirectConnectResponsePrivate(DirectConnectResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

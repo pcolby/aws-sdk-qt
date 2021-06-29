@@ -31,7 +31,7 @@ class PutAccountSuppressionAttributesResponsePrivate : public Sesv2ResponsePriva
 
 public:
 
-    PutAccountSuppressionAttributesResponsePrivate(PutAccountSuppressionAttributesResponse * const q);
+    explicit PutAccountSuppressionAttributesResponsePrivate(PutAccountSuppressionAttributesResponse * const q);
 
     void parsePutAccountSuppressionAttributesResponse(QXmlStreamReader &xml);
 

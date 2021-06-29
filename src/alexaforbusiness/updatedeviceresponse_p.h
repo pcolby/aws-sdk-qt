@@ -31,7 +31,7 @@ class UpdateDeviceResponsePrivate : public AlexaForBusinessResponsePrivate {
 
 public:
 
-    UpdateDeviceResponsePrivate(UpdateDeviceResponse * const q);
+    explicit UpdateDeviceResponsePrivate(UpdateDeviceResponse * const q);
 
     void parseUpdateDeviceResponse(QXmlStreamReader &xml);
 

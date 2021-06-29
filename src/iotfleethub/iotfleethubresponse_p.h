@@ -29,7 +29,7 @@ class IoTFleetHubResponsePrivate {
 
 public:
 
-    IoTFleetHubResponsePrivate(IoTFleetHubResponse * const q);
+    explicit IoTFleetHubResponsePrivate(IoTFleetHubResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

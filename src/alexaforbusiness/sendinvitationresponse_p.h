@@ -31,7 +31,7 @@ class SendInvitationResponsePrivate : public AlexaForBusinessResponsePrivate {
 
 public:
 
-    SendInvitationResponsePrivate(SendInvitationResponse * const q);
+    explicit SendInvitationResponsePrivate(SendInvitationResponse * const q);
 
     void parseSendInvitationResponse(QXmlStreamReader &xml);
 

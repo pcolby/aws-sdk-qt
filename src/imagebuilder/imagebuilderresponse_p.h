@@ -29,7 +29,7 @@ class imagebuilderResponsePrivate {
 
 public:
 
-    imagebuilderResponsePrivate(imagebuilderResponse * const q);
+    explicit imagebuilderResponsePrivate(imagebuilderResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

@@ -31,7 +31,7 @@ class DeleteCorsPolicyResponsePrivate : public MediaStoreResponsePrivate {
 
 public:
 
-    DeleteCorsPolicyResponsePrivate(DeleteCorsPolicyResponse * const q);
+    explicit DeleteCorsPolicyResponsePrivate(DeleteCorsPolicyResponse * const q);
 
     void parseDeleteCorsPolicyResponse(QXmlStreamReader &xml);
 

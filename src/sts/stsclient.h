@@ -57,7 +57,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    StsClient(
+    explicit StsClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -75,7 +75,7 @@ public slots:
 protected:
     /// @cond internal
     StsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    StsClient(StsClientPrivate * const d);
+    explicit StsClient(StsClientPrivate * const d);
     /// @endcond
 
 private:

@@ -31,7 +31,7 @@ class DeleteWebACLResponsePrivate : public Wafv2ResponsePrivate {
 
 public:
 
-    DeleteWebACLResponsePrivate(DeleteWebACLResponse * const q);
+    explicit DeleteWebACLResponsePrivate(DeleteWebACLResponse * const q);
 
     void parseDeleteWebACLResponse(QXmlStreamReader &xml);
 

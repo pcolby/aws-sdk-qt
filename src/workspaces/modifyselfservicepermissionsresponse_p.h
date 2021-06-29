@@ -31,7 +31,7 @@ class ModifySelfservicePermissionsResponsePrivate : public WorkSpacesResponsePri
 
 public:
 
-    ModifySelfservicePermissionsResponsePrivate(ModifySelfservicePermissionsResponse * const q);
+    explicit ModifySelfservicePermissionsResponsePrivate(ModifySelfservicePermissionsResponse * const q);
 
     void parseModifySelfservicePermissionsResponse(QXmlStreamReader &xml);
 

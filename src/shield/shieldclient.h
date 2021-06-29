@@ -107,7 +107,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    ShieldClient(
+    explicit ShieldClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -150,7 +150,7 @@ public slots:
 protected:
     /// @cond internal
     ShieldClientPrivate * const d_ptr; ///< Internal d-pointer.
-    ShieldClient(ShieldClientPrivate * const d);
+    explicit ShieldClient(ShieldClientPrivate * const d);
     /// @endcond
 
 private:

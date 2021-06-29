@@ -31,7 +31,7 @@ class UpdateAssessmentResponsePrivate : public AuditManagerResponsePrivate {
 
 public:
 
-    UpdateAssessmentResponsePrivate(UpdateAssessmentResponse * const q);
+    explicit UpdateAssessmentResponsePrivate(UpdateAssessmentResponse * const q);
 
     void parseUpdateAssessmentResponse(QXmlStreamReader &xml);
 

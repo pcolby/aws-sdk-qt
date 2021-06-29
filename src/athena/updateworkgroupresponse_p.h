@@ -31,7 +31,7 @@ class UpdateWorkGroupResponsePrivate : public AthenaResponsePrivate {
 
 public:
 
-    UpdateWorkGroupResponsePrivate(UpdateWorkGroupResponse * const q);
+    explicit UpdateWorkGroupResponsePrivate(UpdateWorkGroupResponse * const q);
 
     void parseUpdateWorkGroupResponse(QXmlStreamReader &xml);
 

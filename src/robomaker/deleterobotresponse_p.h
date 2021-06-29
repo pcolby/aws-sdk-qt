@@ -31,7 +31,7 @@ class DeleteRobotResponsePrivate : public RoboMakerResponsePrivate {
 
 public:
 
-    DeleteRobotResponsePrivate(DeleteRobotResponse * const q);
+    explicit DeleteRobotResponsePrivate(DeleteRobotResponse * const q);
 
     void parseDeleteRobotResponse(QXmlStreamReader &xml);
 

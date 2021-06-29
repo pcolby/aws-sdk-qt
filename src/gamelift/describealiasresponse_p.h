@@ -31,7 +31,7 @@ class DescribeAliasResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    DescribeAliasResponsePrivate(DescribeAliasResponse * const q);
+    explicit DescribeAliasResponsePrivate(DescribeAliasResponse * const q);
 
     void parseDescribeAliasResponse(QXmlStreamReader &xml);
 

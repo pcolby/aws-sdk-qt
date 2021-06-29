@@ -31,7 +31,7 @@ class ListProfileObjectTypesResponsePrivate : public CustomerProfilesResponsePri
 
 public:
 
-    ListProfileObjectTypesResponsePrivate(ListProfileObjectTypesResponse * const q);
+    explicit ListProfileObjectTypesResponsePrivate(ListProfileObjectTypesResponse * const q);
 
     void parseListProfileObjectTypesResponse(QXmlStreamReader &xml);
 

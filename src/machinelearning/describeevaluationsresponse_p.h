@@ -31,7 +31,7 @@ class DescribeEvaluationsResponsePrivate : public MachineLearningResponsePrivate
 
 public:
 
-    DescribeEvaluationsResponsePrivate(DescribeEvaluationsResponse * const q);
+    explicit DescribeEvaluationsResponsePrivate(DescribeEvaluationsResponse * const q);
 
     void parseDescribeEvaluationsResponse(QXmlStreamReader &xml);
 

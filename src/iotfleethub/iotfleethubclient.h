@@ -57,7 +57,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    IoTFleetHubClient(
+    explicit IoTFleetHubClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -75,7 +75,7 @@ public slots:
 protected:
     /// @cond internal
     IoTFleetHubClientPrivate * const d_ptr; ///< Internal d-pointer.
-    IoTFleetHubClient(IoTFleetHubClientPrivate * const d);
+    explicit IoTFleetHubClient(IoTFleetHubClientPrivate * const d);
     /// @endcond
 
 private:

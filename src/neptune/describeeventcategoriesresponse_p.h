@@ -31,7 +31,7 @@ class DescribeEventCategoriesResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 
-    DescribeEventCategoriesResponsePrivate(DescribeEventCategoriesResponse * const q);
+    explicit DescribeEventCategoriesResponsePrivate(DescribeEventCategoriesResponse * const q);
 
     void parseDescribeEventCategoriesResponse(QXmlStreamReader &xml);
 

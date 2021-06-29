@@ -31,7 +31,7 @@ class CancelEnvironmentDeploymentResponsePrivate : public ProtonResponsePrivate 
 
 public:
 
-    CancelEnvironmentDeploymentResponsePrivate(CancelEnvironmentDeploymentResponse * const q);
+    explicit CancelEnvironmentDeploymentResponsePrivate(CancelEnvironmentDeploymentResponse * const q);
 
     void parseCancelEnvironmentDeploymentResponse(QXmlStreamReader &xml);
 

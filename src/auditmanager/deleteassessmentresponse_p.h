@@ -31,7 +31,7 @@ class DeleteAssessmentResponsePrivate : public AuditManagerResponsePrivate {
 
 public:
 
-    DeleteAssessmentResponsePrivate(DeleteAssessmentResponse * const q);
+    explicit DeleteAssessmentResponsePrivate(DeleteAssessmentResponse * const q);
 
     void parseDeleteAssessmentResponse(QXmlStreamReader &xml);
 

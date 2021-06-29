@@ -31,7 +31,7 @@ class PutBucketOwnershipControlsResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    PutBucketOwnershipControlsResponsePrivate(PutBucketOwnershipControlsResponse * const q);
+    explicit PutBucketOwnershipControlsResponsePrivate(PutBucketOwnershipControlsResponse * const q);
 
     void parsePutBucketOwnershipControlsResponse(QXmlStreamReader &xml);
 

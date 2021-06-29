@@ -31,7 +31,7 @@ class ListAnalysesResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    ListAnalysesResponsePrivate(ListAnalysesResponse * const q);
+    explicit ListAnalysesResponsePrivate(ListAnalysesResponse * const q);
 
     void parseListAnalysesResponse(QXmlStreamReader &xml);
 

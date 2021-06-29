@@ -31,7 +31,7 @@ class CreateFirewallResponsePrivate : public NetworkFirewallResponsePrivate {
 
 public:
 
-    CreateFirewallResponsePrivate(CreateFirewallResponse * const q);
+    explicit CreateFirewallResponsePrivate(CreateFirewallResponse * const q);
 
     void parseCreateFirewallResponse(QXmlStreamReader &xml);
 

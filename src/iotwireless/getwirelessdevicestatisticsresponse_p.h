@@ -31,7 +31,7 @@ class GetWirelessDeviceStatisticsResponsePrivate : public IoTWirelessResponsePri
 
 public:
 
-    GetWirelessDeviceStatisticsResponsePrivate(GetWirelessDeviceStatisticsResponse * const q);
+    explicit GetWirelessDeviceStatisticsResponsePrivate(GetWirelessDeviceStatisticsResponse * const q);
 
     void parseGetWirelessDeviceStatisticsResponse(QXmlStreamReader &xml);
 

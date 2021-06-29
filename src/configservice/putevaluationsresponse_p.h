@@ -31,7 +31,7 @@ class PutEvaluationsResponsePrivate : public ConfigServiceResponsePrivate {
 
 public:
 
-    PutEvaluationsResponsePrivate(PutEvaluationsResponse * const q);
+    explicit PutEvaluationsResponsePrivate(PutEvaluationsResponse * const q);
 
     void parsePutEvaluationsResponse(QXmlStreamReader &xml);
 

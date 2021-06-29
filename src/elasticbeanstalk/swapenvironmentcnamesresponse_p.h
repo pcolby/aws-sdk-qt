@@ -31,7 +31,7 @@ class SwapEnvironmentCNAMEsResponsePrivate : public ElasticBeanstalkResponsePriv
 
 public:
 
-    SwapEnvironmentCNAMEsResponsePrivate(SwapEnvironmentCNAMEsResponse * const q);
+    explicit SwapEnvironmentCNAMEsResponsePrivate(SwapEnvironmentCNAMEsResponse * const q);
 
     void parseSwapEnvironmentCNAMEsResponse(QXmlStreamReader &xml);
 

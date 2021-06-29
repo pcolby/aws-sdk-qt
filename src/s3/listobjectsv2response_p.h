@@ -31,7 +31,7 @@ class ListObjectsV2ResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    ListObjectsV2ResponsePrivate(ListObjectsV2Response * const q);
+    explicit ListObjectsV2ResponsePrivate(ListObjectsV2Response * const q);
 
     void parseListObjectsV2Response(QXmlStreamReader &xml);
 

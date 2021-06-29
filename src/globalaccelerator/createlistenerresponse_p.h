@@ -31,7 +31,7 @@ class CreateListenerResponsePrivate : public GlobalAcceleratorResponsePrivate {
 
 public:
 
-    CreateListenerResponsePrivate(CreateListenerResponse * const q);
+    explicit CreateListenerResponsePrivate(CreateListenerResponse * const q);
 
     void parseCreateListenerResponse(QXmlStreamReader &xml);
 

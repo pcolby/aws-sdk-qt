@@ -31,7 +31,7 @@ class PutSnapshotBlockResponsePrivate : public EbsResponsePrivate {
 
 public:
 
-    PutSnapshotBlockResponsePrivate(PutSnapshotBlockResponse * const q);
+    explicit PutSnapshotBlockResponsePrivate(PutSnapshotBlockResponse * const q);
 
     void parsePutSnapshotBlockResponse(QXmlStreamReader &xml);
 

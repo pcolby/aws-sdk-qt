@@ -31,7 +31,7 @@ class GetInsightImpactGraphResponsePrivate : public XRayResponsePrivate {
 
 public:
 
-    GetInsightImpactGraphResponsePrivate(GetInsightImpactGraphResponse * const q);
+    explicit GetInsightImpactGraphResponsePrivate(GetInsightImpactGraphResponse * const q);
 
     void parseGetInsightImpactGraphResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeVpcPeeringConnectionsResponsePrivate : public GameLiftResponsePriv
 
 public:
 
-    DescribeVpcPeeringConnectionsResponsePrivate(DescribeVpcPeeringConnectionsResponse * const q);
+    explicit DescribeVpcPeeringConnectionsResponsePrivate(DescribeVpcPeeringConnectionsResponse * const q);
 
     void parseDescribeVpcPeeringConnectionsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class AssociateFileSystemResponsePrivate : public StorageGatewayResponsePrivate 
 
 public:
 
-    AssociateFileSystemResponsePrivate(AssociateFileSystemResponse * const q);
+    explicit AssociateFileSystemResponsePrivate(AssociateFileSystemResponse * const q);
 
     void parseAssociateFileSystemResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CancelSimulationJobResponsePrivate : public RoboMakerResponsePrivate {
 
 public:
 
-    CancelSimulationJobResponsePrivate(CancelSimulationJobResponse * const q);
+    explicit CancelSimulationJobResponsePrivate(CancelSimulationJobResponse * const q);
 
     void parseCancelSimulationJobResponse(QXmlStreamReader &xml);
 

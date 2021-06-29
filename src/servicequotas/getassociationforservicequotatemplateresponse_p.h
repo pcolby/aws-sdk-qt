@@ -31,7 +31,7 @@ class GetAssociationForServiceQuotaTemplateResponsePrivate : public ServiceQuota
 
 public:
 
-    GetAssociationForServiceQuotaTemplateResponsePrivate(GetAssociationForServiceQuotaTemplateResponse * const q);
+    explicit GetAssociationForServiceQuotaTemplateResponsePrivate(GetAssociationForServiceQuotaTemplateResponse * const q);
 
     void parseGetAssociationForServiceQuotaTemplateResponse(QXmlStreamReader &xml);
 

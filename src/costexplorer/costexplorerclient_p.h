@@ -30,7 +30,7 @@ class CostExplorerClient;
 class CostExplorerClientPrivate {
 
 public:
-    CostExplorerClientPrivate(CostExplorerClient * const q);
+    explicit CostExplorerClientPrivate(CostExplorerClient * const q);
 
 protected:
     CostExplorerClient * const q_ptr; ///< Internal q-pointer.

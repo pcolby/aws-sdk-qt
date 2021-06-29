@@ -31,7 +31,7 @@ class ListTopicRuleDestinationsResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    ListTopicRuleDestinationsResponsePrivate(ListTopicRuleDestinationsResponse * const q);
+    explicit ListTopicRuleDestinationsResponsePrivate(ListTopicRuleDestinationsResponse * const q);
 
     void parseListTopicRuleDestinationsResponse(QXmlStreamReader &xml);
 

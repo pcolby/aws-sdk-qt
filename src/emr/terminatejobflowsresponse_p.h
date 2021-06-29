@@ -31,7 +31,7 @@ class TerminateJobFlowsResponsePrivate : public EmrResponsePrivate {
 
 public:
 
-    TerminateJobFlowsResponsePrivate(TerminateJobFlowsResponse * const q);
+    explicit TerminateJobFlowsResponsePrivate(TerminateJobFlowsResponse * const q);
 
     void parseTerminateJobFlowsResponse(QXmlStreamReader &xml);
 

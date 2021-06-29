@@ -31,7 +31,7 @@ class CreateComputeEnvironmentResponsePrivate : public BatchResponsePrivate {
 
 public:
 
-    CreateComputeEnvironmentResponsePrivate(CreateComputeEnvironmentResponse * const q);
+    explicit CreateComputeEnvironmentResponsePrivate(CreateComputeEnvironmentResponse * const q);
 
     void parseCreateComputeEnvironmentResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeDocumentPermissionResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    DescribeDocumentPermissionResponsePrivate(DescribeDocumentPermissionResponse * const q);
+    explicit DescribeDocumentPermissionResponsePrivate(DescribeDocumentPermissionResponse * const q);
 
     void parseDescribeDocumentPermissionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListEndpointsResponsePrivate : public ComprehendResponsePrivate {
 
 public:
 
-    ListEndpointsResponsePrivate(ListEndpointsResponse * const q);
+    explicit ListEndpointsResponsePrivate(ListEndpointsResponse * const q);
 
     void parseListEndpointsResponse(QXmlStreamReader &xml);
 

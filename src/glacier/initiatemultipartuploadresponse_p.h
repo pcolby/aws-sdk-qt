@@ -31,7 +31,7 @@ class InitiateMultipartUploadResponsePrivate : public GlacierResponsePrivate {
 
 public:
 
-    InitiateMultipartUploadResponsePrivate(InitiateMultipartUploadResponse * const q);
+    explicit InitiateMultipartUploadResponsePrivate(InitiateMultipartUploadResponse * const q);
 
     void parseInitiateMultipartUploadResponse(QXmlStreamReader &xml);
 

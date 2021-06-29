@@ -31,7 +31,7 @@ class DescribeUserImportJobResponsePrivate : public CognitoIdentityProviderRespo
 
 public:
 
-    DescribeUserImportJobResponsePrivate(DescribeUserImportJobResponse * const q);
+    explicit DescribeUserImportJobResponsePrivate(DescribeUserImportJobResponse * const q);
 
     void parseDescribeUserImportJobResponse(QXmlStreamReader &xml);
 

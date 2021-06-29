@@ -31,7 +31,7 @@ class ListLoggerDefinitionVersionsResponsePrivate : public GreengrassResponsePri
 
 public:
 
-    ListLoggerDefinitionVersionsResponsePrivate(ListLoggerDefinitionVersionsResponse * const q);
+    explicit ListLoggerDefinitionVersionsResponsePrivate(ListLoggerDefinitionVersionsResponse * const q);
 
     void parseListLoggerDefinitionVersionsResponse(QXmlStreamReader &xml);
 

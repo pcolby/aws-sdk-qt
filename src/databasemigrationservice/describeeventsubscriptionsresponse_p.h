@@ -31,7 +31,7 @@ class DescribeEventSubscriptionsResponsePrivate : public DatabaseMigrationServic
 
 public:
 
-    DescribeEventSubscriptionsResponsePrivate(DescribeEventSubscriptionsResponse * const q);
+    explicit DescribeEventSubscriptionsResponsePrivate(DescribeEventSubscriptionsResponse * const q);
 
     void parseDescribeEventSubscriptionsResponse(QXmlStreamReader &xml);
 

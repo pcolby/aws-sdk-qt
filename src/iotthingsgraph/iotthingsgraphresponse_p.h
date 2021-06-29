@@ -29,7 +29,7 @@ class IoTThingsGraphResponsePrivate {
 
 public:
 
-    IoTThingsGraphResponsePrivate(IoTThingsGraphResponse * const q);
+    explicit IoTThingsGraphResponsePrivate(IoTThingsGraphResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

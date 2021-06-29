@@ -31,7 +31,7 @@ class ScheduleKeyDeletionResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    ScheduleKeyDeletionResponsePrivate(ScheduleKeyDeletionResponse * const q);
+    explicit ScheduleKeyDeletionResponsePrivate(ScheduleKeyDeletionResponse * const q);
 
     void parseScheduleKeyDeletionResponse(QXmlStreamReader &xml);
 

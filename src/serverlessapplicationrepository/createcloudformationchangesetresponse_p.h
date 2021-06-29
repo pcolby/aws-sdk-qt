@@ -31,7 +31,7 @@ class CreateCloudFormationChangeSetResponsePrivate : public ServerlessApplicatio
 
 public:
 
-    CreateCloudFormationChangeSetResponsePrivate(CreateCloudFormationChangeSetResponse * const q);
+    explicit CreateCloudFormationChangeSetResponsePrivate(CreateCloudFormationChangeSetResponse * const q);
 
     void parseCreateCloudFormationChangeSetResponse(QXmlStreamReader &xml);
 

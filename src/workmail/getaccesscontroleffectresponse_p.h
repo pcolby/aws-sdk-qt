@@ -31,7 +31,7 @@ class GetAccessControlEffectResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 
-    GetAccessControlEffectResponsePrivate(GetAccessControlEffectResponse * const q);
+    explicit GetAccessControlEffectResponsePrivate(GetAccessControlEffectResponse * const q);
 
     void parseGetAccessControlEffectResponse(QXmlStreamReader &xml);
 

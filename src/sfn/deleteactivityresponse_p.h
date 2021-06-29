@@ -31,7 +31,7 @@ class DeleteActivityResponsePrivate : public SfnResponsePrivate {
 
 public:
 
-    DeleteActivityResponsePrivate(DeleteActivityResponse * const q);
+    explicit DeleteActivityResponsePrivate(DeleteActivityResponse * const q);
 
     void parseDeleteActivityResponse(QXmlStreamReader &xml);
 

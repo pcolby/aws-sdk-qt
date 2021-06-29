@@ -31,7 +31,7 @@ class ListLunaClientsResponsePrivate : public CloudHSMResponsePrivate {
 
 public:
 
-    ListLunaClientsResponsePrivate(ListLunaClientsResponse * const q);
+    explicit ListLunaClientsResponsePrivate(ListLunaClientsResponse * const q);
 
     void parseListLunaClientsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class EstimateTemplateCostResponsePrivate : public CloudFormationResponsePrivate
 
 public:
 
-    EstimateTemplateCostResponsePrivate(EstimateTemplateCostResponse * const q);
+    explicit EstimateTemplateCostResponsePrivate(EstimateTemplateCostResponse * const q);
 
     void parseEstimateTemplateCostResponse(QXmlStreamReader &xml);
 

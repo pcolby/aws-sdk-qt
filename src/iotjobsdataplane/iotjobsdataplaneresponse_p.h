@@ -29,7 +29,7 @@ class IoTJobsDataPlaneResponsePrivate {
 
 public:
 
-    IoTJobsDataPlaneResponsePrivate(IoTJobsDataPlaneResponse * const q);
+    explicit IoTJobsDataPlaneResponsePrivate(IoTJobsDataPlaneResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

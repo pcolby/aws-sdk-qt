@@ -31,7 +31,7 @@ class DisassociateEnclaveCertificateIamRoleResponsePrivate : public Ec2ResponseP
 
 public:
 
-    DisassociateEnclaveCertificateIamRoleResponsePrivate(DisassociateEnclaveCertificateIamRoleResponse * const q);
+    explicit DisassociateEnclaveCertificateIamRoleResponsePrivate(DisassociateEnclaveCertificateIamRoleResponse * const q);
 
     void parseDisassociateEnclaveCertificateIamRoleResponse(QXmlStreamReader &xml);
 

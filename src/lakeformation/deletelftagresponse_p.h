@@ -31,7 +31,7 @@ class DeleteLFTagResponsePrivate : public LakeFormationResponsePrivate {
 
 public:
 
-    DeleteLFTagResponsePrivate(DeleteLFTagResponse * const q);
+    explicit DeleteLFTagResponsePrivate(DeleteLFTagResponse * const q);
 
     void parseDeleteLFTagResponse(QXmlStreamReader &xml);
 

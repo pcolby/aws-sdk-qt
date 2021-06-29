@@ -31,7 +31,7 @@ class BuildSuggestersResponsePrivate : public CloudSearchResponsePrivate {
 
 public:
 
-    BuildSuggestersResponsePrivate(BuildSuggestersResponse * const q);
+    explicit BuildSuggestersResponsePrivate(BuildSuggestersResponse * const q);
 
     void parseBuildSuggestersResponse(QXmlStreamReader &xml);
 

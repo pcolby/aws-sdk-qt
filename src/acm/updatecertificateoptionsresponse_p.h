@@ -31,7 +31,7 @@ class UpdateCertificateOptionsResponsePrivate : public AcmResponsePrivate {
 
 public:
 
-    UpdateCertificateOptionsResponsePrivate(UpdateCertificateOptionsResponse * const q);
+    explicit UpdateCertificateOptionsResponsePrivate(UpdateCertificateOptionsResponse * const q);
 
     void parseUpdateCertificateOptionsResponse(QXmlStreamReader &xml);
 

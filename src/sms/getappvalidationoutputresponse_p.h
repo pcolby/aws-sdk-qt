@@ -31,7 +31,7 @@ class GetAppValidationOutputResponsePrivate : public SmsResponsePrivate {
 
 public:
 
-    GetAppValidationOutputResponsePrivate(GetAppValidationOutputResponse * const q);
+    explicit GetAppValidationOutputResponsePrivate(GetAppValidationOutputResponse * const q);
 
     void parseGetAppValidationOutputResponse(QXmlStreamReader &xml);
 

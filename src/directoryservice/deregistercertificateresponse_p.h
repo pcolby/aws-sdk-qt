@@ -31,7 +31,7 @@ class DeregisterCertificateResponsePrivate : public DirectoryServiceResponsePriv
 
 public:
 
-    DeregisterCertificateResponsePrivate(DeregisterCertificateResponse * const q);
+    explicit DeregisterCertificateResponsePrivate(DeregisterCertificateResponse * const q);
 
     void parseDeregisterCertificateResponse(QXmlStreamReader &xml);
 

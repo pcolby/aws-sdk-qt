@@ -31,7 +31,7 @@ class DeleteTransitGatewayMulticastDomainResponsePrivate : public Ec2ResponsePri
 
 public:
 
-    DeleteTransitGatewayMulticastDomainResponsePrivate(DeleteTransitGatewayMulticastDomainResponse * const q);
+    explicit DeleteTransitGatewayMulticastDomainResponsePrivate(DeleteTransitGatewayMulticastDomainResponse * const q);
 
     void parseDeleteTransitGatewayMulticastDomainResponse(QXmlStreamReader &xml);
 

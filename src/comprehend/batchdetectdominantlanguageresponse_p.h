@@ -31,7 +31,7 @@ class BatchDetectDominantLanguageResponsePrivate : public ComprehendResponsePriv
 
 public:
 
-    BatchDetectDominantLanguageResponsePrivate(BatchDetectDominantLanguageResponse * const q);
+    explicit BatchDetectDominantLanguageResponsePrivate(BatchDetectDominantLanguageResponse * const q);
 
     void parseBatchDetectDominantLanguageResponse(QXmlStreamReader &xml);
 

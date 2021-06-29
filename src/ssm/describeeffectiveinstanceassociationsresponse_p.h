@@ -31,7 +31,7 @@ class DescribeEffectiveInstanceAssociationsResponsePrivate : public SsmResponseP
 
 public:
 
-    DescribeEffectiveInstanceAssociationsResponsePrivate(DescribeEffectiveInstanceAssociationsResponse * const q);
+    explicit DescribeEffectiveInstanceAssociationsResponsePrivate(DescribeEffectiveInstanceAssociationsResponse * const q);
 
     void parseDescribeEffectiveInstanceAssociationsResponse(QXmlStreamReader &xml);
 

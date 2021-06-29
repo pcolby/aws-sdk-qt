@@ -31,7 +31,7 @@ class ListLogSubscriptionsResponsePrivate : public DirectoryServiceResponsePriva
 
 public:
 
-    ListLogSubscriptionsResponsePrivate(ListLogSubscriptionsResponse * const q);
+    explicit ListLogSubscriptionsResponsePrivate(ListLogSubscriptionsResponse * const q);
 
     void parseListLogSubscriptionsResponse(QXmlStreamReader &xml);
 

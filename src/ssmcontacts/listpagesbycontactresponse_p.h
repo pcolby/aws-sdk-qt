@@ -31,7 +31,7 @@ class ListPagesByContactResponsePrivate : public SSMContactsResponsePrivate {
 
 public:
 
-    ListPagesByContactResponsePrivate(ListPagesByContactResponse * const q);
+    explicit ListPagesByContactResponsePrivate(ListPagesByContactResponse * const q);
 
     void parseListPagesByContactResponse(QXmlStreamReader &xml);
 

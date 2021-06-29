@@ -29,7 +29,7 @@ class IoT1ClickProjectsResponsePrivate {
 
 public:
 
-    IoT1ClickProjectsResponsePrivate(IoT1ClickProjectsResponse * const q);
+    explicit IoT1ClickProjectsResponsePrivate(IoT1ClickProjectsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

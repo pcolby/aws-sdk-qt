@@ -31,7 +31,7 @@ class RemoveAttributesResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    RemoveAttributesResponsePrivate(RemoveAttributesResponse * const q);
+    explicit RemoveAttributesResponsePrivate(RemoveAttributesResponse * const q);
 
     void parseRemoveAttributesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateMissionProfileResponsePrivate : public GroundStationResponsePrivate 
 
 public:
 
-    CreateMissionProfileResponsePrivate(CreateMissionProfileResponse * const q);
+    explicit CreateMissionProfileResponsePrivate(CreateMissionProfileResponse * const q);
 
     void parseCreateMissionProfileResponse(QXmlStreamReader &xml);
 

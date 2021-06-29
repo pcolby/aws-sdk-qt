@@ -30,7 +30,7 @@ class InspectorClient;
 class InspectorClientPrivate {
 
 public:
-    InspectorClientPrivate(InspectorClient * const q);
+    explicit InspectorClientPrivate(InspectorClient * const q);
 
 protected:
     InspectorClient * const q_ptr; ///< Internal q-pointer.

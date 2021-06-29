@@ -31,7 +31,7 @@ class OptInPhoneNumberResponsePrivate : public SnsResponsePrivate {
 
 public:
 
-    OptInPhoneNumberResponsePrivate(OptInPhoneNumberResponse * const q);
+    explicit OptInPhoneNumberResponsePrivate(OptInPhoneNumberResponse * const q);
 
     void parseOptInPhoneNumberResponse(QXmlStreamReader &xml);
 

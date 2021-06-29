@@ -31,7 +31,7 @@ class StopTextTranslationJobResponsePrivate : public TranslateResponsePrivate {
 
 public:
 
-    StopTextTranslationJobResponsePrivate(StopTextTranslationJobResponse * const q);
+    explicit StopTextTranslationJobResponsePrivate(StopTextTranslationJobResponse * const q);
 
     void parseStopTextTranslationJobResponse(QXmlStreamReader &xml);
 

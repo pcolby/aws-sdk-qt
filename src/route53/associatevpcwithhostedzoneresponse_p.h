@@ -31,7 +31,7 @@ class AssociateVPCWithHostedZoneResponsePrivate : public Route53ResponsePrivate 
 
 public:
 
-    AssociateVPCWithHostedZoneResponsePrivate(AssociateVPCWithHostedZoneResponse * const q);
+    explicit AssociateVPCWithHostedZoneResponsePrivate(AssociateVPCWithHostedZoneResponse * const q);
 
     void parseAssociateVPCWithHostedZoneResponse(QXmlStreamReader &xml);
 

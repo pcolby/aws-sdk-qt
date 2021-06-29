@@ -31,7 +31,7 @@ class CreateMatchmakingConfigurationResponsePrivate : public GameLiftResponsePri
 
 public:
 
-    CreateMatchmakingConfigurationResponsePrivate(CreateMatchmakingConfigurationResponse * const q);
+    explicit CreateMatchmakingConfigurationResponsePrivate(CreateMatchmakingConfigurationResponse * const q);
 
     void parseCreateMatchmakingConfigurationResponse(QXmlStreamReader &xml);
 

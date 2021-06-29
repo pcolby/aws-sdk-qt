@@ -31,7 +31,7 @@ class DisassociateIamInstanceProfileResponsePrivate : public Ec2ResponsePrivate 
 
 public:
 
-    DisassociateIamInstanceProfileResponsePrivate(DisassociateIamInstanceProfileResponse * const q);
+    explicit DisassociateIamInstanceProfileResponsePrivate(DisassociateIamInstanceProfileResponse * const q);
 
     void parseDisassociateIamInstanceProfileResponse(QXmlStreamReader &xml);
 

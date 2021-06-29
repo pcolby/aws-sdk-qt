@@ -31,7 +31,7 @@ class StopAppReplicationResponsePrivate : public SmsResponsePrivate {
 
 public:
 
-    StopAppReplicationResponsePrivate(StopAppReplicationResponse * const q);
+    explicit StopAppReplicationResponsePrivate(StopAppReplicationResponse * const q);
 
     void parseStopAppReplicationResponse(QXmlStreamReader &xml);
 

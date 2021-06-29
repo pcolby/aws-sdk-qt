@@ -30,7 +30,7 @@ class BatchClient;
 class BatchClientPrivate {
 
 public:
-    BatchClientPrivate(BatchClient * const q);
+    explicit BatchClientPrivate(BatchClient * const q);
 
 protected:
     BatchClient * const q_ptr; ///< Internal q-pointer.

@@ -31,7 +31,7 @@ class GetDeploymentInstanceResponsePrivate : public CodeDeployResponsePrivate {
 
 public:
 
-    GetDeploymentInstanceResponsePrivate(GetDeploymentInstanceResponse * const q);
+    explicit GetDeploymentInstanceResponsePrivate(GetDeploymentInstanceResponse * const q);
 
     void parseGetDeploymentInstanceResponse(QXmlStreamReader &xml);
 

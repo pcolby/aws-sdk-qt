@@ -31,7 +31,7 @@ class UpdateRegexPatternSetResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 
-    UpdateRegexPatternSetResponsePrivate(UpdateRegexPatternSetResponse * const q);
+    explicit UpdateRegexPatternSetResponsePrivate(UpdateRegexPatternSetResponse * const q);
 
     void parseUpdateRegexPatternSetResponse(QXmlStreamReader &xml);
 

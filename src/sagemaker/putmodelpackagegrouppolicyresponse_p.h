@@ -31,7 +31,7 @@ class PutModelPackageGroupPolicyResponsePrivate : public SageMakerResponsePrivat
 
 public:
 
-    PutModelPackageGroupPolicyResponsePrivate(PutModelPackageGroupPolicyResponse * const q);
+    explicit PutModelPackageGroupPolicyResponsePrivate(PutModelPackageGroupPolicyResponse * const q);
 
     void parsePutModelPackageGroupPolicyResponse(QXmlStreamReader &xml);
 

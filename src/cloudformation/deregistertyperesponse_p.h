@@ -31,7 +31,7 @@ class DeregisterTypeResponsePrivate : public CloudFormationResponsePrivate {
 
 public:
 
-    DeregisterTypeResponsePrivate(DeregisterTypeResponse * const q);
+    explicit DeregisterTypeResponsePrivate(DeregisterTypeResponse * const q);
 
     void parseDeregisterTypeResponse(QXmlStreamReader &xml);
 

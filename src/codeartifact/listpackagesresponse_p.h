@@ -31,7 +31,7 @@ class ListPackagesResponsePrivate : public CodeArtifactResponsePrivate {
 
 public:
 
-    ListPackagesResponsePrivate(ListPackagesResponse * const q);
+    explicit ListPackagesResponsePrivate(ListPackagesResponse * const q);
 
     void parseListPackagesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetLifecyclePolicyPreviewResponsePrivate : public EcrResponsePrivate {
 
 public:
 
-    GetLifecyclePolicyPreviewResponsePrivate(GetLifecyclePolicyPreviewResponse * const q);
+    explicit GetLifecyclePolicyPreviewResponsePrivate(GetLifecyclePolicyPreviewResponse * const q);
 
     void parseGetLifecyclePolicyPreviewResponse(QXmlStreamReader &xml);
 

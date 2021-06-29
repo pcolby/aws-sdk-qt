@@ -31,7 +31,7 @@ class DisassociateMemberResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 
-    DisassociateMemberResponsePrivate(DisassociateMemberResponse * const q);
+    explicit DisassociateMemberResponsePrivate(DisassociateMemberResponse * const q);
 
     void parseDisassociateMemberResponse(QXmlStreamReader &xml);
 

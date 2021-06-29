@@ -31,7 +31,7 @@ class ResetClusterParameterGroupResponsePrivate : public RedshiftResponsePrivate
 
 public:
 
-    ResetClusterParameterGroupResponsePrivate(ResetClusterParameterGroupResponse * const q);
+    explicit ResetClusterParameterGroupResponsePrivate(ResetClusterParameterGroupResponse * const q);
 
     void parseResetClusterParameterGroupResponse(QXmlStreamReader &xml);
 

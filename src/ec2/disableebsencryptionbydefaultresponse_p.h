@@ -31,7 +31,7 @@ class DisableEbsEncryptionByDefaultResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DisableEbsEncryptionByDefaultResponsePrivate(DisableEbsEncryptionByDefaultResponse * const q);
+    explicit DisableEbsEncryptionByDefaultResponsePrivate(DisableEbsEncryptionByDefaultResponse * const q);
 
     void parseDisableEbsEncryptionByDefaultResponse(QXmlStreamReader &xml);
 

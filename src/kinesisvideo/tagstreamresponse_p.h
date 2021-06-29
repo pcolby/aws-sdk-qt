@@ -31,7 +31,7 @@ class TagStreamResponsePrivate : public KinesisVideoResponsePrivate {
 
 public:
 
-    TagStreamResponsePrivate(TagStreamResponse * const q);
+    explicit TagStreamResponsePrivate(TagStreamResponse * const q);
 
     void parseTagStreamResponse(QXmlStreamReader &xml);
 

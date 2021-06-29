@@ -29,7 +29,7 @@ class AppIntegrationsServiceResponsePrivate {
 
 public:
 
-    AppIntegrationsServiceResponsePrivate(AppIntegrationsServiceResponse * const q);
+    explicit AppIntegrationsServiceResponsePrivate(AppIntegrationsServiceResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

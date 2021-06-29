@@ -31,7 +31,7 @@ class GetDASHStreamingSessionURLResponsePrivate : public KinesisVideoArchivedMed
 
 public:
 
-    GetDASHStreamingSessionURLResponsePrivate(GetDASHStreamingSessionURLResponse * const q);
+    explicit GetDASHStreamingSessionURLResponsePrivate(GetDASHStreamingSessionURLResponse * const q);
 
     void parseGetDASHStreamingSessionURLResponse(QXmlStreamReader &xml);
 

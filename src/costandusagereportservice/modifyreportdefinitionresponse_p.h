@@ -31,7 +31,7 @@ class ModifyReportDefinitionResponsePrivate : public CostandUsageReportServiceRe
 
 public:
 
-    ModifyReportDefinitionResponsePrivate(ModifyReportDefinitionResponse * const q);
+    explicit ModifyReportDefinitionResponsePrivate(ModifyReportDefinitionResponse * const q);
 
     void parseModifyReportDefinitionResponse(QXmlStreamReader &xml);
 

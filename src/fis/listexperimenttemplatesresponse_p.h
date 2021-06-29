@@ -31,7 +31,7 @@ class ListExperimentTemplatesResponsePrivate : public FisResponsePrivate {
 
 public:
 
-    ListExperimentTemplatesResponsePrivate(ListExperimentTemplatesResponse * const q);
+    explicit ListExperimentTemplatesResponsePrivate(ListExperimentTemplatesResponse * const q);
 
     void parseListExperimentTemplatesResponse(QXmlStreamReader &xml);
 

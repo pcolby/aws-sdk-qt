@@ -29,7 +29,7 @@ class BudgetsResponsePrivate {
 
 public:
 
-    BudgetsResponsePrivate(BudgetsResponse * const q);
+    explicit BudgetsResponsePrivate(BudgetsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

@@ -31,7 +31,7 @@ class FinalizeCutoverResponsePrivate : public mgnResponsePrivate {
 
 public:
 
-    FinalizeCutoverResponsePrivate(FinalizeCutoverResponse * const q);
+    explicit FinalizeCutoverResponsePrivate(FinalizeCutoverResponse * const q);
 
     void parseFinalizeCutoverResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class SetAlarmStateResponsePrivate : public CloudWatchResponsePrivate {
 
 public:
 
-    SetAlarmStateResponsePrivate(SetAlarmStateResponse * const q);
+    explicit SetAlarmStateResponsePrivate(SetAlarmStateResponse * const q);
 
     void parseSetAlarmStateResponse(QXmlStreamReader &xml);
 

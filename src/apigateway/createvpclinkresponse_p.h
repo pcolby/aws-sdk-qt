@@ -31,7 +31,7 @@ class CreateVpcLinkResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    CreateVpcLinkResponsePrivate(CreateVpcLinkResponse * const q);
+    explicit CreateVpcLinkResponsePrivate(CreateVpcLinkResponse * const q);
 
     void parseCreateVpcLinkResponse(QXmlStreamReader &xml);
 

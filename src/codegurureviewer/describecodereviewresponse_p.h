@@ -31,7 +31,7 @@ class DescribeCodeReviewResponsePrivate : public CodeGuruReviewerResponsePrivate
 
 public:
 
-    DescribeCodeReviewResponsePrivate(DescribeCodeReviewResponse * const q);
+    explicit DescribeCodeReviewResponsePrivate(DescribeCodeReviewResponse * const q);
 
     void parseDescribeCodeReviewResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class RegisterDelegatedAdministratorResponsePrivate : public OrganizationsRespon
 
 public:
 
-    RegisterDelegatedAdministratorResponsePrivate(RegisterDelegatedAdministratorResponse * const q);
+    explicit RegisterDelegatedAdministratorResponsePrivate(RegisterDelegatedAdministratorResponse * const q);
 
     void parseRegisterDelegatedAdministratorResponse(QXmlStreamReader &xml);
 

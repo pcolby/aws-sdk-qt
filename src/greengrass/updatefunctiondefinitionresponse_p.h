@@ -31,7 +31,7 @@ class UpdateFunctionDefinitionResponsePrivate : public GreengrassResponsePrivate
 
 public:
 
-    UpdateFunctionDefinitionResponsePrivate(UpdateFunctionDefinitionResponse * const q);
+    explicit UpdateFunctionDefinitionResponsePrivate(UpdateFunctionDefinitionResponse * const q);
 
     void parseUpdateFunctionDefinitionResponse(QXmlStreamReader &xml);
 

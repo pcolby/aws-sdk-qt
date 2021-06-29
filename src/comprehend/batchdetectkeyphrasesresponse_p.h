@@ -31,7 +31,7 @@ class BatchDetectKeyPhrasesResponsePrivate : public ComprehendResponsePrivate {
 
 public:
 
-    BatchDetectKeyPhrasesResponsePrivate(BatchDetectKeyPhrasesResponse * const q);
+    explicit BatchDetectKeyPhrasesResponsePrivate(BatchDetectKeyPhrasesResponse * const q);
 
     void parseBatchDetectKeyPhrasesResponse(QXmlStreamReader &xml);
 

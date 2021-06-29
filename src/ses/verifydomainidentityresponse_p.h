@@ -31,7 +31,7 @@ class VerifyDomainIdentityResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    VerifyDomainIdentityResponsePrivate(VerifyDomainIdentityResponse * const q);
+    explicit VerifyDomainIdentityResponsePrivate(VerifyDomainIdentityResponse * const q);
 
     void parseVerifyDomainIdentityResponse(QXmlStreamReader &xml);
 

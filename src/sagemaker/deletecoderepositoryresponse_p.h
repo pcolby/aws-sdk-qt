@@ -31,7 +31,7 @@ class DeleteCodeRepositoryResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    DeleteCodeRepositoryResponsePrivate(DeleteCodeRepositoryResponse * const q);
+    explicit DeleteCodeRepositoryResponsePrivate(DeleteCodeRepositoryResponse * const q);
 
     void parseDeleteCodeRepositoryResponse(QXmlStreamReader &xml);
 

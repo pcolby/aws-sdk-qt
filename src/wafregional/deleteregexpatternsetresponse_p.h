@@ -31,7 +31,7 @@ class DeleteRegexPatternSetResponsePrivate : public WAFRegionalResponsePrivate {
 
 public:
 
-    DeleteRegexPatternSetResponsePrivate(DeleteRegexPatternSetResponse * const q);
+    explicit DeleteRegexPatternSetResponsePrivate(DeleteRegexPatternSetResponse * const q);
 
     void parseDeleteRegexPatternSetResponse(QXmlStreamReader &xml);
 

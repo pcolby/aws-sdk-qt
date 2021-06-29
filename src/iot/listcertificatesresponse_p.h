@@ -31,7 +31,7 @@ class ListCertificatesResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    ListCertificatesResponsePrivate(ListCertificatesResponse * const q);
+    explicit ListCertificatesResponsePrivate(ListCertificatesResponse * const q);
 
     void parseListCertificatesResponse(QXmlStreamReader &xml);
 

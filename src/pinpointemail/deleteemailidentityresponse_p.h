@@ -31,7 +31,7 @@ class DeleteEmailIdentityResponsePrivate : public PinpointEmailResponsePrivate {
 
 public:
 
-    DeleteEmailIdentityResponsePrivate(DeleteEmailIdentityResponse * const q);
+    explicit DeleteEmailIdentityResponsePrivate(DeleteEmailIdentityResponse * const q);
 
     void parseDeleteEmailIdentityResponse(QXmlStreamReader &xml);
 

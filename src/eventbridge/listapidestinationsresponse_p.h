@@ -31,7 +31,7 @@ class ListApiDestinationsResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 
-    ListApiDestinationsResponsePrivate(ListApiDestinationsResponse * const q);
+    explicit ListApiDestinationsResponsePrivate(ListApiDestinationsResponse * const q);
 
     void parseListApiDestinationsResponse(QXmlStreamReader &xml);
 

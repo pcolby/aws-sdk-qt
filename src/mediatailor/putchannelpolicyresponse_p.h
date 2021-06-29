@@ -31,7 +31,7 @@ class PutChannelPolicyResponsePrivate : public MediaTailorResponsePrivate {
 
 public:
 
-    PutChannelPolicyResponsePrivate(PutChannelPolicyResponse * const q);
+    explicit PutChannelPolicyResponsePrivate(PutChannelPolicyResponse * const q);
 
     void parsePutChannelPolicyResponse(QXmlStreamReader &xml);
 

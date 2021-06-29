@@ -31,7 +31,7 @@ class StopApplicationResponsePrivate : public KinesisAnalyticsV2ResponsePrivate 
 
 public:
 
-    StopApplicationResponsePrivate(StopApplicationResponse * const q);
+    explicit StopApplicationResponsePrivate(StopApplicationResponse * const q);
 
     void parseStopApplicationResponse(QXmlStreamReader &xml);
 

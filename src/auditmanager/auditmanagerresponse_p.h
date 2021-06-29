@@ -29,7 +29,7 @@ class AuditManagerResponsePrivate {
 
 public:
 
-    AuditManagerResponsePrivate(AuditManagerResponse * const q);
+    explicit AuditManagerResponsePrivate(AuditManagerResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

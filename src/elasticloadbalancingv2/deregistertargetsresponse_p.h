@@ -31,7 +31,7 @@ class DeregisterTargetsResponsePrivate : public ElasticLoadBalancingv2ResponsePr
 
 public:
 
-    DeregisterTargetsResponsePrivate(DeregisterTargetsResponse * const q);
+    explicit DeregisterTargetsResponsePrivate(DeregisterTargetsResponse * const q);
 
     void parseDeregisterTargetsResponse(QXmlStreamReader &xml);
 

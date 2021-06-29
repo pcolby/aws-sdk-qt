@@ -31,7 +31,7 @@ class CreateThesaurusResponsePrivate : public kendraResponsePrivate {
 
 public:
 
-    CreateThesaurusResponsePrivate(CreateThesaurusResponse * const q);
+    explicit CreateThesaurusResponsePrivate(CreateThesaurusResponse * const q);
 
     void parseCreateThesaurusResponse(QXmlStreamReader &xml);
 

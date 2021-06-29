@@ -31,7 +31,7 @@ class GetKeyPolicyResponsePrivate : public KmsResponsePrivate {
 
 public:
 
-    GetKeyPolicyResponsePrivate(GetKeyPolicyResponse * const q);
+    explicit GetKeyPolicyResponsePrivate(GetKeyPolicyResponse * const q);
 
     void parseGetKeyPolicyResponse(QXmlStreamReader &xml);
 

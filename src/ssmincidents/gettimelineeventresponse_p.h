@@ -31,7 +31,7 @@ class GetTimelineEventResponsePrivate : public SSMIncidentsResponsePrivate {
 
 public:
 
-    GetTimelineEventResponsePrivate(GetTimelineEventResponse * const q);
+    explicit GetTimelineEventResponsePrivate(GetTimelineEventResponse * const q);
 
     void parseGetTimelineEventResponse(QXmlStreamReader &xml);
 

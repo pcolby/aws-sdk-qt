@@ -31,7 +31,7 @@ class GetStatusResponsePrivate : public ImportExportResponsePrivate {
 
 public:
 
-    GetStatusResponsePrivate(GetStatusResponse * const q);
+    explicit GetStatusResponsePrivate(GetStatusResponse * const q);
 
     void parseGetStatusResponse(QXmlStreamReader &xml);
 

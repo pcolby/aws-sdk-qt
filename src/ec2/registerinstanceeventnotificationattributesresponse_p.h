@@ -31,7 +31,7 @@ class RegisterInstanceEventNotificationAttributesResponsePrivate : public Ec2Res
 
 public:
 
-    RegisterInstanceEventNotificationAttributesResponsePrivate(RegisterInstanceEventNotificationAttributesResponse * const q);
+    explicit RegisterInstanceEventNotificationAttributesResponsePrivate(RegisterInstanceEventNotificationAttributesResponse * const q);
 
     void parseRegisterInstanceEventNotificationAttributesResponse(QXmlStreamReader &xml);
 

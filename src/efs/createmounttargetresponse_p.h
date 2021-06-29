@@ -31,7 +31,7 @@ class CreateMountTargetResponsePrivate : public EfsResponsePrivate {
 
 public:
 
-    CreateMountTargetResponsePrivate(CreateMountTargetResponse * const q);
+    explicit CreateMountTargetResponsePrivate(CreateMountTargetResponse * const q);
 
     void parseCreateMountTargetResponse(QXmlStreamReader &xml);
 

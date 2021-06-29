@@ -31,7 +31,7 @@ class CreateInvalidationResponsePrivate : public CloudFrontResponsePrivate {
 
 public:
 
-    CreateInvalidationResponsePrivate(CreateInvalidationResponse * const q);
+    explicit CreateInvalidationResponsePrivate(CreateInvalidationResponse * const q);
 
     void parseCreateInvalidationResponse(QXmlStreamReader &xml);
 

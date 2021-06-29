@@ -31,7 +31,7 @@ class DescribeMultiplexProgramResponsePrivate : public MediaLiveResponsePrivate 
 
 public:
 
-    DescribeMultiplexProgramResponsePrivate(DescribeMultiplexProgramResponse * const q);
+    explicit DescribeMultiplexProgramResponsePrivate(DescribeMultiplexProgramResponse * const q);
 
     void parseDescribeMultiplexProgramResponse(QXmlStreamReader &xml);
 

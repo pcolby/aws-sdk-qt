@@ -31,7 +31,7 @@ class GetPermissionResponsePrivate : public RamResponsePrivate {
 
 public:
 
-    GetPermissionResponsePrivate(GetPermissionResponse * const q);
+    explicit GetPermissionResponsePrivate(GetPermissionResponse * const q);
 
     void parseGetPermissionResponse(QXmlStreamReader &xml);
 

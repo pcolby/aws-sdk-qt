@@ -31,7 +31,7 @@ class DeleteQueuedReservedInstancesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DeleteQueuedReservedInstancesResponsePrivate(DeleteQueuedReservedInstancesResponse * const q);
+    explicit DeleteQueuedReservedInstancesResponsePrivate(DeleteQueuedReservedInstancesResponse * const q);
 
     void parseDeleteQueuedReservedInstancesResponse(QXmlStreamReader &xml);
 

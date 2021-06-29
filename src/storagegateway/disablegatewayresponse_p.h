@@ -31,7 +31,7 @@ class DisableGatewayResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 
-    DisableGatewayResponsePrivate(DisableGatewayResponse * const q);
+    explicit DisableGatewayResponsePrivate(DisableGatewayResponse * const q);
 
     void parseDisableGatewayResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class InvokeAsyncResponsePrivate : public LambdaResponsePrivate {
 
 public:
 
-    InvokeAsyncResponsePrivate(InvokeAsyncResponse * const q);
+    explicit InvokeAsyncResponsePrivate(InvokeAsyncResponse * const q);
 
     void parseInvokeAsyncResponse(QXmlStreamReader &xml);
 

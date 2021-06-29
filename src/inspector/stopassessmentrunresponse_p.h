@@ -31,7 +31,7 @@ class StopAssessmentRunResponsePrivate : public InspectorResponsePrivate {
 
 public:
 
-    StopAssessmentRunResponsePrivate(StopAssessmentRunResponse * const q);
+    explicit StopAssessmentRunResponsePrivate(StopAssessmentRunResponse * const q);
 
     void parseStopAssessmentRunResponse(QXmlStreamReader &xml);
 

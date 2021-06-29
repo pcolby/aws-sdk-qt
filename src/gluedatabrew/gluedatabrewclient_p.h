@@ -30,7 +30,7 @@ class GlueDataBrewClient;
 class GlueDataBrewClientPrivate {
 
 public:
-    GlueDataBrewClientPrivate(GlueDataBrewClient * const q);
+    explicit GlueDataBrewClientPrivate(GlueDataBrewClient * const q);
 
 protected:
     GlueDataBrewClient * const q_ptr; ///< Internal q-pointer.

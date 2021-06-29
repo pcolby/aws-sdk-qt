@@ -31,7 +31,7 @@ class DeleteEntityTypeResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 
-    DeleteEntityTypeResponsePrivate(DeleteEntityTypeResponse * const q);
+    explicit DeleteEntityTypeResponsePrivate(DeleteEntityTypeResponse * const q);
 
     void parseDeleteEntityTypeResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class BatchGetStreamKeyResponsePrivate : public IvsResponsePrivate {
 
 public:
 
-    BatchGetStreamKeyResponsePrivate(BatchGetStreamKeyResponse * const q);
+    explicit BatchGetStreamKeyResponsePrivate(BatchGetStreamKeyResponse * const q);
 
     void parseBatchGetStreamKeyResponse(QXmlStreamReader &xml);
 

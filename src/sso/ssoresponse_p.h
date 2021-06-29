@@ -29,7 +29,7 @@ class SsoResponsePrivate {
 
 public:
 
-    SsoResponsePrivate(SsoResponse * const q);
+    explicit SsoResponsePrivate(SsoResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

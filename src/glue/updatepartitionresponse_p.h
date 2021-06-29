@@ -31,7 +31,7 @@ class UpdatePartitionResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    UpdatePartitionResponsePrivate(UpdatePartitionResponse * const q);
+    explicit UpdatePartitionResponsePrivate(UpdatePartitionResponse * const q);
 
     void parseUpdatePartitionResponse(QXmlStreamReader &xml);
 

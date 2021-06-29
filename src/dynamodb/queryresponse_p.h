@@ -31,7 +31,7 @@ class QueryResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 
-    QueryResponsePrivate(QueryResponse * const q);
+    explicit QueryResponsePrivate(QueryResponse * const q);
 
     void parseQueryResponse(QXmlStreamReader &xml);
 

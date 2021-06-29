@@ -31,7 +31,7 @@ class BatchGetRecordResponsePrivate : public SageMakerFeatureStoreRuntimeRespons
 
 public:
 
-    BatchGetRecordResponsePrivate(BatchGetRecordResponse * const q);
+    explicit BatchGetRecordResponsePrivate(BatchGetRecordResponse * const q);
 
     void parseBatchGetRecordResponse(QXmlStreamReader &xml);
 

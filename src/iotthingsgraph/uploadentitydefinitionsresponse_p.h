@@ -31,7 +31,7 @@ class UploadEntityDefinitionsResponsePrivate : public IoTThingsGraphResponsePriv
 
 public:
 
-    UploadEntityDefinitionsResponsePrivate(UploadEntityDefinitionsResponse * const q);
+    explicit UploadEntityDefinitionsResponsePrivate(UploadEntityDefinitionsResponse * const q);
 
     void parseUploadEntityDefinitionsResponse(QXmlStreamReader &xml);
 

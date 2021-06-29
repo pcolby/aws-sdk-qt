@@ -31,7 +31,7 @@ class UpdateAppInstanceUserResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    UpdateAppInstanceUserResponsePrivate(UpdateAppInstanceUserResponse * const q);
+    explicit UpdateAppInstanceUserResponsePrivate(UpdateAppInstanceUserResponse * const q);
 
     void parseUpdateAppInstanceUserResponse(QXmlStreamReader &xml);
 

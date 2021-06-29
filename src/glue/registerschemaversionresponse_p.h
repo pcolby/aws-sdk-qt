@@ -31,7 +31,7 @@ class RegisterSchemaVersionResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    RegisterSchemaVersionResponsePrivate(RegisterSchemaVersionResponse * const q);
+    explicit RegisterSchemaVersionResponsePrivate(RegisterSchemaVersionResponse * const q);
 
     void parseRegisterSchemaVersionResponse(QXmlStreamReader &xml);
 

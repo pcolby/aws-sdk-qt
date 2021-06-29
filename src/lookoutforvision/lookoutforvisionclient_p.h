@@ -30,7 +30,7 @@ class LookoutforVisionClient;
 class LookoutforVisionClientPrivate {
 
 public:
-    LookoutforVisionClientPrivate(LookoutforVisionClient * const q);
+    explicit LookoutforVisionClientPrivate(LookoutforVisionClient * const q);
 
 protected:
     LookoutforVisionClient * const q_ptr; ///< Internal q-pointer.

@@ -31,7 +31,7 @@ class ListQueueQuickConnectsResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    ListQueueQuickConnectsResponsePrivate(ListQueueQuickConnectsResponse * const q);
+    explicit ListQueueQuickConnectsResponsePrivate(ListQueueQuickConnectsResponse * const q);
 
     void parseListQueueQuickConnectsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteDomainNameResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    DeleteDomainNameResponsePrivate(DeleteDomainNameResponse * const q);
+    explicit DeleteDomainNameResponsePrivate(DeleteDomainNameResponse * const q);
 
     void parseDeleteDomainNameResponse(QXmlStreamReader &xml);
 

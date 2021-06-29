@@ -31,7 +31,7 @@ class RecordActivityTaskHeartbeatResponsePrivate : public SwfResponsePrivate {
 
 public:
 
-    RecordActivityTaskHeartbeatResponsePrivate(RecordActivityTaskHeartbeatResponse * const q);
+    explicit RecordActivityTaskHeartbeatResponsePrivate(RecordActivityTaskHeartbeatResponse * const q);
 
     void parseRecordActivityTaskHeartbeatResponse(QXmlStreamReader &xml);
 

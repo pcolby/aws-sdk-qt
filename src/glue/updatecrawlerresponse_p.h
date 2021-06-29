@@ -31,7 +31,7 @@ class UpdateCrawlerResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    UpdateCrawlerResponsePrivate(UpdateCrawlerResponse * const q);
+    explicit UpdateCrawlerResponsePrivate(UpdateCrawlerResponse * const q);
 
     void parseUpdateCrawlerResponse(QXmlStreamReader &xml);
 

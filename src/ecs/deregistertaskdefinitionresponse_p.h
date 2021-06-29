@@ -31,7 +31,7 @@ class DeregisterTaskDefinitionResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    DeregisterTaskDefinitionResponsePrivate(DeregisterTaskDefinitionResponse * const q);
+    explicit DeregisterTaskDefinitionResponsePrivate(DeregisterTaskDefinitionResponse * const q);
 
     void parseDeregisterTaskDefinitionResponse(QXmlStreamReader &xml);
 

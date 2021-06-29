@@ -31,7 +31,7 @@ class TestRenderEmailTemplateResponsePrivate : public Sesv2ResponsePrivate {
 
 public:
 
-    TestRenderEmailTemplateResponsePrivate(TestRenderEmailTemplateResponse * const q);
+    explicit TestRenderEmailTemplateResponsePrivate(TestRenderEmailTemplateResponse * const q);
 
     void parseTestRenderEmailTemplateResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteRecordResponsePrivate : public SageMakerFeatureStoreRuntimeResponseP
 
 public:
 
-    DeleteRecordResponsePrivate(DeleteRecordResponse * const q);
+    explicit DeleteRecordResponsePrivate(DeleteRecordResponse * const q);
 
     void parseDeleteRecordResponse(QXmlStreamReader &xml);
 

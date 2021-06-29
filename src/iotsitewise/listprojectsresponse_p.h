@@ -31,7 +31,7 @@ class ListProjectsResponsePrivate : public IoTSiteWiseResponsePrivate {
 
 public:
 
-    ListProjectsResponsePrivate(ListProjectsResponse * const q);
+    explicit ListProjectsResponsePrivate(ListProjectsResponse * const q);
 
     void parseListProjectsResponse(QXmlStreamReader &xml);
 

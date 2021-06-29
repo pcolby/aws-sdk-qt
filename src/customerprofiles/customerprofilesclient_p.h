@@ -30,7 +30,7 @@ class CustomerProfilesClient;
 class CustomerProfilesClientPrivate {
 
 public:
-    CustomerProfilesClientPrivate(CustomerProfilesClient * const q);
+    explicit CustomerProfilesClientPrivate(CustomerProfilesClient * const q);
 
 protected:
     CustomerProfilesClient * const q_ptr; ///< Internal q-pointer.

@@ -31,7 +31,7 @@ class DescribeOrderableDBInstanceOptionsResponsePrivate : public DocDBResponsePr
 
 public:
 
-    DescribeOrderableDBInstanceOptionsResponsePrivate(DescribeOrderableDBInstanceOptionsResponse * const q);
+    explicit DescribeOrderableDBInstanceOptionsResponsePrivate(DescribeOrderableDBInstanceOptionsResponse * const q);
 
     void parseDescribeOrderableDBInstanceOptionsResponse(QXmlStreamReader &xml);
 

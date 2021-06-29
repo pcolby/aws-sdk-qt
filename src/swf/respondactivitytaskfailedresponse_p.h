@@ -31,7 +31,7 @@ class RespondActivityTaskFailedResponsePrivate : public SwfResponsePrivate {
 
 public:
 
-    RespondActivityTaskFailedResponsePrivate(RespondActivityTaskFailedResponse * const q);
+    explicit RespondActivityTaskFailedResponsePrivate(RespondActivityTaskFailedResponse * const q);
 
     void parseRespondActivityTaskFailedResponse(QXmlStreamReader &xml);
 

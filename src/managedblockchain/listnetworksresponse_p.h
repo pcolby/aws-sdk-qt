@@ -31,7 +31,7 @@ class ListNetworksResponsePrivate : public ManagedBlockchainResponsePrivate {
 
 public:
 
-    ListNetworksResponsePrivate(ListNetworksResponse * const q);
+    explicit ListNetworksResponsePrivate(ListNetworksResponse * const q);
 
     void parseListNetworksResponse(QXmlStreamReader &xml);
 

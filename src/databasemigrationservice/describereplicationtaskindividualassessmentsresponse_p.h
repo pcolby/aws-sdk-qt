@@ -31,7 +31,7 @@ class DescribeReplicationTaskIndividualAssessmentsResponsePrivate : public Datab
 
 public:
 
-    DescribeReplicationTaskIndividualAssessmentsResponsePrivate(DescribeReplicationTaskIndividualAssessmentsResponse * const q);
+    explicit DescribeReplicationTaskIndividualAssessmentsResponsePrivate(DescribeReplicationTaskIndividualAssessmentsResponse * const q);
 
     void parseDescribeReplicationTaskIndividualAssessmentsResponse(QXmlStreamReader &xml);
 

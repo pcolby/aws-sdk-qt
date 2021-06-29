@@ -31,7 +31,7 @@ class CreateLogGroupResponsePrivate : public CloudWatchLogsResponsePrivate {
 
 public:
 
-    CreateLogGroupResponsePrivate(CreateLogGroupResponse * const q);
+    explicit CreateLogGroupResponsePrivate(CreateLogGroupResponse * const q);
 
     void parseCreateLogGroupResponse(QXmlStreamReader &xml);
 

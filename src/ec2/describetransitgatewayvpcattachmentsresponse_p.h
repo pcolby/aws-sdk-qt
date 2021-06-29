@@ -31,7 +31,7 @@ class DescribeTransitGatewayVpcAttachmentsResponsePrivate : public Ec2ResponsePr
 
 public:
 
-    DescribeTransitGatewayVpcAttachmentsResponsePrivate(DescribeTransitGatewayVpcAttachmentsResponse * const q);
+    explicit DescribeTransitGatewayVpcAttachmentsResponsePrivate(DescribeTransitGatewayVpcAttachmentsResponse * const q);
 
     void parseDescribeTransitGatewayVpcAttachmentsResponse(QXmlStreamReader &xml);
 

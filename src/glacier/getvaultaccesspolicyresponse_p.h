@@ -31,7 +31,7 @@ class GetVaultAccessPolicyResponsePrivate : public GlacierResponsePrivate {
 
 public:
 
-    GetVaultAccessPolicyResponsePrivate(GetVaultAccessPolicyResponse * const q);
+    explicit GetVaultAccessPolicyResponsePrivate(GetVaultAccessPolicyResponse * const q);
 
     void parseGetVaultAccessPolicyResponse(QXmlStreamReader &xml);
 

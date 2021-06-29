@@ -31,7 +31,7 @@ class CreatePresignedNotebookInstanceUrlResponsePrivate : public SageMakerRespon
 
 public:
 
-    CreatePresignedNotebookInstanceUrlResponsePrivate(CreatePresignedNotebookInstanceUrlResponse * const q);
+    explicit CreatePresignedNotebookInstanceUrlResponsePrivate(CreatePresignedNotebookInstanceUrlResponse * const q);
 
     void parseCreatePresignedNotebookInstanceUrlResponse(QXmlStreamReader &xml);
 

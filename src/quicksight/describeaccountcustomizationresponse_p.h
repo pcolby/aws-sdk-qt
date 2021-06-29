@@ -31,7 +31,7 @@ class DescribeAccountCustomizationResponsePrivate : public QuickSightResponsePri
 
 public:
 
-    DescribeAccountCustomizationResponsePrivate(DescribeAccountCustomizationResponse * const q);
+    explicit DescribeAccountCustomizationResponsePrivate(DescribeAccountCustomizationResponse * const q);
 
     void parseDescribeAccountCustomizationResponse(QXmlStreamReader &xml);
 

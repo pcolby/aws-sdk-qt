@@ -31,7 +31,7 @@ class DescribeLocalGatewayRouteTablesResponsePrivate : public Ec2ResponsePrivate
 
 public:
 
-    DescribeLocalGatewayRouteTablesResponsePrivate(DescribeLocalGatewayRouteTablesResponse * const q);
+    explicit DescribeLocalGatewayRouteTablesResponsePrivate(DescribeLocalGatewayRouteTablesResponse * const q);
 
     void parseDescribeLocalGatewayRouteTablesResponse(QXmlStreamReader &xml);
 

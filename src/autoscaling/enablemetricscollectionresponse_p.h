@@ -31,7 +31,7 @@ class EnableMetricsCollectionResponsePrivate : public AutoScalingResponsePrivate
 
 public:
 
-    EnableMetricsCollectionResponsePrivate(EnableMetricsCollectionResponse * const q);
+    explicit EnableMetricsCollectionResponsePrivate(EnableMetricsCollectionResponse * const q);
 
     void parseEnableMetricsCollectionResponse(QXmlStreamReader &xml);
 

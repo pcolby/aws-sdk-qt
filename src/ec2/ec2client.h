@@ -943,7 +943,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    Ec2Client(
+    explicit Ec2Client(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -1404,7 +1404,7 @@ public slots:
 protected:
     /// @cond internal
     Ec2ClientPrivate * const d_ptr; ///< Internal d-pointer.
-    Ec2Client(Ec2ClientPrivate * const d);
+    explicit Ec2Client(Ec2ClientPrivate * const d);
     /// @endcond
 
 private:

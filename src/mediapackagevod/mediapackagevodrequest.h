@@ -76,7 +76,7 @@ public:
 protected:
     /// @cond internal
     MediaPackageVodRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    MediaPackageVodRequest(MediaPackageVodRequestPrivate * const d);
+    explicit MediaPackageVodRequest(MediaPackageVodRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

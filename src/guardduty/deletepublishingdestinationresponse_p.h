@@ -31,7 +31,7 @@ class DeletePublishingDestinationResponsePrivate : public GuardDutyResponsePriva
 
 public:
 
-    DeletePublishingDestinationResponsePrivate(DeletePublishingDestinationResponse * const q);
+    explicit DeletePublishingDestinationResponsePrivate(DeletePublishingDestinationResponse * const q);
 
     void parseDeletePublishingDestinationResponse(QXmlStreamReader &xml);
 

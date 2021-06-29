@@ -31,7 +31,7 @@ class PutVoiceConnectorLoggingConfigurationResponsePrivate : public ChimeRespons
 
 public:
 
-    PutVoiceConnectorLoggingConfigurationResponsePrivate(PutVoiceConnectorLoggingConfigurationResponse * const q);
+    explicit PutVoiceConnectorLoggingConfigurationResponsePrivate(PutVoiceConnectorLoggingConfigurationResponse * const q);
 
     void parsePutVoiceConnectorLoggingConfigurationResponse(QXmlStreamReader &xml);
 

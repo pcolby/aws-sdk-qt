@@ -31,7 +31,7 @@ class GetBuiltinIntentResponsePrivate : public LexModelBuildingServiceResponsePr
 
 public:
 
-    GetBuiltinIntentResponsePrivate(GetBuiltinIntentResponse * const q);
+    explicit GetBuiltinIntentResponsePrivate(GetBuiltinIntentResponse * const q);
 
     void parseGetBuiltinIntentResponse(QXmlStreamReader &xml);
 

@@ -111,7 +111,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    ForecastServiceClient(
+    explicit ForecastServiceClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -156,7 +156,7 @@ public slots:
 protected:
     /// @cond internal
     ForecastServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
-    ForecastServiceClient(ForecastServiceClientPrivate * const d);
+    explicit ForecastServiceClient(ForecastServiceClientPrivate * const d);
     /// @endcond
 
 private:

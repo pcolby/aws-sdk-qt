@@ -29,7 +29,7 @@ class KafkaResponsePrivate {
 
 public:
 
-    KafkaResponsePrivate(KafkaResponse * const q);
+    explicit KafkaResponsePrivate(KafkaResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

@@ -31,7 +31,7 @@ class UpdateLicenseConfigurationResponsePrivate : public LicenseManagerResponseP
 
 public:
 
-    UpdateLicenseConfigurationResponsePrivate(UpdateLicenseConfigurationResponse * const q);
+    explicit UpdateLicenseConfigurationResponsePrivate(UpdateLicenseConfigurationResponse * const q);
 
     void parseUpdateLicenseConfigurationResponse(QXmlStreamReader &xml);
 

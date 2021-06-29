@@ -31,7 +31,7 @@ class ListXssMatchSetsResponsePrivate : public WafResponsePrivate {
 
 public:
 
-    ListXssMatchSetsResponsePrivate(ListXssMatchSetsResponse * const q);
+    explicit ListXssMatchSetsResponsePrivate(ListXssMatchSetsResponse * const q);
 
     void parseListXssMatchSetsResponse(QXmlStreamReader &xml);
 

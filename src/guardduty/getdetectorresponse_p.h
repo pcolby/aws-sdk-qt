@@ -31,7 +31,7 @@ class GetDetectorResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 
-    GetDetectorResponsePrivate(GetDetectorResponse * const q);
+    explicit GetDetectorResponsePrivate(GetDetectorResponse * const q);
 
     void parseGetDetectorResponse(QXmlStreamReader &xml);
 

@@ -30,7 +30,7 @@ class WorkLinkClient;
 class WorkLinkClientPrivate {
 
 public:
-    WorkLinkClientPrivate(WorkLinkClient * const q);
+    explicit WorkLinkClientPrivate(WorkLinkClient * const q);
 
 protected:
     WorkLinkClient * const q_ptr; ///< Internal q-pointer.

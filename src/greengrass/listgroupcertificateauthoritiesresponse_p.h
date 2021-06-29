@@ -31,7 +31,7 @@ class ListGroupCertificateAuthoritiesResponsePrivate : public GreengrassResponse
 
 public:
 
-    ListGroupCertificateAuthoritiesResponsePrivate(ListGroupCertificateAuthoritiesResponse * const q);
+    explicit ListGroupCertificateAuthoritiesResponsePrivate(ListGroupCertificateAuthoritiesResponse * const q);
 
     void parseListGroupCertificateAuthoritiesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class PutRemediationExceptionsResponsePrivate : public ConfigServiceResponsePriv
 
 public:
 
-    PutRemediationExceptionsResponsePrivate(PutRemediationExceptionsResponse * const q);
+    explicit PutRemediationExceptionsResponsePrivate(PutRemediationExceptionsResponse * const q);
 
     void parsePutRemediationExceptionsResponse(QXmlStreamReader &xml);
 

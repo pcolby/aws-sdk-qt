@@ -31,7 +31,7 @@ class GetDomainSuggestionsResponsePrivate : public Route53DomainsResponsePrivate
 
 public:
 
-    GetDomainSuggestionsResponsePrivate(GetDomainSuggestionsResponse * const q);
+    explicit GetDomainSuggestionsResponsePrivate(GetDomainSuggestionsResponse * const q);
 
     void parseGetDomainSuggestionsResponse(QXmlStreamReader &xml);
 

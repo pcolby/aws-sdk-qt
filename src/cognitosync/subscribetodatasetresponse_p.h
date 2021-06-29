@@ -31,7 +31,7 @@ class SubscribeToDatasetResponsePrivate : public CognitoSyncResponsePrivate {
 
 public:
 
-    SubscribeToDatasetResponsePrivate(SubscribeToDatasetResponse * const q);
+    explicit SubscribeToDatasetResponsePrivate(SubscribeToDatasetResponse * const q);
 
     void parseSubscribeToDatasetResponse(QXmlStreamReader &xml);
 

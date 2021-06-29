@@ -31,7 +31,7 @@ class ListThingsInThingGroupResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    ListThingsInThingGroupResponsePrivate(ListThingsInThingGroupResponse * const q);
+    explicit ListThingsInThingGroupResponsePrivate(ListThingsInThingGroupResponse * const q);
 
     void parseListThingsInThingGroupResponse(QXmlStreamReader &xml);
 

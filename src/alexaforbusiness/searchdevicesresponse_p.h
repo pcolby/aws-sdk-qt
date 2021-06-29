@@ -31,7 +31,7 @@ class SearchDevicesResponsePrivate : public AlexaForBusinessResponsePrivate {
 
 public:
 
-    SearchDevicesResponsePrivate(SearchDevicesResponse * const q);
+    explicit SearchDevicesResponsePrivate(SearchDevicesResponse * const q);
 
     void parseSearchDevicesResponse(QXmlStreamReader &xml);
 

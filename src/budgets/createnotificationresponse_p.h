@@ -31,7 +31,7 @@ class CreateNotificationResponsePrivate : public BudgetsResponsePrivate {
 
 public:
 
-    CreateNotificationResponsePrivate(CreateNotificationResponse * const q);
+    explicit CreateNotificationResponsePrivate(CreateNotificationResponse * const q);
 
     void parseCreateNotificationResponse(QXmlStreamReader &xml);
 

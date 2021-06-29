@@ -31,7 +31,7 @@ class DescribeJobTemplateResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DescribeJobTemplateResponsePrivate(DescribeJobTemplateResponse * const q);
+    explicit DescribeJobTemplateResponsePrivate(DescribeJobTemplateResponse * const q);
 
     void parseDescribeJobTemplateResponse(QXmlStreamReader &xml);
 

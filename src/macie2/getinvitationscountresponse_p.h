@@ -31,7 +31,7 @@ class GetInvitationsCountResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 
-    GetInvitationsCountResponsePrivate(GetInvitationsCountResponse * const q);
+    explicit GetInvitationsCountResponsePrivate(GetInvitationsCountResponse * const q);
 
     void parseGetInvitationsCountResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteMessageResponsePrivate : public SqsResponsePrivate {
 
 public:
 
-    DeleteMessageResponsePrivate(DeleteMessageResponse * const q);
+    explicit DeleteMessageResponsePrivate(DeleteMessageResponse * const q);
 
     void parseDeleteMessageResponse(QXmlStreamReader &xml);
 

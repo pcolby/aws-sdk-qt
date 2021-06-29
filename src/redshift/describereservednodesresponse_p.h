@@ -31,7 +31,7 @@ class DescribeReservedNodesResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    DescribeReservedNodesResponsePrivate(DescribeReservedNodesResponse * const q);
+    explicit DescribeReservedNodesResponsePrivate(DescribeReservedNodesResponse * const q);
 
     void parseDescribeReservedNodesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class PurchaseScheduledInstancesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    PurchaseScheduledInstancesResponsePrivate(PurchaseScheduledInstancesResponse * const q);
+    explicit PurchaseScheduledInstancesResponsePrivate(PurchaseScheduledInstancesResponse * const q);
 
     void parsePurchaseScheduledInstancesResponse(QXmlStreamReader &xml);
 

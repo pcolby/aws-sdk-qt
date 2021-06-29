@@ -31,7 +31,7 @@ class ListPolicyGenerationsResponsePrivate : public AccessAnalyzerResponsePrivat
 
 public:
 
-    ListPolicyGenerationsResponsePrivate(ListPolicyGenerationsResponse * const q);
+    explicit ListPolicyGenerationsResponsePrivate(ListPolicyGenerationsResponse * const q);
 
     void parseListPolicyGenerationsResponse(QXmlStreamReader &xml);
 

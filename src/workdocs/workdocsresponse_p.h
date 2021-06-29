@@ -29,7 +29,7 @@ class WorkDocsResponsePrivate {
 
 public:
 
-    WorkDocsResponsePrivate(WorkDocsResponse * const q);
+    explicit WorkDocsResponsePrivate(WorkDocsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

@@ -31,7 +31,7 @@ class ListDistributionsByKeyGroupResponsePrivate : public CloudFrontResponsePriv
 
 public:
 
-    ListDistributionsByKeyGroupResponsePrivate(ListDistributionsByKeyGroupResponse * const q);
+    explicit ListDistributionsByKeyGroupResponsePrivate(ListDistributionsByKeyGroupResponse * const q);
 
     void parseListDistributionsByKeyGroupResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class RecognizeUtteranceResponsePrivate : public LexRuntimeV2ResponsePrivate {
 
 public:
 
-    RecognizeUtteranceResponsePrivate(RecognizeUtteranceResponse * const q);
+    explicit RecognizeUtteranceResponsePrivate(RecognizeUtteranceResponse * const q);
 
     void parseRecognizeUtteranceResponse(QXmlStreamReader &xml);
 

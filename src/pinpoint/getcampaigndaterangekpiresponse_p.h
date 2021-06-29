@@ -31,7 +31,7 @@ class GetCampaignDateRangeKpiResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    GetCampaignDateRangeKpiResponsePrivate(GetCampaignDateRangeKpiResponse * const q);
+    explicit GetCampaignDateRangeKpiResponsePrivate(GetCampaignDateRangeKpiResponse * const q);
 
     void parseGetCampaignDateRangeKpiResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateConfigurationResponsePrivate : public MqResponsePrivate {
 
 public:
 
-    CreateConfigurationResponsePrivate(CreateConfigurationResponse * const q);
+    explicit CreateConfigurationResponsePrivate(CreateConfigurationResponse * const q);
 
     void parseCreateConfigurationResponse(QXmlStreamReader &xml);
 

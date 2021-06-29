@@ -31,7 +31,7 @@ class GetDistributionResponsePrivate : public CloudFrontResponsePrivate {
 
 public:
 
-    GetDistributionResponsePrivate(GetDistributionResponse * const q);
+    explicit GetDistributionResponsePrivate(GetDistributionResponse * const q);
 
     void parseGetDistributionResponse(QXmlStreamReader &xml);
 

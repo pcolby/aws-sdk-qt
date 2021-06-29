@@ -31,7 +31,7 @@ class DescribeProjectsResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 
-    DescribeProjectsResponsePrivate(DescribeProjectsResponse * const q);
+    explicit DescribeProjectsResponsePrivate(DescribeProjectsResponse * const q);
 
     void parseDescribeProjectsResponse(QXmlStreamReader &xml);
 

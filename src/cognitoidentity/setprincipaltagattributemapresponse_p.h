@@ -31,7 +31,7 @@ class SetPrincipalTagAttributeMapResponsePrivate : public CognitoIdentityRespons
 
 public:
 
-    SetPrincipalTagAttributeMapResponsePrivate(SetPrincipalTagAttributeMapResponse * const q);
+    explicit SetPrincipalTagAttributeMapResponsePrivate(SetPrincipalTagAttributeMapResponse * const q);
 
     void parseSetPrincipalTagAttributeMapResponse(QXmlStreamReader &xml);
 

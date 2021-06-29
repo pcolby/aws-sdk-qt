@@ -31,7 +31,7 @@ class ListEventIntegrationAssociationsResponsePrivate : public AppIntegrationsSe
 
 public:
 
-    ListEventIntegrationAssociationsResponsePrivate(ListEventIntegrationAssociationsResponse * const q);
+    explicit ListEventIntegrationAssociationsResponsePrivate(ListEventIntegrationAssociationsResponse * const q);
 
     void parseListEventIntegrationAssociationsResponse(QXmlStreamReader &xml);
 

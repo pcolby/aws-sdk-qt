@@ -31,7 +31,7 @@ class DescribeThemeResponsePrivate : public QuickSightResponsePrivate {
 
 public:
 
-    DescribeThemeResponsePrivate(DescribeThemeResponse * const q);
+    explicit DescribeThemeResponsePrivate(DescribeThemeResponse * const q);
 
     void parseDescribeThemeResponse(QXmlStreamReader &xml);
 

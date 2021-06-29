@@ -31,7 +31,7 @@ class AssociateOpsItemRelatedItemResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    AssociateOpsItemRelatedItemResponsePrivate(AssociateOpsItemRelatedItemResponse * const q);
+    explicit AssociateOpsItemRelatedItemResponsePrivate(AssociateOpsItemRelatedItemResponse * const q);
 
     void parseAssociateOpsItemRelatedItemResponse(QXmlStreamReader &xml);
 

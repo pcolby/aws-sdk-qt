@@ -31,7 +31,7 @@ class DescribeReplicationSubnetGroupsResponsePrivate : public DatabaseMigrationS
 
 public:
 
-    DescribeReplicationSubnetGroupsResponsePrivate(DescribeReplicationSubnetGroupsResponse * const q);
+    explicit DescribeReplicationSubnetGroupsResponsePrivate(DescribeReplicationSubnetGroupsResponse * const q);
 
     void parseDescribeReplicationSubnetGroupsResponse(QXmlStreamReader &xml);
 

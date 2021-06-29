@@ -31,7 +31,7 @@ class DeleteUploadResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    DeleteUploadResponsePrivate(DeleteUploadResponse * const q);
+    explicit DeleteUploadResponsePrivate(DeleteUploadResponse * const q);
 
     void parseDeleteUploadResponse(QXmlStreamReader &xml);
 

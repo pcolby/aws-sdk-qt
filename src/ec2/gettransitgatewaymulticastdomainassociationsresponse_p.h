@@ -31,7 +31,7 @@ class GetTransitGatewayMulticastDomainAssociationsResponsePrivate : public Ec2Re
 
 public:
 
-    GetTransitGatewayMulticastDomainAssociationsResponsePrivate(GetTransitGatewayMulticastDomainAssociationsResponse * const q);
+    explicit GetTransitGatewayMulticastDomainAssociationsResponsePrivate(GetTransitGatewayMulticastDomainAssociationsResponse * const q);
 
     void parseGetTransitGatewayMulticastDomainAssociationsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateTokenResponsePrivate : public LicenseManagerResponsePrivate {
 
 public:
 
-    CreateTokenResponsePrivate(CreateTokenResponse * const q);
+    explicit CreateTokenResponsePrivate(CreateTokenResponse * const q);
 
     void parseCreateTokenResponse(QXmlStreamReader &xml);
 

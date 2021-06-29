@@ -31,7 +31,7 @@ class UpdateShardCountResponsePrivate : public KinesisResponsePrivate {
 
 public:
 
-    UpdateShardCountResponsePrivate(UpdateShardCountResponse * const q);
+    explicit UpdateShardCountResponsePrivate(UpdateShardCountResponse * const q);
 
     void parseUpdateShardCountResponse(QXmlStreamReader &xml);
 

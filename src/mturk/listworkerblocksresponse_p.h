@@ -31,7 +31,7 @@ class ListWorkerBlocksResponsePrivate : public MTurkResponsePrivate {
 
 public:
 
-    ListWorkerBlocksResponsePrivate(ListWorkerBlocksResponse * const q);
+    explicit ListWorkerBlocksResponsePrivate(ListWorkerBlocksResponse * const q);
 
     void parseListWorkerBlocksResponse(QXmlStreamReader &xml);
 

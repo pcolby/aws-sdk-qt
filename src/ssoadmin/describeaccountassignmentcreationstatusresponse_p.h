@@ -31,7 +31,7 @@ class DescribeAccountAssignmentCreationStatusResponsePrivate : public SSOAdminRe
 
 public:
 
-    DescribeAccountAssignmentCreationStatusResponsePrivate(DescribeAccountAssignmentCreationStatusResponse * const q);
+    explicit DescribeAccountAssignmentCreationStatusResponsePrivate(DescribeAccountAssignmentCreationStatusResponse * const q);
 
     void parseDescribeAccountAssignmentCreationStatusResponse(QXmlStreamReader &xml);
 

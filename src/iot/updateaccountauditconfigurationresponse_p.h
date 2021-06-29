@@ -31,7 +31,7 @@ class UpdateAccountAuditConfigurationResponsePrivate : public IoTResponsePrivate
 
 public:
 
-    UpdateAccountAuditConfigurationResponsePrivate(UpdateAccountAuditConfigurationResponse * const q);
+    explicit UpdateAccountAuditConfigurationResponsePrivate(UpdateAccountAuditConfigurationResponse * const q);
 
     void parseUpdateAccountAuditConfigurationResponse(QXmlStreamReader &xml);
 

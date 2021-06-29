@@ -31,7 +31,7 @@ class DescribeDataSourcesResponsePrivate : public MachineLearningResponsePrivate
 
 public:
 
-    DescribeDataSourcesResponsePrivate(DescribeDataSourcesResponse * const q);
+    explicit DescribeDataSourcesResponsePrivate(DescribeDataSourcesResponse * const q);
 
     void parseDescribeDataSourcesResponse(QXmlStreamReader &xml);
 

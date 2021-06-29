@@ -31,7 +31,7 @@ class GetTagsResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    GetTagsResponsePrivate(GetTagsResponse * const q);
+    explicit GetTagsResponsePrivate(GetTagsResponse * const q);
 
     void parseGetTagsResponse(QXmlStreamReader &xml);
 

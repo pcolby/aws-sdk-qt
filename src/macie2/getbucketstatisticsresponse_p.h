@@ -31,7 +31,7 @@ class GetBucketStatisticsResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 
-    GetBucketStatisticsResponsePrivate(GetBucketStatisticsResponse * const q);
+    explicit GetBucketStatisticsResponsePrivate(GetBucketStatisticsResponse * const q);
 
     void parseGetBucketStatisticsResponse(QXmlStreamReader &xml);
 

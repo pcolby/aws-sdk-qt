@@ -31,7 +31,7 @@ class ListRulesResponsePrivate : public CloudWatchEventsResponsePrivate {
 
 public:
 
-    ListRulesResponsePrivate(ListRulesResponse * const q);
+    explicit ListRulesResponsePrivate(ListRulesResponse * const q);
 
     void parseListRulesResponse(QXmlStreamReader &xml);
 

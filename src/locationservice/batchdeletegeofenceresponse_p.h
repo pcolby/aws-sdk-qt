@@ -31,7 +31,7 @@ class BatchDeleteGeofenceResponsePrivate : public LocationServiceResponsePrivate
 
 public:
 
-    BatchDeleteGeofenceResponsePrivate(BatchDeleteGeofenceResponse * const q);
+    explicit BatchDeleteGeofenceResponsePrivate(BatchDeleteGeofenceResponse * const q);
 
     void parseBatchDeleteGeofenceResponse(QXmlStreamReader &xml);
 

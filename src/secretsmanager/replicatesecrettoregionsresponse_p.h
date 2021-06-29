@@ -31,7 +31,7 @@ class ReplicateSecretToRegionsResponsePrivate : public SecretsManagerResponsePri
 
 public:
 
-    ReplicateSecretToRegionsResponsePrivate(ReplicateSecretToRegionsResponse * const q);
+    explicit ReplicateSecretToRegionsResponsePrivate(ReplicateSecretToRegionsResponse * const q);
 
     void parseReplicateSecretToRegionsResponse(QXmlStreamReader &xml);
 

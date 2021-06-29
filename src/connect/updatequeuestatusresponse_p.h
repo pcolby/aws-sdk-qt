@@ -31,7 +31,7 @@ class UpdateQueueStatusResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    UpdateQueueStatusResponsePrivate(UpdateQueueStatusResponse * const q);
+    explicit UpdateQueueStatusResponsePrivate(UpdateQueueStatusResponse * const q);
 
     void parseUpdateQueueStatusResponse(QXmlStreamReader &xml);
 

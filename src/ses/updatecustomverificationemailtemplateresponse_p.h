@@ -31,7 +31,7 @@ class UpdateCustomVerificationEmailTemplateResponsePrivate : public SesResponseP
 
 public:
 
-    UpdateCustomVerificationEmailTemplateResponsePrivate(UpdateCustomVerificationEmailTemplateResponse * const q);
+    explicit UpdateCustomVerificationEmailTemplateResponsePrivate(UpdateCustomVerificationEmailTemplateResponse * const q);
 
     void parseUpdateCustomVerificationEmailTemplateResponse(QXmlStreamReader &xml);
 

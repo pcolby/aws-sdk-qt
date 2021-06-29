@@ -43,7 +43,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    QLDBSessionClient(
+    explicit QLDBSessionClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -54,7 +54,7 @@ public slots:
 protected:
     /// @cond internal
     QLDBSessionClientPrivate * const d_ptr; ///< Internal d-pointer.
-    QLDBSessionClient(QLDBSessionClientPrivate * const d);
+    explicit QLDBSessionClient(QLDBSessionClientPrivate * const d);
     /// @endcond
 
 private:

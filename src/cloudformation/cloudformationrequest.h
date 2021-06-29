@@ -114,7 +114,7 @@ public:
 protected:
     /// @cond internal
     CloudFormationRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    CloudFormationRequest(CloudFormationRequestPrivate * const d);
+    explicit CloudFormationRequest(CloudFormationRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

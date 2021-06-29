@@ -31,7 +31,7 @@ class GetServiceRoleForAccountResponsePrivate : public GreengrassResponsePrivate
 
 public:
 
-    GetServiceRoleForAccountResponsePrivate(GetServiceRoleForAccountResponse * const q);
+    explicit GetServiceRoleForAccountResponsePrivate(GetServiceRoleForAccountResponse * const q);
 
     void parseGetServiceRoleForAccountResponse(QXmlStreamReader &xml);
 

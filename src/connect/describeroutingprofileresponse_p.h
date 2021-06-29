@@ -31,7 +31,7 @@ class DescribeRoutingProfileResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    DescribeRoutingProfileResponsePrivate(DescribeRoutingProfileResponse * const q);
+    explicit DescribeRoutingProfileResponsePrivate(DescribeRoutingProfileResponse * const q);
 
     void parseDescribeRoutingProfileResponse(QXmlStreamReader &xml);
 

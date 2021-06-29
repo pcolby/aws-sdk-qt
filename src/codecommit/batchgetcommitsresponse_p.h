@@ -31,7 +31,7 @@ class BatchGetCommitsResponsePrivate : public CodeCommitResponsePrivate {
 
 public:
 
-    BatchGetCommitsResponsePrivate(BatchGetCommitsResponse * const q);
+    explicit BatchGetCommitsResponsePrivate(BatchGetCommitsResponse * const q);
 
     void parseBatchGetCommitsResponse(QXmlStreamReader &xml);
 

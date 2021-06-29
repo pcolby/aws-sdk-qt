@@ -31,7 +31,7 @@ class ListOperationsResponsePrivate : public AppRunnerResponsePrivate {
 
 public:
 
-    ListOperationsResponsePrivate(ListOperationsResponse * const q);
+    explicit ListOperationsResponsePrivate(ListOperationsResponse * const q);
 
     void parseListOperationsResponse(QXmlStreamReader &xml);
 

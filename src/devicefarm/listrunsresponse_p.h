@@ -31,7 +31,7 @@ class ListRunsResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    ListRunsResponsePrivate(ListRunsResponse * const q);
+    explicit ListRunsResponsePrivate(ListRunsResponse * const q);
 
     void parseListRunsResponse(QXmlStreamReader &xml);
 

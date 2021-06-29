@@ -31,7 +31,7 @@ class DescribeNodeConfigurationOptionsResponsePrivate : public RedshiftResponseP
 
 public:
 
-    DescribeNodeConfigurationOptionsResponsePrivate(DescribeNodeConfigurationOptionsResponse * const q);
+    explicit DescribeNodeConfigurationOptionsResponsePrivate(DescribeNodeConfigurationOptionsResponse * const q);
 
     void parseDescribeNodeConfigurationOptionsResponse(QXmlStreamReader &xml);
 

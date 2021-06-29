@@ -31,7 +31,7 @@ class PutAutoScalingPolicyResponsePrivate : public EmrResponsePrivate {
 
 public:
 
-    PutAutoScalingPolicyResponsePrivate(PutAutoScalingPolicyResponse * const q);
+    explicit PutAutoScalingPolicyResponsePrivate(PutAutoScalingPolicyResponse * const q);
 
     void parsePutAutoScalingPolicyResponse(QXmlStreamReader &xml);
 

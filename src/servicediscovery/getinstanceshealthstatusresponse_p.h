@@ -31,7 +31,7 @@ class GetInstancesHealthStatusResponsePrivate : public ServiceDiscoveryResponseP
 
 public:
 
-    GetInstancesHealthStatusResponsePrivate(GetInstancesHealthStatusResponse * const q);
+    explicit GetInstancesHealthStatusResponsePrivate(GetInstancesHealthStatusResponse * const q);
 
     void parseGetInstancesHealthStatusResponse(QXmlStreamReader &xml);
 

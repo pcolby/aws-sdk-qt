@@ -31,7 +31,7 @@ class DeleteProfilingGroupResponsePrivate : public CodeGuruProfilerResponsePriva
 
 public:
 
-    DeleteProfilingGroupResponsePrivate(DeleteProfilingGroupResponse * const q);
+    explicit DeleteProfilingGroupResponsePrivate(DeleteProfilingGroupResponse * const q);
 
     void parseDeleteProfilingGroupResponse(QXmlStreamReader &xml);
 

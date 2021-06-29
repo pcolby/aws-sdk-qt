@@ -30,7 +30,7 @@ class CodeArtifactClient;
 class CodeArtifactClientPrivate {
 
 public:
-    CodeArtifactClientPrivate(CodeArtifactClient * const q);
+    explicit CodeArtifactClientPrivate(CodeArtifactClient * const q);
 
 protected:
     CodeArtifactClient * const q_ptr; ///< Internal q-pointer.

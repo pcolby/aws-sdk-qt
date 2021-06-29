@@ -31,7 +31,7 @@ class GetEffectivePoliciesResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    GetEffectivePoliciesResponsePrivate(GetEffectivePoliciesResponse * const q);
+    explicit GetEffectivePoliciesResponsePrivate(GetEffectivePoliciesResponse * const q);
 
     void parseGetEffectivePoliciesResponse(QXmlStreamReader &xml);
 

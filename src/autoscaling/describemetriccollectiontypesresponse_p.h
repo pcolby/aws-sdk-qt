@@ -31,7 +31,7 @@ class DescribeMetricCollectionTypesResponsePrivate : public AutoScalingResponseP
 
 public:
 
-    DescribeMetricCollectionTypesResponsePrivate(DescribeMetricCollectionTypesResponse * const q);
+    explicit DescribeMetricCollectionTypesResponsePrivate(DescribeMetricCollectionTypesResponse * const q);
 
     void parseDescribeMetricCollectionTypesResponse(QXmlStreamReader &xml);
 

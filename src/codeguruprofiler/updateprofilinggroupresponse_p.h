@@ -31,7 +31,7 @@ class UpdateProfilingGroupResponsePrivate : public CodeGuruProfilerResponsePriva
 
 public:
 
-    UpdateProfilingGroupResponsePrivate(UpdateProfilingGroupResponse * const q);
+    explicit UpdateProfilingGroupResponsePrivate(UpdateProfilingGroupResponse * const q);
 
     void parseUpdateProfilingGroupResponse(QXmlStreamReader &xml);
 

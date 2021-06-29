@@ -31,7 +31,7 @@ class UpdateRegionSettingsResponsePrivate : public BackupResponsePrivate {
 
 public:
 
-    UpdateRegionSettingsResponsePrivate(UpdateRegionSettingsResponse * const q);
+    explicit UpdateRegionSettingsResponsePrivate(UpdateRegionSettingsResponse * const q);
 
     void parseUpdateRegionSettingsResponse(QXmlStreamReader &xml);
 

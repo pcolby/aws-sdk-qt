@@ -31,7 +31,7 @@ class CreateAccountAliasResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    CreateAccountAliasResponsePrivate(CreateAccountAliasResponse * const q);
+    explicit CreateAccountAliasResponsePrivate(CreateAccountAliasResponse * const q);
 
     void parseCreateAccountAliasResponse(QXmlStreamReader &xml);
 

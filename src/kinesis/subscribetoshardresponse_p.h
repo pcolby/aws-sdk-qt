@@ -31,7 +31,7 @@ class SubscribeToShardResponsePrivate : public KinesisResponsePrivate {
 
 public:
 
-    SubscribeToShardResponsePrivate(SubscribeToShardResponse * const q);
+    explicit SubscribeToShardResponsePrivate(SubscribeToShardResponse * const q);
 
     void parseSubscribeToShardResponse(QXmlStreamReader &xml);
 

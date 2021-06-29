@@ -31,7 +31,7 @@ class ListProfileTimesResponsePrivate : public CodeGuruProfilerResponsePrivate {
 
 public:
 
-    ListProfileTimesResponsePrivate(ListProfileTimesResponse * const q);
+    explicit ListProfileTimesResponsePrivate(ListProfileTimesResponse * const q);
 
     void parseListProfileTimesResponse(QXmlStreamReader &xml);
 

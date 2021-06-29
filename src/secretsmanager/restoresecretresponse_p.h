@@ -31,7 +31,7 @@ class RestoreSecretResponsePrivate : public SecretsManagerResponsePrivate {
 
 public:
 
-    RestoreSecretResponsePrivate(RestoreSecretResponse * const q);
+    explicit RestoreSecretResponsePrivate(RestoreSecretResponse * const q);
 
     void parseRestoreSecretResponse(QXmlStreamReader &xml);
 

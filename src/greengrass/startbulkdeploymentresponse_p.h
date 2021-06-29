@@ -31,7 +31,7 @@ class StartBulkDeploymentResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 
-    StartBulkDeploymentResponsePrivate(StartBulkDeploymentResponse * const q);
+    explicit StartBulkDeploymentResponsePrivate(StartBulkDeploymentResponse * const q);
 
     void parseStartBulkDeploymentResponse(QXmlStreamReader &xml);
 

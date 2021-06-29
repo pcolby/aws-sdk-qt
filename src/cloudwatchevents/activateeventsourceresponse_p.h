@@ -31,7 +31,7 @@ class ActivateEventSourceResponsePrivate : public CloudWatchEventsResponsePrivat
 
 public:
 
-    ActivateEventSourceResponsePrivate(ActivateEventSourceResponse * const q);
+    explicit ActivateEventSourceResponsePrivate(ActivateEventSourceResponse * const q);
 
     void parseActivateEventSourceResponse(QXmlStreamReader &xml);
 

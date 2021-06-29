@@ -31,7 +31,7 @@ class DeleteLoggerDefinitionResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 
-    DeleteLoggerDefinitionResponsePrivate(DeleteLoggerDefinitionResponse * const q);
+    explicit DeleteLoggerDefinitionResponsePrivate(DeleteLoggerDefinitionResponse * const q);
 
     void parseDeleteLoggerDefinitionResponse(QXmlStreamReader &xml);
 

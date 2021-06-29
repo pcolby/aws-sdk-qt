@@ -31,7 +31,7 @@ class UpdateUsagePlanResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    UpdateUsagePlanResponsePrivate(UpdateUsagePlanResponse * const q);
+    explicit UpdateUsagePlanResponsePrivate(UpdateUsagePlanResponse * const q);
 
     void parseUpdateUsagePlanResponse(QXmlStreamReader &xml);
 

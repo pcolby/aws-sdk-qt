@@ -31,7 +31,7 @@ class DeleteAlarmsResponsePrivate : public CloudWatchResponsePrivate {
 
 public:
 
-    DeleteAlarmsResponsePrivate(DeleteAlarmsResponse * const q);
+    explicit DeleteAlarmsResponsePrivate(DeleteAlarmsResponse * const q);
 
     void parseDeleteAlarmsResponse(QXmlStreamReader &xml);
 

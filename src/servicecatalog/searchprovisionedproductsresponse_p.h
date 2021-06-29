@@ -31,7 +31,7 @@ class SearchProvisionedProductsResponsePrivate : public ServiceCatalogResponsePr
 
 public:
 
-    SearchProvisionedProductsResponsePrivate(SearchProvisionedProductsResponse * const q);
+    explicit SearchProvisionedProductsResponsePrivate(SearchProvisionedProductsResponse * const q);
 
     void parseSearchProvisionedProductsResponse(QXmlStreamReader &xml);
 

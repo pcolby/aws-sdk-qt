@@ -31,7 +31,7 @@ class ListMembersResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 
-    ListMembersResponsePrivate(ListMembersResponse * const q);
+    explicit ListMembersResponsePrivate(ListMembersResponse * const q);
 
     void parseListMembersResponse(QXmlStreamReader &xml);
 

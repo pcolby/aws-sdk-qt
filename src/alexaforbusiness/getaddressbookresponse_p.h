@@ -31,7 +31,7 @@ class GetAddressBookResponsePrivate : public AlexaForBusinessResponsePrivate {
 
 public:
 
-    GetAddressBookResponsePrivate(GetAddressBookResponse * const q);
+    explicit GetAddressBookResponsePrivate(GetAddressBookResponse * const q);
 
     void parseGetAddressBookResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateContainerServiceRegistryLoginResponsePrivate : public LightsailRespo
 
 public:
 
-    CreateContainerServiceRegistryLoginResponsePrivate(CreateContainerServiceRegistryLoginResponse * const q);
+    explicit CreateContainerServiceRegistryLoginResponsePrivate(CreateContainerServiceRegistryLoginResponse * const q);
 
     void parseCreateContainerServiceRegistryLoginResponse(QXmlStreamReader &xml);
 

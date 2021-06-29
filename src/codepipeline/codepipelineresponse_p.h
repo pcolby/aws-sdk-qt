@@ -29,7 +29,7 @@ class CodePipelineResponsePrivate {
 
 public:
 
-    CodePipelineResponsePrivate(CodePipelineResponse * const q);
+    explicit CodePipelineResponsePrivate(CodePipelineResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

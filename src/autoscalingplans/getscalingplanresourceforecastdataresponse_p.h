@@ -31,7 +31,7 @@ class GetScalingPlanResourceForecastDataResponsePrivate : public AutoScalingPlan
 
 public:
 
-    GetScalingPlanResourceForecastDataResponsePrivate(GetScalingPlanResourceForecastDataResponse * const q);
+    explicit GetScalingPlanResourceForecastDataResponsePrivate(GetScalingPlanResourceForecastDataResponse * const q);
 
     void parseGetScalingPlanResourceForecastDataResponse(QXmlStreamReader &xml);
 

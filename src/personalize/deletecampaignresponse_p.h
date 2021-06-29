@@ -31,7 +31,7 @@ class DeleteCampaignResponsePrivate : public PersonalizeResponsePrivate {
 
 public:
 
-    DeleteCampaignResponsePrivate(DeleteCampaignResponse * const q);
+    explicit DeleteCampaignResponsePrivate(DeleteCampaignResponse * const q);
 
     void parseDeleteCampaignResponse(QXmlStreamReader &xml);
 

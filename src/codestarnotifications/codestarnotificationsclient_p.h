@@ -30,7 +30,7 @@ class CodeStarNotificationsClient;
 class CodeStarNotificationsClientPrivate {
 
 public:
-    CodeStarNotificationsClientPrivate(CodeStarNotificationsClient * const q);
+    explicit CodeStarNotificationsClientPrivate(CodeStarNotificationsClient * const q);
 
 protected:
     CodeStarNotificationsClient * const q_ptr; ///< Internal q-pointer.

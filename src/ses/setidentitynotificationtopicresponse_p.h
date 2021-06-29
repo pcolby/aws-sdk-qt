@@ -31,7 +31,7 @@ class SetIdentityNotificationTopicResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    SetIdentityNotificationTopicResponsePrivate(SetIdentityNotificationTopicResponse * const q);
+    explicit SetIdentityNotificationTopicResponsePrivate(SetIdentityNotificationTopicResponse * const q);
 
     void parseSetIdentityNotificationTopicResponse(QXmlStreamReader &xml);
 

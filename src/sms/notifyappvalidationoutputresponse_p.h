@@ -31,7 +31,7 @@ class NotifyAppValidationOutputResponsePrivate : public SmsResponsePrivate {
 
 public:
 
-    NotifyAppValidationOutputResponsePrivate(NotifyAppValidationOutputResponse * const q);
+    explicit NotifyAppValidationOutputResponsePrivate(NotifyAppValidationOutputResponse * const q);
 
     void parseNotifyAppValidationOutputResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteAccessResponsePrivate : public TransferResponsePrivate {
 
 public:
 
-    DeleteAccessResponsePrivate(DeleteAccessResponse * const q);
+    explicit DeleteAccessResponsePrivate(DeleteAccessResponse * const q);
 
     void parseDeleteAccessResponse(QXmlStreamReader &xml);
 

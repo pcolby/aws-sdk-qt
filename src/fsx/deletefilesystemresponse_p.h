@@ -31,7 +31,7 @@ class DeleteFileSystemResponsePrivate : public FSxResponsePrivate {
 
 public:
 
-    DeleteFileSystemResponsePrivate(DeleteFileSystemResponse * const q);
+    explicit DeleteFileSystemResponsePrivate(DeleteFileSystemResponse * const q);
 
     void parseDeleteFileSystemResponse(QXmlStreamReader &xml);
 

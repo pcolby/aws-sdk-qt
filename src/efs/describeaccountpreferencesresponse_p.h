@@ -31,7 +31,7 @@ class DescribeAccountPreferencesResponsePrivate : public EfsResponsePrivate {
 
 public:
 
-    DescribeAccountPreferencesResponsePrivate(DescribeAccountPreferencesResponse * const q);
+    explicit DescribeAccountPreferencesResponsePrivate(DescribeAccountPreferencesResponse * const q);
 
     void parseDescribeAccountPreferencesResponse(QXmlStreamReader &xml);
 

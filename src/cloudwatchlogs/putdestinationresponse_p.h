@@ -31,7 +31,7 @@ class PutDestinationResponsePrivate : public CloudWatchLogsResponsePrivate {
 
 public:
 
-    PutDestinationResponsePrivate(PutDestinationResponse * const q);
+    explicit PutDestinationResponsePrivate(PutDestinationResponse * const q);
 
     void parsePutDestinationResponse(QXmlStreamReader &xml);
 

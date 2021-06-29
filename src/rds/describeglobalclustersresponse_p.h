@@ -31,7 +31,7 @@ class DescribeGlobalClustersResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    DescribeGlobalClustersResponsePrivate(DescribeGlobalClustersResponse * const q);
+    explicit DescribeGlobalClustersResponsePrivate(DescribeGlobalClustersResponse * const q);
 
     void parseDescribeGlobalClustersResponse(QXmlStreamReader &xml);
 

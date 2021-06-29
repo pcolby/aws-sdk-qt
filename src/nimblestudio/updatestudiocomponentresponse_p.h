@@ -31,7 +31,7 @@ class UpdateStudioComponentResponsePrivate : public NimbleStudioResponsePrivate 
 
 public:
 
-    UpdateStudioComponentResponsePrivate(UpdateStudioComponentResponse * const q);
+    explicit UpdateStudioComponentResponsePrivate(UpdateStudioComponentResponse * const q);
 
     void parseUpdateStudioComponentResponse(QXmlStreamReader &xml);
 

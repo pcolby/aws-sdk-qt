@@ -31,7 +31,7 @@ class DeleteDataQualityJobDefinitionResponsePrivate : public SageMakerResponsePr
 
 public:
 
-    DeleteDataQualityJobDefinitionResponsePrivate(DeleteDataQualityJobDefinitionResponse * const q);
+    explicit DeleteDataQualityJobDefinitionResponsePrivate(DeleteDataQualityJobDefinitionResponse * const q);
 
     void parseDeleteDataQualityJobDefinitionResponse(QXmlStreamReader &xml);
 

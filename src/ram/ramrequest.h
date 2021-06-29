@@ -83,7 +83,7 @@ public:
 protected:
     /// @cond internal
     RamRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    RamRequest(RamRequestPrivate * const d);
+    explicit RamRequest(RamRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -31,7 +31,7 @@ class PutConfigurationSetSendingOptionsResponsePrivate : public Sesv2ResponsePri
 
 public:
 
-    PutConfigurationSetSendingOptionsResponsePrivate(PutConfigurationSetSendingOptionsResponse * const q);
+    explicit PutConfigurationSetSendingOptionsResponsePrivate(PutConfigurationSetSendingOptionsResponse * const q);
 
     void parsePutConfigurationSetSendingOptionsResponse(QXmlStreamReader &xml);
 

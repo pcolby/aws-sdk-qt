@@ -29,7 +29,7 @@ class CostExplorerResponsePrivate {
 
 public:
 
-    CostExplorerResponsePrivate(CostExplorerResponse * const q);
+    explicit CostExplorerResponsePrivate(CostExplorerResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

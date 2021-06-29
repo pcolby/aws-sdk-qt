@@ -31,7 +31,7 @@ class DescribeReturnShippingLabelResponsePrivate : public SnowballResponsePrivat
 
 public:
 
-    DescribeReturnShippingLabelResponsePrivate(DescribeReturnShippingLabelResponse * const q);
+    explicit DescribeReturnShippingLabelResponsePrivate(DescribeReturnShippingLabelResponse * const q);
 
     void parseDescribeReturnShippingLabelResponse(QXmlStreamReader &xml);
 

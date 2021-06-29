@@ -31,7 +31,7 @@ class DeleteInputSecurityGroupResponsePrivate : public MediaLiveResponsePrivate 
 
 public:
 
-    DeleteInputSecurityGroupResponsePrivate(DeleteInputSecurityGroupResponse * const q);
+    explicit DeleteInputSecurityGroupResponsePrivate(DeleteInputSecurityGroupResponse * const q);
 
     void parseDeleteInputSecurityGroupResponse(QXmlStreamReader &xml);
 

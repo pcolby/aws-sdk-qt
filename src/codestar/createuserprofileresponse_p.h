@@ -31,7 +31,7 @@ class CreateUserProfileResponsePrivate : public CodeStarResponsePrivate {
 
 public:
 
-    CreateUserProfileResponsePrivate(CreateUserProfileResponse * const q);
+    explicit CreateUserProfileResponsePrivate(CreateUserProfileResponse * const q);
 
     void parseCreateUserProfileResponse(QXmlStreamReader &xml);
 

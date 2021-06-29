@@ -31,7 +31,7 @@ class GenerateAccessLogsResponsePrivate : public AmplifyResponsePrivate {
 
 public:
 
-    GenerateAccessLogsResponsePrivate(GenerateAccessLogsResponse * const q);
+    explicit GenerateAccessLogsResponsePrivate(GenerateAccessLogsResponse * const q);
 
     void parseGenerateAccessLogsResponse(QXmlStreamReader &xml);
 

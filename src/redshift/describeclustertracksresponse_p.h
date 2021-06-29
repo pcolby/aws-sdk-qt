@@ -31,7 +31,7 @@ class DescribeClusterTracksResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    DescribeClusterTracksResponsePrivate(DescribeClusterTracksResponse * const q);
+    explicit DescribeClusterTracksResponsePrivate(DescribeClusterTracksResponse * const q);
 
     void parseDescribeClusterTracksResponse(QXmlStreamReader &xml);
 

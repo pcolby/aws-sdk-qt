@@ -31,7 +31,7 @@ class CreateScheduledAuditResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    CreateScheduledAuditResponsePrivate(CreateScheduledAuditResponse * const q);
+    explicit CreateScheduledAuditResponsePrivate(CreateScheduledAuditResponse * const q);
 
     void parseCreateScheduledAuditResponse(QXmlStreamReader &xml);
 

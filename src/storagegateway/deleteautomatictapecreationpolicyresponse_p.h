@@ -31,7 +31,7 @@ class DeleteAutomaticTapeCreationPolicyResponsePrivate : public StorageGatewayRe
 
 public:
 
-    DeleteAutomaticTapeCreationPolicyResponsePrivate(DeleteAutomaticTapeCreationPolicyResponse * const q);
+    explicit DeleteAutomaticTapeCreationPolicyResponsePrivate(DeleteAutomaticTapeCreationPolicyResponse * const q);
 
     void parseDeleteAutomaticTapeCreationPolicyResponse(QXmlStreamReader &xml);
 

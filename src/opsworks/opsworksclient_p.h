@@ -30,7 +30,7 @@ class OpsWorksClient;
 class OpsWorksClientPrivate {
 
 public:
-    OpsWorksClientPrivate(OpsWorksClient * const q);
+    explicit OpsWorksClientPrivate(OpsWorksClient * const q);
 
 protected:
     OpsWorksClient * const q_ptr; ///< Internal q-pointer.

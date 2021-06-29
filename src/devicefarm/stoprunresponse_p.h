@@ -31,7 +31,7 @@ class StopRunResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    StopRunResponsePrivate(StopRunResponse * const q);
+    explicit StopRunResponsePrivate(StopRunResponse * const q);
 
     void parseStopRunResponse(QXmlStreamReader &xml);
 

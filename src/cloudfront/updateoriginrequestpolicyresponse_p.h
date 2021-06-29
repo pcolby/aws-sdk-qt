@@ -31,7 +31,7 @@ class UpdateOriginRequestPolicyResponsePrivate : public CloudFrontResponsePrivat
 
 public:
 
-    UpdateOriginRequestPolicyResponsePrivate(UpdateOriginRequestPolicyResponse * const q);
+    explicit UpdateOriginRequestPolicyResponsePrivate(UpdateOriginRequestPolicyResponse * const q);
 
     void parseUpdateOriginRequestPolicyResponse(QXmlStreamReader &xml);
 

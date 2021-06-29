@@ -31,7 +31,7 @@ class DeleteRequestValidatorResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    DeleteRequestValidatorResponsePrivate(DeleteRequestValidatorResponse * const q);
+    explicit DeleteRequestValidatorResponsePrivate(DeleteRequestValidatorResponse * const q);
 
     void parseDeleteRequestValidatorResponse(QXmlStreamReader &xml);
 

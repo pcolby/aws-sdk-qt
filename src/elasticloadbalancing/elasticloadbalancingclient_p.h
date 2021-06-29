@@ -30,7 +30,7 @@ class ElasticLoadBalancingClient;
 class ElasticLoadBalancingClientPrivate {
 
 public:
-    ElasticLoadBalancingClientPrivate(ElasticLoadBalancingClient * const q);
+    explicit ElasticLoadBalancingClientPrivate(ElasticLoadBalancingClient * const q);
 
 protected:
     ElasticLoadBalancingClient * const q_ptr; ///< Internal q-pointer.

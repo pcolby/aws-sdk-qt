@@ -31,7 +31,7 @@ class DeregisterAccountResponsePrivate : public AuditManagerResponsePrivate {
 
 public:
 
-    DeregisterAccountResponsePrivate(DeregisterAccountResponse * const q);
+    explicit DeregisterAccountResponsePrivate(DeregisterAccountResponse * const q);
 
     void parseDeregisterAccountResponse(QXmlStreamReader &xml);
 

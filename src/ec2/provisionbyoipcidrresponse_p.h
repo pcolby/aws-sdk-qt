@@ -31,7 +31,7 @@ class ProvisionByoipCidrResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ProvisionByoipCidrResponsePrivate(ProvisionByoipCidrResponse * const q);
+    explicit ProvisionByoipCidrResponsePrivate(ProvisionByoipCidrResponse * const q);
 
     void parseProvisionByoipCidrResponse(QXmlStreamReader &xml);
 

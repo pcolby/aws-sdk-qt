@@ -31,7 +31,7 @@ class UpdateMLTransformResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    UpdateMLTransformResponsePrivate(UpdateMLTransformResponse * const q);
+    explicit UpdateMLTransformResponsePrivate(UpdateMLTransformResponse * const q);
 
     void parseUpdateMLTransformResponse(QXmlStreamReader &xml);
 

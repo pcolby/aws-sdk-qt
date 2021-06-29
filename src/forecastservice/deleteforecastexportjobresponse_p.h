@@ -31,7 +31,7 @@ class DeleteForecastExportJobResponsePrivate : public ForecastServiceResponsePri
 
 public:
 
-    DeleteForecastExportJobResponsePrivate(DeleteForecastExportJobResponse * const q);
+    explicit DeleteForecastExportJobResponsePrivate(DeleteForecastExportJobResponse * const q);
 
     void parseDeleteForecastExportJobResponse(QXmlStreamReader &xml);
 

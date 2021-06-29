@@ -31,7 +31,7 @@ class CreateDefaultVpcResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    CreateDefaultVpcResponsePrivate(CreateDefaultVpcResponse * const q);
+    explicit CreateDefaultVpcResponsePrivate(CreateDefaultVpcResponse * const q);
 
     void parseCreateDefaultVpcResponse(QXmlStreamReader &xml);
 

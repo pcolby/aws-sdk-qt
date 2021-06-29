@@ -31,7 +31,7 @@ class ActivateContactChannelResponsePrivate : public SSMContactsResponsePrivate 
 
 public:
 
-    ActivateContactChannelResponsePrivate(ActivateContactChannelResponse * const q);
+    explicit ActivateContactChannelResponsePrivate(ActivateContactChannelResponse * const q);
 
     void parseActivateContactChannelResponse(QXmlStreamReader &xml);
 

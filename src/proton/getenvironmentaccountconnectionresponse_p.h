@@ -31,7 +31,7 @@ class GetEnvironmentAccountConnectionResponsePrivate : public ProtonResponsePriv
 
 public:
 
-    GetEnvironmentAccountConnectionResponsePrivate(GetEnvironmentAccountConnectionResponse * const q);
+    explicit GetEnvironmentAccountConnectionResponsePrivate(GetEnvironmentAccountConnectionResponse * const q);
 
     void parseGetEnvironmentAccountConnectionResponse(QXmlStreamReader &xml);
 

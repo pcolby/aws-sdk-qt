@@ -31,7 +31,7 @@ class UpdateEnvironmentAccountConnectionResponsePrivate : public ProtonResponseP
 
 public:
 
-    UpdateEnvironmentAccountConnectionResponsePrivate(UpdateEnvironmentAccountConnectionResponse * const q);
+    explicit UpdateEnvironmentAccountConnectionResponsePrivate(UpdateEnvironmentAccountConnectionResponse * const q);
 
     void parseUpdateEnvironmentAccountConnectionResponse(QXmlStreamReader &xml);
 

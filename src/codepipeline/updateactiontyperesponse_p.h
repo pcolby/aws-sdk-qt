@@ -31,7 +31,7 @@ class UpdateActionTypeResponsePrivate : public CodePipelineResponsePrivate {
 
 public:
 
-    UpdateActionTypeResponsePrivate(UpdateActionTypeResponse * const q);
+    explicit UpdateActionTypeResponsePrivate(UpdateActionTypeResponse * const q);
 
     void parseUpdateActionTypeResponse(QXmlStreamReader &xml);
 

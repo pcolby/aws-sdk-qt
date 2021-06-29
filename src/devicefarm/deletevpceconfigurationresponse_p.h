@@ -31,7 +31,7 @@ class DeleteVPCEConfigurationResponsePrivate : public DeviceFarmResponsePrivate 
 
 public:
 
-    DeleteVPCEConfigurationResponsePrivate(DeleteVPCEConfigurationResponse * const q);
+    explicit DeleteVPCEConfigurationResponsePrivate(DeleteVPCEConfigurationResponse * const q);
 
     void parseDeleteVPCEConfigurationResponse(QXmlStreamReader &xml);
 

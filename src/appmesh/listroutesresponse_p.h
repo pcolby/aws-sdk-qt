@@ -31,7 +31,7 @@ class ListRoutesResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 
-    ListRoutesResponsePrivate(ListRoutesResponse * const q);
+    explicit ListRoutesResponsePrivate(ListRoutesResponse * const q);
 
     void parseListRoutesResponse(QXmlStreamReader &xml);
 

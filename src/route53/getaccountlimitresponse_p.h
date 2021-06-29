@@ -31,7 +31,7 @@ class GetAccountLimitResponsePrivate : public Route53ResponsePrivate {
 
 public:
 
-    GetAccountLimitResponsePrivate(GetAccountLimitResponse * const q);
+    explicit GetAccountLimitResponsePrivate(GetAccountLimitResponse * const q);
 
     void parseGetAccountLimitResponse(QXmlStreamReader &xml);
 

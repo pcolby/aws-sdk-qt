@@ -31,7 +31,7 @@ class ListS3ResourcesResponsePrivate : public MacieResponsePrivate {
 
 public:
 
-    ListS3ResourcesResponsePrivate(ListS3ResourcesResponse * const q);
+    explicit ListS3ResourcesResponsePrivate(ListS3ResourcesResponse * const q);
 
     void parseListS3ResourcesResponse(QXmlStreamReader &xml);
 

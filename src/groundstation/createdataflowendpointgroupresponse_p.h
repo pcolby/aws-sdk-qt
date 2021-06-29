@@ -31,7 +31,7 @@ class CreateDataflowEndpointGroupResponsePrivate : public GroundStationResponseP
 
 public:
 
-    CreateDataflowEndpointGroupResponsePrivate(CreateDataflowEndpointGroupResponse * const q);
+    explicit CreateDataflowEndpointGroupResponsePrivate(CreateDataflowEndpointGroupResponse * const q);
 
     void parseCreateDataflowEndpointGroupResponse(QXmlStreamReader &xml);
 

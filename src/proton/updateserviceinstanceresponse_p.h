@@ -31,7 +31,7 @@ class UpdateServiceInstanceResponsePrivate : public ProtonResponsePrivate {
 
 public:
 
-    UpdateServiceInstanceResponsePrivate(UpdateServiceInstanceResponse * const q);
+    explicit UpdateServiceInstanceResponsePrivate(UpdateServiceInstanceResponse * const q);
 
     void parseUpdateServiceInstanceResponse(QXmlStreamReader &xml);
 

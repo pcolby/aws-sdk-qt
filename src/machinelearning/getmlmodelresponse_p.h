@@ -31,7 +31,7 @@ class GetMLModelResponsePrivate : public MachineLearningResponsePrivate {
 
 public:
 
-    GetMLModelResponsePrivate(GetMLModelResponse * const q);
+    explicit GetMLModelResponsePrivate(GetMLModelResponse * const q);
 
     void parseGetMLModelResponse(QXmlStreamReader &xml);
 

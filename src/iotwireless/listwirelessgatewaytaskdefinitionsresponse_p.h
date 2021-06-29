@@ -31,7 +31,7 @@ class ListWirelessGatewayTaskDefinitionsResponsePrivate : public IoTWirelessResp
 
 public:
 
-    ListWirelessGatewayTaskDefinitionsResponsePrivate(ListWirelessGatewayTaskDefinitionsResponse * const q);
+    explicit ListWirelessGatewayTaskDefinitionsResponsePrivate(ListWirelessGatewayTaskDefinitionsResponse * const q);
 
     void parseListWirelessGatewayTaskDefinitionsResponse(QXmlStreamReader &xml);
 

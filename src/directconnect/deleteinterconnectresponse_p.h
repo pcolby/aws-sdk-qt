@@ -31,7 +31,7 @@ class DeleteInterconnectResponsePrivate : public DirectConnectResponsePrivate {
 
 public:
 
-    DeleteInterconnectResponsePrivate(DeleteInterconnectResponse * const q);
+    explicit DeleteInterconnectResponsePrivate(DeleteInterconnectResponse * const q);
 
     void parseDeleteInterconnectResponse(QXmlStreamReader &xml);
 

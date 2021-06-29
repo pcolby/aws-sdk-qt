@@ -30,7 +30,7 @@ class ConnectContactLensClient;
 class ConnectContactLensClientPrivate {
 
 public:
-    ConnectContactLensClientPrivate(ConnectContactLensClient * const q);
+    explicit ConnectContactLensClientPrivate(ConnectContactLensClient * const q);
 
 protected:
     ConnectContactLensClient * const q_ptr; ///< Internal q-pointer.

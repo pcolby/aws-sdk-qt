@@ -31,7 +31,7 @@ class GetTestGridSessionResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    GetTestGridSessionResponsePrivate(GetTestGridSessionResponse * const q);
+    explicit GetTestGridSessionResponsePrivate(GetTestGridSessionResponse * const q);
 
     void parseGetTestGridSessionResponse(QXmlStreamReader &xml);
 

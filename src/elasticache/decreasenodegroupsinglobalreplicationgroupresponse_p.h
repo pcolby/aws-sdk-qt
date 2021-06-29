@@ -31,7 +31,7 @@ class DecreaseNodeGroupsInGlobalReplicationGroupResponsePrivate : public ElastiC
 
 public:
 
-    DecreaseNodeGroupsInGlobalReplicationGroupResponsePrivate(DecreaseNodeGroupsInGlobalReplicationGroupResponse * const q);
+    explicit DecreaseNodeGroupsInGlobalReplicationGroupResponsePrivate(DecreaseNodeGroupsInGlobalReplicationGroupResponse * const q);
 
     void parseDecreaseNodeGroupsInGlobalReplicationGroupResponse(QXmlStreamReader &xml);
 

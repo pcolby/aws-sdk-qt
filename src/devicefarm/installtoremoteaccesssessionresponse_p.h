@@ -31,7 +31,7 @@ class InstallToRemoteAccessSessionResponsePrivate : public DeviceFarmResponsePri
 
 public:
 
-    InstallToRemoteAccessSessionResponsePrivate(InstallToRemoteAccessSessionResponse * const q);
+    explicit InstallToRemoteAccessSessionResponsePrivate(InstallToRemoteAccessSessionResponse * const q);
 
     void parseInstallToRemoteAccessSessionResponse(QXmlStreamReader &xml);
 

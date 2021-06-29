@@ -29,7 +29,7 @@ class FmsResponsePrivate {
 
 public:
 
-    FmsResponsePrivate(FmsResponse * const q);
+    explicit FmsResponsePrivate(FmsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

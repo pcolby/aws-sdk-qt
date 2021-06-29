@@ -31,7 +31,7 @@ class UpdateWebhookResponsePrivate : public AmplifyResponsePrivate {
 
 public:
 
-    UpdateWebhookResponsePrivate(UpdateWebhookResponse * const q);
+    explicit UpdateWebhookResponsePrivate(UpdateWebhookResponse * const q);
 
     void parseUpdateWebhookResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeObjectsResponsePrivate : public DataPipelineResponsePrivate {
 
 public:
 
-    DescribeObjectsResponsePrivate(DescribeObjectsResponse * const q);
+    explicit DescribeObjectsResponsePrivate(DescribeObjectsResponse * const q);
 
     void parseDescribeObjectsResponse(QXmlStreamReader &xml);
 

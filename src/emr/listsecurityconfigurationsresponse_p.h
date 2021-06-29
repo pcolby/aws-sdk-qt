@@ -31,7 +31,7 @@ class ListSecurityConfigurationsResponsePrivate : public EmrResponsePrivate {
 
 public:
 
-    ListSecurityConfigurationsResponsePrivate(ListSecurityConfigurationsResponse * const q);
+    explicit ListSecurityConfigurationsResponsePrivate(ListSecurityConfigurationsResponse * const q);
 
     void parseListSecurityConfigurationsResponse(QXmlStreamReader &xml);
 

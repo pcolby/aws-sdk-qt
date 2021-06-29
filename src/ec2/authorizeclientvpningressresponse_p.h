@@ -31,7 +31,7 @@ class AuthorizeClientVpnIngressResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    AuthorizeClientVpnIngressResponsePrivate(AuthorizeClientVpnIngressResponse * const q);
+    explicit AuthorizeClientVpnIngressResponsePrivate(AuthorizeClientVpnIngressResponse * const q);
 
     void parseAuthorizeClientVpnIngressResponse(QXmlStreamReader &xml);
 

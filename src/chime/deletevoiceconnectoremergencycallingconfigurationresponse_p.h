@@ -31,7 +31,7 @@ class DeleteVoiceConnectorEmergencyCallingConfigurationResponsePrivate : public 
 
 public:
 
-    DeleteVoiceConnectorEmergencyCallingConfigurationResponsePrivate(DeleteVoiceConnectorEmergencyCallingConfigurationResponse * const q);
+    explicit DeleteVoiceConnectorEmergencyCallingConfigurationResponsePrivate(DeleteVoiceConnectorEmergencyCallingConfigurationResponse * const q);
 
     void parseDeleteVoiceConnectorEmergencyCallingConfigurationResponse(QXmlStreamReader &xml);
 

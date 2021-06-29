@@ -31,7 +31,7 @@ class GetInstanceResponsePrivate : public ServiceDiscoveryResponsePrivate {
 
 public:
 
-    GetInstanceResponsePrivate(GetInstanceResponse * const q);
+    explicit GetInstanceResponsePrivate(GetInstanceResponse * const q);
 
     void parseGetInstanceResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetFlowLogsIntegrationTemplateResponsePrivate : public Ec2ResponsePrivate 
 
 public:
 
-    GetFlowLogsIntegrationTemplateResponsePrivate(GetFlowLogsIntegrationTemplateResponse * const q);
+    explicit GetFlowLogsIntegrationTemplateResponsePrivate(GetFlowLogsIntegrationTemplateResponse * const q);
 
     void parseGetFlowLogsIntegrationTemplateResponse(QXmlStreamReader &xml);
 

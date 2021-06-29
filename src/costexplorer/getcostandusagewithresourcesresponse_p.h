@@ -31,7 +31,7 @@ class GetCostAndUsageWithResourcesResponsePrivate : public CostExplorerResponseP
 
 public:
 
-    GetCostAndUsageWithResourcesResponsePrivate(GetCostAndUsageWithResourcesResponse * const q);
+    explicit GetCostAndUsageWithResourcesResponsePrivate(GetCostAndUsageWithResourcesResponse * const q);
 
     void parseGetCostAndUsageWithResourcesResponse(QXmlStreamReader &xml);
 

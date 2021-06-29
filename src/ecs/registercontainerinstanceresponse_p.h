@@ -31,7 +31,7 @@ class RegisterContainerInstanceResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    RegisterContainerInstanceResponsePrivate(RegisterContainerInstanceResponse * const q);
+    explicit RegisterContainerInstanceResponsePrivate(RegisterContainerInstanceResponse * const q);
 
     void parseRegisterContainerInstanceResponse(QXmlStreamReader &xml);
 

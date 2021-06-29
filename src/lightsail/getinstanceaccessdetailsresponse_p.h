@@ -31,7 +31,7 @@ class GetInstanceAccessDetailsResponsePrivate : public LightsailResponsePrivate 
 
 public:
 
-    GetInstanceAccessDetailsResponsePrivate(GetInstanceAccessDetailsResponse * const q);
+    explicit GetInstanceAccessDetailsResponsePrivate(GetInstanceAccessDetailsResponse * const q);
 
     void parseGetInstanceAccessDetailsResponse(QXmlStreamReader &xml);
 

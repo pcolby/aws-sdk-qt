@@ -31,7 +31,7 @@ class CreateDataSourceFromRDSResponsePrivate : public MachineLearningResponsePri
 
 public:
 
-    CreateDataSourceFromRDSResponsePrivate(CreateDataSourceFromRDSResponse * const q);
+    explicit CreateDataSourceFromRDSResponsePrivate(CreateDataSourceFromRDSResponse * const q);
 
     void parseCreateDataSourceFromRDSResponse(QXmlStreamReader &xml);
 

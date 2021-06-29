@@ -29,7 +29,7 @@ class PersonalizeRuntimeResponsePrivate {
 
 public:
 
-    PersonalizeRuntimeResponsePrivate(PersonalizeRuntimeResponse * const q);
+    explicit PersonalizeRuntimeResponsePrivate(PersonalizeRuntimeResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

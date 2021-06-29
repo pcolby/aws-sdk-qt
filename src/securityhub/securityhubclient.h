@@ -143,7 +143,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    SecurityHubClient(
+    explicit SecurityHubClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -204,7 +204,7 @@ public slots:
 protected:
     /// @cond internal
     SecurityHubClientPrivate * const d_ptr; ///< Internal d-pointer.
-    SecurityHubClient(SecurityHubClientPrivate * const d);
+    explicit SecurityHubClient(SecurityHubClientPrivate * const d);
     /// @endcond
 
 private:

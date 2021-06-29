@@ -31,7 +31,7 @@ class GetFunctionConcurrencyResponsePrivate : public LambdaResponsePrivate {
 
 public:
 
-    GetFunctionConcurrencyResponsePrivate(GetFunctionConcurrencyResponse * const q);
+    explicit GetFunctionConcurrencyResponsePrivate(GetFunctionConcurrencyResponse * const q);
 
     void parseGetFunctionConcurrencyResponse(QXmlStreamReader &xml);
 

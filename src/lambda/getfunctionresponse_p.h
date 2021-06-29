@@ -31,7 +31,7 @@ class GetFunctionResponsePrivate : public LambdaResponsePrivate {
 
 public:
 
-    GetFunctionResponsePrivate(GetFunctionResponse * const q);
+    explicit GetFunctionResponsePrivate(GetFunctionResponse * const q);
 
     void parseGetFunctionResponse(QXmlStreamReader &xml);
 

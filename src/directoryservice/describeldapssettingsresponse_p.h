@@ -31,7 +31,7 @@ class DescribeLDAPSSettingsResponsePrivate : public DirectoryServiceResponsePriv
 
 public:
 
-    DescribeLDAPSSettingsResponsePrivate(DescribeLDAPSSettingsResponse * const q);
+    explicit DescribeLDAPSSettingsResponsePrivate(DescribeLDAPSSettingsResponse * const q);
 
     void parseDescribeLDAPSSettingsResponse(QXmlStreamReader &xml);
 

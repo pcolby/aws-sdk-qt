@@ -31,7 +31,7 @@ class GetRecordingConfigurationResponsePrivate : public IvsResponsePrivate {
 
 public:
 
-    GetRecordingConfigurationResponsePrivate(GetRecordingConfigurationResponse * const q);
+    explicit GetRecordingConfigurationResponsePrivate(GetRecordingConfigurationResponse * const q);
 
     void parseGetRecordingConfigurationResponse(QXmlStreamReader &xml);
 

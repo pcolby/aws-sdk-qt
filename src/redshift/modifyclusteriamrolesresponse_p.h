@@ -31,7 +31,7 @@ class ModifyClusterIamRolesResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    ModifyClusterIamRolesResponsePrivate(ModifyClusterIamRolesResponse * const q);
+    explicit ModifyClusterIamRolesResponsePrivate(ModifyClusterIamRolesResponse * const q);
 
     void parseModifyClusterIamRolesResponse(QXmlStreamReader &xml);
 

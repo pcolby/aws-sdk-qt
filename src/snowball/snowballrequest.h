@@ -84,7 +84,7 @@ public:
 protected:
     /// @cond internal
     SnowballRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    SnowballRequest(SnowballRequestPrivate * const d);
+    explicit SnowballRequest(SnowballRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

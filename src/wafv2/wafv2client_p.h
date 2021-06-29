@@ -30,7 +30,7 @@ class Wafv2Client;
 class Wafv2ClientPrivate {
 
 public:
-    Wafv2ClientPrivate(Wafv2Client * const q);
+    explicit Wafv2ClientPrivate(Wafv2Client * const q);
 
 protected:
     Wafv2Client * const q_ptr; ///< Internal q-pointer.

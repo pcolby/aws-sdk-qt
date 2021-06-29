@@ -31,7 +31,7 @@ class RegisterOnPremisesInstanceResponsePrivate : public CodeDeployResponsePriva
 
 public:
 
-    RegisterOnPremisesInstanceResponsePrivate(RegisterOnPremisesInstanceResponse * const q);
+    explicit RegisterOnPremisesInstanceResponsePrivate(RegisterOnPremisesInstanceResponse * const q);
 
     void parseRegisterOnPremisesInstanceResponse(QXmlStreamReader &xml);
 

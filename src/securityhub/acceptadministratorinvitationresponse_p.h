@@ -31,7 +31,7 @@ class AcceptAdministratorInvitationResponsePrivate : public SecurityHubResponseP
 
 public:
 
-    AcceptAdministratorInvitationResponsePrivate(AcceptAdministratorInvitationResponse * const q);
+    explicit AcceptAdministratorInvitationResponsePrivate(AcceptAdministratorInvitationResponse * const q);
 
     void parseAcceptAdministratorInvitationResponse(QXmlStreamReader &xml);
 

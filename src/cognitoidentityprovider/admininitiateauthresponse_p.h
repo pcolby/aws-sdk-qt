@@ -31,7 +31,7 @@ class AdminInitiateAuthResponsePrivate : public CognitoIdentityProviderResponseP
 
 public:
 
-    AdminInitiateAuthResponsePrivate(AdminInitiateAuthResponse * const q);
+    explicit AdminInitiateAuthResponsePrivate(AdminInitiateAuthResponse * const q);
 
     void parseAdminInitiateAuthResponse(QXmlStreamReader &xml);
 

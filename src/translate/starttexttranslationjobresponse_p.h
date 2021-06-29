@@ -31,7 +31,7 @@ class StartTextTranslationJobResponsePrivate : public TranslateResponsePrivate {
 
 public:
 
-    StartTextTranslationJobResponsePrivate(StartTextTranslationJobResponse * const q);
+    explicit StartTextTranslationJobResponsePrivate(StartTextTranslationJobResponse * const q);
 
     void parseStartTextTranslationJobResponse(QXmlStreamReader &xml);
 

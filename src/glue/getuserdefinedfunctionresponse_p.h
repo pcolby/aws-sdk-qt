@@ -31,7 +31,7 @@ class GetUserDefinedFunctionResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    GetUserDefinedFunctionResponsePrivate(GetUserDefinedFunctionResponse * const q);
+    explicit GetUserDefinedFunctionResponsePrivate(GetUserDefinedFunctionResponse * const q);
 
     void parseGetUserDefinedFunctionResponse(QXmlStreamReader &xml);
 

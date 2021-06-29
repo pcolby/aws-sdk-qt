@@ -31,7 +31,7 @@ class HeadObjectResponsePrivate : public S3ResponsePrivate {
 
 public:
 
-    HeadObjectResponsePrivate(HeadObjectResponse * const q);
+    explicit HeadObjectResponsePrivate(HeadObjectResponse * const q);
 
     void parseHeadObjectResponse(QXmlStreamReader &xml);
 

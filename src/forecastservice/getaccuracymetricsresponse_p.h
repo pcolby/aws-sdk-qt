@@ -31,7 +31,7 @@ class GetAccuracyMetricsResponsePrivate : public ForecastServiceResponsePrivate 
 
 public:
 
-    GetAccuracyMetricsResponsePrivate(GetAccuracyMetricsResponse * const q);
+    explicit GetAccuracyMetricsResponsePrivate(GetAccuracyMetricsResponse * const q);
 
     void parseGetAccuracyMetricsResponse(QXmlStreamReader &xml);
 

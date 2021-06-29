@@ -95,7 +95,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    EfsClient(
+    explicit EfsClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -132,7 +132,7 @@ public slots:
 protected:
     /// @cond internal
     EfsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    EfsClient(EfsClientPrivate * const d);
+    explicit EfsClient(EfsClientPrivate * const d);
     /// @endcond
 
 private:

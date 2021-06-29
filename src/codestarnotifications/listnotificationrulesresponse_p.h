@@ -31,7 +31,7 @@ class ListNotificationRulesResponsePrivate : public CodeStarNotificationsRespons
 
 public:
 
-    ListNotificationRulesResponsePrivate(ListNotificationRulesResponse * const q);
+    explicit ListNotificationRulesResponsePrivate(ListNotificationRulesResponse * const q);
 
     void parseListNotificationRulesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListLaunchPathsResponsePrivate : public ServiceCatalogResponsePrivate {
 
 public:
 
-    ListLaunchPathsResponsePrivate(ListLaunchPathsResponse * const q);
+    explicit ListLaunchPathsResponsePrivate(ListLaunchPathsResponse * const q);
 
     void parseListLaunchPathsResponse(QXmlStreamReader &xml);
 

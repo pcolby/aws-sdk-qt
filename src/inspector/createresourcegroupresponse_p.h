@@ -31,7 +31,7 @@ class CreateResourceGroupResponsePrivate : public InspectorResponsePrivate {
 
 public:
 
-    CreateResourceGroupResponsePrivate(CreateResourceGroupResponse * const q);
+    explicit CreateResourceGroupResponsePrivate(CreateResourceGroupResponse * const q);
 
     void parseCreateResourceGroupResponse(QXmlStreamReader &xml);
 

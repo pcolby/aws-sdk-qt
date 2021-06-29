@@ -31,7 +31,7 @@ class CloneReceiptRuleSetResponsePrivate : public SesResponsePrivate {
 
 public:
 
-    CloneReceiptRuleSetResponsePrivate(CloneReceiptRuleSetResponse * const q);
+    explicit CloneReceiptRuleSetResponsePrivate(CloneReceiptRuleSetResponse * const q);
 
     void parseCloneReceiptRuleSetResponse(QXmlStreamReader &xml);
 

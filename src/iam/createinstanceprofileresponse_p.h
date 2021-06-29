@@ -31,7 +31,7 @@ class CreateInstanceProfileResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    CreateInstanceProfileResponsePrivate(CreateInstanceProfileResponse * const q);
+    explicit CreateInstanceProfileResponsePrivate(CreateInstanceProfileResponse * const q);
 
     void parseCreateInstanceProfileResponse(QXmlStreamReader &xml);
 

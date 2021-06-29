@@ -31,7 +31,7 @@ class DeleteReplicationJobResponsePrivate : public SmsResponsePrivate {
 
 public:
 
-    DeleteReplicationJobResponsePrivate(DeleteReplicationJobResponse * const q);
+    explicit DeleteReplicationJobResponsePrivate(DeleteReplicationJobResponse * const q);
 
     void parseDeleteReplicationJobResponse(QXmlStreamReader &xml);
 

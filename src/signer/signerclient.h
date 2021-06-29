@@ -75,7 +75,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    signerClient(
+    explicit signerClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -102,7 +102,7 @@ public slots:
 protected:
     /// @cond internal
     signerClientPrivate * const d_ptr; ///< Internal d-pointer.
-    signerClient(signerClientPrivate * const d);
+    explicit signerClient(signerClientPrivate * const d);
     /// @endcond
 
 private:

@@ -31,7 +31,7 @@ class DescribeSnapshotsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeSnapshotsResponsePrivate(DescribeSnapshotsResponse * const q);
+    explicit DescribeSnapshotsResponsePrivate(DescribeSnapshotsResponse * const q);
 
     void parseDescribeSnapshotsResponse(QXmlStreamReader &xml);
 

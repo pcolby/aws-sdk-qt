@@ -31,7 +31,7 @@ class CreateQueryLoggingConfigResponsePrivate : public Route53ResponsePrivate {
 
 public:
 
-    CreateQueryLoggingConfigResponsePrivate(CreateQueryLoggingConfigResponse * const q);
+    explicit CreateQueryLoggingConfigResponsePrivate(CreateQueryLoggingConfigResponse * const q);
 
     void parseCreateQueryLoggingConfigResponse(QXmlStreamReader &xml);
 

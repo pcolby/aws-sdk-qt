@@ -31,7 +31,7 @@ class DescribeModelResponsePrivate : public LookoutforVisionResponsePrivate {
 
 public:
 
-    DescribeModelResponsePrivate(DescribeModelResponse * const q);
+    explicit DescribeModelResponsePrivate(DescribeModelResponse * const q);
 
     void parseDescribeModelResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateEnvironmentResponsePrivate : public ProtonResponsePrivate {
 
 public:
 
-    UpdateEnvironmentResponsePrivate(UpdateEnvironmentResponse * const q);
+    explicit UpdateEnvironmentResponsePrivate(UpdateEnvironmentResponse * const q);
 
     void parseUpdateEnvironmentResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class RequestSpotFleetResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    RequestSpotFleetResponsePrivate(RequestSpotFleetResponse * const q);
+    explicit RequestSpotFleetResponsePrivate(RequestSpotFleetResponse * const q);
 
     void parseRequestSpotFleetResponse(QXmlStreamReader &xml);
 

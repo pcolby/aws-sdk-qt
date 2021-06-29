@@ -31,7 +31,7 @@ class GetIntegrationResponseResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    GetIntegrationResponseResponsePrivate(GetIntegrationResponseResponse * const q);
+    explicit GetIntegrationResponseResponsePrivate(GetIntegrationResponseResponse * const q);
 
     void parseGetIntegrationResponseResponse(QXmlStreamReader &xml);
 

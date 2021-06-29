@@ -31,7 +31,7 @@ class DescribeProjectResponsePrivate : public IoT1ClickProjectsResponsePrivate {
 
 public:
 
-    DescribeProjectResponsePrivate(DescribeProjectResponse * const q);
+    explicit DescribeProjectResponsePrivate(DescribeProjectResponse * const q);
 
     void parseDescribeProjectResponse(QXmlStreamReader &xml);
 

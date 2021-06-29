@@ -31,7 +31,7 @@ class DeleteResourceServerResponsePrivate : public CognitoIdentityProviderRespon
 
 public:
 
-    DeleteResourceServerResponsePrivate(DeleteResourceServerResponse * const q);
+    explicit DeleteResourceServerResponsePrivate(DeleteResourceServerResponse * const q);
 
     void parseDeleteResourceServerResponse(QXmlStreamReader &xml);
 

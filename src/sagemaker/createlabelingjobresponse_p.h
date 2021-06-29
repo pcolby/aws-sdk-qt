@@ -31,7 +31,7 @@ class CreateLabelingJobResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    CreateLabelingJobResponsePrivate(CreateLabelingJobResponse * const q);
+    explicit CreateLabelingJobResponsePrivate(CreateLabelingJobResponse * const q);
 
     void parseCreateLabelingJobResponse(QXmlStreamReader &xml);
 

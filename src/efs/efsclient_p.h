@@ -30,7 +30,7 @@ class EfsClient;
 class EfsClientPrivate {
 
 public:
-    EfsClientPrivate(EfsClient * const q);
+    explicit EfsClientPrivate(EfsClient * const q);
 
 protected:
     EfsClient * const q_ptr; ///< Internal q-pointer.

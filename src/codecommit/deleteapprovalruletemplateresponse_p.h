@@ -31,7 +31,7 @@ class DeleteApprovalRuleTemplateResponsePrivate : public CodeCommitResponsePriva
 
 public:
 
-    DeleteApprovalRuleTemplateResponsePrivate(DeleteApprovalRuleTemplateResponse * const q);
+    explicit DeleteApprovalRuleTemplateResponsePrivate(DeleteApprovalRuleTemplateResponse * const q);
 
     void parseDeleteApprovalRuleTemplateResponse(QXmlStreamReader &xml);
 

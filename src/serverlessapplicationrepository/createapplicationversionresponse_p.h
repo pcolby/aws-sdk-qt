@@ -31,7 +31,7 @@ class CreateApplicationVersionResponsePrivate : public ServerlessApplicationRepo
 
 public:
 
-    CreateApplicationVersionResponsePrivate(CreateApplicationVersionResponse * const q);
+    explicit CreateApplicationVersionResponsePrivate(CreateApplicationVersionResponse * const q);
 
     void parseCreateApplicationVersionResponse(QXmlStreamReader &xml);
 

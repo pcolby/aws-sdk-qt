@@ -59,7 +59,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    AppIntegrationsServiceClient(
+    explicit AppIntegrationsServiceClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -78,7 +78,7 @@ public slots:
 protected:
     /// @cond internal
     AppIntegrationsServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
-    AppIntegrationsServiceClient(AppIntegrationsServiceClientPrivate * const d);
+    explicit AppIntegrationsServiceClient(AppIntegrationsServiceClientPrivate * const d);
     /// @endcond
 
 private:

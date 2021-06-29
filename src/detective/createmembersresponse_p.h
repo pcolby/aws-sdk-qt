@@ -31,7 +31,7 @@ class CreateMembersResponsePrivate : public DetectiveResponsePrivate {
 
 public:
 
-    CreateMembersResponsePrivate(CreateMembersResponse * const q);
+    explicit CreateMembersResponsePrivate(CreateMembersResponse * const q);
 
     void parseCreateMembersResponse(QXmlStreamReader &xml);
 

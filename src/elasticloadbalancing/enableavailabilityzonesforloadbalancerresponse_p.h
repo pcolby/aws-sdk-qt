@@ -31,7 +31,7 @@ class EnableAvailabilityZonesForLoadBalancerResponsePrivate : public ElasticLoad
 
 public:
 
-    EnableAvailabilityZonesForLoadBalancerResponsePrivate(EnableAvailabilityZonesForLoadBalancerResponse * const q);
+    explicit EnableAvailabilityZonesForLoadBalancerResponsePrivate(EnableAvailabilityZonesForLoadBalancerResponse * const q);
 
     void parseEnableAvailabilityZonesForLoadBalancerResponse(QXmlStreamReader &xml);
 

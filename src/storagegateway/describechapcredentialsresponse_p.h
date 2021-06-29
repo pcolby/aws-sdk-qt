@@ -31,7 +31,7 @@ class DescribeChapCredentialsResponsePrivate : public StorageGatewayResponsePriv
 
 public:
 
-    DescribeChapCredentialsResponsePrivate(DescribeChapCredentialsResponse * const q);
+    explicit DescribeChapCredentialsResponsePrivate(DescribeChapCredentialsResponse * const q);
 
     void parseDescribeChapCredentialsResponse(QXmlStreamReader &xml);
 

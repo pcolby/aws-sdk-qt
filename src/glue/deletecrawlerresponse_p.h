@@ -31,7 +31,7 @@ class DeleteCrawlerResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    DeleteCrawlerResponsePrivate(DeleteCrawlerResponse * const q);
+    explicit DeleteCrawlerResponsePrivate(DeleteCrawlerResponse * const q);
 
     void parseDeleteCrawlerResponse(QXmlStreamReader &xml);
 

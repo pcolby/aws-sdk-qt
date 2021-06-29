@@ -31,7 +31,7 @@ class DescribeComponentConfigurationResponsePrivate : public ApplicationInsights
 
 public:
 
-    DescribeComponentConfigurationResponsePrivate(DescribeComponentConfigurationResponse * const q);
+    explicit DescribeComponentConfigurationResponsePrivate(DescribeComponentConfigurationResponse * const q);
 
     void parseDescribeComponentConfigurationResponse(QXmlStreamReader &xml);
 

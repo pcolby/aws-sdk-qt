@@ -31,7 +31,7 @@ class ListEntityRecognizersResponsePrivate : public ComprehendResponsePrivate {
 
 public:
 
-    ListEntityRecognizersResponsePrivate(ListEntityRecognizersResponse * const q);
+    explicit ListEntityRecognizersResponsePrivate(ListEntityRecognizersResponse * const q);
 
     void parseListEntityRecognizersResponse(QXmlStreamReader &xml);
 

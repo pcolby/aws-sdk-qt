@@ -31,7 +31,7 @@ class CreateUseCaseResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    CreateUseCaseResponsePrivate(CreateUseCaseResponse * const q);
+    explicit CreateUseCaseResponsePrivate(CreateUseCaseResponse * const q);
 
     void parseCreateUseCaseResponse(QXmlStreamReader &xml);
 

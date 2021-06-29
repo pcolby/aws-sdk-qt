@@ -31,7 +31,7 @@ class DescribeTimeToLiveResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 
-    DescribeTimeToLiveResponsePrivate(DescribeTimeToLiveResponse * const q);
+    explicit DescribeTimeToLiveResponsePrivate(DescribeTimeToLiveResponse * const q);
 
     void parseDescribeTimeToLiveResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetRandomPasswordResponsePrivate : public SecretsManagerResponsePrivate {
 
 public:
 
-    GetRandomPasswordResponsePrivate(GetRandomPasswordResponse * const q);
+    explicit GetRandomPasswordResponsePrivate(GetRandomPasswordResponse * const q);
 
     void parseGetRandomPasswordResponse(QXmlStreamReader &xml);
 

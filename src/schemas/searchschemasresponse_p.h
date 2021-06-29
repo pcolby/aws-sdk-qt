@@ -31,7 +31,7 @@ class SearchSchemasResponsePrivate : public SchemasResponsePrivate {
 
 public:
 
-    SearchSchemasResponsePrivate(SearchSchemasResponse * const q);
+    explicit SearchSchemasResponsePrivate(SearchSchemasResponse * const q);
 
     void parseSearchSchemasResponse(QXmlStreamReader &xml);
 

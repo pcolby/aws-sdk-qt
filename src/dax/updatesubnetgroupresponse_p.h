@@ -31,7 +31,7 @@ class UpdateSubnetGroupResponsePrivate : public DaxResponsePrivate {
 
 public:
 
-    UpdateSubnetGroupResponsePrivate(UpdateSubnetGroupResponse * const q);
+    explicit UpdateSubnetGroupResponsePrivate(UpdateSubnetGroupResponse * const q);
 
     void parseUpdateSubnetGroupResponse(QXmlStreamReader &xml);
 

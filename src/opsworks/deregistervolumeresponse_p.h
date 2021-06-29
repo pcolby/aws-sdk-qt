@@ -31,7 +31,7 @@ class DeregisterVolumeResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    DeregisterVolumeResponsePrivate(DeregisterVolumeResponse * const q);
+    explicit DeregisterVolumeResponsePrivate(DeregisterVolumeResponse * const q);
 
     void parseDeregisterVolumeResponse(QXmlStreamReader &xml);
 

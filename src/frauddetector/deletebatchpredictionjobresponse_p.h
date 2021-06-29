@@ -31,7 +31,7 @@ class DeleteBatchPredictionJobResponsePrivate : public FraudDetectorResponsePriv
 
 public:
 
-    DeleteBatchPredictionJobResponsePrivate(DeleteBatchPredictionJobResponse * const q);
+    explicit DeleteBatchPredictionJobResponsePrivate(DeleteBatchPredictionJobResponse * const q);
 
     void parseDeleteBatchPredictionJobResponse(QXmlStreamReader &xml);
 

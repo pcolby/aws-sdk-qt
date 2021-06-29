@@ -31,7 +31,7 @@ class AuthorizeSnapshotAccessResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    AuthorizeSnapshotAccessResponsePrivate(AuthorizeSnapshotAccessResponse * const q);
+    explicit AuthorizeSnapshotAccessResponsePrivate(AuthorizeSnapshotAccessResponse * const q);
 
     void parseAuthorizeSnapshotAccessResponse(QXmlStreamReader &xml);
 

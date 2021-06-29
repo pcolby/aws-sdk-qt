@@ -29,7 +29,7 @@ class ManagedBlockchainResponsePrivate {
 
 public:
 
-    ManagedBlockchainResponsePrivate(ManagedBlockchainResponse * const q);
+    explicit ManagedBlockchainResponsePrivate(ManagedBlockchainResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

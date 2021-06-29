@@ -31,7 +31,7 @@ class DescribeAvailabilityZonesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeAvailabilityZonesResponsePrivate(DescribeAvailabilityZonesResponse * const q);
+    explicit DescribeAvailabilityZonesResponsePrivate(DescribeAvailabilityZonesResponse * const q);
 
     void parseDescribeAvailabilityZonesResponse(QXmlStreamReader &xml);
 

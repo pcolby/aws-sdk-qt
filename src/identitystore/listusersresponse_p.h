@@ -31,7 +31,7 @@ class ListUsersResponsePrivate : public IdentityStoreResponsePrivate {
 
 public:
 
-    ListUsersResponsePrivate(ListUsersResponse * const q);
+    explicit ListUsersResponsePrivate(ListUsersResponse * const q);
 
     void parseListUsersResponse(QXmlStreamReader &xml);
 

@@ -53,7 +53,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    TextractClient(
+    explicit TextractClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -69,7 +69,7 @@ public slots:
 protected:
     /// @cond internal
     TextractClientPrivate * const d_ptr; ///< Internal d-pointer.
-    TextractClient(TextractClientPrivate * const d);
+    explicit TextractClient(TextractClientPrivate * const d);
     /// @endcond
 
 private:

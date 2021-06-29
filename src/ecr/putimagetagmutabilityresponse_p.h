@@ -31,7 +31,7 @@ class PutImageTagMutabilityResponsePrivate : public EcrResponsePrivate {
 
 public:
 
-    PutImageTagMutabilityResponsePrivate(PutImageTagMutabilityResponse * const q);
+    explicit PutImageTagMutabilityResponsePrivate(PutImageTagMutabilityResponse * const q);
 
     void parsePutImageTagMutabilityResponse(QXmlStreamReader &xml);
 

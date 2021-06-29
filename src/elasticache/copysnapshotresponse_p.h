@@ -31,7 +31,7 @@ class CopySnapshotResponsePrivate : public ElastiCacheResponsePrivate {
 
 public:
 
-    CopySnapshotResponsePrivate(CopySnapshotResponse * const q);
+    explicit CopySnapshotResponsePrivate(CopySnapshotResponse * const q);
 
     void parseCopySnapshotResponse(QXmlStreamReader &xml);
 

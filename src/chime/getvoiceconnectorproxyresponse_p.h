@@ -31,7 +31,7 @@ class GetVoiceConnectorProxyResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    GetVoiceConnectorProxyResponsePrivate(GetVoiceConnectorProxyResponse * const q);
+    explicit GetVoiceConnectorProxyResponsePrivate(GetVoiceConnectorProxyResponse * const q);
 
     void parseGetVoiceConnectorProxyResponse(QXmlStreamReader &xml);
 

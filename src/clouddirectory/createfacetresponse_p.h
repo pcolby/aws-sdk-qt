@@ -31,7 +31,7 @@ class CreateFacetResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 
-    CreateFacetResponsePrivate(CreateFacetResponse * const q);
+    explicit CreateFacetResponsePrivate(CreateFacetResponse * const q);
 
     void parseCreateFacetResponse(QXmlStreamReader &xml);
 

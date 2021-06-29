@@ -31,7 +31,7 @@ class AddApplicationVpcConfigurationResponsePrivate : public KinesisAnalyticsV2R
 
 public:
 
-    AddApplicationVpcConfigurationResponsePrivate(AddApplicationVpcConfigurationResponse * const q);
+    explicit AddApplicationVpcConfigurationResponsePrivate(AddApplicationVpcConfigurationResponse * const q);
 
     void parseAddApplicationVpcConfigurationResponse(QXmlStreamReader &xml);
 

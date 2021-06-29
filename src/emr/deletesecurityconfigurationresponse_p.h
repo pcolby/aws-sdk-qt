@@ -31,7 +31,7 @@ class DeleteSecurityConfigurationResponsePrivate : public EmrResponsePrivate {
 
 public:
 
-    DeleteSecurityConfigurationResponsePrivate(DeleteSecurityConfigurationResponse * const q);
+    explicit DeleteSecurityConfigurationResponsePrivate(DeleteSecurityConfigurationResponse * const q);
 
     void parseDeleteSecurityConfigurationResponse(QXmlStreamReader &xml);
 

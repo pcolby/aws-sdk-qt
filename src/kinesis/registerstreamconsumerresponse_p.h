@@ -31,7 +31,7 @@ class RegisterStreamConsumerResponsePrivate : public KinesisResponsePrivate {
 
 public:
 
-    RegisterStreamConsumerResponsePrivate(RegisterStreamConsumerResponse * const q);
+    explicit RegisterStreamConsumerResponsePrivate(RegisterStreamConsumerResponse * const q);
 
     void parseRegisterStreamConsumerResponse(QXmlStreamReader &xml);
 

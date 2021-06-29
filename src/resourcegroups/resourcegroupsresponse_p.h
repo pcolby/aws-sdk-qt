@@ -29,7 +29,7 @@ class ResourceGroupsResponsePrivate {
 
 public:
 
-    ResourceGroupsResponsePrivate(ResourceGroupsResponse * const q);
+    explicit ResourceGroupsResponsePrivate(ResourceGroupsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

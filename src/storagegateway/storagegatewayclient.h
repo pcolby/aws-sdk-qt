@@ -219,7 +219,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    StorageGatewayClient(
+    explicit StorageGatewayClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -318,7 +318,7 @@ public slots:
 protected:
     /// @cond internal
     StorageGatewayClientPrivate * const d_ptr; ///< Internal d-pointer.
-    StorageGatewayClient(StorageGatewayClientPrivate * const d);
+    explicit StorageGatewayClient(StorageGatewayClientPrivate * const d);
     /// @endcond
 
 private:

@@ -31,7 +31,7 @@ class StopReplicationToReplicaResponsePrivate : public SecretsManagerResponsePri
 
 public:
 
-    StopReplicationToReplicaResponsePrivate(StopReplicationToReplicaResponse * const q);
+    explicit StopReplicationToReplicaResponsePrivate(StopReplicationToReplicaResponse * const q);
 
     void parseStopReplicationToReplicaResponse(QXmlStreamReader &xml);
 

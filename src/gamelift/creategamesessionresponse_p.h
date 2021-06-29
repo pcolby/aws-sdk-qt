@@ -31,7 +31,7 @@ class CreateGameSessionResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    CreateGameSessionResponsePrivate(CreateGameSessionResponse * const q);
+    explicit CreateGameSessionResponsePrivate(CreateGameSessionResponse * const q);
 
     void parseCreateGameSessionResponse(QXmlStreamReader &xml);
 

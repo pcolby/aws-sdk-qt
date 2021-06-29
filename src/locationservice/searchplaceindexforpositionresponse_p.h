@@ -31,7 +31,7 @@ class SearchPlaceIndexForPositionResponsePrivate : public LocationServiceRespons
 
 public:
 
-    SearchPlaceIndexForPositionResponsePrivate(SearchPlaceIndexForPositionResponse * const q);
+    explicit SearchPlaceIndexForPositionResponsePrivate(SearchPlaceIndexForPositionResponse * const q);
 
     void parseSearchPlaceIndexForPositionResponse(QXmlStreamReader &xml);
 

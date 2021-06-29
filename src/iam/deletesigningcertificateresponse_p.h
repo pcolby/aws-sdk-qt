@@ -31,7 +31,7 @@ class DeleteSigningCertificateResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    DeleteSigningCertificateResponsePrivate(DeleteSigningCertificateResponse * const q);
+    explicit DeleteSigningCertificateResponsePrivate(DeleteSigningCertificateResponse * const q);
 
     void parseDeleteSigningCertificateResponse(QXmlStreamReader &xml);
 

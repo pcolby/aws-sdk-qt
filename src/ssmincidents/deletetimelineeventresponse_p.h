@@ -31,7 +31,7 @@ class DeleteTimelineEventResponsePrivate : public SSMIncidentsResponsePrivate {
 
 public:
 
-    DeleteTimelineEventResponsePrivate(DeleteTimelineEventResponse * const q);
+    explicit DeleteTimelineEventResponsePrivate(DeleteTimelineEventResponse * const q);
 
     void parseDeleteTimelineEventResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteBackupVaultAccessPolicyResponsePrivate : public BackupResponsePrivat
 
 public:
 
-    DeleteBackupVaultAccessPolicyResponsePrivate(DeleteBackupVaultAccessPolicyResponse * const q);
+    explicit DeleteBackupVaultAccessPolicyResponsePrivate(DeleteBackupVaultAccessPolicyResponse * const q);
 
     void parseDeleteBackupVaultAccessPolicyResponse(QXmlStreamReader &xml);
 

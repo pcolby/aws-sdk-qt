@@ -31,7 +31,7 @@ class GetRepositoryEndpointResponsePrivate : public CodeArtifactResponsePrivate 
 
 public:
 
-    GetRepositoryEndpointResponsePrivate(GetRepositoryEndpointResponse * const q);
+    explicit GetRepositoryEndpointResponsePrivate(GetRepositoryEndpointResponse * const q);
 
     void parseGetRepositoryEndpointResponse(QXmlStreamReader &xml);
 

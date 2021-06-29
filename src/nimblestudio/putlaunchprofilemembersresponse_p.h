@@ -31,7 +31,7 @@ class PutLaunchProfileMembersResponsePrivate : public NimbleStudioResponsePrivat
 
 public:
 
-    PutLaunchProfileMembersResponsePrivate(PutLaunchProfileMembersResponse * const q);
+    explicit PutLaunchProfileMembersResponsePrivate(PutLaunchProfileMembersResponse * const q);
 
     void parsePutLaunchProfileMembersResponse(QXmlStreamReader &xml);
 

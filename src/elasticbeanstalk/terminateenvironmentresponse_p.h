@@ -31,7 +31,7 @@ class TerminateEnvironmentResponsePrivate : public ElasticBeanstalkResponsePriva
 
 public:
 
-    TerminateEnvironmentResponsePrivate(TerminateEnvironmentResponse * const q);
+    explicit TerminateEnvironmentResponsePrivate(TerminateEnvironmentResponse * const q);
 
     void parseTerminateEnvironmentResponse(QXmlStreamReader &xml);
 

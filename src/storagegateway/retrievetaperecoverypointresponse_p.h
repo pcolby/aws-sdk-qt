@@ -31,7 +31,7 @@ class RetrieveTapeRecoveryPointResponsePrivate : public StorageGatewayResponsePr
 
 public:
 
-    RetrieveTapeRecoveryPointResponsePrivate(RetrieveTapeRecoveryPointResponse * const q);
+    explicit RetrieveTapeRecoveryPointResponsePrivate(RetrieveTapeRecoveryPointResponse * const q);
 
     void parseRetrieveTapeRecoveryPointResponse(QXmlStreamReader &xml);
 

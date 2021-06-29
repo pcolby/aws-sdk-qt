@@ -31,7 +31,7 @@ class JoinDomainResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 
-    JoinDomainResponsePrivate(JoinDomainResponse * const q);
+    explicit JoinDomainResponsePrivate(JoinDomainResponse * const q);
 
     void parseJoinDomainResponse(QXmlStreamReader &xml);
 

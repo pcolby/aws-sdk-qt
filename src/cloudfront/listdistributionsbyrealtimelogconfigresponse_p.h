@@ -31,7 +31,7 @@ class ListDistributionsByRealtimeLogConfigResponsePrivate : public CloudFrontRes
 
 public:
 
-    ListDistributionsByRealtimeLogConfigResponsePrivate(ListDistributionsByRealtimeLogConfigResponse * const q);
+    explicit ListDistributionsByRealtimeLogConfigResponsePrivate(ListDistributionsByRealtimeLogConfigResponse * const q);
 
     void parseListDistributionsByRealtimeLogConfigResponse(QXmlStreamReader &xml);
 

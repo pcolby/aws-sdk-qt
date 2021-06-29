@@ -31,7 +31,7 @@ class ListInfrastructureConfigurationsResponsePrivate : public imagebuilderRespo
 
 public:
 
-    ListInfrastructureConfigurationsResponsePrivate(ListInfrastructureConfigurationsResponse * const q);
+    explicit ListInfrastructureConfigurationsResponsePrivate(ListInfrastructureConfigurationsResponse * const q);
 
     void parseListInfrastructureConfigurationsResponse(QXmlStreamReader &xml);
 

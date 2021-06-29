@@ -31,7 +31,7 @@ class ListEmailTemplatesResponsePrivate : public Sesv2ResponsePrivate {
 
 public:
 
-    ListEmailTemplatesResponsePrivate(ListEmailTemplatesResponse * const q);
+    explicit ListEmailTemplatesResponsePrivate(ListEmailTemplatesResponse * const q);
 
     void parseListEmailTemplatesResponse(QXmlStreamReader &xml);
 

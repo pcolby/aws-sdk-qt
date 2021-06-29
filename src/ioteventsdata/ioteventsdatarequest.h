@@ -70,7 +70,7 @@ public:
 protected:
     /// @cond internal
     IoTEventsDataRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    IoTEventsDataRequest(IoTEventsDataRequestPrivate * const d);
+    explicit IoTEventsDataRequest(IoTEventsDataRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

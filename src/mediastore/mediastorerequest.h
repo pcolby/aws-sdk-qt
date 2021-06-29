@@ -80,7 +80,7 @@ public:
 protected:
     /// @cond internal
     MediaStoreRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    MediaStoreRequest(MediaStoreRequestPrivate * const d);
+    explicit MediaStoreRequest(MediaStoreRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

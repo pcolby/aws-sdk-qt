@@ -31,7 +31,7 @@ class ListLocationsResponsePrivate : public DataSyncResponsePrivate {
 
 public:
 
-    ListLocationsResponsePrivate(ListLocationsResponse * const q);
+    explicit ListLocationsResponsePrivate(ListLocationsResponse * const q);
 
     void parseListLocationsResponse(QXmlStreamReader &xml);
 

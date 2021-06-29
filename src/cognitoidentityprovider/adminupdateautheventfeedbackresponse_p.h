@@ -31,7 +31,7 @@ class AdminUpdateAuthEventFeedbackResponsePrivate : public CognitoIdentityProvid
 
 public:
 
-    AdminUpdateAuthEventFeedbackResponsePrivate(AdminUpdateAuthEventFeedbackResponse * const q);
+    explicit AdminUpdateAuthEventFeedbackResponsePrivate(AdminUpdateAuthEventFeedbackResponse * const q);
 
     void parseAdminUpdateAuthEventFeedbackResponse(QXmlStreamReader &xml);
 

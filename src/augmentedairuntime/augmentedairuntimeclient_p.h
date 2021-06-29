@@ -30,7 +30,7 @@ class AugmentedAIRuntimeClient;
 class AugmentedAIRuntimeClientPrivate {
 
 public:
-    AugmentedAIRuntimeClientPrivate(AugmentedAIRuntimeClient * const q);
+    explicit AugmentedAIRuntimeClientPrivate(AugmentedAIRuntimeClient * const q);
 
 protected:
     AugmentedAIRuntimeClient * const q_ptr; ///< Internal q-pointer.

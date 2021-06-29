@@ -29,7 +29,7 @@ class LexModelBuildingServiceResponsePrivate {
 
 public:
 
-    LexModelBuildingServiceResponsePrivate(LexModelBuildingServiceResponse * const q);
+    explicit LexModelBuildingServiceResponsePrivate(LexModelBuildingServiceResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

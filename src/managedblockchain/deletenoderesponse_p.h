@@ -31,7 +31,7 @@ class DeleteNodeResponsePrivate : public ManagedBlockchainResponsePrivate {
 
 public:
 
-    DeleteNodeResponsePrivate(DeleteNodeResponse * const q);
+    explicit DeleteNodeResponsePrivate(DeleteNodeResponse * const q);
 
     void parseDeleteNodeResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class SendHeartbeatResponsePrivate : public SagemakerEdgeManagerResponsePrivate 
 
 public:
 
-    SendHeartbeatResponsePrivate(SendHeartbeatResponse * const q);
+    explicit SendHeartbeatResponsePrivate(SendHeartbeatResponse * const q);
 
     void parseSendHeartbeatResponse(QXmlStreamReader &xml);
 

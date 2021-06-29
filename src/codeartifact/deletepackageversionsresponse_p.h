@@ -31,7 +31,7 @@ class DeletePackageVersionsResponsePrivate : public CodeArtifactResponsePrivate 
 
 public:
 
-    DeletePackageVersionsResponsePrivate(DeletePackageVersionsResponse * const q);
+    explicit DeletePackageVersionsResponsePrivate(DeletePackageVersionsResponse * const q);
 
     void parseDeletePackageVersionsResponse(QXmlStreamReader &xml);
 

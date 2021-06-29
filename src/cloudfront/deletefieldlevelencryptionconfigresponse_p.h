@@ -31,7 +31,7 @@ class DeleteFieldLevelEncryptionConfigResponsePrivate : public CloudFrontRespons
 
 public:
 
-    DeleteFieldLevelEncryptionConfigResponsePrivate(DeleteFieldLevelEncryptionConfigResponse * const q);
+    explicit DeleteFieldLevelEncryptionConfigResponsePrivate(DeleteFieldLevelEncryptionConfigResponse * const q);
 
     void parseDeleteFieldLevelEncryptionConfigResponse(QXmlStreamReader &xml);
 

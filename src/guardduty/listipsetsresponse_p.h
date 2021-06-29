@@ -31,7 +31,7 @@ class ListIPSetsResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 
-    ListIPSetsResponsePrivate(ListIPSetsResponse * const q);
+    explicit ListIPSetsResponsePrivate(ListIPSetsResponse * const q);
 
     void parseListIPSetsResponse(QXmlStreamReader &xml);
 

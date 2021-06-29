@@ -31,7 +31,7 @@ class ListOpsItemEventsResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    ListOpsItemEventsResponsePrivate(ListOpsItemEventsResponse * const q);
+    explicit ListOpsItemEventsResponsePrivate(ListOpsItemEventsResponse * const q);
 
     void parseListOpsItemEventsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListTagsForResourcesResponsePrivate : public Route53ResponsePrivate {
 
 public:
 
-    ListTagsForResourcesResponsePrivate(ListTagsForResourcesResponse * const q);
+    explicit ListTagsForResourcesResponsePrivate(ListTagsForResourcesResponse * const q);
 
     void parseListTagsForResourcesResponse(QXmlStreamReader &xml);
 

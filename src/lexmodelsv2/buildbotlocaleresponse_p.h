@@ -31,7 +31,7 @@ class BuildBotLocaleResponsePrivate : public LexModelsV2ResponsePrivate {
 
 public:
 
-    BuildBotLocaleResponsePrivate(BuildBotLocaleResponse * const q);
+    explicit BuildBotLocaleResponsePrivate(BuildBotLocaleResponse * const q);
 
     void parseBuildBotLocaleResponse(QXmlStreamReader &xml);
 

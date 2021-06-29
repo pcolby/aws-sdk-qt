@@ -98,7 +98,7 @@ public:
 protected:
     /// @cond internal
     CodePipelineRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    CodePipelineRequest(CodePipelineRequestPrivate * const d);
+    explicit CodePipelineRequest(CodePipelineRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

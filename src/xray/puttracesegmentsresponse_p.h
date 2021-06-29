@@ -31,7 +31,7 @@ class PutTraceSegmentsResponsePrivate : public XRayResponsePrivate {
 
 public:
 
-    PutTraceSegmentsResponsePrivate(PutTraceSegmentsResponse * const q);
+    explicit PutTraceSegmentsResponsePrivate(PutTraceSegmentsResponse * const q);
 
     void parsePutTraceSegmentsResponse(QXmlStreamReader &xml);
 

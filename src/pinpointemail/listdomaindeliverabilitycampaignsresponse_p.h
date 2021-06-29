@@ -31,7 +31,7 @@ class ListDomainDeliverabilityCampaignsResponsePrivate : public PinpointEmailRes
 
 public:
 
-    ListDomainDeliverabilityCampaignsResponsePrivate(ListDomainDeliverabilityCampaignsResponse * const q);
+    explicit ListDomainDeliverabilityCampaignsResponsePrivate(ListDomainDeliverabilityCampaignsResponse * const q);
 
     void parseListDomainDeliverabilityCampaignsResponse(QXmlStreamReader &xml);
 

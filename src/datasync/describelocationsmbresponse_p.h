@@ -31,7 +31,7 @@ class DescribeLocationSmbResponsePrivate : public DataSyncResponsePrivate {
 
 public:
 
-    DescribeLocationSmbResponsePrivate(DescribeLocationSmbResponse * const q);
+    explicit DescribeLocationSmbResponsePrivate(DescribeLocationSmbResponse * const q);
 
     void parseDescribeLocationSmbResponse(QXmlStreamReader &xml);
 

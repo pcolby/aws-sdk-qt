@@ -29,7 +29,7 @@ class IvsResponsePrivate {
 
 public:
 
-    IvsResponsePrivate(IvsResponse * const q);
+    explicit IvsResponsePrivate(IvsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

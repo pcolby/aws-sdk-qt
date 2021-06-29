@@ -31,7 +31,7 @@ class UpdateServerResponsePrivate : public TransferResponsePrivate {
 
 public:
 
-    UpdateServerResponsePrivate(UpdateServerResponse * const q);
+    explicit UpdateServerResponsePrivate(UpdateServerResponse * const q);
 
     void parseUpdateServerResponse(QXmlStreamReader &xml);
 

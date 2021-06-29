@@ -31,7 +31,7 @@ class AddRoleToDBInstanceResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    AddRoleToDBInstanceResponsePrivate(AddRoleToDBInstanceResponse * const q);
+    explicit AddRoleToDBInstanceResponsePrivate(AddRoleToDBInstanceResponse * const q);
 
     void parseAddRoleToDBInstanceResponse(QXmlStreamReader &xml);
 

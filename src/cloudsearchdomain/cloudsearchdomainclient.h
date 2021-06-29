@@ -47,7 +47,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    CloudSearchDomainClient(
+    explicit CloudSearchDomainClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -60,7 +60,7 @@ public slots:
 protected:
     /// @cond internal
     CloudSearchDomainClientPrivate * const d_ptr; ///< Internal d-pointer.
-    CloudSearchDomainClient(CloudSearchDomainClientPrivate * const d);
+    explicit CloudSearchDomainClient(CloudSearchDomainClientPrivate * const d);
     /// @endcond
 
 private:

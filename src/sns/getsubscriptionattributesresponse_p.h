@@ -31,7 +31,7 @@ class GetSubscriptionAttributesResponsePrivate : public SnsResponsePrivate {
 
 public:
 
-    GetSubscriptionAttributesResponsePrivate(GetSubscriptionAttributesResponse * const q);
+    explicit GetSubscriptionAttributesResponsePrivate(GetSubscriptionAttributesResponse * const q);
 
     void parseGetSubscriptionAttributesResponse(QXmlStreamReader &xml);
 

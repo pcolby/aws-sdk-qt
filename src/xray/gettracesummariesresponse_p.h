@@ -31,7 +31,7 @@ class GetTraceSummariesResponsePrivate : public XRayResponsePrivate {
 
 public:
 
-    GetTraceSummariesResponsePrivate(GetTraceSummariesResponse * const q);
+    explicit GetTraceSummariesResponsePrivate(GetTraceSummariesResponse * const q);
 
     void parseGetTraceSummariesResponse(QXmlStreamReader &xml);
 

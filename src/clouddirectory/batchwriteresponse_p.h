@@ -31,7 +31,7 @@ class BatchWriteResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 
-    BatchWriteResponsePrivate(BatchWriteResponse * const q);
+    explicit BatchWriteResponsePrivate(BatchWriteResponse * const q);
 
     void parseBatchWriteResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListMeshesResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 
-    ListMeshesResponsePrivate(ListMeshesResponse * const q);
+    explicit ListMeshesResponsePrivate(ListMeshesResponse * const q);
 
     void parseListMeshesResponse(QXmlStreamReader &xml);
 

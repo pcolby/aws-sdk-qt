@@ -31,7 +31,7 @@ class ListHapgsResponsePrivate : public CloudHSMResponsePrivate {
 
 public:
 
-    ListHapgsResponsePrivate(ListHapgsResponse * const q);
+    explicit ListHapgsResponsePrivate(ListHapgsResponse * const q);
 
     void parseListHapgsResponse(QXmlStreamReader &xml);
 

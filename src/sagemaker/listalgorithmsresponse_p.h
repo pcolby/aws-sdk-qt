@@ -31,7 +31,7 @@ class ListAlgorithmsResponsePrivate : public SageMakerResponsePrivate {
 
 public:
 
-    ListAlgorithmsResponsePrivate(ListAlgorithmsResponse * const q);
+    explicit ListAlgorithmsResponsePrivate(ListAlgorithmsResponse * const q);
 
     void parseListAlgorithmsResponse(QXmlStreamReader &xml);
 

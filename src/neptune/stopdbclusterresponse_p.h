@@ -31,7 +31,7 @@ class StopDBClusterResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 
-    StopDBClusterResponsePrivate(StopDBClusterResponse * const q);
+    explicit StopDBClusterResponsePrivate(StopDBClusterResponse * const q);
 
     void parseStopDBClusterResponse(QXmlStreamReader &xml);
 

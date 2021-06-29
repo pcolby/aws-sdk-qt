@@ -31,7 +31,7 @@ class ListDeviceInstancesResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    ListDeviceInstancesResponsePrivate(ListDeviceInstancesResponse * const q);
+    explicit ListDeviceInstancesResponsePrivate(ListDeviceInstancesResponse * const q);
 
     void parseListDeviceInstancesResponse(QXmlStreamReader &xml);
 

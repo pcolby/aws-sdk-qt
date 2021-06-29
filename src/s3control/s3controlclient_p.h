@@ -30,7 +30,7 @@ class S3ControlClient;
 class S3ControlClientPrivate {
 
 public:
-    S3ControlClientPrivate(S3ControlClient * const q);
+    explicit S3ControlClientPrivate(S3ControlClient * const q);
 
 protected:
     S3ControlClient * const q_ptr; ///< Internal q-pointer.

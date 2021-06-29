@@ -31,7 +31,7 @@ class GetItemResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 
-    GetItemResponsePrivate(GetItemResponse * const q);
+    explicit GetItemResponsePrivate(GetItemResponse * const q);
 
     void parseGetItemResponse(QXmlStreamReader &xml);
 

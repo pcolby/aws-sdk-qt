@@ -30,7 +30,7 @@ class LookoutMetricsClient;
 class LookoutMetricsClientPrivate {
 
 public:
-    LookoutMetricsClientPrivate(LookoutMetricsClient * const q);
+    explicit LookoutMetricsClientPrivate(LookoutMetricsClient * const q);
 
 protected:
     LookoutMetricsClient * const q_ptr; ///< Internal q-pointer.

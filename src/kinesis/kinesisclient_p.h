@@ -30,7 +30,7 @@ class KinesisClient;
 class KinesisClientPrivate {
 
 public:
-    KinesisClientPrivate(KinesisClient * const q);
+    explicit KinesisClientPrivate(KinesisClient * const q);
 
 protected:
     KinesisClient * const q_ptr; ///< Internal q-pointer.

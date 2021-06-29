@@ -31,7 +31,7 @@ class SubmitTaskStateChangeResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    SubmitTaskStateChangeResponsePrivate(SubmitTaskStateChangeResponse * const q);
+    explicit SubmitTaskStateChangeResponsePrivate(SubmitTaskStateChangeResponse * const q);
 
     void parseSubmitTaskStateChangeResponse(QXmlStreamReader &xml);
 

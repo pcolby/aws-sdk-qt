@@ -31,7 +31,7 @@ class DeleteServiceActionResponsePrivate : public ServiceCatalogResponsePrivate 
 
 public:
 
-    DeleteServiceActionResponsePrivate(DeleteServiceActionResponse * const q);
+    explicit DeleteServiceActionResponsePrivate(DeleteServiceActionResponse * const q);
 
     void parseDeleteServiceActionResponse(QXmlStreamReader &xml);
 

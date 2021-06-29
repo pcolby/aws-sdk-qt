@@ -31,7 +31,7 @@ class AcceptHandshakeResponsePrivate : public OrganizationsResponsePrivate {
 
 public:
 
-    AcceptHandshakeResponsePrivate(AcceptHandshakeResponse * const q);
+    explicit AcceptHandshakeResponsePrivate(AcceptHandshakeResponse * const q);
 
     void parseAcceptHandshakeResponse(QXmlStreamReader &xml);
 

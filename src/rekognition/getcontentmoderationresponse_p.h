@@ -31,7 +31,7 @@ class GetContentModerationResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 
-    GetContentModerationResponsePrivate(GetContentModerationResponse * const q);
+    explicit GetContentModerationResponsePrivate(GetContentModerationResponse * const q);
 
     void parseGetContentModerationResponse(QXmlStreamReader &xml);
 

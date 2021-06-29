@@ -31,7 +31,7 @@ class CreateDistributionConfigurationResponsePrivate : public imagebuilderRespon
 
 public:
 
-    CreateDistributionConfigurationResponsePrivate(CreateDistributionConfigurationResponse * const q);
+    explicit CreateDistributionConfigurationResponsePrivate(CreateDistributionConfigurationResponse * const q);
 
     void parseCreateDistributionConfigurationResponse(QXmlStreamReader &xml);
 

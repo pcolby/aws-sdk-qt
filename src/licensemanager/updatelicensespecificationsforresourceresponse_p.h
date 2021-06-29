@@ -31,7 +31,7 @@ class UpdateLicenseSpecificationsForResourceResponsePrivate : public LicenseMana
 
 public:
 
-    UpdateLicenseSpecificationsForResourceResponsePrivate(UpdateLicenseSpecificationsForResourceResponse * const q);
+    explicit UpdateLicenseSpecificationsForResourceResponsePrivate(UpdateLicenseSpecificationsForResourceResponse * const q);
 
     void parseUpdateLicenseSpecificationsForResourceResponse(QXmlStreamReader &xml);
 

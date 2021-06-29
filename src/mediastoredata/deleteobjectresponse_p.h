@@ -31,7 +31,7 @@ class DeleteObjectResponsePrivate : public MediaStoreDataResponsePrivate {
 
 public:
 
-    DeleteObjectResponsePrivate(DeleteObjectResponse * const q);
+    explicit DeleteObjectResponsePrivate(DeleteObjectResponse * const q);
 
     void parseDeleteObjectResponse(QXmlStreamReader &xml);
 

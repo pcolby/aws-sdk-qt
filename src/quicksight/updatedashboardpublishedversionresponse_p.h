@@ -31,7 +31,7 @@ class UpdateDashboardPublishedVersionResponsePrivate : public QuickSightResponse
 
 public:
 
-    UpdateDashboardPublishedVersionResponsePrivate(UpdateDashboardPublishedVersionResponse * const q);
+    explicit UpdateDashboardPublishedVersionResponsePrivate(UpdateDashboardPublishedVersionResponse * const q);
 
     void parseUpdateDashboardPublishedVersionResponse(QXmlStreamReader &xml);
 

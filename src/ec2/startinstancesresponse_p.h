@@ -31,7 +31,7 @@ class StartInstancesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    StartInstancesResponsePrivate(StartInstancesResponse * const q);
+    explicit StartInstancesResponsePrivate(StartInstancesResponse * const q);
 
     void parseStartInstancesResponse(QXmlStreamReader &xml);
 

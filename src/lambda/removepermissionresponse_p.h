@@ -31,7 +31,7 @@ class RemovePermissionResponsePrivate : public LambdaResponsePrivate {
 
 public:
 
-    RemovePermissionResponsePrivate(RemovePermissionResponse * const q);
+    explicit RemovePermissionResponsePrivate(RemovePermissionResponse * const q);
 
     void parseRemovePermissionResponse(QXmlStreamReader &xml);
 

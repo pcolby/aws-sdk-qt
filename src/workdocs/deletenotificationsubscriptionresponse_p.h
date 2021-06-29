@@ -31,7 +31,7 @@ class DeleteNotificationSubscriptionResponsePrivate : public WorkDocsResponsePri
 
 public:
 
-    DeleteNotificationSubscriptionResponsePrivate(DeleteNotificationSubscriptionResponse * const q);
+    explicit DeleteNotificationSubscriptionResponsePrivate(DeleteNotificationSubscriptionResponse * const q);
 
     void parseDeleteNotificationSubscriptionResponse(QXmlStreamReader &xml);
 

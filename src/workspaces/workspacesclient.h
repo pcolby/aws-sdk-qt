@@ -147,7 +147,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    WorkSpacesClient(
+    explicit WorkSpacesClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -210,7 +210,7 @@ public slots:
 protected:
     /// @cond internal
     WorkSpacesClientPrivate * const d_ptr; ///< Internal d-pointer.
-    WorkSpacesClient(WorkSpacesClientPrivate * const d);
+    explicit WorkSpacesClient(WorkSpacesClientPrivate * const d);
     /// @endcond
 
 private:

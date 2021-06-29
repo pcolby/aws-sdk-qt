@@ -31,7 +31,7 @@ class UpdateCoreDefinitionResponsePrivate : public GreengrassResponsePrivate {
 
 public:
 
-    UpdateCoreDefinitionResponsePrivate(UpdateCoreDefinitionResponse * const q);
+    explicit UpdateCoreDefinitionResponsePrivate(UpdateCoreDefinitionResponse * const q);
 
     void parseUpdateCoreDefinitionResponse(QXmlStreamReader &xml);
 

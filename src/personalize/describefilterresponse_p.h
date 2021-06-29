@@ -31,7 +31,7 @@ class DescribeFilterResponsePrivate : public PersonalizeResponsePrivate {
 
 public:
 
-    DescribeFilterResponsePrivate(DescribeFilterResponse * const q);
+    explicit DescribeFilterResponsePrivate(DescribeFilterResponse * const q);
 
     void parseDescribeFilterResponse(QXmlStreamReader &xml);
 

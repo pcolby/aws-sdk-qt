@@ -31,7 +31,7 @@ class PutAlarmResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    PutAlarmResponsePrivate(PutAlarmResponse * const q);
+    explicit PutAlarmResponsePrivate(PutAlarmResponse * const q);
 
     void parsePutAlarmResponse(QXmlStreamReader &xml);
 

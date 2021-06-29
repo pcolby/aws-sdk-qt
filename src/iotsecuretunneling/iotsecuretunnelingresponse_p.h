@@ -29,7 +29,7 @@ class IoTSecureTunnelingResponsePrivate {
 
 public:
 
-    IoTSecureTunnelingResponsePrivate(IoTSecureTunnelingResponse * const q);
+    explicit IoTSecureTunnelingResponsePrivate(IoTSecureTunnelingResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

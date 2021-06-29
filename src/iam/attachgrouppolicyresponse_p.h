@@ -31,7 +31,7 @@ class AttachGroupPolicyResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    AttachGroupPolicyResponsePrivate(AttachGroupPolicyResponse * const q);
+    explicit AttachGroupPolicyResponsePrivate(AttachGroupPolicyResponse * const q);
 
     void parseAttachGroupPolicyResponse(QXmlStreamReader &xml);
 

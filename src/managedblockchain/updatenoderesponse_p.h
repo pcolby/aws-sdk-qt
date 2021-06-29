@@ -31,7 +31,7 @@ class UpdateNodeResponsePrivate : public ManagedBlockchainResponsePrivate {
 
 public:
 
-    UpdateNodeResponsePrivate(UpdateNodeResponse * const q);
+    explicit UpdateNodeResponsePrivate(UpdateNodeResponse * const q);
 
     void parseUpdateNodeResponse(QXmlStreamReader &xml);
 

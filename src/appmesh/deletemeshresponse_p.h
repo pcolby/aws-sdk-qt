@@ -31,7 +31,7 @@ class DeleteMeshResponsePrivate : public AppMeshResponsePrivate {
 
 public:
 
-    DeleteMeshResponsePrivate(DeleteMeshResponse * const q);
+    explicit DeleteMeshResponsePrivate(DeleteMeshResponse * const q);
 
     void parseDeleteMeshResponse(QXmlStreamReader &xml);
 

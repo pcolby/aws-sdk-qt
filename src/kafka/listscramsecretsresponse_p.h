@@ -31,7 +31,7 @@ class ListScramSecretsResponsePrivate : public KafkaResponsePrivate {
 
 public:
 
-    ListScramSecretsResponsePrivate(ListScramSecretsResponse * const q);
+    explicit ListScramSecretsResponsePrivate(ListScramSecretsResponse * const q);
 
     void parseListScramSecretsResponse(QXmlStreamReader &xml);
 

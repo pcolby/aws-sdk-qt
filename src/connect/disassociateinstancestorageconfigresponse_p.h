@@ -31,7 +31,7 @@ class DisassociateInstanceStorageConfigResponsePrivate : public ConnectResponseP
 
 public:
 
-    DisassociateInstanceStorageConfigResponsePrivate(DisassociateInstanceStorageConfigResponse * const q);
+    explicit DisassociateInstanceStorageConfigResponsePrivate(DisassociateInstanceStorageConfigResponse * const q);
 
     void parseDisassociateInstanceStorageConfigResponse(QXmlStreamReader &xml);
 

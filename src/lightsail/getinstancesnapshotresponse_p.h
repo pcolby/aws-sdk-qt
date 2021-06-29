@@ -31,7 +31,7 @@ class GetInstanceSnapshotResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    GetInstanceSnapshotResponsePrivate(GetInstanceSnapshotResponse * const q);
+    explicit GetInstanceSnapshotResponsePrivate(GetInstanceSnapshotResponse * const q);
 
     void parseGetInstanceSnapshotResponse(QXmlStreamReader &xml);
 

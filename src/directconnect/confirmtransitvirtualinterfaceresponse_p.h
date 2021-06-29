@@ -31,7 +31,7 @@ class ConfirmTransitVirtualInterfaceResponsePrivate : public DirectConnectRespon
 
 public:
 
-    ConfirmTransitVirtualInterfaceResponsePrivate(ConfirmTransitVirtualInterfaceResponse * const q);
+    explicit ConfirmTransitVirtualInterfaceResponsePrivate(ConfirmTransitVirtualInterfaceResponse * const q);
 
     void parseConfirmTransitVirtualInterfaceResponse(QXmlStreamReader &xml);
 

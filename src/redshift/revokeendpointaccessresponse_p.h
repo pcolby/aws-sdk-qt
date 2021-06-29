@@ -31,7 +31,7 @@ class RevokeEndpointAccessResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    RevokeEndpointAccessResponsePrivate(RevokeEndpointAccessResponse * const q);
+    explicit RevokeEndpointAccessResponsePrivate(RevokeEndpointAccessResponse * const q);
 
     void parseRevokeEndpointAccessResponse(QXmlStreamReader &xml);
 

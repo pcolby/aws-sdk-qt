@@ -30,7 +30,7 @@ class AppStreamClient;
 class AppStreamClientPrivate {
 
 public:
-    AppStreamClientPrivate(AppStreamClient * const q);
+    explicit AppStreamClientPrivate(AppStreamClient * const q);
 
 protected:
     AppStreamClient * const q_ptr; ///< Internal q-pointer.

@@ -30,7 +30,7 @@ class DaxClient;
 class DaxClientPrivate {
 
 public:
-    DaxClientPrivate(DaxClient * const q);
+    explicit DaxClientPrivate(DaxClient * const q);
 
 protected:
     DaxClient * const q_ptr; ///< Internal q-pointer.

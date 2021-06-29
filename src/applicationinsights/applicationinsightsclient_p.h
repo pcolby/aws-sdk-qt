@@ -30,7 +30,7 @@ class ApplicationInsightsClient;
 class ApplicationInsightsClientPrivate {
 
 public:
-    ApplicationInsightsClientPrivate(ApplicationInsightsClient * const q);
+    explicit ApplicationInsightsClientPrivate(ApplicationInsightsClient * const q);
 
 protected:
     ApplicationInsightsClient * const q_ptr; ///< Internal q-pointer.

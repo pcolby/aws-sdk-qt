@@ -31,7 +31,7 @@ class DeleteFunctionCodeSigningConfigResponsePrivate : public LambdaResponsePriv
 
 public:
 
-    DeleteFunctionCodeSigningConfigResponsePrivate(DeleteFunctionCodeSigningConfigResponse * const q);
+    explicit DeleteFunctionCodeSigningConfigResponsePrivate(DeleteFunctionCodeSigningConfigResponse * const q);
 
     void parseDeleteFunctionCodeSigningConfigResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetBootstrapBrokersResponsePrivate : public KafkaResponsePrivate {
 
 public:
 
-    GetBootstrapBrokersResponsePrivate(GetBootstrapBrokersResponse * const q);
+    explicit GetBootstrapBrokersResponsePrivate(GetBootstrapBrokersResponse * const q);
 
     void parseGetBootstrapBrokersResponse(QXmlStreamReader &xml);
 

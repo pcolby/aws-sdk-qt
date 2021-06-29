@@ -29,7 +29,7 @@ class SupportResponsePrivate {
 
 public:
 
-    SupportResponsePrivate(SupportResponse * const q);
+    explicit SupportResponsePrivate(SupportResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

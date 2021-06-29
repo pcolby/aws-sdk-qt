@@ -31,7 +31,7 @@ class StartFleetResponsePrivate : public AppStreamResponsePrivate {
 
 public:
 
-    StartFleetResponsePrivate(StartFleetResponse * const q);
+    explicit StartFleetResponsePrivate(StartFleetResponse * const q);
 
     void parseStartFleetResponse(QXmlStreamReader &xml);
 

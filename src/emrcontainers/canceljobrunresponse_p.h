@@ -31,7 +31,7 @@ class CancelJobRunResponsePrivate : public EMRContainersResponsePrivate {
 
 public:
 
-    CancelJobRunResponsePrivate(CancelJobRunResponse * const q);
+    explicit CancelJobRunResponsePrivate(CancelJobRunResponse * const q);
 
     void parseCancelJobRunResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetRoleResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    GetRoleResponsePrivate(GetRoleResponse * const q);
+    explicit GetRoleResponsePrivate(GetRoleResponse * const q);
 
     void parseGetRoleResponse(QXmlStreamReader &xml);
 

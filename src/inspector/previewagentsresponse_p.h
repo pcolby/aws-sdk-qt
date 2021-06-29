@@ -31,7 +31,7 @@ class PreviewAgentsResponsePrivate : public InspectorResponsePrivate {
 
 public:
 
-    PreviewAgentsResponsePrivate(PreviewAgentsResponse * const q);
+    explicit PreviewAgentsResponsePrivate(PreviewAgentsResponse * const q);
 
     void parsePreviewAgentsResponse(QXmlStreamReader &xml);
 

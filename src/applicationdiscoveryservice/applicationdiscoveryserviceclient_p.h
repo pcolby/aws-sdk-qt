@@ -30,7 +30,7 @@ class ApplicationDiscoveryServiceClient;
 class ApplicationDiscoveryServiceClientPrivate {
 
 public:
-    ApplicationDiscoveryServiceClientPrivate(ApplicationDiscoveryServiceClient * const q);
+    explicit ApplicationDiscoveryServiceClientPrivate(ApplicationDiscoveryServiceClient * const q);
 
 protected:
     ApplicationDiscoveryServiceClient * const q_ptr; ///< Internal q-pointer.

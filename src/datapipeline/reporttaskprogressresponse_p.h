@@ -31,7 +31,7 @@ class ReportTaskProgressResponsePrivate : public DataPipelineResponsePrivate {
 
 public:
 
-    ReportTaskProgressResponsePrivate(ReportTaskProgressResponse * const q);
+    explicit ReportTaskProgressResponsePrivate(ReportTaskProgressResponse * const q);
 
     void parseReportTaskProgressResponse(QXmlStreamReader &xml);
 

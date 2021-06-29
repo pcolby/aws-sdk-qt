@@ -31,7 +31,7 @@ class CreateDeploymentJobResponsePrivate : public RoboMakerResponsePrivate {
 
 public:
 
-    CreateDeploymentJobResponsePrivate(CreateDeploymentJobResponse * const q);
+    explicit CreateDeploymentJobResponsePrivate(CreateDeploymentJobResponse * const q);
 
     void parseCreateDeploymentJobResponse(QXmlStreamReader &xml);
 

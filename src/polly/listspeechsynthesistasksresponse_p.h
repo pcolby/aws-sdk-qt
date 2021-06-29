@@ -31,7 +31,7 @@ class ListSpeechSynthesisTasksResponsePrivate : public PollyResponsePrivate {
 
 public:
 
-    ListSpeechSynthesisTasksResponsePrivate(ListSpeechSynthesisTasksResponse * const q);
+    explicit ListSpeechSynthesisTasksResponsePrivate(ListSpeechSynthesisTasksResponse * const q);
 
     void parseListSpeechSynthesisTasksResponse(QXmlStreamReader &xml);
 

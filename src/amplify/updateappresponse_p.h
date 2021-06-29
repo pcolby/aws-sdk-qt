@@ -31,7 +31,7 @@ class UpdateAppResponsePrivate : public AmplifyResponsePrivate {
 
 public:
 
-    UpdateAppResponsePrivate(UpdateAppResponse * const q);
+    explicit UpdateAppResponsePrivate(UpdateAppResponse * const q);
 
     void parseUpdateAppResponse(QXmlStreamReader &xml);
 

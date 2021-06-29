@@ -31,7 +31,7 @@ class ListDistributionsByCachePolicyIdResponsePrivate : public CloudFrontRespons
 
 public:
 
-    ListDistributionsByCachePolicyIdResponsePrivate(ListDistributionsByCachePolicyIdResponse * const q);
+    explicit ListDistributionsByCachePolicyIdResponsePrivate(ListDistributionsByCachePolicyIdResponse * const q);
 
     void parseListDistributionsByCachePolicyIdResponse(QXmlStreamReader &xml);
 

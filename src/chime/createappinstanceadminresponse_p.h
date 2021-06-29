@@ -31,7 +31,7 @@ class CreateAppInstanceAdminResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    CreateAppInstanceAdminResponsePrivate(CreateAppInstanceAdminResponse * const q);
+    explicit CreateAppInstanceAdminResponsePrivate(CreateAppInstanceAdminResponse * const q);
 
     void parseCreateAppInstanceAdminResponse(QXmlStreamReader &xml);
 

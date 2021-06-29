@@ -31,7 +31,7 @@ class UpdateRulesOfIpGroupResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 
-    UpdateRulesOfIpGroupResponsePrivate(UpdateRulesOfIpGroupResponse * const q);
+    explicit UpdateRulesOfIpGroupResponsePrivate(UpdateRulesOfIpGroupResponse * const q);
 
     void parseUpdateRulesOfIpGroupResponse(QXmlStreamReader &xml);
 

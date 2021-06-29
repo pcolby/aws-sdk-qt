@@ -31,7 +31,7 @@ class DecreaseStreamRetentionPeriodResponsePrivate : public KinesisResponsePriva
 
 public:
 
-    DecreaseStreamRetentionPeriodResponsePrivate(DecreaseStreamRetentionPeriodResponse * const q);
+    explicit DecreaseStreamRetentionPeriodResponsePrivate(DecreaseStreamRetentionPeriodResponse * const q);
 
     void parseDecreaseStreamRetentionPeriodResponse(QXmlStreamReader &xml);
 

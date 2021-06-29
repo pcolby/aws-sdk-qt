@@ -31,7 +31,7 @@ class UpdateQuerySuggestionsConfigResponsePrivate : public kendraResponsePrivate
 
 public:
 
-    UpdateQuerySuggestionsConfigResponsePrivate(UpdateQuerySuggestionsConfigResponse * const q);
+    explicit UpdateQuerySuggestionsConfigResponsePrivate(UpdateQuerySuggestionsConfigResponse * const q);
 
     void parseUpdateQuerySuggestionsConfigResponse(QXmlStreamReader &xml);
 

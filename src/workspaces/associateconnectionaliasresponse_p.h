@@ -31,7 +31,7 @@ class AssociateConnectionAliasResponsePrivate : public WorkSpacesResponsePrivate
 
 public:
 
-    AssociateConnectionAliasResponsePrivate(AssociateConnectionAliasResponse * const q);
+    explicit AssociateConnectionAliasResponsePrivate(AssociateConnectionAliasResponse * const q);
 
     void parseAssociateConnectionAliasResponse(QXmlStreamReader &xml);
 

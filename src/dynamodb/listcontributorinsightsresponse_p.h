@@ -31,7 +31,7 @@ class ListContributorInsightsResponsePrivate : public DynamoDBResponsePrivate {
 
 public:
 
-    ListContributorInsightsResponsePrivate(ListContributorInsightsResponse * const q);
+    explicit ListContributorInsightsResponsePrivate(ListContributorInsightsResponse * const q);
 
     void parseListContributorInsightsResponse(QXmlStreamReader &xml);
 

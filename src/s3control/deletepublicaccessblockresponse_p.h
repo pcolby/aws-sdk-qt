@@ -31,7 +31,7 @@ class DeletePublicAccessBlockResponsePrivate : public S3ControlResponsePrivate {
 
 public:
 
-    DeletePublicAccessBlockResponsePrivate(DeletePublicAccessBlockResponse * const q);
+    explicit DeletePublicAccessBlockResponsePrivate(DeletePublicAccessBlockResponse * const q);
 
     void parseDeletePublicAccessBlockResponse(QXmlStreamReader &xml);
 

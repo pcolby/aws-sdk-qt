@@ -31,7 +31,7 @@ class GetInstancePortStatesResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    GetInstancePortStatesResponsePrivate(GetInstancePortStatesResponse * const q);
+    explicit GetInstancePortStatesResponsePrivate(GetInstancePortStatesResponse * const q);
 
     void parseGetInstancePortStatesResponse(QXmlStreamReader &xml);
 

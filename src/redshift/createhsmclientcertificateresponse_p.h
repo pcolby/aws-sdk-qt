@@ -31,7 +31,7 @@ class CreateHsmClientCertificateResponsePrivate : public RedshiftResponsePrivate
 
 public:
 
-    CreateHsmClientCertificateResponsePrivate(CreateHsmClientCertificateResponse * const q);
+    explicit CreateHsmClientCertificateResponsePrivate(CreateHsmClientCertificateResponse * const q);
 
     void parseCreateHsmClientCertificateResponse(QXmlStreamReader &xml);
 

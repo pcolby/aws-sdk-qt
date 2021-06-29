@@ -31,7 +31,7 @@ class DeleteBaiduChannelResponsePrivate : public PinpointResponsePrivate {
 
 public:
 
-    DeleteBaiduChannelResponsePrivate(DeleteBaiduChannelResponse * const q);
+    explicit DeleteBaiduChannelResponsePrivate(DeleteBaiduChannelResponse * const q);
 
     void parseDeleteBaiduChannelResponse(QXmlStreamReader &xml);
 

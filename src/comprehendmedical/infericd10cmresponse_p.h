@@ -31,7 +31,7 @@ class InferICD10CMResponsePrivate : public ComprehendMedicalResponsePrivate {
 
 public:
 
-    InferICD10CMResponsePrivate(InferICD10CMResponse * const q);
+    explicit InferICD10CMResponsePrivate(InferICD10CMResponse * const q);
 
     void parseInferICD10CMResponse(QXmlStreamReader &xml);
 

@@ -30,7 +30,7 @@ class finspaceClient;
 class finspaceClientPrivate {
 
 public:
-    finspaceClientPrivate(finspaceClient * const q);
+    explicit finspaceClientPrivate(finspaceClient * const q);
 
 protected:
     finspaceClient * const q_ptr; ///< Internal q-pointer.

@@ -31,7 +31,7 @@ class DeregisterOrganizationAdminAccountResponsePrivate : public AuditManagerRes
 
 public:
 
-    DeregisterOrganizationAdminAccountResponsePrivate(DeregisterOrganizationAdminAccountResponse * const q);
+    explicit DeregisterOrganizationAdminAccountResponsePrivate(DeregisterOrganizationAdminAccountResponse * const q);
 
     void parseDeregisterOrganizationAdminAccountResponse(QXmlStreamReader &xml);
 

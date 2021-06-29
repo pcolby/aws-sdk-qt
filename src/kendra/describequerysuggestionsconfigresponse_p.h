@@ -31,7 +31,7 @@ class DescribeQuerySuggestionsConfigResponsePrivate : public kendraResponsePriva
 
 public:
 
-    DescribeQuerySuggestionsConfigResponsePrivate(DescribeQuerySuggestionsConfigResponse * const q);
+    explicit DescribeQuerySuggestionsConfigResponsePrivate(DescribeQuerySuggestionsConfigResponse * const q);
 
     void parseDescribeQuerySuggestionsConfigResponse(QXmlStreamReader &xml);
 

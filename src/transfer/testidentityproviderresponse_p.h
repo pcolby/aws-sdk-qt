@@ -31,7 +31,7 @@ class TestIdentityProviderResponsePrivate : public TransferResponsePrivate {
 
 public:
 
-    TestIdentityProviderResponsePrivate(TestIdentityProviderResponse * const q);
+    explicit TestIdentityProviderResponsePrivate(TestIdentityProviderResponse * const q);
 
     void parseTestIdentityProviderResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribeAggregateComplianceByConfigRulesResponsePrivate : public ConfigSer
 
 public:
 
-    DescribeAggregateComplianceByConfigRulesResponsePrivate(DescribeAggregateComplianceByConfigRulesResponse * const q);
+    explicit DescribeAggregateComplianceByConfigRulesResponsePrivate(DescribeAggregateComplianceByConfigRulesResponse * const q);
 
     void parseDescribeAggregateComplianceByConfigRulesResponse(QXmlStreamReader &xml);
 

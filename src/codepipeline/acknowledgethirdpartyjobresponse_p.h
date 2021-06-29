@@ -31,7 +31,7 @@ class AcknowledgeThirdPartyJobResponsePrivate : public CodePipelineResponsePriva
 
 public:
 
-    AcknowledgeThirdPartyJobResponsePrivate(AcknowledgeThirdPartyJobResponse * const q);
+    explicit AcknowledgeThirdPartyJobResponsePrivate(AcknowledgeThirdPartyJobResponse * const q);
 
     void parseAcknowledgeThirdPartyJobResponse(QXmlStreamReader &xml);
 

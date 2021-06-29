@@ -31,7 +31,7 @@ class DescribeStudioResponsePrivate : public EmrResponsePrivate {
 
 public:
 
-    DescribeStudioResponsePrivate(DescribeStudioResponse * const q);
+    explicit DescribeStudioResponsePrivate(DescribeStudioResponse * const q);
 
     void parseDescribeStudioResponse(QXmlStreamReader &xml);
 

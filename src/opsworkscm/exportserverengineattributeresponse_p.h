@@ -31,7 +31,7 @@ class ExportServerEngineAttributeResponsePrivate : public OpsWorksCMResponsePriv
 
 public:
 
-    ExportServerEngineAttributeResponsePrivate(ExportServerEngineAttributeResponse * const q);
+    explicit ExportServerEngineAttributeResponsePrivate(ExportServerEngineAttributeResponse * const q);
 
     void parseExportServerEngineAttributeResponse(QXmlStreamReader &xml);
 

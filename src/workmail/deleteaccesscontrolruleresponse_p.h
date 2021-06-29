@@ -31,7 +31,7 @@ class DeleteAccessControlRuleResponsePrivate : public WorkMailResponsePrivate {
 
 public:
 
-    DeleteAccessControlRuleResponsePrivate(DeleteAccessControlRuleResponse * const q);
+    explicit DeleteAccessControlRuleResponsePrivate(DeleteAccessControlRuleResponse * const q);
 
     void parseDeleteAccessControlRuleResponse(QXmlStreamReader &xml);
 

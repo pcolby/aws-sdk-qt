@@ -31,7 +31,7 @@ class GetContainerServicePowersResponsePrivate : public LightsailResponsePrivate
 
 public:
 
-    GetContainerServicePowersResponsePrivate(GetContainerServicePowersResponse * const q);
+    explicit GetContainerServicePowersResponsePrivate(GetContainerServicePowersResponse * const q);
 
     void parseGetContainerServicePowersResponse(QXmlStreamReader &xml);
 

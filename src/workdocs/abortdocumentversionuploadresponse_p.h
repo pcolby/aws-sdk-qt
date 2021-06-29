@@ -31,7 +31,7 @@ class AbortDocumentVersionUploadResponsePrivate : public WorkDocsResponsePrivate
 
 public:
 
-    AbortDocumentVersionUploadResponsePrivate(AbortDocumentVersionUploadResponse * const q);
+    explicit AbortDocumentVersionUploadResponsePrivate(AbortDocumentVersionUploadResponse * const q);
 
     void parseAbortDocumentVersionUploadResponse(QXmlStreamReader &xml);
 

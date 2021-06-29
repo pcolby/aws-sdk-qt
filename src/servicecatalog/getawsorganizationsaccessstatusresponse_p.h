@@ -31,7 +31,7 @@ class GetAWSOrganizationsAccessStatusResponsePrivate : public ServiceCatalogResp
 
 public:
 
-    GetAWSOrganizationsAccessStatusResponsePrivate(GetAWSOrganizationsAccessStatusResponse * const q);
+    explicit GetAWSOrganizationsAccessStatusResponsePrivate(GetAWSOrganizationsAccessStatusResponse * const q);
 
     void parseGetAWSOrganizationsAccessStatusResponse(QXmlStreamReader &xml);
 

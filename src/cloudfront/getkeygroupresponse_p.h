@@ -31,7 +31,7 @@ class GetKeyGroupResponsePrivate : public CloudFrontResponsePrivate {
 
 public:
 
-    GetKeyGroupResponsePrivate(GetKeyGroupResponse * const q);
+    explicit GetKeyGroupResponsePrivate(GetKeyGroupResponse * const q);
 
     void parseGetKeyGroupResponse(QXmlStreamReader &xml);
 

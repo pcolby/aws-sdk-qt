@@ -31,7 +31,7 @@ class UpdateQueueResponsePrivate : public MediaConvertResponsePrivate {
 
 public:
 
-    UpdateQueueResponsePrivate(UpdateQueueResponse * const q);
+    explicit UpdateQueueResponsePrivate(UpdateQueueResponse * const q);
 
     void parseUpdateQueueResponse(QXmlStreamReader &xml);
 

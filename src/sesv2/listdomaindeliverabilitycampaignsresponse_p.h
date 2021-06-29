@@ -31,7 +31,7 @@ class ListDomainDeliverabilityCampaignsResponsePrivate : public Sesv2ResponsePri
 
 public:
 
-    ListDomainDeliverabilityCampaignsResponsePrivate(ListDomainDeliverabilityCampaignsResponse * const q);
+    explicit ListDomainDeliverabilityCampaignsResponsePrivate(ListDomainDeliverabilityCampaignsResponse * const q);
 
     void parseListDomainDeliverabilityCampaignsResponse(QXmlStreamReader &xml);
 

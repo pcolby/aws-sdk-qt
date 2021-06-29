@@ -31,7 +31,7 @@ class RevokeInvitationResponsePrivate : public AlexaForBusinessResponsePrivate {
 
 public:
 
-    RevokeInvitationResponsePrivate(RevokeInvitationResponse * const q);
+    explicit RevokeInvitationResponsePrivate(RevokeInvitationResponse * const q);
 
     void parseRevokeInvitationResponse(QXmlStreamReader &xml);
 

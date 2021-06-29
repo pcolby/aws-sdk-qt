@@ -31,7 +31,7 @@ class DefineSuggesterResponsePrivate : public CloudSearchResponsePrivate {
 
 public:
 
-    DefineSuggesterResponsePrivate(DefineSuggesterResponse * const q);
+    explicit DefineSuggesterResponsePrivate(DefineSuggesterResponse * const q);
 
     void parseDefineSuggesterResponse(QXmlStreamReader &xml);
 

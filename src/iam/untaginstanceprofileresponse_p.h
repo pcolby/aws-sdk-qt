@@ -31,7 +31,7 @@ class UntagInstanceProfileResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    UntagInstanceProfileResponsePrivate(UntagInstanceProfileResponse * const q);
+    explicit UntagInstanceProfileResponsePrivate(UntagInstanceProfileResponse * const q);
 
     void parseUntagInstanceProfileResponse(QXmlStreamReader &xml);
 

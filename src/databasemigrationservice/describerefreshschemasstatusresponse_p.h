@@ -31,7 +31,7 @@ class DescribeRefreshSchemasStatusResponsePrivate : public DatabaseMigrationServ
 
 public:
 
-    DescribeRefreshSchemasStatusResponsePrivate(DescribeRefreshSchemasStatusResponse * const q);
+    explicit DescribeRefreshSchemasStatusResponsePrivate(DescribeRefreshSchemasStatusResponse * const q);
 
     void parseDescribeRefreshSchemasStatusResponse(QXmlStreamReader &xml);
 

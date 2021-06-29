@@ -29,7 +29,7 @@ class MediaStoreDataResponsePrivate {
 
 public:
 
-    MediaStoreDataResponsePrivate(MediaStoreDataResponse * const q);
+    explicit MediaStoreDataResponsePrivate(MediaStoreDataResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

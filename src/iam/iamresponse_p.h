@@ -29,7 +29,7 @@ class IamResponsePrivate {
 
 public:
 
-    IamResponsePrivate(IamResponse * const q);
+    explicit IamResponsePrivate(IamResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

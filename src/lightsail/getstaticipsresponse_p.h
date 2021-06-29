@@ -31,7 +31,7 @@ class GetStaticIpsResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    GetStaticIpsResponsePrivate(GetStaticIpsResponse * const q);
+    explicit GetStaticIpsResponsePrivate(GetStaticIpsResponse * const q);
 
     void parseGetStaticIpsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteDirectConnectGatewayResponsePrivate : public DirectConnectResponsePr
 
 public:
 
-    DeleteDirectConnectGatewayResponsePrivate(DeleteDirectConnectGatewayResponse * const q);
+    explicit DeleteDirectConnectGatewayResponsePrivate(DeleteDirectConnectGatewayResponse * const q);
 
     void parseDeleteDirectConnectGatewayResponse(QXmlStreamReader &xml);
 

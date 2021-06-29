@@ -31,7 +31,7 @@ class RestoreWorkspaceResponsePrivate : public WorkSpacesResponsePrivate {
 
 public:
 
-    RestoreWorkspaceResponsePrivate(RestoreWorkspaceResponse * const q);
+    explicit RestoreWorkspaceResponsePrivate(RestoreWorkspaceResponse * const q);
 
     void parseRestoreWorkspaceResponse(QXmlStreamReader &xml);
 

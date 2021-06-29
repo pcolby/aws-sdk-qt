@@ -30,7 +30,7 @@ class SSMIncidentsClient;
 class SSMIncidentsClientPrivate {
 
 public:
-    SSMIncidentsClientPrivate(SSMIncidentsClient * const q);
+    explicit SSMIncidentsClientPrivate(SSMIncidentsClient * const q);
 
 protected:
     SSMIncidentsClient * const q_ptr; ///< Internal q-pointer.

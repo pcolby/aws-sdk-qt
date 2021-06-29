@@ -31,7 +31,7 @@ class DisassociateSkillFromUsersResponsePrivate : public AlexaForBusinessRespons
 
 public:
 
-    DisassociateSkillFromUsersResponsePrivate(DisassociateSkillFromUsersResponse * const q);
+    explicit DisassociateSkillFromUsersResponsePrivate(DisassociateSkillFromUsersResponse * const q);
 
     void parseDisassociateSkillFromUsersResponse(QXmlStreamReader &xml);
 

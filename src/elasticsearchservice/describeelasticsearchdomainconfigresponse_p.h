@@ -31,7 +31,7 @@ class DescribeElasticsearchDomainConfigResponsePrivate : public ElasticsearchSer
 
 public:
 
-    DescribeElasticsearchDomainConfigResponsePrivate(DescribeElasticsearchDomainConfigResponse * const q);
+    explicit DescribeElasticsearchDomainConfigResponsePrivate(DescribeElasticsearchDomainConfigResponse * const q);
 
     void parseDescribeElasticsearchDomainConfigResponse(QXmlStreamReader &xml);
 

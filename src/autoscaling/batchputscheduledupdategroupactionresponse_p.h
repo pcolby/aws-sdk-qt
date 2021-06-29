@@ -31,7 +31,7 @@ class BatchPutScheduledUpdateGroupActionResponsePrivate : public AutoScalingResp
 
 public:
 
-    BatchPutScheduledUpdateGroupActionResponsePrivate(BatchPutScheduledUpdateGroupActionResponse * const q);
+    explicit BatchPutScheduledUpdateGroupActionResponsePrivate(BatchPutScheduledUpdateGroupActionResponse * const q);
 
     void parseBatchPutScheduledUpdateGroupActionResponse(QXmlStreamReader &xml);
 

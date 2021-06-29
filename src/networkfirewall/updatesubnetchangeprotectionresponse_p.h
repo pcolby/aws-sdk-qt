@@ -31,7 +31,7 @@ class UpdateSubnetChangeProtectionResponsePrivate : public NetworkFirewallRespon
 
 public:
 
-    UpdateSubnetChangeProtectionResponsePrivate(UpdateSubnetChangeProtectionResponse * const q);
+    explicit UpdateSubnetChangeProtectionResponsePrivate(UpdateSubnetChangeProtectionResponse * const q);
 
     void parseUpdateSubnetChangeProtectionResponse(QXmlStreamReader &xml);
 

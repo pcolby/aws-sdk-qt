@@ -31,7 +31,7 @@ class StopResourceResponsePrivate : public ForecastServiceResponsePrivate {
 
 public:
 
-    StopResourceResponsePrivate(StopResourceResponse * const q);
+    explicit StopResourceResponsePrivate(StopResourceResponse * const q);
 
     void parseStopResourceResponse(QXmlStreamReader &xml);
 

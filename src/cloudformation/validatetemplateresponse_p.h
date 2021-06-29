@@ -31,7 +31,7 @@ class ValidateTemplateResponsePrivate : public CloudFormationResponsePrivate {
 
 public:
 
-    ValidateTemplateResponsePrivate(ValidateTemplateResponse * const q);
+    explicit ValidateTemplateResponsePrivate(ValidateTemplateResponse * const q);
 
     void parseValidateTemplateResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DescribePatchBaselinesResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    DescribePatchBaselinesResponsePrivate(DescribePatchBaselinesResponse * const q);
+    explicit DescribePatchBaselinesResponsePrivate(DescribePatchBaselinesResponse * const q);
 
     void parseDescribePatchBaselinesResponse(QXmlStreamReader &xml);
 

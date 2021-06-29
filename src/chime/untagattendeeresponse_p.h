@@ -31,7 +31,7 @@ class UntagAttendeeResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    UntagAttendeeResponsePrivate(UntagAttendeeResponse * const q);
+    explicit UntagAttendeeResponsePrivate(UntagAttendeeResponse * const q);
 
     void parseUntagAttendeeResponse(QXmlStreamReader &xml);
 

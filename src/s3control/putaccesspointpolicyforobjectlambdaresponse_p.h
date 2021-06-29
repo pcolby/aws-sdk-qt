@@ -31,7 +31,7 @@ class PutAccessPointPolicyForObjectLambdaResponsePrivate : public S3ControlRespo
 
 public:
 
-    PutAccessPointPolicyForObjectLambdaResponsePrivate(PutAccessPointPolicyForObjectLambdaResponse * const q);
+    explicit PutAccessPointPolicyForObjectLambdaResponsePrivate(PutAccessPointPolicyForObjectLambdaResponse * const q);
 
     void parsePutAccessPointPolicyForObjectLambdaResponse(QXmlStreamReader &xml);
 

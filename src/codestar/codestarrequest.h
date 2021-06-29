@@ -77,7 +77,7 @@ public:
 protected:
     /// @cond internal
     CodeStarRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    CodeStarRequest(CodeStarRequestPrivate * const d);
+    explicit CodeStarRequest(CodeStarRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

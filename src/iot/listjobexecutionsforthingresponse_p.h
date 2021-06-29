@@ -31,7 +31,7 @@ class ListJobExecutionsForThingResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    ListJobExecutionsForThingResponsePrivate(ListJobExecutionsForThingResponse * const q);
+    explicit ListJobExecutionsForThingResponsePrivate(ListJobExecutionsForThingResponse * const q);
 
     void parseListJobExecutionsForThingResponse(QXmlStreamReader &xml);
 

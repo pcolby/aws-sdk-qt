@@ -31,7 +31,7 @@ class BatchGetWorkflowsResponsePrivate : public GlueResponsePrivate {
 
 public:
 
-    BatchGetWorkflowsResponsePrivate(BatchGetWorkflowsResponse * const q);
+    explicit BatchGetWorkflowsResponsePrivate(BatchGetWorkflowsResponse * const q);
 
     void parseBatchGetWorkflowsResponse(QXmlStreamReader &xml);
 

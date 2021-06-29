@@ -31,7 +31,7 @@ class ExportSchemaResponsePrivate : public SchemasResponsePrivate {
 
 public:
 
-    ExportSchemaResponsePrivate(ExportSchemaResponse * const q);
+    explicit ExportSchemaResponsePrivate(ExportSchemaResponse * const q);
 
     void parseExportSchemaResponse(QXmlStreamReader &xml);
 

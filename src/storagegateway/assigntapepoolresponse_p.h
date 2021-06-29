@@ -31,7 +31,7 @@ class AssignTapePoolResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 
-    AssignTapePoolResponsePrivate(AssignTapePoolResponse * const q);
+    explicit AssignTapePoolResponsePrivate(AssignTapePoolResponse * const q);
 
     void parseAssignTapePoolResponse(QXmlStreamReader &xml);
 

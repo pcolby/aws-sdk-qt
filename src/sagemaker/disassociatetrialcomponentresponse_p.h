@@ -31,7 +31,7 @@ class DisassociateTrialComponentResponsePrivate : public SageMakerResponsePrivat
 
 public:
 
-    DisassociateTrialComponentResponsePrivate(DisassociateTrialComponentResponse * const q);
+    explicit DisassociateTrialComponentResponsePrivate(DisassociateTrialComponentResponse * const q);
 
     void parseDisassociateTrialComponentResponse(QXmlStreamReader &xml);
 

@@ -30,7 +30,7 @@ class IoTFleetHubClient;
 class IoTFleetHubClientPrivate {
 
 public:
-    IoTFleetHubClientPrivate(IoTFleetHubClient * const q);
+    explicit IoTFleetHubClientPrivate(IoTFleetHubClient * const q);
 
 protected:
     IoTFleetHubClient * const q_ptr; ///< Internal q-pointer.

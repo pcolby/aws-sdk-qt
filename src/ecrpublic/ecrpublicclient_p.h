@@ -30,7 +30,7 @@ class ECRPublicClient;
 class ECRPublicClientPrivate {
 
 public:
-    ECRPublicClientPrivate(ECRPublicClient * const q);
+    explicit ECRPublicClientPrivate(ECRPublicClient * const q);
 
 protected:
     ECRPublicClient * const q_ptr; ///< Internal q-pointer.

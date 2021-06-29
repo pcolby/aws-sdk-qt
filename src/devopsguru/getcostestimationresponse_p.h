@@ -31,7 +31,7 @@ class GetCostEstimationResponsePrivate : public DevOpsGuruResponsePrivate {
 
 public:
 
-    GetCostEstimationResponsePrivate(GetCostEstimationResponse * const q);
+    explicit GetCostEstimationResponsePrivate(GetCostEstimationResponse * const q);
 
     void parseGetCostEstimationResponse(QXmlStreamReader &xml);
 

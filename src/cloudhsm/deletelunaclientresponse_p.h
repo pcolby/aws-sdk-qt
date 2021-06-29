@@ -31,7 +31,7 @@ class DeleteLunaClientResponsePrivate : public CloudHSMResponsePrivate {
 
 public:
 
-    DeleteLunaClientResponsePrivate(DeleteLunaClientResponse * const q);
+    explicit DeleteLunaClientResponsePrivate(DeleteLunaClientResponse * const q);
 
     void parseDeleteLunaClientResponse(QXmlStreamReader &xml);
 

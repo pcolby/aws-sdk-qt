@@ -87,7 +87,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    ServiceDiscoveryClient(
+    explicit ServiceDiscoveryClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -120,7 +120,7 @@ public slots:
 protected:
     /// @cond internal
     ServiceDiscoveryClientPrivate * const d_ptr; ///< Internal d-pointer.
-    ServiceDiscoveryClient(ServiceDiscoveryClientPrivate * const d);
+    explicit ServiceDiscoveryClient(ServiceDiscoveryClientPrivate * const d);
     /// @endcond
 
 private:

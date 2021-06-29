@@ -31,7 +31,7 @@ class CreateCustomMetadataResponsePrivate : public WorkDocsResponsePrivate {
 
 public:
 
-    CreateCustomMetadataResponsePrivate(CreateCustomMetadataResponse * const q);
+    explicit CreateCustomMetadataResponsePrivate(CreateCustomMetadataResponse * const q);
 
     void parseCreateCustomMetadataResponse(QXmlStreamReader &xml);
 

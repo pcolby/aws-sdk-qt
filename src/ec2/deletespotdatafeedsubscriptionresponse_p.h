@@ -31,7 +31,7 @@ class DeleteSpotDatafeedSubscriptionResponsePrivate : public Ec2ResponsePrivate 
 
 public:
 
-    DeleteSpotDatafeedSubscriptionResponsePrivate(DeleteSpotDatafeedSubscriptionResponse * const q);
+    explicit DeleteSpotDatafeedSubscriptionResponsePrivate(DeleteSpotDatafeedSubscriptionResponse * const q);
 
     void parseDeleteSpotDatafeedSubscriptionResponse(QXmlStreamReader &xml);
 

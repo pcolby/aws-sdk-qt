@@ -31,7 +31,7 @@ class RegisterJobDefinitionResponsePrivate : public BatchResponsePrivate {
 
 public:
 
-    RegisterJobDefinitionResponsePrivate(RegisterJobDefinitionResponse * const q);
+    explicit RegisterJobDefinitionResponsePrivate(RegisterJobDefinitionResponse * const q);
 
     void parseRegisterJobDefinitionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class PutScalingPolicyResponsePrivate : public AutoScalingResponsePrivate {
 
 public:
 
-    PutScalingPolicyResponsePrivate(PutScalingPolicyResponse * const q);
+    explicit PutScalingPolicyResponsePrivate(PutScalingPolicyResponse * const q);
 
     void parsePutScalingPolicyResponse(QXmlStreamReader &xml);
 

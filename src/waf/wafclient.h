@@ -195,7 +195,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    WafClient(
+    explicit WafClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -282,7 +282,7 @@ public slots:
 protected:
     /// @cond internal
     WafClientPrivate * const d_ptr; ///< Internal d-pointer.
-    WafClient(WafClientPrivate * const d);
+    explicit WafClient(WafClientPrivate * const d);
     /// @endcond
 
 private:

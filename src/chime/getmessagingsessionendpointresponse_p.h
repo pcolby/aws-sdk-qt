@@ -31,7 +31,7 @@ class GetMessagingSessionEndpointResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    GetMessagingSessionEndpointResponsePrivate(GetMessagingSessionEndpointResponse * const q);
+    explicit GetMessagingSessionEndpointResponsePrivate(GetMessagingSessionEndpointResponse * const q);
 
     void parseGetMessagingSessionEndpointResponse(QXmlStreamReader &xml);
 

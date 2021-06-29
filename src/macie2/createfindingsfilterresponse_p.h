@@ -31,7 +31,7 @@ class CreateFindingsFilterResponsePrivate : public Macie2ResponsePrivate {
 
 public:
 
-    CreateFindingsFilterResponsePrivate(CreateFindingsFilterResponse * const q);
+    explicit CreateFindingsFilterResponsePrivate(CreateFindingsFilterResponse * const q);
 
     void parseCreateFindingsFilterResponse(QXmlStreamReader &xml);
 

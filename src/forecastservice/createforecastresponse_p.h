@@ -31,7 +31,7 @@ class CreateForecastResponsePrivate : public ForecastServiceResponsePrivate {
 
 public:
 
-    CreateForecastResponsePrivate(CreateForecastResponse * const q);
+    explicit CreateForecastResponsePrivate(CreateForecastResponse * const q);
 
     void parseCreateForecastResponse(QXmlStreamReader &xml);
 

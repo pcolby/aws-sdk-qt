@@ -31,7 +31,7 @@ class CreateStorediSCSIVolumeResponsePrivate : public StorageGatewayResponsePriv
 
 public:
 
-    CreateStorediSCSIVolumeResponsePrivate(CreateStorediSCSIVolumeResponse * const q);
+    explicit CreateStorediSCSIVolumeResponsePrivate(CreateStorediSCSIVolumeResponse * const q);
 
     void parseCreateStorediSCSIVolumeResponse(QXmlStreamReader &xml);
 

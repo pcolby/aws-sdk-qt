@@ -31,7 +31,7 @@ class GetSnapshotLimitsResponsePrivate : public DirectoryServiceResponsePrivate 
 
 public:
 
-    GetSnapshotLimitsResponsePrivate(GetSnapshotLimitsResponse * const q);
+    explicit GetSnapshotLimitsResponsePrivate(GetSnapshotLimitsResponse * const q);
 
     void parseGetSnapshotLimitsResponse(QXmlStreamReader &xml);
 

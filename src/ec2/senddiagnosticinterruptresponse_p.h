@@ -31,7 +31,7 @@ class SendDiagnosticInterruptResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    SendDiagnosticInterruptResponsePrivate(SendDiagnosticInterruptResponse * const q);
+    explicit SendDiagnosticInterruptResponsePrivate(SendDiagnosticInterruptResponse * const q);
 
     void parseSendDiagnosticInterruptResponse(QXmlStreamReader &xml);
 

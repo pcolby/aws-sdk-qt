@@ -31,7 +31,7 @@ class DeleteNamespaceResponsePrivate : public IoTThingsGraphResponsePrivate {
 
 public:
 
-    DeleteNamespaceResponsePrivate(DeleteNamespaceResponse * const q);
+    explicit DeleteNamespaceResponsePrivate(DeleteNamespaceResponse * const q);
 
     void parseDeleteNamespaceResponse(QXmlStreamReader &xml);
 

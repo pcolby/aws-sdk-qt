@@ -31,7 +31,7 @@ class GetQualificationScoreResponsePrivate : public MTurkResponsePrivate {
 
 public:
 
-    GetQualificationScoreResponsePrivate(GetQualificationScoreResponse * const q);
+    explicit GetQualificationScoreResponsePrivate(GetQualificationScoreResponse * const q);
 
     void parseGetQualificationScoreResponse(QXmlStreamReader &xml);
 

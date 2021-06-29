@@ -31,7 +31,7 @@ class SignOutUserResponsePrivate : public WorkLinkResponsePrivate {
 
 public:
 
-    SignOutUserResponsePrivate(SignOutUserResponse * const q);
+    explicit SignOutUserResponsePrivate(SignOutUserResponse * const q);
 
     void parseSignOutUserResponse(QXmlStreamReader &xml);
 

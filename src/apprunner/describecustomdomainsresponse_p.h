@@ -31,7 +31,7 @@ class DescribeCustomDomainsResponsePrivate : public AppRunnerResponsePrivate {
 
 public:
 
-    DescribeCustomDomainsResponsePrivate(DescribeCustomDomainsResponse * const q);
+    explicit DescribeCustomDomainsResponsePrivate(DescribeCustomDomainsResponse * const q);
 
     void parseDescribeCustomDomainsResponse(QXmlStreamReader &xml);
 

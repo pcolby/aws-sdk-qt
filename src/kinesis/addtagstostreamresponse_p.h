@@ -31,7 +31,7 @@ class AddTagsToStreamResponsePrivate : public KinesisResponsePrivate {
 
 public:
 
-    AddTagsToStreamResponsePrivate(AddTagsToStreamResponse * const q);
+    explicit AddTagsToStreamResponsePrivate(AddTagsToStreamResponse * const q);
 
     void parseAddTagsToStreamResponse(QXmlStreamReader &xml);
 

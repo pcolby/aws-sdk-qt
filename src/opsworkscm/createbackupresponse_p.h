@@ -31,7 +31,7 @@ class CreateBackupResponsePrivate : public OpsWorksCMResponsePrivate {
 
 public:
 
-    CreateBackupResponsePrivate(CreateBackupResponse * const q);
+    explicit CreateBackupResponsePrivate(CreateBackupResponse * const q);
 
     void parseCreateBackupResponse(QXmlStreamReader &xml);
 

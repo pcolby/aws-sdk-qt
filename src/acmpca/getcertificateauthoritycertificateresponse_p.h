@@ -31,7 +31,7 @@ class GetCertificateAuthorityCertificateResponsePrivate : public AcmpcaResponseP
 
 public:
 
-    GetCertificateAuthorityCertificateResponsePrivate(GetCertificateAuthorityCertificateResponse * const q);
+    explicit GetCertificateAuthorityCertificateResponsePrivate(GetCertificateAuthorityCertificateResponse * const q);
 
     void parseGetCertificateAuthorityCertificateResponse(QXmlStreamReader &xml);
 

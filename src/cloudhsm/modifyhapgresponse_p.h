@@ -31,7 +31,7 @@ class ModifyHapgResponsePrivate : public CloudHSMResponsePrivate {
 
 public:
 
-    ModifyHapgResponsePrivate(ModifyHapgResponse * const q);
+    explicit ModifyHapgResponsePrivate(ModifyHapgResponse * const q);
 
     void parseModifyHapgResponse(QXmlStreamReader &xml);
 

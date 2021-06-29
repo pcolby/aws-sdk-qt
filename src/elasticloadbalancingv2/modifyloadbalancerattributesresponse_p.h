@@ -31,7 +31,7 @@ class ModifyLoadBalancerAttributesResponsePrivate : public ElasticLoadBalancingv
 
 public:
 
-    ModifyLoadBalancerAttributesResponsePrivate(ModifyLoadBalancerAttributesResponse * const q);
+    explicit ModifyLoadBalancerAttributesResponsePrivate(ModifyLoadBalancerAttributesResponse * const q);
 
     void parseModifyLoadBalancerAttributesResponse(QXmlStreamReader &xml);
 

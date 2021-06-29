@@ -31,7 +31,7 @@ class GetScreenDataResponsePrivate : public HoneycodeResponsePrivate {
 
 public:
 
-    GetScreenDataResponsePrivate(GetScreenDataResponse * const q);
+    explicit GetScreenDataResponsePrivate(GetScreenDataResponse * const q);
 
     void parseGetScreenDataResponse(QXmlStreamReader &xml);
 

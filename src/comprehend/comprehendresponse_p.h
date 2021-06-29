@@ -29,7 +29,7 @@ class ComprehendResponsePrivate {
 
 public:
 
-    ComprehendResponsePrivate(ComprehendResponse * const q);
+    explicit ComprehendResponsePrivate(ComprehendResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

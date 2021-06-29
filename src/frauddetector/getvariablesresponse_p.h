@@ -31,7 +31,7 @@ class GetVariablesResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 
-    GetVariablesResponsePrivate(GetVariablesResponse * const q);
+    explicit GetVariablesResponsePrivate(GetVariablesResponse * const q);
 
     void parseGetVariablesResponse(QXmlStreamReader &xml);
 

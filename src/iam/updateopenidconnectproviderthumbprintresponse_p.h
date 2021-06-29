@@ -31,7 +31,7 @@ class UpdateOpenIDConnectProviderThumbprintResponsePrivate : public IamResponseP
 
 public:
 
-    UpdateOpenIDConnectProviderThumbprintResponsePrivate(UpdateOpenIDConnectProviderThumbprintResponse * const q);
+    explicit UpdateOpenIDConnectProviderThumbprintResponsePrivate(UpdateOpenIDConnectProviderThumbprintResponse * const q);
 
     void parseUpdateOpenIDConnectProviderThumbprintResponse(QXmlStreamReader &xml);
 

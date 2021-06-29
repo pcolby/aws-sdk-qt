@@ -31,7 +31,7 @@ class CreateResolverEndpointResponsePrivate : public Route53ResolverResponsePriv
 
 public:
 
-    CreateResolverEndpointResponsePrivate(CreateResolverEndpointResponse * const q);
+    explicit CreateResolverEndpointResponsePrivate(CreateResolverEndpointResponse * const q);
 
     void parseCreateResolverEndpointResponse(QXmlStreamReader &xml);
 

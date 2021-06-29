@@ -29,7 +29,7 @@ class RedshiftResponsePrivate {
 
 public:
 
-    RedshiftResponsePrivate(RedshiftResponse * const q);
+    explicit RedshiftResponsePrivate(RedshiftResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

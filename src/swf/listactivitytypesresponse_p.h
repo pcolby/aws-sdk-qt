@@ -31,7 +31,7 @@ class ListActivityTypesResponsePrivate : public SwfResponsePrivate {
 
 public:
 
-    ListActivityTypesResponsePrivate(ListActivityTypesResponse * const q);
+    explicit ListActivityTypesResponsePrivate(ListActivityTypesResponse * const q);
 
     void parseListActivityTypesResponse(QXmlStreamReader &xml);
 

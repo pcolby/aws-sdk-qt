@@ -31,7 +31,7 @@ class CreateFaqResponsePrivate : public kendraResponsePrivate {
 
 public:
 
-    CreateFaqResponsePrivate(CreateFaqResponse * const q);
+    explicit CreateFaqResponsePrivate(CreateFaqResponse * const q);
 
     void parseCreateFaqResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ExecuteProvisionedProductPlanResponsePrivate : public ServiceCatalogRespon
 
 public:
 
-    ExecuteProvisionedProductPlanResponsePrivate(ExecuteProvisionedProductPlanResponse * const q);
+    explicit ExecuteProvisionedProductPlanResponsePrivate(ExecuteProvisionedProductPlanResponse * const q);
 
     void parseExecuteProvisionedProductPlanResponse(QXmlStreamReader &xml);
 

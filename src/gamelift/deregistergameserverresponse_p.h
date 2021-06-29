@@ -31,7 +31,7 @@ class DeregisterGameServerResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    DeregisterGameServerResponsePrivate(DeregisterGameServerResponse * const q);
+    explicit DeregisterGameServerResponsePrivate(DeregisterGameServerResponse * const q);
 
     void parseDeregisterGameServerResponse(QXmlStreamReader &xml);
 

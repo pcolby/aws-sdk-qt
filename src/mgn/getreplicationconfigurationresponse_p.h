@@ -31,7 +31,7 @@ class GetReplicationConfigurationResponsePrivate : public mgnResponsePrivate {
 
 public:
 
-    GetReplicationConfigurationResponsePrivate(GetReplicationConfigurationResponse * const q);
+    explicit GetReplicationConfigurationResponsePrivate(GetReplicationConfigurationResponse * const q);
 
     void parseGetReplicationConfigurationResponse(QXmlStreamReader &xml);
 

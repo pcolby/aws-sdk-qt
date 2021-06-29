@@ -29,7 +29,7 @@ class MarketplaceEntitlementServiceResponsePrivate {
 
 public:
 
-    MarketplaceEntitlementServiceResponsePrivate(MarketplaceEntitlementServiceResponse * const q);
+    explicit MarketplaceEntitlementServiceResponsePrivate(MarketplaceEntitlementServiceResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

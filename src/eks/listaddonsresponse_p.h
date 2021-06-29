@@ -31,7 +31,7 @@ class ListAddonsResponsePrivate : public EksResponsePrivate {
 
 public:
 
-    ListAddonsResponsePrivate(ListAddonsResponse * const q);
+    explicit ListAddonsResponsePrivate(ListAddonsResponse * const q);
 
     void parseListAddonsResponse(QXmlStreamReader &xml);
 

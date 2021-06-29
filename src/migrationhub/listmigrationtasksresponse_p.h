@@ -31,7 +31,7 @@ class ListMigrationTasksResponsePrivate : public MigrationHubResponsePrivate {
 
 public:
 
-    ListMigrationTasksResponsePrivate(ListMigrationTasksResponse * const q);
+    explicit ListMigrationTasksResponsePrivate(ListMigrationTasksResponse * const q);
 
     void parseListMigrationTasksResponse(QXmlStreamReader &xml);
 

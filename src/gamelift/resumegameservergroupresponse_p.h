@@ -31,7 +31,7 @@ class ResumeGameServerGroupResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    ResumeGameServerGroupResponsePrivate(ResumeGameServerGroupResponse * const q);
+    explicit ResumeGameServerGroupResponsePrivate(ResumeGameServerGroupResponse * const q);
 
     void parseResumeGameServerGroupResponse(QXmlStreamReader &xml);
 

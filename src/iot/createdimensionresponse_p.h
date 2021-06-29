@@ -31,7 +31,7 @@ class CreateDimensionResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    CreateDimensionResponsePrivate(CreateDimensionResponse * const q);
+    explicit CreateDimensionResponsePrivate(CreateDimensionResponse * const q);
 
     void parseCreateDimensionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateJobExecutionResponsePrivate : public IoTJobsDataPlaneResponsePrivate
 
 public:
 
-    UpdateJobExecutionResponsePrivate(UpdateJobExecutionResponse * const q);
+    explicit UpdateJobExecutionResponsePrivate(UpdateJobExecutionResponse * const q);
 
     void parseUpdateJobExecutionResponse(QXmlStreamReader &xml);
 

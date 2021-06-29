@@ -31,7 +31,7 @@ class ContainsPiiEntitiesResponsePrivate : public ComprehendResponsePrivate {
 
 public:
 
-    ContainsPiiEntitiesResponsePrivate(ContainsPiiEntitiesResponse * const q);
+    explicit ContainsPiiEntitiesResponsePrivate(ContainsPiiEntitiesResponse * const q);
 
     void parseContainsPiiEntitiesResponse(QXmlStreamReader &xml);
 

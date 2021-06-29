@@ -31,7 +31,7 @@ class AssociateWirelessDeviceWithThingResponsePrivate : public IoTWirelessRespon
 
 public:
 
-    AssociateWirelessDeviceWithThingResponsePrivate(AssociateWirelessDeviceWithThingResponse * const q);
+    explicit AssociateWirelessDeviceWithThingResponsePrivate(AssociateWirelessDeviceWithThingResponse * const q);
 
     void parseAssociateWirelessDeviceWithThingResponse(QXmlStreamReader &xml);
 

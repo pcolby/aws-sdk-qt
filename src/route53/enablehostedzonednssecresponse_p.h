@@ -31,7 +31,7 @@ class EnableHostedZoneDNSSECResponsePrivate : public Route53ResponsePrivate {
 
 public:
 
-    EnableHostedZoneDNSSECResponsePrivate(EnableHostedZoneDNSSECResponse * const q);
+    explicit EnableHostedZoneDNSSECResponsePrivate(EnableHostedZoneDNSSECResponse * const q);
 
     void parseEnableHostedZoneDNSSECResponse(QXmlStreamReader &xml);
 

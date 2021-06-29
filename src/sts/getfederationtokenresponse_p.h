@@ -31,7 +31,7 @@ class GetFederationTokenResponsePrivate : public StsResponsePrivate {
 
 public:
 
-    GetFederationTokenResponsePrivate(GetFederationTokenResponse * const q);
+    explicit GetFederationTokenResponsePrivate(GetFederationTokenResponse * const q);
 
     void parseGetFederationTokenResponse(QXmlStreamReader &xml);
 

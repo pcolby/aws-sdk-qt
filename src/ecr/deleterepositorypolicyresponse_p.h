@@ -31,7 +31,7 @@ class DeleteRepositoryPolicyResponsePrivate : public EcrResponsePrivate {
 
 public:
 
-    DeleteRepositoryPolicyResponsePrivate(DeleteRepositoryPolicyResponse * const q);
+    explicit DeleteRepositoryPolicyResponsePrivate(DeleteRepositoryPolicyResponse * const q);
 
     void parseDeleteRepositoryPolicyResponse(QXmlStreamReader &xml);
 

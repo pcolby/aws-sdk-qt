@@ -31,7 +31,7 @@ class ListTopicsResponsePrivate : public SnsResponsePrivate {
 
 public:
 
-    ListTopicsResponsePrivate(ListTopicsResponse * const q);
+    explicit ListTopicsResponsePrivate(ListTopicsResponse * const q);
 
     void parseListTopicsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteApiCacheResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 
-    DeleteApiCacheResponsePrivate(DeleteApiCacheResponse * const q);
+    explicit DeleteApiCacheResponsePrivate(DeleteApiCacheResponse * const q);
 
     void parseDeleteApiCacheResponse(QXmlStreamReader &xml);
 

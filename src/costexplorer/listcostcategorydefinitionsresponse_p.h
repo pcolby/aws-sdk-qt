@@ -31,7 +31,7 @@ class ListCostCategoryDefinitionsResponsePrivate : public CostExplorerResponsePr
 
 public:
 
-    ListCostCategoryDefinitionsResponsePrivate(ListCostCategoryDefinitionsResponse * const q);
+    explicit ListCostCategoryDefinitionsResponsePrivate(ListCostCategoryDefinitionsResponse * const q);
 
     void parseListCostCategoryDefinitionsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteGrantResponsePrivate : public LicenseManagerResponsePrivate {
 
 public:
 
-    DeleteGrantResponsePrivate(DeleteGrantResponse * const q);
+    explicit DeleteGrantResponsePrivate(DeleteGrantResponse * const q);
 
     void parseDeleteGrantResponse(QXmlStreamReader &xml);
 

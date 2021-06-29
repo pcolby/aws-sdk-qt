@@ -31,7 +31,7 @@ class DisableDomainAutoRenewResponsePrivate : public Route53DomainsResponsePriva
 
 public:
 
-    DisableDomainAutoRenewResponsePrivate(DisableDomainAutoRenewResponse * const q);
+    explicit DisableDomainAutoRenewResponsePrivate(DisableDomainAutoRenewResponse * const q);
 
     void parseDisableDomainAutoRenewResponse(QXmlStreamReader &xml);
 

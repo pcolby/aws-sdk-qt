@@ -31,7 +31,7 @@ class DeleteInsightRulesResponsePrivate : public CloudWatchResponsePrivate {
 
 public:
 
-    DeleteInsightRulesResponsePrivate(DeleteInsightRulesResponse * const q);
+    explicit DeleteInsightRulesResponsePrivate(DeleteInsightRulesResponse * const q);
 
     void parseDeleteInsightRulesResponse(QXmlStreamReader &xml);
 

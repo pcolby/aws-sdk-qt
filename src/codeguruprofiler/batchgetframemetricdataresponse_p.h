@@ -31,7 +31,7 @@ class BatchGetFrameMetricDataResponsePrivate : public CodeGuruProfilerResponsePr
 
 public:
 
-    BatchGetFrameMetricDataResponsePrivate(BatchGetFrameMetricDataResponse * const q);
+    explicit BatchGetFrameMetricDataResponsePrivate(BatchGetFrameMetricDataResponse * const q);
 
     void parseBatchGetFrameMetricDataResponse(QXmlStreamReader &xml);
 

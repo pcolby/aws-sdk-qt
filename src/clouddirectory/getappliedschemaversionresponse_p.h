@@ -31,7 +31,7 @@ class GetAppliedSchemaVersionResponsePrivate : public CloudDirectoryResponsePriv
 
 public:
 
-    GetAppliedSchemaVersionResponsePrivate(GetAppliedSchemaVersionResponse * const q);
+    explicit GetAppliedSchemaVersionResponsePrivate(GetAppliedSchemaVersionResponse * const q);
 
     void parseGetAppliedSchemaVersionResponse(QXmlStreamReader &xml);
 

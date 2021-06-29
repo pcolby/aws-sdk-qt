@@ -31,7 +31,7 @@ class DescribeRdsDbInstancesResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    DescribeRdsDbInstancesResponsePrivate(DescribeRdsDbInstancesResponse * const q);
+    explicit DescribeRdsDbInstancesResponsePrivate(DescribeRdsDbInstancesResponse * const q);
 
     void parseDescribeRdsDbInstancesResponse(QXmlStreamReader &xml);
 

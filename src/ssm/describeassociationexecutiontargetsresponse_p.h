@@ -31,7 +31,7 @@ class DescribeAssociationExecutionTargetsResponsePrivate : public SsmResponsePri
 
 public:
 
-    DescribeAssociationExecutionTargetsResponsePrivate(DescribeAssociationExecutionTargetsResponse * const q);
+    explicit DescribeAssociationExecutionTargetsResponsePrivate(DescribeAssociationExecutionTargetsResponse * const q);
 
     void parseDescribeAssociationExecutionTargetsResponse(QXmlStreamReader &xml);
 

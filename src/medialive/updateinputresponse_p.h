@@ -31,7 +31,7 @@ class UpdateInputResponsePrivate : public MediaLiveResponsePrivate {
 
 public:
 
-    UpdateInputResponsePrivate(UpdateInputResponse * const q);
+    explicit UpdateInputResponsePrivate(UpdateInputResponse * const q);
 
     void parseUpdateInputResponse(QXmlStreamReader &xml);
 

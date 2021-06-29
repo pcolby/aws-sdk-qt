@@ -31,7 +31,7 @@ class PutEventsConfigurationResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    PutEventsConfigurationResponsePrivate(PutEventsConfigurationResponse * const q);
+    explicit PutEventsConfigurationResponsePrivate(PutEventsConfigurationResponse * const q);
 
     void parsePutEventsConfigurationResponse(QXmlStreamReader &xml);
 

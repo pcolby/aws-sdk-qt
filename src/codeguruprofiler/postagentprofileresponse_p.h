@@ -31,7 +31,7 @@ class PostAgentProfileResponsePrivate : public CodeGuruProfilerResponsePrivate {
 
 public:
 
-    PostAgentProfileResponsePrivate(PostAgentProfileResponse * const q);
+    explicit PostAgentProfileResponsePrivate(PostAgentProfileResponse * const q);
 
     void parsePostAgentProfileResponse(QXmlStreamReader &xml);
 

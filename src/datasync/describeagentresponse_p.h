@@ -31,7 +31,7 @@ class DescribeAgentResponsePrivate : public DataSyncResponsePrivate {
 
 public:
 
-    DescribeAgentResponsePrivate(DescribeAgentResponse * const q);
+    explicit DescribeAgentResponsePrivate(DescribeAgentResponse * const q);
 
     void parseDescribeAgentResponse(QXmlStreamReader &xml);
 

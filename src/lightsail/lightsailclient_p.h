@@ -30,7 +30,7 @@ class LightsailClient;
 class LightsailClientPrivate {
 
 public:
-    LightsailClientPrivate(LightsailClient * const q);
+    explicit LightsailClientPrivate(LightsailClient * const q);
 
 protected:
     LightsailClient * const q_ptr; ///< Internal q-pointer.

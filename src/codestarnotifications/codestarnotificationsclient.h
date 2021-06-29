@@ -67,7 +67,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    CodeStarNotificationsClient(
+    explicit CodeStarNotificationsClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -90,7 +90,7 @@ public slots:
 protected:
     /// @cond internal
     CodeStarNotificationsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    CodeStarNotificationsClient(CodeStarNotificationsClientPrivate * const d);
+    explicit CodeStarNotificationsClient(CodeStarNotificationsClientPrivate * const d);
     /// @endcond
 
 private:

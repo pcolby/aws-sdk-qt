@@ -31,7 +31,7 @@ class StopChannelResponsePrivate : public MediaLiveResponsePrivate {
 
 public:
 
-    StopChannelResponsePrivate(StopChannelResponse * const q);
+    explicit StopChannelResponsePrivate(StopChannelResponse * const q);
 
     void parseStopChannelResponse(QXmlStreamReader &xml);
 

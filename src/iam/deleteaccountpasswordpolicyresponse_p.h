@@ -31,7 +31,7 @@ class DeleteAccountPasswordPolicyResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    DeleteAccountPasswordPolicyResponsePrivate(DeleteAccountPasswordPolicyResponse * const q);
+    explicit DeleteAccountPasswordPolicyResponsePrivate(DeleteAccountPasswordPolicyResponse * const q);
 
     void parseDeleteAccountPasswordPolicyResponse(QXmlStreamReader &xml);
 

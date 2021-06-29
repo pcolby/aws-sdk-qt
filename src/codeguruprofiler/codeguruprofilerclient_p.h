@@ -30,7 +30,7 @@ class CodeGuruProfilerClient;
 class CodeGuruProfilerClientPrivate {
 
 public:
-    CodeGuruProfilerClientPrivate(CodeGuruProfilerClient * const q);
+    explicit CodeGuruProfilerClientPrivate(CodeGuruProfilerClient * const q);
 
 protected:
     CodeGuruProfilerClient * const q_ptr; ///< Internal q-pointer.

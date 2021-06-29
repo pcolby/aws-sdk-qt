@@ -30,7 +30,7 @@ class HealthLakeClient;
 class HealthLakeClientPrivate {
 
 public:
-    HealthLakeClientPrivate(HealthLakeClient * const q);
+    explicit HealthLakeClientPrivate(HealthLakeClient * const q);
 
 protected:
     HealthLakeClient * const q_ptr; ///< Internal q-pointer.

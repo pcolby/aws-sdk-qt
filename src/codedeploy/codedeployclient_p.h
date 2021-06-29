@@ -30,7 +30,7 @@ class CodeDeployClient;
 class CodeDeployClientPrivate {
 
 public:
-    CodeDeployClientPrivate(CodeDeployClient * const q);
+    explicit CodeDeployClientPrivate(CodeDeployClient * const q);
 
 protected:
     CodeDeployClient * const q_ptr; ///< Internal q-pointer.

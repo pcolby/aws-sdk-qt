@@ -31,7 +31,7 @@ class UpdateManagedInstanceRoleResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    UpdateManagedInstanceRoleResponsePrivate(UpdateManagedInstanceRoleResponse * const q);
+    explicit UpdateManagedInstanceRoleResponsePrivate(UpdateManagedInstanceRoleResponse * const q);
 
     void parseUpdateManagedInstanceRoleResponse(QXmlStreamReader &xml);
 

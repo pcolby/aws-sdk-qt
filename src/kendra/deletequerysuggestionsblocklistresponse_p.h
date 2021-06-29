@@ -31,7 +31,7 @@ class DeleteQuerySuggestionsBlockListResponsePrivate : public kendraResponsePriv
 
 public:
 
-    DeleteQuerySuggestionsBlockListResponsePrivate(DeleteQuerySuggestionsBlockListResponse * const q);
+    explicit DeleteQuerySuggestionsBlockListResponsePrivate(DeleteQuerySuggestionsBlockListResponse * const q);
 
     void parseDeleteQuerySuggestionsBlockListResponse(QXmlStreamReader &xml);
 

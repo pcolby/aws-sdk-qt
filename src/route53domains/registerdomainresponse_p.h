@@ -31,7 +31,7 @@ class RegisterDomainResponsePrivate : public Route53DomainsResponsePrivate {
 
 public:
 
-    RegisterDomainResponsePrivate(RegisterDomainResponse * const q);
+    explicit RegisterDomainResponsePrivate(RegisterDomainResponse * const q);
 
     void parseRegisterDomainResponse(QXmlStreamReader &xml);
 

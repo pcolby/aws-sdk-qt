@@ -31,7 +31,7 @@ class ListDomainNamesResponsePrivate : public CloudSearchResponsePrivate {
 
 public:
 
-    ListDomainNamesResponsePrivate(ListDomainNamesResponse * const q);
+    explicit ListDomainNamesResponsePrivate(ListDomainNamesResponse * const q);
 
     void parseListDomainNamesResponse(QXmlStreamReader &xml);
 

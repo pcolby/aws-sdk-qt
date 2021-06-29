@@ -31,7 +31,7 @@ class DescribeDirectConnectGatewayAssociationProposalsResponsePrivate : public D
 
 public:
 
-    DescribeDirectConnectGatewayAssociationProposalsResponsePrivate(DescribeDirectConnectGatewayAssociationProposalsResponse * const q);
+    explicit DescribeDirectConnectGatewayAssociationProposalsResponsePrivate(DescribeDirectConnectGatewayAssociationProposalsResponse * const q);
 
     void parseDescribeDirectConnectGatewayAssociationProposalsResponse(QXmlStreamReader &xml);
 

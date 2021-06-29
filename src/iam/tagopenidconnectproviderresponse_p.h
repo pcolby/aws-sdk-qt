@@ -31,7 +31,7 @@ class TagOpenIDConnectProviderResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    TagOpenIDConnectProviderResponsePrivate(TagOpenIDConnectProviderResponse * const q);
+    explicit TagOpenIDConnectProviderResponsePrivate(TagOpenIDConnectProviderResponse * const q);
 
     void parseTagOpenIDConnectProviderResponse(QXmlStreamReader &xml);
 

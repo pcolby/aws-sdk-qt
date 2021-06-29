@@ -31,7 +31,7 @@ class DescribeOrganizationConfigurationResponsePrivate : public SecurityHubRespo
 
 public:
 
-    DescribeOrganizationConfigurationResponsePrivate(DescribeOrganizationConfigurationResponse * const q);
+    explicit DescribeOrganizationConfigurationResponsePrivate(DescribeOrganizationConfigurationResponse * const q);
 
     void parseDescribeOrganizationConfigurationResponse(QXmlStreamReader &xml);
 

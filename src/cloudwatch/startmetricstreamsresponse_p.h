@@ -31,7 +31,7 @@ class StartMetricStreamsResponsePrivate : public CloudWatchResponsePrivate {
 
 public:
 
-    StartMetricStreamsResponsePrivate(StartMetricStreamsResponse * const q);
+    explicit StartMetricStreamsResponsePrivate(StartMetricStreamsResponse * const q);
 
     void parseStartMetricStreamsResponse(QXmlStreamReader &xml);
 

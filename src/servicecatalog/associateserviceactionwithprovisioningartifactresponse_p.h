@@ -31,7 +31,7 @@ class AssociateServiceActionWithProvisioningArtifactResponsePrivate : public Ser
 
 public:
 
-    AssociateServiceActionWithProvisioningArtifactResponsePrivate(AssociateServiceActionWithProvisioningArtifactResponse * const q);
+    explicit AssociateServiceActionWithProvisioningArtifactResponsePrivate(AssociateServiceActionWithProvisioningArtifactResponse * const q);
 
     void parseAssociateServiceActionWithProvisioningArtifactResponse(QXmlStreamReader &xml);
 

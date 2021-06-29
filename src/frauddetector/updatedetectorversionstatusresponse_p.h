@@ -31,7 +31,7 @@ class UpdateDetectorVersionStatusResponsePrivate : public FraudDetectorResponseP
 
 public:
 
-    UpdateDetectorVersionStatusResponsePrivate(UpdateDetectorVersionStatusResponse * const q);
+    explicit UpdateDetectorVersionStatusResponsePrivate(UpdateDetectorVersionStatusResponse * const q);
 
     void parseUpdateDetectorVersionStatusResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateReplicationSubnetGroupResponsePrivate : public DatabaseMigrationServ
 
 public:
 
-    CreateReplicationSubnetGroupResponsePrivate(CreateReplicationSubnetGroupResponse * const q);
+    explicit CreateReplicationSubnetGroupResponsePrivate(CreateReplicationSubnetGroupResponse * const q);
 
     void parseCreateReplicationSubnetGroupResponse(QXmlStreamReader &xml);
 

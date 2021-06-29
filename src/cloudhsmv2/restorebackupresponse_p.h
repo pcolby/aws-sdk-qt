@@ -31,7 +31,7 @@ class RestoreBackupResponsePrivate : public CloudHSMV2ResponsePrivate {
 
 public:
 
-    RestoreBackupResponsePrivate(RestoreBackupResponse * const q);
+    explicit RestoreBackupResponsePrivate(RestoreBackupResponse * const q);
 
     void parseRestoreBackupResponse(QXmlStreamReader &xml);
 

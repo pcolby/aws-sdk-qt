@@ -31,7 +31,7 @@ class GetCloudFormationTemplateResponsePrivate : public ServerlessApplicationRep
 
 public:
 
-    GetCloudFormationTemplateResponsePrivate(GetCloudFormationTemplateResponse * const q);
+    explicit GetCloudFormationTemplateResponsePrivate(GetCloudFormationTemplateResponse * const q);
 
     void parseGetCloudFormationTemplateResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class CreateStudioComponentResponsePrivate : public NimbleStudioResponsePrivate 
 
 public:
 
-    CreateStudioComponentResponsePrivate(CreateStudioComponentResponse * const q);
+    explicit CreateStudioComponentResponsePrivate(CreateStudioComponentResponse * const q);
 
     void parseCreateStudioComponentResponse(QXmlStreamReader &xml);
 

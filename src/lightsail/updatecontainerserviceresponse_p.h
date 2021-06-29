@@ -31,7 +31,7 @@ class UpdateContainerServiceResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    UpdateContainerServiceResponsePrivate(UpdateContainerServiceResponse * const q);
+    explicit UpdateContainerServiceResponsePrivate(UpdateContainerServiceResponse * const q);
 
     void parseUpdateContainerServiceResponse(QXmlStreamReader &xml);
 

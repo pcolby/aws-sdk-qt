@@ -31,7 +31,7 @@ class UpdateAcceleratorResponsePrivate : public GlobalAcceleratorResponsePrivate
 
 public:
 
-    UpdateAcceleratorResponsePrivate(UpdateAcceleratorResponse * const q);
+    explicit UpdateAcceleratorResponsePrivate(UpdateAcceleratorResponse * const q);
 
     void parseUpdateAcceleratorResponse(QXmlStreamReader &xml);
 

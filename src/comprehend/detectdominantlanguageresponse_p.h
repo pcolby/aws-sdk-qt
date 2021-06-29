@@ -31,7 +31,7 @@ class DetectDominantLanguageResponsePrivate : public ComprehendResponsePrivate {
 
 public:
 
-    DetectDominantLanguageResponsePrivate(DetectDominantLanguageResponse * const q);
+    explicit DetectDominantLanguageResponsePrivate(DetectDominantLanguageResponse * const q);
 
     void parseDetectDominantLanguageResponse(QXmlStreamReader &xml);
 

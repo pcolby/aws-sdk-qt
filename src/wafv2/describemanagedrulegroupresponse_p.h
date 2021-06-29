@@ -31,7 +31,7 @@ class DescribeManagedRuleGroupResponsePrivate : public Wafv2ResponsePrivate {
 
 public:
 
-    DescribeManagedRuleGroupResponsePrivate(DescribeManagedRuleGroupResponse * const q);
+    explicit DescribeManagedRuleGroupResponsePrivate(DescribeManagedRuleGroupResponse * const q);
 
     void parseDescribeManagedRuleGroupResponse(QXmlStreamReader &xml);
 

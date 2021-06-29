@@ -30,7 +30,7 @@ class MediaStoreClient;
 class MediaStoreClientPrivate {
 
 public:
-    MediaStoreClientPrivate(MediaStoreClient * const q);
+    explicit MediaStoreClientPrivate(MediaStoreClient * const q);
 
 protected:
     MediaStoreClient * const q_ptr; ///< Internal q-pointer.

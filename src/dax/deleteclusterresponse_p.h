@@ -31,7 +31,7 @@ class DeleteClusterResponsePrivate : public DaxResponsePrivate {
 
 public:
 
-    DeleteClusterResponsePrivate(DeleteClusterResponse * const q);
+    explicit DeleteClusterResponsePrivate(DeleteClusterResponse * const q);
 
     void parseDeleteClusterResponse(QXmlStreamReader &xml);
 

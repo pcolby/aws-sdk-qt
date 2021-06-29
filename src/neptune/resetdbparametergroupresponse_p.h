@@ -31,7 +31,7 @@ class ResetDBParameterGroupResponsePrivate : public NeptuneResponsePrivate {
 
 public:
 
-    ResetDBParameterGroupResponsePrivate(ResetDBParameterGroupResponse * const q);
+    explicit ResetDBParameterGroupResponsePrivate(ResetDBParameterGroupResponse * const q);
 
     void parseResetDBParameterGroupResponse(QXmlStreamReader &xml);
 

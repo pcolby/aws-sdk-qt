@@ -31,7 +31,7 @@ class TagMFADeviceResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    TagMFADeviceResponsePrivate(TagMFADeviceResponse * const q);
+    explicit TagMFADeviceResponsePrivate(TagMFADeviceResponse * const q);
 
     void parseTagMFADeviceResponse(QXmlStreamReader &xml);
 

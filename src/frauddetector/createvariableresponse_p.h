@@ -31,7 +31,7 @@ class CreateVariableResponsePrivate : public FraudDetectorResponsePrivate {
 
 public:
 
-    CreateVariableResponsePrivate(CreateVariableResponse * const q);
+    explicit CreateVariableResponsePrivate(CreateVariableResponse * const q);
 
     void parseCreateVariableResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteJobTemplateResponsePrivate : public MediaConvertResponsePrivate {
 
 public:
 
-    DeleteJobTemplateResponsePrivate(DeleteJobTemplateResponse * const q);
+    explicit DeleteJobTemplateResponsePrivate(DeleteJobTemplateResponse * const q);
 
     void parseDeleteJobTemplateResponse(QXmlStreamReader &xml);
 

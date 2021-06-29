@@ -31,7 +31,7 @@ class AdminSetUserPasswordResponsePrivate : public CognitoIdentityProviderRespon
 
 public:
 
-    AdminSetUserPasswordResponsePrivate(AdminSetUserPasswordResponse * const q);
+    explicit AdminSetUserPasswordResponsePrivate(AdminSetUserPasswordResponse * const q);
 
     void parseAdminSetUserPasswordResponse(QXmlStreamReader &xml);
 

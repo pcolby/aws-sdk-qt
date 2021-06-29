@@ -31,7 +31,7 @@ class DescribeGroupResponsePrivate : public IdentityStoreResponsePrivate {
 
 public:
 
-    DescribeGroupResponsePrivate(DescribeGroupResponse * const q);
+    explicit DescribeGroupResponsePrivate(DescribeGroupResponse * const q);
 
     void parseDescribeGroupResponse(QXmlStreamReader &xml);
 

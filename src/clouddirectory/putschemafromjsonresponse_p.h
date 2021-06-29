@@ -31,7 +31,7 @@ class PutSchemaFromJsonResponsePrivate : public CloudDirectoryResponsePrivate {
 
 public:
 
-    PutSchemaFromJsonResponsePrivate(PutSchemaFromJsonResponse * const q);
+    explicit PutSchemaFromJsonResponsePrivate(PutSchemaFromJsonResponse * const q);
 
     void parsePutSchemaFromJsonResponse(QXmlStreamReader &xml);
 

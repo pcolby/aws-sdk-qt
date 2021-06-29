@@ -59,7 +59,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    BraketClient(
+    explicit BraketClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -78,7 +78,7 @@ public slots:
 protected:
     /// @cond internal
     BraketClientPrivate * const d_ptr; ///< Internal d-pointer.
-    BraketClient(BraketClientPrivate * const d);
+    explicit BraketClient(BraketClientPrivate * const d);
     /// @endcond
 
 private:

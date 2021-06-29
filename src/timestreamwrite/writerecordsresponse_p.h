@@ -31,7 +31,7 @@ class WriteRecordsResponsePrivate : public TimestreamWriteResponsePrivate {
 
 public:
 
-    WriteRecordsResponsePrivate(WriteRecordsResponse * const q);
+    explicit WriteRecordsResponsePrivate(WriteRecordsResponse * const q);
 
     void parseWriteRecordsResponse(QXmlStreamReader &xml);
 

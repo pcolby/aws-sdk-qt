@@ -31,7 +31,7 @@ class AssociateSkillWithUsersResponsePrivate : public AlexaForBusinessResponsePr
 
 public:
 
-    AssociateSkillWithUsersResponsePrivate(AssociateSkillWithUsersResponse * const q);
+    explicit AssociateSkillWithUsersResponsePrivate(AssociateSkillWithUsersResponse * const q);
 
     void parseAssociateSkillWithUsersResponse(QXmlStreamReader &xml);
 

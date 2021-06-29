@@ -31,7 +31,7 @@ class ListSigningPlatformsResponsePrivate : public signerResponsePrivate {
 
 public:
 
-    ListSigningPlatformsResponsePrivate(ListSigningPlatformsResponse * const q);
+    explicit ListSigningPlatformsResponsePrivate(ListSigningPlatformsResponse * const q);
 
     void parseListSigningPlatformsResponse(QXmlStreamReader &xml);
 

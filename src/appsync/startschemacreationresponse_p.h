@@ -31,7 +31,7 @@ class StartSchemaCreationResponsePrivate : public AppSyncResponsePrivate {
 
 public:
 
-    StartSchemaCreationResponsePrivate(StartSchemaCreationResponse * const q);
+    explicit StartSchemaCreationResponsePrivate(StartSchemaCreationResponse * const q);
 
     void parseStartSchemaCreationResponse(QXmlStreamReader &xml);
 

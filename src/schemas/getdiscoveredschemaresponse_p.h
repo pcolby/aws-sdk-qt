@@ -31,7 +31,7 @@ class GetDiscoveredSchemaResponsePrivate : public SchemasResponsePrivate {
 
 public:
 
-    GetDiscoveredSchemaResponsePrivate(GetDiscoveredSchemaResponse * const q);
+    explicit GetDiscoveredSchemaResponsePrivate(GetDiscoveredSchemaResponse * const q);
 
     void parseGetDiscoveredSchemaResponse(QXmlStreamReader &xml);
 

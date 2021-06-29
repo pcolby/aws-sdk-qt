@@ -31,7 +31,7 @@ class DescribeInventoryDeletionsResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    DescribeInventoryDeletionsResponsePrivate(DescribeInventoryDeletionsResponse * const q);
+    explicit DescribeInventoryDeletionsResponsePrivate(DescribeInventoryDeletionsResponse * const q);
 
     void parseDescribeInventoryDeletionsResponse(QXmlStreamReader &xml);
 

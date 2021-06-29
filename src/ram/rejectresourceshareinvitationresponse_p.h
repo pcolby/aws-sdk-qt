@@ -31,7 +31,7 @@ class RejectResourceShareInvitationResponsePrivate : public RamResponsePrivate {
 
 public:
 
-    RejectResourceShareInvitationResponsePrivate(RejectResourceShareInvitationResponse * const q);
+    explicit RejectResourceShareInvitationResponsePrivate(RejectResourceShareInvitationResponse * const q);
 
     void parseRejectResourceShareInvitationResponse(QXmlStreamReader &xml);
 

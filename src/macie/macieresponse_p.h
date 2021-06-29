@@ -29,7 +29,7 @@ class MacieResponsePrivate {
 
 public:
 
-    MacieResponsePrivate(MacieResponse * const q);
+    explicit MacieResponsePrivate(MacieResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

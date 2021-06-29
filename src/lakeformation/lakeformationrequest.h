@@ -82,7 +82,7 @@ public:
 protected:
     /// @cond internal
     LakeFormationRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    LakeFormationRequest(LakeFormationRequestPrivate * const d);
+    explicit LakeFormationRequest(LakeFormationRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

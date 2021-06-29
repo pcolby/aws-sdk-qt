@@ -31,7 +31,7 @@ class DescribeEnvironmentResourcesResponsePrivate : public ElasticBeanstalkRespo
 
 public:
 
-    DescribeEnvironmentResourcesResponsePrivate(DescribeEnvironmentResourcesResponse * const q);
+    explicit DescribeEnvironmentResourcesResponsePrivate(DescribeEnvironmentResourcesResponse * const q);
 
     void parseDescribeEnvironmentResourcesResponse(QXmlStreamReader &xml);
 

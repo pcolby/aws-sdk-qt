@@ -31,7 +31,7 @@ class CreateLicenseConfigurationResponsePrivate : public LicenseManagerResponseP
 
 public:
 
-    CreateLicenseConfigurationResponsePrivate(CreateLicenseConfigurationResponse * const q);
+    explicit CreateLicenseConfigurationResponsePrivate(CreateLicenseConfigurationResponse * const q);
 
     void parseCreateLicenseConfigurationResponse(QXmlStreamReader &xml);
 

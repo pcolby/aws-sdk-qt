@@ -31,7 +31,7 @@ class GetOpsSummaryResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    GetOpsSummaryResponsePrivate(GetOpsSummaryResponse * const q);
+    explicit GetOpsSummaryResponsePrivate(GetOpsSummaryResponse * const q);
 
     void parseGetOpsSummaryResponse(QXmlStreamReader &xml);
 

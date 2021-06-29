@@ -31,7 +31,7 @@ class GetEnvironmentTemplateVersionResponsePrivate : public ProtonResponsePrivat
 
 public:
 
-    GetEnvironmentTemplateVersionResponsePrivate(GetEnvironmentTemplateVersionResponse * const q);
+    explicit GetEnvironmentTemplateVersionResponsePrivate(GetEnvironmentTemplateVersionResponse * const q);
 
     void parseGetEnvironmentTemplateVersionResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteDocumentationPartResponsePrivate : public APIGatewayResponsePrivate 
 
 public:
 
-    DeleteDocumentationPartResponsePrivate(DeleteDocumentationPartResponse * const q);
+    explicit DeleteDocumentationPartResponsePrivate(DeleteDocumentationPartResponse * const q);
 
     void parseDeleteDocumentationPartResponse(QXmlStreamReader &xml);
 

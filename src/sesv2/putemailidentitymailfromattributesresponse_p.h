@@ -31,7 +31,7 @@ class PutEmailIdentityMailFromAttributesResponsePrivate : public Sesv2ResponsePr
 
 public:
 
-    PutEmailIdentityMailFromAttributesResponsePrivate(PutEmailIdentityMailFromAttributesResponse * const q);
+    explicit PutEmailIdentityMailFromAttributesResponsePrivate(PutEmailIdentityMailFromAttributesResponse * const q);
 
     void parsePutEmailIdentityMailFromAttributesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListAttacksResponsePrivate : public ShieldResponsePrivate {
 
 public:
 
-    ListAttacksResponsePrivate(ListAttacksResponse * const q);
+    explicit ListAttacksResponsePrivate(ListAttacksResponse * const q);
 
     void parseListAttacksResponse(QXmlStreamReader &xml);
 

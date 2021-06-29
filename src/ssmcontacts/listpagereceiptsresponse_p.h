@@ -31,7 +31,7 @@ class ListPageReceiptsResponsePrivate : public SSMContactsResponsePrivate {
 
 public:
 
-    ListPageReceiptsResponsePrivate(ListPageReceiptsResponse * const q);
+    explicit ListPageReceiptsResponsePrivate(ListPageReceiptsResponse * const q);
 
     void parseListPageReceiptsResponse(QXmlStreamReader &xml);
 

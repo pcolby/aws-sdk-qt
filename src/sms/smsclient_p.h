@@ -30,7 +30,7 @@ class SmsClient;
 class SmsClientPrivate {
 
 public:
-    SmsClientPrivate(SmsClient * const q);
+    explicit SmsClientPrivate(SmsClient * const q);
 
 protected:
     SmsClient * const q_ptr; ///< Internal q-pointer.

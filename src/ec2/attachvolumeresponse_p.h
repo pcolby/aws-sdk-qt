@@ -31,7 +31,7 @@ class AttachVolumeResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    AttachVolumeResponsePrivate(AttachVolumeResponse * const q);
+    explicit AttachVolumeResponsePrivate(AttachVolumeResponse * const q);
 
     void parseAttachVolumeResponse(QXmlStreamReader &xml);
 

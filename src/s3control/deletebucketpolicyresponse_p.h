@@ -31,7 +31,7 @@ class DeleteBucketPolicyResponsePrivate : public S3ControlResponsePrivate {
 
 public:
 
-    DeleteBucketPolicyResponsePrivate(DeleteBucketPolicyResponse * const q);
+    explicit DeleteBucketPolicyResponsePrivate(DeleteBucketPolicyResponse * const q);
 
     void parseDeleteBucketPolicyResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteQueuedSavingsPlanResponsePrivate : public SavingsPlansResponsePrivat
 
 public:
 
-    DeleteQueuedSavingsPlanResponsePrivate(DeleteQueuedSavingsPlanResponse * const q);
+    explicit DeleteQueuedSavingsPlanResponsePrivate(DeleteQueuedSavingsPlanResponse * const q);
 
     void parseDeleteQueuedSavingsPlanResponse(QXmlStreamReader &xml);
 

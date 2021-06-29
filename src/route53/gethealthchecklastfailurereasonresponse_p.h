@@ -31,7 +31,7 @@ class GetHealthCheckLastFailureReasonResponsePrivate : public Route53ResponsePri
 
 public:
 
-    GetHealthCheckLastFailureReasonResponsePrivate(GetHealthCheckLastFailureReasonResponse * const q);
+    explicit GetHealthCheckLastFailureReasonResponsePrivate(GetHealthCheckLastFailureReasonResponse * const q);
 
     void parseGetHealthCheckLastFailureReasonResponse(QXmlStreamReader &xml);
 

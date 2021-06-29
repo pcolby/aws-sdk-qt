@@ -31,7 +31,7 @@ class ListSecurityPoliciesResponsePrivate : public TransferResponsePrivate {
 
 public:
 
-    ListSecurityPoliciesResponsePrivate(ListSecurityPoliciesResponse * const q);
+    explicit ListSecurityPoliciesResponsePrivate(ListSecurityPoliciesResponse * const q);
 
     void parseListSecurityPoliciesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetChangeResponsePrivate : public Route53ResponsePrivate {
 
 public:
 
-    GetChangeResponsePrivate(GetChangeResponse * const q);
+    explicit GetChangeResponsePrivate(GetChangeResponse * const q);
 
     void parseGetChangeResponse(QXmlStreamReader &xml);
 

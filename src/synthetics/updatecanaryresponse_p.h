@@ -31,7 +31,7 @@ class UpdateCanaryResponsePrivate : public SyntheticsResponsePrivate {
 
 public:
 
-    UpdateCanaryResponsePrivate(UpdateCanaryResponse * const q);
+    explicit UpdateCanaryResponsePrivate(UpdateCanaryResponse * const q);
 
     void parseUpdateCanaryResponse(QXmlStreamReader &xml);
 

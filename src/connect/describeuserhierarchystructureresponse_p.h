@@ -31,7 +31,7 @@ class DescribeUserHierarchyStructureResponsePrivate : public ConnectResponsePriv
 
 public:
 
-    DescribeUserHierarchyStructureResponsePrivate(DescribeUserHierarchyStructureResponse * const q);
+    explicit DescribeUserHierarchyStructureResponsePrivate(DescribeUserHierarchyStructureResponse * const q);
 
     void parseDescribeUserHierarchyStructureResponse(QXmlStreamReader &xml);
 

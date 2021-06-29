@@ -31,7 +31,7 @@ class DeleteAgentResponsePrivate : public DataSyncResponsePrivate {
 
 public:
 
-    DeleteAgentResponsePrivate(DeleteAgentResponse * const q);
+    explicit DeleteAgentResponsePrivate(DeleteAgentResponse * const q);
 
     void parseDeleteAgentResponse(QXmlStreamReader &xml);
 

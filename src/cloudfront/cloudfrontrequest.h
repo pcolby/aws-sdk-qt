@@ -142,7 +142,7 @@ public:
 protected:
     /// @cond internal
     CloudFrontRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    CloudFrontRequest(CloudFrontRequestPrivate * const d);
+    explicit CloudFrontRequest(CloudFrontRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

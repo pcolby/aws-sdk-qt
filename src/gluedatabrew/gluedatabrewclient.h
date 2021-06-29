@@ -119,7 +119,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    GlueDataBrewClient(
+    explicit GlueDataBrewClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -168,7 +168,7 @@ public slots:
 protected:
     /// @cond internal
     GlueDataBrewClientPrivate * const d_ptr; ///< Internal d-pointer.
-    GlueDataBrewClient(GlueDataBrewClientPrivate * const d);
+    explicit GlueDataBrewClient(GlueDataBrewClientPrivate * const d);
     /// @endcond
 
 private:

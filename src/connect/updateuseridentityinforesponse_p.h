@@ -31,7 +31,7 @@ class UpdateUserIdentityInfoResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    UpdateUserIdentityInfoResponsePrivate(UpdateUserIdentityInfoResponse * const q);
+    explicit UpdateUserIdentityInfoResponsePrivate(UpdateUserIdentityInfoResponse * const q);
 
     void parseUpdateUserIdentityInfoResponse(QXmlStreamReader &xml);
 

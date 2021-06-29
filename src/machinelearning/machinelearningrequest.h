@@ -87,7 +87,7 @@ public:
 protected:
     /// @cond internal
     MachineLearningRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    MachineLearningRequest(MachineLearningRequestPrivate * const d);
+    explicit MachineLearningRequest(MachineLearningRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

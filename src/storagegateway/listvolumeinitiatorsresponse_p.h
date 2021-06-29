@@ -31,7 +31,7 @@ class ListVolumeInitiatorsResponsePrivate : public StorageGatewayResponsePrivate
 
 public:
 
-    ListVolumeInitiatorsResponsePrivate(ListVolumeInitiatorsResponse * const q);
+    explicit ListVolumeInitiatorsResponsePrivate(ListVolumeInitiatorsResponse * const q);
 
     void parseListVolumeInitiatorsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class UpdateApiDestinationResponsePrivate : public EventBridgeResponsePrivate {
 
 public:
 
-    UpdateApiDestinationResponsePrivate(UpdateApiDestinationResponse * const q);
+    explicit UpdateApiDestinationResponsePrivate(UpdateApiDestinationResponse * const q);
 
     void parseUpdateApiDestinationResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteProjectVersionResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 
-    DeleteProjectVersionResponsePrivate(DeleteProjectVersionResponse * const q);
+    explicit DeleteProjectVersionResponsePrivate(DeleteProjectVersionResponse * const q);
 
     void parseDeleteProjectVersionResponse(QXmlStreamReader &xml);
 

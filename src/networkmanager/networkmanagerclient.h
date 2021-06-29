@@ -111,7 +111,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    NetworkManagerClient(
+    explicit NetworkManagerClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -156,7 +156,7 @@ public slots:
 protected:
     /// @cond internal
     NetworkManagerClientPrivate * const d_ptr; ///< Internal d-pointer.
-    NetworkManagerClient(NetworkManagerClientPrivate * const d);
+    explicit NetworkManagerClient(NetworkManagerClientPrivate * const d);
     /// @endcond
 
 private:

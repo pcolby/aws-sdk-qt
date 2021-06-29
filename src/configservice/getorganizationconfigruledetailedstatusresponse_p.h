@@ -31,7 +31,7 @@ class GetOrganizationConfigRuleDetailedStatusResponsePrivate : public ConfigServ
 
 public:
 
-    GetOrganizationConfigRuleDetailedStatusResponsePrivate(GetOrganizationConfigRuleDetailedStatusResponse * const q);
+    explicit GetOrganizationConfigRuleDetailedStatusResponsePrivate(GetOrganizationConfigRuleDetailedStatusResponse * const q);
 
     void parseGetOrganizationConfigRuleDetailedStatusResponse(QXmlStreamReader &xml);
 

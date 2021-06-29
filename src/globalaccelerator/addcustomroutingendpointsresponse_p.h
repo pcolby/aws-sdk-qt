@@ -31,7 +31,7 @@ class AddCustomRoutingEndpointsResponsePrivate : public GlobalAcceleratorRespons
 
 public:
 
-    AddCustomRoutingEndpointsResponsePrivate(AddCustomRoutingEndpointsResponse * const q);
+    explicit AddCustomRoutingEndpointsResponsePrivate(AddCustomRoutingEndpointsResponse * const q);
 
     void parseAddCustomRoutingEndpointsResponse(QXmlStreamReader &xml);
 

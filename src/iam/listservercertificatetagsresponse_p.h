@@ -31,7 +31,7 @@ class ListServerCertificateTagsResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    ListServerCertificateTagsResponsePrivate(ListServerCertificateTagsResponse * const q);
+    explicit ListServerCertificateTagsResponsePrivate(ListServerCertificateTagsResponse * const q);
 
     void parseListServerCertificateTagsResponse(QXmlStreamReader &xml);
 

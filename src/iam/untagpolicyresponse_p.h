@@ -31,7 +31,7 @@ class UntagPolicyResponsePrivate : public IamResponsePrivate {
 
 public:
 
-    UntagPolicyResponsePrivate(UntagPolicyResponse * const q);
+    explicit UntagPolicyResponsePrivate(UntagPolicyResponse * const q);
 
     void parseUntagPolicyResponse(QXmlStreamReader &xml);
 

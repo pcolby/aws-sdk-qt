@@ -31,7 +31,7 @@ class GetDeployablePatchSnapshotForInstanceResponsePrivate : public SsmResponseP
 
 public:
 
-    GetDeployablePatchSnapshotForInstanceResponsePrivate(GetDeployablePatchSnapshotForInstanceResponse * const q);
+    explicit GetDeployablePatchSnapshotForInstanceResponsePrivate(GetDeployablePatchSnapshotForInstanceResponse * const q);
 
     void parseGetDeployablePatchSnapshotForInstanceResponse(QXmlStreamReader &xml);
 

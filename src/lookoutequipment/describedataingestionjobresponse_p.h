@@ -31,7 +31,7 @@ class DescribeDataIngestionJobResponsePrivate : public LookoutEquipmentResponseP
 
 public:
 
-    DescribeDataIngestionJobResponsePrivate(DescribeDataIngestionJobResponse * const q);
+    explicit DescribeDataIngestionJobResponsePrivate(DescribeDataIngestionJobResponse * const q);
 
     void parseDescribeDataIngestionJobResponse(QXmlStreamReader &xml);
 

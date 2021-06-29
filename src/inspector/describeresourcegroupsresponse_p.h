@@ -31,7 +31,7 @@ class DescribeResourceGroupsResponsePrivate : public InspectorResponsePrivate {
 
 public:
 
-    DescribeResourceGroupsResponsePrivate(DescribeResourceGroupsResponse * const q);
+    explicit DescribeResourceGroupsResponsePrivate(DescribeResourceGroupsResponse * const q);
 
     void parseDescribeResourceGroupsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListPortfoliosForProductResponsePrivate : public ServiceCatalogResponsePri
 
 public:
 
-    ListPortfoliosForProductResponsePrivate(ListPortfoliosForProductResponse * const q);
+    explicit ListPortfoliosForProductResponsePrivate(ListPortfoliosForProductResponse * const q);
 
     void parseListPortfoliosForProductResponse(QXmlStreamReader &xml);
 

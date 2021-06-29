@@ -31,7 +31,7 @@ class DiscoverInstancesResponsePrivate : public ServiceDiscoveryResponsePrivate 
 
 public:
 
-    DiscoverInstancesResponsePrivate(DiscoverInstancesResponse * const q);
+    explicit DiscoverInstancesResponsePrivate(DiscoverInstancesResponse * const q);
 
     void parseDiscoverInstancesResponse(QXmlStreamReader &xml);
 

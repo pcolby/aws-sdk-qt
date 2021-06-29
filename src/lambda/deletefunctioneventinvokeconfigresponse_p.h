@@ -31,7 +31,7 @@ class DeleteFunctionEventInvokeConfigResponsePrivate : public LambdaResponsePriv
 
 public:
 
-    DeleteFunctionEventInvokeConfigResponsePrivate(DeleteFunctionEventInvokeConfigResponse * const q);
+    explicit DeleteFunctionEventInvokeConfigResponsePrivate(DeleteFunctionEventInvokeConfigResponse * const q);
 
     void parseDeleteFunctionEventInvokeConfigResponse(QXmlStreamReader &xml);
 

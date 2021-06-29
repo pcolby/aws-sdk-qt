@@ -31,7 +31,7 @@ class DescribeLogPatternResponsePrivate : public ApplicationInsightsResponsePriv
 
 public:
 
-    DescribeLogPatternResponsePrivate(DescribeLogPatternResponse * const q);
+    explicit DescribeLogPatternResponsePrivate(DescribeLogPatternResponse * const q);
 
     void parseDescribeLogPatternResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListRulesPackagesResponsePrivate : public InspectorResponsePrivate {
 
 public:
 
-    ListRulesPackagesResponsePrivate(ListRulesPackagesResponse * const q);
+    explicit ListRulesPackagesResponsePrivate(ListRulesPackagesResponse * const q);
 
     void parseListRulesPackagesResponse(QXmlStreamReader &xml);
 

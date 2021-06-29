@@ -31,7 +31,7 @@ class UpdateTaskResponsePrivate : public DataSyncResponsePrivate {
 
 public:
 
-    UpdateTaskResponsePrivate(UpdateTaskResponse * const q);
+    explicit UpdateTaskResponsePrivate(UpdateTaskResponse * const q);
 
     void parseUpdateTaskResponse(QXmlStreamReader &xml);
 

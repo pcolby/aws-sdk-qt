@@ -31,7 +31,7 @@ class CheckDomainTransferabilityResponsePrivate : public Route53DomainsResponseP
 
 public:
 
-    CheckDomainTransferabilityResponsePrivate(CheckDomainTransferabilityResponse * const q);
+    explicit CheckDomainTransferabilityResponsePrivate(CheckDomainTransferabilityResponse * const q);
 
     void parseCheckDomainTransferabilityResponse(QXmlStreamReader &xml);
 

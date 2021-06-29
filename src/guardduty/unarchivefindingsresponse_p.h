@@ -31,7 +31,7 @@ class UnarchiveFindingsResponsePrivate : public GuardDutyResponsePrivate {
 
 public:
 
-    UnarchiveFindingsResponsePrivate(UnarchiveFindingsResponse * const q);
+    explicit UnarchiveFindingsResponsePrivate(UnarchiveFindingsResponse * const q);
 
     void parseUnarchiveFindingsResponse(QXmlStreamReader &xml);
 

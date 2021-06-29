@@ -31,7 +31,7 @@ class DescribeVolumesModificationsResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeVolumesModificationsResponsePrivate(DescribeVolumesModificationsResponse * const q);
+    explicit DescribeVolumesModificationsResponsePrivate(DescribeVolumesModificationsResponse * const q);
 
     void parseDescribeVolumesModificationsResponse(QXmlStreamReader &xml);
 

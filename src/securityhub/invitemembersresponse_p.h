@@ -31,7 +31,7 @@ class InviteMembersResponsePrivate : public SecurityHubResponsePrivate {
 
 public:
 
-    InviteMembersResponsePrivate(InviteMembersResponse * const q);
+    explicit InviteMembersResponsePrivate(InviteMembersResponse * const q);
 
     void parseInviteMembersResponse(QXmlStreamReader &xml);
 

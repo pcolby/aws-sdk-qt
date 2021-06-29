@@ -31,7 +31,7 @@ class CreateSnapshotFromVolumeRecoveryPointResponsePrivate : public StorageGatew
 
 public:
 
-    CreateSnapshotFromVolumeRecoveryPointResponsePrivate(CreateSnapshotFromVolumeRecoveryPointResponse * const q);
+    explicit CreateSnapshotFromVolumeRecoveryPointResponsePrivate(CreateSnapshotFromVolumeRecoveryPointResponse * const q);
 
     void parseCreateSnapshotFromVolumeRecoveryPointResponse(QXmlStreamReader &xml);
 

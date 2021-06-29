@@ -31,7 +31,7 @@ class AttachThingPrincipalResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    AttachThingPrincipalResponsePrivate(AttachThingPrincipalResponse * const q);
+    explicit AttachThingPrincipalResponsePrivate(AttachThingPrincipalResponse * const q);
 
     void parseAttachThingPrincipalResponse(QXmlStreamReader &xml);
 

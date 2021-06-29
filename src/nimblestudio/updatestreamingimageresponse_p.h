@@ -31,7 +31,7 @@ class UpdateStreamingImageResponsePrivate : public NimbleStudioResponsePrivate {
 
 public:
 
-    UpdateStreamingImageResponsePrivate(UpdateStreamingImageResponse * const q);
+    explicit UpdateStreamingImageResponsePrivate(UpdateStreamingImageResponse * const q);
 
     void parseUpdateStreamingImageResponse(QXmlStreamReader &xml);
 

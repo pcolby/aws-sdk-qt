@@ -31,7 +31,7 @@ class DisassociateServiceRoleFromAccountResponsePrivate : public GreengrassRespo
 
 public:
 
-    DisassociateServiceRoleFromAccountResponsePrivate(DisassociateServiceRoleFromAccountResponse * const q);
+    explicit DisassociateServiceRoleFromAccountResponsePrivate(DisassociateServiceRoleFromAccountResponse * const q);
 
     void parseDisassociateServiceRoleFromAccountResponse(QXmlStreamReader &xml);
 

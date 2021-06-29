@@ -31,7 +31,7 @@ class DeletePlaceIndexResponsePrivate : public LocationServiceResponsePrivate {
 
 public:
 
-    DeletePlaceIndexResponsePrivate(DeletePlaceIndexResponse * const q);
+    explicit DeletePlaceIndexResponsePrivate(DeletePlaceIndexResponse * const q);
 
     void parseDeletePlaceIndexResponse(QXmlStreamReader &xml);
 

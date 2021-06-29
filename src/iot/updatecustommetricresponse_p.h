@@ -31,7 +31,7 @@ class UpdateCustomMetricResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    UpdateCustomMetricResponsePrivate(UpdateCustomMetricResponse * const q);
+    explicit UpdateCustomMetricResponsePrivate(UpdateCustomMetricResponse * const q);
 
     void parseUpdateCustomMetricResponse(QXmlStreamReader &xml);
 

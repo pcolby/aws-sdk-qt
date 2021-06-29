@@ -31,7 +31,7 @@ class ListTableColumnsResponsePrivate : public HoneycodeResponsePrivate {
 
 public:
 
-    ListTableColumnsResponsePrivate(ListTableColumnsResponse * const q);
+    explicit ListTableColumnsResponsePrivate(ListTableColumnsResponse * const q);
 
     void parseListTableColumnsResponse(QXmlStreamReader &xml);
 

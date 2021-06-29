@@ -31,7 +31,7 @@ class ResetCacheParameterGroupResponsePrivate : public ElastiCacheResponsePrivat
 
 public:
 
-    ResetCacheParameterGroupResponsePrivate(ResetCacheParameterGroupResponse * const q);
+    explicit ResetCacheParameterGroupResponsePrivate(ResetCacheParameterGroupResponse * const q);
 
     void parseResetCacheParameterGroupResponse(QXmlStreamReader &xml);
 

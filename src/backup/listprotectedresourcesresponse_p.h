@@ -31,7 +31,7 @@ class ListProtectedResourcesResponsePrivate : public BackupResponsePrivate {
 
 public:
 
-    ListProtectedResourcesResponsePrivate(ListProtectedResourcesResponse * const q);
+    explicit ListProtectedResourcesResponsePrivate(ListProtectedResourcesResponse * const q);
 
     void parseListProtectedResourcesResponse(QXmlStreamReader &xml);
 

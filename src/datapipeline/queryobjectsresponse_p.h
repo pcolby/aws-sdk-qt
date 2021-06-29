@@ -31,7 +31,7 @@ class QueryObjectsResponsePrivate : public DataPipelineResponsePrivate {
 
 public:
 
-    QueryObjectsResponsePrivate(QueryObjectsResponse * const q);
+    explicit QueryObjectsResponsePrivate(QueryObjectsResponse * const q);
 
     void parseQueryObjectsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ShutdownGatewayResponsePrivate : public StorageGatewayResponsePrivate {
 
 public:
 
-    ShutdownGatewayResponsePrivate(ShutdownGatewayResponse * const q);
+    explicit ShutdownGatewayResponsePrivate(ShutdownGatewayResponse * const q);
 
     void parseShutdownGatewayResponse(QXmlStreamReader &xml);
 

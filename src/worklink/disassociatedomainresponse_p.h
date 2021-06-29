@@ -31,7 +31,7 @@ class DisassociateDomainResponsePrivate : public WorkLinkResponsePrivate {
 
 public:
 
-    DisassociateDomainResponsePrivate(DisassociateDomainResponse * const q);
+    explicit DisassociateDomainResponsePrivate(DisassociateDomainResponse * const q);
 
     void parseDisassociateDomainResponse(QXmlStreamReader &xml);
 

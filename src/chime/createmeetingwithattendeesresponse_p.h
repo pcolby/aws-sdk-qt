@@ -31,7 +31,7 @@ class CreateMeetingWithAttendeesResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    CreateMeetingWithAttendeesResponsePrivate(CreateMeetingWithAttendeesResponse * const q);
+    explicit CreateMeetingWithAttendeesResponsePrivate(CreateMeetingWithAttendeesResponse * const q);
 
     void parseCreateMeetingWithAttendeesResponse(QXmlStreamReader &xml);
 

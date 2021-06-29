@@ -31,7 +31,7 @@ class AssociateRoutingProfileQueuesResponsePrivate : public ConnectResponsePriva
 
 public:
 
-    AssociateRoutingProfileQueuesResponsePrivate(AssociateRoutingProfileQueuesResponse * const q);
+    explicit AssociateRoutingProfileQueuesResponsePrivate(AssociateRoutingProfileQueuesResponse * const q);
 
     void parseAssociateRoutingProfileQueuesResponse(QXmlStreamReader &xml);
 

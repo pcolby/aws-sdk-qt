@@ -31,7 +31,7 @@ class GetLogEventsResponsePrivate : public CloudWatchLogsResponsePrivate {
 
 public:
 
-    GetLogEventsResponsePrivate(GetLogEventsResponse * const q);
+    explicit GetLogEventsResponsePrivate(GetLogEventsResponse * const q);
 
     void parseGetLogEventsResponse(QXmlStreamReader &xml);
 

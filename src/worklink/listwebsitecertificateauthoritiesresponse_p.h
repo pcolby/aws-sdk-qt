@@ -31,7 +31,7 @@ class ListWebsiteCertificateAuthoritiesResponsePrivate : public WorkLinkResponse
 
 public:
 
-    ListWebsiteCertificateAuthoritiesResponsePrivate(ListWebsiteCertificateAuthoritiesResponse * const q);
+    explicit ListWebsiteCertificateAuthoritiesResponsePrivate(ListWebsiteCertificateAuthoritiesResponse * const q);
 
     void parseListWebsiteCertificateAuthoritiesResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class DeleteConferenceProviderResponsePrivate : public AlexaForBusinessResponseP
 
 public:
 
-    DeleteConferenceProviderResponsePrivate(DeleteConferenceProviderResponse * const q);
+    explicit DeleteConferenceProviderResponsePrivate(DeleteConferenceProviderResponse * const q);
 
     void parseDeleteConferenceProviderResponse(QXmlStreamReader &xml);
 

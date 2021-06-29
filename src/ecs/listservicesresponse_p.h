@@ -31,7 +31,7 @@ class ListServicesResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    ListServicesResponsePrivate(ListServicesResponse * const q);
+    explicit ListServicesResponsePrivate(ListServicesResponse * const q);
 
     void parseListServicesResponse(QXmlStreamReader &xml);
 

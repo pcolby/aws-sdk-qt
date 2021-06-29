@@ -31,7 +31,7 @@ class ListTaskDefinitionsResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    ListTaskDefinitionsResponsePrivate(ListTaskDefinitionsResponse * const q);
+    explicit ListTaskDefinitionsResponsePrivate(ListTaskDefinitionsResponse * const q);
 
     void parseListTaskDefinitionsResponse(QXmlStreamReader &xml);
 

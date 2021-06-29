@@ -31,7 +31,7 @@ class DeleteEntityRecognizerResponsePrivate : public ComprehendResponsePrivate {
 
 public:
 
-    DeleteEntityRecognizerResponsePrivate(DeleteEntityRecognizerResponse * const q);
+    explicit DeleteEntityRecognizerResponsePrivate(DeleteEntityRecognizerResponse * const q);
 
     void parseDeleteEntityRecognizerResponse(QXmlStreamReader &xml);
 

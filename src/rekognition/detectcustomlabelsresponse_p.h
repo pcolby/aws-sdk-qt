@@ -31,7 +31,7 @@ class DetectCustomLabelsResponsePrivate : public RekognitionResponsePrivate {
 
 public:
 
-    DetectCustomLabelsResponsePrivate(DetectCustomLabelsResponse * const q);
+    explicit DetectCustomLabelsResponsePrivate(DetectCustomLabelsResponse * const q);
 
     void parseDetectCustomLabelsResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetSigningCertificateResponsePrivate : public CognitoIdentityProviderRespo
 
 public:
 
-    GetSigningCertificateResponsePrivate(GetSigningCertificateResponse * const q);
+    explicit GetSigningCertificateResponsePrivate(GetSigningCertificateResponse * const q);
 
     void parseGetSigningCertificateResponse(QXmlStreamReader &xml);
 

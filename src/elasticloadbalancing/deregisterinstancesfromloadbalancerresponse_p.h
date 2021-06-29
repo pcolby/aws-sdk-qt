@@ -31,7 +31,7 @@ class DeregisterInstancesFromLoadBalancerResponsePrivate : public ElasticLoadBal
 
 public:
 
-    DeregisterInstancesFromLoadBalancerResponsePrivate(DeregisterInstancesFromLoadBalancerResponse * const q);
+    explicit DeregisterInstancesFromLoadBalancerResponsePrivate(DeregisterInstancesFromLoadBalancerResponse * const q);
 
     void parseDeregisterInstancesFromLoadBalancerResponse(QXmlStreamReader &xml);
 

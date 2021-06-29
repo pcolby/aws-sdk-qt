@@ -31,7 +31,7 @@ class PurchaseReservedNodeOfferingResponsePrivate : public RedshiftResponsePriva
 
 public:
 
-    PurchaseReservedNodeOfferingResponsePrivate(PurchaseReservedNodeOfferingResponse * const q);
+    explicit PurchaseReservedNodeOfferingResponsePrivate(PurchaseReservedNodeOfferingResponse * const q);
 
     void parsePurchaseReservedNodeOfferingResponse(QXmlStreamReader &xml);
 

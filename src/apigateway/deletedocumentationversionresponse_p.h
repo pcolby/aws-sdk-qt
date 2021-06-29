@@ -31,7 +31,7 @@ class DeleteDocumentationVersionResponsePrivate : public APIGatewayResponsePriva
 
 public:
 
-    DeleteDocumentationVersionResponsePrivate(DeleteDocumentationVersionResponse * const q);
+    explicit DeleteDocumentationVersionResponsePrivate(DeleteDocumentationVersionResponse * const q);
 
     void parseDeleteDocumentationVersionResponse(QXmlStreamReader &xml);
 

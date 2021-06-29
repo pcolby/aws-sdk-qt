@@ -31,7 +31,7 @@ class AttachDiskResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    AttachDiskResponsePrivate(AttachDiskResponse * const q);
+    explicit AttachDiskResponsePrivate(AttachDiskResponse * const q);
 
     void parseAttachDiskResponse(QXmlStreamReader &xml);
 

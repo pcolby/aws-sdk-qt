@@ -31,7 +31,7 @@ class DetectAnomaliesResponsePrivate : public LookoutforVisionResponsePrivate {
 
 public:
 
-    DetectAnomaliesResponsePrivate(DetectAnomaliesResponse * const q);
+    explicit DetectAnomaliesResponsePrivate(DetectAnomaliesResponse * const q);
 
     void parseDetectAnomaliesResponse(QXmlStreamReader &xml);
 

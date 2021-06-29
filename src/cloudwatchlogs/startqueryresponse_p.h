@@ -31,7 +31,7 @@ class StartQueryResponsePrivate : public CloudWatchLogsResponsePrivate {
 
 public:
 
-    StartQueryResponsePrivate(StartQueryResponse * const q);
+    explicit StartQueryResponsePrivate(StartQueryResponse * const q);
 
     void parseStartQueryResponse(QXmlStreamReader &xml);
 

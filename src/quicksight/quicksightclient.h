@@ -239,7 +239,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    QuickSightClient(
+    explicit QuickSightClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -348,7 +348,7 @@ public slots:
 protected:
     /// @cond internal
     QuickSightClientPrivate * const d_ptr; ///< Internal d-pointer.
-    QuickSightClient(QuickSightClientPrivate * const d);
+    explicit QuickSightClient(QuickSightClientPrivate * const d);
     /// @endcond
 
 private:

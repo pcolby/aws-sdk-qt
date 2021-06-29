@@ -31,7 +31,7 @@ class GetVPCEConfigurationResponsePrivate : public DeviceFarmResponsePrivate {
 
 public:
 
-    GetVPCEConfigurationResponsePrivate(GetVPCEConfigurationResponse * const q);
+    explicit GetVPCEConfigurationResponsePrivate(GetVPCEConfigurationResponse * const q);
 
     void parseGetVPCEConfigurationResponse(QXmlStreamReader &xml);
 

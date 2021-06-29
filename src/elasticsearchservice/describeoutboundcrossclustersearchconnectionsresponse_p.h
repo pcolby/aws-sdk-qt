@@ -31,7 +31,7 @@ class DescribeOutboundCrossClusterSearchConnectionsResponsePrivate : public Elas
 
 public:
 
-    DescribeOutboundCrossClusterSearchConnectionsResponsePrivate(DescribeOutboundCrossClusterSearchConnectionsResponse * const q);
+    explicit DescribeOutboundCrossClusterSearchConnectionsResponsePrivate(DescribeOutboundCrossClusterSearchConnectionsResponse * const q);
 
     void parseDescribeOutboundCrossClusterSearchConnectionsResponse(QXmlStreamReader &xml);
 

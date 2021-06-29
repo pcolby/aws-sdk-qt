@@ -31,7 +31,7 @@ class DeleteDeploymentResponsePrivate : public APIGatewayResponsePrivate {
 
 public:
 
-    DeleteDeploymentResponsePrivate(DeleteDeploymentResponse * const q);
+    explicit DeleteDeploymentResponsePrivate(DeleteDeploymentResponse * const q);
 
     void parseDeleteDeploymentResponse(QXmlStreamReader &xml);
 

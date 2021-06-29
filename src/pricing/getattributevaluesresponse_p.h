@@ -31,7 +31,7 @@ class GetAttributeValuesResponsePrivate : public PricingResponsePrivate {
 
 public:
 
-    GetAttributeValuesResponsePrivate(GetAttributeValuesResponse * const q);
+    explicit GetAttributeValuesResponsePrivate(GetAttributeValuesResponse * const q);
 
     void parseGetAttributeValuesResponse(QXmlStreamReader &xml);
 

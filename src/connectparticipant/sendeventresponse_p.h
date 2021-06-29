@@ -31,7 +31,7 @@ class SendEventResponsePrivate : public ConnectParticipantResponsePrivate {
 
 public:
 
-    SendEventResponsePrivate(SendEventResponse * const q);
+    explicit SendEventResponsePrivate(SendEventResponse * const q);
 
     void parseSendEventResponse(QXmlStreamReader &xml);
 

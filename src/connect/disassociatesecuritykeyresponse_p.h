@@ -31,7 +31,7 @@ class DisassociateSecurityKeyResponsePrivate : public ConnectResponsePrivate {
 
 public:
 
-    DisassociateSecurityKeyResponsePrivate(DisassociateSecurityKeyResponse * const q);
+    explicit DisassociateSecurityKeyResponsePrivate(DisassociateSecurityKeyResponse * const q);
 
     void parseDisassociateSecurityKeyResponse(QXmlStreamReader &xml);
 

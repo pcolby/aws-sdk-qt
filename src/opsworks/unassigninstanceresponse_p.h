@@ -31,7 +31,7 @@ class UnassignInstanceResponsePrivate : public OpsWorksResponsePrivate {
 
 public:
 
-    UnassignInstanceResponsePrivate(UnassignInstanceResponse * const q);
+    explicit UnassignInstanceResponsePrivate(UnassignInstanceResponse * const q);
 
     void parseUnassignInstanceResponse(QXmlStreamReader &xml);
 

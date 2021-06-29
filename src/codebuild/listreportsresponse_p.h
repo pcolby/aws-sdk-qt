@@ -31,7 +31,7 @@ class ListReportsResponsePrivate : public CodeBuildResponsePrivate {
 
 public:
 
-    ListReportsResponsePrivate(ListReportsResponse * const q);
+    explicit ListReportsResponsePrivate(ListReportsResponse * const q);
 
     void parseListReportsResponse(QXmlStreamReader &xml);
 

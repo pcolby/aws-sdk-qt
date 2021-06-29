@@ -31,7 +31,7 @@ class DescribeClientVpnAuthorizationRulesResponsePrivate : public Ec2ResponsePri
 
 public:
 
-    DescribeClientVpnAuthorizationRulesResponsePrivate(DescribeClientVpnAuthorizationRulesResponse * const q);
+    explicit DescribeClientVpnAuthorizationRulesResponsePrivate(DescribeClientVpnAuthorizationRulesResponse * const q);
 
     void parseDescribeClientVpnAuthorizationRulesResponse(QXmlStreamReader &xml);
 

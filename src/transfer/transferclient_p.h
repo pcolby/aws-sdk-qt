@@ -30,7 +30,7 @@ class TransferClient;
 class TransferClientPrivate {
 
 public:
-    TransferClientPrivate(TransferClient * const q);
+    explicit TransferClientPrivate(TransferClient * const q);
 
 protected:
     TransferClient * const q_ptr; ///< Internal q-pointer.

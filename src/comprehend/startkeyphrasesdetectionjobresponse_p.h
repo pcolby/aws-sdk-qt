@@ -31,7 +31,7 @@ class StartKeyPhrasesDetectionJobResponsePrivate : public ComprehendResponsePriv
 
 public:
 
-    StartKeyPhrasesDetectionJobResponsePrivate(StartKeyPhrasesDetectionJobResponse * const q);
+    explicit StartKeyPhrasesDetectionJobResponsePrivate(StartKeyPhrasesDetectionJobResponse * const q);
 
     void parseStartKeyPhrasesDetectionJobResponse(QXmlStreamReader &xml);
 

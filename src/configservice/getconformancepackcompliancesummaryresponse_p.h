@@ -31,7 +31,7 @@ class GetConformancePackComplianceSummaryResponsePrivate : public ConfigServiceR
 
 public:
 
-    GetConformancePackComplianceSummaryResponsePrivate(GetConformancePackComplianceSummaryResponse * const q);
+    explicit GetConformancePackComplianceSummaryResponsePrivate(GetConformancePackComplianceSummaryResponse * const q);
 
     void parseGetConformancePackComplianceSummaryResponse(QXmlStreamReader &xml);
 

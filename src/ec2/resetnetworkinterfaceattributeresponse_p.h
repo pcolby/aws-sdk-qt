@@ -31,7 +31,7 @@ class ResetNetworkInterfaceAttributeResponsePrivate : public Ec2ResponsePrivate 
 
 public:
 
-    ResetNetworkInterfaceAttributeResponsePrivate(ResetNetworkInterfaceAttributeResponse * const q);
+    explicit ResetNetworkInterfaceAttributeResponsePrivate(ResetNetworkInterfaceAttributeResponse * const q);
 
     void parseResetNetworkInterfaceAttributeResponse(QXmlStreamReader &xml);
 

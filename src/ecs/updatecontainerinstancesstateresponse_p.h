@@ -31,7 +31,7 @@ class UpdateContainerInstancesStateResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    UpdateContainerInstancesStateResponsePrivate(UpdateContainerInstancesStateResponse * const q);
+    explicit UpdateContainerInstancesStateResponsePrivate(UpdateContainerInstancesStateResponse * const q);
 
     void parseUpdateContainerInstancesStateResponse(QXmlStreamReader &xml);
 

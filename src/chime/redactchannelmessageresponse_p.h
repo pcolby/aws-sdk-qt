@@ -31,7 +31,7 @@ class RedactChannelMessageResponsePrivate : public ChimeResponsePrivate {
 
 public:
 
-    RedactChannelMessageResponsePrivate(RedactChannelMessageResponse * const q);
+    explicit RedactChannelMessageResponsePrivate(RedactChannelMessageResponse * const q);
 
     void parseRedactChannelMessageResponse(QXmlStreamReader &xml);
 

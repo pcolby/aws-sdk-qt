@@ -31,7 +31,7 @@ class AddAttributesToFindingsResponsePrivate : public InspectorResponsePrivate {
 
 public:
 
-    AddAttributesToFindingsResponsePrivate(AddAttributesToFindingsResponse * const q);
+    explicit AddAttributesToFindingsResponsePrivate(AddAttributesToFindingsResponse * const q);
 
     void parseAddAttributesToFindingsResponse(QXmlStreamReader &xml);
 

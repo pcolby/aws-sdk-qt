@@ -31,7 +31,7 @@ class DeleteMitigationActionResponsePrivate : public IoTResponsePrivate {
 
 public:
 
-    DeleteMitigationActionResponsePrivate(DeleteMitigationActionResponse * const q);
+    explicit DeleteMitigationActionResponsePrivate(DeleteMitigationActionResponse * const q);
 
     void parseDeleteMitigationActionResponse(QXmlStreamReader &xml);
 

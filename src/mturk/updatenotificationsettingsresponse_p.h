@@ -31,7 +31,7 @@ class UpdateNotificationSettingsResponsePrivate : public MTurkResponsePrivate {
 
 public:
 
-    UpdateNotificationSettingsResponsePrivate(UpdateNotificationSettingsResponse * const q);
+    explicit UpdateNotificationSettingsResponsePrivate(UpdateNotificationSettingsResponse * const q);
 
     void parseUpdateNotificationSettingsResponse(QXmlStreamReader &xml);
 

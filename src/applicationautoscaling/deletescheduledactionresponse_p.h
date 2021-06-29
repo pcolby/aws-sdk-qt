@@ -31,7 +31,7 @@ class DeleteScheduledActionResponsePrivate : public ApplicationAutoScalingRespon
 
 public:
 
-    DeleteScheduledActionResponsePrivate(DeleteScheduledActionResponse * const q);
+    explicit DeleteScheduledActionResponsePrivate(DeleteScheduledActionResponse * const q);
 
     void parseDeleteScheduledActionResponse(QXmlStreamReader &xml);
 

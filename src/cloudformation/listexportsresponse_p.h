@@ -31,7 +31,7 @@ class ListExportsResponsePrivate : public CloudFormationResponsePrivate {
 
 public:
 
-    ListExportsResponsePrivate(ListExportsResponse * const q);
+    explicit ListExportsResponsePrivate(ListExportsResponse * const q);
 
     void parseListExportsResponse(QXmlStreamReader &xml);
 

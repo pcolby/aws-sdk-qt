@@ -31,7 +31,7 @@ class BatchResetAlarmResponsePrivate : public IoTEventsDataResponsePrivate {
 
 public:
 
-    BatchResetAlarmResponsePrivate(BatchResetAlarmResponse * const q);
+    explicit BatchResetAlarmResponsePrivate(BatchResetAlarmResponse * const q);
 
     void parseBatchResetAlarmResponse(QXmlStreamReader &xml);
 

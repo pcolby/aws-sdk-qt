@@ -31,7 +31,7 @@ class DescribeDefaultEncryptionConfigurationResponsePrivate : public IoTSiteWise
 
 public:
 
-    DescribeDefaultEncryptionConfigurationResponsePrivate(DescribeDefaultEncryptionConfigurationResponse * const q);
+    explicit DescribeDefaultEncryptionConfigurationResponsePrivate(DescribeDefaultEncryptionConfigurationResponse * const q);
 
     void parseDescribeDefaultEncryptionConfigurationResponse(QXmlStreamReader &xml);
 

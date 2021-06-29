@@ -29,7 +29,7 @@ class CloudWatchEventsResponsePrivate {
 
 public:
 
-    CloudWatchEventsResponsePrivate(CloudWatchEventsResponse * const q);
+    explicit CloudWatchEventsResponsePrivate(CloudWatchEventsResponse * const q);
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);

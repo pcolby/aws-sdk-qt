@@ -31,7 +31,7 @@ class CancelChangeSetResponsePrivate : public MarketplaceCatalogResponsePrivate 
 
 public:
 
-    CancelChangeSetResponsePrivate(CancelChangeSetResponse * const q);
+    explicit CancelChangeSetResponsePrivate(CancelChangeSetResponse * const q);
 
     void parseCancelChangeSetResponse(QXmlStreamReader &xml);
 

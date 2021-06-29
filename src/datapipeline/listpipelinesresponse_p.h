@@ -31,7 +31,7 @@ class ListPipelinesResponsePrivate : public DataPipelineResponsePrivate {
 
 public:
 
-    ListPipelinesResponsePrivate(ListPipelinesResponse * const q);
+    explicit ListPipelinesResponsePrivate(ListPipelinesResponse * const q);
 
     void parseListPipelinesResponse(QXmlStreamReader &xml);
 

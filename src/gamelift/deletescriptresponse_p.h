@@ -31,7 +31,7 @@ class DeleteScriptResponsePrivate : public GameLiftResponsePrivate {
 
 public:
 
-    DeleteScriptResponsePrivate(DeleteScriptResponse * const q);
+    explicit DeleteScriptResponsePrivate(DeleteScriptResponse * const q);
 
     void parseDeleteScriptResponse(QXmlStreamReader &xml);
 

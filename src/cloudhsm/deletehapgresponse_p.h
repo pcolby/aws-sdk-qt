@@ -31,7 +31,7 @@ class DeleteHapgResponsePrivate : public CloudHSMResponsePrivate {
 
 public:
 
-    DeleteHapgResponsePrivate(DeleteHapgResponse * const q);
+    explicit DeleteHapgResponsePrivate(DeleteHapgResponse * const q);
 
     void parseDeleteHapgResponse(QXmlStreamReader &xml);
 

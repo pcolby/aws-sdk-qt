@@ -31,7 +31,7 @@ class RevokeSnapshotAccessResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    RevokeSnapshotAccessResponsePrivate(RevokeSnapshotAccessResponse * const q);
+    explicit RevokeSnapshotAccessResponsePrivate(RevokeSnapshotAccessResponse * const q);
 
     void parseRevokeSnapshotAccessResponse(QXmlStreamReader &xml);
 

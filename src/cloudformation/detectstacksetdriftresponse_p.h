@@ -31,7 +31,7 @@ class DetectStackSetDriftResponsePrivate : public CloudFormationResponsePrivate 
 
 public:
 
-    DetectStackSetDriftResponsePrivate(DetectStackSetDriftResponse * const q);
+    explicit DetectStackSetDriftResponsePrivate(DetectStackSetDriftResponse * const q);
 
     void parseDetectStackSetDriftResponse(QXmlStreamReader &xml);
 

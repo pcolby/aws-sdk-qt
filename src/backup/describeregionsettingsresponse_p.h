@@ -31,7 +31,7 @@ class DescribeRegionSettingsResponsePrivate : public BackupResponsePrivate {
 
 public:
 
-    DescribeRegionSettingsResponsePrivate(DescribeRegionSettingsResponse * const q);
+    explicit DescribeRegionSettingsResponsePrivate(DescribeRegionSettingsResponse * const q);
 
     void parseDescribeRegionSettingsResponse(QXmlStreamReader &xml);
 

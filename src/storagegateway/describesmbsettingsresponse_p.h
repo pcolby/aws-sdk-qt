@@ -31,7 +31,7 @@ class DescribeSMBSettingsResponsePrivate : public StorageGatewayResponsePrivate 
 
 public:
 
-    DescribeSMBSettingsResponsePrivate(DescribeSMBSettingsResponse * const q);
+    explicit DescribeSMBSettingsResponsePrivate(DescribeSMBSettingsResponse * const q);
 
     void parseDescribeSMBSettingsResponse(QXmlStreamReader &xml);
 

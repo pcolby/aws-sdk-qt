@@ -30,7 +30,7 @@ class GroundStationClient;
 class GroundStationClientPrivate {
 
 public:
-    GroundStationClientPrivate(GroundStationClient * const q);
+    explicit GroundStationClientPrivate(GroundStationClient * const q);
 
 protected:
     GroundStationClient * const q_ptr; ///< Internal q-pointer.

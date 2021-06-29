@@ -30,7 +30,7 @@ class ComputeOptimizerClient;
 class ComputeOptimizerClientPrivate {
 
 public:
-    ComputeOptimizerClientPrivate(ComputeOptimizerClient * const q);
+    explicit ComputeOptimizerClientPrivate(ComputeOptimizerClient * const q);
 
 protected:
     ComputeOptimizerClient * const q_ptr; ///< Internal q-pointer.

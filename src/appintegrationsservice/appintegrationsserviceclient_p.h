@@ -30,7 +30,7 @@ class AppIntegrationsServiceClient;
 class AppIntegrationsServiceClientPrivate {
 
 public:
-    AppIntegrationsServiceClientPrivate(AppIntegrationsServiceClient * const q);
+    explicit AppIntegrationsServiceClientPrivate(AppIntegrationsServiceClient * const q);
 
 protected:
     AppIntegrationsServiceClient * const q_ptr; ///< Internal q-pointer.

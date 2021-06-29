@@ -31,7 +31,7 @@ class CreateSnapshotCopyGrantResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    CreateSnapshotCopyGrantResponsePrivate(CreateSnapshotCopyGrantResponse * const q);
+    explicit CreateSnapshotCopyGrantResponsePrivate(CreateSnapshotCopyGrantResponse * const q);
 
     void parseCreateSnapshotCopyGrantResponse(QXmlStreamReader &xml);
 

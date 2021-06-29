@@ -31,7 +31,7 @@ class DeleteInstallationMediaResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    DeleteInstallationMediaResponsePrivate(DeleteInstallationMediaResponse * const q);
+    explicit DeleteInstallationMediaResponsePrivate(DeleteInstallationMediaResponse * const q);
 
     void parseDeleteInstallationMediaResponse(QXmlStreamReader &xml);
 

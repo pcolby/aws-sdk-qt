@@ -31,7 +31,7 @@ class ListFlowExecutionMessagesResponsePrivate : public IoTThingsGraphResponsePr
 
 public:
 
-    ListFlowExecutionMessagesResponsePrivate(ListFlowExecutionMessagesResponse * const q);
+    explicit ListFlowExecutionMessagesResponsePrivate(ListFlowExecutionMessagesResponse * const q);
 
     void parseListFlowExecutionMessagesResponse(QXmlStreamReader &xml);
 

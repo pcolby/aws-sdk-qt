@@ -31,7 +31,7 @@ class CreateOpsItemResponsePrivate : public SsmResponsePrivate {
 
 public:
 
-    CreateOpsItemResponsePrivate(CreateOpsItemResponse * const q);
+    explicit CreateOpsItemResponsePrivate(CreateOpsItemResponse * const q);
 
     void parseCreateOpsItemResponse(QXmlStreamReader &xml);
 

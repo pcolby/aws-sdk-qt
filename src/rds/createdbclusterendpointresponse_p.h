@@ -31,7 +31,7 @@ class CreateDBClusterEndpointResponsePrivate : public RdsResponsePrivate {
 
 public:
 
-    CreateDBClusterEndpointResponsePrivate(CreateDBClusterEndpointResponse * const q);
+    explicit CreateDBClusterEndpointResponsePrivate(CreateDBClusterEndpointResponse * const q);
 
     void parseCreateDBClusterEndpointResponse(QXmlStreamReader &xml);
 

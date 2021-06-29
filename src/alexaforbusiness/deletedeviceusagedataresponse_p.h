@@ -31,7 +31,7 @@ class DeleteDeviceUsageDataResponsePrivate : public AlexaForBusinessResponsePriv
 
 public:
 
-    DeleteDeviceUsageDataResponsePrivate(DeleteDeviceUsageDataResponse * const q);
+    explicit DeleteDeviceUsageDataResponsePrivate(DeleteDeviceUsageDataResponse * const q);
 
     void parseDeleteDeviceUsageDataResponse(QXmlStreamReader &xml);
 

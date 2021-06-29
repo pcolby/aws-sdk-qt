@@ -31,7 +31,7 @@ class GrantFlowEntitlementsResponsePrivate : public MediaConnectResponsePrivate 
 
 public:
 
-    GrantFlowEntitlementsResponsePrivate(GrantFlowEntitlementsResponse * const q);
+    explicit GrantFlowEntitlementsResponsePrivate(GrantFlowEntitlementsResponse * const q);
 
     void parseGrantFlowEntitlementsResponse(QXmlStreamReader &xml);
 

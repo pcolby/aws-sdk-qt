@@ -31,7 +31,7 @@ class DescribeTransitGatewaysResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeTransitGatewaysResponsePrivate(DescribeTransitGatewaysResponse * const q);
+    explicit DescribeTransitGatewaysResponsePrivate(DescribeTransitGatewaysResponse * const q);
 
     void parseDescribeTransitGatewaysResponse(QXmlStreamReader &xml);
 

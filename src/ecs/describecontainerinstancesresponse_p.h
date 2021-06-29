@@ -31,7 +31,7 @@ class DescribeContainerInstancesResponsePrivate : public EcsResponsePrivate {
 
 public:
 
-    DescribeContainerInstancesResponsePrivate(DescribeContainerInstancesResponse * const q);
+    explicit DescribeContainerInstancesResponsePrivate(DescribeContainerInstancesResponse * const q);
 
     void parseDescribeContainerInstancesResponse(QXmlStreamReader &xml);
 

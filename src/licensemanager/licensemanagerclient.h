@@ -131,7 +131,7 @@ public:
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
 
-    LicenseManagerClient(
+    explicit LicenseManagerClient(
         const QUrl &endpoint, QtAws::Core::AwsAbstractCredentials * credentials = NULL,
         QNetworkAccessManager * const manager = NULL,
         QObject * const parent = 0);
@@ -186,7 +186,7 @@ public slots:
 protected:
     /// @cond internal
     LicenseManagerClientPrivate * const d_ptr; ///< Internal d-pointer.
-    LicenseManagerClient(LicenseManagerClientPrivate * const d);
+    explicit LicenseManagerClient(LicenseManagerClientPrivate * const d);
     /// @endcond
 
 private:

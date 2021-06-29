@@ -31,7 +31,7 @@ class DefineIndexFieldResponsePrivate : public CloudSearchResponsePrivate {
 
 public:
 
-    DefineIndexFieldResponsePrivate(DefineIndexFieldResponse * const q);
+    explicit DefineIndexFieldResponsePrivate(DefineIndexFieldResponse * const q);
 
     void parseDefineIndexFieldResponse(QXmlStreamReader &xml);
 

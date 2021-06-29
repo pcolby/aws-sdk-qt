@@ -31,7 +31,7 @@ class UpdateCachePolicyResponsePrivate : public CloudFrontResponsePrivate {
 
 public:
 
-    UpdateCachePolicyResponsePrivate(UpdateCachePolicyResponse * const q);
+    explicit UpdateCachePolicyResponsePrivate(UpdateCachePolicyResponse * const q);
 
     void parseUpdateCachePolicyResponse(QXmlStreamReader &xml);
 

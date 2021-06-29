@@ -30,7 +30,7 @@ class ChimeClient;
 class ChimeClientPrivate {
 
 public:
-    ChimeClientPrivate(ChimeClient * const q);
+    explicit ChimeClientPrivate(ChimeClient * const q);
 
 protected:
     ChimeClient * const q_ptr; ///< Internal q-pointer.

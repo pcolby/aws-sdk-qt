@@ -31,7 +31,7 @@ class DescribeRouteTablesResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    DescribeRouteTablesResponsePrivate(DescribeRouteTablesResponse * const q);
+    explicit DescribeRouteTablesResponsePrivate(DescribeRouteTablesResponse * const q);
 
     void parseDescribeRouteTablesResponse(QXmlStreamReader &xml);
 

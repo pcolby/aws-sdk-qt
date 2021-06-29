@@ -31,7 +31,7 @@ class UpdatePartnerStatusResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    UpdatePartnerStatusResponsePrivate(UpdatePartnerStatusResponse * const q);
+    explicit UpdatePartnerStatusResponsePrivate(UpdatePartnerStatusResponse * const q);
 
     void parseUpdatePartnerStatusResponse(QXmlStreamReader &xml);
 

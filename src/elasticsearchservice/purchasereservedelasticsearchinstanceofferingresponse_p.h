@@ -31,7 +31,7 @@ class PurchaseReservedElasticsearchInstanceOfferingResponsePrivate : public Elas
 
 public:
 
-    PurchaseReservedElasticsearchInstanceOfferingResponsePrivate(PurchaseReservedElasticsearchInstanceOfferingResponse * const q);
+    explicit PurchaseReservedElasticsearchInstanceOfferingResponsePrivate(PurchaseReservedElasticsearchInstanceOfferingResponse * const q);
 
     void parsePurchaseReservedElasticsearchInstanceOfferingResponse(QXmlStreamReader &xml);
 

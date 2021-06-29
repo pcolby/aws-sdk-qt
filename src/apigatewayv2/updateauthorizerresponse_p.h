@@ -31,7 +31,7 @@ class UpdateAuthorizerResponsePrivate : public ApiGatewayV2ResponsePrivate {
 
 public:
 
-    UpdateAuthorizerResponsePrivate(UpdateAuthorizerResponse * const q);
+    explicit UpdateAuthorizerResponsePrivate(UpdateAuthorizerResponse * const q);
 
     void parseUpdateAuthorizerResponse(QXmlStreamReader &xml);
 

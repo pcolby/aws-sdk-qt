@@ -30,7 +30,7 @@ class DataPipelineClient;
 class DataPipelineClientPrivate {
 
 public:
-    DataPipelineClientPrivate(DataPipelineClient * const q);
+    explicit DataPipelineClientPrivate(DataPipelineClient * const q);
 
 protected:
     DataPipelineClient * const q_ptr; ///< Internal q-pointer.

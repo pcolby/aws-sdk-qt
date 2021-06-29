@@ -31,7 +31,7 @@ class ImportKeyPairResponsePrivate : public Ec2ResponsePrivate {
 
 public:
 
-    ImportKeyPairResponsePrivate(ImportKeyPairResponse * const q);
+    explicit ImportKeyPairResponsePrivate(ImportKeyPairResponse * const q);
 
     void parseImportKeyPairResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class GetAlarmsResponsePrivate : public LightsailResponsePrivate {
 
 public:
 
-    GetAlarmsResponsePrivate(GetAlarmsResponse * const q);
+    explicit GetAlarmsResponsePrivate(GetAlarmsResponse * const q);
 
     void parseGetAlarmsResponse(QXmlStreamReader &xml);
 

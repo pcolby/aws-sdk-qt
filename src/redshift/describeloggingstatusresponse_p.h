@@ -31,7 +31,7 @@ class DescribeLoggingStatusResponsePrivate : public RedshiftResponsePrivate {
 
 public:
 
-    DescribeLoggingStatusResponsePrivate(DescribeLoggingStatusResponse * const q);
+    explicit DescribeLoggingStatusResponsePrivate(DescribeLoggingStatusResponse * const q);
 
     void parseDescribeLoggingStatusResponse(QXmlStreamReader &xml);
 

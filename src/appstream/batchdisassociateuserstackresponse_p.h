@@ -31,7 +31,7 @@ class BatchDisassociateUserStackResponsePrivate : public AppStreamResponsePrivat
 
 public:
 
-    BatchDisassociateUserStackResponsePrivate(BatchDisassociateUserStackResponse * const q);
+    explicit BatchDisassociateUserStackResponsePrivate(BatchDisassociateUserStackResponse * const q);
 
     void parseBatchDisassociateUserStackResponse(QXmlStreamReader &xml);
 

@@ -31,7 +31,7 @@ class ListAccessPreviewFindingsResponsePrivate : public AccessAnalyzerResponsePr
 
 public:
 
-    ListAccessPreviewFindingsResponsePrivate(ListAccessPreviewFindingsResponse * const q);
+    explicit ListAccessPreviewFindingsResponsePrivate(ListAccessPreviewFindingsResponse * const q);
 
     void parseListAccessPreviewFindingsResponse(QXmlStreamReader &xml);
 
