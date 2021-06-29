@@ -80,17 +80,20 @@ jobs:
       matrix:
         os: [ windows-latest ]
         qt: [ '5.12.11', '5.15.2' ]
-        generator: [ 'MinGW Makefiles', 'NMake Makefiles' ]
+        platform:
+        - generator: 'MinGW Makefiles', arch: 'win64_mingw81'
+        - generator: 'NMake Makefiles', arch: null
     steps:
     - uses: actions/checkout@v2
     - name: Install Qt
       uses: jurplel/install-qt-action@v2
       with:
         version: ${{ matrix.qt }}
+        arch:  ${{ matrix.platform.arch }}
     - name: Configure MSVC
-      if: ${{ contains(matrix.generator, 'nmake') }}
+      if: ${{ contains(matrix.platform.generator, 'nmake') }}
       uses: ilammy/msvc-dev-cmd@v1
     - name: Build
       run: |
-        cmake -D BUILD_CODEGEN=NO -G "${{ matrix.generator }}" -S "%GITHUB_WORKSPACE%" -B "%RUNNER_TEMP%"
+        cmake -D BUILD_CODEGEN=NO -G "${{ matrix.platform.generator }}" -S "%GITHUB_WORKSPACE%" -B "%RUNNER_TEMP%"
         cmake --build "%RUNNER_TEMP%" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
