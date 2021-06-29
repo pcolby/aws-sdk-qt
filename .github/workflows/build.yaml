@@ -83,6 +83,11 @@ jobs:
         os: [ windows-latest ]
         qt: [ '5.12.11', '5.15.2' ]
         generator: [ 'MinGW Makefiles', 'NMake Makefiles' ]
+        include:
+        - qt: '5.12.11'
+          arch: win64_mingw73
+        - qt: '5.15.2'
+          arch: win64_mingw81
     steps:
     - uses: actions/checkout@v2
     - name: Install Qt (mingw)
@@ -90,7 +95,7 @@ jobs:
       uses: jurplel/install-qt-action@v2
       with:
         version: ${{ matrix.qt }}
-        arch: win64_mingw73
+        arch: ${{ matrix.arch }}
     - name: Install Qt (msvc)
       if: ${{ contains(matrix.generator, 'nmake') }}
       uses: jurplel/install-qt-action@v2
