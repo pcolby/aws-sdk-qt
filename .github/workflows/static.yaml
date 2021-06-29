@@ -1,0 +1,22 @@
+name: Static Code Analysis
+
+on: [push, pull_request]
+
+jobs:
+  CodeQL:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install Grantlee
+      run: sudo apt install libgrantlee5-dev
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v1
+      languages: cpp
+    - name: Build
+      run: |
+        cmake -D BUILD_CODEGEN=YES -S "$GITHUB_WORKSPACE" -B "$RUNNER_TEMP"
+        cmake --build "$RUNNER_TEMP" --target codegen QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze
+
+# @todo cppcheck
