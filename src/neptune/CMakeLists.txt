@@ -387,8 +387,7 @@ add_library(QtAwsNeptune
   stopdbclusterrequest.cpp
   stopdbclusterresponse.cpp)
 
-add_dependencies(QtAwsNeptune QtAwsCore)
-
 target_link_libraries(QtAwsNeptune
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

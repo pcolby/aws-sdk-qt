@@ -45,8 +45,7 @@ add_library(QtAwsRDSDataService
   rollbacktransactionrequest.cpp
   rollbacktransactionresponse.cpp)
 
-add_dependencies(QtAwsRDSDataService QtAwsCore)
-
 target_link_libraries(QtAwsRDSDataService
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -357,8 +357,7 @@ add_library(QtAwsLambda
   updatefunctioneventinvokeconfigrequest.cpp
   updatefunctioneventinvokeconfigresponse.cpp)
 
-add_dependencies(QtAwsLambda QtAwsCore)
-
 target_link_libraries(QtAwsLambda
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

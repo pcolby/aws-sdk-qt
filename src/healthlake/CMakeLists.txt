@@ -57,8 +57,7 @@ add_library(QtAwsHealthLake
   startfhirimportjobrequest.cpp
   startfhirimportjobresponse.cpp)
 
-add_dependencies(QtAwsHealthLake QtAwsCore)
-
 target_link_libraries(QtAwsHealthLake
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

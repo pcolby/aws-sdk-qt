@@ -495,8 +495,7 @@ add_library(QtAwsWAFRegional
   wafregionalrequest.cpp
   wafregionalresponse.cpp)
 
-add_dependencies(QtAwsWAFRegional QtAwsCore)
-
 target_link_libraries(QtAwsWAFRegional
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

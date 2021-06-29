@@ -123,8 +123,7 @@ add_library(QtAwsOpsWorksCM
   updateserverrequest.cpp
   updateserverresponse.cpp)
 
-add_dependencies(QtAwsOpsWorksCM QtAwsCore)
-
 target_link_libraries(QtAwsOpsWorksCM
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

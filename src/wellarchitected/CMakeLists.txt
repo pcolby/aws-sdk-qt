@@ -195,8 +195,7 @@ add_library(QtAwsWellArchitected
   wellarchitectedrequest.cpp
   wellarchitectedresponse.cpp)
 
-add_dependencies(QtAwsWellArchitected QtAwsCore)
-
 target_link_libraries(QtAwsWellArchitected
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

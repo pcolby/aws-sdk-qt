@@ -327,8 +327,7 @@ add_library(QtAwsDocDB
   stopdbclusterrequest.cpp
   stopdbclusterresponse.cpp)
 
-add_dependencies(QtAwsDocDB QtAwsCore)
-
 target_link_libraries(QtAwsDocDB
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

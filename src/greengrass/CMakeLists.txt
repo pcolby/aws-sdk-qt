@@ -561,8 +561,7 @@ add_library(QtAwsGreengrass
   updatethingruntimeconfigurationrequest.cpp
   updatethingruntimeconfigurationresponse.cpp)
 
-add_dependencies(QtAwsGreengrass QtAwsCore)
-
 target_link_libraries(QtAwsGreengrass
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

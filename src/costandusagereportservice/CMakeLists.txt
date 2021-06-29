@@ -33,8 +33,7 @@ add_library(QtAwsCostandUsageReportService
   putreportdefinitionrequest.cpp
   putreportdefinitionresponse.cpp)
 
-add_dependencies(QtAwsCostandUsageReportService QtAwsCore)
-
 target_link_libraries(QtAwsCostandUsageReportService
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

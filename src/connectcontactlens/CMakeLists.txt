@@ -15,8 +15,7 @@ add_library(QtAwsConnectContactLens
   listrealtimecontactanalysissegmentsrequest.cpp
   listrealtimecontactanalysissegmentsresponse.cpp)
 
-add_dependencies(QtAwsConnectContactLens QtAwsCore)
-
 target_link_libraries(QtAwsConnectContactLens
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

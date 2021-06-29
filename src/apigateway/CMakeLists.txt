@@ -729,8 +729,7 @@ add_library(QtAwsAPIGateway
   updatevpclinkrequest.cpp
   updatevpclinkresponse.cpp)
 
-add_dependencies(QtAwsAPIGateway QtAwsCore)
-
 target_link_libraries(QtAwsAPIGateway
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -57,8 +57,7 @@ add_library(QtAwsSts
   stsrequest.cpp
   stsresponse.cpp)
 
-add_dependencies(QtAwsSts QtAwsCore)
-
 target_link_libraries(QtAwsSts
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

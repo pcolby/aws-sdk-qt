@@ -219,8 +219,7 @@ add_library(QtAwsDataSync
   updatetaskrequest.cpp
   updatetaskresponse.cpp)
 
-add_dependencies(QtAwsDataSync QtAwsCore)
-
 target_link_libraries(QtAwsDataSync
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

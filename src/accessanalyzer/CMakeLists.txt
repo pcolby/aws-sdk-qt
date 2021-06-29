@@ -177,8 +177,7 @@ add_library(QtAwsAccessAnalyzer
   validatepolicyrequest.cpp
   validatepolicyresponse.cpp)
 
-add_dependencies(QtAwsAccessAnalyzer QtAwsCore)
-
 target_link_libraries(QtAwsAccessAnalyzer
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -93,8 +93,7 @@ add_library(QtAwsSupport
   supportrequest.cpp
   supportresponse.cpp)
 
-add_dependencies(QtAwsSupport QtAwsCore)
-
 target_link_libraries(QtAwsSupport
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

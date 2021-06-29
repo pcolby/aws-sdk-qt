@@ -63,8 +63,7 @@ add_library(QtAwsMobile
   updateprojectrequest.cpp
   updateprojectresponse.cpp)
 
-add_dependencies(QtAwsMobile QtAwsCore)
-
 target_link_libraries(QtAwsMobile
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

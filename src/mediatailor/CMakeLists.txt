@@ -195,8 +195,7 @@ add_library(QtAwsMediaTailor
   updatevodsourcerequest.cpp
   updatevodsourceresponse.cpp)
 
-add_dependencies(QtAwsMediaTailor QtAwsCore)
-
 target_link_libraries(QtAwsMediaTailor
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

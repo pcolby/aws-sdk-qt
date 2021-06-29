@@ -33,8 +33,7 @@ add_library(QtAwsMarketplaceMetering
   resolvecustomerrequest.cpp
   resolvecustomerresponse.cpp)
 
-add_dependencies(QtAwsMarketplaceMetering QtAwsCore)
-
 target_link_libraries(QtAwsMarketplaceMetering
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

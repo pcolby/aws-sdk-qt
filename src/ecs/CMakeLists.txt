@@ -321,8 +321,7 @@ add_library(QtAwsEcs
   updatetasksetrequest.cpp
   updatetasksetresponse.cpp)
 
-add_dependencies(QtAwsEcs QtAwsCore)
-
 target_link_libraries(QtAwsEcs
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -201,8 +201,7 @@ add_library(QtAwsEks
   updatenodegroupversionrequest.cpp
   updatenodegroupversionresponse.cpp)
 
-add_dependencies(QtAwsEks QtAwsCore)
-
 target_link_libraries(QtAwsEks
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

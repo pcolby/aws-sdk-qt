@@ -195,8 +195,7 @@ add_library(QtAwsSSOAdmin
   updatepermissionsetrequest.cpp
   updatepermissionsetresponse.cpp)
 
-add_dependencies(QtAwsSSOAdmin QtAwsCore)
-
 target_link_libraries(QtAwsSSOAdmin
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

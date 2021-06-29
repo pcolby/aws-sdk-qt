@@ -621,8 +621,7 @@ add_library(QtAwsConnect
   updateusersecurityprofilesrequest.cpp
   updateusersecurityprofilesresponse.cpp)
 
-add_dependencies(QtAwsConnect QtAwsCore)
-
 target_link_libraries(QtAwsConnect
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

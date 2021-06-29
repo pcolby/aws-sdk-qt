@@ -183,8 +183,7 @@ add_library(QtAwsNetworkFirewall
   updatesubnetchangeprotectionrequest.cpp
   updatesubnetchangeprotectionresponse.cpp)
 
-add_dependencies(QtAwsNetworkFirewall QtAwsCore)
-
 target_link_libraries(QtAwsNetworkFirewall
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

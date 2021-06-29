@@ -231,8 +231,7 @@ add_library(QtAwsInspector
   updateassessmenttargetrequest.cpp
   updateassessmenttargetresponse.cpp)
 
-add_dependencies(QtAwsInspector QtAwsCore)
-
 target_link_libraries(QtAwsInspector
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

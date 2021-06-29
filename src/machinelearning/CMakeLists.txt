@@ -177,8 +177,7 @@ add_library(QtAwsMachineLearning
   updatemlmodelrequest.cpp
   updatemlmodelresponse.cpp)
 
-add_dependencies(QtAwsMachineLearning QtAwsCore)
-
 target_link_libraries(QtAwsMachineLearning
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

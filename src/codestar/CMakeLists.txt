@@ -117,8 +117,7 @@ add_library(QtAwsCodeStar
   updateuserprofilerequest.cpp
   updateuserprofileresponse.cpp)
 
-add_dependencies(QtAwsCodeStar QtAwsCore)
-
 target_link_libraries(QtAwsCodeStar
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -117,8 +117,7 @@ add_library(QtAwsAppflow
   updateflowrequest.cpp
   updateflowresponse.cpp)
 
-add_dependencies(QtAwsAppflow QtAwsCore)
-
 target_link_libraries(QtAwsAppflow
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

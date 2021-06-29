@@ -603,8 +603,7 @@ add_library(QtAwsQuickSight
   updateuserrequest.cpp
   updateuserresponse.cpp)
 
-add_dependencies(QtAwsQuickSight QtAwsCore)
-
 target_link_libraries(QtAwsQuickSight
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

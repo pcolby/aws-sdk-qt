@@ -213,8 +213,7 @@ add_library(QtAwsCodeArtifact
   updaterepositoryrequest.cpp
   updaterepositoryresponse.cpp)
 
-add_dependencies(QtAwsCodeArtifact QtAwsCore)
-
 target_link_libraries(QtAwsCodeArtifact
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

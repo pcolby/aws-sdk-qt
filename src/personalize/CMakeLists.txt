@@ -291,8 +291,7 @@ add_library(QtAwsPersonalize
   updatecampaignrequest.cpp
   updatecampaignresponse.cpp)
 
-add_dependencies(QtAwsPersonalize QtAwsCore)
-
 target_link_libraries(QtAwsPersonalize
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

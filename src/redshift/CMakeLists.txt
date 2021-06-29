@@ -633,8 +633,7 @@ add_library(QtAwsRedshift
   updatepartnerstatusrequest.cpp
   updatepartnerstatusresponse.cpp)
 
-add_dependencies(QtAwsRedshift QtAwsCore)
-
 target_link_libraries(QtAwsRedshift
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

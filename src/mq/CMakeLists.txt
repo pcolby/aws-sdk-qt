@@ -141,8 +141,7 @@ add_library(QtAwsMq
   updateuserrequest.cpp
   updateuserresponse.cpp)
 
-add_dependencies(QtAwsMq QtAwsCore)
-
 target_link_libraries(QtAwsMq
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

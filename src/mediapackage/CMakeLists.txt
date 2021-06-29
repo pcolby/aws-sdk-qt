@@ -123,8 +123,7 @@ add_library(QtAwsMediaPackage
   updateoriginendpointrequest.cpp
   updateoriginendpointresponse.cpp)
 
-add_dependencies(QtAwsMediaPackage QtAwsCore)
-
 target_link_libraries(QtAwsMediaPackage
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

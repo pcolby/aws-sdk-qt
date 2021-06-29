@@ -159,8 +159,7 @@ add_library(QtAwsApplicationDiscoveryService
   updateapplicationrequest.cpp
   updateapplicationresponse.cpp)
 
-add_dependencies(QtAwsApplicationDiscoveryService QtAwsCore)
-
 target_link_libraries(QtAwsApplicationDiscoveryService
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

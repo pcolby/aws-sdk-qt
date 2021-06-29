@@ -249,8 +249,7 @@ add_library(QtAwsWafv2
   wafv2request.cpp
   wafv2response.cpp)
 
-add_dependencies(QtAwsWafv2 QtAwsCore)
-
 target_link_libraries(QtAwsWafv2
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

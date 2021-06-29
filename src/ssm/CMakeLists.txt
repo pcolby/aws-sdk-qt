@@ -819,8 +819,7 @@ add_library(QtAwsSsm
   updateservicesettingrequest.cpp
   updateservicesettingresponse.cpp)
 
-add_dependencies(QtAwsSsm QtAwsCore)
-
 target_link_libraries(QtAwsSsm
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

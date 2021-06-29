@@ -165,8 +165,7 @@ add_library(QtAwsIvs
   updatechannelrequest.cpp
   updatechannelresponse.cpp)
 
-add_dependencies(QtAwsIvs QtAwsCore)
-
 target_link_libraries(QtAwsIvs
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

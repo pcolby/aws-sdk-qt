@@ -261,8 +261,7 @@ add_library(QtAwsCloudWatchLogs
   untagloggrouprequest.cpp
   untagloggroupresponse.cpp)
 
-add_dependencies(QtAwsCloudWatchLogs QtAwsCore)
-
 target_link_libraries(QtAwsCloudWatchLogs
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

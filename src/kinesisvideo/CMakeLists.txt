@@ -123,8 +123,7 @@ add_library(QtAwsKinesisVideo
   updatestreamrequest.cpp
   updatestreamresponse.cpp)
 
-add_dependencies(QtAwsKinesisVideo QtAwsCore)
-
 target_link_libraries(QtAwsKinesisVideo
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

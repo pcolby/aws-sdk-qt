@@ -213,8 +213,7 @@ add_library(QtAwsEcr
   uploadlayerpartrequest.cpp
   uploadlayerpartresponse.cpp)
 
-add_dependencies(QtAwsEcr QtAwsCore)
-
 target_link_libraries(QtAwsEcr
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

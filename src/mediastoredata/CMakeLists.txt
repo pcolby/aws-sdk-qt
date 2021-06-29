@@ -39,8 +39,7 @@ add_library(QtAwsMediaStoreData
   putobjectrequest.cpp
   putobjectresponse.cpp)
 
-add_dependencies(QtAwsMediaStoreData QtAwsCore)
-
 target_link_libraries(QtAwsMediaStoreData
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

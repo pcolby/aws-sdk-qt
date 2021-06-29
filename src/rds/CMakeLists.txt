@@ -831,8 +831,7 @@ add_library(QtAwsRds
   stopdbinstancerequest.cpp
   stopdbinstanceresponse.cpp)
 
-add_dependencies(QtAwsRds QtAwsCore)
-
 target_link_libraries(QtAwsRds
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

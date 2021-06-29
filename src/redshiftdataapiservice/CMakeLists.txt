@@ -63,8 +63,7 @@ add_library(QtAwsRedshiftDataAPIService
   redshiftdataapiservicerequest.cpp
   redshiftdataapiserviceresponse.cpp)
 
-add_dependencies(QtAwsRedshiftDataAPIService QtAwsCore)
-
 target_link_libraries(QtAwsRedshiftDataAPIService
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

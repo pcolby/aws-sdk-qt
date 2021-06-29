@@ -21,8 +21,7 @@ add_library(QtAwsMarketplaceCommerceAnalytics
   startsupportdataexportrequest.cpp
   startsupportdataexportresponse.cpp)
 
-add_dependencies(QtAwsMarketplaceCommerceAnalytics QtAwsCore)
-
 target_link_libraries(QtAwsMarketplaceCommerceAnalytics
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

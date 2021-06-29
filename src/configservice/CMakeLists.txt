@@ -525,8 +525,7 @@ add_library(QtAwsConfigService
   untagresourcerequest.cpp
   untagresourceresponse.cpp)
 
-add_dependencies(QtAwsConfigService QtAwsCore)
-
 target_link_libraries(QtAwsConfigService
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -153,8 +153,7 @@ add_library(QtAwsAmplifyBackend
   updatebackendjobrequest.cpp
   updatebackendjobresponse.cpp)
 
-add_dependencies(QtAwsAmplifyBackend QtAwsCore)
-
 target_link_libraries(QtAwsAmplifyBackend
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

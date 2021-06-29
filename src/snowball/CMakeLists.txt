@@ -159,8 +159,7 @@ add_library(QtAwsSnowball
   updatelongtermpricingrequest.cpp
   updatelongtermpricingresponse.cpp)
 
-add_dependencies(QtAwsSnowball QtAwsCore)
-
 target_link_libraries(QtAwsSnowball
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

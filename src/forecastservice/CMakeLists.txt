@@ -219,8 +219,7 @@ add_library(QtAwsForecastService
   updatedatasetgrouprequest.cpp
   updatedatasetgroupresponse.cpp)
 
-add_dependencies(QtAwsForecastService QtAwsCore)
-
 target_link_libraries(QtAwsForecastService
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

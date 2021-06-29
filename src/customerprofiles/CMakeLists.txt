@@ -189,8 +189,7 @@ add_library(QtAwsCustomerProfiles
   updateprofilerequest.cpp
   updateprofileresponse.cpp)
 
-add_dependencies(QtAwsCustomerProfiles QtAwsCore)
-
 target_link_libraries(QtAwsCustomerProfiles
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

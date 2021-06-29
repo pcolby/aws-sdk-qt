@@ -129,8 +129,7 @@ add_library(QtAwsQldb
   updateledgerrequest.cpp
   updateledgerresponse.cpp)
 
-add_dependencies(QtAwsQldb QtAwsCore)
-
 target_link_libraries(QtAwsQldb
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

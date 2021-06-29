@@ -375,8 +375,7 @@ add_library(QtAwsAutoScaling
   updateautoscalinggrouprequest.cpp
   updateautoscalinggroupresponse.cpp)
 
-add_dependencies(QtAwsAutoScaling QtAwsCore)
-
 target_link_libraries(QtAwsAutoScaling
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

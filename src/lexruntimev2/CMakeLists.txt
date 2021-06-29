@@ -45,8 +45,7 @@ add_library(QtAwsLexRuntimeV2
   startconversationrequest.cpp
   startconversationresponse.cpp)
 
-add_dependencies(QtAwsLexRuntimeV2 QtAwsCore)
-
 target_link_libraries(QtAwsLexRuntimeV2
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

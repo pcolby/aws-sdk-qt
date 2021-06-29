@@ -171,8 +171,7 @@ add_library(QtAwsApplicationInsights
   updatelogpatternrequest.cpp
   updatelogpatternresponse.cpp)
 
-add_dependencies(QtAwsApplicationInsights QtAwsCore)
-
 target_link_libraries(QtAwsApplicationInsights
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -141,8 +141,7 @@ add_library(QtAwsSecretsManager
   validateresourcepolicyrequest.cpp
   validateresourcepolicyresponse.cpp)
 
-add_dependencies(QtAwsSecretsManager QtAwsCore)
-
 target_link_libraries(QtAwsSecretsManager
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

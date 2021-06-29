@@ -363,8 +363,7 @@ add_library(QtAwsDirectConnect
   updatevirtualinterfaceattributesrequest.cpp
   updatevirtualinterfaceattributesresponse.cpp)
 
-add_dependencies(QtAwsDirectConnect QtAwsCore)
-
 target_link_libraries(QtAwsDirectConnect
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

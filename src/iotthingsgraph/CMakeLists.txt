@@ -219,8 +219,7 @@ add_library(QtAwsIoTThingsGraph
   uploadentitydefinitionsrequest.cpp
   uploadentitydefinitionsresponse.cpp)
 
-add_dependencies(QtAwsIoTThingsGraph QtAwsCore)
-
 target_link_libraries(QtAwsIoTThingsGraph
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

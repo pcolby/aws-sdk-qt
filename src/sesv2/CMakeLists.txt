@@ -495,8 +495,7 @@ add_library(QtAwsSesv2
   updateemailtemplaterequest.cpp
   updateemailtemplateresponse.cpp)
 
-add_dependencies(QtAwsSesv2 QtAwsCore)
-
 target_link_libraries(QtAwsSesv2
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

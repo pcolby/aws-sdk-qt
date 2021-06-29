@@ -135,8 +135,7 @@ add_library(QtAwsDevOpsGuru
   updateserviceintegrationrequest.cpp
   updateserviceintegrationresponse.cpp)
 
-add_dependencies(QtAwsDevOpsGuru QtAwsCore)
-
 target_link_libraries(QtAwsDevOpsGuru
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

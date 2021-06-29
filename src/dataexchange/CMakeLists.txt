@@ -141,8 +141,7 @@ add_library(QtAwsDataExchange
   updaterevisionrequest.cpp
   updaterevisionresponse.cpp)
 
-add_dependencies(QtAwsDataExchange QtAwsCore)
-
 target_link_libraries(QtAwsDataExchange
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

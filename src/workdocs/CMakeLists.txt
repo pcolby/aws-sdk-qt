@@ -255,8 +255,7 @@ add_library(QtAwsWorkDocs
   workdocsrequest.cpp
   workdocsresponse.cpp)
 
-add_dependencies(QtAwsWorkDocs QtAwsCore)
-
 target_link_libraries(QtAwsWorkDocs
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

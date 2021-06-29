@@ -357,8 +357,7 @@ add_library(QtAwsIoTSiteWise
   updateprojectrequest.cpp
   updateprojectresponse.cpp)
 
-add_dependencies(QtAwsIoTSiteWise QtAwsCore)
-
 target_link_libraries(QtAwsIoTSiteWise
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

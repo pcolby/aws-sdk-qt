@@ -123,8 +123,7 @@ add_library(QtAwsLookoutforVision
   updatedatasetentriesrequest.cpp
   updatedatasetentriesresponse.cpp)
 
-add_dependencies(QtAwsLookoutforVision QtAwsCore)
-
 target_link_libraries(QtAwsLookoutforVision
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

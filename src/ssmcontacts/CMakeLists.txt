@@ -171,8 +171,7 @@ add_library(QtAwsSSMContacts
   updatecontactrequest.cpp
   updatecontactresponse.cpp)
 
-add_dependencies(QtAwsSSMContacts QtAwsCore)
-
 target_link_libraries(QtAwsSSMContacts
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

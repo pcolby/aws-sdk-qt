@@ -87,8 +87,7 @@ add_library(QtAwsHealth
   healthrequest.cpp
   healthresponse.cpp)
 
-add_dependencies(QtAwsHealth QtAwsCore)
-
 target_link_libraries(QtAwsHealth
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

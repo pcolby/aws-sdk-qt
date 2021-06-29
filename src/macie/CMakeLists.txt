@@ -51,8 +51,7 @@ add_library(QtAwsMacie
   updates3resourcesrequest.cpp
   updates3resourcesresponse.cpp)
 
-add_dependencies(QtAwsMacie QtAwsCore)
-
 target_link_libraries(QtAwsMacie
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

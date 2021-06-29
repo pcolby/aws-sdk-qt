@@ -81,8 +81,7 @@ add_library(QtAwsFirehose
   updatedestinationrequest.cpp
   updatedestinationresponse.cpp)
 
-add_dependencies(QtAwsFirehose QtAwsCore)
-
 target_link_libraries(QtAwsFirehose
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

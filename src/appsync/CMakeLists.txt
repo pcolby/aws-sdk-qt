@@ -255,8 +255,7 @@ add_library(QtAwsAppSync
   updatetyperequest.cpp
   updatetyperesponse.cpp)
 
-add_dependencies(QtAwsAppSync QtAwsCore)
-
 target_link_libraries(QtAwsAppSync
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

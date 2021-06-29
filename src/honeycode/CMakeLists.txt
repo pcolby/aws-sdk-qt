@@ -81,8 +81,7 @@ add_library(QtAwsHoneycode
   starttabledataimportjobrequest.cpp
   starttabledataimportjobresponse.cpp)
 
-add_dependencies(QtAwsHoneycode QtAwsCore)
-
 target_link_libraries(QtAwsHoneycode
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

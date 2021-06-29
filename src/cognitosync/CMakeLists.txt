@@ -111,8 +111,7 @@ add_library(QtAwsCognitoSync
   updaterecordsrequest.cpp
   updaterecordsresponse.cpp)
 
-add_dependencies(QtAwsCognitoSync QtAwsCore)
-
 target_link_libraries(QtAwsCognitoSync
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

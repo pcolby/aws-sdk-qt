@@ -159,8 +159,7 @@ add_library(QtAwsTransfer
   updateuserrequest.cpp
   updateuserresponse.cpp)
 
-add_dependencies(QtAwsTransfer QtAwsCore)
-
 target_link_libraries(QtAwsTransfer
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

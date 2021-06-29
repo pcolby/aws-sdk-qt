@@ -2715,8 +2715,7 @@ add_library(QtAwsEc2
   withdrawbyoipcidrrequest.cpp
   withdrawbyoipcidrresponse.cpp)
 
-add_dependencies(QtAwsEc2 QtAwsCore)
-
 target_link_libraries(QtAwsEc2
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

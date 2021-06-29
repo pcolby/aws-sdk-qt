@@ -435,8 +435,7 @@ add_library(QtAwsSes
   verifyemailidentityrequest.cpp
   verifyemailidentityresponse.cpp)
 
-add_dependencies(QtAwsSes QtAwsCore)
-
 target_link_libraries(QtAwsSes
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

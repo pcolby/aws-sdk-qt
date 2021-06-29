@@ -207,8 +207,7 @@ add_library(QtAwsAppConfig
   validateconfigurationrequest.cpp
   validateconfigurationresponse.cpp)
 
-add_dependencies(QtAwsAppConfig QtAwsCore)
-
 target_link_libraries(QtAwsAppConfig
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

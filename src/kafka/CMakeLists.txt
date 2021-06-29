@@ -189,8 +189,7 @@ add_library(QtAwsKafka
   updatemonitoringrequest.cpp
   updatemonitoringresponse.cpp)
 
-add_dependencies(QtAwsKafka QtAwsCore)
-
 target_link_libraries(QtAwsKafka
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

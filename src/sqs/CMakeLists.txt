@@ -129,8 +129,7 @@ add_library(QtAwsSqs
   untagqueuerequest.cpp
   untagqueueresponse.cpp)
 
-add_dependencies(QtAwsSqs QtAwsCore)
-
 target_link_libraries(QtAwsSqs
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

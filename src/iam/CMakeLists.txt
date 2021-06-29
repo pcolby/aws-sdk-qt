@@ -957,8 +957,7 @@ add_library(QtAwsIam
   uploadsshpublickeyrequest.cpp
   uploadsshpublickeyresponse.cpp)
 
-add_dependencies(QtAwsIam QtAwsCore)
-
 target_link_libraries(QtAwsIam
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

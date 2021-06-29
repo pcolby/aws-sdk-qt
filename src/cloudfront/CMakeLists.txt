@@ -507,8 +507,7 @@ add_library(QtAwsCloudFront
   updatestreamingdistributionrequest.cpp
   updatestreamingdistributionresponse.cpp)
 
-add_dependencies(QtAwsCloudFront QtAwsCore)
-
 target_link_libraries(QtAwsCloudFront
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

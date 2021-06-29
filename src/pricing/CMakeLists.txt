@@ -27,8 +27,7 @@ add_library(QtAwsPricing
   pricingrequest.cpp
   pricingresponse.cpp)
 
-add_dependencies(QtAwsPricing QtAwsCore)
-
 target_link_libraries(QtAwsPricing
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

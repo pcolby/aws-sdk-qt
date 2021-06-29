@@ -57,8 +57,7 @@ add_library(QtAwsConnectParticipant
   startattachmentuploadrequest.cpp
   startattachmentuploadresponse.cpp)
 
-add_dependencies(QtAwsConnectParticipant QtAwsCore)
-
 target_link_libraries(QtAwsConnectParticipant
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

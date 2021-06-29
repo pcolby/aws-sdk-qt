@@ -231,8 +231,7 @@ add_library(QtAwsAmplify
   updatewebhookrequest.cpp
   updatewebhookresponse.cpp)
 
-add_dependencies(QtAwsAmplify QtAwsCore)
-
 target_link_libraries(QtAwsAmplify
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

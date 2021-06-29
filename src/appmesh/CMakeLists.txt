@@ -237,8 +237,7 @@ add_library(QtAwsAppMesh
   updatevirtualservicerequest.cpp
   updatevirtualserviceresponse.cpp)
 
-add_dependencies(QtAwsAppMesh QtAwsCore)
-
 target_link_libraries(QtAwsAppMesh
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

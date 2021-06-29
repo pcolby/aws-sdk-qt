@@ -219,8 +219,7 @@ add_library(QtAwsNetworkManager
   updatesiterequest.cpp
   updatesiteresponse.cpp)
 
-add_dependencies(QtAwsNetworkManager QtAwsCore)
-
 target_link_libraries(QtAwsNetworkManager
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

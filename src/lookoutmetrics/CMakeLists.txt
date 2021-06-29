@@ -159,8 +159,7 @@ add_library(QtAwsLookoutMetrics
   updatemetricsetrequest.cpp
   updatemetricsetresponse.cpp)
 
-add_dependencies(QtAwsLookoutMetrics QtAwsCore)
-
 target_link_libraries(QtAwsLookoutMetrics
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

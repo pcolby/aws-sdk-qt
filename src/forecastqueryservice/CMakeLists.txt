@@ -15,8 +15,7 @@ add_library(QtAwsForecastQueryService
   queryforecastrequest.cpp
   queryforecastresponse.cpp)
 
-add_dependencies(QtAwsForecastQueryService QtAwsCore)
-
 target_link_libraries(QtAwsForecastQueryService
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

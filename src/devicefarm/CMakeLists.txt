@@ -471,8 +471,7 @@ add_library(QtAwsDeviceFarm
   updatevpceconfigurationrequest.cpp
   updatevpceconfigurationresponse.cpp)
 
-add_dependencies(QtAwsDeviceFarm QtAwsCore)
-
 target_link_libraries(QtAwsDeviceFarm
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

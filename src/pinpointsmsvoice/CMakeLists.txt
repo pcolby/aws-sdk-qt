@@ -57,8 +57,7 @@ add_library(QtAwsPinpointSMSVoice
   updateconfigurationseteventdestinationrequest.cpp
   updateconfigurationseteventdestinationresponse.cpp)
 
-add_dependencies(QtAwsPinpointSMSVoice QtAwsCore)
-
 target_link_libraries(QtAwsPinpointSMSVoice
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

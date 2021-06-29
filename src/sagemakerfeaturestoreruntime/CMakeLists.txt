@@ -33,8 +33,7 @@ add_library(QtAwsSageMakerFeatureStoreRuntime
   sagemakerfeaturestoreruntimerequest.cpp
   sagemakerfeaturestoreruntimeresponse.cpp)
 
-add_dependencies(QtAwsSageMakerFeatureStoreRuntime QtAwsCore)
-
 target_link_libraries(QtAwsSageMakerFeatureStoreRuntime
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

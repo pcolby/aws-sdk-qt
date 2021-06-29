@@ -123,8 +123,7 @@ add_library(QtAwsBatch
   updatejobqueuerequest.cpp
   updatejobqueueresponse.cpp)
 
-add_dependencies(QtAwsBatch QtAwsCore)
-
 target_link_libraries(QtAwsBatch
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

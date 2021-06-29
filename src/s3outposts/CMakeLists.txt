@@ -27,8 +27,7 @@ add_library(QtAwsS3Outposts
   s3outpostsrequest.cpp
   s3outpostsresponse.cpp)
 
-add_dependencies(QtAwsS3Outposts QtAwsCore)
-
 target_link_libraries(QtAwsS3Outposts
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -327,8 +327,7 @@ add_library(QtAwsWorkSpaces
   workspacesrequest.cpp
   workspacesresponse.cpp)
 
-add_dependencies(QtAwsWorkSpaces QtAwsCore)
-
 target_link_libraries(QtAwsWorkSpaces
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

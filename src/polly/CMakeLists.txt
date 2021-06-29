@@ -63,8 +63,7 @@ add_library(QtAwsPolly
   synthesizespeechrequest.cpp
   synthesizespeechresponse.cpp)
 
-add_dependencies(QtAwsPolly QtAwsCore)
-
 target_link_libraries(QtAwsPolly
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

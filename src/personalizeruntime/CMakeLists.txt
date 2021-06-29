@@ -21,8 +21,7 @@ add_library(QtAwsPersonalizeRuntime
   personalizeruntimerequest.cpp
   personalizeruntimeresponse.cpp)
 
-add_dependencies(QtAwsPersonalizeRuntime QtAwsCore)
-
 target_link_libraries(QtAwsPersonalizeRuntime
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

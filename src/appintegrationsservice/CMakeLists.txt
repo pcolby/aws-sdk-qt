@@ -63,8 +63,7 @@ add_library(QtAwsAppIntegrationsService
   updateeventintegrationrequest.cpp
   updateeventintegrationresponse.cpp)
 
-add_dependencies(QtAwsAppIntegrationsService QtAwsCore)
-
 target_link_libraries(QtAwsAppIntegrationsService
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

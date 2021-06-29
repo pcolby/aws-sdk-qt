@@ -45,8 +45,7 @@ add_library(QtAwsTextract
   textractrequest.cpp
   textractresponse.cpp)
 
-add_dependencies(QtAwsTextract QtAwsCore)
-
 target_link_libraries(QtAwsTextract
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

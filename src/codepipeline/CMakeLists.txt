@@ -243,8 +243,7 @@ add_library(QtAwsCodePipeline
   updatepipelinerequest.cpp
   updatepipelineresponse.cpp)
 
-add_dependencies(QtAwsCodePipeline QtAwsCore)
-
 target_link_libraries(QtAwsCodePipeline
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -585,8 +585,7 @@ add_library(QtAwsS3
   writegetobjectresponserequest.cpp
   writegetobjectresponseresponse.cpp)
 
-add_dependencies(QtAwsS3 QtAwsCore)
-
 target_link_libraries(QtAwsS3
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

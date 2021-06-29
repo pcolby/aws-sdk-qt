@@ -297,8 +297,7 @@ add_library(QtAwsAppStream
   updatestackrequest.cpp
   updatestackresponse.cpp)
 
-add_dependencies(QtAwsAppStream QtAwsCore)
-
 target_link_libraries(QtAwsAppStream
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

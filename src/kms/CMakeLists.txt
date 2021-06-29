@@ -285,8 +285,7 @@ add_library(QtAwsKms
   verifyrequest.cpp
   verifyresponse.cpp)
 
-add_dependencies(QtAwsKms QtAwsCore)
-
 target_link_libraries(QtAwsKms
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -27,8 +27,7 @@ add_library(QtAwsFinSpaceData
   getworkinglocationrequest.cpp
   getworkinglocationresponse.cpp)
 
-add_dependencies(QtAwsFinSpaceData QtAwsCore)
-
 target_link_libraries(QtAwsFinSpaceData
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

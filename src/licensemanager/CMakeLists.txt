@@ -279,8 +279,7 @@ add_library(QtAwsLicenseManager
   updateservicesettingsrequest.cpp
   updateservicesettingsresponse.cpp)
 
-add_dependencies(QtAwsLicenseManager QtAwsCore)
-
 target_link_libraries(QtAwsLicenseManager
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

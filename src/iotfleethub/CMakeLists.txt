@@ -57,8 +57,7 @@ add_library(QtAwsIoTFleetHub
   updateapplicationrequest.cpp
   updateapplicationresponse.cpp)
 
-add_dependencies(QtAwsIoTFleetHub QtAwsCore)
-
 target_link_libraries(QtAwsIoTFleetHub
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

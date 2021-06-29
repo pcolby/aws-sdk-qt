@@ -15,8 +15,7 @@ add_library(QtAwsKinesisVideoMedia
   kinesisvideomediarequest.cpp
   kinesisvideomediaresponse.cpp)
 
-add_dependencies(QtAwsKinesisVideoMedia QtAwsCore)
-
 target_link_libraries(QtAwsKinesisVideoMedia
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

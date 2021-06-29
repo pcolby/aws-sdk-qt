@@ -93,8 +93,7 @@ add_library(QtAwsCodeGuruReviewer
   untagresourcerequest.cpp
   untagresourceresponse.cpp)
 
-add_dependencies(QtAwsCodeGuruReviewer QtAwsCore)
-
 target_link_libraries(QtAwsCodeGuruReviewer
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

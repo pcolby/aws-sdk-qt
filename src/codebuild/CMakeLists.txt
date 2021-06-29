@@ -273,8 +273,7 @@ add_library(QtAwsCodeBuild
   updatewebhookrequest.cpp
   updatewebhookresponse.cpp)
 
-add_dependencies(QtAwsCodeBuild QtAwsCore)
-
 target_link_libraries(QtAwsCodeBuild
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

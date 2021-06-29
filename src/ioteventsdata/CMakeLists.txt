@@ -75,8 +75,7 @@ add_library(QtAwsIoTEventsData
   listdetectorsrequest.cpp
   listdetectorsresponse.cpp)
 
-add_dependencies(QtAwsIoTEventsData QtAwsCore)
-
 target_link_libraries(QtAwsIoTEventsData
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

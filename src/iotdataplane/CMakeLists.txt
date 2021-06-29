@@ -39,8 +39,7 @@ add_library(QtAwsIoTDataPlane
   updatethingshadowrequest.cpp
   updatethingshadowresponse.cpp)
 
-add_dependencies(QtAwsIoTDataPlane QtAwsCore)
-
 target_link_libraries(QtAwsIoTDataPlane
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

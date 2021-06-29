@@ -147,8 +147,7 @@ add_library(QtAwsManagedBlockchain
   voteonproposalrequest.cpp
   voteonproposalresponse.cpp)
 
-add_dependencies(QtAwsManagedBlockchain QtAwsCore)
-
 target_link_libraries(QtAwsManagedBlockchain
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -213,8 +213,7 @@ add_library(QtAwsElasticLoadBalancingv2
   setsubnetsrequest.cpp
   setsubnetsresponse.cpp)
 
-add_dependencies(QtAwsElasticLoadBalancingv2 QtAwsCore)
-
 target_link_libraries(QtAwsElasticLoadBalancingv2
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

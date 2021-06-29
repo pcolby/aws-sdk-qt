@@ -291,8 +291,7 @@ add_library(QtAwsGlobalAccelerator
   withdrawbyoipcidrrequest.cpp
   withdrawbyoipcidrresponse.cpp)
 
-add_dependencies(QtAwsGlobalAccelerator QtAwsCore)
-
 target_link_libraries(QtAwsGlobalAccelerator
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

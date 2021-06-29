@@ -33,8 +33,7 @@ add_library(QtAwsSso
   ssorequest.cpp
   ssoresponse.cpp)
 
-add_dependencies(QtAwsSso QtAwsCore)
-
 target_link_libraries(QtAwsSso
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

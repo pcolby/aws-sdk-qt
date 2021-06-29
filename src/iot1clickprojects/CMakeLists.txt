@@ -105,8 +105,7 @@ add_library(QtAwsIoT1ClickProjects
   updateprojectrequest.cpp
   updateprojectresponse.cpp)
 
-add_dependencies(QtAwsIoT1ClickProjects QtAwsCore)
-
 target_link_libraries(QtAwsIoT1ClickProjects
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

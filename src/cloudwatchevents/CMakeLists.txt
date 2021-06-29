@@ -315,8 +315,7 @@ add_library(QtAwsCloudWatchEvents
   updateconnectionrequest.cpp
   updateconnectionresponse.cpp)
 
-add_dependencies(QtAwsCloudWatchEvents QtAwsCore)
-
 target_link_libraries(QtAwsCloudWatchEvents
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

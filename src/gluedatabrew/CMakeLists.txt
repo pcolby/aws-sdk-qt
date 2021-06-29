@@ -243,8 +243,7 @@ add_library(QtAwsGlueDataBrew
   updateschedulerequest.cpp
   updatescheduleresponse.cpp)
 
-add_dependencies(QtAwsGlueDataBrew QtAwsCore)
-
 target_link_libraries(QtAwsGlueDataBrew
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

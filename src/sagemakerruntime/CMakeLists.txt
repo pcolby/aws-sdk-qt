@@ -15,8 +15,7 @@ add_library(QtAwsSageMakerRuntime
   sagemakerruntimerequest.cpp
   sagemakerruntimeresponse.cpp)
 
-add_dependencies(QtAwsSageMakerRuntime QtAwsCore)
-
 target_link_libraries(QtAwsSageMakerRuntime
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

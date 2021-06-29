@@ -57,8 +57,7 @@ add_library(QtAwsDlm
   updatelifecyclepolicyrequest.cpp
   updatelifecyclepolicyresponse.cpp)
 
-add_dependencies(QtAwsDlm QtAwsCore)
-
 target_link_libraries(QtAwsDlm
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -615,8 +615,7 @@ add_library(QtAwsCognitoIdentityProvider
   verifyuserattributerequest.cpp
   verifyuserattributeresponse.cpp)
 
-add_dependencies(QtAwsCognitoIdentityProvider QtAwsCore)
-
 target_link_libraries(QtAwsCognitoIdentityProvider
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

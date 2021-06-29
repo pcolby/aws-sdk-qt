@@ -39,8 +39,7 @@ add_library(QtAwsAugmentedAIRuntime
   stophumanlooprequest.cpp
   stophumanloopresponse.cpp)
 
-add_dependencies(QtAwsAugmentedAIRuntime QtAwsCore)
-
 target_link_libraries(QtAwsAugmentedAIRuntime
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -99,8 +99,7 @@ add_library(QtAwsDetective
   untagresourcerequest.cpp
   untagresourceresponse.cpp)
 
-add_dependencies(QtAwsDetective QtAwsCore)
-
 target_link_libraries(QtAwsDetective
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

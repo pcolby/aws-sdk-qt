@@ -345,8 +345,7 @@ add_library(QtAwsMacie2
   updateorganizationconfigurationrequest.cpp
   updateorganizationconfigurationresponse.cpp)
 
-add_dependencies(QtAwsMacie2 QtAwsCore)
-
 target_link_libraries(QtAwsMacie2
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

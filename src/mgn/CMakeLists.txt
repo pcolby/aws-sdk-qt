@@ -159,8 +159,7 @@ add_library(QtAwsmgn
   updatereplicationconfigurationtemplaterequest.cpp
   updatereplicationconfigurationtemplateresponse.cpp)
 
-add_dependencies(QtAwsmgn QtAwsCore)
-
 target_link_libraries(QtAwsmgn
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

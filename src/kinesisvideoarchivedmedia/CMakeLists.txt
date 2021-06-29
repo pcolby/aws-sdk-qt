@@ -39,8 +39,7 @@ add_library(QtAwsKinesisVideoArchivedMedia
   listfragmentsrequest.cpp
   listfragmentsresponse.cpp)
 
-add_dependencies(QtAwsKinesisVideoArchivedMedia QtAwsCore)
-
 target_link_libraries(QtAwsKinesisVideoArchivedMedia
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

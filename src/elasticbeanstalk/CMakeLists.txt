@@ -291,8 +291,7 @@ add_library(QtAwsElasticBeanstalk
   validateconfigurationsettingsrequest.cpp
   validateconfigurationsettingsresponse.cpp)
 
-add_dependencies(QtAwsElasticBeanstalk QtAwsCore)
-
 target_link_libraries(QtAwsElasticBeanstalk
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

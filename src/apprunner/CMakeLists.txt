@@ -141,8 +141,7 @@ add_library(QtAwsAppRunner
   updateservicerequest.cpp
   updateserviceresponse.cpp)
 
-add_dependencies(QtAwsAppRunner QtAwsCore)
-
 target_link_libraries(QtAwsAppRunner
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

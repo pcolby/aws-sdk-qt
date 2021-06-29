@@ -27,8 +27,7 @@ add_library(QtAwsMigrationHubConfig
   migrationhubconfigrequest.cpp
   migrationhubconfigresponse.cpp)
 
-add_dependencies(QtAwsMigrationHubConfig QtAwsCore)
-
 target_link_libraries(QtAwsMigrationHubConfig
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

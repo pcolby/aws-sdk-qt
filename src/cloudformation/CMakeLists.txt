@@ -339,8 +339,7 @@ add_library(QtAwsCloudFormation
   validatetemplaterequest.cpp
   validatetemplateresponse.cpp)
 
-add_dependencies(QtAwsCloudFormation QtAwsCore)
-
 target_link_libraries(QtAwsCloudFormation
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

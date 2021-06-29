@@ -159,8 +159,7 @@ add_library(QtAwsGroundStation
   updatemissionprofilerequest.cpp
   updatemissionprofileresponse.cpp)
 
-add_dependencies(QtAwsGroundStation QtAwsCore)
-
 target_link_libraries(QtAwsGroundStation
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

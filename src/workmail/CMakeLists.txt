@@ -333,8 +333,7 @@ add_library(QtAwsWorkMail
   workmailrequest.cpp
   workmailresponse.cpp)
 
-add_dependencies(QtAwsWorkMail QtAwsCore)
-
 target_link_libraries(QtAwsWorkMail
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -81,8 +81,7 @@ add_library(QtAwsCodeStarconnections
   updatehostrequest.cpp
   updatehostresponse.cpp)
 
-add_dependencies(QtAwsCodeStarconnections QtAwsCore)
-
 target_link_libraries(QtAwsCodeStarconnections
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -129,8 +129,7 @@ add_library(QtAwsAppRegistry
   updateattributegrouprequest.cpp
   updateattributegroupresponse.cpp)
 
-add_dependencies(QtAwsAppRegistry QtAwsCore)
-
 target_link_libraries(QtAwsAppRegistry
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

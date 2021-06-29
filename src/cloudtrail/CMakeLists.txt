@@ -117,8 +117,7 @@ add_library(QtAwsCloudTrail
   updatetrailrequest.cpp
   updatetrailresponse.cpp)
 
-add_dependencies(QtAwsCloudTrail QtAwsCore)
-
 target_link_libraries(QtAwsCloudTrail
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

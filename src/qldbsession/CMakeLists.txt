@@ -15,8 +15,7 @@ add_library(QtAwsQLDBSession
   sendcommandrequest.cpp
   sendcommandresponse.cpp)
 
-add_dependencies(QtAwsQLDBSession QtAwsCore)
-
 target_link_libraries(QtAwsQLDBSession
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

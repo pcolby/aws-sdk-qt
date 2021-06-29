@@ -147,8 +147,7 @@ add_library(QtAwsServiceDiscovery
   updateservicerequest.cpp
   updateserviceresponse.cpp)
 
-add_dependencies(QtAwsServiceDiscovery QtAwsCore)
-
 target_link_libraries(QtAwsServiceDiscovery
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

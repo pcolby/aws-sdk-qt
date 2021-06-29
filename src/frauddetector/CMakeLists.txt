@@ -351,8 +351,7 @@ add_library(QtAwsFraudDetector
   updatevariablerequest.cpp
   updatevariableresponse.cpp)
 
-add_dependencies(QtAwsFraudDetector QtAwsCore)
-
 target_link_libraries(QtAwsFraudDetector
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

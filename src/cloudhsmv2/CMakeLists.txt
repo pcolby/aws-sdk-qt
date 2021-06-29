@@ -99,8 +99,7 @@ add_library(QtAwsCloudHSMV2
   untagresourcerequest.cpp
   untagresourceresponse.cpp)
 
-add_dependencies(QtAwsCloudHSMV2 QtAwsCore)
-
 target_link_libraries(QtAwsCloudHSMV2
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

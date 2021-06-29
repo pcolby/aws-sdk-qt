@@ -63,8 +63,7 @@ add_library(QtAwsSavingsPlans
   untagresourcerequest.cpp
   untagresourceresponse.cpp)
 
-add_dependencies(QtAwsSavingsPlans QtAwsCore)
-
 target_link_libraries(QtAwsSavingsPlans
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

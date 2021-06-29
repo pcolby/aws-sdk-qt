@@ -141,8 +141,7 @@ add_library(QtAwsLookoutEquipment
   updateinferenceschedulerrequest.cpp
   updateinferenceschedulerresponse.cpp)
 
-add_dependencies(QtAwsLookoutEquipment QtAwsCore)
-
 target_link_libraries(QtAwsLookoutEquipment
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

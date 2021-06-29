@@ -111,8 +111,7 @@ add_library(QtAwsMediaPackageVod
   updatepackaginggrouprequest.cpp
   updatepackaginggroupresponse.cpp)
 
-add_dependencies(QtAwsMediaPackageVod QtAwsCore)
-
 target_link_libraries(QtAwsMediaPackageVod
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

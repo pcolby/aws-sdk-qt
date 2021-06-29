@@ -207,8 +207,7 @@ add_library(QtAwsGlacier
   uploadmultipartpartrequest.cpp
   uploadmultipartpartresponse.cpp)
 
-add_dependencies(QtAwsGlacier QtAwsCore)
-
 target_link_libraries(QtAwsGlacier
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -195,8 +195,7 @@ add_library(QtAwsSchemas
   updateschemarequest.cpp
   updateschemaresponse.cpp)
 
-add_dependencies(QtAwsSchemas QtAwsCore)
-
 target_link_libraries(QtAwsSchemas
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -165,8 +165,7 @@ add_library(QtAwsCloudSearch
   updateserviceaccesspoliciesrequest.cpp
   updateserviceaccesspoliciesresponse.cpp)
 
-add_dependencies(QtAwsCloudSearch QtAwsCore)
-
 target_link_libraries(QtAwsCloudSearch
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

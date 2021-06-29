@@ -21,8 +21,7 @@ add_library(QtAwsEC2InstanceConnect
   sendsshpublickeyrequest.cpp
   sendsshpublickeyresponse.cpp)
 
-add_dependencies(QtAwsEC2InstanceConnect QtAwsCore)
-
 target_link_libraries(QtAwsEC2InstanceConnect
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

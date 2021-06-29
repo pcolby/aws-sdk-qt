@@ -231,8 +231,7 @@ add_library(QtAwsSwf
   untagresourcerequest.cpp
   untagresourceresponse.cpp)
 
-add_dependencies(QtAwsSwf QtAwsCore)
-
 target_link_libraries(QtAwsSwf
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

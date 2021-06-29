@@ -309,8 +309,7 @@ add_library(QtAwsDynamoDB
   updatetimetoliverequest.cpp
   updatetimetoliveresponse.cpp)
 
-add_dependencies(QtAwsDynamoDB QtAwsCore)
-
 target_link_libraries(QtAwsDynamoDB
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

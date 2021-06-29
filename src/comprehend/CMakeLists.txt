@@ -375,8 +375,7 @@ add_library(QtAwsComprehend
   updateendpointrequest.cpp
   updateendpointresponse.cpp)
 
-add_dependencies(QtAwsComprehend QtAwsCore)
-
 target_link_libraries(QtAwsComprehend
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

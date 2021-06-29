@@ -291,8 +291,7 @@ add_library(QtAwsEmr
   updatestudiosessionmappingrequest.cpp
   updatestudiosessionmappingresponse.cpp)
 
-add_dependencies(QtAwsEmr QtAwsCore)
-
 target_link_libraries(QtAwsEmr
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

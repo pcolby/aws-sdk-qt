@@ -147,8 +147,7 @@ add_library(QtAwsCodeGuruProfiler
   updateprofilinggrouprequest.cpp
   updateprofilinggroupresponse.cpp)
 
-add_dependencies(QtAwsCodeGuruProfiler QtAwsCore)
-
 target_link_libraries(QtAwsCodeGuruProfiler
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

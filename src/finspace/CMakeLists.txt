@@ -57,8 +57,7 @@ add_library(QtAwsfinspace
   updateenvironmentrequest.cpp
   updateenvironmentresponse.cpp)
 
-add_dependencies(QtAwsfinspace QtAwsCore)
-
 target_link_libraries(QtAwsfinspace
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

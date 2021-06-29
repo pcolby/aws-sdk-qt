@@ -129,8 +129,7 @@ add_library(QtAwsKinesisAnalytics
   updateapplicationrequest.cpp
   updateapplicationresponse.cpp)
 
-add_dependencies(QtAwsKinesisAnalytics QtAwsCore)
-
 target_link_libraries(QtAwsKinesisAnalytics
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -357,8 +357,7 @@ add_library(QtAwsGuardDuty
   updatethreatintelsetrequest.cpp
   updatethreatintelsetresponse.cpp)
 
-add_dependencies(QtAwsGuardDuty QtAwsCore)
-
 target_link_libraries(QtAwsGuardDuty
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

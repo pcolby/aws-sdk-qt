@@ -1107,8 +1107,7 @@ add_library(QtAwsChime
   updatevoiceconnectorrequest.cpp
   updatevoiceconnectorresponse.cpp)
 
-add_dependencies(QtAwsChime QtAwsCore)
-
 target_link_libraries(QtAwsChime
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

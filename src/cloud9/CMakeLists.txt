@@ -87,8 +87,7 @@ add_library(QtAwsCloud9
   updateenvironmentrequest.cpp
   updateenvironmentresponse.cpp)
 
-add_dependencies(QtAwsCloud9 QtAwsCore)
-
 target_link_libraries(QtAwsCloud9
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -99,8 +99,7 @@ add_library(QtAwsTimestreamWrite
   writerecordsrequest.cpp
   writerecordsresponse.cpp)
 
-add_dependencies(QtAwsTimestreamWrite QtAwsCore)
-
 target_link_libraries(QtAwsTimestreamWrite
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -33,8 +33,7 @@ add_library(QtAwsDynamoDBStreams
   liststreamsrequest.cpp
   liststreamsresponse.cpp)
 
-add_dependencies(QtAwsDynamoDBStreams QtAwsCore)
-
 target_link_libraries(QtAwsDynamoDBStreams
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

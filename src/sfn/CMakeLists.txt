@@ -147,8 +147,7 @@ add_library(QtAwsSfn
   updatestatemachinerequest.cpp
   updatestatemachineresponse.cpp)
 
-add_dependencies(QtAwsSfn QtAwsCore)
-
 target_link_libraries(QtAwsSfn
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

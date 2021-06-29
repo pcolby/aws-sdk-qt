@@ -351,8 +351,7 @@ add_library(QtAwsIoTWireless
   updatewirelessgatewayrequest.cpp
   updatewirelessgatewayresponse.cpp)
 
-add_dependencies(QtAwsIoTWireless QtAwsCore)
-
 target_link_libraries(QtAwsIoTWireless
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

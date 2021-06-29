@@ -243,8 +243,7 @@ add_library(QtAwsSns
   verifysmssandboxphonenumberrequest.cpp
   verifysmssandboxphonenumberresponse.cpp)
 
-add_dependencies(QtAwsSns QtAwsCore)
-
 target_link_libraries(QtAwsSns
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -531,8 +531,7 @@ add_library(QtAwsServiceCatalog
   updatetagoptionrequest.cpp
   updatetagoptionresponse.cpp)
 
-add_dependencies(QtAwsServiceCatalog QtAwsCore)
-
 target_link_libraries(QtAwsServiceCatalog
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -93,8 +93,7 @@ add_library(QtAwsTranslate
   updateparalleldatarequest.cpp
   updateparalleldataresponse.cpp)
 
-add_dependencies(QtAwsTranslate QtAwsCore)
-
 target_link_libraries(QtAwsTranslate
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

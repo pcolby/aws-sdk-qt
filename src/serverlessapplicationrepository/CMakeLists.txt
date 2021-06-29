@@ -93,8 +93,7 @@ add_library(QtAwsServerlessApplicationRepository
   updateapplicationrequest.cpp
   updateapplicationresponse.cpp)
 
-add_dependencies(QtAwsServerlessApplicationRepository QtAwsCore)
-
 target_link_libraries(QtAwsServerlessApplicationRepository
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

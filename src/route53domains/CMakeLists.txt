@@ -177,8 +177,7 @@ add_library(QtAwsRoute53Domains
   viewbillingrequest.cpp
   viewbillingresponse.cpp)
 
-add_dependencies(QtAwsRoute53Domains QtAwsCore)
-
 target_link_libraries(QtAwsRoute53Domains
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

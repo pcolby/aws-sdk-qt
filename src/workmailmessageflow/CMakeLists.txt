@@ -21,8 +21,7 @@ add_library(QtAwsWorkMailMessageFlow
   workmailmessageflowrequest.cpp
   workmailmessageflowresponse.cpp)
 
-add_dependencies(QtAwsWorkMailMessageFlow QtAwsCore)
-
 target_link_libraries(QtAwsWorkMailMessageFlow
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

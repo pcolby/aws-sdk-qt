@@ -225,8 +225,7 @@ add_library(QtAwsCloudWatch
   untagresourcerequest.cpp
   untagresourceresponse.cpp)
 
-add_dependencies(QtAwsCloudWatch QtAwsCore)
-
 target_link_libraries(QtAwsCloudWatch
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

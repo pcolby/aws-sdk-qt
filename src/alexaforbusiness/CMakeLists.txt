@@ -567,8 +567,7 @@ add_library(QtAwsAlexaForBusiness
   updateskillgrouprequest.cpp
   updateskillgroupresponse.cpp)
 
-add_dependencies(QtAwsAlexaForBusiness QtAwsCore)
-
 target_link_libraries(QtAwsAlexaForBusiness
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

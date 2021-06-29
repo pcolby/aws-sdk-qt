@@ -165,8 +165,7 @@ add_library(QtAwsIoTEvents
   updateinputrequest.cpp
   updateinputresponse.cpp)
 
-add_dependencies(QtAwsIoTEvents QtAwsCore)
-
 target_link_libraries(QtAwsIoTEvents
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

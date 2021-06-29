@@ -5,9 +5,8 @@ add_library(
 {% for source in SourceFiles %}
   {{source}}{% endfor %})
 
-add_dependencies({{ModuleName}} QtAwsCore)
-
 target_link_libraries(
   {{ModuleName}}
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

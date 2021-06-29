@@ -147,8 +147,7 @@ add_library(QtAwsLakeFormation
   updateresourcerequest.cpp
   updateresourceresponse.cpp)
 
-add_dependencies(QtAwsLakeFormation QtAwsCore)
-
 target_link_libraries(QtAwsLakeFormation
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -21,8 +21,7 @@ add_library(QtAwsSagemakerEdgeManager
   sendheartbeatrequest.cpp
   sendheartbeatresponse.cpp)
 
-add_dependencies(QtAwsSagemakerEdgeManager QtAwsCore)
-
 target_link_libraries(QtAwsSagemakerEdgeManager
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

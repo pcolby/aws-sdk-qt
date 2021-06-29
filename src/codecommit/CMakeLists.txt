@@ -471,8 +471,7 @@ add_library(QtAwsCodeCommit
   updaterepositorynamerequest.cpp
   updaterepositorynameresponse.cpp)
 
-add_dependencies(QtAwsCodeCommit QtAwsCore)
-
 target_link_libraries(QtAwsCodeCommit
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

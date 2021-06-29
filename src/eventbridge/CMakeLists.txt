@@ -315,8 +315,7 @@ add_library(QtAwsEventBridge
   updateconnectionrequest.cpp
   updateconnectionresponse.cpp)
 
-add_dependencies(QtAwsEventBridge QtAwsCore)
-
 target_link_libraries(QtAwsEventBridge
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

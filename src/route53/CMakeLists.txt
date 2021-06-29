@@ -393,8 +393,7 @@ add_library(QtAwsRoute53
   updatetrafficpolicyinstancerequest.cpp
   updatetrafficpolicyinstanceresponse.cpp)
 
-add_dependencies(QtAwsRoute53 QtAwsCore)
-
 target_link_libraries(QtAwsRoute53
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

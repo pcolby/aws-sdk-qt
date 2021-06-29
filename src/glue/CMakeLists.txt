@@ -951,8 +951,7 @@ add_library(QtAwsGlue
   updateworkflowrequest.cpp
   updateworkflowresponse.cpp)
 
-add_dependencies(QtAwsGlue QtAwsCore)
-
 target_link_libraries(QtAwsGlue
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

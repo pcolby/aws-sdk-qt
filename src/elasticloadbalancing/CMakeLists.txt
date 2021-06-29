@@ -183,8 +183,7 @@ add_library(QtAwsElasticLoadBalancing
   setloadbalancerpoliciesoflistenerrequest.cpp
   setloadbalancerpoliciesoflistenerresponse.cpp)
 
-add_dependencies(QtAwsElasticLoadBalancing QtAwsCore)
-
 target_link_libraries(QtAwsElasticLoadBalancing
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

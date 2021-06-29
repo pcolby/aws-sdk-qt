@@ -27,8 +27,7 @@ add_library(QtAwsTimestreamQuery
   timestreamqueryrequest.cpp
   timestreamqueryresponse.cpp)
 
-add_dependencies(QtAwsTimestreamQuery QtAwsCore)
-
 target_link_libraries(QtAwsTimestreamQuery
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -147,8 +147,7 @@ add_library(QtAwsCognitoIdentity
   updateidentitypoolrequest.cpp
   updateidentitypoolresponse.cpp)
 
-add_dependencies(QtAwsCognitoIdentity QtAwsCore)
-
 target_link_libraries(QtAwsCognitoIdentity
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

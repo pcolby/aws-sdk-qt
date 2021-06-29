@@ -51,8 +51,7 @@ add_library(QtAwsIoTSecureTunneling
   untagresourcerequest.cpp
   untagresourceresponse.cpp)
 
-add_dependencies(QtAwsIoTSecureTunneling QtAwsCore)
-
 target_link_libraries(QtAwsIoTSecureTunneling
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

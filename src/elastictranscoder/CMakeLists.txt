@@ -111,8 +111,7 @@ add_library(QtAwsElasticTranscoder
   updatepipelinestatusrequest.cpp
   updatepipelinestatusresponse.cpp)
 
-add_dependencies(QtAwsElasticTranscoder QtAwsCore)
-
 target_link_libraries(QtAwsElasticTranscoder
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

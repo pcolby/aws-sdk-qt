@@ -105,8 +105,7 @@ add_library(QtAwsResourceGroups
   updategrouprequest.cpp
   updategroupresponse.cpp)
 
-add_dependencies(QtAwsResourceGroups QtAwsCore)
-
 target_link_libraries(QtAwsResourceGroups
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

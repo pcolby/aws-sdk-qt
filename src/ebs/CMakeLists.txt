@@ -45,8 +45,7 @@ add_library(QtAwsEbs
   startsnapshotrequest.cpp
   startsnapshotresponse.cpp)
 
-add_dependencies(QtAwsEbs QtAwsCore)
-
 target_link_libraries(QtAwsEbs
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

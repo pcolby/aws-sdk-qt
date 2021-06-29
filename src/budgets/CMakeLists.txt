@@ -141,8 +141,7 @@ add_library(QtAwsBudgets
   updatesubscriberrequest.cpp
   updatesubscriberresponse.cpp)
 
-add_dependencies(QtAwsBudgets QtAwsCore)
-
 target_link_libraries(QtAwsBudgets
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

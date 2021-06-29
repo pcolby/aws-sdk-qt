@@ -45,8 +45,7 @@ add_library(QtAwsMarketplaceCatalog
   startchangesetrequest.cpp
   startchangesetresponse.cpp)
 
-add_dependencies(QtAwsMarketplaceCatalog QtAwsCore)
-
 target_link_libraries(QtAwsMarketplaceCatalog
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -303,8 +303,7 @@ add_library(QtAwsS3Control
   updatejobstatusrequest.cpp
   updatejobstatusresponse.cpp)
 
-add_dependencies(QtAwsS3Control QtAwsCore)
-
 target_link_libraries(QtAwsS3Control
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

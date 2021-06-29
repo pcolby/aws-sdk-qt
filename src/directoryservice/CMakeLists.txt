@@ -381,8 +381,7 @@ add_library(QtAwsDirectoryService
   verifytrustrequest.cpp
   verifytrustresponse.cpp)
 
-add_dependencies(QtAwsDirectoryService QtAwsCore)
-
 target_link_libraries(QtAwsDirectoryService
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

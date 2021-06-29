@@ -15,8 +15,7 @@ add_library(QtAwsMobileAnalytics
   puteventsrequest.cpp
   puteventsresponse.cpp)
 
-add_dependencies(QtAwsMobileAnalytics QtAwsCore)
-
 target_link_libraries(QtAwsMobileAnalytics
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

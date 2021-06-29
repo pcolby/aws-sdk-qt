@@ -177,8 +177,7 @@ add_library(QtAwsKinesis
   updateshardcountrequest.cpp
   updateshardcountresponse.cpp)
 
-add_dependencies(QtAwsKinesis QtAwsCore)
-
 target_link_libraries(QtAwsKinesis
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

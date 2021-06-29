@@ -153,8 +153,7 @@ add_library(QtAwsRam
   updateresourcesharerequest.cpp
   updateresourceshareresponse.cpp)
 
-add_dependencies(QtAwsRam QtAwsCore)
-
 target_link_libraries(QtAwsRam
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

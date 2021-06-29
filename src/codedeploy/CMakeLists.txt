@@ -291,8 +291,7 @@ add_library(QtAwsCodeDeploy
   updatedeploymentgrouprequest.cpp
   updatedeploymentgroupresponse.cpp)
 
-add_dependencies(QtAwsCodeDeploy QtAwsCore)
-
 target_link_libraries(QtAwsCodeDeploy
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

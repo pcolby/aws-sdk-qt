@@ -279,8 +279,7 @@ add_library(QtAwsNimbleStudio
   updatestudiorequest.cpp
   updatestudioresponse.cpp)
 
-add_dependencies(QtAwsNimbleStudio QtAwsCore)
-
 target_link_libraries(QtAwsNimbleStudio
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

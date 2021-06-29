@@ -189,8 +189,7 @@ add_library(QtAwsMediaConnect
   updateflowsourcerequest.cpp
   updateflowsourceresponse.cpp)
 
-add_dependencies(QtAwsMediaConnect QtAwsCore)
-
 target_link_libraries(QtAwsMediaConnect
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

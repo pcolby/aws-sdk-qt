@@ -135,8 +135,7 @@ add_library(QtAwsComprehendMedical
   stoprxnorminferencejobrequest.cpp
   stoprxnorminferencejobresponse.cpp)
 
-add_dependencies(QtAwsComprehendMedical QtAwsCore)
-
 target_link_libraries(QtAwsComprehendMedical
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

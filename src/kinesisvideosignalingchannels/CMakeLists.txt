@@ -21,8 +21,7 @@ add_library(QtAwsKinesisVideoSignalingChannels
   sendalexaoffertomasterrequest.cpp
   sendalexaoffertomasterresponse.cpp)
 
-add_dependencies(QtAwsKinesisVideoSignalingChannels QtAwsCore)
-
 target_link_libraries(QtAwsKinesisVideoSignalingChannels
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

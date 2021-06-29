@@ -87,8 +87,7 @@ add_library(QtAwsSynthetics
   updatecanaryrequest.cpp
   updatecanaryresponse.cpp)
 
-add_dependencies(QtAwsSynthetics QtAwsCore)
-
 target_link_libraries(QtAwsSynthetics
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

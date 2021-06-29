@@ -243,8 +243,7 @@ add_library(QtAwskendra
   updatethesaurusrequest.cpp
   updatethesaurusresponse.cpp)
 
-add_dependencies(QtAwskendra QtAwsCore)
-
 target_link_libraries(QtAwskendra
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

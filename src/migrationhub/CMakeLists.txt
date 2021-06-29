@@ -111,8 +111,7 @@ add_library(QtAwsMigrationHub
   putresourceattributesrequest.cpp
   putresourceattributesresponse.cpp)
 
-add_dependencies(QtAwsMigrationHub QtAwsCore)
-
 target_link_libraries(QtAwsMigrationHub
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -87,8 +87,7 @@ add_library(QtAwsComputeOptimizer
   updateenrollmentstatusrequest.cpp
   updateenrollmentstatusresponse.cpp)
 
-add_dependencies(QtAwsComputeOptimizer QtAwsCore)
-
 target_link_libraries(QtAwsComputeOptimizer
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

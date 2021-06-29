@@ -207,8 +207,7 @@ add_library(QtAwsWorkLink
   worklinkrequest.cpp
   worklinkresponse.cpp)
 
-add_dependencies(QtAwsWorkLink QtAwsCore)
-
 target_link_libraries(QtAwsWorkLink
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

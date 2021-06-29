@@ -243,8 +243,7 @@ add_library(QtAwsMTurk
   updatequalificationtyperequest.cpp
   updatequalificationtyperesponse.cpp)
 
-add_dependencies(QtAwsMTurk QtAwsCore)
-
 target_link_libraries(QtAwsMTurk
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -129,8 +129,7 @@ add_library(QtAwsCloudHSM
   removetagsfromresourcerequest.cpp
   removetagsfromresourceresponse.cpp)
 
-add_dependencies(QtAwsCloudHSM QtAwsCore)
-
 target_link_libraries(QtAwsCloudHSM
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

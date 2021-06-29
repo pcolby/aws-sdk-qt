@@ -345,8 +345,7 @@ add_library(QtAwsLexModelsV2
   updateslottyperequest.cpp
   updateslottyperesponse.cpp)
 
-add_dependencies(QtAwsLexModelsV2 QtAwsCore)
-
 target_link_libraries(QtAwsLexModelsV2
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

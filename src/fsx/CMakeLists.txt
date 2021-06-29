@@ -117,8 +117,7 @@ add_library(QtAwsFSx
   updatefilesystemrequest.cpp
   updatefilesystemresponse.cpp)
 
-add_dependencies(QtAwsFSx QtAwsCore)
-
 target_link_libraries(QtAwsFSx
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

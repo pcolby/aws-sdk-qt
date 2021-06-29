@@ -87,8 +87,7 @@ add_library(QtAwsIoT1ClickDevicesService
   updatedevicestaterequest.cpp
   updatedevicestateresponse.cpp)
 
-add_dependencies(QtAwsIoT1ClickDevicesService QtAwsCore)
-
 target_link_libraries(QtAwsIoT1ClickDevicesService
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

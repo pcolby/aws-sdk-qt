@@ -123,8 +123,7 @@ add_library(QtAwsDataPipeline
   validatepipelinedefinitionrequest.cpp
   validatepipelinedefinitionresponse.cpp)
 
-add_dependencies(QtAwsDataPipeline QtAwsCore)
-
 target_link_libraries(QtAwsDataPipeline
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

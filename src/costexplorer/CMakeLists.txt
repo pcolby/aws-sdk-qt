@@ -189,8 +189,7 @@ add_library(QtAwsCostExplorer
   updatecostcategorydefinitionrequest.cpp
   updatecostcategorydefinitionresponse.cpp)
 
-add_dependencies(QtAwsCostExplorer QtAwsCore)
-
 target_link_libraries(QtAwsCostExplorer
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

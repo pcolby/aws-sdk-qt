@@ -1419,8 +1419,7 @@ add_library(QtAwsSageMaker
   updateworkteamrequest.cpp
   updateworkteamresponse.cpp)
 
-add_dependencies(QtAwsSageMaker QtAwsCore)
-
 target_link_libraries(QtAwsSageMaker
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -147,8 +147,7 @@ add_library(QtAwsAcmpca
   updatecertificateauthorityrequest.cpp
   updatecertificateauthorityresponse.cpp)
 
-add_dependencies(QtAwsAcmpca QtAwsCore)
-
 target_link_libraries(QtAwsAcmpca
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

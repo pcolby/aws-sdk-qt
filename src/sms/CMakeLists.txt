@@ -219,8 +219,7 @@ add_library(QtAwsSms
   updatereplicationjobrequest.cpp
   updatereplicationjobresponse.cpp)
 
-add_dependencies(QtAwsSms QtAwsCore)
-
 target_link_libraries(QtAwsSms
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

@@ -27,8 +27,7 @@ add_library(QtAwsSsooidc
   startdeviceauthorizationrequest.cpp
   startdeviceauthorizationresponse.cpp)
 
-add_dependencies(QtAwsSsooidc QtAwsCore)
-
 target_link_libraries(QtAwsSsooidc
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

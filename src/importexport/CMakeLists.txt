@@ -45,8 +45,7 @@ add_library(QtAwsImportExport
   updatejobrequest.cpp
   updatejobresponse.cpp)
 
-add_dependencies(QtAwsImportExport QtAwsCore)
-
 target_link_libraries(QtAwsImportExport
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

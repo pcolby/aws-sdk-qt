@@ -183,8 +183,7 @@ add_library(QtAwsSSMIncidents
   updatetimelineeventrequest.cpp
   updatetimelineeventresponse.cpp)
 
-add_dependencies(QtAwsSSMIncidents QtAwsCore)
-
 target_link_libraries(QtAwsSSMIncidents
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

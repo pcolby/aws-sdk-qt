@@ -27,8 +27,7 @@ add_library(QtAwsApiGatewayManagementApi
   posttoconnectionrequest.cpp
   posttoconnectionresponse.cpp)
 
-add_dependencies(QtAwsApiGatewayManagementApi QtAwsCore)
-
 target_link_libraries(QtAwsApiGatewayManagementApi
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

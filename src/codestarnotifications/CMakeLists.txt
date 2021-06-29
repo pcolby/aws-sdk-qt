@@ -87,8 +87,7 @@ add_library(QtAwsCodeStarNotifications
   updatenotificationrulerequest.cpp
   updatenotificationruleresponse.cpp)
 
-add_dependencies(QtAwsCodeStarNotifications QtAwsCore)
-
 target_link_libraries(QtAwsCodeStarNotifications
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

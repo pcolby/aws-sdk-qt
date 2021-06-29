@@ -369,8 +369,7 @@ add_library(QtAwsRoute53Resolver
   updateresolverrulerequest.cpp
   updateresolverruleresponse.cpp)
 
-add_dependencies(QtAwsRoute53Resolver QtAwsCore)
-
 target_link_libraries(QtAwsRoute53Resolver
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

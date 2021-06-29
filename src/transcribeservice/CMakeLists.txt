@@ -171,8 +171,7 @@ add_library(QtAwsTranscribeService
   updatevocabularyrequest.cpp
   updatevocabularyresponse.cpp)
 
-add_dependencies(QtAwsTranscribeService QtAwsCore)
-
 target_link_libraries(QtAwsTranscribeService
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

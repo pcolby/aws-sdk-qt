@@ -345,8 +345,7 @@ add_library(QtAwsMediaLive
   updatereservationrequest.cpp
   updatereservationresponse.cpp)
 
-add_dependencies(QtAwsMediaLive QtAwsCore)
-
 target_link_libraries(QtAwsMediaLive
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)

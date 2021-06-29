@@ -27,8 +27,7 @@ add_library(QtAwsCloudSearchDomain
   uploaddocumentsrequest.cpp
   uploaddocumentsresponse.cpp)
 
-add_dependencies(QtAwsCloudSearchDomain QtAwsCore)
-
 target_link_libraries(QtAwsCloudSearchDomain
+  PRIVATE QtAwsCore
   PRIVATE Qt${QT_VERSION_MAJOR}::Core
   PRIVATE Qt${QT_VERSION_MAJOR}::Network)
