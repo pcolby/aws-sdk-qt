@@ -306,7 +306,34 @@ QString Route53DomainsRequestPrivate::toString(const Route53DomainsRequest::Acti
     #define ActionToString(action) \
         case Route53DomainsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AcceptDomainTransferFromAnotherAwsAccount);
+        ActionToString(CancelDomainTransferToAnotherAwsAccount);
+        ActionToString(CheckDomainAvailability);
+        ActionToString(CheckDomainTransferability);
+        ActionToString(DeleteTagsForDomain);
+        ActionToString(DisableDomainAutoRenew);
+        ActionToString(DisableDomainTransferLock);
+        ActionToString(EnableDomainAutoRenew);
+        ActionToString(EnableDomainTransferLock);
+        ActionToString(GetContactReachabilityStatus);
+        ActionToString(GetDomainDetail);
+        ActionToString(GetDomainSuggestions);
+        ActionToString(GetOperationDetail);
+        ActionToString(ListDomains);
+        ActionToString(ListOperations);
+        ActionToString(ListTagsForDomain);
+        ActionToString(RegisterDomain);
+        ActionToString(RejectDomainTransferFromAnotherAwsAccount);
+        ActionToString(RenewDomain);
+        ActionToString(ResendContactReachabilityEmail);
+        ActionToString(RetrieveDomainAuthCode);
+        ActionToString(TransferDomain);
+        ActionToString(TransferDomainToAnotherAwsAccount);
+        ActionToString(UpdateDomainContact);
+        ActionToString(UpdateDomainContactPrivacy);
+        ActionToString(UpdateDomainNameservers);
+        ActionToString(UpdateTagsForDomain);
+        ActionToString(ViewBilling);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

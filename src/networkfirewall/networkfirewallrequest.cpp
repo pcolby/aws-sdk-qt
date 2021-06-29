@@ -307,7 +307,35 @@ QString NetworkFirewallRequestPrivate::toString(const NetworkFirewallRequest::Ac
     #define ActionToString(action) \
         case NetworkFirewallRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateFirewallPolicy);
+        ActionToString(AssociateSubnets);
+        ActionToString(CreateFirewall);
+        ActionToString(CreateFirewallPolicy);
+        ActionToString(CreateRuleGroup);
+        ActionToString(DeleteFirewall);
+        ActionToString(DeleteFirewallPolicy);
+        ActionToString(DeleteResourcePolicy);
+        ActionToString(DeleteRuleGroup);
+        ActionToString(DescribeFirewall);
+        ActionToString(DescribeFirewallPolicy);
+        ActionToString(DescribeLoggingConfiguration);
+        ActionToString(DescribeResourcePolicy);
+        ActionToString(DescribeRuleGroup);
+        ActionToString(DisassociateSubnets);
+        ActionToString(ListFirewallPolicies);
+        ActionToString(ListFirewalls);
+        ActionToString(ListRuleGroups);
+        ActionToString(ListTagsForResource);
+        ActionToString(PutResourcePolicy);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateFirewallDeleteProtection);
+        ActionToString(UpdateFirewallDescription);
+        ActionToString(UpdateFirewallPolicy);
+        ActionToString(UpdateFirewallPolicyChangeProtection);
+        ActionToString(UpdateLoggingConfiguration);
+        ActionToString(UpdateRuleGroup);
+        ActionToString(UpdateSubnetChangeProtection);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

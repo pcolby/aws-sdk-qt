@@ -279,7 +279,7 @@ QString MobileAnalyticsRequestPrivate::toString(const MobileAnalyticsRequest::Ac
     #define ActionToString(action) \
         case MobileAnalyticsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(PutEvents);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -327,7 +327,55 @@ QString imagebuilderRequestPrivate::toString(const imagebuilderRequest::Action &
     #define ActionToString(action) \
         case imagebuilderRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CancelImageCreation);
+        ActionToString(CreateComponent);
+        ActionToString(CreateContainerRecipe);
+        ActionToString(CreateDistributionConfiguration);
+        ActionToString(CreateImage);
+        ActionToString(CreateImagePipeline);
+        ActionToString(CreateImageRecipe);
+        ActionToString(CreateInfrastructureConfiguration);
+        ActionToString(DeleteComponent);
+        ActionToString(DeleteContainerRecipe);
+        ActionToString(DeleteDistributionConfiguration);
+        ActionToString(DeleteImage);
+        ActionToString(DeleteImagePipeline);
+        ActionToString(DeleteImageRecipe);
+        ActionToString(DeleteInfrastructureConfiguration);
+        ActionToString(GetComponent);
+        ActionToString(GetComponentPolicy);
+        ActionToString(GetContainerRecipe);
+        ActionToString(GetContainerRecipePolicy);
+        ActionToString(GetDistributionConfiguration);
+        ActionToString(GetImage);
+        ActionToString(GetImagePipeline);
+        ActionToString(GetImagePolicy);
+        ActionToString(GetImageRecipe);
+        ActionToString(GetImageRecipePolicy);
+        ActionToString(GetInfrastructureConfiguration);
+        ActionToString(ImportComponent);
+        ActionToString(ListComponentBuildVersions);
+        ActionToString(ListComponents);
+        ActionToString(ListContainerRecipes);
+        ActionToString(ListDistributionConfigurations);
+        ActionToString(ListImageBuildVersions);
+        ActionToString(ListImagePackages);
+        ActionToString(ListImagePipelineImages);
+        ActionToString(ListImagePipelines);
+        ActionToString(ListImageRecipes);
+        ActionToString(ListImages);
+        ActionToString(ListInfrastructureConfigurations);
+        ActionToString(ListTagsForResource);
+        ActionToString(PutComponentPolicy);
+        ActionToString(PutContainerRecipePolicy);
+        ActionToString(PutImagePolicy);
+        ActionToString(PutImageRecipePolicy);
+        ActionToString(StartImagePipelineExecution);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateDistributionConfiguration);
+        ActionToString(UpdateImagePipeline);
+        ActionToString(UpdateInfrastructureConfiguration);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

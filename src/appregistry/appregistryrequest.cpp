@@ -298,7 +298,26 @@ QString AppRegistryRequestPrivate::toString(const AppRegistryRequest::Action &ac
     #define ActionToString(action) \
         case AppRegistryRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateAttributeGroup);
+        ActionToString(AssociateResource);
+        ActionToString(CreateApplication);
+        ActionToString(CreateAttributeGroup);
+        ActionToString(DeleteApplication);
+        ActionToString(DeleteAttributeGroup);
+        ActionToString(DisassociateAttributeGroup);
+        ActionToString(DisassociateResource);
+        ActionToString(GetApplication);
+        ActionToString(GetAttributeGroup);
+        ActionToString(ListApplications);
+        ActionToString(ListAssociatedAttributeGroups);
+        ActionToString(ListAssociatedResources);
+        ActionToString(ListAttributeGroups);
+        ActionToString(ListTagsForResource);
+        ActionToString(SyncResource);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateApplication);
+        ActionToString(UpdateAttributeGroup);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

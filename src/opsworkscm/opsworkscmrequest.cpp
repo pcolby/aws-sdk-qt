@@ -297,7 +297,25 @@ QString OpsWorksCMRequestPrivate::toString(const OpsWorksCMRequest::Action &acti
     #define ActionToString(action) \
         case OpsWorksCMRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateNode);
+        ActionToString(CreateBackup);
+        ActionToString(CreateServer);
+        ActionToString(DeleteBackup);
+        ActionToString(DeleteServer);
+        ActionToString(DescribeAccountAttributes);
+        ActionToString(DescribeBackups);
+        ActionToString(DescribeEvents);
+        ActionToString(DescribeNodeAssociationStatus);
+        ActionToString(DescribeServers);
+        ActionToString(DisassociateNode);
+        ActionToString(ExportServerEngineAttribute);
+        ActionToString(ListTagsForResource);
+        ActionToString(RestoreServer);
+        ActionToString(StartMaintenance);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateServer);
+        ActionToString(UpdateServerEngineAttributes);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

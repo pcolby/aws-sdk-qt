@@ -292,7 +292,20 @@ QString CodeGuruReviewerRequestPrivate::toString(const CodeGuruReviewerRequest::
     #define ActionToString(action) \
         case CodeGuruReviewerRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateRepository);
+        ActionToString(CreateCodeReview);
+        ActionToString(DescribeCodeReview);
+        ActionToString(DescribeRecommendationFeedback);
+        ActionToString(DescribeRepositoryAssociation);
+        ActionToString(DisassociateRepository);
+        ActionToString(ListCodeReviews);
+        ActionToString(ListRecommendationFeedback);
+        ActionToString(ListRecommendations);
+        ActionToString(ListRepositoryAssociations);
+        ActionToString(ListTagsForResource);
+        ActionToString(PutRecommendationFeedback);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -295,7 +295,23 @@ QString ElasticTranscoderRequestPrivate::toString(const ElasticTranscoderRequest
     #define ActionToString(action) \
         case ElasticTranscoderRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CancelJob);
+        ActionToString(CreateJob);
+        ActionToString(CreatePipeline);
+        ActionToString(CreatePreset);
+        ActionToString(DeletePipeline);
+        ActionToString(DeletePreset);
+        ActionToString(ListJobsByPipeline);
+        ActionToString(ListJobsByStatus);
+        ActionToString(ListPipelines);
+        ActionToString(ListPresets);
+        ActionToString(ReadJob);
+        ActionToString(ReadPipeline);
+        ActionToString(ReadPreset);
+        ActionToString(TestRole);
+        ActionToString(UpdatePipeline);
+        ActionToString(UpdatePipelineNotifications);
+        ActionToString(UpdatePipelineStatus);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

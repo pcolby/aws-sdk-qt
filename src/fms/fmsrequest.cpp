@@ -304,7 +304,32 @@ QString FmsRequestPrivate::toString(const FmsRequest::Action &action)
     #define ActionToString(action) \
         case FmsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateAdminAccount);
+        ActionToString(DeleteAppsList);
+        ActionToString(DeleteNotificationChannel);
+        ActionToString(DeletePolicy);
+        ActionToString(DeleteProtocolsList);
+        ActionToString(DisassociateAdminAccount);
+        ActionToString(GetAdminAccount);
+        ActionToString(GetAppsList);
+        ActionToString(GetComplianceDetail);
+        ActionToString(GetNotificationChannel);
+        ActionToString(GetPolicy);
+        ActionToString(GetProtectionStatus);
+        ActionToString(GetProtocolsList);
+        ActionToString(GetViolationDetails);
+        ActionToString(ListAppsLists);
+        ActionToString(ListComplianceStatus);
+        ActionToString(ListMemberAccounts);
+        ActionToString(ListPolicies);
+        ActionToString(ListProtocolsLists);
+        ActionToString(ListTagsForResource);
+        ActionToString(PutAppsList);
+        ActionToString(PutNotificationChannel);
+        ActionToString(PutPolicy);
+        ActionToString(PutProtocolsList);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

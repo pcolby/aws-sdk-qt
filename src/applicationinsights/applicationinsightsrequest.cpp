@@ -305,7 +305,33 @@ QString ApplicationInsightsRequestPrivate::toString(const ApplicationInsightsReq
     #define ActionToString(action) \
         case ApplicationInsightsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateApplication);
+        ActionToString(CreateComponent);
+        ActionToString(CreateLogPattern);
+        ActionToString(DeleteApplication);
+        ActionToString(DeleteComponent);
+        ActionToString(DeleteLogPattern);
+        ActionToString(DescribeApplication);
+        ActionToString(DescribeComponent);
+        ActionToString(DescribeComponentConfiguration);
+        ActionToString(DescribeComponentConfigurationRecommendation);
+        ActionToString(DescribeLogPattern);
+        ActionToString(DescribeObservation);
+        ActionToString(DescribeProblem);
+        ActionToString(DescribeProblemObservations);
+        ActionToString(ListApplications);
+        ActionToString(ListComponents);
+        ActionToString(ListConfigurationHistory);
+        ActionToString(ListLogPatternSets);
+        ActionToString(ListLogPatterns);
+        ActionToString(ListProblems);
+        ActionToString(ListTagsForResource);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateApplication);
+        ActionToString(UpdateComponent);
+        ActionToString(UpdateComponentConfiguration);
+        ActionToString(UpdateLogPattern);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

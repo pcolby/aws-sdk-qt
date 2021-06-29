@@ -330,7 +330,58 @@ QString EcsRequestPrivate::toString(const EcsRequest::Action &action)
     #define ActionToString(action) \
         case EcsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateCapacityProvider);
+        ActionToString(CreateCluster);
+        ActionToString(CreateService);
+        ActionToString(CreateTaskSet);
+        ActionToString(DeleteAccountSetting);
+        ActionToString(DeleteAttributes);
+        ActionToString(DeleteCapacityProvider);
+        ActionToString(DeleteCluster);
+        ActionToString(DeleteService);
+        ActionToString(DeleteTaskSet);
+        ActionToString(DeregisterContainerInstance);
+        ActionToString(DeregisterTaskDefinition);
+        ActionToString(DescribeCapacityProviders);
+        ActionToString(DescribeClusters);
+        ActionToString(DescribeContainerInstances);
+        ActionToString(DescribeServices);
+        ActionToString(DescribeTaskDefinition);
+        ActionToString(DescribeTaskSets);
+        ActionToString(DescribeTasks);
+        ActionToString(DiscoverPollEndpoint);
+        ActionToString(ExecuteCommand);
+        ActionToString(ListAccountSettings);
+        ActionToString(ListAttributes);
+        ActionToString(ListClusters);
+        ActionToString(ListContainerInstances);
+        ActionToString(ListServices);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListTaskDefinitionFamilies);
+        ActionToString(ListTaskDefinitions);
+        ActionToString(ListTasks);
+        ActionToString(PutAccountSetting);
+        ActionToString(PutAccountSettingDefault);
+        ActionToString(PutAttributes);
+        ActionToString(PutClusterCapacityProviders);
+        ActionToString(RegisterContainerInstance);
+        ActionToString(RegisterTaskDefinition);
+        ActionToString(RunTask);
+        ActionToString(StartTask);
+        ActionToString(StopTask);
+        ActionToString(SubmitAttachmentStateChanges);
+        ActionToString(SubmitContainerStateChange);
+        ActionToString(SubmitTaskStateChange);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateCapacityProvider);
+        ActionToString(UpdateCluster);
+        ActionToString(UpdateClusterSettings);
+        ActionToString(UpdateContainerAgent);
+        ActionToString(UpdateContainerInstancesState);
+        ActionToString(UpdateService);
+        ActionToString(UpdateServicePrimaryTaskSet);
+        ActionToString(UpdateTaskSet);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

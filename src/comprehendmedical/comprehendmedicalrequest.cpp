@@ -299,7 +299,27 @@ QString ComprehendMedicalRequestPrivate::toString(const ComprehendMedicalRequest
     #define ActionToString(action) \
         case ComprehendMedicalRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(DescribeEntitiesDetectionV2Job);
+        ActionToString(DescribeICD10CMInferenceJob);
+        ActionToString(DescribePHIDetectionJob);
+        ActionToString(DescribeRxNormInferenceJob);
+        ActionToString(DetectEntities);
+        ActionToString(DetectEntitiesV2);
+        ActionToString(DetectPHI);
+        ActionToString(InferICD10CM);
+        ActionToString(InferRxNorm);
+        ActionToString(ListEntitiesDetectionV2Jobs);
+        ActionToString(ListICD10CMInferenceJobs);
+        ActionToString(ListPHIDetectionJobs);
+        ActionToString(ListRxNormInferenceJobs);
+        ActionToString(StartEntitiesDetectionV2Job);
+        ActionToString(StartICD10CMInferenceJob);
+        ActionToString(StartPHIDetectionJob);
+        ActionToString(StartRxNormInferenceJob);
+        ActionToString(StopEntitiesDetectionV2Job);
+        ActionToString(StopICD10CMInferenceJob);
+        ActionToString(StopPHIDetectionJob);
+        ActionToString(StopRxNormInferenceJob);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

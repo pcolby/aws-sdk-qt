@@ -279,7 +279,7 @@ QString SageMakerRuntimeRequestPrivate::toString(const SageMakerRuntimeRequest::
     #define ActionToString(action) \
         case SageMakerRuntimeRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(InvokeEndpoint);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

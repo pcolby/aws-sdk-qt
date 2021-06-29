@@ -339,7 +339,67 @@ QString AutoScalingRequestPrivate::toString(const AutoScalingRequest::Action &ac
     #define ActionToString(action) \
         case AutoScalingRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AttachInstances);
+        ActionToString(AttachLoadBalancerTargetGroups);
+        ActionToString(AttachLoadBalancers);
+        ActionToString(BatchDeleteScheduledAction);
+        ActionToString(BatchPutScheduledUpdateGroupAction);
+        ActionToString(CancelInstanceRefresh);
+        ActionToString(CompleteLifecycleAction);
+        ActionToString(CreateAutoScalingGroup);
+        ActionToString(CreateLaunchConfiguration);
+        ActionToString(CreateOrUpdateTags);
+        ActionToString(DeleteAutoScalingGroup);
+        ActionToString(DeleteLaunchConfiguration);
+        ActionToString(DeleteLifecycleHook);
+        ActionToString(DeleteNotificationConfiguration);
+        ActionToString(DeletePolicy);
+        ActionToString(DeleteScheduledAction);
+        ActionToString(DeleteTags);
+        ActionToString(DeleteWarmPool);
+        ActionToString(DescribeAccountLimits);
+        ActionToString(DescribeAdjustmentTypes);
+        ActionToString(DescribeAutoScalingGroups);
+        ActionToString(DescribeAutoScalingInstances);
+        ActionToString(DescribeAutoScalingNotificationTypes);
+        ActionToString(DescribeInstanceRefreshes);
+        ActionToString(DescribeLaunchConfigurations);
+        ActionToString(DescribeLifecycleHookTypes);
+        ActionToString(DescribeLifecycleHooks);
+        ActionToString(DescribeLoadBalancerTargetGroups);
+        ActionToString(DescribeLoadBalancers);
+        ActionToString(DescribeMetricCollectionTypes);
+        ActionToString(DescribeNotificationConfigurations);
+        ActionToString(DescribePolicies);
+        ActionToString(DescribeScalingActivities);
+        ActionToString(DescribeScalingProcessTypes);
+        ActionToString(DescribeScheduledActions);
+        ActionToString(DescribeTags);
+        ActionToString(DescribeTerminationPolicyTypes);
+        ActionToString(DescribeWarmPool);
+        ActionToString(DetachInstances);
+        ActionToString(DetachLoadBalancerTargetGroups);
+        ActionToString(DetachLoadBalancers);
+        ActionToString(DisableMetricsCollection);
+        ActionToString(EnableMetricsCollection);
+        ActionToString(EnterStandby);
+        ActionToString(ExecutePolicy);
+        ActionToString(ExitStandby);
+        ActionToString(GetPredictiveScalingForecast);
+        ActionToString(PutLifecycleHook);
+        ActionToString(PutNotificationConfiguration);
+        ActionToString(PutScalingPolicy);
+        ActionToString(PutScheduledUpdateGroupAction);
+        ActionToString(PutWarmPool);
+        ActionToString(RecordLifecycleActionHeartbeat);
+        ActionToString(ResumeProcesses);
+        ActionToString(SetDesiredCapacity);
+        ActionToString(SetInstanceHealth);
+        ActionToString(SetInstanceProtection);
+        ActionToString(StartInstanceRefresh);
+        ActionToString(SuspendProcesses);
+        ActionToString(TerminateInstanceInAutoScalingGroup);
+        ActionToString(UpdateAutoScalingGroup);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

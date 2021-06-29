@@ -305,7 +305,33 @@ QString SSMContactsRequestPrivate::toString(const SSMContactsRequest::Action &ac
     #define ActionToString(action) \
         case SSMContactsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AcceptPage);
+        ActionToString(ActivateContactChannel);
+        ActionToString(CreateContact);
+        ActionToString(CreateContactChannel);
+        ActionToString(DeactivateContactChannel);
+        ActionToString(DeleteContact);
+        ActionToString(DeleteContactChannel);
+        ActionToString(DescribeEngagement);
+        ActionToString(DescribePage);
+        ActionToString(GetContact);
+        ActionToString(GetContactChannel);
+        ActionToString(GetContactPolicy);
+        ActionToString(ListContactChannels);
+        ActionToString(ListContacts);
+        ActionToString(ListEngagements);
+        ActionToString(ListPageReceipts);
+        ActionToString(ListPagesByContact);
+        ActionToString(ListPagesByEngagement);
+        ActionToString(ListTagsForResource);
+        ActionToString(PutContactPolicy);
+        ActionToString(SendActivationCode);
+        ActionToString(StartEngagement);
+        ActionToString(StopEngagement);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateContact);
+        ActionToString(UpdateContactChannel);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

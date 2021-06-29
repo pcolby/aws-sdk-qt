@@ -306,7 +306,34 @@ QString MachineLearningRequestPrivate::toString(const MachineLearningRequest::Ac
     #define ActionToString(action) \
         case MachineLearningRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AddTags);
+        ActionToString(CreateBatchPrediction);
+        ActionToString(CreateDataSourceFromRDS);
+        ActionToString(CreateDataSourceFromRedshift);
+        ActionToString(CreateDataSourceFromS3);
+        ActionToString(CreateEvaluation);
+        ActionToString(CreateMLModel);
+        ActionToString(CreateRealtimeEndpoint);
+        ActionToString(DeleteBatchPrediction);
+        ActionToString(DeleteDataSource);
+        ActionToString(DeleteEvaluation);
+        ActionToString(DeleteMLModel);
+        ActionToString(DeleteRealtimeEndpoint);
+        ActionToString(DeleteTags);
+        ActionToString(DescribeBatchPredictions);
+        ActionToString(DescribeDataSources);
+        ActionToString(DescribeEvaluations);
+        ActionToString(DescribeMLModels);
+        ActionToString(DescribeTags);
+        ActionToString(GetBatchPrediction);
+        ActionToString(GetDataSource);
+        ActionToString(GetEvaluation);
+        ActionToString(GetMLModel);
+        ActionToString(Predict);
+        ActionToString(UpdateBatchPrediction);
+        ActionToString(UpdateDataSource);
+        ActionToString(UpdateEvaluation);
+        ActionToString(UpdateMLModel);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

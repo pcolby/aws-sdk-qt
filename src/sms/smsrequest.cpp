@@ -313,7 +313,41 @@ QString SmsRequestPrivate::toString(const SmsRequest::Action &action)
     #define ActionToString(action) \
         case SmsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateApp);
+        ActionToString(CreateReplicationJob);
+        ActionToString(DeleteApp);
+        ActionToString(DeleteAppLaunchConfiguration);
+        ActionToString(DeleteAppReplicationConfiguration);
+        ActionToString(DeleteAppValidationConfiguration);
+        ActionToString(DeleteReplicationJob);
+        ActionToString(DeleteServerCatalog);
+        ActionToString(DisassociateConnector);
+        ActionToString(GenerateChangeSet);
+        ActionToString(GenerateTemplate);
+        ActionToString(GetApp);
+        ActionToString(GetAppLaunchConfiguration);
+        ActionToString(GetAppReplicationConfiguration);
+        ActionToString(GetAppValidationConfiguration);
+        ActionToString(GetAppValidationOutput);
+        ActionToString(GetConnectors);
+        ActionToString(GetReplicationJobs);
+        ActionToString(GetReplicationRuns);
+        ActionToString(GetServers);
+        ActionToString(ImportAppCatalog);
+        ActionToString(ImportServerCatalog);
+        ActionToString(LaunchApp);
+        ActionToString(ListApps);
+        ActionToString(NotifyAppValidationOutput);
+        ActionToString(PutAppLaunchConfiguration);
+        ActionToString(PutAppReplicationConfiguration);
+        ActionToString(PutAppValidationConfiguration);
+        ActionToString(StartAppReplication);
+        ActionToString(StartOnDemandAppReplication);
+        ActionToString(StartOnDemandReplicationRun);
+        ActionToString(StopAppReplication);
+        ActionToString(TerminateApp);
+        ActionToString(UpdateApp);
+        ActionToString(UpdateReplicationJob);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

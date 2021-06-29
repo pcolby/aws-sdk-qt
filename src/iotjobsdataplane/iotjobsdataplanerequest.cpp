@@ -282,7 +282,10 @@ QString IoTJobsDataPlaneRequestPrivate::toString(const IoTJobsDataPlaneRequest::
     #define ActionToString(action) \
         case IoTJobsDataPlaneRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(DescribeJobExecution);
+        ActionToString(GetPendingJobExecutions);
+        ActionToString(StartNextPendingJobExecution);
+        ActionToString(UpdateJobExecution);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

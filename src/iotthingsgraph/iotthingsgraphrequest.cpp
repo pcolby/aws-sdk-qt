@@ -313,7 +313,41 @@ QString IoTThingsGraphRequestPrivate::toString(const IoTThingsGraphRequest::Acti
     #define ActionToString(action) \
         case IoTThingsGraphRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateEntityToThing);
+        ActionToString(CreateFlowTemplate);
+        ActionToString(CreateSystemInstance);
+        ActionToString(CreateSystemTemplate);
+        ActionToString(DeleteFlowTemplate);
+        ActionToString(DeleteNamespace);
+        ActionToString(DeleteSystemInstance);
+        ActionToString(DeleteSystemTemplate);
+        ActionToString(DeploySystemInstance);
+        ActionToString(DeprecateFlowTemplate);
+        ActionToString(DeprecateSystemTemplate);
+        ActionToString(DescribeNamespace);
+        ActionToString(DissociateEntityFromThing);
+        ActionToString(GetEntities);
+        ActionToString(GetFlowTemplate);
+        ActionToString(GetFlowTemplateRevisions);
+        ActionToString(GetNamespaceDeletionStatus);
+        ActionToString(GetSystemInstance);
+        ActionToString(GetSystemTemplate);
+        ActionToString(GetSystemTemplateRevisions);
+        ActionToString(GetUploadStatus);
+        ActionToString(ListFlowExecutionMessages);
+        ActionToString(ListTagsForResource);
+        ActionToString(SearchEntities);
+        ActionToString(SearchFlowExecutions);
+        ActionToString(SearchFlowTemplates);
+        ActionToString(SearchSystemInstances);
+        ActionToString(SearchSystemTemplates);
+        ActionToString(SearchThings);
+        ActionToString(TagResource);
+        ActionToString(UndeploySystemInstance);
+        ActionToString(UntagResource);
+        ActionToString(UpdateFlowTemplate);
+        ActionToString(UpdateSystemTemplate);
+        ActionToString(UploadEntityDefinitions);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

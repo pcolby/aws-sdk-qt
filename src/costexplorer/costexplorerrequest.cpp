@@ -308,7 +308,36 @@ QString CostExplorerRequestPrivate::toString(const CostExplorerRequest::Action &
     #define ActionToString(action) \
         case CostExplorerRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateAnomalyMonitor);
+        ActionToString(CreateAnomalySubscription);
+        ActionToString(CreateCostCategoryDefinition);
+        ActionToString(DeleteAnomalyMonitor);
+        ActionToString(DeleteAnomalySubscription);
+        ActionToString(DeleteCostCategoryDefinition);
+        ActionToString(DescribeCostCategoryDefinition);
+        ActionToString(GetAnomalies);
+        ActionToString(GetAnomalyMonitors);
+        ActionToString(GetAnomalySubscriptions);
+        ActionToString(GetCostAndUsage);
+        ActionToString(GetCostAndUsageWithResources);
+        ActionToString(GetCostCategories);
+        ActionToString(GetCostForecast);
+        ActionToString(GetDimensionValues);
+        ActionToString(GetReservationCoverage);
+        ActionToString(GetReservationPurchaseRecommendation);
+        ActionToString(GetReservationUtilization);
+        ActionToString(GetRightsizingRecommendation);
+        ActionToString(GetSavingsPlansCoverage);
+        ActionToString(GetSavingsPlansPurchaseRecommendation);
+        ActionToString(GetSavingsPlansUtilization);
+        ActionToString(GetSavingsPlansUtilizationDetails);
+        ActionToString(GetTags);
+        ActionToString(GetUsageForecast);
+        ActionToString(ListCostCategoryDefinitions);
+        ActionToString(ProvideAnomalyFeedback);
+        ActionToString(UpdateAnomalyMonitor);
+        ActionToString(UpdateAnomalySubscription);
+        ActionToString(UpdateCostCategoryDefinition);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

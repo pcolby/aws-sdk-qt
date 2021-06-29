@@ -297,7 +297,25 @@ QString BatchRequestPrivate::toString(const BatchRequest::Action &action)
     #define ActionToString(action) \
         case BatchRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CancelJob);
+        ActionToString(CreateComputeEnvironment);
+        ActionToString(CreateJobQueue);
+        ActionToString(DeleteComputeEnvironment);
+        ActionToString(DeleteJobQueue);
+        ActionToString(DeregisterJobDefinition);
+        ActionToString(DescribeComputeEnvironments);
+        ActionToString(DescribeJobDefinitions);
+        ActionToString(DescribeJobQueues);
+        ActionToString(DescribeJobs);
+        ActionToString(ListJobs);
+        ActionToString(ListTagsForResource);
+        ActionToString(RegisterJobDefinition);
+        ActionToString(SubmitJob);
+        ActionToString(TagResource);
+        ActionToString(TerminateJob);
+        ActionToString(UntagResource);
+        ActionToString(UpdateComputeEnvironment);
+        ActionToString(UpdateJobQueue);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

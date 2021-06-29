@@ -329,7 +329,57 @@ QString CloudWatchEventsRequestPrivate::toString(const CloudWatchEventsRequest::
     #define ActionToString(action) \
         case CloudWatchEventsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(ActivateEventSource);
+        ActionToString(CancelReplay);
+        ActionToString(CreateApiDestination);
+        ActionToString(CreateArchive);
+        ActionToString(CreateConnection);
+        ActionToString(CreateEventBus);
+        ActionToString(CreatePartnerEventSource);
+        ActionToString(DeactivateEventSource);
+        ActionToString(DeauthorizeConnection);
+        ActionToString(DeleteApiDestination);
+        ActionToString(DeleteArchive);
+        ActionToString(DeleteConnection);
+        ActionToString(DeleteEventBus);
+        ActionToString(DeletePartnerEventSource);
+        ActionToString(DeleteRule);
+        ActionToString(DescribeApiDestination);
+        ActionToString(DescribeArchive);
+        ActionToString(DescribeConnection);
+        ActionToString(DescribeEventBus);
+        ActionToString(DescribeEventSource);
+        ActionToString(DescribePartnerEventSource);
+        ActionToString(DescribeReplay);
+        ActionToString(DescribeRule);
+        ActionToString(DisableRule);
+        ActionToString(EnableRule);
+        ActionToString(ListApiDestinations);
+        ActionToString(ListArchives);
+        ActionToString(ListConnections);
+        ActionToString(ListEventBuses);
+        ActionToString(ListEventSources);
+        ActionToString(ListPartnerEventSourceAccounts);
+        ActionToString(ListPartnerEventSources);
+        ActionToString(ListReplays);
+        ActionToString(ListRuleNamesByTarget);
+        ActionToString(ListRules);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListTargetsByRule);
+        ActionToString(PutEvents);
+        ActionToString(PutPartnerEvents);
+        ActionToString(PutPermission);
+        ActionToString(PutRule);
+        ActionToString(PutTargets);
+        ActionToString(RemovePermission);
+        ActionToString(RemoveTargets);
+        ActionToString(StartReplay);
+        ActionToString(TagResource);
+        ActionToString(TestEventPattern);
+        ActionToString(UntagResource);
+        ActionToString(UpdateApiDestination);
+        ActionToString(UpdateArchive);
+        ActionToString(UpdateConnection);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

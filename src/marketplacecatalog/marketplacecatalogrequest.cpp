@@ -284,7 +284,12 @@ QString MarketplaceCatalogRequestPrivate::toString(const MarketplaceCatalogReque
     #define ActionToString(action) \
         case MarketplaceCatalogRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CancelChangeSet);
+        ActionToString(DescribeChangeSet);
+        ActionToString(DescribeEntity);
+        ActionToString(ListChangeSets);
+        ActionToString(ListEntities);
+        ActionToString(StartChangeSet);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

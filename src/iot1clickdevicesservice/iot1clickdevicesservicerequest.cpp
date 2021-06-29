@@ -291,7 +291,19 @@ QString IoT1ClickDevicesServiceRequestPrivate::toString(const IoT1ClickDevicesSe
     #define ActionToString(action) \
         case IoT1ClickDevicesServiceRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(ClaimDevicesByClaimCode);
+        ActionToString(DescribeDevice);
+        ActionToString(FinalizeDeviceClaim);
+        ActionToString(GetDeviceMethods);
+        ActionToString(InitiateDeviceClaim);
+        ActionToString(InvokeDeviceMethod);
+        ActionToString(ListDeviceEvents);
+        ActionToString(ListDevices);
+        ActionToString(ListTagsForResource);
+        ActionToString(TagResource);
+        ActionToString(UnclaimDevice);
+        ActionToString(UntagResource);
+        ActionToString(UpdateDeviceState);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

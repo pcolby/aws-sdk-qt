@@ -308,7 +308,36 @@ QString MediaConnectRequestPrivate::toString(const MediaConnectRequest::Action &
     #define ActionToString(action) \
         case MediaConnectRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AddFlowMediaStreams);
+        ActionToString(AddFlowOutputs);
+        ActionToString(AddFlowSources);
+        ActionToString(AddFlowVpcInterfaces);
+        ActionToString(CreateFlow);
+        ActionToString(DeleteFlow);
+        ActionToString(DescribeFlow);
+        ActionToString(DescribeOffering);
+        ActionToString(DescribeReservation);
+        ActionToString(GrantFlowEntitlements);
+        ActionToString(ListEntitlements);
+        ActionToString(ListFlows);
+        ActionToString(ListOfferings);
+        ActionToString(ListReservations);
+        ActionToString(ListTagsForResource);
+        ActionToString(PurchaseOffering);
+        ActionToString(RemoveFlowMediaStream);
+        ActionToString(RemoveFlowOutput);
+        ActionToString(RemoveFlowSource);
+        ActionToString(RemoveFlowVpcInterface);
+        ActionToString(RevokeFlowEntitlement);
+        ActionToString(StartFlow);
+        ActionToString(StopFlow);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateFlow);
+        ActionToString(UpdateFlowEntitlement);
+        ActionToString(UpdateFlowMediaStream);
+        ActionToString(UpdateFlowOutput);
+        ActionToString(UpdateFlowSource);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

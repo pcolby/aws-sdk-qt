@@ -296,7 +296,24 @@ QString FSxRequestPrivate::toString(const FSxRequest::Action &action)
     #define ActionToString(action) \
         case FSxRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateFileSystemAliases);
+        ActionToString(CancelDataRepositoryTask);
+        ActionToString(CopyBackup);
+        ActionToString(CreateBackup);
+        ActionToString(CreateDataRepositoryTask);
+        ActionToString(CreateFileSystem);
+        ActionToString(CreateFileSystemFromBackup);
+        ActionToString(DeleteBackup);
+        ActionToString(DeleteFileSystem);
+        ActionToString(DescribeBackups);
+        ActionToString(DescribeDataRepositoryTasks);
+        ActionToString(DescribeFileSystemAliases);
+        ActionToString(DescribeFileSystems);
+        ActionToString(DisassociateFileSystemAliases);
+        ActionToString(ListTagsForResource);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateFileSystem);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

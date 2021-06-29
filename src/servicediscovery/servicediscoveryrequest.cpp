@@ -301,7 +301,29 @@ QString ServiceDiscoveryRequestPrivate::toString(const ServiceDiscoveryRequest::
     #define ActionToString(action) \
         case ServiceDiscoveryRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateHttpNamespace);
+        ActionToString(CreatePrivateDnsNamespace);
+        ActionToString(CreatePublicDnsNamespace);
+        ActionToString(CreateService);
+        ActionToString(DeleteNamespace);
+        ActionToString(DeleteService);
+        ActionToString(DeregisterInstance);
+        ActionToString(DiscoverInstances);
+        ActionToString(GetInstance);
+        ActionToString(GetInstancesHealthStatus);
+        ActionToString(GetNamespace);
+        ActionToString(GetOperation);
+        ActionToString(GetService);
+        ActionToString(ListInstances);
+        ActionToString(ListNamespaces);
+        ActionToString(ListOperations);
+        ActionToString(ListServices);
+        ActionToString(ListTagsForResource);
+        ActionToString(RegisterInstance);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateInstanceCustomHealthStatus);
+        ActionToString(UpdateService);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

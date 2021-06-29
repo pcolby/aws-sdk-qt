@@ -303,7 +303,31 @@ QString mgnRequestPrivate::toString(const mgnRequest::Action &action)
     #define ActionToString(action) \
         case mgnRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(ChangeServerLifeCycleState);
+        ActionToString(CreateReplicationConfigurationTemplate);
+        ActionToString(DeleteJob);
+        ActionToString(DeleteReplicationConfigurationTemplate);
+        ActionToString(DeleteSourceServer);
+        ActionToString(DescribeJobLogItems);
+        ActionToString(DescribeJobs);
+        ActionToString(DescribeReplicationConfigurationTemplates);
+        ActionToString(DescribeSourceServers);
+        ActionToString(DisconnectFromService);
+        ActionToString(FinalizeCutover);
+        ActionToString(GetLaunchConfiguration);
+        ActionToString(GetReplicationConfiguration);
+        ActionToString(InitializeService);
+        ActionToString(ListTagsForResource);
+        ActionToString(MarkAsArchived);
+        ActionToString(RetryDataReplication);
+        ActionToString(StartCutover);
+        ActionToString(StartTest);
+        ActionToString(TagResource);
+        ActionToString(TerminateTargetInstances);
+        ActionToString(UntagResource);
+        ActionToString(UpdateLaunchConfiguration);
+        ActionToString(UpdateReplicationConfiguration);
+        ActionToString(UpdateReplicationConfigurationTemplate);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

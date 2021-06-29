@@ -300,7 +300,28 @@ QString LookoutEquipmentRequestPrivate::toString(const LookoutEquipmentRequest::
     #define ActionToString(action) \
         case LookoutEquipmentRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateDataset);
+        ActionToString(CreateInferenceScheduler);
+        ActionToString(CreateModel);
+        ActionToString(DeleteDataset);
+        ActionToString(DeleteInferenceScheduler);
+        ActionToString(DeleteModel);
+        ActionToString(DescribeDataIngestionJob);
+        ActionToString(DescribeDataset);
+        ActionToString(DescribeInferenceScheduler);
+        ActionToString(DescribeModel);
+        ActionToString(ListDataIngestionJobs);
+        ActionToString(ListDatasets);
+        ActionToString(ListInferenceExecutions);
+        ActionToString(ListInferenceSchedulers);
+        ActionToString(ListModels);
+        ActionToString(ListTagsForResource);
+        ActionToString(StartDataIngestionJob);
+        ActionToString(StartInferenceScheduler);
+        ActionToString(StopInferenceScheduler);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateInferenceScheduler);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

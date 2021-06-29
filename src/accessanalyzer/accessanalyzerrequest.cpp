@@ -306,7 +306,34 @@ QString AccessAnalyzerRequestPrivate::toString(const AccessAnalyzerRequest::Acti
     #define ActionToString(action) \
         case AccessAnalyzerRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(ApplyArchiveRule);
+        ActionToString(CancelPolicyGeneration);
+        ActionToString(CreateAccessPreview);
+        ActionToString(CreateAnalyzer);
+        ActionToString(CreateArchiveRule);
+        ActionToString(DeleteAnalyzer);
+        ActionToString(DeleteArchiveRule);
+        ActionToString(GetAccessPreview);
+        ActionToString(GetAnalyzedResource);
+        ActionToString(GetAnalyzer);
+        ActionToString(GetArchiveRule);
+        ActionToString(GetFinding);
+        ActionToString(GetGeneratedPolicy);
+        ActionToString(ListAccessPreviewFindings);
+        ActionToString(ListAccessPreviews);
+        ActionToString(ListAnalyzedResources);
+        ActionToString(ListAnalyzers);
+        ActionToString(ListArchiveRules);
+        ActionToString(ListFindings);
+        ActionToString(ListPolicyGenerations);
+        ActionToString(ListTagsForResource);
+        ActionToString(StartPolicyGeneration);
+        ActionToString(StartResourceScan);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateArchiveRule);
+        ActionToString(UpdateFindings);
+        ActionToString(ValidatePolicy);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

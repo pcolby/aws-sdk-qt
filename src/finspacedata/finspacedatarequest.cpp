@@ -281,7 +281,9 @@ QString FinSpaceDataRequestPrivate::toString(const FinSpaceDataRequest::Action &
     #define ActionToString(action) \
         case FinSpaceDataRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateChangeset);
+        ActionToString(GetProgrammaticAccessCredentials);
+        ActionToString(GetWorkingLocation);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

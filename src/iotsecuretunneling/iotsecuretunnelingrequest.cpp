@@ -285,7 +285,13 @@ QString IoTSecureTunnelingRequestPrivate::toString(const IoTSecureTunnelingReque
     #define ActionToString(action) \
         case IoTSecureTunnelingRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CloseTunnel);
+        ActionToString(DescribeTunnel);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListTunnels);
+        ActionToString(OpenTunnel);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

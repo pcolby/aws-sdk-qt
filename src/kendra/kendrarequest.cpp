@@ -317,7 +317,45 @@ QString kendraRequestPrivate::toString(const kendraRequest::Action &action)
     #define ActionToString(action) \
         case kendraRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(BatchDeleteDocument);
+        ActionToString(BatchGetDocumentStatus);
+        ActionToString(BatchPutDocument);
+        ActionToString(ClearQuerySuggestions);
+        ActionToString(CreateDataSource);
+        ActionToString(CreateFaq);
+        ActionToString(CreateIndex);
+        ActionToString(CreateQuerySuggestionsBlockList);
+        ActionToString(CreateThesaurus);
+        ActionToString(DeleteDataSource);
+        ActionToString(DeleteFaq);
+        ActionToString(DeleteIndex);
+        ActionToString(DeleteQuerySuggestionsBlockList);
+        ActionToString(DeleteThesaurus);
+        ActionToString(DescribeDataSource);
+        ActionToString(DescribeFaq);
+        ActionToString(DescribeIndex);
+        ActionToString(DescribeQuerySuggestionsBlockList);
+        ActionToString(DescribeQuerySuggestionsConfig);
+        ActionToString(DescribeThesaurus);
+        ActionToString(GetQuerySuggestions);
+        ActionToString(ListDataSourceSyncJobs);
+        ActionToString(ListDataSources);
+        ActionToString(ListFaqs);
+        ActionToString(ListIndices);
+        ActionToString(ListQuerySuggestionsBlockLists);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListThesauri);
+        ActionToString(Query);
+        ActionToString(StartDataSourceSyncJob);
+        ActionToString(StopDataSourceSyncJob);
+        ActionToString(SubmitFeedback);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateDataSource);
+        ActionToString(UpdateIndex);
+        ActionToString(UpdateQuerySuggestionsBlockList);
+        ActionToString(UpdateQuerySuggestionsConfig);
+        ActionToString(UpdateThesaurus);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

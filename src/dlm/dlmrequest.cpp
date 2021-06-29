@@ -286,7 +286,14 @@ QString DlmRequestPrivate::toString(const DlmRequest::Action &action)
     #define ActionToString(action) \
         case DlmRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateLifecyclePolicy);
+        ActionToString(DeleteLifecyclePolicy);
+        ActionToString(GetLifecyclePolicies);
+        ActionToString(GetLifecyclePolicy);
+        ActionToString(ListTagsForResource);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateLifecyclePolicy);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

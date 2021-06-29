@@ -288,7 +288,16 @@ QString SimpleDBRequestPrivate::toString(const SimpleDBRequest::Action &action)
     #define ActionToString(action) \
         case SimpleDBRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(BatchDeleteAttributes);
+        ActionToString(BatchPutAttributes);
+        ActionToString(CreateDomain);
+        ActionToString(DeleteAttributes);
+        ActionToString(DeleteDomain);
+        ActionToString(DomainMetadata);
+        ActionToString(GetAttributes);
+        ActionToString(ListDomains);
+        ActionToString(PutAttributes);
+        ActionToString(Select);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -303,7 +303,31 @@ QString LookoutMetricsRequestPrivate::toString(const LookoutMetricsRequest::Acti
     #define ActionToString(action) \
         case LookoutMetricsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(ActivateAnomalyDetector);
+        ActionToString(BackTestAnomalyDetector);
+        ActionToString(CreateAlert);
+        ActionToString(CreateAnomalyDetector);
+        ActionToString(CreateMetricSet);
+        ActionToString(DeleteAlert);
+        ActionToString(DeleteAnomalyDetector);
+        ActionToString(DescribeAlert);
+        ActionToString(DescribeAnomalyDetectionExecutions);
+        ActionToString(DescribeAnomalyDetector);
+        ActionToString(DescribeMetricSet);
+        ActionToString(GetAnomalyGroup);
+        ActionToString(GetFeedback);
+        ActionToString(GetSampleData);
+        ActionToString(ListAlerts);
+        ActionToString(ListAnomalyDetectors);
+        ActionToString(ListAnomalyGroupSummaries);
+        ActionToString(ListAnomalyGroupTimeSeries);
+        ActionToString(ListMetricSets);
+        ActionToString(ListTagsForResource);
+        ActionToString(PutFeedback);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateAnomalyDetector);
+        ActionToString(UpdateMetricSet);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

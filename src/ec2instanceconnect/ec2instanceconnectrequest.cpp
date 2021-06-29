@@ -280,7 +280,8 @@ QString EC2InstanceConnectRequestPrivate::toString(const EC2InstanceConnectReque
     #define ActionToString(action) \
         case EC2InstanceConnectRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(SendSSHPublicKey);
+        ActionToString(SendSerialConsoleSSHPublicKey);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

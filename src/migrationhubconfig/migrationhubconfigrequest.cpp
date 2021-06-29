@@ -281,7 +281,9 @@ QString MigrationHubConfigRequestPrivate::toString(const MigrationHubConfigReque
     #define ActionToString(action) \
         case MigrationHubConfigRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateHomeRegionControl);
+        ActionToString(DescribeHomeRegionControls);
+        ActionToString(GetHomeRegion);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

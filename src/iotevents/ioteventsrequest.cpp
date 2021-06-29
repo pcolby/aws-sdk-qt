@@ -304,7 +304,32 @@ QString IoTEventsRequestPrivate::toString(const IoTEventsRequest::Action &action
     #define ActionToString(action) \
         case IoTEventsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateAlarmModel);
+        ActionToString(CreateDetectorModel);
+        ActionToString(CreateInput);
+        ActionToString(DeleteAlarmModel);
+        ActionToString(DeleteDetectorModel);
+        ActionToString(DeleteInput);
+        ActionToString(DescribeAlarmModel);
+        ActionToString(DescribeDetectorModel);
+        ActionToString(DescribeDetectorModelAnalysis);
+        ActionToString(DescribeInput);
+        ActionToString(DescribeLoggingOptions);
+        ActionToString(GetDetectorModelAnalysisResults);
+        ActionToString(ListAlarmModelVersions);
+        ActionToString(ListAlarmModels);
+        ActionToString(ListDetectorModelVersions);
+        ActionToString(ListDetectorModels);
+        ActionToString(ListInputRoutings);
+        ActionToString(ListInputs);
+        ActionToString(ListTagsForResource);
+        ActionToString(PutLoggingOptions);
+        ActionToString(StartDetectorModelAnalysis);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateAlarmModel);
+        ActionToString(UpdateDetectorModel);
+        ActionToString(UpdateInput);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

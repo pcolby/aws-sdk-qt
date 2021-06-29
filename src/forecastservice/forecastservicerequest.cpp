@@ -313,7 +313,41 @@ QString ForecastServiceRequestPrivate::toString(const ForecastServiceRequest::Ac
     #define ActionToString(action) \
         case ForecastServiceRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateDataset);
+        ActionToString(CreateDatasetGroup);
+        ActionToString(CreateDatasetImportJob);
+        ActionToString(CreateForecast);
+        ActionToString(CreateForecastExportJob);
+        ActionToString(CreatePredictor);
+        ActionToString(CreatePredictorBacktestExportJob);
+        ActionToString(DeleteDataset);
+        ActionToString(DeleteDatasetGroup);
+        ActionToString(DeleteDatasetImportJob);
+        ActionToString(DeleteForecast);
+        ActionToString(DeleteForecastExportJob);
+        ActionToString(DeletePredictor);
+        ActionToString(DeletePredictorBacktestExportJob);
+        ActionToString(DeleteResourceTree);
+        ActionToString(DescribeDataset);
+        ActionToString(DescribeDatasetGroup);
+        ActionToString(DescribeDatasetImportJob);
+        ActionToString(DescribeForecast);
+        ActionToString(DescribeForecastExportJob);
+        ActionToString(DescribePredictor);
+        ActionToString(DescribePredictorBacktestExportJob);
+        ActionToString(GetAccuracyMetrics);
+        ActionToString(ListDatasetGroups);
+        ActionToString(ListDatasetImportJobs);
+        ActionToString(ListDatasets);
+        ActionToString(ListForecastExportJobs);
+        ActionToString(ListForecasts);
+        ActionToString(ListPredictorBacktestExportJobs);
+        ActionToString(ListPredictors);
+        ActionToString(ListTagsForResource);
+        ActionToString(StopResource);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateDatasetGroup);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

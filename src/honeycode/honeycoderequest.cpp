@@ -290,7 +290,18 @@ QString HoneycodeRequestPrivate::toString(const HoneycodeRequest::Action &action
     #define ActionToString(action) \
         case HoneycodeRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(BatchCreateTableRows);
+        ActionToString(BatchDeleteTableRows);
+        ActionToString(BatchUpdateTableRows);
+        ActionToString(BatchUpsertTableRows);
+        ActionToString(DescribeTableDataImportJob);
+        ActionToString(GetScreenData);
+        ActionToString(InvokeScreenAutomation);
+        ActionToString(ListTableColumns);
+        ActionToString(ListTableRows);
+        ActionToString(ListTables);
+        ActionToString(QueryTableRows);
+        ActionToString(StartTableDataImportJob);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

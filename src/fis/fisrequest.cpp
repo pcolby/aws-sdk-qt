@@ -292,7 +292,20 @@ QString FisRequestPrivate::toString(const FisRequest::Action &action)
     #define ActionToString(action) \
         case FisRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateExperimentTemplate);
+        ActionToString(DeleteExperimentTemplate);
+        ActionToString(GetAction);
+        ActionToString(GetExperiment);
+        ActionToString(GetExperimentTemplate);
+        ActionToString(ListActions);
+        ActionToString(ListExperimentTemplates);
+        ActionToString(ListExperiments);
+        ActionToString(ListTagsForResource);
+        ActionToString(StartExperiment);
+        ActionToString(StopExperiment);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateExperimentTemplate);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

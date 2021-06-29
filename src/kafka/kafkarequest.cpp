@@ -308,7 +308,36 @@ QString KafkaRequestPrivate::toString(const KafkaRequest::Action &action)
     #define ActionToString(action) \
         case KafkaRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(BatchAssociateScramSecret);
+        ActionToString(BatchDisassociateScramSecret);
+        ActionToString(CreateCluster);
+        ActionToString(CreateConfiguration);
+        ActionToString(DeleteCluster);
+        ActionToString(DeleteConfiguration);
+        ActionToString(DescribeCluster);
+        ActionToString(DescribeClusterOperation);
+        ActionToString(DescribeConfiguration);
+        ActionToString(DescribeConfigurationRevision);
+        ActionToString(GetBootstrapBrokers);
+        ActionToString(GetCompatibleKafkaVersions);
+        ActionToString(ListClusterOperations);
+        ActionToString(ListClusters);
+        ActionToString(ListConfigurationRevisions);
+        ActionToString(ListConfigurations);
+        ActionToString(ListKafkaVersions);
+        ActionToString(ListNodes);
+        ActionToString(ListScramSecrets);
+        ActionToString(ListTagsForResource);
+        ActionToString(RebootBroker);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateBrokerCount);
+        ActionToString(UpdateBrokerStorage);
+        ActionToString(UpdateBrokerType);
+        ActionToString(UpdateClusterConfiguration);
+        ActionToString(UpdateClusterKafkaVersion);
+        ActionToString(UpdateConfiguration);
+        ActionToString(UpdateMonitoring);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

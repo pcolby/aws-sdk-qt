@@ -283,7 +283,11 @@ QString MediaStoreDataRequestPrivate::toString(const MediaStoreDataRequest::Acti
     #define ActionToString(action) \
         case MediaStoreDataRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(DeleteObject);
+        ActionToString(DescribeObject);
+        ActionToString(GetObject);
+        ActionToString(ListItems);
+        ActionToString(PutObject);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

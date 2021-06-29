@@ -329,7 +329,57 @@ QString RekognitionRequestPrivate::toString(const RekognitionRequest::Action &ac
     #define ActionToString(action) \
         case RekognitionRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CompareFaces);
+        ActionToString(CreateCollection);
+        ActionToString(CreateProject);
+        ActionToString(CreateProjectVersion);
+        ActionToString(CreateStreamProcessor);
+        ActionToString(DeleteCollection);
+        ActionToString(DeleteFaces);
+        ActionToString(DeleteProject);
+        ActionToString(DeleteProjectVersion);
+        ActionToString(DeleteStreamProcessor);
+        ActionToString(DescribeCollection);
+        ActionToString(DescribeProjectVersions);
+        ActionToString(DescribeProjects);
+        ActionToString(DescribeStreamProcessor);
+        ActionToString(DetectCustomLabels);
+        ActionToString(DetectFaces);
+        ActionToString(DetectLabels);
+        ActionToString(DetectModerationLabels);
+        ActionToString(DetectProtectiveEquipment);
+        ActionToString(DetectText);
+        ActionToString(GetCelebrityInfo);
+        ActionToString(GetCelebrityRecognition);
+        ActionToString(GetContentModeration);
+        ActionToString(GetFaceDetection);
+        ActionToString(GetFaceSearch);
+        ActionToString(GetLabelDetection);
+        ActionToString(GetPersonTracking);
+        ActionToString(GetSegmentDetection);
+        ActionToString(GetTextDetection);
+        ActionToString(IndexFaces);
+        ActionToString(ListCollections);
+        ActionToString(ListFaces);
+        ActionToString(ListStreamProcessors);
+        ActionToString(ListTagsForResource);
+        ActionToString(RecognizeCelebrities);
+        ActionToString(SearchFaces);
+        ActionToString(SearchFacesByImage);
+        ActionToString(StartCelebrityRecognition);
+        ActionToString(StartContentModeration);
+        ActionToString(StartFaceDetection);
+        ActionToString(StartFaceSearch);
+        ActionToString(StartLabelDetection);
+        ActionToString(StartPersonTracking);
+        ActionToString(StartProjectVersion);
+        ActionToString(StartSegmentDetection);
+        ActionToString(StartStreamProcessor);
+        ActionToString(StartTextDetection);
+        ActionToString(StopProjectVersion);
+        ActionToString(StopStreamProcessor);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

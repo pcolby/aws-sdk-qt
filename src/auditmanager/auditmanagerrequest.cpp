@@ -329,7 +329,57 @@ QString AuditManagerRequestPrivate::toString(const AuditManagerRequest::Action &
     #define ActionToString(action) \
         case AuditManagerRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateAssessmentReportEvidenceFolder);
+        ActionToString(BatchAssociateAssessmentReportEvidence);
+        ActionToString(BatchCreateDelegationByAssessment);
+        ActionToString(BatchDeleteDelegationByAssessment);
+        ActionToString(BatchDisassociateAssessmentReportEvidence);
+        ActionToString(BatchImportEvidenceToAssessmentControl);
+        ActionToString(CreateAssessment);
+        ActionToString(CreateAssessmentFramework);
+        ActionToString(CreateAssessmentReport);
+        ActionToString(CreateControl);
+        ActionToString(DeleteAssessment);
+        ActionToString(DeleteAssessmentFramework);
+        ActionToString(DeleteAssessmentReport);
+        ActionToString(DeleteControl);
+        ActionToString(DeregisterAccount);
+        ActionToString(DeregisterOrganizationAdminAccount);
+        ActionToString(DisassociateAssessmentReportEvidenceFolder);
+        ActionToString(GetAccountStatus);
+        ActionToString(GetAssessment);
+        ActionToString(GetAssessmentFramework);
+        ActionToString(GetAssessmentReportUrl);
+        ActionToString(GetChangeLogs);
+        ActionToString(GetControl);
+        ActionToString(GetDelegations);
+        ActionToString(GetEvidence);
+        ActionToString(GetEvidenceByEvidenceFolder);
+        ActionToString(GetEvidenceFolder);
+        ActionToString(GetEvidenceFoldersByAssessment);
+        ActionToString(GetEvidenceFoldersByAssessmentControl);
+        ActionToString(GetOrganizationAdminAccount);
+        ActionToString(GetServicesInScope);
+        ActionToString(GetSettings);
+        ActionToString(ListAssessmentFrameworks);
+        ActionToString(ListAssessmentReports);
+        ActionToString(ListAssessments);
+        ActionToString(ListControls);
+        ActionToString(ListKeywordsForDataSource);
+        ActionToString(ListNotifications);
+        ActionToString(ListTagsForResource);
+        ActionToString(RegisterAccount);
+        ActionToString(RegisterOrganizationAdminAccount);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateAssessment);
+        ActionToString(UpdateAssessmentControl);
+        ActionToString(UpdateAssessmentControlSetStatus);
+        ActionToString(UpdateAssessmentFramework);
+        ActionToString(UpdateAssessmentStatus);
+        ActionToString(UpdateControl);
+        ActionToString(UpdateSettings);
+        ActionToString(ValidateAssessmentReportIntegrity);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

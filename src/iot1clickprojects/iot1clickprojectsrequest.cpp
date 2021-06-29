@@ -294,7 +294,22 @@ QString IoT1ClickProjectsRequestPrivate::toString(const IoT1ClickProjectsRequest
     #define ActionToString(action) \
         case IoT1ClickProjectsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateDeviceWithPlacement);
+        ActionToString(CreatePlacement);
+        ActionToString(CreateProject);
+        ActionToString(DeletePlacement);
+        ActionToString(DeleteProject);
+        ActionToString(DescribePlacement);
+        ActionToString(DescribeProject);
+        ActionToString(DisassociateDeviceFromPlacement);
+        ActionToString(GetDevicesInPlacement);
+        ActionToString(ListPlacements);
+        ActionToString(ListProjects);
+        ActionToString(ListTagsForResource);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdatePlacement);
+        ActionToString(UpdateProject);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

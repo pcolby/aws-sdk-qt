@@ -293,7 +293,21 @@ QString TimestreamWriteRequestPrivate::toString(const TimestreamWriteRequest::Ac
     #define ActionToString(action) \
         case TimestreamWriteRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateDatabase);
+        ActionToString(CreateTable);
+        ActionToString(DeleteDatabase);
+        ActionToString(DeleteTable);
+        ActionToString(DescribeDatabase);
+        ActionToString(DescribeEndpoints);
+        ActionToString(DescribeTable);
+        ActionToString(ListDatabases);
+        ActionToString(ListTables);
+        ActionToString(ListTagsForResource);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateDatabase);
+        ActionToString(UpdateTable);
+        ActionToString(WriteRecords);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

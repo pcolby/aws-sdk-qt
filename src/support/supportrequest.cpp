@@ -292,7 +292,20 @@ QString SupportRequestPrivate::toString(const SupportRequest::Action &action)
     #define ActionToString(action) \
         case SupportRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AddAttachmentsToSet);
+        ActionToString(AddCommunicationToCase);
+        ActionToString(CreateCase);
+        ActionToString(DescribeAttachment);
+        ActionToString(DescribeCases);
+        ActionToString(DescribeCommunications);
+        ActionToString(DescribeServices);
+        ActionToString(DescribeSeverityLevels);
+        ActionToString(DescribeTrustedAdvisorCheckRefreshStatuses);
+        ActionToString(DescribeTrustedAdvisorCheckResult);
+        ActionToString(DescribeTrustedAdvisorCheckSummaries);
+        ActionToString(DescribeTrustedAdvisorChecks);
+        ActionToString(RefreshTrustedAdvisorCheck);
+        ActionToString(ResolveCase);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

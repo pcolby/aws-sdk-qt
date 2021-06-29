@@ -303,7 +303,31 @@ QString MediaConvertRequestPrivate::toString(const MediaConvertRequest::Action &
     #define ActionToString(action) \
         case MediaConvertRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateCertificate);
+        ActionToString(CancelJob);
+        ActionToString(CreateJob);
+        ActionToString(CreateJobTemplate);
+        ActionToString(CreatePreset);
+        ActionToString(CreateQueue);
+        ActionToString(DeleteJobTemplate);
+        ActionToString(DeletePreset);
+        ActionToString(DeleteQueue);
+        ActionToString(DescribeEndpoints);
+        ActionToString(DisassociateCertificate);
+        ActionToString(GetJob);
+        ActionToString(GetJobTemplate);
+        ActionToString(GetPreset);
+        ActionToString(GetQueue);
+        ActionToString(ListJobTemplates);
+        ActionToString(ListJobs);
+        ActionToString(ListPresets);
+        ActionToString(ListQueues);
+        ActionToString(ListTagsForResource);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateJobTemplate);
+        ActionToString(UpdatePreset);
+        ActionToString(UpdateQueue);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

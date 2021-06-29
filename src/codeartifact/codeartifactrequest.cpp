@@ -312,7 +312,40 @@ QString CodeArtifactRequestPrivate::toString(const CodeArtifactRequest::Action &
     #define ActionToString(action) \
         case CodeArtifactRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateExternalConnection);
+        ActionToString(CopyPackageVersions);
+        ActionToString(CreateDomain);
+        ActionToString(CreateRepository);
+        ActionToString(DeleteDomain);
+        ActionToString(DeleteDomainPermissionsPolicy);
+        ActionToString(DeletePackageVersions);
+        ActionToString(DeleteRepository);
+        ActionToString(DeleteRepositoryPermissionsPolicy);
+        ActionToString(DescribeDomain);
+        ActionToString(DescribePackageVersion);
+        ActionToString(DescribeRepository);
+        ActionToString(DisassociateExternalConnection);
+        ActionToString(DisposePackageVersions);
+        ActionToString(GetAuthorizationToken);
+        ActionToString(GetDomainPermissionsPolicy);
+        ActionToString(GetPackageVersionAsset);
+        ActionToString(GetPackageVersionReadme);
+        ActionToString(GetRepositoryEndpoint);
+        ActionToString(GetRepositoryPermissionsPolicy);
+        ActionToString(ListDomains);
+        ActionToString(ListPackageVersionAssets);
+        ActionToString(ListPackageVersionDependencies);
+        ActionToString(ListPackageVersions);
+        ActionToString(ListPackages);
+        ActionToString(ListRepositories);
+        ActionToString(ListRepositoriesInDomain);
+        ActionToString(ListTagsForResource);
+        ActionToString(PutDomainPermissionsPolicy);
+        ActionToString(PutRepositoryPermissionsPolicy);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdatePackageVersionsStatus);
+        ActionToString(UpdateRepository);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

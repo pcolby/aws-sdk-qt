@@ -334,7 +334,62 @@ QString LexModelsV2RequestPrivate::toString(const LexModelsV2Request::Action &ac
     #define ActionToString(action) \
         case LexModelsV2Request::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(BuildBotLocale);
+        ActionToString(CreateBot);
+        ActionToString(CreateBotAlias);
+        ActionToString(CreateBotLocale);
+        ActionToString(CreateBotVersion);
+        ActionToString(CreateExport);
+        ActionToString(CreateIntent);
+        ActionToString(CreateResourcePolicy);
+        ActionToString(CreateResourcePolicyStatement);
+        ActionToString(CreateSlot);
+        ActionToString(CreateSlotType);
+        ActionToString(CreateUploadUrl);
+        ActionToString(DeleteBot);
+        ActionToString(DeleteBotAlias);
+        ActionToString(DeleteBotLocale);
+        ActionToString(DeleteBotVersion);
+        ActionToString(DeleteExport);
+        ActionToString(DeleteImport);
+        ActionToString(DeleteIntent);
+        ActionToString(DeleteResourcePolicy);
+        ActionToString(DeleteResourcePolicyStatement);
+        ActionToString(DeleteSlot);
+        ActionToString(DeleteSlotType);
+        ActionToString(DescribeBot);
+        ActionToString(DescribeBotAlias);
+        ActionToString(DescribeBotLocale);
+        ActionToString(DescribeBotVersion);
+        ActionToString(DescribeExport);
+        ActionToString(DescribeImport);
+        ActionToString(DescribeIntent);
+        ActionToString(DescribeResourcePolicy);
+        ActionToString(DescribeSlot);
+        ActionToString(DescribeSlotType);
+        ActionToString(ListBotAliases);
+        ActionToString(ListBotLocales);
+        ActionToString(ListBotVersions);
+        ActionToString(ListBots);
+        ActionToString(ListBuiltInIntents);
+        ActionToString(ListBuiltInSlotTypes);
+        ActionToString(ListExports);
+        ActionToString(ListImports);
+        ActionToString(ListIntents);
+        ActionToString(ListSlotTypes);
+        ActionToString(ListSlots);
+        ActionToString(ListTagsForResource);
+        ActionToString(StartImport);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateBot);
+        ActionToString(UpdateBotAlias);
+        ActionToString(UpdateBotLocale);
+        ActionToString(UpdateExport);
+        ActionToString(UpdateIntent);
+        ActionToString(UpdateResourcePolicy);
+        ActionToString(UpdateSlot);
+        ActionToString(UpdateSlotType);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

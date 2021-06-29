@@ -301,7 +301,29 @@ QString ManagedBlockchainRequestPrivate::toString(const ManagedBlockchainRequest
     #define ActionToString(action) \
         case ManagedBlockchainRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateMember);
+        ActionToString(CreateNetwork);
+        ActionToString(CreateNode);
+        ActionToString(CreateProposal);
+        ActionToString(DeleteMember);
+        ActionToString(DeleteNode);
+        ActionToString(GetMember);
+        ActionToString(GetNetwork);
+        ActionToString(GetNode);
+        ActionToString(GetProposal);
+        ActionToString(ListInvitations);
+        ActionToString(ListMembers);
+        ActionToString(ListNetworks);
+        ActionToString(ListNodes);
+        ActionToString(ListProposalVotes);
+        ActionToString(ListProposals);
+        ActionToString(ListTagsForResource);
+        ActionToString(RejectInvitation);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateMember);
+        ActionToString(UpdateNode);
+        ActionToString(VoteOnProposal);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

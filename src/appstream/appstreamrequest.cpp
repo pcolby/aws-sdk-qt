@@ -326,7 +326,54 @@ QString AppStreamRequestPrivate::toString(const AppStreamRequest::Action &action
     #define ActionToString(action) \
         case AppStreamRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateFleet);
+        ActionToString(BatchAssociateUserStack);
+        ActionToString(BatchDisassociateUserStack);
+        ActionToString(CopyImage);
+        ActionToString(CreateDirectoryConfig);
+        ActionToString(CreateFleet);
+        ActionToString(CreateImageBuilder);
+        ActionToString(CreateImageBuilderStreamingURL);
+        ActionToString(CreateStack);
+        ActionToString(CreateStreamingURL);
+        ActionToString(CreateUpdatedImage);
+        ActionToString(CreateUsageReportSubscription);
+        ActionToString(CreateUser);
+        ActionToString(DeleteDirectoryConfig);
+        ActionToString(DeleteFleet);
+        ActionToString(DeleteImage);
+        ActionToString(DeleteImageBuilder);
+        ActionToString(DeleteImagePermissions);
+        ActionToString(DeleteStack);
+        ActionToString(DeleteUsageReportSubscription);
+        ActionToString(DeleteUser);
+        ActionToString(DescribeDirectoryConfigs);
+        ActionToString(DescribeFleets);
+        ActionToString(DescribeImageBuilders);
+        ActionToString(DescribeImagePermissions);
+        ActionToString(DescribeImages);
+        ActionToString(DescribeSessions);
+        ActionToString(DescribeStacks);
+        ActionToString(DescribeUsageReportSubscriptions);
+        ActionToString(DescribeUserStackAssociations);
+        ActionToString(DescribeUsers);
+        ActionToString(DisableUser);
+        ActionToString(DisassociateFleet);
+        ActionToString(EnableUser);
+        ActionToString(ExpireSession);
+        ActionToString(ListAssociatedFleets);
+        ActionToString(ListAssociatedStacks);
+        ActionToString(ListTagsForResource);
+        ActionToString(StartFleet);
+        ActionToString(StartImageBuilder);
+        ActionToString(StopFleet);
+        ActionToString(StopImageBuilder);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateDirectoryConfig);
+        ActionToString(UpdateFleet);
+        ActionToString(UpdateImagePermissions);
+        ActionToString(UpdateStack);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

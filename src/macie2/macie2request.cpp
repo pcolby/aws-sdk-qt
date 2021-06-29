@@ -334,7 +334,62 @@ QString Macie2RequestPrivate::toString(const Macie2Request::Action &action)
     #define ActionToString(action) \
         case Macie2Request::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AcceptInvitation);
+        ActionToString(BatchGetCustomDataIdentifiers);
+        ActionToString(CreateClassificationJob);
+        ActionToString(CreateCustomDataIdentifier);
+        ActionToString(CreateFindingsFilter);
+        ActionToString(CreateInvitations);
+        ActionToString(CreateMember);
+        ActionToString(CreateSampleFindings);
+        ActionToString(DeclineInvitations);
+        ActionToString(DeleteCustomDataIdentifier);
+        ActionToString(DeleteFindingsFilter);
+        ActionToString(DeleteInvitations);
+        ActionToString(DeleteMember);
+        ActionToString(DescribeBuckets);
+        ActionToString(DescribeClassificationJob);
+        ActionToString(DescribeOrganizationConfiguration);
+        ActionToString(DisableMacie);
+        ActionToString(DisableOrganizationAdminAccount);
+        ActionToString(DisassociateFromAdministratorAccount);
+        ActionToString(DisassociateFromMasterAccount);
+        ActionToString(DisassociateMember);
+        ActionToString(EnableMacie);
+        ActionToString(EnableOrganizationAdminAccount);
+        ActionToString(GetAdministratorAccount);
+        ActionToString(GetBucketStatistics);
+        ActionToString(GetClassificationExportConfiguration);
+        ActionToString(GetCustomDataIdentifier);
+        ActionToString(GetFindingStatistics);
+        ActionToString(GetFindings);
+        ActionToString(GetFindingsFilter);
+        ActionToString(GetFindingsPublicationConfiguration);
+        ActionToString(GetInvitationsCount);
+        ActionToString(GetMacieSession);
+        ActionToString(GetMasterAccount);
+        ActionToString(GetMember);
+        ActionToString(GetUsageStatistics);
+        ActionToString(GetUsageTotals);
+        ActionToString(ListClassificationJobs);
+        ActionToString(ListCustomDataIdentifiers);
+        ActionToString(ListFindings);
+        ActionToString(ListFindingsFilters);
+        ActionToString(ListInvitations);
+        ActionToString(ListMembers);
+        ActionToString(ListOrganizationAdminAccounts);
+        ActionToString(ListTagsForResource);
+        ActionToString(PutClassificationExportConfiguration);
+        ActionToString(PutFindingsPublicationConfiguration);
+        ActionToString(SearchResources);
+        ActionToString(TagResource);
+        ActionToString(TestCustomDataIdentifier);
+        ActionToString(UntagResource);
+        ActionToString(UpdateClassificationJob);
+        ActionToString(UpdateFindingsFilter);
+        ActionToString(UpdateMacieSession);
+        ActionToString(UpdateMemberSession);
+        ActionToString(UpdateOrganizationConfiguration);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

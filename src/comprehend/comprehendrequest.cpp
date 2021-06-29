@@ -339,7 +339,67 @@ QString ComprehendRequestPrivate::toString(const ComprehendRequest::Action &acti
     #define ActionToString(action) \
         case ComprehendRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(BatchDetectDominantLanguage);
+        ActionToString(BatchDetectEntities);
+        ActionToString(BatchDetectKeyPhrases);
+        ActionToString(BatchDetectSentiment);
+        ActionToString(BatchDetectSyntax);
+        ActionToString(ClassifyDocument);
+        ActionToString(ContainsPiiEntities);
+        ActionToString(CreateDocumentClassifier);
+        ActionToString(CreateEndpoint);
+        ActionToString(CreateEntityRecognizer);
+        ActionToString(DeleteDocumentClassifier);
+        ActionToString(DeleteEndpoint);
+        ActionToString(DeleteEntityRecognizer);
+        ActionToString(DescribeDocumentClassificationJob);
+        ActionToString(DescribeDocumentClassifier);
+        ActionToString(DescribeDominantLanguageDetectionJob);
+        ActionToString(DescribeEndpoint);
+        ActionToString(DescribeEntitiesDetectionJob);
+        ActionToString(DescribeEntityRecognizer);
+        ActionToString(DescribeEventsDetectionJob);
+        ActionToString(DescribeKeyPhrasesDetectionJob);
+        ActionToString(DescribePiiEntitiesDetectionJob);
+        ActionToString(DescribeSentimentDetectionJob);
+        ActionToString(DescribeTopicsDetectionJob);
+        ActionToString(DetectDominantLanguage);
+        ActionToString(DetectEntities);
+        ActionToString(DetectKeyPhrases);
+        ActionToString(DetectPiiEntities);
+        ActionToString(DetectSentiment);
+        ActionToString(DetectSyntax);
+        ActionToString(ListDocumentClassificationJobs);
+        ActionToString(ListDocumentClassifiers);
+        ActionToString(ListDominantLanguageDetectionJobs);
+        ActionToString(ListEndpoints);
+        ActionToString(ListEntitiesDetectionJobs);
+        ActionToString(ListEntityRecognizers);
+        ActionToString(ListEventsDetectionJobs);
+        ActionToString(ListKeyPhrasesDetectionJobs);
+        ActionToString(ListPiiEntitiesDetectionJobs);
+        ActionToString(ListSentimentDetectionJobs);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListTopicsDetectionJobs);
+        ActionToString(StartDocumentClassificationJob);
+        ActionToString(StartDominantLanguageDetectionJob);
+        ActionToString(StartEntitiesDetectionJob);
+        ActionToString(StartEventsDetectionJob);
+        ActionToString(StartKeyPhrasesDetectionJob);
+        ActionToString(StartPiiEntitiesDetectionJob);
+        ActionToString(StartSentimentDetectionJob);
+        ActionToString(StartTopicsDetectionJob);
+        ActionToString(StopDominantLanguageDetectionJob);
+        ActionToString(StopEntitiesDetectionJob);
+        ActionToString(StopEventsDetectionJob);
+        ActionToString(StopKeyPhrasesDetectionJob);
+        ActionToString(StopPiiEntitiesDetectionJob);
+        ActionToString(StopSentimentDetectionJob);
+        ActionToString(StopTrainingDocumentClassifier);
+        ActionToString(StopTrainingEntityRecognizer);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateEndpoint);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -285,7 +285,13 @@ QString MacieRequestPrivate::toString(const MacieRequest::Action &action)
     #define ActionToString(action) \
         case MacieRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateMemberAccount);
+        ActionToString(AssociateS3Resources);
+        ActionToString(DisassociateMemberAccount);
+        ActionToString(DisassociateS3Resources);
+        ActionToString(ListMemberAccounts);
+        ActionToString(ListS3Resources);
+        ActionToString(UpdateS3Resources);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

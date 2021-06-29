@@ -299,7 +299,27 @@ QString DaxRequestPrivate::toString(const DaxRequest::Action &action)
     #define ActionToString(action) \
         case DaxRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateCluster);
+        ActionToString(CreateParameterGroup);
+        ActionToString(CreateSubnetGroup);
+        ActionToString(DecreaseReplicationFactor);
+        ActionToString(DeleteCluster);
+        ActionToString(DeleteParameterGroup);
+        ActionToString(DeleteSubnetGroup);
+        ActionToString(DescribeClusters);
+        ActionToString(DescribeDefaultParameters);
+        ActionToString(DescribeEvents);
+        ActionToString(DescribeParameterGroups);
+        ActionToString(DescribeParameters);
+        ActionToString(DescribeSubnetGroups);
+        ActionToString(IncreaseReplicationFactor);
+        ActionToString(ListTags);
+        ActionToString(RebootNode);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateCluster);
+        ActionToString(UpdateParameterGroup);
+        ActionToString(UpdateSubnetGroup);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

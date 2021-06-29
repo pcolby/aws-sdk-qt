@@ -306,7 +306,34 @@ QString KinesisRequestPrivate::toString(const KinesisRequest::Action &action)
     #define ActionToString(action) \
         case KinesisRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AddTagsToStream);
+        ActionToString(CreateStream);
+        ActionToString(DecreaseStreamRetentionPeriod);
+        ActionToString(DeleteStream);
+        ActionToString(DeregisterStreamConsumer);
+        ActionToString(DescribeLimits);
+        ActionToString(DescribeStream);
+        ActionToString(DescribeStreamConsumer);
+        ActionToString(DescribeStreamSummary);
+        ActionToString(DisableEnhancedMonitoring);
+        ActionToString(EnableEnhancedMonitoring);
+        ActionToString(GetRecords);
+        ActionToString(GetShardIterator);
+        ActionToString(IncreaseStreamRetentionPeriod);
+        ActionToString(ListShards);
+        ActionToString(ListStreamConsumers);
+        ActionToString(ListStreams);
+        ActionToString(ListTagsForStream);
+        ActionToString(MergeShards);
+        ActionToString(PutRecord);
+        ActionToString(PutRecords);
+        ActionToString(RegisterStreamConsumer);
+        ActionToString(RemoveTagsFromStream);
+        ActionToString(SplitShard);
+        ActionToString(StartStreamEncryption);
+        ActionToString(StopStreamEncryption);
+        ActionToString(SubscribeToShard);
+        ActionToString(UpdateShardCount);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

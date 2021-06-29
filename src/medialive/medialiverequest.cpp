@@ -334,7 +334,62 @@ QString MediaLiveRequestPrivate::toString(const MediaLiveRequest::Action &action
     #define ActionToString(action) \
         case MediaLiveRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AcceptInputDeviceTransfer);
+        ActionToString(BatchDelete);
+        ActionToString(BatchStart);
+        ActionToString(BatchStop);
+        ActionToString(BatchUpdateSchedule);
+        ActionToString(CancelInputDeviceTransfer);
+        ActionToString(CreateChannel);
+        ActionToString(CreateInput);
+        ActionToString(CreateInputSecurityGroup);
+        ActionToString(CreateMultiplex);
+        ActionToString(CreateMultiplexProgram);
+        ActionToString(CreatePartnerInput);
+        ActionToString(CreateTags);
+        ActionToString(DeleteChannel);
+        ActionToString(DeleteInput);
+        ActionToString(DeleteInputSecurityGroup);
+        ActionToString(DeleteMultiplex);
+        ActionToString(DeleteMultiplexProgram);
+        ActionToString(DeleteReservation);
+        ActionToString(DeleteSchedule);
+        ActionToString(DeleteTags);
+        ActionToString(DescribeChannel);
+        ActionToString(DescribeInput);
+        ActionToString(DescribeInputDevice);
+        ActionToString(DescribeInputDeviceThumbnail);
+        ActionToString(DescribeInputSecurityGroup);
+        ActionToString(DescribeMultiplex);
+        ActionToString(DescribeMultiplexProgram);
+        ActionToString(DescribeOffering);
+        ActionToString(DescribeReservation);
+        ActionToString(DescribeSchedule);
+        ActionToString(ListChannels);
+        ActionToString(ListInputDeviceTransfers);
+        ActionToString(ListInputDevices);
+        ActionToString(ListInputSecurityGroups);
+        ActionToString(ListInputs);
+        ActionToString(ListMultiplexPrograms);
+        ActionToString(ListMultiplexes);
+        ActionToString(ListOfferings);
+        ActionToString(ListReservations);
+        ActionToString(ListTagsForResource);
+        ActionToString(PurchaseOffering);
+        ActionToString(RejectInputDeviceTransfer);
+        ActionToString(StartChannel);
+        ActionToString(StartMultiplex);
+        ActionToString(StopChannel);
+        ActionToString(StopMultiplex);
+        ActionToString(TransferInputDevice);
+        ActionToString(UpdateChannel);
+        ActionToString(UpdateChannelClass);
+        ActionToString(UpdateInput);
+        ActionToString(UpdateInputDevice);
+        ActionToString(UpdateInputSecurityGroup);
+        ActionToString(UpdateMultiplex);
+        ActionToString(UpdateMultiplexProgram);
+        ActionToString(UpdateReservation);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

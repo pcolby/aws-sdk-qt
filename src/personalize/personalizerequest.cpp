@@ -325,7 +325,53 @@ QString PersonalizeRequestPrivate::toString(const PersonalizeRequest::Action &ac
     #define ActionToString(action) \
         case PersonalizeRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateBatchInferenceJob);
+        ActionToString(CreateCampaign);
+        ActionToString(CreateDataset);
+        ActionToString(CreateDatasetExportJob);
+        ActionToString(CreateDatasetGroup);
+        ActionToString(CreateDatasetImportJob);
+        ActionToString(CreateEventTracker);
+        ActionToString(CreateFilter);
+        ActionToString(CreateSchema);
+        ActionToString(CreateSolution);
+        ActionToString(CreateSolutionVersion);
+        ActionToString(DeleteCampaign);
+        ActionToString(DeleteDataset);
+        ActionToString(DeleteDatasetGroup);
+        ActionToString(DeleteEventTracker);
+        ActionToString(DeleteFilter);
+        ActionToString(DeleteSchema);
+        ActionToString(DeleteSolution);
+        ActionToString(DescribeAlgorithm);
+        ActionToString(DescribeBatchInferenceJob);
+        ActionToString(DescribeCampaign);
+        ActionToString(DescribeDataset);
+        ActionToString(DescribeDatasetExportJob);
+        ActionToString(DescribeDatasetGroup);
+        ActionToString(DescribeDatasetImportJob);
+        ActionToString(DescribeEventTracker);
+        ActionToString(DescribeFeatureTransformation);
+        ActionToString(DescribeFilter);
+        ActionToString(DescribeRecipe);
+        ActionToString(DescribeSchema);
+        ActionToString(DescribeSolution);
+        ActionToString(DescribeSolutionVersion);
+        ActionToString(GetSolutionMetrics);
+        ActionToString(ListBatchInferenceJobs);
+        ActionToString(ListCampaigns);
+        ActionToString(ListDatasetExportJobs);
+        ActionToString(ListDatasetGroups);
+        ActionToString(ListDatasetImportJobs);
+        ActionToString(ListDatasets);
+        ActionToString(ListEventTrackers);
+        ActionToString(ListFilters);
+        ActionToString(ListRecipes);
+        ActionToString(ListSchemas);
+        ActionToString(ListSolutionVersions);
+        ActionToString(ListSolutions);
+        ActionToString(StopSolutionVersionCreation);
+        ActionToString(UpdateCampaign);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

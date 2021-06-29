@@ -281,7 +281,9 @@ QString PersonalizeEventsRequestPrivate::toString(const PersonalizeEventsRequest
     #define ActionToString(action) \
         case PersonalizeEventsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(PutEvents);
+        ActionToString(PutItems);
+        ActionToString(PutUsers);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

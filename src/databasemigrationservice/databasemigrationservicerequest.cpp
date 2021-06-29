@@ -333,7 +333,61 @@ QString DatabaseMigrationServiceRequestPrivate::toString(const DatabaseMigration
     #define ActionToString(action) \
         case DatabaseMigrationServiceRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AddTagsToResource);
+        ActionToString(ApplyPendingMaintenanceAction);
+        ActionToString(CancelReplicationTaskAssessmentRun);
+        ActionToString(CreateEndpoint);
+        ActionToString(CreateEventSubscription);
+        ActionToString(CreateReplicationInstance);
+        ActionToString(CreateReplicationSubnetGroup);
+        ActionToString(CreateReplicationTask);
+        ActionToString(DeleteCertificate);
+        ActionToString(DeleteConnection);
+        ActionToString(DeleteEndpoint);
+        ActionToString(DeleteEventSubscription);
+        ActionToString(DeleteReplicationInstance);
+        ActionToString(DeleteReplicationSubnetGroup);
+        ActionToString(DeleteReplicationTask);
+        ActionToString(DeleteReplicationTaskAssessmentRun);
+        ActionToString(DescribeAccountAttributes);
+        ActionToString(DescribeApplicableIndividualAssessments);
+        ActionToString(DescribeCertificates);
+        ActionToString(DescribeConnections);
+        ActionToString(DescribeEndpointSettings);
+        ActionToString(DescribeEndpointTypes);
+        ActionToString(DescribeEndpoints);
+        ActionToString(DescribeEventCategories);
+        ActionToString(DescribeEventSubscriptions);
+        ActionToString(DescribeEvents);
+        ActionToString(DescribeOrderableReplicationInstances);
+        ActionToString(DescribePendingMaintenanceActions);
+        ActionToString(DescribeRefreshSchemasStatus);
+        ActionToString(DescribeReplicationInstanceTaskLogs);
+        ActionToString(DescribeReplicationInstances);
+        ActionToString(DescribeReplicationSubnetGroups);
+        ActionToString(DescribeReplicationTaskAssessmentResults);
+        ActionToString(DescribeReplicationTaskAssessmentRuns);
+        ActionToString(DescribeReplicationTaskIndividualAssessments);
+        ActionToString(DescribeReplicationTasks);
+        ActionToString(DescribeSchemas);
+        ActionToString(DescribeTableStatistics);
+        ActionToString(ImportCertificate);
+        ActionToString(ListTagsForResource);
+        ActionToString(ModifyEndpoint);
+        ActionToString(ModifyEventSubscription);
+        ActionToString(ModifyReplicationInstance);
+        ActionToString(ModifyReplicationSubnetGroup);
+        ActionToString(ModifyReplicationTask);
+        ActionToString(MoveReplicationTask);
+        ActionToString(RebootReplicationInstance);
+        ActionToString(RefreshSchemas);
+        ActionToString(ReloadTables);
+        ActionToString(RemoveTagsFromResource);
+        ActionToString(StartReplicationTask);
+        ActionToString(StartReplicationTaskAssessment);
+        ActionToString(StartReplicationTaskAssessmentRun);
+        ActionToString(StopReplicationTask);
+        ActionToString(TestConnection);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

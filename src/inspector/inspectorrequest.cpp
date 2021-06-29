@@ -315,7 +315,43 @@ QString InspectorRequestPrivate::toString(const InspectorRequest::Action &action
     #define ActionToString(action) \
         case InspectorRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AddAttributesToFindings);
+        ActionToString(CreateAssessmentTarget);
+        ActionToString(CreateAssessmentTemplate);
+        ActionToString(CreateExclusionsPreview);
+        ActionToString(CreateResourceGroup);
+        ActionToString(DeleteAssessmentRun);
+        ActionToString(DeleteAssessmentTarget);
+        ActionToString(DeleteAssessmentTemplate);
+        ActionToString(DescribeAssessmentRuns);
+        ActionToString(DescribeAssessmentTargets);
+        ActionToString(DescribeAssessmentTemplates);
+        ActionToString(DescribeCrossAccountAccessRole);
+        ActionToString(DescribeExclusions);
+        ActionToString(DescribeFindings);
+        ActionToString(DescribeResourceGroups);
+        ActionToString(DescribeRulesPackages);
+        ActionToString(GetAssessmentReport);
+        ActionToString(GetExclusionsPreview);
+        ActionToString(GetTelemetryMetadata);
+        ActionToString(ListAssessmentRunAgents);
+        ActionToString(ListAssessmentRuns);
+        ActionToString(ListAssessmentTargets);
+        ActionToString(ListAssessmentTemplates);
+        ActionToString(ListEventSubscriptions);
+        ActionToString(ListExclusions);
+        ActionToString(ListFindings);
+        ActionToString(ListRulesPackages);
+        ActionToString(ListTagsForResource);
+        ActionToString(PreviewAgents);
+        ActionToString(RegisterCrossAccountAccessRole);
+        ActionToString(RemoveAttributesFromFindings);
+        ActionToString(SetTagsForResource);
+        ActionToString(StartAssessmentRun);
+        ActionToString(StopAssessmentRun);
+        ActionToString(SubscribeToEvent);
+        ActionToString(UnsubscribeFromEvent);
+        ActionToString(UpdateAssessmentTarget);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

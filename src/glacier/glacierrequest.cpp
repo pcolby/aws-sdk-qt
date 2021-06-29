@@ -311,7 +311,39 @@ QString GlacierRequestPrivate::toString(const GlacierRequest::Action &action)
     #define ActionToString(action) \
         case GlacierRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AbortMultipartUpload);
+        ActionToString(AbortVaultLock);
+        ActionToString(AddTagsToVault);
+        ActionToString(CompleteMultipartUpload);
+        ActionToString(CompleteVaultLock);
+        ActionToString(CreateVault);
+        ActionToString(DeleteArchive);
+        ActionToString(DeleteVault);
+        ActionToString(DeleteVaultAccessPolicy);
+        ActionToString(DeleteVaultNotifications);
+        ActionToString(DescribeJob);
+        ActionToString(DescribeVault);
+        ActionToString(GetDataRetrievalPolicy);
+        ActionToString(GetJobOutput);
+        ActionToString(GetVaultAccessPolicy);
+        ActionToString(GetVaultLock);
+        ActionToString(GetVaultNotifications);
+        ActionToString(InitiateJob);
+        ActionToString(InitiateMultipartUpload);
+        ActionToString(InitiateVaultLock);
+        ActionToString(ListJobs);
+        ActionToString(ListMultipartUploads);
+        ActionToString(ListParts);
+        ActionToString(ListProvisionedCapacity);
+        ActionToString(ListTagsForVault);
+        ActionToString(ListVaults);
+        ActionToString(PurchaseProvisionedCapacity);
+        ActionToString(RemoveTagsFromVault);
+        ActionToString(SetDataRetrievalPolicy);
+        ActionToString(SetVaultAccessPolicy);
+        ActionToString(SetVaultNotifications);
+        ActionToString(UploadArchive);
+        ActionToString(UploadMultipartPart);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

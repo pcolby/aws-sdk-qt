@@ -336,7 +336,64 @@ QString IoTSiteWiseRequestPrivate::toString(const IoTSiteWiseRequest::Action &ac
     #define ActionToString(action) \
         case IoTSiteWiseRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateAssets);
+        ActionToString(BatchAssociateProjectAssets);
+        ActionToString(BatchDisassociateProjectAssets);
+        ActionToString(BatchPutAssetPropertyValue);
+        ActionToString(CreateAccessPolicy);
+        ActionToString(CreateAsset);
+        ActionToString(CreateAssetModel);
+        ActionToString(CreateDashboard);
+        ActionToString(CreateGateway);
+        ActionToString(CreatePortal);
+        ActionToString(CreateProject);
+        ActionToString(DeleteAccessPolicy);
+        ActionToString(DeleteAsset);
+        ActionToString(DeleteAssetModel);
+        ActionToString(DeleteDashboard);
+        ActionToString(DeleteGateway);
+        ActionToString(DeletePortal);
+        ActionToString(DeleteProject);
+        ActionToString(DescribeAccessPolicy);
+        ActionToString(DescribeAsset);
+        ActionToString(DescribeAssetModel);
+        ActionToString(DescribeAssetProperty);
+        ActionToString(DescribeDashboard);
+        ActionToString(DescribeDefaultEncryptionConfiguration);
+        ActionToString(DescribeGateway);
+        ActionToString(DescribeGatewayCapabilityConfiguration);
+        ActionToString(DescribeLoggingOptions);
+        ActionToString(DescribePortal);
+        ActionToString(DescribeProject);
+        ActionToString(DisassociateAssets);
+        ActionToString(GetAssetPropertyAggregates);
+        ActionToString(GetAssetPropertyValue);
+        ActionToString(GetAssetPropertyValueHistory);
+        ActionToString(GetInterpolatedAssetPropertyValues);
+        ActionToString(ListAccessPolicies);
+        ActionToString(ListAssetModels);
+        ActionToString(ListAssetRelationships);
+        ActionToString(ListAssets);
+        ActionToString(ListAssociatedAssets);
+        ActionToString(ListDashboards);
+        ActionToString(ListGateways);
+        ActionToString(ListPortals);
+        ActionToString(ListProjectAssets);
+        ActionToString(ListProjects);
+        ActionToString(ListTagsForResource);
+        ActionToString(PutDefaultEncryptionConfiguration);
+        ActionToString(PutLoggingOptions);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateAccessPolicy);
+        ActionToString(UpdateAsset);
+        ActionToString(UpdateAssetModel);
+        ActionToString(UpdateAssetProperty);
+        ActionToString(UpdateDashboard);
+        ActionToString(UpdateGateway);
+        ActionToString(UpdateGatewayCapabilityConfiguration);
+        ActionToString(UpdatePortal);
+        ActionToString(UpdateProject);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

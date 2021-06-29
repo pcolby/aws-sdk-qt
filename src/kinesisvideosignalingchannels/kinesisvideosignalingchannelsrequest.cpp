@@ -280,7 +280,8 @@ QString KinesisVideoSignalingChannelsRequestPrivate::toString(const KinesisVideo
     #define ActionToString(action) \
         case KinesisVideoSignalingChannelsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(GetIceServerConfig);
+        ActionToString(SendAlexaOfferToMaster);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

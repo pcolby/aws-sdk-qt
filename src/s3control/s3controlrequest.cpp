@@ -327,7 +327,55 @@ QString S3ControlRequestPrivate::toString(const S3ControlRequest::Action &action
     #define ActionToString(action) \
         case S3ControlRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateAccessPoint);
+        ActionToString(CreateAccessPointForObjectLambda);
+        ActionToString(CreateBucket);
+        ActionToString(CreateJob);
+        ActionToString(DeleteAccessPoint);
+        ActionToString(DeleteAccessPointForObjectLambda);
+        ActionToString(DeleteAccessPointPolicy);
+        ActionToString(DeleteAccessPointPolicyForObjectLambda);
+        ActionToString(DeleteBucket);
+        ActionToString(DeleteBucketLifecycleConfiguration);
+        ActionToString(DeleteBucketPolicy);
+        ActionToString(DeleteBucketTagging);
+        ActionToString(DeleteJobTagging);
+        ActionToString(DeletePublicAccessBlock);
+        ActionToString(DeleteStorageLensConfiguration);
+        ActionToString(DeleteStorageLensConfigurationTagging);
+        ActionToString(DescribeJob);
+        ActionToString(GetAccessPoint);
+        ActionToString(GetAccessPointConfigurationForObjectLambda);
+        ActionToString(GetAccessPointForObjectLambda);
+        ActionToString(GetAccessPointPolicy);
+        ActionToString(GetAccessPointPolicyForObjectLambda);
+        ActionToString(GetAccessPointPolicyStatus);
+        ActionToString(GetAccessPointPolicyStatusForObjectLambda);
+        ActionToString(GetBucket);
+        ActionToString(GetBucketLifecycleConfiguration);
+        ActionToString(GetBucketPolicy);
+        ActionToString(GetBucketTagging);
+        ActionToString(GetJobTagging);
+        ActionToString(GetPublicAccessBlock);
+        ActionToString(GetStorageLensConfiguration);
+        ActionToString(GetStorageLensConfigurationTagging);
+        ActionToString(ListAccessPoints);
+        ActionToString(ListAccessPointsForObjectLambda);
+        ActionToString(ListJobs);
+        ActionToString(ListRegionalBuckets);
+        ActionToString(ListStorageLensConfigurations);
+        ActionToString(PutAccessPointConfigurationForObjectLambda);
+        ActionToString(PutAccessPointPolicy);
+        ActionToString(PutAccessPointPolicyForObjectLambda);
+        ActionToString(PutBucketLifecycleConfiguration);
+        ActionToString(PutBucketPolicy);
+        ActionToString(PutBucketTagging);
+        ActionToString(PutJobTagging);
+        ActionToString(PutPublicAccessBlock);
+        ActionToString(PutStorageLensConfiguration);
+        ActionToString(PutStorageLensConfigurationTagging);
+        ActionToString(UpdateJobPriority);
+        ActionToString(UpdateJobStatus);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

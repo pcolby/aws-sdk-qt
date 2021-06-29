@@ -303,7 +303,31 @@ QString GroundStationRequestPrivate::toString(const GroundStationRequest::Action
     #define ActionToString(action) \
         case GroundStationRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CancelContact);
+        ActionToString(CreateConfig);
+        ActionToString(CreateDataflowEndpointGroup);
+        ActionToString(CreateMissionProfile);
+        ActionToString(DeleteConfig);
+        ActionToString(DeleteDataflowEndpointGroup);
+        ActionToString(DeleteMissionProfile);
+        ActionToString(DescribeContact);
+        ActionToString(GetConfig);
+        ActionToString(GetDataflowEndpointGroup);
+        ActionToString(GetMinuteUsage);
+        ActionToString(GetMissionProfile);
+        ActionToString(GetSatellite);
+        ActionToString(ListConfigs);
+        ActionToString(ListContacts);
+        ActionToString(ListDataflowEndpointGroups);
+        ActionToString(ListGroundStations);
+        ActionToString(ListMissionProfiles);
+        ActionToString(ListSatellites);
+        ActionToString(ListTagsForResource);
+        ActionToString(ReserveContact);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateConfig);
+        ActionToString(UpdateMissionProfile);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

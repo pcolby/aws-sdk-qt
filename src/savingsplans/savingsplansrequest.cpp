@@ -287,7 +287,15 @@ QString SavingsPlansRequestPrivate::toString(const SavingsPlansRequest::Action &
     #define ActionToString(action) \
         case SavingsPlansRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateSavingsPlan);
+        ActionToString(DeleteQueuedSavingsPlan);
+        ActionToString(DescribeSavingsPlanRates);
+        ActionToString(DescribeSavingsPlans);
+        ActionToString(DescribeSavingsPlansOfferingRates);
+        ActionToString(DescribeSavingsPlansOfferings);
+        ActionToString(ListTagsForResource);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

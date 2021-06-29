@@ -317,7 +317,45 @@ QString CodePipelineRequestPrivate::toString(const CodePipelineRequest::Action &
     #define ActionToString(action) \
         case CodePipelineRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AcknowledgeJob);
+        ActionToString(AcknowledgeThirdPartyJob);
+        ActionToString(CreateCustomActionType);
+        ActionToString(CreatePipeline);
+        ActionToString(DeleteCustomActionType);
+        ActionToString(DeletePipeline);
+        ActionToString(DeleteWebhook);
+        ActionToString(DeregisterWebhookWithThirdParty);
+        ActionToString(DisableStageTransition);
+        ActionToString(EnableStageTransition);
+        ActionToString(GetActionType);
+        ActionToString(GetJobDetails);
+        ActionToString(GetPipeline);
+        ActionToString(GetPipelineExecution);
+        ActionToString(GetPipelineState);
+        ActionToString(GetThirdPartyJobDetails);
+        ActionToString(ListActionExecutions);
+        ActionToString(ListActionTypes);
+        ActionToString(ListPipelineExecutions);
+        ActionToString(ListPipelines);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListWebhooks);
+        ActionToString(PollForJobs);
+        ActionToString(PollForThirdPartyJobs);
+        ActionToString(PutActionRevision);
+        ActionToString(PutApprovalResult);
+        ActionToString(PutJobFailureResult);
+        ActionToString(PutJobSuccessResult);
+        ActionToString(PutThirdPartyJobFailureResult);
+        ActionToString(PutThirdPartyJobSuccessResult);
+        ActionToString(PutWebhook);
+        ActionToString(RegisterWebhookWithThirdParty);
+        ActionToString(RetryStageExecution);
+        ActionToString(StartPipelineExecution);
+        ActionToString(StopPipelineExecution);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateActionType);
+        ActionToString(UpdatePipeline);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

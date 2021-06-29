@@ -298,7 +298,26 @@ QString SqsRequestPrivate::toString(const SqsRequest::Action &action)
     #define ActionToString(action) \
         case SqsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AddPermission);
+        ActionToString(ChangeMessageVisibility);
+        ActionToString(ChangeMessageVisibilityBatch);
+        ActionToString(CreateQueue);
+        ActionToString(DeleteMessage);
+        ActionToString(DeleteMessageBatch);
+        ActionToString(DeleteQueue);
+        ActionToString(GetQueueAttributes);
+        ActionToString(GetQueueUrl);
+        ActionToString(ListDeadLetterSourceQueues);
+        ActionToString(ListQueueTags);
+        ActionToString(ListQueues);
+        ActionToString(PurgeQueue);
+        ActionToString(ReceiveMessage);
+        ActionToString(RemovePermission);
+        ActionToString(SendMessage);
+        ActionToString(SendMessageBatch);
+        ActionToString(SetQueueAttributes);
+        ActionToString(TagQueue);
+        ActionToString(UntagQueue);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

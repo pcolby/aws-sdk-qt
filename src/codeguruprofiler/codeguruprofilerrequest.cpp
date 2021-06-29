@@ -301,7 +301,29 @@ QString CodeGuruProfilerRequestPrivate::toString(const CodeGuruProfilerRequest::
     #define ActionToString(action) \
         case CodeGuruProfilerRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AddNotificationChannels);
+        ActionToString(BatchGetFrameMetricData);
+        ActionToString(ConfigureAgent);
+        ActionToString(CreateProfilingGroup);
+        ActionToString(DeleteProfilingGroup);
+        ActionToString(DescribeProfilingGroup);
+        ActionToString(GetFindingsReportAccountSummary);
+        ActionToString(GetNotificationConfiguration);
+        ActionToString(GetPolicy);
+        ActionToString(GetProfile);
+        ActionToString(GetRecommendations);
+        ActionToString(ListFindingsReports);
+        ActionToString(ListProfileTimes);
+        ActionToString(ListProfilingGroups);
+        ActionToString(ListTagsForResource);
+        ActionToString(PostAgentProfile);
+        ActionToString(PutPermission);
+        ActionToString(RemoveNotificationChannel);
+        ActionToString(RemovePermission);
+        ActionToString(SubmitFeedback);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateProfilingGroup);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

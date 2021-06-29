@@ -280,7 +280,8 @@ QString SagemakerEdgeManagerRequestPrivate::toString(const SagemakerEdgeManagerR
     #define ActionToString(action) \
         case SagemakerEdgeManagerRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(GetDeviceRegistration);
+        ActionToString(SendHeartbeat);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

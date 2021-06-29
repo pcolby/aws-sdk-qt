@@ -293,7 +293,21 @@ QString EMRContainersRequestPrivate::toString(const EMRContainersRequest::Action
     #define ActionToString(action) \
         case EMRContainersRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CancelJobRun);
+        ActionToString(CreateManagedEndpoint);
+        ActionToString(CreateVirtualCluster);
+        ActionToString(DeleteManagedEndpoint);
+        ActionToString(DeleteVirtualCluster);
+        ActionToString(DescribeJobRun);
+        ActionToString(DescribeManagedEndpoint);
+        ActionToString(DescribeVirtualCluster);
+        ActionToString(ListJobRuns);
+        ActionToString(ListManagedEndpoints);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListVirtualClusters);
+        ActionToString(StartJobRun);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

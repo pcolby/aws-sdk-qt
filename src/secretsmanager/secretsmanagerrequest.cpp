@@ -300,7 +300,28 @@ QString SecretsManagerRequestPrivate::toString(const SecretsManagerRequest::Acti
     #define ActionToString(action) \
         case SecretsManagerRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CancelRotateSecret);
+        ActionToString(CreateSecret);
+        ActionToString(DeleteResourcePolicy);
+        ActionToString(DeleteSecret);
+        ActionToString(DescribeSecret);
+        ActionToString(GetRandomPassword);
+        ActionToString(GetResourcePolicy);
+        ActionToString(GetSecretValue);
+        ActionToString(ListSecretVersionIds);
+        ActionToString(ListSecrets);
+        ActionToString(PutResourcePolicy);
+        ActionToString(PutSecretValue);
+        ActionToString(RemoveRegionsFromReplication);
+        ActionToString(ReplicateSecretToRegions);
+        ActionToString(RestoreSecret);
+        ActionToString(RotateSecret);
+        ActionToString(StopReplicationToReplica);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateSecret);
+        ActionToString(UpdateSecretVersionStage);
+        ActionToString(ValidateResourcePolicy);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

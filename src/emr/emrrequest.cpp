@@ -325,7 +325,53 @@ QString EmrRequestPrivate::toString(const EmrRequest::Action &action)
     #define ActionToString(action) \
         case EmrRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AddInstanceFleet);
+        ActionToString(AddInstanceGroups);
+        ActionToString(AddJobFlowSteps);
+        ActionToString(AddTags);
+        ActionToString(CancelSteps);
+        ActionToString(CreateSecurityConfiguration);
+        ActionToString(CreateStudio);
+        ActionToString(CreateStudioSessionMapping);
+        ActionToString(DeleteSecurityConfiguration);
+        ActionToString(DeleteStudio);
+        ActionToString(DeleteStudioSessionMapping);
+        ActionToString(DescribeCluster);
+        ActionToString(DescribeJobFlows);
+        ActionToString(DescribeNotebookExecution);
+        ActionToString(DescribeSecurityConfiguration);
+        ActionToString(DescribeStep);
+        ActionToString(DescribeStudio);
+        ActionToString(GetBlockPublicAccessConfiguration);
+        ActionToString(GetManagedScalingPolicy);
+        ActionToString(GetStudioSessionMapping);
+        ActionToString(ListBootstrapActions);
+        ActionToString(ListClusters);
+        ActionToString(ListInstanceFleets);
+        ActionToString(ListInstanceGroups);
+        ActionToString(ListInstances);
+        ActionToString(ListNotebookExecutions);
+        ActionToString(ListSecurityConfigurations);
+        ActionToString(ListSteps);
+        ActionToString(ListStudioSessionMappings);
+        ActionToString(ListStudios);
+        ActionToString(ModifyCluster);
+        ActionToString(ModifyInstanceFleet);
+        ActionToString(ModifyInstanceGroups);
+        ActionToString(PutAutoScalingPolicy);
+        ActionToString(PutBlockPublicAccessConfiguration);
+        ActionToString(PutManagedScalingPolicy);
+        ActionToString(RemoveAutoScalingPolicy);
+        ActionToString(RemoveManagedScalingPolicy);
+        ActionToString(RemoveTags);
+        ActionToString(RunJobFlow);
+        ActionToString(SetTerminationProtection);
+        ActionToString(SetVisibleToAllUsers);
+        ActionToString(StartNotebookExecution);
+        ActionToString(StopNotebookExecution);
+        ActionToString(TerminateJobFlows);
+        ActionToString(UpdateStudio);
+        ActionToString(UpdateStudioSessionMapping);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

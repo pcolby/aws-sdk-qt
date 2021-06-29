@@ -289,7 +289,17 @@ QString MwaaRequestPrivate::toString(const MwaaRequest::Action &action)
     #define ActionToString(action) \
         case MwaaRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateCliToken);
+        ActionToString(CreateEnvironment);
+        ActionToString(CreateWebLoginToken);
+        ActionToString(DeleteEnvironment);
+        ActionToString(GetEnvironment);
+        ActionToString(ListEnvironments);
+        ActionToString(ListTagsForResource);
+        ActionToString(PublishMetrics);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateEnvironment);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

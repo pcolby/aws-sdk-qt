@@ -288,7 +288,16 @@ QString ApplicationAutoScalingRequestPrivate::toString(const ApplicationAutoScal
     #define ActionToString(action) \
         case ApplicationAutoScalingRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(DeleteScalingPolicy);
+        ActionToString(DeleteScheduledAction);
+        ActionToString(DeregisterScalableTarget);
+        ActionToString(DescribeScalableTargets);
+        ActionToString(DescribeScalingActivities);
+        ActionToString(DescribeScalingPolicies);
+        ActionToString(DescribeScheduledActions);
+        ActionToString(PutScalingPolicy);
+        ActionToString(PutScheduledAction);
+        ActionToString(RegisterScalableTarget);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

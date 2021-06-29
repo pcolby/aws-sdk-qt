@@ -286,7 +286,14 @@ QString ResourceGroupsTaggingAPIRequestPrivate::toString(const ResourceGroupsTag
     #define ActionToString(action) \
         case ResourceGroupsTaggingAPIRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(DescribeReportCreation);
+        ActionToString(GetComplianceSummary);
+        ActionToString(GetResources);
+        ActionToString(GetTagKeys);
+        ActionToString(GetTagValues);
+        ActionToString(StartReportCreation);
+        ActionToString(TagResources);
+        ActionToString(UntagResources);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

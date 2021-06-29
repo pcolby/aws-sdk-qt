@@ -284,7 +284,12 @@ QString LexRuntimeV2RequestPrivate::toString(const LexRuntimeV2Request::Action &
     #define ActionToString(action) \
         case LexRuntimeV2Request::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(DeleteSession);
+        ActionToString(GetSession);
+        ActionToString(PutSession);
+        ActionToString(RecognizeText);
+        ActionToString(RecognizeUtterance);
+        ActionToString(StartConversation);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

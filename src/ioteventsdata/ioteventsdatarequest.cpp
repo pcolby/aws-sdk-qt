@@ -289,7 +289,17 @@ QString IoTEventsDataRequestPrivate::toString(const IoTEventsDataRequest::Action
     #define ActionToString(action) \
         case IoTEventsDataRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(BatchAcknowledgeAlarm);
+        ActionToString(BatchDisableAlarm);
+        ActionToString(BatchEnableAlarm);
+        ActionToString(BatchPutMessage);
+        ActionToString(BatchResetAlarm);
+        ActionToString(BatchSnoozeAlarm);
+        ActionToString(BatchUpdateDetector);
+        ActionToString(DescribeAlarm);
+        ActionToString(DescribeDetector);
+        ActionToString(ListAlarms);
+        ActionToString(ListDetectors);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

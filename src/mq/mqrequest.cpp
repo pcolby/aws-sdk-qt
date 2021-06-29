@@ -300,7 +300,28 @@ QString MqRequestPrivate::toString(const MqRequest::Action &action)
     #define ActionToString(action) \
         case MqRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateBroker);
+        ActionToString(CreateConfiguration);
+        ActionToString(CreateTags);
+        ActionToString(CreateUser);
+        ActionToString(DeleteBroker);
+        ActionToString(DeleteTags);
+        ActionToString(DeleteUser);
+        ActionToString(DescribeBroker);
+        ActionToString(DescribeBrokerEngineTypes);
+        ActionToString(DescribeBrokerInstanceOptions);
+        ActionToString(DescribeConfiguration);
+        ActionToString(DescribeConfigurationRevision);
+        ActionToString(DescribeUser);
+        ActionToString(ListBrokers);
+        ActionToString(ListConfigurationRevisions);
+        ActionToString(ListConfigurations);
+        ActionToString(ListTags);
+        ActionToString(ListUsers);
+        ActionToString(RebootBroker);
+        ActionToString(UpdateBroker);
+        ActionToString(UpdateConfiguration);
+        ActionToString(UpdateUser);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -281,7 +281,9 @@ QString PricingRequestPrivate::toString(const PricingRequest::Action &action)
     #define ActionToString(action) \
         case PricingRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(DescribeServices);
+        ActionToString(GetAttributeValues);
+        ActionToString(GetProducts);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

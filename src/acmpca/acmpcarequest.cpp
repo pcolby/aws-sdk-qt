@@ -301,7 +301,29 @@ QString AcmpcaRequestPrivate::toString(const AcmpcaRequest::Action &action)
     #define ActionToString(action) \
         case AcmpcaRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateCertificateAuthority);
+        ActionToString(CreateCertificateAuthorityAuditReport);
+        ActionToString(CreatePermission);
+        ActionToString(DeleteCertificateAuthority);
+        ActionToString(DeletePermission);
+        ActionToString(DeletePolicy);
+        ActionToString(DescribeCertificateAuthority);
+        ActionToString(DescribeCertificateAuthorityAuditReport);
+        ActionToString(GetCertificate);
+        ActionToString(GetCertificateAuthorityCertificate);
+        ActionToString(GetCertificateAuthorityCsr);
+        ActionToString(GetPolicy);
+        ActionToString(ImportCertificateAuthorityCertificate);
+        ActionToString(IssueCertificate);
+        ActionToString(ListCertificateAuthorities);
+        ActionToString(ListPermissions);
+        ActionToString(ListTags);
+        ActionToString(PutPolicy);
+        ActionToString(RestoreCertificateAuthority);
+        ActionToString(RevokeCertificate);
+        ActionToString(TagCertificateAuthority);
+        ActionToString(UntagCertificateAuthority);
+        ActionToString(UpdateCertificateAuthority);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

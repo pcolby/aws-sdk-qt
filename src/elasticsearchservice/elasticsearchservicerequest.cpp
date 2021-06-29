@@ -318,7 +318,46 @@ QString ElasticsearchServiceRequestPrivate::toString(const ElasticsearchServiceR
     #define ActionToString(action) \
         case ElasticsearchServiceRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AcceptInboundCrossClusterSearchConnection);
+        ActionToString(AddTags);
+        ActionToString(AssociatePackage);
+        ActionToString(CancelElasticsearchServiceSoftwareUpdate);
+        ActionToString(CreateElasticsearchDomain);
+        ActionToString(CreateOutboundCrossClusterSearchConnection);
+        ActionToString(CreatePackage);
+        ActionToString(DeleteElasticsearchDomain);
+        ActionToString(DeleteElasticsearchServiceRole);
+        ActionToString(DeleteInboundCrossClusterSearchConnection);
+        ActionToString(DeleteOutboundCrossClusterSearchConnection);
+        ActionToString(DeletePackage);
+        ActionToString(DescribeDomainAutoTunes);
+        ActionToString(DescribeElasticsearchDomain);
+        ActionToString(DescribeElasticsearchDomainConfig);
+        ActionToString(DescribeElasticsearchDomains);
+        ActionToString(DescribeElasticsearchInstanceTypeLimits);
+        ActionToString(DescribeInboundCrossClusterSearchConnections);
+        ActionToString(DescribeOutboundCrossClusterSearchConnections);
+        ActionToString(DescribePackages);
+        ActionToString(DescribeReservedElasticsearchInstanceOfferings);
+        ActionToString(DescribeReservedElasticsearchInstances);
+        ActionToString(DissociatePackage);
+        ActionToString(GetCompatibleElasticsearchVersions);
+        ActionToString(GetPackageVersionHistory);
+        ActionToString(GetUpgradeHistory);
+        ActionToString(GetUpgradeStatus);
+        ActionToString(ListDomainNames);
+        ActionToString(ListDomainsForPackage);
+        ActionToString(ListElasticsearchInstanceTypes);
+        ActionToString(ListElasticsearchVersions);
+        ActionToString(ListPackagesForDomain);
+        ActionToString(ListTags);
+        ActionToString(PurchaseReservedElasticsearchInstanceOffering);
+        ActionToString(RejectInboundCrossClusterSearchConnection);
+        ActionToString(RemoveTags);
+        ActionToString(StartElasticsearchServiceSoftwareUpdate);
+        ActionToString(UpdateElasticsearchDomainConfig);
+        ActionToString(UpdatePackage);
+        ActionToString(UpgradeElasticsearchDomain);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

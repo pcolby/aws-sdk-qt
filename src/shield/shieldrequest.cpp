@@ -311,7 +311,39 @@ QString ShieldRequestPrivate::toString(const ShieldRequest::Action &action)
     #define ActionToString(action) \
         case ShieldRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateDRTLogBucket);
+        ActionToString(AssociateDRTRole);
+        ActionToString(AssociateHealthCheck);
+        ActionToString(AssociateProactiveEngagementDetails);
+        ActionToString(CreateProtection);
+        ActionToString(CreateProtectionGroup);
+        ActionToString(CreateSubscription);
+        ActionToString(DeleteProtection);
+        ActionToString(DeleteProtectionGroup);
+        ActionToString(DeleteSubscription);
+        ActionToString(DescribeAttack);
+        ActionToString(DescribeAttackStatistics);
+        ActionToString(DescribeDRTAccess);
+        ActionToString(DescribeEmergencyContactSettings);
+        ActionToString(DescribeProtection);
+        ActionToString(DescribeProtectionGroup);
+        ActionToString(DescribeSubscription);
+        ActionToString(DisableProactiveEngagement);
+        ActionToString(DisassociateDRTLogBucket);
+        ActionToString(DisassociateDRTRole);
+        ActionToString(DisassociateHealthCheck);
+        ActionToString(EnableProactiveEngagement);
+        ActionToString(GetSubscriptionState);
+        ActionToString(ListAttacks);
+        ActionToString(ListProtectionGroups);
+        ActionToString(ListProtections);
+        ActionToString(ListResourcesInProtectionGroup);
+        ActionToString(ListTagsForResource);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateEmergencyContactSettings);
+        ActionToString(UpdateProtectionGroup);
+        ActionToString(UpdateSubscription);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

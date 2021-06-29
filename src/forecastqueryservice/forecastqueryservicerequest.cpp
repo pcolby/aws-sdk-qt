@@ -279,7 +279,7 @@ QString ForecastQueryServiceRequestPrivate::toString(const ForecastQueryServiceR
     #define ActionToString(action) \
         case ForecastQueryServiceRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(QueryForecast);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

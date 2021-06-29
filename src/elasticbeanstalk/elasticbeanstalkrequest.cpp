@@ -325,7 +325,53 @@ QString ElasticBeanstalkRequestPrivate::toString(const ElasticBeanstalkRequest::
     #define ActionToString(action) \
         case ElasticBeanstalkRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AbortEnvironmentUpdate);
+        ActionToString(ApplyEnvironmentManagedAction);
+        ActionToString(AssociateEnvironmentOperationsRole);
+        ActionToString(CheckDNSAvailability);
+        ActionToString(ComposeEnvironments);
+        ActionToString(CreateApplication);
+        ActionToString(CreateApplicationVersion);
+        ActionToString(CreateConfigurationTemplate);
+        ActionToString(CreateEnvironment);
+        ActionToString(CreatePlatformVersion);
+        ActionToString(CreateStorageLocation);
+        ActionToString(DeleteApplication);
+        ActionToString(DeleteApplicationVersion);
+        ActionToString(DeleteConfigurationTemplate);
+        ActionToString(DeleteEnvironmentConfiguration);
+        ActionToString(DeletePlatformVersion);
+        ActionToString(DescribeAccountAttributes);
+        ActionToString(DescribeApplicationVersions);
+        ActionToString(DescribeApplications);
+        ActionToString(DescribeConfigurationOptions);
+        ActionToString(DescribeConfigurationSettings);
+        ActionToString(DescribeEnvironmentHealth);
+        ActionToString(DescribeEnvironmentManagedActionHistory);
+        ActionToString(DescribeEnvironmentManagedActions);
+        ActionToString(DescribeEnvironmentResources);
+        ActionToString(DescribeEnvironments);
+        ActionToString(DescribeEvents);
+        ActionToString(DescribeInstancesHealth);
+        ActionToString(DescribePlatformVersion);
+        ActionToString(DisassociateEnvironmentOperationsRole);
+        ActionToString(ListAvailableSolutionStacks);
+        ActionToString(ListPlatformBranches);
+        ActionToString(ListPlatformVersions);
+        ActionToString(ListTagsForResource);
+        ActionToString(RebuildEnvironment);
+        ActionToString(RequestEnvironmentInfo);
+        ActionToString(RestartAppServer);
+        ActionToString(RetrieveEnvironmentInfo);
+        ActionToString(SwapEnvironmentCNAMEs);
+        ActionToString(TerminateEnvironment);
+        ActionToString(UpdateApplication);
+        ActionToString(UpdateApplicationResourceLifecycle);
+        ActionToString(UpdateApplicationVersion);
+        ActionToString(UpdateConfigurationTemplate);
+        ActionToString(UpdateEnvironment);
+        ActionToString(UpdateTagsForResource);
+        ActionToString(ValidateConfigurationSettings);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

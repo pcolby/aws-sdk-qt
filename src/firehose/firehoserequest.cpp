@@ -290,7 +290,18 @@ QString FirehoseRequestPrivate::toString(const FirehoseRequest::Action &action)
     #define ActionToString(action) \
         case FirehoseRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateDeliveryStream);
+        ActionToString(DeleteDeliveryStream);
+        ActionToString(DescribeDeliveryStream);
+        ActionToString(ListDeliveryStreams);
+        ActionToString(ListTagsForDeliveryStream);
+        ActionToString(PutRecord);
+        ActionToString(PutRecordBatch);
+        ActionToString(StartDeliveryStreamEncryption);
+        ActionToString(StopDeliveryStreamEncryption);
+        ActionToString(TagDeliveryStream);
+        ActionToString(UntagDeliveryStream);
+        ActionToString(UpdateDestination);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

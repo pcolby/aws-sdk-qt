@@ -301,7 +301,29 @@ QString SfnRequestPrivate::toString(const SfnRequest::Action &action)
     #define ActionToString(action) \
         case SfnRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateActivity);
+        ActionToString(CreateStateMachine);
+        ActionToString(DeleteActivity);
+        ActionToString(DeleteStateMachine);
+        ActionToString(DescribeActivity);
+        ActionToString(DescribeExecution);
+        ActionToString(DescribeStateMachine);
+        ActionToString(DescribeStateMachineForExecution);
+        ActionToString(GetActivityTask);
+        ActionToString(GetExecutionHistory);
+        ActionToString(ListActivities);
+        ActionToString(ListExecutions);
+        ActionToString(ListStateMachines);
+        ActionToString(ListTagsForResource);
+        ActionToString(SendTaskFailure);
+        ActionToString(SendTaskHeartbeat);
+        ActionToString(SendTaskSuccess);
+        ActionToString(StartExecution);
+        ActionToString(StartSyncExecution);
+        ActionToString(StopExecution);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateStateMachine);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

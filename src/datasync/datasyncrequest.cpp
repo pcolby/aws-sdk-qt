@@ -313,7 +313,41 @@ QString DataSyncRequestPrivate::toString(const DataSyncRequest::Action &action)
     #define ActionToString(action) \
         case DataSyncRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CancelTaskExecution);
+        ActionToString(CreateAgent);
+        ActionToString(CreateLocationEfs);
+        ActionToString(CreateLocationFsxWindows);
+        ActionToString(CreateLocationNfs);
+        ActionToString(CreateLocationObjectStorage);
+        ActionToString(CreateLocationS3);
+        ActionToString(CreateLocationSmb);
+        ActionToString(CreateTask);
+        ActionToString(DeleteAgent);
+        ActionToString(DeleteLocation);
+        ActionToString(DeleteTask);
+        ActionToString(DescribeAgent);
+        ActionToString(DescribeLocationEfs);
+        ActionToString(DescribeLocationFsxWindows);
+        ActionToString(DescribeLocationNfs);
+        ActionToString(DescribeLocationObjectStorage);
+        ActionToString(DescribeLocationS3);
+        ActionToString(DescribeLocationSmb);
+        ActionToString(DescribeTask);
+        ActionToString(DescribeTaskExecution);
+        ActionToString(ListAgents);
+        ActionToString(ListLocations);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListTaskExecutions);
+        ActionToString(ListTasks);
+        ActionToString(StartTaskExecution);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateAgent);
+        ActionToString(UpdateLocationNfs);
+        ActionToString(UpdateLocationObjectStorage);
+        ActionToString(UpdateLocationSmb);
+        ActionToString(UpdateTask);
+        ActionToString(UpdateTaskExecution);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

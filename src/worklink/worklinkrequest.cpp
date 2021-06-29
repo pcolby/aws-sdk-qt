@@ -311,7 +311,39 @@ QString WorkLinkRequestPrivate::toString(const WorkLinkRequest::Action &action)
     #define ActionToString(action) \
         case WorkLinkRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateDomain);
+        ActionToString(AssociateWebsiteAuthorizationProvider);
+        ActionToString(AssociateWebsiteCertificateAuthority);
+        ActionToString(CreateFleet);
+        ActionToString(DeleteFleet);
+        ActionToString(DescribeAuditStreamConfiguration);
+        ActionToString(DescribeCompanyNetworkConfiguration);
+        ActionToString(DescribeDevice);
+        ActionToString(DescribeDevicePolicyConfiguration);
+        ActionToString(DescribeDomain);
+        ActionToString(DescribeFleetMetadata);
+        ActionToString(DescribeIdentityProviderConfiguration);
+        ActionToString(DescribeWebsiteCertificateAuthority);
+        ActionToString(DisassociateDomain);
+        ActionToString(DisassociateWebsiteAuthorizationProvider);
+        ActionToString(DisassociateWebsiteCertificateAuthority);
+        ActionToString(ListDevices);
+        ActionToString(ListDomains);
+        ActionToString(ListFleets);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListWebsiteAuthorizationProviders);
+        ActionToString(ListWebsiteCertificateAuthorities);
+        ActionToString(RestoreDomainAccess);
+        ActionToString(RevokeDomainAccess);
+        ActionToString(SignOutUser);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateAuditStreamConfiguration);
+        ActionToString(UpdateCompanyNetworkConfiguration);
+        ActionToString(UpdateDevicePolicyConfiguration);
+        ActionToString(UpdateDomainMetadata);
+        ActionToString(UpdateFleetMetadata);
+        ActionToString(UpdateIdentityProviderConfiguration);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

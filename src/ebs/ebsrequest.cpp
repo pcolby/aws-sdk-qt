@@ -284,7 +284,12 @@ QString EbsRequestPrivate::toString(const EbsRequest::Action &action)
     #define ActionToString(action) \
         case EbsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CompleteSnapshot);
+        ActionToString(GetSnapshotBlock);
+        ActionToString(ListChangedBlocks);
+        ActionToString(ListSnapshotBlocks);
+        ActionToString(PutSnapshotBlock);
+        ActionToString(StartSnapshot);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

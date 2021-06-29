@@ -319,7 +319,47 @@ QString AppSyncRequestPrivate::toString(const AppSyncRequest::Action &action)
     #define ActionToString(action) \
         case AppSyncRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateApiCache);
+        ActionToString(CreateApiKey);
+        ActionToString(CreateDataSource);
+        ActionToString(CreateFunction);
+        ActionToString(CreateGraphqlApi);
+        ActionToString(CreateResolver);
+        ActionToString(CreateType);
+        ActionToString(DeleteApiCache);
+        ActionToString(DeleteApiKey);
+        ActionToString(DeleteDataSource);
+        ActionToString(DeleteFunction);
+        ActionToString(DeleteGraphqlApi);
+        ActionToString(DeleteResolver);
+        ActionToString(DeleteType);
+        ActionToString(FlushApiCache);
+        ActionToString(GetApiCache);
+        ActionToString(GetDataSource);
+        ActionToString(GetFunction);
+        ActionToString(GetGraphqlApi);
+        ActionToString(GetIntrospectionSchema);
+        ActionToString(GetResolver);
+        ActionToString(GetSchemaCreationStatus);
+        ActionToString(GetType);
+        ActionToString(ListApiKeys);
+        ActionToString(ListDataSources);
+        ActionToString(ListFunctions);
+        ActionToString(ListGraphqlApis);
+        ActionToString(ListResolvers);
+        ActionToString(ListResolversByFunction);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListTypes);
+        ActionToString(StartSchemaCreation);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateApiCache);
+        ActionToString(UpdateApiKey);
+        ActionToString(UpdateDataSource);
+        ActionToString(UpdateFunction);
+        ActionToString(UpdateGraphqlApi);
+        ActionToString(UpdateResolver);
+        ActionToString(UpdateType);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

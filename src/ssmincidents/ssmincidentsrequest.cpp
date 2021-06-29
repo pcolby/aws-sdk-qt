@@ -307,7 +307,35 @@ QString SSMIncidentsRequestPrivate::toString(const SSMIncidentsRequest::Action &
     #define ActionToString(action) \
         case SSMIncidentsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateReplicationSet);
+        ActionToString(CreateResponsePlan);
+        ActionToString(CreateTimelineEvent);
+        ActionToString(DeleteIncidentRecord);
+        ActionToString(DeleteReplicationSet);
+        ActionToString(DeleteResourcePolicy);
+        ActionToString(DeleteResponsePlan);
+        ActionToString(DeleteTimelineEvent);
+        ActionToString(GetIncidentRecord);
+        ActionToString(GetReplicationSet);
+        ActionToString(GetResourcePolicies);
+        ActionToString(GetResponsePlan);
+        ActionToString(GetTimelineEvent);
+        ActionToString(ListIncidentRecords);
+        ActionToString(ListRelatedItems);
+        ActionToString(ListReplicationSets);
+        ActionToString(ListResponsePlans);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListTimelineEvents);
+        ActionToString(PutResourcePolicy);
+        ActionToString(StartIncident);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateDeletionProtection);
+        ActionToString(UpdateIncidentRecord);
+        ActionToString(UpdateRelatedItems);
+        ActionToString(UpdateReplicationSet);
+        ActionToString(UpdateResponsePlan);
+        ActionToString(UpdateTimelineEvent);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

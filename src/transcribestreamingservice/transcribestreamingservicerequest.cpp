@@ -280,7 +280,8 @@ QString TranscribeStreamingServiceRequestPrivate::toString(const TranscribeStrea
     #define ActionToString(action) \
         case TranscribeStreamingServiceRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(StartMedicalStreamTranscription);
+        ActionToString(StartStreamTranscription);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -297,7 +297,25 @@ QString LookoutforVisionRequestPrivate::toString(const LookoutforVisionRequest::
     #define ActionToString(action) \
         case LookoutforVisionRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateDataset);
+        ActionToString(CreateModel);
+        ActionToString(CreateProject);
+        ActionToString(DeleteDataset);
+        ActionToString(DeleteModel);
+        ActionToString(DeleteProject);
+        ActionToString(DescribeDataset);
+        ActionToString(DescribeModel);
+        ActionToString(DescribeProject);
+        ActionToString(DetectAnomalies);
+        ActionToString(ListDatasetEntries);
+        ActionToString(ListModels);
+        ActionToString(ListProjects);
+        ActionToString(ListTagsForResource);
+        ActionToString(StartModel);
+        ActionToString(StopModel);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateDatasetEntries);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

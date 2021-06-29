@@ -281,7 +281,9 @@ QString S3OutpostsRequestPrivate::toString(const S3OutpostsRequest::Action &acti
     #define ActionToString(action) \
         case S3OutpostsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateEndpoint);
+        ActionToString(DeleteEndpoint);
+        ActionToString(ListEndpoints);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

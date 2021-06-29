@@ -292,7 +292,20 @@ QString TranslateRequestPrivate::toString(const TranslateRequest::Action &action
     #define ActionToString(action) \
         case TranslateRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateParallelData);
+        ActionToString(DeleteParallelData);
+        ActionToString(DeleteTerminology);
+        ActionToString(DescribeTextTranslationJob);
+        ActionToString(GetParallelData);
+        ActionToString(GetTerminology);
+        ActionToString(ImportTerminology);
+        ActionToString(ListParallelData);
+        ActionToString(ListTerminologies);
+        ActionToString(ListTextTranslationJobs);
+        ActionToString(StartTextTranslationJob);
+        ActionToString(StopTextTranslationJob);
+        ActionToString(TranslateText);
+        ActionToString(UpdateParallelData);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

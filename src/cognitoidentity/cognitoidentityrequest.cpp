@@ -301,7 +301,29 @@ QString CognitoIdentityRequestPrivate::toString(const CognitoIdentityRequest::Ac
     #define ActionToString(action) \
         case CognitoIdentityRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateIdentityPool);
+        ActionToString(DeleteIdentities);
+        ActionToString(DeleteIdentityPool);
+        ActionToString(DescribeIdentity);
+        ActionToString(DescribeIdentityPool);
+        ActionToString(GetCredentialsForIdentity);
+        ActionToString(GetId);
+        ActionToString(GetIdentityPoolRoles);
+        ActionToString(GetOpenIdToken);
+        ActionToString(GetOpenIdTokenForDeveloperIdentity);
+        ActionToString(GetPrincipalTagAttributeMap);
+        ActionToString(ListIdentities);
+        ActionToString(ListIdentityPools);
+        ActionToString(ListTagsForResource);
+        ActionToString(LookupDeveloperIdentity);
+        ActionToString(MergeDeveloperIdentities);
+        ActionToString(SetIdentityPoolRoles);
+        ActionToString(SetPrincipalTagAttributeMap);
+        ActionToString(TagResource);
+        ActionToString(UnlinkDeveloperIdentity);
+        ActionToString(UnlinkIdentity);
+        ActionToString(UntagResource);
+        ActionToString(UpdateIdentityPool);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -291,7 +291,19 @@ QString SyntheticsRequestPrivate::toString(const SyntheticsRequest::Action &acti
     #define ActionToString(action) \
         case SyntheticsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateCanary);
+        ActionToString(DeleteCanary);
+        ActionToString(DescribeCanaries);
+        ActionToString(DescribeCanariesLastRun);
+        ActionToString(DescribeRuntimeVersions);
+        ActionToString(GetCanary);
+        ActionToString(GetCanaryRuns);
+        ActionToString(ListTagsForResource);
+        ActionToString(StartCanary);
+        ActionToString(StopCanary);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateCanary);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

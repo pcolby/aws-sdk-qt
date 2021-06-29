@@ -287,7 +287,15 @@ QString AppIntegrationsServiceRequestPrivate::toString(const AppIntegrationsServ
     #define ActionToString(action) \
         case AppIntegrationsServiceRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateEventIntegration);
+        ActionToString(DeleteEventIntegration);
+        ActionToString(GetEventIntegration);
+        ActionToString(ListEventIntegrationAssociations);
+        ActionToString(ListEventIntegrations);
+        ActionToString(ListTagsForResource);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateEventIntegration);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

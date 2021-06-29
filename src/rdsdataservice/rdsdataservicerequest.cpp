@@ -284,7 +284,12 @@ QString RDSDataServiceRequestPrivate::toString(const RDSDataServiceRequest::Acti
     #define ActionToString(action) \
         case RDSDataServiceRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(BatchExecuteStatement);
+        ActionToString(BeginTransaction);
+        ActionToString(CommitTransaction);
+        ActionToString(ExecuteSql);
+        ActionToString(ExecuteStatement);
+        ActionToString(RollbackTransaction);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

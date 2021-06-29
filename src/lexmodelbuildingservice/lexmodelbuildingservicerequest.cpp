@@ -317,7 +317,45 @@ QString LexModelBuildingServiceRequestPrivate::toString(const LexModelBuildingSe
     #define ActionToString(action) \
         case LexModelBuildingServiceRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateBotVersion);
+        ActionToString(CreateIntentVersion);
+        ActionToString(CreateSlotTypeVersion);
+        ActionToString(DeleteBot);
+        ActionToString(DeleteBotAlias);
+        ActionToString(DeleteBotChannelAssociation);
+        ActionToString(DeleteBotVersion);
+        ActionToString(DeleteIntent);
+        ActionToString(DeleteIntentVersion);
+        ActionToString(DeleteSlotType);
+        ActionToString(DeleteSlotTypeVersion);
+        ActionToString(DeleteUtterances);
+        ActionToString(GetBot);
+        ActionToString(GetBotAlias);
+        ActionToString(GetBotAliases);
+        ActionToString(GetBotChannelAssociation);
+        ActionToString(GetBotChannelAssociations);
+        ActionToString(GetBotVersions);
+        ActionToString(GetBots);
+        ActionToString(GetBuiltinIntent);
+        ActionToString(GetBuiltinIntents);
+        ActionToString(GetBuiltinSlotTypes);
+        ActionToString(GetExport);
+        ActionToString(GetImport);
+        ActionToString(GetIntent);
+        ActionToString(GetIntentVersions);
+        ActionToString(GetIntents);
+        ActionToString(GetSlotType);
+        ActionToString(GetSlotTypeVersions);
+        ActionToString(GetSlotTypes);
+        ActionToString(GetUtterancesView);
+        ActionToString(ListTagsForResource);
+        ActionToString(PutBot);
+        ActionToString(PutBotAlias);
+        ActionToString(PutIntent);
+        ActionToString(PutSlotType);
+        ActionToString(StartImport);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

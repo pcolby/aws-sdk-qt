@@ -288,7 +288,16 @@ QString OutpostsRequestPrivate::toString(const OutpostsRequest::Action &action)
     #define ActionToString(action) \
         case OutpostsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateOutpost);
+        ActionToString(DeleteOutpost);
+        ActionToString(DeleteSite);
+        ActionToString(GetOutpost);
+        ActionToString(GetOutpostInstanceTypes);
+        ActionToString(ListOutposts);
+        ActionToString(ListSites);
+        ActionToString(ListTagsForResource);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

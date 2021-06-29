@@ -294,7 +294,22 @@ QString ResourceGroupsRequestPrivate::toString(const ResourceGroupsRequest::Acti
     #define ActionToString(action) \
         case ResourceGroupsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateGroup);
+        ActionToString(DeleteGroup);
+        ActionToString(GetGroup);
+        ActionToString(GetGroupConfiguration);
+        ActionToString(GetGroupQuery);
+        ActionToString(GetTags);
+        ActionToString(GroupResources);
+        ActionToString(ListGroupResources);
+        ActionToString(ListGroups);
+        ActionToString(PutGroupConfiguration);
+        ActionToString(SearchResources);
+        ActionToString(Tag);
+        ActionToString(UngroupResources);
+        ActionToString(Untag);
+        ActionToString(UpdateGroup);
+        ActionToString(UpdateGroupQuery);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

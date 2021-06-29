@@ -313,7 +313,41 @@ QString NetworkManagerRequestPrivate::toString(const NetworkManagerRequest::Acti
     #define ActionToString(action) \
         case NetworkManagerRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateCustomerGateway);
+        ActionToString(AssociateLink);
+        ActionToString(AssociateTransitGatewayConnectPeer);
+        ActionToString(CreateConnection);
+        ActionToString(CreateDevice);
+        ActionToString(CreateGlobalNetwork);
+        ActionToString(CreateLink);
+        ActionToString(CreateSite);
+        ActionToString(DeleteConnection);
+        ActionToString(DeleteDevice);
+        ActionToString(DeleteGlobalNetwork);
+        ActionToString(DeleteLink);
+        ActionToString(DeleteSite);
+        ActionToString(DeregisterTransitGateway);
+        ActionToString(DescribeGlobalNetworks);
+        ActionToString(DisassociateCustomerGateway);
+        ActionToString(DisassociateLink);
+        ActionToString(DisassociateTransitGatewayConnectPeer);
+        ActionToString(GetConnections);
+        ActionToString(GetCustomerGatewayAssociations);
+        ActionToString(GetDevices);
+        ActionToString(GetLinkAssociations);
+        ActionToString(GetLinks);
+        ActionToString(GetSites);
+        ActionToString(GetTransitGatewayConnectPeerAssociations);
+        ActionToString(GetTransitGatewayRegistrations);
+        ActionToString(ListTagsForResource);
+        ActionToString(RegisterTransitGateway);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateConnection);
+        ActionToString(UpdateDevice);
+        ActionToString(UpdateGlobalNetwork);
+        ActionToString(UpdateLink);
+        ActionToString(UpdateSite);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

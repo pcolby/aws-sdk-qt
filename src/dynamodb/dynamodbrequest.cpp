@@ -328,7 +328,56 @@ QString DynamoDBRequestPrivate::toString(const DynamoDBRequest::Action &action)
     #define ActionToString(action) \
         case DynamoDBRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(BatchExecuteStatement);
+        ActionToString(BatchGetItem);
+        ActionToString(BatchWriteItem);
+        ActionToString(CreateBackup);
+        ActionToString(CreateGlobalTable);
+        ActionToString(CreateTable);
+        ActionToString(DeleteBackup);
+        ActionToString(DeleteItem);
+        ActionToString(DeleteTable);
+        ActionToString(DescribeBackup);
+        ActionToString(DescribeContinuousBackups);
+        ActionToString(DescribeContributorInsights);
+        ActionToString(DescribeEndpoints);
+        ActionToString(DescribeExport);
+        ActionToString(DescribeGlobalTable);
+        ActionToString(DescribeGlobalTableSettings);
+        ActionToString(DescribeKinesisStreamingDestination);
+        ActionToString(DescribeLimits);
+        ActionToString(DescribeTable);
+        ActionToString(DescribeTableReplicaAutoScaling);
+        ActionToString(DescribeTimeToLive);
+        ActionToString(DisableKinesisStreamingDestination);
+        ActionToString(EnableKinesisStreamingDestination);
+        ActionToString(ExecuteStatement);
+        ActionToString(ExecuteTransaction);
+        ActionToString(ExportTableToPointInTime);
+        ActionToString(GetItem);
+        ActionToString(ListBackups);
+        ActionToString(ListContributorInsights);
+        ActionToString(ListExports);
+        ActionToString(ListGlobalTables);
+        ActionToString(ListTables);
+        ActionToString(ListTagsOfResource);
+        ActionToString(PutItem);
+        ActionToString(Query);
+        ActionToString(RestoreTableFromBackup);
+        ActionToString(RestoreTableToPointInTime);
+        ActionToString(Scan);
+        ActionToString(TagResource);
+        ActionToString(TransactGetItems);
+        ActionToString(TransactWriteItems);
+        ActionToString(UntagResource);
+        ActionToString(UpdateContinuousBackups);
+        ActionToString(UpdateContributorInsights);
+        ActionToString(UpdateGlobalTable);
+        ActionToString(UpdateGlobalTableSettings);
+        ActionToString(UpdateItem);
+        ActionToString(UpdateTable);
+        ActionToString(UpdateTableReplicaAutoScaling);
+        ActionToString(UpdateTimeToLive);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -283,7 +283,11 @@ QString AugmentedAIRuntimeRequestPrivate::toString(const AugmentedAIRuntimeReque
     #define ActionToString(action) \
         case AugmentedAIRuntimeRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(DeleteHumanLoop);
+        ActionToString(DescribeHumanLoop);
+        ActionToString(ListHumanLoops);
+        ActionToString(StartHumanLoop);
+        ActionToString(StopHumanLoop);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

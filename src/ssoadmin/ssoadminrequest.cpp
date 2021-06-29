@@ -309,7 +309,37 @@ QString SSOAdminRequestPrivate::toString(const SSOAdminRequest::Action &action)
     #define ActionToString(action) \
         case SSOAdminRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AttachManagedPolicyToPermissionSet);
+        ActionToString(CreateAccountAssignment);
+        ActionToString(CreateInstanceAccessControlAttributeConfiguration);
+        ActionToString(CreatePermissionSet);
+        ActionToString(DeleteAccountAssignment);
+        ActionToString(DeleteInlinePolicyFromPermissionSet);
+        ActionToString(DeleteInstanceAccessControlAttributeConfiguration);
+        ActionToString(DeletePermissionSet);
+        ActionToString(DescribeAccountAssignmentCreationStatus);
+        ActionToString(DescribeAccountAssignmentDeletionStatus);
+        ActionToString(DescribeInstanceAccessControlAttributeConfiguration);
+        ActionToString(DescribePermissionSet);
+        ActionToString(DescribePermissionSetProvisioningStatus);
+        ActionToString(DetachManagedPolicyFromPermissionSet);
+        ActionToString(GetInlinePolicyForPermissionSet);
+        ActionToString(ListAccountAssignmentCreationStatus);
+        ActionToString(ListAccountAssignmentDeletionStatus);
+        ActionToString(ListAccountAssignments);
+        ActionToString(ListAccountsForProvisionedPermissionSet);
+        ActionToString(ListInstances);
+        ActionToString(ListManagedPoliciesInPermissionSet);
+        ActionToString(ListPermissionSetProvisioningStatus);
+        ActionToString(ListPermissionSets);
+        ActionToString(ListPermissionSetsProvisionedToAccount);
+        ActionToString(ListTagsForResource);
+        ActionToString(ProvisionPermissionSet);
+        ActionToString(PutInlinePolicyToPermissionSet);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateInstanceAccessControlAttributeConfiguration);
+        ActionToString(UpdatePermissionSet);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

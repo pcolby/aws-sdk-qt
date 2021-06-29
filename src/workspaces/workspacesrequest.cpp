@@ -331,7 +331,59 @@ QString WorkSpacesRequestPrivate::toString(const WorkSpacesRequest::Action &acti
     #define ActionToString(action) \
         case WorkSpacesRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateConnectionAlias);
+        ActionToString(AssociateIpGroups);
+        ActionToString(AuthorizeIpRules);
+        ActionToString(CopyWorkspaceImage);
+        ActionToString(CreateConnectionAlias);
+        ActionToString(CreateIpGroup);
+        ActionToString(CreateTags);
+        ActionToString(CreateWorkspaceBundle);
+        ActionToString(CreateWorkspaces);
+        ActionToString(DeleteConnectionAlias);
+        ActionToString(DeleteIpGroup);
+        ActionToString(DeleteTags);
+        ActionToString(DeleteWorkspaceBundle);
+        ActionToString(DeleteWorkspaceImage);
+        ActionToString(DeregisterWorkspaceDirectory);
+        ActionToString(DescribeAccount);
+        ActionToString(DescribeAccountModifications);
+        ActionToString(DescribeClientProperties);
+        ActionToString(DescribeConnectionAliasPermissions);
+        ActionToString(DescribeConnectionAliases);
+        ActionToString(DescribeIpGroups);
+        ActionToString(DescribeTags);
+        ActionToString(DescribeWorkspaceBundles);
+        ActionToString(DescribeWorkspaceDirectories);
+        ActionToString(DescribeWorkspaceImagePermissions);
+        ActionToString(DescribeWorkspaceImages);
+        ActionToString(DescribeWorkspaceSnapshots);
+        ActionToString(DescribeWorkspaces);
+        ActionToString(DescribeWorkspacesConnectionStatus);
+        ActionToString(DisassociateConnectionAlias);
+        ActionToString(DisassociateIpGroups);
+        ActionToString(ImportWorkspaceImage);
+        ActionToString(ListAvailableManagementCidrRanges);
+        ActionToString(MigrateWorkspace);
+        ActionToString(ModifyAccount);
+        ActionToString(ModifyClientProperties);
+        ActionToString(ModifySelfservicePermissions);
+        ActionToString(ModifyWorkspaceAccessProperties);
+        ActionToString(ModifyWorkspaceCreationProperties);
+        ActionToString(ModifyWorkspaceProperties);
+        ActionToString(ModifyWorkspaceState);
+        ActionToString(RebootWorkspaces);
+        ActionToString(RebuildWorkspaces);
+        ActionToString(RegisterWorkspaceDirectory);
+        ActionToString(RestoreWorkspace);
+        ActionToString(RevokeIpRules);
+        ActionToString(StartWorkspaces);
+        ActionToString(StopWorkspaces);
+        ActionToString(TerminateWorkspaces);
+        ActionToString(UpdateConnectionAliasPermission);
+        ActionToString(UpdateRulesOfIpGroup);
+        ActionToString(UpdateWorkspaceBundle);
+        ActionToString(UpdateWorkspaceImagePermission);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

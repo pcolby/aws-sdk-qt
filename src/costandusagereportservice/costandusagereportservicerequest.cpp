@@ -282,7 +282,10 @@ QString CostandUsageReportServiceRequestPrivate::toString(const CostandUsageRepo
     #define ActionToString(action) \
         case CostandUsageReportServiceRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(DeleteReportDefinition);
+        ActionToString(DescribeReportDefinitions);
+        ActionToString(ModifyReportDefinition);
+        ActionToString(PutReportDefinition);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

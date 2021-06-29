@@ -293,7 +293,21 @@ QString DetectiveRequestPrivate::toString(const DetectiveRequest::Action &action
     #define ActionToString(action) \
         case DetectiveRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AcceptInvitation);
+        ActionToString(CreateGraph);
+        ActionToString(CreateMembers);
+        ActionToString(DeleteGraph);
+        ActionToString(DeleteMembers);
+        ActionToString(DisassociateMembership);
+        ActionToString(GetMembers);
+        ActionToString(ListGraphs);
+        ActionToString(ListInvitations);
+        ActionToString(ListMembers);
+        ActionToString(ListTagsForResource);
+        ActionToString(RejectInvitation);
+        ActionToString(StartMonitoringMember);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

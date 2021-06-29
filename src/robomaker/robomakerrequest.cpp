@@ -335,7 +335,63 @@ QString RoboMakerRequestPrivate::toString(const RoboMakerRequest::Action &action
     #define ActionToString(action) \
         case RoboMakerRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(BatchDeleteWorlds);
+        ActionToString(BatchDescribeSimulationJob);
+        ActionToString(CancelDeploymentJob);
+        ActionToString(CancelSimulationJob);
+        ActionToString(CancelSimulationJobBatch);
+        ActionToString(CancelWorldExportJob);
+        ActionToString(CancelWorldGenerationJob);
+        ActionToString(CreateDeploymentJob);
+        ActionToString(CreateFleet);
+        ActionToString(CreateRobot);
+        ActionToString(CreateRobotApplication);
+        ActionToString(CreateRobotApplicationVersion);
+        ActionToString(CreateSimulationApplication);
+        ActionToString(CreateSimulationApplicationVersion);
+        ActionToString(CreateSimulationJob);
+        ActionToString(CreateWorldExportJob);
+        ActionToString(CreateWorldGenerationJob);
+        ActionToString(CreateWorldTemplate);
+        ActionToString(DeleteFleet);
+        ActionToString(DeleteRobot);
+        ActionToString(DeleteRobotApplication);
+        ActionToString(DeleteSimulationApplication);
+        ActionToString(DeleteWorldTemplate);
+        ActionToString(DeregisterRobot);
+        ActionToString(DescribeDeploymentJob);
+        ActionToString(DescribeFleet);
+        ActionToString(DescribeRobot);
+        ActionToString(DescribeRobotApplication);
+        ActionToString(DescribeSimulationApplication);
+        ActionToString(DescribeSimulationJob);
+        ActionToString(DescribeSimulationJobBatch);
+        ActionToString(DescribeWorld);
+        ActionToString(DescribeWorldExportJob);
+        ActionToString(DescribeWorldGenerationJob);
+        ActionToString(DescribeWorldTemplate);
+        ActionToString(GetWorldTemplateBody);
+        ActionToString(ListDeploymentJobs);
+        ActionToString(ListFleets);
+        ActionToString(ListRobotApplications);
+        ActionToString(ListRobots);
+        ActionToString(ListSimulationApplications);
+        ActionToString(ListSimulationJobBatches);
+        ActionToString(ListSimulationJobs);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListWorldExportJobs);
+        ActionToString(ListWorldGenerationJobs);
+        ActionToString(ListWorldTemplates);
+        ActionToString(ListWorlds);
+        ActionToString(RegisterRobot);
+        ActionToString(RestartSimulationJob);
+        ActionToString(StartSimulationJobBatch);
+        ActionToString(SyncDeploymentJob);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateRobotApplication);
+        ActionToString(UpdateSimulationApplication);
+        ActionToString(UpdateWorldTemplate);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

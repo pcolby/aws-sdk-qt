@@ -335,7 +335,63 @@ QString FraudDetectorRequestPrivate::toString(const FraudDetectorRequest::Action
     #define ActionToString(action) \
         case FraudDetectorRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(BatchCreateVariable);
+        ActionToString(BatchGetVariable);
+        ActionToString(CancelBatchPredictionJob);
+        ActionToString(CreateBatchPredictionJob);
+        ActionToString(CreateDetectorVersion);
+        ActionToString(CreateModel);
+        ActionToString(CreateModelVersion);
+        ActionToString(CreateRule);
+        ActionToString(CreateVariable);
+        ActionToString(DeleteBatchPredictionJob);
+        ActionToString(DeleteDetector);
+        ActionToString(DeleteDetectorVersion);
+        ActionToString(DeleteEntityType);
+        ActionToString(DeleteEvent);
+        ActionToString(DeleteEventType);
+        ActionToString(DeleteExternalModel);
+        ActionToString(DeleteLabel);
+        ActionToString(DeleteModel);
+        ActionToString(DeleteModelVersion);
+        ActionToString(DeleteOutcome);
+        ActionToString(DeleteRule);
+        ActionToString(DeleteVariable);
+        ActionToString(DescribeDetector);
+        ActionToString(DescribeModelVersions);
+        ActionToString(GetBatchPredictionJobs);
+        ActionToString(GetDetectorVersion);
+        ActionToString(GetDetectors);
+        ActionToString(GetEntityTypes);
+        ActionToString(GetEventPrediction);
+        ActionToString(GetEventTypes);
+        ActionToString(GetExternalModels);
+        ActionToString(GetKMSEncryptionKey);
+        ActionToString(GetLabels);
+        ActionToString(GetModelVersion);
+        ActionToString(GetModels);
+        ActionToString(GetOutcomes);
+        ActionToString(GetRules);
+        ActionToString(GetVariables);
+        ActionToString(ListTagsForResource);
+        ActionToString(PutDetector);
+        ActionToString(PutEntityType);
+        ActionToString(PutEventType);
+        ActionToString(PutExternalModel);
+        ActionToString(PutKMSEncryptionKey);
+        ActionToString(PutLabel);
+        ActionToString(PutOutcome);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateDetectorVersion);
+        ActionToString(UpdateDetectorVersionMetadata);
+        ActionToString(UpdateDetectorVersionStatus);
+        ActionToString(UpdateModel);
+        ActionToString(UpdateModelVersion);
+        ActionToString(UpdateModelVersionStatus);
+        ActionToString(UpdateRuleMetadata);
+        ActionToString(UpdateRuleVersion);
+        ActionToString(UpdateVariable);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

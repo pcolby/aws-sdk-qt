@@ -300,7 +300,28 @@ QString DataExchangeRequestPrivate::toString(const DataExchangeRequest::Action &
     #define ActionToString(action) \
         case DataExchangeRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CancelJob);
+        ActionToString(CreateDataSet);
+        ActionToString(CreateJob);
+        ActionToString(CreateRevision);
+        ActionToString(DeleteAsset);
+        ActionToString(DeleteDataSet);
+        ActionToString(DeleteRevision);
+        ActionToString(GetAsset);
+        ActionToString(GetDataSet);
+        ActionToString(GetJob);
+        ActionToString(GetRevision);
+        ActionToString(ListDataSetRevisions);
+        ActionToString(ListDataSets);
+        ActionToString(ListJobs);
+        ActionToString(ListRevisionAssets);
+        ActionToString(ListTagsForResource);
+        ActionToString(StartJob);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateAsset);
+        ActionToString(UpdateDataSet);
+        ActionToString(UpdateRevision);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

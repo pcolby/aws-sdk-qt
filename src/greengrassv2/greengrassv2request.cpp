@@ -301,7 +301,29 @@ QString GreengrassV2RequestPrivate::toString(const GreengrassV2Request::Action &
     #define ActionToString(action) \
         case GreengrassV2Request::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(BatchAssociateClientDeviceWithCoreDevice);
+        ActionToString(BatchDisassociateClientDeviceFromCoreDevice);
+        ActionToString(CancelDeployment);
+        ActionToString(CreateComponentVersion);
+        ActionToString(CreateDeployment);
+        ActionToString(DeleteComponent);
+        ActionToString(DeleteCoreDevice);
+        ActionToString(DescribeComponent);
+        ActionToString(GetComponent);
+        ActionToString(GetComponentVersionArtifact);
+        ActionToString(GetCoreDevice);
+        ActionToString(GetDeployment);
+        ActionToString(ListClientDevicesAssociatedWithCoreDevice);
+        ActionToString(ListComponentVersions);
+        ActionToString(ListComponents);
+        ActionToString(ListCoreDevices);
+        ActionToString(ListDeployments);
+        ActionToString(ListEffectiveDeployments);
+        ActionToString(ListInstalledComponents);
+        ActionToString(ListTagsForResource);
+        ActionToString(ResolveComponentCandidates);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

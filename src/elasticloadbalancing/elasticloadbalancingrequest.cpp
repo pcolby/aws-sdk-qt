@@ -307,7 +307,35 @@ QString ElasticLoadBalancingRequestPrivate::toString(const ElasticLoadBalancingR
     #define ActionToString(action) \
         case ElasticLoadBalancingRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AddTags);
+        ActionToString(ApplySecurityGroupsToLoadBalancer);
+        ActionToString(AttachLoadBalancerToSubnets);
+        ActionToString(ConfigureHealthCheck);
+        ActionToString(CreateAppCookieStickinessPolicy);
+        ActionToString(CreateLBCookieStickinessPolicy);
+        ActionToString(CreateLoadBalancer);
+        ActionToString(CreateLoadBalancerListeners);
+        ActionToString(CreateLoadBalancerPolicy);
+        ActionToString(DeleteLoadBalancer);
+        ActionToString(DeleteLoadBalancerListeners);
+        ActionToString(DeleteLoadBalancerPolicy);
+        ActionToString(DeregisterInstancesFromLoadBalancer);
+        ActionToString(DescribeAccountLimits);
+        ActionToString(DescribeInstanceHealth);
+        ActionToString(DescribeLoadBalancerAttributes);
+        ActionToString(DescribeLoadBalancerPolicies);
+        ActionToString(DescribeLoadBalancerPolicyTypes);
+        ActionToString(DescribeLoadBalancers);
+        ActionToString(DescribeTags);
+        ActionToString(DetachLoadBalancerFromSubnets);
+        ActionToString(DisableAvailabilityZonesForLoadBalancer);
+        ActionToString(EnableAvailabilityZonesForLoadBalancer);
+        ActionToString(ModifyLoadBalancerAttributes);
+        ActionToString(RegisterInstancesWithLoadBalancer);
+        ActionToString(RemoveTags);
+        ActionToString(SetLoadBalancerListenerSSLCertificate);
+        ActionToString(SetLoadBalancerPoliciesForBackendServer);
+        ActionToString(SetLoadBalancerPoliciesOfListener);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

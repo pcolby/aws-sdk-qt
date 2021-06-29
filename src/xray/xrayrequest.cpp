@@ -305,7 +305,33 @@ QString XRayRequestPrivate::toString(const XRayRequest::Action &action)
     #define ActionToString(action) \
         case XRayRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(BatchGetTraces);
+        ActionToString(CreateGroup);
+        ActionToString(CreateSamplingRule);
+        ActionToString(DeleteGroup);
+        ActionToString(DeleteSamplingRule);
+        ActionToString(GetEncryptionConfig);
+        ActionToString(GetGroup);
+        ActionToString(GetGroups);
+        ActionToString(GetInsight);
+        ActionToString(GetInsightEvents);
+        ActionToString(GetInsightImpactGraph);
+        ActionToString(GetInsightSummaries);
+        ActionToString(GetSamplingRules);
+        ActionToString(GetSamplingStatisticSummaries);
+        ActionToString(GetSamplingTargets);
+        ActionToString(GetServiceGraph);
+        ActionToString(GetTimeSeriesServiceStatistics);
+        ActionToString(GetTraceGraph);
+        ActionToString(GetTraceSummaries);
+        ActionToString(ListTagsForResource);
+        ActionToString(PutEncryptionConfig);
+        ActionToString(PutTelemetryRecords);
+        ActionToString(PutTraceSegments);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateGroup);
+        ActionToString(UpdateSamplingRule);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

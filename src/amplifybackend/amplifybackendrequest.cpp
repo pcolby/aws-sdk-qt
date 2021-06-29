@@ -302,7 +302,30 @@ QString AmplifyBackendRequestPrivate::toString(const AmplifyBackendRequest::Acti
     #define ActionToString(action) \
         case AmplifyBackendRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CloneBackend);
+        ActionToString(CreateBackend);
+        ActionToString(CreateBackendAPI);
+        ActionToString(CreateBackendAuth);
+        ActionToString(CreateBackendConfig);
+        ActionToString(CreateToken);
+        ActionToString(DeleteBackend);
+        ActionToString(DeleteBackendAPI);
+        ActionToString(DeleteBackendAuth);
+        ActionToString(DeleteToken);
+        ActionToString(GenerateBackendAPIModels);
+        ActionToString(GetBackend);
+        ActionToString(GetBackendAPI);
+        ActionToString(GetBackendAPIModels);
+        ActionToString(GetBackendAuth);
+        ActionToString(GetBackendJob);
+        ActionToString(GetToken);
+        ActionToString(ListBackendJobs);
+        ActionToString(RemoveAllBackends);
+        ActionToString(RemoveBackendConfig);
+        ActionToString(UpdateBackendAPI);
+        ActionToString(UpdateBackendAuth);
+        ActionToString(UpdateBackendConfig);
+        ActionToString(UpdateBackendJob);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

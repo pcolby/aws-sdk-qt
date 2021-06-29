@@ -329,7 +329,57 @@ QString SecurityHubRequestPrivate::toString(const SecurityHubRequest::Action &ac
     #define ActionToString(action) \
         case SecurityHubRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AcceptAdministratorInvitation);
+        ActionToString(AcceptInvitation);
+        ActionToString(BatchDisableStandards);
+        ActionToString(BatchEnableStandards);
+        ActionToString(BatchImportFindings);
+        ActionToString(BatchUpdateFindings);
+        ActionToString(CreateActionTarget);
+        ActionToString(CreateInsight);
+        ActionToString(CreateMembers);
+        ActionToString(DeclineInvitations);
+        ActionToString(DeleteActionTarget);
+        ActionToString(DeleteInsight);
+        ActionToString(DeleteInvitations);
+        ActionToString(DeleteMembers);
+        ActionToString(DescribeActionTargets);
+        ActionToString(DescribeHub);
+        ActionToString(DescribeOrganizationConfiguration);
+        ActionToString(DescribeProducts);
+        ActionToString(DescribeStandards);
+        ActionToString(DescribeStandardsControls);
+        ActionToString(DisableImportFindingsForProduct);
+        ActionToString(DisableOrganizationAdminAccount);
+        ActionToString(DisableSecurityHub);
+        ActionToString(DisassociateFromAdministratorAccount);
+        ActionToString(DisassociateFromMasterAccount);
+        ActionToString(DisassociateMembers);
+        ActionToString(EnableImportFindingsForProduct);
+        ActionToString(EnableOrganizationAdminAccount);
+        ActionToString(EnableSecurityHub);
+        ActionToString(GetAdministratorAccount);
+        ActionToString(GetEnabledStandards);
+        ActionToString(GetFindings);
+        ActionToString(GetInsightResults);
+        ActionToString(GetInsights);
+        ActionToString(GetInvitationsCount);
+        ActionToString(GetMasterAccount);
+        ActionToString(GetMembers);
+        ActionToString(InviteMembers);
+        ActionToString(ListEnabledProductsForImport);
+        ActionToString(ListInvitations);
+        ActionToString(ListMembers);
+        ActionToString(ListOrganizationAdminAccounts);
+        ActionToString(ListTagsForResource);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateActionTarget);
+        ActionToString(UpdateFindings);
+        ActionToString(UpdateInsight);
+        ActionToString(UpdateOrganizationConfiguration);
+        ActionToString(UpdateSecurityHubConfiguration);
+        ActionToString(UpdateStandardsControl);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

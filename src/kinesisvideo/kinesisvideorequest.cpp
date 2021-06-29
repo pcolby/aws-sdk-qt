@@ -297,7 +297,25 @@ QString KinesisVideoRequestPrivate::toString(const KinesisVideoRequest::Action &
     #define ActionToString(action) \
         case KinesisVideoRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateSignalingChannel);
+        ActionToString(CreateStream);
+        ActionToString(DeleteSignalingChannel);
+        ActionToString(DeleteStream);
+        ActionToString(DescribeSignalingChannel);
+        ActionToString(DescribeStream);
+        ActionToString(GetDataEndpoint);
+        ActionToString(GetSignalingChannelEndpoint);
+        ActionToString(ListSignalingChannels);
+        ActionToString(ListStreams);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListTagsForStream);
+        ActionToString(TagResource);
+        ActionToString(TagStream);
+        ActionToString(UntagResource);
+        ActionToString(UntagStream);
+        ActionToString(UpdateDataRetention);
+        ActionToString(UpdateSignalingChannel);
+        ActionToString(UpdateStream);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

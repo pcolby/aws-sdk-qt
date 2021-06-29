@@ -280,7 +280,8 @@ QString PersonalizeRuntimeRequestPrivate::toString(const PersonalizeRuntimeReque
     #define ActionToString(action) \
         case PersonalizeRuntimeRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(GetPersonalizedRanking);
+        ActionToString(GetRecommendations);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

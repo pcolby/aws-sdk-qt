@@ -312,7 +312,40 @@ QString IoTAnalyticsRequestPrivate::toString(const IoTAnalyticsRequest::Action &
     #define ActionToString(action) \
         case IoTAnalyticsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(BatchPutMessage);
+        ActionToString(CancelPipelineReprocessing);
+        ActionToString(CreateChannel);
+        ActionToString(CreateDataset);
+        ActionToString(CreateDatasetContent);
+        ActionToString(CreateDatastore);
+        ActionToString(CreatePipeline);
+        ActionToString(DeleteChannel);
+        ActionToString(DeleteDataset);
+        ActionToString(DeleteDatasetContent);
+        ActionToString(DeleteDatastore);
+        ActionToString(DeletePipeline);
+        ActionToString(DescribeChannel);
+        ActionToString(DescribeDataset);
+        ActionToString(DescribeDatastore);
+        ActionToString(DescribeLoggingOptions);
+        ActionToString(DescribePipeline);
+        ActionToString(GetDatasetContent);
+        ActionToString(ListChannels);
+        ActionToString(ListDatasetContents);
+        ActionToString(ListDatasets);
+        ActionToString(ListDatastores);
+        ActionToString(ListPipelines);
+        ActionToString(ListTagsForResource);
+        ActionToString(PutLoggingOptions);
+        ActionToString(RunPipelineActivity);
+        ActionToString(SampleChannelData);
+        ActionToString(StartPipelineReprocessing);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateChannel);
+        ActionToString(UpdateDataset);
+        ActionToString(UpdateDatastore);
+        ActionToString(UpdatePipeline);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

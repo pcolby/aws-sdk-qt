@@ -312,7 +312,40 @@ QString EcrRequestPrivate::toString(const EcrRequest::Action &action)
     #define ActionToString(action) \
         case EcrRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(BatchCheckLayerAvailability);
+        ActionToString(BatchDeleteImage);
+        ActionToString(BatchGetImage);
+        ActionToString(CompleteLayerUpload);
+        ActionToString(CreateRepository);
+        ActionToString(DeleteLifecyclePolicy);
+        ActionToString(DeleteRegistryPolicy);
+        ActionToString(DeleteRepository);
+        ActionToString(DeleteRepositoryPolicy);
+        ActionToString(DescribeImageScanFindings);
+        ActionToString(DescribeImages);
+        ActionToString(DescribeRegistry);
+        ActionToString(DescribeRepositories);
+        ActionToString(GetAuthorizationToken);
+        ActionToString(GetDownloadUrlForLayer);
+        ActionToString(GetLifecyclePolicy);
+        ActionToString(GetLifecyclePolicyPreview);
+        ActionToString(GetRegistryPolicy);
+        ActionToString(GetRepositoryPolicy);
+        ActionToString(InitiateLayerUpload);
+        ActionToString(ListImages);
+        ActionToString(ListTagsForResource);
+        ActionToString(PutImage);
+        ActionToString(PutImageScanningConfiguration);
+        ActionToString(PutImageTagMutability);
+        ActionToString(PutLifecyclePolicy);
+        ActionToString(PutRegistryPolicy);
+        ActionToString(PutReplicationConfiguration);
+        ActionToString(SetRepositoryPolicy);
+        ActionToString(StartImageScan);
+        ActionToString(StartLifecyclePolicyPreview);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UploadLayerPart);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

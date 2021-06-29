@@ -322,7 +322,50 @@ QString CodeBuildRequestPrivate::toString(const CodeBuildRequest::Action &action
     #define ActionToString(action) \
         case CodeBuildRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(BatchDeleteBuilds);
+        ActionToString(BatchGetBuildBatches);
+        ActionToString(BatchGetBuilds);
+        ActionToString(BatchGetProjects);
+        ActionToString(BatchGetReportGroups);
+        ActionToString(BatchGetReports);
+        ActionToString(CreateProject);
+        ActionToString(CreateReportGroup);
+        ActionToString(CreateWebhook);
+        ActionToString(DeleteBuildBatch);
+        ActionToString(DeleteProject);
+        ActionToString(DeleteReport);
+        ActionToString(DeleteReportGroup);
+        ActionToString(DeleteResourcePolicy);
+        ActionToString(DeleteSourceCredentials);
+        ActionToString(DeleteWebhook);
+        ActionToString(DescribeCodeCoverages);
+        ActionToString(DescribeTestCases);
+        ActionToString(GetReportGroupTrend);
+        ActionToString(GetResourcePolicy);
+        ActionToString(ImportSourceCredentials);
+        ActionToString(InvalidateProjectCache);
+        ActionToString(ListBuildBatches);
+        ActionToString(ListBuildBatchesForProject);
+        ActionToString(ListBuilds);
+        ActionToString(ListBuildsForProject);
+        ActionToString(ListCuratedEnvironmentImages);
+        ActionToString(ListProjects);
+        ActionToString(ListReportGroups);
+        ActionToString(ListReports);
+        ActionToString(ListReportsForReportGroup);
+        ActionToString(ListSharedProjects);
+        ActionToString(ListSharedReportGroups);
+        ActionToString(ListSourceCredentials);
+        ActionToString(PutResourcePolicy);
+        ActionToString(RetryBuild);
+        ActionToString(RetryBuildBatch);
+        ActionToString(StartBuild);
+        ActionToString(StartBuildBatch);
+        ActionToString(StopBuild);
+        ActionToString(StopBuildBatch);
+        ActionToString(UpdateProject);
+        ActionToString(UpdateReportGroup);
+        ActionToString(UpdateWebhook);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

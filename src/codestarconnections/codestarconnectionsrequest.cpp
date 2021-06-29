@@ -290,7 +290,18 @@ QString CodeStarconnectionsRequestPrivate::toString(const CodeStarconnectionsReq
     #define ActionToString(action) \
         case CodeStarconnectionsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateConnection);
+        ActionToString(CreateHost);
+        ActionToString(DeleteConnection);
+        ActionToString(DeleteHost);
+        ActionToString(GetConnection);
+        ActionToString(GetHost);
+        ActionToString(ListConnections);
+        ActionToString(ListHosts);
+        ActionToString(ListTagsForResource);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateHost);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

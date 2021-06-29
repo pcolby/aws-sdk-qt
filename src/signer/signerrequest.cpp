@@ -295,7 +295,23 @@ QString signerRequestPrivate::toString(const signerRequest::Action &action)
     #define ActionToString(action) \
         case signerRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AddProfilePermission);
+        ActionToString(CancelSigningProfile);
+        ActionToString(DescribeSigningJob);
+        ActionToString(GetSigningPlatform);
+        ActionToString(GetSigningProfile);
+        ActionToString(ListProfilePermissions);
+        ActionToString(ListSigningJobs);
+        ActionToString(ListSigningPlatforms);
+        ActionToString(ListSigningProfiles);
+        ActionToString(ListTagsForResource);
+        ActionToString(PutSigningProfile);
+        ActionToString(RemoveProfilePermission);
+        ActionToString(RevokeSignature);
+        ActionToString(RevokeSigningProfile);
+        ActionToString(StartSigningJob);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

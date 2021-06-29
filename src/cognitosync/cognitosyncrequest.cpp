@@ -295,7 +295,23 @@ QString CognitoSyncRequestPrivate::toString(const CognitoSyncRequest::Action &ac
     #define ActionToString(action) \
         case CognitoSyncRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(BulkPublish);
+        ActionToString(DeleteDataset);
+        ActionToString(DescribeDataset);
+        ActionToString(DescribeIdentityPoolUsage);
+        ActionToString(DescribeIdentityUsage);
+        ActionToString(GetBulkPublishDetails);
+        ActionToString(GetCognitoEvents);
+        ActionToString(GetIdentityPoolConfiguration);
+        ActionToString(ListDatasets);
+        ActionToString(ListIdentityPoolUsage);
+        ActionToString(ListRecords);
+        ActionToString(RegisterDevice);
+        ActionToString(SetCognitoEvents);
+        ActionToString(SetIdentityPoolConfiguration);
+        ActionToString(SubscribeToDataset);
+        ActionToString(UnsubscribeFromDataset);
+        ActionToString(UpdateRecords);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

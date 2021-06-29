@@ -314,7 +314,42 @@ QString CloudWatchRequestPrivate::toString(const CloudWatchRequest::Action &acti
     #define ActionToString(action) \
         case CloudWatchRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(DeleteAlarms);
+        ActionToString(DeleteAnomalyDetector);
+        ActionToString(DeleteDashboards);
+        ActionToString(DeleteInsightRules);
+        ActionToString(DeleteMetricStream);
+        ActionToString(DescribeAlarmHistory);
+        ActionToString(DescribeAlarms);
+        ActionToString(DescribeAlarmsForMetric);
+        ActionToString(DescribeAnomalyDetectors);
+        ActionToString(DescribeInsightRules);
+        ActionToString(DisableAlarmActions);
+        ActionToString(DisableInsightRules);
+        ActionToString(EnableAlarmActions);
+        ActionToString(EnableInsightRules);
+        ActionToString(GetDashboard);
+        ActionToString(GetInsightRuleReport);
+        ActionToString(GetMetricData);
+        ActionToString(GetMetricStatistics);
+        ActionToString(GetMetricStream);
+        ActionToString(GetMetricWidgetImage);
+        ActionToString(ListDashboards);
+        ActionToString(ListMetricStreams);
+        ActionToString(ListMetrics);
+        ActionToString(ListTagsForResource);
+        ActionToString(PutAnomalyDetector);
+        ActionToString(PutCompositeAlarm);
+        ActionToString(PutDashboard);
+        ActionToString(PutInsightRule);
+        ActionToString(PutMetricAlarm);
+        ActionToString(PutMetricData);
+        ActionToString(PutMetricStream);
+        ActionToString(SetAlarmState);
+        ActionToString(StartMetricStreams);
+        ActionToString(StopMetricStreams);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

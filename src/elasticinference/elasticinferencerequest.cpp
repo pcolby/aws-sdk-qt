@@ -284,7 +284,12 @@ QString ElasticInferenceRequestPrivate::toString(const ElasticInferenceRequest::
     #define ActionToString(action) \
         case ElasticInferenceRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(DescribeAcceleratorOfferings);
+        ActionToString(DescribeAcceleratorTypes);
+        ActionToString(DescribeAccelerators);
+        ActionToString(ListTagsForResource);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

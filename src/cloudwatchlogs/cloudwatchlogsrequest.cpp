@@ -320,7 +320,48 @@ QString CloudWatchLogsRequestPrivate::toString(const CloudWatchLogsRequest::Acti
     #define ActionToString(action) \
         case CloudWatchLogsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateKmsKey);
+        ActionToString(CancelExportTask);
+        ActionToString(CreateExportTask);
+        ActionToString(CreateLogGroup);
+        ActionToString(CreateLogStream);
+        ActionToString(DeleteDestination);
+        ActionToString(DeleteLogGroup);
+        ActionToString(DeleteLogStream);
+        ActionToString(DeleteMetricFilter);
+        ActionToString(DeleteQueryDefinition);
+        ActionToString(DeleteResourcePolicy);
+        ActionToString(DeleteRetentionPolicy);
+        ActionToString(DeleteSubscriptionFilter);
+        ActionToString(DescribeDestinations);
+        ActionToString(DescribeExportTasks);
+        ActionToString(DescribeLogGroups);
+        ActionToString(DescribeLogStreams);
+        ActionToString(DescribeMetricFilters);
+        ActionToString(DescribeQueries);
+        ActionToString(DescribeQueryDefinitions);
+        ActionToString(DescribeResourcePolicies);
+        ActionToString(DescribeSubscriptionFilters);
+        ActionToString(DisassociateKmsKey);
+        ActionToString(FilterLogEvents);
+        ActionToString(GetLogEvents);
+        ActionToString(GetLogGroupFields);
+        ActionToString(GetLogRecord);
+        ActionToString(GetQueryResults);
+        ActionToString(ListTagsLogGroup);
+        ActionToString(PutDestination);
+        ActionToString(PutDestinationPolicy);
+        ActionToString(PutLogEvents);
+        ActionToString(PutMetricFilter);
+        ActionToString(PutQueryDefinition);
+        ActionToString(PutResourcePolicy);
+        ActionToString(PutRetentionPolicy);
+        ActionToString(PutSubscriptionFilter);
+        ActionToString(StartQuery);
+        ActionToString(StopQuery);
+        ActionToString(TagLogGroup);
+        ActionToString(TestMetricFilter);
+        ActionToString(UntagLogGroup);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

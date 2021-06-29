@@ -309,7 +309,37 @@ QString MediaTailorRequestPrivate::toString(const MediaTailorRequest::Action &ac
     #define ActionToString(action) \
         case MediaTailorRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateChannel);
+        ActionToString(CreateProgram);
+        ActionToString(CreateSourceLocation);
+        ActionToString(CreateVodSource);
+        ActionToString(DeleteChannel);
+        ActionToString(DeleteChannelPolicy);
+        ActionToString(DeletePlaybackConfiguration);
+        ActionToString(DeleteProgram);
+        ActionToString(DeleteSourceLocation);
+        ActionToString(DeleteVodSource);
+        ActionToString(DescribeChannel);
+        ActionToString(DescribeProgram);
+        ActionToString(DescribeSourceLocation);
+        ActionToString(DescribeVodSource);
+        ActionToString(GetChannelPolicy);
+        ActionToString(GetChannelSchedule);
+        ActionToString(GetPlaybackConfiguration);
+        ActionToString(ListChannels);
+        ActionToString(ListPlaybackConfigurations);
+        ActionToString(ListSourceLocations);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListVodSources);
+        ActionToString(PutChannelPolicy);
+        ActionToString(PutPlaybackConfiguration);
+        ActionToString(StartChannel);
+        ActionToString(StopChannel);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateChannel);
+        ActionToString(UpdateSourceLocation);
+        ActionToString(UpdateVodSource);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

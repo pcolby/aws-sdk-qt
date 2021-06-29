@@ -293,7 +293,21 @@ QString AcmRequestPrivate::toString(const AcmRequest::Action &action)
     #define ActionToString(action) \
         case AcmRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AddTagsToCertificate);
+        ActionToString(DeleteCertificate);
+        ActionToString(DescribeCertificate);
+        ActionToString(ExportCertificate);
+        ActionToString(GetAccountConfiguration);
+        ActionToString(GetCertificate);
+        ActionToString(ImportCertificate);
+        ActionToString(ListCertificates);
+        ActionToString(ListTagsForCertificate);
+        ActionToString(PutAccountConfiguration);
+        ActionToString(RemoveTagsFromCertificate);
+        ActionToString(RenewCertificate);
+        ActionToString(RequestCertificate);
+        ActionToString(ResendValidationEmail);
+        ActionToString(UpdateCertificateOptions);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

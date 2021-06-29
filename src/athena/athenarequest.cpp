@@ -312,7 +312,40 @@ QString AthenaRequestPrivate::toString(const AthenaRequest::Action &action)
     #define ActionToString(action) \
         case AthenaRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(BatchGetNamedQuery);
+        ActionToString(BatchGetQueryExecution);
+        ActionToString(CreateDataCatalog);
+        ActionToString(CreateNamedQuery);
+        ActionToString(CreatePreparedStatement);
+        ActionToString(CreateWorkGroup);
+        ActionToString(DeleteDataCatalog);
+        ActionToString(DeleteNamedQuery);
+        ActionToString(DeletePreparedStatement);
+        ActionToString(DeleteWorkGroup);
+        ActionToString(GetDataCatalog);
+        ActionToString(GetDatabase);
+        ActionToString(GetNamedQuery);
+        ActionToString(GetPreparedStatement);
+        ActionToString(GetQueryExecution);
+        ActionToString(GetQueryResults);
+        ActionToString(GetTableMetadata);
+        ActionToString(GetWorkGroup);
+        ActionToString(ListDataCatalogs);
+        ActionToString(ListDatabases);
+        ActionToString(ListEngineVersions);
+        ActionToString(ListNamedQueries);
+        ActionToString(ListPreparedStatements);
+        ActionToString(ListQueryExecutions);
+        ActionToString(ListTableMetadata);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListWorkGroups);
+        ActionToString(StartQueryExecution);
+        ActionToString(StopQueryExecution);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateDataCatalog);
+        ActionToString(UpdatePreparedStatement);
+        ActionToString(UpdateWorkGroup);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

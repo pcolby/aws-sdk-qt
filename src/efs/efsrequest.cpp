@@ -305,7 +305,33 @@ QString EfsRequestPrivate::toString(const EfsRequest::Action &action)
     #define ActionToString(action) \
         case EfsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateAccessPoint);
+        ActionToString(CreateFileSystem);
+        ActionToString(CreateMountTarget);
+        ActionToString(CreateTags);
+        ActionToString(DeleteAccessPoint);
+        ActionToString(DeleteFileSystem);
+        ActionToString(DeleteFileSystemPolicy);
+        ActionToString(DeleteMountTarget);
+        ActionToString(DeleteTags);
+        ActionToString(DescribeAccessPoints);
+        ActionToString(DescribeAccountPreferences);
+        ActionToString(DescribeBackupPolicy);
+        ActionToString(DescribeFileSystemPolicy);
+        ActionToString(DescribeFileSystems);
+        ActionToString(DescribeLifecycleConfiguration);
+        ActionToString(DescribeMountTargetSecurityGroups);
+        ActionToString(DescribeMountTargets);
+        ActionToString(DescribeTags);
+        ActionToString(ListTagsForResource);
+        ActionToString(ModifyMountTargetSecurityGroups);
+        ActionToString(PutAccountPreferences);
+        ActionToString(PutBackupPolicy);
+        ActionToString(PutFileSystemPolicy);
+        ActionToString(PutLifecycleConfiguration);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateFileSystem);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

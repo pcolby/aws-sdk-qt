@@ -281,7 +281,9 @@ QString PiRequestPrivate::toString(const PiRequest::Action &action)
     #define ActionToString(action) \
         case PiRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(DescribeDimensionKeys);
+        ActionToString(GetDimensionKeyDetails);
+        ActionToString(GetResourceMetrics);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

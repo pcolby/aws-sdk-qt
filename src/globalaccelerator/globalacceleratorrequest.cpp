@@ -325,7 +325,53 @@ QString GlobalAcceleratorRequestPrivate::toString(const GlobalAcceleratorRequest
     #define ActionToString(action) \
         case GlobalAcceleratorRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AddCustomRoutingEndpoints);
+        ActionToString(AdvertiseByoipCidr);
+        ActionToString(AllowCustomRoutingTraffic);
+        ActionToString(CreateAccelerator);
+        ActionToString(CreateCustomRoutingAccelerator);
+        ActionToString(CreateCustomRoutingEndpointGroup);
+        ActionToString(CreateCustomRoutingListener);
+        ActionToString(CreateEndpointGroup);
+        ActionToString(CreateListener);
+        ActionToString(DeleteAccelerator);
+        ActionToString(DeleteCustomRoutingAccelerator);
+        ActionToString(DeleteCustomRoutingEndpointGroup);
+        ActionToString(DeleteCustomRoutingListener);
+        ActionToString(DeleteEndpointGroup);
+        ActionToString(DeleteListener);
+        ActionToString(DenyCustomRoutingTraffic);
+        ActionToString(DeprovisionByoipCidr);
+        ActionToString(DescribeAccelerator);
+        ActionToString(DescribeAcceleratorAttributes);
+        ActionToString(DescribeCustomRoutingAccelerator);
+        ActionToString(DescribeCustomRoutingAcceleratorAttributes);
+        ActionToString(DescribeCustomRoutingEndpointGroup);
+        ActionToString(DescribeCustomRoutingListener);
+        ActionToString(DescribeEndpointGroup);
+        ActionToString(DescribeListener);
+        ActionToString(ListAccelerators);
+        ActionToString(ListByoipCidrs);
+        ActionToString(ListCustomRoutingAccelerators);
+        ActionToString(ListCustomRoutingEndpointGroups);
+        ActionToString(ListCustomRoutingListeners);
+        ActionToString(ListCustomRoutingPortMappings);
+        ActionToString(ListCustomRoutingPortMappingsByDestination);
+        ActionToString(ListEndpointGroups);
+        ActionToString(ListListeners);
+        ActionToString(ListTagsForResource);
+        ActionToString(ProvisionByoipCidr);
+        ActionToString(RemoveCustomRoutingEndpoints);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateAccelerator);
+        ActionToString(UpdateAcceleratorAttributes);
+        ActionToString(UpdateCustomRoutingAccelerator);
+        ActionToString(UpdateCustomRoutingAcceleratorAttributes);
+        ActionToString(UpdateCustomRoutingListener);
+        ActionToString(UpdateEndpointGroup);
+        ActionToString(UpdateListener);
+        ActionToString(WithdrawByoipCidr);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

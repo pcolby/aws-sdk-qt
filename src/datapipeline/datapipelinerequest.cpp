@@ -297,7 +297,25 @@ QString DataPipelineRequestPrivate::toString(const DataPipelineRequest::Action &
     #define ActionToString(action) \
         case DataPipelineRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(ActivatePipeline);
+        ActionToString(AddTags);
+        ActionToString(CreatePipeline);
+        ActionToString(DeactivatePipeline);
+        ActionToString(DeletePipeline);
+        ActionToString(DescribeObjects);
+        ActionToString(DescribePipelines);
+        ActionToString(EvaluateExpression);
+        ActionToString(GetPipelineDefinition);
+        ActionToString(ListPipelines);
+        ActionToString(PollForTask);
+        ActionToString(PutPipelineDefinition);
+        ActionToString(QueryObjects);
+        ActionToString(RemoveTags);
+        ActionToString(ReportTaskProgress);
+        ActionToString(ReportTaskRunnerHeartbeat);
+        ActionToString(SetStatus);
+        ActionToString(SetTaskStatus);
+        ActionToString(ValidatePipelineDefinition);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

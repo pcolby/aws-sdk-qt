@@ -302,7 +302,30 @@ QString RamRequestPrivate::toString(const RamRequest::Action &action)
     #define ActionToString(action) \
         case RamRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AcceptResourceShareInvitation);
+        ActionToString(AssociateResourceShare);
+        ActionToString(AssociateResourceSharePermission);
+        ActionToString(CreateResourceShare);
+        ActionToString(DeleteResourceShare);
+        ActionToString(DisassociateResourceShare);
+        ActionToString(DisassociateResourceSharePermission);
+        ActionToString(EnableSharingWithAwsOrganization);
+        ActionToString(GetPermission);
+        ActionToString(GetResourcePolicies);
+        ActionToString(GetResourceShareAssociations);
+        ActionToString(GetResourceShareInvitations);
+        ActionToString(GetResourceShares);
+        ActionToString(ListPendingInvitationResources);
+        ActionToString(ListPermissions);
+        ActionToString(ListPrincipals);
+        ActionToString(ListResourceSharePermissions);
+        ActionToString(ListResourceTypes);
+        ActionToString(ListResources);
+        ActionToString(PromoteResourceShareCreatedFromPolicy);
+        ActionToString(RejectResourceShareInvitation);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateResourceShare);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -332,7 +332,60 @@ QString WorkMailRequestPrivate::toString(const WorkMailRequest::Action &action)
     #define ActionToString(action) \
         case WorkMailRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateDelegateToResource);
+        ActionToString(AssociateMemberToGroup);
+        ActionToString(CancelMailboxExportJob);
+        ActionToString(CreateAlias);
+        ActionToString(CreateGroup);
+        ActionToString(CreateMobileDeviceAccessRule);
+        ActionToString(CreateOrganization);
+        ActionToString(CreateResource);
+        ActionToString(CreateUser);
+        ActionToString(DeleteAccessControlRule);
+        ActionToString(DeleteAlias);
+        ActionToString(DeleteGroup);
+        ActionToString(DeleteMailboxPermissions);
+        ActionToString(DeleteMobileDeviceAccessRule);
+        ActionToString(DeleteOrganization);
+        ActionToString(DeleteResource);
+        ActionToString(DeleteRetentionPolicy);
+        ActionToString(DeleteUser);
+        ActionToString(DeregisterFromWorkMail);
+        ActionToString(DescribeGroup);
+        ActionToString(DescribeMailboxExportJob);
+        ActionToString(DescribeOrganization);
+        ActionToString(DescribeResource);
+        ActionToString(DescribeUser);
+        ActionToString(DisassociateDelegateFromResource);
+        ActionToString(DisassociateMemberFromGroup);
+        ActionToString(GetAccessControlEffect);
+        ActionToString(GetDefaultRetentionPolicy);
+        ActionToString(GetMailboxDetails);
+        ActionToString(GetMobileDeviceAccessEffect);
+        ActionToString(ListAccessControlRules);
+        ActionToString(ListAliases);
+        ActionToString(ListGroupMembers);
+        ActionToString(ListGroups);
+        ActionToString(ListMailboxExportJobs);
+        ActionToString(ListMailboxPermissions);
+        ActionToString(ListMobileDeviceAccessRules);
+        ActionToString(ListOrganizations);
+        ActionToString(ListResourceDelegates);
+        ActionToString(ListResources);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListUsers);
+        ActionToString(PutAccessControlRule);
+        ActionToString(PutMailboxPermissions);
+        ActionToString(PutRetentionPolicy);
+        ActionToString(RegisterToWorkMail);
+        ActionToString(ResetPassword);
+        ActionToString(StartMailboxExportJob);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateMailboxQuota);
+        ActionToString(UpdateMobileDeviceAccessRule);
+        ActionToString(UpdatePrimaryEmailAddress);
+        ActionToString(UpdateResource);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

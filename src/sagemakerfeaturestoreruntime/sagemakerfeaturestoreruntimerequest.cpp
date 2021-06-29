@@ -282,7 +282,10 @@ QString SageMakerFeatureStoreRuntimeRequestPrivate::toString(const SageMakerFeat
     #define ActionToString(action) \
         case SageMakerFeatureStoreRuntimeRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(BatchGetRecord);
+        ActionToString(DeleteRecord);
+        ActionToString(GetRecord);
+        ActionToString(PutRecord);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

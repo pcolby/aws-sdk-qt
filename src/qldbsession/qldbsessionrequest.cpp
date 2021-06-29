@@ -279,7 +279,7 @@ QString QLDBSessionRequestPrivate::toString(const QLDBSessionRequest::Action &ac
     #define ActionToString(action) \
         case QLDBSessionRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(SendCommand);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -263,7 +263,9 @@ QString {{ClassName}}Private::toString(const {{ClassName}}::Action &action)
     #define ActionToString(action) \
         case {{ClassName}}::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        {% for name in operations.keys %}
+        ActionToString({{name}});
+        {% endfor %}
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -286,7 +286,14 @@ QString StsRequestPrivate::toString(const StsRequest::Action &action)
     #define ActionToString(action) \
         case StsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssumeRole);
+        ActionToString(AssumeRoleWithSAML);
+        ActionToString(AssumeRoleWithWebIdentity);
+        ActionToString(DecodeAuthorizationMessage);
+        ActionToString(GetAccessKeyInfo);
+        ActionToString(GetCallerIdentity);
+        ActionToString(GetFederationToken);
+        ActionToString(GetSessionToken);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

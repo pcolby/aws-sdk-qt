@@ -324,7 +324,52 @@ QString KmsRequestPrivate::toString(const KmsRequest::Action &action)
     #define ActionToString(action) \
         case KmsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CancelKeyDeletion);
+        ActionToString(ConnectCustomKeyStore);
+        ActionToString(CreateAlias);
+        ActionToString(CreateCustomKeyStore);
+        ActionToString(CreateGrant);
+        ActionToString(CreateKey);
+        ActionToString(Decrypt);
+        ActionToString(DeleteAlias);
+        ActionToString(DeleteCustomKeyStore);
+        ActionToString(DeleteImportedKeyMaterial);
+        ActionToString(DescribeCustomKeyStores);
+        ActionToString(DescribeKey);
+        ActionToString(DisableKey);
+        ActionToString(DisableKeyRotation);
+        ActionToString(DisconnectCustomKeyStore);
+        ActionToString(EnableKey);
+        ActionToString(EnableKeyRotation);
+        ActionToString(Encrypt);
+        ActionToString(GenerateDataKey);
+        ActionToString(GenerateDataKeyPair);
+        ActionToString(GenerateDataKeyPairWithoutPlaintext);
+        ActionToString(GenerateDataKeyWithoutPlaintext);
+        ActionToString(GenerateRandom);
+        ActionToString(GetKeyPolicy);
+        ActionToString(GetKeyRotationStatus);
+        ActionToString(GetParametersForImport);
+        ActionToString(GetPublicKey);
+        ActionToString(ImportKeyMaterial);
+        ActionToString(ListAliases);
+        ActionToString(ListGrants);
+        ActionToString(ListKeyPolicies);
+        ActionToString(ListKeys);
+        ActionToString(ListResourceTags);
+        ActionToString(ListRetirableGrants);
+        ActionToString(PutKeyPolicy);
+        ActionToString(ReEncrypt);
+        ActionToString(RetireGrant);
+        ActionToString(RevokeGrant);
+        ActionToString(ScheduleKeyDeletion);
+        ActionToString(Sign);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateAlias);
+        ActionToString(UpdateCustomKeyStore);
+        ActionToString(UpdateKeyDescription);
+        ActionToString(Verify);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

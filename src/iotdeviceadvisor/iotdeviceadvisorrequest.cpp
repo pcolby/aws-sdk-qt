@@ -291,7 +291,19 @@ QString IoTDeviceAdvisorRequestPrivate::toString(const IoTDeviceAdvisorRequest::
     #define ActionToString(action) \
         case IoTDeviceAdvisorRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateSuiteDefinition);
+        ActionToString(DeleteSuiteDefinition);
+        ActionToString(GetSuiteDefinition);
+        ActionToString(GetSuiteRun);
+        ActionToString(GetSuiteRunReport);
+        ActionToString(ListSuiteDefinitions);
+        ActionToString(ListSuiteRuns);
+        ActionToString(ListTagsForResource);
+        ActionToString(StartSuiteRun);
+        ActionToString(StopSuiteRun);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateSuiteDefinition);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

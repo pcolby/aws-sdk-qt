@@ -295,7 +295,23 @@ QString MigrationHubRequestPrivate::toString(const MigrationHubRequest::Action &
     #define ActionToString(action) \
         case MigrationHubRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateCreatedArtifact);
+        ActionToString(AssociateDiscoveredResource);
+        ActionToString(CreateProgressUpdateStream);
+        ActionToString(DeleteProgressUpdateStream);
+        ActionToString(DescribeApplicationState);
+        ActionToString(DescribeMigrationTask);
+        ActionToString(DisassociateCreatedArtifact);
+        ActionToString(DisassociateDiscoveredResource);
+        ActionToString(ImportMigrationTask);
+        ActionToString(ListApplicationStates);
+        ActionToString(ListCreatedArtifacts);
+        ActionToString(ListDiscoveredResources);
+        ActionToString(ListMigrationTasks);
+        ActionToString(ListProgressUpdateStreams);
+        ActionToString(NotifyApplicationState);
+        ActionToString(NotifyMigrationTaskState);
+        ActionToString(PutResourceAttributes);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

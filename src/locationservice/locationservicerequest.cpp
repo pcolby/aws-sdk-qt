@@ -323,7 +323,51 @@ QString LocationServiceRequestPrivate::toString(const LocationServiceRequest::Ac
     #define ActionToString(action) \
         case LocationServiceRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateTrackerConsumer);
+        ActionToString(BatchDeleteDevicePositionHistory);
+        ActionToString(BatchDeleteGeofence);
+        ActionToString(BatchEvaluateGeofences);
+        ActionToString(BatchGetDevicePosition);
+        ActionToString(BatchPutGeofence);
+        ActionToString(BatchUpdateDevicePosition);
+        ActionToString(CalculateRoute);
+        ActionToString(CreateGeofenceCollection);
+        ActionToString(CreateMap);
+        ActionToString(CreatePlaceIndex);
+        ActionToString(CreateRouteCalculator);
+        ActionToString(CreateTracker);
+        ActionToString(DeleteGeofenceCollection);
+        ActionToString(DeleteMap);
+        ActionToString(DeletePlaceIndex);
+        ActionToString(DeleteRouteCalculator);
+        ActionToString(DeleteTracker);
+        ActionToString(DescribeGeofenceCollection);
+        ActionToString(DescribeMap);
+        ActionToString(DescribePlaceIndex);
+        ActionToString(DescribeRouteCalculator);
+        ActionToString(DescribeTracker);
+        ActionToString(DisassociateTrackerConsumer);
+        ActionToString(GetDevicePosition);
+        ActionToString(GetDevicePositionHistory);
+        ActionToString(GetGeofence);
+        ActionToString(GetMapGlyphs);
+        ActionToString(GetMapSprites);
+        ActionToString(GetMapStyleDescriptor);
+        ActionToString(GetMapTile);
+        ActionToString(ListDevicePositions);
+        ActionToString(ListGeofenceCollections);
+        ActionToString(ListGeofences);
+        ActionToString(ListMaps);
+        ActionToString(ListPlaceIndexes);
+        ActionToString(ListRouteCalculators);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListTrackerConsumers);
+        ActionToString(ListTrackers);
+        ActionToString(PutGeofence);
+        ActionToString(SearchPlaceIndexForPosition);
+        ActionToString(SearchPlaceIndexForText);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

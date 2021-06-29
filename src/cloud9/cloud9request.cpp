@@ -291,7 +291,19 @@ QString Cloud9RequestPrivate::toString(const Cloud9Request::Action &action)
     #define ActionToString(action) \
         case Cloud9Request::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateEnvironmentEC2);
+        ActionToString(CreateEnvironmentMembership);
+        ActionToString(DeleteEnvironment);
+        ActionToString(DeleteEnvironmentMembership);
+        ActionToString(DescribeEnvironmentMemberships);
+        ActionToString(DescribeEnvironmentStatus);
+        ActionToString(DescribeEnvironments);
+        ActionToString(ListEnvironments);
+        ActionToString(ListTagsForResource);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateEnvironment);
+        ActionToString(UpdateEnvironmentMembership);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

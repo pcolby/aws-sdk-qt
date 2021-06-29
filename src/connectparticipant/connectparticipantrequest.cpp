@@ -286,7 +286,14 @@ QString ConnectParticipantRequestPrivate::toString(const ConnectParticipantReque
     #define ActionToString(action) \
         case ConnectParticipantRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CompleteAttachmentUpload);
+        ActionToString(CreateParticipantConnection);
+        ActionToString(DisconnectParticipant);
+        ActionToString(GetAttachment);
+        ActionToString(GetTranscript);
+        ActionToString(SendEvent);
+        ActionToString(SendMessage);
+        ActionToString(StartAttachmentUpload);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

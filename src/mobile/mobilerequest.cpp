@@ -287,7 +287,15 @@ QString MobileRequestPrivate::toString(const MobileRequest::Action &action)
     #define ActionToString(action) \
         case MobileRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateProject);
+        ActionToString(DeleteProject);
+        ActionToString(DescribeBundle);
+        ActionToString(DescribeProject);
+        ActionToString(ExportBundle);
+        ActionToString(ExportProject);
+        ActionToString(ListBundles);
+        ActionToString(ListProjects);
+        ActionToString(UpdateProject);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

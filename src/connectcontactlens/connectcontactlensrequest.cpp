@@ -279,7 +279,7 @@ QString ConnectContactLensRequestPrivate::toString(const ConnectContactLensReque
     #define ActionToString(action) \
         case ConnectContactLensRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(ListRealtimeContactAnalysisSegments);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

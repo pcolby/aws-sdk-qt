@@ -286,7 +286,14 @@ QString PinpointSMSVoiceRequestPrivate::toString(const PinpointSMSVoiceRequest::
     #define ActionToString(action) \
         case PinpointSMSVoiceRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateConfigurationSet);
+        ActionToString(CreateConfigurationSetEventDestination);
+        ActionToString(DeleteConfigurationSet);
+        ActionToString(DeleteConfigurationSetEventDestination);
+        ActionToString(GetConfigurationSetEventDestinations);
+        ActionToString(ListConfigurationSets);
+        ActionToString(SendVoiceMessage);
+        ActionToString(UpdateConfigurationSetEventDestination);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

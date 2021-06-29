@@ -304,7 +304,32 @@ QString IvsRequestPrivate::toString(const IvsRequest::Action &action)
     #define ActionToString(action) \
         case IvsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(BatchGetChannel);
+        ActionToString(BatchGetStreamKey);
+        ActionToString(CreateChannel);
+        ActionToString(CreateRecordingConfiguration);
+        ActionToString(CreateStreamKey);
+        ActionToString(DeleteChannel);
+        ActionToString(DeletePlaybackKeyPair);
+        ActionToString(DeleteRecordingConfiguration);
+        ActionToString(DeleteStreamKey);
+        ActionToString(GetChannel);
+        ActionToString(GetPlaybackKeyPair);
+        ActionToString(GetRecordingConfiguration);
+        ActionToString(GetStream);
+        ActionToString(GetStreamKey);
+        ActionToString(ImportPlaybackKeyPair);
+        ActionToString(ListChannels);
+        ActionToString(ListPlaybackKeyPairs);
+        ActionToString(ListRecordingConfigurations);
+        ActionToString(ListStreamKeys);
+        ActionToString(ListStreams);
+        ActionToString(ListTagsForResource);
+        ActionToString(PutMetadata);
+        ActionToString(StopStream);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateChannel);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -301,7 +301,29 @@ QString LakeFormationRequestPrivate::toString(const LakeFormationRequest::Action
     #define ActionToString(action) \
         case LakeFormationRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AddLFTagsToResource);
+        ActionToString(BatchGrantPermissions);
+        ActionToString(BatchRevokePermissions);
+        ActionToString(CreateLFTag);
+        ActionToString(DeleteLFTag);
+        ActionToString(DeregisterResource);
+        ActionToString(DescribeResource);
+        ActionToString(GetDataLakeSettings);
+        ActionToString(GetEffectivePermissionsForPath);
+        ActionToString(GetLFTag);
+        ActionToString(GetResourceLFTags);
+        ActionToString(GrantPermissions);
+        ActionToString(ListLFTags);
+        ActionToString(ListPermissions);
+        ActionToString(ListResources);
+        ActionToString(PutDataLakeSettings);
+        ActionToString(RegisterResource);
+        ActionToString(RemoveLFTagsFromResource);
+        ActionToString(RevokePermissions);
+        ActionToString(SearchDatabasesByLFTags);
+        ActionToString(SearchTablesByLFTags);
+        ActionToString(UpdateLFTag);
+        ActionToString(UpdateResource);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

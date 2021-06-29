@@ -317,7 +317,45 @@ QString MTurkRequestPrivate::toString(const MTurkRequest::Action &action)
     #define ActionToString(action) \
         case MTurkRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AcceptQualificationRequest);
+        ActionToString(ApproveAssignment);
+        ActionToString(AssociateQualificationWithWorker);
+        ActionToString(CreateAdditionalAssignmentsForHIT);
+        ActionToString(CreateHIT);
+        ActionToString(CreateHITType);
+        ActionToString(CreateHITWithHITType);
+        ActionToString(CreateQualificationType);
+        ActionToString(CreateWorkerBlock);
+        ActionToString(DeleteHIT);
+        ActionToString(DeleteQualificationType);
+        ActionToString(DeleteWorkerBlock);
+        ActionToString(DisassociateQualificationFromWorker);
+        ActionToString(GetAccountBalance);
+        ActionToString(GetAssignment);
+        ActionToString(GetFileUploadURL);
+        ActionToString(GetHIT);
+        ActionToString(GetQualificationScore);
+        ActionToString(GetQualificationType);
+        ActionToString(ListAssignmentsForHIT);
+        ActionToString(ListBonusPayments);
+        ActionToString(ListHITs);
+        ActionToString(ListHITsForQualificationType);
+        ActionToString(ListQualificationRequests);
+        ActionToString(ListQualificationTypes);
+        ActionToString(ListReviewPolicyResultsForHIT);
+        ActionToString(ListReviewableHITs);
+        ActionToString(ListWorkerBlocks);
+        ActionToString(ListWorkersWithQualificationType);
+        ActionToString(NotifyWorkers);
+        ActionToString(RejectAssignment);
+        ActionToString(RejectQualificationRequest);
+        ActionToString(SendBonus);
+        ActionToString(SendTestEventNotification);
+        ActionToString(UpdateExpirationForHIT);
+        ActionToString(UpdateHITReviewStatus);
+        ActionToString(UpdateHITTypeOfHIT);
+        ActionToString(UpdateNotificationSettings);
+        ActionToString(UpdateQualificationType);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -319,7 +319,47 @@ QString WorkDocsRequestPrivate::toString(const WorkDocsRequest::Action &action)
     #define ActionToString(action) \
         case WorkDocsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AbortDocumentVersionUpload);
+        ActionToString(ActivateUser);
+        ActionToString(AddResourcePermissions);
+        ActionToString(CreateComment);
+        ActionToString(CreateCustomMetadata);
+        ActionToString(CreateFolder);
+        ActionToString(CreateLabels);
+        ActionToString(CreateNotificationSubscription);
+        ActionToString(CreateUser);
+        ActionToString(DeactivateUser);
+        ActionToString(DeleteComment);
+        ActionToString(DeleteCustomMetadata);
+        ActionToString(DeleteDocument);
+        ActionToString(DeleteFolder);
+        ActionToString(DeleteFolderContents);
+        ActionToString(DeleteLabels);
+        ActionToString(DeleteNotificationSubscription);
+        ActionToString(DeleteUser);
+        ActionToString(DescribeActivities);
+        ActionToString(DescribeComments);
+        ActionToString(DescribeDocumentVersions);
+        ActionToString(DescribeFolderContents);
+        ActionToString(DescribeGroups);
+        ActionToString(DescribeNotificationSubscriptions);
+        ActionToString(DescribeResourcePermissions);
+        ActionToString(DescribeRootFolders);
+        ActionToString(DescribeUsers);
+        ActionToString(GetCurrentUser);
+        ActionToString(GetDocument);
+        ActionToString(GetDocumentPath);
+        ActionToString(GetDocumentVersion);
+        ActionToString(GetFolder);
+        ActionToString(GetFolderPath);
+        ActionToString(GetResources);
+        ActionToString(InitiateDocumentVersionUpload);
+        ActionToString(RemoveAllResourcePermissions);
+        ActionToString(RemoveResourcePermission);
+        ActionToString(UpdateDocument);
+        ActionToString(UpdateDocumentVersion);
+        ActionToString(UpdateFolder);
+        ActionToString(UpdateUser);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -283,7 +283,11 @@ QString KinesisVideoArchivedMediaRequestPrivate::toString(const KinesisVideoArch
     #define ActionToString(action) \
         case KinesisVideoArchivedMediaRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(GetClip);
+        ActionToString(GetDASHStreamingSessionURL);
+        ActionToString(GetHLSStreamingSessionURL);
+        ActionToString(GetMediaForFragmentList);
+        ActionToString(ListFragments);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -308,7 +308,36 @@ QString CustomerProfilesRequestPrivate::toString(const CustomerProfilesRequest::
     #define ActionToString(action) \
         case CustomerProfilesRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AddProfileKey);
+        ActionToString(CreateDomain);
+        ActionToString(CreateProfile);
+        ActionToString(DeleteDomain);
+        ActionToString(DeleteIntegration);
+        ActionToString(DeleteProfile);
+        ActionToString(DeleteProfileKey);
+        ActionToString(DeleteProfileObject);
+        ActionToString(DeleteProfileObjectType);
+        ActionToString(GetDomain);
+        ActionToString(GetIntegration);
+        ActionToString(GetMatches);
+        ActionToString(GetProfileObjectType);
+        ActionToString(GetProfileObjectTypeTemplate);
+        ActionToString(ListAccountIntegrations);
+        ActionToString(ListDomains);
+        ActionToString(ListIntegrations);
+        ActionToString(ListProfileObjectTypeTemplates);
+        ActionToString(ListProfileObjectTypes);
+        ActionToString(ListProfileObjects);
+        ActionToString(ListTagsForResource);
+        ActionToString(MergeProfiles);
+        ActionToString(PutIntegration);
+        ActionToString(PutProfileObject);
+        ActionToString(PutProfileObjectType);
+        ActionToString(SearchProfiles);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateDomain);
+        ActionToString(UpdateProfile);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

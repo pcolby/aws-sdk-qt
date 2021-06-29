@@ -298,7 +298,26 @@ QString CloudHSMRequestPrivate::toString(const CloudHSMRequest::Action &action)
     #define ActionToString(action) \
         case CloudHSMRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AddTagsToResource);
+        ActionToString(CreateHapg);
+        ActionToString(CreateHsm);
+        ActionToString(CreateLunaClient);
+        ActionToString(DeleteHapg);
+        ActionToString(DeleteHsm);
+        ActionToString(DeleteLunaClient);
+        ActionToString(DescribeHapg);
+        ActionToString(DescribeHsm);
+        ActionToString(DescribeLunaClient);
+        ActionToString(GetConfig);
+        ActionToString(ListAvailableZones);
+        ActionToString(ListHapgs);
+        ActionToString(ListHsms);
+        ActionToString(ListLunaClients);
+        ActionToString(ListTagsForResource);
+        ActionToString(ModifyHapg);
+        ActionToString(ModifyHsm);
+        ActionToString(ModifyLunaClient);
+        ActionToString(RemoveTagsFromResource);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -336,7 +336,64 @@ QString GuardDutyRequestPrivate::toString(const GuardDutyRequest::Action &action
     #define ActionToString(action) \
         case GuardDutyRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AcceptInvitation);
+        ActionToString(ArchiveFindings);
+        ActionToString(CreateDetector);
+        ActionToString(CreateFilter);
+        ActionToString(CreateIPSet);
+        ActionToString(CreateMembers);
+        ActionToString(CreatePublishingDestination);
+        ActionToString(CreateSampleFindings);
+        ActionToString(CreateThreatIntelSet);
+        ActionToString(DeclineInvitations);
+        ActionToString(DeleteDetector);
+        ActionToString(DeleteFilter);
+        ActionToString(DeleteIPSet);
+        ActionToString(DeleteInvitations);
+        ActionToString(DeleteMembers);
+        ActionToString(DeletePublishingDestination);
+        ActionToString(DeleteThreatIntelSet);
+        ActionToString(DescribeOrganizationConfiguration);
+        ActionToString(DescribePublishingDestination);
+        ActionToString(DisableOrganizationAdminAccount);
+        ActionToString(DisassociateFromMasterAccount);
+        ActionToString(DisassociateMembers);
+        ActionToString(EnableOrganizationAdminAccount);
+        ActionToString(GetDetector);
+        ActionToString(GetFilter);
+        ActionToString(GetFindings);
+        ActionToString(GetFindingsStatistics);
+        ActionToString(GetIPSet);
+        ActionToString(GetInvitationsCount);
+        ActionToString(GetMasterAccount);
+        ActionToString(GetMemberDetectors);
+        ActionToString(GetMembers);
+        ActionToString(GetThreatIntelSet);
+        ActionToString(GetUsageStatistics);
+        ActionToString(InviteMembers);
+        ActionToString(ListDetectors);
+        ActionToString(ListFilters);
+        ActionToString(ListFindings);
+        ActionToString(ListIPSets);
+        ActionToString(ListInvitations);
+        ActionToString(ListMembers);
+        ActionToString(ListOrganizationAdminAccounts);
+        ActionToString(ListPublishingDestinations);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListThreatIntelSets);
+        ActionToString(StartMonitoringMembers);
+        ActionToString(StopMonitoringMembers);
+        ActionToString(TagResource);
+        ActionToString(UnarchiveFindings);
+        ActionToString(UntagResource);
+        ActionToString(UpdateDetector);
+        ActionToString(UpdateFilter);
+        ActionToString(UpdateFindingsFeedback);
+        ActionToString(UpdateIPSet);
+        ActionToString(UpdateMemberDetectors);
+        ActionToString(UpdateOrganizationConfiguration);
+        ActionToString(UpdatePublishingDestination);
+        ActionToString(UpdateThreatIntelSet);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

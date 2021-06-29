@@ -296,7 +296,24 @@ QString CodeStarRequestPrivate::toString(const CodeStarRequest::Action &action)
     #define ActionToString(action) \
         case CodeStarRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateTeamMember);
+        ActionToString(CreateProject);
+        ActionToString(CreateUserProfile);
+        ActionToString(DeleteProject);
+        ActionToString(DeleteUserProfile);
+        ActionToString(DescribeProject);
+        ActionToString(DescribeUserProfile);
+        ActionToString(DisassociateTeamMember);
+        ActionToString(ListProjects);
+        ActionToString(ListResources);
+        ActionToString(ListTagsForProject);
+        ActionToString(ListTeamMembers);
+        ActionToString(ListUserProfiles);
+        ActionToString(TagProject);
+        ActionToString(UntagProject);
+        ActionToString(UpdateProject);
+        ActionToString(UpdateTeamMember);
+        ActionToString(UpdateUserProfile);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -283,7 +283,11 @@ QString IoTDataPlaneRequestPrivate::toString(const IoTDataPlaneRequest::Action &
     #define ActionToString(action) \
         case IoTDataPlaneRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(DeleteThingShadow);
+        ActionToString(GetThingShadow);
+        ActionToString(ListNamedShadowsForThing);
+        ActionToString(Publish);
+        ActionToString(UpdateThingShadow);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

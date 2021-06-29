@@ -280,7 +280,8 @@ QString MarketplaceCommerceAnalyticsRequestPrivate::toString(const MarketplaceCo
     #define ActionToString(action) \
         case MarketplaceCommerceAnalyticsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(GenerateDataSet);
+        ActionToString(StartSupportDataExport);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

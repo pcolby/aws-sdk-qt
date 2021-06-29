@@ -325,7 +325,53 @@ QString CodeDeployRequestPrivate::toString(const CodeDeployRequest::Action &acti
     #define ActionToString(action) \
         case CodeDeployRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AddTagsToOnPremisesInstances);
+        ActionToString(BatchGetApplicationRevisions);
+        ActionToString(BatchGetApplications);
+        ActionToString(BatchGetDeploymentGroups);
+        ActionToString(BatchGetDeploymentInstances);
+        ActionToString(BatchGetDeploymentTargets);
+        ActionToString(BatchGetDeployments);
+        ActionToString(BatchGetOnPremisesInstances);
+        ActionToString(ContinueDeployment);
+        ActionToString(CreateApplication);
+        ActionToString(CreateDeployment);
+        ActionToString(CreateDeploymentConfig);
+        ActionToString(CreateDeploymentGroup);
+        ActionToString(DeleteApplication);
+        ActionToString(DeleteDeploymentConfig);
+        ActionToString(DeleteDeploymentGroup);
+        ActionToString(DeleteGitHubAccountToken);
+        ActionToString(DeleteResourcesByExternalId);
+        ActionToString(DeregisterOnPremisesInstance);
+        ActionToString(GetApplication);
+        ActionToString(GetApplicationRevision);
+        ActionToString(GetDeployment);
+        ActionToString(GetDeploymentConfig);
+        ActionToString(GetDeploymentGroup);
+        ActionToString(GetDeploymentInstance);
+        ActionToString(GetDeploymentTarget);
+        ActionToString(GetOnPremisesInstance);
+        ActionToString(ListApplicationRevisions);
+        ActionToString(ListApplications);
+        ActionToString(ListDeploymentConfigs);
+        ActionToString(ListDeploymentGroups);
+        ActionToString(ListDeploymentInstances);
+        ActionToString(ListDeploymentTargets);
+        ActionToString(ListDeployments);
+        ActionToString(ListGitHubAccountTokenNames);
+        ActionToString(ListOnPremisesInstances);
+        ActionToString(ListTagsForResource);
+        ActionToString(PutLifecycleEventHookExecutionStatus);
+        ActionToString(RegisterApplicationRevision);
+        ActionToString(RegisterOnPremisesInstance);
+        ActionToString(RemoveTagsFromOnPremisesInstances);
+        ActionToString(SkipWaitTimeForInstanceTermination);
+        ActionToString(StopDeployment);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateApplication);
+        ActionToString(UpdateDeploymentGroup);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

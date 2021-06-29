@@ -286,7 +286,14 @@ QString finspaceRequestPrivate::toString(const finspaceRequest::Action &action)
     #define ActionToString(action) \
         case finspaceRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateEnvironment);
+        ActionToString(DeleteEnvironment);
+        ActionToString(GetEnvironment);
+        ActionToString(ListEnvironments);
+        ActionToString(ListTagsForResource);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateEnvironment);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

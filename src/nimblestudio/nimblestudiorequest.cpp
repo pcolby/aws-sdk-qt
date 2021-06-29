@@ -323,7 +323,51 @@ QString NimbleStudioRequestPrivate::toString(const NimbleStudioRequest::Action &
     #define ActionToString(action) \
         case NimbleStudioRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AcceptEulas);
+        ActionToString(CreateLaunchProfile);
+        ActionToString(CreateStreamingImage);
+        ActionToString(CreateStreamingSession);
+        ActionToString(CreateStreamingSessionStream);
+        ActionToString(CreateStudio);
+        ActionToString(CreateStudioComponent);
+        ActionToString(DeleteLaunchProfile);
+        ActionToString(DeleteLaunchProfileMember);
+        ActionToString(DeleteStreamingImage);
+        ActionToString(DeleteStreamingSession);
+        ActionToString(DeleteStudio);
+        ActionToString(DeleteStudioComponent);
+        ActionToString(DeleteStudioMember);
+        ActionToString(GetEula);
+        ActionToString(GetLaunchProfile);
+        ActionToString(GetLaunchProfileDetails);
+        ActionToString(GetLaunchProfileInitialization);
+        ActionToString(GetLaunchProfileMember);
+        ActionToString(GetStreamingImage);
+        ActionToString(GetStreamingSession);
+        ActionToString(GetStreamingSessionStream);
+        ActionToString(GetStudio);
+        ActionToString(GetStudioComponent);
+        ActionToString(GetStudioMember);
+        ActionToString(ListEulaAcceptances);
+        ActionToString(ListEulas);
+        ActionToString(ListLaunchProfileMembers);
+        ActionToString(ListLaunchProfiles);
+        ActionToString(ListStreamingImages);
+        ActionToString(ListStreamingSessions);
+        ActionToString(ListStudioComponents);
+        ActionToString(ListStudioMembers);
+        ActionToString(ListStudios);
+        ActionToString(ListTagsForResource);
+        ActionToString(PutLaunchProfileMembers);
+        ActionToString(PutStudioMembers);
+        ActionToString(StartStudioSSOConfigurationRepair);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateLaunchProfile);
+        ActionToString(UpdateLaunchProfileMember);
+        ActionToString(UpdateStreamingImage);
+        ActionToString(UpdateStudio);
+        ActionToString(UpdateStudioComponent);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

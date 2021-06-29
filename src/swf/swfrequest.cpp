@@ -315,7 +315,43 @@ QString SwfRequestPrivate::toString(const SwfRequest::Action &action)
     #define ActionToString(action) \
         case SwfRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CountClosedWorkflowExecutions);
+        ActionToString(CountOpenWorkflowExecutions);
+        ActionToString(CountPendingActivityTasks);
+        ActionToString(CountPendingDecisionTasks);
+        ActionToString(DeprecateActivityType);
+        ActionToString(DeprecateDomain);
+        ActionToString(DeprecateWorkflowType);
+        ActionToString(DescribeActivityType);
+        ActionToString(DescribeDomain);
+        ActionToString(DescribeWorkflowExecution);
+        ActionToString(DescribeWorkflowType);
+        ActionToString(GetWorkflowExecutionHistory);
+        ActionToString(ListActivityTypes);
+        ActionToString(ListClosedWorkflowExecutions);
+        ActionToString(ListDomains);
+        ActionToString(ListOpenWorkflowExecutions);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListWorkflowTypes);
+        ActionToString(PollForActivityTask);
+        ActionToString(PollForDecisionTask);
+        ActionToString(RecordActivityTaskHeartbeat);
+        ActionToString(RegisterActivityType);
+        ActionToString(RegisterDomain);
+        ActionToString(RegisterWorkflowType);
+        ActionToString(RequestCancelWorkflowExecution);
+        ActionToString(RespondActivityTaskCanceled);
+        ActionToString(RespondActivityTaskCompleted);
+        ActionToString(RespondActivityTaskFailed);
+        ActionToString(RespondDecisionTaskCompleted);
+        ActionToString(SignalWorkflowExecution);
+        ActionToString(StartWorkflowExecution);
+        ActionToString(TagResource);
+        ActionToString(TerminateWorkflowExecution);
+        ActionToString(UndeprecateActivityType);
+        ActionToString(UndeprecateDomain);
+        ActionToString(UndeprecateWorkflowType);
+        ActionToString(UntagResource);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

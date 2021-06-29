@@ -282,7 +282,10 @@ QString IdentityStoreRequestPrivate::toString(const IdentityStoreRequest::Action
     #define ActionToString(action) \
         case IdentityStoreRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(DescribeGroup);
+        ActionToString(DescribeUser);
+        ActionToString(ListGroups);
+        ActionToString(ListUsers);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

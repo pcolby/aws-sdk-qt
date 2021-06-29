@@ -295,7 +295,23 @@ QString MediaPackageVodRequestPrivate::toString(const MediaPackageVodRequest::Ac
     #define ActionToString(action) \
         case MediaPackageVodRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(ConfigureLogs);
+        ActionToString(CreateAsset);
+        ActionToString(CreatePackagingConfiguration);
+        ActionToString(CreatePackagingGroup);
+        ActionToString(DeleteAsset);
+        ActionToString(DeletePackagingConfiguration);
+        ActionToString(DeletePackagingGroup);
+        ActionToString(DescribeAsset);
+        ActionToString(DescribePackagingConfiguration);
+        ActionToString(DescribePackagingGroup);
+        ActionToString(ListAssets);
+        ActionToString(ListPackagingConfigurations);
+        ActionToString(ListPackagingGroups);
+        ActionToString(ListTagsForResource);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdatePackagingGroup);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -280,7 +280,8 @@ QString WorkMailMessageFlowRequestPrivate::toString(const WorkMailMessageFlowReq
     #define ActionToString(action) \
         case WorkMailMessageFlowRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(GetRawMessageContent);
+        ActionToString(PutRawMessageContent);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

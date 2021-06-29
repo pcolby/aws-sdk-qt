@@ -304,7 +304,32 @@ QString CloudSearchRequestPrivate::toString(const CloudSearchRequest::Action &ac
     #define ActionToString(action) \
         case CloudSearchRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(BuildSuggesters);
+        ActionToString(CreateDomain);
+        ActionToString(DefineAnalysisScheme);
+        ActionToString(DefineExpression);
+        ActionToString(DefineIndexField);
+        ActionToString(DefineSuggester);
+        ActionToString(DeleteAnalysisScheme);
+        ActionToString(DeleteDomain);
+        ActionToString(DeleteExpression);
+        ActionToString(DeleteIndexField);
+        ActionToString(DeleteSuggester);
+        ActionToString(DescribeAnalysisSchemes);
+        ActionToString(DescribeAvailabilityOptions);
+        ActionToString(DescribeDomainEndpointOptions);
+        ActionToString(DescribeDomains);
+        ActionToString(DescribeExpressions);
+        ActionToString(DescribeIndexFields);
+        ActionToString(DescribeScalingParameters);
+        ActionToString(DescribeServiceAccessPolicies);
+        ActionToString(DescribeSuggesters);
+        ActionToString(IndexDocuments);
+        ActionToString(ListDomainNames);
+        ActionToString(UpdateAvailabilityOptions);
+        ActionToString(UpdateDomainEndpointOptions);
+        ActionToString(UpdateScalingParameters);
+        ActionToString(UpdateServiceAccessPolicies);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -292,7 +292,20 @@ QString ServerlessApplicationRepositoryRequestPrivate::toString(const Serverless
     #define ActionToString(action) \
         case ServerlessApplicationRepositoryRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateApplication);
+        ActionToString(CreateApplicationVersion);
+        ActionToString(CreateCloudFormationChangeSet);
+        ActionToString(CreateCloudFormationTemplate);
+        ActionToString(DeleteApplication);
+        ActionToString(GetApplication);
+        ActionToString(GetApplicationPolicy);
+        ActionToString(GetCloudFormationTemplate);
+        ActionToString(ListApplicationDependencies);
+        ActionToString(ListApplicationVersions);
+        ActionToString(ListApplications);
+        ActionToString(PutApplicationPolicy);
+        ActionToString(UnshareApplication);
+        ActionToString(UpdateApplication);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -327,7 +327,55 @@ QString ProtonRequestPrivate::toString(const ProtonRequest::Action &action)
     #define ActionToString(action) \
         case ProtonRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AcceptEnvironmentAccountConnection);
+        ActionToString(CancelEnvironmentDeployment);
+        ActionToString(CancelServiceInstanceDeployment);
+        ActionToString(CancelServicePipelineDeployment);
+        ActionToString(CreateEnvironment);
+        ActionToString(CreateEnvironmentAccountConnection);
+        ActionToString(CreateEnvironmentTemplate);
+        ActionToString(CreateEnvironmentTemplateVersion);
+        ActionToString(CreateService);
+        ActionToString(CreateServiceTemplate);
+        ActionToString(CreateServiceTemplateVersion);
+        ActionToString(DeleteEnvironment);
+        ActionToString(DeleteEnvironmentAccountConnection);
+        ActionToString(DeleteEnvironmentTemplate);
+        ActionToString(DeleteEnvironmentTemplateVersion);
+        ActionToString(DeleteService);
+        ActionToString(DeleteServiceTemplate);
+        ActionToString(DeleteServiceTemplateVersion);
+        ActionToString(GetAccountSettings);
+        ActionToString(GetEnvironment);
+        ActionToString(GetEnvironmentAccountConnection);
+        ActionToString(GetEnvironmentTemplate);
+        ActionToString(GetEnvironmentTemplateVersion);
+        ActionToString(GetService);
+        ActionToString(GetServiceInstance);
+        ActionToString(GetServiceTemplate);
+        ActionToString(GetServiceTemplateVersion);
+        ActionToString(ListEnvironmentAccountConnections);
+        ActionToString(ListEnvironmentTemplateVersions);
+        ActionToString(ListEnvironmentTemplates);
+        ActionToString(ListEnvironments);
+        ActionToString(ListServiceInstances);
+        ActionToString(ListServiceTemplateVersions);
+        ActionToString(ListServiceTemplates);
+        ActionToString(ListServices);
+        ActionToString(ListTagsForResource);
+        ActionToString(RejectEnvironmentAccountConnection);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateAccountSettings);
+        ActionToString(UpdateEnvironment);
+        ActionToString(UpdateEnvironmentAccountConnection);
+        ActionToString(UpdateEnvironmentTemplate);
+        ActionToString(UpdateEnvironmentTemplateVersion);
+        ActionToString(UpdateService);
+        ActionToString(UpdateServiceInstance);
+        ActionToString(UpdateServicePipeline);
+        ActionToString(UpdateServiceTemplate);
+        ActionToString(UpdateServiceTemplateVersion);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -337,7 +337,65 @@ QString DirectConnectRequestPrivate::toString(const DirectConnectRequest::Action
     #define ActionToString(action) \
         case DirectConnectRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AcceptDirectConnectGatewayAssociationProposal);
+        ActionToString(AllocateConnectionOnInterconnect);
+        ActionToString(AllocateHostedConnection);
+        ActionToString(AllocatePrivateVirtualInterface);
+        ActionToString(AllocatePublicVirtualInterface);
+        ActionToString(AllocateTransitVirtualInterface);
+        ActionToString(AssociateConnectionWithLag);
+        ActionToString(AssociateHostedConnection);
+        ActionToString(AssociateMacSecKey);
+        ActionToString(AssociateVirtualInterface);
+        ActionToString(ConfirmConnection);
+        ActionToString(ConfirmPrivateVirtualInterface);
+        ActionToString(ConfirmPublicVirtualInterface);
+        ActionToString(ConfirmTransitVirtualInterface);
+        ActionToString(CreateBGPPeer);
+        ActionToString(CreateConnection);
+        ActionToString(CreateDirectConnectGateway);
+        ActionToString(CreateDirectConnectGatewayAssociation);
+        ActionToString(CreateDirectConnectGatewayAssociationProposal);
+        ActionToString(CreateInterconnect);
+        ActionToString(CreateLag);
+        ActionToString(CreatePrivateVirtualInterface);
+        ActionToString(CreatePublicVirtualInterface);
+        ActionToString(CreateTransitVirtualInterface);
+        ActionToString(DeleteBGPPeer);
+        ActionToString(DeleteConnection);
+        ActionToString(DeleteDirectConnectGateway);
+        ActionToString(DeleteDirectConnectGatewayAssociation);
+        ActionToString(DeleteDirectConnectGatewayAssociationProposal);
+        ActionToString(DeleteInterconnect);
+        ActionToString(DeleteLag);
+        ActionToString(DeleteVirtualInterface);
+        ActionToString(DescribeConnectionLoa);
+        ActionToString(DescribeConnections);
+        ActionToString(DescribeConnectionsOnInterconnect);
+        ActionToString(DescribeDirectConnectGatewayAssociationProposals);
+        ActionToString(DescribeDirectConnectGatewayAssociations);
+        ActionToString(DescribeDirectConnectGatewayAttachments);
+        ActionToString(DescribeDirectConnectGateways);
+        ActionToString(DescribeHostedConnections);
+        ActionToString(DescribeInterconnectLoa);
+        ActionToString(DescribeInterconnects);
+        ActionToString(DescribeLags);
+        ActionToString(DescribeLoa);
+        ActionToString(DescribeLocations);
+        ActionToString(DescribeTags);
+        ActionToString(DescribeVirtualGateways);
+        ActionToString(DescribeVirtualInterfaces);
+        ActionToString(DisassociateConnectionFromLag);
+        ActionToString(DisassociateMacSecKey);
+        ActionToString(ListVirtualInterfaceTestHistory);
+        ActionToString(StartBgpFailoverTest);
+        ActionToString(StopBgpFailoverTest);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateConnection);
+        ActionToString(UpdateDirectConnectGatewayAssociation);
+        ActionToString(UpdateLag);
+        ActionToString(UpdateVirtualInterfaceAttributes);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

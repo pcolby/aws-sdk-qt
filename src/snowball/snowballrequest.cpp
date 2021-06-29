@@ -303,7 +303,31 @@ QString SnowballRequestPrivate::toString(const SnowballRequest::Action &action)
     #define ActionToString(action) \
         case SnowballRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CancelCluster);
+        ActionToString(CancelJob);
+        ActionToString(CreateAddress);
+        ActionToString(CreateCluster);
+        ActionToString(CreateJob);
+        ActionToString(CreateLongTermPricing);
+        ActionToString(CreateReturnShippingLabel);
+        ActionToString(DescribeAddress);
+        ActionToString(DescribeAddresses);
+        ActionToString(DescribeCluster);
+        ActionToString(DescribeJob);
+        ActionToString(DescribeReturnShippingLabel);
+        ActionToString(GetJobManifest);
+        ActionToString(GetJobUnlockCode);
+        ActionToString(GetSnowballUsage);
+        ActionToString(GetSoftwareUpdates);
+        ActionToString(ListClusterJobs);
+        ActionToString(ListClusters);
+        ActionToString(ListCompatibleImages);
+        ActionToString(ListJobs);
+        ActionToString(ListLongTermPricing);
+        ActionToString(UpdateCluster);
+        ActionToString(UpdateJob);
+        ActionToString(UpdateJobShipmentState);
+        ActionToString(UpdateLongTermPricing);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

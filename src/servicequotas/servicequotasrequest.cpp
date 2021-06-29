@@ -297,7 +297,25 @@ QString ServiceQuotasRequestPrivate::toString(const ServiceQuotasRequest::Action
     #define ActionToString(action) \
         case ServiceQuotasRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateServiceQuotaTemplate);
+        ActionToString(DeleteServiceQuotaIncreaseRequestFromTemplate);
+        ActionToString(DisassociateServiceQuotaTemplate);
+        ActionToString(GetAWSDefaultServiceQuota);
+        ActionToString(GetAssociationForServiceQuotaTemplate);
+        ActionToString(GetRequestedServiceQuotaChange);
+        ActionToString(GetServiceQuota);
+        ActionToString(GetServiceQuotaIncreaseRequestFromTemplate);
+        ActionToString(ListAWSDefaultServiceQuotas);
+        ActionToString(ListRequestedServiceQuotaChangeHistory);
+        ActionToString(ListRequestedServiceQuotaChangeHistoryByQuota);
+        ActionToString(ListServiceQuotaIncreaseRequestsInTemplate);
+        ActionToString(ListServiceQuotas);
+        ActionToString(ListServices);
+        ActionToString(ListTagsForResource);
+        ActionToString(PutServiceQuotaIncreaseRequestIntoTemplate);
+        ActionToString(RequestServiceQuotaIncrease);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -296,7 +296,24 @@ QString CloudTrailRequestPrivate::toString(const CloudTrailRequest::Action &acti
     #define ActionToString(action) \
         case CloudTrailRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AddTags);
+        ActionToString(CreateTrail);
+        ActionToString(DeleteTrail);
+        ActionToString(DescribeTrails);
+        ActionToString(GetEventSelectors);
+        ActionToString(GetInsightSelectors);
+        ActionToString(GetTrail);
+        ActionToString(GetTrailStatus);
+        ActionToString(ListPublicKeys);
+        ActionToString(ListTags);
+        ActionToString(ListTrails);
+        ActionToString(LookupEvents);
+        ActionToString(PutEventSelectors);
+        ActionToString(PutInsightSelectors);
+        ActionToString(RemoveTags);
+        ActionToString(StartLogging);
+        ActionToString(StopLogging);
+        ActionToString(UpdateTrail);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

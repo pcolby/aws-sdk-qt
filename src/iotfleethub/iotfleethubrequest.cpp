@@ -286,7 +286,14 @@ QString IoTFleetHubRequestPrivate::toString(const IoTFleetHubRequest::Action &ac
     #define ActionToString(action) \
         case IoTFleetHubRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateApplication);
+        ActionToString(DeleteApplication);
+        ActionToString(DescribeApplication);
+        ActionToString(ListApplications);
+        ActionToString(ListTagsForResource);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateApplication);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

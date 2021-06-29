@@ -296,7 +296,24 @@ QString AppflowRequestPrivate::toString(const AppflowRequest::Action &action)
     #define ActionToString(action) \
         case AppflowRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateConnectorProfile);
+        ActionToString(CreateFlow);
+        ActionToString(DeleteConnectorProfile);
+        ActionToString(DeleteFlow);
+        ActionToString(DescribeConnectorEntity);
+        ActionToString(DescribeConnectorProfiles);
+        ActionToString(DescribeConnectors);
+        ActionToString(DescribeFlow);
+        ActionToString(DescribeFlowExecutionRecords);
+        ActionToString(ListConnectorEntities);
+        ActionToString(ListFlows);
+        ActionToString(ListTagsForResource);
+        ActionToString(StartFlow);
+        ActionToString(StopFlow);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateConnectorProfile);
+        ActionToString(UpdateFlow);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

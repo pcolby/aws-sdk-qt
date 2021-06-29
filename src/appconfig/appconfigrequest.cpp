@@ -311,7 +311,39 @@ QString AppConfigRequestPrivate::toString(const AppConfigRequest::Action &action
     #define ActionToString(action) \
         case AppConfigRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateApplication);
+        ActionToString(CreateConfigurationProfile);
+        ActionToString(CreateDeploymentStrategy);
+        ActionToString(CreateEnvironment);
+        ActionToString(CreateHostedConfigurationVersion);
+        ActionToString(DeleteApplication);
+        ActionToString(DeleteConfigurationProfile);
+        ActionToString(DeleteDeploymentStrategy);
+        ActionToString(DeleteEnvironment);
+        ActionToString(DeleteHostedConfigurationVersion);
+        ActionToString(GetApplication);
+        ActionToString(GetConfiguration);
+        ActionToString(GetConfigurationProfile);
+        ActionToString(GetDeployment);
+        ActionToString(GetDeploymentStrategy);
+        ActionToString(GetEnvironment);
+        ActionToString(GetHostedConfigurationVersion);
+        ActionToString(ListApplications);
+        ActionToString(ListConfigurationProfiles);
+        ActionToString(ListDeploymentStrategies);
+        ActionToString(ListDeployments);
+        ActionToString(ListEnvironments);
+        ActionToString(ListHostedConfigurationVersions);
+        ActionToString(ListTagsForResource);
+        ActionToString(StartDeployment);
+        ActionToString(StopDeployment);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateApplication);
+        ActionToString(UpdateConfigurationProfile);
+        ActionToString(UpdateDeploymentStrategy);
+        ActionToString(UpdateEnvironment);
+        ActionToString(ValidateConfiguration);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

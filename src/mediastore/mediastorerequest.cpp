@@ -299,7 +299,27 @@ QString MediaStoreRequestPrivate::toString(const MediaStoreRequest::Action &acti
     #define ActionToString(action) \
         case MediaStoreRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateContainer);
+        ActionToString(DeleteContainer);
+        ActionToString(DeleteContainerPolicy);
+        ActionToString(DeleteCorsPolicy);
+        ActionToString(DeleteLifecyclePolicy);
+        ActionToString(DeleteMetricPolicy);
+        ActionToString(DescribeContainer);
+        ActionToString(GetContainerPolicy);
+        ActionToString(GetCorsPolicy);
+        ActionToString(GetLifecyclePolicy);
+        ActionToString(GetMetricPolicy);
+        ActionToString(ListContainers);
+        ActionToString(ListTagsForResource);
+        ActionToString(PutContainerPolicy);
+        ActionToString(PutCorsPolicy);
+        ActionToString(PutLifecyclePolicy);
+        ActionToString(PutMetricPolicy);
+        ActionToString(StartAccessLogging);
+        ActionToString(StopAccessLogging);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

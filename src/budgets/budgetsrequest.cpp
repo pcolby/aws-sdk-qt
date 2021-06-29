@@ -300,7 +300,28 @@ QString BudgetsRequestPrivate::toString(const BudgetsRequest::Action &action)
     #define ActionToString(action) \
         case BudgetsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateBudget);
+        ActionToString(CreateBudgetAction);
+        ActionToString(CreateNotification);
+        ActionToString(CreateSubscriber);
+        ActionToString(DeleteBudget);
+        ActionToString(DeleteBudgetAction);
+        ActionToString(DeleteNotification);
+        ActionToString(DeleteSubscriber);
+        ActionToString(DescribeBudget);
+        ActionToString(DescribeBudgetAction);
+        ActionToString(DescribeBudgetActionHistories);
+        ActionToString(DescribeBudgetActionsForAccount);
+        ActionToString(DescribeBudgetActionsForBudget);
+        ActionToString(DescribeBudgetPerformanceHistory);
+        ActionToString(DescribeBudgets);
+        ActionToString(DescribeNotificationsForBudget);
+        ActionToString(DescribeSubscribersForNotification);
+        ActionToString(ExecuteBudgetAction);
+        ActionToString(UpdateBudget);
+        ActionToString(UpdateBudgetAction);
+        ActionToString(UpdateNotification);
+        ActionToString(UpdateSubscriber);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

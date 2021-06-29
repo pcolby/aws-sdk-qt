@@ -309,7 +309,37 @@ QString WellArchitectedRequestPrivate::toString(const WellArchitectedRequest::Ac
     #define ActionToString(action) \
         case WellArchitectedRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateLenses);
+        ActionToString(CreateMilestone);
+        ActionToString(CreateWorkload);
+        ActionToString(CreateWorkloadShare);
+        ActionToString(DeleteWorkload);
+        ActionToString(DeleteWorkloadShare);
+        ActionToString(DisassociateLenses);
+        ActionToString(GetAnswer);
+        ActionToString(GetLensReview);
+        ActionToString(GetLensReviewReport);
+        ActionToString(GetLensVersionDifference);
+        ActionToString(GetMilestone);
+        ActionToString(GetWorkload);
+        ActionToString(ListAnswers);
+        ActionToString(ListLensReviewImprovements);
+        ActionToString(ListLensReviews);
+        ActionToString(ListLenses);
+        ActionToString(ListMilestones);
+        ActionToString(ListNotifications);
+        ActionToString(ListShareInvitations);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListWorkloadShares);
+        ActionToString(ListWorkloads);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateAnswer);
+        ActionToString(UpdateLensReview);
+        ActionToString(UpdateShareInvitation);
+        ActionToString(UpdateWorkload);
+        ActionToString(UpdateWorkloadShare);
+        ActionToString(UpgradeLensReview);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

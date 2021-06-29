@@ -291,7 +291,19 @@ QString ComputeOptimizerRequestPrivate::toString(const ComputeOptimizerRequest::
     #define ActionToString(action) \
         case ComputeOptimizerRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(DescribeRecommendationExportJobs);
+        ActionToString(ExportAutoScalingGroupRecommendations);
+        ActionToString(ExportEBSVolumeRecommendations);
+        ActionToString(ExportEC2InstanceRecommendations);
+        ActionToString(ExportLambdaFunctionRecommendations);
+        ActionToString(GetAutoScalingGroupRecommendations);
+        ActionToString(GetEBSVolumeRecommendations);
+        ActionToString(GetEC2InstanceRecommendations);
+        ActionToString(GetEC2RecommendationProjectedMetrics);
+        ActionToString(GetEnrollmentStatus);
+        ActionToString(GetLambdaFunctionRecommendations);
+        ActionToString(GetRecommendationSummaries);
+        ActionToString(UpdateEnrollmentStatus);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

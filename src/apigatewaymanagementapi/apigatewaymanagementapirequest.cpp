@@ -281,7 +281,9 @@ QString ApiGatewayManagementApiRequestPrivate::toString(const ApiGatewayManageme
     #define ActionToString(action) \
         case ApiGatewayManagementApiRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(DeleteConnection);
+        ActionToString(GetConnection);
+        ActionToString(PostToConnection);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

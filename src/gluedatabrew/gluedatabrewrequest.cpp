@@ -317,7 +317,45 @@ QString GlueDataBrewRequestPrivate::toString(const GlueDataBrewRequest::Action &
     #define ActionToString(action) \
         case GlueDataBrewRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(BatchDeleteRecipeVersion);
+        ActionToString(CreateDataset);
+        ActionToString(CreateProfileJob);
+        ActionToString(CreateProject);
+        ActionToString(CreateRecipe);
+        ActionToString(CreateRecipeJob);
+        ActionToString(CreateSchedule);
+        ActionToString(DeleteDataset);
+        ActionToString(DeleteJob);
+        ActionToString(DeleteProject);
+        ActionToString(DeleteRecipeVersion);
+        ActionToString(DeleteSchedule);
+        ActionToString(DescribeDataset);
+        ActionToString(DescribeJob);
+        ActionToString(DescribeJobRun);
+        ActionToString(DescribeProject);
+        ActionToString(DescribeRecipe);
+        ActionToString(DescribeSchedule);
+        ActionToString(ListDatasets);
+        ActionToString(ListJobRuns);
+        ActionToString(ListJobs);
+        ActionToString(ListProjects);
+        ActionToString(ListRecipeVersions);
+        ActionToString(ListRecipes);
+        ActionToString(ListSchedules);
+        ActionToString(ListTagsForResource);
+        ActionToString(PublishRecipe);
+        ActionToString(SendProjectSessionAction);
+        ActionToString(StartJobRun);
+        ActionToString(StartProjectSession);
+        ActionToString(StopJobRun);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateDataset);
+        ActionToString(UpdateProfileJob);
+        ActionToString(UpdateProject);
+        ActionToString(UpdateRecipe);
+        ActionToString(UpdateRecipeJob);
+        ActionToString(UpdateSchedule);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

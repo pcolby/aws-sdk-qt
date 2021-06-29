@@ -333,7 +333,61 @@ QString CloudFormationRequestPrivate::toString(const CloudFormationRequest::Acti
     #define ActionToString(action) \
         case CloudFormationRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CancelUpdateStack);
+        ActionToString(ContinueUpdateRollback);
+        ActionToString(CreateChangeSet);
+        ActionToString(CreateStack);
+        ActionToString(CreateStackInstances);
+        ActionToString(CreateStackSet);
+        ActionToString(DeleteChangeSet);
+        ActionToString(DeleteStack);
+        ActionToString(DeleteStackInstances);
+        ActionToString(DeleteStackSet);
+        ActionToString(DeregisterType);
+        ActionToString(DescribeAccountLimits);
+        ActionToString(DescribeChangeSet);
+        ActionToString(DescribeStackDriftDetectionStatus);
+        ActionToString(DescribeStackEvents);
+        ActionToString(DescribeStackInstance);
+        ActionToString(DescribeStackResource);
+        ActionToString(DescribeStackResourceDrifts);
+        ActionToString(DescribeStackResources);
+        ActionToString(DescribeStackSet);
+        ActionToString(DescribeStackSetOperation);
+        ActionToString(DescribeStacks);
+        ActionToString(DescribeType);
+        ActionToString(DescribeTypeRegistration);
+        ActionToString(DetectStackDrift);
+        ActionToString(DetectStackResourceDrift);
+        ActionToString(DetectStackSetDrift);
+        ActionToString(EstimateTemplateCost);
+        ActionToString(ExecuteChangeSet);
+        ActionToString(GetStackPolicy);
+        ActionToString(GetTemplate);
+        ActionToString(GetTemplateSummary);
+        ActionToString(ListChangeSets);
+        ActionToString(ListExports);
+        ActionToString(ListImports);
+        ActionToString(ListStackInstances);
+        ActionToString(ListStackResources);
+        ActionToString(ListStackSetOperationResults);
+        ActionToString(ListStackSetOperations);
+        ActionToString(ListStackSets);
+        ActionToString(ListStacks);
+        ActionToString(ListTypeRegistrations);
+        ActionToString(ListTypeVersions);
+        ActionToString(ListTypes);
+        ActionToString(RecordHandlerProgress);
+        ActionToString(RegisterType);
+        ActionToString(SetStackPolicy);
+        ActionToString(SetTypeDefaultVersion);
+        ActionToString(SignalResource);
+        ActionToString(StopStackSetOperation);
+        ActionToString(UpdateStack);
+        ActionToString(UpdateStackInstances);
+        ActionToString(UpdateStackSet);
+        ActionToString(UpdateTerminationProtection);
+        ActionToString(ValidateTemplate);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

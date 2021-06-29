@@ -320,7 +320,48 @@ QString PinpointEmailRequestPrivate::toString(const PinpointEmailRequest::Action
     #define ActionToString(action) \
         case PinpointEmailRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateConfigurationSet);
+        ActionToString(CreateConfigurationSetEventDestination);
+        ActionToString(CreateDedicatedIpPool);
+        ActionToString(CreateDeliverabilityTestReport);
+        ActionToString(CreateEmailIdentity);
+        ActionToString(DeleteConfigurationSet);
+        ActionToString(DeleteConfigurationSetEventDestination);
+        ActionToString(DeleteDedicatedIpPool);
+        ActionToString(DeleteEmailIdentity);
+        ActionToString(GetAccount);
+        ActionToString(GetBlacklistReports);
+        ActionToString(GetConfigurationSet);
+        ActionToString(GetConfigurationSetEventDestinations);
+        ActionToString(GetDedicatedIp);
+        ActionToString(GetDedicatedIps);
+        ActionToString(GetDeliverabilityDashboardOptions);
+        ActionToString(GetDeliverabilityTestReport);
+        ActionToString(GetDomainDeliverabilityCampaign);
+        ActionToString(GetDomainStatisticsReport);
+        ActionToString(GetEmailIdentity);
+        ActionToString(ListConfigurationSets);
+        ActionToString(ListDedicatedIpPools);
+        ActionToString(ListDeliverabilityTestReports);
+        ActionToString(ListDomainDeliverabilityCampaigns);
+        ActionToString(ListEmailIdentities);
+        ActionToString(ListTagsForResource);
+        ActionToString(PutAccountDedicatedIpWarmupAttributes);
+        ActionToString(PutAccountSendingAttributes);
+        ActionToString(PutConfigurationSetDeliveryOptions);
+        ActionToString(PutConfigurationSetReputationOptions);
+        ActionToString(PutConfigurationSetSendingOptions);
+        ActionToString(PutConfigurationSetTrackingOptions);
+        ActionToString(PutDedicatedIpInPool);
+        ActionToString(PutDedicatedIpWarmupAttributes);
+        ActionToString(PutDeliverabilityDashboardOption);
+        ActionToString(PutEmailIdentityDkimAttributes);
+        ActionToString(PutEmailIdentityFeedbackAttributes);
+        ActionToString(PutEmailIdentityMailFromAttributes);
+        ActionToString(SendEmail);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateConfigurationSetEventDestination);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

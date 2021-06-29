@@ -303,7 +303,31 @@ QString ApplicationDiscoveryServiceRequestPrivate::toString(const ApplicationDis
     #define ActionToString(action) \
         case ApplicationDiscoveryServiceRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateConfigurationItemsToApplication);
+        ActionToString(BatchDeleteImportData);
+        ActionToString(CreateApplication);
+        ActionToString(CreateTags);
+        ActionToString(DeleteApplications);
+        ActionToString(DeleteTags);
+        ActionToString(DescribeAgents);
+        ActionToString(DescribeConfigurations);
+        ActionToString(DescribeContinuousExports);
+        ActionToString(DescribeExportConfigurations);
+        ActionToString(DescribeExportTasks);
+        ActionToString(DescribeImportTasks);
+        ActionToString(DescribeTags);
+        ActionToString(DisassociateConfigurationItemsFromApplication);
+        ActionToString(ExportConfigurations);
+        ActionToString(GetDiscoverySummary);
+        ActionToString(ListConfigurations);
+        ActionToString(ListServerNeighbors);
+        ActionToString(StartContinuousExport);
+        ActionToString(StartDataCollectionByAgentIds);
+        ActionToString(StartExportTask);
+        ActionToString(StartImportTask);
+        ActionToString(StopContinuousExport);
+        ActionToString(StopDataCollectionByAgentIds);
+        ActionToString(UpdateApplication);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

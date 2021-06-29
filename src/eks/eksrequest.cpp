@@ -310,7 +310,38 @@ QString EksRequestPrivate::toString(const EksRequest::Action &action)
     #define ActionToString(action) \
         case EksRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateEncryptionConfig);
+        ActionToString(AssociateIdentityProviderConfig);
+        ActionToString(CreateAddon);
+        ActionToString(CreateCluster);
+        ActionToString(CreateFargateProfile);
+        ActionToString(CreateNodegroup);
+        ActionToString(DeleteAddon);
+        ActionToString(DeleteCluster);
+        ActionToString(DeleteFargateProfile);
+        ActionToString(DeleteNodegroup);
+        ActionToString(DescribeAddon);
+        ActionToString(DescribeAddonVersions);
+        ActionToString(DescribeCluster);
+        ActionToString(DescribeFargateProfile);
+        ActionToString(DescribeIdentityProviderConfig);
+        ActionToString(DescribeNodegroup);
+        ActionToString(DescribeUpdate);
+        ActionToString(DisassociateIdentityProviderConfig);
+        ActionToString(ListAddons);
+        ActionToString(ListClusters);
+        ActionToString(ListFargateProfiles);
+        ActionToString(ListIdentityProviderConfigs);
+        ActionToString(ListNodegroups);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListUpdates);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateAddon);
+        ActionToString(UpdateClusterConfig);
+        ActionToString(UpdateClusterVersion);
+        ActionToString(UpdateNodegroupConfig);
+        ActionToString(UpdateNodegroupVersion);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

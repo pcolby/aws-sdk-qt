@@ -316,7 +316,44 @@ QString AppMeshRequestPrivate::toString(const AppMeshRequest::Action &action)
     #define ActionToString(action) \
         case AppMeshRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateGatewayRoute);
+        ActionToString(CreateMesh);
+        ActionToString(CreateRoute);
+        ActionToString(CreateVirtualGateway);
+        ActionToString(CreateVirtualNode);
+        ActionToString(CreateVirtualRouter);
+        ActionToString(CreateVirtualService);
+        ActionToString(DeleteGatewayRoute);
+        ActionToString(DeleteMesh);
+        ActionToString(DeleteRoute);
+        ActionToString(DeleteVirtualGateway);
+        ActionToString(DeleteVirtualNode);
+        ActionToString(DeleteVirtualRouter);
+        ActionToString(DeleteVirtualService);
+        ActionToString(DescribeGatewayRoute);
+        ActionToString(DescribeMesh);
+        ActionToString(DescribeRoute);
+        ActionToString(DescribeVirtualGateway);
+        ActionToString(DescribeVirtualNode);
+        ActionToString(DescribeVirtualRouter);
+        ActionToString(DescribeVirtualService);
+        ActionToString(ListGatewayRoutes);
+        ActionToString(ListMeshes);
+        ActionToString(ListRoutes);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListVirtualGateways);
+        ActionToString(ListVirtualNodes);
+        ActionToString(ListVirtualRouters);
+        ActionToString(ListVirtualServices);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateGatewayRoute);
+        ActionToString(UpdateMesh);
+        ActionToString(UpdateRoute);
+        ActionToString(UpdateVirtualGateway);
+        ActionToString(UpdateVirtualNode);
+        ActionToString(UpdateVirtualRouter);
+        ActionToString(UpdateVirtualService);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -315,7 +315,43 @@ QString AmplifyRequestPrivate::toString(const AmplifyRequest::Action &action)
     #define ActionToString(action) \
         case AmplifyRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateApp);
+        ActionToString(CreateBackendEnvironment);
+        ActionToString(CreateBranch);
+        ActionToString(CreateDeployment);
+        ActionToString(CreateDomainAssociation);
+        ActionToString(CreateWebhook);
+        ActionToString(DeleteApp);
+        ActionToString(DeleteBackendEnvironment);
+        ActionToString(DeleteBranch);
+        ActionToString(DeleteDomainAssociation);
+        ActionToString(DeleteJob);
+        ActionToString(DeleteWebhook);
+        ActionToString(GenerateAccessLogs);
+        ActionToString(GetApp);
+        ActionToString(GetArtifactUrl);
+        ActionToString(GetBackendEnvironment);
+        ActionToString(GetBranch);
+        ActionToString(GetDomainAssociation);
+        ActionToString(GetJob);
+        ActionToString(GetWebhook);
+        ActionToString(ListApps);
+        ActionToString(ListArtifacts);
+        ActionToString(ListBackendEnvironments);
+        ActionToString(ListBranches);
+        ActionToString(ListDomainAssociations);
+        ActionToString(ListJobs);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListWebhooks);
+        ActionToString(StartDeployment);
+        ActionToString(StartJob);
+        ActionToString(StopJob);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateApp);
+        ActionToString(UpdateBranch);
+        ActionToString(UpdateDomainAssociation);
+        ActionToString(UpdateWebhook);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

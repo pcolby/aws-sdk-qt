@@ -329,7 +329,57 @@ QString OrganizationsRequestPrivate::toString(const OrganizationsRequest::Action
     #define ActionToString(action) \
         case OrganizationsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AcceptHandshake);
+        ActionToString(AttachPolicy);
+        ActionToString(CancelHandshake);
+        ActionToString(CreateAccount);
+        ActionToString(CreateGovCloudAccount);
+        ActionToString(CreateOrganization);
+        ActionToString(CreateOrganizationalUnit);
+        ActionToString(CreatePolicy);
+        ActionToString(DeclineHandshake);
+        ActionToString(DeleteOrganization);
+        ActionToString(DeleteOrganizationalUnit);
+        ActionToString(DeletePolicy);
+        ActionToString(DeregisterDelegatedAdministrator);
+        ActionToString(DescribeAccount);
+        ActionToString(DescribeCreateAccountStatus);
+        ActionToString(DescribeEffectivePolicy);
+        ActionToString(DescribeHandshake);
+        ActionToString(DescribeOrganization);
+        ActionToString(DescribeOrganizationalUnit);
+        ActionToString(DescribePolicy);
+        ActionToString(DetachPolicy);
+        ActionToString(DisableAWSServiceAccess);
+        ActionToString(DisablePolicyType);
+        ActionToString(EnableAWSServiceAccess);
+        ActionToString(EnableAllFeatures);
+        ActionToString(EnablePolicyType);
+        ActionToString(InviteAccountToOrganization);
+        ActionToString(LeaveOrganization);
+        ActionToString(ListAWSServiceAccessForOrganization);
+        ActionToString(ListAccounts);
+        ActionToString(ListAccountsForParent);
+        ActionToString(ListChildren);
+        ActionToString(ListCreateAccountStatus);
+        ActionToString(ListDelegatedAdministrators);
+        ActionToString(ListDelegatedServicesForAccount);
+        ActionToString(ListHandshakesForAccount);
+        ActionToString(ListHandshakesForOrganization);
+        ActionToString(ListOrganizationalUnitsForParent);
+        ActionToString(ListParents);
+        ActionToString(ListPolicies);
+        ActionToString(ListPoliciesForTarget);
+        ActionToString(ListRoots);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListTargetsForPolicy);
+        ActionToString(MoveAccount);
+        ActionToString(RegisterDelegatedAdministrator);
+        ActionToString(RemoveAccountFromOrganization);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateOrganizationalUnit);
+        ActionToString(UpdatePolicy);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

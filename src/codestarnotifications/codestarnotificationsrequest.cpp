@@ -291,7 +291,19 @@ QString CodeStarNotificationsRequestPrivate::toString(const CodeStarNotification
     #define ActionToString(action) \
         case CodeStarNotificationsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateNotificationRule);
+        ActionToString(DeleteNotificationRule);
+        ActionToString(DeleteTarget);
+        ActionToString(DescribeNotificationRule);
+        ActionToString(ListEventTypes);
+        ActionToString(ListNotificationRules);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListTargets);
+        ActionToString(Subscribe);
+        ActionToString(TagResource);
+        ActionToString(Unsubscribe);
+        ActionToString(UntagResource);
+        ActionToString(UpdateNotificationRule);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

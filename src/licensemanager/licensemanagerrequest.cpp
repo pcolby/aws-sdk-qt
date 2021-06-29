@@ -323,7 +323,51 @@ QString LicenseManagerRequestPrivate::toString(const LicenseManagerRequest::Acti
     #define ActionToString(action) \
         case LicenseManagerRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AcceptGrant);
+        ActionToString(CheckInLicense);
+        ActionToString(CheckoutBorrowLicense);
+        ActionToString(CheckoutLicense);
+        ActionToString(CreateGrant);
+        ActionToString(CreateGrantVersion);
+        ActionToString(CreateLicense);
+        ActionToString(CreateLicenseConfiguration);
+        ActionToString(CreateLicenseManagerReportGenerator);
+        ActionToString(CreateLicenseVersion);
+        ActionToString(CreateToken);
+        ActionToString(DeleteGrant);
+        ActionToString(DeleteLicense);
+        ActionToString(DeleteLicenseConfiguration);
+        ActionToString(DeleteLicenseManagerReportGenerator);
+        ActionToString(DeleteToken);
+        ActionToString(ExtendLicenseConsumption);
+        ActionToString(GetAccessToken);
+        ActionToString(GetGrant);
+        ActionToString(GetLicense);
+        ActionToString(GetLicenseConfiguration);
+        ActionToString(GetLicenseManagerReportGenerator);
+        ActionToString(GetLicenseUsage);
+        ActionToString(GetServiceSettings);
+        ActionToString(ListAssociationsForLicenseConfiguration);
+        ActionToString(ListDistributedGrants);
+        ActionToString(ListFailuresForLicenseConfigurationOperations);
+        ActionToString(ListLicenseConfigurations);
+        ActionToString(ListLicenseManagerReportGenerators);
+        ActionToString(ListLicenseSpecificationsForResource);
+        ActionToString(ListLicenseVersions);
+        ActionToString(ListLicenses);
+        ActionToString(ListReceivedGrants);
+        ActionToString(ListReceivedLicenses);
+        ActionToString(ListResourceInventory);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListTokens);
+        ActionToString(ListUsageForLicenseConfiguration);
+        ActionToString(RejectGrant);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateLicenseConfiguration);
+        ActionToString(UpdateLicenseManagerReportGenerator);
+        ActionToString(UpdateLicenseSpecificationsForResource);
+        ActionToString(UpdateServiceSettings);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

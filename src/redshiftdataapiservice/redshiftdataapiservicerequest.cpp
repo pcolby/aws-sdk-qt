@@ -287,7 +287,15 @@ QString RedshiftDataAPIServiceRequestPrivate::toString(const RedshiftDataAPIServ
     #define ActionToString(action) \
         case RedshiftDataAPIServiceRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CancelStatement);
+        ActionToString(DescribeStatement);
+        ActionToString(DescribeTable);
+        ActionToString(ExecuteStatement);
+        ActionToString(GetStatementResult);
+        ActionToString(ListDatabases);
+        ActionToString(ListSchemas);
+        ActionToString(ListStatements);
+        ActionToString(ListTables);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

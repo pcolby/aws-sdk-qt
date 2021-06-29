@@ -309,7 +309,37 @@ QString KinesisAnalyticsV2RequestPrivate::toString(const KinesisAnalyticsV2Reque
     #define ActionToString(action) \
         case KinesisAnalyticsV2Request::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AddApplicationCloudWatchLoggingOption);
+        ActionToString(AddApplicationInput);
+        ActionToString(AddApplicationInputProcessingConfiguration);
+        ActionToString(AddApplicationOutput);
+        ActionToString(AddApplicationReferenceDataSource);
+        ActionToString(AddApplicationVpcConfiguration);
+        ActionToString(CreateApplication);
+        ActionToString(CreateApplicationPresignedUrl);
+        ActionToString(CreateApplicationSnapshot);
+        ActionToString(DeleteApplication);
+        ActionToString(DeleteApplicationCloudWatchLoggingOption);
+        ActionToString(DeleteApplicationInputProcessingConfiguration);
+        ActionToString(DeleteApplicationOutput);
+        ActionToString(DeleteApplicationReferenceDataSource);
+        ActionToString(DeleteApplicationSnapshot);
+        ActionToString(DeleteApplicationVpcConfiguration);
+        ActionToString(DescribeApplication);
+        ActionToString(DescribeApplicationSnapshot);
+        ActionToString(DescribeApplicationVersion);
+        ActionToString(DiscoverInputSchema);
+        ActionToString(ListApplicationSnapshots);
+        ActionToString(ListApplicationVersions);
+        ActionToString(ListApplications);
+        ActionToString(ListTagsForResource);
+        ActionToString(RollbackApplication);
+        ActionToString(StartApplication);
+        ActionToString(StopApplication);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateApplication);
+        ActionToString(UpdateApplicationMaintenanceConfiguration);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

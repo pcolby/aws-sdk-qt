@@ -286,7 +286,14 @@ QString HealthLakeRequestPrivate::toString(const HealthLakeRequest::Action &acti
     #define ActionToString(action) \
         case HealthLakeRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateFHIRDatastore);
+        ActionToString(DeleteFHIRDatastore);
+        ActionToString(DescribeFHIRDatastore);
+        ActionToString(DescribeFHIRExportJob);
+        ActionToString(DescribeFHIRImportJob);
+        ActionToString(ListFHIRDatastores);
+        ActionToString(StartFHIRExportJob);
+        ActionToString(StartFHIRImportJob);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

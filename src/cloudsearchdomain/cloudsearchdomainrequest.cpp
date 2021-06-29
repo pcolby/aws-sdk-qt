@@ -281,7 +281,9 @@ QString CloudSearchDomainRequestPrivate::toString(const CloudSearchDomainRequest
     #define ActionToString(action) \
         case CloudSearchDomainRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(Search);
+        ActionToString(Suggest);
+        ActionToString(UploadDocuments);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

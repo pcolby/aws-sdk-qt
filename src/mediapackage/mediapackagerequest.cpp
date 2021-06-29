@@ -297,7 +297,25 @@ QString MediaPackageRequestPrivate::toString(const MediaPackageRequest::Action &
     #define ActionToString(action) \
         case MediaPackageRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(ConfigureLogs);
+        ActionToString(CreateChannel);
+        ActionToString(CreateHarvestJob);
+        ActionToString(CreateOriginEndpoint);
+        ActionToString(DeleteChannel);
+        ActionToString(DeleteOriginEndpoint);
+        ActionToString(DescribeChannel);
+        ActionToString(DescribeHarvestJob);
+        ActionToString(DescribeOriginEndpoint);
+        ActionToString(ListChannels);
+        ActionToString(ListHarvestJobs);
+        ActionToString(ListOriginEndpoints);
+        ActionToString(ListTagsForResource);
+        ActionToString(RotateChannelCredentials);
+        ActionToString(RotateIngestEndpointCredentials);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateChannel);
+        ActionToString(UpdateOriginEndpoint);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

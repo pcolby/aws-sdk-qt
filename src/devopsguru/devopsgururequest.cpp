@@ -299,7 +299,27 @@ QString DevOpsGuruRequestPrivate::toString(const DevOpsGuruRequest::Action &acti
     #define ActionToString(action) \
         case DevOpsGuruRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AddNotificationChannel);
+        ActionToString(DescribeAccountHealth);
+        ActionToString(DescribeAccountOverview);
+        ActionToString(DescribeAnomaly);
+        ActionToString(DescribeFeedback);
+        ActionToString(DescribeInsight);
+        ActionToString(DescribeResourceCollectionHealth);
+        ActionToString(DescribeServiceIntegration);
+        ActionToString(GetCostEstimation);
+        ActionToString(GetResourceCollection);
+        ActionToString(ListAnomaliesForInsight);
+        ActionToString(ListEvents);
+        ActionToString(ListInsights);
+        ActionToString(ListNotificationChannels);
+        ActionToString(ListRecommendations);
+        ActionToString(PutFeedback);
+        ActionToString(RemoveNotificationChannel);
+        ActionToString(SearchInsights);
+        ActionToString(StartCostEstimation);
+        ActionToString(UpdateResourceCollection);
+        ActionToString(UpdateServiceIntegration);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

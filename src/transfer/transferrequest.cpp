@@ -303,7 +303,31 @@ QString TransferRequestPrivate::toString(const TransferRequest::Action &action)
     #define ActionToString(action) \
         case TransferRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateAccess);
+        ActionToString(CreateServer);
+        ActionToString(CreateUser);
+        ActionToString(DeleteAccess);
+        ActionToString(DeleteServer);
+        ActionToString(DeleteSshPublicKey);
+        ActionToString(DeleteUser);
+        ActionToString(DescribeAccess);
+        ActionToString(DescribeSecurityPolicy);
+        ActionToString(DescribeServer);
+        ActionToString(DescribeUser);
+        ActionToString(ImportSshPublicKey);
+        ActionToString(ListAccesses);
+        ActionToString(ListSecurityPolicies);
+        ActionToString(ListServers);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListUsers);
+        ActionToString(StartServer);
+        ActionToString(StopServer);
+        ActionToString(TagResource);
+        ActionToString(TestIdentityProvider);
+        ActionToString(UntagResource);
+        ActionToString(UpdateAccess);
+        ActionToString(UpdateServer);
+        ActionToString(UpdateUser);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

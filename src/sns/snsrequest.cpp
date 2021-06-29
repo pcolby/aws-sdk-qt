@@ -317,7 +317,45 @@ QString SnsRequestPrivate::toString(const SnsRequest::Action &action)
     #define ActionToString(action) \
         case SnsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AddPermission);
+        ActionToString(CheckIfPhoneNumberIsOptedOut);
+        ActionToString(ConfirmSubscription);
+        ActionToString(CreatePlatformApplication);
+        ActionToString(CreatePlatformEndpoint);
+        ActionToString(CreateSMSSandboxPhoneNumber);
+        ActionToString(CreateTopic);
+        ActionToString(DeleteEndpoint);
+        ActionToString(DeletePlatformApplication);
+        ActionToString(DeleteSMSSandboxPhoneNumber);
+        ActionToString(DeleteTopic);
+        ActionToString(GetEndpointAttributes);
+        ActionToString(GetPlatformApplicationAttributes);
+        ActionToString(GetSMSAttributes);
+        ActionToString(GetSMSSandboxAccountStatus);
+        ActionToString(GetSubscriptionAttributes);
+        ActionToString(GetTopicAttributes);
+        ActionToString(ListEndpointsByPlatformApplication);
+        ActionToString(ListOriginationNumbers);
+        ActionToString(ListPhoneNumbersOptedOut);
+        ActionToString(ListPlatformApplications);
+        ActionToString(ListSMSSandboxPhoneNumbers);
+        ActionToString(ListSubscriptions);
+        ActionToString(ListSubscriptionsByTopic);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListTopics);
+        ActionToString(OptInPhoneNumber);
+        ActionToString(Publish);
+        ActionToString(RemovePermission);
+        ActionToString(SetEndpointAttributes);
+        ActionToString(SetPlatformApplicationAttributes);
+        ActionToString(SetSMSAttributes);
+        ActionToString(SetSubscriptionAttributes);
+        ActionToString(SetTopicAttributes);
+        ActionToString(Subscribe);
+        ActionToString(TagResource);
+        ActionToString(Unsubscribe);
+        ActionToString(UntagResource);
+        ActionToString(VerifySMSSandboxPhoneNumber);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

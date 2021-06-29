@@ -287,7 +287,15 @@ QString BraketRequestPrivate::toString(const BraketRequest::Action &action)
     #define ActionToString(action) \
         case BraketRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CancelQuantumTask);
+        ActionToString(CreateQuantumTask);
+        ActionToString(GetDevice);
+        ActionToString(GetQuantumTask);
+        ActionToString(ListTagsForResource);
+        ActionToString(SearchDevices);
+        ActionToString(SearchQuantumTasks);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -298,7 +298,26 @@ QString QldbRequestPrivate::toString(const QldbRequest::Action &action)
     #define ActionToString(action) \
         case QldbRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CancelJournalKinesisStream);
+        ActionToString(CreateLedger);
+        ActionToString(DeleteLedger);
+        ActionToString(DescribeJournalKinesisStream);
+        ActionToString(DescribeJournalS3Export);
+        ActionToString(DescribeLedger);
+        ActionToString(ExportJournalToS3);
+        ActionToString(GetBlock);
+        ActionToString(GetDigest);
+        ActionToString(GetRevision);
+        ActionToString(ListJournalKinesisStreamsForLedger);
+        ActionToString(ListJournalS3Exports);
+        ActionToString(ListJournalS3ExportsForLedger);
+        ActionToString(ListLedgers);
+        ActionToString(ListTagsForResource);
+        ActionToString(StreamJournalToKinesis);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateLedger);
+        ActionToString(UpdateLedgerPermissionsMode);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

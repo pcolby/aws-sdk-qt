@@ -301,7 +301,29 @@ QString ECRPublicRequestPrivate::toString(const ECRPublicRequest::Action &action
     #define ActionToString(action) \
         case ECRPublicRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(BatchCheckLayerAvailability);
+        ActionToString(BatchDeleteImage);
+        ActionToString(CompleteLayerUpload);
+        ActionToString(CreateRepository);
+        ActionToString(DeleteRepository);
+        ActionToString(DeleteRepositoryPolicy);
+        ActionToString(DescribeImageTags);
+        ActionToString(DescribeImages);
+        ActionToString(DescribeRegistries);
+        ActionToString(DescribeRepositories);
+        ActionToString(GetAuthorizationToken);
+        ActionToString(GetRegistryCatalogData);
+        ActionToString(GetRepositoryCatalogData);
+        ActionToString(GetRepositoryPolicy);
+        ActionToString(InitiateLayerUpload);
+        ActionToString(ListTagsForResource);
+        ActionToString(PutImage);
+        ActionToString(PutRegistryCatalogData);
+        ActionToString(PutRepositoryCatalogData);
+        ActionToString(SetRepositoryPolicy);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UploadLayerPart);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

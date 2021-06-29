@@ -305,7 +305,33 @@ QString TranscribeServiceRequestPrivate::toString(const TranscribeServiceRequest
     #define ActionToString(action) \
         case TranscribeServiceRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateLanguageModel);
+        ActionToString(CreateMedicalVocabulary);
+        ActionToString(CreateVocabulary);
+        ActionToString(CreateVocabularyFilter);
+        ActionToString(DeleteLanguageModel);
+        ActionToString(DeleteMedicalTranscriptionJob);
+        ActionToString(DeleteMedicalVocabulary);
+        ActionToString(DeleteTranscriptionJob);
+        ActionToString(DeleteVocabulary);
+        ActionToString(DeleteVocabularyFilter);
+        ActionToString(DescribeLanguageModel);
+        ActionToString(GetMedicalTranscriptionJob);
+        ActionToString(GetMedicalVocabulary);
+        ActionToString(GetTranscriptionJob);
+        ActionToString(GetVocabulary);
+        ActionToString(GetVocabularyFilter);
+        ActionToString(ListLanguageModels);
+        ActionToString(ListMedicalTranscriptionJobs);
+        ActionToString(ListMedicalVocabularies);
+        ActionToString(ListTranscriptionJobs);
+        ActionToString(ListVocabularies);
+        ActionToString(ListVocabularyFilters);
+        ActionToString(StartMedicalTranscriptionJob);
+        ActionToString(StartTranscriptionJob);
+        ActionToString(UpdateMedicalVocabulary);
+        ActionToString(UpdateVocabulary);
+        ActionToString(UpdateVocabularyFilter);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

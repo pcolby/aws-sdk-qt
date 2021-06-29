@@ -331,7 +331,59 @@ QString DocDBRequestPrivate::toString(const DocDBRequest::Action &action)
     #define ActionToString(action) \
         case DocDBRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AddSourceIdentifierToSubscription);
+        ActionToString(AddTagsToResource);
+        ActionToString(ApplyPendingMaintenanceAction);
+        ActionToString(CopyDBClusterParameterGroup);
+        ActionToString(CopyDBClusterSnapshot);
+        ActionToString(CreateDBCluster);
+        ActionToString(CreateDBClusterParameterGroup);
+        ActionToString(CreateDBClusterSnapshot);
+        ActionToString(CreateDBInstance);
+        ActionToString(CreateDBSubnetGroup);
+        ActionToString(CreateEventSubscription);
+        ActionToString(CreateGlobalCluster);
+        ActionToString(DeleteDBCluster);
+        ActionToString(DeleteDBClusterParameterGroup);
+        ActionToString(DeleteDBClusterSnapshot);
+        ActionToString(DeleteDBInstance);
+        ActionToString(DeleteDBSubnetGroup);
+        ActionToString(DeleteEventSubscription);
+        ActionToString(DeleteGlobalCluster);
+        ActionToString(DescribeCertificates);
+        ActionToString(DescribeDBClusterParameterGroups);
+        ActionToString(DescribeDBClusterParameters);
+        ActionToString(DescribeDBClusterSnapshotAttributes);
+        ActionToString(DescribeDBClusterSnapshots);
+        ActionToString(DescribeDBClusters);
+        ActionToString(DescribeDBEngineVersions);
+        ActionToString(DescribeDBInstances);
+        ActionToString(DescribeDBSubnetGroups);
+        ActionToString(DescribeEngineDefaultClusterParameters);
+        ActionToString(DescribeEventCategories);
+        ActionToString(DescribeEventSubscriptions);
+        ActionToString(DescribeEvents);
+        ActionToString(DescribeGlobalClusters);
+        ActionToString(DescribeOrderableDBInstanceOptions);
+        ActionToString(DescribePendingMaintenanceActions);
+        ActionToString(FailoverDBCluster);
+        ActionToString(ListTagsForResource);
+        ActionToString(ModifyDBCluster);
+        ActionToString(ModifyDBClusterParameterGroup);
+        ActionToString(ModifyDBClusterSnapshotAttribute);
+        ActionToString(ModifyDBInstance);
+        ActionToString(ModifyDBSubnetGroup);
+        ActionToString(ModifyEventSubscription);
+        ActionToString(ModifyGlobalCluster);
+        ActionToString(RebootDBInstance);
+        ActionToString(RemoveFromGlobalCluster);
+        ActionToString(RemoveSourceIdentifierFromSubscription);
+        ActionToString(RemoveTagsFromResource);
+        ActionToString(ResetDBClusterParameterGroup);
+        ActionToString(RestoreDBClusterFromSnapshot);
+        ActionToString(RestoreDBClusterToPointInTime);
+        ActionToString(StartDBCluster);
+        ActionToString(StopDBCluster);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

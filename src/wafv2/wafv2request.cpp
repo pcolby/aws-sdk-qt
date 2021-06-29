@@ -318,7 +318,46 @@ QString Wafv2RequestPrivate::toString(const Wafv2Request::Action &action)
     #define ActionToString(action) \
         case Wafv2Request::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateWebACL);
+        ActionToString(CheckCapacity);
+        ActionToString(CreateIPSet);
+        ActionToString(CreateRegexPatternSet);
+        ActionToString(CreateRuleGroup);
+        ActionToString(CreateWebACL);
+        ActionToString(DeleteFirewallManagerRuleGroups);
+        ActionToString(DeleteIPSet);
+        ActionToString(DeleteLoggingConfiguration);
+        ActionToString(DeletePermissionPolicy);
+        ActionToString(DeleteRegexPatternSet);
+        ActionToString(DeleteRuleGroup);
+        ActionToString(DeleteWebACL);
+        ActionToString(DescribeManagedRuleGroup);
+        ActionToString(DisassociateWebACL);
+        ActionToString(GetIPSet);
+        ActionToString(GetLoggingConfiguration);
+        ActionToString(GetPermissionPolicy);
+        ActionToString(GetRateBasedStatementManagedKeys);
+        ActionToString(GetRegexPatternSet);
+        ActionToString(GetRuleGroup);
+        ActionToString(GetSampledRequests);
+        ActionToString(GetWebACL);
+        ActionToString(GetWebACLForResource);
+        ActionToString(ListAvailableManagedRuleGroups);
+        ActionToString(ListIPSets);
+        ActionToString(ListLoggingConfigurations);
+        ActionToString(ListRegexPatternSets);
+        ActionToString(ListResourcesForWebACL);
+        ActionToString(ListRuleGroups);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListWebACLs);
+        ActionToString(PutLoggingConfiguration);
+        ActionToString(PutPermissionPolicy);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateIPSet);
+        ActionToString(UpdateRegexPatternSet);
+        ActionToString(UpdateRuleGroup);
+        ActionToString(UpdateWebACL);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

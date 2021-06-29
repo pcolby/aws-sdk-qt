@@ -282,7 +282,10 @@ QString SsoRequestPrivate::toString(const SsoRequest::Action &action)
     #define ActionToString(action) \
         case SsoRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(GetRoleCredentials);
+        ActionToString(ListAccountRoles);
+        ActionToString(ListAccounts);
+        ActionToString(Logout);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

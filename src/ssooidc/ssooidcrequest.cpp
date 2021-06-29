@@ -281,7 +281,9 @@ QString SsooidcRequestPrivate::toString(const SsooidcRequest::Action &action)
     #define ActionToString(action) \
         case SsooidcRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateToken);
+        ActionToString(RegisterClient);
+        ActionToString(StartDeviceAuthorization);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -291,7 +291,19 @@ QString HealthRequestPrivate::toString(const HealthRequest::Action &action)
     #define ActionToString(action) \
         case HealthRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(DescribeAffectedAccountsForOrganization);
+        ActionToString(DescribeAffectedEntities);
+        ActionToString(DescribeAffectedEntitiesForOrganization);
+        ActionToString(DescribeEntityAggregates);
+        ActionToString(DescribeEventAggregates);
+        ActionToString(DescribeEventDetails);
+        ActionToString(DescribeEventDetailsForOrganization);
+        ActionToString(DescribeEventTypes);
+        ActionToString(DescribeEvents);
+        ActionToString(DescribeEventsForOrganization);
+        ActionToString(DescribeHealthServiceStatusForOrganization);
+        ActionToString(DisableHealthServiceAccessForOrganization);
+        ActionToString(EnableHealthServiceAccessForOrganization);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -284,7 +284,12 @@ QString ApplicationCostProfilerRequestPrivate::toString(const ApplicationCostPro
     #define ActionToString(action) \
         case ApplicationCostProfilerRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(DeleteReportDefinition);
+        ActionToString(GetReportDefinition);
+        ActionToString(ImportApplicationUsage);
+        ActionToString(ListReportDefinitions);
+        ActionToString(PutReportDefinition);
+        ActionToString(UpdateReportDefinition);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

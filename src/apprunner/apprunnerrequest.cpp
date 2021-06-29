@@ -300,7 +300,28 @@ QString AppRunnerRequestPrivate::toString(const AppRunnerRequest::Action &action
     #define ActionToString(action) \
         case AppRunnerRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateCustomDomain);
+        ActionToString(CreateAutoScalingConfiguration);
+        ActionToString(CreateConnection);
+        ActionToString(CreateService);
+        ActionToString(DeleteAutoScalingConfiguration);
+        ActionToString(DeleteConnection);
+        ActionToString(DeleteService);
+        ActionToString(DescribeAutoScalingConfiguration);
+        ActionToString(DescribeCustomDomains);
+        ActionToString(DescribeService);
+        ActionToString(DisassociateCustomDomain);
+        ActionToString(ListAutoScalingConfigurations);
+        ActionToString(ListConnections);
+        ActionToString(ListOperations);
+        ActionToString(ListServices);
+        ActionToString(ListTagsForResource);
+        ActionToString(PauseService);
+        ActionToString(ResumeService);
+        ActionToString(StartDeployment);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateService);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

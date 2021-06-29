@@ -329,7 +329,57 @@ QString BackupRequestPrivate::toString(const BackupRequest::Action &action)
     #define ActionToString(action) \
         case BackupRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateBackupPlan);
+        ActionToString(CreateBackupSelection);
+        ActionToString(CreateBackupVault);
+        ActionToString(DeleteBackupPlan);
+        ActionToString(DeleteBackupSelection);
+        ActionToString(DeleteBackupVault);
+        ActionToString(DeleteBackupVaultAccessPolicy);
+        ActionToString(DeleteBackupVaultNotifications);
+        ActionToString(DeleteRecoveryPoint);
+        ActionToString(DescribeBackupJob);
+        ActionToString(DescribeBackupVault);
+        ActionToString(DescribeCopyJob);
+        ActionToString(DescribeGlobalSettings);
+        ActionToString(DescribeProtectedResource);
+        ActionToString(DescribeRecoveryPoint);
+        ActionToString(DescribeRegionSettings);
+        ActionToString(DescribeRestoreJob);
+        ActionToString(DisassociateRecoveryPoint);
+        ActionToString(ExportBackupPlanTemplate);
+        ActionToString(GetBackupPlan);
+        ActionToString(GetBackupPlanFromJSON);
+        ActionToString(GetBackupPlanFromTemplate);
+        ActionToString(GetBackupSelection);
+        ActionToString(GetBackupVaultAccessPolicy);
+        ActionToString(GetBackupVaultNotifications);
+        ActionToString(GetRecoveryPointRestoreMetadata);
+        ActionToString(GetSupportedResourceTypes);
+        ActionToString(ListBackupJobs);
+        ActionToString(ListBackupPlanTemplates);
+        ActionToString(ListBackupPlanVersions);
+        ActionToString(ListBackupPlans);
+        ActionToString(ListBackupSelections);
+        ActionToString(ListBackupVaults);
+        ActionToString(ListCopyJobs);
+        ActionToString(ListProtectedResources);
+        ActionToString(ListRecoveryPointsByBackupVault);
+        ActionToString(ListRecoveryPointsByResource);
+        ActionToString(ListRestoreJobs);
+        ActionToString(ListTags);
+        ActionToString(PutBackupVaultAccessPolicy);
+        ActionToString(PutBackupVaultNotifications);
+        ActionToString(StartBackupJob);
+        ActionToString(StartCopyJob);
+        ActionToString(StartRestoreJob);
+        ActionToString(StopBackupJob);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateBackupPlan);
+        ActionToString(UpdateGlobalSettings);
+        ActionToString(UpdateRecoveryPointLifecycle);
+        ActionToString(UpdateRegionSettings);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

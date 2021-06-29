@@ -309,7 +309,37 @@ QString SchemasRequestPrivate::toString(const SchemasRequest::Action &action)
     #define ActionToString(action) \
         case SchemasRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CreateDiscoverer);
+        ActionToString(CreateRegistry);
+        ActionToString(CreateSchema);
+        ActionToString(DeleteDiscoverer);
+        ActionToString(DeleteRegistry);
+        ActionToString(DeleteResourcePolicy);
+        ActionToString(DeleteSchema);
+        ActionToString(DeleteSchemaVersion);
+        ActionToString(DescribeCodeBinding);
+        ActionToString(DescribeDiscoverer);
+        ActionToString(DescribeRegistry);
+        ActionToString(DescribeSchema);
+        ActionToString(ExportSchema);
+        ActionToString(GetCodeBindingSource);
+        ActionToString(GetDiscoveredSchema);
+        ActionToString(GetResourcePolicy);
+        ActionToString(ListDiscoverers);
+        ActionToString(ListRegistries);
+        ActionToString(ListSchemaVersions);
+        ActionToString(ListSchemas);
+        ActionToString(ListTagsForResource);
+        ActionToString(PutCodeBinding);
+        ActionToString(PutResourcePolicy);
+        ActionToString(SearchSchemas);
+        ActionToString(StartDiscoverer);
+        ActionToString(StopDiscoverer);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateDiscoverer);
+        ActionToString(UpdateRegistry);
+        ActionToString(UpdateSchema);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

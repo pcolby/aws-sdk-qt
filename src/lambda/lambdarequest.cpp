@@ -336,7 +336,64 @@ QString LambdaRequestPrivate::toString(const LambdaRequest::Action &action)
     #define ActionToString(action) \
         case LambdaRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AddLayerVersionPermission);
+        ActionToString(AddPermission);
+        ActionToString(CreateAlias);
+        ActionToString(CreateCodeSigningConfig);
+        ActionToString(CreateEventSourceMapping);
+        ActionToString(CreateFunction);
+        ActionToString(DeleteAlias);
+        ActionToString(DeleteCodeSigningConfig);
+        ActionToString(DeleteEventSourceMapping);
+        ActionToString(DeleteFunction);
+        ActionToString(DeleteFunctionCodeSigningConfig);
+        ActionToString(DeleteFunctionConcurrency);
+        ActionToString(DeleteFunctionEventInvokeConfig);
+        ActionToString(DeleteLayerVersion);
+        ActionToString(DeleteProvisionedConcurrencyConfig);
+        ActionToString(GetAccountSettings);
+        ActionToString(GetAlias);
+        ActionToString(GetCodeSigningConfig);
+        ActionToString(GetEventSourceMapping);
+        ActionToString(GetFunction);
+        ActionToString(GetFunctionCodeSigningConfig);
+        ActionToString(GetFunctionConcurrency);
+        ActionToString(GetFunctionConfiguration);
+        ActionToString(GetFunctionEventInvokeConfig);
+        ActionToString(GetLayerVersion);
+        ActionToString(GetLayerVersionByArn);
+        ActionToString(GetLayerVersionPolicy);
+        ActionToString(GetPolicy);
+        ActionToString(GetProvisionedConcurrencyConfig);
+        ActionToString(Invoke);
+        ActionToString(InvokeAsync);
+        ActionToString(ListAliases);
+        ActionToString(ListCodeSigningConfigs);
+        ActionToString(ListEventSourceMappings);
+        ActionToString(ListFunctionEventInvokeConfigs);
+        ActionToString(ListFunctions);
+        ActionToString(ListFunctionsByCodeSigningConfig);
+        ActionToString(ListLayerVersions);
+        ActionToString(ListLayers);
+        ActionToString(ListProvisionedConcurrencyConfigs);
+        ActionToString(ListTags);
+        ActionToString(ListVersionsByFunction);
+        ActionToString(PublishLayerVersion);
+        ActionToString(PublishVersion);
+        ActionToString(PutFunctionCodeSigningConfig);
+        ActionToString(PutFunctionConcurrency);
+        ActionToString(PutFunctionEventInvokeConfig);
+        ActionToString(PutProvisionedConcurrencyConfig);
+        ActionToString(RemoveLayerVersionPermission);
+        ActionToString(RemovePermission);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateAlias);
+        ActionToString(UpdateCodeSigningConfig);
+        ActionToString(UpdateEventSourceMapping);
+        ActionToString(UpdateFunctionCode);
+        ActionToString(UpdateFunctionConfiguration);
+        ActionToString(UpdateFunctionEventInvokeConfig);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

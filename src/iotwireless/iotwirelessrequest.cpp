@@ -335,7 +335,63 @@ QString IoTWirelessRequestPrivate::toString(const IoTWirelessRequest::Action &ac
     #define ActionToString(action) \
         case IoTWirelessRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateAwsAccountWithPartnerAccount);
+        ActionToString(AssociateWirelessDeviceWithThing);
+        ActionToString(AssociateWirelessGatewayWithCertificate);
+        ActionToString(AssociateWirelessGatewayWithThing);
+        ActionToString(CreateDestination);
+        ActionToString(CreateDeviceProfile);
+        ActionToString(CreateServiceProfile);
+        ActionToString(CreateWirelessDevice);
+        ActionToString(CreateWirelessGateway);
+        ActionToString(CreateWirelessGatewayTask);
+        ActionToString(CreateWirelessGatewayTaskDefinition);
+        ActionToString(DeleteDestination);
+        ActionToString(DeleteDeviceProfile);
+        ActionToString(DeleteServiceProfile);
+        ActionToString(DeleteWirelessDevice);
+        ActionToString(DeleteWirelessGateway);
+        ActionToString(DeleteWirelessGatewayTask);
+        ActionToString(DeleteWirelessGatewayTaskDefinition);
+        ActionToString(DisassociateAwsAccountFromPartnerAccount);
+        ActionToString(DisassociateWirelessDeviceFromThing);
+        ActionToString(DisassociateWirelessGatewayFromCertificate);
+        ActionToString(DisassociateWirelessGatewayFromThing);
+        ActionToString(GetDestination);
+        ActionToString(GetDeviceProfile);
+        ActionToString(GetLogLevelsByResourceTypes);
+        ActionToString(GetPartnerAccount);
+        ActionToString(GetResourceLogLevel);
+        ActionToString(GetServiceEndpoint);
+        ActionToString(GetServiceProfile);
+        ActionToString(GetWirelessDevice);
+        ActionToString(GetWirelessDeviceStatistics);
+        ActionToString(GetWirelessGateway);
+        ActionToString(GetWirelessGatewayCertificate);
+        ActionToString(GetWirelessGatewayFirmwareInformation);
+        ActionToString(GetWirelessGatewayStatistics);
+        ActionToString(GetWirelessGatewayTask);
+        ActionToString(GetWirelessGatewayTaskDefinition);
+        ActionToString(ListDestinations);
+        ActionToString(ListDeviceProfiles);
+        ActionToString(ListPartnerAccounts);
+        ActionToString(ListServiceProfiles);
+        ActionToString(ListTagsForResource);
+        ActionToString(ListWirelessDevices);
+        ActionToString(ListWirelessGatewayTaskDefinitions);
+        ActionToString(ListWirelessGateways);
+        ActionToString(PutResourceLogLevel);
+        ActionToString(ResetAllResourceLogLevels);
+        ActionToString(ResetResourceLogLevel);
+        ActionToString(SendDataToWirelessDevice);
+        ActionToString(TagResource);
+        ActionToString(TestWirelessDevice);
+        ActionToString(UntagResource);
+        ActionToString(UpdateDestination);
+        ActionToString(UpdateLogLevelsByResourceTypes);
+        ActionToString(UpdatePartnerAccount);
+        ActionToString(UpdateWirelessDevice);
+        ActionToString(UpdateWirelessGateway);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

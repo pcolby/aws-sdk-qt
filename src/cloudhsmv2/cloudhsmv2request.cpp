@@ -293,7 +293,21 @@ QString CloudHSMV2RequestPrivate::toString(const CloudHSMV2Request::Action &acti
     #define ActionToString(action) \
         case CloudHSMV2Request::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(CopyBackupToRegion);
+        ActionToString(CreateCluster);
+        ActionToString(CreateHsm);
+        ActionToString(DeleteBackup);
+        ActionToString(DeleteCluster);
+        ActionToString(DeleteHsm);
+        ActionToString(DescribeBackups);
+        ActionToString(DescribeClusters);
+        ActionToString(InitializeCluster);
+        ActionToString(ListTags);
+        ActionToString(ModifyBackupAttributes);
+        ActionToString(ModifyCluster);
+        ActionToString(RestoreBackup);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -284,7 +284,12 @@ QString TextractRequestPrivate::toString(const TextractRequest::Action &action)
     #define ActionToString(action) \
         case TextractRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AnalyzeDocument);
+        ActionToString(DetectDocumentText);
+        ActionToString(GetDocumentAnalysis);
+        ActionToString(GetDocumentTextDetection);
+        ActionToString(StartDocumentAnalysis);
+        ActionToString(StartDocumentTextDetection);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

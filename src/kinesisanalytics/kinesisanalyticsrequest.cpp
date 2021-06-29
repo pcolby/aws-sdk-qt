@@ -298,7 +298,26 @@ QString KinesisAnalyticsRequestPrivate::toString(const KinesisAnalyticsRequest::
     #define ActionToString(action) \
         case KinesisAnalyticsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AddApplicationCloudWatchLoggingOption);
+        ActionToString(AddApplicationInput);
+        ActionToString(AddApplicationInputProcessingConfiguration);
+        ActionToString(AddApplicationOutput);
+        ActionToString(AddApplicationReferenceDataSource);
+        ActionToString(CreateApplication);
+        ActionToString(DeleteApplication);
+        ActionToString(DeleteApplicationCloudWatchLoggingOption);
+        ActionToString(DeleteApplicationInputProcessingConfiguration);
+        ActionToString(DeleteApplicationOutput);
+        ActionToString(DeleteApplicationReferenceDataSource);
+        ActionToString(DescribeApplication);
+        ActionToString(DiscoverInputSchema);
+        ActionToString(ListApplications);
+        ActionToString(ListTagsForResource);
+        ActionToString(StartApplication);
+        ActionToString(StopApplication);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateApplication);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

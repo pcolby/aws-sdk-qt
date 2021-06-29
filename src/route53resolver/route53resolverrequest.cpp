@@ -338,7 +338,66 @@ QString Route53ResolverRequestPrivate::toString(const Route53ResolverRequest::Ac
     #define ActionToString(action) \
         case Route53ResolverRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AssociateFirewallRuleGroup);
+        ActionToString(AssociateResolverEndpointIpAddress);
+        ActionToString(AssociateResolverQueryLogConfig);
+        ActionToString(AssociateResolverRule);
+        ActionToString(CreateFirewallDomainList);
+        ActionToString(CreateFirewallRule);
+        ActionToString(CreateFirewallRuleGroup);
+        ActionToString(CreateResolverEndpoint);
+        ActionToString(CreateResolverQueryLogConfig);
+        ActionToString(CreateResolverRule);
+        ActionToString(DeleteFirewallDomainList);
+        ActionToString(DeleteFirewallRule);
+        ActionToString(DeleteFirewallRuleGroup);
+        ActionToString(DeleteResolverEndpoint);
+        ActionToString(DeleteResolverQueryLogConfig);
+        ActionToString(DeleteResolverRule);
+        ActionToString(DisassociateFirewallRuleGroup);
+        ActionToString(DisassociateResolverEndpointIpAddress);
+        ActionToString(DisassociateResolverQueryLogConfig);
+        ActionToString(DisassociateResolverRule);
+        ActionToString(GetFirewallConfig);
+        ActionToString(GetFirewallDomainList);
+        ActionToString(GetFirewallRuleGroup);
+        ActionToString(GetFirewallRuleGroupAssociation);
+        ActionToString(GetFirewallRuleGroupPolicy);
+        ActionToString(GetResolverDnssecConfig);
+        ActionToString(GetResolverEndpoint);
+        ActionToString(GetResolverQueryLogConfig);
+        ActionToString(GetResolverQueryLogConfigAssociation);
+        ActionToString(GetResolverQueryLogConfigPolicy);
+        ActionToString(GetResolverRule);
+        ActionToString(GetResolverRuleAssociation);
+        ActionToString(GetResolverRulePolicy);
+        ActionToString(ImportFirewallDomains);
+        ActionToString(ListFirewallConfigs);
+        ActionToString(ListFirewallDomainLists);
+        ActionToString(ListFirewallDomains);
+        ActionToString(ListFirewallRuleGroupAssociations);
+        ActionToString(ListFirewallRuleGroups);
+        ActionToString(ListFirewallRules);
+        ActionToString(ListResolverDnssecConfigs);
+        ActionToString(ListResolverEndpointIpAddresses);
+        ActionToString(ListResolverEndpoints);
+        ActionToString(ListResolverQueryLogConfigAssociations);
+        ActionToString(ListResolverQueryLogConfigs);
+        ActionToString(ListResolverRuleAssociations);
+        ActionToString(ListResolverRules);
+        ActionToString(ListTagsForResource);
+        ActionToString(PutFirewallRuleGroupPolicy);
+        ActionToString(PutResolverQueryLogConfigPolicy);
+        ActionToString(PutResolverRulePolicy);
+        ActionToString(TagResource);
+        ActionToString(UntagResource);
+        ActionToString(UpdateFirewallConfig);
+        ActionToString(UpdateFirewallDomains);
+        ActionToString(UpdateFirewallRule);
+        ActionToString(UpdateFirewallRuleGroupAssociation);
+        ActionToString(UpdateResolverDnssecConfig);
+        ActionToString(UpdateResolverEndpoint);
+        ActionToString(UpdateResolverRule);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

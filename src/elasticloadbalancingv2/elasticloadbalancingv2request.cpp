@@ -312,7 +312,40 @@ QString ElasticLoadBalancingv2RequestPrivate::toString(const ElasticLoadBalancin
     #define ActionToString(action) \
         case ElasticLoadBalancingv2Request::action##Action: return QStringLiteral(#action)
     switch (action) {
-        //ActionToString(/*todo*/);
+        ActionToString(AddListenerCertificates);
+        ActionToString(AddTags);
+        ActionToString(CreateListener);
+        ActionToString(CreateLoadBalancer);
+        ActionToString(CreateRule);
+        ActionToString(CreateTargetGroup);
+        ActionToString(DeleteListener);
+        ActionToString(DeleteLoadBalancer);
+        ActionToString(DeleteRule);
+        ActionToString(DeleteTargetGroup);
+        ActionToString(DeregisterTargets);
+        ActionToString(DescribeAccountLimits);
+        ActionToString(DescribeListenerCertificates);
+        ActionToString(DescribeListeners);
+        ActionToString(DescribeLoadBalancerAttributes);
+        ActionToString(DescribeLoadBalancers);
+        ActionToString(DescribeRules);
+        ActionToString(DescribeSSLPolicies);
+        ActionToString(DescribeTags);
+        ActionToString(DescribeTargetGroupAttributes);
+        ActionToString(DescribeTargetGroups);
+        ActionToString(DescribeTargetHealth);
+        ActionToString(ModifyListener);
+        ActionToString(ModifyLoadBalancerAttributes);
+        ActionToString(ModifyRule);
+        ActionToString(ModifyTargetGroup);
+        ActionToString(ModifyTargetGroupAttributes);
+        ActionToString(RegisterTargets);
+        ActionToString(RemoveListenerCertificates);
+        ActionToString(RemoveTags);
+        ActionToString(SetIpAddressType);
+        ActionToString(SetRulePriorities);
+        ActionToString(SetSecurityGroups);
+        ActionToString(SetSubnets);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }
