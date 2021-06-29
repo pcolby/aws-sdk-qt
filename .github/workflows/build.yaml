@@ -4,7 +4,6 @@ on: [push, pull_request]
 
 jobs:
   linux:
-    if: false
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -25,7 +24,6 @@ jobs:
         cmake --build "$RUNNER_TEMP" --target codegen QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
 
   linux-qts:
-    if: false
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
