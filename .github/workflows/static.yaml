@@ -4,11 +4,12 @@ on: [push, pull_request]
 
 jobs:
   CodeQL:
+    if: false
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
     - name: Install Grantlee
       run: sudo apt install libgrantlee5-dev
+    - uses: actions/checkout@v2
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v1
       with:
@@ -20,4 +21,11 @@ jobs:
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
 
-# @todo cppcheck
+  Cppcheck:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install Cppcheck
+      run: sudo apt install cppcheck
+    - uses: actions/checkout@v2
+    - name: Perform Cppcheck Analysis
+      run: cppcheck -DQ_DECLARE_{FLAGS,PRIVATE,PUBLIC} -DQ_DECL_OVERRIDE=override --enable=all --error-exitcode=1 --quiet --std=c++11 {codegen/,}src/
