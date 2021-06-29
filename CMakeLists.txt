@@ -19,7 +19,7 @@ add_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII)
 
 # Enable most compiler warnings, and treat as errors.
 if (MSVC)
-  add_compile_options(/Wall /WX)
+  add_compile_options(/W4 /WX)
 else()
   add_compile_options(-Wall -Wextra -Werror)
 endif()
