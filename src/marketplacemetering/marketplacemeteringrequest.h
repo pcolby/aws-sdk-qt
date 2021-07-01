@@ -62,7 +62,7 @@ public:
 
 protected:
     /// @cond internal
-    MarketplaceMeteringRequest(MarketplaceMeteringRequestPrivate * const d);
+    explicit MarketplaceMeteringRequest(MarketplaceMeteringRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

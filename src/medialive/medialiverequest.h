@@ -114,7 +114,7 @@ public:
 
 protected:
     /// @cond internal
-    MediaLiveRequest(MediaLiveRequestPrivate * const d);
+    explicit MediaLiveRequest(MediaLiveRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

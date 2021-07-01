@@ -113,7 +113,7 @@ public:
 
 protected:
     /// @cond internal
-    DatabaseMigrationServiceRequest(DatabaseMigrationServiceRequestPrivate * const d);
+    explicit DatabaseMigrationServiceRequest(DatabaseMigrationServiceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

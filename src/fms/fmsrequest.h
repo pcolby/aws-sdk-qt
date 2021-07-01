@@ -84,7 +84,7 @@ public:
 
 protected:
     /// @cond internal
-    FmsRequest(FmsRequestPrivate * const d);
+    explicit FmsRequest(FmsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

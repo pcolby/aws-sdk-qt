@@ -89,7 +89,7 @@ public:
 
 protected:
     /// @cond internal
-    WellArchitectedRequest(WellArchitectedRequestPrivate * const d);
+    explicit WellArchitectedRequest(WellArchitectedRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

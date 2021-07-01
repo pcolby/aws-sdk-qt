@@ -135,7 +135,7 @@ public:
 
 protected:
     /// @cond internal
-    CodeCommitRequest(CodeCommitRequestPrivate * const d);
+    explicit CodeCommitRequest(CodeCommitRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

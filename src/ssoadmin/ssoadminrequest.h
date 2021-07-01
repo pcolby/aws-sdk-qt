@@ -89,7 +89,7 @@ public:
 
 protected:
     /// @cond internal
-    SSOAdminRequest(SSOAdminRequestPrivate * const d);
+    explicit SSOAdminRequest(SSOAdminRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

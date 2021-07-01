@@ -72,7 +72,7 @@ public:
 
 protected:
     /// @cond internal
-    FisRequest(FisRequestPrivate * const d);
+    explicit FisRequest(FisRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

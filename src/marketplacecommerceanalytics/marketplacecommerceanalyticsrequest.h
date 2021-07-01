@@ -60,7 +60,7 @@ public:
 
 protected:
     /// @cond internal
-    MarketplaceCommerceAnalyticsRequest(MarketplaceCommerceAnalyticsRequestPrivate * const d);
+    explicit MarketplaceCommerceAnalyticsRequest(MarketplaceCommerceAnalyticsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

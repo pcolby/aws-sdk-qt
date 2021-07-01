@@ -97,7 +97,7 @@ public:
 
 protected:
     /// @cond internal
-    MTurkRequest(MTurkRequestPrivate * const d);
+    explicit MTurkRequest(MTurkRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -105,7 +105,7 @@ public:
 
 protected:
     /// @cond internal
-    PersonalizeRequest(PersonalizeRequestPrivate * const d);
+    explicit PersonalizeRequest(PersonalizeRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

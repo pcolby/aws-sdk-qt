@@ -81,7 +81,7 @@ public:
 
 protected:
     /// @cond internal
-    GreengrassV2Request(GreengrassV2RequestPrivate * const d);
+    explicit GreengrassV2Request(GreengrassV2RequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

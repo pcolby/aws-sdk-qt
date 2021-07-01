@@ -94,7 +94,7 @@ public:
 
 protected:
     /// @cond internal
-    CloudWatchRequest(CloudWatchRequestPrivate * const d);
+    explicit CloudWatchRequest(CloudWatchRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

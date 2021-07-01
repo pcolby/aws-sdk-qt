@@ -91,7 +91,7 @@ public:
 
 protected:
     /// @cond internal
-    ShieldRequest(ShieldRequestPrivate * const d);
+    explicit ShieldRequest(ShieldRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

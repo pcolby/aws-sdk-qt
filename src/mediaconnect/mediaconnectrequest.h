@@ -88,7 +88,7 @@ public:
 
 protected:
     /// @cond internal
-    MediaConnectRequest(MediaConnectRequestPrivate * const d);
+    explicit MediaConnectRequest(MediaConnectRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -81,7 +81,7 @@ public:
 
 protected:
     /// @cond internal
-    AcmpcaRequest(AcmpcaRequestPrivate * const d);
+    explicit AcmpcaRequest(AcmpcaRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

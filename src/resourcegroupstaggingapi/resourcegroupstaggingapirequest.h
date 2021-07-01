@@ -66,7 +66,7 @@ public:
 
 protected:
     /// @cond internal
-    ResourceGroupsTaggingAPIRequest(ResourceGroupsTaggingAPIRequestPrivate * const d);
+    explicit ResourceGroupsTaggingAPIRequest(ResourceGroupsTaggingAPIRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

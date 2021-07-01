@@ -97,7 +97,7 @@ public:
 
 protected:
     /// @cond internal
-    kendraRequest(kendraRequestPrivate * const d);
+    explicit kendraRequest(kendraRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

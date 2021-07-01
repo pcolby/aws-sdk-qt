@@ -67,7 +67,7 @@ public:
 
 protected:
     /// @cond internal
-    BraketRequest(BraketRequestPrivate * const d);
+    explicit BraketRequest(BraketRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

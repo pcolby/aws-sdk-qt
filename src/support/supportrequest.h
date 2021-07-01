@@ -72,7 +72,7 @@ public:
 
 protected:
     /// @cond internal
-    SupportRequest(SupportRequestPrivate * const d);
+    explicit SupportRequest(SupportRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

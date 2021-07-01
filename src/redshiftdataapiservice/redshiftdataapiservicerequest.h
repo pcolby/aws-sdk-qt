@@ -67,7 +67,7 @@ public:
 
 protected:
     /// @cond internal
-    RedshiftDataAPIServiceRequest(RedshiftDataAPIServiceRequestPrivate * const d);
+    explicit RedshiftDataAPIServiceRequest(RedshiftDataAPIServiceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

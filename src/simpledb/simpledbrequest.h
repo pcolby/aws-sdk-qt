@@ -68,7 +68,7 @@ public:
 
 protected:
     /// @cond internal
-    SimpleDBRequest(SimpleDBRequestPrivate * const d);
+    explicit SimpleDBRequest(SimpleDBRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

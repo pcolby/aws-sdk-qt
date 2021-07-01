@@ -106,7 +106,7 @@ public:
 
 protected:
     /// @cond internal
-    AppStreamRequest(AppStreamRequestPrivate * const d);
+    explicit AppStreamRequest(AppStreamRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

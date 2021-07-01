@@ -109,7 +109,7 @@ public:
 
 protected:
     /// @cond internal
-    EventBridgeRequest(EventBridgeRequestPrivate * const d);
+    explicit EventBridgeRequest(EventBridgeRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -76,7 +76,7 @@ public:
 
 protected:
     /// @cond internal
-    AppflowRequest(AppflowRequestPrivate * const d);
+    explicit AppflowRequest(AppflowRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

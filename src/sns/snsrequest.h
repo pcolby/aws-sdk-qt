@@ -97,7 +97,7 @@ public:
 
 protected:
     /// @cond internal
-    SnsRequest(SnsRequestPrivate * const d);
+    explicit SnsRequest(SnsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

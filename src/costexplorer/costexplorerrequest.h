@@ -88,7 +88,7 @@ public:
 
 protected:
     /// @cond internal
-    CostExplorerRequest(CostExplorerRequestPrivate * const d);
+    explicit CostExplorerRequest(CostExplorerRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -104,7 +104,7 @@ public:
 
 protected:
     /// @cond internal
-    KmsRequest(KmsRequestPrivate * const d);
+    explicit KmsRequest(KmsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

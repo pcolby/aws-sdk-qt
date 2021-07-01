@@ -71,7 +71,7 @@ public:
 
 protected:
     /// @cond internal
-    ComputeOptimizerRequest(ComputeOptimizerRequestPrivate * const d);
+    explicit ComputeOptimizerRequest(ComputeOptimizerRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

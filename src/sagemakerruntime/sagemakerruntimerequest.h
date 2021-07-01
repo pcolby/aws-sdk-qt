@@ -59,7 +59,7 @@ public:
 
 protected:
     /// @cond internal
-    SageMakerRuntimeRequest(SageMakerRuntimeRequestPrivate * const d);
+    explicit SageMakerRuntimeRequest(SageMakerRuntimeRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

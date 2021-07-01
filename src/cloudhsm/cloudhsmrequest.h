@@ -78,7 +78,7 @@ public:
 
 protected:
     /// @cond internal
-    CloudHSMRequest(CloudHSMRequestPrivate * const d);
+    explicit CloudHSMRequest(CloudHSMRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

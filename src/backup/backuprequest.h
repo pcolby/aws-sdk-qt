@@ -109,7 +109,7 @@ public:
 
 protected:
     /// @cond internal
-    BackupRequest(BackupRequestPrivate * const d);
+    explicit BackupRequest(BackupRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

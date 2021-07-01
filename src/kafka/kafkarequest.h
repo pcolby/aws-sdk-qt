@@ -88,7 +88,7 @@ public:
 
 protected:
     /// @cond internal
-    KafkaRequest(KafkaRequestPrivate * const d);
+    explicit KafkaRequest(KafkaRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

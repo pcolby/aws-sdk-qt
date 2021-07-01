@@ -83,7 +83,7 @@ public:
 
 protected:
     /// @cond internal
-    mgnRequest(mgnRequestPrivate * const d);
+    explicit mgnRequest(mgnRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

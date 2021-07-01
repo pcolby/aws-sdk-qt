@@ -71,7 +71,7 @@ public:
 
 protected:
     /// @cond internal
-    HealthRequest(HealthRequestPrivate * const d);
+    explicit HealthRequest(HealthRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -83,7 +83,7 @@ public:
 
 protected:
     /// @cond internal
-    ApplicationDiscoveryServiceRequest(ApplicationDiscoveryServiceRequestPrivate * const d);
+    explicit ApplicationDiscoveryServiceRequest(ApplicationDiscoveryServiceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

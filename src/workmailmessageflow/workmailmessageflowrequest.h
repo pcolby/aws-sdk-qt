@@ -60,7 +60,7 @@ public:
 
 protected:
     /// @cond internal
-    WorkMailMessageFlowRequest(WorkMailMessageFlowRequestPrivate * const d);
+    explicit WorkMailMessageFlowRequest(WorkMailMessageFlowRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

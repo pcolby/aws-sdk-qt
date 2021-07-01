@@ -66,7 +66,7 @@ public:
 
 protected:
     /// @cond internal
-    finspaceRequest(finspaceRequestPrivate * const d);
+    explicit finspaceRequest(finspaceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

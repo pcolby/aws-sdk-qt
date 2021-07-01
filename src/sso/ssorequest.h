@@ -62,7 +62,7 @@ public:
 
 protected:
     /// @cond internal
-    SsoRequest(SsoRequestPrivate * const d);
+    explicit SsoRequest(SsoRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

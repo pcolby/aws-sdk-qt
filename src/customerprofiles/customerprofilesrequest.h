@@ -88,7 +88,7 @@ public:
 
 protected:
     /// @cond internal
-    CustomerProfilesRequest(CustomerProfilesRequestPrivate * const d);
+    explicit CustomerProfilesRequest(CustomerProfilesRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

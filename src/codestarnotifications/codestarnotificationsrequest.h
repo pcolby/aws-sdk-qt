@@ -71,7 +71,7 @@ public:
 
 protected:
     /// @cond internal
-    CodeStarNotificationsRequest(CodeStarNotificationsRequestPrivate * const d);
+    explicit CodeStarNotificationsRequest(CodeStarNotificationsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

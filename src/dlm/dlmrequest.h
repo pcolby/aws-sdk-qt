@@ -66,7 +66,7 @@ public:
 
 protected:
     /// @cond internal
-    DlmRequest(DlmRequestPrivate * const d);
+    explicit DlmRequest(DlmRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

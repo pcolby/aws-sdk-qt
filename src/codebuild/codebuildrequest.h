@@ -102,7 +102,7 @@ public:
 
 protected:
     /// @cond internal
-    CodeBuildRequest(CodeBuildRequestPrivate * const d);
+    explicit CodeBuildRequest(CodeBuildRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

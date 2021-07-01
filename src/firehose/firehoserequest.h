@@ -70,7 +70,7 @@ public:
 
 protected:
     /// @cond internal
-    FirehoseRequest(FirehoseRequestPrivate * const d);
+    explicit FirehoseRequest(FirehoseRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

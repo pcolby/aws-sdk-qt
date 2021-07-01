@@ -65,7 +65,7 @@ public:
 
 protected:
     /// @cond internal
-    MacieRequest(MacieRequestPrivate * const d);
+    explicit MacieRequest(MacieRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

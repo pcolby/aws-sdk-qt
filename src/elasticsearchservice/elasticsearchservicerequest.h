@@ -98,7 +98,7 @@ public:
 
 protected:
     /// @cond internal
-    ElasticsearchServiceRequest(ElasticsearchServiceRequestPrivate * const d);
+    explicit ElasticsearchServiceRequest(ElasticsearchServiceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

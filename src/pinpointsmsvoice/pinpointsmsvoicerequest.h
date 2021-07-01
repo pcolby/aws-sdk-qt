@@ -66,7 +66,7 @@ public:
 
 protected:
     /// @cond internal
-    PinpointSMSVoiceRequest(PinpointSMSVoiceRequestPrivate * const d);
+    explicit PinpointSMSVoiceRequest(PinpointSMSVoiceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

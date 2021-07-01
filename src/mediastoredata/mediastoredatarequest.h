@@ -63,7 +63,7 @@ public:
 
 protected:
     /// @cond internal
-    MediaStoreDataRequest(MediaStoreDataRequestPrivate * const d);
+    explicit MediaStoreDataRequest(MediaStoreDataRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -92,7 +92,7 @@ public:
 
 protected:
     /// @cond internal
-    IoTAnalyticsRequest(IoTAnalyticsRequestPrivate * const d);
+    explicit IoTAnalyticsRequest(IoTAnalyticsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

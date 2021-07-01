@@ -66,7 +66,7 @@ public:
 
 protected:
     /// @cond internal
-    HealthLakeRequest(HealthLakeRequestPrivate * const d);
+    explicit HealthLakeRequest(HealthLakeRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

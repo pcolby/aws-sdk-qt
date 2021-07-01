@@ -73,7 +73,7 @@ public:
 
 protected:
     /// @cond internal
-    AcmRequest(AcmRequestPrivate * const d);
+    explicit AcmRequest(AcmRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -216,7 +216,7 @@ public:
 
 protected:
     /// @cond internal
-    IamRequest(IamRequestPrivate * const d);
+    explicit IamRequest(IamRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

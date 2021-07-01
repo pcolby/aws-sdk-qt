@@ -89,7 +89,7 @@ public:
 
 protected:
     /// @cond internal
-    MediaTailorRequest(MediaTailorRequestPrivate * const d);
+    explicit MediaTailorRequest(MediaTailorRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

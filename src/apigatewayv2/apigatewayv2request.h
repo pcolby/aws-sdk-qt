@@ -130,7 +130,7 @@ public:
 
 protected:
     /// @cond internal
-    ApiGatewayV2Request(ApiGatewayV2RequestPrivate * const d);
+    explicit ApiGatewayV2Request(ApiGatewayV2RequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

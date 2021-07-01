@@ -150,7 +150,7 @@ public:
 
 protected:
     /// @cond internal
-    GreengrassRequest(GreengrassRequestPrivate * const d);
+    explicit GreengrassRequest(GreengrassRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

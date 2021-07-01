@@ -285,7 +285,7 @@ public:
 
 protected:
     /// @cond internal
-    IoTRequest(IoTRequestPrivate * const d);
+    explicit IoTRequest(IoTRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

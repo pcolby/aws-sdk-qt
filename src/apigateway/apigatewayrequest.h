@@ -178,7 +178,7 @@ public:
 
 protected:
     /// @cond internal
-    APIGatewayRequest(APIGatewayRequestPrivate * const d);
+    explicit APIGatewayRequest(APIGatewayRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -83,7 +83,7 @@ public:
 
 protected:
     /// @cond internal
-    MediaConvertRequest(MediaConvertRequestPrivate * const d);
+    explicit MediaConvertRequest(MediaConvertRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

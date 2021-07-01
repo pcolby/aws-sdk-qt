@@ -93,7 +93,7 @@ public:
 
 protected:
     /// @cond internal
-    ForecastServiceRequest(ForecastServiceRequestPrivate * const d);
+    explicit ForecastServiceRequest(ForecastServiceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

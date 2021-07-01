@@ -200,7 +200,7 @@ public:
 
 protected:
     /// @cond internal
-    LightsailRequest(LightsailRequestPrivate * const d);
+    explicit LightsailRequest(LightsailRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

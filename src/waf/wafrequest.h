@@ -135,7 +135,7 @@ public:
 
 protected:
     /// @cond internal
-    WafRequest(WafRequestPrivate * const d);
+    explicit WafRequest(WafRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

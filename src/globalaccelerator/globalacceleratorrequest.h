@@ -105,7 +105,7 @@ public:
 
 protected:
     /// @cond internal
-    GlobalAcceleratorRequest(GlobalAcceleratorRequestPrivate * const d);
+    explicit GlobalAcceleratorRequest(GlobalAcceleratorRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

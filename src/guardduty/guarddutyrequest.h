@@ -116,7 +116,7 @@ public:
 
 protected:
     /// @cond internal
-    GuardDutyRequest(GuardDutyRequestPrivate * const d);
+    explicit GuardDutyRequest(GuardDutyRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

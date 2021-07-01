@@ -99,7 +99,7 @@ public:
 
 protected:
     /// @cond internal
-    WorkDocsRequest(WorkDocsRequestPrivate * const d);
+    explicit WorkDocsRequest(WorkDocsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

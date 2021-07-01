@@ -73,7 +73,7 @@ public:
 
 protected:
     /// @cond internal
-    EMRContainersRequest(EMRContainersRequestPrivate * const d);
+    explicit EMRContainersRequest(EMRContainersRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

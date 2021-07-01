@@ -123,7 +123,7 @@ public:
 
 protected:
     /// @cond internal
-    ElastiCacheRequest(ElastiCacheRequestPrivate * const d);
+    explicit ElastiCacheRequest(ElastiCacheRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -77,7 +77,7 @@ public:
 
 protected:
     /// @cond internal
-    BatchRequest(BatchRequestPrivate * const d);
+    explicit BatchRequest(BatchRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

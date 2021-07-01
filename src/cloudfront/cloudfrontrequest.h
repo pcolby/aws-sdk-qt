@@ -141,7 +141,7 @@ public:
 
 protected:
     /// @cond internal
-    CloudFrontRequest(CloudFrontRequestPrivate * const d);
+    explicit CloudFrontRequest(CloudFrontRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

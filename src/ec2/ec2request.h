@@ -509,7 +509,7 @@ public:
 
 protected:
     /// @cond internal
-    Ec2Request(Ec2RequestPrivate * const d);
+    explicit Ec2Request(Ec2RequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

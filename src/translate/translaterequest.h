@@ -72,7 +72,7 @@ public:
 
 protected:
     /// @cond internal
-    TranslateRequest(TranslateRequestPrivate * const d);
+    explicit TranslateRequest(TranslateRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

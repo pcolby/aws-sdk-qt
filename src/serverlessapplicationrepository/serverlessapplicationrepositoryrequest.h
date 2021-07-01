@@ -72,7 +72,7 @@ public:
 
 protected:
     /// @cond internal
-    ServerlessApplicationRepositoryRequest(ServerlessApplicationRepositoryRequestPrivate * const d);
+    explicit ServerlessApplicationRepositoryRequest(ServerlessApplicationRepositoryRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

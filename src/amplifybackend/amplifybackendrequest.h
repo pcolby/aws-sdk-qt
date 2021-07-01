@@ -82,7 +82,7 @@ public:
 
 protected:
     /// @cond internal
-    AmplifyBackendRequest(AmplifyBackendRequestPrivate * const d);
+    explicit AmplifyBackendRequest(AmplifyBackendRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

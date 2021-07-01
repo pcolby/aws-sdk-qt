@@ -71,7 +71,7 @@ public:
 
 protected:
     /// @cond internal
-    IoTDeviceAdvisorRequest(IoTDeviceAdvisorRequestPrivate * const d);
+    explicit IoTDeviceAdvisorRequest(IoTDeviceAdvisorRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

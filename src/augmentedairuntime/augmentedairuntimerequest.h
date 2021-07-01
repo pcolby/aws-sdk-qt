@@ -63,7 +63,7 @@ public:
 
 protected:
     /// @cond internal
-    AugmentedAIRuntimeRequest(AugmentedAIRuntimeRequestPrivate * const d);
+    explicit AugmentedAIRuntimeRequest(AugmentedAIRuntimeRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

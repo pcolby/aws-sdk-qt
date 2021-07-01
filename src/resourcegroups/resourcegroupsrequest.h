@@ -74,7 +74,7 @@ public:
 
 protected:
     /// @cond internal
-    ResourceGroupsRequest(ResourceGroupsRequestPrivate * const d);
+    explicit ResourceGroupsRequest(ResourceGroupsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

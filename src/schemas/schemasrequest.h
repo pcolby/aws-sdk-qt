@@ -89,7 +89,7 @@ public:
 
 protected:
     /// @cond internal
-    SchemasRequest(SchemasRequestPrivate * const d);
+    explicit SchemasRequest(SchemasRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -80,7 +80,7 @@ public:
 
 protected:
     /// @cond internal
-    AppRunnerRequest(AppRunnerRequestPrivate * const d);
+    explicit AppRunnerRequest(AppRunnerRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -69,7 +69,7 @@ public:
 
 protected:
     /// @cond internal
-    MwaaRequest(MwaaRequestPrivate * const d);
+    explicit MwaaRequest(MwaaRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

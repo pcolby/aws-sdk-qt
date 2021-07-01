@@ -87,7 +87,7 @@ public:
 
 protected:
     /// @cond internal
-    SSMIncidentsRequest(SSMIncidentsRequestPrivate * const d);
+    explicit SSMIncidentsRequest(SSMIncidentsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

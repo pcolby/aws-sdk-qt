@@ -115,7 +115,7 @@ public:
 
 protected:
     /// @cond internal
-    RoboMakerRequest(RoboMakerRequestPrivate * const d);
+    explicit RoboMakerRequest(RoboMakerRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

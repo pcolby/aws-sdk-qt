@@ -109,7 +109,7 @@ public:
 
 protected:
     /// @cond internal
-    OrganizationsRequest(OrganizationsRequestPrivate * const d);
+    explicit OrganizationsRequest(OrganizationsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

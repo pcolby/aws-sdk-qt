@@ -67,7 +67,7 @@ public:
 
 protected:
     /// @cond internal
-    SavingsPlansRequest(SavingsPlansRequestPrivate * const d);
+    explicit SavingsPlansRequest(SavingsPlansRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

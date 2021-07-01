@@ -61,7 +61,7 @@ public:
 
 protected:
     /// @cond internal
-    SsooidcRequest(SsooidcRequestPrivate * const d);
+    explicit SsooidcRequest(SsooidcRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

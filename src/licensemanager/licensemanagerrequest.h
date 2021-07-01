@@ -103,7 +103,7 @@ public:
 
 protected:
     /// @cond internal
-    LicenseManagerRequest(LicenseManagerRequestPrivate * const d);
+    explicit LicenseManagerRequest(LicenseManagerRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

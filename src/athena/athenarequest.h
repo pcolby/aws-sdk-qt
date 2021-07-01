@@ -92,7 +92,7 @@ public:
 
 protected:
     /// @cond internal
-    AthenaRequest(AthenaRequestPrivate * const d);
+    explicit AthenaRequest(AthenaRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -67,7 +67,7 @@ public:
 
 protected:
     /// @cond internal
-    AppIntegrationsServiceRequest(AppIntegrationsServiceRequestPrivate * const d);
+    explicit AppIntegrationsServiceRequest(AppIntegrationsServiceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

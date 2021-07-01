@@ -129,7 +129,7 @@ public:
 
 protected:
     /// @cond internal
-    SesRequest(SesRequestPrivate * const d);
+    explicit SesRequest(SesRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

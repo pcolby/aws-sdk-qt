@@ -74,7 +74,7 @@ public:
 
 protected:
     /// @cond internal
-    IoT1ClickProjectsRequest(IoT1ClickProjectsRequestPrivate * const d);
+    explicit IoT1ClickProjectsRequest(IoT1ClickProjectsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

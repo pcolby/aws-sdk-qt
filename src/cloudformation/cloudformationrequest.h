@@ -113,7 +113,7 @@ public:
 
 protected:
     /// @cond internal
-    CloudFormationRequest(CloudFormationRequestPrivate * const d);
+    explicit CloudFormationRequest(CloudFormationRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -84,7 +84,7 @@ public:
 
 protected:
     /// @cond internal
-    CloudSearchRequest(CloudSearchRequestPrivate * const d);
+    explicit CloudSearchRequest(CloudSearchRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

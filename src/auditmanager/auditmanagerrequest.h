@@ -109,7 +109,7 @@ public:
 
 protected:
     /// @cond internal
-    AuditManagerRequest(AuditManagerRequestPrivate * const d);
+    explicit AuditManagerRequest(AuditManagerRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

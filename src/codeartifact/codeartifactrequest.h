@@ -92,7 +92,7 @@ public:
 
 protected:
     /// @cond internal
-    CodeArtifactRequest(CodeArtifactRequestPrivate * const d);
+    explicit CodeArtifactRequest(CodeArtifactRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

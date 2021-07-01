@@ -93,7 +93,7 @@ public:
 
 protected:
     /// @cond internal
-    DataSyncRequest(DataSyncRequestPrivate * const d);
+    explicit DataSyncRequest(DataSyncRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

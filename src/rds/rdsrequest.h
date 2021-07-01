@@ -195,7 +195,7 @@ public:
 
 protected:
     /// @cond internal
-    RdsRequest(RdsRequestPrivate * const d);
+    explicit RdsRequest(RdsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

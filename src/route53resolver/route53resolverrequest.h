@@ -118,7 +118,7 @@ public:
 
 protected:
     /// @cond internal
-    Route53ResolverRequest(Route53ResolverRequestPrivate * const d);
+    explicit Route53ResolverRequest(Route53ResolverRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

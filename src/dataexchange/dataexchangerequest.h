@@ -80,7 +80,7 @@ public:
 
 protected:
     /// @cond internal
-    DataExchangeRequest(DataExchangeRequestPrivate * const d);
+    explicit DataExchangeRequest(DataExchangeRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

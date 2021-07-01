@@ -67,7 +67,7 @@ public:
 
 protected:
     /// @cond internal
-    PollyRequest(PollyRequestPrivate * const d);
+    explicit PollyRequest(PollyRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

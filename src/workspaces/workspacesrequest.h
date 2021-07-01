@@ -111,7 +111,7 @@ public:
 
 protected:
     /// @cond internal
-    WorkSpacesRequest(WorkSpacesRequestPrivate * const d);
+    explicit WorkSpacesRequest(WorkSpacesRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

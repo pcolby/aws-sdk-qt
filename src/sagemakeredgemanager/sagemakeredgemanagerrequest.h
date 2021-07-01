@@ -60,7 +60,7 @@ public:
 
 protected:
     /// @cond internal
-    SagemakerEdgeManagerRequest(SagemakerEdgeManagerRequestPrivate * const d);
+    explicit SagemakerEdgeManagerRequest(SagemakerEdgeManagerRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

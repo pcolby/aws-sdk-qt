@@ -66,7 +66,7 @@ public:
 
 protected:
     /// @cond internal
-    IoTFleetHubRequest(IoTFleetHubRequestPrivate * const d);
+    explicit IoTFleetHubRequest(IoTFleetHubRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

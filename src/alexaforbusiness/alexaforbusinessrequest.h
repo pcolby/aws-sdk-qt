@@ -151,7 +151,7 @@ public:
 
 protected:
     /// @cond internal
-    AlexaForBusinessRequest(AlexaForBusinessRequestPrivate * const d);
+    explicit AlexaForBusinessRequest(AlexaForBusinessRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

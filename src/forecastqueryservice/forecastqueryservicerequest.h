@@ -59,7 +59,7 @@ public:
 
 protected:
     /// @cond internal
-    ForecastQueryServiceRequest(ForecastQueryServiceRequestPrivate * const d);
+    explicit ForecastQueryServiceRequest(ForecastQueryServiceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

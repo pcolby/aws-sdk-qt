@@ -99,7 +99,7 @@ public:
 
 protected:
     /// @cond internal
-    AppSyncRequest(AppSyncRequestPrivate * const d);
+    explicit AppSyncRequest(AppSyncRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

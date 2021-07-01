@@ -117,7 +117,7 @@ public:
 
 protected:
     /// @cond internal
-    DirectConnectRequest(DirectConnectRequestPrivate * const d);
+    explicit DirectConnectRequest(DirectConnectRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

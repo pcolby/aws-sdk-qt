@@ -111,7 +111,7 @@ public:
 
 protected:
     /// @cond internal
-    DocDBRequest(DocDBRequestPrivate * const d);
+    explicit DocDBRequest(DocDBRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

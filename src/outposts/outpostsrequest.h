@@ -68,7 +68,7 @@ public:
 
 protected:
     /// @cond internal
-    OutpostsRequest(OutpostsRequestPrivate * const d);
+    explicit OutpostsRequest(OutpostsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

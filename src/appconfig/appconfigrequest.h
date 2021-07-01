@@ -91,7 +91,7 @@ public:
 
 protected:
     /// @cond internal
-    AppConfigRequest(AppConfigRequestPrivate * const d);
+    explicit AppConfigRequest(AppConfigRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

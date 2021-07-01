@@ -79,7 +79,7 @@ public:
 
 protected:
     /// @cond internal
-    ComprehendMedicalRequest(ComprehendMedicalRequestPrivate * const d);
+    explicit ComprehendMedicalRequest(ComprehendMedicalRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

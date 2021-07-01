@@ -95,7 +95,7 @@ public:
 
 protected:
     /// @cond internal
-    SwfRequest(SwfRequestPrivate * const d);
+    explicit SwfRequest(SwfRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

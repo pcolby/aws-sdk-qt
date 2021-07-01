@@ -119,7 +119,7 @@ public:
 
 protected:
     /// @cond internal
-    ComprehendRequest(ComprehendRequestPrivate * const d);
+    explicit ComprehendRequest(ComprehendRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

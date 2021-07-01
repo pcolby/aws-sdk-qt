@@ -44,7 +44,7 @@ public:
 
 protected:
     /// @cond internal
-    {{ClassName}}({{ClassName}}Private * const d);
+    explicit {{ClassName}}({{ClassName}}Private * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

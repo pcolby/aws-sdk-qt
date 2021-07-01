@@ -90,7 +90,7 @@ public:
 
 protected:
     /// @cond internal
-    EksRequest(EksRequestPrivate * const d);
+    explicit EksRequest(EksRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

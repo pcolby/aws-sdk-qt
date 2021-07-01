@@ -84,7 +84,7 @@ public:
 
 protected:
     /// @cond internal
-    IvsRequest(IvsRequestPrivate * const d);
+    explicit IvsRequest(IvsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

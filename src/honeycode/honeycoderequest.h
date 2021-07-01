@@ -70,7 +70,7 @@ public:
 
 protected:
     /// @cond internal
-    HoneycodeRequest(HoneycodeRequestPrivate * const d);
+    explicit HoneycodeRequest(HoneycodeRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

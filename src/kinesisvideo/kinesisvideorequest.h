@@ -77,7 +77,7 @@ public:
 
 protected:
     /// @cond internal
-    KinesisVideoRequest(KinesisVideoRequestPrivate * const d);
+    explicit KinesisVideoRequest(KinesisVideoRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

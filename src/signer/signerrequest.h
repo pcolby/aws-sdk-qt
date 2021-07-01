@@ -75,7 +75,7 @@ public:
 
 protected:
     /// @cond internal
-    signerRequest(signerRequestPrivate * const d);
+    explicit signerRequest(signerRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

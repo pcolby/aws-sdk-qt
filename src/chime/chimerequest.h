@@ -241,7 +241,7 @@ public:
 
 protected:
     /// @cond internal
-    ChimeRequest(ChimeRequestPrivate * const d);
+    explicit ChimeRequest(ChimeRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -64,7 +64,7 @@ public:
 
 protected:
     /// @cond internal
-    ElasticInferenceRequest(ElasticInferenceRequestPrivate * const d);
+    explicit ElasticInferenceRequest(ElasticInferenceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

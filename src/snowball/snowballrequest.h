@@ -83,7 +83,7 @@ public:
 
 protected:
     /// @cond internal
-    SnowballRequest(SnowballRequestPrivate * const d);
+    explicit SnowballRequest(SnowballRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

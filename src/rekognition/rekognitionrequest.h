@@ -109,7 +109,7 @@ public:
 
 protected:
     /// @cond internal
-    RekognitionRequest(RekognitionRequestPrivate * const d);
+    explicit RekognitionRequest(RekognitionRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

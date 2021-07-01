@@ -85,7 +85,7 @@ public:
 
 protected:
     /// @cond internal
-    ApplicationInsightsRequest(ApplicationInsightsRequestPrivate * const d);
+    explicit ApplicationInsightsRequest(ApplicationInsightsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

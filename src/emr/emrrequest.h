@@ -105,7 +105,7 @@ public:
 
 protected:
     /// @cond internal
-    EmrRequest(EmrRequestPrivate * const d);
+    explicit EmrRequest(EmrRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -64,7 +64,7 @@ public:
 
 protected:
     /// @cond internal
-    AutoScalingPlansRequest(AutoScalingPlansRequestPrivate * const d);
+    explicit AutoScalingPlansRequest(AutoScalingPlansRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

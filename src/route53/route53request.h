@@ -122,7 +122,7 @@ public:
 
 protected:
     /// @cond internal
-    Route53Request(Route53RequestPrivate * const d);
+    explicit Route53Request(Route53RequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -62,7 +62,7 @@ public:
 
 protected:
     /// @cond internal
-    IoTJobsDataPlaneRequest(IoTJobsDataPlaneRequestPrivate * const d);
+    explicit IoTJobsDataPlaneRequest(IoTJobsDataPlaneRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -64,7 +64,7 @@ public:
 
 protected:
     /// @cond internal
-    EbsRequest(EbsRequestPrivate * const d);
+    explicit EbsRequest(EbsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

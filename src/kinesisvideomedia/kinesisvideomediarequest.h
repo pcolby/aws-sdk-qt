@@ -59,7 +59,7 @@ public:
 
 protected:
     /// @cond internal
-    KinesisVideoMediaRequest(KinesisVideoMediaRequestPrivate * const d);
+    explicit KinesisVideoMediaRequest(KinesisVideoMediaRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

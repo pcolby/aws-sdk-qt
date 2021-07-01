@@ -162,7 +162,7 @@ public:
 
 protected:
     /// @cond internal
-    RedshiftRequest(RedshiftRequestPrivate * const d);
+    explicit RedshiftRequest(RedshiftRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -95,7 +95,7 @@ public:
 
 protected:
     /// @cond internal
-    AmplifyRequest(AmplifyRequestPrivate * const d);
+    explicit AmplifyRequest(AmplifyRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -93,7 +93,7 @@ public:
 
 protected:
     /// @cond internal
-    IoTThingsGraphRequest(IoTThingsGraphRequestPrivate * const d);
+    explicit IoTThingsGraphRequest(IoTThingsGraphRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

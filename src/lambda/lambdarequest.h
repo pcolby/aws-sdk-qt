@@ -116,7 +116,7 @@ public:
 
 protected:
     /// @cond internal
-    LambdaRequest(LambdaRequestPrivate * const d);
+    explicit LambdaRequest(LambdaRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

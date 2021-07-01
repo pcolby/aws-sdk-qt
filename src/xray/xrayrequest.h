@@ -85,7 +85,7 @@ public:
 
 protected:
     /// @cond internal
-    XRayRequest(XRayRequestPrivate * const d);
+    explicit XRayRequest(XRayRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -91,7 +91,7 @@ public:
 
 protected:
     /// @cond internal
-    WorkLinkRequest(WorkLinkRequestPrivate * const d);
+    explicit WorkLinkRequest(WorkLinkRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

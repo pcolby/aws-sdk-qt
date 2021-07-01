@@ -139,7 +139,7 @@ public:
 
 protected:
     /// @cond internal
-    WAFRegionalRequest(WAFRegionalRequestPrivate * const d);
+    explicit WAFRegionalRequest(WAFRegionalRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

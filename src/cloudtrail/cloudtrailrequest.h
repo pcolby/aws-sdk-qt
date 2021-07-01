@@ -76,7 +76,7 @@ public:
 
 protected:
     /// @cond internal
-    CloudTrailRequest(CloudTrailRequestPrivate * const d);
+    explicit CloudTrailRequest(CloudTrailRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

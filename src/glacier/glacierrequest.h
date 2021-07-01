@@ -91,7 +91,7 @@ public:
 
 protected:
     /// @cond internal
-    GlacierRequest(GlacierRequestPrivate * const d);
+    explicit GlacierRequest(GlacierRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

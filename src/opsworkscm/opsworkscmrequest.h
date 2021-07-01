@@ -77,7 +77,7 @@ public:
 
 protected:
     /// @cond internal
-    OpsWorksCMRequest(OpsWorksCMRequestPrivate * const d);
+    explicit OpsWorksCMRequest(OpsWorksCMRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

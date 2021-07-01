@@ -72,7 +72,7 @@ public:
 
 protected:
     /// @cond internal
-    CodeGuruReviewerRequest(CodeGuruReviewerRequestPrivate * const d);
+    explicit CodeGuruReviewerRequest(CodeGuruReviewerRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

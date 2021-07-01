@@ -62,7 +62,7 @@ public:
 
 protected:
     /// @cond internal
-    IdentityStoreRequest(IdentityStoreRequestPrivate * const d);
+    explicit IdentityStoreRequest(IdentityStoreRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

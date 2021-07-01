@@ -107,7 +107,7 @@ public:
 
 protected:
     /// @cond internal
-    S3ControlRequest(S3ControlRequestPrivate * const d);
+    explicit S3ControlRequest(S3ControlRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

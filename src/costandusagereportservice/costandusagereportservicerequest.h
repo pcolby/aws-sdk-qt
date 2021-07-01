@@ -62,7 +62,7 @@ public:
 
 protected:
     /// @cond internal
-    CostandUsageReportServiceRequest(CostandUsageReportServiceRequestPrivate * const d);
+    explicit CostandUsageReportServiceRequest(CostandUsageReportServiceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

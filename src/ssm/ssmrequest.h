@@ -193,7 +193,7 @@ public:
 
 protected:
     /// @cond internal
-    SsmRequest(SsmRequestPrivate * const d);
+    explicit SsmRequest(SsmRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

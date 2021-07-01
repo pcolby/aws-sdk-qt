@@ -61,7 +61,7 @@ public:
 
 protected:
     /// @cond internal
-    ApiGatewayManagementApiRequest(ApiGatewayManagementApiRequestPrivate * const d);
+    explicit ApiGatewayManagementApiRequest(ApiGatewayManagementApiRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

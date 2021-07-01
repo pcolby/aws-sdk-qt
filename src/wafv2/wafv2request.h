@@ -98,7 +98,7 @@ public:
 
 protected:
     /// @cond internal
-    Wafv2Request(Wafv2RequestPrivate * const d);
+    explicit Wafv2Request(Wafv2RequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

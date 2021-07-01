@@ -61,7 +61,7 @@ public:
 
 protected:
     /// @cond internal
-    PiRequest(PiRequestPrivate * const d);
+    explicit PiRequest(PiRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

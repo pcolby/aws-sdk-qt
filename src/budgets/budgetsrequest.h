@@ -80,7 +80,7 @@ public:
 
 protected:
     /// @cond internal
-    BudgetsRequest(BudgetsRequestPrivate * const d);
+    explicit BudgetsRequest(BudgetsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

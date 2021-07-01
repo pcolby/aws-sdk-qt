@@ -60,7 +60,7 @@ public:
 
 protected:
     /// @cond internal
-    PersonalizeRuntimeRequest(PersonalizeRuntimeRequestPrivate * const d);
+    explicit PersonalizeRuntimeRequest(PersonalizeRuntimeRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

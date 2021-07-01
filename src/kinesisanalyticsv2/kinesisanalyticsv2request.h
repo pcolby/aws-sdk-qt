@@ -89,7 +89,7 @@ public:
 
 protected:
     /// @cond internal
-    KinesisAnalyticsV2Request(KinesisAnalyticsV2RequestPrivate * const d);
+    explicit KinesisAnalyticsV2Request(KinesisAnalyticsV2RequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

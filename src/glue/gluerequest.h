@@ -215,7 +215,7 @@ public:
 
 protected:
     /// @cond internal
-    GlueRequest(GlueRequestPrivate * const d);
+    explicit GlueRequest(GlueRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

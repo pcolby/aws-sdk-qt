@@ -109,7 +109,7 @@ public:
 
 protected:
     /// @cond internal
-    SecurityHubRequest(SecurityHubRequestPrivate * const d);
+    explicit SecurityHubRequest(SecurityHubRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

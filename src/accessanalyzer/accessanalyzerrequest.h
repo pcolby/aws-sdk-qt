@@ -86,7 +86,7 @@ public:
 
 protected:
     /// @cond internal
-    AccessAnalyzerRequest(AccessAnalyzerRequestPrivate * const d);
+    explicit AccessAnalyzerRequest(AccessAnalyzerRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

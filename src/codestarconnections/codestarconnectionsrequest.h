@@ -70,7 +70,7 @@ public:
 
 protected:
     /// @cond internal
-    CodeStarconnectionsRequest(CodeStarconnectionsRequestPrivate * const d);
+    explicit CodeStarconnectionsRequest(CodeStarconnectionsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

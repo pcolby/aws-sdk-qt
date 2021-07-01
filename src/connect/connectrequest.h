@@ -160,7 +160,7 @@ public:
 
 protected:
     /// @cond internal
-    ConnectRequest(ConnectRequestPrivate * const d);
+    explicit ConnectRequest(ConnectRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

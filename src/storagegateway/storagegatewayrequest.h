@@ -147,7 +147,7 @@ public:
 
 protected:
     /// @cond internal
-    StorageGatewayRequest(StorageGatewayRequestPrivate * const d);
+    explicit StorageGatewayRequest(StorageGatewayRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

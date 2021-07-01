@@ -75,7 +75,7 @@ public:
 
 protected:
     /// @cond internal
-    MigrationHubRequest(MigrationHubRequestPrivate * const d);
+    explicit MigrationHubRequest(MigrationHubRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

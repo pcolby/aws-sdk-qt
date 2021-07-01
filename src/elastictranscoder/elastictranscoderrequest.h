@@ -75,7 +75,7 @@ public:
 
 protected:
     /// @cond internal
-    ElasticTranscoderRequest(ElasticTranscoderRequestPrivate * const d);
+    explicit ElasticTranscoderRequest(ElasticTranscoderRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

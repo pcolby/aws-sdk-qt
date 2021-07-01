@@ -81,7 +81,7 @@ public:
 
 protected:
     /// @cond internal
-    LakeFormationRequest(LakeFormationRequestPrivate * const d);
+    explicit LakeFormationRequest(LakeFormationRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -60,7 +60,7 @@ public:
 
 protected:
     /// @cond internal
-    TranscribeStreamingServiceRequest(TranscribeStreamingServiceRequestPrivate * const d);
+    explicit TranscribeStreamingServiceRequest(TranscribeStreamingServiceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

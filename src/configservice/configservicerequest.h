@@ -144,7 +144,7 @@ public:
 
 protected:
     /// @cond internal
-    ConfigServiceRequest(ConfigServiceRequestPrivate * const d);
+    explicit ConfigServiceRequest(ConfigServiceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

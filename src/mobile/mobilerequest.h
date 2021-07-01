@@ -67,7 +67,7 @@ public:
 
 protected:
     /// @cond internal
-    MobileRequest(MobileRequestPrivate * const d);
+    explicit MobileRequest(MobileRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

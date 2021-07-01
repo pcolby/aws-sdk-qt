@@ -96,7 +96,7 @@ public:
 
 protected:
     /// @cond internal
-    AppMeshRequest(AppMeshRequestPrivate * const d);
+    explicit AppMeshRequest(AppMeshRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

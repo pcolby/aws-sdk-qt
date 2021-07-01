@@ -112,7 +112,7 @@ public:
 
 protected:
     /// @cond internal
-    WorkMailRequest(WorkMailRequestPrivate * const d);
+    explicit WorkMailRequest(WorkMailRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

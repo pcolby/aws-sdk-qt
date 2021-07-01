@@ -78,7 +78,7 @@ public:
 
 protected:
     /// @cond internal
-    QldbRequest(QldbRequestPrivate * const d);
+    explicit QldbRequest(QldbRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

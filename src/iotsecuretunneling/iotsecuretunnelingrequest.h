@@ -65,7 +65,7 @@ public:
 
 protected:
     /// @cond internal
-    IoTSecureTunnelingRequest(IoTSecureTunnelingRequestPrivate * const d);
+    explicit IoTSecureTunnelingRequest(IoTSecureTunnelingRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -135,7 +135,7 @@ public:
 
 protected:
     /// @cond internal
-    DeviceFarmRequest(DeviceFarmRequestPrivate * const d);
+    explicit DeviceFarmRequest(DeviceFarmRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

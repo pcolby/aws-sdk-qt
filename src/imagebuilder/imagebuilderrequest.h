@@ -107,7 +107,7 @@ public:
 
 protected:
     /// @cond internal
-    imagebuilderRequest(imagebuilderRequestPrivate * const d);
+    explicit imagebuilderRequest(imagebuilderRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

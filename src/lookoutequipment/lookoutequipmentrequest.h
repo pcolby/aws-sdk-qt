@@ -80,7 +80,7 @@ public:
 
 protected:
     /// @cond internal
-    LookoutEquipmentRequest(LookoutEquipmentRequestPrivate * const d);
+    explicit LookoutEquipmentRequest(LookoutEquipmentRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

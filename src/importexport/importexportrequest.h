@@ -64,7 +64,7 @@ public:
 
 protected:
     /// @cond internal
-    ImportExportRequest(ImportExportRequestPrivate * const d);
+    explicit ImportExportRequest(ImportExportRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

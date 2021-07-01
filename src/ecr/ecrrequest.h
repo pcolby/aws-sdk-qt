@@ -92,7 +92,7 @@ public:
 
 protected:
     /// @cond internal
-    EcrRequest(EcrRequestPrivate * const d);
+    explicit EcrRequest(EcrRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

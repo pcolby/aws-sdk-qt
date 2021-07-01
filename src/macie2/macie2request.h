@@ -114,7 +114,7 @@ public:
 
 protected:
     /// @cond internal
-    Macie2Request(Macie2RequestPrivate * const d);
+    explicit Macie2Request(Macie2RequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

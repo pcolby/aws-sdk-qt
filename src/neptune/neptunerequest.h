@@ -121,7 +121,7 @@ public:
 
 protected:
     /// @cond internal
-    NeptuneRequest(NeptuneRequestPrivate * const d);
+    explicit NeptuneRequest(NeptuneRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

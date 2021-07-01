@@ -81,7 +81,7 @@ public:
 
 protected:
     /// @cond internal
-    SfnRequest(SfnRequestPrivate * const d);
+    explicit SfnRequest(SfnRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

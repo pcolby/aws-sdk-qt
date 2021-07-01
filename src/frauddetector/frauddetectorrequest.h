@@ -115,7 +115,7 @@ public:
 
 protected:
     /// @cond internal
-    FraudDetectorRequest(FraudDetectorRequestPrivate * const d);
+    explicit FraudDetectorRequest(FraudDetectorRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

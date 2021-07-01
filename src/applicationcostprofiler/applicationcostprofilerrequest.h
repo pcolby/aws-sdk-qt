@@ -64,7 +64,7 @@ public:
 
 protected:
     /// @cond internal
-    ApplicationCostProfilerRequest(ApplicationCostProfilerRequestPrivate * const d);
+    explicit ApplicationCostProfilerRequest(ApplicationCostProfilerRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

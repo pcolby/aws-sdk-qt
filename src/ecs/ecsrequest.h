@@ -110,7 +110,7 @@ public:
 
 protected:
     /// @cond internal
-    EcsRequest(EcsRequestPrivate * const d);
+    explicit EcsRequest(EcsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

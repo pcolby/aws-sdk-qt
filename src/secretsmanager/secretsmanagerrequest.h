@@ -80,7 +80,7 @@ public:
 
 protected:
     /// @cond internal
-    SecretsManagerRequest(SecretsManagerRequestPrivate * const d);
+    explicit SecretsManagerRequest(SecretsManagerRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

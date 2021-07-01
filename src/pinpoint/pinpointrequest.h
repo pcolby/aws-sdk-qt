@@ -170,7 +170,7 @@ public:
 
 protected:
     /// @cond internal
-    PinpointRequest(PinpointRequestPrivate * const d);
+    explicit PinpointRequest(PinpointRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

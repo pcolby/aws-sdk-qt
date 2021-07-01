@@ -83,7 +83,7 @@ public:
 
 protected:
     /// @cond internal
-    TransferRequest(TransferRequestPrivate * const d);
+    explicit TransferRequest(TransferRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

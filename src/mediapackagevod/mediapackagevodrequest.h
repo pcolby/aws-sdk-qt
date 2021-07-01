@@ -75,7 +75,7 @@ public:
 
 protected:
     /// @cond internal
-    MediaPackageVodRequest(MediaPackageVodRequestPrivate * const d);
+    explicit MediaPackageVodRequest(MediaPackageVodRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

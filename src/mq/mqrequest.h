@@ -80,7 +80,7 @@ public:
 
 protected:
     /// @cond internal
-    MqRequest(MqRequestPrivate * const d);
+    explicit MqRequest(MqRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

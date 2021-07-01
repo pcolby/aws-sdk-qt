@@ -66,7 +66,7 @@ public:
 
 protected:
     /// @cond internal
-    StsRequest(StsRequestPrivate * const d);
+    explicit StsRequest(StsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

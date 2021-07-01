@@ -64,7 +64,7 @@ public:
 
 protected:
     /// @cond internal
-    TextractRequest(TextractRequestPrivate * const d);
+    explicit TextractRequest(TextractRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

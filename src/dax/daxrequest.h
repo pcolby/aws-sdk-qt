@@ -79,7 +79,7 @@ public:
 
 protected:
     /// @cond internal
-    DaxRequest(DaxRequestPrivate * const d);
+    explicit DaxRequest(DaxRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

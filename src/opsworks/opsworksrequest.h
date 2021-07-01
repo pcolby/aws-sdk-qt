@@ -132,7 +132,7 @@ public:
 
 protected:
     /// @cond internal
-    OpsWorksRequest(OpsWorksRequestPrivate * const d);
+    explicit OpsWorksRequest(OpsWorksRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

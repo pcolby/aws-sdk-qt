@@ -66,7 +66,7 @@ public:
 
 protected:
     /// @cond internal
-    ConnectParticipantRequest(ConnectParticipantRequestPrivate * const d);
+    explicit ConnectParticipantRequest(ConnectParticipantRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

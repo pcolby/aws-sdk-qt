@@ -119,7 +119,7 @@ public:
 
 protected:
     /// @cond internal
-    AutoScalingRequest(AutoScalingRequestPrivate * const d);
+    explicit AutoScalingRequest(AutoScalingRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

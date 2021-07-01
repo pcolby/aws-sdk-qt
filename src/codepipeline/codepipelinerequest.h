@@ -97,7 +97,7 @@ public:
 
 protected:
     /// @cond internal
-    CodePipelineRequest(CodePipelineRequestPrivate * const d);
+    explicit CodePipelineRequest(CodePipelineRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

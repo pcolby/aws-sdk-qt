@@ -83,7 +83,7 @@ public:
 
 protected:
     /// @cond internal
-    LookoutMetricsRequest(LookoutMetricsRequestPrivate * const d);
+    explicit LookoutMetricsRequest(LookoutMetricsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

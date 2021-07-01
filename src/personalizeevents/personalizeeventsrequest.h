@@ -61,7 +61,7 @@ public:
 
 protected:
     /// @cond internal
-    PersonalizeEventsRequest(PersonalizeEventsRequestPrivate * const d);
+    explicit PersonalizeEventsRequest(PersonalizeEventsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -73,7 +73,7 @@ public:
 
 protected:
     /// @cond internal
-    CloudHSMV2Request(CloudHSMV2RequestPrivate * const d);
+    explicit CloudHSMV2Request(CloudHSMV2RequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

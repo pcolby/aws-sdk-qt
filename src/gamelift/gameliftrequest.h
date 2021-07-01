@@ -153,7 +153,7 @@ public:
 
 protected:
     /// @cond internal
-    GameLiftRequest(GameLiftRequestPrivate * const d);
+    explicit GameLiftRequest(GameLiftRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

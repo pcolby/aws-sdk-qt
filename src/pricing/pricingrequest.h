@@ -61,7 +61,7 @@ public:
 
 protected:
     /// @cond internal
-    PricingRequest(PricingRequestPrivate * const d);
+    explicit PricingRequest(PricingRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);
