@@ -27,14 +27,14 @@ jobs:
       run: sudo apt install cppcheck
     - uses: actions/checkout@v2
     - name: Perform Cppcheck Analysis
-      run: >
+      run: >-
         cppcheck -DQTAWS_SHARED -DQ_DECL_OVERRIDE=override -DQ_DECLARE_{FLAGS,PRIVATE,PUBLIC}
            --enable=all --error-exitcode=1 -Isrc --std={c++03,c++11} '--suppress=*:src/sqs-old/*'
            --suppress={missingIncludeSystem,unusedFunction} --suppress=no{CopyConstructor,OperatorEq}
            --xml --xml-version=2 codegen/src src 2> "$RUNNER_TEMP/cppcheck.xml"
     - name: Generate Report
       if: ${{ failure() }}
-      run: >
+      run: >-
         cppcheck-htmlreport --title=LibQtAws --file="$RUNNER_TEMP/cppcheck.xml"
           --report-dir="$RUNNER_TEMP/report" --source-dir="$GITHUB_WORKSPACE"
     - name: Upload Report
