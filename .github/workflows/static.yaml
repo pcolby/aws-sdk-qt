@@ -42,4 +42,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: report
-        path: "$RUNNER_TEMP/report"
+        path: "${{ runner.temp }}/report"
