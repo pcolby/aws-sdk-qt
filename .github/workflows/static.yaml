@@ -31,7 +31,7 @@ jobs:
         cppcheck -DQTAWS_SHARED -DQ_DECL_OVERRIDE=override -DQ_DECLARE_{FLAGS,PRIVATE,PUBLIC} \
            --enable=all --error-exitcode=1 -Isrc --std={c++03,c++11} '--suppress=*:src/sqs-old/*' \
            --suppress={missingIncludeSystem,unusedFunction} --suppress=no{CopyConstructor,OperatorEq} \
-           --xml --xml-version=2 codegen/src src 2> "$RUNNER_TEMP/cppcheck.xml"
+           --quiet --xml --xml-version=2 "$GITHUB_WORKSPACE/"{codegen/,}src 2> "$RUNNER_TEMP/cppcheck.xml"
     - name: Generate Report
       if: ${{ failure() }}
       run: |
