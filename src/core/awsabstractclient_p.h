@@ -35,7 +35,8 @@ class AwsAbstractCredentials;
 class AwsAbstractRequest;
 class AwsAbstractSignature;
 
-class AwsAbstractClientPrivate {
+// Exported for *internal* use by other QtAws modules only.
+class QTAWSCORE_EXPORT AwsAbstractClientPrivate {
 
 public:
     QString apiVersion;                           ///< Amazon service API version.

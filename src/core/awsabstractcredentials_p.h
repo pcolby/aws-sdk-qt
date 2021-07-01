@@ -27,7 +27,8 @@ namespace Core {
 
 class AwsAbstractCredentials;
 
-class AwsAbstractCredentialsPrivate {
+// Exported for *internal* use by other QtAws modules only.
+class QTAWSCORE_EXPORT AwsAbstractCredentialsPrivate {
 
 public:
     explicit AwsAbstractCredentialsPrivate(AwsAbstractCredentials * const q);

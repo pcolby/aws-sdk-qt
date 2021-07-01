@@ -33,7 +33,8 @@ namespace Core {
 class AwsAbstractRequest;
 class AwsAbstractResponse;
 
-class AwsAbstractResponsePrivate {
+// Exported for *internal* use by other QtAws modules only.
+class QTAWSCORE_EXPORT AwsAbstractResponsePrivate {
 
 public:
     QNetworkReply * reply;              ///< Network reply for this response.

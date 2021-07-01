@@ -34,7 +34,8 @@ namespace Core {
 class AwsAbstractRequest;
 class AwsAbstractResponse;
 
-class AwsAbstractRequestPrivate {
+// Exported for *internal* use by other QtAws modules only.
+class QTAWSCORE_EXPORT AwsAbstractRequestPrivate {
 
 public:
     QByteArray data;                            ///< Data for POST/PUT operations.
