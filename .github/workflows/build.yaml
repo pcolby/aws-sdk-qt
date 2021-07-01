@@ -20,7 +20,7 @@ jobs:
         CC:  ${{ matrix.env.cc }}
         CXX: ${{ matrix.env.cxx }}
       run: |
-        cmake -D BUILD_CODEGEN=YES -S "$GITHUB_WORKSPACE" -B "$RUNNER_TEMP"
+        cmake -D BUILD_CODEGEN=YES -D CMAKE_BUILD_TYPE=Release -S "$GITHUB_WORKSPACE" -B "$RUNNER_TEMP"
         cmake --build "$RUNNER_TEMP" --target codegen QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
 
   linux-qts:
@@ -47,7 +47,7 @@ jobs:
       run: |
         # We don't build codegen when using jurplel Qt's, because installing libgrantlee5-dev
         # pulls in Ubuntu's own Qt5 libraries, which is not ideal.
-        cmake -D BUILD_CODEGEN=NO -S "$GITHUB_WORKSPACE" -B "$RUNNER_TEMP"
+        cmake -D BUILD_CODEGEN=NO -D CMAKE_BUILD_TYPE=Release -S "$GITHUB_WORKSPACE" -B "$RUNNER_TEMP"
         cmake --build "$RUNNER_TEMP" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
 
   mac:
@@ -70,7 +70,7 @@ jobs:
         CC:  ${{ matrix.env.cc }}
         CXX: ${{ matrix.env.cxx }}
       run: |
-        cmake -D BUILD_CODEGEN=NO -S "$GITHUB_WORKSPACE" -B "$RUNNER_TEMP"
+        cmake -D BUILD_CODEGEN=NO -D CMAKE_BUILD_TYPE=Release -S "$GITHUB_WORKSPACE" -B "$RUNNER_TEMP"
         cmake --build "$RUNNER_TEMP" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
 
   win:
@@ -104,5 +104,5 @@ jobs:
       uses: ilammy/msvc-dev-cmd@v1
     - name: Build
       run: |
-        cmake -D BUILD_CODEGEN=NO -G "${{ matrix.generator }}" -S "%GITHUB_WORKSPACE%" -B "%RUNNER_TEMP%"
+        cmake -D BUILD_CODEGEN=NO -D CMAKE_BUILD_TYPE=Release -G "${{ matrix.generator }}" -S "%GITHUB_WORKSPACE%" -B "%RUNNER_TEMP%"
         cmake --build "%RUNNER_TEMP%" --target QtAwsAcm QtAwsCore QtAwsS3 QtAwsS3Control QtAwsXRay
